@@ -64,6 +64,13 @@ CYCLE = ('cyan', 'lavender', 'amber', 'rose')
 INK, BODY = hx('#F7FAFC'), hx('#D7E1EA')
 TREATMENTS = ('flat', 'spotlight', 'neon')
 
+#: Body copy steps down through these (size, line step) pairs before it is
+#: allowed to reach the footer. The rule sits at H - 150, so the limit keeps
+#: a 40px gap clear above it.
+BODY_LIMIT = H - 190
+BODY_SIZES = ((54, 68), (52, 65), (50, 63), (48, 60))
+BODY_GAP = 18
+
 
 def resolve(name):
     """A territory name, an accent name or a raw RGB triple."""
@@ -261,6 +268,32 @@ def footer(im, bg, source, date, rule_colour):
     return im
 
 
+def _fit_body(d, lines, y, limit=BODY_LIMIT):
+    """The largest body size whose copy still clears the footer.
+
+    Returns (font, line_step, paragraphs) with the copy already wrapped at
+    the size that was chosen. Every size is re-wrapped, because smaller type
+    fits more words per line and so changes the line count, not just the step.
+
+    Overrunning is an editorial problem rather than a layout one. Letting the
+    last paragraph run through the footer rule reads as a bug in the template,
+    and shrinking past 48 would undercut the type floor the system is built
+    on, so the smallest size that still does not fit raises instead and says
+    how many lines have to go.
+    """
+    for size, step in BODY_SIZES:
+        f = F(size, 450)
+        paras = [C.wrap(d, p, f, W - M * 2) for p in lines]
+        end = y + sum(step * len(lns) + BODY_GAP for lns in paras)
+        if end - BODY_GAP <= limit:
+            return f, step, paras
+    over = end - BODY_GAP - limit
+    cut = max(1, -(-over // step))
+    raise ValueError(
+        f'body copy overruns the footer by {over}px at {size}pt, the '
+        f'smallest body size: cut about {cut} line{"s" * (cut != 1)} of copy')
+
+
 def single(kicker, title, lines, label, media, date, source, out,
            background='reported', accent='cold', support=None, treatment='flat',
            display=None, gulf=False, video=None, clip_start=0, clip_seconds=6,
@@ -332,11 +365,11 @@ def single(kicker, title, lines, label, media, date, source, out,
         d.text((M, y), ln, font=tf, fill=INK); y += 116
     y += 28
 
-    bf = F(54, 450)
-    for p in lines:
-        for ln in C.wrap(d, p, bf, W - M * 2):
-            d.text((M, y), ln, font=bf, fill=BODY); y += 68
-        y += 18
+    bf, step, paras = _fit_body(d, lines, y)
+    for lns in paras:
+        for ln in lns:
+            d.text((M, y), ln, font=bf, fill=BODY); y += step
+        y += BODY_GAP
 
     im = footer(im, bg, source, date, edge)
 
