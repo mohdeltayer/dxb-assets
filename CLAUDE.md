@@ -56,7 +56,19 @@ carries only what is new in its window, explicitly dropping what earlier
 hours already filed. Reading only the newest email misses whole stories:
 a piece that lands at 15:00 appears once and never again.
 
-Sweep all unread digests for the day before recommending anything.
+Sweep all unread digests before recommending anything.
+
+There is no scheduled sweep and no Routine. Mohammad asks when he wants
+one, at no fixed cadence, so "unread" has to mean "not yet worked
+through" or the request has no edge. After reporting on a sweep, mark the
+digests just covered as read with `update_message`
+(`removeLabels: ["unread"]`), so the next sweep starts from genuinely new
+sheets rather than re-reading the day.
+
+Come back with a ranked shortlist, not a summary of every item. For each
+candidate give the verification status, and the template, background,
+accent and label already chosen — then ask for his take. He supplies the
+take and the art; everything else should be decided before he reads it.
 
 ## Verify against primary sources
 
