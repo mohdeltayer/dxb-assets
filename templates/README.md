@@ -6,6 +6,9 @@
 `cards.py` is retired as a template set but is still imported — see
 [Legacy](#legacy-cardspy) at the end.
 
+The agreed card system sheet (20 Sep 2026) is canonical. Where this file
+and the sheet disagree, the sheet wins.
+
 ## Restoring after a sandbox reset
 
 ```bash
@@ -115,7 +118,10 @@ flex.single(kicker, title, lines, label, media, date, source, out,
             video=None, clip_start=0, clip_seconds=6, audio=False)
 ```
 The hero card. `lines` is a list of paragraphs. The panel image is
-*contained*, never cropped — the story's picture is the story. `display` is
+*contained* by default — the story's picture is the story. A crop to fill
+the panel is fine when nothing important is lost and the frame does not
+read as compromised; contain it when a crop would cut a face, a logo or
+headline text. `display` is
 an oversized word above the kicker, which the `neon` treatment lights.
 
 The only template that takes `gulf` or `display`.
@@ -217,6 +223,21 @@ That is deliberate. Copy running through the footer rule reads as a bug in
 the template, and shrinking past 48 would undercut the type floor the system
 is built on, so the overrun is handed back as an editorial problem.
 
+## Choosing
+
+Background says who is talking. Accent says how the subject feels. The label
+chip says what kind of piece it is. They are three separate decisions.
+
+The subject decides, not the outlet. A business story about Nintendo is
+`cold`, not `playful`.
+
+A chart is always `cold`, never the platform that won the week.
+
+Spectacle carries two. Rose leads; reach for coral when the card will sit
+next to an amber one.
+
+Unsure? `reported` + `cold` + `flat`. That is the house default.
+
 ## Rules that produced this
 
 Phone first. Fandom's cards work because the type is around 6% of the frame
@@ -228,6 +249,11 @@ The footer never changes. That consistency is what makes a series read as a
 publication rather than a set of posts.
 
 Media keeps its own colours. Nothing is tinted, overlaid or graded.
+
+Hero media is contained rather than cropped, so the card does not throw
+away part of the story's picture. Row thumbnails in a `roundup` are the
+exception, and a crop that loses nothing is a judgement call, not a
+violation.
 
 ## Legacy: cards.py
 

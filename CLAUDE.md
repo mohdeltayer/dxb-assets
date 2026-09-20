@@ -25,6 +25,23 @@ story built as a `quote` silently loses the Gulf marker.
 
 When the template choice is not obvious, ask rather than guess.
 
+## The agreed sheet is canonical
+
+The card system sheet dated 20 Sep 2026 is the source of truth for the
+canvas, the type sizes, the palette and the argument names. `flex.py`
+already matches it exactly. Where `templates/README.md` disagrees with the
+sheet, the sheet wins.
+
+## Hero media: contain by default, crop only when nothing is lost
+
+The sheet says hero media is contained, never cropped, with roundup row
+thumbnails the one exception. In practice a crop to fill the panel is fine
+when nothing important is lost and the frame does not look distracting or
+compromised.
+
+Contain it when a crop would cut a face, a logo or headline text. When in
+doubt contain, and say what the trade-off was.
+
 ## Logos need plating
 
 Wordmarks are far wider than either media box (`single` 1460x860,
