@@ -3,6 +3,8 @@
 Locked 18 September 2026. Files live in `templates/` on the shelf:
 `cards.py`, `crest-tint.png`, `crest-source.png`, `Inter.ttf`.
 
+The flexible variant `flex.py` sits alongside them in the same folder.
+
 ## Restoring after a sandbox reset
 
 ```bash
