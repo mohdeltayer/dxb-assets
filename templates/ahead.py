@@ -82,11 +82,14 @@ def _pumpkin(draw, box, color, sw):
                   (cx - mw * 0.6, my - mh * 0.2)], fill=color)
 
 
-def _neon(im, xy, text, font, color, glow=18, anchor='mm', mark='@'):
+def _neon(im, xy, text, font, color, glow=18, anchor='mm', mark='@',
+          glyph_level=1.0):
     """Outlined neon lettering over a soft glow, the September treatment.
 
     A `mark` character in `text` is replaced by a pumpkin drawn in the same
     stroke, sized to the font's O, so 'M@NTH' reads as MONTH in costume.
+    `glyph_level` scales the pumpkin's brightness and glow on its own, which
+    is what the flicker animation drives; the letters never dim.
     """
     parts = text.split(mark)
     probe = ImageDraw.Draw(im)
@@ -94,32 +97,42 @@ def _neon(im, xy, text, font, color, glow=18, anchor='mm', mark='@'):
     widths = [probe.textlength(t, font=font) for t in parts]
     total = sum(widths) + o_w * (len(parts) - 1)
     cx, cy = xy
-    x = cx - total / 2                       # lay the run out left to right
-    asc, desc = font.getmetrics()
+    x = cx - total / 2
     cap = probe.textbbox((0, 0), 'M', font=font)
     top, bot = cy - (cap[3] - cap[1]) / 2, cy + (cap[3] - cap[1]) / 2
 
-    def paint(sw, fill_alpha, target):
+    def paint(sw, fill_alpha, target, want):
         d = ImageDraw.Draw(target)
         px = x
         for i, t in enumerate(parts):
             if t:
-                d.text((px, cy), t, font=font, fill=color + (fill_alpha,),
-                       anchor='lm', stroke_width=sw, stroke_fill=color + (255,))
+                if want == 'text':
+                    d.text((px, cy), t, font=font, fill=color + (fill_alpha,),
+                           anchor='lm', stroke_width=sw,
+                           stroke_fill=color + (255,))
                 px += widths[i]
             if i < len(parts) - 1:
-                _pumpkin(d, (px - o_w * 0.04, top - (bot - top) * 0.08, px + o_w * 1.04, bot),
-                         color + (255,), sw)
+                if want == 'glyph':
+                    _pumpkin(d, (px - o_w * 0.04, top - (bot - top) * 0.08,
+                                 px + o_w * 1.04, bot), color + (255,), sw)
                 px += o_w
 
-    layer = Image.new('RGBA', im.size, (0, 0, 0, 0))
-    paint(3, 255, layer)
-    halo = layer.filter(ImageFilter.GaussianBlur(glow)).split()[3]
-    im.paste(Image.new('RGB', im.size, color), (0, 0),
-             halo.point(lambda a: int(a * 0.55)))
-    sharp = Image.new('RGBA', im.size, (0, 0, 0, 0))
-    paint(4, 0, sharp)
-    im.paste(sharp, (0, 0), sharp)
+    gl = max(0.0, min(1.0, glyph_level))
+    dim = tuple(int(c * gl) for c in color)
+    for want, lvl, col in (('text', 1.0, color), ('glyph', gl, dim)):
+        layer = Image.new('RGBA', im.size, (0, 0, 0, 0))
+        paint(3, 255, layer, want)
+        halo = layer.filter(ImageFilter.GaussianBlur(glow)).split()[3]
+        im.paste(Image.new('RGB', im.size, col), (0, 0),
+                 halo.point(lambda a, k=lvl: int(a * 0.55 * k)))
+        sharp = Image.new('RGBA', im.size, (0, 0, 0, 0))
+        paint(4, 0, sharp, want)
+        if want == 'glyph' and gl < 1.0:
+            r, g, b, a = sharp.split()
+            sharp = Image.merge('RGBA', (r.point(lambda v: int(v * gl)),
+                                         g.point(lambda v: int(v * gl)),
+                                         b.point(lambda v: int(v * gl)), a))
+        im.paste(sharp, (0, 0), sharp)
 
 
 def _tile(im, box, t, border, date, name, sub, image):
@@ -167,8 +180,8 @@ def _tile(im, box, t, border, date, name, sub, image):
         d.text((cx, y + h * fy), ln, font=F(18, 500), fill=t['sub'], anchor='mm')
 
 
-def ahead(title_lines, items, footer, out, theme='halloween'):
-    t = THEMES[theme]
+def _body(items, footer, t):
+    """Everything except the title: background, stars, tiles, footer."""
     im = Image.new('RGB', (W, H), t['bg0'])
     d = ImageDraw.Draw(im)
     for y in range(H):
@@ -180,16 +193,9 @@ def ahead(title_lines, items, footer, out, theme='halloween'):
         rng = random.Random(7)
         for _ in range(90):
             sx, sy = rng.randrange(W), rng.randrange(H)
-            s = rng.choice((1, 1, 1, 2))
-            d.ellipse([sx, sy, sx + s, sy + s],
+            sz = rng.choice((1, 1, 1, 2))
+            d.ellipse([sx, sy, sx + sz, sy + sz],
                       fill=tuple(min(255, c + 90) for c in t['bg1']))
-
-    tf = ImageFont.truetype(os.path.join(FONTS, t['font']), t['title_size'])
-    ty = 130
-    for line in title_lines:
-        _neon(im, (W // 2, ty), line, tf, t['title'])
-        ty += 130
-
     tw, th, gap = 340, 420, 44
     x0 = (W - (3 * tw + 2 * gap)) // 2
     rows = (410, 880)
@@ -197,8 +203,73 @@ def ahead(title_lines, items, footer, out, theme='halloween'):
         col, row = i % 3, i // 3
         _tile(im, (x0 + col * (tw + gap), rows[row], tw, th), t,
               t['borders'][i % len(t['borders'])], date, name, sub, image)
-
     d = ImageDraw.Draw(im)
     d.text((W // 2, H - 24), footer, font=F(18, 500), fill=t['foot'], anchor='mm')
+    return im
+
+
+def _title(im, title_lines, t, glyph_level=1.0):
+    tf = ImageFont.truetype(os.path.join(FONTS, t['font']), t['title_size'])
+    ty = 130
+    for line in title_lines:
+        _neon(im, (W // 2, ty), line, tf, t['title'], glyph_level=glyph_level)
+        ty += 130
+
+
+def ahead(title_lines, items, footer, out, theme='halloween'):
+    t = THEMES[theme]
+    im = _body(items, footer, t)
+    _title(im, title_lines, t)
     im.save(out)
     return out
+
+
+def _flicker(n, seed=3):
+    """Per-frame brightness for the glyph: steady with a faint hum, the odd
+    dip, a rare double-blink, and full brightness at both ends so the loop
+    is seamless."""
+    import random
+    rng = random.Random(seed)
+    lv = [1.0] * n
+    i = 6
+    while i < n - 8:
+        r = rng.random()
+        if r < 0.035:                        # single dip, 1-3 frames
+            k = rng.randint(1, 3); lvl = rng.uniform(0.25, 0.65)
+            for j in range(k): lv[i + j] = lvl
+            i += k + rng.randint(4, 14)
+        elif r < 0.045:                      # double blink
+            for j, l in enumerate((0.3, 1.0, 0.2)): lv[i + j] = l
+            i += 3 + rng.randint(8, 20)
+        else:
+            i += 1
+    return [max(0.0, min(1.0, l * rng.uniform(0.97, 1.0))) if 0 < i < n - 1 else 1.0
+            for i, l in enumerate(lv)]
+
+
+def ahead_video(title_lines, items, footer, out, theme='halloween',
+                seconds=8, fps=30, seed=3):
+    """The same card as `ahead`, as a looping MP4 where the title glyph
+    flickers like a neon tube. Written to a .mp4 path via ffmpeg."""
+    import subprocess, tempfile
+    if not out.lower().endswith('.mp4'):
+        raise ValueError('ahead_video writes an .mp4')
+    t = THEMES[theme]
+    base = _body(items, footer, t)
+    n = seconds * fps
+    levels = _flicker(n, seed)
+    tmp = tempfile.mkdtemp(prefix='dxbahead-')
+    # yuv420p needs even dimensions; H is 1389, so pad one row of background.
+    canvas_h = H + (H % 2)
+    for i, lvl in enumerate(levels):
+        fr = base.copy()
+        _title(fr, title_lines, t, glyph_level=lvl)
+        if canvas_h != H:
+            pad = Image.new('RGB', (W, canvas_h), t['bg1'])
+            pad.paste(fr, (0, 0)); fr = pad
+        fr.save(os.path.join(tmp, f'{i:04d}.png'))
+    subprocess.run(['ffmpeg', '-y', '-v', 'error', '-framerate', str(fps),
+                    '-i', os.path.join(tmp, '%04d.png'),
+                    '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '19',
+                    '-movflags', '+faststart', out], check=True)
+    return out, levels
