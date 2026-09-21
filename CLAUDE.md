@@ -84,6 +84,17 @@ publisher sites outright. WebSearch still works and is the fallback —
 but say plainly when something is corroborated by search rather than
 read from the primary.
 
+## The post text and the card never say the same thing
+
+The card carries the detail. The post text is the hook that makes someone
+stop and open it. Never paste the card copy into the post, or a version of
+it — if the post already tells the story, the card is decoration and there
+is no reason to look at it.
+
+Write the post for attention and tone: the drama, the stakes, the reason to
+care. Leave every fact, quote, number and name to the card. If a line could
+sit in either, it belongs in the card.
+
 ## Publishing
 
 Cards render to `cards/YYYY-MM/`, source art to `live/YYYY-MM-DD/`.
