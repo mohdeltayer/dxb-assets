@@ -84,6 +84,13 @@ publisher sites outright. WebSearch still works and is the fallback —
 but say plainly when something is corroborated by search rather than
 read from the primary.
 
+## No em dashes
+
+Mohammad does not use the em dash. Not in post text, not in card copy,
+not in a kicker. Use a comma, a full stop or the middot the footer
+already uses. This applies to anything that carries his name, not just
+the words he writes himself.
+
 ## The post text and the card never say the same thing
 
 The card carries the detail. The post text is the hook that makes someone
