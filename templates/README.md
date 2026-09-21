@@ -282,6 +282,43 @@ away part of the story's picture. Row thumbnails in a `roundup` are the
 exception, and a crop that loses nothing is a judgement call, not a
 violation.
 
+## The lookout: ahead.py
+
+The pinned month-ahead is not a flex.py card. It is its own format,
+reproduced from the September original: a 1320x1389 canvas, a neon title,
+a 2x3 grid of tiles with art on top, a big date, an event name and a sub,
+and a footer for the timezone note. Six tiles, never more. `roundup` is
+not the way to build one.
+
+    ahead(['THE M@NTH', 'AHEAD.'], items, footer, out, theme='halloween')
+
+`items` is up to six `(date, name, sub, image|None)`. `sub` is a string or
+a `(platforms, note)` pair. **Every tile names its platforms in the same
+form**, `PS5 · Xbox · Switch 2 · PC`, so a tile that says nothing does not
+read as "not on it". Notes such as a demo date go on the second line.
+Without an image the art panel is a graded wash in the tile's border
+colour, which is the placeholder to review layout against.
+
+`theme` picks palette and title font; the geometry never changes, so a new
+month is a palette swap and six new items. `halloween` (October) and
+`neon` (September's look) ship; add November as a dict.
+
+A marker in the title, `@` by default, is drawn as a glyph in the same
+stroke and glow as the letters, sized to the font's O. Halloween's glyph is
+a jack-o'-lantern. Swap `_pumpkin` for something else when the month
+changes.
+
+**Video.** `ahead_video(..., seconds=8, fps=30, style='soft')` renders the
+same card as a looping MP4 where only the glyph flickers; the letters never
+dim. `soft` is a slow breath plus a few smooth dips to about half
+brightness. `sharp` is a tube on its way out. First and last frames are
+full brightness so the loop is seamless. Output is H.264 yuv420p, the odd
+canvas height padded by one row. The still and the video render from the
+same call arguments; keep both in `cards/`.
+
+Title fonts (Bungee, Monoton, Righteous) are vendored under
+`templates/fonts/`. The card system sheet does not list this format.
+
 ## Legacy: cards.py
 
 The `cards.py` **templates are retired** — its five entry points

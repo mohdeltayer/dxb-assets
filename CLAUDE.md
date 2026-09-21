@@ -25,6 +25,15 @@ story built as a `quote` silently loses the Gulf marker.
 
 When the template choice is not obvious, ask rather than guess.
 
+## The lookout is its own format
+
+The pinned month-ahead (`templates/ahead.py`) is not a flex.py card and
+`roundup` is not the way to build one. Six tiles, every tile naming its
+platforms the same way, notes on a second line, dates verified against
+primaries because it sits pinned for a month. It renders as a still and,
+with `ahead_video`, as a looping MP4 where the title glyph flickers.
+Theme and glyph change with the month; the geometry never does.
+
 ## The agreed sheet is canonical
 
 The card system sheet dated 20 Sep 2026 is the source of truth for the
