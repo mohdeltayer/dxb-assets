@@ -8,7 +8,9 @@ changes, so a new month is a theme swap and six new items.
 
     ahead(['THE MONTH', 'AHEAD.'], items, footer, out, theme='halloween')
 
-`items` is up to six (date, name, sub, image|None). With no image the art
+`items` is up to six (date, name, sub, image|None). `sub` is a string, or
+a (platforms, note) pair for a second line: every tile should name its
+platforms the same way, and notes like a demo date go on the line below. With no image the art
 panel is a graded wash in the tile's border colour, which is the placeholder
 to review layout against before real art goes in.
 """
@@ -93,10 +95,13 @@ def _tile(im, box, t, border, date, name, sub, image):
     im.paste(art, (x + 4, y + 4), mask)
 
     cx = x + w // 2
-    d.text((cx, y + h * 0.66), date, font=F(74, 900), fill=t['ink'], anchor='mm')
-    d.text((cx, y + h * 0.80), name.upper(), font=F(24, 800), fill=t['ink'],
+    lines = [sub] if isinstance(sub, str) else [l for l in sub if l]
+    d.text((cx, y + h * 0.64), date, font=F(74, 900), fill=t['ink'], anchor='mm')
+    d.text((cx, y + h * 0.77), name.upper(), font=F(24, 800), fill=t['ink'],
            anchor='mm')
-    d.text((cx, y + h * 0.89), sub, font=F(18, 500), fill=t['sub'], anchor='mm')
+    ys = (0.87,) if len(lines) == 1 else (0.855, 0.925)
+    for ln, fy in zip(lines, ys):
+        d.text((cx, y + h * fy), ln, font=F(18, 500), fill=t['sub'], anchor='mm')
 
 
 def ahead(title_lines, items, footer, out, theme='halloween'):
