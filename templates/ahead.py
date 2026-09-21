@@ -43,19 +43,82 @@ THEMES = {
 }
 
 
-def _neon(im, xy, text, font, color, glow=18, anchor='mm'):
-    """Outlined neon lettering over a soft glow, the September treatment."""
+def _pumpkin(draw, box, color, sw):
+    """A jack-o'-lantern outline sized to a letter box, same stroke as the
+    text so it reads as the O it replaces.
+
+    Three side-by-side lobes give the bumpy silhouette and the rib lines
+    where they overlap; the face is filled, like a lit cut-out, so it still
+    reads at feed size.
+    """
+    x0, y0, x1, y1 = box
+    w, h = x1 - x0, y1 - y0
+    cx = (x0 + x1) / 2
+    top = y0 + h * 0.16                      # stem pokes above this
+    bot = y1
+    bh = bot - top
+    # lobes: centre is tallest, sides a little shorter and pushed outward
+    lobes = [(cx - w * 0.28, top + bh * 0.06, w * 0.62),
+             (cx + w * 0.28, top + bh * 0.06, w * 0.62),
+             (cx,            top,             w * 0.70)]
+    for lx, lt, lw in lobes:
+        draw.ellipse([lx - lw / 2, lt, lx + lw / 2, bot], outline=color, width=sw)
+    # stem: short, thick, leaning right
+    draw.line([(cx - w * 0.02, top + sw), (cx + w * 0.06, y0 + h * 0.03),
+               (cx + w * 0.16, y0 + h * 0.01)], fill=color, width=sw + 3,
+              joint='curve')
+    # face: filled cut-outs
+    ey = top + bh * 0.40
+    ew, eh = w * 0.11, bh * 0.16
+    for ex in (cx - w * 0.20, cx + w * 0.20):
+        draw.polygon([(ex, ey - eh * 0.6), (ex - ew, ey + eh * 0.5),
+                      (ex + ew, ey + eh * 0.5)], fill=color)
+    my = top + bh * 0.70
+    mw, mh = w * 0.32, bh * 0.10
+    draw.polygon([(cx - mw, my - mh), (cx - mw * 0.55, my + mh),
+                  (cx - mw * 0.2, my), (cx + mw * 0.2, my),
+                  (cx + mw * 0.55, my + mh), (cx + mw, my - mh),
+                  (cx + mw * 0.6, my - mh * 0.2), (cx, my + mh * 0.35),
+                  (cx - mw * 0.6, my - mh * 0.2)], fill=color)
+
+
+def _neon(im, xy, text, font, color, glow=18, anchor='mm', mark='@'):
+    """Outlined neon lettering over a soft glow, the September treatment.
+
+    A `mark` character in `text` is replaced by a pumpkin drawn in the same
+    stroke, sized to the font's O, so 'M@NTH' reads as MONTH in costume.
+    """
+    parts = text.split(mark)
+    probe = ImageDraw.Draw(im)
+    o_w = probe.textlength('O', font=font)
+    widths = [probe.textlength(t, font=font) for t in parts]
+    total = sum(widths) + o_w * (len(parts) - 1)
+    cx, cy = xy
+    x = cx - total / 2                       # lay the run out left to right
+    asc, desc = font.getmetrics()
+    cap = probe.textbbox((0, 0), 'M', font=font)
+    top, bot = cy - (cap[3] - cap[1]) / 2, cy + (cap[3] - cap[1]) / 2
+
+    def paint(sw, fill_alpha, target):
+        d = ImageDraw.Draw(target)
+        px = x
+        for i, t in enumerate(parts):
+            if t:
+                d.text((px, cy), t, font=font, fill=color + (fill_alpha,),
+                       anchor='lm', stroke_width=sw, stroke_fill=color + (255,))
+                px += widths[i]
+            if i < len(parts) - 1:
+                _pumpkin(d, (px - o_w * 0.04, top - (bot - top) * 0.08, px + o_w * 1.04, bot),
+                         color + (255,), sw)
+                px += o_w
+
     layer = Image.new('RGBA', im.size, (0, 0, 0, 0))
-    ImageDraw.Draw(layer).text(xy, text, font=font, fill=color + (255,),
-                               anchor=anchor, stroke_width=3,
-                               stroke_fill=color + (255,))
+    paint(3, 255, layer)
     halo = layer.filter(ImageFilter.GaussianBlur(glow)).split()[3]
     im.paste(Image.new('RGB', im.size, color), (0, 0),
              halo.point(lambda a: int(a * 0.55)))
     sharp = Image.new('RGBA', im.size, (0, 0, 0, 0))
-    ImageDraw.Draw(sharp).text(xy, text, font=font, fill=(0, 0, 0, 0),
-                               anchor=anchor, stroke_width=4,
-                               stroke_fill=color + (255,))
+    paint(4, 0, sharp)
     im.paste(sharp, (0, 0), sharp)
 
 
