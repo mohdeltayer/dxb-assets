@@ -105,7 +105,7 @@ the other four it sits top right, level with the header.
 
 Keep it to a word or two — `hands on`, `rumour`, `confirmed`, `sale`.
 
-## The five templates
+## The six templates
 
 Every template returns the output path. All take `label=`, `background=`
 and `accent=`.
@@ -222,6 +222,33 @@ cut about 2 lines of copy
 That is deliberate. Copy running through the footer rule reads as a bug in
 the template, and shrinking past 48 would undercut the type floor the system
 is built on, so the overrun is handed back as an editorial problem.
+
+### recap — a stats board
+```python
+flex.recap(kicker, hero, caption, rows, date, source, out, label=None,
+           media=None, dim=0.30, plate=0.55,
+           background='reported', accent='cold', gulf=False)
+# rows: [(label, value), ...] max 6
+```
+Same wireframe as `single`: panel on top with the chip bottom left inside
+it, figures below. `hero` is the lead number and `caption` says what it
+counts; exactly one hero per card, so the ledger values stay in ink and only
+the hero, the border and the chip carry the accent.
+
+`rows` puts the label on the card margin and the value on the right margin,
+the same pairing `charts` uses for its hardware lines.
+
+With `media` the panel takes art. Without it the panel becomes a wash graded
+toward the accent, which is the version for a card with no picture.
+
+Art behind type is the one place the contain rule bends. `dim` is a light
+left-weighted scrim over the panel, `plate` a translucent lozenge under the
+figures only, sized from the text itself. Measure a new image rather than
+trusting the defaults: a dark photo wants less, a bright one more.
+
+This is not `charts`. `charts` is for hardware and software sales, ranked
+rows with units. `recap` is for a handful of headline figures that are not a
+ranking.
 
 ## Choosing
 

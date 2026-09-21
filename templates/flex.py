@@ -628,3 +628,89 @@ def quote(header, text, attribution, context, date, source, out,
 
     footer(im, bg, source, date, edge).save(out)
     return out
+
+
+# ------------------------------------------------------------------ RECAP ---
+def recap(kicker, hero, caption, rows, date, source, out, label=None,
+          media=None, dim=0.30, plate=0.55, background='reported',
+          accent='cold', gulf=False):
+    """A stats board: one hero figure, then a ledger of figures.
+
+    Same wireframe as `single`: panel on top with the chip bottom left inside
+    it, content below. `hero` is the lead figure and `caption` says what it
+    counts. `rows` is (label, value) pairs, max 6, label on the card margin
+    and value on the right margin, the pairing `charts` uses for hardware.
+
+    Exactly one hero figure per card. It is the number the eye should land on,
+    so the others stay in ink and only the hero, the border and the chip carry
+    the accent.
+
+    With `media` the panel takes art. Without it the panel is a wash graded
+    toward the accent, which is the version to use when there is no picture.
+
+    `dim` is a light left-weighted scrim over the whole panel and `plate` a
+    translucent lozenge under the figures only, sized from the text itself.
+    Between them the type stays legible while the artwork keeps its colours
+    everywhere the type is not. Measure a new image rather than trusting the
+    defaults: a dark photo wants less, a bright one more.
+    """
+    bg, panel, panel2, edge = ground(background)
+    acc = resolve(accent)
+    im = Image.new('RGB', (W, H), bg)
+    x0, y0, x1, y1 = ART
+    pw, ph = x1 - x0, y1 - y0
+
+    if media:
+        place_media(im, ART, media, panel)
+        if dim:
+            scrim = Image.new('L', (pw, ph), 0)
+            sd = ImageDraw.Draw(scrim)
+            for i in range(pw):
+                sd.line([i, 0, i, ph], fill=int(255 * dim * (1 - 0.45 * i / pw)))
+            mask = Image.new('L', (pw, ph), 0)
+            ImageDraw.Draw(mask).rounded_rectangle([0, 0, pw, ph], radius=24,
+                                                   fill=255)
+            scrim = Image.composite(scrim, Image.new('L', (pw, ph), 0), mask)
+            im.paste(Image.new('RGB', (pw, ph), (0, 0, 0)), (x0, y0), scrim)
+    else:
+        wash = Image.new('RGB', (pw, ph), panel)
+        wd = ImageDraw.Draw(wash)
+        for i in range(ph):
+            wd.line([0, i, pw, i], fill=lift(panel, 0.16 * (i / ph), acc))
+        mask = Image.new('L', (pw, ph), 0)
+        ImageDraw.Draw(mask).rounded_rectangle([0, 0, pw, ph], radius=24, fill=255)
+        im.paste(wash, (x0, y0), mask)
+
+    d = ImageDraw.Draw(im)
+    parts = [((x0 + 60, y0 + 90), kicker.upper(), F(46, 800), acc),
+             ((x0 + 60, y0 + 190), hero, F(230, 800), INK),
+             ((x0 + 60, y0 + 500), caption.upper(), F(38, 700),
+              lift(BODY, -0.15, bg))]
+
+    if media and plate:
+        bb = [d.textbbox(xy, t, font=f) for xy, t, f, _ in parts]
+        pad = 44
+        box = [min(b[0] for b in bb) - pad, min(b[1] for b in bb) - pad,
+               max(b[2] for b in bb) + pad, max(b[3] for b in bb) + pad]
+        ov = Image.new('RGBA', im.size, (0, 0, 0, 0))
+        ImageDraw.Draw(ov).rounded_rectangle(box, radius=28,
+                                             fill=(0, 0, 0, int(255 * plate)))
+        im = Image.alpha_composite(im.convert('RGBA'), ov).convert('RGB')
+        d = ImageDraw.Draw(im)
+
+    for xy, t, f, fill in parts:
+        d.text(xy, t, font=f, fill=fill)
+
+    marks(d, acc, bg, label, gulf, 'flat')
+
+    y, pitch = 1015, 128
+    lf, vf = F(44, 600), F(50, 800)
+    for name, val in rows[:6]:
+        d.line([M, y, W - M, y], fill=edge, width=2)
+        d.text((M, y + 64), name, font=lf, fill=BODY, anchor='lm')
+        d.text((W - M, y + 64), val, font=vf, fill=INK, anchor='rm')
+        y += pitch
+    d.line([M, y, W - M, y], fill=edge, width=2)
+
+    footer(im, bg, source, date, edge).save(out)
+    return out
