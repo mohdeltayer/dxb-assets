@@ -152,7 +152,9 @@ def heading(d, header, subheader, label, acc, bg):
     if subheader:
         d.text((M, 228), subheader, font=F(44, 450), fill=BODY)
     if label:
-        filled_label(d, label, W - M, 116, acc, bg, anchor='rt')
+        # 128, not 116: the chip centres on the header's cap band (centre y=168
+        # at 96/800), not on its ascender box. quote() already used 128.
+        filled_label(d, label, W - M, 128, acc, bg, anchor='rt')
 
 
 def marks(d, acc, bg, label, gulf, treatment):
