@@ -224,31 +224,56 @@ def ahead(title_lines, items, footer, out, theme='halloween'):
     return out
 
 
-def _flicker(n, seed=3):
-    """Per-frame brightness for the glyph: steady with a faint hum, the odd
-    dip, a rare double-blink, and full brightness at both ends so the loop
-    is seamless."""
-    import random
+def _flicker(n, seed=3, style='soft'):
+    """Per-frame brightness for the glyph, full at both ends so the loop is
+    seamless.
+
+    'soft': a slow breath (two cycles per loop, ~3%) and a handful of gentle
+    dips, each a raised-cosine fade down to 0.45-0.7 over 0.4-0.9s. Nothing
+    cuts; nothing goes near dark. The calm version.
+
+    'sharp': steady with a faint hum, one-to-three-frame drops, the odd
+    double blink. A tube on its way out.
+    """
+    import math, random
     rng = random.Random(seed)
-    lv = [1.0] * n
-    i = 6
-    while i < n - 8:
-        r = rng.random()
-        if r < 0.035:                        # single dip, 1-3 frames
-            k = rng.randint(1, 3); lvl = rng.uniform(0.25, 0.65)
-            for j in range(k): lv[i + j] = lvl
-            i += k + rng.randint(4, 14)
-        elif r < 0.045:                      # double blink
-            for j, l in enumerate((0.3, 1.0, 0.2)): lv[i + j] = l
-            i += 3 + rng.randint(8, 20)
-        else:
-            i += 1
-    return [max(0.0, min(1.0, l * rng.uniform(0.97, 1.0))) if 0 < i < n - 1 else 1.0
-            for i, l in enumerate(lv)]
+    if style == 'sharp':
+        lv = [1.0] * n
+        i = 6
+        while i < n - 8:
+            r = rng.random()
+            if r < 0.035:
+                k = rng.randint(1, 3); lvl = rng.uniform(0.25, 0.65)
+                for j in range(k): lv[i + j] = lvl
+                i += k + rng.randint(4, 14)
+            elif r < 0.045:
+                for j, l in enumerate((0.3, 1.0, 0.2)): lv[i + j] = l
+                i += 3 + rng.randint(8, 20)
+            else:
+                i += 1
+        return [max(0.0, min(1.0, l * rng.uniform(0.97, 1.0)))
+                if 0 < i < n - 1 else 1.0 for i, l in enumerate(lv)]
+
+    # soft
+    lv = [1.0 - 0.03 * (1 - math.cos(2 * math.pi * 2 * i / n)) / 2
+          for i in range(n)]
+    dips = rng.randint(4, 6)
+    margin = int(n * 0.06)
+    centres = sorted(rng.randint(margin, n - margin) for _ in range(dips))
+    for c in centres:
+        width = rng.randint(int(n * 0.05), int(n * 0.11))   # 0.4-0.9s at 8s
+        depth = rng.uniform(0.30, 0.55)                       # to 0.45-0.70
+        for j in range(-width // 2, width // 2 + 1):
+            i = c + j
+            if 0 < i < n - 1:
+                k = (1 + math.cos(math.pi * j / (width / 2))) / 2   # 1 at centre
+                lv[i] = min(lv[i], lv[i] - depth * k)
+    lv[0] = lv[-1] = 1.0
+    return [max(0.0, min(1.0, l)) for l in lv]
 
 
 def ahead_video(title_lines, items, footer, out, theme='halloween',
-                seconds=8, fps=30, seed=3):
+                seconds=8, fps=30, seed=3, style='soft'):
     """The same card as `ahead`, as a looping MP4 where the title glyph
     flickers like a neon tube. Written to a .mp4 path via ffmpeg."""
     import subprocess, tempfile
@@ -257,7 +282,7 @@ def ahead_video(title_lines, items, footer, out, theme='halloween',
     t = THEMES[theme]
     base = _body(items, footer, t)
     n = seconds * fps
-    levels = _flicker(n, seed)
+    levels = _flicker(n, seed, style)
     tmp = tempfile.mkdtemp(prefix='dxbahead-')
     # yuv420p needs even dimensions; H is 1389, so pad one row of background.
     canvas_h = H + (H % 2)
