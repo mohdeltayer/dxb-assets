@@ -62,13 +62,15 @@ def _cue(im, text, hi, bg, last=False):
     f = F(34, 800)
     t = text.upper()
     tw = d.textlength(t, font=f)
+    if last:
+        # a sign-off, not a turn: no arrow, since there is no next page
+        d.text((W - M, CUE_Y), t, font=f, fill=lift(BODY, -0.1, bg), anchor='rm')
+        return
     x = W - M - 70
-    d.text((x, CUE_Y), t, font=f, fill=hi if not last else lift(BODY, -0.1, bg),
-           anchor='rm')
+    d.text((x, CUE_Y), t, font=f, fill=hi, anchor='rm')
     ax0, ax1, ay = x + 18, W - M, CUE_Y
-    col = hi if not last else lift(BODY, -0.1, bg)
-    d.line([ax0, ay, ax1, ay], fill=col, width=5)
-    d.polygon([(ax1, ay), (ax1 - 16, ay - 12), (ax1 - 16, ay + 12)], fill=col)
+    d.line([ax0, ay, ax1, ay], fill=hi, width=5)
+    d.polygon([(ax1, ay), (ax1 - 16, ay - 12), (ax1 - 16, ay + 12)], fill=hi)
 
 
 def cover(series, part, title, dek, contents, media, date, source, out,
