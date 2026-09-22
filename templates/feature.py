@@ -23,6 +23,8 @@ THEMES = {
     'sony-deep':dict(bg=(9, 20, 44),   acc=(0, 112, 209),  hi=(77, 163, 255)),
     'nintendo': dict(bg=(29, 20, 64),  acc=(230, 0, 18),   hi=(255, 96, 106)),
     'nintendo-deep': dict(bg=(38, 8, 16), acc=(230, 0, 18), hi=(255, 96, 106)),
+    'xbox':     dict(bg=(29, 20, 64),  acc=(16, 124, 16),  hi=(82, 204, 82)),
+    'xbox-deep':dict(bg=(8, 22, 14),   acc=(16, 124, 16),  hi=(82, 204, 82)),
 }
 
 
@@ -96,7 +98,7 @@ def cover(series, part, title, dek, contents, media, date, source, out,
 
 def page(series, part, n, section_title, paras, date, source, out, next_title,
          total=4, stat=None, pull=None, media=None, background='voiced',
-         accent='cold', last=False, theme=None):
+         accent='cold', last=False, theme=None, pull_by=None):
     """One section. `stat` is (big, caption); `pull` is a quote line.
     `media` is an optional strip under the section title."""
     (bg, *surf), acc, hi = _theme(theme, background, accent)
@@ -138,6 +140,9 @@ def page(series, part, n, section_title, paras, date, source, out, next_title,
         d.rectangle([M, y, M + 8, y + 72 * len(lines)], fill=acc)
         for ln in lines:
             d.text((M + 48, y), ln, font=qf, fill=INK); y += 72
+        if pull_by:
+            y += 10
+            d.text((M + 48, y), pull_by.upper(), font=F(28, 700), fill=hi); y += 40
     if y > CUE_Y - 60:
         raise ValueError(f'page {n} runs {y - (CUE_Y - 60)}px into the cue: cut copy')
     _cue(im, ('next · ' + next_title) if not last else next_title, acc, bg, last)
