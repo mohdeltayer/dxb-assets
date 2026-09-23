@@ -103,7 +103,10 @@ background-coloured type, set upper case. On `single` it sits inside the
 media panel, bottom left, with the GULF chip to its right when present. On
 the other four it sits top right, level with the header.
 
-Keep it to a word or two — `hands on`, `rumour`, `confirmed`, `sale`.
+Use the agreed chips only (CLAUDE.md, "Chips"). Card lane: `hands on`,
+`opinion`, `interview`, `analysis`, `stats`, `milestone`, `reviews`, `update`,
+`event`, `recap`, `vs`. Fast lane chips live on `fast.py`, which rejects
+anything off its list.
 
 ## The six templates
 

@@ -114,12 +114,12 @@ sit in either, it belongs in the card.
 ## Two lanes: fast and card
 
 The fast lane posts breaking news within minutes, on `templates/fast.py`:
-the image in an exact 16:9 panel taking most of the card, an optional
-label chip, and the same footer as every full card (crest and DXB-KNIGHT
-left, source centre, date right). No headline and no kicker on the card.
-Here the post text carries the facts, attributed
-("Xbox says", "per Windows Central"), because the card deliberately does
-not. Speed never excuses an unverified claim: name the source in the text.
+the image or clip full bleed in a 1600x900 (16:9) frame, a chip on the
+media, an accent rule, and the same footer as every full card (crest and
+DXB-KNIGHT left, source centre, date right). No headline and no kicker on
+the card. Here the post text carries the facts, attributed ("Xbox says",
+"per Windows Central"), because the card deliberately does not. Speed never
+excuses an unverified claim: name the source in the text.
 
 The card lane is the considered `flex.py` card with his take, posted later
 as a reply to his own fast post so it inherits that post's audience. The
@@ -128,6 +128,27 @@ as a reply to his own fast post so it inherits that post's audience. The
 Every image in both lanes gets alt text: an honest description of the card
 that names the game and company, never a keyword list. It goes in job.json
 as `{"file": "card.png", "alt": "..."}`, 1000 characters at most.
+
+## Chips: agreed 23 Sep 2026
+
+Fast-lane chips say what happened and how sure we are. Card-lane chips say
+what kind of piece it is. Background already says whose voice it is, so no
+chip repeats that.
+
+- Fast: BREAKING, JUST IN, OFFICIAL, REPORT, LEAK, RUMOUR, FIRST LOOK,
+  OUT NOW, DELAYED, PRICE. `fast.py` refuses anything else.
+- Card: HANDS ON, OPINION, INTERVIEW, ANALYSIS, STATS, MILESTONE, REVIEWS,
+  UPDATE, EVENT, RECAP, VS.
+- GULF (gold) rides beside either, on `single` and `fast` only.
+
+The chip never claims more certainty than the sourcing has: RUMOUR, REPORT,
+OFFICIAL is a ladder. BREAKING is for unscheduled, major, confirmed news,
+once or twice a week at most; most news is JUST IN. Retired: NEWS, and
+topic words used as chips (SWITCH 2, MAP, DESIGN, SAID, a city name).
+
+In every sweep, each shortlisted item comes with its lane and chip already
+chosen. Minutes old and the image tells it: fast. Needs his take, numbers
+or context: card. Big: fast now, card later as a reply to the fast post.
 
 ## Publishing
 
