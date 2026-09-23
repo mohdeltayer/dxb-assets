@@ -114,9 +114,10 @@ sit in either, it belongs in the card.
 ## Two lanes: fast and card
 
 The fast lane posts breaking news within minutes, on `templates/fast.py`:
-one image, a label, one headline line and the mark, on a 4:3 canvas with
-an exact 16:9 image panel. A headline that needs two lines means it is a
-full card, not a fast one. Here the post text carries the facts, attributed
+the image in an exact 16:9 panel taking most of the card, an optional
+label chip, and the same footer as every full card (crest and DXB-KNIGHT
+left, source centre, date right). No headline and no kicker on the card.
+Here the post text carries the facts, attributed
 ("Xbox says", "per Windows Central"), because the card deliberately does
 not. Speed never excuses an unverified claim: name the source in the text.
 
