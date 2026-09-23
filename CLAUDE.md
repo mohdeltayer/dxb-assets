@@ -125,14 +125,9 @@ The card lane is the considered `flex.py` card with his take, posted later
 as a reply to his own fast post so it inherits that post's audience. The
 "post text and card never say the same thing" rule applies to this lane.
 
-Alt text: the Postiz Public API has no alt-text field (Postiz support
-confirmed, 23 Sep 2026: the image payload is only id and path). `publish.py`
-still accepts `{"file": "card.png", "alt": "..."}` but it never reaches X.
-Alt text can only be added by hand in the Postiz composer (attach image,
-select its thumbnail, fill Alt text). The only way to combine that with this
-pipeline is to queue the job as `"type": "draft"` and have Mohammad add the
-alt text and publish from the composer, which is too slow for the fast lane.
-Do not tell him a post has alt text unless he added it in the composer.
+Alt text is dropped (Mohammad, 23 Sep 2026). The Postiz Public API has no
+alt-text field, so it never reached X; the composer is the only route and
+not worth the manual step. Do not write alt text into job.json.
 
 ## Chips: agreed 23 Sep 2026
 
