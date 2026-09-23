@@ -88,10 +88,12 @@ Destiny United" for what is *Romancing SaGa 3: Destinies Unite*).
 Attribute a company's own numbers to the company: "Capcom says", not a
 bare figure.
 
-Note: session egress policy usually blocks press domains, Steam and
-publisher sites outright. WebSearch still works and is the fallback —
-but say plainly when something is corroborated by search rather than
-read from the primary.
+Network: Mohammad opened the environment's network access on 23 Sep 2026.
+Press sites, Steam, PlayStation Blog, Nintendo and their image CDNs now
+load, so read primaries and fetch art directly. Google Patents, pbs.twimg.com
+and news.xbox.com refuse automated requests at their end; use a press
+article that carries the same image. Say plainly when something is
+corroborated by search rather than read from the primary.
 
 ## No em dashes
 
