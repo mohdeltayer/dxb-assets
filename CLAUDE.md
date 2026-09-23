@@ -125,9 +125,12 @@ The card lane is the considered `flex.py` card with his take, posted later
 as a reply to his own fast post so it inherits that post's audience. The
 "post text and card never say the same thing" rule applies to this lane.
 
-Every image in both lanes gets alt text: an honest description of the card
-that names the game and company, never a keyword list. It goes in job.json
-as `{"file": "card.png", "alt": "..."}`, 1000 characters at most.
+Alt text: `publish.py` accepts `{"file": "card.png", "alt": "..."}` and
+Postiz accepts the field, but it does not reach X. The Stellar Blade fast
+post of 23 Sep carried one and showed no ALT badge. Keep writing it (an
+honest description naming the game and company, never a keyword list) so it
+is ready if Postiz starts passing it through, but do not tell Mohammad a
+post has alt text until a badge has been seen on X.
 
 ## Chips: agreed 23 Sep 2026
 
