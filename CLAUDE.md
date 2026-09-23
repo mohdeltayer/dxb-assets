@@ -111,6 +111,23 @@ Write the post for attention and tone: the drama, the stakes, the reason to
 care. Leave every fact, quote, number and name to the card. If a line could
 sit in either, it belongs in the card.
 
+## Two lanes: fast and card
+
+The fast lane posts breaking news within minutes, on `templates/fast.py`:
+one image, a label, one headline line and the mark, on a 4:3 canvas with
+an exact 16:9 image panel. A headline that needs two lines means it is a
+full card, not a fast one. Here the post text carries the facts, attributed
+("Xbox says", "per Windows Central"), because the card deliberately does
+not. Speed never excuses an unverified claim: name the source in the text.
+
+The card lane is the considered `flex.py` card with his take, posted later
+as a reply to his own fast post so it inherits that post's audience. The
+"post text and card never say the same thing" rule applies to this lane.
+
+Every image in both lanes gets alt text: an honest description of the card
+that names the game and company, never a keyword list. It goes in job.json
+as `{"file": "card.png", "alt": "..."}`, 1000 characters at most.
+
 ## Publishing
 
 Cards render to `cards/YYYY-MM/`, source art to `live/YYYY-MM-DD/`.
