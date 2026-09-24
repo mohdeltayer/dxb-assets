@@ -28,6 +28,22 @@ the regional stories then reach.
 - Global stories carry no Gulf angle unless the region is actually part of
   the story.
 
+## Two accounts (from 24 Sep 2026)
+
+- DXB-KNIGHT (@DXBNIN), English: Mohammad's personal voice, in the Genki
+  or Daniel Ahmed mould. General games news and takes, Gulf sprinkled in.
+- The Digital Lounge, Arabic: a full Arabic games outlet, "the regional
+  IGN" and Mohammad's first entrance into that market. It covers the whole
+  games slate for Arabic readers, not only regional news, in an outlet
+  voice (more news, more volume, no first person). Regional stories lead
+  more often here than on DXB-KNIGHT because its readers are in the region.
+
+Arabic posts are written for Arabic readers, never translated from the
+English post. The two brands never share a crest or palette. Every
+shortlisted story in a sweep gets a lane per account (for example: fast on
+both; card on DXB-KNIGHT only; Digital Lounge only). The Digital Lounge's
+Postiz integration id, mark, palette and Arabic font are pending.
+
 ## Always ask for Mohammad's take before building a card
 
 DXB-KNIGHT is not a wire service. Before rendering any card, ask what he
