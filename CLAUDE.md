@@ -45,8 +45,10 @@ no Arabic leads, no setup work. The plan below stands for when it resumes.
 Arabic posts are written for Arabic readers, never translated from the
 English post. The two brands never share a crest or palette. Every
 shortlisted story in a sweep gets a lane per account (for example: fast on
-both; card on DXB-KNIGHT only; Digital Lounge only). The Digital Lounge's
-Postiz integration id, mark, palette and Arabic font are pending.
+both; card on DXB-KNIGHT only; Digital Lounge only). The Digital Lounge is
+@the_digilounge on X (display name DIGI-ديجي, joined Jan 2024; 19
+followers and 1,565 posts as of 24 Sep 2026). Its Postiz integration id,
+mark, palette and Arabic font are pending.
 
 ## Always ask for Mohammad's take before building a card
 
