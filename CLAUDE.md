@@ -1,5 +1,27 @@
 # Working on DXB-KNIGHT
 
+## What the account is for
+
+DXB-KNIGHT covers games in general and the Gulf in particular. The model
+is Genki on Japan or Daniel Ahmed on China and Asia: a regional specialism
+that runs through a general feed, not a filter every post must pass.
+
+The regional side is the reason the account exists: shed light on what is
+happening in the Gulf games scene, the studios, events, publishers,
+investment, pricing and players that the wider press rarely covers, and be
+one of the few outlets that puts that information out there whether or not
+it trends. Global stories are covered on their merits, without forcing a
+Gulf angle onto them.
+
+In practice:
+- In every sweep, a genuine Gulf story ranks above a global story of
+  similar weight. When there is none, say so; do not invent one.
+- Gulf stories are sourced from the region (regional press, companies,
+  official bodies, Arabic sources) wherever possible, not only from
+  Western outlets rewriting them.
+- Global stories carry no Gulf angle unless the region is actually part of
+  the story.
+
 ## Always ask for Mohammad's take before building a card
 
 DXB-KNIGHT is not a wire service. Before rendering any card, ask what he
