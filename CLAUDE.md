@@ -30,6 +30,10 @@ the regional stories then reach.
 
 ## Two accounts (from 24 Sep 2026)
 
+**On hold (Mohammad, 24 Sep 2026).** The Digital Lounge is paused until
+he says otherwise. Sweeps cover DXB-KNIGHT only: no Digital Lounge lanes,
+no Arabic leads, no setup work. The plan below stands for when it resumes.
+
 - DXB-KNIGHT (@DXBNIN), English: Mohammad's personal voice, in the Genki
   or Daniel Ahmed mould. General games news and takes, Gulf sprinkled in.
 - The Digital Lounge, Arabic: a full Arabic games outlet, "the regional
