@@ -175,6 +175,27 @@ Write the post for attention and tone: the drama, the stakes, the reason to
 care. Leave every fact, quote, number and name to the card. If a line could
 sit in either, it belongs in the card.
 
+## Post text: no mould (Mohammad, 24 Sep 2026)
+
+By 24 Sep every fast post had the same four beats: hook line, "X says"
+facts, a caveat ("The catch:"), a closing question. Read in a row on the
+timeline they looked templated. Pick the shape per story instead:
+
+- One line: out-now posts and dates. The card carries the rest.
+  "BeamNG.drive hits PS5 on October 19. No mods at launch."
+- Number first: when the figure is the story. "$399.99. No game included."
+- Quote first: when someone said something sharp, let the quote lead.
+- His take first: on voiced posts his view opens, the facts follow.
+- Full breakdown: only when the detail is the point (refund rules,
+  eligibility windows).
+
+Closing questions are occasional, only when readers would genuinely want
+to answer; most posts end on a fact or his view. Attribute once, where it
+reads naturally, not "X says" in every paragraph. Never reuse an opener or
+closer within the same evening, and let length vary from one line to a
+few paragraphs. Before queuing a batch, read the posts back to back and
+rewrite any two that share a shape.
+
 ## Two lanes: fast and card
 
 The fast lane posts breaking news within minutes, on `templates/fast.py`:
