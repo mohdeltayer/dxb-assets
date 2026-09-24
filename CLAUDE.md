@@ -13,9 +13,15 @@ one of the few outlets that puts that information out there whether or not
 it trends. Global stories are covered on their merits, without forcing a
 Gulf angle onto them.
 
-In practice:
-- In every sweep, a genuine Gulf story ranks above a global story of
-  similar weight. When there is none, say so; do not invent one.
+In practice the Gulf is sprinkled in, and grows gradually (Mohammad,
+24 Sep 2026): the more the feed leans on the region, the less the wider
+audience engages, so general games coverage leads and builds the audience
+the regional stories then reach.
+- Rank sweeps on general interest first. Include a Gulf story when it is
+  strong enough to interest a general games reader, and frame it as a
+  games story first (the game, the studio, the money), the region second.
+- Aim for a regional story now and then, not a quota. When a sweep has
+  none worth posting, say so; do not invent one.
 - Gulf stories are sourced from the region (regional press, companies,
   official bodies, Arabic sources) wherever possible, not only from
   Western outlets rewriting them.
