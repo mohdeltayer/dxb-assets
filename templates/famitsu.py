@@ -141,10 +141,11 @@ def render(url, stem, date, prev_url=None, background='reported'):
     for s in software:
         s['last'] = last_sw.get((s['plat'], s['jp']))
 
-    sub = f'{span}, {y} · physical + download cards'
-    software_card(software, f'Software top 10 · {sub}', date,
+    software_card(software,
+                  f'Software top 10 · {span}, {y} · physical + download cards',
+                  date,
                   f'{stem}-software.png', background, vs)
-    hardware_card(hardware, last_hw, f'Hardware · {sub}', date,
+    hardware_card(hardware, last_hw, f'Hardware · {span}, {y}', date,
                   f'{stem}-hardware.png', background, vs)
     return software, hardware, last_hw, nxt
 
