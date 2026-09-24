@@ -73,6 +73,17 @@ story built as a `quote` silently loses the Gulf marker.
 
 When the template choice is not obvious, ask rather than guess.
 
+## Japan sales: two cards, one post
+
+Famitsu's weekly physical sales go out as fast as possible after Famitsu
+posts them (usually Thursday 22:00 JST, 17:00 Dubai; holiday weeks move,
+and each article ends with the next date, "次回は...に掲載予定").
+`templates/famitsu.py <famitsu article url> <out-stem> <date>` reads
+Famitsu's own article, not Gematsu's rewrite, and renders a software top 10
+card and a hardware card for the same post. An untranslated title stops
+the run: add the publisher's English name to `TITLES`. Chip STATS, cold,
+reported unless Mohammad gives a take.
+
 ## The lookout is its own format
 
 The pinned month-ahead (`templates/ahead.py`) is not a flex.py card and
