@@ -141,7 +141,10 @@ chip repeats that.
   OUT NOW, DELAYED, PRICE. `fast.py` refuses anything else.
 - Card: HANDS ON, OPINION, INTERVIEW, ANALYSIS, STATS, MILESTONE, REVIEWS,
   UPDATE, EVENT, RECAP, VS.
-- GULF (gold) rides beside either, on `single` and `fast` only.
+- GULF (gold) rides beside either, on `single` and `fast` only. Use it for
+  stories that are about the region (Gulf studios, events, pricing, retail).
+  Do not angle a global launch on whether it reaches the Gulf: Mohammad
+  judges that by the company's real regional presence, not the launch list.
 
 The chip never claims more certainty than the sourcing has: RUMOUR, REPORT,
 OFFICIAL is a ladder. BREAKING is for unscheduled, major, confirmed news,
