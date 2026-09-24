@@ -126,22 +126,26 @@ def render(url, stem, date, prev_url=None, background='reported'):
     y, m1, d1, m2, d2 = period.groups()
     months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
               'Oct', 'Nov', 'Dec']
-    span = (f'{months[int(m1) - 1]} {d1}-{d2}' if m1 == m2 else
-            f'{months[int(m1) - 1]} {d1} to {months[int(m2) - 1]} {d2}')
+    def spanof(p):
+        _, a, b, c, e = p.groups()
+        return (f'{months[int(a) - 1]} {b}-{e}' if a == c else
+                f'{months[int(a) - 1]} {b} to {months[int(c) - 1]} {e}')
+    span = spanof(period)
 
-    last_sw, last_hw = {}, {}
+    last_sw, last_hw, vs = {}, {}, None
     if prev_url:
-        _, _, psw, phw = parse(fetch(prev_url))
+        pperiod, _, psw, phw = parse(fetch(prev_url))
         last_sw = {(s['plat'], s['jp']): s['week'] for s in psw}
         last_hw = {name: week for name, week, _ in families(phw)}
+        vs = spanof(pperiod)
     for s in software:
         s['last'] = last_sw.get((s['plat'], s['jp']))
 
     sub = f'{span}, {y} · physical + download cards'
     software_card(software, f'Software top 10 · {sub}', date,
-                  f'{stem}-software.png', background, bool(prev_url))
+                  f'{stem}-software.png', background, vs)
     hardware_card(hardware, last_hw, f'Hardware · {sub}', date,
-                  f'{stem}-hardware.png', background)
+                  f'{stem}-hardware.png', background, vs)
     return software, hardware, last_hw, nxt
 
 
@@ -201,8 +205,26 @@ def change_pill(d, x_right, cy, change, bg, muted, size=34):
     return pill(d, x_right, cy, '0%', muted, bg, None, size)
 
 
+def key(d, vs, bg, muted, extra=()):
+    """The legend above the footer: what the chips are measured against.
+    Arrows are drawn, like the chips, so no font can drop them."""
+    F, M = flex.F, flex.M
+    f = F(32, 600)
+    cy, x, t = flex.H - 196, M, 26
+    d.polygon([(x, cy + t * .45), (x + t, cy + t * .45), (x + t / 2, cy - t * .45)],
+              fill=UP)
+    x += t + 10
+    d.polygon([(x, cy - t * .45), (x + t, cy - t * .45), (x + t / 2, cy + t * .45)],
+              fill=DOWN)
+    x += t + 18
+    text = f'% change vs last week ({vs})'
+    for mark, what in extra:
+        text += f'  ·  {mark} {what}'
+    d.text((x, cy), text, font=f, fill=muted, anchor='lm')
+
+
 def software_card(software, subheader, date, out, background='reported',
-                  compare=False):
+                  vs=None):
     """Ten rows. Each carries a colour bar and rank in the list cycle, the
     week's number with the lifetime total under it, and, when last week is
     known, a change chip: the percentage for a title that was in last week's
@@ -228,10 +250,10 @@ def software_card(software, subheader, date, out, background='reported',
         chip_right = W - M - 290
         if s['new']:
             left = pill(d, chip_right, mid, 'NEW', acc, bg)
-        elif compare and s['last']:
+        elif vs and s['last']:
             left = change_pill(d, chip_right, mid, pct(s['week'], s['last']),
                                bg, muted)
-        elif compare and s['was']:
+        elif vs and s['was']:
             left = pill(d, chip_right, mid, f'was #{s["was"]}', panel2,
                         flex.BODY, 'up' if s['was'] > s['rank'] else 'down')
         else:
@@ -245,11 +267,19 @@ def software_card(software, subheader, date, out, background='reported',
         d.text((W - M - 30, mid + 30), f'{s["life"]:,} total', font=lf,
                fill=muted, anchor='rm')
         y += STEP
+    if vs:
+        extra = []
+        if any(s['new'] for s in software[:10]):
+            extra.append(('NEW', 'debut'))
+        if any(not s['new'] and not s['last'] and s['was'] for s in software[:10]):
+            extra.append(('was #', "last week's rank"))
+        key(d, vs, bg, muted, extra)
     flex.footer(im, bg, 'Famitsu', date, edge).save(out)
     return out
 
 
-def hardware_card(hardware, last, subheader, date, out, background='reported'):
+def hardware_card(hardware, last, subheader, date, out, background='reported',
+                  vs=None):
     """One block per family: the week's total in its colour, a change chip
     against last week, a bar against the week's leader, then the models
     with the family's lifetime total. Colours follow the list cycle by
@@ -286,6 +316,8 @@ def hardware_card(hardware, last, subheader, date, out, background='reported'):
             d.text((M + 40, y + 180), f'{life:,} total', font=F(36, 600),
                    fill=muted, anchor='lm')
         y += h + 30
+    if vs:
+        key(d, vs, bg, muted)
     flex.footer(im, bg, 'Famitsu', date, edge).save(out)
     return out
 
