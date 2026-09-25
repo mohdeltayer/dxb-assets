@@ -64,6 +64,11 @@ His answer decides the background mode:
 Ask before rendering, not after. A card built without asking is a card
 that reports someone else's story in his name.
 
+The same goes for fast posts (Mohammad, 25 Sep 2026): before queuing a
+batch, ask whether he wants his view on any of them. A post that has gone
+to Postiz can only be edited or deleted by him in the app, so his input
+has to come before the push, or as a reply once it is live.
+
 ## Art goes on top
 
 `single` is the template with the art panel at the top, and it is the
