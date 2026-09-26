@@ -79,12 +79,14 @@ he did.
   more often here than on DXB-KNIGHT because its readers are in the region.
 
 Arabic posts are written for Arabic readers, never translated from the
-English post. Names keep their official Latin form inside the Arabic
-text (Mohammad, 26 Sep 2026): games, series, characters, companies,
-platforms, outlets and people, written as the company writes them
-(Fortnite, Sonic, Dr. Eggman, Epic Games, SEGA, PS5, Famitsu, Takayuki
-Kawasaki), never transliterated (not فورتنايت, سونيك, فاميتسو). The same
-goes for the source on an Arabic card. The two brands never share a mark; their palettes are kin
+English post. Names carry both forms (Mohammad, 26 Sep 2026): the
+Arabic spelling, then the official Latin form in brackets, "أعلنت شركة
+نينتيندو (Nintendo) أن". This covers games, series, characters,
+companies, platforms, outlets and people (فورتنايت (Fortnite), سيغا
+(SEGA), تاكايوكي كاواساكي (Takayuki Kawasaki)). Both at the first
+mention; later mentions in the same post use the Arabic alone. The Latin
+is written as the company writes it. The source on an Arabic card, where
+there is no room for both, stays in Arabic (فاميتسو). The two brands never share a mark; their palettes are kin
 (Mohammad, 26 Sep 2026). What tells a Digital Lounge card apart is the
 indigo ground, the play mark, Dubai type and the right-to-left footer.
 No pink or magenta anywhere on it: to a Gulf reader it reads as girlish
