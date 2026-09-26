@@ -226,7 +226,9 @@ what kind of piece it is. Background already says whose voice it is, so no
 chip repeats that.
 
 - Fast: BREAKING, JUST IN, OFFICIAL, REPORT, LEAK, RUMOUR, FIRST LOOK,
-  OUT NOW, DELAYED, PRICE. `fast.py` refuses anything else.
+  OUT NOW, DELAYED, PRICE, HANDS ON. `fast.py` refuses anything else.
+  HANDS ON (Mohammad, 26 Sep 2026) is for a fast post led by his own
+  play time, when no news chip fits and JUST IN would oversell it.
 - Card: HANDS ON, OPINION, INTERVIEW, ANALYSIS, STATS, MILESTONE, REVIEWS,
   UPDATE, EVENT, RECAP, VS.
 - GULF (gold) rides beside either, on `single` and `fast` only. Use it for

@@ -29,7 +29,7 @@ F = flex.F
 
 #: The agreed fast-lane chips. What happened and how sure we are.
 CHIPS = ('breaking', 'just in', 'official', 'report', 'leak', 'rumour',
-         'first look', 'out now', 'delayed', 'price')
+         'first look', 'out now', 'delayed', 'price', 'hands on')
 
 
 def _still(path, backing, crop):
