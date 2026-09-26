@@ -343,8 +343,8 @@ alternative in brackets only when he asks for it on a given story.
 - Fast: عاجل BREAKING, جديد JUST IN (الآن, وصل للتو), رسمي OFFICIAL,
   تقرير REPORT (حسب تقارير), تسريب LEAK, شائعة RUMOUR (إشاعة),
   نظرة أولى FIRST LOOK (أول نظرة), متوفر الآن OUT NOW (متاح الآن, صدر),
-  تأجيل DELAYED (مؤجل), السعر PRICE (سعر), انطباعات HANDS ON (تجربة).
-- Card: انطباعات HANDS ON (تجربة), رأي OPINION, حوار INTERVIEW (مقابلة),
+  تأجيل DELAYED (مؤجل), السعر PRICE (سعر), نظرة أولى HANDS ON (انطباعات).
+- Card: نظرة أولى HANDS ON (انطباعات), رأي OPINION, حوار INTERVIEW (مقابلة),
   تحليل ANALYSIS, أرقام STATS (إحصائيات), إنجاز MILESTONE (رقم قياسي),
   التقييمات REVIEWS (المراجعات), تحديث UPDATE, فعالية EVENT (حدث),
   ملخص RECAP, مقارنة VS (ضد).
@@ -354,8 +354,9 @@ alternative in brackets only when he asks for it on a given story.
   text, beside the news chip, never azure. Same test as GULF: only when
   the country is the story, not because a global launch includes it.
 - The same ladder and BREAKING rule apply: عاجل is rare, most news is جديد.
-- HANDS ON is انطباعات, not تجربة (Mohammad, 26 Sep 2026): تجربة reads as
-  a test or trial, not play time.
+- HANDS ON is نظرة أولى (Mohammad, 26 Sep 2026), better for an early look
+  or preview; تجربة reads as a test or trial, and انطباعات is the fallback.
+  It shares the word with FIRST LOOK, which is fine: both are an early look.
 
 In every sweep, each shortlisted item comes with its lane and chip already
 chosen. Minutes old and the image tells it: fast. Needs his take, numbers
