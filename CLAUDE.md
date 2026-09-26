@@ -79,16 +79,19 @@ he did.
   more often here than on DXB-KNIGHT because its readers are in the region.
 
 Arabic posts are written for Arabic readers, never translated from the
-English post. Names carry both forms (Mohammad, 26 Sep 2026): the
-Arabic spelling, then the official Latin form in brackets, "أعلنت شركة
-نينتيندو (Nintendo) أن". This covers games, series, characters,
-companies, platforms, outlets and people (فورتنايت (Fortnite), سيغا
-(SEGA), تاكايوكي كاواساكي (Takayuki Kawasaki)). Both at the first
-mention; later mentions in the same post use the Arabic alone. The Latin
-is written as the company writes it. Cards do the same wherever there is
-room and keep the Arabic alone where there is not: the card source is
-passed as "فاميتسو (Famitsu)" and `fast_ar` drops the bracket itself when
-it would crowd the footer. The two brands never share a mark; their palettes are kin
+English post. Names in Arabic posts (Mohammad, 26 Sep 2026):
+- Games, series, characters and platforms stay in English only, as the
+  publisher writes them: The Witcher 3: Wild Hunt Remastered, Dr. Eggman,
+  PS5, Xbox Series X|S, Nintendo Switch 2, Steam.
+- Companies, studios, outlets and people carry both forms, Arabic then
+  the Latin in brackets, at the first mention: "أعلنت شركة نينتيندو
+  (Nintendo) أن", ريميدي (Remedy), بيور إكس بوكس (Pure Xbox), تاكايوكي
+  كاواساكي (Takayuki Kawasaki). Later mentions use the Arabic alone.
+- Cards follow the same rule where there is room and keep the Arabic
+  alone where there is not: `fast_ar` drops the bracket itself when the
+  source would crowd the footer.
+
+The two brands never share a mark; their palettes are kin
 (Mohammad, 26 Sep 2026). What tells a Digital Lounge card apart is the
 indigo ground, the play mark, Dubai type and the right-to-left footer.
 No pink or magenta anywhere on it: to a Gulf reader it reads as girlish
