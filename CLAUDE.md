@@ -113,6 +113,14 @@ Brand kit (Mohammad, 26 Sep 2026):
   the English form, printed as "26 سبتمبر 2026" in Western digits;
   `source` as the Arabic reader knows it. It refuses any chip or country
   outside the agreed lists.
+- Footer: the banner's wave lines behind it, subtle (Mohammad, 26 Sep
+  2026), varied by `theme`, picked per story like DXB-KNIGHT's accent:
+  cold indigo to azure (sci-fi, horror, hardware, business), stylized
+  indigo to periwinkle (RPG, fantasy, anime, story-led), playful azure to
+  mint (platformers, party, sports), spectacle azure to amber
+  (blockbusters, film and TV). Chip and rule stay azure on every theme.
+  No blend may pass through pink: indigo into amber does, so spectacle
+  starts from azure.
 
 ## Always ask for Mohammad's take before building a card
 

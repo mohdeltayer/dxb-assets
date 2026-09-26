@@ -8,7 +8,9 @@ Dubai type, the play mark. No pink or magenta.
 Dubai's licence forbids redistribution and this repo is public, so the
 font is not in git. Unzip Mohammad's dubai.zip into FONTS before rendering.
 """
+import math
 import os
+import zlib
 
 from PIL import Image, ImageDraw, ImageFont
 import fast
@@ -25,6 +27,19 @@ def hx(h):
 GROUND, AZURE, INDIGO = hx('#141332'), hx('#28B6F6'), hx('#5552E0')
 INK, BODY = hx('#F4F3FF'), hx('#C9C8E6')
 AR = dict(direction='rtl', language='ar')
+
+#: The banner's wave lines, repeated faintly behind the footer. The theme
+#: follows the story the way DXB-KNIGHT's accent does; the chip and rule
+#: stay azure on every theme. Each entry: left colour, right colour,
+#: wave frequency, amplitude, line spacing. No pink or magenta.
+THEMES = {
+    'cold':      (INDIGO, AZURE, 4.0, 34, 16),        # sci-fi, horror, hardware, business
+    'stylized':  (INDIGO, hx('#A5A3FF'), 2.4, 46, 18),  # RPG, fantasy, anime, story-led
+    'playful':   (AZURE, hx('#3DDCB4'), 9.0, 20, 14),   # platformers, party, sports
+    'spectacle': (AZURE, hx('#FFB547'), 6.0, 40, 11),   # blockbusters, film and TV
+}
+#: How far the lines rise out of the ground: subtle, the type sits on top.
+STRENGTH = 0.45
 
 #: The agreed picks, then the alternatives used only when Mohammad asks.
 PICKS = ('عاجل', 'جديد', 'رسمي', 'تقرير', 'تسريب', 'شائعة', 'نظرة أولى',
@@ -75,8 +90,32 @@ def _chips(d, label, country):
         _chip(d, country, x, INDIGO, INK)
 
 
-def _footer(im, source, date):
-    W, M, MH, RULE = fast.W, fast.M, fast.MH, fast.RULE
+def _waves(w, h, theme, seed):
+    """Footer-sized cut of the banner lines. `seed` shifts the phase so no
+    two cards share exactly the same footer."""
+    left, right, freq, amp, gap = THEMES[theme]
+    k = 3
+    big = Image.new('RGB', (w * k, h * k), GROUND)
+    d = ImageDraw.Draw(big)
+    ph = (seed % 628) / 100
+    for j in range(-4, h // gap + 5):
+        pts = []
+        for x in range(0, w * k + 24, 12):
+            u = x / (w * k)
+            y = (j * gap + amp * math.sin(u * freq + j * 0.22 + ph)
+                 + amp * 0.5 * math.sin(u * freq * 2.3 + ph * 1.7)) * k
+            pts.append((x, y))
+        for a, b in zip(pts, pts[1:]):
+            u = a[0] / (w * k)
+            c = tuple(int(left[i] + (right[i] - left[i]) * u) for i in range(3))
+            c = tuple(int(GROUND[i] + (c[i] - GROUND[i]) * STRENGTH) for i in range(3))
+            d.line((a, b), fill=c, width=2 * k)
+    return big.resize((w, h), Image.LANCZOS)
+
+
+def _footer(im, source, date, theme, seed):
+    W, H, M, MH, RULE = fast.W, fast.H, fast.M, fast.MH, fast.RULE
+    im.paste(_waves(W, H - MH - RULE, theme, seed), (0, MH + RULE))
     d = ImageDraw.Draw(im)
     d.rectangle([0, MH, W, MH + RULE], fill=AZURE)
     base = MH + RULE + 62
@@ -93,15 +132,19 @@ def _footer(im, source, date):
     d.text((M, base), arabic_date(date), font=F('Medium', 36), fill=BODY, anchor='lm', **AR)
 
 
-def fast_ar(media, date, source, out, label=None, country=None, crop=False,
-            video=None, clip_start=0, clip_seconds=8, audio=False):
+def fast_ar(media, date, source, out, label=None, country=None, theme='cold',
+            crop=False, video=None, clip_start=0, clip_seconds=8, audio=False):
     """`date` in the English form ('26 Sep 2026'); `source` as the Arabic
-    reader knows it (فاميتسو, IGN)."""
+    reader knows it (فاميتسو, IGN); `theme` one of THEMES, chosen per story
+    like DXB-KNIGHT's accent."""
+    if theme not in THEMES:
+        raise ValueError(f'theme is one of {", ".join(THEMES)}')
+    seed = zlib.crc32(os.path.basename(out).encode())
     if label and label not in PICKS + ALTERNATIVES:
         raise ValueError(f'"{label}" is not an Arabic fast chip: {"، ".join(PICKS)}')
     if country and country not in COUNTRIES:
         raise ValueError(f'"{country}" is not a country chip: {"، ".join(COUNTRIES)}')
     return fast.compose(media, out, GROUND,
-                        lambda im: _footer(im, source, date),
+                        lambda im: _footer(im, source, date, theme, seed),
                         lambda d: _chips(d, label, country),
                         crop, video, clip_start, clip_seconds, audio)
