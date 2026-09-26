@@ -104,9 +104,15 @@ Brand kit (Mohammad, 26 Sep 2026):
   public, so the TTFs never go in git: they live in
   `/root/fonts-private/dubai/`, which a new container does not have. Ask
   Mohammad to upload `dubai.zip` again and unzip it there.
-- Banner: not yet agreed. Proposed: the old wave lines redrawn, bright
-  indigo left to azure right, with the name in Dubai on a dark plate
-  (`live/2026-09-26/digital-lounge/digi3-banner.png`).
+- Banner: the old wave lines redrawn, bright indigo left to azure right,
+  with the name in Dubai on a dark plate
+  (`live/2026-09-26/digital-lounge/digi3-banner.png`, sent 26 Sep).
+- Fast card: `templates/fast_ar.py`, `fast_ar(media, date, source, out,
+  label=None, country=None, crop=False, video=...)`. Same frame as
+  `fast.py` (both call `fast.compose`), mirrored right to left. `date` in
+  the English form, printed as "26 سبتمبر 2026" in Western digits;
+  `source` as the Arabic reader knows it. It refuses any chip or country
+  outside the agreed lists.
 
 ## Always ask for Mohammad's take before building a card
 
@@ -298,6 +304,24 @@ The chip never claims more certainty than the sourcing has: RUMOUR, REPORT,
 OFFICIAL is a ladder. BREAKING is for unscheduled, major, confirmed news,
 once or twice a week at most; most news is JUST IN. Retired: NEWS, and
 topic words used as chips (SWITCH 2, MAP, DESIGN, SAID, a city name).
+
+Arabic chips (Mohammad, 26 Sep 2026). Use the pick; switch to the
+alternative in brackets only when he asks for it on a given story.
+
+- Fast: عاجل BREAKING, جديد JUST IN (الآن, وصل للتو), رسمي OFFICIAL,
+  تقرير REPORT (حسب تقارير), تسريب LEAK, شائعة RUMOUR (إشاعة),
+  نظرة أولى FIRST LOOK (أول نظرة), متوفر الآن OUT NOW (متاح الآن, صدر),
+  تأجيل DELAYED (مؤجل), السعر PRICE (سعر), تجربة HANDS ON (انطباعات).
+- Card: تجربة HANDS ON (انطباعات), رأي OPINION, حوار INTERVIEW (مقابلة),
+  تحليل ANALYSIS, أرقام STATS (إحصائيات), إنجاز MILESTONE (رقم قياسي),
+  التقييمات REVIEWS (المراجعات), تحديث UPDATE, فعالية EVENT (حدث),
+  ملخص RECAP, مقارنة VS (ضد).
+- No GULF chip on Arabic. A regional story names its country instead:
+  الإمارات, السعودية, قطر, الكويت, البحرين, عُمان, and the wider Arab world
+  the same way (مصر, الأردن, المغرب). Bright indigo `#5552E0` with ink
+  text, beside the news chip, never azure. Same test as GULF: only when
+  the country is the story, not because a global launch includes it.
+- The same ladder and BREAKING rule apply: عاجل is rare, most news is جديد.
 
 In every sweep, each shortlisted item comes with its lane and chip already
 chosen. Minutes old and the image tells it: fast. Needs his take, numbers

@@ -77,21 +77,30 @@ def fast(media, date, source, out, label=None, gulf=False,
         raise ValueError(f'"{label}" is not a fast-lane chip: {", ".join(CHIPS)}')
     bg = flex.ground(background)[0]
     acc = flex.resolve(accent)
-    backing = (0, 0, 0)
+    return compose(media, out, bg,
+                   lambda im: _footer(im, bg, acc, source, date),
+                   lambda d: _chips(d, label, gulf, acc, bg),
+                   crop, video, clip_start, clip_seconds, audio)
 
+
+def compose(media, out, bg, paint_footer, paint_chips, crop=False,
+            video=None, clip_start=0, clip_seconds=8, audio=False):
+    """The frame both brands share: media full bleed, then the brand's own
+    footer and chips painted on top. A still or, with `video`, an MP4."""
+    backing = (0, 0, 0)
     im = Image.new('RGB', (W, H), bg)
     if not video:
         im.paste(_still(media, backing, crop), (0, 0))
-        _footer(im, bg, acc, source, date)
-        _chips(ImageDraw.Draw(im), label, gulf, acc, bg)
+        paint_footer(im)
+        paint_chips(ImageDraw.Draw(im))
         im.save(out)
         return out
 
     if not out.lower().endswith('.mp4'):
         raise ValueError('a video card must be written to a .mp4 path')
-    _footer(im, bg, acc, source, date)
+    paint_footer(im)
     top = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-    _chips(ImageDraw.Draw(top), label, gulf, acc, bg)
+    paint_chips(ImageDraw.Draw(top))
     clips = ([(video, clip_start, clip_seconds)] if isinstance(video, str)
              else [tuple(c) for c in video])
     tmp = tempfile.mkdtemp(prefix='dxbfast-')
