@@ -70,7 +70,9 @@ post is written for its own readers.
   more often here than on DXB-KNIGHT because its readers are in the region.
 
 Arabic posts are written for Arabic readers, never translated from the
-English post. The two brands never share a crest or palette.
+English post. The two brands never share a mark; their palettes are kin
+(Mohammad, 26 Sep 2026), so magenta, which DXB-KNIGHT never uses, is
+what marks a Digital Lounge card.
 
 Settled 26 Sep 2026: the name is Digital Lounge, ديجيتال لاونج (display
 name "ديجيتال لاونج | أخبار الألعاب"), and it stays; renaming on the spot
@@ -78,7 +80,7 @@ is what held it back before, so changes wait for data. Scope is games
 only: news, hardware, the business, the Gulf and Arab scene, esports when
 big or regional. No AI, phones or general tech, and film or TV only for a
 game adaptation gamers are talking about; mixing topics scattered its
-audience before. Each brand has its own name, mark, palette and fonts;
+audience before. Each brand has its own name, mark and fonts;
 the layouts, chips and workflow are shared and restyled per brand (the
 Arabic fast card is the same frame, mirrored right to left). Every
 shortlisted story in a sweep gets a lane per account (for example: fast on
@@ -86,8 +88,23 @@ both; card on DXB-KNIGHT only; Digital Lounge only). The Digital Lounge is
 @the_digilounge on X (display name DIGI-ديجي until 26 Sep, joined Jan 2024; 19
 followers and 1,565 posts as of 24 Sep 2026). Connected to Postiz on
 26 Sep 2026 as integration `cmuifxrd70mbdo80y235utthm` (DXB-KNIGHT is
-`cmtk7cltp0030my0yj6glcyru`); check the id on every Arabic job.json. Its
-mark, palette and Arabic font are pending.
+`cmtk7cltp0030my0yj6glcyru`); check the id on every Arabic job.json.
+
+Brand kit (Mohammad, 26 Sep 2026):
+- Mark: the existing azure play button on an indigo radial ground,
+  `templates/digi-mark.jpg` (400x400, from his upload). It stays.
+- Palette, sampled from the mark and the old banner: ground `#141332`,
+  panel `#1E1D4A`, edge `#3F3DA8`, azure `#28B6F6`, magenta `#EE33DD`,
+  ink `#F4F3FF`, body `#C9C8E6`. Magenta carries chips and rules.
+- Font: Dubai (Light, Regular, Medium, Bold) for Arabic and Latin. Its
+  EULA allows commercial use but forbids redistribution and this repo is
+  public, so the TTFs never go in git: they live in
+  `/root/fonts-private/dubai/`, which a new container does not have. Ask
+  Mohammad to upload `dubai.zip` again and unzip it there.
+- Banner: not yet agreed. Proposed: the old wave lines redrawn, magenta
+  left to azure right, with the name in Dubai on a dark plate
+  (`live/2026-09-26/digital-lounge/digi2-banner.png`, drawn by
+  `boards2.py`).
 
 ## Always ask for Mohammad's take before building a card
 
