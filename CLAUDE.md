@@ -61,6 +61,12 @@ Sweeps therefore shortlist more for Arabic than for English, including
 stories DXB-KNIGHT passes on. Same story, not same text: each account's
 post is written for its own readers.
 
+Both languages are prepared together (Mohammad, 26 Sep 2026): every
+shortlisted story comes with its English and Arabic post text and card
+side by side, and he approves them as a pair. The Digital Lounge has no
+X Premium, so its posts must stay within 280 characters (DXB-KNIGHT's
+longer posts go through).
+
 - DXB-KNIGHT (@DXBNIN), English: Mohammad's personal voice, in the Genki
   or Daniel Ahmed mould. General games news and takes, Gulf sprinkled in.
 - The Digital Lounge, Arabic: a full Arabic games outlet, "the regional
