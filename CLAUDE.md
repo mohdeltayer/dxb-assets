@@ -70,10 +70,20 @@ post is written for its own readers.
   more often here than on DXB-KNIGHT because its readers are in the region.
 
 Arabic posts are written for Arabic readers, never translated from the
-English post. The two brands never share a crest or palette. Every
+English post. The two brands never share a crest or palette.
+
+Settled 26 Sep 2026: the name is Digital Lounge, ديجيتال لاونج (display
+name "ديجيتال لاونج | أخبار الألعاب"), and it stays; renaming on the spot
+is what held it back before, so changes wait for data. Scope is games
+only: news, hardware, the business, the Gulf and Arab scene, esports when
+big or regional. No AI, phones or general tech, and film or TV only for a
+game adaptation gamers are talking about; mixing topics scattered its
+audience before. Each brand has its own name, mark, palette and fonts;
+the layouts, chips and workflow are shared and restyled per brand (the
+Arabic fast card is the same frame, mirrored right to left). Every
 shortlisted story in a sweep gets a lane per account (for example: fast on
 both; card on DXB-KNIGHT only; Digital Lounge only). The Digital Lounge is
-@the_digilounge on X (display name DIGI-ديجي, joined Jan 2024; 19
+@the_digilounge on X (display name DIGI-ديجي until 26 Sep, joined Jan 2024; 19
 followers and 1,565 posts as of 24 Sep 2026). Connected to Postiz on
 26 Sep 2026 as integration `cmuifxrd70mbdo80y235utthm` (DXB-KNIGHT is
 `cmtk7cltp0030my0yj6glcyru`); check the id on every Arabic job.json. Its
