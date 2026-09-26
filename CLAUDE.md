@@ -28,6 +28,29 @@ the regional stories then reach.
 - Global stories carry no Gulf angle unless the region is actually part of
   the story.
 
+## Growth: content, not tricks (Mohammad, 26 Sep 2026)
+
+After a one-week audit of @DXBNIN (Grok, 19 to 26 Sep; figures spot-checked
+against X), these are agreed:
+
+- DXB-KNIGHT is a voice from the region talking outward about the whole
+  games slate, in the Genki mould. The Gulf side is small because the
+  market is small; that is expected, not a problem to fix. The Arabic
+  account is the one aimed at the region.
+- Grow through the quality of the content and how it is presented. No
+  piggybacking: never post a card under someone else's post, no
+  follow/unfollow games, no reply bait. A reply under another account is
+  fine when it adds something real (a number, a comparison, first-hand
+  detail), is plain text, and Mohammad chooses to post it.
+- Hero posts (the FFXIV-on-Switch-2 shape: his setup, native video, one
+  verdict) go out when they are ready, not on a schedule. Longer capture
+  is the next step (the Switch 2 clip limit is 30 seconds).
+- Analysis cards go out while the topic is live, not as overnight filler.
+- Re-audit weekly with the same Grok prompt and compare.
+
+Open, not agreed: spacing of scheduled cards. The audit found the 03:00 to
+08:00 Dubai clusters weakest (median 21 views, 8 posts, 25 to 26 Sep).
+
 ## Two accounts (from 24 Sep 2026)
 
 **On hold (Mohammad, 24 Sep 2026).** The Digital Lounge is paused until
