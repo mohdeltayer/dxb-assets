@@ -121,6 +121,10 @@ Brand kit (Mohammad, 26 Sep 2026):
   (blockbusters, film and TV). Chip and rule stay azure on every theme.
   No blend may pass through pink: indigo into amber does, so spectacle
   starts from azure.
+- Animated footer (prototype, 26 Sep 2026): `animate=6` renders a still
+  card as a seamless 6 second MP4 loop with only the footer lines
+  drifting. Not for clip cards, which already move. When to use it over
+  the still is not yet agreed.
 
 ## Always ask for Mohammad's take before building a card
 

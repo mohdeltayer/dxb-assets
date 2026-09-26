@@ -10,6 +10,7 @@ font is not in git. Unzip Mohammad's dubai.zip into FONTS before rendering.
 """
 import math
 import os
+import subprocess
 import zlib
 
 from PIL import Image, ImageDraw, ImageFont
@@ -90,20 +91,22 @@ def _chips(d, label, country):
         _chip(d, country, x, INDIGO, INK)
 
 
-def _waves(w, h, theme, seed):
+def _waves(w, h, theme, seed, t=0.0):
     """Footer-sized cut of the banner lines. `seed` shifts the phase so no
-    two cards share exactly the same footer."""
+    two cards share exactly the same footer; `t` in [0, 1) drifts it, and
+    both terms move by whole turns so t = 1 lands back on t = 0."""
     left, right, freq, amp, gap = THEMES[theme]
     k = 3
     big = Image.new('RGB', (w * k, h * k), GROUND)
     d = ImageDraw.Draw(big)
     ph = (seed % 628) / 100
+    turn = 2 * math.pi * t
     for j in range(-4, h // gap + 5):
         pts = []
         for x in range(0, w * k + 24, 12):
             u = x / (w * k)
-            y = (j * gap + amp * math.sin(u * freq + j * 0.22 + ph)
-                 + amp * 0.5 * math.sin(u * freq * 2.3 + ph * 1.7)) * k
+            y = (j * gap + amp * math.sin(u * freq + j * 0.22 + ph + turn)
+                 + amp * 0.5 * math.sin(u * freq * 2.3 + ph * 1.7 - 2 * turn)) * k
             pts.append((x, y))
         for a, b in zip(pts, pts[1:]):
             u = a[0] / (w * k)
@@ -113,9 +116,9 @@ def _waves(w, h, theme, seed):
     return big.resize((w, h), Image.LANCZOS)
 
 
-def _footer(im, source, date, theme, seed):
+def _footer(im, source, date, theme, seed, t=0.0):
     W, H, M, MH, RULE = fast.W, fast.H, fast.M, fast.MH, fast.RULE
-    im.paste(_waves(W, H - MH - RULE, theme, seed), (0, MH + RULE))
+    im.paste(_waves(W, H - MH - RULE, theme, seed, t), (0, MH + RULE))
     d = ImageDraw.Draw(im)
     d.rectangle([0, MH, W, MH + RULE], fill=AZURE)
     base = MH + RULE + 62
@@ -133,13 +136,20 @@ def _footer(im, source, date, theme, seed):
 
 
 def fast_ar(media, date, source, out, label=None, country=None, theme='cold',
-            crop=False, video=None, clip_start=0, clip_seconds=8, audio=False):
+            crop=False, video=None, clip_start=0, clip_seconds=8, audio=False,
+            animate=0):
     """`date` in the English form ('26 Sep 2026'); `source` as the Arabic
     reader knows it (فاميتسو, IGN); `theme` one of THEMES, chosen per story
-    like DXB-KNIGHT's accent."""
+    like DXB-KNIGHT's accent. `animate=6` writes a still card whose footer
+    lines drift, as a seamless 6 second MP4 loop."""
     if theme not in THEMES:
         raise ValueError(f'theme is one of {", ".join(THEMES)}')
     seed = zlib.crc32(os.path.basename(out).encode())
+    if animate:
+        if video:
+            raise ValueError('animate is for still cards; a clip already moves')
+        return _animated(media, date, source, out, label, country, theme, crop,
+                         seed, animate)
     if label and label not in PICKS + ALTERNATIVES:
         raise ValueError(f'"{label}" is not an Arabic fast chip: {"، ".join(PICKS)}')
     if country and country not in COUNTRIES:
@@ -148,3 +158,27 @@ def fast_ar(media, date, source, out, label=None, country=None, theme='cold',
                         lambda im: _footer(im, source, date, theme, seed),
                         lambda d: _chips(d, label, country),
                         crop, video, clip_start, clip_seconds, audio)
+
+
+def _animated(media, date, source, out, label, country, theme, crop, seed, seconds,
+              fps=30):
+    if not out.lower().endswith('.mp4'):
+        raise ValueError('an animated card must be written to a .mp4 path')
+    W, H = fast.W, fast.H
+    base = Image.new('RGB', (W, H), GROUND)
+    base.paste(fast._still(media, (0, 0, 0), crop), (0, 0))
+    _chips(ImageDraw.Draw(base), label, country)
+    n = int(seconds * fps)
+    cmd = ['ffmpeg', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24',
+           '-s', f'{W}x{H}', '-r', str(fps), '-i', '-', '-c:v', 'libx264',
+           '-preset', 'medium', '-crf', '18', '-pix_fmt', 'yuv420p',
+           '-movflags', '+faststart', out]
+    p = subprocess.Popen(cmd, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+    for f in range(n):
+        frame = base.copy()
+        _footer(frame, source, date, theme, seed, f / n)
+        p.stdin.write(frame.tobytes())
+    p.stdin.close()
+    if p.wait() != 0:
+        raise RuntimeError(f'ffmpeg failed:\n{p.stderr.read().decode()[-1200:]}')
+    return out
