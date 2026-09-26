@@ -53,9 +53,13 @@ Open, not agreed: spacing of scheduled cards. The audit found the 03:00 to
 
 ## Two accounts (from 24 Sep 2026)
 
-**On hold (Mohammad, 24 Sep 2026).** The Digital Lounge is paused until
-he says otherwise. Sweeps cover DXB-KNIGHT only: no Digital Lounge lanes,
-no Arabic leads, no setup work. The plan below stands for when it resumes.
+**Resumed (Mohammad, 26 Sep 2026).** The hold set on 24 Sep is lifted.
+Every story DXB-KNIGHT posts also goes out on The Digital Lounge, and the
+Arabic side runs at a higher cadence on top of that: the Arabic games
+space is thin and the account is small, so volume is how it gets found.
+Sweeps therefore shortlist more for Arabic than for English, including
+stories DXB-KNIGHT passes on. Same story, not same text: each account's
+post is written for its own readers.
 
 - DXB-KNIGHT (@DXBNIN), English: Mohammad's personal voice, in the Genki
   or Daniel Ahmed mould. General games news and takes, Gulf sprinkled in.
