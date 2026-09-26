@@ -71,8 +71,10 @@ post is written for its own readers.
 
 Arabic posts are written for Arabic readers, never translated from the
 English post. The two brands never share a mark; their palettes are kin
-(Mohammad, 26 Sep 2026), so magenta, which DXB-KNIGHT never uses, is
-what marks a Digital Lounge card.
+(Mohammad, 26 Sep 2026). What tells a Digital Lounge card apart is the
+indigo ground, the play mark, Dubai type and the right-to-left footer.
+No pink or magenta anywhere on it: to a Gulf reader it reads as girlish
+or for kids (Mohammad, 26 Sep 2026).
 
 Settled 26 Sep 2026: the name is Digital Lounge, ديجيتال لاونج (display
 name "ديجيتال لاونج | أخبار الألعاب"), and it stays; renaming on the spot
@@ -94,17 +96,17 @@ Brand kit (Mohammad, 26 Sep 2026):
 - Mark: the existing azure play button on an indigo radial ground,
   `templates/digi-mark.jpg` (400x400, from his upload). It stays.
 - Palette, sampled from the mark and the old banner: ground `#141332`,
-  panel `#1E1D4A`, edge `#3F3DA8`, azure `#28B6F6`, magenta `#EE33DD`,
-  ink `#F4F3FF`, body `#C9C8E6`. Magenta carries chips and rules.
+  panel `#1E1D4A`, edge `#3F3DA8`, azure `#28B6F6`, bright indigo
+  `#5552E0`, ink `#F4F3FF`, body `#C9C8E6`. Azure carries chips (ground
+  text on azure) and the rule under the media.
 - Font: Dubai (Light, Regular, Medium, Bold) for Arabic and Latin. Its
   EULA allows commercial use but forbids redistribution and this repo is
   public, so the TTFs never go in git: they live in
   `/root/fonts-private/dubai/`, which a new container does not have. Ask
   Mohammad to upload `dubai.zip` again and unzip it there.
-- Banner: not yet agreed. Proposed: the old wave lines redrawn, magenta
-  left to azure right, with the name in Dubai on a dark plate
-  (`live/2026-09-26/digital-lounge/digi2-banner.png`, drawn by
-  `boards2.py`).
+- Banner: not yet agreed. Proposed: the old wave lines redrawn, bright
+  indigo left to azure right, with the name in Dubai on a dark plate
+  (`live/2026-09-26/digital-lounge/digi3-banner.png`).
 
 ## Always ask for Mohammad's take before building a card
 
