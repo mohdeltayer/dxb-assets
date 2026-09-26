@@ -63,9 +63,12 @@ post is written for its own readers.
 
 Both languages are prepared together (Mohammad, 26 Sep 2026): every
 shortlisted story comes with its English and Arabic post text and card
-side by side, and he approves them as a pair. The Digital Lounge has no
-X Premium, so its posts must stay within 280 characters (DXB-KNIGHT's
-longer posts go through).
+side by side, and he approves them as a pair. The Digital Lounge took X
+Premium on 26 Sep 2026, so long posts are fine on both accounts. Postiz
+caches a channel's profile (name, picture, Premium) from when it was
+connected: after a change on X it rejects long posts with "post is too
+long" until Mohammad reconnects the channel. The id stayed the same when
+he did.
 
 - DXB-KNIGHT (@DXBNIN), English: Mohammad's personal voice, in the Genki
   or Daniel Ahmed mould. General games news and takes, Gulf sprinkled in.
