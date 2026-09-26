@@ -70,7 +70,9 @@ English post. The two brands never share a crest or palette. Every
 shortlisted story in a sweep gets a lane per account (for example: fast on
 both; card on DXB-KNIGHT only; Digital Lounge only). The Digital Lounge is
 @the_digilounge on X (display name DIGI-ديجي, joined Jan 2024; 19
-followers and 1,565 posts as of 24 Sep 2026). Its Postiz integration id,
+followers and 1,565 posts as of 24 Sep 2026). Connected to Postiz on
+26 Sep 2026 as integration `cmuifxrd70mbdo80y235utthm` (DXB-KNIGHT is
+`cmtk7cltp0030my0yj6glcyru`); check the id on every Arabic job.json. Its
 mark, palette and Arabic font are pending.
 
 ## Always ask for Mohammad's take before building a card
