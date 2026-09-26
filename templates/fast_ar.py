@@ -39,6 +39,10 @@ THEMES = {
     'playful':   (AZURE, hx('#3DDCB4'), 9.0, 20, 14),   # platformers, party, sports
     'spectacle': (AZURE, hx('#FFB547'), 6.0, 40, 11),   # blockbusters, film and TV
 }
+#: The source sits between the name and the date. Wider than this, the
+#: Latin in brackets is dropped and the Arabic stands alone.
+SOURCE_MAX = 620
+
 #: How far the lines rise out of the ground: subtle, the type sits on top.
 STRENGTH = 0.45
 
@@ -131,15 +135,18 @@ def _footer(im, source, date, theme, seed, t=0.0):
     d = ImageDraw.Draw(im)
     d.text((W - M - size - 18, base), 'ديجيتال لاونج', font=F('Bold', 42),
            fill=INK, anchor='rm', **AR)
-    d.text((W / 2, base), source, font=F('Medium', 36), fill=BODY, anchor='mm', **AR)
+    f = F('Medium', 36)
+    if d.textlength(source, font=f, **AR) > SOURCE_MAX and '(' in source:
+        source = source.split('(')[0].strip()      # no room for both forms
+    d.text((W / 2, base), source, font=f, fill=BODY, anchor='mm', **AR)
     d.text((M, base), arabic_date(date), font=F('Medium', 36), fill=BODY, anchor='lm', **AR)
 
 
 def fast_ar(media, date, source, out, label=None, country=None, theme='cold',
             crop=False, video=None, clip_start=0, clip_seconds=8, audio=False,
             animate=0):
-    """`date` in the English form ('26 Sep 2026'); `source` as the Arabic
-    reader knows it (فاميتسو, IGN); `theme` one of THEMES, chosen per story
+    """`date` in the English form ('26 Sep 2026'); `source` in both forms,
+    'فاميتسو (Famitsu)', which falls back to the Arabic when too wide; `theme` one of THEMES, chosen per story
     like DXB-KNIGHT's accent. `animate=6` writes a still card whose footer
     lines drift, as a seamless 6 second MP4 loop."""
     if theme not in THEMES:

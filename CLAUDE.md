@@ -85,8 +85,10 @@ Arabic spelling, then the official Latin form in brackets, "أعلنت شركة
 companies, platforms, outlets and people (فورتنايت (Fortnite), سيغا
 (SEGA), تاكايوكي كاواساكي (Takayuki Kawasaki)). Both at the first
 mention; later mentions in the same post use the Arabic alone. The Latin
-is written as the company writes it. The source on an Arabic card, where
-there is no room for both, stays in Arabic (فاميتسو). The two brands never share a mark; their palettes are kin
+is written as the company writes it. Cards do the same wherever there is
+room and keep the Arabic alone where there is not: the card source is
+passed as "فاميتسو (Famitsu)" and `fast_ar` drops the bracket itself when
+it would crowd the footer. The two brands never share a mark; their palettes are kin
 (Mohammad, 26 Sep 2026). What tells a Digital Lounge card apart is the
 indigo ground, the play mark, Dubai type and the right-to-left footer.
 No pink or magenta anywhere on it: to a Gulf reader it reads as girlish
