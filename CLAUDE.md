@@ -436,7 +436,8 @@ The card lane is the considered `flex.py` card with his take, posted later
 as a reply to his own fast post so it inherits that post's audience.
 A reply goes out with its post: job.json takes `"thread": [{"content":
 "<p>..</p>", "media": ["reply.mp4"]}]` and `publish.py` sends each item as a
-reply under the post (27 Sep 2026). A post already in Postiz cannot gain a
+reply under the post (27 Sep 2026; the first, the tap-to-pay explainer
+under the 18:30 DXB-KNIGHT post, appeared on X as a reply). A post already in Postiz cannot gain a
 reply from here; he deletes it and the post goes again with its thread. The
 "post text and card never say the same thing" rule applies to this lane.
 
