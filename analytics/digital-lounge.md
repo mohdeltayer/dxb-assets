@@ -19,3 +19,14 @@ Reel 23 views and 2 likes in about 40 minutes; stills 0 to 1 view each.
 | Read (Dubai) | Short | Posted | Views | Notes |
 |---|---|---|---|---|
 | 27 Sep 21:15 | Dynasty Warriors 3 (test) | 27 Sep 20:52 | 2 | public count |
+
+## Ideas on file, not agreed (Mohammad, 27 Sep 2026: "keep that in mind")
+
+Raised after the Minecraft Ice Caves reading; not to be applied until he
+asks. Bring them back when more Reels have data to compare.
+- Shorter Reels, 12 to 18s instead of 26 to 31s, since half the viewers
+  leave by about 6s and completion rate feeds reach.
+- Open on the headline and the strongest shot in the first second.
+- Follows: an Arabic bio that says what the account gives, pinned Reels,
+  and possibly a 1s end frame "أخبار الألعاب يوميًا · @the_digilounge".
+- Still stories as short Reels (a slow pan over the official art).
