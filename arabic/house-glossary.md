@@ -12,6 +12,7 @@ has said so; everything else is a working suggestion.
 | Company, studio, outlet, people names | Arabic, then the English in brackets at first mention; Arabic alone after | Approved 26 Sep 2026 (the skill's default of English-only does not apply) |
 | Voice | Outlet voice, no first person. His play time runs uncredited as the account's own: "انطباعات أولية بعد 10 ساعات مع …" (no "محرر ديجيتال لاونج": readers are already on the account) | Approved 27 Sep 2026 |
 | Nintendo | نينتيندو (Nintendo), his spelling, also in نينتيندو لايف (Nintendo Life) | Approved 26 Sep 2026 |
+| Game and series names as subjects | Feminine agreement, because the unstated noun is لعبة or سلسلة: ستحصل Minecraft, تواصل Control Resonant (not يحصل Minecraft) | Approved 27 Sep 2026 |
 | HANDS ON chip | نظرة أولى (fallback انطباعات; not تجربة, which reads as a test) | Approved 26 Sep 2026 |
 
 ## Terms
