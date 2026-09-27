@@ -27,6 +27,7 @@ has said so; everything else is a working suggestion.
 | Dungeons (Fire Emblem: Fortune's Weave) | مناطق الاستكشاف | not الزنزانات (reads as prison cells) | Approved 27 Sep 2026 |
 | N hours with a game | بعد 10 ساعات من <game> (من, not مع); the skill's own example is بعد عشر ساعات من اللعب | Approved 27 Sep 2026 |
 | A bit disappointing | مخيّب للآمال بعض الشيء | never intensify | Suggested 27 Sep 2026 |
+| Expansion (DLC) | إضافة، والمثنى الإضافتان (وتضم الإضافتين Hearts of Stone وBlood and Wine) | not توسعة or توسيع | Approved 27 Sep 2026 |
 
 ## Tools
 
