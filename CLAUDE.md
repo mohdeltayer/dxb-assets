@@ -75,6 +75,11 @@ In sweeps that means:
   DXB-KNIGHT is his personal account, Digital Lounge and Instagram are
   news. A piece built on his take (analysis, a history angle, a verdict)
   is DXB-KNIGHT only, even when Digital Lounge already ran the news.
+- Timing follows each account's readers (Mohammad, 27 Sep 2026):
+  DXB-KNIGHT writes for an international, largely American audience, so
+  its slots aim at Europe's afternoon and the US morning (about 17:00 to
+  21:00 Dubai, 09:00 to 13:00 US Eastern); Digital Lounge and Instagram
+  run in Gulf waking hours.
 
 Digital Lounge is meant to become the Arabic games news source that does
 not exist yet (Mohammad, 27 Sep 2026), an official-feeling news cycle for
