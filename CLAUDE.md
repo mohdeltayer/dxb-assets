@@ -80,6 +80,11 @@ In sweeps that means:
   its slots aim at Europe's afternoon and the US morning (about 17:00 to
   21:00 Dubai, 09:00 to 13:00 US Eastern); Digital Lounge and Instagram
   run in Gulf waking hours.
+- Each account keeps its own cadence (Mohammad, 27 Sep 2026). DXB-KNIGHT
+  never waits for Digital Lounge or the other way round: two or three
+  posts across the accounts at the same minute is fine, even on different
+  topics. The only pairing is Digital Lounge X with Digital Lounge
+  Instagram, which post each story together.
 
 Digital Lounge is meant to become the Arabic games news source that does
 not exist yet (Mohammad, 27 Sep 2026), an official-feeling news cycle for
