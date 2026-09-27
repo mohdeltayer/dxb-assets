@@ -238,7 +238,7 @@ def _reel(video, date, source, out, headline, summary, label, country, theme, se
     end = _panel(d, summary, panel_y, 36, 56)
     foot_y = BAND + 1350 - FH
     if end > foot_y - 10:
-        raise ValueError('headline and summary do not fit the Reel; shorten one of them')
+        raise ValueError(f'headline and summary do not fit the Reel (panel ends {end}, footer at {foot_y}); shorten one of them')
     foot = Image.new('RGB', (W, foot_y + FH), A.GROUND)
     _footer(foot, foot_y, source, date, theme, seed)
     top.paste(foot.crop((0, foot_y, W, foot_y + FH)), (0, foot_y))
