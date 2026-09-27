@@ -395,6 +395,10 @@ or context: card. Big: fast now, card later as a reply to the fast post.
 
 Cards render to `cards/YYYY-MM/`, source art to `live/YYYY-MM-DD/`.
 
+Every time a schedule is shown (drafts, confirmations, what is queued),
+each post names its account: DXB-KNIGHT, Digital Lounge, or both
+(Mohammad, 27 Sep 2026). Never a bare time and title.
+
 Posting is irreversible: pushing `queue/**` to *any* branch of dxb-queue
 fires the publisher, because `publish.yml` has no branch filter. Never
 queue without explicit say-so, and dry-run `publish.py` with `DRY_RUN=1`
