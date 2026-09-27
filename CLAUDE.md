@@ -61,6 +61,12 @@ Sweeps therefore shortlist more for Arabic than for English, including
 stories DXB-KNIGHT passes on. Same story, not same text: each account's
 post is written for its own readers.
 
+Timing differs too (Mohammad, 27 Sep 2026): Arabic games coverage is
+thin, so Digital Lounge does not follow DXB-KNIGHT's spacing. Its posts
+can run close together and go out as soon as they are ready in waking
+hours for the Gulf, rather than being held for a slot or spread hours
+apart.
+
 Both languages are prepared together (Mohammad, 26 Sep 2026): every
 shortlisted story comes with its English and Arabic post text and card
 side by side, and he approves them as a pair. The Digital Lounge took X
