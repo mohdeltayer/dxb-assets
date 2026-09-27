@@ -108,7 +108,25 @@ when they open here.
 - He will send the monetization screenshots (X Creator Studio for both X
   accounts first, then YouTube Earn, TikTok Studio, Instagram dashboard).
 
+## Weekly YouTube roundup: voice test to do (Mohammad, 28 Sep 2026)
+
+Narration is undecided: his own Arabic voice or text only (he worries his
+setup and nasal voice could distract). Test later, when he sends a clip:
+1. He records about 30 seconds reading an Arabic news paragraph (small
+   soft room, phone 15 to 20 cm away and slightly off to the side, Voice
+   Memos is fine).
+2. Clean it with Adobe Enhance Speech (the Adobe connector's
+   media_enhance_speech; call adobe_mandatory_init first).
+3. Finish with ffmpeg: high-pass around 80 Hz, a gentle cut around
+   800 Hz to 1.5 kHz for nasal tone, a little warmth around 150 to 250 Hz,
+   light compression, loudness to about -14 LUFS.
+4. Send back three files: original, Adobe only, Adobe plus EQ. He then
+   picks voice or text only for the roundup.
+Not an AI voice to start with (generic sound, YouTube's stance on
+mass-produced content).
+
 ## Open questions for Mohammad
+
 
 
 - DXB-KNIGHT's current followers, verified followers and 90-day
