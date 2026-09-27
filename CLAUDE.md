@@ -200,7 +200,11 @@ channel). Its job.json takes `"platform": "youtube"` and settings
 optional `tags` as `[{"value": "..", "label": ".."}]`. The title (2 to
 100 characters) starts with an Arabic word like every Arabic line; the
 content is the description (5000 characters). Every post needs a video.
-Nothing posts to it until Mohammad says go.
+YouTube Shorts are standard (Mohammad, 27 Sep 2026, after the Dynasty
+Warriors 3 test looked right): every Digital Lounge story with a video goes
+to YouTube with the rest of Digital Lounge, same Reel file and same time as
+its X and Instagram posts. Title: the story in one Arabic-first line.
+Description: the Instagram caption.
 
 Instagram (Mohammad, 27 Sep 2026): every Digital Lounge story also goes to
 Instagram, on its own card and caption, at the same time as its X post:
@@ -222,8 +226,12 @@ blurred fill and bare panels read as wasted.
   Reels safe zone (Mohammad, 27 Sep 2026; also for TikTok later): the
   Reels UI covers the right edge (like, comment, share, menu) and the
   bottom (account name, caption), so text, chips and the footer sit in
-  x 64 to 910, y 285 to 1480 (`SAFE_*` in ig_ar.py); only the clip runs
+  x 96 to 910, y 285 to 1480 (`SAFE_*` in ig_ar.py); only the clip runs
   full width. That fits a two-line headline and a two-line summary.
+  The left edge moved from 64 to 96 on 27 Sep 2026 (Mohammad): tall
+  phones zoom a Reel or Short to fill the screen and trim about 55px off
+  each side (measured on YouTube), which left the date almost touching
+  the edge. Stills keep 64.
   The right column stays the blurred clip, nothing else (Mohammad,
   27 Sep 2026): a vertical brand strip there was tried and dropped,
   since rotated text reads slowly and the strip crossing the footer
