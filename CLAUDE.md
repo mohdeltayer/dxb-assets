@@ -193,8 +193,14 @@ Digital Lounge YouTube (@the_digilounge, the old "Digi-ديجي" channel)
 was rebranded on 27 Sep 2026: name "ديجيتال لاونج | أخبار الألعاب", Arabic
 description, banner `live/2026-09-27/youtube/digi-youtube-banner.png`
 (2560x1440, `yt_banner.py`). The Reels go there as Shorts (vertical, 3
-minutes or less). Not yet connected to Postiz; nothing posts to it until
-Mohammad says go.
+minutes or less). Connected to Postiz on 27 Sep 2026 as integration
+`cmuk20rj302oqpr0ygqzcdzch`, platform `youtube` (Postiz name matches the
+channel). Its job.json takes `"platform": "youtube"` and settings
+`{"title": "...", "type": "public", "selfDeclaredMadeForKids": "no"}`,
+optional `tags` as `[{"value": "..", "label": ".."}]`. The title (2 to
+100 characters) starts with an Arabic word like every Arabic line; the
+content is the description (5000 characters). Every post needs a video.
+Nothing posts to it until Mohammad says go.
 
 Instagram (Mohammad, 27 Sep 2026): every Digital Lounge story also goes to
 Instagram, on its own card and caption, at the same time as its X post:
