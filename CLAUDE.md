@@ -244,6 +244,19 @@ Brand kit (Mohammad, 26 Sep 2026):
   seamless 6 second MP4 loop, only the footer lines drift) but is not
   used: cards post as stills unless he asks for motion on a story.
 
+## Explainers from the source's own drawings (trial, 27 Sep 2026)
+
+For "how does it work" stories (patents, hardware, new features),
+`templates/explainer.py` steps through the source's own figures, one step
+per figure, drawing left and step text right, 1600x900 with the
+DXB-KNIGHT footer. Motion is limited to what the figures show: `ring`
+pulses on a part, `slide` lifts a drawn object out and moves it into
+place, `path` runs dots along the figure's own arrows. No AI-generated
+visuals of hardware (they invent parts readers take as real); if one is
+ever used, label it an illustration. Mohammad liked the tap-to-pay trial
+(`cards/2026-09/sony-tap-to-pay-explainer-trial-v2.mp4`); it has not been
+posted, and using the format on a story is his call.
+
 ## Always ask for Mohammad's take before building a card
 
 DXB-KNIGHT is not a wire service. Before rendering any card, ask what he
