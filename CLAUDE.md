@@ -175,6 +175,17 @@ Digital Lounge Instagram joined Postiz on 27 Sep 2026 as integration
 takes `"platform": "instagram"` and `"settings": {"post_type": "post"}`
 (or "story"); every post needs media, captions stop at 2200 characters.
 `publish.py` needs no change for it.
+Digital Lounge TikTok (@the_digilounge) joined Postiz on 27 Sep 2026 as
+integration `cmuk0rett044oo80y3ycfes66`, platform `tiktok-business` (Postiz
+shows it as "Mohammed", the name TikTok had when it was connected; Postiz
+keeps the name and picture from connect time, so reconnect after the
+display name changes on 4 Oct). Its job.json takes `"platform":
+"tiktok-business"` and settings `{"content_posting_method": "DIRECT_POST",
+"privacy_level": "PUBLIC_TO_EVERYONE", "duet": true, "stitch": true,
+"comment": true, "autoAddMusic": "no", "brand_content_toggle": false,
+"brand_organic_toggle": false}` plus an optional `title` (90 characters).
+UPLOAD only drops the video in the TikTok app inbox for him to finish by
+hand. Every post needs media; captions stop at 2200 characters.
 
 Instagram (Mohammad, 27 Sep 2026): every Digital Lounge story also goes to
 Instagram, on its own card and caption, at the same time as its X post:
