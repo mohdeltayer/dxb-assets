@@ -186,6 +186,9 @@ display name changes on 4 Oct). Its job.json takes `"platform":
 "brand_organic_toggle": false}` plus an optional `title` (90 characters).
 UPLOAD only drops the video in the TikTok app inbox for him to finish by
 hand. Every post needs media; captions stop at 2200 characters.
+On hold (Mohammad, 27 Sep 2026): no TikTok posts until he confirms the
+display name no longer shows "Mohammed" (name lock ends about 4 Oct). The
+only post so far is the Dynasty Warriors 3 Reel test, 27 Sep 20:20.
 
 Instagram (Mohammad, 27 Sep 2026): every Digital Lounge story also goes to
 Instagram, on its own card and caption, at the same time as its X post:
