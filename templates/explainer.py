@@ -60,12 +60,57 @@ def _figure(path):
     return plate, mask
 
 
+def _ease(u):
+    u = max(0.0, min(1.0, u))
+    return 1 - (1 - u) ** 3
+
+
+def _slid(plate, spec, t):
+    """Lift a drawn object out of the figure and slide it into place:
+    spec = dict(box=(x0, y0, x1, y1), frm=(dx, dy), to=(dx, dy), dur=s)."""
+    from PIL import ImageChops
+    x0, y0, x1, y1 = spec['box']
+    sprite = plate.crop((x0, y0, x1, y1))
+    out = plate.copy()
+    ImageDraw.Draw(out).rectangle([x0, y0, x1, y1], fill='white')
+    k = _ease(t / spec.get('dur', 1.2))
+    dx = spec['frm'][0] + (spec['to'][0] - spec['frm'][0]) * k
+    dy = spec['frm'][1] + (spec['to'][1] - spec['frm'][1]) * k
+    layer = Image.new('RGB', out.size, 'white')
+    layer.paste(sprite, (int(x0 + dx), int(y0 + dy)))
+    return ImageChops.darker(out, layer)
+
+
+def _dots(d, pts, acc, t, period=1.4, n=3):
+    """Azure dots running along a polyline in panel pixels, looping."""
+    seg = [math.dist(a, b) for a, b in zip(pts, pts[1:])]
+    total = sum(seg)
+    for i in range(n):
+        u = ((t / period) - i * 0.12) % 1
+        s = u * total
+        for (a, b), L in zip(zip(pts, pts[1:]), seg):
+            if s <= L:
+                x = a[0] + (b[0] - a[0]) * s / L
+                y = a[1] + (b[1] - a[1]) * s / L
+                r = 13 - i * 3
+                d.ellipse([PANEL[0] + x - r, PANEL[1] + y - r, PANEL[0] + x + r, PANEL[1] + y + r],
+                          fill=acc)
+                break
+            s -= L
+
+
 def _step_frame(base, plate, mask, n, total, heading, text, acc, extras, t):
     im = base.copy()
+    if 'slide' in extras:
+        plate = _slid(plate, extras['slide'], t)
     im.paste(plate, PANEL[:2], mask)
     d = ImageDraw.Draw(im)
-    if 'ring' in extras:
-        x, y, r = extras['ring']
+    if 'path' in extras:
+        _dots(d, extras['path'], acc, t)
+    ring = extras.get('ring')
+    if ring and t >= extras.get('ring_from', 0):
+        x, y, r = ring
+        t = t - extras.get('ring_from', 0)
         for k in range(3):
             ph = (t * 1.2 + k / 3) % 1
             rr = r * (0.6 + 0.9 * ph)
