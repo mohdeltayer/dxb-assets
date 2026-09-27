@@ -72,6 +72,14 @@ In sweeps that means:
   release calendars, Game Pass and store lists and regional items.
 - When in doubt, a story goes Arabic-only rather than both.
 
+Digital Lounge is meant to become the Arabic games news source that does
+not exist yet (Mohammad, 27 Sep 2026), an official-feeling news cycle for
+Arabic readers; DXB-KNIGHT's Gulf posts showed the appetite is there. So
+its cadence is aggressive: every verified story that fits the scope goes
+out on it, the same morning, minutes apart when several are ready, and
+sweeps look for more Arabic-only items (store and price news, release
+dates, updates, regional and official announcements) rather than fewer.
+
 Timing differs too (Mohammad, 27 Sep 2026): Arabic games coverage is
 thin, so Digital Lounge does not follow DXB-KNIGHT's spacing. Its posts
 can run close together and go out as soon as they are ready in waking
