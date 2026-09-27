@@ -100,7 +100,16 @@ when they open here.
 - TikTok Creator Rewards and Instagram programmes if they open in the
   UAE; check the in-app locations each quarter.
 
+## Decisions (Mohammad, 28 Sep 2026)
+
+- Sponsors are allowed on DXB-KNIGHT as well as Digital Lounge, same
+  labelling and editorial rules.
+- Start the weekly Arabic YouTube roundup (format below, to be agreed).
+- He will send the monetization screenshots (X Creator Studio for both X
+  accounts first, then YouTube Earn, TikTok Studio, Instagram dashboard).
+
 ## Open questions for Mohammad
+
 
 - DXB-KNIGHT's current followers, verified followers and 90-day
   impressions (Creator Studio screenshot).
