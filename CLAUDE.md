@@ -413,6 +413,20 @@ candidate give the verification status, and the template, background,
 accent and label already chosen — then ask for his take. He supplies the
 take and the art; everything else should be decided before he reads it.
 
+Scout additive trial (28 Sep to 4 Oct 2026; prompt in
+`notes/scout-optimize-prompt.md`, audit in
+`notes/scout-source-audit-2026-09-28.md`). The scout's existing map is
+unchanged; on top it reads platform feeds, Arabic outlets (IGN ME
+Arabic, True Gaming, Saudi Gamer, VGA4A), Japanese feeds, and overnight
+only Gulf official sources and store prices. Digests now carry a "From new
+sources" heading at the end (sweep it like the rest), "Outlet report"
+where no primary was found (verify before use), and AGE labels from the
+primary's time. Its no-refile ledger starts incomplete (Sep 21 to 22
+missing), so refiles can still slip through in the first days. Store
+prices come in the currency the store returns (Xbox and PS Store UAE in
+USD, Xbox Saudi in SAR); never convert. The trial report arrives in the
+digest inbox on or after 5 Oct.
+
 ## Verify against primary sources
 
 The digest is a lead sheet, not proof. Check claims independently before
