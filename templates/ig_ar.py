@@ -80,9 +80,9 @@ def _chip(d, text, x_right, y_bottom, fill, ink, size=38):
     return x0
 
 
-def _head(d, text, y, label, country, size, step):
+def _head(d, text, y, label, country, size, step, right=M):
     """Chip row then the headline; returns the y under the last line."""
-    x = W - M
+    x = W - right
     if label:
         x = _chip(d, label, x, y + 57, A.AZURE, A.GROUND) - 14
     if country:
@@ -90,25 +90,25 @@ def _head(d, text, y, label, country, size, step):
     if label or country:
         y += 57 + 22
     f = A.F('Bold', size)
-    lines = _wrap(d, text, f, W - 2 * M)
+    lines = _wrap(d, text, f, W - M - right)
     if len(lines) > 3:
         raise ValueError(f'headline runs to {len(lines)} lines; keep it to 3')
     for line in lines:
-        d.text((W - M, y + step / 2), line, font=f, fill=A.INK, anchor='rm', **AR)
+        d.text((W - right, y + step / 2), line, font=f, fill=A.INK, anchor='rm', **AR)
         y += step
     return y
 
 
-def _panel(d, text, y, size, step, pad=34):
+def _panel(d, text, y, size, step, pad=34, right=M):
     """The detail panel: lighter indigo, an azure edge on the reading side."""
     f = A.F('Medium', size)
-    lines = _wrap(d, text, f, W - 2 * M - 2 * pad - 10)
+    lines = _wrap(d, text, f, W - M - right - 2 * pad - 10)
     h = pad * 2 + step * len(lines) - (step - size)
-    d.rounded_rectangle([M, y, W - M, y + h], radius=18, fill=PANEL)
-    d.rounded_rectangle([W - M - 8, y + 18, W - M, y + h - 18], radius=4, fill=A.AZURE)
+    d.rounded_rectangle([M, y, W - right, y + h], radius=18, fill=PANEL)
+    d.rounded_rectangle([W - right - 8, y + 18, W - right, y + h - 18], radius=4, fill=A.AZURE)
     ty = y + pad
     for line in lines:
-        d.text((W - M - pad - 12, ty + size / 2 + 4), line, font=f, fill=A.INK,
+        d.text((W - right - pad - 12, ty + size / 2 + 4), line, font=f, fill=A.INK,
                anchor='rm', **AR)
         ty += step
     return y + h
@@ -128,21 +128,21 @@ def _icon_ig(d, x, y, s, c):
     d.ellipse([x + s * 0.72, y + s * 0.18, x + s * 0.84, y + s * 0.30], fill=c)
 
 
-def _footer(im, y, source, date, theme, seed):
+def _footer(im, y, source, date, theme, seed, right=M, fh=FH):
     """As on X, right to left: mark and name, source centre, date left.
     The handle, shared by the X and Instagram accounts, sits under the name."""
-    im.paste(A._waves(W, FH, theme, seed), (0, y))
+    im.paste(A._waves(W, fh, theme, seed), (0, y))
     d = ImageDraw.Draw(im)
     d.rectangle([0, y, W, y + 3], fill=EDGE)
-    mid = y + FH // 2
+    mid = y + fh // 2
     size = 62
     mark = Image.open(A.MARK).convert('RGB').resize((size * 4, size * 4), Image.LANCZOS)
     mask = Image.new('L', mark.size, 0)
     ImageDraw.Draw(mask).ellipse((0, 0, mark.width - 1, mark.height - 1), fill=255)
     mark, mask = mark.resize((size, size), Image.LANCZOS), mask.resize((size, size), Image.LANCZOS)
-    im.paste(mark, (W - M - size, mid - size // 2), mask)
+    im.paste(mark, (W - right - size, mid - size // 2), mask)
     d = ImageDraw.Draw(im)
-    xr = W - M - size - 16
+    xr = W - right - size - 16
     d.text((xr, mid - 16), 'ديجيتال لاونج', font=A.F('Bold', 34), fill=A.INK,
            anchor='rm', **AR)
     f = A.F('Medium', 24)
@@ -154,7 +154,7 @@ def _footer(im, y, source, date, theme, seed):
     f = A.F('Medium', 28)
     if d.textlength(source, font=f, **AR) > SOURCE_MAX and '(' in source:
         source = source.split('(')[0].strip()      # no room for both forms
-    d.text((W / 2 - 40, mid), source, font=f, fill=A.BODY, anchor='mm', **AR)
+    d.text(((M + W - right) / 2 - 40, mid), source, font=f, fill=A.BODY, anchor='mm', **AR)
     d.text((M, mid), A.arabic_date(date), font=f, fill=A.BODY, anchor='lm', **AR)
 
 
@@ -204,16 +204,28 @@ def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
     return out
 
 
+#: Reels safe zone (27 Sep 2026). Instagram's Reels UI puts a column of
+#: buttons down the right and the account name and caption along the
+#: bottom; TikTok does the same. The feed also cuts a Reel to its middle
+#: 4:5. Text, chips and the footer stay inside all three; only the clip
+#: runs full width.
+SAFE_TOP = BAND                 # 285: where the feed's 4:5 cut starts
+SAFE_BOTTOM = 1480              # above the name and caption
+SAFE_RIGHT = 170                # clear of the like, comment, share column
+REEL_FH = 112
+
+
 def _subtitle_png(text, path, y):
     im = Image.new('RGBA', (W, H_REEL), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    f = A.F('Bold', 50)
-    for line in _wrap(d, text, f, W - 2 * M):
+    f = A.F('Bold', 46)
+    cx = (M + W - SAFE_RIGHT) / 2
+    for line in _wrap(d, text, f, W - M - SAFE_RIGHT - 40):
         w = d.textlength(line, font=f, **AR)
-        d.rounded_rectangle([(W - w) / 2 - 20, y, (W + w) / 2 + 20, y + 72], radius=10,
+        d.rounded_rectangle([cx - w / 2 - 18, y, cx + w / 2 + 18, y + 64], radius=10,
                             fill=A.GROUND + (230,))
-        d.text((W / 2, y + 36), line, font=f, fill=A.INK, anchor='mm', **AR)
-        y += 78
+        d.text((cx, y + 32), line, font=f, fill=A.INK, anchor='mm', **AR)
+        y += 70
     im.save(path)
     return path
 
@@ -230,18 +242,19 @@ def _reel(video, date, source, out, headline, summary, label, country, theme, se
     # The overlay: everything but the clip and the subtitles, on transparency.
     top = Image.new('RGBA', (W, H_REEL), (0, 0, 0, 0))
     d = ImageDraw.Draw(top)
-    vid_y = _head(d, headline, BAND + 30, label, country, 52, 74) + 24
+    vid_y = _head(d, headline, SAFE_TOP + 10, label, country, 46, 62, right=SAFE_RIGHT) + 18
     rule_y = vid_y + vid_h
     d.rectangle([0, rule_y, W, rule_y + RULE], fill=A.AZURE)
-    sub_y = rule_y + RULE + 26
-    panel_y = sub_y + 104 + 22 if subtitles else rule_y + RULE + 34   # a subtitle line
-    end = _panel(d, summary, panel_y, 36, 56)
-    foot_y = BAND + 1350 - FH
-    if end > foot_y - 10:
-        raise ValueError(f'headline and summary do not fit the Reel (panel ends {end}, footer at {foot_y}); shorten one of them')
-    foot = Image.new('RGB', (W, foot_y + FH), A.GROUND)
-    _footer(foot, foot_y, source, date, theme, seed)
-    top.paste(foot.crop((0, foot_y, W, foot_y + FH)), (0, foot_y))
+    sub_y = rule_y + RULE + 14
+    panel_y = sub_y + 70 + 14 if subtitles else rule_y + RULE + 20   # one subtitle line
+    end = _panel(d, summary, panel_y, 33, 48, pad=26, right=SAFE_RIGHT)
+    foot_y = SAFE_BOTTOM - REEL_FH
+    if end > foot_y - 8:
+        raise ValueError(f'headline and summary do not fit the Reel safe zone (panel ends {end}, '
+                         f'footer at {foot_y}); keep the headline to two lines and the summary to two')
+    foot = Image.new('RGB', (W, foot_y + REEL_FH), A.GROUND)
+    _footer(foot, foot_y, source, date, theme, seed, right=SAFE_RIGHT, fh=REEL_FH)
+    top.paste(foot.crop((0, foot_y, W, foot_y + REEL_FH)), (0, foot_y))
     tmp = tempfile.mkdtemp(prefix='dlreel-')
     top_p = os.path.join(tmp, 'top.png')
     top.save(top_p)

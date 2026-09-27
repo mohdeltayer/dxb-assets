@@ -186,6 +186,11 @@ blurred fill and bare panels read as wasted.
   stack in the middle 1350px the feed shows, a subtitle band between the
   clip and the panel, and the blurred clip behind. `src_crop` trims a
   trailer's own letterbox (ffmpeg cropdetect).
+  Reels safe zone (Mohammad, 27 Sep 2026; also for TikTok later): the
+  Reels UI covers the right edge (like, comment, share, menu) and the
+  bottom (account name, caption), so text, chips and the footer sit in
+  x 64 to 910, y 285 to 1480 (`SAFE_*` in ig_ar.py); only the clip runs
+  full width. That fits a two-line headline and a two-line summary.
 - Caption: the first line is a hook that differs from the card headline
   (only about two lines show before "more"), then the full story with the
   same checked facts, then 2 story hashtags plus #ألعاب #أخبار_الألعاب.
