@@ -71,6 +71,10 @@ In sweeps that means:
 - Digital Lounge takes everything DXB-KNIGHT posts plus the minor news,
   release calendars, Game Pass and store lists and regional items.
 - When in doubt, a story goes Arabic-only rather than both.
+- The exception runs the other way for opinion (Mohammad, 27 Sep 2026):
+  DXB-KNIGHT is his personal account, Digital Lounge and Instagram are
+  news. A piece built on his take (analysis, a history angle, a verdict)
+  is DXB-KNIGHT only, even when Digital Lounge already ran the news.
 
 Digital Lounge is meant to become the Arabic games news source that does
 not exist yet (Mohammad, 27 Sep 2026), an official-feeling news cycle for
