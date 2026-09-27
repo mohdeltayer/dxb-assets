@@ -61,6 +61,17 @@ Sweeps therefore shortlist more for Arabic than for English, including
 stories DXB-KNIGHT passes on. Same story, not same text: each account's
 post is written for its own readers.
 
+Balance shifts toward Arabic (Mohammad, 27 Sep 2026): Digital Lounge
+posts more, DXB-KNIGHT posts less, in line with the growth points above.
+In sweeps that means:
+- DXB-KNIGHT gets fewer, stronger posts: his takes, hero posts, analysis
+  cards while the topic is live, and fast posts only for stories a general
+  games reader would stop for. Minor news, calendars and roundups are not
+  shortlisted for it.
+- Digital Lounge takes everything DXB-KNIGHT posts plus the minor news,
+  release calendars, Game Pass and store lists and regional items.
+- When in doubt, a story goes Arabic-only rather than both.
+
 Timing differs too (Mohammad, 27 Sep 2026): Arabic games coverage is
 thin, so Digital Lounge does not follow DXB-KNIGHT's spacing. Its posts
 can run close together and go out as soon as they are ready in waking
