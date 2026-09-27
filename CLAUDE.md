@@ -142,6 +142,13 @@ correction he makes to the glossary. DeepL stays the alternative when needed; it
 translates only (no Arabic rewriting) and its output still needs the
 house rules applied.
 
+Text direction (Mohammad, 27 Sep 2026): X and Instagram take a post's
+direction from its first word, so every Arabic post, paragraph and line
+starts with an Arabic word, never an English name or a hashtag in Latin.
+Write "تصل DYNASTY WARRIORS 3", not "DYNASTY WARRIORS 3 تصل", and lead the
+hashtag line with #ألعاب #أخبار_الألعاب. Read every paragraph's first
+word before queuing.
+
 The two brands never share a mark; their palettes are kin
 (Mohammad, 26 Sep 2026). What tells a Digital Lounge card apart is the
 indigo ground, the play mark, Dubai type and the right-to-left footer.
@@ -202,7 +209,8 @@ blurred fill and bare panels read as wasted.
   azure on every story, and headline and summary stay ink.
 - Caption: the first line is a hook that differs from the card headline
   (only about two lines show before "more"), then the full story with the
-  same checked facts, then 2 story hashtags plus #ألعاب #أخبار_الألعاب.
+  same checked facts, then #ألعاب #أخبار_الألعاب followed by 2 story hashtags (Arabic tags
+  first, so the line reads right to left).
   No links (not clickable). Same Arabic rules and two passes as X.
   The caption stands alone: it names the game by the second sentence and
   never leans on the card for its subject (27 Sep 2026: swapping in a new
