@@ -174,6 +174,11 @@ blurred fill and bare panels read as wasted.
   (only about two lines show before "more"), then the full story with the
   same checked facts, then 2 story hashtags plus #ألعاب #أخبار_الألعاب.
   No links (not clickable). Same Arabic rules and two passes as X.
+  The caption stands alone: it names the game by the second sentence and
+  never leans on the card for its subject (27 Sep 2026: swapping in a new
+  hook left three captions saying "the game" with no name). Read every
+  caption back in Postiz after queuing.
+  The first post, Fire Emblem (Reel), went live on 27 Sep 2026 at 15:40.
 
 Brand kit (Mohammad, 26 Sep 2026):
 - Mark: the existing azure play button on an indigo radial ground,
