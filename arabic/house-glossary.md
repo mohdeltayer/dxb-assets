@@ -23,6 +23,7 @@ has said so; everything else is a working suggestion.
 | Locked 30fps | معدل ثابت يبلغ 30 إطارًا في الثانية | only when the source measured stability | Suggested 27 Sep 2026 |
 | Upscaled from X to Y | مُرقّاة من X | keep which number is internal and which is output | Suggested 27 Sep 2026 |
 | Dungeons (Fire Emblem: Fortune's Weave) | مناطق الاستكشاف | not الزنزانات (reads as prison cells) | Approved 27 Sep 2026 |
+| N hours with a game | بعد 10 ساعات من <game> (من, not مع); the skill's own example is بعد عشر ساعات من اللعب | Approved 27 Sep 2026 |
 | A bit disappointing | مخيّب للآمال بعض الشيء | never intensify | Suggested 27 Sep 2026 |
 
 ## Tools
