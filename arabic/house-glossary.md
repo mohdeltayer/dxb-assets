@@ -11,6 +11,7 @@ has said so; everything else is a working suggestion.
 | Game, series, character, platform names | English only, as the publisher writes them | Approved 26 Sep 2026 |
 | Company, studio, outlet, people names | Arabic, then the English in brackets at first mention; Arabic alone after | Approved 26 Sep 2026 (the skill's default of English-only does not apply) |
 | Voice | Outlet voice, no first person. His own play time is credited: "انطباعات محرر ديجيتال لاونج" | Approved 26 Sep 2026 |
+| Nintendo | نينتيندو (Nintendo), his spelling, also in نينتيندو لايف (Nintendo Life) | Approved 26 Sep 2026 |
 | HANDS ON chip | نظرة أولى (fallback انطباعات; not تجربة, which reads as a test) | Approved 26 Sep 2026 |
 
 ## Terms
@@ -26,7 +27,8 @@ has said so; everything else is a working suggestion.
 
 ## Tools
 
-1. `arabic-games-film-editor` skill (this repo, `.claude/skills/`), first choice.
+1. `arabic-games-film-editor` skill (this repo, `.claude/skills/`), writes.
+1b. `arabic-writing` skill (same folder), checks: grammar, spelling, smell test.
 2. DeepL (connector, Free plan), the alternative when needed: translation only.
    Its Write/rephrase and correct tools do not support Arabic, and context,
    custom instructions and glossaries need DeepL Pro. Its raw output needs the

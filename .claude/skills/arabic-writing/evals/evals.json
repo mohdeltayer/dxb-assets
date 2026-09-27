@@ -1,0 +1,80 @@
+{
+  "skill_name": "arabic-writing",
+  "description": "Objective checks that the skill produces correct, natural Arabic and avoids machine-translation tells. Each eval lists a prompt and concrete, checkable expected behaviors. Run with and without the skill to measure the delta.",
+  "evals": [
+    {
+      "id": "non-human-plural-agreement",
+      "prompt": "Translate into Modern Standard Arabic: \"The new cars are fast and the old books are interesting.\"",
+      "expected_behavior": [
+        "Non-human plural subjects take feminine-singular agreement (e.g. السيارات الجديدة سريعة, الكتب القديمة مثيرة للاهتمام)",
+        "Does NOT use plural adjectives like سريعون/سريعات or جُدُد for the non-human nouns",
+        "Uses Arabic punctuation; no Latin comma/period mixed into the Arabic"
+      ]
+    },
+    {
+      "id": "no-qama-bi-no-by-passive",
+      "prompt": "Translate into MSA: \"The committee reviewed the plan and the company conducted a study of the market.\"",
+      "expected_behavior": [
+        "Uses active voice with the agent named (e.g. راجعت اللجنة الخطة), not a من قبل passive",
+        "Uses a single verb (e.g. أجرت الشركة دراسة or درست الشركة) rather than قام/قامت بـ + verbal noun",
+        "Verb-before-subject (VSO) verbs are singular and agree only in gender"
+      ]
+    },
+    {
+      "id": "possessive-not-al-khas",
+      "prompt": "Translate into MSA: \"Update your account and review the company's policy.\"",
+      "expected_behavior": [
+        "Renders 'your account' with an attached pronoun suffix (حسابك), not الحساب الخاص بك",
+        "Renders 'the company's policy' as an iḍāfa (سياسة الشركة), not السياسة الخاصة بالشركة",
+        "The first noun of the iḍāfa carries no ال and no tanwin"
+      ]
+    },
+    {
+      "id": "proofread-error-seeded",
+      "prompt": "Proofread and correct this Arabic, listing each fix: \"انا ذهبت الى المدرسه , و قابلت ثلاث طلاب هناك ?\"",
+      "expected_behavior": [
+        "Fixes the hamza: انا → أنا, الى → إلى",
+        "Fixes ة/ه: المدرسه → المدرسة",
+        "Fixes number agreement/polarity for a masculine counted noun: ثلاث طلاب → ثلاثة طلاب",
+        "Replaces Latin punctuation with Arabic glyphs (، and ؟) and fixes spacing (no space before a mark)"
+      ]
+    },
+    {
+      "id": "natural-not-translationese",
+      "prompt": "Translate into natural MSA: \"In addition, the goal of the project is to play an important role in raising awareness, where the team made a decision to launch the campaign.\"",
+      "expected_behavior": [
+        "Fronts the verb instead of the copular calque (e.g. يهدف المشروع إلى…, not الهدف من المشروع هو…)",
+        "Uses idiomatic collocations: يؤدّي/يضطلع بدور (not يلعب دورًا), اتخذ قرارًا (not عمل/أخذ قرارًا), نشر/رفع مستوى الوعي",
+        "Does not stack heavy connectors; avoids misusing حيث for a non-locative 'where' (uses إذ/الذي or restructures)",
+        "Reads as native MSA when read aloud, without needing the English to be intelligible"
+      ]
+    },
+    {
+      "id": "dialect-egyptian-no-leak",
+      "prompt": "Rewrite in natural Egyptian Arabic: \"I want to go now; where is the restaurant?\"",
+      "expected_behavior": [
+        "Uses Egyptian markers: عايز/عاوز, دلوقتي, فين, and the question word at the end (المطعم فين؟)",
+        "Does not leak MSA (أريد أن أذهب الآن) or other dialects (بدّي/أبغى, هلّق/الحين)",
+        "Keeps a single consistent dialect throughout"
+      ]
+    },
+    {
+      "id": "register-choice",
+      "prompt": "I'm writing the body text of a legal privacy policy in Arabic. Which register should I use, and translate this clause: \"We do not share your data with third parties.\"",
+      "expected_behavior": [
+        "Recommends Modern Standard Arabic for a legal document (not a dialect)",
+        "Produces correct MSA (e.g. لا نشارك بياناتك مع أطراف ثالثة) with an attached suffix for 'your', not الخاص بك",
+        "Tone is formal and natural, not stiff or calqued"
+      ]
+    },
+    {
+      "id": "numbers-and-dates",
+      "prompt": "Translate for an Egyptian audience: \"The conference will be held on January 15, 2026, and 75% of seats are reserved.\"",
+      "expected_behavior": [
+        "Uses the Mashreq month name يناير (not the Levantine كانون الثاني) for an Egyptian audience",
+        "Places the percent sign to the left of the number with no space (75%), with the number running left-to-right",
+        "Uses a consistent numeral system throughout"
+      ]
+    }
+  ]
+}

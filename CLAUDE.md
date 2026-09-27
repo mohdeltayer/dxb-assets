@@ -91,11 +91,15 @@ English post. Names in Arabic posts (Mohammad, 26 Sep 2026):
   alone where there is not: `fast_ar` drops the bracket itself when the
   source would crowd the footer.
 
-Arabic writing (Mohammad, 27 Sep 2026): write and edit Arabic with the
-`arabic-games-film-editor` skill (`.claude/skills/`, his upload) and the
-house glossary `arabic/house-glossary.md`, whose approved rules override
-the skill's defaults (names above, no first person). Add every correction
-he makes to the glossary. DeepL stays the alternative when needed; it
+Arabic writing (Mohammad, 27 Sep 2026): two passes on every Arabic post.
+1. Write with the `arabic-games-film-editor` skill (his upload): meaning,
+   attribution chains, hedges, technical terms.
+2. Check with the `arabic-writing` skill (ahmeddabak/claude-arabic-writing,
+   MIT, commit 7001831): grammar, hamza, ة/ه, ى/ي, agreement, collocations,
+   punctuation and its machine-translation smell test.
+Both live in `.claude/skills/`. The house glossary `arabic/house-glossary.md`
+overrides both (names above, no first person, Western digits). Add every
+correction he makes to the glossary. DeepL stays the alternative when needed; it
 translates only (no Arabic rewriting) and its output still needs the
 house rules applied.
 
