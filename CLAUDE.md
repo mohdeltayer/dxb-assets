@@ -179,6 +179,21 @@ Brand kit (Mohammad, 26 Sep 2026):
   (blockbusters, film and TV). Chip and rule stay azure on every theme.
   No blend may pass through pink: indigo into amber does, so spectacle
   starts from azure.
+- Video first (Mohammad, 27 Sep 2026): Arabic games video is rare, so a
+  Digital Lounge story with an official trailer goes out as a video card.
+  `templates/trailer.py`: `steam_trailers(appid)` lists Steam trailers,
+  `fetch(hls, name, start, seconds)` saves a stretch to uploads,
+  `transcribe(name)` returns timed English lines (faster-whisper small;
+  `pip install faster-whisper` in a new container, the model downloads on
+  first use). Arabic subtitles: `fast_ar(..., video=..., subtitles=[(start,
+  end, text)], sub_bottom=None)`, Dubai Bold on a dark band above the chip
+  row; raise `sub_bottom` (about 700) when the clip has its own subtitles.
+  The transcript is a draft: check it against on-screen text or the
+  official source before writing the Arabic (on 27 Sep it heard "I think"
+  where the screen said "They say"), then write the Arabic with both
+  Arabic skills. Subtitles carry what was said, never more. His own
+  gameplay with Arabic captions is the third step, once the YoloBox Ultra
+  capture is running.
 - Stills, not animation (Mohammad, 26 Sep 2026). `animate=6` exists (a
   seamless 6 second MP4 loop, only the footer lines drift) but is not
   used: cards post as stills unless he asks for motion on a story.

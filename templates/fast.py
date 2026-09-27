@@ -84,9 +84,11 @@ def fast(media, date, source, out, label=None, gulf=False,
 
 
 def compose(media, out, bg, paint_footer, paint_chips, crop=False,
-            video=None, clip_start=0, clip_seconds=8, audio=False):
+            video=None, clip_start=0, clip_seconds=8, audio=False, timed=()):
     """The frame both brands share: media full bleed, then the brand's own
-    footer and chips painted on top. A still or, with `video`, an MP4."""
+    footer and chips painted on top. A still or, with `video`, an MP4.
+    `timed` is a list of (png, start, end): full-frame RGBA overlays shown
+    only between those seconds (subtitles)."""
     backing = (0, 0, 0)
     im = Image.new('RGB', (W, H), bg)
     if not video:
@@ -124,8 +126,14 @@ def compose(media, out, bg, paint_footer, paint_chips, crop=False,
     else:
         concat = ''.join(f'[s{i}]' for i in range(n)) + f'concat=n={n}:v=1:a=0[vid];'
         amap = ['-an']
+    for png, _, _ in timed:
+        cmd += ['-loop', '1', '-i', png]
     chain = (parts + concat + '[0:v][vid]overlay=0:0:shortest=1[a];'
-             f'[a][{n + 1}:v]overlay=0:0:shortest=1,format=yuv420p[out]')
+             f'[a][{n + 1}:v]overlay=0:0:shortest=1[b0];')
+    for k, (_, st, en) in enumerate(timed):
+        chain += (f"[b{k}][{n + 2 + k}:v]overlay=0:0:shortest=1:"
+                  f"enable='between(t,{st},{en})'[b{k + 1}];")
+    chain += f'[b{len(timed)}]format=yuv420p[out]'
     cmd += ['-filter_complex', chain, '-map', '[out]'] + amap + [
         '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-r', '30',
         '-movflags', '+faststart', out]

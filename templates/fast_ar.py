@@ -11,6 +11,7 @@ font is not in git. Unzip Mohammad's dubai.zip into FONTS before rendering.
 import math
 import os
 import subprocess
+import tempfile
 import zlib
 
 from PIL import Image, ImageDraw, ImageFont
@@ -142,13 +143,49 @@ def _footer(im, source, date, theme, seed, t=0.0):
     d.text((M, base), arabic_date(date), font=F('Medium', 36), fill=BODY, anchor='lm', **AR)
 
 
+#: Arabic subtitles on video cards: Dubai Bold on a dark band, centred low
+#: on the media, above the chip row. Long lines wrap to two.
+SUB_SIZE, SUB_MAX_W, SUB_BOTTOM = 50, 1300, fast.MH - 132
+
+
+def _wrap(d, text, f):
+    words, lines, cur = text.split(), [], ''
+    for w in words:
+        trial = (cur + ' ' + w).strip()
+        if cur and d.textlength(trial, font=f, **AR) > SUB_MAX_W:
+            lines.append(cur); cur = w
+        else:
+            cur = trial
+    return lines + [cur] if cur else lines
+
+
+def _subtitle_png(text, path, bottom=None):
+    W, H = fast.W, fast.H
+    im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    f = F('Bold', SUB_SIZE)
+    lines = _wrap(d, text, f)
+    step = int(SUB_SIZE * 1.45)
+    y = (bottom or SUB_BOTTOM) - step * len(lines)
+    for line in lines:
+        w = d.textlength(line, font=f, **AR)
+        d.rounded_rectangle([(W - w) / 2 - 22, y - 4, (W + w) / 2 + 22, y + step - 2],
+                            radius=10, fill=GROUND + (205,))
+        d.text((W / 2, y + step / 2 - 2), line, font=f, fill=INK, anchor='mm', **AR)
+        y += step
+    im.save(path)
+    return path
+
+
 def fast_ar(media, date, source, out, label=None, country=None, theme='cold',
             crop=False, video=None, clip_start=0, clip_seconds=8, audio=False,
-            animate=0):
+            animate=0, subtitles=(), sub_bottom=None):
     """`date` in the English form ('26 Sep 2026'); `source` in both forms,
     'فاميتسو (Famitsu)', which falls back to the Arabic when too wide; `theme` one of THEMES, chosen per story
     like DXB-KNIGHT's accent. `animate=6` writes a still card whose footer
-    lines drift, as a seamless 6 second MP4 loop."""
+    lines drift, as a seamless 6 second MP4 loop. `subtitles` is a list of
+    (start, end, arabic_text) in seconds of the output video; raise
+    `sub_bottom` (pixels from the top) when the clip has its own subtitles."""
     if theme not in THEMES:
         raise ValueError(f'theme is one of {", ".join(THEMES)}')
     seed = zlib.crc32(os.path.basename(out).encode())
@@ -161,10 +198,15 @@ def fast_ar(media, date, source, out, label=None, country=None, theme='cold',
         raise ValueError(f'"{label}" is not an Arabic fast chip: {"، ".join(PICKS)}')
     if country and country not in COUNTRIES:
         raise ValueError(f'"{country}" is not a country chip: {"، ".join(COUNTRIES)}')
+    if subtitles and not video:
+        raise ValueError('subtitles need a video card')
+    tmp = tempfile.mkdtemp(prefix='dlsubs-')
+    timed = [(_subtitle_png(t, os.path.join(tmp, f'sub{i}.png'), sub_bottom), st, en)
+             for i, (st, en, t) in enumerate(subtitles)]
     return fast.compose(media, out, GROUND,
                         lambda im: _footer(im, source, date, theme, seed),
                         lambda d: _chips(d, label, country),
-                        crop, video, clip_start, clip_seconds, audio)
+                        crop, video, clip_start, clip_seconds, audio, timed)
 
 
 def _animated(media, date, source, out, label, country, theme, crop, seed, seconds,
