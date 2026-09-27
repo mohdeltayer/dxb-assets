@@ -191,6 +191,15 @@ blurred fill and bare panels read as wasted.
   bottom (account name, caption), so text, chips and the footer sit in
   x 64 to 910, y 285 to 1480 (`SAFE_*` in ig_ar.py); only the clip runs
   full width. That fits a two-line headline and a two-line summary.
+  The right column stays the blurred clip, nothing else (Mohammad,
+  27 Sep 2026): a vertical brand strip there was tried and dropped,
+  since rotated text reads slowly and the strip crossing the footer
+  distracted. The brand stays horizontal, in the footer.
+  Accent (Mohammad, 27 Sep 2026, for posts from then on): on Instagram
+  the rule under the media, the panel edge and the footer's top line
+  take the story's theme colour (cold azure, stylized periwinkle,
+  playful mint, spectacle amber; `ACCENTS` in ig_ar.py). The chip stays
+  azure on every story, and headline and summary stay ink.
 - Caption: the first line is a hook that differs from the card headline
   (only about two lines show before "more"), then the full story with the
   same checked facts, then 2 story hashtags plus #ألعاب #أخبار_الألعاب.

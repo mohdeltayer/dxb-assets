@@ -33,12 +33,12 @@ FH = 132                         # footer
 M = 64
 AR = A.AR
 PANEL = A.hx('#1E1D4A')
-EDGE = A.hx('#3F3DA8')
 HANDLE = '@the_digilounge'
 
 #: Instagram accent per theme (Mohammad, 27 Sep 2026: some liberty with
-#: colour on Instagram, as on X). The accent carries the chip, the rule and
-#: the panel edge; the ground stays indigo. None of them is pink.
+#: colour on Instagram, as on X). The accent carries the rule under the
+#: media, the panel edge and the footer's top line; the chip stays azure on
+#: every story and the ground stays indigo. None of them is pink.
 ACCENTS = {'cold': A.AZURE, 'stylized': A.hx('#A5A3FF'),
            'playful': A.hx('#3DDCB4'), 'spectacle': A.hx('#FFB547')}
 _ACC = A.AZURE
@@ -91,7 +91,7 @@ def _head(d, text, y, label, country, size, step, right=M):
     """Chip row then the headline; returns the y under the last line."""
     x = W - right
     if label:
-        x = _chip(d, label, x, y + 57, _ACC, A.GROUND) - 14
+        x = _chip(d, label, x, y + 57, A.AZURE, A.GROUND) - 14
     if country:
         _chip(d, country, x, y + 57, A.INDIGO, A.INK)
     if label or country:
@@ -140,7 +140,7 @@ def _footer(im, y, source, date, theme, seed, right=M, fh=FH):
     The handle, shared by the X and Instagram accounts, sits under the name."""
     im.paste(A._waves(W, fh, theme, seed), (0, y))
     d = ImageDraw.Draw(im)
-    d.rectangle([0, y, W, y + 3], fill=EDGE)
+    d.rectangle([0, y, W, y + 3], fill=_ACC)
     mid = y + fh // 2
     size = 62
     mark = Image.open(A.MARK).convert('RGB').resize((size * 4, size * 4), Image.LANCZOS)
@@ -186,19 +186,20 @@ def _check(label, country, theme):
 
 def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
           theme='cold', video=None, clip_start=0, clip_seconds=8, audio=False,
-          subtitles=(), src_crop=None, accent=None, banner=False):
+          subtitles=(), src_crop=None, accent=None):
     """`headline`: the hook, one or two lines. `summary`: one or two
     sentences of detail for the panel. `media` is a 16:9 still (a file in
     uploads); with `video` instead, a 9:16 Reel is written to an .mp4 `out`.
     `subtitles`: [(start, end, arabic)]. `src_crop` ('w:h:x:y' from
-    cropdetect) trims a trailer's own letterbox first."""
+    cropdetect) trims a trailer's own letterbox first. The accent follows
+    `theme` (ACCENTS); `accent` overrides it with a colour."""
     _check(label, country, theme)
     global _ACC
-    _ACC = (A.AZURE if accent is None else ACCENTS[theme] if accent == 'theme' else accent)
+    _ACC = ACCENTS[theme] if accent is None else accent
     seed = zlib.crc32(os.path.basename(out).encode())
     if video:
         return _reel(video, date, source, out, headline, summary, label, country, theme,
-                     seed, clip_start, clip_seconds, audio, subtitles, src_crop, banner)
+                     seed, clip_start, clip_seconds, audio, subtitles, src_crop)
     im = Image.new('RGB', (W, H_STILL), A.GROUND)
     d = ImageDraw.Draw(im)
     y = _head(d, headline, 70, label, country, 64, 88) + 30
@@ -224,36 +225,6 @@ SAFE_RIGHT = 170                # clear of the like, comment, share column
 REEL_FH = 112
 
 
-BANNER_X = W - SAFE_RIGHT + 24     # 934: the strip the Reels buttons sit on
-
-
-def _banner(top, theme, seed):
-    """A vertical brand strip under the Reels button column: the wave
-    lines running top to bottom in the theme's colours, the play mark and
-    the name set vertically above where the buttons start."""
-    bw = W - BANNER_X
-    strip = A._waves(H_REEL, bw, theme, seed).rotate(90, expand=True).convert('RGBA')
-    strip.putalpha(235)
-    top.paste(strip, (BANNER_X, 0))
-    d = ImageDraw.Draw(top)
-    d.rectangle([BANNER_X, 0, BANNER_X + 4, H_REEL], fill=_ACC + (255,))
-    size = 70
-    mark = Image.open(A.MARK).convert('RGB').resize((size * 4, size * 4), Image.LANCZOS)
-    mask = Image.new('L', mark.size, 0)
-    ImageDraw.Draw(mask).ellipse((0, 0, mark.width - 1, mark.height - 1), fill=255)
-    mark, mask = mark.resize((size, size), Image.LANCZOS), mask.resize((size, size), Image.LANCZOS)
-    cx = BANNER_X + 4 + (bw - 4) // 2
-    top.paste(mark, (cx - size // 2, SAFE_TOP + 8), mask)
-    # The name and handle, turned to read up the strip.
-    t = Image.new('RGBA', (720, bw - 4), (0, 0, 0, 0))
-    td = ImageDraw.Draw(t)
-    td.text((360, (bw - 4) / 2 - 14), 'ديجيتال لاونج', font=A.F('Bold', 44), fill=A.INK,
-            anchor='mm', **AR)
-    td.text((360, (bw - 4) / 2 + 30), HANDLE, font=A.F('Medium', 24), fill=A.BODY, anchor='mm')
-    t = t.rotate(90, expand=True)
-    top.alpha_composite(t, (BANNER_X + 4, SAFE_TOP + 8 + size + 20))
-
-
 def _subtitle_png(text, path, y):
     im = Image.new('RGBA', (W, H_REEL), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
@@ -274,7 +245,7 @@ def _subtitle_png(text, path, y):
 
 
 def _reel(video, date, source, out, headline, summary, label, country, theme, seed,
-          clip_start, clip_seconds, audio, subtitles, src_crop, banner=True):
+          clip_start, clip_seconds, audio, subtitles, src_crop):
     if not out.lower().endswith('.mp4'):
         raise ValueError('a Reel must be written to a .mp4 path')
     if src_crop:
@@ -284,8 +255,6 @@ def _reel(video, date, source, out, headline, summary, label, country, theme, se
     vid_h = W * ch // cw // 2 * 2
     # The overlay: everything but the clip and the subtitles, on transparency.
     top = Image.new('RGBA', (W, H_REEL), (0, 0, 0, 0))
-    if banner:
-        _banner(top, theme, seed)
     d = ImageDraw.Draw(top)
     vid_y = _head(d, headline, SAFE_TOP + 10, label, country, 46, 62, right=SAFE_RIGHT) + 18
     rule_y = vid_y + vid_h
