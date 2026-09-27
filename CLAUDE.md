@@ -156,17 +156,24 @@ takes `"platform": "instagram"` and `"settings": {"post_type": "post"}`
 `publish.py` needs no change for it.
 
 Instagram (Mohammad, 27 Sep 2026): every Digital Lounge story also goes to
-Instagram, on its own card and caption.
-- Card: `templates/ig_ar.py`, `ig_ar(media, date, source, out, label=None,
-  country=None, theme='cold', video=None, clip_start=0, clip_seconds=8,
-  audio=False, subtitles=(), src_crop=None)`. Option B, agreed: stills 4:5
-  (1080x1350), the picture contained on a blurred, darkened copy of itself,
-  chip on the media, wave footer; no headline. Video is a 9:16 Reel whose
-  middle 4:5 band is the same card (the feed crops a Reel to 4:5).
-  `src_crop` trims a trailer's own letterbox (use ffmpeg cropdetect).
-- Caption: written for Instagram, not pasted from the X post; same facts,
-  a different hook, list lines kept, then 2 story hashtags plus
-  #ألعاب #أخبار_الألعاب. Same Arabic rules and two passes as X.
+Instagram, on its own card and caption. Empty space is the thing to avoid:
+blurred fill and bare panels read as wasted.
+- Card: `templates/ig_ar.py`, `ig_ar(media, date, source, out, headline,
+  summary, label=None, country=None, theme='cold', video=None,
+  clip_start=0, clip_seconds=8, audio=False, subtitles=(), src_crop=None)`.
+  The news layout: chip and a short headline on top, the media at full
+  width and 16:9 (never cropped), a lighter panel with one or two
+  sentences (not bullets), then the footer laid out as on X (mark and name
+  right with @the_digilounge and the X and Instagram glyphs under it,
+  source centre, date left). Stills are 3:4, 1080x1440, which Instagram
+  shows uncropped in feed and grid. Video is a 9:16 Reel with the same
+  stack in the middle 1350px the feed shows, a subtitle band between the
+  clip and the panel, and the blurred clip behind. `src_crop` trims a
+  trailer's own letterbox (ffmpeg cropdetect).
+- Caption: the first line is a hook that differs from the card headline
+  (only about two lines show before "more"), then the full story with the
+  same checked facts, then 2 story hashtags plus #ألعاب #أخبار_الألعاب.
+  No links (not clickable). Same Arabic rules and two passes as X.
 
 Brand kit (Mohammad, 26 Sep 2026):
 - Mark: the existing azure play button on an indigo radial ground,

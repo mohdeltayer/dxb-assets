@@ -1,16 +1,19 @@
-"""Digital Lounge Instagram card, Arabic (agreed 27 Sep 2026: option B).
+"""Digital Lounge Instagram card, Arabic (agreed 27 Sep 2026).
 
-Stills are 4:5 (1080 x 1350): the picture contained, never cropped, on a
-blurred and darkened copy of itself, the chip bottom right on the media,
-an azure rule, and the wave footer (play mark and name right, date left,
-source beneath). No headline, as on the X fast card.
+The news layout. Top to bottom: the chip and a short headline, the media
+at full width and 16:9 (never cropped, the X rule), a distinct panel with
+one or two sentences of detail, then the footer laid out as on X: the
+play mark and name right with @the_digilounge and the X and Instagram
+glyphs under the name, the source centre, the date left.
 
-Video is a 9:16 Reel (1080 x 1920) built so its middle 1080 x 1350 is the
-same card: the feed shows a Reel cut to 4:5, so everything that matters
-sits in that band. Above it the blurred clip runs on; below it the wave
-footer runs on, under Instagram's own caption and buttons.
+Stills are 3:4 (1080 x 1440), the size Instagram now shows uncropped in
+both the feed and the profile grid. Video is a 9:16 Reel (1080 x 1920):
+the same stack inside the middle 1080 x 1350 band the feed shows, a band
+for Arabic subtitles between the clip and the panel, and the blurred clip
+behind everything instead of flat colour.
 """
 import os
+import re
 import subprocess
 import tempfile
 import zlib
@@ -21,29 +24,53 @@ import flex
 import fast_ar as A
 
 W = 1080
-H4 = 1350                    # 4:5 still
-H9 = 1920                    # 9:16 Reel
-BAND = (H9 - H4) // 2        # 285: where the 4:5 band starts in the Reel
+H_STILL = 1440
+H_REEL = 1920
+BAND = (H_REEL - 1350) // 2      # 285: the part of a Reel the feed shows starts here
+MH = 608                         # 16:9 media at full width
 RULE = 6
-FOOT = 176
-M = 44
+FH = 132                         # footer
+M = 64
 AR = A.AR
-DIM = 0.55                   # how far the blurred fill sinks into the ground
+PANEL = A.hx('#1E1D4A')
+EDGE = A.hx('#3F3DA8')
+HANDLE = '@the_digilounge'
+SOURCE_MAX = 380
 
 
-def _cover(src, w, h):
-    k = max(w / src.width, h / src.height)
-    art = src.resize((int(src.width * k) + 1, int(src.height * k) + 1), Image.LANCZOS)
-    l, t = (art.width - w) // 2, (art.height - h) // 2
-    return art.crop((l, t, l + w, t + h))
+# ---------------------------------------------------------------- text
+
+_LAT_END = re.compile(r'[A-Za-z0-9|:.,!?)\]\-]$')
+_LAT_START = re.compile(r'^[A-Za-z0-9(|]')
 
 
-def _contain(src, w, h):
-    k = min(w / src.width, h / src.height)
-    return src.resize((max(1, int(src.width * k)), max(1, int(src.height * k))), Image.LANCZOS)
+def _tokens(text):
+    """Words, with English names and a number and the word after it kept
+    together, so "Hearts of Stone" or "3 ديسمبر" never breaks over a line."""
+    out = []
+    for w in text.split():
+        if out and ((_LAT_END.search(out[-1]) and _LAT_START.match(w)) or out[-1].isdigit()):
+            out[-1] += ' ' + w
+        else:
+            out.append(w)
+    return out
 
 
-def _chip(d, text, x_right, y_bottom, fill, ink, size=40):
+def _wrap(d, text, f, width):
+    lines, cur = [], ''
+    for w in _tokens(text):
+        trial = (cur + ' ' + w).strip()
+        if cur and d.textlength(trial, font=f, **AR) > width:
+            lines.append(cur)
+            cur = w
+        else:
+            cur = trial
+    return lines + [cur] if cur else lines
+
+
+# ---------------------------------------------------------------- parts
+
+def _chip(d, text, x_right, y_bottom, fill, ink, size=38):
     f = A.F('Bold', size)
     w = d.textlength(text, font=f, **AR)
     bw, bh = w + 48, int(size * 1.5)
@@ -53,35 +80,90 @@ def _chip(d, text, x_right, y_bottom, fill, ink, size=40):
     return x0
 
 
-def _chips(d, label, country, y_bottom):
+def _head(d, text, y, label, country, size, step):
+    """Chip row then the headline; returns the y under the last line."""
     x = W - M
     if label:
-        x = _chip(d, label, x, y_bottom, A.AZURE, A.GROUND) - 14
+        x = _chip(d, label, x, y + 57, A.AZURE, A.GROUND) - 14
     if country:
-        _chip(d, country, x, y_bottom, A.INDIGO, A.INK)
+        _chip(d, country, x, y + 57, A.INDIGO, A.INK)
+    if label or country:
+        y += 57 + 22
+    f = A.F('Bold', size)
+    lines = _wrap(d, text, f, W - 2 * M)
+    if len(lines) > 3:
+        raise ValueError(f'headline runs to {len(lines)} lines; keep it to 3')
+    for line in lines:
+        d.text((W - M, y + step / 2), line, font=f, fill=A.INK, anchor='rm', **AR)
+        y += step
+    return y
 
 
-def _footer(im, top, height, source, date, theme, seed):
-    """Waves over `height` from `top`; the type sits in its first FOOT px."""
-    im.paste(A._waves(W, height, theme, seed), (0, top))
+def _panel(d, text, y, size, step, pad=34):
+    """The detail panel: lighter indigo, an azure edge on the reading side."""
+    f = A.F('Medium', size)
+    lines = _wrap(d, text, f, W - 2 * M - 2 * pad - 10)
+    h = pad * 2 + step * len(lines) - (step - size)
+    d.rounded_rectangle([M, y, W - M, y + h], radius=18, fill=PANEL)
+    d.rounded_rectangle([W - M - 8, y + 18, W - M, y + h - 18], radius=4, fill=A.AZURE)
+    ty = y + pad
+    for line in lines:
+        d.text((W - M - pad - 12, ty + size / 2 + 4), line, font=f, fill=A.INK,
+               anchor='rm', **AR)
+        ty += step
+    return y + h
+
+
+def _icon_x(d, x, y, s, c):
+    d.line((x, y, x + s, y + s), fill=c, width=4)
+    d.line((x + s, y, x, y + s), fill=c, width=2)
+
+
+def _icon_ig(d, x, y, s, c):
+    w = max(2, s // 9)
+    d.rounded_rectangle([x, y, x + s, y + s], radius=s / 3.2, outline=c, width=w)
+    r = s * 0.24
+    cx, cy = x + s / 2, y + s / 2
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=c, width=w)
+    d.ellipse([x + s * 0.72, y + s * 0.18, x + s * 0.84, y + s * 0.30], fill=c)
+
+
+def _footer(im, y, source, date, theme, seed):
+    """As on X, right to left: mark and name, source centre, date left.
+    The handle, shared by the X and Instagram accounts, sits under the name."""
+    im.paste(A._waves(W, FH, theme, seed), (0, y))
     d = ImageDraw.Draw(im)
-    d.rectangle([0, top - RULE, W, top], fill=A.AZURE)
-    row = top + 58
-    size = 58
+    d.rectangle([0, y, W, y + 3], fill=EDGE)
+    mid = y + FH // 2
+    size = 62
     mark = Image.open(A.MARK).convert('RGB').resize((size * 4, size * 4), Image.LANCZOS)
     mask = Image.new('L', mark.size, 0)
     ImageDraw.Draw(mask).ellipse((0, 0, mark.width - 1, mark.height - 1), fill=255)
     mark, mask = mark.resize((size, size), Image.LANCZOS), mask.resize((size, size), Image.LANCZOS)
-    im.paste(mark, (W - M - size, row - size // 2), mask)
+    im.paste(mark, (W - M - size, mid - size // 2), mask)
     d = ImageDraw.Draw(im)
-    d.text((W - M - size - 16, row), 'ديجيتال لاونج', font=A.F('Bold', 40),
-           fill=A.INK, anchor='rm', **AR)
-    d.text((M, row), A.arabic_date(date), font=A.F('Medium', 32), fill=A.BODY,
-           anchor='lm', **AR)
-    f = A.F('Medium', 30)
-    if d.textlength(source, font=f, **AR) > W - 2 * M and '(' in source:
-        source = source.split('(')[0].strip()
-    d.text((W - M, row + 70), source, font=f, fill=A.BODY, anchor='rm', **AR)
+    xr = W - M - size - 16
+    d.text((xr, mid - 16), 'ديجيتال لاونج', font=A.F('Bold', 34), fill=A.INK,
+           anchor='rm', **AR)
+    f = A.F('Medium', 24)
+    d.text((xr, mid + 24), HANDLE, font=f, fill=A.BODY, anchor='rm')
+    s = 20
+    ix = xr - d.textlength(HANDLE, font=f) - 12 - s
+    _icon_ig(d, ix, mid + 24 - s / 2, s, A.BODY)
+    _icon_x(d, ix - s - 10, mid + 24 - s / 2 + 1, s - 2, A.BODY)
+    f = A.F('Medium', 28)
+    if d.textlength(source, font=f, **AR) > SOURCE_MAX and '(' in source:
+        source = source.split('(')[0].strip()      # no room for both forms
+    d.text((W / 2 - 40, mid), source, font=f, fill=A.BODY, anchor='mm', **AR)
+    d.text((M, mid), A.arabic_date(date), font=f, fill=A.BODY, anchor='lm', **AR)
+
+
+def _media(path):
+    src = Image.open(C.U + path).convert('RGB')
+    k = max(W / src.width, MH / src.height)
+    art = src.resize((int(src.width * k) + 1, int(src.height * k) + 1), Image.LANCZOS)
+    l, t = (art.width - W) // 2, (art.height - MH) // 2
+    return art.crop((l, t, l + W, t + MH))
 
 
 def _check(label, country, theme):
@@ -93,95 +175,94 @@ def _check(label, country, theme):
         raise ValueError(f'"{country}" is not a country chip: {"، ".join(A.COUNTRIES)}')
 
 
-def ig_ar(media, date, source, out, label=None, country=None, theme='cold',
-          video=None, clip_start=0, clip_seconds=8, audio=False, subtitles=(),
-          src_crop=None):
-    """A 4:5 still from `media`, or with `video` (a file in uploads) a 9:16
-    Reel written to an .mp4 `out`. `subtitles`: [(start, end, arabic)].
-    `src_crop` ('w:h:x:y', from ffmpeg's cropdetect) trims a trailer's own
-    letterbox before the clip is set in the frame."""
+# ---------------------------------------------------------------- entry
+
+def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
+          theme='cold', video=None, clip_start=0, clip_seconds=8, audio=False,
+          subtitles=(), src_crop=None):
+    """`headline`: the hook, one or two lines. `summary`: one or two
+    sentences of detail for the panel. `media` is a 16:9 still (a file in
+    uploads); with `video` instead, a 9:16 Reel is written to an .mp4 `out`.
+    `subtitles`: [(start, end, arabic)]. `src_crop` ('w:h:x:y' from
+    cropdetect) trims a trailer's own letterbox first."""
     _check(label, country, theme)
     seed = zlib.crc32(os.path.basename(out).encode())
     if video:
-        return _reel(video, date, source, out, label, country, theme, seed,
-                     clip_start, clip_seconds, audio, subtitles, src_crop)
-    box = H4 - FOOT - RULE
-    src = Image.open(C.U + media).convert('RGB')
-    back = _cover(src, W, box).filter(ImageFilter.GaussianBlur(36))
-    back = Image.blend(back, Image.new('RGB', back.size, A.GROUND), DIM)
-    art = _contain(src, W, box)
-    back.paste(art, ((W - art.width) // 2, (box - art.height) // 2))
-    im = Image.new('RGB', (W, H4), A.GROUND)
-    im.paste(back, (0, 0))
-    _chips(ImageDraw.Draw(im), label, country, box - 34)
-    _footer(im, box + RULE, FOOT, source, date, theme, seed)
+        return _reel(video, date, source, out, headline, summary, label, country, theme,
+                     seed, clip_start, clip_seconds, audio, subtitles, src_crop)
+    im = Image.new('RGB', (W, H_STILL), A.GROUND)
+    d = ImageDraw.Draw(im)
+    y = _head(d, headline, 70, label, country, 64, 88) + 30
+    im.paste(_media(media), (0, y))
+    d = ImageDraw.Draw(im)
+    d.rectangle([0, y + MH, W, y + MH + RULE], fill=A.AZURE)
+    end = _panel(d, summary, y + MH + RULE + 40, 37, 58)
+    if end > H_STILL - FH - 16:
+        raise ValueError('headline and summary do not fit; shorten one of them')
+    _footer(im, H_STILL - FH, source, date, theme, seed)
     im.save(out)
     return out
 
 
-def _subtitle_png(text, path, y_bottom):
-    im = Image.new('RGBA', (W, H9), (0, 0, 0, 0))
+def _subtitle_png(text, path, y):
+    im = Image.new('RGBA', (W, H_REEL), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    f = A.F('Bold', 46)
-    words, lines, cur = text.split(), [], ''
-    for w in words:
-        trial = (cur + ' ' + w).strip()
-        if cur and d.textlength(trial, font=f, **AR) > W - 2 * M - 40:
-            lines.append(cur)
-            cur = w
-        else:
-            cur = trial
-    lines += [cur] if cur else []
-    step = 66
-    y = y_bottom - step * len(lines)
-    for line in lines:
+    f = A.F('Bold', 50)
+    for line in _wrap(d, text, f, W - 2 * M):
         w = d.textlength(line, font=f, **AR)
-        d.rounded_rectangle([(W - w) / 2 - 20, y - 4, (W + w) / 2 + 20, y + step - 2],
-                            radius=10, fill=A.GROUND + (205,))
-        d.text((W / 2, y + step / 2 - 2), line, font=f, fill=A.INK, anchor='mm', **AR)
-        y += step
+        d.rounded_rectangle([(W - w) / 2 - 20, y, (W + w) / 2 + 20, y + 72], radius=10,
+                            fill=A.GROUND + (230,))
+        d.text((W / 2, y + 36), line, font=f, fill=A.INK, anchor='mm', **AR)
+        y += 78
     im.save(path)
     return path
 
 
-def _reel(video, date, source, out, label, country, theme, seed,
-          clip_start, clip_seconds, audio, subtitles, src_crop=None):
+def _reel(video, date, source, out, headline, summary, label, country, theme, seed,
+          clip_start, clip_seconds, audio, subtitles, src_crop):
     if not out.lower().endswith('.mp4'):
         raise ValueError('a Reel must be written to a .mp4 path')
-    box_bottom = BAND + H4 - FOOT - RULE          # 1453: the media area ends
     if src_crop:
         cw, ch = (int(v) for v in src_crop.split(':')[:2])
     else:
         cw, ch = 16, 9
-    vid_h = W * ch // cw // 2 * 2                 # the clip, contained
-    vid_y = BAND + (H4 - FOOT - RULE - vid_h) // 2
+    vid_h = W * ch // cw // 2 * 2
+    # The overlay: everything but the clip and the subtitles, on transparency.
+    top = Image.new('RGBA', (W, H_REEL), (0, 0, 0, 0))
+    d = ImageDraw.Draw(top)
+    vid_y = _head(d, headline, BAND + 30, label, country, 52, 74) + 24
+    rule_y = vid_y + vid_h
+    d.rectangle([0, rule_y, W, rule_y + RULE], fill=A.AZURE)
+    sub_y = rule_y + RULE + 26
+    panel_y = sub_y + 104 + 22 if subtitles else rule_y + RULE + 34   # a subtitle line
+    end = _panel(d, summary, panel_y, 36, 56)
+    foot_y = BAND + 1350 - FH
+    if end > foot_y - 10:
+        raise ValueError('headline and summary do not fit the Reel; shorten one of them')
+    foot = Image.new('RGB', (W, foot_y + FH), A.GROUND)
+    _footer(foot, foot_y, source, date, theme, seed)
+    top.paste(foot.crop((0, foot_y, W, foot_y + FH)), (0, foot_y))
     tmp = tempfile.mkdtemp(prefix='dlreel-')
-    top = Image.new('RGBA', (W, H9), (0, 0, 0, 0))
-    _footer(top, box_bottom + RULE, H9 - box_bottom - RULE, source, date, theme, seed)
-    _chips(ImageDraw.Draw(top), label, country, box_bottom - 34)
     top_p = os.path.join(tmp, 'top.png')
     top.save(top_p)
-    subs = [(_subtitle_png(t, os.path.join(tmp, f'sub{i}.png'), box_bottom - 118), st, en)
+    subs = [(_subtitle_png(t, os.path.join(tmp, f'sub{i}.png'), sub_y), st, en)
             for i, (st, en, t) in enumerate(subtitles)]
     p = C.U + video
     keep_audio = audio and flex._has_audio(p)
     g = '0x%02X%02X%02X' % A.GROUND
+    pre = f'crop={src_crop},' if src_crop else ''
     cmd = ['ffmpeg', '-y', '-v', 'error', '-ss', str(clip_start), '-t', str(clip_seconds),
            '-i', p, '-loop', '1', '-i', top_p]
     for png, _, _ in subs:
         cmd += ['-loop', '1', '-i', png]
-    pre = f'crop={src_crop},' if src_crop else ''
     chain = (f'[0:v]{pre}fps=30,split[a][b];'
-             f'[a]scale={W}:{box_bottom}:force_original_aspect_ratio=increase,'
-             f'crop={W}:{box_bottom},boxblur=40:2,setsar=1,format=rgba[bl];'
-             f'color=c={g}@{DIM}:s={W}x{box_bottom}:r=30,format=rgba[dim];'
+             f'[a]scale={W}:{H_REEL}:force_original_aspect_ratio=increase,'
+             f'crop={W}:{H_REEL},boxblur=40:2,setsar=1,format=rgba[bl];'
+             f'color=c={g}@0.72:s={W}x{H_REEL}:r=30,format=rgba[dim];'
              f'[bl][dim]overlay=0:0:shortest=1[bg];'
-             f'[b]scale={W}:{vid_h}:force_original_aspect_ratio=decrease,'
-             f'pad={W}:{vid_h}:(ow-iw)/2:(oh-ih)/2:color=black,setsar=1[v];'
-             f'color=c={g}:s={W}x{H9}:r=30[cv];'
-             f'[cv][bg]overlay=0:0:shortest=1[c1];'
-             f'[c1][v]overlay=0:{vid_y}:shortest=1[c2];'
-             f'[c2][1:v]overlay=0:0:shortest=1[s0];')
+             f'[b]scale={W}:{vid_h},setsar=1[v];'
+             f'[bg][v]overlay=0:{vid_y}:shortest=1[c1];'
+             f'[c1][1:v]overlay=0:0:shortest=1[s0];')
     for k, (_, st, en) in enumerate(subs):
         chain += (f"[s{k}][{2 + k}:v]overlay=0:0:shortest=1:"
                   f"enable='between(t,{st},{en})'[s{k + 1}];")
