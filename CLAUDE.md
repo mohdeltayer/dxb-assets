@@ -149,6 +149,11 @@ both; card on DXB-KNIGHT only; Digital Lounge only). The Digital Lounge is
 followers and 1,565 posts as of 24 Sep 2026). Connected to Postiz on
 26 Sep 2026 as integration `cmuifxrd70mbdo80y235utthm` (DXB-KNIGHT is
 `cmtk7cltp0030my0yj6glcyru`); check the id on every Arabic job.json.
+Digital Lounge Instagram joined Postiz on 27 Sep 2026 as integration
+`cmujo38ww12j3o80ygi3webqt` (Postiz name "The DIGI-Lounge"). Its job.json
+takes `"platform": "instagram"` and `"settings": {"post_type": "post"}`
+(or "story"); every post needs media, captions stop at 2200 characters.
+`publish.py` needs no change for it.
 
 Brand kit (Mohammad, 26 Sep 2026):
 - Mark: the existing azure play button on an indigo radial ground,
