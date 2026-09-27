@@ -186,9 +186,13 @@ display name changes on 4 Oct). Its job.json takes `"platform":
 "brand_organic_toggle": false}` plus an optional `title` (90 characters).
 UPLOAD only drops the video in the TikTok app inbox for him to finish by
 hand. Every post needs media; captions stop at 2200 characters.
-On hold (Mohammad, 27 Sep 2026): no TikTok posts until he confirms the
-display name no longer shows "Mohammed" (name lock ends about 4 Oct). The
-only post so far is the Dynasty Warriors 3 Reel test, 27 Sep 20:20.
+Hold lifted (Mohammad, 28 Sep 2026): the public profile shows the_digilounge
+with the bio and play mark, which is fine until the name becomes
+"ديجيتال لاونج | أخبار الألعاب" on 4 Oct (reminder set). Every Digital Lounge
+story with a video goes to TikTok with the rest of Digital Lounge: same
+Reel file, same time as its X, Instagram and YouTube posts, the Instagram
+caption as text (Arabic hashtags first). Postiz still labels the channel
+"Mohammed" until it is reconnected; that label is not seen by anyone.
 Digital Lounge YouTube (@the_digilounge, the old "Digi-ديجي" channel)
 was rebranded on 27 Sep 2026: name "ديجيتال لاونج | أخبار الألعاب", Arabic
 description, banner `live/2026-09-27/youtube/digi-youtube-banner.png`
