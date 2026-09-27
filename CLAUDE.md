@@ -156,7 +156,9 @@ takes `"platform": "instagram"` and `"settings": {"post_type": "post"}`
 `publish.py` needs no change for it.
 
 Instagram (Mohammad, 27 Sep 2026): every Digital Lounge story also goes to
-Instagram, on its own card and caption. Empty space is the thing to avoid:
+Instagram, on its own card and caption, at the same time as its X post:
+one time per story, both job.json files carry the same date. (The first
+batch ran later on Instagram only because the channel was being set up.) Empty space is the thing to avoid:
 blurred fill and bare panels read as wasted.
 - Card: `templates/ig_ar.py`, `ig_ar(media, date, source, out, headline,
   summary, label=None, country=None, theme='cold', video=None,
