@@ -22,7 +22,7 @@ has said so; everything else is a working suggestion.
 | Handheld mode | الوضع المحمول | | Suggested 27 Sep 2026 |
 | Locked 30fps | معدل ثابت يبلغ 30 إطارًا في الثانية | only when the source measured stability | Suggested 27 Sep 2026 |
 | Upscaled from X to Y | مُرقّاة من X | keep which number is internal and which is output | Suggested 27 Sep 2026 |
-| Dungeons (Fire Emblem: Fortune's Weave) | الزنزانات | RPG dungeon areas, not a prison | Unresolved, ask |
+| Dungeons (Fire Emblem: Fortune's Weave) | مناطق الاستكشاف | not الزنزانات (reads as prison cells) | Approved 27 Sep 2026 |
 | A bit disappointing | مخيّب للآمال بعض الشيء | never intensify | Suggested 27 Sep 2026 |
 
 ## Tools
@@ -34,5 +34,7 @@ has said so; everything else is a working suggestion.
    custom instructions and glossaries need DeepL Pro. Its raw output needs the
    house rules applied after (it left "Digital Lounge" in Latin and rendered
    "docked" literally).
+2b. DeepL back-translation (Arabic to English) is the cross-check that the
+    meaning survived: compare it with the English source before queuing.
 3. Jais Chat (jaischat.ai, G42/Inception), used by Mohammad by hand with the
    house prompt when he wants a second Arabic read.
