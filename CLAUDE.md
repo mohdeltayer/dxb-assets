@@ -91,6 +91,14 @@ English post. Names in Arabic posts (Mohammad, 26 Sep 2026):
   alone where there is not: `fast_ar` drops the bracket itself when the
   source would crowd the footer.
 
+Arabic writing (Mohammad, 27 Sep 2026): write and edit Arabic with the
+`arabic-games-film-editor` skill (`.claude/skills/`, his upload) and the
+house glossary `arabic/house-glossary.md`, whose approved rules override
+the skill's defaults (names above, no first person). Add every correction
+he makes to the glossary. DeepL stays the alternative when needed; it
+translates only (no Arabic rewriting) and its output still needs the
+house rules applied.
+
 The two brands never share a mark; their palettes are kin
 (Mohammad, 26 Sep 2026). What tells a Digital Lounge card apart is the
 indigo ground, the play mark, Dubai type and the right-to-left footer.
