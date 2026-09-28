@@ -223,6 +223,12 @@ Warriors 3 test looked right): every Digital Lounge story with a video goes
 to YouTube with the rest of Digital Lounge, same Reel file and same time as
 its X and Instagram posts. Title: the story in one Arabic-first line.
 Description: the Instagram caption.
+Studio upload defaults (Mohammad, 28 Sep 2026): video and title
+language Arabic, category Gaming, tags and channel keywords "ألعاب, أخبار
+الألعاب, أخبار الألعاب بالعربي, بلايستيشن, نينتندو, إكس بوكس, gaming news";
+country United Arab Emirates. Whether Postiz uploads inherit them is
+unchecked: look at the first Short of 29 Sep, and if they did not carry
+over, send them from job.json where Postiz has the fields.
 
 Instagram (Mohammad, 27 Sep 2026): every Digital Lounge story also goes to
 Instagram, on its own card and caption, at the same time as its X post:
