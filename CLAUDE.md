@@ -207,6 +207,16 @@ story with a video goes to TikTok with the rest of Digital Lounge: same
 Reel file, same time as its X, Instagram and YouTube posts, the Instagram
 caption as text (Arabic hashtags first). Postiz still labels the channel
 "Mohammed" until it is reconnected; that label is not seen by anyone.
+TikTok on hold (Mohammad, 28 Sep 2026, 21:30 Dubai, for 48 hours):
+every post after the first three sat at 0 views while the account check
+showed no issues, and a phone upload did no better, so the account is
+not being sent to For You after a burst of about nine posts on day one.
+Until about 21:30 on 30 Sep no new TikTok jobs are drafted or queued
+(posts already in Postiz stay). The first post back is posted from his
+phone, built from our own graphics (a sales chart, not a trailer), with
+a location and a headline cover; after that 1 to 3 TikToks a day, the
+strongest stories only. This overrides "every Digital Lounge story
+goes to TikTok" until he says otherwise.
 Digital Lounge YouTube (@the_digilounge, the old "Digi-ديجي" channel)
 was rebranded on 27 Sep 2026: name "ديجيتال لاونج | أخبار الألعاب", Arabic
 description, banner `live/2026-09-27/youtube/digi-youtube-banner.png`
