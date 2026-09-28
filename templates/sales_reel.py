@@ -61,7 +61,7 @@ def _fmt(n):
     return f'{n:,}'
 
 
-def _base(title, week_label, source, date):
+def _base(title, week_label, source, date, page=''):
     im = Image.new('RGB', (W, H), A.GROUND)
     glow = Image.new('L', (W, H), 0)
     ImageDraw.Draw(glow).ellipse([-200, 300, W + 200, 1500], fill=70)
@@ -75,7 +75,8 @@ def _base(title, week_label, source, date):
     d.rounded_rectangle([R - tw - 36, 300, R, 356], radius=12, fill=A.AZURE)
     d.text((R - 18, 328), 'أرقام', font=f, fill=A.GROUND, anchor='rm', **G.AR)
     d.text((R, 400), title, font=A.F('Bold', 58), fill=A.INK, anchor='rm', **G.AR)
-    d.text((R, 460), week_label, font=A.F('Regular', 32), fill=A.BODY, anchor='rm', **G.AR)
+    line = f'{page} · {week_label}' if page else week_label
+    d.text((R, 460), line, font=A.F('Regular', 32), fill=A.BODY, anchor='rm', **G.AR)
     foot_y = G.SAFE_BOTTOM - G.REEL_FH
     G._footer(im, foot_y, source, date, 'cold', 7, right=G.SAFE_RIGHT, fh=G.REEL_FH,
               left=G.SAFE_LEFT, handles=False)
@@ -130,29 +131,104 @@ def _row(r, count):
     return lay
 
 
-def body(rows, week_label, date, out, title='الأكثر مبيعًا في اليابان',
+def _hw_row(h, frac, count, widest):
+    """Hardware row: family name right, bar growing left, number, change."""
+    lay = Image.new('RGBA', (R - L, ROW_H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    d.rounded_rectangle([0, 0, R - L - 1, ROW_H - 1], radius=18, fill=A.hx('#1E1D4A') + (235,),
+                        outline=A.hx('#3F3DA8') + (255,), width=2)
+    x = R - L - 24
+    d.text((x, 40), h['name'], font=A.F('Bold', 36), fill=A.INK, anchor='rm')
+    d.text((x, 84), f'الإجمالي {_fmt(h["life"])}', font=A.F('Regular', 24), fill=A.BODY,
+           anchor='rm', **G.AR)
+    if h.get('last'):
+        ch = (h['week'] - h['last']) / h['last'] * 100
+        col = UP if ch >= 0 else DOWN
+        # Dubai has no arrow glyphs, so the triangle is drawn
+        ty = 122
+        tri = ([(x - 16, ty + 7), (x, ty + 7), (x - 8, ty - 7)] if ch >= 0 else
+               [(x - 16, ty - 7), (x, ty - 7), (x - 8, ty + 7)])
+        d.polygon(tri, fill=col)
+        d.text((x - 26, ty), f'{abs(ch):.0f}% عن الأسبوع الماضي', font=A.F('Medium', 24),
+               fill=col, anchor='rm', **G.AR)
+    bx0, bx1 = 24, x - 260
+    bar1 = x - 310                                  # clear of the change line
+    w = max(6, (bar1 - bx0) * (h['week'] / widest) * frac)
+    d.rounded_rectangle([bar1 - w, 100, bar1, 128], radius=10, fill=A.AZURE)
+    d.text((bx1, 52), _fmt(count), font=A.F('Bold', 40), fill=A.INK, anchor='rm')
+    d.text((bx1 - d.textlength(_fmt(count), font=A.F('Bold', 40)) - 12, 56), 'جهاز',
+           font=A.F('Regular', 24), fill=A.BODY, anchor='rm', **G.AR)
+    return lay
+
+
+def _slot_y(i):
+    return ROWS_Y + i * (ROW_H + ROW_GAP)
+
+
+def body(rows, week_label, date, out, hardware=(), title='الأكثر مبيعًا في اليابان',
          source='فاميتسو (Famitsu)'):
-    rows = sorted(rows, key=lambda r: r['rank'])[:5]
-    base = _base(title, week_label, source, date).convert('RGBA')
-    order = sorted(rows, key=lambda r: -r['rank'])          # 5 first, 1 last
-    starts = {r['rank']: FIRST + i * STEP for i, r in enumerate(order)}
-    dur = FIRST + (len(order) - 1) * STEP + HOLD
+    """rows: the software top 10 (or 5). hardware: [dict(name, week, life,
+    last)] in display order. Pages: ranks 10 to 6, 5 to 1, then hardware,
+    each a countdown on the stats beat, crossfading into the next."""
+    rows = sorted(rows, key=lambda r: r['rank'])[:10]
+    pages = []
+    if len(rows) > 5:
+        pages.append(('sw', 'المراكز 10 إلى 6', rows[5:]))
+    pages.append(('sw', 'المراكز 5 إلى 1' if len(rows) > 5 else '', rows[:5]))
+    if hardware:
+        pages.append(('hw', 'مبيعات الأجهزة', list(hardware)))
+    XF = 0.35
+    plan, t0 = [], 0.0
+    for kind, label, items in pages:
+        n = len(items)
+        hold = HOLD if (kind, label) == (pages[-1][0], pages[-1][1]) else 1.3
+        dur = FIRST + (n - 1) * STEP + hold
+        plan.append((kind, label, items, t0, dur))
+        t0 += dur - XF
+    total = t0 + XF
+    bases = {label: _base(title, week_label, source, date, label).convert('RGBA')
+             for _, label, _, _, _ in plan}
+    widest = max((h['week'] for h in hardware), default=1)
     tmp = tempfile.mkdtemp(prefix='sales-')
-    for f in range(int(round(dur * FPS))):
+
+    def draw(kind, label, items, start, t):
+        im = bases[label].copy()
+        if kind == 'sw':
+            order = sorted(items, key=lambda r: -r['rank'])
+            for i, r in enumerate(order):
+                st = start + FIRST + i * STEP
+                k = (t - st) / 0.3
+                if k <= 0:
+                    continue
+                a = _ease(k)
+                lay = _row(r, int(r['week'] * _ease((t - st) / 0.7)))
+                if a < 1:
+                    lay.putalpha(lay.getchannel('A').point(lambda v: int(v * a)))
+                im.alpha_composite(lay, (int(L - 40 * (1 - a)), _slot_y((r['rank'] - 1) % 5)))
+        else:
+            order = sorted(range(len(items)), key=lambda i: items[i]['week'])   # smallest first
+            for n_, i in enumerate(order):
+                h = items[i]
+                st = start + FIRST + n_ * STEP
+                k = (t - st) / 0.3
+                if k <= 0:
+                    continue
+                a = _ease(k)
+                g = _ease((t - st) / 0.7)
+                lay = _hw_row(h, g, int(h['week'] * g), widest)
+                if a < 1:
+                    lay.putalpha(lay.getchannel('A').point(lambda v: int(v * a)))
+                im.alpha_composite(lay, (int(L - 40 * (1 - a)), _slot_y(i)))
+        return im
+
+    for f in range(int(round(total * FPS))):
         t = f / FPS
-        im = base.copy()
-        for r in rows:
-            k = (t - starts[r['rank']]) / 0.3
-            if k <= 0:
-                continue
-            a = _ease(k)
-            count = int(r['week'] * _ease((t - starts[r['rank']]) / 0.7))
-            lay = _row(r, count)
-            if a < 1:
-                lay.putalpha(lay.getchannel('A').point(lambda v: int(v * a)))
-            y = ROWS_Y + (r['rank'] - 1) * (ROW_H + ROW_GAP)
-            im.alpha_composite(lay, (int(L - 40 * (1 - a)), y))
-        im.convert('RGB').save(f'{tmp}/{f:04d}.png')
+        live = [p for p in plan if p[3] <= t < p[3] + p[4]] or [plan[-1]]
+        frame = draw(*live[0][:3], live[0][3], t)
+        if len(live) > 1:                                  # crossfade into the next page
+            nxt = draw(*live[1][:3], live[1][3], t)
+            frame = Image.blend(frame, nxt, min(1, (t - live[1][3]) / XF))
+        frame.convert('RGB').save(f'{tmp}/{f:04d}.png')
     subprocess.run(['ffmpeg', '-y', '-v', 'error', '-framerate', str(FPS), '-i', f'{tmp}/%04d.png',
                     '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '18', '-r', str(FPS), out],
                    check=True)
