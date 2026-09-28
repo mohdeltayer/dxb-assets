@@ -320,16 +320,28 @@ Brand kit (Mohammad, 26 Sep 2026):
   notes, so the music is original. Every flavour keeps the motif's shape
   and changes mode, instruments, tempo and rhythm (`FLAVOURS`): `neon`
   (D F# A E, bells) is the everyday one; `hijaz` (D Eb F# A, oud-like
-  string) the regional one. Occasions: `ramadan`, `eid` (hijaz), and
-  `national`, `halloween`, `christmas`. Post types: `stats` (sales charts
-  such as Famitsu, meant to be exciting), `breaking`, `launch`, `digest`.
-  No noise swell, no saw pad (both read as a whoosh or a plane), and
-  percussion is tonal, never noise. `python3 sonic.py <dir>` renders them
-  all; `under(video, bed, out, jingle_path=...)` puts a bed under a clip
-  with no sound of its own and closes on the jingle. Audition set in
-  `live/2026-09-28/audio/set/`, sampler `digi-sound-sampler.mp4`. Which
-  flavours are kept and where they go on posts is not agreed yet. The
-  sound is a Digital Lounge mark; DXB-KNIGHT does not use it.
+  string) the regional one. Occasions: `ramadan`, `eid` (hijaz),
+  `halloween`, `christmas` (calmed after the first cut was distracting).
+  Post types: `stats` (sales charts such as Famitsu, meant to be
+  exciting), `breaking`, `launch`, `digest`. No noise swell, no saw pad
+  (both read as a whoosh or a plane); percussion is tonal, never noise.
+  `python3 sonic.py <dir>` renders them all; `under(video, bed, out,
+  jingle_path=...)` puts a bed under a clip with no sound of its own.
+  Audition set in `live/2026-09-28/audio/set/`. Where they go on posts is
+  not agreed yet. The sound is a Digital Lounge mark; DXB-KNIGHT does not
+  use it.
+  National days are not part of the news set: some readers take them as
+  political and it could cost the account. If Mohammad ever decides on a
+  UAE National Day card with the anthem in these instruments, it is his
+  call per year, and the rules on using and arranging the anthem are
+  checked first.
+- Reel end card (trial, 28 Sep 2026, Mohammad's idea): `templates/outro.py`.
+  The clip fades into the play mark, each jingle note lights one platform
+  (X, Instagram, TikTok, YouTube, right to left), and the name, "أخبار
+  الألعاب" and @the_digilounge come up on the final chord; nothing zooms
+  or pans. `append(video, out, style, bed=...)`, with the Reel rendered by
+  `ig_ar(..., handles=False)` so the footer keeps only mark, name, source
+  and date. Not in use until he approves it.
 - Stills, not animation (Mohammad, 26 Sep 2026). `animate=6` exists (a
   seamless 6 second MP4 loop, only the footer lines drift) but is not
   used: cards post as stills unless he asks for motion on a story.

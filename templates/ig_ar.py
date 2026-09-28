@@ -135,9 +135,11 @@ def _icon_ig(d, x, y, s, c):
     d.ellipse([x + s * 0.72, y + s * 0.18, x + s * 0.84, y + s * 0.30], fill=c)
 
 
-def _footer(im, y, source, date, theme, seed, right=M, fh=FH, left=M):
+def _footer(im, y, source, date, theme, seed, right=M, fh=FH, left=M, handles=True):
     """As on X, right to left: mark and name, source centre, date left.
-    The handle, shared by the X and Instagram accounts, sits under the name."""
+    The handle, shared by the X and Instagram accounts, sits under the name;
+    handles=False drops it for a Reel that ends on the outro card, which
+    carries the handle and every platform instead."""
     im.paste(A._waves(W, fh, theme, seed), (0, y))
     d = ImageDraw.Draw(im)
     d.rectangle([0, y, W, y + 3], fill=_ACC)
@@ -150,14 +152,15 @@ def _footer(im, y, source, date, theme, seed, right=M, fh=FH, left=M):
     im.paste(mark, (W - right - size, mid - size // 2), mask)
     d = ImageDraw.Draw(im)
     xr = W - right - size - 16
-    d.text((xr, mid - 16), 'ديجيتال لاونج', font=A.F('Bold', 34), fill=A.INK,
-           anchor='rm', **AR)
-    f = A.F('Medium', 24)
-    d.text((xr, mid + 24), HANDLE, font=f, fill=A.BODY, anchor='rm')
-    s = 20
-    ix = xr - d.textlength(HANDLE, font=f) - 12 - s
-    _icon_ig(d, ix, mid + 24 - s / 2, s, A.BODY)
-    _icon_x(d, ix - s - 10, mid + 24 - s / 2 + 1, s - 2, A.BODY)
+    d.text((xr, mid - 16 if handles else mid), 'ديجيتال لاونج', font=A.F('Bold', 34),
+           fill=A.INK, anchor='rm', **AR)
+    if handles:
+        f = A.F('Medium', 24)
+        d.text((xr, mid + 24), HANDLE, font=f, fill=A.BODY, anchor='rm')
+        s = 20
+        ix = xr - d.textlength(HANDLE, font=f) - 12 - s
+        _icon_ig(d, ix, mid + 24 - s / 2, s, A.BODY)
+        _icon_x(d, ix - s - 10, mid + 24 - s / 2 + 1, s - 2, A.BODY)
     f = A.F('Medium', 28)
     if d.textlength(source, font=f, **AR) > SOURCE_MAX and '(' in source:
         source = source.split('(')[0].strip()      # no room for both forms
@@ -186,20 +189,22 @@ def _check(label, country, theme):
 
 def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
           theme='cold', video=None, clip_start=0, clip_seconds=8, audio=False,
-          subtitles=(), src_crop=None, accent=None):
+          subtitles=(), src_crop=None, accent=None, handles=True):
     """`headline`: the hook, one or two lines. `summary`: one or two
     sentences of detail for the panel. `media` is a 16:9 still (a file in
     uploads); with `video` instead, a 9:16 Reel is written to an .mp4 `out`.
     `subtitles`: [(start, end, arabic)]. `src_crop` ('w:h:x:y' from
     cropdetect) trims a trailer's own letterbox first. The accent follows
-    `theme` (ACCENTS); `accent` overrides it with a colour."""
+    `theme` (ACCENTS); `accent` overrides it with a colour. `handles=False`
+    leaves the handle out of a Reel's footer (for one that ends on
+    `outro.append`)."""
     _check(label, country, theme)
     global _ACC
     _ACC = ACCENTS[theme] if accent is None else accent
     seed = zlib.crc32(os.path.basename(out).encode())
     if video:
         return _reel(video, date, source, out, headline, summary, label, country, theme,
-                     seed, clip_start, clip_seconds, audio, subtitles, src_crop)
+                     seed, clip_start, clip_seconds, audio, subtitles, src_crop, handles)
     im = Image.new('RGB', (W, H_STILL), A.GROUND)
     d = ImageDraw.Draw(im)
     y = _head(d, headline, 70, label, country, 64, 88) + 30
@@ -246,7 +251,7 @@ def _subtitle_png(text, path, y):
 
 
 def _reel(video, date, source, out, headline, summary, label, country, theme, seed,
-          clip_start, clip_seconds, audio, subtitles, src_crop):
+          clip_start, clip_seconds, audio, subtitles, src_crop, handles=True):
     if not out.lower().endswith('.mp4'):
         raise ValueError('a Reel must be written to a .mp4 path')
     if src_crop:
@@ -270,7 +275,7 @@ def _reel(video, date, source, out, headline, summary, label, country, theme, se
                          f'footer at {foot_y}); keep the headline to two lines and the summary to two')
     foot = Image.new('RGB', (W, foot_y + REEL_FH), A.GROUND)
     _footer(foot, foot_y, source, date, theme, seed, right=SAFE_RIGHT, fh=REEL_FH,
-            left=SAFE_LEFT)
+            left=SAFE_LEFT, handles=handles)
     top.paste(foot.crop((0, foot_y, W, foot_y + REEL_FH)), (0, foot_y))
     tmp = tempfile.mkdtemp(prefix='dlreel-')
     top_p = os.path.join(tmp, 'top.png')

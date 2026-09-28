@@ -10,9 +10,9 @@ and changes the mode, the instruments, the tempo and the rhythm:
   occasions
     ramadan    hijaz, slow, oud and qanun, a soft frame drum.
     eid        hijaz, bright, oud with bells, the maqsum rhythm.
-    national   UAE and Saudi national days: open fifths, bells, timpani.
     halloween  D F A Eb, music box over a low drone, minor.
-    christmas  the neon motif on glockenspiel with sleigh bells.
+    christmas  the neon motif on glockenspiel; a soft celesta, one light
+               shake of bells a bar (the busier first cut was distracting).
   post types
     stats      sales charts (Famitsu, Circana): fast, a kick and hats,
                sixteenth-note arpeggio that climbs like a counter.
@@ -65,15 +65,11 @@ FLAVOURS = {
     'ramadan':   dict(HIJAZ, lead='oud', arp='qanun', bpm=76, step=0.2, drums='daf_slow'),
     'eid':       dict(HIJAZ, chord=['D3', 'A3', 'D4', 'F#4', 'A4', 'D5'], lead='oud+bell',
                       arp='qanun', bpm=108, step=0.14, drums='maqsum'),
-    'national':  dict(motif=['D5', 'F#5', 'A5', 'D6'], chord=['D2', 'A2', 'D3', 'A3', 'D4', 'F#4'],
-                      prog=[['D3', 'A3', 'D4', 'F#4'], ['G2', 'D3', 'G3', 'B3'],
-                            ['B2', 'F#3', 'B3', 'D4'], ['A2', 'E3', 'A3', 'C#4']],
-                      lead='bell+glock', arp='bell', bpm=88, step=0.18, drums='timpani'),
     'halloween': dict(motif=['D5', 'F5', 'A5', 'Eb6'], chord=['D2', 'A2', 'D3', 'F3', 'A3'],
                       prog=[['D3', 'F3', 'A3', 'D4'], ['Bb2', 'D3', 'F3', 'A3'],
                             ['G2', 'Bb2', 'D3', 'G3'], ['A2', 'C#3', 'E3', 'G3']],
                       lead='musicbox', arp='musicbox', bpm=84, step=0.2, drone='D2'),
-    'christmas': dict(NEON, lead='glock', arp='glock', bpm=104, step=0.15, drums='sleigh'),
+    'christmas': dict(NEON, lead='glock+bell', arp='celesta', bpm=88, step=0.16, drums='sleigh_soft'),
     'stats':     dict(NEON, lead='bell', arp='bell', bpm=124, step=0.11, drums='pulse',
                       sixteenths=True, hits=True),
     'breaking':  dict(NEON, lead='bell', arp='pluck', bpm=112, step=0.12, drums='tick',
@@ -148,7 +144,8 @@ def voice(name, freq, dur):
             'qanun': lambda: pluck(freq, dur, bright=0.3),
             'pluck': lambda: pluck(freq, dur, bright=0.45),
             'glock': lambda: glock(freq, dur),
-            'musicbox': lambda: musicbox(freq, dur)}[name]()
+            'musicbox': lambda: musicbox(freq, dur),
+            'celesta': lambda: bell(freq, dur, ratio=4.0, index=0.6)}[name]()
 
 
 def warm(notes, dur, attack=0.05, decay=1.1):
@@ -225,16 +222,11 @@ def sleigh():
     return out
 
 
-def timpani():
-    return _mix(_drop(90, 73.4, 0.04, 0.6, 1.2), 0.3 * _drop(150, 110, 0.03, 0.3, 0.8))
-
-
 # Per bar, as (instrument, position in eighths, level).
 PATTERNS = {
     'daf_slow': [(dum, 0, 0.5), (tak, 3, 0.25), (tak, 5, 0.18)],
     'maqsum':   [(dum, 0, 0.55), (tak, 1, 0.3), (tak, 3, 0.3), (dum, 4, 0.5), (tak, 6, 0.3)],
-    'timpani':  [(timpani, 0, 0.5), (timpani, 6, 0.25)],
-    'sleigh':   [(sleigh, i, 0.28 if i % 2 == 0 else 0.16) for i in range(8)],
+    'sleigh_soft': [(sleigh, 0, 0.12), (sleigh, 4, 0.07)],
     'pulse':    [(kick, i, 0.6) for i in (0, 2, 4, 6)] + [(hat, i, 0.12) for i in (1, 3, 5, 7)],
     'tick':     [(kick, 0, 0.5), (kick, 4, 0.35)] + [(hat, i / 2, 0.08 if i % 4 else 0.13) for i in range(16)],
     'light':    [(kick, 0, 0.45), (kick, 4, 0.4), (tak, 2, 0.18), (tak, 6, 0.18)] + [(hat, i, 0.07) for i in (1, 3, 5, 7)],
@@ -289,6 +281,16 @@ def _fx(room):
 
 # ---- jingle and bed ------------------------------------------------------
 
+def beats(style):
+    """(motif note times, chord time) in seconds from the jingle's start,
+    so an end card can move on the notes."""
+    F = FLAVOURS[style]
+    step, at0 = F['step'], 0.1
+    if F.get('pickup'):
+        at0 += len(F['pickup']) * step * 0.8 + step * 0.4
+    return [at0 + k * step for k in range(4)], at0 + 4 * step
+
+
 def jingle(style, path):
     """About 3.5 s: optional pick-up, the motif, a chord that fades."""
     F = FLAVOURS[style]
@@ -318,11 +320,8 @@ def jingle(style, path):
     if drums in ('daf_slow', 'maqsum'):
         place(buf, dum() * 0.6, hit)
         place(buf, tak() * 0.3, hit - step / 2)
-    elif drums == 'timpani':
-        place(buf, timpani() * 0.7, hit)
-    elif drums == 'sleigh':
-        for i in range(6):
-            place(buf, sleigh() * (0.3 - i * 0.04), hit + i * 0.09)
+    elif drums == 'sleigh_soft':
+        place(buf, sleigh() * 0.15, hit)
     elif drums in ('pulse', 'tick', 'light'):
         place(buf, kick() * 0.7, hit)
     if F.get('drone'):
