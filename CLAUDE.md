@@ -317,13 +317,19 @@ Brand kit (Mohammad, 26 Sep 2026):
   capture is running.
 - Sound (Mohammad, 28 Sep 2026): `templates/sonic.py` synthesises the
   Digital Lounge jingle and a quiet background bed from the same four
-  notes, so the music is original. Two styles, both kept: `neon` (D F# A
-  E, bells) is the everyday one; `hijaz` (D Eb F# A, plucked oud-like
-  string) is for occasions such as Ramadan and Eid. Seasonal variations
-  (Halloween, Christmas) follow the same motif. No noise swell and no saw
-  pad: both read as a whoosh or a plane. `under(video, bed, out,
-  jingle_path=...)` puts the bed under a clip with no sound of its own
-  and closes on the jingle. Where it goes on posts is not agreed yet.
+  notes, so the music is original. Every flavour keeps the motif's shape
+  and changes mode, instruments, tempo and rhythm (`FLAVOURS`): `neon`
+  (D F# A E, bells) is the everyday one; `hijaz` (D Eb F# A, oud-like
+  string) the regional one. Occasions: `ramadan`, `eid` (hijaz), and
+  `national`, `halloween`, `christmas`. Post types: `stats` (sales charts
+  such as Famitsu, meant to be exciting), `breaking`, `launch`, `digest`.
+  No noise swell, no saw pad (both read as a whoosh or a plane), and
+  percussion is tonal, never noise. `python3 sonic.py <dir>` renders them
+  all; `under(video, bed, out, jingle_path=...)` puts a bed under a clip
+  with no sound of its own and closes on the jingle. Audition set in
+  `live/2026-09-28/audio/set/`, sampler `digi-sound-sampler.mp4`. Which
+  flavours are kept and where they go on posts is not agreed yet. The
+  sound is a Digital Lounge mark; DXB-KNIGHT does not use it.
 - Stills, not animation (Mohammad, 26 Sep 2026). `animate=6` exists (a
   seamless 6 second MP4 loop, only the footer lines drift) but is not
   used: cards post as stills unless he asks for motion on a story.
