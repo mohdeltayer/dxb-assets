@@ -267,9 +267,9 @@ blurred fill and bare panels read as wasted.
   with exactly those 4: #ألعاب #أخبار_الألعاب, then the game and the
   platform or series as written by the publisher (#WARDOGS #Steam).
   Search on TikTok and Instagram also reads the words, so the game's name
-  sits in the first two lines of the caption. Digital Lounge X posts
-  carry no hashtags for now (X favours one or two at most; open to a
-  trial). DXB-KNIGHT posts carry none. Before queuing, and before reusing
+  sits in the first two lines of the caption. X posts, on both
+  accounts, carry no hashtags: X has said they are no longer needed
+  (Mohammad, 28 Sep 2026). The video platforms keep them. Before queuing, and before reusing
   an older caption, check that its last line starts with #ألعاب (on
   28 Sep three TikTok backfills went out with an older, English-first
   hashtag line).
