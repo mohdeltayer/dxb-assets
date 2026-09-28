@@ -20,6 +20,12 @@ Reel 23 views and 2 likes in about 40 minutes; stills 0 to 1 view each.
 |---|---|---|---|---|
 | 27 Sep 21:15 | Dynasty Warriors 3 (test) | 27 Sep 20:52 | 2 | public count |
 
+## Reach by channel
+
+| Read (Dubai) | Ranking, best to worst | Basis | Notes |
+|---|---|---|---|
+| 28 Sep 12:45 | Instagram, X, TikTok, YouTube | Mohammad's cross-check of views so far | Early: TikTok and YouTube Shorts started 27 to 28 Sep, X has about 20 followers. Re-read with numbers after a week. |
+
 ## Ideas on file, not agreed (Mohammad, 27 Sep 2026: "keep that in mind")
 
 Raised after the Minecraft Ice Caves reading; not to be applied until he
