@@ -29,8 +29,22 @@ Creator Studio.
 
 - UAE Advertiser Permit (UAE Media Council), in force since 1 Feb 2026:
   needed for any promotional content published from the UAE, paid or
-  not, whatever the follower count. AED 370 per cycle; fines up to
-  AED 500,000. Get it before the first sponsored post or affiliate link.
+  not, whatever the follower count. Get it before the first sponsored
+  post, affiliate link or TikTok game campaign. Corrected 28 Sep 2026
+  (Emirates 24|7, 1 Jul 2026; Meydan Free Zone, updated 28 Sep 2026):
+  free for UAE residents for the first three years, then AED 1,000 a
+  year; valid one year. Fines quoted: AED 10,000 to 1,000,000 for
+  advertising without it.
+  How: (1) a trade or freelance licence whose activity covers social
+  media or electronic media (for example Social Media Services, Marketing
+  Services via Social Media, Digital Content Management), from a free
+  zone or the mainland; (2) apply at eservices.uaemc.gov.ae with UAE
+  PASS, "Social Media Advertising Licence", uploading Emirates ID,
+  passport, photo, the licence and a good conduct certificate; about
+  three working days. If on an employer's visa, check whether the
+  licensing authority asks for the employer's no-objection letter.
+  Exempt: promoting your own products or services. Straight news posts
+  are not advertising.
 - Saudi Arabia: Mawthooq is for residents; a non-resident works with
   Saudi brands through a Mawthooq-registered agency.
 - Label every paid post (#إعلان on Digital Lounge, "Ad" on DXB-KNIGHT),
@@ -53,7 +67,8 @@ when they open here.
    screens into `analytics/` so the plan works from real numbers.
 2. Confirm DXB-KNIGHT's Premium and pull its 90-day verified impressions
    from Creator Studio.
-3. Apply for the UAE Advertiser Permit (AED 370).
+3. Get a media or social media freelance licence, then apply for the
+   UAE Advertiser Permit (free for residents for three years).
 4. Keep logging Reel and Short numbers in `analytics/digital-lounge.md`;
    they become the media kit.
 
