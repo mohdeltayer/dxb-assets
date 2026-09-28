@@ -35,3 +35,19 @@ Audience (by impressions)
 Read against the 17:00 to 21:00 Dubai window (US morning): the US-first
 audience supports it. Not changed; waiting for the Active times detail
 and the scout's full weekly pack.
+
+## 28 Sep 2026, 12:25 Dubai: Active times (impressions, last 28 days)
+
+Read off the heatmap (X shows it in the phone's time zone, Dubai):
+- Evenings are the strong band on most days: roughly 19:00 to midnight
+  Dubai on Wednesday, Thursday and Friday, brightest Friday 20:00 to
+  midnight. That is late morning to afternoon US Eastern.
+- Thursday is lit from about noon onward.
+- Saturday is bright almost all day, most of all midnight to 08:00 Dubai,
+  which is Friday afternoon and evening in the US. With 28 days of a
+  small account this could be one post's spike rather than a habit; the
+  scout's per-post times will tell which.
+- Monday and Tuesday are the dimmest days; mornings (03:00 to 12:00
+  Dubai) are dim on every day but Saturday.
+- The map shows when impressions happened, so it also reflects when we
+  posted. Treat it as a lead, not a verdict.
