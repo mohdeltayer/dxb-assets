@@ -306,6 +306,9 @@ Brand kit (Mohammad, 26 Sep 2026):
   trailer); publisher sites such as playstation.com also host product
   clips on gmedia.playstation.com. Check the first and last seconds for
   ratings cards, end slates and anyone else's logo before cutting.
+  The subtitle band is for speech only (Mohammad, 28 Sep 2026): facts
+  shown in it read as someone talking. A clip without speech gets no
+  band text; the facts stay in the headline, panel and caption.
   The transcript is a draft: check it against on-screen text or the
   official source before writing the Arabic (on 27 Sep it heard "I think"
   where the screen said "They say"), then write the Arabic with both
