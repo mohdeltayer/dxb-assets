@@ -166,6 +166,14 @@ setup and nasal voice could distract). Test later, when he sends a clip:
 Not an AI voice to start with (generic sound, YouTube's stance on
 mass-produced content).
 
+## Licence and permit: on hold (Mohammad, 28 Sep 2026)
+
+No licence and no Advertiser Permit yet: no income and the accounts are
+new. Until then nothing promotional goes out on either brand: no
+sponsored post, affiliate link, gifted-product review or TikTok game
+campaign. News posts carry on as normal. Revisit when a real deal or
+campaign is on the table, or when the follower thresholds come near.
+
 ## In-app check (Mohammad, 28 Sep 2026)
 
 - Instagram: monetization asks for a verified business or personal
