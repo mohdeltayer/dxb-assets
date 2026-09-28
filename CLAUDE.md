@@ -260,6 +260,19 @@ blurred fill and bare panels read as wasted.
   (only about two lines show before "more"), then the full story with the
   same checked facts, then #ألعاب #أخبار_الألعاب followed by 2 story hashtags (Arabic tags
   first, so the line reads right to left).
+  Hashtags for discovery (Mohammad, 28 Sep 2026: make sure they are
+  there where they help people find the account). Instagram caps a post
+  at 5 hashtags, and TikTok and YouTube Shorts work best with 3 to 5, so
+  every Instagram caption, TikTok caption and YouTube description ends
+  with exactly those 4: #ألعاب #أخبار_الألعاب, then the game and the
+  platform or series as written by the publisher (#WARDOGS #Steam).
+  Search on TikTok and Instagram also reads the words, so the game's name
+  sits in the first two lines of the caption. Digital Lounge X posts
+  carry no hashtags for now (X favours one or two at most; open to a
+  trial). DXB-KNIGHT posts carry none. Before queuing, and before reusing
+  an older caption, check that its last line starts with #ألعاب (on
+  28 Sep three TikTok backfills went out with an older, English-first
+  hashtag line).
   No links (not clickable). Same Arabic rules and two passes as X.
   The caption stands alone: it names the game by the second sentence and
   never leans on the card for its subject (27 Sep 2026: swapping in a new
