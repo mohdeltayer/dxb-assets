@@ -137,15 +137,32 @@ def _write(st, path, loud=-16):
     return path
 
 
-def _stereo(y):
+def _stereo(y, mix=0.25):
     st = np.stack([y, y]).astype(np.float32)
-    return Pedalboard([Chorus(rate_hz=0.3, depth=0.15, mix=0.25)])(st, SR)
+    return Pedalboard([Chorus(rate_hz=0.3, depth=0.15, mix=mix)])(st, SR)
 
 
-def jingle(style, path):
+def warm(notes, dur, attack=0.05):
+    """Sine pad with a slow release: the chord without a saw's buzz."""
+    t = t_(dur)
+    out = np.zeros(len(t))
+    for nt in notes:
+        f = hz(nt)
+        out += np.sin(2 * np.pi * f * t) + 0.25 * np.sin(4 * np.pi * f * t)
+    out /= max(1, len(notes))
+    return out * np.minimum(1, t / attack) * np.exp(-t / 1.1)
+
+
+def jingle(style, path, soft=True):
+    """soft (28 Sep 2026, Mohammad): the noise swell and the saw chord read
+    as a whoosh or a plane at the end of a Reel, so the swell drops to a
+    faint low-passed breath and the chord is a sine pad that decays."""
     dur = 3.4
     buf = np.zeros(int(dur * SR))
-    place(buf, riser(0.35) * 0.5, 0.0)
+    sw = riser(0.35) * (0.5 if not soft else 0.1)
+    if soft:
+        sw = Pedalboard([LowpassFilter(1200)])(sw.astype(np.float32), SR)
+    place(buf, sw, 0.0)
     step = 0.16
     for k, nt in enumerate(MOTIF[style]):
         at = 0.35 + k * step
@@ -156,14 +173,18 @@ def jingle(style, path):
             place(buf, bell(hz(nt), 1.2) * 0.6, at)
             place(buf, pluck(hz(nt) / 2, 0.8, bright=0.3) * 0.5, at)
     hit = 0.35 + 4 * step
-    chord = Pedalboard([LowpassFilter(1800)])(pad(CHORD[style], dur - hit, attack=0.05)
-                                              .astype(np.float32), SR)
-    place(buf, chord * 0.45, hit)
-    place(buf, sub(hz('D2'), 1.2) * 0.8, hit)
+    if soft:
+        place(buf, warm(CHORD[style], dur - hit) * 0.5, hit)
+        place(buf, sub(hz('D2'), 1.0) * 0.55, hit)
+    else:
+        chord = Pedalboard([LowpassFilter(1800)])(pad(CHORD[style], dur - hit, attack=0.05)
+                                                  .astype(np.float32), SR)
+        place(buf, chord * 0.45, hit)
+        place(buf, sub(hz('D2'), 1.2) * 0.8, hit)
     place(buf, bell(hz(CHORD[style][-1]) * 2, 1.6, ratio=3.5, index=1.2) * 0.2, hit + 0.02)
     fx = Pedalboard([HighpassFilter(35), Reverb(room_size=0.55, wet_level=0.28, dry_level=0.8),
                      Compressor(threshold_db=-14, ratio=2.5), Limiter(-1.0)])
-    y = _stereo(fx(buf.astype(np.float32), SR))
+    y = _stereo(fx(buf.astype(np.float32), SR), mix=0.1 if soft else 0.25)
     fade = int(0.4 * SR)
     y[:, -fade:] *= np.linspace(1, 0, fade)
     return _write(y, path, loud=-14)
