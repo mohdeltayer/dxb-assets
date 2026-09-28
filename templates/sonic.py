@@ -153,16 +153,18 @@ def warm(notes, dur, attack=0.05):
     return out * np.minimum(1, t / attack) * np.exp(-t / 1.1)
 
 
-def jingle(style, path, soft=True):
+def jingle(style, path, soft=True, swell=False):
     """soft (28 Sep 2026, Mohammad): the noise swell and the saw chord read
-    as a whoosh or a plane at the end of a Reel, so the swell drops to a
-    faint low-passed breath and the chord is a sine pad that decays."""
+    as a whoosh or a plane at the end of a Reel, so the chord is a sine pad
+    that decays. The swell is off by default (Mohammad asked for it out);
+    swell=True brings back a faint low-passed breath."""
     dur = 3.4
     buf = np.zeros(int(dur * SR))
     sw = riser(0.35) * (0.5 if not soft else 0.1)
     if soft:
         sw = Pedalboard([LowpassFilter(1200)])(sw.astype(np.float32), SR)
-    place(buf, sw, 0.0)
+    if swell or not soft:
+        place(buf, sw, 0.0)
     step = 0.16
     for k, nt in enumerate(MOTIF[style]):
         at = 0.35 + k * step
