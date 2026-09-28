@@ -25,6 +25,7 @@ Reel 23 views and 2 likes in about 40 minutes; stills 0 to 1 view each.
 | Read (Dubai) | Ranking, best to worst | Basis | Notes |
 |---|---|---|---|
 | 28 Sep 12:45 | Instagram, X, TikTok, YouTube | Mohammad's cross-check of views so far | Early: TikTok and YouTube Shorts started 27 to 28 Sep, X has about 20 followers. Re-read with numbers after a week. |
+| 28 Sep 20:20 | Instagram, X ahead; TikTok and YouTube near zero | His screenshots plus public pages | TikTok: 11 public videos, all 0 views, 0 followers; the public profile reports region US. YouTube: 12 uploads, all public and classed as Shorts, 0 to 2 views each. |
 
 ## Ideas on file, not agreed (Mohammad, 27 Sep 2026: "keep that in mind")
 
