@@ -148,7 +148,10 @@ mass-produced content).
     disclosure, #إعلان), keep it off news posts, and it needs the UAE
     Advertiser Permit first. Joining the programme itself costs nothing.
   - Service+ (LIVE, finding clients): not relevant.
-  - Video Gifts: 4 of 5 requirements met. Subscription: 2 of 4.
+  - Video Gifts: 4 of 5 met; the missing one is 10,000 followers.
+    Subscription 2 of 4, TikTok Shop for Creator 3 of 4, Creator
+    Marketplace (paid brand campaigns) 4 of 5, Work with Artists 1 of 2,
+    LIVE Incentive 2 of 3. Followers are the gate for almost all of them.
 - YouTube: no monetization entry found in the app yet.
 
 ## Open questions for Mohammad
