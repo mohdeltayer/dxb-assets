@@ -568,6 +568,12 @@ Every time a schedule is shown (drafts, confirmations, what is queued),
 each post names its account: DXB-KNIGHT, Digital Lounge, or both
 (Mohammad, 27 Sep 2026). Never a bare time and title.
 
+Approval is not a go (Mohammad, 28 Sep 2026): "as soon as possible" means
+schedule tighter, not post now. Every post, Digital Lounge included, goes
+to the queue only with a time he has seen and a "go" from him; propose
+the times with the drafts. (On 28 Sep a PS5 Pro set went out immediately
+on a misread and he deleted it.)
+
 Posting is irreversible: pushing `queue/**` to *any* branch of dxb-queue
 fires the publisher, because `publish.yml` has no branch filter. Never
 queue without explicit say-so, and dry-run `publish.py` with `DRY_RUN=1`
