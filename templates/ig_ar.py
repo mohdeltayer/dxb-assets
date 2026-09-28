@@ -44,6 +44,10 @@ ACCENTS = {'cold': A.AZURE, 'stylized': A.hx('#A5A3FF'),
 _ACC = A.AZURE
 SOURCE_MAX = 380
 
+#: Jingle flavour by chip, for Reels (sonic.FLAVOURS).
+SOUNDS = {'عاجل': 'breaking', 'متوفر الآن': 'launch', 'متاح الآن': 'launch', 'صدر': 'launch',
+          'أرقام': 'stats', 'إحصائيات': 'stats'}
+
 
 # ---------------------------------------------------------------- text
 
@@ -189,22 +193,35 @@ def _check(label, country, theme):
 
 def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
           theme='cold', video=None, clip_start=0, clip_seconds=8, audio=False,
-          subtitles=(), src_crop=None, accent=None, handles=True):
+          subtitles=(), src_crop=None, accent=None, handles=None, outro=True, sound=None):
     """`headline`: the hook, one or two lines. `summary`: one or two
     sentences of detail for the panel. `media` is a 16:9 still (a file in
     uploads); with `video` instead, a 9:16 Reel is written to an .mp4 `out`.
     `subtitles`: [(start, end, arabic)]. `src_crop` ('w:h:x:y' from
     cropdetect) trims a trailer's own letterbox first. The accent follows
-    `theme` (ACCENTS); `accent` overrides it with a colour. `handles=False`
-    leaves the handle out of a Reel's footer (for one that ends on
-    `outro.append`)."""
+    `theme` (ACCENTS); `accent` overrides it with a colour.
+    Every Reel ends on the outro card with the jingle (Mohammad, 28 Sep
+    2026), so its footer drops the handle; stills keep it. `sound` picks
+    the jingle flavour (sonic.FLAVOURS), by default from the chip: عاجل
+    breaking, متوفر الآن launch, أرقام stats, anything else neon; occasion
+    flavours (ramadan, eid, halloween, christmas) are passed by hand. A
+    trailer kept with `audio=True` plays its own sound and then only the
+    jingle; a clip with no sound gets the flavour's bed under it."""
     _check(label, country, theme)
     global _ACC
     _ACC = ACCENTS[theme] if accent is None else accent
     seed = zlib.crc32(os.path.basename(out).encode())
     if video:
-        return _reel(video, date, source, out, headline, summary, label, country, theme,
-                     seed, clip_start, clip_seconds, audio, subtitles, src_crop, handles)
+        if not outro:
+            return _reel(video, date, source, out, headline, summary, label, country, theme,
+                         seed, clip_start, clip_seconds, audio, subtitles, src_crop,
+                         True if handles is None else handles)
+        import outro as O
+        body = os.path.join(tempfile.mkdtemp(prefix='dlreel-'), 'body.mp4')
+        _reel(video, date, source, body, headline, summary, label, country, theme, seed,
+              clip_start, clip_seconds, audio, subtitles, src_crop,
+              False if handles is None else handles)
+        return O.append(body, out, sound or SOUNDS.get(label, 'neon'), accent=_ACC)
     im = Image.new('RGB', (W, H_STILL), A.GROUND)
     d = ImageDraw.Draw(im)
     y = _head(d, headline, 70, label, country, 64, 88) + 30
@@ -214,7 +231,8 @@ def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
     end = _panel(d, summary, y + MH + RULE + 40, 37, 58)
     if end > H_STILL - FH - 16:
         raise ValueError('headline and summary do not fit; shorten one of them')
-    _footer(im, H_STILL - FH, source, date, theme, seed)
+    _footer(im, H_STILL - FH, source, date, theme, seed,
+            handles=True if handles is None else handles)
     im.save(out)
     return out
 

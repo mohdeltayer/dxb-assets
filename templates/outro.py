@@ -11,8 +11,10 @@ platform.
 
 `card(style, out)` renders the card alone (9:16, silent).
 `append(video, out, style='neon', bed=None)` adds it to a Reel: the clip
-crossfades into the card, the jingle plays on it, and a clip with no sound
-of its own gets `bed` (a sonic.bed .wav) under it.
+crossfades into the card and the jingle plays on it. A clip with sound
+keeps it, faded out before the jingle, and gets nothing else (Mohammad,
+28 Sep 2026); a clip with no sound gets the flavour's bed under it
+(`bed` overrides the cached one). ig_ar Reels call this by default.
 Everything sits in the Reels safe zone (ig_ar.SAFE_*).
 """
 import math
@@ -154,10 +156,23 @@ def _has_audio(p):
                                capture_output=True, text=True).stdout.strip())
 
 
-def append(video, out, style='neon', bed=None, jingle=None):
+CACHE = os.path.expanduser('~/.cache/digi-sound')
+
+
+def _cached(kind, style):
+    os.makedirs(CACHE, exist_ok=True)
+    p = f'{CACHE}/{kind}-{style}.' + ('mp3' if kind == 'jingle' else 'wav')
+    if not os.path.exists(p) or os.path.getmtime(p) < os.path.getmtime(sonic.__file__):
+        (sonic.jingle if kind == 'jingle' else sonic.bed)(style, p)
+    return p
+
+
+def append(video, out, style='neon', bed=None, jingle=None, accent=None):
+    if style not in sonic.FLAVOURS:
+        raise ValueError(f'sound is one of {", ".join(sonic.FLAVOURS)}')
     tmp = tempfile.mkdtemp(prefix='outro-')
-    end = card(style, f'{tmp}/card.mp4')
-    jingle = jingle or sonic.jingle(style, f'{tmp}/jingle.mp3')
+    end = card(style, f'{tmp}/card.mp4', accent)
+    jingle = jingle or _cached('jingle', style)
     d = _dur(video)
     total = d - LEAD + LEAD + 3.6
     cmd = ['ffmpeg', '-y', '-v', 'error', '-i', video, '-i', end, '-i', jingle]
@@ -167,12 +182,10 @@ def append(video, out, style='neon', bed=None, jingle=None):
     j = f'[2:a]adelay={int(d * 1000)}:all=1[j];'
     if _has_audio(video):
         a = f'[0:a]afade=t=out:st={max(0, d - 0.6):.2f}:d=0.6[b];'
-    elif bed:
-        cmd += ['-stream_loop', '-1', '-i', bed]
+    else:
+        cmd += ['-stream_loop', '-1', '-i', bed or _cached('bed', style)]
         a = (f'[3:a]volume=-2dB,afade=t=in:d=0.4,atrim=0:{d:.3f},'
              f'afade=t=out:st={max(0, d - 1.0):.2f}:d=1.0[b];')
-    else:
-        a = f'anullsrc=r=48000:cl=stereo,atrim=0:{d:.3f}[b];'
     fc = v + j + a + f'[b][j]amix=inputs=2:duration=longest:normalize=0,apad[a]'
     subprocess.run(cmd + ['-filter_complex', fc, '-map', '[v]', '-map', '[a]', '-t', f'{total:.3f}',
                           '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-c:a', 'aac',

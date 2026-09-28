@@ -327,21 +327,28 @@ Brand kit (Mohammad, 26 Sep 2026):
   (both read as a whoosh or a plane); percussion is tonal, never noise.
   `python3 sonic.py <dir>` renders them all; `under(video, bed, out,
   jingle_path=...)` puts a bed under a clip with no sound of its own.
-  Audition set in `live/2026-09-28/audio/set/`. Where they go on posts is
-  not agreed yet. The sound is a Digital Lounge mark; DXB-KNIGHT does not
-  use it.
+  Audition set in `live/2026-09-28/audio/set/`. On posts: every Reel
+  ends on the jingle (see the end card below); X video cards and stills
+  carry no added sound yet. The sound is a Digital Lounge mark;
+  DXB-KNIGHT does not use it.
   National days are not part of the news set: some readers take them as
   political and it could cost the account. If Mohammad ever decides on a
   UAE National Day card with the anthem in these instruments, it is his
   call per year, and the rules on using and arranging the anthem are
   checked first.
-- Reel end card (trial, 28 Sep 2026, Mohammad's idea): `templates/outro.py`.
-  The clip fades into the play mark, each jingle note lights one platform
-  (X, Instagram, TikTok, YouTube, right to left), and the name, "أخبار
-  الألعاب" and @the_digilounge come up on the final chord; nothing zooms
-  or pans. `append(video, out, style, bed=...)`, with the Reel rendered by
-  `ig_ar(..., handles=False)` so the footer keeps only mark, name, source
-  and date. Not in use until he approves it.
+- Reel end card (Mohammad, 28 Sep 2026: every Digital Lounge Reel, so
+  every TikTok and Short too): `templates/outro.py`, applied by `ig_ar`
+  itself. The clip fades into the play mark, each jingle note lights one
+  platform (X, Instagram, TikTok, YouTube, right to left), and the name,
+  "أخبار الألعاب" and @the_digilounge come up on the final chord; nothing
+  zooms or pans. It adds about 3.6 seconds. Reel footers drop the handle
+  (the card carries it); stills keep it. Sound: a trailer kept with
+  `audio=True` plays its own sound, faded out before the card, and gets
+  nothing added but the jingle; a clip with no sound gets the flavour's
+  bed under it. The flavour follows the chip (`SOUNDS` in ig_ar.py: عاجل
+  breaking, متوفر الآن launch, أرقام stats, otherwise neon); pass
+  `sound='ramadan'` and the like for occasions. `outro=False` renders a
+  Reel without it.
 - Stills, not animation (Mohammad, 26 Sep 2026). `animate=6` exists (a
   seamless 6 second MP4 loop, only the footer lines drift) but is not
   used: cards post as stills unless he asks for motion on a story.
