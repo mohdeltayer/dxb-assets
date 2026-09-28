@@ -45,8 +45,10 @@ Creator Studio.
   licensing authority asks for the employer's no-objection letter.
   Exempt: promoting your own products or services. Straight news posts
   are not advertising.
-- Saudi Arabia: Mawthooq is for residents; a non-resident works with
-  Saudi brands through a Mawthooq-registered agency.
+- Scope (Mohammad, 28 Sep 2026): monetization and brand work are done
+  in the UAE, from Dubai, under UAE rules only. Saudi Arabia (Mawthooq)
+  is dropped. This is about deals and licences, not coverage: Digital
+  Lounge still reports Saudi and wider Arab news.
 - Label every paid post (#إعلان on Digital Lounge, "Ad" on DXB-KNIGHT),
   and keep sponsors off news cards unless the card says so. Needs an
   agreed chip before it is used (the chip lists refuse anything else).
@@ -102,8 +104,8 @@ when they open here.
 - Who to approach: regional publisher and platform teams (PlayStation
   Middle East, Xbox Arabia), regional distributors and retailers
   (gaming stores and electronics chains), esports organisers and
-  federations, gaming peripheral brands. Saudi brands through a
-  Mawthooq-registered agency.
+  federations, gaming peripheral brands, all UAE-based or dealing
+  through their UAE entity.
 - Affiliate: Amazon.ae Associates for hardware and games mentioned in
   posts, links in bio and YouTube descriptions only (Instagram caption
   links do not click). Needs the permit first. Keep it off news posts.
