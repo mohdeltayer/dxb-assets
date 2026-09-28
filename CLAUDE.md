@@ -315,6 +315,15 @@ Brand kit (Mohammad, 26 Sep 2026):
   Arabic skills. Subtitles carry what was said, never more. His own
   gameplay with Arabic captions is the third step, once the YoloBox Ultra
   capture is running.
+- Sound (Mohammad, 28 Sep 2026): `templates/sonic.py` synthesises the
+  Digital Lounge jingle and a quiet background bed from the same four
+  notes, so the music is original. Two styles, both kept: `neon` (D F# A
+  E, bells) is the everyday one; `hijaz` (D Eb F# A, plucked oud-like
+  string) is for occasions such as Ramadan and Eid. Seasonal variations
+  (Halloween, Christmas) follow the same motif. No noise swell and no saw
+  pad: both read as a whoosh or a plane. `under(video, bed, out,
+  jingle_path=...)` puts the bed under a clip with no sound of its own
+  and closes on the jingle. Where it goes on posts is not agreed yet.
 - Stills, not animation (Mohammad, 26 Sep 2026). `animate=6` exists (a
   seamless 6 second MP4 loop, only the footer lines drift) but is not
   used: cards post as stills unless he asks for motion on a story.

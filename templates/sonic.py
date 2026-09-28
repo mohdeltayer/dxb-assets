@@ -153,6 +153,17 @@ def warm(notes, dur, attack=0.05):
     return out * np.minimum(1, t / attack) * np.exp(-t / 1.1)
 
 
+def hold(notes, dur, attack=0.4, release=0.6):
+    """Sustained sine chord for the bed: no saw buzz, no swell."""
+    t = t_(dur)
+    out = np.zeros(len(t))
+    for nt in notes:
+        f = hz(nt)
+        out += np.sin(2 * np.pi * f * t) + 0.2 * np.sin(4 * np.pi * f * t)
+    out /= max(1, len(notes))
+    return out * np.minimum(1, t / attack) * np.clip((dur - t) / release, 0, 1)
+
+
 def jingle(style, path, soft=True, swell=False):
     """soft (28 Sep 2026, Mohammad): the noise swell and the saw chord read
     as a whoosh or a plane at the end of a Reel, so the chord is a sine pad
@@ -192,7 +203,10 @@ def jingle(style, path, soft=True, swell=False):
     return _write(y, path, loud=-14)
 
 
-def bed(style, path, bars=16, bpm=96):
+def bed(style, path, bars=16, bpm=96, soft=True):
+    """soft (28 Sep 2026, Mohammad): the saw pad swelling in every two bars
+    and fading under the jingle read as a whoosh or a plane, so the chords
+    are sustained sine tones and the chorus is barely there."""
     beat = 60 / bpm
     bar = 4 * beat
     length = bars * bar
@@ -203,7 +217,10 @@ def bed(style, path, bars=16, bpm=96):
         chord = prog[(b // 2) % len(prog)]
         at = b * bar
         if b % 2 == 0:
-            place(buf, pad(chord, 2 * bar + 0.5, attack=1.2) * 0.35, at)
+            if soft:
+                place(buf, hold(chord, 2 * bar + 0.5) * 0.3, at)
+            else:
+                place(buf, pad(chord, 2 * bar + 0.5, attack=1.2) * 0.35, at)
             place(buf, sub(hz(chord[0]) / 2, 1.5) * 0.25, at)
         # quiet eighth-note arpeggio on the chord, an octave up
         for e8 in range(8):
@@ -219,7 +236,7 @@ def bed(style, path, bars=16, bpm=96):
     fx = Pedalboard([LowpassFilter(5000), HighpassFilter(40),
                      Reverb(room_size=0.7, wet_level=0.3, dry_level=0.7),
                      Compressor(threshold_db=-18, ratio=2), Limiter(-1.0)])
-    y = _stereo(fx(buf.astype(np.float32), SR))
+    y = _stereo(fx(buf.astype(np.float32), SR), mix=0.08 if soft else 0.25)
     n = int(length * SR)
     loop = y[:, :n].copy()
     loop[:, :y.shape[1] - n] += y[:, n:]  # wrap the tail so the loop is seamless
