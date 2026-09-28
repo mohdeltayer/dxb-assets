@@ -94,6 +94,10 @@ out on it, the same morning, minutes apart when several are ready, and
 sweeps look for more Arabic-only items (store and price news, release
 dates, updates, regional and official announcements) rather than fewer.
 
+Digital Lounge's posting window is 08:00 to 21:00 Dubai (Mohammad,
+28 Sep 2026), with exceptions when a story needs it; propose times inside
+it, earliest first, not a midday slot.
+
 Timing differs too (Mohammad, 27 Sep 2026): Arabic games coverage is
 thin, so Digital Lounge does not follow DXB-KNIGHT's spacing. Its posts
 can run close together and go out as soon as they are ready in waking
