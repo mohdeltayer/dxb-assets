@@ -137,6 +137,20 @@ setup and nasal voice could distract). Test later, when he sends a clip:
 Not an AI voice to start with (generic sound, YouTube's stance on
 mass-produced content).
 
+## In-app check (Mohammad, 28 Sep 2026)
+
+- Instagram: monetization asks for a verified business or personal
+  documents first.
+- TikTok (Digital Lounge), Monetization page: $0.00 so far.
+  - Gaming Incentive Program: "Recommended", Join button open. Rewards
+    for gaming videos or LIVE, run as campaigns with a publisher's tasks.
+    A campaign post is paid promotion: label it (TikTok's content
+    disclosure, #إعلان), keep it off news posts, and it needs the UAE
+    Advertiser Permit first. Joining the programme itself costs nothing.
+  - Service+ (LIVE, finding clients): not relevant.
+  - Video Gifts: 4 of 5 requirements met. Subscription: 2 of 4.
+- YouTube: no monetization entry found in the app yet.
+
 ## Open questions for Mohammad
 
 
