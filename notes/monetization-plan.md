@@ -108,6 +108,18 @@ when they open here.
 - He will send the monetization screenshots (X Creator Studio for both X
   accounts first, then YouTube Earn, TikTok Studio, Instagram dashboard).
 
+## Weekly digest, every Friday (Mohammad, 28 Sep 2026)
+
+- A daily 30-second "top news" Reel was proposed and dropped: a mixed
+  Reel has no single topic for the algorithm to match, while single-topic
+  Reels ride a fan base (Minecraft). Today's Fortnite Reel tests that.
+- Instead, one weekly digest every Friday (start of the weekend in Saudi
+  Arabia): the week's biggest Digital Lounge stories, built once and cut
+  twice. YouTube gets the long 6 to 10 minute 16:9 video (watch hours);
+  Instagram, TikTok and YouTube Shorts get a vertical cut of about 60s.
+- First one Friday 2 Oct, or the week after if he wants the voice test
+  first.
+
 ## Weekly YouTube roundup: voice test to do (Mohammad, 28 Sep 2026)
 
 Narration is undecided: his own Arabic voice or text only (he worries his
@@ -133,7 +145,6 @@ mass-produced content).
   impressions (Creator Studio screenshot).
 - Whether he wants sponsors on DXB-KNIGHT at all (it is his personal
   voice) or only on Digital Lounge.
-- Whether to start the weekly Arabic YouTube roundup.
 
 ## Sources (read 28 Sep 2026)
 
