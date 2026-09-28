@@ -294,6 +294,14 @@ Brand kit (Mohammad, 26 Sep 2026):
   first use). Arabic subtitles: `fast_ar(..., video=..., subtitles=[(start,
   end, text)], sub_bottom=None)`, Dubai Bold on a dark band above the chip
   row; raise `sub_bottom` (about 700) when the clip has its own subtitles.
+  Trailers not on Steam (28 Sep 2026): YouTube now asks for a sign-in
+  (yt-dlp refused), and third-party "YouTube downloader" sites are not
+  used (they route around that check). IGN's video pages
+  (ign.com/videos/<slug>) link the official trailers as plain MP4 files
+  on assets.ign.com (1280 to 3840 wide, no IGN logo on the Fortnite
+  trailer); publisher sites such as playstation.com also host product
+  clips on gmedia.playstation.com. Check the first and last seconds for
+  ratings cards, end slates and anyone else's logo before cutting.
   The transcript is a draft: check it against on-screen text or the
   official source before writing the Arabic (on 27 Sep it heard "I think"
   where the screen said "They say"), then write the Arabic with both
