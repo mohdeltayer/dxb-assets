@@ -186,6 +186,9 @@ Digital Lounge Instagram joined Postiz on 27 Sep 2026 as integration
 takes `"platform": "instagram"` and `"settings": {"post_type": "post"}`
 (or "story"); every post needs media, captions stop at 2200 characters.
 `publish.py` needs no change for it.
+Stories work with `"post_type": "story"` (a Reel fits as it is, the
+safe zone clears the story bars; no caption shows). Not used by default
+(Mohammad, 28 Sep 2026): post one only when he asks.
 Digital Lounge TikTok (@the_digilounge) joined Postiz on 27 Sep 2026 as
 integration `cmuk0rett044oo80y3ycfes66`, platform `tiktok-business` (Postiz
 shows it as "Mohammed", the name TikTok had when it was connected; Postiz
