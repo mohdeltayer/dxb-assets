@@ -32,9 +32,11 @@ W, H = 1080, 1920
 FPS = 30
 L, R = G.SAFE_LEFT, W - G.SAFE_RIGHT          # 96 .. 910
 BEAT = 60 / sonic.FLAVOURS['stats']['bpm']
-STEP = 2 * BEAT                                 # one row every two beats
+STEP = 3 * BEAT                                 # one row every three beats (slowed 28 Sep)
 FIRST = BEAT                                    # first row on beat two
-HOLD = 2.6                                      # after number one lands
+HOLD = 3.4                                      # after number one lands
+PAGE_HOLD = 2.0                                 # before turning a page
+IN, COUNT = 0.45, 1.0                           # row slide-in and count-up
 ROW_H, ROW_GAP, ROWS_Y = 158, 12, 494
 PLAT = {'Switch': 'Switch', 'Switch2': 'Switch 2', 'PS5': 'PS5', 'PS4': 'PS4',
         'XboxSeries': 'Xbox Series'}
@@ -177,11 +179,11 @@ def body(rows, week_label, date, out, hardware=(), title='الأكثر مبيع�
     pages.append(('sw', 'المراكز 5 إلى 1' if len(rows) > 5 else '', rows[:5]))
     if hardware:
         pages.append(('hw', 'مبيعات الأجهزة', list(hardware)))
-    XF = 0.35
+    XF = 0.5
     plan, t0 = [], 0.0
     for kind, label, items in pages:
         n = len(items)
-        hold = HOLD if (kind, label) == (pages[-1][0], pages[-1][1]) else 1.3
+        hold = HOLD if (kind, label) == (pages[-1][0], pages[-1][1]) else PAGE_HOLD
         dur = FIRST + (n - 1) * STEP + hold
         plan.append((kind, label, items, t0, dur))
         t0 += dur - XF
@@ -197,11 +199,11 @@ def body(rows, week_label, date, out, hardware=(), title='الأكثر مبيع�
             order = sorted(items, key=lambda r: -r['rank'])
             for i, r in enumerate(order):
                 st = start + FIRST + i * STEP
-                k = (t - st) / 0.3
+                k = (t - st) / IN
                 if k <= 0:
                     continue
                 a = _ease(k)
-                lay = _row(r, int(r['week'] * _ease((t - st) / 0.7)))
+                lay = _row(r, int(r['week'] * _ease((t - st) / COUNT)))
                 if a < 1:
                     lay.putalpha(lay.getchannel('A').point(lambda v: int(v * a)))
                 im.alpha_composite(lay, (int(L - 40 * (1 - a)), _slot_y((r['rank'] - 1) % 5)))
@@ -210,11 +212,11 @@ def body(rows, week_label, date, out, hardware=(), title='الأكثر مبيع�
             for n_, i in enumerate(order):
                 h = items[i]
                 st = start + FIRST + n_ * STEP
-                k = (t - st) / 0.3
+                k = (t - st) / IN
                 if k <= 0:
                     continue
                 a = _ease(k)
-                g = _ease((t - st) / 0.7)
+                g = _ease((t - st) / COUNT)
                 lay = _hw_row(h, g, int(h['week'] * g), widest)
                 if a < 1:
                     lay.putalpha(lay.getchannel('A').point(lambda v: int(v * a)))
