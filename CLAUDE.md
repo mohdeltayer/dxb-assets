@@ -80,6 +80,13 @@ In sweeps that means:
   its slots aim at Europe's afternoon and the US morning (about 17:00 to
   21:00 Dubai, 09:00 to 13:00 US Eastern); Digital Lounge and Instagram
   run in Gulf waking hours.
+  Day and evening split (Mohammad, 28 Sep 2026, from X Active times for
+  the last 28 days; `analytics/dxb-knight.md`): Digital Lounge works the
+  daytime, 08:00 to 21:00 Dubai; DXB-KNIGHT works the evening, 19:00 to
+  23:00 Dubai (11:00 to 15:00 US Eastern), the day's main post around
+  20:00 to 21:00, strongest pieces Wednesday to Friday, and Friday may
+  run to about 01:00. Breaking news still goes when it breaks. Recheck
+  against the scout's weekly packs.
 - Each account keeps its own cadence (Mohammad, 27 Sep 2026). DXB-KNIGHT
   never waits for Digital Lounge or the other way round: two or three
   posts across the accounts at the same minute is fine, even on different
