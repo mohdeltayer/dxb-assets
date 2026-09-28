@@ -125,7 +125,7 @@ def families(hardware):
         models = [(k, *hardware[k]) for k in keys if k in hardware]
         if models:
             out.append((name, sum(m[1] for m in models), models))
-    return out
+    return sorted(out, key=lambda f: -f[1])       # ranked by the week, like the software
 
 
 def render(url, stem, date, prev_url=None, background='reported'):

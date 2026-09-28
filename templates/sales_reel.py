@@ -170,7 +170,7 @@ def _slot_y(i):
 def body(rows, week_label, date, out, hardware=(), title='الأكثر مبيعًا في اليابان',
          source='فاميتسو (Famitsu)'):
     """rows: the software top 10 (or 5). hardware: [dict(name, week, life,
-    last)] in display order. Pages: ranks 10 to 6, 5 to 1, then hardware,
+    last)], ranked by the week's sales. Pages: ranks 10 to 6, 5 to 1, then hardware,
     each a countdown on the stats beat, crossfading into the next."""
     rows = sorted(rows, key=lambda r: r['rank'])[:10]
     pages = []
@@ -178,7 +178,7 @@ def body(rows, week_label, date, out, hardware=(), title='الأكثر مبيع�
         pages.append(('sw', 'المراكز 10 إلى 6', rows[5:]))
     pages.append(('sw', 'المراكز 5 إلى 1' if len(rows) > 5 else '', rows[:5]))
     if hardware:
-        pages.append(('hw', 'مبيعات الأجهزة', list(hardware)))
+        pages.append(('hw', 'مبيعات الأجهزة', sorted(hardware, key=lambda h: -h['week'])))
     XF = 0.5
     plan, t0 = [], 0.0
     for kind, label, items in pages:
