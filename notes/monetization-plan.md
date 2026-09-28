@@ -147,6 +147,16 @@ mass-produced content).
     A campaign post is paid promotion: label it (TikTok's content
     disclosure, #إعلان), keep it off news posts, and it needs the UAE
     Advertiser Permit first. Joining the programme itself costs nothing.
+  - Joined 28 Sep 2026 (Digital Lounge TikTok). No events yet;
+    notifications on. How it works, from TikTok's own FAQ: join an
+    event, then post through the event page with the game's hashtags and
+    link; only game-related videos count; rewards are paid on valid
+    views from the countries named in each event's rules; payout usually
+    the first Wednesday after the campaign ends, to a payout account set
+    up under Balance; taxes are ours.
+    Event videos must be posted in the TikTok app from the event page,
+    not through Postiz, or they do not count. Each carries a game link,
+    so treat it as promotion: label it and have the permit first.
   - Service+ (LIVE, finding clients): not relevant.
   - Video Gifts: 4 of 5 met; the missing one is 10,000 followers.
     Subscription 2 of 4, TikTok Shop for Creator 3 of 4, Creator
