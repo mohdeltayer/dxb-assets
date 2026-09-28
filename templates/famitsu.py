@@ -26,6 +26,13 @@ import flex  # noqa: E402
 
 # Japanese title as Famitsu prints it -> English title as the publisher uses it.
 TITLES = {
+    'ファイアーエムブレム 万紫千紅': "Fire Emblem: Fortune's Weave",
+    '空の軌跡 the 2nd（ソラノキセキ ザ・セカンド）': 'Trails in the Sky 2nd Chapter',
+    '空の軌跡 the 2nd（ソラノキセキ ザ・セカンド） Nintendo Switch 2 Edition':
+        'Trails in the Sky 2nd Chapter',
+    "Marvel's Wolverine": "Marvel's Wolverine",
+    'アナザーエデン ビギンズ': 'Another Eden Begins',
+    'アナザーエデン ビギンズ Nintendo Switch 2 Edition': 'Another Eden Begins',
     'リズム天国 ミラクルスターズ': 'Rhythm Heaven Groove',
     '鬼武者 Way of the Sword': 'Onimusha: Way of the Sword',
     'スプラトゥーン レイダース': 'Splatoon Raiders',
