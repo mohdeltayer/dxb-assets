@@ -43,6 +43,18 @@ Creator Studio.
   passport, photo, the licence and a good conduct certificate; about
   three working days. If on an employer's visa, check whether the
   licensing authority asks for the employer's no-objection letter.
+  Likely licence for step (1), Dubai only (Mohammad's lead, 28 Sep
+  2026): Dubai Economy and Tourism's e-Trader licence, home-based, no
+  office or Ejari, applied for online through Invest in Dubai with UAE
+  PASS. Expatriate residents get professional activities only; must be
+  21+, live in Dubai, hold an Emirates ID. Quoted cost: licence AED
+  1,070 + Dubai Chamber AED 300 + trade name AED 620 (Emirates 24|7,
+  24 Sep 2026; other guides quote AED 1,416.50 all in). Activities listed
+  include content creation services and marketing services. To confirm
+  on the portal before paying: that an activity the Media Council
+  accepts for the permit (social media or electronic media) can be put
+  on an e-Trader licence, and whether an employer's no-objection letter
+  is asked for.
   Exempt: promoting your own products or services. Straight news posts
   are not advertising.
 - Scope (Mohammad, 28 Sep 2026): monetization and brand work are done
