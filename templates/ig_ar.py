@@ -193,7 +193,8 @@ def _check(label, country, theme):
 
 def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
           theme='cold', video=None, clip_start=0, clip_seconds=8, audio=False,
-          subtitles=(), src_crop=None, accent=None, handles=None, outro=True, sound=None):
+          subtitles=(), src_crop=None, accent=None, handles=None, outro=True, sound=None,
+          cover=0.0, bg_dim=0.72):
     """`headline`: the hook, one or two lines. `summary`: one or two
     sentences of detail for the panel. `media` is a 16:9 still (a file in
     uploads); with `video` instead, a 9:16 Reel is written to an .mp4 `out`.
@@ -206,7 +207,12 @@ def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
     breaking, متوفر الآن launch, أرقام stats, anything else neon; occasion
     flavours (ramadan, eid, halloween, christmas) are passed by hand. A
     trailer kept with `audio=True` plays its own sound and then only the
-    jingle; a clip with no sound gets the flavour's bed under it."""
+    jingle; a clip with no sound gets the flavour's bed under it.
+    `cover` (seconds, trial 29 Sep 2026) opens the Reel on the clip full
+    screen with the chip and headline, then fades into the card: Instagram
+    shows the first frame as the grid tile, and an all-indigo first frame
+    made the grid a purple wall. `bg_dim` is how much indigo sits over the
+    blurred clip behind the card (0.72 was the only value until then)."""
     _check(label, country, theme)
     global _ACC
     _ACC = ACCENTS[theme] if accent is None else accent
@@ -215,12 +221,12 @@ def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
         if not outro:
             return _reel(video, date, source, out, headline, summary, label, country, theme,
                          seed, clip_start, clip_seconds, audio, subtitles, src_crop,
-                         True if handles is None else handles)
+                         True if handles is None else handles, cover, bg_dim)
         import outro as O
         body = os.path.join(tempfile.mkdtemp(prefix='dlreel-'), 'body.mp4')
         _reel(video, date, source, body, headline, summary, label, country, theme, seed,
               clip_start, clip_seconds, audio, subtitles, src_crop,
-              False if handles is None else handles)
+              False if handles is None else handles, cover, bg_dim)
         return O.append(body, out, sound or SOUNDS.get(label, 'neon'), accent=_ACC)
     im = Image.new('RGB', (W, H_STILL), A.GROUND)
     d = ImageDraw.Draw(im)
@@ -268,8 +274,26 @@ def _subtitle_png(text, path, y):
     return path
 
 
+def _cover_png(headline, label, country, path):
+    """The opening frame: a dark fade up from the bottom, then the chip and
+    headline, placed inside the 3:4 middle Instagram shows on the grid
+    (y 240 to 1680) and inside the Reels safe zone."""
+    im = Image.new('RGBA', (W, H_REEL), (0, 0, 0, 0))
+    g = Image.new('L', (1, H_REEL), 0)
+    for yy in range(H_REEL):
+        g.putpixel((0, yy), int(max(0, min(1, (yy - 820) / 520)) * 225))
+    shade = Image.new('RGBA', (W, H_REEL), A.GROUND + (255,))
+    shade.putalpha(g.resize((W, H_REEL)))
+    im.alpha_composite(shade)
+    d = ImageDraw.Draw(im)
+    _head(d, headline, 1180, label, country, 54, 70, right=SAFE_RIGHT, left=SAFE_LEFT)
+    im.save(path)
+    return path
+
+
 def _reel(video, date, source, out, headline, summary, label, country, theme, seed,
-          clip_start, clip_seconds, audio, subtitles, src_crop, handles=True):
+          clip_start, clip_seconds, audio, subtitles, src_crop, handles=True, cover=0.0,
+          bg_dim=0.72):
     if not out.lower().endswith('.mp4'):
         raise ValueError('a Reel must be written to a .mp4 path')
     if src_crop:
@@ -300,6 +324,7 @@ def _reel(video, date, source, out, headline, summary, label, country, theme, se
     top.save(top_p)
     subs = [(_subtitle_png(t, os.path.join(tmp, f'sub{i}.png'), sub_y), st, en)
             for i, (st, en, t) in enumerate(subtitles)]
+    cov_p = _cover_png(headline, label, country, os.path.join(tmp, 'cover.png')) if cover else None
     p = C.U + video
     keep_audio = audio and flex._has_audio(p)
     g = '0x%02X%02X%02X' % A.GROUND
@@ -308,10 +333,13 @@ def _reel(video, date, source, out, headline, summary, label, country, theme, se
            '-i', p, '-loop', '1', '-i', top_p]
     for png, _, _ in subs:
         cmd += ['-loop', '1', '-i', png]
-    chain = (f'[0:v]{pre}fps=30,split[a][b];'
+    if cov_p:
+        cmd += ['-loop', '1', '-i', cov_p]
+    chain = (f'[0:v]{pre}fps=30,split=3[a][b][f];' if cov_p else f'[0:v]{pre}fps=30,split[a][b];')
+    chain += (
              f'[a]scale={W}:{H_REEL}:force_original_aspect_ratio=increase,'
              f'crop={W}:{H_REEL},boxblur=40:2,setsar=1,format=rgba[bl];'
-             f'color=c={g}@0.72:s={W}x{H_REEL}:r=30,format=rgba[dim];'
+             f'color=c={g}@{bg_dim}:s={W}x{H_REEL}:r=30,format=rgba[dim];'
              f'[bl][dim]overlay=0:0:shortest=1[bg];'
              f'[b]scale={W}:{vid_h},setsar=1[v];'
              f'[bg][v]overlay=0:{vid_y}:shortest=1[c1];'
@@ -319,7 +347,14 @@ def _reel(video, date, source, out, headline, summary, label, country, theme, se
     for k, (_, st, en) in enumerate(subs):
         chain += (f"[s{k}][{2 + k}:v]overlay=0:0:shortest=1:"
                   f"enable='between(t,{st},{en})'[s{k + 1}];")
-    chain += f'[s{len(subs)}]format=yuv420p[out]'
+    last = f's{len(subs)}'
+    if cov_p:
+        ci = 2 + len(subs)
+        chain += (f'[f]scale={W}:{H_REEL}:force_original_aspect_ratio=increase,crop={W}:{H_REEL},'
+                  f'setsar=1,format=rgba[fb0];[fb0][{ci}:v]overlay=0:0:shortest=1,format=rgba,'
+                  f'fade=t=out:st={cover}:d=0.35:alpha=1[fb];[{last}][fb]overlay=0:0:shortest=1[cv];')
+        last = 'cv'
+    chain += f'[{last}]format=yuv420p[out]'
     amap = (['-map', '0:a', '-c:a', 'aac', '-b:a', '128k'] if keep_audio else ['-an'])
     cmd += ['-filter_complex', chain, '-map', '[out]'] + amap + [
         '-t', str(clip_seconds), '-c:v', 'libx264', '-preset', 'medium', '-crf', '20',
