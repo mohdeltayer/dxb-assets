@@ -35,6 +35,7 @@ has said so; everything else is a working suggestion.
 | Shaping up to be | يبدو في طريقه ليكون | not تتشكل لتكون (a calque) | Suggested 29 Sep 2026 |
 | Service ends (online game) | تنتهي خدمة <game>، تُوقف <company> خدمة <game> | not تتوقف <game> alone, which DeepL read back as "taking a break" | Suggested 29 Sep 2026 |
 | N years after launch | بعد مرور سبع سنوات على إطلاقها | not بعد سبع سنوات من إطلاقها; and not لتتوقف بعد…, which reads as "only to be" | Suggested 29 Sep 2026 |
+| Update or game released today | تطرح <company> اليوم تحديثًا…، or once it is live: أصبح … متوفرًا الآن (chip متوفر الآن) | not يصل اليوم, which reads as a physical delivery | Approved 29 Sep 2026 |
 
 ## Tools
 
