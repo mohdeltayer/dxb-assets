@@ -33,6 +33,8 @@ has said so; everything else is a working suggestion.
 | Nintendo Everything | نينتيندو إفريثينغ (Nintendo Everything) | follows the house spelling of نينتيندو; on 29 Sep it went out as نينتندو | Suggested 29 Sep 2026 |
 | Instead of (price was X) | بدلًا من | not bare بدل in formal copy | Suggested 29 Sep 2026 |
 | Shaping up to be | يبدو في طريقه ليكون | not تتشكل لتكون (a calque) | Suggested 29 Sep 2026 |
+| Service ends (online game) | تنتهي خدمة <game>، تُوقف <company> خدمة <game> | not تتوقف <game> alone, which DeepL read back as "taking a break" | Suggested 29 Sep 2026 |
+| N years after launch | بعد مرور سبع سنوات على إطلاقها | not بعد سبع سنوات من إطلاقها; and not لتتوقف بعد…, which reads as "only to be" | Suggested 29 Sep 2026 |
 
 ## Tools
 
