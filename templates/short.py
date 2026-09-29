@@ -88,19 +88,38 @@ def _brand(im, y=BRAND_Y):
 
 
 def _overlay(headline, label, path, size=66, step=86):
-    """Dark fade from the middle down, then chip, headline and brand line."""
+    """A soft band behind the text only, fading in above the chip and out
+    below the brand line, so the footage shows through the rest of the
+    frame (29 Sep 2026, Mohammad: the first cut's shade covered about 45%
+    of the screen). A dark glow under the letters holds white text on pale
+    footage without a solid panel."""
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    probe = ImageDraw.Draw(Image.new('RGBA', (W, H)))
+    h = G._head(probe, headline, 0, label, None, size, step, right=G.SAFE_RIGHT, left=G.SAFE_LEFT)
+    top = BOTTOM - h
+    a0, a1 = top - 140, BRAND_Y + 70          # band: fade in, hold, fade out
     g = Image.new('L', (1, H), 0)
     for yy in range(H):
-        g.putpixel((0, yy), int(max(0, min(1, (yy - 860) / 520)) * 232))
+        if yy < a0 or yy > a1 + 120:
+            v = 0
+        elif yy < top:
+            v = (yy - a0) / (top - a0)
+        elif yy <= a1:
+            v = 1
+        else:
+            v = 1 - (yy - a1) / 120
+        g.putpixel((0, yy), int(v * 150))
     shade = Image.new('RGBA', (W, H), A.GROUND + (255,))
     shade.putalpha(g.resize((W, H)))
     im.alpha_composite(shade)
-    probe = ImageDraw.Draw(Image.new('RGBA', (W, H)))
-    h = G._head(probe, headline, 0, label, None, size, step, right=G.SAFE_RIGHT, left=G.SAFE_LEFT)
-    G._head(ImageDraw.Draw(im), headline, BOTTOM - h, label, None, size, step,
+    text = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    G._head(ImageDraw.Draw(text), headline, top, label, None, size, step,
             right=G.SAFE_RIGHT, left=G.SAFE_LEFT)
-    _brand(im)
+    _brand(text)
+    glow = Image.new('RGBA', (W, H), A.GROUND + (0,))
+    glow.putalpha(text.getchannel('A').filter(ImageFilter.GaussianBlur(10)).point(lambda v: min(255, v * 2)))
+    im.alpha_composite(glow)
+    im.alpha_composite(text)
     im.save(path)
     return path
 

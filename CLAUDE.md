@@ -230,7 +230,8 @@ every Short sat at 0 to 8 views): the Instagram Reel shrinks the clip to a
 trailers lose to the publisher's own upload. TikTok and YouTube therefore
 take `templates/short.py`, not the `ig_ar` Reel: `clip()` puts the
 footage at full 9:16 height with the chip and one big headline low in the
-frame and a small brand line; `chart()` opens on a question and the box
+frame on a soft band behind the text only (not a shade over the lower half;
+Mohammad, 29 Sep) and a small brand line; `chart()` opens on a question and the box
 art, then the top 5 countdown; both end on a 1 second end card (the
 outro's final frame). Original material first (our charts, his gameplay,
 his voice), trailers last; one or two a day on these two. A 7-day test
