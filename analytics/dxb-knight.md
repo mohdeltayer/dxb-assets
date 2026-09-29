@@ -51,3 +51,26 @@ Read off the heatmap (X shows it in the phone's time zone, Dubai):
   Dubai) are dim on every day but Saturday.
 - The map shows when impressions happened, so it also reflects when we
   posted. Treat it as a lead, not a verdict.
+
+## 29 Sep 2026: scout weekly pack, week 21 to 27 Sep (read 29 Sep 11:10)
+
+Totals from the X API, 67 posts (51 originals, 1 self-thread, 15 replies):
+- All impressions 22,921, which matches the app's 7-day overview (about
+  23.4K). The earlier gap (scout 3,661 against the app's 17K for 25 to
+  27 Sep) was replies: the scout counted originals only.
+- Originals: 5,598 impressions, median 44, 7 likes. FC 27 out now
+  (Fri 08:00) is 2,606 of that on its own; next are Stranger Than Heaven
+  293, Control Resonant 217, Armed Fantasia 175, BeamNG PS5 136, the
+  $400 GTA 6 box 126.
+- Replies: 17,312 impressions (76% of the week), median 459, 56 likes.
+  Top: under @Wario64 6,822, @Pirat_Nation (handheld comparison) 2,112
+  with 30 likes, @benhylak 2,077, FC 27 Lite times 1,812.
+- Followers 173, no change on the week.
+- The 03:15 to 04:45 Dubai originals (26 Sep) got 26 to 56; the evening
+  ones mostly 30 to 220. Weak mornings again, but the week's best original
+  went out at 08:00, so the topic outweighed the slot.
+
+Reading: nearly all reach comes from replies under big accounts and from
+one breakout story. Replies that add something (the Pirat_Nation
+comparison) earn likes as well as views; the house rule stands (plain
+text, adds a number or first-hand detail, his call).
