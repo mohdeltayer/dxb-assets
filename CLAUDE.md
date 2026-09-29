@@ -224,6 +224,19 @@ phone, built from our own graphics (a sales chart, not a trailer), with
 a location and a headline cover; after that 1 to 3 TikToks a day, the
 strongest stories only. This overrides "every Digital Lounge story
 goes to TikTok" until he says otherwise.
+Shorts format for TikTok and YouTube (Mohammad, 29 Sep 2026, after
+every Short sat at 0 to 8 views): the Instagram Reel shrinks the clip to a
+16:9 strip that reads as a slide on a full-screen feed, and reposted
+trailers lose to the publisher's own upload. TikTok and YouTube therefore
+take `templates/short.py`, not the `ig_ar` Reel: `clip()` puts the
+footage at full 9:16 height with the chip and one big headline low in the
+frame and a small brand line; `chart()` opens on a question and the box
+art, then the top 5 countdown; both end on a 1 second end card (the
+outro's final frame). Original material first (our charts, his gameplay,
+his voice), trailers last; one or two a day on these two. A 7-day test
+from 30 Sep against the old baseline (2 to 8 views per Short); if nothing
+moves, effort goes back to X and Instagram. X and Instagram keep their
+cards.
 Digital Lounge YouTube (@the_digilounge, the old "Digi-ديجي" channel)
 was rebranded on 27 Sep 2026: name "ديجيتال لاونج | أخبار الألعاب", Arabic
 description, banner `live/2026-09-27/youtube/digi-youtube-banner.png`
