@@ -147,6 +147,13 @@ Arabic writing (Mohammad, 27 Sep 2026): two passes on every Arabic post.
 2. Check with the `arabic-writing` skill (ahmeddabak/claude-arabic-writing,
    MIT, commit 7001831): grammar, hamza, ة/ه, ى/ي, agreement, collocations,
    punctuation and its machine-translation smell test.
+Resources first, every time (Mohammad, 29 Sep 2026, after a review found
+grammar slips in that morning's posts): before writing any Arabic, in every
+batch and every session, load both skills fresh, read the glossary and the
+`arabic-writing` references the text touches (grammar.md for agreement and
+numbers, conventions.md for prices and dates), and only then write. Never
+work from memory of the rules. Live posts are not changed afterwards unless
+he asks.
 Both live in `.claude/skills/`. The house glossary `arabic/house-glossary.md`
 overrides both (names above, no first person, Western digits). Add every
 correction he makes to the glossary. DeepL stays the alternative when needed; it
