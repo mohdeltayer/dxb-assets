@@ -74,3 +74,11 @@ Reading:
 4. The audience is pan-Arab, led by Iraq and Saudi Arabia, not the UAE:
    keep the Arabic region-neutral (no UAE-only framing, times given with
    the country when a time matters).
+- Overview (same read): 1,808 views, 1,608 viewers, average watch 5 s,
+  0 follows. Instagram's "what impacts your views", in its order of
+  importance: skip rate 46.2% (lower than the account's typical, good),
+  share rate 2.2% (higher), like rate 1.2% (lower), save rate 0.6%
+  (higher), reposts and comments 0% (typical). Views climbed to about
+  1.4K within the first day and kept rising slowly; the account's typical
+  Reel sits near 150. So the lever Instagram names first is the skip in
+  the opening seconds, then shares.
