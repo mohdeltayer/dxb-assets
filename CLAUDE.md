@@ -266,6 +266,15 @@ blurred fill and bare panels read as wasted.
   phones zoom a Reel or Short to fill the screen and trim about 55px off
   each side (measured on YouTube), which left the date almost touching
   the edge. Stills keep 64.
+  Colour on the grid (Mohammad, 29 Sep 2026: "the account is starting
+  to look like a purple wall"): Instagram shows a Reel's first frame as
+  its grid tile, and Postiz cannot set a cover, so every Reel now opens
+  on the clip full screen with the chip and headline low in the frame
+  (`cover=0.8` seconds, inside the 3:4 grid window and the safe zone),
+  then fades into the card. Behind the card the blurred clip shows
+  through more (`bg_dim=0.5`, was 0.72), with a soft indigo band behind
+  the headline so white text holds on pale footage. The mark, chips,
+  Dubai type, footer lines and end card stay as they are.
   The right column stays the blurred clip, nothing else (Mohammad,
   27 Sep 2026): a vertical brand strip there was tried and dropped,
   since rotated text reads slowly and the strip crossing the footer

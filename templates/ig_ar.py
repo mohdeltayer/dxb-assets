@@ -194,7 +194,7 @@ def _check(label, country, theme):
 def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
           theme='cold', video=None, clip_start=0, clip_seconds=8, audio=False,
           subtitles=(), src_crop=None, accent=None, handles=None, outro=True, sound=None,
-          cover=0.0, bg_dim=0.72):
+          cover=0.8, bg_dim=0.5):
     """`headline`: the hook, one or two lines. `summary`: one or two
     sentences of detail for the panel. `media` is a 16:9 still (a file in
     uploads); with `video` instead, a 9:16 Reel is written to an .mp4 `out`.
@@ -212,7 +212,9 @@ def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
     screen with the chip and headline, then fades into the card: Instagram
     shows the first frame as the grid tile, and an all-indigo first frame
     made the grid a purple wall. `bg_dim` is how much indigo sits over the
-    blurred clip behind the card (0.72 was the only value until then)."""
+    blurred clip behind the card (0.72 until then). Both on by default from
+    29 Sep 2026 (Mohammad: "yes switch"): 0.8 s opening, 0.5 dim, and a soft
+    indigo band behind the headline so white text holds on pale footage."""
     _check(label, country, theme)
     global _ACC
     _ACC = ACCENTS[theme] if accent is None else accent
@@ -292,8 +294,8 @@ def _cover_png(headline, label, country, path):
 
 
 def _reel(video, date, source, out, headline, summary, label, country, theme, seed,
-          clip_start, clip_seconds, audio, subtitles, src_crop, handles=True, cover=0.0,
-          bg_dim=0.72):
+          clip_start, clip_seconds, audio, subtitles, src_crop, handles=True, cover=0.8,
+          bg_dim=0.5):
     if not out.lower().endswith('.mp4'):
         raise ValueError('a Reel must be written to a .mp4 path')
     if src_crop:
@@ -304,8 +306,13 @@ def _reel(video, date, source, out, headline, summary, label, country, theme, se
     # The overlay: everything but the clip and the subtitles, on transparency.
     top = Image.new('RGBA', (W, H_REEL), (0, 0, 0, 0))
     d = ImageDraw.Draw(top)
-    vid_y = _head(d, headline, SAFE_TOP + 10, label, country, 46, 62, right=SAFE_RIGHT,
+    probe = ImageDraw.Draw(Image.new('RGBA', (W, H_REEL)))
+    vid_y = _head(probe, headline, SAFE_TOP + 10, label, country, 46, 62, right=SAFE_RIGHT,
                   left=SAFE_LEFT) + 18
+    if bg_dim < 0.72:                 # hold the headline when the backdrop is lighter
+        band = Image.new('RGBA', (W, vid_y - SAFE_TOP + 20), A.GROUND + (150,))
+        top.alpha_composite(band, (0, SAFE_TOP - 10))
+    _head(d, headline, SAFE_TOP + 10, label, country, 46, 62, right=SAFE_RIGHT, left=SAFE_LEFT)
     rule_y = vid_y + vid_h
     d.rectangle([0, rule_y, W, rule_y + RULE], fill=_ACC)
     sub_y = rule_y + RULE + 14
