@@ -37,3 +37,14 @@ asks. Bring them back when more Reels have data to compare.
 - Follows: an Arabic bio that says what the account gives, pinned Reels,
   and possibly a 1s end frame "أخبار الألعاب يوميًا · @the_digilounge".
 - Still stories as short Reels (a slow pan over the official art).
+
+## 29 Sep 2026, evening: Instagram Reel passes 1.8K views
+
+Instagram notified Mohammad that a Reel "got over 1.8K views" (seen about
+6 hours after the alert). The thumbnail is the WARDOGS 3 million sales
+Reel. The same video as a YouTube Short had 0 views (Studio, 29 Sep 21:32),
+and the other Shorts 2 to 8 each. So the story and the edit can travel;
+what stalls on TikTok and YouTube is the new channels and the format
+there, which is what the 7-day Shorts test (from 30 Sep) checks. Worth
+noting: a sales number with a soldier's face as the opening frame, on the
+account's strongest platform.
