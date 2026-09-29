@@ -359,7 +359,12 @@ Brand kit (Mohammad, 26 Sep 2026):
   (ign.com/videos/<slug>) link the official trailers as plain MP4 files
   on assets.ign.com (1280 to 3840 wide, no IGN logo on the Fortnite
   trailer); publisher sites such as playstation.com also host product
-  clips on gmedia.playstation.com. Check the first and last seconds for
+  clips on gmedia.playstation.com. Nintendo's US store product pages
+  (nintendo.com/us/store/products/<game>/) list their trailers as
+  `publicId` values under /store/software/switch2/<nsuid>/Video/, which
+  download as `https://assets.nintendo.com/video/upload<publicId>.mp4`
+  (29 Sep 2026: the Star Fox Battle Mode trailer, 1280x720, after IGN had
+  no copy); the first `nsuid` on the page is the game's own. Check the first and last seconds for
   ratings cards, end slates and anyone else's logo before cutting.
   The subtitle band is for speech only (Mohammad, 28 Sep 2026): facts
   shown in it read as someone talking. A clip without speech gets no
