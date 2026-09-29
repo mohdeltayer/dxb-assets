@@ -48,3 +48,29 @@ what stalls on TikTok and YouTube is the new channels and the format
 there, which is what the 7-day Shorts test (from 30 Sep) checks. Worth
 noting: a sales number with a soldier's face as the opening frame, on the
 account's strongest platform.
+
+### WARDOGS Reel insights (read 29 Sep 23:22 Dubai, Mohammad's screenshots)
+
+- Views about 1.8K; 96.1% non-followers. Sources: Reels tab 82.3%,
+  Explore 10.0%, Stories 3.8%, Profile 0.7%, Feed 0.1%.
+- Interactions: 19 likes, 35 shares, 10 saves, 0 comments, 0 reposts.
+  Shares outnumber likes almost two to one: people sent it to friends.
+- After viewing: 2 profile visits, 0 follows.
+- Audience: men 98.2%. Ages 25-34 53.2%, 18-24 33.9%, 35-44 10.1%.
+  Countries: Iraq 31.6%, Saudi Arabia 13.9%, Jordan 8%, Oman 5.5%,
+  Syria 5.2% (UAE not in the top five).
+- Watch time (15 s Reel with the 3.6 s end card): roughly a third gone in
+  the first second or two, about half by 3 to 4 s, near zero by 15 s. This
+  Reel went out on 28 Sep, before the full-screen cover opening (29 Sep).
+
+Reading:
+1. The first two seconds lose the most; the cover opening and the facts in
+   the first 3 s are the lever. Compare retention on Reels from 29 Sep on.
+2. Shares are the signal Instagram rewarded: numbers and surprises people
+   pass on (sales figures, records) are the Reels to make more of.
+3. Reach does not turn into follows (2 visits, 0 follows): the profile
+   has to convert: Arabic bio that says what the account gives, the best
+   3 Reels pinned, and a line on the end card asking to follow.
+4. The audience is pan-Arab, led by Iraq and Saudi Arabia, not the UAE:
+   keep the Arabic region-neutral (no UAE-only framing, times given with
+   the country when a time matters).
