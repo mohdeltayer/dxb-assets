@@ -195,6 +195,34 @@ def _media(path):
     return art.crop((l, t, l + W, t + MH))
 
 
+def slideshow(images, name, seconds=8, fade=0.5):
+    """Several official stills as one 16:9 clip for a still Reel (Mohammad,
+    30 Sep 2026: one image held for 8 seconds is not enough when more
+    exist). `images` are files in uploads, first one first: it becomes the
+    cover and the grid tile. Each is fitted to 1920x1080 without cropping
+    and they crossfade over `seconds` in total. Writes uploads/`name` and
+    returns it, for `ig_ar(..., video=name, audio=False)`."""
+    n = len(images)
+    if n < 2:
+        raise ValueError('a slideshow needs at least two images')
+    hold = (seconds + fade * (n - 1)) / n
+    cmd = ['ffmpeg', '-y', '-v', 'error']
+    for img in images:
+        cmd += ['-loop', '1', '-t', f'{hold:.3f}', '-i', C.U + img]
+    chain = ''.join(f'[{i}:v]scale=1920:1080:force_original_aspect_ratio=decrease,'
+                    f'pad=1920:1080:(ow-iw)/2:(oh-ih)/2,setsar=1,fps=30,format=yuv420p[s{i}];'
+                    for i in range(n))
+    last = 's0'
+    for i in range(1, n):
+        chain += (f'[{last}][s{i}]xfade=transition=fade:duration={fade}:'
+                  f'offset={i * (hold - fade):.3f}[x{i}];')
+        last = f'x{i}'
+    chain = chain.rstrip(';')
+    subprocess.run(cmd + ['-filter_complex', chain, '-map', f'[{last}]', '-t', str(seconds),
+                          '-c:v', 'libx264', '-crf', '18', '-r', '30', C.U + name], check=True)
+    return name
+
+
 def _check(label, country, theme):
     if theme not in A.THEMES:
         raise ValueError(f'theme is one of {", ".join(A.THEMES)}')

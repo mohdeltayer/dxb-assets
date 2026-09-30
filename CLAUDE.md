@@ -318,6 +318,13 @@ blurred fill and bare panels read as wasted.
   passed as `video` with `audio=False`, so the bed plays under it and the
   jingle end card follows. `focus` (0 left to 1 right) aims the full-screen
   cover at the subject or logo, because the cover is the grid tile.
+  One image is not enough when more exist (Mohammad, 30 Sep 2026): gather
+  every official still for the story (publisher blog, Steam screenshots,
+  store page, press kit) and pass three or four through
+  `ig_ar.slideshow(images, name, seconds=8)`, which crossfades them into
+  one 16:9 clip for `video`; the first image is the cover. Trim a
+  letterboxed still's bars first. A single still is the fallback only
+  when the story has one image.
   X keeps its still and video cards.
 - Caption: the first line is a hook that differs from the card headline
   (only about two lines show before "more"), then the full story with the
