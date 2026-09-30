@@ -124,7 +124,7 @@ def _overlay(headline, label, path, size=66, step=86):
     return path
 
 
-def clip(video, out, headline, label=None, clip_start=0, clip_seconds=8, audio=False,
+def clip(video, out, headline, label=None, clip_start=0, clip_seconds=8, audio=True,
          focus=0.5, style='neon'):
     """Footage at full height (16:9 cropped to 9:16 around `focus`, 0 left to
     1 right), chip and headline low in the frame, 1 second end card."""

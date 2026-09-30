@@ -192,7 +192,7 @@ def _check(label, country, theme):
 # ---------------------------------------------------------------- entry
 
 def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
-          theme='cold', video=None, clip_start=0, clip_seconds=8, audio=False,
+          theme='cold', video=None, clip_start=0, clip_seconds=8, audio=True,
           subtitles=(), src_crop=None, accent=None, handles=None, outro=True, sound=None,
           cover=0.8, bg_dim=0.5):
     """`headline`: the hook, one or two lines. `summary`: one or two

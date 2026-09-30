@@ -178,7 +178,7 @@ def _subtitle_png(text, path, bottom=None):
 
 
 def fast_ar(media, date, source, out, label=None, country=None, theme='cold',
-            crop=False, video=None, clip_start=0, clip_seconds=8, audio=False,
+            crop=False, video=None, clip_start=0, clip_seconds=8, audio=True,
             animate=0, subtitles=(), sub_bottom=None):
     """`date` in the English form ('26 Sep 2026'); `source` in both forms,
     'فاميتسو (Famitsu)', which falls back to the Arabic when too wide; `theme` one of THEMES, chosen per story

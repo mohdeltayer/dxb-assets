@@ -72,7 +72,7 @@ def _footer(im, bg, acc, source, date):
 
 def fast(media, date, source, out, label=None, gulf=False,
          background='reported', accent='cold', crop=False,
-         video=None, clip_start=0, clip_seconds=8, audio=False):
+         video=None, clip_start=0, clip_seconds=8, audio=True):
     if label and label.lower() not in CHIPS:
         raise ValueError(f'"{label}" is not a fast-lane chip: {", ".join(CHIPS)}')
     bg = flex.ground(background)[0]

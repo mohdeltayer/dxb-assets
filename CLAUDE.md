@@ -380,6 +380,13 @@ Brand kit (Mohammad, 26 Sep 2026):
   (29 Sep 2026: the Star Fox Battle Mode trailer, 1280x720, after IGN had
   no copy); the first `nsuid` on the page is the game's own. Check the first and last seconds for
   ratings cards, end slates and anyone else's logo before cutting.
+  Footage keeps its own sound (Mohammad, 30 Sep 2026): when the video is
+  footage (a trailer, gameplay, his capture), its original audio plays and
+  no bed is added under it; the bed is only for clips with no sound and for
+  our own graphics (charts). `audio=True` is the default in `ig_ar`,
+  `fast_ar`, `fast` and `short.clip`. Speech in the kept sound gets Arabic
+  subtitles of what is said (the band below), so a voiced trailer costs a
+  transcript; pick a stretch without talking when time is short.
   The subtitle band is for speech only (Mohammad, 28 Sep 2026): facts
   shown in it read as someone talking. A clip without speech gets no
   band text; the facts stay in the headline, panel and caption.
