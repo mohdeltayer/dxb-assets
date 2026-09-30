@@ -209,7 +209,7 @@ def _check(label, country, theme):
 def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
           theme='cold', video=None, clip_start=0, clip_seconds=8, audio=True,
           subtitles=(), src_crop=None, accent=None, handles=None, outro=True, sound=None,
-          cover=0.8, bg_dim=0.5):
+          cover=0.8, bg_dim=0.5, focus=0.5):
     """`headline`: the hook, one or two lines. `summary`: one or two
     sentences of detail for the panel. `media` is a 16:9 still (a file in
     uploads); with `video` instead, a 9:16 Reel is written to an .mp4 `out`.
@@ -231,7 +231,10 @@ def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
     29 Sep 2026 (Mohammad: "yes switch"): 0.8 s opening, 0.5 dim, and a soft
     indigo band behind the headline so white text holds on pale footage.
     Stills take the same `bg_dim` over their own art, blurred (30 Sep 2026);
-    bg_dim=1 restores the flat indigo ground."""
+    bg_dim=1 restores the flat indigo ground. `focus` (0 left to 1 right)
+    picks which part of a 16:9 frame the full-screen cover shows, since the
+    cover is the grid tile (30 Sep 2026: a centre cut lost the logo or
+    subject on most key art)."""
     _check(label, country, theme)
     global _ACC
     _ACC = ACCENTS[theme] if accent is None else accent
@@ -240,12 +243,12 @@ def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
         if not outro:
             return _reel(video, date, source, out, headline, summary, label, country, theme,
                          seed, clip_start, clip_seconds, audio, subtitles, src_crop,
-                         True if handles is None else handles, cover, bg_dim)
+                         True if handles is None else handles, cover, bg_dim, focus)
         import outro as O
         body = os.path.join(tempfile.mkdtemp(prefix='dlreel-'), 'body.mp4')
         _reel(video, date, source, body, headline, summary, label, country, theme, seed,
               clip_start, clip_seconds, audio, subtitles, src_crop,
-              False if handles is None else handles, cover, bg_dim)
+              False if handles is None else handles, cover, bg_dim, focus)
         return O.append(body, out, sound or SOUNDS.get(label, 'neon'), accent=_ACC)
     im = _still_ground(media, bg_dim)
     d = ImageDraw.Draw(im)
@@ -320,7 +323,7 @@ def _cover_png(headline, label, country, path):
 
 def _reel(video, date, source, out, headline, summary, label, country, theme, seed,
           clip_start, clip_seconds, audio, subtitles, src_crop, handles=True, cover=0.8,
-          bg_dim=0.5):
+          bg_dim=0.5, focus=0.5):
     if not out.lower().endswith('.mp4'):
         raise ValueError('a Reel must be written to a .mp4 path')
     if src_crop:
@@ -382,7 +385,8 @@ def _reel(video, date, source, out, headline, summary, label, country, theme, se
     last = f's{len(subs)}'
     if cov_p:
         ci = 2 + len(subs)
-        chain += (f'[f]scale={W}:{H_REEL}:force_original_aspect_ratio=increase,crop={W}:{H_REEL},'
+        chain += (f'[f]scale={W}:{H_REEL}:force_original_aspect_ratio=increase,'
+                  f'crop={W}:{H_REEL}:(iw-{W})*{focus}:0,'
                   f'setsar=1,format=rgba[fb0];[fb0][{ci}:v]overlay=0:0:shortest=1,format=rgba,'
                   f'fade=t=out:st={cover}:d=0.35:alpha=1[fb];[{last}][fb]overlay=0:0:shortest=1[cv];')
         last = 'cv'

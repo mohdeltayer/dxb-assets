@@ -310,6 +310,15 @@ blurred fill and bare panels read as wasted.
   take the story's theme colour (cold azure, stylized periwinkle,
   playful mint, spectacle amber; `ACCENTS` in ig_ar.py). The chip stays
   azure on every story, and headline and summary stay ink.
+- Reels only (Mohammad, 30 Sep 2026): still cards on Instagram reach 1 to
+  3 views where Reels reach about 1,000 (the WARDOGS Reel: 96% non-followers,
+  mostly from the Reels tab), so every Digital Lounge Instagram post is a
+  Reel. A story with footage uses the footage; one with only a still gets a
+  still Reel: the art as an 8 second clip (`-loop 1 -t 8`, padded to 16:9)
+  passed as `video` with `audio=False`, so the bed plays under it and the
+  jingle end card follows. `focus` (0 left to 1 right) aims the full-screen
+  cover at the subject or logo, because the cover is the grid tile.
+  X keeps its still and video cards.
 - Caption: the first line is a hook that differs from the card headline
   (only about two lines show before "more"), then the full story with the
   same checked facts, then #ألعاب #أخبار_الألعاب followed by 2 story hashtags (Arabic tags
