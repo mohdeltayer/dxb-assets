@@ -268,7 +268,7 @@ batch ran later on Instagram only because the channel was being set up.) Empty s
 blurred fill and bare panels read as wasted.
 - Card: `templates/ig_ar.py`, `ig_ar(media, date, source, out, headline,
   summary, label=None, country=None, theme='cold', video=None,
-  clip_start=0, clip_seconds=8, audio=False, subtitles=(), src_crop=None)`.
+  clip_start=0, clip_seconds=8, audio=True, subtitles=(), src_crop=None)`.
   The news layout: chip and a short headline on top, the media at full
   width and 16:9 (never cropped), a lighter panel with one or two
   sentences (not bullets), then the footer laid out as on X (mark and name
