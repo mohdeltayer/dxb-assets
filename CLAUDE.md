@@ -283,6 +283,10 @@ blurred fill and bare panels read as wasted.
   bottom (account name, caption), so text, chips and the footer sit in
   x 96 to 910, y 285 to 1480 (`SAFE_*` in ig_ar.py); only the clip runs
   full width. That fits a two-line headline and a two-line summary.
+  Text fills the space (Mohammad, 30 Sep 2026: the fixed 46/33 sizes left
+  an empty band under the panel on the Crimson Desert Reel): `_reel_sizes`
+  picks the largest headline and summary from `REEL_SIZES` (up to 62/44)
+  that still end above the footer, so short copy runs bigger.
   The left edge moved from 64 to 96 on 27 Sep 2026 (Mohammad): tall
   phones zoom a Reel or Short to fill the screen and trim about 55px off
   each side (measured on YouTube), which left the date almost touching

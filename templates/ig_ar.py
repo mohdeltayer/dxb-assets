@@ -349,6 +349,33 @@ def _cover_png(headline, label, country, path):
     return path
 
 
+#: Reel text sizes, largest first (30 Sep 2026, Mohammad: the fixed 46/33
+#: sizes left an empty band between the panel and the footer). The Reel
+#: takes the largest headline and summary that still end above the footer.
+REEL_SIZES = [(62, 80, 44, 62), (58, 76, 42, 58), (54, 72, 40, 56), (50, 68, 38, 52),
+              (46, 62, 36, 50), (46, 62, 33, 48)]
+
+
+def _reel_sizes(headline, summary, label, country, vid_h, subtitles=False):
+    probe = ImageDraw.Draw(Image.new('RGBA', (W, H_REEL)))
+    foot_y = SAFE_BOTTOM - REEL_FH
+    for hs, hst, ps, pst in REEL_SIZES:
+        try:
+            y = _head(probe, headline, SAFE_TOP + 10, label, country, hs, hst,
+                      right=SAFE_RIGHT, left=SAFE_LEFT) + 18
+        except ValueError:
+            continue
+        lines = len(_wrap(probe, headline, A.F('Bold', hs), W - SAFE_LEFT - SAFE_RIGHT))
+        if lines > 2:
+            continue
+        rule = y + vid_h
+        panel_y = rule + RULE + 14 + 70 + 14 if subtitles else rule + RULE + 20
+        end = _panel(probe, summary, panel_y, ps, pst, pad=26, right=SAFE_RIGHT, left=SAFE_LEFT)
+        if end <= foot_y - 8:
+            return hs, hst, ps, pst
+    return REEL_SIZES[-1]
+
+
 def _reel(video, date, source, out, headline, summary, label, country, theme, seed,
           clip_start, clip_seconds, audio, subtitles, src_crop, handles=True, cover=0.8,
           bg_dim=0.5, focus=0.5):
@@ -363,17 +390,18 @@ def _reel(video, date, source, out, headline, summary, label, country, theme, se
     top = Image.new('RGBA', (W, H_REEL), (0, 0, 0, 0))
     d = ImageDraw.Draw(top)
     probe = ImageDraw.Draw(Image.new('RGBA', (W, H_REEL)))
-    vid_y = _head(probe, headline, SAFE_TOP + 10, label, country, 46, 62, right=SAFE_RIGHT,
+    hs, hst, ps, pst = _reel_sizes(headline, summary, label, country, vid_h, bool(subtitles))
+    vid_y = _head(probe, headline, SAFE_TOP + 10, label, country, hs, hst, right=SAFE_RIGHT,
                   left=SAFE_LEFT) + 18
     if bg_dim < 0.72:                 # hold the headline when the backdrop is lighter
         band = Image.new('RGBA', (W, vid_y - SAFE_TOP + 20), A.GROUND + (150,))
         top.alpha_composite(band, (0, SAFE_TOP - 10))
-    _head(d, headline, SAFE_TOP + 10, label, country, 46, 62, right=SAFE_RIGHT, left=SAFE_LEFT)
+    _head(d, headline, SAFE_TOP + 10, label, country, hs, hst, right=SAFE_RIGHT, left=SAFE_LEFT)
     rule_y = vid_y + vid_h
     d.rectangle([0, rule_y, W, rule_y + RULE], fill=_ACC)
     sub_y = rule_y + RULE + 14
     panel_y = sub_y + 70 + 14 if subtitles else rule_y + RULE + 20   # one subtitle line
-    end = _panel(d, summary, panel_y, 33, 48, pad=26, right=SAFE_RIGHT, left=SAFE_LEFT)
+    end = _panel(d, summary, panel_y, ps, pst, pad=26, right=SAFE_RIGHT, left=SAFE_LEFT)
     foot_y = SAFE_BOTTOM - REEL_FH
     if end > foot_y - 8:
         raise ValueError(f'headline and summary do not fit the Reel safe zone (panel ends {end}, '
