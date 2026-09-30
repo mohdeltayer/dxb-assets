@@ -296,6 +296,11 @@ blurred fill and bare panels read as wasted.
   through more (`bg_dim=0.5`, was 0.72), with a soft indigo band behind
   the headline so white text holds on pale footage. The mark, chips,
   Dubai type, footer lines and end card stay as they are.
+  Stills take the same treatment (Mohammad, 30 Sep 2026, after a batch of
+  six stills came out on flat indigo): the story's own art, blurred to
+  fill the 3:4 frame, sits behind the card under the same `bg_dim=0.5`,
+  with the soft band behind the headline. `bg_dim=1` restores the flat
+  ground.
   The right column stays the blurred clip, nothing else (Mohammad,
   27 Sep 2026): a vertical brand strip there was tried and dropped,
   since rotated text reads slowly and the strip crossing the footer

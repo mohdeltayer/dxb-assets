@@ -172,6 +172,21 @@ def _footer(im, y, source, date, theme, seed, right=M, fh=FH, left=M, handles=Tr
     d.text((left, mid), A.arabic_date(date), font=f, fill=A.BODY, anchor='lm', **AR)
 
 
+def _still_ground(path, bg_dim):
+    """The ground behind a still: the story's own art, blurred to fill the
+    3:4 frame, under `bg_dim` of indigo (30 Sep 2026, Mohammad: the grid
+    was turning into a purple wall, the same fix the Reels got on 29 Sep).
+    bg_dim=1 gives the flat indigo ground the stills had before."""
+    if bg_dim >= 1:
+        return Image.new('RGB', (W, H_STILL), A.GROUND)
+    src = Image.open(C.U + path).convert('RGB')
+    k = max(W / src.width, H_STILL / src.height)
+    art = src.resize((int(src.width * k) + 1, int(src.height * k) + 1), Image.LANCZOS)
+    l, t = (art.width - W) // 2, (art.height - H_STILL) // 2
+    art = art.crop((l, t, l + W, t + H_STILL)).filter(ImageFilter.GaussianBlur(36))
+    return Image.blend(art, Image.new('RGB', (W, H_STILL), A.GROUND), bg_dim)
+
+
 def _media(path):
     src = Image.open(C.U + path).convert('RGB')
     k = max(W / src.width, MH / src.height)
@@ -214,7 +229,9 @@ def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
     made the grid a purple wall. `bg_dim` is how much indigo sits over the
     blurred clip behind the card (0.72 until then). Both on by default from
     29 Sep 2026 (Mohammad: "yes switch"): 0.8 s opening, 0.5 dim, and a soft
-    indigo band behind the headline so white text holds on pale footage."""
+    indigo band behind the headline so white text holds on pale footage.
+    Stills take the same `bg_dim` over their own art, blurred (30 Sep 2026);
+    bg_dim=1 restores the flat indigo ground."""
     _check(label, country, theme)
     global _ACC
     _ACC = ACCENTS[theme] if accent is None else accent
@@ -230,8 +247,16 @@ def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
               clip_start, clip_seconds, audio, subtitles, src_crop,
               False if handles is None else handles, cover, bg_dim)
         return O.append(body, out, sound or SOUNDS.get(label, 'neon'), accent=_ACC)
-    im = Image.new('RGB', (W, H_STILL), A.GROUND)
+    im = _still_ground(media, bg_dim)
     d = ImageDraw.Draw(im)
+    if bg_dim < 1:                    # hold the headline when the backdrop is lighter
+        probe = ImageDraw.Draw(Image.new('RGB', (W, H_STILL)))
+        hy = _head(probe, headline, 70, label, country, 64, 88) + 30
+        band = Image.new('RGBA', (W, hy), A.GROUND + (150,))
+        im = im.convert('RGBA')
+        im.alpha_composite(band, (0, 0))
+        im = im.convert('RGB')
+        d = ImageDraw.Draw(im)
     y = _head(d, headline, 70, label, country, 64, 88) + 30
     im.paste(_media(media), (0, y))
     d = ImageDraw.Draw(im)
