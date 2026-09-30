@@ -31,6 +31,7 @@ has said so; everything else is a working suggestion.
 | Expansion (DLC) | إضافة، والمثنى الإضافتان (وتضم الإضافتين Hearts of Stone وBlood and Wine) | not توسعة or توسيع | Approved 27 Sep 2026 |
 | Steam store in a country | متجر Steam في الإمارات، متجر Steam في السعودية | not متجر Steam الإمارات (a construct with a Latin word in the middle reads broken) | Suggested 29 Sep 2026 |
 | Nintendo Everything | نينتيندو إفريثينغ (Nintendo Everything) | follows the house spelling of نينتيندو; on 29 Sep it went out as نينتندو | Suggested 29 Sep 2026 |
+| UAE price (AED, dirhams) | The Central Bank's dirham symbol, left of the numeral, same height as the digits, never with "AED" or "درهم" beside it: `templates/assets/dirham-symbol-mask.png`, cut from the CBUAE guideline's own vector. Written-out text in a caption keeps درهمًا | Approved 30 Sep 2026 |
 | Instead of (price was X) | بدلًا من | not bare بدل in formal copy | Suggested 29 Sep 2026 |
 | Shaping up to be | يبدو في طريقه ليكون | not تتشكل لتكون (a calque) | Suggested 29 Sep 2026 |
 | Service ends (online game) | تنتهي خدمة <game>، تُوقف <company> خدمة <game> | not تتوقف <game> alone, which DeepL read back as "taking a break" | Suggested 29 Sep 2026 |
