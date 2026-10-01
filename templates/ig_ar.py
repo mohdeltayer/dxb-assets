@@ -277,7 +277,12 @@ def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
         _reel(video, date, source, body, headline, summary, label, country, theme, seed,
               clip_start, clip_seconds, audio, subtitles, src_crop,
               False if handles is None else handles, cover, bg_dim, focus)
-        return O.append(body, out, sound or SOUNDS.get(label, 'neon'), accent=_ACC)
+        style = sound or SOUNDS.get(label, 'neon')
+        bed = None
+        if style == 'neon' and not audio:          # silent clip: rotate the everyday bed
+            import sonic
+            bed = O._cached('bed', sonic.rotate(out))
+        return O.append(body, out, style, bed=bed, accent=_ACC)
     im = _still_ground(media, bg_dim)
     d = ImageDraw.Draw(im)
     if bg_dim < 1:                    # hold the headline when the backdrop is lighter

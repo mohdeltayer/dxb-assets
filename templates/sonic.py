@@ -104,9 +104,29 @@ EVERYDAY = ['neon', 'neon_b', 'neon_c', 'neon_d', 'neon_e']
 
 
 def rotate(key):
-    """An everyday flavour picked from the post's own name, stable per post."""
-    import zlib
-    return EVERYDAY[zlib.crc32(str(key).encode()) % len(EVERYDAY)]
+    """An everyday bed for a post, never the one used most recently: the
+    ledger (assets/bed-ledger.json) remembers which bed each post got, so a
+    re-render keeps its bed and a new post takes the bed rested longest
+    (Mohammad, 1 Oct 2026: variety across the day, not a hash that can land
+    on the same bed three times running)."""
+    import json
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'bed-ledger.json')
+    try:
+        ledger = json.load(open(path))
+    except (OSError, ValueError):
+        ledger = []
+    key = os.path.basename(str(key))
+    for k, f in ledger:
+        if k == key and f in EVERYDAY:
+            return f
+    last = {f: -1 for f in EVERYDAY}
+    for i, (_, f) in enumerate(ledger):
+        if f in last:
+            last[f] = i
+    pick = min(EVERYDAY, key=lambda f: (last[f], EVERYDAY.index(f)))
+    ledger.append([key, pick])
+    json.dump(ledger[-200:], open(path, 'w'), indent=0)
+    return pick
 
 
 def _times(F, at0):

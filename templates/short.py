@@ -64,7 +64,11 @@ def finish(video, out, style='neon'):
     if outro._has_audio(video):
         a = f'[0:a]afade=t=out:st={max(0, d - 0.8):.2f}:d=0.8,apad[a]'
     else:
-        cmd += ['-stream_loop', '-1', '-i', outro._cached('bed', style)]
+        bed = style
+        if style == 'neon':                     # silent clip: rotate the everyday bed
+            import sonic
+            bed = sonic.rotate(out)
+        cmd += ['-stream_loop', '-1', '-i', outro._cached('bed', bed)]
         a = (f'[2:a]volume=-2dB,afade=t=in:d=0.3,atrim=0:{total:.3f},'
              f'afade=t=out:st={total - 0.9:.2f}:d=0.9[a]')
     subprocess.run(cmd + ['-filter_complex', v + ';' + a, '-map', '[v]', '-map', '[a]',

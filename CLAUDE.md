@@ -466,9 +466,13 @@ Brand kit (Mohammad, 26 Sep 2026):
   `neon_b` marimba over D A Bm G with a light beat, `neon_c` vibraphone on
   two major-seventh chords at a slower quarter-note pace, `neon_d`
   glockenspiel over D Em G A, `neon_e` plucked strings over Bm G D A, a
-  minor-leaning loop. Each keeps the motif every 8 bars. `reel.py` rotates
-  `sonic.EVERYDAY` per post (`sonic.rotate(<file name>)`) for clips with
-  no sound; launch, breaking and stats keep their own flavour. Audition:
+  minor-leaning loop. Each keeps the motif every 8 bars. `reel.py`,
+  `ig_ar` and `short` rotate `sonic.EVERYDAY` for clips with no sound
+  (`sonic.rotate(<file name>)`): each new post takes the bed rested
+  longest, from the ledger in `templates/assets/bed-ledger.json`, so no
+  bed repeats until all five have played (Mohammad, 1 Oct 2026: use the
+  variations for variety); a re-render keeps its bed. Footage still keeps
+  its own sound. Launch, breaking and stats keep their own flavour. Audition:
   `live/2026-10-01/audio/`. On posts: every Reel
   ends on the jingle (see the end card below); X video cards and stills
   carry no added sound yet. The sound is a Digital Lounge mark;
