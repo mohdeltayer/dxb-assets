@@ -76,7 +76,38 @@ FLAVOURS = {
                       pickup=['A4', 'A4', 'A4']),
     'launch':    dict(NEON, lead='bell+glock', arp='bell', bpm=116, step=0.13, drums='light'),
     'digest':    dict(NEON, lead='bell', arp='bell', bpm=96, step=0.16, drums='soft'),
+    # everyday variations (Mohammad, 1 Oct 2026: the one jingle on every post
+    # had gone stale). Same four notes and direction, so it still reads as
+    # Digital Lounge; rhythm, voice, harmony and the closing chord change.
+    'neon_b':    dict(NEON, chord=['D3', 'A3', 'D4', 'F#4', 'B4', 'E5'], lead='marimba',
+                      arp='marimba', bpm=100, step=0.15, rhythm=[1, 1, 1.6]),
+    'neon_c':    dict(NEON, chord=['D3', 'A3', 'C#4', 'F#4', 'A4', 'E5'], lead='vibes',
+                      arp='vibes', bpm=88, step=0.18, harmony=['B4', 'D5', 'F#5', 'C#6']),
+    'neon_d':    dict(NEON, lead='glock', arp='glock', bpm=104, step=0.12,
+                      echo=True, drums='soft'),
+    'neon_e':    dict(NEON, chord=['D3', 'A3', 'D4', 'G4', 'A4', 'E5'], lead='pluck+bell',
+                      arp='pluck', bpm=96, step=0.14, rhythm=[0.75, 1.25, 1], roll=True),
 }
+
+# The everyday jingle rotates through these, one per post, so a run of posts
+# never repeats the same sting; the occasion and post-type flavours stay fixed.
+EVERYDAY = ['neon', 'neon_b', 'neon_c', 'neon_d', 'neon_e']
+
+
+def rotate(key):
+    """An everyday flavour picked from the post's own name, stable per post."""
+    import zlib
+    return EVERYDAY[zlib.crc32(str(key).encode()) % len(EVERYDAY)]
+
+
+def _times(F, at0):
+    """Motif note times: even steps, or the flavour's own rhythm."""
+    gaps = F.get('rhythm', [1, 1, 1])
+    out, t = [at0], at0
+    for g in gaps:
+        t += F['step'] * g
+        out.append(t)
+    return out
 
 
 def t_(dur):
@@ -135,6 +166,21 @@ def musicbox(freq, dur):
     return x * env(len(t), a=0.001, d=0.45, r=0.08)
 
 
+def marimba(freq, dur):
+    """Wooden bar: a short FM knock with a fourth-partial ring."""
+    t = t_(dur)
+    mod = 1.4 * np.exp(-t / 0.05) * np.sin(2 * np.pi * freq * 4 * t)
+    return np.sin(2 * np.pi * freq * t + mod) * env(len(t), a=0.002, d=0.35, r=0.08)
+
+
+def vibes(freq, dur):
+    """Vibraphone: a soft sine with the motor's slow tremolo."""
+    t = t_(dur)
+    trem = 1 - 0.25 * (0.5 + 0.5 * np.sin(2 * np.pi * 5.0 * t))
+    x = np.sin(2 * np.pi * freq * t) + 0.18 * np.sin(2 * np.pi * freq * 4 * t) * np.exp(-t / 0.2)
+    return x * trem * env(len(t), a=0.004, d=1.0, r=0.15)
+
+
 def voice(name, freq, dur):
     if '+' in name:
         a, b = name.split('+')
@@ -145,7 +191,9 @@ def voice(name, freq, dur):
             'pluck': lambda: pluck(freq, dur, bright=0.45),
             'glock': lambda: glock(freq, dur),
             'musicbox': lambda: musicbox(freq, dur),
-            'celesta': lambda: bell(freq, dur, ratio=4.0, index=0.6)}[name]()
+            'celesta': lambda: bell(freq, dur, ratio=4.0, index=0.6),
+            'marimba': lambda: marimba(freq, dur),
+            'vibes': lambda: vibes(freq, dur)}[name]()
 
 
 def warm(notes, dur, attack=0.05, decay=1.1):
@@ -288,7 +336,10 @@ def beats(style):
     step, at0 = F['step'], 0.1
     if F.get('pickup'):
         at0 += len(F['pickup']) * step * 0.8 + step * 0.4
-    return [at0 + k * step for k in range(4)], at0 + 4 * step
+    if F.get('roll'):
+        at0 += 0.12
+    ts = _times(F, at0)
+    return ts, ts[-1] + step
 
 
 def jingle(style, path):
@@ -302,14 +353,24 @@ def jingle(style, path):
         place(buf, voice('pluck', hz(nt), 0.25) * 0.5, at0 + k * step * 0.8)
     if F.get('pickup'):
         at0 += len(F['pickup']) * step * 0.8 + step * 0.4
+    if F.get('roll'):                     # a quick strum of the chord's top into the motif
+        for k, nt in enumerate(F['chord'][2:5]):
+            place(buf, pluck(hz(nt), 0.4, bright=0.5) * 0.18, at0 + k * 0.035)
+        at0 += 0.12
+    ts = _times(F, at0)
     for k, nt in enumerate(F['motif']):
-        at = at0 + k * step
+        at = ts[k]
         place(buf, voice(F['lead'], hz(nt), 1.2) * 0.7, at)
+        if F.get('harmony'):
+            place(buf, voice(F['lead'], hz(F['harmony'][k]), 1.2) * 0.38, at)
         if F['lead'] in ('bell', 'bell+glock'):
             place(buf, pluck(hz(nt) / 2, 0.8, bright=0.3) * 0.4, at)
         if F.get('hits'):
             place(buf, kick() * 0.5, at)
-    hit = at0 + 4 * step
+    hit = ts[-1] + step
+    if F.get('echo'):                     # the last two notes answer, softer, after the chord lands
+        for k, nt in enumerate(F['motif'][2:]):
+            place(buf, voice(F['lead'], hz(nt), 0.9) * 0.22, hit + 0.32 + k * step)
     place(buf, warm(F['chord'], dur - hit) * 0.5, hit)
     place(buf, sub(hz('D2'), 1.0) * 0.55, hit)
     top = F['chord'][-1]

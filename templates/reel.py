@@ -27,7 +27,7 @@ lines: [(text, t0, t1, opts)] with times on the finished clip, or plain
 """
 import os, subprocess, tempfile
 from PIL import Image, ImageDraw, ImageFilter
-import cards as C, fast_ar as A, ig_ar as G, outro
+import cards as C, fast_ar as A, ig_ar as G, outro, sonic
 
 W, H = 1080, 1920
 L, R = G.SAFE_LEFT, G.SAFE_RIGHT
@@ -213,4 +213,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     amap = ['-map', '0:a?', '-c:a', 'aac']
     subprocess.run(args + ['-filter_complex', ';'.join(fc), '-map', '[v]'] + amap +
                    ['-c:v', 'libx264', '-crf', '21', body], check=True)
-    return outro.append(body, out, sound or G.SOUNDS.get(label, 'neon'), accent=G.ACCENTS[theme]), starts, end
+    if sound is None:                      # everyday posts rotate the jingle; launch, breaking, stats keep theirs
+        sound = G.SOUNDS.get(label, 'neon')
+        if sound == 'neon':
+            sound = sonic.rotate(os.path.basename(out))
+    return outro.append(body, out, sound, accent=G.ACCENTS[theme]), starts, end

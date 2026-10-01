@@ -460,7 +460,15 @@ Brand kit (Mohammad, 26 Sep 2026):
   (both read as a whoosh or a plane); percussion is tonal, never noise.
   `python3 sonic.py <dir>` renders them all; `under(video, bed, out,
   jingle_path=...)` puts a bed under a clip with no sound of its own.
-  Audition set in `live/2026-09-28/audio/set/`. On posts: every Reel
+  Audition set in `live/2026-09-28/audio/set/`.
+  Everyday variations (Mohammad, 1 Oct 2026: one jingle on every post had
+  gone stale): `neon_b` marimba with a held top note and an added sixth,
+  `neon_c` vibraphone in thirds over a major-seventh chord, `neon_d` quick
+  glockenspiel whose last two notes echo after the chord, `neon_e` a strum
+  into plucked bells with a swung rhythm. Same four notes and direction
+  as `neon`, so the mark still reads. `reel.py` rotates `sonic.EVERYDAY`
+  per post (`sonic.rotate(<file name>)`); launch, breaking and stats keep
+  their own flavours. Audition: `live/2026-10-01/audio/`. On posts: every Reel
   ends on the jingle (see the end card below); X video cards and stills
   carry no added sound yet. The sound is a Digital Lounge mark;
   DXB-KNIGHT does not use it.
