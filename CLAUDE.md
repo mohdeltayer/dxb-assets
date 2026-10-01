@@ -248,6 +248,13 @@ chart Short at 19:15 went through Postiz as the control. Compare both
 the next morning. No new automated TikTok or YouTube jobs until the
 result is in. YouTube's channel verification (video selfie or ID) is
 optional and his call; it was left until after this test.
+TikTok and YouTube dropped (Mohammad, 1 Oct 2026, 21:00 Dubai): no
+TikTok or YouTube posts at all, automated or for his phone, until the
+cause of the zero views is found. This overrides every rule above that
+sends Digital Lounge stories or Shorts to either platform. Digital Lounge
+runs on X and Instagram only; reel.py files still render 9:16 so either
+platform can come back without new work. Nothing was queued on either
+when the drop started.
 Digital Lounge YouTube (@the_digilounge, the old "Digi-ديجي" channel)
 was rebranded on 27 Sep 2026: name "ديجيتال لاونج | أخبار الألعاب", Arabic
 description, banner `live/2026-09-27/youtube/digi-youtube-banner.png`
