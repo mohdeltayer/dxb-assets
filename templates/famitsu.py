@@ -43,6 +43,10 @@ TITLES = {
     'ほの暮しの庭': 'Village in the Shade',
     '三國志14 with パワーアップキット Complete Edition':
         'Three Kingdoms XIV PK Complete Edition',
+    'ダービースタリオン2': 'Derby Stallion 2',
+    'SILENT HILL： Townfall': 'SILENT HILL: Townfall',
+    'ドラゴンクエストXI　過ぎ去りし時を求めて S': 'Dragon Quest XI S',
+    'EA SPORTS FC 27': 'EA SPORTS FC 27',
 }
 
 PLATFORMS = {'Switch2': 'NS2', 'Switch': 'NS', 'PS5': 'PS5', 'PS4': 'PS4',
