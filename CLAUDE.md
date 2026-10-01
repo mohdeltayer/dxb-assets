@@ -563,6 +563,13 @@ top 10 card and a hardware card for the same post, with week-on-week change
 (green up, red down; red is kept out of the row colours for that reason). An untranslated title stops
 the run: add the publisher's English name to `TITLES`. Chip STATS, cold,
 reported unless Mohammad gives a take.
+Digital Lounge sales Reel needs a new layout (Mohammad, 1 Oct 2026): the
+`sales_reel` chart and the `short.chart` countdown still sit as rows on a
+flat ground with empty space above and below, which the full-screen
+format dropped everywhere else. Let go for the 21 to 27 Sep week; from the
+next Famitsu week (about 8 Oct) the chart must fill the 9:16 frame in the
+spirit of `reel.py` (box art or footage full bleed, numbers over it, no
+bare bands). Show him a draft before that Thursday.
 
 ## The lookout is its own format
 
