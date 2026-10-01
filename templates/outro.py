@@ -188,6 +188,6 @@ def append(video, out, style='neon', bed=None, jingle=None, accent=None):
              f'afade=t=out:st={max(0, d - 1.0):.2f}:d=1.0[b];')
     fc = v + j + a + f'[b][j]amix=inputs=2:duration=longest:normalize=0,apad[a]'
     subprocess.run(cmd + ['-filter_complex', fc, '-map', '[v]', '-map', '[a]', '-t', f'{total:.3f}',
-                          '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-c:a', 'aac',
+                          '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-pix_fmt', 'yuv420p', '-profile:v', 'high', '-c:a', 'aac',
                           '-b:a', '160k', '-ar', '48000', '-movflags', '+faststart', out], check=True)
     return out
