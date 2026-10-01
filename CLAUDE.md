@@ -147,6 +147,22 @@ Arabic writing (Mohammad, 27 Sep 2026): two passes on every Arabic post.
 2. Check with the `arabic-writing` skill (ahmeddabak/claude-arabic-writing,
    MIT, commit 7001831): grammar, hamza, ة/ه, ى/ي, agreement, collocations,
    punctuation and its machine-translation smell test.
+Grammar review (Mohammad, 1 Oct 2026): the check in pass 2 now runs as the
+`arabic-grammar-review` stage on the finished text. It takes نحو and صرف from
+`perfect-arabic` (alialsaudi/perfect-arabic, MIT, commit 78fdade, a summary of
+النحو الوافي), spelling and punctuation from `arabic-writing`'s
+orthography.md, and keeps style apart: the smell test and collocations are
+suggestions only. It returns `corrected_text`, `required_edits` (original,
+proposed, class, category, explanation, a reference only when the file was
+opened), `optional_style_suggestions` and `uncertain_cases`. Smallest fix
+only; correct text comes back unchanged; valid alternatives, absent
+diacritics and digits are never errors; problems inside a quotation are
+flagged, not rewritten. Both outside skills are community-maintained, not
+authorities: lines found wrong are in the stage's
+`references/known-issues.md`. Required edits are applied before he sees the
+pair; suggestions and uncertain cases go to him with the drafts. Tested on
+1 Oct against 39 posts (`notes/arabic-review-test-2026-10-01.md`). It never
+queues: posting still needs his times and his "go".
 Resources first, every time (Mohammad, 29 Sep 2026, after a review found
 grammar slips in that morning's posts): before writing any Arabic, in every
 batch and every session, load both skills fresh, read the glossary and the
