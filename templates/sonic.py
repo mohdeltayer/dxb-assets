@@ -76,21 +76,30 @@ FLAVOURS = {
                       pickup=['A4', 'A4', 'A4']),
     'launch':    dict(NEON, lead='bell+glock', arp='bell', bpm=116, step=0.13, drums='light'),
     'digest':    dict(NEON, lead='bell', arp='bell', bpm=96, step=0.16, drums='soft'),
-    # everyday variations (Mohammad, 1 Oct 2026: the one jingle on every post
-    # had gone stale). Same four notes and direction, so it still reads as
-    # Digital Lounge; rhythm, voice, harmony and the closing chord change.
-    'neon_b':    dict(NEON, chord=['D3', 'A3', 'D4', 'F#4', 'B4', 'E5'], lead='marimba',
-                      arp='marimba', bpm=100, step=0.15, rhythm=[1, 1, 1.6]),
-    'neon_c':    dict(NEON, chord=['D3', 'A3', 'C#4', 'F#4', 'A4', 'E5'], lead='vibes',
-                      arp='vibes', bpm=88, step=0.18, harmony=['B4', 'D5', 'F#5', 'C#6']),
-    'neon_d':    dict(NEON, lead='glock', arp='glock', bpm=104, step=0.12,
-                      echo=True, drums='soft'),
-    'neon_e':    dict(NEON, chord=['D3', 'A3', 'D4', 'G4', 'A4', 'E5'], lead='pluck+bell',
-                      arp='pluck', bpm=96, step=0.14, rhythm=[0.75, 1.25, 1], roll=True),
+    # background beds for clips with no sound of their own (Mohammad, 1 Oct
+    # 2026: the one bed under every still Reel had gone stale). Each keeps the
+    # motif (it still surfaces every 8 bars) but changes the progression,
+    # the instrument, the tempo and the arpeggio's shape. The jingle stays neon.
+    'neon_b':    dict(NEON, prog=[['D3', 'F#3', 'A3', 'D4'], ['A2', 'C#3', 'E3', 'A3'],
+                                  ['B2', 'D3', 'F#3', 'B3'], ['G2', 'B2', 'D3', 'G3']],
+                      lead='marimba', arp='marimba', bpm=100, step=0.16, drums='light',
+                      pattern=[0, 2, 1, 3, 2, 0, 3, 1]),
+    'neon_c':    dict(NEON, prog=[['D3', 'F#3', 'A3', 'C#4'], ['G2', 'B2', 'D3', 'F#3']],
+                      lead='vibes', arp='vibes', bpm=84, step=0.16, rate=4,
+                      pattern=[0, 2, 3, 1]),
+    'neon_d':    dict(NEON, prog=[['D3', 'F#3', 'A3', 'D4'], ['E3', 'G3', 'B3', 'E4'],
+                                  ['G2', 'B2', 'D3', 'G3'], ['A2', 'C#3', 'E3', 'A3']],
+                      lead='glock', arp='glock', bpm=104, step=0.16, drums='soft',
+                      pattern=[0, 1, 2, 3, 3, 2, 1, 2]),
+    'neon_e':    dict(NEON, prog=[['B2', 'D3', 'F#3', 'B3'], ['G2', 'B2', 'D3', 'G3'],
+                                  ['D3', 'F#3', 'A3', 'D4'], ['A2', 'C#3', 'E3', 'A3']],
+                      lead='pluck+bell', arp='pluck', bpm=92, step=0.16, drums='soft',
+                      pattern=[0, 1, 2, 3, 2, 3, 1, 2]),
 }
 
-# The everyday jingle rotates through these, one per post, so a run of posts
-# never repeats the same sting; the occasion and post-type flavours stay fixed.
+# The everyday bed rotates through these, one per post, so a run of still
+# Reels never repeats the same music; the jingle and the occasion and
+# post-type flavours stay fixed.
 EVERYDAY = ['neon', 'neon_b', 'neon_c', 'neon_d', 'neon_e']
 
 
@@ -414,10 +423,11 @@ def bed(style, path, bars=16):
                 f = hz(chord[o]) * (4 if i >= 8 and o == 0 else 2)
                 place(buf, voice(F['arp'], f, 0.3) * (0.13 if i % 4 == 0 else 0.08), at + i * beat / 4)
         else:
-            for e8 in range(8):
-                nt = chord[[0, 1, 2, 3, 2, 1, 2, 3][e8]]
-                place(buf, voice(F['arp'], hz(nt) * 2, 0.5) * (0.16 if e8 % 2 == 0 else 0.10),
-                      at + e8 * beat / 2)
+            pat, rate = F.get('pattern', [0, 1, 2, 3, 2, 1, 2, 3]), F.get('rate', 8)
+            for e in range(rate):
+                nt = chord[pat[e % len(pat)]]
+                place(buf, voice(F['arp'], hz(nt) * 2, 0.5 if rate == 8 else 0.9) *
+                      (0.16 if e % 2 == 0 else 0.10), at + e * 4 * beat / rate)
         for inst, pos, lvl in PATTERNS.get(F.get('drums'), []):
             place(buf, inst() * lvl, at + pos * beat / 2)
     for b0 in range(4, bars, 8):

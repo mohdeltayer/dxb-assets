@@ -213,8 +213,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     amap = ['-map', '0:a?', '-c:a', 'aac']
     subprocess.run(args + ['-filter_complex', ';'.join(fc), '-map', '[v]'] + amap +
                    ['-c:v', 'libx264', '-crf', '21', body], check=True)
-    if sound is None:                      # everyday posts rotate the jingle; launch, breaking, stats keep theirs
-        sound = G.SOUNDS.get(label, 'neon')
-        if sound == 'neon':
-            sound = sonic.rotate(os.path.basename(out))
-    return outro.append(body, out, sound, accent=G.ACCENTS[theme]), starts, end
+    sound = sound or G.SOUNDS.get(label, 'neon')
+    bed = None                             # clips with no sound rotate the everyday bed; the jingle stays
+    if sound == 'neon':
+        bed = outro._cached('bed', sonic.rotate(os.path.basename(out)))
+    return outro.append(body, out, sound, bed=bed, accent=G.ACCENTS[theme]), starts, end
