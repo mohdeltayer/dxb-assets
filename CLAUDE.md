@@ -238,6 +238,16 @@ his voice), trailers last; one or two a day on these two. A 7-day test
 from 30 Sep against the old baseline (2 to 8 views per Short); if nothing
 moves, effort goes back to X and Instagram. X and Instagram keep their
 cards.
+Native upload test (Mohammad, 1 Oct 2026): both accounts check clean
+(YouTube Studio shows no restrictions, TikTok "No outstanding issues"),
+yet every API-posted Short sits at 0 to 18 views while the same stories
+reach about 1,000 on Instagram. He deleted the API Zelda Short on both
+and posted the same file from his phone at about 18:55 Dubai (TikTok
+with in-app edits and filters, YouTube uploaded by hand); the Famitsu
+chart Short at 19:15 went through Postiz as the control. Compare both
+the next morning. No new automated TikTok or YouTube jobs until the
+result is in. YouTube's channel verification (video selfie or ID) is
+optional and his call; it was left until after this test.
 Digital Lounge YouTube (@the_digilounge, the old "Digi-ديجي" channel)
 was rebranded on 27 Sep 2026: name "ديجيتال لاونج | أخبار الألعاب", Arabic
 description, banner `live/2026-09-27/youtube/digi-youtube-banner.png`
