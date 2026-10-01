@@ -68,7 +68,7 @@ def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86)
     t = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(t)
     G._head(d, headline, G.SAFE_TOP + 10, label, country, hs, hst, right=R, left=hl)
     d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=G._ACC)
-    d.text((W - R - 62, meta_y), f'{source}  ·  {A.arabic_date(date)}', font=A.F('Medium', 32),
+    d.text((W - R - 62, meta_y), f'{source}\u200f  ·  \u200f{A.arabic_date(date)}', font=A.F('Medium', 32),
            fill=A.BODY, anchor='rm', **G.AR)
     glow = Image.new('RGBA', (W, H), A.GROUND + (0,))
     glow.putalpha(t.getchannel('A').filter(ImageFilter.GaussianBlur(10)).point(lambda v: min(255, v * 2)))
