@@ -261,6 +261,33 @@ country United Arab Emirates. Whether Postiz uploads inherit them is
 unchecked: look at the first Short of 29 Sep, and if they did not carry
 over, send them from job.json where Postiz has the fields.
 
+Full-screen format for everything (Mohammad, 1 Oct 2026, after the Ocarina
+of Time post): every Digital Lounge story is now one 9:16 video built with
+`templates/reel.py`, and the same file goes to X, Instagram, TikTok and
+YouTube. Empty space is gone: no footer, no panel, no blurred fill.
+- The footage fills the frame and keeps its own sound. Cut only stretches
+  without speech (check word timings with faster-whisper), and run the
+  shots in their source order: jumping back and forth through a trailer
+  made its music jump (the Zelda v3 complaint).
+- Top, for about 3.5 seconds: chip, a large headline, and a credit line
+  (accent rule, source · date) on a soft band. The first frame is the grid
+  tile.
+- Then the story itself, not a summary, cut into short sentences that run
+  one after another low in the frame: white Dubai Bold 70 with an indigo
+  outline and soft shadow, no plate (the Netflix MENA look), right-aligned
+  so it does not read as dialogue. One or two lines, three at most; set
+  breaks by hand so a phrase never splits (لا stays with its verb). Each
+  sentence sits on the shot it describes. Above a game's lower-third UI
+  (note panels and the like) the sentence moves to the top.
+- Everything stays in the Reels safe zone; `reel.py` stops on a line or
+  price that would leave it.
+- UAE prices take the Central Bank's dirham symbol, left of the digits.
+- Stills get the same frame: each image fills 9:16 and pans slowly across,
+  three or four official images per story, with the flavour's bed under
+  them. Avoid images carrying someone else's watermark (Game Informer's
+  GTA VI screens) and low-resolution art that would be upscaled 3x.
+- The end card (outro.py) follows as before.
+
 Instagram (Mohammad, 27 Sep 2026): every Digital Lounge story also goes to
 Instagram, on its own card and caption, at the same time as its X post:
 one time per story, both job.json files carry the same date. (The first
