@@ -125,6 +125,12 @@ def _has_audio(p):
     return bool(r.stdout.strip())
 
 
+def _height(p):
+    r = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries',
+                        'stream=height', '-of', 'csv=p=0', p], capture_output=True, text=True)
+    return int(r.stdout.strip() or 0)
+
+
 def montage(shots, out):
     """Cut the shots into one 9:16 clip with crossfades; returns (starts, end)."""
     stills = [os.path.splitext(s[0])[1].lower() in STILL for s in shots]
@@ -140,7 +146,11 @@ def montage(shots, out):
                       f'fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]')
         else:
             args += ['-ss', str(s), '-t', str(d), '-i', C.U + f]
-            fc.append(f'[{i}:v]scale=-2:{H},crop={W}:{H}:(iw-{W})*{fo}:0,fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]')
+            # Footage is 16:9, so filling 9:16 enlarges it (1.78x for 1080p, more
+            # for letterboxed trailers): lanczos keeps edges, a light unsharp
+            # restores what the enlargement softens. 4K sources need neither.
+            sharp = ',unsharp=5:5:0.5:5:5:0.0' if _height(C.U + f) < H else ''
+            fc.append(f'[{i}:v]scale=-2:{H}:flags=lanczos{sharp},crop={W}:{H}:(iw-{W})*{fo}:0,fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]')
     if sound:
         for i, ((f, s, d, fo), st) in enumerate(zip(shots, stills)):
             if st or not _has_audio(C.U + f):
@@ -155,7 +165,7 @@ def montage(shots, out):
             fc.append(f'[{pa}][a{i}]acrossfade=d={X}[xa{i}]'); pa = f'xa{i}'
         t = off + shots[i][2]
     maps = ['-map', f'[{pv}]'] + (['-map', f'[{pa}]', '-c:a', 'aac', '-b:a', '192k'] if sound else [])
-    subprocess.run(args + ['-filter_complex', ';'.join(fc)] + maps + ['-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '18', out], check=True)
+    subprocess.run(args + ['-filter_complex', ';'.join(fc)] + maps + ['-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-preset', 'slow', '-crf', '15', out], check=True)
     return starts, t
 
 
@@ -212,7 +222,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     body = f'{tmp}/body.mp4'
     amap = ['-map', '0:a?', '-c:a', 'aac']
     subprocess.run(args + ['-filter_complex', ';'.join(fc), '-map', '[v]'] + amap +
-                   ['-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '21', body], check=True)
+                   ['-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-preset', 'slow', '-crf', '16', body], check=True)
     sound = sound or G.SOUNDS.get(label, 'neon')
     bed = None                             # clips with no sound rotate the everyday bed; the jingle stays
     if sound == 'neon':
