@@ -16,6 +16,7 @@ has said so; everything else is a working suggestion.
 | Bandai Namco | بانداي نامكو (Bandai Namco); never باندا نامكو, which reads as "Panda Namco" | Approved 27 Sep 2026 |
 | HANDS ON chip | نظرة أولى (fallback انطباعات; not تجربة, which reads as a test) | Approved 26 Sep 2026 |
 | Text direction | Every post, paragraph and line starts with an Arabic word, so X and Instagram set it right to left: تصل DYNASTY WARRIORS 3، not DYNASTY WARRIORS 3 تصل. A paragraph that opens on an English name (or a digit before one) can register as English and align left. Hashtag lines lead with the Arabic tags: #ألعاب #أخبار_الألعاب #DynastyWarriors | Approved 27 Sep 2026 |
+| Say what a name is | A name an Arab gamer may not know is introduced by what it is, on screen as well as in the text: the Reel headline or first line, the X post and the caption. فريق ميامي هيت لكرة السلة (a basketball team), صانع المحتوى ريبس غيمنغ (a YouTuber), الهيئة العامة لتنظيم الإعلام في السعودية (a regulator), استوديو فيوز غيمز. Well-known names (سوني، نينتيندو، PlayStation) need no label. The Miami HEAT Reel of 2 Oct said «ميامي هيت يتحول إلى Vice City» on screen with no word that it is a basketball team | Approved 2 Oct 2026 |
 
 ## Terms
 

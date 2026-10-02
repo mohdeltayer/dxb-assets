@@ -305,6 +305,12 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
 - Top, for about 3.5 seconds: chip, a large headline, and a credit line
   (accent rule, source · date) on a soft band. The first frame is the grid
   tile.
+- Say what a name is (Mohammad, 2 Oct 2026, after the Miami HEAT Reel):
+  many viewers only watch, so the on-screen text identifies any name an
+  Arab gamer may not know, at its first appearance (headline or first
+  line): «فريق ميامي هيت لكرة السلة», not «ميامي هيت» alone; the same in
+  the X post and the caption. Teams, YouTubers, regulators, small studios
+  and outlets get their label; Sony, Nintendo and the like do not.
 - Then the story itself, not a summary, cut into short sentences that run
   one after another low in the frame: white Dubai Bold 70 with an indigo
   outline and soft shadow, no plate (the Netflix MENA look), right-aligned
