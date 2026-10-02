@@ -47,3 +47,14 @@ recordings. Its licence (Coqui Public Model License) is non-commercial, so
 its output is for listening tests only, never for a post. English names
 come out mangled. Anything posted uses his own recorded voice, or a
 commercially licensed service such as ElevenLabs if he adds a key.
+
+Dialect speech-to-text, watched (2 Oct 2026): NVIDIA's post of 30 Sep 2026
+on fine-tuning Nemotron 3.5 ASR (nvidia/nemotron-3.5-asr-streaming-0.6b,
+Hugging Face) for Saudi Najdi and Hijazi cut word error from about 55% to
+30% on those dialects, with a recipe needing two workstation GPUs and no
+released Saudi checkpoint. Not adopted: Whisper (faster-whisper) covers
+English trailers and formal Arabic, 30% error is too high for published
+subtitles, and Emirati is not covered. Revisit if he records in dialect or
+we transcribe Arabic podcasts; a side-by-side on one of his recordings
+would settle it. Nemotron 3 Diarization (speaker labels, up to 8) is the
+companion if that day comes.
