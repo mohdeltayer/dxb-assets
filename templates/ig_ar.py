@@ -219,7 +219,7 @@ def slideshow(images, name, seconds=8, fade=0.5):
         last = f'x{i}'
     chain = chain.rstrip(';')
     subprocess.run(cmd + ['-filter_complex', chain, '-map', f'[{last}]', '-t', str(seconds),
-                          '-c:v', 'libx264', '-crf', '18', '-r', '30', C.U + name], check=True)
+                          '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '18', '-r', '30', C.U + name], check=True)
     return name
 
 
@@ -454,7 +454,7 @@ def _reel(video, date, source, out, headline, summary, label, country, theme, se
     chain += f'[{last}]format=yuv420p[out]'
     amap = (['-map', '0:a', '-c:a', 'aac', '-b:a', '128k'] if keep_audio else ['-an'])
     cmd += ['-filter_complex', chain, '-map', '[out]'] + amap + [
-        '-t', str(clip_seconds), '-c:v', 'libx264', '-preset', 'medium', '-crf', '20',
+        '-t', str(clip_seconds), '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-preset', 'medium', '-crf', '20',
         '-r', '30', '-movflags', '+faststart', out]
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode != 0:

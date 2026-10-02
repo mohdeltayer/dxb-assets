@@ -155,7 +155,7 @@ def montage(shots, out):
             fc.append(f'[{pa}][a{i}]acrossfade=d={X}[xa{i}]'); pa = f'xa{i}'
         t = off + shots[i][2]
     maps = ['-map', f'[{pv}]'] + (['-map', f'[{pa}]', '-c:a', 'aac', '-b:a', '192k'] if sound else [])
-    subprocess.run(args + ['-filter_complex', ';'.join(fc)] + maps + ['-c:v', 'libx264', '-crf', '18', out], check=True)
+    subprocess.run(args + ['-filter_complex', ';'.join(fc)] + maps + ['-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '18', out], check=True)
     return starts, t
 
 
@@ -212,7 +212,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     body = f'{tmp}/body.mp4'
     amap = ['-map', '0:a?', '-c:a', 'aac']
     subprocess.run(args + ['-filter_complex', ';'.join(fc), '-map', '[v]'] + amap +
-                   ['-c:v', 'libx264', '-crf', '21', body], check=True)
+                   ['-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '21', body], check=True)
     sound = sound or G.SOUNDS.get(label, 'neon')
     bed = None                             # clips with no sound rotate the everyday bed; the jingle stays
     if sound == 'neon':

@@ -1,0 +1,29 @@
+{
+ "id": "2026-10-02-example-slug",
+ "title": "Kena: Scars of Kosmora delayed to 2027",
+ "game": "Kena: Scars of Kosmora",
+ "companies": ["Ember Lab"],
+ "category": "delay",
+ "priority": "🟡",
+ "status": "shortlisted",
+ "sources": [
+  {"role": "primary", "name": "PlayStation Blog (Ember Lab post)", "url": "https://blog.playstation.com/...", "time": "2026-10-01T13:00:00Z"},
+  {"role": "radar", "name": "scout digest 16:00", "via": "Gematsu"}
+ ],
+ "claims": [
+  {"text": "Delayed from 2026 to 2027", "status": "verified", "source": "PlayStation Blog"},
+  {"text": "PS5 and PC", "status": "verified", "source": "PlayStation Blog"},
+  {"text": "Delay is about scope", "status": "reported", "source": "an outlet's reading, not in the post"}
+ ],
+ "why": "One of PlayStation's bigger 2026 indies leaves the year.",
+ "lanes": {
+  "dxb": {"lane": "fast", "chip": "DELAYED", "time": "20:30 Dubai", "text": "..."},
+  "dl": {"lane": "Reel", "chip": "تأجيل", "time": "20:50 Dubai", "headline": "...", "x": "...", "ig": "..."}
+ },
+ "versions": [{"v": 1, "at": "2026-10-01T16:10:00Z", "change": "first draft"}],
+ "times": {"source": "2026-10-01T13:00:00Z", "digest": "2026-10-01T14:00:00Z", "shortlisted": "2026-10-01T15:30:00Z", "shown": "2026-10-01T16:10:00Z", "go": "2026-10-01T16:20:00Z"},
+ "media": [{"file": "live/2026-10-01/kena/trailer.mp4", "source_url": "https://...", "kind": "official trailer", "fetched": "2026-10-01T15:40:00Z"}],
+ "posts": [],
+ "corrections": [],
+ "metrics": []
+}

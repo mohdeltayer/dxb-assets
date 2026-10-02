@@ -420,7 +420,7 @@ def _render_video(base, colour, release, video, out, art_y, art_h,
         f'[b]scale=1080:1350,format=yuv420p[out]'
     )
     cmd += ['-filter_complex', chain, '-map', '[out]'] + amap + [
-        '-c:v', 'libx264', '-preset', 'medium', '-crf', '20',
+        '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-preset', 'medium', '-crf', '20',
         '-r', '30', '-movflags', '+faststart', out,
     ]
     r = subprocess.run(cmd, capture_output=True, text=True)

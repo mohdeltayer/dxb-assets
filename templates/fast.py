@@ -135,7 +135,7 @@ def compose(media, out, bg, paint_footer, paint_chips, crop=False,
                   f"enable='between(t,{st},{en})'[b{k + 1}];")
     chain += f'[b{len(timed)}]format=yuv420p[out]'
     cmd += ['-filter_complex', chain, '-map', '[out]'] + amap + [
-        '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-r', '30',
+        '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-preset', 'medium', '-crf', '20', '-r', '30',
         '-movflags', '+faststart', out]
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode != 0:

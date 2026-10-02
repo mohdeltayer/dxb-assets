@@ -678,6 +678,34 @@ and news.xbox.com refuse automated requests at their end; use a press
 article that carries the same image. Say plainly when something is
 corroborated by search rather than read from the primary.
 
+## Newsroom workflow (Mohammad, 2 Oct 2026)
+
+After reviewing an outside newsroom brief, he approved these additions;
+the detail is in `newsroom/README.md`. They add to the rules above and
+change nothing already in Postiz.
+- Story ledger, `newsroom/stories/` via `newsroom/ledger.py`: run `find`
+  before shortlisting (a hit is an update, follow-up or duplicate, never
+  a new story), keep each story's source chain, claims with their status,
+  drafts and versions there, and `sync` after queuing.
+- Every shortlisted story reaches him as a short approval card
+  (`ledger.py card`): source, ✓ and ? claims, why it matters, lane, chip,
+  time and text per account, media, what changed. "Source?" gets the
+  primary, the original reporter and the exact claim.
+- Preflight in dxb-queue: `publish.py` refuses any folder that fails
+  `.github/scripts/preflight.py` (account, future time, text rules, video
+  Instagram accepts, and an approval marker matching the folder). The
+  marker is written with `preflight.py approve` only after his "go" for
+  that version; any later edit needs his eyes again.
+- Verification rules, the corrections routine, the events calendar
+  (`newsroom/events.md`, confirmed dates only), the experiments log and
+  the capability list live in `newsroom/`. Scout changes wait for the
+  trial report (`notes/scout-proposals-2026-10-05.md`).
+- Not adopted: the brief's colours, a points-based priority score,
+  5-minute polling, Instagram carousels. Still his call: X first and the
+  Reel later for breaking Digital Lounge news (today X and Instagram post
+  together), and text-only DXB-KNIGHT posts when art is not ready (today
+  every post carries a card).
+
 ## No em dashes
 
 Mohammad does not use the em dash. Not in post text, not in card copy,
@@ -805,3 +833,5 @@ Posting is irreversible: pushing `queue/**` to *any* branch of dxb-queue
 fires the publisher, because `publish.yml` has no branch filter. Never
 queue without explicit say-so, and dry-run `publish.py` with `DRY_RUN=1`
 first to confirm which folders will post.
+Since 2 Oct 2026 the dry run also runs preflight, so a folder without a
+current approval marker shows as FAILED there before anything is pushed.

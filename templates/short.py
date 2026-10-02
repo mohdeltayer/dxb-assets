@@ -72,7 +72,7 @@ def finish(video, out, style='neon'):
         a = (f'[2:a]volume=-2dB,afade=t=in:d=0.3,atrim=0:{total:.3f},'
              f'afade=t=out:st={total - 0.9:.2f}:d=0.9[a]')
     subprocess.run(cmd + ['-filter_complex', v + ';' + a, '-map', '[v]', '-map', '[a]',
-                          '-t', f'{total:.3f}', '-c:v', 'libx264', '-preset', 'medium',
+                          '-t', f'{total:.3f}', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-preset', 'medium',
                           '-crf', '20', '-c:a', 'aac', '-b:a', '160k', '-ar', '48000',
                           '-movflags', '+faststart', out], check=True)
     return out
@@ -141,7 +141,7 @@ def clip(video, out, headline, label=None, clip_start=0, clip_seconds=8, audio=T
     cmd = ['ffmpeg', '-y', '-v', 'error', '-ss', str(clip_start), '-t', str(clip_seconds),
            '-i', src, '-i', ov, '-filter_complex', vf, '-map', '[v]']
     cmd += ['-map', '0:a?', '-c:a', 'aac'] if audio else ['-an']
-    subprocess.run(cmd + ['-c:v', 'libx264', '-crf', '18', body], check=True)
+    subprocess.run(cmd + ['-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '18', body], check=True)
     return finish(body, out, style)
 
 
@@ -198,5 +198,5 @@ def chart(rows, week_label, date, out, hook, title='الأكثر مبيعًا ف
                     '-i', hook_png, '-i', body, '-filter_complex',
                     f'[0:v]fps={FPS},setsar=1,format=yuv420p[a];[1:v]fps={FPS},setsar=1,format=yuv420p[b];'
                     f'[a][b]xfade=transition=fade:duration={XF}:offset={HOOK:.2f}[v]',
-                    '-map', '[v]', '-c:v', 'libx264', '-crf', '18', joined], check=True)
+                    '-map', '[v]', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '18', joined], check=True)
     return finish(joined, out, 'stats')
