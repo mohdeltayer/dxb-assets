@@ -381,6 +381,15 @@ blurred fill and bare panels read as wasted.
   take the story's theme colour (cold azure, stylized periwinkle,
   playful mint, spectacle amber; `ACCENTS` in ig_ar.py). The chip stays
   azure on every story, and headline and summary stay ink.
+Vivid look on Reels (Mohammad, 2 Oct 2026, trial from the evening batch):
+"something similar to DXB-KNIGHT in terms of the chip, multiple themes",
+because one colour had run for a while. `reel.py` now defaults to
+`vivid=True`: the news chip takes the story's theme accent (cold azure,
+stylized periwinkle, playful mint, spectacle amber) instead of azure on
+every story, and the banner's wave lines run in the theme's colours across
+the top band behind the headline. Country chips stay bright indigo; no pink
+anywhere (official art that is pink is left out). `vivid=False` restores
+the azure-only look. Pick a theme per story so a run of posts varies.
 - Reels only (Mohammad, 30 Sep 2026): still cards on Instagram reach 1 to
   3 views where Reels reach about 1,000 (the WARDOGS Reel: 96% non-followers,
   mostly from the Reels tab), so every Digital Lounge Instagram post is a

@@ -91,11 +91,12 @@ def _chip(d, text, x_right, y_bottom, fill, ink, size=38):
     return x0
 
 
-def _head(d, text, y, label, country, size, step, right=M, left=M):
-    """Chip row then the headline; returns the y under the last line."""
+def _head(d, text, y, label, country, size, step, right=M, left=M, chip=None):
+    """Chip row then the headline; returns the y under the last line.
+    `chip` colours the news chip (azure unless a Reel passes its theme)."""
     x = W - right
     if label:
-        x = _chip(d, label, x, y + 57, A.AZURE, A.GROUND) - 14
+        x = _chip(d, label, x, y + 57, chip or A.AZURE, A.GROUND) - 14
     if country:
         _chip(d, country, x, y + 57, A.INDIGO, A.INK)
     if label or country:

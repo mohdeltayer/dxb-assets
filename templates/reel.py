@@ -25,7 +25,7 @@ lines: [(text, t0, t1, opts)] with times on the finished clip, or plain
        (digits with the dirham symbol to their left), shade=True (a light
        indigo shade low in the frame, for pale footage).
 """
-import os, subprocess, tempfile
+import math, os, subprocess, tempfile
 from PIL import Image, ImageDraw, ImageFilter
 import cards as C, fast_ar as A, ig_ar as G, outro, sonic
 
@@ -44,8 +44,27 @@ def _band(im, y0, y1, up, alpha):
     s = Image.new('RGBA', (W, H), A.GROUND + (255,)); s.putalpha(g.resize((W, H))); im.alpha_composite(s)
 
 
-def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86):
-    """Chip, headline and the credit line on a soft band at the top."""
+def _waves(im, y1, theme, seed, alpha=0.7):
+    """The banner's wave lines in the theme's colours, full strength at the
+    top and fading out by y1: the colourful part of the vivid look."""
+    left, right, freq, amp, gap = A.THEMES[theme]
+    k = 2; lay = Image.new('RGBA', (W * k, y1 * k), (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
+    ph = (seed % 628) / 100
+    for j in range(-4, y1 // gap + 5):
+        pts = [(x, (j * gap + amp * math.sin(x / (W * k) * freq + j * 0.22 + ph)
+                    + amp * 0.5 * math.sin(x / (W * k) * freq * 2.3 + ph * 1.7)) * k)
+               for x in range(0, W * k + 24, 12)]
+        for a, b in zip(pts, pts[1:]):
+            u = a[0] / (W * k); fade = max(0.0, 1 - a[1] / (y1 * k)) ** 1.3
+            c = tuple(int(left[i] + (right[i] - left[i]) * u) for i in range(3))
+            d.line((a, b), fill=c + (int(255 * alpha * fade),), width=2 * k)
+    im.alpha_composite(lay.resize((W, y1), Image.LANCZOS))
+
+
+def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
+               vivid=False, theme='cold', seed=0):
+    """Chip, headline and the credit line on a soft band at the top. `vivid`
+    colours the chip with the theme and lays the theme's wave lines in the band."""
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     probe = ImageDraw.Draw(Image.new('RGBA', (W, H)))
     room = W - R - L
@@ -62,11 +81,14 @@ def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86)
         words = headline.split(); tw = lambda x: probe.textlength(x, font=f, **G.AR)
         bw = min(max(tw(' '.join(words[:k])), tw(' '.join(words[k:]))) for k in range(1, len(words)))
         hl = max(L, int(W - R - bw - 16))
+    chip = G._ACC if vivid else None
     end = G._head(probe, headline, G.SAFE_TOP + 10, label, country, hs, hst, right=R, left=hl)
     meta_y = end + 30
     _band(im, 0, meta_y + 220, True, 190)
+    if vivid:
+        _waves(im, meta_y + 140, theme, seed)
     t = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(t)
-    G._head(d, headline, G.SAFE_TOP + 10, label, country, hs, hst, right=R, left=hl)
+    G._head(d, headline, G.SAFE_TOP + 10, label, country, hs, hst, right=R, left=hl, chip=chip)
     d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=G._ACC)
     d.text((W - R - 62, meta_y), f'{source}\u200f  ·  \u200f{A.arabic_date(date)}', font=A.F('Medium', 32),
            fill=A.BODY, anchor='rm', **G.AR)
@@ -197,7 +219,7 @@ def by_shot(groups):
 
 
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
-         country=None, head_secs=3.5):
+         country=None, head_secs=3.5, vivid=True):
     G._ACC = G.ACCENTS[theme]
     tmp = tempfile.mkdtemp(prefix='reel-')
     starts, end = montage(shots, f'{tmp}/cut.mp4')
@@ -205,7 +227,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         lines = lines(starts, end)
     if lines and isinstance(lines[0], str):
         lines = spread(lines, head_secs + 0.1, end)
-    layers = [(head_layer(headline, label, f'{tmp}/head.png', source, date, country), 0, head_secs)]
+    layers = [(head_layer(headline, label, f'{tmp}/head.png', source, date, country,
+                          vivid=vivid, theme=theme, seed=sum(map(ord, out))), 0, head_secs)]
     for i, (text, a, z, kw) in enumerate(lines):
         layers.append((line_layer(text, f'{tmp}/l{i}.png', **kw), a, min(z, end)))
     for i in range(1, len(layers) - 1):    # a line leaves before the next arrives
