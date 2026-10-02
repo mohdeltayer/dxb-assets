@@ -82,3 +82,27 @@ Reading:
   1.4K within the first day and kept rising slowly; the account's typical
   Reel sits near 150. So the lever Instagram names first is the skip in
   the opening seconds, then shares.
+
+## 1 Sep to 1 Oct 2026: Instagram account summary (Edits export, read 2 Oct 21:30 Dubai)
+
+Mohammad's PDF export ("Account insights for the_digilounge, Sep 1 2026 -
+Oct 1 2026", aggregated across Reels and posts; no per-Reel figures).
+
+- Followers 23. Reels 59. Reel views 14K, viewers 9.5K (about 1.5 views
+  per viewer). Average about 237 views per Reel, so the 1.4K to 1.8K Reels
+  (Minecraft, WARDOGS) are the exception, not the norm.
+- Likes 230, shares 218, saves 43, reposts 5, comments 1. Interactions
+  about 3.5% of views. Shares almost equal likes (1.6% of views each):
+  people forward the news, as on WARDOGS.
+- Follows: 23 followers against 9.5K viewers, under 0.3% even if every
+  follower came this month. The reach is non-followers from the Reels tab;
+  it is not turning into follows. Comments are almost nil (1 in 30 days).
+- Top Reels shown in the export (likely the top six by views): Kena: Scars
+  of Kosmora delay to 2027; the Famitsu Japan sales chart (the old flat
+  layout); Capcom's plans after the Resident Evil remakes; Football
+  Manager 27 date; Octopath Traveler on Switch 2 out now; Gears of War:
+  E-Day early access. Delays, dates, sales and big franchises.
+- Missing for a fuller read: per-Reel views and watch time, follows per
+  Reel, audience countries and ages for the month, and the day-by-day
+  follower curve. Instagram Insights > Content (sorted by views) and >
+  Followers would give them.
