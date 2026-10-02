@@ -40,7 +40,8 @@ HANDLE = '@the_digilounge'
 #: media, the panel edge and the footer's top line; the chip stays azure on
 #: every story and the ground stays indigo. None of them is pink.
 ACCENTS = {'cold': A.AZURE, 'stylized': A.hx('#A5A3FF'),
-           'playful': A.hx('#3DDCB4'), 'spectacle': A.hx('#FFB547')}
+           'playful': A.hx('#3DDCB4'), 'spectacle': A.hx('#FFB547'),
+           'emerald': A.hx('#3DDC97'), 'gold': A.hx('#F5C542'), 'crimson': A.hx('#FF5A4E')}
 _ACC = A.AZURE
 SOURCE_MAX = 380
 

@@ -39,6 +39,10 @@ THEMES = {
     'stylized':  (INDIGO, hx('#A5A3FF'), 2.4, 46, 18),  # RPG, fantasy, anime, story-led
     'playful':   (AZURE, hx('#3DDCB4'), 9.0, 20, 14),   # platformers, party, sports
     'spectacle': (AZURE, hx('#FFB547'), 6.0, 40, 11),   # blockbusters, film and TV
+    # Added 2 Oct 2026 with the vivid Reel look (Mohammad: "I like them all").
+    'emerald':   (hx('#1FB59A'), hx('#B8E36A'), 5.0, 30, 15),  # general news, a change from blue
+    'gold':      (hx('#D99A1E'), hx('#F5D06B'), 3.0, 38, 15),  # numbers and milestones (أرقام، إنجاز)
+    'crimson':   (hx('#E5383B'), hx('#FFB547'), 7.0, 30, 13),  # breaking only (عاجل); red into amber, never pink
 }
 #: The source sits between the name and the date. Wider than this, the
 #: Latin in brackets is dropped and the Arabic stands alone.

@@ -19,6 +19,7 @@ Everything sits in the Reels safe zone (ig_ar.SAFE_*).
 """
 import math
 import os
+import shutil
 import subprocess
 import tempfile
 
@@ -142,6 +143,7 @@ def card(style, out, theme_accent=None):
     subprocess.run(['ffmpeg', '-y', '-v', 'error', '-framerate', str(FPS), '-i', f'{tmp}/%04d.png',
                     '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '18', '-r', str(FPS), out],
                    check=True)
+    shutil.rmtree(tmp, ignore_errors=True)     # the frame PNGs
     return out
 
 
@@ -190,4 +192,5 @@ def append(video, out, style='neon', bed=None, jingle=None, accent=None):
     subprocess.run(cmd + ['-filter_complex', fc, '-map', '[v]', '-map', '[a]', '-t', f'{total:.3f}',
                           '-c:v', 'libx264', '-preset', 'slow', '-crf', '17', '-pix_fmt', 'yuv420p', '-profile:v', 'high', '-c:a', 'aac',
                           '-b:a', '160k', '-ar', '48000', '-movflags', '+faststart', out], check=True)
+    shutil.rmtree(tmp, ignore_errors=True)
     return out

@@ -390,6 +390,19 @@ every story, and the banner's wave lines run in the theme's colours across
 the top band behind the headline. Country chips stay bright indigo; no pink
 anywhere (official art that is pink is left out). `vivid=False` restores
 the azure-only look. Pick a theme per story so a run of posts varies.
+More variations (Mohammad, 2 Oct 2026: "Honestly, I like them all"):
+- Four styles for the top band (`STYLES` in reel.py): `lines` (the first
+  look), `bold` (thicker, denser waves), `glow` (a soft wash of the two
+  theme colours) and `frame` (the top lines plus fainter waves rising from
+  the bottom for the whole clip). `style=None` rotates them through
+  `templates/assets/style-ledger.json` like the beds, so no two posts in a
+  row share a style; a re-render keeps its style. Pass `style=` to choose.
+- Three more themes (fast_ar.THEMES, ig_ar.ACCENTS): `emerald` (teal to
+  lime) for general news as a change from blue, `gold` for numbers and
+  milestones (أرقام، إنجاز), and `crimson` (red into amber, never pink) for
+  عاجل only, so breaking news stands out when it comes.
+- Housekeeping: reel.py and outro.py delete their temp folders after a
+  render (81 leftover folders filled the disk on 2 Oct).
 - Reels only (Mohammad, 30 Sep 2026): still cards on Instagram reach 1 to
   3 views where Reels reach about 1,000 (the WARDOGS Reel: 96% non-followers,
   mostly from the Reels tab), so every Digital Lounge Instagram post is a

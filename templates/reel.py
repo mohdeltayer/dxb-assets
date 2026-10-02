@@ -25,7 +25,7 @@ lines: [(text, t0, t1, opts)] with times on the finished clip, or plain
        (digits with the dirham symbol to their left), shade=True (a light
        indigo shade low in the frame, for pale footage).
 """
-import math, os, subprocess, tempfile
+import math, os, shutil, subprocess, tempfile
 from PIL import Image, ImageDraw, ImageFilter
 import cards as C, fast_ar as A, ig_ar as G, outro, sonic
 
@@ -44,10 +44,11 @@ def _band(im, y0, y1, up, alpha):
     s = Image.new('RGBA', (W, H), A.GROUND + (255,)); s.putalpha(g.resize((W, H))); im.alpha_composite(s)
 
 
-def _waves(im, y1, theme, seed, alpha=0.7):
+def _waves(im, y1, theme, seed, alpha=0.7, width=2, tighten=0, lift=1.0):
     """The banner's wave lines in the theme's colours, full strength at the
     top and fading out by y1: the colourful part of the vivid look."""
     left, right, freq, amp, gap = A.THEMES[theme]
+    gap, amp = gap - tighten, amp * lift
     k = 2; lay = Image.new('RGBA', (W * k, y1 * k), (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
     ph = (seed % 628) / 100
     for j in range(-4, y1 // gap + 5):
@@ -57,12 +58,61 @@ def _waves(im, y1, theme, seed, alpha=0.7):
         for a, b in zip(pts, pts[1:]):
             u = a[0] / (W * k); fade = max(0.0, 1 - a[1] / (y1 * k)) ** 1.3
             c = tuple(int(left[i] + (right[i] - left[i]) * u) for i in range(3))
-            d.line((a, b), fill=c + (int(255 * alpha * fade),), width=2 * k)
+            d.line((a, b), fill=c + (int(255 * alpha * fade),), width=width * k)
     im.alpha_composite(lay.resize((W, y1), Image.LANCZOS))
 
 
+def _glow(im, y1, theme, alpha=0.8):
+    """A soft wash of the theme's two colours, left to right, fading down."""
+    left, right = A.THEMES[theme][:2]
+    row = Image.new('RGB', (2, 1)); row.putpixel((0, 0), left); row.putpixel((1, 0), right)
+    wash = row.resize((W, y1), Image.BILINEAR).convert('RGBA')
+    fade = Image.new('L', (1, y1))
+    for y in range(y1):
+        fade.putpixel((0, y), int(255 * alpha * max(0.0, 1 - y / y1) ** 1.6))
+    wash.putalpha(fade.resize((W, y1))); im.alpha_composite(wash)
+
+
+#: Four ways to colour the top band, all approved on 2 Oct 2026. `style=None`
+#: in reel() rotates them through STYLE_LEDGER so a run of posts varies.
+STYLES = ('lines', 'bold', 'glow', 'frame')
+STYLE_LEDGER = os.path.join(os.path.dirname(__file__), 'assets', 'style-ledger.json')
+
+
+def pick_style(out):
+    """The style for this file: kept on a re-render, else the one rested longest."""
+    import json
+    try:
+        book = json.load(open(STYLE_LEDGER))
+    except (OSError, ValueError):
+        book = {}
+    key = os.path.basename(out)
+    if key not in book:
+        used = list(book.values())
+        last = {s: max([i for i, v in enumerate(used) if v == s], default=-1) for s in STYLES}
+        book[key] = min(STYLES, key=lambda s: last[s])
+        json.dump(book, open(STYLE_LEDGER, 'w'), indent=1)
+    return book[key]
+
+
+def _colour(im, y1, theme, seed, style):
+    if style == 'bold':
+        _waves(im, y1, theme, seed, alpha=0.95, width=3, tighten=4, lift=1.3)
+    elif style == 'glow':
+        _glow(im, y1, theme)
+    else:                                   # 'lines' and the top half of 'frame'
+        _waves(im, y1, theme, seed)
+
+
+def frame_layer(path, theme, seed, h=420):
+    """For style 'frame': fainter waves rising from the bottom, behind the story lines."""
+    im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    band = Image.new('RGBA', (W, h), (0, 0, 0, 0)); _waves(band, h, theme, seed + 3, alpha=0.55)
+    im.alpha_composite(band.transpose(Image.FLIP_TOP_BOTTOM), (0, H - h)); im.save(path); return path
+
+
 def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
-               vivid=False, theme='cold', seed=0):
+               vivid=False, theme='cold', seed=0, style='lines'):
     """Chip, headline and the credit line on a soft band at the top. `vivid`
     colours the chip with the theme and lays the theme's wave lines in the band."""
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
@@ -86,7 +136,7 @@ def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
     meta_y = end + 30
     _band(im, 0, meta_y + 220, True, 190)
     if vivid:
-        _waves(im, meta_y + 140, theme, seed)
+        _colour(im, meta_y + 140, theme, seed, style)
     t = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(t)
     G._head(d, headline, G.SAFE_TOP + 10, label, country, hs, hst, right=R, left=hl, chip=chip)
     d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=G._ACC)
@@ -219,8 +269,9 @@ def by_shot(groups):
 
 
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
-         country=None, head_secs=3.5, vivid=True):
+         country=None, head_secs=3.5, vivid=True, style=None):
     G._ACC = G.ACCENTS[theme]
+    style = style or pick_style(out)
     tmp = tempfile.mkdtemp(prefix='reel-')
     starts, end = montage(shots, f'{tmp}/cut.mp4')
     if callable(lines):                    # lines placed against the cut's own shot starts
@@ -228,7 +279,9 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     if lines and isinstance(lines[0], str):
         lines = spread(lines, head_secs + 0.1, end)
     layers = [(head_layer(headline, label, f'{tmp}/head.png', source, date, country,
-                          vivid=vivid, theme=theme, seed=sum(map(ord, out))), 0, head_secs)]
+                          vivid=vivid, theme=theme, seed=sum(map(ord, out)), style=style), 0, head_secs)]
+    if vivid and style == 'frame':          # the bottom waves stay for the whole clip
+        layers.insert(0, (frame_layer(f'{tmp}/frame.png', theme, sum(map(ord, out))), 0, end))
     for i, (text, a, z, kw) in enumerate(lines):
         layers.append((line_layer(text, f'{tmp}/l{i}.png', **kw), a, min(z, end)))
     for i in range(1, len(layers) - 1):    # a line leaves before the next arrives
@@ -250,4 +303,6 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     bed = None                             # clips with no sound rotate the everyday bed; the jingle stays
     if sound == 'neon':
         bed = outro._cached('bed', sonic.rotate(os.path.basename(out)))
-    return outro.append(body, out, sound, bed=bed, accent=G.ACCENTS[theme]), starts, end
+    done = outro.append(body, out, sound, bed=bed, accent=G.ACCENTS[theme])
+    shutil.rmtree(tmp, ignore_errors=True)  # the temp renders filled the disk on 2 Oct
+    return done, starts, end
