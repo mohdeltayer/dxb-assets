@@ -72,7 +72,10 @@ Order of work:
 3. Show him the card.
 4. After his "go" for that version and time:
    `python3 .github/scripts/preflight.py approve drafts/<name> --note "go 2 Oct 09:40"`.
-5. Move the folder to `queue/` and dry-run `publish.py`.
+5. Move the folder to `queue/`, then `git add` it again (`git mv` stages
+   the folder as it was last staged, without the marker just written; on
+   2 Oct the markers were left out and preflight refused all four
+   folders), and dry-run `publish.py`.
 6. Push, then run `ledger.py sync`.
 
 Any edit after approval breaks the fingerprint and the folder is refused
