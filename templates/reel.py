@@ -268,8 +268,50 @@ def by_shot(groups):
     return place
 
 
+def _voice_over(body, voice, end, duck_db, out):
+    """Lay the read over the cut: the footage's sound drops `duck_db` while he
+    speaks (40 ms down, 450 ms back up) and returns in the pauses; a cut with
+    no sound gets the voice alone (outro still adds the jingle)."""
+    import numpy as np, soundfile as sf
+    tmp = os.path.dirname(out)
+    sr, n = 48000, int(round(end * 48000))
+    def wav(src, dst, extra=()):
+        subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', src, *extra, '-vn', '-ac', '2',
+                        '-ar', str(sr), '-c:a', 'pcm_f32le', dst], check=True)
+        x, _ = sf.read(dst, dtype='float32', always_2d=True); return x
+    v = wav(voice, f'{tmp}/v.wav')
+    if len(v) > n + sr // 20:
+        raise ValueError(f'the read runs {len(v) / sr:.1f}s but the shots only {end:.1f}s; add footage')
+    v = np.pad(v, ((0, max(0, n - len(v))), (0, 0)))[:n]
+    mix = v.copy()
+    if _has_audio(body):
+        bg = wav(body, f'{tmp}/bg.wav'); bg = np.pad(bg, ((0, max(0, n - len(bg))), (0, 0)))[:n]
+        hop = sr // 100; frames = n // hop
+        rms = np.sqrt((v[:frames * hop].mean(axis=1) ** 2).reshape(frames, hop).mean(axis=1))
+        db = 20 * np.log10(rms + 1e-9)
+        active = (db > db.max() - 30).astype('float32')      # speaking: within 30 dB of the loudest
+        target = 1 - (1 - 10 ** (-duck_db / 20)) * active
+        g = np.empty_like(target); cur = 1.0
+        down, up = 1 - np.exp(-1 / 4), 1 - np.exp(-1 / 45)  # about 40 ms down, 450 ms up
+        for i, t in enumerate(target):
+            cur += (t - cur) * (down if t < cur else up); g[i] = cur
+        gain = np.interp(np.arange(n), np.arange(frames) * hop + hop / 2, g).astype('float32')
+        mix = bg * gain[:, None] + v
+    peak = np.abs(mix).max()
+    if peak > 0.89:
+        mix *= 0.89 / peak
+    sf.write(f'{tmp}/mix.wav', mix, sr, subtype='FLOAT')
+    subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', body, '-i', f'{tmp}/mix.wav',
+                    '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k',
+                    '-t', f'{end:.3f}', out], check=True)
+    return out
+
+
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
-         country=None, head_secs=3.5, vivid=True, style=None):
+         country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18):
+    """`voice`: his processed read (templates/voice.py output). It plays over
+    the footage, whose own sound drops about `duck_db` under it and comes back
+    up in the pauses; the shots should add up to at least the read's length."""
     G._ACC = G.ACCENTS[theme]
     style = style or pick_style(out)
     tmp = tempfile.mkdtemp(prefix='reel-')
@@ -299,6 +341,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     amap = ['-map', '0:a?', '-c:a', 'aac']
     subprocess.run(args + ['-filter_complex', ';'.join(fc), '-map', '[v]'] + amap +
                    ['-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-preset', 'slow', '-crf', '16', body], check=True)
+    if voice:
+        body = _voice_over(body, voice, end, duck_db, f'{tmp}/voiced.mp4')
     sound = sound or G.SOUNDS.get(label, 'neon')
     bed = None                             # clips with no sound rotate the everyday bed; the jingle stays
     if sound == 'neon':

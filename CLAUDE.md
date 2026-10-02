@@ -325,6 +325,12 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   three or four official images per story, with the flavour's bed under
   them. Avoid images carrying someone else's watermark (Game Informer's
   GTA VI screens) and low-resolution art that would be upscaled 3x.
+- His voice over a Reel (2 Oct 2026, for the Fire Emblem 30-hour review):
+  `reel(..., voice=<read processed with templates/voice.py>)` plays the
+  read over the footage; the footage's own sound drops about 18 dB while
+  he speaks and comes back in the pauses (`duck_db`). The shots must last
+  at least as long as the read, and the on-screen lines follow what he
+  says. Recording rules: `notes/voice-guide.md`.
 - The end card (outro.py) follows as before.
 - Footage sharpness (Mohammad, 2 Oct 2026: some trailers looked soft). A
   16:9 trailer has to be enlarged to fill 9:16: 1.78x from 1080p, about
