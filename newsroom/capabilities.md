@@ -40,3 +40,10 @@ job, and update this file when something changes.
 | vidIQ | Connector | Not while YouTube is dropped |
 | Firecrawl | Connector | Not needed: WebFetch and curl cover it |
 | Canva | Needs authorising in his claude.ai connector settings | Not used |
+
+Voice copy (tested 2 Oct 2026): XTTS-v2 (coqui-tts, in its own venv in the
+session scratchpad) copies his voice in Arabic from about 25 seconds of his
+recordings. Its licence (Coqui Public Model License) is non-commercial, so
+its output is for listening tests only, never for a post. English names
+come out mangled. Anything posted uses his own recorded voice, or a
+commercially licensed service such as ElevenLabs if he adds a key.
