@@ -151,13 +151,18 @@ Changes proposed for the end of the trial (report due 5 Oct) are in
 `../notes/scout-proposals-2026-10-05.md`. Nothing changes in the scout
 until he agrees.
 
+Card designs (Mohammad, 2 Oct 2026): the agreed designs stand (the
+full-screen `reel.py` Reel and the existing cards, no empty space). The
+outside brief was a second opinion, not a redesign.
+
 ## 8. Performance and experiments
 
 `experiments.md` logs what has been tried, the evidence and the
 decision. There are two baselines, one for Digital Lounge and one for
 DXB-KNIGHT. No rule comes from one post or a few days. Numbers go into
-each story's `metrics[]` at about 24 hours. Where they come from (by
-hand, Postiz, or a paid tool such as Metricool) is his call. Engagement
+each story's `metrics[]` at about 24 hours. They come as now (2 Oct 2026):
+what the agent can read itself, his screenshots, and the scout's Monday
+numbers. Engagement
 never argues for a weaker label, a hidden "reported", a louder headline
 than the source, or console-war framing.
 
