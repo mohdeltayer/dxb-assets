@@ -320,6 +320,13 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   them. Avoid images carrying someone else's watermark (Game Informer's
   GTA VI screens) and low-resolution art that would be upscaled 3x.
 - The end card (outro.py) follows as before.
+- Footage sharpness (Mohammad, 2 Oct 2026: some trailers looked soft). A
+  16:9 trailer has to be enlarged to fill 9:16: 1.78x from 1080p, about
+  2.4x from a letterboxed one, and Steam trailers stop at 1080p. Prefer a
+  4K copy when one exists (IGN's MP4s run up to 3840 wide; press kits),
+  which fills the frame with no enlargement, and avoid letterboxed
+  trailers when another cut exists. `reel.py` enlarges with lanczos and a
+  light unsharp on sub-1920 sources and encodes at higher quality.
 
 Instagram (Mohammad, 27 Sep 2026): every Digital Lounge story also goes to
 Instagram, on its own card and caption, at the same time as its X post:
