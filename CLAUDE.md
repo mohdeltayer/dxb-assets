@@ -381,7 +381,7 @@ blurred fill and bare panels read as wasted.
   take the story's theme colour (cold azure, stylized periwinkle,
   playful mint, spectacle amber; `ACCENTS` in ig_ar.py). The chip stays
   azure on every story, and headline and summary stay ink.
-Vivid look on Reels (Mohammad, 2 Oct 2026, trial from the evening batch):
+Vivid look on Reels (Mohammad, 2 Oct 2026; approved the same evening, "the new colourful look is perfect", so it is the standard for every Reel and overrides "the chip stays azure" for Reels):
 "something similar to DXB-KNIGHT in terms of the chip, multiple themes",
 because one colour had run for a while. `reel.py` now defaults to
 `vivid=True`: the news chip takes the story's theme accent (cold azure,
