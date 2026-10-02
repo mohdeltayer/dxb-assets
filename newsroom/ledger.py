@@ -123,7 +123,7 @@ def sync():
             s = {'id': sid, 'title': text[0][:120] if text else slug, 'status': 'published',
                  'backfilled': True, 'posts': []}
             created += 1
-        s['posts'].append(post)
+        s.setdefault('posts', []).append(post)
         s['posts'].sort(key=lambda p: p['date'])
         s.setdefault('times', {})['posted'] = min(p['date'] for p in s['posts'])
         save(s)
