@@ -8,7 +8,7 @@ and the mouth-noise fix.
 
 ## What the host does
 
-**Script** (transcript, faster-whisper medium, checked by ear-free reading):
+**Script** (faster-whisper medium transcript, spelling corrected):
 
 > تعزيزًا لشبكة رحلاتها التي تربط قارات العالم، دشّنت طيران الإمارات الخط
 > المباشر الجديد من دبي إلى هلسنكي في فنلندا، بطائرة إيرباص A350، بواقع
