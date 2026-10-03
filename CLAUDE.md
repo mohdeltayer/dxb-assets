@@ -337,6 +337,13 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
     left with under 700 rows stops the render (`lowres_ok=True` only when
     there is no other copy). On 3 Oct the Steam Deck Reel went out with
     black bands from letterboxed Valve clips.
+  - Trailer audio stays (Mohammad, 3 Oct 2026, after a batch of eight
+    went out muted with the background music under them: "none of these
+    has actual trailer audio"). Never mute footage to swap in a bed. When
+    a trailer has dialogue, run one continuous stretch of its own audio
+    under the cuts (so the music does not jump) and either keep a stretch
+    without speech, subtitle what is said, or strip the voices and keep
+    its music and effects. The bed stays for stills and our own graphics.
   - Pick shot times from `templates/seekmap.py` (frames labelled with the
     seek time reel.py uses), never from a sheet labelled with timestamps:
     Steam trailer downloads start their picture 2 to 3 seconds in, and on
