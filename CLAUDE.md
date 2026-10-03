@@ -337,6 +337,11 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
     left with under 700 rows stops the render (`lowres_ok=True` only when
     there is no other copy). On 3 Oct the Steam Deck Reel went out with
     black bands from letterboxed Valve clips.
+  - Pick shot times from `templates/seekmap.py` (frames labelled with the
+    seek time reel.py uses), never from a sheet labelled with timestamps:
+    Steam trailer downloads start their picture 2 to 3 seconds in, and on
+    3 Oct shots picked that way landed on title cards. Then look at the
+    finished Reel's frames before showing it.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under
