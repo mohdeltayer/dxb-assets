@@ -910,3 +910,8 @@ queue without explicit say-so, and dry-run `publish.py` with `DRY_RUN=1`
 first to confirm which folders will post.
 Since 2 Oct 2026 the dry run also runs preflight, so a folder without a
 current approval marker shows as FAILED there before anything is pushed.
+After a batch's first slot, check its posts read PUBLISHED in Postiz
+(`postsListTool`), not just that the receipts came back: a receipt only
+means Postiz accepted the post. On 3 Oct 2026 ten due posts sat in QUEUE
+for 40 minutes and went out only when Mohammad refreshed the posts view
+in the Postiz app, and the 07:00 Steam Deck X post ended in ERROR.
