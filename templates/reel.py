@@ -203,8 +203,29 @@ def _height(p):
     return int(r.stdout.strip() or 0)
 
 
-def montage(shots, out):
-    """Cut the shots into one 9:16 clip with crossfades; returns (starts, end)."""
+MIN_SRC_H = 700     # picture rows a clip must keep once its bars are cut
+
+
+def _bars(p, s, d):
+    """The picture inside a trailer's letterbox, as an ffmpeg crop (or '').
+    On 3 Oct 2026 the Steam Deck Reel enlarged letterboxed Valve clips bars
+    and all, leaving black bands across the frame."""
+    r = subprocess.run(['ffmpeg', '-nostdin', '-v', 'info', '-ss', str(s), '-t', str(min(d, 3)), '-i', p,
+                        '-vf', 'cropdetect=limit=24:round=2:reset=0', '-f', 'null', '-'],
+                       capture_output=True, text=True)
+    found = [l.split('crop=')[-1].split()[0] for l in r.stderr.splitlines() if 'crop=' in l]
+    if not found:
+        return '', _height(p)
+    w, h, x, y = map(int, found[-1].split(':'))
+    full = _height(p)
+    return (f'crop={w}:{h}:{x}:{y},', h) if h < full - 8 else ('', full)
+
+
+def montage(shots, out, lowres_ok=False):
+    """Cut the shots into one 9:16 clip with crossfades; returns (starts, end).
+    Letterbox bars are cropped before the enlargement; a clip with fewer than
+    MIN_SRC_H rows of picture stops the render (it would be enlarged 3x or
+    more and look soft) unless lowres_ok."""
     stills = [os.path.splitext(s[0])[1].lower() in STILL for s in shots]
     sound = any(not st and _has_audio(C.U + s[0]) for s, st in zip(shots, stills))
     args = ['ffmpeg', '-nostdin', '-y', '-v', 'error']
@@ -221,8 +242,12 @@ def montage(shots, out):
             # Footage is 16:9, so filling 9:16 enlarges it (1.78x for 1080p, more
             # for letterboxed trailers): lanczos keeps edges, a light unsharp
             # restores what the enlargement softens. 4K sources need neither.
-            sharp = ',unsharp=5:5:0.5:5:5:0.0' if _height(C.U + f) < H else ''
-            fc.append(f'[{i}:v]scale=-2:{H}:flags=lanczos{sharp},crop={W}:{H}:(iw-{W})*{fo}:0,fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]')
+            bars, rows = _bars(C.U + f, s, d)
+            if rows < MIN_SRC_H and not lowres_ok:
+                raise ValueError(f'{f}: only {rows} rows of picture (bars cut); find a sharper copy '
+                                 f'or pass lowres_ok=True')
+            sharp = ',unsharp=5:5:0.5:5:5:0.0' if rows < H else ''
+            fc.append(f'[{i}:v]{bars}scale=-2:{H}:flags=lanczos{sharp},crop={W}:{H}:(iw-{W})*{fo}:0,fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]')
     if sound:
         for i, ((f, s, d, fo), st) in enumerate(zip(shots, stills)):
             if st or not _has_audio(C.U + f):
@@ -241,12 +266,28 @@ def montage(shots, out):
     return starts, t
 
 
+def read_secs(text):
+    """Time a viewer needs to read a line once: about 14 characters a second
+    plus half a second to find it, never under 2.2 s (Mohammad, 3 Oct 2026:
+    the Steam Deck lines went by too fast to read)."""
+    return max(2.2, 0.5 + len(text.replace('\n', ' ').replace('|', ' ')) / 14)
+
+
+def timeline(shots):
+    """Shot start times and total length of the cut, as montage() builds it."""
+    starts, t = [0.0], shots[0][2]
+    for sh in shots[1:]:
+        starts.append(t - X); t = t - X + sh[2]
+    return starts, t
+
+
 def spread(texts, t0, t1, gap=0.0):
-    """Give each sentence a share of [t0, t1] by its length, at least 1.8 s."""
+    """Give each sentence a share of [t0, t1] by its length, at least its
+    reading time."""
     w = [max(len(x), 14) for x in texts]
     span = t1 - t0; out, t = [], t0
     for x, k in zip(texts, w):
-        d = max(1.8, span * k / sum(w))
+        d = max(read_secs(x), span * k / sum(w))
         out.append((x, t, min(t + d, t1), {})); t += d
     return out
 
@@ -307,19 +348,43 @@ def _voice_over(body, voice, end, duck_db, out):
     return out
 
 
+def check_reading(lines, end):
+    """Stop when a line is on screen for less than its reading time, naming
+    the line and how much footage would fix it. Lines placed by hand are
+    trimmed so one leaves before the next arrives, so check after that."""
+    short = []
+    for k, (text, a, z, _) in enumerate(lines):
+        z = min(z, end, lines[k + 1][1] if k + 1 < len(lines) else end)
+        need = read_secs(text)
+        if z - a < need - 0.05:
+            short.append(f'  "{text.splitlines()[0]}…" {z - a:.1f}s of {need:.1f}s')
+    if short:
+        raise ValueError('lines too fast to read; add related footage or move the line:\n' + '\n'.join(short))
+
+
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
-         country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18):
+         country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
+         lowres_ok=False, read_check=True):
     """`voice`: his processed read (templates/voice.py output). It plays over
     the footage, whose own sound drops about `duck_db` under it and comes back
-    up in the pauses; the shots should add up to at least the read's length."""
+    up in the pauses; the shots should add up to at least the read's length.
+    Without a voice every line must stay up for its reading time (read_secs);
+    the render stops otherwise, so a short story gets more related footage."""
     G._ACC = G.ACCENTS[theme]
-    style = style or pick_style(out)
     tmp = tempfile.mkdtemp(prefix='reel-')
-    starts, end = montage(shots, f'{tmp}/cut.mp4')
-    if callable(lines):                    # lines placed against the cut's own shot starts
-        lines = lines(starts, end)
-    if lines and isinstance(lines[0], str):
-        lines = spread(lines, head_secs + 0.1, end)
+    try:
+        starts, end = timeline(shots)          # known before the slow encode
+        if callable(lines):                    # lines placed against the cut's own shot starts
+            lines = lines(starts, end)
+        if lines and isinstance(lines[0], str):
+            lines = spread(lines, head_secs + 0.1, end)
+        if read_check and not voice:
+            check_reading(lines, end)
+        montage(shots, f'{tmp}/cut.mp4', lowres_ok)
+    except Exception:
+        shutil.rmtree(tmp, ignore_errors=True)
+        raise
+    style = style or pick_style(out)       # after the checks, so a stopped render takes no turn
     layers = [(head_layer(headline, label, f'{tmp}/head.png', source, date, country,
                           vivid=vivid, theme=theme, seed=sum(map(ord, out)), style=style), 0, head_secs)]
     if vivid and style == 'frame':          # the bottom waves stay for the whole clip

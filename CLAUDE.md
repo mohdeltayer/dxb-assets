@@ -320,6 +320,23 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   (note panels and the like) the sentence moves to the top.
 - Everything stays in the Reels safe zone; `reel.py` stops on a line or
   price that would leave it.
+- Headline, lines and pace (Mohammad, 3 Oct 2026, after the Steam Deck
+  Reel went by too fast; until his own voice carries the Reels):
+  - The headline is a hook: the most surprising fact or the stakes, in
+    news words, not a label («اسم رمزي يشعل…» is a label). Never louder
+    than the source: a rumour still reads as one.
+  - The lines tell the story with its facts (who, what, the number, when,
+    what is not confirmed), not slogans. Four to six lines is normal.
+  - Every line stays up long enough to read once: `reel.read_secs`, about
+    14 characters a second plus half a second, 2.2 s at least. `reel.py`
+    checks before it encodes and stops on a line that is too fast.
+  - Short of footage, add related official footage rather than speeding
+    the lines up: the game's other trailers, the series, the platform or
+    the company's own clips.
+  - Letterboxed clips are cropped to the picture automatically, and a clip
+    left with under 700 rows stops the render (`lowres_ok=True` only when
+    there is no other copy). On 3 Oct the Steam Deck Reel went out with
+    black bands from letterboxed Valve clips.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under
