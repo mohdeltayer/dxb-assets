@@ -271,6 +271,14 @@ sends Digital Lounge stories or Shorts to either platform. Digital Lounge
 runs on X and Instagram only; reel.py files still render 9:16 so either
 platform can come back without new work. Nothing was queued on either
 when the drop started.
+TikTok photo-mode test (Mohammad, 3 Oct 2026, after TikTok showed a
+"post photos to get more views" prompt): one swipe-through photo set built
+from our own graphics, posted by hand from his phone, to see whether the
+account gets any reach outside the video format. `templates/photos.py`
+renders 1080x1920 slides: `famitsu_set(rows, hw, week, date, outdir)` gives
+a question cover with the week's box art, entries 5 to 1 (art full bleed,
+rank, title, this week and since launch), consoles, and an end slide.
+Nothing goes to TikTok through Postiz; the 1 Oct drop otherwise stands.
 Digital Lounge YouTube (@the_digilounge, the old "Digi-ديجي" channel)
 was rebranded on 27 Sep 2026: name "ديجيتال لاونج | أخبار الألعاب", Arabic
 description, banner `live/2026-09-27/youtube/digi-youtube-banner.png`
