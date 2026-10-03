@@ -25,7 +25,7 @@ lines: [(text, t0, t1, opts)] with times on the finished clip, or plain
        (digits with the dirham symbol to their left), shade=True (a light
        indigo shade low in the frame, for pale footage).
 """
-import math, os, shutil, subprocess, tempfile
+import math, os, shutil, subprocess, sys, tempfile
 from PIL import Image, ImageDraw, ImageFilter
 import cards as C, fast_ar as A, ig_ar as G, outro, sonic
 
@@ -348,6 +348,36 @@ def _voice_over(body, voice, end, duck_db, out):
     return out
 
 
+def _music(f):
+    """`f` without its voices: demucs' two-stem split keeps the music and
+    effects. Cached next to the upload as <name>-music.wav. demucs runs in
+    DEMUCS_PY (a Python with demucs installed), default this one."""
+    dst = C.U + os.path.splitext(f)[0] + '-music.wav'
+    if not os.path.exists(dst):
+        tmp = tempfile.mkdtemp(prefix='demucs-')
+        try:
+            subprocess.run([os.environ.get('DEMUCS_PY', sys.executable), '-m', 'demucs', '--two-stems=vocals',
+                            '-o', tmp, C.U + f], check=True, capture_output=True)
+            stem = os.path.splitext(os.path.basename(f))[0]
+            shutil.move(f'{tmp}/htdemucs/{stem}/no_vocals.wav', dst)
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
+    return dst
+
+
+def _track(body, track, end, out):
+    """Put one continuous stretch of a trailer's own sound under the cut, so
+    the music runs on instead of jumping at every shot (Mohammad, 3 Oct 2026).
+    `track` is (file, start) or (file, start, 'music') to strip the voices."""
+    f, start, *mode = track
+    src = _music(f) if mode and mode[0] == 'music' else C.U + f
+    subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', body, '-ss', str(start), '-t', f'{end:.3f}', '-i', src,
+                    '-filter_complex', '[1:a]aformat=sample_rates=48000:channel_layouts=stereo,afade=t=in:d=0.3[a]',
+                    '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k',
+                    '-t', f'{end:.3f}', out], check=True)
+    return out
+
+
 def check_reading(lines, end):
     """Stop when a line is on screen for less than its reading time, naming
     the line and how much footage would fix it. Lines placed by hand are
@@ -364,8 +394,12 @@ def check_reading(lines, end):
 
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
-         lowres_ok=False, read_check=True):
-    """`voice`: his processed read (templates/voice.py output). It plays over
+         lowres_ok=False, read_check=True, track=None):
+    """`track`: (file, start) plays one continuous stretch of that trailer's
+    sound under the whole cut, in place of each shot's own; add 'music' as a
+    third item to strip its voices (demucs). Footage never goes out muted
+    with a bed instead (Mohammad, 3 Oct 2026).
+    `voice`: his processed read (templates/voice.py output). It plays over
     the footage, whose own sound drops about `duck_db` under it and comes back
     up in the pauses; the shots should add up to at least the read's length.
     Without a voice every line must stay up for its reading time (read_secs);
@@ -380,6 +414,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             lines = spread(lines, head_secs + 0.1, end)
         if read_check and not voice:
             check_reading(lines, end)
+        for i, (text, _, _, kw) in enumerate(lines):   # a line outside the safe zone stops here, not after the encode
+            line_layer(text, f'{tmp}/l{i}.png', **kw)
         montage(shots, f'{tmp}/cut.mp4', lowres_ok)
     except Exception:
         shutil.rmtree(tmp, ignore_errors=True)
@@ -406,6 +442,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     amap = ['-map', '0:a?', '-c:a', 'aac']
     subprocess.run(args + ['-filter_complex', ';'.join(fc), '-map', '[v]'] + amap +
                    ['-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-preset', 'slow', '-crf', '16', body], check=True)
+    if track:
+        body = _track(body, track, end, f'{tmp}/track.mp4')
     if voice:
         body = _voice_over(body, voice, end, duck_db, f'{tmp}/voiced.mp4')
     sound = sound or G.SOUNDS.get(label, 'neon')

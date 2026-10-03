@@ -344,6 +344,11 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
     under the cuts (so the music does not jump) and either keep a stretch
     without speech, subtitle what is said, or strip the voices and keep
     its music and effects. The bed stays for stills and our own graphics.
+    In code: `reel(..., track=(file, start))` runs one stretch of that
+    file's sound under the whole cut; `track=(file, start, 'music')` strips
+    the voices first (demucs two-stem, cached as `<name>-music.wav` in
+    uploads; set `DEMUCS_PY` to a Python with demucs installed). Lines are
+    also checked against the safe zone before the encode.
   - Pick shot times from `templates/seekmap.py` (frames labelled with the
     seek time reel.py uses), never from a sheet labelled with timestamps:
     Steam trailer downloads start their picture 2 to 3 seconds in, and on

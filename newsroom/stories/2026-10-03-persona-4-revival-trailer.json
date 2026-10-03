@@ -1,0 +1,87 @@
+{
+ "status": "shortlisted",
+ "versions": [
+  {
+   "v": 1,
+   "at": "2026-10-03T14:30:00Z",
+   "change": "first draft (digest, second check); trailer audio kept"
+  }
+ ],
+ "id": "2026-10-03-persona-4-revival-trailer",
+ "title": "Persona 4 Revival: new trailer; 18 Feb 2027 (PS5/Xbox/PC, Game Pass), Switch 2 20 May 2027",
+ "game": "Persona 4 Revival",
+ "companies": [
+  "Atlus",
+  "SEGA"
+ ],
+ "priority": "🟢",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "ATLUS West YouTube: Shadow trailer",
+   "url": "https://www.youtube.com/watch?v=Bo-lYhPhDW0"
+  },
+  {
+   "role": "primary",
+   "name": "SEGA press release (Nintendo Direct, Switch 2 date)",
+   "url": "https://sega.prezly.com/nintendo-direct-announces-persona-6-and-persona-4-revival-coming-to-nintendo-switch-2"
+  },
+  {
+   "role": "primary",
+   "name": "Steam store AE (app 2963950), checked 3 Oct"
+  },
+  {
+   "role": "radar",
+   "name": "Gematsu"
+  }
+ ],
+ "claims": [
+  {
+   "text": "New trailer released by Atlus",
+   "status": "verified",
+   "source": "ATLUS West YouTube"
+  },
+  {
+   "text": "PS5, Xbox Series, PC (Steam, Microsoft Store) on 18 Feb 2027",
+   "status": "verified",
+   "source": "Story trailer end slate; SEGA"
+  },
+  {
+   "text": "Game Pass day one",
+   "status": "reported",
+   "source": "Gematsu / search, SEGA release"
+  },
+  {
+   "text": "Switch 2 on 20 May 2027",
+   "status": "verified",
+   "source": "SEGA press release"
+  },
+  {
+   "text": "Steam AE pre-order 255 AED",
+   "status": "verified",
+   "source": "Steam API 3 Oct"
+  }
+ ],
+ "why": "Big JRPG remake with a firm date and a Gulf price.",
+ "lanes": {
+  "dl": {
+   "lane": "Reel (vivid)",
+   "chip": "رسمي",
+   "time": "20:00 Dubai, 3 Oct",
+   "headline": "عرض جديد من Persona 4 Revival قبل صدورها في فبراير",
+   "x": "نشرت أتلس (Atlus) عرضًا جديدًا للعبة Persona 4 Revival، النسخة المعاد بناؤها من Persona 4 التي صدرت أول مرة عام 2008. / وتصدر اللعبة في 18 فبراير 2027 على PS5 وXbox Series وPC عبر Steam ومتجر Microsoft، وتتوفر في Game Pass يوم إطلاقها، فيما تصل نسخة Nintendo Switch 2 في 20 مايو 2027. / ويبلغ سعر الطلب المسبق في متجر Steam في الإمارات 255 درهمًا.",
+   "ig": "عودة إلى Persona 4 بحلّة جديدة في فبراير 2027 / نشرت أتلس (Atlus) عرضًا جديدًا للعبة Persona 4 Revival، النسخة المعاد بناؤها من Persona 4 التي صدرت أول مرة عام 2008. / وتصدر اللعبة في 18 فبراير 2027 على PS5 وXbox Series وPC عبر Steam ومتجر Microsoft، وتتوفر في Game Pass يوم إطلاقها، فيما تصل نسخة Nintendo Switch 2 في 20 مايو 2027. / ويبلغ سعر الطلب المسبق في متجر Steam في الإمارات 255 درهمًا. / #ألعاب #أخبار_الألعاب #Persona4Revival #Persona"
+  },
+  "dxb": {
+   "lane": "none"
+  }
+ },
+ "media": [
+  {
+   "file": "cards/2026-10/persona-4-revival-trailer-reel-v1.mp4",
+   "source_url": "Steam: Persona 4 Revival Story Trailer (the Shadow trailer is YouTube-only), own music and effects, voices removed",
+   "kind": "footage with its own sound",
+   "fetched": "2026-10-03"
+  }
+ ]
+}
