@@ -36,6 +36,7 @@ has said so; everything else is a working suggestion.
 | Physical edition | Not النسخة المادية (reads oddly in Arabic); leave the edition out, or name what the reader holds if it matters | Approved 30 Sep 2026 |
 | Retailer prices | Never name the shop a price came from (Geekay, Virgin, Amazon) in a post or card: readers take it as an undeclared sponsor. Show the price alone | Approved 30 Sep 2026 |
 | Take-Two Interactive | تيك-تو إنتراكتيف (Take-Two Interactive), hyphenated; later mentions الشركة or تيك-تو. Bare تيك تو reads as TikTok (DeepL read it back that way) | Suggested 1 Oct 2026 |
+| Silent / quiet revision (hardware changed without an announcement) | تعديل خفي | not تعديل صامت, a calque of "silent" that reads oddly; the PS5 Slim Reel headline of 3 Oct went out as «تعديل صامت داخل PS5 Slim» | Approved 3 Oct 2026 |
 | Instead of (price was X) | بدلًا من | not bare بدل in formal copy | Suggested 29 Sep 2026 |
 | Shaping up to be | يبدو في طريقه ليكون | not تتشكل لتكون (a calque) | Suggested 29 Sep 2026 |
 | Service ends (online game) | تنتهي خدمة <game>، تُوقف <company> خدمة <game> | not تتوقف <game> alone, which DeepL read back as "taking a break" | Suggested 29 Sep 2026 |
