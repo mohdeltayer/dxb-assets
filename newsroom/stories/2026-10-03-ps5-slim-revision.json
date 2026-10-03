@@ -1,0 +1,73 @@
+{
+ "status": "shortlisted",
+ "versions": [
+  {
+   "v": 1,
+   "at": "2026-10-03T06:30:00Z",
+   "change": "first draft (scout + manual sweep)"
+  }
+ ],
+ "id": "2026-10-03-ps5-slim-revision",
+ "title": "PS5 Slim quietly revised (EDM-051) per teardown",
+ "game": "PS5",
+ "companies": [
+  "Sony"
+ ],
+ "priority": "🟢",
+ "sources": [
+  {
+   "role": "original_reporting",
+   "name": "@Modyficator89 teardown on X"
+  },
+  {
+   "role": "outlet_report",
+   "name": "TweakTown",
+   "url": "https://www.tweaktown.com/news/113864/sony-quietly-revises-ps5-slim-with-better-liquid-metal-cooling-and-easier-to-replace-cmos-battery/index.html",
+   "via": "@Modyficator89"
+  },
+  {
+   "role": "radar",
+   "name": "Push Square",
+   "via": "TweakTown"
+  }
+ ],
+ "claims": [
+  {
+   "text": "EDM-051 board, simpler and easier to repair",
+   "status": "reported",
+   "source": "TweakTown"
+  },
+  {
+   "text": "Better liquid-metal containment, new heatsink, cheaper HDMI retimer, easier CMOS battery",
+   "status": "reported",
+   "source": "TweakTown"
+  },
+  {
+   "text": "No Sony announcement; manuals don't mention it",
+   "status": "reported",
+   "source": "TweakTown"
+  }
+ ],
+ "why": "Hardware change readers buying a Slim now may get.",
+ "lanes": {
+  "dl": {
+   "lane": "Reel (vivid)",
+   "chip": "تقرير",
+   "time": "15:30 Dubai, 3 Oct",
+   "headline": "تعديل صامت داخل PS5 Slim تكشفه عملية تفكيك",
+   "x": "حسب موقع تويك تاون (TweakTown)، أجرت سوني (Sony) تعديلًا داخليًا على PS5 Slim دون إعلان، كشفه فني صيانة الأجهزة المعروف باسم Modyficator89 بعد تفكيك نسخة Marvel's Wolverine الخاصة من الجهاز. / ويضم الطراز المعدّل لوحة أم جديدة تحمل الرمز EDM-051 بتصميم أبسط وأسهل في الإصلاح، وعازلًا محسّنًا يقلل احتمال تسرب المعدن السائل الذي يبرّد المعالج، ومشتتًا حراريًا بتصميم ومواد مختلفة، إضافة إلى شريحة HDMI أقل تكلفة وبطارية CMOS أسهل في الاستبدال على غرار PS5 Pro. / ولم تعلّق سوني على التعديل، فيما لا تزال الأجهزة تُشحن بأدلة استخدام لا تذكره.",
+   "ig": "تغييرات خفية داخل PS5 Slim / حسب موقع تويك تاون (TweakTown)، أجرت سوني (Sony) تعديلًا داخليًا على PS5 Slim دون إعلان، كشفه فني صيانة الأجهزة المعروف باسم Modyficator89 بعد تفكيك نسخة Marvel's Wolverine الخاصة من الجهاز. / ويضم الطراز المعدّل لوحة أم جديدة تحمل الرمز EDM-051 بتصميم أبسط وأسهل في الإصلاح، وعازلًا محسّنًا يقلل احتمال تسرب المعدن السائل الذي يبرّد المعالج، ومشتتًا حراريًا بتصميم ومواد مختلفة، إضافة إلى شريحة HDMI أقل تكلفة وبطارية CMOS أسهل في الاستبدال على غرار PS5 Pro. / ولم تعلّق سوني على التعديل، فيما لا تزال الأجهزة تُشحن بأدلة استخدام لا تذكره. / #ألعاب #أخبار_الألعاب #PS5 #PlayStation"
+  },
+  "dxb": {
+   "lane": "none"
+  }
+ },
+ "media": [
+  {
+   "file": "cards/2026-10/ps5-slim-revision-reel-v1.mp4",
+   "source_url": "playstation.com PS5 videos + PS Blog Wolverine bundle images",
+   "kind": "muted footage, bed under",
+   "fetched": "2026-10-03"
+  }
+ ]
+}
