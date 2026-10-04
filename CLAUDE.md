@@ -308,6 +308,15 @@ as "undisclosed AI-generated content" on 4 Oct; the in-app appeal (tap the
 "!" on the tile, then "here") stating it is the publisher's official
 trailer with our text was granted within about half an hour. Appeal any
 such flag on official footage; never add the AI label to work around it.
+Snapchat copies drop the platform row (Snap's recommendation guidelines,
+Quality, read 4 Oct 2026: a username paired with another app's name or logo
+is not eligible for Spotlight, nor are off-platform links, unoriginal
+reposts without creative transformation, letterboxed or blurry video,
+strobes without a warning, or wholly AI-made video). `outro.snap_cut(reel,
+out, accent=G.ACCENTS[theme])` writes `<name>-snap.mp4`: the same Reel with
+an end card of mark, name and handle only. Hand him that file for Snapchat,
+never the X/Instagram one. The profile intro and Story can show the other
+accounts; only Spotlight posts can't.
 Digital Lounge YouTube (@the_digilounge, the old "Digi-ديجي" channel)
 was rebranded on 27 Sep 2026: name "ديجيتال لاونج | أخبار الألعاب", Arabic
 description, banner `live/2026-09-27/youtube/digi-youtube-banner.png`

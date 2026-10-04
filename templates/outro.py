@@ -96,17 +96,17 @@ def _fade(lay, a):
     return lay
 
 
-def card(style, out, theme_accent=None):
+def card(style, out, theme_accent=None, platforms=PLATFORMS):
     notes, chord = sonic.beats(style)
     notes = [LEAD + t for t in notes]
     chord += LEAD
     dur = LEAD + 3.6
     acc = theme_accent or A.AZURE
     base = _base()
-    row_w = len(PLATFORMS) * GLYPH + (len(PLATFORMS) - 1) * GAP
-    xs = [CX + row_w / 2 - GLYPH - i * (GLYPH + GAP) for i in range(len(PLATFORMS))]
+    row_w = len(platforms) * GLYPH + (len(platforms) - 1) * GAP
+    xs = [CX + row_w / 2 - GLYPH - i * (GLYPH + GAP) for i in range(len(platforms))]
     glyphs = [_layer(lambda d, n=n, x=x: _glyph(d, n, x, ROW_Y - GLYPH / 2, GLYPH, A.INK))
-              for n, x in zip(PLATFORMS, xs)]
+              for n, x in zip(platforms, xs)]
     name = _layer(lambda d: d.text((CX, NAME_Y), 'ديجيتال لاونج', font=A.F('Bold', 84),
                                    fill=A.INK, anchor='mm', **G.AR))
     tag = _layer(lambda d: d.text((CX, TAG_Y), 'أخبار الألعاب', font=A.F('Medium', 46),
@@ -192,5 +192,23 @@ def append(video, out, style='neon', bed=None, jingle=None, accent=None):
     subprocess.run(cmd + ['-filter_complex', fc, '-map', '[v]', '-map', '[a]', '-t', f'{total:.3f}',
                           '-c:v', 'libx264', '-preset', 'slow', '-crf', '17', '-pix_fmt', 'yuv420p', '-profile:v', 'high', '-c:a', 'aac',
                           '-b:a', '160k', '-ar', '48000', '-movflags', '+faststart', out], check=True)
+    shutil.rmtree(tmp, ignore_errors=True)
+    return out
+
+
+def snap_cut(video, out, style='neon', accent=None):
+    """Snapchat copy of a finished Reel: the same file with the end card's
+    platform row taken out. Spotlight does not recommend a Snap that pairs a
+    username with other apps' logos (Snap's recommendation guidelines,
+    Quality, "Promotion of accounts"; read 4 Oct 2026), so the card keeps
+    the mark, name, tagline and handle and drops the glyphs. The card is
+    laid over the last 3.6 s, after the crossfade; the sound is untouched."""
+    tmp = tempfile.mkdtemp(prefix='outro-')
+    end = card(style, f'{tmp}/card.mp4', accent, platforms=())
+    t0 = _dur(video) - 3.6
+    subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', video, '-ss', str(LEAD), '-i', end,
+                    '-filter_complex', f'[1:v]setpts=PTS-STARTPTS+{t0:.3f}/TB[c];[0:v][c]overlay=enable=gte(t\\,{t0:.3f})[v]',
+                    '-map', '[v]', '-map', '0:a', '-c:v', 'libx264', '-preset', 'slow', '-crf', '17',
+                    '-pix_fmt', 'yuv420p', '-c:a', 'copy', '-movflags', '+faststart', out], check=True)
     shutil.rmtree(tmp, ignore_errors=True)
     return out
