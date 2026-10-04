@@ -301,6 +301,8 @@ stills, his gameplay), trailers last. Each approved Reel is handed to him
 with a short Arabic Spotlight caption. Judge it after two weeks against
 Instagram Reels (about 1,000 views each). Same name and mark as the other
 Digital Lounge accounts.
+Created 4 Oct 2026 about 08:05 Dubai: username the_digilounge, name
+ديجيتال لاونج, the play mark as picture; public profile set up next.
 Digital Lounge YouTube (@the_digilounge, the old "Digi-ديجي" channel)
 was rebranded on 27 Sep 2026: name "ديجيتال لاونج | أخبار الألعاب", Arabic
 description, banner `live/2026-09-27/youtube/digi-youtube-banner.png`
