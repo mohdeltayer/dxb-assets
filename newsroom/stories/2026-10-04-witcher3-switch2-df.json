@@ -1,0 +1,107 @@
+{
+ "id": "2026-10-04-witcher3-switch2-df",
+ "title": "Digital Foundry: The Witcher 3 Remastered on Switch 2 a colossal upgrade; 40fps cap unstable, 30 advised",
+ "game": "The Witcher 3: Wild Hunt Remastered",
+ "companies": [
+  "CD Projekt Red",
+  "Digital Foundry",
+  "Nintendo"
+ ],
+ "priority": "🟡",
+ "related": [
+  "2026-09-29-witcher3-remastered-out",
+  "2026-09-23-witcher3-remastered"
+ ],
+ "sources": [
+  {
+   "role": "technical",
+   "name": "Digital Foundry video \"A Colossal Upgrade over Switch 1\"",
+   "url": "https://www.youtube.com/watch?v=qaoqPjbXk2Y"
+  },
+  {
+   "role": "outlet_report",
+   "name": "Nintendo Everything roundup, 3 Oct",
+   "url": "https://nintendoeverything.com/the-witcher-3-remastered-nintendo-switch-2-frame-rate-resolution/",
+   "via": "Digital Foundry"
+  },
+  {
+   "role": "primary",
+   "name": "Nintendo Switch 2 system update 23.0.0 notes (docked VRR)",
+   "url": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68526"
+  },
+  {
+   "role": "outlet_report",
+   "name": "Nintendo Wire / RPG Site on CDPR Switch 2 specs (handheld VRR)",
+   "url": "https://nintendowire.com/news/2026/08/28/cd-projekt-red-details-technical-information-for-the-witcher-3-remastered-on-switch-2/",
+   "via": "CD Projekt Red"
+  },
+  {
+   "role": "radar",
+   "name": "DXB digest 15:21 4 Oct"
+  }
+ ],
+ "claims": [
+  {
+   "text": "Docked dynamic 540p to 1080p, DLSS to a 1080p target; handheld 360p to 720p",
+   "status": "reported",
+   "source": "DF via Nintendo Everything"
+  },
+  {
+   "text": "40fps cap needs a 120Hz display, otherwise 30; 40 not sustained, DF advises 30",
+   "status": "reported",
+   "source": "DF via Nintendo Everything"
+  },
+  {
+   "text": "No ray tracing; 55.5GB vs 39.1GB on Switch 1",
+   "status": "reported",
+   "source": "DF via Nintendo Everything"
+  },
+  {
+   "text": "Docked VRR added in Switch 2 update 23.0.0, needs software support and a dock update",
+   "status": "verified",
+   "source": "Nintendo support"
+  },
+  {
+   "text": "The game uses VRR in handheld, not docked",
+   "status": "reported",
+   "source": "CDPR specs via Nintendo Wire and RPG Site; CDPR's own post not opened"
+  }
+ ],
+ "why": "First hard numbers on the Switch 2 version after launch week; Mohammad's take on docked VRR.",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "جديد",
+   "time": "20:00 Dubai, 4 Oct (proposed)",
+   "headline": "ترقية هائلة لـ The Witcher 3 على Switch 2 وأداء متذبذب",
+   "x": "وصفت قناة التحليل التقني ديجيتال فاوندري (Digital Foundry) نسخة Nintendo Switch 2 من The Witcher 3: Wild Hunt Remastered بأنها ترقية هائلة مقارنةً بنسخة Switch الأولى، مع خامات أعلى دقة وإضاءة جديدة وتقليل لظهور العناصر المفاجئ في الأفق. / وفي وضع التلفاز تتراوح الدقة بين 540p و1080p قبل أن ترفعها تقنية DLSS إلى 1080p، وفي الوضع المحمول بين 360p و720p. ولا تدعم هذه النسخة تتبع الأشعة، ويبلغ حجمها 55.5 غيغابايت. / وتتيح اللعبة حدًا أعلى يبلغ 40 إطارًا في الثانية على الشاشات التي تعمل بتردد 120 هرتز، وإلا فالحد 30 إطارًا. لكن معدل 40 إطارًا لا يثبت في كل المناطق، لذا تنصح القناة باللعب على 30 إطارًا لأنه أكثر ثباتًا.",
+   "ig": "هل تصمد The Witcher 3 على Switch 2؟ تحليل تقني يجيب / وصفت قناة التحليل التقني ديجيتال فاوندري (Digital Foundry) نسخة Nintendo Switch 2 من The Witcher 3: Wild Hunt Remastered بأنها ترقية هائلة مقارنةً بنسخة Switch الأولى، مع خامات أعلى دقة وإضاءة جديدة وتقليل لظهور العناصر المفاجئ في الأفق. / وفي وضع التلفاز تتراوح الدقة بين 540p و1080p قبل أن ترفعها تقنية DLSS إلى 1080p، وفي الوضع المحمول بين 360p و720p. ولا تدعم هذه النسخة تتبع الأشعة، ويبلغ حجمها 55.5 غيغابايت. / وتتيح اللعبة حدًا أعلى يبلغ 40 إطارًا في الثانية على الشاشات التي تعمل بتردد 120 هرتز، وإلا فالحد 30 إطارًا. لكن معدل 40 إطارًا لا يثبت في كل المناطق، لذا تنصح القناة باللعب على 30 إطارًا لأنه أكثر ثباتًا. / #ألعاب #أخبار_الألعاب #TheWitcher3 #NintendoSwitch2"
+  },
+  "dxb": {
+   "lane": "fast (voiced)",
+   "chip": "JUST IN",
+   "time": "21:30 Dubai, 4 Oct (proposed)",
+   "x": "The Witcher 3 Remastered on Switch 2 is the game docked VRR was made for. / Digital Foundry found the 40fps cap won’t hold everywhere and suggests playing at 30. Nintendo switched on docked VRR a month ago. The game uses it in handheld but not on the TV. One patch away from a smooth 40."
+  }
+ },
+ "media": [
+  {
+   "file": "cards/2026-10/witcher3-switch2-df-reel-v1.mp4",
+   "source_url": "Nintendo US store page, Switch 2 screenshots (assets.nintendo.com)",
+   "kind": "stills"
+  },
+  {
+   "file": "cards/2026-10/witcher3-switch2-vrr-fast-v1.png",
+   "source_url": "Nintendo US store page, Switch 2 screenshot",
+   "kind": "still"
+  }
+ ],
+ "status": "shortlisted",
+ "versions": [
+  {
+   "v": 1,
+   "at": "2026-10-04T14:50:00Z",
+   "change": "first draft; grammar review: no required edits, its uncertain cases on 'سبتمبر الماضي', the headline quote marks and the CEO title applied; DeepL read-back"
+  }
+ ]
+}
