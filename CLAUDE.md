@@ -140,6 +140,12 @@ English post. Names in Arabic posts (Mohammad, 26 Sep 2026):
 - Cards follow the same rule where there is room and keep the Arabic
   alone where there is not: `fast_ar` drops the bracket itself when the
   source would crowd the footer.
+- Reels carry the Latin too (Mohammad, 4 Oct 2026: "add the English for
+  companies because some are hard to read"): the first on-screen mention
+  of a company, studio or outlet in a Reel's headline or lines takes the
+  bracket, «جاجكس (Jagex)», «بوليفوني ديجيتال (Polyphony Digital)». Later
+  mentions use the Arabic alone. Set the break so the bracket stays on the
+  line with its name, and keep the visual line starting with an Arabic word.
 
 Arabic writing (Mohammad, 27 Sep 2026): two passes on every Arabic post.
 1. Write with the `arabic-games-film-editor` skill (his upload): meaning,

@@ -10,6 +10,7 @@ has said so; everything else is a working suggestion.
 |---|---|---|
 | Game, series, character, platform names | English only, as the publisher writes them | Approved 26 Sep 2026 |
 | Company, studio, outlet, people names | Arabic, then the English in brackets at first mention; Arabic alone after | Approved 26 Sep 2026 (the skill's default of English-only does not apply) |
+| Company names on Reels | The same bracket on screen: the first mention of a company, studio or outlet in a Reel's headline or lines reads «جاجكس (Jagex)»; Arabic names alone were hard to read | Approved 4 Oct 2026 |
 | Voice | Outlet voice, no first person. His play time runs uncredited as the account's own: "انطباعات أولية بعد 10 ساعات مع …" (no "محرر ديجيتال لاونج": readers are already on the account) | Approved 27 Sep 2026 |
 | Nintendo | نينتيندو (Nintendo), his spelling, also in نينتيندو لايف (Nintendo Life) | Approved 26 Sep 2026 |
 | Game and series names as subjects | Feminine agreement, because the unstated noun is لعبة or سلسلة: ستحصل Minecraft, تواصل Control Resonant (not يحصل Minecraft) | Approved 27 Sep 2026 |
