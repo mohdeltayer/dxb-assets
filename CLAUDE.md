@@ -325,6 +325,14 @@ out, accent=G.ACCENTS[theme])` writes `<name>-snap.mp4`: the same Reel with
 an end card of mark, name and handle only. Hand him that file for Snapchat,
 never the X/Instagram one. The profile intro and Story can show the other
 accounts; only Spotlight posts can't.
+Threads (Mohammad, 4 Oct 2026): Digital Lounge Threads (@the_digilounge,
+made from the Instagram account) joined Postiz on 4 Oct 2026 as integration
+`cmuu27hg405tls00yikmo4ij3`, platform `threads`, no settings (`"settings":
+{}`), 500 characters a post. A small test, judged after two weeks like
+Snapchat: does it reach anyone beyond the Instagram crowd. One or two posts a
+day, the day's strongest Digital Lounge stories only, at the same time as
+their X and Instagram posts, carrying the short X text and the same Reel; no
+hashtags. Preflight knows the account.
 Digital Lounge YouTube (@the_digilounge, the old "Digi-ديجي" channel)
 was rebranded on 27 Sep 2026: name "ديجيتال لاونج | أخبار الألعاب", Arabic
 description, banner `live/2026-09-27/youtube/digi-youtube-banner.png`
