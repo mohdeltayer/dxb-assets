@@ -374,6 +374,18 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
     Steam trailer downloads start their picture 2 to 3 seconds in, and on
     3 Oct shots picked that way landed on title cards. Then look at the
     finished Reel's frames before showing it.
+  - Check before rendering, draft before the real encode (Mohammad,
+    4 Oct 2026, option 3: fewer re-renders rather than more agents or
+    sessions; everything stays in this session). On 3 Oct Nagoshi and
+    Micron each rendered four times over title cards, pink and a busy HUD.
+    1. `reel.shotsheet(shots, sheet.jpg)`: first, middle and last frame of
+       every shot in one sheet, about 20 s; it flags near-black frames
+       (title cards on black, fades) and pink or magenta. Fix the shot list
+       until the sheet is clean.
+    2. `reel(..., draft=True)`: ultrafast, low quality, no end card, written
+       as <name>-draft.mp4, about 2.5 minutes against 7 to 10 for the real
+       encode. `reel.strip(video, strip.jpg)` lays its frames out.
+    3. The real render once the draft is clean, then `strip` again.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under

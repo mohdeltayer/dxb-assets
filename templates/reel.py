@@ -221,7 +221,7 @@ def _bars(p, s, d):
     return (f'crop={w}:{h}:{x}:{y},', h) if h < full - 8 else ('', full)
 
 
-def montage(shots, out, lowres_ok=False):
+def montage(shots, out, lowres_ok=False, fast=False):
     """Cut the shots into one 9:16 clip with crossfades; returns (starts, end).
     Letterbox bars are cropped before the enlargement; a clip with fewer than
     MIN_SRC_H rows of picture stops the render (it would be enlarged 3x or
@@ -262,7 +262,7 @@ def montage(shots, out, lowres_ok=False):
             fc.append(f'[{pa}][a{i}]acrossfade=d={X}[xa{i}]'); pa = f'xa{i}'
         t = off + shots[i][2]
     maps = ['-map', f'[{pv}]'] + (['-map', f'[{pa}]', '-c:a', 'aac', '-b:a', '192k'] if sound else [])
-    subprocess.run(args + ['-filter_complex', ';'.join(fc)] + maps + ['-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-preset', 'slow', '-crf', '15', out], check=True)
+    subprocess.run(args + ['-filter_complex', ';'.join(fc)] + maps + ['-c:v', 'libx264', '-pix_fmt', 'yuv420p'] + (DRAFT_ENC if fast else ['-preset', 'slow', '-crf', '15']) + [out], check=True)
     return starts, t
 
 
@@ -271,6 +271,80 @@ def read_secs(text):
     plus half a second to find it, never under 2.2 s (Mohammad, 3 Oct 2026:
     the Steam Deck lines went by too fast to read)."""
     return max(2.2, 0.5 + len(text.replace('\n', ' ').replace('|', ' ')) / 14)
+
+
+DRAFT_ENC = ['-preset', 'ultrafast', '-crf', '30']
+PINK = (210, 242)       # PIL HSV hue band for pink and magenta (red and purple stay out)
+
+
+def _frame(f, t, w=240):
+    tmp = tempfile.mktemp(suffix='.png')
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', f'{max(0, t):.2f}', '-i', f, '-frames:v', '1',
+                    '-vf', f'scale={w}:-2', tmp], check=True)
+    im = Image.open(tmp).convert('RGB'); os.remove(tmp); return im
+
+
+def _flags(im):
+    """'pink' when over 3% of the frame is saturated pink or magenta, 'black'
+    for a near-black frame (a fade or a gap between scenes)."""
+    out = []
+    h, sat, v = im.convert('HSV').split()
+    hd, sd, vd = h.getdata(), sat.getdata(), v.getdata()
+    n = len(hd)
+    pink = sum(1 for a, b, c in zip(hd, sd, vd) if PINK[0] <= a <= PINK[1] and b > 90 and c > 90)
+    if pink / n > 0.03:
+        out.append('pink')
+    if sum(vd) / n < 22:
+        out.append('black')
+    return out
+
+
+def shotsheet(shots, out):
+    """Before any render: the first, middle and last frame of every shot, in
+    one sheet, labelled with the seek time, so title cards, end slates,
+    logos and pink are caught before the encode (3 Oct 2026: Nagoshi and
+    Micron each rendered four times over things this sheet shows). Returns
+    (sheet path, [(shot index, time, flags)]) for frames flagged pink or black."""
+    from PIL import ImageDraw as D
+    tiles, flagged = [], []
+    for i, (f, s, d, _) in enumerate(shots):
+        if os.path.splitext(f)[1].lower() in STILL:
+            im = Image.open(C.U + f).convert('RGB'); im.thumbnail((240, 240))
+            tiles.append((i, 'still', im)); continue
+        for t in (s + 0.15, s + d / 2, s + d - 0.15):
+            im = _frame(C.U + f, t)
+            fl = _flags(im)
+            if fl:
+                flagged.append((i, round(t, 2), fl))
+            tiles.append((i, f'{t:.1f}' + (' ' + '+'.join(fl) if fl else ''), im))
+    th = max(im.height for _, _, im in tiles)
+    cols = 9
+    rows = (len(tiles) + cols - 1) // cols
+    sheet = Image.new('RGB', (240 * cols, (th + 22) * rows), (20, 19, 50))
+    d = D.Draw(sheet)
+    for k, (i, lab, im) in enumerate(tiles):
+        x, y = (k % cols) * 240, (k // cols) * (th + 22)
+        sheet.paste(im, (x, y + 22))
+        d.text((x + 4, y + 4), f'#{i} {shots[i][0][:18]} @{lab}', fill=(255, 80, 80) if '+' in lab or 'pink' in lab
+               or 'black' in lab else (255, 230, 120))
+    sheet.save(out)
+    return out, flagged
+
+
+def strip(video, out, every=2.5):
+    """After a render: a frame every `every` seconds across the finished
+    Reel, for the last look before it is shown."""
+    r = subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', video],
+                       capture_output=True, text=True)
+    dur = float(r.stdout)
+    ts = [0.3] + [1.5 + k * every for k in range(int((dur - 2) / every))]
+    ims = [_frame(video, t, 216) for t in ts]
+    cols = 10
+    sheet = Image.new('RGB', (216 * cols, ims[0].height * ((len(ims) + cols - 1) // cols)))
+    for k, im in enumerate(ims):
+        sheet.paste(im, ((k % cols) * 216, (k // cols) * im.height))
+    sheet.save(out)
+    return out
 
 
 def timeline(shots):
@@ -394,11 +468,14 @@ def check_reading(lines, end):
 
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
-         lowres_ok=False, read_check=True, track=None):
+         lowres_ok=False, read_check=True, track=None, draft=False):
     """`track`: (file, start) plays one continuous stretch of that trailer's
     sound under the whole cut, in place of each shot's own; add 'music' as a
     third item to strip its voices (demucs). Footage never goes out muted
     with a bed instead (Mohammad, 3 Oct 2026).
+    `draft=True` is the quick look before the real encode: ultrafast at a
+    low quality, no end card, written next to `out` as <name>-draft.mp4 and
+    about three times faster. Fix shots on the draft, then render for real.
     `voice`: his processed read (templates/voice.py output). It plays over
     the footage, whose own sound drops about `duck_db` under it and comes back
     up in the pauses; the shots should add up to at least the read's length.
@@ -416,7 +493,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             check_reading(lines, end)
         for i, (text, _, _, kw) in enumerate(lines):   # a line outside the safe zone stops here, not after the encode
             line_layer(text, f'{tmp}/l{i}.png', **kw)
-        montage(shots, f'{tmp}/cut.mp4', lowres_ok)
+        montage(shots, f'{tmp}/cut.mp4', lowres_ok, fast=draft)
     except Exception:
         shutil.rmtree(tmp, ignore_errors=True)
         raise
@@ -441,11 +518,17 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     body = f'{tmp}/body.mp4'
     amap = ['-map', '0:a?', '-c:a', 'aac']
     subprocess.run(args + ['-filter_complex', ';'.join(fc), '-map', '[v]'] + amap +
-                   ['-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-preset', 'slow', '-crf', '16', body], check=True)
+                   ['-c:v', 'libx264', '-pix_fmt', 'yuv420p'] + (DRAFT_ENC if draft else ['-preset', 'slow', '-crf', '16'])
+                   + [body], check=True)
     if track:
         body = _track(body, track, end, f'{tmp}/track.mp4')
     if voice:
         body = _voice_over(body, voice, end, duck_db, f'{tmp}/voiced.mp4')
+    if draft:                              # no end card, no bed: the draft is for checking the cut
+        done = os.path.splitext(out)[0] + '-draft.mp4'
+        shutil.move(body, done)
+        shutil.rmtree(tmp, ignore_errors=True)
+        return done, starts, end
     sound = sound or G.SOUNDS.get(label, 'neon')
     bed = None                             # clips with no sound rotate the everyday bed; the jingle stays
     if sound == 'neon':
