@@ -193,7 +193,9 @@ The two brands never share a mark; their palettes are kin
 (Mohammad, 26 Sep 2026). What tells a Digital Lounge card apart is the
 indigo ground, the play mark, Dubai type and the right-to-left footer.
 No pink or magenta anywhere on it: to a Gulf reader it reads as girlish
-or for kids (Mohammad, 26 Sep 2026).
+or for kids (Mohammad, 26 Sep 2026). That rule is for the brand's own
+colours only, its themes, chips, wave lines, footer and end card; game
+footage and official art may be pink and stay in (Mohammad, 4 Oct 2026).
 
 Settled 26 Sep 2026: the name is Digital Lounge, ديجيتال لاونج (display
 name "ديجيتال لاونج | أخبار الألعاب"), and it stays; renaming on the spot
@@ -412,8 +414,9 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
     Micron each rendered four times over title cards, pink and a busy HUD.
     1. `reel.shotsheet(shots, sheet.jpg)`: first, middle and last frame of
        every shot in one sheet, about 20 s; it flags near-black frames
-       (title cards on black, fades) and pink or magenta. Fix the shot list
-       until the sheet is clean.
+       (title cards on black, fades). Fix the shot list until the sheet is
+       clean. Pink in the footage is no longer flagged (4 Oct 2026: the
+       no-pink rule covers our colours, not the games).
     2. `reel(..., draft=True)`: ultrafast, low quality, no end card, written
        as <name>-draft.mp4, about 2.5 minutes against 7 to 10 for the real
        encode. `reel.strip(video, strip.jpg)` lays its frames out.
@@ -498,7 +501,7 @@ because one colour had run for a while. `reel.py` now defaults to
 stylized periwinkle, playful mint, spectacle amber) instead of azure on
 every story, and the banner's wave lines run in the theme's colours across
 the top band behind the headline. Country chips stay bright indigo; no pink
-anywhere (official art that is pink is left out). `vivid=False` restores
+in our themes (official art that is pink stays; 4 Oct 2026). `vivid=False` restores
 the azure-only look. Pick a theme per story so a run of posts varies.
 More variations (Mohammad, 2 Oct 2026: "Honestly, I like them all"):
 - Four styles for the top band (`STYLES` in reel.py): `lines` (the first

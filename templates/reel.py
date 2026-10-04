@@ -274,6 +274,7 @@ def read_secs(text):
 
 
 DRAFT_ENC = ['-preset', 'ultrafast', '-crf', '30']
+PINK_FLAG = False         # Mohammad, 4 Oct 2026: pink in game footage and official art is fine
 PINK = (210, 242)       # PIL HSV hue band for pink and magenta (red and purple stay out)
 
 
@@ -292,7 +293,7 @@ def _flags(im):
     hd, sd, vd = h.getdata(), sat.getdata(), v.getdata()
     n = len(hd)
     pink = sum(1 for a, b, c in zip(hd, sd, vd) if PINK[0] <= a <= PINK[1] and b > 90 and c > 90)
-    if pink / n > 0.03:
+    if PINK_FLAG and pink / n > 0.03:      # off: the no-pink rule is for our colours, not the games
         out.append('pink')
     if sum(vd) / n < 22:
         out.append('black')

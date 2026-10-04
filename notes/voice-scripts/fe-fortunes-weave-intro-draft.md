@@ -96,5 +96,4 @@ Jingle end card. YouTube: a 10 second end screen for subscribe and another video
 1. Register (test above).
 2. Long-form YouTube on the Digital Lounge channel while Shorts stay off: his call.
 3. The opening file: upload it here; song lyrics Japanese or English, subtitled or not.
-4. Pink check: any hero whose official art is pink is shown briefly or framed away (house rule); to check against the footage.
-5. YouTube may put a Content ID claim on the song; keep it to about 25 seconds.
+4. YouTube may put a Content ID claim on the song; keep it to about 25 seconds.
