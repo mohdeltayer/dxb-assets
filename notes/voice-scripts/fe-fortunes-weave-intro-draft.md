@@ -1,4 +1,19 @@
-# Fire Emblem: Fortune's Weave · an Arabic fan's introduction (script draft v1, 4 Oct 2026)
+# Fire Emblem: Fortune's Weave · an Arabic fan's introduction (script draft v2, 4 Oct 2026)
+
+## Decided (Mohammad, 4 Oct 2026)
+- Account: Digital Lounge. He reads as an unnamed narrator: the channel's voice, no name on screen. His play time is the channel's own (house rule): "after 30 hours..." with no "I".
+- Cai is the character he stayed with: Cai is the thread through sections 4 and 6.
+- Opening movie: his download of Nintendo's official upload (file still to come here). Nintendo's store page also carries three official videos at 720p, now in uploads: fefw-n1.mp4 (7.5 min overview with name cards for each hero, e.g. Cai at 1:40, Theodora at 2:05), fefw-n2.mp4 (60 s trailer), fefw-n3.mp4 (2 min launch trailer).
+- Register: not decided. Test both on the hook paragraph below and choose by ear.
+
+### Register test (section 3, read both aloud)
+Formal:
+> في عاصمة إمبراطورية داغدا تُقام «الألعاب البطولية»، والفائز فيها يحصل على أمنية واحدة. لكن العالم يتجه نحو الدمار، وأنت البطل الذي تختاره Fortuna، إلهة القدر، لتعود عبر الزمن، وتجمع الحلفاء، وتواجه الإله الشيطاني Balor.
+
+Light Gulf (understood across the region):
+> في عاصمة إمبراطورية داغدا فيه بطولة اسمها «الألعاب البطولية»، واللي يفوز فيها ياخذ أمنية وحدة. بس العالم رايح للدمار، وإنت البطل اللي تختاره Fortuna، إلهة القدر، عشان ترجع بالزمن، وتجمع الحلفاء، وتواجه الإله الشيطاني Balor.
+
+On-screen text and captions stay formal either way.
 
 Two cuts from one recording:
 - **YouTube, horizontal 16:9, about 7 to 8 minutes**: the full introduction, in chapters.
@@ -50,7 +65,7 @@ To check: 2003 western debut (Fire Emblem on Game Boy Advance) and the Smash Mel
 
 Each over the character's moment in the opening, then his gameplay with that character.
 
-> **Cai**: فتى عازم على إنقاذ والده من السجن. [What he thinks of Cai.]
+> **Cai**: فتى عازم على إنقاذ والده من السجن. [Why Cai: the character the channel stayed with from the first hour; the longest of the four.]
 > **Dietrich**: مبارز لا يرحم، يبحث دائمًا عن خصم أقوى. [...]
 > **Theodora**: ملكة تسعى إلى تحقيق حلم طال انتظاره لمملكتها سراميس. [...]
 > **Leda**: موسيقية موهوبة تسعى إلى الانتقام. [...]
@@ -77,8 +92,9 @@ Jingle end card. YouTube: a 10 second end screen for subscribe and another video
 
 ---
 
-## Open questions for him
-1. Which account and voice: Digital Lounge with his first-person voice (an exception to "no first person", since this is a presented piece), or DXB-KNIGHT? And does long-form YouTube come back for this, while Shorts stay off?
-2. Arabic register: simple formal Arabic (as drafted) or a lighter Gulf/"white" Arabic for warmth?
-3. The opening movie: whose upload is the file (Nintendo's own channel or the game)? The song's lyrics: Japanese or English, and do we subtitle them?
-4. Which character he stayed with, and the one thing he would tell a newcomer.
+## Still open
+1. Register (test above).
+2. Long-form YouTube on the Digital Lounge channel while Shorts stay off: his call.
+3. The opening file: upload it here; song lyrics Japanese or English, subtitled or not.
+4. Pink check: any hero whose official art is pink is shown briefly or framed away (house rule); to check against the footage.
+5. YouTube may put a Content ID claim on the song; keep it to about 25 seconds.
