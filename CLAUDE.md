@@ -303,6 +303,11 @@ Instagram Reels (about 1,000 views each). Same name and mark as the other
 Digital Lounge accounts.
 Created 4 Oct 2026 about 08:05 Dubai: username the_digilounge, name
 ديجيتال لاونج, the play mark as picture; public profile set up next.
+Spotlight's detector flagged the FF7 Revelation Reel (Square Enix CG trailer)
+as "undisclosed AI-generated content" on 4 Oct; the in-app appeal (tap the
+"!" on the tile, then "here") stating it is the publisher's official
+trailer with our text was granted within about half an hour. Appeal any
+such flag on official footage; never add the AI label to work around it.
 Digital Lounge YouTube (@the_digilounge, the old "Digi-ديجي" channel)
 was rebranded on 27 Sep 2026: name "ديجيتال لاونج | أخبار الألعاب", Arabic
 description, banner `live/2026-09-27/youtube/digi-youtube-banner.png`
