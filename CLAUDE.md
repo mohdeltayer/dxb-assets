@@ -279,6 +279,14 @@ renders 1080x1920 slides: `famitsu_set(rows, hw, week, date, outdir)` gives
 a question cover with the week's box art, entries 5 to 1 (art full bleed,
 rank, title, this week and since launch), consoles, and an end slide.
 Nothing goes to TikTok through Postiz; the 1 Oct drop otherwise stands.
+It got 0 views by the morning of 4 Oct, so the account itself is not
+being distributed. Plan (Mohammad, 4 Oct 2026): nothing on TikTok for two
+weeks, then one original post from his phone (about 18 Oct); if that is 0
+too, a fresh account posted from the phone only, never through the API.
+History: about two years ago TikTok labelled this account a bot and barred
+it from monetising, yet its videos still reached people; now there is no
+notice and no reach, so the label has likely hardened after the burst of
+API posts on 27 to 28 Sep.
 Digital Lounge YouTube (@the_digilounge, the old "Digi-ديجي" channel)
 was rebranded on 27 Sep 2026: name "ديجيتال لاونج | أخبار الألعاب", Arabic
 description, banner `live/2026-09-27/youtube/digi-youtube-banner.png`
