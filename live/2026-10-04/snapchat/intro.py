@@ -10,6 +10,7 @@ import ig_ar as G
 import outro as O
 import sonic
 from snap_bg import waves
+import ghost
 
 W, H, FPS, DUR = 1080, 1920, 30, 10.5
 CX = W // 2
@@ -45,11 +46,12 @@ def foot(d):
     f = A.F('Medium', 44)
     tw = d.textlength(G.HANDLE, font=f)
     g, gap = 52, 26
-    total = 2 * g + gap + 34 + tw
+    total = 3 * g + 2 * gap + 34 + tw
     x = CX - total / 2
     O._glyph(d, 'x', x, FOOT_Y - g / 2, g, A.INK)
     O._glyph(d, 'instagram', x + g + gap, FOOT_Y - g / 2, g, A.INK)
-    d.text((x + 2 * g + gap + 34, FOOT_Y), G.HANDLE, font=f, fill=A.BODY, anchor='lm')
+    ghost.glyph(d, x + 2 * (g + gap), FOOT_Y - g / 2, g, A.INK)
+    d.text((x + 3 * g + 2 * gap + 34, FOOT_Y), G.HANDLE, font=f, fill=A.BODY, anchor='lm')
 
 
 def render(out):
