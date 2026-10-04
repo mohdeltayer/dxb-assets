@@ -283,10 +283,14 @@ It got 0 views by the morning of 4 Oct, so the account itself is not
 being distributed. Plan (Mohammad, 4 Oct 2026): nothing on TikTok for two
 weeks, then one original post from his phone (about 18 Oct); if that is 0
 too, a fresh account posted from the phone only, never through the API.
-History: about two years ago TikTok labelled this account a bot and barred
-it from monetising, yet its videos still reached people; now there is no
-notice and no reach, so the label has likely hardened after the burst of
-API posts on 27 to 28 Sep.
+History: an account he used about two years ago was labelled a bot and
+barred from monetising but still reached people. That account seems gone:
+in Sep 2026 TikTok made him register from scratch, so @the_digilounge is
+effectively new and the old label is not the likely cause. More likely: a
+brand-new account posting about nine videos on day one through a
+third-party app (Postiz), most of them reposted publisher trailers, which
+reads as automated, unoriginal content. The same mix went to YouTube,
+which also sat near zero.
 Digital Lounge YouTube (@the_digilounge, the old "Digi-ديجي" channel)
 was rebranded on 27 Sep 2026: name "ديجيتال لاونج | أخبار الألعاب", Arabic
 description, banner `live/2026-09-27/youtube/digi-youtube-banner.png`
