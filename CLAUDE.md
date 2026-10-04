@@ -291,6 +291,16 @@ brand-new account posting about nine videos on day one through a
 third-party app (Postiz), most of them reposted publisher trailers, which
 reads as automated, unoriginal content. The same mix went to YouTube,
 which also sat near zero.
+Snapchat test (Mohammad, 4 Oct 2026): Digital Lounge gets a Snapchat
+public profile, because Saudi Arabia and the UAE are among Snapchat's
+strongest markets and Spotlight (its TikTok-style feed) takes the same 9:16
+Reels. He posts by hand from his phone; nothing goes through Postiz until the
+account shows reach, and then only after he says so. Start at one or two
+posts a day, strongest stories and original material first (our charts and
+stills, his gameplay), trailers last. Each approved Reel is handed to him
+with a short Arabic Spotlight caption. Judge it after two weeks against
+Instagram Reels (about 1,000 views each). Same name and mark as the other
+Digital Lounge accounts.
 Digital Lounge YouTube (@the_digilounge, the old "Digi-ديجي" channel)
 was rebranded on 27 Sep 2026: name "ديجيتال لاونج | أخبار الألعاب", Arabic
 description, banner `live/2026-09-27/youtube/digi-youtube-banner.png`
