@@ -47,8 +47,9 @@ ACCOUNTS = {
     'cmujo38ww12j3o80ygi3webqt': ('Digital Lounge', 'instagram'),
     'cmuk0rett044oo80y3ycfes66': ('Digital Lounge', 'tiktok'),
     'cmuk20rj302oqpr0ygqzcdzch': ('Digital Lounge', 'youtube'),
+    'cmuu27hg405tls00yikmo4ij3': ('Digital Lounge', 'threads'),
 }
-SUFFIX = re.compile(r'(-(ar|ig|tt|yt|dxb|thread|retry|short|now|v\d+))+$')
+SUFFIX = re.compile(r'(-(ar|ig|tt|yt|th|dxb|thread|retry|short|now|v\d+))+$')
 DUBAI = datetime.timezone(datetime.timedelta(hours=4))
 
 
