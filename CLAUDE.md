@@ -895,6 +895,21 @@ closer within the same evening, and let length vary from one line to a
 few paragraphs. Before queuing a batch, read the posts back to back and
 rewrite any two that share a shape.
 
+## Short X posts on both accounts (Mohammad, 5 Oct 2026)
+
+X showed impressions but no plays, likes or follows on Digital Lounge, and
+people scrolled past. From 5 Oct every X post, DXB-KNIGHT and Digital
+Lounge alike, is short: one or two lines that hook (the stake, the number,
+the quote), and the video or card carries the rest. Digital Lounge's full
+story stays in the Reel and the Instagram caption; Threads takes the short
+X text. On DXB-KNIGHT this tightens the fast lane below: the post still
+attributes its claim ("per Digital Foundry"), in the fewest words.
+Vertical Reels stay on X: X now plays 9:16 large in the timeline and in its
+swipe-through video feed (his Fandom example, 5 Oct), so no 16:9 cut. The
+first frame carries a readable title because X autoplays muted. A one-week
+test from the RuneScape series post (4 Oct, 20:45), judged about 11 Oct in
+`newsroom/experiments.md`.
+
 ## Two lanes: fast and card
 
 The fast lane posts breaking news within minutes, on `templates/fast.py`:
