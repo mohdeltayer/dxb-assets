@@ -1049,3 +1049,6 @@ once a batch's receipts are in, its media is removed from dxb-queue in the
 next commit (the Reels stay in dxb-assets). The publish checkout had grown
 to 12.5 minutes with 4.4 GB of posted video; never strip a folder that has
 no receipt.json, and never push while a publish run is in progress.
+A weekly workflow in dxb-queue (`.github/workflows/cleanup.yml`, Sunday
+03:00 Dubai, also runnable by hand) does the same as a backstop; it shares
+the publisher's concurrency group, so it never runs during a publish.
