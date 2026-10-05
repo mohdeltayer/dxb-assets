@@ -871,9 +871,10 @@ To save tokens the main session acts as the editor and hands repeated
 production work to cheaper subagents (sonnet or haiku) using the task cards
 in `newsroom/delegation.md`: digest reading, footage fetching, renders,
 snap and phone copies, drafts and preflight, grammar review, publish checks
-and housekeeping. The main session keeps story choice, verification, the
-Arabic writing, judging frames, everything said to Mohammad, and the queue
-step after his "go". Helpers never queue, approve or push to dxb-queue.
+and housekeeping, and, once he has said "go", the publishing steps. He talks
+only to the main session, which keeps story choice, verification, the Arabic
+writing, judging frames and everything said to him, and hands work off in
+parallel so it can move to the next point. Nothing is queued without his "go".
 
 ## No em dashes
 

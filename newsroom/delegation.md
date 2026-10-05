@@ -5,14 +5,17 @@ judges the frames and talks to Mohammad. Repeated production work goes to a
 cheaper subagent (Agent tool with `model`), which works only from the task card
 below and the files it names, and reports back in a few lines.
 
-Helpers never queue, push to dxb-queue, approve, or message Mohammad. Posting
-stays with the main session, after his "go", every time.
+Mohammad talks only to the main session. Helpers never message him and never
+decide anything he has not approved. Once he has said "go" for a set of posts
+and their times, the main session may hand the publishing steps to a helper
+(Publish card below) and move on; helpers run in parallel where the work
+allows. Nothing is queued without his "go".
 
 ## Kept by the main session
 - Choosing stories, verifying against primaries, lanes, chips, times.
 - Writing the Arabic (both skills, glossary, references) and reading the review.
 - Looking at shot sheets, draft strips and final strips, and deciding fixes.
-- Approval, `git mv` to queue, dry run, push, and everything said to Mohammad.
+- Everything said to Mohammad, and deciding what is ready to publish.
 
 ## Task cards
 
@@ -39,6 +42,12 @@ Return the preflight lines.
 
 **Grammar review (sonnet).** The `arabic-grammar-review` stage on a given
 text file, report only, no edits.
+
+**Publish (haiku), only after his "go".** Given the exact draft folders, times and
+his approval note: `preflight.py approve` each, `git mv` to queue, `DRY_RUN=1
+publish.py` and confirm it lists exactly those folders (stop and report if not),
+push to dxb-queue main, wait for the receipts commit, read the captions back with
+`postsListTool`, `ledger.py sync`, push dxb-assets. Return the post ids and states.
 
 **Publish check (haiku).** `postsListTool` for the given window: report each
 post's state and error. Then `newsroom/ledger.py sync`, commit and push
