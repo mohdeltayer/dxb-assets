@@ -1,3 +1,6 @@
 # Python bytecode, generated whenever the templates are imported to render a card
 __pycache__/
 *.py[cod]
+
+# Draft Reels (reel(..., draft=True)): working files, never posted
+cards/**/*-draft.mp4
