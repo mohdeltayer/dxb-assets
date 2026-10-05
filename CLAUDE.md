@@ -324,6 +324,14 @@ anime-style art) and, later, his gameplay. Reels built on photorealistic CG
 trailers (Metal Gear, FF7, Call of Duty and the like) skip Snapchat and go to
 X, Instagram and Threads as normal. Any flag that still comes is appealed in
 the app with the publisher's name and the trailer it came from.
+Posting route (Mohammad, 5 Oct 2026): Snapchat stays hand-posted, from his
+phone or from Snap's web uploader at my.snapchat.com (Post to Spotlight / My
+Story). Postiz has no Snapchat channel; API services (ShortSync, bundle.social,
+Ayrshare) were compared on 5 Oct and parked, and browser automation of his
+account is out (Snap's terms forbid automated or semi-automated access). For
+every approved Reel that passes the filter, hand him the `-snap.mp4` copy
+together with its Arabic Spotlight caption (about 160 characters, Arabic
+first, two or three hashtags) in one message, ready to drag and paste.
 Snapchat copies drop the platform row (Snap's recommendation guidelines,
 Quality, read 4 Oct 2026: a username paired with another app's name or logo
 is not eligible for Spotlight, nor are off-platform links, unoriginal
