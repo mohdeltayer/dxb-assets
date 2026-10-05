@@ -815,6 +815,12 @@ digests just covered as read with `update_message`
 (`removeLabels: ["unread"]`), so the next sweep starts from genuinely new
 sheets rather than re-reading the day.
 
+Variety (Mohammad, 5 Oct 2026, after a run of Witcher and RuneScape posts:
+"I've been posting about it for a while now"): a game or series that went out
+in the last few days does not come back in a shortlist unless there is real
+news (a launch, a date, a big number, an official announcement), and a
+slot's picks are spread across different games and publishers.
+
 Come back with a ranked shortlist, not a summary of every item. For each
 candidate give the verification status, and the template, background,
 accent and label already chosen — then ask for his take. He supplies the
