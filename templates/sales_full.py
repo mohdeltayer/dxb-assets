@@ -9,7 +9,8 @@ filling the 9:16 frame and panning slowly, with the numbers laid over a
 soft band low in the frame: the rank large in the theme colour, the box
 art beside it, the title as the publisher writes it, platform, last week's
 place and the two figures (this week, since launch). Hardware follows on a
-dimmed mosaic of the week's games, then the end card with the stats
+dimmed mosaic of the week's games, counting from last week's numbers to
+this week's with the rows re-sorting live (hw_clip), then the end card with the stats
 jingle; the stats bed plays under the whole chart. Everything stays in the
 Reels safe zone (ig_ar.SAFE_*).
 
@@ -180,22 +181,126 @@ def hook_layer(hook, sub, source, date, theme, path):
     lay.save(path); return path
 
 
-def hw_layer(hw, title, week_label, accent, path):
-    lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-    _top_line(lay, title, week_label, accent)
-    widest = max(h['week'] for h in hw)
-    y = 560
-    for h in hw:
-        row = S._hw_row(h, 1.0, h['week'], widest)
-        lay.alpha_composite(row, (L, y)); y += S.ROW_H + 22
-    if y > BOT:
+CONSOLES = {'Switch 2': 'switch2.png', 'Switch': 'switch.png', 'PS5': 'ps5.png',
+            'Xbox Series': 'xbox-series.png'}
+HW_ROW, HW_GAP, HW_Y = 196, 20, 580          # four rows end at 1424, inside the safe zone
+PLATE = 168
+
+
+def _plate(name):
+    """The console's own product shot, contained on a soft indigo plate the
+    size of the games' box art."""
+    pl = Image.new('RGBA', (PLATE, PLATE), (0, 0, 0, 0))
+    g = Image.new('L', (PLATE, PLATE), 0)
+    ImageDraw.Draw(g).ellipse([-30, -30, PLATE + 30, PLATE + 30], fill=255)
+    g = g.filter(ImageFilter.GaussianBlur(28))
+    ground = Image.composite(Image.new('RGB', (PLATE, PLATE), A.hx('#5552E0')),
+                             Image.new('RGB', (PLATE, PLATE), A.hx('#2A2870')), g).convert('RGBA')
+    m = Image.new('L', (PLATE, PLATE), 0)
+    ImageDraw.Draw(m).rounded_rectangle([0, 0, PLATE - 1, PLATE - 1], radius=16, fill=255)
+    pl.paste(ground, (0, 0), m)
+    f = os.path.join(os.path.dirname(__file__), 'assets', 'consoles', CONSOLES.get(name, ''))
+    if os.path.isfile(f):
+        im = Image.open(f).convert('RGBA'); im.thumbnail((PLATE - 22, PLATE - 22), Image.LANCZOS)
+        pl.alpha_composite(im, ((PLATE - im.width) // 2, (PLATE - im.height) // 2))
+    return pl
+
+
+def _hw_row(h, week, life, frac_bar, change_a, plate):
+    """One hardware row at a moment of the count: plate right, name, total,
+    this moment's number and bar, and the change line fading in at the end."""
+    w = R - L
+    lay = Image.new('RGBA', (w, HW_ROW), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    d.rounded_rectangle([0, 0, w - 1, HW_ROW - 1], radius=18, fill=A.hx('#1E1D4A') + (232,),
+                        outline=A.hx('#3F3DA8') + (255,), width=2)
+    lay.alpha_composite(plate, (w - PLATE - 14, (HW_ROW - PLATE) // 2))
+    x = w - PLATE - 34                              # right column: name, then the total
+    d.text((x, 48), h['name'], font=A.F('Bold', 40), fill=A.INK, anchor='rm')
+    d.text((x, 100), f'الإجمالي {S._fmt(life)}', font=A.F('Regular', 26), fill=A.BODY, anchor='rm', **G.AR)
+    nf = A.F('Bold', 50)                            # left: this moment's number, the change under it
+    d.text((24, 50), S._fmt(round(week)), font=nf, fill=A.INK, anchor='lm')
+    d.text((24 + d.textlength(S._fmt(round(week)), font=nf) + 12, 56), 'جهاز', font=A.F('Regular', 26),
+           fill=A.BODY, anchor='lm', **G.AR)
+    if change_a > 0 and h.get('last'):
+        ch = (h['week'] - h['last']) / h['last'] * 100
+        col = UP if ch >= 0 else DOWN
+        cl = Image.new('RGBA', (w, HW_ROW), (0, 0, 0, 0)); cd = ImageDraw.Draw(cl)
+        ty, ct = 100, f'{abs(ch):.0f}% عن الأسبوع الماضي'
+        cf = A.F('Medium', 26)
+        cd.text((24, ty), ct, font=cf, fill=col, anchor='lm', **G.AR)
+        tx = 24 + cd.textlength(ct, font=cf, **G.AR) + 10   # the triangle leads the line, read right to left
+        tri = ([(tx, ty + 8), (tx + 18, ty + 8), (tx + 9, ty - 8)] if ch >= 0 else
+               [(tx, ty - 8), (tx + 18, ty - 8), (tx + 9, ty + 8)])
+        cd.polygon(tri, fill=col)                    # Dubai has no arrows, so it is drawn
+        cl.putalpha(cl.getchannel('A').point(lambda v: int(v * change_a)))
+        lay.alpha_composite(cl)
+    span = x - 24                                   # the bar grows leftward from under the name
+    bw = max(8, span * frac_bar)
+    d.rounded_rectangle([x - bw, 140, x, 166], radius=11, fill=A.AZURE)
+    return lay
+
+
+def _ease2(x):
+    x = min(1.0, max(0.0, x))
+    return x * x * (3 - 2 * x)
+
+
+def hw_clip(hw, title, week_label, accent, bg, out, secs=8.0, hold=1.2, count=2.4, fast=False,
+            source='فاميتسو (Famitsu)'):
+    """The hardware slide as its own clip (Mohammad, 5 Oct 2026): every
+    console opens on last week's number and counts to this week's, its bar
+    following, and the rows keep sorted by the live numbers, so a console that
+    overtakes another slides up past it. The caption reads «الأسبوع الماضي»
+    over the opening numbers and «هذا الأسبوع» once the count starts; the
+    change on last week fades in when the count lands."""
+    fps = 30
+    n = int(round(secs * fps))
+    base = Image.open(bg).convert('RGBA').resize((W, H))
+    _top_line(base, title, week_label, accent, source)
+    caps = []
+    for t in ('الأسبوع الماضي', 'هذا الأسبوع'):
+        c = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+        _text(c, (R, HW_Y - 54), t, A.F('Bold', 52), accent, 'rs', ar=True, stroke=5)
+        caps.append(c)
+    plates = {h['name']: _plate(h['name']) for h in hw}
+    top = max(max(h['week'], h.get('last') or h['week']) for h in hw)
+    slot = lambda k: HW_Y + k * (HW_ROW + HW_GAP)
+    if slot(len(hw)) - HW_GAP > BOT:
         raise ValueError('hardware rows run past the safe zone')
-    lay.save(path); return path
+    start = lambda h: h.get('last') or h['week']
+    ys = {h['name']: slot(k) for k, h in enumerate(sorted(hw, key=lambda h: -start(h)))}
+    proc = subprocess.Popen(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24',
+                             '-s', f'{W}x{H}', '-r', str(fps), '-i', '-', '-c:v', 'libx264', '-pix_fmt', 'yuv420p']
+                            + (RL.DRAFT_ENC if fast else ['-preset', 'slow', '-crf', '16']) + [out],
+                            stdin=subprocess.PIPE)
+    for i in range(n):
+        t = i / fps
+        k = _ease2((t - hold) / count)
+        cur = {h['name']: start(h) + (h['week'] - start(h)) * k for h in hw}
+        order = sorted(hw, key=lambda h: -cur[h['name']])
+        for j, h in enumerate(order):                # each row eases toward its live place
+            ys[h['name']] += (slot(j) - ys[h['name']]) * 0.2
+        fr = base.copy()
+        ca = _ease2((t - hold + 0.15) / 0.3)
+        for c, a in ((caps[0], 1 - ca), (caps[1], ca)):
+            if a > 0.01:
+                cc = c.copy(); cc.putalpha(c.getchannel('A').point(lambda v: int(v * a))); fr.alpha_composite(cc)
+        chg = _ease2((t - hold - count) / 0.4)
+        for h in sorted(hw, key=lambda h: ys[h['name']], reverse=True):   # the row moving up draws on top
+            life = h['life'] - h['week'] + cur[h['name']]
+            row = _hw_row(h, cur[h['name']], round(life), cur[h['name']] / top, chg, plates[h['name']])
+            fr.alpha_composite(row, (L, int(round(ys[h['name']]))))
+        proc.stdin.write(fr.convert('RGB').tobytes())
+    proc.stdin.close()
+    if proc.wait():
+        raise RuntimeError('hardware clip encode failed')
+    return out
 
 
 def reel(rows, week_label, date, out, hardware=(), hook='من تصدّر مبيعات اليابان هذا الأسبوع؟',
          title='الأكثر مبيعًا في اليابان', hw_title='مبيعات الأجهزة في اليابان',
-         source='فاميتسو (Famitsu)', theme='gold', hook_secs=3.6, hw_secs=6.5, draft=False):
+         source='فاميتسو (Famitsu)', theme='gold', hook_secs=3.6, hw_secs=8.0, draft=False):
     accent = G.ACCENTS[theme]
     rows = sorted(rows, key=lambda r: -r['rank'])        # countdown, 10 to 1
     os.makedirs(C.U + SUB, exist_ok=True)
@@ -212,17 +317,11 @@ def reel(rows, week_label, date, out, hardware=(), hook='من تصدّر مبي�
         shots = [(f'{SUB}/hook.jpg', None, hook_secs, (0.5, 0.5))]
         for r in rows:
             shots.append((up(r['shot'][0]), None, _secs(r['rank']), r['shot'][1]))
-        if hardware:
-            bg = [(up(r['shot'][0]), sum(r['shot'][1]) / 2) for r in sorted(rows, key=lambda r: r['rank'])[:6]]
-            mosaic(bg, C.U + f'{SUB}/hw-bg.jpg', cols=2, rows=3, dim=0.55)
-            shots.append((f'{SUB}/hw-bg.jpg', None, hw_secs, (0.5, 0.5)))
         starts, end = RL.timeline(shots)
         layers = [(hook_layer(hook, week_label, source, date, theme, f'{tmp}/h.png'), 0, starts[1] + RL.X)]
         for i, r in enumerate(rows, 1):
             z = starts[i + 1] + RL.X if i + 1 < len(starts) else end
             layers.append((entry_layer(r, title, week_label, accent, f'{tmp}/e{i}.png'), starts[i], z))
-        if hardware:
-            layers.append((hw_layer(hardware, hw_title, week_label, accent, f'{tmp}/hw.png'), starts[-1], end))
         RL.montage(shots, f'{tmp}/cut.mp4', fast=draft)
         args = ['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', f'{tmp}/cut.mp4']
         for p, _, _ in layers:
@@ -236,6 +335,18 @@ def reel(rows, week_label, date, out, hardware=(), hook='من تصدّر مبي�
         body = f'{tmp}/body.mp4'
         subprocess.run(args + ['-filter_complex', ';'.join(fc), '-map', '[v]', '-c:v', 'libx264', '-pix_fmt', 'yuv420p']
                        + (RL.DRAFT_ENC if draft else ['-preset', 'slow', '-crf', '16']) + [body], check=True)
+        if hardware:                       # the animated hardware slide, crossfaded on
+            bg = [(up(r['shot'][0]), sum(r['shot'][1]) / 2) for r in sorted(rows, key=lambda r: r['rank'])[:6]]
+            mosaic(bg, f'{tmp}/hw-bg.jpg', cols=2, rows=3, dim=0.55)
+            hw_clip(hardware, hw_title, week_label, accent, f'{tmp}/hw-bg.jpg', f'{tmp}/hw.mp4', hw_secs,
+                    fast=draft, source=source)
+            subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', body, '-i', f'{tmp}/hw.mp4',
+                            '-filter_complex', f'[0:v]settb=AVTB,fps=30[a];[1:v]settb=AVTB,fps=30[b];'
+                            f'[a][b]xfade=transition=fade:duration={RL.X}:offset={end - RL.X:.3f}[v]',
+                            '-map', '[v]', '-c:v', 'libx264', '-pix_fmt', 'yuv420p']
+                           + (RL.DRAFT_ENC if draft else ['-preset', 'slow', '-crf', '16']) + [f'{tmp}/all.mp4'], check=True)
+            body = f'{tmp}/all.mp4'
+            end += hw_secs - RL.X
         if draft:
             done = os.path.splitext(out)[0] + '-draft.mp4'
             shutil.move(body, done)
