@@ -14,6 +14,7 @@ has said so; everything else is a working suggestion.
 | Voice | Outlet voice, no first person. His play time runs uncredited as the account's own: "انطباعات أولية بعد 10 ساعات مع …" (no "محرر ديجيتال لاونج": readers are already on the account) | Approved 27 Sep 2026 |
 | Nintendo | نينتيندو (Nintendo), his spelling, also in نينتيندو لايف (Nintendo Life) | Approved 26 Sep 2026 |
 | Game and series names as subjects | Feminine agreement, because the unstated noun is لعبة or سلسلة: ستحصل Minecraft, تواصل Control Resonant (not يحصل Minecraft) | Approved 27 Sep 2026 |
+| Square Enix | سكوير (Square Enix) at first mention, سكوير alone after; on cards and Reels the source reads سكوير. Not سكوير إنكس | Approved 5 Oct 2026 |
 | Bandai Namco | بانداي نامكو (Bandai Namco); never باندا نامكو, which reads as "Panda Namco" | Approved 27 Sep 2026 |
 | HANDS ON chip | نظرة أولى (fallback انطباعات; not تجربة, which reads as a test) | Approved 26 Sep 2026 |
 | Text direction | Every post, paragraph and line starts with an Arabic word, so X and Instagram set it right to left: تصل DYNASTY WARRIORS 3، not DYNASTY WARRIORS 3 تصل. A paragraph that opens on an English name (or a digit before one) can register as English and align left. Hashtag lines lead with the Arabic tags: #ألعاب #أخبار_الألعاب #DynastyWarriors | Approved 27 Sep 2026 |
