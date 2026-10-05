@@ -24,6 +24,17 @@ dxbknight-digest@agentmail.to, oldest first. Return one line per item: age
 label, headline, primary URL, status, and whether the ledger has it
 (`python3 newsroom/ledger.py find "<keyword>"`). Do not mark anything read.
 
+**Internal scout (sonnet).** A second check on the email scout. For the
+window since the last review slot, read these primaries directly: PlayStation
+Blog, Xbox Wire, Nintendo news (nintendo.com/us/whatsnew and Nintendo's own
+X-free pages), Steam news for the week's big titles, Famitsu and Gematsu
+(Japan), IGN Middle East Arabic, True Gaming, Saudi Gamer, Tbreak, and Sony,
+Nintendo and Xbox UAE and Saudi pages (store, support, prices). Then read the
+email digests for the same window (do not mark them read). Return three
+lists, one line per story with its primary URL and time: found by both, only
+found internally (gaps in the email scout), only in the digests. Flag anything
+that looks like breaking news at the top. No social media scraping, no logins.
+
 **Footage (sonnet).** For a named game: list its Steam trailers
 (`templates/trailer.py`), Nintendo store `publicId`s under its own nsuid, or
 IGN MP4s; fetch the asked-for ones to uploads; make `seekmap.py` sheets.
@@ -55,3 +66,28 @@ dxb-assets. Return one line per post.
 
 **Housekeeping (haiku).** Commit and push leftover changes in dxb-assets
 (ledgers, story files, cards); never touch dxb-queue.
+
+## Review slots (Mohammad, 5 Oct 2026)
+
+He reviews at four fixed times, Dubai time: **06:30, 10:00, 14:00, 17:30**.
+A trigger wakes the main session about 35 minutes before each slot:
+1. Launch in parallel: the Digest digest card (all unread digests) and the
+   Internal scout card (window since the previous slot).
+2. Main session: merge both lists, run `ledger.py find`, verify the
+   candidates against their primaries, decide lanes, chips, themes, accounts
+   and proposed times, and note anything the email scout missed.
+3. At the slot: send him the ranked shortlist (and, at 17:30 on Thursdays,
+   Famitsu), ask for takes on DXB-KNIGHT items, and mark the covered digests
+   read. A thin window gets a one-line "nothing worth posting" instead.
+4. On his green light, build (Footage, Render, Drafts cards in parallel), and
+   bring the Reels back for his "go"; then the Publish card.
+
+Between slots he is only interrupted for genuine breaking news (عاجل level).
+
+**Event slots.** Shows agreed one at a time from `newsroom/events.md`
+(Nintendo Direct, State of Play, The Game Awards and the like, once the
+date and time are confirmed): propose to him a pre-show slot (what to
+expect, time in Dubai), live coverage during the show (announcements
+captured as they land and checked against the official page before
+posting), and a wrap-up slot after it; set one-off triggers only after he
+agrees each one.

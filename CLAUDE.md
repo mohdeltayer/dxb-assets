@@ -795,9 +795,14 @@ a piece that lands at 15:00 appears once and never again.
 
 Sweep all unread digests before recommending anything.
 
-There is no scheduled sweep and no Routine. Mohammad asks when he wants
-one, at no fixed cadence, so "unread" has to mean "not yet worked
-through" or the request has no edge. After reporting on a sweep, mark the
+Review slots (Mohammad, 5 Oct 2026, replacing sweeps on request only): he
+reviews at 06:30, 10:00, 14:00 and 17:30 Dubai. A trigger wakes the session
+about 35 minutes before each, the digests and an internal scout (a second,
+independent read of the primaries) run in parallel, and the shortlist is in
+front of him at the slot; the routine is in `newsroom/delegation.md`. Shows
+(Nintendo Direct, The Game Awards and the like) get event slots agreed one
+at a time once their time is confirmed. "Unread" still means "not yet worked
+through", and he can still ask for a sweep at any time. After reporting on a sweep, mark the
 digests just covered as read with `update_message`
 (`removeLabels: ["unread"]`), so the next sweep starts from genuinely new
 sheets rather than re-reading the day.
