@@ -316,6 +316,14 @@ as "undisclosed AI-generated content" on 4 Oct; the in-app appeal (tap the
 "!" on the tile, then "here") stating it is the publisher's official
 trailer with our text was granted within about half an hour. Appeal any
 such flag on official footage; never add the AI label to work around it.
+Snapchat filter (Mohammad, 5 Oct 2026, after a second AI flag, this time
+on Konami's Metal Gear Solid Δ launch trailer): the detector trips on
+photorealistic in-engine CG, so Snapchat only gets our own graphics (sales
+charts, the PS Store Reel kind), stylised or animated games (Nintendo,
+anime-style art) and, later, his gameplay. Reels built on photorealistic CG
+trailers (Metal Gear, FF7, Call of Duty and the like) skip Snapchat and go to
+X, Instagram and Threads as normal. Any flag that still comes is appealed in
+the app with the publisher's name and the trailer it came from.
 Snapchat copies drop the platform row (Snap's recommendation guidelines,
 Quality, read 4 Oct 2026: a username paired with another app's name or logo
 is not eligible for Spotlight, nor are off-platform links, unoriginal

@@ -37,3 +37,4 @@ posting time.
 |---|---|
 | Digital Lounge Reels cut from footage outperform still slideshows on the same kind of story | Tag every Reel's format; compare after about 20 of each |
 | A number in the first frame lifts sales and specs stories | Alternate the opening frame on comparable stories for two weeks |
+| 5 Oct 2026 | Snapchat | Metal Gear Otsuka Reel flagged as undisclosed AI (Konami's photorealistic MGS Δ trailer), second flag after FF7 on 4 Oct; appealed. Filter from now: no photoreal CG trailer Reels on Snapchat, our graphics and stylised games only | Judge with the two-week test, about 18 Oct |
