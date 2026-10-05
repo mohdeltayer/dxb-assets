@@ -1044,3 +1044,8 @@ After a batch's first slot, check its posts read PUBLISHED in Postiz
 means Postiz accepted the post. On 3 Oct 2026 ten due posts sat in QUEUE
 for 40 minutes and went out only when Mohammad refreshed the posts view
 in the Postiz app, and the 07:00 Steam Deck X post ended in ERROR.
+Posted folders keep only job.json and receipt.json (Mohammad, 5 Oct 2026):
+once a batch's receipts are in, its media is removed from dxb-queue in the
+next commit (the Reels stay in dxb-assets). The publish checkout had grown
+to 12.5 minutes with 4.4 GB of posted video; never strip a folder that has
+no receipt.json, and never push while a publish run is in progress.

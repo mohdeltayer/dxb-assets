@@ -58,7 +58,8 @@ text file, report only, no edits.
 his approval note: `preflight.py approve` each, `git mv` to queue, `DRY_RUN=1
 publish.py` and confirm it lists exactly those folders (stop and report if not),
 push to dxb-queue main, wait for the receipts commit, read the captions back with
-`postsListTool`, `ledger.py sync`, push dxb-assets. Return the post ids and states.
+`postsListTool`, `ledger.py sync`, push dxb-assets. Then `git rm` the media (not
+the .json files) from the folders that now have receipt.json and push that too. Return the post ids and states.
 
 **Publish check (haiku).** `postsListTool` for the given window: report each
 post's state and error. Then `newsroom/ledger.py sync`, commit and push
