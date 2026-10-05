@@ -865,6 +865,16 @@ change nothing already in Postiz.
   together), and text-only DXB-KNIGHT posts when art is not ready (today
   every post carries a card).
 
+## Delegation (Mohammad, 5 Oct 2026)
+
+To save tokens the main session acts as the editor and hands repeated
+production work to cheaper subagents (sonnet or haiku) using the task cards
+in `newsroom/delegation.md`: digest reading, footage fetching, renders,
+snap and phone copies, drafts and preflight, grammar review, publish checks
+and housekeeping. The main session keeps story choice, verification, the
+Arabic writing, judging frames, everything said to Mohammad, and the queue
+step after his "go". Helpers never queue, approve or push to dxb-queue.
+
 ## No em dashes
 
 Mohammad does not use the em dash. Not in post text, not in card copy,
