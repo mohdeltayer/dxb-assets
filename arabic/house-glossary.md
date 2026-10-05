@@ -36,6 +36,7 @@ has said so; everything else is a working suggestion.
 | UAE price (AED, dirhams) | The Central Bank's dirham symbol, left of the numeral, same height as the digits, never with "AED" or "درهم" beside it: `templates/assets/dirham-symbol-mask.png`, cut from the CBUAE guideline's own vector. Written-out text in a caption keeps درهمًا | Approved 30 Sep 2026 |
 | Physical edition | Not النسخة المادية (reads oddly in Arabic); leave the edition out, or name what the reader holds if it matters | Approved 30 Sep 2026 |
 | Retailer prices | Never name the shop a price came from (Geekay, Virgin, Amazon) in a post or card: readers take it as an undeclared sponsor. Show the price alone | Approved 30 Sep 2026 |
+| Activision | أكتيفيجن (Activision); later mentions أكتيفيجن | spelling used on 2, 3 and 5 Oct; not أكتيفجن | Suggested 5 Oct 2026 |
 | Take-Two Interactive | تيك-تو إنتراكتيف (Take-Two Interactive), hyphenated; later mentions الشركة or تيك-تو. Bare تيك تو reads as TikTok (DeepL read it back that way) | Suggested 1 Oct 2026 |
 | Silent / quiet revision (hardware changed without an announcement) | تعديل خفي | not تعديل صامت, a calque of "silent" that reads oddly; the PS5 Slim Reel headline of 3 Oct went out as «تعديل صامت داخل PS5 Slim» | Approved 3 Oct 2026 |
 | Instead of (price was X) | بدلًا من | not bare بدل in formal copy | Suggested 29 Sep 2026 |
