@@ -736,13 +736,22 @@ top 10 card and a hardware card for the same post, with week-on-week change
 (green up, red down; red is kept out of the row colours for that reason). An untranslated title stops
 the run: add the publisher's English name to `TITLES`. Chip STATS, cold,
 reported unless Mohammad gives a take.
-Digital Lounge sales Reel needs a new layout (Mohammad, 1 Oct 2026): the
-`sales_reel` chart and the `short.chart` countdown still sit as rows on a
-flat ground with empty space above and below, which the full-screen
-format dropped everywhere else. Let go for the 21 to 27 Sep week; from the
-next Famitsu week (about 8 Oct) the chart must fill the 9:16 frame in the
-spirit of `reel.py` (box art or footage full bleed, numbers over it, no
-bare bands). Show him a draft before that Thursday.
+Digital Lounge sales Reel (approved by Mohammad, 5 Oct 2026; replaces
+`sales_reel` and `short.chart`, whose rows on a flat ground left bare bands):
+`templates/sales_full.py`, `reel(rows, week_label, date, out, hardware=hw)`.
+It opens on the question over a mosaic of the top four, counts down 10 to 1
+with each game's official screenshot full frame and panning (the rank, box
+art, title, platform, last week's place and the two figures over a soft band
+low in the frame), then the hardware slide: every console opens on last
+week's number in last week's order and counts to this week's, the rows
+re-sorting live so one that overtakes slides up, with the console's own
+product shot on the right (`templates/assets/consoles/`). Each row takes
+`shot=(screenshot, (from, to))`: the publisher's store page, Steam or a press
+kit, 1920 wide where one exists, letterbox bars cropped, logos and text kept
+out of the pan. On Nintendo's store pages keep only the `publicId`s under the
+game's own nsuid (the first one on the page); the others belong to related
+products. Speed agreed as is (5 Oct). First used for 21 to 27 Sep
+(`cards/2026-10/famitsu-sep21-27-full-reel-v2.mp4`).
 
 ## The lookout is its own format
 
