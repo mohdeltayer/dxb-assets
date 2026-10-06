@@ -42,8 +42,8 @@ ASK, TELL = 2.4, 2.8                            # seconds: question with countdo
 HOOK, CLOSE = 3.8, 4.6
 
 TEXT = {
-    'ar': dict(ask='من صنع هذه الشخصية؟', of='من {n}'),
-    'en': dict(ask='Who created this character?', of='{i} of {n}'),
+    'ar': dict(ask='من صنع هذه اللعبة؟', of='من {n}'),
+    'en': dict(ask='Who made this game?', of='{i} of {n}'),
 }
 
 
