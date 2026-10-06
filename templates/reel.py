@@ -221,6 +221,70 @@ def _bars(p, s, d):
     return (f'crop={w}:{h}:{x}:{y},', h) if h < full - 8 else ('', full)
 
 
+def _fo_expr(fo):
+    """A focus for ffmpeg's crop: a number, or per-scene keyframes
+    [(offset, focus), ...] that switch at the trailer's own cuts."""
+    if not isinstance(fo, (list, tuple)):
+        return str(fo)
+    expr = str(fo[-1][1])
+    for (t, f), (t2, _) in reversed(list(zip(fo, fo[1:]))):
+        expr = f'if(lt(t,{t2:.3f}),{f},{expr})'
+    return expr
+
+
+def scenes(f, start, dur, thresh=0.2):
+    """Offsets (from `start`) where the trailer cuts, 0 first."""
+    r = subprocess.run(['ffmpeg', '-nostdin', '-v', 'info', '-ss', str(start), '-t', str(dur), '-i', C.U + f,
+                        '-vf', f"select='gt(scene,{thresh})',showinfo", '-an', '-f', 'null', '-'],
+                       capture_output=True, text=True)
+    cuts = [float(l.split('pts_time:')[1].split()[0]) for l in r.stderr.splitlines() if 'pts_time:' in l]
+    out = [0.0]
+    for c in cuts:
+        if c - out[-1] >= 0.5:
+            out.append(round(c, 3))
+    return out
+
+
+def _salient_x(img):
+    """Where the subject sits across a frame (0 left .. 1 right), from a
+    spectral-residual saliency map (Hou and Zhang, 2007), so the 9:16 zoom
+    follows faces, ships and logos instead of the centre."""
+    import numpy as np
+    g = np.asarray(img.convert('L').resize((128, max(16, int(128 * img.height / img.width)))), float)
+    F = np.fft.fft2(g); A = np.log(np.abs(F) + 1e-9); P = np.angle(F)
+    k = np.ones((3, 3)) / 9
+    from numpy.lib.stride_tricks import sliding_window_view as sw
+    Ap = np.pad(A, 1, mode='edge'); R = A - (sw(Ap, (3, 3)) * k).sum(axis=(-1, -2))
+    S = np.abs(np.fft.ifft2(np.exp(R + 1j * P))) ** 2
+    S = np.asarray(Image.fromarray((S / S.max() * 255).astype('uint8')).filter(ImageFilter.GaussianBlur(4)), float)
+    S = np.where(S > np.percentile(S, 90), S, 0)
+    col = S.sum(axis=0)
+    return float((col * np.arange(len(col))).sum() / max(col.sum(), 1e-9) / (len(col) - 1))
+
+
+def autofocus(f, start, dur, thresh=0.2):
+    """Per-scene focus keyframes for one continuous stretch: at each of the
+    trailer's cuts, aim the 9:16 window at that scene's subject (Mohammad,
+    6 Oct 2026: "choose a better focus area"). Returns [(offset, focus)]."""
+    bars, rows = _bars(C.U + f, start, dur)
+    probe = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width',
+                            '-of', 'csv=p=0', C.U + f], capture_output=True, text=True).stdout.strip()
+    iw = int(bars.split('crop=')[1].split(':')[0]) if bars else int(probe)
+    sw_ = iw * H / rows                       # width after scaling the picture to the frame height
+    cuts = scenes(f, start, dur, thresh) + [dur]
+    keys = []
+    for a, b in zip(cuts, cuts[1:]):
+        xs = []
+        for t in (a + (b - a) * q for q in (0.25, 0.5, 0.75)):
+            tmp = tempfile.mktemp(suffix='.png')
+            subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', f'{start + t:.2f}', '-i', C.U + f, '-frames:v', '1',
+                            '-vf', f'{bars}scale=320:-2', tmp], check=True)
+            xs.append(_salient_x(Image.open(tmp))); os.remove(tmp)
+        c = sorted(xs)[1]
+        keys.append((round(a, 3), round(min(1, max(0, (c * sw_ - W / 2) / max(sw_ - W, 1))), 3)))
+    return keys
+
+
 def montage(shots, out, lowres_ok=False, fast=False):
     """Cut the shots into one 9:16 clip with crossfades; returns (starts, end).
     Letterbox bars are cropped before the enlargement; a clip with fewer than
@@ -247,7 +311,7 @@ def montage(shots, out, lowres_ok=False, fast=False):
                 raise ValueError(f'{f}: only {rows} rows of picture (bars cut); find a sharper copy '
                                  f'or pass lowres_ok=True')
             sharp = ',unsharp=5:5:0.5:5:5:0.0' if rows < H else ''
-            fc.append(f'[{i}:v]{bars}scale=-2:{H}:flags=lanczos{sharp},crop={W}:{H}:(iw-{W})*{fo}:0,fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]')
+            fc.append(f"[{i}:v]{bars}scale=-2:{H}:flags=lanczos{sharp},crop={W}:{H}:x='(iw-{W})*({_fo_expr(fo)})':y=0,fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]")
     if sound:
         for i, ((f, s, d, fo), st) in enumerate(zip(shots, stills)):
             if st or not _has_audio(C.U + f):

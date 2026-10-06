@@ -380,6 +380,15 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   without speech (check word timings with faster-whisper), and run the
   shots in their source order: jumping back and forth through a trailer
   made its music jump (the Zelda v3 complaint).
+  One continuous stretch is the standard (Mohammad, 6 Oct 2026, from the
+  Fandom and GameSpot Reels he sent: "match the images with the footage"):
+  a single stretch of one official trailer, picture and its own sound
+  together, with our headline and lines on top as now. The 9:16 crop aims
+  at the subject of each scene: `reel.autofocus(file, start, dur)` finds
+  the cuts and returns a per-scene focus to pass as the shot's focus
+  (a manual `(offset, focus)` entry overrides one scene). The stretch has
+  no burnt-in subtitles, title cards, logo slate or black tail under our
+  lines; Galactic Racer v4 and Monster Hunter Rise v3 were the first.
 - Top, for about 3.5 seconds: chip, a large headline, and a credit line
   (accent rule, source · date) on a soft band. The first frame is the grid
   tile.
