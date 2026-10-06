@@ -495,6 +495,14 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   which fills the frame with no enlargement, and avoid letterboxed
   trailers when another cut exists. `reel.py` enlarges with lanczos and a
   light unsharp on sub-1920 sources and encodes at higher quality.
+  Source order (Mohammad, 6 Oct 2026, after GameSpot's Ace Combat 8 Reel
+  looked cleaner than ours: it was Bandai Namco's own 9:16 cut, nothing
+  cropped or enlarged, while ours cropped a 1080p trailer and enlarged a
+  608px strip 1.78x): 1. the publisher's own vertical cut (press kits,
+  media sites, or a file he sends; no social-media downloaders), 2. a 4K
+  trailer, 3. a 1080p trailer, choosing close-ups and centred subjects
+  that survive the crop. Each Reel's draft notes say which kind of source
+  it used.
 
 Instagram (Mohammad, 27 Sep 2026): every Digital Lounge story also goes to
 Instagram, on its own card and caption, at the same time as its X post:
