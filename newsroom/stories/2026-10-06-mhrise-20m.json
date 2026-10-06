@@ -1,84 +1,112 @@
 {
- "id": "2026-10-06-mhrise-20m",
- "title": "Monster Hunter Rise passes 20 million units (Capcom)",
- "game": "Monster Hunter Rise",
- "companies": [
-  "Capcom"
- ],
- "priority": "🟢",
- "related": [],
- "sources": [
-  {
-   "role": "outlet_report",
-   "name": "Gematsu, crediting Capcom @MH_Rise_JP",
-   "url": "https://www.gematsu.com/2026/10/monster-hunter-rise-sales-top-20-million"
-  }
- ],
- "claims": [
-  {
-   "text": "Over 20 million units",
-   "status": "reported",
-   "source": "Capcom on X via Gematsu; Capcom IR not yet updated"
+  "id": "2026-10-06-mhrise-20m",
+  "title": "Monster Hunter Rise passes 20 million units (Capcom)",
+  "game": "Monster Hunter Rise",
+  "companies": [
+    "Capcom"
+  ],
+  "priority": "🟢",
+  "related": [],
+  "sources": [
+    {
+      "role": "outlet_report",
+      "name": "Gematsu, crediting Capcom @MH_Rise_JP",
+      "url": "https://www.gematsu.com/2026/10/monster-hunter-rise-sales-top-20-million"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Over 20 million units",
+      "status": "reported",
+      "source": "Capcom on X via Gematsu; Capcom IR not yet updated"
+    },
+    {
+      "text": "19.3M as of 30 Jun 2026",
+      "status": "verified",
+      "source": "Capcom Platinum Titles"
+    }
+  ],
+  "why": "Digital Lounge daily slate (10:00 review, \"publish accordingly\")",
+  "lanes": {
+    "dl": {
+      "lane": "Reel",
+      "chip": "رسمي",
+      "time": "2026-10-06T09:15:00.000Z",
+      "headline": "أكثر من 20 مليون نسخة من Monster Hunter Rise",
+      "x": "أعلنت كابكوم (Capcom) أن مبيعات Monster Hunter Rise تجاوزت 20 مليون نسخة.",
+      "ig": "رقم جديد لسلسلة Monster Hunter: أكثر من 20 مليون نسخة من Rise. / أعلنت شركة كابكوم (Capcom) أن مبيعات Monster Hunter Rise تجاوزت 20 مليون نسخة حول العالم، ونشرت رسمًا احتفاليًا بالمناسبة عبر حساب اللعبة الرسمي. / وكانت آخر أرقام الشركة الرسمية قد أشارت إلى 19.3 مليون نسخة حتى نهاية يونيو. / وصدرت اللعبة على Nintendo Switch في مارس 2021، ثم وصلت إلى PC وPlayStation وXbox، وتلتها إضافة Sunbreak.",
+      "threads": "none (two already today)"
+    }
   },
-  {
-   "text": "19.3M as of 30 Jun 2026",
-   "status": "verified",
-   "source": "Capcom Platinum Titles"
+  "media": [
+    {
+      "file": "cards/2026-10/mhrise-20m-reel-v1.mp4",
+      "source_url": "mhrise-steam-trailer.mp4 (Steam 1446780)",
+      "kind": "footage"
+    },
+    {
+      "file": "cards/2026-10/mhrise-20m-reel-v3.mp4",
+      "source_url": "mhn-2.mp4 (Nintendo store, Sunbreak gameplay trailer) 30.2-57.2 s",
+      "kind": "footage"
+    }
+  ],
+  "status": "approved",
+  "versions": [
+    {
+      "v": 1,
+      "at": "2026-10-06T07:00:00Z",
+      "change": "first build; grammar review: no required edits"
+    },
+    {
+      "v": 1,
+      "at": "2026-10-06T09:30:00Z",
+      "change": "published 13:15 Dubai; Mohammad deleting on X and Instagram: the trailer's audio is monster roars only, repetitive. Lesson: no trailer stretch without music as the Reel's sound"
+    },
+    {
+      "v": 3,
+      "at": "2026-10-06T14:46:00Z",
+      "change": "rebuilt as one continuous stretch of Capcom's Sunbreak gameplay trailer with its own score, per-scene autofocus; requeued for 19:15 Dubai on Mohammad's go"
+    }
+  ],
+  "posts": [
+    {
+      "folder": "mhrise-20m-ar",
+      "account": "Digital Lounge",
+      "platform": "x",
+      "date": "2026-10-06T09:15:00.000Z",
+      "postiz_id": "cmuwewxfb007amx0yn8z59rn8",
+      "sent_at": "2026-10-06T08:24:08+00:00",
+      "approved": "go, 6 Oct ~10:00 Dubai ('publish accordingly'); times moved to 13:15-14:55 and shown"
+    },
+    {
+      "folder": "mhrise-20m-ig",
+      "account": "Digital Lounge",
+      "platform": "instagram",
+      "date": "2026-10-06T09:15:00.000Z",
+      "postiz_id": "cmuwex1h6009arz0yolzj1e4k",
+      "sent_at": "2026-10-06T08:24:14+00:00",
+      "approved": "go, 6 Oct ~10:00 Dubai ('publish accordingly'); times moved to 13:15-14:55 and shown"
+    },
+    {
+      "folder": "mhrise-20m-v3-ar",
+      "account": "Digital Lounge",
+      "platform": "x",
+      "date": "2026-10-06T15:15:00.000Z",
+      "postiz_id": "cmuwsoekk081hmx0y33pcbii9",
+      "sent_at": "2026-10-06T14:49:25+00:00",
+      "approved": "Mohammad: go, 6 Oct 18:46 Dubai (MH Rise v3 19:15, DD2 19:30, Endfield 19:45 Digital Lounge; Denuvo 20:30 DXB-KNIGHT)"
+    },
+    {
+      "folder": "mhrise-20m-v3-ig",
+      "account": "Digital Lounge",
+      "platform": "instagram",
+      "date": "2026-10-06T15:15:00.000Z",
+      "postiz_id": "cmuwsoh9n083jrz0y0zetxtz3",
+      "sent_at": "2026-10-06T14:49:29+00:00",
+      "approved": "Mohammad: go, 6 Oct 18:46 Dubai (MH Rise v3 19:15, DD2 19:30, Endfield 19:45 Digital Lounge; Denuvo 20:30 DXB-KNIGHT)"
+    }
+  ],
+  "times": {
+    "posted": "2026-10-06T09:15:00.000Z"
   }
- ],
- "why": "Digital Lounge daily slate (10:00 review, \"publish accordingly\")",
- "lanes": {
-  "dl": {
-   "lane": "Reel",
-   "chip": "رسمي",
-   "time": "2026-10-06T09:15:00.000Z",
-   "headline": "أكثر من 20 مليون نسخة من Monster Hunter Rise",
-   "x": "أعلنت كابكوم (Capcom) أن مبيعات Monster Hunter Rise تجاوزت 20 مليون نسخة.",
-   "ig": "رقم جديد لسلسلة Monster Hunter: أكثر من 20 مليون نسخة من Rise. / أعلنت شركة كابكوم (Capcom) أن مبيعات Monster Hunter Rise تجاوزت 20 مليون نسخة حول العالم، ونشرت رسمًا احتفاليًا بالمناسبة عبر حساب اللعبة الرسمي. / وكانت آخر أرقام الشركة الرسمية قد أشارت إلى 19.3 مليون نسخة حتى نهاية يونيو. / وصدرت اللعبة على Nintendo Switch في مارس 2021، ثم وصلت إلى PC وPlayStation وXbox، وتلتها إضافة Sunbreak.",
-   "threads": "none (two already today)"
-  }
- },
- "media": [
-  {
-   "file": "cards/2026-10/mhrise-20m-reel-v1.mp4",
-   "source_url": "mhrise-steam-trailer.mp4 (Steam 1446780)",
-   "kind": "footage"
-  }
- ],
- "status": "withdrawn",
- "versions": [
-  {
-   "v": 1,
-   "at": "2026-10-06T07:00:00Z",
-   "change": "first build; grammar review: no required edits"
-  },
-  {
-   "v": 1,
-   "at": "2026-10-06T09:30:00Z",
-   "change": "published 13:15 Dubai; Mohammad deleting on X and Instagram: the trailer's audio is monster roars only, repetitive. Lesson: no trailer stretch without music as the Reel's sound"
-  }
- ],
- "posts": [
-  {
-   "folder": "mhrise-20m-ar",
-   "account": "Digital Lounge",
-   "platform": "x",
-   "date": "2026-10-06T09:15:00.000Z",
-   "postiz_id": "cmuwewxfb007amx0yn8z59rn8",
-   "sent_at": "2026-10-06T08:24:08+00:00",
-   "approved": "go, 6 Oct ~10:00 Dubai ('publish accordingly'); times moved to 13:15-14:55 and shown"
-  },
-  {
-   "folder": "mhrise-20m-ig",
-   "account": "Digital Lounge",
-   "platform": "instagram",
-   "date": "2026-10-06T09:15:00.000Z",
-   "postiz_id": "cmuwex1h6009arz0yolzj1e4k",
-   "sent_at": "2026-10-06T08:24:14+00:00",
-   "approved": "go, 6 Oct ~10:00 Dubai ('publish accordingly'); times moved to 13:15-14:55 and shown"
-  }
- ],
- "times": {
-  "posted": "2026-10-06T09:15:00.000Z"
- }
 }
