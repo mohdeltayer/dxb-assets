@@ -38,7 +38,9 @@ that looks like breaking news at the top. No social media scraping, no logins.
 **Footage (sonnet).** For a named game: list its Steam trailers
 (`templates/trailer.py`), Nintendo store `publicId`s under its own nsuid, or
 IGN MP4s; fetch the asked-for ones to uploads; make `seekmap.py` sheets.
-Return file names, sizes, durations and sheet paths. No YouTube downloaders.
+Look for the publisher's own vertical (9:16) cut first (press kits, media sites), then a 4K copy,
+then 1080p. Return file names, sizes, resolutions, durations and sheet paths. No YouTube or
+social-media downloaders.
 
 **Render (sonnet).** Given a batch folder with `copyNN.py` and `renderNN.py`:
 `check`, then `sheet`, then `draft`, then `strip`, and stop there with the
