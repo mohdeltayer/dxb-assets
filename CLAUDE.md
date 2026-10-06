@@ -427,6 +427,17 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
     the voices first (demucs two-stem, cached as `<name>-music.wav` in
     uploads; set `DEMUCS_PY` to a Python with demucs installed). Lines are
     also checked against the safe zone before the encode.
+    The sound has to be good, not just the trailer's (Mohammad, 6 Oct
+    2026, after the Monster Hunter Rise Reel ran a montage of repeated
+    roars and the Supermassive Reel carried odd effects through a
+    voice-stripped track): use a stretch of the trailer's own music, or a
+    part of the trailer where its music and effects sound right. A stretch
+    of only roars, slates or effects is not usable, and a voice-stripped
+    track that leaves artefacts is not either. When no stretch is good,
+    use our own sound: a `sonic.py` bed whose flavour matches the story's
+    tone (or a new flavour made for it), with the jingle on the end card.
+    Listen-check the chosen stretch before the render: name what plays
+    under the cut (music, effects, voices) in the draft notes.
   - Pick shot times from `templates/seekmap.py` (frames labelled with the
     seek time reel.py uses), never from a sheet labelled with timestamps:
     Steam trailer downloads start their picture 2 to 3 seconds in, and on

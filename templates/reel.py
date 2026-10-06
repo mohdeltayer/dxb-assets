@@ -471,9 +471,11 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
          lowres_ok=False, read_check=True, track=None, draft=False):
     """`track`: (file, start) plays one continuous stretch of that trailer's
-    sound under the whole cut, in place of each shot's own; add 'music' as a
-    third item to strip its voices (demucs). Footage never goes out muted
-    with a bed instead (Mohammad, 3 Oct 2026).
+    sound under the whole cut, in place of each shot's own; `track='bed'` drops
+    the footage's sound for our own bed (`sound=` picks the flavour to match the
+    tone, default the everyday rotation) when no stretch of the trailer is good
+    (Mohammad, 6 Oct 2026); add 'music' as a third item to strip its voices
+    (demucs). Otherwise footage keeps its own sound (Mohammad, 3 Oct 2026).
     `draft=True` is the quick look before the real encode: ultrafast at a
     low quality, no end card, written next to `out` as <name>-draft.mp4 and
     about three times faster. Fix shots on the draft, then render for real.
@@ -521,7 +523,11 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     subprocess.run(args + ['-filter_complex', ';'.join(fc), '-map', '[v]'] + amap +
                    ['-c:v', 'libx264', '-pix_fmt', 'yuv420p'] + (DRAFT_ENC if draft else ['-preset', 'slow', '-crf', '16'])
                    + [body], check=True)
-    if track:
+    if track == 'bed':                     # no good stretch in the trailer: our own bed under the cut (6 Oct 2026)
+        subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', body, '-map', '0:v', '-c:v', 'copy', '-an',
+                        f'{tmp}/silent.mp4'], check=True)
+        body = f'{tmp}/silent.mp4'
+    elif track:
         body = _track(body, track, end, f'{tmp}/track.mp4')
     if voice:
         body = _voice_over(body, voice, end, duck_db, f'{tmp}/voiced.mp4')
