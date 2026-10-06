@@ -438,6 +438,13 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
     tone (or a new flavour made for it), with the jingle on the end card.
     Listen-check the chosen stretch before the render: name what plays
     under the cut (music, effects, voices) in the draft notes.
+    Music, not effects (Mohammad, 6 Oct 2026, after the Galactic Racer
+    Reel ran a gameplay stretch thick with engines and impacts: "the star
+    wars one sounds noisy"): the stretch has to be the trailer's music
+    leading, such as a score passage or the logo fanfare, not gameplay audio
+    where effects sit on top of it. Measure it before choosing (tonal
+    music against noisy effects, and voices) and send him the stretch when
+    unsure; if every stretch is effects-heavy, use our bed.
   - Pick shot times from `templates/seekmap.py` (frames labelled with the
     seek time reel.py uses), never from a sheet labelled with timestamps:
     Steam trailer downloads start their picture 2 to 3 seconds in, and on
