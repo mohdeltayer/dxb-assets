@@ -40,6 +40,7 @@ TOP, BOT = G.SAFE_TOP, G.SAFE_BOTTOM            # 285 .. 1480
 SUB = 'quiz'                                    # stills are copied to uploads/<SUB>/
 ASK, TELL = 2.4, 2.8                            # seconds: question with countdown, then the answer
 HOOK, CLOSE = 3.8, 4.6
+GAP = 0.2          # one text fades out before the next fades in
 
 TEXT = {
     'ar': dict(ask='من صنع هذه اللعبة؟', of='من {n}'),
@@ -62,9 +63,15 @@ class _Type:
         return C.font(size, {'Bold': 750, 'Medium': 560, 'Regular': 420}[weight])
 
 
+def _kw(T, s):
+    """Arabic shaping only for lines with Arabic in them: a Latin line set
+    right to left reorders ("428: Shibuya Scramble" came out as ":428")."""
+    return dict(G.AR) if T.ar and any('\u0600' <= ch <= '\u06ff' for ch in s) else {}
+
+
 def _text(lay, xy, s, f, fill, anchor, T, stroke=5):
     """Text with a dark outline and a soft shadow, as on the Reel lines."""
-    kw = dict(G.AR) if T.ar else {}
+    kw = _kw(T, s)
     m = Image.new('L', (W, H), 0)
     ImageDraw.Draw(m).text(xy, s, font=f, fill=255, anchor=anchor, **kw)
     out = m.filter(ImageFilter.MaxFilter(stroke if stroke % 2 else stroke + 1))
@@ -75,7 +82,7 @@ def _text(lay, xy, s, f, fill, anchor, T, stroke=5):
 
 
 def _fits(T, s, f, room=R - L):
-    kw = dict(G.AR) if T.ar else {}
+    kw = _kw(T, s)
     return ImageDraw.Draw(Image.new('RGBA', (8, 8))).textlength(s, font=f, **kw) <= room
 
 
@@ -142,14 +149,18 @@ def hook_layer(T, hook, sub, accent, path, chip=None):
     d = ImageDraw.Draw(lay)
     kw = dict(G.AR) if T.ar else {}
     f = T.f('Bold', 80)
-    words, lines, cur = hook.split(), [], ''
+    words, lines, cur = ([] if '\n' in hook else hook.split()), [], ''
+    if '\n' in hook:                                # breaks set by hand win (a phrase never splits)
+        lines = hook.split('\n')
+        f = T.f('Bold', max(sz for sz in range(56, 82, 2) if all(_fits(T, ln, T.f('Bold', sz)) for ln in lines)))
     for w_ in words:                                 # greedy wrap inside the safe zone
         t = (cur + ' ' + w_).strip()
         if d.textlength(t, font=f, **kw) <= R - L:
             cur = t
         else:
             lines.append(cur); cur = w_
-    lines.append(cur)
+    if words:
+        lines.append(cur)
     if len(lines) > 4:
         raise ValueError('hook too long for four lines')
     y = 960 - len(lines) * 104 // 2
@@ -162,7 +173,7 @@ def hook_layer(T, hook, sub, accent, path, chip=None):
         _text(lay, (T.x, y + k * 104), ln, f, T.ink, T.anchor_m, T, stroke=6)
     y2 = y + len(lines) * 104 + 20
     d.rectangle([T.x - 50, y2, T.x, y2 + 5] if T.ar else [T.x, y2, T.x + 50, y2 + 5], fill=accent)
-    _text(lay, (T.x, y2 + 60), sub, _sized(T, sub, 'Medium', 40, 28), T.body, T.anchor_m, T, stroke=3)
+    _text(lay, (T.x, y2 + 60), sub, _sized(T, sub, 'Medium', 52, 34), T.body, T.anchor_m, T, stroke=3)
     lay.save(path); return path
 
 
@@ -206,14 +217,14 @@ def reel(rounds, hook, sub, photo, close, date, out, lang='ar', theme='stylized'
     tmp = tempfile.mkdtemp(prefix='quiz-')
     try:
         # (png, from, to, fade): the hook dims the photo with its own plate
-        layers = [(hook_layer(T, hook, sub, accent, f'{tmp}/h.png', chip), 0, starts[1] + RL.X, RL.X)]
+        layers = [(hook_layer(T, hook, sub, accent, f'{tmp}/h.png', chip), 0, starts[1] + GAP - 0.05, 0.3)]
         for i, r in enumerate(rounds, 1):
             s = starts[i]; step = ASK / 3
             for k, digit in enumerate((3, 2, 1)):
-                a = s + k * step; z = a + step
+                a = s + k * step + (GAP if k == 0 else 0); z = s + (k + 1) * step
                 layers.append((ask_layer(T, i, n, digit, accent, f'{tmp}/a{i}{digit}.png'), a, z, 0.12))
-            layers.append((tell_layer(T, i, n, r, accent, f'{tmp}/t{i}.png'), s + ASK, starts[i + 1] + RL.X, 0.2))
-        layers.append((close_layer(T, close[0], close[1], accent, f'{tmp}/c.png'), starts[-1], end, RL.X))
+            layers.append((tell_layer(T, i, n, r, accent, f'{tmp}/t{i}.png'), s + ASK, starts[i + 1] + GAP - 0.05, 0.2))
+        layers.append((close_layer(T, close[0], close[1], accent, f'{tmp}/c.png'), starts[-1] + GAP, end, RL.X))
         RL.montage(shots, f'{tmp}/cut.mp4', fast=draft)
         args = ['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', f'{tmp}/cut.mp4']
         for p, *_ in layers:
