@@ -445,6 +445,10 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
     where effects sit on top of it. Measure it before choosing (tonal
     music against noisy effects, and voices) and send him the stretch when
     unsure; if every stretch is effects-heavy, use our bed.
+    Voices are fine (Mohammad, 6 Oct 2026: "it's okay to feature that
+    part of the clip with voices"): a stretch where dialogue runs over the
+    score can play as it is. Prefer that to stripping the voices, which
+    leaves artefacts; `'music'` mode is a last resort.
   - Pick shot times from `templates/seekmap.py` (frames labelled with the
     seek time reel.py uses), never from a sheet labelled with timestamps:
     Steam trailer downloads start their picture 2 to 3 seconds in, and on
