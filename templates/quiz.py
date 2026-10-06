@@ -107,23 +107,35 @@ def _counter(lay, T, i, n, accent):
     d.text(((x0 + x1) / 2, TOP + 40), s, font=f, fill=T.ground, anchor='mm', **kw)
 
 
-def ask_layer(T, i, n, digit, accent, path):
+def round_layer(T, i, n, accent, path):
+    """What stays on screen for the whole round: the soft bands and the
+    round counter. The countdown and the answer change on top of it, so the
+    frame never empties between digits (Mohammad, 6 Oct 2026: the whole
+    overlay fading out and back on 3, 2, 1 read as flashing)."""
     lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     RL._band(lay, 0, TOP + 120, True, 150)
-    RL._band(lay, 980, H, False, 230)
+    RL._band(lay, 900, H, False, 235)
     _counter(lay, T, i, n, accent)
+    lay.save(path); return path
+
+
+def ask_layer(T, path):
+    """The question, steady through the countdown."""
+    lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     q = TEXT['ar' if T.ar else 'en']['ask']
     _text(lay, (T.x, BOT - 150), q, _sized(T, q, 'Bold', 70, 46), T.ink, T.anchor_s, T)
-    big = T.f('Bold', 230)
-    _text(lay, (W // 2 - 40, BOT - 260), str(digit), big, accent, 'ms', T, stroke=9)
+    lay.save(path); return path
+
+
+def digit_layer(T, digit, accent, path):
+    """One countdown number; only this changes on 3, 2, 1."""
+    lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    _text(lay, (W // 2 - 40, BOT - 260), str(digit), T.f('Bold', 230), accent, 'ms', T, stroke=9)
     lay.save(path); return path
 
 
 def tell_layer(T, i, n, r, accent, path):
     lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-    RL._band(lay, 0, TOP + 120, True, 150)
-    RL._band(lay, 900, H, False, 235)
-    _counter(lay, T, i, n, accent)
     d = ImageDraw.Draw(lay)
     y = BOT - 40
     meta = f'{r["game"]}  ·  {r["year"]}'
@@ -219,11 +231,13 @@ def reel(rounds, hook, sub, photo, close, date, out, lang='ar', theme='stylized'
         # (png, from, to, fade): the hook dims the photo with its own plate
         layers = [(hook_layer(T, hook, sub, accent, f'{tmp}/h.png', chip), 0, starts[1] + GAP - 0.05, 0.3)]
         for i, r in enumerate(rounds, 1):
-            s = starts[i]; step = ASK / 3
+            s = starts[i]; step = ASK / 3; z = starts[i + 1] + GAP - 0.05
+            layers.append((round_layer(T, i, n, accent, f'{tmp}/r{i}.png'), s + GAP, z, 0.2))
+            layers.append((ask_layer(T, f'{tmp}/q{i}.png'), s + GAP, s + ASK, 0.2))
             for k, digit in enumerate((3, 2, 1)):
-                a = s + k * step + (GAP if k == 0 else 0); z = s + (k + 1) * step
-                layers.append((ask_layer(T, i, n, digit, accent, f'{tmp}/a{i}{digit}.png'), a, z, 0.12))
-            layers.append((tell_layer(T, i, n, r, accent, f'{tmp}/t{i}.png'), s + ASK, starts[i + 1] + GAP - 0.05, 0.2))
+                a = s + k * step + (GAP if k == 0 else 0)
+                layers.append((digit_layer(T, digit, accent, f'{tmp}/a{i}{digit}.png'), a, s + (k + 1) * step, 0.08))
+            layers.append((tell_layer(T, i, n, r, accent, f'{tmp}/t{i}.png'), s + ASK, z, 0.2))
         layers.append((close_layer(T, close[0], close[1], accent, f'{tmp}/c.png'), starts[-1] + GAP, end, RL.X))
         RL.montage(shots, f'{tmp}/cut.mp4', fast=draft)
         args = ['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', f'{tmp}/cut.mp4']
