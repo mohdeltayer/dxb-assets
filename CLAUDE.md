@@ -579,6 +579,14 @@ More variations (Mohammad, 2 Oct 2026: "Honestly, I like them all"):
   عاجل only, so breaking news stands out when it comes.
 - Housekeeping: reel.py and outro.py delete their temp folders after a
   render (81 leftover folders filled the disk on 2 Oct).
+- Daily disk cleanup (Mohammad, 7 Oct 2026, after the disk allowance ran
+  out mid-render that morning): a Routine runs `newsroom/disk_cleanup.sh`
+  every day at 02:47 Dubai. It removes render temp folders left in /tmp,
+  scratchpad batch folders untouched for 3 days, fetched footage and audio
+  in uploads untouched for 3 days (images and his own recordings stay),
+  and re-clones dxb-queue shallow once its history passes 1 GB. It does
+  nothing while a render or a publish is running, or while dxb-queue has
+  unpushed work. `--dry-run` lists what it would remove.
 - Reels only (Mohammad, 30 Sep 2026): still cards on Instagram reach 1 to
   3 views where Reels reach about 1,000 (the WARDOGS Reel: 96% non-followers,
   mostly from the Reels tab), so every Digital Lounge Instagram post is a

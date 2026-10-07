@@ -69,6 +69,8 @@ dxb-assets. Return one line per post.
 
 **Housekeeping (haiku).** Commit and push leftover changes in dxb-assets
 (ledgers, story files, cards); never touch dxb-queue.
+Disk cleanup runs daily on its own (`newsroom/disk_cleanup.sh`, 02:47 Dubai);
+run it by hand when free space drops under about 4 GB.
 
 ## Review slots (Mohammad, 5 Oct 2026)
 
