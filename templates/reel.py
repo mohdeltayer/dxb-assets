@@ -533,7 +533,7 @@ def check_reading(lines, end):
 
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
-         lowres_ok=False, read_check=True, track=None, draft=False):
+         lowres_ok=False, read_check=True, track=None, draft=False, head_size=66):
     """`track`: (file, start) plays one continuous stretch of that trailer's
     sound under the whole cut, in place of each shot's own; `track='bed'` drops
     the footage's sound for our own bed (`sound=` picks the flavour to match the
@@ -565,8 +565,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         shutil.rmtree(tmp, ignore_errors=True)
         raise
     style = style or pick_style(out)       # after the checks, so a stopped render takes no turn
-    layers = [(head_layer(headline, label, f'{tmp}/head.png', source, date, country,
-                          vivid=vivid, theme=theme, seed=sum(map(ord, out)), style=style), 0, head_secs)]
+    layers = [(head_layer(headline, label, f'{tmp}/head.png', source, date, country, hs=head_size,   # a long Latin title can take 60 so its line opens in Arabic
+                          hst=head_size + 20, vivid=vivid, theme=theme, seed=sum(map(ord, out)), style=style), 0, head_secs)]
     if vivid and style == 'frame':          # the bottom waves stay for the whole clip
         layers.insert(0, (frame_layer(f'{tmp}/frame.png', theme, sum(map(ord, out))), 0, end))
     for i, (text, a, z, kw) in enumerate(lines):
