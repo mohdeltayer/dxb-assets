@@ -47,6 +47,10 @@ TITLES = {
     'SILENT HILL： Townfall': 'SILENT HILL: Townfall',
     'ドラゴンクエストXI　過ぎ去りし時を求めて S': 'Dragon Quest XI S',
     'EA SPORTS FC 27': 'EA SPORTS FC 27',
+    'ACE COMBAT 8： WINGS OF THEVE（エースコンバット8 ウイングス・オブ・シーヴ）': 'ACE COMBAT 8: WINGS OF THEVE',
+    '真・三國無双2 with 猛将伝 Remastered': 'DYNASTY WARRIORS 3: Complete Edition Remastered',
+    'Minecraft Dungeons II': 'Minecraft Dungeons II',
+    'ゼノブレイド2 Nintendo Switch 2 Edition': 'Xenoblade Chronicles 2',
 }
 
 PLATFORMS = {'Switch2': 'NS2', 'Switch': 'NS', 'PS5': 'PS5', 'PS4': 'PS4',

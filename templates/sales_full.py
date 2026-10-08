@@ -111,12 +111,17 @@ def entry_layer(r, title, week_label, accent, path):
             d.polygon(tri, fill=col); tx -= 32
         _text(lay, (tx, cy + 25), t, tf, col, 'rm', ar=True, stroke=3)
     # title, as the publisher writes it, shrinking before it would leave the zone
+    # a long title may carry one hand break ("\n"); the lines stack upwards
+    parts = r['title'].split('\n')
+    wide = lambda s: max(d.textlength(p, font=A.F('Bold', s)) for p in parts)
     size = 64
-    while d.textlength(r['title'], font=A.F('Bold', size)) > R - L and size > 40:
+    while wide(size) > R - L and size > 40:
         size -= 2
     ty = cy - 34
-    _text(lay, (R, ty), r['title'], A.F('Bold', size), A.INK, 'rs')
-    if d.textlength(r['title'], font=A.F('Bold', size)) > R - L:
+    for k, p in enumerate(reversed(parts)):
+        _text(lay, (R, ty - k * round(size * 1.15)), p, A.F('Bold', size), A.INK, 'rs')
+    ty -= (len(parts) - 1) * round(size * 1.15)
+    if wide(size) > R - L:
         raise ValueError(f'title runs out of the safe zone: {r["title"]}')
     # rank, large, with the box art to its left
     rf = A.F('Bold', 250 if r['rank'] == 1 else 210)

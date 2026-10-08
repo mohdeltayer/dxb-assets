@@ -815,6 +815,11 @@ out of the pan. On Nintendo's store pages keep only the `publicId`s under the
 game's own nsuid (the first one on the page); the others belong to related
 products. Speed agreed as is (5 Oct). First used for 21 to 27 Sep
 (`cards/2026-10/famitsu-sep21-27-full-reel-v2.mp4`).
+Timing (Mohammad, 8 Oct 2026): the sales post goes out immediately after
+Famitsu releases the numbers, not held for a slot. Watch the chart page
+from about 16:45 Dubai on Thursdays (or the date the last article names),
+have the screenshots and box art for the likely top 10 gathered before
+then, and render and bring the Reel to him the moment the article is up.
 
 ## The lookout is its own format
 
