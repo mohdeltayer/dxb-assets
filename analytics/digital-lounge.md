@@ -151,3 +151,21 @@ Oct 1 2026", aggregated across Reels and posts; no per-Reel figures).
   out-now items are not in the top nine.
 - Still missing: follows per Reel (Content > Follows), to see which
   Reels convert viewers into followers.
+
+## 30 days to 9 Oct 2026: Reels by follows (screenshot, read 9 Oct 16:06 Dubai)
+
+`live/2026-10-09/analytics/instagram-reels-by-follows-1606.png`
+
+- Follows per Reel are small and spread out: Fortnite Hollow Knight 5
+  (8.3K views, so about 0.6 per 1K), Solid Snake / Otsuka 4 (2.2K, about
+  1.8 per 1K), «ذكاء اصطناعي يحسّن الصور» (PS5 image upscaling, about
+  2 Oct) 4, FINAL FANTASY XIV 3, Persona 4 Revival 3 (45 likes, 13
+  comments, the account's first real conversation), Clair Obscur / Game
+  Pass deadline 2, ARC Raiders question 2, and today's Cyberpunk film
+  and ACE COMBAT 8 Reels 1 each within 7 hours.
+- Reading: the shared, viral Reel brings reach but converts weakly; the
+  Reels that turn viewers into followers are enthusiast stories with a
+  reason to come back (beloved series with a question or a debate,
+  hardware tech, JRPGs), and the one with the most comments converted
+  about as well as the one with 30 times its shares. Followers grow from
+  many Reels a few at a time, which fits the daily volume.
