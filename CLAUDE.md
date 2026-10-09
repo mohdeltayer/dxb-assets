@@ -299,6 +299,9 @@ brand-new account posting about nine videos on day one through a
 third-party app (Postiz), most of them reposted publisher trailers, which
 reads as automated, unoriginal content. The same mix went to YouTube,
 which also sat near zero.
+Snapchat paused (Mohammad, 9 Oct 2026: "forget snapchat for now"): no
+Snapchat copies or captions are made or handed to him until he brings it
+back. The rules below stay for when it returns.
 Snapchat test (Mohammad, 4 Oct 2026): Digital Lounge gets a Snapchat
 public profile, because Saudi Arabia and the UAE are among Snapchat's
 strongest markets and Spotlight (its TikTok-style feed) takes the same 9:16
