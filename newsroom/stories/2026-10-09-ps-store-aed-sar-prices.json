@@ -1,0 +1,71 @@
+{
+ "id": "2026-10-09-ps-store-aed-sar-prices",
+ "title": "PlayStation Store UAE and Saudi now price in AED and SAR (live store prices)",
+ "game": "PlayStation Store",
+ "companies": [
+  "Sony Interactive Entertainment"
+ ],
+ "priority": "🟢",
+ "related": [
+  "2026-10-05-ps-store-aed-sar-switch"
+ ],
+ "sources": [
+  {
+   "role": "primary",
+   "name": "PlayStation Store GraphQL categoryGridRetrieve, en-AE / en-SA / en-US, read 9 Oct ~10:30 Dubai"
+  },
+  {
+   "role": "primary",
+   "name": "PS Store concept 10010040 en-ae/en-sa",
+   "url": "https://store.playstation.com/en-ae/concept/10010040"
+  },
+  {
+   "role": "primary",
+   "name": "PlayStation support, LATAM/MENA currency change",
+   "url": "https://www.playstation.com/en-ae/support/store/latam-mena-currency/"
+  }
+ ],
+ "claims": [
+  {
+   "text": "GTA VI 299.16 AED / 301.56 SAR; FC 27 Standard 261.76 / 263.86; Wolverine 261.76 / 290.25; CoD MW4 299 / 299",
+   "status": "verified",
+   "source": "PS Store data"
+  },
+  {
+   "text": "Switch followed maintenance 5 to 8 Oct; wallet 4.00 AED / 4.5 SAR per USD",
+   "status": "verified",
+   "source": "Sony support page"
+  },
+  {
+   "text": "Sony has not announced the switch as complete",
+   "status": "open",
+   "source": "support page still in future tense"
+  }
+ ],
+ "why": "Store and price news for Gulf players; follow-up to the 5 Oct switch post with real prices",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "السعر",
+   "time": "15:00 Dubai, 9 Oct",
+   "headline": "متجر PlayStation يعرض أسعاره الآن بالدرهم والريال",
+   "x": "أصبحت أسعار متجر PlayStation في الإمارات والسعودية بالدرهم والريال، ومنها GTA VI بسعر 299.16 درهمًا في الإمارات و301.56 ريالًا في السعودية.",
+   "ig": "أسعار ألعاب PS5 في الإمارات والسعودية صارت بالدرهم والريال. / بدأ متجر PlayStation في الإمارات عرض أسعار الألعاب بالدرهم، وفي السعودية بالريال، بدلًا من الدولار، بعد أعمال الصيانة التي أعلنتها سوني (Sony) بين 5 و8 أكتوبر. / ويعرض المتجر اليوم Grand Theft Auto VI بسعر 299.16 درهمًا في الإمارات و301.56 ريالًا في السعودية، والنسخة القياسية من EA SPORTS FC 27 بسعر 261.76 درهمًا و263.86 ريالًا. / أما Marvel's Wolverine فسعرها 261.76 درهمًا في الإمارات و290.25 ريالًا في السعودية، وتباع Call of Duty: Modern Warfare 4 بسعر 299 درهمًا في الإمارات و299 ريالًا في السعودية. / وتظهر بعض الأسعار بكسور، وبعضها بأرقام كاملة. / وحسب صفحة الدعم في سوني، تُحوَّل أرصدة المحافظ بالدولار بسعر 4 دراهم للدولار في الإمارات و4.5 ريال في السعودية.",
+   "threads": "none (two already today)"
+  }
+ },
+ "media": [
+  {
+   "file": "cards/2026-10/ps-store-aed-sar-prices-reel-v1.mp4",
+   "kind": "stills: PS Store 4K screenshots; bed"
+  }
+ ],
+ "status": "shortlisted",
+ "versions": [
+  {
+   "v": 1,
+   "at": "2026-10-09T10:30:00Z",
+   "change": "first build; grammar review: no required edits, five optional clarity fixes taken; DeepL back-check"
+  }
+ ]
+}
