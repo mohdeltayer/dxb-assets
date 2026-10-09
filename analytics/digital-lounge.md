@@ -124,3 +124,30 @@ Oct 1 2026", aggregated across Reels and posts; no per-Reel figures).
 - 8 Oct carried 20 stories, but 1 Oct carried 23 with no jump, so volume
   alone does not explain it. One or two Reels that day probably took off;
   Insights > Content sorted by views would name them.
+
+## 30 days to 9 Oct 2026: Audience and top Reels by views (screenshots, read 9 Oct 16:03 Dubai)
+
+`live/2026-10-09/analytics/instagram-audience-30d-1603.png`,
+`live/2026-10-09/analytics/instagram-content-by-views-1603.png`
+
+- Followers 59, against 23 in the export to 1 Oct: +36 in about eight
+  days. Growth curve, gender and age are blank ("Data is currently
+  unavailable"): Instagram shows demographics only from 100 followers.
+- Top Reels by views (likes, comments, reposts, shares):
+  1. Fortnite's Hollow Knight pack price (8 Oct): 8.3K; 216, 10, 10,
+     832 shares. Shares are 10% of views, about six times the September
+     rate (1.6%): readers forwarded it. This is the 8 Oct jump.
+  2. «هل يعود Solid Snake؟», Otsuka on a new Metal Gear (5 Oct): 2.2K; 42, 0, 0, 39.
+  3. «ثلاثة ملايين نسخة في أسبوع» (about 2 Oct): 1.8K; 19, 0, 0, 35.
+  4. Minecraft «تحت الأرض» (about 2 Oct): 1.6K; 43, 0, 0, 37.
+  5. «عادت نقاط المهارات في The…» (about 2 Oct): 1.6K; 30, 0, 1, 34.
+  6. Perfect Dark leaked gameplay (8 Oct): 1.4K; 14, 1, 0, 3.
+  7. Mafia II and III Definitive ratings (8 Oct): 1.3K; 24, 2, 0, 9.
+  8. «هل تنجح ARC Raiders على…» (6 Oct): 1.3K; 10, 0, 0, 14.
+  9. ARC Raiders bans, «لا فرصة ثانية للغشاشين» (2 Oct): 1.3K; 16, 2, 0, 14.
+- Pattern: a price players can judge for themselves on a loved series,
+  big series asking a question (Solid Snake, ARC Raiders), and
+  unconfirmed news on beloved games (Perfect Dark, Mafia). Dates and
+  out-now items are not in the top nine.
+- Still missing: follows per Reel (Content > Follows), to see which
+  Reels convert viewers into followers.
