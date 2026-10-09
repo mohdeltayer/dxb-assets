@@ -106,3 +106,21 @@ Oct 1 2026", aggregated across Reels and posts; no per-Reel figures).
   Reel, audience countries and ages for the month, and the day-by-day
   follower curve. Instagram Insights > Content (sorted by views) and >
   Followers would give them.
+
+## 30 days to 8 Oct 2026: Instagram Insights overview (screenshot, read 9 Oct 16:01 Dubai)
+
+`live/2026-10-09/analytics/instagram-insights-30d-1601.png`
+
+- Views 50,736 from 28,159 viewers (about 1.8 views per viewer).
+  Interactions 1,925 (3.8% of views). Net followers not shown ("--").
+- 99.2% of views from non-followers, 0.8% from followers: the reach is
+  still the Reels tab, not the follower base.
+- By type: Reels 51K, posts 44, stories 5. Reels only stands.
+- Daily curve: nothing before the account restarted (27 Sep), about 4K
+  a day by 28 to 29 Sep, a dip to about 2K, then 3K to 4K a day through
+  early Oct, and a jump to about 14K on 8 Oct, the last day shown.
+- Against the Edits export for 1 Sep to 1 Oct (14K views, 9.5K viewers,
+  about 3.5% interactions), views more than tripled in about a week.
+- 8 Oct carried 20 stories, but 1 Oct carried 23 with no jump, so volume
+  alone does not explain it. One or two Reels that day probably took off;
+  Insights > Content sorted by views would name them.
