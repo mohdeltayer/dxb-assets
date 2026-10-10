@@ -128,7 +128,7 @@ def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
         hs, hst = hs - 4, hst - 5
     hl = L
     if len(lines) == 2:                    # balance two lines so no word hangs alone
-        words = headline.split(); tw = lambda x: probe.textlength(x, font=f, **G.AR)
+        words = G._tokens(headline); tw = lambda x: probe.textlength(x, font=f, **G.AR)
         bw = min(max(tw(' '.join(words[:k])), tw(' '.join(words[k:]))) for k in range(1, len(words)))
         hl = max(L, int(W - R - bw - 16))
     chip = G._ACC if vivid else None
