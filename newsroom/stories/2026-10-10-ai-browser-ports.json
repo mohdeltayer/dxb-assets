@@ -1,0 +1,63 @@
+{
+ "id": "2026-10-10-ai-browser-ports",
+ "title": "AI-decompiled browser ports of Halo: CE, GTA: Vice City, The Simpsons: Hit & Run and more run well, Kotaku",
+ "game": "Halo / GTA / Call of Duty",
+ "companies": [
+  "Kotaku",
+  "Microsoft",
+  "Take-Two",
+  "Anthropic"
+ ],
+ "priority": "🟢",
+ "related": [],
+ "sources": [
+  {
+   "role": "outlet_report",
+   "name": "Kotaku, 9 Oct 21:45 UTC",
+   "url": "https://kotaku.com/we-might-be-cooked-as-these-vibe-coded-web-browser-ports-of-halo-the-simpsons-hit-and-run-and-gta-vice-city-seem-to-work-perfectly-2000743300"
+  },
+  {
+   "role": "outlet_report",
+   "name": "Windows Central via Yahoo, 1 Oct",
+   "url": "https://tech.yahoo.com/gaming/articles/ai-game-ports-bring-original-103210194.html"
+  }
+ ],
+ "claims": [
+  {
+   "text": "Hundreds of AI-decompiled ports in two weeks; browser ports of Black Ops, Halo CE, Vice City, Skate 3, Simpsons run well; one Halo port has online servers; takedowns are whack-a-mole",
+   "status": "verified",
+   "source": "Kotaku (writer played them)"
+  },
+  {
+   "text": "Halo CE community port on browser, Android, Linux; decompiled with AI",
+   "status": "verified",
+   "source": "Windows Central"
+  }
+ ],
+ "why": "Big trend few Arabic outlets covered (Mohammad); framed as a publishers/IP story, no port sites named or shown",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "تقرير",
+   "time": "19:15 Dubai, 10 Oct (proposed)",
+   "headline": "نسخ من Halo وGTA تعمل داخل المتصفح بمساعدة الذكاء الاصطناعي",
+   "x": "مئات النسخ غير الرسمية من ألعاب قديمة، بينها Halo وGTA: Vice City، صارت تعمل داخل المتصفح بعد إعادة بناء شيفرتها بالذكاء الاصطناعي، حسب موقع كوتاكو (Kotaku).",
+   "ig": "ألعاب من جيل PS2 وPS3 تعمل الآن داخل المتصفح. / ذكر موقع كوتاكو (Kotaku) أن مئات النسخ غير الرسمية من ألعاب قديمة ظهرت خلال الأسبوعين الماضيين، بعد أن أُعيد بناء شيفرتها البرمجية من ملفات الألعاب الأصلية بمساعدة الذكاء الاصطناعي، في عملية كانت تستغرق شهورًا من العمل. / ومن بينها نسخ تعمل داخل المتصفح من Call of Duty: Black Ops وHalo: Combat Evolved وGrand Theft Auto: Vice City وSkate 3 وThe Simpsons: Hit & Run، وقال كاتب الموقع بعد تجربة عدد منها إن بعضها يعمل بشكل شبه خالٍ من العيوب، وإن إحدى نسخ Halo تعمل مع خوادم لعب جماعي. / ويعزو الموقع هذه الموجة إلى قدرة أحدث إصدار من نموذج Claude، من شركة أنثروبيك (Anthropic)، على تفكيك شيفرة الألعاب، فيما ذكر موقع ويندوز سنترال (Windows Central) أن نسخة طوّرها مجتمع اللاعبين من Halo: Combat Evolved وصلت أيضًا إلى Android وLinux. / ويرى كوتاكو أن الناشرين يستطيعون المطالبة بحذف هذه النسخ، لكن صنع غيرها سهل وسريع، ما يجعل حماية حقوقهم أشبه بمطاردة لا تنتهي.",
+   "threads": "مئات النسخ غير الرسمية من ألعاب قديمة، بينها Halo وGTA: Vice City، صارت تعمل داخل المتصفح بعد إعادة بناء شيفرتها بالذكاء الاصطناعي، حسب موقع كوتاكو (Kotaku)."
+  }
+ },
+ "media": [
+  {
+   "file": "cards/2026-10/ai-browser-ports-reel-v1.mp4",
+   "kind": "official Steam screenshots (Halo MCC, Vice City DE, Black Ops) in our own generic browser bar; bed"
+  }
+ ],
+ "status": "shortlisted",
+ "versions": [
+  {
+   "v": 1,
+   "at": "2026-10-10T14:00:00Z",
+   "change": "first build; grammar review: 2 required (Android/Linux in English; Bokeh founder sentence order), headline wording matched to source; DeepL back-check (Starfield halted line)"
+  }
+ ]
+}
