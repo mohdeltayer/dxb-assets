@@ -77,6 +77,14 @@ In sweeps that means:
   Lounge Reels before DXB-KNIGHT cards: each review slot builds as many
   verified Digital Lounge stories as the window holds, and Reel quality
   (cover tile, footage, sound, readable lines) comes before speed.
+- DXB-KNIGHT on hold, option B (Mohammad, 10 Oct 2026, from 11 Oct; the
+  two posts queued for 10 Oct evening went out as planned): no routine
+  DXB-KNIGHT production. Sweeps and review slots shortlist for Digital
+  Lounge only: no fast posts, no analysis cards, no evening slot planning,
+  and no "ask for his take" step for DXB-KNIGHT. He can still post a hero
+  piece or a take when he has one; build it when he brings it. The account,
+  its rules below and its Postiz connection stay as they are, so the hold
+  lifts without new work. The time goes to more Digital Lounge Reels.
 - The exception runs the other way for opinion (Mohammad, 27 Sep 2026):
   DXB-KNIGHT is his personal account, Digital Lounge and Instagram are
   news. A piece built on his take (analysis, a history angle, a verdict)
