@@ -1,0 +1,74 @@
+{
+ "id": "2026-10-10-gears-eday-alinea-estimates",
+ "title": "Gears of War: E-Day estimates (Alinea Analytics): ~230K sold, ~1.7M Game Pass players, 722K+ paid $30 upgrade, $37M+",
+ "game": "Gears of War: E-Day",
+ "companies": [
+  "Microsoft",
+  "The Coalition",
+  "Alinea Analytics"
+ ],
+ "priority": "🟢",
+ "related": [
+  "2026-10-06-gears-eday-launch",
+  "2026-10-01-gears-eday"
+ ],
+ "sources": [
+  {
+   "role": "outlet_report",
+   "name": "Eurogamer, 9 Oct 18:03 UTC",
+   "url": "https://www.eurogamer.net/gears-of-war-eday-sales-xbox-game-pass-players",
+   "via": "Alinea Analytics (Rhys Elliott) estimates; his X post not read (X refuses automated requests)"
+  }
+ ],
+ "claims": [
+  {
+   "text": "~230K copies sold since 1 Oct (168K Steam, 62K Xbox console and PC)",
+   "status": "verified",
+   "source": "Alinea estimate as reported by Eurogamer"
+  },
+  {
+   "text": "~1.7M Game Pass players; 722K+ bought the $30 Premium upgrade; $37M+ incl. microtransactions",
+   "status": "verified",
+   "source": "Alinea estimate as reported by Eurogamer"
+  },
+  {
+   "text": "Microsoft official figures",
+   "status": "open",
+   "source": "none published"
+  }
+ ],
+ "why": "Big number on a flagship game, and the Game Pass money question",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "تقرير",
+   "time": "08:00 Dubai, 10 Oct",
+   "headline": "تقديرات: نحو مليون لاعب دفعوا مقابل Gears of War: E-Day",
+   "x": "تقديرات شركة ألينيا أناليتكس (Alinea Analytics): بيعت نحو 230 ألف نسخة من Gears of War: E-Day، ولعبها 1.7 مليون مشترك في Game Pass.",
+   "ig": "كم باعت Gears of War: E-Day حتى الآن؟ / قدّرت شركة تحليلات السوق ألينيا أناليتكس (Alinea Analytics) مبيعات Gears of War: E-Day بنحو 230 ألف نسخة منذ بدء الوصول المبكر في 1 أكتوبر، منها 168 ألفًا على Steam و62 ألفًا على أجهزة Xbox وPC، حسب ما نقله موقع يوروجيمر (Eurogamer) عن المحلل ريس إليوت (Rhys Elliott). / ولعب اللعبة نحو 1.7 مليون مشترك عبر Game Pass، واشترى أكثر من 722 ألفًا منهم ترقية Premium Edition بسعر 30 دولارًا ليبدؤوا اللعب مبكرًا قبل الإطلاق الكامل في 6 أكتوبر. / وتقدّر الشركة إيرادات اللعبة بأكثر من 37 مليون دولار، تشمل المبيعات والمشتريات داخل اللعبة والترقيات، أي أن قرابة مليون لاعب دفعوا مقابلها شيئًا. / ولم تكشف مايكروسوفت (Microsoft) أي أرقام رسمية للعبة حتى الآن.",
+   "threads": "yes, short X text"
+  },
+  "dxb": {
+   "lane": "fast",
+   "chip": "REPORT",
+   "background": "reported",
+   "time": "19:30 Dubai, 10 Oct",
+   "x": "About 230K copies sold, but 1.7M played Gears of War: E-Day on Game Pass and 722K of them paid $30 to start early. That's Alinea Analytics' estimate; Microsoft hasn't shared numbers.",
+   "card": "cards/2026-10/gears-eday-alinea-fast-v1.png"
+  }
+ },
+ "media": [
+  {
+   "file": "cards/2026-10/gears-eday-alinea-estimates-reel-v1.mp4",
+   "kind": "footage: IGN 3840 copy of the official launch trailer, clean shots only; sound is our bed (trailer effects-heavy after 16 s)"
+  }
+ ],
+ "status": "shortlisted",
+ "versions": [
+  {
+   "v": 1,
+   "at": "2026-10-10T03:00:00Z",
+   "change": "first build; grammar review: 1 required (ليبدؤوا), clarity edit taken; DeepL back-check (MW4 MIA line)"
+  }
+ ]
+}

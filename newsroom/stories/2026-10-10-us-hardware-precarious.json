@@ -1,0 +1,66 @@
+{
+ "id": "2026-10-10-us-hardware-precarious",
+ "title": "Piscatella: US hardware market most precarious since the early 80s; Xbox YTD units -33% (all-time low), PlayStation -25% (lowest since 2013); avg prices $529 / $597 all-time highs",
+ "game": "Market",
+ "companies": [
+  "Circana"
+ ],
+ "priority": "🟢",
+ "related": [
+  "2026-10-09-us-august-sales-circana"
+ ],
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Mat Piscatella, Bluesky, 9 Oct 14:00-14:04 UTC",
+   "url": "https://bsky.app/profile/matpiscatella.bsky.social/post/3mxh5dxt5sc2g"
+  },
+  {
+   "role": "outlet_report",
+   "name": "Eurogamer, 9 Oct 18:51 UTC",
+   "url": "https://www.eurogamer.net/xbox-playstation-sales-new-lows-hardware-market"
+  }
+ ],
+ "claims": [
+  {
+   "text": "2026 YTD to Aug: Xbox units -33% (all-time low), PlayStation -25% (lowest since 2013)",
+   "status": "verified",
+   "source": "Circana via Piscatella"
+  },
+  {
+   "text": "Avg price paid: Xbox $529 (+26%), PlayStation $597 (+20%), all-time US highs",
+   "status": "verified",
+   "source": "Circana via Piscatella"
+  },
+  {
+   "text": "\"not been in a more precarious position since the early 80s\"; GTA VI may ease declines depending on availability and pricing",
+   "status": "verified",
+   "source": "Piscatella"
+  }
+ ],
+ "why": "Follow-up to the August numbers; the analysis card while the topic is live",
+ "lanes": {
+  "dxb": {
+   "lane": "card",
+   "chip": "ANALYSIS",
+   "background": "reported",
+   "time": "20:30 Dubai, 10 Oct",
+   "x": "Record prices, record lows. Circana's Mat Piscatella on where US console sales stand going into GTA VI.",
+   "card": "cards/2026-10/us-hardware-precarious-analysis-v1.png"
+  }
+ },
+ "media": [
+  {
+   "file": "cards/2026-10/us-hardware-precarious-analysis-v1.png",
+   "kind": "flex single; our own plate with console product shots and Circana figures"
+  }
+ ],
+ "status": "shortlisted",
+ "versions": [
+  {
+   "v": 1,
+   "at": "2026-10-10T02:30:00Z",
+   "change": "first build, reported (no take given)"
+  }
+ ]
+}
