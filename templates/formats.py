@@ -17,6 +17,7 @@ FORMATS = {
     'quote':     "the speaker's line leads, in «» right after the headline",
     'explainer': "the source's own figures step by step (patents, features)",
     'handson':   'his gameplay: natural colours, text after the action, numbered tips',
+    'retro':     'on this day: the game on a real CRT photo, fact sheet then «هل تعلم؟» facts (retro_tv, 10 Oct 2026)',
 }
 LEDGER = os.path.join(os.path.dirname(__file__), 'assets', 'format-ledger.json')
 
