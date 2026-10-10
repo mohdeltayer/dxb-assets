@@ -1,0 +1,65 @@
+{
+ "id": "2026-10-10-switch2-battery-fcc",
+ "title": "Device BEE-001(-01), said to be the EU battery-replaceable Switch 2, certified by the US FCC (8 Oct)",
+ "game": "Nintendo Switch 2",
+ "companies": [
+  "Nintendo"
+ ],
+ "priority": "🟢",
+ "related": [],
+ "sources": [
+  {
+   "role": "original_reporter",
+   "name": "Bluesky user tracking Nintendo filings",
+   "url": ""
+  },
+  {
+   "role": "outlet_report",
+   "name": "Game*Spark, 10 Oct",
+   "url": "http://www.gamespark.jp/article/2026/10/10/173470.html"
+  }
+ ],
+ "claims": [
+  {
+   "text": "FCC certification dated 8 Oct for BEE-001(-01)",
+   "status": "open",
+   "source": "Game*Spark (FCC page blocks automated access)"
+  },
+  {
+   "text": "Nintendo announced user-replaceable-battery versions for EU battery rules, only where Nintendo of Europe operates",
+   "status": "verified",
+   "source": "Nintendo's EU compliance disclosure, per press"
+  },
+  {
+   "text": "No release announced outside Europe",
+   "status": "verified",
+   "source": "Game*Spark"
+  }
+ ],
+ "why": "Hardware change Switch 2 owners ask about",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "تقرير",
+   "time": "16:15 Dubai, 10 Oct (proposed)",
+   "headline": "نسخة Switch 2 ببطارية قابلة للاستبدال تحصل على اعتماد أمريكي",
+   "x": "طراز يُنسب إلى نسخة Switch 2 الأوروبية ذات البطارية القابلة للاستبدال حصل على اعتماد هيئة الاتصالات الأمريكية، ولم تعلن نينتيندو (Nintendo) طرحها خارج أوروبا.",
+   "ig": "هل تصل البطارية القابلة للاستبدال إلى Switch 2 خارج أوروبا؟ / حصل جهاز يحمل رقم الطراز BEE-001(-01)‎ على اعتماد هيئة الاتصالات الفدرالية الأمريكية (FCC) في 8 أكتوبر، حسب ما رصده أحد متتبعي براءات اختراع نينتيندو (Nintendo) ووثائق اعتمادها، ونقله موقع جيم سبارك (Game*Spark) الياباني. / ويُنسب هذا الرقم إلى النسخة المعدلة من Nintendo Switch 2 المخصصة لأوروبا، بينما يحمل الجهاز الحالي الرقم BEE-001. / وكانت نينتيندو قد أعلنت أنها ستنتقل تدريجيًا إلى نسخ من Switch 2 وأذرع التحكم ببطاريات يستطيع المستخدم استبدالها، التزامًا بقواعد البطاريات الجديدة في الاتحاد الأوروبي، على أن يقتصر ذلك على المناطق التي تعمل فيها نينتيندو أوروبا (Nintendo of Europe). / ولم تعلن الشركة حتى الآن طرح هذه النسخ في أي منطقة أخرى.",
+   "threads": "طراز يُنسب إلى نسخة Switch 2 الأوروبية ذات البطارية القابلة للاستبدال حصل على اعتماد هيئة الاتصالات الأمريكية، ولم تعلن نينتيندو (Nintendo) طرحها خارج أوروبا."
+  }
+ },
+ "media": [
+  {
+   "file": "cards/2026-10/switch2-battery-fcc-reel-v1.mp4",
+   "kind": "Nintendo's own stills (nintendo.com) and Joy-Con attach clip (1080p); bed"
+  }
+ ],
+ "status": "shortlisted",
+ "versions": [
+  {
+   "v": 1,
+   "at": "2026-10-10T10:30:00Z",
+   "change": "first build; grammar review: 1 required (quote case, fixed); DeepL back-check (Townfall date scope, TFLOPS wording, Nintendo of Europe line, hedge on the model number)"
+  }
+ ]
+}
