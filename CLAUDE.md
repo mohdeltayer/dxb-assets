@@ -362,10 +362,12 @@ Threads (Mohammad, 4 Oct 2026): Digital Lounge Threads (@the_digilounge,
 made from the Instagram account) joined Postiz on 4 Oct 2026 as integration
 `cmuu27hg405tls00yikmo4ij3`, platform `threads`, no settings (`"settings":
 {}`), 500 characters a post. A small test, judged after two weeks like
-Snapchat: does it reach anyone beyond the Instagram crowd. One or two posts a
-day, the day's strongest Digital Lounge stories only, at the same time as
-their X and Instagram posts, carrying the short X text and the same Reel; no
-hashtags. Preflight knows the account.
+Snapchat: does it reach anyone beyond the Instagram crowd. Every story
+(Mohammad, 10 Oct 2026: "should carry all stories at the same time"; was one
+or two a day): every Digital Lounge story goes to Threads at the same time as
+its X and Instagram posts, carrying the short X text and the same Reel; no
+hashtags. Digital Lounge runs on X, Instagram and Threads. Preflight knows
+the account.
 Digital Lounge YouTube (@the_digilounge, the old "Digi-ديجي" channel)
 was rebranded on 27 Sep 2026: name "ديجيتال لاونج | أخبار الألعاب", Arabic
 description, banner `live/2026-09-27/youtube/digi-youtube-banner.png`
