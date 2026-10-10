@@ -71,6 +71,12 @@ In sweeps that means:
 - Digital Lounge takes everything DXB-KNIGHT posts plus the minor news,
   release calendars, Game Pass and store lists and regional items.
 - When in doubt, a story goes Arabic-only rather than both.
+- Digital Lounge first, Instagram above all (Mohammad, 10 Oct 2026: "focus
+  on the digital [lounge], both the Instagram and the X, especially the
+  Instagram part, as it's getting a lot of views"). Effort goes to Digital
+  Lounge Reels before DXB-KNIGHT cards: each review slot builds as many
+  verified Digital Lounge stories as the window holds, and Reel quality
+  (cover tile, footage, sound, readable lines) comes before speed.
 - The exception runs the other way for opinion (Mohammad, 27 Sep 2026):
   DXB-KNIGHT is his personal account, Digital Lounge and Instagram are
   news. A piece built on his take (analysis, a history angle, a verdict)
