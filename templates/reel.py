@@ -533,8 +533,11 @@ def check_reading(lines, end):
 
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
-         lowres_ok=False, read_check=True, track=None, draft=False, head_size=66):
-    """`track`: (file, start) plays one continuous stretch of that trailer's
+         lowres_ok=False, read_check=True, track=None, draft=False, head_size=66, cut=False):
+    """`cut=True` joins the shots with hard cuts instead of crossfades: the
+    Comparison format (Mohammad, 10 Oct 2026), two states side by side in time
+    with their labels as lines, no soft blending.
+    `track`: (file, start) plays one continuous stretch of that trailer's
     sound under the whole cut, in place of each shot's own; `track='bed'` drops
     the footage's sound for our own bed (`sound=` picks the flavour to match the
     tone, default the everyday rotation) when no stretch of the trailer is good
@@ -548,6 +551,14 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     up in the pauses; the shots should add up to at least the read's length.
     Without a voice every line must stay up for its reading time (read_secs);
     the render stops otherwise, so a short story gets more related footage."""
+    global X
+    if cut:                                # hard cuts for Comparison; restored on the way out
+        keep, X = X, 0.04
+        try:
+            return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
+                        style, voice, duck_db, lowres_ok, read_check, track, draft, head_size)
+        finally:
+            X = keep
     G._ACC = G.ACCENTS[theme]
     tmp = tempfile.mkdtemp(prefix='reel-')
     try:

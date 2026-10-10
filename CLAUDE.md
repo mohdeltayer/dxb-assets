@@ -495,6 +495,23 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
        as <name>-draft.mp4, about 2.5 minutes against 7 to 10 for the real
        encode. `reel.strip(video, strip.jpg)` lays its frames out.
     3. The real render once the draft is clean, then `strip` again.
+- Creative brief and formats (Mohammad, 10 Oct 2026, adapted from an
+  outside "creative director" prompt; its gameplay styles, fast beat cuts,
+  regrading of publisher footage, comedy style and added music were left
+  out). Before the shot sheet, every Reel gets a five-line brief in its draft
+  notes: the angle and hook, the format, the cover frame, what plays under
+  it (trailer music, voices or our bed) and the one shot the key fact lands
+  on. Formats (`templates/formats.py`): trailer (one continuous stretch, the
+  default), numbers (our own graphics), comparison (two labelled states with
+  hard cuts, `reel(..., cut=True)`: prices by country, specs, before and
+  after), quote (the speaker's line leads), explainer (the source's own
+  figures) and handson (his gameplay: natural colours, text after the
+  action, numbered tips). No more than two Reels in a row share a format
+  (`formats.py check`, then `add` after the render), and each shortlisted
+  story names its format. On trailer Reels a strong shot may breathe a
+  second or two with no line after the headline; reading pace, line limits
+  and the headline on the first frame stay as they are. The line carrying
+  the number or the news lands on the most striking shot.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under

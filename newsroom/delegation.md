@@ -42,8 +42,9 @@ Look for the publisher's own vertical (9:16) cut first (press kits, media sites)
 then 1080p. Return file names, sizes, resolutions, durations and sheet paths. No YouTube or
 social-media downloaders.
 
-**Render (sonnet).** Given a batch folder with `copyNN.py` and `renderNN.py`:
-`check`, then `sheet`, then `draft`, then `strip`, and stop there with the
+**Render (sonnet).** Given a batch folder with `copyNN.py`, `renderNN.py` and
+the main session's five-line brief per Reel (angle, format, cover frame, sound,
+key shot; CLAUDE.md "Creative brief and formats"): `check`, then `sheet`, then `draft`, then `strip`, and stop there with the
 paths. After the main session clears the draft: `final`, `strip`,
 `outro.snap_cut` per Reel, 2-pass phone copies over 30 MB
 (`vb = 27*8192/dur - 192`, `-passlogfile` before the output), two renders at a
