@@ -293,14 +293,14 @@ def room3d_quad():
 
 def scrim_layer(spec, out):
     """The ground over the title band and the sheet, as a layer of its own for a video base."""
-    ground = gnd(spec)
+    ground = gnd(spec); top_a, bot_a = 0.62, 0.84                  # the code-built room is dark already: lighter scrims
     g = Image.new('L', (1, H), 0)
     for y in range(H):
-        if y < 540: v = 0.92
-        elif y < 660: v = 0.92 * (1 - (y - 540) / 120) ** 1.2
+        if y < 540: v = top_a
+        elif y < 660: v = top_a * (1 - (y - 540) / 120) ** 1.2
         elif y < WASH - 60: v = 0.0
-        elif y < Y0 - 6: v = 0.96 * ((y - WASH + 60) / (Y0 - 6 - WASH + 60)) ** 0.9
-        else: v = 0.96
+        elif y < Y0 - 6: v = bot_a * ((y - WASH + 60) / (Y0 - 6 - WASH + 60)) ** 0.9
+        else: v = bot_a
         g.putpixel((0, y), int(255 * v))
     im = Image.new('RGBA', (W, H), ground + (255,)); im.putalpha(g.resize((W, H))); im.save(out)
 

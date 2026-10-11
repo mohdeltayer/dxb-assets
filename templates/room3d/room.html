@@ -79,7 +79,7 @@ add(new THREE.BoxGeometry(0.72, 0.06, 0.05), mat({ color: 0x8a8378 }), [-0.78, 0
 // posters, right
 const poster = (k, x, y, w, h) => { add(new THREE.BoxGeometry(w + 0.05, h + 0.05, 0.02), mat({ color: 0x14100e }), [x, y, -0.60]);
   add(new THREE.PlaneGeometry(w, h), mat({ map: posterTex(k), roughness: 0.7 }), [x, y, -0.588]); };
-poster(0, 0.52, 1.56, 0.32, 0.46); poster(1, -0.78, 2.28, 0.3, 0.42);
+poster(0, 0.55, 2.12, 0.32, 0.46); poster(1, 0.86, 1.52, 0.26, 0.36);
 // shelf above the TV with rows of plain boxes (cartridge and tape cases)
 add(new THREE.BoxGeometry(1.0, 0.03, 0.2), mat({ color: PALETTE.shelf }), [-0.1, 1.68, -0.52]);
 add(new THREE.BoxGeometry(1.0, 0.03, 0.2), mat({ color: PALETTE.shelf }), [-0.1, 2.02, -0.52]);
@@ -107,13 +107,13 @@ const screen = add(new THREE.PlaneGeometry(scrW, scrH), mat({ color: 0x0a0a0c, r
 for (let i = 0; i < 4; i++) add(new THREE.CylinderGeometry(0.014, 0.014, 0.01, 16), mat({ color: 0x6b6b70 }), [0.33, 0.56 + i * 0.1, scrZ], [Math.PI / 2, 0, 0]);  // knobs
 add(new THREE.BoxGeometry(0.06, 0.4, 0.004), mat({ color: 0x3a3030 }), [0.33, 0.73, scrZ - 0.003]);              // speaker grille strip
 // a controller on the rug, a plant, a floor lamp
-add(new THREE.BoxGeometry(0.16, 0.025, 0.07), mat({ color: 0xd9d4c7, roughness: 0.5 }), [-0.42, 0.012, 0.95], [0, 0.4, 0]);
-add(new THREE.BoxGeometry(0.03, 0.006, 0.03), mat({ color: 0x1e1e22 }), [-0.47, 0.027, 0.95], [0, 0.4, 0]);
-add(new THREE.CylinderGeometry(0.11, 0.09, 0.14, 24), mat({ color: 0xb3573a }), [-0.62, 0.07, 0.42]);
-for (let i = 0; i < 9; i++) add(new THREE.ConeGeometry(0.03, 0.26, 6), mat({ color: 0x3d7a4a }), [-0.62 + Math.cos(i) * 0.05, 0.26, 0.42 + Math.sin(i) * 0.05], [Math.sin(i) * 0.35, i, Math.cos(i) * 0.35]);
-add(new THREE.CylinderGeometry(0.16, 0.2, 0.02, 24), mat({ color: 0x3a3030 }), [0.58, 0.01, 0.25]);               // lamp base
-add(new THREE.CylinderGeometry(0.012, 0.012, 1.45, 12), mat({ color: 0xcfa968, metalness: 0.6, roughness: 0.4 }), [0.58, 0.73, 0.25]);
-const shade = add(new THREE.CylinderGeometry(0.11, 0.16, 0.24, 24, 1, true), mat({ color: 0xe8c59a, emissive: PALETTE.lamp, emissiveIntensity: 0.55, side: THREE.DoubleSide, roughness: 1 }), [0.58, 1.50, 0.25]);
+add(new THREE.BoxGeometry(0.16, 0.025, 0.07), mat({ color: 0xd9d4c7, roughness: 0.5 }), [0.42, 0.012, 0.95], [0, -0.4, 0]);
+add(new THREE.BoxGeometry(0.03, 0.006, 0.03), mat({ color: 0x1e1e22 }), [0.37, 0.027, 0.95], [0, -0.4, 0]);
+add(new THREE.CylinderGeometry(0.11, 0.09, 0.14, 24), mat({ color: 0xb3573a }), [0.66, 0.07, 0.42]);
+for (let i = 0; i < 9; i++) add(new THREE.ConeGeometry(0.03, 0.26, 6), mat({ color: 0x3d7a4a }), [0.66 + Math.cos(i) * 0.05, 0.26, 0.42 + Math.sin(i) * 0.05], [Math.sin(i) * 0.35, i, Math.cos(i) * 0.35]);
+add(new THREE.CylinderGeometry(0.16, 0.2, 0.02, 24), mat({ color: 0x3a3030 }), [-0.60, 0.01, 0.25]);              // lamp base
+add(new THREE.CylinderGeometry(0.012, 0.012, 1.45, 12), mat({ color: 0xcfa968, metalness: 0.6, roughness: 0.4 }), [-0.60, 0.73, 0.25]);
+const shade = add(new THREE.CylinderGeometry(0.11, 0.16, 0.24, 24, 1, true), mat({ color: 0xe8c59a, emissive: PALETTE.lamp, emissiveIntensity: 0.55, side: THREE.DoubleSide, roughness: 1 }), [-0.60, 1.50, 0.25]);
 shade.castShadow = false;
 
 const vigTex = canvasTex(512, 512, g => { const grd = g.createRadialGradient(256, 236, 120, 256, 256, 330);
@@ -124,14 +124,14 @@ vig.position.set(0.05, 1.02, 3.2 - 1.9); vig.lookAt(camera.position); vig.render
 scene.add(new THREE.AmbientLight(0x202838, 0.12));
 const moon = new THREE.DirectionalLight(PALETTE.night, 0.5); moon.position.set(-2.2, 2.6, -0.3); moon.target.position.set(0.3, 0, 0.8);
 moon.castShadow = true; moon.shadow.mapSize.set(2048, 2048); moon.shadow.bias = -0.0005; scene.add(moon, moon.target);
-const lamp = new THREE.PointLight(PALETTE.lamp, 2.6, 6, 1.6); lamp.position.set(0.58, 1.44, 0.25); scene.add(lamp);
-const lampSpot = new THREE.SpotLight(PALETTE.lamp, 10, 5, 0.95, 0.6, 1.4); lampSpot.position.set(0.58, 1.38, 0.25); lampSpot.target.position.set(0.4, 0, 0.3);
+const lamp = new THREE.PointLight(PALETTE.lamp, 2.6, 6, 1.6); lamp.position.set(-0.60, 1.44, 0.25); scene.add(lamp);
+const lampSpot = new THREE.SpotLight(PALETTE.lamp, 10, 5, 0.95, 0.6, 1.4); lampSpot.position.set(-0.60, 1.38, 0.25); lampSpot.target.position.set(-0.4, 0, 0.3);
 lampSpot.castShadow = true; lampSpot.shadow.mapSize.set(2048, 2048); lampSpot.shadow.bias = -0.0004; scene.add(lampSpot, lampSpot.target);
 const tvGlow = new THREE.PointLight(0x9fb3d8, 1.2, 3, 1.8); tvGlow.position.set(-0.06, scrY - 0.1, scrZ + 0.45); scene.add(tvGlow);
 
 // ---- dust in the lamp's light: whole cycles per loop
 const N = 120, dust = new Float32Array(N * 3), seeds = [];
-for (let i = 0; i < N; i++) seeds.push({ x: 0.15 + R() * 0.75, y: 0.3 + R() * 1.2, z: -0.2 + R() * 0.9, a: R() * 6.28, k: 1 + Math.floor(R() * 3), r: 0.03 + R() * 0.06 });
+for (let i = 0; i < N; i++) seeds.push({ x: -0.95 + R() * 0.75, y: 0.3 + R() * 1.2, z: -0.2 + R() * 0.9, a: R() * 6.28, k: 1 + Math.floor(R() * 3), r: 0.03 + R() * 0.06 });
 const dustGeo = new THREE.BufferGeometry(); dustGeo.setAttribute('position', new THREE.BufferAttribute(dust, 3));
 const dustPts = new THREE.Points(dustGeo, new THREE.PointsMaterial({ color: 0xffe3b8, size: 0.006, transparent: true, opacity: 0.35, depthWrite: false }));
 scene.add(dustPts);
