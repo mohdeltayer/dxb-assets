@@ -201,8 +201,11 @@ def scene(ground=GROUND, kind=None):
 
 # Handhelds sit on a desk, not on the TV (Mohammad, 11 Oct 2026). Top-down desk photo from the media scout's package
 # (Unsplash WW8jBak7bo), the handheld's own product shot laid on it, the footage on its screen.
-DESK = '/mnt/user-data/uploads/scene-desk-4-pexels32759887.jpg'   # cassettes, sunglasses, a pocket watch: the era's things
-DESK_TURN, DESK_CROP = 0, (0.0, 0.56)                                # the rows kept (fractions of height): cassette, sunglasses, bandana
+DESKS = {
+    'cassette': dict(photo='/mnt/user-data/uploads/scene-desk-4-pexels32759887.jpg', window=(0, 0, 3000, 2520), dev=(0.5, 0.52)),
+    'carts': dict(photo='/mnt/user-data/uploads/scout/c1-pexels16247234.jpg', window=(0, 2560, 2200, 4360), dev=(0.42, 0.50)),
+}
+DESK = 'carts'                                                        # window: the source crop; dev: where the device centre lands (fractions)
 HANDHELDS = {
     # the product shot, how far it is turned in the photo (degrees, undone so the device faces the viewer: Mohammad,
     # 11 Oct 2026), its width on the frame, and the DMG green screen
@@ -237,9 +240,8 @@ def desk_scene(spec):
     im = Image.new('RGB', (SW, SH), ground)
     pat = motif(kind, ground) if kind else None
     if pat: im = im.convert('RGBA'); im.alpha_composite(pat); im = im.convert('RGB')
-    desk = Image.open(DESK).convert('RGB')
-    if DESK_TURN: desk = desk.rotate(DESK_TURN, expand=True)
-    desk = desk.crop((0, int(desk.height * DESK_CROP[0]), desk.width, int(desk.height * DESK_CROP[1])))
+    dk = DESKS[spec.get('desk', DESK)]
+    desk = Image.open(dk['photo']).convert('RGB').crop(dk['window'])
     top_y = sc(FADE_LIGHT[0]); hgt = sc(1420) - top_y; wid = SW   # the band under the title, full width, cropped to fit
     k = max(wid / desk.width, hgt / desk.height)
     desk = desk.resize((int(desk.width * k), int(desk.height * k)), Image.LANCZOS)
@@ -260,7 +262,8 @@ def desk_scene(spec):
     dev, lcd = device(key)
     kk = min(sc(hh['width']) / dev.width, sc(WASH + 30 - FADE_LIGHT[1] - 4) / dev.height)   # never into the sheet
     dev = dev.resize((int(dev.width * kk), int(dev.height * kk)), Image.LANCZOS)
-    dx, dy = (SW - dev.width) // 2, sc(FADE_LIGHT[1] + 4)
+    dx = int(dk['dev'][0] * SW - dev.width / 2); dy = int(top_y + dk['dev'][1] * hgt - dev.height / 2)
+    dy = max(dy, sc(FADE_LIGHT[1] + 4)); dy = min(dy, sc(WASH + 30) - dev.height)
     sh = Image.new('RGBA', (SW, SH), (0, 0, 0, 0))             # a soft shadow on the desk
     sm = Image.new('L', (SW, SH), 0); sm.paste(dev.split()[3], (dx + sc(14), dy + sc(20)))
     sh.putalpha(sm.point(lambda v: int(v * 0.6))); im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(sc(14))))
@@ -269,6 +272,49 @@ def desk_scene(spec):
     m = Image.new('L', (SW, SH), 255); ImageDraw.Draw(m).rectangle([x0 + 2, y0 + 2, x1 - 2, y1 - 2], fill=0)
     im.putalpha(ImageChops.multiply(im.split()[3], m.filter(ImageFilter.GaussianBlur(1.2))))
     return im, dict(cx=(x0 + x1) / 2, cy=(y0 + y1) / 2, w=x1 - x0, h=y1 - y0, angle=0)
+
+# The room (Mohammad, 11 Oct 2026, from his references: a warm 70s and 80s den with the set inside it, not a cut-out TV on a
+# flat ground). Unsplash J_30KpjyTgk: wallpaper, a lamp, a wood-cased Philips on a stand. The footage is mapped onto the
+# tube in perspective. `quad` is the glass's corners in the photo (tl, tr, br, bl); `scale` the photo's scale on the frame;
+# `top` where the photo's top edge lands; `cx` where the screen centre lands across the frame.
+ROOMS = {
+    'den': dict(photo='/mnt/user-data/uploads/scene-room-4-unsplash-J_30KpjyTgk.jpg',
+                quad=[(1882, 620), (2350, 606), (2346, 960), (1880, 962)], scale=0.78, top=220, cx=520),
+}
+ROOM = 'den'
+
+def room_scene(spec):
+    """The full-bleed room with scrims for the type, the tube cut out. Returns the scene and the screen quad on the
+    drawn (S-scaled) frame."""
+    rm = ROOMS[spec.get('room', ROOM)]; ground = gnd(spec)
+    ph = Image.open(rm['photo']).convert('RGB')
+    k = rm['scale'] * S
+    ph = ph.resize((int(ph.width * k), int(ph.height * k)), Image.LANCZOS)
+    qx = sum(p[0] for p in rm['quad']) / 4
+    ox, oy = sc(rm['cx']) - qx * k, sc(rm['top'])
+    im = Image.new('RGBA', (SW, SH), ground + (255,))
+    im.paste(ph, (int(ox), int(oy)))
+    # scrims: the ground over the title band and over the sheet, the room showing between them
+    g = Image.new('L', (1, SH), 0)
+    for yy in range(SH):
+        y = yy / S
+        if y < 540: v = 0.92
+        elif y < 660: v = 0.92 * (1 - (y - 540) / 120) ** 1.2
+        elif y < WASH - 60: v = 0.0
+        elif y < Y0 - 6: v = 0.96 * ((y - WASH + 60) / (Y0 - 6 - WASH + 60)) ** 0.9
+        else: v = 0.96
+        g.putpixel((0, yy), int(255 * v))
+    scrim = Image.new('RGBA', (SW, SH), ground + (255,)); scrim.putalpha(g.resize((SW, SH))); im.alpha_composite(scrim)
+    q = [(ox + x * k, oy + y * k) for x, y in rm['quad']]
+    m = Image.new('L', (SW, SH), 255); ImageDraw.Draw(m).polygon(q, fill=0)
+    im.putalpha(ImageChops.multiply(im.split()[3], m.filter(ImageFilter.GaussianBlur(1.6))))
+    return im, q
+
+def quad_mask(q, bx, by, bw, bh, out):
+    """The screen's shape inside its bounding box, for alphamerge after the perspective warp."""
+    m = Image.new('L', (bw, bh), 0)
+    ImageDraw.Draw(m).polygon([(x - bx, y - by) for x, y in q], fill=255)
+    m.filter(ImageFilter.GaussianBlur(1.2)).save(out)
 
 def lcdfx(w, h, out):
     """A handheld's LCD: a faint pixel grid and a soft shade at the edges, no scanlines or CRT glare."""
@@ -378,7 +424,7 @@ def fit(d, text, sizes, width, weight='Bold'):
 def boxart(t, spec):
     """The game's box stands on the cabinet beside the TV (or lies on the desk beside a handheld), in front of the
     photo and clear of the screen, with a soft shadow under it."""
-    if not spec.get('box'): return
+    if not spec.get('box') or (not CONSOLES[spec['console']].get('handheld') and spec.get('scene', 'room') == 'room'): return
     box = Image.open(spec['box']).convert('RGBA')
     hand = CONSOLES[spec['console']].get('handheld')
     maxw, maxh = (200, 250) if hand else (150, 190)
@@ -393,8 +439,10 @@ def boxart(t, spec):
 
 def top(spec, out):
     t = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-    waves(t, spec['console']); title_chip(t, spec['console'])
-    if SKINS[spec['console']].get('motif'):
+    hand = CONSOLES[spec['console']].get('handheld')
+    if hand or spec.get('scene', 'room') != 'room': waves(t, spec['console'])
+    title_chip(t, spec['console'])
+    if SKINS[spec['console']].get('motif') and (hand or spec.get('scene', 'room') != 'room'):
         sc_ = Image.new('RGBA', (W, H), (0, 0, 0, 0))
         ImageDraw.Draw(sc_).rounded_rectangle([L + 40, 352, R + 40, 548], 60, fill=gnd(spec) + (215,))
         t.alpha_composite(sc_.filter(ImageFilter.GaussianBlur(34)))
@@ -461,6 +509,11 @@ def render(spec, out, push=0.03, sheet_secs=6.0):
         if hand:                                                # handhelds: the desk, footage on the device's own screen
             base, geo = desk_scene(spec)
             w, h = int(geo['w'] / 2) * 2, int(geo['h'] / 2) * 2; lcdfx(w, h, f'{tmp}/fx.png')
+        elif spec.get('scene', 'room') == 'room':
+            base, q = room_scene(spec)
+            xs, ys = [p[0] for p in q], [p[1] for p in q]
+            x0, y0 = int(min(xs)), int(min(ys)); w, h = int(max(xs) - x0 + 1) // 2 * 2, int(max(ys) - y0 + 1) // 2 * 2
+            screenfx(w, h, f'{tmp}/fx.png'); quad_mask(q, x0, y0, w, h, f'{tmp}/qm.png')
         else:
             base, (x0, y0, w, h) = scene(gnd(spec), SKINS[key].get('motif'))
             screenfx(w, h, f'{tmp}/fx.png')
@@ -474,6 +527,7 @@ def render(spec, out, push=0.03, sheet_secs=6.0):
             assert b - a >= need, ('fact too fast', i, b - a, need)
             segs.append((f'{tmp}/s{i + 1}.png', a, b))
         cy = (geo['cy'] if hand else y0 + h / 2) / SH; z = f"({1 / S}/(1-{push}*t/{dur}))"
+        room = not hand and spec.get('scene', 'room') == 'room'
         ins = ['-loop', '1', '-t', str(dur), '-i', f'{tmp}/base.png', '-ss', str(start), '-t', str(dur), '-i', clip,
                '-loop', '1', '-t', str(dur), '-i', f'{tmp}/fx.png', '-loop', '1', '-t', str(dur), '-i', f'{tmp}/top.png']
         cx0, cy0, cw, ch = spec.get('crop', (10, 5, 330, 216))
@@ -482,6 +536,13 @@ def render(spec, out, push=0.03, sheet_secs=6.0):
             fc = (f"[1:v]crop={cw}:{ch}:{cx0}:{cy0},scale={w}:{h}:flags=lanczos{dmg},format=rgba[g];"
                   f"[g][2:v]overlay=0:0[gs];"
                   f"color=c=0x0b0d10:s={SW}x{SH}:d={dur}[blk];[blk][gs]overlay=x='{geo['cx']}-w/2':y='{geo['cy']}-h/2'[sc];")
+        elif room:                                              # warp the picture onto the tube, then cut it to the glass
+            pts = ':'.join(f"{a}={v - (x0 if i % 2 == 0 else y0):.1f}" for i, (a, v) in enumerate(zip(
+                ['x0', 'y0', 'x1', 'y1', 'x2', 'y2', 'x3', 'y3'], [c for p in (q[0], q[1], q[3], q[2]) for c in p])))
+            ins += ['-loop', '1', '-t', str(dur), '-i', f'{tmp}/qm.png']
+            fc = (f"[1:v]crop={cw}:{ch}:{cx0}:{cy0},scale={w}:{h}:flags=lanczos,eq=saturation=1.2:contrast=1.1:brightness=0.03,format=rgba[g];"
+                  f"[g][2:v]overlay=0:0,format=rgb24,perspective={pts}:sense=destination:interpolation=cubic,format=rgba[gw];"
+                  f"[gw][4:v]alphamerge[gs];color=c=0x0b0d10:s={SW}x{SH}:d={dur}[blk];[blk][gs]overlay={x0}:{y0}[sc];")
         else:
             fc = (f"[1:v]crop={cw}:{ch}:{cx0}:{cy0},scale={w}:{h}:flags=lanczos,eq=saturation=1.25:contrast=1.15:brightness=0.05,format=rgba[g];"
                   f"[g][2:v]overlay=0:0[gs];color=c=0x0b0d10:s={SW}x{SH}:d={dur}[blk];[blk][gs]overlay={x0}:{y0}[sc];")
@@ -489,11 +550,12 @@ def render(spec, out, push=0.03, sheet_secs=6.0):
                f"[0:v]format=rgba[bg];[sc][bg]overlay=0:0[full];"
                f"[full]scale=w='ceil({SW}*{z}/2)*2':h='ceil({SH}*{z}/2)*2':eval=frame:flags=bicubic,"
                f"crop={W}:{H}:x='(iw-{W})/2':y='(ih-{H})*{cy}',format=rgba[cam];[cam][3:v]overlay=0:0[v0];")
+        base_in = 5 if room else 4
         for i, (n, a, b) in enumerate(segs):
             ins += ['-loop', '1', '-t', str(dur), '-i', n]
             fi = f"fade=t=in:st={max(0, a - 0.01)}:d=0.35:alpha=1," if a > 0 else ''
             fo = f"fade=t=out:st={b - 0.35}:d=0.35:alpha=1" if b < dur else 'null'
-            fc += f"[{4 + i}:v]format=rgba,{fi}{fo}[s{i}];[v{i}][s{i}]overlay=0:0[v{i + 1}];"
+            fc += f"[{base_in + i}:v]format=rgba,{fi}{fo}[s{i}];[v{i}][s{i}]overlay=0:0[v{i + 1}];"
         fc += f"[v{len(segs)}]format=yuv420p[v]"
         subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', *ins, '-filter_complex', fc, '-map', '[v]', '-map', '1:a?',
                         '-c:v', 'libx264', '-crf', '17', '-preset', 'medium', '-c:a', 'aac', '-t', str(dur), out], check=True)
@@ -506,7 +568,8 @@ def stills(spec, outdir):
     top(spec, f'{outdir}/top.png'); sheet(spec, f'{outdir}/s0.png')
     for i in range(len(spec['facts'])): fact(spec, i, f'{outdir}/s{i + 1}.png')
     k = spec['console']
-    base = (desk_scene(spec) if CONSOLES[k].get('handheld') else scene(gnd(spec), SKINS[k].get('motif')))[0]
+    base = (desk_scene(spec) if CONSOLES[k].get('handheld') else room_scene(spec) if spec.get('scene', 'room') == 'room'
+            else scene(gnd(spec), SKINS[k].get('motif')))[0]
     base = base.resize((W, H), Image.LANCZOS)          # the first frame shows the whole drawing at 1/S
     for n in ['s0'] + [f's{i + 1}' for i in range(len(spec['facts']))]:
         im = Image.new('RGBA', (W, H), (11, 13, 16, 255)); im.alpha_composite(base)
