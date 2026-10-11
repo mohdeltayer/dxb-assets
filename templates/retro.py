@@ -60,7 +60,7 @@ SKINS = {
                       trim=('buttons', [(196, 0, 43), (196, 0, 43)]), waves=((196, 0, 43), (184, 184, 188))),
     'famicom':   dict(ground=(54, 14, 22), fill=(212, 172, 84), rim=(150, 28, 40), ink=(110, 20, 30),
                       trim=('buttons', [(150, 28, 40), (150, 28, 40)]), waves=((150, 28, 40), (212, 172, 84))),
-    'mastersystem': dict(ground=(16, 16, 19), fill=(30, 30, 34), rim=(230, 0, 18), ink=(244, 244, 248),
+    'mastersystem': dict(ground=(244, 244, 246), motif='grid', fill=(30, 30, 34), rim=(230, 0, 18), ink=(244, 244, 248),
                       trim=('grid', [(230, 0, 18)]), waves=((30, 91, 198), (200, 200, 205))),
     'snes':      dict(ground=(38, 33, 62), fill=(200, 200, 206), rim=(79, 67, 174), ink=(60, 50, 140),
                       trim=('buttons', [(79, 67, 174), (79, 67, 174), (154, 143, 216), (154, 143, 216)]), waves=((79, 67, 174), (154, 143, 216))),
@@ -78,7 +78,7 @@ SKINS = {
                       trim=('symbols', [(0, 160, 120), (230, 0, 18), (58, 110, 200), (150, 150, 160)]), waves=((247, 198, 0), (0, 160, 160))),
     'saturn':    dict(ground=(18, 19, 27), fill=(36, 36, 42), rim=(30, 91, 198), ink=(244, 244, 248),
                       trim=('squares', [(30, 91, 198), (230, 0, 18), (245, 196, 0), (0, 166, 81)]), waves=((30, 91, 198), (245, 196, 0))),
-    'dreamcast': dict(ground=(16, 30, 54), fill=(236, 236, 240), rim=(170, 170, 178), ink=(40, 40, 48),
+    'dreamcast': dict(ground=(246, 246, 248), fill=(236, 236, 240), rim=(170, 170, 178), ink=(40, 40, 48),
                       trim=('swirl', [(242, 107, 29)]), waves=((242, 107, 29), (0, 96, 168))),
     'gba':       dict(ground=(30, 24, 74), fill=(75, 63, 158), rim=(124, 112, 210), ink=(244, 243, 255),
                       trim=('buttons', [(124, 112, 210), (124, 112, 210)]), waves=((75, 63, 158), (124, 112, 210))),
@@ -89,6 +89,10 @@ SKINS = {
     'xbox':      dict(ground=(10, 22, 11), fill=(22, 28, 22), rim=(16, 124, 16), ink=(200, 250, 120),
                       trim=('jewel', [(16, 124, 16), (155, 240, 11)]), waves=((16, 124, 16), (155, 240, 11))),
 }
+
+DARK_TEXT = (24, 24, 30)
+def light(key): return lum(SKINS[key]['ground']) > 0.6
+def txt(key): return DARK_TEXT if light(key) else INK          # white box, white ground, dark type
 
 def sc(v): return int(round(v * S))
 def fr(x, y): return OX + x * K, OY + y * K
@@ -127,8 +131,9 @@ def motif(kind, ground):
         fall = np.clip(0.62 - 0.5 * dist, 0.07, 0.62)
         m.putalpha(Image.fromarray((np.array(m.split()[3]) * fall).astype('uint8')))
     elif kind == 'grid':                                        # NES and Mega Drive black boxes: a fine grey grid
-        for x in range(0, SW, sc(36)): d.line([(x, 0), (x, SH)], fill=(150, 150, 160, 46), width=sc(2))
-        for y in range(0, SH, sc(36)): d.line([(0, y), (SW, y)], fill=(150, 150, 160, 46), width=sc(2))
+        gc = (30, 30, 36, 40) if lum(ground) > 0.6 else (150, 150, 160, 46)
+        for x in range(0, SW, sc(36)): d.line([(x, 0), (x, SH)], fill=gc, width=sc(2))
+        for y in range(0, SH, sc(36)): d.line([(0, y), (SW, y)], fill=gc, width=sc(2))
     elif kind == 'wood':                                        # Atari: the woodgrain front
         for i in range(0, SH, sc(9)):
             pts = [(x, i + sc(4) * math.sin(x / sc(90) + i * 0.013)) for x in range(0, SW + 20, 20)]
@@ -167,6 +172,78 @@ def scene(ground=GROUND, kind=None):
     ImageDraw.Draw(m).rounded_rectangle([sc(x0), sc(y0), sc(x1), sc(y1)], sc(62), fill=0)
     im.putalpha(ImageChops.multiply(im.split()[3], m.filter(ImageFilter.GaussianBlur(3))))
     return im, (sc(x0), sc(y0), sc(x1) - sc(x0), sc(y1) - sc(y0))
+
+# Handhelds sit on a desk, not on the TV (Mohammad, 11 Oct 2026). Top-down desk photo from the media scout's package
+# (Unsplash WW8jBak7bo), the handheld's own product shot laid on it, the footage on its screen.
+DESK = '/mnt/user-data/uploads/scene-desk-3-unsplash-WW8jBak7bo.jpg'
+HANDHELDS = {
+    # photo, screen corners in the photo (tl, tr, br, bl), the device's width on the frame, and the DMG green screen
+    'gameboy': dict(photo='/mnt/user-data/uploads/retro-gameboy.jpg', screen=[(1329, 640), (2076, 841), (1788, 1618), (1063, 1389)],
+                    width=470, top=584, dmg=True),
+}
+
+def desk_scene(ground, kind, key):
+    """The desk under the text bands, the handheld on it with its screen cut out. Returns the scene and the screen's
+    centre, size and angle on the drawn (S-scaled) frame."""
+    hh = HANDHELDS.get(key)
+    if not hh:
+        raise ValueError(f"{CONSOLES[key]['name']}: no handheld photo yet for the desk scene")
+    im = Image.new('RGB', (SW, SH), ground)
+    pat = motif(kind, ground) if kind else None
+    if pat: im = im.convert('RGBA'); im.alpha_composite(pat); im = im.convert('RGB')
+    desk = Image.open(DESK).convert('RGB')                     # a vertical slice of the desk, from y 560 down
+    top_y = sc(560); hgt = SH - top_y; wid = SW
+    k = hgt / desk.height; sw = int(wid / k); x0 = (desk.width - sw) // 2
+    desk = desk.crop((x0, 0, x0 + sw, desk.height)).resize((wid, hgt), Image.LANCZOS)
+    desk = Image.eval(desk, lambda v: int(v * 0.8))
+    a = Image.new('L', desk.size, 255); d = ImageDraw.Draw(a)
+    fade = sc(160)
+    for i in range(fade): d.line([(0, i), (desk.width, i)], fill=int(255 * (i / fade) ** 1.4))
+    im.paste(desk, (0, top_y), a)
+    ImageDraw.Draw(im).rectangle([0, sc(1420), SW, SH], fill=ground)   # nothing of the desk under the caption area
+    im = im.convert('RGBA')
+    if pat: im.alpha_composite(pat)
+    g = Image.new('L', (1, SH), 0)                             # the same wash as the TV scene, so the sheet reads
+    for yy in range(SH):
+        t = (yy - sc(WASH)) / sc(160)
+        g.putpixel((0, yy), int(250 * min(1, max(0, t)) ** 0.9))
+    wash = Image.new('RGBA', (SW, SH), ground + (255,)); wash.putalpha(g.resize((SW, SH)))
+    # the handheld: cut from its white product background, screen cut out
+    src = Image.open(hh['photo']).convert('RGB')
+    import numpy as np
+    arr = np.array(src).astype(int)
+    white = (arr.min(axis=2) > 236).astype('uint8') * 255
+    wm = Image.fromarray(white).copy(); ImageDraw.floodfill(wm, (2, 2), 128); ImageDraw.floodfill(wm, (src.width - 3, src.height - 3), 128)
+    body = wm.point(lambda v: 0 if v == 128 else 255).filter(ImageFilter.MinFilter(5)).filter(ImageFilter.GaussianBlur(1.5))
+    scr = Image.new('L', src.size, 0); ImageDraw.Draw(scr).polygon(hh['screen'], fill=255)
+    body = ImageChops.subtract(body, scr.filter(ImageFilter.GaussianBlur(2)))
+    bb = body.getbbox(); src, body = src.crop(bb), body.crop(bb)
+    kk = sc(hh['width']) / src.width
+    dev = src.resize((int(src.width * kk), int(src.height * kk)), Image.LANCZOS).convert('RGBA')
+    dev.putalpha(body.resize(dev.size, Image.LANCZOS))
+    dx, dy = (SW - dev.width) // 2, sc(hh['top'])
+    sh = Image.new('RGBA', (SW, SH), (0, 0, 0, 0))             # a soft shadow on the desk
+    sm = Image.new('L', (SW, SH), 0); sm.paste(dev.split()[3], (dx + sc(18), dy + sc(26)))
+    sh.putalpha(sm.point(lambda v: int(v * 0.6))); im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(sc(16))))
+    im.alpha_composite(wash)
+    hole = Image.new('L', (SW, SH), 0); hole.paste(dev.split()[3], (dx, dy))
+    im.alpha_composite(dev, (dx, dy))
+    # the frame is opaque except the screen: punch the screen out of the whole scene
+    q = [((x - bb[0]) * kk + dx, (y - bb[1]) * kk + dy) for x, y in hh['screen']]
+    m = Image.new('L', (SW, SH), 255); ImageDraw.Draw(m).polygon(q, fill=0)
+    im.putalpha(ImageChops.multiply(im.split()[3], m.filter(ImageFilter.GaussianBlur(1.5))))
+    (tlx, tly), (trx, try_), (brx, bry), (blx, bly) = q
+    w = math.hypot(trx - tlx, try_ - tly); h = math.hypot(blx - tlx, bly - tly)
+    ang = math.atan2(try_ - tly, trx - tlx)
+    cx = (tlx + trx + brx + blx) / 4; cy = (tly + try_ + bry + bly) / 4
+    return im, dict(cx=cx, cy=cy, w=w, h=h, angle=ang)
+
+def lcdfx(w, h, out):
+    """A handheld's LCD: a faint pixel grid and a soft shade at the edges, no scanlines or CRT glare."""
+    fx = Image.new('RGBA', (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(fx)
+    for x in range(0, w, 3): d.line([x, 0, x, h], fill=(0, 0, 0, 26))
+    for y in range(0, h, 3): d.line([0, y, w, y], fill=(0, 0, 0, 26))
+    d.rectangle([0, 0, w - 1, h - 1], outline=(0, 0, 0, 90), width=4); fx.save(out)
 
 def screenfx(w, h, out):
     fx = Image.new('RGBA', (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(fx)
@@ -263,8 +340,8 @@ def top(spec, out):
     t = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     waves(t, spec['console']); title_chip(t, spec['console'])
     d = ImageDraw.Draw(t)
-    d.text((R, 386), spec['date'], font=A.F('Bold', 66), fill=INK, anchor='ra', **AR)
-    d.text((R, 474), f"صدرت \u2066{spec['game']}\u2069", font=A.F('Bold', 54), fill=INK, anchor='ra', **AR)
+    d.text((R, 386), spec['date'], font=A.F('Bold', 66), fill=txt(spec['console']), anchor='ra', **AR)
+    d.text((R, 474), f"صدرت \u2066{spec['game']}\u2069", font=A.F('Bold', 54), fill=txt(spec['console']), anchor='ra', **AR)
     t.save(out)
 
 def sheet(spec, out):
@@ -297,12 +374,12 @@ def sheet(spec, out):
         if isinstance(v, list):                                 # a two-line value in the smaller weight
             for j, line in enumerate(v):
                 assert d.textlength(line, font=sub, **opt(line)) <= room, ('too wide', line)
-                d.text((vx, y + 6 + j * 46), line, font=sub, fill=INK, anchor='ra', **opt(line))
+                d.text((vx, y + 6 + j * 46), line, font=sub, fill=txt(spec['console']), anchor='ra', **opt(line))
             y += 46 * len(v) + 20
         else:
             f = val if d.textlength(v, font=val, **opt(v)) <= room else sub      # a long studio name drops to the smaller weight
             assert d.textlength(v, font=f, **opt(v)) <= room, ('too wide', v)
-            d.text((vx, y + (0 if f is val else 8)), v, font=f, fill=INK, anchor='ra', **opt(v)); y += step
+            d.text((vx, y + (0 if f is val else 8)), v, font=f, fill=txt(spec['console']), anchor='ra', **opt(v)); y += step
     bb = t.getbbox(); assert bb[0] >= L - 30 and bb[3] <= FLOOR, ('sheet leaves the safe zone', bb)
     t.save(out)
 
@@ -316,19 +393,22 @@ def fact(spec, i, out):
         block(d, [R - 22, yy, R, yy + 22], c if j % 2 == 0 else tuple(int(v * 0.6) for v in c), px=4)
     for j, s in enumerate(lines):
         assert d.textlength(s, font=f, **opt(s)) <= R - 46 - L, ('too wide', s)
-        d.text((R - 46, top_ + j * step), s, font=f, fill=INK, anchor='ra', **opt(s))
+        d.text((R - 46, top_ + j * step), s, font=f, fill=txt(spec['console']), anchor='ra', **opt(s))
     bb = t.getbbox(); assert bb[0] >= L and bb[3] <= FLOOR, ('outside the safe zone', bb, lines)
     t.save(out)
 
 def render(spec, out, push=0.03, sheet_secs=6.0):
-    if CONSOLES[spec['console']].get('handheld'):               # Mohammad, 11 Oct 2026: handhelds sit on a desk, not on a TV
-        raise ValueError(f"{CONSOLES[spec['console']]['name']} is a handheld: its backdrop is a desk, not the TV. "
-                         "The desk scene is not built yet.")
     clip, start, dur = spec['clip'], spec['start'], spec['dur']
     tmp = tempfile.mkdtemp(prefix='retro-')
     try:
-        base, (x0, y0, w, h) = scene(SKINS[spec['console']]['ground'], SKINS[spec['console']].get('motif')); base.save(f'{tmp}/base.png')
-        screenfx(w, h, f'{tmp}/fx.png'); top(spec, f'{tmp}/top.png'); sheet(spec, f'{tmp}/s0.png')
+        key = spec['console']; hand = CONSOLES[key].get('handheld')
+        if hand:                                                # handhelds: the desk, footage on the device's own screen
+            base, geo = desk_scene(SKINS[key]['ground'], SKINS[key].get('motif'), key)
+            w, h = int(geo['w'] / 2) * 2, int(geo['h'] / 2) * 2; lcdfx(w, h, f'{tmp}/fx.png')
+        else:
+            base, (x0, y0, w, h) = scene(SKINS[key]['ground'], SKINS[key].get('motif'))
+            screenfx(w, h, f'{tmp}/fx.png')
+        base.save(f'{tmp}/base.png'); top(spec, f'{tmp}/top.png'); sheet(spec, f'{tmp}/s0.png')
         segs = [(f'{tmp}/s0.png', 0, sheet_secs)]
         per = (dur - sheet_secs) / len(spec['facts'])
         for i, lines in enumerate(spec['facts']):
@@ -337,15 +417,23 @@ def render(spec, out, push=0.03, sheet_secs=6.0):
             need = len(' '.join(lines)) / 14 + 0.5              # every fact stays long enough to read once
             assert b - a >= need, ('fact too fast', i, b - a, need)
             segs.append((f'{tmp}/s{i + 1}.png', a, b))
-        cy = (y0 + h / 2) / SH; z = f"({1 / S}/(1-{push}*t/{dur}))"
+        cy = (geo['cy'] if hand else y0 + h / 2) / SH; z = f"({1 / S}/(1-{push}*t/{dur}))"
         ins = ['-loop', '1', '-t', str(dur), '-i', f'{tmp}/base.png', '-ss', str(start), '-t', str(dur), '-i', clip,
                '-loop', '1', '-t', str(dur), '-i', f'{tmp}/fx.png', '-loop', '1', '-t', str(dur), '-i', f'{tmp}/top.png']
         cx0, cy0, cw, ch = spec.get('crop', (10, 5, 330, 216))
-        fc = (f"[1:v]crop={cw}:{ch}:{cx0}:{cy0},scale={w}:{h}:flags=lanczos,eq=saturation=1.25:contrast=1.15:brightness=0.05,format=rgba[g];"
-              f"[g][2:v]overlay=0:0[gs];color=c=0x0b0d10:s={SW}x{SH}:d={dur}[blk];[blk][gs]overlay={x0}:{y0}[sc];"
-              f"[0:v]format=rgba[bg];[sc][bg]overlay=0:0[full];"
-              f"[full]scale=w='ceil({SW}*{z}/2)*2':h='ceil({SH}*{z}/2)*2':eval=frame:flags=bicubic,"
-              f"crop={W}:{H}:x='(iw-{W})/2':y='(ih-{H})*{cy}',format=rgba[cam];[cam][3:v]overlay=0:0[v0];")
+        if hand:
+            dmg = ",format=gray,format=rgb24,lutrgb=r='15+val*0.55':g='56+val*0.52':b=15" if HANDHELDS[key].get('dmg') else ''
+            a = geo['angle']
+            fc = (f"[1:v]crop={cw}:{ch}:{cx0}:{cy0},scale={w}:{h}:flags=lanczos{dmg},format=rgba[g];"
+                  f"[g][2:v]overlay=0:0,rotate={a}:ow=rotw({a}):oh=roth({a}):c=black@0[gs];"
+                  f"color=c=0x0b0d10:s={SW}x{SH}:d={dur}[blk];[blk][gs]overlay=x='{geo['cx']}-w/2':y='{geo['cy']}-h/2'[sc];")
+        else:
+            fc = (f"[1:v]crop={cw}:{ch}:{cx0}:{cy0},scale={w}:{h}:flags=lanczos,eq=saturation=1.25:contrast=1.15:brightness=0.05,format=rgba[g];"
+                  f"[g][2:v]overlay=0:0[gs];color=c=0x0b0d10:s={SW}x{SH}:d={dur}[blk];[blk][gs]overlay={x0}:{y0}[sc];")
+        fc += (
+               f"[0:v]format=rgba[bg];[sc][bg]overlay=0:0[full];"
+               f"[full]scale=w='ceil({SW}*{z}/2)*2':h='ceil({SH}*{z}/2)*2':eval=frame:flags=bicubic,"
+               f"crop={W}:{H}:x='(iw-{W})/2':y='(ih-{H})*{cy}',format=rgba[cam];[cam][3:v]overlay=0:0[v0];")
         for i, (n, a, b) in enumerate(segs):
             ins += ['-loop', '1', '-t', str(dur), '-i', n]
             fi = f"fade=t=in:st={max(0, a - 0.01)}:d=0.35:alpha=1," if a > 0 else ''
@@ -362,7 +450,9 @@ def stills(spec, outdir):
     os.makedirs(outdir, exist_ok=True)
     top(spec, f'{outdir}/top.png'); sheet(spec, f'{outdir}/s0.png')
     for i in range(len(spec['facts'])): fact(spec, i, f'{outdir}/s{i + 1}.png')
-    base, _ = scene(SKINS[spec['console']]['ground'], SKINS[spec['console']].get('motif')); base = base.resize((W, H), Image.LANCZOS)          # the first frame shows the whole drawing at 1/S
+    k = spec['console']
+    base = (desk_scene(SKINS[k]['ground'], SKINS[k].get('motif'), k) if CONSOLES[k].get('handheld') else scene(SKINS[k]['ground'], SKINS[k].get('motif')))[0]
+    base = base.resize((W, H), Image.LANCZOS)          # the first frame shows the whole drawing at 1/S
     for n in ['s0'] + [f's{i + 1}' for i in range(len(spec['facts']))]:
         im = Image.new('RGBA', (W, H), (11, 13, 16, 255)); im.alpha_composite(base)
         im.alpha_composite(Image.open(f'{outdir}/top.png')); im.alpha_composite(Image.open(f'{outdir}/{n}.png'))
