@@ -20,12 +20,13 @@ GROUND, INK, BODY = (20, 19, 50), (244, 243, 255), (201, 200, 230)
 GOLD2 = A.THEMES['gold'][1]
 AR = A.AR
 PHOTO = '/mnt/user-data/uploads/scout/tv1-pexels16707770.jpg'
-K = 0.28                                          # photo scale: the TV (source x 750 to 2940, top y 594) centred, top at y 628
-OX, OY = 580 - 1845 * K, 628 - 594 * K          # TV centred at x 580: the box art stands clear at its left
-FADE = (566, 628)                                 # the photo fades in below the title, so no type ever sits on it
+K = 0.34                                          # photo scale as first approved: the TV (source x 750 to 2940, top y 594), top at y 588
+OX, OY = 590 - 1845 * K, 588 - 594 * K          # TV centred at x 590 so the box art stands on the cabinet at its left
+FADE = (400, 588)                                 # the photo fades in under the title as first approved (dark grounds)
+FADE_LIGHT = (536, 596)                           # on a white ground it appears only below the title: the wall under dark type read messy
 GLASS = (900, 720, 2420, 1830)                    # the screen in the photo
-WASH = 1070                                       # the wash over the cabinet starts at its top edge so the text reads
-Y0 = 1124                                         # the lower area runs from here to FLOOR
+WASH = 1116                                       # the wash over the cabinet starts at its top edge so the text reads
+Y0 = 1156                                         # the lower area runs from here to FLOOR
 
 # Each console's own colours, in the order the blocks use them (rows top to bottom, facts one by one).
 # No pink: the brand rule covers our own blocks, so PlayStation takes its logo's colours, not the square button.
@@ -55,21 +56,21 @@ CONSOLES = {
 # The «في مثل هذا اليوم» chip and the wave lines borrow each console's own look (Mohammad, 11 Oct 2026: the gold chip
 # did not blend). fill/rim/ink colour the chip, grain/lcd texture it, trim is the artifact beside it, waves the two wave colours.
 SKINS = {
-    'atari2600': dict(ground=(40, 25, 16), motif='wood', fill=(122, 74, 36), grain=True, rim=(192, 195, 199), ink=(246, 236, 214),
+    'atari2600': dict(type=(245, 130, 32), ground=(40, 25, 16), motif='wood', fill=(122, 74, 36), grain=True, rim=(192, 195, 199), ink=(246, 236, 214),
                       trim=('bars', [(228, 49, 38), (245, 130, 32), (250, 196, 40)]), waves=((228, 49, 38), (245, 130, 32))),
     'nes':       dict(ground=(28, 28, 32), fill=(38, 38, 42), rim=(184, 184, 188), ink=(240, 240, 244), band=(196, 0, 43), motif='grid',
                       trim=('buttons', [(196, 0, 43), (196, 0, 43)]), waves=((196, 0, 43), (184, 184, 188))),
-    'famicom':   dict(ground=(54, 14, 22), fill=(212, 172, 84), rim=(150, 28, 40), ink=(110, 20, 30),
+    'famicom':   dict(type=(212, 172, 84), ground=(54, 14, 22), fill=(212, 172, 84), rim=(150, 28, 40), ink=(110, 20, 30),
                       trim=('buttons', [(150, 28, 40), (150, 28, 40)]), waves=((150, 28, 40), (212, 172, 84))),
     'mastersystem': dict(ground=(16, 16, 19), light=(244, 244, 246), motif='grid', fill=(30, 30, 34), rim=(230, 0, 18), ink=(244, 244, 248),
                       trim=('grid', [(230, 0, 18)]), waves=((30, 91, 198), (200, 200, 205))),
-    'snes':      dict(ground=(38, 33, 62), fill=(200, 200, 206), rim=(79, 67, 174), ink=(60, 50, 140),
+    'snes':      dict(type=(154, 143, 216), ground=(38, 33, 62), fill=(200, 200, 206), rim=(79, 67, 174), ink=(60, 50, 140),
                       trim=('buttons', [(79, 67, 174), (79, 67, 174), (154, 143, 216), (154, 143, 216)]), waves=((79, 67, 174), (154, 143, 216))),
     'sfc':       dict(ground=(34, 34, 40), fill=(200, 200, 206), rim=(110, 110, 120), ink=(40, 40, 48),
                       trim=('diamond', [(45, 159, 74), (245, 196, 0), (42, 79, 184), (208, 2, 27)]), waves=((245, 196, 0), (45, 159, 74))),
-    'megadrive': dict(ground=(14, 14, 17), motif='grid', fill=(30, 30, 34), rim=(230, 0, 18), ink=(232, 190, 80),
+    'megadrive': dict(type=(232, 190, 80), ground=(14, 14, 17), motif='grid', fill=(30, 30, 34), rim=(230, 0, 18), ink=(232, 190, 80),
                       trim=('ring', [(230, 0, 18)]), waves=((230, 0, 18), (232, 190, 80))),
-    'gameboy':   dict(ground=(7, 7, 11), fill=(196, 198, 204), brushed=True, rim=(92, 94, 104), ink=(58, 60, 70),
+    'gameboy':   dict(type=(96, 112, 232), ground=(7, 7, 11), fill=(196, 198, 204), brushed=True, rim=(92, 94, 104), ink=(58, 60, 70),
                       trim=('led', [(228, 30, 40)]), waves=None, motif='rays'),          # the 1989 box: black, silver band, rays
     'gamegear':  dict(ground=(12, 12, 16), fill=(34, 34, 40), rim=(30, 91, 198), ink=(244, 244, 248),
                       trim=('buttons', [(30, 91, 198), (30, 91, 198)]), waves=((30, 91, 198), (200, 200, 205))),
@@ -77,17 +78,17 @@ SKINS = {
                       trim=('squares', [(228, 32, 46), (255, 194, 14), (0, 166, 81), (0, 97, 175)]), waves=((255, 194, 14), (0, 166, 81))),
     'ps1':       dict(ground=(36, 36, 43), fill=(196, 196, 202), rim=(110, 110, 120), ink=(40, 40, 48),
                       trim=('symbols', [(0, 160, 120), (230, 0, 18), (58, 110, 200), (150, 150, 160)]), waves=((247, 198, 0), (0, 160, 160))),
-    'saturn':    dict(ground=(18, 19, 27), fill=(36, 36, 42), rim=(30, 91, 198), ink=(244, 244, 248),
+    'saturn':    dict(type=(90, 150, 240), ground=(18, 19, 27), fill=(36, 36, 42), rim=(30, 91, 198), ink=(244, 244, 248),
                       trim=('squares', [(30, 91, 198), (230, 0, 18), (245, 196, 0), (0, 166, 81)]), waves=((30, 91, 198), (245, 196, 0))),
-    'dreamcast': dict(ground=(16, 30, 54), light=(246, 246, 248), fill=(236, 236, 240), rim=(170, 170, 178), ink=(40, 40, 48),
+    'dreamcast': dict(type=(242, 107, 29), ground=(16, 30, 54), light=(246, 246, 248), fill=(236, 236, 240), rim=(170, 170, 178), ink=(40, 40, 48),
                       trim=('swirl', [(242, 107, 29)]), waves=((242, 107, 29), (0, 96, 168))),
-    'gba':       dict(ground=(30, 24, 74), fill=(75, 63, 158), rim=(124, 112, 210), ink=(244, 243, 255),
+    'gba':       dict(type=(124, 112, 210), ground=(30, 24, 74), fill=(75, 63, 158), rim=(124, 112, 210), ink=(244, 243, 255),
                       trim=('buttons', [(124, 112, 210), (124, 112, 210)]), waves=((75, 63, 158), (124, 112, 210))),
-    'ps2':       dict(ground=(8, 14, 36), motif='lines', fill=(20, 24, 40), rim=(40, 120, 220), ink=(244, 244, 248),
+    'ps2':       dict(type=(40, 120, 220), ground=(8, 14, 36), motif='lines', fill=(20, 24, 40), rim=(40, 120, 220), ink=(244, 244, 248),
                       trim=('symbols', [(0, 160, 120), (230, 0, 18), (58, 110, 200), (150, 150, 160)]), waves=((0, 55, 145), (40, 120, 220))),
     'gamecube':  dict(ground=(34, 26, 74), fill=(106, 90, 205), rim=(60, 50, 140), ink=(244, 243, 255),
                       trim=('buttons', [(60, 180, 75), (230, 60, 50), (245, 196, 0)]), waves=((106, 90, 205), (60, 180, 75))),
-    'xbox':      dict(ground=(10, 22, 11), fill=(22, 28, 22), rim=(16, 124, 16), ink=(200, 250, 120),
+    'xbox':      dict(type=(155, 240, 11), ground=(10, 22, 11), fill=(22, 28, 22), rim=(16, 124, 16), ink=(200, 250, 120),
                       trim=('jewel', [(16, 124, 16), (155, 240, 11)]), waves=((16, 124, 16), (155, 240, 11))),
 }
 
@@ -101,6 +102,20 @@ def gnd(spec):
         return k['light']
     return k['ground']
 def txt(spec): return DARK_TEXT if lum(gnd(spec)) > 0.6 else INK   # white ground, dark type
+
+def contrast(a, b):
+    def lin(c):
+        r, g, b_ = [v / 255 for v in c]
+        f = lambda u: u / 12.92 if u <= 0.03928 else ((u + 0.055) / 1.055) ** 2.4
+        return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b_)
+    la, lb = lin(a), lin(b); hi, lo = max(la, lb), min(la, lb)
+    return (hi + 0.05) / (lo + 0.05)
+
+def title_ink(spec):
+    """The console's own lettering colour for the title line (SKINS 'type'), when it reads on the ground;
+    otherwise the plain ink."""
+    c = SKINS[spec['console']].get('type')
+    return c if c and contrast(c, gnd(spec)) >= 3.0 else txt(spec)
 
 def sc(v): return int(round(v * S))
 def fr(x, y): return OX + x * K, OY + y * K
@@ -151,13 +166,14 @@ def motif(kind, ground):
     keep = Image.new('L', (1, SH), 0)                           # full in the top band and the bottom band, clear between
     for y in range(SH):
         yy = y / S
-        v = 1 if yy < 560 else max(0, 1 - (yy - 560) / 90) if yy < 650 else 0 if yy < 1490 else min(1, (yy - 1490) / 110)
+        v = 1 if yy < FADE_LIGHT[0] else max(0, 1 - (yy - FADE_LIGHT[0]) / 60) if yy < FADE_LIGHT[0] + 60 else 0 if yy < 1490 else min(1, (yy - 1490) / 110)
         keep.putpixel((0, y), int(255 * v))
     m.putalpha(ImageChops.multiply(m.split()[3], keep.resize((SW, SH))))
     return m
 
 def scene(ground=GROUND, kind=None):
-    """The CRT photo on the console's dark ground (Mohammad, 11 Oct 2026: the ground matches the console, not indigo)."""
+    """The CRT photo on the console's ground (Mohammad, 11 Oct 2026: the ground matches the console, not indigo)."""
+    fade = FADE_LIGHT if lum(ground) > 0.6 else FADE
     im = Image.new('RGB', (SW, SH), ground)
     pat = motif(kind, ground) if kind else None
     if pat: im = im.convert('RGBA'); im.alpha_composite(pat); im = im.convert('RGB')
@@ -166,14 +182,9 @@ def scene(ground=GROUND, kind=None):
     x, y = sc(OX), sc(OY)
     a = Image.new('L', ph.size, 255); d = ImageDraw.Draw(a)
     for i in range(ph.height):                                # transparent above FADE[0], full by FADE[1]
-        yy = (y + i) / S; v = min(1, max(0, (yy - FADE[0]) / (FADE[1] - FADE[0])))
-        if v < 1: d.line([(0, i), (ph.width, i)], fill=int(255 * v ** 1.2))
+        yy = (y + i) / S; v = min(1, max(0, (yy - fade[0]) / (fade[1] - fade[0])))
+        if v < 1: d.line([(0, i), (ph.width, i)], fill=int(255 * v ** 1.4))
         else: break
-    side = sc(90)                                             # soft side edges: the photo is narrower than the frame
-    ramp = Image.new('L', (ph.width, 1), 255)
-    for i in range(side):
-        v = int(255 * (i / side) ** 1.3); ramp.putpixel((i, 0), v); ramp.putpixel((ph.width - 1 - i, 0), v)
-    a = ImageChops.multiply(a, ramp.resize(ph.size))
     im.paste(ph, (x, y), a)
     im = im.convert('RGBA')
     g = Image.new('L', (1, SH), 0)
@@ -190,7 +201,8 @@ def scene(ground=GROUND, kind=None):
 
 # Handhelds sit on a desk, not on the TV (Mohammad, 11 Oct 2026). Top-down desk photo from the media scout's package
 # (Unsplash WW8jBak7bo), the handheld's own product shot laid on it, the footage on its screen.
-DESK = '/mnt/user-data/uploads/scene-desk-3-unsplash-WW8jBak7bo.jpg'
+DESK = '/mnt/user-data/uploads/scene-desk-4-pexels32759887.jpg'   # cassettes, sunglasses, a pocket watch: the era's things
+DESK_TURN, DESK_CROP = 0, (0.0, 0.56)                                # the rows kept (fractions of height): cassette, sunglasses, bandana
 HANDHELDS = {
     # the product shot, how far it is turned in the photo (degrees, undone so the device faces the viewer: Mohammad,
     # 11 Oct 2026), its width on the frame, and the DMG green screen
@@ -225,13 +237,17 @@ def desk_scene(spec):
     im = Image.new('RGB', (SW, SH), ground)
     pat = motif(kind, ground) if kind else None
     if pat: im = im.convert('RGBA'); im.alpha_composite(pat); im = im.convert('RGB')
-    desk = Image.open(DESK).convert('RGB')                     # a vertical slice of the desk under the title
-    top_y = sc(FADE[0]); hgt = sc(1420) - top_y; wid = SW
-    k = SH / desk.height; sw = int(wid / k); x0 = (desk.width - sw) // 2
-    desk = desk.crop((x0, 0, x0 + sw, int(hgt / k))).resize((wid, hgt), Image.LANCZOS)
-    desk = Image.eval(desk, lambda v: int(v * 0.8))
+    desk = Image.open(DESK).convert('RGB')
+    if DESK_TURN: desk = desk.rotate(DESK_TURN, expand=True)
+    desk = desk.crop((0, int(desk.height * DESK_CROP[0]), desk.width, int(desk.height * DESK_CROP[1])))
+    top_y = sc(FADE_LIGHT[0]); hgt = sc(1420) - top_y; wid = SW   # the band under the title, full width, cropped to fit
+    k = max(wid / desk.width, hgt / desk.height)
+    desk = desk.resize((int(desk.width * k), int(desk.height * k)), Image.LANCZOS)
+    cx, cy = (desk.width - wid) // 2, 0
+    desk = desk.crop((cx, cy, cx + wid, cy + hgt))
+    desk = Image.eval(desk, lambda v: int(v * 0.72))
     a = Image.new('L', desk.size, 255); d = ImageDraw.Draw(a)
-    fade = sc(FADE[1] - FADE[0])
+    fade = sc(FADE_LIGHT[1] - FADE_LIGHT[0])
     for i in range(fade): d.line([(0, i), (desk.width, i)], fill=int(255 * (i / fade) ** 1.2))
     im.paste(desk, (0, top_y), a)
     im = im.convert('RGBA')
@@ -242,9 +258,9 @@ def desk_scene(spec):
         g.putpixel((0, yy), int(255 * min(1, max(0, t)) ** 0.8))
     wash = Image.new('RGBA', (SW, SH), ground + (255,)); wash.putalpha(g.resize((SW, SH)))
     dev, lcd = device(key)
-    kk = min(sc(hh['width']) / dev.width, sc(WASH + 30 - FADE[1] - 4) / dev.height)   # never into the sheet
+    kk = min(sc(hh['width']) / dev.width, sc(WASH + 30 - FADE_LIGHT[1] - 4) / dev.height)   # never into the sheet
     dev = dev.resize((int(dev.width * kk), int(dev.height * kk)), Image.LANCZOS)
-    dx, dy = (SW - dev.width) // 2, sc(FADE[1] + 4)
+    dx, dy = (SW - dev.width) // 2, sc(FADE_LIGHT[1] + 4)
     sh = Image.new('RGBA', (SW, SH), (0, 0, 0, 0))             # a soft shadow on the desk
     sm = Image.new('L', (SW, SH), 0); sm.paste(dev.split()[3], (dx + sc(14), dy + sc(20)))
     sh.putalpha(sm.point(lambda v: int(v * 0.6))); im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(sc(14))))
@@ -365,7 +381,7 @@ def boxart(t, spec):
     if not spec.get('box'): return
     box = Image.open(spec['box']).convert('RGBA')
     hand = CONSOLES[spec['console']].get('handheld')
-    maxw, maxh = (200, 250) if hand else (165, 210)
+    maxw, maxh = (200, 250) if hand else (150, 190)
     k = min(maxw / box.width, maxh / box.height); box = box.resize((int(box.width * k), int(box.height * k)), Image.LANCZOS)
     if hand: box = box.rotate(6, Image.BICUBIC, expand=True)
     x = L; base = (WASH + 14) if not hand else WASH                 # standing on the cabinet's top edge, or on the desk
@@ -380,14 +396,14 @@ def top(spec, out):
     waves(t, spec['console']); title_chip(t, spec['console'])
     if SKINS[spec['console']].get('motif'):
         sc_ = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-        ImageDraw.Draw(sc_).rounded_rectangle([L + 40, 372, R + 40, 572], 60, fill=gnd(spec) + (215,))
+        ImageDraw.Draw(sc_).rounded_rectangle([L + 40, 352, R + 40, 548], 60, fill=gnd(spec) + (215,))
         t.alpha_composite(sc_.filter(ImageFilter.GaussianBlur(34)))
     d = ImageDraw.Draw(t); ink = txt(spec)
-    d.text((R, 368), spec['date'], font=A.F('Bold', 84), fill=ink, anchor='ra', **AR)
+    d.text((R, 350), spec['date'], font=A.F('Bold', 84), fill=ink, anchor='ra', **AR)
     title = f"صدرت \u2066{spec['game']}\u2069"
     f, z = fit(d, title, range(66, 43, -2), R - L)
-    d.text((R, 478), title, font=f, fill=ink, anchor='ra', **AR)
-    assert d.textbbox((R, 478), title, font=f, anchor='ra', **AR)[3] <= FADE[0], 'title runs into the photo'
+    d.text((R, 456), title, font=f, fill=title_ink(spec), anchor='ra', **AR)
+    assert d.textbbox((R, 456), title, font=f, anchor='ra', **AR)[3] <= FADE_LIGHT[0] + 12, 'title runs into the picture'
     boxart(t, spec)
     t.save(out)
 
@@ -427,6 +443,7 @@ def fact(spec, i, out):
     t = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(t)
     chip(d, R, Y0, 'هل تعلم؟', c, 40)
     z = min(fit(d, s, range(70, 49, -2), R - 50 - L, 'Medium')[1] for s in lines)
+    while Y0 + 92 + (len(lines) - 1) * int(z * 1.36) + int(z * 1.45) > FLOOR and z > 46: z -= 2   # and the height (descenders)
     f, step, top_ = A.F('Medium', z), int(z * 1.36), Y0 + 92
     for j in range(len(lines)):                                 # a pixel square at the start of each line, in the fact's colour
         yy = top_ + j * step + int(z * 0.42)
