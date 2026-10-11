@@ -1,4 +1,4 @@
-# "On this day" retro Reel (Mohammad, 10 to 11 Oct 2026). The top stays as approved: gold chip, date, "صدرت <game>".
+# "On this day" retro Reel (Mohammad, 10 to 11 Oct 2026). The top: the console-skinned chip, date, "صدرت <game>".
 # A real CRT on a cabinet (Pexels 16707770, Oktay Köseoğlu, Pexels License) plays the game's footage on its own screen.
 # Under it, first a fact sheet (game, developer, publisher, console, with the box art), then the fun facts one at a time.
 # 11 Oct: bigger type to fill the lower half, and the console's own colours on pixel-edged label blocks beside each row and
@@ -7,7 +7,7 @@
 #   retro.render(dict(clip=..., start=2.0, dur=27.5, date='11 أكتوبر 1999', game='Jet Force Gemini', console='n64',
 #                     box='box.jpg', sheet=[('اللعبة', 'Jet Force Gemini'), ...], facts=[[line, line, line], ...]), 'out.mp4')
 # then outro.append(out, final, style='retro').
-import os, sys, shutil, subprocess, tempfile
+import math, os, sys, shutil, subprocess, tempfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from PIL import Image, ImageDraw, ImageFilter, ImageChops
 import fast_ar as A, reel as RL
@@ -48,6 +48,43 @@ CONSOLES = {
     'ps2':      dict(name='PlayStation 2', colours=[(0, 55, 145), (40, 120, 220), (0, 55, 145), (40, 120, 220)]),
     'gamecube': dict(name='GameCube', colours=[(106, 90, 205), (60, 180, 75), (230, 60, 50), (245, 196, 0)]),
     'xbox':     dict(name='Xbox', colours=[(16, 124, 16), (155, 240, 11), (16, 124, 16), (155, 240, 11)]),
+}
+
+# The «في مثل هذا اليوم» chip and the wave lines borrow each console's own look (Mohammad, 11 Oct 2026: the gold chip
+# did not blend). fill/rim/ink colour the chip, grain/lcd texture it, trim is the artifact beside it, waves the two wave colours.
+SKINS = {
+    'atari2600': dict(fill=(122, 74, 36), grain=True, rim=(192, 195, 199), ink=(246, 236, 214),
+                      trim=('bars', [(228, 49, 38), (245, 130, 32), (250, 196, 40)]), waves=((228, 49, 38), (245, 130, 32))),
+    'nes':       dict(fill=(38, 38, 42), rim=(184, 184, 188), ink=(240, 240, 244), band=(196, 0, 43),
+                      trim=('buttons', [(196, 0, 43), (196, 0, 43)]), waves=((196, 0, 43), (184, 184, 188))),
+    'famicom':   dict(fill=(212, 172, 84), rim=(150, 28, 40), ink=(110, 20, 30),
+                      trim=('buttons', [(150, 28, 40), (150, 28, 40)]), waves=((150, 28, 40), (212, 172, 84))),
+    'mastersystem': dict(fill=(30, 30, 34), rim=(230, 0, 18), ink=(244, 244, 248),
+                      trim=('grid', [(230, 0, 18)]), waves=((230, 0, 18), (200, 200, 205))),
+    'snes':      dict(fill=(200, 200, 206), rim=(79, 67, 174), ink=(60, 50, 140),
+                      trim=('buttons', [(79, 67, 174), (79, 67, 174), (154, 143, 216), (154, 143, 216)]), waves=((79, 67, 174), (154, 143, 216))),
+    'sfc':       dict(fill=(200, 200, 206), rim=(110, 110, 120), ink=(40, 40, 48),
+                      trim=('diamond', [(45, 159, 74), (245, 196, 0), (42, 79, 184), (208, 2, 27)]), waves=((208, 2, 27), (42, 79, 184))),
+    'megadrive': dict(fill=(30, 30, 34), rim=(230, 0, 18), ink=(232, 190, 80),
+                      trim=('ring', [(230, 0, 18)]), waves=((230, 0, 18), (232, 190, 80))),
+    'gameboy':   dict(fill=(155, 188, 15), lcd=True, rim=(92, 92, 108), ink=(15, 56, 15),
+                      trim=('led', [(228, 30, 40)]), waves=((48, 98, 48), (155, 188, 15))),
+    'n64':       dict(fill=(40, 40, 46), rim=(110, 110, 120), ink=(244, 243, 255),
+                      trim=('squares', [(228, 32, 46), (255, 194, 14), (0, 166, 81), (0, 97, 175)]), waves=((228, 32, 46), (0, 97, 175))),
+    'ps1':       dict(fill=(196, 196, 202), rim=(110, 110, 120), ink=(40, 40, 48),
+                      trim=('symbols', [(0, 160, 120), (230, 0, 18), (58, 110, 200), (150, 150, 160)]), waves=((230, 0, 18), (58, 76, 168))),
+    'saturn':    dict(fill=(36, 36, 42), rim=(30, 91, 198), ink=(244, 244, 248),
+                      trim=('squares', [(30, 91, 198), (230, 0, 18), (245, 196, 0), (0, 166, 81)]), waves=((30, 91, 198), (245, 196, 0))),
+    'dreamcast': dict(fill=(236, 236, 240), rim=(170, 170, 178), ink=(40, 40, 48),
+                      trim=('swirl', [(242, 107, 29)]), waves=((242, 107, 29), (0, 96, 168))),
+    'gba':       dict(fill=(75, 63, 158), rim=(124, 112, 210), ink=(244, 243, 255),
+                      trim=('buttons', [(124, 112, 210), (124, 112, 210)]), waves=((75, 63, 158), (124, 112, 210))),
+    'ps2':       dict(fill=(20, 24, 40), rim=(40, 120, 220), ink=(244, 244, 248),
+                      trim=('symbols', [(0, 160, 120), (230, 0, 18), (58, 110, 200), (150, 150, 160)]), waves=((0, 55, 145), (40, 120, 220))),
+    'gamecube':  dict(fill=(106, 90, 205), rim=(60, 50, 140), ink=(244, 243, 255),
+                      trim=('buttons', [(60, 180, 75), (230, 60, 50), (245, 196, 0)]), waves=((106, 90, 205), (60, 180, 75))),
+    'xbox':      dict(fill=(22, 28, 22), rim=(16, 124, 16), ink=(200, 250, 120),
+                      trim=('jewel', [(16, 124, 16), (155, 240, 11)]), waves=((16, 124, 16), (155, 240, 11))),
 }
 
 def sc(v): return int(round(v * S))
@@ -100,20 +137,88 @@ def screenfx(w, h, out):
     gl = Image.new('RGBA', (w, h), (0, 0, 0, 0)); ImageDraw.Draw(gl).ellipse([int(w * 0.62), int(h * -0.1), int(w * 1.05), int(h * 0.3)], fill=(255, 255, 255, 40))
     fx.alpha_composite(gl.filter(ImageFilter.GaussianBlur(sc(20)))); fx.save(out)
 
-def top(spec, out):
-    cols = CONSOLES[spec['console']]['colours']
-    t = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-    RL._waves(t, 290, 'gold', 11, alpha=0.6)
-    b = Image.new('RGBA', (W, 420), (0, 0, 0, 0)); RL._waves(b, 420, 'gold', 23, alpha=0.5)
+def title_chip(t, key, text='في مثل هذا اليوم', y=300, h=66, size=44):
+    """The console-skinned chip at the top right, and its artifact to the left. Returns the chip's left edge."""
+    k = SKINS[key]; d = ImageDraw.Draw(t); f = A.F('Bold', size)
+    w = int(d.textlength(text, font=f, **AR)) + 52 + (22 if k.get('band') else 0); x0 = R - w
+    block(d, [x0, y, R, y + h], k['fill'], px=6)
+    if k.get('grain'):                                          # Atari: the woodgrain front panel
+        for i in range(9):
+            yy = y + 8 + i * 6.3
+            pts = [(xx, yy + 2.2 * math.sin(xx / 23 + i * 1.7)) for xx in range(x0 + 6, R - 5, 6)]
+            d.line(pts, fill=(96, 56, 26), width=2)
+    if k.get('lcd'):                                            # Game Boy: the dot-matrix screen
+        for xx in range(x0 + 6, R - 5, 4): d.line([(xx, y + 6), (xx, y + h - 6)], fill=(139, 172, 15), width=1)
+        for yy in range(y + 6, y + h - 5, 4): d.line([(x0 + 6, yy), (R - 6, yy)], fill=(139, 172, 15), width=1)
+    if k.get('band'):                                           # NES: the red label band at the start of the line
+        d.rectangle([R - 26, y + 6, R - 8, y + h - 6], fill=k['band'])
+    rim = k['rim']                                              # a hard pixel rim, no rounding
+    d.line([(x0 + 6, y), (R - 6, y)], fill=rim, width=4); d.line([(x0 + 6, y + h), (R - 6, y + h)], fill=rim, width=4)
+    d.line([(x0, y + 6), (x0, y + h - 6)], fill=rim, width=4); d.line([(R, y + 6), (R, y + h - 6)], fill=rim, width=4)
+    for cx, cy in [(x0, y), (R - 6, y), (x0, y + h - 6), (R - 6, y + h - 6)]:
+        d.rectangle([cx + 1, cy + 1, cx + 5, cy + 5], fill=rim)
+    d.text((R - 26 - (22 if k.get('band') else 0), y + h / 2 + 1), text, font=f, fill=k['ink'], anchor='rm', **AR)
+    trim(t, k['trim'], x0 - 20, y + h / 2)
+    return x0
+
+def trim(t, spec, right, cy):
+    kind, cols = spec; d = ImageDraw.Draw(t)
+    def ball(x, y, r, c):
+        d.ellipse([x - r, y - r, x + r, y + r], fill=tuple(int(v * 0.6) for v in c))
+        d.ellipse([x - r, y - r, x + r - 2, y + r - 2], fill=c)
+        d.ellipse([x - r * 0.45, y - r * 0.6, x - r * 0.05, y - r * 0.25], fill=tuple(min(255, v + 90) for v in c))
+    if kind == 'squares':
+        x = right
+        for c in reversed(cols): block(d, [x - 30, cy - 15, x, cy + 15], c, px=4); x -= 38
+    elif kind == 'bars':                                        # Atari's striped 80s box art
+        x = right
+        for c in reversed(cols): d.polygon([(x - 12, cy - 22), (x, cy - 22), (x - 14, cy + 22), (x - 26, cy + 22)], fill=c); x -= 20
+    elif kind == 'buttons':
+        x = right - 17
+        for c in reversed(cols): ball(x, cy, 16, c); x -= 40
+    elif kind == 'diamond':                                     # Super Famicom: X top, A right, B bottom, Y left
+        x = right - 34; r = 12
+        for (dx, dy), c in zip([(0, -19), (19, 0), (0, 19), (-19, 0)], [cols[2], cols[3], cols[1], cols[0]]): ball(x + dx, cy + dy, r, c)
+    elif kind == 'symbols':                                     # PlayStation's four face buttons, drawn as outlines
+        x = right - 18; r = 14
+        tri, circ, cross, sq = cols
+        d.ellipse([x - r, cy - r, x + r, cy + r], outline=circ, width=5); x -= 40
+        d.line([(x - r, cy - r), (x + r, cy + r)], fill=cross, width=5); d.line([(x - r, cy + r), (x + r, cy - r)], fill=cross, width=5); x -= 40
+        d.rectangle([x - r + 2, cy - r + 2, x + r - 2, cy + r - 2], outline=sq, width=5); x -= 40
+        d.polygon([(x, cy - r - 2), (x + r + 2, cy + r - 2), (x - r - 2, cy + r - 2)], outline=tri, width=5)
+    elif kind == 'grid':                                        # Master System's red grid
+        c = cols[0]; x0 = right - 64
+        for i in range(5): d.line([(x0 + i * 16, cy - 22), (x0 + i * 16, cy + 22)], fill=c, width=3)
+        for i in range(4): d.line([(x0, cy - 22 + i * 14.6), (x0 + 64, cy - 22 + i * 14.6)], fill=c, width=3)
+    elif kind == 'ring':                                        # Mega Drive's red disc
+        x = right - 24; d.ellipse([x - 24, cy - 24, x + 24, cy + 24], outline=cols[0], width=6); d.ellipse([x - 9, cy - 9, x + 9, cy + 9], fill=cols[0])
+    elif kind == 'led':                                         # Game Boy's battery light
+        x = right - 12
+        g = Image.new('RGBA', t.size, (0, 0, 0, 0)); ImageDraw.Draw(g).ellipse([x - 20, cy - 20, x + 20, cy + 20], fill=cols[0] + (140,))
+        t.alpha_composite(g.filter(ImageFilter.GaussianBlur(8))); d = ImageDraw.Draw(t); ball(x, cy, 9, cols[0])
+    elif kind == 'swirl':                                       # Dreamcast's spiral
+        x = right - 26; c = cols[0]
+        pts = [(x + (2 + 2.6 * a) * math.cos(a), cy + (2 + 2.6 * a) * math.sin(a)) for a in [i / 10 for i in range(0, 85)]]
+        d.line(pts, fill=c, width=6)
+    elif kind == 'jewel':                                       # the original Xbox's green jewel
+        x = right - 24
+        g = Image.new('RGBA', t.size, (0, 0, 0, 0)); ImageDraw.Draw(g).ellipse([x - 30, cy - 30, x + 30, cy + 30], fill=cols[1] + (120,))
+        t.alpha_composite(g.filter(ImageFilter.GaussianBlur(10))); d = ImageDraw.Draw(t)
+        d.ellipse([x - 22, cy - 22, x + 22, cy + 22], fill=cols[0]); d.ellipse([x - 22, cy - 22, x + 22, cy + 22], outline=cols[1], width=3)
+
+def waves(t, key):
+    """The brand's wave lines in the console's two colours instead of gold, top and bottom."""
+    A.THEMES['_retro'] = (*SKINS[key]['waves'], 3.0, 38, 15)
+    RL._waves(t, 290, '_retro', 11, alpha=0.55)
+    b = Image.new('RGBA', (W, 420), (0, 0, 0, 0)); RL._waves(b, 420, '_retro', 23, alpha=0.45)
     t.alpha_composite(b.transpose(Image.FLIP_TOP_BOTTOM), (0, H - 420))
+
+def top(spec, out):
+    t = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    waves(t, spec['console']); title_chip(t, spec['console'])
     d = ImageDraw.Draw(t)
-    d.rounded_rectangle([R - 300, 300, R, 366], 12, fill=GOLD2)
-    d.text((R - 24, 335), 'في مثل هذا اليوم', font=A.F('Bold', 44), fill=GROUND, anchor='rm', **AR)
-    x = R - 300 - 22                                          # the console's colours as four pixel squares beside the chip
-    for c in reversed(cols):
-        block(d, [x - 30, 318, x, 348], c, px=4); x -= 38
     d.text((R, 386), spec['date'], font=A.F('Bold', 66), fill=INK, anchor='ra', **AR)
-    d.text((R, 474), f"صدرت {spec['game']}", font=A.F('Bold', 54), fill=INK, anchor='ra', **AR)
+    d.text((R, 474), f"صدرت \u2066{spec['game']}\u2069", font=A.F('Bold', 54), fill=INK, anchor='ra', **AR)
     t.save(out)
 
 def sheet(spec, out):

@@ -774,7 +774,12 @@ Brand kit (Mohammad, 26 Sep 2026):
   (11 Oct): Atari 2600 (big in the Middle East in the 70s and 80s), NES and
   Famicom kept apart (grey and red against cream, maroon and gold), Master
   System, SNES and Super Famicom, Mega Drive, Game Boy, N64, PlayStation,
-  Saturn, Dreamcast, GBA, PS2, GameCube, Xbox. Everyday audition:
+  Saturn, Dreamcast, GBA, PS2, GameCube, Xbox. The «في مثل هذا اليوم» chip
+  and the wave lines follow the console too, not gold (Mohammad, 11 Oct: the
+  gold did not blend): `SKINS` borrows each machine's own look for the chip
+  (Atari woodgrain, NES charcoal with the red band, Famicom gold plate, Game
+  Boy green screen) and an artifact beside it (controller buttons, the Super
+  Famicom diamond, PlayStation's face buttons, the Dreamcast swirl). Everyday audition:
   `live/2026-10-01/audio/`. On posts: every Reel
   ends on the jingle (see the end card below); X video cards and stills
   carry no added sound yet. The sound is a Digital Lounge mark;
