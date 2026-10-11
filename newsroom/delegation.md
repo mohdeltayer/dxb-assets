@@ -108,6 +108,8 @@ item with `newsroom/watch-seen.json` (url, title, first seen), adds the new
 ones to it, and returns only items first seen this hour, one line each:
 time (UTC), source, headline, URL. Nothing new returns "nothing new".
 No judging, no verifying, no social media, no logins.
+When watch-seen.json is empty (the first run) it records everything it
+sees and reports only items published in the last two hours.
 Sources: PlayStation Blog, Xbox Wire (news.xbox.com may refuse; then
 skip), Nintendo US whatsnew and Nintendo press, Nintendo Japan news
 (nintendo.co.jp/topics), Steam news for the top sellers, the newsrooms of
