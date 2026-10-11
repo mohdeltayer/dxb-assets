@@ -59,3 +59,4 @@ has said so; everything else is a working suggestion.
     meaning survived: compare it with the English source before queuing.
 3. Jais Chat (jaischat.ai, G42/Inception), used by Mohammad by hand with the
    house prompt when he wants a second Arabic read.
+| Countdown (days left) | باقي 23 يومًا، باقي 5 أيام، باقي يومان، باقي يوم واحد | not يتبقى 23 يومًا (Mohammad, 11 Oct 2026, «الطريق إلى Ocarina» intro) | Approved 11 Oct 2026 |
