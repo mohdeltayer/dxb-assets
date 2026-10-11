@@ -194,7 +194,7 @@ DESK = '/mnt/user-data/uploads/scene-desk-3-unsplash-WW8jBak7bo.jpg'
 HANDHELDS = {
     # the product shot, how far it is turned in the photo (degrees, undone so the device faces the viewer: Mohammad,
     # 11 Oct 2026), its width on the frame, and the DMG green screen
-    'gameboy': dict(photo='/mnt/user-data/uploads/retro-gameboy.jpg', turn=15.06, width=360, dmg=True),
+    'gameboy': dict(photo='/mnt/user-data/uploads/retro-gameboy-front.webp', turn=0, width=360, dmg=True),   # his front-on shot, 11 Oct
 }
 
 def device(key):
@@ -202,14 +202,15 @@ def device(key):
     screen box inside it (found from the LCD's own green)."""
     import numpy as np
     hh = HANDHELDS[key]
-    src = Image.open(hh['photo']).convert('RGB').rotate(hh['turn'], Image.BICUBIC, expand=True, fillcolor=(255, 255, 255))
+    src = Image.open(hh['photo']).convert('RGB')
+    if hh['turn']: src = src.rotate(hh['turn'], Image.BICUBIC, expand=True, fillcolor=(255, 255, 255))
     arr = np.array(src).astype(int)
     white = (arr.min(axis=2) > 236).astype('uint8') * 255
     wm = Image.fromarray(white).copy()                         # fromarray shares a read-only buffer
     ImageDraw.floodfill(wm, (2, 2), 128); ImageDraw.floodfill(wm, (src.width - 3, src.height - 3), 128)
     body = wm.point(lambda v: 0 if v == 128 else 255).filter(ImageFilter.MinFilter(5)).filter(ImageFilter.GaussianBlur(1.5))
     r, g, b = arr[..., 0], arr[..., 1], arr[..., 2]
-    ys, xs = np.where((g > r + 5) & (g > b + 40) & (g > 120))
+    ys, xs = np.where((g > r + 10) & (g > b + 40) & (g > 60))     # the LCD's olive green, lit or dark
     lcd = (np.percentile(xs, 0.5), np.percentile(ys, 0.5), np.percentile(xs, 99.5), np.percentile(ys, 99.5))
     bb = body.getbbox(); dev = src.crop(bb).convert('RGBA'); dev.putalpha(body.crop(bb))
     return dev, (lcd[0] - bb[0], lcd[1] - bb[1], lcd[2] - bb[0], lcd[3] - bb[1])

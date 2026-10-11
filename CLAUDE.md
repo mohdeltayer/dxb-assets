@@ -794,7 +794,7 @@ Brand kit (Mohammad, 26 Sep 2026):
   Handhelds (Mohammad, 11 Oct 2026: "Gameboy, Game Gear back drop will be
   a desk and not TV"): Game Boy, Game Gear and GBA stories play on a desk
   scene, never the CRT. Built for Game Boy (11 Oct): the media scout's
-  top-down desk (`scene-desk-3`), the Game Boy product shot turned upright
+  top-down desk (`scene-desk-3`), his front-on Game Boy shot (uploads/retro-gameboy-front.webp) upright
   so it faces the viewer (never slanted, which would slant the clip), the
   footage on its own screen in the DMG greens. Game Gear and GBA need their
   own product shot in `HANDHELDS` first; `retro.render` stops until then.
