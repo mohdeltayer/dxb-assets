@@ -779,7 +779,11 @@ Brand kit (Mohammad, 26 Sep 2026):
   gold did not blend): `SKINS` borrows each machine's own look for the chip
   (Atari woodgrain, NES charcoal with the red band, Famicom gold plate, Game
   Boy green screen) and an artifact beside it (controller buttons, the Super
-  Famicom diamond, PlayStation's face buttons, the Dreamcast swirl). Everyday audition:
+  Famicom diamond, PlayStation's face buttons, the Dreamcast swirl).
+  The ground follows the console as well (Mohammad, 11 Oct 2026): a dark
+  tone of the machine (Famicom maroon, Game Boy green, Atari walnut, PS2
+  blue-black) replaces the indigo on these Reels only; the end card keeps
+  the Digital Lounge indigo and mark. Everyday audition:
   `live/2026-10-01/audio/`. On posts: every Reel
   ends on the jingle (see the end card below); X video cards and stills
   carry no added sound yet. The sound is a Digital Lounge mark;
