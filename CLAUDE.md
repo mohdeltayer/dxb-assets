@@ -828,7 +828,18 @@ Brand kit (Mohammad, 26 Sep 2026):
   click. No licensed poster art in any room. The Game Boy desk stays the
   cassette flat lay until he picks the route (a licence-clear cartridges
   photo from the scout, or Firefly-made surroundings around the real
-  device, his call); `DESKS['carts']` is a prepared alternative. Everyday audition:
+  device, his call); `DESKS['carts']` is a prepared alternative.
+  The den built in code (Mohammad, 11 Oct 2026, from the "Lights on, one
+  by one" prompt pack he sent): `scene='room3d'` is the second option, a
+  three.js room in `templates/room3d/room.html` (deterministic
+  `renderAt(t)`, seeded randomness, whole cycles per 8 s loop, fixed
+  camera so the screen's corners stay put), rendered by `render.mjs` in
+  headless Chromium to `templates/assets/retro/room3d-loop.mp4` and
+  `room3d-quad.json`; retro.py loops it under the warped footage with
+  lighter scrims (0.62 top, 0.84 bottom). Nothing in it is licensed from
+  anyone: plain boxes on the shelves, our own geometric prints, no logos.
+  Method and numbers: `notes/retro-room-3d.md`. Which of the two rooms a
+  story uses is his call per post. Everyday audition:
   `live/2026-10-01/audio/`. On posts: every Reel
   ends on the jingle (see the end card below); X video cards and stills
   carry no added sound yet. The sound is a Digital Lounge mark;
