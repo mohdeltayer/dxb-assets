@@ -783,7 +783,14 @@ Brand kit (Mohammad, 26 Sep 2026):
   The ground follows the console as well (Mohammad, 11 Oct 2026): a dark
   tone of the machine (Famicom maroon, Game Boy green, Atari walnut, PS2
   blue-black) replaces the indigo on these Reels only; the end card keeps
-  the Digital Lounge indigo and mark. Everyday audition:
+  the Digital Lounge indigo and mark.
+  Closer to the box art (Mohammad, 11 Oct, from the 1989 Game Boy box):
+  Game Boy is black with yellow and orange rays, a brushed-silver chip in
+  dark grey type and electric-blue, yellow and orange blocks; NES and Mega
+  Drive get their black boxes' fine grey grid, Atari its woodgrain, PS2 its
+  blue lines. Those patterns stay above the TV and below the safe floor, and
+  replace the wave lines there. No wave pair blends red into blue (the
+  middle reads magenta). Everyday audition:
   `live/2026-10-01/audio/`. On posts: every Reel
   ends on the jingle (see the end card below); X video cards and stills
   carry no added sound yet. The sound is a Digital Lounge mark;

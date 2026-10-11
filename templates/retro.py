@@ -39,7 +39,7 @@ CONSOLES = {
     'snes':     dict(name='Super Nintendo', colours=[(79, 67, 174), (154, 143, 216), (190, 190, 196), (110, 98, 200)]),
     'sfc':      dict(name='Super Famicom', colours=[(208, 2, 27), (245, 196, 0), (45, 159, 74), (42, 79, 184)]),
     'megadrive': dict(name='Mega Drive', colours=[(230, 0, 18), (30, 91, 198), (170, 170, 170), (230, 0, 18)]),
-    'gameboy':  dict(name='Game Boy', colours=[(155, 188, 15), (139, 172, 15), (48, 98, 48), (155, 188, 15)]),
+    'gameboy':  dict(name='Game Boy', colours=[(60, 170, 255), (250, 214, 60), (245, 140, 30), (196, 198, 204)]),
     'n64':      dict(name='Nintendo 64', mark='n64-mark.png', colours=[(228, 32, 46), (255, 194, 14), (0, 166, 81), (0, 97, 175)]),
     'ps1':      dict(name='PlayStation', colours=[(230, 0, 18), (247, 198, 0), (0, 160, 160), (58, 76, 168)]),
     'saturn':   dict(name='Sega Saturn', colours=[(30, 91, 198), (230, 0, 18), (245, 196, 0), (0, 166, 81)]),
@@ -53,33 +53,33 @@ CONSOLES = {
 # The «في مثل هذا اليوم» chip and the wave lines borrow each console's own look (Mohammad, 11 Oct 2026: the gold chip
 # did not blend). fill/rim/ink colour the chip, grain/lcd texture it, trim is the artifact beside it, waves the two wave colours.
 SKINS = {
-    'atari2600': dict(ground=(40, 25, 16), fill=(122, 74, 36), grain=True, rim=(192, 195, 199), ink=(246, 236, 214),
+    'atari2600': dict(ground=(40, 25, 16), motif='wood', fill=(122, 74, 36), grain=True, rim=(192, 195, 199), ink=(246, 236, 214),
                       trim=('bars', [(228, 49, 38), (245, 130, 32), (250, 196, 40)]), waves=((228, 49, 38), (245, 130, 32))),
-    'nes':       dict(ground=(28, 28, 32), fill=(38, 38, 42), rim=(184, 184, 188), ink=(240, 240, 244), band=(196, 0, 43),
+    'nes':       dict(ground=(28, 28, 32), fill=(38, 38, 42), rim=(184, 184, 188), ink=(240, 240, 244), band=(196, 0, 43), motif='grid',
                       trim=('buttons', [(196, 0, 43), (196, 0, 43)]), waves=((196, 0, 43), (184, 184, 188))),
     'famicom':   dict(ground=(54, 14, 22), fill=(212, 172, 84), rim=(150, 28, 40), ink=(110, 20, 30),
                       trim=('buttons', [(150, 28, 40), (150, 28, 40)]), waves=((150, 28, 40), (212, 172, 84))),
     'mastersystem': dict(ground=(16, 16, 19), fill=(30, 30, 34), rim=(230, 0, 18), ink=(244, 244, 248),
-                      trim=('grid', [(230, 0, 18)]), waves=((230, 0, 18), (200, 200, 205))),
+                      trim=('grid', [(230, 0, 18)]), waves=((30, 91, 198), (200, 200, 205))),
     'snes':      dict(ground=(38, 33, 62), fill=(200, 200, 206), rim=(79, 67, 174), ink=(60, 50, 140),
                       trim=('buttons', [(79, 67, 174), (79, 67, 174), (154, 143, 216), (154, 143, 216)]), waves=((79, 67, 174), (154, 143, 216))),
     'sfc':       dict(ground=(34, 34, 40), fill=(200, 200, 206), rim=(110, 110, 120), ink=(40, 40, 48),
-                      trim=('diamond', [(45, 159, 74), (245, 196, 0), (42, 79, 184), (208, 2, 27)]), waves=((208, 2, 27), (42, 79, 184))),
-    'megadrive': dict(ground=(14, 14, 17), fill=(30, 30, 34), rim=(230, 0, 18), ink=(232, 190, 80),
+                      trim=('diamond', [(45, 159, 74), (245, 196, 0), (42, 79, 184), (208, 2, 27)]), waves=((245, 196, 0), (45, 159, 74))),
+    'megadrive': dict(ground=(14, 14, 17), motif='grid', fill=(30, 30, 34), rim=(230, 0, 18), ink=(232, 190, 80),
                       trim=('ring', [(230, 0, 18)]), waves=((230, 0, 18), (232, 190, 80))),
-    'gameboy':   dict(ground=(15, 40, 17), fill=(155, 188, 15), lcd=True, rim=(92, 92, 108), ink=(15, 56, 15),
-                      trim=('led', [(228, 30, 40)]), waves=((48, 98, 48), (155, 188, 15))),
+    'gameboy':   dict(ground=(7, 7, 11), fill=(196, 198, 204), brushed=True, rim=(92, 94, 104), ink=(58, 60, 70),
+                      trim=('led', [(228, 30, 40)]), waves=None, motif='rays'),          # the 1989 box: black, silver band, rays
     'n64':       dict(ground=(28, 28, 34), fill=(40, 40, 46), rim=(110, 110, 120), ink=(244, 243, 255),
-                      trim=('squares', [(228, 32, 46), (255, 194, 14), (0, 166, 81), (0, 97, 175)]), waves=((228, 32, 46), (0, 97, 175))),
+                      trim=('squares', [(228, 32, 46), (255, 194, 14), (0, 166, 81), (0, 97, 175)]), waves=((255, 194, 14), (0, 166, 81))),
     'ps1':       dict(ground=(36, 36, 43), fill=(196, 196, 202), rim=(110, 110, 120), ink=(40, 40, 48),
-                      trim=('symbols', [(0, 160, 120), (230, 0, 18), (58, 110, 200), (150, 150, 160)]), waves=((230, 0, 18), (58, 76, 168))),
+                      trim=('symbols', [(0, 160, 120), (230, 0, 18), (58, 110, 200), (150, 150, 160)]), waves=((247, 198, 0), (0, 160, 160))),
     'saturn':    dict(ground=(18, 19, 27), fill=(36, 36, 42), rim=(30, 91, 198), ink=(244, 244, 248),
                       trim=('squares', [(30, 91, 198), (230, 0, 18), (245, 196, 0), (0, 166, 81)]), waves=((30, 91, 198), (245, 196, 0))),
     'dreamcast': dict(ground=(16, 30, 54), fill=(236, 236, 240), rim=(170, 170, 178), ink=(40, 40, 48),
                       trim=('swirl', [(242, 107, 29)]), waves=((242, 107, 29), (0, 96, 168))),
     'gba':       dict(ground=(30, 24, 74), fill=(75, 63, 158), rim=(124, 112, 210), ink=(244, 243, 255),
                       trim=('buttons', [(124, 112, 210), (124, 112, 210)]), waves=((75, 63, 158), (124, 112, 210))),
-    'ps2':       dict(ground=(8, 14, 36), fill=(20, 24, 40), rim=(40, 120, 220), ink=(244, 244, 248),
+    'ps2':       dict(ground=(8, 14, 36), motif='lines', fill=(20, 24, 40), rim=(40, 120, 220), ink=(244, 244, 248),
                       trim=('symbols', [(0, 160, 120), (230, 0, 18), (58, 110, 200), (150, 150, 160)]), waves=((0, 55, 145), (40, 120, 220))),
     'gamecube':  dict(ground=(34, 26, 74), fill=(106, 90, 205), rim=(60, 50, 140), ink=(244, 243, 255),
                       trim=('buttons', [(60, 180, 75), (230, 60, 50), (245, 196, 0)]), waves=((106, 90, 205), (60, 180, 75))),
@@ -107,9 +107,44 @@ def chip(d, right, y, text, c, size, pad=20, h=None):
     d.text((right - pad, y + h / 2 + 1), text, font=f, fill=GROUND if lum(c) > 0.5 else INK, anchor='rm', **AR)
     return w
 
-def scene(ground=GROUND):
+def motif(kind, ground):
+    """The console box's own background pattern, drawn at frame scale: kept to the bands above the TV and below
+    the safe floor so the sheet and facts sit on plain ground."""
+    m = Image.new('RGBA', (SW, SH), (0, 0, 0, 0)); d = ImageDraw.Draw(m)
+    if kind == 'rays':                                          # Game Boy box: yellow and orange rays, bright near the centre
+        import numpy as np
+        cx, cy = SW / 2, sc(900)
+        for i in range(44):
+            a0 = i * 2 * math.pi / 44 + 0.03; a1 = a0 + 0.03 + 0.018 * (i % 3)
+            c = [(255, 214, 60), (245, 140, 30), (255, 236, 150)][i % 3]
+            r = sc(2400)
+            d.polygon([(cx, cy), (cx + r * math.cos(a0), cy + r * math.sin(a0)), (cx + r * math.cos(a1), cy + r * math.sin(a1))], fill=c + (255,))
+        yy, xx = np.mgrid[0:SH, 0:SW]
+        dist = np.hypot(xx - cx, (yy - cy) * 0.8) / sc(1000)
+        fall = np.clip(0.62 - 0.5 * dist, 0.07, 0.62)
+        m.putalpha(Image.fromarray((np.array(m.split()[3]) * fall).astype('uint8')))
+    elif kind == 'grid':                                        # NES and Mega Drive black boxes: a fine grey grid
+        for x in range(0, SW, sc(36)): d.line([(x, 0), (x, SH)], fill=(150, 150, 160, 46), width=sc(2))
+        for y in range(0, SH, sc(36)): d.line([(0, y), (SW, y)], fill=(150, 150, 160, 46), width=sc(2))
+    elif kind == 'wood':                                        # Atari: the woodgrain front
+        for i in range(0, SH, sc(9)):
+            pts = [(x, i + sc(4) * math.sin(x / sc(90) + i * 0.013)) for x in range(0, SW + 20, 20)]
+            d.line(pts, fill=(20, 10, 4, 70), width=sc(3))
+    elif kind == 'lines':                                       # PS2 boxes: fine horizontal blue lines
+        for y in range(0, SH, sc(10)): d.line([(0, y), (SW, y)], fill=(40, 120, 220, 40), width=sc(2))
+    keep = Image.new('L', (1, SH), 0)                           # full in the top band and the bottom band, clear between
+    for y in range(SH):
+        yy = y / S
+        v = 1 if yy < 560 else max(0, 1 - (yy - 560) / 90) if yy < 650 else 0 if yy < 1490 else min(1, (yy - 1490) / 110)
+        keep.putpixel((0, y), int(255 * v))
+    m.putalpha(ImageChops.multiply(m.split()[3], keep.resize((SW, SH))))
+    return m
+
+def scene(ground=GROUND, kind=None):
     """The CRT photo on the console's dark ground (Mohammad, 11 Oct 2026: the ground matches the console, not indigo)."""
     im = Image.new('RGB', (SW, SH), ground)
+    pat = motif(kind, ground) if kind else None
+    if pat: im = im.convert('RGBA'); im.alpha_composite(pat); im = im.convert('RGB')
     ph = Image.open(PHOTO).convert('RGB'); k = K * S
     ph = ph.resize((int(ph.width * k), int(ph.height * k)), Image.LANCZOS)
     x, y = sc(OX), sc(OY)
@@ -123,6 +158,7 @@ def scene(ground=GROUND):
         t = (yy - sc(WASH)) / sc(160)
         g.putpixel((0, yy), int(232 * min(1, max(0, t)) ** 0.9))
     wash = Image.new('RGBA', (SW, SH), ground + (255,)); wash.putalpha(g.resize((SW, SH))); im.alpha_composite(wash)
+    if pat: im.alpha_composite(pat)                             # the pattern again over the wash, in the bottom band only
     x0, y0 = fr(*GLASS[:2]); x1, y1 = fr(*GLASS[2:])           # cut the glass out; the footage plays behind it
     m = Image.new('L', im.size, 255)
     ImageDraw.Draw(m).rounded_rectangle([sc(x0), sc(y0), sc(x1), sc(y1)], sc(62), fill=0)
@@ -148,6 +184,10 @@ def title_chip(t, key, text='في مثل هذا اليوم', y=300, h=66, size=4
             yy = y + 8 + i * 6.3
             pts = [(xx, yy + 2.2 * math.sin(xx / 23 + i * 1.7)) for xx in range(x0 + 6, R - 5, 6)]
             d.line(pts, fill=(96, 56, 26), width=2)
+    if k.get('brushed'):                                        # Game Boy box: the brushed-silver band
+        for xx in range(x0 + 6, R - 5, 2):
+            v = 170 + int(40 * math.sin(xx * 0.37) * math.sin(xx * 0.051))
+            d.line([(xx, y + 6), (xx, y + h - 6)], fill=(v, v + 2, v + 8), width=1)
     if k.get('lcd'):                                            # Game Boy: the dot-matrix screen
         for xx in range(x0 + 6, R - 5, 4): d.line([(xx, y + 6), (xx, y + h - 6)], fill=(139, 172, 15), width=1)
         for yy in range(y + 6, y + h - 5, 4): d.line([(x0 + 6, yy), (R - 6, yy)], fill=(139, 172, 15), width=1)
@@ -209,6 +249,8 @@ def trim(t, spec, right, cy):
 
 def waves(t, key):
     """The brand's wave lines in the console's two colours instead of gold, top and bottom."""
+    if not SKINS[key].get('waves') or SKINS[key].get('motif'): return   # the box pattern stands in for the waves
+    # never a red into blue blend: its middle runs through magenta, and no pink is ours (brand rule)
     A.THEMES['_retro'] = (*SKINS[key]['waves'], 3.0, 38, 15)
     RL._waves(t, 290, '_retro', 11, alpha=0.55)
     b = Image.new('RGBA', (W, 420), (0, 0, 0, 0)); RL._waves(b, 420, '_retro', 23, alpha=0.45)
@@ -279,7 +321,7 @@ def render(spec, out, push=0.03, sheet_secs=6.0):
     clip, start, dur = spec['clip'], spec['start'], spec['dur']
     tmp = tempfile.mkdtemp(prefix='retro-')
     try:
-        base, (x0, y0, w, h) = scene(SKINS[spec['console']]['ground']); base.save(f'{tmp}/base.png')
+        base, (x0, y0, w, h) = scene(SKINS[spec['console']]['ground'], SKINS[spec['console']].get('motif')); base.save(f'{tmp}/base.png')
         screenfx(w, h, f'{tmp}/fx.png'); top(spec, f'{tmp}/top.png'); sheet(spec, f'{tmp}/s0.png')
         segs = [(f'{tmp}/s0.png', 0, sheet_secs)]
         per = (dur - sheet_secs) / len(spec['facts'])
@@ -314,7 +356,7 @@ def stills(spec, outdir):
     os.makedirs(outdir, exist_ok=True)
     top(spec, f'{outdir}/top.png'); sheet(spec, f'{outdir}/s0.png')
     for i in range(len(spec['facts'])): fact(spec, i, f'{outdir}/s{i + 1}.png')
-    base, _ = scene(SKINS[spec['console']]['ground']); base = base.resize((W, H), Image.LANCZOS)          # the first frame shows the whole drawing at 1/S
+    base, _ = scene(SKINS[spec['console']]['ground'], SKINS[spec['console']].get('motif')); base = base.resize((W, H), Image.LANCZOS)          # the first frame shows the whole drawing at 1/S
     for n in ['s0'] + [f's{i + 1}' for i in range(len(spec['facts']))]:
         im = Image.new('RGBA', (W, H), (11, 13, 16, 255)); im.alpha_composite(base)
         im.alpha_composite(Image.open(f'{outdir}/top.png')); im.alpha_composite(Image.open(f'{outdir}/{n}.png'))
