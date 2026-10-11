@@ -798,7 +798,7 @@ Legend of Zelda: Ocarina of Time on 5 Nov 2026. Few Arabic outlets cover it,
 so the aim is to bring the region's attention to a major upcoming release
 for as long as possible, drawing in new fans. It is coverage of a new
 game told through its history, not a retro piece: every episode opens on
-the series intro (`oot/intro.py`, his Triforce Medley upload and «باقي N
+the series intro (`templates/ocarina_intro.py <days>`, his Triforce Medley upload and «باقي N
 يومًا»; never يتبقى) and keeps the everyday sound, never the 8-bit retro
 flavour. The 23 Nov anniversary of the original belongs to the series too.
 Episode 1 (why it matters) is queued for 13 Oct 18:00 Dubai.
