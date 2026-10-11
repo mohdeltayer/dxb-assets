@@ -130,6 +130,12 @@ keywords plus a grep of `stories/`, and grade it:
   rumour, leak or a single outlet's report.
 Return BREAKING and NEW items with the quoted primary, the ledger result
 and why it matters. Never posts or drafts.
+X-only claims (Mohammad, 11 Oct 2026): the external scout, Gaming Watch
+(gamingwatch@agentmail.to), can read X. Email it from
+dxbknight-digest@agentmail.to with the account, the claim and what to
+quote (exact text, URL, time, linked page); its reply lands in the digest
+inbox, and the next hourly run reads it. An X post by the company or person
+itself counts as the primary once its text is quoted verbatim.
 
 **Main session.** On BREAKING or NEW: brief, footage, Arabic (both skills
 fresh, grammar review, DeepL back-check), Reel, drafts, preflight. Then
