@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__AgentMail__list_messages",
+      "mcp__AgentMail__get_message",
+      "mcp__AgentMail__get_thread",
+      "mcp__AgentMail__list_threads",
+      "mcp__AgentMail__search_messages",
+      "mcp__AgentMail__update_message",
+      "mcp__Postiz__integrationList",
+      "mcp__Postiz__postsListTool",
+      "WebSearch"
+    ],
+    "ask": [
+      "mcp__AgentMail__send_message",
+      "mcp__AgentMail__reply_to_message",
+      "mcp__AgentMail__forward_message",
+      "mcp__AgentMail__delete_thread",
+      "mcp__AgentMail__delete_inbox"
+    ]
+  }
+}
