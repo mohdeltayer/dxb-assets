@@ -770,7 +770,11 @@ Brand kit (Mohammad, 26 Sep 2026):
   Mohammad, 11 Oct: bigger type in the lower half, and the console's own
   colours on pixel-edged blocks beside each row and each fact (`CONSOLES`:
   N64 red, yellow, green, blue and so on; no pink, so PlayStation takes its
-  logo colours). Add a console there before its first post. Everyday audition:
+  logo colours). Add a console there before its first post. Palettes
+  (11 Oct): Atari 2600 (big in the Middle East in the 70s and 80s), NES and
+  Famicom kept apart (grey and red against cream, maroon and gold), Master
+  System, SNES and Super Famicom, Mega Drive, Game Boy, N64, PlayStation,
+  Saturn, Dreamcast, GBA, PS2, GameCube, Xbox. Everyday audition:
   `live/2026-10-01/audio/`. On posts: every Reel
   ends on the jingle (see the end card below); X video cards and stills
   carry no added sound yet. The sound is a Digital Lounge mark;

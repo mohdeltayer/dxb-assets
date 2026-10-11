@@ -29,19 +29,24 @@ Y0 = 1140                                         # the lower area runs from her
 # Each console's own colours, in the order the blocks use them (rows top to bottom, facts one by one).
 # No pink: the brand rule covers our own blocks, so PlayStation takes its logo's colours, not the square button.
 CONSOLES = {
-    'n64':      dict(name='Nintendo 64', mark='n64-mark.png', colours=[(228, 32, 46), (255, 194, 14), (0, 166, 81), (0, 97, 175)]),
-    'nes':      dict(name='NES', colours=[(196, 0, 43), (169, 169, 169), (110, 110, 118), (230, 230, 230)]),
-    'famicom':  dict(name='Famicom', colours=[(176, 30, 44), (212, 175, 90), (240, 236, 224), (176, 30, 44)]),
-    'snes':     dict(name='Super Nintendo', colours=[(79, 67, 174), (154, 143, 216), (208, 2, 27), (245, 196, 0)]),
+    # Atari 2600 (VCS): the woodgrain front, the Atari red-orange and the silver switches. Big in the Gulf in the late 70s and 80s.
+    'atari2600': dict(name='Atari 2600', colours=[(228, 49, 38), (245, 130, 32), (150, 92, 48), (192, 195, 199)]),
+    # NES (the Western grey box): light grey, the logo and button red, charcoal, pale grey.
+    'nes':      dict(name='NES', colours=[(196, 0, 43), (184, 184, 188), (92, 92, 100), (226, 226, 230)]),
+    # Famicom (Japan): cream body, the deep maroon trim, the gold controller faces.
+    'famicom':  dict(name='Famicom', colours=[(150, 28, 40), (212, 172, 84), (238, 230, 210), (150, 28, 40)]),
+    'mastersystem': dict(name='Master System', colours=[(230, 0, 18), (30, 91, 198), (200, 200, 205), (230, 0, 18)]),
+    'snes':     dict(name='Super Nintendo', colours=[(79, 67, 174), (154, 143, 216), (190, 190, 196), (110, 98, 200)]),
     'sfc':      dict(name='Super Famicom', colours=[(208, 2, 27), (245, 196, 0), (45, 159, 74), (42, 79, 184)]),
-    'gameboy':  dict(name='Game Boy', colours=[(155, 188, 15), (139, 172, 15), (48, 98, 48), (155, 188, 15)]),
-    'gba':      dict(name='Game Boy Advance', colours=[(75, 63, 158), (124, 112, 210), (75, 63, 158), (124, 112, 210)]),
-    'gamecube': dict(name='GameCube', colours=[(106, 90, 205), (60, 180, 75), (230, 60, 50), (245, 196, 0)]),
-    'ps1':      dict(name='PlayStation', colours=[(230, 0, 18), (247, 198, 0), (0, 160, 160), (58, 76, 168)]),
-    'ps2':      dict(name='PlayStation 2', colours=[(0, 55, 145), (40, 120, 220), (0, 55, 145), (40, 120, 220)]),
     'megadrive': dict(name='Mega Drive', colours=[(230, 0, 18), (30, 91, 198), (170, 170, 170), (230, 0, 18)]),
+    'gameboy':  dict(name='Game Boy', colours=[(155, 188, 15), (139, 172, 15), (48, 98, 48), (155, 188, 15)]),
+    'n64':      dict(name='Nintendo 64', mark='n64-mark.png', colours=[(228, 32, 46), (255, 194, 14), (0, 166, 81), (0, 97, 175)]),
+    'ps1':      dict(name='PlayStation', colours=[(230, 0, 18), (247, 198, 0), (0, 160, 160), (58, 76, 168)]),
     'saturn':   dict(name='Sega Saturn', colours=[(30, 91, 198), (230, 0, 18), (245, 196, 0), (0, 166, 81)]),
     'dreamcast': dict(name='Dreamcast', colours=[(242, 107, 29), (0, 96, 168), (242, 107, 29), (0, 96, 168)]),
+    'gba':      dict(name='Game Boy Advance', colours=[(75, 63, 158), (124, 112, 210), (75, 63, 158), (124, 112, 210)]),
+    'ps2':      dict(name='PlayStation 2', colours=[(0, 55, 145), (40, 120, 220), (0, 55, 145), (40, 120, 220)]),
+    'gamecube': dict(name='GameCube', colours=[(106, 90, 205), (60, 180, 75), (230, 60, 50), (245, 196, 0)]),
     'xbox':     dict(name='Xbox', colours=[(16, 124, 16), (155, 240, 11), (16, 124, 16), (155, 240, 11)]),
 }
 
@@ -114,14 +119,16 @@ def top(spec, out):
 def sheet(spec, out):
     con = CONSOLES[spec['console']]; cols = con['colours']
     t = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(t)
-    box = Image.open(spec['box']).convert('RGBA')
-    bh = spec.get('box_h', 170); box = box.resize((int(box.width * bh / box.height), bh), Image.LANCZOS)
-    bw = box.width; by = Y0 + 8
-    sh = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ImageDraw.Draw(sh).rectangle([L + 8, by + 12, L + bw + 8, by + bh + 12], fill=(0, 0, 0, 150))
-    t.alpha_composite(sh.filter(ImageFilter.GaussianBlur(12)))
-    frame = Image.new('RGBA', (W, H), (0, 0, 0, 0))            # the box art sits in a pixel frame in the console's first colour
-    block(ImageDraw.Draw(frame), [L - 8, by - 8, L + bw + 8, by + bh + 8], cols[0], px=6); t.alpha_composite(frame)
-    t.alpha_composite(box, (L, by))
+    bw = -30                                                    # no box art: the values may run to the left edge
+    if spec.get('box'):
+        box = Image.open(spec['box']).convert('RGBA')
+        bh = spec.get('box_h', 170); box = box.resize((int(box.width * bh / box.height), bh), Image.LANCZOS)
+        bw = box.width; by = Y0 + 8
+        sh = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ImageDraw.Draw(sh).rectangle([L + 8, by + 12, L + bw + 8, by + bh + 12], fill=(0, 0, 0, 150))
+        t.alpha_composite(sh.filter(ImageFilter.GaussianBlur(12)))
+        frame = Image.new('RGBA', (W, H), (0, 0, 0, 0))        # the box art sits in a pixel frame in the console's first colour
+        block(ImageDraw.Draw(frame), [L - 8, by - 8, L + bw + 8, by + bh + 8], cols[0], px=6); t.alpha_composite(frame)
+        t.alpha_composite(box, (L, by))
     val, sub, csize, step = A.F('Bold', 46), A.F('Medium', 34), 30, 72
     cw = max(d.textlength(k, font=A.F('Bold', csize), **AR) for k, _ in spec['sheet']) + 40    # every label block the same width
     vx0 = R - cw - 20; room = vx0 - (L + bw + 30)
@@ -142,8 +149,9 @@ def sheet(spec, out):
                 d.text((vx, y + 6 + j * 46), line, font=sub, fill=INK, anchor='ra', **opt(line))
             y += 46 * len(v) + 20
         else:
-            assert d.textlength(v, font=val, **opt(v)) <= room, ('too wide', v)
-            d.text((vx, y), v, font=val, fill=INK, anchor='ra', **opt(v)); y += step
+            f = val if d.textlength(v, font=val, **opt(v)) <= room else sub      # a long studio name drops to the smaller weight
+            assert d.textlength(v, font=f, **opt(v)) <= room, ('too wide', v)
+            d.text((vx, y + (0 if f is val else 8)), v, font=f, fill=INK, anchor='ra', **opt(v)); y += step
     bb = t.getbbox(); assert bb[0] >= L - 30 and bb[3] <= FLOOR, ('sheet leaves the safe zone', bb)
     t.save(out)
 
