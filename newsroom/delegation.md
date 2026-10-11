@@ -112,10 +112,10 @@ When watch-seen.json is empty (the first run) it records everything it
 sees and reports only items published in the last two hours.
 Sources: PlayStation Blog, Xbox Wire (news.xbox.com may refuse; then
 skip), Nintendo US whatsnew and Nintendo press, Nintendo Japan news
-(nintendo.co.jp/topics), Steam news for the top sellers, the newsrooms of
+(RSS: nintendo.com/jp/topics/c/feed/rss/), Steam news for the top sellers, the newsrooms of
 Capcom, Square Enix, Bandai Namco, Sega/Atlus, Konami, EA, Ubisoft,
 Rockstar Newswire, Take-Two, Epic/Fortnite, Riot, Blizzard, Bungie,
-thegameawards.com/news, Famitsu, Gematsu (outlet, for Japan speed), and
+thegameawards.com/news, Bandai Namco (bandainamcoent.com/news), Famitsu, Gematsu (outlet, for Japan speed), and
 the regional official pages (PS Store UAE and Saudi, Saudi Esports
 Federation, Saudi Games/GEA-type bodies, UAE gaming bodies).
 
