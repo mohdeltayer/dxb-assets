@@ -7,7 +7,7 @@
 #   retro.render(dict(clip=..., start=2.0, dur=27.5, date='11 أكتوبر 1999', game='Jet Force Gemini', console='n64',
 #                     box='box.jpg', sheet=[('اللعبة', 'Jet Force Gemini'), ...], facts=[[line, line, line], ...]), 'out.mp4')
 # then outro.append(out, final, style='retro').
-import math, os, sys, shutil, subprocess, tempfile
+import json, math, os, sys, shutil, subprocess, tempfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from PIL import Image, ImageDraw, ImageFilter, ImageChops
 import fast_ar as A, reel as RL
@@ -282,6 +282,27 @@ ROOMS = {
                 quad=[(1882, 620), (2350, 606), (2346, 960), (1880, 962)], scale=0.78, top=220, cx=520),
 }
 ROOM = 'den'
+# The den built in code (Mohammad, 11 Oct 2026, from the "Lights on, one by one" prompt pack he sent): templates/room3d/room.html
+# is a three.js scene with a deterministic renderAt(t), render.mjs captures a seamless loop in headless Chromium, and the
+# screen's corners come out of the same render. Nothing in it is licensed from anyone. scene='room3d' uses it.
+ROOM3D = dict(video=os.path.join(HERE, 'assets', 'retro', 'room3d-loop.mp4'), quad=os.path.join(HERE, 'assets', 'retro', 'room3d-quad.json'))
+
+def room3d_quad():
+    q = json.load(open(ROOM3D['quad']))['quad']
+    return [(x * S, y * S) for x, y in q]
+
+def scrim_layer(spec, out):
+    """The ground over the title band and the sheet, as a layer of its own for a video base."""
+    ground = gnd(spec)
+    g = Image.new('L', (1, H), 0)
+    for y in range(H):
+        if y < 540: v = 0.92
+        elif y < 660: v = 0.92 * (1 - (y - 540) / 120) ** 1.2
+        elif y < WASH - 60: v = 0.0
+        elif y < Y0 - 6: v = 0.96 * ((y - WASH + 60) / (Y0 - 6 - WASH + 60)) ** 0.9
+        else: v = 0.96
+        g.putpixel((0, y), int(255 * v))
+    im = Image.new('RGBA', (W, H), ground + (255,)); im.putalpha(g.resize((W, H))); im.save(out)
 
 def room_scene(spec):
     """The full-bleed room with scrims for the type, the tube cut out. Returns the scene and the screen quad on the
@@ -424,7 +445,7 @@ def fit(d, text, sizes, width, weight='Bold'):
 def boxart(t, spec):
     """The game's box stands on the cabinet beside the TV (or lies on the desk beside a handheld), in front of the
     photo and clear of the screen, with a soft shadow under it."""
-    if not spec.get('box') or (not CONSOLES[spec['console']].get('handheld') and spec.get('scene', 'room') == 'room'): return
+    if not spec.get('box') or (not CONSOLES[spec['console']].get('handheld') and spec.get('scene', 'room') in ('room', 'room3d')): return
     box = Image.open(spec['box']).convert('RGBA')
     hand = CONSOLES[spec['console']].get('handheld')
     maxw, maxh = (200, 250) if hand else (150, 190)
@@ -440,9 +461,9 @@ def boxart(t, spec):
 def top(spec, out):
     t = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     hand = CONSOLES[spec['console']].get('handheld')
-    if hand or spec.get('scene', 'room') != 'room': waves(t, spec['console'])
+    if hand or spec.get('scene', 'room') not in ('room', 'room3d'): waves(t, spec['console'])
     title_chip(t, spec['console'])
-    if SKINS[spec['console']].get('motif') and (hand or spec.get('scene', 'room') != 'room'):
+    if SKINS[spec['console']].get('motif') and (hand or spec.get('scene', 'room') not in ('room', 'room3d')):
         sc_ = Image.new('RGBA', (W, H), (0, 0, 0, 0))
         ImageDraw.Draw(sc_).rounded_rectangle([L + 40, 352, R + 40, 548], 60, fill=gnd(spec) + (215,))
         t.alpha_composite(sc_.filter(ImageFilter.GaussianBlur(34)))
@@ -509,6 +530,11 @@ def render(spec, out, push=0.03, sheet_secs=6.0):
         if hand:                                                # handhelds: the desk, footage on the device's own screen
             base, geo = desk_scene(spec)
             w, h = int(geo['w'] / 2) * 2, int(geo['h'] / 2) * 2; lcdfx(w, h, f'{tmp}/fx.png')
+        elif spec.get('scene', 'room') == 'room3d':
+            base, q = None, room3d_quad()
+            xs, ys = [p[0] for p in q], [p[1] for p in q]
+            x0, y0 = int(min(xs)), int(min(ys)); w, h = int(max(xs) - x0 + 1) // 2 * 2, int(max(ys) - y0 + 1) // 2 * 2
+            screenfx(w, h, f'{tmp}/fx.png'); quad_mask(q, x0, y0, w, h, f'{tmp}/qm.png'); scrim_layer(spec, f'{tmp}/scrim.png')
         elif spec.get('scene', 'room') == 'room':
             base, q = room_scene(spec)
             xs, ys = [p[0] for p in q], [p[1] for p in q]
@@ -517,7 +543,8 @@ def render(spec, out, push=0.03, sheet_secs=6.0):
         else:
             base, (x0, y0, w, h) = scene(gnd(spec), SKINS[key].get('motif'))
             screenfx(w, h, f'{tmp}/fx.png')
-        base.save(f'{tmp}/base.png'); top(spec, f'{tmp}/top.png'); sheet(spec, f'{tmp}/s0.png')
+        if base is not None: base.save(f'{tmp}/base.png')
+        top(spec, f'{tmp}/top.png'); sheet(spec, f'{tmp}/s0.png')
         segs = [(f'{tmp}/s0.png', 0, sheet_secs)]
         per = (dur - sheet_secs) / len(spec['facts'])
         for i, lines in enumerate(spec['facts']):
@@ -527,8 +554,9 @@ def render(spec, out, push=0.03, sheet_secs=6.0):
             assert b - a >= need, ('fact too fast', i, b - a, need)
             segs.append((f'{tmp}/s{i + 1}.png', a, b))
         cy = (geo['cy'] if hand else y0 + h / 2) / SH; z = f"({1 / S}/(1-{push}*t/{dur}))"
-        room = not hand and spec.get('scene', 'room') == 'room'
-        ins = ['-loop', '1', '-t', str(dur), '-i', f'{tmp}/base.png', '-ss', str(start), '-t', str(dur), '-i', clip,
+        room = not hand and spec.get('scene', 'room') in ('room', 'room3d'); r3 = not hand and spec.get('scene', 'room') == 'room3d'
+        base_src = ['-stream_loop', '-1', '-t', str(dur), '-i', ROOM3D['video']] if r3 else ['-loop', '1', '-t', str(dur), '-i', f'{tmp}/base.png']
+        ins = [*base_src, '-ss', str(start), '-t', str(dur), '-i', clip,
                '-loop', '1', '-t', str(dur), '-i', f'{tmp}/fx.png', '-loop', '1', '-t', str(dur), '-i', f'{tmp}/top.png']
         cx0, cy0, cw, ch = spec.get('crop', (10, 5, 330, 216))
         if hand:
@@ -546,11 +574,17 @@ def render(spec, out, push=0.03, sheet_secs=6.0):
         else:
             fc = (f"[1:v]crop={cw}:{ch}:{cx0}:{cy0},scale={w}:{h}:flags=lanczos,eq=saturation=1.25:contrast=1.15:brightness=0.05,format=rgba[g];"
                   f"[g][2:v]overlay=0:0[gs];color=c=0x0b0d10:s={SW}x{SH}:d={dur}[blk];[blk][gs]overlay={x0}:{y0}[sc];")
+        if r3:                                                  # the room is a video under the picture, the scrims a layer above
+            ins += ['-loop', '1', '-t', str(dur), '-i', f'{tmp}/scrim.png']
+            fc = fc.replace(f"color=c=0x0b0d10:s={SW}x{SH}:d={dur}[blk];[blk][gs]overlay={x0}:{y0}[sc];",
+                            f"[0:v]scale={SW}:{SH}:flags=lanczos,format=rgba[bg];[bg][gs]overlay={x0}:{y0}[full];")
+        else:
+            fc += f"[0:v]format=rgba[bg];[sc][bg]overlay=0:0[full];"
         fc += (
-               f"[0:v]format=rgba[bg];[sc][bg]overlay=0:0[full];"
                f"[full]scale=w='ceil({SW}*{z}/2)*2':h='ceil({SH}*{z}/2)*2':eval=frame:flags=bicubic,"
-               f"crop={W}:{H}:x='(iw-{W})/2':y='(ih-{H})*{cy}',format=rgba[cam];[cam][3:v]overlay=0:0[v0];")
-        base_in = 5 if room else 4
+               f"crop={W}:{H}:x='(iw-{W})/2':y='(ih-{H})*{cy}',format=rgba[cam];")
+        fc += f"[cam][5:v]overlay=0:0[cam2];[cam2][3:v]overlay=0:0[v0];" if r3 else f"[cam][3:v]overlay=0:0[v0];"
+        base_in = 6 if r3 else 5 if room else 4
         for i, (n, a, b) in enumerate(segs):
             ins += ['-loop', '1', '-t', str(dur), '-i', n]
             fi = f"fade=t=in:st={max(0, a - 0.01)}:d=0.35:alpha=1," if a > 0 else ''
@@ -568,9 +602,13 @@ def stills(spec, outdir):
     top(spec, f'{outdir}/top.png'); sheet(spec, f'{outdir}/s0.png')
     for i in range(len(spec['facts'])): fact(spec, i, f'{outdir}/s{i + 1}.png')
     k = spec['console']
-    base = (desk_scene(spec) if CONSOLES[k].get('handheld') else room_scene(spec) if spec.get('scene', 'room') == 'room'
-            else scene(gnd(spec), SKINS[k].get('motif')))[0]
-    base = base.resize((W, H), Image.LANCZOS)          # the first frame shows the whole drawing at 1/S
+    if not CONSOLES[k].get('handheld') and spec.get('scene', 'room') == 'room3d':
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', '1', '-i', ROOM3D['video'], '-frames:v', '1', f'{outdir}/room.png'], check=True)
+        base = Image.open(f'{outdir}/room.png').convert('RGBA'); scrim_layer(spec, f'{outdir}/scrim.png'); base.alpha_composite(Image.open(f'{outdir}/scrim.png'))
+    else:
+        base = (desk_scene(spec) if CONSOLES[k].get('handheld') else room_scene(spec) if spec.get('scene', 'room') == 'room'
+                else scene(gnd(spec), SKINS[k].get('motif')))[0]
+        base = base.resize((W, H), Image.LANCZOS)      # the first frame shows the whole drawing at 1/S
     for n in ['s0'] + [f's{i + 1}' for i in range(len(spec['facts']))]:
         im = Image.new('RGBA', (W, H), (11, 13, 16, 255)); im.alpha_composite(base)
         im.alpha_composite(Image.open(f'{outdir}/top.png')); im.alpha_composite(Image.open(f'{outdir}/{n}.png'))

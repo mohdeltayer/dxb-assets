@@ -1,0 +1,159 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Digital Lounge retro den, built in code</title>
+<style>html,body{margin:0;background:#000}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./three.module.js"}}</script>
+<script type="module">
+// A retro den for the "on this day" Reels (Mohammad, 11 Oct 2026): every model, texture and light is code, so
+// nothing is licensed from anyone. Fixed camera, so the TV screen's four corners stay put and retro.py maps the
+// real footage onto them. Deterministic: window.renderAt(t) draws the moment t (seconds) with no dependence on
+// the wall clock; every motion runs a whole number of cycles per LOOP seconds. ?t=3.3 freezes a moment,
+// ?scale=2 renders at 2160x3840.
+import * as THREE from 'three';
+const Q = new URLSearchParams(location.search);
+const W = 1080, H = 1920, SCALE = +(Q.get('scale') || 1), LOOP = 10.0;
+const PALETTE = { panel: 0x5a3219, panelDark: 0x3a2010, floor: 0x4a2e1c, rug: 0x4a1f1c, rug2: 0x8a6a3a, stand: 0x3b2314,
+  tv: 0x2a2320, bezel: 0x1b1715, lamp: 0xffb45e, night: 0x4a6fb3, shelf: 0x5a371e,
+  boxes: [0x8a8f96, 0x2b4b8c, 0xb3261e, 0xe8a33d, 0x1e1e22, 0x3d7a4a, 0xd9d4c7] };
+
+// seeded randomness: mulberry32, seed 7
+function rng(seed) { return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+  t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+const R = rng(7);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setSize(W * SCALE, H * SCALE, false);
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 0.92;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+document.body.appendChild(renderer.domElement);
+const scene = new THREE.Scene(); scene.background = new THREE.Color(0x070508);
+const camera = new THREE.PerspectiveCamera(50, W / H, 0.1, 30);
+camera.position.set(0.05, 1.02, 3.2); camera.lookAt(0, 0.70, 0);
+
+// ---- procedural textures
+function canvasTex(w, h, draw, repeat) {
+  const c = document.createElement('canvas'); c.width = w; c.height = h; draw(c.getContext('2d'));
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.wrapS = t.wrapT = THREE.RepeatWrapping;
+  if (repeat) t.repeat.set(...repeat); t.anisotropy = 4; return t;
+}
+const hex = c => '#' + c.toString(16).padStart(6, '0');
+const woodTex = canvasTex(512, 512, g => {                    // vertical panelling with grain
+  g.fillStyle = hex(PALETTE.panel); g.fillRect(0, 0, 512, 512);
+  const r = rng(11);
+  for (let x = 0; x < 512; x += 2) { const v = 0.82 + 0.18 * Math.sin(x * 0.37 + r() * 0.5) * Math.sin(x * 0.051);
+    g.fillStyle = `rgba(0,0,0,${(1 - v) * 0.6})`; g.fillRect(x, 0, 2, 512); }
+  for (let i = 0; i < 6; i++) { g.fillStyle = 'rgba(0,0,0,0.55)'; g.fillRect(i * 85 + 42, 0, 4, 512); g.fillStyle = 'rgba(255,220,180,0.10)'; g.fillRect(i * 85 + 46, 0, 2, 512); }
+}, [3, 1.5]);
+const floorTex = canvasTex(512, 512, g => {
+  g.fillStyle = hex(PALETTE.floor); g.fillRect(0, 0, 512, 512); const r = rng(5);
+  for (let y = 0; y < 512; y += 64) { for (let x = -64; x < 512; x += 256) { const off = (y / 64) % 2 ? 128 : 0;
+    g.fillStyle = `rgba(0,0,0,${0.08 + 0.12 * r()})`; g.fillRect(x + off, y, 254, 62); g.fillStyle = 'rgba(0,0,0,0.5)'; g.fillRect(x + off, y + 62, 256, 2); g.fillRect(x + off + 254, y, 2, 64); } }
+}, [2, 2]);
+const rugTex = canvasTex(512, 512, g => {                     // a 70s rug: stripes and a diamond border, no symbols
+  g.fillStyle = hex(PALETTE.rug); g.fillRect(0, 0, 512, 512);
+  g.strokeStyle = hex(PALETTE.rug2); g.lineWidth = 10; g.strokeRect(24, 24, 464, 464); g.lineWidth = 4; g.strokeRect(48, 48, 416, 416);
+  g.fillStyle = hex(PALETTE.rug2); for (let i = 0; i < 12; i++) for (let j = 0; j < 12; j++) { const x = 72 + i * 34, y = 72 + j * 34;
+    g.beginPath(); g.moveTo(x, y - 5); g.lineTo(x + 5, y); g.lineTo(x, y + 5); g.lineTo(x - 5, y); g.closePath(); g.fill(); }
+});
+const posterTex = (kind) => canvasTex(256, 384, g => {        // our own geometric prints, no characters or logos
+  if (kind === 0) { g.fillStyle = '#1b2a4a'; g.fillRect(0, 0, 256, 384); g.fillStyle = '#f2c55a'; g.beginPath(); g.arc(128, 150, 70, 0, 7); g.fill();
+    for (let i = 0; i < 9; i++) { g.fillStyle = i % 2 ? '#e06a22' : '#b3261e'; g.fillRect(0, 230 + i * 16, 256, 9); } }
+  else { g.fillStyle = '#efe6d2'; g.fillRect(0, 0, 256, 384); g.fillStyle = '#2b4b8c'; g.beginPath(); g.moveTo(20, 330); g.lineTo(128, 90); g.lineTo(236, 330); g.closePath(); g.fill();
+    g.fillStyle = '#b3261e'; g.beginPath(); g.arc(190, 90, 34, 0, 7); g.fill(); g.fillStyle = '#1e1e22'; g.fillRect(0, 340, 256, 44); }
+});
+
+// ---- room
+const mat = (o) => new THREE.MeshStandardMaterial(o);
+const add = (geo, m, pos, rot) => { const mesh = new THREE.Mesh(geo, m); mesh.position.set(...pos); if (rot) mesh.rotation.set(...rot);
+  mesh.castShadow = mesh.receiveShadow = true; scene.add(mesh); return mesh; };
+add(new THREE.PlaneGeometry(6, 4), mat({ map: woodTex, roughness: 0.85 }), [0, 1.3, -0.62]);                      // back wall
+add(new THREE.PlaneGeometry(6, 6), mat({ map: floorTex, roughness: 0.9 }), [0, 0, 1], [-Math.PI / 2, 0, 0]);          // floor
+add(new THREE.PlaneGeometry(2.2, 1.6), mat({ map: rugTex, roughness: 1 }), [0, 0.004, 0.9], [-Math.PI / 2, 0, 0]);  // rug
+add(new THREE.BoxGeometry(6, 0.12, 0.03), mat({ color: PALETTE.panelDark }), [0, 0.06, -0.605]);                   // skirting
+// window, left, with slats; the night outside is a cool emissive plane
+add(new THREE.PlaneGeometry(0.62, 0.9), mat({ color: 0x06101f, emissive: 0x24427a, emissiveIntensity: 0.35 }), [-0.78, 1.45, -0.615]);
+for (let i = 0; i < 14; i++) add(new THREE.BoxGeometry(0.66, 0.022, 0.02), mat({ color: 0x9a9388, roughness: 0.9 }), [-0.78, 1.03 + i * 0.064, -0.60]);
+add(new THREE.BoxGeometry(0.72, 0.06, 0.05), mat({ color: 0x8a8378 }), [-0.78, 1.93, -0.60]);
+add(new THREE.BoxGeometry(0.72, 0.06, 0.05), mat({ color: 0x8a8378 }), [-0.78, 0.98, -0.60]);
+// posters, right
+const poster = (k, x, y, w, h) => { add(new THREE.BoxGeometry(w + 0.05, h + 0.05, 0.02), mat({ color: 0x14100e }), [x, y, -0.60]);
+  add(new THREE.PlaneGeometry(w, h), mat({ map: posterTex(k), roughness: 0.7 }), [x, y, -0.588]); };
+poster(0, 0.52, 1.56, 0.32, 0.46); poster(1, -0.78, 2.28, 0.3, 0.42);
+// shelf above the TV with rows of plain boxes (cartridge and tape cases)
+add(new THREE.BoxGeometry(1.0, 0.03, 0.2), mat({ color: PALETTE.shelf }), [-0.1, 1.68, -0.52]);
+add(new THREE.BoxGeometry(1.0, 0.03, 0.2), mat({ color: PALETTE.shelf }), [-0.1, 2.02, -0.52]);
+for (const sy of [1.70, 2.04]) { let x = -0.57; while (x < 0.36) { const w = 0.03 + R() * 0.03, h = 0.12 + R() * 0.1;
+  const c = PALETTE.boxes[Math.floor(R() * PALETTE.boxes.length)];
+  add(new THREE.BoxGeometry(w, h, 0.16), mat({ color: c, roughness: 0.6 }), [x + w / 2, sy + h / 2, -0.52]);
+  add(new THREE.BoxGeometry(w + 0.002, h * 0.25, 0.002), mat({ color: 0xefe6d2 }), [x + w / 2, sy + h * 0.6, -0.439]); x += w + 0.006 + R() * 0.01; } }
+// TV stand and the set
+const standMat = mat({ map: woodTex, roughness: 0.7, color: 0x8a6a4a });
+add(new THREE.BoxGeometry(1.1, 0.04, 0.55), standMat, [0, 0.48, 0]);                                               // top
+add(new THREE.BoxGeometry(1.1, 0.04, 0.55), standMat, [0, 0.08, 0]);                                               // base
+add(new THREE.BoxGeometry(0.04, 0.44, 0.55), standMat, [-0.53, 0.28, 0]); add(new THREE.BoxGeometry(0.04, 0.44, 0.55), standMat, [0.53, 0.28, 0]);
+add(new THREE.BoxGeometry(1.1, 0.44, 0.03), mat({ color: 0x1a0f08 }), [0, 0.28, -0.26]);                           // back
+add(new THREE.BoxGeometry(1.1, 0.06, 0.5), mat({ color: 0x120a06 }), [0, 0.03, 0]);                                // plinth shadow
+add(new THREE.BoxGeometry(0.42, 0.08, 0.3), mat({ color: 0x8a8f96, roughness: 0.5 }), [-0.22, 0.14, 0.06]);        // a grey console box
+add(new THREE.BoxGeometry(0.12, 0.012, 0.03), mat({ color: 0x1e1e22 }), [-0.22, 0.185, 0.08]);
+add(new THREE.BoxGeometry(0.38, 0.07, 0.26), mat({ color: 0x1e1e22, roughness: 0.4 }), [0.26, 0.135, 0.05]);       // a tape deck
+const led = add(new THREE.BoxGeometry(0.02, 0.01, 0.005), mat({ color: 0x33ff66, emissive: 0x33ff66, emissiveIntensity: 2 }), [0.4, 0.14, 0.182]);
+const tvW = 0.82, tvH = 0.64, tvD = 0.5;
+add(new THREE.BoxGeometry(tvW, tvH, tvD), mat({ map: woodTex, color: 0x9a7a5a, roughness: 0.6 }), [0, 0.5 + tvH / 2, -0.02]);
+add(new THREE.BoxGeometry(tvW - 0.07, tvH - 0.07, 0.02), mat({ color: 0x6e6e72, metalness: 0.5, roughness: 0.5 }), [0, 0.5 + tvH / 2, tvD / 2 - 0.02 + 0.005]);
+add(new THREE.BoxGeometry(tvW - 0.11, tvH - 0.11, 0.012), mat({ color: PALETTE.bezel, roughness: 0.9 }), [-0.06, 0.5 + tvH / 2 + 0.01, tvD / 2 - 0.02 + 0.016]);
+const scrW = 0.64, scrH = 0.48, scrY = 0.5 + tvH / 2 + 0.01, scrZ = tvD / 2 - 0.02 + 0.016;
+const screen = add(new THREE.PlaneGeometry(scrW, scrH), mat({ color: 0x0a0a0c, roughness: 0.7 }), [-0.06, scrY, scrZ + 0.008]);
+for (let i = 0; i < 4; i++) add(new THREE.CylinderGeometry(0.014, 0.014, 0.01, 16), mat({ color: 0x6b6b70 }), [0.33, 0.56 + i * 0.1, scrZ], [Math.PI / 2, 0, 0]);  // knobs
+add(new THREE.BoxGeometry(0.06, 0.4, 0.004), mat({ color: 0x3a3030 }), [0.33, 0.73, scrZ - 0.003]);              // speaker grille strip
+// a controller on the rug, a plant, a floor lamp
+add(new THREE.BoxGeometry(0.16, 0.025, 0.07), mat({ color: 0xd9d4c7, roughness: 0.5 }), [-0.42, 0.012, 0.95], [0, 0.4, 0]);
+add(new THREE.BoxGeometry(0.03, 0.006, 0.03), mat({ color: 0x1e1e22 }), [-0.47, 0.027, 0.95], [0, 0.4, 0]);
+add(new THREE.CylinderGeometry(0.11, 0.09, 0.14, 24), mat({ color: 0xb3573a }), [-0.62, 0.07, 0.42]);
+for (let i = 0; i < 9; i++) add(new THREE.ConeGeometry(0.03, 0.26, 6), mat({ color: 0x3d7a4a }), [-0.62 + Math.cos(i) * 0.05, 0.26, 0.42 + Math.sin(i) * 0.05], [Math.sin(i) * 0.35, i, Math.cos(i) * 0.35]);
+add(new THREE.CylinderGeometry(0.16, 0.2, 0.02, 24), mat({ color: 0x3a3030 }), [0.58, 0.01, 0.25]);               // lamp base
+add(new THREE.CylinderGeometry(0.012, 0.012, 1.45, 12), mat({ color: 0xcfa968, metalness: 0.6, roughness: 0.4 }), [0.58, 0.73, 0.25]);
+const shade = add(new THREE.CylinderGeometry(0.11, 0.16, 0.24, 24, 1, true), mat({ color: 0xe8c59a, emissive: PALETTE.lamp, emissiveIntensity: 0.55, side: THREE.DoubleSide, roughness: 1 }), [0.58, 1.50, 0.25]);
+shade.castShadow = false;
+
+const vigTex = canvasTex(512, 512, g => { const grd = g.createRadialGradient(256, 236, 120, 256, 256, 330);
+  grd.addColorStop(0, 'rgba(0,0,0,0)'); grd.addColorStop(1, 'rgba(0,0,0,0.78)'); g.fillStyle = grd; g.fillRect(0, 0, 512, 512); });
+const vig = new THREE.Mesh(new THREE.PlaneGeometry(1.0, 1.78), new THREE.MeshBasicMaterial({ map: vigTex, transparent: true, depthTest: false, depthWrite: false }));
+vig.position.set(0.05, 1.02, 3.2 - 1.9); vig.lookAt(camera.position); vig.renderOrder = 10; scene.add(vig);
+// ---- light: cool fill from the window, warm from the lamp, the set's own glow
+scene.add(new THREE.AmbientLight(0x202838, 0.12));
+const moon = new THREE.DirectionalLight(PALETTE.night, 0.5); moon.position.set(-2.2, 2.6, -0.3); moon.target.position.set(0.3, 0, 0.8);
+moon.castShadow = true; moon.shadow.mapSize.set(2048, 2048); moon.shadow.bias = -0.0005; scene.add(moon, moon.target);
+const lamp = new THREE.PointLight(PALETTE.lamp, 2.6, 6, 1.6); lamp.position.set(0.58, 1.44, 0.25); scene.add(lamp);
+const lampSpot = new THREE.SpotLight(PALETTE.lamp, 10, 5, 0.95, 0.6, 1.4); lampSpot.position.set(0.58, 1.38, 0.25); lampSpot.target.position.set(0.4, 0, 0.3);
+lampSpot.castShadow = true; lampSpot.shadow.mapSize.set(2048, 2048); lampSpot.shadow.bias = -0.0004; scene.add(lampSpot, lampSpot.target);
+const tvGlow = new THREE.PointLight(0x9fb3d8, 1.2, 3, 1.8); tvGlow.position.set(-0.06, scrY - 0.1, scrZ + 0.45); scene.add(tvGlow);
+
+// ---- dust in the lamp's light: whole cycles per loop
+const N = 120, dust = new Float32Array(N * 3), seeds = [];
+for (let i = 0; i < N; i++) seeds.push({ x: 0.15 + R() * 0.75, y: 0.3 + R() * 1.2, z: -0.2 + R() * 0.9, a: R() * 6.28, k: 1 + Math.floor(R() * 3), r: 0.03 + R() * 0.06 });
+const dustGeo = new THREE.BufferGeometry(); dustGeo.setAttribute('position', new THREE.BufferAttribute(dust, 3));
+const dustPts = new THREE.Points(dustGeo, new THREE.PointsMaterial({ color: 0xffe3b8, size: 0.006, transparent: true, opacity: 0.35, depthWrite: false }));
+scene.add(dustPts);
+
+function cyc(t, k, ph = 0) { return Math.sin(2 * Math.PI * k * t / LOOP + ph); }            // k whole cycles per loop
+window.renderAt = function (t) {
+  const fl = 1 + 0.035 * cyc(t, 23) + 0.02 * cyc(t, 41, 1.3) + 0.012 * cyc(t, 67, 2.1);     // lamp flicker
+  lamp.intensity = 2.6 * fl; lampSpot.intensity = 10 * fl; shade.material.emissiveIntensity = 0.55 * fl;
+  const tvf = 1 + 0.18 * cyc(t, 50) + 0.1 * cyc(t, 130, 0.7);                               // the set's picture flicker
+  tvGlow.intensity = 1.2 * tvf;
+  led.material.emissiveIntensity = 1.5 + 0.5 * cyc(t, 10);
+  for (let i = 0; i < N; i++) { const s = seeds[i];
+    dust[i * 3] = s.x + s.r * cyc(t, s.k, s.a); dust[i * 3 + 1] = s.y + s.r * 0.6 * cyc(t, s.k + 1, s.a * 1.7); dust[i * 3 + 2] = s.z + s.r * cyc(t, s.k, s.a + 2); }
+  dustGeo.attributes.position.needsUpdate = true;
+  renderer.render(scene, camera);
+};
+window.screenQuad = function () {                                                            // the screen's corners in frame pixels
+  const pts = [[-scrW / 2, scrH / 2], [scrW / 2, scrH / 2], [scrW / 2, -scrH / 2], [-scrW / 2, -scrH / 2]];
+  return pts.map(([dx, dy]) => { const v = new THREE.Vector3(dx, dy, 0); screen.localToWorld(v); v.project(camera);
+    return [(v.x + 1) / 2 * W, (1 - v.y) / 2 * H]; });
+};
+window.ready = true;
+if (Q.has('t')) renderAt(+Q.get('t'));
+else { const t0 = performance.now(); (function loop() { renderAt(((performance.now() - t0) / 1000) % LOOP); requestAnimationFrame(loop); })(); }
+</script>
