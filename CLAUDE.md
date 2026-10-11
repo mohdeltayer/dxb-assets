@@ -838,8 +838,16 @@ Brand kit (Mohammad, 26 Sep 2026):
   `room3d-quad.json`; retro.py loops it under the warped footage with
   lighter scrims (0.62 top, 0.84 bottom). Nothing in it is licensed from
   anyone: plain boxes on the shelves, our own geometric prints, no logos.
-  Method and numbers: `notes/retro-room-3d.md`. Which of the two rooms a
-  story uses is his call per post. Everyday audition:
+  Method and numbers: `notes/retro-room-3d.md`.
+  The den path-traced (Mohammad, 11 Oct 2026: "how do we make it look
+  photorealistic", then "Go"): `templates/room3d/den_cycles.py` builds the
+  same kind of room in Blender Cycles (the `bpy` module) from Poly Haven
+  CC0 models and textures, with our own lamp, shelf and blind (moonlight
+  stripes on the wall). `scene='room3d', room3d='cycles'` uses it. Brand
+  marks on a downloaded model are painted out of its texture before it is
+  used (the set's VTECH plate). First version is a held still, sent as a
+  test; flicker comes after his verdict. Which room a story uses is his
+  call per post. Everyday audition:
   `live/2026-10-01/audio/`. On posts: every Reel
   ends on the jingle (see the end card below); X video cards and stills
   carry no added sound yet. The sound is a Digital Lounge mark;

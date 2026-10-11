@@ -286,9 +286,16 @@ ROOM = 'den'
 # is a three.js scene with a deterministic renderAt(t), render.mjs captures a seamless loop in headless Chromium, and the
 # screen's corners come out of the same render. Nothing in it is licensed from anyone. scene='room3d' uses it.
 ROOM3D = dict(video=os.path.join(HERE, 'assets', 'retro', 'room3d-loop.mp4'), quad=os.path.join(HERE, 'assets', 'retro', 'room3d-quad.json'))
+# The same den path-traced (Mohammad, 11 Oct 2026: "how do we make it look photorealistic"): room3d/den_cycles.py builds it in
+# Blender Cycles from Poly Haven CC0 models and textures (brand marks painted out), with moonlight through a blind.
+# scene='room3d' with room3d='cycles' uses it.
+ROOM3D_CYCLES = dict(video=os.path.join(HERE, 'assets', 'retro', 'den-cycles-loop.mp4'), quad=os.path.join(HERE, 'assets', 'retro', 'den-cycles-quad.json'))
 
-def room3d_quad():
-    q = json.load(open(ROOM3D['quad']))['quad']
+def r3src(spec):
+    return ROOM3D_CYCLES if spec.get('room3d') == 'cycles' else ROOM3D
+
+def room3d_quad(spec):
+    q = json.load(open(r3src(spec)['quad']))['quad']
     return [(x * S, y * S) for x, y in q]
 
 def scrim_layer(spec, out):
@@ -531,7 +538,7 @@ def render(spec, out, push=0.03, sheet_secs=6.0):
             base, geo = desk_scene(spec)
             w, h = int(geo['w'] / 2) * 2, int(geo['h'] / 2) * 2; lcdfx(w, h, f'{tmp}/fx.png')
         elif spec.get('scene', 'room') == 'room3d':
-            base, q = None, room3d_quad()
+            base, q = None, room3d_quad(spec)
             xs, ys = [p[0] for p in q], [p[1] for p in q]
             x0, y0 = int(min(xs)), int(min(ys)); w, h = int(max(xs) - x0 + 1) // 2 * 2, int(max(ys) - y0 + 1) // 2 * 2
             screenfx(w, h, f'{tmp}/fx.png'); quad_mask(q, x0, y0, w, h, f'{tmp}/qm.png'); scrim_layer(spec, f'{tmp}/scrim.png')
@@ -555,7 +562,7 @@ def render(spec, out, push=0.03, sheet_secs=6.0):
             segs.append((f'{tmp}/s{i + 1}.png', a, b))
         cy = (geo['cy'] if hand else y0 + h / 2) / SH; z = f"({1 / S}/(1-{push}*t/{dur}))"
         room = not hand and spec.get('scene', 'room') in ('room', 'room3d'); r3 = not hand and spec.get('scene', 'room') == 'room3d'
-        base_src = ['-stream_loop', '-1', '-t', str(dur), '-i', ROOM3D['video']] if r3 else ['-loop', '1', '-t', str(dur), '-i', f'{tmp}/base.png']
+        base_src = ['-stream_loop', '-1', '-t', str(dur), '-i', r3src(spec)['video']] if r3 else ['-loop', '1', '-t', str(dur), '-i', f'{tmp}/base.png']
         ins = [*base_src, '-ss', str(start), '-t', str(dur), '-i', clip,
                '-loop', '1', '-t', str(dur), '-i', f'{tmp}/fx.png', '-loop', '1', '-t', str(dur), '-i', f'{tmp}/top.png']
         cx0, cy0, cw, ch = spec.get('crop', (10, 5, 330, 216))
@@ -603,7 +610,7 @@ def stills(spec, outdir):
     for i in range(len(spec['facts'])): fact(spec, i, f'{outdir}/s{i + 1}.png')
     k = spec['console']
     if not CONSOLES[k].get('handheld') and spec.get('scene', 'room') == 'room3d':
-        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', '1', '-i', ROOM3D['video'], '-frames:v', '1', f'{outdir}/room.png'], check=True)
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', '1', '-i', r3src(spec)['video'], '-frames:v', '1', f'{outdir}/room.png'], check=True)
         base = Image.open(f'{outdir}/room.png').convert('RGBA'); scrim_layer(spec, f'{outdir}/scrim.png'); base.alpha_composite(Image.open(f'{outdir}/scrim.png'))
     else:
         base = (desk_scene(spec) if CONSOLES[k].get('handheld') else room_scene(spec) if spec.get('scene', 'room') == 'room'

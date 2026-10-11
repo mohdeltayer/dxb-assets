@@ -58,3 +58,40 @@ by the frame edge: moved to x 0.58, smaller shade.
 - The quad in `quad.json` matches the render it shipped with.
 - Frames reviewed as an art director: no text over the picture, the set's
   picture inside the bezel, nothing cut by the frame edge.
+
+## The photoreal den (Blender Cycles, 11 Oct 2026)
+
+Mohammad: "The coded one look good as a first try. How do we make it look
+photorealistic". The same den, path-traced instead of rasterised.
+
+- `templates/room3d/den_cycles.py <out.png> [scale] [samples] [pass]`, run
+  with the `bpy` wheel (Blender 5.0.1 as a Python module, in
+  `/root/blender-env/venv`, Python 3.11; `pip install bpy` in a new container).
+  Writes the frame and `<out>.quad.json`, the screen's corners in
+  1080x1920 frame pixels from the camera's own projection.
+- Models and textures: Poly Haven, all CC0, fetched to `/root/den-assets/dl`
+  with `fetch.py <ids>` (glTF 1k) and `tex.py <id:res>` (diffuse, normal,
+  roughness). Not committed: they are large and re-fetchable.
+  Models: Television_01, modern_wooden_cabinet, portable_cassette_player,
+  potted_plant_02, book_encyclopedia_set_01, boombox. Textures:
+  dark_paneled_wood (walls, shelf), herringbone_parquet (floor),
+  floral_jacquard (rug, tinted brown).
+- Brand marks: Television_01 carries a "VTECH" plate on the front and the
+  side. Both are painted out of its diffuse texture after every fetch
+  (median colour of the plate beside it); check any new model for logos,
+  labels and screen text before it goes in a frame.
+- Our own pieces: the floor lamp (brass pole, linen shade with a
+  translucent mix), the wall shelf, the venetian blind (slats 1 m in front
+  of a 4 mm spot, out of shot, so the stripes stay sharp on the wall) and
+  the emissive plane over the tube that the footage replaces.
+- Light: warm point inside the shade (excluded from the moon by light
+  linking, so the blind's stripes never land on the glowing shade), an area
+  light in front of the screen facing the room (it first faced the set and
+  bleached its bezel), the cool moon spot, a faint warm fill. AgX, Medium
+  High Contrast. Camera 45 mm, f/4 on the screen, 2.6 m back.
+- Times on 4 CPU cores: half size at 32 samples about 40 s; full size at
+  128 samples about 10 minutes.
+- `retro.render(dict(..., scene='room3d', room3d='cycles'), out)` uses
+  `assets/retro/den-cycles-loop.mp4` and `den-cycles-quad.json`. The first
+  loop is the still held for 8 s; lamp and set flicker come once the look
+  is approved (render the lamp and TV states and blend them per frame).
