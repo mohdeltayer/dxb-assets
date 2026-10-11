@@ -1151,6 +1151,18 @@ to the queue only with a time he has seen and a "go" from him; propose
 the times with the drafts. (On 28 Sep a PS5 Pro set went out immediately
 on a misread and he deleted it.)
 
+Breaking lane (Mohammad, 11 Oct 2026: "even if I'm not available, you
+either can ping me, and if I don't reply, you can take like 15 minutes and
+basically post it. And this is only for new news or breaking news"). An
+hourly watcher reads the official sources and a separate verifier checks
+what is new (`newsroom/delegation.md`, "Hourly watch"). For a verified,
+official, new or breaking Digital Lounge story, the drafts are built, he is
+pinged, and if he has not replied 15 minutes later the post is queued with
+the approval note "auto-go: no reply in 15 minutes". This is the only
+exception to "approval is not a go". Never for rumours, leaks, single-outlet
+reports, routine items, DXB-KNIGHT or anything he turned down; auto-posting
+runs 08:00 to 23:00 Dubai, at most three a day.
+
 Posting is irreversible: pushing `queue/**` to *any* branch of dxb-queue
 fires the publisher, because `publish.yml` has no branch filter. Never
 queue without explicit say-so, and dry-run `publish.py` with `DRY_RUN=1`

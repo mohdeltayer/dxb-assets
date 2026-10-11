@@ -97,3 +97,47 @@ expect, time in Dubai), live coverage during the show (announcements
 captured as they land and checked against the official page before
 posting), and a wrap-up slot after it; set one-off triggers only after he
 agrees each one.
+
+## Hourly watch and the breaking lane (Mohammad, 11 Oct 2026)
+
+He wants Digital Lounge on top of the latest news even when he is away.
+The official-source check is split in two, and runs every hour.
+
+**Watcher (haiku).** Reads only the official sources below, compares every
+item with `newsroom/watch-seen.json` (url, title, first seen), adds the new
+ones to it, and returns only items first seen this hour, one line each:
+time (UTC), source, headline, URL. Nothing new returns "nothing new".
+No judging, no verifying, no social media, no logins.
+Sources: PlayStation Blog, Xbox Wire (news.xbox.com may refuse; then
+skip), Nintendo US whatsnew and Nintendo press, Nintendo Japan news
+(nintendo.co.jp/topics), Steam news for the top sellers, the newsrooms of
+Capcom, Square Enix, Bandai Namco, Sega/Atlus, Konami, EA, Ubisoft,
+Rockstar Newswire, Take-Two, Epic/Fortnite, Riot, Blizzard, Bungie,
+thegameawards.com/news, Famitsu, Gematsu (outlet, for Japan speed), and
+the regional official pages (PS Store UAE and Saudi, Saudi Esports
+Federation, Saudi Games/GEA-type bodies, UAE gaming bodies).
+
+**Verifier (sonnet).** Given the watcher's new items, for each one: open
+the primary and quote the claim, run `ledger.py find` with at least two
+keywords plus a grep of `stories/`, and grade it:
+- BREAKING: unscheduled, major, confirmed by the company itself (a
+  surprise reveal, a release date, a delay, a price change, a shutdown,
+  a big number, a studio closure, a major regional announcement);
+- NEW: confirmed official news worth a Digital Lounge post today;
+- SKIP: routine (sales, minor patches, merch), already in the ledger,
+  rumour, leak or a single outlet's report.
+Return BREAKING and NEW items with the quoted primary, the ledger result
+and why it matters. Never posts or drafts.
+
+**Main session.** On BREAKING or NEW: brief, footage, Arabic (both skills
+fresh, grammar review, DeepL back-check), Reel, drafts, preflight. Then
+ping him (PushNotification, one line: the story and the proposed time) and
+set a 15-minute send_later. If he answers, follow his answer. If he has
+not replied when it fires, approve with the note "auto-go: no reply in 15
+minutes (breaking lane, Mohammad 11 Oct 2026)" and queue it a few minutes
+out, then the publish check as usual, and tell him what went out.
+Limits: Digital Lounge only; official, verified news only (never a
+rumour, leak or single-outlet report); auto-posting only 08:00 to 23:00
+Dubai, and a story found overnight is built and held for his go or for
+08:00 with the same 15-minute ping at 07:45; at most three auto-posts a
+day; a story he has turned down is never auto-posted.
