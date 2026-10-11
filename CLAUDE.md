@@ -816,7 +816,19 @@ Brand kit (Mohammad, 26 Sep 2026):
   `SKINS`: Mega Drive gold, Game Boy blue, Dreamcast orange, Xbox green and
   so on) carries the title line when it reads on the ground (contrast 3:1),
   otherwise plain ink. Review every frame as an art director before
-  sending. Everyday audition:
+  sending.
+  The den (Mohammad, 11 Oct 2026, from his references, which were AI
+  renders and a collector's photo and so could not be used themselves):
+  the default TV scene is now a real 70s den (Unsplash J_30KpjyTgk:
+  wallpaper, a lamp, a wood-cased Philips on a stand), full bleed, with the
+  footage mapped onto the tube in perspective (`ROOMS`, ffmpeg
+  `perspective`) and scrims of the console's ground over the title band
+  and the sheet; no wave lines or box patterns on it. `scene='cabinet'`
+  keeps the cut-out TV. He may still replace the room if it does not
+  click. No licensed poster art in any room. The Game Boy desk stays the
+  cassette flat lay until he picks the route (a licence-clear cartridges
+  photo from the scout, or Firefly-made surroundings around the real
+  device, his call); `DESKS['carts']` is a prepared alternative. Everyday audition:
   `live/2026-10-01/audio/`. On posts: every Reel
   ends on the jingle (see the end card below); X video cards and stills
   carry no added sound yet. The sound is a Digital Lounge mark;

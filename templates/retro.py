@@ -205,7 +205,7 @@ DESKS = {
     'cassette': dict(photo='/mnt/user-data/uploads/scene-desk-4-pexels32759887.jpg', window=(0, 0, 3000, 2520), dev=(0.5, 0.52)),
     'carts': dict(photo='/mnt/user-data/uploads/scout/c1-pexels16247234.jpg', window=(0, 2560, 2200, 4360), dev=(0.42, 0.50)),
 }
-DESK = 'carts'                                                        # window: the source crop; dev: where the device centre lands (fractions)
+DESK = 'cassette'                                                       # window: the source crop; dev: where the device centre lands (fractions)
 HANDHELDS = {
     # the product shot, how far it is turned in the photo (degrees, undone so the device faces the viewer: Mohammad,
     # 11 Oct 2026), its width on the frame, and the DMG green screen
