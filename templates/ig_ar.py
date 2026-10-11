@@ -47,7 +47,8 @@ SOURCE_MAX = 380
 
 #: Jingle flavour by chip, for Reels (sonic.FLAVOURS).
 SOUNDS = {'عاجل': 'breaking', 'متوفر الآن': 'launch', 'متاح الآن': 'launch', 'صدر': 'launch',
-          'أرقام': 'stats', 'إحصائيات': 'stats'}
+          'أرقام': 'stats', 'إحصائيات': 'stats',
+          'في مثل هذا اليوم': 'retro'}   # on this day and retro stories: the 8-bit flavour (Mohammad, 11 Oct 2026)
 
 
 # ---------------------------------------------------------------- text

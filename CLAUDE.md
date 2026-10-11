@@ -754,7 +754,17 @@ Brand kit (Mohammad, 26 Sep 2026):
   longest, from the ledger in `templates/assets/bed-ledger.json`, so no
   bed repeats until all five have played (Mohammad, 1 Oct 2026: use the
   variations for variety); a re-render keeps its bed. Footage still keeps
-  its own sound. Launch, breaking and stats keep their own flavour. Audition:
+  its own sound. Launch, breaking and stats keep their own flavour.
+  Retro sound (Mohammad, 11 Oct 2026: "a little bit 8-bit or retro like an
+  NES game"): "on this day" release anniversaries and other stories that are
+  plainly retro (an old game, an old console, a look back) end on the
+  `retro` flavour, the same motif on an NES-style pulse lead, triangle bass
+  and a frame-speed chord arpeggio, dry; its bed plays under retro Reels with
+  no sound of their own. The «في مثل هذا اليوم» chip picks it in `reel.py`
+  (`ig_ar.SOUNDS`); elsewhere pass `sound='retro'` or `outro.append(...,
+  style='retro')`. Not for the «الطريق إلى Ocarina» series or other coverage
+  of new releases and remakes, which keep the everyday sound. Audition:
+  `live/2026-10-11/audio/retro/`. Audition:
   `live/2026-10-01/audio/`. On posts: every Reel
   ends on the jingle (see the end card below); X video cards and stills
   carry no added sound yet. The sound is a Digital Lounge mark;
