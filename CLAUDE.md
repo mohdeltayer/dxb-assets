@@ -794,13 +794,21 @@ Brand kit (Mohammad, 26 Sep 2026):
   Handhelds (Mohammad, 11 Oct 2026: "Gameboy, Game Gear back drop will be
   a desk and not TV"): Game Boy, Game Gear and GBA stories play on a desk
   scene, never the CRT. Built for Game Boy (11 Oct): the media scout's
-  top-down desk (`scene-desk-3`), the Game Boy product shot laid on it, the
+  top-down desk (`scene-desk-3`), the Game Boy product shot turned upright
+  so it faces the viewer (never slanted, which would slant the clip), the
   footage on its own screen in the DMG greens. Game Gear and GBA need their
   own product shot in `HANDHELDS` first; `retro.render` stops until then.
-  White boxes take a white ground (Mohammad, 11 Oct 2026: "if console box is
-  white it's ok to use white color background and change the font color
-  accordingly"): Dreamcast and the PAL Master System now run on white with
-  dark type; any ground lighter than mid-grey switches the type itself. Everyday audition:
+  White ground is allowed, not the default (Mohammad, 11 Oct 2026): a console
+  whose box is white (Dreamcast, PAL Master System; `light` in `SKINS`) may
+  take `light=True` on a story when it helps, and the type turns dark.
+  Layout after his review (11 Oct): the clip is not the target, so the TV is
+  smaller and the type larger and fitted to the width (date 84, title up to
+  66, sheet values up to 62, facts up to 70); the sheet drops the game row
+  (the title says it); the box art stands on the cabinet beside the TV (on
+  the desk beside a handheld); the photo fades in below the title and a
+  full wash ends before the first row, so no type ever sits on the picture;
+  box patterns get a soft scrim behind the date and title. Review every
+  frame as an art director before sending. Everyday audition:
   `live/2026-10-01/audio/`. On posts: every Reel
   ends on the jingle (see the end card below); X video cards and stills
   carry no added sound yet. The sound is a Digital Lounge mark;
