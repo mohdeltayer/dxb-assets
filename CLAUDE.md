@@ -764,7 +764,13 @@ Brand kit (Mohammad, 26 Sep 2026):
   (`ig_ar.SOUNDS`); elsewhere pass `sound='retro'` or `outro.append(...,
   style='retro')`. Not for the «الطريق إلى Ocarina» series or other coverage
   of new releases and remakes, which keep the everyday sound. Retro audition:
-  `live/2026-10-11/audio/retro/`. Everyday audition:
+  `live/2026-10-11/audio/retro/`.
+  On-this-day Reels are built with `templates/retro.py` (11 Oct 2026: the
+  game plays on a real CRT, then a fact sheet and the facts one at a time).
+  Mohammad, 11 Oct: bigger type in the lower half, and the console's own
+  colours on pixel-edged blocks beside each row and each fact (`CONSOLES`:
+  N64 red, yellow, green, blue and so on; no pink, so PlayStation takes its
+  logo colours). Add a console there before its first post. Everyday audition:
   `live/2026-10-01/audio/`. On posts: every Reel
   ends on the jingle (see the end card below); X video cards and stills
   carry no added sound yet. The sound is a Digital Lounge mark;
