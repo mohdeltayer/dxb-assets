@@ -763,8 +763,8 @@ Brand kit (Mohammad, 26 Sep 2026):
   no sound of their own. The «في مثل هذا اليوم» chip picks it in `reel.py`
   (`ig_ar.SOUNDS`); elsewhere pass `sound='retro'` or `outro.append(...,
   style='retro')`. Not for the «الطريق إلى Ocarina» series or other coverage
-  of new releases and remakes, which keep the everyday sound. Audition:
-  `live/2026-10-11/audio/retro/`. Audition:
+  of new releases and remakes, which keep the everyday sound. Retro audition:
+  `live/2026-10-11/audio/retro/`. Everyday audition:
   `live/2026-10-01/audio/`. On posts: every Reel
   ends on the jingle (see the end card below); X video cards and stills
   carry no added sound yet. The sound is a Digital Lounge mark;
