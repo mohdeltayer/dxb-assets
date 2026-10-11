@@ -19,6 +19,13 @@ and changes the mode, the instruments, the tempo and the rhythm:
     breaking   a repeated pulse and three pick-up notes before the motif.
     launch     out now and release dates: bright, a light beat.
     digest     the Friday weekly: neon with a soft beat, for under a voice.
+    retro      "on this day" release anniversaries (Mohammad, 11 Oct 2026:
+               "a little bit 8-bit, like an NES game"): the neon motif on a
+               pulse-wave lead with its echo channel, a triangle bass, the
+               closing chord as a fast arpeggio, dry like the console.
+
+Retro is chip voices only: two pulse waves, a triangle, volume in 16
+steps, a tonal triangle kick (no noise channel, same rule as below).
 
 No noise swells and no saw pads (Mohammad, 28 Sep 2026): both read as a
 whoosh or a plane. Percussion is tonal (sine and FM hits), never noise.
@@ -76,6 +83,8 @@ FLAVOURS = {
                       pickup=['A4', 'A4', 'A4']),
     'launch':    dict(NEON, lead='bell+glock', arp='bell', bpm=116, step=0.13, drums='light'),
     'digest':    dict(NEON, lead='bell', arp='bell', bpm=96, step=0.16, drums='soft'),
+    'retro':     dict(NEON, lead='square', arp='square12', bpm=132, step=0.13, drums='chip',
+                      chip=True, pattern=[0, 1, 2, 3, 2, 1, 2, 3]),
     # background beds for clips with no sound of their own (Mohammad, 1 Oct
     # 2026: the one bed under every still Reel had gone stale). Each keeps the
     # motif (it still surfaces every 8 bars) but changes the progression,
@@ -210,6 +219,42 @@ def vibes(freq, dur):
     return x * trem * env(len(t), a=0.004, d=1.0, r=0.15)
 
 
+# ---- chip voices (retro) ------------------------------------------------
+
+def _steps(e):
+    """The console's 4-bit volume: an envelope in 16 steps."""
+    return np.round(e * 15) / 15
+
+
+def square(freq, dur, duty=0.25, decay=0.35, vib=True):
+    """NES pulse channel: a pulse wave, stepped volume, and a late vibrato
+    on long notes, as the sound drivers of the time did."""
+    t = t_(dur)
+    f = freq * (1 + (0.006 * np.sin(2 * np.pi * 6 * t) * np.clip((t - 0.18) / 0.1, 0, 1) if vib else 0 * t))
+    ph = np.cumsum(f) / SR
+    x = np.where(ph % 1 < duty, 1.0, -1.0) - (2 * duty - 1)
+    return x * _steps(env(len(t), a=0.002, d=decay, s=0.25, r=0.04)) * 0.5
+
+
+def triangle(freq, dur, decay=None):
+    """NES triangle channel: a 32-step triangle, no volume control, so it
+    gates on and off (an optional decay stands in for a short note)."""
+    t = t_(dur)
+    ph = (freq * t) % 1
+    x = np.round((1 - 4 * np.abs(ph - 0.5)) * 7.5) / 7.5
+    g = np.ones(len(t)) if decay is None else _steps(np.exp(-t / decay))
+    g[-int(0.01 * SR):] = 0
+    return x * g * 0.6
+
+
+def chipkick():
+    """Triangle pitch drop: the tonal kick of NES drivers."""
+    t = t_(0.12)
+    ph = np.cumsum(180 * np.exp(-t / 0.025) + 45) / SR
+    x = np.round((1 - 4 * np.abs(ph % 1 - 0.5)) * 7.5) / 7.5
+    return x * np.where(t < 0.1, 1.0, 0.0)
+
+
 def voice(name, freq, dur):
     if '+' in name:
         a, b = name.split('+')
@@ -222,7 +267,10 @@ def voice(name, freq, dur):
             'musicbox': lambda: musicbox(freq, dur),
             'celesta': lambda: bell(freq, dur, ratio=4.0, index=0.6),
             'marimba': lambda: marimba(freq, dur),
-            'vibes': lambda: vibes(freq, dur)}[name]()
+            'vibes': lambda: vibes(freq, dur),
+            'square': lambda: square(freq, dur),
+            'square12': lambda: square(freq, dur, duty=0.125, decay=0.12, vib=False),
+            'triangle': lambda: triangle(freq, dur)}[name]()
 
 
 def warm(notes, dur, attack=0.05, decay=1.1):
@@ -308,6 +356,7 @@ PATTERNS = {
     'tick':     [(kick, 0, 0.5), (kick, 4, 0.35)] + [(hat, i / 2, 0.08 if i % 4 else 0.13) for i in range(16)],
     'light':    [(kick, 0, 0.45), (kick, 4, 0.4), (tak, 2, 0.18), (tak, 6, 0.18)] + [(hat, i, 0.07) for i in (1, 3, 5, 7)],
     'soft':     [(kick, 0, 0.3), (kick, 4, 0.25), (hat, 2, 0.05), (hat, 6, 0.05)],
+    'chip':     [(chipkick, 0, 0.5), (chipkick, 3, 0.35), (chipkick, 4, 0.5)],
 }
 
 
@@ -374,6 +423,8 @@ def beats(style):
 def jingle(style, path):
     """About 3.5 s: optional pick-up, the motif, a chord that fades."""
     F = FLAVOURS[style]
+    if F.get('chip'):
+        return _chip_jingle(F, path)
     dur = 3.6
     buf = np.zeros(int(dur * SR))
     step = F['step']
@@ -422,6 +473,39 @@ def jingle(style, path):
     return _write(y, path, loud=-14)
 
 
+def _chip_jingle(F, path):
+    """The retro jingle: the same motif and timing as neon (so the end card
+    lights on the same notes), on a 25% pulse with a quieter 12.5% echo an
+    eighth behind it, a triangle bass, and the chord played the way NES
+    music held a chord: one channel cycling D F# A E at frame speed."""
+    dur = 3.6
+    buf = np.zeros(int(dur * SR))
+    step = F['step']
+    ts = _times(F, 0.1)
+    for k, nt in enumerate(F['motif']):
+        place(buf, square(hz(nt), step * 1.6, vib=False) * 0.55, ts[k])
+        place(buf, square(hz(nt), step * 1.6, duty=0.125, vib=False) * 0.18, ts[k] + step / 2)
+        place(buf, triangle(hz(['D3', 'D3', 'A2', 'A2'][k]), step * 0.9, decay=0.08) * 0.7, ts[k])
+    hit = ts[-1] + step
+    ring = dur - hit
+    t = t_(ring)
+    notes = [hz(n) for n in ('D5', 'F#5', 'A5', 'E6')]
+    idx = (t * 30).astype(int) % len(notes)          # two frames a note at 60 Hz
+    f = np.array(notes)[idx]
+    ph = np.cumsum(f) / SR
+    arp = (np.where(ph % 1 < 0.25, 1.0, -1.0) + 0.5) * _steps(np.exp(-t / 0.7)) * 0.4
+    place(buf, arp, hit)
+    place(buf, square(hz('D6'), 1.4, duty=0.125, decay=0.5) * 0.2, hit)
+    place(buf, triangle(hz('D2'), 1.1) * 0.8, hit)
+    place(buf, chipkick() * 0.7, hit)
+    fx = Pedalboard([HighpassFilter(30), LowpassFilter(11000),
+                     Reverb(room_size=0.15, wet_level=0.08, dry_level=0.95), Limiter(-1.0)])
+    y = _stereo(fx(buf.astype(np.float32), SR), mix=0.0)
+    fade = int(0.4 * SR)
+    y[:, -fade:] *= np.linspace(1, 0, fade)
+    return _write(y, path, loud=-14)
+
+
 def bed(style, path, bars=16):
     """Seamless loop: held chords, a quiet arpeggio, the flavour's rhythm,
     and the motif every 8 bars (bars 5, 13, ...)."""
@@ -433,7 +517,11 @@ def bed(style, path, bars=16):
     for b in range(bars):
         chord = F['prog'][(b // 2) % len(F['prog'])]
         at = b * bar
-        if b % 2 == 0:
+        if F.get('chip'):                 # triangle bass on eighths, root and octave, no pads
+            for e in range(8):
+                f = hz(chord[0]) * (2 if e % 2 else 1)
+                place(buf, triangle(f, beat / 2 * 0.9, decay=0.15) * 0.5, at + e * beat / 2)
+        elif b % 2 == 0:
             place(buf, hold(chord, 2 * bar + 0.5) * 0.3, at)
             place(buf, sub(hz(chord[0]) / 2, 1.5) * 0.25, at)
         if F.get('sixteenths'):
@@ -456,9 +544,10 @@ def bed(style, path, bars=16):
     if F.get('drone'):
         place(buf, hold([F['drone'], F['drone'][0] + '3'], length + 0.5, attack=1.0, release=0.5) * 0.18, 0)
     fx = Pedalboard([LowpassFilter(7000), HighpassFilter(40),
-                     Reverb(room_size=0.7, wet_level=0.3, dry_level=0.7),
+                     Reverb(room_size=0.15 if F.get('chip') else 0.7, wet_level=0.08 if F.get('chip') else 0.3,
+                            dry_level=0.95 if F.get('chip') else 0.7),
                      Compressor(threshold_db=-18, ratio=2), Limiter(-1.0)])
-    y = _stereo(fx(buf.astype(np.float32), SR), mix=0.08)
+    y = _stereo(fx(buf.astype(np.float32), SR), mix=0.0 if F.get('chip') else 0.08)
     n = int(length * SR)
     loop = y[:, :n].copy()
     loop[:, :y.shape[1] - n] += y[:, n:]  # wrap the tail so the loop is seamless
