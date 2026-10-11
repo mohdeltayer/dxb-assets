@@ -790,7 +790,11 @@ Brand kit (Mohammad, 26 Sep 2026):
   Drive get their black boxes' fine grey grid, Atari its woodgrain, PS2 its
   blue lines. Those patterns stay above the TV and below the safe floor, and
   replace the wave lines there. No wave pair blends red into blue (the
-  middle reads magenta). Everyday audition:
+  middle reads magenta).
+  Handhelds (Mohammad, 11 Oct 2026: "Gameboy, Game Gear back drop will be
+  a desk and not TV"): Game Boy, Game Gear and GBA stories play on a desk
+  scene, never the CRT. `retro.render` refuses a handheld until the desk
+  scene is built. Everyday audition:
   `live/2026-10-01/audio/`. On posts: every Reel
   ends on the jingle (see the end card below); X video cards and stills
   carry no added sound yet. The sound is a Digital Lounge mark;

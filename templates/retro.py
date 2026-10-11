@@ -39,12 +39,13 @@ CONSOLES = {
     'snes':     dict(name='Super Nintendo', colours=[(79, 67, 174), (154, 143, 216), (190, 190, 196), (110, 98, 200)]),
     'sfc':      dict(name='Super Famicom', colours=[(208, 2, 27), (245, 196, 0), (45, 159, 74), (42, 79, 184)]),
     'megadrive': dict(name='Mega Drive', colours=[(230, 0, 18), (30, 91, 198), (170, 170, 170), (230, 0, 18)]),
-    'gameboy':  dict(name='Game Boy', colours=[(60, 170, 255), (250, 214, 60), (245, 140, 30), (196, 198, 204)]),
+    'gameboy':  dict(name='Game Boy', handheld=True, colours=[(60, 170, 255), (250, 214, 60), (245, 140, 30), (196, 198, 204)]),
+    'gamegear': dict(name='Game Gear', handheld=True, colours=[(30, 91, 198), (230, 0, 18), (200, 200, 205), (245, 196, 0)]),
     'n64':      dict(name='Nintendo 64', mark='n64-mark.png', colours=[(228, 32, 46), (255, 194, 14), (0, 166, 81), (0, 97, 175)]),
     'ps1':      dict(name='PlayStation', colours=[(230, 0, 18), (247, 198, 0), (0, 160, 160), (58, 76, 168)]),
     'saturn':   dict(name='Sega Saturn', colours=[(30, 91, 198), (230, 0, 18), (245, 196, 0), (0, 166, 81)]),
     'dreamcast': dict(name='Dreamcast', colours=[(242, 107, 29), (0, 96, 168), (242, 107, 29), (0, 96, 168)]),
-    'gba':      dict(name='Game Boy Advance', colours=[(75, 63, 158), (124, 112, 210), (75, 63, 158), (124, 112, 210)]),
+    'gba':      dict(name='Game Boy Advance', handheld=True, colours=[(75, 63, 158), (124, 112, 210), (75, 63, 158), (124, 112, 210)]),
     'ps2':      dict(name='PlayStation 2', colours=[(0, 55, 145), (40, 120, 220), (0, 55, 145), (40, 120, 220)]),
     'gamecube': dict(name='GameCube', colours=[(106, 90, 205), (60, 180, 75), (230, 60, 50), (245, 196, 0)]),
     'xbox':     dict(name='Xbox', colours=[(16, 124, 16), (155, 240, 11), (16, 124, 16), (155, 240, 11)]),
@@ -69,6 +70,8 @@ SKINS = {
                       trim=('ring', [(230, 0, 18)]), waves=((230, 0, 18), (232, 190, 80))),
     'gameboy':   dict(ground=(7, 7, 11), fill=(196, 198, 204), brushed=True, rim=(92, 94, 104), ink=(58, 60, 70),
                       trim=('led', [(228, 30, 40)]), waves=None, motif='rays'),          # the 1989 box: black, silver band, rays
+    'gamegear':  dict(ground=(12, 12, 16), fill=(34, 34, 40), rim=(30, 91, 198), ink=(244, 244, 248),
+                      trim=('buttons', [(30, 91, 198), (30, 91, 198)]), waves=((30, 91, 198), (200, 200, 205))),
     'n64':       dict(ground=(28, 28, 34), fill=(40, 40, 46), rim=(110, 110, 120), ink=(244, 243, 255),
                       trim=('squares', [(228, 32, 46), (255, 194, 14), (0, 166, 81), (0, 97, 175)]), waves=((255, 194, 14), (0, 166, 81))),
     'ps1':       dict(ground=(36, 36, 43), fill=(196, 196, 202), rim=(110, 110, 120), ink=(40, 40, 48),
@@ -318,6 +321,9 @@ def fact(spec, i, out):
     t.save(out)
 
 def render(spec, out, push=0.03, sheet_secs=6.0):
+    if CONSOLES[spec['console']].get('handheld'):               # Mohammad, 11 Oct 2026: handhelds sit on a desk, not on a TV
+        raise ValueError(f"{CONSOLES[spec['console']]['name']} is a handheld: its backdrop is a desk, not the TV. "
+                         "The desk scene is not built yet.")
     clip, start, dur = spec['clip'], spec['start'], spec['dur']
     tmp = tempfile.mkdtemp(prefix='retro-')
     try:
