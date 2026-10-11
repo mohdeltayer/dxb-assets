@@ -933,6 +933,16 @@ digests just covered as read with `update_message`
 (`removeLabels: ["unread"]`), so the next sweep starts from genuinely new
 sheets rather than re-reading the day.
 
+Speculation for reach (Mohammad, 11 Oct 2026: "post all 3, we can label
+unconfirmed ones as unconfirmed or rumours. I want more people to view the
+channel and balance news and speculation to generate hype"). Digital Lounge
+shortlists rumours, leaks and single-outlet reports alongside confirmed
+news, as long as each is labelled for what it is: the chip on the ladder
+(شائعة، تسريب، تقرير), the headline never louder than the source, and the
+text naming who claims it and what is not confirmed. Skip only what is
+harmful or explicit (leaked explicit material, hacking threats, doxxing).
+The breaking lane's auto-go stays for confirmed official news only.
+
 Variety (Mohammad, 5 Oct 2026, after a run of Witcher and RuneScape posts:
 "I've been posting about it for a while now"): a game or series that went out
 in the last few days does not come back in a shortlist unless there is real
