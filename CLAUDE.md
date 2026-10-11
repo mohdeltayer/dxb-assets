@@ -791,6 +791,18 @@ Brand kit (Mohammad, 26 Sep 2026):
   seamless 6 second MP4 loop, only the footer lines drift) but is not
   used: cards post as stills unless he asks for motion on a story.
 
+## «الطريق إلى Ocarina» (Mohammad, 11 Oct 2026)
+
+A Digital Lounge spotlight series running up to the Switch 2 launch of The
+Legend of Zelda: Ocarina of Time on 5 Nov 2026. Few Arabic outlets cover it,
+so the aim is to bring the region's attention to a major upcoming release
+for as long as possible, drawing in new fans. It is coverage of a new
+game told through its history, not a retro piece: every episode opens on
+the series intro (`oot/intro.py`, his Triforce Medley upload and «باقي N
+يومًا»; never يتبقى) and keeps the everyday sound, never the 8-bit retro
+flavour. The 23 Nov anniversary of the original belongs to the series too.
+Episode 1 (why it matters) is queued for 13 Oct 18:00 Dubai.
+
 ## Explainers from the source's own drawings (trial, 27 Sep 2026)
 
 For "how does it work" stories (patents, hardware, new features),
