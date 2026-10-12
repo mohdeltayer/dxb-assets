@@ -1,0 +1,61 @@
+{
+ "id": "2026-10-12-steam-record-43m",
+ "title": "Steam sets an all-time record: 43.5 million concurrent users (11 Oct)",
+ "game": "Steam",
+ "companies": [
+  "Valve"
+ ],
+ "priority": "🟢",
+ "related": [],
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Valve's Steam stats page and its userdata.json (read 12 Oct 02:40 UTC)",
+   "url": "https://store.steampowered.com/stats/stats/"
+  },
+  {
+   "role": "outlet_report",
+   "name": "TechPowerUp; Notebookcheck / gsmgotech on the January record (SteamDB)",
+   "url": "https://www.techpowerup.com/353605/steam-tops-43-5-million-concurrent-players-new-all-time-high"
+  }
+ ],
+ "claims": [
+  {
+   "text": "48-hour peak 43,501,449 (page readout); 43,500,796 at 14:21 UTC on 11 Oct in the data",
+   "status": "verified",
+   "source": "Valve stats page"
+  },
+  {
+   "text": "Previous record 42,042,778 on 11 Jan 2026",
+   "status": "verified",
+   "source": "SteamDB via several outlets (SteamDB itself refused automated access)"
+  }
+ ],
+ "why": "Platform-wide milestone every PC player knows; our own chart from Valve data",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "أرقام",
+   "format": "numbers",
+   "time": "08:30 Dubai, 12 Oct (proposed)",
+   "headline": "رقم قياسي جديد على Steam: أكثر من 43.5 مليون مستخدم في الوقت نفسه",
+   "x": "رقم قياسي جديد على Steam: أكثر من 43.5 مليون مستخدم في الوقت نفسه.",
+   "ig": "لم تكن منصة Steam يومًا أكثر ازدحامًا مما كانت عليه أمس. / سجّلت منصة Steam رقمًا قياسيًا جديدًا لعدد المستخدمين المتصلين في الوقت نفسه، إذ تجاوز العدد 43.5 مليون مستخدم يوم الأحد 11 أكتوبر، حسب صفحة الإحصاءات الرسمية لشركة فالف (Valve). / وجاءت الذروة قرابة السادسة مساءً بتوقيت الإمارات، وكان الرقم القياسي السابق نحو 42 مليونًا في 11 يناير 2026، حسب موقع SteamDB لتتبّع بيانات المنصة.",
+   "threads": "رقم قياسي جديد على Steam: أكثر من 43.5 مليون مستخدم في الوقت نفسه."
+  }
+ },
+ "media": [
+  {
+   "file": "cards/2026-10/steam-record-43m-reel-v1.mp4",
+   "kind": "our own graphics from Valve's stats data (steamgfx.py): number, 48-hour curve, two-record bars; stats bed"
+  }
+ ],
+ "status": "shortlisted",
+ "versions": [
+  {
+   "v": 1,
+   "at": "2026-10-12T03:30:00Z",
+   "change": "first build; DeepL back-check matches the sources"
+  }
+ ]
+}
