@@ -353,7 +353,18 @@ def montage(shots, out, lowres_ok=False, fast=False):
             else:
                 fc.append(f'[{i}:a]aformat=sample_rates=48000:channel_layouts=stereo[a{i}]')
     starts, t, pv, pa = [0.0], shots[0][2], 'v0', 'a0'
-    for i in range(1, len(shots)):
+    if X < 0.1:                             # hard cuts: concat, each shot trimmed to its slot. Chained xfades with a
+        n, segs = len(shots), []            # 1-frame overlap drift a frame a shot and stop early (He-Man, 12 Oct: 28 s of 35)
+        for i, (_, _, d, _) in enumerate(shots):
+            slot = d - X if i < n - 1 else d
+            fc.append(f'[v{i}]trim=duration={slot:.3f},setpts=PTS-STARTPTS[cv{i}]'); segs.append(f'[cv{i}]')
+            if sound:
+                fc.append(f'[a{i}]atrim=duration={slot:.3f},asetpts=PTS-STARTPTS[ca{i}]'); segs.append(f'[ca{i}]')
+            if i: starts.append(starts[-1] + shots[i - 1][2] - X)
+        t = starts[-1] + shots[-1][2]
+        fc.append(''.join(segs) + f'concat=n={n}:v=1:a={1 if sound else 0}' + ('[cv][ca]' if sound else '[cv]'))
+        pv, pa = 'cv', 'ca'
+    for i in range(1, len(shots) if X >= 0.1 else 1):
         off = t - X; starts.append(off)
         fc.append(f'[{pv}][v{i}]xfade=transition=fade:duration={X}:offset={off:.3f}[xv{i}]'); pv = f'xv{i}'
         if sound:
