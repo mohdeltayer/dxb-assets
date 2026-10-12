@@ -411,6 +411,24 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
 - Top, for about 3.5 seconds: chip, a large headline, and a credit line
   (accent rule, source · date) on a soft band. The first frame is the grid
   tile.
+- Shots that work vertically (Mohammad, 12 Oct 2026: "focus on the main
+  event... select things that make sense for someone who watches it
+  vertically"). Some Reels looked right while others showed the side of a
+  character, or half a first-person view (a gun and an empty half frame).
+  Pick shots whose subject fits a 9:16 column: a face, a character or
+  creature standing centred, a vehicle head-on, a close-up of the thing
+  the line is about. Skip wide two-shots, subjects at the frame's edge and
+  first-person gameplay with the weapon off to one side; when only those
+  exist, use stills or our own graphics. On the shot sheet, judge every
+  frame as the cropped vertical a phone shows, not the 16:9 source.
+- Nothing graphic in a Reel (Mohammad, 12 Oct 2026: "an open account for
+  everyone"). Any game may be covered, mature-rated included, but the
+  footage carries no blood, gore, dismemberment, finishing kills or sexual
+  content. For a violent game, cut to story beats, characters, places and
+  some shooting without the extreme moments (a Resident Evil Reel can show
+  a gun raised and a creature in shadow, not the wound). Check every frame
+  of the shot sheet and the finished strip for it; if a trailer has no
+  clean stretch, use its other trailers, official stills or our graphics.
 - Say what a name is (Mohammad, 2 Oct 2026, after the Miami HEAT Reel):
   many viewers only watch, so the on-screen text identifies any name an
   Arab gamer may not know, at its first appearance (headline or first
