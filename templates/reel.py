@@ -203,6 +203,21 @@ def _height(p):
     return int(r.stdout.strip() or 0)
 
 
+#: Picture finish for every Reel (Mohammad, 12 Oct 2026, after the TEKKEN three-way test:
+#: "make the filters standard for every Reel"): a light denoise before the enlargement so
+#: compression blocks are not blown up, contrast-adaptive sharpening after it, a touch of
+#: contrast and colour, and a fine moving grain that reads as detail on a phone and survives
+#: Instagram's re-encode. Applied to footage and official stills, never to our own graphics
+#: (numgfx clips under uploads/numbers/), which stay clean. FINISH = False turns it off.
+FINISH = True
+DENOISE = 'hqdn3d=1.5:1.5:4:4'
+GRADE = 'eq=contrast=1.04:saturation=1.06,noise=alls=3:allf=t'
+
+
+def _ours(f):
+    return f.startswith('numbers/')
+
+
 MAX_ZOOM = 2.0      # most a shot may be enlarged to fill 9:16 (Mohammad, 12 Oct 2026: image quality;
                     # the letterboxed Street Fighter trailer went out enlarged 2.4x and looked soft)
 MIN_SRC_H = int(H / MAX_ZOOM)   # so a clip must keep 960 rows of picture once its bars are cut (was 700)
@@ -313,20 +328,24 @@ def montage(shots, out, lowres_ok=False, fast=False):
             if z > MAX_ZOOM and not lowres_ok:
                 raise ValueError(f'{f}: a still enlarged {z:.1f}x to fill 9:16; find a larger image or pass lowres_ok=True')
             args += ['-loop', '1', '-framerate', '30', '-t', str(d), '-i', C.U + f]
-            fc.append(f'[{i}:v]scale={W}:{H}:force_original_aspect_ratio=increase,'
-                      f"crop={W}:{H}:x='(iw-{W})*({a}+({b}-{a})*t/{d})':y='(ih-{H})/2',"
+            fin = f',cas=0.5,{GRADE}' if FINISH and not _ours(f) else ''
+            fc.append(f'[{i}:v]scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,'
+                      f"crop={W}:{H}:x='(iw-{W})*({a}+({b}-{a})*t/{d})':y='(ih-{H})/2'{fin},"
                       f'fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]')
         else:
             args += ['-ss', str(s), '-t', str(d), '-i', C.U + f]
             # Footage is 16:9, so filling 9:16 enlarges it (1.78x for 1080p, more
-            # for letterboxed trailers): lanczos keeps edges, a light unsharp
-            # restores what the enlargement softens. 4K sources need neither.
+            # for letterboxed trailers): lanczos keeps edges and the FINISH chain
+            # cleans and sharpens around it (lighter on 4K, which is not enlarged).
             bars, rows = _bars(C.U + f, s, d)
             if rows < MIN_SRC_H and not lowres_ok:
                 raise ValueError(f'{f}: only {rows} rows of picture (bars cut), enlarged {H / rows:.1f}x; '
                                  f'find a 4K or unletterboxed copy, or pass lowres_ok=True when none exists')
-            sharp = ',unsharp=5:5:0.5:5:5:0.0' if rows < H else ''
-            fc.append(f"[{i}:v]{bars}scale=-2:{H}:flags=lanczos{sharp},crop={W}:{H}:x='(iw-{W})*({_fo_expr(fo)})':y=0,fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]")
+            if FINISH and not _ours(f):     # the standard finish (12 Oct 2026): denoise, enlarge, adaptive sharpen, grade
+                pre, post = f'{DENOISE},', f",cas={0.7 if rows < H else 0.4},{GRADE}"
+            else:                           # our graphics, or FINISH off: the old lanczos + light unsharp
+                pre, post = '', (',unsharp=5:5:0.5:5:5:0.0' if rows < H else '')
+            fc.append(f"[{i}:v]{bars}{pre}scale=-2:{H}:flags=lanczos,crop={W}:{H}:x='(iw-{W})*({_fo_expr(fo)})':y=0{post},fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]")
     if sound:
         for i, ((f, s, d, fo), st) in enumerate(zip(shots, stills)):
             if st or not _has_audio(C.U + f):

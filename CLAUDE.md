@@ -557,8 +557,14 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   2.4x from a letterboxed one, and Steam trailers stop at 1080p. Prefer a
   4K copy when one exists (IGN's MP4s run up to 3840 wide; press kits),
   which fills the frame with no enlargement, and avoid letterboxed
-  trailers when another cut exists. `reel.py` enlarges with lanczos and a
-  light unsharp on sub-1920 sources and encodes at higher quality.
+  trailers when another cut exists. `reel.py` gives every Reel the standard picture finish (Mohammad,
+  12 Oct 2026, after a three-way TEKKEN test of today's look, a filter
+  chain and an AI upscaler: "make the filters standard for every Reel"):
+  a light denoise before the enlargement, lanczos, contrast-adaptive
+  sharpening (`cas`, lighter on 4K), a touch of contrast and colour, and
+  a fine moving grain that reads as detail on a phone. Footage and
+  official stills get it; our own graphics (numgfx) stay clean;
+  `reel.FINISH = False` turns it off.
   Source order (Mohammad, 6 Oct 2026, after GameSpot's Ace Combat 8 Reel
   looked cleaner than ours: it was Bandai Namco's own 9:16 cut, nothing
   cropped or enlarged, while ours cropped a 1080p trailer and enlarged a
