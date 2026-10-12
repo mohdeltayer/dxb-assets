@@ -95,3 +95,13 @@ photorealistic". The same den, path-traced instead of rasterised.
   `assets/retro/den-cycles-loop.mp4` and `den-cycles-quad.json`. The first
   loop is the still held for 8 s; lamp and set flicker come once the look
   is approved (render the lamp and TV states and blend them per frame).
+
+## Next: rooms per era (Mohammad, 12 Oct 2026, parked for news)
+
+One room per era, colourful and fun. The 70s den stays for Atari only. For
+80s and 90s consoles, the mood is his two references in `notes/refs/`
+(mood only, not for use: they carry film posters and brand marks). Build it
+the same way as `den_cycles.py`: a kid's bedroom with a shag rug, a bean
+bag, posters of our own wall to wall, shelves of unbranded tapes and
+cartridges, a desk lamp and a lava lamp, a starry ceiling, a cereal bowl
+and a controller in front. Warm practical lights against the TV's glow.

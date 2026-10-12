@@ -847,7 +847,18 @@ Brand kit (Mohammad, 26 Sep 2026):
   marks on a downloaded model are painted out of its texture before it is
   used (the set's VTECH plate). First version is a held still, sent as a
   test; flicker comes after his verdict. Which room a story uses is his
-  call per post. Everyday audition:
+  call per post.
+  Rooms per era, later (Mohammad, 12 Oct 2026, after the path-traced test:
+  "Nice. Not for now since we want to go back to news"): several rooms,
+  each matching its console's era, colourful and fun. The 70s den suits
+  Atari only (the 70s looked like that, less playful). For the 80s and
+  90s machines the vibe is his two references (a kid's bedroom: shag rug,
+  bean bag, posters wall to wall, VHS and cartridge shelves, a desk lamp,
+  a lava lamp, a starry ceiling, cereal and a controller on the bed or
+  rug, warm light against the TV's glow). The references themselves carry
+  licensed art (film posters, Nintendo, Nike), so the rooms recreate the
+  mood with our own posters and props, no brands, as in `den_cycles.py`.
+  News comes first; this waits until he brings it back. Everyday audition:
   `live/2026-10-01/audio/`. On posts: every Reel
   ends on the jingle (see the end card below); X video cards and stills
   carry no added sound yet. The sound is a Digital Lounge mark;
