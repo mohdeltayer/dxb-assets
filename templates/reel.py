@@ -203,7 +203,19 @@ def _height(p):
     return int(r.stdout.strip() or 0)
 
 
-MIN_SRC_H = 700     # picture rows a clip must keep once its bars are cut
+MAX_ZOOM = 2.0      # most a shot may be enlarged to fill 9:16 (Mohammad, 12 Oct 2026: image quality;
+                    # the letterboxed Street Fighter trailer went out enlarged 2.4x and looked soft)
+MIN_SRC_H = int(H / MAX_ZOOM)   # so a clip must keep 960 rows of picture once its bars are cut (was 700)
+
+
+def zoom(shot):
+    """How much a shot is enlarged to fill the 9:16 frame: 1080p footage
+    1.78x, a letterboxed 2.39:1 trailer about 2.4x, 4K about 1x."""
+    f, s, d, _ = shot
+    if os.path.splitext(f)[1].lower() in STILL:
+        iw, ih = Image.open(C.U + f).size
+        return max(W / iw, H / ih)
+    return H / _bars(C.U + f, s, d)[1]
 
 
 def _bars(p, s, d):
@@ -288,8 +300,8 @@ def autofocus(f, start, dur, thresh=0.2):
 def montage(shots, out, lowres_ok=False, fast=False):
     """Cut the shots into one 9:16 clip with crossfades; returns (starts, end).
     Letterbox bars are cropped before the enlargement; a clip with fewer than
-    MIN_SRC_H rows of picture stops the render (it would be enlarged 3x or
-    more and look soft) unless lowres_ok."""
+    MIN_SRC_H rows of picture, or a still enlarged past MAX_ZOOM, stops the
+    render (it would look soft) unless lowres_ok."""
     stills = [os.path.splitext(s[0])[1].lower() in STILL for s in shots]
     sound = any(not st and _has_audio(C.U + s[0]) for s, st in zip(shots, stills))
     args = ['ffmpeg', '-nostdin', '-y', '-v', 'error']
@@ -297,6 +309,9 @@ def montage(shots, out, lowres_ok=False, fast=False):
     for i, ((f, s, d, fo), st) in enumerate(zip(shots, stills)):
         if st:
             a, b = fo if isinstance(fo, (tuple, list)) else (fo, fo)
+            z = zoom((f, s, d, fo))
+            if z > MAX_ZOOM and not lowres_ok:
+                raise ValueError(f'{f}: a still enlarged {z:.1f}x to fill 9:16; find a larger image or pass lowres_ok=True')
             args += ['-loop', '1', '-framerate', '30', '-t', str(d), '-i', C.U + f]
             fc.append(f'[{i}:v]scale={W}:{H}:force_original_aspect_ratio=increase,'
                       f"crop={W}:{H}:x='(iw-{W})*({a}+({b}-{a})*t/{d})':y='(ih-{H})/2',"
@@ -308,8 +323,8 @@ def montage(shots, out, lowres_ok=False, fast=False):
             # restores what the enlargement softens. 4K sources need neither.
             bars, rows = _bars(C.U + f, s, d)
             if rows < MIN_SRC_H and not lowres_ok:
-                raise ValueError(f'{f}: only {rows} rows of picture (bars cut); find a sharper copy '
-                                 f'or pass lowres_ok=True')
+                raise ValueError(f'{f}: only {rows} rows of picture (bars cut), enlarged {H / rows:.1f}x; '
+                                 f'find a 4K or unletterboxed copy, or pass lowres_ok=True when none exists')
             sharp = ',unsharp=5:5:0.5:5:5:0.0' if rows < H else ''
             fc.append(f"[{i}:v]{bars}scale=-2:{H}:flags=lanczos{sharp},crop={W}:{H}:x='(iw-{W})*({_fo_expr(fo)})':y=0,fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]")
     if sound:
@@ -373,15 +388,19 @@ def shotsheet(shots, out):
     from PIL import ImageDraw as D
     tiles, flagged = [], []
     for i, (f, s, d, _) in enumerate(shots):
+        z = zoom(shots[i])
+        soft = ['soft'] if z > MAX_ZOOM else []       # enlarged past MAX_ZOOM: look for a sharper copy
+        if soft:
+            flagged.append((i, s, soft))
         if os.path.splitext(f)[1].lower() in STILL:
             im = Image.open(C.U + f).convert('RGB'); im.thumbnail((240, 240))
-            tiles.append((i, 'still', im)); continue
+            tiles.append((i, f'still x{z:.1f}' + (' +soft' if soft else ''), im)); continue
         for t in (s + 0.15, s + d / 2, s + d - 0.15):
             im = _frame(C.U + f, t)
-            fl = _flags(im)
+            fl = _flags(im) + soft
             if fl:
                 flagged.append((i, round(t, 2), fl))
-            tiles.append((i, f'{t:.1f}' + (' ' + '+'.join(fl) if fl else ''), im))
+            tiles.append((i, f'{t:.1f} x{z:.1f}' + (' +' + '+'.join(fl) if fl else ''), im))
     th = max(im.height for _, _, im in tiles)
     cols = 9
     rows = (len(tiles) + cols - 1) // cols
@@ -390,8 +409,7 @@ def shotsheet(shots, out):
     for k, (i, lab, im) in enumerate(tiles):
         x, y = (k % cols) * 240, (k // cols) * (th + 22)
         sheet.paste(im, (x, y + 22))
-        d.text((x + 4, y + 4), f'#{i} {shots[i][0][:18]} @{lab}', fill=(255, 80, 80) if '+' in lab or 'pink' in lab
-               or 'black' in lab else (255, 230, 120))
+        d.text((x + 4, y + 4), f'#{i} {shots[i][0][:16]} @{lab}', fill=(255, 80, 80) if '+' in lab else (255, 230, 120))
     sheet.save(out)
     return out, flagged
 

@@ -567,6 +567,23 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   trailer, 3. a 1080p trailer, choosing close-ups and centred subjects
   that survive the crop. Each Reel's draft notes say which kind of source
   it used.
+  Enlargement cap (Mohammad, 12 Oct 2026, on image quality, after the
+  letterboxed Street Fighter trailer went out enlarged 2.4x): `reel.MAX_ZOOM`
+  is 2.0. The shot sheet prints each shot's enlargement (`x1.8`) and flags
+  `soft` above it, and the render stops on a clip with under 960 rows of
+  picture or a still enlarged past 2x. `lowres_ok=True` only when no 4K,
+  publisher or unletterboxed copy exists, said in the draft notes.
+  Full quality to every platform (12 Oct 2026): Instagram gets the same
+  file as X and Threads, not a smaller "phone" copy. The 47 MB DOOM Reel's
+  "Instagram Video download failed" was a one-off: the 73 MB TEKKEN 8 Reel
+  posted the same morning, and Reels up to 92 MB have gone through. On that
+  error, retry the same file once; only a second failure gets a smaller copy.
+  AI upscaling tested, not adopted (12 Oct 2026): `templates/upscale.py`
+  runs Real-ESRGAN x2 on the cropped window (weights in `/root/models`, not
+  in git). On the Street Fighter trailer it cleaned compression grain but
+  added little real detail, and on this CPU-only container it takes about
+  30 seconds a frame, hours for one Reel. Better sources come first; it may
+  still help a still (one frame) when no larger image exists.
 
 Instagram (Mohammad, 27 Sep 2026): every Digital Lounge story also goes to
 Instagram, on its own card and caption, at the same time as its X post:
