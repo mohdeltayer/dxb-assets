@@ -530,6 +530,16 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   second or two with no line after the headline; reading pace, line limits
   and the headline on the first frame stay as they are. The line carrying
   the number or the news lands on the most striking shot.
+- Numbers Reels have a living ground (Mohammad, 12 Oct 2026: once the
+  title went, the charts sat on "a big purple background" and the sales
+  Reels felt stale). Our graphics are drawn on a transparent canvas
+  (`numgfx.canvas()`) and `numgfx.shots([(png, secs)], theme, name)` lays
+  them over the indigo ground with faint wave lines in the theme's colours
+  drifting slowly sideways for the whole Reel: a little stronger at the top
+  and bottom, faint behind the chart and the story lines, one clock across
+  the slides so crossfades never double the lines. Never a flat ground
+  behind a chart again. First sample: the Resident Evil box office Reel
+  (`resident-evil-film-record-reel-v2.mp4`, not posted).
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under
