@@ -90,7 +90,7 @@ game games gaming update trailer reveals revealed announced announces review rev
 says said gets get launch launches release releases date out coming here every one two vs'''.split())
 
 
-JUNK = re.compile(r'wordle|connections hint|hints and answer|sbc solution|best (players|builds?|loadouts?|settings)|\\bcodes?\\b|how to |guide|walkthrough|deals?\\b|\\bsale\\b.*\\b(off|\\$)|tier list|quiz|best places|where to (find|farm)|poll: vote', re.I)
+JUNK = re.compile(r'wordle|connections hint|hints and answer|sbc solution|best (players|builds?|loadouts?|settings)|\bcodes?\b|how to |guide|walkthrough|deals?\b|\bsale\b.*\b(off|\$)|tier list|quiz|best places|where to (find|farm)|poll: vote', re.I)
 
 
 def words(t):
@@ -180,7 +180,7 @@ def main(dry):
         for pub, title, link in got[:30]:
             if link in urls or (src, title) in titles:
                 continue
-            if 'Google News' in src and (title.lstrip().startswith('-') or len(title.split(' - ')[0].split()) < 3):
+            if 'Google News' in src and (title.lstrip().startswith('-') or len(title.split(' - ')[0].split()) < 3 or 'Shop' in title):
                 continue   # store, cart and section pages, not news
             urls.add(link); titles.add((src, title))
             e = dict(url=link, title=title, source=src, published=pub, first_seen=now)
@@ -199,7 +199,7 @@ def main(dry):
         print('nothing new')
     # outlets: one line per story, with every outlet that ran it in the last 24 hours
     fresh = {e['url'] for e in shown if e['source'] in OUTLET_NAMES}
-    pool = [e for e in seen + new if e.get('source') in OUTLET_NAMES and (e.get('published') or e['first_seen']) >= day]
+    pool = [e for e in seen + new if e.get('source') in OUTLET_NAMES and (e.get('published') or e['first_seen']) >= day and not JUNK.search(e['title'])]
     groups = [g for g in cluster(sorted(pool, key=lambda e: e.get('published') or '')) if any(e['url'] in fresh for e in g['items'])]
     groups.sort(key=lambda g: (-len({e['source'] for e in g['items']}), max(e.get('published') or '' for e in g['items'])), reverse=False)
     groups.sort(key=lambda g: max(e.get('published') or '' for e in g['items']), reverse=True)
