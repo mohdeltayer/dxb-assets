@@ -1255,6 +1255,15 @@ to the queue only with a time he has seen and a "go" from him; propose
 the times with the drafts. (On 28 Sep a PS5 Pro set went out immediately
 on a misread and he deleted it.)
 
+Silence on a built batch (Mohammad, 12 Oct 2026: "if I didn't say go
+half an hour before the first draft time go ahead immediately"). Once he
+has asked for a batch to be built and its drafts and times are in front of
+him, no reply by 30 minutes before the first proposed time is his go: the
+batch is approved (note "go: no reply 30 minutes before first time") and
+queued at once, retimed to the next half hour if a slot has passed. It
+covers only batches he asked for, never a bare shortlist, a story he
+turned down, or DXB-KNIGHT.
+
 Breaking lane (Mohammad, 11 Oct 2026: "even if I'm not available, you
 either can ping me, and if I don't reply, you can take like 15 minutes and
 basically post it. And this is only for new news or breaking news"). An
