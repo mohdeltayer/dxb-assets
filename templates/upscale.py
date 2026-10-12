@@ -113,11 +113,15 @@ def _to_im(t):
     return Image.frombytes('RGB', (w, h), bytes(t.flatten().tolist()))
 
 
-def sr(im, heavy=False):
-    """One frame, upscaled by Real-ESRGAN: the compact x4 model by default, the heavy x2 with heavy=True."""
+def sr(im, heavy=False, size=None):
+    """One frame, upscaled by Real-ESRGAN: the compact x4 model by default, the heavy x2 with heavy=True.
+    `size` (w, h) resizes inside torch (antialiased bicubic) before the slow conversion back to PIL."""
     if not heavy:
         with torch.no_grad():
-            return _to_im(compact()(_to_t(im).to(memory_format=torch.channels_last)))
+            o = compact()(_to_t(im).to(memory_format=torch.channels_last))
+            if size:
+                o = F.interpolate(o, size=(size[1], size[0]), mode='bicubic', antialias=True, align_corners=False)
+            return _to_im(o)
     w, h = im.size
     pw, ph = w % 2, h % 2                  # pixel_unshuffle needs even sides
     if pw or ph:
@@ -137,7 +141,7 @@ def compare(f, start, secs, focus, stem, crop=''):
         for p in sorted(glob.glob(f'{tmp}/s*.png')):
             im = Image.open(p)
             base = im.resize((W, H), Image.LANCZOS)            # today: lanczos (reel.py adds a light unsharp after)
-            ai = sr(im).resize((W, H), Image.LANCZOS)
+            ai = sr(im, size=(W, H))
             base.save(p.replace('/s', '/b')); ai.save(p.replace('/s', '/a'))
         subprocess.run(['ffmpeg', '-v', 'error', '-y', '-framerate', '30', '-i', f'{tmp}/b%04d.png',
                         '-framerate', '30', '-i', f'{tmp}/a%04d.png', '-ss', str(start), '-t', str(secs), '-i', U + f,
