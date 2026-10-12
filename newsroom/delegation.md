@@ -101,7 +101,12 @@ agrees each one.
 ## Hourly watch and the breaking lane (Mohammad, 11 Oct 2026)
 
 He wants Digital Lounge on top of the latest news even when he is away.
-The official-source check is split in two, and runs every hour.
+The official-source check is split in two, and runs every hour. It never
+skips (Mohammad, 12 Oct 2026, after it skipped five runs during renders):
+the Watcher and Verifier are background helpers that only read the web, so
+they launch at once even mid-render or mid-slot; only building a Reel for
+what they find waits for the current render, and a breaking story is
+pinged to him straight away.
 
 **Watcher (haiku).** Reads only the official sources below, compares every
 item with `newsroom/watch-seen.json` (url, title, first seen), adds the new
