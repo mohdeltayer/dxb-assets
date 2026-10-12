@@ -134,6 +134,22 @@ user agent for every page. Sega's site rate-limits us and the Saudi
 Esports Federation and GEA sites refuse us: those, Rockstar and
 Epic/Fortnite are covered on X by Gaming Watch (below).
 
+Outlets (Mohammad, 12 Oct 2026: "add resources from large blog posts
+especially ones that update quickly"): the same script reads 31 outlet
+feeds (IGN, GameSpot, Eurogamer, VGC, Kotaku, Polygon, PC Gamer, RPS, The
+Verge, Push Square, Pure Xbox, Nintendo Life, Insider Gaming,
+GamesIndustry.biz, Game File, Siliconera, Destructoid, Game Informer,
+GamesRadar, Dexerto, TheGamer, Gamekult, Gematsu, Automaton and 4Gamer in
+Japanese, and the Arabic outlets IGN Middle East, True Gaming, Saudi Gamer,
+VGA4A and Arab Hardware). It groups the same story across outlets and prints
+each with the number of outlets that ran it in the last 24 hours, most
+covered first; guides, puzzles and deals are dropped, and single-outlet
+items stop at 25 a run. The main session reads the list and passes only the
+candidates to the Verifier. Outlets are leads, never proof: the Verifier
+finds the company's own words. A story only outlets carry is a تقرير for a
+review slot, never the breaking lane; the Arabic outlets also show what the
+competition already ran.
+
 **Verifier (sonnet).** Given the watcher's new items, for each one: open
 the primary and quote the claim, run `ledger.py find` with at least two
 keywords plus a grep of `stories/`, and grade it:
