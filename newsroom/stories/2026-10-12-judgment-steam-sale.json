@@ -1,0 +1,67 @@
+{
+ "id": "2026-10-12-judgment-steam-sale",
+ "title": "Judgment 75% off and Lost Judgment 70% off on Steam (UAE and Saudi stores)",
+ "game": "Judgment",
+ "companies": [
+  "SEGA",
+  "RGG Studio"
+ ],
+ "priority": "🟢",
+ "related": [],
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Steam store API, cc=ae and cc=sa (read 12 Oct ~09:40 UTC)",
+   "url": "https://store.steampowered.com/app/2058180/"
+  },
+  {
+   "role": "primary",
+   "name": "Steam store page, Lost Judgment",
+   "url": "https://store.steampowered.com/app/2058190/"
+  }
+ ],
+ "claims": [
+  {
+   "text": "Judgment 37.50 AED (was 150), 37.50 SR (was 150), -75%",
+   "status": "verified",
+   "source": "Steam API"
+  },
+  {
+   "text": "Lost Judgment 43.50 AED (was 145), 45 SR (was 150), -70%",
+   "status": "verified",
+   "source": "Steam API"
+  },
+  {
+   "text": "No end date shown",
+   "status": "verified",
+   "source": "Steam API (no discount_expiration returned)"
+  }
+ ],
+ "why": "Store and price news for Gulf readers, in dirhams and riyals; a series many know through Yakuza",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "السعر",
+   "format": "trailer",
+   "time": "17:00 Dubai, 12 Oct (proposed)",
+   "headline": "خصم يصل إلى 75% على Judgment وLost Judgment في Steam",
+   "x": "لعبتا التحقيق من صانعي Yakuza بخصم يصل إلى 75% على Steam، في الإمارات والسعودية أيضًا.",
+   "ig": "فرصة لدخول عالم المحقق Yagami بسعر أقل. / خفّضت منصة Steam سعر لعبتي التحقيق Judgment وLost Judgment من شركة سيغا (SEGA) واستوديو آر جي جي (RGG) صانع سلسلة Yakuza. / وأصبح سعر Judgment في متجر الإمارات 37.50 درهمًا بدلًا من 150 درهمًا بخصم 75%، وفي السعودية 37.50 ريالًا بدلًا من 150 ريالًا. / أما Lost Judgment فأصبح سعرها 43.50 درهمًا بدلًا من 145 درهمًا بخصم 70%، و45 ريالًا في السعودية بدلًا من 150 ريالًا. / ولم تحدد صفحة المتجر موعد انتهاء العرض حتى الآن.",
+   "threads": "لعبتا التحقيق من صانعي Yakuza بخصم يصل إلى 75% على Steam، في الإمارات والسعودية أيضًا."
+  }
+ },
+ "media": [
+  {
+   "file": "cards/2026-10/judgment-steam-sale-reel-v1.mp4",
+   "kind": "Judgment and Lost Judgment launch trailers (Steam 1080p): hand-picked story and character shots, one subject centred; no fight blows, blood or title cards; five official Steam screenshots as stills; one stretch of the Judgment trailer score from 0.8 s"
+  }
+ ],
+ "status": "shortlisted",
+ "versions": [
+  {
+   "v": 1,
+   "at": "2026-10-12T11:30:00Z",
+   "change": "first build; grammar review optional fixes applied"
+  }
+ ]
+}
