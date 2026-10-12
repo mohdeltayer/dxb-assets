@@ -9,7 +9,7 @@ two can be compared side by side before it is used on a post.
     python3 templates/upscale.py <file in uploads> <start> <seconds> <focus> <out-stem> [crop=W:H:X:Y]
 
 Writes <out-stem>-compare.mp4 (left: today's lanczos + unsharp, right:
-Real-ESRGAN) and <out-stem>-compare.png (one frame, both halves at full size).
+Real-ESRGAN, with the source's sound) and <out-stem>-compare.png (one frame, both halves at full size).
 CPU only here (no GPU): roughly a few seconds a frame, so test short stretches.
 """
 import os, sys, subprocess, tempfile, shutil, glob
@@ -19,7 +19,8 @@ import torch.nn.functional as F
 from PIL import Image
 
 U = '/mnt/user-data/uploads/'
-MODEL = '/root/models/RealESRGAN_x2plus.pth'
+MODEL = '/root/models/RealESRGAN_x2plus.pth'          # heavy RRDB, x2: about 67 s a 608x1080 frame on this CPU
+COMPACT = '/root/models/realesr-general-x4v3.pth'      # compact SRVGG, x4: about 9 s a frame (channels_last); the default
 W, H = 1080, 1920
 
 
@@ -63,6 +64,33 @@ class RRDBNet(nn.Module):
         return s.conv_last(s.l(s.conv_hr(f)))
 
 
+class Compact(nn.Module):
+    """Real-ESRGAN's compact general model (SRVGGNetCompact, x4)."""
+    def __init__(s, nf=64, nc=32, up=4):
+        super().__init__(); s.up = up
+        L = [nn.Conv2d(3, nf, 3, 1, 1), nn.PReLU(nf)]
+        for _ in range(nc):
+            L += [nn.Conv2d(nf, nf, 3, 1, 1), nn.PReLU(nf)]
+        L += [nn.Conv2d(nf, 3 * up * up, 3, 1, 1)]
+        s.body = nn.ModuleList(L)
+
+    def forward(s, x):
+        o = x
+        for m in s.body:
+            o = m(o)
+        return F.pixel_shuffle(o, s.up) + F.interpolate(x, scale_factor=s.up, mode='nearest')
+
+
+_compact = None
+def compact():
+    global _compact
+    if _compact is None:
+        _compact = Compact()
+        _compact.load_state_dict(torch.load(COMPACT, map_location='cpu')['params'], strict=True)
+        _compact.eval(); _compact = _compact.to(memory_format=torch.channels_last); torch.set_num_threads(os.cpu_count())
+    return _compact
+
+
 _net = None
 def net():
     global _net
@@ -85,8 +113,11 @@ def _to_im(t):
     return Image.frombytes('RGB', (w, h), bytes(t.flatten().tolist()))
 
 
-def sr(im):
-    """One frame, upscaled 2x by Real-ESRGAN."""
+def sr(im, heavy=False):
+    """One frame, upscaled by Real-ESRGAN: the compact x4 model by default, the heavy x2 with heavy=True."""
+    if not heavy:
+        with torch.no_grad():
+            return _to_im(compact()(_to_t(im).to(memory_format=torch.channels_last)))
     w, h = im.size
     pw, ph = w % 2, h % 2                  # pixel_unshuffle needs even sides
     if pw or ph:
@@ -109,9 +140,10 @@ def compare(f, start, secs, focus, stem, crop=''):
             ai = sr(im).resize((W, H), Image.LANCZOS)
             base.save(p.replace('/s', '/b')); ai.save(p.replace('/s', '/a'))
         subprocess.run(['ffmpeg', '-v', 'error', '-y', '-framerate', '30', '-i', f'{tmp}/b%04d.png',
-                        '-framerate', '30', '-i', f'{tmp}/a%04d.png', '-filter_complex',
-                        '[0:v]unsharp=5:5:0.5:5:5:0.0[l];[l][1:v]hstack,format=yuv420p', '-c:v', 'libx264',
-                        '-crf', '14', '-preset', 'slow', stem + '-compare.mp4'], check=True)
+                        '-framerate', '30', '-i', f'{tmp}/a%04d.png', '-ss', str(start), '-t', str(secs), '-i', U + f,
+                        '-filter_complex', '[0:v]unsharp=5:5:0.5:5:5:0.0[l];[l][1:v]hstack,format=yuv420p[v]',
+                        '-map', '[v]', '-map', '2:a?', '-c:v', 'libx264', '-crf', '14', '-preset', 'slow',
+                        '-c:a', 'aac', '-shortest', stem + '-compare.mp4'], check=True)
         mid = sorted(glob.glob(f'{tmp}/b*.png'))[len(glob.glob(f'{tmp}/b*.png')) // 2]
         b, a = Image.open(mid), Image.open(mid.replace('/b', '/a'))
         s = Image.new('RGB', (W * 2, H)); s.paste(b, (0, 0)); s.paste(a, (W, 0)); s.save(stem + '-compare.png')
