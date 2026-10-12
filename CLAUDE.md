@@ -115,9 +115,14 @@ out on it, the same morning, minutes apart when several are ready, and
 sweeps look for more Arabic-only items (store and price news, release
 dates, updates, regional and official announcements) rather than fewer.
 
-Digital Lounge's posting window is 08:00 to 21:00 Dubai (Mohammad,
-28 Sep 2026), with exceptions when a story needs it; propose times inside
-it, earliest first, not a midday slot.
+Digital Lounge posts round the clock (Mohammad, 12 Oct 2026: "I know
+there are peak hours but having some news day and date around the clock
+will attract more followers and will distinguish it in comparison with
+other Arabic outlets"). A verified story he has said go to goes out as soon
+as it is built, night included, rather than waiting for 08:00; peak hours
+(08:00 to 21:00 Dubai, from 28 Sep) still get the strongest pieces. Propose
+times earliest first. The breaking lane's auto-go hours below are
+unchanged.
 
 Timing differs too (Mohammad, 27 Sep 2026): Arabic games coverage is
 thin, so Digital Lounge does not follow DXB-KNIGHT's spacing. Its posts
