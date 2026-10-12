@@ -115,14 +115,24 @@ time (UTC), source, headline, URL. Nothing new returns "nothing new".
 No judging, no verifying, no social media, no logins.
 When watch-seen.json is empty (the first run) it records everything it
 sees and reports only items published in the last two hours.
-Sources: PlayStation Blog, Xbox Wire (news.xbox.com may refuse; then
-skip), Nintendo US whatsnew and Nintendo press, Nintendo Japan news
-(RSS: nintendo.com/jp/topics/c/feed/rss/), Steam news for the top sellers, the newsrooms of
-Capcom, Square Enix, Bandai Namco, Sega/Atlus, Konami, EA, Ubisoft,
-Rockstar Newswire, Take-Two, Epic/Fortnite, Riot, Blizzard, Bungie,
-thegameawards.com/news, Bandai Namco (bandainamcoent.com/news), Famitsu, Gematsu (outlet, for Japan speed), and
-the regional official pages (PS Store UAE and Saudi, Saudi Esports
-Federation, Saudi Games/GEA-type bodies, UAE gaming bodies).
+Feeds first (Mohammad, 12 Oct 2026, after five sources refused the
+watcher): the Watcher starts by running `python3 newsroom/watch_feeds.py`,
+which reads every official RSS feed with a browser user agent, records new
+items in watch-seen.json and prints the ones from the last two days, plus a
+"failed:" line. Feeds: PlayStation Blog, Xbox Wire (serves a browser, not a
+bare script), Nintendo Japan, Take-Two investor news, Atlus, Bungie,
+Gematsu, and Google News backstops for the sites that refuse us (Rockstar,
+Blizzard, Fortnite, Sega, Square Enix games; hours late, Google redirect
+links, so the Verifier opens the real page). Then the Watcher reads the
+pages that have no feed: Nintendo US whatsnew and Nintendo press, Steam
+news for the top sellers, Capcom (capcom.co.jp IR news), Square Enix
+(hd.square-enix.com/eng/news/), Bandai Namco (bandainamcoent.com/news),
+Konami (konami.com/games/jp/ja/topics/; the English news page is gone),
+EA, Ubisoft, Riot, thegameawards.com/news, Famitsu, and the regional
+official pages (PS Store UAE and Saudi, UAE gaming bodies). Use a browser
+user agent for every page. Sega's site rate-limits us and the Saudi
+Esports Federation and GEA sites refuse us: those, Rockstar and
+Epic/Fortnite are covered on X by Gaming Watch (below).
 
 **Verifier (sonnet).** Given the watcher's new items, for each one: open
 the primary and quote the claim, run `ledger.py find` with at least two
