@@ -345,7 +345,7 @@ def montage(shots, out, lowres_ok=False, fast=False):
                 pre, post = f'{DENOISE},', f",cas={0.7 if rows < H else 0.4},{GRADE}"
             else:                           # our graphics, or FINISH off: the old lanczos + light unsharp
                 pre, post = '', (',unsharp=5:5:0.5:5:5:0.0' if rows < H else '')
-            fc.append(f"[{i}:v]{bars}{pre}scale=-2:{H}:flags=lanczos,crop={W}:{H}:x='(iw-{W})*({_fo_expr(fo)})':y=0{post},fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]")
+            fc.append(f"[{i}:v]{bars}{pre}scale=-2:{H}:flags=lanczos,crop={W}:{H}:x='(iw-{W})*({_fo_expr(fo)})':y=0{post},fps=30,tpad=stop_mode=clone:stop_duration=0.5,trim=duration={d},setpts=PTS-STARTPTS,settb=AVTB,setsar=1,format=yuv420p[v{i}]")   # padded and trimmed to exactly d: a clip a few frames short ended the xfade chain early (12 Oct)
     if sound:
         for i, ((f, s, d, fo), st) in enumerate(zip(shots, stills)):
             if st or not _has_audio(C.U + f):
