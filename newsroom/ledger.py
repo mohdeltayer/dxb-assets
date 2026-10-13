@@ -112,8 +112,10 @@ def sync():
             continue
         slug = SUFFIX.sub('', re.sub(r'^\d{4}-\d{2}-\d{2}-', '', d.name))
         day = job['date'][:10]
+        # a story whose name ends in a suffix word ("-out-now") matches on the platform suffix alone first
+        exact = re.sub(r'-(ar|ig|tt|yt|th)$', '', re.sub(r'^\d{4}-\d{2}-\d{2}-', '', d.name))
         sid = next((s['id'] for s in stories()
-                    if s['id'].split('-', 3)[-1] == slug
+                    if s['id'].split('-', 3)[-1] in (exact, slug)
                     and abs((datetime.date.fromisoformat(s['id'][:10])
                              - datetime.date.fromisoformat(day)).days) <= 3), None)
         if sid:
