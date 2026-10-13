@@ -15,6 +15,7 @@ before posting. Reminders before a show only when Mohammad asks.
 | Date | Event | Time | Confirmed by | Read | Notes |
 |---|---|---|---|---|---|
 | Every Thursday | Famitsu weekly sales | usually 22:00 JST (17:00 Dubai) | Famitsu; each article names the next date (次回は…に掲載予定) | standing | Holiday weeks move. Next about 8 Oct, the first week on the new full-frame Digital Lounge chart |
+| 20 Oct 2026 | ID@Xbox Showcase, presented by IGN | 10:00 PT, 21:00 Dubai | IGN (co-presenter; Xbox Wire's post only links to it), read 13 Oct 2026 | 13 Oct 2026 | About 18 to 20 games (IGN's headline says 20, its body 18); The Wolf Among Us Remastered named; streams on IGN.com, YouTube, Twitch, X. An event slot to propose: live coverage from 21:00 Dubai |
 | 23 Oct 2026 | Golden Joystick Awards: public voting closes | not given | GamesRadar+ (organiser) | 2 Oct 2026 | Ultimate Game of the Year vote 26 to 30 Oct |
 | 11 Nov 2026 | Golden Joystick Awards ceremony | time not announced | GamesRadar+ (organiser): live show at Troxy, London | 2 Oct 2026 | WARDOGS is nominated (best early access) |
 | 10 Dec 2026 | The Game Awards | time not announced | thegameawards.com shows the date | 2 Oct 2026 | Venue (Peacock Theater, Los Angeles) per outlets, not on the official page yet. A US evening show lands overnight in Dubai: check the time when announced |
