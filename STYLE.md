@@ -114,8 +114,12 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     moment it is published.
 - **Approval:**
   - Nothing is queued without his go.
-  - Silence rule: no reply 30 minutes before the first time of a batch he
-    asked for counts as a go.
+  - Rolling posts (13 Oct): his pick from a shortlist is the go. Each
+    story posts when ready, queued for the next quarter hour at least 15
+    minutes out, preview sent at the same time; "hold" or "fix" in those
+    15 minutes stops it. Reports and rumours are re-checked before queuing.
+  - Silence rule (batches he asks for outside a slot): no reply 30 minutes
+    before the first time counts as a go.
 - **Breaking lane:**
   - Verified official news only.
   - 15-minute auto-go, 08:00 to 23:00, at most three a day.
