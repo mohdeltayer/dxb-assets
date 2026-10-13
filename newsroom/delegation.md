@@ -88,14 +88,15 @@ A trigger wakes the main session about 35 minutes before each slot:
 3. At the slot: send him the ranked shortlist (and, at 17:30 on Thursdays,
    Famitsu), ask for takes on DXB-KNIGHT items, and mark the covered digests
    read. A thin window gets a one-line "nothing worth posting" instead.
-4. His pick is the go (rolling posts, 13 Oct 2026). Build the picks in news
-   order (Footage, Render, Drafts cards in parallel); as each passes
-   preflight, approve it with the note "go: shortlist pick, rolling; preview
-   sent HH:MMZ", queue it for the next quarter hour at least 15 minutes out,
-   push (Publish card), and send him the preview with that time. "Hold" or
-   "fix" inside the 15 minutes stops it. The top one or two stories start
-   (verification, footage, Arabic) as soon as the shortlist is sent, before
-   he replies.
+4. The queue runs without his pick (rolling queue, 13 Oct 2026). Every
+   verified story is built in rank order (Footage, Render, Drafts cards in
+   parallel, one render at a time); as each passes preflight, approve it
+   with the note "go: rolling queue; preview sent HH:MMZ", queue it for the
+   next free slot under the cadence rules (next quarter hour, at least 15
+   minutes out, 30 minutes after the previous post in 08:00 to 23:00 Dubai,
+   90 overnight, no two in a row on one game or publisher), push (Publish
+   card), and send him the preview with that time. His number moves a story
+   to the front, "skip N" drops it, "hold" holds; silence runs the queue.
 
 Between slots he is only interrupted for genuine breaking news (عاجل level).
 

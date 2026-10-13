@@ -1341,31 +1341,41 @@ queued at once, retimed to the next half hour if a slot has passed. It
 covers only batches he asked for, never a bare shortlist, a story he
 turned down, or DXB-KNIGHT.
 
-Rolling posts (Mohammad, 13 Oct 2026: "rolling with 15 minute", after a
-five-story batch held its first Reel about two hours; the channel has to
-be up to speed without dropping quality). From 13 Oct evening, for Digital
-Lounge review-slot picks:
-- His pick from a shortlist is the go for those stories. No second
-  approval at the draft stage.
-- Each story is built in news order (freshest and biggest first) and
-  posts when it is ready: the moment it passes preflight it is queued for
-  the next quarter hour, at least 15 minutes out, and its preview goes to
-  him at the same time with that time (approval note "go: shortlist pick,
-  rolling; preview sent HH:MMZ"). In those 15 minutes "hold" or "fix"
-  stops it; silence lets it go. Once in Postiz, only he can pull it.
+Rolling queue (Mohammad, 13 Oct 2026, in two steps: "rolling with 15
+minute", then, after the first story still waited on his pick: "putting it
+on me will cause delays... sharing a list and picking a number highlights
+priority but doesn't mean we remain idle. We will work on a queue system
+with phases and agents handling parts so we ensure organic updating and not
+just spamming reels"). From 13 Oct evening Digital Lounge runs as a queue:
+- Phases, each with its own agent: intake (the hourly watch and the scout
+  digests feed every candidate into the queue), verify (the Verifier finds
+  the primary and sets the chip on the ladder), rank (the editor orders by
+  news value, freshness and variety), build (footage, our graphics, the
+  Arabic, render, drafts, preflight; one render at a time, the rest
+  overlapping), schedule (the next free slot under the cadence below),
+  publish check, strip and ledger.
+- His pick is priority, not permission. The ranked list goes to him at the
+  review slots as information; a number moves a story to the front, "skip
+  N" drops it, "hold" holds. No reply means the queue runs as ranked. The
+  head start applies to every verified story, not only the top two.
+- Each finished story is queued for the next quarter hour at least 15
+  minutes out (approval note "go: rolling queue; preview sent HH:MMZ") and
+  its preview goes to him at the same time; "hold" or "fix" in that window
+  stops it. Once in Postiz, only he can pull it.
+- Cadence, so the feed reads as an outlet and not a bot (numbers proposed
+  13 Oct, his confirmation pending): at least 30 minutes between Digital
+  Lounge posts from 08:00 to 23:00 Dubai, at least 90 minutes overnight;
+  about 12 posts a day at most; no two consecutive posts on the same game
+  or publisher; no more than two in a row in the same format; reports and
+  rumours never more than one post in three, each re-checked right before
+  queuing, a denial stops it.
 - The quality steps do not change: brief, shot sheet, draft render, frame
   checks, both Arabic skills, grammar review, DeepL back-check, preflight.
-  A تقرير, شائعة or تسريب story is still searched again right before it is
-  queued, and a denial stops it.
-- Head start: when a shortlist goes to him, verification, footage and the
-  Arabic for the top one or two stories begin before he replies; a story
-  he passes on is dropped. His pick then only triggers the render.
-- Unchanged: a story he turned down never posts; nothing he has not
-  picked is queued (a bare shortlist is not a go); the breaking lane keeps
-  its own rules below; DXB-KNIGHT stays on hold. The 30-minute silence
-  rule above still covers a batch he asked for outside a review slot.
-The time between the slot and the first post drops from three to four
-hours to about one, and a five-story slot spreads over about two hours.
+- Unchanged: a story he turned down never posts; the breaking lane keeps
+  its own rules below and jumps the queue; DXB-KNIGHT stays on hold. The
+  30-minute silence rule above still covers a batch he asks for by hand.
+The GTA 6 PC report was the first story under this model: 42 minutes from
+his pick to queue; the Laufey box followed 75 minutes later with no pick.
 
 Breaking lane (Mohammad, 11 Oct 2026: "even if I'm not available, you
 either can ping me, and if I don't reply, you can take like 15 minutes and

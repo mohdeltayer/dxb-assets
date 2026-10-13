@@ -114,10 +114,14 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     moment it is published.
 - **Approval:**
   - Nothing is queued without his go.
-  - Rolling posts (13 Oct): his pick from a shortlist is the go. Each
-    story posts when ready, queued for the next quarter hour at least 15
-    minutes out, preview sent at the same time; "hold" or "fix" in those
-    15 minutes stops it. Reports and rumours are re-checked before queuing.
+  - Rolling queue (13 Oct): his pick is priority, not permission. Every
+    verified story is built in rank order and queued for the next quarter
+    hour at least 15 minutes out, preview sent at the same time; "hold" or
+    "fix" in that window stops it; "skip N" drops a story.
+  - Cadence (proposed 13 Oct): 30 minutes between posts 08:00 to 23:00
+    Dubai, 90 minutes overnight, about 12 a day, no two in a row on one
+    game or publisher, reports and rumours at most one in three and
+    re-checked before queuing.
   - Silence rule (batches he asks for outside a slot): no reply 30 minutes
     before the first time counts as a go.
 - **Breaking lane:**
