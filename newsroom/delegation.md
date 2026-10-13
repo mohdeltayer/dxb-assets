@@ -19,8 +19,9 @@ allows. Nothing is queued without his "go".
 
 ## Task cards
 
-**Digest digest (sonnet).** Read every unread digest in
-dxbknight-digest@agentmail.to, oldest first. Return one line per item: age
+**Digest digest (sonnet).** Read every digest in
+dxbknight-digest@agentmail.to newer than `covered_through` in
+`newsroom/digests-covered.json`, oldest first. Return one line per item: age
 label, headline, primary URL, status, and whether the ledger has it
 (`python3 newsroom/ledger.py find "<keyword>"`). Do not mark anything read.
 
@@ -79,7 +80,7 @@ run it by hand when free space drops under about 4 GB.
 
 He reviews at four fixed times, Dubai time: **06:30, 10:00, 14:00, 17:30**.
 A trigger wakes the main session about 35 minutes before each slot:
-1. Launch in parallel: the Digest digest card (all unread digests) and the
+1. Launch in parallel: the Digest digest card (all digests since `covered_through`) and the
    Internal scout card (window since the previous slot).
 2. Main session: merge both lists, run `ledger.py find`, verify the
    candidates against their primaries, decide lanes, chips, themes, accounts

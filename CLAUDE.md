@@ -1091,10 +1091,12 @@ independent read of the primaries) run in parallel, and the shortlist is in
 front of him at the slot; the routine is in `newsroom/delegation.md`. Shows
 (Nintendo Direct, The Game Awards and the like) get event slots agreed one
 at a time once their time is confirmed. "Unread" still means "not yet worked
-through", and he can still ask for a sweep at any time. After reporting on a sweep, mark the
-digests just covered as read with `update_message`
-(`removeLabels: ["unread"]`), so the next sweep starts from genuinely new
-sheets rather than re-reading the day.
+through", and he can still ask for a sweep at any time. After reporting on a sweep, record the
+digests just covered in `newsroom/digests-covered.json` (`covered_through`,
+the newest digest's time), so the next sweep starts from genuinely new
+sheets rather than re-reading the day. The digest inbox is read only, never
+written to (Mohammad, 13 Oct 2026: marking digests read with `update_message`
+sent him an approval prompt each time).
 
 Speculation for reach (Mohammad, 11 Oct 2026: "post all 3, we can label
 unconfirmed ones as unconfirmed or rumours. I want more people to view the
