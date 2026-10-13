@@ -124,11 +124,11 @@ bare script), Nintendo Japan, Take-Two investor news, Atlus, Bungie,
 Gematsu, and Google News backstops for the sites that refuse us (Rockstar,
 Blizzard, Fortnite, Sega, Square Enix games; hours late, Google redirect
 links, so the Verifier opens the real page). Then the Watcher reads the
-pages that have no feed: Nintendo US whatsnew and Nintendo press, Steam
+pages that have no feed: Nintendo US whatsnew (nintendo.com/us/whatsnew/; the old press page is gone), Steam
 news for the top sellers, Capcom (capcom.co.jp IR news), Square Enix
-(hd.square-enix.com/eng/news/), Bandai Namco (bandainamcoent.com/news),
+(www.hd.square-enix.com/eng/news/; without www it refuses), Bandai Namco (bandainamcoent.com/news),
 Konami (konami.com/games/jp/ja/topics/; the English news page is gone),
-EA, Ubisoft, Riot, thegameawards.com/news, Famitsu, and the regional
+EA, Ubisoft, Riot, thegameawards.com/news, Famitsu (famitsu.com front page; /news/ is gone), and the regional
 official pages (PS Store UAE and Saudi, UAE gaming bodies). Use a browser
 user agent for every page. Sega's site rate-limits us and the Saudi
 Esports Federation and GEA sites refuse us: those, Rockstar and
