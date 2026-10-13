@@ -1,5 +1,8 @@
 # Working on DXB-KNIGHT
 
+**Rules in force at a glance: `STYLE.md`** (one page, 13 Oct 2026). This file
+is the full dated history; when a rule changes, update both in the same commit.
+
 ## What the account is for
 
 DXB-KNIGHT covers games in general and the Gulf in particular. The model
@@ -434,6 +437,16 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   a gun raised and a creature in shadow, not the wound). Check every frame
   of the shot sheet and the finished strip for it; if a trailer has no
   clean stretch, use its other trailers, official stills or our graphics.
+- Stand-in footage is named on screen (Mohammad, 13 Oct 2026, review
+  priority 3): when the footage is not of the story's subject (Fortnite
+  footage over Epic's unshown Disney shooter, Dragon Quest VII over Horii's
+  AI game), the Reel carries a small credit, «لقطات من Fortnite»:
+  `reel(..., credits=[(first_shot, last_shot, text)])`, under the safe top
+  (or above the safe bottom when the lines sit at the top).
+- Wrapped lines are checked (13 Oct 2026, review priority 4): reel.py stops
+  when any visual line of the headline, a story line or a credit opens on a
+  Latin word, a digit or a bracket (`rtl_starts`). On 13 Oct three headlines
+  wrapped that way and were caught only by eye.
 - Say what a name is (Mohammad, 2 Oct 2026, after the Miami HEAT Reel):
   many viewers only watch, so the on-screen text identifies any name an
   Arab gamer may not know, at its first appearance (headline or first
@@ -1126,6 +1139,12 @@ Destiny United" for what is *Romancing SaGa 3: Destinies Unite*).
 
 Attribute a company's own numbers to the company: "Capcom says", not a
 bare figure.
+
+Re-check before queuing (Mohammad, 13 Oct 2026, review priority 2): any
+تقرير, شائعة or تسريب story is searched again right before it goes to queue/,
+and the approval note records what was found; a denial stops it. Every
+correction is listed in `newsroom/corrections.md`, open until his decision
+is written there.
 
 Network: Mohammad opened the environment's network access on 23 Sep 2026.
 Press sites, Steam, PlayStation Blog, Nintendo and their image CDNs now

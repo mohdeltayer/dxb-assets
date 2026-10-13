@@ -138,6 +138,12 @@ glossary or these rules so it does not repeat.
 - **A source that deletes or changes a statement:** find out what
   changed before assuming why.
 
+Every case, open or closed, is listed in `corrections.md` with its status;
+a case closes only when his decision and the action taken are written
+there (13 Oct 2026). Reports, rumours and leaks are searched again right
+before they are queued (the queue-time re-check in `corrections.md`), and
+the approval note says what that search found.
+
 ## 6. Events
 
 `events.md`: confirmed dates only, in Dubai time with the source's own

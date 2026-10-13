@@ -36,6 +36,22 @@ SYM = Image.open(os.path.join(os.path.dirname(__file__), 'assets', 'dirham-symbo
 STILL = ('.jpg', '.jpeg', '.png', '.webp')
 
 
+def _arabic(ch):
+    o = ord(ch)
+    return 0x0600 <= o <= 0x06FF or 0x0750 <= o <= 0x077F or 0xFB50 <= o <= 0xFDFF or 0xFE70 <= o <= 0xFEFF
+
+
+def rtl_starts(lines, what):
+    """Every visual line opens on an Arabic word (Mohammad, 27 Sep 2026; checked
+    on the wrapped lines since 13 Oct, after a headline wrapped «(Finji)», «30
+    دقيقة» and «PS5» to the start of a line). Quotation marks before the word
+    are fine; a Latin word, a digit or a bracket is not."""
+    for ln in lines:
+        t = ln.strip().lstrip('«"“\u200f')
+        if t and not _arabic(t[0]):
+            raise ValueError(f'{what} line opens on {t[:12]!r}, not an Arabic word; rebreak or reword: {ln}')
+
+
 def _band(im, y0, y1, up, alpha):
     g = Image.new('L', (1, H), 0)
     for y in range(max(0, y0), min(H, y1)):
@@ -131,6 +147,7 @@ def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
         words = G._tokens(headline); tw = lambda x: probe.textlength(x, font=f, **G.AR)
         bw = min(max(tw(' '.join(words[:k])), tw(' '.join(words[k:]))) for k in range(1, len(words)))
         hl = max(L, int(W - R - bw - 16))
+    rtl_starts(G._wrap(probe, headline, f, W - hl - R), 'headline')
     chip = G._ACC if vivid else None
     end = G._head(probe, headline, G.SAFE_TOP + 10, label, country, hs, hst, right=R, left=hl)
     meta_y = end + 30
@@ -167,6 +184,7 @@ def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96)
             raise ValueError(f'line runs out of the safe zone: {x}')
     if len(lines) > 3:
         raise ValueError(f'{len(lines)} lines; keep a sentence to 3: {text}')
+    rtl_starts(lines, 'story')
     base0 = G.SAFE_TOP + 110 if top else G.SAFE_BOTTOM - 40 - step * (len(lines) - 1)
     mask = Image.new('L', (W, H), 0); d = ImageDraw.Draw(mask)
     for i, ln in enumerate(lines):
@@ -188,6 +206,25 @@ def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96)
     for col, m, off in [((0, 0, 0), shadow, (3, 4)), (A.GROUND, outline, (0, 0)), (A.INK, mask, (0, 0))]:
         lay = Image.new('RGBA', (W, H), col + (255,)); a = Image.new('L', (W, H), 0)
         a.paste(m, off); lay.putalpha(a); im.alpha_composite(lay)
+    im.save(path); return path
+
+
+def credit_layer(text, path, low=False, size=36):
+    """A small credit naming footage that is not of the story's subject itself,
+    «لقطات من Fortnite» over a delayed game that has never been shown (Mohammad,
+    13 Oct 2026, review priority 3). Right-aligned under the safe top, or just
+    above the safe bottom when the story lines sit at the top."""
+    rtl_starts([text], 'credit')
+    f = A.F('Medium', size)
+    y = G.SAFE_BOTTOM - 10 if low else G.SAFE_TOP + 40
+    mask = Image.new('L', (W, H), 0)
+    ImageDraw.Draw(mask).text((W - R, y), text, font=f, fill=255, anchor='rs', **G.AR)
+    if ImageDraw.Draw(mask).textlength(text, font=f, **G.AR) > W - R - L:
+        raise ValueError(f'credit runs out of the safe zone: {text}')
+    im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    outline = mask.filter(ImageFilter.MaxFilter(5))
+    for col, m in [(A.GROUND, outline), (A.BODY, mask)]:
+        lay = Image.new('RGBA', (W, H), col + (255,)); lay.putalpha(m); im.alpha_composite(lay)
     im.save(path); return path
 
 
@@ -581,8 +618,10 @@ def check_reading(lines, end):
 
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
-         lowres_ok=False, read_check=True, track=None, draft=False, head_size=66, cut=False):
-    """`cut=True` joins the shots with hard cuts instead of crossfades: the
+         lowres_ok=False, read_check=True, track=None, draft=False, head_size=66, cut=False, credits=None):
+    """`credits`: [(first_shot, last_shot, text)] labels footage that is not
+    of the story's subject («لقطات من Fortnite»), shown over those shots.
+    `cut=True` joins the shots with hard cuts instead of crossfades: the
     Comparison format (Mohammad, 10 Oct 2026), two states side by side in time
     with their labels as lines, no soft blending.
     `track`: (file, start) plays one continuous stretch of that trailer's
@@ -604,7 +643,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         keep, X = X, 0.04
         try:
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
-                        style, voice, duck_db, lowres_ok, read_check, track, draft, head_size)
+                        style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, credits=credits)
         finally:
             X = keep
     G._ACC = G.ACCENTS[theme]
@@ -632,6 +671,12 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         layers.append((line_layer(text, f'{tmp}/l{i}.png', **kw), a, min(z, end)))
     for i in range(1, len(layers) - 1):    # a line leaves before the next arrives
         p, a, z = layers[i]; layers[i] = (p, a, min(z, layers[i + 1][1]))
+    for j, (first, last, text) in enumerate(credits or []):   # after the trim: credits overlap the lines
+        a = max(starts[first] + 0.2, head_secs + 0.1)          # not under the headline
+        z = starts[last + 1] if last + 1 < len(starts) else end
+        low = any(kw.get('top') and la < z and lz > a for _, la, lz, kw in lines)
+        if z - a > 0.5:
+            layers.append((credit_layer(text, f'{tmp}/c{j}.png', low=low), a, z))
     args = ['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', f'{tmp}/cut.mp4']
     for p, _, _ in layers:
         args += ['-loop', '1', '-t', f'{end:.2f}', '-i', p]

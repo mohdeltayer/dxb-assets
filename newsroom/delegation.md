@@ -57,7 +57,9 @@ Return the preflight lines.
 **Grammar review (sonnet).** The `arabic-grammar-review` stage on a given
 text file, report only, no edits.
 
-**Publish (haiku), only after his "go".** Given the exact draft folders, times and
+**Publish (haiku), only after his "go".** Before this card runs, the main session
+re-checks any تقرير, شائعة or تسريب story (newsroom/corrections.md, queue-time
+re-check) and puts the result in the approval note. Given the exact draft folders, times and
 his approval note: `preflight.py approve` each, `git mv` to queue, `DRY_RUN=1
 publish.py` and confirm it lists exactly those folders (stop and report if not),
 push to dxb-queue main, wait for the receipts commit, read the captions back with
