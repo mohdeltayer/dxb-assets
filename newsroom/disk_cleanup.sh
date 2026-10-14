@@ -5,7 +5,7 @@
 #   1. render temp folders left in /tmp (older than 2 hours)
 #   2. scratchpad working folders untouched for 3 days (tools kept)
 #   3. source footage and audio in uploads untouched for 3 days
-#      (images, fonts and his own recordings kept)
+#      (images, fonts, his own recordings and the Ocarina series medley kept)
 #   4. dxb-queue git history: re-cloned shallow when .git passes 1 GB
 #      (posted video lives on in GitHub and the Reels in dxb-assets)
 # Stops without deleting anything while a render or a publish is running.
@@ -44,7 +44,7 @@ if [ -d $U ]; then
     \( -iname '*.mp4' -o -iname '*.webm' -o -iname '*.ts' -o -iname '*.mkv' \
        -o -iname '*.mov' -o -iname '*.m4a' -o -iname '*.wav' -o -iname '*.m3u8' \) \
     ! -iname '*voice*' ! -iname '*read*' ! -iname '*capture*' ! -iname '*gameplay*' \
-    ! -iname '*yolo*' ! -iname '*mohammad*' ! -iname '*phone*')
+    ! -iname '*yolo*' ! -iname '*mohammad*' ! -iname '*phone*' ! -iname '*medley*')
 fi
 
 # 4. dxb-queue shallow re-clone
