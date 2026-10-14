@@ -34,6 +34,8 @@ W, H = 1080, 1920
 FPS = 30
 CX = (G.SAFE_LEFT + W - G.SAFE_RIGHT) // 2      # 503, the middle of the safe zone
 LEAD = 0.3                                       # the crossfade, before the first note
+CARD = 2.0                                       # the end card's length (advisor, 14 Oct 2026: trimmed from 3.6 s; the notes, chord
+                                                 # and name all land by 1.6 s, the jingle's ring fades over the last half second)
 MARK_Y, MARK = 700, 300
 NAME_Y, TAG_Y = 930, 1010
 ROW_Y, GLYPH, GAP = 1150, 64, 56
@@ -101,7 +103,7 @@ def card(style, out, theme_accent=None, platforms=PLATFORMS):
     notes, chord = sonic.beats(style)
     notes = [LEAD + t for t in notes]
     chord += LEAD
-    dur = LEAD + 3.6
+    dur = LEAD + CARD
     acc = theme_accent or A.AZURE
     base = _base()
     row_w = len(platforms) * GLYPH + (len(platforms) - 1) * GAP
@@ -187,12 +189,12 @@ def append(video, out, style='neon', bed=None, jingle=None, accent=None):
     end = card(style, f'{tmp}/card.mp4', accent)
     jingle = jingle or _cached('jingle', style)
     d = _dur(video)
-    total = d - LEAD + LEAD + 3.6
+    total = d + CARD
     cmd = ['ffmpeg', '-y', '-v', 'error', '-i', video, '-i', end, '-i', jingle]
     v = (f'[0:v]fps={FPS},scale={W}:{H},setsar=1,format=yuv420p[v0];'
          f'[1:v]fps={FPS},setsar=1,format=yuv420p[v1];'
          f'[v0][v1]xfade=transition=fade:duration={LEAD}:offset={d - LEAD:.3f}[v];')
-    j = f'[2:a]adelay={int(d * 1000)}:all=1[j];'
+    j = f'[2:a]adelay={int(d * 1000)}:all=1,afade=t=out:st={total - 0.5:.3f}:d=0.5[j];'   # the ring fades with the card
     if _has_audio(video):
         a = f'[0:a]afade=t=out:st={max(0, d - 0.6):.2f}:d=0.6[b];'
     else:
@@ -213,10 +215,10 @@ def snap_cut(video, out, style='neon', accent=None):
     username with other apps' logos (Snap's recommendation guidelines,
     Quality, "Promotion of accounts"; read 4 Oct 2026), so the card keeps
     the mark, name, tagline and handle and drops the glyphs. The card is
-    laid over the last 3.6 s, after the crossfade; the sound is untouched."""
+    laid over the last CARD seconds, after the crossfade; the sound is untouched."""
     tmp = tempfile.mkdtemp(prefix='outro-')
     end = card(style, f'{tmp}/card.mp4', accent, platforms=())
-    t0 = _dur(video) - 3.6
+    t0 = _dur(video) - CARD
     subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', video, '-ss', str(LEAD), '-i', end,
                     '-filter_complex', f'[1:v]setpts=PTS-STARTPTS+{t0:.3f}/TB[c];[0:v][c]overlay=enable=gte(t\\,{t0:.3f})[v]',
                     '-map', '[v]', '-map', '0:a', '-c:v', 'libx264', '-preset', 'slow', '-crf', '17',

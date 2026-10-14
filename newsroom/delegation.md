@@ -44,12 +44,18 @@ then 1080p. Return file names, sizes, resolutions, durations and sheet paths. No
 social-media downloaders.
 
 **Render (sonnet).** Given a batch folder with `copyNN.py`, `renderNN.py` and
-the main session's brief per Reel (angle, template from `formats.py pick`,
-cover frame, sound, key shot, and one reason per line saying what the viewer
+the main session's brief per Reel (angle and hook kind, template from
+`formats.py pick` and its opening beat from `formats.py check`, cover frame,
+sound, key shot, the total seconds before the end card (12 to 20 s target,
+advisor 14 Oct 2026), and one reason per line saying what the viewer
 sees and why it shows that line; CLAUDE.md "Creative brief and formats" and
 "Templates and scenarios", 14 Oct): `check`, then `sheet`, then `draft`, then `strip`, and stop there with the
 paths. A line over a card must be at most one visual line of framing or
-absent (one fact, one place); report any line that repeats its card. After the main session clears the draft: `final`, `strip`,
+absent (one fact, one place); report any line that repeats its card. Report
+the `length` line reel.py prints at `check` when it says "outside the target".
+On the strip, confirm the mark sits top left for the whole Reel, the credit
+line is absent on the first frame and present from 2 s, and the end card is
+2 s (advisor, 14 Oct 2026). After the main session clears the draft: `final`, `strip`,
 copy that final strip and the shot sheet to `cards/YYYY-MM/<name>-strip.jpg`
 and `<name>-sheet.jpg` (advisor, 14 Oct 2026: both go into git in the same
 ledger commit as the mp4),
@@ -63,6 +69,21 @@ Return the preflight lines.
 
 **Grammar review (sonnet).** The `arabic-grammar-review` stage on a given
 text file, report only, no edits.
+
+**Caption check (haiku).** Given a batch's `copyNN.py`: for every Instagram
+caption (hook + story) and X text, report whether the game's name and the
+news word (صدرت، تأجيل، السعر، تقرير، تحديث، رسمي and the like) both sit in the
+first five words of the first line, in the Arabic and in any English line
+(advisor, 14 Oct 2026); whether the first word of every paragraph is Arabic;
+whether the last caption line starts with #ألعاب #أخبار_الألعاب and carries
+exactly four tags; and the character counts (2200 Instagram, 500 Threads).
+Report only; the main session rewrites.
+
+**Weekly views (haiku), Tuesday morning before the audit.** Given the
+Instagram views Mohammad sends per Reel: `python3 templates/formats.py views
+<reel name> <views>` for each, then `formats.py templates` for the median per
+template; append the table to `analytics/reel-views.md` with the date and
+commit (advisor, 14 Oct 2026).
 
 **Publish (haiku), only after his "go".** Before this card runs, the main session
 re-checks any تقرير, شائعة or تسريب story (newsroom/corrections.md, queue-time

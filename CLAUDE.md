@@ -534,10 +534,12 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
 - Creative brief and formats (Mohammad, 10 Oct 2026, adapted from an
   outside "creative director" prompt; its gameplay styles, fast beat cuts,
   regrading of publisher footage, comedy style and added music were left
-  out). Before the shot sheet, every Reel gets a five-line brief in its draft
-  notes: the angle and hook, the format, the cover frame, what plays under
-  it (trailer music, voices or our bed) and the one shot the key fact lands
-  on. Formats (`templates/formats.py`): trailer (one continuous stretch, the
+  out). Before the shot sheet, every Reel gets a brief in its draft
+  notes: the angle and hook (and which kind of hook: number, question or
+  surprise), the format and its opening beat, the cover frame, what plays
+  under it (trailer music, voices or our bed), the one shot the key fact
+  lands on, and the total seconds before the end card (advisor, 14 Oct
+  2026: a sixth line; 12 to 20 s is the target). Formats (`templates/formats.py`): trailer (one continuous stretch, the
   default), numbers (our own graphics), comparison (two labelled states with
   hard cuts, `reel(..., cut=True)`: prices by country, specs, before and
   after), quote (the speaker's line leads), explainer (the source's own
@@ -642,6 +644,34 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   fallback is the publisher's photos unmasked, else the story stays on
   `split`. In `formats.py` it joins FORMATS and NEWS_MAP (kind `edition`:
   `['edition', 'split']`), card-led family. First draft to Mohammad before use.
+- Best-practice pass (advisor, 14 Oct 2026; applies from the next Reel after
+  each lands, 1 to 4 first):
+  1. Hook first: the footage moves from frame one under the chip and the
+     headline; the credit line (accent rule, source · date) enters at 2 s
+     (`reel.CREDIT_AT`, its own layer); the headline is written as a hook (a
+     number, a question or the surprise), never a label.
+  2. Persistent mark: the play mark at 48 px, 50% opacity, top left inside
+     the safe zone on the chip row's empty end, through the whole Reel
+     (`reel.mark_layer`; `MARK_PERSIST`, `MARK_PX`, `MARK_ALPHA`).
+  3. End card trimmed to 2 s (`outro.CARD`, was 3.6): the notes, chord and
+     name all land by 1.6 s and the jingle's ring fades over the last half
+     second; the last story line runs to the end of the clip and may land
+     over the mark through the crossfade.
+  4. Length target 12 to 20 s of story before the end card (`reel.LENGTH`):
+     four lines is the normal case, six only when the story needs them.
+     reel() prints `length_note` at the check step, and the brief states
+     the total seconds.
+  5. The opening beat varies by template (`formats.OPENERS`, printed by
+     `formats.py check`): quote on the quote, numbers on the number alone,
+     edition on the hero item, trailer on the strongest moving shot, and
+     so on. The brief names it.
+  6. Captions: the game's name and the news word (صدرت، تأجيل، السعر، تقرير
+     and the like) sit in the first five words, in the Arabic caption and
+     in any English line (the caption task card in `newsroom/delegation.md`).
+  7. Weekly views next to the template in the format ledger: Mohammad sends
+     the Instagram numbers Tuesday morning before the audit; `formats.py
+     views <name> <n>` records them and `formats.py templates` gives the
+     median per template (`analytics/reel-views.md`).
 - Numbers Reels have a living ground (Mohammad, 12 Oct 2026: once the
   title went, the charts sat on "a big purple background" and the sales
   Reels felt stale). Our graphics are drawn on a transparent canvas
@@ -824,8 +854,9 @@ More variations (Mohammad, 2 Oct 2026: "Honestly, I like them all"):
   when the story has one image.
   X keeps its still and video cards.
 - Caption: the first line is a hook that differs from the card headline
-  (only about two lines show before "more"), then the full story with the
-  same checked facts, then #ألعاب #أخبار_الألعاب followed by 2 story hashtags (Arabic tags
+  (only about two lines show before "more"), with the game's name and the
+  news word in its first five words (advisor, 14 Oct 2026), then the full
+  story with the same checked facts, then #ألعاب #أخبار_الألعاب followed by 2 story hashtags (Arabic tags
   first, so the line reads right to left).
   Hashtags for discovery (Mohammad, 28 Sep 2026: make sure they are
   there where they help people find the account). Instagram caps a post
@@ -1083,7 +1114,7 @@ Brand kit (Mohammad, 26 Sep 2026):
   itself. The clip fades into the play mark, each jingle note lights one
   platform (X, Instagram, TikTok, YouTube, right to left), and the name,
   "أخبار الألعاب" and @the_digilounge come up on the final chord; nothing
-  zooms or pans. It adds about 3.6 seconds. Reel footers drop the handle
+  zooms or pans. It adds 2 seconds (advisor, 14 Oct 2026; 3.6 until then). Reel footers drop the handle
   (the card carries it); stills keep it. Sound: a trailer kept with
   `audio=True` plays its own sound, faded out before the card, and gets
   nothing added but the jingle; a clip with no sound gets the flavour's

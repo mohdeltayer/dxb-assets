@@ -132,8 +132,9 @@ def frame_layer(path, theme, seed, h=420):
 
 
 def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
-               vivid=False, theme='cold', seed=0, style='lines'):
-    """Chip, headline and the credit line on a soft band at the top. `vivid`
+               vivid=False, theme='cold', seed=0, style='lines', meta_path=None):
+    """Chip and headline on a soft band at the top; the credit line (rule, source · date)
+    is written to `meta_path` as its own layer when given, else drawn with the head. `vivid`
     colours the chip with the theme and lays the theme's wave lines in the band."""
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     probe = ImageDraw.Draw(Image.new('RGBA', (W, H)))
@@ -160,12 +161,60 @@ def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
         _colour(im, meta_y + 140, theme, seed, style)
     t = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(t)
     G._head(d, headline, G.SAFE_TOP + 10, label, country, hs, hst, right=R, left=hl, chip=chip)
-    d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=G._ACC)
-    d.text((W - R - 62, meta_y), f'{source}\u200f  ·  \u200f{A.arabic_date(date)}', font=A.F('Medium', 32),
-           fill=A.BODY, anchor='rm', **G.AR)
+    if not meta_path:                      # one layer, as before 14 Oct
+        d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=G._ACC)
+        d.text((W - R - 62, meta_y), f'{source}\u200f  ·  \u200f{A.arabic_date(date)}', font=A.F('Medium', 32),
+               fill=A.BODY, anchor='rm', **G.AR)
+    _glowed(im, t); im.save(path)
+    if meta_path:                          # the credit line on its own layer: it enters at CREDIT_AT (advisor, 14 Oct 2026)
+        m = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(m)
+        d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=G._ACC)
+        d.text((W - R - 62, meta_y), f'{source}\u200f  ·  \u200f{A.arabic_date(date)}', font=A.F('Medium', 32),
+               fill=A.BODY, anchor='rm', **G.AR)
+        _glowed(Image.new('RGBA', (W, H), (0, 0, 0, 0)), m).save(meta_path)
+    return path
+
+
+def _glowed(im, t):
+    """Lay the drawn text `t` on `im` with a soft ground-coloured glow behind it."""
     glow = Image.new('RGBA', (W, H), A.GROUND + (0,))
     glow.putalpha(t.getchannel('A').filter(ImageFilter.GaussianBlur(10)).point(lambda v: min(255, v * 2)))
-    im.alpha_composite(glow); im.alpha_composite(t); im.save(path); return path
+    im.alpha_composite(glow); im.alpha_composite(t); return im
+
+
+#: The hook (advisor, 14 Oct 2026): the footage moves from frame one under the chip and
+#: headline; the credit line (rule, source · date) enters at CREDIT_AT; the headline is a hook
+#: (a number, a question or the surprise), never a label.
+CREDIT_AT = 2.0
+#: The persistent mark (advisor, 14 Oct 2026): the play mark at MARK_PX, MARK_ALPHA opacity,
+#: top left inside the safe zone, on screen for the whole Reel. `MARK_PERSIST = False` turns it off.
+MARK_PERSIST, MARK_PX, MARK_ALPHA = True, 48, 0.5
+#: Length target (advisor, 14 Oct 2026): 12 to 20 s of story before the end card; four lines is the
+#: normal case, six only when the story needs them. reel() warns outside it; the brief states the total.
+LENGTH = (12.0, 20.0)
+
+
+def mark_layer(path):
+    """The play mark, round, MARK_PX wide at MARK_ALPHA, on the chip row's empty left end
+    (the chip sits at the right): x SAFE_LEFT, centred on the chip row."""
+    mark = Image.open(A.MARK).convert('RGB').resize((MARK_PX * 4, MARK_PX * 4), Image.LANCZOS)
+    mask = Image.new('L', mark.size, 0)
+    ImageDraw.Draw(mask).ellipse((0, 0, mark.width - 1, mark.height - 1), fill=255)
+    mark, mask = mark.resize((MARK_PX, MARK_PX), Image.LANCZOS), mask.resize((MARK_PX, MARK_PX), Image.LANCZOS)
+    mask = mask.point(lambda v: int(v * MARK_ALPHA))
+    im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    y = G.SAFE_TOP + 10 + 57 - int(57 * 1.5 / 2) - MARK_PX // 2     # the chip row's middle (chip bottom at +57, 57 high)
+    im.paste(mark, (G.SAFE_LEFT, y), mask); im.save(path); return path
+
+
+def length_note(end):
+    """One line for the brief and the render log: the total before the end card, and
+    a warning when it sits outside LENGTH."""
+    lo, hi = LENGTH
+    note = f'length {end:.1f} s before the end card (target {lo:.0f} to {hi:.0f} s)'
+    if not lo <= end <= hi:
+        note += ': outside the target; four lines is the normal case, six only when the story needs them'
+    return note
 
 
 def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96, lift=0):
@@ -807,7 +856,7 @@ def by_shot(groups):
     def place(starts, end):
         out = []
         for a, b, texts in groups:
-            t0 = starts[a] + (0.25 if a else 3.6)
+            t0 = starts[a] + (0.25 if a else 3.6)   # the first line waits for the head band
             t1 = starts[b + 1] if b + 1 < len(starts) else end
             span = (t1 - t0) / len(texts)
             for i, x in enumerate(texts):
@@ -957,6 +1006,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     tmp = tempfile.mkdtemp(prefix='reel-')
     try:
         starts, end = timeline(shots)          # known before the slow encode
+        print(length_note(end))                # 12 to 20 s target (advisor, 14 Oct 2026); the brief states the total
         if callable(lines):                    # lines placed against the cut's own shot starts
             lines = lines(starts, end)
         if lines and isinstance(lines[0], str):
@@ -980,12 +1030,17 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         raise
     style = style or pick_style(out)       # after the checks, so a stopped render takes no turn
     layers = [(head_layer(headline, label, f'{tmp}/head.png', source, date, country, hs=head_size,   # a long Latin title can take 60 so its line opens in Arabic
-                          hst=head_size + 20, vivid=vivid, theme=theme, seed=sum(map(ord, out)), style=style), 0, head_secs)]
+                          hst=head_size + 20, vivid=vivid, theme=theme, seed=sum(map(ord, out)), style=style,
+                          meta_path=f'{tmp}/meta.png'), 0, head_secs)]
     if vivid and style == 'frame':          # the bottom waves stay for the whole clip
         layers.insert(0, (frame_layer(f'{tmp}/frame.png', theme, sum(map(ord, out))), 0, end))
+    if MARK_PERSIST:                        # the play mark, small and half transparent, for the whole Reel (14 Oct 2026)
+        layers.insert(0, (mark_layer(f'{tmp}/mark.png'), 0, end))
+    fixed = len(layers)                     # these never get trimmed by the next line
+    layers.append((f'{tmp}/meta.png', min(CREDIT_AT, head_secs - 0.5), head_secs))   # the credit line enters at 2 s
     for i, (text, a, z, kw) in enumerate(lines):
         layers.append((line_layer(text, f'{tmp}/l{i}.png', **kw), a, min(z, end)))
-    for i in range(1, len(layers) - 1):    # a line leaves before the next arrives
+    for i in range(fixed + 1, len(layers) - 1):    # a line leaves before the next arrives (the head and credit are not lines)
         p, a, z = layers[i]; layers[i] = (p, a, min(z, layers[i + 1][1]))
     if strip:                              # after the trim: the strip stays for the rest of the clip, fading in over 0.4 s
         layers.append((f'{tmp}/strip.png', head_secs if comp is None else starts[comp],

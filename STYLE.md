@@ -1,4 +1,4 @@
-# Digital Lounge: the rules in force (13 Oct 2026)
+# Digital Lounge: the rules in force (14 Oct 2026)
 
 One page of what applies today. CLAUDE.md is the full, dated history and wins
 on detail; each line here names its section there. Anything listed under
@@ -80,6 +80,13 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - Each line stays up for its reading time (`read_secs`); the safe zone is
     x 96 to 910, y 285 to 1480.
   - Lines move to the top over a game's lower-third UI.
+  - Hook first (14 Oct): the footage moves from frame one under the chip and
+    headline, the credit line enters at 2 s, and the headline is a hook (a
+    number, a question, the surprise), never a label.
+  - The play mark, 48 px at 50%, sits top left in the safe zone for the whole
+    Reel (14 Oct).
+  - 12 to 20 s of story before the end card; four lines is normal, six only
+    when needed; the brief states the total (14 Oct).
 - **Sound:**
   - One continuous stretch of the trailer's own music, with voices allowed.
   - Our bed under stills, graphics or noisy stretches; never mute footage to
@@ -89,7 +96,7 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     long Reel's music moves without getting louder or busier; the cycle
     follows the news type (everyday, stats, launch, digest, breaking,
     hijaz; retro stays chip).
-  - The jingle and end card always close the Reel.
+  - The jingle and end card always close the Reel; the card is 2 s (14 Oct).
 - **Templates (14 Oct):** the template is chosen per story from
   templates/formats.py (`NEWS_MAP`): `trailer` (footage all the way, lines
   on the picture, no card), `split` (footage all the way plus a slim pinned
@@ -110,6 +117,10 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 - **Variety:**
   - Themes per story; band styles rotate through the ledger.
   - No more than two Reels in a row share a template.
+  - The opening beat follows the template (`formats.OPENERS`, 14 Oct): quote
+    on the quote, numbers on the number alone, edition on the hero item.
+  - Weekly Instagram views are recorded next to each Reel's template
+    (`formats.py views`, Tuesday morning from Mohammad's numbers, 14 Oct).
   - Landing (14 Oct, first draft to Mohammad before use): `edition` (editions,
     bundles, limited consoles: press-render cut-outs drifting onto the living
     ground, then one composition frame with the price strip; card-led) and a
@@ -117,7 +128,8 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     window drawn on the shot sheet).
   - The retro sound is for on-this-day pieces only.
 - **Process:**
-  1. A five-line brief.
+  1. A six-line brief (angle and hook kind, template and opening beat, cover,
+     sound, key shot, total seconds).
   2. `shotsheet`.
   3. `draft`, then `strip`, looked at frame by frame.
   4. `final`, then `strip` again; the final strip and the shot sheet are
@@ -131,7 +143,8 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   story ("Short X posts").
 - **Instagram:**
   - Reels only; the same full-quality file as X.
-  - Caption: a hook that differs from the headline, then the full story,
+  - Caption: a hook that differs from the headline, with the game's name and
+    the news word in the first five words (14 Oct), then the full story,
     then exactly #ألعاب #أخبار_الألعاب plus two story tags.
   - Under 2200 characters, no links.
   - On an upload error, retry the same file once.
