@@ -909,6 +909,32 @@ Brand kit (Mohammad, 26 Sep 2026):
   bed repeats until all five have played (Mohammad, 1 Oct 2026: use the
   variations for variety); a re-render keeps its bed. Footage still keeps
   its own sound. Launch, breaking and stats keep their own flavour.
+  Beds evolve (Mohammad, 14 Oct 2026, 12:40 Dubai, from the Fire Emblem
+  "Obelisk Chamber" mashup he sent as the reference: "something similar
+  depending on the news type and subtle change in videos that are long so
+  the background music doesn't become noisy"). The reference keeps one
+  theme, one tempo, one key and one loudness for five minutes and changes
+  only the arrangement, about every 50 to 60 seconds with a crossfade; its
+  audio is Nintendo's and is not used, only that shape. `sonic.PALETTES`
+  are arrangements of our own motif (bells, mallets, piano, e-piano,
+  strings, synth, chip, oud, qanun, musicbox, celesta; new voices `piano`,
+  `epiano`, `flute` and a `strings` pad of detuned sines, never a saw), and
+  `sonic.ARRANGE` gives each flavour the cycle it moves through, the first
+  palette being the flavour's old look (everyday neon: bells, piano,
+  strings, mallets, e-piano; stats: synth, chip, bells; launch: bells,
+  synth, mallets; digest: piano, strings, bells, e-piano; breaking: synth,
+  piano; hijaz: oud, qanun, strings; retro stays chip only). `sonic.bed(
+  style, path, secs=)` (`arrange`) builds a bed for the clip's length: a new
+  palette every `SECTION` (8) bars, each change a one-bar overlap in which
+  the old palette fades out as the new fades in, every section balanced to
+  the same level, the motif still surfacing at bar 5 of each 8. A clip
+  shorter than a section hears one palette, as before. `outro.append`
+  takes it for every silent clip (`outro.evolving_bed(style, secs)`,
+  cached by style and seconds), and reel.py and ig_ar.py pass the rotated
+  everyday bed through it. The 16-bar loops stay for anything that asks
+  for `bed()` without `secs`. Audition: `live/2026-10-14/audio/evolve/`
+  (60 s beds and the Epic educators Reel re-laid as a demo); his verdict
+  pending.
   Retro sound (Mohammad, 11 Oct 2026: "a little bit 8-bit or retro like an
   NES game"): "on this day" release anniversaries and other stories that are
   plainly retro (an old game, an old console, a look back) end on the

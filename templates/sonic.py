@@ -111,6 +111,51 @@ FLAVOURS = {
 # post-type flavours stay fixed.
 EVERYDAY = ['neon', 'neon_b', 'neon_c', 'neon_d', 'neon_e']
 
+# Palettes (Mohammad, 14 Oct 2026, from the Fire Emblem "Obelisk Chamber"
+# mashup he sent as the reference: one theme, one tempo, one key and one
+# loudness for five minutes, and only the arrangement changes, about every
+# 50 to 60 seconds with a crossfade). A palette is one arrangement of the
+# same motif and progression: the arpeggio's voice, what holds the chord
+# (a sine pad, a string section, a chip bass or nothing), the drum pattern
+# and the voice the motif surfaces in. `arrange()` walks a flavour's cycle
+# of palettes, one every SECTION bars, so a long Reel's bed changes texture
+# without changing tempo, key or level.
+PALETTES = {
+    'bells':    dict(arp='bell', pad='hold', drums=None, lead='bell'),
+    'mallets':  dict(arp='marimba', pad='hold', drums='light', lead='glock'),
+    'piano':    dict(arp='piano', pad=None, drums='soft', lead='piano', arp_lvl=1.2),
+    'strings':  dict(arp='pluck', pad='strings', drums=None, lead='flute', rate=4, arp_lvl=0.7),
+    'epiano':   dict(arp='epiano', pad='hold', drums='soft', lead='epiano'),
+    'synth':    dict(arp='square12', pad='hold', drums='light', lead='bell', arp_lvl=0.8),
+    'chip':     dict(arp='square12', pad='chip', drums='chip', lead='square', chip=True),
+    'oud':      dict(arp='oud', pad='hold', drums='daf_slow', lead='oud'),
+    'qanun':    dict(arp='qanun', pad='strings', drums=None, lead='oud', rate=4),
+    'musicbox': dict(arp='musicbox', pad='hold', drums=None, lead='musicbox'),
+    'celesta':  dict(arp='celesta', pad='strings', drums='sleigh_soft', lead='glock+bell'),
+}
+SECTION = 8     # bars per palette (about 20 s at 96 bpm)
+XFADE = 1       # bars of overlap at a change
+
+# The cycle each flavour moves through; the first palette is the flavour's
+# own look, so a short Reel (one section) sounds as it did before.
+ARRANGE = {
+    'neon':      ['bells', 'piano', 'strings', 'mallets', 'epiano'],
+    'neon_b':    ['mallets', 'epiano', 'strings', 'bells', 'piano'],
+    'neon_c':    ['epiano', 'strings', 'piano', 'bells'],
+    'neon_d':    ['mallets', 'bells', 'piano', 'strings'],
+    'neon_e':    ['piano', 'strings', 'epiano', 'mallets'],
+    'stats':     ['synth', 'chip', 'bells', 'synth'],
+    'breaking':  ['synth', 'piano', 'synth'],
+    'launch':    ['bells', 'synth', 'mallets', 'bells'],
+    'digest':    ['piano', 'strings', 'bells', 'epiano'],
+    'retro':     ['chip'],
+    'hijaz':     ['oud', 'qanun', 'strings', 'oud'],
+    'ramadan':   ['oud', 'qanun', 'oud'],
+    'eid':       ['qanun', 'oud', 'strings'],
+    'halloween': ['musicbox', 'strings', 'musicbox'],
+    'christmas': ['celesta', 'bells', 'strings', 'celesta'],
+}
+
 
 def rotate(key):
     """An everyday bed for a post, never the one used most recently: the
@@ -270,7 +315,52 @@ def voice(name, freq, dur):
             'vibes': lambda: vibes(freq, dur),
             'square': lambda: square(freq, dur),
             'square12': lambda: square(freq, dur, duty=0.125, decay=0.12, vib=False),
-            'triangle': lambda: triangle(freq, dur)}[name]()
+            'triangle': lambda: triangle(freq, dur),
+            'piano': lambda: piano(freq, dur),
+            'epiano': lambda: epiano(freq, dur),
+            'flute': lambda: flute(freq, dur)}[name]()
+
+
+def piano(freq, dur):
+    """Struck string: stretched partials that die faster the higher they are."""
+    t = t_(dur)
+    out = np.zeros(len(t))
+    for h, a in ((1, 1.0), (2, 0.5), (3, 0.25), (4, 0.12), (5, 0.07), (6, 0.04)):
+        out += a * np.sin(2 * np.pi * freq * h * (1 + 0.0004 * h * h) * t) * np.exp(-t * (1.2 + 0.6 * h))
+    return out * env(len(t), a=0.003, d=1.2, r=0.15) / 1.8
+
+
+def epiano(freq, dur):
+    """Tine piano: a soft FM bell with a short click at the front."""
+    t = t_(dur)
+    idx = 1.6 * np.exp(-t / 0.35)
+    out = np.sin(2 * np.pi * freq * t + idx * np.sin(2 * np.pi * freq * t)) * env(len(t), a=0.004, d=0.9, r=0.1)
+    out += 0.2 * np.sin(2 * np.pi * freq * 4 * t) * np.exp(-t / 0.08)
+    return out * 0.8
+
+
+def flute(freq, dur):
+    """Breathless flute: a sine with a slow onset and a little vibrato."""
+    t = t_(dur)
+    vib = 1 + 0.006 * np.sin(2 * np.pi * 5.5 * t) * np.minimum(1, t / 0.6)
+    ph = 2 * np.pi * np.cumsum(freq * vib) / SR
+    out = np.sin(ph) + 0.18 * np.sin(2 * ph) + 0.06 * np.sin(3 * ph)
+    return out * env(len(t), a=0.08, d=1.6, s=0.5, r=0.25) * 0.9
+
+
+def strings(notes, dur, attack=0.7, release=0.8):
+    """Sustained string section: three detuned sine stacks a note, slow bow
+    attack, slow vibrato. Sines, not saws, so it never reads as a whoosh."""
+    t = t_(dur)
+    out = np.zeros(len(t))
+    vib = 1 + 0.003 * np.sin(2 * np.pi * 5.0 * t) * np.minimum(1, t / 1.2)
+    for nt in notes:
+        f = hz(nt)
+        for det in (-3, 0, 3):                  # cents
+            ph = 2 * np.pi * np.cumsum(f * 2 ** (det / 1200) * vib) / SR
+            out += np.sin(ph) + 0.35 * np.sin(2 * ph) + 0.15 * np.sin(3 * ph)
+    out /= max(1, len(notes)) * 3
+    return out * np.minimum(1, t / attack) ** 2 * np.clip((dur - t) / release, 0, 1)
 
 
 def warm(notes, dur, attack=0.05, decay=1.1):
@@ -506,9 +596,99 @@ def _chip_jingle(F, path):
     return _write(y, path, loud=-14)
 
 
-def bed(style, path, bars=16):
+def _section(F, P, bars, b0, nbars, buf, beat, bar):
+    """Place one palette's bars [b0, b0 + nbars) of the flavour into buf."""
+    for b in range(b0, b0 + nbars):
+        chord = F['prog'][(b // 2) % len(F['prog'])]
+        at = b * bar
+        pad = P.get('pad')
+        if pad == 'chip':                 # triangle bass on eighths, root and octave, no pads
+            for e in range(8):
+                f = hz(chord[0]) * (2 if e % 2 else 1)
+                place(buf, triangle(f, beat / 2 * 0.9, decay=0.15) * 0.5, at + e * beat / 2)
+        elif b % 2 == 0:
+            if pad == 'hold':
+                place(buf, hold(chord, 2 * bar + 0.5) * 0.3, at)
+            elif pad == 'strings':
+                place(buf, strings(chord, 2 * bar + 0.6) * 0.3, at)
+            place(buf, sub(hz(chord[0]) / 2, 1.5) * (0.18 if pad is None else 0.25), at)
+        lvl = P.get('arp_lvl', 1.0)
+        if F.get('sixteenths') and P['arp'] in ('bell', 'square12'):
+            order = [0, 1, 2, 3, 0, 1, 2, 3, 1, 2, 3, 0, 1, 2, 3, 3]
+            for i, o in enumerate(order):
+                f = hz(chord[o]) * (4 if i >= 8 and o == 0 else 2)
+                place(buf, voice(P['arp'], f, 0.3) * (0.13 if i % 4 == 0 else 0.08) * lvl, at + i * beat / 4)
+        else:
+            pat, rate = F.get('pattern', [0, 1, 2, 3, 2, 1, 2, 3]), P.get('rate', F.get('rate', 8))
+            for e in range(rate):
+                nt = chord[pat[e % len(pat)]]
+                place(buf, voice(P['arp'], hz(nt) * 2, 0.5 if rate == 8 else 0.9) *
+                      (0.16 if e % 2 == 0 else 0.10) * lvl, at + e * 4 * beat / rate)
+        for inst, pos, l in PATTERNS.get(P.get('drums'), []):
+            place(buf, inst() * l, at + pos * beat / 2)
+    for bm in range(b0 + 4, b0 + nbars, 8):      # the motif, bar 5 of each 8
+        for k, nt in enumerate(F['motif']):
+            place(buf, voice(P['lead'], hz(nt), 1.0) * 0.22, bm * bar + k * beat / 2)
+
+
+def _palette(F):
+    """The flavour's own look as a palette, for the loop and for a cycle that starts on it."""
+    return dict(arp=F['arp'], pad='chip' if F.get('chip') else 'hold', drums=F.get('drums'), lead=F['lead'])
+
+
+def arrange(style, path, secs):
+    """A bed for a clip of `secs`: the flavour's motif and progression at one
+    tempo and one level throughout, the arrangement moving through the
+    flavour's palette cycle one every SECTION bars, each change a XFADE-bar
+    overlap in which the old palette fades out as the new one fades in
+    (Mohammad, 14 Oct 2026: a long video's music should change a little so
+    it does not become noisy). A clip shorter than a section hears one
+    palette, as before."""
+    F = FLAVOURS[style]
+    beat = 60 / F['bpm']
+    bar = 4 * beat
+    cycle = ARRANGE.get(style) or [None]
+    nsec = max(1, int(np.ceil((secs + 1.0) / (SECTION * bar))))
+    total = nsec * SECTION * bar
+    n = int((total + 3.0) * SR)
+    mix = np.zeros(n)
+    for si in range(nsec):
+        name = cycle[si % len(cycle)]
+        P = PALETTES[name] if name else _palette(F)
+        b0 = si * SECTION
+        nb = SECTION + (XFADE if si < nsec - 1 else 0)     # run XFADE bars into the next section
+        buf = np.zeros(n)
+        _section(F, P, SECTION, b0, nb, buf, beat, bar)
+        t0, t1 = b0 * bar, (b0 + nb) * bar
+        xf = int(XFADE * bar * SR)
+        core = buf[int(t0 * SR):int(t1 * SR) - xf]           # one level for every palette (the reference holds its loudness)
+        rms = np.sqrt((core ** 2).mean()) + 1e-9
+        buf *= 0.12 / rms
+        g = np.ones(n)
+        if si > 0:                                           # fade in over the first bar
+            a = int(t0 * SR)
+            g[:a] = 0; g[a:a + xf] = np.linspace(0, 1, xf)
+        if si < nsec - 1:                                    # fade out over the overlap bar
+            z = int(t1 * SR)
+            g[z - xf:z] = np.linspace(1, 0, xf); g[z:] = 0
+        mix += buf * g
+    chip = all((PALETTES[c].get('chip') if c else F.get('chip')) for c in cycle)
+    if F.get('drone'):
+        place(mix, hold([F['drone'], F['drone'][0] + '3'], total + 0.5, attack=1.0, release=0.5) * 0.18, 0)
+    fx = Pedalboard([LowpassFilter(7000), HighpassFilter(40),
+                     Reverb(room_size=0.15 if chip else 0.7, wet_level=0.08 if chip else 0.3,
+                            dry_level=0.95 if chip else 0.7),
+                     Compressor(threshold_db=-18, ratio=2), Limiter(-1.0)])
+    y = _stereo(fx(mix.astype(np.float32), SR), mix=0.0 if chip else 0.08)
+    return _write(y[:, :int((secs + 2.0) * SR)], path, loud=-18)
+
+
+def bed(style, path, bars=16, secs=None):
     """Seamless loop: held chords, a quiet arpeggio, the flavour's rhythm,
-    and the motif every 8 bars (bars 5, 13, ...)."""
+    and the motif every 8 bars (bars 5, 13, ...). With `secs` the bed is
+    arranged for a clip of that length instead (see arrange)."""
+    if secs:
+        return arrange(style, path, secs)
     F = FLAVOURS[style]
     beat = 60 / F['bpm']
     bar = 4 * beat
@@ -581,6 +761,13 @@ if __name__ == '__main__':
     import sys
     out = sys.argv[1] if len(sys.argv) > 1 else '.'
     os.makedirs(out, exist_ok=True)
+    if '--arrange' in sys.argv:                 # python3 sonic.py <dir> --arrange 60 [flavour ...]
+        secs = float(sys.argv[sys.argv.index('--arrange') + 1])
+        names = [a for a in sys.argv[2:] if a in FLAVOURS] or list(ARRANGE)
+        for s in names:
+            arrange(s, f'{out}/digi-bed-{s}-{int(secs)}s.mp3', secs)
+            print(s, ' > '.join(ARRANGE.get(s, [s])[:int(np.ceil((secs + 1) / (SECTION * 4 * 60 / FLAVOURS[s]['bpm'])))]))
+        sys.exit()
     for s in FLAVOURS:
         jingle(s, f'{out}/digi-jingle-{s}.mp3')
         bed(s, f'{out}/digi-bed-{s}.wav')

@@ -284,7 +284,7 @@ def ig_ar(media, date, source, out, headline, summary, label=None, country=None,
         bed = None
         if style == 'neon' and not audio:          # silent clip: rotate the everyday bed
             import sonic
-            bed = O._cached('bed', sonic.rotate(out))
+            bed = O.evolving_bed(sonic.rotate(out), O._dur(body))
         return O.append(body, out, style, bed=bed, accent=_ACC)
     im = _still_ground(media, bg_dim)
     d = ImageDraw.Draw(im)

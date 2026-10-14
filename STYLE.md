@@ -84,6 +84,11 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - One continuous stretch of the trailer's own music, with voices allowed.
   - Our bed under stills, graphics or noisy stretches; never mute footage to
     add a bed.
+  - Beds evolve (14 Oct): one motif, tempo and level, the arrangement
+    changing every 8 bars with a one-bar crossfade (`sonic.ARRANGE`), so a
+    long Reel's music moves without getting louder or busier; the cycle
+    follows the news type (everyday, stats, launch, digest, breaking,
+    hijaz; retro stays chip).
   - The jingle and end card always close the Reel.
 - **Templates (14 Oct):** the template is chosen per story from
   templates/formats.py (`NEWS_MAP`): `trailer` (footage all the way, lines

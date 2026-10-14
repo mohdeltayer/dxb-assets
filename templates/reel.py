@@ -820,7 +820,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     sound = sound or G.SOUNDS.get(label, 'neon')
     bed = None                             # clips with no sound rotate the everyday bed; the jingle stays
     if sound == 'neon':
-        bed = outro._cached('bed', sonic.rotate(os.path.basename(out)))
+        bed = outro.evolving_bed(sonic.rotate(os.path.basename(out)), end)
     done = outro.append(body, out, sound, bed=bed, accent=G.ACCENTS[theme])
     shutil.rmtree(tmp, ignore_errors=True)  # the temp renders filled the disk on 2 Oct
     return done, starts, end

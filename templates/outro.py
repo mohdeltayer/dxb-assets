@@ -19,6 +19,7 @@ Everything sits in the Reels safe zone (ig_ar.SAFE_*).
 """
 import math
 import os
+import numpy as np
 import shutil
 import subprocess
 import tempfile
@@ -169,6 +170,16 @@ def _cached(kind, style):
     return p
 
 
+def evolving_bed(style, secs):
+    """A bed arranged for a clip of `secs` (sonic.arrange), cached by style
+    and whole seconds; rebuilt when sonic.py changes."""
+    os.makedirs(CACHE, exist_ok=True)
+    p = f'{CACHE}/bed-{style}-{int(np.ceil(secs))}s.wav'
+    if not os.path.exists(p) or os.path.getmtime(p) < os.path.getmtime(sonic.__file__):
+        sonic.bed(style, p, secs=float(np.ceil(secs)))
+    return p
+
+
 def append(video, out, style='neon', bed=None, jingle=None, accent=None):
     if style not in sonic.FLAVOURS:
         raise ValueError(f'sound is one of {", ".join(sonic.FLAVOURS)}')
@@ -185,7 +196,7 @@ def append(video, out, style='neon', bed=None, jingle=None, accent=None):
     if _has_audio(video):
         a = f'[0:a]afade=t=out:st={max(0, d - 0.6):.2f}:d=0.6[b];'
     else:
-        cmd += ['-stream_loop', '-1', '-i', bed or _cached('bed', style)]
+        cmd += ['-stream_loop', '-1', '-i', bed or evolving_bed(style, d)]
         a = (f'[3:a]volume=-2dB,afade=t=in:d=0.4,atrim=0:{d:.3f},'
              f'afade=t=out:st={max(0, d - 1.0):.2f}:d=1.0[b];')
     fc = v + j + a + f'[b][j]amix=inputs=2:duration=longest:normalize=0,apad[a]'
