@@ -795,6 +795,30 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   `templates/assets/render-times.json`, and the render task card records
   them for the next ten Reels. Baseline, the Xbox Nano Reel (18.6 s, a
   still, a graphic and a still) on the old chain, is in the same file.
+- Review of the Xbox Nano Reel, the first under the hook band (advisor,
+  14 Oct 2026):
+  1. Ten seconds on one still (0 to 10 s) broke the 3 to 4 s change rule.
+     Before accepting a still for a hardware story, run the motion-search
+     order (the publisher's clip, the store page's video, our graphics in
+     motion); when a still is all there is, cut to a second angle at 3.5 s,
+     the angle the line names (the pocket for the pocket line). `reel.py`
+     now stops on a pace warning unless `pace_ok=True` is passed with the
+     reason in the brief.
+  2. When a card is up on a split Reel, the strip hides for the card's
+     duration (reel.py does this) or the card absorbs its items as its last
+     rows; never card, framing line and strip stacked. A card's attribution
+     line is at least 40 px (`numgfx.MIN_TEXT`) or moves to the credit line.
+  3. A line about a store page gets the store page as its shot (the
+     pre-order page cropped to the markets row for the Gulf line), not the
+     hero still again: `templates/pageshot.py <url> <out.png> --clip
+     x,y,w,h` (headless Chromium) makes the still.
+  4. Ledger entries record what went out: a split with a card is logged as
+     `clipcard`, so the day and family caps read it correctly (the Nano
+     entry was corrected).
+  5. For the breaking profile, the hook band and the persistent mark are
+     confirmed from a phone screenshot of the first 2 s on the next
+     breaking Reel, since the strip cannot show a 48 px mark; the publish
+     check asks Mohammad for it.
 - Numbers Reels have a living ground (Mohammad, 12 Oct 2026: once the
   title went, the charts sat on "a big purple background" and the sales
   Reels felt stale). Our graphics are drawn on a transparent canvas

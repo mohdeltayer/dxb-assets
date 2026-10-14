@@ -133,9 +133,14 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     (crimson, breaking bed) on any template. NEWS_MAP carries about fifty
     kinds now (CLAUDE.md "Advisor memos, 14 Oct 2026 evening session");
     the brief starts from the advisor canvas scenario for the kind.
-  - Something changes on screen every 3 to 4 s, lines enter on cuts, the
+  - Something changes on screen every 3 to 4 s (reel.py stops on a pace
+    warning unless the brief gives a reason), lines enter on cuts, the
     word-by-word reveal is for the key line only, and the last two seconds
     before the end card are a picture, never a card.
+  - A still is never ten seconds alone: a second angle at 3.5 s, the one the
+    line names; a store-page line gets the page as its shot (pageshot.py).
+  - On a split Reel the strip hides under a card; card type is 40 px or
+    more; the ledger logs a split with a card as clipcard (14 Oct review).
   - A closing question only on stories readers argue about, never on a
     launch or a price.
   - Weekly Instagram views are recorded next to each Reel's template

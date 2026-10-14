@@ -35,6 +35,7 @@ W, H = RL.W, RL.H
 SPEED = 26          # px a second the waves drift
 FPS = 30
 SUB = 'numbers'     # clips are written under uploads/numbers/
+MIN_TEXT = 40       # the smallest type on a card (advisor review, 14 Oct 2026): an attribution line is 40 px or moves to the credit line
 
 
 def canvas():

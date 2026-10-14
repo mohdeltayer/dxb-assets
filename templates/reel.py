@@ -1110,7 +1110,7 @@ def check_reading(lines, end):
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
          lowres_ok=False, read_check=True, track=None, draft=False, head_size=66, cut=False, credits=None, strip=None,
-         products=None, template=None, tribute=False, reveal=None, profile=None):
+         products=None, template=None, tribute=False, reveal=None, profile=None, pace_ok=False):
     """`strip`: [(label, value), ...], 2 or 3 facts for the `split` template
     (Mohammad, 14 Oct 2026): a slim strip pinned low in the safe zone from the end
     of the headline to the end of the clip, the story lines rising above it. A
@@ -1192,8 +1192,11 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             lines = spread(lines, head_secs + 0.1, end)
         if read_check and not voice:
             check_reading(lines, end)
-        for note in (pace_note(starts, end, lines, head_secs if strip else None), close_note(shots)):
-            if note: print(note)               # attention rules (advisor, 14 Oct 2026): warnings, judged in the brief
+        pn = pace_note(starts, end, lines, head_secs if strip else None)
+        if pn and not pace_ok:                 # review of the Nano Reel (advisor, 14 Oct 2026): ten seconds on one still went out
+            raise ValueError(pn + '; cut to a second angle, add a line or a strip, or pass pace_ok=True with the reason in the brief')
+        for note in (pn, close_note(shots)):
+            if note: print(note)               # attention rules (advisor, 14 Oct 2026)
         if reveal is not None:                 # word-by-word reveal on the key line only
             lines = _reveal(lines, reveal)
         if tribute:
@@ -1231,8 +1234,18 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     for i in range(fixed + 1, len(layers) - 1):    # a line leaves before the next arrives (the head and credit are not lines)
         p, a, z = layers[i]; layers[i] = (p, a, min(z, layers[i + 1][1]))
     if strip:                              # after the trim: the strip stays for the rest of the clip, fading in over 0.4 s
-        layers.append((f'{tmp}/strip.png', head_secs if comp is None else starts[comp],
-                       end if comp is None else starts[comp + 1]))
+        if comp is None:                   # it hides under a card (advisor review, 14 Oct 2026): never card, frame line and strip stacked
+            a0, segs = head_secs, []
+            for i, (f, _, _, _) in enumerate(shots):
+                if _ours(f):
+                    z = starts[i]; a1 = starts[i + 1] if i + 1 < len(starts) else end
+                    if z - a0 > 0.6: segs.append((a0, z))
+                    a0 = a1
+            if end - a0 > 0.6: segs.append((a0, end))
+            for a, z in segs:
+                layers.append((f'{tmp}/strip.png', a, z))
+        else:
+            layers.append((f'{tmp}/strip.png', starts[comp], starts[comp + 1]))
     for j, (first, last, text) in enumerate(credits or []):   # after the trim: credits overlap the lines
         a = max(starts[first] + 0.2, head_secs + 0.1)          # not under the headline
         z = starts[last + 1] if last + 1 < len(starts) else end

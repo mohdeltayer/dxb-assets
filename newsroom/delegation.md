@@ -47,6 +47,10 @@ trailers of the game or series; the platform's or publisher's own clips and dev
 diaries; the store page's video; his capture of the game; the source page recorded as
 video (Playwright); our graphics in motion. Only then the official images, three or
 four, neighbouring ones different in kind (art, screen, face), with their sizes.
+A hardware story is no exception (14 Oct review): a single press still needs a
+second angle by 3.5 s, and a line about a store page gets the page itself as a
+still, cropped to the row the line is about (`templates/pageshot.py <url>
+<out.png> --clip x,y,w,h`).
 
 **Render (sonnet).** Given a batch folder with `copyNN.py`, `renderNN.py` and
 the main session's brief per Reel (the news kind and its scenario from the
@@ -114,6 +118,9 @@ push to dxb-queue main, wait for the receipts commit, read the captions back wit
 the .json files) from the folders that now have receipt.json and push that too. Return the post ids and states.
 
 **Publish check (haiku).** `postsListTool` for the given window: report each
+post's state; on the next breaking-lane Reel also ask Mohammad (one line) for a
+phone screenshot of its first 2 s, to confirm the hook band and the 48 px mark
+that the strip cannot show (advisor review, 14 Oct 2026). Then: report each
 post's state and error. Then `newsroom/ledger.py sync`, commit and push
 dxb-assets. Return one line per post.
 
