@@ -612,6 +612,27 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   the slides so crossfades never double the lines. Never a flat ground
   behind a chart again. First sample: the Resident Evil box office Reel
   (`resident-evil-film-record-reel-v2.mp4`, not posted).
+- Windows hold clips, grounds vary (Mohammad, 14 Oct 2026, 09:50 Dubai,
+  after the GBA Nintendo Classics Reel: "Some reels have images like the nso
+  one. For next one if we can small clips in the same place of the image
+  windows it would've been interesting. The background colors for info
+  graphs text is mostly the same with the same subtle animation I think we
+  might need to add variety without loosing the ability to read.").
+  - A framed window on our ground (a game screen, box art, a product shot)
+    plays a short clip when footage exists, with its own sound off and the
+    bed under it, instead of a still: `numgfx.window(clip, box, start,
+    secs)` lays the footage inside the frame, pixel-crisp at integer scale
+    for retro screens. Stills stay only where no footage reaches us through
+    an allowed route (the GBA Reel: Nintendo's clip was on X and YouTube only).
+  - The living ground has styles that rotate like the band styles
+    (`numgfx.GROUNDS`, ledger `templates/assets/ground-ledger.json`): the
+    waves as before, a soft theme glow, a diagonal two-tone wash, a fine
+    dotted grid, angled or denser waves, and a blurred official still of the
+    story behind the chart (dimmed as on the Instagram cards). No two
+    consecutive numbers Reels share a ground, and every ground keeps the
+    text readable: the chart's text area is checked for contrast (the ground
+    behind the type stays at or below the indigo's brightness) before the
+    render.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under

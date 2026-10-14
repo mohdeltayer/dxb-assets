@@ -67,7 +67,11 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - Shots whose subject fits a vertical crop.
   - Enlargement capped at 2x; the standard picture finish on footage.
   - Source order: the publisher's vertical cut, then 4K, then 1080p.
-  - Our own graphics sit on the moving numgfx ground.
+  - Our own graphics sit on the moving numgfx ground, whose style rotates
+    (waves, glow, wash, grid, blurred still) so consecutive numbers Reels
+    differ, with the text area checked for contrast (14 Oct).
+  - A framed window on the ground plays a clip when footage exists, not a
+    still (14 Oct).
 - **Text:**
   - The chip and headline sit at the top for about 3.5 s; the first frame is
     the grid tile.
