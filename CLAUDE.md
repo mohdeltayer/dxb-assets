@@ -612,6 +612,36 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
     (`reel.py` stops on a third). Applies from the next Reel after Valve
     Index; the four that followed it that morning (numbers, clipcard,
     explainer, split) went out before the rule and sit in the window.
+- Strips and sheets go into git (advisor, 14 Oct 2026): every final render
+  commits its `<name>-strip.jpg` (the finished Reel's frames) and
+  `<name>-sheet.jpg` (the shot sheet) to `cards/YYYY-MM/` beside the mp4, in
+  the same ledger commit. Applies from the GT7 Spec IV Reel of 14 Oct; the
+  strips of valve-index-sunset, total-war-shogun-2-complete-edition and
+  ps-store-three-sony-games-missing were committed that day too.
+- Autofocus aims at a subject (advisor, 14 Oct 2026): `reel.autofocus` runs a
+  small object detector (YOLOv8n on CPU) on three frames per scene and centres
+  the 9:16 window on the largest person, vehicle or animal; the spectral
+  saliency stays as the fallback when nothing is detected. Each scene returns
+  two keyframes (the subject at 25% and 75% of the scene) so the window pans
+  with a moving subject, and `reel.shotsheet` draws the crop window on the full
+  16:9 frame next to each cropped frame. First draft goes to Mohammad before
+  use; applies from the next Reel after it lands.
+- `edition` template (advisor, 14 Oct 2026), for special and collector's
+  editions, bundles, limited consoles, accessories and tier contents: a 3.5 s
+  trailer hook with the headline, then the contents one at a time on the
+  numgfx living ground as publisher press-render cut-outs (hero item first and
+  largest), each drifting in from the right with a soft shadow, name in Dubai
+  Bold 64 and an optional one-line note in Medium 44 body colour, 2.5 to 3 s
+  each, four to six items; then one composition frame of every item with the
+  price strip pinned low (price, date, where; strip only, never in a line);
+  2 s of footage under the closing line; end card. Trailer music runs under
+  the whole Reel; gold theme for premium editions, otherwise the story's
+  theme; chip رسمي or السعر. In reel.py a `products=[(png, name, note)]` shot
+  type on the numgfx ground with drift and shadow, and the composition frame;
+  cut-outs from press kits with backgrounds removed in the build step; the
+  fallback is the publisher's photos unmasked, else the story stays on
+  `split`. In `formats.py` it joins FORMATS and NEWS_MAP (kind `edition`:
+  `['edition', 'split']`), card-led family. First draft to Mohammad before use.
 - Numbers Reels have a living ground (Mohammad, 12 Oct 2026: once the
   title went, the charts sat on "a big purple background" and the sales
   Reels felt stale). Our graphics are drawn on a transparent canvas

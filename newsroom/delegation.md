@@ -50,6 +50,9 @@ sees and why it shows that line; CLAUDE.md "Creative brief and formats" and
 "Templates and scenarios", 14 Oct): `check`, then `sheet`, then `draft`, then `strip`, and stop there with the
 paths. A line over a card must be at most one visual line of framing or
 absent (one fact, one place); report any line that repeats its card. After the main session clears the draft: `final`, `strip`,
+copy that final strip and the shot sheet to `cards/YYYY-MM/<name>-strip.jpg`
+and `<name>-sheet.jpg` (advisor, 14 Oct 2026: both go into git in the same
+ledger commit as the mp4),
 `outro.snap_cut` per Reel, 2-pass phone copies over 30 MB
 (`vb = 27*8192/dur - 192`, `-passlogfile` before the output), two renders at a
 time at most. Return paths and any error verbatim.
@@ -98,7 +101,9 @@ A trigger wakes the main session about 35 minutes before each slot:
    next free slot under the cadence rules (next quarter hour, at least 15
    minutes out, 30 minutes after the previous post in 08:00 to 23:00 Dubai,
    90 overnight, no two in a row on one game or publisher), push (Publish
-   card), and send him the preview with that time. His number moves a story
+   card), commit the Reel to dxb-assets together with its `<name>-strip.jpg`
+   and `<name>-sheet.jpg` in the same ledger commit (advisor, 14 Oct 2026),
+   and send him the preview with that time. His number moves a story
    to the front, "skip N" drops it, "hold" holds; silence runs the queue.
 
 Between slots he is only interrupted for genuine breaking news (عاجل level).

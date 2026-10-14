@@ -110,12 +110,19 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 - **Variety:**
   - Themes per story; band styles rotate through the ledger.
   - No more than two Reels in a row share a template.
+  - Landing (14 Oct, first draft to Mohammad before use): `edition` (editions,
+    bundles, limited consoles: press-render cut-outs drifting onto the living
+    ground, then one composition frame with the price strip; card-led) and a
+    subject-detecting `autofocus` (YOLOv8n, two keyframes per scene, crop
+    window drawn on the shot sheet).
   - The retro sound is for on-this-day pieces only.
 - **Process:**
   1. A five-line brief.
   2. `shotsheet`.
   3. `draft`, then `strip`, looked at frame by frame.
-  4. `final`, then `strip` again.
+  4. `final`, then `strip` again; the final strip and the shot sheet are
+     committed to `cards/YYYY-MM/` as `<name>-strip.jpg` and
+     `<name>-sheet.jpg` with the mp4 (14 Oct).
   - (CLAUDE.md "Full-screen format", "Creative brief and formats")
 
 ## Platforms
