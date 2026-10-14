@@ -1,6 +1,6 @@
 {
  "id": "2026-10-14-ps-store-three-sony-games-missing",
- "title": "Three Sony PS4 games (Knack 2, Uncharted: The Nathan Drake Collection, God of War III Remastered) missing from the US PlayStation Store, no explanation; Kotaku report",
+ "title": "Three Sony PS4 games (Knack 2, Uncharted: The Nathan Drake Collection, God of War III Remastered) missing from the US PlayStation Store, no word from Sony; Kotaku report",
  "game": "",
  "companies": [
   "Sony Interactive Entertainment"
@@ -39,6 +39,11 @@
    "text": "No statement from Sony",
    "status": "verified",
    "source": "checked 14 Oct, re-check before queuing"
+  },
+  {
+   "text": "Re-check 10:58Z before queuing: no Sony statement (PlayStation Blog, support, outlets), no relisting report, Kotaku article unmodified (dateModified = 13 Oct 21:15Z); Kotaku frames it as apparently temporary after the Mexico pricing error and says the games were delisted in different regions; Spanish and Indian outlets ran it on 11 Oct",
+   "status": "verified",
+   "source": "re-check 14 Oct 10:58Z"
   }
  ],
  "why": "Three first-party PS4 games vanishing from the store with no word from Sony; an outlet report, labelled as one",
@@ -66,6 +71,11 @@
    "v": 1,
    "at": "2026-10-14T09:50:00Z",
    "change": "first build from the 14:00 intake; grammar review; DeepL back-check; rolling queue"
+  },
+  {
+   "v": 2,
+   "at": "2026-10-14T11:00:00Z",
+   "change": "headline and X line: \"with no explanation from the company\" instead of \"with no explanation\", since Kotaku itself offers the pricing-error cause"
   }
  ]
 }
