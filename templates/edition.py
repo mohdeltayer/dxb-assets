@@ -265,7 +265,7 @@ def _render(art, text, secs, theme, out, ground, seed, t0, region, drift=None, f
               f"[a][tx]overlay=0:0:format=auto,fps={FPS},format=yuv420p[v]")
         args = (['ffmpeg', '-nostdin', '-y', '-v', 'error'] +
                 NG._run_inputs(files + [f'{tmp}/art.png', tp], secs))
-        enc = RL.DRAFT_ENC if fast else ['-preset', 'slow', '-crf', '15']
+        enc = RL.DRAFT_ENC if fast else RL.FINAL_ENC
         subprocess.run(args + ['-filter_complex', fc, '-map', '[v]', '-t', f'{secs:.3f}', '-c:v', 'libx264',
                                '-pix_fmt', 'yuv420p'] + enc + [out], check=True)
     finally:

@@ -59,7 +59,12 @@ and one reason per line saying what the viewer sees and why it shows that line; 
 "Templates and scenarios", 14 Oct): `check`, then `sheet`, then `draft`, then `strip`, and stop there with the
 paths. A line over a card must be at most one visual line of framing or
 absent (one fact, one place); report any line that repeats its card. Report
-the `length`, `pace` and `close` lines reel.py prints at `check` when they warn.
+the `length`, `pace` and `close` lines reel.py prints at `check` when they warn,
+and the `render times` line the final render prints (seconds per stage: checks,
+montage, text, audio, outro; advisor, 14 Oct 2026: recorded for the next ten
+Reels in `templates/assets/render-times.json`, before and after the one-encode
+chain). A breaking-lane Reel renders with `profile='breaking'` and skips the
+draft step.
 On the strip, confirm the mark sits top left for the whole Reel, the credit
 line is absent on the first frame and present from 2 s, and the end card is
 2 s (advisor, 14 Oct 2026). After the main session clears the draft: `final`, `strip`,
@@ -69,6 +74,13 @@ ledger commit as the mp4),
 `outro.snap_cut` per Reel, 2-pass phone copies over 30 MB
 (`vb = 27*8192/dur - 192`, `-passlogfile` before the output), two renders at a
 time at most. Return paths and any error verbatim.
+
+**Evening pre-fetch (sonnet), about 22:00 Dubai.** For every dated story in
+`newsroom/events.md` due the next day (and the next Famitsu Thursday): fetch
+the footage and official images through the allowed routes, make the seekmap
+sheets, and run `reel.warm_cache(shots)` on the likely stretches so the picture
+pass is cached under `uploads/cache/` before the day (advisor, 14 Oct 2026, rule
+6). Report what is cached and what has no footage route yet.
 
 **Drafts (haiku).** Run `jobsNN.py`, then
 `preflight.py --no-approval` on each new draft folder, and `ledgerNN.py`.

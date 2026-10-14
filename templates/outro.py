@@ -183,35 +183,67 @@ def evolving_bed(style, secs):
     return p
 
 
-def append(video, out, style='neon', bed=None, jingle=None, accent=None, quiet=False):
-    """`quiet` (tribute, advisor 14 Oct 2026): the end card with the mark and no jingle; the bed fades out under it."""
+FINAL_A = ['-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-ac', '2']
+GROUND_HEX = '0x141332'
+
+
+def card_master(style, accent=None, quiet=False, platforms=PLATFORMS):
+    """Rule 4 (advisor, 14 Oct 2026): the end card rendered once per (sound, theme, quiet,
+    platforms) with its jingle, encoded at the final parameters with a LEAD fade in from the
+    ground, and appended to every Reel by the concat demuxer without a re-encode."""
+    os.makedirs(CACHE, exist_ok=True)
+    acc = accent or A.AZURE
+    key = f"card-{style}-{'%02x%02x%02x' % tuple(acc[:3])}-{'q' if quiet else 'j'}-{len(platforms)}.mp4"
+    p = f'{CACHE}/{key}'
+    fresh = max(os.path.getmtime(__file__), os.path.getmtime(sonic.__file__))
+    if os.path.exists(p) and os.path.getmtime(p) > fresh:
+        return p
+    tmp = tempfile.mkdtemp(prefix='outro-')
+    frames = card(style, f'{tmp}/card.mp4', acc, platforms=platforms, quiet=quiet)
+    cmd = ['ffmpeg', '-y', '-v', 'error', '-ss', str(LEAD), '-i', frames]        # the LEAD of crossfade frames is not needed
+    if quiet:
+        cmd += ['-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo']
+        af = '[1:a]atrim=0:%.3f[a]' % CARD
+    else:
+        cmd += ['-i', _cached('jingle', style)]
+        af = f'[1:a]aformat=sample_rates=48000:channel_layouts=stereo,atrim=0:{CARD:.3f},afade=t=out:st={CARD - 0.5:.3f}:d=0.5[a]'
+    vf = f'[0:v]trim=duration={CARD:.3f},setpts=PTS-STARTPTS,fps={FPS},fade=t=in:st=0:d={LEAD}:color={GROUND_HEX},setsar=1,format=yuv420p[v]'
+    subprocess.run(cmd + ['-filter_complex', vf + ';' + af, '-map', '[v]', '-map', '[a]', '-t', f'{CARD:.3f}',
+                          '-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-pix_fmt', 'yuv420p', '-profile:v', 'high',
+                          '-video_track_timescale', '15360'] + FINAL_A + [p + '.part.mp4'], check=True)
+    os.replace(p + '.part.mp4', p)
+    shutil.rmtree(tmp, ignore_errors=True)
+    return p
+
+
+def append(video, out, style='neon', bed=None, jingle=None, accent=None, quiet=False, enc=None):
+    """The one real encode of a Reel (advisor, 14 Oct 2026): the lossless body gets its sound
+    (its own, or the bed) and a LEAD fade to the ground, encoded once at `enc` (reel.FINAL_ENC),
+    and the cached end-card master is joined with the concat demuxer, no re-encode. `quiet`
+    (tribute): the card with the mark and no jingle, the bed fading out under it."""
+    import reel
     if style not in sonic.FLAVOURS:
         raise ValueError(f'sound is one of {", ".join(sonic.FLAVOURS)}')
+    enc = enc or reel.FINAL_ENC
+    master = card_master(style, accent, quiet)
     tmp = tempfile.mkdtemp(prefix='outro-')
-    end = card(style, f'{tmp}/card.mp4', accent, quiet=quiet)
-    jingle = jingle or _cached('jingle', style)
     d = _dur(video)
-    total = d + CARD
-    cmd = ['ffmpeg', '-y', '-v', 'error', '-i', video, '-i', end]
-    v = (f'[0:v]fps={FPS},scale={W}:{H},setsar=1,format=yuv420p[v0];'
-         f'[1:v]fps={FPS},setsar=1,format=yuv420p[v1];'
-         f'[v0][v1]xfade=transition=fade:duration={LEAD}:offset={d - LEAD:.3f}[v];')
-    if quiet:
-        j = 'anullsrc=r=48000:cl=stereo[j];'
-        bi = 2
-    else:
-        cmd += ['-i', jingle]; bi = 3
-        j = f'[2:a]adelay={int(d * 1000)}:all=1,afade=t=out:st={total - 0.5:.3f}:d=0.5[j];'   # the ring fades with the card
+    cmd = ['ffmpeg', '-y', '-v', 'error', '-i', video]
+    v = f'[0:v]fps={FPS},scale={W}:{H},setsar=1,fade=t=out:st={max(0, d - LEAD):.3f}:d={LEAD}:color={GROUND_HEX},format=yuv420p[v];'
     if _has_audio(video):
-        a = f'[0:a]afade=t=out:st={max(0, d - 0.6):.2f}:d=0.6[b];'
+        a = f'[0:a]aformat=sample_rates=48000:channel_layouts=stereo,afade=t=out:st={max(0, d - 0.6):.2f}:d=0.6[a]'
     else:
         cmd += ['-stream_loop', '-1', '-i', bed or evolving_bed(style, d)]
-        tail = f'atrim=0:{total:.3f},afade=t=out:st={max(0, total - 1.5):.2f}:d=1.5' if quiet else f'atrim=0:{d:.3f},afade=t=out:st={max(0, d - 1.0):.2f}:d=1.0'
-        a = f'[{bi}:a]volume=-2dB,afade=t=in:d=0.4,{tail}[b];'
-    fc = v + j + a + f'[b][j]amix=inputs=2:duration=longest:normalize=0,apad[a]'
-    subprocess.run(cmd + ['-filter_complex', fc, '-map', '[v]', '-map', '[a]', '-t', f'{total:.3f}',
-                          '-c:v', 'libx264', '-preset', 'slow', '-crf', '17', '-pix_fmt', 'yuv420p', '-profile:v', 'high', '-c:a', 'aac',
-                          '-b:a', '160k', '-ar', '48000', '-movflags', '+faststart', out], check=True)
+        a = (f'[1:a]aformat=sample_rates=48000:channel_layouts=stereo,volume=-2dB,afade=t=in:d=0.4,atrim=0:{d:.3f},'
+             f'afade=t=out:st={max(0, d - 1.0):.2f}:d=1.0[a]')
+    body = f'{tmp}/body-final.mp4'
+    subprocess.run(cmd + ['-filter_complex', v + a, '-map', '[v]', '-map', '[a]', '-t', f'{d:.3f}',
+                          '-c:v', 'libx264'] + enc + ['-pix_fmt', 'yuv420p', '-profile:v', 'high', '-video_track_timescale', '15360']
+                   + FINAL_A + [body], check=True)
+    lst = f'{tmp}/concat.txt'
+    open(lst, 'w').write(f"file '{body}'\nfile '{master}'\n")
+    subprocess.run(['ffmpeg', '-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', lst, '-c', 'copy',
+                    '-movflags', '+faststart', out], check=True)
     shutil.rmtree(tmp, ignore_errors=True)
     return out
 

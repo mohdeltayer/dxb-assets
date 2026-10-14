@@ -29,7 +29,7 @@ strip: [(label, value), ...] (2 or 3) pins the `split` template's fact strip low
        lines rise above it and never repeat a value. A value is a string, or
        ('aed', '149') for digits with the dirham symbol left of them.
 """
-import math, os, re, shutil, subprocess, sys, tempfile
+import json, math, os, re, shutil, subprocess, sys, tempfile
 from PIL import Image, ImageDraw, ImageFilter
 import cards as C, fast_ar as A, ig_ar as G, outro, sonic
 
@@ -729,6 +729,9 @@ def montage(shots, out, lowres_ok=False, fast=False):
     sound = any(not st and _has_audio(C.U + s[0]) for s, st in zip(shots, stills))
     args = ['ffmpeg', '-nostdin', '-y', '-v', 'error']
     fc = []
+    if CACHE_PICTURE and not fast:         # the picture pass per footage shot comes from the cache (advisor, 14 Oct 2026)
+        shots = [((cached_shot(f, s, d, fo, lowres_ok), 0.0, d, fo) if not st and not _ours(f) and not f.startswith(CACHE + '/') else (f, s, d, fo))
+                 for (f, s, d, fo), st in zip(shots, stills)]
     for i, ((f, s, d, fo), st) in enumerate(zip(shots, stills)):
         if st:
             a, b = fo if isinstance(fo, (tuple, list)) else (fo, fo)
@@ -742,6 +745,9 @@ def montage(shots, out, lowres_ok=False, fast=False):
             fc.append(f'[{i}:v]scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,'
                       f"crop={W}:{H}:x='(iw-{W})*({a}+({b}-{a})*t/{d})':y='(ih-{H})/2'{fin},"
                       f'fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]')
+        elif f.startswith(CACHE + '/'):       # already the finished picture at 1080x1920, exactly d long
+            args += ['-t', str(d), '-i', C.U + f]
+            fc.append(f'[{i}:v]settb=AVTB,setsar=1,format=yuv420p[v{i}]')
         else:
             args += ['-ss', str(s), '-t', str(d), '-i', C.U + f]
             # Footage is 16:9, so filling 9:16 enlarges it (1.78x for 1080p, more
@@ -780,8 +786,9 @@ def montage(shots, out, lowres_ok=False, fast=False):
         if sound:
             fc.append(f'[{pa}][a{i}]acrossfade=d={X}[xa{i}]'); pa = f'xa{i}'
         t = off + shots[i][2]
-    maps = ['-map', f'[{pv}]'] + (['-map', f'[{pa}]', '-c:a', 'aac', '-b:a', '192k'] if sound else [])
-    subprocess.run(args + ['-filter_complex', ';'.join(fc)] + maps + ['-c:v', 'libx264', '-pix_fmt', 'yuv420p'] + (DRAFT_ENC if fast else ['-preset', 'slow', '-crf', '15']) + [out], check=True)
+    aenc = ['-c:a', 'aac', '-b:a', '192k'] if fast else ['-c:a', 'pcm_s16le']   # lossless sound in the intermediate
+    maps = ['-map', f'[{pv}]'] + (['-map', f'[{pa}]'] + aenc if sound else [])
+    subprocess.run(args + ['-filter_complex', ';'.join(fc)] + maps + ['-c:v', 'libx264', '-pix_fmt', 'yuv420p'] + (DRAFT_ENC if fast else inter_enc()) + [out], check=True)
     return starts, t
 
 
@@ -793,6 +800,79 @@ def read_secs(text):
 
 
 DRAFT_ENC = ['-preset', 'ultrafast', '-crf', '30']
+#: Render time (advisor, 14 Oct 2026). One encode per Reel: the montage and the text pass write lossless intermediates
+#: (INTER_ENC; a near-lossless crf 8 when the disk has under 3 GB free), and only outro.append encodes, at FINAL_ENC
+#: (Instagram re-encodes to about 5 Mbps, so slow/15 bought nothing visible). The picture pass per footage shot
+#: (bars, denoise, enlarge, cas, grade) is cached under uploads/cache keyed by (file, start, duration, focus) so a text
+#: or strip change only re-burns the text. PROFILES['breaking'] is the breaking lane's fast path.
+FINAL_ENC = ['-preset', 'medium', '-crf', '18']
+INTER_ENC = ['-preset', 'ultrafast', '-qp', '0']
+CACHE = 'cache'                      # uploads/cache/<key>.mkv
+CACHE_PICTURE = True
+PROFILES = {'breaking': dict(finish=False, enc=['-preset', 'veryfast', '-crf', '20'], music=False)}
+TIMES = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'render-times.json')
+
+
+def inter_enc():
+    free = shutil.disk_usage(C.U).free
+    return INTER_ENC if free > 3e9 else ['-preset', 'ultrafast', '-crf', '8']
+
+
+def _shot_key(f, s, d, fo):
+    import hashlib
+    src = C.U + f
+    raw = json.dumps([f, s, d, repr(fo), FINISH, MAX_ZOOM, DENOISE, GRADE, os.path.getmtime(src), os.path.getsize(src)])
+    return hashlib.sha1(raw.encode()).hexdigest()[:16]
+
+
+def cached_shot(f, s, d, fo, lowres_ok=False):
+    """The picture pass for one footage shot, rendered once to uploads/cache/<key>.mkv
+    (video at inter_enc, the shot's own sound as pcm) and reused by every later
+    render of the same (file, start, duration, focus). Returns the cache path
+    relative to uploads."""
+    os.makedirs(C.U + CACHE, exist_ok=True)
+    key = _shot_key(f, s, d, fo)
+    rel = f'{CACHE}/{key}.mkv'
+    if os.path.exists(C.U + rel):
+        return rel
+    bars, rows = _bars(C.U + f, s, d)
+    if rows < MIN_SRC_H and not lowres_ok:
+        raise ValueError(f'{f}: only {rows} rows of picture (bars cut), enlarged {H / rows:.1f}x; '
+                         f'find a 4K or unletterboxed copy, or pass lowres_ok=True when none exists')
+    if FINISH and not _ours(f):
+        pre, post = f'{DENOISE},', f",cas={0.7 if rows < H else 0.4},{GRADE}"
+    else:
+        pre, post = '', (',unsharp=5:5:0.5:5:5:0.0' if rows < H else '')
+    vf = (f"{bars}{pre}scale=-2:{H}:flags=lanczos,crop={W}:{H}:x='(iw-{W})*({_fo_expr(fo, d)})':y=0{post},"
+          f"fps=30,tpad=stop_mode=clone:stop_duration=0.5,trim=duration={d},setpts=PTS-STARTPTS,setsar=1,format=yuv420p")
+    a = ['-map', '0:a?', '-c:a', 'pcm_s16le', '-ar', '48000', '-ac', '2'] if _has_audio(C.U + f) else ['-an']
+    tmp = C.U + rel + '.part.mkv'
+    subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-ss', str(s), '-t', str(d), '-i', C.U + f, '-vf', vf,
+                    '-map', '0:v', '-c:v', 'libx264', '-pix_fmt', 'yuv420p'] + inter_enc() + a + ['-t', str(d), tmp], check=True)
+    os.replace(tmp, C.U + rel)
+    return rel
+
+
+def warm_cache(shots, lowres_ok=False):
+    """Rule 6 (advisor, 14 Oct 2026): for a dated story, run the picture pass the
+    evening before so the render on the day is text and outro only."""
+    out = []
+    for f, s, d, fo in shots:
+        if os.path.splitext(f)[1].lower() not in STILL and not _ours(f) and not f.startswith(CACHE + '/'):
+            out.append(cached_shot(f, s, d, fo, lowres_ok))
+    return out
+
+
+def _record_times(name, profile, stages):
+    try:
+        led = json.load(open(TIMES))
+    except (OSError, ValueError):
+        led = []
+    import datetime
+    led.append(dict(name=name, profile=profile or 'standard', at=datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%MZ'),
+                    stages={k: round(v, 1) for k, v in stages.items()}, total=round(sum(stages.values()), 1)))
+    json.dump(led[-100:], open(TIMES, 'w'), indent=1)
+    return led[-1]
 PINK_FLAG = False         # Mohammad, 4 Oct 2026: pink in game footage and official art is fine
 PINK = (210, 242)       # PIL HSV hue band for pink and magenta (red and purple stay out)
 
@@ -978,7 +1058,7 @@ def _voice_over(body, voice, end, duck_db, out):
         mix *= 0.89 / peak
     sf.write(f'{tmp}/mix.wav', mix, sr, subtype='FLOAT')
     subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', body, '-i', f'{tmp}/mix.wav',
-                    '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k',
+                    '-map', '0:v', '-map', '1:a', '-c:v', 'copy'] + (['-c:a', 'pcm_s16le'] if out.endswith('.mkv') else ['-c:a', 'aac', '-b:a', '192k']) + [
                     '-t', f'{end:.3f}', out], check=True)
     return out
 
@@ -1008,8 +1088,8 @@ def _track(body, track, end, out):
     src = _music(f) if mode and mode[0] == 'music' else C.U + f
     subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', body, '-ss', str(start), '-t', f'{end:.3f}', '-i', src,
                     '-filter_complex', '[1:a]aformat=sample_rates=48000:channel_layouts=stereo,afade=t=in:d=0.3[a]',
-                    '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k',
-                    '-t', f'{end:.3f}', out], check=True)
+                    '-map', '0:v', '-map', '[a]', '-c:v', 'copy'] + (['-c:a', 'pcm_s16le'] if out.endswith('.mkv') else ['-c:a', 'aac', '-b:a', '192k']) +
+                   ['-t', f'{end:.3f}', out], check=True)
     return out
 
 
@@ -1030,7 +1110,7 @@ def check_reading(lines, end):
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
          lowres_ok=False, read_check=True, track=None, draft=False, head_size=66, cut=False, credits=None, strip=None,
-         products=None, template=None, tribute=False, reveal=None):
+         products=None, template=None, tribute=False, reveal=None, profile=None):
     """`strip`: [(label, value), ...], 2 or 3 facts for the `split` template
     (Mohammad, 14 Oct 2026): a slim strip pinned low in the safe zone from the end
     of the headline to the end of the clip, the story lines rising above it. A
@@ -1073,9 +1153,25 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         try:
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, credits=credits, strip=strip,
-                        products=products, template=template, tribute=tribute, reveal=reveal)
+                        products=products, template=template, tribute=tribute, reveal=reveal, profile=profile)
         finally:
             X = keep
+    global FINISH
+    if profile and not PROFILES[profile].get('finish', True) and FINISH:   # the breaking profile: no picture finish, no demucs
+        keep_f, FINISH = FINISH, False
+        try:
+            return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
+                        style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, cut, credits=credits, strip=strip,
+                        products=products, template=template, tribute=tribute, reveal=reveal, profile=profile)
+        finally:
+            FINISH = keep_f
+    if profile and not PROFILES[profile].get('music', True) and isinstance(track, (tuple, list)) and len(track) > 2:
+        track = tuple(track[:2])
+    import time
+    stages, _t = {}, time.time()
+    def lap(k):
+        nonlocal _t
+        stages[k] = time.time() - _t; _t = time.time()
     G._ACC = G.ACCENTS[theme]
     comp = None                            # index of the composition shot (edition template)
     if products:                           # hook + items + composition + closing (14 Oct 2026)
@@ -1113,7 +1209,10 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
                         raise ValueError(f'the composition frame ({sa:.1f} to {sz:.1f}s) carries the strip only, never a line: {t}')
         for i, (text, _, _, kw) in enumerate(lines):   # a line outside the safe zone stops here, not after the encode
             line_layer(text, f'{tmp}/l{i}.png', **kw)
-        montage(shots, f'{tmp}/cut.mp4', lowres_ok, fast=draft)
+        lap('checks')
+        ext = 'mp4' if draft else 'mkv'             # lossless intermediates for the real render (advisor, 14 Oct 2026)
+        montage(shots, f'{tmp}/cut.{ext}', lowres_ok, fast=draft)
+        lap('montage')
     except Exception:
         shutil.rmtree(tmp, ignore_errors=True)
         raise
@@ -1141,7 +1240,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         if z - a > 0.5:                                        # a low credit sits just above the strip, not on it
             layers.append((credit_layer(text, f'{tmp}/c{j}.png', low=low,
                                         y=STRIP_TOP - 12 if low and strip else None), a, z))
-    args = ['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', f'{tmp}/cut.mp4']
+    args = ['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', f'{tmp}/cut.{ext}']
     for p, _, _ in layers:
         args += ['-loop', '1', '-t', f'{end:.2f}', '-i', p]
     fc = ['[0:v]setsar=1,fps=30[v0]']
@@ -1150,19 +1249,21 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         fout = f',fade=t=out:st={z - 0.2:.2f}:d=0.2:alpha=1' if z < end - 0.01 else ''
         fc += [f'[{i}:v]format=rgba{fin}{fout}[l{i}]', f'[v{i - 1}][l{i}]overlay=0:0:shortest=1[v{i}]']
     fc.append(f'[v{len(layers)}]format=yuv420p[v]')
-    body = f'{tmp}/body.mp4'
-    amap = ['-map', '0:a?', '-c:a', 'aac']
+    body = f'{tmp}/body.{ext}'
+    amap = ['-map', '0:a?'] + (['-c:a', 'aac'] if draft else ['-c:a', 'copy'])
     subprocess.run(args + ['-filter_complex', ';'.join(fc), '-map', '[v]'] + amap +
-                   ['-c:v', 'libx264', '-pix_fmt', 'yuv420p'] + (DRAFT_ENC if draft else ['-preset', 'slow', '-crf', '16'])
+                   ['-c:v', 'libx264', '-pix_fmt', 'yuv420p'] + (DRAFT_ENC if draft else inter_enc())
                    + [body], check=True)
+    lap('text')
     if track == 'bed':                     # no good stretch in the trailer: our own bed under the cut (6 Oct 2026)
         subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', body, '-map', '0:v', '-c:v', 'copy', '-an',
-                        f'{tmp}/silent.mp4'], check=True)
-        body = f'{tmp}/silent.mp4'
+                        f'{tmp}/silent.{ext}'], check=True)
+        body = f'{tmp}/silent.{ext}'
     elif track:
-        body = _track(body, track, end, f'{tmp}/track.mp4')
+        body = _track(body, track, end, f'{tmp}/track.{ext}')
     if voice:
-        body = _voice_over(body, voice, end, duck_db, f'{tmp}/voiced.mp4')
+        body = _voice_over(body, voice, end, duck_db, f'{tmp}/voiced.{ext}')
+    lap('audio')
     if draft:                              # no end card, no bed: the draft is for checking the cut
         done = os.path.splitext(out)[0] + '-draft.mp4'
         shutil.move(body, done)
@@ -1174,6 +1275,9 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         bed = outro.evolving_bed(sonic.rotate(os.path.basename(out)), end)
     elif sound in sonic.EVERYDAY:              # a named everyday bed (the tribute's calm neon_c)
         bed = outro.evolving_bed(sound, end)
-    done = outro.append(body, out, sound, bed=bed, accent=G.ACCENTS[theme], quiet=tribute)
+    done = outro.append(body, out, sound, bed=bed, accent=G.ACCENTS[theme], quiet=tribute,
+                        enc=PROFILES[profile]['enc'] if profile else None)   # the one real encode (advisor, 14 Oct 2026)
+    lap('outro')
     shutil.rmtree(tmp, ignore_errors=True)  # the temp renders filled the disk on 2 Oct
+    print('render times', _record_times(os.path.basename(out), profile, stages))
     return done, starts, end

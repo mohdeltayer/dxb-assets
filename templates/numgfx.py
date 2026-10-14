@@ -352,7 +352,7 @@ def slide(graphic, secs, theme, out, seed=0, t0=0.0, fast=False, ground=None, st
         n = len(files)
         fc = f"{graph};[gw][{n}:v]overlay=0:0:format=auto,fps={FPS},format=yuv420p[v]"
         args = ['ffmpeg', '-nostdin', '-y', '-v', 'error'] + _run_inputs(files + [f'{tmp}/f.png'], secs)
-        enc = RL.DRAFT_ENC if fast else ['-preset', 'slow', '-crf', '15']
+        enc = RL.DRAFT_ENC if fast else RL.FINAL_ENC
         subprocess.run(args + ['-filter_complex', fc, '-map', '[v]', '-c:v', 'libx264', '-pix_fmt', 'yuv420p']
                        + enc + [out], check=True)
     finally:
@@ -435,7 +435,7 @@ def window(graphic, clip, box, start, secs, out, theme, ground=None, seed=0, t0=
               f"[gc][{n}:v]overlay=0:0:format=auto,fps={FPS},format=yuv420p[v]")
         args = (['ffmpeg', '-nostdin', '-y', '-v', 'error'] + _run_inputs(files + [f'{tmp}/f.png'], secs)
                 + ['-ss', f'{start:.3f}', '-t', f'{secs:.3f}', '-i', src])
-        enc = RL.DRAFT_ENC if fast else ['-preset', 'slow', '-crf', '15']
+        enc = RL.DRAFT_ENC if fast else RL.FINAL_ENC
         subprocess.run(args + ['-filter_complex', fc, '-map', '[v]', '-an', '-t', f'{secs:.3f}',
                                '-c:v', 'libx264', '-pix_fmt', 'yuv420p'] + enc + [out], check=True)
     finally:

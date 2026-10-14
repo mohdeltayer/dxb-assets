@@ -150,6 +150,12 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   4. `final`, then `strip` again; the final strip and the shot sheet are
      committed to `cards/YYYY-MM/` as `<name>-strip.jpg` and
      `<name>-sheet.jpg` with the mp4 (14 Oct).
+  - Render time (14 Oct): one real encode per Reel at medium/18, lossless
+    intermediates, the picture pass cached per shot under uploads/cache,
+    end-card masters joined by concat; the breaking lane renders on the
+    `breaking` profile (no finish, veryfast/20, no draft); dated stories
+    have their footage cached the evening before; seconds per stage go to
+    `templates/assets/render-times.json`.
   - (CLAUDE.md "Full-screen format", "Creative brief and formats")
 
 ## Platforms

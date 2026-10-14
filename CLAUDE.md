@@ -751,6 +751,50 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   reason, sound) is on the advisor canvas "Digital Lounge Reel
   Templates", board "Scenarios by news kind"; a brief for a story of that
   kind starts from it.
+- Render time (advisor, 14 Oct 2026):
+  1. The final encode is `-preset medium -crf 18` (`reel.FINAL_ENC`; was
+     slow, 15) in reel.py, numgfx.py, edition.py and outro.py's per-Reel
+     pass; `-preset slow` stays only for the cached end-card masters.
+     Instagram re-encodes to about 5 Mbps, so the difference is not
+     visible after upload.
+  2. One encode per Reel: the montage and the text pass write lossless
+     intermediates (`reel.INTER_ENC`, `-preset ultrafast -qp 0`, mkv with
+     pcm sound; a near-lossless crf 8 when the disk has under 3 GB free),
+     the track and voice steps copy the video, and only `outro.append`
+     encodes.
+  3. The picture pass (bars, denoise, enlarge, cas, grade) is cached per
+     (file, start, duration, focus) under `uploads/cache/` as
+     `<key>.mkv` (`reel.cached_shot`); the montage takes the cached clip
+     as a plain input, so a text or strip change re-burns the text over
+     the cache. The daily cleanup removes cache clips untouched for 3
+     days like other fetched footage.
+  4. End cards are rendered once per (sound, theme, quiet, platforms) as
+     a master (`outro.card_master`, in `~/.cache/digi-sound/`, preset
+     slow, with the jingle and a 0.3 s fade in from the ground) and joined
+     to the body with the concat demuxer, no re-encode. The body's final
+     encode ends on a 0.3 s fade to the ground in place of the old
+     crossfade.
+  5. Breaking profile for the breaking lane (`reel(..., profile=
+     'breaking')`, `reel.PROFILES`): trailer template, FINISH off, no
+     demucs (a 'music' track falls back to the plain stretch), the final
+     encode `-preset veryfast -crf 20`, no draft step; target under 2
+     minutes.
+  6. For dated stories in `newsroom/events.md`, the footage is fetched and
+     the picture pass cached the evening before (`reel.warm_cache(shots)`;
+     the evening pre-fetch card in `newsroom/delegation.md`).
+  7. If slot batches still queue behind one render, renders move to a
+     GitHub Actions workflow in dxb-queue (one job per story, in
+     parallel). Cost before switching: about 8 to 12 Actions minutes per
+     Reel on the 2-core runner (the free tier's 2,000 minutes a month
+     covers about 170 Reels; a paid minute is $0.008, so a 12-post day is
+     about $1), plus the Dubai font as an encrypted secret because it
+     cannot go in the public repo, and the footage uploaded with the job.
+     Not switched; measured first.
+  Measure before and after: every render appends its seconds per stage
+  (checks, montage, text, audio, outro) to
+  `templates/assets/render-times.json`, and the render task card records
+  them for the next ten Reels. Baseline, the Xbox Nano Reel (18.6 s, a
+  still, a graphic and a still) on the old chain, is in the same file.
 - Numbers Reels have a living ground (Mohammad, 12 Oct 2026: once the
   title went, the charts sat on "a big purple background" and the sales
   Reels felt stale). Our graphics are drawn on a transparent canvas
