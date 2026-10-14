@@ -128,6 +128,14 @@ dxb-assets. Return one line per post.
 (ledgers, story files, cards); never touch dxb-queue.
 Disk cleanup runs daily on its own (`newsroom/disk_cleanup.sh`, 02:47 Dubai);
 run it by hand when free space drops under about 4 GB.
+Posted Reels stay out of the working tree (14 Oct 2026, after the disk filled
+mid-render with 7.5 GB of October mp4s checked out): dxb-assets uses a
+non-cone sparse checkout that excludes `cards/2026-09/` and
+`cards/2026-10/*.mp4`; every file stays in git. Before a new render is
+committed, re-include it by name so `git add` takes it:
+`git sparse-checkout add '/cards/2026-10/<name>*'` (its strip and sheet
+jpgs are not excluded). A new month gets its own `!/cards/YYYY-MM/*.mp4`
+line once its first Reels are posted.
 
 ## Review slots (Mohammad, 5 Oct 2026)
 
