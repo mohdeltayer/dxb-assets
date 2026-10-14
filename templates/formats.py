@@ -20,6 +20,7 @@ FORMATS = {
     'explainer': "the source's own figures or screens step by step (patents, features, store pages)",
     'handson':   'his gameplay: natural colours, text after the action, numbered tips',
     'retro':     'on this day: the game on a real CRT photo, fact sheet then «هل تعلم؟» facts (retro_tv, 10 Oct 2026)',
+    'edition':   'special and collector\'s editions, bundles, limited consoles, accessories, tier contents: trailer hook, each item as a press-render cut-out drifting onto the living ground, one composition frame with the price strip, footage close (edition.py, 14 Oct 2026)',
 }
 TEMPLATES = FORMATS
 
@@ -27,7 +28,7 @@ TEMPLATES = FORMATS
 # figures or a portrait on screen. Besides "no third in a row", card-led Reels are at most one in three over the last six.
 FAMILIES = {
     'footage': ('trailer', 'split', 'clipcard', 'handson'),
-    'card':    ('numbers', 'explainer', 'quote', 'retro'),
+    'card':    ('numbers', 'explainer', 'quote', 'retro', 'edition'),
 }
 FAMILY = {fmt: fam for fam, fmts in FAMILIES.items() for fmt in fmts}
 FAMILY['comparison'] = 'footage'   # two labelled states of the footage or store screens, hard cuts
@@ -50,6 +51,7 @@ NEWS_MAP = {
     'event':         ['split', 'explainer'],          # a show, a tournament, a date card
     'handson':       ['handson'],
     'anniversary':   ['retro'],
+    'edition':       ['edition', 'split'],            # a collector's or special edition, bundle, limited console, accessory, tier contents
 }
 
 

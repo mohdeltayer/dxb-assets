@@ -902,12 +902,21 @@ def check_reading(lines, end):
 
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
-         lowres_ok=False, read_check=True, track=None, draft=False, head_size=66, cut=False, credits=None, strip=None):
+         lowres_ok=False, read_check=True, track=None, draft=False, head_size=66, cut=False, credits=None, strip=None,
+         products=None):
     """`strip`: [(label, value), ...], 2 or 3 facts for the `split` template
     (Mohammad, 14 Oct 2026): a slim strip pinned low in the safe zone from the end
     of the headline to the end of the clip, the story lines rising above it. A
     value is a string or ('aed', '149'); a line that already says a value stops
     the render (one fact, one place). See strip_layer.
+    `products`: [(png, name, note_or_None), ...], the `edition` template (advisor, 14 Oct 2026),
+    4 to 6 items: `shots` is then just [hook, closing] (a trailer stretch for the headline,
+    and about 2 s of footage under the closing line). The items go between them as
+    edition.products() clips, one per item, and ONE composition frame of every item,
+    all on the living ground; the `strip` is pinned on the composition frame only
+    (a line may not overlap it, and no line is lifted). Shot indices for by_shot()
+    and credits count the expanded list: hook 0, items 1..n, composition n + 1,
+    closing n + 2. Run the trailer's music under the whole Reel with `track=`. See edition.py.
     `credits`: [(first_shot, last_shot, text)] labels footage that is not
     of the story's subject («لقطات من Fortnite»), shown over those shots.
     `cut=True` joins the shots with hard cuts instead of crossfades: the
@@ -932,10 +941,19 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         keep, X = X, 0.04
         try:
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
-                        style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, credits=credits, strip=strip)
+                        style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, credits=credits, strip=strip,
+                        products=products)
         finally:
             X = keep
     G._ACC = G.ACCENTS[theme]
+    comp = None                            # index of the composition shot (edition template)
+    if products:                           # hook + items + composition + closing (14 Oct 2026)
+        if len(shots) < 2:
+            raise ValueError('products needs shots=[hook, closing]: a trailer stretch first, footage for the closing line last')
+        import edition
+        mid = edition.shots(products, theme, os.path.splitext(os.path.basename(out))[0], fast=draft)
+        comp = len(shots) - 1 + len(products)
+        shots = list(shots[:-1]) + mid + list(shots[-1:])
     tmp = tempfile.mkdtemp(prefix='reel-')
     try:
         starts, end = timeline(shots)          # known before the slow encode
@@ -947,7 +965,13 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             check_reading(lines, end)
         if strip:                              # lines rise over the strip; a repeated fact or a bad strip stops here
             strip_check(strip, lines); strip_layer(strip, f'{tmp}/strip.png', theme)
-            lines = [(t, a, z, kw if kw.get('top') else {**kw, 'lift': STRIP_LIFT}) for t, a, z, kw in lines]
+            if comp is None:
+                lines = [(t, a, z, kw if kw.get('top') else {**kw, 'lift': STRIP_LIFT}) for t, a, z, kw in lines]
+            else:                          # edition: the strip owns the composition frame, no line may share it
+                sa, sz = starts[comp], starts[comp + 1]
+                for t, a, z, _ in lines:
+                    if a < sz and z > sa:
+                        raise ValueError(f'the composition frame ({sa:.1f} to {sz:.1f}s) carries the strip only, never a line: {t}')
         for i, (text, _, _, kw) in enumerate(lines):   # a line outside the safe zone stops here, not after the encode
             line_layer(text, f'{tmp}/l{i}.png', **kw)
         montage(shots, f'{tmp}/cut.mp4', lowres_ok, fast=draft)
@@ -964,7 +988,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     for i in range(1, len(layers) - 1):    # a line leaves before the next arrives
         p, a, z = layers[i]; layers[i] = (p, a, min(z, layers[i + 1][1]))
     if strip:                              # after the trim: the strip stays for the rest of the clip, fading in over 0.4 s
-        layers.append((f'{tmp}/strip.png', head_secs, end))
+        layers.append((f'{tmp}/strip.png', head_secs if comp is None else starts[comp],
+                       end if comp is None else starts[comp + 1]))
     for j, (first, last, text) in enumerate(credits or []):   # after the trim: credits overlap the lines
         a = max(starts[first] + 0.2, head_secs + 0.1)          # not under the headline
         z = starts[last + 1] if last + 1 < len(starts) else end
