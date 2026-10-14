@@ -1,0 +1,71 @@
+{
+ "id": "2026-10-14-ps-store-three-sony-games-missing",
+ "title": "Three Sony PS4 games (Knack 2, Uncharted: The Nathan Drake Collection, God of War III Remastered) missing from the US PlayStation Store, no explanation; Kotaku report",
+ "game": "",
+ "companies": [
+  "Sony Interactive Entertainment"
+ ],
+ "priority": "🟢",
+ "related": [],
+ "sources": [
+  {
+   "role": "outlet_report",
+   "name": "Kotaku, 13 Oct 2026 21:15Z: the three games gone from US PS Store search; owners can still download; Kotaku suspects a pricing error after God of War III Remastered showed at about 50 cents on the Mexican store days earlier; Sony did not reply",
+   "url": "https://kotaku.com/playstation-store-uncharted-god-of-war-knack-delisted-2000745375"
+  },
+  {
+   "role": "check",
+   "name": "Our own check, 14 Oct: the three product pages absent from the US and UAE PS Store; no Sony statement found",
+   "url": "https://store.playstation.com/en-ae/"
+  }
+ ],
+ "claims": [
+  {
+   "text": "Knack 2, Uncharted: The Nathan Drake Collection and God of War III Remastered missing from US PS Store search and purchase",
+   "status": "verified",
+   "source": "Kotaku, plus our own check of the US and UAE stores"
+  },
+  {
+   "text": "Owners can still download them from their library",
+   "status": "reported",
+   "source": "Kotaku"
+  },
+  {
+   "text": "Pricing error (GoW III at about 50 cents in Mexico) as the likely cause",
+   "status": "reported",
+   "source": "Kotaku's own guess; Sony has not replied"
+  },
+  {
+   "text": "No statement from Sony",
+   "status": "verified",
+   "source": "checked 14 Oct, re-check before queuing"
+  }
+ ],
+ "why": "Three first-party PS4 games vanishing from the store with no word from Sony; an outlet report, labelled as one",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "تقرير",
+   "format": "clipcard",
+   "time": "14 Oct 16:00 Dubai",
+   "headline": "ثلاث ألعاب من سوني (Sony) اختفت من متجر PlayStation في أمريكا من دون تفسير",
+   "x": "ثلاث ألعاب من سوني (Sony)، بينها Uncharted وGod of War III، اختفت من متجر PlayStation في أمريكا، ولا تفسير حتى الآن.",
+   "ig": "اختفاء غامض لثلاث ألعاب PS4 من متجر PlayStation. / رصد لاعبون اختفاء ثلاث ألعاب PS4 من سوني (Sony) من نتائج البحث في متجر PlayStation الأمريكي، بحسب موقع كوتاكو (Kotaku): Knack 2 وUncharted: The Nathan Drake Collection وGod of War III Remastered. ومن يملك هذه الألعاب يستطيع تنزيلها من مكتبته، لكن شراءها لم يعد متاحًا. / ويرجّح الموقع أن السبب خطأ في التسعير، بعد أن ظهرت God of War III Remastered بنحو 50 سنتًا في متجر PlayStation في المكسيك قبل أيام، لكنه يؤكد أن سوني لم ترد على استفساره حتى الآن. / وعند التحقق اليوم كانت صفحات الألعاب الثلاث غائبة عن متجري أمريكا والإمارات أيضًا، من دون أي بيان من سوني.",
+   "threads": "ثلاث ألعاب من سوني (Sony)، بينها Uncharted وGod of War III، اختفت من متجر PlayStation في أمريكا، ولا تفسير حتى الآن."
+  }
+ },
+ "media": [
+  {
+   "file": "cards/2026-10/ps-store-three-sony-games-missing-reel-v1.mp4",
+   "kind": "Sony's own trailers for Uncharted NDC and Knack 2 (muted, our bed) with one card naming the three games; clipcard"
+  }
+ ],
+ "status": "drafted",
+ "versions": [
+  {
+   "v": 1,
+   "at": "2026-10-14T09:50:00Z",
+   "change": "first build from the 14:00 intake; grammar review; DeepL back-check; rolling queue"
+  }
+ ]
+}
