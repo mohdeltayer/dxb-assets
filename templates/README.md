@@ -322,6 +322,39 @@ same call arguments; keep both in `cards/`.
 Title fonts (Bungee, Monoton, Righteous) are vendored under
 `templates/fonts/`. The card system sheet does not list this format.
 
+## The edition Reel: edition.py (advisor, 14 Oct 2026)
+
+For special and collector's editions, bundles, limited consoles, accessories
+and tier contents. Card-led family in `formats.py` (`NEWS_MAP['edition'] =
+['edition', 'split']`). A 3.5 s trailer hook with the headline, then each
+item as a publisher press-render cut-out on the numgfx living ground (hero
+first and largest, about 70% of the safe width, the rest 55%), drifting in
+from the right over about 0.6 s with a soft shadow, its name in Dubai Bold 64
+and an optional one-line note in Dubai Medium 44 (body colour), 2.5 to 3 s
+each, four to six items; then one composition frame of every item with the
+price strip pinned low (strip only, never a line); the closing footage under
+the closing line; the end card. The trailer's music runs under all of it
+(`track=`); gold theme for premium editions; chip رسمي or السعر.
+
+    import edition as E
+    png, how = E.cutout('press-box.jpg', 'box-cut.png')      # rembg if installed, else flood-fill; says which
+    items = [('box-cut.png', 'النسخة الفاخرة', 'تضم كل المحتوى'), ('book.png', 'كتاب الفن', None), ...]
+    mid = E.shots(items, 'gold', 'game-collectors')           # products() + composition(), one ground, one clock
+    # or the pieces: E.products(items, theme, name, secs=2.8, note_size=44, name_size=64)
+    #                E.composition(items, theme, name, secs=3.0)
+
+Clips land in uploads/numbers/ (`<name>-prod-<i>.mp4`, `<name>-comp.mp4`), so
+reel.py takes them as our own graphics (no picture finish). Every name and note
+line must open on an Arabic word, a note is one line, and name plus note must be
+readable in the clip (`reel.read_secs`, about 35 characters at 3 s). A cut-out
+enlarged past `reel.MAX_ZOOM` stops the build. The composition keeps everything
+above `reel.STRIP_TOP` for the strip. `loose=True` allows 2 to 3 items for tests.
+The ground style rotates through ground-ledger.json keyed by `name`, like numbers
+Reels. `reel(..., products=items, strip=[...])` is the hook that expands all this
+(shots are then `[hook, closing]`). Cut-outs from press kits are the plan; when a
+background cannot be removed cleanly, fall back to the publisher's photos
+unmasked, else keep the story on `split`.
+
 ## Legacy: cards.py
 
 The `cards.py` **templates are retired** — its five entry points
@@ -343,3 +376,21 @@ and uses it for:
 | `C._fit`, `C._rounded` | crop-to-fill and rounded-corner paste helpers |
 
 Deleting `cards.py` breaks `flex.py` on import. Restore both together.
+
+## Reel crop focus: autofocus (14 Oct 2026)
+
+`reel.autofocus(file, start, dur, keyframes=False)` aims the 9:16 window at a
+detected subject, not at texture. Per scene (cut) it takes three frames (10,
+50, 90%), runs YOLOv8n on the CPU (person, vehicles, animals; COCO has no
+"face", so a person box counts), takes the largest box, and sets two keyframes,
+the subject's x at 25% and 75% of the scene. Where nothing is detected the
+spectral saliency (`_salient_x`) is the fallback and the window holds still.
+Default return is `[(offset, focus)]` as before, focus = mean of the two
+keyframes. `keyframes=True` returns `[(offset, Pan)]`; a `Pan` (`reel.pan(x0,
+x1)`) is two `(t_frac, x)` keyframes the window pans between, clamped at the
+ends, and works as a whole shot's focus or as a scene's focus. Floats and
+per-scene lists render exactly as before. `shotsheet` shows each footage frame
+as the vertical crop beside the full 16:9 frame with the window outlined.
+Weights `/root/models/yolov8n.pt` (fetched on first use, not in git); the
+detector runs in a child process with numpy 2 from `/root/models/pylibs`,
+because the system numpy is a 1.26 over 2.4 mix that torch cannot use.

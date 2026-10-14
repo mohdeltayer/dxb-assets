@@ -387,15 +387,69 @@ def _bars(p, s, d):
     return (f'crop={w}:{h}:{x}:{y},', h) if h < full - 8 else ('', full)
 
 
-def _fo_expr(fo):
-    """A focus for ffmpeg's crop: a number, or per-scene keyframes
-    [(offset, focus), ...] that switch at the trailer's own cuts."""
+class Pan(list):
+    """Two focus keyframes [(t_frac, x), (t_frac, x)] for one scene or one shot
+    (14 Oct 2026): the 9:16 window sits at the first x until the first t_frac of
+    the scene, pans linearly to the second x, and holds it from the second
+    t_frac on. t_frac is 0 at the scene's start and 1 at its end. A plain
+    number is still a fixed focus, so nothing existing changes."""
+
+
+def pan(x0, x1, t0=0.25, t1=0.75):
+    """A Pan from focus x0 (at t0 of the scene) to x1 (at t1)."""
+    return Pan([(t0, x0), (t1, x1)])
+
+
+def _pan_at(p, u):
+    """Focus of Pan `p` at fraction `u` of its scene, clamped at the ends."""
+    (t0, x0), (t1, x1) = p[0], p[1]
+    if u <= t0 or t1 - t0 < 1e-6:
+        return x0
+    if u >= t1:
+        return x1
+    return x0 + (x1 - x0) * (u - t0) / (t1 - t0)
+
+
+def _pan_expr(p, a, b):
+    """ffmpeg expression for Pan `p` over the scene running a..b seconds."""
+    if b is None:
+        raise ValueError('a Pan needs the shot length to know where its scene ends')
+    (t0, x0), (t1, x1) = p[0], p[1]
+    ta, tb = a + t0 * (b - a), a + t1 * (b - a)
+    if tb - ta < 1e-3:
+        return str(x0)
+    return f'if(lt(t,{ta:.3f}),{x0},if(gt(t,{tb:.3f}),{x1},{x0}+({x1}-{x0})*(t-{ta:.3f})/{tb - ta:.3f}))'
+
+
+def _fo_expr(fo, d=None):
+    """A focus for ffmpeg's crop: a number, per-scene keyframes
+    [(offset, focus), ...] that switch at the trailer's own cuts, or a Pan
+    (the whole shot, or any scene's focus) that moves between two keyframes.
+    `d` is the shot length, needed where a Pan runs to the shot's end."""
+    if isinstance(fo, Pan):
+        return _pan_expr(fo, 0, d)
     if not isinstance(fo, (list, tuple)):
         return str(fo)
-    expr = str(fo[-1][1])
-    for (t, f), (t2, _) in reversed(list(zip(fo, fo[1:]))):
-        expr = f'if(lt(t,{t2:.3f}),{f},{expr})'
+
+    def one(f, a, b):
+        return _pan_expr(f, a, b) if isinstance(f, Pan) else str(f)
+    expr = one(fo[-1][1], fo[-1][0], d)
+    for i in range(len(fo) - 2, -1, -1):
+        (t, f), t2 = fo[i], fo[i + 1][0]
+        expr = f'if(lt(t,{t2:.3f}),{one(f, t, t2)},{expr})'
     return expr
+
+
+def _fo_at(fo, off, d):
+    """The focus _fo_expr gives `off` seconds into a shot of length `d`."""
+    if isinstance(fo, Pan):
+        return _pan_at(fo, off / max(d, 1e-6))
+    if not isinstance(fo, (list, tuple)):
+        return float(fo)
+    for i, (t, f) in enumerate(fo):
+        t2 = fo[i + 1][0] if i + 1 < len(fo) else d
+        if off < t2 or i == len(fo) - 1:
+            return _pan_at(f, (off - t) / max(t2 - t, 1e-6)) if isinstance(f, Pan) else float(f)
 
 
 def scenes(f, start, dur, thresh=0.2):
@@ -428,27 +482,115 @@ def _salient_x(img):
     return float((col * np.arange(len(col))).sum() / max(col.sum(), 1e-9) / (len(col) - 1))
 
 
-def autofocus(f, start, dur, thresh=0.2):
-    """Per-scene focus keyframes for one continuous stretch: at each of the
-    trailer's cuts, aim the 9:16 window at that scene's subject (Mohammad,
-    6 Oct 2026: "choose a better focus area"). Returns [(offset, focus)]."""
+#: Subject detector for autofocus (14 Oct 2026): YOLOv8n on the CPU, weights in /root/models
+#: (not in git; fetched there on first use). It runs in a child process so its own numpy
+#: (YOLO_LIBS, numpy 2.x, which torch needs) never mixes with this process's numpy.
+YOLO_WEIGHTS = os.environ.get('YOLO_WEIGHTS', '/root/models/yolov8n.pt')
+YOLO_LIBS = os.environ.get('YOLO_LIBS', '/root/models/pylibs')
+#: COCO ids: person, bicycle, car, motorcycle, airplane, bus, train, truck, boat, then every animal
+#: (bird to giraffe). COCO has no "face", so a person box stands for one.
+SUBJECT_CLASSES = list(range(0, 9)) + list(range(14, 24))
+SAMPLES = (0.1, 0.5, 0.9)        # where in a scene autofocus looks
+KEYS = (0.25, 0.75)              # where in a scene the two keyframes sit
+_DETECT_PY = r"""
+import json, os, sys
+w, cls, paths = sys.argv[1], json.loads(sys.argv[2]), sys.argv[3:]
+from ultralytics import YOLO
+if not os.path.exists(w):
+    os.makedirs(os.path.dirname(w) or '.', exist_ok=True)
+    from ultralytics.utils.downloads import attempt_download_asset
+    attempt_download_asset(w)
+out = []
+for r in YOLO(w).predict(paths, imgsz=640, conf=0.25, classes=cls, device='cpu', verbose=False):
+    h, wd = r.orig_shape
+    best = None
+    for (x1, y1, x2, y2) in r.boxes.xyxy.tolist():
+        a = (x2 - x1) * (y2 - y1)
+        if best is None or a > best[1]:
+            best = ((x1 + x2) / 2 / wd, a / (wd * h))
+    out.append(best)
+print('@@' + json.dumps(out))
+"""
+
+
+def detect_subjects(paths):
+    """[(centre x 0..1, box area share) or None] per image: the largest person,
+    vehicle or animal YOLOv8n finds. All None (with a note on stderr) when the
+    detector cannot run, so autofocus falls back to saliency."""
+    env = dict(os.environ)
+    if os.path.isdir(YOLO_LIBS):
+        env['PYTHONPATH'] = YOLO_LIBS + os.pathsep + env.get('PYTHONPATH', '')
+    try:
+        r = subprocess.run([sys.executable, '-c', _DETECT_PY, YOLO_WEIGHTS, str(SUBJECT_CLASSES).replace(' ', '')] + list(paths),
+                           capture_output=True, text=True, env=env, check=True)
+        line = [l for l in r.stdout.splitlines() if l.startswith('@@')][-1]
+        import json
+        return [tuple(x) if x else None for x in json.loads(line[2:])]
+    except Exception as e:
+        why = (getattr(e, 'stderr', '') or str(e)).strip().splitlines()[-1:] or ['?']
+        print(f'autofocus: detector unavailable ({why[0][:160]}), using saliency', file=sys.stderr)
+        return [None] * len(paths)
+
+
+def _keyframes(samples):
+    """samples [(t_frac, x or None)] -> the subject's x at KEYS, interpolated
+    from the detected samples only (clamped at their ends); None if none."""
+    pts = [(q, x) for q, x in samples if x is not None]
+    if not pts:
+        return None
+    def at(u):
+        if u <= pts[0][0]:
+            return pts[0][1]
+        for (q0, x0), (q1, x1) in zip(pts, pts[1:]):
+            if u <= q1:
+                return x0 + (x1 - x0) * (u - q0) / (q1 - q0)
+        return pts[-1][1]
+    return [at(u) for u in KEYS]
+
+
+def autofocus(f, start, dur, thresh=0.2, keyframes=False):
+    """Per-scene focus for one continuous stretch: at each of the trailer's cuts,
+    aim the 9:16 window at that scene's subject (Mohammad, 6 Oct 2026: "choose a
+    better focus area"; advisor, 14 Oct 2026: aim at a detected subject, not at
+    texture). Three frames per scene (10, 50 and 90%) go through YOLOv8n; the
+    largest person, vehicle or animal in each sets where the subject is, and the
+    scene gets two keyframes, the subject at 25% and at 75% of the scene,
+    interpolated from the frames it was found in. Where nothing is detected the
+    spectral saliency (_salient_x, the median of the three frames) stays as the
+    fallback and the window holds still.
+
+    Returns [(offset, focus)] with one focus per scene (the mean of its two
+    keyframes), the shape the render scripts have always taken; with
+    keyframes=True each focus is a Pan of the two keyframes, so the window moves
+    with the subject. Either goes straight into a shot as its focus."""
     bars, rows = _bars(C.U + f, start, dur)
     probe = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width',
                             '-of', 'csv=p=0', C.U + f], capture_output=True, text=True).stdout.strip()
     iw = int(bars.split('crop=')[1].split(':')[0]) if bars else int(probe)
     sw_ = iw * H / rows                       # width after scaling the picture to the frame height
     cuts = scenes(f, start, dur, thresh) + [dur]
-    keys = []
-    for a, b in zip(cuts, cuts[1:]):
-        xs = []
-        for t in (a + (b - a) * q for q in (0.25, 0.5, 0.75)):
-            tmp = tempfile.mktemp(suffix='.png')
-            subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', f'{start + t:.2f}', '-i', C.U + f, '-frames:v', '1',
-                            '-vf', f'{bars}scale=320:-2', tmp], check=True)
-            xs.append(_salient_x(Image.open(tmp))); os.remove(tmp)
-        c = sorted(xs)[1]
-        keys.append((round(a, 3), round(min(1, max(0, (c * sw_ - W / 2) / max(sw_ - W, 1))), 3)))
-    return keys
+    tmp = tempfile.mkdtemp(prefix='autofocus-')
+    try:
+        paths = []
+        for k, (a, b) in enumerate(zip(cuts, cuts[1:])):
+            for j, q in enumerate(SAMPLES):
+                p = f'{tmp}/{k}-{j}.png'
+                subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-ss', f'{start + a + (b - a) * q:.2f}', '-i', C.U + f,
+                                '-frames:v', '1', '-vf', f'{bars}scale=640:-2', p], check=True)
+                paths.append(p)
+        found = detect_subjects(paths)
+        keys = []
+        for k, a in enumerate(cuts[:-1]):
+            row = found[k * len(SAMPLES):(k + 1) * len(SAMPLES)]
+            kf = _keyframes([(q, d[0] if d else None) for q, d in zip(SAMPLES, row)])
+            if kf is None:                    # nothing detected: saliency, held still
+                xs = [_salient_x(Image.open(p)) for p in paths[k * len(SAMPLES):(k + 1) * len(SAMPLES)]]
+                kf = [sorted(xs)[1]] * 2
+            fk = [round(min(1, max(0, (c * sw_ - W / 2) / max(sw_ - W, 1))), 3) for c in kf]
+            keys.append((round(a, 3), pan(fk[0], fk[1], *KEYS) if keyframes else round(sum(fk) / 2, 3)))
+        return keys
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
 
 
 def montage(shots, out, lowres_ok=False, fast=False):
@@ -463,6 +605,8 @@ def montage(shots, out, lowres_ok=False, fast=False):
     for i, ((f, s, d, fo), st) in enumerate(zip(shots, stills)):
         if st:
             a, b = fo if isinstance(fo, (tuple, list)) else (fo, fo)
+            if isinstance(fo, Pan):
+                a, b = fo[0][1], fo[1][1]
             z = zoom((f, s, d, fo))
             if z > MAX_ZOOM and not lowres_ok:
                 raise ValueError(f'{f}: a still enlarged {z:.1f}x to fill 9:16; find a larger image or pass lowres_ok=True')
@@ -484,7 +628,7 @@ def montage(shots, out, lowres_ok=False, fast=False):
                 pre, post = f'{DENOISE},', f",cas={0.7 if rows < H else 0.4},{GRADE}"
             else:                           # our graphics, or FINISH off: the old lanczos + light unsharp
                 pre, post = '', (',unsharp=5:5:0.5:5:5:0.0' if rows < H else '')
-            fc.append(f"[{i}:v]{bars}{pre}scale=-2:{H}:flags=lanczos,crop={W}:{H}:x='(iw-{W})*({_fo_expr(fo)})':y=0{post},fps=30,tpad=stop_mode=clone:stop_duration=0.5,trim=duration={d},setpts=PTS-STARTPTS,settb=AVTB,setsar=1,format=yuv420p[v{i}]")   # padded and trimmed to exactly d: a clip a few frames short ended the xfade chain early (12 Oct)
+            fc.append(f"[{i}:v]{bars}{pre}scale=-2:{H}:flags=lanczos,crop={W}:{H}:x='(iw-{W})*({_fo_expr(fo, d)})':y=0{post},fps=30,tpad=stop_mode=clone:stop_duration=0.5,trim=duration={d},setpts=PTS-STARTPTS,settb=AVTB,setsar=1,format=yuv420p[v{i}]")   # padded and trimmed to exactly d: a clip a few frames short ended the xfade chain early (12 Oct)
     if sound:
         for i, ((f, s, d, fo), st) in enumerate(zip(shots, stills)):
             if st or not _has_audio(C.U + f):
@@ -548,15 +692,41 @@ def _flags(im):
     return out
 
 
+ACCENT = (40, 182, 246)      # azure, the Digital Lounge accent: the crop window on the sheet
+
+
+def _src_size(p):
+    r = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height',
+                        '-of', 'csv=p=0', p], capture_output=True, text=True)
+    w, h = r.stdout.strip().split(',')[:2]
+    return int(w), int(h)
+
+
+def _window(bars, srcw, srch, focus):
+    """The 9:16 window a shot takes from its source, in source pixels
+    (left, top, right, bottom), given the letterbox crop and the focus."""
+    px, py, pw, ph = 0, 0, srcw, srch
+    if bars:
+        pw, ph, px, py = map(int, bars.split('crop=')[1].rstrip(',').split(':'))
+    ww = ph * W / H                          # window width in picture pixels
+    x0 = px + (pw - ww) * min(1, max(0, focus))
+    return x0, py, x0 + ww, py + ph
+
+
 def shotsheet(shots, out):
     """Before any render: the first, middle and last frame of every shot, in
     one sheet, labelled with the seek time, so title cards, end slates,
     logos and pink are caught before the encode (3 Oct 2026: Nagoshi and
-    Micron each rendered four times over things this sheet shows). Returns
+    Micron each rendered four times over things this sheet shows). Each
+    footage frame is a pair (14 Oct 2026): the cropped vertical frame the
+    phone will show, and beside it the full 16:9 frame with the crop window
+    outlined in the accent, so the editor sees what the crop took. Returns
     (sheet path, [(shot index, time, flags)]) for frames flagged pink or black."""
     from PIL import ImageDraw as D
+    FW, FH = 288, 162                        # the full frame; the vertical crop beside it is FH tall
+    VW = round(FH * W / H)
     tiles, flagged = [], []
-    for i, (f, s, d, _) in enumerate(shots):
+    for i, (f, s, d, fo) in enumerate(shots):
         z = zoom(shots[i])
         soft = ['soft'] if z > MAX_ZOOM else []       # enlarged past MAX_ZOOM: look for a sharper copy
         if soft:
@@ -564,19 +734,31 @@ def shotsheet(shots, out):
         if os.path.splitext(f)[1].lower() in STILL:
             im = Image.open(C.U + f).convert('RGB'); im.thumbnail((240, 240))
             tiles.append((i, f'still x{z:.1f}' + (' +soft' if soft else ''), im)); continue
+        bars = _bars(C.U + f, s, d)[0]
+        srcw, srch = _src_size(C.U + f)
         for t in (s + 0.15, s + d / 2, s + d - 0.15):
-            im = _frame(C.U + f, t)
-            fl = _flags(im) + soft
+            full = _frame(C.U + f, t, 640)
+            fl = _flags(full.resize((240, round(240 * full.height / full.width)))) + soft
             if fl:
                 flagged.append((i, round(t, 2), fl))
-            tiles.append((i, f'{t:.1f} x{z:.1f}' + (' +' + '+'.join(fl) if fl else ''), im))
+            x0, y0, x1, y1 = _window(bars, srcw, srch, _fo_at(fo, t - s, d))
+            k = full.width / srcw
+            vert = full.crop((round(x0 * k), round(y0 * k), round(x1 * k), round(y1 * k))).resize((VW, FH))
+            thumb = full.resize((FW, round(FW * full.height / full.width)))
+            dr = D.Draw(thumb)
+            k2 = thumb.width / srcw
+            dr.rectangle([x0 * k2, y0 * k2, x1 * k2 - 1, y1 * k2 - 1], outline=ACCENT, width=3)
+            tile = Image.new('RGB', (FW + 4 + VW, max(thumb.height, FH)), (20, 19, 50))
+            tile.paste(vert, (0, 0)); tile.paste(thumb, (VW + 4, 0))
+            tiles.append((i, f'{t:.1f} x{z:.1f}' + (' +' + '+'.join(fl) if fl else ''), tile))
+    cw = max(im.width for _, _, im in tiles) + 6
     th = max(im.height for _, _, im in tiles)
-    cols = 9
+    cols = max(1, 1560 // cw)
     rows = (len(tiles) + cols - 1) // cols
-    sheet = Image.new('RGB', (240 * cols, (th + 22) * rows), (20, 19, 50))
+    sheet = Image.new('RGB', (cw * cols, (th + 22) * rows), (20, 19, 50))
     d = D.Draw(sheet)
     for k, (i, lab, im) in enumerate(tiles):
-        x, y = (k % cols) * 240, (k // cols) * (th + 22)
+        x, y = (k % cols) * cw, (k // cols) * (th + 22)
         sheet.paste(im, (x, y + 22))
         d.text((x + 4, y + 4), f'#{i} {shots[i][0][:16]} @{lab}', fill=(255, 80, 80) if '+' in lab else (255, 230, 120))
     sheet.save(out)
