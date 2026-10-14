@@ -1,4 +1,4 @@
-# «الطريق إلى Ocarina»: episode plan (proposed 14 Oct 2026, for Mohammad's revision)
+# «الطريق إلى Ocarina»: episode plan (proposed 14 Oct 2026; approved by Mohammad that evening, "Ocarina is good")
 
 Series rules: CLAUDE.md «الطريق إلى Ocarina» (11 Oct). Every episode opens on the series intro
 (`templates/ocarina_intro.py <days>`, «باقي N يومًا»), everyday sound, coverage of the new game
