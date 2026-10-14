@@ -1,0 +1,86 @@
+{
+ "id": "2026-10-13-valve-index-sunset",
+ "title": "Valve Index Sunset: Valve ends production, remaining stock 20% off while supplies last (13 Oct)",
+ "game": "Valve Index",
+ "companies": [
+  "Valve"
+ ],
+ "priority": "🟢",
+ "related": [],
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Valve, Steam hardware page, event \"Valve Index Sunset\", 13 Oct 2026 22:34Z: \"Valve Index is no longer being produced. Remaining Index headsets, controllers, and accessories are still available at the new prices below while supplies last. If you already own an Index, nothing changes - it is still supported on Steam and SteamVR.\"",
+   "url": "https://store.steampowered.com/hardware/valveindex"
+  },
+  {
+   "role": "primary",
+   "name": "Steam package API, US, 14 Oct 02:30Z: Full VR Kit $999 -> $799.20, Headset $499 -> $399.20, Controllers $279 -> $223.20, Base Station $149 -> $119.20 (20% off); cc=ae and cc=sa return success:false for every package",
+   "url": "https://store.steampowered.com/api/packagedetails?packageids=354231&cc=us"
+  },
+  {
+   "role": "outlet_report",
+   "name": "Automaton (JP), 14 Oct 02:06Z",
+   "url": "https://automaton-media.com/articles/newsjp/20261014-473332/"
+  },
+  {
+   "role": "outlet_report",
+   "name": "Engadget, 13 Nov 2025: Valve's Lawrence Yang told The Verge the Index is no longer being manufactured (the week Steam Frame was announced)",
+   "url": "https://engadget.com/ar-vr/valve-confirms-that-it-has-stopped-making-the-index-vr-headset-150324456.html"
+  }
+ ],
+ "claims": [
+  {
+   "text": "Valve Index no longer produced; remaining stock at new prices while supplies last; existing owners keep Steam and SteamVR support",
+   "status": "verified",
+   "source": "Valve's Steam page"
+  },
+  {
+   "text": "20% off: headset $399.20 (was $499), full kit $799.20 (was $999), US store",
+   "status": "verified",
+   "source": "Steam package API read 14 Oct"
+  },
+  {
+   "text": "Not purchasable on Steam in the UAE or Saudi Arabia",
+   "status": "verified",
+   "source": "Steam package API with cc=ae and cc=sa, 14 Oct"
+  },
+  {
+   "text": "Launched June 2019 at $999 for the full kit",
+   "status": "verified",
+   "source": "Valve's 2019 launch pricing (known chain)"
+  },
+  {
+   "text": "Valve said in Nov 2025 it had stopped manufacturing the Index, the week Steam Frame was announced",
+   "status": "verified",
+   "source": "Engadget quoting The Verge, 13 Nov 2025"
+  }
+ ],
+ "why": "Valve's VR headset is formally over, with a clearance price readers abroad can act on and a regional note",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "رسمي",
+   "format": "split",
+   "time": "14 Oct 08:30 Dubai",
+   "headline": "توقف إنتاج نظارة Valve Index رسميًا، وما تبقى منها يُباع بخصم حتى نفاد المخزون",
+   "x": "أعلنت فالف (Valve) على Steam توقف إنتاج نظارة Valve Index، وما تبقى منها يُباع بخصم 20% حتى نفاد المخزون.",
+   "ig": "نهاية رسمية لنظارة الواقع الافتراضي من فالف (Valve) بعد مرور سبع سنوات على إطلاقها، وتخفيض على ما تبقى منها. / أعلنت فالف على صفحة Steam أن نظارة الواقع الافتراضي Valve Index لم تعد تُنتج، وأن ما تبقى من النظارات وأجهزة التحكم والملحقات يُباع بالأسعار الجديدة حتى نفاد المخزون: خصم 20% على كل شيء، فالنظارة وحدها بـ399.20 دولارًا بدلًا من 499 دولارًا، والطقم الكامل بـ799.20 دولارًا بدلًا من 999 دولارًا في المتجر الأمريكي. / وقالت فالف إن من يملك النظارة لا يتغير شيء عنده، فهي ما زالت مدعومة على Steam وSteamVR. ولا تُباع Valve Index عبر Steam في الإمارات أو السعودية. / صدرت Valve Index في يونيو 2019 بسعر 999 دولارًا للطقم الكامل، وكانت فالف قد قالت في نوفمبر الماضي، بحسب ما نقله موقع ذا فيرج (The Verge)، إنها توقفت عن تصنيعها، في الأسبوع نفسه الذي أعلنت فيه نظارتها الجديدة Steam Frame.",
+   "threads": "أعلنت فالف (Valve) على Steam توقف إنتاج نظارة Valve Index، وما تبقى منها يُباع بخصم 20% حتى نفاد المخزون."
+  }
+ },
+ "media": [
+  {
+   "file": "cards/2026-10/valve-index-sunset-reel-v1.mp4",
+   "kind": "Valve's own headset trailer (1920x1080, 1.8x, silent, one stretch) and five product stills (1920x1080 on black, 1.8x); the split strip carries the discount and two prices; cold bed"
+  }
+ ],
+ "status": "drafted",
+ "versions": [
+  {
+   "v": 1,
+   "at": "2026-10-14T02:40:00Z",
+   "change": "first build from the 06:30 intake; grammar review; DeepL back-check; rolling queue"
+  }
+ ]
+}
