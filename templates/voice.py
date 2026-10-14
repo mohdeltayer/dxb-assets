@@ -195,6 +195,166 @@ def run(src, stem, rebuild=False, keep_pauses=False):
     return stem + '.wav'
 
 
+# ---------------------------------------------------------------------------
+# Synthesised reads in his voice (trial, advisor 14 Oct 2026).
+#
+# Chatterbox Multilingual (Resemble AI, MIT, Arabic listed) clones zero-shot from
+# the cleanest 30 s of his own recording and reads a Reel's headline and lines.
+# It lives in its own venv (templates/voice_setup.sh; CHATTERBOX_PY points at its
+# python) because it pins torch 2.6 and transformers 5.2, which the system
+# python does not have. Diacritisation is Mishkal (MISHKAL_LIBS, a --target
+# install) with the names fixed from arabic/house-glossary.md ("Names as read
+# aloud"). XTTS-v2 and Fish Speech are out on licence (non-commercial).
+#
+#     python voice.py ref <his recording> <ref.wav>          # the cleanest 30 s
+#     python voice.py tashkeel "<text>"                        # diacritised, names fixed
+#     python voice.py trial <ref.wav> <scripts.json> <outdir>  # six WAVs + trial-log.md
+#     python voice.py clone <ref.wav> "<text>" <out.wav> [--tashkeel]
+#
+# Nothing synthesised is posted without his judgement on the six WAVs (pass:
+# two of three), and then only one trial under a numbers Reel.
+# ---------------------------------------------------------------------------
+import re, time
+
+CB_PY = os.environ.get('CHATTERBOX_PY', '/root/venvs/chatterbox/bin/python')
+MISHKAL_LIBS = os.environ.get('MISHKAL_LIBS', '/root/models/mishkal')
+GLOSSARY = os.path.join(HERE, '..', 'arabic', 'house-glossary.md')
+NAMES_HEADING = '## Names as read aloud'
+LATIN = re.compile(r'[A-Za-z][A-Za-z0-9&\'.+-]*(?: [A-Za-z][A-Za-z0-9&\'.+-]*)*')
+BRACKET = re.compile(r'\s*\([A-Za-z][^)]*\)')
+_CLONE = r"""
+import sys, time, json
+import torch, torchaudio as ta
+from chatterbox.mtl_tts import ChatterboxMultilingualTTS
+ref, out, jobs = sys.argv[1], sys.argv[2], json.load(open(sys.argv[3]))
+t = time.time(); m = ChatterboxMultilingualTTS.from_pretrained(device='cpu'); load = time.time() - t
+res = []
+for name, text, kw in jobs:
+    t = time.time()
+    wav = m.generate(text, language_id='ar', audio_prompt_path=ref, **kw)
+    secs = time.time() - t
+    ta.save(f'{out}/{name}.wav', wav, m.sr)
+    res.append(dict(name=name, cpu_secs=round(secs, 1), audio_secs=round(wav.shape[-1] / m.sr, 2), chars=len(text)))
+json.dump(dict(load_secs=round(load, 1), reads=res), open(f'{out}/clone-times.json', 'w'))
+"""
+
+
+def names_map():
+    """{written: read-as} from the glossary's "Names as read aloud" table."""
+    out = {}
+    try:
+        text = open(GLOSSARY, encoding='utf-8').read()
+    except OSError:
+        return out
+    if NAMES_HEADING not in text:
+        return out
+    for line in text.split(NAMES_HEADING, 1)[1].split('\n## ')[0].splitlines():
+        cells = [c.strip() for c in line.strip().strip('|').split('|')]
+        if len(cells) >= 2 and cells[0] and cells[0] not in ('Written', '---') and not cells[0].startswith('-'):
+            out[cells[0]] = cells[1]
+    return out
+
+
+def for_reading(text):
+    """The post text as it is read: the Latin bracket after an Arabic name goes
+    («سوني (Sony) تكشف» is read «سوني تكشف»); «·» becomes a pause."""
+    return BRACKET.sub('', text).replace(' · ', '، ').strip()
+
+
+def tashkeel(text, names=None):
+    """Diacritise with Mishkal, sentence by sentence (it drops a full stop it is
+    given in one go). Names in the glossary map are replaced by their read-as
+    form first (Latin or Arabic); they and the remaining Latin are held out of
+    Mishkal's way, which would otherwise vowel them wrongly or twice."""
+    names = names_map() if names is None else names
+    text = for_reading(text)
+    sys.path.insert(0, MISHKAL_LIBS)
+    import mishkal.tashkeel as T
+    voweller = T.TashkeelClass()
+    out = []
+    for sent in re.split(r'(?<=[.؟!])\s+', text):
+        keep = []
+        def hold(v):
+            keep.append(v); return f' \u2066{len(keep) - 1}\u2069 '    # a token Mishkal passes through
+        for k in sorted(names, key=len, reverse=True):              # longest first: "Unreal Engine" before "Unreal"
+            sent = re.sub(r'(?<![A-Za-z\u0600-\u06FF])' + re.escape(k) + r'(?![A-Za-z\u0600-\u06FF])',
+                          lambda m: hold(names[k]), sent)
+        masked = LATIN.sub(lambda m: hold(m.group(0)), sent)
+        tail = masked[-1] if masked and masked[-1] in '.؟!' else ''
+        v = voweller.tashkeel(masked.rstrip('.؟! '))
+        v = re.sub(r'\s*\u2066\s*(\d+)\s*\u2069\s*', lambda m: ' ' + keep[int(m.group(1))] + ' ', v)
+        v = v.replace('إَ', 'إِ').replace('إُ', 'إِ').replace('إْ', 'إِ')   # hamza below never carries another vowel
+        out.append(re.sub(r' +', ' ', v).replace(' ،', '،').strip() + tail)
+    return ' '.join(out)
+
+
+def ref(src, out, secs=30.0, hop=1.0):
+    """The cleanest `secs` of his recording: the window with the best speech
+    level against its own noise floor, with speech in most of it. Writes a
+    48 kHz mono WAV (Chatterbox resamples it itself)."""
+    x = read48(src)
+    n, w, h = len(x), int(secs * SR), int(hop * SR)
+    if n <= w:
+        sf.write(out, x, SR); return out, 0.0
+    frame = int(0.05 * SR)
+    rms = np.sqrt(np.convolve(x ** 2, np.ones(frame) / frame, 'same') + 1e-12)
+    best, at = -1e9, 0
+    for s in range(0, n - w, h):
+        r = rms[s:s + w]
+        floor = np.percentile(r, 10); speech = np.percentile(r, 70)
+        frac = np.mean(r > floor * 4)
+        score = 20 * np.log10(speech / (floor + 1e-9)) + (0 if frac > 0.55 else -40)
+        if score > best:
+            best, at = score, s
+    sf.write(out, x[at:at + w], SR)
+    return out, at / SR
+
+
+def clone(ref_wav, jobs, outdir, exaggeration=0.5, cfg_weight=0.5):
+    """Render [(name, text, kw)] in the Chatterbox venv; returns clone-times.json
+    (load time, CPU seconds and audio seconds per read)."""
+    os.makedirs(outdir, exist_ok=True)
+    jf = os.path.join(outdir, 'jobs.json')
+    json.dump([(n, t, {'exaggeration': exaggeration, 'cfg_weight': cfg_weight, **kw}) for n, t, kw in jobs],
+              open(jf, 'w'), ensure_ascii=False)
+    subprocess.run([CB_PY, '-c', _CLONE, ref_wav, outdir, jf], check=True)
+    return json.load(open(os.path.join(outdir, 'clone-times.json')))
+
+
+def trial(ref_wav, scripts, outdir):
+    """Three Reels' headline and lines, twice each: raw text and after tashkeel.
+    Six WAVs at 48 kHz for Mohammad, and trial-log.md with the CPU time per read."""
+    sc = json.load(open(scripts))
+    names = names_map()
+    jobs, texts = [], {}
+    for name, v in sc.items():
+        raw = for_reading(v['text']); dia = tashkeel(v['text'], names)
+        texts[name] = (raw, dia)
+        jobs += [(f'{name}-raw', raw, {}), (f'{name}-tashkeel', dia, {})]
+    times = clone(ref_wav, jobs, outdir)
+    for r in times['reads']:
+        p = os.path.join(outdir, r['name'] + '.wav')
+        ff('-i', p, '-ar', str(SR), '-ac', '1', p + '.48.wav'); os.replace(p + '.48.wav', p)
+    with open(os.path.join(outdir, 'trial-log.md'), 'w', encoding='utf-8') as f:
+        f.write(f"# Voice clone trial, {time.strftime('%d %b %Y %H:%M')}Z\n\nModel load {times['load_secs']} s (CPU).\n\n")
+        f.write('| read | chars | audio s | CPU s | x realtime |\n|---|---|---|---|---|\n')
+        for r in times['reads']:
+            f.write(f"| {r['name']} | {r['chars']} | {r['audio_secs']} | {r['cpu_secs']} | {r['cpu_secs'] / max(r['audio_secs'], 0.1):.1f} |\n")
+        for name, (raw, dia) in texts.items():
+            f.write(f'\n## {name}\n\nraw: {raw}\n\ntashkeel: {dia}\n')
+    return os.path.join(outdir, 'trial-log.md')
+
+
 if __name__ == '__main__':
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
-    run(args[0], args[1], rebuild='--rebuild' in sys.argv, keep_pauses='--keep-pauses' in sys.argv)
+    if args[0] == 'ref':
+        print(ref(args[1], args[2]))
+    elif args[0] == 'tashkeel':
+        print(tashkeel(args[1]))
+    elif args[0] == 'trial':
+        print(trial(args[1], args[2], args[3]))
+    elif args[0] == 'clone':
+        text = tashkeel(args[2]) if '--tashkeel' in sys.argv else for_reading(args[2])
+        d, n = os.path.split(args[3]); print(clone(args[1], [(n[:-4], text, {})], d or '.'))
+    else:
+        run(args[0], args[1], rebuild='--rebuild' in sys.argv, keep_pauses='--keep-pauses' in sys.argv)

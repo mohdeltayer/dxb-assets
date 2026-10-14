@@ -48,6 +48,22 @@ its output is for listening tests only, never for a post. English names
 come out mangled. Anything posted uses his own recorded voice, or a
 commercially licensed service such as ElevenLabs if he adds a key.
 
+Synthesised reads in his voice, trial (advisor, 14 Oct 2026): Chatterbox
+Multilingual (Resemble AI, MIT, Arabic listed) in its own venv
+(`templates/voice_setup.sh`; about 2 GB for the venv and 3.3 GB for the
+weights), cloned zero-shot from the cleanest 30 s of a 20-minute MSA news
+read he records per `notes/voice-guide.md` (48 kHz WAV, one mic, one room).
+`voice.py trial` renders three published Reels' headline and lines twice
+each, raw and after diacritisation (Mishkal, GPL, used as a tool, with the
+names fixed from the glossary's "Names as read aloud"; CATT is the
+alternative if Mishkal's vowels are wrong too often), six WAVs to Mohammad.
+Pass: two of three; then one trial under the next numbers Reel through
+`reel(..., voice=)` with the existing ducking. XTTS-v2 and Fish Speech are
+out on licence (non-commercial). CPU render time per read goes in the
+draft notes (`trial-log.md`). Status: code and scripts ready 14 Oct; the
+install waits on disk (about 5.5 GB needed, 460 MB free) and the clone on
+his recording.
+
 Dialect speech-to-text, watched (2 Oct 2026): NVIDIA's post of 30 Sep 2026
 on fine-tuning Nemotron 3.5 ASR (nvidia/nemotron-3.5-asr-streaming-0.6b,
 Hugging Face) for Saudi Najdi and Hijazi cut word error from about 55% to

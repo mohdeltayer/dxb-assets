@@ -46,6 +46,42 @@ has said so; everything else is a working suggestion.
 | N years after launch | بعد مرور سبع سنوات على إطلاقها | not بعد سبع سنوات من إطلاقها; and not لتتوقف بعد…, which reads as "only to be" | Suggested 29 Sep 2026 |
 | Update or game released today | تطرح <company> اليوم تحديثًا…، or once it is live: أصبح … متوفرًا الآن (chip متوفر الآن) | not يصل اليوم, which reads as a physical delivery | Approved 29 Sep 2026 |
 
+## Names as read aloud (voice clone trial, advisor 14 Oct 2026)
+
+For a synthesised or recorded read, not for written posts: how a name is said
+in an Arabic news read. `voice.py tashkeel` replaces the written form with the
+read-as form before Mishkal diacritises the rest, so the synthesiser never
+guesses at a Latin name or vowels an Arabic one wrongly (Mishkal read سوني as
+سَوِّنِي on 14 Oct). Written posts keep the spellings above. Suggested 14 Oct
+2026; each row is his to approve once he hears the trial WAVs.
+
+| Written | Read as | Note |
+|---|---|---|
+| سوني | سُونِي | |
+| يوبيسوفت | يُوبِيسُوفْت | |
+| إيبك جيمز | إِيبِك غَيْمْز | |
+| أبوظبي | أَبُوظَبِي | |
+| Sony | سُونِي | |
+| Ubisoft | يُوبِيسُوفْت | |
+| RedLynx | رِيدْلِينْكْس | |
+| Trials | تْرَايَلْز | |
+| Skull and Bones | سْكَل آنْد بُونْز | |
+| GamesIndustry.biz | غَيْمْز إِنْدَسْتْرِي | the outlet, as said |
+| Gran Turismo | غْرَان تُورِيزْمُو | |
+| Spec IV | سْبِيك فُور | |
+| DualSense | دْيُوَال سِينْس | |
+| Experience | إِكْسْبِيرْيَنْس | the GT7 mode |
+| World Circuit | وُورْلْد سِيرْكِت | |
+| Sugo | سُوغُو | |
+| Unreal Engine | أَنْرِيَل إِنْجِن | |
+| Epic Games | إِيبِك غَيْمْز | |
+| Abu Dhabi Gaming | أَبُوظَبِي غَيْمِنْغ | |
+| PlayStation | بْلَايْسْتَيْشِن | |
+| Nintendo | نِينْتِينْدُو | |
+| Xbox | إِكْسْ بُوكْس | |
+| Steam | سْتِيم | |
+| Microsoft | مَايْكْرُوسُوفْت | |
+
 ## Tools
 
 1. `arabic-games-film-editor` skill (this repo, `.claude/skills/`), writes.
