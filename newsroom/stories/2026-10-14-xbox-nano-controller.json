@@ -66,7 +66,7 @@
    "kind": "Xbox Wire's textless press render (1920x1080, x1.8) panned, plus our size card on the living ground; no trailer or MP4 on the page"
   }
  ],
- "status": "queued",
+ "status": "published",
  "versions": [
   {
    "v": 1,
@@ -76,7 +76,41 @@
  ],
  "times": {
   "queued": "2026-10-14T16:43Z",
-  "scheduled": "2026-10-14T17:30Z"
+  "scheduled": "2026-10-14T17:30Z",
+  "published": "2026-10-14T17:30Z",
+  "checked": "2026-10-14T17:45Z: Instagram and Threads PUBLISHED, X ERROR"
  },
- "approval": "auto-go: no reply in 15 minutes (breaking lane, Mohammad 11 Oct 2026); pinged 16:26Z, preview sent 16:40Z"
+ "approval": "auto-go: no reply in 15 minutes (breaking lane, Mohammad 11 Oct 2026); pinged 16:26Z, preview sent 16:40Z",
+ "posts": [
+  {
+   "folder": "xbox-nano-controller-ar",
+   "account": "Digital Lounge",
+   "platform": "x",
+   "date": "2026-10-14T17:30:00Z",
+   "postiz_id": "cmv8casmj09h9qu0yc53pdf9n",
+   "sent_at": "2026-10-14T16:44:11+00:00",
+   "approved": "auto-go: no reply in 15 minutes (breaking lane, Mohammad 11 Oct 2026); pinged 16:26Z, preview sent 16:40Z",
+   "state": "ERROR in Postiz at 17:45Z (no error text); Mohammad pinged to retry from the app"
+  },
+  {
+   "folder": "xbox-nano-controller-ig",
+   "account": "Digital Lounge",
+   "platform": "instagram",
+   "date": "2026-10-14T17:30:00Z",
+   "postiz_id": "cmv8caurm098pqt0yhk7sm1qy",
+   "sent_at": "2026-10-14T16:44:13+00:00",
+   "approved": "auto-go: no reply in 15 minutes (breaking lane, Mohammad 11 Oct 2026); pinged 16:26Z, preview sent 16:40Z",
+   "state": "PUBLISHED"
+  },
+  {
+   "folder": "xbox-nano-controller-th",
+   "account": "Digital Lounge",
+   "platform": "threads",
+   "date": "2026-10-14T17:30:00Z",
+   "postiz_id": "cmv8cawpb09hfqu0ye0oq5hsq",
+   "sent_at": "2026-10-14T16:44:16+00:00",
+   "approved": "auto-go: no reply in 15 minutes (breaking lane, Mohammad 11 Oct 2026); pinged 16:26Z, preview sent 16:40Z",
+   "state": "PUBLISHED"
+  }
+ ]
 }
