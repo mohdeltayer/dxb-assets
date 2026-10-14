@@ -12,7 +12,7 @@ YouTube only (X and Instagram keep their cards):
   second or so, then the top 5 as a countdown (`sales_reel`), number one
   last.
 - Both end on a 1 second end card (the outro's final frame), not the
-  3.6 second animated outro, and sit inside the Reels safe zone.
+  2 second animated outro (outro.CARD), and sit inside the Reels safe zone.
 
     short.chart(rows, 'أسبوع 14 إلى 20 سبتمبر 2026', '30 Sep 2026', out,
                 hook='من تصدّر مبيعات اليابان؟')

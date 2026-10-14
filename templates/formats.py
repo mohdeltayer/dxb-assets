@@ -7,6 +7,8 @@ unless the story demands it; the ledger keeps the order they went out in.
     python3 formats.py                      # the last ten, newest last
     python3 formats.py check numbers        # a third in a row, or a third card-led Reel in six?
     python3 formats.py add <reel name> trailer
+    python3 formats.py views <reel name> 1840   # weekly Instagram views next to the template (Tuesday, 14 Oct 2026)
+    python3 formats.py templates                # median views per template
 """
 import json, os, sys
 
@@ -23,6 +25,25 @@ FORMATS = {
     'edition':   'special and collector\'s editions, bundles, limited consoles, accessories, tier contents: trailer hook, each item as a press-render cut-out drifting onto the living ground, one composition frame with the price strip, footage close (edition.py, 14 Oct 2026)',
 }
 TEMPLATES = FORMATS
+
+# The opening beat per template (advisor, 14 Oct 2026): what is on screen in the first second, under the chip and the
+# hook headline. The footage moves from frame one; the credit line enters at 2 s (reel.CREDIT_AT).
+OPENERS = {
+    'trailer':    'the strongest shot of the stretch, moving from frame one, the headline over it',
+    'split':      'the footage moving from frame one; the strip pins when the headline leaves',
+    'clipcard':   'the footage hook, moving; the card comes only at the key beat',
+    'numbers':    'the number alone, large, on the living ground; the chart builds after it',
+    'comparison': 'the first state with its label; the second state is the cut',
+    'quote':      'the quote itself in «», over the speaker or the thing they spoke of; the portrait never holds the whole Reel',
+    'explainer':  "the source's first figure or screen, the part the story turns on ringed",
+    'handson':    'the action, his play, before any text',
+    'retro':      'the game running on the CRT, the date over it',
+    'edition':    'the hero item: the trailer hook with the headline, then the hero cut-out first and largest',
+}
+
+
+def opener(fmt):
+    return OPENERS.get(fmt, '')
 
 # Two families (advisor, 14 Oct 2026): footage-led Reels run the picture the whole way; card-led Reels put our graphics,
 # figures or a portrait on screen. Besides "no third in a row", card-led Reels are at most one in three over the last six.
@@ -75,9 +96,32 @@ def _load():
 def add(name, fmt):
     if fmt not in FORMATS:
         raise ValueError(f'{fmt}: not a format ({", ".join(FORMATS)})')
-    led = [e for e in _load() if e['name'] != name]   # a re-render keeps its place
-    led.append({'name': name, 'format': fmt})
+    led = _load()
+    old = next((e for e in led if e['name'] == name), {})
+    led = [e for e in led if e['name'] != name]   # a re-render keeps its place and its views
+    led.append({'name': name, 'format': fmt, **({'views': old['views']} if 'views' in old else {})})
     json.dump(led[-200:], open(LEDGER, 'w'), indent=1)
+
+
+def views(name, n):
+    """Weekly views next to the template (advisor, 14 Oct 2026): Mohammad sends the numbers on Tuesday morning before the
+    audit; `analytics/reel-views.md` says how they are read. Instagram's count for the Reel, as an integer."""
+    led = _load()
+    hit = [e for e in led if e['name'] == name]
+    if not hit:
+        raise ValueError(f'{name}: not in the format ledger')
+    hit[0]['views'] = int(n)
+    json.dump(led, open(LEDGER, 'w'), indent=1)
+
+
+def by_template():
+    """Median and count of the views recorded per template, newest 200 Reels."""
+    import statistics
+    seen = {}
+    for e in _load():
+        if 'views' in e:
+            seen.setdefault(e['format'], []).append(e['views'])
+    return {f: (statistics.median(v), len(v)) for f, v in seen.items()}
 
 
 def check(fmt):
@@ -103,9 +147,16 @@ if __name__ == '__main__':
     a = sys.argv[1:]
     if a[:1] == ['add']:
         add(a[1], a[2]); print('ok')
+    elif a[:1] == ['views']:                       # python3 formats.py views <reel name> <instagram views>
+        views(a[1], a[2]); print('ok')
+    elif a[:1] == ['templates']:                   # views per template, for the Tuesday audit
+        for f, (med, n) in sorted(by_template().items(), key=lambda kv: -kv[1][0]):
+            print(f'{f:<10} median {med:>8,.0f} views over {n} Reels')
     elif a[:1] == ['check']:
         why = check(a[1])
         print(f'{why}: pick another unless the story demands it' if why else 'ok')
+        print(f'opens on: {opener(a[1])}')
     else:
         for e in _load()[-10:]:
-            print(f"{e['format']:<10} {family(e['format']):<7} {e['name']}")
+            v = f"{e['views']:>7,}" if 'views' in e else '      -'
+            print(f"{e['format']:<10} {family(e['format']):<7} {v}  {e['name']}")
