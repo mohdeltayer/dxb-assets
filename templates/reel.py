@@ -24,6 +24,10 @@ lines: [(text, t0, t1, opts)] with times on the finished clip, or plain
        hand (a newline). opts: top=True (above a lower-third game UI), price='289'
        (digits with the dirham symbol to their left), shade=True (a light
        indigo shade low in the frame, for pale footage).
+strip: [(label, value), ...] (2 or 3) pins the `split` template's fact strip low in the
+       safe zone from the end of the headline to the end of the clip (14 Oct 2026); the
+       lines rise above it and never repeat a value. A value is a string, or
+       ('aed', '149') for digits with the dirham symbol left of them.
 """
 import math, os, shutil, subprocess, sys, tempfile
 from PIL import Image, ImageDraw, ImageFilter
@@ -164,9 +168,10 @@ def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
     im.alpha_composite(glow); im.alpha_composite(t); im.save(path); return path
 
 
-def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96):
+def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96, lift=0):
     """One sentence, right-aligned; bottom line on SAFE_BOTTOM - 40, or
-    under SAFE_TOP with top=True."""
+    under SAFE_TOP with top=True. `lift` raises a low line (the split template
+    lifts them over its fact strip)."""
     f = A.F('Bold', size); probe = ImageDraw.Draw(Image.new('L', (W, H)))
     tw = lambda s: probe.textlength(s, font=f, **G.AR)
     full = text + (f' {price}' if price else '')
@@ -185,7 +190,7 @@ def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96)
     if len(lines) > 3:
         raise ValueError(f'{len(lines)} lines; keep a sentence to 3: {text}')
     rtl_starts(lines, 'story')
-    base0 = G.SAFE_TOP + 110 if top else G.SAFE_BOTTOM - 40 - step * (len(lines) - 1)
+    base0 = G.SAFE_TOP + 110 if top else G.SAFE_BOTTOM - 40 - lift - step * (len(lines) - 1)
     mask = Image.new('L', (W, H), 0); d = ImageDraw.Draw(mask)
     for i, ln in enumerate(lines):
         b = base0 + i * step
@@ -209,14 +214,14 @@ def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96)
     im.save(path); return path
 
 
-def credit_layer(text, path, low=False, size=36):
+def credit_layer(text, path, low=False, size=36, y=None):
     """A small credit naming footage that is not of the story's subject itself,
     «لقطات من Fortnite» over a delayed game that has never been shown (Mohammad,
     13 Oct 2026, review priority 3). Right-aligned under the safe top, or just
     above the safe bottom when the story lines sit at the top."""
     rtl_starts([text], 'credit')
     f = A.F('Medium', size)
-    y = G.SAFE_BOTTOM - 10 if low else G.SAFE_TOP + 40
+    y = y if y is not None else G.SAFE_BOTTOM - 10 if low else G.SAFE_TOP + 40
     mask = Image.new('L', (W, H), 0)
     ImageDraw.Draw(mask).text((W - R, y), text, font=f, fill=255, anchor='rs', **G.AR)
     if ImageDraw.Draw(mask).textlength(text, font=f, **G.AR) > W - R - L:
@@ -225,6 +230,102 @@ def credit_layer(text, path, low=False, size=36):
     outline = mask.filter(ImageFilter.MaxFilter(5))
     for col, m in [(A.GROUND, outline), (A.BODY, mask)]:
         lay = Image.new('RGBA', (W, H), col + (255,)); lay.putalpha(m); im.alpha_composite(lay)
+    im.save(path); return path
+
+
+#: The `split` template's fact strip (Mohammad, 14 Oct 2026): footage runs the whole
+#: Reel and two or three facts (date, price, platforms) stay pinned low in the safe
+#: zone while the lines narrate above it. A fact lives here or in a line, never both.
+STRIP_H = 160
+STRIP_BOTTOM = G.SAFE_BOTTOM - 24
+STRIP_TOP = STRIP_BOTTOM - STRIP_H
+STRIP_LIFT = STRIP_H + 32             # how far the story lines rise to clear it
+STRIP_VALUE_SIZES = (56, 48, 44)      # one size for the whole strip: the largest at which every value fits
+STRIP_LABEL_SIZES = (34, 30)
+
+
+def _strip_text(v):
+    """A strip value as the text a line would have to repeat to duplicate it."""
+    return v[1] if isinstance(v, tuple) else v
+
+
+def strip_check(items, lines=()):
+    """Stop on a malformed strip, or on a story line that already says a strip
+    value (one fact, one place). `lines` are the (text, t0, t1, opts) of reel()."""
+    if not 2 <= len(items) <= 3:
+        raise ValueError(f'a strip takes 2 or 3 items, got {len(items)}')
+    for label, v in items:
+        if isinstance(v, tuple) and (len(v) != 2 or v[0] != 'aed' or not str(v[1]).strip()):
+            raise ValueError(f"strip value {v!r}: use a string, or ('aed', '149') for the dirham symbol")
+    rtl_starts([label for label, _ in items], 'strip label')
+    for text, _, _, kw in lines:
+        hay = (text + (f" {kw['price']}" if kw.get('price') else '')).replace('|', ' ').replace('\n', ' ').casefold()
+        for label, v in items:
+            val = _strip_text(v).strip()
+            if val and val.casefold() in hay:
+                raise ValueError(f'the strip already shows {val!r} ({label}); a line must not say it again: {text}')
+
+
+def strip_layer(items, path, theme='cold'):
+    """The fact strip alone, 1080x1920 transparent: a rounded soft band (the
+    ground tinted with the theme, about 70% opaque) at x SAFE_LEFT to W - SAFE_RIGHT,
+    bottom at SAFE_BOTTOM - 24, items as equal columns right to left with thin
+    rules in the theme's second colour. Each item: label in Dubai Medium (34) over
+    the value in Dubai Bold (56, or 48 then 44 so every value fits one size). Raises
+    when something leaves the safe zone, a label does not open on an Arabic word, or
+    a text will not fit its column."""
+    strip_check(items)
+    left, right = A.THEMES[theme][:2]
+    x0, x1, y0, y1 = L, W - R, STRIP_TOP, STRIP_BOTTOM
+    if x0 < G.SAFE_LEFT or x1 > W - G.SAFE_RIGHT or y1 > G.SAFE_BOTTOM or y0 < G.SAFE_TOP:
+        raise ValueError(f'the strip ({x0}-{x1}, {y0}-{y1}) leaves the safe zone')
+    n = len(items); cw = (x1 - x0) / n; room = cw - 28
+    probe = ImageDraw.Draw(Image.new('L', (W, H)))
+
+    def vwidth(v, size):               # (width, symbol width) of a value at a size
+        f = A.F('Bold', size)
+        if isinstance(v, tuple):
+            dh = probe.textbbox((0, 0), v[1], font=f, anchor='ls')[3] - probe.textbbox((0, 0), v[1], font=f, anchor='ls')[1]
+            sw = round(SYM.width * dh / SYM.height)
+            return probe.textlength(v[1], font=f, **G.AR) + round(dh * 0.3) + sw, dh
+        return probe.textlength(v, font=f, **G.AR), 0
+    ls = next((s for s in STRIP_LABEL_SIZES if all(probe.textlength(l, font=A.F('Medium', s), **G.AR) <= room for l, _ in items)), None)
+    if ls is None:
+        raise ValueError(f'a strip label is wider than its column ({room:.0f}px at {STRIP_LABEL_SIZES[-1]}): '
+                         f'{[l for l, _ in items]}; shorten it or use 2 items')
+    vs = next((s for s in STRIP_VALUE_SIZES if all(vwidth(v, s)[0] <= room for _, v in items)), None)
+    if vs is None:
+        raise ValueError(f'a strip value is wider than its column ({room:.0f}px at {STRIP_VALUE_SIZES[-1]}): '
+                         f'{[_strip_text(v) for _, v in items]}; shorten it or use 2 items')
+
+    im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    soft = Image.new('L', (W, H), 0)   # a wider, blurred shadow so the band's edge is soft
+    ImageDraw.Draw(soft).rounded_rectangle([x0 - 8, y0 - 8, x1 + 8, y1 + 8], radius=34, fill=110)
+    sh = Image.new('RGBA', (W, H), A.GROUND + (255,)); sh.putalpha(soft.filter(ImageFilter.GaussianBlur(14))); im.alpha_composite(sh)
+    tint = tuple(round(A.GROUND[i] * 0.86 + left[i] * 0.14) for i in range(3))
+    d = ImageDraw.Draw(im)
+    d.rounded_rectangle([x0, y0, x1, y1], radius=26, fill=tint + (178,), outline=right + (90,), width=2)
+    for i in range(1, n):              # thin rules in the theme's second colour
+        rx = round(x1 - i * cw)
+        d.line([(rx, y0 + 26), (rx, y1 - 26)], fill=right + (170,), width=2)
+    fl, fv = A.F('Medium', ls), A.F('Bold', vs)
+    lab_y, val_y = y0 + 56, y1 - 34
+    for i, (label, v) in enumerate(items):
+        cx = x1 - (i + 0.5) * cw
+        d.text((cx, lab_y), label, font=fl, fill=A.BODY, anchor='ms', **G.AR)
+        w, dh = vwidth(v, vs)
+        if isinstance(v, tuple):       # digits with the dirham symbol to their left, as on the price lines
+            dw = probe.textlength(v[1], font=fv, **G.AR); sw = round(SYM.width * dh / SYM.height)
+            d.text((cx + w / 2, val_y), v[1], font=fv, fill=A.INK, anchor='rs', **G.AR)
+            sym = Image.new('RGBA', (sw, dh), A.INK + (255,))
+            sym.putalpha(SYM.resize((sw, dh), Image.LANCZOS))
+            im.alpha_composite(sym, (round(cx - w / 2), val_y - dh))
+        else:
+            d.text((cx, val_y), v, font=fv, fill=A.INK, anchor='ms', **G.AR)
+        for t, f, yy in ((label, fl, lab_y), (_strip_text(v), fv, val_y)):    # nothing may leave the column or the band
+            bb = probe.textbbox((cx, yy), t, font=f, anchor='ms', **G.AR)
+            if bb[0] < cx - cw / 2 + 6 or bb[2] > cx + cw / 2 - 6 or bb[1] < y0 + 4 or bb[3] > y1 - 4:
+                raise ValueError(f'strip text {t!r} leaves its column or the band: {bb}')
     im.save(path); return path
 
 
@@ -618,8 +719,13 @@ def check_reading(lines, end):
 
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
-         lowres_ok=False, read_check=True, track=None, draft=False, head_size=66, cut=False, credits=None):
-    """`credits`: [(first_shot, last_shot, text)] labels footage that is not
+         lowres_ok=False, read_check=True, track=None, draft=False, head_size=66, cut=False, credits=None, strip=None):
+    """`strip`: [(label, value), ...], 2 or 3 facts for the `split` template
+    (Mohammad, 14 Oct 2026): a slim strip pinned low in the safe zone from the end
+    of the headline to the end of the clip, the story lines rising above it. A
+    value is a string or ('aed', '149'); a line that already says a value stops
+    the render (one fact, one place). See strip_layer.
+    `credits`: [(first_shot, last_shot, text)] labels footage that is not
     of the story's subject («لقطات من Fortnite»), shown over those shots.
     `cut=True` joins the shots with hard cuts instead of crossfades: the
     Comparison format (Mohammad, 10 Oct 2026), two states side by side in time
@@ -643,7 +749,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         keep, X = X, 0.04
         try:
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
-                        style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, credits=credits)
+                        style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, credits=credits, strip=strip)
         finally:
             X = keep
     G._ACC = G.ACCENTS[theme]
@@ -656,6 +762,9 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             lines = spread(lines, head_secs + 0.1, end)
         if read_check and not voice:
             check_reading(lines, end)
+        if strip:                              # lines rise over the strip; a repeated fact or a bad strip stops here
+            strip_check(strip, lines); strip_layer(strip, f'{tmp}/strip.png', theme)
+            lines = [(t, a, z, kw if kw.get('top') else {**kw, 'lift': STRIP_LIFT}) for t, a, z, kw in lines]
         for i, (text, _, _, kw) in enumerate(lines):   # a line outside the safe zone stops here, not after the encode
             line_layer(text, f'{tmp}/l{i}.png', **kw)
         montage(shots, f'{tmp}/cut.mp4', lowres_ok, fast=draft)
@@ -671,18 +780,21 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         layers.append((line_layer(text, f'{tmp}/l{i}.png', **kw), a, min(z, end)))
     for i in range(1, len(layers) - 1):    # a line leaves before the next arrives
         p, a, z = layers[i]; layers[i] = (p, a, min(z, layers[i + 1][1]))
+    if strip:                              # after the trim: the strip stays for the rest of the clip, fading in over 0.4 s
+        layers.append((f'{tmp}/strip.png', head_secs, end))
     for j, (first, last, text) in enumerate(credits or []):   # after the trim: credits overlap the lines
         a = max(starts[first] + 0.2, head_secs + 0.1)          # not under the headline
         z = starts[last + 1] if last + 1 < len(starts) else end
         low = any(kw.get('top') and la < z and lz > a for _, la, lz, kw in lines)
-        if z - a > 0.5:
-            layers.append((credit_layer(text, f'{tmp}/c{j}.png', low=low), a, z))
+        if z - a > 0.5:                                        # a low credit sits just above the strip, not on it
+            layers.append((credit_layer(text, f'{tmp}/c{j}.png', low=low,
+                                        y=STRIP_TOP - 12 if low and strip else None), a, z))
     args = ['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', f'{tmp}/cut.mp4']
     for p, _, _ in layers:
         args += ['-loop', '1', '-t', f'{end:.2f}', '-i', p]
     fc = ['[0:v]setsar=1,fps=30[v0]']
     for i, (p, a, z) in enumerate(layers, 1):
-        fin = f',fade=t=in:st={a:.2f}:d=0.2:alpha=1' if a > 0 else ''
+        fin = f",fade=t=in:st={a:.2f}:d={0.4 if strip and p == f'{tmp}/strip.png' else 0.2}:alpha=1" if a > 0 else ''
         fout = f',fade=t=out:st={z - 0.2:.2f}:d=0.2:alpha=1' if z < end - 0.01 else ''
         fc += [f'[{i}:v]format=rgba{fin}{fout}[l{i}]', f'[v{i - 1}][l{i}]overlay=0:0:shortest=1[v{i}]']
     fc.append(f'[v{len(layers)}]format=yuv420p[v]')
