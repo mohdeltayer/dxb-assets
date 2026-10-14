@@ -81,10 +81,21 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - Our bed under stills, graphics or noisy stretches; never mute footage to
     add a bed.
   - The jingle and end card always close the Reel.
+- **Templates (14 Oct):** the template is chosen per story from
+  templates/formats.py (`NEWS_MAP`): `trailer` (footage all the way, lines
+  on the picture, no card), `split` (footage all the way plus a slim pinned
+  fact strip), `clipcard` (footage, one card at the key beat, footage),
+  `numbers` (our graphics only, when no footage shows the news), and
+  `comparison`, `quote`, `explainer`, `handson`, `retro`.
+  - Footage first: a story with a trailer takes `trailer` or `split` before
+    any card template.
+  - One fact, one place: a fact is on a card or in a line, never both; over
+    a card the line is at most one visual line of framing, or absent.
+  - Every shot has a reason, written per line in the brief: what the viewer
+    sees and why it shows that line.
 - **Variety:**
   - Themes per story; band styles rotate through the ledger.
-  - Formats come from templates/formats.py, with no more than two of the
-    same in a row.
+  - No more than two Reels in a row share a template.
   - The retro sound is for on-this-day pieces only.
 - **Process:**
   1. A five-line brief.

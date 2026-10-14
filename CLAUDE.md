@@ -548,6 +548,60 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   second or two with no line after the headline; reading pace, line limits
   and the headline on the first frame stay as they are. The line carrying
   the number or the news lands on the most striking shot.
+- Templates and scenarios (Mohammad, 14 Oct 2026, 04:52 Dubai, after the
+  Shogun 2 Reel: "I like the style of showing part clip and then adding an
+  info graph or a screen but this started appearing nearly for every reel.
+  In some cases I would like to see the video while reading the news on
+  screen. In some cases the information is shown twice... How about making
+  various reel templates and scenarios and which templates can be used with
+  the type of news. Plus when adding a video we need to think very clearly
+  what is on screen and how we convey the information instead of just a
+  random clip."). The format ledger confirmed it: of the ten Reels before
+  his message, eight were clip-then-card or card-only. From 14 Oct:
+  - One fact, one place. A fact lives on a card or in a line, never both.
+    Over a card the line is a frame of at most one visual line («هذا ما
+    يدفعه اللاعب في الخليج», «الخصم ينتهي الثلاثاء»), or there is no line
+    and the card holds the beat alone for its reading time. On the Shogun 2
+    Reel the card said 149 AED and 149 SR and the line under it said the
+    same again; never again.
+  - The template is chosen per story from `templates/formats.py`
+    (`TEMPLATES`, and `NEWS_MAP` from the kind of news to the templates
+    that fit it), named in the brief, and the ledger keeps consecutive
+    Reels apart as before. The set:
+    - `trailer`: official footage runs the whole Reel with its own sound;
+      the lines ride on it and the news is read while the video plays; no
+      card at all. The headline carries the key fact. For launches, dates,
+      reveals, updates and anything with a trailer that shows the news.
+    - `split`: footage runs the whole Reel and a slim fact strip (date,
+      price, platforms; two or three items at most) stays pinned low in
+      the safe zone while the lines narrate on the picture above it. The
+      strip is the card; the lines never repeat it. For a launch with a
+      price, a dated event, a sale with a deadline. New in `reel.py`
+      (`strip=[(label, value), ...]`), first used 14 Oct.
+    - `clipcard`: footage for the hook and the story, one card at the key
+      beat (the price table, the date, the figure), then back to footage.
+      One card, not three; the card holds the beat alone or under a frame
+      line. For store prices across regions, a figure with a comparison.
+    - `numbers`: our graphics on the living ground for the whole Reel,
+      only when there is no footage worth showing: sales charts, financial
+      results, rankings. The lines are the story; the charts are the data.
+    - `comparison`, `quote`, `explainer`, `handson`, `retro`: as before.
+      A quote Reel still shows what the speaker talked about once the
+      quote has landed, not their portrait for the whole Reel.
+  - Every shot has a reason. The brief's shot list says, per line, what
+    the viewer sees and why it is that frame («السطر عن سعر النسخة الكاملة:
+    اللقطة هي شاشة محتويات النسخة»; «السطر عن الكاميرا الجديدة: لقطة
+    تُظهر الكاميرا تدور حول المقاتل»). A shot with no reason beyond "it is
+    from the trailer" is replaced by one that shows the line, by the
+    publisher's own screen of the thing, or by our graphic for it. The
+    shot sheet is judged against those reasons, not only for black frames
+    and crops.
+  - Footage first. When a trailer, gameplay or the publisher's own video
+    exists, `trailer` or `split` comes before any card template; cards are
+    for facts the footage cannot show (prices, dates, numbers), and even
+    then `split` keeps the picture running.
+  - The Sifu Reel of 14 Oct 05:00 Dubai went out under the old shape (card
+    plus a line reading it) because it was already in Postiz when he wrote.
 - Numbers Reels have a living ground (Mohammad, 12 Oct 2026: once the
   title went, the charts sat on "a big purple background" and the sales
   Reels felt stale). Our graphics are drawn on a transparent canvas
