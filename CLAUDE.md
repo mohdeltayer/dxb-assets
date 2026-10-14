@@ -1249,6 +1249,29 @@ Brand kit (Mohammad, 26 Sep 2026):
   seamless 6 second MP4 loop, only the footer lines drift) but is not
   used: cards post as stills unless he asks for motion on a story.
 
+## The Game Awards co-stream (advisor decision, 14 Oct 2026)
+
+Digital Lounge co-streams The Game Awards on Thursday 10 Dec 2026 (Peacock
+Theater; past years 17:00 Pacific, 05:00 Friday Dubai; the time is confirmed
+when announced) on YouTube, with Mohammad's voice and no face, Instagram
+carrying the clips. The YouTube drop of 1 Oct covers posted Shorts, not this
+live stream. No YoloBox purchase before the Awards: OBS on a laptop with
+window capture and a USB mic.
+- Build by 31 Oct: a live brand package in the Reel look as OBS scenes:
+  starting-soon with a countdown, BRB, a right-to-left lower-third ticker in
+  Dubai, the corner mark, an end card (`templates/live/`, planned).
+- Two unlisted dry runs in November on the next showcases, the second with
+  the ticker fed from the hourly watch.
+- Countdown Reels from 3 Dec; the announcement Reel on 9 Dec with the Dubai
+  time.
+- The clip routine is designed first: timestamps noted live, five to eight
+  Reels cut from 06:30 Friday under `list`, `trailer` and `numbers`.
+- Judged at the 16 Dec audit on peak live viewers, replay views and the clip
+  Reels against normal Reels; play streams and hardware are decided then.
+- The Awards are in `newsroom/events.md`; its co-stream policy is read the
+  week before (a check-in is set for 3 Dec). Plan and checklist:
+  `notes/tga-costream-plan.md`.
+
 ## «الطريق إلى Ocarina» (Mohammad, 11 Oct 2026)
 
 A Digital Lounge spotlight series running up to the Switch 2 launch of The

@@ -10,6 +10,10 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 - **Live:** Digital Lounge on X, Instagram and Threads. Every story goes to all
   three at the same time with the same Reel (CLAUDE.md "Threads",
   "Instagram").
+- **The Game Awards, 10 Dec:** a YouTube co-stream with Mohammad's voice, no
+  face, OBS on a laptop; brand package as OBS scenes by 31 Oct, two unlisted
+  dry runs in November, countdown Reels from 3 Dec, clip Reels from 06:30
+  Friday; judged at the 16 Dec audit (CLAUDE.md "The Game Awards co-stream").
 - **On hold:** DXB-KNIGHT, option B from 11 Oct. There is no routine
   production; a hero piece or a take is built only when Mohammad brings one
   ("Two accounts").
