@@ -1,91 +1,123 @@
 {
-  "id": "2026-10-14-sbox-free-to-play",
-  "title": "s&box going free to play towards the end of 2026; Facepunch admits poor reviews and retention",
-  "game": "s&box",
-  "companies": [
-    "Facepunch Studios"
-  ],
-  "priority": "🟢",
-  "related": [],
-  "sources": [
-    {
-      "role": "primary",
-      "name": "Facepunch, \"Rethinking\", sbox.game/news, 13 Oct 2026 09:00Z (read via the site RSS; author \"matt\", unsigned first-person opening)",
-      "url": "https://sbox.game/news/rethinking"
-    },
-    {
-      "role": "primary",
-      "name": "Steam appdetails app 590830, UAE price 32.75 AED, read 14 Oct",
-      "url": "https://store.steampowered.com/api/appdetails?appids=590830&cc=ae"
-    },
-    {
-      "role": "outlet_report",
-      "name": "GamingOnLinux, Liam Squires-Hand, 14 Oct 08:02Z",
-      "url": "https://www.gamingonlinux.com/2026/10/facepunch-are-rethinking-s-box-since-its-not-doing-well-its-going-free-to-play/"
-    }
-  ],
-  "claims": [
-    {
-      "text": "Free to play \"towards the end of the year\"; no date",
-      "status": "verified",
-      "source": "the post"
-    },
-    {
-      "text": "\"We don't need the entrance fee, we need players\"; \"not well liked\", poor retention, \"embarrassed by our reviews\"",
-      "status": "verified",
-      "source": "the post, verbatim"
-    },
-    {
-      "text": "Buyers get exclusive Steam inventory items, extra for the $20 tier",
-      "status": "verified",
-      "source": "the post"
-    },
-    {
-      "text": "Focus on the Sandbox game to reach and pass Garry's Mod; the Citizen removed; maps to the Steam Workshop",
-      "status": "verified",
-      "source": "the post"
-    },
-    {
-      "text": "32.75 AED on Steam UAE today",
-      "status": "verified",
-      "source": "Steam API"
-    }
-  ],
-  "why": "Garry's Mod's successor admitting failure in its maker's own words, and going free",
-  "lanes": {
-    "dl": {
-      "lane": "Reel",
-      "chip": "جديد",
-      "format": "split",
-      "time": "14 Oct 15:00 Dubai",
-      "headline": "استوديو فيس بانش (Facepunch) يحوّل لعبته s&box خليفة Garry's Mod إلى لعبة مجانية بعد إقراره بمراجعات «مخجلة»",
-      "x": "استوديو فيس بانش (Facepunch) يجعل s&box، خليفة Garry's Mod، مجانية أواخر العام: «لا نحتاج رسم الدخول، بل نحتاج إلى لاعبين».",
-      "ig": "خليفة Garry's Mod يفتح أبوابه مجانًا بعد استقبال فاتر. / أعلن استوديو فيس بانش (Facepunch) في تدوينة بعنوان «إعادة تفكير» أن s&box، خليفة Garry's Mod، ستتحول إلى لعبة مجانية في أواخر العام الحالي، من دون تاريخ محدد بعد. ويقول الاستوديو: «لا نحتاج رسم الدخول، بل نحتاج إلى لاعبين». / ويقرّ المنشور بأن المنصة «غير محبوبة» وأن احتفاظها باللاعبين ضعيف، وبأن مراجعاتها على Steam مخجلة. وسيحصل كل من دفع ثمن اللعبة تلقائيًا على عناصر حصرية في مخزون Steam، مع عناصر إضافية لمن اشتراها بسعر 20 دولارًا (وليس 10). / وتتضمن الخطة التركيز على وضع Sandbox بهدف مجاراة Garry's Mod ثم تجاوزها، وإزالة شخصية Citizen الافتراضية، ونقل الخرائط إلى Steam Workshop. وتُباع اللعبة حاليًا على Steam في الإمارات بـ32.75 درهمًا.",
-      "threads": "استوديو فيس بانش (Facepunch) يجعل s&box، خليفة Garry's Mod، مجانية أواخر العام: «لا نحتاج رسم الدخول، بل نحتاج إلى لاعبين»."
-    }
+ "id": "2026-10-14-sbox-free-to-play",
+ "title": "s&box going free to play towards the end of 2026; Facepunch admits poor reviews and retention",
+ "game": "s&box",
+ "companies": [
+  "Facepunch Studios"
+ ],
+ "priority": "🟢",
+ "related": [],
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Facepunch, \"Rethinking\", sbox.game/news, 13 Oct 2026 09:00Z (read via the site RSS; author \"matt\", unsigned first-person opening)",
+   "url": "https://sbox.game/news/rethinking"
   },
-  "media": [
-    {
-      "file": "cards/2026-10/sbox-free-to-play-reel-v1.mp4",
-      "kind": "Facepunch's own gravity-gun clips from the post (2000x1060, 1.8x, muted, our bed) and Steam's own screenshots; split strip with the timing and the price"
-    }
-  ],
-  "status": "queued",
-  "versions": [
-    {
-      "v": 1,
-      "at": "2026-10-14T09:50:00Z",
-      "change": "first build from the 14:00 intake; grammar review; DeepL back-check; rolling queue"
-    }
-  ],
-  "queued": {
-    "time": "2026-10-14T11:00:00Z",
-    "accounts": [
-      "Digital Lounge X",
-      "Digital Lounge Instagram",
-      "Digital Lounge Threads"
-    ],
-    "approval": "go: rolling queue; preview sent 10:31Z",
-    "media": "cards/2026-10/sbox-free-to-play-reel-v1.mp4"
+  {
+   "role": "primary",
+   "name": "Steam appdetails app 590830, UAE price 32.75 AED, read 14 Oct",
+   "url": "https://store.steampowered.com/api/appdetails?appids=590830&cc=ae"
+  },
+  {
+   "role": "outlet_report",
+   "name": "GamingOnLinux, Liam Squires-Hand, 14 Oct 08:02Z",
+   "url": "https://www.gamingonlinux.com/2026/10/facepunch-are-rethinking-s-box-since-its-not-doing-well-its-going-free-to-play/"
   }
+ ],
+ "claims": [
+  {
+   "text": "Free to play \"towards the end of the year\"; no date",
+   "status": "verified",
+   "source": "the post"
+  },
+  {
+   "text": "\"We don't need the entrance fee, we need players\"; \"not well liked\", poor retention, \"embarrassed by our reviews\"",
+   "status": "verified",
+   "source": "the post, verbatim"
+  },
+  {
+   "text": "Buyers get exclusive Steam inventory items, extra for the $20 tier",
+   "status": "verified",
+   "source": "the post"
+  },
+  {
+   "text": "Focus on the Sandbox game to reach and pass Garry's Mod; the Citizen removed; maps to the Steam Workshop",
+   "status": "verified",
+   "source": "the post"
+  },
+  {
+   "text": "32.75 AED on Steam UAE today",
+   "status": "verified",
+   "source": "Steam API"
+  }
+ ],
+ "why": "Garry's Mod's successor admitting failure in its maker's own words, and going free",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "جديد",
+   "format": "split",
+   "time": "14 Oct 15:00 Dubai",
+   "headline": "استوديو فيس بانش (Facepunch) يحوّل لعبته s&box خليفة Garry's Mod إلى لعبة مجانية بعد إقراره بمراجعات «مخجلة»",
+   "x": "استوديو فيس بانش (Facepunch) يجعل s&box، خليفة Garry's Mod، مجانية أواخر العام: «لا نحتاج رسم الدخول، بل نحتاج إلى لاعبين».",
+   "ig": "خليفة Garry's Mod يفتح أبوابه مجانًا بعد استقبال فاتر. / أعلن استوديو فيس بانش (Facepunch) في تدوينة بعنوان «إعادة تفكير» أن s&box، خليفة Garry's Mod، ستتحول إلى لعبة مجانية في أواخر العام الحالي، من دون تاريخ محدد بعد. ويقول الاستوديو: «لا نحتاج رسم الدخول، بل نحتاج إلى لاعبين». / ويقرّ المنشور بأن المنصة «غير محبوبة» وأن احتفاظها باللاعبين ضعيف، وبأن مراجعاتها على Steam مخجلة. وسيحصل كل من دفع ثمن اللعبة تلقائيًا على عناصر حصرية في مخزون Steam، مع عناصر إضافية لمن اشتراها بسعر 20 دولارًا (وليس 10). / وتتضمن الخطة التركيز على وضع Sandbox بهدف مجاراة Garry's Mod ثم تجاوزها، وإزالة شخصية Citizen الافتراضية، ونقل الخرائط إلى Steam Workshop. وتُباع اللعبة حاليًا على Steam في الإمارات بـ32.75 درهمًا.",
+   "threads": "استوديو فيس بانش (Facepunch) يجعل s&box، خليفة Garry's Mod، مجانية أواخر العام: «لا نحتاج رسم الدخول، بل نحتاج إلى لاعبين»."
+  }
+ },
+ "media": [
+  {
+   "file": "cards/2026-10/sbox-free-to-play-reel-v1.mp4",
+   "kind": "Facepunch's own gravity-gun clips from the post (2000x1060, 1.8x, muted, our bed) and Steam's own screenshots; split strip with the timing and the price"
+  }
+ ],
+ "status": "queued",
+ "versions": [
+  {
+   "v": 1,
+   "at": "2026-10-14T09:50:00Z",
+   "change": "first build from the 14:00 intake; grammar review; DeepL back-check; rolling queue"
+  }
+ ],
+ "queued": {
+  "time": "2026-10-14T11:00:00Z",
+  "accounts": [
+   "Digital Lounge X",
+   "Digital Lounge Instagram",
+   "Digital Lounge Threads"
+  ],
+  "approval": "go: rolling queue; preview sent 10:31Z",
+  "media": "cards/2026-10/sbox-free-to-play-reel-v1.mp4"
+ },
+ "posts": [
+  {
+   "folder": "sbox-free-to-play-ar",
+   "account": "Digital Lounge",
+   "platform": "x",
+   "date": "2026-10-14T11:00:00Z",
+   "postiz_id": "cmv7z0a7900fhqt0ykjervi4s",
+   "sent_at": "2026-10-14T10:32:05+00:00",
+   "approved": "go: rolling queue; preview sent 10:29Z"
+  },
+  {
+   "folder": "sbox-free-to-play-ig",
+   "account": "Digital Lounge",
+   "platform": "instagram",
+   "date": "2026-10-14T11:00:00Z",
+   "postiz_id": "cmv7z0e9g00hwqu0y0caomnki",
+   "sent_at": "2026-10-14T10:32:11+00:00",
+   "approved": "go: rolling queue; preview sent 10:29Z"
+  },
+  {
+   "folder": "sbox-free-to-play-th",
+   "account": "Digital Lounge",
+   "platform": "threads",
+   "date": "2026-10-14T11:00:00Z",
+   "postiz_id": "cmv7z0ijf00frqt0ypeubkp67",
+   "sent_at": "2026-10-14T10:32:16+00:00",
+   "approved": "go: rolling queue; preview sent 10:29Z"
+  }
+ ],
+ "times": {
+  "posted": "2026-10-14T11:00:00Z"
+ }
 }
