@@ -97,6 +97,11 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     a card the line is at most one visual line of framing, or absent.
   - Every shot has a reason, written per line in the brief: what the viewer
     sees and why it shows that line.
+  - Two families: footage-led (`trailer`, `split`, `clipcard`, `handson`,
+    `comparison`) and card-led (`numbers`, `explainer`, `quote`, `retro`).
+    No third in a row, and card-led at most one in three over the last six
+    (`formats.py check`). Over a split strip a line is two visual lines at
+    most.
 - **Variety:**
   - Themes per story; band styles rotate through the ledger.
   - No more than two Reels in a row share a template.

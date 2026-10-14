@@ -187,8 +187,9 @@ def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96,
     for i, x in enumerate(lines):
         if tw(x) > room - (size if price and i == len(lines) - 1 else 0):
             raise ValueError(f'line runs out of the safe zone: {x}')
-    if len(lines) > 3:
-        raise ValueError(f'{len(lines)} lines; keep a sentence to 3: {text}')
+    cap = 2 if lift else 3                 # over a split strip a sentence is two visual lines at most (14 Oct 2026)
+    if len(lines) > cap:
+        raise ValueError(f'{len(lines)} lines; keep a sentence to {cap}' + (' over the strip' if lift else '') + f': {text}')
     rtl_starts(lines, 'story')
     base0 = G.SAFE_TOP + 110 if top else G.SAFE_BOTTOM - 40 - lift - step * (len(lines) - 1)
     mask = Image.new('L', (W, H), 0); d = ImageDraw.Draw(mask)

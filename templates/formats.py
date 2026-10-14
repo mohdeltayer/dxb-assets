@@ -5,7 +5,7 @@ brief before the shot sheet. No more than two Reels in a row share a format
 unless the story demands it; the ledger keeps the order they went out in.
 
     python3 formats.py                      # the last ten, newest last
-    python3 formats.py check numbers        # would this be a third in a row?
+    python3 formats.py check numbers        # a third in a row, or a third card-led Reel in six?
     python3 formats.py add <reel name> trailer
 """
 import json, os, sys
@@ -22,6 +22,16 @@ FORMATS = {
     'retro':     'on this day: the game on a real CRT photo, fact sheet then «هل تعلم؟» facts (retro_tv, 10 Oct 2026)',
 }
 TEMPLATES = FORMATS
+
+# Two families (advisor, 14 Oct 2026): footage-led Reels run the picture the whole way; card-led Reels put our graphics,
+# figures or a portrait on screen. Besides "no third in a row", card-led Reels are at most one in three over the last six.
+FAMILIES = {
+    'footage': ('trailer', 'split', 'clipcard', 'handson'),
+    'card':    ('numbers', 'explainer', 'quote', 'retro'),
+}
+FAMILY = {fmt: fam for fam, fmts in FAMILIES.items() for fmt in fmts}
+FAMILY['comparison'] = 'footage'   # two labelled states of the footage or store screens, hard cuts
+WINDOW, CARD_MAX = 6, 2            # at most CARD_MAX card-led Reels in any WINDOW consecutive Reels
 
 # Which templates fit which kind of news (Mohammad, 14 Oct 2026: "various reel templates and scenarios and which templates can
 # be used with the type of news"). First is the default; the rest are the alternatives when the first would be a third in a row
@@ -44,7 +54,8 @@ NEWS_MAP = {
 
 
 def pick(kind):
-    """The template for a kind of news: its first choice unless that would be a third in a row."""
+    """The template for a kind of news: its first choice unless the ledger refuses it (a third in a row, or a third
+    card-led Reel in six)."""
     for fmt in NEWS_MAP[kind]:
         if not check(fmt):
             return fmt
@@ -68,9 +79,22 @@ def add(name, fmt):
 
 
 def check(fmt):
-    """True when fmt would be a third in a row."""
-    last = [e['format'] for e in _load()[-2:]]
-    return len(last) == 2 and all(f == fmt for f in last)
+    """Why fmt should not be next, or '' when it may: a third in a row, or (card-led) a third card-led Reel in the
+    last six (at most one in three)."""
+    led = [e['format'] for e in _load()]
+    last = led[-2:]
+    if len(last) == 2 and all(f == fmt for f in last):
+        return f'third {fmt} in a row'
+    if FAMILY.get(fmt) == 'card':
+        recent = led[-(WINDOW - 1):]
+        cards = [f for f in recent if FAMILY.get(f) == 'card']
+        if len(cards) >= CARD_MAX:
+            return f'card-led would be {len(cards) + 1} of the last {len(recent) + 1} ({", ".join(cards)}); at most {CARD_MAX} in {WINDOW}'
+    return ''
+
+
+def family(fmt):
+    return FAMILY.get(fmt, '?')
 
 
 if __name__ == '__main__':
@@ -78,7 +102,8 @@ if __name__ == '__main__':
     if a[:1] == ['add']:
         add(a[1], a[2]); print('ok')
     elif a[:1] == ['check']:
-        print('third in a row: pick another unless the story demands it' if check(a[1]) else 'ok')
+        why = check(a[1])
+        print(f'{why}: pick another unless the story demands it' if why else 'ok')
     else:
         for e in _load()[-10:]:
-            print(e['format'], e['name'])
+            print(f"{e['format']:<10} {family(e['format']):<7} {e['name']}")

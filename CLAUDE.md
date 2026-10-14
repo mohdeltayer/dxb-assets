@@ -602,6 +602,16 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
     then `split` keeps the picture running.
   - The Sifu Reel of 14 Oct 05:00 Dubai went out under the old shape (card
     plus a line reading it) because it was already in Postiz when he wrote.
+  - Two families (advisor, 14 Oct 2026, 12:30 Dubai): footage-led (`trailer`,
+    `split`, `clipcard`, `handson`, and `comparison`) and card-led (`numbers`,
+    `explainer`, `quote`, `retro`). Besides "no third in a row", card-led
+    Reels are at most one in three over the last six: `formats.py check`
+    refuses a third card-led Reel in a window of six (`FAMILIES`, `WINDOW`,
+    `CARD_MAX`), and `pick` moves to the kind's next template. `NEWS_MAP` is
+    unchanged. Over a split strip a story line is at most two visual lines
+    (`reel.py` stops on a third). Applies from the next Reel after Valve
+    Index; the four that followed it that morning (numbers, clipcard,
+    explainer, split) went out before the rule and sit in the window.
 - Numbers Reels have a living ground (Mohammad, 12 Oct 2026: once the
   title went, the charts sat on "a big purple background" and the sales
   Reels felt stale). Our graphics are drawn on a transparent canvas
