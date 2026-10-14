@@ -277,7 +277,7 @@ def tashkeel(text, names=None):
         def hold(v):
             keep.append(v); return f' \u2066{len(keep) - 1}\u2069 '    # a token Mishkal passes through
         for k in sorted(names, key=len, reverse=True):              # longest first: "Unreal Engine" before "Unreal"
-            sent = re.sub(r'(?<![A-Za-z\u0600-\u06FF])' + re.escape(k) + r'(?![A-Za-z\u0600-\u06FF])',
+            sent = re.sub(r'(?<![A-Za-z\u0621-\u064A])' + re.escape(k) + r'(?![A-Za-z\u0621-\u064A])',   # letters only: ، may follow
                           lambda m: hold(names[k]), sent)
         masked = LATIN.sub(lambda m: hold(m.group(0)), sent)
         tail = masked[-1] if masked and masked[-1] in '.؟!' else ''
