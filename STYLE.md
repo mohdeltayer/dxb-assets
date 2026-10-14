@@ -119,6 +119,21 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - No more than two Reels in a row share a template.
   - The opening beat follows the template (`formats.OPENERS`, 14 Oct): quote
     on the quote, numbers on the number alone, edition on the hero item.
+  - No template more than four times a day; a price story with more than
+    three facts is never split; handson and edition are the only templates
+    outside the 12 to 20 s target (advisor memos, 14 Oct evening).
+  - New templates `stills` (footage-led, the last resort after every motion
+    source: cut not panned, 3 s an image, 12 to 14 s) and `list` (card-led:
+    N items on their own art, n/N cue, mosaic cover); `tribute` is a stills
+    variant (no chip, no waves, grey lines, quiet end card); عاجل is a skin
+    (crimson, breaking bed) on any template. NEWS_MAP carries about fifty
+    kinds now (CLAUDE.md "Advisor memos, 14 Oct 2026 evening session");
+    the brief starts from the advisor canvas scenario for the kind.
+  - Something changes on screen every 3 to 4 s, lines enter on cuts, the
+    word-by-word reveal is for the key line only, and the last two seconds
+    before the end card are a picture, never a card.
+  - A closing question only on stories readers argue about, never on a
+    launch or a price.
   - Weekly Instagram views are recorded next to each Reel's template
     (`formats.py views`, Tuesday morning from Mohammad's numbers, 14 Oct).
   - Landing (14 Oct, first draft to Mohammad before use): `edition` (editions,
@@ -141,6 +156,8 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 
 - **X:** one or two lines that hook, with no hashtags; the Reel carries the
   story ("Short X posts").
+- **Arabic-support stories:** kind `arabic`, split strip (الواجهة · الترجمة ·
+  الدبلجة as they apply) and the chip «بالعربية» beside the news chip (14 Oct).
 - **Instagram:**
   - Reels only; the same full-quality file as X.
   - Caption: a hook that differs from the headline, with the game's name and

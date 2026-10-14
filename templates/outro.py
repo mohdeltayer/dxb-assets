@@ -99,7 +99,8 @@ def _fade(lay, a):
     return lay
 
 
-def card(style, out, theme_accent=None, platforms=PLATFORMS):
+def card(style, out, theme_accent=None, platforms=PLATFORMS, quiet=False):
+    """`quiet` (tribute, advisor 14 Oct 2026): no rings on the notes or the chord; the glyphs and name still come up."""
     notes, chord = sonic.beats(style)
     notes = [LEAD + t for t in notes]
     chord += LEAD
@@ -128,7 +129,7 @@ def card(style, out, theme_accent=None, platforms=PLATFORMS):
             if lay:
                 im.alpha_composite(lay)
             ring = (t - notes[i]) / 0.45          # one soft ring as the note sounds
-            if 0 <= ring <= 1:
+            if 0 <= ring <= 1 and not quiet:
                 r = GLYPH * (0.62 + 0.35 * _ease(ring))
                 cx, cy = x + GLYPH / 2, ROW_Y
                 a = int(200 * (1 - ring))
@@ -138,7 +139,7 @@ def card(style, out, theme_accent=None, platforms=PLATFORMS):
             if lay:
                 im.alpha_composite(lay)
         ring = (t - chord) / 0.7                   # the mark answers the chord once
-        if 0 <= ring <= 1:
+        if 0 <= ring <= 1 and not quiet:
             r = MARK / 2 + 8 + 40 * _ease(ring)
             d.ellipse([CX - r, MARK_Y - r, CX + r, MARK_Y + r], outline=acc + (int(170 * (1 - ring)),),
                       width=4)
@@ -182,25 +183,31 @@ def evolving_bed(style, secs):
     return p
 
 
-def append(video, out, style='neon', bed=None, jingle=None, accent=None):
+def append(video, out, style='neon', bed=None, jingle=None, accent=None, quiet=False):
+    """`quiet` (tribute, advisor 14 Oct 2026): the end card with the mark and no jingle; the bed fades out under it."""
     if style not in sonic.FLAVOURS:
         raise ValueError(f'sound is one of {", ".join(sonic.FLAVOURS)}')
     tmp = tempfile.mkdtemp(prefix='outro-')
-    end = card(style, f'{tmp}/card.mp4', accent)
+    end = card(style, f'{tmp}/card.mp4', accent, quiet=quiet)
     jingle = jingle or _cached('jingle', style)
     d = _dur(video)
     total = d + CARD
-    cmd = ['ffmpeg', '-y', '-v', 'error', '-i', video, '-i', end, '-i', jingle]
+    cmd = ['ffmpeg', '-y', '-v', 'error', '-i', video, '-i', end]
     v = (f'[0:v]fps={FPS},scale={W}:{H},setsar=1,format=yuv420p[v0];'
          f'[1:v]fps={FPS},setsar=1,format=yuv420p[v1];'
          f'[v0][v1]xfade=transition=fade:duration={LEAD}:offset={d - LEAD:.3f}[v];')
-    j = f'[2:a]adelay={int(d * 1000)}:all=1,afade=t=out:st={total - 0.5:.3f}:d=0.5[j];'   # the ring fades with the card
+    if quiet:
+        j = 'anullsrc=r=48000:cl=stereo[j];'
+        bi = 2
+    else:
+        cmd += ['-i', jingle]; bi = 3
+        j = f'[2:a]adelay={int(d * 1000)}:all=1,afade=t=out:st={total - 0.5:.3f}:d=0.5[j];'   # the ring fades with the card
     if _has_audio(video):
         a = f'[0:a]afade=t=out:st={max(0, d - 0.6):.2f}:d=0.6[b];'
     else:
         cmd += ['-stream_loop', '-1', '-i', bed or evolving_bed(style, d)]
-        a = (f'[3:a]volume=-2dB,afade=t=in:d=0.4,atrim=0:{d:.3f},'
-             f'afade=t=out:st={max(0, d - 1.0):.2f}:d=1.0[b];')
+        tail = f'atrim=0:{total:.3f},afade=t=out:st={max(0, total - 1.5):.2f}:d=1.5' if quiet else f'atrim=0:{d:.3f},afade=t=out:st={max(0, d - 1.0):.2f}:d=1.0'
+        a = f'[{bi}:a]volume=-2dB,afade=t=in:d=0.4,{tail}[b];'
     fc = v + j + a + f'[b][j]amix=inputs=2:duration=longest:normalize=0,apad[a]'
     subprocess.run(cmd + ['-filter_complex', fc, '-map', '[v]', '-map', '[a]', '-t', f'{total:.3f}',
                           '-c:v', 'libx264', '-preset', 'slow', '-crf', '17', '-pix_fmt', 'yuv420p', '-profile:v', 'high', '-c:a', 'aac',

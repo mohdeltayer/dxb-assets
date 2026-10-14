@@ -41,18 +41,25 @@ that looks like breaking news at the top. No social media scraping, no logins.
 IGN MP4s; fetch the asked-for ones to uploads; make `seekmap.py` sheets.
 Look for the publisher's own vertical (9:16) cut first (press kits, media sites), then a 4K copy,
 then 1080p. Return file names, sizes, resolutions, durations and sheet paths. No YouTube or
-social-media downloaders.
+social-media downloaders. Stills are the last resort (advisor, 14 Oct 2026): before a
+stills Reel, look for motion in this order and report what each step found: older
+trailers of the game or series; the platform's or publisher's own clips and dev
+diaries; the store page's video; his capture of the game; the source page recorded as
+video (Playwright); our graphics in motion. Only then the official images, three or
+four, neighbouring ones different in kind (art, screen, face), with their sizes.
 
 **Render (sonnet).** Given a batch folder with `copyNN.py`, `renderNN.py` and
-the main session's brief per Reel (angle and hook kind, template from
-`formats.py pick` and its opening beat from `formats.py check`, cover frame,
-sound, key shot, the total seconds before the end card (12 to 20 s target,
-advisor 14 Oct 2026), and one reason per line saying what the viewer
-sees and why it shows that line; CLAUDE.md "Creative brief and formats" and
+the main session's brief per Reel (the news kind and its scenario from the
+advisor canvas "Digital Lounge Reel Templates", board "Scenarios by news kind";
+angle and hook kind, template from `formats.py pick` with the brief's fact
+count and its opening beat from `formats.py check`, cover frame, sound, key
+shot, the named turn and the second it lands on, the total seconds before the
+end card (12 to 20 s target, advisor 14 Oct 2026; handson and edition exempt),
+and one reason per line saying what the viewer sees and why it shows that line; CLAUDE.md "Creative brief and formats" and
 "Templates and scenarios", 14 Oct): `check`, then `sheet`, then `draft`, then `strip`, and stop there with the
 paths. A line over a card must be at most one visual line of framing or
 absent (one fact, one place); report any line that repeats its card. Report
-the `length` line reel.py prints at `check` when it says "outside the target".
+the `length`, `pace` and `close` lines reel.py prints at `check` when they warn.
 On the strip, confirm the mark sits top left for the whole Reel, the credit
 line is absent on the first frame and present from 2 s, and the end card is
 2 s (advisor, 14 Oct 2026). After the main session clears the draft: `final`, `strip`,

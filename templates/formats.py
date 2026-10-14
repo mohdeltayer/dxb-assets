@@ -23,7 +23,21 @@ FORMATS = {
     'handson':   'his gameplay: natural colours, text after the action, numbered tips',
     'retro':     'on this day: the game on a real CRT photo, fact sheet then «هل تعلم؟» facts (retro_tv, 10 Oct 2026)',
     'edition':   'special and collector\'s editions, bundles, limited consoles, accessories, tier contents: trailer hook, each item as a press-render cut-out drifting onto the living ground, one composition frame with the price strip, footage close (edition.py, 14 Oct 2026)',
+    'stills':    'three or four official images filling 9:16, cut not panned (subject cut-outs on a parallax ground where the art allows, else a 2 to 4% push-in), hard cuts on the bed, 3 s each, 12 to 14 s, four lines, neighbouring images differ in kind; the last resort after every motion source (reel.stills_clips, advisor 14 Oct 2026)',
+    'list':      'N items at 2 to 2.5 s each on their own art, rank or date on a small plate, progress cue n/N, one line per item at most, mosaic cover, closing frame of all tiles: Game Pass waves, leaving-soon, line-ups, awards, top fives, show recaps, weekly releases (advisor 14 Oct 2026)',
 }
+#: `tribute` is a variant of stills (reel(..., tribute=True)): cold, wave lines off, no chip, name and dates as the headline, lines
+#: in body grey, slow dissolves, calm bed, end card with the mark and no jingle. `عاجل` is a skin on any template, not a kind:
+#: crimson theme and the breaking bed (reel.py applies it from the chip).
+SKINS = {'عاجل': dict(theme='crimson', sound='breaking')}
+#: Templates outside the 12 to 20 s length target (advisor, 14 Oct 2026): every other template states its total in the brief.
+LENGTH_EXEMPT = ('handson', 'edition')
+#: No template more than DAY_MAX times in one day, any family (advisor, 14 Oct 2026).
+DAY_MAX = 4
+#: A closing question line is allowed only on stories readers argue about (advisor, 14 Oct 2026), never on launches or prices.
+QUESTION_ALLOWED = ('controversy', 'reviews', 'quote', 'layoffs', 'policy', 'remake', 'adaptation', 'report', 'business')
+#: The `arabic` kind's strip items, as they apply to the story.
+ARABIC_STRIP = ('الواجهة', 'الترجمة', 'الدبلجة')
 TEMPLATES = FORMATS
 
 # The opening beat per template (advisor, 14 Oct 2026): what is on screen in the first second, under the chip and the
@@ -39,6 +53,8 @@ OPENERS = {
     'handson':    'the action, his play, before any text',
     'retro':      'the game running on the CRT, the date over it',
     'edition':    'the hero item: the trailer hook with the headline, then the hero cut-out first and largest',
+    'stills':     'the strongest image, already pushing in, the headline over it; the first cut lands with the first line',
+    'list':       'the mosaic of every item, the count in the headline; item 1 on the first cut',
 }
 
 
@@ -48,8 +64,8 @@ def opener(fmt):
 # Two families (advisor, 14 Oct 2026): footage-led Reels run the picture the whole way; card-led Reels put our graphics,
 # figures or a portrait on screen. Besides "no third in a row", card-led Reels are at most one in three over the last six.
 FAMILIES = {
-    'footage': ('trailer', 'split', 'clipcard', 'handson'),
-    'card':    ('numbers', 'explainer', 'quote', 'retro', 'edition'),
+    'footage': ('trailer', 'split', 'clipcard', 'handson', 'stills'),
+    'card':    ('numbers', 'explainer', 'quote', 'retro', 'edition', 'list'),
 }
 FAMILY = {fmt: fam for fam, fmts in FAMILIES.items() for fmt in fmts}
 FAMILY['comparison'] = 'footage'   # two labelled states of the footage or store screens, hard cuts
@@ -67,22 +83,73 @@ NEWS_MAP = {
     'sales':         ['numbers', 'clipcard'],         # sales figures, charts, rankings
     'business':      ['quote', 'explainer', 'numbers'],     # studios, deals, results, people
     'quote':         ['quote'],                        # someone said something
-    'report':        ['clipcard', 'trailer'],         # a report or rumour: the footage of the game, one card for the claim
+    'report':        ['trailer', 'clipcard'],         # a report or rumour on the game's footage; a card only when the claim has a figure or a table (advisor, 14 Oct)
     'hardware':      ['explainer', 'split'],          # devices, specs
     'event':         ['split', 'explainer'],          # a show, a tournament, a date card
     'handson':       ['handson'],
     'anniversary':   ['retro'],
     'edition':       ['edition', 'split'],            # a collector's or special edition, bundle, limited console, accessory, tier contents
+    # Batch 1 (advisor, 14 Oct 2026, approved)
+    'delay':         ['split', 'trailer'],
+    'preorder':      ['split'],
+    'free':          ['split'],                       # free weekends, giveaways, free-to-play switches
+    'shutdown':      ['split', 'explainer'],
+    'reviews':       ['clipcard', 'numbers'],
+    'awards':        ['list'],
+    'esports':       ['split', 'numbers'],
+    'controversy':   ['quote', 'clipcard'],
+    'recap':         ['list'],                        # show recaps
+    'weekly':        ['list'],                        # the week's releases
+    'gamepass':      ['list'],                        # Game Pass and PS Plus waves, store line-ups
+    'lineup':        ['list'],
+    'top':           ['list'],                        # top fives and rankings told as a list
+    'adaptation':    ['trailer', 'stills'],           # film and TV of a game
+    'mods':          ['trailer'],                     # with the stand-in credit naming the creator; the creator's permission when the footage is theirs
+    'hardware_price': ['comparison'],
+    'arabic':        ['split'],                       # Arabic support: strip items from ARABIC_STRIP as they apply, chip «بالعربية» beside the news chip
+    # Batch 2 (advisor, 14 Oct 2026, approved)
+    'layoffs':       ['quote', 'stills'],
+    'acquisition':   ['explainer'],
+    'results':       ['numbers'],
+    'players':       ['split'],                       # player counts and milestones
+    'policy':        ['explainer'],
+    'leaving':       ['list'],                        # leaving Game Pass or PS Plus
+    'crossover':     ['trailer'],
+    'expansion':     ['split'],
+    'beta':          ['split'],
+    'crossplay':     ['comparison'],
+    'performance':   ['comparison'],
+    'remake':        ['comparison', 'trailer'],
+    'rating_leak':   ['clipcard'],                    # re-checked right before queuing
+    'firmware':      ['explainer'],
+    'format':        ['explainer'],                   # a new format, service or feature explained
+    'cast':          ['quote'],
+    'soundtrack':    ['edition', 'split'],
+    'community_record': ['handson'],                  # permission and on-screen credit required
+    'watch_guide':   ['split'],                       # times in Gulf time
+    'breach':        ['explainer'],                   # عاجل skin only on official confirmation; never methods or third-party claims
+}
+# Judgement rules, not templates (advisor, 14 Oct 2026): bans and censorship carry the official decision and the publisher's
+# response only, no commentary, chip رسمي or تقرير; regional investment and government programmes take the business templates,
+# the country chip only when the country is the story. The scenario for every kind (cover, where the facts live, key shot and
+# reason, sound) is on the advisor canvas "Digital Lounge Reel Templates", board "Scenarios by news kind"; a brief starts from it.
+JUDGEMENT = {
+    'ban':        'official decision and publisher response only; no commentary; chip رسمي or تقرير',
+    'investment': 'business templates (quote, explainer, numbers); country chip only when the country is the story',
 }
 
 
-def pick(kind):
-    """The template for a kind of news: its first choice unless the ledger refuses it (a third in a row, or a third
-    card-led Reel in six)."""
-    for fmt in NEWS_MAP[kind]:
+def pick(kind, facts=None):
+    """The template for a kind of news: its first choice unless the ledger refuses it (a third in a row, a third
+    card-led Reel in six, or a fifth of the day). `facts` is the brief's item count: a price story with more than three
+    facts can never be split (advisor, 14 Oct 2026)."""
+    opts = list(NEWS_MAP[kind])
+    if kind == 'price' and facts is not None and facts > 3:
+        opts = [f for f in opts if f != 'split'] or ['clipcard']
+    for fmt in opts:
         if not check(fmt):
             return fmt
-    return NEWS_MAP[kind][0]
+    return opts[0]
 LEDGER = os.path.join(os.path.dirname(__file__), 'assets', 'format-ledger.json')
 
 
@@ -99,7 +166,9 @@ def add(name, fmt):
     led = _load()
     old = next((e for e in led if e['name'] == name), {})
     led = [e for e in led if e['name'] != name]   # a re-render keeps its place and its views
-    led.append({'name': name, 'format': fmt, **({'views': old['views']} if 'views' in old else {})})
+    import datetime
+    at = old.get('at') or datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%MZ')   # a re-render keeps its day
+    led.append({'name': name, 'format': fmt, 'at': at, **({'views': old['views']} if 'views' in old else {})})
     json.dump(led[-200:], open(LEDGER, 'w'), indent=1)
 
 
@@ -136,6 +205,11 @@ def check(fmt):
         cards = [f for f in recent if FAMILY.get(f) == 'card']
         if len(cards) >= CARD_MAX:
             return f'card-led would be {len(cards) + 1} of the last {len(recent) + 1} ({", ".join(cards)}); at most {CARD_MAX} in {WINDOW}'
+    import datetime
+    today = datetime.datetime.utcnow().strftime('%Y-%m-%d')
+    n = sum(1 for e in _load() if e['format'] == fmt and e.get('at', '').startswith(today))
+    if n >= DAY_MAX:
+        return f'{fmt} already {n} times today; at most {DAY_MAX} a day, any family'
     return ''
 
 

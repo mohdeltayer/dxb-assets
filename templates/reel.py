@@ -29,7 +29,7 @@ strip: [(label, value), ...] (2 or 3) pins the `split` template's fact strip low
        lines rise above it and never repeat a value. A value is a string, or
        ('aed', '149') for digits with the dirham symbol left of them.
 """
-import math, os, shutil, subprocess, sys, tempfile
+import math, os, re, shutil, subprocess, sys, tempfile
 from PIL import Image, ImageDraw, ImageFilter
 import cards as C, fast_ar as A, ig_ar as G, outro, sonic
 
@@ -207,17 +207,95 @@ def mark_layer(path):
     im.paste(mark, (G.SAFE_LEFT, y), mask); im.save(path); return path
 
 
-def length_note(end):
+def length_note(end, exempt=False):
     """One line for the brief and the render log: the total before the end card, and
-    a warning when it sits outside LENGTH."""
+    a warning when it sits outside LENGTH (`exempt`: handson and edition, formats.LENGTH_EXEMPT)."""
     lo, hi = LENGTH
     note = f'length {end:.1f} s before the end card (target {lo:.0f} to {hi:.0f} s)'
+    if exempt:
+        return note + ' (exempt template)'
     if not lo <= end <= hi:
         note += ': outside the target; four lines is the normal case, six only when the story needs them'
     return note
 
 
-def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96, lift=0):
+#: Attention (advisor, 14 Oct 2026): something changes on screen every PACE seconds (a cut, a line, a strip, a number);
+#: the last CLOSE seconds before the end card are a picture, never a card. Both are warnings at the check step.
+PACE, CLOSE = 4.0, 2.0
+
+
+def pace_note(starts, end, lines, strip_at=None):
+    """Warn on any stretch longer than PACE with no change on screen."""
+    ev = sorted(set([0.0, end] + list(starts) + [a for _, a, _, _ in lines] + ([strip_at] if strip_at else [])))
+    gaps = [(a, b) for a, b in zip(ev, ev[1:]) if b - a > PACE + 0.05]
+    return '' if not gaps else 'pace: nothing changes for ' + ', '.join(f'{b - a:.1f} s at {a:.1f}' for a, b in gaps) + f' (change every {PACE:.0f} s)'
+
+
+def close_note(shots):
+    """Warn when the Reel ends on our own graphic instead of a picture."""
+    f = shots[-1][0]
+    return f'close: the last {CLOSE:.0f} s are a card ({f}); end on a picture' if _ours(f) else ''
+
+
+def _reveal(lines, idx):
+    """Word-by-word reveal of one line (the key line only, advisor 14 Oct 2026): the line
+    becomes cumulative prefixes, each a layer, entering a quarter second apart."""
+    text, a, z, kw = lines[idx]
+    toks = re.findall(r'\S+|\n', text)
+    words = [t for t in toks if t != '\n']
+    dt = min(0.25, (z - a) * 0.4 / max(len(words), 1))
+    out, k = [], 0
+    for n in range(1, len(words) + 1):
+        pre, c = [], 0
+        for t in toks:
+            if t == '\n':
+                if pre: pre.append('\n')
+            else:
+                if c == n: break
+                pre.append(t); c += 1
+        txt = ' '.join(pre).replace(' \n ', '\n').strip()
+        out.append((txt, a + (n - 1) * dt, z, kw))
+    return lines[:idx] + out + lines[idx + 1:]
+
+
+STILLS = 'stills'   # push-in clips are written under uploads/stills/
+
+
+def stills_clips(images, name, secs=3.0, push=0.03, focus=0.5, cutout=False, theme='cold', fast=False):
+    """The `stills` template (advisor, 14 Oct 2026): each official image as a clip of
+    `secs` with a slow push-in of `push` (2 to 4%), or with `cutout=True` the subject cut
+    out of its backdrop (edition.cutout) and laid still on the drifting living ground, so
+    the ground moves behind it (parallax). Pass the result as `shots` with `cut=True` so the
+    cuts are hard, and the lines enter on the cuts. Returns [(file, 0.0, secs, 0.5), ...]."""
+    out = []
+    frames = int(secs * 30)
+    if cutout:
+        import edition, numgfx as NG
+    for i, img in enumerate(images):
+        src = img if os.path.isabs(img) else C.U + img
+        fo = focus[i] if isinstance(focus, (list, tuple)) else focus
+        if cutout:
+            os.makedirs(C.U + NG.SUB, exist_ok=True)
+            png = f'{C.U}{NG.SUB}/{name}-cut-{i}.png'
+            edition.cutout(src, png)
+            it = Image.open(png).convert('RGBA'); sc = min(820 / it.width, 1100 / it.height)
+            it = it.resize((max(1, int(it.width * sc)), max(1, int(it.height * sc))), Image.LANCZOS)
+            lay = Image.new('RGBA', (W, H), (0, 0, 0, 0)); lay.alpha_composite(it, ((W - it.width) // 2, (H - it.height) // 2 - 60))
+            lay.save(png)
+            clip = f'{NG.SUB}/{name}-still-{i}.mp4'
+            NG.slide(png, secs, theme, C.U + clip, seed=sum(map(ord, name)) + i, t0=i * secs, fast=fast, check=False)
+        else:
+            os.makedirs(C.U + STILLS, exist_ok=True)
+            clip = f'{STILLS}/{name}-still-{i}.mp4'
+            vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H}:x='(iw-{W})*{fo}':y='(ih-{H})/2',"
+                  f"zoompan=z='1+{push}*on/{frames}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={frames}:s={W}x{H}:fps=30,format=yuv420p")
+            subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-loop', '1', '-t', str(secs), '-i', src, '-vf', vf, '-t', str(secs),
+                            '-c:v', 'libx264', '-pix_fmt', 'yuv420p'] + (DRAFT_ENC if fast else ['-preset', 'medium', '-crf', '16']) + [C.U + clip], check=True)
+        out.append((clip, 0.0, secs, 0.5))
+    return out
+
+
+def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96, lift=0, ink=None):
     """One sentence, right-aligned; bottom line on SAFE_BOTTOM - 40, or
     under SAFE_TOP with top=True. `lift` raises a low line (the split template
     lifts them over its fact strip)."""
@@ -258,7 +336,7 @@ def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96,
         _band(im, 1150, H, False, 110)
     outline = mask.filter(ImageFilter.MaxFilter(7))
     shadow = outline.filter(ImageFilter.GaussianBlur(7)).point(lambda v: int(v * 0.7))
-    for col, m, off in [((0, 0, 0), shadow, (3, 4)), (A.GROUND, outline, (0, 0)), (A.INK, mask, (0, 0))]:
+    for col, m, off in [((0, 0, 0), shadow, (3, 4)), (A.GROUND, outline, (0, 0)), (ink or A.INK, mask, (0, 0))]:
         lay = Image.new('RGBA', (W, H), col + (255,)); a = Image.new('L', (W, H), 0)
         a.paste(m, off); lay.putalpha(a); im.alpha_composite(lay)
     im.save(path); return path
@@ -952,7 +1030,7 @@ def check_reading(lines, end):
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
          lowres_ok=False, read_check=True, track=None, draft=False, head_size=66, cut=False, credits=None, strip=None,
-         products=None):
+         products=None, template=None, tribute=False, reveal=None):
     """`strip`: [(label, value), ...], 2 or 3 facts for the `split` template
     (Mohammad, 14 Oct 2026): a slim strip pinned low in the safe zone from the end
     of the headline to the end of the clip, the story lines rising above it. A
@@ -986,12 +1064,16 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     Without a voice every line must stay up for its reading time (read_secs);
     the render stops otherwise, so a short story gets more related footage."""
     global X
-    if cut:                                # hard cuts for Comparison; restored on the way out
-        keep, X = X, 0.04
+    if label == 'عاجل':                    # عاجل is a skin on any template (advisor, 14 Oct 2026): crimson and the breaking bed
+        theme, sound = 'crimson', sound or 'breaking'
+    if tribute:                            # the stills variant for a death (advisor, 14 Oct 2026): cold, no waves, no chip, body-grey
+        theme, vivid, label, sound = 'cold', False, None, sound or 'neon_c'   # lines, slow dissolves, a calm bed, a quiet end card
+    if (cut or tribute) and X not in (0.04, 1.0):   # hard cuts for Comparison and stills, slow dissolves for a tribute; restored on the way out
+        keep, X = X, (1.0 if tribute else 0.04)
         try:
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, credits=credits, strip=strip,
-                        products=products)
+                        products=products, template=template, tribute=tribute, reveal=reveal)
         finally:
             X = keep
     G._ACC = G.ACCENTS[theme]
@@ -1006,13 +1088,20 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     tmp = tempfile.mkdtemp(prefix='reel-')
     try:
         starts, end = timeline(shots)          # known before the slow encode
-        print(length_note(end))                # 12 to 20 s target (advisor, 14 Oct 2026); the brief states the total
+        import formats
+        print(length_note(end, exempt=template in formats.LENGTH_EXEMPT))   # 12 to 20 s target (advisor, 14 Oct 2026)
         if callable(lines):                    # lines placed against the cut's own shot starts
             lines = lines(starts, end)
         if lines and isinstance(lines[0], str):
             lines = spread(lines, head_secs + 0.1, end)
         if read_check and not voice:
             check_reading(lines, end)
+        for note in (pace_note(starts, end, lines, head_secs if strip else None), close_note(shots)):
+            if note: print(note)               # attention rules (advisor, 14 Oct 2026): warnings, judged in the brief
+        if reveal is not None:                 # word-by-word reveal on the key line only
+            lines = _reveal(lines, reveal)
+        if tribute:
+            lines = [(t, a, z, {**kw, 'ink': A.BODY}) for t, a, z, kw in lines]
         if strip:                              # lines rise over the strip; a repeated fact or a bad strip stops here
             strip_check(strip, lines); strip_layer(strip, f'{tmp}/strip.png', theme)
             if comp is None:
@@ -1083,6 +1172,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     bed = None                             # clips with no sound rotate the everyday bed; the jingle stays
     if sound == 'neon':
         bed = outro.evolving_bed(sonic.rotate(os.path.basename(out)), end)
-    done = outro.append(body, out, sound, bed=bed, accent=G.ACCENTS[theme])
+    elif sound in sonic.EVERYDAY:              # a named everyday bed (the tribute's calm neon_c)
+        bed = outro.evolving_bed(sound, end)
+    done = outro.append(body, out, sound, bed=bed, accent=G.ACCENTS[theme], quiet=tribute)
     shutil.rmtree(tmp, ignore_errors=True)  # the temp renders filled the disk on 2 Oct
     return done, starts, end

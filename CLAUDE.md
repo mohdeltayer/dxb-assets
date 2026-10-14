@@ -672,6 +672,85 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      the Instagram numbers Tuesday morning before the audit; `formats.py
      views <name> <n>` records them and `formats.py templates` gives the
      median per template (`analytics/reel-views.md`).
+- Advisor memos, 14 Oct 2026 evening session (template audit onward;
+  approved by Mohammad, recorded 14 Oct 2026):
+  A. Template audit fixes. 1. A `price` story with more than three facts
+  is never `split`: the brief states the item count and `formats.pick(kind,
+  facts=)` reads it. 2. No template more than four times in one day, any
+  family (`formats.DAY_MAX`; the ledger now dates each entry), on top of
+  the family cap and the no-third-in-a-row rule. 3. The format ledger's
+  `views` column, filled weekly from his Instagram numbers (Tuesday
+  morning before the audit; `analytics/reel-views.md`). 4. `handson` and
+  `edition` are the named exceptions to the 12 to 20 s target
+  (`formats.LENGTH_EXEMPT`); every other template states its total
+  seconds in the brief.
+  B. Decisions. 5. New templates `stills` (three or four official images
+  filling 9:16, lines on them, the bed under; footage-led; built on
+  `reel.stills_clips`) and `list` (N items at 2 to 2.5 s each on their own
+  art, rank or date on a small plate, progress cue "n/N", one line per
+  item at most, mosaic cover, closing frame of all tiles; card-led). Game
+  Pass waves, leaving-soon, line-ups, awards, top fives, show recaps and
+  weekly releases map to `list`. 6. `NEWS_MAP['report']` is
+  `['trailer', 'clipcard']`: a card only when the claim has a figure or a
+  table. 7. `comparison` has no split-frame option: hard cuts only, and a
+  figure sits in the state's label plate, never in a line. 8. `edition`
+  goes ahead as specified on 14 Oct; first draft to Mohammad.
+  C. New news kinds, batch 1. 9. `NEWS_MAP`: delay [split, trailer];
+  preorder [split]; free [split]; shutdown [split, explainer]; reviews
+  [clipcard, numbers]; awards [list]; esports [split, numbers];
+  controversy [quote, clipcard]; recap [list]; weekly [list]; adaptation
+  [trailer, stills]; mods [trailer, with the stand-in credit naming the
+  creator, and the creator's permission when the footage is theirs];
+  hardware_price [comparison]. 10. Kind `arabic` [split]: strip items
+  الواجهة · الترجمة · الدبلجة as they apply, and the chip «بالعربية» in
+  bright indigo beside the news chip, placed like a country chip
+  (`fast_ar.COUNTRIES`). 11. `tribute`, a variant of stills
+  (`reel(..., tribute=True)`): cold theme, wave lines off, no chip, name
+  and dates as the headline, lines in body grey, slow dissolves instead
+  of push-ins, a calm bed (neon_c), the end card with the mark and no
+  jingle (`outro.append(..., quiet=True)`). 12. عاجل is a skin on any
+  template, not a kind: crimson and the breaking bed, applied from the
+  chip in reel.py. 13. A closing question line only on stories readers
+  argue about (`formats.QUESTION_ALLOWED`), never on launches or prices.
+  D. Stills and attention. 14. Stills are the last resort: before a
+  stills Reel the build step looks for motion in this order: older
+  trailers of the game or series, the platform's or publisher's own clips
+  and dev diaries, the store page's video, his capture of the game, the
+  source page recorded as video, our graphics in motion. Stand-in footage
+  is credited as now. 15. A stills Reel is cut, not panned: subject
+  cut-outs on a parallax ground where the art allows
+  (`stills_clips(..., cutout=True)`, the backdrop removed in the build
+  step), otherwise a slow push-in of 2 to 4% per image and a hard cut on
+  the bed's beat (`cut=True`); three or four images, 3 s each, 12 to 14 s
+  in all, four lines; neighbouring images differ in kind (art, screen,
+  face). 16. Every Reel changes on screen every 3 to 4 s (a cut, a line,
+  a strip, a number; `reel.pace_note` warns at the check step) and names
+  a turn in the brief with the second it lands on. Lines enter on cuts.
+  Word-by-word reveal only on the key line (`reel(..., reveal=<line>)`).
+  17. The last two seconds before the end card are a picture, never a
+  card (`reel.close_note` warns). 18. Formats to spec when the news
+  brings them: trailer breakdown, timeline, map (labels, no borders),
+  interview clip, versus, by the numbers, countdown. Weekly series with a
+  fixed sting and chip colour: Gulf prices (day to be set), morning recap
+  «ماذا فاتك», Sunday releases «هذا الأسبوع», Famitsu.
+  E. New news kinds, batch 2. 19. `NEWS_MAP`: layoffs [quote, stills];
+  acquisition [explainer]; results [numbers]; players [split]; policy
+  [explainer]; leaving [list]; crossover [trailer]; expansion [split];
+  beta [split]; crossplay [comparison]; performance [comparison]; remake
+  [comparison, trailer]; rating_leak [clipcard, re-checked before
+  queuing]; firmware [explainer]; format [explainer]; cast [quote];
+  soundtrack [edition, split]; community_record [handson, permission and
+  on-screen credit required]; watch_guide [split, times in Gulf time];
+  breach [explainer, the عاجل skin only on official confirmation, never
+  methods or third-party claims]. 20. Judgement rules, not templates
+  (`formats.JUDGEMENT`): bans and censorship carry the official decision
+  and the publisher's response only, no commentary, chip رسمي or تقرير;
+  regional investment and government programmes take the business
+  templates, the country chip only when the country is the story. 21. The
+  scenario for every kind (cover, where the facts live, key shot and
+  reason, sound) is on the advisor canvas "Digital Lounge Reel
+  Templates", board "Scenarios by news kind"; a brief for a story of that
+  kind starts from it.
 - Numbers Reels have a living ground (Mohammad, 12 Oct 2026: once the
   title went, the charts sat on "a big purple background" and the sales
   Reels felt stale). Our graphics are drawn on a transparent canvas
