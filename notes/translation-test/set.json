@@ -1,22 +1,142 @@
 [
- {"id": "dungeons", "en": "Between battles, you explore the dungeons to find new weapons.", "pass": "مناطق الاستكشاف", "fail": "زنزان", "rule": "Dungeons (Fire Emblem) = مناطق الاستكشاف, not الزنزانات"},
- {"id": "docked", "en": "In docked mode, the game runs at 1080p.", "pass": "التلفاز", "fail": "الإرساء|القاعدة|الإرساء", "rule": "Docked = وضع التلفاز"},
- {"id": "handheld", "en": "In handheld mode, the game runs at 720p.", "pass": "الوضع المحمول|وضع المحمول|الوضع اليدوي", "fail": "", "rule": "Handheld mode = الوضع المحمول"},
- {"id": "hours_with", "en": "Our first impressions after 10 hours with the game.", "pass": "ساعات من", "fail": "ساعات مع", "rule": "after N hours with = بعد 10 ساعات من, not مع"},
- {"id": "bit_disappointing", "en": "The ending is a bit disappointing.", "pass": "بعض الشيء|نوعًا ما|نوعا ما|قليلًا|قليلا", "fail": "للغاية|جدًا|جدا|كبير", "rule": "never intensify"},
- {"id": "expansions", "en": "The edition includes both expansions, Hearts of Stone and Blood and Wine.", "pass": "إضافت|الإضافتين|إضافتين|الإضافتان", "fail": "توسع", "rule": "Expansion = إضافة, not توسعة"},
- {"id": "physical", "en": "The physical edition costs $69.99.", "pass": "", "fail": "النسخة المادية|الإصدار المادي", "rule": "not النسخة المادية"},
- {"id": "supplies", "en": "The first print run comes with a foil cover while supplies last.", "pass": "الكمية|الكميات", "fail": "المخزون", "rule": "countable products take الكمية (15 Oct)"},
- {"id": "silent_revision", "en": "Sony made a silent revision inside the PS5 Slim.", "pass": "خفي", "fail": "صامت", "rule": "silent revision = تعديل خفي"},
- {"id": "instead_of", "en": "The game is now $29.99 instead of $59.99.", "pass": "بدلًا من|بدلاً من|بدلا من", "fail": "", "rule": "instead of = بدلًا من"},
- {"id": "shaping_up", "en": "The game is shaping up to be one of the year's biggest launches.", "pass": "يبدو|تبدو", "fail": "تتشكل|يتشكل", "rule": "shaping up to be = يبدو في طريقه ليكون"},
- {"id": "service_ends", "en": "Rainbow Six Mobile will stop on December 1.", "pass": "خدمة", "fail": "", "rule": "service ends = تنتهي خدمة <game>, not تتوقف <game> alone"},
- {"id": "years_after", "en": "The servers will close seven years after launch.", "pass": "مرور", "fail": "", "rule": "N years after launch = بعد مرور سبع سنوات على إطلاقها"},
- {"id": "out_today", "en": "The update arrives today on PS5.", "pass": "متوفر|تطرح|يطرح|طرح|صدر|يصدر", "fail": "يصل اليوم|تصل اليوم", "rule": "not يصل اليوم (reads as a physical delivery)"},
- {"id": "countdown", "en": "23 days left until launch.", "pass": "باقي|تبقى", "fail": "يتبقى", "rule": "باقي 23 يومًا, not يتبقى"},
- {"id": "steam_uae", "en": "The game costs 149 dirhams on the Steam store in the UAE.", "pass": "متجر Steam في الإمارات|متجر ستيم في الإمارات", "fail": "متجر Steam الإمارات", "rule": "متجر Steam في الإمارات"},
- {"id": "hands_on", "en": "Our hands-on impressions of the demo.", "pass": "نظرة أولى|انطباعات", "fail": "تجربت|تجربة", "rule": "HANDS ON = نظرة أولى, not تجربة"},
- {"id": "locked_30", "en": "The game runs at a locked 30fps.", "pass": "ثابت", "fail": "مقفل|مغلق", "rule": "locked 30fps = معدل ثابت يبلغ 30 إطارًا"},
- {"id": "bandai", "en": "Bandai Namco announced a new Tales game.", "pass": "بانداي نامكو", "fail": "باندا نامكو", "rule": "بانداي نامكو"},
- {"id": "nintendo", "en": "Nintendo announced a new Direct for Thursday.", "pass": "نينتيندو", "fail": "نينتندو", "rule": "his spelling نينتيندو"}
+ {
+  "id": "dungeons",
+  "en": "Between battles, you explore the dungeons to find new weapons.",
+  "pass": "مناطق الاستكشاف",
+  "fail": "زنزان",
+  "rule": "Dungeons (Fire Emblem) = مناطق الاستكشاف, not الزنزانات"
+ },
+ {
+  "id": "docked",
+  "en": "In docked mode, the game runs at 1080p.",
+  "pass": "التلفاز",
+  "fail": "الإرساء|القاعدة|الإرساء",
+  "rule": "Docked = وضع التلفاز"
+ },
+ {
+  "id": "handheld",
+  "en": "In handheld mode, the game runs at 720p.",
+  "pass": "الوضع المحمول|وضع المحمول|الوضع اليدوي",
+  "fail": "",
+  "rule": "Handheld mode = الوضع المحمول"
+ },
+ {
+  "id": "hours_with",
+  "en": "Our first impressions after 10 hours with the game.",
+  "pass": "ساعات من",
+  "fail": "ساعات مع",
+  "rule": "after N hours with = بعد 10 ساعات من, not مع"
+ },
+ {
+  "id": "bit_disappointing",
+  "en": "The ending is a bit disappointing.",
+  "pass": "بعض الشيء|نوعًا ما|نوعا ما|قليلًا|قليلا",
+  "fail": "للغاية|جدًا|جدا|كبير",
+  "rule": "never intensify"
+ },
+ {
+  "id": "expansions",
+  "en": "The edition includes both expansions, Hearts of Stone and Blood and Wine.",
+  "pass": "إضافت|الإضافتين|إضافتين|الإضافتان",
+  "fail": "توسع",
+  "rule": "Expansion = إضافة, not توسعة"
+ },
+ {
+  "id": "physical",
+  "en": "The physical edition costs $69.99.",
+  "pass": "",
+  "fail": "النسخة المادية|الإصدار المادي|الفيزيائية|المطبوعة",
+  "rule": "not النسخة المادية"
+ },
+ {
+  "id": "supplies",
+  "en": "The first print run comes with a foil cover while supplies last.",
+  "pass": "الكمية|الكميات",
+  "fail": "المخزون",
+  "rule": "countable products take الكمية (15 Oct)"
+ },
+ {
+  "id": "silent_revision",
+  "en": "Sony made a silent revision inside the PS5 Slim.",
+  "pass": "خفي",
+  "fail": "صامت",
+  "rule": "silent revision = تعديل خفي"
+ },
+ {
+  "id": "instead_of",
+  "en": "The game is now $29.99 instead of $59.99.",
+  "pass": "بدلًا من|بدلاً من|بدلا من",
+  "fail": "",
+  "rule": "instead of = بدلًا من"
+ },
+ {
+  "id": "shaping_up",
+  "en": "The game is shaping up to be one of the year's biggest launches.",
+  "pass": "يبدو|تبدو",
+  "fail": "تتشكل|يتشكل",
+  "rule": "shaping up to be = يبدو في طريقه ليكون"
+ },
+ {
+  "id": "service_ends",
+  "en": "Rainbow Six Mobile will stop on December 1.",
+  "pass": "خدم",
+  "fail": "",
+  "rule": "service ends = تنتهي خدمة <game>, not تتوقف <game> alone"
+ },
+ {
+  "id": "years_after",
+  "en": "The servers will close seven years after launch.",
+  "pass": "مرور",
+  "fail": "سنوات من إطلاق|سنوات من الإطلاق",
+  "rule": "N years after launch = بعد مرور سبع سنوات على إطلاقها"
+ },
+ {
+  "id": "out_today",
+  "en": "The update arrives today on PS5.",
+  "pass": "متوفر|تطرح|يطرح|طرح|صدر|يصدر",
+  "fail": "يصل التحديث اليوم|يصل اليوم|تصل اليوم",
+  "rule": "not يصل اليوم (reads as a physical delivery)"
+ },
+ {
+  "id": "countdown",
+  "en": "23 days left until launch.",
+  "pass": "باقي|تبقى|بقي",
+  "fail": "يتبقى",
+  "rule": "باقي 23 يومًا, not يتبقى"
+ },
+ {
+  "id": "steam_uae",
+  "en": "The game costs 149 dirhams on the Steam store in the UAE.",
+  "pass": "متجر Steam في الإمارات|متجر ستيم في الإمارات",
+  "fail": "متجر Steam الإمارات",
+  "rule": "متجر Steam في الإمارات"
+ },
+ {
+  "id": "hands_on",
+  "en": "Our hands-on impressions of the demo.",
+  "pass": "نظرة أولى|انطباعات",
+  "fail": "تجربت|تجربة",
+  "rule": "HANDS ON = نظرة أولى, not تجربة"
+ },
+ {
+  "id": "locked_30",
+  "en": "The game runs at a locked 30fps.",
+  "pass": "ثابت",
+  "fail": "مقفل|مغلق",
+  "rule": "locked 30fps = معدل ثابت يبلغ 30 إطارًا"
+ },
+ {
+  "id": "bandai",
+  "en": "Bandai Namco announced a new Tales game.",
+  "pass": "بانداي نامكو",
+  "fail": "باندا نامكو",
+  "rule": "بانداي نامكو"
+ },
+ {
+  "id": "nintendo",
+  "en": "Nintendo announced a new Direct for Thursday.",
+  "pass": "نينتيندو",
+  "fail": "نينتندو",
+  "rule": "his spelling نينتيندو"
+ }
 ]
