@@ -86,6 +86,31 @@ sheets, and run `reel.warm_cache(shots)` on the likely stretches so the picture
 pass is cached under `uploads/cache/` before the day (advisor, 14 Oct 2026, rule
 6). Report what is cached and what has no footage route yet.
 
+**Idle card, quiet hours (main session plus Footage and Render cards; advisor,
+16 Oct 2026).** Whenever no story is being built, work down this list:
+1. Fetch footage and warm the picture cache (`reel.warm_cache`) for every dated
+   story on the next day's calendar (`newsroom/events.md`: launches, embargo
+   lifts, Famitsu Thursday, shows), as in the evening pre-fetch card.
+2. Pre-build a shell Reel for anything due at a known time: footage, seekmap
+   and shot list, strip layout, and the Arabic (both skills, grammar review)
+   for everything except the final fact, kept in its batch folder with a
+   `SHELL` note naming the missing fact. When the news lands, only the fact,
+   the text pass and the encode remain.
+3. Bank evergreen pieces (Ocarina episodes, retro on-this-day, list,
+   explainer), each rendered and ready to queue, listed in
+   `newsroom/evergreen.md` with what would date it.
+Real news always comes first: every verified story landing 23:00 to 08:00
+Dubai is built and queued at the 90-minute overnight spacing; mornings stay at
+one post per 30 minutes at most, none bunched before 08:00.
+
+**Morning digest (main session), by 07:30 Dubai.** One message to Mohammad
+listing every post published since 23:00 Dubai, one line each: time (Dubai),
+title, template, chip, and the strip path in `cards/YYYY-MM/`. Built from
+`postsListTool` (PUBLISHED only) and the format ledger. A post he deletes is
+recorded in its ledger story; a wrong fact found more than an hour after
+publishing gets a correction Reel (`newsroom/corrections.md`), never a silent
+deletion.
+
 **Drafts (haiku).** Run `jobsNN.py`, then
 `preflight.py --no-approval` on each new draft folder, and `ledgerNN.py`.
 Return the preflight lines.
@@ -249,7 +274,9 @@ not replied when it fires, approve with the note "auto-go: no reply in 15
 minutes (breaking lane, Mohammad 11 Oct 2026)" and queue it a few minutes
 out, then the publish check as usual, and tell him what went out.
 Limits: Digital Lounge only; official, verified news only (never a
-rumour, leak or single-outlet report); auto-posting only 08:00 to 23:00
-Dubai, and a story found overnight is built and held for his go or for
-08:00 with the same 15-minute ping at 07:45; at most three auto-posts a
-day; a story he has turned down is never auto-posted.
+rumour, leak or single-outlet report, at any hour); auto-posting was 08:00 to 23:00
+Dubai until 16 Oct 2026; from then round the clock (advisor, 16 Oct 2026,
+agreed with Mohammad), so a story found overnight is pinged, built and
+auto-goes after 15 minutes like any other, spaced at least 90 minutes from
+the previous post between 23:00 and 08:00; at most three auto-posts in any
+24 hours; a story he has turned down is never auto-posted.

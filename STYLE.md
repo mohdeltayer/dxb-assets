@@ -1,4 +1,4 @@
-# Digital Lounge: the rules in force (15 Oct 2026)
+# Digital Lounge: the rules in force (16 Oct 2026)
 
 One page of what applies today. CLAUDE.md is the full, dated history and wins
 on detail; each line here names its section there. Anything listed under
@@ -207,8 +207,26 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - Silence rule (batches he asks for outside a slot): no reply 30 minutes
     before the first time counts as a go.
 - **Breaking lane:**
-  - Verified official news only.
-  - 15-minute auto-go, 08:00 to 23:00, at most three a day.
+  - Verified official news only; never rumours, leaks or single-outlet
+    reports, at any hour.
+  - 15-minute auto-go round the clock (16 Oct; was 08:00 to 23:00), at most
+    three in any 24 hours.
+- **Overnight (advisor, 16 Oct, agreed with Mohammad 02:50 Dubai; he now
+  reads the feed as a viewer and deletes what he does not like):**
+  - Every verified story landing 23:00 to 08:00 is queued at the 90-minute
+    overnight spacing, real news and not only evergreen. The strongest pieces
+    still go 08:00 to 21:00.
+  - Mornings are spread out: at most one post per 30 minutes, none bunched
+    before 08:00.
+  - Quiet hours, when nothing is being built: warm footage and cache for the
+    next day's dated stories, pre-build shell Reels for anything due at a
+    known time, then bank evergreen pieces (idle card, `delegation.md`).
+  - Morning digest by 07:30: every post since 23:00, one line each (time,
+    title, template, chip, strip path).
+  - He may delete any post. A wrong fact found more than an hour after
+    publishing gets a correction Reel, not a silent deletion
+    (`newsroom/corrections.md`).
+  CLAUDE.md, "Overnight cadence", after the breaking lane.
 - **Expansion passes and DLC (15 Oct):** an official add-on announcement with
   official footage is built at once and queued at the next quarter hour (15
   minutes out, preview sent), any hour; his 15 Oct message is the go.

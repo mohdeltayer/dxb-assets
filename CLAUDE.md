@@ -1749,7 +1749,8 @@ pinged, and if he has not replied 15 minutes later the post is queued with
 the approval note "auto-go: no reply in 15 minutes". This is the only
 exception to "approval is not a go". Never for rumours, leaks, single-outlet
 reports, routine items, DXB-KNIGHT or anything he turned down; auto-posting
-runs 08:00 to 23:00 Dubai, at most three a day.
+runs round the clock from 16 Oct 2026 (was 08:00 to 23:00 Dubai; see
+"Overnight cadence" below), at most three in any 24 hours.
 
 Expansion passes and DLC go out on announcement (Mohammad, 15 Oct 2026:
 "Expansion pass and these kind of news can be published fast as soon as
@@ -1761,6 +1762,39 @@ the same time; his message is the go for this kind, so it does not wait for
 a review slot or a pick. Overnight it still keeps the 90-minute cadence gap.
 Rumoured or leaked DLC stays on the normal ladder. First used on Fire
 Emblem: Fortune's Weave's Expansion Pass, 15 Oct.
+
+Overnight cadence (advisor, 16 Oct 2026, agreed with Mohammad at 02:50
+Dubai). Mohammad now reads the Digital Lounge feed as a viewer and deletes
+anything he does not like, so there is a check after publishing as well as
+before it, and the night can be used more.
+1. Quiet-hours work. Whenever no story is being built, in this order (the
+   idle card in `newsroom/delegation.md`):
+   a. Fetch footage and warm the picture cache (`reel.warm_cache`) for every
+      dated story on the next day's calendar: launches, embargo lifts,
+      Famitsu Thursday, shows.
+   b. Pre-build a shell Reel for anything due at a known time: footage, shot
+      list, strip layout and the Arabic for everything except the final
+      fact, so only the fact, the text pass and the encode remain when the
+      news lands.
+   c. Bank evergreen pieces (Ocarina episodes, retro, list, explainer), each
+      ready to queue.
+2. Overnight posting uses real news. Every verified story that lands between
+   23:00 and 08:00 Dubai is queued at the overnight spacing (at least 90
+   minutes), not only evergreen pieces. The strongest pieces of the day still
+   go to 08:00 to 21:00. Morning queues are spread out: no more than one post
+   per 30 minutes, and none bunched before 08:00 because the night was left
+   empty.
+3. Breaking-lane auto-go runs round the clock (was 08:00 to 23:00) for
+   verified, official, new or breaking news only. Rumours, leaks and
+   single-outlet reports never auto-go at any hour. The cap stays at three
+   auto-go posts a day, counted over 24 hours.
+4. Morning digest. By 07:30 Dubai, one message to Mohammad listing every post
+   published since 23:00, one line each (time, title, template, chip) with
+   the path of its strip in `cards/`, so his check takes two minutes.
+5. Deleting and correcting. He may delete a post he dislikes at any time. A
+   wrong fact found more than an hour after publishing gets a correction Reel
+   (as with Alinea) rather than a silent deletion; the corrections routine in
+   `newsroom/corrections.md` is unchanged.
 
 Posting is irreversible: pushing `queue/**` to *any* branch of dxb-queue
 fires the publisher, because `publish.yml` has no branch filter. Never
