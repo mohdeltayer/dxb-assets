@@ -1,4 +1,4 @@
-# Digital Lounge: the rules in force (14 Oct 2026)
+# Digital Lounge: the rules in force (15 Oct 2026)
 
 One page of what applies today. CLAUDE.md is the full, dated history and wins
 on detail; each line here names its section there. Anything listed under
@@ -49,7 +49,10 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   1. Load both skills fresh and read the house glossary.
   2. Write with arabic-games-film-editor.
   3. Run the arabic-grammar-review stage.
-  4. DeepL back-check.
+  4. DeepL both ways: the back-check (meaning), and a forward pass of the
+     stock phrases, retail terms, dates and prices phrased two to four ways
+     in English, to pick the term Arab readers expect; spell-check the pick.
+     Countable products take الكمية (حتى نفاد الكمية), bulk goods المخزون.
   - (CLAUDE.md "Arabic writing")
 - **Names:**
   - Games, series and platforms stay in English.

@@ -203,6 +203,20 @@ overrides both (names above, no first person, Western digits). Add every
 correction he makes to the glossary. DeepL stays the alternative when needed; it
 translates only (no Arabic rewriting) and its output still needs the
 house rules applied.
+DeepL both ways, and its alternatives (Mohammad, 15 Oct 2026, after the
+Ocarina foil cover post said ما دام المخزون متوفرًا where Arab retail says
+حتى نفاد الكمية: "DeepL usually has multiple suggestions so please go through
+them and pick the right words"). The back-check (Arabic to English) confirms
+meaning only, and it passed that phrase as "whilst stocks last". So every
+batch also runs a forward pass: the stock phrases, product and retail terms,
+dates and prices of the post, in English, through DeepL into Arabic, each
+phrased two to four ways ("while supplies last", "while stocks last", "until
+sold out", "in limited quantities"). The DeepL connector returns one Arabic
+rendering per request and DeepL Write has no Arabic, so the phrasings are the
+alternatives. Compare them with our wording, pick the term an Arab reader
+expects (countable products take الكمية, bulk goods المخزون), then spell-check
+the pick: DeepL itself wrote نفاذ for نفاد twice on 15 Oct. The choice and the
+alternatives go in the draft notes.
 
 Text direction (Mohammad, 27 Sep 2026): X and Instagram take a post's
 direction from its first word, so every Arabic post, paragraph and line

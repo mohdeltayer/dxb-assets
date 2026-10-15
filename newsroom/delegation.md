@@ -242,7 +242,7 @@ inbox, and the next hourly run reads it. An X post by the company or person
 itself counts as the primary once its text is quoted verbatim.
 
 **Main session.** On BREAKING or NEW: brief, footage, Arabic (both skills
-fresh, grammar review, DeepL back-check), Reel, drafts, preflight. Then
+fresh, grammar review, DeepL back-check and forward pass), Reel, drafts, preflight. Then
 ping him (PushNotification, one line: the story and the proposed time) and
 set a 15-minute send_later. If he answers, follow his answer. If he has
 not replied when it fires, approve with the note "auto-go: no reply in 15
