@@ -305,7 +305,9 @@ def hw_clip(hw, title, week_label, accent, bg, out, secs=8.0, hold=1.2, count=2.
 
 def reel(rows, week_label, date, out, hardware=(), hook='من تصدّر مبيعات اليابان هذا الأسبوع؟',
          title='الأكثر مبيعًا في اليابان', hw_title='مبيعات الأجهزة في اليابان',
-         source='فاميتسو (Famitsu)', theme='gold', hook_secs=3.6, hw_secs=8.0, draft=False):
+         source='فاميتسو (Famitsu)', theme='gold', hook_secs=3.6, hw_secs=8.0, draft=False,
+         lowres_ok=False):
+    # lowres_ok: Switch 1 screenshots exist only at their native 1280x720 (Famitsu 5 to 11 Oct 2026)
     accent = G.ACCENTS[theme]
     rows = sorted(rows, key=lambda r: -r['rank'])        # countdown, 10 to 1
     os.makedirs(C.U + SUB, exist_ok=True)
@@ -327,7 +329,7 @@ def reel(rows, week_label, date, out, hardware=(), hook='من تصدّر مبي�
         for i, r in enumerate(rows, 1):
             z = starts[i + 1] + RL.X if i + 1 < len(starts) else end
             layers.append((entry_layer(r, title, week_label, accent, f'{tmp}/e{i}.png'), starts[i], z))
-        RL.montage(shots, f'{tmp}/cut.mp4', fast=draft)
+        RL.montage(shots, f'{tmp}/cut.mp4', lowres_ok=lowres_ok, fast=draft)
         args = ['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', f'{tmp}/cut.mp4']
         for p, _, _ in layers:
             args += ['-loop', '1', '-t', f'{end:.2f}', '-i', p]

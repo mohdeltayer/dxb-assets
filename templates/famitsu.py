@@ -26,6 +26,9 @@ import flex  # noqa: E402
 
 # Japanese title as Famitsu prints it -> English title as the publisher uses it.
 TITLES = {
+    'ドラゴンズドグマ 2：ダークアリズン': "Dragon's Dogma 2: Dark Arisen",
+    '地球防衛軍5 for Nintendo Switch 2': 'EARTH DEFENSE FORCE 5',
+    'キングダム ハーツ コレクション［I～III］': 'KINGDOM HEARTS Collection [I~III]',
     'ファイアーエムブレム 万紫千紅': "Fire Emblem: Fortune's Weave",
     '空の軌跡 the 2nd（ソラノキセキ ザ・セカンド）': 'Trails in the Sky 2nd Chapter',
     '空の軌跡 the 2nd（ソラノキセキ ザ・セカンド） Nintendo Switch 2 Edition':
@@ -62,14 +65,19 @@ FAMILIES = [
     ('Switch', ['Switch', 'Switch Lite', 'Switch（有機ELモデル）']),
     ('PS5', ['PS5', 'PS5 デジタル・エディション', 'PS5 Pro']),
     ('Xbox Series', ['Xbox Series X', 'Xbox Series X デジタルエディション',
-                     'Xbox Series S']),
+                     'Xbox Series S',
+                     # Famitsu writes XBOX in capitals from the 5 to 11 Oct 2026 chart
+                     'XBOX Series X', 'XBOX Series X デジタルエディション',
+                     'XBOX Series S']),
 ]
 SHORT = {'Switch2': 'Switch 2', 'Switch（有機ELモデル）': 'OLED',
          'Switch Lite': 'Lite', 'Switch': 'Original',
          'PS5 デジタル・エディション': 'Digital', 'PS5 Pro': 'Pro',
          'PS5': 'Standard', 'Xbox Series X': 'Series X',
          'Xbox Series X デジタルエディション': 'Series X Digital',
-         'Xbox Series S': 'Series S'}
+         'Xbox Series S': 'Series S', 'XBOX Series X': 'Series X',
+         'XBOX Series X デジタルエディション': 'Series X Digital',
+         'XBOX Series S': 'Series S'}
 
 # Week-on-week colours. Green is not in the sheet palette: up and down need
 # to read at a glance, and every reader already knows green up, red down.
