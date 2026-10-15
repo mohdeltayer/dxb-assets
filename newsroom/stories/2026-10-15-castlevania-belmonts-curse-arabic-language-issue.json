@@ -1,0 +1,82 @@
+{
+ "id": "2026-10-15-castlevania-belmonts-curse-arabic-language-issue",
+ "title": "Castlevania: Belmont's Curse: Arabic system language can stop players at the title screen after save and quit (Konami known issue)",
+ "game": "Castlevania: Belmont's Curse",
+ "companies": [
+  "Konami"
+ ],
+ "category": "update",
+ "status": "drafted",
+ "related": [
+  "2026-10-15-castlevania-belmonts-curse-out-now"
+ ],
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Konami known-issues notice",
+   "url": "https://www.konami.com/games/castlevania/belmonts_curse/us/en-us/noti_261014",
+   "time": "2026-10-14",
+   "via": "read directly 2026-10-15T09:30Z"
+  },
+  {
+   "role": "radar",
+   "name": "DXB digest 12:29",
+   "url": "",
+   "time": "2026-10-15T08:29:30Z",
+   "via": "Gaming Watch"
+  }
+ ],
+ "claims": [
+  {
+   "text": "Players using certain system languages (mainly Arabic) may not get past the title page after saving and quitting to it, on PS5, Xbox Series X|S, Steam and Xbox on PC",
+   "status": "verified",
+   "source": "Konami"
+  },
+  {
+   "text": "Workaround: change the system language to another supported language (such as English) to continue from the existing save",
+   "status": "verified",
+   "source": "Konami"
+  },
+  {
+   "text": "Konami is creating a patch and will notify when ready; no date",
+   "status": "verified",
+   "source": "Konami"
+  }
+ ],
+ "why": "Hits our readers directly: Arabic-language players who bought the game on launch day can lose access to their save until they switch language.",
+ "lanes": {
+  "dl": {
+   "lane": "Reel (split)",
+   "chip": "رسمي",
+   "time": "2026-10-15T20:00:00Z",
+   "headline": "إذا كانت لغة جهازك العربية فقد تعلق Castlevania الجديدة بعد الحفظ",
+   "x": "لاعبو Castlevania: Belmont's Curse الذين يستخدمون العربية لغةً للنظام: تقول كونامي (Konami) إن اللعبة قد تعلق عند شاشة البداية بعد الحفظ والخروج إليها، والحل المؤقت لغة أخرى مثل الإنجليزية حتى يصدر التحديث.",
+   "ig": "مشكلة في Castlevania: Belmont's Curse تخصّ من يستخدم العربية لغةً للنظام.\nأعلنت كونامي (Konami) في قائمة المشكلات المعروفة للعبة Castlevania: Belmont's Curse أن اللاعبين الذين يستخدمون بعض اللغات لغةً للنظام، وفي مقدمتها العربية، قد لا يتمكنون من تجاوز شاشة البداية بعد حفظ اللعبة والخروج إليها. وتشمل المشكلة نسخ PS5 وXbox Series X|S، ونسختي PC على Steam وXbox.\nولمتابعة اللعب من ملف الحفظ الحالي، تنصح الشركة بتغيير لغة النظام إلى لغة أخرى تدعمها اللعبة، مثل الإنجليزية.\nوتضم القائمة نفسها تعذّر تشغيل اللعبة على PC عند إيقاف V-Sync وترك معدل الإطارات دون حد، وظهور بعض عناصر الواجهة خارج الشاشة جزئيًا على Steam Deck. وتقول كونامي إنها تعمل على تحديث يعالج هذه المشكلات، وستعلن عنه حين يصبح جاهزًا.\nوقد صدرت اللعبة في 15 أكتوبر."
+  }
+ },
+ "versions": [
+  {
+   "v": 1,
+   "at": "2026-10-15T11:20:00Z",
+   "change": "first build"
+  }
+ ],
+ "times": {
+  "source": "2026-10-14",
+  "digest": "2026-10-15T08:29:30Z",
+  "shortlisted": "2026-10-15T09:40:00Z",
+  "shown": "2026-10-15T09:40:00Z"
+ },
+ "media": [
+  {
+   "file": "castlevania-bc-bloodytears-ign-3840.mp4",
+   "source_url": "IGN (Konami Bloody Tears trailer)",
+   "kind": "trailer"
+  },
+  {
+   "file": "castlevania-bc-voicecast-ign-3840.mp4",
+   "source_url": "IGN (Konami voice cast trailer)",
+   "kind": "trailer, picture only"
+  }
+ ]
+}
