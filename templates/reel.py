@@ -1153,7 +1153,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         try:
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, credits=credits, strip=strip,
-                        products=products, template=template, tribute=tribute, reveal=reveal, profile=profile)
+                        products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok)
         finally:
             X = keep
     global FINISH
