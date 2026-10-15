@@ -74,3 +74,16 @@ Claude's two scores were similar; in both modes it wrote يصل التحديث �
 Method from 15 Oct: the forward pass sends the whole story to DeepL (his
 instruction; it shows how the post reads as one piece), and the short alternative
 phrasings stay for stock phrases and retail terms only.
+
+## Replay: the Ocarina foil cover post under the new method (15 Oct)
+
+The English of the published caption, X post and Reel text went to DeepL whole.
+All three came back with حتى نفاذ الكمية (to be spelled نفاد) where we published
+ما دام المخزون متوفرًا and ما دام في المخزون, so the method would have caught it.
+DeepL rendered "textured foil cover" as غلاف معدني مزخرف (decorated metallic), and
+the blind Claude run had غلاف معدني لامع; we published غلاف فويل بارز الملمس. معدني is
+the plainer Arabic for foil, but مزخرف shifts "textured" to "decorated", so the
+candidate is غلاف معدني بارز الملمس, raised with Mohammad, not adopted. Nothing else
+would change: DeepL's الطلبات المسبقة مفتوحة، النسخة المباعة في المتاجر and من الصفر say
+what ours say, and its نينتندو spelling, IGN without the Arabic bracket and سيتم إطلاق
+would not be taken.
