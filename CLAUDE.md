@@ -1751,6 +1751,17 @@ exception to "approval is not a go". Never for rumours, leaks, single-outlet
 reports, routine items, DXB-KNIGHT or anything he turned down; auto-posting
 runs 08:00 to 23:00 Dubai, at most three a day.
 
+Expansion passes and DLC go out on announcement (Mohammad, 15 Oct 2026:
+"Expansion pass and these kind of news can be published fast as soon as
+it's announced. There is an official trailer"). When a publisher officially
+announces an expansion pass, a DLC wave, a season or a similar add-on, and
+there is an official trailer or footage, the story is built at once and
+queued at the next quarter hour at least 15 minutes out, its preview sent at
+the same time; his message is the go for this kind, so it does not wait for
+a review slot or a pick. Overnight it still keeps the 90-minute cadence gap.
+Rumoured or leaked DLC stays on the normal ladder. First used on Fire
+Emblem: Fortune's Weave's Expansion Pass, 15 Oct.
+
 Posting is irreversible: pushing `queue/**` to *any* branch of dxb-queue
 fires the publisher, because `publish.yml` has no branch filter. Never
 queue without explicit say-so, and dry-run `publish.py` with `DRY_RUN=1`

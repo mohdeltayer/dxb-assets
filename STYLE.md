@@ -209,6 +209,10 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 - **Breaking lane:**
   - Verified official news only.
   - 15-minute auto-go, 08:00 to 23:00, at most three a day.
+- **Expansion passes and DLC (15 Oct):** an official add-on announcement with
+  official footage is built at once and queued at the next quarter hour (15
+  minutes out, preview sent), any hour; his 15 Oct message is the go.
+  Overnight gap still 90 minutes. CLAUDE.md, after the breaking lane.
 - **Before every push:**
   - Preflight and `DRY_RUN=1`; no push while a publish run is in progress.
   - Never re-run a failed publish.
