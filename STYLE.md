@@ -50,8 +50,10 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   2. Write with arabic-games-film-editor.
   3. Run the arabic-grammar-review stage.
   4. DeepL both ways: the back-check (meaning), and a forward pass of the
-     stock phrases, retail terms, dates and prices phrased two to four ways
-     in English, to pick the term Arab readers expect; spell-check the pick.
+     whole story in one piece (never sentence by sentence), read against
+     ours; stock phrases, retail terms, dates and prices also go phrased two
+     to four ways in English to pick the term Arab readers expect;
+     spell-check the pick and keep names to the house rules.
      Countable products take الكمية (حتى نفاد الكمية), bulk goods المخزون.
   - (CLAUDE.md "Arabic writing")
 - **Names:**

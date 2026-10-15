@@ -44,3 +44,33 @@ running both checks: the writer (Claude, with the glossary loaded) and DeepL bot
 ways, with every disagreement looked up rather than either engine trusted. Re-run
 this set with Microsoft's dictionary lookup once the key exists, and add every new
 correction he makes as a sentence here.
+
+## Round 2: whole stories (Mohammad, 15 Oct: "Add the full story in DeepL and not sentence by sentence")
+
+The same 20 terms were placed in six short news stories in our usual shape
+(`stories.json`) and each story was sent whole, to DeepL and to a blind Claude.
+
+| | pass | fail | miss |
+|---|---|---|---|
+| DeepL, sentences | 12 | 4 | 4 |
+| DeepL, stories | 8 | 5 | 7 |
+| Claude blind, sentences | 13 | 5 | 2 |
+| Claude blind, stories | 12 | 5 | 3 |
+
+Read by hand, the gap narrows: most of DeepL's new misses in story mode are
+acceptable wordings (وضع اللعب المحمول، بعد قضاء 10 ساعات في اللعب، يتوفر التحديث
+اليوم، لم يتبق سوى 23 يومًا), so about 13 of 20 are usable against 14 in sentence mode.
+
+What context fixed in DeepL: silent revision came back as تعديلاً خفيًّا (our term), and
+"10 hours with" no longer became مع. What it broke: docked became وضع التوصيل بالقاعدة
+(the literal the glossary already names), hands-on became تجربة لعب, Rainbow Six
+Mobile "ستتوقف عن العمل" (the glossary wants تنتهي خدمة), and the whole-story runs
+added errors the sentence runs did not have: Ubisoft spelled أوبيسبوت, and Nintendo
+Switch 2 written in Arabic letters against the house rule. The real gain is flow:
+the story reads as one connected news piece (وتأتي، لذا فإن، وفي الوقت نفسه).
+Claude's two scores were similar; in both modes it wrote يصل التحديث اليوم and
+ستتوقف عن العمل, which the scorer missed in story mode (counted here by hand).
+
+Method from 15 Oct: the forward pass sends the whole story to DeepL (his
+instruction; it shows how the post reads as one piece), and the short alternative
+phrasings stay for stock phrases and retail terms only.

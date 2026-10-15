@@ -208,15 +208,21 @@ Ocarina foil cover post said ما دام المخزون متوفرًا where Ara
 حتى نفاد الكمية: "DeepL usually has multiple suggestions so please go through
 them and pick the right words"). The back-check (Arabic to English) confirms
 meaning only, and it passed that phrase as "whilst stocks last". So every
-batch also runs a forward pass: the stock phrases, product and retail terms,
-dates and prices of the post, in English, through DeepL into Arabic, each
+batch also runs a forward pass. The whole story goes to DeepL in one piece,
+not sentence by sentence (Mohammad, 15 Oct 2026: "Add the full story in DeepL
+and not sentence by sentence"; a proper translation needs the context), and
+its Arabic is read against ours as a whole post. On top of that, the stock
+phrases, product and retail terms, dates and prices are each sent in English
 phrased two to four ways ("while supplies last", "while stocks last", "until
 sold out", "in limited quantities"). The DeepL connector returns one Arabic
 rendering per request and DeepL Write has no Arabic, so the phrasings are the
 alternatives. Compare them with our wording, pick the term an Arab reader
 expects (countable products take الكمية, bulk goods المخزون), then spell-check
 the pick: DeepL itself wrote نفاذ for نفاد twice on 15 Oct. The choice and the
-alternatives go in the draft notes.
+alternatives go in the draft notes. Test of both methods on 20 glossary terms:
+`notes/translation-engine-test-2026-10-15.md` (whole stories read better as one
+piece but did not pick better terms, and added a misspelled Ubisoft and an
+Arabic-lettered Nintendo Switch 2, so its names are checked against the house rules).
 
 Text direction (Mohammad, 27 Sep 2026): X and Instagram take a post's
 direction from its first word, so every Arabic post, paragraph and line
