@@ -321,6 +321,34 @@ sends Digital Lounge stories or Shorts to either platform. Digital Lounge
 runs on X and Instagram only; reel.py files still render 9:16 so either
 platform can come back without new work. Nothing was queued on either
 when the drop started.
+YouTube lane for original material (advisor trial, 17 Oct 2026, agreed with
+Mohammad). The Famitsu 5 to 11 Oct Short, uploaded by him by hand, reached 140
+views in 1 day 9 hours (the first of the last ten; the channel had 510 views in
+28 days) where every earlier Short sat at 0 to 28; his hand upload of the Zelda
+trailer on 1 Oct got 9. So the difference is the content (our own data and
+graphics), perhaps helped by the account ageing since the 27 Sep burst. This
+overrides the 1 Oct drop for original material only; TikTok stays dropped.
+1. YouTube takes original material only: Famitsu weekly, numbers Reels, list
+   pieces, the Gulf price roundup, retro and his handson. Trailer Reels never
+   go to YouTube.
+2. Every YouTube post is a YouTube cut under 35 seconds (Famitsu: top five plus
+   hardware, not the full ten; the full Famitsu Reel held 24.7% average viewed).
+   The title opens on an Arabic word, carries the game or the news word in its
+   first five words, and passes the grammar stage (the Famitsu title wrote
+   «الاسبوع» for «الأسبوع»).
+3. Route test: the next two original pieces go to YouTube through Postiz
+   (integration `cmuk20rj302oqpr0ygqzcdzch`, settings as above; Postiz has no
+   category field, so Gaming comes from the channel's Studio defaults). If both
+   are distributed like the Famitsu Short (views in the hundreds within 48
+   hours), the lane runs through Postiz at one or two a day. If they stay near
+   zero, the lane is manual: production prepares the cut, title and
+   description, and Mohammad uploads from his phone.
+4. Judged after two weeks against the 140-view baseline, in
+   `newsroom/experiments.md`.
+Preflight enforces it: a YouTube job.json carries `"original"` set to the kind
+(famitsu, numbers, list, gulf_prices, retro, handson; publish.py does not send
+it), a clip under 35 s, an Arabic-first title of 2 to 100 characters, `"type":
+"public"` and `"selfDeclaredMadeForKids": "no"`.
 TikTok photo-mode test (Mohammad, 3 Oct 2026, after TikTok showed a
 "post photos to get more views" prompt): one swipe-through photo set built
 from our own graphics, posted by hand from his phone, to see whether the

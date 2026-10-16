@@ -245,13 +245,26 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - Never re-run a failed publish.
   - Check PUBLISHED after the slot, then strip posted media.
 
+## YouTube lane (trial from 17 Oct 2026)
+
+- Original material only: Famitsu weekly, numbers, list, Gulf prices, retro,
+  his handson. Never trailer Reels.
+- A YouTube cut under 35 s (Famitsu: top five plus hardware). Title opens on an
+  Arabic word, game or news word in the first five words, grammar-checked.
+- The next two originals go through Postiz; hundreds of views in 48 hours keeps
+  the lane on Postiz at one or two a day, near zero makes it manual (he uploads
+  from his phone). Judged after two weeks against 140 views.
+- job.json: `"original": "<kind>"`, `"type": "public"`, `"selfDeclaredMadeForKids":
+  "no"`; preflight checks all of it.
+
 ## Not in force (history only)
 
 - Cadence of 13 Oct (30 minutes by day, 90 overnight, about 12 posts a day)
   and the daily cap: replaced by constant coverage, 16 Oct.
 - **Dropped or paused platforms:**
-  - TikTok and YouTube: dropped 1 Oct, along with every rule sending Reels
-    or Shorts there.
+  - TikTok: dropped 1 Oct, along with every rule sending Reels or Shorts
+    there. YouTube was dropped the same day and came back on 17 Oct for
+    original material only (see the YouTube lane above).
   - Snapchat: paused 9 Oct.
   - DXB-KNIGHT routine production: on hold from 11 Oct.
 - **Retired formats:**
