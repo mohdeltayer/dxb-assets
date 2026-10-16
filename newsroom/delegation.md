@@ -99,9 +99,13 @@ pass is cached under `uploads/cache/` before the day (advisor, 14 Oct 2026, rule
 3. Bank evergreen pieces (Ocarina episodes, retro on-this-day, list,
    explainer), each rendered and ready to queue, listed in
    `newsroom/evergreen.md` with what would date it.
-Real news always comes first: every verified story landing 23:00 to 08:00
-Dubai is built and queued at the 90-minute overnight spacing; mornings stay at
-one post per 30 minutes at most, none bunched before 08:00.
+Real news always comes first: every verified story landing overnight is
+built and queued at the overnight spacing (60 minutes, 00:00 to 08:00 Dubai;
+constant coverage, 16 Oct 2026); mornings stay at one post per 30 minutes at
+most, none bunched before 08:00.
+The bank keeps at least 6 ready Reels at all times (constant coverage): when
+`newsroom/evergreen.md` lists fewer, step 3 comes before steps 1 and 2 unless
+a dated story is due within 12 hours.
 
 **Morning digest (main session), by 07:30 Dubai.** One message to Mohammad
 listing every post published since 23:00 Dubai, one line each: time (Dubai),
@@ -248,6 +252,17 @@ finds the company's own words. A story only outlets carry is a تقرير for a
 review slot, never the breaking lane; the Arabic outlets also show what the
 competition already ran.
 
+**Gap alarm (main session, every run; constant coverage, 16 Oct 2026).**
+Run `python3 templates/formats.py gaps 2` from dxb-assets. It reads the slots
+in the format ledger and prints any spacing or gap rule that would break in
+the next two hours (Dubai time: at least 30 minutes between posts 08:00 to
+24:00 and 60 minutes 00:00 to 08:00; never more than 60 minutes without a
+post by day, 2 hours by night). Put its lines in the watch-seen commit
+message ("gap alarm: ..."), then queue the next finished Reel into the gap,
+or, with none ready, a banked piece from `newsroom/evergreen.md`, at the
+earliest slot the spacing allows, preview sent at the same time. "ok" means
+nothing to do.
+
 **Verifier (sonnet).** Given the watcher's new items, for each one: open
 the primary and quote the claim, run `ledger.py find` with at least two
 keywords plus a grep of `stories/`, and grade it:
@@ -277,6 +292,6 @@ Limits: Digital Lounge only; official, verified news only (never a
 rumour, leak or single-outlet report, at any hour); auto-posting was 08:00 to 23:00
 Dubai until 16 Oct 2026; from then round the clock (advisor, 16 Oct 2026,
 agreed with Mohammad), so a story found overnight is pinged, built and
-auto-goes after 15 minutes like any other, spaced at least 90 minutes from
-the previous post between 23:00 and 08:00; at most three auto-posts in any
-24 hours; a story he has turned down is never auto-posted.
+auto-goes after 15 minutes like any other, at the constant-coverage spacing
+(60 minutes from the previous post between 00:00 and 08:00 Dubai, 30 by day;
+breaking news may break it); at most three auto-posts in any 24 hours; a story he has turned down is never auto-posted.

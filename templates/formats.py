@@ -193,10 +193,28 @@ def by_template():
     return {f: (statistics.median(v), len(v)) for f, v in seen.items()}
 
 
-def check(fmt):
-    """Why fmt should not be next, or '' when it may: a third in a row, or (card-led) a third card-led Reel in the
-    last six (at most one in three)."""
-    led = [e['format'] for e in _load()]
+def _at(e):
+    import datetime
+    try:
+        return datetime.datetime.strptime(e.get('at', '')[:16], '%Y-%m-%dT%H:%M')
+    except ValueError:
+        return None
+
+
+def _dubai(t):
+    import datetime
+    return t + datetime.timedelta(hours=4)
+
+
+def check(fmt, at=None):
+    """Why fmt should not be next, or '' when it may: a third in a row, (card-led) a third card-led Reel in the
+    last six (at most one in three), or a fifth of one template in the same Dubai day (constant coverage, 16 Oct
+    2026: the day is Dubai's, not UTC's). `at` (UTC, 'YYYY-MM-DDTHH:MM') is the slot the Reel would take; the
+    ledger is read in time order up to it, so a Reel moved into an earlier slot is checked where it lands."""
+    import datetime
+    t = datetime.datetime.strptime(at[:16], '%Y-%m-%dT%H:%M') if at else datetime.datetime.utcnow()
+    before = sorted((e for e in _load() if _at(e) and _at(e) < t), key=_at)
+    led = [e['format'] for e in before]
     last = led[-2:]
     if len(last) == 2 and all(f == fmt for f in last):
         return f'third {fmt} in a row'
@@ -205,12 +223,45 @@ def check(fmt):
         cards = [f for f in recent if FAMILY.get(f) == 'card']
         if len(cards) >= CARD_MAX:
             return f'card-led would be {len(cards) + 1} of the last {len(recent) + 1} ({", ".join(cards)}); at most {CARD_MAX} in {WINDOW}'
-    import datetime
-    today = datetime.datetime.utcnow().strftime('%Y-%m-%d')
-    n = sum(1 for e in _load() if e['format'] == fmt and e.get('at', '').startswith(today))
+    day = _dubai(t).date()
+    n = sum(1 for e in _load() if e['format'] == fmt and _at(e) and _dubai(_at(e)).date() == day)
     if n >= DAY_MAX:
-        return f'{fmt} already {n} times today; at most {DAY_MAX} a day, any family'
+        return f'{fmt} already {n} times on Dubai day {day}; at most {DAY_MAX} a day, any family'
     return ''
+
+
+#: Constant coverage (advisor, 16 Oct 2026; Mohammad: "I want constant coverage"). No daily cap; spacing and gaps
+#: in Dubai time, by the hour of the later post: at least SPACING minutes between posts and never more than
+#: MAX_GAP minutes without one; day is 08:00 to 24:00, night 00:00 to 08:00. Breaking news may break the spacing.
+SPACING = {'day': 30, 'night': 60}
+MAX_GAP = {'day': 60, 'night': 120}
+
+
+def _band(t):
+    return 'night' if _dubai(t).hour < 8 else 'day'
+
+
+def gaps(hours=2, start=None):
+    """Spacing and gap problems from `start` (UTC, default now) to `hours` ahead, from the ledger's slots. Each is
+    one line (Dubai times). The hourly watch runs it and says so in its commit (gap alarm)."""
+    import datetime
+    t0 = datetime.datetime.strptime(start[:16], '%Y-%m-%dT%H:%M') if start else datetime.datetime.utcnow()
+    t1 = t0 + datetime.timedelta(hours=hours)
+    slots = sorted({_at(e) for e in _load() if _at(e)})
+    prev = max([x for x in slots if x <= t0], default=None)
+    out, cur = [], prev
+    for x in [x for x in slots if t0 < x <= t1] + [t1]:
+        if cur is not None:
+            mins = (x - cur).total_seconds() / 60
+            band, gband = _band(x), _band(cur)       # spacing by the later post's hour, the gap by where it starts
+            d0, d1 = _dubai(cur).strftime('%H:%M'), _dubai(x).strftime('%H:%M')
+            if x != t1 and mins < SPACING[band]:
+                out.append(f'spacing: {d0} to {d1} Dubai is {mins:.0f} min ({band} minimum {SPACING[band]})')
+            if mins > MAX_GAP[gband]:
+                end = 'end of window' if x == t1 else f'{d1}'
+                out.append(f'gap: nothing from {d0} to {end} Dubai, {mins:.0f} min ({gband} maximum {MAX_GAP[gband]})')
+        cur = x
+    return out
 
 
 def family(fmt):
@@ -226,8 +277,11 @@ if __name__ == '__main__':
     elif a[:1] == ['templates']:                   # views per template, for the Tuesday audit
         for f, (med, n) in sorted(by_template().items(), key=lambda kv: -kv[1][0]):
             print(f'{f:<10} median {med:>8,.0f} views over {n} Reels')
-    elif a[:1] == ['check']:
-        why = check(a[1])
+    elif a[:1] == ['gaps']:                        # python3 formats.py gaps [hours] [start UTC]: the gap alarm
+        g = gaps(float(a[1]) if len(a) > 1 else 2, a[2] if len(a) > 2 else None)
+        print('\n'.join(g) if g else 'ok')
+    elif a[:1] == ['check']:                       # python3 formats.py check <fmt> [slot UTC]
+        why = check(a[1], a[2] if len(a) > 2 else None)
         print(f'{why}: pick another unless the story demands it' if why else 'ok')
         print(f'opens on: {opener(a[1])}')
     else:

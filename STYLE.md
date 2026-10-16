@@ -200,10 +200,18 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     verified story is built in rank order and queued for the next quarter
     hour at least 15 minutes out, preview sent at the same time; "hold" or
     "fix" in that window stops it; "skip N" drops a story.
-  - Cadence (proposed 13 Oct): 30 minutes between posts 08:00 to 23:00
-    Dubai, 90 minutes overnight, about 12 a day, no two in a row on one
-    game or publisher, reports and rumours at most one in three and
-    re-checked before queuing.
+  - Constant coverage (16 Oct; replaces the 13 Oct cadence and the daily
+    cap): no daily cap. Spacing at least 30 minutes 08:00 to 24:00 Dubai, 60
+    minutes 00:00 to 08:00 (breaking news may break it); never more than 60
+    minutes without a post 08:00 to 24:00, 2 hours 00:00 to 08:00. A
+    finished Reel takes the earliest free slot unless the approval note
+    gives a reason (embargo, dated launch, his hold). Gaps are filled from
+    the build queue first, then the bank of evergreen Reels (at least 6
+    ready at all times). The hourly watch runs `formats.py gaps 2` and says
+    so in its commit. Variety unchanged: no two in a row on one game or
+    publisher, no third on one template, card-led one in three over six,
+    four per template per Dubai day; reports and rumours at most one in
+    three and re-checked before queuing. CLAUDE.md, "Constant coverage".
   - Silence rule (batches he asks for outside a slot): no reply 30 minutes
     before the first time counts as a go.
 - **Breaking lane:**
@@ -213,8 +221,9 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     three in any 24 hours.
 - **Overnight (advisor, 16 Oct, agreed with Mohammad 02:50 Dubai; he now
   reads the feed as a viewer and deletes what he does not like):**
-  - Every verified story landing 23:00 to 08:00 is queued at the 90-minute
-    overnight spacing, real news and not only evergreen. The strongest pieces
+  - Every verified story landing overnight is queued at the overnight
+    spacing (60 minutes, 00:00 to 08:00, since 16 Oct), real news and not
+    only evergreen. The strongest pieces
     still go 08:00 to 21:00.
   - Mornings are spread out: at most one post per 30 minutes, none bunched
     before 08:00.
@@ -230,7 +239,7 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 - **Expansion passes and DLC (15 Oct):** an official add-on announcement with
   official footage is built at once and queued at the next quarter hour (15
   minutes out, preview sent), any hour; his 15 Oct message is the go.
-  Overnight gap still 90 minutes. CLAUDE.md, after the breaking lane.
+  Constant-coverage spacing applies. CLAUDE.md, after the breaking lane.
 - **Before every push:**
   - Preflight and `DRY_RUN=1`; no push while a publish run is in progress.
   - Never re-run a failed publish.
@@ -238,6 +247,8 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 
 ## Not in force (history only)
 
+- Cadence of 13 Oct (30 minutes by day, 90 overnight, about 12 posts a day)
+  and the daily cap: replaced by constant coverage, 16 Oct.
 - **Dropped or paused platforms:**
   - TikTok and YouTube: dropped 1 Oct, along with every rule sending Reels
     or Shorts there.

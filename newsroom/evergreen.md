@@ -2,7 +2,9 @@
 
 Pieces rendered and ready to queue in quiet hours, when real news is thin.
 Each line: name, template, Reel path in `cards/`, what would date it, status.
-Real news always goes first; overnight spacing is at least 90 minutes.
+Real news always goes first. Constant coverage (16 Oct 2026): the bank keeps
+at least 6 ready Reels at all times and fills any gap the build queue cannot;
+spacing is at least 30 minutes by day and 60 from 00:00 to 08:00 Dubai.
 
 | Name | Template | Reel | Dates it | Status |
 |------|----------|------|----------|--------|

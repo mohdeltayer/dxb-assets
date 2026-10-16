@@ -1724,10 +1724,9 @@ just spamming reels"). From 13 Oct evening Digital Lounge runs as a queue:
   minutes out (approval note "go: rolling queue; preview sent HH:MMZ") and
   its preview goes to him at the same time; "hold" or "fix" in that window
   stops it. Once in Postiz, only he can pull it.
-- Cadence, so the feed reads as an outlet and not a bot (numbers proposed
-  13 Oct, his confirmation pending): at least 30 minutes between Digital
-  Lounge posts from 08:00 to 23:00 Dubai, at least 90 minutes overnight;
-  about 12 posts a day at most; no two consecutive posts on the same game
+- Cadence: spacing and gaps, no daily cap (see "Constant coverage" below,
+  16 Oct 2026; it replaced the 13 Oct numbers of 30 minutes by day, 90
+  overnight and about 12 a day). No two consecutive posts on the same game
   or publisher; no more than two in a row in the same format; reports and
   rumours never more than one post in three, each re-checked right before
   queuing, a denial stops it.
@@ -1759,7 +1758,7 @@ announces an expansion pass, a DLC wave, a season or a similar add-on, and
 there is an official trailer or footage, the story is built at once and
 queued at the next quarter hour at least 15 minutes out, its preview sent at
 the same time; his message is the go for this kind, so it does not wait for
-a review slot or a pick. Overnight it still keeps the 90-minute cadence gap.
+a review slot or a pick. It keeps the spacing of "Constant coverage" below.
 Rumoured or leaked DLC stays on the normal ladder. First used on Fire
 Emblem: Fortune's Weave's Expansion Pass, 15 Oct.
 
@@ -1778,12 +1777,12 @@ before it, and the night can be used more.
       news lands.
    c. Bank evergreen pieces (Ocarina episodes, retro, list, explainer), each
       ready to queue.
-2. Overnight posting uses real news. Every verified story that lands between
-   23:00 and 08:00 Dubai is queued at the overnight spacing (at least 90
-   minutes), not only evergreen pieces. The strongest pieces of the day still
-   go to 08:00 to 21:00. Morning queues are spread out: no more than one post
-   per 30 minutes, and none bunched before 08:00 because the night was left
-   empty.
+2. Overnight posting uses real news. Every verified story that lands
+   overnight is queued at the overnight spacing (at least 60 minutes from
+   00:00 to 08:00 since 16 Oct; was 90 from 23:00), not only evergreen pieces.
+   The strongest pieces of the day still go to 08:00 to 21:00. Morning queues
+   are spread out: no more than one post per 30 minutes, and none bunched
+   before 08:00 because the night was left empty.
 3. Breaking-lane auto-go runs round the clock (was 08:00 to 23:00) for
    verified, official, new or breaking news only. Rumours, leaks and
    single-outlet reports never auto-go at any hour. The cap stays at three
@@ -1795,6 +1794,44 @@ before it, and the night can be used more.
    wrong fact found more than an hour after publishing gets a correction Reel
    (as with Alinea) rather than a silent deletion; the corrections routine in
    `newsroom/corrections.md` is unchanged.
+
+Constant coverage (advisor, 16 Oct 2026; Mohammad: "I want constant
+coverage"). Replaces the daily cap of about 12 posts and items 1 to 4 of
+the "empty afternoon" fix sent earlier that day. On 16 Oct nothing posted
+from 12:00 to 18:45 Dubai while eleven finished Reels waited for Saturday
+and Sunday.
+1. No daily cap. The limits are spacing and gaps, in Dubai time:
+   - Minimum spacing: 30 minutes between posts from 08:00 to 24:00, 60
+     minutes from 00:00 to 08:00 (by the hour of the later post). Breaking
+     news may break the spacing, as before.
+   - Maximum gap: never more than 60 minutes without a post from 08:00 to
+     24:00, never more than 2 hours from 00:00 to 08:00 (by the hour the gap
+     starts).
+2. A finished Reel takes the earliest free slot under the spacing rule. It
+   is never held for a later day unless the approval note gives a reason
+   (embargo, dated launch, Mohammad's hold). An «الطريق إلى Ocarina» episode
+   is dated by its «باقي N يومًا» count.
+3. Gap filling, in order, when no new story is ready for the next slot: a
+   verified story still in the build queue (built first), then a banked
+   evergreen piece (Ocarina, retro, list, explainer). The bank keeps at least
+   6 ready Reels at all times; quiet hours top it up.
+4. Gap alarm: the hourly watch runs `python3 templates/formats.py gaps 2`
+   (from the format ledger's slots); if a gap or spacing rule would break in
+   the next two hours its commit says so, and the next finished Reel or a
+   banked piece is queued into it. `formats.py gaps <hours> [start UTC]`
+   checks any window.
+5. Unchanged: variety rules (no two in a row on one game or publisher, no
+   third in a row on one template, card-led at most one in three over six,
+   four per template per Dubai day; `formats.py check <fmt> [slot UTC]` now
+   counts the Dubai day and reads the ledger in time order up to the slot),
+   reports and rumours at most one post in three, re-check before queuing,
+   all quality steps.
+6. 16 Oct: the Reels queued for 17 and 18 Oct moved forward with his go
+   (deleted in Postiz and requeued, note "go: Mohammad, constant coverage
+   16 Oct"): nine into 18:45 to 23:00 Dubai, Nintendo repair prices and
+   Where the Seeds Fall to 08:00 and 08:30 Saturday. Asked that evening,
+   he put the gap rule over the four-per-template cap for that one night
+   (trailers and splits had already reached it).
 
 Posting is irreversible: pushing `queue/**` to *any* branch of dxb-queue
 fires the publisher, because `publish.yml` has no branch filter. Never
