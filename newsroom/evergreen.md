@@ -19,4 +19,4 @@ spacing is at least 30 minutes by day and 60 from 00:00 to 08:00 Dubai.
 | Best-selling consoles of all time | numbers | any day before Nintendo's early-November results | Nintendo IR hardware page (30 Jun 2026: Switch 156.59M, DS 154.02M); Sony says PS2 "over 160 million" (playstation.com history page). PS4 figure unverified, leave out. |
 | Tomb Raider turns 30 | retro (saturn/ps1) | Sat 24 or Sun 25 Oct (Saturn EU 24 Oct 1996; the franchise marks 25 Oct) | Tomb Raider I-III Remastered trailers (Steam 2478970); the Egypt levels for the Arab angle; Legacy of Atlantis due 12 Feb 2027. |
 | Biggest games in the last week of October | list | by Wed 21 Oct | MW4 (22/23 Oct), Minecraft Switch 2 (27 Oct), Phantom Blade Zero (28/29 Oct): check each date on the primary first. |
-| Bully turns 20 | retro (ps2) | Sat 17 Oct only (NA 17 Oct 2006) | Wikipedia only so far; drop if it cannot ship on the day. |
+| Bully turns 20 | retro (ps2) | Built 16 Oct, queued Sat 17 Oct 09:30Z | newsroom/stories/2026-10-17-retro-bully-20.json |
