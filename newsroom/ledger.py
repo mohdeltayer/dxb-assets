@@ -134,18 +134,28 @@ def sync():
     print(f'{created} new stories, {added} posts attached')
 
 
+def _posts(s):
+    """A story's posts as a list of dicts. Hand-written entries (from 15 Oct 2026) keep `posts` as
+    {platform: postiz id} and `notes` as a list; read those too."""
+    ps = s.get('posts', [])
+    if isinstance(ps, dict):
+        return [{'folder': i, 'account': 'Digital Lounge', 'platform': k} for k, i in ps.items()]
+    return [p for p in ps if isinstance(p, dict) and 'folder' in p]
+
+
 def find(words):
     """Stories whose title, game, folders or notes contain every word."""
     words = [w.lower() for w in words]
     hits = []
     for s in stories():
+        notes = s.get('notes', '') or ''
         hay = ' '.join([s['id'], s.get('title', ''), s.get('game', '') or '',
-                        s.get('notes', '') or '',
-                        ' '.join(p['folder'] for p in s.get('posts', []))]).lower()
+                        ' '.join(notes) if isinstance(notes, list) else notes,
+                        ' '.join(p['folder'] for p in _posts(s))]).lower()
         if all(w in hay for w in words):
             hits.append(s)
     for s in hits[-20:]:
-        where = sorted({f'{p["account"]} {p["platform"]}' for p in s.get('posts', [])})
+        where = sorted({f'{p["account"]} {p["platform"]}' for p in _posts(s)})
         print(f'{s["id"]}  [{s.get("status")}]  {s.get("title", "")[:70]}')
         if where:
             print(f'    posted: {", ".join(where)}, first {dubai(s.get("times", {}).get("posted"))} Dubai')
