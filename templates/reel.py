@@ -499,10 +499,17 @@ def zoom(shot):
     return H / _bars(C.U + f, s, d)[1]
 
 
+NOBARS = set()                            # file names whose black is picture, not letterbox (product renders on black)
+
+
 def _bars(p, s, d):
     """The picture inside a trailer's letterbox, as an ffmpeg crop (or '').
     On 3 Oct 2026 the Steam Deck Reel enlarged letterboxed Valve clips bars
-    and all, leaving black bands across the frame."""
+    and all, leaving black bands across the frame. A file named in NOBARS
+    is taken whole (16 Oct 2026: ASUS's product loops float the handheld on
+    pure black, which cropdetect read as bars and enlarged 3.4x)."""
+    if os.path.basename(p) in NOBARS:
+        return '', _height(p)
     r = subprocess.run(['ffmpeg', '-nostdin', '-v', 'info', '-ss', str(s), '-t', str(min(d, 3)), '-i', p,
                         '-vf', 'cropdetect=limit=24:round=2:reset=0', '-f', 'null', '-'],
                        capture_output=True, text=True)
