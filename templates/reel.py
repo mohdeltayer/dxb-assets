@@ -730,7 +730,7 @@ def montage(shots, out, lowres_ok=False, fast=False):
     args = ['ffmpeg', '-nostdin', '-y', '-v', 'error']
     fc = []
     if CACHE_PICTURE and not fast:         # the picture pass per footage shot comes from the cache (advisor, 14 Oct 2026)
-        shots = [((cached_shot(f, s, d, fo, lowres_ok), 0.0, d, fo) if not st and not _ours(f) and not f.startswith(CACHE + '/') else (f, s, d, fo))
+        shots = [((cached_shot(f, s, d, fo, lowres_ok), 0.0, d, fo) if not st and not _ours(f) and not f.startswith((CACHE + '/', STILLS + '/')) else (f, s, d, fo))
                  for (f, s, d, fo), st in zip(shots, stills)]
     for i, ((f, s, d, fo), st) in enumerate(zip(shots, stills)):
         if st:
@@ -745,7 +745,7 @@ def montage(shots, out, lowres_ok=False, fast=False):
             fc.append(f'[{i}:v]scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,'
                       f"crop={W}:{H}:x='(iw-{W})*({a}+({b}-{a})*t/{d})':y='(ih-{H})/2'{fin},"
                       f'fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]')
-        elif f.startswith(CACHE + '/'):       # already the finished picture at 1080x1920, exactly d long
+        elif f.startswith((CACHE + '/', STILLS + '/')):   # already the finished picture at 1080x1920, exactly d long (cache, or stills_clips push-ins)
             args += ['-t', str(d), '-i', C.U + f]
             fc.append(f'[{i}:v]settb=AVTB,setsar=1,format=yuv420p[v{i}]')
         else:
