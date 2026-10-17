@@ -1,55 +1,57 @@
 {
-  "id": "2026-10-17-modern-warfare-4-top-seller-steam-uae",
-  "title": "Call of Duty: Modern Warfare 4 is No. 1 on Steam top sellers in the UAE, Saudi Arabia and the US before release (22 Oct; 299 AED / 299 SR)",
-  "game": "Call of Duty: Modern Warfare 4",
-  "companies": [
-    "Activision"
-  ],
-  "status": "queued",
-  "sources": [
-    {
-      "role": "primary",
-      "name": "Steam top sellers, cc=ae, sa, us (read 17 Oct 10:40Z)",
-      "url": "https://store.steampowered.com/search/?filter=topsellers&cc=ae"
-    },
-    {
-      "role": "primary",
-      "name": "Steam app 4435490 (22 Oct, 299 AED)",
-      "url": "https://store.steampowered.com/app/4435490/"
-    },
-    {
-      "role": "relay",
-      "name": "VGA4A citing SteamDB (global No. 1)",
-      "url": "https://www.vga4a.com/archives/338077"
-    }
-  ],
-  "claims": [
-    {
-      "text": "No. 1 on Steam top sellers in UAE, Saudi, US",
-      "status": "verified (Steam, 10:40Z)"
-    },
-    {
-      "text": "Ahead of Dota 2 and PUBG in UAE and Saudi",
-      "status": "verified"
-    },
-    {
-      "text": "Global No. 1 per SteamDB",
-      "status": "relay only, not used"
-    }
-  ],
-  "lanes": {
-    "dl": {
-      "lane": "Reel",
-      "chip": "رسمي",
-      "format": "split",
-      "footage": "Steam Multiplayer trailer + Steam pages (pageshot)"
-    }
+ "id": "2026-10-17-modern-warfare-4-top-seller-steam-uae",
+ "title": "Call of Duty: Modern Warfare 4 is No. 1 on Steam top sellers in the UAE, Saudi Arabia and the US before release (22 Oct; 299 AED / 299 SR)",
+ "game": "Call of Duty: Modern Warfare 4",
+ "companies": [
+  "Activision"
+ ],
+ "status": "published",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Steam top sellers, cc=ae, sa, us (read 17 Oct 10:40Z)",
+   "url": "https://store.steampowered.com/search/?filter=topsellers&cc=ae"
   },
-  "times": {
-    "dl": "2026-10-17T12:00:00Z"
+  {
+   "role": "primary",
+   "name": "Steam app 4435490 (22 Oct, 299 AED)",
+   "url": "https://store.steampowered.com/app/4435490/"
   },
-  "reel": "cards/2026-10/modern-warfare-4-top-seller-steam-uae-reel-v1.mp4",
-  "notes": [
-    "17 Oct 10:46Z: built b129 (split), grammar review applied, queued 12:00Z under 'Fill it'."
-  ]
+  {
+   "role": "relay",
+   "name": "VGA4A citing SteamDB (global No. 1)",
+   "url": "https://www.vga4a.com/archives/338077"
+  }
+ ],
+ "claims": [
+  {
+   "text": "No. 1 on Steam top sellers in UAE, Saudi, US",
+   "status": "verified (Steam, 10:40Z)"
+  },
+  {
+   "text": "Ahead of Dota 2 and PUBG in UAE and Saudi",
+   "status": "verified"
+  },
+  {
+   "text": "Global No. 1 per SteamDB",
+   "status": "relay only, not used"
+  }
+ ],
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "رسمي",
+   "format": "split",
+   "footage": "Steam Multiplayer trailer + Steam pages (pageshot)"
+  }
+ },
+ "times": {
+  "dl": "2026-10-17T12:00:00Z",
+  "published_checked": "2026-10-17T12:18Z (Postiz PUBLISHED)"
+ },
+ "reel": "cards/2026-10/modern-warfare-4-top-seller-steam-uae-reel-v1.mp4",
+ "notes": [
+  "17 Oct 10:46Z: built b129 (split), grammar review applied, queued 12:00Z under 'Fill it'."
+ ],
+ "correction": "corrections.md #6 (22 vs 23 Oct), open"
 }
