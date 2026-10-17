@@ -476,7 +476,7 @@ def top(spec, out):
         t.alpha_composite(sc_.filter(ImageFilter.GaussianBlur(34)))
     d = ImageDraw.Draw(t); ink = txt(spec)
     d.text((R, 350), spec['date'], font=A.F('Bold', 84), fill=ink, anchor='ra', **AR)
-    title = f"صدرت \u2066{spec['game']}\u2069"
+    title = spec.get('title') or f"صدرت \u2066{spec['game']}\u2069"   # a console launch passes its own title
     f, z = fit(d, title, range(66, 43, -2), R - L)
     d.text((R, 456), title, font=f, fill=title_ink(spec), anchor='ra', **AR)
     assert d.textbbox((R, 456), title, font=f, anchor='ra', **AR)[3] <= FADE_LIGHT[0] + 12, 'title runs into the picture'
