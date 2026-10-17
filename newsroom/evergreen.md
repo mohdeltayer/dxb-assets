@@ -10,12 +10,12 @@ spacing is at least 30 minutes by day and 60 from 00:00 to 08:00 Dubai.
 |------|----------|------|----------|--------|
 | «الطريق إلى Ocarina» ep. 3, how the game was born (Iwata Asks) | trailer | `cards/2026-10/ocarina-road-ep3-how-it-was-born-episode-v1.mp4` | the intro counts «باقي 18 يومًا» (re-run `ocarina_intro.py <days>` and re-join if it moves off 18 Oct) | ready; story `2026-10-18-ocarina-road-ep3-how-it-was-born`; planned Sat 18 Oct 18:00 Dubai |
 | Best-selling consoles of all time (top five, makers own figures) | numbers | `cards/2026-10/best-selling-consoles-of-all-time-reel-v1.mp4` | Nintendo results in early November update Switch (it may pass PS2) | ready (built 16 Oct) |
+| Battlefield 1 turns 10: Zara Ghufran and «Nothing Is Written» in the Arabian desert | trailer (في مثل هذا اليوم chip, retro end card) | `cards/2026-10/battlefield-1-turns-10-reel-v1.mp4` | the release day, Wed 21 Oct 2026; keep a gap after the Battlefield 6 posts | Ready 17 Oct (built 01:53Z; newsroom/stories/2026-10-21-battlefield-1-turns-10.json; re-check the EA Play line before queuing) |
 
 ## Planned, not built (researched 16 Oct 2026; dates checked against the sources named in the story notes when built)
 
 | Name | Template | Runs | Sources and notes |
 |------|----------|------|-------------------|
-| Battlefield 1 turns 10: the Bedouin fighter Zara Ghufran and «Nothing Is Written» in the Arabian desert | trailer (or retro once a PS4 skin exists) | Wed 21 Oct (released 21 Oct 2016) | Researched 16 Oct: EA press releases (date, platforms), Wikipedia (Zara, Lawrence, Arabian Peninsula), EA Q3 FY18 (25 million players). IGN 1080p copies fetched 16 Oct (Single Player trailer: Zara close-ups 30.5 and 66 s, keffiyeh rider 53 s, narration 52 to 69 s; reveal: rider on a rearing horse 10.5 s); no 4K exists. Voice actress, Hejaz and the real-person claim unverified, kept out. Notes in scratchpad b120/research.md. Keep a gap after the Battlefield 6 posts of 16 and 17 Oct. |
 | GTA III turns 25 | retro (ps2) | Fri 23 Oct (NA 23 Oct 2001, Rockstar's 2001 news page via Wikipedia; one list says 22 Oct) | Rockstar's Trilogy Definitive Edition clips, credited; nothing violent. |
 | Tomb Raider turns 30 | retro (saturn/ps1) | Sat 24 or Sun 25 Oct (Saturn EU 24 Oct 1996; the franchise marks 25 Oct) | Tomb Raider I-III Remastered trailers (Steam 2478970); the Egypt levels for the Arab angle; Legacy of Atlantis due 12 Feb 2027. |
 | Biggest games in the last week of October | list | by Wed 21 Oct | MW4 (22/23 Oct), Minecraft Switch 2 (27 Oct), Phantom Blade Zero (28/29 Oct): check each date on the primary first. |
