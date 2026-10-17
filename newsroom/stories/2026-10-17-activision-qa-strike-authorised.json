@@ -1,52 +1,87 @@
 {
-  "id": "2026-10-17-activision-qa-strike-authorised",
-  "title": "Activision QA testers (AQAU-CWA) vote to authorise a strike before Modern Warfare 4's launch; no strike date",
-  "game": "Call of Duty: Modern Warfare 4",
-  "companies": [
-    "Activision",
-    "CWA"
-  ],
-  "priority": "🟢",
-  "why": "Business story tied to a major launch within days; 8 outlets",
-  "sources": [
-    {
-      "role": "primary",
-      "name": "CWA press release, 15 Oct 2026 (date only)",
-      "url": "https://cwa-union.org/news/releases/activision-quality-assurance-workers-vote-authorize-strike"
-    }
-  ],
-  "claims": [
-    {
-      "text": "QA testers at Activision Publishing (AQAU-CWA, Locals 6215, 7250, 9400; nearly 600 organised in March 2024) voted overwhelmingly to authorise a strike on 15 Oct",
-      "status": "verified (union's own release, read through a summarising fetch)"
-    },
-    {
-      "text": "The CWA president may call a strike if talks stall; no strike date set",
-      "status": "verified"
-    },
-    {
-      "text": "Demands: wages, AI guardrails, limits on contractors, ADA accommodations",
-      "status": "verified (union's claim)"
-    },
-    {
-      "text": "Vote percentage, turnout, any Activision or Microsoft response",
-      "status": "unknown"
-    },
-    {
-      "text": "MW4 early access 16 Oct, launch 23 Oct",
-      "status": "stated in the CWA release; Activision's own page not opened"
-    }
-  ],
-  "status": "candidate",
-  "lanes": {
-    "dl": {
-      "lane": "Reel",
-      "chip": "رسمي (attributed to CWA)",
-      "format": "split or trailer over MW4 footage"
-    }
+ "id": "2026-10-17-activision-qa-strike-authorised",
+ "title": "Activision QA testers (AQAU-CWA) vote to authorise a strike before Modern Warfare 4's launch; no strike date",
+ "game": "Call of Duty: Modern Warfare 4",
+ "companies": [
+  "Activision",
+  "CWA"
+ ],
+ "priority": "🟢",
+ "why": "Business story tied to a major launch within days; 8 outlets",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "CWA press release, 15 Oct 2026 (date only)",
+   "url": "https://cwa-union.org/news/releases/activision-quality-assurance-workers-vote-authorize-strike"
+  }
+ ],
+ "claims": [
+  {
+   "text": "QA testers at Activision Publishing (AQAU-CWA, Locals 6215, 7250, 9400; nearly 600 organised in March 2024) voted overwhelmingly to authorise a strike on 15 Oct",
+   "status": "verified (union release read directly 17 Oct)"
   },
-  "times": {},
-  "notes": [
-    "Hourly watch 16 Oct 20:10Z: Verifier graded NEW, not breaking lane (a union announcement a day old, not a publisher's). Shortlist for the 06:30 slot 17 Oct; split and trailer are at the Saturday cap, so it waits for Mohammad's cap answer like the three held Reels. Headline must say authorised, not a strike."
-  ]
+  {
+   "text": "The CWA president may call a strike if talks stall; no strike date set",
+   "status": "verified"
+  },
+  {
+   "text": "Demands: wages, AI guardrails, limits on contractors, ADA accommodations",
+   "status": "verified (union's claim)"
+  },
+  {
+   "text": "Vote percentage, turnout, any Activision or Microsoft response",
+   "status": "unknown"
+  },
+  {
+   "text": "MW4 early access 16 Oct, launch 23 Oct",
+   "status": "stated in the CWA release; Activision's own page not opened"
+  }
+ ],
+ "status": "queued",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "رسمي",
+   "format": "stills",
+   "footage": "Activision Steam screenshots (MW4, appid 4435490)"
+  }
+ },
+ "times": {
+  "dl": "2026-10-17T10:30:00Z",
+  "posted": "2026-10-17T10:30:00Z"
+ },
+ "notes": [
+  "Hourly watch 16 Oct 20:10Z: Verifier graded NEW, not breaking lane (a union announcement a day old, not a publisher's). Shortlist for the 06:30 slot 17 Oct; split and trailer are at the Saturday cap, so it waits for Mohammad's cap answer like the three held Reels. Headline must say authorised, not a strike.",
+  "17 Oct 08:50Z: CWA release read directly; built b127 (stills), grammar review applied, queued 10:30Z."
+ ],
+ "reel": "cards/2026-10/activision-qa-strike-authorised-reel-v1.mp4",
+ "posts": [
+  {
+   "folder": "activision-qa-strike-authorised-ar",
+   "account": "Digital Lounge",
+   "platform": "x",
+   "date": "2026-10-17T10:30:00Z",
+   "postiz_id": null,
+   "sent_at": null,
+   "approved": "go: rolling queue; preview sent 08:55Z"
+  },
+  {
+   "folder": "activision-qa-strike-authorised-ig",
+   "account": "Digital Lounge",
+   "platform": "instagram",
+   "date": "2026-10-17T10:30:00Z",
+   "postiz_id": null,
+   "sent_at": null,
+   "approved": "go: rolling queue; preview sent 08:55Z"
+  },
+  {
+   "folder": "activision-qa-strike-authorised-th",
+   "account": "Digital Lounge",
+   "platform": "threads",
+   "date": "2026-10-17T10:30:00Z",
+   "postiz_id": null,
+   "sent_at": null,
+   "approved": "go: rolling queue; preview sent 08:55Z"
+  }
+ ]
 }
