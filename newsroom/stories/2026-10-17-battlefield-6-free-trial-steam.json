@@ -36,12 +36,12 @@
       "source": "EA's Steam post; Steam store API"
     },
     {
-      "text": "Steam trial ends 19 Oct",
-      "status": "secondary",
-      "source": "deal sites and Polygon; EA says a free weekend"
+      "text": "Steam trial extended to Tue 20 Oct 17:00 UTC (21:00 Dubai); 2x XP to Tuesday",
+      "status": "verified",
+      "source": "Battlefield team, Steam, 16 Oct 20:28Z"
     }
   ],
-  "status": "queued",
+  "status": "correction pending: v1 queued for 08:30Z with the old date; v2 built",
   "lanes": {
     "dl": {
       "lane": "Reel",
@@ -71,6 +71,15 @@
   "notes": [
     "Constant coverage build; 12:30 Dubai Sat 17 Oct; go: rolling queue. Free kind maps to split, capped on Saturday, so clipcard (fourth of the Dubai day).",
     "Footage: Season 5 trailer, first-person gun shots avoided where possible (the card window's last half second shows a scope); sound: the trailer's closing music from 99.0 s. Previous Battlefield post: XP revert, Fri 17:45Z; not consecutive.",
-    "Grammar review: card row given an Arabic opener (السعر); taken: «تجربة» in the headline, «الكاملة», the discount is live now (not after the trial), «القياسية», «بدلًا من», US store named, line 1 rebroken."
+    "Grammar review: card row given an Arabic opener (السعر); taken: «تجربة» in the headline, «الكاملة», the discount is live now (not after the trial), «القياسية», «بدلًا من», US store named, line 1 rebroken.",
+    "17 Oct 06:20Z: Steam post of 16 Oct 20:28Z extends the trial; Mohammad pinged to delete v1 in Postiz; v2 drafts in dxb-queue/drafts, preflight ok, not queued."
+  ],
+  "versions": [
+    {
+      "v": 2,
+      "media": "cards/2026-10/battlefield-6-free-trial-steam-reel-v2.mp4",
+      "strip": "cards/2026-10/battlefield-6-free-trial-steam-reel-v2-strip.jpg",
+      "why": "trial extended to 20 Oct (corrections.md #5)"
+    }
   ]
 }
