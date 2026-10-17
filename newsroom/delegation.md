@@ -24,6 +24,9 @@ dxbknight-digest@agentmail.to newer than `covered_through` in
 `newsroom/digests-covered.json`, oldest first. Return one line per item: age
 label, headline, primary URL, status, and whether the ledger has it
 (`python3 newsroom/ledger.py find "<keyword>"`). Do not mark anything read.
+For an item the digest found in an Arabic outlet, give the time of its first
+report anywhere (primary, English or Japanese outlet, forum) beside the
+relay's time (Mohammad, 17 Oct 2026).
 
 **Internal scout (sonnet).** A second check on the email scout. For the
 window since the last review slot, read these primaries directly: PlayStation
@@ -35,6 +38,9 @@ email digests for the same window (do not mark them read). Return three
 lists, one line per story with its primary URL and time: found by both, only
 found internally (gaps in the email scout), only in the digests. Flag anything
 that looks like breaking news at the top. No social media scraping, no logins.
+For anything first seen in an Arabic outlet, find and give its first report's
+time; over 24 hours old at the origin goes under "stale relay", not in the
+lists (Mohammad, 17 Oct 2026).
 
 **Footage (sonnet).** For a named game: list its Steam trailers
 (`templates/trailer.py`), Nintendo store `publicId`s under its own nsuid, or
@@ -209,6 +215,10 @@ the Watcher and Verifier are background helpers that only read the web, so
 they launch at once even mid-render or mid-slot; only building a Reel for
 what they find waits for the current render, and a breaking story is
 pinged to him straight away.
+
+Triage of the OUTLETS list (Mohammad, 17 Oct 2026): a group marked "AR RELAY"
+is dated from its first report anywhere before it is considered; over 24 hours
+old at the origin and not posted, it is dropped unless something new landed.
 
 **Watcher (haiku).** Reads only the official sources below, compares every
 item with `newsroom/watch-seen.json` (url, title, first seen), adds the new

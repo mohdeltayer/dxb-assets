@@ -27,6 +27,9 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     numbers to the company.
   - Outlets are leads, not proof. Ten articles citing one report are one
     source.
+  - A story's age is its first report anywhere, not the relay's. Arabic
+    outlets rewrite a day or two late: date from the origin, and drop a story
+    over 24 hours old at its origin unless something new has landed (17 Oct).
   - (README §4; "Verify against primary sources")
 - **Chip ladder:** رسمي / تقرير / تسريب / شائعة, with جديد for most news and
   عاجل rarely.

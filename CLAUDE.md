@@ -1498,6 +1498,28 @@ text naming who claims it and what is not confirmed. Skip only what is
 harmful or explicit (leaked explicit material, hacking threats, doxxing).
 The breaking lane's auto-go stays for confirmed official news only.
 
+Date a story from its first report, not from the relay (Mohammad, 17 Oct
+2026, after the 16:08Z watch offered the Ocarina of Time remake beating GTA 6
+on Amazon pre-orders as a Sunday post: "a couple of days old from Japanese and
+western accounts. That's what I'm trying to tackle with this account, be up to
+date"). Arabic outlets usually rewrite English and Japanese stories a day or
+two late, and the scout's AGE labels and the watch's outlet times are the
+relay's time. So:
+- An Arabic outlet is never a lead on its own. Before a story first seen in an
+  Arabic outlet (IGN ME Arabic, True Gaming, Saudi Gamer, VGA4A, Arab Hardware,
+  the digest's Arabic items) is shortlisted, find its first report anywhere
+  (the primary, Japanese and English outlets, the forum or post it came from)
+  and date the story from that. `watch_feeds.py` marks Arabic-only groups
+  "AR RELAY: date it from the first report".
+- The same holds for any rewrite: the age of a story is the age of its
+  earliest source, and the shortlist line gives that time.
+- Older than 24 hours at its first report and not yet posted: drop it, unless
+  something new has landed since (a figure, a statement, a date) or it is
+  regional news the wider press missed. Say which in the shortlist.
+- Being first in Arabic is the point: an English or Japanese story goes on the
+  list as soon as the watch or the scout finds it, without waiting for an
+  Arabic outlet to carry it.
+
 Variety (Mohammad, 5 Oct 2026, after a run of Witcher and RuneScape posts:
 "I've been posting about it for a while now"): a game or series that went out
 in the last few days does not come back in a shortlist unless there is real

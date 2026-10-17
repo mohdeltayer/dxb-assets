@@ -212,7 +212,8 @@ def main(dry):
             singles += 1
             if singles > 25:
                 continue   # one outlet only: the newest 25 are enough for a lead sheet
-        print(f"{len(srcs)} | {f['published'] or 'no time'} | {f['title']} | {', '.join(srcs)} | {f['url']}")
+        relay = ' | AR RELAY: date it from the first report' if all(x.endswith('(AR)') for x in srcs) else ''   # Mohammad, 17 Oct
+        print(f"{len(srcs)} | {f['published'] or 'no time'} | {f['title']} | {', '.join(srcs)} | {f['url']}{relay}")
     print('failed: ' + ('; '.join(failed) if failed else 'none'))
 
 
