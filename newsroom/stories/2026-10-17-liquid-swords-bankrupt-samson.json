@@ -1,0 +1,59 @@
+{
+  "id": "2026-10-17-liquid-swords-bankrupt-samson",
+  "title": "Liquid Swords (Samson) declared bankrupt by Stockholm District Court on 12 Oct; trustee selling the studio and Samson IP, bids by 21 Oct",
+  "game": "Samson: A Tyndalston Story",
+  "companies": [
+    "Liquid Swords",
+    "Cirio"
+  ],
+  "priority": "🟢",
+  "why": "Studio closure behind a 2026 release; official court order; new to Arabic readers",
+  "sources": [
+    {
+      "role": "primary",
+      "name": "Trustee notice, Cirio Advokatbyrå, 14 Oct 2026",
+      "url": "https://cirio.se/news/liquidswords"
+    },
+    {
+      "role": "relay",
+      "name": "Breakit, 15 Oct 2026 (almost 30 staff, unpaid wages, state wage guarantee)",
+      "url": "https://www.breakit.se/artikel/47736/christofer-sundbergs-studio-liquid-swords-i-konkurs-30-anstallda-drabbas"
+    },
+    {
+      "role": "relay",
+      "name": "Breakit, 9 Oct 2026 (Sundberg: 'Jag tror inte att det går att lösa')",
+      "url": "https://www.breakit.se/artikel/47690/christofer-sundbergs-spelstudio-liquid-swords-nara-konkurs-inte-betalat-lon-pa-tva-manader"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Declared bankrupt (konkurs) by Stockholms tingsrätt on 12 Oct 2026; trustee Karl Björlin, Cirio",
+      "status": "verified (trustee notice)"
+    },
+    {
+      "text": "Assets are mainly the Samson IP; business offered for sale, indicative bids by 21 Oct 12:00",
+      "status": "verified (trustee notice)"
+    },
+    {
+      "text": "Almost 30 staff; wages unpaid for about two months; state wage guarantee",
+      "status": "Breakit only"
+    },
+    {
+      "text": "Samson console versions (announced for 21 Sep 2026) actually released",
+      "status": "unconfirmed: do not state"
+    }
+  ],
+  "status": "candidate",
+  "lanes": {
+    "dl": {
+      "lane": "Reel",
+      "chip": "رسمي",
+      "format": "split (shutdown kind) or explainer",
+      "footage": "Steam appid 3634520 (launch, gameplay, release date and announcement trailers); nothing graphic"
+    }
+  },
+  "times": {},
+  "notes": [
+    "Hourly watch 17 Oct 00:30Z: Verifier NEW (court order, trustee notice 14 Oct). Not breaking lane (four days old). Split is at the Saturday cap; waits on Mohammad's cap answer or goes as explainer."
+  ]
+}
