@@ -27,23 +27,28 @@
     },
     {
       "text": "PS5, Xbox Series X|S, Switch 2 on 8 Dec; free upgrade for existing owners",
-      "status": "platforms verified; upgrade per Gematsu"
+      "status": "platforms verified (developer post); console date 8 Dec per PlayGround.ru and Gematsu; free console upgrade not stated by the developer, left out"
     },
     {
       "text": "Price of console versions; publisher handover from Private Division",
       "status": "unknown"
     }
   ],
-  "status": "candidate",
+  "status": "queued",
   "lanes": {
     "dl": {
       "lane": "Reel",
       "chip": "رسمي",
-      "format": "split or stills (no confirmed trailer file)"
+      "format": "split",
+      "footage": "Steam launch and Evolve trailers (2019)"
     }
   },
-  "times": {},
+  "times": {
+    "dl": "2026-10-18T00:00:00Z"
+  },
   "notes": [
-    "Hourly watch 16 Oct 22:10Z: Verifier NEW, low priority. No trailer file confirmed. The Micromania France replica N64 box for Ocarina was skipped (retailer bonus, France only, no Nintendo source)."
-  ]
+    "Hourly watch 16 Oct 22:10Z: Verifier NEW, low priority. No trailer file confirmed. The Micromania France replica N64 box for Ocarina was skipped (retailer bonus, France only, no Nintendo source).",
+    "17 Oct 10:20Z: built b128 (split), grammar review applied, queued 00:00Z 18 Oct."
+  ],
+  "reel": "cards/2026-10/ancestors-ps5-xbox-switch-2-december-8-reel-v1.mp4"
 }
