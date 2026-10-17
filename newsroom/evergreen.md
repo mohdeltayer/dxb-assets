@@ -9,7 +9,7 @@ spacing is at least 30 minutes by day and 60 from 00:00 to 08:00 Dubai.
 | Name | Template | Reel | Dates it | Status |
 |------|----------|------|----------|--------|
 | «الطريق إلى Ocarina» ep. 3, how the game was born (Iwata Asks) | trailer | `cards/2026-10/ocarina-road-ep3-how-it-was-born-episode-v1.mp4` | the intro counts «باقي 18 يومًا» (re-run `ocarina_intro.py <days>` and re-join if it moves off 18 Oct) | ready; story `2026-10-18-ocarina-road-ep3-how-it-was-born`; planned Sat 18 Oct 18:00 Dubai |
-| Best-selling consoles of all time (top five, makers own figures) | numbers | `cards/2026-10/best-selling-consoles-of-all-time-reel-v1.mp4` | Nintendo results in early November update Switch (it may pass PS2) | ready (built 16 Oct) |
+| Best-selling consoles of all time (top five, makers own figures) | numbers | `cards/2026-10/best-selling-consoles-of-all-time-reel-v1.mp4` | Nintendo results in early November update Switch (it may pass PS2) | queued 17 Oct 11:00Z (Saturday gap, his 'Fill it'); YouTube route test 1 |
 | Battlefield 1 turns 10: Zara Ghufran and «Nothing Is Written» in the Arabian desert | trailer (في مثل هذا اليوم chip, retro end card) | `cards/2026-10/battlefield-1-turns-10-reel-v1.mp4` | the release day, Wed 21 Oct 2026; keep a gap after the Battlefield 6 posts | Ready 17 Oct (built 01:53Z; newsroom/stories/2026-10-21-battlefield-1-turns-10.json; re-check the EA Play line before queuing) |
 
 ## Planned, not built (researched 16 Oct 2026; dates checked against the sources named in the story notes when built)

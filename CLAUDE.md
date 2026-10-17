@@ -1860,6 +1860,12 @@ and Sunday.
    Where the Seeds Fall to 08:00 and 08:30 Saturday. Asked that evening,
    he put the gap rule over the four-per-template cap for that one night
    (trailers and splits had already reached it).
+7. 17 Oct, 14:30 Dubai: trailer, split and clipcard had each reached four on
+   Saturday and the card-led window was full, so nothing could fill 14:30 to
+   00:00 Dubai. Asked, he said "Fill it": for that afternoon the gap rule
+   wins over the per-template caps (four a day, card-led two in six). No
+   third in a row on one template, no two in a row on one game or publisher,
+   and reports at most one in three still hold.
 
 Posting is irreversible: pushing `queue/**` to *any* branch of dxb-queue
 fires the publisher, because `publish.yml` has no branch filter. Never
