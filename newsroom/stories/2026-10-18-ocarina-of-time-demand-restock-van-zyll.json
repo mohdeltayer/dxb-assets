@@ -33,7 +33,7 @@
       "status": "game date verified (Nintendo US store); console date per Nintendo Everything"
     }
   ],
-  "status": "ready (held: fifth trailer of the Dubai day over the cap of four; asked Mohammad 02:25Z)",
+  "status": "queued",
   "lanes": {
     "dl": {
       "lane": "Reel",
@@ -54,7 +54,17 @@
   },
   "times": {},
   "notes": [
-    "18 Oct 02:20Z: built b146 (trailer, stylized, Nintendo Overview Trailer 720p, lowres_ok; own sound from 54.0, logo fanfare then one narrated line). Grammar review: five required edits applied, plus quote fidelity, hook softened, full role, attribution. DeepL back-check: last line read as new titles, fixed. Line 4 set top=True over the ocarina staff UI. Drafts approved in dxb-queue/drafts but not pushed: trailer cap (4 a Dubai day) reached; asked him."
+    "18 Oct 02:20Z: built b146 (trailer, stylized, Nintendo Overview Trailer 720p, lowres_ok; own sound from 54.0, logo fanfare then one narrated line). Grammar review: five required edits applied, plus quote fidelity, hook softened, full role, attribution. DeepL back-check: last line read as new titles, fixed. Line 4 set top=True over the ocarina staff UI. Drafts approved in dxb-queue/drafts but not pushed: trailer cap (4 a Dubai day) reached; asked him.",
+    "18 Oct 07:18Z: rebuilt as clipcard v2 (b151; the trailer template was at four): the facts on one card (pre-orders at the limit, restock of the console, controller and game, no date), the dates on the closing line from Nintendo's US store (console 29 Oct, game 5 Nov); caption adds that Nintendo announced no restock date. Gate 07:12Z Exit B. Queued 08:30Z under the rolling queue. v1 (trailer) not used."
   ],
-  "reel": "cards/2026-10/ocarina-of-time-demand-restock-van-zyll-reel-v1.mp4"
+  "reel": "cards/2026-10/ocarina-of-time-demand-restock-van-zyll-reel-v2.mp4",
+  "template": "clipcard",
+  "queue": {
+    "time": "2026-10-18T08:30:00Z",
+    "folders": [
+      "ocarina-of-time-demand-restock-van-zyll-ar",
+      "ocarina-of-time-demand-restock-van-zyll-ig",
+      "ocarina-of-time-demand-restock-van-zyll-th"
+    ]
+  }
 }
