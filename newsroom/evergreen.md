@@ -17,7 +17,7 @@ spacing is at least 30 minutes by day and 60 from 00:00 to 08:00 Dubai.
 
 | Name | Template | Runs | Sources and notes |
 |------|----------|------|-------------------|
-| GTA III turns 25 | retro (ps2) | Fri 23 Oct (NA 23 Oct 2001, Rockstar's 2001 news page via Wikipedia; one list says 22 Oct) | Rockstar's Trilogy Definitive Edition clips, credited; nothing violent. |
+| GTA III turns 25 | retro (ps2) | Parked 18 Oct: only about 12 s of GTA III footage reachable (Trilogy DE trailer via IGN, three pieces at 9.5-14.4, 27-30.7, 38-40.4; uploads/gta3-def-official-1080.mp4), Steam has none; date 22 Oct (iGTA, Inverse) vs 23 Oct (Wikipedia) unsettled. Needs his capture or a still-led build | Rockstar's Trilogy Definitive Edition clips, credited; nothing violent. |
 | Tomb Raider turns 30 | retro (saturn/ps1) | Built 18 Oct for Sat 24 Oct (Saturn EU 24 Oct 1996 confirmed) (Saturn EU 24 Oct 1996; the franchise marks 25 Oct) | Tomb Raider I-III Remastered trailers (Steam 2478970); the Egypt levels for the Arab angle; Legacy of Atlantis due 12 Feb 2027. |
 | Biggest games in the last week of October | list | by Wed 21 Oct | MW4 (22/23 Oct), Minecraft Switch 2 (27 Oct), Phantom Blade Zero (28/29 Oct): check each date on the primary first. |
 | Bully turns 20 | retro (ps2) | Built 16 Oct, queued Sat 17 Oct 09:30Z | newsroom/stories/2026-10-17-retro-bully-20.json |
