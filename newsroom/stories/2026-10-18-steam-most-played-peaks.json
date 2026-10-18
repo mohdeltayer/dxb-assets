@@ -1,0 +1,58 @@
+{
+  "id": "2026-10-18-steam-most-played-peaks",
+  "title": "Steam's highest daily peaks, top five (Valve's daily most-played chart)",
+  "game": "multiple",
+  "companies": [
+    "Valve"
+  ],
+  "priority": "evergreen data piece, fills the 16:00Z gap",
+  "why": "CS2, Dota 2 and PUBG are among the most-played games in the region; a numbers piece from Valve's own chart.",
+  "sources": [
+    {
+      "role": "primary",
+      "name": "Valve Steam API ISteamChartsService/GetMostPlayedGames (rollup 2026-10-17)",
+      "url": "https://api.steampowered.com/ISteamChartsService/GetMostPlayedGames/v1/"
+    }
+  ],
+  "claims": [
+    {
+      "text": "peaks: CS2 1,360,532; Dota 2 969,895; PUBG 809,673; WARDOGS 304,002; AION 2 301,962",
+      "status": "confirmed (Valve API, re-read 11:25Z)"
+    },
+    {
+      "text": "the five highest peaks among the chart's top ten (chart ranked by daily players; Wallpaper Engine not a game)",
+      "status": "editorial, stated in the caption"
+    },
+    {
+      "text": "chart day",
+      "status": "not labelled by Valve; no date on screen"
+    }
+  ],
+  "status": "queued",
+  "lanes": {
+    "dl": {
+      "lane": "Reel",
+      "chip": "أرقام",
+      "format": "list",
+      "headline": "أكثر من 1.3 مليون لاعب معًا\nفي لعبة واحدة على Steam",
+      "x": "اجتمع أكثر من 1.3 مليون لاعب في Counter-Strike 2 في وقت واحد، حسب أحدث أرقام Steam اليومية.",
+      "ig": "تتصدر Counter-Strike 2 ألعاب Steam بذروة تجاوزت 1.3 مليون لاعب في وقت واحد. / هذه الألعاب الخمس صاحبة أعلى ذروة للاعبين في وقت واحد بين الألعاب العشر الأولى في القائمة اليومية للألعاب الأكثر لعبًا على Steam، التي تنشرها شركة فالف (Valve)، بأحدث أرقامها المنشورة. / في المركز الأول Counter-Strike 2 بذروة بلغت نحو 1.36 مليون لاعب، ثم تأتي Dota 2 ثانيةً بنحو 970 ألفًا، ثم PUBG: BATTLEGROUNDS ثالثةً بنحو 810 آلاف. / وتحل WARDOGS رابعةً بنحو 304 آلاف لاعب، ثم AION 2 خامسةً بنحو 302 ألف لاعب. / والذروة هي أكبر عدد من اللاعبين داخل اللعبة في اللحظة نفسها خلال اليوم. والألعاب الثلاث الأولى مجانية، واثنتان منها من تطوير فالف نفسها.",
+      "lines": [
+        "الخامسة: AION 2\nبذروة 302 ألف لاعب",
+        "الرابعة: WARDOGS\nبذروة 304 آلاف لاعب",
+        "الثالثة: PUBG: BATTLEGROUNDS\nبذروة 810 آلاف لاعب",
+        "الثانية: Dota 2\nبذروة 970 ألف لاعب",
+        "الأولى: Counter-Strike 2\nبذروة 1.36 مليون لاعب"
+      ],
+      "media": "cards/2026-10/steam-most-played-peaks-reel-v1.mp4",
+      "time": "Sun 18 Oct 20:00 Dubai (16:00Z)"
+    }
+  },
+  "times": {
+    "dl": "2026-10-18T16:00:00Z"
+  },
+  "notes": [
+    "18 Oct 11:25Z: built b158 (list, cold, stats bed; five Steam trailers, no first-person gameplay, CS2 ends on its CRT room and the arena crowd). Grammar review: no required edits; the top-ten scope added to the caption. DeepL forward pass. 22.9 s. First final render hit the full disk (ffmpeg 228); footage of rendered Reels cleared and re-rendered. Queued 16:00Z; second list in a row, gap rule over caps, disclosed in the preview."
+  ],
+  "reel": "cards/2026-10/steam-most-played-peaks-reel-v1.mp4"
+}
