@@ -1,4 +1,4 @@
-# Digital Lounge: the rules in force (16 Oct 2026)
+# Digital Lounge: the rules in force (18 Oct 2026)
 
 One page of what applies today. CLAUDE.md is the full, dated history and wins
 on detail; each line here names its section there. Anything listed under
@@ -165,6 +165,9 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     before the end card are a picture, never a card.
   - A still is never ten seconds alone: a second angle at 3.5 s, the one the
     line names; a store-page line gets the page as its shot (pageshot.py).
+  - Stills push and pan at 4x the frame and scale down last, the finish after
+    the downscale, so the motion is sub-pixel and does not judder (18 Oct;
+    CLAUDE.md "Stills move smoothly").
   - On a split Reel the strip hides under a card; card type is 40 px or
     more; the ledger logs a split with a card as clipcard (14 Oct review).
   - A closing question only on stories readers argue about, never on a

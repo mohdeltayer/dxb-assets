@@ -259,6 +259,19 @@ def _reveal(lines, idx):
 
 
 STILLS = 'stills'   # push-in clips are written under uploads/stills/
+#: Stills move at SUB times the frame and are scaled down last (advisor, 18 Oct 2026; Mohammad:
+#: "some of the stills feel shaky"): zoompan and crop place the picture in whole pixels, so a 3%
+#: push or a slow pan at 1080x1920 stepped a pixel at a time and juddered. At 4x the steps are a
+#: quarter pixel at the output. The finish (cas, grade, grain) runs after the downscale, so the
+#: grain is not magnified. STILLS_VER is in the clip names, so clips from before the fix are
+#: re-rendered, never reused.
+SUB = 4
+STILLS_VER = 's4'
+
+
+def _still_finish(f):
+    """The picture finish for an official still, applied at the output size."""
+    return f',cas=0.5,{GRADE}' if FINISH and not _ours(f) else ''
 
 
 def stills_clips(images, name, secs=3.0, push=0.03, focus=0.5, cutout=False, theme='cold', fast=False):
@@ -286,9 +299,11 @@ def stills_clips(images, name, secs=3.0, push=0.03, focus=0.5, cutout=False, the
             NG.slide(png, secs, theme, C.U + clip, seed=sum(map(ord, name)) + i, t0=i * secs, fast=fast, check=False)
         else:
             os.makedirs(C.U + STILLS, exist_ok=True)
-            clip = f'{STILLS}/{name}-still-{i}.mp4'
-            vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H}:x='(iw-{W})*{fo}':y='(ih-{H})/2',"
-                  f"zoompan=z='1+{push}*on/{frames}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={frames}:s={W}x{H}:fps=30,format=yuv420p")
+            clip = f'{STILLS}/{name}-still-{i}-{STILLS_VER}.mp4'
+            sw, sh = W * SUB, H * SUB
+            vf = (f"scale={sw}:{sh}:force_original_aspect_ratio=increase:flags=lanczos,crop={sw}:{sh}:x='(iw-{sw})*{fo}':y='(ih-{sh})/2',"
+                  f"zoompan=z='1+{push}*on/{frames}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={frames}:s={sw}x{sh}:fps=30,"
+                  f"scale={W}:{H}:flags=lanczos{_still_finish(img)},format=yuv420p")
             subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-loop', '1', '-t', str(secs), '-i', src, '-vf', vf, '-t', str(secs),
                             '-c:v', 'libx264', '-pix_fmt', 'yuv420p'] + (DRAFT_ENC if fast else ['-preset', 'medium', '-crf', '16']) + [C.U + clip], check=True)
         out.append((clip, 0.0, secs, 0.5))
@@ -748,9 +763,10 @@ def montage(shots, out, lowres_ok=False, fast=False):
             if z > MAX_ZOOM and not lowres_ok:
                 raise ValueError(f'{f}: a still enlarged {z:.1f}x to fill 9:16; find a larger image or pass lowres_ok=True')
             args += ['-loop', '1', '-framerate', '30', '-t', str(d), '-i', C.U + f]
-            fin = f',cas=0.5,{GRADE}' if FINISH and not _ours(f) else ''
-            fc.append(f'[{i}:v]scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,'
-                      f"crop={W}:{H}:x='(iw-{W})*({a}+({b}-{a})*t/{d})':y='(ih-{H})/2'{fin},"
+            sw, sh = W * SUB, H * SUB              # pan at 4x, scale down last (18 Oct 2026: whole-pixel pans judder)
+            fc.append(f'[{i}:v]scale={sw}:{sh}:force_original_aspect_ratio=increase:flags=lanczos,'
+                      f"crop={sw}:{sh}:x='(iw-{sw})*({a}+({b}-{a})*t/{d})':y='(ih-{sh})/2',"
+                      f'scale={W}:{H}:flags=lanczos{_still_finish(f)},'
                       f'fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]')
         elif f.startswith((CACHE + '/', STILLS + '/')):   # already the finished picture at 1080x1920, exactly d long (cache, or stills_clips push-ins)
             args += ['-t', str(d), '-i', C.U + f]

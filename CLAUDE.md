@@ -903,6 +903,21 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   three or four official images per story, with the flavour's bed under
   them. Avoid images carrying someone else's watermark (Game Informer's
   GTA VI screens) and low-resolution art that would be upscaled 3x.
+  Stills move smoothly (advisor, 18 Oct 2026; Mohammad: "some of the stills
+  feel shaky"): zoompan and crop place a picture in whole pixels, so a 3% push
+  or a slow pan at 1080x1920 stood still for about 11 frames and then jumped
+  2 px (pans alternated 6 and 4 px steps). `stills_clips` now scales each image
+  to 4x the frame (4320x7680), runs zoompan there and scales down to 1080x1920
+  with lanczos; still pans inside `montage` pan at 4x and scale down last
+  (`reel.SUB`). The picture finish (cas, grade, moving grain) runs after the
+  downscale, so the grain is not magnified; stills_clips gained the finish it
+  had been missing. Clip names carry `STILLS_VER` (s4), so clips from before
+  the fix are re-rendered, never reused. Checked on the Pokopia Reel (v1 old,
+  v2 new): per-frame motion on the push-in went from 7 jumps of about 2 px to
+  an even 0.04 px a frame, and the pan from 6/4 px alternation to an even
+  5.05 px. Cost: about 40 s of render per 3 s still on this CPU (a seven-image
+  stills Reel took 6.5 minutes against about 2.5; the stills step is not in
+  render-times.json, which starts at reel()).
 - His voice over a Reel (2 Oct 2026, for the Fire Emblem 30-hour review):
   `reel(..., voice=<read processed with templates/voice.py>)` plays the
   read over the footage; the footage's own sound drops about 18 dB while
