@@ -28,7 +28,7 @@
       "status": "not labelled by Valve; no date on screen"
     }
   ],
-  "status": "queued",
+  "status": "published",
   "lanes": {
     "dl": {
       "lane": "Reel",
@@ -54,5 +54,9 @@
   "notes": [
     "18 Oct 11:25Z: built b158 (list, cold, stats bed; five Steam trailers, no first-person gameplay, CS2 ends on its CRT room and the arena crowd). Grammar review: no required edits; the top-ten scope added to the caption. DeepL forward pass. 22.9 s. First final render hit the full disk (ffmpeg 228); footage of rendered Reels cleared and re-rendered. Queued 16:00Z; second list in a row, gap rule over caps, disclosed in the preview."
   ],
-  "reel": "cards/2026-10/steam-most-played-peaks-reel-v1.mp4"
+  "reel": "cards/2026-10/steam-most-played-peaks-reel-v1.mp4",
+  "published": {
+    "at": "2026-10-18T16:00:00Z",
+    "checked": "2026-10-18T16:11Z postsListTool: X, Instagram, Threads PUBLISHED; media stripped from dxb-queue"
+  }
 }
