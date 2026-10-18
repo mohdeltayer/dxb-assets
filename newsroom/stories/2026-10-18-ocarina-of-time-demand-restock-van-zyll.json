@@ -33,7 +33,7 @@
       "status": "game date verified (Nintendo US store); console date per Nintendo Everything"
     }
   ],
-  "status": "queued",
+  "status": "published",
   "lanes": {
     "dl": {
       "lane": "Reel",
@@ -52,10 +52,13 @@
       "time": "proposed Sun 18 Oct 10:00 Dubai (06:00Z)"
     }
   },
-  "times": {},
+  "times": {
+    "dl": "2026-10-18T08:30:00Z"
+  },
   "notes": [
     "18 Oct 02:20Z: built b146 (trailer, stylized, Nintendo Overview Trailer 720p, lowres_ok; own sound from 54.0, logo fanfare then one narrated line). Grammar review: five required edits applied, plus quote fidelity, hook softened, full role, attribution. DeepL back-check: last line read as new titles, fixed. Line 4 set top=True over the ocarina staff UI. Drafts approved in dxb-queue/drafts but not pushed: trailer cap (4 a Dubai day) reached; asked him.",
-    "18 Oct 07:18Z: rebuilt as clipcard v2 (b151; the trailer template was at four): the facts on one card (pre-orders at the limit, restock of the console, controller and game, no date), the dates on the closing line from Nintendo's US store (console 29 Oct, game 5 Nov); caption adds that Nintendo announced no restock date. Gate 07:12Z Exit B. Queued 08:30Z under the rolling queue. v1 (trailer) not used."
+    "18 Oct 07:18Z: rebuilt as clipcard v2 (b151; the trailer template was at four): the facts on one card (pre-orders at the limit, restock of the console, controller and game, no date), the dates on the closing line from Nintendo's US store (console 29 Oct, game 5 Nov); caption adds that Nintendo announced no restock date. Gate 07:12Z Exit B. Queued 08:30Z under the rolling queue. v1 (trailer) not used.",
+    "18 Oct 08:47Z: X, Instagram and Threads read PUBLISHED in Postiz; media stripped from dxb-queue."
   ],
   "reel": "cards/2026-10/ocarina-of-time-demand-restock-van-zyll-reel-v2.mp4",
   "template": "clipcard",
