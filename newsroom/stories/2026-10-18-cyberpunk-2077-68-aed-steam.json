@@ -1,0 +1,63 @@
+{
+  "id": "2026-10-18-cyberpunk-2077-68-aed-steam",
+  "title": "Cyberpunk 2077 70% off on Steam: 68.70 AED / 68.70 SR (until 26 Oct)",
+  "game": "Cyberpunk 2077",
+  "companies": [
+    "CD PROJEKT RED",
+    "Valve"
+  ],
+  "priority": "price story, fills 19:00Z",
+  "why": "Gulf store price two days before Edgerunners 2.",
+  "sources": [
+    {
+      "role": "primary",
+      "name": "Steam appdetails 1091500 (cc=ae, cc=sa)",
+      "url": "https://store.steampowered.com/api/appdetails?appids=1091500&cc=ae"
+    },
+    {
+      "role": "primary",
+      "name": "Steam store page (Offer ends 26 October)",
+      "url": "https://store.steampowered.com/app/1091500/"
+    }
+  ],
+  "claims": [
+    {
+      "text": "UAE 229.00 -> 68.70 AED; Saudi 229.00 -> 68.70 SR; 70%",
+      "status": "confirmed (Steam, re-read 11:55Z)"
+    },
+    {
+      "text": "offer ends 26 October",
+      "status": "confirmed (store page)"
+    },
+    {
+      "text": "Edgerunners 2 on Netflix 20 Oct",
+      "status": "confirmed (CDPR, batch 159)"
+    }
+  ],
+  "status": "queued",
+  "lanes": {
+    "dl": {
+      "lane": "Reel",
+      "chip": "السعر",
+      "format": "split",
+      "headline": "خصم 70% على Steam\nللعبة Cyberpunk 2077",
+      "x": "تنخفض Cyberpunk 2077 إلى 68.70 درهمًا على Steam في الإمارات، بخصم 70% حتى 26 أكتوبر، حسب صفحة اللعبة على المتجر.",
+      "ig": "بخصم 70%، تنخفض Cyberpunk 2077 على Steam إلى 68.70 درهمًا في الإمارات و68.70 ريالًا في السعودية. / انخفض سعر Cyberpunk 2077 على Steam في الإمارات من 229 درهمًا إلى 68.70 درهمًا، وفي السعودية من 229 ريالًا إلى 68.70 ريالًا، حسب صفحة اللعبة على المتجر، ويستمر العرض حتى 26 أكتوبر. / ويأتي الخصم قبل عرض الموسم الثاني من أنمي Cyberpunk: Edgerunners على نتفليكس (Netflix) يوم الثلاثاء 20 أكتوبر. / وطوّرت اللعبة ونشرتها شركة سي دي بروجكت رد (CD PROJEKT RED)، وتدور أحداثها في مدينة Night City.",
+      "lines": [
+        "قبل يومين من عرض الموسم الثاني\nمن Edgerunners",
+        "والخصم مستمر حتى 26 أكتوبر",
+        "من سي دي بروجكت رد (CD PROJEKT RED)\nوتدور أحداثها في Night City"
+      ],
+      "strip": "[('في الإمارات', ('aed', '68.70')), ('في السعودية', '68.70 ريالًا')]",
+      "media": "cards/2026-10/cyberpunk-2077-68-aed-steam-reel-v1.mp4",
+      "time": "Sun 18 Oct 23:00 Dubai (19:00Z)"
+    }
+  },
+  "times": {
+    "dl": "2026-10-18T19:00:00Z"
+  },
+  "notes": [
+    "18 Oct 11:55Z: built b162 (split on four Steam screenshots, cold, everyday bed; the Steam trailers are letterboxed 800/960 rows and weapon-heavy). Grammar review: no required edits; «والخصم مستمر», line 0 rebroken, «شركة» taken. DeepL forward pass. 15.6 s. Final render hit the full disk once (cache 1.5 GB cleared, rendered footage removed). Queued 19:00Z, over 6 h ahead: re-gate at 18:15Z. «قبل يومين» is true on 18 Oct only."
+  ],
+  "reel": "cards/2026-10/cyberpunk-2077-68-aed-steam-reel-v1.mp4"
+}
