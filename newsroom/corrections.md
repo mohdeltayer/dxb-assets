@@ -13,6 +13,7 @@ decision is recorded here, with what was done.
 | 4 | 16 Oct 15:10Z | `2026-10-09-cyberpunk-2077-film` | Digital Lounge X, Instagram and Threads, 9 Oct 09:00 Dubai: Paramount's live-action film «مقتبس من Cyberpunk 2077» (Deadline's framing) | CD Projekt Red co-CEO Michał Nowakowski to PAP Biznes (via GamesRadar, 16 Oct): "we definitely don't want to make a film adaptation of the game ... it won't be a one-to-one translation of the game's story"; a story in the Cyberpunk world | **Open** | Proposed: no correction post; the 9 Oct wording followed the report of the day, and a follow-up Reel (17 Oct, quote) states the new detail with attribution. Awaiting Mohammad |
 | 5 | 17 Oct 06:20Z | `2026-10-17-battlefield-6-free-trial-steam` | Digital Lounge X, Instagram and Threads, live 12:30 Dubai (08:30Z; not deleted in time). The text and the Reel's card say the Steam trial runs «حتى 19 أكتوبر» (aggregators' window when built) | The Battlefield team on Steam, "Steam Free Trial Extended!", 16 Oct 20:28Z: trial extended to Tue 20 Oct 17:00 UTC (21:00 Dubai), 2x XP to Tuesday, after day-one access problems | **Open** | Mohammad pinged 06:20Z and 08:07Z to delete the three posts in Postiz (only he can); no reply, v1 published 08:30Z. Corrected v2 built (batch 124: `cards/2026-10/battlefield-6-free-trial-steam-reel-v2.mp4`, card «مجانًا حتى 20 أكتوبر، تنتهي الساعة 9 مساءً بتوقيت الإمارات»), to requeue once v1 is gone. Offered: a reply under the X post and a pinned Instagram comment with the new date (text ready; Postiz cannot add a reply to a live post, so he posts it), or v2 as a correction post. Awaiting Mohammad |
 | 6 | 17 Oct 12:20Z | `2026-10-17-modern-warfare-4-top-seller-steam-uae` | Digital Lounge X, Instagram and Threads, 16:00 Dubai (12:00Z): text, caption and the Reel's strip give MW4's release as «22 أكتوبر», attributed to its Steam page | Steam (UAE, Saudi and US, rechecked 12:20Z) still lists 22 Oct; Activision's Call of Duty blog and the PlayStation Blog give 23 Oct, and the 10:30Z Activision QA Reel said 23 Oct. Likely a 22 Oct evening unlock in US time (23 Oct in the Gulf); Activision has not published a Gulf unlock time | **Open** | Not an error as attributed, but a Gulf reader may read it as the launch day. Proposed: a reply under the X post and a pinned Instagram comment: «تاريخ الإصدار الرسمي حسب أكتيفيجن 23 أكتوبر، ويعرض Steam تاريخ 22 أكتوبر حسب التوقيت الأمريكي». Awaiting Mohammad |
+| 7 | 18 Oct 01:15Z | `2026-10-17-world-of-warcraft-forever-free-stress-test` | Digital Lounge X, Instagram and Threads, 02:00 Dubai 18 Oct: X text, caption and the Reel's strip give the stress test as «19 أكتوبر» (times 21:00 and 01:00 UAE on 19/20 Oct) | Blizzard's announcement carries "Update October 16: ... moving to October 21 (previously October 19)"; same local times on 21 Oct (21:00 UAE 21 Oct, 01:00 UAE 22 Oct). The build read the page without the update | **Open** | Correction Reel per the overnight rule (wrong fact found over an hour after publishing; Alinea precedent): `2026-10-18-world-of-warcraft-forever-stress-test-correction`, split, chip تحديث, gold, proposed 07:00 Dubai (03:00Z) on the rolling queue with preview. Proposed besides: a reply under the X post and a pinned Instagram comment pointing to it. Awaiting Mohammad on the reply and pin; the original post stays as posted unless he deletes it |
 
 ## Error types and the rule each added
 
@@ -23,7 +24,7 @@ decision is recorded here, with what was done.
   and a text figure, read both and use the chart's number if they differ,
   and recheck the post for a correction note before queuing.
 
-## Queue-time re-check (Mohammad, 13 Oct 2026, review priority 2)
+## Queue-time re-check (Mohammad, 13 Oct 2026, review priority 2; widened 18 Oct)
 
 Any story whose chip is تقرير, شائعة or تسريب, or whose claims include a
 "reported" one, is searched again immediately before its folder goes to
@@ -33,4 +34,25 @@ a denial or confirmation since the drafts were written. The approval note
 records it, for example `recheck 04:31Z: no denial, Kotaku unchanged`. A
 denial or a change stops the queue and goes to Mohammad as a correction
 proposal, even under the silence rule or the breaking lane.
-| 7 | 18 Oct 01:15Z | `2026-10-17-world-of-warcraft-forever-free-stress-test` | Digital Lounge X, Instagram and Threads, 02:00 Dubai 18 Oct: X text, caption and the Reel's strip give the stress test as «19 أكتوبر» (times 21:00 and 01:00 UAE on 19/20 Oct) | Blizzard's announcement carries "Update October 16: ... moving to October 21 (previously October 19)"; same local times on 21 Oct (21:00 UAE 21 Oct, 01:00 UAE 22 Oct). The build read the page without the update | **Open** | Correction Reel per the overnight rule (wrong fact found over an hour after publishing; Alinea precedent): `2026-10-18-world-of-warcraft-forever-stress-test-correction`, split, chip تحديث, gold, proposed 07:00 Dubai (03:00Z) on the rolling queue with preview. Proposed besides: a reply under the X post and a pinned Instagram comment pointing to it. Awaiting Mohammad on the reply and pin; the original post stays as posted unless he deletes it |
+
+Since 18 Oct 2026 this re-check is part of the pre-publish gate, which runs on
+every post, not only reports, leaks and rumours (CLAUDE.md "Verification
+without delay").
+
+## Causes and controls (advisor, 18 Oct 2026; reviewed at the Tuesday audit)
+
+Causes: gate skipped, secondary used for a primary fact, primary read
+incompletely, could not pull, long build-to-publish gap, source changed. A
+change at the source after we publish is an update (تحديث, or رسمي confirming a
+تقرير), not a correction; an update never implies the source changed when the
+error was ours.
+
+| # | Cause | Control that covers it | Follow-up under rule 7 or 8 |
+|---|---|---|---|
+| 1 | Wording outside the glossary | Glossary «تعديل خفي» | None (closed) |
+| 2 | Gate skipped: Xbox's denial (02:59Z) was out before our 04:00Z post | Gate rule 1, news search for a denial before every post; rule 5 for posts queued ahead | Update or reply «نفت Xbox ...», attributed to Matthew Ball; awaiting Mohammad's go |
+| 3 | Primary read incompletely: Alinea's chart carried the right figure, its text a typo | Gate rule 4, chart against text | Done: correction post 14 Oct (closed) |
+| 4 | Source changed after publishing (CDPR's 16 Oct comments) | Rule 7 | Done: the 17 Oct follow-up Reel |
+| 5 | Secondary used for a primary fact (aggregators' window) and a long build-to-publish gap; EA's extension (16 Oct 20:28Z) predates our post | Gate rules 2 and 5 | Update «التجربة المجانية متاحة حتى الثلاثاء 20 أكتوبر 21:00 بتوقيت الإمارات، حسب فريق Battlefield»; no wording that the change came after our post (rule 8); awaiting Mohammad's go, useful only before 20 Oct 17:00Z |
+| 6 | Secondary used for a primary fact: Steam's 22 Oct where Activision says 23 Oct | Gate rule 2, publisher over store, time zone stated | Reply or update «تصدر في 23 أكتوبر حسب أكتيفيجن، ويعرض Steam تاريخ 22 أكتوبر بالتوقيت الأمريكي»; awaiting Mohammad's go |
+| 7 | Primary read incompletely and a long build-to-publish gap: Blizzard's "Update October 16" was on the page before our 17 Oct 22:00Z post | Gate rules 4 and 5 | Done 18 Oct 03:00Z as a correction Reel (accurate under rule 8: the miss was ours, the move predates our post); reply and pin awaiting Mohammad |

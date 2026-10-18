@@ -36,6 +36,18 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - A story's age is its first report anywhere, not the relay's. Arabic
     outlets rewrite a day or two late: date from the origin, and drop a story
     over 24 hours old at its origin unless something new has landed (17 Oct).
+  - Pre-publish gate on every post (18 Oct): primary, reporting outlets and a
+    news search for a denial or new date, 10 minutes (5 on the breaking lane),
+    recorded in the approval note. Confirmed by the primary: جديد or رسمي, with
+    dates, prices and figures from the primary only (publisher over store, time
+    zone stated). Not confirmed: publish now as تقرير / تسريب / شائعة with who
+    reports it and «لم تؤكد [الشركة] الخبر بعد»; never wait. Read the whole
+    primary (Update, Editor's note, chart against text). Queued over 6 h ahead:
+    gate again in the last hour; built over 12 h before its slot: full recheck.
+  - A change at the source after we publish is an update (تحديث, or رسمي
+    confirming a تقرير), never "correction" wording; our own slips are deleted
+    and reposted within the hour, then Mohammad decides. Each case is logged in
+    corrections.md with cause and control.
   - (README §4; "Verify against primary sources")
 - **Chip ladder:** رسمي / تقرير / تسريب / شائعة, with جديد for most news and
   عاجل rarely.

@@ -152,9 +152,23 @@ Instagram views Mohammad sends per Reel: `python3 templates/formats.py views
 template; append the table to `analytics/reel-views.md` with the date and
 commit (advisor, 14 Oct 2026).
 
+**Pre-publish gate (main session, every post; advisor, 18 Oct 2026).** Time box
+10 minutes, 5 on the breaking lane, never a wait. Check the primary (read the whole
+page: Update, Correction, Editor's note, a changed date; chart against text), the
+outlets that reported it, and a news search for a denial, update or new date. Exit A:
+the primary confirms every on-screen fact, chip جديد or رسمي, and every date, time,
+price and figure is the primary's (publisher over store, time zone stated). Exit B: no
+primary in the time box, publish now as تقرير / تسريب / شائعة, the text names who
+reports it and carries «لم تؤكد [الشركة] الخبر بعد». Record `gate HH:MMZ: <what was
+checked, what was found>` in the approval note. Posts queued more than 6 h ahead are
+gated again within the hour before they publish (set a send_later when queuing); a
+dated story built more than 12 h before its slot is rechecked in full. If the gate
+fails on a scheduled, unpublished post, delete it in Postiz (`deletePostTool`),
+requeue the fixed or relabelled version and send Mohammad the preview; published
+posts are his to delete.
+
 **Publish (haiku), only after his "go".** Before this card runs, the main session
-re-checks any تقرير, شائعة or تسريب story (newsroom/corrections.md, queue-time
-re-check) and puts the result in the approval note. Given the exact draft folders, times and
+runs the pre-publish gate above and puts the result in the approval note. Given the exact draft folders, times and
 his approval note: `preflight.py approve` each, `git mv` to queue, `DRY_RUN=1
 publish.py` and confirm it lists exactly those folders (stop and report if not),
 push to dxb-queue main, wait for the receipts commit, read the captions back with

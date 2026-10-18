@@ -1573,7 +1573,9 @@ bare figure.
 
 Re-check before queuing (Mohammad, 13 Oct 2026, review priority 2): any
 تقرير, شائعة or تسريب story is searched again right before it goes to queue/,
-and the approval note records what was found; a denial stops it. Every
+and the approval note records what was found; a denial stops it. Since 18 Oct
+every post goes through the pre-publish gate below ("Verification without
+delay"). Every
 correction is listed in `newsroom/corrections.md`, open until his decision
 is written there.
 
@@ -1583,6 +1585,62 @@ load, so read primaries and fetch art directly. Google Patents, pbs.twimg.com
 and news.xbox.com refuse automated requests at their end; use a press
 article that carries the same image. Say plainly when something is
 corroborated by search rather than read from the primary.
+
+## Verification without delay (advisor, 18 Oct 2026, agreed with Mohammad)
+
+Avoid corrections by verifying harder, never by waiting: news is never held
+for official confirmation, and a change at the source after we publish is an
+update, not a correction. From a review of the seven cases in
+`newsroom/corrections.md`: one changed at the source after publishing (#4),
+five carried information we could have caught before publishing (#2, #3, #5,
+#6, #7), one was wording (#1).
+
+The pre-publish gate (fast, two exits, never a wait):
+1. Before every post, check all sources for the latest: the primary if one
+   exists (publisher, platform holder, store page, the company's own post),
+   the outlets that reported it, and a news search for a denial, update or
+   new date. Time box: 10 minutes for normal news, 5 for the breaking lane.
+   The approval note records what was checked and when (`gate HH:MMZ: ...`).
+2. Exit A, confirmed: the primary confirms every fact on screen. Publish as
+   جديد or رسمي. Dates, times, prices, deadlines and figures come from the
+   primary itself, never from an outlet or aggregator; if the publisher and
+   a store disagree, use the publisher's and state the time zone.
+3. Exit B, not yet confirmed: no primary within the time box, but the story
+   is reported. Publish now, labelled on the ladder: تقرير (a credible
+   outlet reports it), تسريب (leaked material), شائعة (anonymous or social
+   claims). The text names who reports it and carries «لم تؤكد [الشركة]
+   الخبر بعد». Never wait for official confirmation to publish.
+4. Read the whole primary when there is one: look for "Update",
+   "Correction", "Editor's note" or a changed date on the page, and compare
+   a chart against its text when both exist.
+5. Queued ahead: a post queued more than six hours ahead goes through the
+   gate again within the hour before it publishes; a dated story built more
+   than 12 hours before its slot is rechecked in full.
+6. Production may delete its own scheduled, unpublished post in Postiz when
+   the gate fails, then requeue the fixed or relabelled version with a
+   preview to Mohammad. Published posts are deleted only by Mohammad.
+
+Updates, not corrections:
+7. When the source changes after we publish (official confirmation of a
+   تقرير, a denial, an extension, a new date, a clarification, the source's
+   own fix), the follow-up is an update post: chip تحديث, or رسمي when it
+   confirms an earlier تقرير; what the source now says, attributed; no
+   "correction" wording. The original stays unless Mohammad deletes it.
+8. Honesty boundary: an update never states or implies that the source
+   changed when the error was ours alone (a misread figure, a wrong name, a
+   translation slip, a change at the source that we missed before posting).
+   Those are fixed by deleting and reposting within the first hour; after
+   that, Mohammad decides.
+9. Each case gets a line in `newsroom/corrections.md` with its cause (gate
+   skipped, secondary used for a primary fact, primary read incompletely,
+   could not pull, long build-to-publish gap, source changed) and the
+   control that covers it, reviewed at the Tuesday audit.
+10. Open cases become update posts or replies under rule 7, each with
+    Mohammad's go: #2 Xbox's denial, #5 trial extended to 20 Oct, #6
+    Activision's 23 Oct with the US time note, #7 Blizzard moved the test to
+    21 Oct; #4 is already covered by the 17 Oct follow-up.
+This replaces the narrower queue-time re-check of 13 Oct (reports, leaks and
+rumours only): the gate runs on every post.
 
 ## Newsroom workflow (Mohammad, 2 Oct 2026)
 
