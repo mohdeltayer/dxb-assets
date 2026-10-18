@@ -39,7 +39,7 @@
       "status": "not published; none given"
     }
   ],
-  "status": "queued",
+  "status": "published",
   "lanes": {
     "dl": {
       "lane": "Reel",
@@ -63,7 +63,8 @@
   },
   "notes": [
     "18 Oct 11:39Z: built b159 (trailer, stylized, everyday bed; CDPR's own season 2 clip from cyberpunk.net in source order, then the Cyberpunk 2077 Edgerunners tie-in trailer from Steam for season 1 and Night City, credited «لقطات من الموسم الأول ومن Cyberpunk 2077»). Grammar review: one required edit resolved by rewording Weak (a man) as «المرتزق الذي كان أسطورة»; Netflix bracket moved to the hook. DeepL forward pass. 20.8 s. First final render hit the full disk; sparse-checkout reapply and cache cleanup, re-rendered. Queued 17:00Z.",
-    "18 Oct 13:18Z: Postiz held this story twice at 17:00Z. The 11:38Z publish run (aa4079a) created the posts, then failed at 'Commit receipts' because the media-strip commit (639661f) was pushed while it ran; the 639661f run posted the folders again. Deleted the three posts with no receipt (cmvdr6hna/cmvdr6jn/cmvdr6lcq, all scheduled, none published); the receipted set stays. Control: never push to dxb-queue while a publish run is in progress (already in CLAUDE.md); check the run list first."
+    "18 Oct 13:18Z: Postiz held this story twice at 17:00Z. The 11:38Z publish run (aa4079a) created the posts, then failed at 'Commit receipts' because the media-strip commit (639661f) was pushed while it ran; the 639661f run posted the folders again. Deleted the three posts with no receipt (cmvdr6hna/cmvdr6jn/cmvdr6lcq, all scheduled, none published); the receipted set stays. Control: never push to dxb-queue while a publish run is in progress (already in CLAUDE.md); check the run list first.",
+    "18 Oct 17:09Z: X, Instagram, Threads read PUBLISHED in Postiz (17:00Z); media stripped from dxb-queue after receipts."
   ],
   "reel": "cards/2026-10/cyberpunk-edgerunners-2-netflix-tuesday-reel-v1.mp4"
 }
