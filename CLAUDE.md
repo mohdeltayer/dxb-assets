@@ -1520,6 +1520,23 @@ relay's time. So:
   list as soon as the watch or the scout finds it, without waiting for an
   Arabic outlet to carry it.
 
+Sources and names (advisor, 17 Oct 2026, agreed with Mohammad; from the Phantom
+Blade Zero director Reel, where an X reader asked «وش مصدرك؟» and the on-screen
+line read «قالها سولفريم (Soulframe)»):
+1. People are labelled by role at first mention, on screen and in the text:
+   «المخرج سولفريم ليانغ (Soulframe Liang)», never a bare name. A name that is
+   also a game, studio or product (Soulframe is a Digital Extremes game) always
+   takes the role word. The brief lists each person with their role, and the
+   grammar stage checks it as a house rule.
+2. The X and Threads text names the source for every quote, report, rumour,
+   leak or interview, in a few words («لموقع PCGamesN», «حسب بلومبرغ
+   (Bloomberg)»), even when the Reel already shows it. Official announcements
+   name the company, as before.
+3. A reader's question about a source is answered from the story file's
+   primary: the outlet, the date, and the link on X and Threads (links are
+   fine there); on Instagram the outlet and the date only, no link. The reply
+   is drafted for Mohammad to post (Postiz cannot reply to a live post).
+
 Variety (Mohammad, 5 Oct 2026, after a run of Witcher and RuneScape posts:
 "I've been posting about it for a while now"): a game or series that went out
 in the last few days does not come back in a shortlist unless there is real

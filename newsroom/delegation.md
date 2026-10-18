@@ -135,7 +135,16 @@ first five words of the first line, in the Arabic and in any English line
 (advisor, 14 Oct 2026); whether the first word of every paragraph is Arabic;
 whether the last caption line starts with #ألعاب #أخبار_الألعاب and carries
 exactly four tags; and the character counts (2200 Instagram, 500 Threads).
+Also (17 Oct 2026): every person named carries a role word at first mention in
+the Reel lines, the caption and the X text; and the X and Threads text names
+the source (outlet or company) for any quote, report, rumour, leak or
+interview.
 Report only; the main session rewrites.
+
+**Source reply (haiku).** When a reader asks for the source («وش مصدرك؟»,
+«المصدر؟»), read the story file's primary and draft one Arabic line for
+Mohammad to post: outlet, date and link on X and Threads; outlet and date only
+on Instagram. Never a source that is not in the story file.
 
 **Weekly views (haiku), Tuesday morning before the audit.** Given the
 Instagram views Mohammad sends per Reel: `python3 templates/formats.py views

@@ -65,6 +65,11 @@ its topic.
 - Direct quotations: flag a problem inside «…» or a quoted line, do not
   rewrite it. It goes in `required_edits` with `"quotation": true` and is left
   out of `corrected_text`.
+- Sources and names (17 Oct 2026), also `house_rule`: a person named
+  without a role word at first mention (المخرج، الرئيس التنفيذي، مبتكر،
+  الممثل…) is a required edit, above all when the name is also a game, studio
+  or product; X and Threads text that carries a quote, report, rumour, leak or
+  interview without naming its source («لموقع …»، «حسب …») is a required edit.
 - House rules are required edits of their own kind (`house_rule`): game and
   series names take feminine agreement (تصدر Football Manager 27); company and
   people names as Arabic then the Latin in brackets at first mention, Arabic

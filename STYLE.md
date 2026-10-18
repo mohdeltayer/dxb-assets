@@ -27,6 +27,12 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     numbers to the company.
   - Outlets are leads, not proof. Ten articles citing one report are one
     source.
+  - People take their role at first mention, on screen and in text
+    («المخرج سولفريم ليانغ»), never a bare name, above all when the name is
+    also a game or studio. X and Threads name the source of every quote,
+    report, rumour, leak or interview in a few words («لموقع PCGamesN»).
+    Reader questions about a source get the primary: outlet, date and link
+    (no link on Instagram) (17 Oct).
   - A story's age is its first report anywhere, not the relay's. Arabic
     outlets rewrite a day or two late: date from the origin, and drop a story
     over 24 hours old at its origin unless something new has landed (17 Oct).
