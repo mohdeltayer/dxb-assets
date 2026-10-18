@@ -1,0 +1,79 @@
+{
+  "id": "2026-10-19-007-first-light-40-off-steam",
+  "title": "007 First Light 40% off on Steam: 108 AED, 89.97 SR until 22 Oct",
+  "game": "007 First Light",
+  "companies": [
+    "IO Interactive",
+    "Valve"
+  ],
+  "priority": "price, overnight 02:00Z slot",
+  "why": "Gulf prices for a big recent release at 40% off, with the deadline.",
+  "sources": [
+    {
+      "role": "primary",
+      "name": "Steam appdetails cc=ae / cc=sa and the store page (Offer ends 22 October)",
+      "url": "https://store.steampowered.com/app/3768760/"
+    },
+    {
+      "role": "primary",
+      "name": "IOI press release, Switch 2 date 18 Mar 2027 (our 14 Oct story)",
+      "url": "https://ioi.dk/007firstlightgame/news/2026/007-first-light-switch-2-date-confirmed"
+    }
+  ],
+  "claims": [
+    {
+      "text": "180.00 -> 108.00 AED; 149.95 -> 89.97 SR (-40%)",
+      "status": "confirmed (Steam)"
+    },
+    {
+      "text": "Offer ends 22 October",
+      "status": "confirmed (Steam store page; no time given)"
+    },
+    {
+      "text": "Released May 2026; developed and published by IO Interactive; origin story of Bond as an MI6 recruit",
+      "status": "confirmed (Steam)"
+    },
+    {
+      "text": "Switch 2 on 18 Mar 2027",
+      "status": "confirmed (IOI)"
+    },
+    {
+      "text": "Record discount",
+      "status": "not used (SteamDB relay only)"
+    }
+  ],
+  "status": "queued",
+  "lanes": {
+    "dl": {
+      "lane": "Reel",
+      "chip": "السعر",
+      "format": "split",
+      "headline": "مغامرة James Bond\nبخصم 40% على Steam",
+      "strip": [
+        [
+          "في الإمارات",
+          [
+            "aed",
+            "108"
+          ]
+        ],
+        [
+          "في السعودية",
+          "89.97 ريالًا"
+        ]
+      ],
+      "x": "مغامرة James Bond في ‎007 First Light بخصم 40% على Steam حتى 22 أكتوبر: 108 دراهم في الإمارات و89.97 ريالًا في السعودية.",
+      "ig": "ينخفض سعر ‎007 First Light على Steam إلى 108 دراهم في الإمارات، بخصم 40% حتى 22 أكتوبر. / يعرض متجر Steam لعبة ‎007 First Light بخصم 40%، فينخفض سعرها في الإمارات من 180 درهمًا إلى 108 دراهم، وفي السعودية من 149.95 ريالًا إلى 89.97 ريالًا. / ويستمر العرض حتى 22 أكتوبر، حسب صفحة اللعبة على المتجر. / وصدرت اللعبة في مايو الماضي من تطوير ونشر استوديو آي أو إنتراكتيف (IO Interactive)، مطوّر سلسلة Hitman، وتروي بدايات James Bond مجندًا شابًا في برنامج تدريب جهاز الاستخبارات البريطاني MI6. / وتصل إلى Nintendo Switch 2 في 18 مارس 2027، حسب إعلان الاستوديو.",
+      "lines": [
+        "وهي ‎007 First Light من استوديو\nآي أو إنتراكتيف (IO Interactive)",
+        "وتروي بدايات James Bond\nفي برنامج تدريب MI6",
+        "والعرض مستمر حتى 22 أكتوبر"
+      ],
+      "time": "2026-10-19T02:00:00Z",
+      "reel": "cards/2026-10/007-first-light-40-off-steam-reel-v1.mp4"
+    }
+  },
+  "notes": [
+    "18 Oct 15:22Z: built b165 (split, cold, the Rules of Spycraft trailer's own sound from 0 s: narration over score), 15.2 s before the end card. The story and gameplay trailers and the cutscenes inside Spycraft are letterboxed to 816 rows, so only full-frame gameplay is used. Frames checked: guns, the swimsuit frame and the Omega case skipped; two short HUD tails kept. Grammar review: no required edits; the game named on screen, «إنتراكتيف» per the glossary, MI6 introduced, the Switch 2 date attributed. DeepL forward pass. Bidi: «007 First Light» rendered as «First Light 007» after an Arabic word; a left-to-right mark (U+200E) before every «007» fixes it in the Reel and the post text. Gate 15:20Z Exit A. Queued 02:00Z; re-gate within the hour before."
+  ]
+}
