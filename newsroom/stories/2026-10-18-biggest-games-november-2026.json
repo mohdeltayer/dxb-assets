@@ -43,7 +43,7 @@
       "status": "verified against the primary pages (research 18 Oct 01:20Z)"
     }
   ],
-  "status": "ready",
+  "status": "queued",
   "lanes": {
     "dl": {
       "lane": "Reel",
@@ -66,7 +66,16 @@
   },
   "times": {},
   "notes": [
-    "18 Oct 01:44Z: built b145 (list, spectacle, everyday bed, hard cuts), 28.6 s (six dated lines at reading pace; over the 12 to 20 s target). lowres_ok: Ocarina and Pikmin are Nintendo's 720p store files only. Grammar review: no required edits; ومعها -> وتصل, hook leads on the games. Headline rewritten twice for the wrap check. Frames checked: no violence, no shower or kiss scenes, no slates."
+    "18 Oct 01:44Z: built b145 (list, spectacle, everyday bed, hard cuts), 28.6 s (six dated lines at reading pace; over the 12 to 20 s target). lowres_ok: Ocarina and Pikmin are Nintendo's 720p store files only. Grammar review: no required edits; ومعها -> وتصل, hook leads on the games. Headline rewritten twice for the wrap check. Frames checked: no violence, no shower or kiss scenes, no slates.",
+    "18 Oct 06:42Z: gate 06:41Z, all six dates re-read on their primaries (unchanged); queued 08:00Z under the rolling queue once the card-led window allowed a list."
   ],
-  "reel": "cards/2026-10/biggest-games-november-2026-reel-v1.mp4"
+  "reel": "cards/2026-10/biggest-games-november-2026-reel-v1.mp4",
+  "queue": {
+    "time": "2026-10-18T08:00:00Z",
+    "folders": [
+      "biggest-games-november-2026-ar",
+      "biggest-games-november-2026-ig",
+      "biggest-games-november-2026-th"
+    ]
+  }
 }
