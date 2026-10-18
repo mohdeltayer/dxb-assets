@@ -1,27 +1,5 @@
 [
  {
-  "name": "xbox-nano-controller-reel-v9.mp4",
-  "profile": "baseline-old-chain",
-  "at": "2026-10-14T17:32Z",
-  "stages": {},
-  "total": 292.3,
-  "note": "old chain: montage slow/15, text slow/16, outro slow/17 with xfade; 17.8 MB"
- },
- {
-  "name": "xbox-nano-controller-reel-v9.mp4",
-  "profile": "standard",
-  "at": "2026-10-14T17:45Z",
-  "stages": {
-   "checks": 4.0,
-   "montage": 60.0,
-   "text": 40.0,
-   "audio": 0.5,
-   "outro": 65.0
-  },
-  "total": 169.5,
-  "note": "after: new chain, wall 172 s measured by the shell; stage split estimated (the record step failed on a missing import); baseline on the old chain 292 s wall, 17.8 MB; new 12.6 MB"
- },
- {
   "name": "007-first-light-switch-2-date-reel-v1.mp4",
   "profile": "standard",
   "at": "2026-10-14T19:56Z",
@@ -1294,5 +1272,31 @@
    "outro": 39.1
   },
   "total": 102.9
+ },
+ {
+  "name": "shrek-2-remastered-leak-gta-6-parody-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-18T03:47Z",
+  "stages": {
+   "checks": 1.7,
+   "montage": 16.1,
+   "text": 56.7,
+   "audio": 0.5,
+   "outro": 28.4
+  },
+  "total": 103.5
+ },
+ {
+  "name": "shrek-2-remastered-leak-gta-6-parody-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-18T03:50Z",
+  "stages": {
+   "checks": 1.5,
+   "montage": 12.1,
+   "text": 53.9,
+   "audio": 0.6,
+   "outro": 27.4
+  },
+  "total": 95.4
  }
 ]
