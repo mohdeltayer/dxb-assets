@@ -44,7 +44,8 @@ same presentation is **P-IGN**, the same times).
 | 2 | What's new (15 Oct) | O 46.8-50.3, 144.0-148.6, 150.6-155.8, 160.2-165.6, 182.2-186.9 | O from 136.0 |
 | 3 | How it was born (18 Oct) | A 39.8-43.3, 112.4-117.6, 56.2-61.6, 61.6-66.2, 172.0-178.0; O 97.6-100.3 | A from 26.0 |
 | 4 | The music (19 Oct) | A 31.0-34.3, 40.5-42.5, 34.9-37.65, 62.0-64.25; O 63.0-63.95, 71.6-74.75, 99.0-101.0, 15.2-17.1, 48.0-50.75, 152.6-155.2, 131.0-133.75 | A from 26.0 (repeats ep 3) |
-| 5 | Z-targeting (20 Oct), v1 as built 19 Oct 08:20Z, not posted | O 95.0-97.5, 89.6-92.3, 99.0-101.25, 46.8-49.6, 186.0-188.4, 194.3-196.7; P 28.3-30.75, 47.6-49.85, 39.4-41.8, 378.0-380.75, 364.4-366.3 | A from 26.0 (repeats eps 3 and 4) |
+| 5 v2 | Z-targeting (20 Oct), rebuilt 19 Oct 12:50Z | P 343.0-345.6, 28.3-31.1, 47.45-49.2, 366.0-368.5, 368.6-371.1, 39.4-41.8, 384.5-387.1, 347.4-349.5, 166.2-168.9, 846.0-848.4, 852.0-854.6 | P from 338.9, Aonuma narrating targeting over the Deku Tree music |
+| 5 v1 | Z-targeting, built 19 Oct 08:20Z, replaced by v2, not posted | O 95.0-97.5, 89.6-92.3, 99.0-101.25, 46.8-49.6, 186.0-188.4, 194.3-196.7; P 28.3-30.75, 47.6-49.85, 39.4-41.8, 378.0-380.75, 364.4-366.3 | A from 26.0 (repeats eps 3 and 4) |
 
 Repeats found on 19 Oct: A from 26.0 in eps 3, 4 and 5 (ep 1's A from 5.0 runs
 into it); the Hyrule Field with the castle in eps 1 and 4; A 61.6/62.0 (the
