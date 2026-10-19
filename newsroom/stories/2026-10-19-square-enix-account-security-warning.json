@@ -1,0 +1,66 @@
+{
+  "id": "2026-10-19-square-enix-account-security-warning",
+  "title": "Square Enix warns of unauthorized logins with credentials leaked from other services; affected accounts restricted; possible reset of all passwords",
+  "game": "FINAL FANTASY XIV",
+  "companies": [
+    "Square Enix"
+  ],
+  "priority": "🟢",
+  "status": "queued",
+  "related": [],
+  "sources": [
+    {
+      "role": "primary",
+      "name": "Lodestone JP notice [重要]不正アクセスとアカウント管理に関するご注意, listed 19 Oct 2026 03:40Z",
+      "url": "https://jp.finalfantasyxiv.com/lodestone/news/detail/7a3ea81bad4e15c107251cfe644209dcc2cd4e08"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Unauthorized logins with email/ID and password combinations believed leaked from other services",
+      "status": "confirmed (official)"
+    },
+    {
+      "text": "Affected accounts login-restricted",
+      "status": "confirmed"
+    },
+    {
+      "text": "Change password now; one-time passwords recommended",
+      "status": "confirmed"
+    },
+    {
+      "text": "Possible password reset for all accounts if it keeps increasing",
+      "status": "confirmed"
+    }
+  ],
+  "why": "Affects every Square Enix account holder in the region (FFXIV, Dragon Quest X and others); practical, official",
+  "lanes": {
+    "dl": {
+      "lane": "Reel",
+      "template": "clipcard",
+      "chip": "رسمي",
+      "time": "14:00 Dubai, 19 Oct",
+      "headline": "سكوير (Square Enix) تحذر من دخول غير مصرح به إلى الحسابات",
+      "x": "تحذر سكوير (Square Enix) من حالات دخول غير مصرح به إلى حسابات سكوير بكلمات مرور يُعتقد أنها تسربت من خدمات أخرى، وتطلب تغيير كلمة المرور فورًا.",
+      "ig": "تحذير لأصحاب حسابات FINAL FANTASY XIV وسكوير (Square Enix): دخول غير مصرح به بكلمات مرور يُعتقد أنها مسربة. / نشرت سكوير تحذيرًا رسميًا على موقع FINAL FANTASY XIV في اليابان، قالت فيه إنها رصدت حالات دخول غير مصرح به إلى حسابات سكوير باستخدام عناوين بريد إلكتروني أو معرّفات دخول مع كلمات مرور يُعتقد أنها تسربت من خدمات شركات أخرى. / وقالت الشركة إن الخطر أكبر على من يستخدم البريد الإلكتروني وكلمة المرور نفسيهما في خدمات أخرى، أو يختار كلمة مرور سهلة التخمين مثل تكرار الأحرف والأرقام أو تاريخ الميلاد. / وأضافت أنها تقيّد تسجيل الدخول إلى الحسابات التي يُرجَّح أنها تضررت، وطلبت تغيير كلمة المرور فورًا، ونصحت باستخدام كلمة المرور لمرة واحدة لأنها ترفع الأمان كثيرًا. / وأشارت إلى أنها قد تعيد تعيين كلمات المرور لكل حسابات سكوير إذا استمرت هذه الحالات في الازدياد.",
+      "lines": [
+        "بكلمات مرور يُعتقد أنها\nتسربت من خدمات أخرى",
+        "وتقيّد الشركة الدخول\nإلى الحسابات المشتبه بها",
+        "وقد تعيد تعيين كلمات\nالمرور لكل الحسابات"
+      ]
+    }
+  },
+  "media": [
+    {
+      "file": "cards/2026-10/square-enix-account-security-warning-reel-v1.mp4",
+      "kind": "Square Enix's FFXIV in 1 Minute trailer (Steam 1080p), its own score; one card (the two steps) on the numgfx ground"
+    }
+  ],
+  "times": {
+    "dl": "2026-10-19T10:00:00Z"
+  },
+  "notes": [
+    "19 Oct 06:15Z: built b174 (clipcard, cold, 22.0 s). First read wrongly as a 13 Oct notice (the detail page carries an older timestamp for another element); the Lodestone list shows 19 Oct 03:40Z. Template moved split to clipcard: 08:00Z and 09:00Z are splits and trailer reached four today. Grammar review: no required edits; hedges kept (يُعتقد, المشتبه بها), حالات not محاولات, تعيين not ضبط; the risk line folded into the card (one fact, one place). DeepL back-check matches.",
+    "19 Oct 06:24Z: queued X/IG/Threads for 10:00Z (14:00 Dubai), approval 'go: rolling queue; preview sent 06:23Z'."
+  ]
+}
