@@ -1,0 +1,142 @@
+<!doctype html>
+<!-- Web-style end cards (pilot, advisor 19 Oct 2026; CLAUDE.md "Web-style motion graphics"). Three variants of
+     the Digital Lounge end card, drawn with HTML and CSS and set frame by frame by window.renderAt(t) (no CSS
+     animation, so every frame is deterministic). Query: ?v=aurora|lines|kinetic&accent=28B6F6&notes=0.1,0.26,0.42,0.58&chord=0.74
+     The note and chord times are the jingle's (sonic.beats), so each platform lights on its note as on the current card.
+     Fonts are served from /fonts/ (the Dubai TTFs never go in git); the mark from /mark.jpg. -->
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<style>
+@font-face { font-family: Dubai; font-weight: 700; src: url(/fonts/Dubai-Bold.ttf); }
+@font-face { font-family: Dubai; font-weight: 500; src: url(/fonts/Dubai-Medium.ttf); }
+@font-face { font-family: Dubai; font-weight: 400; src: url(/fonts/Dubai-Regular.ttf); }
+:root { --ground: #141332; --panel: #1E1D4A; --edge: #3F3DA8; --azure: #28B6F6; --indigo: #5552E0; --ink: #F4F3FF; --body: #C9C8E6; --acc: #28B6F6; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--ground); font-family: Dubai, sans-serif; }
+#stage { position: absolute; inset: 0; overflow: hidden; background: var(--ground); }
+/* Everything centres on x 503, the middle of the Reels safe zone (x 96 to 910), as outro.py does. */
+.c { position: absolute; left: 503px; transform: translateX(-50%); }
+.mark { width: 300px; height: 300px; border-radius: 50%; background: url(/mark.jpg) center/cover; }
+.name { font-weight: 700; color: var(--ink); white-space: nowrap; }
+.tag { font-weight: 500; color: var(--body); white-space: nowrap; }
+.handle { font-weight: 500; color: var(--body); direction: ltr; white-space: nowrap; letter-spacing: 1px; }
+.row { display: flex; flex-direction: row; gap: 56px; }
+.g { width: 64px; height: 64px; }
+.g svg { width: 64px; height: 64px; overflow: visible; }
+.blob { position: absolute; border-radius: 50%; filter: blur(120px); }
+.chip { width: 104px; height: 104px; border-radius: 30px; display: flex; align-items: center; justify-content: center;
+        background: rgba(244,243,255,0.06); border: 2px solid rgba(85,82,224,0.55); }
+.chip svg { width: 56px; height: 56px; overflow: visible; }
+</style></head>
+<body><div id="stage"></div>
+<script>
+const q = new URLSearchParams(location.search);
+const V = q.get('v') || 'aurora';
+const ACC = '#' + (q.get('accent') || '28B6F6');
+const NOTES = (q.get('notes') || '0.1,0.26,0.42,0.58').split(',').map(Number);
+const CHORD = +(q.get('chord') || 0.74);
+document.documentElement.style.setProperty('--acc', ACC);
+const S = document.getElementById('stage');
+const clamp = x => Math.max(0, Math.min(1, x));
+const out3 = x => 1 - Math.pow(1 - clamp(x), 3);
+const outBack = x => { x = clamp(x); const c = 1.7, d = c + 1; return 1 + d * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const lerp = (a, b, k) => a + (b - a) * k;
+const el = (tag, cls, css, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (css) Object.assign(e.style, css); if (html !== undefined) e.innerHTML = html; S.appendChild(e); return e; };
+// Platform glyphs, the same shapes as outro.py draws (lit right to left: X, Instagram, TikTok, YouTube; in this
+// right-to-left page the first flex child sits at the right, so glyph i lights on note i).
+const GLYPHS = {
+  x: c => `<svg viewBox="0 0 64 64"><line x1="6" y1="6" x2="58" y2="58" stroke="${c}" stroke-width="9" stroke-linecap="round"/><line x1="58" y1="6" x2="6" y2="58" stroke="${c}" stroke-width="5" stroke-linecap="round"/></svg>`,
+  instagram: c => `<svg viewBox="0 0 64 64"><rect x="3" y="3" width="58" height="58" rx="18" fill="none" stroke="${c}" stroke-width="6"/><circle cx="32" cy="32" r="14" fill="none" stroke="${c}" stroke-width="6"/><circle cx="49" cy="15" r="4.5" fill="${c}"/></svg>`,
+  tiktok: c => `<svg viewBox="0 0 64 64"><circle cx="20" cy="48" r="12" fill="none" stroke="${c}" stroke-width="6"/><line x1="32" y1="48" x2="32" y2="4" stroke="${c}" stroke-width="6" stroke-linecap="round"/><path d="M32 6 Q36 22 58 22" fill="none" stroke="${c}" stroke-width="6" stroke-linecap="round"/></svg>`,
+  youtube: c => `<svg viewBox="0 0 64 64"><rect x="0" y="10" width="64" height="44" rx="13" fill="${c}"/><polygon points="26,21 26,43 45,32" fill="#141332"/></svg>`,
+};
+const PLAT = ['x', 'instagram', 'tiktok', 'youtube'];
+const parts = {};
+
+function build() {
+  if (V === 'aurora') {
+    // A: a slow aurora of the theme colour and bright indigo behind a springing mark; the platforms as glass chips
+    // that rise on their notes; the name wiped in right to left on the chord with an accent rule growing under it.
+    parts.b1 = el('div', 'blob', { width: '900px', height: '900px', background: ACC, opacity: 0.32 });
+    parts.b2 = el('div', 'blob', { width: '800px', height: '800px', background: '#5552E0', opacity: 0.38 });
+    parts.mark = el('div', 'mark c', { top: '520px', boxShadow: `0 0 80px 10px ${ACC}55` });
+    parts.chips = PLAT.map((p, i) => el('div', 'chip', { position: 'absolute', top: '1100px', left: (503 + 1.5 * 128 - i * 128 - 52) + 'px' }, GLYPHS[p]('#F4F3FF')));
+    parts.name = el('div', 'name c', { top: '858px', fontSize: '96px' }, 'ديجيتال لاونج');
+    parts.rule = el('div', 'c', { top: '1000px', height: '6px', borderRadius: '3px', background: ACC });
+    parts.tag = el('div', 'tag c', { top: '1018px', fontSize: '48px' }, 'أخبار الألعاب');
+    parts.handle = el('div', 'handle c', { top: '1250px', fontSize: '42px' }, '@the_digilounge');
+  } else if (V === 'lines') {
+    // B: the banner's wave lines draw themselves across the frame and meet at a ring that closes round the mark;
+    // each platform lights with a ring on its note; the two words of the name rise from a mask on the chord.
+    const W = 1080; let paths = '';
+    for (let k = 0; k < 9; k++) { const y0 = 700 + (k - 4) * 26, a = 70 + k * 9, f = 0.0042 + k * 0.00025; let d = `M ${W + 40} ${y0}`;
+      for (let x = W + 40; x >= -40; x -= 20) d += ` L ${x} ${(y0 + a * Math.sin(x * f + k * 0.7)).toFixed(1)}`;
+      paths += `<path d="${d}" fill="none" stroke="url(#gr)" stroke-width="${k === 4 ? 4 : 2.5}" stroke-opacity="${0.35 + 0.07 * (4 - Math.abs(k - 4))}"/>`; }
+    parts.svg = el('div', '', { position: 'absolute', inset: 0 }, `<svg width="1080" height="1920"><defs><linearGradient id="gr" x1="1" x2="0"><stop offset="0" stop-color="#5552E0"/><stop offset="1" stop-color="${ACC}"/></linearGradient></defs>${paths}<circle id="ring" cx="503" cy="700" r="176" fill="none" stroke="${ACC}" stroke-width="5" transform="rotate(-90 503 700)"/></svg>`);
+    parts.paths = [...S.querySelectorAll('path')]; parts.ringc = S.querySelector('#ring');
+    parts.paths.forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.L = L; });
+    parts.ringc.style.strokeDasharray = 2 * Math.PI * 176;
+    parts.mark = el('div', 'mark c', { top: '550px' });
+    parts.row = el('div', 'row c', { top: '1118px' });
+    parts.g = PLAT.map(p => { const e = document.createElement('div'); e.className = 'g'; e.innerHTML = GLYPHS[p]('#F4F3FF'); parts.row.appendChild(e); return e; });
+    parts.rings = PLAT.map(() => el('div', '', { position: 'absolute', borderRadius: '50%', border: `3px solid ${ACC}` }));
+    parts.w = ['ديجيتال', 'لاونج'].map((w, i) => { const m = el('div', 'c', { top: '880px', height: '120px', overflow: 'hidden', left: (i ? 360 : 640) + 'px' }); const s = document.createElement('div'); s.className = 'name'; s.style.fontSize = '92px'; s.textContent = w; m.appendChild(s); return s; });
+    parts.tag = el('div', 'tag c', { top: '1006px', fontSize: '46px' }, 'أخبار الألعاب');
+    parts.handle = el('div', 'handle c', { top: '1240px', fontSize: '42px' }, '@the_digilounge');
+  } else {
+    // C: kinetic type. A fine dotted grid breathes behind; the platforms land one by one with a small bounce on
+    // their notes, a progress rule fills right to left under them; on the chord the name comes in large, word by
+    // word from the right, then the mark settles beside the handle.
+    parts.grid = el('div', '', { position: 'absolute', inset: '-200px', backgroundImage: 'radial-gradient(rgba(201,200,230,0.22) 2px, transparent 2.5px)', backgroundSize: '44px 44px' });
+    parts.vig = el('div', '', { position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 47% 45%, rgba(20,19,50,0) 0%, rgba(20,19,50,0.55) 55%, #141332 85%)' });
+    parts.glow = el('div', 'blob', { width: '700px', height: '700px', background: ACC, opacity: 0, left: '153px', top: '420px' });
+    parts.row = el('div', 'row c', { top: '560px' });
+    parts.g = PLAT.map(p => { const e = document.createElement('div'); e.className = 'g'; e.innerHTML = GLYPHS[p]('#F4F3FF'); parts.row.appendChild(e); return e; });
+    parts.bar0 = el('div', 'c', { top: '668px', width: '420px', height: '6px', borderRadius: '3px', background: 'rgba(244,243,255,0.12)' });
+    parts.bar = el('div', '', { position: 'absolute', top: '668px', height: '6px', borderRadius: '3px', background: ACC });
+    parts.w = ['ديجيتال', 'لاونج'].map((w, i) => { const m = el('div', 'c', { top: (760 + i * 150) + 'px', height: '160px', overflow: 'hidden', width: '820px', textAlign: 'center' }); const s = document.createElement('div'); s.className = 'name'; s.style.fontSize = '132px'; s.style.lineHeight = '160px'; s.textContent = w; m.appendChild(s); return s; });
+    parts.tag = el('div', 'tag c', { top: '1090px', fontSize: '50px' }, 'أخبار الألعاب');
+    parts.mark = el('div', 'mark', { position: 'absolute', width: '96px', height: '96px', top: '1196px' });
+    parts.handle = el('div', 'handle', { position: 'absolute', top: '1218px', fontSize: '42px' }, '@the_digilounge');
+  }
+}
+
+window.renderAt = function (t) {
+  if (V === 'aurora') {
+    parts.b1.style.left = (503 - 450 + 160 * Math.sin(t * 0.9)) + 'px'; parts.b1.style.top = (380 + 90 * Math.cos(t * 0.7)) + 'px';
+    parts.b2.style.left = (503 - 400 - 170 * Math.sin(t * 0.8 + 1)) + 'px'; parts.b2.style.top = (620 + 110 * Math.sin(t * 0.6)) + 'px';
+    const m = outBack(t / 0.55); parts.mark.style.transform = `translateX(-50%) scale(${lerp(0.82, 1, m)})`; parts.mark.style.opacity = out3(t / 0.25);
+    parts.chips.forEach((c, i) => { const k = out3((t - NOTES[i]) / 0.22); c.style.opacity = k; c.style.transform = `translateY(${lerp(40, 0, k)}px)`; c.style.filter = `blur(${lerp(8, 0, k)}px)`;
+      c.style.borderColor = (t >= NOTES[i] && t < NOTES[i] + 0.35) ? ACC : 'rgba(85,82,224,0.55)'; });
+    const n = out3((t - CHORD) / 0.32); parts.name.style.clipPath = `inset(0 0 0 ${100 - 100 * n}%)`;
+    const r = out3((t - CHORD - 0.08) / 0.4); parts.rule.style.width = (360 * r) + 'px'; parts.rule.style.opacity = r;
+    const g = out3((t - CHORD - 0.12) / 0.28); parts.tag.style.opacity = g; parts.tag.style.transform = `translateX(-50%) translateY(${lerp(14, 0, g)}px)`;
+    parts.tag.style.top = '1024px';
+    const h = out3((t - CHORD - 0.24) / 0.28); parts.handle.style.opacity = h;
+  } else if (V === 'lines') {
+    parts.paths.forEach((p, k) => { const L = +p.dataset.L; const d = out3((t - k * 0.025) / 0.6); p.style.strokeDashoffset = L * (1 - d); });
+    const rc = out3((t - 0.25) / 0.5); parts.ringc.style.strokeDashoffset = 2 * Math.PI * 176 * (1 - rc);
+    const m = out3((t - 0.05) / 0.35); parts.mark.style.opacity = m; parts.mark.style.transform = `translateX(-50%) scale(${lerp(0.94, 1, m)})`;
+    const rb = parts.row.getBoundingClientRect();
+    parts.g.forEach((g, i) => { const k = out3((t - NOTES[i]) / 0.14); g.style.opacity = lerp(0.15, 1, k);
+      const rr = parts.rings[i], gb = g.getBoundingClientRect(), x = (t - NOTES[i]) / 0.45;
+      if (x >= 0 && x <= 1) { const R = 32 * (1.25 + 0.7 * out3(x)); Object.assign(rr.style, { display: 'block', left: (gb.left + 32 - R) + 'px', top: (gb.top + 32 - R) + 'px', width: 2 * R + 'px', height: 2 * R + 'px', opacity: 0.85 * (1 - x) }); }
+      else rr.style.display = 'none'; });
+    parts.w.forEach((w, i) => { const k = out3((t - CHORD - i * 0.1) / 0.3); w.style.transform = `translateY(${lerp(110, 0, k)}px)`; });
+    const g = out3((t - CHORD - 0.2) / 0.28); parts.tag.style.opacity = g;
+    const h = out3((t - CHORD - 0.3) / 0.28); parts.handle.style.opacity = h;
+  } else {
+    parts.grid.style.transform = `scale(${1 + 0.03 * t}) translateY(${-6 * t}px)`;
+    parts.glow.style.opacity = 0.22 * out3((t - CHORD) / 0.4);
+    parts.g.forEach((g, i) => { const k = (t - NOTES[i]) / 0.2; const y = k < 0 ? -60 : k < 1 ? -60 * (1 - outBack(k)) : 0; g.style.opacity = out3(k * 2); g.style.transform = `translateY(${y}px)`; });
+    const p = clamp((t - NOTES[0]) / (NOTES[3] + 0.12 - NOTES[0])); const bw = 420 * out3(p); parts.bar.style.width = bw + 'px'; parts.bar.style.left = (503 + 210 - bw) + 'px';
+    parts.w.forEach((w, i) => { const k = out3((t - CHORD - i * 0.09) / 0.32); w.style.transform = `translateX(${lerp(-0, 0, k)}px) translateY(${lerp(170, 0, k)}px)`; w.style.opacity = k; });
+    const g = out3((t - CHORD - 0.18) / 0.3); parts.tag.style.opacity = g; parts.tag.style.transform = `translateX(-50%) translateY(${lerp(16, 0, g)}px)`;
+    const h = out3((t - CHORD - 0.28) / 0.3);
+    parts.mark.style.opacity = h; parts.handle.style.opacity = h;
+    const hw = parts.handle.getBoundingClientRect().width, tot = hw + 24 + 96, x0 = 503 - tot / 2;
+    parts.handle.style.left = x0 + 'px'; parts.mark.style.left = (x0 + hw + 24) + 'px'; parts.mark.style.transform = `scale(${lerp(0.7, 1, outBack(h))})`;
+  }
+};
+build();
+document.fonts.ready.then(() => { window.renderAt(0); window.ready = true; });
+</script></body></html>

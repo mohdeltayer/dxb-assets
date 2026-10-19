@@ -1436,6 +1436,12 @@ and right-to-left text better than the image library.
    reading pace apply; renders run on the Mac once it is live (browser
    rendering is slow on the 2-core container). Nothing replaces the current
    pieces until he approves the side-by-side.
+5. Built 19 Oct: `templates/web/outro.html` (three variants on `?v=`: `aurora`, `lines`, `kinetic`; theme accent,
+   the jingle's note and chord times from `sonic.beats`) and `templates/web/render.mjs <page> <out.mp4> <secs>
+   [query]` (headless Chromium, one screenshot per frame, /fonts/ served from the private Dubai folder,
+   Playwright from room3d's node_modules through a `node_modules` link). About 15 to 50 s a card on the
+   container. The side-by-side with the current card went to Mohammad on 19 Oct
+   (`live/2026-10-19/web-outro/`); his verdict is pending.
 
 ## Explainers from the source's own drawings (trial, 27 Sep 2026)
 
