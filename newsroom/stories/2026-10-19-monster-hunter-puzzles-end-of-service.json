@@ -1,75 +1,75 @@
 {
-  "id": "2026-10-19-monster-hunter-puzzles-end-of-service",
-  "title": "Capcom ends Monster Hunter Puzzles: Felyne Isles on 14 Jan 2027 (global); buy-once Furever version 12 Nov; Switch and Steam ports later",
-  "game": "Monster Hunter Puzzles: Felyne Isles",
-  "companies": [
-    "Capcom"
-  ],
-  "priority": "🟢",
-  "status": "queued",
-  "related": [],
-  "sources": [
-    {
-      "role": "primary",
-      "name": "Capcom notice page (English; ten languages)",
-      "url": "https://mobile.capcom.com/mhpuzzle/en/notice_announcement.html"
-    },
-    {
-      "role": "primary",
-      "name": "@MHPuzzles official X post, 19 Oct 03:00Z",
-      "url": "https://x.com/MHPuzzles/status/2112015883203940808"
-    }
-  ],
-  "claims": [
-    {
-      "text": "End of service 14 Jan 2027 11:00 JST, global",
-      "status": "confirmed (official)"
-    },
-    {
-      "text": "In-app purchases and VIP License sales stop 12 Nov",
-      "status": "confirmed"
-    },
-    {
-      "text": "Furever buy-once version on iOS/Android 12 Nov; Switch and Steam ports, dates later",
-      "status": "confirmed"
-    },
-    {
-      "text": "Data transfer with conditions (2.25.00+, same OS, cloud)",
-      "status": "confirmed"
-    },
-    {
-      "text": "Price",
-      "status": "not stated"
-    }
-  ],
-  "why": "A Monster Hunter game closes after about two and a half years and returns as a buy-once version, also coming to Switch and Steam",
-  "lanes": {
-    "dl": {
-      "lane": "Reel",
-      "template": "clipcard",
-      "chip": "رسمي",
-      "time": "17:00 Dubai, 19 Oct",
-      "headline": "إغلاق لعبة Monster Hunter Puzzles على الهواتف في يناير",
-      "x": "توقف كابكوم (Capcom) خدمة لعبة الهواتف Monster Hunter Puzzles في 14 يناير 2027، وتطرح في 12 نوفمبر نسخة منها تُشترى مرة واحدة.",
-      "ig": "تنهي Monster Hunter Puzzles خدمتها في 14 يناير 2027، وتصدر قبل ذلك نسخة تُشترى مرة واحدة. / أعلنت كابكوم (Capcom) أنها ستوقف خدمة لعبة الهواتف Monster Hunter Puzzles: Felyne Isles في 14 يناير 2027، بعد مرور نحو عامين ونصف على إطلاقها في يونيو 2024. / وتتوقف المشتريات داخل اللعبة وبيع VIP License في 12 نوفمبر، وهو اليوم نفسه الذي تصدر فيه على iOS وAndroid نسخة Monster Hunter Puzzles: Felyne Isles Furever، وهي نسخة تُشترى مرة واحدة. / وقالت الشركة إن نسختي Nintendo Switch وSteam قيد التطوير، وستعلن موعدهما لاحقًا. / ويمكن نقل البيانات إلى النسخة الجديدة على النظام نفسه عبر iCloud أو Google Cloud، بشرط تحديث اللعبة قبل إغلاق الخدمة إلى الإصدار 2.25.0 أو أحدث، وعدم حذفها، مع تغيير بعض الميزات وعدم انتقال بعض البيانات. / ولم تعلن كابكوم سعر النسخة الجديدة بعد.",
-      "lines": [
-        "بعد مرور نحو عامين ونصف\nعلى إطلاقها في يونيو 2024",
-        "أما نسخة Furever الجديدة\nفتُشترى مرة واحدة",
-        "ونسختا Nintendo Switch وSteam\nقيد التطوير دون موعد بعد"
-      ]
-    }
+ "id": "2026-10-19-monster-hunter-puzzles-end-of-service",
+ "title": "Capcom ends Monster Hunter Puzzles: Felyne Isles on 14 Jan 2027 (global); buy-once Furever version 12 Nov; Switch and Steam ports later",
+ "game": "Monster Hunter Puzzles: Felyne Isles",
+ "companies": [
+  "Capcom"
+ ],
+ "priority": "🟢",
+ "status": "published",
+ "related": [],
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Capcom notice page (English; ten languages)",
+   "url": "https://mobile.capcom.com/mhpuzzle/en/notice_announcement.html"
   },
-  "media": [
-    {
-      "file": "cards/2026-10/monster-hunter-puzzles-end-of-service-reel-v1.mp4",
-      "kind": "Capcom's App Store preview video (1920x886, lowres_ok), its own music; one card with the two dates on the numgfx ground"
-    }
-  ],
-  "times": {
-    "dl": "2026-10-19T13:00:00Z"
+  {
+   "role": "primary",
+   "name": "@MHPuzzles official X post, 19 Oct 03:00Z",
+   "url": "https://x.com/MHPuzzles/status/2112015883203940808"
+  }
+ ],
+ "claims": [
+  {
+   "text": "End of service 14 Jan 2027 11:00 JST, global",
+   "status": "confirmed (official)"
   },
-  "notes": [
-    "19 Oct 08:34Z: built b178 (clipcard, playful, 19.3 s). Grammar review: three required edits; service not servers on the hook and card. DeepL back-check matches.",
-    "19 Oct 08:35Z: gate 08:31Z re-read Capcom's English notice; queued X/IG/Threads for 13:00Z (17:00 Dubai), approval 'go: rolling queue; preview sent 08:35Z'."
-  ]
+  {
+   "text": "In-app purchases and VIP License sales stop 12 Nov",
+   "status": "confirmed"
+  },
+  {
+   "text": "Furever buy-once version on iOS/Android 12 Nov; Switch and Steam ports, dates later",
+   "status": "confirmed"
+  },
+  {
+   "text": "Data transfer with conditions (2.25.00+, same OS, cloud)",
+   "status": "confirmed"
+  },
+  {
+   "text": "Price",
+   "status": "not stated"
+  }
+ ],
+ "why": "A Monster Hunter game closes after about two and a half years and returns as a buy-once version, also coming to Switch and Steam",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "template": "clipcard",
+   "chip": "رسمي",
+   "time": "17:00 Dubai, 19 Oct",
+   "headline": "إغلاق لعبة Monster Hunter Puzzles على الهواتف في يناير",
+   "x": "توقف كابكوم (Capcom) خدمة لعبة الهواتف Monster Hunter Puzzles في 14 يناير 2027، وتطرح في 12 نوفمبر نسخة منها تُشترى مرة واحدة.",
+   "ig": "تنهي Monster Hunter Puzzles خدمتها في 14 يناير 2027، وتصدر قبل ذلك نسخة تُشترى مرة واحدة. / أعلنت كابكوم (Capcom) أنها ستوقف خدمة لعبة الهواتف Monster Hunter Puzzles: Felyne Isles في 14 يناير 2027، بعد مرور نحو عامين ونصف على إطلاقها في يونيو 2024. / وتتوقف المشتريات داخل اللعبة وبيع VIP License في 12 نوفمبر، وهو اليوم نفسه الذي تصدر فيه على iOS وAndroid نسخة Monster Hunter Puzzles: Felyne Isles Furever، وهي نسخة تُشترى مرة واحدة. / وقالت الشركة إن نسختي Nintendo Switch وSteam قيد التطوير، وستعلن موعدهما لاحقًا. / ويمكن نقل البيانات إلى النسخة الجديدة على النظام نفسه عبر iCloud أو Google Cloud، بشرط تحديث اللعبة قبل إغلاق الخدمة إلى الإصدار 2.25.0 أو أحدث، وعدم حذفها، مع تغيير بعض الميزات وعدم انتقال بعض البيانات. / ولم تعلن كابكوم سعر النسخة الجديدة بعد.",
+   "lines": [
+    "بعد مرور نحو عامين ونصف\nعلى إطلاقها في يونيو 2024",
+    "أما نسخة Furever الجديدة\nفتُشترى مرة واحدة",
+    "ونسختا Nintendo Switch وSteam\nقيد التطوير دون موعد بعد"
+   ]
+  }
+ },
+ "media": [
+  {
+   "file": "cards/2026-10/monster-hunter-puzzles-end-of-service-reel-v1.mp4",
+   "kind": "Capcom's App Store preview video (1920x886, lowres_ok), its own music; one card with the two dates on the numgfx ground"
+  }
+ ],
+ "times": {
+  "dl": "2026-10-19T13:00:00Z"
+ },
+ "notes": [
+  "19 Oct 08:34Z: built b178 (clipcard, playful, 19.3 s). Grammar review: three required edits; service not servers on the hook and card. DeepL back-check matches.",
+  "19 Oct 08:35Z: gate 08:31Z re-read Capcom's English notice; queued X/IG/Threads for 13:00Z (17:00 Dubai), approval 'go: rolling queue; preview sent 08:35Z'."
+ ]
 }
