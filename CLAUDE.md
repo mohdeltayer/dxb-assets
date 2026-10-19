@@ -662,6 +662,22 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
     (`reel.py` stops on a third). Applies from the next Reel after Valve
     Index; the four that followed it that morning (numbers, clipcard,
     explainer, split) went out before the rule and sit in the window.
+- Grid tile (advisor, 19 Oct 2026, agreed with Mohammad, from his profile
+  screenshot: 189.7K views in 30 days, the grid judged appealing and
+  readable). 1. Instagram's Reels icon covers the top right of every grid
+  tile, where the chip sat: the chip row is 60 px lower (`reel.CHIP_DROP`,
+  `HEAD_TOP`), the headline and the persistent mark with it, and
+  `head_layer` stops when any chip or text pixel falls in the 140 px square
+  at the top right of the first frame's 3:4 window (x 940 to 1080, y 240 to
+  380; `grid_corner_clear`). First used on the Kojima Edgerunners Reel of
+  19 Oct; check each first frame cropped to 3:4. 2. The first frame never
+  shows a trailer's slate, title card or publisher text (the Rockstar tile
+  showed "GAMES PRESENTS" behind the headline): `shotsheet` reads the first
+  shot's first frame with tesseract (`_words`; `apt-get install -y
+  tesseract-ocr` in a new container, it warns when missing) and flags any
+  text with the first clean seek time after it (`first_clean`); move the
+  shot's start there. 3. Nothing else on the cover changes: headline, band,
+  colour variety and the Ocarina series card stay.
 - Strips and sheets go into git (advisor, 14 Oct 2026): every final render
   commits its `<name>-strip.jpg` (the finished Reel's frames) and
   `<name>-sheet.jpg` (the shot sheet) to `cards/YYYY-MM/` beside the mp4, in
@@ -1370,6 +1386,56 @@ the series intro (`templates/ocarina_intro.py <days>`, his Triforce Medley uploa
 يومًا»; never يتبقى) and keeps the everyday sound, never the 8-bit retro
 flavour. The 23 Nov anniversary of the original belongs to the series too.
 Episode 1 (why it matters) is queued for 13 Oct 18:00 Dubai.
+
+Mini documentary (advisor, 19 Oct 2026, agreed with Mohammad: "change the
+content, not the intro or the outro... so it looks like a mini, well-designed
+documentary"). Found in the first five: episodes 3, 4 and 5 all run trailer
+A's score from 26.0 s and episode 1 ran trailer A's opening from 5.0 s, so
+the same music returned episode after episode; the Hyrule Field shot with the
+castle appears in episodes 1 and 4; only 4 and 5 opened on the series intro.
+1. Fixed identity: every episode opens on the series intro
+   (`ocarina_intro.py`, «باقي N يومًا») and closes on the same outro.
+   Episodes 1 to 3 stay as posted.
+2. Everything between is built around the episode's subject, with its own
+   material and its own sound: a character or hero gets that character's
+   reveal footage mixed with official artwork, the lines saying who they are;
+   music has the piece described heard (the presentation's stretch where it
+   plays); a mechanic is shown in action, the N64 original next to the
+   Switch 2 version; history or making-of uses archive material, official
+   artwork and the source's own figures; places and the world take the
+   official map as a guided piece (web-style motion, below).
+3. Series ledger: `notes/ocarina-series.md` records each episode's shots and
+   audio stretch. No shot and no audio stretch appears in two episodes;
+   check a new episode's shot list and track against it before the render.
+4. Episode 5 (Z-targeting, Tue 20 Oct) is rebuilt on a stretch no earlier
+   episode used (combat or targeting music from Aonuma's presentation) with
+   its shots checked against the ledger; had there been no time, it would
+   have posted as built and the rule started at episode 6.
+
+## Web-style motion graphics (pilot, advisor, 19 Oct 2026, agreed with Mohammad)
+
+Modern web-style animation, written in HTML, CSS and JavaScript and rendered
+frame by frame to video in headless Chromium (the room3d route: a
+deterministic `renderAt(t)`, Remotion-style), in the Digital Lounge palette
+and the Dubai font, laid over or between footage. Browsers also shape Arabic
+and right-to-left text better than the image library.
+1. A reusable library, each piece built once and cached like the end-card
+   masters: the outro first (two or three variants that rotate), then the fact
+   strip, number counters and charts, list tiles, chips, and the explainer
+   rings and highlights.
+2. Bespoke pieces for special stories. First candidate: an Ocarina "world"
+   episode on the official map: the camera moves across it, each region
+   lights up with its name, then it zooms into Hyrule Castle to show the new
+   artwork with the town around it beside the original, where castle and town
+   square were separate. Later: a box opening for edition stories, a mechanic
+   shown step by step.
+3. Pilot order: (a) the outro in the new style, side by side with the current
+   one, for Mohammad's verdict; (b) one bespoke piece, the map, if a coming
+   Ocarina episode fits it.
+4. Rules: readable at phone size before it looks fancy; the safe zone and
+   reading pace apply; renders run on the Mac once it is live (browser
+   rendering is slow on the 2-core container). Nothing replaces the current
+   pieces until he approves the side-by-side.
 
 ## Explainers from the source's own drawings (trial, 27 Sep 2026)
 

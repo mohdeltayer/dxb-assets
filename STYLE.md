@@ -1,4 +1,4 @@
-# Digital Lounge: the rules in force (18 Oct 2026)
+# Digital Lounge: the rules in force (19 Oct 2026)
 
 One page of what applies today. CLAUDE.md is the full, dated history and wins
 on detail; each line here names its section there. Anything listed under
@@ -105,6 +105,11 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 - **Text:**
   - The chip and headline sit at the top for about 3.5 s; the first frame is
     the grid tile.
+  - Grid tile (19 Oct): the chip row sits 60 px lower so Instagram's Reels
+    icon never covers it, and nothing is drawn in the 140 px square at the
+    top right of the 3:4 window (reel.py stops); the first frame carries no
+    slate, title card or publisher text (`shotsheet` reads it and names the
+    first clean frame) (CLAUDE.md "Grid tile").
   - Then 4 to 6 lines of the actual story: white Dubai Bold with an indigo
     outline, right-aligned, 1 to 3 visual lines each.
   - Each line stays up for its reading time (`read_secs`); the safe zone is
@@ -180,6 +185,20 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     subject-detecting `autofocus` (YOLOv8n, two keyframes per scene, crop
     window drawn on the shot sheet).
   - The retro sound is for on-this-day pieces only.
+- **«الطريق إلى Ocarina» (19 Oct):** a mini documentary. The series intro
+  opens and the same outro closes every episode; between them, material and
+  sound built for the episode's subject (a character's reveal footage and
+  art, the music piece itself, the mechanic N64 beside Switch 2, archive and
+  figures for history, the official map for places). No shot and no audio
+  stretch in two episodes: `notes/ocarina-series.md` keeps the ledger
+  (CLAUDE.md "Mini documentary").
+- **Web-style motion (pilot, 19 Oct):** HTML/CSS/JS pieces rendered frame by
+  frame in headless Chromium, palette and Dubai: the outro first (two or
+  three rotating variants) side by side with the current one for Mohammad's
+  verdict, then an Ocarina map piece. Readable at phone size first; safe
+  zone and reading pace apply; renders on the Mac once live; nothing
+  replaces a current piece until he approves (CLAUDE.md "Web-style motion
+  graphics").
 - **Process:**
   1. A six-line brief (angle and hook kind, template and opening beat, cover,
      sound, key shot, total seconds).

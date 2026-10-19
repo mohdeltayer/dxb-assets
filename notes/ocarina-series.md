@@ -23,3 +23,37 @@ once a plain-MP4 route exists (YouTube only on 14 Oct). Official footage and sti
 
 Open for his revision: order, dates, which subjects to drop or add (a Majora's Mask companion
 episode, his own hands-on once he plays it, the Electric Ocarina accessory on its own).
+
+## Series ledger: shots and sound per episode (advisor, 19 Oct 2026)
+
+Rule (CLAUDE.md "Mini documentary"): no shot and no audio stretch appears in two
+episodes. Every episode opens on the series intro and closes on the same outro;
+those two are the fixed identity and are not counted here. Check a new episode's
+shot list and track against this table before its shot sheet, and add its row
+once it is final. Times are seek seconds in the file.
+
+Sources: **A** Nintendo trailer A, 8 Sep (`uploads/oot-trailer-a.mp4`, 205.8 s,
+US store); **O** Overview Trailer, 14 Oct (`oot-overview-trailer-nintendo-1280.mp4`,
+283.2 s, US store); **P** Aonuma's gameplay presentation (`oot-aonuma-presentation-1280.mp4`,
+910.1 s, US store nsuid 70010000130792, publicId 9291846d...; the IGN 1920 copy of the
+same presentation is **P-IGN**, the same times).
+
+| Ep | Subject | Shots | Sound under the body |
+|---|---|---|---|
+| 1 | Why it matters (13 Oct) | P-IGN 472-488, 532-538.3, 772-784 (Deku Tree, the exit to Hyrule Field, the field with the castle) | A from 5.0, the orchestral opening |
+| 2 | What's new (15 Oct) | O 46.8-50.3, 144.0-148.6, 150.6-155.8, 160.2-165.6, 182.2-186.9 | O from 136.0 |
+| 3 | How it was born (18 Oct) | A 39.8-43.3, 112.4-117.6, 56.2-61.6, 61.6-66.2, 172.0-178.0; O 97.6-100.3 | A from 26.0 |
+| 4 | The music (19 Oct) | A 31.0-34.3, 40.5-42.5, 34.9-37.65, 62.0-64.25; O 63.0-63.95, 71.6-74.75, 99.0-101.0, 15.2-17.1, 48.0-50.75, 152.6-155.2, 131.0-133.75 | A from 26.0 (repeats ep 3) |
+| 5 | Z-targeting (20 Oct), v1 as built 19 Oct 08:20Z, not posted | O 95.0-97.5, 89.6-92.3, 99.0-101.25, 46.8-49.6, 186.0-188.4, 194.3-196.7; P 28.3-30.75, 47.6-49.85, 39.4-41.8, 378.0-380.75, 364.4-366.3 | A from 26.0 (repeats eps 3 and 4) |
+
+Repeats found on 19 Oct: A from 26.0 in eps 3, 4 and 5 (ep 1's A from 5.0 runs
+into it); the Hyrule Field with the castle in eps 1 and 4; A 61.6/62.0 (the
+knights) in eps 3 and 4; O 97.6 to 101 (the green room knights) in eps 3, 4 and
+5; O 46.8 (Link with Navi) in eps 2 and 5; O 182 to 188 (the Master Sword) in
+eps 2 and 5. Episode 5 is rebuilt (v2) without any of them.
+
+Still unused for later episodes: O 0 to 45, 51 to 62, 76 to 89, 102 to 130,
+200 to 283 (to be checked for slates); A 0 to 25 apart from ep 1's opening, 66
+to 112, 118 to 172; P 60 to 470, 540 to 770 and 790 to 900 apart from ep 5 v2's
+stretches below (Kokiri Forest, the Deku Tree, Hyrule Field by day and night,
+Castle Town, Lon Lon Ranch, the ocarina scenes at 762 and 804).

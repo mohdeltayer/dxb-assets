@@ -131,6 +131,22 @@ def frame_layer(path, theme, seed, h=420):
     im.alpha_composite(band.transpose(Image.FLIP_TOP_BOTTOM), (0, H - h)); im.save(path); return path
 
 
+#: The grid tile (advisor, 19 Oct 2026): Instagram's Reels icon covers the top right of every grid
+#: tile, where the chip sat. The chip row drops CHIP_DROP px, the headline with it, and no chip or
+#: text may fall in the GRID_CORNER px square at the top right of the first frame's 3:4 window
+#: (1080x1440, centred: y 240 to 1680). head_layer stops when it would.
+CHIP_DROP, GRID_CORNER = 60, 140
+HEAD_TOP = G.SAFE_TOP + 10 + CHIP_DROP
+GRID_TOP = (H - W * 4 // 3) // 2
+
+
+def grid_corner_clear(im, what='head'):
+    """Stop when anything drawn on `im` (RGBA, W x H) reaches the grid tile's top-right corner."""
+    box = (W - GRID_CORNER, GRID_TOP, W, GRID_TOP + GRID_CORNER)
+    if im.getchannel('A').crop(box).point(lambda v: 255 if v > 40 else 0).getbbox():
+        raise ValueError(f'{what} reaches the grid tile corner (Reels icon, x {box[0]} to {W}, y {box[1]} to {box[3]})')
+
+
 def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
                vivid=False, theme='cold', seed=0, style='lines', meta_path=None):
     """Chip and headline on a soft band at the top; the credit line (rule, source · date)
@@ -154,13 +170,14 @@ def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
         hl = max(L, int(W - R - bw - 16))
     rtl_starts(G._wrap(probe, headline, f, W - hl - R), 'headline')
     chip = G._ACC if vivid else None
-    end = G._head(probe, headline, G.SAFE_TOP + 10, label, country, hs, hst, right=R, left=hl)
+    end = G._head(probe, headline, HEAD_TOP, label, country, hs, hst, right=R, left=hl)
     meta_y = end + 30
     _band(im, 0, meta_y + 220, True, 190)
     if vivid:
         _colour(im, meta_y + 140, theme, seed, style)
     t = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(t)
-    G._head(d, headline, G.SAFE_TOP + 10, label, country, hs, hst, right=R, left=hl, chip=chip)
+    G._head(d, headline, HEAD_TOP, label, country, hs, hst, right=R, left=hl, chip=chip)
+    grid_corner_clear(t)
     if not meta_path:                      # one layer, as before 14 Oct
         d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=G._ACC)
         d.text((W - R - 62, meta_y), f'{source}\u200f  ·  \u200f{A.arabic_date(date)}', font=A.F('Medium', 32),
@@ -203,7 +220,7 @@ def mark_layer(path):
     mark, mask = mark.resize((MARK_PX, MARK_PX), Image.LANCZOS), mask.resize((MARK_PX, MARK_PX), Image.LANCZOS)
     mask = mask.point(lambda v: int(v * MARK_ALPHA))
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-    y = G.SAFE_TOP + 10 + 57 - int(57 * 1.5 / 2) - MARK_PX // 2     # the chip row's middle (chip bottom at +57, 57 high)
+    y = HEAD_TOP + 57 - int(57 * 1.5 / 2) - MARK_PX // 2     # the chip row's middle (chip bottom at +57, 57 high)
     im.paste(mark, (G.SAFE_LEFT, y), mask); im.save(path); return path
 
 
@@ -943,6 +960,47 @@ def _window(bars, srcw, srch, focus):
     return x0, py, x0 + ww, py + ph
 
 
+def _words(im, conf=70):
+    """Words tesseract reads in `im` (PIL), at least three letters at `conf` or better. The
+    first frame is the grid tile (advisor, 19 Oct 2026): a slate, title card or publisher text
+    behind the headline ("GAMES PRESENTS" on the Rockstar tile) is caught by this. Needs the
+    tesseract binary (`apt-get install -y tesseract-ocr` in a new container); None when absent."""
+    import shutil, tempfile
+    if not shutil.which('tesseract'):
+        return None
+    with tempfile.NamedTemporaryFile(suffix='.png') as tf:
+        im.convert('L').save(tf.name)
+        r = subprocess.run(['tesseract', tf.name, '-', '--psm', '11', 'tsv'], capture_output=True, text=True)
+    out = []
+    for ln in r.stdout.splitlines()[1:]:
+        c = ln.split('\t')
+        if len(c) == 12 and c[11].strip() and float(c[10]) >= conf:
+            w = ''.join(ch for ch in c[11] if ch.isalpha())
+            if len(w) >= 3:
+                out.append(w)
+    return out
+
+
+def _vert(f, s, d, fo, t, width=1280):
+    """The cropped vertical frame the phone shows at seek time `t` of shot (f, s, d, fo)."""
+    full = _frame(C.U + f, t, width)
+    bars = _bars(C.U + f, s, d)[0]; srcw, srch = _src_size(C.U + f)
+    x0, y0, x1, y1 = _window(bars, srcw, srch, _fo_at(fo, t - s, d)); k = full.width / srcw
+    return full.crop((round(x0 * k), round(y0 * k), round(x1 * k), round(y1 * k)))
+
+
+def first_clean(shot, step=0.2, upto=3.0):
+    """The first seek time in the shot whose vertical frame carries no readable text, or None."""
+    f, s, d, fo = shot
+    t = s
+    while t <= s + min(upto, d - 0.5):
+        w = _words(_vert(f, s, d, fo, t))
+        if w is not None and not w:
+            return round(t, 2)
+        t += step
+    return None
+
+
 def shotsheet(shots, out):
     """Before any render: the first, middle and last frame of every shot, in
     one sheet, labelled with the seek time, so title cards, end slates,
@@ -951,11 +1009,23 @@ def shotsheet(shots, out):
     footage frame is a pair (14 Oct 2026): the cropped vertical frame the
     phone will show, and beside it the full 16:9 frame with the crop window
     outlined in the accent, so the editor sees what the crop took. Returns
-    (sheet path, [(shot index, time, flags)]) for frames flagged pink or black."""
+    (sheet path, [(shot index, time, flags)]) for frames flagged pink or black, and for
+    readable text in the first shot's first frame (the grid tile; advisor, 19 Oct 2026),
+    with the first clean seek time after it."""
     from PIL import ImageDraw as D
     FW, FH = 288, 162                        # the full frame; the vertical crop beside it is FH tall
     VW = round(FH * W / H)
     tiles, flagged = [], []
+    f0, s0, d0, fo0 = shots[0]               # the grid tile: no text in the first frame (advisor, 19 Oct 2026)
+    if os.path.splitext(f0)[1].lower() in STILL:
+        w0 = _words(Image.open(C.U + f0).convert('RGB'))
+    else:
+        w0 = _words(_vert(f0, s0, d0, fo0, s0))
+    if w0 is None:
+        print('shotsheet: tesseract missing, first-frame text not checked (apt-get install -y tesseract-ocr)')
+    elif w0:
+        fc = None if os.path.splitext(f0)[1].lower() in STILL else first_clean(shots[0])
+        flagged.append((0, s0, ['text: ' + ' '.join(w0[:4]) + (f'; first clean frame at {fc}' if fc is not None else '; no clean frame in the first 3 s')]))
     for i, (f, s, d, fo) in enumerate(shots):
         z = zoom(shots[i])
         soft = ['soft'] if z > MAX_ZOOM else []       # enlarged past MAX_ZOOM: look for a sharper copy
