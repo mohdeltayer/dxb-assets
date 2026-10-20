@@ -1378,5 +1378,27 @@
   "runner": "actions",
   "cores": 4,
   "job_secs": 231
+ },
+ {
+  "name": "shrek-2-remastered-official-november-10-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-20T17:55Z",
+  "stages": {
+   "checks": 0.8,
+   "montage": 59.2,
+   "text": 44.5,
+   "audio": 1.2,
+   "outro": 51.3
+  },
+  "total": 157.0,
+  "lane": "runner",
+  "queued_at": "2026-10-20T17:50:07Z",
+  "finished_at": "2026-10-20T17:55Z",
+  "render_min": 2.62,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 238,
+  "setup_min": 1.32,
+  "story": "shrek-2-remastered-official-november-10"
  }
 ]
