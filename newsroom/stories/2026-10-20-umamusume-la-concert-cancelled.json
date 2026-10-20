@@ -1,0 +1,75 @@
+{
+  "id": "2026-10-20-umamusume-la-concert-cancelled",
+  "title": "Cygames cancels Umamusume 7th EVENT WORLD TOUR 'THE STAGE' in Los Angeles (22-23 Oct): US visas not obtained; refunds planned",
+  "game": "Umamusume: Pretty Derby",
+  "companies": [
+    "Cygames",
+    "JTB"
+  ],
+  "category": "event",
+  "status": "queued",
+  "lane": "rolling queue",
+  "chip": "تحديث",
+  "template": "quote",
+  "follows": "2026-10-19-umamusume-la-concert-visas",
+  "sources": [
+    {
+      "role": "primary",
+      "name": "Uma Musume official X account",
+      "url": "https://x.com/uma_musu/status/2112401910900859135",
+      "time": "2026-10-20T04:33:56Z",
+      "via": "api.fxtwitter, read 05:10Z, re-read at the gate"
+    },
+    {
+      "role": "primary",
+      "name": "umamusume.jp news 3503",
+      "url": "https://umamusume.jp/news/detail?id=3503",
+      "time": "2026-10-20",
+      "via": "linked from the post (JS page, not read)"
+    },
+    {
+      "role": "outlet",
+      "name": "ORICON NEWS",
+      "url": "https://www.oricon.co.jp/news/2487398/",
+      "time": "2026-10-20T04:34Z"
+    }
+  ],
+  "claims": [
+    {
+      "text": "LA show of 7th EVENT WORLD TOUR THE STAGE (22 and 23 Oct local) cancelled",
+      "status": "verified",
+      "source": "Cygames"
+    },
+    {
+      "text": "Reason: the US visas the show needs could not be obtained after coordinating with the parties concerned; 苦渋の決断",
+      "status": "verified",
+      "source": "Cygames"
+    },
+    {
+      "text": "Refunds planned: venue tickets, streaming tickets, Uma Musume x JTB official tour, live viewing",
+      "status": "verified",
+      "source": "Cygames"
+    },
+    {
+      "text": "Measures for those who planned to attend in person under consideration; details on the 7th EVENT site",
+      "status": "verified",
+      "source": "Cygames"
+    },
+    {
+      "text": "Peacock Theater venue",
+      "status": "not used",
+      "source": "ORICON only"
+    }
+  ],
+  "media": [
+    {
+      "file": "umamusume-la-concert-cancelled-reel-v1.mp4",
+      "source_url": "Steam app 3224770 launch trailer (uploads/uma-launch.mp4)",
+      "kind": "the game's own footage, credited; trailer music from 28.5 s"
+    }
+  ],
+  "notes": "Grammar review: no required edits; uncertain: قرار مؤلم for 苦渋の決断 (DeepL forward pass gives قرار مؤلم for both agonizing and painful; kept). DeepL back-check matches; tدابير offered for measures, kept إجراءات. Template quote: trailer and split at four for the Dubai day.",
+  "times": {
+    "dl": "2026-10-20T06:00:00Z"
+  }
+}
