@@ -1,7 +1,7 @@
 {
  "name": "scramble-knights-online-game-pass-october-26",
- "note": "Scramble Knights Online at the ID@Xbox x IGN Showcase (Xbox Wire recap 20 Oct 17:45Z): MMO-lite action RPG, out 26 Oct 2026 on Xbox Series X|S, Xbox on PC and Game Pass. Template trailer. Footage: the official release-date trailer on IGN (1920x1080; no 4K copy), shots clear of the ESRB card, the logo cards and the burnt-in feature captions. Sound: the trailer's own music from 2.8 s. v2: the outfit screen and the desert pop-ups dropped (text cut by the crop: its button bar, 'Strength +1', 'Old Knight'); snow fight and the purple level instead.",
- "out": "cards/2026-10/scramble-knights-online-game-pass-october-26-reel-v2.mp4",
+ "note": "Scramble Knights Online at the ID@Xbox x IGN Showcase (Xbox Wire recap 20 Oct 17:45Z): MMO-lite action RPG, out 26 Oct 2026 on Xbox Series X|S, Xbox on PC and Game Pass. Template split (strip: date, platforms, Game Pass; a third trailer in a row was not allowed). Footage: the official release-date trailer on IGN (1920x1080; no 4K copy), shots clear of the ESRB card, the logo cards and the burnt-in feature captions. Sound: the trailer's own music from 2.8 s. v2: the outfit screen and the desert pop-ups dropped (text cut by the crop: its button bar, 'Strength +1', 'Old Knight'); snow fight and the purple level instead. v3: split.",
+ "out": "cards/2026-10/scramble-knights-online-game-pass-october-26-reel-v3.mp4",
  "footage": [
   {
    "file": "scramble-knights.mp4",
@@ -161,7 +161,7 @@
    7,
    [
     [
-     "ويخوضون المهام معًا\nويصنعون عتادًا أقوى",
+     "ويخوضون المهام معًا",
      {
       "size": 54
      }
@@ -173,7 +173,7 @@
    10,
    [
     [
-     "وتصدر في 26 أكتوبر\nضمن Game Pass من اليوم الأول",
+     "ثم يصنعون عتادًا أقوى\nقبل المهمة التالية",
      {
       "size": 54
      }
@@ -187,11 +187,25 @@
  "date": "20 Oct 2026",
  "theme": "playful",
  "style": "frame",
- "template": "trailer",
+ "template": "split",
  "head_size": 60,
  "track": [
   "scramble-knights.mp4",
   2.8
  ],
- "cut": true
+ "cut": true,
+ "strip": [
+  [
+   "الموعد",
+   "26 أكتوبر"
+  ],
+  [
+   "المنصات",
+   "Xbox وPC"
+  ],
+  [
+   "الاشتراك",
+   "Game Pass"
+  ]
+ ]
 }
