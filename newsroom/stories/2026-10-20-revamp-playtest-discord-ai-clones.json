@@ -1,0 +1,61 @@
+{
+  "id": "2026-10-20-revamp-playtest-discord-ai-clones",
+  "title": "ReVamp (Digital Sun) moves its first playtest from Steam to Discord over AI cloning fears; public playtest around January; release 25 Mar 2027 unchanged",
+  "game": "ReVamp",
+  "companies": [
+    "Digital Sun"
+  ],
+  "category": "studio",
+  "status": "queued",
+  "lane": "rolling queue",
+  "chip": "جديد",
+  "template": "quote",
+  "sources": [
+    {
+      "role": "primary",
+      "name": "Digital Sun, Steam announcement 'About the ReVamp playtest' (DigitalMallen)",
+      "url": "https://store.steampowered.com/news/app/3295000",
+      "time": "2026-10-19T13:05Z",
+      "via": "Steam news API, read 05:58Z and at the gate 06:21Z"
+    },
+    {
+      "role": "outlet",
+      "name": "PC Gamer (quotes marketing manager Israel Mallén)",
+      "url": "https://www.pcgamer.com/gaming-industry/moonlighter-studio-wont-host-a-public-playtest-of-its-next-game-due-to-rampant-ai-led-cloning-we-know-were-not-the-only-developers-feeling-this-way/",
+      "time": "2026-10-19T23:33Z"
+    }
+  ],
+  "claims": [
+    {
+      "text": "First playtest moves from Steam to Digital Sun's Discord, access in waves; still starts 29 Oct",
+      "status": "verified",
+      "source": "Digital Sun"
+    },
+    {
+      "text": "Reason: games being reverse-engineered, cloned and published before the original is out; sharing a build with tens of thousands felt like too big a risk",
+      "status": "verified",
+      "source": "Digital Sun"
+    },
+    {
+      "text": "Public playtest hoped for around January; platforms urged to strengthen protections",
+      "status": "verified",
+      "source": "Digital Sun"
+    },
+    {
+      "text": "Release unchanged: 25 Mar 2027",
+      "status": "verified",
+      "source": "Digital Sun"
+    }
+  ],
+  "media": [
+    {
+      "file": "revamp-playtest-discord-ai-clones-reel-v1.mp4",
+      "source_url": "Steam app 3295000 reveal trailer (uploads/revamp-reveal.mp4)",
+      "kind": "the game's own trailer with its narration from 9.5 s; blood-red stretches left out; lowres_ok for one 952-row shot"
+    }
+  ],
+  "notes": "Grammar review: no required edits after the X text was softened ('hopes to open around January', not 'postponed to January'). DeepL back-check matches; forward pass gave الهندسة العكسية for reverse-engineered, taken into the caption quote.",
+  "times": {
+    "dl": "2026-10-20T08:00:00Z"
+  }
+}
