@@ -914,6 +914,31 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
     text readable: the chart's text area is checked for contrast (the ground
     behind the type stays at or below the indigo's brightness) before the
     render.
+- Numbers wear their game (advisor, 20 Oct 2026; Mohammad on the GTA 6
+  pre-orders Reel: "looks a bit generic, adding a logo or a theme close to
+  the game is more attractive"):
+  1. A numbers card about one game sits on that game's official key art or
+     a trailer frame, blurred and dimmed (the `still` ground), never the
+     plain indigo. `numgfx.shots(..., still=<art>)` now always takes the
+     `still` ground when an image is given, ahead of the rotation; the
+     contrast check behind the type still runs and dims harder when needed.
+  2. The game's official logo sits on a plate above the main figure
+     (`numgfx.put_logo(canvas, logo_png, box=LOGO_BOX, theme=)`: the logo
+     centred on a plate cut to the box, indigo at 78%, edge in the theme
+     accent; the default box, y 690 to 890, clears the headline). The first
+     frame, the grid tile, shows logo, figure and headline together.
+  3. The accent takes the theme nearest the game's own palette (spectacle
+     for GTA's sunsets, cold for sci-fi, playful for Nintendo, emerald and
+     so on); gold stays for multi-game charts and milestones. Our colours
+     never go pink; the game art behind may.
+  4. Footage first still holds for numbers stories: when the game has
+     official footage the template is `clipcard` (trailer hook, one card
+     with the figure, back to footage), not `numbers`
+     (`formats.pick(kind, footage=True)` swaps it). `numbers` alone is for
+     stories with no footage: Famitsu-style charts, company results,
+     multi-game rankings.
+  5. Multi-game charts keep the rotating living ground and put each game's
+     art or box shot beside its row, as `sales_full` already does.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under

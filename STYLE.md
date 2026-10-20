@@ -1,4 +1,4 @@
-# Digital Lounge: the rules in force (19 Oct 2026)
+# Digital Lounge: the rules in force (20 Oct 2026)
 
 One page of what applies today. CLAUDE.md is the full, dated history and wins
 on detail; each line here names its section there. Anything listed under
@@ -100,6 +100,13 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - Our own graphics sit on the moving numgfx ground, whose style rotates
     (waves, glow, wash, grid, blurred still) so consecutive numbers Reels
     differ, with the text area checked for contrast (14 Oct).
+  - Numbers wear their game (20 Oct): a one-game card sits on its blurred
+    key art (`still` ground) with its plated logo above the figure
+    (`numgfx.put_logo`), so the grid tile shows logo, figure and headline;
+    the accent is the theme nearest the game's palette, gold only for
+    multi-game charts and milestones. A game with footage takes `clipcard`,
+    not `numbers` (`formats.pick(..., footage=True)`); multi-game charts
+    keep the living ground with each game's art beside its row.
   - A framed window on the ground plays a clip when footage exists, not a
     still (14 Oct).
 - **Text:**
@@ -136,7 +143,8 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   templates/formats.py (`NEWS_MAP`): `trailer` (footage all the way, lines
   on the picture, no card), `split` (footage all the way plus a slim pinned
   fact strip), `clipcard` (footage, one card at the key beat, footage),
-  `numbers` (our graphics only, when no footage shows the news), and
+  `numbers` (our graphics only, when no footage shows the news; a game
+  with footage takes `clipcard`, 20 Oct), and
   `comparison`, `quote`, `explainer`, `handson`, `retro`.
   - Footage first: a story with a trailer takes `trailer` or `split` before
     any card template.

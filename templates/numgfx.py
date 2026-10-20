@@ -29,7 +29,7 @@ import json, math, os, subprocess, tempfile, shutil
 from functools import lru_cache
 import numpy as np
 from PIL import Image, ImageChops, ImageDraw, ImageFilter
-import cards as C, fast_ar as A, reel as RL
+import cards as C, fast_ar as A, ig_ar as G, reel as RL
 
 W, H = RL.W, RL.H
 SPEED = 26          # px a second the waves drift
@@ -41,6 +41,37 @@ MIN_TEXT = 40       # the smallest type on a card (advisor review, 14 Oct 2026):
 def canvas():
     """A transparent 1080x1920 canvas for one graphic (no ground of its own)."""
     return Image.new('RGBA', (W, H), (0, 0, 0, 0))
+
+
+# Game-skinned numbers (advisor, 20 Oct 2026; Mohammad on the GTA 6 pre-orders Reel: "looks a bit generic, adding a
+# logo or a theme close to the game is more attractive"). A numbers card about one game wears it: its official key art
+# or a trailer frame blurred behind (the 'still' ground, always, when `still` is given; _resolve) and its official logo
+# on a plate above the main figure, so the first frame (the grid tile) shows logo, figure and headline together.
+# Multi-game charts pass no still: they keep the rotating living ground and put each game's art beside its row.
+LOGO_BOX = (190, 690, 890, 890)     # under the headline (it ends near y 650), above the figure; inside the safe zone
+LOGO_PAD = 30                       # logo clear of the plate's edge
+
+
+def logo_plate(logo, box=LOGO_BOX, theme='cold'):
+    """The game's official logo (a transparent PNG) centred on a plate cut to `box` exactly (logos need plating):
+    the indigo ground at 78%, rounded, a 3 px edge in the theme's accent. Returns an RGBA image the size of `box`."""
+    w, h = box[2] - box[0], box[3] - box[1]
+    plate = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+    acc = G.ACCENTS[theme]
+    ImageDraw.Draw(plate).rounded_rectangle([1, 1, w - 2, h - 2], 26, fill=A.hx('#141332') + (199,),
+                                            outline=tuple(acc[:3]) + (255,), width=3)
+    art = Image.open(logo).convert('RGBA')
+    art = art.crop(art.getbbox() or (0, 0, art.width, art.height))
+    k = min((w - 2 * LOGO_PAD) / art.width, (h - 2 * LOGO_PAD) / art.height)
+    art = art.resize((max(1, round(art.width * k)), max(1, round(art.height * k))), Image.LANCZOS)
+    plate.alpha_composite(art, ((w - art.width) // 2, (h - art.height) // 2))
+    return plate
+
+
+def put_logo(im, logo, box=LOGO_BOX, theme='cold'):
+    """Draw the plated logo onto a canvas() graphic at `box`. Returns the canvas."""
+    im.alpha_composite(logo_plate(logo, box, theme), tuple(box[:2]))
+    return im
 
 
 def _profile(y):
@@ -324,8 +355,10 @@ def check_ground(graphic, ground, theme, seed=0, t0=0.0, still=None, region=None
 
 
 def _resolve(ground, out, still):
+    """A story about one game wears its art: with `still` the ground is 'still' (advisor, 20 Oct 2026), never a
+    rotated plain style. Without it the ground rotates among the others (multi-game charts, company results)."""
     if ground is None:
-        ground = rotate_ground(out, allow=None if still else [g for g in GROUNDS if g != 'still'])
+        ground = 'still' if still else rotate_ground(out, allow=[g for g in GROUNDS if g != 'still'])
     return ground
 
 

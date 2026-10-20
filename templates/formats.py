@@ -16,7 +16,7 @@ FORMATS = {
     'trailer':   'official footage runs the whole Reel with its own sound; the lines ride on the picture; no card (the default when a trailer exists)',
     'split':     'footage runs the whole Reel with a slim pinned fact strip (date, price, platforms; 2 or 3 items) low in the safe zone; the lines never repeat the strip (reel(..., strip=[...]), 14 Oct 2026)',
     'clipcard':  'footage for the hook and story, ONE card at the key beat (price table, date, figure), then footage again; the card holds its beat alone or under a one-line frame',
-    'numbers':   'our own graphics on the living ground for the whole Reel, only when no footage shows the news: sales charts, results, rankings',
+    'numbers':   'our own graphics on the living ground for the whole Reel, only when no footage shows the news: sales charts, results, rankings; a one-game card wears the game (its art blurred behind, its plated logo above the figure; numgfx.put_logo, 20 Oct 2026)',
     'comparison': 'two states with labels and hard cuts: prices by country, specs, before and after (reel(..., cut=True))',
     'quote':     "the speaker's line leads, in «» right after the headline; then footage of what they talked about",
     'explainer': "the source's own figures or screens step by step (patents, features, store pages)",
@@ -46,7 +46,7 @@ OPENERS = {
     'trailer':    'the strongest shot of the stretch, moving from frame one, the headline over it',
     'split':      'the footage moving from frame one; the strip pins when the headline leaves',
     'clipcard':   'the footage hook, moving; the card comes only at the key beat',
-    'numbers':    'the number alone, large, on the living ground; the chart builds after it',
+    'numbers':    'the number alone, large, on the living ground (one game: under its plated logo, on its blurred art); the chart builds after it',
     'comparison': 'the first state with its label; the second state is the cut',
     'quote':      'the quote itself in «», over the speaker or the thing they spoke of; the portrait never holds the whole Reel',
     'explainer':  "the source's first figure or screen, the part the story turns on ringed",
@@ -139,13 +139,17 @@ JUDGEMENT = {
 }
 
 
-def pick(kind, facts=None):
+def pick(kind, facts=None, footage=None):
     """The template for a kind of news: its first choice unless the ledger refuses it (a third in a row, a third
     card-led Reel in six, or a fifth of the day). `facts` is the brief's item count: a price story with more than three
-    facts can never be split (advisor, 14 Oct 2026)."""
+    facts can never be split (advisor, 14 Oct 2026). `footage=True` (the game has official footage) turns `numbers`
+    into `clipcard`: a trailer hook, one card with the figure, back to footage (advisor, 20 Oct 2026); numbers alone
+    is for stories with no footage (Famitsu-style charts, company results, multi-game rankings)."""
     opts = list(NEWS_MAP[kind])
     if kind == 'price' and facts is not None and facts > 3:
         opts = [f for f in opts if f != 'split'] or ['clipcard']
+    if footage:
+        opts = list(dict.fromkeys('clipcard' if f == 'numbers' else f for f in opts))
     for fmt in opts:
         if not check(fmt):
             return fmt
