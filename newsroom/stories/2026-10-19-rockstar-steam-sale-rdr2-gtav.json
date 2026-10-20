@@ -1,74 +1,104 @@
 {
-  "id": "2026-10-19-rockstar-steam-sale-rdr2-gtav",
-  "title": "Steam sale: Red Dead Redemption 2 -75% (229 to 57.25 AED/SR) and GTA V Enhanced -56% (171 to 75.24 AED/SR) until 22 Oct",
-  "game": "Red Dead Redemption 2; Grand Theft Auto V Enhanced",
-  "companies": [
-    "Rockstar Games",
-    "Valve"
-  ],
-  "priority": "🟢",
-  "status": "published",
-  "related": [
-    "2026-10-18-gta-6-one-month-to-go"
-  ],
-  "sources": [
-    {
-      "role": "primary",
-      "name": "Steam appdetails cc=ae and cc=sa, apps 1174180 and 3240220, read 05:40Z and 06:33Z",
-      "url": "https://store.steampowered.com/app/1174180/"
-    },
-    {
-      "role": "primary",
-      "name": "Steam store page, GTA V Enhanced (Offer ends 22 October)",
-      "url": "https://store.steampowered.com/app/3240220/"
-    }
-  ],
-  "claims": [
-    {
-      "text": "RDR2 229 to 57.25 AED and SR (-75%)",
-      "status": "confirmed (store)"
-    },
-    {
-      "text": "GTA V Enhanced 171 to 75.24 AED and SR (-56%)",
-      "status": "confirmed (store)"
-    },
-    {
-      "text": "Both offers end 22 October",
-      "status": "confirmed (store pages)"
-    },
-    {
-      "text": "GTA VI 19 Nov on PS5 and Xbox Series X|S",
-      "status": "confirmed (Rockstar; ledger 2026-10-18)"
-    }
-  ],
-  "why": "Gulf prices on two of Rockstar's biggest games a month before GTA VI; practical, priced in the readers' currencies",
-  "lanes": {
-    "dl": {
-      "lane": "Reel",
-      "template": "clipcard",
-      "chip": "السعر",
-      "time": "15:00 Dubai, 19 Oct",
-      "headline": "خصم حتى 75% على لعبتين من روكستار غيمز (Rockstar Games)",
-      "x": "خصم يصل إلى 75% على Red Dead Redemption 2 وGrand Theft Auto V Enhanced في متجر Steam حتى 22 أكتوبر: 57.25 و75.24 درهمًا في الإمارات، وبالأرقام نفسها بالريال في السعودية.",
-      "ig": "تنخفض Red Dead Redemption 2 على Steam إلى 57.25 درهمًا في الإمارات، بخصم 75% حتى 22 أكتوبر. / يعرض متجر Steam لعبتين من روكستار غيمز (Rockstar Games)، هما Red Dead Redemption 2 وGrand Theft Auto V Enhanced بخصم حتى 22 أكتوبر، حسب صفحتيهما على المتجر. / تنخفض Red Dead Redemption 2 بخصم 75% من 229 درهمًا إلى 57.25 درهمًا في الإمارات، ومن 229 ريالًا إلى 57.25 ريالًا في السعودية. / وتنخفض Grand Theft Auto V Enhanced بخصم 56% من 171 درهمًا إلى 75.24 درهمًا في الإمارات، ومن 171 ريالًا إلى 75.24 ريالًا في السعودية. / وتأتي الخصومات قبل نحو شهر من صدور Grand Theft Auto VI في 19 نوفمبر على PS5 وXbox Series X|S.",
-      "lines": [
-        "تنخفض Red Dead Redemption 2\nإلى ربع سعرها",
-        "وخصم Grand Theft Auto V Enhanced\nيبلغ 56%",
-        "ويأتي العرض قبل نحو شهر\nمن صدور GTA VI في 19 نوفمبر"
-      ]
-    }
+ "id": "2026-10-19-rockstar-steam-sale-rdr2-gtav",
+ "title": "Steam sale: Red Dead Redemption 2 -75% (229 to 57.25 AED/SR) and GTA V Enhanced -56% (171 to 75.24 AED/SR) until 22 Oct",
+ "game": "Red Dead Redemption 2; Grand Theft Auto V Enhanced",
+ "companies": [
+  "Rockstar Games",
+  "Valve"
+ ],
+ "priority": "🟢",
+ "status": "published",
+ "related": [
+  "2026-10-18-gta-6-one-month-to-go"
+ ],
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Steam appdetails cc=ae and cc=sa, apps 1174180 and 3240220, read 05:40Z and 06:33Z",
+   "url": "https://store.steampowered.com/app/1174180/"
   },
-  "media": [
-    {
-      "file": "cards/2026-10/rockstar-steam-sale-rdr2-gtav-reel-v1.mp4",
-      "kind": "Rockstar's Steam trailers (RDR2 launch, GTA Online on the GTA V Enhanced page; 1080p letterboxed, lowres_ok), our everyday bed; one price card on the numgfx ground"
-    }
-  ],
-  "times": {
-    "dl": "2026-10-19T11:00:00Z"
+  {
+   "role": "primary",
+   "name": "Steam store page, GTA V Enhanced (Offer ends 22 October)",
+   "url": "https://store.steampowered.com/app/3240220/"
+  }
+ ],
+ "claims": [
+  {
+   "text": "RDR2 229 to 57.25 AED and SR (-75%)",
+   "status": "confirmed (store)"
   },
-  "notes": [
-    "19 Oct 06:57Z: built b175 (clipcard, gold, 19.9 s). First built as split; split and trailer had both reached four on the Dubai day, so rebuilt with one price card (old price struck through, new with the dirham symbol, end date) and lines carrying the cut only. Grammar review 06:20Z (روكستار غيمز); DeepL back-check 06:46Z matches; forward pass kept ينتهي العرض.",
-    "19 Oct 06:58Z: gate 06:33Z re-read appdetails and both store pages; queued X/IG/Threads for 11:00Z (15:00 Dubai), approval 'go: rolling queue; preview sent 06:58Z'."
-  ]
+  {
+   "text": "GTA V Enhanced 171 to 75.24 AED and SR (-56%)",
+   "status": "confirmed (store)"
+  },
+  {
+   "text": "Both offers end 22 October",
+   "status": "confirmed (store pages)"
+  },
+  {
+   "text": "GTA VI 19 Nov on PS5 and Xbox Series X|S",
+   "status": "confirmed (Rockstar; ledger 2026-10-18)"
+  }
+ ],
+ "why": "Gulf prices on two of Rockstar's biggest games a month before GTA VI; practical, priced in the readers' currencies",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "template": "clipcard",
+   "chip": "السعر",
+   "time": "15:00 Dubai, 19 Oct",
+   "headline": "خصم حتى 75% على لعبتين من روكستار غيمز (Rockstar Games)",
+   "x": "خصم يصل إلى 75% على Red Dead Redemption 2 وGrand Theft Auto V Enhanced في متجر Steam حتى 22 أكتوبر: 57.25 و75.24 درهمًا في الإمارات، وبالأرقام نفسها بالريال في السعودية.",
+   "ig": "تنخفض Red Dead Redemption 2 على Steam إلى 57.25 درهمًا في الإمارات، بخصم 75% حتى 22 أكتوبر. / يعرض متجر Steam لعبتين من روكستار غيمز (Rockstar Games)، هما Red Dead Redemption 2 وGrand Theft Auto V Enhanced بخصم حتى 22 أكتوبر، حسب صفحتيهما على المتجر. / تنخفض Red Dead Redemption 2 بخصم 75% من 229 درهمًا إلى 57.25 درهمًا في الإمارات، ومن 229 ريالًا إلى 57.25 ريالًا في السعودية. / وتنخفض Grand Theft Auto V Enhanced بخصم 56% من 171 درهمًا إلى 75.24 درهمًا في الإمارات، ومن 171 ريالًا إلى 75.24 ريالًا في السعودية. / وتأتي الخصومات قبل نحو شهر من صدور Grand Theft Auto VI في 19 نوفمبر على PS5 وXbox Series X|S.",
+   "lines": [
+    "تنخفض Red Dead Redemption 2\nإلى ربع سعرها",
+    "وخصم Grand Theft Auto V Enhanced\nيبلغ 56%",
+    "ويأتي العرض قبل نحو شهر\nمن صدور GTA VI في 19 نوفمبر"
+   ]
+  }
+ },
+ "media": [
+  {
+   "file": "cards/2026-10/rockstar-steam-sale-rdr2-gtav-reel-v1.mp4",
+   "kind": "Rockstar's Steam trailers (RDR2 launch, GTA Online on the GTA V Enhanced page; 1080p letterboxed, lowres_ok), our everyday bed; one price card on the numgfx ground"
+  }
+ ],
+ "times": {
+  "dl": "2026-10-19T11:00:00Z",
+  "posted": "2026-10-19T11:00:00Z"
+ },
+ "notes": [
+  "19 Oct 06:57Z: built b175 (clipcard, gold, 19.9 s). First built as split; split and trailer had both reached four on the Dubai day, so rebuilt with one price card (old price struck through, new with the dirham symbol, end date) and lines carrying the cut only. Grammar review 06:20Z (روكستار غيمز); DeepL back-check 06:46Z matches; forward pass kept ينتهي العرض.",
+  "19 Oct 06:58Z: gate 06:33Z re-read appdetails and both store pages; queued X/IG/Threads for 11:00Z (15:00 Dubai), approval 'go: rolling queue; preview sent 06:58Z'."
+ ],
+ "posts": [
+  {
+   "folder": "rockstar-steam-sale-rdr2-gtav-ar",
+   "account": "Digital Lounge",
+   "platform": "x",
+   "date": "2026-10-19T11:00:00Z",
+   "postiz_id": "cmvewm3ks06zqpc0yd1gea2qf",
+   "sent_at": "2026-10-19T06:59:27+00:00",
+   "approved": "go: rolling queue; preview sent 06:58Z; gate 06:33Z: Steam appdetails cc=ae/sa (RDR2 229->57.25, -75%; GTA V Enhanced 171->75.24, -56%) and both store pages 'Offer ends 22 October'; clipcard (split and trailer at four for the Dubai day)"
+  },
+  {
+   "folder": "rockstar-steam-sale-rdr2-gtav-ig",
+   "account": "Digital Lounge",
+   "platform": "instagram",
+   "date": "2026-10-19T11:00:00Z",
+   "postiz_id": "cmvewm5y506zqo70y5whsb6ib",
+   "sent_at": "2026-10-19T06:59:30+00:00",
+   "approved": "go: rolling queue; preview sent 06:58Z; gate 06:33Z: Steam appdetails cc=ae/sa (RDR2 229->57.25, -75%; GTA V Enhanced 171->75.24, -56%) and both store pages 'Offer ends 22 October'; clipcard (split and trailer at four for the Dubai day)"
+  },
+  {
+   "folder": "rockstar-steam-sale-rdr2-gtav-th",
+   "account": "Digital Lounge",
+   "platform": "threads",
+   "date": "2026-10-19T11:00:00Z",
+   "postiz_id": "cmvewmgn206zro70ym5s4iqjc",
+   "sent_at": "2026-10-19T06:59:45+00:00",
+   "approved": "go: rolling queue; preview sent 06:58Z; gate 06:33Z: Steam appdetails cc=ae/sa (RDR2 229->57.25, -75%; GTA V Enhanced 171->75.24, -56%) and both store pages 'Offer ends 22 October'; clipcard (split and trailer at four for the Dubai day)"
+  }
+ ]
 }

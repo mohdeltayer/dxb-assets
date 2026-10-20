@@ -1,65 +1,95 @@
 {
-  "id": "2026-10-18-cyberpunk-2077-68-aed-steam",
-  "title": "Cyberpunk 2077 70% off on Steam: 68.70 AED / 68.70 SR (until 26 Oct)",
-  "game": "Cyberpunk 2077",
-  "companies": [
-    "CD PROJEKT RED",
-    "Valve"
-  ],
-  "priority": "price story, fills 19:00Z",
-  "why": "Gulf store price two days before Edgerunners 2.",
-  "sources": [
-    {
-      "role": "primary",
-      "name": "Steam appdetails 1091500 (cc=ae, cc=sa)",
-      "url": "https://store.steampowered.com/api/appdetails?appids=1091500&cc=ae"
-    },
-    {
-      "role": "primary",
-      "name": "Steam store page (Offer ends 26 October)",
-      "url": "https://store.steampowered.com/app/1091500/"
-    }
-  ],
-  "claims": [
-    {
-      "text": "UAE 229.00 -> 68.70 AED; Saudi 229.00 -> 68.70 SR; 70%",
-      "status": "confirmed (Steam, re-read 11:55Z)"
-    },
-    {
-      "text": "offer ends 26 October",
-      "status": "confirmed (store page)"
-    },
-    {
-      "text": "Edgerunners 2 on Netflix 20 Oct",
-      "status": "confirmed (CDPR, batch 159)"
-    }
-  ],
-  "status": "published",
-  "lanes": {
-    "dl": {
-      "lane": "Reel",
-      "chip": "السعر",
-      "format": "split",
-      "headline": "خصم 70% على Steam\nللعبة Cyberpunk 2077",
-      "x": "تنخفض Cyberpunk 2077 إلى 68.70 درهمًا على Steam في الإمارات، بخصم 70% حتى 26 أكتوبر، حسب صفحة اللعبة على المتجر.",
-      "ig": "بخصم 70%، تنخفض Cyberpunk 2077 على Steam إلى 68.70 درهمًا في الإمارات و68.70 ريالًا في السعودية. / انخفض سعر Cyberpunk 2077 على Steam في الإمارات من 229 درهمًا إلى 68.70 درهمًا، وفي السعودية من 229 ريالًا إلى 68.70 ريالًا، حسب صفحة اللعبة على المتجر، ويستمر العرض حتى 26 أكتوبر. / ويأتي الخصم قبل عرض الموسم الثاني من أنمي Cyberpunk: Edgerunners على نتفليكس (Netflix) يوم الثلاثاء 20 أكتوبر. / وطوّرت اللعبة ونشرتها شركة سي دي بروجكت رد (CD PROJEKT RED)، وتدور أحداثها في مدينة Night City.",
-      "lines": [
-        "قبل يومين من عرض الموسم الثاني\nمن Edgerunners",
-        "والخصم مستمر حتى 26 أكتوبر",
-        "من سي دي بروجكت رد (CD PROJEKT RED)\nوتدور أحداثها في Night City"
-      ],
-      "strip": "[('في الإمارات', ('aed', '68.70')), ('في السعودية', '68.70 ريالًا')]",
-      "media": "cards/2026-10/cyberpunk-2077-68-aed-steam-reel-v1.mp4",
-      "time": "Sun 18 Oct 23:00 Dubai (19:00Z)"
-    }
+ "id": "2026-10-18-cyberpunk-2077-68-aed-steam",
+ "title": "Cyberpunk 2077 70% off on Steam: 68.70 AED / 68.70 SR (until 26 Oct)",
+ "game": "Cyberpunk 2077",
+ "companies": [
+  "CD PROJEKT RED",
+  "Valve"
+ ],
+ "priority": "price story, fills 19:00Z",
+ "why": "Gulf store price two days before Edgerunners 2.",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Steam appdetails 1091500 (cc=ae, cc=sa)",
+   "url": "https://store.steampowered.com/api/appdetails?appids=1091500&cc=ae"
   },
-  "times": {
-    "dl": "2026-10-18T19:00:00Z"
+  {
+   "role": "primary",
+   "name": "Steam store page (Offer ends 26 October)",
+   "url": "https://store.steampowered.com/app/1091500/"
+  }
+ ],
+ "claims": [
+  {
+   "text": "UAE 229.00 -> 68.70 AED; Saudi 229.00 -> 68.70 SR; 70%",
+   "status": "confirmed (Steam, re-read 11:55Z)"
   },
-  "notes": [
-    "18 Oct 11:55Z: built b162 (split on four Steam screenshots, cold, everyday bed; the Steam trailers are letterboxed 800/960 rows and weapon-heavy). Grammar review: no required edits; «والخصم مستمر», line 0 rebroken, «شركة» taken. DeepL forward pass. 15.6 s. Final render hit the full disk once (cache 1.5 GB cleared, rendered footage removed). Queued 19:00Z, over 6 h ahead: re-gate at 18:15Z. «قبل يومين» is true on 18 Oct only.",
-    "18 Oct 18:16Z re-gate (queued over 6 h ahead): Steam appdetails 1091500 cc=ae AED 229.00 -> 68.70 (70%), cc=sa SAR 229.00 -> 68.70 (70%); store page still \"Offer ends 26 October\". Unchanged; posts stay at 19:00Z.",
-    "18 Oct 20:09Z: X, Instagram, Threads read PUBLISHED in Postiz (19:00Z); media stripped from dxb-queue after receipts."
-  ],
-  "reel": "cards/2026-10/cyberpunk-2077-68-aed-steam-reel-v1.mp4"
+  {
+   "text": "offer ends 26 October",
+   "status": "confirmed (store page)"
+  },
+  {
+   "text": "Edgerunners 2 on Netflix 20 Oct",
+   "status": "confirmed (CDPR, batch 159)"
+  }
+ ],
+ "status": "published",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "السعر",
+   "format": "split",
+   "headline": "خصم 70% على Steam\nللعبة Cyberpunk 2077",
+   "x": "تنخفض Cyberpunk 2077 إلى 68.70 درهمًا على Steam في الإمارات، بخصم 70% حتى 26 أكتوبر، حسب صفحة اللعبة على المتجر.",
+   "ig": "بخصم 70%، تنخفض Cyberpunk 2077 على Steam إلى 68.70 درهمًا في الإمارات و68.70 ريالًا في السعودية. / انخفض سعر Cyberpunk 2077 على Steam في الإمارات من 229 درهمًا إلى 68.70 درهمًا، وفي السعودية من 229 ريالًا إلى 68.70 ريالًا، حسب صفحة اللعبة على المتجر، ويستمر العرض حتى 26 أكتوبر. / ويأتي الخصم قبل عرض الموسم الثاني من أنمي Cyberpunk: Edgerunners على نتفليكس (Netflix) يوم الثلاثاء 20 أكتوبر. / وطوّرت اللعبة ونشرتها شركة سي دي بروجكت رد (CD PROJEKT RED)، وتدور أحداثها في مدينة Night City.",
+   "lines": [
+    "قبل يومين من عرض الموسم الثاني\nمن Edgerunners",
+    "والخصم مستمر حتى 26 أكتوبر",
+    "من سي دي بروجكت رد (CD PROJEKT RED)\nوتدور أحداثها في Night City"
+   ],
+   "strip": "[('في الإمارات', ('aed', '68.70')), ('في السعودية', '68.70 ريالًا')]",
+   "media": "cards/2026-10/cyberpunk-2077-68-aed-steam-reel-v1.mp4",
+   "time": "Sun 18 Oct 23:00 Dubai (19:00Z)"
+  }
+ },
+ "times": {
+  "dl": "2026-10-18T19:00:00Z",
+  "posted": "2026-10-18T19:00:00Z"
+ },
+ "notes": [
+  "18 Oct 11:55Z: built b162 (split on four Steam screenshots, cold, everyday bed; the Steam trailers are letterboxed 800/960 rows and weapon-heavy). Grammar review: no required edits; «والخصم مستمر», line 0 rebroken, «شركة» taken. DeepL forward pass. 15.6 s. Final render hit the full disk once (cache 1.5 GB cleared, rendered footage removed). Queued 19:00Z, over 6 h ahead: re-gate at 18:15Z. «قبل يومين» is true on 18 Oct only.",
+  "18 Oct 18:16Z re-gate (queued over 6 h ahead): Steam appdetails 1091500 cc=ae AED 229.00 -> 68.70 (70%), cc=sa SAR 229.00 -> 68.70 (70%); store page still \"Offer ends 26 October\". Unchanged; posts stay at 19:00Z.",
+  "18 Oct 20:09Z: X, Instagram, Threads read PUBLISHED in Postiz (19:00Z); media stripped from dxb-queue after receipts."
+ ],
+ "reel": "cards/2026-10/cyberpunk-2077-68-aed-steam-reel-v1.mp4",
+ "posts": [
+  {
+   "folder": "cyberpunk-2077-68-aed-steam-ar",
+   "account": "Digital Lounge",
+   "platform": "x",
+   "date": "2026-10-18T19:00:00Z",
+   "postiz_id": "cmvdrsje30q6er50yjbe9p0co",
+   "sent_at": "2026-10-18T11:56:44+00:00",
+   "approved": "go: rolling queue (price story, fills 19:00Z); preview sent 12:22Z. gate 12:21Z Exit A (السعر): Steam appdetails re-read (UAE 68.70 AED from 229.00, Saudi 68.70 SR from 229.00, 70%); store page 'Offer ends 26 October'. No lowest-ever claim. Queued over 6 h ahead: re-gate at 18:15Z. Template caps over today: gap rule over caps as on 16 and 17 Oct"
+  },
+  {
+   "folder": "cyberpunk-2077-68-aed-steam-ig",
+   "account": "Digital Lounge",
+   "platform": "instagram",
+   "date": "2026-10-18T19:00:00Z",
+   "postiz_id": "cmvdrsll20q6fr50yrrc55aqt",
+   "sent_at": "2026-10-18T11:56:46+00:00",
+   "approved": "go: rolling queue (price story, fills 19:00Z); preview sent 12:22Z. gate 12:21Z Exit A (السعر): Steam appdetails re-read (UAE 68.70 AED from 229.00, Saudi 68.70 SR from 229.00, 70%); store page 'Offer ends 26 October'. No lowest-ever claim. Queued over 6 h ahead: re-gate at 18:15Z. Template caps over today: gap rule over caps as on 16 and 17 Oct"
+  },
+  {
+   "folder": "cyberpunk-2077-68-aed-steam-th",
+   "account": "Digital Lounge",
+   "platform": "threads",
+   "date": "2026-10-18T19:00:00Z",
+   "postiz_id": "cmvdrsn0l0q6gr50y7lhrm8rd",
+   "sent_at": "2026-10-18T11:56:48+00:00",
+   "approved": "go: rolling queue (price story, fills 19:00Z); preview sent 12:22Z. gate 12:21Z Exit A (السعر): Steam appdetails re-read (UAE 68.70 AED from 229.00, Saudi 68.70 SR from 229.00, 70%); store page 'Offer ends 26 October'. No lowest-ever claim. Queued over 6 h ahead: re-gate at 18:15Z. Template caps over today: gap rule over caps as on 16 and 17 Oct"
+  }
+ ]
 }

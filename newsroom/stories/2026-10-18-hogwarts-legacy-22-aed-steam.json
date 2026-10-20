@@ -1,71 +1,101 @@
 {
-  "id": "2026-10-18-hogwarts-legacy-22-aed-steam",
-  "title": "Hogwarts Legacy 90% off on Steam: 22 AED in the UAE, 22.40 SR in Saudi (until 22 Oct)",
-  "game": "Hogwarts Legacy",
-  "companies": [
-    "Warner Bros. Games",
-    "Avalanche Software",
-    "Valve"
-  ],
-  "priority": "price story, fills 18:00Z",
-  "why": "Big game at a Gulf store price; three days left.",
-  "sources": [
-    {
-      "role": "primary",
-      "name": "Steam appdetails 990080 (cc=ae, cc=sa)",
-      "url": "https://store.steampowered.com/api/appdetails?appids=990080&cc=ae"
-    },
-    {
-      "role": "primary",
-      "name": "Steam store page (Offer ends 22 October)",
-      "url": "https://store.steampowered.com/app/990080/"
-    },
-    {
-      "role": "primary",
-      "name": "WB Games Publisher Sale",
-      "url": "https://store.steampowered.com/sale/wbpubsale2026"
-    }
-  ],
-  "claims": [
-    {
-      "text": "UAE 220.00 -> 22.00 AED; Saudi 224.00 -> 22.40 SR; 90%",
-      "status": "confirmed (Steam, re-read 11:51Z)"
-    },
-    {
-      "text": "offer ends 22 October",
-      "status": "confirmed (store page; API 17:00Z)"
-    },
-    {
-      "text": "lowest price ever",
-      "status": "not checked; not claimed"
-    }
-  ],
-  "status": "published",
-  "lanes": {
-    "dl": {
-      "lane": "Reel",
-      "chip": "السعر",
-      "format": "split",
-      "headline": "خصم 90% على Steam\nللعبة Hogwarts Legacy",
-      "x": "تنخفض Hogwarts Legacy إلى 22 درهمًا على Steam في الإمارات، بخصم 90% حتى 22 أكتوبر، حسب صفحة اللعبة على المتجر.",
-      "ig": "بخصم 90%، تنخفض Hogwarts Legacy على Steam إلى 22 درهمًا في الإمارات و22.40 ريالًا في السعودية. / انخفض سعر Hogwarts Legacy على Steam في الإمارات من 220 درهمًا إلى 22 درهمًا، وفي السعودية من 224 ريالًا إلى 22.40 ريالًا، حسب صفحة اللعبة على المتجر. / ويأتي الخصم ضمن تخفيضات وارنر براذرز غيمز (Warner Bros. Games) على Steam، ويستمر حتى 22 أكتوبر. / وصدرت اللعبة في فبراير 2023 من تطوير أفالانش سوفتوير (Avalanche Software)، وتدور أحداثها في عالم Harry Potter داخل مدرسة Hogwarts في القرن التاسع عشر.",
-      "lines": [
-        "ضمن تخفيضات وارنر براذرز\nغيمز (Warner Bros. Games)",
-        "والعرض مستمر حتى يوم الخميس",
-        "صدرت عام 2023 من تطوير\nأفالانش سوفتوير (Avalanche Software)"
-      ],
-      "strip": "[('في الإمارات', ('aed', '22')), ('في السعودية', '22.40 ريالًا')]",
-      "media": "cards/2026-10/hogwarts-legacy-22-aed-steam-reel-v1.mp4",
-      "time": "Sun 18 Oct 22:00 Dubai (18:00Z)"
-    }
+ "id": "2026-10-18-hogwarts-legacy-22-aed-steam",
+ "title": "Hogwarts Legacy 90% off on Steam: 22 AED in the UAE, 22.40 SR in Saudi (until 22 Oct)",
+ "game": "Hogwarts Legacy",
+ "companies": [
+  "Warner Bros. Games",
+  "Avalanche Software",
+  "Valve"
+ ],
+ "priority": "price story, fills 18:00Z",
+ "why": "Big game at a Gulf store price; three days left.",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Steam appdetails 990080 (cc=ae, cc=sa)",
+   "url": "https://store.steampowered.com/api/appdetails?appids=990080&cc=ae"
   },
-  "times": {
-    "dl": "2026-10-18T18:00:00Z"
+  {
+   "role": "primary",
+   "name": "Steam store page (Offer ends 22 October)",
+   "url": "https://store.steampowered.com/app/990080/"
   },
-  "notes": [
-    "18 Oct 11:51Z: built b160 (split, spectacle; the Steam launch trailer as one continuous stretch with its own music and narration from 18.0 s; prices in the strip, the dirham symbol for the UAE). Grammar review: no required edits; head reworded twice for the RTL wrap check. Line date moved to «حتى يوم الخميس» because the strip already shows 22. DeepL forward pass. 15.9 s. Queued 18:00Z, 6 h 9 m ahead: re-gate of the price set for 17:15Z.",
-    "18 Oct 17:16Z re-gate (queued over 6 h ahead): Steam appdetails 990080 cc=ae AED 220.00 -> 22.00 (90%), cc=sa SAR 224.00 -> 22.40 (90%); store page still \"Offer ends 22 October\". Unchanged; posts stay at 18:00Z.",
-    "18 Oct 18:09Z: X, Instagram, Threads read PUBLISHED in Postiz (18:00Z); media stripped from dxb-queue after receipts."
-  ],
-  "reel": "cards/2026-10/hogwarts-legacy-22-aed-steam-reel-v1.mp4"
+  {
+   "role": "primary",
+   "name": "WB Games Publisher Sale",
+   "url": "https://store.steampowered.com/sale/wbpubsale2026"
+  }
+ ],
+ "claims": [
+  {
+   "text": "UAE 220.00 -> 22.00 AED; Saudi 224.00 -> 22.40 SR; 90%",
+   "status": "confirmed (Steam, re-read 11:51Z)"
+  },
+  {
+   "text": "offer ends 22 October",
+   "status": "confirmed (store page; API 17:00Z)"
+  },
+  {
+   "text": "lowest price ever",
+   "status": "not checked; not claimed"
+  }
+ ],
+ "status": "published",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "السعر",
+   "format": "split",
+   "headline": "خصم 90% على Steam\nللعبة Hogwarts Legacy",
+   "x": "تنخفض Hogwarts Legacy إلى 22 درهمًا على Steam في الإمارات، بخصم 90% حتى 22 أكتوبر، حسب صفحة اللعبة على المتجر.",
+   "ig": "بخصم 90%، تنخفض Hogwarts Legacy على Steam إلى 22 درهمًا في الإمارات و22.40 ريالًا في السعودية. / انخفض سعر Hogwarts Legacy على Steam في الإمارات من 220 درهمًا إلى 22 درهمًا، وفي السعودية من 224 ريالًا إلى 22.40 ريالًا، حسب صفحة اللعبة على المتجر. / ويأتي الخصم ضمن تخفيضات وارنر براذرز غيمز (Warner Bros. Games) على Steam، ويستمر حتى 22 أكتوبر. / وصدرت اللعبة في فبراير 2023 من تطوير أفالانش سوفتوير (Avalanche Software)، وتدور أحداثها في عالم Harry Potter داخل مدرسة Hogwarts في القرن التاسع عشر.",
+   "lines": [
+    "ضمن تخفيضات وارنر براذرز\nغيمز (Warner Bros. Games)",
+    "والعرض مستمر حتى يوم الخميس",
+    "صدرت عام 2023 من تطوير\nأفالانش سوفتوير (Avalanche Software)"
+   ],
+   "strip": "[('في الإمارات', ('aed', '22')), ('في السعودية', '22.40 ريالًا')]",
+   "media": "cards/2026-10/hogwarts-legacy-22-aed-steam-reel-v1.mp4",
+   "time": "Sun 18 Oct 22:00 Dubai (18:00Z)"
+  }
+ },
+ "times": {
+  "dl": "2026-10-18T18:00:00Z",
+  "posted": "2026-10-18T18:00:00Z"
+ },
+ "notes": [
+  "18 Oct 11:51Z: built b160 (split, spectacle; the Steam launch trailer as one continuous stretch with its own music and narration from 18.0 s; prices in the strip, the dirham symbol for the UAE). Grammar review: no required edits; head reworded twice for the RTL wrap check. Line date moved to «حتى يوم الخميس» because the strip already shows 22. DeepL forward pass. 15.9 s. Queued 18:00Z, 6 h 9 m ahead: re-gate of the price set for 17:15Z.",
+  "18 Oct 17:16Z re-gate (queued over 6 h ahead): Steam appdetails 990080 cc=ae AED 220.00 -> 22.00 (90%), cc=sa SAR 224.00 -> 22.40 (90%); store page still \"Offer ends 22 October\". Unchanged; posts stay at 18:00Z.",
+  "18 Oct 18:09Z: X, Instagram, Threads read PUBLISHED in Postiz (18:00Z); media stripped from dxb-queue after receipts."
+ ],
+ "reel": "cards/2026-10/hogwarts-legacy-22-aed-steam-reel-v1.mp4",
+ "posts": [
+  {
+   "folder": "hogwarts-legacy-22-aed-steam-ar",
+   "account": "Digital Lounge",
+   "platform": "x",
+   "date": "2026-10-18T18:00:00Z",
+   "postiz_id": "cmvdrg45y0q0ur50y3x9bitx6",
+   "sent_at": "2026-10-18T11:47:04+00:00",
+   "approved": "go: rolling queue (price story, fills 18:00Z); preview sent 11:52Z. gate 11:51Z Exit A (السعر): Steam appdetails re-read (UAE 22.00 AED from 220.00, Saudi 22.40 SR from 224.00, 90%); store page 'Offer ends 22 October'; WB Games Publisher Sale page. No lowest-ever claim. Re-check the price within the hour before 18:00Z (queued over 6 h? no, 6 h 9 m: re-gate set)"
+  },
+  {
+   "folder": "hogwarts-legacy-22-aed-steam-ig",
+   "account": "Digital Lounge",
+   "platform": "instagram",
+   "date": "2026-10-18T18:00:00Z",
+   "postiz_id": "cmvdrg6hr0q0xr50yifmgjauz",
+   "sent_at": "2026-10-18T11:47:07+00:00",
+   "approved": "go: rolling queue (price story, fills 18:00Z); preview sent 11:52Z. gate 11:51Z Exit A (السعر): Steam appdetails re-read (UAE 22.00 AED from 220.00, Saudi 22.40 SR from 224.00, 90%); store page 'Offer ends 22 October'; WB Games Publisher Sale page. No lowest-ever claim. Re-check the price within the hour before 18:00Z (queued over 6 h? no, 6 h 9 m: re-gate set)"
+  },
+  {
+   "folder": "hogwarts-legacy-22-aed-steam-th",
+   "account": "Digital Lounge",
+   "platform": "threads",
+   "date": "2026-10-18T18:00:00Z",
+   "postiz_id": "cmvdrg8dn0q0zr50yhqbb1io7",
+   "sent_at": "2026-10-18T11:47:09+00:00",
+   "approved": "go: rolling queue (price story, fills 18:00Z); preview sent 11:52Z. gate 11:51Z Exit A (السعر): Steam appdetails re-read (UAE 22.00 AED from 220.00, Saudi 22.40 SR from 224.00, 90%); store page 'Offer ends 22 October'; WB Games Publisher Sale page. No lowest-ever claim. Re-check the price within the hour before 18:00Z (queued over 6 h? no, 6 h 9 m: re-gate set)"
+  }
+ ]
 }

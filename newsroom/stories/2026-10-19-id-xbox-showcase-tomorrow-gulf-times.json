@@ -1,85 +1,115 @@
 {
-  "id": "2026-10-19-id-xbox-showcase-tomorrow-gulf-times",
-  "title": "ID@Xbox Showcase presented by IGN: Tue 20 Oct 21:00 UAE / 20:00 KSA; The Wolf Among Us Remastered confirmed",
-  "game": "ID@Xbox Showcase",
-  "companies": [
-    "Xbox",
-    "IGN",
-    "Telltale",
-    "Critical Reflex"
-  ],
-  "priority": "🟢",
-  "status": "published",
-  "related": [],
-  "sources": [
-    {
-      "role": "primary",
-      "name": "IGN co-presenter announcement (events.md, read 13 Oct); Xbox Wire links to it",
-      "url": "https://www.ign.com"
-    },
-    {
-      "role": "corroboration",
-      "name": "GamingBolt 13 Oct; Windows Report; Gematsu tag page",
-      "url": "https://gamingbolt.com/?p=654831"
-    },
-    {
-      "role": "date",
-      "name": "Steam app 3884860 The Wolf Among Us Remastered, Oct 29, 2026",
-      "url": "https://store.steampowered.com/app/3884860/"
-    }
-  ],
-  "claims": [
-    {
-      "text": "Tue 20 Oct 10:00 PT = 21:00 UAE, 20:00 KSA",
-      "status": "confirmed (IGN via events.md; outlets agree)"
-    },
-    {
-      "text": "The Wolf Among Us Remastered and Critical Reflex titles featured",
-      "status": "confirmed (IGN/GamingBolt)"
-    },
-    {
-      "text": "about 20 games",
-      "status": "conflict (18 vs 20), left out"
-    }
-  ],
-  "why": "Watch guide in Gulf time for an event the Arabic press rarely times locally",
-  "lanes": {
-    "dl": {
-      "lane": "Reel",
-      "template": "split",
-      "chip": "فعالية",
-      "time": "12:00 Dubai, 19 Oct",
-      "headline": "غدًا: عرض ID@Xbox للألعاب المستقلة",
-      "x": "يُبث عرض ID@Xbox للألعاب المستقلة غدًا الثلاثاء الساعة 9 مساءً بتوقيت الإمارات (8 مساءً بتوقيت السعودية) على قنوات آي جي إن (IGN).",
-      "ig": "عرض ID@Xbox للألعاب المستقلة غدًا الثلاثاء: 9 مساءً بتوقيت الإمارات و8 مساءً بتوقيت السعودية. / يعود عرض ID@Xbox المخصص للألعاب المستقلة على Xbox وPC غدًا الثلاثاء 20 أكتوبر، بتقديم من موقع آي جي إن (IGN)، ويبدأ الساعة 9 مساءً بتوقيت الإمارات و8 مساءً بتوقيت السعودية. / ويُبث العرض على قنوات الموقع في YouTube وTwitch وX، ويعد بعروض أولى عالمية ولقطات من أسلوب اللعب. / ومن الألعاب المؤكدة فيه The Wolf Among Us Remastered، النسخة المحسّنة من مغامرة تيلتيل (Telltale)، وألعاب من الناشر كريتيكال ريفلكس (Critical Reflex). وتصدر The Wolf Among Us Remastered في 29 أكتوبر.",
-      "lines": [
-        "ويبثه موقع آي جي إن (IGN)\nعلى YouTube وTwitch وX",
-        "ومن ألعابه المؤكدة نسخة\nمحسّنة من The Wolf Among Us",
-        "وتصدر في 29 أكتوبر"
-      ],
-      "strip": [
-        [
-          "الإمارات",
-          "الثلاثاء 9 مساءً"
-        ],
-        [
-          "السعودية",
-          "الثلاثاء 8 مساءً"
-        ]
-      ]
-    }
+ "id": "2026-10-19-id-xbox-showcase-tomorrow-gulf-times",
+ "title": "ID@Xbox Showcase presented by IGN: Tue 20 Oct 21:00 UAE / 20:00 KSA; The Wolf Among Us Remastered confirmed",
+ "game": "ID@Xbox Showcase",
+ "companies": [
+  "Xbox",
+  "IGN",
+  "Telltale",
+  "Critical Reflex"
+ ],
+ "priority": "🟢",
+ "status": "published",
+ "related": [],
+ "sources": [
+  {
+   "role": "primary",
+   "name": "IGN co-presenter announcement (events.md, read 13 Oct); Xbox Wire links to it",
+   "url": "https://www.ign.com"
   },
-  "media": [
-    {
-      "file": "cards/2026-10/id-xbox-showcase-tomorrow-gulf-times-reel-v1.mp4",
-      "kind": "Telltale's announcement trailer for The Wolf Among Us Remastered (Steam 1080p), stand-in footage credited on screen; trailer music from 30 s"
-    }
-  ],
-  "times": {
-    "dl": "2026-10-19T08:00:00Z"
+  {
+   "role": "corroboration",
+   "name": "GamingBolt 13 Oct; Windows Report; Gematsu tag page",
+   "url": "https://gamingbolt.com/?p=654831"
   },
-  "notes": [
-    "19 Oct 03:37Z: built b171 (split, emerald, 15.8 s). Grammar review: no required edits; أسلوب اللعب taken, Critical Reflex clause moved before the date. DeepL back-check matches. غدًا holds: posts 12:00 Dubai Monday.",
-    "19 Oct 03:46Z: queued X/IG/Threads for 08:00Z (12:00 Dubai), approval 'go: rolling queue; preview sent 03:42Z'."
-  ]
+  {
+   "role": "date",
+   "name": "Steam app 3884860 The Wolf Among Us Remastered, Oct 29, 2026",
+   "url": "https://store.steampowered.com/app/3884860/"
+  }
+ ],
+ "claims": [
+  {
+   "text": "Tue 20 Oct 10:00 PT = 21:00 UAE, 20:00 KSA",
+   "status": "confirmed (IGN via events.md; outlets agree)"
+  },
+  {
+   "text": "The Wolf Among Us Remastered and Critical Reflex titles featured",
+   "status": "confirmed (IGN/GamingBolt)"
+  },
+  {
+   "text": "about 20 games",
+   "status": "conflict (18 vs 20), left out"
+  }
+ ],
+ "why": "Watch guide in Gulf time for an event the Arabic press rarely times locally",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "template": "split",
+   "chip": "فعالية",
+   "time": "12:00 Dubai, 19 Oct",
+   "headline": "غدًا: عرض ID@Xbox للألعاب المستقلة",
+   "x": "يُبث عرض ID@Xbox للألعاب المستقلة غدًا الثلاثاء الساعة 9 مساءً بتوقيت الإمارات (8 مساءً بتوقيت السعودية) على قنوات آي جي إن (IGN).",
+   "ig": "عرض ID@Xbox للألعاب المستقلة غدًا الثلاثاء: 9 مساءً بتوقيت الإمارات و8 مساءً بتوقيت السعودية. / يعود عرض ID@Xbox المخصص للألعاب المستقلة على Xbox وPC غدًا الثلاثاء 20 أكتوبر، بتقديم من موقع آي جي إن (IGN)، ويبدأ الساعة 9 مساءً بتوقيت الإمارات و8 مساءً بتوقيت السعودية. / ويُبث العرض على قنوات الموقع في YouTube وTwitch وX، ويعد بعروض أولى عالمية ولقطات من أسلوب اللعب. / ومن الألعاب المؤكدة فيه The Wolf Among Us Remastered، النسخة المحسّنة من مغامرة تيلتيل (Telltale)، وألعاب من الناشر كريتيكال ريفلكس (Critical Reflex). وتصدر The Wolf Among Us Remastered في 29 أكتوبر.",
+   "lines": [
+    "ويبثه موقع آي جي إن (IGN)\nعلى YouTube وTwitch وX",
+    "ومن ألعابه المؤكدة نسخة\nمحسّنة من The Wolf Among Us",
+    "وتصدر في 29 أكتوبر"
+   ],
+   "strip": [
+    [
+     "الإمارات",
+     "الثلاثاء 9 مساءً"
+    ],
+    [
+     "السعودية",
+     "الثلاثاء 8 مساءً"
+    ]
+   ]
+  }
+ },
+ "media": [
+  {
+   "file": "cards/2026-10/id-xbox-showcase-tomorrow-gulf-times-reel-v1.mp4",
+   "kind": "Telltale's announcement trailer for The Wolf Among Us Remastered (Steam 1080p), stand-in footage credited on screen; trailer music from 30 s"
+  }
+ ],
+ "times": {
+  "dl": "2026-10-19T08:00:00Z",
+  "posted": "2026-10-19T08:00:00Z"
+ },
+ "notes": [
+  "19 Oct 03:37Z: built b171 (split, emerald, 15.8 s). Grammar review: no required edits; أسلوب اللعب taken, Critical Reflex clause moved before the date. DeepL back-check matches. غدًا holds: posts 12:00 Dubai Monday.",
+  "19 Oct 03:46Z: queued X/IG/Threads for 08:00Z (12:00 Dubai), approval 'go: rolling queue; preview sent 03:42Z'."
+ ],
+ "posts": [
+  {
+   "folder": "id-xbox-showcase-tomorrow-gulf-times-ar",
+   "account": "Digital Lounge",
+   "platform": "x",
+   "date": "2026-10-19T08:00:00Z",
+   "postiz_id": "cmvepr3n902ywo70y8aylerhh",
+   "sent_at": "2026-10-19T03:47:23+00:00",
+   "approved": "go: rolling queue; preview sent 03:42Z; gate 03:41Z: showcase time 10:00 PT 20 Oct (Windows Report, GamingBolt, Gematsu; IGN per events.md), The Wolf Among Us Remastered Steam Oct 29, 2026"
+  },
+  {
+   "folder": "id-xbox-showcase-tomorrow-gulf-times-ig",
+   "account": "Digital Lounge",
+   "platform": "instagram",
+   "date": "2026-10-19T08:00:00Z",
+   "postiz_id": "cmvepr5xt02txpc0yfmsz7suh",
+   "sent_at": "2026-10-19T03:47:26+00:00",
+   "approved": "go: rolling queue; preview sent 03:42Z; gate 03:41Z: showcase time 10:00 PT 20 Oct (Windows Report, GamingBolt, Gematsu; IGN per events.md), The Wolf Among Us Remastered Steam Oct 29, 2026"
+  },
+  {
+   "folder": "id-xbox-showcase-tomorrow-gulf-times-th",
+   "account": "Digital Lounge",
+   "platform": "threads",
+   "date": "2026-10-19T08:00:00Z",
+   "postiz_id": "cmvepr7ns02typc0ymj7pe59c",
+   "sent_at": "2026-10-19T03:47:29+00:00",
+   "approved": "go: rolling queue; preview sent 03:42Z; gate 03:41Z: showcase time 10:00 PT 20 Oct (Windows Report, GamingBolt, Gematsu; IGN per events.md), The Wolf Among Us Remastered Steam Oct 29, 2026"
+  }
+ ]
 }

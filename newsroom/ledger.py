@@ -130,7 +130,7 @@ def sync():
             created += 1
         (s.__setitem__('posts', [{'platform': k, 'postiz_id': v} for k, v in s['posts'].items()]) if isinstance(s.get('posts'), dict) else None); s.setdefault('posts', []).append(post)
         s['posts'].sort(key=lambda p: p.get('date', ''))
-        s.setdefault('times', {})['posted'] = min(p['date'] for p in s['posts'])
+        s.setdefault('times', {})['posted'] = min((p['date'] for p in s['posts'] if p.get('date')), default=s.get('times', {}).get('posted'))
         save(s)
         added += 1
     print(f'{created} new stories, {added} posts attached')

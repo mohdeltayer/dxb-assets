@@ -1,64 +1,94 @@
 {
-  "id": "2026-10-18-game-pass-leaving-soon-late-october",
-  "title": "Eight games on Xbox Game Pass's 'Leaving soon' list (late October)",
-  "game": "multiple",
-  "companies": [
-    "Microsoft"
-  ],
-  "priority": "gap fill 13:30Z (rolling queue)",
-  "why": "Game Pass subscribers' to-play list: Deep Rock Galactic and LEGO Star Wars among eight games leaving.",
-  "sources": [
-    {
-      "role": "primary",
-      "name": "Microsoft Game Pass catalog, 'Leaving soon' sigl 393f05bf-e596-4ef6-9487-6d4fa0eab987 (US/AE/SA), resolved via displaycatalog",
-      "url": "https://catalog.gamepass.com/sigls/v2?id=393f05bf-e596-4ef6-9487-6d4fa0eab987&language=en-us&market=US"
-    },
-    {
-      "role": "lead",
-      "name": "Pure Xbox, 18 Oct 09:50Z",
-      "url": "https://www.purexbox.com/news/2026/10/eight-games-are-leaving-xbox-game-pass-in-late-october-2026"
-    }
-  ],
-  "claims": [
-    {
-      "text": "eight titles on the Leaving soon list",
-      "status": "confirmed (Microsoft catalog, re-read 10:26Z)"
-    },
-    {
-      "text": "leave on 31 Oct",
-      "status": "Pure Xbox only; catalog windows end earlier for Deep Rock Galactic (~20 Oct), Dead Static Drive and Lara Croft (~22 Oct); not on screen, attributed in caption"
-    },
-    {
-      "text": "at least 20% off most",
-      "status": "Pure Xbox"
-    }
-  ],
-  "status": "published",
-  "lanes": {
-    "dl": {
-      "lane": "Reel",
-      "chip": "رسمي",
-      "format": "list",
-      "headline": "ثماني ألعاب تغادر قريبًا خدمة Xbox Game Pass",
-      "x": "ثماني ألعاب تغادر قريبًا خدمة Xbox Game Pass، منها Deep Rock Galactic وLEGO Star Wars: The Skywalker Saga، حسب كتالوج الخدمة.",
-      "ig": "تغادر Deep Rock Galactic وLEGO Star Wars: The Skywalker Saga خدمة Xbox Game Pass قريبًا، ضمن ثماني ألعاب. / أضافت مايكروسوفت (Microsoft) ثماني ألعاب إلى قائمة الألعاب التي تغادر Xbox Game Pass قريبًا، حسب كتالوج الخدمة الذي يعرضه تطبيق Xbox. / والألعاب هي: Deep Rock Galactic وWildgate وWartales وDead Static Drive وLEGO Star Wars: The Skywalker Saga وLara Croft and the Temple of Osiris وFull Throttle Remastered وDay of the Tentacle Remastered. / ولم تعلن مايكروسوفت مواعيد المغادرة رسميًا بعد، وذكر موقع بيور إكس بوكس (Pure Xbox) أنها تغادر في 31 أكتوبر، فيما تشير بيانات كتالوج مايكروسوفت إلى أن بعضها قد يغادر قبل ذلك. / وذكر الموقع أن أغلبها متاح للمشتركين بخصم لا يقل عن 20% لمن يريد شراءها قبل مغادرتها.",
-      "lines": [
-        "تغادر Deep Rock Galactic\nوWildgate",
-        "وتغادر Wartales\nوDead Static Drive",
-        "ومعها LEGO Star Wars: The Skywalker Saga",
-        "وتغادر Lara Croft and the Temple of Osiris",
-        "ومن دابل فاين (Double Fine):\nلعبتا Full Throttle وDay of the Tentacle"
-      ],
-      "media": "cards/2026-10/game-pass-leaving-soon-late-october-reel-v1.mp4",
-      "time": "Sun 18 Oct 17:30 Dubai (13:30Z)"
-    }
+ "id": "2026-10-18-game-pass-leaving-soon-late-october",
+ "title": "Eight games on Xbox Game Pass's 'Leaving soon' list (late October)",
+ "game": "multiple",
+ "companies": [
+  "Microsoft"
+ ],
+ "priority": "gap fill 13:30Z (rolling queue)",
+ "why": "Game Pass subscribers' to-play list: Deep Rock Galactic and LEGO Star Wars among eight games leaving.",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Microsoft Game Pass catalog, 'Leaving soon' sigl 393f05bf-e596-4ef6-9487-6d4fa0eab987 (US/AE/SA), resolved via displaycatalog",
+   "url": "https://catalog.gamepass.com/sigls/v2?id=393f05bf-e596-4ef6-9487-6d4fa0eab987&language=en-us&market=US"
   },
-  "times": {
-    "dl": "2026-10-18T13:30:00Z"
+  {
+   "role": "lead",
+   "name": "Pure Xbox, 18 Oct 09:50Z",
+   "url": "https://www.purexbox.com/news/2026/10/eight-games-are-leaving-xbox-game-pass-in-late-october-2026"
+  }
+ ],
+ "claims": [
+  {
+   "text": "eight titles on the Leaving soon list",
+   "status": "confirmed (Microsoft catalog, re-read 10:26Z)"
   },
-  "notes": [
-    "18 Oct 10:26Z: built b156 (list, emerald, eight Steam trailers, Wartales as a Steam screenshot because its trailer is letterboxed). Grammar review: one required edit (لعبتا), date data named as Microsoft's catalog, no guillemets on the label. DeepL forward pass. 22.4 s before the end card (eight games). Gate 10:26Z Exit A for the list. Queued 13:30Z. Follow-up: Xbox Wire's wave 2 post (~20 Oct) will give official dates; an update post if they differ from what readers expect.",
-    "18 Oct 13:40Z: PUBLISHED on X, Instagram, Threads at 13:30Z (postsListTool); media stripped from dxb-queue."
-  ],
-  "reel": "cards/2026-10/game-pass-leaving-soon-late-october-reel-v1.mp4"
+  {
+   "text": "leave on 31 Oct",
+   "status": "Pure Xbox only; catalog windows end earlier for Deep Rock Galactic (~20 Oct), Dead Static Drive and Lara Croft (~22 Oct); not on screen, attributed in caption"
+  },
+  {
+   "text": "at least 20% off most",
+   "status": "Pure Xbox"
+  }
+ ],
+ "status": "published",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "رسمي",
+   "format": "list",
+   "headline": "ثماني ألعاب تغادر قريبًا خدمة Xbox Game Pass",
+   "x": "ثماني ألعاب تغادر قريبًا خدمة Xbox Game Pass، منها Deep Rock Galactic وLEGO Star Wars: The Skywalker Saga، حسب كتالوج الخدمة.",
+   "ig": "تغادر Deep Rock Galactic وLEGO Star Wars: The Skywalker Saga خدمة Xbox Game Pass قريبًا، ضمن ثماني ألعاب. / أضافت مايكروسوفت (Microsoft) ثماني ألعاب إلى قائمة الألعاب التي تغادر Xbox Game Pass قريبًا، حسب كتالوج الخدمة الذي يعرضه تطبيق Xbox. / والألعاب هي: Deep Rock Galactic وWildgate وWartales وDead Static Drive وLEGO Star Wars: The Skywalker Saga وLara Croft and the Temple of Osiris وFull Throttle Remastered وDay of the Tentacle Remastered. / ولم تعلن مايكروسوفت مواعيد المغادرة رسميًا بعد، وذكر موقع بيور إكس بوكس (Pure Xbox) أنها تغادر في 31 أكتوبر، فيما تشير بيانات كتالوج مايكروسوفت إلى أن بعضها قد يغادر قبل ذلك. / وذكر الموقع أن أغلبها متاح للمشتركين بخصم لا يقل عن 20% لمن يريد شراءها قبل مغادرتها.",
+   "lines": [
+    "تغادر Deep Rock Galactic\nوWildgate",
+    "وتغادر Wartales\nوDead Static Drive",
+    "ومعها LEGO Star Wars: The Skywalker Saga",
+    "وتغادر Lara Croft and the Temple of Osiris",
+    "ومن دابل فاين (Double Fine):\nلعبتا Full Throttle وDay of the Tentacle"
+   ],
+   "media": "cards/2026-10/game-pass-leaving-soon-late-october-reel-v1.mp4",
+   "time": "Sun 18 Oct 17:30 Dubai (13:30Z)"
+  }
+ },
+ "times": {
+  "dl": "2026-10-18T13:30:00Z",
+  "posted": "2026-10-18T13:30:00Z"
+ },
+ "notes": [
+  "18 Oct 10:26Z: built b156 (list, emerald, eight Steam trailers, Wartales as a Steam screenshot because its trailer is letterboxed). Grammar review: one required edit (لعبتا), date data named as Microsoft's catalog, no guillemets on the label. DeepL forward pass. 22.4 s before the end card (eight games). Gate 10:26Z Exit A for the list. Queued 13:30Z. Follow-up: Xbox Wire's wave 2 post (~20 Oct) will give official dates; an update post if they differ from what readers expect.",
+  "18 Oct 13:40Z: PUBLISHED on X, Instagram, Threads at 13:30Z (postsListTool); media stripped from dxb-queue."
+ ],
+ "reel": "cards/2026-10/game-pass-leaving-soon-late-october-reel-v1.mp4",
+ "posts": [
+  {
+   "folder": "game-pass-leaving-soon-late-october-ar",
+   "account": "Digital Lounge",
+   "platform": "x",
+   "date": "2026-10-18T13:30:00Z",
+   "postiz_id": "cmvdom7zu0otqlk0yodgp0hm2",
+   "sent_at": "2026-10-18T10:27:50+00:00",
+   "approved": "go: rolling queue (fills 13:30Z gap); preview sent 10:27Z. gate 10:26Z Exit A (رسمي) for the list: Microsoft's Game Pass 'Leaving soon' catalog sigl re-read, 8 ids = the 8 titles (displaycatalog); dates not official (Pure Xbox 31 Oct, catalog windows earlier for 3), so none on screen and the caption attributes them; Xbox Wire has no post yet"
+  },
+  {
+   "folder": "game-pass-leaving-soon-late-october-ig",
+   "account": "Digital Lounge",
+   "platform": "instagram",
+   "date": "2026-10-18T13:30:00Z",
+   "postiz_id": "cmvdomanc0otvlk0ymjwcxjmv",
+   "sent_at": "2026-10-18T10:27:53+00:00",
+   "approved": "go: rolling queue (fills 13:30Z gap); preview sent 10:27Z. gate 10:26Z Exit A (رسمي) for the list: Microsoft's Game Pass 'Leaving soon' catalog sigl re-read, 8 ids = the 8 titles (displaycatalog); dates not official (Pure Xbox 31 Oct, catalog windows earlier for 3), so none on screen and the caption attributes them; Xbox Wire has no post yet"
+  },
+  {
+   "folder": "game-pass-leaving-soon-late-october-th",
+   "account": "Digital Lounge",
+   "platform": "threads",
+   "date": "2026-10-18T13:30:00Z",
+   "postiz_id": "cmvdome5a0otwlk0ysuvvd7ov",
+   "sent_at": "2026-10-18T10:27:58+00:00",
+   "approved": "go: rolling queue (fills 13:30Z gap); preview sent 10:27Z. gate 10:26Z Exit A (رسمي) for the list: Microsoft's Game Pass 'Leaving soon' catalog sigl re-read, 8 ids = the 8 titles (displaycatalog); dates not official (Pure Xbox 31 Oct, catalog windows earlier for 3), so none on screen and the caption attributes them; Xbox Wire has no post yet"
+  }
+ ]
 }

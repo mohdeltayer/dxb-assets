@@ -1,77 +1,113 @@
 {
-  "id": "2026-10-19-bone-drth-coop-steam",
-  "title": "Bone (عظمة): co-op game from Saudi developer DRTH, maker of Aunt Fatima, Steam page and trailer, published by SAAF Interactive",
-  "game": "Bone - عظمة",
-  "companies": [
-    "DRTH",
-    "SAAF Interactive"
-  ],
-  "category": "reveal",
-  "status": "published",
-  "lane": "rolling queue",
-  "chip": "نظرة أولى",
-  "country": "السعودية",
-  "template": "trailer",
-  "sources": [
-    {
-      "role": "primary",
-      "name": "DRTH (@Drth7) on X: teaser and Steam link",
-      "url": "https://x.com/Drth7",
-      "time": "2026-10-15T15:00:30Z",
-      "via": "api.fxtwitter.com timeline, read 20:30Z"
-    },
-    {
-      "role": "primary",
-      "name": "Steam store page app 4630560",
-      "url": "https://store.steampowered.com/app/4630560/",
-      "time": "2026-10-14",
-      "via": "appdetails read 20:25Z"
-    },
-    {
-      "role": "radar",
-      "name": "Saudi Gamer",
-      "url": "https://www.saudigamer.com/creator-of-khala-fatima-returns-with-a-fantastic-cooperative-game-bone/",
-      "time": "2026-10-19T19:28:58Z",
-      "via": "20:08Z watch"
-    }
-  ],
-  "claims": [
-    {
-      "text": "4-player online co-op; skeletons escort a fragile orb on a wagon",
-      "status": "verified",
-      "source": "Steam, DRTH"
-    },
-    {
-      "text": "Developer Abdulla Al Hamad (DRTH), publisher SAAF Interactive (Saudi), partnership announced 15 Oct",
-      "status": "verified",
-      "source": "Steam, DRTH X"
-    },
-    {
-      "text": "PC (Windows) on Steam, English and Arabic with full audio, Coming soon, no date",
-      "status": "verified",
-      "source": "Steam"
-    },
-    {
-      "text": "Maker of Aunt Fatima - خالة فاطمة (Steam 3030250, 31 Oct 2024)",
-      "status": "verified",
-      "source": "Steam"
-    }
-  ],
-  "media": [
-    {
-      "file": "bone-trailer.mp4",
-      "source_url": "Steam app 4630560 Trailer1",
-      "kind": "trailer"
-    }
-  ],
-  "notes": "Dated from 15 Oct (4 days at first report): kept as regional news the wider press missed (first press Saudi Gamer 19 Oct 19:28Z). Developer's name spelt two ways in the press (آل حمد, الحمد); copy uses DRTH.",
-  "times": {
-    "dl": "2026-10-20T01:00:00Z",
-    "posted": "2026-10-20T01:00:00Z"
+ "id": "2026-10-19-bone-drth-coop-steam",
+ "title": "Bone (عظمة): co-op game from Saudi developer DRTH, maker of Aunt Fatima, Steam page and trailer, published by SAAF Interactive",
+ "game": "Bone - عظمة",
+ "companies": [
+  "DRTH",
+  "SAAF Interactive"
+ ],
+ "category": "reveal",
+ "status": "published",
+ "lane": "rolling queue",
+ "chip": "نظرة أولى",
+ "country": "السعودية",
+ "template": "trailer",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "DRTH (@Drth7) on X: teaser and Steam link",
+   "url": "https://x.com/Drth7",
+   "time": "2026-10-15T15:00:30Z",
+   "via": "api.fxtwitter.com timeline, read 20:30Z"
   },
-  "posts": {
-    "x": "cmvfqgo7w00rkl40yljqts5st",
-    "instagram": "cmvfqgqip00rml40ya2ny2kk0",
-    "threads": "cmvfqgsu700sulj0yjkijonxm"
+  {
+   "role": "primary",
+   "name": "Steam store page app 4630560",
+   "url": "https://store.steampowered.com/app/4630560/",
+   "time": "2026-10-14",
+   "via": "appdetails read 20:25Z"
+  },
+  {
+   "role": "radar",
+   "name": "Saudi Gamer",
+   "url": "https://www.saudigamer.com/creator-of-khala-fatima-returns-with-a-fantastic-cooperative-game-bone/",
+   "time": "2026-10-19T19:28:58Z",
+   "via": "20:08Z watch"
   }
+ ],
+ "claims": [
+  {
+   "text": "4-player online co-op; skeletons escort a fragile orb on a wagon",
+   "status": "verified",
+   "source": "Steam, DRTH"
+  },
+  {
+   "text": "Developer Abdulla Al Hamad (DRTH), publisher SAAF Interactive (Saudi), partnership announced 15 Oct",
+   "status": "verified",
+   "source": "Steam, DRTH X"
+  },
+  {
+   "text": "PC (Windows) on Steam, English and Arabic with full audio, Coming soon, no date",
+   "status": "verified",
+   "source": "Steam"
+  },
+  {
+   "text": "Maker of Aunt Fatima - خالة فاطمة (Steam 3030250, 31 Oct 2024)",
+   "status": "verified",
+   "source": "Steam"
+  }
+ ],
+ "media": [
+  {
+   "file": "bone-trailer.mp4",
+   "source_url": "Steam app 4630560 Trailer1",
+   "kind": "trailer"
+  }
+ ],
+ "notes": "Dated from 15 Oct (4 days at first report): kept as regional news the wider press missed (first press Saudi Gamer 19 Oct 19:28Z). Developer's name spelt two ways in the press (آل حمد, الحمد); copy uses DRTH.",
+ "times": {
+  "dl": "2026-10-20T01:00:00Z",
+  "posted": "2026-10-20T01:00:00.000Z"
+ },
+ "posts": [
+  {
+   "platform": "x",
+   "postiz_id": "cmvfqgo7w00rkl40yljqts5st"
+  },
+  {
+   "platform": "instagram",
+   "postiz_id": "cmvfqgqip00rml40ya2ny2kk0"
+  },
+  {
+   "platform": "threads",
+   "postiz_id": "cmvfqgsu700sulj0yjkijonxm"
+  },
+  {
+   "folder": "bone-drth-coop-steam-ar",
+   "account": "Digital Lounge",
+   "platform": "x",
+   "date": "2026-10-20T01:00:00.000Z",
+   "postiz_id": "cmvfqgo7w00rkl40yljqts5st",
+   "sent_at": "2026-10-19T20:55:03+00:00",
+   "approved": "go: rolling queue (overnight regional news, 20:08Z watch; dated 15 Oct, kept as regional news the wider press missed); preview sent 20:53Z; gate 20:53Z: Steam app 4630560 unchanged (Coming soon, SAAF Interactive, Windows), DRTH X posts 15 Oct unchanged"
+  },
+  {
+   "folder": "bone-drth-coop-steam-ig",
+   "account": "Digital Lounge",
+   "platform": "instagram",
+   "date": "2026-10-20T01:00:00.000Z",
+   "postiz_id": "cmvfqgqip00rml40ya2ny2kk0",
+   "sent_at": "2026-10-19T20:55:06+00:00",
+   "approved": "go: rolling queue (overnight regional news, 20:08Z watch; dated 15 Oct, kept as regional news the wider press missed); preview sent 20:53Z; gate 20:53Z: Steam app 4630560 unchanged (Coming soon, SAAF Interactive, Windows), DRTH X posts 15 Oct unchanged"
+  },
+  {
+   "folder": "bone-drth-coop-steam-th",
+   "account": "Digital Lounge",
+   "platform": "threads",
+   "date": "2026-10-20T01:00:00.000Z",
+   "postiz_id": "cmvfqgsu700sulj0yjkijonxm",
+   "sent_at": "2026-10-19T20:55:09+00:00",
+   "approved": "go: rolling queue (overnight regional news, 20:08Z watch; dated 15 Oct, kept as regional news the wider press missed); preview sent 20:53Z; gate 20:53Z: Steam app 4630560 unchanged (Coming soon, SAAF Interactive, Windows), DRTH X posts 15 Oct unchanged"
+  }
+ ]
 }

@@ -1,79 +1,109 @@
 {
-  "id": "2026-10-19-ocarina-road-ep4-the-music",
-  "title": "«الطريق إلى Ocarina» episode 4: the music (Koji Kondo in Iwata Asks)",
-  "game": "The Legend of Zelda: Ocarina of Time",
-  "companies": [
-    "Nintendo"
-  ],
-  "priority": "evergreen bank (series episode); dated by its «باقي 17 يومًا» intro (19 Oct Dubai); re-run ocarina_intro.py <days> and re-join if it moves",
-  "why": "Series episode toward the 5 Nov Switch 2 release; the music story from Nintendo's own interview.",
-  "sources": [
-    {
-      "role": "primary",
-      "name": "Iwata Asks: The Legend of Zelda: Ocarina of Time 3D, Vol. 1 Sound (Nintendo, 2011)",
-      "url": "https://www.nintendo.com/en-gb/Iwata-Asks/Iwata-Asks-The-Legend-of-Zelda-Ocarina-of-Time-3D/Vol-1-Sound/"
-    },
-    {
-      "role": "primary",
-      "name": "Iwata Asks (Japanese original), vol 1 page 2",
-      "url": "https://www.nintendo.co.jp/3ds/interview/aqej/vol1/index2.html"
-    },
-    {
-      "role": "primary",
-      "name": "Nintendo What's New, 14 Oct 2026 (full symphonic orchestral music) and US store page (5 Nov)",
-      "url": "https://www.nintendo.com/us/whatsnew/you-have-been-summoned-to-watch-the-new-legend-of-zelda-ocarina-of-time-overview-trailer/"
-    }
-  ],
-  "claims": [
-    {
-      "text": "Hyrule Field music in small pieces played in random order so it does not drone",
-      "status": "confirmed (Kondo, Iwata Asks)"
-    },
-    {
-      "text": "Fight music blends in near an enemy and out after",
-      "status": "confirmed (Iwata Asks)"
-    },
-    {
-      "text": "The forest ocarina meant to sound as if from far away",
-      "status": "confirmed (Kondo, Iwata Asks)"
-    },
-    {
-      "text": "'Link is you'",
-      "status": "confirmed (Kondo, Iwata Asks)"
-    },
-    {
-      "text": "Switch 2 version 5 Nov with full symphonic orchestral music",
-      "status": "confirmed (Nintendo)"
-    },
-    {
-      "text": "Five notes, twelve songs",
-      "status": "not used (fan translation only)"
-    }
-  ],
-  "status": "published",
-  "lanes": {
-    "dl": {
-      "lane": "Reel",
-      "chip": "رسمي",
-      "format": "trailer",
-      "headline": "سر موسيقى Ocarina of Time\nكما رواه ملحنها",
-      "x": "ألّف الملحن كوجي كوندو (Koji Kondo) موسيقى Hyrule Field في Ocarina of Time من مقاطع قصيرة تُعزف بترتيب عشوائي، كما روى في مقابلة ضمن سلسلة Iwata Asks. الحلقة الرابعة من «الطريق إلى Ocarina».",
-      "ig": "سر موسيقى Ocarina of Time: ألّف الملحن كوجي كوندو (Koji Kondo) موسيقى Hyrule Field من مقاطع قصيرة تُعزف بترتيب عشوائي. / روى الملحن كوجي كوندو قصة موسيقى The Legend of Zelda: Ocarina of Time في مقابلة ضمن سلسلة Iwata Asks نشرتها نينتيندو (Nintendo) عام 2011 مع صدور نسخة Nintendo 3DS. / وقال كوندو إنه كتب موسيقى Hyrule Field على شكل مقاطع قصيرة تُعزف بترتيب عشوائي، لأنه لم يرد أن يعود اللاعب إلى السهل بعد مغامرة طويلة فيجد اللحن نفسه يتكرر بلا انقطاع. / وتدخل موسيقى القتال بسلاسة حين يقترب Link من عدو، ثم تتلاشى حين ينتهي القتال. / وأراد كوندو أن يصل صوت الأوكارينا من الغابة كأنه آتٍ من بعيد، وقال إن «Link هو أنت»، فالموسيقى تُكتب من وجهة نظر Link. / وتصدر النسخة الجديدة على Nintendo Switch 2 في 5 نوفمبر بموسيقى أوركسترالية سيمفونية كاملة، حسب نينتيندو. / وهذه هي الحلقة الرابعة من «الطريق إلى Ocarina»، سلسلة ترافقكم حتى موعد الإطلاق.",
-      "lines": [
-        "ألّف الملحن كوجي كوندو (Koji Kondo)\nموسيقى Hyrule Field من مقاطع قصيرة",
-        "تُعزف عشوائيًا كي لا تتكرر",
-        "وتدخل موسيقى القتال بسلاسة\nحين يقترب Link من عدو",
-        "وأراد كوندو صوت الأوكارينا من الغابة\nكأنه آتٍ من بعيد",
-        "وتصدر بأوركسترا سيمفونية كاملة\nعلى Nintendo Switch 2 في 5 نوفمبر"
-      ],
-      "reel": "cards/2026-10/ocarina-road-ep4-the-music-episode-v1.mp4"
-    }
+ "id": "2026-10-19-ocarina-road-ep4-the-music",
+ "title": "«الطريق إلى Ocarina» episode 4: the music (Koji Kondo in Iwata Asks)",
+ "game": "The Legend of Zelda: Ocarina of Time",
+ "companies": [
+  "Nintendo"
+ ],
+ "priority": "evergreen bank (series episode); dated by its «باقي 17 يومًا» intro (19 Oct Dubai); re-run ocarina_intro.py <days> and re-join if it moves",
+ "why": "Series episode toward the 5 Nov Switch 2 release; the music story from Nintendo's own interview.",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Iwata Asks: The Legend of Zelda: Ocarina of Time 3D, Vol. 1 Sound (Nintendo, 2011)",
+   "url": "https://www.nintendo.com/en-gb/Iwata-Asks/Iwata-Asks-The-Legend-of-Zelda-Ocarina-of-Time-3D/Vol-1-Sound/"
   },
-  "notes": [
-    "18 Oct 15:50Z: built b167 (trailer, stylized, trailer A's own score from 26.0 under hard cuts), 26.0 s plus the 4.2 s intro (32.2 s in all; five beats at reading pace, over the 12 to 20 s target, as episode 3). Nintendo's 720p store trailers only (lowres_ok). Frames checked: the lake and Zelda cuts trimmed off the field shots; the last line moved to the top above the ocarina's note panel. Grammar review: no required edits; seven optional taken. DeepL forward pass (bar count dropped). Intro rebuilt with episode 3's backdrop still (its source clip was cleared from uploads). Banked: not before Monday daytime, away from the 00:00Z Metacritic list (also Ocarina).",
-    "19 Oct 03:27Z: queued X/IG/Threads for 07:00Z (11:00 Dubai), approval 'go: rolling queue (banked evergreen)'."
-  ],
-  "times": {
-    "dl": "2026-10-19T07:00:00Z"
+  {
+   "role": "primary",
+   "name": "Iwata Asks (Japanese original), vol 1 page 2",
+   "url": "https://www.nintendo.co.jp/3ds/interview/aqej/vol1/index2.html"
+  },
+  {
+   "role": "primary",
+   "name": "Nintendo What's New, 14 Oct 2026 (full symphonic orchestral music) and US store page (5 Nov)",
+   "url": "https://www.nintendo.com/us/whatsnew/you-have-been-summoned-to-watch-the-new-legend-of-zelda-ocarina-of-time-overview-trailer/"
   }
+ ],
+ "claims": [
+  {
+   "text": "Hyrule Field music in small pieces played in random order so it does not drone",
+   "status": "confirmed (Kondo, Iwata Asks)"
+  },
+  {
+   "text": "Fight music blends in near an enemy and out after",
+   "status": "confirmed (Iwata Asks)"
+  },
+  {
+   "text": "The forest ocarina meant to sound as if from far away",
+   "status": "confirmed (Kondo, Iwata Asks)"
+  },
+  {
+   "text": "'Link is you'",
+   "status": "confirmed (Kondo, Iwata Asks)"
+  },
+  {
+   "text": "Switch 2 version 5 Nov with full symphonic orchestral music",
+   "status": "confirmed (Nintendo)"
+  },
+  {
+   "text": "Five notes, twelve songs",
+   "status": "not used (fan translation only)"
+  }
+ ],
+ "status": "published",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "رسمي",
+   "format": "trailer",
+   "headline": "سر موسيقى Ocarina of Time\nكما رواه ملحنها",
+   "x": "ألّف الملحن كوجي كوندو (Koji Kondo) موسيقى Hyrule Field في Ocarina of Time من مقاطع قصيرة تُعزف بترتيب عشوائي، كما روى في مقابلة ضمن سلسلة Iwata Asks. الحلقة الرابعة من «الطريق إلى Ocarina».",
+   "ig": "سر موسيقى Ocarina of Time: ألّف الملحن كوجي كوندو (Koji Kondo) موسيقى Hyrule Field من مقاطع قصيرة تُعزف بترتيب عشوائي. / روى الملحن كوجي كوندو قصة موسيقى The Legend of Zelda: Ocarina of Time في مقابلة ضمن سلسلة Iwata Asks نشرتها نينتيندو (Nintendo) عام 2011 مع صدور نسخة Nintendo 3DS. / وقال كوندو إنه كتب موسيقى Hyrule Field على شكل مقاطع قصيرة تُعزف بترتيب عشوائي، لأنه لم يرد أن يعود اللاعب إلى السهل بعد مغامرة طويلة فيجد اللحن نفسه يتكرر بلا انقطاع. / وتدخل موسيقى القتال بسلاسة حين يقترب Link من عدو، ثم تتلاشى حين ينتهي القتال. / وأراد كوندو أن يصل صوت الأوكارينا من الغابة كأنه آتٍ من بعيد، وقال إن «Link هو أنت»، فالموسيقى تُكتب من وجهة نظر Link. / وتصدر النسخة الجديدة على Nintendo Switch 2 في 5 نوفمبر بموسيقى أوركسترالية سيمفونية كاملة، حسب نينتيندو. / وهذه هي الحلقة الرابعة من «الطريق إلى Ocarina»، سلسلة ترافقكم حتى موعد الإطلاق.",
+   "lines": [
+    "ألّف الملحن كوجي كوندو (Koji Kondo)\nموسيقى Hyrule Field من مقاطع قصيرة",
+    "تُعزف عشوائيًا كي لا تتكرر",
+    "وتدخل موسيقى القتال بسلاسة\nحين يقترب Link من عدو",
+    "وأراد كوندو صوت الأوكارينا من الغابة\nكأنه آتٍ من بعيد",
+    "وتصدر بأوركسترا سيمفونية كاملة\nعلى Nintendo Switch 2 في 5 نوفمبر"
+   ],
+   "reel": "cards/2026-10/ocarina-road-ep4-the-music-episode-v1.mp4"
+  }
+ },
+ "notes": [
+  "18 Oct 15:50Z: built b167 (trailer, stylized, trailer A's own score from 26.0 under hard cuts), 26.0 s plus the 4.2 s intro (32.2 s in all; five beats at reading pace, over the 12 to 20 s target, as episode 3). Nintendo's 720p store trailers only (lowres_ok). Frames checked: the lake and Zelda cuts trimmed off the field shots; the last line moved to the top above the ocarina's note panel. Grammar review: no required edits; seven optional taken. DeepL forward pass (bar count dropped). Intro rebuilt with episode 3's backdrop still (its source clip was cleared from uploads). Banked: not before Monday daytime, away from the 00:00Z Metacritic list (also Ocarina).",
+  "19 Oct 03:27Z: queued X/IG/Threads for 07:00Z (11:00 Dubai), approval 'go: rolling queue (banked evergreen)'."
+ ],
+ "times": {
+  "dl": "2026-10-19T07:00:00Z",
+  "posted": "2026-10-19T07:00:00Z"
+ },
+ "posts": [
+  {
+   "folder": "ocarina-road-ep4-the-music-ar",
+   "account": "Digital Lounge",
+   "platform": "x",
+   "date": "2026-10-19T07:00:00Z",
+   "postiz_id": "cmveou44b02f2pc0yj3xfs5jj",
+   "sent_at": "2026-10-19T03:21:44+00:00",
+   "approved": "go: rolling queue (banked evergreen, constant coverage); preview sent 03:26Z; gate 03:25Z: countdown «باقي 17 يومًا» right for 19 Oct Dubai (launch 5 Nov); Iwata Asks history unchanged"
+  },
+  {
+   "folder": "ocarina-road-ep4-the-music-ig",
+   "account": "Digital Lounge",
+   "platform": "instagram",
+   "date": "2026-10-19T07:00:00Z",
+   "postiz_id": "cmveou7em02hyo70yrpf6yypm",
+   "sent_at": "2026-10-19T03:21:49+00:00",
+   "approved": "go: rolling queue (banked evergreen, constant coverage); preview sent 03:26Z; gate 03:25Z: countdown «باقي 17 يومًا» right for 19 Oct Dubai (launch 5 Nov); Iwata Asks history unchanged"
+  },
+  {
+   "folder": "ocarina-road-ep4-the-music-th",
+   "account": "Digital Lounge",
+   "platform": "threads",
+   "date": "2026-10-19T07:00:00Z",
+   "postiz_id": "cmveoual202i7o70yckj9lc6o",
+   "sent_at": "2026-10-19T03:21:53+00:00",
+   "approved": "go: rolling queue (banked evergreen, constant coverage); preview sent 03:26Z; gate 03:25Z: countdown «باقي 17 يومًا» right for 19 Oct Dubai (launch 5 Nov); Iwata Asks history unchanged"
+  }
+ ]
 }

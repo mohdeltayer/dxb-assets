@@ -1,82 +1,112 @@
 {
-  "id": "2026-10-20-tropico-7-pre-orders-demo-arabic",
-  "title": "Tropico 7: digital pre-orders open with 10% off, free Next Fest demo, launch 28 Jan 2027 (Game Pass); Arabic listed on Steam; AED 143.99 on Steam UAE",
-  "game": "Tropico 7",
-  "companies": [
-    "Kalypso Media"
-  ],
-  "category": "preorder",
-  "status": "published",
-  "lane": "rolling queue",
-  "chip": "رسمي",
-  "template": "split",
-  "sources": [
-    {
-      "role": "primary",
-      "name": "Kalypso Media, Steam news 'Tropico 7 Pre-Orders & Demo Open Today'",
-      "url": "https://store.steampowered.com/news/app/1853440/",
-      "time": "2026-10-20T08:55Z"
-    },
-    {
-      "role": "store",
-      "name": "Steam app 1853440, cc=ae (store API)",
-      "url": "https://store.steampowered.com/app/1853440/",
-      "via": "read 2026-10-20T10:12Z: 159.99 -> 143.99 AED; Deluxe 204.99 -> 184.49 AED; Arabic in supported languages, not full audio"
-    },
-    {
-      "role": "outlet",
-      "name": "4Gamer (Japanese version, same date)",
-      "url": "https://www.4gamer.net/games/939/G093900/20261020025/",
-      "time": "2026-10-20T08:00Z"
-    }
-  ],
-  "claims": [
-    {
-      "text": "Digital pre-orders open today with 10% off (PS: PS Plus members only)",
-      "status": "verified",
-      "source": "Kalypso"
-    },
-    {
-      "text": "Launch 28 Jan 2027, Game Pass Ultimate and PC Game Pass at launch",
-      "status": "verified",
-      "source": "Kalypso"
-    },
-    {
-      "text": "Deluxe Edition pre-order: 48 hours early access",
-      "status": "verified",
-      "source": "Kalypso"
-    },
-    {
-      "text": "Free demo during Steam Next Fest with the first campaign mission",
-      "status": "verified",
-      "source": "Kalypso"
-    },
-    {
-      "text": "Switch 2 Special Edition with Joy-Con 2 mouse controls",
-      "status": "verified",
-      "source": "Kalypso"
-    },
-    {
-      "text": "Steam UAE: 143.99 AED after 10% (159.99 list), Deluxe 184.49 AED",
-      "status": "verified",
-      "source": "Steam store API"
-    },
-    {
-      "text": "Arabic listed among supported languages, without full audio",
-      "status": "verified",
-      "source": "Steam store API (Kalypso's post does not mention it)"
-    }
-  ],
-  "why": "A known series opens pre-orders with an Arabic listing and a UAE price; regional angle for our readers",
-  "media": [
-    {
-      "file": "tropico-7-pre-orders-demo-arabic-reel-v1.mp4",
-      "source_url": "Steam 1853440: Gameplay Trailer, Pre-Order and Demo Trailer (uploads/tropico7-gameplay.mp4, tropico7-preorder.mp4)",
-      "kind": "official 1080p trailers; sound: the gameplay trailer's music from 8 s, no speech; a sliver of the trailer's own 'Work in progress' mark at the top-left edge of one shot"
-    }
-  ],
-  "notes": "Template split at a fifth use for the Dubai day: kind preorder maps only to split ('story demands it'); Mohammad asked at 09:45Z whether the gap rule wins over the caps today. Grammar review: no required edits; style: ويقتصر خصم PS5 (was الخصم على PS5 على). DeepL forward: الطلبات المسبقة (house glossary keeps الحجز المسبق), دون تعليق صوتي; back-check matches. Gate 10:15Z: Kalypso post read in full, no update notes.",
-  "times": {
-    "dl": "2026-10-20T11:00:00Z"
+ "id": "2026-10-20-tropico-7-pre-orders-demo-arabic",
+ "title": "Tropico 7: digital pre-orders open with 10% off, free Next Fest demo, launch 28 Jan 2027 (Game Pass); Arabic listed on Steam; AED 143.99 on Steam UAE",
+ "game": "Tropico 7",
+ "companies": [
+  "Kalypso Media"
+ ],
+ "category": "preorder",
+ "status": "published",
+ "lane": "rolling queue",
+ "chip": "رسمي",
+ "template": "split",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Kalypso Media, Steam news 'Tropico 7 Pre-Orders & Demo Open Today'",
+   "url": "https://store.steampowered.com/news/app/1853440/",
+   "time": "2026-10-20T08:55Z"
+  },
+  {
+   "role": "store",
+   "name": "Steam app 1853440, cc=ae (store API)",
+   "url": "https://store.steampowered.com/app/1853440/",
+   "via": "read 2026-10-20T10:12Z: 159.99 -> 143.99 AED; Deluxe 204.99 -> 184.49 AED; Arabic in supported languages, not full audio"
+  },
+  {
+   "role": "outlet",
+   "name": "4Gamer (Japanese version, same date)",
+   "url": "https://www.4gamer.net/games/939/G093900/20261020025/",
+   "time": "2026-10-20T08:00Z"
   }
+ ],
+ "claims": [
+  {
+   "text": "Digital pre-orders open today with 10% off (PS: PS Plus members only)",
+   "status": "verified",
+   "source": "Kalypso"
+  },
+  {
+   "text": "Launch 28 Jan 2027, Game Pass Ultimate and PC Game Pass at launch",
+   "status": "verified",
+   "source": "Kalypso"
+  },
+  {
+   "text": "Deluxe Edition pre-order: 48 hours early access",
+   "status": "verified",
+   "source": "Kalypso"
+  },
+  {
+   "text": "Free demo during Steam Next Fest with the first campaign mission",
+   "status": "verified",
+   "source": "Kalypso"
+  },
+  {
+   "text": "Switch 2 Special Edition with Joy-Con 2 mouse controls",
+   "status": "verified",
+   "source": "Kalypso"
+  },
+  {
+   "text": "Steam UAE: 143.99 AED after 10% (159.99 list), Deluxe 184.49 AED",
+   "status": "verified",
+   "source": "Steam store API"
+  },
+  {
+   "text": "Arabic listed among supported languages, without full audio",
+   "status": "verified",
+   "source": "Steam store API (Kalypso's post does not mention it)"
+  }
+ ],
+ "why": "A known series opens pre-orders with an Arabic listing and a UAE price; regional angle for our readers",
+ "media": [
+  {
+   "file": "tropico-7-pre-orders-demo-arabic-reel-v1.mp4",
+   "source_url": "Steam 1853440: Gameplay Trailer, Pre-Order and Demo Trailer (uploads/tropico7-gameplay.mp4, tropico7-preorder.mp4)",
+   "kind": "official 1080p trailers; sound: the gameplay trailer's music from 8 s, no speech; a sliver of the trailer's own 'Work in progress' mark at the top-left edge of one shot"
+  }
+ ],
+ "notes": "Template split at a fifth use for the Dubai day: kind preorder maps only to split ('story demands it'); Mohammad asked at 09:45Z whether the gap rule wins over the caps today. Grammar review: no required edits; style: ويقتصر خصم PS5 (was الخصم على PS5 على). DeepL forward: الطلبات المسبقة (house glossary keeps الحجز المسبق), دون تعليق صوتي; back-check matches. Gate 10:15Z: Kalypso post read in full, no update notes.",
+ "times": {
+  "dl": "2026-10-20T11:00:00Z",
+  "posted": "2026-10-20T11:00:00Z"
+ },
+ "posts": [
+  {
+   "folder": "tropico-7-pre-orders-demo-arabic-ar",
+   "account": "Digital Lounge",
+   "platform": "x",
+   "date": "2026-10-20T11:00:00Z",
+   "postiz_id": "cmvgjkpaw01sfmx0y1lkqm2gw",
+   "sent_at": "2026-10-20T10:30:00+00:00",
+   "approved": "go: rolling queue; preview sent 10:31Z; gate 10:15Z: Kalypso Steam post (08:55Z) read in full, no update notes; Steam UAE price 143.99 AED read from the store API 10:12Z; split at a fifth use today because kind preorder maps only to split (story demands it), Mohammad asked at 09:45Z"
+  },
+  {
+   "folder": "tropico-7-pre-orders-demo-arabic-ig",
+   "account": "Digital Lounge",
+   "platform": "instagram",
+   "date": "2026-10-20T11:00:00Z",
+   "postiz_id": "cmvgjktvp01sgmx0y63h7jbxv",
+   "sent_at": "2026-10-20T10:30:06+00:00",
+   "approved": "go: rolling queue; preview sent 10:31Z; gate 10:15Z: Kalypso Steam post (08:55Z) read in full, no update notes; Steam UAE price 143.99 AED read from the store API 10:12Z; split at a fifth use today because kind preorder maps only to split (story demands it), Mohammad asked at 09:45Z"
+  },
+  {
+   "folder": "tropico-7-pre-orders-demo-arabic-th",
+   "account": "Digital Lounge",
+   "platform": "threads",
+   "date": "2026-10-20T11:00:00Z",
+   "postiz_id": "cmvgjl1vc01shmx0ybhrjcfen",
+   "sent_at": "2026-10-20T10:30:16+00:00",
+   "approved": "go: rolling queue; preview sent 10:31Z; gate 10:15Z: Kalypso Steam post (08:55Z) read in full, no update notes; Steam UAE price 143.99 AED read from the store API 10:12Z; split at a fifth use today because kind preorder maps only to split (story demands it), Mohammad asked at 09:45Z"
+  }
+ ]
 }
