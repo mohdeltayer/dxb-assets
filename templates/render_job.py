@@ -126,6 +126,11 @@ def focus(job, path):
     return job
 
 
+def strip_items(job):
+    """[(label, value)] for reel's strip; a value written as ["aed", "185"] in JSON becomes the ('aed', '185') price tuple."""
+    return [(l, tuple(v) if isinstance(v, list) else v) for l, v in job['strip']]
+
+
 def place(job):
     return reel.by_shot([(a, b, [tuple(x) if isinstance(x, list) else x for x in texts]) for a, b, texts in job['lines']])
 
@@ -163,7 +168,7 @@ def textcheck(job):
                     kw = dict(kw, lift=reel.STRIP_LIFT) if hasattr(reel, 'STRIP_LIFT') else kw
                 reel.line_layer(text, f'{tmp}/l.png', skin=skin, **kw)
         if job.get('strip'):
-            reel.strip_layer([tuple(i) for i in job['strip']], f'{tmp}/s.png', job['theme'], skin=skin)
+            reel.strip_layer(strip_items(job), f'{tmp}/s.png', job['theme'], skin=skin)
         for c in job.get('credits') or []:
             reel.credit_layer(c[2], f'{tmp}/c.png')
     finally:
@@ -183,7 +188,7 @@ def run(job, draft=False):
                      theme=job['theme'], style=job.get('style'), sound=job.get('sound'), country=job.get('country'),
                      head_size=job.get('head_size', 66), draft=draft, track=tup(job.get('track')), cut=job.get('cut', False),
                      credits=[tuple(c) for c in job['credits']] if job.get('credits') else None,
-                     strip=[tuple(s) for s in job['strip']] if job.get('strip') else None,
+                     strip=strip_items(job) if job.get('strip') else None,
                      template=job.get('template'), pace_ok=job.get('pace_ok', False), lowres_ok=job.get('lowres_ok', False),
                      skin=job.get('skin'))
     video = done[0] if isinstance(done, (list, tuple)) else done
