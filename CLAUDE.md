@@ -1074,6 +1074,21 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      crop-edge text flag in 1 is a sheet check, applied to every Reel). The
      container has no Dubai font since the reset, so the HTML themes render on
      the runner or once `dubai.zip` is back.
+  6. Built 20 Oct (commits 6fba31e, 4ae1e37): `templates/skins.py` with the
+     kit tokens in `templates/web/skins/{scifi,fantasy,house}.css`;
+     `reel(..., skin='scifi'|'fantasy')` or `"skin"` in a job file (house or
+     no key is today's look; any other kit name stops the render). A kit
+     changes the top-band decoration, a plate behind chip and headline, the
+     split strip's plate, the story lines' outline, the shot-to-shot cut
+     (sci-fi digital break-up; fantasy dissolve with a warm light leak), the
+     line entrance (sci-fi fast slide; fantasy slow rise) and a sting at the
+     first line (synth blip; harp-like pluck). The headline stays still (the
+     first frame is the grid tile). With no skin the layers match the old code
+     pixel for pixel. Card scripts still have to call `skins.plate(im, box,
+     kit)` themselves. The house theme with footage behind is numgfx's
+     `footage` ground (`ground_footage` in a job). Side-by-sides went to
+     Mohammad at 19:16Z with a note that the sci-fi break-up looks heavy; no
+     live Reel uses a kit until his verdict.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under

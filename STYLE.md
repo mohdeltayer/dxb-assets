@@ -110,7 +110,8 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - Game skins (20 Oct, pilot): one game, its look (franchise skin, else
     genre kit); several games or the industry, the house theme. Pilot kits:
     sci-fi, fantasy, house with footage behind; `skin` logged in the format
-    ledger, compared after two weeks. Card-led templates sit on the game's
+    ledger, compared after two weeks (kits built 20 Oct, `reel(..., skin=)`,
+    waiting on his side-by-side verdict). Card-led templates sit on the game's
     dimmed, blurred, moving footage, never flat; nothing static in the first
     3 s. Dubai type, mark, chip position, safe zone, end card and crimson
     عاجل never change; no pixel copies of a game's UI or logo.
