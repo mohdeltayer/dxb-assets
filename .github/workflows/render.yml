@@ -91,6 +91,11 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Text check (fails in seconds on a bad wrap)
+        run: |
+          python -m pip install -q pillow numpy soundfile pedalboard
+          python templates/render_job.py text "$JOB"
+
       - name: Tools
         run: |
           sudo apt-get update -qq

@@ -143,6 +143,29 @@ def check(job):
     return end
 
 
+def textcheck(job):
+    """Headline, lines, strip and credits drawn alone, so a line that wraps onto a Latin word or
+    leaves the safe zone stops in seconds (needs the Dubai font: the runner runs it first)."""
+    import tempfile
+    tmp = tempfile.mkdtemp(prefix='textcheck-')
+    try:
+        reel.head_layer(job['headline'], job['label'], f'{tmp}/h.png', job['source'], job['date'], job.get('country'),
+                        hs=job.get('head_size', 66))
+        for a, b, texts in job['lines']:
+            for x in texts:
+                text, kw = (x, {}) if isinstance(x, str) else (x[0], x[1] if len(x) > 1 else {})
+                if job.get('strip') and 'lift' not in kw:
+                    kw = dict(kw, lift=reel.STRIP_LIFT) if hasattr(reel, 'STRIP_LIFT') else kw
+                reel.line_layer(text, f'{tmp}/l.png', **kw)
+        if job.get('strip'):
+            reel.strip_layer([tuple(i) for i in job['strip']], f'{tmp}/s.png', job['theme'])
+        for c in job.get('credits') or []:
+            reel.credit_layer(c[2], f'{tmp}/c.png')
+    finally:
+        import shutil as _sh
+        _sh.rmtree(tmp, ignore_errors=True)
+
+
 def run(job, draft=False):
     t0 = time.time()
     for item in job.get('footage', []):
@@ -172,6 +195,8 @@ if __name__ == '__main__':
     job = json.load(open(path))
     if step == 'check':
         print(job['name'], 'ok, clip %.1f s' % check(job))
+    elif step == 'text':
+        textcheck(job); print(job['name'], 'text ok')
     elif step == 'focus':
         focus(job, path); print(job['name'], 'focus written')
     elif step == 'run':
