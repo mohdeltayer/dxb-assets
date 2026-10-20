@@ -1,0 +1,75 @@
+{
+  "id": "2026-10-20-steam-next-fest-october-ai-disclosures",
+  "title": "Steam Next Fest October 2026: 7,164 demos, at least 1,054 with AI disclosures (SteamDB via GamingOnLinux); press page 8,202, more than double last year (Eurogamer)",
+  "game": "Steam Next Fest",
+  "companies": [
+    "Valve",
+    "SteamDB",
+    "GamingOnLinux",
+    "Eurogamer"
+  ],
+  "category": "platform",
+  "status": "queued",
+  "lane": "rolling queue",
+  "chip": "أرقام",
+  "template": "clipcard",
+  "follows": "2026-10-19-steam-next-fest-october-starts-today",
+  "sources": [
+    {
+      "role": "data",
+      "name": "SteamDB event page, via GamingOnLinux",
+      "url": "https://www.gamingonlinux.com/2026/10/steam-next-fest-oct-2026-is-live-with-thousands-of-demos/",
+      "time": "2026-10-20T07:14Z"
+    },
+    {
+      "role": "outlet",
+      "name": "Eurogamer",
+      "url": "https://www.eurogamer.net/steam-next-fest-2026-over-double",
+      "time": "2026-10-19T10:43Z"
+    },
+    {
+      "role": "primary-missing",
+      "name": "Valve, Next Fest page",
+      "url": "https://store.steampowered.com/sale/nextfest",
+      "via": "script-only, count not readable"
+    }
+  ],
+  "claims": [
+    {
+      "text": "7,164 demos",
+      "status": "reported",
+      "source": "SteamDB via GamingOnLinux"
+    },
+    {
+      "text": "At least 1,054 with an AI disclosure notice",
+      "status": "reported",
+      "source": "SteamDB via GamingOnLinux"
+    },
+    {
+      "text": "Press page count 8,202; more than double last year",
+      "status": "reported",
+      "source": "Eurogamer"
+    },
+    {
+      "text": "Real AI share may be higher (undisclosed use)",
+      "status": "reported",
+      "source": "Eurogamer"
+    },
+    {
+      "text": "Alliance Arts cancelled the Drunken Goddess Reflux demo over cloning fears",
+      "status": "reported",
+      "source": "Eurogamer"
+    }
+  ],
+  "media": [
+    {
+      "file": "steam-next-fest-october-ai-disclosures-reel-v1.mp4",
+      "source_url": "Steam: Surfpunk (2434830) demo reveal, Littlelands (2083660) date trailer",
+      "kind": "stand-in demo footage, credited «لقطات من عرضي Surfpunk وLittlelands»; Surfpunk's music from 14 s"
+    }
+  ],
+  "notes": "Headline turned into a question so the card alone carries the figures (one fact, one place). Grammar review: no required edits; SteamDB labelled as قاعدة بيانات. DeepL back-check matches. Left out: Send In The Clown (damage numbers), Surfpunk's swimwear close-up and white flash.",
+  "times": {
+    "dl": "2026-10-20T09:00:00Z"
+  }
+}
