@@ -232,8 +232,8 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     renders the next story at the same time and takes over a runner job that
     fails or passes 15 minutes; breaking stays on the container; both lanes
     log story, lane, queued, finished, render and setup minutes.
-    Every runner Reel stays held (story file: "held for Mohammad
-    (runner)") until he says the runner is trusted.
+    Runner hold lifted (Mohammad, 20 Oct, about 17:17Z): runner Reels
+    follow the normal rolling-queue rules.
   - (CLAUDE.md "Full-screen format", "Creative brief and formats")
 
 ## Platforms

@@ -943,6 +943,11 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      (16:45Z) went out on "go: rolling queue" without that hold; Game Pass
      wave 2 and Ace Combat 8 were already in Postiz too (he was told; only he
      can pull them).
+     Hold lifted (Mohammad, 20 Oct 2026, about 17:17Z: "lift the runner
+     hold", after his OK on Mortal Shell II): the runner is trusted. Runner
+     Reels now go out under the normal rules (rolling queue, preview at
+     queuing, breaking lane as written), with no separate hold; the story
+     file's approved line carries the usual note.
 - Review of the Xbox Nano Reel, the first under the hook band (advisor,
   14 Oct 2026):
   1. Ten seconds on one still (0 to 10 s) broke the 3 to 4 s change rule.
