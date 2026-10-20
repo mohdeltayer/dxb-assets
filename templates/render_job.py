@@ -168,6 +168,9 @@ def textcheck(job):
                     kw = dict(kw, lift=reel.STRIP_LIFT) if hasattr(reel, 'STRIP_LIFT') else kw
                 reel.line_layer(text, f'{tmp}/l.png', skin=skin, **kw)
         if job.get('strip'):
+            # the same one-fact-one-place check reel() runs, so a repeat fails here in seconds
+            reel.strip_check(strip_items(job), [(x if isinstance(x, str) else x[0], 0, 0, {} if isinstance(x, str) else (x[1] if len(x) > 1 else {}))
+                                                for _, _, texts in job['lines'] for x in texts])
             reel.strip_layer(strip_items(job), f'{tmp}/s.png', job['theme'], skin=skin)
         for c in job.get('credits') or []:
             reel.credit_layer(c[2], f'{tmp}/c.png')
