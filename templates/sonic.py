@@ -757,6 +757,35 @@ def under(video, bed_path, out, level_db=-2, jingle_path=None):
     return out
 
 
+# ---- game skin stings (advisor, 20 Oct 2026) -------------------------------------------------------------------
+# A short sting at the cut into a skinned Reel's first line (reel(..., skin=)): the house motif's notes in the kit's
+# voice, tonal, never noise, no saw. scifi: a two-note glassy synth blip; fantasy: a harp-like pluck of the motif.
+STINGS = ('scifi', 'fantasy')
+
+
+def sting(kit, path):
+    """Write the kit's sting (about 0.6 s, stereo) to `path` and return it."""
+    if kit not in STINGS:
+        raise ValueError(f'no sting for {kit!r}: {", ".join(STINGS)}')
+    m = NEON['motif']                                     # D F# A E: the house motif
+    if kit == 'scifi':
+        dur = 0.7
+        buf = np.zeros(int(dur * SR))
+        place(buf, 0.6 * bell(hz('D6'), 0.22, ratio=3.5, index=1.4), 0.0)
+        place(buf, 0.7 * bell(hz('A6'), 0.40, ratio=3.5, index=1.1), 0.075)
+        place(buf, 0.25 * np.sin(2 * np.pi * hz('D4') * t_(0.30)) * env(int(0.30 * SR), a=0.004, d=0.12, r=0.08), 0.0)
+        st = Pedalboard([HighpassFilter(120), Reverb(room_size=0.25, wet_level=0.18, dry_level=0.9),
+                         Limiter(-1.0)])(_stereo(buf, 0.25), SR)
+    else:
+        dur = 1.1
+        buf = np.zeros(int(dur * SR))
+        for i, n in enumerate(m[:3] + [m[0][:-1] + str(int(m[0][-1]) + 1)]):   # D F# A, then the D above, rolled like a harp
+            place(buf, (0.75 - 0.08 * i) * pluck(hz(n), 0.9 - 0.1 * i, bright=0.35), 0.055 * i)
+        st = Pedalboard([HighpassFilter(90), LowpassFilter(7000), Reverb(room_size=0.6, wet_level=0.32, dry_level=0.8),
+                         Limiter(-1.0)])(_stereo(buf, 0.15), SR)
+    return _write(st, path, loud=-20)
+
+
 if __name__ == '__main__':
     import sys
     out = sys.argv[1] if len(sys.argv) > 1 else '.'

@@ -153,16 +153,17 @@ def textcheck(job):
     import tempfile
     tmp = tempfile.mkdtemp(prefix='textcheck-')
     try:
+        skin = job.get('skin') if job.get('skin') in reel.SK.KITS and job.get('label') != 'عاجل' else None
         reel.head_layer(job['headline'], job['label'], f'{tmp}/h.png', job['source'], job['date'], job.get('country'),
-                        hs=job.get('head_size', 66))
+                        hs=job.get('head_size', 66), skin=skin)
         for a, b, texts in job['lines']:
             for x in texts:
                 text, kw = (x, {}) if isinstance(x, str) else (x[0], x[1] if len(x) > 1 else {})
                 if job.get('strip') and 'lift' not in kw:
                     kw = dict(kw, lift=reel.STRIP_LIFT) if hasattr(reel, 'STRIP_LIFT') else kw
-                reel.line_layer(text, f'{tmp}/l.png', **kw)
+                reel.line_layer(text, f'{tmp}/l.png', skin=skin, **kw)
         if job.get('strip'):
-            reel.strip_layer([tuple(i) for i in job['strip']], f'{tmp}/s.png', job['theme'])
+            reel.strip_layer([tuple(i) for i in job['strip']], f'{tmp}/s.png', job['theme'], skin=skin)
         for c in job.get('credits') or []:
             reel.credit_layer(c[2], f'{tmp}/c.png')
     finally:
@@ -183,7 +184,8 @@ def run(job, draft=False):
                      head_size=job.get('head_size', 66), draft=draft, track=tup(job.get('track')), cut=job.get('cut', False),
                      credits=[tuple(c) for c in job['credits']] if job.get('credits') else None,
                      strip=[tuple(s) for s in job['strip']] if job.get('strip') else None,
-                     template=job.get('template'), pace_ok=job.get('pace_ok', False), lowres_ok=job.get('lowres_ok', False))
+                     template=job.get('template'), pace_ok=job.get('pace_ok', False), lowres_ok=job.get('lowres_ok', False),
+                     skin=job.get('skin'))
     video = done[0] if isinstance(done, (list, tuple)) else done
     stem = os.path.splitext(out)[0]
     base = re.sub(r'-reel-v\d+$', '', stem)   # matches the workflow's ${stem%-reel-v*}, so v2 and later commit too

@@ -1,0 +1,25 @@
+/* Game skins pilot (advisor, 20 Oct 2026): the house theme, for multi-game lists, releases of the week, awards,
+   industry, business, hardware, platform policy and our own series. These are the Digital Lounge brand tokens as
+   reel.py already draws them (skin=None); the house look with footage behind is numgfx's 'footage' ground.
+   Listed here so skin.html can show the house look beside a kit. */
+:root {
+  --kit: house;
+  --ink: #F4F3FF;
+  --body: #C9C8E6;
+  --plate: #141332;
+  --plate-alpha: 0.70;
+  --edge: #3F3DA8;
+  --accent: #28B6F6;
+  --accent2: #5552E0;
+  --outline: #141332;
+  --chip: #28B6F6;
+  --radius: 26px;
+  --rule: 2px;
+  --enter: fade;
+  --enter-dur: 0.2s;
+  --enter-dx: 0px;
+  --enter-dy: 0px;
+  --cut: fade;
+  --leak: none;
+  --sting: none;
+}

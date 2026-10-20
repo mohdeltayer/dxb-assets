@@ -1,0 +1,31 @@
+/* Game skins pilot (advisor, 20 Oct 2026): the fantasy genre kit.
+   The single source of the kit's tokens: skins.py reads these custom properties for the Reel (PIL and ffmpeg),
+   skin.html uses them for the web-motion route. Inspired by the genre, never a copy of any game's UI or logo.
+   Our colours carry no pink or magenta. Arabic type stays Dubai on every kit; the mark, the chip position,
+   the safe zone and the end card never change. */
+:root {
+  --kit: fantasy;
+  --ink: #FFF6E6;
+  --body: #E6D6B8;
+  --plate: #1C140D;        /* a soft parchment-dark plate */
+  --plate-alpha: 0.70;
+  --edge: #D8B26A;         /* old gold: the double rule and the flourishes */
+  --accent: #D8B26A;
+  --accent2: #8FC2A4;      /* soft jade, the wash's second colour */
+  --outline: #1E150C;
+  --chip: #D8B26A;
+  --radius: 12px;
+  --rule: 2px;
+  --rule-gap: 9px;         /* the double rule: outer edge and an inner line this far in */
+  --corner: 22px;          /* flourish size at each corner */
+  --wash-alpha: 0.55;      /* the warm wash across the top band */
+  --curl-alpha: 0.45;      /* the thin ornamental curls in the band */
+  --enter: rise;           /* text entrance: a slow rise and fade */
+  --enter-dur: 0.6s;
+  --enter-dx: 0px;
+  --enter-dy: 28px;
+  --cut: fade;             /* shot to shot: the soft dissolve, with a warm light leak over each cut */
+  --leak: #FFC46E;
+  --leak-alpha: 0.42;
+  --sting: fantasy;        /* sonic.sting(): a harp-like pluck of the house motif */
+}

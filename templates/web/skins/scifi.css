@@ -1,0 +1,30 @@
+/* Game skins pilot (advisor, 20 Oct 2026): the sci-fi / cyberpunk genre kit.
+   The single source of the kit's tokens: skins.py reads these custom properties for the Reel (PIL and ffmpeg),
+   skin.html uses them for the web-motion route. Inspired by the genre, never a copy of any game's UI or logo.
+   Our colours carry no pink or magenta, and no blend runs red into blue. Arabic type stays Dubai on every kit;
+   the mark, the chip position, the safe zone and the end card never change. */
+:root {
+  --kit: scifi;
+  --ink: #EAF6FF;          /* headline and story lines */
+  --body: #A9C4D6;         /* credit line, strip labels */
+  --plate: #06131F;        /* plate fill under the headline and the strip */
+  --plate-alpha: 0.72;
+  --edge: #2FE0FF;         /* plate edge, rules, scan accents (cyan) */
+  --accent: #2FE0FF;
+  --accent2: #F4E04D;      /* the second colour: corner ticks, the short dash (yellow) */
+  --outline: #041019;      /* the story lines' outline */
+  --chip: #2FE0FF;         /* the news chip's fill (the chip's place never moves) */
+  --chamfer: 26px;         /* cut corners: top left and bottom right */
+  --tick: 30px;            /* corner tick length on the square corners */
+  --rule: 2px;
+  --scan-gap: 6px;         /* scan lines across the top band */
+  --scan-alpha: 0.13;
+  --grid-alpha: 0.10;      /* the faint dot grid at the top right of the band */
+  --enter: slide;          /* text entrance: slides in from the right edge with a fast fade */
+  --enter-dur: 0.28s;
+  --enter-dx: 54px;
+  --enter-dy: 0px;
+  --cut: pixelize;         /* shot to shot: ffmpeg xfade transition (a short digital break-up) */
+  --leak: none;
+  --sting: scifi;          /* sonic.sting(): a two-note synth blip from the house motif */
+}

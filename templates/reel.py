@@ -32,10 +32,12 @@ strip: [(label, value), ...] (2 or 3) pins the `split` template's fact strip low
 import json, math, os, re, shutil, subprocess, sys, tempfile
 from PIL import Image, ImageDraw, ImageFilter
 import cards as C, fast_ar as A, ig_ar as G, outro, sonic
+import skins as SK
 
 W, H = 1080, 1920
 L, R = G.SAFE_LEFT, G.SAFE_RIGHT
 X = 0.4                                   # crossfade between shots
+TRANSITION = 'fade'                       # the xfade between shots; a game skin swaps it for its own (advisor, 20 Oct 2026)
 SYM = Image.open(os.path.join(os.path.dirname(__file__), 'assets', 'dirham-symbol-mask.png')).convert('L')
 STILL = ('.jpg', '.jpeg', '.png', '.webp')
 
@@ -148,10 +150,13 @@ def grid_corner_clear(im, what='head'):
 
 
 def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
-               vivid=False, theme='cold', seed=0, style='lines', meta_path=None):
+               vivid=False, theme='cold', seed=0, style='lines', meta_path=None, skin=None):
     """Chip and headline on a soft band at the top; the credit line (rule, source · date)
     is written to `meta_path` as its own layer when given, else drawn with the head. `vivid`
-    colours the chip with the theme and lays the theme's wave lines in the band."""
+    colours the chip with the theme and lays the theme's wave lines in the band. `skin` (a game
+    skins pilot kit, skins.KITS) lays the kit's band decoration and a plate behind chip and
+    headline instead, and colours the chip and the credit rule with the kit; the chip's place
+    and the grid-corner rule do not change."""
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     probe = ImageDraw.Draw(Image.new('RGBA', (W, H)))
     room = W - R - L
@@ -169,23 +174,27 @@ def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
         bw = min(max(tw(' '.join(words[:k])), tw(' '.join(words[k:]))) for k in range(1, len(words)))
         hl = max(L, int(W - R - bw - 16))
     rtl_starts(G._wrap(probe, headline, f, W - hl - R), 'headline')
-    chip = G._ACC if vivid else None
+    chip = SK.chip(skin) if skin else G._ACC if vivid else None
+    acc = SK.load(skin)['accent'] if skin else G._ACC
     end = G._head(probe, headline, HEAD_TOP, label, country, hs, hst, right=R, left=hl)
     meta_y = end + 30
     _band(im, 0, meta_y + 220, True, 190)
-    if vivid:
+    if skin:                               # the kit's decoration and its plate behind chip and headline
+        SK.top(im, meta_y + 140, skin, seed)
+        SK.plate(im, (max(L - 20, hl - 28), HEAD_TOP - 18, W - R + 20, end + 14), skin)
+    elif vivid:
         _colour(im, meta_y + 140, theme, seed, style)
     t = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(t)
     G._head(d, headline, HEAD_TOP, label, country, hs, hst, right=R, left=hl, chip=chip)
     grid_corner_clear(t)
     if not meta_path:                      # one layer, as before 14 Oct
-        d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=G._ACC)
+        d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=acc)
         d.text((W - R - 62, meta_y), f'{source}\u200f  ·  \u200f{A.arabic_date(date)}', font=A.F('Medium', 32),
                fill=A.BODY, anchor='rm', **G.AR)
     _glowed(im, t); im.save(path)
     if meta_path:                          # the credit line on its own layer: it enters at CREDIT_AT (advisor, 14 Oct 2026)
         m = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(m)
-        d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=G._ACC)
+        d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=acc)
         d.text((W - R - 62, meta_y), f'{source}\u200f  ·  \u200f{A.arabic_date(date)}', font=A.F('Medium', 32),
                fill=A.BODY, anchor='rm', **G.AR)
         _glowed(Image.new('RGBA', (W, H), (0, 0, 0, 0)), m).save(meta_path)
@@ -327,10 +336,10 @@ def stills_clips(images, name, secs=3.0, push=0.03, focus=0.5, cutout=False, the
     return out
 
 
-def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96, lift=0, ink=None):
+def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96, lift=0, ink=None, skin=None):
     """One sentence, right-aligned; bottom line on SAFE_BOTTOM - 40, or
     under SAFE_TOP with top=True. `lift` raises a low line (the split template
-    lifts them over its fact strip)."""
+    lifts them over its fact strip). `skin` takes the kit's outline and ink."""
     f = A.F('Bold', size); probe = ImageDraw.Draw(Image.new('L', (W, H)))
     tw = lambda s: probe.textlength(s, font=f, **G.AR)
     full = text + (f' {price}' if price else '')
@@ -368,7 +377,8 @@ def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96,
         _band(im, 1150, H, False, 110)
     outline = mask.filter(ImageFilter.MaxFilter(7))
     shadow = outline.filter(ImageFilter.GaussianBlur(7)).point(lambda v: int(v * 0.7))
-    for col, m, off in [((0, 0, 0), shadow, (3, 4)), (A.GROUND, outline, (0, 0)), (ink or A.INK, mask, (0, 0))]:
+    oc, kink = SK.line_colours(skin) if skin else (A.GROUND, A.INK)
+    for col, m, off in [((0, 0, 0), shadow, (3, 4)), (oc, outline, (0, 0)), (ink or kink, mask, (0, 0))]:
         lay = Image.new('RGBA', (W, H), col + (255,)); a = Image.new('L', (W, H), 0)
         a.paste(m, off); lay.putalpha(a); im.alpha_composite(lay)
     im.save(path); return path
@@ -426,14 +436,14 @@ def strip_check(items, lines=()):
                 raise ValueError(f'the strip already shows {val!r} ({label}); a line must not say it again: {text}')
 
 
-def strip_layer(items, path, theme='cold'):
+def strip_layer(items, path, theme='cold', skin=None):
     """The fact strip alone, 1080x1920 transparent: a rounded soft band (the
     ground tinted with the theme, about 70% opaque) at x SAFE_LEFT to W - SAFE_RIGHT,
     bottom at SAFE_BOTTOM - 24, items as equal columns right to left with thin
     rules in the theme's second colour. Each item: label in Dubai Medium (34) over
     the value in Dubai Bold (56, or 48 then 44 so every value fits one size). Raises
     when something leaves the safe zone, a label does not open on an Arabic word, or
-    a text will not fit its column."""
+    a text will not fit its column. `skin` draws the kit's plate and colours instead of the band."""
     strip_check(items)
     left, right = A.THEMES[theme][:2]
     x0, x1, y0, y1 = L, W - R, STRIP_TOP, STRIP_BOTTOM
@@ -464,7 +474,12 @@ def strip_layer(items, path, theme='cold'):
     sh = Image.new('RGBA', (W, H), A.GROUND + (255,)); sh.putalpha(soft.filter(ImageFilter.GaussianBlur(14))); im.alpha_composite(sh)
     tint = tuple(round(A.GROUND[i] * 0.86 + left[i] * 0.14) for i in range(3))
     d = ImageDraw.Draw(im)
-    d.rounded_rectangle([x0, y0, x1, y1], radius=26, fill=tint + (178,), outline=right + (90,), width=2)
+    body, ink = A.BODY, A.INK
+    if skin:                           # the kit's plate, rules in its edge colour, its ink
+        k = SK.load(skin); SK.plate(im, (x0, y0, x1, y1), skin); d = ImageDraw.Draw(im)
+        right, body, ink = k['edge'], k['body'], k['ink']
+    else:
+        d.rounded_rectangle([x0, y0, x1, y1], radius=26, fill=tint + (178,), outline=right + (90,), width=2)
     for i in range(1, n):              # thin rules in the theme's second colour
         rx = round(x1 - i * cw)
         d.line([(rx, y0 + 26), (rx, y1 - 26)], fill=right + (170,), width=2)
@@ -472,16 +487,16 @@ def strip_layer(items, path, theme='cold'):
     lab_y, val_y = y0 + 56, y1 - 34
     for i, (label, v) in enumerate(items):
         cx = x1 - (i + 0.5) * cw
-        d.text((cx, lab_y), label, font=fl, fill=A.BODY, anchor='ms', **G.AR)
+        d.text((cx, lab_y), label, font=fl, fill=body, anchor='ms', **G.AR)
         w, dh = vwidth(v, vs)
         if isinstance(v, tuple):       # digits with the dirham symbol to their left, as on the price lines
             dw = probe.textlength(v[1], font=fv, **G.AR); sw = round(SYM.width * dh / SYM.height)
-            d.text((cx + w / 2, val_y), v[1], font=fv, fill=A.INK, anchor='rs', **G.AR)
-            sym = Image.new('RGBA', (sw, dh), A.INK + (255,))
+            d.text((cx + w / 2, val_y), v[1], font=fv, fill=ink, anchor='rs', **G.AR)
+            sym = Image.new('RGBA', (sw, dh), ink + (255,))
             sym.putalpha(SYM.resize((sw, dh), Image.LANCZOS))
             im.alpha_composite(sym, (round(cx - w / 2), val_y - dh))
         else:
-            d.text((cx, val_y), v, font=fv, fill=A.INK, anchor='ms', **G.AR)
+            d.text((cx, val_y), v, font=fv, fill=ink, anchor='ms', **G.AR)
         for t, f, yy in ((label, fl, lab_y), (_strip_text(v), fv, val_y)):    # nothing may leave the column or the band
             bb = probe.textbbox((cx, yy), t, font=f, anchor='ms', **G.AR)
             if bb[0] < cx - cw / 2 + 6 or bb[2] > cx + cw / 2 - 6 or bb[1] < y0 + 4 or bb[3] > y1 - 4:
@@ -822,7 +837,7 @@ def montage(shots, out, lowres_ok=False, fast=False):
         pv, pa = 'cv', 'ca'
     for i in range(1, len(shots) if X >= 0.1 else 1):
         off = t - X; starts.append(off)
-        fc.append(f'[{pv}][v{i}]xfade=transition=fade:duration={X}:offset={off:.3f}[xv{i}]'); pv = f'xv{i}'
+        fc.append(f'[{pv}][v{i}]xfade=transition={TRANSITION}:duration={X}:offset={off:.3f}[xv{i}]'); pv = f'xv{i}'
         if sound:
             fc.append(f'[{pa}][a{i}]acrossfade=d={X}[xa{i}]'); pa = f'xa{i}'
         t = off + shots[i][2]
@@ -1220,6 +1235,16 @@ def _track(body, track, end, out):
     return out
 
 
+def _sting(body, sting, at, out, draft=False):
+    """Mix a skin's short sting into the body's sound at `at` seconds, under the footage (advisor, 20 Oct 2026)."""
+    ms = int(at * 1000)
+    subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', body, '-i', sting, '-filter_complex',
+                    f'[1:a]aformat=sample_rates=48000:channel_layouts=stereo,adelay={ms}|{ms},volume=0.8[s];'
+                    f'[0:a][s]amix=inputs=2:duration=first:normalize=0[a]', '-map', '0:v', '-map', '[a]', '-c:v', 'copy']
+                   + (['-c:a', 'aac'] if draft else ['-c:a', 'pcm_s16le']) + [out], check=True)
+    return out
+
+
 def check_reading(lines, end):
     """Stop when a line is on screen for less than its reading time, naming
     the line and how much footage would fix it. Lines placed by hand are
@@ -1237,8 +1262,12 @@ def check_reading(lines, end):
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
          lowres_ok=False, read_check=True, track=None, draft=False, head_size=66, cut=False, credits=None, strip=None,
-         products=None, template=None, tribute=False, reveal=None, profile=None, pace_ok=False):
-    """`strip`: [(label, value), ...], 2 or 3 facts for the `split` template
+         products=None, template=None, tribute=False, reveal=None, profile=None, pace_ok=False, skin=None):
+    """`skin`: a game skins pilot kit, 'scifi' or 'fantasy' (advisor, 20 Oct 2026; skins.py, the kit's tokens in
+    templates/web/skins/<kit>.css): the kit's band decoration and plates, its line outline and entrance, its shot
+    to shot transition, a light leak over each cut (fantasy) and a short sting at the first line. None (the default)
+    is the house look exactly as before; عاجل always keeps its crimson house skin.
+    `strip`: [(label, value), ...], 2 or 3 facts for the `split` template
     (Mohammad, 14 Oct 2026): a slim strip pinned low in the safe zone from the end
     of the headline to the end of the clip, the story lines rising above it. A
     value is a string or ('aed', '149'); a line that already says a value stops
@@ -1273,6 +1302,11 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     global X
     if label == 'عاجل':                    # عاجل is a skin on any template (advisor, 14 Oct 2026): crimson and the breaking bed
         theme, sound = 'crimson', sound or 'breaking'
+        skin = None                        # and stays crimson on any game skin (advisor, 20 Oct 2026)
+    if skin == 'house':
+        skin = None
+    if skin and skin not in SK.KITS:
+        raise ValueError(f'skin {skin!r}: the pilot kits are {", ".join(SK.KITS)}; the others wait for the pilot result')
     if tribute:                            # the stills variant for a death (advisor, 14 Oct 2026): cold, no waves, no chip, body-grey
         theme, vivid, label, sound = 'cold', False, None, sound or 'neon_c'   # lines, slow dissolves, a calm bed, a quiet end card
     if (cut or tribute) and X not in (0.04, 1.0):   # hard cuts for Comparison and stills, slow dissolves for a tribute; restored on the way out
@@ -1280,7 +1314,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         try:
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, credits=credits, strip=strip,
-                        products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok)
+                        products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok,
+                        skin=skin)
         finally:
             X = keep
     global FINISH
@@ -1289,7 +1324,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         try:
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, cut, credits=credits, strip=strip,
-                        products=products, template=template, tribute=tribute, reveal=reveal, profile=profile)
+                        products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, skin=skin)
         finally:
             FINISH = keep_f
     if profile and not PROFILES[profile].get('music', True) and isinstance(track, (tuple, list)) and len(track) > 2:
@@ -1329,7 +1364,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         if tribute:
             lines = [(t, a, z, {**kw, 'ink': A.BODY}) for t, a, z, kw in lines]
         if strip:                              # lines rise over the strip; a repeated fact or a bad strip stops here
-            strip_check(strip, lines); strip_layer(strip, f'{tmp}/strip.png', theme)
+            strip_check(strip, lines); strip_layer(strip, f'{tmp}/strip.png', theme, skin=skin)
             if comp is None:
                 lines = [(t, a, z, kw if kw.get('top') else {**kw, 'lift': STRIP_LIFT}) for t, a, z, kw in lines]
             else:                          # edition: the strip owns the composition frame, no line may share it
@@ -1338,26 +1373,34 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
                     if a < sz and z > sa:
                         raise ValueError(f'the composition frame ({sa:.1f} to {sz:.1f}s) carries the strip only, never a line: {t}')
         for i, (text, _, _, kw) in enumerate(lines):   # a line outside the safe zone stops here, not after the encode
-            line_layer(text, f'{tmp}/l{i}.png', **kw)
+            line_layer(text, f'{tmp}/l{i}.png', skin=skin, **kw)
         lap('checks')
         ext = 'mp4' if draft else 'mkv'             # lossless intermediates for the real render (advisor, 14 Oct 2026)
-        montage(shots, f'{tmp}/cut.{ext}', lowres_ok, fast=draft)
+        global TRANSITION
+        keep_tr = TRANSITION
+        if skin:                                    # the kit's cut between shots
+            TRANSITION = SK.transition(skin)
+        try:
+            montage(shots, f'{tmp}/cut.{ext}', lowres_ok, fast=draft)
+        finally:
+            TRANSITION = keep_tr
         lap('montage')
     except Exception:
         shutil.rmtree(tmp, ignore_errors=True)
         raise
-    style = style or pick_style(out)       # after the checks, so a stopped render takes no turn
+    style = style or ('lines' if skin else pick_style(out))   # after the checks, so a stopped render takes no turn; a skin takes none
     layers = [(head_layer(headline, label, f'{tmp}/head.png', source, date, country, hs=head_size,   # a long Latin title can take 60 so its line opens in Arabic
                           hst=head_size + 20, vivid=vivid, theme=theme, seed=sum(map(ord, out)), style=style,
-                          meta_path=f'{tmp}/meta.png'), 0, head_secs)]
-    if vivid and style == 'frame':          # the bottom waves stay for the whole clip
+                          meta_path=f'{tmp}/meta.png', skin=skin), 0, head_secs)]
+    if vivid and style == 'frame' and not skin:   # the bottom waves stay for the whole clip
         layers.insert(0, (frame_layer(f'{tmp}/frame.png', theme, sum(map(ord, out))), 0, end))
     if MARK_PERSIST:                        # the play mark, small and half transparent, for the whole Reel (14 Oct 2026)
         layers.insert(0, (mark_layer(f'{tmp}/mark.png'), 0, end))
     fixed = len(layers)                     # these never get trimmed by the next line
     layers.append((f'{tmp}/meta.png', min(CREDIT_AT, head_secs - 0.5), head_secs))   # the credit line enters at 2 s
     for i, (text, a, z, kw) in enumerate(lines):
-        layers.append((line_layer(text, f'{tmp}/l{i}.png', **kw), a, min(z, end)))
+        layers.append((line_layer(text, f'{tmp}/l{i}.png', skin=skin, **kw), a, min(z, end)))
+    line_paths = {f'{tmp}/l{i}.png' for i in range(len(lines))}
     for i in range(fixed + 1, len(layers) - 1):    # a line leaves before the next arrives (the head and credit are not lines)
         p, a, z = layers[i]; layers[i] = (p, a, min(z, layers[i + 1][1]))
     if strip:                              # after the trim: the strip stays for the rest of the clip, fading in over 0.4 s
@@ -1380,14 +1423,26 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         if z - a > 0.5:                                        # a low credit sits just above the strip, not on it
             layers.append((credit_layer(text, f'{tmp}/c{j}.png', low=low,
                                         y=STRIP_TOP - 12 if low and strip else None), a, z))
+    if skin and SK.leak_layer(f'{tmp}/leak.png', skin):   # fantasy: a warm light leak over each cut
+        for s0 in starts[1:]:
+            if s0 + 0.35 < end:
+                layers.append((f'{tmp}/leak.png', max(0.05, s0 - 0.3), s0 + 0.35))
+    ent = SK.entrance(skin) if skin else None
     args = ['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', f'{tmp}/cut.{ext}']
     for p, _, _ in layers:
         args += ['-loop', '1', '-t', f'{end:.2f}', '-i', p]
     fc = ['[0:v]setsar=1,fps=30[v0]']
     for i, (p, a, z) in enumerate(layers, 1):
-        fin = f",fade=t=in:st={a:.2f}:d={0.4 if strip and p == f'{tmp}/strip.png' else 0.2}:alpha=1" if a > 0 else ''
+        moving = bool(ent) and p in line_paths and a > 0 and (ent[0] or ent[1])
+        fd = 0.4 if strip and p == f'{tmp}/strip.png' else (round(ent[2] * 0.8, 2) if moving else 0.2)
+        fin = f",fade=t=in:st={a:.2f}:d={fd}:alpha=1" if a > 0 else ''
         fout = f',fade=t=out:st={z - 0.2:.2f}:d=0.2:alpha=1' if z < end - 0.01 else ''
-        fc += [f'[{i}:v]format=rgba{fin}{fout}[l{i}]', f'[v{i - 1}][l{i}]overlay=0:0:shortest=1[v{i}]']
+        if moving:                          # the kit's entrance: in from dx right and dy below, easing out over its duration
+            u = f'min(1\\,max(0\\,(t-{a:.2f})/{ent[2]}))'
+            pos = f"x='{ent[0]}*pow(1-{u}\\,3)':y='{ent[1]}*pow(1-{u}\\,3)':eval=frame"
+        else:
+            pos = '0:0'
+        fc += [f'[{i}:v]format=rgba{fin}{fout}[l{i}]', f'[v{i - 1}][l{i}]overlay={pos}:shortest=1[v{i}]']
     fc.append(f'[v{len(layers)}]format=yuv420p[v]')
     body = f'{tmp}/body.{ext}'
     amap = ['-map', '0:a?'] + (['-c:a', 'aac'] if draft else ['-c:a', 'copy'])
@@ -1403,6 +1458,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         body = _track(body, track, end, f'{tmp}/track.{ext}')
     if voice:
         body = _voice_over(body, voice, end, duck_db, f'{tmp}/voiced.{ext}')
+    if skin and lines and _has_audio(body):   # the kit's sting at the cut into the first line
+        body = _sting(body, sonic.sting(skin, f'{tmp}/sting.wav'), lines[0][1], f'{tmp}/sting.{ext}', draft)
     lap('audio')
     if draft:                              # no end card, no bed: the draft is for checking the cut
         done = os.path.splitext(out)[0] + '-draft.mp4'
