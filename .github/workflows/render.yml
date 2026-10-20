@@ -71,6 +71,9 @@ jobs:
         run: |
           echo "cores $(nproc), $(free -g | awk '/Mem:/{print $2}') GB, $(lsb_release -ds)"
           {
+            echo "T_START=$(date +%s)"
+            echo "RENDER_LANE=runner"
+            echo "RENDER_QUEUED_AT=${{ github.event.head_commit.timestamp || '' }}"
             echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts"
             echo "DXB_UPLOADS=$RUNNER_TEMP/uploads"
             echo "YOLO_WEIGHTS=$RUNNER_TEMP/models/yolov8n.pt"
@@ -108,6 +111,7 @@ jobs:
       - name: Render
         run: |
           start=$(date +%s)
+          echo "SETUP_SECS=$(( start - T_START ))" >> "$GITHUB_ENV"
           python templates/render_job.py run "$JOB"
           echo "RENDER_SECS=$(( $(date +%s) - start ))" >> "$GITHUB_ENV"
           # keep this run's render-times entry; the commit step rebuilds on the latest main
@@ -126,7 +130,7 @@ jobs:
             git fetch -q --depth=1 --filter=blob:none origin main
             git reset -q --hard origin/main
             cp -r "$RUNNER_TEMP/out/." .
-            python -c "import json; p = 'templates/assets/render-times.json'; d = json.load(open(p)); e = json.load(open('$RUNNER_TEMP/render-time.json')); e['job_secs'] = $RENDER_SECS; d.append(e); json.dump(d, open(p, 'w'), indent=1, ensure_ascii=False)"
+            python -c "import json; p = 'templates/assets/render-times.json'; d = json.load(open(p)); e = json.load(open('$RUNNER_TEMP/render-time.json')); e['job_secs'] = $RENDER_SECS; e['setup_min'] = round($SETUP_SECS / 60, 2); e['story'] = '$(basename "$JOB" .json)'; d.append(e); json.dump(d, open(p, 'w'), indent=1, ensure_ascii=False)"
             git add --sparse -f $files templates/assets/render-times.json
             if [ -f "$JOB" ]; then git rm -q "$JOB"; fi
             git commit -q -m "Render $(basename "$JOB" .json) on the runner ($RENDER_SECS s, $(nproc) cores)"

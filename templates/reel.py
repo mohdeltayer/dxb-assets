@@ -909,8 +909,13 @@ def _record_times(name, profile, stages):
     except (OSError, ValueError):
         led = []
     import datetime
-    led.append(dict(name=name, profile=profile or 'standard', at=datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%MZ'),
-                    stages={k: round(v, 1) for k, v in stages.items()}, total=round(sum(stages.values()), 1)))
+    now = datetime.datetime.utcnow(); total = sum(stages.values())
+    led.append(dict(name=name, profile=profile or 'standard', at=now.strftime('%Y-%m-%dT%H:%MZ'),
+                    stages={k: round(v, 1) for k, v in stages.items()}, total=round(total, 1),
+                    # lanes (advisor, 20 Oct 2026): runner or container, queued and finished, render minutes
+                    lane=os.environ.get('RENDER_LANE', 'container'),
+                    queued_at=os.environ.get('RENDER_QUEUED_AT') or (now - datetime.timedelta(seconds=total)).strftime('%Y-%m-%dT%H:%MZ'),
+                    finished_at=now.strftime('%Y-%m-%dT%H:%MZ'), render_min=round(total / 60, 2)))
     json.dump(led[-100:], open(TIMES, 'w'), indent=1)
     return led[-1]
 PINK_FLAG = False         # Mohammad, 4 Oct 2026: pink in game footage and official art is fine

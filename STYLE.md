@@ -227,7 +227,11 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     never committed or logged). The job carries the focus judged on the
     sheet (`render_job.py focus` before the sheet). Tested on the Cyberpunk
     re-render (same length and text, 4 cores, 214 s a job) and reported to
-    Mohammad; the container is the fallback.
+    Mohammad; the container is the fallback. Advisor memo of 20 Oct: a
+    runner Reel is held for his OK before it is scheduled; the container
+    renders the next story at the same time and takes over a runner job that
+    fails or passes 15 minutes; breaking stays on the container; both lanes
+    log story, lane, queued, finished, render and setup minutes.
   - (CLAUDE.md "Full-screen format", "Creative brief and formats")
 
 ## Platforms

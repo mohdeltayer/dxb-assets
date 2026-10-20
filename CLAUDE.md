@@ -917,6 +917,26 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      container before the sheet, and the runner only autofocuses what is left
      null. A first run failed at the font step (`dubai.zip` holds lowercase
      `.ttf` only); fixed.
+  8. First job (advisor memo, 20 Oct 2026, received about 16:40Z; it
+     replaces the re-render test of 6): the first runner job is a real new
+     routine story with footage, not a re-render; while it renders, the next
+     story renders on the container, two Reels at once. The runner's Reel is
+     committed as usual and sent to Mohammad, and held: not scheduled in
+     Postiz until he approves; after his OK it goes out under the normal
+     rules. Fallback: if the runner job fails or passes 15 minutes, the same
+     story renders on the container, and the failure and its log line are
+     noted (no secrets). Both lanes go to render-times.json: story, lane
+     (runner or container), queued at, finished at, render minutes, and setup
+     minutes on the runner (`RENDER_LANE`, `RENDER_QUEUED_AT`; the workflow
+     adds `setup_min` and `job_secs`). Breaking renders stay on the
+     container. State when it arrived: the re-render test had already run
+     (15:21Z) and three runner Reels were already queued under the rolling
+     queue (ARC Raiders 16:45Z, Game Pass wave 2 17:15Z, Ace Combat 8
+     17:45Z); once in Postiz only Mohammad can pull them, and he was told at
+     16:41Z. The container has no Dubai font since the reset, so points 2
+     and 4 (render on the container) wait for `dubai.zip`; until then the
+     runner is the only lane. From Mortal Shell II on, runner Reels are held
+     for his OK.
 - Review of the Xbox Nano Reel, the first under the hook band (advisor,
   14 Oct 2026):
   1. Ten seconds on one still (0 to 10 s) broke the 3 to 4 s change rule.
