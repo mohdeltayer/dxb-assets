@@ -128,7 +128,11 @@ def _gradient(theme):
 # so the crossfades between slides never double, and every style is measured
 # under the graphic's text before it renders (check_ground).
 # ---------------------------------------------------------------------------
-GROUNDS = ['waves', 'glow', 'wash', 'grid', 'waves-angled', 'waves-dense', 'still']
+GROUNDS = ['waves', 'glow', 'wash', 'grid', 'waves-angled', 'waves-dense', 'still', 'footage']
+FOOTAGE_BLUR = 14           # the footage ground (advisor, 20 Oct 2026): the game's own trailer, slightly blurred,
+FOOTAGE_DIM = 0.5           # dimmed toward the indigo and always moving; a feathered indigo scrim behind the
+FOOTAGE_DIMS = (0.45, 0.6, 0.75, 0.85)   # card's text steps up until the type passes the contrast check
+FOOTAGE_FEATHER = 60
 GROUND_LEDGER = os.path.join(os.path.dirname(__file__), 'assets', 'ground-ledger.json')
 
 #: Readability limits, on a 0 to 255 luminance scale (Rec. 601).
@@ -230,7 +234,18 @@ def _still_image(still, dim):
     return im, im.width - W
 
 
-def _build_ground(ground, theme, seed, t0, tmp, still=None, dim=None):
+def _scrim(region, alpha):
+    """The indigo, `alpha` opaque behind `region` and feathered out, so the footage stays visible around the card."""
+    x0, y0, x1, y1 = region
+    m = Image.new('L', (W, H), 0)
+    ImageDraw.Draw(m).rectangle([x0 - FOOTAGE_FEATHER, y0 - FOOTAGE_FEATHER, x1 + FOOTAGE_FEATHER, y1 + FOOTAGE_FEATHER],
+                                fill=int(255 * alpha))
+    im = Image.new('RGBA', (W, H), tuple(A.GROUND) + (0,))
+    im.putalpha(m.filter(ImageFilter.GaussianBlur(FOOTAGE_FEATHER)))
+    return im
+
+
+def _build_ground(ground, theme, seed, t0, tmp, still=None, dim=None, footage=None, region=None):
     """Write the ground's input images into `tmp` and return (files, graph):
     `files[0]` is the base, the rest are layers; `graph` is the filter text
     that ends in the label [gw], numbering its inputs from 0 and using the
@@ -276,6 +291,16 @@ def _build_ground(ground, theme, seed, t0, tmp, still=None, dim=None):
         save(_plain(), 'g'); save(_grid_image(theme), 'd')
         return files, (f"[1:v]crop={W}:{H}:x='mod({T}*7\\,40)':y='mod({T}*5\\,40)'[d];"
                        f"[0:v][d]overlay=0:0:format=auto[gw]")
+    if ground == 'footage':                   # the game's own trailer behind the card (advisor, 20 Oct 2026)
+        if not footage:
+            raise ValueError("ground 'footage' needs footage=(clip, start)")
+        save(_plain(), 'g')
+        clip, start = footage
+        files.append((clip, start + t0))      # the shared clock: the next card picks up where this one left the trailer
+        save(_scrim(region or DEFAULT_BAND, FOOTAGE_DIMS[0] if dim is None else dim), 's')
+        return files, (f"[1:v]fps={FPS},scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
+                       f"gblur=sigma={FOOTAGE_BLUR},format=rgba,colorchannelmixer=aa={1 - FOOTAGE_DIM:.3f}[f];"
+                       f"[0:v][f]overlay=0:0:format=auto[b];[b][2:v]overlay=0:0:format=auto[gw]")
     # 'still'
     if not still:
         raise ValueError("ground 'still' needs still=<official image>")
@@ -286,9 +311,13 @@ def _build_ground(ground, theme, seed, t0, tmp, still=None, dim=None):
 
 
 def _run_inputs(files, secs):
+    """ffmpeg inputs for a ground: images loop for `secs`; a (video, start) pair plays from `start`, looped if short."""
     args = []
     for f in files:
-        args += ['-loop', '1', '-framerate', str(FPS), '-t', f'{secs:.3f}', '-i', f]
+        if isinstance(f, tuple):
+            args += ['-stream_loop', '-1', '-ss', f'{f[1]:.3f}', '-t', f'{secs:.3f}', '-i', f[0]]
+        else:
+            args += ['-loop', '1', '-framerate', str(FPS), '-t', f'{secs:.3f}', '-i', f]
     return args
 
 
@@ -332,7 +361,7 @@ def _check(ground, frame, region):
     return stats
 
 
-def check_ground(graphic, ground, theme, seed=0, t0=0.0, still=None, region=None):
+def check_ground(graphic, ground, theme, seed=0, t0=0.0, still=None, region=None, footage=None):
     """Render one ground frame at `t0` and measure it under the graphic's text.
     Returns the numbers (mean, base, delta, max_local, dim for 'still'); raises
     ValueError naming the ground and the numbers when it is too bright. The
@@ -340,8 +369,8 @@ def check_ground(graphic, ground, theme, seed=0, t0=0.0, still=None, region=None
     region = region or text_region(graphic)
     tmp = tempfile.mkdtemp(prefix='numbers-')
     try:
-        for dim in (STILL_DIMS if ground == 'still' else (None,)):
-            files, graph = _build_ground(ground, theme, seed, t0, tmp, still=still, dim=dim)
+        for dim in (STILL_DIMS if ground == 'still' else FOOTAGE_DIMS if ground == 'footage' else (None,)):
+            files, graph = _build_ground(ground, theme, seed, t0, tmp, still=still, dim=dim, footage=footage, region=region)
             st = _check(ground, _ground_frame(files, graph, tmp), region)
             st['dim'] = dim
             if st['ok']:
@@ -354,20 +383,22 @@ def check_ground(graphic, ground, theme, seed=0, t0=0.0, still=None, region=None
         shutil.rmtree(tmp, ignore_errors=True)
 
 
-def _resolve(ground, out, still):
-    """A story about one game wears its art: with `still` the ground is 'still' (advisor, 20 Oct 2026), never a
-    rotated plain style. Without it the ground rotates among the others (multi-game charts, company results)."""
+def _resolve(ground, out, still, footage=None):
+    """A story about one game wears its art: with `footage` (its trailer) the ground is 'footage', moving (advisor,
+    20 Oct 2026: no flat backgrounds); else with `still` it is 'still'; never a rotated plain style. Without either
+    the ground rotates among the others (multi-game charts, company results)."""
     if ground is None:
-        ground = 'still' if still else rotate_ground(out, allow=[g for g in GROUNDS if g != 'still'])
+        ground = ('footage' if footage else 'still' if still
+                  else rotate_ground(out, allow=[g for g in GROUNDS if g not in ('still', 'footage')]))
     return ground
 
 
-def _still_dim(graphic, ground, theme, seed, t0, still):
-    """Dim for the 'still' ground that passes the check (raises if none does)."""
-    return check_ground(graphic, ground, theme, seed=seed, t0=t0, still=still)['dim']
+def _still_dim(graphic, ground, theme, seed, t0, still, footage=None):
+    """Dim for the 'still' or 'footage' ground that passes the check (raises if none does)."""
+    return check_ground(graphic, ground, theme, seed=seed, t0=t0, still=still, footage=footage)['dim']
 
 
-def slide(graphic, secs, theme, out, seed=0, t0=0.0, fast=False, ground=None, still=None, check=True):
+def slide(graphic, secs, theme, out, seed=0, t0=0.0, fast=False, ground=None, still=None, check=True, footage=None):
     """One graphic (RGBA, any 9:16 size) over the drifting ground, `secs` long,
     its drift starting at the shared clock `t0`. Returns `out`.
 
@@ -375,13 +406,15 @@ def slide(graphic, secs, theme, out, seed=0, t0=0.0, fast=False, ground=None, st
     ledger (keyed by the file name; shots() resolves it once per Reel).
     `still` is the official image the 'still' ground blurs. The ground is
     measured under the graphic's text first (`check=False` skips it)."""
-    ground = _resolve(ground, out, still)
-    dim = _still_dim(graphic, ground, theme, seed, t0, still) if (check and ground == 'still') else None
-    if check and ground != 'still':
+    ground = _resolve(ground, out, still, footage)
+    dimmed = ground in ('still', 'footage')
+    dim = _still_dim(graphic, ground, theme, seed, t0, still, footage) if (check and dimmed) else None
+    if check and not dimmed:
         check_ground(graphic, ground, theme, seed=seed, t0=t0)
     tmp = tempfile.mkdtemp(prefix='numbers-')
     try:
-        files, graph = _build_ground(ground, theme, seed, t0, tmp, still=still, dim=dim)
+        files, graph = _build_ground(ground, theme, seed, t0, tmp, still=still, dim=dim, footage=footage,
+                                     region=text_region(graphic) if ground == 'footage' else None)
         Image.open(graphic).convert('RGBA').resize((W, H), Image.LANCZOS).save(f'{tmp}/f.png')
         n = len(files)
         fc = f"{graph};[gw][{n}:v]overlay=0:0:format=auto,fps={FPS},format=yuv420p[v]"
@@ -394,7 +427,7 @@ def slide(graphic, secs, theme, out, seed=0, t0=0.0, fast=False, ground=None, st
     return out
 
 
-def shots(slides, theme, name, fast=False, ground=None, still=None):
+def shots(slides, theme, name, fast=False, ground=None, still=None, footage=None):
     """[(graphic file in uploads, seconds)] -> reel() shots. Each slide becomes
     uploads/numbers/<name>-<i>.mp4 on the shared drift clock (so the
     crossfades line up) and is cut in whole, focus 0.5. The ground is chosen
@@ -402,11 +435,13 @@ def shots(slides, theme, name, fast=False, ground=None, still=None):
     `name`, so a re-render keeps it)."""
     os.makedirs(C.U + SUB, exist_ok=True)
     seed = sum(map(ord, name))
-    ground = _resolve(ground, name, still)
+    ground = _resolve(ground, name, still, footage)
+    if footage:
+        footage = (C.U + footage[0] if not os.path.isabs(footage[0]) else footage[0], footage[1])
     out, t = [], 0.0
     for i, (g, secs) in enumerate(slides):
         f = f'{SUB}/{name}-{i + 1}.mp4'
-        slide(C.U + g, secs, theme, C.U + f, seed=seed, t0=t, fast=fast, ground=ground, still=still)
+        slide(C.U + g, secs, theme, C.U + f, seed=seed, t0=t, fast=fast, ground=ground, still=still, footage=footage)
         out.append((f, 0.0, secs, 0.5))
         t += secs - RL.X                         # the next slide starts inside this one's crossfade
     return out
@@ -439,7 +474,7 @@ def _fit_filter(src, box, pixel):
 
 
 def window(graphic, clip, box, start, secs, out, theme, ground=None, seed=0, t0=0.0, fast=False,
-           pixel=False, still=None, check=True, punch=False):
+           pixel=False, still=None, check=True, punch=False, footage=None):
     """Footage `clip` (a file in uploads) inside the rectangle `box=(x, y, w, h)`
     of the 1080x1920 frame, under the transparent `graphic` (so its frame and
     edge draw over the clip), on the living ground. The clip is cropped to the
@@ -449,13 +484,15 @@ def window(graphic, clip, box, start, secs, out, theme, ground=None, seed=0, t0=
     own pixels inside the box (for a graphic that still carries its still
     picture there). Returns `out`."""
     x, y, bw, bh = box
-    ground = _resolve(ground, out, still)
-    dim = _still_dim(graphic, ground, theme, seed, t0, still) if (check and ground == 'still') else None
-    if check and ground != 'still':
+    ground = _resolve(ground, out, still, footage)
+    dimmed = ground in ('still', 'footage')
+    dim = _still_dim(graphic, ground, theme, seed, t0, still, footage) if (check and dimmed) else None
+    if check and not dimmed:
         check_ground(graphic, ground, theme, seed=seed, t0=t0)
     tmp = tempfile.mkdtemp(prefix='numbers-')
     try:
-        files, graph = _build_ground(ground, theme, seed, t0, tmp, still=still, dim=dim)
+        files, graph = _build_ground(ground, theme, seed, t0, tmp, still=still, dim=dim, footage=footage,
+                                     region=text_region(graphic) if ground == 'footage' else None)
         g = Image.open(graphic).convert('RGBA').resize((W, H), Image.LANCZOS)
         if punch:
             g.paste((0, 0, 0, 0), (x, y, x + bw, y + bh))

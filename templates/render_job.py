@@ -22,7 +22,9 @@ unreleased material.
       "head_size": 64, "strip": [["الموعد", "22 أكتوبر"]], "credits": [[0, 9, "..."]],
       "track": ["cp-er-trailer.mp4", 12.0], "cut": true,
       "sound": null, "country": null, "pace_ok": false, "lowres_ok": false,
-      "ground_theme": "gold"                                         # for -gfx- graphics on the living ground
+      "ground_theme": "gold",                                        # for -gfx- graphics on the living ground
+      "ground_footage": ["cp-er-trailer.mp4", 40.0],                 # card-led: the game's trailer behind the cards, moving
+      "skin": "house"                                                # game skins pilot: house, scifi or fantasy (format ledger)
     }
 
 `style` (and `sound` for a Reel with no footage sound) are chosen by the main
@@ -94,8 +96,10 @@ def shots(job, draft=False, build=True):
             clip = f"{NG.SUB}/{job['name']}-{i}.mp4"
             if build:
                 os.makedirs(C.U + NG.SUB, exist_ok=True)
+                gf = job.get('ground_footage')    # [file, start]: the game's own trailer behind the card (advisor, 20 Oct 2026)
                 NG.slide(C.U + f, secs, job.get('ground_theme', job['theme']), C.U + clip,
-                         seed=sum(map(ord, job['name'])), t0=t, fast=draft)
+                         seed=sum(map(ord, job['name'])), t0=t, fast=draft,
+                         footage=(C.U + gf[0], gf[1]) if gf else None)
             out.append((clip, 0.0, secs, 0.5))
         elif os.path.splitext(f)[1].lower() in reel.STILL:   # an official still: (art, null, secs, [from, to]) pans
             out.append((f, None, secs, tuple(fo) if isinstance(fo, list) else (0.5 if fo is None else fo)))
