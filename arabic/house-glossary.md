@@ -47,6 +47,7 @@ has said so; everything else is a working suggestion.
 | Service ends (online game) | تنتهي خدمة <game>، تُوقف <company> خدمة <game> | not تتوقف <game> alone, which DeepL read back as "taking a break" | Suggested 29 Sep 2026 |
 | N years after launch | بعد مرور سبع سنوات على إطلاقها | not بعد سبع سنوات من إطلاقها; and not لتتوقف بعد…, which reads as "only to be" | Suggested 29 Sep 2026 |
 | Update or game released today | تطرح <company> اليوم تحديثًا…، or once it is live: أصبح … متوفرًا الآن (chip متوفر الآن) | not يصل اليوم, which reads as a physical delivery | Approved 29 Sep 2026 |
+| Sample of players, users or fans (surveys, tests, polls) | شريحة: «شريحة من اللاعبين» | not عينة, which is correct but reads clinical to a general reader; keep عينة only for real research (a study's sample size, a lab or data sample). From the ARC Raiders PvE test post of 20 Oct («a representative sample of ARC Raiders players»; that live post stays as it is) | Advisor, 20 Oct 2026 |
 
 ## Names as read aloud (voice clone trial, advisor 14 Oct 2026)
 

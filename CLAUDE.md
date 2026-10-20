@@ -937,6 +937,12 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      and 4 (render on the container) wait for `dubai.zip`; until then the
      runner is the only lane. From Mortal Shell II on, runner Reels are held
      for his OK.
+     Reminder (advisor, 20 Oct 2026): every runner Reel is held for his OK
+     until he says the runner is trusted; the story file's approved line
+     reads "held for Mohammad (runner)" until his OK is recorded. ARC Raiders
+     (16:45Z) went out on "go: rolling queue" without that hold; Game Pass
+     wave 2 and Ace Combat 8 were already in Postiz too (he was told; only he
+     can pull them).
 - Review of the Xbox Nano Reel, the first under the hook band (advisor,
   14 Oct 2026):
   1. Ten seconds on one still (0 to 10 s) broke the 3 to 4 s change rule.
