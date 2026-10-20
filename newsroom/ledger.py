@@ -84,8 +84,10 @@ def sync():
     """Attach every queue folder to a story, creating stories for new ones."""
     by_folder = {}
     for s in stories():
-        for p in s.get('posts', []):
-            by_folder[p['folder']] = s['id']
+        posts = s.get('posts', [])
+        for p in posts if isinstance(posts, list) else []:   # some stories keep {platform: postiz id} here
+            if isinstance(p, dict) and 'folder' in p:
+                by_folder[p['folder']] = s['id']
     added, created = 0, 0
     for d in sorted(QUEUE.iterdir()) if QUEUE.is_dir() else []:
         job_f = d / 'job.json'
@@ -126,8 +128,8 @@ def sync():
             s = {'id': sid, 'title': text[0][:120] if text else slug, 'status': 'published',
                  'backfilled': True, 'posts': []}
             created += 1
-        s.setdefault('posts', []).append(post)
-        s['posts'].sort(key=lambda p: p['date'])
+        (s.__setitem__('posts', [{'platform': k, 'postiz_id': v} for k, v in s['posts'].items()]) if isinstance(s.get('posts'), dict) else None); s.setdefault('posts', []).append(post)
+        s['posts'].sort(key=lambda p: p.get('date', ''))
         s.setdefault('times', {})['posted'] = min(p['date'] for p in s['posts'])
         save(s)
         added += 1
