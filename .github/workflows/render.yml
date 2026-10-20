@@ -27,7 +27,7 @@ jobs:
     outputs:
       jobs: ${{ steps.pick.outputs.jobs }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 1
           filter: blob:none
@@ -59,7 +59,7 @@ jobs:
     env:
       JOB: ${{ matrix.job }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 1
           filter: blob:none
@@ -83,11 +83,11 @@ jobs:
           repo="$RUNNER_TEMP/dxb-fonts"
           git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
           mkdir -p "$DUBAI_FONTS"
-          unzip -q -j -o "$repo/dubai.zip" '*.ttf' '*.TTF' -d "$DUBAI_FONTS"
+          unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$DUBAI_FONTS"
           rm -rf "$repo"
           for w in Light Regular Medium Bold; do test -f "$DUBAI_FONTS/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing from dubai.zip"; exit 1; }; done
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
