@@ -965,11 +965,9 @@ def _window(bars, srcw, srch, focus):
     return x0, py, x0 + ww, py + ph
 
 
-def _words(im, conf=70):
-    """Words tesseract reads in `im` (PIL), at least three letters at `conf` or better. The
-    first frame is the grid tile (advisor, 19 Oct 2026): a slate, title card or publisher text
-    behind the headline ("GAMES PRESENTS" on the Rockstar tile) is caught by this. Needs the
-    tesseract binary (`apt-get install -y tesseract-ocr` in a new container); None when absent."""
+def _word_boxes(im, conf=70, letters=3):
+    """(word, left, top, right, bottom) for each word tesseract reads in `im` (PIL), with at
+    least `letters` letters at `conf` or better; None when the tesseract binary is absent."""
     import shutil, tempfile
     if not shutil.which('tesseract'):
         return None
@@ -981,9 +979,31 @@ def _words(im, conf=70):
         c = ln.split('\t')
         if len(c) == 12 and c[11].strip() and float(c[10]) >= conf:
             w = ''.join(ch for ch in c[11] if ch.isalpha())
-            if len(w) >= 3:
-                out.append(w)
+            if len(w) >= letters:
+                l, t, ww, hh = map(int, c[6:10])
+                out.append((w, l, t, l + ww, t + hh))
     return out
+
+
+def _words(im, conf=70):
+    """Words tesseract reads in `im` (PIL), at least three letters at `conf` or better. The
+    first frame is the grid tile (advisor, 19 Oct 2026): a slate, title card or publisher text
+    behind the headline ("GAMES PRESENTS" on the Rockstar tile) is caught by this. Needs the
+    tesseract binary (`apt-get install -y tesseract-ocr` in a new container); None when absent."""
+    b = _word_boxes(im, conf)
+    return None if b is None else [w for w, *_ in b]
+
+
+def edge_text(im, x0, x1, conf=60):
+    """Words in the full frame `im` whose box crosses an edge of the crop window x0..x1 (in
+    `im` pixels): printed text, a logo or a subtitle the 9:16 crop would cut (advisor, 20 Oct
+    2026). Drop the shot when the text does not matter; when it is the point (the Edgerunners 2
+    Oshima card), rebuild it as a vertical card in the game's own style. Returns
+    [(word, box)], [] when clean, None without tesseract."""
+    b = _word_boxes(im, conf)
+    if b is None:
+        return None
+    return [(w, (l, t, r, bt)) for w, l, t, r, bt in b if l < x0 < r or l < x1 < r]
 
 
 def _vert(f, s, d, fo, t, width=1280):
@@ -1014,9 +1034,10 @@ def shotsheet(shots, out):
     footage frame is a pair (14 Oct 2026): the cropped vertical frame the
     phone will show, and beside it the full 16:9 frame with the crop window
     outlined in the accent, so the editor sees what the crop took. Returns
-    (sheet path, [(shot index, time, flags)]) for frames flagged pink or black, and for
+    (sheet path, [(shot index, time, flags)]) for frames flagged pink or black, for
     readable text in the first shot's first frame (the grid tile; advisor, 19 Oct 2026),
-    with the first clean seek time after it."""
+    with the first clean seek time after it, and for text, a logo or a subtitle that the
+    crop window cuts (`cut-text`, outlined in red; advisor, 20 Oct 2026)."""
     from PIL import ImageDraw as D
     FW, FH = 288, 162                        # the full frame; the vertical crop beside it is FH tall
     VW = round(FH * W / H)
@@ -1048,11 +1069,19 @@ def shotsheet(shots, out):
                 flagged.append((i, round(t, 2), fl))
             x0, y0, x1, y1 = _window(bars, srcw, srch, _fo_at(fo, t - s, d))
             k = full.width / srcw
+            big = _frame(C.U + f, t, 1280); kb = big.width / srcw   # text cut by the crop (advisor, 20 Oct 2026)
+            cut = edge_text(big, x0 * kb, x1 * kb) or []
+            if cut:
+                fl = fl + ['cut-text']
+                flagged.append((i, round(t, 2), ['text cut by the crop: ' + ' '.join(w for w, _ in cut[:4])]))
             vert = full.crop((round(x0 * k), round(y0 * k), round(x1 * k), round(y1 * k))).resize((VW, FH))
             thumb = full.resize((FW, round(FW * full.height / full.width)))
             dr = D.Draw(thumb)
             k2 = thumb.width / srcw
             dr.rectangle([x0 * k2, y0 * k2, x1 * k2 - 1, y1 * k2 - 1], outline=ACCENT, width=3)
+            for _, (l, tp, r, bt) in cut:                        # the cut words, outlined in red on the full frame
+                q = k2 / kb
+                dr.rectangle([l * q - 1, tp * q - 1, r * q + 1, bt * q + 1], outline=(255, 60, 60), width=2)
             tile = Image.new('RGB', (FW + 4 + VW, max(thumb.height, FH)), (20, 19, 50))
             tile.paste(vert, (0, 0)); tile.paste(thumb, (VW + 4, 0))
             tiles.append((i, f'{t:.1f} x{z:.1f}' + (' +' + '+'.join(fl) if fl else ''), tile))
