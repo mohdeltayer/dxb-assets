@@ -39,7 +39,7 @@ Focus is resolved on the container before the shot sheet (`focus`), so the job
 carries the crop that was judged; a null left in the job is autofocused on the
 runner, which may pick another subject.
 """
-import json, os, shutil, subprocess, sys, time, urllib.request
+import json, os, re, shutil, subprocess, sys, time, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -182,7 +182,7 @@ def run(job, draft=False):
                      template=job.get('template'), pace_ok=job.get('pace_ok', False), lowres_ok=job.get('lowres_ok', False))
     video = done[0] if isinstance(done, (list, tuple)) else done
     stem = os.path.splitext(out)[0]
-    base = stem[:-len('-reel-v1')] if stem.endswith('-reel-v1') else stem
+    base = re.sub(r'-reel-v\d+$', '', stem)   # matches the workflow's ${stem%-reel-v*}, so v2 and later commit too
     if not draft:
         reel.strip(video, base + '-strip.jpg')
         reel.shotsheet([s for s in shots(job, build=False) if not s[0].startswith(NG.SUB + '/')], base + '-sheet.jpg')
