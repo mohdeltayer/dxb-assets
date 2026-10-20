@@ -33,6 +33,11 @@ laid on the living ground (numgfx.slide), as in the batch render scripts.
 
     python3 templates/render_job.py run   <job.json> [--draft]   # fetch, render, strip, sheet
     python3 templates/render_job.py check <job.json>              # timeline and reading pace only
+    python3 templates/render_job.py focus <job.json>              # fill null focus from autofocus, before the sheet
+
+Focus is resolved on the container before the shot sheet (`focus`), so the job
+carries the crop that was judged; a null left in the job is autofocused on the
+runner, which may pick another subject.
 """
 import json, os, shutil, subprocess, sys, time, urllib.request
 
@@ -95,9 +100,24 @@ def shots(job, draft=False, build=True):
         else:
             if fo is None and build:
                 fo = reel.autofocus(f, start, secs)
+            if isinstance(fo, list):              # [[offset, focus], ...] from a job file
+                fo = [tuple(k) for k in fo]
             out.append((f, start, secs, 0.5 if fo is None else fo))
         t += secs - reel.X
     return out
+
+
+def focus(job, path):
+    """Fill every null focus with reel.autofocus and write the job back, so the
+    runner crops exactly what the shot sheet was judged on (20 Oct 2026: on the
+    first runner test, autofocus there chose other subjects on three shots)."""
+    for item in job.get('footage', []):
+        fetch(item)
+    for sh in job['shots']:
+        if sh[3] is None and not (sh[0].endswith('.png') and '-gfx-' in sh[0]):
+            sh[3] = [list(k) for k in reel.autofocus(sh[0], sh[1], sh[2])]
+    json.dump(job, open(path, 'w'), ensure_ascii=False, indent=1)
+    return job
 
 
 def place(job):
@@ -145,7 +165,9 @@ if __name__ == '__main__':
     job = json.load(open(path))
     if step == 'check':
         print(job['name'], 'ok, clip %.1f s' % check(job))
+    elif step == 'focus':
+        focus(job, path); print(job['name'], 'focus written')
     elif step == 'run':
         run(job, draft='--draft' in sys.argv[3:])
     else:
-        raise SystemExit(f'unknown step {step!r}: run or check')
+        raise SystemExit(f'unknown step {step!r}: run, check or focus')

@@ -902,6 +902,21 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      s), compare look and timing with the container's version, record the
      minutes in render-times.json, report to Mohammad. Only then do routine
      renders move. If Actions is down or a run fails, render on the container.
+  7. Test result, 20 Oct 2026, 15:21Z (`cards/2026-10/cyberpunk-2077-edgerunners-
+     2-update-october-22-runner-*`): the runner has 4 cores. Length identical
+     (20.561 s), and headline, lines, strip, credit, chip, theme, style and
+     end card match the published Reel frame for frame. Render 153 s on the
+     runner from a cold cache (montage 43, text 60, outro 48) against 95 s on
+     the container, whose picture cache and end-card master were already warm
+     from the sheet and draft; the whole job took 214 s with the footage
+     fetch and autofocus, about 5 minutes with setup. Gain: renders run in
+     parallel, one runner per job, and the container stays free. One
+     difference: the crop on three shots, because the runner's autofocus
+     (YOLO) chose other subjects. So the job file carries the focus judged on
+     the shot sheet: `render_job.py focus <job>` fills every null focus on the
+     container before the sheet, and the runner only autofocuses what is left
+     null. A first run failed at the font step (`dubai.zip` holds lowercase
+     `.ttf` only); fixed.
 - Review of the Xbox Nano Reel, the first under the hook band (advisor,
   14 Oct 2026):
   1. Ten seconds on one still (0 to 10 s) broke the 3 to 4 s change rule.
