@@ -97,6 +97,8 @@ def shots(job, draft=False, build=True):
                 NG.slide(C.U + f, secs, job.get('ground_theme', job['theme']), C.U + clip,
                          seed=sum(map(ord, job['name'])), t0=t, fast=draft)
             out.append((clip, 0.0, secs, 0.5))
+        elif os.path.splitext(f)[1].lower() in reel.STILL:   # an official still: (art, null, secs, [from, to]) pans
+            out.append((f, None, secs, tuple(fo) if isinstance(fo, list) else (0.5 if fo is None else fo)))
         else:
             if fo is None and build:
                 fo = reel.autofocus(f, start, secs)
@@ -114,7 +116,7 @@ def focus(job, path):
     for item in job.get('footage', []):
         fetch(item)
     for sh in job['shots']:
-        if sh[3] is None and not (sh[0].endswith('.png') and '-gfx-' in sh[0]):
+        if sh[3] is None and not (sh[0].endswith('.png') and '-gfx-' in sh[0]) and os.path.splitext(sh[0])[1].lower() not in reel.STILL:
             sh[3] = [list(k) for k in reel.autofocus(sh[0], sh[1], sh[2])]
     json.dump(job, open(path, 'w'), ensure_ascii=False, indent=1)
     return job
@@ -129,6 +131,11 @@ def check(job):
     if job.get('cut'):
         reel.X = 0.04
     try:
+        for f, s, d, fo in shots(job, build=False):   # the runner stops on a letterboxed or small clip; catch it here first
+            if s is not None and not f.startswith(NG.SUB + '/') and os.path.exists(C.U + f) and not job.get('lowres_ok'):
+                rows = reel._bars(C.U + f, s, d)[1]
+                if rows < reel.MIN_SRC_H:
+                    raise ValueError(f'{f} at {s}: only {rows} rows of picture; find an unletterboxed or 4K copy, or set lowres_ok')
         st, end = reel.timeline(shots(job, build=False))
         reel.check_reading(place(job)(st, end), end)
     finally:
@@ -143,7 +150,7 @@ def run(job, draft=False):
     fetched = time.time() - t0
     out = os.path.join(ROOT, job['out'])
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    tup = lambda v: tuple(tuple(x) if isinstance(x, list) else x for x in v) if v is not None else None
+    tup = lambda v: v if v is None or isinstance(v, str) else tuple(tuple(x) if isinstance(x, list) else x for x in v)
     done = reel.reel(shots(job, draft), job['headline'], job['label'], place(job), job['source'], job['date'], out,
                      theme=job['theme'], style=job.get('style'), sound=job.get('sound'), country=job.get('country'),
                      head_size=job.get('head_size', 66), draft=draft, track=tup(job.get('track')), cut=job.get('cut', False),
