@@ -14,7 +14,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const [pageName, out, seconds, query = '', fps = '30'] = process.argv.slice(2);
 const FPS = +fps, N = Math.round(FPS * +seconds);
 const FONTS = process.env.DUBAI_FONTS || '/root/fonts-private/dubai';
-const TYPES = { '.js': 'text/javascript', '.mjs': 'text/javascript', '.ttf': 'font/ttf', '.jpg': 'image/jpeg', '.png': 'image/png', '.html': 'text/html', '.svg': 'image/svg+xml', '.json': 'application/json' };
+const TYPES = { '.css': 'text/css', '.js': 'text/javascript', '.mjs': 'text/javascript', '.ttf': 'font/ttf', '.jpg': 'image/jpeg', '.png': 'image/png', '.html': 'text/html', '.svg': 'image/svg+xml', '.json': 'application/json' };
 const srv = createServer(async (req, res) => {
   const u = decodeURIComponent(req.url.split('?')[0]);
   let f = u.startsWith('/fonts/') ? path.join(FONTS, path.basename(u)) : u === '/mark.jpg' ? path.join(here, '..', 'digi-mark.jpg') : path.join(here, u.replace(/^\//, ''));

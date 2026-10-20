@@ -1,0 +1,158 @@
+<!doctype html>
+<!-- Game skins pilot (advisor, 20 Oct 2026; CLAUDE.md "Game skins, footage behind text, rebuilt cards").
+     One page for every kit: the kit's tokens come from <kit>.css (the same file skins.py reads for the Reel), and
+     window.renderAt(t) sets every frame (no CSS animation, so frames are deterministic), as templates/web/outro.html.
+     It shows the kit as a Reel opening plays it: the top band's decoration, the plate behind chip and headline, the
+     credit line at 2 s, a cut at CUT, the story line's entrance at LINE, the split strip's plate.
+       node ../render.mjs skins/skin.html out.mp4 6 "kit=scifi"
+     Query: kit=scifi|fantasy|house, head, line, bg (an image file in this folder; a dark gradient by default).
+     The geometry follows skins.py (plate box, chamfer, ticks, double rule) so both routes draw the same kit.
+     Fonts: /fonts/ (the Dubai TTFs never go in git). Arabic stays Dubai on every kit; the chip's place, the safe zone
+     (x 96 to 910, y 285 to 1480) and the end card never change. -->
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<link id="kitcss" rel="stylesheet">
+<style>
+@font-face { font-family: Dubai; font-weight: 700; src: url(/fonts/Dubai-Bold.ttf); }
+@font-face { font-family: Dubai; font-weight: 500; src: url(/fonts/Dubai-Medium.ttf); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #141332; font-family: Dubai, sans-serif; }
+#stage { position: absolute; inset: 0; overflow: hidden; }
+#bg { position: absolute; inset: 0; background: radial-gradient(120% 70% at 30% 35%, #3a4a6a, #10121e 70%); background-size: cover; background-position: center; }
+canvas { position: absolute; inset: 0; }
+.chip { position: absolute; top: 355px; right: 170px; height: 57px; padding: 0 22px; border-radius: 10px; font-weight: 700;
+        font-size: 34px; line-height: 57px; color: #141332; }
+.head { position: absolute; top: 430px; right: 170px; width: 814px; font-weight: 700; font-size: 66px; line-height: 86px;
+        text-align: right; color: var(--ink); text-shadow: 0 0 18px rgba(20,19,50,0.9); }
+.meta { position: absolute; right: 170px; font-weight: 500; font-size: 32px; color: var(--body); }
+.meta i { display: inline-block; width: 44px; height: 4px; margin-left: 18px; vertical-align: middle; background: var(--accent); }
+.line { position: absolute; right: 170px; width: 814px; font-weight: 700; font-size: 66px; line-height: 92px; text-align: right;
+        color: var(--ink); paint-order: stroke fill; -webkit-text-stroke: 10px var(--outline); }
+.strip { position: absolute; left: 96px; right: 170px; display: flex; flex-direction: row; }
+.strip div { flex: 1; text-align: center; }
+.strip small { display: block; font-weight: 500; font-size: 34px; color: var(--body); margin-top: 22px; }
+.strip b { display: block; font-weight: 700; font-size: 56px; color: var(--ink); }
+</style></head>
+<body><div id="stage"><div id="bg"></div><canvas id="deco" width="1080" height="1920"></canvas><canvas id="fx" width="1080" height="1920"></canvas></div>
+<script>
+const q = new URLSearchParams(location.search);
+const KIT = q.get('kit') || 'scifi';
+const HEAD = q.get('head') || 'تعود اللعبة رسميًا بعد أيام من تسريبها';
+const LINE = q.get('line') || 'ويستكشف اللاعبون عالمًا جديدًا';
+const W = 1080, H = 1920, SAFE_L = 96, SAFE_R = 910, SAFE_B = 1480;
+const CREDIT_AT = 2.0, CUT = 2.8, LINE_AT = 3.6, STRIP_AT = 3.5;
+if (q.get('bg')) document.getElementById('bg').style.backgroundImage = `url(${q.get('bg')})`;
+const S = document.getElementById('stage');
+const el = (cls, html, css) => { const e = document.createElement('div'); e.className = cls; e.innerHTML = html; Object.assign(e.style, css || {}); S.appendChild(e); return e; };
+const clamp = x => Math.max(0, Math.min(1, x));
+const ease = x => 1 - Math.pow(1 - clamp(x), 3);
+let K = {};
+function tokens() {                                   // the kit's custom properties, as skins.py reads them
+  const cs = getComputedStyle(document.documentElement), get = n => cs.getPropertyValue('--' + n).trim();
+  const names = ['ink','body','plate','plate-alpha','edge','accent','accent2','outline','chip','chamfer','tick','rule','scan-gap','scan-alpha',
+                 'grid-alpha','radius','rule-gap','corner','wash-alpha','curl-alpha','enter','enter-dur','enter-dx','enter-dy','cut','leak','leak-alpha'];
+  for (const n of names) { const v = get(n); K[n] = /^-?[\d.]+(px|s)?$/.test(v) ? parseFloat(v) : v; }
+}
+const rgba = (hex, a) => { const n = parseInt(hex.slice(1), 16); return `rgba(${n >> 16},${(n >> 8) & 255},${n & 255},${a})`; };
+
+function plate(g, x0, y0, x1, y1, a = 1) {           // skins.plate()
+  g.save();
+  if (KIT === 'scifi') {
+    const c = K.chamfer, p = [[x0 + c, y0], [x1, y0], [x1, y1 - c], [x1 - c, y1], [x0, y1], [x0, y0 + c]];
+    g.beginPath(); p.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.closePath();
+    g.fillStyle = rgba(K.plate, K['plate-alpha'] * a); g.fill();
+    g.save(); g.clip(); g.strokeStyle = rgba(K.edge, K['scan-alpha'] * a); g.lineWidth = 1;
+    for (let y = y0; y < y1; y += K['scan-gap']) { g.beginPath(); g.moveTo(x0, y + 0.5); g.lineTo(x1, y + 0.5); g.stroke(); }
+    g.restore();
+    g.strokeStyle = rgba(K.edge, 0.82 * a); g.lineWidth = K.rule; g.stroke();
+    const t = K.tick, gp = 7; g.strokeStyle = rgba(K.accent2, 0.92 * a); g.lineWidth = K.rule + 1;
+    [[x1 + gp, y0 - gp, -1, 1], [x0 - gp, y1 + gp, 1, -1]].forEach(([cx, cy, sx, sy]) => {
+      g.beginPath(); g.moveTo(cx + sx * t, cy); g.lineTo(cx, cy); g.lineTo(cx, cy + sy * t); g.stroke(); });
+  } else if (KIT === 'fantasy') {
+    const r = K.radius, gp = K['rule-gap'];
+    const rr = (x, y, w, h, r) => { g.beginPath(); g.roundRect(x, y, w, h, r); };
+    rr(x0, y0, x1 - x0, y1 - y0, r); g.fillStyle = rgba(K.plate, K['plate-alpha'] * a); g.fill();
+    g.strokeStyle = rgba(K.edge, 0.84 * a); g.lineWidth = K.rule; g.stroke();
+    rr(x0 + gp, y0 + gp, x1 - x0 - 2 * gp, y1 - y0 - 2 * gp, Math.max(2, r - gp / 2)); g.strokeStyle = rgba(K.edge, 0.55 * a); g.lineWidth = 1.5; g.stroke();
+    const f = K.corner, qd = f * 0.32;
+    [[x0, y0, 1, 1], [x1, y0, -1, 1], [x0, y1, 1, -1], [x1, y1, -1, -1]].forEach(([cx, cy, sx, sy]) => {
+      const dx = cx + sx * gp / 2, dy = cy + sy * gp / 2;
+      g.beginPath(); g.moveTo(dx, dy - qd); g.lineTo(dx + qd, dy); g.lineTo(dx, dy + qd); g.lineTo(dx - qd, dy); g.closePath();
+      g.fillStyle = rgba(K.edge, 0.92 * a); g.fill();
+      for (const ax of [0, 1]) {
+        g.beginPath();
+        for (let i = 0; i <= 18; i++) {
+          const u = i / 18, r2 = f * (0.95 - 0.55 * u), th = u * 1.6 * Math.PI;
+          const along = r2 * (1 - Math.cos(th)) * 0.9, across = r2 * Math.sin(th) * 0.45;
+          const [px, py] = ax ? [dx + sx * across, dy + sy * (qd + along)] : [dx + sx * (qd + along), dy + sy * across];
+          i ? g.lineTo(px, py) : g.moveTo(px, py);
+        }
+        g.strokeStyle = rgba(K.edge, 0.75 * a); g.lineWidth = 1.5; g.stroke();
+      }
+    });
+  } else {
+    g.beginPath(); g.roundRect(x0, y0, x1 - x0, y1 - y0, K.radius || 26); g.fillStyle = rgba(K.plate, K['plate-alpha'] * a); g.fill();
+    g.strokeStyle = rgba(K.edge, 0.47 * a); g.lineWidth = 2; g.stroke();
+  }
+  g.restore();
+}
+
+function band(g, y1, t) {                              // skins.top(); the soft ground band under it as in reel._band
+  const gr = g.createLinearGradient(0, 0, 0, y1 + 80); gr.addColorStop(0, 'rgba(20,19,50,0.75)'); gr.addColorStop(1, 'rgba(20,19,50,0)');
+  g.fillStyle = gr; g.fillRect(0, 0, W, y1 + 80);
+  const fade = y => Math.pow(Math.max(0, 1 - y / y1), 1.3);
+  if (KIT === 'scifi') {
+    const tint = g.createLinearGradient(0, 0, 0, y1); tint.addColorStop(0, rgba(K.edge, 0.30)); tint.addColorStop(1, rgba(K.edge, 0)); g.fillStyle = tint; g.fillRect(0, 0, W, y1);
+    for (let y = 0; y < y1; y += K['scan-gap']) { g.fillStyle = rgba(K.edge, K['scan-alpha'] * 1.4 * fade(y)); g.fillRect(0, y, W, 1); }
+    for (let gy = 40; gy < y1 * 0.7; gy += 28) for (let gx = 24; gx < 360; gx += 28) {
+      g.fillStyle = rgba(K.edge, K['grid-alpha'] * 2.2 * fade(gy) * (1 - gx / 380)); g.beginPath(); g.arc(gx, gy, 2, 0, 7); g.fill(); }
+    const ry = Math.round(y1 * 0.16), sweep = (t * 260) % (W * 1.6) - W * 0.3;   // the broken rule, and a dash that sweeps along it
+    g.fillStyle = rgba(K.edge, 0.59 * fade(ry)); g.fillRect(0, ry, W * 0.58, 2); g.fillStyle = rgba(K.edge, 0.35 * fade(ry)); g.fillRect(W * 0.62, ry, W * 0.38, 2);
+    g.fillStyle = rgba(K.accent2, 0.9 * fade(ry)); g.fillRect(sweep, ry - 1, 46, 4);
+  } else if (KIT === 'fantasy') {
+    const wash = g.createLinearGradient(0, 0, W, 0); wash.addColorStop(0, rgba(K.accent2, 1)); wash.addColorStop(1, rgba(K.accent, 1));
+    g.save(); const m = g.createLinearGradient(0, 0, 0, y1); g.globalAlpha = K['wash-alpha']; g.fillStyle = wash;
+    g.globalCompositeOperation = 'source-over'; for (let y = 0; y < y1; y += 4) { g.globalAlpha = K['wash-alpha'] * Math.pow(1 - y / y1, 1.6); g.fillRect(0, y, W, 4); } g.restore();
+    [0.10, 0.27, 0.44].forEach((b, j) => { const yb = y1 * b; g.beginPath();
+      for (let i = 0; i <= 240; i++) { const u = i / 240, th = u * 2 * Math.PI * 7 + j + t * 0.4;
+        const x = u * (W + 80) - 40 + 16 * Math.sin(th), y = yb + 13 * Math.cos(th) + 18 * Math.sin(u * 5 + j); i ? g.lineTo(x, y) : g.moveTo(x, y); }
+      g.strokeStyle = rgba(K.edge, K['curl-alpha'] * fade(yb)); g.lineWidth = 2; g.stroke(); });
+  }
+}
+
+let chip, head, meta, line, strip;
+window.renderAt = function (t) {
+  const g = document.getElementById('deco').getContext('2d'), fx = document.getElementById('fx').getContext('2d');
+  g.clearRect(0, 0, W, H); fx.clearRect(0, 0, W, H);
+  const hb = head.getBoundingClientRect(), end = hb.bottom;
+  band(g, end + 30 + 140, t);
+  if (KIT !== 'house') plate(g, Math.max(SAFE_L - 20, hb.left - 28), 355 - 18, SAFE_R + 20, end + 14);
+  meta.style.top = (end + 12) + 'px'; meta.style.opacity = clamp((t - CREDIT_AT) / 0.2);
+  const sTop = SAFE_B - 24 - 160;                      // the strip: same box as reel.strip_layer
+  strip.style.top = sTop + 'px'; strip.style.opacity = clamp((t - STRIP_AT) / 0.4);
+  if (t >= STRIP_AT) plate(g, SAFE_L, sTop, SAFE_R, sTop + 160, clamp((t - STRIP_AT) / 0.4));
+  const u = ease((t - LINE_AT) / (K['enter-dur'] || 0.2));   // the line's entrance: in from dx right and dy below
+  line.style.opacity = t < LINE_AT ? 0 : clamp((t - LINE_AT) / ((K['enter-dur'] || 0.2) * 0.8));
+  line.style.transform = `translate(${(K['enter-dx'] || 0) * (1 - u)}px, ${(K['enter-dy'] || 0) * (1 - u)}px)`;
+  line.style.top = (sTop - 32 - line.offsetHeight) + 'px';   // above the strip, by the line's own height (STRIP_LIFT in reel.py)
+  const k = (t - CUT) / 0.4;                           // the cut: sci-fi breaks up, fantasy lets in a warm light leak
+  if (k > 0 && k < 1) {
+    const p = Math.sin(Math.PI * k);
+    if (KIT === 'scifi') { for (let i = 0; i < 14; i++) { const y = (i * 137 + Math.floor(t * 30) * 53) % H;
+        fx.fillStyle = rgba(i % 3 ? K.edge : K.accent2, 0.35 * p); fx.fillRect(((i * 71) % 300) * p, y, W * (0.3 + (i % 4) * 0.15), 6 + (i % 5) * 4); } }
+    else if (KIT === 'fantasy' && K.leak && K.leak !== 'none') { const r = fx.createRadialGradient(W * 0.9, H * 0.05, 0, W * 0.9, H * 0.05, W);
+        r.addColorStop(0, rgba(K.leak, K['leak-alpha'] * p)); r.addColorStop(1, rgba(K.leak, 0)); fx.fillStyle = r; fx.fillRect(0, 0, W, H); }
+  }
+};
+const css = document.getElementById('kitcss');
+css.onload = () => {
+  tokens();
+  chip = el('chip', 'جديد', { background: K.chip });
+  head = el('head', HEAD);
+  meta = el('meta', '<i></i>إكس بوكس  ·  20 أكتوبر 2026');
+  line = el('line', LINE);
+  strip = el('strip', '<div><small>الموعد</small><b>29 أكتوبر</b></div><div><small>الاشتراك</small><b>Game Pass</b></div>');
+  document.fonts.ready.then(() => { window.renderAt(0); window.ready = true; });
+};
+css.onerror = () => { throw new Error('kit stylesheet ' + KIT + '.css did not load'); };
+css.href = KIT + '.css';                               // after onload is set, so a cached sheet cannot fire first
+</script></body></html>
