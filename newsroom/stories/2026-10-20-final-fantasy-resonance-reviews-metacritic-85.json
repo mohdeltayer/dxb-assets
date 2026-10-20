@@ -1,0 +1,72 @@
+{
+ "id": "2026-10-20-final-fantasy-resonance-reviews-metacritic-85",
+ "title": "Final Fantasy Resonance reviews: Metacritic 85 before the 22 Oct launch",
+ "game": "Final Fantasy Resonance",
+ "companies": [
+  "Square Enix"
+ ],
+ "category": "reviews",
+ "related": [
+  "2026-10-15-final-fantasy-resonance-famitsu-36"
+ ],
+ "sources": [
+  {
+   "role": "aggregate",
+   "url": "https://www.metacritic.com/game/final-fantasy-resonance/"
+  },
+  {
+   "role": "store",
+   "url": "https://store.steampowered.com/app/3259780/"
+  }
+ ],
+ "claims": [
+  {
+   "text": "Metacritic 85 (42 critic reviews at 18:50Z; caption says more than 40)",
+   "status": "verified (Metacritic page, re-read 19:02Z)"
+  },
+  {
+   "text": "release 22 Oct 2026",
+   "status": "verified (Steam, Metacritic)"
+  },
+  {
+   "text": "185 AED on Steam UAE",
+   "status": "verified (Steam appdetails cc=ae)"
+  },
+  {
+   "text": "first FINAL FANTASY in the HD-2D lineup, turn-based battles, Visions",
+   "status": "verified (Square Enix Steam description)"
+  }
+ ],
+ "status": "queued",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "التقييمات",
+   "format": "split",
+   "theme": "stylized",
+   "headline": "تقييم Final Fantasy Resonance يصل إلى 85 قبل صدورها",
+   "strip": [
+    [
+     "ميتاكريتيك",
+     "85"
+    ],
+    [
+     "الإصدار",
+     "22 أكتوبر"
+    ],
+    [
+     "سعرها على Steam",
+     [
+      "aed",
+      "185"
+     ]
+    ]
+   ],
+   "media": "cards/2026-10/final-fantasy-resonance-reviews-metacritic-85-reel-v1.mp4",
+   "render": "runner (re-run after the strip price fix)",
+   "time": "2026-10-20T21:45:00Z",
+   "approved": "go: rolling queue; preview sent 19:04Z; gate 19:02Z: Metacritic 85, Steam UAE 185 AED, Square Enix description, no change",
+   "notes": "Shiva CG dropped (costume, open-account rule); scene bleeds trimmed on the sheet. Glossary: سكوير (Square Enix). DeepL forward: معارك قائمة على الأدوار, موقع تجميع التقييمات; ours kept. Grammar stage: no required edits."
+  }
+ }
+}
