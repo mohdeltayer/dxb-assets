@@ -1028,6 +1028,52 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      multi-game rankings.
   5. Multi-game charts keep the rotating living ground and put each game's
      art or box shot beside its row, as `sales_full` already does.
+- Game skins, footage behind text, rebuilt cards (advisor, 20 Oct 2026). The
+  picture comes from the game, and it moves: a single-game story wears the
+  game's look; the house theme is for news across several games or the
+  industry.
+  1. Text cut by the crop: `reel.shotsheet` reads every sheet frame with
+     tesseract (`reel.edge_text`) and flags any printed text, logo or subtitle
+     whose box crosses the 9:16 window's edge (`cut-text`, outlined in red on
+     the sheet). Text that does not matter: drop the shot for a nearby one
+     (Scramble Knights v2, 20 Oct: the outfit screen's button bar and the
+     "Strength +1" pop-ups). Text that is the point (the Edgerunners 2 Oshima
+     card): rebuild it as a vertical card in the game's own style (colours,
+     label shapes, rules, type spacing), labels in Arabic (الاسم · يؤديه),
+     names in English, animated the way the game's or show's UI moves, run or
+     cut against the matching trailer shot. Flagged frames are marked on the
+     sheet before queuing.
+  2. No flat backgrounds: card-led templates (numbers, quote, explainer,
+     edition, list) sit on the game's own trailer footage, dimmed and slightly
+     blurred, always moving, never the flat indigo. Nothing static in the
+     first 3 s of any Reel. No footage at all: key art split into layers with
+     parallax, or animated type through the web-motion setup. The house look
+     stays on the end card, the chips and the tribute variant.
+  3. Game skins: eight genre kits (sci-fi/cyberpunk, fantasy,
+     military/realistic, horror (never gore), anime/stylised, retro pixel,
+     sports/racing, cosy/Nintendo-bright), each with colour tokens, plate and
+     frame shapes, a text entrance, a cut transition and a short sound sting,
+     built as web-motion (HTML) themes. Franchise skins on top of a kit for
+     series covered often (Cyberpunk, Zelda, GTA, Pokemon, Final Fantasy, Call
+     of Duty); a franchise earns one after three or four stories. Pick: one
+     game is the story, its franchise skin, else its genre kit; multi-game
+     lists, releases of the week, awards, industry, business, hardware,
+     platform policy and our own series take the house theme, with footage or
+     motion behind it.
+  4. Never changes on any skin: Arabic type stays Dubai; the mark, the chip
+     position, the safe zone (x 96 to 910, y 285 to 1480) and the end card on
+     the jingle stay fixed, so the grid reads as one channel; عاجل stays
+     crimson; inspired by the game's look, never a pixel copy of its UI or
+     logo, and official logos only from press kits, to identify the game.
+  5. Pilot first: three are built (sci-fi kit, fantasy kit, and the house
+     theme with footage behind) and used on the next stories that fit. The
+     format ledger logs each Reel's skin (`formats.py add <name> <fmt>
+     [skin]`, `formats.SKINS`). After two weeks, views are compared with the
+     two weeks before; the other six kits wait for that result. Nothing in the
+     live pipeline changes for stories outside the pilot until then (the
+     crop-edge text flag in 1 is a sheet check, applied to every Reel). The
+     container has no Dubai font since the reset, so the HTML themes render on
+     the runner or once `dubai.zip` is back.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under

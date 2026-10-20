@@ -107,6 +107,15 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     multi-game charts and milestones. A game with footage takes `clipcard`,
     not `numbers` (`formats.pick(..., footage=True)`); multi-game charts
     keep the living ground with each game's art beside its row.
+  - Game skins (20 Oct, pilot): one game, its look (franchise skin, else
+    genre kit); several games or the industry, the house theme. Pilot kits:
+    sci-fi, fantasy, house with footage behind; `skin` logged in the format
+    ledger, compared after two weeks. Card-led templates sit on the game's
+    dimmed, blurred, moving footage, never flat; nothing static in the first
+    3 s. Dubai type, mark, chip position, safe zone, end card and crimson
+    عاجل never change; no pixel copies of a game's UI or logo.
+  - Text cut by the crop (20 Oct): the shot sheet flags `cut-text`; drop the
+    shot, or rebuild text that matters as a vertical card in the game's style.
   - A framed window on the ground plays a clip when footage exists, not a
     still (14 Oct).
 - **Text:**

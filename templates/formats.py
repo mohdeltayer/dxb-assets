@@ -164,15 +164,26 @@ def _load():
         return []
 
 
-def add(name, fmt):
+# Game skins pilot (advisor, 20 Oct 2026): each Reel logs its skin; the pilot compares two weeks of views against the
+# two weeks before. `house` is the Digital Lounge theme (multi-game, industry, hardware, policy, our series); the kits
+# are genre looks built as web-motion themes, three in the pilot, the other five wait for the result.
+SKINS = ['house', 'scifi', 'fantasy']
+SKINS_LATER = ['military', 'horror', 'anime', 'retro', 'sports', 'cosy']
+
+
+def add(name, fmt, skin=None):
     if fmt not in FORMATS:
         raise ValueError(f'{fmt}: not a format ({", ".join(FORMATS)})')
+    if skin is not None and skin not in SKINS:
+        raise ValueError(f'{skin}: not a pilot skin ({", ".join(SKINS)}); {", ".join(SKINS_LATER)} wait for the pilot result')
     led = _load()
     old = next((e for e in led if e['name'] == name), {})
     led = [e for e in led if e['name'] != name]   # a re-render keeps its place and its views
     import datetime
     at = old.get('at') or datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%MZ')   # a re-render keeps its day
-    led.append({'name': name, 'format': fmt, 'at': at, **({'views': old['views']} if 'views' in old else {})})
+    sk = skin or old.get('skin')
+    led.append({'name': name, 'format': fmt, 'at': at, **({'skin': sk} if sk else {}),
+                **({'views': old['views']} if 'views' in old else {})})
     json.dump(led[-200:], open(LEDGER, 'w'), indent=1)
 
 
@@ -274,8 +285,8 @@ def family(fmt):
 
 if __name__ == '__main__':
     a = sys.argv[1:]
-    if a[:1] == ['add']:
-        add(a[1], a[2]); print('ok')
+    if a[:1] == ['add']:                           # python3 formats.py add <reel name> <fmt> [skin]
+        add(a[1], a[2], a[3] if len(a) > 3 else None); print('ok')
     elif a[:1] == ['views']:                       # python3 formats.py views <reel name> <instagram views>
         views(a[1], a[2]); print('ok')
     elif a[:1] == ['templates']:                   # views per template, for the Tuesday audit
