@@ -859,6 +859,49 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   `templates/assets/render-times.json`, and the render task card records
   them for the next ten Reels. Baseline, the Xbox Nano Reel (18.6 s, a
   still, a graphic and a still) on the old chain, is in the same file.
+- Render runner (advisor, 20 Oct 2026, agreed with Mohammad; supersedes point
+  7 above): routine renders move to GitHub Actions in dxb-assets to add
+  capacity. dxb-assets is public, so the standard Linux runners are free with
+  no minute limit (4 cores, to be confirmed on the first run). The 2016
+  MacBook Pro (dual-core i5, 8 GB) is about as fast as the container and may
+  serve later as a second slot. Nothing already running changes until the
+  test in 6 passes, and the container stays the fallback.
+  1. Set up by Mohammad on 20 Oct: Actions allowed for all actions; the
+     repo's default workflow permission stays read-only; the private repo
+     mohdeltayer/dxb-fonts holds `dubai.zip` (the same archive as
+     `/root/fonts-private/dubai/`, not loose TTFs); a fine-grained token
+     "render-fonts" (dxb-fonts only, Contents read-only, no expiry) is the
+     dxb-assets secret `FONTS_TOKEN`. Rotate it if anything else ever needs it.
+  2. Fonts: never committed, never uploaded as an artifact, never printed.
+     The workflow clones dxb-fonts with `FONTS_TOKEN` into a temp folder
+     outside the workspace, unzips `dubai.zip` there, points `DUBAI_FONTS`
+     (read by `fast_ar.FONTS`) at it and deletes it at the end.
+  3. `.github/workflows/render.yml` declares `permissions: contents: write`
+     itself, so it is the only workflow that can commit back. Triggers: a push
+     to main of `jobs/render/*.json`, or workflow_dispatch; never
+     pull_request. One matrix job per job file: checkout (sparse, templates and
+     jobs), fonts, ffmpeg, tesseract and the Python packages (YOLO included),
+     footage fetched from the job's URLs, `templates/render_job.py run`, then
+     one commit with the mp4, strip and sheet in `cards/YYYY-MM/`, the run's
+     render-times entry (`runner: actions`, cores, whole-job seconds) and the
+     job file deleted; it rebases and retries when parallel jobs race.
+  4. The job file (`jobs/render/<name>.json`, format in `render_job.py`)
+     carries everything reel() needs: footage (a Steam trailer by app and
+     name prefix, a direct URL, or a file committed under `live/`), shots
+     with times and focus, the by_shot line groups, headline, label, source,
+     date, theme, style, template, strip, credits, track, cut. The main
+     session picks `style` (and `sound` for silent footage) when it writes
+     the job, so the rotation ledgers stay in its commits. No tokens, Postiz
+     IDs or unreleased material: the repo and the Actions logs are public.
+     `render_job.py check <job>` runs the timeline and reading checks first.
+  5. Flow: the main session commits a job file and moves to the next story; it
+     queues the Reel once the render commit lands and the strip is checked,
+     as now.
+  6. First test before any switch: re-render one published Reel on the runner
+     (the Cyberpunk 2077 Edgerunners 2 update, container render 10:54Z, 94.8
+     s), compare look and timing with the container's version, record the
+     minutes in render-times.json, report to Mohammad. Only then do routine
+     renders move. If Actions is down or a run fails, render on the container.
 - Review of the Xbox Nano Reel, the first under the hook band (advisor,
   14 Oct 2026):
   1. Ten seconds on one still (0 to 10 s) broke the 3 to 4 s change rule.

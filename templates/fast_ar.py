@@ -17,7 +17,7 @@ import zlib
 from PIL import Image, ImageDraw, ImageFont
 import fast
 
-FONTS = '/root/fonts-private/dubai/'
+FONTS = os.environ.get('DUBAI_FONTS', '/root/fonts-private/dubai').rstrip('/') + '/'   # the render runner points it at its temp folder
 MARK = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'digi-mark.jpg')
 
 

@@ -1,0 +1,135 @@
+# Render runner (advisor, 20 Oct 2026, agreed with Mohammad): one Reel per job file in
+# jobs/render/, rendered on a GitHub runner and committed back to cards/YYYY-MM/.
+# The Dubai font comes from the private dxb-fonts repo through FONTS_TOKEN into a temp
+# folder outside the workspace: never committed, never uploaded, never printed, and
+# deleted at the end (its licence forbids redistribution). No pull_request trigger, so
+# outside forks never see the secret. The repo default stays read-only; only this
+# workflow may write.
+name: render
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches: [main]
+    paths: ['jobs/render/*.json']
+  workflow_dispatch:
+    inputs:
+      job:
+        description: 'One job file (jobs/render/<name>.json); empty renders every file there'
+        required: false
+        default: ''
+
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    outputs:
+      jobs: ${{ steps.pick.outputs.jobs }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: jobs
+      - id: pick
+        env:
+          BEFORE: ${{ github.event.before }}
+          INPUT: ${{ github.event.inputs.job }}
+        run: |
+          if [ -n "$INPUT" ]; then
+            files="$INPUT"
+          elif [ "${{ github.event_name }}" = "push" ] && [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ]; then
+            git fetch -q --depth=1 --filter=blob:none origin "$BEFORE"
+            files=$(git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- 'jobs/render/*.json')
+          else
+            files=$(ls jobs/render/*.json 2>/dev/null || true)
+          fi
+          echo "jobs=$(printf '%s\n' $files | python3 -c 'import json,sys; print(json.dumps([l.strip() for l in sys.stdin if l.strip()]))')" >> "$GITHUB_OUTPUT"
+
+  render:
+    needs: list
+    if: needs.list.outputs.jobs != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        job: ${{ fromJSON(needs.list.outputs.jobs) }}
+    env:
+      JOB: ${{ matrix.job }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            templates
+            jobs
+
+      - name: Runner
+        run: |
+          echo "cores $(nproc), $(free -g | awk '/Mem:/{print $2}') GB, $(lsb_release -ds)"
+          {
+            echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts"
+            echo "DXB_UPLOADS=$RUNNER_TEMP/uploads"
+            echo "YOLO_WEIGHTS=$RUNNER_TEMP/models/yolov8n.pt"
+          } >> "$GITHUB_ENV"
+
+      - name: Fonts (temp folder, outside the workspace)
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          repo="$RUNNER_TEMP/dxb-fonts"
+          git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+          mkdir -p "$DUBAI_FONTS"
+          unzip -q -j -o "$repo/dubai.zip" '*.ttf' '*.TTF' -d "$DUBAI_FONTS"
+          rm -rf "$repo"
+          for w in Light Regular Medium Bold; do test -f "$DUBAI_FONTS/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing from dubai.zip"; exit 1; }; done
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg tesseract-ocr > /dev/null
+          python -m pip install -q --upgrade pip
+          python -m pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -q pillow numpy soundfile pedalboard ultralytics opencv-python-headless
+          mkdir -p "$DXB_UPLOADS" "$(dirname "$YOLO_WEIGHTS")"
+
+      - name: Render
+        run: |
+          start=$(date +%s)
+          python templates/render_job.py run "$JOB"
+          echo "RENDER_SECS=$(( $(date +%s) - start ))" >> "$GITHUB_ENV"
+          # keep this run's render-times entry; the commit step rebuilds on the latest main
+          python -c "import json; e = json.load(open('templates/assets/render-times.json'))[-1]; e['runner'] = 'actions'; e['cores'] = $(nproc); e['job_secs'] = None; json.dump(e, open('$RUNNER_TEMP/render-time.json', 'w'))"
+
+      - name: Commit back
+        run: |
+          out=$(python -c "import json; print(json.load(open('$JOB'))['out'])")
+          stem="${out%.mp4}"; base="${stem%-reel-v*}"
+          files="$out $base-strip.jpg $base-sheet.jpg"
+          mkdir -p "$RUNNER_TEMP/out"
+          for f in $files; do cp --parents "$f" "$RUNNER_TEMP/out/"; done
+          git config user.name "dxb-render"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for i in 1 2 3 4 5; do
+            git fetch -q --depth=1 --filter=blob:none origin main
+            git reset -q --hard origin/main
+            cp -r "$RUNNER_TEMP/out/." .
+            python -c "import json; p = 'templates/assets/render-times.json'; d = json.load(open(p)); e = json.load(open('$RUNNER_TEMP/render-time.json')); e['job_secs'] = $RENDER_SECS; d.append(e); json.dump(d, open(p, 'w'), indent=1, ensure_ascii=False)"
+            git add --sparse -f $files templates/assets/render-times.json
+            if [ -f "$JOB" ]; then git rm -q "$JOB"; fi
+            git commit -q -m "Render $(basename "$JOB" .json) on the runner ($RENDER_SECS s, $(nproc) cores)"
+            if git push -q origin HEAD:main; then exit 0; fi
+            sleep $(( i * 5 ))
+          done
+          echo "push failed five times"; exit 1
+
+      - name: Remove fonts
+        if: always()
+        run: rm -rf "$DUBAI_FONTS" "$RUNNER_TEMP/dxb-fonts"

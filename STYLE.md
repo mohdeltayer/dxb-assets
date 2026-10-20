@@ -221,6 +221,12 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     `breaking` profile (no finish, veryfast/20, no draft); dated stories
     have their footage cached the evening before; seconds per stage go to
     `templates/assets/render-times.json`.
+  - Render runner (20 Oct, in test): routine renders are to move to GitHub
+    Actions (`render.yml`, one job per `jobs/render/<name>.json`, run by
+    `templates/render_job.py`; fonts from dxb-fonts through `FONTS_TOKEN`,
+    never committed or logged). Until the Cyberpunk re-render test passes
+    and is reported, renders stay on the container, which remains the
+    fallback.
   - (CLAUDE.md "Full-screen format", "Creative brief and formats")
 
 ## Platforms

@@ -67,7 +67,7 @@ GOOD = (60, 255, 150)
 BAD  = (255, 80, 130)
 
 F = '/home/claude/fonts/Inter.ttf'
-U = '/mnt/user-data/uploads/'
+U = os.environ.get('DXB_UPLOADS', '/mnt/user-data/uploads').rstrip('/') + '/'   # the render runner sets its own
 CREST = '/home/claude/crest-tint.png'
 M = 70
 
