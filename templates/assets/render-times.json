@@ -2390,5 +2390,27 @@
   "job_secs": 270,
   "setup_min": 0.93,
   "story": "stranger-than-heaven-show-business-hands-on"
+ },
+ {
+  "name": "mw4-pc-advanced-shader-delivery-nvidia-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-21T15:15Z",
+  "stages": {
+   "checks": 0.9,
+   "montage": 81.0,
+   "text": 55.6,
+   "audio": 1.4,
+   "outro": 66.3
+  },
+  "total": 205.2,
+  "lane": "runner",
+  "queued_at": "2026-10-21T15:09:56Z",
+  "finished_at": "2026-10-21T15:15Z",
+  "render_min": 3.42,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 340,
+  "setup_min": 1.05,
+  "story": "mw4-pc-advanced-shader-delivery-nvidia"
  }
 ]
