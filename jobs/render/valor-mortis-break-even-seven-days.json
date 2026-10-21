@@ -1,0 +1,204 @@
+{
+ "name": "valor-mortis-break-even-seven-days",
+ "out": "cards/2026-10/valor-mortis-break-even-seven-days-reel-v2.mp4",
+ "footage": [
+  {
+   "file": "vm-launch.mp4",
+   "steam": 2828710,
+   "trailer": "Valor Mortis Launch Trailer",
+   "start": 0,
+   "seconds": 145
+  },
+  {
+   "file": "vm-story.mp4",
+   "steam": 2828710,
+   "trailer": "Valor Mortis - Story Trailer",
+   "start": 0,
+   "seconds": 95
+  }
+ ],
+ "gfx": [
+  {
+   "file": "valor-mortis-break-even-seven-days-gfx-days.png",
+   "kind": "fact",
+   "label": "بلغت نقطة التعادل خلال",
+   "value": "7 أيام",
+   "note": "من إطلاقها في 13 أكتوبر"
+  }
+ ],
+ "shots": [
+  [
+   "vm-story.mp4",
+   80.0,
+   3.4,
+   [
+    [
+     0.0,
+     0.376
+    ]
+   ]
+  ],
+  [
+   "vm-launch.mp4",
+   15.0,
+   1.9,
+   [
+    [
+     0.0,
+     0.65
+    ],
+    [
+     1.78,
+     0.738
+    ]
+   ]
+  ],
+  [
+   "vm-story.mp4",
+   11.3,
+   1.85,
+   [
+    [
+     0.0,
+     0.314
+    ]
+   ]
+  ],
+  [
+   "valor-mortis-break-even-seven-days-gfx-days.png",
+   null,
+   3.0,
+   null
+  ],
+  [
+   "vm-story.mp4",
+   48.5,
+   1.6,
+   [
+    [
+     0.0,
+     0.488
+    ]
+   ]
+  ],
+  [
+   "vm-launch.mp4",
+   17.0,
+   0.9,
+   [
+    [
+     0.0,
+     0.713
+    ],
+    [
+     0.847,
+     0.661
+    ]
+   ]
+  ],
+  [
+   "vm-story.mp4",
+   71.8,
+   1.0,
+   [
+    [
+     0.0,
+     0.529
+    ]
+   ]
+  ],
+  [
+   "vm-launch.mp4",
+   116.5,
+   1.5,
+   [
+    [
+     0.0,
+     0.485
+    ]
+   ]
+  ],
+  [
+   "vm-launch.mp4",
+   65.0,
+   0.65,
+   [
+    [
+     0.0,
+     0.467
+    ]
+   ]
+  ],
+  [
+   "vm-story.mp4",
+   32.0,
+   1.5,
+   [
+    [
+     0.0,
+     0.52
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "حسب مطوّرها\nون مور ليفل (One More Level)",
+     {
+      "size": 50
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   6,
+   [
+    [
+     "أي أن مبيعاتها غطّت\nما أُنفق عليها",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   7,
+   9,
+   [
+    [
+     "ولم يكشف الاستوديو\nأرقام المبيعات بعد",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "headline": "لعبة Valor Mortis تغطي تكاليفها في سبعة أيام فقط",
+ "head_size": 60,
+ "label": "إنجاز",
+ "source": "One More Level",
+ "date": "21 Oct 2026",
+ "theme": "gold",
+ "ground_theme": "gold",
+ "ground_footage": [
+  "vm-story.mp4",
+  32.0
+ ],
+ "style": "frame",
+ "template": "clipcard",
+ "track": [
+  "vm-launch.mp4",
+  0.0
+ ],
+ "cut": true,
+ "sound": null,
+ "pace_ok": false,
+ "lowres_ok": false,
+ "skin": "house"
+}
