@@ -119,6 +119,16 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     shot, or rebuild text that matters as a vertical card in the game's style.
   - A framed window on the ground plays a clip when footage exists, not a
     still (14 Oct).
+  - Damaged footage (21 Oct): every source is decoded in full on download
+    (`ffmpeg -v error -i <file> -f null -`); an error means one fresh
+    download, a second damaged copy means another copy or dropping the
+    shots, never shots from a file that reports errors. Every shot's source
+    stretch and every finished Reel are read for a blocky smear
+    (`templates/decodecheck.py`); the finished mp4 is decoded once more; a
+    4-frames-a-second strip covers the first second of every shot. The
+    runner fails the job on any of these; a flagged stretch a person has
+    looked at is waived with `block_ok` and a reason. "decode clean" goes
+    in the draft notes per source.
 - **Text:**
   - The chip and headline sit at the top for about 3.5 s; the first frame is
     the grid tile.

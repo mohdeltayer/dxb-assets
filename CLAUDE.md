@@ -1089,6 +1089,35 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      `footage` ground (`ground_footage` in a job). Side-by-sides went to
      Mohammad at 19:16Z with a note that the sci-fi break-up looks heavy; no
      live Reel uses a kit until his verdict.
+- Damaged source footage (advisor, 21 Oct 2026). The Battlefield 1 turns 10
+  Reel (published 21 Oct 01:45Z) carried decode damage from 5.3 to 6.3 s, the
+  planes-over-the-battlefield shot: a blocky white and black smear of the
+  previous cockpit shot over the new scene, healing a second later. Our text
+  was clean, so it came in with the footage (the IGN 1080p download, damaged
+  at that scene cut). The shot sheet's single seeked frame skipped it; the
+  strip showed it in two frames and it was missed. Mohammad deleted the live
+  posts; v2 was re-rendered from fresh copies and queued as the same story
+  with the same text (not an update: the error was ours). Corrections #8.
+  1. Every source file, on download: decoded in full once (`ffmpeg -v error
+     -i <file> -f null -`). Any error line: download once more (and remove
+     its picture-pass cache clips); a second damaged copy means another copy
+     or dropping the shots from the damaged stretch. Never build shots from a
+     file that reports errors. "decode clean" per source in the draft notes.
+  2. Every finished Reel, before queuing: the same full decode on the final
+     mp4, and the blocky-smear flag (`templates/decodecheck.py`: long
+     straight edges in the picture area, read clear of our headline, lines
+     and strip, jumping above 12 and to four times the footage within 1.5 s
+     either side for 8 frames or more; it reads the v1 Reel at 5.33 to 6.10 s
+     and passes clean Reels; pixel-art bars, low-poly art and burnt-in title
+     cards still flag, and a person who has looked waives the stretch with
+     `block_ok` and the reason). The same flag runs on each shot's source
+     stretch before the render. `decodecheck.py <mp4> --strip out.jpg` runs
+     both and writes a 4-frames-a-second strip, so the first second of every
+     shot, where this damage shows, is looked at.
+  3. The runner: `render_job.py run` does 1 on every fetched source and 2 on
+     the source stretches and the output, and fails the job before anything
+     is committed; it also writes `<name>-dense.jpg` (the 4 fps strip),
+     committed beside the strip and sheet.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under
