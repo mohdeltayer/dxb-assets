@@ -175,17 +175,19 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - 12 to 20 s of story before the end card; four lines is normal, six only
     when needed; the brief states the total (14 Oct).
 - **Sound:**
-  - No speech under the headline or story lines (21 Oct): one continuous
-    music stretch of the trailer (score, fanfare, music-led passage) with no
-    words in it, checked with faster-whisper word timings; start and fade in
-    pauses. Speech only when it is the news (statement, quote, interview),
-    then translated exactly and timed as a subtitle, with no story line over
-    it. No clean stretch: another official trailer or clip, then our bed
-    (`track='bed'`); demucs only as a clean last resort.
-  - Before queuing, the finished Reel is transcribed: an English word under a
-    story line, or a clipped word, stops the post; the draft notes say
-    "speech: none" or "speech: quote, subtitled" (CLAUDE.md "Framing and
-    speech").
+  - Trailer sound first (21 Oct, director review): the trailer's own sound,
+    music-led or voiced, as one continuous stretch; our bed only for silent
+    footage, stills, our graphics, or when no coherent stretch exists.
+    Voiced stretches run whole sentences (start in a pause, end after a
+    sentence), story lines land in the pauses, never on speech; speech that is
+    the news gets an exact Arabic subtitle with no story line over it; the
+    headline may sit over speech in the first 3.5 s.
+  - The director (a separate agent, after the draft or runner render, before
+    queuing) checks the 4 fps strip, the transcript with sentence boundaries,
+    the face and crop-edge flags, and writes audio, lines, shots and a
+    verdict; up to two send-backs, then pass with a note or a simpler
+    template. It judges sound from transcripts and measurements and says so
+    when unsure (CLAUDE.md "Director review, and voiced clips allowed").
   - Our bed under stills, graphics or noisy stretches; never mute footage to
     add a bed.
   - Beds evolve (14 Oct): one motif, tempo and level, the arrangement
@@ -378,7 +380,9 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 
 ## Not in force (history only)
 
-- "Voices are fine" (6 Oct): replaced on 21 Oct by no speech under story lines.
+- "Voices are fine" (6 Oct): replaced on 21 Oct by no speech under story lines,
+  itself replaced the same evening by the director review (voiced clips allowed
+  when coherent).
 - Cadence of 13 Oct (30 minutes by day, 90 overnight, about 12 posts a day)
   and the daily cap: replaced by constant coverage, 16 Oct.
 - **Dropped or paused platforms:**

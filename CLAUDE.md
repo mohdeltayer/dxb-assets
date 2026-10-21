@@ -1129,7 +1129,8 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      9:16 window cannot give that room, the shot is replaced. `render_job.py
      focus` writes the judged focus into the job file as now, so the runner
      keeps the framing.
-  2. No speech under story lines (replaces "Voices are fine", 6 Oct). Reason
+  2. (Superseded the same evening by "Director review, and voiced clips
+     allowed" below; kept as history.) No speech under story lines (replaces "Voices are fine", 6 Oct). Reason
      (Mohammad, 21 Oct): with English speech playing and Arabic text on screen,
      viewers read the text as a subtitle of the speech, and when it does not
      match it feels wrong. The audio under the headline and story lines is
@@ -1158,6 +1159,50 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      also carried speech but went out as queued: it was due in under three
      minutes, and a re-render would have taken it past 24 hours from its first
      report. Live posts stay as they are unless Mohammad asks.
+- Director review, and voiced clips allowed (advisor, 21 Oct 2026, agreed with
+  Mohammad; supersedes point 2 of "Framing and speech"). Our bed is not the
+  default. Mohammad: "I don't want every video to have our music, it's ok to
+  use voiced clips but cut into something coherent."
+  1. Audio order, decided per Reel by the director: a. the trailer's own
+     sound, music-led or voiced, as one continuous stretch; b. our bed only
+     when the footage has no usable sound (silent clips, stills, our graphics)
+     or no coherent stretch exists. Re-renders made onto our bed under the
+     earlier rule and not yet published (Escape from Playtime v2, Stellaris v2,
+     Switch Sports Resort v3) are reviewed by the director, and the trailer
+     sound comes back where a coherent stretch exists.
+  2. Voiced stretches are coherent, not cut: whole sentences only; the stretch
+     starts at a sentence start or in a pause and ends after a sentence ends
+     (faster-whisper word timings); no word cut at a shot change, since the
+     audio runs as one stretch under the cuts. Story lines appear in the pauses
+     between sentences, not on top of speech. When the speech is the news (a
+     statement, a quote, a narrator stating the feature the story is about),
+     it gets a faithful Arabic subtitle in subtitle position, timed to the
+     words, and no separate story line runs at the same time. The headline may
+     sit over speech in the first 3.5 s.
+  3. The director step: a separate agent, after the draft render and before
+     the real encode (on the runner lane, after the render and before queuing),
+     watches the Reel as a viewer: the strip at 4 frames a second, the
+     transcript with sentence boundaries, the face-direction flags and the
+     crop-edge text flags. It writes an edit decision in the draft notes:
+     audio (trailer music / voiced, which sentences / our bed, and why); lines
+     (where each lands, pause or shot, any to re-time); shots (any to replace
+     or reframe: profile, cut text, weak shot); verdict (pass, or the list of
+     fixes). The build applies the fixes and the director looks again. It may
+     send a Reel back twice; after that it passes with a note, or the story
+     moves to a simpler template. Task card: "Director" in
+     `newsroom/delegation.md`.
+  4. Limit: the director judges audio from the transcript and measurements
+     (speech against music, loudness), not by ear; when unsure how a passage
+     feels, it says so in the preview note to Mohammad.
+  5. Unchanged from the 21 Oct memo: face direction and look room, the
+     crop-edge text flag, the decode and blockiness checks. The pre-queue
+     transcription stays, read against the director's decision: speech the
+     director placed in pauses or subtitled passes (`speech_director` in the
+     draft spec); speech under a story line still stops the post.
+  6. First applied 21 Oct about 19:10Z: Stellaris v2 (19:15Z) was due in
+     minutes and went out on our bed; Escape from Playtime and Switch Sports
+     Resort went to the director; BioWare (19:45Z, breaking) stayed on our
+     bed, since its footage crosses two trailers and no one stretch fits both.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under

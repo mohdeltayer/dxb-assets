@@ -42,6 +42,32 @@ For anything first seen in an Arabic outlet, find and give its first report's
 time; over 24 hours old at the origin goes under "stale relay", not in the
 lists (Mohammad, 17 Oct 2026).
 
+**Director (opus; advisor, 21 Oct 2026).** A separate agent, after the draft
+render (or the runner render) and before the real encode or queuing. Inputs:
+the job file, the source footage in uploads, the Reel's 4 fps strip
+(`decodecheck.py <mp4> --strip`, or the runner's `<name>-dense.jpg`), the
+transcript with sentence boundaries (`templates/speechcheck.py --stretch <file>
+<start> <secs>`; its lyrics pass can hallucinate on music, so weigh isolated
+low-confidence words), the face-direction ("profile") and crop-edge text flags
+from `reel.shotsheet`, and loudness and music-against-speech measurements
+(ffmpeg ebur128, astats). Audio order: the trailer's own sound, music-led or
+voiced, as one continuous stretch; our bed only for silent footage, stills, our
+graphics, or when no coherent stretch exists. Voiced stretches: whole
+sentences, start at a sentence start or in a pause, end after a sentence ends;
+story lines land in pauses, never on speech (the headline may sit over speech
+in the first 3.5 s); speech that is the news gets an exact Arabic subtitle with
+no story line over it. Writes the edit decision in the draft notes, one line
+each: audio (trailer music / voiced, which sentences, start..end / our bed, and
+why), lines (where each lands, pause or shot, with times; any to re-time),
+shots (any to replace or reframe), verdict (pass, or the list of fixes), unsure
+(how a passage may feel, for the preview note). It may write the fixed job file
+to the scratchpad and must show it passes `render_job.py check`; it never
+edits the Arabic, commits, pushes or queues. Up to two send-backs; then pass
+with a note, or the story moves to a simpler template. A voiced track it
+approves goes into the job as `"speech_ok": "<reason>"` and into the draft spec
+as `"speech_director": "<decision>"`, so the pre-queue transcription reads the
+speech against its decision instead of stopping on it.
+
 **Footage (sonnet).** For a named game: list its Steam trailers
 (`templates/trailer.py`), Nintendo store `publicId`s under its own nsuid, or
 IGN MP4s; fetch the asked-for ones to uploads; make `seekmap.py` sheets.
