@@ -1203,6 +1203,10 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      minutes and went out on our bed; Escape from Playtime and Switch Sports
      Resort went to the director; BioWare (19:45Z, breaking) stayed on our
      bed, since its footage crosses two trailers and no one stretch fits both.
+     The director restored trailer music on both (Escape from Playtime v3 on the
+     reveal trailer's score, Switch Sports Resort v4 on the overview montage),
+     but the session stalled after a container restart and both went out at
+     20:45Z and 21:45Z in their bed versions; v3 and v4 stay in `cards/`.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under
