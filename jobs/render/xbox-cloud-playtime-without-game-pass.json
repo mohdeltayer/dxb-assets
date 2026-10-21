@@ -1,0 +1,186 @@
+{
+ "name": "xbox-cloud-playtime-without-game-pass",
+ "out": "cards/2026-10/xbox-cloud-playtime-without-game-pass-reel-v4.mp4",
+ "footage": [
+  {
+   "file": "xcloud-xboxcom-hero-fh5.mp4",
+   "url": "https://cms-assets.xboxservices.com/assets/90/36/903642ea-6de0-460c-8d1a-f3ebc83115ca.mp4"
+  },
+  {
+   "file": "xcloud-rog-ally-1080.mp4",
+   "url": "https://assets.ign.com/videos/zencoder/2025/10/17/1920/5f0f3ba4-24a9-47e1-96e1-8c30509086ea-1760738992.mp4"
+  },
+  {
+   "file": "xcloud-vroom-2160.mp4",
+   "url": "https://assets.ign.com/videos/zencoder/2025/09/09/3840/e4a7f627-5220-4fe3-b32a-013a906fd1a9-1757424720.mp4"
+  }
+ ],
+ "shots": [
+  [
+   "xcloud-xboxcom-hero-fh5.mp4",
+   0.3,
+   3.4,
+   [
+    [
+     0.0,
+     0.372
+    ]
+   ]
+  ],
+  [
+   "xcloud-rog-ally-1080.mp4",
+   9.0,
+   2.1,
+   [
+    [
+     0.0,
+     0.538
+    ]
+   ]
+  ],
+  [
+   "xcloud-xboxcom-hero-fh5.mp4",
+   3.7,
+   2.3,
+   [
+    [
+     0.0,
+     0.411
+    ]
+   ]
+  ],
+  [
+   "xcloud-vroom-2160.mp4",
+   26.75,
+   1.6,
+   [
+    [
+     0.0,
+     0.526
+    ]
+   ]
+  ],
+  [
+   "xcloud-rog-ally-1080.mp4",
+   16.4,
+   1.5,
+   [
+    [
+     0.0,
+     0.589
+    ]
+   ]
+  ],
+  [
+   "xcloud-xboxcom-hero-fh5.mp4",
+   6.0,
+   2.3,
+   [
+    [
+     0.0,
+     0.393
+    ]
+   ]
+  ],
+  [
+   "xcloud-xboxcom-hero-fh5.mp4",
+   8.4,
+   2.3,
+   [
+    [
+     0.0,
+     0.365
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "بدأت التجربة لأعضاء Xbox Insider\nوتتوسع في نوفمبر",
+     {
+      "size": 48
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "والباقات كلها بلا إعلانات",
+     {
+      "size": 50
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "ولا تشمل الخدمة دول الخليج حتى الآن\nحسب موقع Xbox",
+     {
+      "size": 46
+     }
+    ]
+   ]
+  ]
+ ],
+ "headline": "ساعات لعب سحابي من Xbox\nدون اشتراك في Game Pass",
+ "head_size": 60,
+ "label": "جديد",
+ "source": "Xbox Wire",
+ "date": "21 Oct 2026",
+ "theme": "emerald",
+ "style": "lines",
+ "template": "split",
+ "strip": [
+  [
+   "باقة 10 ساعات",
+   "3.99 دولار"
+  ],
+  [
+   "باقة 25 ساعة",
+   "7.99 دولار"
+  ],
+  [
+   "باقة 50 ساعة",
+   "11.99 دولار"
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "لقطات من فيديوهات Xbox الرسمية"
+  ]
+ ],
+ "track": [
+  "xcloud-rog-ally-1080.mp4",
+  1.2
+ ],
+ "cut": true,
+ "sound": null,
+ "pace_ok": false,
+ "lowres_ok": false,
+ "skin": "house",
+ "block_ok": [
+  [
+   "xcloud-vroom-2160.mp4",
+   26.6,
+   28.4,
+   "looked at 10 fps: camera pulls back to the car screen frame, no decode damage"
+  ],
+  [
+   7.9,
+   9.7,
+   "same stretch in the Reel, checked at 10 fps"
+  ]
+ ]
+}
