@@ -1,6 +1,6 @@
 {
  "name": "apothecary-diaries-game-japan-march-18-2027",
- "out": "cards/2026-10/apothecary-diaries-game-japan-march-18-2027-reel-v1.mp4",
+ "out": "cards/2026-10/apothecary-diaries-game-japan-march-18-2027-reel-v2.mp4",
  "footage": [
   {
    "file": "apothecary-announce.mp4",
@@ -158,7 +158,7 @@
    7,
    [
     [
-     "وتصل إلى بقية العالم\nمطلع 2027 دون موعد محدد",
+     "ولم يُحدد موعدها\nفي بقية العالم بعد",
      {
       "size": 54
      }
@@ -192,5 +192,18 @@
  "sound": null,
  "pace_ok": false,
  "lowres_ok": false,
- "skin": "house"
+ "skin": "house",
+ "block_ok": [
+  [
+   "apothecary-announce.mp4",
+   10.8,
+   11.8,
+   "palace lattice windows behind the characters, straight edges, not damage (frames 10.8 to 11.8 looked at 10:28Z)"
+  ],
+  [
+   2.8,
+   5.2,
+   "the same lattice windows (source 10.9 to 11.7), not damage"
+  ]
+ ]
 }
