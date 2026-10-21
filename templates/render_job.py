@@ -24,7 +24,9 @@ unreleased material.
       "sound": null, "country": null, "pace_ok": false, "lowres_ok": false,
       "ground_theme": "gold",                                        # for -gfx- graphics on the living ground
       "ground_footage": ["cp-er-trailer.mp4", 40.0],                 # card-led: the game's trailer behind the cards, moving
-      "skin": "house"                                                # game skins pilot: house, scifi or fantasy (format ledger)
+      "skin": "house",                                               # game skins pilot: house, scifi or fantasy (format ledger)
+      "gfx": [{"file": "x-gfx-fps.png", "kind": "fact", "label": "الأداء",   # cards drawn here with the Dubai font
+               "value": "حتى 120", "note": "إطارًا في الثانية"}]              # (cardgfx.py), then laid on the ground
     }
 
 `style` (and `sound` for a Reel with no footage sound) are chosen by the main
@@ -46,7 +48,7 @@ import json, os, re, shutil, subprocess, sys, time, urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
-import cards as C, reel, numgfx as NG, trailer, decodecheck as DC   # noqa: E402
+import cards as C, reel, numgfx as NG, trailer, decodecheck as DC, cardgfx as CG   # noqa: E402
 
 UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36'
 
@@ -211,9 +213,17 @@ def textcheck(job):
             reel.strip_layer(strip_items(job), f'{tmp}/s.png', job['theme'], skin=skin)
         for c in job.get('credits') or []:
             reel.credit_layer(c[2], f'{tmp}/c.png')
+        gfx(job, tmp)
     finally:
         import shutil as _sh
         _sh.rmtree(tmp, ignore_errors=True)
+
+
+def gfx(job, where=None):
+    """The job's cards (`gfx`), drawn with the Dubai font: into uploads before the render, or into
+    `where` for the text check, so a card that does not fit stops in seconds."""
+    for item in job.get('gfx', []):
+        CG.build(item, os.path.join(where, item['file']) if where else C.U + item['file'], job.get('ground_theme', job['theme']))
 
 
 def source_check(job):
@@ -239,6 +249,7 @@ def run(job, draft=False):
     t0 = time.time()
     for item in job.get('footage', []):
         fetch(item)
+    gfx(job)
     source_check(job)
     fetched = time.time() - t0
     out = os.path.join(ROOT, job['out'])
