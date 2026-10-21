@@ -2830,5 +2830,27 @@
   "job_secs": 149,
   "setup_min": 1.25,
   "story": "xbox-cloud-playtime-without-game-pass"
+ },
+ {
+  "name": "bioware-legacy-30-years-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-21T22:34Z",
+  "stages": {
+   "checks": 1.2,
+   "montage": 53.8,
+   "text": 121.9,
+   "audio": 1.6,
+   "outro": 67.9
+  },
+  "total": 246.3,
+  "lane": "runner",
+  "queued_at": "2026-10-21T22:27:43Z",
+  "finished_at": "2026-10-21T22:34Z",
+  "render_min": 4.1,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 360,
+  "setup_min": 0.98,
+  "story": "bioware-legacy-30-years"
  }
 ]
