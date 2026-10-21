@@ -23,7 +23,7 @@
    "kind": "fact",
    "label": "الإصدار الكامل",
    "value": "10 نوفمبر",
-   "note": "والحجز المسبق بخصم 10%"
+   "note": "الحجز المسبق بخصم 10%"
   }
  ],
  "shots": [
@@ -79,11 +79,11 @@
   [
    "fm27-gameplay.mp4",
    119.0,
-   2.9,
+   3.2,
    [
     [
      0.0,
-     0.496
+     0.524
     ]
    ]
   ]
@@ -94,7 +94,7 @@
    2,
    [
     [
-     "ويقول الاستوديو إنها خطوة\nغير مسبوقة في ألعاب الإصدار السنوي",
+     "ويقول الاستوديو إنها خطوة يُعتقد\nأنها الأولى في هذه الصناعة",
      {
       "size": 54
      }
@@ -106,7 +106,7 @@
    5,
    [
     [
-     "على Steam وEpic وGame Pass\nوتنتقل الحفظات إلى النسخة الكاملة",
+     "على Steam وEpic وGame Pass،\nوتنتقل ملفات الحفظ\nإلى النسخة الكاملة",
      {
       "size": 54
      }
@@ -135,5 +135,29 @@
  "sound": null,
  "pace_ok": false,
  "lowres_ok": false,
- "skin": "house"
+ "skin": "house",
+ "block_ok": [
+  [
+   "fm27-gameplay.mp4",
+   69.0,
+   70.2,
+   "goal net mesh, not damage (frames 69.2 to 69.8 looked at 11:22Z)"
+  ],
+  [
+   "fm27-gameplay.mp4",
+   118.9,
+   119.7,
+   "goal net mesh, not damage (frames 119.1 to 119.4 looked at)"
+  ],
+  [
+   3.0,
+   4.8,
+   "goal net mesh (source 69.2 to 70.0)"
+  ],
+  [
+   13.0,
+   14.8,
+   "goal net mesh (source 119.0 to 119.5)"
+  ]
+ ]
 }
