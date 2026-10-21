@@ -2478,5 +2478,27 @@
   "job_secs": 296,
   "setup_min": 1.27,
   "story": "dont-nod-safeguard-proceedings"
+ },
+ {
+  "name": "escape-from-playtime-early-access-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-21T16:17Z",
+  "stages": {
+   "checks": 0.5,
+   "montage": 25.1,
+   "text": 34.6,
+   "audio": 0.7,
+   "outro": 29.1
+  },
+  "total": 90.0,
+  "lane": "runner",
+  "queued_at": "2026-10-21T16:14:11Z",
+  "finished_at": "2026-10-21T16:17Z",
+  "render_min": 1.5,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 135,
+  "setup_min": 0.95,
+  "story": "escape-from-playtime-early-access"
  }
 ]
