@@ -42,7 +42,7 @@
    "status": "verified (Nintendo US store listing; NISA did not state it)"
   }
  ],
- "status": "building",
+ "status": "queued",
  "lanes": {
   "dl": {
    "lane": "Reel",
@@ -51,9 +51,25 @@
    "theme": "stylized",
    "skin": "house",
    "headline": "تصل Ys VIII إلى Switch 2\nفي 25 فبراير 2027",
-   "media": "cards/2026-10/ys-viii-switch-2-february-25-2027-reel-v1.mp4",
+   "media": "cards/2026-10/ys-viii-switch-2-february-25-2027-reel-v3.mp4",
    "render": "runner",
-   "notes": "Brief: hook = the date and platform in the headline; format clipcard (trailer and split at 4/4 for Wednesday); opener: the monster fight at 56 s moving under the headline; card «الأداء / حتى 120 / إطارًا في الثانية» over the trailer at 38 s, blurred (the figure lives only on the card); line 1 (what the game is) on Adol at the ship's railing, the ship at sea, Adol washed ashore: the game's hero and its sea voyage; line 2 (GameShare co-op) on the party fighting in the field and Adol's attack; under it the trailer's own score from 28 s (tonal, no subtitles on screen in that stretch; measured, not heard). 16.3 s. Source decode clean. Two shot sheets: removed a mid-shot cut, an English dialogue box cut by the crop, a midriff framing, a white flash; focus by hand on Adol. Arabic: both skills; glossary نينتيندو; Falcom as «فالكوم (Falcom)» (earlier use). DeepL forward: «بمعدل يصل إلى 120 إطارًا في الثانية» taken for the caption; back-check matched. Grammar: no required edits; NIS America as «إن آي إس أمريكا» (no glossary row). Cards drawn on the runner (cardgfx) since the container has no Dubai font."
+   "notes": "Brief: hook = the date and platform in the headline; format clipcard (trailer and split at 4/4 for Wednesday); opener: the monster fight at 56 s moving under the headline; card «الأداء / حتى 120 / إطارًا في الثانية» over the trailer at 38 s, blurred (the figure lives only on the card); line 1 (what the game is) on Adol at the ship's railing, the ship at sea, Adol washed ashore: the game's hero and its sea voyage; line 2 (GameShare co-op) on the party fighting in the field and Adol's attack; under it the trailer's own score from 28 s (tonal, no subtitles on screen in that stretch; measured, not heard). 16.3 s. Source decode clean. Two shot sheets: removed a mid-shot cut, an English dialogue box cut by the crop, a midriff framing, a white flash; focus by hand on Adol. Arabic: both skills; glossary نينتيندو; Falcom as «فالكوم (Falcom)» (earlier use). DeepL forward: «بمعدل يصل إلى 120 إطارًا في الثانية» taken for the caption; back-check matched. Grammar: no required edits; NIS America as «إن آي إس أمريكا» (no glossary row). Cards drawn on the runner (cardgfx) since the container has no Dubai font. v1: card ground (38 s) read flat dark; v2: ground landed on the trailer's English GameShare screen (the footage ground runs from start plus the card's time); v3 ground 20.5 s, so 28 to 31 s, gameplay without text. v3 decode clean, no smear; co-op line in three short lines.",
+   "time": "2026-10-21T05:45:00Z",
+   "approved": "go: rolling queue; preview sent 04:14Z; gate 04:12Z: Nintendo US store re-read (releaseDate 2027-02-25), NISA statement via Gematsu, trailer end slate; no change found"
   }
- }
+ },
+ "versions": [
+  {
+   "v": 1,
+   "note": "not posted: dark card ground"
+  },
+  {
+   "v": 2,
+   "note": "not posted: English text behind the card"
+  },
+  {
+   "v": 3,
+   "queued": "2026-10-21T05:45Z"
+  }
+ ]
 }
