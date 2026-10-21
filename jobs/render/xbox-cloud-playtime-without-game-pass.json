@@ -1,6 +1,6 @@
 {
  "name": "xbox-cloud-playtime-without-game-pass",
- "out": "cards/2026-10/xbox-cloud-playtime-without-game-pass-reel-v2.mp4",
+ "out": "cards/2026-10/xbox-cloud-playtime-without-game-pass-reel-v3.mp4",
  "footage": [
   {
    "file": "xcloud-xboxcom-hero-fh5.mp4",
@@ -51,8 +51,8 @@
   ],
   [
    "xcloud-vroom-2160.mp4",
-   26.7,
-   2.4,
+   26.6,
+   1.7,
    [
     [
      0.0,
@@ -112,7 +112,7 @@
    4,
    [
     [
-     "كلها بلا إعلانات\nوساعاتها بلا تاريخ انتهاء",
+     "والباقات كلها بلا إعلانات",
      {
       "size": 50
      }
@@ -169,5 +169,18 @@
  "sound": null,
  "pace_ok": false,
  "lowres_ok": false,
- "skin": "house"
+ "skin": "house",
+ "block_ok": [
+  [
+   "xcloud-vroom-2160.mp4",
+   26.6,
+   28.4,
+   "looked at 10 fps: camera pulls back to the car screen's frame (long straight edges), no decode damage"
+  ],
+  [
+   7.8,
+   9.7,
+   "same stretch in the Reel: car screen frame edges, checked at 10 fps"
+  ]
+ ]
 }
