@@ -16,8 +16,10 @@ rmx() { local sz; sz=$(du -sm "$1" 2>/dev/null | cut -f1); LOG+=("${sz:-0}M $1")
 
 before=$(df -m / | awk 'NR==2{print $4}')
 
-if pgrep -f 'reel|render|ffmpeg|demucs|sales_full|outro|whisper' >/dev/null; then
-  echo "skipped: a render is running"; pgrep -af 'reel|render|ffmpeg|demucs' | cut -c1-100; exit 0
+# match real render processes only (the session's own command line contains 'render', 21 Oct 2026)
+PAT='python3? [^ ]*(reel|render_job|sales_full|outro|numgfx|edition)\.py|^ffmpeg|/ffmpeg |demucs|whisper'
+if pgrep -f "$PAT" >/dev/null; then
+  echo "skipped: a render is running"; pgrep -af "$PAT" | cut -c1-100; exit 0
 fi
 
 # 1. /tmp render leftovers
