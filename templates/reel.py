@@ -729,6 +729,114 @@ def _keyframes(samples):
     return [at(u) for u in KEYS]
 
 
+#: Face turn for autofocus and the shot sheet (advisor, 21 Oct 2026: no side-on centring). YuNet (OpenCV)
+#: finds the faces, profiles included; MediaPipe's face landmarker gives the yaw from its transformation
+#: matrix for every face it can mesh. Its own detector skips faces turned past about 45 degrees (the
+#: Stellaris man at 148 s, the Aphelion astronaut at 23 s), so for those the yaw comes from YuNet's five
+#: points: the eyes close up as the head turns (eye gap over eye-to-mouth height, FACE_E0 when frontal)
+#: and the nose's side gives the direction. Both models live in /root/models (not in git; fetched on
+#: first use). Needs `pip install mediapipe` and libEGL (`apt-get install -y libegl1`); without them,
+#: or on the runner, framing is exactly as before.
+FACE_LANDMARKER = os.environ.get('FACE_LANDMARKER', '/root/models/face_landmarker.task')
+FACE_DETECTOR = os.environ.get('FACE_DETECTOR', '/root/models/face_detection_yunet_2023mar.onnx')
+FACE_URLS = ('https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task',
+             'https://huggingface.co/opencv/face_detection_yunet/resolve/main/face_detection_yunet_2023mar.onnx')
+FACE_MIN = 0.12          # a face this share of the frame height or taller is the subject; smaller ones are background
+FACE_E0 = 1.1            # eye gap over eye-to-mouth height on a frontal face (YuNet points, measured on two trailers)
+FRONT_YAW = 30           # |yaw| below this: front
+PROFILE_YAW = 60         # |yaw| above this: profile, framed with look room and flagged on the sheet; between: three-quarter
+LOOK_ROOM = 2 / 3        # a profile face sits a third in from the side it turns away from
+LOOK_MIN = 0.55          # less room than this on the side it looks to: the window cannot frame it, replace the shot
+_FACES_PY = r"""
+import json, math, os, sys, urllib.request
+lmk, det, urls, paths = sys.argv[1], sys.argv[2], json.loads(sys.argv[3]), sys.argv[4:]
+import cv2, mediapipe as mp
+from mediapipe.tasks.python import vision, BaseOptions
+for p, u in zip((lmk, det), urls):
+    if not os.path.exists(p):
+        os.makedirs(os.path.dirname(p) or '.', exist_ok=True)
+        urllib.request.urlretrieve(u, p + '.part'); os.replace(p + '.part', p)
+lm = vision.FaceLandmarker.create_from_options(vision.FaceLandmarkerOptions(
+    base_options=BaseOptions(model_asset_path=lmk), num_faces=4, output_facial_transformation_matrixes=True,
+    min_face_detection_confidence=0.3, min_face_presence_confidence=0.3))
+E0 = float(os.environ.get('FACE_E0', '1.1'))
+out = []
+for p in paths:
+    im = cv2.imread(p); h, w = im.shape[:2]
+    yn = cv2.FaceDetectorYN.create(det, '', (w, h), 0.6, 0.3, 50)
+    found = yn.detect(im)[1]
+    r = lm.detect(mp.Image.create_from_file(p))
+    mesh = []
+    for pts, M in zip(r.face_landmarks, r.facial_transformation_matrixes):
+        xs, ys = [q.x for q in pts], [q.y for q in pts]
+        mesh.append([(min(xs) + max(xs)) / 2, (max(ys) - min(ys)), math.degrees(math.atan2(M[0][2], M[2][2])), (min(ys) + max(ys)) / 2])
+    faces = []
+    for f in (found if found is not None else []):
+        x, y, bw, bh = (float(v) for v in f[:4])
+        m = [k for k in mesh if x <= k[0] * w <= x + bw and y <= k[3] * h <= y + bh]
+        if m:
+            yaw = m[0][2]; mesh.remove(m[0])
+        else:
+            ex, ey, my = (f[4] + f[6]) / 2, (f[5] + f[7]) / 2, (f[11] + f[13]) / 2
+            e = abs(float(f[6] - f[4])) / max(float(my - ey), 1.0)
+            yaw = math.degrees(math.acos(min(1.0, e / E0))) * (1 if f[8] >= ex else -1)
+        faces.append(((x + bw / 2) / w, bh / h, round(yaw, 1), (y + bh / 2) / h))
+    faces += [(k[0], k[1], round(k[2], 1), k[3]) for k in mesh]
+    out.append(max(faces, key=lambda q: q[1]) if faces else None)
+print('@@' + json.dumps(out))
+"""
+
+
+def turn(yaw):
+    """'front', 'three-quarter' or 'profile' for a face's yaw in degrees."""
+    a = abs(yaw)
+    return 'front' if a < FRONT_YAW else 'profile' if a > PROFILE_YAW else 'three-quarter'
+
+
+def detect_faces(paths, what='autofocus'):
+    """[(centre x 0..1, height share, yaw degrees, centre y 0..1) or None] per image: the tallest face of at least
+    FACE_MIN of the frame height. Negative yaw looks towards the frame's left, positive towards its
+    right. All None (with a note on stderr) when MediaPipe or a model is missing, so framing stays as it was."""
+    try:
+        r = subprocess.run([sys.executable, '-c', _FACES_PY, FACE_LANDMARKER, FACE_DETECTOR, json.dumps(FACE_URLS)] + list(paths),
+                           capture_output=True, text=True, check=True, env=dict(os.environ, FACE_E0=str(FACE_E0)))
+        line = [l for l in r.stdout.splitlines() if l.startswith('@@')][-1]
+        return [tuple(x) if x and x[1] >= FACE_MIN else None for x in json.loads(line[2:])]
+    except Exception as e:
+        why = [l for l in (getattr(e, 'stderr', '') or str(e)).strip().splitlines() if 'Error' in l][-1:] or ['?']
+        print(f'{what}: face model unavailable ({why[0][:160]}), faces not measured', file=sys.stderr)
+        return [None] * len(paths)
+
+
+def look_x(face, wf):
+    """Where to aim the 9:16 window (centre, 0..1 across the picture) for a face: on it when front or
+    three-quarter; for a profile, shifted so the face sits a third in from the side it turns away from
+    and the room is on the side it looks to. `wf` is the window's width as a share of the picture."""
+    x, yaw = face[0], face[2]
+    if turn(yaw) != 'profile':
+        return x
+    return x + (LOOK_ROOM - 0.5) * wf * (1 if yaw > 0 else -1)
+
+
+def look_room(face, fo, wf):
+    """Share of the 9:16 window on the side a profile face looks to, at focus `fo` (0 when the face
+    centre falls outside the window)."""
+    x, yaw = face[0], face[2]
+    p = (x - fo * (1 - wf)) / wf                 # the face's place across the window, 0 left .. 1 right
+    if not 0 <= p <= 1:                          # the face is outside the window: no framing at all
+        return 0.0
+    return 1 - p if yaw > 0 else p
+
+
+class Focus(list):
+    """autofocus's [(offset, focus)], plus `profile`: [(offset, side, room)] for each scene whose face is
+    in profile, `side` the way it looks and `room` the share of the window on that side (LOOK_MIN at
+    least, or the shot is replaced). A plain list everywhere else: job files store it as before."""
+    def __init__(self, *a):
+        super().__init__(*a)
+        self.profile = []
+
+
 def autofocus(f, start, dur, thresh=0.2, keyframes=False):
     """Per-scene focus for one continuous stretch: at each of the trailer's cuts,
     aim the 9:16 window at that scene's subject (Mohammad, 6 Oct 2026: "choose a
@@ -743,7 +851,15 @@ def autofocus(f, start, dur, thresh=0.2, keyframes=False):
     Returns [(offset, focus)] with one focus per scene (the mean of its two
     keyframes), the shape the render scripts have always taken; with
     keyframes=True each focus is a Pan of the two keyframes, so the window moves
-    with the subject. Either goes straight into a shot as its focus."""
+    with the subject. Either goes straight into a shot as its focus.
+
+    Faces (advisor, 21 Oct 2026): the same frames go through the face pass
+    (detect_faces). A face of at least FACE_MIN of the frame height is the
+    subject: front and three-quarter faces are centred, a profile is framed
+    with look room (look_x). The result is a Focus, whose `profile` lists each
+    scene with a profile face, the side it looks to and the room it got; under
+    LOOK_MIN the window cannot frame it and the shot is replaced. Without faces,
+    or without MediaPipe, the focus is exactly as before."""
     bars, rows = _bars(C.U + f, start, dur)
     probe = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width',
                             '-of', 'csv=p=0', C.U + f], capture_output=True, text=True).stdout.strip()
@@ -760,15 +876,26 @@ def autofocus(f, start, dur, thresh=0.2, keyframes=False):
                                 '-frames:v', '1', '-vf', f'{bars}scale=640:-2', p], check=True)
                 paths.append(p)
         found = detect_subjects(paths)
-        keys = []
+        faces = detect_faces(paths)
+        wf = W / sw_                          # the window's width as a share of the picture
+        keys = Focus()
         for k, a in enumerate(cuts[:-1]):
             row = found[k * len(SAMPLES):(k + 1) * len(SAMPLES)]
-            kf = _keyframes([(q, d[0] if d else None) for q, d in zip(SAMPLES, row)])
+            frow = faces[k * len(SAMPLES):(k + 1) * len(SAMPLES)]
+            kf = _keyframes([(q, look_x(fc, wf) if fc else d[0] if d else None) for q, d, fc in zip(SAMPLES, row, frow)])
             if kf is None:                    # nothing detected: saliency, held still
                 xs = [_salient_x(Image.open(p)) for p in paths[k * len(SAMPLES):(k + 1) * len(SAMPLES)]]
                 kf = [sorted(xs)[1]] * 2
             fk = [round(min(1, max(0, (c * sw_ - W / 2) / max(sw_ - W, 1))), 3) for c in kf]
             keys.append((round(a, 3), pan(fk[0], fk[1], *KEYS) if keyframes else round(sum(fk) / 2, 3)))
+            prof = [(q, fc) for q, fc in zip(SAMPLES, frow) if fc and turn(fc[2]) == 'profile']
+            if prof:                          # look room as framed: where the window is at each sampled frame
+                side = 'right' if sum(fc[2] for _, fc in prof) > 0 else 'left'
+                at = (lambda q: _pan_at(pan(fk[0], fk[1], *KEYS), q)) if keyframes else (lambda q: sum(fk) / 2)
+                room = round(min(look_room(fc, at(q), wf) for q, fc in prof), 2)
+                keys.profile.append((round(a, 3), side, room))
+                print(f'autofocus: profile face at {start + a:.1f} s looks {side}, {room:.0%} look room'
+                      + ('' if room >= LOOK_MIN else '; the 9:16 window cannot frame it, replace the shot'), file=sys.stderr)
         return keys
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
@@ -1052,7 +1179,9 @@ def shotsheet(shots, out):
     (sheet path, [(shot index, time, flags)]) for frames flagged pink or black, for
     readable text in the first shot's first frame (the grid tile; advisor, 19 Oct 2026),
     with the first clean seek time after it, and for text, a logo or a subtitle that the
-    crop window cuts (`cut-text`, outlined in red; advisor, 20 Oct 2026)."""
+    crop window cuts (`cut-text`, outlined in red; advisor, 20 Oct 2026), and for frames whose
+    main face is in profile (`profile`, the face outlined in amber; advisor, 21 Oct 2026): fix it
+    or justify it in the brief."""
     from PIL import ImageDraw as D
     FW, FH = 288, 162                        # the full frame; the vertical crop beside it is FH tall
     VW = round(FH * W / H)
@@ -1067,6 +1196,15 @@ def shotsheet(shots, out):
     elif w0:
         fc = None if os.path.splitext(f0)[1].lower() in STILL else first_clean(shots[0])
         flagged.append((0, s0, ['text: ' + ' '.join(w0[:4]) + (f'; first clean frame at {fc}' if fc is not None else '; no clean frame in the first 3 s')]))
+    seen = {(i, t): _frame(C.U + f, t, 640) for i, (f, s, d, fo) in enumerate(shots)
+            if os.path.splitext(f)[1].lower() not in STILL for t in (s + 0.15, s + d / 2, s + d - 0.15)}
+    tmp = tempfile.mkdtemp(prefix='sheetfaces-')
+    try:                                     # every footage frame through the face pass at once (advisor, 21 Oct 2026)
+        for n, im in enumerate(seen.values()):
+            im.save(f'{tmp}/{n}.png')
+        faces = dict(zip(seen, detect_faces([f'{tmp}/{n}.png' for n in range(len(seen))], 'shotsheet') if seen else []))
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
     for i, (f, s, d, fo) in enumerate(shots):
         z = zoom(shots[i])
         soft = ['soft'] if z > MAX_ZOOM else []       # enlarged past MAX_ZOOM: look for a sharper copy
@@ -1078,8 +1216,10 @@ def shotsheet(shots, out):
         bars = _bars(C.U + f, s, d)[0]
         srcw, srch = _src_size(C.U + f)
         for t in (s + 0.15, s + d / 2, s + d - 0.15):
-            full = _frame(C.U + f, t, 640)
-            fl = _flags(full.resize((240, round(240 * full.height / full.width)))) + soft
+            full = seen[i, t]
+            face = faces.get((i, t))
+            side = face and turn(face[2]) == 'profile' and ['profile']
+            fl = _flags(full.resize((240, round(240 * full.height / full.width)))) + soft + (side or [])
             if fl:
                 flagged.append((i, round(t, 2), fl))
             x0, y0, x1, y1 = _window(bars, srcw, srch, _fo_at(fo, t - s, d))
@@ -1094,6 +1234,10 @@ def shotsheet(shots, out):
             dr = D.Draw(thumb)
             k2 = thumb.width / srcw
             dr.rectangle([x0 * k2, y0 * k2, x1 * k2 - 1, y1 * k2 - 1], outline=ACCENT, width=3)
+            if side:                                             # the profile face, outlined in amber on the full frame
+                fx, fy, fh = face[0] * thumb.width, face[3] * thumb.height, face[1] * thumb.height
+                dr.rectangle([fx - fh * 0.4, fy - fh * 0.5, fx + fh * 0.4, fy + fh * 0.5],
+                             outline=(255, 176, 0), width=2)
             for _, (l, tp, r, bt) in cut:                        # the cut words, outlined in red on the full frame
                 q = k2 / kb
                 dr.rectangle([l * q - 1, tp * q - 1, r * q + 1, bt * q + 1], outline=(255, 60, 60), width=2)

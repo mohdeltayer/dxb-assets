@@ -20,7 +20,8 @@ unreleased material.
       "headline": "...", "label": "رسمي", "source": "...", "date": "20 Oct 2026",
       "theme": "spectacle", "style": "lines", "template": "split",
       "head_size": 64, "strip": [["الموعد", "22 أكتوبر"]], "credits": [[0, 9, "..."]],
-      "track": ["cp-er-trailer.mp4", 12.0], "cut": true,
+      "track": ["cp-er-trailer.mp4", 12.0], "cut": true,                 # or "bed"; a stretch is checked for speech
+      "speech_ok": [[3.0, 7.5, "director's statement, subtitled"]],      # only for a quote or interview Reel (Reel time)
       "sound": null, "country": null, "pace_ok": false, "lowres_ok": false,
       "ground_theme": "gold",                                        # for -gfx- graphics on the living ground
       "ground_footage": ["cp-er-trailer.mp4", 40.0],                 # card-led: the game's trailer behind the cards, moving
@@ -36,7 +37,7 @@ over them. A graphic shot (`-gfx-` in its name) is fetched like footage and
 laid on the living ground (numgfx.slide), as in the batch render scripts.
 
     python3 templates/render_job.py run   <job.json> [--draft]   # fetch, render, strip, sheet
-    python3 templates/render_job.py check <job.json>              # timeline and reading pace only
+    python3 templates/render_job.py check <job.json>              # timeline, reading pace and speech in the track
     python3 templates/render_job.py focus <job.json>              # fill null focus from autofocus, before the sheet
 
 Focus is resolved on the container before the shot sheet (`focus`), so the job
@@ -188,7 +189,42 @@ def check(job):
         reel.check_reading(place(job)(st, end), end)
     finally:
         reel.X = keep
+    speech_check(job, end)
     return end
+
+
+def speech_check(job, end):
+    """No speech under the lines (advisor, 21 Oct 2026): the track's stretch of trailer sound is transcribed over the
+    Reel's length before the render, and any word, or a start or fade-out that is not in a pause, stops the job. A quote
+    or interview Reel names its subtitled speech as speech_ok [[t0, t1, reason]] in Reel time. Skipped with a notice
+    when the source is not in uploads or faster-whisper is missing (the runner)."""
+    tr = job.get('track')
+    if not isinstance(tr, list) or len(tr) < 2 or not isinstance(tr[0], str):
+        return
+    f, start = tr[0], float(tr[1])
+    if len(tr) > 2 and tr[2] == 'music':          # voices stripped: read what will actually play
+        f = os.path.splitext(f)[0] + '-music.wav'
+    if not os.path.exists(C.U + f):
+        print(f'speech check: {f} not in uploads, skipped', flush=True)
+        return
+    try:
+        import speechcheck as SC
+        heard = SC.stretch(f, start, end)
+    except ImportError as e:
+        print(f'speech check: skipped ({e})', flush=True)
+        return
+    ok = [w for w in job.get('speech_ok', []) if len(w) == 3]
+    bad = [(a - start, b - start, w) for a, b, w in heard
+           if not any(t0 <= a - start and b - start <= t1 for t0, t1, _ in ok)]
+    edges = [what for what, fine in (('starts', heard.head_pause), ('fades out', heard.tail_pause)) if not fine]
+    if bad or edges:
+        raise ValueError(f'{f} from {start} s: ' + '; '.join(
+            ([f'speech under the lines at ' + ', '.join(f'{a:.2f} to {b:.2f} s "{w}"' for a, b, w in bad[:12])
+              + (f' and {len(bad) - 12} more' if len(bad) > 12 else '') + ' (Reel time)'] if bad else [])
+            + [f'the track {e} on a word' for e in edges])
+            + '; choose a music-only stretch (speechcheck.py --stretch), another trailer, or track "bed"; '
+              'for a quote Reel pass speech_ok=[[t0, t1, reason]]')
+    print(f'speech check: {f} from {start} s for {end:.1f} s, speech: ' + ('inside speech_ok only' if heard else 'none'), flush=True)
 
 
 def textcheck(job):
