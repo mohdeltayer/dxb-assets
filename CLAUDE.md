@@ -558,7 +558,8 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
     music against noisy effects, and voices) and send him the stretch when
     unsure; if every stretch is effects-heavy, use our bed.
     Voices are fine (Mohammad, 6 Oct 2026: "it's okay to feature that
-    part of the clip with voices"): a stretch where dialogue runs over the
+    part of the clip with voices"; replaced 21 Oct 2026 by "No speech under
+    story lines", see "Framing and speech"): a stretch where dialogue runs over the
     score can play as it is. Prefer that to stripping the voices, which
     leaves artefacts; `'music'` mode is a last resort.
   - Pick shot times from `templates/seekmap.py` (frames labelled with the
@@ -1118,6 +1119,45 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      the source stretches and the output, and fails the job before anything
      is committed; it also writes `<name>-dense.jpg` (the 4 fps strip),
      committed beside the strip and sheet.
+- Framing and speech (advisor, 21 Oct 2026, agreed with Mohammad).
+  1. Faces, no side-on centring: autofocus also measures each face's turn
+     (yaw) on the frames it already samples, with a face-landmark model on CPU
+     (MediaPipe face landmarker). Front and three-quarter faces are preferred;
+     a face in full profile is flagged "profile" on the shot sheet. A profile
+     shot that is still the right shot is framed with look room: the face off
+     centre, the empty space on the side the character looks towards; if the
+     9:16 window cannot give that room, the shot is replaced. `render_job.py
+     focus` writes the judged focus into the job file as now, so the runner
+     keeps the framing.
+  2. No speech under story lines (replaces "Voices are fine", 6 Oct). Reason
+     (Mohammad, 21 Oct): with English speech playing and Arabic text on screen,
+     viewers read the text as a subtitle of the speech, and when it does not
+     match it feels wrong. The audio under the headline and story lines is
+     music (score, logo fanfare, music-led passages) with no audible speech or
+     narration. The stretch is chosen with the transcriber: no words inside it
+     (faster-whisper word timings, checked before the render), and the track's
+     start and its fade before the end card fall in pauses. Speech only when
+     the speech is the news (a director's statement, a quote Reel, an interview
+     clip): then the on-screen Arabic is a faithful translation of exactly what
+     is said, timed to it, in subtitle position, with no separate story line
+     over it. No music-only stretch in the trailer: another official trailer or
+     clip of the game, then our bed (`track='bed'`); demucs voice stripping is
+     the last resort and only with no audible artefacts. One continuous stretch
+     per Reel whenever trailer audio is used; never each shot's own sound when
+     it carries voices.
+  3. Checks before queuing: the shot sheet shows the "profile" flags, each
+     fixed or justified in the brief; the finished Reel's audio is transcribed,
+     and any English word under a story line, or a word cut off at the start,
+     the end or a cut, stops the post (except a quote or interview Reel under
+     2). The draft notes name what plays under the cut, as now, plus "speech:
+     none" or "speech: quote, subtitled".
+  4. First applied 21 Oct about 17:10Z: three Reels already queued carried
+     narration under their lines (Escape from Playtime 17:45Z, Stellaris 19:15Z,
+     Switch Sports Resort 20:15Z) and were re-rendered on our bed; Escape from
+     Playtime's scheduled posts were pulled from Postiz first. DON'T NOD (17:15Z)
+     also carried speech but went out as queued: it was due in under three
+     minutes, and a re-render would have taken it past 24 hours from its first
+     report. Live posts stay as they are unless Mohammad asks.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under
@@ -1881,6 +1921,43 @@ missing), so refiles can still slip through in the first days. Store
 prices come in the currency the store returns (Xbox and PS Store UAE in
 USD, Xbox Saudi in SAR); never convert. The trial report arrives in the
 digest inbox on or after 5 Oct.
+
+## Wider monitoring: anime, mobile, football (advisor, 21 Oct 2026, agreed with Mohammad)
+
+Principle: no genre quotas and no targets. The aim is that the watch sees
+everything that matters to Gulf players; whether a story runs is decided by its
+news value, as now.
+
+1. New sources for the hourly watch and the scout, each as an official news
+   page or feed (production confirms the URL is readable and dates its items;
+   any that block automated reads are skipped and noted in
+   `newsroom/watch_feeds.py`):
+   - Anime-licensed and anime-style games: Bandai Namco Entertainment news,
+     Aniplex games, Spike Chunsoft, Anime News Network (game news and press
+     releases), Crunchyroll Games, Manga Productions (Saudi; Grendizer,
+     regional angle).
+   - HoYoverse: official news for Genshin Impact, Honkai: Star Rail and
+     Zenless Zone Zero (version updates with trailers about every six weeks).
+   - Mobile: PUBG Mobile, Free Fire (Garena), Call of Duty: Mobile, Supercell
+     (Clash of Clans, Clash Royale, Brawl Stars), Roblox newsroom.
+   - Football: EA SPORTS FC news, eFootball (Konami) news.
+   Same rules as every source: verify against the primary, date from the first
+   report; the variety rules and the verification gate apply.
+2. Calendar (`newsroom/events.md`), confirmed dates only: HoYoverse version
+   releases and their livestreams; Jump Festa (December) anime game reveals;
+   Bandai Namco fighting game DLC waves when announced; EA FC and eFootball
+   season updates.
+3. Genre visibility, not quotas: every story file carries a "genre" field
+   (shooter, open world, RPG, family, fighting, horror, racing, sports,
+   strategy/sim, indie, live service/MMO, mobile, anime, industry/hardware,
+   regional/esports; one primary, optional second, as `"genre": [primary,
+   second]`). The Tuesday audit adds one line, stories per genre that week, for
+   information only: it shows blind spots in the sources and never forces a
+   story.
+4. Presentation: anime-licensed and anime-style stories use the anime/stylised
+   skin once the kits are past the pilot. Mobile stories follow the same quality
+   bar: official footage, vertical-friendly shots, no filler. A routine event or
+   patch without real news is not a story.
 
 ## Verify against primary sources
 

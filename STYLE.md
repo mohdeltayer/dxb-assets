@@ -72,6 +72,15 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   (newsroom/corrections.md).
 - **Corrections:** Mohammad is told at once and decides; live posts change
   only on his word. Every case is listed in newsroom/corrections.md.
+- **Monitoring (21 Oct):** the watch and the scout also read anime-licensed
+  and anime-style publishers (Bandai Namco, Aniplex, Spike Chunsoft, Anime News
+  Network, Crunchyroll Games, Manga Productions), HoYoverse (Genshin Impact,
+  Honkai: Star Rail, Zenless Zone Zero), mobile (PUBG Mobile, Free Fire, Call of
+  Duty: Mobile, Supercell, Roblox) and football (EA SPORTS FC, eFootball).
+  No genre quotas: news value decides. Every story file has a "genre" field;
+  the Tuesday audit lists stories per genre for information only. Routine
+  mobile events or patches without real news are not stories (CLAUDE.md
+  "Wider monitoring").
 - **Stand-in footage is named on screen.** When the footage is not of the
   story's subject, credit it with
   `reel(..., credits=[(first, last, 'لقطات من Fortnite')])`.
@@ -106,6 +115,10 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 
 - **Frame:**
   - 9:16, footage full frame; nothing graphic.
+  - Faces (21 Oct): front and three-quarter preferred; autofocus measures each
+    face's yaw and the shot sheet flags "profile". A profile shot that stays
+    gets look room (face off centre, space on the side it looks towards), or
+    is replaced; each flag is fixed or justified in the brief.
   - Shots whose subject fits a vertical crop.
   - Enlargement capped at 2x; the standard picture finish on footage.
   - Source order: the publisher's vertical cut, then 4K, then 1080p.
@@ -162,7 +175,17 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - 12 to 20 s of story before the end card; four lines is normal, six only
     when needed; the brief states the total (14 Oct).
 - **Sound:**
-  - One continuous stretch of the trailer's own music, with voices allowed.
+  - No speech under the headline or story lines (21 Oct): one continuous
+    music stretch of the trailer (score, fanfare, music-led passage) with no
+    words in it, checked with faster-whisper word timings; start and fade in
+    pauses. Speech only when it is the news (statement, quote, interview),
+    then translated exactly and timed as a subtitle, with no story line over
+    it. No clean stretch: another official trailer or clip, then our bed
+    (`track='bed'`); demucs only as a clean last resort.
+  - Before queuing, the finished Reel is transcribed: an English word under a
+    story line, or a clipped word, stops the post; the draft notes say
+    "speech: none" or "speech: quote, subtitled" (CLAUDE.md "Framing and
+    speech").
   - Our bed under stills, graphics or noisy stretches; never mute footage to
     add a bed.
   - Beds evolve (14 Oct): one motif, tempo and level, the arrangement
@@ -355,6 +378,7 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 
 ## Not in force (history only)
 
+- "Voices are fine" (6 Oct): replaced on 21 Oct by no speech under story lines.
 - Cadence of 13 Oct (30 minutes by day, 90 overnight, about 12 posts a day)
   and the daily cap: replaced by constant coverage, 16 Oct.
 - **Dropped or paused platforms:**
