@@ -2500,5 +2500,27 @@
   "job_secs": 135,
   "setup_min": 0.95,
   "story": "escape-from-playtime-early-access"
+ },
+ {
+  "name": "cygames-php-emergency-maintenance-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-21T16:27Z",
+  "stages": {
+   "checks": 0.5,
+   "montage": 41.2,
+   "text": 31.1,
+   "audio": 0.8,
+   "outro": 38.9
+  },
+  "total": 112.5,
+  "lane": "runner",
+  "queued_at": "2026-10-21T16:24:28Z",
+  "finished_at": "2026-10-21T16:27Z",
+  "render_min": 1.88,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 194,
+  "setup_min": 0.95,
+  "story": "cygames-php-emergency-maintenance"
  }
 ]
