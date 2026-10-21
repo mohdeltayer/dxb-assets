@@ -46,17 +46,52 @@ import json, os, re, shutil, subprocess, sys, time, urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
-import cards as C, reel, numgfx as NG, trailer   # noqa: E402
+import cards as C, reel, numgfx as NG, trailer, decodecheck as DC   # noqa: E402
 
 UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36'
 
 
 def fetch(item):
-    """One footage or art item into uploads, unless it is already there."""
+    """One footage or art item into uploads, unless it is already there. Video is decoded in full once
+    (advisor, 21 Oct 2026, after the Battlefield 1 Reel carried a damaged IGN download): any error line means one
+    fresh download, and a second damaged copy stops the job. Never build shots from a file that reports errors."""
     dst = C.U + item['file']
-    if os.path.exists(dst):
+    if os.path.exists(dst) and not item.get('_retry'):
+        _decode_ok(item, dst)
         return dst
     os.makedirs(os.path.dirname(dst), exist_ok=True)
+    if os.path.exists(dst):
+        os.remove(dst)
+    _download(item, dst)
+    _decode_ok(item, dst)
+    return dst
+
+
+def _decode_ok(item, dst):
+    if os.path.splitext(dst)[1].lower() in reel.STILL or dst.endswith('.png'):
+        return
+    errs = DC.decode_errors(dst)
+    if not errs:
+        print(f"decode clean: {item['file']}", flush=True)
+        return
+    if item.get('_retry'):
+        raise ValueError(f"{item['file']}: still damaged after a fresh download ({len(errs)} errors, first: {errs[0]}); "
+                         'use another copy or drop the shots from the damaged stretch')
+    print(f"decode errors in {item['file']} ({len(errs)}, first: {errs[0]}); downloading again", flush=True)
+    os.remove(dst)
+    for cached in _cache_for(dst):
+        os.remove(cached)
+    fetch(dict(item, _retry=True))
+
+
+def _cache_for(src):
+    """Picture-pass clips built from this file (reel.cached_shot names carry the file's stem)."""
+    d = os.path.join(C.U, 'cache')
+    stem = os.path.splitext(os.path.basename(src))[0]
+    return [os.path.join(d, f) for f in os.listdir(d) if stem in f] if os.path.isdir(d) else []
+
+
+def _download(item, dst):
     if 'steam' in item:
         hls = {t['name']: t['hls'] for t in trailer.steam_trailers(item['steam'])}
         name = [n for n in hls if n.startswith(item['trailer'])]
@@ -67,7 +102,10 @@ def fetch(item):
         if os.path.abspath(got) != os.path.abspath(dst):
             shutil.move(got, dst)
     elif 'url' in item:
-        req = urllib.request.Request(item['url'], headers={'User-Agent': UA})
+        hdr = {'User-Agent': UA}
+        if item.get('referer'):                   # IGN's asset hosts refuse requests without their own referer
+            hdr['Referer'] = item['referer']
+        req = urllib.request.Request(item['url'], headers=hdr)
         with urllib.request.urlopen(req, timeout=120) as r, open(dst + '.part', 'wb') as f:
             shutil.copyfileobj(r, f)
         os.replace(dst + '.part', dst)
@@ -85,7 +123,6 @@ def fetch(item):
                 subprocess.run(['git', '-C', ROOT, 'show', 'HEAD:' + item['repo']], stdout=f, check=True)
     else:
         raise ValueError(f"{item['file']}: footage needs steam, url or repo")
-    return dst
 
 
 def shots(job, draft=False, build=True):
@@ -179,10 +216,30 @@ def textcheck(job):
         _sh.rmtree(tmp, ignore_errors=True)
 
 
+def source_check(job):
+    """Every footage shot's stretch read for a blocky smear before it is used (the damage in a download sits on its
+    own scene cut). block_ok entries [file, t0, t1, reason] waive a stretch a person has looked at."""
+    waive = [w for w in job.get('block_ok', []) if len(w) == 4]
+    bad = []
+    for f, start, secs, _ in job['shots']:
+        if start is None or os.path.splitext(f)[1].lower() in reel.STILL or f.endswith('.png'):
+            continue
+        lo = max(0.0, start - 1.0)                 # read with context, report only what the shot uses
+        for a, b, peak in DC.smear_times(C.U + f, lo, secs + (start - lo) + 1.0):
+            if b <= start or a >= start + secs:
+                continue
+            if not any(w[0] == f and w[1] <= a <= w[2] for w in waive):
+                bad.append(f'{f} {a:.2f} to {b:.2f} s (peak {peak})')
+    if bad:
+        raise ValueError('blocky smear in the source: ' + '; '.join(bad) + '; re-fetch it, use another copy, '
+                         'or after looking pass block_ok=[[file, t0, t1, reason]]')
+
+
 def run(job, draft=False):
     t0 = time.time()
     for item in job.get('footage', []):
         fetch(item)
+    source_check(job)
     fetched = time.time() - t0
     out = os.path.join(ROOT, job['out'])
     os.makedirs(os.path.dirname(out), exist_ok=True)
@@ -198,6 +255,8 @@ def run(job, draft=False):
     stem = os.path.splitext(out)[0]
     base = re.sub(r'-reel-v\d+$', '', stem)   # matches the workflow's ${stem%-reel-v*}, so v2 and later commit too
     if not draft:
+        DC.check(video, [w for w in job.get('block_ok', []) if len(w) == 3])   # stops before anything is committed
+        DC.dense_strip(video, base + '-dense.jpg')
         reel.strip(video, base + '-strip.jpg')
         reel.shotsheet([s for s in shots(job, build=False) if not s[0].startswith(NG.SUB + '/')], base + '-sheet.jpg')
     print(f"render_job: {job['name']} done in {time.time() - t0:.0f} s (fetch {fetched:.0f} s): {video}", flush=True)
