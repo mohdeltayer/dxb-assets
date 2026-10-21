@@ -1,4 +1,4 @@
-# Digital Lounge: the rules in force (20 Oct 2026)
+# Digital Lounge: the rules in force (21 Oct 2026)
 
 One page of what applies today. CLAUDE.md is the full, dated history and wins
 on detail; each line here names its section there. Anything listed under
@@ -49,6 +49,18 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     and reposted within the hour, then Mohammad decides. Each case is logged in
     corrections.md with cause and control.
   - (README §4; "Verify against primary sources")
+- **Culturally sensitive details** (21 Oct): the game and its news always run;
+  only the detail is left out or kept general, never skipped and never false.
+  - LGBTQ content: the general word only («الزواج»، «العلاقات العاطفية»،
+    «خيارات العلاقات»، «الشخصيات») in every text, hashtags included; footage
+    that does not show it explicitly; a regional ban or refused rating quotes
+    the authority's wording and adds nothing.
+  - Evolution, religion, politics, real conflicts: neutral, attributed to the
+    developer («حسب وصف الاستوديو»), no first person, no claim as fact; the
+    headline leads with the news, not the theme; replies only say we report
+    game news.
+  - Every brief has a "sensitive" line; the grammar stage checks it as a house
+    rule. Live posts stay unless Mohammad asks. ("Culturally sensitive details")
 - **Chip ladder:** رسمي / تقرير / تسريب / شائعة, with جديد for most news and
   عاجل rarely.
   - The chip matches the weakest claim, and the headline is never louder

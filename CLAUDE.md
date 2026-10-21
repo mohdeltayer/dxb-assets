@@ -1828,6 +1828,35 @@ line read «قالها سولفريم (Soulframe)»):
    fine there); on Instagram the outlet and the date only, no link. The reply
    is drafted for Mohammad to post (Postiz cannot reply to a live post).
 
+Culturally sensitive details (advisor, 21 Oct 2026, from Mohammad). The game
+and its news always run; only the sensitive detail is left out or kept general.
+Nothing is skipped because of it.
+1. LGBTQ content in games: the general word, never the specific type
+   («الزواج»، «العلاقات العاطفية»، «خيارات العلاقات»، «الشخصيات»), with no
+   description of what kind of marriage, romance or identity, everywhere:
+   headline, on-screen lines, caption, X and Threads text, hashtags. The rest
+   of the story runs as normal (release, price, platforms, features, sales); a
+   feature list carries it in its general form («خيارات العلاقات»، «نظام
+   الزواج»), and when the general form is the whole news (an update adding
+   romance options) it is reported in that form. Footage: shots that do not
+   show it explicitly, as with the no-gore rule. General, never false: never
+   swap in a different specific detail, never deny it. A ban or refused rating
+   in the region quotes the authority's own wording («محتوى لا يتوافق مع معايير
+   التصنيف المحلية») and adds nothing, never a different reason than the real one.
+2. Evolution and religiously sensitive themes (Ancestors and the like): neutral
+   and factual, a description of the product attributed to the developer
+   («تدور اللعبة حول... حسب وصف الاستوديو»). Never sounding for or against; no
+   first person and no claim stated as fact (not «أسلافنا», not «رحلة الإنسان
+   الأول»); if the theme must be named, «مستوحاة من نظرية التطور», no judgement.
+   Headlines lead with the news (platforms, date, price, update), never the
+   theme. Comments: no arguing about belief; a reply, when needed, only says we
+   report game news, drafted for Mohammad as now. The same approach covers
+   religion, politics and real-world conflicts depicted in games.
+3. Every brief carries a "sensitive" line: none, or which rule applies and how
+   the wording handles it, checked before the build. The grammar stage checks
+   the final Arabic against 1 and 2 as a house rule.
+4. Live posts stay as they are unless Mohammad asks.
+
 Variety (Mohammad, 5 Oct 2026, after a run of Witcher and RuneScape posts:
 "I've been posting about it for a while now"): a game or series that went out
 in the last few days does not come back in a shortlist unless there is real

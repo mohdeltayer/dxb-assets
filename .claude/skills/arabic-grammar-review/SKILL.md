@@ -77,6 +77,16 @@ its topic.
   Western digits; no em dash; every paragraph and line starts with an Arabic
   word; no first person; X posts carry no hashtags, Instagram captions end on
   `#ألعاب #أخبار_الألعاب` plus two tags.
+- Culturally sensitive details (21 Oct 2026), also `house_rule`: a specific
+  description of LGBTQ content (the kind of marriage, romance or identity)
+  where the general word belongs («الزواج»، «العلاقات العاطفية»، «خيارات
+  العلاقات»، «الشخصيات») is a required edit, in every text and hashtag; so is
+  wording on evolution, religion, politics or real conflicts that states the
+  theme as fact, takes a side or uses the first person (أسلافنا، رحلة الإنسان
+  الأول) instead of describing the product and attributing it («حسب وصف
+  الاستوديو»), and a headline that leads with such a theme rather than the
+  news. Never propose a different specific detail or a denial: general, never
+  false. A regional ban keeps the authority's own wording.
 - Do not invent rules, book quotations, مسألة numbers or source references.
   When the opened files say nothing on a point, say so and give the general
   principle without a reference.

@@ -65,7 +65,7 @@ angle and hook kind, template from `formats.py pick` with the brief's fact
 count and its opening beat from `formats.py check`, cover frame, sound, key
 shot, the named turn and the second it lands on, the total seconds before the
 end card (12 to 20 s target, advisor 14 Oct 2026; handson and edition exempt),
-and one reason per line saying what the viewer sees and why it shows that line; CLAUDE.md "Creative brief and formats" and
+and one reason per line saying what the viewer sees and why it shows that line, and the "sensitive" line: none, or which rule of CLAUDE.md "Culturally sensitive details" applies and how the wording and shots handle it (21 Oct 2026); CLAUDE.md "Creative brief and formats" and
 "Templates and scenarios", 14 Oct): `check`, then `sheet`, then `draft`, then `strip`, and stop there with the
 paths. A line over a card must be at most one visual line of framing or
 absent (one fact, one place); report any line that repeats its card. Report

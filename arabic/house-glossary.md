@@ -100,3 +100,6 @@ guesses at a Latin name or vowels an Arabic one wrongly (Mishkal read سوني a
    house prompt when he wants a second Arabic read.
 | Countdown (days left) | باقي 23 يومًا، باقي 5 أيام، باقي يومان، باقي يوم واحد | not يتبقى 23 يومًا (Mohammad, 11 Oct 2026, «الطريق إلى Ocarina» intro) | Approved 11 Oct 2026 |
 | Pokémon (the creatures, the franchise) | Pokémon in Latin letters, never «البوكيمون»: «ويفاجئ Pokémon» | grammar stage, batch 155 (house rule: series names stay English) | Suggested 18 Oct 2026 |
+| LGBTQ content in a game (marriage, romance, identity) | the general word only: «الزواج»، «العلاقات العاطفية»، «خيارات العلاقات»، «نظام الزواج»، «الشخصيات»; never the specific type | advisor memo from Mohammad, culturally sensitive details | Approved 21 Oct 2026 |
+| Evolution as a game's theme | «مستوحاة من نظرية التطور» only when the theme must be named; describe the product «حسب وصف الاستوديو»; never «أسلافنا» or «رحلة الإنسان الأول» | advisor memo from Mohammad, culturally sensitive details | Approved 21 Oct 2026 |
+| Regional ban or refused rating | the authority's own wording, e.g. «محتوى لا يتوافق مع معايير التصنيف المحلية», nothing added | advisor memo from Mohammad, culturally sensitive details | Approved 21 Oct 2026 |
