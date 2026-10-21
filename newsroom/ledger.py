@@ -11,9 +11,12 @@ original. Sweeps read it; nothing here posts anything.
     python3 newsroom/ledger.py find kena delay   # dedup check before shortlisting
     python3 newsroom/ledger.py card <story_id>   # the approval card
     python3 newsroom/ledger.py lags [days]       # where the time goes
+    python3 newsroom/ledger.py genres [days]     # stories per genre (Tuesday audit line)
 
 Story fields (all optional except id and title):
   id, title, game, companies[], category, status, related[], notes
+  genre       [primary] or [primary, second], from GENRES (21 Oct 2026; for
+              the Tuesday audit's stories-per-genre line, never a quota)
   sources[]   {role, name, url, time, via}
               role: primary | original_reporting | technical | outlet_report
                     | radar | rumour.  `via` names who it came through, so
@@ -51,6 +54,9 @@ ACCOUNTS = {
 }
 SUFFIX = re.compile(r'(-(ar|ig|tt|yt|th|dxb|thread|retry|short|now|v\d+))+$')
 DUBAI = datetime.timezone(datetime.timedelta(hours=4))
+GENRES = ('shooter', 'open world', 'RPG', 'family', 'fighting', 'horror', 'racing', 'sports',
+          'strategy/sim', 'indie', 'live service/MMO', 'mobile', 'anime', 'industry/hardware',
+          'regional/esports')
 
 
 def load(sid):
@@ -218,6 +224,25 @@ def lags(days=7):
         print(f'{a:>11} → {b:<11} {med}  ({len(g)} stories)')
 
 
+def genres(days=7):
+    """Stories per primary genre over the last `days` (by the date in the story id), for information only."""
+    cut = (datetime.datetime.now(DUBAI) - datetime.timedelta(days=days)).date().isoformat()
+    count, missing = {}, []
+    for s in stories():
+        if s['id'][:10] < cut:
+            continue
+        g = s.get('genre') or []
+        if not g:
+            missing.append(s['id'])
+            continue
+        if g[0] not in GENRES:
+            print(f'unknown genre {g[0]!r} in {s["id"]}')
+        count[g[0]] = count.get(g[0], 0) + 1
+    print(', '.join(f'{g} {count.get(g, 0)}' for g in GENRES))
+    if missing:
+        print(f'{len(missing)} stories with no genre field')
+
+
 if __name__ == '__main__':
     cmd, *rest = sys.argv[1:] or ['help']
     if cmd == 'sync':
@@ -228,5 +253,7 @@ if __name__ == '__main__':
         card(rest[0])
     elif cmd == 'lags':
         lags(int(rest[0]) if rest else 7)
+    elif cmd == 'genres':
+        genres(int(rest[0]) if rest else 7)
     else:
         print(__doc__)

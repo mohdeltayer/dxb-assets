@@ -151,6 +151,10 @@ Instagram views Mohammad sends per Reel: `python3 templates/formats.py views
 <reel name> <views>` for each, then `formats.py templates` for the median per
 template; append the table to `analytics/reel-views.md` with the date and
 commit (advisor, 14 Oct 2026).
+Then `python3 newsroom/ledger.py genres 7` for the audit's one line, stories
+per genre that week: information only, it shows blind spots in the sources and
+never forces a story (advisor, 21 Oct 2026). Every new story file carries
+`"genre": [primary]` or `[primary, second]` from `ledger.GENRES`.
 
 **Pre-publish gate (main session, every post; advisor, 18 Oct 2026).** Time box
 10 minutes, 5 on the breaking lane, never a wait. Check the primary (read the whole
