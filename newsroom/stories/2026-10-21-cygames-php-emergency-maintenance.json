@@ -1,0 +1,70 @@
+{
+ "id": "2026-10-21-cygames-php-emergency-maintenance",
+ "title": "Cygames: emergency maintenance from ~23:00 JST 21 Oct for Umamusume, Granblue Fantasy, Shadowverse: Worlds Beyond over PHP vulnerabilities; no damage or leak confirmed (SVWB notice); Granblue planned to 07:00 JST; Pokémon HOME/Champions/Sleep also in maintenance per Kotaku",
+ "game": "Umamusume: Pretty Derby",
+ "companies": [
+  "Cygames",
+  "The Pokémon Company"
+ ],
+ "category": "service",
+ "related": [
+  "2026-10-20-umamusume-la-concert-cancelled"
+ ],
+ "sources": [
+  {
+   "url": "https://x.com/uma_musu/status/2112838920757215615",
+   "time": "2026-10-21T09:30Z",
+   "kind": "primary"
+  },
+  {
+   "url": "https://x.com/granbluefantasy/status/2112830026827931737",
+   "time": "2026-10-21T08:55Z",
+   "kind": "primary"
+  },
+  {
+   "url": "https://game.watch.impress.co.jp/docs/news/2150124.html",
+   "time": "2026-10-21",
+   "kind": "outlet (carries the Shadowverse WB no-damage notice)"
+  },
+  {
+   "url": "https://www.famitsu.com/article/202610/91632",
+   "time": "2026-10-21",
+   "kind": "outlet"
+  },
+  {
+   "url": "https://kotaku.com/pokemon-home-sleep-champions-offline-php-cyber-attack-2000748338",
+   "time": "2026-10-21T16:00Z",
+   "kind": "outlet (Pokémon apps)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "emergency maintenance from ~23:00 JST for Umamusume, Granblue, SVWB to secure systems after PHP vulnerability announcement",
+   "status": "confirmed",
+   "by": "primary"
+  },
+  {
+   "claim": "no damage or data leak confirmed so far",
+   "status": "confirmed (SVWB notice, Cygames)",
+   "by": "GAME Watch quoting @shadowverse_jp"
+  },
+  {
+   "claim": "Granblue planned until 07:00 JST 22 Oct, may change; others undecided",
+   "status": "confirmed",
+   "by": "primary/Famitsu"
+  },
+  {
+   "claim": "Pokémon HOME, Champions, Sleep in emergency maintenance, reason not given",
+   "status": "reported",
+   "by": "Kotaku"
+  }
+ ],
+ "status": "queued",
+ "lanes": {
+  "digital_lounge": "trailer Reel, رسمي, X Instagram Threads",
+  "dxb_knight": "on hold"
+ },
+ "approved": "go: rolling queue; preview sent 16:41Z; gate 16:39Z; sensitive: none; v1 hit a title card, v2 queued; cel-shaded close-up waived",
+ "queued_at": "2026-10-21T18:15Z",
+ "sensitive": "none"
+}
