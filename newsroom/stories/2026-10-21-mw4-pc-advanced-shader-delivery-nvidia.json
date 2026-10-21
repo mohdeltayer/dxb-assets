@@ -1,0 +1,59 @@
+{
+ "id": "2026-10-21-mw4-pc-advanced-shader-delivery-nvidia",
+ "title": "NVIDIA Game Ready 621.01 adds Microsoft's Advanced Shader Delivery to Call of Duty: Modern Warfare 4 (and Gears of War: E-Day) on PC: no shader compilation screen; needs the Xbox PC app, Steam copies included",
+ "game": "Call of Duty: Modern Warfare 4",
+ "companies": [
+  "NVIDIA",
+  "Microsoft",
+  "Activision"
+ ],
+ "category": "pc_tech",
+ "related": [],
+ "sources": [
+  {
+   "url": "https://www.nvidia.com/en-us/geforce/news/phantom-blade-zero-nvidia-geforce-game-ready-driver/",
+   "time": "2026-10-21T13:00Z",
+   "kind": "primary (datePublished; byline shows 20 Oct)"
+  },
+  {
+   "url": "https://store.steampowered.com/app/4435490/",
+   "time": "",
+   "kind": "footage (Activision Multiplayer trailer on Steam; the PC trailer is letterboxed to 800 rows)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "driver 621.01 adds Advanced Shader Delivery for MW4 and Gears of War: E-Day",
+   "status": "confirmed",
+   "by": "primary"
+  },
+  {
+   "claim": "Microsoft cloud precompiles shaders for hundreds of thousands of hardware and driver combinations; database comes with the download or update via the Xbox PC app; compilation screen skipped",
+   "status": "confirmed",
+   "by": "primary"
+  },
+  {
+   "claim": "compilation can mean waits of up to 30 minutes; near-100% cache hit rate removes mid-game compilation, CPU spikes and stutter",
+   "status": "NVIDIA's claim, attributed",
+   "by": "primary"
+  },
+  {
+   "claim": "storefront-agnostic: Steam purchases benefit if the Xbox PC app is installed",
+   "status": "confirmed",
+   "by": "primary"
+  },
+  {
+   "claim": "MW4 launches 23 Oct after campaign early access from 16 Oct",
+   "status": "confirmed",
+   "by": "primary"
+  }
+ ],
+ "status": "queued",
+ "lanes": {
+  "digital_lounge": "trailer Reel, رسمي, X Instagram Threads",
+  "dxb_knight": "on hold"
+ },
+ "approved": "go: rolling queue; preview sent 15:21Z; gate 15:17Z NVIDIA article re-read (dateModified 13:00Z, no update note); sensitive: none; PC trailer letterboxed (800 rows), Multiplayer trailer used; grammar stage applied (bracket moved to first mention, attribution to NVIDIA); DeepL forward picked دون ظهور over بلا شاشة",
+ "queued_at": "2026-10-21T16:45Z",
+ "sensitive": "none"
+}
