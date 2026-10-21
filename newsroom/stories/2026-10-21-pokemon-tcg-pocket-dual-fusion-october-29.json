@@ -52,7 +52,7 @@
    "status": "verified (press release)"
   }
  ],
- "status": "building",
+ "status": "queued",
  "lanes": {
   "dl": {
    "lane": "Reel",
@@ -61,9 +61,21 @@
    "theme": "playful",
    "skin": "house",
    "headline": "بطاقات تحمل نوعين لأول مرة\nفي لعبة Pokémon TCG Pocket",
-   "media": "cards/2026-10/pokemon-tcg-pocket-dual-fusion-october-29-reel-v1.mp4",
+   "media": "cards/2026-10/pokemon-tcg-pocket-dual-fusion-october-29-reel-v2.mp4",
    "render": "runner",
-   "notes": "Brief: hook = the surprise (first dual-type cards); format stills (trailer and split at 4/4 for Wednesday; the trailer is YouTube only); opener: Mega Mewtwo X ex card already panning, headline over it; under it our bed neon_c; key shot: the dual-type line lands on Mega Greninja ex; the date line on Mega Dragonite ex (a Dual Fusion card); the art line on Charizard then Blastoise (named in the line); First Partners line on Fuecoco (a first partner). 20.0 s (four lines). Closer angles (card at 1.4x on the same ground) on Greninja and Fuecoco for the 3 to 4 s change rule; date line shortened to «تصل إضافة Dual Fusion في 29 أكتوبر». Runner fixes: headline balance put the game name on line 2, so «في لعبة» leads it; lines at 54 px. Cards composed at 0.98x on a blurred copy of their own art (no upscale). Sources decode: PNG stills only. Arabic: both skills loaded, glossary (إضافة not توسعة; Pokémon in Latin). Grammar stage: no required edits; uncertain: «شركة بوكيمون» (no glossary row; DeepL gives the same), «Pokémon البداية» for First Partner Pokémon (DeepL alternatives: بوكيمون الشريك الأول، بوكيمون المبتدئين). DeepL forward (whole story): حزمة التوسعة (kept إضافة per glossary), بطاقات ثنائية النوع (alternative). Back-check: «بطاقات بنوعين» read as two card types, so headline and X say «بطاقات تحمل نوعين»; rest matched."
+   "notes": "Brief: hook = the surprise (first dual-type cards); format stills (trailer and split at 4/4 for Wednesday; the trailer is YouTube only); opener: Mega Mewtwo X ex card already panning, headline over it; under it our bed neon_c; key shot: the dual-type line lands on Mega Greninja ex; the date line on Mega Dragonite ex (a Dual Fusion card); the art line on Charizard then Blastoise (named in the line); First Partners line on Fuecoco (a first partner). 20.0 s (four lines). Closer angles (card at 1.4x on the same ground) on Greninja and Fuecoco for the 3 to 4 s change rule; date line shortened to «تصل إضافة Dual Fusion في 29 أكتوبر». Runner fixes: headline balance put the game name on line 2, so «في لعبة» leads it; lines at 54 px. Cards composed at 0.98x on a blurred copy of their own art (no upscale). Sources decode: PNG stills only. Arabic: both skills loaded, glossary (إضافة not توسعة; Pokémon in Latin). Grammar stage: no required edits; uncertain: «شركة بوكيمون» (no glossary row; DeepL gives the same), «Pokémon البداية» for First Partner Pokémon (DeepL alternatives: بوكيمون الشريك الأول، بوكيمون المبتدئين). DeepL forward (whole story): حزمة التوسعة (kept إضافة per glossary), بطاقات ثنائية النوع (alternative). Back-check: «بطاقات بنوعين» read as two card types, so headline and X say «بطاقات تحمل نوعين»; rest matched. v1 (runner 03:34Z) put the lines over printed card text on the close-ups; v2 fades the close-up cards below the art. v2 decode clean, no smear; strip and dense strip checked.",
+   "time": "2026-10-21T04:45:00Z",
+   "approved": "go: rolling queue; preview sent 03:44Z; gate 03:36Z: pokemon.com page re-read (28 Oct 6:00 pm PDT, no update note), press release 20 Oct, no delay found"
   }
- }
+ },
+ "versions": [
+  {
+   "v": 1,
+   "note": "not posted: lines over card text on close-ups"
+  },
+  {
+   "v": 2,
+   "queued": "2026-10-21T04:45Z"
+  }
+ ]
 }
