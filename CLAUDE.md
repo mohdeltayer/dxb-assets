@@ -2251,6 +2251,32 @@ In every sweep, each shortlisted item comes with its lane and chip already
 chosen. Minutes old and the image tells it: fast. Needs his take, numbers
 or context: card. Big: fast now, card later as a reply to the fast post.
 
+## Postiz shut down: publishing paused (advisor, 22 Oct 2026)
+
+Postiz shut down for all customers after a suspected breach at its host,
+Railway (Railway disclosed exposed customer credentials on 21 Oct; from
+22:36Z on 21 Oct api.postiz.com and the app answered Railway's "Application
+not found"). Mohammad is disconnecting Postiz from every social account.
+This overrides every queuing and publishing rule below until he lifts it.
+1. Stop publishing. Nothing is pushed to queue/** in dxb-queue and no publish
+   run is started. publish.yml's job carries `if: false` (dxb-queue f105e8a,
+   22 Oct about 02:05Z; the session's tools cannot press Disable workflow, so
+   Mohammad may also disable it in Actions). Folders already queued stay as
+   they are; Xbox cloud playtime and BioWare legacy were moved to drafts/ and
+   handed to him at 01:40Z.
+2. Keep building. Render, gate and bank Reels as normal; the gap and spacing
+   rules (and the gap alarm in the hourly watch) are suspended until
+   publishing returns.
+3. Manual posting for the strongest stories only: for fresh reveals and
+   breaking news, Mohammad gets the final mp4, the Instagram caption and the
+   short X text in one message, ready to post from his phone. The story file
+   says "posted by hand" once he confirms.
+4. The Postiz connector and API are not used until Mohammad says Postiz is
+   safe and has issued a new API key (then `if: false` comes out of
+   publish.yml).
+5. Morning digest: every Reel banked overnight, with its strip, so he can
+   choose what to post by hand.
+
 ## Publishing
 
 Cards render to `cards/YYYY-MM/`, source art to `live/YYYY-MM-DD/`.

@@ -1,4 +1,4 @@
-# Digital Lounge: the rules in force (21 Oct 2026)
+# Digital Lounge: the rules in force (22 Oct 2026)
 
 One page of what applies today. CLAUDE.md is the full, dated history and wins
 on detail; each line here names its section there. Anything listed under
@@ -307,6 +307,17 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - Under 2200 characters, no links.
   - On an upload error, retry the same file once.
 - **Threads:** the short X text, no hashtags, 500 characters at most.
+
+## Publishing paused (22 Oct 2026; CLAUDE.md "Postiz shut down")
+
+- Postiz is shut down (suspected breach at Railway). No pushes to queue/**, no
+  publish runs; publish.yml's job is `if: false`. No Postiz connector or API
+  until Mohammad says it is safe and issues a new key.
+- Keep building, gating and banking Reels; gap and spacing rules suspended.
+- Fresh reveals and breaking news only: mp4, Instagram caption and short X
+  text to Mohammad in one message for posting by hand; "posted by hand" in the
+  story file once he confirms.
+- Morning digest lists every Reel banked overnight with its strip.
 
 ## Timing and approval
 
