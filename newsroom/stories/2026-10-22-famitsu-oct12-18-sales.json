@@ -1,0 +1,66 @@
+{
+ "id": "2026-10-22-famitsu-oct12-18-sales",
+ "title": "تصدّرت Tales of Eternia Remastered مبيعات اليابان على Switch 2 بـ17,911 نسخة",
+ "game": "Tales of Eternia Remastered",
+ "companies": [
+  "Famitsu",
+  "Bandai Namco",
+  "Konami",
+  "Nintendo",
+  "Square Enix"
+ ],
+ "category": "sales",
+ "genre": [
+  "RPG",
+  "industry/hardware"
+ ],
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Famitsu",
+   "url": "https://www.famitsu.com/article/202610/91765",
+   "time": "2026-10-22T08:00:00Z"
+  },
+  {
+   "role": "primary",
+   "name": "Famitsu (last week, for change)",
+   "url": "https://www.famitsu.com/article/202610/91095"
+  }
+ ],
+ "claims": [
+  {
+   "text": "Tales of Eternia Remastered No. 1 Switch 2 17,911; No. 3 Switch 14,003; No. 5 PS5 10,390",
+   "status": "confirmed",
+   "source": "Famitsu"
+  },
+  {
+   "text": "Castlevania: Belmont's Curse No. 2 Switch 15,630; No. 6 PS5 7,621",
+   "status": "confirmed",
+   "source": "Famitsu"
+  },
+  {
+   "text": "KH Collection [I~III] 1 to 8; Rhythm Heaven Groove lifetime 1,093,427",
+   "status": "confirmed",
+   "source": "Famitsu"
+  },
+  {
+   "text": "Hardware: Switch 2 21,854 (last 22,420); PS5 family 10,667; Switch family 4,857; Xbox Series 229",
+   "status": "confirmed",
+   "source": "Famitsu"
+  }
+ ],
+ "status": "banked",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "أرقام",
+   "format": "numbers",
+   "theme": "gold",
+   "media": "cards/2026-10/famitsu-oct12-18-sales-reel-v1.mp4",
+   "render": "runner (kind famitsu, first runner Famitsu; first attempt failed on a missing job name)",
+   "time": "post now (Famitsu goes out on release, Mohammad 8 Oct)",
+   "approved": "sent to Mohammad as post now (Postiz down); gate 13:40Z: Famitsu article read in full, figures match",
+   "notes": "Grammar stage: no required edits; «للنسخ المادية» became «لمبيعات المتاجر» (glossary). DeepL forward pass: المرتبة vs our المركز (kept), feminine طرازاتها vs our masculine device (kept). Rhythm Heaven and Tomodachi stills native 1280x720, lowres_ok. Tomodachi art cropped clear of the Demo banner. Sound: stats bed. Speech: none. Sensitive: none."
+  }
+ }
+}
