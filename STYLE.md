@@ -1,4 +1,4 @@
-# Digital Lounge: the rules in force (22 Oct 2026)
+# Digital Lounge: the rules in force (23 Oct 2026)
 
 One page of what applies today. CLAUDE.md is the full, dated history and wins
 on detail; each line here names its section there. Anything listed under
@@ -317,21 +317,31 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - On an upload error, retry the same file once.
 - **Threads:** the short X text, no hashtags, 500 characters at most.
 
-## Publishing paused (22 Oct 2026; CLAUDE.md "Postiz shut down")
+## Publishing through Publer (22 to 23 Oct 2026; CLAUDE.md "Publishing through Publer")
 
-- Postiz is shut down (suspected breach at Railway). No pushes to queue/**, no
-  publish runs; publish.yml's job is `if: false`. No Postiz connector or API
-  until Mohammad says it is safe and issues a new key.
-- Keep building, gating and banking Reels; gap and spacing rules suspended.
-- Instagram via Meta Business Suite (22 Oct; replaces the manual-posting line):
-  Mohammad schedules Instagram himself. Two batches a day, morning by 08:00
-  Dubai (09:00 to 18:00) and evening by 18:00 (18:30 to 08:00): per Reel the
-  mp4 named from its Dubai time, the time, the caption in a code block, gate
-  re-run first; then a one-line summary. Fresh reveals and breaking news go
-  at once as "post now" with caption and short X text. On his confirmation:
-  story file "scheduled by hand (Business Suite) HH:MM Dubai" and the slots in
-  the format ledger.
-- Morning digest lists every Reel banked overnight with its strip.
+- Postiz stays off (shut down 22 Oct after the Railway breach; publish.yml
+  `if: false`, no Postiz connector or API). The Business Suite batches ended
+  when Publer took over on 22 Oct.
+- Publer (Business plan, workspace The Digi-Lounge, Dubai time) posts every
+  Reel to Instagram (as a Reel), X and Threads at the same minute, each with
+  its own text; one submit call per account. Upload from the public
+  dxb-assets URL. Gate first, constant-coverage spacing and variety rules as
+  before. After each slot, confirm all three read Published; a failed post is
+  rescheduled once, then reported with Publer's reason.
+- Every post carries labels: template, skin, sound (trailer,
+  voiced-subtitled, our bed) and genre, spelled as before.
+- Source as a follow-up: on X a reply with the source link; on Instagram a
+  comment «المصدر: ...» with no link; on Threads the source stays in the text.
+- Weekend windows: the day's strongest non-urgent Reels go Thursday 17:00 to
+  21:00 and Friday 19:00 to 22:00 Dubai (Publer best times, last 30 days:
+  Thursday 18:00 and Friday 20:00). Breaking news and fresh reveals still go
+  at once.
+- Instagram Reels carry the location "Dubai, United Arab Emirates" (two-week
+  test). Trial Reels only for pilots (skins, mood music, new templates), mode
+  MANUAL; never news.
+- Not used: RSS automation, AI captions, recycling, recurring news posts,
+  spintax, AutoShare.
+- Morning digest lists every post published overnight with its strip.
 
 ## Timing and approval
 

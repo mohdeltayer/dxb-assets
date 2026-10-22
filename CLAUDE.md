@@ -2332,6 +2332,62 @@ publish.yml stays disabled.
    review. Nothing goes to Postiz or its API until Mohammad says it is safe and
    has issued a new key.
 
+## Publishing through Publer (advisor, 22 and 23 Oct 2026, agreed with Mohammad)
+
+Replaces the Business Suite batches above. Postiz stays off; its secret and
+code are removed after one clean day on Publer.
+- 22 Oct: Publer (Business plan, workspace "The Digi-Lounge", shown in UTC+4)
+  holds Digital Lounge Instagram, Threads and X, and production posts through
+  the connector. Every Reel goes to all three at the same minute: Instagram as
+  a Reel with the caption, X with the short text, Threads with the Threads
+  text. One `submit_publer_posts` call per account (a call shares one account
+  set); the video is uploaded once from its public dxb-assets URL and reused.
+  The gate runs before scheduling, spacing and variety as in "Constant
+  coverage". After each slot all three are checked as Published; a failed
+  post is rescheduled once, then reported with Publer's reason. Story files
+  say "scheduled in Publer HH:MMZ" with the platforms; the format ledger takes
+  the slot. No IDs or tokens in public files or logs.
+  First post (MW4 maps, 15:30Z): Instagram and X published; Threads failed and
+  every Threads action returned "Authentication failed. Please reauthorize
+  this account" until Mohammad reconnected Threads a second time (16:51Z);
+  from then all three posted. The Publer posting and read tools are on the
+  allow list in `.claude/settings.json`; the delete tools stay on ask.
+- 23 Oct, using Publer further:
+  1. Labels on every post: template (trailer, split, clipcard, numbers, ...),
+     skin (house, scifi, fantasy), sound (trailer, voiced-subtitled, our bed)
+     and genre from the story file. `list_publer_labels` first, and reuse the
+     existing spelling (a label is created the first time a post uses it).
+  2. The advisor pulls last week's views, reach and shares per Reel from
+     Publer each Tuesday and fills the format ledger's views column; Mohammad
+     no longer sends numbers by hand.
+  3. Weekend windows. Publer's best times for Instagram (last 30 days, read
+     23 Oct): Thursday 18:00 (score 16,609) and Friday 20:00 (10,203) lead,
+     then Wednesday 12:00 (6,560). The workspace shows times in UTC+4, Dubai.
+     The day's strongest non-urgent Reels are held for Thursday 17:00 to 21:00
+     and Friday 19:00 to 22:00 Dubai. Breaking news and fresh reveals still go
+     at once; constant coverage unchanged.
+  4. Source in a follow-up: on X one reply under the post with the source link
+     (`follow_up_comments`); on Instagram one comment with the source in a
+     short Arabic line («المصدر: ...»), no link; on Threads the source line
+     stays in the text.
+  5. Custom Reel cover, test first: a designed 3:4 cover (headline, the game's
+     key art, our chip) as the Reel's thumbnail. Publer's API takes it as an
+     extra entry in `media[].thumbnails` with `default_thumbnail`, but the
+     connector's submit tool does not pass media thumbnails (network_options
+     cannot override media), so the test needs the Publer API key for covers
+     only, or Mohammad setting covers by hand in the app for key Reels. Once
+     covers work, the grid-tile rules move from the first frame to the cover.
+  6. Trial Reels for pilots only (game-skin kits, mood music, new templates),
+     `trial_reel: "MANUAL"`; news never goes out as a trial.
+  7. Location tag on Instagram Reels, "Dubai, United Arab Emirates", for two
+     weeks; reach is compared at that audit, kept or dropped.
+  8. Mohammad switches on Publer's email alerts for failed posts (Settings,
+     Notifications); production still confirms each slot.
+  9. Not used: RSS automation, AI captions, recycling or recurring news posts,
+     spintax, AutoShare.
+  10. Waiting on Mohammad: which Arabic games outlets to track as competitors,
+      and a Linkie (link in bio) page with source links per Reel.
+
 ## Publishing
 
 Cards render to `cards/YYYY-MM/`, source art to `live/YYYY-MM-DD/`.

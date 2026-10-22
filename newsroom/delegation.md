@@ -181,11 +181,29 @@ Report only; the main session rewrites.
 Mohammad to post: outlet, date and link on X and Threads; outlet and date only
 on Instagram. Never a source that is not in the story file.
 
-**Weekly views (haiku), Tuesday morning before the audit.** Given the
-Instagram views Mohammad sends per Reel: `python3 templates/formats.py views
-<reel name> <views>` for each, then `formats.py templates` for the median per
-template; append the table to `analytics/reel-views.md` with the date and
-commit (advisor, 14 Oct 2026).
+**Weekly views (haiku), Tuesday morning before the audit.** From 23 Oct the
+numbers come from Publer, not from Mohammad: last week's views, reach and
+shares per Reel (`get_post_insights` / `export_publer_analytics`), then
+`python3 templates/formats.py views <reel name> <views>` for each, then
+`formats.py templates` for the median per template; append the table to
+`analytics/reel-views.md` with the date and commit (advisor, 14 Oct 2026; Publer
+source 23 Oct 2026).
+
+**Publer post (main session; advisor, 22 and 23 Oct 2026).** Per Reel, after
+the gate: upload the mp4 once from its public dxb-assets URL
+(`upload_publer_media_from_url`), then one `submit_publer_posts` call per
+account at the same minute: Instagram `post_type: "reel"` with the caption and
+`location: "Dubai, United Arab Emirates"`, X `video` with the short text,
+Threads `video` with the Threads text. Every post takes the labels template,
+skin, sound (trailer / voiced-subtitled / our bed) and genre
+(`list_publer_labels` first, same spelling). Source follow-up: X a reply with
+the source link, Instagram a comment «المصدر: ...» with no link
+(`follow_up_comments`); Threads keeps the source in its text. Strongest
+non-urgent Reels wait for Thursday 17:00 to 21:00 or Friday 19:00 to 22:00
+Dubai. After the slot, `list_publer_posts` shows all three Published; a
+failure is rescheduled once, then reported with Publer's reason. Story file:
+"scheduled in Publer HH:MMZ" with the platforms; ledger slot. No IDs or tokens
+in public files.
 Then `python3 newsroom/ledger.py genres 7` for the audit's one line, stories
 per genre that week: information only, it shows blind spots in the sources and
 never forces a story (advisor, 21 Oct 2026). Every new story file carries
