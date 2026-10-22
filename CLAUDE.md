@@ -2277,6 +2277,31 @@ This overrides every queuing and publishing rule below until he lifts it.
 5. Morning digest: every Reel banked overnight, with its strip, so he can
    choose what to post by hand.
 
+## Instagram via Meta Business Suite while Postiz is down (advisor, 22 Oct 2026, agreed with Mohammad)
+
+Replaces point 3 of "Postiz shut down: publishing paused". Mohammad schedules
+Instagram himself in Meta Business Suite (Meta's own tool). Postiz stays off,
+publish.yml stays disabled.
+1. Batches, twice a day: a morning batch by 08:00 Dubai (covers 09:00 to
+   18:00) and an evening batch by 18:00 Dubai (covers 18:30 to 08:00 the next
+   day). Each holds the banked Reels that passed the gate, in the order and
+   spacing of "Constant coverage" (30 minutes apart by day, 60 at night); the
+   gate is re-run on each just before sending. Per Reel, in slot order: the
+   final mp4 named from its Dubai time ("0930-serious-sam-the-third-
+   encounter.mp4"), the suggested time (Dubai), and the Instagram caption in a
+   plain code block. Then one summary line: count, first and last time, and
+   any Reel with a time constraint (embargo, launch hour).
+2. Fresh reveals and breaking news go at once, outside the batch, marked
+   "post now", with the Instagram caption and the short X text (X and Threads
+   stay manual, for these stories only).
+3. Records: when Mohammad confirms a batch is scheduled, each story file is
+   marked "scheduled by hand (Business Suite) HH:MM Dubai" and the slots go in
+   the format ledger, so variety and gap checks still read correctly. X and
+   Threads: only stories he posts by hand are recorded there.
+4. Unchanged: every quality step, the gate, the variety rules, the director
+   review. Nothing goes to Postiz or its API until Mohammad says it is safe and
+   has issued a new key.
+
 ## Publishing
 
 Cards render to `cards/YYYY-MM/`, source art to `live/YYYY-MM-DD/`.

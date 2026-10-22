@@ -314,9 +314,14 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   publish runs; publish.yml's job is `if: false`. No Postiz connector or API
   until Mohammad says it is safe and issues a new key.
 - Keep building, gating and banking Reels; gap and spacing rules suspended.
-- Fresh reveals and breaking news only: mp4, Instagram caption and short X
-  text to Mohammad in one message for posting by hand; "posted by hand" in the
-  story file once he confirms.
+- Instagram via Meta Business Suite (22 Oct; replaces the manual-posting line):
+  Mohammad schedules Instagram himself. Two batches a day, morning by 08:00
+  Dubai (09:00 to 18:00) and evening by 18:00 (18:30 to 08:00): per Reel the
+  mp4 named from its Dubai time, the time, the caption in a code block, gate
+  re-run first; then a one-line summary. Fresh reveals and breaking news go
+  at once as "post now" with caption and short X text. On his confirmation:
+  story file "scheduled by hand (Business Suite) HH:MM Dubai" and the slots in
+  the format ledger.
 - Morning digest lists every Reel banked overnight with its strip.
 
 ## Timing and approval
