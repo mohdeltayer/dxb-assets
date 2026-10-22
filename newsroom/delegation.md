@@ -52,7 +52,16 @@ low-confidence words), the face-direction ("profile") and crop-edge text flags
 from `reel.shotsheet`, and loudness and music-against-speech measurements
 (ffmpeg ebur128, astats). Audio order: the trailer's own sound, music-led or
 voiced, as one continuous stretch; our bed only for silent footage, stills, our
-graphics, or when no coherent stretch exists. Voiced stretches: whole
+graphics, or when no coherent stretch exists. Trailer sound is the default
+(advisor, 23 Oct 2026): narration is no reason to drop it (whole sentences,
+subtitled when it is the news, lines in the pauses); clean effects-led gameplay
+audio passes, only harsh effects (constant explosions, engines, screams) fail a
+stretch; before approving our bed on a footage Reel, check the game's other
+official trailers and clips, list each one checked and why it failed in the
+decision, and say so plainly. Our bed stays the norm only for sales charts,
+numbers Reels, our graphics, stills, silent footage, retro, tribute, and
+breaking news with silent or unusable footage. A bed it approves on footage
+means the preview to Mohammad opens with "our bed". Voiced stretches: whole
 sentences, start at a sentence start or in a pause, end after a sentence ends;
 story lines land in pauses, never on speech (the headline may sit over speech
 in the first 3.5 s); speech that is the news gets an exact Arabic subtitle with
@@ -181,6 +190,10 @@ Then `python3 newsroom/ledger.py genres 7` for the audit's one line, stories
 per genre that week: information only, it shows blind spots in the sources and
 never forces a story (advisor, 21 Oct 2026). Every new story file carries
 `"genre": [primary]` or `[primary, second]` from `ledger.GENRES`.
+The audit also counts the week's Reels by sound: trailer, voiced and
+subtitled, our bed (from each story file's sound note). Our bed on a footage
+Reel should be the rare exception; list each one with its reason (advisor,
+23 Oct 2026).
 
 **Pre-publish gate (main session, every post; advisor, 18 Oct 2026).** Time box
 10 minutes, 5 on the breaking lane, never a wait. Check the primary (read the whole

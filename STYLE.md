@@ -188,8 +188,17 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     verdict; up to two send-backs, then pass with a note or a simpler
     template. It judges sound from transcripts and measurements and says so
     when unsure (CLAUDE.md "Director review, and voiced clips allowed").
-  - Our bed under stills, graphics or noisy stretches; never mute footage to
-    add a bed.
+  - Trailer sound is the default (23 Oct). Our bed only for: sales charts
+    (Famitsu), numbers Reels and our graphics; stills and silent footage;
+    retro and on-this-day (retro flavour), tribute (calm bed); breaking news
+    only when its footage is silent or unusable. Narration is no reason to
+    drop the trailer sound: whole sentences, subtitled when the speech is the
+    news, lines in the pauses. Clean effects-led gameplay audio is fine; only
+    harsh effects (constant explosions, engines, screams) rule a stretch out.
+    Try the game's other trailers before our bed. Our bed on a footage Reel
+    needs a reason in the story file (trailers checked, why each failed), the
+    director's sign-off, and "our bed" in the preview's first line. Never mute
+    footage to add a bed.
   - Beds evolve (14 Oct): one motif, tempo and level, the arrangement
     changing every 8 bars with a one-bar crossfade (`sonic.ARRANGE`), so a
     long Reel's music moves without getting louder or busier; the cycle

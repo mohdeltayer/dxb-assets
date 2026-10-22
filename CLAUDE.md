@@ -1207,6 +1207,36 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      reveal trailer's score, Switch Sports Resort v4 on the overview montage),
      but the session stalled after a container restart and both went out at
      20:45Z and 21:45Z in their bed versions; v3 and v4 stay in `cards/`.
+- Trailer sound is the default (advisor, 23 Oct 2026, from Mohammad: "A lot of
+  news has the channel tune instead of the trailer... the background music
+  should be used in certain news pieces like Famitsu but not nearly
+  everything"). On 22 Oct, FFXIV, Once Human and Capcom went out on our bed
+  although a trailer was available. This tightens "Director review, and voiced
+  clips allowed" and relaxes the 6 Oct "Music, not effects" line.
+  1. Our bed belongs only to: Famitsu and other sales charts, numbers Reels and
+     our own graphics; stills Reels and footage with no sound of its own; retro
+     and on-this-day pieces (retro flavour) and tribute (calm bed); breaking
+     news only when its footage is silent or unusable. Every other Reel with
+     official footage uses the footage's own sound.
+  2. Keeping the trailer sound on a footage Reel: narration or dialogue is not
+     a reason to drop it. Build around it: whole sentences only, a faithful
+     Arabic subtitle when the speech carries the news, story lines in the
+     pauses (director rule, 21 Oct). Prefer a music-led stretch when one
+     exists; when narration runs through the whole trailer, take the stretch
+     where the speech is complete and relevant, and subtitle it. Effects-led
+     gameplay audio is fine when it is clean and not harsh; only harsh or
+     noisy effects (constant explosions, engines, screams) rule a stretch out.
+     When one trailer has no usable stretch, try the game's other official
+     trailers and clips before our bed.
+  3. Our bed on a footage Reel needs a reason, and only after step 2 fails: the
+     story file names each trailer checked and why it was unusable, and the
+     director signs it off. The preview to Mohammad says "our bed" in its first
+     line, so he can object before it posts.
+  4. The Tuesday audit counts Reels by sound (trailer, voiced and subtitled, our
+     bed); our bed on a footage Reel should be the rare exception.
+  5. Posts published on 22 Oct stay as they are. The two Reels still scheduled
+     that night (Dragon Ball Xenoverse 3, PlayStation Pulse) already ran on
+     trailer music, so nothing was re-rendered.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under
