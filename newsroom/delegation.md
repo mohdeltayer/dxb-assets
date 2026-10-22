@@ -196,7 +196,11 @@ account at the same minute: Instagram `post_type: "reel"` with the caption and
 `location: "Dubai, United Arab Emirates"`, X `video` with the short text,
 Threads `video` with the Threads text. Every post takes the labels template,
 skin, sound (trailer / voiced-subtitled / our bed) and genre
-(`list_publer_labels` first, same spelling). Source follow-up: X a reply with
+(`list_publer_labels` first, same spelling; the first post, Valve HLX on 22 Oct,
+set the form `tpl:trailer`, `skin:house`, `sound:trailer` / `sound:voiced` /
+`sound:bed`, `genre:shooter`). If Publer's location lookup fails (22 Oct: "undefined
+method [] for nil" for both "Dubai, United Arab Emirates" and "Dubai"), post
+without it and note it in the story file. Source follow-up: X a reply with
 the source link, Instagram a comment «المصدر: ...» with no link
 (`follow_up_comments`); Threads keeps the source in its text. Strongest
 non-urgent Reels wait for Thursday 17:00 to 21:00 or Friday 19:00 to 22:00
