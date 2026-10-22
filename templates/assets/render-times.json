@@ -3402,5 +3402,27 @@
   "job_secs": 393,
   "setup_min": 1.45,
   "story": "us-september-2026-circana-wolverine"
+ },
+ {
+  "name": "valve-hlx-morasky-slip-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-22T23:08Z",
+  "stages": {
+   "checks": 1.2,
+   "montage": 70.8,
+   "text": 63.2,
+   "audio": 1.1,
+   "outro": 55.4
+  },
+  "total": 191.6,
+  "lane": "runner",
+  "queued_at": "2026-10-22T23:02:42Z",
+  "finished_at": "2026-10-22T23:08Z",
+  "render_min": 3.19,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 291,
+  "setup_min": 1.17,
+  "story": "valve-hlx-morasky-slip"
  }
 ]
