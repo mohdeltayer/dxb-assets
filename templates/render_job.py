@@ -230,6 +230,8 @@ def speech_check(job, end):
 def textcheck(job):
     """Headline, lines, strip and credits drawn alone, so a line that wraps onto a Latin word or
     leaves the safe zone stops in seconds (needs the Dubai font: the runner runs it first)."""
+    if job.get('kind') == 'famitsu':           # sales_full draws its own rows; nothing to pre-check here
+        return
     import tempfile
     tmp = tempfile.mkdtemp(prefix='textcheck-')
     try:
@@ -281,7 +283,39 @@ def source_check(job):
                          'or after looking pass block_ok=[[file, t0, t1, reason]]')
 
 
+def famitsu(job, draft=False):
+    """Famitsu weekly sales Reel (sales_full.reel) on the runner, for when the container has no Dubai font (22 Oct
+    2026). `rows` and `hardware` are what sales_full.reel takes, with `shot` [file, [from, to]] and `art` naming files
+    in uploads that `footage` fetches (screenshots and box art by URL); `week_label`, `date`, optional `hook`,
+    `lowres_ok` and `block_ok`. The sheet lays out every screenshot with its pan."""
+    import sales_full as SF
+    t0 = time.time()
+    for item in job.get('footage', []):
+        fetch(item)
+    rows = []
+    for r in job['rows']:
+        r = dict(r, shot=(C.U + r['shot'][0], tuple(r['shot'][1])))
+        if r.get('art'):
+            r['art'] = C.U + r['art']
+        rows.append(r)
+    out = os.path.join(ROOT, job['out'])
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    extra = {'hook': job['hook']} if job.get('hook') else {}
+    video = SF.reel(rows, job['week_label'], job['date'], out, hardware=job.get('hardware', ()), draft=draft,
+                    lowres_ok=job.get('lowres_ok', False), **extra)[0]
+    base = re.sub(r'-reel-v\d+$', '', os.path.splitext(out)[0])
+    if not draft:
+        DC.check(video, [w for w in job.get('block_ok', []) if len(w) == 3])
+        DC.dense_strip(video, base + '-dense.jpg')
+        reel.strip(video, base + '-strip.jpg')
+        reel.shotsheet([(r['shot'][0], None, 2.0, tuple(r['shot'][1])) for r in job['rows']], base + '-sheet.jpg')
+    print(f"render_job: {job['name']} (famitsu) done in {time.time() - t0:.0f} s: {video}", flush=True)
+    return video
+
+
 def run(job, draft=False):
+    if job.get('kind') == 'famitsu':
+        return famitsu(job, draft)
     t0 = time.time()
     for item in job.get('footage', []):
         fetch(item)
