@@ -1,0 +1,68 @@
+{
+ "id": "2026-10-22-ffxiv-php-new-logins-suspended",
+ "title": "Final Fantasy XIV: new logins back after about 20 hours suspended over a PHP flaw; save-data backup still off",
+ "game": "Final Fantasy XIV",
+ "companies": [
+  "Square Enix"
+ ],
+ "category": "policy",
+ "genre": [
+  "live service/MMO"
+ ],
+ "related": [
+  "2026-10-21-cygames-php-emergency-maintenance"
+ ],
+ "sources": [
+  {
+   "role": "publisher",
+   "url": "https://na.finalfantasyxiv.com/lodestone/news/detail/682d63eac6bb6c380a0b1b16bbeb0efd45c13ad5",
+   "time": "2026-10-21T16:50Z",
+   "note": "new logins suspended on all worlds, critical PHP vulnerability"
+  },
+  {
+   "role": "publisher",
+   "url": "https://na.finalfantasyxiv.com/lodestone/news/detail/8e68057c27c6dc6c8cc1fd0dee9acce993ff503a",
+   "time": "2026-10-22T12:15Z",
+   "note": "logins resumed about 5:16 PDT 22 Oct; save-data server backup still suspended"
+  },
+  {
+   "role": "outlet",
+   "url": "https://dengekionline.com/",
+   "note": "World Quest and 僕の魔界を救って！ end service citing a PHP vulnerability (their official X posts)"
+  }
+ ],
+ "claims": [
+  {
+   "text": "new logins suspended on all worlds from 21 Oct, about 20 hours",
+   "status": "verified (Lodestone, 16:38Z JP to 12:16Z)"
+  },
+  {
+   "text": "new logins resumed 22 Oct",
+   "status": "verified (Lodestone 12:15Z; rechecked 13:05Z)"
+  },
+  {
+   "text": "save-data server backup still suspended",
+   "status": "verified (Lodestone 12:15Z; rechecked 13:05Z)"
+  },
+  {
+   "text": "two Japanese games ending service citing a PHP vulnerability",
+   "status": "verified (official X posts via Dengeki Online)"
+  }
+ ],
+ "status": "banked",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "رسمي",
+   "format": "trailer",
+   "theme": "cold",
+   "style": "glow",
+   "headline": "انتهى توقف الدخول الجديد / إلى Final Fantasy XIV",
+   "media": "cards/2026-10/ffxiv-php-new-logins-suspended-reel-v5.mp4",
+   "render": "runner (v5: line 3 moved to the dark armour shot, v4's line unreadable on the pale airship; output 13.2 to 13.8 s smear flag waived after looking: brick-wall cut)",
+   "time": "18:30 Dubai (suggested, evening Business Suite batch)",
+   "approved": "banked for the evening Business Suite batch; gate 13:05Z: Lodestone resumption notice unchanged, backup still suspended",
+   "notes": "Sound: our bed neon_c (the 1-minute trailer is narrated). Speech: none. Pace: pace_ok, each shot spans 2 to 3 of the montage's own cuts. Grammar stage: no required edits; fidelity fixes applied. Source: Steam 'FINAL FANTASY XIV Online in 1 Minute' 1080p. Sensitive: none."
+  }
+ }
+}
