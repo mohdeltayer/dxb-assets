@@ -2962,5 +2962,27 @@
   "job_secs": 226,
   "setup_min": 1.0,
   "story": "ps-pulse-no-gulf-launch"
+ },
+ {
+  "name": "ps-pulse-no-gulf-launch-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-22T02:30Z",
+  "stages": {
+   "checks": 1.0,
+   "montage": 68.9,
+   "text": 47.0,
+   "audio": 1.0,
+   "outro": 39.5
+  },
+  "total": 157.3,
+  "lane": "runner",
+  "queued_at": "2026-10-22T02:26:32Z",
+  "finished_at": "2026-10-22T02:30Z",
+  "render_min": 2.62,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 263,
+  "setup_min": 0.93,
+  "story": "ps-pulse-no-gulf-launch"
  }
 ]
