@@ -96,12 +96,13 @@ def _cache_for(src):
 
 def _download(item, dst):
     if 'steam' in item:
-        hls = {t['name']: t['hls'] for t in trailer.steam_trailers(item['steam'])}
-        name = [n for n in hls if n.startswith(item['trailer'])]
-        if not name:
+        # `trailer_id` (the number in the HLS path) picks one of several trailers sharing a name (Half-Life 2 has two)
+        hls = [t['hls'] for t in trailer.steam_trailers(item['steam']) if t['name'].startswith(item['trailer'])
+               and ('trailer_id' not in item or f"/{item['trailer_id']}/" in t['hls'])]
+        if not hls:
             raise ValueError(f"{item['file']}: no Steam trailer starting {item['trailer']!r} on app {item['steam']}")
         stem = os.path.splitext(item['file'])[0]
-        got = C.U + trailer.fetch(hls[name[0]], stem, item.get('start', 0), item.get('seconds', 120))
+        got = C.U + trailer.fetch(hls[0], stem, item.get('start', 0), item.get('seconds', 120))
         if os.path.abspath(got) != os.path.abspath(dst):
             shutil.move(got, dst)
     elif 'url' in item:
