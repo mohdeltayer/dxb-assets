@@ -9,14 +9,31 @@
       "mcp__AgentMail__update_message",
       "mcp__Postiz__integrationList",
       "mcp__Postiz__postsListTool",
-      "WebSearch"
+      "WebSearch",
+      "mcp__Publer__submit_publer_posts",
+      "mcp__Publer__upload_publer_media_from_url",
+      "mcp__Publer__upload_publer_media",
+      "mcp__Publer__reschedule_publer_post",
+      "mcp__Publer__update_publer_post",
+      "mcp__Publer__get_publer_job_status",
+      "mcp__Publer__lookup_publer_accounts",
+      "mcp__Publer__lookup_publer_posts",
+      "mcp__Publer__lookup_publer_media",
+      "mcp__Publer__list_publer_posts",
+      "mcp__Publer__get_recent_posts",
+      "mcp__Publer__get_post_insights",
+      "mcp__Publer__search_publer_docs"
     ],
     "ask": [
       "mcp__AgentMail__send_message",
       "mcp__AgentMail__reply_to_message",
       "mcp__AgentMail__forward_message",
       "mcp__AgentMail__delete_thread",
-      "mcp__AgentMail__delete_inbox"
+      "mcp__AgentMail__delete_inbox",
+      "mcp__Publer__delete_publer_posts",
+      "mcp__Publer__confirm_delete_publer_posts",
+      "mcp__Publer__delete_publer_label",
+      "mcp__Publer__confirm_delete_publer_label"
     ]
   }
 }
