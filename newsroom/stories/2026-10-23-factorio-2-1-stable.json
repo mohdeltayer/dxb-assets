@@ -1,7 +1,7 @@
 {
  "id": "2026-10-23-factorio-2-1-stable",
  "title": "Factorio 2.1 is stable (Wube, FFF-449)",
- "status": "building",
+ "status": "scheduled",
  "lane": "rolling queue",
  "chip": "متوفر الآن",
  "template": "explainer",
@@ -66,6 +66,94 @@
   "source kinds: Steam 1080p 'Trailer 2026' (new trailer of 23 Oct), FFF images (1120 px figures on plates at 0.73x; 4K postcard); decode clean",
   "DeepL forward pass (whole story): agrees; picked «صومعة الصواريخ» (DeepL) for rocket silo, «منصة الهبوط» over DeepL «مهبط الهبوط» (tautology), «شبكة الدوائر الكهربائية» (DeepL), «في إطلاق واحد» (DeepL) for mixed rockets",
   "gate 14:0xZ: FFF-449 read in full; releases API stable 2.1.23",
-  "grammar stage 14:07Z: required «إضافة Space Age» (glossary, not توسعة) applied; also applied: «أشهر» for «الصيف», dropped «مباشرة» and «التشيكي» (not in the primary), ARM64, heat exchanger added, «رسومات»، «كواكب جديدة»; on-screen: no required edits"
- ]
+  "grammar stage 14:07Z: required «إضافة Space Age» (glossary, not توسعة) applied; also applied: «أشهر» for «الصيف», dropped «مباشرة» and «التشيكي» (not in the primary), ARM64, heat exchanger added, «رسومات»، «كواكب جديدة»; on-screen: no required edits",
+  "decode clean, smear none on v1 and v2",
+  "go: rolling queue (Mohammad 14:20Z 'Fill it tonight, gap rule over caps'); scheduled in Publer 15:00Z (19:00 Dubai) on Instagram (Reel, Dubai location, source comment), X (source reply) and Threads"
+ ],
+ "director_qa": {
+  "round": 1,
+  "reel": "v1",
+  "verdict": "FIX",
+  "shots": [
+   [
+    "0",
+    "0-3.4",
+    "trailer 33.0",
+    "PASS",
+    "moving, corner clear"
+   ],
+   [
+    "1",
+    "3.0-6.5",
+    "postcard",
+    "PASS",
+    "logo out of crop"
+   ],
+   [
+    "2",
+    "6.1-9.7",
+    "platforms plate",
+    "FIX",
+    "UI text ~8 px: rebuild as enlarged crops"
+   ],
+   [
+    "3",
+    "9.3-12.9",
+    "unloader plate",
+    "PASS",
+    ""
+   ],
+   [
+    "4",
+    "12.5-16.1",
+    "IO plate",
+    "PASS",
+    ""
+   ],
+   [
+    "5",
+    "15.7-19.7",
+    "trailer 90.0",
+    "PASS",
+    "base footage under the Space Age line (soft note)"
+   ]
+  ],
+  "reel_level": "all PASS; plates to x 96-910; headline line 2 repeated the chip"
+ },
+ "director_qa_round2": {
+  "round": 2,
+  "reel": "v2",
+  "verdict": "PASS",
+  "shots": [
+   [
+    "0",
+    "0-3.4",
+    "headline",
+    "PASS",
+    "«يصل بنسخته المستقرة», no wrap, corner clear"
+   ],
+   [
+    "2",
+    "6.9-10.5",
+    "platforms plate",
+    "PASS",
+    "readable at phone size"
+   ],
+   [
+    "3",
+    "10.5-14.1",
+    "unloader",
+    "PASS",
+    ""
+   ],
+   [
+    "4",
+    "14.1-17.7",
+    "IO plate",
+    "PASS",
+    "small headings inside the dialog; the line carries it"
+   ]
+  ],
+  "reel_level": "19.7 s + end card; pace 3.4-3.6 s; last 2 s picture; trailer music -14 LUFS"
+ }
 }
