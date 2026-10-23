@@ -10,13 +10,6 @@
    "seconds": 240
   },
   {
-   "file": "mw4-reveal.mp4",
-   "steam": 1938090,
-   "trailer": "MW4 Reveal",
-   "start": 0,
-   "seconds": 240
-  },
-  {
    "file": "berg-skidmore.jpg",
    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Peter_Berg_by_Gage_Skidmore.jpg/1280px-Peter_Berg_by_Gage_Skidmore.jpg"
   }
@@ -187,7 +180,7 @@
    7,
    [
     [
-     "ويكتب الفيلمَ الكاتب\nتايلور شيريدان (Taylor Sheridan)",
+     "ويكتب سيناريو الفيلم\nتايلور شيريدان (Taylor Sheridan)",
      {
       "size": 50
      }
@@ -195,7 +188,7 @@
    ]
   ]
  ],
- "headline": "مخرج فيلم Call of Duty:\nلن يكون مجرد إطلاق نار",
+ "headline": "فيلم Call of Duty ليس مجرد\nإطلاق نار، حسب مخرجه",
  "head_size": 60,
  "label": "جديد",
  "source": "كوميك بوك (ComicBook)",
@@ -227,9 +220,15 @@
    }
   ]
  ],
- "track": [
-  "mw4-reveal.mp4",
-  40.0
+ "track": "bed",
+ "lowres_ok": true,
+ "block_ok": [
+  [
+   "mw4-campaign.mp4",
+   98.6,
+   98.95,
+   "looked: a hard scene cut from the cockpit window blinds to the flipped vehicle; straight blind edges, no decode damage"
+  ]
  ],
- "lowres_ok": true
+ "sound": "neon_d"
 }
