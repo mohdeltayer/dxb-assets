@@ -1,0 +1,210 @@
+{
+ "name": "arkane-lyon-closure-report",
+ "out": "cards/2026-10/arkane-lyon-closure-report-reel-v3.mp4",
+ "footage": [
+  {
+   "file": "dishonored2-announce.mp4",
+   "steam": 403640,
+   "trailer": "Dishonored 2 Announce Trailer",
+   "start": 0,
+   "seconds": 150
+  },
+  {
+   "file": "dishonored2-gameplay.mp4",
+   "steam": 403640,
+   "trailer": "Dishonored 2 Gameplay Trailer",
+   "start": 0,
+   "seconds": 150
+  }
+ ],
+ "shots": [
+  [
+   "dishonored2-announce.mp4",
+   24.38,
+   3.02,
+   [
+    [
+     0.0,
+     0.316
+    ],
+    [
+     2.205,
+     0.233
+    ]
+   ]
+  ],
+  [
+   "dishonored2-announce.mp4",
+   28.0,
+   3.0,
+   [
+    [
+     0.0,
+     0.333
+    ],
+    [
+     2.142,
+     0.21
+    ]
+   ]
+  ],
+  [
+   "dishonored2-announce.mp4",
+   62.0,
+   3.3,
+   0.55
+  ],
+  [
+   "dishonored2-announce.mp4",
+   71.1,
+   2.6,
+   [
+    [
+     0.0,
+     0.465
+    ]
+   ]
+  ],
+  [
+   "dishonored2-announce.mp4",
+   73.8,
+   2.7,
+   [
+    [
+     0.0,
+     0.48
+    ]
+   ]
+  ],
+  [
+   "dishonored2-announce.mp4",
+   112.0,
+   1.75,
+   [
+    [
+     0.0,
+     0.508
+    ]
+   ]
+  ],
+  [
+   "dishonored2-announce.mp4",
+   114.0,
+   2.0,
+   [
+    [
+     0.0,
+     0.601
+    ]
+   ]
+  ],
+  [
+   "dishonored2-announce.mp4",
+   120.0,
+   1.6,
+   [
+    [
+     0.0,
+     0.475
+    ]
+   ]
+  ],
+  [
+   "dishonored2-announce.mp4",
+   80.0,
+   2.2,
+   [
+    [
+     0.0,
+     0.545
+    ]
+   ]
+  ],
+  [
+   "dishonored2-announce.mp4",
+   88.0,
+   1.6,
+   [
+    [
+     0.0,
+     0.58
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "حسب صحيفة لوموند (Le Monde)،\nتريد مايكروسوفت (Microsoft) إغلاقه",
+     {
+      "size": 56
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   5,
+   [
+    [
+     "ما يهدد 217 وظيفة، ويقول\nممثل نقابي إن تطوير Marvel's Blade\nقارب نهايته",
+     {
+      "size": 56
+     }
+    ]
+   ]
+  ],
+  [
+   6,
+   9,
+   [
+    [
+     "وتقول مايكروسوفت إنها تبحث\nعن شريك لدعم المرحلة التالية\nمن تطوير اللعبة",
+     {
+      "size": 56
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   1,
+   9,
+   "لقطات من Dishonored 2"
+  ]
+ ],
+ "headline": "استوديو أركين (Arkane)\nمهدد بالإغلاق في فرنسا",
+ "head_size": 60,
+ "label": "تقرير",
+ "source": "لوموند",
+ "date": "23 Oct 2026",
+ "theme": "cold",
+ "style": "glow",
+ "template": "trailer",
+ "skin": "house",
+ "track": [
+  "dishonored2-gameplay.mp4",
+  2.7
+ ],
+ "block_ok": [
+  [
+   1.62,
+   3.92,
+   "looked at the source frames (announce trailer 26-29, 62-65, 80-90 s): straight architecture, decode clean; not damage; ranges widened for the v2 retime"
+  ],
+  [
+   7.22,
+   9.42,
+   "looked at the source frames (announce trailer 26-29, 62-65, 80-90 s): straight architecture, decode clean; not damage; ranges widened for the v2 retime"
+  ],
+  [
+   17.42,
+   20.22,
+   "looked at the source frames (announce trailer 26-29, 62-65, 80-90 s): straight architecture, decode clean; not damage; ranges widened for the v2 retime"
+  ]
+ ]
+}
