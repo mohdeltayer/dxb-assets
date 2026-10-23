@@ -3556,5 +3556,27 @@
   "job_secs": 180,
   "setup_min": 3.52,
   "story": "mass-effect-universe-trailer-leak"
+ },
+ {
+  "name": "mw4-launch-switch-2-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-23T04:00Z",
+  "stages": {
+   "checks": 0.6,
+   "montage": 43.0,
+   "text": 40.9,
+   "audio": 0.8,
+   "outro": 31.8
+  },
+  "total": 117.0,
+  "lane": "runner",
+  "queued_at": "2026-10-23T03:56:45Z",
+  "finished_at": "2026-10-23T04:00Z",
+  "render_min": 1.95,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 181,
+  "setup_min": 0.85,
+  "story": "mw4-launch-switch-2"
  }
 ]
