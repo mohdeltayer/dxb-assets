@@ -100,9 +100,10 @@ jobs:
           python templates/render_job.py text "$JOB"
 
       - name: Tools
+        timeout-minutes: 10                        # a hung apt or pip mirror held two runs for 15 minutes on 23 Oct
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq ffmpeg tesseract-ocr > /dev/null
+          sudo apt-get -o Acquire::Retries=3 -o Acquire::http::Timeout=30 update -qq
+          sudo apt-get -o Acquire::Retries=3 -o Acquire::http::Timeout=30 install -y -qq ffmpeg tesseract-ocr > /dev/null
           python -m pip install -q --upgrade pip
           python -m pip install -q torch torchvision --index-url https://download.pytorch.org/whl/cpu   # a matching pair, or YOLO's nms op is missing
           python -m pip install -q pillow numpy soundfile pedalboard ultralytics opencv-python-headless
