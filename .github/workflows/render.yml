@@ -102,11 +102,14 @@ jobs:
       - name: Tools
         timeout-minutes: 10                        # a hung apt or pip mirror held two runs for 15 minutes on 23 Oct
         run: |
-          echo "$(date -u +%T) apt update"
-          sudo apt-get -o Acquire::Retries=3 -o Acquire::http::Timeout=30 update -qq
-          echo "$(date -u +%T) apt install"
-          sudo rm -f /var/lib/man-db/auto-update     # the man-db trigger, and any debconf prompt behind -qq, held the step for 10 minutes (23 Oct)
-          sudo DEBIAN_FRONTEND=noninteractive apt-get -o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold install -y -q --no-install-recommends ffmpeg tesseract-ocr tesseract-ocr-eng | tail -3
+          echo "$(date -u +%T) apt"
+          # four runs on 23 Oct sat silent at apt install for 10 minutes: a fresh VM's unattended-upgrades holds the dpkg lock
+          sudo systemctl stop unattended-upgrades apt-daily.service apt-daily-upgrade.service apt-daily.timer apt-daily-upgrade.timer 2>/dev/null || true
+          APT="sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=120 -o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold"
+          sudo rm -f /var/lib/man-db/auto-update
+          need=""; command -v ffmpeg >/dev/null || need="ffmpeg"; command -v tesseract >/dev/null || need="$need tesseract-ocr tesseract-ocr-eng"
+          if [ -n "$need" ]; then $APT update -qq 2>&1 | tail -3; echo "$(date -u +%T) apt install $need"; timeout 420 $APT install -y -q --no-install-recommends $need 2>&1 | tail -5; fi
+          command -v ffmpeg
           echo "$(date -u +%T) pip"
           python -m pip install -q --upgrade pip
           python -m pip install -q --timeout 60 --retries 3 torch torchvision --index-url https://download.pytorch.org/whl/cpu   # a matching pair, or YOLO's nms op is missing
