@@ -44,6 +44,99 @@
   },
   "notes": [
     "grammar stage 12:40Z: no required edits; applied: SHIFT UP named in X/Threads, the full tweet quoted, «التصويب المجانية بين فريقين», Bayonetta costumes phrased as planned for Stellar Blade",
-    "shot sheet: replaced a disclaimer-text frame (6.0), the 'New Hero' title (OW 15.7), a source smear (111.9 to 112.3), a revealing close-up and creature splatter"
-  ]
+    "shot sheet: replaced a disclaimer-text frame (6.0), the 'New Hero' title (OW 15.7), a source smear (111.9 to 112.3), a revealing close-up and creature splatter",
+    "director QA round 1 (v1): FIX, five shot changes and a stand-in credit, applied in v2 (13:04Z); v2 goes back for the changed shots only"
+  ],
+  "director_qa": {
+    "round": 1,
+    "reel": "v1",
+    "verdict": "FIX",
+    "shots": [
+      [
+        "0",
+        "0.00-0.95",
+        "sb 56.0-57.0",
+        "PASS",
+        "cover, face close-up; headline legible"
+      ],
+      [
+        "1",
+        "0.95-2.15",
+        "sb 57.2-58.4",
+        "FIX",
+        "ends on a 0.13 s city flash: dur 1.0"
+      ],
+      [
+        "2",
+        "2.15-3.62",
+        "sb 98.0-99.5",
+        "PASS",
+        "face-led; nearest to the content line, clothed"
+      ],
+      [
+        "3",
+        "3.62-4.39",
+        "sb 50.0-50.8",
+        "PASS",
+        "centred face"
+      ],
+      [
+        "4",
+        "4.39-6.79",
+        "sb 44.0-46.4",
+        "FIX",
+        "EVE tiny at the edge, scene change at 46.1: replaced (sb 53.0 0.9, sb 89.0 1.3)"
+      ],
+      [
+        "5",
+        "6.79-7.72",
+        "ow 10.4-11.4",
+        "PASS",
+        "wide arena, no HUD"
+      ],
+      [
+        "6",
+        "7.72-8.69",
+        "ow 30.0-31.0",
+        "FIX",
+        "first-person, cut sign at the edge: replaced by ow 14.6 0.5 (clear of 'New Hero')"
+      ],
+      [
+        "7",
+        "8.69-10.25",
+        "ow 22.0-23.6",
+        "FIX",
+        "turns first-person at 9.4: dur 0.7"
+      ],
+      [
+        "8",
+        "10.25-12.05",
+        "ow 94.0-95.8",
+        "PASS",
+        "caption outside the crop"
+      ],
+      [
+        "9",
+        "12.05-12.95",
+        "sb 84.0-84.9",
+        "FIX",
+        "HUD from 84.5: dur 0.45"
+      ],
+      [
+        "10",
+        "12.95-14.15",
+        "sb 12.0-13.2",
+        "PASS",
+        ""
+      ],
+      [
+        "11",
+        "14.15-15.75",
+        "sb 92.0-93.8",
+        "PASS",
+        "stylised creature, no gore"
+      ]
+    ],
+    "reel_level": "cover PASS; length 15.75 s PASS; pace PASS; last 2 s picture PASS; sound trailer score 74.0, speech none PASS; stand-in credit recommended (added)"
+  }
 }
