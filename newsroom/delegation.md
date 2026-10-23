@@ -83,6 +83,22 @@ and readable at phone size, the name plate gives the role, the photo source in
 the brief is on the allowed list (press kit, awarding body, licensed and
 credited), and the first frame shows the person and the game together; a
 missing person window on such a story is a send-back.
+QA format (advisor, 23 Oct 2026; CLAUDE.md "Director QA format"). For every
+shot, pull one frame (the shot's middle, plus its first frame when a line
+enters there) and check: framing (subject in the 9:16 crop, no side-on face
+without look room, no cut text at the edges); text (readable at phone size,
+inside the safe zone, first word Arabic, up long enough); picture (no decode
+damage or blockiness, no title card or slate, nothing graphic); sound (what
+plays under the shot: music, voiced and subtitled, or our bed; no word cut at
+the cut); reason (the shot shows what its line says). Return a compact table,
+one row per shot: shot, time (Reel seconds and source seconds), PASS or FIX
+with the one change needed. Then the Reel-level checks once: cover as a grid
+tile, length against the template target, a change every 3 to 4 s, the last
+2 s a picture, sound per the trailer-sound rule (our bed only with its stated
+reason). Verdict: PASS, or the list of fixes. On a second look, check the
+changed shots only (plus the Reel-level line). The main session pastes the
+table into the story file's draft notes (`director_qa`); the evidence is the
+committed strip and sheet, no extra files. Two rounds of fixes at most.
 
 **Footage (sonnet).** For a named game: list its Steam trailers
 (`templates/trailer.py`), Nintendo store `publicId`s under its own nsuid, or

@@ -1282,6 +1282,33 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   colour, an optional «الصورة: ...» credit); every plate line opens on an
   Arabic word, and a photo enlarged past 2x into the window stops the render.
   Live posts (the Miyamoto Reel) stay as they are unless Mohammad asks.
+- Director QA format (advisor, 23 Oct 2026, agreed with Mohammad). Adds structure
+  to the director step (21 Oct). The format is borrowed from the video-qa skill
+  in universal-video-skills (MIT) as reference only; that pack is not loaded as
+  a skill, since it is about generating AI video and our rules use official
+  footage only.
+  1. Per shot, a short checklist with a frame as evidence: for every shot in the
+     draft, one frame (the shot's middle, plus its first frame if a line enters
+     there), checked for framing (subject visible in the 9:16 crop, no side-on
+     face without look room, no cut text at the edges), text (line readable at
+     phone size, inside the safe zone, first word Arabic, on screen long
+     enough), picture (no decode damage or blockiness, no title card or slate,
+     nothing graphic), sound (what plays under this shot: music, voiced and
+     subtitled, or our bed; no word cut at the cut) and reason (the shot shows
+     what its line says).
+  2. Written verdict: each shot PASS, or FIX with the one change needed; the
+     Reel PASS, or the list of fixes. After fixes, the director looks again at
+     the changed shots only. Saved in the story file's draft notes as a compact
+     table (shot, time, verdict, note); the frames are the strip or sheet
+     already committed, so no extra files.
+  3. Reel-level checks, once per Reel: first frame and cover readable as a grid
+     tile; total length against the template target; something changes on
+     screen every 3 to 4 seconds; the last two seconds before the end card are
+     a picture; the sound choice matches the trailer-sound rule (23 Oct), our
+     bed only with its stated reason.
+  4. Limits: two rounds of fixes at most, then pass with a note or move the
+     story to a simpler template, as now. The director judges sound from the
+     transcript and measurements, not by ear, and says so when unsure.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under

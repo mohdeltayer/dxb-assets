@@ -188,6 +188,14 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     verdict; up to two send-backs, then pass with a note or a simpler
     template. It judges sound from transcripts and measurements and says so
     when unsure (CLAUDE.md "Director review, and voiced clips allowed").
+  - Director QA format (23 Oct): per shot one frame as evidence (the middle,
+    plus the first if a line enters there), checked for framing, text,
+    picture, sound and reason; each shot PASS or FIX with the one change; the
+    Reel PASS or the fix list; after fixes only the changed shots are looked
+    at again. Reel-level once: cover as a grid tile, length against target,
+    a change every 3 to 4 s, last 2 s a picture, sound per the trailer-sound
+    rule. The table (shot, time, verdict, note) goes in the story file's
+    draft notes; the committed strip or sheet is the evidence.
   - Trailer sound is the default (23 Oct). Our bed only for: sales charts
     (Famitsu), numbers Reels and our graphics; stills and silent footage;
     retro and on-this-day (retro flavour), tribute (calm bed); breaking news
