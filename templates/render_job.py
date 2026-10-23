@@ -25,6 +25,7 @@ unreleased material.
       "sound": null, "country": null, "pace_ok": false, "lowres_ok": false,
       "ground_theme": "gold",                                        # for -gfx- graphics on the living ground
       "ground_footage": ["cp-er-trailer.mp4", 40.0],                 # card-led: the game's trailer behind the cards, moving
+                                                                     # (a -gfx- shot may name its own: [png, [file, start], secs, null])
       "skin": "house",                                               # game skins pilot: house, scifi or fantasy (format ledger)
       "person": [["miyamoto.jpg", "شيغيرو مياموتو", "مبتكر Mario وZelda", 0.4, 3.8,      # people stories show the person
                   {"focus": [0.5, 0.3], "credit": null}]],                      # (23 Oct 2026); photo fetched as footage
@@ -140,6 +141,8 @@ def shots(job, draft=False, build=True):
             if build:
                 os.makedirs(C.U + NG.SUB, exist_ok=True)
                 gf = job.get('ground_footage')    # [file, start]: the game's own trailer behind the card (advisor, 20 Oct 2026)
+                if isinstance(start, list):       # per card: ["x-gfx-a.png", [file, start], secs, null] (multi-game numbers)
+                    gf = start
                 NG.slide(C.U + f, secs, job.get('ground_theme', job['theme']), C.U + clip,
                          seed=sum(map(ord, job['name'])), t0=t, fast=draft,
                          footage=(C.U + gf[0], gf[1]) if gf else None)

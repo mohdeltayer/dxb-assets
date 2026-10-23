@@ -1,0 +1,164 @@
+{
+ "name": "goty-winners-sales-alinea",
+ "out": "cards/2026-10/goty-winners-sales-alinea-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "co33-launch.mp4",
+   "steam": 1903340,
+   "trailer": "Launch Trailer",
+   "start": 0,
+   "seconds": 120
+  },
+  {
+   "file": "eldenring-launch.mp4",
+   "steam": 1245620,
+   "trailer": "ELDEN RING - Rise, Tarnished",
+   "start": 0,
+   "seconds": 120
+  },
+  {
+   "file": "bg3-launch.mp4",
+   "steam": 1086940,
+   "trailer": "Baldur's Gate 3 - Launch Trailer",
+   "start": 0,
+   "seconds": 120
+  },
+  {
+   "file": "astrobot-launch-4k.mp4",
+   "url": "https://assets.ign.com/videos/zencoder/2024/08/30/3840/ee968189-a8bc-46c1-8c9f-11152539cd9a-1725031586.mp4"
+  }
+ ],
+ "shots": [
+  [
+   "goty-gfx-co33.png",
+   [
+    "co33-launch.mp4",
+    45.0
+   ],
+   3.4,
+   null
+  ],
+  [
+   "goty-gfx-astro.png",
+   [
+    "astrobot-launch-4k.mp4",
+    22.0
+   ],
+   3.2,
+   null
+  ],
+  [
+   "goty-gfx-bg3.png",
+   [
+    "bg3-launch.mp4",
+    20.5
+   ],
+   3.2,
+   null
+  ],
+  [
+   "goty-gfx-er.png",
+   [
+    "eldenring-launch.mp4",
+    59.0
+   ],
+   3.2,
+   null
+  ],
+  [
+   "co33-launch.mp4",
+   74.0,
+   0.9,
+   [
+    [
+     0.0,
+     0.544
+    ]
+   ]
+  ],
+  [
+   "co33-launch.mp4",
+   96.5,
+   2.9,
+   [
+    [
+     0.0,
+     0.378
+    ]
+   ]
+  ],
+  [
+   "bg3-launch.mp4",
+   32.0,
+   1.3,
+   [
+    [
+     0.0,
+     0.761
+    ]
+   ]
+  ],
+  [
+   "astrobot-launch-4k.mp4",
+   31.0,
+   1.2,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "gfx": [
+  {
+   "file": "goty-gfx-co33.png",
+   "kind": "fact",
+   "label": "فائزة 2025: Clair Obscur",
+   "value": "8.7 مليون نسخة",
+   "note": "وإيرادات 366 مليون دولار"
+  },
+  {
+   "file": "goty-gfx-astro.png",
+   "kind": "fact",
+   "label": "فائزة 2024: Astro Bot",
+   "value": "4.7 مليون نسخة",
+   "note": "وإيرادات 291 مليون دولار"
+  },
+  {
+   "file": "goty-gfx-bg3.png",
+   "kind": "fact",
+   "label": "فائزة 2023: Baldur's Gate 3",
+   "value": "23.2 مليون نسخة",
+   "note": "وإيرادات تتجاوز 1.2 مليار دولار"
+  },
+  {
+   "file": "goty-gfx-er.png",
+   "kind": "fact",
+   "label": "فائزة 2022: Elden Ring",
+   "value": "36.4 مليون نسخة",
+   "note": "وإيرادات تجاوزت ملياري دولار"
+  }
+ ],
+ "lines": [
+  [
+   4,
+   7,
+   [
+    "الأرقام تقديرات لشركة ألينيا\nأناليتيكس (Alinea Analytics)"
+   ]
+  ]
+ ],
+ "headline": "كم نسخة بيعت من آخر أربع\nألعاب فازت بلقب لعبة العام؟",
+ "head_size": 60,
+ "label": "تقرير",
+ "source": "ألينيا أناليتيكس",
+ "date": "22 Oct 2026",
+ "theme": "spectacle",
+ "ground_theme": "gold",
+ "style": "bold",
+ "template": "numbers",
+ "skin": "house",
+ "track": "bed",
+ "sound": "stats"
+}
