@@ -5,6 +5,13 @@
   {
    "file": "gamemaker-gfx-keyart.png",
    "repo": "live/2026-10-23/gamemaker/gamemaker-gfx-keyart.png"
+  },
+  {
+   "file": "gamemaker-trailer.mp4",
+   "steam": 1670460,
+   "trailer": "Nevercake",
+   "start": 0,
+   "seconds": 60
   }
  ],
  "gfx": [
@@ -13,14 +20,14 @@
    "kind": "fact",
    "label": "مجانًا للألعاب التجارية من",
    "value": "1 يناير 2027",
-   "note": "من دون شراء ترخيص Professional"
+   "note": "عبر بيئة التشغيل الجديدة GMRT"
   },
   {
    "file": "gamemaker-gfx-console.png",
    "kind": "fact",
-   "label": "التصدير إلى المنصات المنزلية",
-   "value": "Enterprise",
-   "note": "ما زال يتطلب هذا الترخيص"
+   "label": "التصدير إلى أجهزة الألعاب المنزلية",
+   "value": "ترخيص Enterprise",
+   "note": "ما زال مطلوبًا مع اعتماد المطور"
   }
  ],
  "shots": [
@@ -43,10 +50,19 @@
    null
   ],
   [
-   "gamemaker-gfx-keyart.png",
-   null,
-   3.4,
-   null
+   "gamemaker-trailer.mp4",
+   22.0,
+   3.7,
+   [
+    [
+     0.0,
+     0.676
+    ],
+    [
+     2.739,
+     0.0
+    ]
+   ]
   ]
  ],
  "lines": [
@@ -67,7 +83,7 @@
    3,
    [
     [
-     "وبها صُنعت Undertale وChicory",
+     "وبأداة GameMaker\nصُنعت Undertale وChicory",
      {
       "size": 58
      }
@@ -75,10 +91,10 @@
    ]
   ]
  ],
- "headline": "نشر ألعاب GameMaker تجاريًا\nبلا ترخيص مدفوع",
+ "headline": "نشر ألعاب GameMaker تجاريًا\nبلا ترخيص Professional",
  "head_size": 60,
  "label": "رسمي",
- "source": "موقع GameMaker",
+ "source": "مدونة GameMaker",
  "date": "23 Oct 2026",
  "theme": "cold",
  "ground_theme": "cold",
@@ -86,5 +102,12 @@
  "template": "explainer",
  "skin": "house",
  "track": "bed",
- "sound": "neon"
+ "sound": "neon",
+ "credits": [
+  [
+   3,
+   3,
+   "لقطات من إعلان GameMaker"
+  ]
+ ]
 }
