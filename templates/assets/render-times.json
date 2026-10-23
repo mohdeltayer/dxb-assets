@@ -4744,5 +4744,27 @@
   "job_secs": 202,
   "setup_min": 0.88,
   "story": "steins-gate-reboot-eu-physical-delay"
+ },
+ {
+  "name": "cyberpunk-2077-witcher-3-gear-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-23T17:04Z",
+  "stages": {
+   "checks": 0.5,
+   "montage": 32.8,
+   "text": 35.5,
+   "audio": 0.8,
+   "outro": 33.9
+  },
+  "total": 103.5,
+  "lane": "runner",
+  "queued_at": "2026-10-23T17:00:39Z",
+  "finished_at": "2026-10-23T17:04Z",
+  "render_min": 1.72,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 211,
+  "setup_min": 0.92,
+  "story": "cyberpunk-2077-witcher-3-gear"
  }
 ]
