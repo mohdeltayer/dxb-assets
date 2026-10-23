@@ -4634,5 +4634,27 @@
   "job_secs": 270,
   "setup_min": 1.03,
   "story": "arkane-lyon-closure-report"
+ },
+ {
+  "name": "samurai-shodown-film-the-arena-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-23T16:04Z",
+  "stages": {
+   "checks": 0.7,
+   "montage": 62.5,
+   "text": 36.4,
+   "audio": 1.0,
+   "outro": 48.1
+  },
+  "total": 148.6,
+  "lane": "runner",
+  "queued_at": "2026-10-23T15:59:44Z",
+  "finished_at": "2026-10-23T16:04Z",
+  "render_min": 2.48,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 280,
+  "setup_min": 0.97,
+  "story": "samurai-shodown-film-the-arena"
  }
 ]
