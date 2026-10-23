@@ -5030,5 +5030,27 @@
   "job_secs": 220,
   "setup_min": 3.43,
   "story": "netflix-xbox-rights-talks"
+ },
+ {
+  "name": "dbd-chucky-chapter-leaving-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-23T18:55Z",
+  "stages": {
+   "checks": 0.7,
+   "montage": 31.5,
+   "text": 32.4,
+   "audio": 0.3,
+   "outro": 33.9
+  },
+  "total": 98.8,
+  "lane": "runner",
+  "queued_at": "2026-10-23T18:49:59Z",
+  "finished_at": "2026-10-23T18:55Z",
+  "render_min": 1.65,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 132,
+  "setup_min": 3.4,
+  "story": "dbd-chucky-chapter-leaving"
  }
 ]
