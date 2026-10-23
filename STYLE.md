@@ -395,7 +395,11 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     so in its commit. Variety unchanged: no two in a row on one game or
     publisher, no third on one template, card-led one in three over six,
     four per template per Dubai day; reports and rumours at most one in
-    three and re-checked before queuing. CLAUDE.md, "Constant coverage".
+    three and re-checked before queuing. When the caps would leave a gap,
+    he has ruled for the gap rule night by night (16, 17 and 23 Oct: the
+    per-template and card-led caps give way; no third in a row, no two in a
+    row on one game or publisher and reports one in three still hold); ask
+    each time. CLAUDE.md, "Constant coverage".
   - Silence rule (batches he asks for outside a slot): no reply 30 minutes
     before the first time counts as a go.
 - **Breaking lane:**
