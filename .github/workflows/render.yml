@@ -108,8 +108,13 @@ jobs:
           APT="sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=120 -o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold"
           sudo rm -f /var/lib/man-db/auto-update
           need=""; command -v ffmpeg >/dev/null || need="ffmpeg"; command -v tesseract >/dev/null || need="$need tesseract-ocr tesseract-ocr-eng"
-          if [ -n "$need" ]; then $APT update -qq 2>&1 | tail -3; echo "$(date -u +%T) apt install $need"; timeout 420 $APT install -y -q --no-install-recommends $need 2>&1 | tail -5; fi
-          command -v ffmpeg
+          if [ -n "$need" ]; then $APT update -qq 2>&1 | tail -3; echo "$(date -u +%T) apt install $need"; timeout 150 $APT install -y -q --no-install-recommends $need 2>&1 | tail -5 || true; fi
+          if ! command -v ffmpeg >/dev/null; then                # the Azure apt mirror stalled mid-download on 23 Oct: a static build from GitHub instead
+            echo "$(date -u +%T) static ffmpeg"
+            curl -sSL --retry 3 --max-time 180 -o "$RUNNER_TEMP/ff.tar.xz" https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz
+            tar -xJf "$RUNNER_TEMP/ff.tar.xz" -C "$RUNNER_TEMP" && sudo cp "$RUNNER_TEMP"/ffmpeg-master-latest-linux64-gpl/bin/ff* /usr/local/bin/
+          fi
+          command -v ffmpeg; command -v tesseract || echo "tesseract missing: sheet text checks will warn"
           echo "$(date -u +%T) pip"
           python -m pip install -q --upgrade pip
           python -m pip install -q --timeout 60 --retries 3 torch torchvision --index-url https://download.pytorch.org/whl/cpu   # a matching pair, or YOLO's nms op is missing
