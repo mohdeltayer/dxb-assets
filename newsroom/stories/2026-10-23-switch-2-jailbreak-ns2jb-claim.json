@@ -6,7 +6,7 @@
   "Nintendo"
  ],
  "category": "report",
- "status": "building",
+ "status": "scheduled",
  "genre": [
   "industry/hardware"
  ],
@@ -63,5 +63,19 @@
    "instagram": "المصدر: منشور الباحث pepsipu في 22 أكتوبر 2026، وموقع نينتيندو لايف"
   }
  },
- "notes": "Brief: kind report (claim by its author), chip تقرير; Exit B (no Nintendo primary; the claimant's own post is the source). Template quote (card-led 2 of 6 at 10:30Z; trailer 5, split 6 today, clipcard third in a row, comparison third in a row). Hook: the claim in news words, never louder than the source («باحث أمني يعلن»). Opening beat: Mario on the highway (cover), the researcher's quote on the first line. Person: the researcher is the claimant; no official or licensed photo of him, so the Reel uses the game he modded (person rule 3). Footage: Mario Kart World 'free update' overview trailer from Nintendo's US store (720p only; IGN has no copy), credited «لقطات رسمية من Mario Kart World» so it does not pass for the mod; lowres_ok because no larger official copy exists; framing set by hand (container autofocus has no detector). Sound: our bed. Trailers checked: the store's three Mario Kart World videos are narrated throughout (the 83 s overview has speech in all but two pauses under 5 s; the 4-minute and 17-minute videos are narrated presentations), so no coherent stretch fits under story lines. Sensitive: no method, no link to the exploit, no repository or exploit name on screen or in the texts; the X reply links Nintendo Life, not the researcher's page. Decode clean (source). DeepL forward 09:25Z: «كسر الحماية» and «ثغرة برمجية» match ours; DeepL rendered the name «حاجاميد», ours «حاج حميد» with the Latin in brackets. Grammar stage 09:31Z: on-screen text unchanged (no required edits); required: Nintendo bracket at its first caption mention, Nintendo Life bracket in the X reply. Applied from its notes: caption hook hedged «ما يصفه بأول ثغرة»; the paraphrase taken out of quote marks; 'to my knowledge' kept in the X text; «مقاطع» kept (his post carries gameplay videos). X reply links Nintendo Life, not the researcher's page (it hosts the exploit download). Surname «حاج حميد» is a transliteration, not in the glossary: for Mohammad to confirm."
+ "notes": "Brief: kind report (claim by its author), chip تقرير; Exit B (no Nintendo primary; the claimant's own post is the source). Template quote (card-led 2 of 6 at 10:30Z; trailer 5, split 6 today, clipcard third in a row, comparison third in a row). Hook: the claim in news words, never louder than the source («باحث أمني يعلن»). Opening beat: Mario on the highway (cover), the researcher's quote on the first line. Person: the researcher is the claimant; no official or licensed photo of him, so the Reel uses the game he modded (person rule 3). Footage: Mario Kart World 'free update' overview trailer from Nintendo's US store (720p only; IGN has no copy), credited «لقطات رسمية من Mario Kart World» so it does not pass for the mod; lowres_ok because no larger official copy exists; framing set by hand (container autofocus has no detector). Sound: our bed. Trailers checked: the store's three Mario Kart World videos are narrated throughout (the 83 s overview has speech in all but two pauses under 5 s; the 4-minute and 17-minute videos are narrated presentations), so no coherent stretch fits under story lines. Sensitive: no method, no link to the exploit, no repository or exploit name on screen or in the texts; the X reply links Nintendo Life, not the researcher's page. Decode clean (source). DeepL forward 09:25Z: «كسر الحماية» and «ثغرة برمجية» match ours; DeepL rendered the name «حاجاميد», ours «حاج حميد» with the Latin in brackets. Grammar stage 09:31Z: on-screen text unchanged (no required edits); required: Nintendo bracket at its first caption mention, Nintendo Life bracket in the X reply. Applied from its notes: caption hook hedged «ما يصفه بأول ثغرة»; the paraphrase taken out of quote marks; 'to my knowledge' kept in the X text; «مقاطع» kept (his post carries gameplay videos). X reply links Nintendo Life, not the researcher's page (it hosts the exploit download). Surname «حاج حميد» is a transliteration, not in the glossary: for Mohammad to confirm.",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "تقرير",
+   "format": "quote",
+   "theme": "cold",
+   "media": "cards/2026-10/switch-2-jailbreak-ns2jb-claim-reel-v1.mp4",
+   "render": "runner (96676f9; first run e12bb45 stopped on the output smear flag at 2.57-3.00 s, the circuit's striped kerbs, waived after looking)",
+   "director": "pass 1: pass; our bed signed off (overview trailer narrated 3.1-77.1 s, longest pause 4.9 s; 4- and 17-minute videos narrated); closing » lands correctly after Switch 2; optional trim of shot 9 skipped (L4 needs the reading time); 22 s before the end card, over the 12-20 s target because four two-line sentences need it",
+   "approved": "go: rolling queue; preview sent 09:45Z (first line: our bed)",
+   "gate": "gate 09:40Z: news search, no Nintendo statement or patch for ns2jb; earlier partial Switch 2 exploits exist (2025 userland, July 2026 milestone), so \"first\" stays his claim («على حد علمي»، «في ما يصفه»)",
+   "scheduled": "scheduled in Publer 10:30Z (14:30 Dubai): Instagram (Reel, source comment), X (Nintendo Life link reply), Threads; no location (Instagram location lookup failing)"
+  }
+ }
 }
