@@ -74,6 +74,7 @@
   "source kind: 1080p Steam trailer (no vertical cut or 4K found); decode clean (ffmpeg full decode, no errors).",
   "gate 18:05Z: primary read (DBD post 16:05Z), TheGamer 17:25Z; no change found.",
   "grammar stage 18:10Z: on screen none (source credit spelling «إنترأكتيف» → glossary «إنتراكتيف» applied in v2 with line 1 broken before «دمية»); post text: إنتراكتيف, X labels «دمية الرعب Chucky», IG drops «وبمناسبة رحيله» (motive not in the primary), IG hook now differs from the headline, X follow-up link on the source line.",
-  "director QA v1 18:40Z: FIX. #0 eyes crop follows the eye ([[0,0.62],[1.4,0.2],[3.2,0.16]]); #1 crop on the hand and cleaver (0.86); #6 ss4 replaced by ss_c229005b (blood on ss4's hand); #2-#5 PASS; decode clean, no smear; 16.1 s story. v2 also: source credit «بيهيفيور إنتراكتيف», line 1 broken before «دمية»."
+  "director QA v1 18:40Z: FIX. #0 eyes crop follows the eye ([[0,0.62],[1.4,0.2],[3.2,0.16]]); #1 crop on the hand and cleaver (0.86); #6 ss4 replaced by ss_c229005b (blood on ss4's hand); #2-#5 PASS; decode clean, no smear; 16.1 s story. v2 also: source credit «بيهيفيور إنتراكتيف», line 1 broken before «دمية».",
+  "director round 2 (v2) 18:55Z: #1, #6, line 1, cover PASS; FIX #0 crop lags the pan (eye measured at 0.56/0.30/0.23/0.10-0.15): focus [[0,0.56],[0.6,0.30],[1.2,0.18],[1.6,0.16],[3.2,0.16]]; #2 lengthened to 2.5 s for line 1's margin. v3 = last round."
  ]
 }
