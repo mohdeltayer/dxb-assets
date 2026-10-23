@@ -3600,5 +3600,27 @@
   "job_secs": 283,
   "setup_min": 1.07,
   "story": "mw4-launch-switch-2"
+ },
+ {
+  "name": "miyamoto-order-of-culture-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-23T04:11Z",
+  "stages": {
+   "checks": 0.6,
+   "montage": 29.5,
+   "text": 37.0,
+   "audio": 0.8,
+   "outro": 35.7
+  },
+  "total": 103.7,
+  "lane": "runner",
+  "queued_at": "2026-10-23T04:08:49Z",
+  "finished_at": "2026-10-23T04:11Z",
+  "render_min": 1.73,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 147,
+  "setup_min": 0.8,
+  "story": "miyamoto-order-of-culture"
  }
 ]
