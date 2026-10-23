@@ -7,7 +7,7 @@
   "BioWare"
  ],
  "category": "leak",
- "status": "building",
+ "status": "scheduled",
  "genre": [
   "RPG",
   "shooter"
@@ -57,8 +57,19 @@
    "instagram": "المصدر: كوتاكو (Kotaku) وفي جي سي (VGC)"
   }
  },
- "versions": [],
- "notes": "gate 01:25Z: Kotaku (with its update), VGC read; no EA statement. Chip تسريب; reports and leaks one in three (HLX 23:30Z, Dispatch 00:30Z, Black Flag 01:30Z, this 03:30Z). Leaked footage not used: the Reel is one continuous stretch of the official 2023 N7 teaser (IGN 4K), picture and its own score, credited «لقطات من عرض Mass Effect الرسمي (2023)», and the caption says the footage is not the leak. The Legendary Edition reveal trailer was dropped (letterboxed, 950 rows). Speech: none. Sensitive: none. Grammar stage: no required edits after giving Schreier his role word.",
+ "versions": [
+  {
+   "v": 3,
+   "file": "cards/2026-10/mass-effect-universe-trailer-leak-reel-v3.mp4",
+   "strip": "cards/2026-10/mass-effect-universe-trailer-leak-strip.jpg",
+   "template": "trailer",
+   "theme": "cold",
+   "sound": "trailer: official N7 teaser score (2023), no speech",
+   "length_s": 19.4,
+   "why": "director pass 2: credit low under the headline, then at the top, clear of the two-line story lines"
+  }
+ ],
+ "notes": "gate 01:25Z: Kotaku (with its update), VGC read; no EA statement. Chip تسريب; reports and leaks one in three (HLX 23:30Z, Dispatch 00:30Z, Black Flag 01:30Z, this 03:30Z). Leaked footage not used: the Reel is one continuous stretch of the official 2023 N7 teaser (IGN 4K), picture and its own score, credited «لقطات من عرض Mass Effect الرسمي (2023)», and the caption says the footage is not the leak. The Legendary Edition reveal trailer was dropped (letterboxed, 950 rows). Speech: none. Sensitive: none. Grammar stage: no required edits after giving Schreier his role word. | v2 runner flag 15.3 to 16.5 s looked at (neon door frame), waived. Director pass 2 (03:35Z): audio pass (-12.6 LUFS, TP -1.4), shots pass with note (dark teaser, never blank), one fix: credit crowding the lines; v3 applied it, frames checked 03:45Z. gate 03:37Z: Kotaku page read, update 'It's real' (Schreier) stands, EA has not commented; VGC same; news search found no denial. Label تسريب; footage credited as the official 2023 teaser. Instagram location not set (Publer location lookup fails). approved: go: rolling queue; preview sent 03:47Z. scheduled in Publer 04:00Z (08:00 Dubai): Instagram (Reel), X, Threads; follow-ups on X (Kotaku link) and Instagram (source line).",
  "labels": {
   "template": "trailer",
   "skin": "house",
