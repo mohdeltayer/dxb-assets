@@ -6,12 +6,12 @@
  "chip": "رسمي",
  "template": "split",
  "skin": "house",
- "sound": "our bed (neon_b): the only official trailer (Steam app 2656010, 'Dead by Daylight - Chucky Official Trailer') is a mock toy advert narrated end to end (4.4 to 64.6 s, gaps under 1.6 s), no music-only stretch and no other official trailer reachable (no YouTube); demucs voice stripping would leave artefacts. Director to sign off.",
+ "sound": "our bed (neon_b), signed off by the director 18:40Z. The only official trailer (Steam app 2656010; IGN 403, no YouTube) is a narrated mock toy advert. Pauses exist (26.2-29.8, 31.9-37.2, 40.1-46.3 s) but hold ambience and effects, not music (spectral flatness 0.3-0.6), and the longest coherent stretch (29.6-46.2 s) cannot hold lines 2 and 3 (6.93 s needed, 6.2 s pause) before 'Bring home...' at 46.3 s; the rest of the narration is unusable ('simply die', 'maiming, dismemberment'). Demucs not tried (last resort).",
  "genre": [
   "horror",
   "live service/MMO"
  ],
- "sensitive": "none (horror: no blood, no attack shots; the survivor-attack at 50.2 s and blood pools at 24 to 27 s and 42 to 46 s left out; closing still ss4 chosen over ss1, whose knife shows red)",
+ "sensitive": "none (horror: no blood, no attack shots; trailer blood pools 24-27 s, 42-46 s and the attack at 50.2 s left out; closing still is Steam screenshot ss_c229005b (Chucky running through snow, clean cleaver), replacing ss4, whose sill hand is smeared with blood)",
  "sources": [
   {
    "kind": "primary",
@@ -48,7 +48,7 @@
  "drafts": {
   "headline": "فصل Chucky يغادر متاجر\nلعبة Dead by Daylight",
   "lines": [
-   "أعلن حساب اللعبة أن فصل دمية\nالرعب Chucky سيُحذف من المتاجر",
+   "أعلن حساب اللعبة أن فصل\nدمية الرعب Chucky سيُحذف من المتاجر",
    "وكان قد وصل إلى اللعبة\nفي نوفمبر 2023",
    "ومن فتح محتواه قبل الموعد\nيحتفظ به داخل اللعبة"
   ],
@@ -73,6 +73,7 @@
   "shots and reasons: eyes close-up (the doll, the hook); hand takes the cleaver (Chucky in play, no wound); the house interior and stairs (his stalking ground, lines run here); sweater close-up (his signature stripes, line on what you keep); official screenshot of Chucky (the character leaving).",
   "source kind: 1080p Steam trailer (no vertical cut or 4K found); decode clean (ffmpeg full decode, no errors).",
   "gate 18:05Z: primary read (DBD post 16:05Z), TheGamer 17:25Z; no change found.",
-  "grammar stage 18:10Z: on screen none (source credit spelling «إنترأكتيف» → glossary «إنتراكتيف» applied in v2 with line 1 broken before «دمية»); post text: إنتراكتيف, X labels «دمية الرعب Chucky», IG drops «وبمناسبة رحيله» (motive not in the primary), IG hook now differs from the headline, X follow-up link on the source line."
+  "grammar stage 18:10Z: on screen none (source credit spelling «إنترأكتيف» → glossary «إنتراكتيف» applied in v2 with line 1 broken before «دمية»); post text: إنتراكتيف, X labels «دمية الرعب Chucky», IG drops «وبمناسبة رحيله» (motive not in the primary), IG hook now differs from the headline, X follow-up link on the source line.",
+  "director QA v1 18:40Z: FIX. #0 eyes crop follows the eye ([[0,0.62],[1.4,0.2],[3.2,0.16]]); #1 crop on the hand and cleaver (0.86); #6 ss4 replaced by ss_c229005b (blood on ss4's hand); #2-#5 PASS; decode clean, no smear; 16.1 s story. v2 also: source credit «بيهيفيور إنتراكتيف», line 1 broken before «دمية»."
  ]
 }
