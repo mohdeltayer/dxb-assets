@@ -3622,5 +3622,27 @@
   "job_secs": 147,
   "setup_min": 0.8,
   "story": "miyamoto-order-of-culture"
+ },
+ {
+  "name": "mw4-launch-switch-2-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-23T04:15Z",
+  "stages": {
+   "checks": 1.3,
+   "montage": 65.8,
+   "text": 63.1,
+   "audio": 1.1,
+   "outro": 54.7
+  },
+  "total": 185.9,
+  "lane": "runner",
+  "queued_at": "2026-10-23T04:11:04Z",
+  "finished_at": "2026-10-23T04:15Z",
+  "render_min": 3.1,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 284,
+  "setup_min": 1.02,
+  "story": "mw4-launch-switch-2"
  }
 ]
