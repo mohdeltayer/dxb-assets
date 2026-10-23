@@ -8,7 +8,7 @@
   "HAL Laboratory"
  ],
  "category": "subscription",
- "status": "building",
+ "status": "scheduled",
  "genre": [
   "family",
   "retro"
@@ -54,5 +54,19 @@
    "instagram": "المصدر: المقطع الدعائي الرسمي من نينتيندو أوف أمريكا (Nintendo of America)، 23 أكتوبر 2026"
   }
  },
- "notes": "Brief: kind subscription/catalogue, chip رسمي. Template stills (trailer 5 and split 6 today, card-led allowed but stills keeps the picture moving): our own 9:16 composites, each game's Game Boy screen from Nintendo's EU pages (3DS Virtual Console captures, 267x240 screen area) scaled up nearest-neighbour and framed over the game's blurred, dimmed key art (Nintendo EU share images), so nothing is enlarged by the reel; Pinball uses Nintendo EU's own 3DS VC gameplay clip composited the same way (32 s). Nintendo of America's new trailer is YouTube-only (no download route); the Avenging Spirit video on Nintendo's EU page is the 2022 arcade version, not the Game Boy game, so not used. Composites committed under live/2026-10-23/gb-classics/. Hook: three games join, one produced by Miyamoto (ties to his Order of Culture today). Opening beat: Avenging Spirit gameplay on the cover, push-in. Sound: retro bed (plainly retro games; our graphics and stills). Sensitive: none (Avenging Spirit's kidnapped girlfriend written neutrally as «الفتاة التي اختطفتها»). Length 22.3 s, over target: four two-line sentences. DeepL forward 09:50Z: «لعبة ألغاز»، «لعبة بينبول» match; DeepL «يستحوذ على الأعداء» for possess, ours «يتقمص أجساد الأعداء» kept (the game's mechanic); DeepL Arabic-lettered names ignored (house rule). Grammar stage 10:00Z: Reel line 1 «تتقمص فيها أجساد الأعداء» read as the game possessing (ambiguous unvocalised), changed to «يتقمص بطلها أجساد الآخرين» (re-render; run 677b51d cancelled). Line 4 shortened earlier for the safe zone («لمشتركي Nintendo Switch Online», 48). Caption: Miyamoto full name and bracket at the hook, «تتوفر» for Japan, «ليواجه المزارع الشرير», «طور مواجهة», «يمكن لعبها منفردًا»; genre word «أكشن» dropped (not in Nintendo's rundown); X attribution moved to Nintendo's claim (the Miyamoto credit is the game's credits, not Nintendo's rundown)."
+ "notes": "Brief: kind subscription/catalogue, chip رسمي. Template stills (trailer 5 and split 6 today, card-led allowed but stills keeps the picture moving): our own 9:16 composites, each game's Game Boy screen from Nintendo's EU pages (3DS Virtual Console captures, 267x240 screen area) scaled up nearest-neighbour and framed over the game's blurred, dimmed key art (Nintendo EU share images), so nothing is enlarged by the reel; Pinball uses Nintendo EU's own 3DS VC gameplay clip composited the same way (32 s). Nintendo of America's new trailer is YouTube-only (no download route); the Avenging Spirit video on Nintendo's EU page is the 2022 arcade version, not the Game Boy game, so not used. Composites committed under live/2026-10-23/gb-classics/. Hook: three games join, one produced by Miyamoto (ties to his Order of Culture today). Opening beat: Avenging Spirit gameplay on the cover, push-in. Sound: retro bed (plainly retro games; our graphics and stills). Sensitive: none (Avenging Spirit's kidnapped girlfriend written neutrally as «الفتاة التي اختطفتها»). Length 22.3 s, over target: four two-line sentences. DeepL forward 09:50Z: «لعبة ألغاز»، «لعبة بينبول» match; DeepL «يستحوذ على الأعداء» for possess, ours «يتقمص أجساد الأعداء» kept (the game's mechanic); DeepL Arabic-lettered names ignored (house rule). Grammar stage 10:00Z: Reel line 1 «تتقمص فيها أجساد الأعداء» read as the game possessing (ambiguous unvocalised), changed to «يتقمص بطلها أجساد الآخرين» (re-render; run 677b51d cancelled). Line 4 shortened earlier for the safe zone («لمشتركي Nintendo Switch Online», 48). Caption: Miyamoto full name and bracket at the hook, «تتوفر» for Japan, «ليواجه المزارع الشرير», «طور مواجهة», «يمكن لعبها منفردًا»; genre word «أكشن» dropped (not in Nintendo's rundown); X attribution moved to Nintendo's claim (the Miyamoto credit is the game's credits, not Nintendo's rundown).",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "رسمي",
+   "format": "stills",
+   "theme": "playful",
+   "media": "cards/2026-10/game-boy-nintendo-classics-oct-27-reel-v2.mp4",
+   "render": "runner (v2, 026aed9; v1 first run stopped on the safe zone at line 4, a retry was cancelled for the grammar fix)",
+   "director": "pass 1: send back (credit line on the screen's top row); pass 2: pass (credit clear of the screen, decode clean, smear none; retro bed signed off: stills and a silent composite, NoA trailer YouTube-only)",
+   "approved": "go: rolling queue; preview sent 10:08Z (first line: our bed)",
+   "gate": "gate 09:57Z: Nintendo Life rundown unchanged (no update note; 27 Oct; Japan same titles); no denial or date change found",
+   "scheduled": "scheduled in Publer 11:00Z (15:00 Dubai): Instagram (Reel, source comment), X (NoA trailer link reply), Threads; no location"
+  }
+ }
 }
