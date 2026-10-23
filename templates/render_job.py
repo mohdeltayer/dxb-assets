@@ -26,6 +26,8 @@ unreleased material.
       "ground_theme": "gold",                                        # for -gfx- graphics on the living ground
       "ground_footage": ["cp-er-trailer.mp4", 40.0],                 # card-led: the game's trailer behind the cards, moving
       "skin": "house",                                               # game skins pilot: house, scifi or fantasy (format ledger)
+      "person": [["miyamoto.jpg", "شيغيرو مياموتو", "مبتكر Mario وZelda", 0.4, 3.8,      # people stories show the person
+                  {"focus": [0.5, 0.3], "credit": null}]],                      # (23 Oct 2026); photo fetched as footage
       "gfx": [{"file": "x-gfx-fps.png", "kind": "fact", "label": "الأداء",   # cards drawn here with the Dubai font
                "value": "حتى 120", "note": "إطارًا في الثانية"}]              # (cardgfx.py), then laid on the ground
     }
@@ -252,6 +254,11 @@ def textcheck(job):
             reel.strip_layer(strip_items(job), f'{tmp}/s.png', job['theme'], skin=skin)
         for c in job.get('credits') or []:
             reel.credit_layer(c[2], f'{tmp}/c.png')
+        for x in job.get('person') or []:          # needs the photo in uploads: fetched like footage before this runs
+            o = x[5] if len(x) > 5 else {}
+            if os.path.exists(C.U + x[0]):
+                reel.person_layer(x[0], x[1], x[2], f'{tmp}/p.png', job['theme'], focus=tuple(o.get('focus', (0.5, 0.33))),
+                                  credit=o.get('credit'))
         gfx(job, tmp)
     finally:
         import shutil as _sh
@@ -332,7 +339,7 @@ def run(job, draft=False):
                      credits=[tuple(c) for c in job['credits']] if job.get('credits') else None,
                      strip=strip_items(job) if job.get('strip') else None,
                      template=job.get('template'), pace_ok=job.get('pace_ok', False), lowres_ok=job.get('lowres_ok', False),
-                     skin=job.get('skin'))
+                     skin=job.get('skin'), person=[tuple(x) for x in job['person']] if job.get('person') else None)
     video = done[0] if isinstance(done, (list, tuple)) else done
     stem = os.path.splitext(out)[0]
     base = re.sub(r'-reel-v\d+$', '', stem)   # matches the workflow's ${stem%-reel-v*}, so v2 and later commit too

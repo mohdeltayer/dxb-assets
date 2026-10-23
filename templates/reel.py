@@ -403,6 +403,75 @@ def credit_layer(text, path, low=False, size=36, y=None):
     im.save(path); return path
 
 
+#: People stories show the person (advisor, 23 Oct 2026, from Mohammad, after the Miyamoto honour Reel never
+#: showed Miyamoto): the person's official photo in a framed window over the running footage, a name plate
+#: with their role under the name, in the first 3 to 4 seconds, then back to full footage. The window sits
+#: right of centre between the headline band and the story lines, clear of the grid tile's top-right corner.
+PERSON_BOX = (450, 700, 460, 540)     # x, y, w, h: right edge on the safe right (910), under the credit line, bottom at 1240 above a two-line story line
+PERSON_MAX_ZOOM = 2.0                 # a photo enlarged past 2x into the window reads soft on a phone; find a larger one
+
+
+def person_layer(photo, name, role, path, theme='cold', box=PERSON_BOX, focus=(0.5, 0.33), credit=None):
+    """`photo` (a file in uploads, ideally the company's press photo) cover-cropped into `box`
+    around `focus` (x, y as 0 to 1 of the photo, the face; the default suits a head-and-shoulders
+    portrait), with a rounded frame edged in the theme accent, a soft shadow, and a plate inside
+    the window's lower part: `name` (Bold) over `role` (Medium, body colour), right-aligned, and
+    an optional small `credit` line for a licensed image («الصورة: ويكيميديا كومنز، CC BY-SA 4.0»).
+    Every text line opens on an Arabic word. Stops when the photo would be enlarged past
+    PERSON_MAX_ZOOM or a text line will not fit the plate."""
+    x, y, bw, bh = box
+    src = Image.open(photo if os.path.isabs(photo) else C.U + photo).convert('RGB')
+    sw, sh = src.size
+    scale = max(bw / sw, bh / sh)
+    if scale > PERSON_MAX_ZOOM:
+        raise ValueError(f'person photo {photo} is {sw}x{sh}: enlarged {scale:.1f}x into the window; find a larger one')
+    cw, ch = bw / scale, bh / scale
+    fx, fy = focus
+    cx = min(max(fx * sw - cw / 2, 0), sw - cw); cy = min(max(fy * sh - ch / 2, 0), sh - ch)
+    pic = src.crop((round(cx), round(cy), round(cx + cw), round(cy + ch))).resize((bw, bh), Image.LANCZOS)
+    pad, rad = 26, 22
+    texts = [(name, 'Bold', (46, 42, 38, 34), A.INK), (role, 'Medium', (32, 30, 28, 26), A.BODY)]
+    if credit:
+        texts.append((credit, 'Medium', (22, 20), A.BODY))
+    probe = ImageDraw.Draw(Image.new('L', (W, H)))
+    rows = []
+    for text, weight, sizes, col in texts:
+        rtl_starts([text], 'person plate')
+        for s in sizes:
+            f = A.F(weight, s)
+            if probe.textlength(text, font=f, **G.AR) <= bw - 2 * pad:
+                break
+        else:
+            raise ValueError(f'person plate line will not fit the window: {text}')
+        rows.append((text, f, s, col))
+    gaps = [int(s * 1.25) for _, _, s, _ in rows]
+    plate_h = sum(gaps) + pad + 10
+    # the plate: the window's own lower part darkened to the ground colour so the type holds on any photo
+    shade = Image.new('L', (1, bh), 0)
+    top = bh - plate_h - 70
+    for j in range(max(0, top), bh):
+        shade.putpixel((0, j), int(235 * min(1, (j - top) / 70) ** 1.2))
+    shade = shade.resize((bw, bh))
+    win = pic.convert('RGBA')
+    win.alpha_composite(Image.merge('RGBA', [Image.new('L', (bw, bh), c) for c in A.GROUND] + [shade]))
+    d = ImageDraw.Draw(win)
+    yb = bh - pad
+    for (text, f, s, col), g in zip(reversed(rows), reversed(gaps)):
+        d.text((bw - pad, yb), text, font=f, fill=col + (255,), anchor='rs', **G.AR)
+        yb -= g
+    mask = Image.new('L', (bw, bh), 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, bw - 1, bh - 1), rad, fill=255)
+    im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    sh_m = Image.new('L', (W, H), 0)
+    ImageDraw.Draw(sh_m).rounded_rectangle((x + 6, y + 12, x + bw + 6, y + bh + 12), rad, fill=150)
+    sh_l = Image.new('RGBA', (W, H), (0, 0, 0, 255)); sh_l.putalpha(sh_m.filter(ImageFilter.GaussianBlur(18)))
+    im.alpha_composite(sh_l)
+    im.paste(win, (x, y), mask)
+    acc = G.ACCENTS.get(theme, A.AZURE)
+    ImageDraw.Draw(im).rounded_rectangle((x, y, x + bw - 1, y + bh - 1), rad, outline=acc + (255,), width=4)
+    im.save(path); return path
+
+
 #: The `split` template's fact strip (Mohammad, 14 Oct 2026): footage runs the whole
 #: Reel and two or three facts (date, price, platforms) stay pinned low in the safe
 #: zone while the lines narrate above it. A fact lives here or in a line, never both.
@@ -1406,8 +1475,13 @@ def check_reading(lines, end):
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
          lowres_ok=False, read_check=True, track=None, draft=False, head_size=66, cut=False, credits=None, strip=None,
-         products=None, template=None, tribute=False, reveal=None, profile=None, pace_ok=False, skin=None):
-    """`skin`: a game skins pilot kit, 'scifi' or 'fantasy' (advisor, 20 Oct 2026; skins.py, the kit's tokens in
+         products=None, template=None, tribute=False, reveal=None, profile=None, pace_ok=False, skin=None,
+         person=None):
+    """`person`: [(photo, name, role, t0, t1, opts), ...] (advisor, 23 Oct 2026, people stories show the person):
+    the person's official photo in a framed window with a name plate over the running footage from t0 to t1
+    (Reel seconds; the first appearance within the first 3 to 4 s, with the line that names them), opts
+    {'focus': (x, y), 'credit': text} as in person_layer. The footage and its sound keep running under it.
+    `skin`: a game skins pilot kit, 'scifi' or 'fantasy' (advisor, 20 Oct 2026; skins.py, the kit's tokens in
     templates/web/skins/<kit>.css): the kit's band decoration and plates, its line outline and entrance, its shot
     to shot transition, a light leak over each cut (fantasy) and a short sting at the first line. None (the default)
     is the house look exactly as before; عاجل always keeps its crimson house skin.
@@ -1560,6 +1634,12 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
                 layers.append((f'{tmp}/strip.png', a, z))
         else:
             layers.append((f'{tmp}/strip.png', starts[comp], starts[comp + 1]))
+    for j, (photo, name, role, a, z, *opt) in enumerate(person or []):   # after the trim: the window overlaps the lines
+        opt = opt[0] if opt else {}
+        if not 0 <= a < z <= end:
+            raise ValueError(f'person window {name} runs {a} to {z} s, outside the clip (0 to {end:.1f} s)')
+        layers.append((person_layer(photo, name, role, f'{tmp}/p{j}.png', theme=theme, focus=tuple(opt.get('focus', (0.5, 0.33))),
+                                    credit=opt.get('credit')), a, z))
     for j, (first, last, text, *opt) in enumerate(credits or []):   # after the trim: credits overlap the lines
         opt = opt[0] if opt else {}
         # {'from_start': True, 'low': True, 'size': 42}: a stand-in credit readable on the grid tile, low so it

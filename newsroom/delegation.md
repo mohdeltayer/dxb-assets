@@ -76,6 +76,13 @@ with a note, or the story moves to a simpler template. A voiced track it
 approves goes into the job as `"speech_ok": "<reason>"` and into the draft spec
 as `"speech_director": "<decision>"`, so the pre-queue transcription reads the
 speech against its decision instead of stopping on it.
+People stories (advisor, 23 Oct 2026): when a person is the news, the director
+checks the person's photo window appears with the line that names them within
+the first 3 to 4 s, the face is visible, not cropped by the window or the plate,
+and readable at phone size, the name plate gives the role, the photo source in
+the brief is on the allowed list (press kit, awarding body, licensed and
+credited), and the first frame shows the person and the game together; a
+missing person window on such a story is a send-back.
 
 **Footage (sonnet).** For a named game: list its Steam trailers
 (`templates/trailer.py`), Nintendo store `publicId`s under its own nsuid, or

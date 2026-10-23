@@ -205,6 +205,18 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     follows the news type (everyday, stats, launch, digest, breaking,
     hijaz; retro stays chip).
   - The jingle and end card always close the Reel; the card is 2 s (14 Oct).
+- **People stories show the person (23 Oct):** when a person is the news
+  (honours, appointments, departures, interviews, quotes, retirements,
+  tributes, a creator's new project), their official photo appears in a
+  framed window over the running footage with a name plate and role in the
+  first 3 to 4 s, with the line that names them (`person=` in reel and job
+  files); optional again at the close; the cover shows person and game; the
+  quote template keeps its speaker card. Photo order: press site or kit, the
+  awarding body's photo, a licensed image credited on screen; never social
+  crops, fan edits or AI likenesses; none usable: say so in the brief and use
+  their best-known work with the name plate. The brief lists each person and
+  photo source; the director checks the face (CLAUDE.md "People stories show
+  the person").
 - **Templates (14 Oct):** the template is chosen per story from
   templates/formats.py (`NEWS_MAP`): `trailer` (footage all the way, lines
   on the picture, no card), `split` (footage all the way plus a slim pinned

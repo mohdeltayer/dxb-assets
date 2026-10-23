@@ -1252,6 +1252,36 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   5. Posts published on 22 Oct stay as they are. The two Reels still scheduled
      that night (Dragon Ball Xenoverse 3, PlayStation Pulse) already ran on
      trailer music, so nothing was re-rendered.
+- People stories show the person (advisor, 23 Oct 2026, from Mohammad). The
+  Shigeru Miyamoto honour Reel ran Super Mario clips and music (good) but never
+  showed Miyamoto, so viewers could not tell the story was about him.
+  1. Applies to any story where a person is the news: awards and honours,
+     appointments and departures, interviews and quotes, retirements,
+     tributes, a creator's new project.
+  2. The person's official photo appears with the line that names them within
+     the first 3 to 4 seconds: a framed window over the running footage with a
+     name plate giving the role («شيغيرو مياموتو، مبتكر Mario وZelda»), then
+     back to full footage; the footage's own sound keeps playing. An optional
+     second appearance at the closing line when the Reel runs long. The cover
+     (the first frame until custom covers work) shows the person and the game
+     together. The quote template keeps its own speaker card.
+  3. Photo sources, in order: the company's press site or press kit; the
+     awarding body's or organiser's own release photo; a properly licensed
+     image (Wikimedia Commons with its licence), credited on screen. Never
+     social-media crops, fan edits or AI-made likenesses. No usable photo: the
+     brief says so and the Reel uses the person's best-known work with the
+     name plate.
+  4. The brief lists each person in the story with their photo source; the
+     director checks the face is visible, not cropped, and readable at phone
+     size.
+  In code: `reel(..., person=[(photo, name, role, t0, t1, {'focus': (x, y),
+  'credit': text})])`, or `"person"` in a job file (the photo fetched like
+  footage). `reel.person_layer` draws the window (`PERSON_BOX`, 460x540, right
+  of centre between the credit line and the story lines, edged in the theme
+  accent) with the plate in its lower part (name Bold, role Medium in body
+  colour, an optional «الصورة: ...» credit); every plate line opens on an
+  Arabic word, and a photo enlarged past 2x into the window stops the render.
+  Live posts (the Miyamoto Reel) stay as they are unless Mohammad asks.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under
