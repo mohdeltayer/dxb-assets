@@ -6,7 +6,7 @@
   "Ubisoft"
  ],
  "category": "update",
- "status": "building",
+ "status": "scheduled",
  "genre": [
   "open world"
  ],
@@ -39,12 +39,28 @@
    "instagram": "المصدر: يوبيسوفت (Ubisoft)"
   }
  },
- "versions": [],
+ "versions": [
+  {
+   "v": 2,
+   "file": "cards/2026-10/ac-black-flag-resynced-new-game-plus-reel-v2.mp4",
+   "strip": "cards/2026-10/ac-black-flag-resynced-new-game-plus-strip.jpg",
+   "template": "trailer",
+   "theme": "spectacle",
+   "style": "lines",
+   "sound": "trailer music from 12.0 s; speech none",
+   "length_s": 13.5,
+   "lane": "runner (181 s; two runs hung in the Tools step and were cancelled and re-run)",
+   "why": "v1 headline showed '+New Game'"
+  }
+ ],
  "notes": "gate 00:45Z: Ubisoft's Steam announcement read (one line: 'Thank you for your patience everyone. New Game+ is coming to Black Flag Resynced next week!'). Chosen as the official post between the HLX report and the Mass Effect leak (one in three). PEAK console launch and the Exodus Jun redesign were tried first and dropped: every PEAK trailer burns in subtitles; the Exodus Steam trailer shows Jun's old look and the new video is YouTube-only. Brief: template trailer (kind update), opener the ship at sunset moving; footage the Steam accolades trailer (1080p), no combat shots; sound: the trailer's own music from 12.0 s, speech none. Length 11.5 s (short story, two lines). Sensitive: none. Grammar stage: no required edits. DeepL not needed beyond the house terms (نمط New Game+ kept in English as the feature name). v1 (runner) showed '+New Game' in the headline: the plus flips to the far side in right-to-left text; v2 and all texts say New Game Plus.",
  "labels": {
   "template": "trailer",
   "skin": "house",
   "sound": "trailer",
   "genre": "open world"
- }
+ },
+ "director": "pass 01:16Z: trailer music, no speech, -15.1 LUFS; lines readable; no gore, cards or profile problems; last 2 s a picture. Notes: a small HUD at the top right of the last half second; 11.5 s of story.",
+ "scheduled": "scheduled in Publer 01:30Z (05:30 Dubai): Instagram (Reel), X, Threads; labels tpl:trailer, skin:house, sound:trailer, genre:open world; follow-ups X link reply, Instagram source comment",
+ "approved": "go: rolling queue; preview sent 01:17Z"
 }
