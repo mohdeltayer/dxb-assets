@@ -104,4 +104,13 @@ b. Oshima character card
 - Grid corner (x 940 to 1080, y 240 to 380) on frame 0: photo only, no chip or text pixels.
 
 Checked at phone size on snapshot sheets (fallback font in the container; wraps judged on the runner's
-Dubai render) and on the runner output's frames.
+Dubai render) and on the runner output's frames. After the first runner render the platform card's source
+note sat on the card's edge; the rows were tightened and the piece rendered again (run 4).
+
+| Piece | Runner render (4 cores, Dubai) | File | Pass 1 |
+|---|---|---|---|
+| a. GTA 6 numbers (9 s, video layer) | 51.2 s | 8.4 MB | 48.7 s, 5.6 MB |
+| b. Oshima card (8 s, stills and CSS) | 21.8 s | 3.7 MB | 20.1 s, 4.5 MB |
+
+Whole runner job, setup included: 2 min 15 s (run 40026081312). GTA's file is larger because the footage
+behind is sharper (less blur). Both outputs decode clean.
