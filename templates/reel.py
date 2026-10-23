@@ -384,7 +384,7 @@ def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96,
     im.save(path); return path
 
 
-def credit_layer(text, path, low=False, size=36, y=None):
+def credit_layer(text, path, low=False, size=36, y=None, band=False):
     """A small credit naming footage that is not of the story's subject itself,
     «لقطات من Fortnite» over a delayed game that has never been shown (Mohammad,
     13 Oct 2026, review priority 3). Right-aligned under the safe top, or just
@@ -397,6 +397,13 @@ def credit_layer(text, path, low=False, size=36, y=None):
     if ImageDraw.Draw(mask).textlength(text, font=f, **G.AR) > W - R - L:
         raise ValueError(f'credit runs out of the safe zone: {text}')
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    if band:                                   # a soft dark band behind it, for pale or busy ground (23 Oct 2026,
+        box = mask.getbbox()                   # the Miyamoto Reel: a credit over a light grey portrait and a logo rim)
+        if box:
+            b = Image.new('L', (W, H), 0)
+            ImageDraw.Draw(b).rectangle((box[0] - 24, box[1] - 14, box[2] + 24, box[3] + 14), fill=140)
+            lay = Image.new('RGBA', (W, H), A.GROUND + (255,)); lay.putalpha(b.filter(ImageFilter.GaussianBlur(10)))
+            im.alpha_composite(lay)
     outline = mask.filter(ImageFilter.MaxFilter(5))
     for col, m in [(A.GROUND, outline), (A.BODY, mask)]:
         lay = Image.new('RGBA', (W, H), col + (255,)); lay.putalpha(m); im.alpha_composite(lay)
@@ -1642,14 +1649,14 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
                                     credit=opt.get('credit')), a, z))
     for j, (first, last, text, *opt) in enumerate(credits or []):   # after the trim: credits overlap the lines
         opt = opt[0] if opt else {}
-        # {'from_start': True, 'low': True, 'size': 42}: a stand-in credit readable on the grid tile, low so it
+        # {'from_start': True, 'low': True, 'size': 42, 'band': True}: a stand-in credit readable on the grid tile, low so it
         # clears the headline (23 Oct 2026, the Mass Effect leak Reel, where stand-in footage sat under «تسرب عرض»)
         a = 0.0 if opt.get('from_start') and first == 0 else max(starts[first] + 0.2, head_secs + 0.1)   # not under the headline
         z = starts[last + 1] if last + 1 < len(starts) else end
         low = opt.get('low', any(kw.get('top') and la < z and lz > a for _, la, lz, kw in lines))
         if z - a > 0.5:                                        # a low credit sits just above the strip, not on it
             layers.append((credit_layer(text, f'{tmp}/c{j}.png', low=low, size=opt.get('size', 36),
-                                        y=STRIP_TOP - 12 if low and strip else None), a, z))
+                                        y=STRIP_TOP - 12 if low and strip else None, band=opt.get('band', False)), a, z))
     if skin and SK.leak_layer(f'{tmp}/leak.png', skin):   # fantasy: a warm light leak over each cut
         for s0 in starts[1:]:
             if s0 + 0.35 < end:
