@@ -956,6 +956,14 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      Reels now go out under the normal rules (rolling queue, preview at
      queuing, breaking lane as written), with no separate hold; the story
      file's approved line carries the usual note.
+  9. Runner hang (23 Oct 2026, 00:30 to 02:00Z): five runs sat silent in the
+     Tools step at `apt-get install` until cancelled or timed out, most
+     likely a fresh VM's apt timers holding the dpkg lock. render.yml now
+     stops the apt timers, gives dpkg a lock timeout, skips installs already
+     present, shows apt's output, stamps each install with the time, and
+     times the step out at 10 minutes. A hang shows as a Tools step past 3
+     minutes: cancel, then start a fresh run on main (workflow_dispatch with
+     the job), not a re-run of the old commit's workflow.
 - Review of the Xbox Nano Reel, the first under the hook band (advisor,
   14 Oct 2026):
   1. Ten seconds on one still (0 to 10 s) broke the 3 to 4 s change rule.
