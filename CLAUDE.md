@@ -495,6 +495,13 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   when any visual line of the headline, a story line or a credit opens on a
   Latin word, a digit or a bracket (`rtl_starts`). On 13 Oct three headlines
   wrapped that way and were caught only by eye.
+  A sign at the end of a Latin name or a number flips to the far side in
+  right-to-left text (22 and 23 Oct: a card read «43%+», a headline «+New
+  Game»), and the check does not catch it: spell it out or drop the sign
+  (New Game Plus; «43%» with no plus) on screen and in the post text.
+  The container has no Dubai font, so wraps are only caught on the runner:
+  keep a headline line under about 26 characters at 60 when it carries a
+  Latin name.
 - Say what a name is (Mohammad, 2 Oct 2026, after the Miami HEAT Reel):
   many viewers only watch, so the on-screen text identifies any name an
   Arab gamer may not know, at its first appearance (headline or first
