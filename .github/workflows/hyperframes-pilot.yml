@@ -1,0 +1,113 @@
+# HyperFrames pilot (advisor, 23 Oct 2026). Lives on the pilot/hyperframes branch only and is never merged
+# to main before Mohammad approves. It is not triggered by jobs/render/*.json and shares no concurrency group
+# with render.yml, so it never queues ahead of a news render. It renders the pilot pieces in
+# templates/hyperframes/ and commits only the output mp4s and timings back to this branch.
+# workflow_dispatch only runs from the default branch, so a push to this branch's pilot files starts it.
+name: HyperFrames pilot
+
+on:
+  push:
+    branches: [pilot/hyperframes]
+    paths:
+      - 'templates/hyperframes/**'
+      - '.github/workflows/hyperframes-pilot.yml'
+      - '!templates/hyperframes/out/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hyperframes-pilot
+  cancel-in-progress: false
+
+jobs:
+  render:
+    if: github.ref == 'refs/heads/pilot/hyperframes'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            templates/hyperframes
+            templates/digi-mark.jpg
+
+      - name: Runner
+        run: |
+          echo "cores $(nproc), $(free -g | awk '/Mem:/{print $2}') GB"
+          echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts" >> "$GITHUB_ENV"
+          echo "HFWORK=$RUNNER_TEMP/hf-work" >> "$GITHUB_ENV"
+
+      - name: Fonts (temp folder, outside the workspace; never committed or uploaded)
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          repo="$RUNNER_TEMP/dxb-fonts"
+          git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+          mkdir -p "$DUBAI_FONTS"
+          unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$DUBAI_FONTS"
+          rm -rf "$repo"
+          for w in Light Regular Medium Bold; do test -f "$DUBAI_FONTS/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing"; exit 1; }; done
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Tools
+        timeout-minutes: 10
+        run: |
+          sudo systemctl stop apt-daily.timer apt-daily-upgrade.timer unattended-upgrades 2>/dev/null || true
+          command -v ffmpeg >/dev/null || sudo apt-get -o DPkg::Lock::Timeout=120 install -y -q ffmpeg
+          python -m pip install -q pillow
+          mkdir -p "$RUNNER_TEMP/hf" && cd "$RUNNER_TEMP/hf"
+          npm i -s --no-audit --no-fund hyperframes@0.8.143
+          npx hyperframes browser ensure
+
+      - name: Assets (official sources, not committed)
+        run: python templates/hyperframes/fetch_assets.py
+
+      - name: Render (in a temp copy with the font beside it)
+        run: |
+          set -e
+          mkdir -p templates/hyperframes/out
+          echo '[]' > "$RUNNER_TEMP/times.json"
+          for piece in gta6-numbers oshima-card; do
+            rm -rf "$HFWORK/$piece"; mkdir -p "$HFWORK"
+            cp -r "templates/hyperframes/$piece" "$HFWORK/$piece"
+            mkdir -p "$HFWORK/$piece/fonts" && cp "$DUBAI_FONTS"/Dubai-*.ttf "$HFWORK/$piece/fonts/"
+            t0=$(date +%s.%N)
+            (cd "$RUNNER_TEMP/hf" && npx hyperframes render "$HFWORK/$piece" -o "$HFWORK/$piece-hf.mp4" -q delivery -f 30 --quiet)
+            t1=$(date +%s.%N)
+            cp "$HFWORK/$piece-hf.mp4" "templates/hyperframes/out/$piece-hf-v1.mp4"
+            python - "$piece" "$t0" "$t1" <<'EOF'
+          import json, os, sys, subprocess
+          p, t0, t1 = sys.argv[1], float(sys.argv[2]), float(sys.argv[3])
+          f = os.environ['RUNNER_TEMP'] + '/times.json'; d = json.load(open(f))
+          out = f'templates/hyperframes/out/{p}-hf-v1.mp4'
+          dur = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', out],
+                                     capture_output=True, text=True).stdout.strip())
+          d.append({'piece': p, 'render_secs': round(t1 - t0, 1), 'video_secs': round(dur, 2),
+                    'bytes': os.path.getsize(out), 'cores': os.cpu_count(), 'lane': 'runner', 'hyperframes': '0.8.143'})
+          json.dump(d, open(f, 'w'), indent=1)
+          EOF
+          done
+          cp "$RUNNER_TEMP/times.json" templates/hyperframes/out/render-times.json
+          cat templates/hyperframes/out/render-times.json
+
+      - name: Clean the font copies
+        if: always()
+        run: rm -rf "$DUBAI_FONTS" "$HFWORK"
+
+      - name: Commit outputs to the pilot branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add templates/hyperframes/out
+          git commit -q -m "HyperFrames pilot renders on the runner ($(nproc) cores)" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin pilot/hyperframes && git push -q origin HEAD:pilot/hyperframes && break; sleep 5; done

@@ -1,0 +1,127 @@
+<!doctype html>
+<!-- HyperFrames pilot (advisor, 23 Oct 2026), piece b: the Edgerunners 2 character card rebuilt as a
+     vertical card in a sci-fi skin, Oshima style. CD PROJEKT RED's card (NAME / BIRTHDAY / BLOOD TYPE,
+     "Japanese braindance director, played by Hideo Kojima") was cut by the 9:16 crop in the published
+     Kojima Reel (19 Oct). Labels in Arabic, names in English, animated like a HUD readout; inspired by the
+     game's look, not a copy of its UI. Ends on the official anime portrait. Not for posting. -->
+<html lang="ar" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Dubai"; font-weight: 300; src: url("fonts/Dubai-Light.ttf"); }
+      @font-face { font-family: "Dubai"; font-weight: 400; src: url("fonts/Dubai-Regular.ttf"); }
+      @font-face { font-family: "Dubai"; font-weight: 500; src: url("fonts/Dubai-Medium.ttf"); }
+      @font-face { font-family: "Dubai"; font-weight: 700; src: url("fonts/Dubai-Bold.ttf"); }
+      :root {
+        --ground: #0d0c18; --ink: #f4f3ff; --body: #c9c8e6;
+        --yellow: #f3e600;          /* sci-fi kit: the game's yellow and red, never pink */
+        --red: #e5383b; --cyan: #33d6e8;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--ground); }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden;
+              font-family: "Dubai", "DejaVu Sans", sans-serif; direction: rtl; color: var(--ink); }
+      .clip { position: absolute; }
+
+      /* ground: dark red wash with fine scanlines, moving slowly */
+      #ground { inset: 0; background: radial-gradient(120% 70% at 50% 45%, #3a0d14 0%, #160a12 55%, #0d0c18 100%); }
+      #scan { inset: -40px 0 0 0; height: 2000px;
+              background: repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 2px, transparent 2px 6px); }
+
+      #mark { top: 359px; left: 96px; width: 48px; height: 48px; border-radius: 50%; opacity: .5; }
+      #chip { top: 355px; right: 170px; height: 57px; padding: 0 22px; background: var(--yellow);
+              color: #0d0c18; font-weight: 700; font-size: 34px; line-height: 57px;
+              clip-path: polygon(0 0, 100% 0, 100% 70%, 92% 100%, 0 100%); }
+      #head { top: 432px; right: 170px; width: 814px; text-align: right; font-weight: 700; font-size: 54px; line-height: 1.28; }
+      .nb { white-space: nowrap; }
+
+      /* the photo window: red hairline frame with corner brackets */
+      #win { top: 590px; left: 96px; width: 814px; height: 540px; overflow: hidden;
+             border: 2px solid rgba(229,56,59,.85); }
+      #win img { position: absolute; width: 100%; height: 100%; object-fit: cover; }
+      #anime { opacity: 0; object-fit: contain !important; background: #f8e21c; }
+      .br { width: 46px; height: 46px; border-color: var(--yellow); border-style: solid; }
+      #b1 { top: 576px; right: 156px; border-width: 5px 5px 0 0; }
+      #b2 { top: 1098px; left: 82px; border-width: 0 0 5px 5px; }
+      #tag { top: 602px; left: 112px; direction: ltr; font: 700 24px/1 "Dubai", monospace; letter-spacing: 3px;
+             color: var(--yellow); background: rgba(13,12,24,.7); padding: 6px 10px; }
+
+      /* the card: rows slide in like a readout; labels Arabic, values English */
+      #card { top: 1100px; left: 96px; width: 814px; background: rgba(13,12,24,.88);
+              border-top: 4px solid var(--yellow); padding: 18px 26px 16px; }
+      .row { display: flex; align-items: center; gap: 18px; height: 58px; }
+      .lab { flex: 0 0 auto; min-width: 210px; height: 44px; padding: 0 14px; background: var(--yellow); color: #0d0c18;
+             font-weight: 700; font-size: 32px; line-height: 44px; text-align: center;
+             clip-path: polygon(0 0, 100% 0, 100% 100%, 12px 100%, 0 calc(100% - 12px)); }
+      .val { font-weight: 700; font-size: 40px; color: var(--ink); white-space: nowrap; }
+      .val.en { direction: ltr; letter-spacing: 3px; }
+      .val.dim { color: var(--body); font-weight: 500; }
+      #who { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(229,56,59,.6); }
+      #who .val.en { color: var(--yellow); }
+      .cur { display: inline-block; width: 16px; height: 34px; background: var(--yellow); margin-left: 8px;
+             vertical-align: middle; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="8" data-width="1080" data-height="1920">
+      <div id="ground" class="clip" data-start="0" data-duration="8"></div>
+      <div id="scan" class="clip" data-start="0" data-duration="8"></div>
+
+      <img id="mark" class="clip" data-start="0" data-duration="8" src="assets/digi-mark.jpg" />
+      <div id="chip" class="clip" data-start="0" data-duration="8">رسمي</div>
+      <div id="head" class="clip" data-start="0" data-duration="8">صانع الألعاب هيديو كوجيما يظهر<br />في <bdi class="nb">Cyberpunk: Edgerunners 2</bdi></div>
+
+      <div id="win" class="clip" data-start="0" data-duration="8">
+        <img id="photo" src="assets/kojima-photo.jpg" />
+        <img id="anime" src="assets/oshima-anime.jpg" />
+      </div>
+      <div id="b1" class="br clip" data-start="0" data-duration="8"></div>
+      <div id="b2" class="br clip" data-start="0" data-duration="8"></div>
+      <div id="tag" class="clip" data-start="0" data-duration="8">ID // 2077-NC</div>
+
+      <div id="card" class="clip" data-start="0" data-duration="8">
+        <div class="row" id="r1"><div class="lab">الاسم</div><div class="val en">HIDEYOSHI OSHIMA</div></div>
+        <div class="row" id="r2"><div class="lab">تاريخ الميلاد</div><div class="val dim">سري</div></div>
+        <div class="row" id="r3"><div class="lab">فصيلة الدم</div><div class="val dim">سرية</div></div>
+        <div class="row" id="r4"><div class="lab">الدور</div><div class="val">مخرج براين دانس ياباني</div></div>
+        <div class="row" id="who"><div class="lab">يؤديه</div><div class="val en">HIDEO KOJIMA</div><span class="cur" id="cur"></span></div>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // nothing static: scanlines drift, the photo pushes in slowly
+      tl.fromTo("#scan", { y: 0 }, { y: 36, duration: 8, ease: "none" }, 0);
+      tl.fromTo("#photo", { scale: 1.0 }, { scale: 1.07, duration: 5.6, ease: "none" }, 0);
+
+      // frame 0 is the grid tile: headline, photo and the name row readable together
+      gsap.set(["#r2", "#r3", "#r4", "#who"], { opacity: 0 });
+
+      // a short digital break-up on the window at 0.35 s (sci-fi kit's cut), then the readout
+      tl.to("#win", { x: 14, duration: 0.05, ease: "steps(1)" }, 0.35)
+        .to("#win", { x: -10, filter: "hue-rotate(25deg) saturate(1.6)", duration: 0.05, ease: "steps(1)" }, 0.40)
+        .to("#win", { x: 0, filter: "none", duration: 0.05, ease: "steps(1)" }, 0.45);
+      tl.fromTo("#r1", { x: -40 }, { x: 0, duration: 0.25, ease: "power3.out" }, 0.2);
+      ["#r2", "#r3", "#r4", "#who"].forEach((id, i) => {
+        const t = 0.9 + i * 0.65;
+        tl.fromTo(id, { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.22, ease: "power3.out" }, t);
+        tl.fromTo(id + " .lab", { opacity: 0.2 }, { opacity: 1, duration: 0.06, repeat: 2, yoyo: true, ease: "steps(1)" }, t);
+      });
+      // cursor blinks after the last row
+      tl.fromTo("#cur", { opacity: 0 }, { opacity: 1, duration: 0.25, repeat: 7, yoyo: true, ease: "steps(1)" }, 3.6);
+
+      // ends on the matching official shot: the anime Oshima glitches in over the photo
+      tl.to("#win", { x: 18, filter: "hue-rotate(-30deg) saturate(2)", duration: 0.05, ease: "steps(1)" }, 5.6)
+        .set("#anime", { opacity: 1 }, 5.65)
+        .to("#win", { x: -12, duration: 0.05, ease: "steps(1)" }, 5.7)
+        .to("#win", { x: 0, filter: "none", duration: 0.05, ease: "steps(1)" }, 5.75);
+      tl.fromTo("#anime", { scale: 1.0 }, { scale: 1.06, duration: 2.25, ease: "none" }, 5.65);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
