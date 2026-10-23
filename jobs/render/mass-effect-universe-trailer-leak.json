@@ -1,0 +1,164 @@
+{
+ "name": "mass-effect-universe-trailer-leak",
+ "out": "cards/2026-10/mass-effect-universe-trailer-leak-reel-v2.mp4",
+ "footage": [
+  {
+   "file": "me-n7-2023-4k.mp4",
+   "url": "https://assets.ign.com/videos/zencoder/2023/11/07/3840/6db30c6b-d1c7-47b1-b150-b77b4a5f4511-1699395154.mp4",
+   "referer": "https://www.ign.com/"
+  },
+  {
+   "file": "me-n7-score.mp4",
+   "repo": "live/2026-10-23/me/me-n7-score.mp4"
+  }
+ ],
+ "shots": [
+  [
+   "me-n7-2023-4k.mp4",
+   4.6,
+   2.7,
+   [
+    [
+     0.0,
+     0.215
+    ]
+   ]
+  ],
+  [
+   "me-n7-2023-4k.mp4",
+   7.3,
+   5.3,
+   [
+    [
+     0.0,
+     0.22
+    ],
+    [
+     2.8,
+     0.25
+    ],
+    [
+     4.6,
+     0.45
+    ]
+   ]
+  ],
+  [
+   "me-n7-2023-4k.mp4",
+   13.4,
+   3.8,
+   [
+    [
+     0.0,
+     0.676
+    ]
+   ]
+  ],
+  [
+   "me-n7-2023-4k.mp4",
+   17.2,
+   4.6,
+   [
+    [
+     0.0,
+     0.728
+    ]
+   ]
+  ],
+  [
+   "me-n7-2023-4k.mp4",
+   21.8,
+   3.2,
+   [
+    [
+     0.0,
+     0.367
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "أكده جيسون شراير (Jason Schreier)\nالصحفي في بلومبرغ (Bloomberg)",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    [
+     "وكانت بايووير (BioWare) تطورها\nقبل إغلاقها",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "ويحمل اسم Mass Effect Universe\nوتظهر فيه Liara T'Soni",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   4,
+   [
+    [
+     "ولم تعلق إلكترونيك آرتس (EA) بعد",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "headline": "تسرب عرض Mass Effect الملغاة\nوصحفي يؤكد أنه حقيقي",
+ "head_size": 60,
+ "label": "تسريب",
+ "source": "كوتاكو (Kotaku)",
+ "date": "22 Oct 2026",
+ "theme": "cold",
+ "style": "bold",
+ "template": "trailer",
+ "credits": [
+  [
+   0,
+   4,
+   "لقطات من عرض Mass Effect الرسمي (2023) وليست من التسريب",
+   {
+    "from_start": true,
+    "low": true,
+    "size": 40
+   }
+  ]
+ ],
+ "track": [
+  "me-n7-score.mp4",
+  0.0
+ ],
+ "cut": true,
+ "pace_ok": true,
+ "pace_note": "shots 1 (7.6 to 13.0 s) and 3 (16.9 to 21.3 s) each span two or three of the teaser's own cuts (dark corridor, the red N7 stripe, the helmet); one continuous stretch of the official teaser",
+ "speech_ok": [
+  [
+   5.5,
+   9.2,
+   "not speech: faster-whisper hallucination on the compressed score ('ДИНАМИЧНАЯ МУЗЫКА', Russian for 'dynamic music'); the same stretch before compression transcribed as no speech, and VAD finds no voice in the teaser"
+  ]
+ ]
+}

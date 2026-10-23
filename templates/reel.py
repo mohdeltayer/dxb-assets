@@ -1560,12 +1560,15 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
                 layers.append((f'{tmp}/strip.png', a, z))
         else:
             layers.append((f'{tmp}/strip.png', starts[comp], starts[comp + 1]))
-    for j, (first, last, text) in enumerate(credits or []):   # after the trim: credits overlap the lines
-        a = max(starts[first] + 0.2, head_secs + 0.1)          # not under the headline
+    for j, (first, last, text, *opt) in enumerate(credits or []):   # after the trim: credits overlap the lines
+        opt = opt[0] if opt else {}
+        # {'from_start': True, 'low': True, 'size': 42}: a stand-in credit readable on the grid tile, low so it
+        # clears the headline (23 Oct 2026, the Mass Effect leak Reel, where stand-in footage sat under «تسرب عرض»)
+        a = 0.0 if opt.get('from_start') and first == 0 else max(starts[first] + 0.2, head_secs + 0.1)   # not under the headline
         z = starts[last + 1] if last + 1 < len(starts) else end
-        low = any(kw.get('top') and la < z and lz > a for _, la, lz, kw in lines)
+        low = opt.get('low', any(kw.get('top') and la < z and lz > a for _, la, lz, kw in lines))
         if z - a > 0.5:                                        # a low credit sits just above the strip, not on it
-            layers.append((credit_layer(text, f'{tmp}/c{j}.png', low=low,
+            layers.append((credit_layer(text, f'{tmp}/c{j}.png', low=low, size=opt.get('size', 36),
                                         y=STRIP_TOP - 12 if low and strip else None), a, z))
     if skin and SK.leak_layer(f'{tmp}/leak.png', skin):   # fantasy: a warm light leak over each cut
         for s0 in starts[1:]:
