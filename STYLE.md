@@ -293,6 +293,14 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   zone and reading pace apply; renders on the Mac once live; nothing
   replaces a current piece until he approves (CLAUDE.md "Web-style motion
   graphics").
+- **HyperFrames pilot (23 Oct):** isolated: branch `pilot/hyperframes`, folder
+  `templates/hyperframes/`, no change to reel.py, render_job.py, render.yml, job
+  files, publishing or Publer; renders on the container or a separate
+  workflow_dispatch-only workflow, idle time only, never ahead of news, nothing
+  posted. Two pieces (a counting numbers card on the game's footage with its logo
+  plate; a sci-fi Oshima-style character card) side by side with ours, render
+  times, notes/hyperframes-pilot.md; Mohammad decides (CLAUDE.md "HyperFrames
+  pilot").
 - **Process:**
   1. A six-line brief (angle and hook kind, template and opening beat, cover,
      sound, key shot, total seconds).

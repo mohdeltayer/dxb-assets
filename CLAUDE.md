@@ -1838,6 +1838,40 @@ and right-to-left text better than the image library.
    container. The side-by-side with the current card went to Mohammad on 19 Oct
    (`live/2026-10-19/web-outro/`); his verdict is pending.
 
+## HyperFrames pilot, isolated from the live pipeline (advisor, 23 Oct 2026, agreed with Mohammad)
+
+HyperFrames (heygen-com/hyperframes, Apache 2.0) is an HTML-to-video framework:
+compositions in HTML with GSAP, CSS or Lottie, rendered frame by frame in headless
+Chrome and encoded with FFmpeg, with about 450 ready blocks (transitions, titles,
+kinetic type, captions, counters, charts, maps). It fits the web-motion route above.
+Pilot only.
+0. Nothing live is touched: no changes to reel.py, render_job.py, render.yml, the job
+   file format, the publish flow or Publer scheduling. All pilot work sits in
+   `templates/hyperframes/` on the branch `pilot/hyperframes`, merged to main only
+   after Mohammad approves. Renders run on the container, or on the runner through a
+   separate workflow (workflow_dispatch only, its own concurrency group, one job at a
+   time), never triggered by jobs/render/*.json and never ahead of a news render.
+   Pilot work only in idle time; a news story in the queue always comes first.
+   Nothing from the pilot is posted or scheduled.
+1. Setup: the HyperFrames skills (compose, CLI, registry) for the session; not its
+   media skill for AI voiceover, avatars or stock music (footage official, voice
+   Mohammad's, music under our sound rules). Frame 1080x1920; the Dubai font from the
+   private font folder as in the web-motion setup, never committed; our palette,
+   chips and safe zone (x 96 to 910, y 285 to 1480).
+2. Two pieces: a. a numbers card that counts up (GTA 6 pre-orders or Famitsu figures)
+   on the game's own footage, dimmed and moving, with the game's logo plate; b. a
+   rebuilt character card in the sci-fi skin, Oshima style: labels in Arabic (الاسم ·
+   يؤديه), names in English, animated the way the show's UI moves, ending on the
+   matching trailer shot. Arabic right-to-left rendering and line breaks checked
+   carefully.
+3. Each rendered next to our current version of the same piece; both side by sides go
+   to Mohammad and the advisor with render time (container and/or runner) and any
+   problems (Arabic shaping, fonts, file size); the result goes in
+   `notes/hyperframes-pilot.md`.
+4. Mohammad decides. If approved, a separate memo covers HyperFrames blocks for cards,
+   transitions and skins in live Reels; if not, the branch stays unmerged and nothing
+   changes.
+
 ## Explainers from the source's own drawings (trial, 27 Sep 2026)
 
 For "how does it work" stories (patents, hardware, new features),
