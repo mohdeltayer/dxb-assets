@@ -1,81 +1,82 @@
 {
- "id": "2026-10-23-switch-2-jailbreak-ns2jb-claim",
- "title": "Security researcher pepsipu (Sammy Hajhamid) claims first software-only Switch 2 jailbreak (ns2jb) on firmware 23.0.1; Nintendo silent",
- "game": "Nintendo Switch 2",
- "companies": [
-  "Nintendo"
- ],
- "category": "report",
- "status": "scheduled",
- "genre": [
-  "industry/hardware"
- ],
- "sources": [
-  {
-   "role": "first report (the claimant)",
-   "name": "pepsipu (Sammy Hajhamid) on X and his blog",
-   "time": "2026-10-22 (X post dated Oct 22; time not read, X blocks automated reads)"
+  "id": "2026-10-23-switch-2-jailbreak-ns2jb-claim",
+  "title": "Security researcher pepsipu (Sammy Hajhamid) claims first software-only Switch 2 jailbreak (ns2jb) on firmware 23.0.1; Nintendo silent",
+  "game": "Nintendo Switch 2",
+  "companies": [
+    "Nintendo"
+  ],
+  "category": "report",
+  "status": "published",
+  "genre": [
+    "industry/hardware"
+  ],
+  "sources": [
+    {
+      "role": "first report (the claimant)",
+      "name": "pepsipu (Sammy Hajhamid) on X and his blog",
+      "time": "2026-10-22 (X post dated Oct 22; time not read, X blocks automated reads)"
+    },
+    {
+      "role": "outlet",
+      "name": "Nintendo Life, 'Switch 2 supposedly jailbroken via software-only exploit'",
+      "url": "https://www.nintendolife.com/news/2026/10/switch-2-supposedly-jailbroken-via-software-only-exploit",
+      "time": "2026-10-23T02:55Z"
+    },
+    {
+      "role": "outlet",
+      "name": "True Gaming (AR relay)",
+      "url": "https://www.true-gaming.net/home/642338/"
+    }
+  ],
+  "claims": [
+    {
+      "text": "software-only, tethered jailbreak of Switch 2 on firmware 23.0.1",
+      "status": "claimed by the researcher; not independently verified"
+    },
+    {
+      "text": "'To my knowledge, it's the first such exploit for the Switch 2'",
+      "status": "quote read on his blog"
+    },
+    {
+      "text": "runs homebrew, mods games, backs up saves; resets on power-off",
+      "status": "claimed by the researcher"
+    },
+    {
+      "text": "Mario Kart World mod adding characters as demonstration",
+      "status": "claimed (video on his post)"
+    },
+    {
+      "text": "needs a now-delisted Switch title (SmileBASIC 4)",
+      "status": "Nintendo Life report; delisting not checked on a Nintendo page"
+    },
+    {
+      "text": "Nintendo has not commented",
+      "status": "no statement found"
+    }
+  ],
+  "drafts": {
+    "x": "يقول الباحث الأمني سامي حاج حميد (Sammy Hajhamid) إنه كسر حماية Switch 2 برمجيًا على آخر تحديث للنظام، في ما يصفه، على حد علمه، بأول ثغرة من نوعها للجهاز، ولم تعلّق نينتيندو (Nintendo) بعد.",
+    "threads": "يقول الباحث الأمني سامي حاج حميد (Sammy Hajhamid) إنه كسر حماية Switch 2 برمجيًا على آخر تحديث للنظام، في ما يصفه، على حد علمه، بأول ثغرة من نوعها للجهاز، ولم تعلّق نينتيندو (Nintendo) بعد.",
+    "instagram": "كسر حماية Switch 2 برمجيًا؟ باحث أمني يعلن ما يصفه بأول ثغرة للجهاز.\n\nأعلن الباحث الأمني سامي حاج حميد (Sammy Hajhamid)، المعروف باسم pepsipu، في 22 أكتوبر أنه طوّر طريقة برمجية لكسر حماية جهاز Nintendo Switch 2 تعمل على آخر تحديث للنظام 23.0.1، وقال إنها، على حد علمه، أول ثغرة من نوعها للجهاز.\n\nويقول الباحث إن الثغرة تتيح تشغيل برامج غير رسمية وتعديل الألعاب وإنشاء نسخ احتياطية من ملفات الحفظ، لكنها مؤقتة وتزول عند إطفاء الجهاز. وعرض مقاطع من Mario Kart World بعد تعديلها وإضافة شخصيات جديدة إليها.\n\nوحسب موقع نينتيندو لايف (Nintendo Life)، تعتمد الطريقة على لعبة من مكتبة Switch لم تعد متاحة في المتجر. ولم تعلّق نينتيندو (Nintendo) على الأمر حتى الآن.\n\n#ألعاب #أخبار_الألعاب #NintendoSwitch2 #MarioKartWorld",
+    "follow_up": {
+      "x": "المصدر: نينتيندو لايف (Nintendo Life)\nhttps://www.nintendolife.com/news/2026/10/switch-2-supposedly-jailbroken-via-software-only-exploit",
+      "instagram": "المصدر: منشور الباحث pepsipu في 22 أكتوبر 2026، وموقع نينتيندو لايف"
+    }
   },
-  {
-   "role": "outlet",
-   "name": "Nintendo Life, 'Switch 2 supposedly jailbroken via software-only exploit'",
-   "url": "https://www.nintendolife.com/news/2026/10/switch-2-supposedly-jailbroken-via-software-only-exploit",
-   "time": "2026-10-23T02:55Z"
+  "notes": "Brief: kind report (claim by its author), chip تقرير; Exit B (no Nintendo primary; the claimant's own post is the source). Template quote (card-led 2 of 6 at 10:30Z; trailer 5, split 6 today, clipcard third in a row, comparison third in a row). Hook: the claim in news words, never louder than the source («باحث أمني يعلن»). Opening beat: Mario on the highway (cover), the researcher's quote on the first line. Person: the researcher is the claimant; no official or licensed photo of him, so the Reel uses the game he modded (person rule 3). Footage: Mario Kart World 'free update' overview trailer from Nintendo's US store (720p only; IGN has no copy), credited «لقطات رسمية من Mario Kart World» so it does not pass for the mod; lowres_ok because no larger official copy exists; framing set by hand (container autofocus has no detector). Sound: our bed. Trailers checked: the store's three Mario Kart World videos are narrated throughout (the 83 s overview has speech in all but two pauses under 5 s; the 4-minute and 17-minute videos are narrated presentations), so no coherent stretch fits under story lines. Sensitive: no method, no link to the exploit, no repository or exploit name on screen or in the texts; the X reply links Nintendo Life, not the researcher's page. Decode clean (source). DeepL forward 09:25Z: «كسر الحماية» and «ثغرة برمجية» match ours; DeepL rendered the name «حاجاميد», ours «حاج حميد» with the Latin in brackets. Grammar stage 09:31Z: on-screen text unchanged (no required edits); required: Nintendo bracket at its first caption mention, Nintendo Life bracket in the X reply. Applied from its notes: caption hook hedged «ما يصفه بأول ثغرة»; the paraphrase taken out of quote marks; 'to my knowledge' kept in the X text; «مقاطع» kept (his post carries gameplay videos). X reply links Nintendo Life, not the researcher's page (it hosts the exploit download). Surname «حاج حميد» is a transliteration, not in the glossary: for Mohammad to confirm.",
+  "lanes": {
+    "dl": {
+      "lane": "Reel",
+      "chip": "تقرير",
+      "format": "quote",
+      "theme": "cold",
+      "media": "cards/2026-10/switch-2-jailbreak-ns2jb-claim-reel-v1.mp4",
+      "render": "runner (96676f9; first run e12bb45 stopped on the output smear flag at 2.57-3.00 s, the circuit's striped kerbs, waived after looking)",
+      "director": "pass 1: pass; our bed signed off (overview trailer narrated 3.1-77.1 s, longest pause 4.9 s; 4- and 17-minute videos narrated); closing » lands correctly after Switch 2; optional trim of shot 9 skipped (L4 needs the reading time); 22 s before the end card, over the 12-20 s target because four two-line sentences need it",
+      "approved": "go: rolling queue; preview sent 09:45Z (first line: our bed)",
+      "gate": "gate 09:40Z: news search, no Nintendo statement or patch for ns2jb; earlier partial Switch 2 exploits exist (2025 userland, July 2026 milestone), so \"first\" stays his claim («على حد علمي»، «في ما يصفه»)",
+      "scheduled": "scheduled in Publer 10:30Z (14:30 Dubai): Instagram (Reel, source comment), X (Nintendo Life link reply), Threads; no location (Instagram location lookup failing)"
+    }
   },
-  {
-   "role": "outlet",
-   "name": "True Gaming (AR relay)",
-   "url": "https://www.true-gaming.net/home/642338/"
-  }
- ],
- "claims": [
-  {
-   "text": "software-only, tethered jailbreak of Switch 2 on firmware 23.0.1",
-   "status": "claimed by the researcher; not independently verified"
-  },
-  {
-   "text": "'To my knowledge, it's the first such exploit for the Switch 2'",
-   "status": "quote read on his blog"
-  },
-  {
-   "text": "runs homebrew, mods games, backs up saves; resets on power-off",
-   "status": "claimed by the researcher"
-  },
-  {
-   "text": "Mario Kart World mod adding characters as demonstration",
-   "status": "claimed (video on his post)"
-  },
-  {
-   "text": "needs a now-delisted Switch title (SmileBASIC 4)",
-   "status": "Nintendo Life report; delisting not checked on a Nintendo page"
-  },
-  {
-   "text": "Nintendo has not commented",
-   "status": "no statement found"
-  }
- ],
- "drafts": {
-  "x": "يقول الباحث الأمني سامي حاج حميد (Sammy Hajhamid) إنه كسر حماية Switch 2 برمجيًا على آخر تحديث للنظام، في ما يصفه، على حد علمه، بأول ثغرة من نوعها للجهاز، ولم تعلّق نينتيندو (Nintendo) بعد.",
-  "threads": "يقول الباحث الأمني سامي حاج حميد (Sammy Hajhamid) إنه كسر حماية Switch 2 برمجيًا على آخر تحديث للنظام، في ما يصفه، على حد علمه، بأول ثغرة من نوعها للجهاز، ولم تعلّق نينتيندو (Nintendo) بعد.",
-  "instagram": "كسر حماية Switch 2 برمجيًا؟ باحث أمني يعلن ما يصفه بأول ثغرة للجهاز.\n\nأعلن الباحث الأمني سامي حاج حميد (Sammy Hajhamid)، المعروف باسم pepsipu، في 22 أكتوبر أنه طوّر طريقة برمجية لكسر حماية جهاز Nintendo Switch 2 تعمل على آخر تحديث للنظام 23.0.1، وقال إنها، على حد علمه، أول ثغرة من نوعها للجهاز.\n\nويقول الباحث إن الثغرة تتيح تشغيل برامج غير رسمية وتعديل الألعاب وإنشاء نسخ احتياطية من ملفات الحفظ، لكنها مؤقتة وتزول عند إطفاء الجهاز. وعرض مقاطع من Mario Kart World بعد تعديلها وإضافة شخصيات جديدة إليها.\n\nوحسب موقع نينتيندو لايف (Nintendo Life)، تعتمد الطريقة على لعبة من مكتبة Switch لم تعد متاحة في المتجر. ولم تعلّق نينتيندو (Nintendo) على الأمر حتى الآن.\n\n#ألعاب #أخبار_الألعاب #NintendoSwitch2 #MarioKartWorld",
-  "follow_up": {
-   "x": "المصدر: نينتيندو لايف (Nintendo Life)\nhttps://www.nintendolife.com/news/2026/10/switch-2-supposedly-jailbroken-via-software-only-exploit",
-   "instagram": "المصدر: منشور الباحث pepsipu في 22 أكتوبر 2026، وموقع نينتيندو لايف"
-  }
- },
- "notes": "Brief: kind report (claim by its author), chip تقرير; Exit B (no Nintendo primary; the claimant's own post is the source). Template quote (card-led 2 of 6 at 10:30Z; trailer 5, split 6 today, clipcard third in a row, comparison third in a row). Hook: the claim in news words, never louder than the source («باحث أمني يعلن»). Opening beat: Mario on the highway (cover), the researcher's quote on the first line. Person: the researcher is the claimant; no official or licensed photo of him, so the Reel uses the game he modded (person rule 3). Footage: Mario Kart World 'free update' overview trailer from Nintendo's US store (720p only; IGN has no copy), credited «لقطات رسمية من Mario Kart World» so it does not pass for the mod; lowres_ok because no larger official copy exists; framing set by hand (container autofocus has no detector). Sound: our bed. Trailers checked: the store's three Mario Kart World videos are narrated throughout (the 83 s overview has speech in all but two pauses under 5 s; the 4-minute and 17-minute videos are narrated presentations), so no coherent stretch fits under story lines. Sensitive: no method, no link to the exploit, no repository or exploit name on screen or in the texts; the X reply links Nintendo Life, not the researcher's page. Decode clean (source). DeepL forward 09:25Z: «كسر الحماية» and «ثغرة برمجية» match ours; DeepL rendered the name «حاجاميد», ours «حاج حميد» with the Latin in brackets. Grammar stage 09:31Z: on-screen text unchanged (no required edits); required: Nintendo bracket at its first caption mention, Nintendo Life bracket in the X reply. Applied from its notes: caption hook hedged «ما يصفه بأول ثغرة»; the paraphrase taken out of quote marks; 'to my knowledge' kept in the X text; «مقاطع» kept (his post carries gameplay videos). X reply links Nintendo Life, not the researcher's page (it hosts the exploit download). Surname «حاج حميد» is a transliteration, not in the glossary: for Mohammad to confirm.",
- "lanes": {
-  "dl": {
-   "lane": "Reel",
-   "chip": "تقرير",
-   "format": "quote",
-   "theme": "cold",
-   "media": "cards/2026-10/switch-2-jailbreak-ns2jb-claim-reel-v1.mp4",
-   "render": "runner (96676f9; first run e12bb45 stopped on the output smear flag at 2.57-3.00 s, the circuit's striped kerbs, waived after looking)",
-   "director": "pass 1: pass; our bed signed off (overview trailer narrated 3.1-77.1 s, longest pause 4.9 s; 4- and 17-minute videos narrated); closing » lands correctly after Switch 2; optional trim of shot 9 skipped (L4 needs the reading time); 22 s before the end card, over the 12-20 s target because four two-line sentences need it",
-   "approved": "go: rolling queue; preview sent 09:45Z (first line: our bed)",
-   "gate": "gate 09:40Z: news search, no Nintendo statement or patch for ns2jb; earlier partial Switch 2 exploits exist (2025 userland, July 2026 milestone), so \"first\" stays his claim («على حد علمي»، «في ما يصفه»)",
-   "scheduled": "scheduled in Publer 10:30Z (14:30 Dubai): Instagram (Reel, source comment), X (Nintendo Life link reply), Threads; no location (Instagram location lookup failing)"
-  }
- }
+  "published": "2026-10-23T10:31Z on Instagram, X and Threads (Publer); all three Published"
 }
