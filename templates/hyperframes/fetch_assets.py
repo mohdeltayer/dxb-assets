@@ -41,6 +41,7 @@ def oshima(d):
     os.makedirs(d, exist_ok=True)
     src = get(OSHIMA, os.path.join(d, 'cdpr.jpg'))
     im = Image.open(src)
+    im.save(os.path.join(d, 'cdpr-full.jpg'), quality=95)                                # full image: the opener and the window
     im.crop((222, 96, 950, 614)).save(os.path.join(d, 'kojima-photo.jpg'), quality=95)   # the photo, above the anime box
     im.crop((606, 682, 950, 1026)).save(os.path.join(d, 'oshima-anime.jpg'), quality=95)  # the anime portrait
     os.remove(src)

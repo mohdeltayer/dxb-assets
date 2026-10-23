@@ -84,12 +84,12 @@ jobs:
             t0=$(date +%s.%N)
             (cd "$RUNNER_TEMP/hf" && npx hyperframes render "$HFWORK/$piece" -o "$HFWORK/$piece-hf.mp4" -q delivery -f 30 --quiet)
             t1=$(date +%s.%N)
-            cp "$HFWORK/$piece-hf.mp4" "templates/hyperframes/out/$piece-hf-v1.mp4"
+            cp "$HFWORK/$piece-hf.mp4" "templates/hyperframes/out/$piece-hf-v2.mp4"
             python - "$piece" "$t0" "$t1" <<'EOF'
           import json, os, sys, subprocess
           p, t0, t1 = sys.argv[1], float(sys.argv[2]), float(sys.argv[3])
           f = os.environ['RUNNER_TEMP'] + '/times.json'; d = json.load(open(f))
-          out = f'templates/hyperframes/out/{p}-hf-v1.mp4'
+          out = f'templates/hyperframes/out/{p}-hf-v2.mp4'
           dur = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', out],
                                      capture_output=True, text=True).stdout.strip())
           d.append({'piece': p, 'render_secs': round(t1 - t0, 1), 'video_secs': round(dur, 2),
@@ -97,8 +97,8 @@ jobs:
           json.dump(d, open(f, 'w'), indent=1)
           EOF
           done
-          cp "$RUNNER_TEMP/times.json" templates/hyperframes/out/render-times.json
-          cat templates/hyperframes/out/render-times.json
+          cp "$RUNNER_TEMP/times.json" templates/hyperframes/out/render-times-v2.json
+          cat templates/hyperframes/out/render-times-v2.json
 
       - name: Clean the font copies
         if: always()
@@ -109,5 +109,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add templates/hyperframes/out
-          git commit -q -m "HyperFrames pilot renders on the runner ($(nproc) cores)" || exit 0
+          git commit -q -m "HyperFrames pilot design pass 2 renders on the runner ($(nproc) cores)" || exit 0
           for i in 1 2 3; do git pull -q --rebase origin pilot/hyperframes && git push -q origin HEAD:pilot/hyperframes && break; sleep 5; done
