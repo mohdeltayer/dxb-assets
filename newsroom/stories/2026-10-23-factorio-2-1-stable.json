@@ -1,0 +1,70 @@
+{
+ "id": "2026-10-23-factorio-2-1-stable",
+ "title": "Factorio 2.1 is stable (Wube, FFF-449)",
+ "status": "building",
+ "lane": "rolling queue",
+ "chip": "متوفر الآن",
+ "template": "explainer",
+ "skin": "house",
+ "sound": "trailer (Trailer 2026 music from 30 s; no speech)",
+ "genre": [
+  "strategy/sim"
+ ],
+ "sensitive": "none",
+ "sources": [
+  {
+   "kind": "primary",
+   "who": "Wube Software, Friday Facts #449 '2.1 Stable'",
+   "url": "https://factorio.com/blog/post/fff-449",
+   "time": "2026-10-23T11:00Z"
+  },
+  {
+   "kind": "primary",
+   "who": "FFF-440 (29 May 2026): 2.1 the last major update, no new planets or enemies",
+   "url": "https://factorio.com/blog/post/fff-440"
+  },
+  {
+   "kind": "primary",
+   "who": "FFF-444: 2.1 experimental 26 Jun 2026",
+   "url": "https://factorio.com/blog/post/fff-444"
+  }
+ ],
+ "claims": [
+  [
+   "2.1 marked stable 23 Oct",
+   "confirmed, primary"
+  ],
+  [
+   "mixed rockets, platform-to-platform transfers, landing pad unloading bay, circuit input/output split",
+   "confirmed, primary"
+  ],
+  [
+   "new graphics: assemblers, refinery, rocket silo, heat exchanger",
+   "confirmed, primary"
+  ],
+  [
+   "Space Age playable without Quality; native ARM64 Linux",
+   "confirmed, primary"
+  ],
+  [
+   "2.0 saves load; no downgrade",
+   "confirmed, primary"
+  ]
+ ],
+ "drafts": {
+  "x": "أعلن استوديو ويوب سوفتوير (Wube Software) أن تحديث Factorio 2.1، الذي وصفه بآخر تحديث كبير للعبة، صار مستقرًا ومتاحًا للجميع بعد صيف في النسخة التجريبية.",
+  "threads": "أعلن استوديو ويوب سوفتوير (Wube Software) أن تحديث Factorio 2.1، الذي وصفه بآخر تحديث كبير للعبة، صار مستقرًا ومتاحًا للجميع بعد صيف في النسخة التجريبية.",
+  "instagram": "متوفر الآن: Factorio 2.1 بنسخته المستقرة، آخر تحديث كبير للعبة.\n\nأعلن استوديو ويوب سوفتوير (Wube Software) التشيكي اليوم 23 أكتوبر أن تحديث 2.1 للعبة Factorio صار مستقرًا، بعد أن قضى الصيف في النسخة التجريبية منذ 26 يونيو.\n\nويضيف التحديث صواريخ تحمل أنواعًا مختلفة من العناصر في إطلاق واحد، ونقل الشحنات مباشرة بين المنصات الفضائية، وخانة تفريغ في منصة الهبوط، وفصل مدخلات شبكة الدوائر الكهربائية عن مخرجاتها، إلى جانب رسوم جديدة لآلات التجميع ومصفاة النفط وصومعة الصواريخ.\n\nكما يمكن الآن لعب توسعة Space Age من دون نظام Quality، وتعمل اللعبة أصليًا على أنظمة Linux بمعالجات ARM.\n\nوكان الاستوديو قد وصف الإصدار 2.1 بأنه آخر تحديث كبير للعبة، من دون كواكب أو أعداء جدد. وتعمل عليه ملفات الحفظ من الإصدار 2.0، لكن لا يمكن إعادتها إلى الإصدار السابق بعد ذلك.\n\n#ألعاب #أخبار_الألعاب #Factorio #SpaceAge",
+  "follow_up": {
+   "x": "المصدر: مدونة Factorio الرسمية (Friday Facts #449)\nhttps://factorio.com/blog/post/fff-449",
+   "instagram": "المصدر: مدونة Factorio الرسمية، Friday Facts #449، 23 أكتوبر 2026"
+  }
+ },
+ "notes": [
+  "brief: angle = the last big Factorio update is final, what it brings; hook kind surprise (last major update); explainer (card-led, the source's own FFF figures on plates over the 2026 trailer moving behind); opener the trailer's factory shot moving under the headline; cover headline over the factory; sound the trailer's own music from 30 s (speech check: music only, whisper tags only); key shots: each feature line on its own FFF figure (platform import image for transfers, unloader for the landing pad bay, I/O assembler for the circuit split), postcard still for new graphics; total 19.7 s",
+  "why explainer, not trailer or split: those two are at the day cap (5 and 6); the features are shown in Wube's figures, not in the trailer",
+  "source kinds: Steam 1080p 'Trailer 2026' (new trailer of 23 Oct), FFF images (1120 px figures on plates at 0.73x; 4K postcard); decode clean",
+  "DeepL forward pass (whole story): agrees; picked «صومعة الصواريخ» (DeepL) for rocket silo, «منصة الهبوط» over DeepL «مهبط الهبوط» (tautology), «شبكة الدوائر الكهربائية» (DeepL), «في إطلاق واحد» (DeepL) for mixed rockets",
+  "gate 14:0xZ: FFF-449 read in full; releases API stable 2.1.23"
+ ]
+}
