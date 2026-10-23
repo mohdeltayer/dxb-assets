@@ -1,7 +1,7 @@
 {
  "id": "2026-10-23-genshin-impact-7-2-hour-of-ruin",
  "title": "Genshin Impact 7.2 'Hour of Ruin' launches 4 Nov (HoYoverse)",
- "status": "building",
+ "status": "scheduled",
  "lane": "rolling queue",
  "chip": "رسمي",
  "template": "split",
@@ -71,6 +71,95 @@
   "IGN posted the official 7.2 trailer at 1920 (14:2xZ): picture from it, no stand-in; the trailer is narrated almost throughout, so the sound is the official Snezhnaya exploration teaser's music from 20 s (speech check: music only)",
   "Mohammad 14:20Z: 'Fill it tonight, gap rule over caps' (split is past four today)",
   "brief: angle = 7.2 date and the new region; hook kind surprise; split (strip: the date), opener the icy cliffs and rail bridge moving under the headline; cover headline over Snezhnaya; key shots: Novokitezhgrad for the city line, Mitya then Valeriy for the characters line, the Archons' throne and a nation's representative for the Tsaritsa line; total 17.7 s",
-  "grammar stage 14:4xZ: no required edits; applied «يصدر»، «كشفت عن»، «الواقعة تحت الأرض»، «وسط أزمة» (not «لمواجهة», which added a purpose), new hook line; on-screen line 3 changes to «وسط أزمة» in v2"
- ]
+  "grammar stage 14:4xZ: no required edits; applied «يصدر»، «كشفت عن»، «الواقعة تحت الأرض»، «وسط أزمة» (not «لمواجهة», which added a purpose), new hook line; on-screen line 3 changes to «وسط أزمة» in v2",
+  "v3 pace fix: closing split at the trailer's own cut",
+  "gate 15:45Z: HoYoverse calendar still dates the update 11/04; no change",
+  "go: rolling queue (gap over caps tonight, Mohammad 14:20Z); scheduled in Publer 16:00Z (20:00 Dubai) on Instagram (Reel, Dubai location, source comment), X (source reply) and Threads"
+ ],
+ "director_qa": {
+  "round": 1,
+  "reel": "v2",
+  "verdict": "FIX",
+  "shots": [
+   [
+    "0",
+    "0-3.0",
+    "25.0",
+    "PASS",
+    "cliffs, corner clear"
+   ],
+   [
+    "1",
+    "3.5-5.5",
+    "46.0",
+    "PASS",
+    "cave city"
+   ],
+   [
+    "2",
+    "6.0-8.0",
+    "30.5",
+    "FIX",
+    "train, not underground: crystal cave 49.3"
+   ],
+   [
+    "3",
+    "8.5-10.5",
+    "143.5",
+    "PASS",
+    "Mitya"
+   ],
+   [
+    "4",
+    "10.5-12.0",
+    "108.0",
+    "PASS",
+    "Valeriy"
+   ],
+   [
+    "5",
+    "12.5-14.0",
+    "186.0",
+    "PASS",
+    "throne"
+   ],
+   [
+    "6",
+    "14.0-15.0",
+    "202.0",
+    "FIX",
+    "dark shoulder, no face: dropped"
+   ],
+   [
+    "7",
+    "15.0-17.7",
+    "228.0",
+    "PASS",
+    "lightning close"
+   ]
+  ],
+  "reel_level": "all PASS; music continuous, speech none"
+ },
+ "director_qa_round2": {
+  "round": 2,
+  "reel": "v3",
+  "verdict": "PASS",
+  "shots": [
+   [
+    "2",
+    "4.3-7.0",
+    "49.3",
+    "PASS",
+    "crystal plaza and cave"
+   ],
+   [
+    "6-7",
+    "12-17.5",
+    "228.0, 230.0",
+    "PASS",
+    "emblem then storm; a brief white flash (skip Snapchat)"
+   ]
+  ],
+  "reel_level": "17.5 s + end card; change every 1-3 s; last 2 s picture; no HUD or title card; strip clear of lines"
+ }
 }
