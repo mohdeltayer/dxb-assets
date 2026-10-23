@@ -4678,5 +4678,27 @@
   "job_secs": 318,
   "setup_min": 0.92,
   "story": "steins-gate-reboot-eu-physical-delay"
+ },
+ {
+  "name": "helldivers-3-only-if-different-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-23T16:46Z",
+  "stages": {
+   "checks": 0.9,
+   "montage": 51.5,
+   "text": 59.2,
+   "audio": 1.1,
+   "outro": 55.5
+  },
+  "total": 168.2,
+  "lane": "runner",
+  "queued_at": "2026-10-23T16:41:11Z",
+  "finished_at": "2026-10-23T16:46Z",
+  "render_min": 2.8,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 293,
+  "setup_min": 1.02,
+  "story": "helldivers-3-only-if-different"
  }
 ]
