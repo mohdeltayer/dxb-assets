@@ -7,9 +7,19 @@ smear_times(path)     sudden blocky smear: long straight edges in the picture ar
                       1 to 4 for the rest of the Reel); returns [(start s, end s, peak)]
 dense_strip(path,out) 4 frames a second through the whole clip, so the first second of every shot is seen
 
+Source quality (Mohammad, 24 Oct 2026, inbox 16:26Z, after the ARMS check): the checks above look for broken
+video; these look for a valid but weak source. The ARMS hoop swing (Nintendo's only copy, 1280x720 at 2.6 Mbps,
+enlarged 2.7x) broke into big squares in a fast camera move.
+probe(path)           (width, height, fps, video bit/s), cached per file
+bitrate_floor(w,h,f)  the floor for that source: 5 Mbps at 1080p, 3 Mbps at 720p (see BITRATE_*)
+bitrate_flag(path)    None, or 'low bitrate 2.6 Mbps (floor 3.0 Mbps for 1280x720 at 30 fps)'
+block_ratio(path,s,d) the 8x8 block-edge ratio the encoder leaves over a stretch: (median, peak, frames);
+                      a peak above BLOCK_MAX reads as blocky once the shot is enlarged past 2x
+
     python3 templates/decodecheck.py <file.mp4> [--strip out.jpg]
+    python3 templates/decodecheck.py <file.mp4> --blocks <start> <seconds>
 """
-import subprocess, sys
+import json, math, os, subprocess, sys
 import numpy as np
 
 W, H = 270, 480          # analysis size for a 9:16 Reel; a 16:9 source is read at 480x270
@@ -105,6 +115,98 @@ def dense_strip(path, out, fps=4, width=108):
     return out
 
 
+# Source quality (24 Oct 2026). The bitrate floor is for the bits that land in the 9:16 window, written in source
+# terms: 5 Mbps for a 16:9 1080p source at 30 fps, 3 Mbps at 720p, in between and below on (height / 1080) ** 1.26
+# (0.63 in pixels, the exponent the two approved points give). It holds at 5 Mbps above 1080p, since a larger source
+# is enlarged less and the same bits in the window serve it (IGN's 1440p30 at 5.3 Mbps and 4K60 at 15 Mbps pass). A
+# source narrower than 16:9 (a vertical cut) keeps more of its width, so its floor falls with the share it keeps; one
+# under 30 fps spends its bits on fewer frames, so its floor falls with fps / 30 (a 24 fps Steam trailer: 4 Mbps).
+BITRATE_FLOOR = 5.0e6
+BITRATE_720 = 3.0e6
+BITRATE_EXP = math.log(BITRATE_FLOOR / BITRATE_720) / math.log(1080 / 720)
+# Block-edge ratio: mean luma step across 8-pixel boundaries over the mean step everywhere else, per frame at the
+# source's own size (no scaling, so the grid stays put). ARMS: the hoop swing read median 1.41, peak 1.56 over 0.2 s
+# (frame max 1.61); the clean ARMS shots peaked 1.41 to 1.45; Steam and IGN 1080p trailers 1.06 to 1.30.
+BLOCK_MAX = 1.5          # peak of the BLOCK_WIN rolling mean above this: blocky
+BLOCK_WIN = 0.2          # seconds: a burst the eye catches, not one odd frame
+BLOCK_FPS = 30           # frames read per second at most (a 60 fps source is read on every other frame)
+_PROBE, _BLOCK = {}, {}
+
+
+def probe(path):
+    """(width, height, fps, video bit/s) of a file's first video stream; bit/s from the stream, else the
+    container's, else size over duration."""
+    key = (path, os.path.getmtime(path), os.path.getsize(path))
+    if key not in _PROBE:
+        r = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries',
+                            'stream=width,height,r_frame_rate,bit_rate:format=bit_rate,duration', '-of', 'json', path],
+                           capture_output=True, text=True)
+        j = json.loads(r.stdout or '{}')
+        st = (j.get('streams') or [{}])[0]
+        fm = j.get('format') or {}
+        n, d = (str(st.get('r_frame_rate', '30/1')).split('/') + ['1'])[:2]
+        fps = float(n) / float(d or 1) if float(d or 1) else 30.0
+        bps = st.get('bit_rate') or fm.get('bit_rate')
+        if not bps or bps == 'N/A':
+            bps = os.path.getsize(path) * 8 / max(0.1, float(fm.get('duration') or 1))
+        _PROBE[key] = (int(st.get('width', 0)), int(st.get('height', 0)), fps, float(bps))
+    return _PROBE[key]
+
+
+def bitrate_floor(w, h, fps):
+    share = min(1.0, h * 9 / 16 / w) if w else 1.0     # the part of the width the 9:16 window keeps (16:9: 0.316)
+    k = min(1.0, (h / 1080) ** BITRATE_EXP) * min(1.0, fps / 30)
+    return BITRATE_FLOOR * k * (9 / 16) ** 2 / share
+
+
+def bitrate_flag(path):
+    w, h, fps, bps = probe(path)
+    floor = bitrate_floor(w, h, fps)
+    if bps >= floor:
+        return None
+    return f'low bitrate {bps / 1e6:.1f} Mbps (floor {floor / 1e6:.1f} Mbps for {w}x{h} at {fps:.0f} fps)'
+
+
+def block_ratio(path, start, dur, crop=None):
+    """(median, peak, frames) of the 8x8 block-edge ratio over [start, start + dur] of `path`, read at its own size.
+    `crop` (w, h, x, y) keeps to the picture inside a letterbox; the grid is counted from the coded frame's origin.
+    The peak is the highest BLOCK_WIN rolling mean. Flat frames (black, fades) are skipped. About 0.3 s per second
+    of 720p and 0.6 s per second of 1080p on the container."""
+    key = (path, round(float(start), 3), round(float(dur), 3), crop, os.path.getmtime(path))
+    if key in _BLOCK:
+        return _BLOCK[key]
+    W0, H0, fps, _ = probe(path)
+    w, h, x, y = crop or (W0, H0, 0, 0)
+    vf = (f'crop={w}:{h}:{x}:{y},' if crop else '') + 'format=gray'
+    p = subprocess.Popen(['ffmpeg', '-nostdin', '-v', 'error', '-ss', str(start), '-t', str(dur), '-i', path, '-an',
+                          '-vf', vf, '-f', 'rawvideo', '-'], stdout=subprocess.PIPE)
+    step = max(1, round(fps / BLOCK_FPS))
+    bc = ((np.arange(w - 1) + x) % 8) == 7     # between pixel 7 and 8 of each block, across
+    br = ((np.arange(h - 1) + y) % 8) == 7     # and down
+    n, i, out = w * h, 0, []
+    while True:
+        buf = p.stdout.read(n)
+        if len(buf) < n:
+            break
+        i += 1
+        if (i - 1) % step:
+            continue
+        f = np.frombuffer(buf, np.uint8).reshape(h, w).astype(np.int16)
+        dx, dy = np.abs(np.diff(f, axis=1)), np.abs(np.diff(f, axis=0))
+        den = dx[:, ~bc].mean() + dy[~br, :].mean()
+        if den > 1.0:
+            out.append((dx[:, bc].mean() + dy[br, :].mean()) / den)
+    p.stdout.close(); p.wait()
+    if not out:
+        res = (0.0, 0.0, 0)
+    else:
+        r = np.array(out)
+        k = max(1, min(len(r), round(BLOCK_WIN * fps / step)))
+        res = (round(float(np.median(r)), 2), round(float(np.convolve(r, np.ones(k) / k, 'valid').max()), 2), len(r))
+    _BLOCK[key] = res
+    return res
+
+
 def check(path, waived=()):
     """Raise on decode errors or a smear outside the waived [(t0, t1, reason)] ranges; return the smears found."""
     errs = decode_errors(path)
@@ -119,6 +221,12 @@ def check(path, waived=()):
 
 if __name__ == '__main__':
     p = sys.argv[1]
+    if '--blocks' in sys.argv:
+        k = sys.argv.index('--blocks')
+        med, peak, n = block_ratio(p, float(sys.argv[k + 1]), float(sys.argv[k + 2]))
+        print(f'blocks: median {med}, peak {peak} over {n} frames' + (' (blocky)' if peak > BLOCK_MAX else ''))
+        print('bitrate:', bitrate_flag(p) or 'ok (%.1f Mbps)' % (probe(p)[3] / 1e6))
+        sys.exit(0)
     errs = decode_errors(p)
     print('decode:', 'clean' if not errs else f'{len(errs)} errors, first: {errs[0]}')
     sm = smear_times(p)

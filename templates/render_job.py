@@ -24,7 +24,9 @@ unreleased material.
       "speech_ok": [[3.0, 7.5, "director's statement, subtitled"]],      # only for a quote or interview Reel (Reel time)
       "speech_keep": true,                                           # speech is the news without speech_ok: no audio split
       "audio_split": false,                                          # opt out of the trailer audio split (tracksplit.py)
-      "sound": null, "country": null, "pace_ok": false, "lowres_ok": false,
+      "sound": null, "country": null, "pace_ok": false,
+      "lowres_ok": "IGN, Nintendo store, publisher press site, Steam: none above 720p",   # never a bare true (below)
+      "blocky_ok": [["arms-1.mp4", 28.0, "frames 28.0 to 30.6 looked at, phone size: blocks not visible"]],
       "ground_theme": "gold",                                        # for -gfx- graphics on the living ground
       "ground_footage": ["cp-er-trailer.mp4", 40.0],                 # card-led: the game's trailer behind the cards, moving
                                                                      # (a -gfx- shot may name its own: [png, [file, start], secs, null])
@@ -50,6 +52,17 @@ laid on the living ground (numgfx.slide), as in the batch render scripts.
 Focus is resolved on the container before the shot sheet (`focus`), so the job
 carries the crop that was judged; a null left in the job is autofocused on the
 runner, which may pick another subject.
+
+Source quality (Mohammad, 24 Oct 2026, inbox 16:26Z, after the ARMS check; reel.quality_gate, run by `check` and by
+reel() before the montage):
+  - Bitrate floor: a source under 5 Mbps at 1080p, 3 Mbps at 720p (decodecheck.bitrate_floor scales it for other
+    sizes and frame rates) is printed `lowbit` and flagged on the shot sheet. It does not stop the render.
+  - Block check: a footage shot enlarged past 2x (reel.MAX_ZOOM) has its source stretch read for the 8x8 block-edge
+    ratio; a peak above 1.5 (decodecheck.BLOCK_MAX) is `blocky` and stops the render unless `blocky_ok` names the
+    shot as [file, start, reason], start being the shot's own start, after someone has looked at the frames.
+  - `lowres_ok` names the copies searched: a string ("IGN, Nintendo store, publisher press site, Steam: none above
+    720p"), a list of the sources, or {"searched": [...], "result": "..."}. A bare true stops the render.
+`block_ok` stays the waiver for the smear check (decode damage), a different thing.
 """
 import json, os, re, shutil, subprocess, sys, time, urllib.request
 
@@ -190,11 +203,9 @@ def check(job):
     if job.get('cut'):
         reel.X = 0.04
     try:
-        for f, s, d, fo in shots(job, build=False):   # the runner stops on a letterboxed or small clip; catch it here first
-            if s is not None and not f.startswith(NG.SUB + '/') and os.path.exists(C.U + f) and not job.get('lowres_ok'):
-                rows = reel._bars(C.U + f, s, d)[1]
-                if rows < reel.MIN_SRC_H:
-                    raise ValueError(f'{f} at {s}: only {rows} rows of picture; find an unletterboxed or 4K copy, or set lowres_ok')
+        # the runner stops on a letterboxed or small clip, a blocky enlarged shot or a bare lowres_ok; catch it here
+        # first (source quality, 24 Oct 2026); bitrate flags are printed. Shots not in uploads are skipped.
+        reel.quality_gate(shots(job, build=False), job.get('lowres_ok'), job.get('blocky_ok'))
         st, end = reel.timeline(shots(job, build=False))
         reel.check_reading(place(job)(st, end), end)
     finally:
@@ -401,7 +412,8 @@ def run(job, draft=False):
                      credits=[tuple(c) for c in job['credits']] if job.get('credits') else None,
                      strip=strip_items(job) if job.get('strip') else None,
                      template=job.get('template'), pace_ok=job.get('pace_ok', False), lowres_ok=job.get('lowres_ok', False),
-                     skin=job.get('skin'), person=[tuple(x) for x in job['person']] if job.get('person') else None)
+                     skin=job.get('skin'), person=[tuple(x) for x in job['person']] if job.get('person') else None,
+                     blocky_ok=job.get('blocky_ok'))
     video = done[0] if isinstance(done, (list, tuple)) else done
     if job.get('insert') and not draft:
         inserts(job, video)

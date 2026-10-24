@@ -1251,6 +1251,39 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      the source stretches and the output, and fails the job before anything
      is committed; it also writes `<name>-dense.jpg` (the 4 fps strip),
      committed beside the strip and sheet.
+- Source quality checks (Mohammad, 24 Oct 2026, inbox 16:26Z, after the ARMS
+  check). The ARMS soundtrack Reel (v4) broke up at 12.2 to 12.9 s: Nintendo's
+  only copy is 1280x720 at about 2.6 Mbps, enlarged 2.7x, and its own
+  compression blocks became big squares in a fast camera swing. The decode and
+  smear checks look for broken video, not a valid but weak source, and the 2x
+  cap was waived with `lowres_ok` with no record of which better copies were
+  looked for. Three checks, in `reel.quality_gate` (run by `render_job.py
+  check` and by reel() before the montage) and on the shot sheet:
+  1. Bitrate floor: a source under 5 Mbps at 1080p or 3 Mbps at 720p is
+     flagged `lowbit` in the check output and on the sheet; a flag, not a stop.
+     Other sizes scale on (height / 1080) ** 1.26 (0.63 in pixels, from the two
+     approved points), held at 5 Mbps above 1080p (a larger source is enlarged
+     less), lower for a source narrower than 16:9 by the share of its width the
+     9:16 window keeps, and lower under 30 fps by fps / 30
+     (`decodecheck.bitrate_floor`). On 24 Oct: Steam 1080p trailers 4.7 to 6.0
+     Mbps pass (24 fps floor 4.0), IGN 1440p30 5.3 and 4K60 15 pass, IGN's Ys
+     VIII 1080p at 3.8 and every Nintendo store 720p trailer (2.5 to 2.6) flag.
+  2. Block check: every footage shot enlarged past 2x (`reel.MAX_ZOOM`) has its
+     source stretch read at its own size for the 8x8 block-edge ratio (luma
+     step across 8-pixel boundaries over the step elsewhere,
+     `decodecheck.block_ratio`); the peak of a 0.2 s rolling mean above 1.5
+     (`decodecheck.BLOCK_MAX`) is `blocky` on the sheet and stops the render
+     unless the job waives that shot: `"blocky_ok": [[file, start, reason]]`,
+     start being the shot's own start, after someone has looked at the frames.
+     ARMS v4: the hoop swing read median 1.41, peak 1.56 (stops); its other
+     shots peaked 1.15 to 1.45; Steam and IGN 1080p stretches read 1.05 to
+     1.31. About 1 s per 3 s shot of 720p; shots at 2x or less are not read.
+  3. `lowres_ok` names the copies checked: a string ("IGN, Nintendo store,
+     publisher press site, Steam: none above 720p"), a list of the sources, or
+     `{"searched": [...], "result": "..."}`; a bare true stops the render with
+     the reason to write, in job files and in reel(), montage, cached_shot and
+     edition on the container alike. The reason is printed in the check output.
+  `block_ok` stays the waiver for the smear check (decode damage).
 - Framing and speech (advisor, 21 Oct 2026, agreed with Mohammad).
   1. Faces, no side-on centring: autofocus also measures each face's turn
      (yaw) on the frames it already samples, with a face-landmark model on CPU

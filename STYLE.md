@@ -168,6 +168,10 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     runner fails the job on any of these; a flagged stretch a person has
     looked at is waived with `block_ok` and a reason. "decode clean" goes
     in the draft notes per source.
+  - Source quality (24 Oct): a source under 5 Mbps at 1080p (3 at 720p) is
+    flagged `lowbit`; a shot enlarged past 2x whose source stretch reads
+    blocky (8x8 block-edge peak over 1.5) stops unless `blocky_ok` waives it
+    with a reason; `lowres_ok` names the copies searched, never a bare true.
 - **Text:**
   - The chip and headline sit at the top for about 3.5 s; the first frame is
     the grid tile.

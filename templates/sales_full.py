@@ -307,7 +307,8 @@ def reel(rows, week_label, date, out, hardware=(), hook='من تصدّر مبي�
          title='الأكثر مبيعًا في اليابان', hw_title='مبيعات الأجهزة في اليابان',
          source='فاميتسو (Famitsu)', theme='gold', hook_secs=3.6, hw_secs=8.0, draft=False,
          lowres_ok=False):
-    # lowres_ok: Switch 1 screenshots exist only at their native 1280x720 (Famitsu 5 to 11 Oct 2026)
+    # lowres_ok: Switch 1 screenshots exist only at their native 1280x720 (Famitsu 5 to 11 Oct 2026); since 24 Oct
+    # 2026 it names the copies checked ("Nintendo store, publisher press site: Switch 1 screenshots 1280x720 only"), never True
     accent = G.ACCENTS[theme]
     rows = sorted(rows, key=lambda r: -r['rank'])        # countdown, 10 to 1
     os.makedirs(C.U + SUB, exist_ok=True)

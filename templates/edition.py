@@ -208,9 +208,10 @@ def _prep(png, target_w, max_h, lowres_ok=False):
     p = png if os.path.isabs(png) else C.U + png
     im = _trim(Image.open(p).convert('RGBA'))
     s = min(target_w / im.width, max_h / im.height)
+    lowres_ok = RL.lowres_reason(lowres_ok)   # names the copies checked; a bare True stops (24 Oct 2026)
     if s > RL.MAX_ZOOM and not lowres_ok:
         raise ValueError(f'{png}: enlarged {s:.1f}x to fit ({im.width}x{im.height} to '
-                         f'{round(im.width * s)}x{round(im.height * s)}); find a larger render or pass lowres_ok=True')
+                         f'{round(im.width * s)}x{round(im.height * s)}); find a larger render or name the copies checked in lowres_ok')
     return im.resize((max(1, round(im.width * s)), max(1, round(im.height * s))), Image.LANCZOS)
 
 

@@ -33,6 +33,7 @@ import json, math, os, re, shutil, subprocess, sys, tempfile
 from PIL import Image, ImageDraw, ImageFilter
 import cards as C, fast_ar as A, ig_ar as G, outro, sonic
 import skins as SK
+import decodecheck as DC
 
 W, H = 1080, 1920
 L, R = G.SAFE_LEFT, G.SAFE_RIGHT
@@ -634,6 +635,121 @@ MAX_ZOOM = 2.0      # most a shot may be enlarged to fill 9:16 (Mohammad, 12 Oct
                     # the letterboxed Street Fighter trailer went out enlarged 2.4x and looked soft)
 MIN_SRC_H = int(H / MAX_ZOOM)   # so a clip must keep 960 rows of picture once its bars are cut (was 700)
 
+# Source quality checks (Mohammad, 24 Oct 2026, inbox 16:26Z, after the ARMS check). The ARMS soundtrack Reel broke
+# into big squares at 12.2 to 12.9 s: Nintendo's only copy is 1280x720 at about 2.6 Mbps, enlarged 2.7x, and its own
+# compression blocks grew in a fast camera swing. The decode and smear checks look for broken video, not a weak one.
+# 1. Bitrate floor: a source under its floor (decodecheck.bitrate_floor: 5 Mbps at 1080p, 3 at 720p) is flagged
+#    `lowbit` on the shot sheet and in the check output. A flag, not a stop.
+# 2. Block check: a footage shot enlarged past MAX_ZOOM has its source stretch read for the 8x8 block-edge ratio
+#    (decodecheck.block_ratio); a peak above DC.BLOCK_MAX is `blocky` on the sheet and stops the render unless
+#    blocky_ok names the shot [(file, start, reason)] after someone has looked at it.
+# 3. lowres_ok names the copies checked: a string, a list of the sources searched, or {"searched": [...], "result":
+#    "..."}. A bare True stops the render (lowres_reason).
+LOWRES_EXAMPLE = 'IGN, Nintendo store, publisher press site, Steam: none above 720p'
+
+
+def lowres_reason(v):
+    """The waiver for a soft source as text, or None when there is none. lowres_ok must name the copies that were
+    searched (24 Oct 2026): a string, a list of sources, or {"searched": [...], "result": "..."}; a bare True (or
+    an empty or one-word reason) stops with the reason to write."""
+    if v is None or v is False or v == '' or v == [] or v == {}:
+        return None
+    if isinstance(v, dict):
+        got = v.get('searched') or v.get('sources') or v.get('checked')
+        got = ', '.join(got) if isinstance(got, (list, tuple)) else (got or '')
+        res = v.get('result') or v.get('found') or v.get('note') or ''
+        txt = (got + (': ' + res if res else '')).strip()
+    elif isinstance(v, (list, tuple)) and all(isinstance(x, str) for x in v):
+        txt = ', '.join(x.strip() for x in v if x.strip())
+    elif isinstance(v, str):
+        txt = v.strip()
+    else:
+        txt = ''
+    if len(txt) < 12 or txt.lower() in ('true', 'yes', 'none exists', 'no other copy'):
+        raise ValueError(f'lowres_ok must name the copies checked (Mohammad, 24 Oct 2026), not {v!r}: write the '
+                         f'sources searched and what they had, e.g. "lowres_ok": "{LOWRES_EXAMPLE}", or '
+                         '{"searched": ["IGN", "Nintendo store"], "result": "none above 720p"}')
+    return txt
+
+
+def _footage(f):
+    """A source file the quality checks read: not a still, not our graphics, not a cached or stills clip."""
+    return (os.path.splitext(f)[1].lower() not in STILL and not _ours(f)
+            and not f.startswith((CACHE + '/', STILLS + '/')) and os.path.exists(C.U + f))
+
+
+def source_quality(shots):
+    """{shot index: {'zoom', 'bitrate' (flag text or None), 'block' ((median, peak, frames) or None), 'blocky'}}
+    for every footage shot. The block ratio is read only where the shot is enlarged past MAX_ZOOM, on the shot's
+    own stretch inside its letterbox; a few seconds a shot."""
+    out = {}
+    for i, (f, s, d, fo) in enumerate(shots):
+        if s is None or not _footage(f):
+            continue
+        bars, rows = _bars(C.U + f, s, d)
+        z = H / rows
+        blk = None
+        if z > MAX_ZOOM:
+            crop = tuple(map(int, bars.split('crop=')[1].rstrip(',').split(':'))) if bars else None
+            blk = DC.block_ratio(C.U + f, s, d, crop)
+        out[i] = {'zoom': round(z, 2), 'rows': rows, 'bitrate': DC.bitrate_flag(C.U + f), 'block': blk,
+                  'blocky': bool(blk and blk[1] > DC.BLOCK_MAX)}
+    return out
+
+
+def _waived(f, s, blocky_ok):
+    for w in blocky_ok or ():
+        if len(w) >= 3 and w[0] == f and abs(float(w[1]) - float(s)) < 0.05 and str(w[2]).strip():
+            return str(w[2]).strip()
+    return None
+
+
+def quality_gate(shots, lowres_ok=None, blocky_ok=None):
+    """Before the render: print every source-quality flag, then stop on a bare lowres_ok, a clip under MIN_SRC_H
+    rows or a still past MAX_ZOOM with no lowres reason, or a blocky shot that blocky_ok does not waive. All the
+    problems are listed in one error. Returns source_quality's report."""
+    problems = []
+    try:
+        reason = lowres_reason(lowres_ok)
+    except ValueError as e:
+        reason, problems = None, [str(e)]
+    q = source_quality(shots)
+    seen, small = set(), []
+    for i, (f, s, d, fo) in enumerate(shots):
+        if os.path.splitext(f)[1].lower() in STILL and os.path.exists(C.U + f):
+            z = zoom((f, s, d, fo))
+            if z > MAX_ZOOM and not reason:
+                problems.append(f'{f}: a still enlarged {z:.1f}x to fill 9:16; find a larger image or name the copies '
+                                'checked in lowres_ok')
+            continue
+        if i not in q:
+            continue
+        r = q[i]
+        if r['bitrate'] and f not in seen:
+            print(f'source quality: {f}: {r["bitrate"]} (lowbit)', flush=True)
+        seen.add(f)
+        if r['rows'] < MIN_SRC_H:
+            small.append(f'{f} at {s} ({r["rows"]} rows, enlarged {r["zoom"]}x)')
+        if r['block']:
+            med, peak, _ = r['block']
+            w = _waived(f, s, blocky_ok)
+            tag = 'blocky' if r['blocky'] else 'ok'
+            print(f'source quality: shot {i} {f} at {s} for {d} s, enlarged {r["zoom"]}x: block ratio median {med}, '
+                  f'peak {peak} ({tag}{", waived: " + w if r["blocky"] and w else ""})', flush=True)
+            if r['blocky'] and not w:
+                problems.append(f'shot {i} {f} at {s} for {d} s is blocky: block ratio peak {peak} over '
+                                f'{DC.BLOCK_MAX} enlarged {r["zoom"]}x (the source\'s own compression blocks will show); '
+                                'use another stretch or a better copy, or after looking pass '
+                                f'blocky_ok=[["{f}", {s}, "reason"]]')
+    if small and reason:
+        print(f'source quality: under {MIN_SRC_H} rows: ' + ', '.join(small) + f'; lowres_ok: {reason}', flush=True)
+    elif small:
+        problems.append(f'under {MIN_SRC_H} rows of picture: ' + ', '.join(small) + '; find a 4K or unletterboxed '
+                        f'copy, or name the copies checked in lowres_ok ("{LOWRES_EXAMPLE}")')
+    if problems:
+        raise ValueError('source quality:\n  ' + '\n  '.join(problems))
+    return q
+
 
 def zoom(shot):
     """How much a shot is enlarged to fill the 9:16 frame: 1080p footage
@@ -1004,7 +1120,9 @@ def montage(shots, out, lowres_ok=False, fast=False):
     """Cut the shots into one 9:16 clip with crossfades; returns (starts, end).
     Letterbox bars are cropped before the enlargement; a clip with fewer than
     MIN_SRC_H rows of picture, or a still enlarged past MAX_ZOOM, stops the
-    render (it would look soft) unless lowres_ok."""
+    render (it would look soft) unless lowres_ok names the copies checked
+    (lowres_reason: a bare True stops, 24 Oct 2026)."""
+    lowres_ok = lowres_reason(lowres_ok)
     stills = [os.path.splitext(s[0])[1].lower() in STILL for s in shots]
     sound = any(not st and _has_audio(C.U + s[0]) for s, st in zip(shots, stills))
     args = ['ffmpeg', '-nostdin', '-y', '-v', 'error']
@@ -1019,7 +1137,7 @@ def montage(shots, out, lowres_ok=False, fast=False):
                 a, b = fo[0][1], fo[1][1]
             z = zoom((f, s, d, fo))
             if z > MAX_ZOOM and not lowres_ok:
-                raise ValueError(f'{f}: a still enlarged {z:.1f}x to fill 9:16; find a larger image or pass lowres_ok=True')
+                raise ValueError(f'{f}: a still enlarged {z:.1f}x to fill 9:16; find a larger image or name the copies checked in lowres_ok')
             args += ['-loop', '1', '-framerate', '30', '-t', str(d), '-i', C.U + f]
             sw, sh = W * SUB, H * SUB              # pan at 4x, scale down last (18 Oct 2026: whole-pixel pans judder)
             fc.append(f'[{i}:v]scale={sw}:{sh}:force_original_aspect_ratio=increase:flags=lanczos,'
@@ -1037,7 +1155,7 @@ def montage(shots, out, lowres_ok=False, fast=False):
             bars, rows = _bars(C.U + f, s, d)
             if rows < MIN_SRC_H and not lowres_ok:
                 raise ValueError(f'{f}: only {rows} rows of picture (bars cut), enlarged {H / rows:.1f}x; '
-                                 f'find a 4K or unletterboxed copy, or pass lowres_ok=True when none exists')
+                                 f'find a 4K or unletterboxed copy, or name the copies checked in lowres_ok ("{LOWRES_EXAMPLE}")')
             if FINISH and not _ours(f):     # the standard finish (12 Oct 2026): denoise, enlarge, adaptive sharpen, grade
                 pre, post = f'{DENOISE},', f",cas={0.7 if rows < H else 0.4},{GRADE}"
             else:                           # our graphics, or FINISH off: the old lanczos + light unsharp
@@ -1111,6 +1229,7 @@ def cached_shot(f, s, d, fo, lowres_ok=False):
     (video at inter_enc, the shot's own sound as pcm) and reused by every later
     render of the same (file, start, duration, focus). Returns the cache path
     relative to uploads."""
+    lowres_ok = lowres_reason(lowres_ok)
     os.makedirs(C.U + CACHE, exist_ok=True)
     key = _shot_key(f, s, d, fo)
     rel = f'{CACHE}/{key}.mkv'
@@ -1119,7 +1238,7 @@ def cached_shot(f, s, d, fo, lowres_ok=False):
     bars, rows = _bars(C.U + f, s, d)
     if rows < MIN_SRC_H and not lowres_ok:
         raise ValueError(f'{f}: only {rows} rows of picture (bars cut), enlarged {H / rows:.1f}x; '
-                         f'find a 4K or unletterboxed copy, or pass lowres_ok=True when none exists')
+                         f'find a 4K or unletterboxed copy, or name the copies checked in lowres_ok ("{LOWRES_EXAMPLE}")')
     if FINISH and not _ours(f):
         pre, post = f'{DENOISE},', f",cas={0.7 if rows < H else 0.4},{GRADE}"
     else:
@@ -1280,7 +1399,8 @@ def shotsheet(shots, out):
     with the first clean seek time after it, and for text, a logo or a subtitle that the
     crop window cuts (`cut-text`, outlined in red; advisor, 20 Oct 2026), and for frames whose
     main face is in profile (`profile`, the face outlined in amber; advisor, 21 Oct 2026): fix it
-    or justify it in the brief."""
+    or justify it in the brief. Source quality (24 Oct 2026, after ARMS): `lowbit` for a source under its bitrate
+    floor and `blocky` for a shot enlarged past MAX_ZOOM whose source stretch reads blocky (source_quality)."""
     from PIL import ImageDraw as D
     FW, FH = 288, 162                        # the full frame; the vertical crop beside it is FH tall
     VW = round(FH * W / H)
@@ -1304,11 +1424,19 @@ def shotsheet(shots, out):
         faces = dict(zip(seen, detect_faces([f'{tmp}/{n}.png' for n in range(len(seen))], 'shotsheet') if seen else []))
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
+    qual = source_quality(shots)              # bitrate floor and block check (24 Oct 2026, after ARMS)
     for i, (f, s, d, fo) in enumerate(shots):
         z = zoom(shots[i])
         soft = ['soft'] if z > MAX_ZOOM else []       # enlarged past MAX_ZOOM: look for a sharper copy
         if soft:
             flagged.append((i, s, soft))
+        q = qual.get(i) or {}
+        if q.get('bitrate'):
+            soft = soft + ['lowbit']
+            flagged.append((i, s, [q['bitrate']]))
+        if q.get('blocky'):
+            soft = soft + ['blocky']
+            flagged.append((i, s, [f'blocky: block ratio peak {q["block"][1]} (median {q["block"][0]}) enlarged {q["zoom"]}x']))
         if os.path.splitext(f)[1].lower() in STILL:
             im = Image.open(C.U + f).convert('RGB'); im.thumbnail((240, 240))
             tiles.append((i, f'still x{z:.1f}' + (' +soft' if soft else ''), im)); continue
@@ -1506,8 +1634,10 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
          lowres_ok=False, read_check=True, track=None, draft=False, head_size=HEAD_SIZE, cut=False, credits=None, strip=None,
          products=None, template=None, tribute=False, reveal=None, profile=None, pace_ok=False, skin=None,
-         person=None):
-    """`person`: [(photo, name, role, t0, t1, opts), ...] (advisor, 23 Oct 2026, people stories show the person):
+         person=None, blocky_ok=None):
+    """`blocky_ok`: [(file, start, reason)], shots enlarged past MAX_ZOOM whose source reads blocky (quality_gate,
+    24 Oct 2026) and that someone has looked at; `lowres_ok` names the copies checked (lowres_reason), never True.
+    `person`: [(photo, name, role, t0, t1, opts), ...] (advisor, 23 Oct 2026, people stories show the person):
     the person's official photo in a framed window with a name plate over the running footage from t0 to t1
     (Reel seconds; the first appearance within the first 3 to 4 s, with the line that names them), opts
     {'focus': (x, y), 'credit': text} as in person_layer. The footage and its sound keep running under it.
@@ -1548,6 +1678,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     Without a voice every line must stay up for its reading time (read_secs);
     the render stops otherwise, so a short story gets more related footage."""
     global X
+    lowres_ok = lowres_reason(lowres_ok)   # a bare True stops here, before anything is built (24 Oct 2026)
     if label == 'عاجل':                    # عاجل is a skin on any template (advisor, 14 Oct 2026): crimson and the breaking bed
         theme, sound = 'crimson', sound or 'breaking'
         skin = None                        # and stays crimson on any game skin (advisor, 20 Oct 2026)
@@ -1563,7 +1694,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, credits=credits, strip=strip,
                         products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok,
-                        skin=skin, person=person)
+                        skin=skin, person=person, blocky_ok=blocky_ok)
         finally:
             X = keep
     global FINISH
@@ -1573,7 +1704,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, cut, credits=credits, strip=strip,
                         products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok,
-                        skin=skin, person=person)
+                        skin=skin, person=person, blocky_ok=blocky_ok)
         finally:
             FINISH = keep_f
     if profile and not PROFILES[profile].get('music', True) and isinstance(track, (tuple, list)) and len(track) > 2:
@@ -1623,6 +1754,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
                         raise ValueError(f'the composition frame ({sa:.1f} to {sz:.1f}s) carries the strip only, never a line: {t}')
         for i, (text, _, _, kw) in enumerate(lines):   # a line outside the safe zone stops here, not after the encode
             line_layer(text, f'{tmp}/l{i}.png', skin=skin, **kw)
+        quality_gate(shots, lowres_ok, blocky_ok)   # bitrate floor, block check, named lowres_ok (24 Oct 2026)
         lap('checks')
         ext = 'mp4' if draft else 'mkv'             # lossless intermediates for the real render (advisor, 14 Oct 2026)
         global TRANSITION
