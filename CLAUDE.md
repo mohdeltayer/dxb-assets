@@ -2935,6 +2935,8 @@ and Sunday.
    caps": for that evening the gap rule wins over the per-template and card-led
    caps; no third in a row on one template, no two in a row on one game or
    publisher, and reports at most one in three still hold.
+9. 24 Oct, inbox 10:19Z (Saturday, news thin; trailer and split at their caps,
+   card-led window full): "Fill it tonight". Same terms as 8, until 24:00 Dubai.
 
 Posting is irreversible: pushing `queue/**` to *any* branch of dxb-queue
 fires the publisher, because `publish.yml` has no branch filter. Never
