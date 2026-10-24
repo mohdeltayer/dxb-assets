@@ -118,7 +118,8 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - Say what an unfamiliar name is («استوديو…», «صانع المحتوى…»).
 - **Direction:** every post, paragraph and on-screen line opens on an Arabic
   word. reel.py now stops when a wrapped headline or story line opens on
-  Latin, a digit or a bracket (13 Oct).
+  Latin, a digit or a bracket (13 Oct), and when an Arabic prefix is glued
+  to a Latin name («لـSwitch», «وZelda»), which flips on screen (24 Oct).
 - **Numbers and punctuation:**
   - Western digits.
   - The dirham symbol goes left of the price.

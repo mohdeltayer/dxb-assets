@@ -56,6 +56,15 @@ def rtl_starts(lines, what):
         t = ln.strip().lstrip('«"“\u200f')
         if t and not _arabic(t[0]):
             raise ValueError(f'{what} line opens on {t[:12]!r}, not an Arabic word; rebreak or reword: {ln}')
+        m = GLUED.search(ln)
+        if m:                              # 24 Oct 2026: ARMS v3 drew «لـSwitch 2» as «Switch 2لـ»
+            raise ValueError(f'{what} line glues an Arabic prefix to a Latin word ({m.group(0)!r}), which flips on '
+                             f'screen; reword with a space («لجهاز Switch 2», «و Zelda» or «وسلسلة Zelda»): {ln}')
+
+
+#: An Arabic letter or tatweel written straight onto a Latin letter or digit («لـSwitch», «وZelda»):
+#: the image library's bidi puts the prefix after the name on screen. Post text is not affected.
+GLUED = re.compile('[\u0621-\u064A\u0640][A-Za-z0-9]')
 
 
 def _band(im, y0, y1, up, alpha):

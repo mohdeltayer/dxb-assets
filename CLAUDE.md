@@ -499,6 +499,10 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   right-to-left text (22 and 23 Oct: a card read «43%+», a headline «+New
   Game»), and the check does not catch it: spell it out or drop the sign
   (New Game Plus; «43%» with no plus) on screen and in the post text.
+  An Arabic prefix written straight onto a Latin name flips too (24 Oct: ARMS
+  v3 drew «لـSwitch 2» as «Switch 2لـ»): on screen write «لجهاز Switch 2»,
+  «وسلسلة Zelda» or put a space after the prefix. `rtl_starts` now stops on it
+  (`reel.GLUED`); post text is unaffected.
   The container has no Dubai font, so wraps are only caught on the runner:
   keep a headline line under about 26 characters at 60 when it carries a
   Latin name.
