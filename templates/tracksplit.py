@@ -104,8 +104,20 @@ def _footage(f, start):
 
 # ---------------------------------------------------------------- the child process
 
+_HAS_AUDIO = {}
+
+
+def _has_audio(path):
+    if path not in _HAS_AUDIO:
+        _HAS_AUDIO[path] = bool(subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'a', '-show_entries',
+                                                'stream=index', '-of', 'csv=p=0', path], capture_output=True, text=True).stdout.strip())
+    return _HAS_AUDIO[path]
+
+
 def _audio(path, start, secs):
     import numpy as np
+    if not _has_audio(path):                     # a silent clip (SteamOS, 24 Oct): no effects of its own, not a failure
+        return np.zeros((2, int(round(secs * SR))), dtype=np.float32)
     out = subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-ss', f'{max(0.0, start):.3f}', '-t', f'{secs:.3f}', '-i', path,
                           '-vn', '-ac', '2', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
     a = np.frombuffer(out, dtype=np.float32).reshape(-1, 2).T.copy()
