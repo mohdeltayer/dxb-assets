@@ -140,6 +140,12 @@ def frame_layer(path, theme, seed, h=420):
 CHIP_DROP, GRID_CORNER = 60, 140
 HEAD_TOP = G.SAFE_TOP + 10 + CHIP_DROP
 GRID_TOP = (H - W * 4 // 3) // 2
+#: Grid tile headlines (advisor, 24 Oct 2026, agreed with Mohammad): at grid size the old 66 px
+#: headline read like a caption and faded on bright footage. The first-frame headline is now about
+#: 1.5 times larger (HEAD_SIZE), at most HEAD_LINES short lines, never below HEAD_MIN (a headline that
+#: will not fit is cut to fewer words, not shrunk), on a stronger soft band (HEAD_BAND) with a wider
+#: glow behind the type, so it holds on pale skies and white scenes.
+HEAD_SIZE, HEAD_MIN, HEAD_LINES, HEAD_BAND = 100, 80, 2, 225
 
 
 def grid_corner_clear(im, what='head'):
@@ -149,7 +155,7 @@ def grid_corner_clear(im, what='head'):
         raise ValueError(f'{what} reaches the grid tile corner (Reels icon, x {box[0]} to {W}, y {box[1]} to {box[3]})')
 
 
-def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
+def head_layer(headline, label, path, source, date, country=None, hs=HEAD_SIZE, hst=None,
                vivid=False, theme='cold', seed=0, style='lines', meta_path=None, skin=None):
     """Chip and headline on a soft band at the top; the credit line (rule, source · date)
     is written to `meta_path` as its own layer when given, else drawn with the head. `vivid`
@@ -160,13 +166,16 @@ def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     probe = ImageDraw.Draw(Image.new('RGBA', (W, H)))
     room = W - R - L
-    while True:                            # a long Latin name shrinks the headline, never the frame
+    if hs < HEAD_MIN:
+        raise ValueError(f'head_size {hs} is under HEAD_MIN {HEAD_MIN} (grid tile memo, 24 Oct 2026); cut the headline instead')
+    hst = hst or hs + 20
+    while True:                            # a long Latin name shrinks the headline a little, never below HEAD_MIN
         f = A.F('Bold', hs)
         lines = G._wrap(probe, headline, f, room)
-        if len(lines) <= 3 and all(probe.textlength(x, font=f, **G.AR) <= room for x in lines):
+        if len(lines) <= HEAD_LINES and all(probe.textlength(x, font=f, **G.AR) <= room for x in lines):
             break
-        if hs <= 48:
-            raise ValueError(f'headline will not fit the safe zone: {headline}')
+        if hs - 4 < HEAD_MIN:
+            raise ValueError(f'headline needs more than {HEAD_LINES} lines at {HEAD_MIN} px; cut it to a few words: {headline}')
         hs, hst = hs - 4, hst - 5
     hl = L
     if len(lines) == 2:                    # balance two lines so no word hangs alone
@@ -178,7 +187,7 @@ def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
     acc = SK.load(skin)['accent'] if skin else G._ACC
     end = G._head(probe, headline, HEAD_TOP, label, country, hs, hst, right=R, left=hl)
     meta_y = end + 30
-    _band(im, 0, meta_y + 220, True, 190)
+    _band(im, 0, meta_y + 220, True, HEAD_BAND)
     if skin:                               # the kit's decoration and its plate behind chip and headline
         SK.top(im, meta_y + 140, skin, seed)
         SK.plate(im, (max(L - 20, hl - 28), HEAD_TOP - 18, W - R + 20, end + 14), skin)
@@ -191,7 +200,7 @@ def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
         d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=acc)
         d.text((W - R - 62, meta_y), f'{source}\u200f  ·  \u200f{A.arabic_date(date)}', font=A.F('Medium', 32),
                fill=A.BODY, anchor='rm', **G.AR)
-    _glowed(im, t); im.save(path)
+    _glowed(im, t, blur=16, gain=2.6); im.save(path)
     if meta_path:                          # the credit line on its own layer: it enters at CREDIT_AT (advisor, 14 Oct 2026)
         m = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(m)
         d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=acc)
@@ -201,10 +210,10 @@ def head_layer(headline, label, path, source, date, country=None, hs=66, hst=86,
     return path
 
 
-def _glowed(im, t):
+def _glowed(im, t, blur=10, gain=2):
     """Lay the drawn text `t` on `im` with a soft ground-coloured glow behind it."""
     glow = Image.new('RGBA', (W, H), A.GROUND + (0,))
-    glow.putalpha(t.getchannel('A').filter(ImageFilter.GaussianBlur(10)).point(lambda v: min(255, v * 2)))
+    glow.putalpha(t.getchannel('A').filter(ImageFilter.GaussianBlur(blur)).point(lambda v: min(255, int(v * gain))))
     im.alpha_composite(glow); im.alpha_composite(t); return im
 
 
@@ -414,7 +423,7 @@ def credit_layer(text, path, low=False, size=36, y=None, band=False):
 #: showed Miyamoto): the person's official photo in a framed window over the running footage, a name plate
 #: with their role under the name, in the first 3 to 4 seconds, then back to full footage. The window sits
 #: right of centre between the headline band and the story lines, clear of the grid tile's top-right corner.
-PERSON_BOX = (450, 700, 460, 540)     # x, y, w, h: right edge on the safe right (910), under the credit line, bottom at 1240 above a two-line story line
+PERSON_BOX = (450, 750, 460, 490)     # x, y, w, h: right edge on the safe right (910), under the credit line of a two-line HEAD_SIZE headline (24 Oct 2026; was y 700, h 540), bottom at 1240 above a two-line story line
 PERSON_MAX_ZOOM = 2.0                 # a photo enlarged past 2x into the window reads soft on a phone; find a larger one
 
 
@@ -1481,7 +1490,7 @@ def check_reading(lines, end):
 
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
-         lowres_ok=False, read_check=True, track=None, draft=False, head_size=66, cut=False, credits=None, strip=None,
+         lowres_ok=False, read_check=True, track=None, draft=False, head_size=HEAD_SIZE, cut=False, credits=None, strip=None,
          products=None, template=None, tribute=False, reveal=None, profile=None, pace_ok=False, skin=None,
          person=None):
     """`person`: [(photo, name, role, t0, t1, opts), ...] (advisor, 23 Oct 2026, people stories show the person):
@@ -1615,7 +1624,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         shutil.rmtree(tmp, ignore_errors=True)
         raise
     style = style or ('lines' if skin else pick_style(out))   # after the checks, so a stopped render takes no turn; a skin takes none
-    layers = [(head_layer(headline, label, f'{tmp}/head.png', source, date, country, hs=head_size,   # a long Latin title can take 60 so its line opens in Arabic
+    layers = [(head_layer(headline, label, f'{tmp}/head.png', source, date, country, hs=head_size,   # HEAD_SIZE unless a job asks for more; never below HEAD_MIN
                           hst=head_size + 20, vivid=vivid, theme=theme, seed=sum(map(ord, out)), style=style,
                           meta_path=f'{tmp}/meta.png', skin=skin), 0, head_secs)]
     if vivid and style == 'frame' and not skin:   # the bottom waves stay for the whole clip

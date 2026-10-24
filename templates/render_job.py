@@ -19,7 +19,7 @@ unreleased material.
       "lines": [[2, 3, [["text", {"size": 54}]]], ...],            # reel.by_shot groups: first shot, last shot, sentences
       "headline": "...", "label": "رسمي", "source": "...", "date": "20 Oct 2026",
       "theme": "spectacle", "style": "lines", "template": "split",
-      "head_size": 64, "strip": [["الموعد", "22 أكتوبر"]], "credits": [[0, 9, "..."]],
+      "strip": [["الموعد", "22 أكتوبر"]], "credits": [[0, 9, "..."]],
       "track": ["cp-er-trailer.mp4", 12.0], "cut": true,                 # or "bed"; a stretch is checked for speech
       "speech_ok": [[3.0, 7.5, "director's statement, subtitled"]],      # only for a quote or interview Reel (Reel time)
       "sound": null, "country": null, "pace_ok": false, "lowres_ok": false,
@@ -245,7 +245,7 @@ def textcheck(job):
     try:
         skin = job.get('skin') if job.get('skin') in reel.SK.KITS and job.get('label') != 'عاجل' else None
         reel.head_layer(job['headline'], job['label'], f'{tmp}/h.png', job['source'], job['date'], job.get('country'),
-                        hs=job.get('head_size', 66), skin=skin)
+                        hs=job.get('head_size', reel.HEAD_SIZE), skin=skin)
         for a, b, texts in job['lines']:
             for x in texts:
                 text, kw = (x, {}) if isinstance(x, str) else (x[0], x[1] if len(x) > 1 else {})
@@ -367,7 +367,7 @@ def run(job, draft=False):
     tup = lambda v: v if v is None or isinstance(v, str) else tuple(tuple(x) if isinstance(x, list) else x for x in v)
     done = reel.reel(shots(job, draft), job['headline'], job['label'], place(job), job['source'], job['date'], out,
                      theme=job['theme'], style=job.get('style'), sound=job.get('sound'), country=job.get('country'),
-                     head_size=job.get('head_size', 66), draft=draft, track=tup(job.get('track')), cut=job.get('cut', False),
+                     head_size=job.get('head_size', reel.HEAD_SIZE), draft=draft, track=tup(job.get('track')), cut=job.get('cut', False),
                      credits=[tuple(c) for c in job['credits']] if job.get('credits') else None,
                      strip=strip_items(job) if job.get('strip') else None,
                      template=job.get('template'), pace_ok=job.get('pace_ok', False), lowres_ok=job.get('lowres_ok', False),

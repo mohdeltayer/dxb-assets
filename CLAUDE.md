@@ -686,6 +686,29 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   text with the first clean seek time after it (`first_clean`); move the
   shot's start there. 3. Nothing else on the cover changes: headline, band,
   colour variety and the Ocarina series card stay.
+- Grid tile headlines (advisor, 24 Oct 2026, approved by Mohammad in the inbox
+  08:14Z). From his profile screenshot: the headline was a thin strip, about a
+  fifteenth of the tile, read like a caption and faded on bright frames; the
+  BioWare debate tile was a mostly empty purple frame with a small question.
+  1. Designed covers, once the Publer custom-cover test works: a 3:4 cover per
+     Reel, the headline about twice today's size cut to 3 to 5 words, on a soft
+     dark band, the game's key image or the person's face behind it, the chip in
+     its usual place. The full headline stays in the first frame and the caption.
+  2. Until covers work, the first frame: the headline about 1.5 times larger
+     (`reel.HEAD_SIZE` 100, was 66), at most two short lines (`HEAD_LINES`),
+     never below `HEAD_MIN` 80 (a headline that does not fit is cut to fewer
+     words, not shrunk; `head_layer` stops), inside the safe zone and the grid
+     corner rule; the soft dark band behind it is stronger (`HEAD_BAND` 225, was
+     190) with a wider glow behind the type, so pale skies and white scenes hold.
+     The person box moves down to clear the taller head (`PERSON_BOX` y 750,
+     h 490). Applies from ARMS v4 (24 Oct).
+  3. Debate pieces and other card-led Reels: the cover or first frame shows a
+     strong recognisable image (a character or the game's key art) with the
+     question large; never a mostly empty ground with small text.
+  4. Kept: the layout, chip top right and headline below in the same place on
+     every tile.
+  5. The director QA judges every first frame (and cover) cropped to 3:4 at
+     phone grid size: can the headline be read without zooming?
 - Strips and sheets go into git (advisor, 14 Oct 2026): every final render
   commits its `<name>-strip.jpg` (the finished Reel's frames) and
   `<name>-sheet.jpg` (the shot sheet) to `cards/YYYY-MM/` beside the mp4, in

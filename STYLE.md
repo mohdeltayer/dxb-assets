@@ -1,4 +1,4 @@
-# Digital Lounge: the rules in force (23 Oct 2026)
+# Digital Lounge: the rules in force (24 Oct 2026)
 
 One page of what applies today. CLAUDE.md is the full, dated history and wins
 on detail; each line here names its section there. Anything listed under
@@ -175,6 +175,13 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     top right of the 3:4 window (reel.py stops); the first frame carries no
     slate, title card or publisher text (`shotsheet` reads it and names the
     first clean frame) (CLAUDE.md "Grid tile").
+  - Grid tile headlines (24 Oct, inbox): the first-frame headline is about
+    1.5 times larger (`HEAD_SIZE` 100), two short lines at most, never under
+    80 px (cut words, not size), on a stronger dark band; card-led and debate
+    Reels open on a recognisable image with the question large; the director
+    QA reads every first frame at grid size. Designed 3:4 covers (headline
+    about twice today's size, 3 to 5 words) once Publer covers work
+    (CLAUDE.md "Grid tile headlines").
   - Then 4 to 6 lines of the actual story: white Dubai Bold with an indigo
     outline, right-aligned, 1 to 3 visual lines each.
   - Each line stays up for its reading time (`read_secs`); the safe zone is
