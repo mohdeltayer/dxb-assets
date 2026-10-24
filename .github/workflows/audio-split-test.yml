@@ -1,0 +1,145 @@
+# Trailer audio split test (advisor memo, 24 Oct 2026, approved by Mohammad). Pilot only.
+# Dispatch-only: never on push or pull_request, never touches jobs/render, render.yml, reel.py or
+# anything that publishes. Run it on ref pilot/audio-split; it commits its results back to that
+# branch only (templates/audiosplit/results/). No secrets are used; model weights are cached in the
+# Actions cache, never committed.
+name: audio-split-test
+
+on:
+  workflow_dispatch:
+    inputs:
+      reels:
+        description: 'Job copies in templates/audiosplit/jobs (names, space separated)'
+        required: false
+        default: 'total-war-shogun-2-ce-collum-statement cyberpunk-2077-witcher-3-gear phantom-blade-zero-gulf-unlock-time'
+
+concurrency:
+  group: audio-split-test
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  COCKTAIL_SHA: 19b3de827ebc4bfb014570cf92dd32b4ee3b6921     # merlresearch/cocktail-fork-separation (MIT)
+  MSST_SHA: 6fdad13686bb7e84d029ec66f9dbe76e65c93ebf          # ZFTurbo/Music-Source-Separation-Training (MIT code)
+  MSST_RELEASE: v.1.0.3                                       # BandIt Plus DnR weights (CC BY-NC 4.0 upstream: test only)
+
+jobs:
+  split:
+    if: github.ref_name == 'pilot/audio-split'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            /templates/audiosplit/
+          sparse-checkout-cone-mode: false
+
+      - name: Published Reels (sparse)
+        env:
+          REELS: ${{ github.event.inputs.reels }}
+        run: |
+          for n in $REELS; do
+            out=$(python3 -c "import json,sys; print(json.load(open('templates/audiosplit/jobs/$n.json'))['out'])")
+            git sparse-checkout add "/$out"
+          done
+          ls -la cards/2026-10/
+          echo "cores $(nproc), $(free -g | awk '/Mem:/{print $2}') GB"
+          echo "T_START=$(date +%s)" >> "$GITHUB_ENV"
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Tools
+        timeout-minutes: 15
+        run: |
+          sudo systemctl stop unattended-upgrades apt-daily.service apt-daily-upgrade.service apt-daily.timer apt-daily-upgrade.timer 2>/dev/null || true
+          if ! command -v ffmpeg >/dev/null; then
+            timeout 200 sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=120 -o Acquire::Retries=3 update -qq || true
+            timeout 200 sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=120 install -y -q --no-install-recommends ffmpeg fonts-dejavu-core 2>&1 | tail -3 || true
+          fi
+          if ! command -v ffmpeg >/dev/null; then
+            curl -sSL --retry 3 --max-time 180 -o "$RUNNER_TEMP/ff.tar.xz" https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz
+            tar -xJf "$RUNNER_TEMP/ff.tar.xz" -C "$RUNNER_TEMP" && sudo cp "$RUNNER_TEMP"/ffmpeg-master-latest-linux64-gpl/bin/ff* /usr/local/bin/
+          fi
+          ffmpeg -version | head -1
+          python -m pip install -q --upgrade pip
+          python -m pip install -q --timeout 60 --retries 3 torch==2.5.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -q --timeout 60 --retries 3 numpy scipy soundfile pyloudnorm==0.1.1 ml_collections omegaconf==2.2.3 pyyaml tqdm einops librosa beartype==0.14.1 faster-whisper==1.1.0
+
+      - name: Separators (pinned)
+        run: |
+          GIT_LFS_SKIP_SMUDGE=1 git clone -q --filter=blob:none https://github.com/merlresearch/cocktail-fork-separation.git "$RUNNER_TEMP/cocktail"
+          GIT_LFS_SKIP_SMUDGE=1 git -C "$RUNNER_TEMP/cocktail" -c advice.detachedHead=false checkout -q "$COCKTAIL_SHA"
+          git clone -q --filter=blob:none https://github.com/ZFTurbo/Music-Source-Separation-Training.git "$RUNNER_TEMP/msst"
+          git -C "$RUNNER_TEMP/msst" -c advice.detachedHead=false checkout -q "$MSST_SHA"
+          {
+            echo "COCKTAIL_DIR=$RUNNER_TEMP/cocktail"
+            echo "MSST_DIR=$RUNNER_TEMP/msst"
+            echo "BANDIT_CKPT=$HOME/.cache/audiosplit/bandit/model_bandit_plus_dnr_sdr_11.47.chpt"
+            echo "BANDIT_CFG=$HOME/.cache/audiosplit/bandit/config_dnr_bandit_bsrnn_multi_mus64.yaml"
+            echo "DXB_UPLOADS=$RUNNER_TEMP/uploads"
+            echo "REPO=$GITHUB_WORKSPACE"
+            echo "JOBS_DIR=$GITHUB_WORKSPACE/templates/audiosplit/jobs"
+            echo "OUT=$RUNNER_TEMP/out"
+          } >> "$GITHUB_ENV"
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/audiosplit
+            ~/.cache/huggingface
+          key: audiosplit-${{ env.COCKTAIL_SHA }}-${{ env.MSST_RELEASE }}-whisper-base
+
+      - name: Weights (Actions cache, never the repo)
+        run: |
+          c="$HOME/.cache/audiosplit"; mkdir -p "$c/cocktail" "$c/bandit"
+          w="$c/cocktail/default_mrx_pre_trained_weights.pth"
+          [ -s "$w" ] || curl -sSfL --retry 3 -o "$w" "https://media.githubusercontent.com/media/merlresearch/cocktail-fork-separation/$COCKTAIL_SHA/checkpoints/default_mrx_pre_trained_weights.pth"
+          cp "$w" "$COCKTAIL_DIR/checkpoints/default_mrx_pre_trained_weights.pth"
+          r="https://github.com/ZFTurbo/Music-Source-Separation-Training/releases/download/$MSST_RELEASE"
+          [ -s "$BANDIT_CKPT" ] || curl -sSfL --retry 3 -o "$BANDIT_CKPT" "$r/model_bandit_plus_dnr_sdr_11.47.chpt"
+          [ -s "$BANDIT_CFG" ] || curl -sSfL --retry 3 -o "$BANDIT_CFG" "$r/config_dnr_bandit_bsrnn_multi_mus64.yaml"
+          ls -la "$c"/*/
+          sha256sum "$c"/*/*
+          echo "SETUP_SECS=$(( $(date +%s) - T_START ))" >> "$GITHUB_ENV"
+
+      - name: Separate, rebuild and measure
+        env:
+          REELS: ${{ github.event.inputs.reels }}
+        run: |
+          start=$(date +%s)
+          jobs=""; for n in $REELS; do jobs="$jobs templates/audiosplit/jobs/$n.json"; done
+          python templates/audiosplit/split_test.py run "$OUT" $jobs
+          python -c "import json,os; p='$OUT/results.json'; d=json.load(open(p)); d['setup_secs']=int(os.environ['SETUP_SECS']); d['step_secs']=$(( $(date +%s) - start )); json.dump(d,open(p,'w'),indent=1,ensure_ascii=False)"
+
+      - name: Previews
+        env:
+          REELS: ${{ github.event.inputs.reels }}
+        run: |
+          python templates/audiosplit/split_test.py preview "$OUT" cocktail $REELS
+          python templates/audiosplit/split_test.py preview "$OUT" bandit $REELS
+          for f in "$OUT"/*.wav; do case "$f" in *-music.wav) continue;; esac; ffmpeg -nostdin -v error -y -i "$f" -c:a aac -b:a 160k "${f%.wav}.m4a"; done
+          ls -la "$OUT"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audio-split-${{ github.run_id }}
+          path: ${{ env.OUT }}
+          retention-days: 7
+
+      - name: Commit results to pilot/audio-split
+        run: |
+          d=templates/audiosplit/results; mkdir -p "$d"
+          cp "$OUT"/results.json "$OUT"/preview-*.mp4 "$OUT"/*.m4a "$d"/
+          git config user.name "dxb-render"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --sparse "$d"
+          git commit -q -m "Audio split test results (run ${{ github.run_id }}, $(nproc) cores)"
+          for i in 1 2 3; do git pull -q --rebase origin pilot/audio-split && git push -q origin HEAD:pilot/audio-split && exit 0; sleep 5; done
+          exit 1
