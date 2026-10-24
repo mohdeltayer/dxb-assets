@@ -13,11 +13,18 @@
  ],
  "gfx": [
   {
-   "file": "hfi-test-gfx-gta.png",
+   "file": "hfi-test-gfx-gta-a.png",
    "kind": "fact",
    "value": "6.08 مليون",
    "label": "نسخة محجوزة مسبقًا",
    "note": "تقدير سنسر تاور للنسخ الرقمية"
+  },
+  {
+   "file": "hfi-test-gfx-gta-b.png",
+   "kind": "fact",
+   "value": "74%",
+   "label": "من الحجوزات على PlayStation",
+   "note": "حسب تقديرات سنسر تاور"
   }
  ],
  "shots": [
@@ -33,9 +40,15 @@
    ]
   ],
   [
-   "hfi-test-gfx-gta.png",
+   "hfi-test-gfx-gta-a.png",
    0,
-   9.0,
+   4.6,
+   null
+  ],
+  [
+   "hfi-test-gfx-gta-b.png",
+   0,
+   4.6,
    null
   ],
   [
@@ -56,8 +69,8 @@
  ],
  "lines": [
   [
-   2,
-   2,
+   3,
+   3,
    [
     [
      "قبل شهر واحد من صدورها",
@@ -82,7 +95,10 @@
  "insert": [
   {
    "piece": "numbers",
-   "shot": 1,
+   "shot": [
+    1,
+    2
+   ],
    "data": {
     "chip": "أرقام",
     "title": "تقدير جديد: أكثر من 6 ملايين\nحجز مسبق للعبة GTA 6",

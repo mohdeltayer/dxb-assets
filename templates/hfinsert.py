@@ -1,10 +1,11 @@
 """HyperFrames inserts in live Reels (advisor, 24 Oct 2026, agreed with Mohammad, after pass 2 of the pilot).
 
-reel.py stays the backbone. A job may ask for an insert on one of its graphic shots:
+reel.py stays the backbone. A job may ask for an insert over one graphic shot, or a run of them:
 
-    "insert": [{"piece": "numbers", "shot": 3, "data": {...}}]
+    "insert": [{"piece": "numbers", "shot": 3, "data": {...}}]        # or "shot": [3, 4]
 
-The Reel is rendered exactly as without it, the shot's current card (numgfx, from `gfx`) in the slot. Then the
+The Reel is rendered exactly as without it, the shots' current cards (numgfx, from `gfx`) in the slot, so the
+fallback obeys the Reel's own rules (pace, reading time) on its own. Then the
 piece is built from the data as a static HyperFrames composition, rendered in headless Chrome (pinned to
 HF_VERSION, 1080x1920, 30 fps, the Dubai font copied in from DUBAI_FONTS and never kept), and laid over that
 shot's span of the finished video with a fade in and out as long as the Reel's crossfade. The Reel's audio is
@@ -332,6 +333,11 @@ def build(ins, dur, theme, work):
     return work
 
 
+def span(shot):
+    """"shot": N, or [first, last] for an insert over several graphic shots (its fallback cards, one per beat)."""
+    return (shot, shot) if isinstance(shot, int) else (int(shot[0]), int(shot[1]))
+
+
 def render(work, out, timeout):
     cli = os.environ.get('HF_CLI', 'hyperframes')
     subprocess.run([cli, 'render', work, '-o', out, '-q', 'delivery', '-f', str(FPS), '--quiet'],
@@ -361,11 +367,13 @@ def apply(job, video, starts):
         t = time.time()
         work = tempfile.mkdtemp(prefix='hfins-')
         try:
-            i = ins['shot']
-            f = job['shots'][i][0]
-            if not (f.endswith('.png') and '-gfx-' in f):
-                raise ValueError(f'insert shot {i} is {f}: an insert replaces a graphic (-gfx-) shot, its fallback card')
-            t0, dur = starts[i], job['shots'][i][2]
+            i0, i1 = span(ins['shot'])
+            for i in range(i0, i1 + 1):
+                f = job['shots'][i][0]
+                if not (f.endswith('.png') and '-gfx-' in f):
+                    raise ValueError(f'insert shot {i} is {f}: an insert covers graphic (-gfx-) shots, its fallback cards')
+            t0 = starts[i0]
+            dur = starts[i1] + job['shots'][i1][2] - t0
             build(ins, dur, job['theme'], os.path.join(work, 'piece'))
             left = TIMEOUT - (time.time() - t)
             if left <= 10:
@@ -388,5 +396,8 @@ def apply(job, video, starts):
 if __name__ == '__main__':           # python3 hfinsert.py preview <job.json> <shot> <out-dir>: the composition only
     step, path, shot, out = sys.argv[1:5]
     job = json.load(open(path))
-    ins = next(x for x in job['insert'] if x['shot'] == int(shot))
-    print(build(ins, job['shots'][int(shot)][2], job['theme'], out))
+    import reel
+    ins = next(x for x in job['insert'] if span(x['shot'])[0] == int(shot))
+    i0, i1 = span(ins['shot'])
+    starts, _ = reel.timeline([tuple(x) for x in job['shots']])
+    print(build(ins, starts[i1] + job['shots'][i1][2] - starts[i0], job['theme'], out))
