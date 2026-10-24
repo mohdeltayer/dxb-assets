@@ -155,6 +155,15 @@ GRID_TOP = (H - W * 4 // 3) // 2
 #: that cannot be cut shrinks it that far; anything else is cut to fewer words), on a stronger band (HEAD_BAND) with a wider
 #: glow behind the type, so it holds on pale skies and white scenes.
 HEAD_SIZE, HEAD_MIN, HEAD_LINES, HEAD_BAND = 100, 72, 2, 225
+#: Design pass (advisor, 24 Oct 2026; PILOT BRANCH ONLY, pilot/design-pass, not merged without Mohammad's approval):
+#: chips about 1.3 times their size in the same place (type 38 to 50, chip 57 to 75 px high; the chip's right edge
+#: and top stay, the headline moves down by the difference). The grid-corner rule still holds (the chip's right
+#: edge is at x 910, the corner starts at 940).
+CHIP_SIZE = 50
+#: Pilot only: when DP_CHIP_DIR is set, head_layer draws the chip row on its own layer in that folder
+#: (<reel name>-chip.png and -chip.json with its box) and leaves it out of the burnt-in head, so the motion kit's
+#: chip press (templates/design-pass/compose.py) can lay it back over the Reel's own frames.
+CHIP_APART = os.environ.get('DP_CHIP_DIR')
 
 
 def grid_corner_clear(im, what='head'):
@@ -165,7 +174,7 @@ def grid_corner_clear(im, what='head'):
 
 
 def head_layer(headline, label, path, source, date, country=None, hs=HEAD_SIZE, hst=None,
-               vivid=False, theme='cold', seed=0, style='lines', meta_path=None, skin=None):
+               vivid=False, theme='cold', seed=0, style='lines', meta_path=None, skin=None, chip_path=None):
     """Chip and headline on a soft band at the top; the credit line (rule, source · date)
     is written to `meta_path` as its own layer when given, else drawn with the head. `vivid`
     colours the chip with the theme and lays the theme's wave lines in the band. `skin` (a game
@@ -199,7 +208,7 @@ def head_layer(headline, label, path, source, date, country=None, hs=HEAD_SIZE, 
     rtl_starts(G._wrap(probe, headline, f, W - hl - R), 'headline')
     chip = SK.chip(skin) if skin else G._ACC if vivid else None
     acc = SK.load(skin)['accent'] if skin else G._ACC
-    end = G._head(probe, headline, HEAD_TOP, label, country, hs, hst, right=R, left=hl)
+    end = G._head(probe, headline, HEAD_TOP, label, country, hs, hst, right=R, left=hl, chip_size=CHIP_SIZE)
     meta_y = end + 30
     _band(im, 0, meta_y + 220, True, HEAD_BAND)
     if skin:                               # the kit's decoration and its plate behind chip and headline
@@ -208,8 +217,21 @@ def head_layer(headline, label, path, source, date, country=None, hs=HEAD_SIZE, 
     elif vivid:
         _colour(im, meta_y + 140, theme, seed, style)
     t = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(t)
-    G._head(d, headline, HEAD_TOP, label, country, hs, hst, right=R, left=hl, chip=chip)
+    G._head(d, headline, HEAD_TOP, label, country, hs, hst, right=R, left=hl, chip=chip, chip_size=CHIP_SIZE)
     grid_corner_clear(t)
+    if chip_path and (label or country):   # pilot: the chip row on its own layer, not burnt into the head
+        fc, ch = A.F('Bold', CHIP_SIZE), int(CHIP_SIZE * 1.5)
+        x0 = W - R
+        for lab in (label, country):
+            if lab:
+                x0 = x0 - (probe.textlength(lab, font=fc, **G.AR) + 48) - 14
+        box = (int(x0 + 14) - 3, HEAD_TOP - 3, W - R + 3, HEAD_TOP + ch + 3)
+        c = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+        c.paste(t.crop(box), box[:2])
+        t.paste((0, 0, 0, 0), box)
+        _glowed(Image.new('RGBA', (W, H), (0, 0, 0, 0)), c, blur=16, gain=2.6).save(chip_path)
+        json.dump({'box': box, 'label': label, 'country': country}, open(os.path.splitext(chip_path)[0] + '.json', 'w'),
+                  ensure_ascii=False)
     if not meta_path:                      # one layer, as before 14 Oct
         d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=acc)
         d.text((W - R - 62, meta_y), f'{source}\u200f  ·  \u200f{A.arabic_date(date)}', font=A.F('Medium', 32),
@@ -505,11 +527,12 @@ def person_layer(photo, name, role, path, theme='cold', box=PERSON_BOX, focus=(0
 #: The `split` template's fact strip (Mohammad, 14 Oct 2026): footage runs the whole
 #: Reel and two or three facts (date, price, platforms) stay pinned low in the safe
 #: zone while the lines narrate above it. A fact lives here or in a line, never both.
-STRIP_H = 160
+STRIP_H = 172                         # design pass (pilot, 24 Oct 2026): 12 px taller for the larger values; was 160
 STRIP_BOTTOM = G.SAFE_BOTTOM - 24
 STRIP_TOP = STRIP_BOTTOM - STRIP_H
 STRIP_LIFT = STRIP_H + 32             # how far the story lines rise to clear it
-STRIP_VALUE_SIZES = (56, 48, 44)      # one size for the whole strip: the largest at which every value fits
+STRIP_VALUE_SIZES = (64, 56, 48, 44)  # one size for the whole strip: the largest at which every value fits
+                                      # (design pass, pilot, 24 Oct 2026: a step larger; was 56, 48, 44)
 STRIP_LABEL_SIZES = (34, 30)
 
 
@@ -1640,7 +1663,9 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     style = style or ('lines' if skin else pick_style(out))   # after the checks, so a stopped render takes no turn; a skin takes none
     layers = [(head_layer(headline, label, f'{tmp}/head.png', source, date, country, hs=head_size,   # HEAD_SIZE unless a job asks for more; never below HEAD_MIN
                           hst=head_size + 20, vivid=vivid, theme=theme, seed=sum(map(ord, out)), style=style,
-                          meta_path=f'{tmp}/meta.png', skin=skin), 0, head_secs)]
+                          meta_path=f'{tmp}/meta.png', skin=skin,
+                          chip_path=os.path.join(CHIP_APART, os.path.splitext(os.path.basename(out))[0] + '-chip.png')
+                          if CHIP_APART else None), 0, head_secs)]
     if vivid and style == 'frame' and not skin:   # the bottom waves stay for the whole clip
         layers.insert(0, (frame_layer(f'{tmp}/frame.png', theme, sum(map(ord, out))), 0, end))
     if MARK_PERSIST:                        # the play mark, small and half transparent, for the whole Reel (14 Oct 2026)

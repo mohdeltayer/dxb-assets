@@ -1,0 +1,127 @@
+# Design pass pilot (advisor memo of 24 Oct 2026, approved by Mohammad). Lives on the pilot/design-pass branch only and
+# is never merged to main before Mohammad approves the samples. Not triggered by jobs/render/*.json, its own
+# concurrency group, and it waits while a news render (render.yml) is queued or running, so it never runs ahead of
+# one. It rebuilds three published Reels with the design pass (templates/design-pass/compose.py), makes the side by
+# sides with the published versions and commits only those, the QA frames and the timings back to this branch.
+# The Dubai font is cloned into a temp folder and deleted; it is never committed, uploaded or printed.
+name: Design pass pilot
+
+on:
+  push:
+    branches: [pilot/design-pass]
+    paths:
+      - 'templates/design-pass/**'
+      - 'templates/reel.py'
+      - 'templates/ig_ar.py'
+      - '.github/workflows/design-pass-pilot.yml'
+      - '!templates/design-pass/out/**'
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: design-pass-pilot
+  cancel-in-progress: false
+
+jobs:
+  render:
+    if: github.ref == 'refs/heads/pilot/design-pass'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Wait while a news render runs (news first)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 60); do
+            busy=$(gh run list -R "$GITHUB_REPOSITORY" --workflow render.yml --limit 20 --json status \
+                   -q '[.[] | select(.status == "in_progress" or .status == "queued" or .status == "waiting")] | length')
+            [ "$busy" = "0" ] && { echo "no news render running"; exit 0; }
+            echo "$(date -u +%T) news render busy ($busy), waiting"; sleep 30
+          done
+          echo "still busy after 30 minutes"; exit 1
+
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            templates
+            cards/2026-10/ps-pulse-no-gulf-launch-reel-v2.mp4
+            cards/2026-10/phantom-blade-zero-launch-trailer-gulf-prices-reel-v1.mp4
+            cards/2026-10/aonuma-chevalier-arts-lettres-paris-reel-v4.mp4
+          sparse-checkout-cone-mode: false
+
+      - name: Runner
+        run: |
+          echo "cores $(nproc), $(free -g | awk '/Mem:/{print $2}') GB"
+          {
+            echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts"
+            echo "DXB_UPLOADS=$RUNNER_TEMP/uploads"
+            echo "DP_TIMES=$RUNNER_TEMP/dp-times.json"
+            echo "HF_CLI=$RUNNER_TEMP/hf/node_modules/.bin/hyperframes"
+            echo "T_START=$(date +%s)"
+          } >> "$GITHUB_ENV"
+
+      - name: Fonts (temp folder, outside the workspace; never committed or uploaded)
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          repo="$RUNNER_TEMP/dxb-fonts"
+          git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+          mkdir -p "$DUBAI_FONTS"
+          unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$DUBAI_FONTS"
+          rm -rf "$repo"
+          for w in Light Regular Medium Bold; do test -f "$DUBAI_FONTS/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing"; exit 1; }; done
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Tools
+        timeout-minutes: 10
+        run: |
+          sudo systemctl stop unattended-upgrades apt-daily.service apt-daily-upgrade.service apt-daily.timer apt-daily-upgrade.timer 2>/dev/null || true
+          if ! command -v ffmpeg >/dev/null; then
+            timeout 150 sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=120 install -y -q --no-install-recommends ffmpeg 2>&1 | tail -3 || true
+          fi
+          if ! command -v ffmpeg >/dev/null; then
+            curl -sSL --retry 3 --max-time 180 -o "$RUNNER_TEMP/ff.tar.xz" https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz
+            tar -xJf "$RUNNER_TEMP/ff.tar.xz" -C "$RUNNER_TEMP" && sudo cp "$RUNNER_TEMP"/ffmpeg-master-latest-linux64-gpl/bin/ff* /usr/local/bin/
+          fi
+          python -m pip install -q --timeout 60 --retries 3 pillow numpy soundfile pedalboard
+          mkdir -p "$DXB_UPLOADS" "$RUNNER_TEMP/hf" && cd "$RUNNER_TEMP/hf"
+          npm i -s --no-audit --no-fund hyperframes@0.8.143
+          npx hyperframes browser ensure
+
+      - name: Render the three samples
+        run: |
+          set -e
+          cd templates/design-pass
+          for s in ps-pulse pbz aonuma; do
+            t=$(date +%s)
+            python compose.py "$s"
+            echo "sample $s: $(( $(date +%s) - t )) s"
+          done
+          python compose.py frame-demo
+          python compose.py combine
+          python -c "import json,os; d=json.load(open(os.environ['DP_TIMES'])); d['runner']={'cores': os.cpu_count(), 'hyperframes': '0.8.143', 'setup_secs': None}; json.dump(d, open('out/render-times.json','w'), indent=1, ensure_ascii=False)"
+          cat out/render-times.json
+          for f in out/*.mp4; do ffmpeg -v error -i "$f" -f null - && echo "decode clean: $f $(stat -c %s "$f") bytes"; done
+
+      - name: Clean the font copies
+        if: always()
+        run: rm -rf "$DUBAI_FONTS" /tmp/dp-*
+
+      - name: Commit outputs to the pilot branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -rf templates/design-pass/out/base
+          git add -f templates/design-pass/out
+          git commit -q -m "Design pass pilot renders on the runner ($(nproc) cores)" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin pilot/design-pass && git push -q origin HEAD:pilot/design-pass && break; sleep 5; done
