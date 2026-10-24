@@ -6428,5 +6428,43 @@
   "job_secs": 308,
   "setup_min": 1.03,
   "story": "steam-most-played-oct-24"
+ },
+ {
+  "name": "steamos-3-9-stable-reel-v4.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T17:49Z",
+  "stages": {
+   "checks": 9.6,
+   "montage": 40.6,
+   "text": 45.1,
+   "audio": 0.9,
+   "outro": 40.0
+  },
+  "total": 136.1,
+  "lane": "runner",
+  "queued_at": "2026-10-24T17:44:40Z",
+  "finished_at": "2026-10-24T17:49Z",
+  "render_min": 2.27,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 11.4,
+   "audio_secs": 44.8,
+   "music_pct": 98.2,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 19,
+   "mix_secs": 5.0,
+   "secs": 17.1
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 254,
+  "setup_min": 1.58,
+  "story": "steamos-3-9-stable"
  }
 ]
