@@ -22,6 +22,8 @@ unreleased material.
       "strip": [["الموعد", "22 أكتوبر"]], "credits": [[0, 9, "..."]],
       "track": ["cp-er-trailer.mp4", 12.0], "cut": true,                 # or "bed"; a stretch is checked for speech
       "speech_ok": [[3.0, 7.5, "director's statement, subtitled"]],      # only for a quote or interview Reel (Reel time)
+      "speech_keep": true,                                           # speech is the news without speech_ok: no audio split
+      "audio_split": false,                                          # opt out of the trailer audio split (tracksplit.py)
       "sound": null, "country": null, "pace_ok": false, "lowres_ok": false,
       "ground_theme": "gold",                                        # for -gfx- graphics on the living ground
       "ground_footage": ["cp-er-trailer.mp4", 40.0],                 # card-led: the game's trailer behind the cards, moving
@@ -353,6 +355,34 @@ def inserts(job, video):
     return recs
 
 
+def audio_split(job, video):
+    """Trailer audio split (Mohammad, 24 Oct 2026, inbox 16:26Z): a job on a trailer track gets the trailer's music
+    under the whole Reel and each shot's own effects (templates/tracksplit.py). Anything that fails, runs long or
+    measures unclean keeps today's audio; the outcome is printed and kept in render-times.json as `audio_split`."""
+    import tracksplit as TS
+    keep = reel.X
+    if job.get('cut'):
+        reel.X = 0.04
+    try:
+        starts, _ = reel.timeline(shots(job, build=False))
+        xf = reel.X
+    finally:
+        reel.X = keep
+    rec = TS.apply(job, video, starts, xf, C.U)
+    print('render_job: audio split: ' + ('applied' if rec.get('applied') else 'not applied, audio as rendered') +
+          ''.join(f'; {k} {rec[k]}' for k in ('reason', 'music_pct', 'leak_pct', 'separate_secs', 'secs') if k in rec), flush=True)
+    try:
+        led = json.load(open(reel.TIMES))
+        for e in reversed(led):
+            if e.get('name') == os.path.basename(job['out']):
+                e['audio_split'] = rec
+                break
+        json.dump(led, open(reel.TIMES, 'w'), indent=1)
+    except (OSError, ValueError) as e:
+        print(f'render_job: render-times not updated with the audio split: {e}', flush=True)
+    return rec
+
+
 def run(job, draft=False):
     if job.get('kind') == 'famitsu':
         return famitsu(job, draft)
@@ -375,6 +405,8 @@ def run(job, draft=False):
     video = done[0] if isinstance(done, (list, tuple)) else done
     if job.get('insert') and not draft:
         inserts(job, video)
+    if not draft:
+        audio_split(job, video)                 # before the decode checks, so they read the Reel that ships
     stem = os.path.splitext(out)[0]
     base = re.sub(r'-reel-v\d+$', '', stem)   # matches the workflow's ${stem%-reel-v*}, so v2 and later commit too
     if not draft:

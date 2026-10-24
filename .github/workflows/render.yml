@@ -147,6 +147,35 @@ jobs:
           npx hyperframes browser ensure
           echo "HF_CLI=$RUNNER_TEMP/hf/node_modules/.bin/hyperframes" >> "$GITHUB_ENV"
 
+      # Trailer audio split (Mohammad, 24 Oct 2026, inbox 16:26Z: "Adopt Cocktail Fork"): only for a job on a trailer
+      # track (templates/tracksplit.py). MERL Cocktail Fork, MIT code and weights, pinned; the weights live in the Actions
+      # cache, never in git. A failed install leaves COCKTAIL_DIR unset, so the Reel keeps today's audio.
+      - name: Audio split (only for a trailer-track job)
+        id: split
+        run: |
+          if python templates/tracksplit.py need "$JOB"; then echo "need=1" >> "$GITHUB_OUTPUT"; fi
+
+      - uses: actions/cache@v4
+        if: steps.split.outputs.need == '1'
+        with:
+          path: ~/.cache/cocktail-fork
+          key: cocktail-fork-19b3de827ebc4bfb014570cf92dd32b4ee3b6921
+
+      - name: Cocktail Fork install
+        if: steps.split.outputs.need == '1'
+        continue-on-error: true
+        timeout-minutes: 4
+        env:
+          SHA: 19b3de827ebc4bfb014570cf92dd32b4ee3b6921
+        run: |
+          d="$HOME/.cache/cocktail-fork/$SHA"; mkdir -p "$d/checkpoints"
+          [ -s "$d/mrx.py" ] || curl -sSfL --retry 3 -o "$d/mrx.py" "https://raw.githubusercontent.com/merlresearch/cocktail-fork-separation/$SHA/mrx.py"
+          w="$d/checkpoints/default_mrx_pre_trained_weights.pth"
+          [ -s "$w" ] || curl -sSfL --retry 3 -o "$w" "https://media.githubusercontent.com/media/merlresearch/cocktail-fork-separation/$SHA/checkpoints/default_mrx_pre_trained_weights.pth"
+          python -m pip install -q --timeout 60 --retries 3 pyloudnorm==0.1.1
+          python -c "import sys, torch; sys.path.insert(0, '$d'); import mrx; m = mrx.MRX(); m.load_state_dict(torch.load('$w', map_location='cpu', weights_only=True)); print('cocktail fork ready')"
+          echo "COCKTAIL_DIR=$d" >> "$GITHUB_ENV"
+
       # Render fails the job, before anything is committed, when a fetched source reports decode errors twice,
       # a shot's source stretch or the finished Reel shows a blocky smear (templates/decodecheck.py; advisor,
       # 21 Oct 2026, after the Battlefield 1 Reel carried a damaged download)
