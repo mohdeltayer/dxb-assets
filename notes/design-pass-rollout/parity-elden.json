@@ -1,0 +1,109 @@
+{
+ "old_base_code": {
+  "frames": 689,
+  "secs": 22.988,
+  "size": "1080x1920",
+  "mb": 38.78
+ },
+ "new_branch_code": {
+  "frames": 689,
+  "secs": 22.988,
+  "size": "1080x1920",
+  "mb": 38.95
+ },
+ "published_v3": {
+  "frames": 689,
+  "secs": 22.988,
+  "size": "1080x1920",
+  "mb": 39.02
+ },
+ "render_secs": {
+  "old": 257,
+  "new": 196
+ },
+ "old_vs_new": {
+  "top band 0-760": {
+   "min": 14.92,
+   "median": 49.59,
+   "frames_under_40dB": 107
+  },
+  "middle 760-1000": {
+   "min": 38.25,
+   "median": 48.285,
+   "frames_under_40dB": 42
+  },
+  "lines and strip 1000-1500": {
+   "min": 14.14,
+   "median": 16.905,
+   "frames_under_40dB": 522
+  },
+  "bottom 1500-1920": {
+   "min": 29.56,
+   "median": 33.165,
+   "frames_under_40dB": 604
+  },
+  "frames_identical": 60,
+  "frames_compared": 690
+ },
+ "published_vs_new": {
+  "top band 0-760": {
+   "min": 14.91,
+   "median": 49.635000000000005,
+   "frames_under_40dB": 107
+  },
+  "middle 760-1000": {
+   "min": 38.23,
+   "median": 48.33,
+   "frames_under_40dB": 42
+  },
+  "lines and strip 1000-1500": {
+   "min": 14.14,
+   "median": 16.905,
+   "frames_under_40dB": 522
+  },
+  "bottom 1500-1920": {
+   "min": 28.89,
+   "median": 32.415,
+   "frames_under_40dB": 609
+  },
+  "frames_identical": 60,
+  "frames_compared": 690
+ },
+ "audio_old_vs_new": {
+  "max_abs_diff": 0.0,
+  "samples": [
+   1104896,
+   1104896
+  ],
+  "corr": 1.0
+ },
+ "audio_published_vs_new": {
+  "max_abs_diff": 0.0,
+  "samples": [
+   1104896,
+   1104896
+  ],
+  "corr": 1.0
+ },
+ "render_times_new": {
+  "name": "elden-new-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T19:58Z",
+  "stages": {
+   "checks": 5.3,
+   "montage": 13.1,
+   "text": 64.6,
+   "audio": 1.0,
+   "outro": 40.5
+  },
+  "total": 124.6,
+  "lane": "runner",
+  "queued_at": "2026-10-24T19:56Z",
+  "finished_at": "2026-10-24T19:58Z",
+  "render_min": 2.08,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  }
+ }
+}
