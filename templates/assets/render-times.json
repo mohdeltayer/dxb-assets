@@ -6757,5 +6757,43 @@
   "job_secs": 192,
   "setup_min": 0.97,
   "story": "cyberpunk-2077-steam-peak-3-years"
+ },
+ {
+  "name": "cyberpunk-2077-steam-peak-3-years-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T20:57Z",
+  "stages": {
+   "checks": 5.1,
+   "montage": 38.0,
+   "text": 38.8,
+   "audio": 0.9,
+   "outro": 34.4
+  },
+  "total": 117.2,
+  "lane": "runner",
+  "queued_at": "2026-10-24T20:54:15Z",
+  "finished_at": "2026-10-24T20:57Z",
+  "render_min": 1.95,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 9.0,
+   "audio_secs": 46.7,
+   "music_pct": 93.3,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 16,
+   "mix_secs": 4.0,
+   "secs": 13.6
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 203,
+  "setup_min": 0.92,
+  "story": "cyberpunk-2077-steam-peak-3-years"
  }
 ]
