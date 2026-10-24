@@ -335,6 +335,16 @@ inbox", 24 Oct 2026): act on answered production items and mark them done
 with their outcome; apply the default of any item past its deadline. A
 breaking ping goes into the inbox as an approval item too, deadline 15
 minutes out, default "auto-go".
+Read every item, not only production's (24 Oct 2026, after two approved
+advisor memos waited about 90 minutes and a "pause" answer went unseen for
+76 minutes, across a context compaction): query the whole `items`
+collection and act on (a) every item with status "answered", whoever wrote
+it, and (b) every item `from` "advisor" with `to` "production" that is not
+"done". An answered advisor memo addressed to production is applied first,
+before any build or scheduling in that run, and a stop or pause answer
+takes effect before anything else. The same full read runs before every
+Publer submit and after every context compaction, so a summary never
+stands in for the inbox. The run's commit names each item it acted on.
 
 Triage of the OUTLETS list (Mohammad, 17 Oct 2026): a group marked "AR RELAY"
 is dated from its first report anywhere before it is considered; over 24 hours
