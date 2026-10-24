@@ -234,6 +234,14 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     a change every 3 to 4 s, last 2 s a picture, sound per the trailer-sound
     rule. The table (shot, time, verdict, note) goes in the story file's
     draft notes; the committed strip or sheet is the evidence.
+  - Trailer audio split (24 Oct, inbox 16:26Z): on a runner job with a trailer
+    track the trailer's music stem runs under the whole Reel and each shot gets
+    back only its own effects (Cocktail Fork, `templates/tracksplit.py`); no
+    dialogue, except speech kept by `speech_ok` or `"speech_keep": true`; our
+    bed, breaking and skins with a sting are not split; a failure, over 300 s,
+    leftover above 5% or music under 40% keeps today's audio (`audio_split` in
+    render-times.json). Director QA: every sound heard matches what is on
+    screen, the music track is clean (CLAUDE.md "Trailer audio split, live").
   - Trailer sound is the default (23 Oct). Our bed only for: sales charts
     (Famitsu), numbers Reels and our graphics; stills and silent footage;
     retro and on-this-day (retro flavour), tribute (calm bed); breaking news

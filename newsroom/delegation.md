@@ -76,6 +76,19 @@ with a note, or the story moves to a simpler template. A voiced track it
 approves goes into the job as `"speech_ok": "<reason>"` and into the draft spec
 as `"speech_director": "<decision>"`, so the pre-queue transcription reads the
 speech against its decision instead of stopping on it.
+Trailer audio split (Mohammad, 24 Oct 2026, inbox 16:26Z; CLAUDE.md "Trailer
+audio split, live"): on a job with a trailer track the runner plays the
+trailer's music stem under the whole Reel and puts back only each shot's own
+effects. The director reads the runner log line `render_job: audio split:` (or
+`audio_split` in render-times.json) and checks: every sound heard matches what
+is on screen (an effect only on its own picture: a clash on the clash, an
+explosion on the explosion, nothing over people sitting and talking); the music
+track is clean (no leftover effects, voices, or watery or broken sound). A
+mismatch fails the Reel. When the split was not applied (its reason is logged),
+the Reel carries today's mixed track and the same check applies to it: a
+mismatch there means another stretch, another trailer, or our bed with its
+reason. A voiced or subtitled Reel the director approves keeps its speech by
+`speech_ok` (or `"speech_keep": true`), which skips the split.
 People stories (advisor, 23 Oct 2026): when a person is the news, the director
 checks the person's photo window appears with the line that names them within
 the first 3 to 4 s, the face is visible, not cropped by the window or the plate,
@@ -90,12 +103,14 @@ without look room, no cut text at the edges); text (readable at phone size,
 inside the safe zone, first word Arabic, up long enough); picture (no decode
 damage or blockiness, no title card or slate, nothing graphic); sound (what
 plays under the shot: music, voiced and subtitled, or our bed; no word cut at
-the cut); reason (the shot shows what its line says). Return a compact table,
+the cut; every sound heard matches what is on screen, the music track is
+clean); reason (the shot shows what its line says). Return a compact table,
 one row per shot: shot, time (Reel seconds and source seconds), PASS or FIX
 with the one change needed. Then the Reel-level checks once: cover as a grid
 tile, length against the template target, a change every 3 to 4 s, the last
 2 s a picture, sound per the trailer-sound rule (our bed only with its stated
-reason). Verdict: PASS, or the list of fixes. On a second look, check the
+reason), the audio split's outcome (applied, or why not) and the check that
+every sound heard matches what is on screen and the music track is clean. Verdict: PASS, or the list of fixes. On a second look, check the
 changed shots only (plus the Reel-level line). The main session pastes the
 table into the story file's draft notes (`director_qa`); the evidence is the
 committed strip and sheet, no extra files. Two rounds of fixes at most.

@@ -2129,6 +2129,46 @@ HyperFrames, isolated like the earlier pilot.
    time; the first three live Reels with a kit moment go to Mohammad as
    previews before scheduling, as with the first inserts.
 
+## Trailer audio split, live (Mohammad, 24 Oct 2026, inbox 16:26Z: Adopt Cocktail Fork)
+
+Problem (24 Oct): a trailer's soundtrack is one mixed track, so when a Reel reorders or holds shots
+its effects land on shots they do not belong to (a sword clash while people sit and talk). Test on
+three published Reels (Shogun 2, Cyberpunk x Witcher gear, Phantom Blade Zero unlock time; branch
+`pilot/audio-split`, workflow `audio-split-test`): MERL Cocktail Fork split each Reel in 10 to 15 s
+on the 4-core runner and left 14 to 21% effects in its music by the other tool's judgement; BandIt
+Plus took 9 to 14 minutes and left 18 to 40%, and its weights are CC BY-NC 4.0, so test only.
+Cocktail Fork's code and weights are MIT. Mohammad adopted Cocktail Fork.
+1. What runs: a runner job whose `track` is a stretch of trailer audio is rendered as before, then
+   `templates/tracksplit.py` rebuilds the body sound: the trailer's music stem runs continuously
+   under the whole Reel (faded as the track was); each footage shot gets back only its own effects
+   stem, from the same source moment as its picture, 3 dB under the music; stills, graphics and cards
+   get none; dialogue is not put back. The end card and its jingle stay as rendered, the body keeps
+   the old body's level, and the new sound is muxed onto the same picture (video stream copy). The
+   decode and smear checks then read the Reel that ships.
+2. Not split (today's audio, unchanged): our bed or no track, stills, numbers and silent footage;
+   speech that is the news (`speech_ok`, or `"speech_keep": true` in the job for a voiced or
+   subtitled Reel without speech_ok); a skin kit with its sting; the breaking profile and the عاجل
+   chip (speed first; the install alone is about 10 s); `"audio_split": false`; the container
+   (COCKTAIL_DIR unset).
+3. Fallback, never a hold: the split fails, passes 300 s, or the music stem is not clean (a second
+   Cocktail Fork pass still hears more than 5% of the music stem's energy as effects or speech, the
+   test Reels measured 0.2 to 0.9%; or music is under 40% of the track stretch, an effects-led stretch;
+   the test Reels measured 57 to 79%): the Reel keeps today's audio. The render log prints `render_job:
+   audio split:` with the outcome and reason, and render-times.json keeps it as `audio_split`.
+4. Install: render.yml installs it only for a job that needs it (`tracksplit.py need <job>`), from
+   merlresearch/cocktail-fork-separation at commit 19b3de8 (mrx.py and the default checkpoint), with
+   the weights in the Actions cache, never in git; a failed install leaves the Reel on today's audio.
+5. Director QA adds one check (Director card and QA format in `newsroom/delegation.md`): every sound
+   heard matches what is on screen; the music track is clean. A mismatch fails the Reel.
+6. Parity test on the runner, 24 Oct: Dead by Daylight on our bed (no track) rendered as before, 555
+   frames and 18.52 s like the published v3, audio correlation 0.9999 (encoder noise only). Shogun 2
+   on its trailer track: split applied (music 58.1% of the track, leftover 0.8%, 15 s to separate, 21 s
+   in all), 669 frames and 22.32 s like the published v4, end card sound identical, decode and smear
+   checks clean, its loudness envelope following the test's rebuild (0.95) and not the published mix
+   (0.56). Both test Reels were deleted from `cards/` after the check; neither was for posting.
+   Cost: about 21 s of render per split Reel and about 10 s of install, far inside the 45-minute
+   fresh-reveal target.
+
 ## Explainers from the source's own drawings (trial, 27 Sep 2026)
 
 For "how does it work" stories (patents, hardware, new features),
