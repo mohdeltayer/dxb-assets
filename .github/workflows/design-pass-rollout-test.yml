@@ -1,0 +1,319 @@
+# Design pass roll-out test (24 Oct 2026, after Mohammad's "Roll out", 19:21Z). Lives on rollout/design-pass only and
+# is never triggered by jobs/render/*.json: workflow_dispatch only, its own concurrency group, and it waits while a news
+# render (render.yml) is queued or running. Nothing here is posted or scheduled; results commit to this branch only,
+# under notes/design-pass-rollout/. The Dubai font is cloned into a temp folder and deleted; never committed, uploaded
+# or printed.
+#   parity: one published job without the new keys (Elden Ring film budget v3, split, on our bed) rendered on the base
+#           code (ea5b599) and on this branch from the same fetched source and picture cache, compared with each
+#           other and with the published card.
+#   frame:  the pilot's Phantom Blade Zero sample as a live job with "frame" and "kit": ["chip"].
+#   photobox: the pilot's Aonuma sample as a live job with "kit": ["chip", "photobox"].
+name: Design pass rollout test
+
+on:
+  workflow_dispatch:
+    inputs:
+      tests:
+        description: 'Space separated: parity frame photobox'
+        required: false
+        default: 'parity frame photobox'
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: design-pass-rollout-test
+  cancel-in-progress: false
+
+env:
+  BASE_SHA: ea5b599951f9890d9cd4cbf6e3c5a511aef5882a
+  ELDEN_SHA: c261eda8b946250ff032099c58cb65907aef04fb
+  PILOT_SHA: e23a8fbf9aff7486940781378b0ad292940a7ea9
+
+jobs:
+  test:
+    if: github.ref == 'refs/heads/rollout/design-pass'
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    strategy:
+      fail-fast: false
+      matrix:
+        test: [parity, frame, photobox]
+    env:
+      TEST: ${{ matrix.test }}
+    steps:
+      - name: Selected?
+        id: sel
+        run: |
+          case " ${{ github.event.inputs.tests }} " in *" $TEST "*) echo "run=1" >> "$GITHUB_OUTPUT";; *) echo "skipped";; esac
+
+      - name: Wait while a news render runs (news first)
+        if: steps.sel.outputs.run == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 60); do
+            busy=$(gh run list -R "$GITHUB_REPOSITORY" --workflow render.yml --limit 20 --json status \
+                   -q '[.[] | select(.status == "in_progress" or .status == "queued" or .status == "waiting")] | length')
+            [ "$busy" = "0" ] && { echo "no news render running"; exit 0; }
+            echo "$(date -u +%T) news render busy ($busy), waiting"; sleep 30
+          done
+          echo "still busy after 30 minutes"; exit 1
+
+      - uses: actions/checkout@v5
+        if: steps.sel.outputs.run == '1'
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            templates
+            notes/design-pass-rollout
+
+      - uses: actions/checkout@v5
+        if: steps.sel.outputs.run == '1' && matrix.test == 'parity'
+        with:
+          ref: ${{ env.BASE_SHA }}
+          path: old
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: templates
+
+      - name: Runner
+        if: steps.sel.outputs.run == '1'
+        run: |
+          echo "cores $(nproc), $(free -g | awk '/Mem:/{print $2}') GB"
+          {
+            echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts"
+            echo "DXB_UPLOADS=$RUNNER_TEMP/uploads"
+            echo "YOLO_WEIGHTS=$RUNNER_TEMP/models/yolov8n.pt"
+            echo "RENDER_LANE=runner"
+            echo "OUTD=notes/design-pass-rollout"
+          } >> "$GITHUB_ENV"
+
+      - name: Fonts (temp folder, outside the workspace)
+        if: steps.sel.outputs.run == '1'
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          repo="$RUNNER_TEMP/dxb-fonts"
+          git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+          mkdir -p "$DUBAI_FONTS"
+          unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$DUBAI_FONTS"
+          rm -rf "$repo"
+          for w in Light Regular Medium Bold; do test -f "$DUBAI_FONTS/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing"; exit 1; }; done
+
+      - uses: actions/setup-python@v6
+        if: steps.sel.outputs.run == '1'
+        with:
+          python-version: '3.11'
+
+      - uses: actions/setup-node@v5
+        if: steps.sel.outputs.run == '1' && matrix.test != 'parity'
+        with:
+          node-version: '22'
+
+      - name: Tools (as render.yml)
+        if: steps.sel.outputs.run == '1'
+        timeout-minutes: 12
+        run: |
+          sudo systemctl stop unattended-upgrades apt-daily.service apt-daily-upgrade.service apt-daily.timer apt-daily-upgrade.timer 2>/dev/null || true
+          APT="sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=120 -o Acquire::Retries=3 -o Acquire::http::Timeout=30"
+          need=""; command -v ffmpeg >/dev/null || need="ffmpeg"; command -v tesseract >/dev/null || need="$need tesseract-ocr tesseract-ocr-eng"
+          if [ -n "$need" ]; then $APT update -qq 2>&1 | tail -3; timeout 150 $APT install -y -q --no-install-recommends $need 2>&1 | tail -5 || true; fi
+          if ! command -v ffmpeg >/dev/null; then
+            curl -sSL --retry 3 --max-time 180 -o "$RUNNER_TEMP/ff.tar.xz" https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz
+            tar -xJf "$RUNNER_TEMP/ff.tar.xz" -C "$RUNNER_TEMP" && sudo cp "$RUNNER_TEMP"/ffmpeg-master-latest-linux64-gpl/bin/ff* /usr/local/bin/
+          fi
+          python -m pip install -q --upgrade pip
+          python -m pip install -q --timeout 60 --retries 3 torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -q --timeout 60 --retries 3 pillow numpy soundfile pedalboard ultralytics opencv-python-headless
+          mkdir -p "$DXB_UPLOADS" "$(dirname "$YOLO_WEIGHTS")" "$OUTD" cards/test
+
+      - name: Test jobs (written to the runner's temp folder, never under jobs/render)
+        if: steps.sel.outputs.run == '1'
+        run: |
+          raw="https://raw.githubusercontent.com/$GITHUB_REPOSITORY"   # single files: a commit fetch would pull every card
+          mkdir -p "$RUNNER_TEMP/jobs"
+          curl -sSfL --retry 3 -o "$RUNNER_TEMP/jobs/elden.json" "$raw/$ELDEN_SHA/jobs/render/elden-ring-film-budget-wsj.json"
+          curl -sSfL --retry 3 -o "$RUNNER_TEMP/jobs/pbz.json" "$raw/$PILOT_SHA/templates/design-pass/jobs/phantom-blade-zero-launch-trailer-gulf-prices.json"
+          curl -sSfL --retry 3 -o "$RUNNER_TEMP/jobs/aonuma.json" "$raw/$PILOT_SHA/templates/design-pass/jobs/aonuma-chevalier-arts-lettres-paris.json"
+          python - <<'EOF'
+          import json, os
+          J = os.path.join(os.environ['RUNNER_TEMP'], 'jobs')
+          e = json.load(open(f'{J}/elden.json'))
+          for k in ('old', 'new'):
+              json.dump(dict(e, out=f'cards/test/elden-{k}-reel-v1.mp4'), open(f'{J}/elden-{k}.json', 'w'), ensure_ascii=False, indent=1)
+          p = json.load(open(f'{J}/pbz.json'))
+          p.pop('head_size', None)                      # the 24 Oct grid size: 100 px, never under 72
+          p.update(name='dp-test-pbz', out='cards/test/dp-test-pbz-reel-v1.mp4',
+                   headline='موعد Phantom Blade Zero\nوسعرها في الخليج',   # the pilot's fitted headline
+                   lines=[g for g in p['lines'] if g[0] != 2],             # the frame carries the date and platforms
+                   frame={'shot': 2, 'offset': 0.25, 'secs': 4.0,
+                          'data': {'platforms': [{'logo': 'ps5', 'prices': [['الإمارات', ['aed', '239']]]},
+                                                 {'logo': 'steam', 'prices': [['الإمارات', ['aed', '219']],
+                                                                              ['السعودية', '225 ريالًا']]}],
+                                   'date': 'تصل في 29 أكتوبر', 'note': 'وعلى Epic Games Store أيضًا', 'arabic': False}},
+                   kit=['chip'])
+          json.dump(p, open(f'{J}/pbz-live.json', 'w'), ensure_ascii=False, indent=1)
+          a = json.load(open(f'{J}/aonuma.json'))
+          a.pop('head_size', None)
+          per = a['person'][0]; per[3], per[4] = 0, 3.5            # open on the cover, stepping aside with the headline
+          a.update(name='dp-test-aonuma', out='cards/test/dp-test-aonuma-reel-v1.mp4', person=[per], kit=['chip', 'photobox'],
+                   lowres_ok='test only: the pilot sample\'s Nintendo store copy, 720p; IGN and the press site not searched again')
+          json.dump(a, open(f'{J}/aonuma-live.json', 'w'), ensure_ascii=False, indent=1)
+          EOF
+
+      - name: HyperFrames install (frame and photobox tests)
+        if: steps.sel.outputs.run == '1' && matrix.test != 'parity'
+        continue-on-error: true
+        timeout-minutes: 5
+        run: |
+          mkdir -p "$RUNNER_TEMP/hf" && cd "$RUNNER_TEMP/hf"
+          npm i -s --no-audit --no-fund hyperframes@0.8.143
+          npx hyperframes browser ensure
+          echo "HF_CLI=$RUNNER_TEMP/hf/node_modules/.bin/hyperframes" >> "$GITHUB_ENV"
+
+      - name: Parity renders (base code, then this branch; same source and picture cache)
+        if: steps.sel.outputs.run == '1' && matrix.test == 'parity'
+        run: |
+          mkdir -p old/cards/test
+          t=$(date +%s); (cd old && python templates/render_job.py run "$RUNNER_TEMP/jobs/elden-old.json"); echo "OLD_SECS=$(( $(date +%s) - t ))" >> "$GITHUB_ENV"
+          python templates/render_job.py check "$RUNNER_TEMP/jobs/elden-new.json" || true
+          t=$(date +%s); python templates/render_job.py run "$RUNNER_TEMP/jobs/elden-new.json"; echo "NEW_SECS=$(( $(date +%s) - t ))" >> "$GITHUB_ENV"
+
+      - name: Published card
+        if: steps.sel.outputs.run == '1' && matrix.test == 'parity'
+        run: |
+          curl -sSfL --retry 3 -o "$RUNNER_TEMP/published.mp4" \
+            "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/main/cards/2026-10/elden-ring-film-budget-wsj-reel-v3.mp4"
+
+      - name: Parity compare
+        if: steps.sel.outputs.run == '1' && matrix.test == 'parity'
+        run: |
+          python - <<'EOF'
+          import json, os, subprocess, numpy as np
+          R = os.environ['RUNNER_TEMP']
+          old, new, pub = 'old/cards/test/elden-old-reel-v1.mp4', 'cards/test/elden-new-reel-v1.mp4', f'{R}/published.mp4'
+          def info(f):
+              r = subprocess.run(['ffprobe', '-v', 'error', '-count_frames', '-select_streams', 'v', '-show_entries',
+                                  'stream=nb_read_frames,width,height', '-show_entries', 'format=duration', '-of', 'json', f],
+                                 capture_output=True, text=True, check=True)
+              j = json.loads(r.stdout)
+              s = j['streams'][0]
+              return {'frames': int(s['nb_read_frames']), 'secs': round(float(j['format']['duration']), 3),
+                      'size': f"{s['width']}x{s['height']}", 'mb': round(os.path.getsize(f) / 1e6, 2)}
+          def frames(f):          # every frame, grey, at a quarter size (270 x 480)
+              raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', f, '-vf', 'scale=270:480:flags=area,format=gray', '-f', 'rawvideo', '-'],
+                                   capture_output=True, check=True).stdout
+              return np.frombuffer(raw, np.uint8).reshape(-1, 480, 270).astype(np.float32)
+          def audio(f):
+              raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', f, '-ac', '1', '-ar', '48000', '-f', 'f32le', '-'],
+                                   capture_output=True, check=True).stdout
+              return np.frombuffer(raw, np.float32)
+          REG = {'top band 0-760': (0, 190), 'middle 760-1000': (190, 250), 'lines and strip 1000-1500': (250, 375),
+                 'bottom 1500-1920': (375, 480)}
+          def psnr(a, b):
+              m = float(((a - b) ** 2).mean())
+              return 99.0 if m == 0 else round(10 * np.log10(255 ** 2 / m), 2)
+          def compare(a, b):
+              A, B = frames(a), frames(b)
+              n = min(len(A), len(B))
+              out = {}
+              for k, (y0, y1) in REG.items():
+                  v = [psnr(A[i, y0:y1], B[i, y0:y1]) for i in range(n)]
+                  out[k] = {'min': min(v), 'median': float(np.median(v)), 'frames_under_40dB': int(sum(x < 40 for x in v))}
+              d = np.abs(A[:n] - B[:n]).max(axis=(1, 2))
+              out['frames_identical'] = int((d == 0).sum()); out['frames_compared'] = n
+              return out
+          res = {'old_base_code': info(old), 'new_branch_code': info(new), 'published_v3': info(pub),
+                 'render_secs': {'old': int(os.environ['OLD_SECS']), 'new': int(os.environ['NEW_SECS'])}}
+          res['old_vs_new'] = compare(old, new)
+          res['published_vs_new'] = compare(pub, new)
+          ao, an, ap = audio(old), audio(new), audio(pub)
+          n = min(len(ao), len(an))
+          res['audio_old_vs_new'] = {'max_abs_diff': float(np.abs(ao[:n] - an[:n]).max()), 'samples': [len(ao), len(an)],
+                                     'corr': float(np.corrcoef(ao[:n], an[:n])[0, 1])}
+          n = min(len(ap), len(an))
+          res['audio_published_vs_new'] = {'max_abs_diff': float(np.abs(ap[:n] - an[:n]).max()), 'samples': [len(ap), len(an)],
+                                           'corr': float(np.corrcoef(ap[:n], an[:n])[0, 1])}
+          t = json.load(open('templates/assets/render-times.json'))
+          res['render_times_new'] = next(e for e in reversed(t) if e.get('name') == os.path.basename(new))
+          print(json.dumps(res, indent=1, ensure_ascii=False))
+          json.dump(res, open(os.path.join(os.environ['OUTD'], 'parity-elden.json'), 'w'), indent=1, ensure_ascii=False)
+          EOF
+          for k in old new; do
+            f=cards/test/elden-$k-reel-v1.mp4; [ $k = old ] && f=old/$f
+            ffmpeg -v error -y -ss 0 -i "$f" -frames:v 1 -vf "crop=1080:760:0:240,scale=540:-2" -q:v 3 "$OUTD/parity-elden-$k-top.jpg"
+            ffmpeg -v error -y -ss 6 -i "$f" -frames:v 1 -vf "crop=1080:420:0:1100,scale=540:-2" -q:v 3 "$OUTD/parity-elden-$k-strip.jpg"
+          done
+
+      - name: Frame test render
+        if: steps.sel.outputs.run == '1' && matrix.test == 'frame'
+        run: |
+          python templates/render_job.py text "$RUNNER_TEMP/jobs/pbz-live.json"
+          python templates/render_job.py check "$RUNNER_TEMP/jobs/pbz-live.json" || true
+          t=$(date +%s); python templates/render_job.py run "$RUNNER_TEMP/jobs/pbz-live.json"; echo "SECS=$(( $(date +%s) - t ))"
+
+      - name: Photobox test render
+        if: steps.sel.outputs.run == '1' && matrix.test == 'photobox'
+        run: |
+          python templates/render_job.py text "$RUNNER_TEMP/jobs/aonuma-live.json"
+          python templates/render_job.py check "$RUNNER_TEMP/jobs/aonuma-live.json" || true
+          t=$(date +%s); python templates/render_job.py run "$RUNNER_TEMP/jobs/aonuma-live.json"; echo "SECS=$(( $(date +%s) - t ))"
+
+      - name: QA frames and record
+        if: steps.sel.outputs.run == '1' && matrix.test != 'parity'
+        run: |
+          name=dp-test-pbz; [ "$TEST" = photobox ] && name=dp-test-aonuma
+          f=cards/test/$name-reel-v1.mp4
+          ffmpeg -v error -i "$f" -f null - && echo "decode clean: $f"
+          ffprobe -v error -count_frames -select_streams v -show_entries stream=nb_read_frames -show_entries format=duration -of csv=p=0 "$f"
+          ffmpeg -v error -y -ss 0 -i "$f" -frames:v 1 -vf scale=540:960 -q:v 3 "$OUTD/$name-frame0.jpg"
+          ffmpeg -v error -y -ss 0 -i "$f" -frames:v 1 -vf "crop=1080:1440:0:240,scale=300:400" -q:v 3 "$OUTD/$name-frame0-grid.jpg"
+          i=0; for t in 0.25 0.31 0.37 0.43 0.5; do ffmpeg -v error -y -ss $t -i "$f" -frames:v 1 -vf "crop=560:160:380:320" "$RUNNER_TEMP/p$i.png"; i=$((i+1)); done
+          ffmpeg -v error -y -i "$RUNNER_TEMP/p0.png" -i "$RUNNER_TEMP/p1.png" -i "$RUNNER_TEMP/p2.png" -i "$RUNNER_TEMP/p3.png" -i "$RUNNER_TEMP/p4.png" \
+                 -filter_complex vstack=inputs=5 -q:v 3 "$OUTD/$name-chip-press.jpg"
+          python - <<'EOF'
+          import json, os, subprocess
+          name = 'dp-test-aonuma' if os.environ['TEST'] == 'photobox' else 'dp-test-pbz'
+          f = f'cards/test/{name}-reel-v1.mp4'
+          t = json.load(open('templates/assets/render-times.json'))
+          e = next(x for x in reversed(t) if x.get('name') == os.path.basename(f))
+          e['runner'] = 'actions'; e['cores'] = os.cpu_count()
+          json.dump(e, open(f"{os.environ['OUTD']}/{name}-render-times.json", 'w'), indent=1, ensure_ascii=False)
+          print(json.dumps(e, indent=1, ensure_ascii=False))
+          dp = e.get('design_pass') or {}
+          grab = lambda t, out: subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', f'{t:.3f}', '-i', f, '-frames:v', '1',
+                                                '-vf', 'scale=540:960', '-q:v', '3', f"{os.environ['OUTD']}/{name}-{out}.jpg"], check=True)
+          for p in dp.get('pieces', []):
+              if p.get('ok') and p['piece'] == 'frame':
+                  grab(p['at'] + 0.3, 'frame-pressing'); grab(sum(p['still']) / 2, 'frame-held')
+              if p.get('ok') and p['piece'] == 'cover' and 'photobox' in p.get('moments', []):
+                  grab(3.0, 'box-3s'); grab(3.9, 'after-box')
+          EOF
+          cp "$f" "$OUTD/"
+          base="cards/test/$name"; [ -f "$base-dense.jpg" ] && cp "$base-dense.jpg" "$OUTD/"
+          [ -f "$base-strip.jpg" ] && cp "$base-strip.jpg" "$OUTD/"
+          true
+
+      - name: Clean the font copies
+        if: always()
+        run: rm -rf "$DUBAI_FONTS" /tmp/dpass-*
+
+      - name: Commit results to this branch
+        if: steps.sel.outputs.run == '1'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p "$RUNNER_TEMP/keep" && cp -r "$OUTD/." "$RUNNER_TEMP/keep/"
+          for i in 1 2 3 4 5; do
+            git fetch -q --depth=1 --filter=blob:none origin rollout/design-pass
+            git reset -q --hard origin/rollout/design-pass
+            mkdir -p "$OUTD" && cp -r "$RUNNER_TEMP/keep/." "$OUTD/"
+            git add --sparse -f "$OUTD"
+            git commit -q -m "Design pass roll-out test ($TEST) on the runner ($(nproc) cores)" || exit 0
+            if git push -q origin HEAD:rollout/design-pass; then exit 0; fi
+            sleep $(( i * 7 ))
+          done
+          exit 1
