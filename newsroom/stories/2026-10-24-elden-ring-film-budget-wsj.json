@@ -4,7 +4,7 @@
  "game": "Elden Ring",
  "status": "building",
  "chip": "تقرير",
- "template": "trailer",
+ "template": "split",
  "skin": "house",
  "sound": "our bed (neon_d)",
  "genre": [
@@ -53,8 +53,7 @@
    "حسب صحيفة\nوول ستريت جورنال (WSJ)",
    "وهو أغلى أفلام\nشركة A24 حتى الآن",
    "وقدّرتها تقارير أبريل\nبأكثر من 100 مليون",
-   "يكتبه ويخرجه\nأليكس غارلاند (Alex Garland)",
-   "ويصدر في 3 مارس 2028\nولم تؤكد A24 الميزانية بعد"
+   "يكتبه ويخرجه\nأليكس غارلاند (Alex Garland)"
   ],
   "credit": "لقطات من لعبة Elden Ring",
   "x": "تبلغ ميزانية فيلم Elden Ring من شركة A24 نحو 200 مليون دولار، حسب صحيفة وول ستريت جورنال (The Wall Street Journal). ولم تؤكد A24 الرقم بعد.",
@@ -63,12 +62,23 @@
   "follow_up": {
    "x": "المصدر: صحيفة وول ستريت جورنال (The Wall Street Journal) عبر موقع إنسايدر غيمينغ (Insider Gaming)\nhttps://insider-gaming.com/a24-elden-ring-movie-budget/",
    "instagram": "المصدر: وول ستريت جورنال عبر إنسايدر غيمينغ، 24 أكتوبر"
-  }
+  },
+  "strip": [
+   [
+    "الصدور",
+    "3 مارس 2028"
+   ],
+   [
+    "الميزانية",
+    "لم تؤكدها A24"
+   ]
+  ]
  },
  "notes": [
   "Brief: report, family 6; hook on Torrent's leap and the lone rider under the headline (number hook, never louder than the source: chip تقرير and 'تقارب'); the WSJ line on the castle siege; the April figure on the dragon; Garland on Radahn and Malenia; the date and 'not confirmed' on the dragon close-up. 21.4 s.",
   "Sound: our bed (neon_d). The launch trailer is narrated almost throughout (whisper: speech at 24 to 40, 54 to 67, 77 to 87, 101 to 119 s; longest speech-free stretches 13 s and 14 s, the Reel needs 21.4 s), and the Accolades trailer runs only 29 s. Other trailers (story, gameplay) are narrated too. Preview says 'our bed' first.",
   "Grammar stage 18:25Z: no required edits; caption takes «ويصدر الفيلم» (optional suggestion, clarity). DeepL back-check: meaning holds, but it read the on-screen «ولم تؤكد A24 الرقم» after the date as 'has not confirmed the date'; the line now says «الميزانية» (v2). Forward pass: «أغلى فيلم أنتجته الشركة», «لم تؤكد شركة A24 الميزانية حتى الآن»; our wording kept (names stay Latin per house rules).",
-  "Footage: Steam 1080p launch trailer, x1.8, source quality ok (block ratios 1.05 to 1.35); focus set by hand on shots 3, 4, 5, 7, 8 after the sheet (saliency missed the rider, fighter, knight, Radahn and Malenia)."
+  "Footage: Steam 1080p launch trailer, x1.8, source quality ok (block ratios 1.05 to 1.35); focus set by hand on shots 3, 4, 5, 7, 8 after the sheet (saliency missed the rider, fighter, knight, Radahn and Malenia).",
+  "v3 as split (formats check refused a third trailer in a row after Dear Passengers and SteamOS; Steam most-played cannot sit between them, Valve twice): the strip carries the release date and «الميزانية · لم تؤكدها A24», the date line is gone from the lines, the closing dragon shot breathes with no line."
  ]
 }
