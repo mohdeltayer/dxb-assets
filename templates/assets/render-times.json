@@ -6544,5 +6544,31 @@
   "job_secs": 276,
   "setup_min": 0.98,
   "story": "elden-ring-film-budget-wsj"
+ },
+ {
+  "name": "elden-ring-film-budget-wsj-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T18:44Z",
+  "stages": {
+   "checks": 6.4,
+   "montage": 72.2,
+   "text": 78.9,
+   "audio": 1.2,
+   "outro": 65.2
+  },
+  "total": 223.9,
+  "lane": "runner",
+  "queued_at": "2026-10-24T18:38:59Z",
+  "finished_at": "2026-10-24T18:44Z",
+  "render_min": 3.73,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 327,
+  "setup_min": 1.17,
+  "story": "elden-ring-film-budget-wsj"
  }
 ]
