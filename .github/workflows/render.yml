@@ -123,6 +123,30 @@ jobs:
           echo "$(date -u +%T) tools done"
           mkdir -p "$DXB_UPLOADS" "$(dirname "$YOLO_WEIGHTS")"
 
+      # HyperFrames inserts (advisor, 24 Oct 2026): installed only when the job asks for one, pinned to the tested
+      # version. A failed install leaves HF_CLI unset, so the insert fails and the Reel keeps its current card.
+      - name: HyperFrames (only for a job with an insert)
+        id: hf
+        run: |
+          if python -c "import json,sys; sys.exit(0 if json.load(open('$JOB')).get('insert') else 1)"; then
+            echo "need=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-node@v5
+        if: steps.hf.outputs.need == '1'
+        with:
+          node-version: '22'
+
+      - name: HyperFrames install
+        if: steps.hf.outputs.need == '1'
+        continue-on-error: true
+        timeout-minutes: 5
+        run: |
+          mkdir -p "$RUNNER_TEMP/hf" && cd "$RUNNER_TEMP/hf"
+          npm i -s --no-audit --no-fund hyperframes@0.8.143
+          npx hyperframes browser ensure
+          echo "HF_CLI=$RUNNER_TEMP/hf/node_modules/.bin/hyperframes" >> "$GITHUB_ENV"
+
       # Render fails the job, before anything is committed, when a fetched source reports decode errors twice,
       # a shot's source stretch or the finished Reel shows a blocky smear (templates/decodecheck.py; advisor,
       # 21 Oct 2026, after the Battlefield 1 Reel carried a damaged download)
@@ -147,14 +171,14 @@ jobs:
           git config user.name "dxb-render"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           for i in 1 2 3 4 5; do
-            git fetch -q --depth=1 --filter=blob:none origin main
-            git reset -q --hard origin/main
+            git fetch -q --depth=1 --filter=blob:none origin "$GITHUB_REF_NAME"
+            git reset -q --hard "origin/$GITHUB_REF_NAME"
             cp -r "$RUNNER_TEMP/out/." .
             python -c "import json; p = 'templates/assets/render-times.json'; d = json.load(open(p)); e = json.load(open('$RUNNER_TEMP/render-time.json')); e['job_secs'] = $RENDER_SECS; e['setup_min'] = round($SETUP_SECS / 60, 2); e['story'] = '$(basename "$JOB" .json)'; d.append(e); json.dump(d, open(p, 'w'), indent=1, ensure_ascii=False)"
             git add --sparse -f $files templates/assets/render-times.json
             if [ -f "$JOB" ]; then git rm -q "$JOB"; fi
             git commit -q -m "Render $(basename "$JOB" .json) on the runner ($RENDER_SECS s, $(nproc) cores)"
-            if git push -q origin HEAD:main; then exit 0; fi
+            if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
             sleep $(( i * 5 ))
           done
           echo "push failed five times"; exit 1

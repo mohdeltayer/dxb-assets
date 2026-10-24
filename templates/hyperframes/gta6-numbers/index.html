@@ -1,0 +1,146 @@
+<!doctype html>
+<!-- HyperFrames pilot (advisor, 23 Oct 2026), piece a: a numbers card that counts up on the game's own
+     footage, dimmed and moving, with the game's logo plate. Same story and facts as the published
+     gta-6-pre-orders-sensor-tower-estimate Reel (20 Oct), so the two can be compared side by side.
+     Not for posting. Assets come from fetch_assets.py; the Dubai font is copied in at render time.
+     Design pass 2 (advisor, 24 Oct 2026): the composition fills the safe zone (y 285 to 1480), the figure
+     is the hero (205 px, larger than the published card's), and the footage is dimmed less, with soft
+     bands only behind the type so the contrast check still holds. -->
+<html lang="ar" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Dubai"; font-weight: 300; src: url("fonts/Dubai-Light.ttf"); }
+      @font-face { font-family: "Dubai"; font-weight: 400; src: url("fonts/Dubai-Regular.ttf"); }
+      @font-face { font-family: "Dubai"; font-weight: 500; src: url("fonts/Dubai-Medium.ttf"); }
+      @font-face { font-family: "Dubai"; font-weight: 700; src: url("fonts/Dubai-Bold.ttf"); }
+      :root {
+        --ground: #141332; --panel: #1e1d4a; --edge: #3f3da8;
+        --ink: #f4f3ff; --body: #c9c8e6;
+        --accent: #ffb547;          /* spectacle: nearest the game's sunsets (advisor, 20 Oct) */
+        --azure: #28b6f6;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--ground); }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden;
+              font-family: "Dubai", "DejaVu Sans", sans-serif; direction: rtl; color: var(--ink); }
+      .clip { position: absolute; }
+      
+      /* the game's footage, lightly dimmed so the game reads; bands sit only behind the type */
+      #bg { position: absolute; left: -60px; top: -60px; width: 1200px; height: 2040px; object-fit: cover;
+            filter: blur(3px) brightness(0.72) saturate(1.12); }
+      #shade { position: absolute; inset: 0;
+               background: linear-gradient(180deg, rgba(20,19,50,.55) 0%, rgba(20,19,50,.12) 12%,
+                                           rgba(20,19,50,0) 40%, rgba(20,19,50,0) 70%, rgba(20,19,50,.5) 100%); }
+      /* soft band behind chip and headline (the house hook band), and one behind the story line */
+      #hband { position: absolute; left: 0; top: 300px; width: 1080px; height: 340px;
+               background: linear-gradient(180deg, rgba(20,19,50,0) 0%, rgba(20,19,50,.58) 22%,
+                                           rgba(20,19,50,.58) 78%, rgba(20,19,50,0) 100%); }
+      #lband { position: absolute; left: 0; top: 1340px; width: 1080px; height: 160px;
+               background: linear-gradient(180deg, rgba(20,19,50,0) 0%, rgba(20,19,50,.58) 30%,
+                                           rgba(20,19,50,.58) 70%, rgba(20,19,50,0) 100%); }
+
+      /* chip and headline: the house layout (safe zone x 96-910, chip row at y 355) */
+      #chip { position: absolute; top: 355px; right: 170px; height: 57px; padding: 0 22px;
+              background: var(--accent); color: var(--ground); border-radius: 10px;
+              font-weight: 700; font-size: 34px; line-height: 57px; }
+      #head { position: absolute; top: 432px; right: 170px; width: 814px; text-align: right;
+              font-weight: 700; font-size: 60px; line-height: 1.28;
+              text-shadow: 0 2px 10px rgba(20,19,50,.7); }
+      #mark { position: absolute; top: 359px; left: 96px; width: 48px; height: 48px; border-radius: 50%;
+              opacity: .5; }
+
+      /* logo plate: indigo at 78%, edge in the accent; larger than the pilot's and above the hero */
+      #plate { position: absolute; top: 640px; left: 220px; width: 640px; height: 190px;
+               background: rgba(20,19,50,.78); border: 3px solid var(--accent); border-radius: 26px;
+               display: flex; align-items: center; justify-content: center; }
+      #plate img { height: 150px; }
+
+      /* the cards: same box for both, centred in the space between the plate and the story line */
+      .card { position: absolute; left: 96px; width: 814px; top: 856px; height: 480px; padding: 22px 30px;
+              background: rgba(20,19,50,.82); border: 3px solid rgba(255,181,71,.7); border-radius: 30px;
+              text-align: center; display: flex; flex-direction: column; justify-content: center; }
+      #fig { font-weight: 700; font-size: 205px; line-height: .95; letter-spacing: -2px; white-space: nowrap;
+             color: var(--ink); text-shadow: 0 6px 24px rgba(0,0,0,.45); }
+      #fig .u { font-size: 100px; margin-right: 22px; }
+      .lbl { font-weight: 700; font-size: 58px; color: var(--accent); margin-top: 14px; }
+      .nb { white-space: nowrap; }
+      .note { font-weight: 400; font-size: 40px; line-height: 1.35; color: var(--body); margin-top: 14px; }
+
+      /* card 2: platforms */
+      #c2 .title { font-weight: 700; font-size: 62px; margin-bottom: 10px; }
+      .row { display: flex; align-items: center; gap: 22px; margin: 14px 0; direction: ltr; }
+      .row .name { width: 270px; text-align: left; font-weight: 700; font-size: 50px; color: var(--ink); }
+      .row .bar { flex: 1; height: 50px; background: rgba(255,255,255,.1); border-radius: 25px; overflow: hidden; }
+      .row .fill { height: 100%; width: 0; background: var(--accent); border-radius: 25px; }
+      .row .pct { width: 140px; text-align: right; font-weight: 700; font-size: 64px; }
+
+      /* the story line under the card: one visual line over a card (14 Oct rule) */
+      .line { position: absolute; right: 170px; width: 814px; top: 1378px; text-align: right;
+              font-weight: 700; font-size: 58px; white-space: nowrap;
+              text-shadow: 0 0 6px #141332, 0 0 2px #2d2a8a, 0 4px 14px rgba(0,0,0,.6); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="9" data-width="1080" data-height="1920">
+      <video id="bg" class="clip" data-start="0" data-duration="9" data-media-start="0" muted
+             src="assets/gta6-launch-1920.mp4"></video>
+      <div id="shade" class="clip" data-start="0" data-duration="9"></div>
+      <div id="hband" class="clip" data-start="0" data-duration="9"></div>
+      <div id="lband" class="clip" data-start="0" data-duration="9"></div>
+
+      <img id="mark" class="clip" data-start="0" data-duration="9" src="assets/digi-mark.jpg" />
+      <div id="chip" class="clip" data-start="0" data-duration="9">أرقام</div>
+      <div id="head" class="clip" data-start="0" data-duration="9">تقدير جديد: أكثر من 6 ملايين<br />حجز مسبق للعبة GTA 6</div>
+
+      <div id="plate" class="clip" data-start="0" data-duration="9"><img src="assets/gta6-logo-trim.png" /></div>
+
+      <div id="c1" class="card clip" data-start="0" data-duration="4.9">
+        <div id="fig"><span id="num">6.08</span><span class="u">مليون</span></div>
+        <div class="lbl">نسخة محجوزة مسبقًا</div>
+        <div class="note">تقدير للنسخ الرقمية في الولايات المتحدة<br />حتى 13 أكتوبر، حسب سنسر تاور <bdi class="nb">(Sensor Tower)</bdi></div>
+      </div>
+      <div id="l1" class="line clip" data-start="0" data-duration="4.9">قبل شهر واحد من صدورها</div>
+
+      <div id="c2" class="card clip" data-start="4.5" data-duration="4.5">
+        <div class="title">الحجوزات حسب المنصة</div>
+        <div class="row"><div class="name">PlayStation</div><div class="bar"><div class="fill" id="f1"></div></div><div class="pct"><span id="p1">0</span>%</div></div>
+        <div class="row"><div class="name">Xbox</div><div class="bar"><div class="fill" id="f2"></div></div><div class="pct"><span id="p2">0</span>%</div></div>
+        <div class="note">حسب تقديرات سنسر تاور</div>
+      </div>
+      <div id="l2" class="line clip" data-start="4.5" data-duration="4.5">نحو ثلاثة أرباعها على PlayStation</div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const num = { v: 6.08 }, p = { a: 0, b: 0 };
+      const show = () => { document.getElementById("num").textContent = num.v.toFixed(2); };
+
+      // footage drifts the whole time (nothing static in the first 3 s)
+      tl.fromTo("#bg", { scale: 1.0, x: 0 }, { scale: 1.08, x: -30, duration: 9, ease: "none" }, 0);
+
+      // frame 0 is the grid tile: logo, figure and headline together (advisor, 20 Oct).
+      // At 0.45 s the figure drops to zero and counts up to the estimate.
+      tl.set(num, { v: 0, onUpdate: show, onComplete: show }, 0.45);
+      tl.to(num, { v: 6.08, duration: 1.9, ease: "power3.out", onUpdate: show }, 0.5);
+      tl.fromTo("#fig", { scale: 0.96 }, { scale: 1, duration: 1.9, ease: "power3.out" }, 0.5);
+      tl.fromTo("#l1", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 1.2);
+
+      // card 2 replaces card 1 (one fact, one place)
+      // card 1 is gone before card 2 arrives, so the two never overlap in the same box
+      tl.to(["#c1", "#l1"], { opacity: 0, y: -20, duration: 0.3, ease: "power2.in" }, 4.2);
+      tl.fromTo("#c2", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 4.55);
+      tl.to("#f1", { width: "74%", duration: 1.4, ease: "power3.out" }, 4.9);
+      tl.to("#f2", { width: "26%", duration: 1.4, ease: "power3.out" }, 5.05);
+      tl.to(p, { a: 74, b: 26, duration: 1.4, ease: "power3.out",
+                 onUpdate: () => { document.getElementById("p1").textContent = Math.round(p.a);
+                                   document.getElementById("p2").textContent = Math.round(p.b); } }, 4.9);
+      tl.fromTo("#l2", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 5.6);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
