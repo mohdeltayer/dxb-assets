@@ -31,7 +31,6 @@ jobs:
           fetch-depth: 1
           sparse-checkout: |
             templates/motion-kit
-            jobs/render/mk-helldivers-base.json
             live/2026-10-23/helldivers
             cards/2026-10/mk-helldivers-base-reel-v1.mp4
             cards/2026-10/helldivers-3-only-if-different-reel-v3.mp4
@@ -82,7 +81,7 @@ jobs:
           t0=$(date +%s)
           python templates/motion-kit/compose.py demo "$photo" "$out/mk-demo-v1.mp4"
           python templates/motion-kit/compose.py sample cards/2026-10/mk-helldivers-base-reel-v1.mp4 \
-            jobs/render/mk-helldivers-base.json "$photo" "$out/mk-helldivers-kit-v1.mp4"
+            templates/motion-kit/base-job.json "$photo" "$out/mk-helldivers-kit-v1.mp4"
           python templates/motion-kit/compose.py sbs cards/2026-10/helldivers-3-only-if-different-reel-v3.mp4 \
             "$out/mk-helldivers-kit-v1.mp4" "$out/mk-helldivers-sbs-v1.mp4"
           echo "whole job: $(( $(date +%s) - t0 )) s"
