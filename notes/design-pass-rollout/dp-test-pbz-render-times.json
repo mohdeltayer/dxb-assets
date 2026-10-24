@@ -1,0 +1,58 @@
+{
+ "name": "dp-test-pbz-reel-v1.mp4",
+ "profile": "standard",
+ "at": "2026-10-24T19:53Z",
+ "stages": {
+  "checks": 3.5,
+  "montage": 45.9,
+  "text": 23.2,
+  "audio": 0.8,
+  "outro": 37.6
+ },
+ "total": 111.0,
+ "lane": "runner",
+ "queued_at": "2026-10-24T19:51Z",
+ "finished_at": "2026-10-24T19:53Z",
+ "render_min": 1.85,
+ "audio_split": {
+  "applied": false,
+  "reason": "speech is the news (speech_ok / speech_keep): voiced track kept"
+ },
+ "design_pass": {
+  "hf": "0.8.143",
+  "notes": [],
+  "pieces": [
+   {
+    "piece": "cover",
+    "moments": [
+     "chip"
+    ],
+    "ok": true,
+    "at": 0.0,
+    "secs": 3.6,
+    "render_secs": 21.9
+   },
+   {
+    "piece": "frame",
+    "still": [
+     7.06,
+     9.6
+    ],
+    "ok": true,
+    "at": 5.9,
+    "secs": 4.0,
+    "render_secs": 21.3
+   }
+  ],
+  "blips": [
+   0.37,
+   6.17,
+   6.47
+  ],
+  "laid_back": [],
+  "secs": 69.0,
+  "blips_dropped_for_speech": []
+ },
+ "runner": "actions",
+ "cores": 4
+}
