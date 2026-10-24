@@ -64,7 +64,7 @@ def rtl_starts(lines, what):
 
 #: An Arabic letter or tatweel written straight onto a Latin letter or digit («لـSwitch», «وZelda»):
 #: the image library's bidi puts the prefix after the name on screen. Post text is not affected.
-GLUED = re.compile('[\u0621-\u064A\u0640][A-Za-z0-9]')
+GLUED = re.compile('[\u0621-\u064A\u0640][A-Za-z]')   # digits after و or ل render in order
 
 
 def _band(im, y0, y1, up, alpha):
