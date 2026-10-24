@@ -1,0 +1,748 @@
+{
+ "runner_cores": 4,
+ "model_load_secs": {
+  "cocktail": 0.2,
+  "bandit": 4.4
+ },
+ "reels": [
+  {
+   "name": "total-war-shogun-2-ce-collum-statement",
+   "published": "cards/2026-10/total-war-shogun-2-ce-collum-statement-reel-v4.mp4",
+   "track": [
+    "ts2ce-announce.mp4",
+    42.0
+   ],
+   "shots": [
+    [
+     "ts2ce-announce.mp4",
+     30.3,
+     3.0,
+     0.5
+    ],
+    [
+     "ts2ce-announce.mp4",
+     27.9,
+     1.85,
+     0.5
+    ],
+    [
+     "ts2ce-announce.mp4",
+     78.2,
+     3.65,
+     0.5
+    ],
+    [
+     "ts2ce-announce.mp4",
+     45,
+     2.5,
+     0.5
+    ],
+    [
+     "ts2ce-announce.mp4",
+     63,
+     2.5,
+     0.4
+    ],
+    [
+     "ts2ce-announce.mp4",
+     75,
+     2.5,
+     0.5
+    ],
+    [
+     "ts2ce-announce.mp4",
+     95.3,
+     2.5,
+     0.35
+    ],
+    [
+     "ts2ce-announce.mp4",
+     99,
+     2.5,
+     0.5
+    ],
+    [
+     "ts2ce-announce.mp4",
+     102,
+     2.5,
+     0.5
+    ]
+   ],
+   "fetch_secs": 15.3,
+   "body_secs": 20.3,
+   "published_secs": 22.321,
+   "crossfade": 0.4,
+   "track_offset_secs": -0.021,
+   "track_match": 0.928,
+   "tools": {
+    "cocktail": {
+     "separate_secs": 13.0,
+     "audio_secs_separated": 53.0,
+     "mix_secs": 0.8,
+     "track_share_pct": {
+      "music": 57.1,
+      "speech": 0.0,
+      "sfx": 42.9
+     },
+     "shots": [
+      {
+       "shot": 0,
+       "reel_from": 0.0,
+       "reel_to": 3.0,
+       "old_sfx_db": -19.0,
+       "new_sfx_db": -21.5
+      },
+      {
+       "shot": 1,
+       "reel_from": 2.6,
+       "reel_to": 4.45,
+       "old_sfx_db": -20.5,
+       "new_sfx_db": -24.5
+      },
+      {
+       "shot": 2,
+       "reel_from": 4.05,
+       "reel_to": 7.7,
+       "old_sfx_db": -20.0,
+       "new_sfx_db": -34.7
+      },
+      {
+       "shot": 3,
+       "reel_from": 7.3,
+       "reel_to": 9.8,
+       "old_sfx_db": -21.4,
+       "new_sfx_db": -23.9
+      },
+      {
+       "shot": 4,
+       "reel_from": 9.4,
+       "reel_to": 11.9,
+       "old_sfx_db": -19.2,
+       "new_sfx_db": -28.0
+      },
+      {
+       "shot": 5,
+       "reel_from": 11.5,
+       "reel_to": 14.0,
+       "old_sfx_db": -20.1,
+       "new_sfx_db": -42.4
+      },
+      {
+       "shot": 6,
+       "reel_from": 13.6,
+       "reel_to": 16.1,
+       "old_sfx_db": -23.9,
+       "new_sfx_db": -29.5
+      },
+      {
+       "shot": 7,
+       "reel_from": 15.7,
+       "reel_to": 18.2,
+       "old_sfx_db": -23.8,
+       "new_sfx_db": -28.0
+      },
+      {
+       "shot": 8,
+       "reel_from": 17.8,
+       "reel_to": 20.3,
+       "old_sfx_db": -28.1,
+       "new_sfx_db": -25.5
+      }
+     ],
+     "mp4": "total-war-shogun-2-ce-collum-statement-cocktail.mp4"
+    },
+    "bandit": {
+     "separate_secs": 769.5,
+     "audio_secs_separated": 53.0,
+     "mix_secs": 0.7,
+     "track_share_pct": {
+      "music": 84.1,
+      "speech": 0.0,
+      "sfx": 15.9
+     },
+     "shots": [
+      {
+       "shot": 0,
+       "reel_from": 0.0,
+       "reel_to": 3.0,
+       "old_sfx_db": -20.6,
+       "new_sfx_db": -22.8
+      },
+      {
+       "shot": 1,
+       "reel_from": 2.6,
+       "reel_to": 4.45,
+       "old_sfx_db": -26.2,
+       "new_sfx_db": -27.3
+      },
+      {
+       "shot": 2,
+       "reel_from": 4.05,
+       "reel_to": 7.7,
+       "old_sfx_db": -29.6,
+       "new_sfx_db": -37.4
+      },
+      {
+       "shot": 3,
+       "reel_from": 7.3,
+       "reel_to": 9.8,
+       "old_sfx_db": -30.6,
+       "new_sfx_db": -30.3
+      },
+      {
+       "shot": 4,
+       "reel_from": 9.4,
+       "reel_to": 11.9,
+       "old_sfx_db": -21.6,
+       "new_sfx_db": -27.8
+      },
+      {
+       "shot": 5,
+       "reel_from": 11.5,
+       "reel_to": 14.0,
+       "old_sfx_db": -24.8,
+       "new_sfx_db": -48.3
+      },
+      {
+       "shot": 6,
+       "reel_from": 13.6,
+       "reel_to": 16.1,
+       "old_sfx_db": -23.5,
+       "new_sfx_db": -32.7
+      },
+      {
+       "shot": 7,
+       "reel_from": 15.7,
+       "reel_to": 18.2,
+       "old_sfx_db": -24.9,
+       "new_sfx_db": -28.1
+      },
+      {
+       "shot": 8,
+       "reel_from": 17.8,
+       "reel_to": 20.3,
+       "old_sfx_db": -28.1,
+       "new_sfx_db": -26.1
+      }
+     ],
+     "mp4": "total-war-shogun-2-ce-collum-statement-bandit.mp4"
+    }
+   },
+   "words_in_published_track": 0,
+   "crosscheck": {
+    "cocktail": {
+     "leak_by_cocktail_pct": {
+      "speech": 0.0,
+      "sfx": 0.9
+     },
+     "leak_by_bandit_pct": {
+      "speech": 0.0,
+      "sfx": 15.2
+     },
+     "words_in_music": 0,
+     "words_sample": ""
+    },
+    "bandit": {
+     "leak_by_cocktail_pct": {
+      "speech": 0.0,
+      "sfx": 40.5
+     },
+     "words_in_music": 0,
+     "words_sample": ""
+    }
+   },
+   "crosscheck_secs": 324.3
+  },
+  {
+   "name": "cyberpunk-2077-witcher-3-gear",
+   "published": "cards/2026-10/cyberpunk-2077-witcher-3-gear-reel-v2.mp4",
+   "track": [
+    "cp-brokendreams.mp4",
+    20.0
+   ],
+   "shots": [
+    [
+     "cp-w3r-launch.mp4",
+     8.9,
+     1.2,
+     0.64
+    ],
+    [
+     "cp-w3r-launch.mp4",
+     5.7,
+     2.4,
+     0.55
+    ],
+    [
+     "cp-gameplay20.mp4",
+     13.1,
+     2.8,
+     0.45
+    ],
+    [
+     "cp-w3r-launch.mp4",
+     62.85,
+     1.3,
+     0.72
+    ],
+    [
+     "cp-w3r-launch.mp4",
+     104.8,
+     2.0,
+     0.5
+    ],
+    [
+     "cp-w3r-launch.mp4",
+     80.5,
+     1.6,
+     0.5
+    ],
+    [
+     "cp-w3r-launch.mp4",
+     40.15,
+     1.15,
+     0.78
+    ],
+    [
+     "cp-w3r-launch.mp4",
+     82.3,
+     1.7,
+     0.56
+    ],
+    [
+     "cp-gameplay20.mp4",
+     45.0,
+     3.0,
+     0.64
+    ],
+    [
+     "cp-gameplay20.mp4",
+     107.3,
+     3.0,
+     0.48
+    ],
+    [
+     "cp-gameplay20.mp4",
+     88.35,
+     1.8,
+     0.46
+    ]
+   ],
+   "fetch_secs": 14.7,
+   "body_secs": 17.95,
+   "published_secs": 19.971,
+   "crossfade": 0.4,
+   "track_offset_secs": -0.021,
+   "track_match": 0.982,
+   "tools": {
+    "cocktail": {
+     "separate_secs": 15.1,
+     "audio_secs_separated": 60.9,
+     "mix_secs": 0.6,
+     "track_share_pct": {
+      "music": 78.5,
+      "speech": 0.0,
+      "sfx": 21.5
+     },
+     "shots": [
+      {
+       "shot": 0,
+       "reel_from": 0.0,
+       "reel_to": 1.2,
+       "old_sfx_db": -20.2,
+       "new_sfx_db": -24.8
+      },
+      {
+       "shot": 1,
+       "reel_from": 0.8,
+       "reel_to": 3.2,
+       "old_sfx_db": -23.0,
+       "new_sfx_db": -32.5
+      },
+      {
+       "shot": 2,
+       "reel_from": 2.8,
+       "reel_to": 5.6,
+       "old_sfx_db": -20.0,
+       "new_sfx_db": -35.4
+      },
+      {
+       "shot": 3,
+       "reel_from": 5.2,
+       "reel_to": 6.5,
+       "old_sfx_db": -18.7,
+       "new_sfx_db": -24.7
+      },
+      {
+       "shot": 4,
+       "reel_from": 6.1,
+       "reel_to": 8.1,
+       "old_sfx_db": -20.0,
+       "new_sfx_db": -24.5
+      },
+      {
+       "shot": 5,
+       "reel_from": 7.7,
+       "reel_to": 9.3,
+       "old_sfx_db": -17.9,
+       "new_sfx_db": -22.9
+      },
+      {
+       "shot": 6,
+       "reel_from": 8.9,
+       "reel_to": 10.05,
+       "old_sfx_db": -15.8,
+       "new_sfx_db": -26.1
+      },
+      {
+       "shot": 7,
+       "reel_from": 9.65,
+       "reel_to": 11.35,
+       "old_sfx_db": -16.2,
+       "new_sfx_db": -28.3
+      },
+      {
+       "shot": 8,
+       "reel_from": 10.95,
+       "reel_to": 13.95,
+       "old_sfx_db": -19.7,
+       "new_sfx_db": -28.8
+      },
+      {
+       "shot": 9,
+       "reel_from": 13.55,
+       "reel_to": 16.55,
+       "old_sfx_db": -19.2,
+       "new_sfx_db": -40.1
+      },
+      {
+       "shot": 10,
+       "reel_from": 16.15,
+       "reel_to": 17.95,
+       "old_sfx_db": -17.3,
+       "new_sfx_db": -27.1
+      }
+     ],
+     "mp4": "cyberpunk-2077-witcher-3-gear-cocktail.mp4"
+    },
+    "bandit": {
+     "separate_secs": 825.4,
+     "audio_secs_separated": 60.9,
+     "mix_secs": 0.6,
+     "track_share_pct": {
+      "music": 77.5,
+      "speech": 0.0,
+      "sfx": 22.5
+     },
+     "shots": [
+      {
+       "shot": 0,
+       "reel_from": 0.0,
+       "reel_to": 1.2,
+       "old_sfx_db": -21.1,
+       "new_sfx_db": -25.8
+      },
+      {
+       "shot": 1,
+       "reel_from": 0.8,
+       "reel_to": 3.2,
+       "old_sfx_db": -20.4,
+       "new_sfx_db": -31.9
+      },
+      {
+       "shot": 2,
+       "reel_from": 2.8,
+       "reel_to": 5.6,
+       "old_sfx_db": -17.5,
+       "new_sfx_db": -44.5
+      },
+      {
+       "shot": 3,
+       "reel_from": 5.2,
+       "reel_to": 6.5,
+       "old_sfx_db": -17.0,
+       "new_sfx_db": -26.9
+      },
+      {
+       "shot": 4,
+       "reel_from": 6.1,
+       "reel_to": 8.1,
+       "old_sfx_db": -18.2,
+       "new_sfx_db": -26.2
+      },
+      {
+       "shot": 5,
+       "reel_from": 7.7,
+       "reel_to": 9.3,
+       "old_sfx_db": -13.7,
+       "new_sfx_db": -24.1
+      },
+      {
+       "shot": 6,
+       "reel_from": 8.9,
+       "reel_to": 10.05,
+       "old_sfx_db": -12.6,
+       "new_sfx_db": -27.3
+      },
+      {
+       "shot": 7,
+       "reel_from": 9.65,
+       "reel_to": 11.35,
+       "old_sfx_db": -17.6,
+       "new_sfx_db": -34.0
+      },
+      {
+       "shot": 8,
+       "reel_from": 10.95,
+       "reel_to": 13.95,
+       "old_sfx_db": -21.2,
+       "new_sfx_db": -31.0
+      },
+      {
+       "shot": 9,
+       "reel_from": 13.55,
+       "reel_to": 16.55,
+       "old_sfx_db": -23.7,
+       "new_sfx_db": -58.0
+      },
+      {
+       "shot": 10,
+       "reel_from": 16.15,
+       "reel_to": 17.95,
+       "old_sfx_db": -16.9,
+       "new_sfx_db": -40.2
+      }
+     ],
+     "mp4": "cyberpunk-2077-witcher-3-gear-bandit.mp4"
+    }
+   },
+   "words_in_published_track": 0,
+   "crosscheck": {
+    "cocktail": {
+     "leak_by_cocktail_pct": {
+      "speech": 0.0,
+      "sfx": 0.2
+     },
+     "leak_by_bandit_pct": {
+      "speech": 0.0,
+      "sfx": 20.9
+     },
+     "words_in_music": 0,
+     "words_sample": ""
+    },
+    "bandit": {
+     "leak_by_cocktail_pct": {
+      "speech": 0.0,
+      "sfx": 18.3
+     },
+     "words_in_music": 0,
+     "words_sample": ""
+    }
+   },
+   "crosscheck_secs": 284.2
+  },
+  {
+   "name": "phantom-blade-zero-gulf-unlock-time",
+   "published": "cards/2026-10/phantom-blade-zero-gulf-unlock-time-reel-v3.mp4",
+   "track": [
+    "pbz-date.mp4",
+    19.5
+   ],
+   "shots": [
+    [
+     "pbz-launch.mp4",
+     32.0,
+     3.5,
+     [
+      [
+       0.0,
+       0.497
+      ]
+     ]
+    ],
+    [
+     "pbz-gfx-unlock.png",
+     0,
+     4.0,
+     null
+    ],
+    [
+     "pbz-launch.mp4",
+     45.0,
+     3.4,
+     [
+      [
+       0.0,
+       0.522
+      ],
+      [
+       0.564,
+       0.382
+      ]
+     ]
+    ],
+    [
+     "pbz-launch.mp4",
+     92.0,
+     3.5,
+     [
+      [
+       0.0,
+       0.646
+      ],
+      [
+       1.93,
+       0.625
+      ]
+     ]
+    ],
+    [
+     "pbz-launch.mp4",
+     145.0,
+     2.6,
+     [
+      [
+       0.0,
+       0.294
+      ],
+      [
+       1.13,
+       0.724
+      ]
+     ]
+    ]
+   ],
+   "fetch_secs": 12.9,
+   "body_secs": 16.84,
+   "published_secs": 18.861,
+   "crossfade": 0.04,
+   "track_offset_secs": -0.021,
+   "track_match": 0.992,
+   "tools": {
+    "cocktail": {
+     "separate_secs": 9.6,
+     "audio_secs_separated": 39.9,
+     "mix_secs": 0.7,
+     "track_share_pct": {
+      "music": 65.7,
+      "speech": 2.5,
+      "sfx": 31.8
+     },
+     "shots": [
+      {
+       "shot": 0,
+       "reel_from": 0.0,
+       "reel_to": 3.5,
+       "old_sfx_db": -29.2,
+       "new_sfx_db": -18.9
+      },
+      {
+       "shot": 1,
+       "reel_from": 3.46,
+       "reel_to": 7.46,
+       "old_sfx_db": -32.5,
+       "new_sfx_db": null
+      },
+      {
+       "shot": 2,
+       "reel_from": 7.42,
+       "reel_to": 10.82,
+       "old_sfx_db": -21.1,
+       "new_sfx_db": -69.0
+      },
+      {
+       "shot": 3,
+       "reel_from": 10.78,
+       "reel_to": 14.28,
+       "old_sfx_db": -20.9,
+       "new_sfx_db": -23.8
+      },
+      {
+       "shot": 4,
+       "reel_from": 14.24,
+       "reel_to": 16.84,
+       "old_sfx_db": -18.8,
+       "new_sfx_db": -19.1
+      }
+     ],
+     "mp4": "phantom-blade-zero-gulf-unlock-time-cocktail.mp4"
+    },
+    "bandit": {
+     "separate_secs": 529.1,
+     "audio_secs_separated": 39.9,
+     "mix_secs": 0.7,
+     "track_share_pct": {
+      "music": 94.1,
+      "speech": 0.0,
+      "sfx": 5.9
+     },
+     "shots": [
+      {
+       "shot": 0,
+       "reel_from": 0.0,
+       "reel_to": 3.5,
+       "old_sfx_db": -31.0,
+       "new_sfx_db": -20.5
+      },
+      {
+       "shot": 1,
+       "reel_from": 3.46,
+       "reel_to": 7.46,
+       "old_sfx_db": -33.8,
+       "new_sfx_db": null
+      },
+      {
+       "shot": 2,
+       "reel_from": 7.42,
+       "reel_to": 10.82,
+       "old_sfx_db": -33.8,
+       "new_sfx_db": -47.9
+      },
+      {
+       "shot": 3,
+       "reel_from": 10.78,
+       "reel_to": 14.28,
+       "old_sfx_db": -28.6,
+       "new_sfx_db": -36.4
+      },
+      {
+       "shot": 4,
+       "reel_from": 14.24,
+       "reel_to": 16.84,
+       "old_sfx_db": -23.6,
+       "new_sfx_db": -21.8
+      }
+     ],
+     "mp4": "phantom-blade-zero-gulf-unlock-time-bandit.mp4"
+    }
+   },
+   "words_in_published_track": 0,
+   "crosscheck": {
+    "cocktail": {
+     "leak_by_cocktail_pct": {
+      "speech": 0.0,
+      "sfx": 0.8
+     },
+     "leak_by_bandit_pct": {
+      "speech": 0.0,
+      "sfx": 13.8
+     },
+     "words_in_music": 0,
+     "words_sample": ""
+    },
+    "bandit": {
+     "leak_by_cocktail_pct": {
+      "speech": 5.4,
+      "sfx": 24.0
+     },
+     "words_in_music": 0,
+     "words_sample": ""
+    }
+   },
+   "crosscheck_secs": 279.4
+  }
+ ],
+ "total_secs": 3102.8,
+ "setup_secs": 112,
+ "step_secs": 3105
+}
