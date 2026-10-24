@@ -35,6 +35,8 @@ HF_VERSION = '0.8.143'            # pinned; upgrades only by memo after a test
 TIMEOUT = 300                     # seconds: past this the Reel keeps its current card
 GSAP = 'https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js'
 FPS = 30
+HANDOVER = 0.1                    # seconds: the insert's fade over the Reel; the Reel under it is crossfading into its
+                                  # fallback card, so a longer fade shows that card through (two half-faded cards)
 MAX_ZOOM = 2.0                    # the Reels' enlargement cap applies to a photo in a piece too
 MARK = os.path.join(HERE, 'digi-mark.jpg')
 PIECES = ('numbers', 'charcard')
@@ -317,6 +319,7 @@ def build(ins, dur, theme, work):
         f, s = d['footage']
         subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', f'{s}', '-i', C.U + f, '-t', f'{dur + 1:.2f}', '-an',
                         '-vf', 'scale=1920:-2', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18',
+                        '-r', str(FPS), '-g', str(FPS), '-keyint_min', str(FPS),   # dense keyframes: HyperFrames seeks every frame
                         os.path.join(work, 'assets', 'bg.mp4')], check=True)
         if d.get('logo'):
             im = Image.open(C.U + d['logo']).convert('RGBA')
@@ -346,7 +349,7 @@ def render(work, out, timeout):
 
 
 def overlay(video, ins, t0, dur, fade, out):
-    """Lay the insert over [t0, t0 + dur] of the finished Reel, fading in and out over the crossfade; audio copied."""
+    """Lay the insert over [t0, t0 + dur] of the finished Reel with a short fade at each end; audio copied."""
     import reel
     f = f'format=yuva420p,trim=0:{dur:.3f},setpts=PTS-STARTPTS,fade=t=in:st=0:d={fade}:alpha=1,' \
         f'fade=t=out:st={dur - fade:.3f}:d={fade}:alpha=1,setpts=PTS+{t0:.3f}/TB'
@@ -380,7 +383,7 @@ def apply(job, video, starts):
                 raise TimeoutError('no time left for the render')
             mp4 = render(os.path.join(work, 'piece'), os.path.join(work, 'insert.mp4'), left)
             tmp = os.path.join(work, 'reel.mp4')
-            overlay(video, mp4, t0, dur, reel.X, tmp)
+            overlay(video, mp4, t0, dur, HANDOVER, tmp)
             shutil.move(tmp, video)
             rec.update(ok=True, at=round(t0, 2), secs=round(dur, 2))
         except Exception as e:                       # the story is never held: the current card stays

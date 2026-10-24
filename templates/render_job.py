@@ -341,7 +341,7 @@ def inserts(job, video):
     try:
         led = json.load(open(reel.TIMES))
         for e in reversed(led):
-            if e.get('name') == job['name']:
+            if e.get('name') == os.path.basename(job['out']):   # entries are named after the output file
                 e['hf_insert'] = recs
                 break
         json.dump(led, open(reel.TIMES, 'w'), indent=1)
