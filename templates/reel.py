@@ -571,9 +571,10 @@ def strip_layer(items, path, theme='cold', skin=None):
     x0, x1, y0, y1 = L, W - R, STRIP_TOP, STRIP_BOTTOM
     if x0 < G.SAFE_LEFT or x1 > W - G.SAFE_RIGHT or y1 > G.SAFE_BOTTOM or y0 < G.SAFE_TOP:
         raise ValueError(f'the strip ({x0}-{x1}, {y0}-{y1}) leaves the safe zone')
-    # design pass (pilot, 24 Oct 2026): the value may use the column to 8 px of its rules (was 14 px), so a value
-    # such as «99.99 دولار» in a three-item strip takes the next size up instead of staying at 48
-    n = len(items); cw = (x1 - x0) / n; room = cw - 16
+    # design pass (pilot, 24 Oct 2026): columns are sized to their own label and value (the room left over shared
+    # equally), so the values can take a size up: in a three-item strip such as «99.99 دولار · 19 نوفمبر · 29 أكتوبر»
+    # equal columns held every value at 48; sized columns fit 56 (was: equal columns, 14 px padding on each side)
+    n = len(items); span = x1 - x0; PAD = 28
     probe = ImageDraw.Draw(Image.new('L', (W, H)))
 
     def vwidth(v, size):               # (width, symbol width) of a value at a size
@@ -583,14 +584,20 @@ def strip_layer(items, path, theme='cold', skin=None):
             sw = round(SYM.width * dh / SYM.height)
             return probe.textlength(v[1], font=f, **G.AR) + round(dh * 0.3) + sw, dh
         return probe.textlength(v, font=f, **G.AR), 0
-    ls = next((s for s in STRIP_LABEL_SIZES if all(probe.textlength(l, font=A.F('Medium', s), **G.AR) <= room for l, _ in items)), None)
-    if ls is None:
-        raise ValueError(f'a strip label is wider than its column ({room:.0f}px at {STRIP_LABEL_SIZES[-1]}): '
-                         f'{[l for l, _ in items]}; shorten it or use 2 items')
-    vs = next((s for s in STRIP_VALUE_SIZES if all(vwidth(v, s)[0] <= room for _, v in items)), None)
-    if vs is None:
-        raise ValueError(f'a strip value is wider than its column ({room:.0f}px at {STRIP_VALUE_SIZES[-1]}): '
-                         f'{[_strip_text(v) for _, v in items]}; shorten it or use 2 items')
+
+    def widths(ls, vs):
+        return [max(probe.textlength(l, font=A.F('Medium', ls), **G.AR), vwidth(v, vs)[0]) + PAD for l, v in items]
+    pick = next(((ls, vs) for vs in STRIP_VALUE_SIZES for ls in STRIP_LABEL_SIZES if sum(widths(ls, vs)) <= span), None)
+    if pick is None:
+        raise ValueError(f'the strip items do not fit its width ({span}px at {STRIP_VALUE_SIZES[-1]}): '
+                         f'{[(l, _strip_text(v)) for l, v in items]}; shorten them or use 2 items')
+    ls, vs = pick
+    print(f'strip: values at {vs} px, labels at {ls} px', flush=True)
+    ws = widths(ls, vs)
+    ws = [w + (span - sum(ws)) / n for w in ws]
+    xs = [x1]
+    for w in ws:
+        xs.append(xs[-1] - w)
 
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     soft = Image.new('L', (W, H), 0)   # a wider, blurred shadow so the band's edge is soft
@@ -605,12 +612,12 @@ def strip_layer(items, path, theme='cold', skin=None):
     else:
         d.rounded_rectangle([x0, y0, x1, y1], radius=26, fill=tint + (178,), outline=right + (90,), width=2)
     for i in range(1, n):              # thin rules in the theme's second colour
-        rx = round(x1 - i * cw)
+        rx = round(xs[i])
         d.line([(rx, y0 + 26), (rx, y1 - 26)], fill=right + (170,), width=2)
     fl, fv = A.F('Medium', ls), A.F('Bold', vs)
     lab_y, val_y = y0 + 56, y1 - 34
     for i, (label, v) in enumerate(items):
-        cx = x1 - (i + 0.5) * cw
+        cx, cw = (xs[i] + xs[i + 1]) / 2, xs[i] - xs[i + 1]
         d.text((cx, lab_y), label, font=fl, fill=body, anchor='ms', **G.AR)
         w, dh = vwidth(v, vs)
         if isinstance(v, tuple):       # digits with the dirham symbol to their left, as on the price lines
