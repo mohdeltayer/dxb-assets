@@ -3,13 +3,13 @@
   "frames": 689,
   "secs": 22.988,
   "size": "1080x1920",
-  "mb": 38.78
+  "mb": 39.08
  },
  "new_branch_code": {
   "frames": 689,
   "secs": 22.988,
   "size": "1080x1920",
-  "mb": 38.95
+  "mb": 38.89
  },
  "published_v3": {
   "frames": 689,
@@ -18,41 +18,17 @@
   "mb": 39.02
  },
  "render_secs": {
-  "old": 257,
-  "new": 196
+  "old": 300,
+  "new": 236
  },
  "old_vs_new": {
   "top band 0-760": {
-   "min": 14.92,
+   "min": 14.91,
    "median": 49.59,
    "frames_under_40dB": 107
   },
   "middle 760-1000": {
-   "min": 38.25,
-   "median": 48.285,
-   "frames_under_40dB": 42
-  },
-  "lines and strip 1000-1500": {
-   "min": 14.14,
-   "median": 16.905,
-   "frames_under_40dB": 522
-  },
-  "bottom 1500-1920": {
-   "min": 29.56,
-   "median": 33.165,
-   "frames_under_40dB": 604
-  },
-  "frames_identical": 60,
-  "frames_compared": 690
- },
- "published_vs_new": {
-  "top band 0-760": {
-   "min": 14.91,
-   "median": 49.635000000000005,
-   "frames_under_40dB": 107
-  },
-  "middle 760-1000": {
-   "min": 38.23,
+   "min": 38.28,
    "median": 48.33,
    "frames_under_40dB": 42
   },
@@ -62,9 +38,33 @@
    "frames_under_40dB": 522
   },
   "bottom 1500-1920": {
-   "min": 28.89,
-   "median": 32.415,
-   "frames_under_40dB": 609
+   "min": 28.86,
+   "median": 32.4,
+   "frames_under_40dB": 611
+  },
+  "frames_identical": 60,
+  "frames_compared": 690
+ },
+ "published_vs_new": {
+  "top band 0-760": {
+   "min": 15.13,
+   "median": 49.6,
+   "frames_under_40dB": 107
+  },
+  "middle 760-1000": {
+   "min": 38.25,
+   "median": 48.35,
+   "frames_under_40dB": 42
+  },
+  "lines and strip 1000-1500": {
+   "min": 14.14,
+   "median": 16.905,
+   "frames_under_40dB": 522
+  },
+  "bottom 1500-1920": {
+   "min": 45.75,
+   "median": 48.31,
+   "frames_under_40dB": 0
   },
   "frames_identical": 60,
   "frames_compared": 690
@@ -86,21 +86,21 @@
   "corr": 1.0
  },
  "render_times_new": {
-  "name": "elden-new-reel-v1.mp4",
+  "name": "elden-ring-film-budget-wsj-reel-v3.mp4",
   "profile": "standard",
-  "at": "2026-10-24T19:58Z",
+  "at": "2026-10-24T20:09Z",
   "stages": {
-   "checks": 5.3,
-   "montage": 13.1,
-   "text": 64.6,
-   "audio": 1.0,
-   "outro": 40.5
+   "checks": 6.2,
+   "montage": 15.5,
+   "text": 76.4,
+   "audio": 1.2,
+   "outro": 51.5
   },
-  "total": 124.6,
+  "total": 150.9,
   "lane": "runner",
-  "queued_at": "2026-10-24T19:56Z",
-  "finished_at": "2026-10-24T19:58Z",
-  "render_min": 2.08,
+  "queued_at": "2026-10-24T20:07Z",
+  "finished_at": "2026-10-24T20:09Z",
+  "render_min": 2.51,
   "audio_split": {
    "applied": false,
    "reason": "no trailer track (our bed or each shot's own sound)"
