@@ -184,6 +184,18 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     QA reads every first frame at grid size. Designed 3:4 covers (headline
     about twice today's size, 3 to 5 words) once Publer covers work
     (CLAUDE.md "Grid tile headlines").
+  - Hook rule (24 Oct, inbox): every Reel opens on something recognisable
+    (character, face, product, iconic shot), moving, with the most striking
+    fact in a few news words; the game before the studio; never a question or
+    a label first; a new image and fact every few seconds and a payoff in the
+    second half; no length cap. Director QA: would a scroller stop here?
+  - Beat sheets (24 Oct, inbox): every brief starts from its family's beat
+    sheet (product, announcement, numbers, people, setback, leak, release,
+    debate, oddity) and names it; WHERE AND HOW MUCH frame for product,
+    announcement, release and deals stories (CLAUDE.md "Beat sheets").
+  - Design pass (24 Oct, inbox, in progress): platforms-price-date frame as a
+    HyperFrames insert, platform logo library, chips 1.3x, strip values a step
+    larger, motion kit by family; three samples to Mohammad before roll-out.
   - Then 4 to 6 lines of the actual story: white Dubai Bold with an indigo
     outline, right-aligned, 1 to 3 visual lines each.
   - Each line stays up for its reading time (`read_secs`); the safe zone is

@@ -719,6 +719,90 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      every tile.
   5. The director QA judges every first frame (and cover) cropped to 3:4 at
      phone grid size: can the headline be read without zooming?
+- Hook rule for every Reel (advisor, 24 Oct 2026, approved by Mohammad in the
+  inbox 09:02Z). Case: the BioWare debate Reel, 122 views, average watch 4 s,
+  67% skip, steady drop from 0 to 31 s, opened on a question over an empty
+  purple frame.
+  1. The first frame stops the scroll, on every Reel (news, numbers, people,
+     debate, evergreen): something recognisable (a famous character, not the
+     studio logo; a face; the product; the game's most iconic shot), moving,
+     with the most striking fact in a few news words, never louder than the
+     source («30 عامًا من Mass Effect وDragon Age... انتهت»). Name what people
+     know first (the game or character before the studio). A question never
+     opens a Reel; in a debate piece it comes after the hook and the fact. Read
+     at grid size (grid tile memo).
+  2. A new reason to keep watching every few seconds: each beat a new strong
+     image of a different recognisable subject plus one new fact or view; no
+     beat repeats the previous image; a payoff in the second half (the number,
+     the twist, the answer, the strongest shot).
+  3. No length cap: the story decides the length; cut only beats that add
+     nothing (the 12 to 20 s target is a guide, not a cap).
+  4. The debate recipe is corrected on the advisor's board (hook, fact, views,
+     question last); every other recipe keeps its structure with rule 1 for its
+     opening beat.
+  5. The Tuesday audit reports skip rate and average watch time per Reel (Publer
+     insights once they sync, or Instagram) next to template and opening type,
+     and names the week's weakest openings.
+  6. Director QA adds: would someone scrolling stop on this first frame? If
+     not, fix it before scheduling. First applied to the next-week releases list
+     of 24 Oct (v2: «أربع ألعاب تصدر الأسبوع المقبل» over Phantom Blade Zero's
+     hero instead of the label «أبرز إصدارات الأسبوع المقبل»).
+- Beat sheets (advisor, 24 Oct 2026, approved by Mohammad 09:08Z). Every brief
+  starts from its family's beat sheet on the advisor board «Beat sheets: nine
+  story families»; FIXED beats keep their structure, FROM THE STORY beats come
+  from the news; timings are a guide, the story decides the length. Across all
+  families: the hook slot is a recognisable face or character, a passionate
+  fanbase, or a surprising fact or deadline, never a question, a label or the
+  studio before the game; a WHERE AND HOW MUCH frame for product, announcement,
+  release and deals stories (every platform as a logo on screen, the price
+  beside each, AED when local or USD marked, the date; unknowns said, «لم
+  يُعلن السعر بعد»; held 2 to 3 s); one focus at a time; a new image and fact
+  every few seconds; a payoff in the second half; event kits prepared before
+  predictable events (The Game Awards, Directs, State of Play, big launches).
+  Families: 1 product showcase (hero with name, two or three close-ups, features
+  one at a time, WHERE AND HOW MUCH, hero again); 2 announcement (iconic shot and
+  striking fact, trailer plays with no text, what was revealed, the surprise
+  detail, WHERE AND HOW MUCH, strongest shot); 3 numbers (iconic shot and figure
+  in words, figure counts up, split one bar at a time, context, payoff for
+  players, source line); 4 people (face and what they did, photo box alone, the
+  story, a detail or quote, their best-known work); 5 setback (the game and the
+  fact, what changed on a strip, the stated reason attributed, what is unchanged
+  or what to do, calm close); 6 leak or rumour (game and claim with the
+  certainty chip, who says it, the details claimed, what is not confirmed, never
+  louder than the source); 7 release (best gameplay and out now, what you do in
+  it, reviews or players if strong, WHERE AND HOW MUCH with Arabic support, best
+  closing shot); 8 debate (character and striking fact, the fact, one view per
+  beat on a new image, the question last; options to Mohammad first); 9 fun or
+  oddity (the oddity, setup, twist, reaction, light close). The brief names its
+  family.
+- Design pass after the beat sheets (advisor, 24 Oct 2026, approved by Mohammad
+  09:15Z). Graphics change once; identity (indigo, play mark, Dubai, chip
+  position, end card) and the 100 px headline stay.
+  1. WHERE AND HOW MUCH frame as a HyperFrames insert (limited-use memo, falls
+     back to the current strip): platform logos in a row (two rows past four) on
+     equal plates, the price under each in Dubai Bold, the date on one line
+     beneath; dirham sign left of local prices, dollars marked, one price for all
+     shown once centred; unknowns stated; «بالعربية» badge when it applies; logos
+     press in one after another (under 0.5 s each), then hold still 2 to 3 s;
+     footage keeps moving behind, dimmed.
+  2. Platform logo library in `templates/assets/platforms/` with sources noted,
+     official single-colour (white) marks from the holders' press or brand pages:
+     PS5, PS4, Xbox Series X|S, Xbox One, Nintendo Switch 2, Nintendo Switch,
+     Steam, Epic Games Store, PC (Windows), Mac, App Store, Google Play, Xbox Game
+     Pass, PlayStation Plus, Nintendo Switch Online, Meta Quest; used only to
+     identify platforms.
+  3. Chips about 1.3 times their size in the same place (grid-corner rule
+     holds); split strip values a step larger, labels stay smaller; story lines
+     unchanged.
+  4. Motion kit placed by family: photo box (people), count-up and XP-bar split
+     (numbers), chip press (every Reel), unlock banner (records), play-triangle
+     transition (card to card), quiet UI blips never over speech; one or two kit
+     moments per Reel at most.
+  5. Three samples on real recent stories (a product showcase, a release with the
+     frame, a people story) go to Mohammad's inbox as one card with the videos,
+     beside the published versions, with render times. Roll-out to live Reels
+     only after his approval; the breaking profile keeps the simplest version.
+     Built in idle time; news comes first.
 - Strips and sheets go into git (advisor, 14 Oct 2026): every final render
   commits its `<name>-strip.jpg` (the finished Reel's frames) and
   `<name>-sheet.jpg` (the shot sheet) to `cards/YYYY-MM/` beside the mp4, in
