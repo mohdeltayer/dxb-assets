@@ -133,6 +133,8 @@ NEWS_MAP = {
 # response only, no commentary, chip رسمي or تقرير; regional investment and government programmes take the business templates,
 # the country chip only when the country is the story. The scenario for every kind (cover, where the facts live, key shot and
 # reason, sound) is on the advisor canvas "Digital Lounge Reel Templates", board "Scenarios by news kind"; a brief starts from it.
+# Since 24 Oct 2026 the brief also starts from the kind's recipe on the board "Scenario recipes, second by second" and writes the
+# focus second by second, one focus at a time on screen.
 JUDGEMENT = {
     'ban':        'official decision and publisher response only; no commentary; chip رسمي or تقرير',
     'investment': 'business templates (quote, explainer, numbers); country chip only when the country is the story',

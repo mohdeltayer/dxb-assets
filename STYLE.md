@@ -322,7 +322,10 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   "Digital Lounge motion kit").
 - **Process:**
   1. A six-line brief (angle and hook kind, template and opening beat, cover,
-     sound, key shot, total seconds).
+     sound, key shot, total seconds), started from the matching recipe on the
+     advisor's "Scenario recipes, second by second" board, with the focus
+     written second by second; one focus at a time on screen (24 Oct;
+     `notes/scenario-recipes.md`).
   2. `shotsheet`.
   3. `draft`, then `strip`, looked at frame by frame.
   4. `final`, then `strip` again; the final strip and the shot sheet are

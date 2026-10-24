@@ -118,7 +118,9 @@ still, cropped to the row the line is about (`templates/pageshot.py <url>
 
 **Render (sonnet).** Given a batch folder with `copyNN.py`, `renderNN.py` and
 the main session's brief per Reel (the news kind and its scenario from the
-advisor canvas "Digital Lounge Reel Templates", board "Scenarios by news kind";
+advisor canvas "Digital Lounge Reel Templates", board "Scenarios by news kind",
+and its recipe from the board "Scenario recipes, second by second" with the
+focus written second by second, one focus at a time on screen (24 Oct 2026);
 angle and hook kind, template from `formats.py pick` with the brief's fact
 count and its opening beat from `formats.py check`, cover frame, sound, key
 shot, the named turn and the second it lands on, the total seconds before the

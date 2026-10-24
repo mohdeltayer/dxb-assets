@@ -1309,6 +1309,21 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   4. Limits: two rounds of fixes at most, then pass with a note or move the
      story to a simpler template, as now. The director judges sound from the
      transcript and measurements, not by ear, and says so when unsure.
+- Scenario recipes (advisor, 24 Oct 2026). Each brief starts from the matching
+  recipe on the advisor's "Scenario recipes, second by second" board and writes
+  the focus second by second: one line per beat, the seconds and the one thing
+  the viewer looks at then (the headline, the person window, a story line, the
+  figure, a strip, a picture that breathes). One focus at a time on screen: no
+  story line while the person window or a card is opening, no strip coming in
+  under a new line, no headline sharing its seconds with anything but the
+  footage. The director QA reads the strip against that timeline and sends back
+  any second where two things compete. Six recipes on the board (hardware
+  reveal, trailer drop, person in the news, numbers, delay, debate), copied
+  with production's kind-to-recipe mapping in `notes/scenario-recipes.md`; a
+  story no recipe fits writes its own focus on the same principles and says
+  so. Mohammad's voiceover relaxes the rule: face and name may stay while he
+  speaks. First applied to the Aonuma Reel (v4, recipe 3: headline alone,
+  then the photo box alone, then the lines), which had not posted.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under
