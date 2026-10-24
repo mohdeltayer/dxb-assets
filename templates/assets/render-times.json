@@ -6681,5 +6681,43 @@
   "job_secs": 297,
   "setup_min": 1.05,
   "story": "one-piece-fortnite-official"
+ },
+ {
+  "name": "cyberpunk-2077-steam-peak-3-years-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T20:38Z",
+  "stages": {
+   "checks": 6.9,
+   "montage": 54.2,
+   "text": 60.2,
+   "audio": 1.3,
+   "outro": 58.1
+  },
+  "total": 180.8,
+  "lane": "runner",
+  "queued_at": "2026-10-24T20:33:30Z",
+  "finished_at": "2026-10-24T20:38Z",
+  "render_min": 3.01,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 15.3,
+   "audio_secs": 52.0,
+   "music_pct": 93.6,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 17,
+   "mix_secs": 6.3,
+   "secs": 22.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 306,
+  "setup_min": 1.3,
+  "story": "cyberpunk-2077-steam-peak-3-years"
  }
 ]
