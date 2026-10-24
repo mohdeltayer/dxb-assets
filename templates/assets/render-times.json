@@ -5448,5 +5448,27 @@
   "job_secs": 208,
   "setup_min": 0.95,
   "story": "zzz-sunbringer-kafka-collab"
+ },
+ {
+  "name": "bioware-closure-debate-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T04:42Z",
+  "stages": {
+   "checks": 1.8,
+   "montage": 63.8,
+   "text": 107.7,
+   "audio": 1.8,
+   "outro": 83.1
+  },
+  "total": 258.2,
+  "lane": "runner",
+  "queued_at": "2026-10-24T04:35:26Z",
+  "finished_at": "2026-10-24T04:42Z",
+  "render_min": 4.3,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 403,
+  "setup_min": 1.18,
+  "story": "bioware-closure-debate"
  }
 ]
