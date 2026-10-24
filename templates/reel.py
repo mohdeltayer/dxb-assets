@@ -1284,9 +1284,14 @@ PINK = (210, 242)       # PIL HSV hue band for pink and magenta (red and purple 
 
 def _frame(f, t, w=240):
     tmp = tempfile.mktemp(suffix='.png')
-    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', f'{max(0, t):.2f}', '-i', f, '-frames:v', '1',
-                    '-vf', f'scale={w}:-2', tmp], check=True)
-    im = Image.open(tmp).convert('RGB'); os.remove(tmp); return im
+    for back in range(13):                  # a seek past the picture's last frame writes nothing and exits 0
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', f'{max(0, t - 0.25 * back):.2f}', '-i', f,
+                        '-frames:v', '1', '-vf', f'scale={w}:-2', tmp], check=True)   # (SteamOS v3 sheet, 24 Oct)
+        if os.path.exists(tmp):
+            if back:
+                print(f'sheet frame: {os.path.basename(f)} has no picture at {t:.2f} s, used {t - 0.25 * back:.2f} s')
+            im = Image.open(tmp).convert('RGB'); os.remove(tmp); return im
+    raise SystemExit(f'sheet frame: {os.path.basename(f)} has no picture at or 3 s before {t:.2f} s')
 
 
 def _flags(im):
