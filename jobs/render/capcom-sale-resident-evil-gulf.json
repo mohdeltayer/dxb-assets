@@ -1,0 +1,210 @@
+{
+ "name": "capcom-sale-resident-evil-gulf",
+ "out": "cards/2026-10/capcom-sale-resident-evil-gulf-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "re4-pv3.mp4",
+   "steam": 2050650,
+   "trailer": "07【RE4】_PV3",
+   "start": 0,
+   "seconds": 150
+  },
+  {
+   "file": "re9-launch.mp4",
+   "steam": 3764200,
+   "trailer": "07_RE9_LaunchPV",
+   "start": 0,
+   "seconds": 30
+  }
+ ],
+ "shots": [
+  [
+   "re4-pv3.mp4",
+   72.5,
+   3.6,
+   [
+    [
+     0.0,
+     0.47
+    ],
+    [
+     1.25,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "re4-pv3.mp4",
+   79.0,
+   3.4,
+   [
+    [
+     0.0,
+     0.42
+    ]
+   ]
+  ],
+  [
+   "re4-pv3.mp4",
+   20.75,
+   1.85,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "re4-pv3.mp4",
+   117.5,
+   1.1,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "capcom-sale-gfx-ends.png",
+   [
+    "re4-pv3.mp4",
+    39.0
+   ],
+   3.0,
+   null
+  ],
+  [
+   "re9-launch.mp4",
+   2.2,
+   1.0,
+   [
+    [
+     0.0,
+     0.55
+    ]
+   ]
+  ],
+  [
+   "re9-launch.mp4",
+   9.5,
+   0.7,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "re9-launch.mp4",
+   11.5,
+   0.75,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "re9-launch.mp4",
+   24.5,
+   1.5,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "re4-pv3.mp4",
+   51.75,
+   1.65,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "re4-pv3.mp4",
+   53.5,
+   2.7,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "سعر Resident Evil 4\nفي الإمارات",
+     {
+      "price": "34.98"
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   3,
+   [
+    [
+     "وفي السعودية 32.80 ريالًا",
+     {}
+    ]
+   ]
+  ],
+  [
+   5,
+   8,
+   [
+    [
+     "ومعها Resident Evil Requiem\nبخصم 30%",
+     {}
+    ]
+   ]
+  ],
+  [
+   9,
+   10,
+   [
+    [
+     "وتدعم هذه الألعاب\nاللغة العربية على Steam",
+     {}
+    ]
+   ]
+  ]
+ ],
+ "gfx": [
+  {
+   "file": "capcom-sale-gfx-ends.png",
+   "kind": "fact",
+   "label": "ينتهي العرض",
+   "value": "3 نوفمبر",
+   "note": "على Steam في الخليج"
+  }
+ ],
+ "headline": "تخفيض Resident Evil 4\nبنسبة 75% في الخليج",
+ "label": "السعر",
+ "source": "متجر Steam",
+ "date": "24 Oct 2026",
+ "theme": "cold",
+ "style": "glow",
+ "template": "clipcard",
+ "skin": "house",
+ "track": "bed",
+ "ground_theme": "cold",
+ "cut": true,
+ "sound": "neon_e"
+}
