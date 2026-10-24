@@ -1,0 +1,115 @@
+{
+ "name": "steam-personal-calendar-full-feature",
+ "out": "cards/2026-10/steam-personal-calendar-full-feature-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "steam-calendar-grid.jpg",
+   "repo": "live/2026-10-24/steam-calendar/steam-calendar-grid.jpg"
+  },
+  {
+   "file": "steam-calendar-ground.mp4",
+   "repo": "live/2026-10-24/steam-calendar/steam-calendar-ground.mp4"
+  }
+ ],
+ "gfx": [
+  {
+   "file": "steamcal-gfx-weeks.png",
+   "kind": "fact",
+   "label": "يعرض الألعاب القادمة خلال",
+   "value": "8 أسابيع",
+   "note": "مع ما صدر منها حديثًا"
+  },
+  {
+   "file": "steamcal-gfx-clicks.png",
+   "kind": "fact",
+   "label": "ألعاب ينقر عليها اللاعبون يوميًا",
+   "value": "أكثر من 2000",
+   "note": "في المتوسط، حسب فالف (Valve)"
+  }
+ ],
+ "shots": [
+  [
+   "steam-calendar-grid.jpg",
+   null,
+   3.6,
+   [
+    0.2,
+    0.5
+   ]
+  ],
+  [
+   "steamcal-gfx-weeks.png",
+   [
+    "steam-calendar-ground.mp4",
+    0.0
+   ],
+   3.6,
+   null
+  ],
+  [
+   "steam-calendar-grid.jpg",
+   null,
+   4.0,
+   [
+    0.55,
+    0.85
+   ]
+  ],
+  [
+   "steamcal-gfx-clicks.png",
+   [
+    "steam-calendar-ground.mp4",
+    4.0
+   ],
+   3.8,
+   null
+  ],
+  [
+   "steam-calendar-grid.jpg",
+   null,
+   3.6,
+   [
+    0.85,
+    0.6
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   2,
+   2,
+   [
+    [
+     "ويختارها لك حسب الألعاب\nالتي تلعبها أكثر",
+     {
+      "size": 60
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   4,
+   [
+    [
+     "ولا تبيع فالف أماكن\nالظهور فيه لأي لعبة",
+     {
+      "size": 60
+     }
+    ]
+   ]
+  ]
+ ],
+ "headline": "تقويم يختار ألعابك القادمة\nيصبح ميزة رسمية في Steam",
+ "head_size": 60,
+ "label": "رسمي",
+ "source": "فالف",
+ "date": "23 Oct 2026",
+ "theme": "cold",
+ "ground_theme": "cold",
+ "style": "bold",
+ "template": "explainer",
+ "skin": "house",
+ "track": "bed",
+ "sound": null
+}
