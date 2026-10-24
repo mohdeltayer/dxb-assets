@@ -1870,7 +1870,36 @@ Pilot only.
    `notes/hyperframes-pilot.md`.
 4. Mohammad decides. If approved, a separate memo covers HyperFrames blocks for cards,
    transitions and skins in live Reels; if not, the branch stays unmerged and nothing
-   changes.
+   changes. Pass 2 was approved on 24 Oct 2026: see "HyperFrames inserts in live Reels".
+
+## HyperFrames inserts in live Reels, limited use (advisor, 24 Oct 2026, agreed with Mohammad)
+
+Pass 2 of the pilot was approved (the GTA 6 numbers card and the Oshima character card,
+`notes/hyperframes-pilot.md`). HyperFrames may now be used in live Reels for a limited set of
+pieces, rendered as inserts; reel.py stays the backbone.
+1. What may use it: numbers cards (count-ups, platform or region splits, rankings) on the game's
+   own footage; rebuilt character, fact or UI cards in the game's style (the Oshima case, crop-cut
+   text rebuilt vertically). Nothing else for now: footage, story lines, sound, the end card and
+   transitions stay in reel.py; skins and transitions in HyperFrames come later, by separate memo.
+2. How it joins: a job asks for `"insert": [{"piece": "numbers" | "charcard", "shot": N, "data":
+   {...}}]` (format in `templates/hfinsert.py` and `render_job.py`). Shot N is a `-gfx-` card from
+   `gfx`, which reel.py renders as today; the runner then builds the piece from the data as a static
+   composition, renders it (1080x1920, 30 fps, the Dubai font copied in from the private repo and
+   never kept) and lays it over that shot's span of the finished Reel, fading in and out over the
+   crossfade, with the Reel's audio copied so its single stretch runs under it. Jobs without the key
+   render exactly as before; render.yml installs HyperFrames only for a job that has one.
+3. Safety: a failed insert, or one past 5 minutes, leaves the shot's numgfx card in place and is
+   noted (the render log and `hf_insert` in render-times.json); the story is never held. Breaking
+   news never waits for an insert: the breaking profile uses the current cards. HyperFrames is pinned
+   to 0.8.143; upgrades only by memo after a test.
+4. Quality: every insert goes through the director QA (readable at phone size, safe zone, first
+   frame, Arabic order, contrast over the footage). From pass 2: the hand-over between two cards is
+   quick (0.2 s out, then 0.25 s in), so two half-faded cards are never on screen together.
+5. Roll-out: the first three live Reels with an insert go to Mohammad as a preview before they are
+   scheduled in Publer; after his OK on those, they follow the normal rolling queue. Each use is
+   recorded in the format ledger (note "hf insert") and in render-times.json, for the Tuesday audit.
+6. Merged 24 Oct 2026 after a parity test on the runner: a published job re-rendered without
+   inserts on the new code matched the published Reel (details in `notes/hyperframes-pilot.md`).
 
 ## Explainers from the source's own drawings (trial, 27 Sep 2026)
 

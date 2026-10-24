@@ -293,14 +293,19 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   zone and reading pace apply; renders on the Mac once live; nothing
   replaces a current piece until he approves (CLAUDE.md "Web-style motion
   graphics").
-- **HyperFrames pilot (23 Oct):** isolated: branch `pilot/hyperframes`, folder
-  `templates/hyperframes/`, no change to reel.py, render_job.py, render.yml, job
-  files, publishing or Publer; renders on the container or a separate
-  workflow_dispatch-only workflow, idle time only, never ahead of news, nothing
-  posted. Two pieces (a counting numbers card on the game's footage with its logo
-  plate; a sci-fi Oshima-style character card) side by side with ours, render
-  times, notes/hyperframes-pilot.md; Mohammad decides (CLAUDE.md "HyperFrames
-  pilot").
+- **HyperFrames inserts (24 Oct; pilot passed):** only numbers cards
+  (count-ups, splits, rankings on the game's own footage) and rebuilt
+  character, fact or UI cards in the game's style; footage, lines, sound,
+  transitions and the end card stay in reel.py. A job's `"insert": [{"piece":
+  "numbers"|"charcard", "shot": <a -gfx- shot>, "data": {...}}]` lays the piece
+  over that shot of the finished Reel (templates/hfinsert.py, pinned 0.8.143,
+  runner only, Dubai from the private repo); the shot's numgfx card is the
+  fallback when the insert fails or passes 5 minutes, and the story is never
+  held. Never on the breaking profile. Director QA on every insert (phone size,
+  safe zone, first frame, Arabic order, contrast over the footage); two cards
+  never half-faded together. The first three go to Mohammad as previews before
+  Publer; then the normal rolling queue. Ledger note "hf insert"; render-times
+  carries `hf_insert` (CLAUDE.md "HyperFrames inserts in live Reels").
 - **Process:**
   1. A six-line brief (angle and hook kind, template and opening beat, cover,
      sound, key shot, total seconds).
