@@ -6607,5 +6607,42 @@
   "job_secs": 299,
   "setup_min": 1.55,
   "story": "one-piece-fortnite-official"
+ },
+ {
+  "name": "one-piece-fortnite-official-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T20:08Z",
+  "stages": {
+   "checks": 7.8,
+   "montage": 50.5,
+   "text": 55.9,
+   "audio": 1.2,
+   "outro": 54.7
+  },
+  "total": 170.2,
+  "lane": "runner",
+  "queued_at": "2026-10-24T20:03:15Z",
+  "finished_at": "2026-10-24T20:08Z",
+  "render_min": 2.84,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 19.6,
+   "audio_secs": 68.8,
+   "music_pct": 22.0,
+   "leak_pct": 1.5,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "reason": "music only 22.0% of the track (< 40.0%)",
+   "secs": 24.4
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 326,
+  "setup_min": 1.33,
+  "story": "one-piece-fortnite-official"
  }
 ]
