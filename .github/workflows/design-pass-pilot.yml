@@ -124,6 +124,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           rm -rf templates/design-pass/out/base
+          git checkout -- templates/assets            # reel.py's ledgers and render-times on this run are not kept
+          git status --short | head -20
           git add -f templates/design-pass/out
           git commit -q -m "Design pass pilot renders on the runner ($(nproc) cores)" || exit 0
           for i in 1 2 3; do git pull -q --rebase origin pilot/design-pass && git push -q origin HEAD:pilot/design-pass && break; sleep 5; done

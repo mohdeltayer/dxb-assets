@@ -529,7 +529,7 @@ def combine():
     parts = [p for p in parts if os.path.exists(p)]
     total = sum(float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', p],
                                      capture_output=True, text=True).stdout) for p in parts)
-    kbps = int((19.0e6 * 8 / total - 140e3) / 1000)   # under 20 MB with the sound
+    kbps = int((17.5e6 * 8 / total - 140e3) / 1000)   # under 20 MB with the sound and the container
     ins = sum((['-i', p] for p in parts), [])
     fc = ''.join(f'[{i}:v][{i}:a]' for i in range(len(parts))) + f'concat=n={len(parts)}:v=1:a=1[v][a]'
     out = os.path.join(OUT, 'design-pass-all-sbs.mp4')
@@ -552,7 +552,7 @@ def frame_demo():
                     'date': 'تصل في 5 نوفمبر', 'note': 'مثال للتخطيط، ليس خبرًا', 'arabic': False},
     }
     for k, data in demos.items():
-        w, _, hold = frame(None, 0, 3.6, data, 'cold', 'frame-demo')
+        w, _, hold = frame(None, 0, 4.6, data, 'cold', 'frame-demo')
         out = hf_render(w, os.path.join(w, 'demo.mp4'), f'frame demo {k}', 'frame-demo')
         grab(out, (hold[0] + hold[1]) / 2, f'{q}/frame-demo-{k}.jpg', scale='540:960')
         shutil.rmtree(w, ignore_errors=True)
