@@ -1,7 +1,7 @@
 {
  "id": "2026-10-24-aonuma-chevalier-arts-lettres-paris",
  "title": "Eiji Aonuma receives the Chevalier des Arts et des Lettres at France's Ministry of Culture in Paris (23 Oct)",
- "status": "ready",
+ "status": "building",
  "lane": "digital-lounge",
  "chip": "جديد",
  "template": "trailer",
@@ -136,7 +136,9 @@
     "reel": "PASS",
     "note": "first frame readable as a grid tile (headline, chip, Aonuma); 18.2 s in the 12 to 20 s target; a change every 3 s or less; last 2 s a picture; sound is the trailer's own score (music-led, speech: none); decode clean, smear none. Source 720p (Nintendo store copy only), x2.7 soft flag accepted with lowres_ok."
    }
-  ]
+  ],
+  "recipe": "Recipe 3, person in the news (notes/scenario-recipes.md). Focus: 0.0-3.5 headline over the sky island (nothing else) · 3.5-6.0 photo box alone, name and role, over Link skydiving · 6.0 the box steps aside · 6.5-11.6 line 1 «تسلّم أونوما وسام الفنون والآداب برتبة فارس في وزارة الثقافة بباريس» on paraglide and field · 11.6-16.4 line 2 «وكانت فرنسا أعلنت تكريمه عام 2023» on the climb and the tree · 16.4-21.3 line 3, the quote, on the horse charge, Link rearing and his face. Stand-in credit from line 1 on, not under the photo box. 21.3 s, 1.3 s over the 20 s target: three lines at reading pace after a 6.5 s opening; accepted.",
+  "v4": "v4 rebuilt on the recipe (advisor, 24 Oct: one focus at a time); v3 put the photo box under the headline and line 1 under the box."
  },
  "approved": ""
 }
