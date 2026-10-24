@@ -333,6 +333,8 @@ SAMPLES = {
         # the published headline first; at the 100 px grid size it may not fit two lines, then the caption's own words
         'headlines': ['سماعة PlayStation Pulse تصل في نوفمبر\nلكن ليس إلى الخليج بعد',
                       'سماعة PlayStation Pulse\nلا موعد لها في الخليج بعد'],
+        # the 24 Oct glued-prefix rule (reel.GLUED) came after this Reel posted: the house's own fix, a space after و
+        'line_fix': {'وBluetooth': 'و Bluetooth'},
     },
     'pbz': {
         'job': 'phantom-blade-zero-launch-trailer-gulf-prices.json',
@@ -385,6 +387,8 @@ def build(key):
     job['out'] = os.path.relpath(os.path.join(BASE, name + '.mp4'), ROOT)
     job.pop('head_size', None)                 # the grid headline memo (24 Oct): HEAD_SIZE 100, never under 72
     job['headline'] = pick_headline(job, s['headlines'])
+    for a, b in s.get('line_fix', {}).items():
+        job['lines'] = json.loads(json.dumps(job['lines'], ensure_ascii=False).replace(a, b))
     person = None
     if s.get('person_cover'):
         p = job.pop('person')[0]

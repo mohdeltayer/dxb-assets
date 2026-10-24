@@ -100,18 +100,20 @@ jobs:
 
       - name: Render the three samples
         run: |
-          set -e
           cd templates/design-pass
+          failed=""
           for s in ps-pulse pbz aonuma; do
             t=$(date +%s)
-            python compose.py "$s"
+            python compose.py "$s" || failed="$failed $s"
             echo "sample $s: $(( $(date +%s) - t )) s"
           done
-          python compose.py frame-demo
-          python compose.py combine
+          python compose.py frame-demo || failed="$failed frame-demo"
+          python compose.py combine || failed="$failed combine"
+          set -e
           python -c "import json,os; d=json.load(open(os.environ['DP_TIMES'])); d['runner']={'cores': os.cpu_count(), 'hyperframes': '0.8.143', 'setup_secs': None}; json.dump(d, open('out/render-times.json','w'), indent=1, ensure_ascii=False)"
           cat out/render-times.json
           for f in out/*.mp4; do ffmpeg -v error -i "$f" -f null - && echo "decode clean: $f $(stat -c %s "$f") bytes"; done
+          echo "failed:${failed:- none}" | tee out/failed.txt
 
       - name: Clean the font copies
         if: always()
