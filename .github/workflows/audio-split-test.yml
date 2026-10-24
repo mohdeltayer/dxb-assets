@@ -70,7 +70,11 @@ jobs:
           ffmpeg -version | head -1
           python -m pip install -q --upgrade pip
           python -m pip install -q --timeout 60 --retries 3 torch==2.5.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu
-          python -m pip install -q --timeout 60 --retries 3 numpy scipy soundfile pyloudnorm==0.1.1 ml_collections omegaconf==2.2.3 pyyaml tqdm einops librosa beartype==0.14.1 faster-whisper==1.1.0
+          printf 'torch==2.5.1\ntorchaudio==2.5.1\n' > "$RUNNER_TEMP/pin.txt"     # nothing below may move torch
+          python -m pip install -q --timeout 60 --retries 3 -c "$RUNNER_TEMP/pin.txt" --extra-index-url https://download.pytorch.org/whl/cpu \
+            numpy scipy pandas soundfile pyloudnorm==0.1.1 ml_collections omegaconf==2.2.3 pyyaml tqdm einops librosa beartype==0.14.1 \
+            pytorch_lightning asteroid==0.7.0 torchmetrics==0.11.4 spafe==0.3.2 faster-whisper==1.1.0
+          python -c "import torch, torchaudio; print('torch', torch.__version__, torchaudio.__version__)"
 
       - name: Separators (pinned)
         run: |
