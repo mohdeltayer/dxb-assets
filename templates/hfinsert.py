@@ -36,6 +36,8 @@ TIMEOUT = 300                     # seconds: past this the Reel keeps its curren
 GSAP = 'https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js'
 FPS = 30
 EXIT = 0.35                       # seconds: a numbers piece clears its own type this long before its end
+TAIL = 0.2                        # seconds the insert runs past its slot: the render can come back a frame short,
+                                  # and the Reel's crossfade out of the fallback card must be fully over under it
 # The insert is laid over the Reel with hard cuts at both ends: under it the Reel crossfades into and out of its
 # fallback card, so any fade at the edges showed that card through (a 0.4 s fade, then 0.1 s, on 24 Oct).
 MAX_ZOOM = 2.0                    # the Reels' enlargement cap applies to a photo in a piece too
@@ -158,13 +160,12 @@ def numbers(d, dur, theme):
         cid = f'c{k}'
         if c['type'] == 'figure':
             dec = int(c.get('decimals', 0))
-            final = f"{float(c['value']):.{dec}f}"
-            inner = (f'<div class="fig"><span id="n{k}">{final}</span><span class="u">{text(c.get("unit", ""))}</span></div>'
+            inner = (f'<div class="fig"><span id="n{k}">{0:.{dec}f}</span><span class="u">{text(c.get("unit", ""))}</span></div>'
                      + (f'<div class="lbl">{text(c["label"])}</div>' if c.get('label') else '')
                      + (f'<div class="note">{text(c["note"])}</div>' if c.get('note') else ''))
             js.append(f'      {{ const o = {{ v: 0 }}; const el = () => document.getElementById("n{k}");'
                       f' const show = () => {{ el().textContent = o.v.toFixed({dec}); }};'
-                      f' tl.set(o, {{ v: 0, onUpdate: show, onComplete: show }}, {a + 0.02:.2f});'
+                      f' tl.set(o, {{ v: 0, onUpdate: show, onComplete: show }}, {a:.2f});'
                       f' tl.to(o, {{ v: {float(c["value"])}, duration: {min(1.7, share * 0.5):.2f}, ease: "power3.out", onUpdate: show }}, {a + 0.08:.2f}); }}')
         elif c['type'] == 'bars':
             rows = c['rows']
@@ -381,7 +382,7 @@ def apply(job, video, starts):
                 if not (f.endswith('.png') and '-gfx-' in f):
                     raise ValueError(f'insert shot {i} is {f}: an insert covers graphic (-gfx-) shots, its fallback cards')
             t0 = starts[i0]
-            dur = starts[i1] + job['shots'][i1][2] - t0
+            dur = starts[i1] + job['shots'][i1][2] - t0 + (TAIL if i1 < len(job['shots']) - 1 else 0)   # not into the end card
             build(ins, dur, job['theme'], os.path.join(work, 'piece'))
             left = TIMEOUT - (time.time() - t)
             if left <= 10:

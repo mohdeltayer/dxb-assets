@@ -1,0 +1,140 @@
+{
+ "name": "hfi-test-gta6",
+ "out": "cards/2026-10/hfi-test-gta6-reel-v4.mp4",
+ "footage": [
+  {
+   "file": "gta6-launch-1920.mp4",
+   "url": "https://assets.ign.com/videos/mediaconvert/2026/10/15/1920/5a1ba86e-5f70-46c6-be76-e83223a908cc-1792069737.mp4"
+  },
+  {
+   "file": "gta6-logo.png",
+   "url": "https://www.rockstargames.com/VI/_next/static/media/poster_logo.0m-7c805zusl7.png"
+  }
+ ],
+ "gfx": [
+  {
+   "file": "hfi-test-gfx-gta-a.png",
+   "kind": "fact",
+   "value": "6.08 مليون",
+   "label": "نسخة محجوزة مسبقًا",
+   "note": "تقدير سنسر تاور للنسخ الرقمية"
+  },
+  {
+   "file": "hfi-test-gfx-gta-b.png",
+   "kind": "fact",
+   "value": "74%",
+   "label": "من الحجوزات على PlayStation",
+   "note": "حسب تقديرات سنسر تاور"
+  }
+ ],
+ "shots": [
+  [
+   "gta6-launch-1920.mp4",
+   5.0,
+   3.6,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "hfi-test-gfx-gta-a.png",
+   0,
+   4.3,
+   null
+  ],
+  [
+   "hfi-test-gfx-gta-b.png",
+   0,
+   4.3,
+   null
+  ],
+  [
+   "gta6-launch-1920.mp4",
+   12.0,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "ground_footage": [
+  "gta6-launch-1920.mp4",
+  4.0
+ ],
+ "lines": [
+  [
+   3,
+   3,
+   [
+    [
+     "قبل شهر واحد من صدورها",
+     {
+      "size": 60
+     }
+    ]
+   ]
+  ]
+ ],
+ "headline": "تقدير جديد: أكثر من 6 ملايين\nحجز مسبق للعبة GTA 6",
+ "head_size": 60,
+ "label": "أرقام",
+ "source": "سنسر تاور (Sensor Tower)",
+ "date": "20 Oct 2026",
+ "theme": "spectacle",
+ "style": "lines",
+ "template": "clipcard",
+ "skin": "house",
+ "track": "bed",
+ "sound": "neon_b",
+ "insert": [
+  {
+   "piece": "numbers",
+   "shot": [
+    1,
+    2
+   ],
+   "data": {
+    "chip": "أرقام",
+    "title": "تقدير جديد: أكثر من 6 ملايين\nحجز مسبق للعبة GTA 6",
+    "footage": [
+     "gta6-launch-1920.mp4",
+     3.0
+    ],
+    "logo": "gta6-logo.png",
+    "cards": [
+     {
+      "type": "figure",
+      "value": 6.08,
+      "decimals": 2,
+      "unit": "مليون",
+      "label": "نسخة محجوزة مسبقًا",
+      "note": "تقدير للنسخ الرقمية في الولايات المتحدة\nحتى 13 أكتوبر، حسب سنسر تاور (Sensor Tower)",
+      "line": "قبل شهر واحد من صدورها"
+     },
+     {
+      "type": "bars",
+      "title": "الحجوزات حسب المنصة",
+      "rows": [
+       [
+        "PlayStation",
+        74
+       ],
+       [
+        "Xbox",
+        26
+       ]
+      ],
+      "note": "حسب تقديرات سنسر تاور",
+      "line": "نحو ثلاثة أرباعها على PlayStation"
+     }
+    ]
+   }
+  }
+ ]
+}
