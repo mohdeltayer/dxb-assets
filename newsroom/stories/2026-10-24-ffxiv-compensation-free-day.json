@@ -6,7 +6,7 @@
   "Square Enix"
  ],
  "category": "update",
- "status": "building",
+ "status": "scheduled",
  "genre": [
   "live service/MMO",
   "RPG"
@@ -69,6 +69,8 @@
  "notes": [
   "Brief: clipcard (trailer at cap 8, split at cap 4 today). Hook: Thancred and Wuk Lamat on the ship deck (Dawntrail launch trailer 28.8 s) under the headline; line 1 over the sealed golden gates (145 s: the shutdown); card 'يوم واحد' over the dimmed jungle ruins (124 s); line 2 over the cheering crowd on the pier (the subscribers); line 3 over combat and the gold crystal, closing on the hooded Lalafell. Total 17.8 s. Sound: Dawntrail launch trailer music from 54.5 s, no speech from 48.3 to 80.3 s (faster-whisper word timings). Source: Steam 1080p, decode clean.",
   "Sensitive: none.",
-  "Arabic: written with the editor skill; grammar pass clean on headline, lines, card, X and caption. DeepL forward pass (whole Lodestone text): «يوم واحد من وقت اللعب», «تسجيل الدخول», «بالتتابع»; ours keeps «يوم لعب مجاني» (natural) and takes «تسجيل الدخول». DeepL back-check 09:24Z caught «الدخول الجديد» read as new registrations and «حساب مشترك» as joint account: both fixed in v2 («أُوقف تسجيل الدخول», «للمشتركين»)."
- ]
+  "Arabic: written with the editor skill; grammar pass clean on headline, lines, card, X and caption. DeepL forward pass (whole Lodestone text): «يوم واحد من وقت اللعب», «تسجيل الدخول», «بالتتابع»; ours keeps «يوم لعب مجاني» (natural) and takes «تسجيل الدخول». DeepL back-check 09:24Z caught «الدخول الجديد» read as new registrations and «حساب مشترك» as joint account: both fixed in v2 («أُوقف تسجيل الدخول», «للمشتركين»).",
+  "Director: v2 FIX (cover: Thancred's face on the right edge of the tile); v3 PASS: face whole on the tile, headline reads at grid size, card clean on the dimmed jungle ruins, lines readable, closes on the hooded Lalafell; decode clean, smear none; 19.8 s with end card. Runner text check also caught the card note as too wide (shortened) before v2."
+ ],
+ "approved": "go: rolling queue; gate 09:51Z: Lodestone notice re-read, no change; scheduled in Publer 12:00Z (16:00 Dubai) on Instagram, X, Threads"
 }
