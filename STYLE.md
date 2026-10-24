@@ -29,7 +29,10 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   goes to his inbox page as an item in `items` (`prod-YYYYMMDD-name`, kind,
   title, body, options, deadline and default), with a push; answers are read
   at every hourly watch and before each deadline, acted on, and the item
-  marked done with its outcome (CLAUDE.md "Mohammad's inbox").
+  marked done with its outcome. Cards are complete (24 Oct): summary, body,
+  the Reel or frames uploaded to the inbox and embedded, exact text in memo,
+  options with their effect; a link only as an extra. Advisor memos he
+  approves there are applied and recorded (CLAUDE.md "Mohammad's inbox").
 - **Scope:** games only, the whole slate, regional stories when they are the
   story. Outlet voice, no first person ("Settled 26 Sep").
 - **Sources:**

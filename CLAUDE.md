@@ -2397,6 +2397,20 @@ https://claude.ai/artifact/AwcHX88eyTrUAL9pc4j4AW
    items older than 14 days are deleted; no tokens, IDs or private data in an
    item. Items from the advisor (`from` "advisor") are his; production only
    reads them.
+5. Complete cards (advisor, 24 Oct 2026, approved by Mohammad in the inbox):
+   he decides from the card alone, without opening links, chats or the repo.
+   Every card carries `summary` (one line, what he is deciding), `body` (the
+   facts that matter), the thing itself embedded (a Reel or draft: the mp4, or
+   a cut under 20 MB, uploaded to the inbox's asset store with its id in
+   `video`; frames or a strip: up to 6 image ids in `images`; text to approve:
+   the exact text in `memo` with `memo_label`), `options` as objects
+   `{label, effect}` saying what each tap does, and `deadline` and
+   `default_action` as before. A link is an extra, never the only way to see
+   the content. Upload: read the inbox once with the Artifact tool, then
+   publish to its URL with `asset: true` and the file; store the returned ids.
+   Advisor memos arrive as items `from` "advisor", `to` "production": when he
+   approves one, production applies it as if he had pasted it, records it here
+   and in STYLE.md, and marks the item done; a change or note is followed.
 
 ## Delegation (Mohammad, 5 Oct 2026)
 
