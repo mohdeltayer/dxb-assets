@@ -10,7 +10,7 @@
   "horror",
   "regional/esports"
  ],
- "status": "building",
+ "status": "scheduled",
  "priority": "routine (regional store price)",
  "why": "Gulf prices on a big franchise sale, with Arabic support; a regional store item the wider press does not run in AED and SAR.",
  "sources": [
@@ -71,7 +71,11 @@
   "Sources decode clean (re4-pv3, re9-launch). The RE4 launch PV was dropped: burnt-in English subtitles under most faces.",
   "Arabic: grammar stage: two required edits (بدل to بدلًا من, glossary), applied; nothing else. DeepL back-check: meaning holds on headline, lines, card and caption. Forward pass on the caption and three phrasings of the end date ('The offer ends', 'The sale ends', 'Discount runs until'): DeepL gives ينتهي العرض twice and يستمر العرض حتى once; ours is ينتهي العرض, kept.",
   "Runs 1 and 2 failed on the runner: the Requiem line ran out of the safe zone at 70 px (now 56), then the smear flag caught the cut to Requiem's title card (shot ends 3.1 s; block_ok on the cut).",
-  "v1 (runner): the Requiem title card flashed at 13.5 s, the hook showed Leon's and Ashley's eyes under the headline band, the RE4 close on Leon was nearly black. v2: hook on Ashley still showed only her mouth under the band; Requiem section had a photo board and the back of Grace's head. v3 (director round 2): hook on Luis (face below the band), Ashley for the AED line, Ashley, Ada and Leon for SAR, Grace from 11.4 s, close on Leon and Krauser; closing line shortened to «وتدعم هذه الألعاب / العربية على Steam» for reading time (meaning unchanged: Arabic support)."
+  "v1 (runner): the Requiem title card flashed at 13.5 s, the hook showed Leon's and Ashley's eyes under the headline band, the RE4 close on Leon was nearly black. v2: hook on Ashley still showed only her mouth under the band; Requiem section had a photo board and the back of Grace's head. v3 (director round 2): hook on Luis (face below the band), Ashley for the AED line, Ashley, Ada and Leon for SAR, Grace from 11.4 s, close on Leon and Krauser; closing line shortened to «وتدعم هذه الألعاب / العربية على Steam» for reading time (meaning unchanged: Arabic support).",
+  "v3: the 100 px headline band covered Luis's face, leaving his jacket under the headline; Grace still read as hair. v4: hook opens on Ada (face mid-frame, below the band), then Leon and Ashley; Luis carries the AED line (face fully clear there). Lesson: under the grid-tile headline (band to about a third of the frame), a close-up whose eyes sit in the top third loses them; hook shots need the face mid-to-low.",
+  "Director QA v4 (round 2 of 2, passed with a note): 0.0 Ada face under the headline PASS (3:4 tile reads at grid size); Leon, Ashley under the headline PASS; Luis with the AED price PASS; Ashley close-up and Ada with the SAR line PASS; end-date card on dimmed RE4 footage PASS; Requiem: Leon PASS, Leon at the monitor with the photo board (0.25 s) and Grace from behind (0.75 s) NOTE, weak but on subject; Leon PASS; close Leon then Krauser PASS (no gore: Krauser's knife glint only). Reel: changes every 1 to 3 s; last two seconds a picture; our bed with its reason. Final decode clean, 21.5 s with the end card.",
+  "gate 12:14Z: Steam appdetails cc=ae and cc=sa unchanged (RE4 34.98 AED / 32.80 SR, Requiem 176.36 AED / 165.20 SR); store page 'Offer ends 3 November'.",
+  "go: rolling queue (evergreen fill under Fill it tonight). Scheduled in Publer 14:00Z (18:00 Dubai) on Instagram (Reel, Dubai location, source comment), X (source reply) and Threads; labels tpl:clipcard, skin:house, sound:bed, genre:horror. Preview to Mohammad's inbox at 12:31Z with 'our bed' first (item prod-20261024-capcom-sale-our-bed, default Approve at 13:55Z)."
  ],
- "reel": "cards/2026-10/capcom-sale-resident-evil-gulf-reel-v3.mp4"
+ "reel": "cards/2026-10/capcom-sale-resident-evil-gulf-reel-v4.mp4"
 }
