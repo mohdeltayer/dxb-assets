@@ -15,6 +15,7 @@ spacing is at least 30 minutes by day and 60 from 00:00 to 08:00 Dubai.
 | Battlefield 1 turns 10: Zara Ghufran and «Nothing Is Written» in the Arabian desert | trailer (في مثل هذا اليوم chip, retro end card) | `cards/2026-10/battlefield-1-turns-10-reel-v1.mp4` | the release day, Wed 21 Oct 2026; keep a gap after the Battlefield 6 posts | queued 21 Oct 01:45Z (05:45 Dubai, release day; EA Play line dropped) |
 | Civilization VI turns 10: Saladin leads Arabia in the base game (2K) | trailer (في مثل هذا اليوم chip, retro end card) | `cards/2026-10/civilization-vi-turns-10-reel-v1.mp4` | the release day, Wed 21 Oct 2026; keep apart from Battlefield 1 the same day | queued 20 Oct 22:45Z (02:45 Dubai 21 Oct, release day; rolling queue) |
 | Tomb Raider turns 30 (Saturn EU, 24 Oct 1996; Egypt zone and Tutankhamun's tomb as the room design's model) | retro (saturn, the den) | `cards/2026-10/retro-tomb-raider-30-reel-v1.mp4` | the release day, Sat 24 Oct 2026 | published 23 Oct 20:00Z (00:00 Dubai 24 Oct, the anniversary); story 2026-10-24-retro-tomb-raider-30 |
+| Titanfall 2 turns 10 (28 Oct 2016; BT-7274, Jack Cooper, Respawn and Apex Legends) | trailer (في مثل هذا اليوم chip) | `cards/2026-10/titanfall-2-turns-10-reel-v1.mp4` | the release day, Wed 28 Oct 2026 | ready (built 24 Oct 22:05Z, director PASS: frame 0 is BT's chest, recognisable); story 2026-10-28-titanfall-2-turns-10 |
 
 ## Planned, not built (researched 16 Oct 2026; dates checked against the sources named in the story notes when built)
 
