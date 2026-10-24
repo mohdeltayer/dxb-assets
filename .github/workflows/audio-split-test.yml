@@ -70,7 +70,11 @@ jobs:
           ffmpeg -version | head -1
           python -m pip install -q --upgrade pip
           python -m pip install -q --timeout 60 --retries 3 torch==2.5.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu
-          python -m pip install -q --timeout 60 --retries 3 numpy scipy soundfile pyloudnorm==0.1.1 ml_collections omegaconf==2.2.3 pyyaml tqdm einops librosa beartype==0.14.1 faster-whisper==1.1.0
+          printf 'torch==2.5.1\ntorchaudio==2.5.1\n' > "$RUNNER_TEMP/pin.txt"     # nothing below may move torch
+          python -m pip install -q --timeout 60 --retries 3 -c "$RUNNER_TEMP/pin.txt" --extra-index-url https://download.pytorch.org/whl/cpu \
+            numpy scipy pandas soundfile pyloudnorm==0.1.1 ml_collections omegaconf==2.2.3 pyyaml tqdm einops librosa beartype==0.14.1 \
+            pytorch_lightning asteroid==0.7.0 torchmetrics==0.11.4 spafe==0.3.2 pedalboard~=0.8.1 fire torch_audiomentations faster-whisper==1.1.0
+          python -c "import torch, torchaudio; print('torch', torch.__version__, torchaudio.__version__)"
 
       - name: Separators (pinned)
         run: |
@@ -106,6 +110,9 @@ jobs:
           [ -s "$BANDIT_CKPT" ] || curl -sSfL --retry 3 -o "$BANDIT_CKPT" "$r/model_bandit_plus_dnr_sdr_11.47.chpt"
           [ -s "$BANDIT_CFG" ] || curl -sSfL --retry 3 -o "$BANDIT_CFG" "$r/config_dnr_bandit_bsrnn_multi_mus64.yaml"
           ls -la "$c"/*/
+          # both models load before any footage is fetched, so a missing package fails in seconds
+          ( cd "$MSST_DIR" && python -c "from utils.settings import get_model_from_config; m, c = get_model_from_config('bandit', '$BANDIT_CFG'); print('bandit builds')" )
+          ( cd "$COCKTAIL_DIR" && python -c "import mrx, pyloudnorm; print('cocktail imports')" )
           sha256sum "$c"/*/*
           echo "SETUP_SECS=$(( $(date +%s) - T_START ))" >> "$GITHUB_ENV"
 
@@ -128,15 +135,19 @@ jobs:
           ls -la "$OUT"
 
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: audio-split-${{ github.run_id }}
           path: ${{ env.OUT }}
           retention-days: 7
 
       - name: Commit results to pilot/audio-split
+        if: always()
         run: |
           d=templates/audiosplit/results; mkdir -p "$d"
-          cp "$OUT"/results.json "$OUT"/preview-*.mp4 "$OUT"/*.m4a "$d"/
+          for f in "$OUT"/results.json "$OUT"/preview-*.mp4 "$OUT"/*.m4a; do if [ -f "$f" ]; then cp "$f" "$d"/; fi; done
+          for f in "$OUT"/*-music.wav; do if [ -f "$f" ]; then ffmpeg -nostdin -v error -y -i "$f" -c:a aac -b:a 160k "$d/$(basename "${f%.wav}").m4a"; fi; done
+          ls -la "$d"
           git config user.name "dxb-render"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add --sparse "$d"
