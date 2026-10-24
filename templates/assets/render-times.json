@@ -6871,5 +6871,42 @@
   "job_secs": 279,
   "setup_min": 1.12,
   "story": "cyberpunk-2077-steam-peak-3-years"
+ },
+ {
+  "name": "titanfall-2-turns-10-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T22:04Z",
+  "stages": {
+   "checks": 4.7,
+   "montage": 41.4,
+   "text": 24.5,
+   "audio": 0.8,
+   "outro": 37.0
+  },
+  "total": 108.4,
+  "lane": "runner",
+  "queued_at": "2026-10-24T22:00:51Z",
+  "finished_at": "2026-10-24T22:04Z",
+  "render_min": 1.81,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 11.3,
+   "audio_secs": 36.3,
+   "music_pct": 16.7,
+   "leak_pct": 0.9,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "reason": "music only 16.7% of the track (< 40.0%)",
+   "secs": 14.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 218,
+  "setup_min": 1.23,
+  "story": "titanfall-2-turns-10"
  }
 ]
