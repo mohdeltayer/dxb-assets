@@ -1540,7 +1540,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, credits=credits, strip=strip,
                         products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok,
-                        skin=skin)
+                        skin=skin, person=person)
         finally:
             X = keep
     global FINISH
@@ -1549,7 +1549,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         try:
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, cut, credits=credits, strip=strip,
-                        products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, skin=skin)
+                        products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok,
+                        skin=skin, person=person)
         finally:
             FINISH = keep_f
     if profile and not PROFILES[profile].get('music', True) and isinstance(track, (tuple, list)) and len(track) > 2:
