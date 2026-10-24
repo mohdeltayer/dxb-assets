@@ -1,7 +1,7 @@
 {
  "id": "2026-10-24-aonuma-chevalier-arts-lettres-paris",
  "title": "Eiji Aonuma receives the Chevalier des Arts et des Lettres at France's Ministry of Culture in Paris (23 Oct)",
- "status": "building",
+ "status": "ready",
  "lane": "digital-lounge",
  "chip": "جديد",
  "template": "trailer",
@@ -81,7 +81,62 @@
   "speech": "none",
   "deepl": "03:45Z forward pass (whole story EN to AR): DeepL «حصل على وسام فارس الفنون والآداب», «وفقًا للقناة الفرنسية», wrote نينتندو and آونوما (house: نينتيندو; أونوما as Arabic Wikipedia). Alternatives sent: 'a Knight of the Order of Arts and Letters' «فارس في وسام الفنون والآداب», 'made a knight of arts and letters' «لقب فارس الفنون والآداب», 'received the insignia of Chevalier' «وسام فارس الفنون والآداب». Kept ours, «وسام الفنون والآداب برتبة فارس», the order named first and the rank after. Back-check (AR to EN): caption and lines read true; the headline «وسام فارس فرنسي» came back as 'French Order of the Legion of Honour', so the headline became «وسام ثقافي فرنسي لمنتج سلسلة Zelda».",
   "headline_change": "v1 headline «وسام فارس فرنسي» replaced in v2 (DeepL read it as the Legion of Honour)",
-  "director": "v1 03:33Z: FIX, no person window (reel() hard-cut recursion dropped person=; fixed in a5e8bf0), headline read as Legion of Honour by DeepL, closing line over a shrine wall. v2 03:40Z: window, headline, role word fixed; FIX: a dark ring frame at the end of the horse-charge shot (15.25 s) and the shrine wall again (horse rearing lasts 102.8 to 104.3 only). v3: horse charge 97.7 (1.7 s), horse rearing 102.8 (1.5 s), Link's face 106.7 (1.3 s); closing line shortened to «وقال لزوجته بالفرنسية: «لنواصل المغامرة معًا»» to fit its reading time."
+  "director": "v1 03:33Z: FIX, no person window (reel() hard-cut recursion dropped person=; fixed in a5e8bf0), headline read as Legion of Honour by DeepL, closing line over a shrine wall. v2 03:40Z: window, headline, role word fixed; FIX: a dark ring frame at the end of the horse-charge shot (15.25 s) and the shrine wall again (horse rearing lasts 102.8 to 104.3 only). v3: horse charge 97.7 (1.7 s), horse rearing 102.8 (1.5 s), Link's face 106.7 (1.3 s); closing line shortened to «وقال لزوجته بالفرنسية: «لنواصل المغامرة معًا»» to fit its reading time.",
+  "reel": "cards/2026-10/aonuma-chevalier-arts-lettres-paris-reel-v3.mp4 (18.2 s + end card; runner 203 s)",
+  "director_table": [
+   {
+    "shot": 0,
+    "time": "0.0-3.0",
+    "verdict": "PASS",
+    "note": "sky island over Hyrule under the headline; Aonuma window from frame 0 with plate and credit (cover shows the person and the game)"
+   },
+   {
+    "shot": 1,
+    "time": "2.6-5.6",
+    "verdict": "PASS",
+    "note": "Link skydiving; line 1 enters on the cut; window until 5.0"
+   },
+   {
+    "shot": 2,
+    "time": "5.2-8.0",
+    "verdict": "PASS",
+    "note": "Link paragliding centred"
+   },
+   {
+    "shot": 3,
+    "time": "7.6-10.2",
+    "verdict": "PASS",
+    "note": "Link running across the field; line 2"
+   },
+   {
+    "shot": 4,
+    "time": "9.8-12.4",
+    "verdict": "PASS",
+    "note": "climbing, Link left of centre inside the window"
+   },
+   {
+    "shot": 5,
+    "time": "12.0-13.7",
+    "verdict": "PASS",
+    "note": "horse charge, no dark ring frame (v2 fix)"
+   },
+   {
+    "shot": 6,
+    "time": "13.3-14.8",
+    "verdict": "PASS",
+    "note": "Link rearing on his horse at sunset; closing line"
+   },
+   {
+    "shot": 7,
+    "time": "14.4-15.7+",
+    "verdict": "PASS",
+    "note": "Link's face, the closing picture under «لنواصل المغامرة معًا»"
+   },
+   {
+    "reel": "PASS",
+    "note": "first frame readable as a grid tile (headline, chip, Aonuma); 18.2 s in the 12 to 20 s target; a change every 3 s or less; last 2 s a picture; sound is the trailer's own score (music-led, speech: none); decode clean, smear none. Source 720p (Nintendo store copy only), x2.7 soft flag accepted with lowres_ok."
+   }
+  ]
  },
  "approved": ""
 }
