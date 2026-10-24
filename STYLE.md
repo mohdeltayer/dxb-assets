@@ -24,6 +24,12 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   scheduling decision and `reel-director` for every brief, build and review;
   the repo rules stay the authority on numbers and wording (CLAUDE.md
   "Editorial and director skills").
+- **Mohammad's inbox (24 Oct):** anything that needs him (previews for his
+  OK, debate and first-of-their-kind pieces, questions, deadlines, heads-ups)
+  goes to his inbox page as an item in `items` (`prod-YYYYMMDD-name`, kind,
+  title, body, options, deadline and default), with a push; answers are read
+  at every hourly watch and before each deadline, acted on, and the item
+  marked done with its outcome (CLAUDE.md "Mohammad's inbox").
 - **Scope:** games only, the whole slate, regional stories when they are the
   story. Outlet voice, no first person ("Settled 26 Sep").
 - **Sources:**

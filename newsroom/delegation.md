@@ -329,6 +329,13 @@ they launch at once even mid-render or mid-slot; only building a Reel for
 what they find waits for the current render, and a breaking story is
 pinged to him straight away.
 
+Every run also reads Mohammad's inbox (`items` on
+https://claude.ai/artifact/AwcHX88eyTrUAL9pc4j4AW, CLAUDE.md "Mohammad's
+inbox", 24 Oct 2026): act on answered production items and mark them done
+with their outcome; apply the default of any item past its deadline. A
+breaking ping goes into the inbox as an approval item too, deadline 15
+minutes out, default "auto-go".
+
 Triage of the OUTLETS list (Mohammad, 17 Oct 2026): a group marked "AR RELAY"
 is dated from its first report anywhere before it is considered; over 24 hours
 old at the origin and not posted, it is dropped unless something new landed.

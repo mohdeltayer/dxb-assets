@@ -2354,6 +2354,35 @@ framing, pacing, the director QA). CLAUDE.md and STYLE.md stay the authority
 on exact numbers and wording; where a skill and a repo rule differ, the repo
 rule wins and the difference is raised with Mohammad.
 
+## Mohammad's inbox (advisor, 24 Oct 2026, agreed with Mohammad)
+
+Anything that needs Mohammad goes to his inbox page, not only into the chat,
+so it never gets buried while work continues:
+https://claude.ai/artifact/AwcHX88eyTrUAL9pc4j4AW
+1. What goes in: previews needing his OK, debate pieces and first-of-their-kind
+   formats (options first), questions production cannot settle, decisions with
+   a deadline, memos waiting for his reply, and short heads-ups he should know
+   (failures, a dropped story, a correction). Routine news still runs end to
+   end without him.
+2. Posting (ArtifactData, collection `items`, one document per item, id
+   `prod-YYYYMMDD-short-name`): `from` "production"; `kind` "approval",
+   "decision", "question" or "fyi"; `title` (one line, what is needed); `body`
+   (the context in a few lines, Arabic or English); `options` (button labels;
+   approval defaults to Approve / Reject, fyi to Seen); optional `deadline`
+   (ISO time a default kicks in) and `default_action`; optional `link` (a
+   strip, a Reel, a Publer post); `created_at`; `status` "open". Then a push
+   notification with the title, so his phone shows it.
+3. Answers: read the inbox at every hourly watch, before any deadline and
+   whenever a story is finished. An item with status "answered" carries
+   `answer.choice` and `answer.note`: act on it, then update the item to
+   status "done" with `outcome` (one line on what was done), the write pinned
+   to the version read. No answer by the deadline: apply `default_action` and
+   mark it done with outcome "default applied".
+4. Tidy: one item per decision, never a repeat of an item still open; done
+   items older than 14 days are deleted; no tokens, IDs or private data in an
+   item. Items from the advisor (`from` "advisor") are his; production only
+   reads them.
+
 ## Delegation (Mohammad, 5 Oct 2026)
 
 To save tokens the main session acts as the editor and hands repeated
