@@ -1,0 +1,151 @@
+<!doctype html>
+<!-- HyperFrames pilot (advisor, 23 Oct 2026), piece b: the Edgerunners 2 character card rebuilt as a
+     vertical card in a sci-fi skin, Oshima style. CD PROJEKT RED's card (NAME / BIRTHDAY / BLOOD TYPE,
+     "Japanese braindance director, played by Hideo Kojima") was cut by the 9:16 crop in the published
+     Kojima Reel (19 Oct). Labels in Arabic, names in English, animated like a HUD readout; inspired by the
+     game's look, not a copy of its UI. Ends on the official anime portrait. Not for posting.
+     Design pass 2 (advisor, 24 Oct 2026): opens on Kojima's official photo full screen (CD PROJEKT RED's
+     image at 1.78x, under the 2x cap, as in the published Reel), which shrinks into the window as the card builds; the card is
+     larger and lower and ends at the safe zone's floor (y 1480). -->
+<html lang="ar" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Dubai"; font-weight: 300; src: url("fonts/Dubai-Light.ttf"); }
+      @font-face { font-family: "Dubai"; font-weight: 400; src: url("fonts/Dubai-Regular.ttf"); }
+      @font-face { font-family: "Dubai"; font-weight: 500; src: url("fonts/Dubai-Medium.ttf"); }
+      @font-face { font-family: "Dubai"; font-weight: 700; src: url("fonts/Dubai-Bold.ttf"); }
+      :root {
+        --ground: #0d0c18; --ink: #f4f3ff; --body: #c9c8e6;
+        --yellow: #f3e600;          /* sci-fi kit: the game's yellow and red, never pink */
+        --red: #e5383b; --cyan: #33d6e8;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--ground); }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden;
+              font-family: "Dubai", "DejaVu Sans", sans-serif; direction: rtl; color: var(--ink); }
+      .clip { position: absolute; }
+
+      /* ground: dark red wash with fine scanlines, moving slowly */
+      #ground { inset: 0; background: radial-gradient(120% 70% at 50% 45%, #3a0d14 0%, #160a12 55%, #0d0c18 100%); }
+      #scan { inset: -40px 0 0 0; height: 2000px;
+              background: repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 2px, transparent 2px 6px); }
+
+      #mark { top: 359px; left: 96px; width: 48px; height: 48px; border-radius: 50%; opacity: .5; }
+      /* soft band behind chip and headline, so the type holds over the full-screen photo */
+      #hband { left: 0; top: 300px; width: 1080px; height: 330px;
+               background: linear-gradient(180deg, rgba(13,12,24,0) 0%, rgba(13,12,24,.7) 25%,
+                                           rgba(13,12,24,.7) 75%, rgba(13,12,24,0) 100%); }
+      #chip { top: 355px; right: 170px; height: 57px; padding: 0 22px; background: var(--yellow);
+              color: #0d0c18; font-weight: 700; font-size: 34px; line-height: 57px;
+              clip-path: polygon(0 0, 100% 0, 100% 70%, 92% 100%, 0 100%); }
+      #head { top: 432px; right: 170px; width: 814px; text-align: right; font-weight: 700; font-size: 54px; line-height: 1.28;
+              text-shadow: 0 2px 10px rgba(13,12,24,.8); }
+      .nb { white-space: nowrap; }
+
+      /* the photo: a full-frame stage clipped down to the window (x 96-910, y 600-1010); transforms only,
+         so the shrink stays sub-pixel smooth under frame-by-frame capture */
+      #stage { top: 0; left: 0; width: 1080px; height: 1920px; overflow: hidden;
+               clip-path: inset(0px 0px 0px 0px); }
+      #photo { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+      /* a light shade over the Reels UI zone under the full-screen opener */
+      #bshade { left: 0; top: 1380px; width: 1080px; height: 540px;
+                background: linear-gradient(180deg, rgba(13,12,24,0) 0%, rgba(13,12,24,.75) 60%, rgba(13,12,24,.9) 100%); }
+      #frame { top: 600px; left: 96px; width: 814px; height: 410px; overflow: hidden;
+               border: 2px solid rgba(229,56,59,.85); opacity: 0; }
+      #anime { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; object-fit: contain;
+               background: #f8e21c; }
+      .br { width: 46px; height: 46px; border-color: var(--yellow); border-style: solid; }
+      #b1 { top: 586px; right: 156px; border-width: 5px 5px 0 0; }
+      #b2 { top: 978px; left: 82px; border-width: 0 0 5px 5px; }
+      #tag { top: 614px; left: 112px; direction: ltr; font: 700 26px/1 "Dubai", monospace; letter-spacing: 3px;
+             color: var(--yellow); background: rgba(13,12,24,.7); padding: 6px 10px; }
+
+      /* the card: larger rows, from y 1030 to the safe floor; labels Arabic, values English */
+      #card { top: 1030px; left: 96px; width: 814px; height: 446px; background: rgba(13,12,24,.9);
+              border-top: 5px solid var(--yellow); padding: 18px 26px 14px; }
+      .row { display: flex; align-items: center; gap: 22px; height: 76px; }
+      .lab { flex: 0 0 auto; min-width: 248px; height: 56px; padding: 0 16px; background: var(--yellow); color: #0d0c18;
+             font-weight: 700; font-size: 38px; line-height: 56px; text-align: center;
+             clip-path: polygon(0 0, 100% 0, 100% 100%, 14px 100%, 0 calc(100% - 14px)); }
+      .val { font-weight: 700; font-size: 46px; color: var(--ink); white-space: nowrap; }
+      .val.en { direction: ltr; letter-spacing: 3px; }
+      .val.dim { color: var(--body); font-weight: 500; }
+      #who { margin-top: 10px; padding-top: 8px; height: 86px; border-top: 1px solid rgba(229,56,59,.6); }
+      #who .val.en { color: var(--yellow); }
+      .cur { display: inline-block; width: 18px; height: 40px; background: var(--yellow); margin-left: 8px;
+             vertical-align: middle; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="8" data-width="1080" data-height="1920">
+      <div id="ground" class="clip" data-start="0" data-duration="8"></div>
+      <div id="scan" class="clip" data-start="0" data-duration="8"></div>
+
+      <div id="stage" class="clip" data-start="0" data-duration="8"><img id="photo" src="assets/cdpr-full.jpg" /></div>
+      <div id="bshade" class="clip" data-start="0" data-duration="8"></div>
+      <div id="frame" class="clip" data-start="0" data-duration="8"><img id="anime" src="assets/oshima-anime.jpg" /></div>
+      <div id="hband" class="clip" data-start="0" data-duration="8"></div>
+      <img id="mark" class="clip" data-start="0" data-duration="8" src="assets/digi-mark.jpg" />
+      <div id="chip" class="clip" data-start="0" data-duration="8">رسمي</div>
+      <div id="head" class="clip" data-start="0" data-duration="8">صانع الألعاب هيديو كوجيما يظهر<br />في <bdi class="nb">Cyberpunk: Edgerunners 2</bdi></div>
+
+      <div id="b1" class="br clip" data-start="0" data-duration="8"></div>
+      <div id="b2" class="br clip" data-start="0" data-duration="8"></div>
+      <div id="tag" class="clip" data-start="0" data-duration="8">ID // 2077-NC</div>
+
+      <div id="card" class="clip" data-start="0" data-duration="8">
+        <div class="row" id="r1"><div class="lab">الاسم</div><div class="val en">HIDEYOSHI OSHIMA</div></div>
+        <div class="row" id="r2"><div class="lab">تاريخ الميلاد</div><div class="val dim">سري</div></div>
+        <div class="row" id="r3"><div class="lab">فصيلة الدم</div><div class="val dim">سرية</div></div>
+        <div class="row" id="r4"><div class="lab">الدور</div><div class="val">مخرج براين دانس ياباني</div></div>
+        <div class="row" id="who"><div class="lab">يؤديه</div><div class="val en">HIDEO KOJIMA</div><span class="cur" id="cur"></span></div>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // frame 0 is the grid tile: Kojima's photo full screen under the chip and the headline
+      gsap.set(["#b1", "#b2", "#tag", "#card"], { opacity: 0 });
+      gsap.set(["#r1", "#r2", "#r3", "#r4", "#who"], { opacity: 0 });
+
+      // nothing static: a slow push on the full-screen photo (1.78x), scanlines drifting behind
+      tl.fromTo("#scan", { y: 0 }, { y: 36, duration: 8, ease: "none" }, 0);
+      tl.fromTo("#photo", { x: -420, y: 0, scale: 1.7778 },
+                          { x: -444, y: -14, scale: 1.803, duration: 0.95, ease: "none" }, 0);
+
+      // 0.95 to 1.75 s: the photo shrinks into the window, hair to chin (CDPR image at 0.95x there)
+      tl.to("#photo", { x: -54, y: 429, scale: 0.95, duration: 0.8, ease: "power3.inOut" }, 0.95);
+      tl.to("#bshade", { opacity: 0, duration: 0.4, ease: "none" }, 1.2);
+      tl.fromTo("#stage", { clipPath: "inset(0px 0px 0px 0px)" }, { clipPath: "inset(600px 170px 910px 96px)", duration: 0.8, ease: "power3.inOut" }, 0.95);
+      tl.to("#frame", { opacity: 1, duration: 0.15, ease: "none" }, 1.6);
+
+      // the sci-fi kit's break-up as the frame locks, then brackets, tag and the readout
+      tl.to(["#stage", "#frame"], { x: 14, duration: 0.05, ease: "steps(1)" }, 1.75)
+        .to(["#stage", "#frame"], { x: -10, filter: "hue-rotate(25deg) saturate(1.6)", duration: 0.05, ease: "steps(1)" }, 1.80)
+        .to(["#stage", "#frame"], { x: 0, filter: "none", duration: 0.05, ease: "steps(1)" }, 1.85);
+      tl.to(["#b1", "#b2", "#tag"], { opacity: 1, duration: 0.05, ease: "steps(1)" }, 1.8);
+      tl.fromTo("#card", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 1.75);
+      ["#r1", "#r2", "#r3", "#r4", "#who"].forEach((id, i) => {
+        const t = 1.95 + i * 0.55;
+        tl.fromTo(id, { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.22, ease: "power3.out" }, t);
+        tl.fromTo(id + " .lab", { opacity: 0.2 }, { opacity: 1, duration: 0.06, repeat: 2, yoyo: true, ease: "steps(1)" }, t);
+      });
+      // cursor blinks after the last row
+      tl.fromTo("#cur", { opacity: 0 }, { opacity: 1, duration: 0.25, repeat: 5, yoyo: true, ease: "steps(1)" }, 4.45);
+
+      // ends on the matching official shot: the anime Oshima glitches in over the photo
+      tl.to(["#stage", "#frame"], { x: 18, filter: "hue-rotate(-30deg) saturate(2)", duration: 0.05, ease: "steps(1)" }, 5.9)
+        .set("#anime", { opacity: 1 }, 5.95)
+        .to(["#stage", "#frame"], { x: -12, duration: 0.05, ease: "steps(1)" }, 6.0)
+        .to(["#stage", "#frame"], { x: 0, filter: "none", duration: 0.05, ease: "steps(1)" }, 6.05);
+      tl.fromTo("#anime", { scale: 1.0 }, { scale: 1.06, duration: 2.05, ease: "none" }, 5.95);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

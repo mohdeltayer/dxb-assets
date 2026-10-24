@@ -30,7 +30,9 @@ unreleased material.
       "person": [["miyamoto.jpg", "شيغيرو مياموتو", "مبتكر Mario وZelda", 0.4, 3.8,      # people stories show the person
                   {"focus": [0.5, 0.3], "credit": null}]],                      # (23 Oct 2026); photo fetched as footage
       "gfx": [{"file": "x-gfx-fps.png", "kind": "fact", "label": "الأداء",   # cards drawn here with the Dubai font
-               "value": "حتى 120", "note": "إطارًا في الثانية"}]              # (cardgfx.py), then laid on the ground
+               "value": "حتى 120", "note": "إطارًا في الثانية"}],             # (cardgfx.py), then laid on the ground
+      "insert": [{"piece": "numbers", "shot": 3, "data": {...}}]     # HyperFrames over a -gfx- shot (24 Oct 2026):
+                                                                     # templates/hfinsert.py; the card stays if it fails
     }
 
 `style` (and `sound` for a Reel with no footage sound) are chosen by the main
@@ -324,6 +326,33 @@ def famitsu(job, draft=False):
     return video
 
 
+def inserts(job, video):
+    """HyperFrames inserts (advisor, 24 Oct 2026): laid over the finished Reel at their graphic shots; a failure or
+    a render past hfinsert.TIMEOUT keeps the current card and is noted here and in render-times.json."""
+    import hfinsert as HI
+    keep = reel.X
+    if job.get('cut'):
+        reel.X = 0.04
+    try:
+        starts, _ = reel.timeline(shots(job, build=False))
+        recs = HI.apply(job, video, starts)
+    finally:
+        reel.X = keep
+    try:
+        led = json.load(open(reel.TIMES))
+        for e in reversed(led):
+            if e.get('name') == os.path.basename(job['out']):   # entries are named after the output file
+                e['hf_insert'] = recs
+                break
+        json.dump(led, open(reel.TIMES, 'w'), indent=1)
+    except (OSError, ValueError) as e:
+        print(f'render_job: render-times not updated with the insert: {e}', flush=True)
+    for r in recs:
+        print(f"render_job: hf insert on shot {r['shot']}: {'ok' if r.get('ok') else 'FAILED, current card kept'} "
+              f"({r['render_secs']} s){'' if r.get('ok') else ': ' + r['error']}", flush=True)
+    return recs
+
+
 def run(job, draft=False):
     if job.get('kind') == 'famitsu':
         return famitsu(job, draft)
@@ -344,6 +373,8 @@ def run(job, draft=False):
                      template=job.get('template'), pace_ok=job.get('pace_ok', False), lowres_ok=job.get('lowres_ok', False),
                      skin=job.get('skin'), person=[tuple(x) for x in job['person']] if job.get('person') else None)
     video = done[0] if isinstance(done, (list, tuple)) else done
+    if job.get('insert') and not draft:
+        inserts(job, video)
     stem = os.path.splitext(out)[0]
     base = re.sub(r'-reel-v\d+$', '', stem)   # matches the workflow's ${stem%-reel-v*}, so v2 and later commit too
     if not draft:
