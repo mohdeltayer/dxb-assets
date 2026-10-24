@@ -6402,5 +6402,31 @@
   "job_secs": 293,
   "setup_min": 1.2,
   "story": "steamos-3-9-stable"
+ },
+ {
+  "name": "steam-most-played-oct-24-reel-v4.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T17:39Z",
+  "stages": {
+   "checks": 7.1,
+   "montage": 56.9,
+   "text": 58.8,
+   "audio": 1.1,
+   "outro": 57.9
+  },
+  "total": 181.8,
+  "lane": "runner",
+  "queued_at": "2026-10-24T17:34:05Z",
+  "finished_at": "2026-10-24T17:39Z",
+  "render_min": 3.03,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 308,
+  "setup_min": 1.03,
+  "story": "steam-most-played-oct-24"
  }
 ]
