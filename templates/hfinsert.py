@@ -35,8 +35,9 @@ HF_VERSION = '0.8.143'            # pinned; upgrades only by memo after a test
 TIMEOUT = 300                     # seconds: past this the Reel keeps its current card
 GSAP = 'https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js'
 FPS = 30
-HANDOVER = 0.1                    # seconds: the insert's fade over the Reel; the Reel under it is crossfading into its
-                                  # fallback card, so a longer fade shows that card through (two half-faded cards)
+EXIT = 0.35                       # seconds: a numbers piece clears its own type this long before its end
+# The insert is laid over the Reel with hard cuts at both ends: under it the Reel crossfades into and out of its
+# fallback card, so any fade at the edges showed that card through (a 0.4 s fade, then 0.1 s, on 24 Oct).
 MAX_ZOOM = 2.0                    # the Reels' enlargement cap applies to a photo in a piece too
 MARK = os.path.join(HERE, 'digi-mark.jpg')
 PIECES = ('numbers', 'charcard')
@@ -190,6 +191,11 @@ def numbers(d, dur, theme):
             js.append(f'      tl.fromTo("#{cid}", {{ opacity: 0, y: 24 }}, {{ opacity: 1, y: 0, duration: 0.25, ease: "power2.out" }}, {a:.2f});')
         if c.get('line'):
             js.append(f'      tl.fromTo("#l{k}", {{ opacity: 0, y: 20 }}, {{ opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }}, {a + 0.6:.2f});')
+    # exit: the piece clears its own type over the last EXIT s, so the hard cut back to the Reel goes from this
+    # footage to the next shot and the Reel's fallback card (crossfading out under it) is never seen
+    last = [f'"#c{len(cards) - 1}"'] + ([f'"#l{len(cards) - 1}"'] if cards[-1].get('line') else [])
+    js.append(f'      tl.to([{", ".join(last)}, "#chip", "#head", "#hband", "#lband"{", " + chr(34) + "#plate" + chr(34) if d.get("logo") else ""}], '
+              f'{{ opacity: 0, duration: 0.25, ease: "power2.in" }}, {dur - EXIT:.2f});')
     return HEAD.format(piece='numbers', gsap=GSAP, ground='#141332', css=css, dur=f'{dur:.2f}',
                        body='\n'.join(body), js='\n'.join(js))
 
@@ -348,11 +354,10 @@ def render(work, out, timeout):
     return out
 
 
-def overlay(video, ins, t0, dur, fade, out):
-    """Lay the insert over [t0, t0 + dur] of the finished Reel with a short fade at each end; audio copied."""
+def overlay(video, ins, t0, dur, out):
+    """Lay the insert over [t0, t0 + dur] of the finished Reel, opaque, with a hard cut at each end; audio copied."""
     import reel
-    f = f'format=yuva420p,trim=0:{dur:.3f},setpts=PTS-STARTPTS,fade=t=in:st=0:d={fade}:alpha=1,' \
-        f'fade=t=out:st={dur - fade:.3f}:d={fade}:alpha=1,setpts=PTS+{t0:.3f}/TB'
+    f = f'trim=0:{dur:.3f},setpts=PTS-STARTPTS+{t0:.3f}/TB'
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', video, '-i', ins, '-filter_complex',
                     f'[1:v]{f}[ov];[0:v][ov]overlay=0:0:eof_action=pass[v]', '-map', '[v]', '-map', '0:a?',
                     '-c:a', 'copy', '-c:v', 'libx264', *reel.FINAL_ENC, '-pix_fmt', 'yuv420p', '-r', str(FPS),
@@ -383,7 +388,7 @@ def apply(job, video, starts):
                 raise TimeoutError('no time left for the render')
             mp4 = render(os.path.join(work, 'piece'), os.path.join(work, 'insert.mp4'), left)
             tmp = os.path.join(work, 'reel.mp4')
-            overlay(video, mp4, t0, dur, HANDOVER, tmp)
+            overlay(video, mp4, t0, dur, tmp)
             shutil.move(tmp, video)
             rec.update(ok=True, at=round(t0, 2), secs=round(dur, 2))
         except Exception as e:                       # the story is never held: the current card stays
