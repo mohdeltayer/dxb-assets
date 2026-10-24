@@ -5272,5 +5272,41 @@
   "job_secs": 121,
   "setup_min": 3.57,
   "story": "hfi-test-gta6"
+ },
+ {
+  "name": "hfi-test-gta6-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T02:18Z",
+  "stages": {
+   "checks": 0.2,
+   "montage": 13.9,
+   "text": 18.8,
+   "audio": 0.4,
+   "outro": 25.8
+  },
+  "total": 59.1,
+  "lane": "runner",
+  "queued_at": "2026-10-24T02:17Z",
+  "finished_at": "2026-10-24T02:18Z",
+  "render_min": 0.99,
+  "hf_insert": [
+   {
+    "piece": "numbers",
+    "shot": [
+     1,
+     2
+    ],
+    "hf": "0.8.143",
+    "ok": true,
+    "at": 3.2,
+    "secs": 8.2,
+    "render_secs": 59.0
+   }
+  ],
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 161,
+  "setup_min": 1.15,
+  "story": "hfi-test-gta6"
  }
 ]
