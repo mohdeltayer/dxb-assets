@@ -54,7 +54,7 @@
    "سعر Resident Evil 4\nفي الإمارات [34.98 with the dirham symbol]",
    "وفي السعودية 32.80 ريالًا",
    "ومعها Resident Evil Requiem\nبخصم 30%",
-   "وتدعم هذه الألعاب\nاللغة العربية على Steam"
+   "وتدعم هذه الألعاب\nالعربية على Steam"
   ],
   "card": "ينتهي العرض / 3 نوفمبر / على Steam في الخليج",
   "x": "خصم 75% على Resident Evil 4 في متجر Steam بالخليج حتى 3 نوفمبر، ضمن تخفيضات شركة كابكوم (Capcom).",
@@ -69,7 +69,9 @@
   "Brief: family 7 (release/deals) with the WHERE AND HOW MUCH beat as price lines (design-pass frame not rolled out yet). Template clipcard (price kind, more than three facts, so not split). Hook: Leon's face, then Ashley (RE4 PV3 72.5 s) under «تخفيض Resident Evil 4 / بنسبة 75% في الخليج» (number + the series people know). Beats: AED price on Luis (79.0 s, line about RE4 over RE4); SAR on Ashley close-up (20.75 s) and Leon (117.5 s); one card for the end date on RE4 footage dimmed; Requiem 30% over Requiem's own Leon, Leon at the monitor and Grace (Requiem launch PV 2.2, 9.5, 11.5 s); close on Leon (51.75 s) and Krauser (53.5 s) under the Arabic-support line, a picture to the end. About 20.9 s. Sensitive: none; RE is mature: no blood or gore picked (34.5, 48, 103.5 s of PV3 skipped).",
   "Sound: our bed (neon_e, rotation), reason: all three Capcom trailers fetched are voiced end to end (speechcheck --stretch: RE4 launch PV 52 and 60 s, 12 to 16 words in 21 s; RE4 PV3 0 s, 24 words; 106 s stretch heard 'I'm gonna get you all safe' and more under the lines; Requiem launch PV 4 s, 53 words), and a four-line price Reel has no pauses to place lines in. Director: signed off for a price story. Preview says 'our bed' first.",
   "Sources decode clean (re4-pv3, re9-launch). The RE4 launch PV was dropped: burnt-in English subtitles under most faces.",
-  "Arabic: grammar stage: two required edits (بدل to بدلًا من, glossary), applied; nothing else. DeepL back-check: meaning holds on headline, lines, card and caption. Forward pass on the caption and three phrasings of the end date ('The offer ends', 'The sale ends', 'Discount runs until'): DeepL gives ينتهي العرض twice and يستمر العرض حتى once; ours is ينتهي العرض, kept."
+  "Arabic: grammar stage: two required edits (بدل to بدلًا من, glossary), applied; nothing else. DeepL back-check: meaning holds on headline, lines, card and caption. Forward pass on the caption and three phrasings of the end date ('The offer ends', 'The sale ends', 'Discount runs until'): DeepL gives ينتهي العرض twice and يستمر العرض حتى once; ours is ينتهي العرض, kept.",
+  "Runs 1 and 2 failed on the runner: the Requiem line ran out of the safe zone at 70 px (now 56), then the smear flag caught the cut to Requiem's title card (shot ends 3.1 s; block_ok on the cut).",
+  "v1 (runner): the Requiem title card flashed at 13.5 s, the hook showed Leon's and Ashley's eyes under the headline band, the RE4 close on Leon was nearly black. v2: hook on Ashley still showed only her mouth under the band; Requiem section had a photo board and the back of Grace's head. v3 (director round 2): hook on Luis (face below the band), Ashley for the AED line, Ashley, Ada and Leon for SAR, Grace from 11.4 s, close on Leon and Krauser; closing line shortened to «وتدعم هذه الألعاب / العربية على Steam» for reading time (meaning unchanged: Arabic support)."
  ],
- "reel": "cards/2026-10/capcom-sale-resident-evil-gulf-reel-v1.mp4"
+ "reel": "cards/2026-10/capcom-sale-resident-evil-gulf-reel-v3.mp4"
 }
