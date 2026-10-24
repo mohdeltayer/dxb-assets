@@ -5228,5 +5228,27 @@
   "job_secs": 178,
   "setup_min": 3.45,
   "story": "hfi-parity-fallout"
+ },
+ {
+  "name": "hfi-parity-gta6-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T02:02Z",
+  "stages": {
+   "checks": 0.3,
+   "montage": 17.2,
+   "text": 22.6,
+   "audio": 0.5,
+   "outro": 33.2
+  },
+  "total": 73.7,
+  "lane": "runner",
+  "queued_at": "2026-10-24T02:01Z",
+  "finished_at": "2026-10-24T02:02Z",
+  "render_min": 1.23,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 125,
+  "setup_min": 1.13,
+  "story": "hfi-parity-gta6"
  }
 ]
