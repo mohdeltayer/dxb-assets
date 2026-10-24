@@ -1,71 +1,71 @@
 {
- "id": "2026-10-24-steamos-3-9-stable",
- "title": "SteamOS 3.9 released to all users (Valve, 23 Oct 22:04Z): Steam Deck idle power, Steam Frame wireless adapter, Steam Machine fixes",
- "category": "firmware",
- "status": "scheduled",
- "genre": [
-  "industry/hardware"
- ],
- "sources": [
-  {
-   "role": "primary",
-   "name": "Valve, Steam Deck community announcement 'SteamOS 3.9'",
-   "url": "https://store.steampowered.com/news/app/1675200",
-   "time": "2026-10-23T22:04Z"
-  }
- ],
- "claims": [
-  {
-   "text": "SteamOS 3.9.5 released for all users; notes cover all changes since the previous stable SteamOS 3.8",
-   "status": "verified",
-   "source": "Valve announcement"
-  },
-  {
-   "text": "Improved idle power consumption on Steam Deck when no audio is playing",
-   "status": "verified",
-   "source": "Valve announcement"
-  },
-  {
-   "text": "Improved support for the Steam Frame wireless adapter",
-   "status": "verified",
-   "source": "Valve announcement"
-  },
-  {
-   "text": "Steam Machine fixes: firmware updates occasionally failing to apply; Remote Play not working when booting with no external display",
-   "status": "verified",
-   "source": "Valve announcement"
-  },
-  {
-   "text": "Desktop Mode updated from Plasma 6.4.3 to Plasma 6.7.3",
-   "status": "verified",
-   "source": "Valve announcement"
-  }
- ],
- "why": "Service update for every Steam Deck, Steam Machine and Steam Frame owner; inside 24 hours at 00:00 Dubai.",
- "drafts": {
-  "headline": "نسخة جديدة من SteamOS\nلأجهزة فالف (Valve) الثلاثة",
-  "lines": [
-   "نسخة SteamOS 3.9 متاحة الآن\nلجميع المستخدمين",
-   "ويقل استهلاك Steam Deck\nللطاقة عند الخمول",
-   "وتحسّن دعم المحوّل اللاسلكي\nلنظارة Steam Frame",
-   "وتصلح أعطالًا في Steam Machine\nمنها تحديثات البرامج الثابتة"
+  "id": "2026-10-24-steamos-3-9-stable",
+  "title": "SteamOS 3.9 released to all users (Valve, 23 Oct 22:04Z): Steam Deck idle power, Steam Frame wireless adapter, Steam Machine fixes",
+  "category": "firmware",
+  "status": "published (v4) 19:45Z on Instagram, X, Threads; checked 19:48Z",
+  "genre": [
+    "industry/hardware"
   ],
-  "x": "تحديث SteamOS 3.9 متاح الآن لجميع مستخدمي Steam Deck وSteam Machine وSteam Frame، حسب فالف (Valve).",
-  "threads": "تحديث SteamOS 3.9 متاح الآن لجميع مستخدمي Steam Deck وSteam Machine وSteam Frame، حسب فالف (Valve).\n\nالمصدر: ملاحظات التحديث من فالف على Steam",
-  "instagram": "أطلقت شركة فالف (Valve) نسخة SteamOS 3.9 لجميع المستخدمين، وتضم كل التغييرات منذ النسخة المستقرة السابقة SteamOS 3.8.\n\nوحسب ملاحظات التحديث، تقلل النسخة استهلاك Steam Deck للطاقة في وضع الخمول عند عدم تشغيل أي صوت، وتحسّن دعم المحوّل اللاسلكي لنظارة الواقع الافتراضي Steam Frame.\n\nوتصلح أيضًا أعطالًا في جهاز Steam Machine، منها فشل تحديثات البرامج الثابتة أحيانًا، وعدم عمل ميزة Remote Play عند التشغيل دون شاشة خارجية، وتحدّث وضع سطح المكتب إلى Plasma 6.7.\n\n#ألعاب #أخبار_الألعاب #SteamDeck #SteamOS",
-  "follow_up": {
-   "x": "المصدر: ملاحظات تحديث SteamOS 3.9 من فالف (Valve)\nhttps://store.steampowered.com/news/app/1675200",
-   "instagram": "المصدر: ملاحظات تحديث SteamOS 3.9 من فالف على Steam، 23 أكتوبر"
-  }
- },
- "notes": [
-  "Brief: trailer template (firmware kind; footage-first over explainer), chip رسمي, cold, style glow, family 2 announcement. Hook: Steam Deck in hand in the hammock under the headline. Footage: Valve's own Steam trailers (Steam Deck Available Now, letterboxed 900 rows, the only copy, lowres_ok; Steam Machine; Steam Frame; Streaming & using the Wireless Adapter). Sound: the Steam Deck trailer's music from 4.5 s, speech none (Steam Machine trailer is silent). Sensitive: none.",
-  "Grammar stage 15:05Z: no required edits; house fixes before render: two lines opened on a Latin name (rebroken), Valve named in Arabic first in the headline, Steam Frame labelled «نظارة» on screen and «نظارة الواقع الافتراضي» in the caption. DeepL 15:10Z back-check keeps meaning; DeepL's forward pass said 'الفشل المتكرر' for 'occasionally' (wrong); ours says «أحيانًا».",
-  "Director v1: tile PASS; 15 to 20 s showed the 'Steam Machine Unboxing' trailer (boxes, a 'Hello.' card) because the runner matches trailer names by prefix; v2 pins trailer_id."
- ],
- "times": {
-  "source": "2026-10-23T22:04Z",
-  "shortlisted": "2026-10-24T14:55Z"
- },
- "approved": "go: rolling queue (resumed after the pause 17:30Z); director v4: Valve logo cut by the crop in v3 replaced by the whole Steam Machine; audio split applied (music 98%, leak 0%); gate 17:56Z: Valve notes (Steam news, 23 Oct 22:04Z) match every fact, no update note; scheduled in Publer 19:45Z (23:45 Dubai) on Instagram, X, Threads"
+  "sources": [
+    {
+      "role": "primary",
+      "name": "Valve, Steam Deck community announcement 'SteamOS 3.9'",
+      "url": "https://store.steampowered.com/news/app/1675200",
+      "time": "2026-10-23T22:04Z"
+    }
+  ],
+  "claims": [
+    {
+      "text": "SteamOS 3.9.5 released for all users; notes cover all changes since the previous stable SteamOS 3.8",
+      "status": "verified",
+      "source": "Valve announcement"
+    },
+    {
+      "text": "Improved idle power consumption on Steam Deck when no audio is playing",
+      "status": "verified",
+      "source": "Valve announcement"
+    },
+    {
+      "text": "Improved support for the Steam Frame wireless adapter",
+      "status": "verified",
+      "source": "Valve announcement"
+    },
+    {
+      "text": "Steam Machine fixes: firmware updates occasionally failing to apply; Remote Play not working when booting with no external display",
+      "status": "verified",
+      "source": "Valve announcement"
+    },
+    {
+      "text": "Desktop Mode updated from Plasma 6.4.3 to Plasma 6.7.3",
+      "status": "verified",
+      "source": "Valve announcement"
+    }
+  ],
+  "why": "Service update for every Steam Deck, Steam Machine and Steam Frame owner; inside 24 hours at 00:00 Dubai.",
+  "drafts": {
+    "headline": "نسخة جديدة من SteamOS\nلأجهزة فالف (Valve) الثلاثة",
+    "lines": [
+      "نسخة SteamOS 3.9 متاحة الآن\nلجميع المستخدمين",
+      "ويقل استهلاك Steam Deck\nللطاقة عند الخمول",
+      "وتحسّن دعم المحوّل اللاسلكي\nلنظارة Steam Frame",
+      "وتصلح أعطالًا في Steam Machine\nمنها تحديثات البرامج الثابتة"
+    ],
+    "x": "تحديث SteamOS 3.9 متاح الآن لجميع مستخدمي Steam Deck وSteam Machine وSteam Frame، حسب فالف (Valve).",
+    "threads": "تحديث SteamOS 3.9 متاح الآن لجميع مستخدمي Steam Deck وSteam Machine وSteam Frame، حسب فالف (Valve).\n\nالمصدر: ملاحظات التحديث من فالف على Steam",
+    "instagram": "أطلقت شركة فالف (Valve) نسخة SteamOS 3.9 لجميع المستخدمين، وتضم كل التغييرات منذ النسخة المستقرة السابقة SteamOS 3.8.\n\nوحسب ملاحظات التحديث، تقلل النسخة استهلاك Steam Deck للطاقة في وضع الخمول عند عدم تشغيل أي صوت، وتحسّن دعم المحوّل اللاسلكي لنظارة الواقع الافتراضي Steam Frame.\n\nوتصلح أيضًا أعطالًا في جهاز Steam Machine، منها فشل تحديثات البرامج الثابتة أحيانًا، وعدم عمل ميزة Remote Play عند التشغيل دون شاشة خارجية، وتحدّث وضع سطح المكتب إلى Plasma 6.7.\n\n#ألعاب #أخبار_الألعاب #SteamDeck #SteamOS",
+    "follow_up": {
+      "x": "المصدر: ملاحظات تحديث SteamOS 3.9 من فالف (Valve)\nhttps://store.steampowered.com/news/app/1675200",
+      "instagram": "المصدر: ملاحظات تحديث SteamOS 3.9 من فالف على Steam، 23 أكتوبر"
+    }
+  },
+  "notes": [
+    "Brief: trailer template (firmware kind; footage-first over explainer), chip رسمي, cold, style glow, family 2 announcement. Hook: Steam Deck in hand in the hammock under the headline. Footage: Valve's own Steam trailers (Steam Deck Available Now, letterboxed 900 rows, the only copy, lowres_ok; Steam Machine; Steam Frame; Streaming & using the Wireless Adapter). Sound: the Steam Deck trailer's music from 4.5 s, speech none (Steam Machine trailer is silent). Sensitive: none.",
+    "Grammar stage 15:05Z: no required edits; house fixes before render: two lines opened on a Latin name (rebroken), Valve named in Arabic first in the headline, Steam Frame labelled «نظارة» on screen and «نظارة الواقع الافتراضي» in the caption. DeepL 15:10Z back-check keeps meaning; DeepL's forward pass said 'الفشل المتكرر' for 'occasionally' (wrong); ours says «أحيانًا».",
+    "Director v1: tile PASS; 15 to 20 s showed the 'Steam Machine Unboxing' trailer (boxes, a 'Hello.' card) because the runner matches trailer names by prefix; v2 pins trailer_id."
+  ],
+  "times": {
+    "source": "2026-10-23T22:04Z",
+    "shortlisted": "2026-10-24T14:55Z"
+  },
+  "approved": "go: rolling queue (resumed after the pause 17:30Z); director v4: Valve logo cut by the crop in v3 replaced by the whole Steam Machine; audio split applied (music 98%, leak 0%); gate 17:56Z: Valve notes (Steam news, 23 Oct 22:04Z) match every fact, no update note; scheduled in Publer 19:45Z (23:45 Dubai) on Instagram, X, Threads"
 }
