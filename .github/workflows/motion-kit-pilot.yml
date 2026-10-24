@@ -1,0 +1,103 @@
+# Motion kit pilot (advisor memo, 24 Oct 2026). Lives on the pilot/motion-kit branch only and is never merged to
+# main before Mohammad approves the elements. Not triggered by jobs/render/*.json, its own concurrency group, so it
+# never queues ahead of a news render. It renders the kit demo and the Helldivers 3 sample (the base Reel with two
+# kit moments), makes the side by side with the published Reel, and commits only those outputs and their timings
+# back to this branch. The Dubai font is cloned into a temp folder and deleted; it is never committed or uploaded.
+name: Motion kit pilot
+
+on:
+  push:
+    branches: [pilot/motion-kit]
+    paths:
+      - 'templates/motion-kit/**'
+      - '.github/workflows/motion-kit-pilot.yml'
+      - '!templates/motion-kit/out/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: motion-kit-pilot
+  cancel-in-progress: false
+
+jobs:
+  render:
+    if: github.ref == 'refs/heads/pilot/motion-kit'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            templates/motion-kit
+            jobs/render/mk-helldivers-base.json
+            live/2026-10-23/helldivers
+            cards/2026-10/mk-helldivers-base-reel-v1.mp4
+            cards/2026-10/helldivers-3-only-if-different-reel-v3.mp4
+          sparse-checkout-cone-mode: false
+
+      - name: Runner
+        run: |
+          echo "cores $(nproc), $(free -g | awk '/Mem:/{print $2}') GB"
+          echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts" >> "$GITHUB_ENV"
+          echo "MK_TIMES=$RUNNER_TEMP/mk-times.json" >> "$GITHUB_ENV"
+          echo "HF_CLI=$RUNNER_TEMP/hf/node_modules/.bin/hyperframes" >> "$GITHUB_ENV"
+
+      - name: Fonts (temp folder, outside the workspace; never committed or uploaded)
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          repo="$RUNNER_TEMP/dxb-fonts"
+          git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+          mkdir -p "$DUBAI_FONTS"
+          unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$DUBAI_FONTS"
+          rm -rf "$repo"
+          for w in Regular Medium Bold; do test -f "$DUBAI_FONTS/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing"; exit 1; }; done
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Tools
+        timeout-minutes: 10
+        run: |
+          sudo systemctl stop apt-daily.timer apt-daily-upgrade.timer unattended-upgrades 2>/dev/null || true
+          command -v ffmpeg >/dev/null || sudo apt-get -o DPkg::Lock::Timeout=120 install -y -q ffmpeg
+          python -m pip install -q numpy
+          mkdir -p "$RUNNER_TEMP/hf" && cd "$RUNNER_TEMP/hf"
+          npm i -s --no-audit --no-fund hyperframes@0.8.143
+          npx hyperframes browser ensure
+
+      - name: Render
+        run: |
+          set -e
+          out=templates/motion-kit/out
+          mkdir -p "$out"
+          photo=live/2026-10-23/helldivers/pilestedt-arrowhead-diary.png
+          t0=$(date +%s)
+          python templates/motion-kit/compose.py demo "$photo" "$out/mk-demo-v1.mp4"
+          python templates/motion-kit/compose.py sample cards/2026-10/mk-helldivers-base-reel-v1.mp4 \
+            jobs/render/mk-helldivers-base.json "$photo" "$out/mk-helldivers-kit-v1.mp4"
+          python templates/motion-kit/compose.py sbs cards/2026-10/helldivers-3-only-if-different-reel-v3.mp4 \
+            "$out/mk-helldivers-kit-v1.mp4" "$out/mk-helldivers-sbs-v1.mp4"
+          echo "whole job: $(( $(date +%s) - t0 )) s"
+          python -c "import json,os; d=json.load(open(os.environ['MK_TIMES'])); d.append({'cores': os.cpu_count(), 'lane': 'runner', 'hyperframes': '0.8.143'}); json.dump(d, open('$out/render-times-v1.json','w'), indent=1, ensure_ascii=False)"
+          cat "$out/render-times-v1.json"
+          for f in "$out"/*.mp4; do ffmpeg -v error -i "$f" -f null - && echo "decode clean: $f"; done
+
+      - name: Clean the font copies
+        if: always()
+        run: rm -rf "$DUBAI_FONTS" /tmp/mk-*
+
+      - name: Commit outputs to the pilot branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f templates/motion-kit/out
+          git commit -q -m "Motion kit pilot renders on the runner ($(nproc) cores)" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin pilot/motion-kit && git push -q origin HEAD:pilot/motion-kit && break; sleep 5; done
