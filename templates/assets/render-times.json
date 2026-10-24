@@ -6310,5 +6310,43 @@
   "job_secs": 191,
   "setup_min": 3.68,
   "story": "dbd-chucky-chapter-leaving-test"
+ },
+ {
+  "name": "total-war-shogun-2-ce-collum-statement-test-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T17:27Z",
+  "stages": {
+   "checks": 5.0,
+   "montage": 44.8,
+   "text": 47.9,
+   "audio": 1.0,
+   "outro": 56.6
+  },
+  "total": 155.2,
+  "lane": "runner",
+  "queued_at": "2026-10-24T17:23:36Z",
+  "finished_at": "2026-10-24T17:27Z",
+  "render_min": 2.59,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 15.2,
+   "audio_secs": 53.0,
+   "music_pct": 58.1,
+   "leak_pct": 0.8,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 9,
+   "mix_secs": 5.8,
+   "secs": 21.4
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 250,
+  "setup_min": 1.05,
+  "story": "total-war-shogun-2-ce-collum-statement-test"
  }
 ]
