@@ -6570,5 +6570,42 @@
   "job_secs": 327,
   "setup_min": 1.17,
   "story": "elden-ring-film-budget-wsj"
+ },
+ {
+  "name": "one-piece-fortnite-official-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T19:38Z",
+  "stages": {
+   "checks": 7.1,
+   "montage": 48.3,
+   "text": 55.8,
+   "audio": 1.1,
+   "outro": 55.1
+  },
+  "total": 167.5,
+  "lane": "runner",
+  "queued_at": "2026-10-24T19:33:14Z",
+  "finished_at": "2026-10-24T19:38Z",
+  "render_min": 2.79,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 18.4,
+   "audio_secs": 66.0,
+   "music_pct": 22.0,
+   "leak_pct": 1.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "reason": "music only 22.0% of the track (< 40.0%)",
+   "secs": 23.1
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 299,
+  "setup_min": 1.55,
+  "story": "one-piece-fortnite-official"
  }
 ]
