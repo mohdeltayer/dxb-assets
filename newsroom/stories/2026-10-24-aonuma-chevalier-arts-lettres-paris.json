@@ -80,7 +80,8 @@
   "grammar": "arabic-grammar-review 03:40Z: one required edit (house_rule, role word at first mention on screen): «تسلّم إيجي أونوما» to «تسلّم المنتج إيجي أونوما» in line 1; no other required edits; no uncertain cases.",
   "speech": "none",
   "deepl": "03:45Z forward pass (whole story EN to AR): DeepL «حصل على وسام فارس الفنون والآداب», «وفقًا للقناة الفرنسية», wrote نينتندو and آونوما (house: نينتيندو; أونوما as Arabic Wikipedia). Alternatives sent: 'a Knight of the Order of Arts and Letters' «فارس في وسام الفنون والآداب», 'made a knight of arts and letters' «لقب فارس الفنون والآداب», 'received the insignia of Chevalier' «وسام فارس الفنون والآداب». Kept ours, «وسام الفنون والآداب برتبة فارس», the order named first and the rank after. Back-check (AR to EN): caption and lines read true; the headline «وسام فارس فرنسي» came back as 'French Order of the Legion of Honour', so the headline became «وسام ثقافي فرنسي لمنتج سلسلة Zelda».",
-  "headline_change": "v1 headline «وسام فارس فرنسي» replaced in v2 (DeepL read it as the Legion of Honour)"
+  "headline_change": "v1 headline «وسام فارس فرنسي» replaced in v2 (DeepL read it as the Legion of Honour)",
+  "director": "v1 03:33Z: FIX, no person window (reel() hard-cut recursion dropped person=; fixed in a5e8bf0), headline read as Legion of Honour by DeepL, closing line over a shrine wall. v2 03:40Z: window, headline, role word fixed; FIX: a dark ring frame at the end of the horse-charge shot (15.25 s) and the shrine wall again (horse rearing lasts 102.8 to 104.3 only). v3: horse charge 97.7 (1.7 s), horse rearing 102.8 (1.5 s), Link's face 106.7 (1.3 s); closing line shortened to «وقال لزوجته بالفرنسية: «لنواصل المغامرة معًا»» to fit its reading time."
  },
  "approved": ""
 }
