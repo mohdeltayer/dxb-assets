@@ -1,0 +1,168 @@
+{
+ "name": "phantom-blade-zero-500k-steam-alinea",
+ "out": "cards/2026-10/phantom-blade-zero-500k-steam-alinea-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "pbz-launch.mp4",
+   "steam": 4115450,
+   "trailer": "Phantom Blade Zero - Launch Trailer",
+   "start": 0,
+   "seconds": 189
+  },
+  {
+   "file": "pbz-date.mp4",
+   "steam": 4115450,
+   "trailer": "Phantom Blade Zero - Release Date Announcement Trailer",
+   "start": 0,
+   "seconds": 80
+  }
+ ],
+ "gfx": [
+  {
+   "file": "pbz-gfx-24m.png",
+   "kind": "fact",
+   "value": "24 مليون دولار",
+   "label": "إيرادات الحجوزات على Steam",
+   "note": "تقدير ألينيا (Alinea Analytics)"
+  }
+ ],
+ "shots": [
+  [
+   "pbz-launch.mp4",
+   32.0,
+   3.5,
+   [
+    [
+     0.0,
+     0.497
+    ]
+   ]
+  ],
+  [
+   "pbz-gfx-24m.png",
+   0,
+   3.4,
+   null
+  ],
+  [
+   "pbz-launch.mp4",
+   45.0,
+   3.3,
+   [
+    [
+     0.0,
+     0.522
+    ],
+    [
+     0.564,
+     0.382
+    ]
+   ]
+  ],
+  [
+   "pbz-launch.mp4",
+   92.0,
+   3.7,
+   [
+    [
+     0.0,
+     0.646
+    ],
+    [
+     1.93,
+     0.526
+    ]
+   ]
+  ],
+  [
+   "pbz-launch.mp4",
+   110.0,
+   4.0,
+   [
+    [
+     0.0,
+     0.334
+    ],
+    [
+     2.964,
+     0.677
+    ]
+   ]
+  ],
+  [
+   "pbz-launch.mp4",
+   145.0,
+   3.0,
+   [
+    [
+     0.0,
+     0.294
+    ],
+    [
+     1.13,
+     0.732
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   2,
+   2,
+   [
+    [
+     "حسب المحلل ريس إليوت\nمن شركة ألينيا",
+     {}
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "وأضافها 2.5 مليون لاعب\nإلى قوائم الرغبات",
+     {}
+    ]
+   ]
+  ],
+  [
+   4,
+   4,
+   [
+    [
+     "وتتفوق في Steam\nعلى Gears of War: E-Day",
+     {}
+    ]
+   ]
+  ],
+  [
+   5,
+   5,
+   [
+    [
+     "وتصدر في 29 أكتوبر\nعلى PS5 وPC",
+     {}
+    ]
+   ]
+  ]
+ ],
+ "headline": "نصف مليون حجز على Steam\nللعبة Phantom Blade Zero",
+ "head_size": 60,
+ "label": "تقرير",
+ "source": "ألينيا (Alinea Analytics)",
+ "date": "23 Oct 2026",
+ "theme": "spectacle",
+ "style": "frame",
+ "template": "clipcard",
+ "skin": "house",
+ "track": [
+  "pbz-date.mp4",
+  19.5
+ ],
+ "cut": true,
+ "ground_footage": [
+  "pbz-launch.mp4",
+  120.0
+ ]
+}
