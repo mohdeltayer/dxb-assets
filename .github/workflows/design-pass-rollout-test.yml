@@ -51,7 +51,11 @@ jobs:
       - name: Selected?
         id: sel
         run: |
-          case " ${{ github.event.inputs.tests || 'parity frame photobox' }} " in *" $TEST "*) echo "run=1" >> "$GITHUB_OUTPUT";; *) echo "skipped";; esac
+          tests="${{ github.event.inputs.tests }}"
+          if [ -z "$tests" ]; then   # a push: the trigger file's "tests:" line, else all three
+            tests=$(curl -sSfL "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$GITHUB_SHA/notes/design-pass-rollout/run-tests.txt" | sed -n 's/^tests: //p')
+          fi
+          case " ${tests:-parity frame photobox} " in *" $TEST "*) echo "run=1" >> "$GITHUB_OUTPUT";; *) echo "skipped";; esac
 
       - name: Wait while a news render runs (news first)
         if: steps.sel.outputs.run == '1'
@@ -147,8 +151,8 @@ jobs:
           import json, os
           J = os.path.join(os.environ['RUNNER_TEMP'], 'jobs')
           e = json.load(open(f'{J}/elden.json'))
-          for k in ('old', 'new'):
-              json.dump(dict(e, out=f'cards/test/elden-{k}-reel-v1.mp4'), open(f'{J}/elden-{k}.json', 'w'), ensure_ascii=False, indent=1)
+          for k in ('old', 'new'):   # the published name for both: reel.py seeds the band and frame waves from it
+              json.dump(e, open(f'{J}/elden-{k}.json', 'w'), ensure_ascii=False, indent=1)
           p = json.load(open(f'{J}/pbz.json'))
           p.pop('head_size', None)                      # the 24 Oct grid size: 100 px, never under 72
           p.update(name='dp-test-pbz', out='cards/test/dp-test-pbz-reel-v1.mp4',
@@ -182,7 +186,7 @@ jobs:
       - name: Parity renders (base code, then this branch; same source and picture cache)
         if: steps.sel.outputs.run == '1' && matrix.test == 'parity'
         run: |
-          mkdir -p old/cards/test
+          mkdir -p old/cards/2026-10 cards/2026-10
           t=$(date +%s); (cd old && python templates/render_job.py run "$RUNNER_TEMP/jobs/elden-old.json"); echo "OLD_SECS=$(( $(date +%s) - t ))" >> "$GITHUB_ENV"
           python templates/render_job.py check "$RUNNER_TEMP/jobs/elden-new.json" || true
           t=$(date +%s); python templates/render_job.py run "$RUNNER_TEMP/jobs/elden-new.json"; echo "NEW_SECS=$(( $(date +%s) - t ))" >> "$GITHUB_ENV"
@@ -199,7 +203,8 @@ jobs:
           python - <<'EOF'
           import json, os, subprocess, numpy as np
           R = os.environ['RUNNER_TEMP']
-          old, new, pub = 'old/cards/test/elden-old-reel-v1.mp4', 'cards/test/elden-new-reel-v1.mp4', f'{R}/published.mp4'
+          V = 'cards/2026-10/elden-ring-film-budget-wsj-reel-v3.mp4'
+          old, new, pub = f'old/{V}', V, f'{R}/published.mp4'
           def info(f):
               r = subprocess.run(['ffprobe', '-v', 'error', '-count_frames', '-select_streams', 'v', '-show_entries',
                                   'stream=nb_read_frames,width,height', '-show_entries', 'format=duration', '-of', 'json', f],
@@ -248,7 +253,7 @@ jobs:
           json.dump(res, open(os.path.join(os.environ['OUTD'], 'parity-elden.json'), 'w'), indent=1, ensure_ascii=False)
           EOF
           for k in old new; do
-            f=cards/test/elden-$k-reel-v1.mp4; [ $k = old ] && f=old/$f
+            f=cards/2026-10/elden-ring-film-budget-wsj-reel-v3.mp4; [ $k = old ] && f=old/$f
             ffmpeg -v error -y -ss 0 -i "$f" -frames:v 1 -vf "crop=1080:760:0:240,scale=540:-2" -q:v 3 "$OUTD/parity-elden-$k-top.jpg"
             ffmpeg -v error -y -ss 6 -i "$f" -frames:v 1 -vf "crop=1080:420:0:1100,scale=540:-2" -q:v 3 "$OUTD/parity-elden-$k-strip.jpg"
           done
@@ -297,7 +302,6 @@ jobs:
               if p.get('ok') and p['piece'] == 'cover' and 'photobox' in p.get('moments', []):
                   grab(3.0, 'box-3s'); grab(3.9, 'after-box')
           EOF
-          cp "$f" "$OUTD/"
           base="cards/test/$name"; [ -f "$base-dense.jpg" ] && cp "$base-dense.jpg" "$OUTD/"
           [ -f "$base-strip.jpg" ] && cp "$base-strip.jpg" "$OUTD/"
           true
