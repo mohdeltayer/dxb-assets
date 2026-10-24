@@ -5888,5 +5888,27 @@
   "job_secs": 172,
   "setup_min": 1.05,
   "story": "ffxiv-compensation-free-day"
+ },
+ {
+  "name": "next-week-releases-oct-26-reel-v4.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T10:33Z",
+  "stages": {
+   "checks": 1.2,
+   "montage": 50.3,
+   "text": 81.4,
+   "audio": 1.2,
+   "outro": 52.2
+  },
+  "total": 186.2,
+  "lane": "runner",
+  "queued_at": "2026-10-24T10:28:26Z",
+  "finished_at": "2026-10-24T10:33Z",
+  "render_min": 3.1,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 280,
+  "setup_min": 0.95,
+  "story": "next-week-releases-oct-26"
  }
 ]
