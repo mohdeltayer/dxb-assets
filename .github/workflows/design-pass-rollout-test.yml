@@ -1,6 +1,6 @@
 # Design pass roll-out test (24 Oct 2026, after Mohammad's "Roll out", 19:21Z). Lives on rollout/design-pass only and
-# is never triggered by jobs/render/*.json: workflow_dispatch only, its own concurrency group, and it waits while a news
-# render (render.yml) is queued or running. Nothing here is posted or scheduled; results commit to this branch only,
+# is never triggered by jobs/render/*.json: workflow_dispatch or a trigger file on this branch, its own concurrency group, and it waits while a news
+# render (render.yml) is queued or running (see the trigger note below). Nothing here is posted or scheduled; results commit to this branch only,
 # under notes/design-pass-rollout/. The Dubai font is cloned into a temp folder and deleted; never committed, uploaded
 # or printed.
 #   parity: one published job without the new keys (Elden Ring film budget v3, split, on our bed) rendered on the base
@@ -10,7 +10,12 @@
 #   photobox: the pilot's Aonuma sample as a live job with "kit": ["chip", "photobox"].
 name: Design pass rollout test
 
+# workflow_dispatch cannot reach a workflow that is not on the default branch, so a push to this branch that touches
+# notes/design-pass-rollout/run-tests.txt also starts it (this branch only; the bot's result commits do not).
 on:
+  push:
+    branches: [rollout/design-pass]
+    paths: ['notes/design-pass-rollout/run-tests.txt']
   workflow_dispatch:
     inputs:
       tests:
@@ -46,7 +51,7 @@ jobs:
       - name: Selected?
         id: sel
         run: |
-          case " ${{ github.event.inputs.tests }} " in *" $TEST "*) echo "run=1" >> "$GITHUB_OUTPUT";; *) echo "skipped";; esac
+          case " ${{ github.event.inputs.tests || 'parity frame photobox' }} " in *" $TEST "*) echo "run=1" >> "$GITHUB_OUTPUT";; *) echo "skipped";; esac
 
       - name: Wait while a news render runs (news first)
         if: steps.sel.outputs.run == '1'
