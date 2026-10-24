@@ -6492,5 +6492,31 @@
   "job_secs": 311,
   "setup_min": 1.0,
   "story": "steam-most-played-oct-24"
+ },
+ {
+  "name": "elden-ring-film-budget-wsj-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T18:29Z",
+  "stages": {
+   "checks": 4.2,
+   "montage": 46.4,
+   "text": 52.3,
+   "audio": 0.9,
+   "outro": 38.1
+  },
+  "total": 142.0,
+  "lane": "runner",
+  "queued_at": "2026-10-24T18:25:50Z",
+  "finished_at": "2026-10-24T18:29Z",
+  "render_min": 2.37,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 209,
+  "setup_min": 0.9,
+  "story": "elden-ring-film-budget-wsj"
  }
 ]
