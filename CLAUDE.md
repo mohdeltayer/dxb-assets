@@ -700,8 +700,9 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      its usual place. The full headline stays in the first frame and the caption.
   2. Until covers work, the first frame: the headline about 1.5 times larger
      (`reel.HEAD_SIZE` 100, was 66), at most two short lines (`HEAD_LINES`),
-     never below `HEAD_MIN` 80 (a headline that does not fit is cut to fewer
-     words, not shrunk; `head_layer` stops), inside the safe zone and the grid
+     never below `HEAD_MIN` 72 (only a full game name that cannot be cut, such
+     as Phantom Blade Zero, shrinks it that far; any other headline that does
+     not fit is cut to fewer words; `head_layer` stops), inside the safe zone and the grid
      corner rule; the soft dark band behind it is stronger (`HEAD_BAND` 225, was
      190) with a wider glow behind the type, so pale skies and white scenes hold.
      The person box moves down to clear the taller head (`PERSON_BOX` y 750,

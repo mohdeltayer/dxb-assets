@@ -151,10 +151,10 @@ HEAD_TOP = G.SAFE_TOP + 10 + CHIP_DROP
 GRID_TOP = (H - W * 4 // 3) // 2
 #: Grid tile headlines (advisor, 24 Oct 2026, agreed with Mohammad): at grid size the old 66 px
 #: headline read like a caption and faded on bright footage. The first-frame headline is now about
-#: 1.5 times larger (HEAD_SIZE), at most HEAD_LINES short lines, never below HEAD_MIN (a headline that
-#: will not fit is cut to fewer words, not shrunk), on a stronger soft band (HEAD_BAND) with a wider
+#: 1.5 times larger (HEAD_SIZE), at most HEAD_LINES short lines, never below HEAD_MIN (only a full game name
+#: that cannot be cut shrinks it that far; anything else is cut to fewer words), on a stronger band (HEAD_BAND) with a wider
 #: glow behind the type, so it holds on pale skies and white scenes.
-HEAD_SIZE, HEAD_MIN, HEAD_LINES, HEAD_BAND = 100, 80, 2, 225
+HEAD_SIZE, HEAD_MIN, HEAD_LINES, HEAD_BAND = 100, 72, 2, 225
 
 
 def grid_corner_clear(im, what='head'):

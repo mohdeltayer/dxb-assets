@@ -178,7 +178,8 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     first clean frame) (CLAUDE.md "Grid tile").
   - Grid tile headlines (24 Oct, inbox): the first-frame headline is about
     1.5 times larger (`HEAD_SIZE` 100), two short lines at most, never under
-    80 px (cut words, not size), on a stronger dark band; card-led and debate
+    72 px (only for a full game name; otherwise cut words), on a stronger
+    dark band; card-led and debate
     Reels open on a recognisable image with the question large; the director
     QA reads every first frame at grid size. Designed 3:4 covers (headline
     about twice today's size, 3 to 5 words) once Publer covers work
