@@ -20,6 +20,10 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 
 ## Editorial
 
+- **Skills (24 Oct):** load `games-news-editor` for every triage, ranking and
+  scheduling decision and `reel-director` for every brief, build and review;
+  the repo rules stay the authority on numbers and wording (CLAUDE.md
+  "Editorial and director skills").
 - **Scope:** games only, the whole slate, regional stories when they are the
   story. Outlet voice, no first person ("Settled 26 Sep").
 - **Sources:**
@@ -307,6 +311,15 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   footage); two cards never half-faded together. The first three go to Mohammad as previews before
   Publer; then the normal rolling queue. Ledger note "hf insert"; render-times
   carries `hf_insert` (CLAUDE.md "HyperFrames inserts in live Reels").
+- **Motion kit pilot (24 Oct):** isolated on `pilot/motion-kit`, idle time
+  only, nothing posted, no change to the live render path. Elements: photo box
+  (play-triangle wipe, frame, name plate), number count with a small settle pop,
+  XP-style bar with one glint, chip press, record banner (real records only),
+  play-triangle card wipe, motif blips under the sound. Each under 0.5 s, only
+  where it helps reading, one or two per Reel, no flashing, shaking or loops;
+  skins change colours and plates, never the motion. Side by side with and
+  without, notes/motion-kit.md; Mohammad approves each element (CLAUDE.md
+  "Digital Lounge motion kit").
 - **Process:**
   1. A six-line brief (angle and hook kind, template and opening beat, cover,
      sound, key shot, total seconds).

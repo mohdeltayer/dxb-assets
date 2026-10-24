@@ -1909,6 +1909,46 @@ pieces, rendered as inserts; reel.py stays the backbone.
    a re-render of a published Reel cannot match it frame for frame. Insert test v4 on the runner: the
    insert rendered in 76 s, entry, hand-over and exit clean (`notes/hyperframes-pilot.md`).
 
+## Digital Lounge motion kit: pilot (advisor, 24 Oct 2026, agreed with Mohammad)
+
+Goal: a small set of animated elements that move the same way in every Reel, so
+the channel is recognisable and the news is easier to read. Mohammad: not
+annoying; motion is there to help reading and give identity. Built in
+HyperFrames, isolated like the earlier pilot.
+1. The test every piece passes: it helps the viewer read or notice the key fact
+   (the number, the person, the chip, the record), or it is cut as decoration.
+   Each animation under 0.5 s; nothing moves while text is being read, and the
+   text is fully readable the moment it settles. One or two kit moments per Reel
+   at most, on the element that matters, never on every line. No flashing, no
+   shaking, no constant looping motion.
+2. The kit, our own design inspired by game UI, not copied from any console or
+   game: a. photo box: a quick wipe shaped like our play triangle opens it, a thin
+   frame draws around it, the name plate slides in beneath (role label per the
+   people rule); b. number: counts up with a soft tick and settles with a small
+   scale pop (under 5%); c. bar: fills like an XP bar with one short glint at the
+   end; d. chip: presses in like a controller button with one small bounce;
+   e. record or milestone: a short "unlocked" style banner slides in from the top
+   for about 1.5 s, then out, only for real records and milestones; f. card
+   transition: a quick wipe through the play triangle; g. sound: tiny UI blips
+   built from our four-note motif, mixed well under the trailer or bed, never
+   over speech.
+3. Consistency: the same movements on every Reel; game skins change only the
+   colours and plate shapes (sci-fi neon, fantasy gold, house indigo), never the
+   motion. Safe zone, Dubai font, Arabic-first lines, chip position and end card
+   unchanged. The breaking profile uses only the chip press and the number
+   count, or nothing, so speed comes first.
+4. Pilot: isolated on the branch `pilot/motion-kit`, idle time only, nothing
+   posted, no change to reel.py or the live render path. Each element is built as
+   a reusable HyperFrames block; one sample Reel uses two of them (for example
+   the photo box and the number count) and is rendered again without the kit;
+   the side by side goes to Mohammad and the advisor with render times and a
+   short note per element on the reading problem it solves; results in
+   `notes/motion-kit.md`.
+5. After the pilot Mohammad approves or drops each element on its own. Approved
+   elements join the HyperFrames inserts under the 24 Oct limited-use memo, with
+   the same fallback and director QA, and the director QA adds one check: "does
+   this motion help reading?" Any kit moment that does not is removed.
+
 ## Explainers from the source's own drawings (trial, 27 Sep 2026)
 
 For "how does it work" stories (patents, hardware, new features),
@@ -2288,6 +2328,16 @@ change nothing already in Postiz.
   Reel later for breaking Digital Lounge news (today X and Instagram post
   together), and text-only DXB-KNIGHT posts when art is not ready (today
   every post carries a card).
+
+## Editorial and director skills (Mohammad, 24 Oct 2026)
+
+Two skills are the judgement layer on top of the repo rules: load
+`games-news-editor` for every triage, ranking and scheduling decision (sweeps,
+review slots, the hourly watch, the rolling queue, report spacing and gaps),
+and `reel-director` for every brief, build and review (shot lists, sound,
+framing, pacing, the director QA). CLAUDE.md and STYLE.md stay the authority
+on exact numbers and wording; where a skill and a repo rule differ, the repo
+rule wins and the difference is raised with Mohammad.
 
 ## Delegation (Mohammad, 5 Oct 2026)
 
