@@ -123,12 +123,14 @@ jobs:
           echo "$(date -u +%T) tools done"
           mkdir -p "$DXB_UPLOADS" "$(dirname "$YOLO_WEIGHTS")"
 
-      # HyperFrames inserts (advisor, 24 Oct 2026): installed only when the job asks for one, pinned to the tested
-      # version. A failed install leaves HF_CLI unset, so the insert fails and the Reel keeps its current card.
-      - name: HyperFrames (only for a job with an insert)
+      # HyperFrames inserts (advisor, 24 Oct 2026) and the design pass (frame and kit moments, 24 Oct 2026,
+      # templates/designpass.py): installed only when the job asks for one, pinned to the tested version. A failed
+      # install leaves HF_CLI unset, so the insert keeps its current card and the design pass renders as before.
+      - name: HyperFrames (only for a job with an insert, a frame or kit moments)
         id: hf
         run: |
-          if python -c "import json,sys; sys.exit(0 if json.load(open('$JOB')).get('insert') else 1)"; then
+          if python -c "import json,sys; sys.exit(0 if json.load(open('$JOB')).get('insert') else 1)" \
+             || python templates/designpass.py need "$JOB"; then
             echo "need=1" >> "$GITHUB_OUTPUT"
           fi
 

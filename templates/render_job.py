@@ -35,8 +35,18 @@ unreleased material.
                   {"focus": [0.5, 0.3], "credit": null}]],                      # (23 Oct 2026); photo fetched as footage
       "gfx": [{"file": "x-gfx-fps.png", "kind": "fact", "label": "الأداء",   # cards drawn here with the Dubai font
                "value": "حتى 120", "note": "إطارًا في الثانية"}],             # (cardgfx.py), then laid on the ground
-      "insert": [{"piece": "numbers", "shot": 3, "data": {...}}]     # HyperFrames over a -gfx- shot (24 Oct 2026):
+      "insert": [{"piece": "numbers", "shot": 3, "data": {...}}],    # HyperFrames over a -gfx- shot (24 Oct 2026):
                                                                      # templates/hfinsert.py; the card stays if it fails
+      "frame": {"shot": 2, "offset": 0.25, "secs": 4.0,             # design pass (24 Oct 2026, templates/designpass.py):
+                "data": {"platforms": [{"logo": "ps5",               # the WHERE AND HOW MUCH frame over that shot,
+                                        "prices": [["الإمارات", ["aed", "239"]]]},   # replacing the strip, which
+                                       {"logo": "steam", "prices": [["السعودية", "225 ريالًا"]]}],   # comes back if
+                         "price_all": null, "date": "تصل في 29 أكتوبر",            # the frame fails; no story line,
+                         "note": null, "arabic": false}},                          # credit or person in its span
+      "kit": ["chip"],                                               # kit moments: chip (the press), photobox (the
+                                                                     # first person window, t0 0, open on the cover)
+      "kit_quiet": [[0.0, 3.4]],                                     # Reel seconds with voices: no blip there
+      "blips": false                                                 # no UI blips on this Reel
     }
 
 `style` (and `sound` for a Reel with no footage sound) are chosen by the main
@@ -48,6 +58,22 @@ laid on the living ground (numgfx.slide), as in the batch render scripts.
     python3 templates/render_job.py run   <job.json> [--draft]   # fetch, render, strip, sheet
     python3 templates/render_job.py check <job.json>              # timeline, reading pace and speech in the track
     python3 templates/render_job.py focus <job.json>              # fill null focus from autofocus, before the sheet
+
+Design pass (advisor memo of 24 Oct 2026, rolled out after Mohammad's "Roll out", 24 Oct 19:21Z; templates/
+designpass.py has the full format): chips are 1.3 times their old size and split strip values a step larger on every
+Reel (reel.CHIP_SIZE, STRIP_VALUE_SIZES, STRIP_H). `frame` and `kit` opt a job in to the HyperFrames pieces:
+  - `frame`: {"shot", "offset" (s after the shot's start, default 0.25), "secs" (3 to 6, default 4), "data":
+    {"platforms": [{"logo": slug in templates/assets/platforms, "prices": [[region or null, value]]}],
+    "price_all", "date", "note", "arabic"}}; a value is "225 ريالًا", ["aed", "239"] (dirham sign) or
+    {"unknown": "لم يُعلن السعر بعد"}. Its span must lie after the headline and clear of story lines, credits
+    and person windows; the strip is left off while the frame shows its facts, and laid back if it fails.
+  - `kit`: up to two of "chip" and "photobox" (photobox needs person[0] opening at 0); the frame counts as one
+    moment, so a frame takes one kit moment at most. Extra or invalid moments are dropped with a note.
+  - `kit_quiet` [[t0, t1]] and `speech_ok` windows keep the blips off voices; `speech_keep` without kit_quiet
+    means no blips; `"blips": false` turns them off.
+  The breaking profile (`"profile": "breaking"`) and the عاجل chip skip both. Each piece renders under 5 minutes or
+  that part stays as reel.py drew it; the story is never held. Log: `render_job: design pass:`; render-times.json:
+  `design_pass`. Without the keys, or without a HyperFrames CLI, the Reel renders as before.
 
 Focus is resolved on the container before the shot sheet (`focus`), so the job
 carries the crop that was judged; a null left in the job is autofocused on the
@@ -211,6 +237,18 @@ def check(job):
     finally:
         reel.X = keep
     speech_check(job, end)
+    if job.get('kit') or job.get('frame'):     # what the design pass will do, or drop, on the runner
+        import designpass as DP
+        keep = reel.X
+        if job.get('cut'):
+            reel.X = 0.04
+        try:
+            st, end2 = reel.timeline(shots(job, build=False))
+            p = DP.plan(job, st, end2, place(job)(st, end2))
+        finally:
+            reel.X = keep
+        print(f"design pass: moments {p['moments']}, frame {'at %.2f s for %.1f s' % (p['frame']['at'], p['frame']['secs']) if p['frame'] else 'none'}"
+              + ''.join(f'; {n}' for n in p['notes']), flush=True)
     return end
 
 
@@ -394,6 +432,58 @@ def audio_split(job, video):
     return rec
 
 
+def _times_note(job, key, value):
+    try:
+        led = json.load(open(reel.TIMES))
+        for e in reversed(led):
+            if e.get('name') == os.path.basename(job['out']):   # entries are named after the output file
+                e[key] = value
+                break
+        json.dump(led, open(reel.TIMES, 'w'), indent=1)
+    except (OSError, ValueError) as e:
+        print(f'render_job: render-times not updated with {key}: {e}', flush=True)
+
+
+def design_plan(job):
+    """(plan, apart folder) for the design pass, or (None, None) when the job does not ask for it, is breaking, or
+    HyperFrames is not installed (then the Reel renders exactly as before; the reason is printed)."""
+    import designpass as DP
+    if not (job.get('kit') or job.get('frame')):
+        return None, None
+    keep = reel.X
+    if job.get('cut'):
+        reel.X = 0.04
+    try:
+        starts, end = reel.timeline(shots(job, build=False))
+        lines = place(job)(starts, end)
+    finally:
+        reel.X = keep
+    p = DP.plan(job, starts, end, lines)
+    if not DP.hf_cli() and (p['moments'] or p['frame']):
+        p['notes'].append('HyperFrames CLI not installed: rendered as before')
+        p['moments'], p['frame'] = [], None
+    for n in p['notes']:
+        print(f'render_job: design pass: {n}', flush=True)
+    if not (p['moments'] or p['frame']):
+        return p, None
+    import tempfile
+    return p, tempfile.mkdtemp(prefix='dpass-apart-')
+
+
+def design_pass(job, video, p, folder):
+    """The design pass's pieces over the finished Reel (designpass.apply); parts that fail stay as reel.py drew them."""
+    import designpass as DP
+    try:
+        rec = DP.apply(job, video, p, folder)
+    finally:
+        shutil.rmtree(folder, ignore_errors=True)
+    for r in rec['pieces']:
+        print(f"render_job: design pass {r['piece']}: {'ok' if r.get('ok') else 'FAILED, kept as reel.py drew it'} "
+              f"({r['render_secs']} s){'' if r.get('ok') else ': ' + r['error']}", flush=True)
+    print(f"render_job: design pass laid back from reel.py: {rec['laid_back'] or 'nothing'}", flush=True)
+    return rec
+
+
 def run(job, draft=False):
     if job.get('kind') == 'famitsu':
         return famitsu(job, draft)
@@ -405,6 +495,11 @@ def run(job, draft=False):
     fetched = time.time() - t0
     out = os.path.join(ROOT, job['out'])
     os.makedirs(os.path.dirname(out), exist_ok=True)
+    dp_plan, DP_folder = design_plan(job) if not draft else (None, None)
+    DP_apart = None
+    if DP_folder:
+        import designpass as DP
+        DP_apart = DP.apart_spec(dp_plan, DP_folder)
     tup = lambda v: v if v is None or isinstance(v, str) else tuple(tuple(x) if isinstance(x, list) else x for x in v)
     done = reel.reel(shots(job, draft), job['headline'], job['label'], place(job), job['source'], job['date'], out,
                      theme=job['theme'], style=job.get('style'), sound=job.get('sound'), country=job.get('country'),
@@ -413,12 +508,20 @@ def run(job, draft=False):
                      strip=strip_items(job) if job.get('strip') else None,
                      template=job.get('template'), pace_ok=job.get('pace_ok', False), lowres_ok=job.get('lowres_ok', False),
                      skin=job.get('skin'), person=[tuple(x) for x in job['person']] if job.get('person') else None,
-                     blocky_ok=job.get('blocky_ok'))
+                     blocky_ok=job.get('blocky_ok'), apart=DP_apart)
     video = done[0] if isinstance(done, (list, tuple)) else done
+    dp = design_pass(job, video, dp_plan, DP_folder) if DP_folder else None
     if job.get('insert') and not draft:
         inserts(job, video)
     if not draft:
         audio_split(job, video)                 # before the decode checks, so they read the Reel that ships
+    if dp:
+        import designpass as DP
+        DP.mix_blips(job, video, dp)            # after the audio split, which rebuilds the body sound
+        dp.pop('blip_plan', None)
+        _times_note(job, 'design_pass', dp)
+        print('render_job: design pass: ' + json.dumps({k: dp[k] for k in ('secs', 'blips', 'notes') if k in dp},
+                                                      ensure_ascii=False), flush=True)
     stem = os.path.splitext(out)[0]
     base = re.sub(r'-reel-v\d+$', '', stem)   # matches the workflow's ${stem%-reel-v*}, so v2 and later commit too
     if not draft:

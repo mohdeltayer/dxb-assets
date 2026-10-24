@@ -95,16 +95,18 @@ def _chip(d, text, x_right, y_bottom, fill, ink, size=38):
     return x0
 
 
-def _head(d, text, y, label, country, size, step, right=M, left=M, chip=None):
+def _head(d, text, y, label, country, size, step, right=M, left=M, chip=None, chip_size=38):
     """Chip row then the headline; returns the y under the last line.
-    `chip` colours the news chip (azure unless a Reel passes its theme)."""
+    `chip` colours the news chip (azure unless a Reel passes its theme). `chip_size` is the chip's type size
+    (38, a 57 px chip; the design-pass pilot of 24 Oct 2026 passes about 1.3 times that from reel.py)."""
     x = W - right
+    ch = int(chip_size * 1.5)
     if label:
-        x = _chip(d, label, x, y + 57, chip or A.AZURE, A.GROUND) - 14
+        x = _chip(d, label, x, y + ch, chip or A.AZURE, A.GROUND, size=chip_size) - 14
     if country:
-        _chip(d, country, x, y + 57, A.INDIGO, A.INK)
+        _chip(d, country, x, y + ch, A.INDIGO, A.INK, size=chip_size)
     if label or country:
-        y += 57 + 22
+        y += ch + 22
     f = A.F('Bold', size)
     lines = _wrap(d, text, f, W - left - right)
     if len(lines) > 3:

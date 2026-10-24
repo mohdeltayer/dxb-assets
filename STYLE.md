@@ -197,9 +197,12 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     sheet (product, announcement, numbers, people, setback, leak, release,
     debate, oddity) and names it; WHERE AND HOW MUCH frame for product,
     announcement, release and deals stories (CLAUDE.md "Beat sheets").
-  - Design pass (24 Oct, inbox, in progress): platforms-price-date frame as a
-    HyperFrames insert, platform logo library, chips 1.3x, strip values a step
-    larger, motion kit by family; three samples to Mohammad before roll-out.
+  - Design pass (24 Oct, inbox, rolled out 19:21Z): chips 1.3x (type 50) and
+    strip values up to 64 on every Reel; the WHERE AND HOW MUCH frame (`"frame"`
+    in a job) and kit moments (`"kit": ["chip", "photobox"]`) are opt-in, at
+    most two per Reel, skipped on breaking and عاجل, fall back to the plain
+    Reel on failure; the first three live Reels with a frame or kit moment go to
+    Mohammad as previews before scheduling.
   - Then 4 to 6 lines of the actual story: white Dubai Bold with an indigo
     outline, right-aligned, 1 to 3 visual lines each.
   - Each line stays up for its reading time (`read_secs`); the safe zone is

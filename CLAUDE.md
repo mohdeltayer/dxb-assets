@@ -803,6 +803,26 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      beside the published versions, with render times. Roll-out to live Reels
      only after his approval; the breaking profile keeps the simplest version.
      Built in idle time; news comes first.
+  6. Rolled out (Mohammad, 24 Oct 2026, inbox 19:21Z: "Roll out"). Live from
+     the merge of `rollout/design-pass` the same evening. Every Reel: chips at
+     type 50 (75 px, `reel.CHIP_SIZE`), the strip 172 px tall with values at 64,
+     56, 48 or 44 and columns sized to their content. Opt-in per job, on the
+     runner (`templates/designpass.py`): `"frame": {"shot", "offset", "secs"
+     (3 to 6), "data": {"platforms": [{"logo", "prices": [[region, value]]}],
+     "price_all", "date", "note", "arabic"}}` (a value is a string, `["aed",
+     "239"]` for the dirham sign, or `{"unknown": ...}`) and `"kit": ["chip" |
+     "photobox"]` (photobox needs `person[0]` opening at 0 and opens on frame 0
+     with no wipe); `"kit_quiet": [[t0, t1]]` keeps blips out of voiced
+     seconds, `"blips": false` turns them off. The frame counts as a kit moment,
+     two at most; it sits after the headline, clear of lines, credits and the
+     person window, and the strip is off while it shows. Breaking profile and
+     عاجل skip both. Each piece has 300 s; on failure reel.py's own layer is
+     laid back and the story never waits (`design_pass` in render-times.json).
+     HyperFrames 0.8.143 installs only for a job that needs it. Parity on the
+     Elden Ring v3 job: 689 frames and 22.988 s as published, audio identical;
+     only the chip, headline position, strip values and lines (12 px higher)
+     differ. The first three live Reels with a frame or kit moment go to
+     Mohammad as previews before scheduling, then the rolling queue.
 - Strips and sheets go into git (advisor, 14 Oct 2026): every final render
   commits its `<name>-strip.jpg` (the finished Reel's frames) and
   `<name>-sheet.jpg` (the shot sheet) to `cards/YYYY-MM/` beside the mp4, in

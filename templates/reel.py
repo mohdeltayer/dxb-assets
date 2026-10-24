@@ -156,6 +156,11 @@ GRID_TOP = (H - W * 4 // 3) // 2
 #: that cannot be cut shrinks it that far; anything else is cut to fewer words), on a stronger band (HEAD_BAND) with a wider
 #: glow behind the type, so it holds on pale skies and white scenes.
 HEAD_SIZE, HEAD_MIN, HEAD_LINES, HEAD_BAND = 100, 72, 2, 225
+#: Design pass (advisor memo of 24 Oct 2026, approved by Mohammad 09:15Z; rolled out to live Reels after the three
+#: samples, "Roll out", 24 Oct 19:21Z): chips about 1.3 times their size in the same place (type 38 to 50, chip 57 to
+#: 75 px high; the chip's right edge and top stay, the headline moves down by the difference). The grid-corner rule
+#: still holds (the chip's right edge is at x 910, the corner starts at 940).
+CHIP_SIZE = 50
 
 
 def grid_corner_clear(im, what='head'):
@@ -166,7 +171,7 @@ def grid_corner_clear(im, what='head'):
 
 
 def head_layer(headline, label, path, source, date, country=None, hs=HEAD_SIZE, hst=None,
-               vivid=False, theme='cold', seed=0, style='lines', meta_path=None, skin=None):
+               vivid=False, theme='cold', seed=0, style='lines', meta_path=None, skin=None, chip_path=None):
     """Chip and headline on a soft band at the top; the credit line (rule, source · date)
     is written to `meta_path` as its own layer when given, else drawn with the head. `vivid`
     colours the chip with the theme and lays the theme's wave lines in the band. `skin` (a game
@@ -200,7 +205,7 @@ def head_layer(headline, label, path, source, date, country=None, hs=HEAD_SIZE, 
     rtl_starts(G._wrap(probe, headline, f, W - hl - R), 'headline')
     chip = SK.chip(skin) if skin else G._ACC if vivid else None
     acc = SK.load(skin)['accent'] if skin else G._ACC
-    end = G._head(probe, headline, HEAD_TOP, label, country, hs, hst, right=R, left=hl)
+    end = G._head(probe, headline, HEAD_TOP, label, country, hs, hst, right=R, left=hl, chip_size=CHIP_SIZE)
     meta_y = end + 30
     _band(im, 0, meta_y + 220, True, HEAD_BAND)
     if skin:                               # the kit's decoration and its plate behind chip and headline
@@ -209,8 +214,21 @@ def head_layer(headline, label, path, source, date, country=None, hs=HEAD_SIZE, 
     elif vivid:
         _colour(im, meta_y + 140, theme, seed, style)
     t = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(t)
-    G._head(d, headline, HEAD_TOP, label, country, hs, hst, right=R, left=hl, chip=chip)
+    G._head(d, headline, HEAD_TOP, label, country, hs, hst, right=R, left=hl, chip=chip, chip_size=CHIP_SIZE)
     grid_corner_clear(t)
+    if chip_path and (label or country):   # the chip row on its own layer (designpass.py presses it), not burnt into the head
+        fc, ch = A.F('Bold', CHIP_SIZE), int(CHIP_SIZE * 1.5)
+        x0 = W - R
+        for lab in (label, country):
+            if lab:
+                x0 = x0 - (probe.textlength(lab, font=fc, **G.AR) + 48) - 14
+        box = (int(x0 + 14) - 3, HEAD_TOP - 3, W - R + 3, HEAD_TOP + ch + 3)
+        c = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+        c.paste(t.crop(box), box[:2])
+        t.paste((0, 0, 0, 0), box)
+        _glowed(Image.new('RGBA', (W, H), (0, 0, 0, 0)), c, blur=16, gain=2.6).save(chip_path)
+        json.dump({'box': box, 'label': label, 'country': country}, open(os.path.splitext(chip_path)[0] + '.json', 'w'),
+                  ensure_ascii=False)
     if not meta_path:                      # one layer, as before 14 Oct
         d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=acc)
         d.text((W - R - 62, meta_y), f'{source}\u200f  ·  \u200f{A.arabic_date(date)}', font=A.F('Medium', 32),
@@ -506,11 +524,12 @@ def person_layer(photo, name, role, path, theme='cold', box=PERSON_BOX, focus=(0
 #: The `split` template's fact strip (Mohammad, 14 Oct 2026): footage runs the whole
 #: Reel and two or three facts (date, price, platforms) stay pinned low in the safe
 #: zone while the lines narrate above it. A fact lives here or in a line, never both.
-STRIP_H = 160
+STRIP_H = 172                         # design pass (pilot, 24 Oct 2026): 12 px taller for the larger values; was 160
 STRIP_BOTTOM = G.SAFE_BOTTOM - 24
 STRIP_TOP = STRIP_BOTTOM - STRIP_H
 STRIP_LIFT = STRIP_H + 32             # how far the story lines rise to clear it
-STRIP_VALUE_SIZES = (56, 48, 44)      # one size for the whole strip: the largest at which every value fits
+STRIP_VALUE_SIZES = (64, 56, 48, 44)  # one size for the whole strip: the largest at which every value fits
+                                      # (design pass, pilot, 24 Oct 2026: a step larger; was 56, 48, 44)
 STRIP_LABEL_SIZES = (34, 30)
 
 
@@ -549,7 +568,10 @@ def strip_layer(items, path, theme='cold', skin=None):
     x0, x1, y0, y1 = L, W - R, STRIP_TOP, STRIP_BOTTOM
     if x0 < G.SAFE_LEFT or x1 > W - G.SAFE_RIGHT or y1 > G.SAFE_BOTTOM or y0 < G.SAFE_TOP:
         raise ValueError(f'the strip ({x0}-{x1}, {y0}-{y1}) leaves the safe zone')
-    n = len(items); cw = (x1 - x0) / n; room = cw - 28
+    # design pass (pilot, 24 Oct 2026): columns are sized to their own label and value (the room left over shared
+    # equally), so the values can take a size up: in a three-item strip such as «99.99 دولار · 19 نوفمبر · 29 أكتوبر»
+    # equal columns held every value at 48; sized columns fit 56 (was: equal columns, 14 px padding on each side)
+    n = len(items); span = x1 - x0; PAD = 28
     probe = ImageDraw.Draw(Image.new('L', (W, H)))
 
     def vwidth(v, size):               # (width, symbol width) of a value at a size
@@ -559,14 +581,20 @@ def strip_layer(items, path, theme='cold', skin=None):
             sw = round(SYM.width * dh / SYM.height)
             return probe.textlength(v[1], font=f, **G.AR) + round(dh * 0.3) + sw, dh
         return probe.textlength(v, font=f, **G.AR), 0
-    ls = next((s for s in STRIP_LABEL_SIZES if all(probe.textlength(l, font=A.F('Medium', s), **G.AR) <= room for l, _ in items)), None)
-    if ls is None:
-        raise ValueError(f'a strip label is wider than its column ({room:.0f}px at {STRIP_LABEL_SIZES[-1]}): '
-                         f'{[l for l, _ in items]}; shorten it or use 2 items')
-    vs = next((s for s in STRIP_VALUE_SIZES if all(vwidth(v, s)[0] <= room for _, v in items)), None)
-    if vs is None:
-        raise ValueError(f'a strip value is wider than its column ({room:.0f}px at {STRIP_VALUE_SIZES[-1]}): '
-                         f'{[_strip_text(v) for _, v in items]}; shorten it or use 2 items')
+
+    def widths(ls, vs):
+        return [max(probe.textlength(l, font=A.F('Medium', ls), **G.AR), vwidth(v, vs)[0]) + PAD for l, v in items]
+    pick = next(((ls, vs) for vs in STRIP_VALUE_SIZES for ls in STRIP_LABEL_SIZES if sum(widths(ls, vs)) <= span), None)
+    if pick is None:
+        raise ValueError(f'the strip items do not fit its width ({span}px at {STRIP_VALUE_SIZES[-1]}): '
+                         f'{[(l, _strip_text(v)) for l, v in items]}; shorten them or use 2 items')
+    ls, vs = pick
+    print(f'strip: values at {vs} px, labels at {ls} px', flush=True)
+    ws = widths(ls, vs)
+    ws = [w + (span - sum(ws)) / n for w in ws]
+    xs = [x1]
+    for w in ws:
+        xs.append(xs[-1] - w)
 
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     soft = Image.new('L', (W, H), 0)   # a wider, blurred shadow so the band's edge is soft
@@ -581,12 +609,12 @@ def strip_layer(items, path, theme='cold', skin=None):
     else:
         d.rounded_rectangle([x0, y0, x1, y1], radius=26, fill=tint + (178,), outline=right + (90,), width=2)
     for i in range(1, n):              # thin rules in the theme's second colour
-        rx = round(x1 - i * cw)
+        rx = round(xs[i])
         d.line([(rx, y0 + 26), (rx, y1 - 26)], fill=right + (170,), width=2)
     fl, fv = A.F('Medium', ls), A.F('Bold', vs)
     lab_y, val_y = y0 + 56, y1 - 34
     for i, (label, v) in enumerate(items):
-        cx = x1 - (i + 0.5) * cw
+        cx, cw = (xs[i] + xs[i + 1]) / 2, xs[i] - xs[i + 1]
         d.text((cx, lab_y), label, font=fl, fill=body, anchor='ms', **G.AR)
         w, dh = vwidth(v, vs)
         if isinstance(v, tuple):       # digits with the dirham symbol to their left, as on the price lines
@@ -1639,8 +1667,13 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
          lowres_ok=False, read_check=True, track=None, draft=False, head_size=HEAD_SIZE, cut=False, credits=None, strip=None,
          products=None, template=None, tribute=False, reveal=None, profile=None, pace_ok=False, skin=None,
-         person=None, blocky_ok=None):
-    """`blocky_ok`: [(file, start, reason)], shots enlarged past MAX_ZOOM whose source reads blocky (quality_gate,
+         person=None, blocky_ok=None, apart=None):
+    """`apart`: the design pass (designpass.py, 24 Oct 2026), {'dir': folder, 'chip': bool, 'person': bool,
+    'strip': bool}: the chip row, the first person window when it opens on frame 0, and the split strip are left out
+    of the burnt-in text and written to `dir` as layers, with their times and fades in `dir`/apart.json, so the kit
+    can press or open them over the Reel's own frames, or lay them back exactly as drawn when a step fails. None (the
+    default) draws everything into the Reel as before.
+    `blocky_ok`: [(file, start, reason)], shots enlarged past MAX_ZOOM whose source reads blocky (quality_gate,
     24 Oct 2026) and that someone has looked at; `lowres_ok` names the copies checked (lowres_reason), never True.
     `person`: [(photo, name, role, t0, t1, opts), ...] (advisor, 23 Oct 2026, people stories show the person):
     the person's official photo in a framed window with a name plate over the running footage from t0 to t1
@@ -1699,7 +1732,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, credits=credits, strip=strip,
                         products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok,
-                        skin=skin, person=person, blocky_ok=blocky_ok)
+                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart)
         finally:
             X = keep
     global FINISH
@@ -1709,7 +1742,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, cut, credits=credits, strip=strip,
                         products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok,
-                        skin=skin, person=person, blocky_ok=blocky_ok)
+                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart)
         finally:
             FINISH = keep_f
     if profile and not PROFILES[profile].get('music', True) and isinstance(track, (tuple, list)) and len(track) > 2:
@@ -1777,7 +1810,13 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     style = style or ('lines' if skin else pick_style(out))   # after the checks, so a stopped render takes no turn; a skin takes none
     layers = [(head_layer(headline, label, f'{tmp}/head.png', source, date, country, hs=head_size,   # HEAD_SIZE unless a job asks for more; never below HEAD_MIN
                           hst=head_size + 20, vivid=vivid, theme=theme, seed=sum(map(ord, out)), style=style,
-                          meta_path=f'{tmp}/meta.png', skin=skin), 0, head_secs)]
+                          meta_path=f'{tmp}/meta.png', skin=skin,
+                          chip_path=os.path.join(apart['dir'], 'chip.png') if apart and apart.get('chip') else None),
+               0, head_secs)]
+    kept = []                               # the design pass's layers, left out of the burn (apart)
+    if apart and apart.get('chip') and os.path.exists(os.path.join(apart['dir'], 'chip.json')):
+        kept.append(dict(json.load(open(os.path.join(apart['dir'], 'chip.json'))), what='chip',
+                         png=os.path.join(apart['dir'], 'chip.png'), segs=[[0.0, head_secs, 0.2]]))
     if vivid and style == 'frame' and not skin:   # the bottom waves stay for the whole clip
         layers.insert(0, (frame_layer(f'{tmp}/frame.png', theme, sum(map(ord, out))), 0, end))
     if MARK_PERSIST:                        # the play mark, small and half transparent, for the whole Reel (14 Oct 2026)
@@ -1798,14 +1837,24 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
                     if z - a0 > 0.6: segs.append((a0, z))
                     a0 = a1
             if end - a0 > 0.6: segs.append((a0, end))
+        else:
+            segs = [(starts[comp], starts[comp + 1])]
+        if apart and apart.get('strip'):   # the design pass's frame may replace it; laid back as drawn if it fails
+            shutil.copy(f'{tmp}/strip.png', os.path.join(apart['dir'], 'strip.png'))
+            kept.append(dict(what='strip', png=os.path.join(apart['dir'], 'strip.png'),
+                             segs=[[round(a, 3), round(z, 3), 0.4] for a, z in segs]))
+        else:
             for a, z in segs:
                 layers.append((f'{tmp}/strip.png', a, z))
-        else:
-            layers.append((f'{tmp}/strip.png', starts[comp], starts[comp + 1]))
     for j, (photo, name, role, a, z, *opt) in enumerate(person or []):   # after the trim: the window overlaps the lines
         opt = opt[0] if opt else {}
         if not 0 <= a < z <= end:
             raise ValueError(f'person window {name} runs {a} to {z} s, outside the clip (0 to {end:.1f} s)')
+        if apart and apart.get('person') and j == 0 and a == 0:   # on the cover: the kit's photo box, or this window laid back
+            png = person_layer(photo, name, role, os.path.join(apart['dir'], 'person.png'), theme=theme,
+                               focus=tuple(opt.get('focus', (0.5, 0.33))), credit=opt.get('credit'))
+            kept.append(dict(what='person', png=png, segs=[[0.0, z, 0.2]], box=list(PERSON_BOX)))
+            continue
         layers.append((person_layer(photo, name, role, f'{tmp}/p{j}.png', theme=theme, focus=tuple(opt.get('focus', (0.5, 0.33))),
                                     credit=opt.get('credit')), a, z))
     for j, (first, last, text, *opt) in enumerate(credits or []):   # after the trim: credits overlap the lines
@@ -1822,6 +1871,9 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         for s0 in starts[1:]:
             if s0 + 0.35 < end:
                 layers.append((f'{tmp}/leak.png', max(0.05, s0 - 0.3), s0 + 0.35))
+    if apart:                               # what the design pass lays back: layer, its spans (a, z, fade in) and the clip end
+        json.dump({'end': round(end, 3), 'head_secs': head_secs, 'starts': [round(x, 3) for x in starts], 'layers': kept},
+                  open(os.path.join(apart['dir'], 'apart.json'), 'w'), ensure_ascii=False, indent=1)
     ent = SK.entrance(skin) if skin else None
     args = ['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', f'{tmp}/cut.{ext}']
     for p, _, _ in layers:
