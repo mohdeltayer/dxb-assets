@@ -70,6 +70,8 @@ def _tokens(text):
 
 
 def _wrap(d, text, f, width):
+    if '\n' in text:                      # a break set by hand is kept; each part wraps on its own (24 Oct 2026)
+        return [x for part in text.split('\n') if part.strip() for x in _wrap(d, part, f, width)]
     lines, cur = [], ''
     for w in _tokens(text):
         trial = (cur + ' ' + w).strip()

@@ -181,16 +181,21 @@ def head_layer(headline, label, path, source, date, country=None, hs=HEAD_SIZE, 
     while True:                            # a long Latin name shrinks the headline a little, never below HEAD_MIN
         f = A.F('Bold', hs)
         lines = G._wrap(probe, headline, f, room)
-        if len(lines) <= HEAD_LINES and all(probe.textlength(x, font=f, **G.AR) <= room for x in lines):
+        if (len(lines) <= HEAD_LINES and all(probe.textlength(x, font=f, **G.AR) <= room for x in lines)
+                and all(_arabic(x.lstrip('«"“\u200f')[0]) for x in lines if x)):   # a Latin-led wrap shrinks too
             break
         if hs - 4 < HEAD_MIN:
             raise ValueError(f'headline needs more than {HEAD_LINES} lines at {HEAD_MIN} px; cut it to a few words: {headline}')
         hs, hst = hs - 4, hst - 5
     hl = L
-    if len(lines) == 2:                    # balance two lines so no word hangs alone
+    if len(lines) == 2 and '\n' not in headline:   # balance two lines so no word hangs alone (a hand-set break is kept)
         words = G._tokens(headline); tw = lambda x: probe.textlength(x, font=f, **G.AR)
-        bw = min(max(tw(' '.join(words[:k])), tw(' '.join(words[k:]))) for k in range(1, len(words)))
-        hl = max(L, int(W - R - bw - 16))
+        ks = [k for k in range(1, len(words)) if _arabic(words[k][0])]   # never split before a Latin name (24 Oct 2026)
+        if ks:
+            bw = min(max(tw(' '.join(words[:k])), tw(' '.join(words[k:]))) for k in ks)
+            hl = max(L, int(W - R - bw - 16))
+            if any(x and not _arabic(x.lstrip('«"“\u200f')[0]) for x in G._wrap(probe, headline, f, W - hl - R)):
+                hl = L                     # the balanced width would open a line on Latin: keep the full width
     rtl_starts(G._wrap(probe, headline, f, W - hl - R), 'headline')
     chip = SK.chip(skin) if skin else G._ACC if vivid else None
     acc = SK.load(skin)['accent'] if skin else G._ACC

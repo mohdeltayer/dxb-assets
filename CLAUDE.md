@@ -707,6 +707,11 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      190) with a wider glow behind the type, so pale skies and white scenes hold.
      The person box moves down to clear the taller head (`PERSON_BOX` y 750,
      h 490). Applies from ARMS v4 (24 Oct).
+     A break set by hand in the headline («\n») is now kept (`ig_ar._wrap`),
+     as story lines already did; the two-line balancing runs only on headlines
+     without one and never splits before a Latin name. At 100 px the old
+     wrapping put «Final Fantasy XIV» and «Phantom Blade Zero» alone at the
+     start of line 2 and the text check refused them (24 Oct).
   3. Debate pieces and other card-led Reels: the cover or first frame shows a
      strong recognisable image (a character or the game's key art) with the
      question large; never a mostly empty ground with small text.
