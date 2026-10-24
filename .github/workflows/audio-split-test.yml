@@ -135,15 +135,19 @@ jobs:
           ls -la "$OUT"
 
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: audio-split-${{ github.run_id }}
           path: ${{ env.OUT }}
           retention-days: 7
 
       - name: Commit results to pilot/audio-split
+        if: always()
         run: |
           d=templates/audiosplit/results; mkdir -p "$d"
-          cp "$OUT"/results.json "$OUT"/preview-*.mp4 "$OUT"/*.m4a "$d"/
+          for f in "$OUT"/results.json "$OUT"/preview-*.mp4 "$OUT"/*.m4a; do if [ -f "$f" ]; then cp "$f" "$d"/; fi; done
+          for f in "$OUT"/*-music.wav; do if [ -f "$f" ]; then ffmpeg -nostdin -v error -y -i "$f" -c:a aac -b:a 160k "$d/$(basename "${f%.wav}").m4a"; fi; done
+          ls -la "$d"
           git config user.name "dxb-render"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add --sparse "$d"

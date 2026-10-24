@@ -348,6 +348,8 @@ def crosscheck(rec, tools):
         m = m.T
         res = {}
         for judge in tools:
+            if judge.name == 'bandit' and t.name == 'bandit':
+                continue                                       # BandIt on its own stem: ~5 min a Reel, and a model rarely flags itself
             st = judge(m)
             e = {k: float(np.mean(v.astype(np.float64) ** 2)) for k, v in st.items()}
             tot = sum(e.values()) + 1e-12
@@ -383,7 +385,7 @@ def main_run(out_dir, paths):
         json.dump(summary, open(f'{out_dir}/results.json', 'w'), indent=1, ensure_ascii=False)
     summary['total_secs'] = round(time.time() - t, 1)
     json.dump(summary, open(f'{out_dir}/results.json', 'w'), indent=1, ensure_ascii=False)
-    print(json.dumps(summary, indent=1, ensure_ascii=False)[:6000])
+    print(json.dumps(summary, ensure_ascii=False))
 
 
 # ---------------------------------------------------------------- the card's video
@@ -394,9 +396,11 @@ def preview(out_dir, tool, names):
     parts = []
     for n in names:
         pub = os.path.join(os.environ.get('REPO', '.'), json.load(open(os.path.join(os.environ.get('JOBS_DIR', 'jobs'), n + '.json')))['out'])
-        for src, lab in ((pub, 'PUBLISHED: mixed trailer track'), (f'{out_dir}/{n}-{tool}.mp4', 'NEW: trailer music + each shot\'s own effects')):
+        for src, lab in ((pub, 'PUBLISHED: mixed trailer track'), (f'{out_dir}/{n}-{tool}.mp4', 'NEW: trailer music + each shot own effects')):
             o = f'{out_dir}/_p{len(parts)}.mp4'
-            dt = (f",drawbox=x=0:y=0:w=iw:h=64:color=black@0.75:t=fill,drawtext=fontfile={font}:text='{lab}':"
+            tf = f'{out_dir}/_label.txt'
+            open(tf, 'w').write(lab)                           # textfile: no quoting of the label inside the filter
+            dt = (f",drawbox=x=0:y=0:w=iw:h=64:color=black@0.75:t=fill,drawtext=fontfile={font}:textfile={tf}:"
                   f"fontcolor=white:fontsize=24:x=(w-text_w)/2:y=20") if os.path.exists(font) else ''
             sh(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-i', src, '-vf', f'scale=540:960,fps=30{dt},format=yuv420p',
                 '-c:v', 'libx264', '-preset', 'medium', '-crf', '30', '-c:a', 'aac', '-b:a', '128k', '-ar', '48000', '-ac', '2', o])
@@ -405,8 +409,9 @@ def preview(out_dir, tool, names):
     open(lst, 'w').write(''.join(f"file '{os.path.abspath(p)}'\n" for p in parts))
     out = f'{out_dir}/preview-{tool}.mp4'
     sh(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', lst, '-c', 'copy', '-movflags', '+faststart', out])
-    for p in parts + [lst]:
-        os.remove(p)
+    for p in parts + [lst, f'{out_dir}/_label.txt']:
+        if os.path.exists(p):
+            os.remove(p)
     print(out, round(os.path.getsize(out) / 1e6, 1), 'MB')
 
 
