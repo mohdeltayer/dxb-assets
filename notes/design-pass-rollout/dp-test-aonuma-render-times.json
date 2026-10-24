@@ -1,0 +1,47 @@
+{
+ "name": "dp-test-aonuma-reel-v1.mp4",
+ "profile": "standard",
+ "at": "2026-10-24T19:53Z",
+ "stages": {
+  "checks": 5.3,
+  "montage": 28.4,
+  "text": 37.8,
+  "audio": 0.9,
+  "outro": 37.4
+ },
+ "total": 109.7,
+ "lane": "runner",
+ "queued_at": "2026-10-24T19:51Z",
+ "finished_at": "2026-10-24T19:53Z",
+ "render_min": 1.83,
+ "audio_split": {
+  "applied": false,
+  "reason": "Cocktail Fork not installed here (COCKTAIL_DIR unset)"
+ },
+ "design_pass": {
+  "hf": "0.8.143",
+  "notes": [],
+  "pieces": [
+   {
+    "piece": "cover",
+    "moments": [
+     "chip",
+     "photobox"
+    ],
+    "ok": true,
+    "at": 0.0,
+    "secs": 3.7,
+    "render_secs": 16.5
+   }
+  ],
+  "blips": [
+   0.37,
+   3.34
+  ],
+  "laid_back": [],
+  "secs": 39.9,
+  "blips_dropped_for_speech": []
+ },
+ "runner": "actions",
+ "cores": 4
+}
