@@ -6374,5 +6374,33 @@
   "job_secs": 339,
   "setup_min": 0.97,
   "story": "steam-most-played-oct-24"
+ },
+ {
+  "name": "steamos-3-9-stable-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T17:33Z",
+  "stages": {
+   "checks": 10.9,
+   "montage": 48.7,
+   "text": 52.9,
+   "audio": 1.0,
+   "outro": 48.9
+  },
+  "total": 162.4,
+  "lane": "runner",
+  "queued_at": "2026-10-24T17:28:54Z",
+  "finished_at": "2026-10-24T17:33Z",
+  "render_min": 2.71,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "reason": "split failed: subprocess.CalledProcessError: Command '['ffmpeg', '-nostdin', '-v', 'error', '-ss', '0.000', '-t', '3.300', '-i', '/home/runner/work/_temp/uploads/sframe.mp4', '-vn', '-ac', '2', '-ar', '44100', '-f', 'f32le', '-']' returned non-zero exit status 234.",
+   "secs": 8.1
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 293,
+  "setup_min": 1.2,
+  "story": "steamos-3-9-stable"
  }
 ]
