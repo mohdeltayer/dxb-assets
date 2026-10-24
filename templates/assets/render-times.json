@@ -6284,5 +6284,31 @@
   "job_secs": 189,
   "setup_min": 3.3,
   "story": "steamos-3-9-stable"
+ },
+ {
+  "name": "dbd-chucky-chapter-leaving-test-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T17:22Z",
+  "stages": {
+   "checks": 0.9,
+   "montage": 48.6,
+   "text": 41.4,
+   "audio": 1.0,
+   "outro": 47.0
+  },
+  "total": 138.9,
+  "lane": "runner",
+  "queued_at": "2026-10-24T17:15:11Z",
+  "finished_at": "2026-10-24T17:22Z",
+  "render_min": 2.32,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 191,
+  "setup_min": 3.68,
+  "story": "dbd-chucky-chapter-leaving-test"
  }
 ]
