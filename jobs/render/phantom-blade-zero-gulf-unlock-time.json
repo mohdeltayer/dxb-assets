@@ -1,0 +1,142 @@
+{
+ "name": "phantom-blade-zero-gulf-unlock-time",
+ "out": "cards/2026-10/phantom-blade-zero-gulf-unlock-time-reel-v3.mp4",
+ "footage": [
+  {
+   "file": "pbz-launch.mp4",
+   "steam": 4115450,
+   "trailer": "Phantom Blade Zero - Launch Trailer",
+   "start": 0,
+   "seconds": 189
+  },
+  {
+   "file": "pbz-date.mp4",
+   "steam": 4115450,
+   "trailer": "Phantom Blade Zero - Release Date Announcement Trailer",
+   "start": 0,
+   "seconds": 80
+  }
+ ],
+ "gfx": [
+  {
+   "file": "pbz-gfx-unlock.png",
+   "kind": "fact",
+   "value": "6:00 صباحًا",
+   "label": "الخميس 29 أكتوبر بتوقيت الإمارات",
+   "note": "و5:00 صباحًا بتوقيت السعودية"
+  }
+ ],
+ "shots": [
+  [
+   "pbz-launch.mp4",
+   32.0,
+   3.5,
+   [
+    [
+     0.0,
+     0.497
+    ]
+   ]
+  ],
+  [
+   "pbz-gfx-unlock.png",
+   0,
+   4.0,
+   null
+  ],
+  [
+   "pbz-launch.mp4",
+   45.0,
+   3.4,
+   [
+    [
+     0.0,
+     0.522
+    ],
+    [
+     0.564,
+     0.382
+    ]
+   ]
+  ],
+  [
+   "pbz-launch.mp4",
+   92.0,
+   3.5,
+   [
+    [
+     0.0,
+     0.646
+    ],
+    [
+     1.93,
+     0.625
+    ]
+   ]
+  ],
+  [
+   "pbz-launch.mp4",
+   145.0,
+   2.6,
+   [
+    [
+     0.0,
+     0.294
+    ],
+    [
+     1.13,
+     0.724
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   2,
+   2,
+   [
+    [
+     "هذا موعدها على Steam\nحسب صفحة المتجر",
+     {}
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "ولا تدعم اللعبة\nاللغة العربية في Steam",
+     {}
+    ]
+   ]
+  ],
+  [
+   4,
+   4,
+   [
+    [
+     "وتصدر أيضًا على PS5",
+     {}
+    ]
+   ]
+  ]
+ ],
+ "headline": "موعد Phantom Blade Zero\nفي الخليج",
+ "label": "رسمي",
+ "source": "متجر Steam",
+ "date": "24 Oct 2026",
+ "theme": "spectacle",
+ "style": "frame",
+ "template": "clipcard",
+ "skin": "house",
+ "track": [
+  "pbz-date.mp4",
+  19.5
+ ],
+ "cut": true,
+ "ground_footage": [
+  "pbz-launch.mp4",
+  120.0
+ ]
+}
