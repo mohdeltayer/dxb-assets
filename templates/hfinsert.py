@@ -37,7 +37,7 @@ FPS = 30
 MAX_ZOOM = 2.0                    # the Reels' enlargement cap applies to a photo in a piece too
 MARK = os.path.join(HERE, 'digi-mark.jpg')
 PIECES = ('numbers', 'charcard')
-LATIN = re.compile(r"[A-Za-z0-9][A-Za-z0-9 :.,'&()+/|-]*[A-Za-z0-9)]|[A-Za-z]")
+LATIN = re.compile(r"\(?[A-Za-z0-9][A-Za-z0-9 :.,'&()+/|-]*[A-Za-z0-9)]|[A-Za-z]")   # a bracket rides inside its run
 
 
 def text(s):
