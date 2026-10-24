@@ -1324,6 +1324,13 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   so. Mohammad's voiceover relaxes the rule: face and name may stay while he
   speaks. First applied to the Aonuma Reel (v4, recipe 3: headline alone,
   then the photo box alone, then the lines), which had not posted.
+  Face on the cover (Mohammad, 24 Oct 2026, inbox, over recipe 3's headline-alone
+  opening): on people stories the person's photo box and name plate are already
+  open on frame 0 beside the headline, so the grid tile shows face, name and
+  headline together (the 23 Oct people rule); the box steps aside at 3.5 s and
+  the story lines start after it. The box opens without an animation on the
+  cover. Aonuma (09:30 Dubai, 24 Oct) was scheduled before the answer and went
+  out with the headline-only cover.
 - UAE prices take the Central Bank's dirham symbol, left of the digits.
 - Stills get the same frame: each image fills 9:16 and pans slowly across,
   three or four official images per story, with the flavour's bed under
@@ -1963,6 +1970,14 @@ HyperFrames, isolated like the earlier pilot.
    elements join the HyperFrames inserts under the 24 Oct limited-use memo, with
    the same fallback and director QA, and the director QA adds one check: "does
    this motion help reading?" Any kit moment that does not is removed.
+6. Approved (Mohammad, 24 Oct 2026, inbox, "Approve all"): all seven elements
+   (a to g), with the photo box opening on frame 0 instead of the play-triangle
+   wipe when it is on the cover, so the grid tile never shows a small triangle.
+   They join the HyperFrames inserts under the limited-use memo (fallback to the
+   numgfx card, 5-minute limit, director QA with the reading check). Built from
+   `pilot/motion-kit` into `templates/hyperframes/` as insert pieces in idle
+   time; the first three live Reels with a kit moment go to Mohammad as
+   previews before scheduling, as with the first inserts.
 
 ## Explainers from the source's own drawings (trial, 27 Sep 2026)
 

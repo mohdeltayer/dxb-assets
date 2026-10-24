@@ -324,8 +324,12 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   play-triangle card wipe, motif blips under the sound. Each under 0.5 s, only
   where it helps reading, one or two per Reel, no flashing, shaking or loops;
   skins change colours and plates, never the motion. Side by side with and
-  without, notes/motion-kit.md; Mohammad approves each element (CLAUDE.md
-  "Digital Lounge motion kit").
+  without, notes/motion-kit.md. Approved, all seven (24 Oct, inbox): they
+  join the HyperFrames inserts; photo box opens on frame 0 on the cover; first
+  three live uses previewed (CLAUDE.md "Digital Lounge motion kit").
+- **People on the cover (24 Oct, inbox):** people stories open with the photo
+  box and name plate beside the headline on frame 0; the box steps aside at
+  3.5 s, then the lines (recipe 3 as amended).
 - **Process:**
   1. A six-line brief (angle and hook kind, template and opening beat, cover,
      sound, key shot, total seconds), started from the matching recipe on the

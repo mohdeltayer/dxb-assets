@@ -36,10 +36,9 @@ Principles:
 ## 3. Person in the news (face first, news second)
 | Seconds | Beat | Eye |
 |---|---|---|
-| 0 to 3.5 | Headline over the person's best-known work (Mario footage for Miyamoto). | headline |
-| 3.5 to 6 | Photo box opens with the name plate and role. Alone; no story line yet. | face and name |
-| 6 to 6.5 | The photo shrinks to a corner or steps aside. | |
-| 6.5 to 14 | Story lines on footage of their work, one at a time. | each line |
+| 0 to 3.5 | Headline over the person's best-known work, the photo box and name plate already open beside it (the cover: face, name, headline). Amended by Mohammad, 24 Oct (inbox: "Face on the cover"); the board's version opened on the headline alone and brought the box in at 3.5. | face, name and headline |
+| 3.5 to 4 | The photo steps aside. | |
+| 4 to 14 | Story lines on footage of their work, one at a time. | each line |
 | 14 to 18 | Closing: their most recognisable work, the final line. | the line, then the picture |
 | voiceover | With Mohammad's voice, the face and name stay while he speaks; lines follow the voice. | |
 
