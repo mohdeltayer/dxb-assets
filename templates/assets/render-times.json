@@ -5404,5 +5404,27 @@
   "job_secs": 189,
   "setup_min": 1.05,
   "story": "aonuma-chevalier-arts-lettres-paris"
+ },
+ {
+  "name": "bioware-closure-debate-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T04:33Z",
+  "stages": {
+   "checks": 1.7,
+   "montage": 63.0,
+   "text": 107.5,
+   "audio": 1.7,
+   "outro": 80.3
+  },
+  "total": 254.3,
+  "lane": "runner",
+  "queued_at": "2026-10-24T04:26:06Z",
+  "finished_at": "2026-10-24T04:33Z",
+  "render_min": 4.24,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 422,
+  "setup_min": 0.92,
+  "story": "bioware-closure-debate"
  }
 ]
