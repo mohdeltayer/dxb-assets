@@ -1,0 +1,112 @@
+{
+ "ps-pulse": {
+  "hf": [
+   {
+    "piece": "cover (3.6 s)",
+    "render_secs": 16.1
+   }
+  ],
+  "story": "ps-pulse-no-gulf-launch",
+  "headline": "سماعة PlayStation Pulse\nلا موعد لها في الخليج بعد",
+  "fetch_secs": 16.2,
+  "reel_secs": 105.0,
+  "compose_secs": 31.2,
+  "total_secs": 168.5,
+  "moments": {
+   "cover": [
+    0.0,
+    3.6
+   ]
+  },
+  "blips": [
+   0.37
+  ],
+  "blips_dropped_for_speech": [],
+  "length_s": 17.24,
+  "sbs_mb": 2.99
+ },
+ "pbz": {
+  "hf": [
+   {
+    "piece": "cover (3.6 s)",
+    "render_secs": 16.8
+   },
+   {
+    "piece": "where and how much (4.0 s)",
+    "render_secs": 17.1
+   }
+  ],
+  "story": "phantom-blade-zero-launch-trailer-gulf-prices",
+  "headline": "موعد Phantom Blade Zero\nوسعرها في الخليج",
+  "fetch_secs": 23.5,
+  "reel_secs": 104.9,
+  "compose_secs": 88.2,
+  "total_secs": 242.6,
+  "moments": {
+   "cover": [
+    0.0,
+    3.6
+   ],
+   "frame": [
+    5.9,
+    9.9
+   ],
+   "frame_still": [
+    7.06,
+    9.6
+   ]
+  },
+  "blips": [
+   0.37,
+   6.17,
+   6.47
+  ],
+  "blips_dropped_for_speech": [],
+  "length_s": 19.0,
+  "sbs_mb": 9.23
+ },
+ "aonuma": {
+  "hf": [
+   {
+    "piece": "cover (3.7 s)",
+    "render_secs": 15.7
+   }
+  ],
+  "story": "aonuma-chevalier-arts-lettres-paris",
+  "headline": "وسام ثقافي فرنسي\nلمنتج سلسلة Zelda",
+  "fetch_secs": 7.6,
+  "reel_secs": 111.3,
+  "compose_secs": 43.8,
+  "total_secs": 189.3,
+  "moments": {
+   "cover": [
+    0.0,
+    3.7
+   ]
+  },
+  "blips": [
+   0.37,
+   3.34
+  ],
+  "blips_dropped_for_speech": [],
+  "length_s": 21.28,
+  "sbs_mb": 8.3
+ },
+ "frame-demo": {
+  "hf": [
+   {
+    "piece": "frame demo five",
+    "render_secs": 7.9
+   },
+   {
+    "piece": "frame demo unknown",
+    "render_secs": 7.7
+   }
+  ]
+ },
+ "runner": {
+  "cores": 4,
+  "hyperframes": "0.8.143",
+  "setup_secs": null
+ }
+}
