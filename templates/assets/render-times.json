@@ -5250,5 +5250,27 @@
   "job_secs": 125,
   "setup_min": 1.13,
   "story": "hfi-parity-gta6"
+ },
+ {
+  "name": "hfi-test-gta6-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-24T02:04Z",
+  "stages": {
+   "checks": 0.2,
+   "montage": 10.6,
+   "text": 13.2,
+   "audio": 0.2,
+   "outro": 19.0
+  },
+  "total": 43.1,
+  "lane": "runner",
+  "queued_at": "2026-10-24T02:03Z",
+  "finished_at": "2026-10-24T02:04Z",
+  "render_min": 0.72,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 121,
+  "setup_min": 3.57,
+  "story": "hfi-test-gta6"
  }
 ]
