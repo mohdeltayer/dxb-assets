@@ -1,0 +1,166 @@
+{
+ "name": "ffxiv-compensation-free-day",
+ "out": "cards/2026-10/ffxiv-compensation-free-day-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "ffxiv-dt-launch.mp4",
+   "steam": 2649240,
+   "trailer": "FINAL FANTASY XIV: DAWNTRAIL Launch Trailer - ESRB",
+   "start": 0,
+   "seconds": 200
+  }
+ ],
+ "shots": [
+  [
+   "ffxiv-dt-launch.mp4",
+   28.8,
+   3.6,
+   [
+    [
+     0.0,
+     0.45
+    ],
+    [
+     0.9,
+     0.5
+    ],
+    [
+     2.3,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ffxiv-dt-launch.mp4",
+   145.0,
+   4.3,
+   [
+    [
+     0.0,
+     0.304
+    ],
+    [
+     0.994,
+     0.514
+    ],
+    [
+     3.463,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ffxiv-gfx-day.png",
+   0,
+   3.5,
+   null
+  ],
+  [
+   "ffxiv-dt-launch.mp4",
+   10.6,
+   4.2,
+   [
+    [
+     0.0,
+     0.45
+    ],
+    [
+     1.294,
+     0.5
+    ],
+    [
+     4.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ffxiv-dt-launch.mp4",
+   66.0,
+   2.0,
+   [
+    [
+     0.0,
+     0.32
+    ]
+   ]
+  ],
+  [
+   "ffxiv-dt-launch.mp4",
+   175.0,
+   2.2,
+   [
+    [
+     0.0,
+     0.643
+    ],
+    [
+     1.124,
+     0.564
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "أُوقف الدخول الجديد نحو يوم\nبسبب ثغرة في PHP",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "التعويض لكل حساب مشترك\nفي 21 أو 22 أكتوبر",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   5,
+   [
+    [
+     "ويكتمل المنح\nخلال يومين إلى ثلاثة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "headline": "تعويض مجاني\nللاعبي Final Fantasy XIV",
+ "label": "رسمي",
+ "source": "سكوير إنكس",
+ "date": "24 Oct 2026",
+ "theme": "stylized",
+ "style": "glow",
+ "template": "clipcard",
+ "track": [
+  "ffxiv-dt-launch.mp4",
+  54.5
+ ],
+ "gfx": [
+  {
+   "file": "ffxiv-gfx-day.png",
+   "kind": "fact",
+   "value": "يوم واحد",
+   "label": "يُضاف إلى الاشتراك مجانًا",
+   "note": "من 28 أكتوبر · حسب سكوير إنكس (Square Enix)"
+  }
+ ],
+ "ground_footage": [
+  "ffxiv-dt-launch.mp4",
+  124.0
+ ]
+}
