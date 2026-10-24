@@ -339,7 +339,7 @@ SAMPLES = {
     'pbz': {
         'job': 'phantom-blade-zero-launch-trailer-gulf-prices.json',
         'published': 'cards/2026-10/phantom-blade-zero-launch-trailer-gulf-prices-reel-v1.mp4',
-        'title': 'B. Release with the WHERE AND HOW MUCH frame (family 7): Phantom Blade Zero, published 22 Oct',
+        'title': 'B. Release with the WHERE AND HOW MUCH frame (family 7): Phantom Blade Zero, 22 Oct',
         'headlines': ['أسبوع على Phantom Blade Zero\nوهذا سعرها في الإمارات والسعودية',
                       'أسبوع على Phantom Blade Zero\nوهذا سعرها في الخليج',
                       'موعد Phantom Blade Zero\nوسعرها في الخليج'],
@@ -471,7 +471,8 @@ def _header(title, path):
     import fast_ar as A
     im = Image.new('RGB', (1080, 116), (20, 19, 50))
     d = ImageDraw.Draw(im)
-    d.text((540, 36), title, font=A.F('Bold', 30), fill=(244, 243, 255), anchor='mm')
+    size = next(z for z in (30, 28, 26, 24, 22, 20) if d.textlength(title, font=A.F('Bold', z)) <= 1040)
+    d.text((540, 36), title, font=A.F('Bold', size), fill=(244, 243, 255), anchor='mm')
     d.text((270, 92), 'Published', font=A.F('Medium', 28), fill=(201, 200, 230), anchor='mm')
     d.text((810, 92), 'Design pass (pilot)', font=A.F('Medium', 28), fill=(40, 182, 246), anchor='mm')
     d.line([(540, 70), (540, 116)], fill=(63, 61, 168), width=2)

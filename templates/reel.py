@@ -571,7 +571,9 @@ def strip_layer(items, path, theme='cold', skin=None):
     x0, x1, y0, y1 = L, W - R, STRIP_TOP, STRIP_BOTTOM
     if x0 < G.SAFE_LEFT or x1 > W - G.SAFE_RIGHT or y1 > G.SAFE_BOTTOM or y0 < G.SAFE_TOP:
         raise ValueError(f'the strip ({x0}-{x1}, {y0}-{y1}) leaves the safe zone')
-    n = len(items); cw = (x1 - x0) / n; room = cw - 28
+    # design pass (pilot, 24 Oct 2026): the value may use the column to 8 px of its rules (was 14 px), so a value
+    # such as «99.99 دولار» in a three-item strip takes the next size up instead of staying at 48
+    n = len(items); cw = (x1 - x0) / n; room = cw - 16
     probe = ImageDraw.Draw(Image.new('L', (W, H)))
 
     def vwidth(v, size):               # (width, symbol width) of a value at a size
