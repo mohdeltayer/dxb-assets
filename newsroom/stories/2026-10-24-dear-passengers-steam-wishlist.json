@@ -1,0 +1,70 @@
+{
+ "id": "2026-10-24-dear-passengers-steam-wishlist",
+ "title": "Dear Passengers (FLEXUS) is third on Steam's most-wishlisted chart; supports Arabic; 2026",
+ "category": "numbers",
+ "status": "scheduled",
+ "genre": [
+  "indie"
+ ],
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Steam store page, Dear Passengers (app 4534960)",
+   "url": "https://store.steampowered.com/app/4534960/",
+   "time": "2026-10-24T15:09Z"
+  },
+  {
+   "role": "primary",
+   "name": "Steam search, sorted by most wishlisted (filter=popularwishlist)",
+   "url": "https://store.steampowered.com/search/?filter=popularwishlist",
+   "time": "2026-10-24T15:09Z"
+  }
+ ],
+ "claims": [
+  {
+   "text": "Third in Steam's most-wishlisted ordering (after Deadlock and Light No Fire)",
+   "status": "verified",
+   "source": "Steam search popularwishlist, 14:3xZ and 15:09Z"
+  },
+  {
+   "text": "Supports Arabic (interface and subtitles; no audio mark)",
+   "status": "verified",
+   "source": "Steam appdetails supported_languages"
+  },
+  {
+   "text": "Release 2026, developer and publisher FLEXUS, single-player and online co-op",
+   "status": "verified",
+   "source": "Steam appdetails"
+  }
+ ],
+ "why": "Fun co-op game climbing Steam's wishlists with Arabic support; fills 23:00 Dubai on a news-thin Saturday.",
+ "drafts": {
+  "headline": "أسوأ شركة طيران في العالم\nبين أكثر ألعاب Steam انتظارًا",
+  "lines": [
+   "في Dear Passengers تقود الطائرة\nويخدم أصدقاؤك الركاب",
+   "لكن الطائرة تتفكك في الجو\nوسلامة الركاب في آخر القائمة",
+   "وهي ثالث أكثر الألعاب\nفي قوائم الرغبات على Steam",
+   "وتدعم اللغة العربية\nوتصدر عام 2026"
+  ],
+  "x": "لعبة عن «أسوأ شركة طيران في العالم» هي ثالث أكثر الألعاب إضافةً إلى قوائم الرغبات على Steam، وتدعم العربية.",
+  "threads": "لعبة عن «أسوأ شركة طيران في العالم» هي ثالث أكثر الألعاب إضافةً إلى قوائم الرغبات على Steam، وتدعم العربية.\n\nالمصدر: صفحة اللعبة وترتيب المتجر على Steam",
+  "follow_up": {
+   "x": "المصدر: صفحة Dear Passengers على Steam\nhttps://store.steampowered.com/app/4534960/",
+   "instagram": "المصدر: صفحة اللعبة وترتيب الأكثر إضافة إلى قوائم الرغبات على Steam، 24 أكتوبر"
+  }
+ },
+ "notes": [
+  "Brief: trailer template (fun/oddity family with a ranking fact), chip أرقام, playful, style frame. Hook: the wide-eyed passenger close-up. Sensitive: none. Footage: FLEXUS's Steam trailer (1080p). Sound: our bed (neon_b): character voice lines run through the trailer (Pedro, pilots, passengers); no 20 s stretch without speech.",
+  "Grammar stage 15:05Z: «ثالث أكثر لعبة» to «ثالث أكثر الألعاب» (an elative before a bare singular needs a tamyiz); «ليست أولوية» to «في آخر القائمة» (Steam: 'barely makes the list'); «تصدر في 2026» to «عام 2026». DeepL 15:10Z: back-check keeps meaning; forward pass gave «أكثر الألعاب المضافة إلى قوائم الرغبات», taken as «إضافةً إلى» in the caption and X text.",
+  "Director: v1 hook drifted into an empty aisle and a pickaxe shot read as a blue blob (fixed v2); v3 text changes; round 2 PASS. Gate 15:09Z: rank still third, Arabic listed, release 2026. Exit A (Steam's own data), chip أرقام.",
+  "Verification note: the Xbox catalog's SupportedLanguages field lists Arabic for GTA VI, Starfield and GTA V alike; it is placeholder data and never evidence of Arabic support."
+ ],
+ "reel": "cards/2026-10/dear-passengers-steam-wishlist-reel-v3.mp4",
+ "posts": [
+  "scheduled in Publer 15:10Z for 19:00Z (23:00 Dubai): Instagram Reel (Dubai location, source comment), X (source reply), Threads; labels tpl:trailer, skin:house, sound:bed, genre:indie"
+ ],
+ "approved": "go: rolling queue (evergreen fill; Mohammad 'Fill it tonight', 10:19Z)",
+ "times": {
+  "go": "2026-10-24T15:10Z"
+ }
+}
