@@ -7082,5 +7082,42 @@
   "job_secs": 328,
   "setup_min": 1.23,
   "story": "tomb-raider-legacy-of-atlantis-length"
+ },
+ {
+  "name": "steam-scream-v-starts-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T06:03Z",
+  "stages": {
+   "checks": 5.2,
+   "montage": 53.7,
+   "text": 55.2,
+   "audio": 1.1,
+   "outro": 48.3
+  },
+  "total": 163.5,
+  "lane": "runner",
+  "queued_at": "2026-10-25T05:58:30Z",
+  "finished_at": "2026-10-25T06:03Z",
+  "render_min": 2.73,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 13.2,
+   "audio_secs": 40.4,
+   "music_pct": 32.8,
+   "leak_pct": 1.8,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "reason": "music only 32.8% of the track (< 40.0%)",
+   "secs": 18.3
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 253,
+  "setup_min": 1.18,
+  "story": "steam-scream-v-starts"
  }
 ]
