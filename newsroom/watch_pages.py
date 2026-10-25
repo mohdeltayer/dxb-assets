@@ -29,7 +29,7 @@ UA = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
 PAGES = [
     ('Nintendo US', 'https://www.nintendo.com/us/whatsnew/', r'nintendo\.com/us/whatsnew/[^/?#]+/?$', 5),
     ('Capcom IR', 'https://www.capcom.co.jp/ir/english/news/', r'capcom\.co\.jp/ir/english/news/html/e\d+\.html$', 5),
-    ('Square Enix HD', 'https://www.hd.square-enix.com/eng/news/', r'hd\.square-enix\.com/eng/news/(pdf/|20)[^"]+', 3),
+    ('Square Enix HD', 'https://www.hd.square-enix.com/eng/news/', r'hd\.square-enix\.com/eng/news/pdf/[^/]+\.pdf$', 3),
     ('Bandai Namco', 'https://www.bandainamcoent.com/news', r'bandainamcoent\.com/news/[a-z0-9-]+$', 3),
     ('Konami JP', 'https://www.konami.com/games/jp/ja/topics/', r'konami\.com/games/jp/ja/topics/\d+/?$', 3),
     ('EA', 'https://www.ea.com/news', r'ea\.com/news/[a-z0-9-]+$', 5),
