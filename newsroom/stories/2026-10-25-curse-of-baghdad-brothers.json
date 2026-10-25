@@ -2,7 +2,7 @@
  "id": "2026-10-25-curse-of-baghdad-brothers",
  "title": "Curse of Baghdad: three brothers finish their game after losing both parents during development (Hexonine Games, Steam 19 Oct)",
  "game": "Curse of Baghdad",
- "status": "rendering on the runner (v1)",
+ "status": "v2 rendered and passed director QA; scheduling",
  "chip": "رسمي",
  "template": "trailer",
  "skin": "house",
@@ -38,7 +38,7 @@
   "headline": "ثلاثة إخوة أكملوا لعبتهم\nبعد رحيل والديهم",
   "x": "ثلاثة إخوة فقدوا والديهم خلال تطوير لعبتهم Curse of Baghdad، وأكملوها حتى صدرت على Steam، حسب منشور استوديو هيكسونين جيمز (Hexonine Games).",
   "threads": "ثلاثة إخوة فقدوا والديهم خلال تطوير لعبتهم Curse of Baghdad، وأكملوها حتى صدرت على Steam، حسب منشور استوديو هيكسونين جيمز (Hexonine Games).\n\nالمصدر: منشور استوديو هيكسونين جيمز على X ومتجر Steam",
-  "instagram": "ثلاثة إخوة أكملوا لعبة Curse of Baghdad بعد أن فقدوا والديهم خلال تطويرها.\n\nيقف خلف اللعبة استوديو هيكسونين جيمز (Hexonine Games)، الذي أسسه الإخوة الثلاثة أحمد ومحمد وعبدالله معاوية، حسب موقع سعودي جيمر (Saudi Gamer). وكتب الاستوديو أن فكرة اللعبة بدأت من والدهم، وأنهم فقدوا والدتهم ووالدهم خلال التطوير: «تمنّينا أن يكونا معنا لنريهما ما صنعناه».\n\nوصدرت اللعبة على Steam في 19 أكتوبر بواجهة وترجمة عربية، وسعرها في الإمارات 27.49 درهمًا، وهي لعبة تصويب تكتيكية بمنظور علوي تدور في بغداد، يواجه فيها ضابط كندي وضابط عراقي وصحفية لعنة قديمة، حسب وصف الاستوديو.\n\n#ألعاب #أخبار_الألعاب #CurseOfBaghdad #Steam",
+  "instagram": "ثلاثة إخوة أكملوا لعبة Curse of Baghdad بعد أن فقدوا والديهم خلال تطويرها.\n\nيقف خلف اللعبة استوديو هيكسونين جيمز (Hexonine Games)، الذي أسسه الإخوة الثلاثة أحمد ومحمد وعبدالله معاوية، حسب موقع سعودي جيمر (Saudi Gamer). وكتب الاستوديو أن فكرة اللعبة بدأت من والدهم، وأنهم فقدوا والدتهم ووالدهم خلال التطوير: «تمنّينا أن يكونا معنا لنريهما ما صنعناه».\n\nوصدرت اللعبة على Steam في 19 أكتوبر بواجهة وترجمة عربية، وسعرها في الإمارات 27.49 درهمًا، و24.74 درهمًا بخصم 10 بالمئة حاليًا، وهي لعبة تصويب تكتيكية بمنظور علوي تدور في بغداد، يواجه فيها ضابط كندي وضابط عراقي وصحفية لعنة قديمة، حسب وصف الاستوديو.\n\n#ألعاب #أخبار_الألعاب #CurseOfBaghdad #Steam",
   "ig_comment": "المصدر: منشور استوديو هيكسونين جيمز (Hexonine Games) على X، 23 أكتوبر 2026، ومتجر Steam",
   "x_reply": "المصدر: https://x.com/hexonine/status/2113772393202143588"
  },
@@ -46,7 +46,75 @@
   "brief": "Family 4 people story without a photo (no official photo of the brothers; the people rule's fallback: their work with the name in the lines). Hook: the team in front of the Canadian and Iraqi flags. Lines: the father's idea, the loss, their own words, out on Steam with Arabic. Trailer template, about 20 s, trailer music (tonal, flatness median 0.066).",
   "first_report": "Hexonine Games' own X post, 23 Oct; Saudi Gamer 25 Oct 09:23Z; regional story the wider press missed, so the 24-hour rule's exception applies",
   "deepl": "forward pass on the whole story; DeepL used أشقاء and لعبة إطلاق نار، kept إخوة (the brothers' own word) and لعبة تصويب. Back-check matches every fact.",
-  "grammar": "no required edits (agreement of يكونا/لنريهما dual; quotation kept as written by the studio)"
+  "grammar": "no required edits (agreement of يكونا/لنريهما dual; quotation kept as written by the studio)",
+  "gate": "gate 10:52Z: Steam app 4841390 (cc=ae): released 19 Oct 2026, 27.49 AED, 24.74 AED at 10% off now; Arabic listed; caption updated with the current discount."
  },
- "approved": null
+ "approved": null,
+ "director_model": "opus (main session; first Reel under the tier rule, done before the switch)",
+ "director_qa": {
+  "version": "v2",
+  "shots": [
+   [
+    "0-1.6",
+    "soldiers lineup (cover)",
+    "PASS",
+    "faces and Iraqi flag read at grid size; headline clear"
+   ],
+   [
+    "1.6-3.4",
+    "laser corridor",
+    "PASS",
+    "under the headline"
+   ],
+   [
+    "3.4-5.4",
+    "blue warehouse fight",
+    "PASS",
+    "replaces the palm (v1)"
+   ],
+   [
+    "5.4-7.3",
+    "yellow ring arena",
+    "PASS",
+    ""
+   ],
+   [
+    "7.3-9.7",
+    "red arena",
+    "PASS",
+    "game's own floating Arabic status label touches the left edge for 0.3 s; in-game pop-up, not the story"
+   ],
+   [
+    "9.7-11.4",
+    "light-lined arena",
+    "PASS",
+    "replaces the bare yellow floor (v1)"
+   ],
+   [
+    "11.4-13.3",
+    "red room",
+    "PASS",
+    "replaces the results screen whose Arabic text was cut by the crop (v1)"
+   ],
+   [
+    "13.3-15.6",
+    "laser rows",
+    "PASS",
+    "smear flag waived after a frame-by-frame look (content)"
+   ],
+   [
+    "15.6-17.2",
+    "orange-ring arena",
+    "PASS",
+    "game's HUD panel resizes at the bottom; content"
+   ],
+   [
+    "17.2-19.4",
+    "soldiers walking at sunset",
+    "PASS",
+    "closing picture"
+   ]
+  ],
+  "reel": "PASS: cover readable, 19.4 s, a change every 2 s, closes on a picture, trailer music from 23.4 s (speech none), decode clean on the final mp4"
+ }
 }
