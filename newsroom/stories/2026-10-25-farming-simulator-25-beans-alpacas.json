@@ -2,7 +2,7 @@
  "id": "2026-10-25-farming-simulator-25-beans-alpacas",
  "title": "Farming Simulator 25: Beans & Alpacas expansion out 27 Oct (coffee, alpacas, Brazil-inspired Catuaí; Steam UAE 124 AED, 10% pre-order)",
  "game": "Farming Simulator 25",
- "status": "rendering on the runner (v1)",
+ "status": "scheduled (v2) in Publer 09:30Z (13:30 Dubai): Instagram (Reel, Dubai location, source comment), X (source reply), Threads (source line)",
  "chip": "رسمي",
  "template": "split",
  "skin": "house",
@@ -33,7 +33,7 @@
   "headline": "البن والألبكة\nفي Farming Simulator 25",
   "x": "تصل توسعة Beans & Alpacas للعبة Farming Simulator 25 يوم 27 أكتوبر بمزارع للبن والألبكة، حسب شركة جاينتس سوفتوير (GIANTS Software).",
   "threads": "تصل توسعة Beans & Alpacas للعبة Farming Simulator 25 يوم 27 أكتوبر بمزارع للبن والألبكة، حسب شركة جاينتس سوفتوير (GIANTS Software).\n\nالمصدر: جاينتس سوفتوير ومتجر Steam، 25 أكتوبر 2026",
-  "instagram": "تصل توسعة Beans & Alpacas للعبة Farming Simulator 25 يوم 27 أكتوبر، وتأخذ اللاعبين إلى مزارع البن.\n\nأعلنت شركة جاينتس سوفتوير (GIANTS Software) أن التوسعة تضيف منطقة جديدة باسم Catuaí مستوحاة من ريف البرازيل، بمدرجات للبن وتربة حمراء وتلال خضراء.\n\nوتتيح زراعة البن وتربية الألبكة وأبقار البراهمان، مع سلاسل إنتاج جديدة وأكثر من 25 آلة جديدة.\n\nوسعرها على Steam في الإمارات 124 درهمًا، والحجز المسبق بخصم 10% قبل صدورها، وتصدر على PS5 وXbox Series X|S والحاسب.\n\n#ألعاب #أخبار_الألعاب #FarmingSimulator25 #FS25",
+  "instagram": "تصل توسعة Beans & Alpacas للعبة Farming Simulator 25 يوم 27 أكتوبر، وتأخذ اللاعبين إلى مزارع البن.\n\nأعلنت شركة جاينتس سوفتوير (GIANTS Software) أن التوسعة تضيف منطقة جديدة باسم Catuaí مستوحاة من ريف البرازيل، بمدرجات للبن وتربة حمراء وتلال خضراء.\n\nوتتيح زراعة البن وتربية الألبكة وأبقار البراهمان، مع سلاسل إنتاج جديدة وأكثر من 25 آلة جديدة.\n\nوسعرها على Steam في الإمارات 124 درهمًا، والحجز المسبق بخصم 10 بالمئة قبل صدورها، وتصدر على PS5 وXbox Series X|S والحاسب.\n\n#ألعاب #أخبار_الألعاب #FarmingSimulator25 #FS25",
   "ig_comment": "المصدر: جاينتس سوفتوير (GIANTS Software) ومتجر Steam، 25 أكتوبر 2026",
   "x_reply": "المصدر: https://store.steampowered.com/app/4404070/"
  },
@@ -41,7 +41,52 @@
   "brief": "Gap filler for 13:30 Dubai (news thin on Sunday). Family 7 release: alpacas on the cover (recognisable, moving), coffee sprayer under the headline, farm and alpacas under the region and animal lines, New Holland and John Deere under the machines line, the colonial church as the closing picture. Strip: date, Steam UAE price (dirham sign). About 21 s before the end card.",
   "first_report": "date announced earlier (pre-release show 22 Oct); a release-week item, not a fresh reveal; posted as the expansion lands in two days",
   "deepl": "forward pass on the whole story; terraces as مصاطب (DeepL) vs مدرجات (kept, the usual Arabic for farm terraces); 'pre-orders get 10% off' rendered three ways (خصم بنسبة 10% على الطلبات المسبقة), house wording الحجز المسبق بخصم 10%. Back-check matches every fact.",
-  "grammar": "no required edits (agreement of توسعة/تتيح feminine; درهمًا tamyiz; first words Arabic; hashtags line starts #ألعاب)."
+  "grammar": "no required edits (agreement of توسعة/تتيح feminine; درهمًا tamyiz; first words Arabic; hashtags line starts #ألعاب).",
+  "director_qa": [
+   [
+    "v1",
+    "0 to 22.9 s",
+    "FIX",
+    "grid tile cut the alpaca's head at the right edge; «10%» at the line end drew as «%10»; fur close-up under line 2 unreadable"
+   ],
+   [
+    "v2 shot 0 alpacas",
+    "0.0",
+    "PASS",
+    "grid tile: white alpaca full head under the headline"
+   ],
+   [
+    "v2 shots 1 to 3 sprayer, coffee rows, farm",
+    "1.6",
+    "PASS",
+    "coffee under the headline and the region line"
+   ],
+   [
+    "v2 shots 4 to 5 alpacas in the field, farmer and alpaca",
+    "8.4",
+    "PASS",
+    "animals line"
+   ],
+   [
+    "v2 shots 6 to 7 New Holland, John Deere",
+    "12.3",
+    "PASS",
+    "machines line"
+   ],
+   [
+    "v2 shots 8 to 9 sprayer, colonial church",
+    "17.1",
+    "PASS",
+    "pre-order line, «10 بالمئة» reads right; closing picture"
+   ],
+   [
+    "Reel",
+    "20.1 s + end card",
+    "PASS",
+    "trailer music one stretch, speech none; decode clean, smear none"
+   ]
+  ],
+  "source_kind": "1080p60 Steam trailer (gamescom, 5.9 Mbps), x1.78"
  },
- "approved": null
+ "approved": "go: rolling queue (gap filler, nothing else ready for 13:30 Dubai); gate 08:28Z: GIANTS news page (27 Oct launch, 10% pre-order) and Steam AE (124 AED, 27 Oct) read; preview sent 08:50Z"
 }
