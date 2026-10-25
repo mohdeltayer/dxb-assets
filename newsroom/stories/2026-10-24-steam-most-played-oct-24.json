@@ -2,7 +2,7 @@
  "id": "2026-10-24-steam-most-played-oct-24",
  "title": "Steam's most-played games tonight (Valve's 24 h peaks)",
  "game": "multi",
- "status": "built, held",
+ "status": "v6 rendering on the runner",
  "chip": "أرقام",
  "template": "list",
  "skin": "house",
@@ -15,12 +15,15 @@
   {
    "kind": "primary",
    "who": "Valve, ISteamChartsService/GetGamesByConcurrentPlayers, read 17:32Z: CS2 peak 1,347,645; Dota 2 1,082,992; PUBG 817,009; AION 2 256,271; 5th Deadlock 233,703 (no trailer, dropped to a top four)"
+  },
+  {
+   "kind": "primary",
+   "who": "Valve, ISteamChartsService/GetGamesByConcurrentPlayers, read 02:10Z 25 Oct: CS2 peak 1,347,645; Dota 2 1,082,992; PUBG 817,009; 4th Deadlock 257,777 (no trailer); 5th AION 2 256,271. Cut to a top three (v6)"
   }
  ],
  "drafts": {
   "headline": "لعبتان على Steam\nتجمعان مليوني لاعب",
   "lines": [
-   "رابعًا: AION 2\nبنحو 256 ألف لاعب",
    "ثالثًا: PUBG: BATTLEGROUNDS\nبنحو 817 ألف لاعب",
    "ثانيًا: Dota 2\nبأكثر من مليون لاعب",
    "وفي الصدارة Counter-Strike 2\nبنحو 1.3 مليون لاعب"
@@ -29,7 +32,8 @@
  },
  "notes": [
   "v3 top four after Apex left the top five; v4 headline alone to 3.75 s; v5 last PUBG shot trimmed (flash at 11.0 s). Director pass on v5: clean.",
-  "Held: SteamOS (Valve) posts at 23:45 Dubai and CS2 and Dota 2 are Valve games, so no back to back; refresh the figures and re-render before it posts (tomorrow morning)."
+  "Held: SteamOS (Valve) posts at 23:45 Dubai and CS2 and Dota 2 are Valve games, so no back to back; refresh the figures and re-render before it posts (tomorrow morning).",
+  "v6 (25 Oct 02:12Z): Deadlock passed AION 2 for fourth in the 24 h peaks and has no trailer, so the Reel is a top three (CS2, Dota 2, PUBG); AION shots dropped, the Dota hook shot lengthened to 2.3 s so the headline stands alone to 3.75 s; date 25 Oct. For the 08:00 Dubai slot; peaks re-read at the gate."
  ],
  "approved": "not scheduled: held for tomorrow with refreshed figures (no two Valve posts in a row)"
 }
