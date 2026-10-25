@@ -7308,5 +7308,43 @@
   "job_secs": 315,
   "setup_min": 1.18,
   "story": "farming-simulator-25-beans-alpacas"
+ },
+ {
+  "name": "guardians-of-the-galaxy-turns-5-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T10:15Z",
+  "stages": {
+   "checks": 5.2,
+   "montage": 43.2,
+   "text": 53.4,
+   "audio": 1.2,
+   "outro": 59.7
+  },
+  "total": 162.8,
+  "lane": "runner",
+  "queued_at": "2026-10-25T10:10:59Z",
+  "finished_at": "2026-10-25T10:15Z",
+  "render_min": 2.71,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 19.1,
+   "audio_secs": 65.7,
+   "music_pct": 76.6,
+   "leak_pct": 0.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 10,
+   "mix_secs": 5.6,
+   "secs": 25.3
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 268,
+  "setup_min": 1.27,
+  "story": "guardians-of-the-galaxy-turns-5"
  }
 ]
