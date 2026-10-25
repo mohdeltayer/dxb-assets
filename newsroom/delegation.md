@@ -42,7 +42,10 @@ For anything first seen in an Arabic outlet, find and give its first report's
 time; over 24 hours old at the origin goes under "stale relay", not in the
 lists (Mohammad, 17 Oct 2026).
 
-**Director (opus; advisor, 21 Oct 2026).** A separate agent, after the draft
+**Director (advisor, 21 Oct 2026; model by tier from 25 Oct, Phase 1 step 4).** Model: sonnet for routine
+and evergreen Reels; opus for fresh reveals, anything with speech (voiced or subtitled), debates and the
+first Reel of a new format or template. The story file records it as `"director_model"`, so the week's
+quality can be compared. A separate agent, after the draft
 render (or the runner render) and before the real encode or queuing. Inputs:
 the job file, the source footage in uploads, the Reel's 4 fps strip
 (`decodecheck.py <mp4> --strip`, or the runner's `<name>-dense.jpg`), the
