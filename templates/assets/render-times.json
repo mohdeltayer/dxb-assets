@@ -7536,5 +7536,42 @@
   "job_secs": 241,
   "setup_min": 1.02,
   "story": "skyrim-special-edition-turns-10"
+ },
+ {
+  "name": "call-of-duty-infinite-warfare-turns-10-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T12:25Z",
+  "stages": {
+   "checks": 3.9,
+   "montage": 37.8,
+   "text": 21.9,
+   "audio": 0.7,
+   "outro": 30.0
+  },
+  "total": 94.3,
+  "lane": "runner",
+  "queued_at": "2026-10-25T12:22:10Z",
+  "finished_at": "2026-10-25T12:25Z",
+  "render_min": 1.57,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 8.3,
+   "audio_secs": 49.9,
+   "music_pct": 15.0,
+   "leak_pct": 0.9,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "reason": "music only 15.0% of the track (< 40.0%)",
+   "secs": 10.4
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 170,
+  "setup_min": 1.0,
+  "story": "call-of-duty-infinite-warfare-turns-10"
  }
 ]
