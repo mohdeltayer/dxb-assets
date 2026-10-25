@@ -2,7 +2,7 @@
  "id": "2026-10-25-dragon-ball-xenoverse-2-10th-anniversary",
  "title": "Dragon Ball Xenoverse 2 turns 10: Final Festival of Universes from 30 Oct, rewards carry to Xenoverse 3",
  "game": "Dragon Ball Xenoverse 2",
- "status": "rendering on the runner (v1)",
+ "status": "scheduled (v2) in Publer 08:30Z (12:30 Dubai): Instagram (Reel, Dubai location, source comment), X (source reply), Threads (source line)",
  "chip": "رسمي",
  "template": "trailer",
  "skin": "house",
@@ -39,7 +39,58 @@
   "first_report": "Bandai Namco official posts, 25 Oct 07:00Z (fresh)",
   "deepl": "forward pass on the whole story; '25 times more than usual' rendered 25 ضعفًا عن المعتاد (kept in the caption; screen keeps مضاعفة 25 مرة); 'acrylic figures' as تمثالًا أكريليكيًا, house pick مجسمات أكريليك. Back-check AR to EN matches every fact.",
   "grammar": "no required edits; optional: screen مضاعفة 25 مرة vs caption 25 ضعفًا, both correct.",
-  "render_v1_try1": "failed text check: headline «عشر سنوات على Xenoverse 2 / ومكافآت للجزء الثالث» needed three lines at 72 px; cut."
+  "render_v1_try1": "failed text check: headline «عشر سنوات على Xenoverse 2 / ومكافآت للجزء الثالث» needed three lines at 72 px; cut.",
+  "director_qa": [
+   [
+    "v1",
+    "0 to 22.1 s",
+    "FIX",
+    "white flash frames under line 1 (6.6 to 7.4 s, source 23.0 to 23.8) and line 2 (9 to 11 s, source 26.2 on); cover and other shots PASS"
+   ],
+   [
+    "v2 shot 0 Goku field",
+    "0.0",
+    "PASS",
+    "grid tile: Goku full figure clear of the headline, readable at grid size"
+   ],
+   [
+    "v2 shot 1 Golden Frieza",
+    "2.2",
+    "PASS",
+    "recognisable villain under the headline"
+   ],
+   [
+    "v2 shots 2 to 3 Goku, Piccolo, Zarbon, Dodoria, Cell, Gohan",
+    "3.6",
+    "PASS",
+    "line 1 on a run of characters, 4.8 s"
+   ],
+   [
+    "v2 shots 4 to 5 Buu, staff fighter",
+    "8.4",
+    "PASS",
+    "Star Coins line, no white frames"
+   ],
+   [
+    "v2 shots 6 to 7 fights, Bardock",
+    "11.4",
+    "PASS",
+    "outfit and medal line; Bardock face holds"
+   ],
+   [
+    "v2 shots 8 to 9 fights, Super Saiyan",
+    "16.0",
+    "PASS with note",
+    "closing frames are a bright fire blast with a figure; a picture, not a card"
+   ],
+   [
+    "Reel",
+    "20.3 s + end card",
+    "PASS",
+    "trailer music one stretch, speech none; decode clean, smear none; something changes every 1 to 3 s"
+   ]
+  ],
+  "source_kind": "1080p Steam trailer (launch trailer, 5.5 Mbps), x1.78"
  },
- "approved": null
+ "approved": "go: rolling queue (fresh official news, 07:00Z); gate 07:20Z: both Bandai Namco posts dated 25 Oct, no update notes, every on-screen fact matches; preview sent 07:50Z"
 }
