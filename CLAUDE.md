@@ -1658,6 +1658,13 @@ More variations (Mohammad, 2 Oct 2026: "Honestly, I like them all"):
   `live/` are not on disk; `git show HEAD:cards/...` fetches a file on demand,
   and renders run on the runner. The pilot worktrees were removed (their branches
   are on GitHub). In a new container, clone the same way.
+  Keep it slim (25 Oct 2026): a history command that reads file contents
+  (`git log --stat` or `-p`, `git show` of old commits, blame) makes the partial
+  clone download every media blob it touches; one `git log --stat` over the job
+  files pulled the clone back to 20 GB by 04:20Z and left 3 GB free. Read history
+  with `git log --format` (no stat), single files with `git show <rev>:<path>`, and
+  wider history from GitHub. If `.git` grows past a few GB, re-clone the same way
+  once everything is pushed (done 05:15Z).
 - Reels only (Mohammad, 30 Sep 2026): still cards on Instagram reach 1 to
   3 views where Reels reach about 1,000 (the WARDOGS Reel: 96% non-followers,
   mostly from the Reels tab), so every Digital Lounge Instagram post is a
