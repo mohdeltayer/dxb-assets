@@ -13,3 +13,4 @@ EA 21, Riot 9, Ubisoft 8, Bandai Namco 7, The Game Awards 3). Konami JP is drawn
 |---|---|---|---|---|
 | 11:23 | none new on the 10 pages (Konami read by eye: 1 static link) | 2 Famitsu articles new to its store (Kindle Gundam sale; Nintendo Museum restaurant preview, published 14 Oct): not news, both skipped | none | none (the two Famitsu links were already in watch-seen.json) |
 Fix after 11:23: Square Enix pattern matched year archive pages (/eng/news/2026/); now PDF releases only (the Watcher's note). Year-page entries dropped from page-watch-seen.json.
+| 11:59 | (Watcher not re-run this hour; script only) | none new; Konami needs a look | n/a | n/a |
