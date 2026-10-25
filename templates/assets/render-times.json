@@ -6934,5 +6934,42 @@
   "job_secs": 263,
   "setup_min": 1.03,
   "story": "steam-most-played-oct-24"
+ },
+ {
+  "name": "mass-effect-universe-timelines-toutain-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T03:32Z",
+  "stages": {
+   "checks": 5.7,
+   "montage": 40.8,
+   "text": 47.4,
+   "audio": 1.0,
+   "outro": 39.2
+  },
+  "total": 134.1,
+  "lane": "runner",
+  "queued_at": "2026-10-25T03:27:15Z",
+  "finished_at": "2026-10-25T03:32Z",
+  "render_min": 2.24,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 8.5,
+   "audio_secs": 46.2,
+   "music_pct": 37.2,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "reason": "music only 37.2% of the track (< 40.0%)",
+   "secs": 12.4
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 310,
+  "setup_min": 0.95,
+  "story": "mass-effect-universe-timelines-toutain"
  }
 ]
