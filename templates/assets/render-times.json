@@ -7879,5 +7879,43 @@
   "job_secs": 226,
   "setup_min": 2.08,
   "story": "shenmue-3-enhanced-delay-early-2027"
+ },
+ {
+  "name": "shenmue-3-enhanced-delay-early-2027-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T19:47Z",
+  "stages": {
+   "checks": 3.2,
+   "montage": 33.6,
+   "text": 44.1,
+   "audio": 0.9,
+   "outro": 32.5
+  },
+  "total": 114.4,
+  "lane": "runner",
+  "queued_at": "2026-10-25T19:44:06Z",
+  "finished_at": "2026-10-25T19:47Z",
+  "render_min": 1.91,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 9.4,
+   "audio_secs": 48.6,
+   "music_pct": 56.0,
+   "leak_pct": 0.8,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 8,
+   "mix_secs": 3.6,
+   "secs": 13.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 195,
+  "setup_min": 1.08,
+  "story": "shenmue-3-enhanced-delay-early-2027"
  }
 ]
