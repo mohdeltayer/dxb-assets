@@ -7156,5 +7156,43 @@
   "job_secs": 181,
   "setup_min": 1.9,
   "story": "steam-scream-v-starts"
+ },
+ {
+  "name": "dragon-ball-xenoverse-2-10th-anniversary-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T07:29Z",
+  "stages": {
+   "checks": 5.7,
+   "montage": 66.5,
+   "text": 46.9,
+   "audio": 1.3,
+   "outro": 62.2
+  },
+  "total": 182.6,
+  "lane": "runner",
+  "queued_at": "2026-10-25T07:24:27Z",
+  "finished_at": "2026-10-25T07:29Z",
+  "render_min": 3.04,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 10.0,
+   "audio_secs": 44.6,
+   "music_pct": 68.7,
+   "leak_pct": 0.6,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 9,
+   "mix_secs": 4.2,
+   "secs": 14.8
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 273,
+  "setup_min": 1.37,
+  "story": "dragon-ball-xenoverse-2-10th-anniversary"
  }
 ]
