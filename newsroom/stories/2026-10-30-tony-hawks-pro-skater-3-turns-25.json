@@ -59,5 +59,37 @@
   "footage": "3 + 4 launch trailer (Steam 2545710), 1080p 5.84 Mbps, full frame, decode clean; source smear flag at the 72.2 s scene cut avoided by ending the warehouse shot at 71.9",
   "sound": "bed, see sound field; trailer audio checked twice (12 to 27 s held lyrics on the second pass)",
   "arabic": "grammar stage: no required edits; DeepL back-check keeps the meaning (third entry, 30 Oct 2001 PS2 North America, Neversoft and Activision, 2025 return with the fourth)"
- }
+ },
+ "director_qa": [
+  {
+   "round": 1,
+   "at": "2026-10-25T12:55Z",
+   "model": "opus (main session)",
+   "verdict": "FIX",
+   "table": [
+    [
+     "0 cover 0-0.9",
+     "FIX",
+     "v1 opened on a skater's torso and hand, no face; now the sunglasses skater grinding down the rail (47.2), full figure"
+    ],
+    [
+     "1-6 0.9-6.65",
+     "PASS",
+     "date line on the rooftop and puddle shots"
+    ],
+    [
+     "7-9 6.65-10.0",
+     "PASS",
+     "studio line on the columns grind and the rafters; leather close-up moved to shot 7"
+    ],
+    [
+     "11 closing 11.5-13.5",
+     "FIX",
+     "v1 held a motion-blurred orange ramp wall for 2 s under the closing line; now the pro skater on the cartoon stage (77.5), then Tony Hawk himself (80.05) as the closing picture"
+    ]
+   ],
+   "reel": "our bed (retro flavour allowed for on-this-day); 14.0 s story; stand-in credit on all shots",
+   "next": "v2 render, director looks at shots 0, 7, 11 and 12"
+  }
+ ]
 }
