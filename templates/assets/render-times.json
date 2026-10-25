@@ -7422,5 +7422,43 @@
   "job_secs": 290,
   "setup_min": 1.08,
   "story": "guardians-of-the-galaxy-turns-5"
+ },
+ {
+  "name": "curse-of-baghdad-brothers-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T10:50Z",
+  "stages": {
+   "checks": 5.3,
+   "montage": 43.7,
+   "text": 54.3,
+   "audio": 1.2,
+   "outro": 54.9
+  },
+  "total": 159.3,
+  "lane": "runner",
+  "queued_at": "2026-10-25T10:45:58Z",
+  "finished_at": "2026-10-25T10:50Z",
+  "render_min": 2.65,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 12.8,
+   "audio_secs": 42.2,
+   "music_pct": 95.4,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 10,
+   "mix_secs": 5.6,
+   "secs": 19.0
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 252,
+  "setup_min": 1.2,
+  "story": "curse-of-baghdad-brothers"
  }
 ]
