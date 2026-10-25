@@ -7232,5 +7232,43 @@
   "job_secs": 291,
   "setup_min": 1.17,
   "story": "dragon-ball-xenoverse-2-10th-anniversary"
+ },
+ {
+  "name": "farming-simulator-25-beans-alpacas-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T08:26Z",
+  "stages": {
+   "checks": 7.4,
+   "montage": 69.0,
+   "text": 64.3,
+   "audio": 1.3,
+   "outro": 65.9
+  },
+  "total": 208.0,
+  "lane": "runner",
+  "queued_at": "2026-10-25T08:21:27Z",
+  "finished_at": "2026-10-25T08:26Z",
+  "render_min": 3.47,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 15.8,
+   "audio_secs": 55.2,
+   "music_pct": 100.0,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 10,
+   "mix_secs": 6.7,
+   "secs": 23.0
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 330,
+  "setup_min": 1.18,
+  "story": "farming-simulator-25-beans-alpacas"
  }
 ]
