@@ -4,7 +4,7 @@
  "game": "Blue Archive",
  "category": "news",
  "tier": 1,
- "status": "building (runner render 15:21Z); preview to Mohammad before scheduling",
+ "status": "v2 rendering on the runner (15:54Z); preview to Mohammad next",
  "chip": "رسمي",
  "template": "clipcard",
  "skin": "house",
@@ -121,5 +121,52 @@
   "uncertain_cases": [],
   "note": "house precedent spelling نيكسون applied (was نكسون in the first draft)"
  },
- "deepl": "whole story forward (EN to AR) and every text back (AR to EN) 15:20Z: meaning holds; DeepL offers تُرحَّل for 'carry over', تنتقل kept as plainer; its Ustar for Yostar is a DeepL slip, not ours"
+ "deepl": "whole story forward (EN to AR) and every text back (AR to EN) 15:20Z: meaning holds; DeepL offers تُرحَّل for 'carry over', تنتقل kept as plainer; its Ustar for Yostar is a DeepL slip, not ours",
+ "director": {
+  "round_1_v1": [
+   [
+    "0-3.3 hook",
+    "PASS",
+    "face close-up readable as a grid tile, headline two lines, chip clear of the corner"
+   ],
+   [
+    "3.3-7.8 Nexon line",
+    "PASS",
+    "Tokyo skyline and city under the Japan line"
+   ],
+   [
+    "7.8-13.0 Yostar line",
+    "PASS",
+    "the cast; glasses girl from the Battle PV closes it"
+   ],
+   [
+    "13.0-16.2 card",
+    "PASS",
+    "72% card alone on the dimmed footage, no line under it"
+   ],
+   [
+    "16.2-19.5 Japan-only line",
+    "PASS",
+    "output smear flag at 16.9-18.0 looked at on the dense strip: clean line art"
+   ],
+   [
+    "19.5-24.5 carry-over line",
+    "PASS",
+    "in-game trio, gym, band, bedroom, phone of photos"
+   ],
+   [
+    "24.5-27.8 no-reason line",
+    "FIX",
+    "26 s: character in a black dress with a chest cut-out; replaced by the empty office (65.8 s) for an open-to-everyone account"
+   ],
+   [
+    "27.8-30.3 question",
+    "PASS",
+    "night city is the last picture before the end card"
+   ]
+  ],
+  "reel_checks": "first frame works at grid size; 30.3 s (story decides, six lines plus card); something new every 1 to 1.5 s, lines held for reading time; sound: 5th PV music as one stretch, speech none, audio split applied (music 100%, leak 0%); decode clean",
+  "verdict_v1": "FIX (one shot)",
+  "verdict_v2": "pending render"
+ }
 }
