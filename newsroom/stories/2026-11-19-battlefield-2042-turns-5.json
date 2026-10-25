@@ -67,5 +67,37 @@
   "25 Oct 12:55Z: brief. Family: release anniversary (on this day). Hook: the wingsuit soldier facing camera under the headline, then the pilot leaving the jet. Format trailer, opening beat the strongest moving shot. Cover: masked soldier at 39.0. Sound: the launch-accolade trailer's own music from 6.0 s, one stretch, speech none (checked). Key shot: the red sandstorm over the Doha towers (33.75) under the Doha line. Total 14.0 s before the end card. Shots: 39.0 wingsuit (cover), 13.5 pilot falls from the jet, 9.5 wingsuit dive (headline); 2.5 green-smoke landing, 8.3 street explosion, 10.9 jets over the desert (release line); 33.75 sandstorm, 27.75 desert drive (Doha line); 35.25 tornado with jet, 36.75 vehicle in the storm, 41.15 tornado over the city (tornado line). Quote cards and the logo slate kept out.",
   "Source: EA's Steam launch-accolade trailer, 1080p, 5.6 Mbps, decode clean.",
   "Arabic: grammar stage no required edits; line 3 rewritten verb-first («وتجتاح الأعاصير معارك») so it does not read as a second map; line 2 cut to «ومن خرائطها الدوحة» for reading time. DeepL forward picked تجتاح too (and ما يصل إلى, kept حتى); back-check meaning holds."
+ ],
+ "director_qa": [
+  {
+   "round": 1,
+   "at": "2026-10-25T13:05Z",
+   "model": "opus (main session)",
+   "verdict": "FIX",
+   "table": [
+    [
+     "0 cover 0-1.2",
+     "FIX",
+     "v1's frame 0 was the wingsuit soldier's chest with the head hidden under the headline; v2 opens on the pilot falling from the jet (13.5), jet and figure in frame"
+    ],
+    [
+     "4 street explosion 4.4-5.3",
+     "FIX",
+     "a white blast under the release line; replaced by the jungle tank shot (18.3); jets shot 0.2 s longer"
+    ],
+    [
+     "6-7 sandstorm and desert 7.5-10.4",
+     "PASS",
+     "Doha line over the red sandstorm and the towers"
+    ],
+    [
+     "8-10 tornadoes 10.4-14.0",
+     "PASS",
+     "closes on the tornado and the tower, a picture"
+    ]
+   ],
+   "reel": "14.0 s story; trailer music, speech none; nothing graphic",
+   "next": "v2 render; director looks at shots 0 to 5"
+  }
  ]
 }
