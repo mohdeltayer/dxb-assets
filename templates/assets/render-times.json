@@ -7727,5 +7727,43 @@
   "job_secs": 178,
   "setup_min": 1.0,
   "story": "tony-hawks-pro-skater-3-turns-25"
+ },
+ {
+  "name": "battlefield-2042-turns-5-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T13:10Z",
+  "stages": {
+   "checks": 4.8,
+   "montage": 35.4,
+   "text": 34.5,
+   "audio": 0.9,
+   "outro": 46.9
+  },
+  "total": 122.5,
+  "lane": "runner",
+  "queued_at": "2026-10-25T13:06:35Z",
+  "finished_at": "2026-10-25T13:10Z",
+  "render_min": 2.04,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 11.0,
+   "audio_secs": 36.0,
+   "music_pct": 47.3,
+   "leak_pct": 0.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 11,
+   "mix_secs": 4.1,
+   "secs": 15.6
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 202,
+  "setup_min": 1.25,
+  "story": "battlefield-2042-turns-5"
  }
 ]
