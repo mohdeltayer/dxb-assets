@@ -7765,5 +7765,43 @@
   "job_secs": 202,
   "setup_min": 1.25,
   "story": "battlefield-2042-turns-5"
+ },
+ {
+  "name": "blue-archive-japan-publisher-nexon-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T15:46Z",
+  "stages": {
+   "checks": 9.6,
+   "montage": 74.4,
+   "text": 81.6,
+   "audio": 1.6,
+   "outro": 69.9
+  },
+  "total": 237.1,
+  "lane": "runner",
+  "queued_at": "2026-10-25T15:40:36Z",
+  "finished_at": "2026-10-25T15:46Z",
+  "render_min": 3.95,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 14.1,
+   "audio_secs": 67.5,
+   "music_pct": 100.0,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 26,
+   "mix_secs": 6.8,
+   "secs": 21.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 413,
+  "setup_min": 1.4,
+  "story": "blue-archive-japan-publisher-nexon"
  }
 ]
