@@ -41,10 +41,17 @@ def _curl(args, key, workspace=None, timeout=240):
     return (int(code) if code.strip().isdigit() else 0), data
 
 
+def _why(data):
+    """Publer's own error text (it names the problem, never the key), cut short."""
+    if isinstance(data, dict) and data.get('errors'):
+        return '; '.join(str(e) for e in data['errors'])[:200]
+    return ''
+
+
 def workspace_id(key):
     code, data = _curl([f'{API}/workspaces'], key, timeout=30)
     if code != 200 or not isinstance(data, list) or not data:
-        return None, f'workspace lookup failed (HTTP {code})'
+        return None, f'workspace lookup failed (HTTP {code}) {_why(data)}'.strip()
     for w in data:
         if (w.get('name') or '').strip().lower() == WORKSPACE.lower():
             return w.get('id'), None
@@ -60,7 +67,7 @@ def upload(path, key, ws):
     mid = (data or {}).get('id') if isinstance(data, dict) else None
     if code in (200, 201) and mid:
         return mid, None
-    return None, f'upload failed (HTTP {code})'
+    return None, f'upload failed (HTTP {code}) {_why(data)}'.strip()
 
 
 def main(path, receipt):
