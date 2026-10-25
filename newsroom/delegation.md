@@ -248,7 +248,11 @@ the source link, Instagram a comment «المصدر: ...» with no link
 (`follow_up_comments`); Threads keeps the source in its text. Strongest
 non-urgent Reels wait for Thursday 17:00 to 21:00 or Friday 19:00 to 22:00
 Dubai. After the slot, `list_publer_posts` shows all three Published; a
-failure is rescheduled once, then reported with Publer's reason. Story file:
+failure is rescheduled once, then reported with Publer's reason. Once all
+three read Published, write the slot to dxb-queue `ops/heartbeat.json`
+(`last_published` UTC, `story`, `checked_at`) and push it: the stall alarm
+(dxb-queue `stall-alarm.yml`, 25 Oct 2026) pages Mohammad when it is over
+3 hours old between 08:00 and 02:00 Dubai. Story file:
 "scheduled in Publer HH:MMZ" with the platforms; ledger slot. No IDs or tokens
 in public files.
 Then `python3 newsroom/ledger.py genres 7` for the audit's one line, stories
