@@ -7008,5 +7008,42 @@
   "job_secs": 392,
   "setup_min": 1.1,
   "story": "mass-effect-universe-timelines-toutain"
+ },
+ {
+  "name": "tomb-raider-legacy-of-atlantis-length-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T05:13Z",
+  "stages": {
+   "checks": 5.9,
+   "montage": 56.8,
+   "text": 72.5,
+   "audio": 1.4,
+   "outro": 70.0
+  },
+  "total": 206.6,
+  "lane": "runner",
+  "queued_at": "2026-10-25T05:07:43Z",
+  "finished_at": "2026-10-25T05:13Z",
+  "render_min": 3.44,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 18.7,
+   "audio_secs": 66.2,
+   "music_pct": 19.4,
+   "leak_pct": 0.8,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "reason": "music only 19.4% of the track (< 40.0%)",
+   "secs": 24.8
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 325,
+  "setup_min": 1.15,
+  "story": "tomb-raider-legacy-of-atlantis-length"
  }
 ]
