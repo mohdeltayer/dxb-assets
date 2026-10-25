@@ -7119,5 +7119,42 @@
   "job_secs": 253,
   "setup_min": 1.18,
   "story": "steam-scream-v-starts"
+ },
+ {
+  "name": "steam-scream-v-starts-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T06:12Z",
+  "stages": {
+   "checks": 4.0,
+   "montage": 38.7,
+   "text": 34.0,
+   "audio": 0.7,
+   "outro": 33.5
+  },
+  "total": 110.9,
+  "lane": "runner",
+  "queued_at": "2026-10-25T10:08:32+04:00",
+  "finished_at": "2026-10-25T06:12Z",
+  "render_min": 1.85,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 9.0,
+   "audio_secs": 33.1,
+   "music_pct": 31.7,
+   "leak_pct": 2.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "reason": "music only 31.7% of the track (< 40.0%)",
+   "secs": 12.3
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 181,
+  "setup_min": 1.9,
+  "story": "steam-scream-v-starts"
  }
 ]
