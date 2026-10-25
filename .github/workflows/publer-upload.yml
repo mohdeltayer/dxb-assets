@@ -34,7 +34,8 @@ jobs:
       - name: Fetch the Reel
         run: |
           case "$REEL" in cards/*.mp4) ;; *) echo "not a Reel under cards/"; exit 1;; esac
-          git sparse-checkout add "$(dirname "$REEL")"
+          # only the Reel itself: adding its whole folder would download every Reel of the month
+          git sparse-checkout set --no-cone /templates/ "/$REEL"
           ls -la "$REEL"
       - name: Upload
         env:
@@ -49,6 +50,7 @@ jobs:
           for i in 1 2 3 4 5; do
             git fetch -q --depth=1 --filter=blob:none origin "$GITHUB_REF_NAME"
             git reset -q --hard "origin/$GITHUB_REF_NAME"
+            git sparse-checkout set --no-cone /templates/ "/$REEL" "/$receipt"
             cp "$RUNNER_TEMP/publer.json" "$receipt"
             git add --sparse -f "$receipt"
             git commit -q -m "Publer receipt $(basename "${REEL%.mp4}")"
