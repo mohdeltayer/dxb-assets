@@ -193,6 +193,7 @@ jobs:
       - name: Commit back
         run: |
           out=$(python -c "import json; print(json.load(open('$JOB'))['out'])")
+          echo "OUT=$out" >> "$GITHUB_ENV"
           stem="${out%.mp4}"; base="${stem%-reel-v*}"
           files="$out $base-strip.jpg $base-sheet.jpg"
           # 4 frames a second through the Reel (decodecheck.dense_strip), so the first second of every shot is seen
@@ -213,6 +214,30 @@ jobs:
             sleep $(( i * 5 ))
           done
           echo "push failed five times"; exit 1
+
+      # Phase 1 step 3 (advisor, 25 Oct 2026): the finished Reel goes straight to Publer's media library with
+      # the media-only key, so scheduling never needs a public link. Never fails the job: no key, a failed
+      # upload or a timeout leaves a receipt saying so, and production falls back to the connector upload.
+      # The media id goes into the receipt only while the repo is private; otherwise production finds the
+      # file in Publer by its name. Nothing from Publer is printed.
+      - name: Publer upload
+        continue-on-error: true
+        timeout-minutes: 6
+        env:
+          PUBLER_MEDIA_KEY: ${{ secrets.PUBLER_MEDIA_KEY }}
+          REPO_PRIVATE: ${{ github.event.repository.private }}
+        run: |
+          base="${OUT%.mp4}"; receipt="$base-publer.json"
+          python templates/publer_upload.py "$RUNNER_TEMP/out/$OUT" "$RUNNER_TEMP/publer.json" || true
+          for i in 1 2 3 4 5; do
+            git fetch -q --depth=1 --filter=blob:none origin "$GITHUB_REF_NAME"
+            git reset -q --hard "origin/$GITHUB_REF_NAME"
+            cp "$RUNNER_TEMP/publer.json" "$receipt"
+            git add --sparse -f "$receipt"
+            git commit -q -m "Publer receipt $(basename "$base")"
+            if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
+            sleep $(( i * 5 ))
+          done
 
       - name: Remove fonts
         if: always()
