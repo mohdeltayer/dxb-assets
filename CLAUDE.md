@@ -1650,6 +1650,14 @@ More variations (Mohammad, 2 Oct 2026: "Honestly, I like them all"):
   and re-clones dxb-queue shallow once its history passes 1 GB. It does
   nothing while a render or a publish is running, or while dxb-queue has
   unpushed work. `--dry-run` lists what it would remove.
+  Slim clone (Mohammad, 25 Oct 2026, inbox: "Re-clone slim"): after the cleanup
+  left 616 MB free, dxb-assets was re-cloned at 03:50Z as a shallow, partial,
+  sparse clone (`--depth 1 --filter=blob:none --sparse`, checked out: templates,
+  jobs, newsroom, notes, arabic, analytics, art, .claude, .github): 27 MB in place
+  of 24 GB (20 GB of history plus 4 GB of cards), free space 24 GB. `cards/` and
+  `live/` are not on disk; `git show HEAD:cards/...` fetches a file on demand,
+  and renders run on the runner. The pilot worktrees were removed (their branches
+  are on GitHub). In a new container, clone the same way.
 - Reels only (Mohammad, 30 Sep 2026): still cards on Instagram reach 1 to
   3 views where Reels reach about 1,000 (the WARDOGS Reel: 96% non-followers,
   mostly from the Reels tab), so every Digital Lounge Instagram post is a
