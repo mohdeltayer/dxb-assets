@@ -6971,5 +6971,42 @@
   "job_secs": 310,
   "setup_min": 0.95,
   "story": "mass-effect-universe-timelines-toutain"
+ },
+ {
+  "name": "mass-effect-universe-timelines-toutain-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T03:44Z",
+  "stages": {
+   "checks": 7.4,
+   "montage": 51.0,
+   "text": 61.9,
+   "audio": 1.1,
+   "outro": 50.8
+  },
+  "total": 172.2,
+  "lane": "runner",
+  "queued_at": "2026-10-25T03:38:29Z",
+  "finished_at": "2026-10-25T03:44Z",
+  "render_min": 2.87,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 11.5,
+   "audio_secs": 48.3,
+   "music_pct": 37.6,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "reason": "music only 37.6% of the track (< 40.0%)",
+   "secs": 16.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 392,
+  "setup_min": 1.1,
+  "story": "mass-effect-universe-timelines-toutain"
  }
 ]
