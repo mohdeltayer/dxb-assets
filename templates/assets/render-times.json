@@ -7803,5 +7803,43 @@
   "job_secs": 413,
   "setup_min": 1.4,
   "story": "blue-archive-japan-publisher-nexon"
+ },
+ {
+  "name": "blue-archive-japan-publisher-nexon-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T16:34Z",
+  "stages": {
+   "checks": 10.2,
+   "montage": 73.6,
+   "text": 100.9,
+   "audio": 1.6,
+   "outro": 71.4
+  },
+  "total": 257.7,
+  "lane": "runner",
+  "queued_at": "2026-10-25T16:26:59Z",
+  "finished_at": "2026-10-25T16:34Z",
+  "render_min": 4.29,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 18.5,
+   "audio_secs": 68.7,
+   "music_pct": 100.0,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 26,
+   "mix_secs": 8.4,
+   "secs": 27.4
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 469,
+  "setup_min": 1.28,
+  "story": "blue-archive-japan-publisher-nexon"
  }
 ]
