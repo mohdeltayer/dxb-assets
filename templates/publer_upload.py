@@ -74,7 +74,15 @@ def main(path, receipt):
     t0 = time.time()
     rec = {'name': os.path.basename(path), 'bytes': os.path.getsize(path) if os.path.exists(path) else None,
            'route': 'runner api (media-only key)'}
-    key = os.environ.get('PUBLER_MEDIA_KEY', '').strip()
+    raw = os.environ.get('PUBLER_MEDIA_KEY', '')
+    key = raw.strip()
+    # A key pasted with its header word ("Bearer-API <key>") is the usual copy slip: drop it.
+    for lead in ('Authorization:', 'Bearer-API', 'Bearer'):
+        if key.lower().startswith(lead.lower()):
+            key = key[len(lead):].strip()
+    if raw:   # the shape only, never the key: enough to spot a paste slip
+        rec['key_shape'] = {'length': len(key), 'had_surrounding_space': raw != raw.strip(),
+                            'had_header_word': key != raw.strip(), 'inner_space': any(c.isspace() for c in key)}
     mid, err = None, None
     if not key:
         err = 'no key (PUBLER_MEDIA_KEY not set)'
