@@ -2189,6 +2189,58 @@ Cocktail Fork's code and weights are MIT. Mohammad adopted Cocktail Fork.
    Cost: about 21 s of render per split Reel and about 10 s of install, far inside the 45-minute
    fresh-reveal target.
 
+## Media toolbox, step 1 (advisor, 25 Oct 2026, approved by Mohammad in the inbox 01:08Z)
+
+Mohammad, 24 Oct 21:52 and 21:55 Dubai: the ARMS v5 Reel still looked bad, so it is dropped, and he
+wants proper graphics and audio tools in one place. He approved the media toolbox plan (project doc
+`claude/media-toolbox.md`) on 25 Oct 05:07 Dubai; this is its first step.
+A. ARMS is dropped: no third ARMS post. Mohammad deletes v5 himself after test 1 (Instagram in the app,
+   X and Threads through Publer); production deletes nothing. No ARMS item was left in the queue
+   (Publer checked 03:18Z, 25 Oct).
+B. Toolbox rules:
+   - Every tool is an automatic step inside render.yml or a connector production already has; no
+     manual steps for Mohammad.
+   - Free first; a paid tool only when the free one fails the side-by-side test.
+   - The commercial-use licence is checked and recorded before live use, for the code and the model
+     weights separately.
+   - Every tool has a fallback: if it fails or looks worse, the Reel builds as today.
+   - Nothing goes live without side-by-side samples approved by Mohammad.
+   - Render time stays inside the 45-minute fresh-reveal target; expensive work runs on sampled
+     frames or once per asset and is cached, not on every output frame.
+C. Test 1, on the ARMS footage (Nintendo's 720p copy), the hoop swing (12.2 to 12.9 s) and one calm
+   shot: 1. the video tool's deblocking filter alone; 2. Real-ESRGAN to 1080p (the exact weight file's
+   licence confirmed; time per Reel on the 4-core runner); 3. deblock plus Real-ESRGAN; 4. the
+   OpenVisualCloud Video Super-Resolution Library (BSD-3, CPU RAISR), timed; 5. a framed layout: the
+   trailer at its own width in a box, enlarged no more than 1.5x, over a dimmed, blurred, moving copy
+   of the same footage, with our headline and chip. One card: published v4, then the five versions
+   side by side, with render times and a recommendation for the standard weak-source fallback. Test
+   only; nothing posts.
+D. Answered in the same card: whether any enhancer or upscaler is already in the render and why it
+   did not help ARMS; whether production can call the Adobe connector tools (generative expand,
+   background removal, Enhance Speech) from its session automatically; Real-ESRGAN and RAISR time per
+   Reel; where production looks for trailer footage, whether it uses yt-dlp to take the best official
+   copy (the publisher's YouTube channel included), and whether a 1080p or 4K official ARMS trailer
+   was on Nintendo's YouTube channel. Better sources come before any enhancement.
+E. Next tests, each its own card, in this order (free, commercial-use licences): 1. ffmpeg
+   blockdetect, blurdetect, freezedetect, blackdetect, silencedetect and astats on the final mp4 (stills
+   and fades from the manifest exempt), plus two-pass loudnorm with a true-peak check (ffmpeg-normalize,
+   MIT); 2. best source first: the yt-dlp Python package (Unlicense) picking the best official format,
+   official press-kit or direct URLs as the alternative, no interactive logins; 3. PaddleOCR
+   (Apache-2.0) with PP-OCRv5_mobile_det and arabic_PP-OCRv5_mobile_rec only, to find burnt-in text
+   before cropping and to read our Arabic back from decoded output frames; 4. PySceneDetect (BSD-3)
+   for shot boundaries (adaptive, minimum shot length); 5. HyperFrames' own checks (`npx hyperframes
+   check --json --strict --at-transitions --frame-check --no-browser-gpu`, `npx hyperframes beats --json`
+   on the local music only; browserSkipped:true counts as a failed check). Later, only after these:
+   Adobe generative expand and background removal; BiRefNet Lite (the official MIT checkpoint only,
+   never rembg's default model); faster-whisper small INT8 for subtitling voiced lines; OpenCV Zoo
+   NanoDet (Apache-2.0) and YuNet (MIT) for reframing; DBS-BSRNN-DnR (Apache-2.0) only if Cocktail
+   Fork disappoints; Topaz only if the free upscalers fail, with a cost estimate first. Skipped:
+   auto-vertical-reframe and FrameShift (licences unverified, YOLO weights), Video2X (needs a GPU),
+   stock Demucs (unclear weight licence, wrong stems).
+   Note on E2: the 28 Sep rule stands until Mohammad says otherwise: YouTube asks for a sign-in and
+   yt-dlp was refused then; any yt-dlp test uses no login and no third-party downloader, and its result
+   goes to him on the card.
+
 ## Explainers from the source's own drawings (trial, 27 Sep 2026)
 
 For "how does it work" stories (patents, hardware, new features),

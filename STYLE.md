@@ -399,6 +399,11 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     log story, lane, queued, finished, render and setup minutes.
     Runner hold lifted (Mohammad, 20 Oct, about 17:17Z): runner Reels
     follow the normal rolling-queue rules.
+  - Media toolbox (advisor, 25 Oct 2026, approved 01:08Z): ARMS is dropped (no third post).
+    Tools are automatic steps in render.yml or existing connectors, free first, licences recorded
+    for code and weights, each with a fallback to today's build, live only after his side-by-side
+    OK, inside the 45-minute fresh-reveal target. Test 1 (deblock, Real-ESRGAN, both, RAISR, framed
+    layout) on the ARMS footage, then tests E1 to E5 one card each (CLAUDE.md "Media toolbox").
   - (CLAUDE.md "Full-screen format", "Creative brief and formats")
 
 ## Platforms
