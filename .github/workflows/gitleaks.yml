@@ -1,0 +1,171 @@
+name: Secret scan
+
+# Scans each push to main with gitleaks (pinned, checksum verified). This repo
+# is public, so the log carries counts per rule only: no paths, hashes or
+# values (gitleaks runs with --redact and its output is never printed).
+# Media is excluded by pathspec so git never fetches it. Manual runs can also
+# scan the private dxb-fonts repo with the FONTS_TOKEN secret (full history,
+# counts only). Never a pull-request trigger: forks must not reach the secret.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      full:
+        description: 'Also scan the private dxb-fonts repo (full history)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gitleaks-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Install gitleaks
+        run: |
+          set -euo pipefail
+          GL_VERSION=8.28.0
+          GL_SHA256=a65b5253807a68ac0cafa4414031fd740aeb55f54fb7e55f386acb52e6a840eb
+          mkdir -p "$RUNNER_TEMP/gl"
+          cd "$RUNNER_TEMP/gl"
+          curl -fsSL -o gl.tgz "https://github.com/gitleaks/gitleaks/releases/download/v${GL_VERSION}/gitleaks_${GL_VERSION}_linux_x64.tar.gz"
+          echo "${GL_SHA256}  gl.tgz" | sha256sum -c - > /dev/null
+          tar xzf gl.tgz gitleaks
+          echo "gitleaks ${GL_VERSION} installed, checksum verified"
+          echo "GL=$RUNNER_TEMP/gl/gitleaks" >> "$GITHUB_ENV"
+
+      - name: Scan the pushed range
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SHA: ${{ github.sha }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          # Scans only the pushed range. Media is excluded by pathspec so git never
+          # fetches it. Prints counts per RuleID, never a path, hash or value.
+          set -euo pipefail
+          EXCLUDES=""
+          for e in mp4 png jpg jpeg webp wav mp3 m4a mkv mov zip pyc gif ttf; do
+            EXCLUDES="$EXCLUDES :(glob,exclude)**/*.$e"
+          done
+          EXCLUDES=$(echo $EXCLUDES)
+
+          repo="$RUNNER_TEMP/scan.git"
+          rm -rf "$repo"
+          git init -q --bare "$repo"
+          git -C "$repo" remote add origin "https://github.com/${GITHUB_REPOSITORY}"
+          git -C "$repo" config gc.auto 0
+          if [ -n "${GH_TOKEN:-}" ]; then
+            B64=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+            echo "::add-mask::$B64"
+            git -C "$repo" config http.https://github.com/.extraheader "AUTHORIZATION: basic $B64"
+          fi
+
+          fetch() { git -C "$repo" fetch -q --no-tags --filter=blob:none --depth="$1" origin "$SHA"; }
+
+          ZERO=0000000000000000000000000000000000000000
+          opts=""
+          if [ -n "${BEFORE:-}" ] && [ "$BEFORE" != "$ZERO" ]; then
+            for d in 50 200 1000; do
+              fetch "$d"
+              if GIT_NO_LAZY_FETCH=1 git -C "$repo" cat-file -e "${BEFORE}^{commit}" 2> /dev/null; then
+                opts="${BEFORE}..${SHA}"
+                break
+              fi
+            done
+          fi
+          if [ -z "$opts" ]; then
+            echo "No usable range start (new branch, manual run or forced push): scanning the last 100 commits."
+            fetch 101
+            opts="-n 100 ${SHA}"
+          fi
+
+          expected=$(git -C "$repo" rev-list --count $opts -- . $EXCLUDES)
+          echo "Commits to scan (text changes only): $expected"
+
+          report="$RUNNER_TEMP/gl-report.json"
+          log="$RUNNER_TEMP/gl.log"
+          rm -f "$report" "$log"
+          "$GL" git "$repo" --log-opts="$opts -- . $EXCLUDES" --redact --no-banner \
+            --exit-code 0 -f json -r "$report" > "$log" 2>&1 || true
+
+          errs=$(grep -c ' ERR ' "$log" || true)
+          scanned=$(grep -oE '[0-9]+ commits scanned' "$log" | grep -oE '^[0-9]+' || echo 0)
+          echo "Commits scanned by gitleaks: $scanned, scanner errors: $errs"
+          # Merge commits and empty diffs are not counted by gitleaks, so the two numbers
+          # may differ by a few; an error line, or nothing scanned at all, fails the check.
+          if [ "$errs" != "0" ] || { [ "$expected" != "0" ] && [ "$scanned" = "0" ]; }; then
+            echo "::error::The scan did not cover the pushed range cleanly; treating as a failure."
+            rm -f "$log"
+            exit 1
+          fi
+
+          python3 -I - "$report" <<'PY'
+          import json, sys, collections
+          try:
+              findings = json.load(open(sys.argv[1])) or []
+          except FileNotFoundError:
+              findings = []
+          counts = collections.Counter(f.get("RuleID", "unknown") for f in findings)
+          if not counts:
+              print("No findings.")
+              sys.exit(0)
+          print(f"FINDINGS: {sum(counts.values())}")
+          for rule, n in sorted(counts.items()):
+              print(f"  {rule}: {n}")
+          sys.exit(1)
+          PY
+
+      - name: Scan dxb-fonts (full history)
+        if: ${{ !cancelled() && github.event_name == 'workflow_dispatch' && github.event.inputs.full == 'true' }}
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          # Scans the private fonts repo (full history). Counts per RuleID only.
+          set -euo pipefail
+          B64=$(printf 'x-access-token:%s' "$FONTS_TOKEN" | base64 -w0)
+          echo "::add-mask::$B64"
+          d="$RUNNER_TEMP/fonts-scan"
+          rm -rf "$d"
+          trap 'rm -rf "$d"' EXIT
+          git -c http.extraheader="AUTHORIZATION: basic $B64" clone -q "https://github.com/${GITHUB_REPOSITORY_OWNER}/dxb-fonts" "$d" > /dev/null 2>&1 \
+            || { echo "::error::Could not clone the fonts repo (token or access)."; exit 1; }
+          echo "Fonts repo commits (all refs): $(git -C "$d" rev-list --all --count)"
+
+          fail=0
+          for mode in git dir; do
+            report="$RUNNER_TEMP/gl-fonts-$mode.json"
+            log="$RUNNER_TEMP/gl-fonts-$mode.log"
+            rm -f "$report" "$log"
+            if [ "$mode" = git ]; then
+              "$GL" git "$d" --log-opts="--all" --redact --no-banner --exit-code 0 -f json -r "$report" > "$log" 2>&1 || true
+            else
+              "$GL" dir "$d" --max-archive-depth 2 --redact --no-banner --exit-code 0 -f json -r "$report" > "$log" 2>&1 || true
+            fi
+            errs=$(grep -c ' ERR ' "$log" || true)
+            echo "fonts scan ($mode): scanner errors: $errs"
+            [ "$errs" = "0" ] || fail=1
+            python3 -I - "$report" "$mode" <<'PY' || fail=1
+          import json, sys, collections
+          try:
+              findings = json.load(open(sys.argv[1])) or []
+          except FileNotFoundError:
+              findings = []
+          counts = collections.Counter(f.get("RuleID", "unknown") for f in findings)
+          if not counts:
+              print(f"fonts {sys.argv[2]}: no findings")
+              sys.exit(0)
+          print(f"fonts {sys.argv[2]}: FINDINGS {sum(counts.values())}")
+          for rule, n in sorted(counts.items()):
+              print(f"  {rule}: {n}")
+          sys.exit(1)
+          PY
+          done
+          exit $fail
