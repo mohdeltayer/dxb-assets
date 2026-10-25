@@ -2689,6 +2689,14 @@ https://claude.ai/artifact/AwcHX88eyTrUAL9pc4j4AW
    approves one, production applies it as if he had pasted it, records it here
    and in STYLE.md, and marks the item done; a change or note is followed.
 
+6. Status board (advisor, 25 Oct 2026, approved by Mohammad, 19:49 Dubai). The inbox page has a
+   Status tab built from the cards. On every card addressed to production and every production card
+   Mohammad has answered: when work starts, set `picked_up_at` (ISO time) and `progress` (one short
+   line: "building the Reel", "waiting on render", "checking the source"); update `progress` when the
+   step changes; when finished, status "done", `outcome` and `updated_at`; when production decides not
+   to do it, status "done" with an outcome saying why. A card answered or sent more than 30 minutes ago
+   without `picked_up_at` shows in red as "not acknowledged". The hourly watch's inbox step sets these.
+
 ## Delegation (Mohammad, 5 Oct 2026)
 
 To save tokens the main session acts as the editor and hands repeated

@@ -367,6 +367,12 @@ before any build or scheduling in that run, and a stop or pause answer
 takes effect before anything else. The same full read runs before every
 Publer submit and after every context compaction, so a summary never
 stands in for the inbox. The run's commit names each item it acted on.
+Status board (advisor, 25 Oct 2026): each item the run starts on gets
+`picked_up_at` and a one-line `progress`; `progress` is updated when the step
+changes; a finished item gets status "done", `outcome` and `updated_at`, and
+one production decides not to do gets "done" with the reason. Any answered or
+advisor item older than 30 minutes without `picked_up_at` is picked up in
+this run, before anything else.
 
 Triage of the OUTLETS list (Mohammad, 17 Oct 2026): a group marked "AR RELAY"
 is dated from its first report anywhere before it is considered; over 24 hours

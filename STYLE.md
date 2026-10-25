@@ -33,6 +33,10 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   the Reel or frames uploaded to the inbox and embedded, exact text in memo,
   options with their effect; a link only as an extra. Advisor memos he
   approves there are applied and recorded (CLAUDE.md "Mohammad's inbox").
+  Status board (25 Oct): on starting a card set `picked_up_at` and a one-line
+  `progress`, update it per step, and finish with status done, `outcome` and
+  `updated_at` (or done with the reason when it is not done); a card over 30
+  minutes old without `picked_up_at` shows red on the board.
 - **Scope:** games only, the whole slate, regional stories when they are the
   story. Outlet voice, no first person ("Settled 26 Sep").
 - **Sources:**
