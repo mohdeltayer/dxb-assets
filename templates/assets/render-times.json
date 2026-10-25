@@ -7573,5 +7573,31 @@
   "job_secs": 170,
   "setup_min": 1.0,
   "story": "call-of-duty-infinite-warfare-turns-10"
+ },
+ {
+  "name": "tony-hawks-pro-skater-3-turns-25-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T12:26Z",
+  "stages": {
+   "checks": 5.8,
+   "montage": 52.9,
+   "text": 42.1,
+   "audio": 0.9,
+   "outro": 50.1
+  },
+  "total": 151.8,
+  "lane": "runner",
+  "queued_at": "2026-10-25T12:22:10Z",
+  "finished_at": "2026-10-25T12:26Z",
+  "render_min": 2.53,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 243,
+  "setup_min": 0.97,
+  "story": "tony-hawks-pro-skater-3-turns-25"
  }
 ]
