@@ -3,7 +3,7 @@
  "title": "Call of Duty: Infinite Warfare turns 10 (4 Nov 2016)",
  "game": "Call of Duty: Infinite Warfare",
  "category": "on this day",
- "status": "rendering on the runner (v1), for Wed 4 Nov",
+ "status": "ready (bank, dated Wed 4 Nov)",
  "chip": "في مثل هذا اليوم",
  "template": "trailer",
  "skin": "house",
@@ -53,5 +53,36 @@
   "footage": "story trailer (Steam 292730), 1080p 5.75 Mbps, full frame, decode clean; committed as eg-cod-iw-story-30.mp4, the 30 to 145 s stretch re-encoded at 5.6 Mbps (the whole file is 102.6 MB, over GitHub's limit); job times are source minus 30 s",
   "sound": "the trailer is narrated nearly throughout; 130.4 s onward is score only for 13.7 s (render check: speech none); the track start moved from 127.8 after the check heard Harington's line",
   "arabic": "grammar stage: no required edits; role word on the actor at first mention on screen and in text; DeepL forward pass agrees; back-check keeps the meaning (attribution kept)"
- }
+ },
+ "director_qa": [
+  {
+   "round": 1,
+   "at": "2026-10-25T12:45Z",
+   "model": "opus (main session)",
+   "verdict": "PASS",
+   "table": [
+    [
+     "0-2 carrier and Earth 0-3.25",
+     "PASS",
+     "headline over the carrier; grid tile reads as sci-fi Call of Duty"
+    ],
+    [
+     "3-4 jump and city 3.25-6.35",
+     "PASS",
+     "date line readable over the city and ships"
+    ],
+    [
+     "5-7 Kotch 6.35-9.0",
+     "PASS",
+     "the villain line lands on Kit Harington's Kotch in the red-lit helmet"
+    ],
+    [
+     "8-13 crew, E3N, explosion 9.0-14.25",
+     "PASS",
+     "studio line on Reyes, Salter and E3N; closes on the explosion"
+    ]
+   ],
+   "reel": "15.75 s with the end card; 13.7 s story; story-trailer score, speech none; smear flags at 6.27 s looked at and waived (cockpit edges)"
+  }
+ ]
 }
