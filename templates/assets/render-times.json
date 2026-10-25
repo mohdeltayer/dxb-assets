@@ -7045,5 +7045,42 @@
   "job_secs": 325,
   "setup_min": 1.15,
   "story": "tomb-raider-legacy-of-atlantis-length"
+ },
+ {
+  "name": "tomb-raider-legacy-of-atlantis-length-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T05:24Z",
+  "stages": {
+   "checks": 6.6,
+   "montage": 58.3,
+   "text": 68.4,
+   "audio": 1.3,
+   "outro": 66.3
+  },
+  "total": 200.9,
+  "lane": "runner",
+  "queued_at": "2026-10-25T05:18:56Z",
+  "finished_at": "2026-10-25T05:24Z",
+  "render_min": 3.35,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 18.0,
+   "audio_secs": 63.4,
+   "music_pct": 20.4,
+   "leak_pct": 0.7,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "reason": "music only 20.4% of the track (< 40.0%)",
+   "secs": 23.8
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 328,
+  "setup_min": 1.23,
+  "story": "tomb-raider-legacy-of-atlantis-length"
  }
 ]
