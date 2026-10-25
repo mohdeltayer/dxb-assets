@@ -66,7 +66,7 @@
  "drafts": {
   "x": "تأجيل Shenmue III Enhanced إلى أوائل عام 2027. نقل موقع بوش سكوير (Push Square) عن نشرة الناشر إنين غيمز (ININ Games) أن التطوير يستغرق وقتًا لإتقان كل شيء.",
   "threads": "تأجيل Shenmue III Enhanced إلى أوائل عام 2027. نقل موقع بوش سكوير (Push Square) عن نشرة الناشر إنين غيمز (ININ Games) أن التطوير يستغرق وقتًا لإتقان كل شيء.",
-  "instagram": "تأجيل Shenmue III Enhanced إلى أوائل عام 2027، حسب موقعي شينمو دوجو (Shenmue Dojo) وبوش سكوير (Push Square).\n\nنقل الموقعان عن نشرة بريدية لشركة إنين غيمز (ININ Games)، ناشر اللعبة، أن التطوير يستغرق وقتًا لإتقان كل شيء، وأن الفريق يضع اللمسات الأخيرة على التفاصيل، وأن مزيدًا من التفاصيل سيُعلن قريبًا. ولم يُحدد يوم الإصدار بعد، ولم يظهر الخبر على موقع الشركة حتى الآن.\n\nوكانت الشركة قد أعلنت في مارس أن النسخة تصل إلى PS5 وXbox Series X|S وNintendo Switch 2 والحاسب عبر Steam، مع خامات بدقة 4K وتحميل أسرع وشخصيات أكثر في شوارع قرية نياوو، ويمكن إيقاف كل التغييرات الكبرى لمن يفضّل التجربة الأصلية.\n\nصدرت Shenmue III الأصلية عام 2019 من إخراج يو سوزوكي (Yu Suzuki) مبتكر السلسلة، واللقطات في الفيديو منها.\n\n#ألعاب #أخبار_الألعاب #ShenmueIII #Shenmue",
+  "instagram": "تأجيل Shenmue III Enhanced إلى أوائل عام 2027، حسب موقعي شينمو دوجو (Shenmue Dojo) وبوش سكوير (Push Square).\n\nنقل الموقعان عن نشرة بريدية لناشر اللعبة إنين غيمز (ININ Games) أن التطوير يستغرق وقتًا لإتقان كل شيء، وأن الفريق يضع اللمسات الأخيرة على التفاصيل، وأنه سيكشف المزيد قريبًا. ولم يُحدد يوم الإصدار بعد، ولم يظهر الخبر على موقع الشركة حتى الآن.\n\nوكانت الشركة قد أعلنت في مارس أن النسخة تصل إلى PS5 وXbox Series X|S وNintendo Switch 2 والحاسب عبر Steam، مع خامات بدقة 4K وتحميل أسرع وشخصيات أكثر في شوارع قرية نياوو، ويمكن إيقاف كل التغييرات الكبرى لمن يفضّل التجربة الأصلية.\n\nصدرت Shenmue III الأصلية عام 2019 من إخراج يو سوزوكي (Yu Suzuki) مبتكر السلسلة، واللقطات في الفيديو منها.\n\n#ألعاب #أخبار_الألعاب #ShenmueIII #Shenmue",
   "ig_comment": "المصدر: موقعا شينمو دوجو (Shenmue Dojo) وبوش سكوير (Push Square) نقلًا عن نشرة إنين غيمز (ININ Games)، 25 أكتوبر 2026",
   "x_reply": "المصدر: https://shenmuedojo.com/shenmue-3-enhanced-delayed-into-early-2027/"
  },
@@ -109,5 +109,24 @@
    ],
    "verdict": "FIX (one)"
   }
+ },
+ "grammar": {
+  "required_edits": [
+   {
+    "original": "لشركة إنين غيمز (ININ Games)، ناشر اللعبة،",
+    "proposed": "لناشر اللعبة إنين غيمز (ININ Games)",
+    "class": "grammar_morphology",
+    "explanation": "masculine ناشر in apposition to feminine شركة; recast with the role word first"
+   }
+  ],
+  "optional_style_suggestions": [
+   {
+    "original": "وأن مزيدًا من التفاصيل سيُعلن قريبًا",
+    "suggestion": "وأنه سيكشف المزيد قريبًا",
+    "reason": "avoids repeating التفاصيل; applied"
+   }
+  ],
+  "uncertain_cases": [],
+  "checked": "X, Threads, Instagram, Reel headline, lines and credit; first words Arabic; Western digits; no em dash; role words (الناشر، مبتكر السلسلة); X names its source; caption ends on #ألعاب #أخبار_الألعاب plus two"
  }
 }
