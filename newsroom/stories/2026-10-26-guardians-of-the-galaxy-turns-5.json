@@ -2,7 +2,7 @@
  "id": "2026-10-26-guardians-of-the-galaxy-turns-5",
  "title": "Marvel's Guardians of the Galaxy turns 5 (26 Oct 2021; Best Narrative, TGA 2021)",
  "game": "Marvel's Guardians of the Galaxy",
- "status": "rendering on the runner (v1)",
+ "status": "scheduled in Publer 20:00Z (00:00 Dubai, 26 Oct): Instagram Reel, X, Threads; re-gate due 19:00 to 20:00Z (queued more than 6 h ahead)",
  "chip": "في مثل هذا اليوم",
  "template": "trailer",
  "skin": "house",
@@ -30,7 +30,7 @@
   "headline": "مغامرة Star-Lord وفريقه\nتكمل خمس سنوات",
   "x": "في مثل هذا اليوم قبل خمس سنوات صدرت Marvel's Guardians of the Galaxy، وفازت لاحقًا بجائزة أفضل سرد قصصي في The Game Awards 2021.",
   "threads": "في مثل هذا اليوم قبل خمس سنوات صدرت Marvel's Guardians of the Galaxy، وفازت لاحقًا بجائزة أفضل سرد قصصي في The Game Awards 2021.\n\nالمصدر: متجر Steam ومارفل (Marvel)",
-  "instagram": "خمس سنوات على Marvel's Guardians of the Galaxy، المغامرة التي قاد فيها اللاعبون فريق Star-Lord.\n\nصدرت اللعبة في 26 أكتوبر 2021 على PS5 وPS4 وXbox Series X|S وXbox One والحاسب، من تطوير استوديو إيدوس مونتريال (Eidos-Montréal).\n\nويتحكم اللاعب فيها بشخصية Star-Lord، ويقود بقية الفريق: Gamora وDrax وRocket وGroot.\n\nوفازت بجائزة أفضل سرد قصصي في حفل The Game Awards 2021، وكانت أول جائزة لألعاب مارفل (Marvel) في الحفل، حسب مارفل.\n\n#ألعاب #أخبار_الألعاب #GuardiansOfTheGalaxy #Marvel",
+  "instagram": "خمس سنوات على Marvel's Guardians of the Galaxy، المغامرة التي قاد فيها اللاعبون فريق Star-Lord.\n\nصدرت اللعبة في 26 أكتوبر 2021 على PS5 وPS4 وXbox Series X|S وXbox One والحاسب، وبنسخة سحابية على Nintendo Switch، وهي من تطوير استوديو إيدوس مونتريال (Eidos-Montréal).\n\nويتحكم اللاعب فيها بشخصية Star-Lord، ويقود بقية الفريق: Gamora وDrax وRocket وGroot.\n\nوفازت بجائزة أفضل سرد قصصي في حفل The Game Awards 2021، وكانت أول جائزة لألعاب مارفل (Marvel) في الحفل، حسب مارفل.\n\n#ألعاب #أخبار_الألعاب #GuardiansOfTheGalaxy #Marvel",
   "ig_comment": "المصدر: متجر Steam ومارفل (Marvel)",
   "x_reply": "المصدر: https://www.marvel.com/articles/games/marvels-guardians-of-the-galaxy-wins-best-narrative-the-game-awards"
  },
@@ -39,7 +39,39 @@
   "sound_choice": "launch trailer has dialogue through every long stretch (speech check found words at 62, 71, 105, 125 s); the PC tech trailer's 29.5 to 59.8 s is music only, so it runs under the cut (another official trailer of the game, per the 23 Oct trailer-sound rule)",
   "deepl": "forward pass: DeepL renders Best Narrative as أفضل قصة; kept أفضل سرد قصصي (closer to 'narrative'). Back-check matches every fact.",
   "grammar": "no required edits (خمس سنوات polarity; يتحكم/يقود masculine for اللاعب; first words Arabic; hashtag line starts #ألعاب)",
-  "render_v1_try1": "runner source check stopped on the gold patterned stage at 104.5 to 108.0 s (content, not decode damage); shots moved clear of it"
+  "render_v1_try1": "runner source check stopped on the gold patterned stage at 104.5 to 108.0 s (content, not decode damage); shots moved clear of it",
+  "gate": "gate 10:58Z: launch platforms checked; Switch cloud version (26 Oct 2021, GameSpot and Ubitus) added to the caption"
  },
- "approved": null
+ "approved": "go: rolling queue (dated anniversary); preview sent 10:58Z",
+ "director_model": "opus (main session)",
+ "director_qa": {
+  "version": "v3",
+  "reel": "PASS: v1 burnt-in subtitles and logo slate removed (v2); v2's 'Drax! Destroy!' subtitle at the moon shot's first frames removed (v3); decode clean; trailer music from the PC tech trailer 31.3 s, speech none; 19.6 s; closes on Drax",
+  "shots": [
+   [
+    "0-1.4",
+    "Groot and Star-Lord (cover)",
+    "PASS",
+    ""
+   ],
+   [
+    "1.4-14.0",
+    "launch trailer shots under lines 1 to 3",
+    "PASS",
+    "no subtitles, no slate"
+   ],
+   [
+    "14.0-16.9",
+    "moon shot, starts 0.2 s later",
+    "PASS",
+    "subtitle gone; smear flag at the scene cut waived after a look"
+   ],
+   [
+    "16.9-19.6",
+    "ship deck, Drax close",
+    "PASS",
+    "closing picture"
+   ]
+  ]
+ }
 }
