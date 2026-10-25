@@ -1,0 +1,58 @@
+name: publer-upload
+
+# Uploads one finished Reel already committed under cards/ to Publer's media library with the media-only key
+# (advisor Phase 0 B and Phase 1 step 3, 25 Oct 2026). For Reels rendered before the render job uploaded by
+# itself, or a render-time upload that failed. Run by hand (workflow_dispatch) with the Reel's path.
+# Writes <reel>-publer.json beside it; prints the status only, never a key or an id.
+
+on:
+  workflow_dispatch:
+    inputs:
+      reel:
+        description: "Path of the Reel, e.g. cards/2026-10/name-reel-v1.mp4"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publer-upload
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      REEL: ${{ inputs.reel }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: templates
+          filter: blob:none
+          fetch-depth: 1
+      - name: Fetch the Reel
+        run: |
+          case "$REEL" in cards/*.mp4) ;; *) echo "not a Reel under cards/"; exit 1;; esac
+          git sparse-checkout add "$(dirname "$REEL")"
+          ls -la "$REEL"
+      - name: Upload
+        env:
+          PUBLER_MEDIA_KEY: ${{ secrets.PUBLER_MEDIA_KEY }}
+          REPO_PRIVATE: ${{ github.event.repository.private }}
+        run: python templates/publer_upload.py "$REEL" "$RUNNER_TEMP/publer.json" || true
+      - name: Commit receipt
+        run: |
+          receipt="${REEL%.mp4}-publer.json"
+          git config user.name "dxb-render"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for i in 1 2 3 4 5; do
+            git fetch -q --depth=1 --filter=blob:none origin "$GITHUB_REF_NAME"
+            git reset -q --hard "origin/$GITHUB_REF_NAME"
+            cp "$RUNNER_TEMP/publer.json" "$receipt"
+            git add --sparse -f "$receipt"
+            git commit -q -m "Publer receipt $(basename "${REEL%.mp4}")"
+            if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
+            sleep $(( i * 5 ))
+          done
+          exit 1
