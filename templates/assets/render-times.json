@@ -7498,5 +7498,43 @@
   "job_secs": 289,
   "setup_min": 1.03,
   "story": "guardians-of-the-galaxy-turns-5"
+ },
+ {
+  "name": "skyrim-special-edition-turns-10-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T11:57Z",
+  "stages": {
+   "checks": 5.3,
+   "montage": 45.4,
+   "text": 38.0,
+   "audio": 1.0,
+   "outro": 47.5
+  },
+  "total": 137.1,
+  "lane": "runner",
+  "queued_at": "2026-10-25T11:53:29Z",
+  "finished_at": "2026-10-25T11:57Z",
+  "render_min": 2.29,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 14.1,
+   "audio_secs": 49.2,
+   "music_pct": 73.0,
+   "leak_pct": 2.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 13,
+   "mix_secs": 4.4,
+   "secs": 18.9
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 241,
+  "setup_min": 1.02,
+  "story": "skyrim-special-edition-turns-10"
  }
 ]
