@@ -12,7 +12,7 @@
   "rpg"
  ],
  "sensitive": "none (sword fights only, no gore in the chosen shots)",
- "director_model": "opus (main session)",
+ "director_model": "opus (main session; first of its kind on this day: no)",
  "sources": [
   {
    "kind": "primary",
@@ -63,5 +63,43 @@
   "sound": "Special Edition trailer choir score from 0.0 s for the whole Reel; the transcriber hears only noise in the choir, speech none.",
   "arabic": "grammar stage: no required edits (صدرت feminine for the game; الإضافات الثلاث; جلبت). DeepL forward pass (EN to AR) agrees on the facts and terms (المحسّنة، الإضافات الثلاث، تعديلات اللاعبين); back-check keeps the meaning.",
   "lines": "two lines shortened for reading time; Bethesda's Latin name sits in the credit line, so line 1 uses the Arabic alone; runner text check (25 Oct 11:21Z) refused «وXbox One» on screen (the glued prefix flips), so the line reads «و Xbox One»"
- }
+ },
+ "director": [],
+ "director_qa": [
+  {
+   "round": 1,
+   "at": "2026-10-25T12:35Z",
+   "model": "opus (main session)",
+   "verdict": "FIX",
+   "table": [
+    [
+     "0 dragon 0-0.75",
+     "PASS",
+     "headline over the dragon, grid tile reads"
+    ],
+    [
+     "1 dragon flight 0.75-1.9",
+     "PASS",
+     ""
+    ],
+    [
+     "2 fight close-up 1.9-2.65",
+     "FIX",
+     "bare torso with blood wounds under the headline (no-graphic rule), and no reason beyond being in the trailer; replaced by the shrine's light pillar, AE 85.6"
+    ],
+    [
+     "3-6 SE trailer 2.65-9.75",
+     "PASS",
+     "date and engine lines readable on the landscape and tower"
+    ],
+    [
+     "7-12 AE 9.75-15.85",
+     "PASS",
+     "mods line on the shield and the ride; closes on a picture"
+    ]
+   ],
+   "reel": "first frame works as a grid tile; 15.4 s story; change every 1 to 2 s; closing picture; SE trailer choir score, speech none",
+   "next": "v2 render, director looks at shot 2 only"
+  }
+ ]
 }
