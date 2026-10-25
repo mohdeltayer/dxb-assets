@@ -7194,5 +7194,43 @@
   "job_secs": 273,
   "setup_min": 1.37,
   "story": "dragon-ball-xenoverse-2-10th-anniversary"
+ },
+ {
+  "name": "dragon-ball-xenoverse-2-10th-anniversary-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-25T07:42Z",
+  "stages": {
+   "checks": 6.0,
+   "montage": 64.5,
+   "text": 56.6,
+   "audio": 1.2,
+   "outro": 62.6
+  },
+  "total": 190.8,
+  "lane": "runner",
+  "queued_at": "2026-10-25T07:37:09Z",
+  "finished_at": "2026-10-25T07:42Z",
+  "render_min": 3.18,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 16.3,
+   "audio_secs": 57.9,
+   "music_pct": 69.9,
+   "leak_pct": 0.5,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 10,
+   "mix_secs": 5.6,
+   "secs": 22.4
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 291,
+  "setup_min": 1.17,
+  "story": "dragon-ball-xenoverse-2-10th-anniversary"
  }
 ]
