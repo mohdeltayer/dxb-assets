@@ -95,14 +95,14 @@ log "box: ${PRETTY_NAME}, $(nproc) cores, $(free -g | awk '/Mem:/{print $2}') GB
 log "apt: base tools, ffmpeg, tesseract, browser libraries"
 "${APT[@]}" update
 # Everything the render loads, by what needs it (24.04 t64 names). Found missing on dxb-render-1 on 26 Oct and installed by
-# hand there: libatomic1 (pedalboard), libgomp1 (torch/OpenMP), libsndfile1 (soundfile), libgl1 (OpenCV), libglib2.0-0t64
+# hand there: libatomic1 (pedalboard), libgomp1 (torch/OpenMP), libsndfile1 (soundfile), libgl1 (OpenCV), libglib2.0-0t64, libice6 and libsm6 (OpenCV Qt plugin, flagged by the server check)
 # (OpenCV, GLib), the Chromium libraries for HyperFrames, fontconfig and fonts (ffmpeg drawtext, Chromium), git-lfs.
 # `server-check.yml` (item g, ldd) lists anything still missing; add its apt names here.
 "${APT[@]}" install --no-install-recommends \
   ca-certificates curl gnupg git git-lfs jq unzip xz-utils ufw unattended-upgrades \
   ffmpeg tesseract-ocr tesseract-ocr-eng tesseract-ocr-ara \
   python3 python3-venv python3-pip \
-  libatomic1 libgomp1 libsndfile1 libgl1 libglib2.0-0t64 \
+  libatomic1 libgomp1 libsndfile1 libgl1 libglib2.0-0t64 libice6 libsm6 \
   fontconfig fonts-liberation fonts-noto-core \
   libnss3 libnspr4 libatk1.0-0t64 libatk-bridge2.0-0t64 libcups2t64 libdrm2 libxkbcommon0 \
   libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2t64 libpango-1.0-0 libcairo2 libx11-6 \
