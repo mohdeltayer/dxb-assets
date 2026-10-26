@@ -9104,5 +9104,54 @@
   "min_disk_free_mb": 82020,
   "setup_min": 1.25,
   "story": "gta-6-reviews-november-18-report"
+ },
+ {
+  "name": "ac-black-flag-resynced-new-game-plus-live-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T18:07Z",
+  "stages": {
+   "checks": 5.6,
+   "montage": 51.0,
+   "text": 32.8,
+   "audio": 1.0,
+   "outro": 47.0
+  },
+  "total": 137.5,
+  "lane": "runner",
+  "queued_at": "2026-10-26T18:01:58Z",
+  "finished_at": "2026-10-26T18:07Z",
+  "render_min": 2.29,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 9.2,
+   "audio_secs": 34.1,
+   "music_pct": 54.3,
+   "leak_pct": 0.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "effects_shots": 8,
+   "mix_secs": 3.3,
+   "secs": 13.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 236,
+  "mem_total_mb": 15988,
+  "mem_start_mb": 1310,
+  "peak_mem_mb": 2159,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62825,
+  "peak_disk_mb": 65299,
+  "min_disk_free_mb": 82403,
+  "setup_min": 2.68,
+  "story": "ac-black-flag-resynced-new-game-plus-live"
  }
 ]
