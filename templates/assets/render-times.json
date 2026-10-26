@@ -9153,5 +9153,38 @@
   "min_disk_free_mb": 82403,
   "setup_min": 2.68,
   "story": "ac-black-flag-resynced-new-game-plus-live"
+ },
+ {
+  "name": "steam-scream-5-gulf-deals-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T18:09Z",
+  "stages": {
+   "checks": 6.2,
+   "montage": 52.9,
+   "text": 60.0,
+   "audio": 0.9,
+   "outro": 38.8
+  },
+  "total": 158.8,
+  "lane": "runner",
+  "queued_at": "2026-10-26T18:03:32Z",
+  "finished_at": "2026-10-26T18:09Z",
+  "render_min": 2.65,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 311,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1052,
+  "peak_mem_mb": 2175,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62526,
+  "peak_disk_mb": 66443,
+  "min_disk_free_mb": 81259,
+  "setup_min": 1.13,
+  "story": "steam-scream-5-gulf-deals"
  }
 ]
