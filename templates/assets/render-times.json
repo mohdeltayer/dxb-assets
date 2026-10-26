@@ -9007,5 +9007,53 @@
   "min_disk_free_mb": 82244,
   "setup_min": 1.22,
   "story": "scramble-knights-online-early-access-launch"
+ },
+ {
+  "name": "scramble-knights-online-early-access-launch-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T17:16Z",
+  "stages": {
+   "checks": 4.4,
+   "montage": 41.6,
+   "text": 40.7,
+   "audio": 0.8,
+   "outro": 36.2
+  },
+  "total": 123.9,
+  "lane": "runner",
+  "queued_at": "2026-10-26T17:12:00Z",
+  "finished_at": "2026-10-26T17:16Z",
+  "render_min": 2.06,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 7.2,
+   "audio_secs": 42.2,
+   "music_pct": 39.6,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 4,
+    "miss": 3
+   },
+   "reason": "music only 39.6% of the track (< 40.0%)",
+   "secs": 10.7
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 198,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1438,
+  "peak_mem_mb": 2112,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62883,
+  "peak_disk_mb": 65500,
+  "min_disk_free_mb": 82201,
+  "setup_min": 1.53,
+  "story": "scramble-knights-online-early-access-launch"
  }
 ]
