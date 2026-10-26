@@ -8258,5 +8258,42 @@
   "job_secs": 277,
   "setup_min": 1.58,
   "story": "moon-sweepers-36k-players"
+ },
+ {
+  "name": "save-mass-effect-petition-200k-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T05:45Z",
+  "stages": {
+   "checks": 4.7,
+   "montage": 36.5,
+   "text": 47.5,
+   "audio": 1.0,
+   "outro": 48.6
+  },
+  "total": 138.2,
+  "lane": "runner",
+  "queued_at": "2026-10-26T05:41:29Z",
+  "finished_at": "2026-10-26T05:45Z",
+  "render_min": 2.3,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 13.2,
+   "audio_secs": 44.9,
+   "music_pct": 26.8,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "reason": "music only 26.8% of the track (< 40.0%)",
+   "secs": 17.9
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 243,
+  "setup_min": 1.07,
+  "story": "save-mass-effect-petition-200k"
  }
 ]
