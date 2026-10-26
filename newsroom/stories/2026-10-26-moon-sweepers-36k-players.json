@@ -5,7 +5,7 @@
   "indie",
   "live service/MMO"
  ],
- "status": "rendering on the runner (03:35Z), for 05:30Z (09:30 Dubai)",
+ "status": "scheduled in Publer 05:30Z (09:30 Dubai) on Instagram, X and Threads; v4; media uploaded by the runner (media-only key)",
  "first_report": "SteamDB all-time peak 36,318 on 25 Oct 2026; Automaton (JP) reported the 36k+ peak; the hourly watch saw it 03:08Z 26 Oct",
  "sources": [
   {
@@ -52,7 +52,7 @@
   "key_shot": "line 4 (the peak) over the astronauts at the dust machine and the vehicles",
   "strip": "على Steam 25.06 AED; الخصم حتى 30 أكتوبر",
   "sensitive": "none",
-  "seconds": "19.1 s before the end card",
+  "seconds": "18.4 s before the end card",
   "shots_reason": [
    "0-3 headline: astronaut sweeping, broom shadow, the base, the mascot face",
    "4-5 line 1 (release, the job): the base and players brushing",
@@ -70,5 +70,12 @@
  },
  "deepl": "forward (whole story, 03:45Z) agrees; it wrote «خصم إطلاق» and «اللاعبين المتزامنين»; ours keeps «في وقت واحد», plainer for readers. Alternatives: 'introductory offer ends' → «ينتهي العرض التمهيدي»; 'launch discount ends' → «ينتهي عرض الخصم الترويجي»; picked «خصم الإطلاق ... الذي ينتهي». Back-check: meaning intact on caption and X.",
  "grammar": "self-review with the stage rules 03:45Z: no required edits (36,318 لاعبًا tamyiz singular accusative; يبدؤون hamza on waw; studio named with role and bracket at first mention; lines open on Arabic words)",
- "director_model": "main session (Opus)"
+ "director_model": "main session (Opus)",
+ "gate": "gate 05:03Z: Steam API 25.06 AED / 19.96 SR, intro offer ends 30 Oct, release 23 Oct; current players 22,108 (peak claim 36,318 on 25 Oct per SteamDB unchanged). Exit A on Steam facts; peak attributed to SteamDB.",
+ "director": {
+  "round1": "FIX: cover and mascot helmets under the headline",
+  "round2": "FIX: cover shot 0.25 s long, overhead map at the close, black-sky shots read as letterbox",
+  "round3": "FIX (cover only): first frame was the overhead of the base",
+  "final": "PASS with note: cover is the astronaut from behind at the left edge with a dust canister, helmet below the band; the base cut flags the smear check on every version and is clean on the dense strips"
+ }
 }
