@@ -38,7 +38,7 @@
   "ig_comment": "المصدر: حساب Sonic الرسمي من سيغا (SEGA)، 26 أكتوبر 2026",
   "x_reply": "المصدر: https://www.gematsu.com/2026/10/sonic-x-shadow-generations-sales-top-three-million"
  },
- "status": "render pushed (runner)",
+ "status": "scheduled in Publer 02:37Z for 04:30Z (08:30 Dubai) on Instagram, X and Threads; labels tpl:clipcard skin:house sound:trailer genre:action",
  "grammar": {
   "required_edits": [
    {
@@ -83,6 +83,44 @@
     ]
    ],
    "verdict": "FIX: Shadow's face opens the Reel (cover), Sonic shots follow under the headline; the per-SEGA line gets the Green Hill runs"
+  },
+  "round2": {
+   "reel": "no speech (transcribed); 17.5 s + end card",
+   "table": [
+    [
+     "0 Shadow close",
+     "0-2.6",
+     "PASS",
+     "face clear on the 3:4 tile"
+    ],
+    [
+     "1 Sonic standing",
+     "2.6-4.5",
+     "PASS (note)",
+     "head under the headline band; body reads as Sonic"
+    ],
+    [
+     "2-3 Green Hill",
+     "4.5-8.4",
+     "PASS",
+     "per SEGA line"
+    ],
+    [
+     "card",
+     "8.4-12.2",
+     "PASS",
+     ""
+    ],
+    [
+     "5-7",
+     "12.2-17.5",
+     "PASS",
+     "contents line"
+    ]
+   ],
+   "verdict": "PASS"
   }
- }
+ },
+ "gate": "gate 02:37Z: Gematsu article (25 Oct 9:18 PM EDT) unchanged, quoting SEGA's Sonic account; no correction. Exit A via the company's own post as quoted, chip إنجاز.",
+ "approved": "go: rolling queue; preview sent 02:38Z (inbox)"
 }
