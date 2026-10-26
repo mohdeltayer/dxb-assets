@@ -9318,5 +9318,38 @@
   "min_disk_free_mb": 235771,
   "setup_min": 0.23,
   "story": "marvel-cosmic-invasion-castle-doom-mode"
+ },
+ {
+  "name": "minecraft-switch-2-launch-today-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T19:23Z",
+  "stages": {
+   "checks": 0.9,
+   "montage": 45.4,
+   "text": 40.0,
+   "audio": 0.9,
+   "outro": 41.2
+  },
+  "total": 128.5,
+  "lane": "runner",
+  "queued_at": "2026-10-26T19:19:14Z",
+  "finished_at": "2026-10-26T19:23Z",
+  "render_min": 2.14,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 141,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1092,
+  "peak_mem_mb": 2195,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62526,
+  "peak_disk_mb": 64386,
+  "min_disk_free_mb": 83315,
+  "setup_min": 0.98,
+  "story": "minecraft-switch-2-launch-today"
  }
 ]
