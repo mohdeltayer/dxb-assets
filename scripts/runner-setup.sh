@@ -101,7 +101,8 @@ log "apt: base tools, ffmpeg, tesseract, browser libraries"
   python3 python3-venv python3-pip \
   fonts-liberation libnss3 libnspr4 libatk1.0-0t64 libatk-bridge2.0-0t64 libcups2t64 libdrm2 libxkbcommon0 \
   libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2t64 libpango-1.0-0 libcairo2 libx11-6 \
-  libxcb1 libxext6 libglib2.0-0t64 libdbus-1-3 libxshmfence1
+  libxcb1 libxext6 libglib2.0-0t64 libdbus-1-3 libxshmfence1 \
+  libatomic1
 command -v ffmpeg >/dev/null && command -v tesseract >/dev/null || die "ffmpeg or tesseract did not install"
 
 if ! command -v node >/dev/null || [ "$(node -p 'process.versions.node.split(".")[0]')" != "${NODE_MAJOR}" ]; then
