@@ -9351,5 +9351,53 @@
   "min_disk_free_mb": 83315,
   "setup_min": 0.98,
   "story": "minecraft-switch-2-launch-today"
+ },
+ {
+  "name": "silent-hill-1-remake-2027-report-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T20:30Z",
+  "stages": {
+   "checks": 4.2,
+   "montage": 37.4,
+   "text": 45.5,
+   "audio": 0.5,
+   "outro": 47.0
+  },
+  "total": 134.6,
+  "lane": "runner",
+  "queued_at": "2026-10-26T20:23:43Z",
+  "finished_at": "2026-10-26T20:30Z",
+  "render_min": 2.24,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 14.3,
+   "audio_secs": 48.2,
+   "music_pct": 27.0,
+   "leak_pct": 7.9,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 6
+   },
+   "reason": "music stem not clean (leftover 7.9% > 5.0%)",
+   "secs": 19.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 248,
+  "mem_total_mb": 15988,
+  "mem_start_mb": 1380,
+  "peak_mem_mb": 2213,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 63754,
+  "peak_disk_mb": 66638,
+  "min_disk_free_mb": 81064,
+  "setup_min": 3.57,
+  "story": "silent-hill-1-remake-2027-report"
  }
 ]
