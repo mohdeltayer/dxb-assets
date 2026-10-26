@@ -7917,5 +7917,43 @@
   "job_secs": 195,
   "setup_min": 1.08,
   "story": "shenmue-3-enhanced-delay-early-2027"
+ },
+ {
+  "name": "sonic-x-shadow-generations-3-million-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T02:18Z",
+  "stages": {
+   "checks": 3.0,
+   "montage": 30.2,
+   "text": 35.1,
+   "audio": 0.9,
+   "outro": 47.7
+  },
+  "total": 116.8,
+  "lane": "runner",
+  "queued_at": "2026-10-26T02:14:23Z",
+  "finished_at": "2026-10-26T02:18Z",
+  "render_min": 1.95,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 11.2,
+   "audio_secs": 35.9,
+   "music_pct": 76.8,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 6,
+   "mix_secs": 4.9,
+   "secs": 16.6
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 205,
+  "setup_min": 1.38,
+  "story": "sonic-x-shadow-generations-3-million"
  }
 ]
