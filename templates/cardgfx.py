@@ -4,6 +4,9 @@ reset, so a job file describes its cards and the runner draws them before the re
     "gfx": [{"file": "ys8-gfx-date.png", "kind": "fact", "label": "موعد الصدور",
              "value": "25 فبراير 2027", "note": "على Nintendo Switch 2"}]
 
+A UAE price is written ["aed", "25.20"]: the digits with the Central Bank's dirham symbol to
+their left, as on the strip (26 Oct 2026; the house glossary never puts «درهم» on screen).
+
 Each card is drawn on a transparent canvas (numgfx.canvas) and the shot that names it
 (`-gfx-` in the file name) lays it on the ground as before (numgfx.slide; `ground_footage`
 puts the game's trailer behind it). One fact per card, held alone or under a one-line frame
@@ -17,6 +20,16 @@ VALUE_SIZES = (128, 116, 104, 92, 84)
 LABEL, NOTE = 46, 52
 
 
+def _vwidth(probe, value, size):
+    """(width, symbol height) of a card value at a size; ('aed', digits) adds the dirham symbol."""
+    f = A.F('Bold', size)
+    if isinstance(value, tuple):
+        bb = probe.textbbox((0, 0), value[1], font=f, anchor='ls')
+        dh = bb[3] - bb[1]
+        return probe.textlength(value[1], font=f, **G.AR) + round(dh * 0.3) + round(RL.SYM.width * dh / RL.SYM.height), dh
+    return probe.textlength(value, font=f, **G.AR), 0
+
+
 def fact(path, value, label=None, note=None, theme='cold'):
     """One figure or date, large, on a soft plate tinted with the theme; an optional label above
     it (body colour, accent rule under it) and an optional note below (ink). Label and note open
@@ -24,10 +37,14 @@ def fact(path, value, label=None, note=None, theme='cold'):
     for t, what in ((label, 'card label'), (note, 'card note')):
         if t:
             RL.rtl_starts([t], what)
+    if isinstance(value, list):
+        value = tuple(value)
+    if isinstance(value, tuple) and (len(value) != 2 or value[0] != 'aed' or not str(value[1]).strip()):
+        raise ValueError(f"card value {value!r}: use a string, or ['aed', '25.20'] for the dirham symbol")
     left, right = A.THEMES[theme][:2]
     probe = ImageDraw.Draw(Image.new('L', (NG.W, NG.H)))
     room = X1 - X0 - 72
-    vs = next((s for s in VALUE_SIZES if probe.textlength(value, font=A.F('Bold', s), **G.AR) <= room), None)
+    vs = next((s for s in VALUE_SIZES if _vwidth(probe, value, s)[0] <= room), None)
     if vs is None:
         raise ValueError(f'card value is wider than the plate at {VALUE_SIZES[-1]} px: {value}')
     for t, w, s in ((label, 'Medium', LABEL), (note, 'Medium', NOTE)):
@@ -51,6 +68,14 @@ def fact(path, value, label=None, note=None, theme='cold'):
         if kind == 'label':
             d.text((cx, y + LABEL), label, font=A.F('Medium', LABEL), fill=A.BODY, anchor='ms', **G.AR)
             d.rounded_rectangle([cx - 60, y + LABEL + 16, cx + 60, y + LABEL + 22], radius=3, fill=right)
+        elif kind == 'value' and isinstance(value, tuple):     # digits, the dirham symbol to their left
+            w, dh = _vwidth(probe, value, vs)
+            sw = round(RL.SYM.width * dh / RL.SYM.height)
+            d.text((cx + w / 2, y + vs), value[1], font=A.F('Bold', vs), fill=A.INK, anchor='rs', **G.AR)
+            sym = Image.new('RGBA', (sw, dh), A.INK + (255,))
+            sym.putalpha(RL.SYM.resize((sw, dh), Image.LANCZOS))
+            im.alpha_composite(sym, (round(cx - w / 2), y + vs - dh))
+            d = ImageDraw.Draw(im)
         elif kind == 'value':
             d.text((cx, y + vs), value, font=A.F('Bold', vs), fill=A.INK, anchor='ms', **G.AR)
         else:

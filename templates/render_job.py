@@ -33,7 +33,7 @@ unreleased material.
       "skin": "house",                                               # game skins pilot: house, scifi or fantasy (format ledger)
       "person": [["miyamoto.jpg", "شيغيرو مياموتو", "مبتكر Mario وZelda", 0.4, 3.8,      # people stories show the person
                   {"focus": [0.5, 0.3], "credit": null}]],                      # (23 Oct 2026); photo fetched as footage
-      "gfx": [{"file": "x-gfx-fps.png", "kind": "fact", "label": "الأداء",   # cards drawn here with the Dubai font
+      "gfx": [{"file": "x-gfx-fps.png", "kind": "fact", "label": "الأداء",   # cards drawn here with the Dubai font; a UAE price as ["aed", "25.20"]
                "value": "حتى 120", "note": "إطارًا في الثانية"}],             # (cardgfx.py), then laid on the ground
       "insert": [{"piece": "numbers", "shot": 3, "data": {...}}],    # HyperFrames over a -gfx- shot (24 Oct 2026):
                                                                      # templates/hfinsert.py; the card stays if it fails
