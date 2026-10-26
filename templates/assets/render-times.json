@@ -8860,5 +8860,38 @@
   "min_disk_free_mb": 82061,
   "setup_min": 1.03,
   "story": "helldivers-2-liberty-day-free-rifle"
+ },
+ {
+  "name": "romancing-saga-3-new-party-members-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T12:23Z",
+  "stages": {
+   "checks": 1.8,
+   "montage": 63.6,
+   "text": 89.0,
+   "audio": 1.5,
+   "outro": 60.5
+  },
+  "total": 216.3,
+  "lane": "runner",
+  "queued_at": "2026-10-26T12:18:13Z",
+  "finished_at": "2026-10-26T12:23Z",
+  "render_min": 3.61,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 235,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1068,
+  "peak_mem_mb": 2274,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62526,
+  "peak_disk_mb": 65605,
+  "min_disk_free_mb": 82097,
+  "setup_min": 1.03,
+  "story": "romancing-saga-3-new-party-members"
  }
 ]
