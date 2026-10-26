@@ -8106,5 +8106,43 @@
   "job_secs": 175,
   "setup_min": 0.93,
   "story": "overwatch-stellar-blade-eve-protocol-nov-4"
+ },
+ {
+  "name": "moon-sweepers-36k-players-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T03:55Z",
+  "stages": {
+   "checks": 5.0,
+   "montage": 44.8,
+   "text": 41.6,
+   "audio": 0.8,
+   "outro": 28.8
+  },
+  "total": 121.0,
+  "lane": "runner",
+  "queued_at": "2026-10-26T03:52:10Z",
+  "finished_at": "2026-10-26T03:55Z",
+  "render_min": 2.02,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 6.1,
+   "audio_secs": 30.9,
+   "music_pct": 99.7,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 15,
+   "mix_secs": 3.4,
+   "secs": 9.9
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 202,
+  "setup_min": 1.02,
+  "story": "moon-sweepers-36k-players"
  }
 ]
