@@ -104,6 +104,11 @@ and readable at phone size, the name plate gives the role, the photo source in
 the brief is on the allowed list (press kit, awarding body, licensed and
 credited), and the first frame shows the person and the game together; a
 missing person window on such a story is a send-back.
+Legal, piracy, hacking and leak-enforcement stories (advisor, 26 Oct 2026;
+CLAUDE.md section of that name): the director checks the wording is neutral and
+attributed (no side taken, no leaker's framing), nothing leaked or extracted is
+on screen (not even blurred), there is no how-to or tool link, the footage is
+official, and the sound is our channel bed; any miss is a send-back.
 QA format (advisor, 23 Oct 2026; CLAUDE.md "Director QA format"). For every
 shot, pull one frame (the shot's middle, plus its first frame when a line
 enters there) and check: framing (subject in the 9:16 crop, no side-on face

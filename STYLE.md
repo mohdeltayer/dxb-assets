@@ -78,6 +78,11 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     game news.
   - Every brief has a "sensitive" line; the grammar stage checks it as a house
     rule. Live posts stay unless Mohammad asks. ("Culturally sensitive details")
+- **Legal, piracy, hacking and leak-enforcement stories** (26 Oct): neutral
+  and factual, what the company and the law did, attributed, no side taken; no
+  how-to, no tool links, never the leaked or extracted material (not even
+  blurred); our channel bed by default; official footage only; the director
+  checks all four. ("Legal, piracy, hacking and leak-enforcement stories")
 - **Chip ladder:** رسمي / تقرير / تسريب / شائعة, with جديد for most news and
   عاجل rarely.
   - The chip matches the weakest claim, and the headline is never louder

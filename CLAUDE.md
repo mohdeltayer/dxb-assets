@@ -2488,6 +2488,29 @@ Nothing is skipped because of it.
    the final Arabic against 1 and 2 as a house rule.
 4. Live posts stay as they are unless Mohammad asks.
 
+Legal, piracy, hacking and leak-enforcement stories (advisor, 26 Oct 2026,
+approved by Mohammad; his words, 11:30 Dubai: as an outlet aiming to be
+official, we report unbiased and never promote or encourage illegal activity).
+Covers takedowns, lawsuits, piracy, jailbreaks, cheats, hacks and leak
+enforcement.
+1. Neutral and factual: report what the company and the law did, attributed;
+   no cheering for either side and no leaker's framing («نينتندو غاضبة»).
+2. Never promote or encourage illegal activity: no how-to, no tool names
+   beyond what the context needs, no tool links, and never the leaked or
+   extracted material itself (not even blurred).
+3. Sound: our channel music bed by default, not trailer sound (an exception to
+   "Trailer sound is the default", 23 Oct).
+4. Official footage only (the company's own trailers, art and clips).
+5. The director check asks: neutral wording, nothing leaked or extracted on
+   screen, no how-to, our bed.
+First case: Nintendo's copyright takedowns of posts showing datamined Switch 2
+content (26 Oct): verified against the Lumen database or a major outlet before
+it runs as fact, otherwise تقرير attributed with «لم تعلّق نينتندو»; Peach large
+on the first frame from official footage; preview to Mohammad before
+scheduling. A weekend explainer on hacking, cheating, piracy and AI across all
+major platforms follows as a first of its kind: outline and options to him
+before building.
+
 Variety (Mohammad, 5 Oct 2026, after a run of Witcher and RuneScape posts:
 "I've been posting about it for a while now"): a game or series that went out
 in the last few days does not come back in a shortlist unless there is real
