@@ -8068,5 +8068,43 @@
   "job_secs": 273,
   "setup_min": 1.12,
   "story": "overwatch-stellar-blade-eve-protocol-nov-4"
+ },
+ {
+  "name": "overwatch-stellar-blade-eve-protocol-nov-4-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T02:52Z",
+  "stages": {
+   "checks": 2.9,
+   "montage": 28.6,
+   "text": 20.1,
+   "audio": 0.6,
+   "outro": 25.3
+  },
+  "total": 77.5,
+  "lane": "runner",
+  "queued_at": "2026-10-26T02:48:37Z",
+  "finished_at": "2026-10-26T02:52Z",
+  "render_min": 1.29,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 8.4,
+   "audio_secs": 45.3,
+   "music_pct": 48.9,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 9,
+   "mix_secs": 2.3,
+   "secs": 11.1
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 175,
+  "setup_min": 0.93,
+  "story": "overwatch-stellar-blade-eve-protocol-nov-4"
  }
 ]
