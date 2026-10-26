@@ -9055,5 +9055,54 @@
   "min_disk_free_mb": 82201,
   "setup_min": 1.53,
   "story": "scramble-knights-online-early-access-launch"
+ },
+ {
+  "name": "gta-6-reviews-november-18-report-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T17:37Z",
+  "stages": {
+   "checks": 12.3,
+   "montage": 58.9,
+   "text": 55.4,
+   "audio": 1.1,
+   "outro": 51.3
+  },
+  "total": 179.0,
+  "lane": "runner",
+  "queued_at": "2026-10-26T17:32:06Z",
+  "finished_at": "2026-10-26T17:37Z",
+  "render_min": 2.98,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 15.5,
+   "audio_secs": 52.2,
+   "music_pct": 96.1,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "effects_shots": 10,
+   "mix_secs": 5.4,
+   "secs": 21.7
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 350,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1326,
+  "peak_mem_mb": 2807,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62825,
+  "peak_disk_mb": 65682,
+  "min_disk_free_mb": 82020,
+  "setup_min": 1.25,
+  "story": "gta-6-reviews-november-18-report"
  }
 ]
