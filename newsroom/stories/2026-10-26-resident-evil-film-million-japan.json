@@ -63,6 +63,45 @@
  },
  "translation": "DeepL back-check passed (record attributed to the company; director and lead roles read correctly)",
  "gate": "gate 09:55Z: Sony Pictures Japan release (26 Oct) read in full via Denfami; worldwide figure as of 23 Oct per The Numbers as quoted; no change found",
- "approved": "go: rolling queue (14:00 review, ranked 1); preview at queuing",
- "status": "rendering v1 on the runner (09:51Z)"
+ "approved": "go: rolling queue (14:00 review, ranked 1); preview at queuing; preview sent 10:25Z",
+ "status": "scheduled in Publer 11:00Z (15:00 Dubai) on Instagram, X and Threads; v1",
+ "director": {
+  "round1": {
+   "reel": "footage soft (letterboxed 1080p enlarged 2.39x, 1.3 Mbps; block ratio ok); no gore; one fact per place",
+   "table": [
+    [
+     "0-1 Brian close in the beanie, nurse",
+     "0-3.95",
+     "PASS",
+     "cover: a face and the headline, readable"
+    ],
+    [
+     "2 card 1,033,027",
+     "3.95-7.75",
+     "PASS",
+     "the figure alone, label and source on the plate; dimmed footage behind"
+    ],
+    [
+     "3-4 Brian close, hallway with the cooler",
+     "7.75-12.1",
+     "PASS",
+     "line 1 (worldwide 364 million)"
+    ],
+    [
+     "5-6 counter, hallway",
+     "12.1-16.5",
+     "PASS",
+     "line 2 (series record)"
+    ],
+    [
+     "7-8 hallway, Brian at the door",
+     "16.5-20.7",
+     "PASS",
+     "line 3 (director with his role); ends on a picture"
+    ]
+   ],
+   "verdict": "PASS (note: soft source, the best usable copy)"
+  },
+  "model": "opus"
+ }
 }
