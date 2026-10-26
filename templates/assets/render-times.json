@@ -8182,5 +8182,43 @@
   "job_secs": 295,
   "setup_min": 1.23,
   "story": "moon-sweepers-36k-players"
+ },
+ {
+  "name": "moon-sweepers-36k-players-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T04:53Z",
+  "stages": {
+   "checks": 7.1,
+   "montage": 62.5,
+   "text": 62.1,
+   "audio": 1.1,
+   "outro": 48.1
+  },
+  "total": 180.9,
+  "lane": "runner",
+  "queued_at": "2026-10-26T04:48:48Z",
+  "finished_at": "2026-10-26T04:53Z",
+  "render_min": 3.02,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 10.8,
+   "audio_secs": 34.2,
+   "music_pct": 99.7,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 13,
+   "mix_secs": 5.4,
+   "secs": 16.7
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 292,
+  "setup_min": 1.17,
+  "story": "moon-sweepers-36k-players"
  }
 ]
