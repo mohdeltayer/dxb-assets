@@ -9399,5 +9399,53 @@
   "min_disk_free_mb": 81064,
   "setup_min": 3.57,
   "story": "silent-hill-1-remake-2027-report"
+ },
+ {
+  "name": "silent-hill-1-remake-2027-report-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T20:40Z",
+  "stages": {
+   "checks": 4.7,
+   "montage": 39.3,
+   "text": 52.9,
+   "audio": 1.1,
+   "outro": 48.1
+  },
+  "total": 146.1,
+  "lane": "runner",
+  "queued_at": "2026-10-26T20:35:44Z",
+  "finished_at": "2026-10-26T20:40Z",
+  "render_min": 2.43,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 14.3,
+   "audio_secs": 48.2,
+   "music_pct": 30.9,
+   "leak_pct": 10.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 6
+   },
+   "reason": "music stem not clean (leftover 10.1% > 5.0%)",
+   "secs": 19.0
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 233,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1298,
+  "peak_mem_mb": 2239,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62892,
+  "peak_disk_mb": 65734,
+  "min_disk_free_mb": 81968,
+  "setup_min": 1.25,
+  "story": "silent-hill-1-remake-2027-report"
  }
 ]
