@@ -8614,5 +8614,54 @@
   "min_disk_free_mb": 82700,
   "setup_min": 1.43,
   "story": "resident-evil-film-million-japan"
+ },
+ {
+  "name": "pao-pao-early-access-gulf-prices-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T10:38Z",
+  "stages": {
+   "checks": 8.2,
+   "montage": 48.5,
+   "text": 42.4,
+   "audio": 0.9,
+   "outro": 45.4
+  },
+  "total": 145.4,
+  "lane": "runner",
+  "queued_at": "2026-10-26T10:33:28Z",
+  "finished_at": "2026-10-26T10:38Z",
+  "render_min": 2.42,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 10.8,
+   "audio_secs": 33.5,
+   "music_pct": 93.1,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "effects_shots": 8,
+   "mix_secs": 4.5,
+   "secs": 15.9
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 257,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1370,
+  "peak_mem_mb": 2131,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62829,
+  "peak_disk_mb": 65260,
+  "min_disk_free_mb": 82442,
+  "setup_min": 1.03,
+  "story": "pao-pao-early-access-gulf-prices"
  }
 ]
