@@ -1,0 +1,68 @@
+{
+ "id": "2026-10-26-resident-evil-film-million-japan",
+ "genre": [
+  "horror",
+  "industry/hardware"
+ ],
+ "kind": "results",
+ "chip": "أرقام",
+ "tier": 2,
+ "sources": [
+  {
+   "role": "primary",
+   "who": "Sony Pictures Japan press release, 26 Oct 2026 (reproduced in full by Denfami, 26 Oct 18:00 JST)",
+   "url": "https://news.denfaminicogamer.jp/news/2610262e",
+   "text": "公開17日間で観客動員1,033,027人、興行収入17億6,648万9,750円 (10月25日時点); 全米1億5,153万ドル、全世界3億6,454万ドル (10月23日付 The Numbers調べ); 実写映画シリーズ史上最高の記録を更新中"
+  }
+ ],
+ "claims": [
+  [
+   "1,033,027 admissions in Japan in 17 days, 1.77 billion yen, to 25 Oct",
+   "✓ Sony Pictures Japan release"
+  ],
+  [
+   "over 364.5 million dollars worldwide (The Numbers, 23 Oct)",
+   "✓ quoted in the release"
+  ],
+  [
+   "highest for the live-action film series",
+   "✓ the release's own claim, attributed"
+  ],
+  [
+   "director Zach Cregger (Barbarian), lead Austin Abrams as a delivery driver",
+   "✓ release"
+  ]
+ ],
+ "brief": {
+  "family": "3 numbers",
+  "template": "clipcard",
+  "opening": "Brian (Austin Abrams) close-up in the beanie, smiling",
+  "hook": "number: a million in Japan",
+  "cover": "Brian's face with the headline",
+  "footage": "IGN's copy of the film's Official Trailer 2 (1920x1080, letterboxed to 804 rows, 1.3 Mbps; enlarged 2.39x, block ratio peaks 1.06 to 1.26, ok); IGN's vertical copy carries IGN's own caption and burnt-in subtitles, not used; lowres_ok names the copies",
+  "sound": "trailer 2's own sound, one stretch from 40.4 s (speech-free 40.3 to 69 s: night drive, score and effects); speech none",
+  "card": "one fact card: 1,033,027 admissions in Japan in 17 days (Sony Pictures Japan, to 25 Oct); worldwide figure in a line, not on the card",
+  "sensitive": "horror film: no blood, wounds or creatures; the street shot with a red splash on the snow left out",
+  "seconds": "20.6 s before the end card",
+  "people": "Zach Cregger named with his role (director of Barbarian); not a people story"
+ },
+ "drafts": {
+  "x": "تجاوز فيلم Resident Evil مليون مشاهد في اليابان خلال 17 يومًا، و364 مليون دولار من الإيرادات حول العالم، في رقم قياسي لأفلام السلسلة بالممثلين الحقيقيين، حسب سوني بيكتشرز (Sony Pictures).",
+  "threads": "تجاوز فيلم Resident Evil مليون مشاهد في اليابان خلال 17 يومًا، و364 مليون دولار من الإيرادات حول العالم، في رقم قياسي لأفلام السلسلة بالممثلين الحقيقيين، حسب سوني بيكتشرز (Sony Pictures).",
+  "instagram": "مليون مشاهد في اليابان لفيلم Resident Evil خلال 17 يومًا.\n\nأعلنت شركة سوني بيكتشرز (Sony Pictures) في اليابان أن فيلم Resident Evil من إخراج المخرج زاك كريغر (Zach Cregger) جذب 1,033,027 مشاهدًا في دور العرض اليابانية خلال أول 17 يومًا، بإيرادات بلغت 1.77 مليار ين حتى 25 أكتوبر.\n\nوتجاوزت إيرادات الفيلم حول العالم 364.5 مليون دولار حتى 23 أكتوبر، وهو أعلى رقم لأفلام السلسلة بالممثلين الحقيقيين حسب الشركة.\n\nويؤدي الممثل أوستن أبرامز (Austin Abrams) دور البطولة، عامل توصيل عادي يجد نفسه في عالم السلسلة.\n\n#ألعاب #أخبار_الألعاب #ResidentEvil #ResidentEvilMovie",
+  "follow_up": {
+   "x": "المصدر: سوني بيكتشرز اليابان (Sony Pictures) عبر بيان صحفي، 26 أكتوبر https://news.denfaminicogamer.jp/news/2610262e",
+   "instagram": "المصدر: بيان سوني بيكتشرز (Sony Pictures) في اليابان، 26 أكتوبر"
+  }
+ },
+ "grammar": {
+  "required_edits": [],
+  "optional_style_suggestions": [],
+  "uncertain_cases": [],
+  "checked": "X, Threads, Instagram, headline, lines, card, credit; tamyiz after 1,033,027 accusative singular (مشاهدًا); people with role at first mention; every line opens on an Arabic word"
+ },
+ "translation": "DeepL back-check passed (record attributed to the company; director and lead roles read correctly)",
+ "gate": "gate 09:55Z: Sony Pictures Japan release (26 Oct) read in full via Denfami; worldwide figure as of 23 Oct per The Numbers as quoted; no change found",
+ "approved": "go: rolling queue (14:00 review, ranked 1); preview at queuing",
+ "status": "rendering v1 on the runner (09:51Z)"
+}
