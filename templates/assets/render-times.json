@@ -8030,5 +8030,43 @@
   "job_secs": 215,
   "setup_min": 1.25,
   "story": "sonic-x-shadow-generations-3-million"
+ },
+ {
+  "name": "overwatch-stellar-blade-eve-protocol-nov-4-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T02:46Z",
+  "stages": {
+   "checks": 4.1,
+   "montage": 41.9,
+   "text": 30.6,
+   "audio": 0.8,
+   "outro": 40.6
+  },
+  "total": 118.0,
+  "lane": "runner",
+  "queued_at": "2026-10-26T02:41:08Z",
+  "finished_at": "2026-10-26T02:46Z",
+  "render_min": 1.97,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 13.3,
+   "audio_secs": 45.3,
+   "music_pct": 48.9,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 9,
+   "mix_secs": 3.5,
+   "secs": 17.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 273,
+  "setup_min": 1.12,
+  "story": "overwatch-stellar-blade-eve-protocol-nov-4"
  }
 ]
