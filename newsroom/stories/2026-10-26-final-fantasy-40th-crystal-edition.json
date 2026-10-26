@@ -1,0 +1,73 @@
+{
+ "id": "2026-10-26-final-fantasy-40th-crystal-edition",
+ "title": "Final Fantasy 40th Anniversary: THE CRYSTAL EDITION, vinyl and CD, 16 tracks (one per mainline game I to XVI), Japan 6 Jan 2027",
+ "game": "Final Fantasy",
+ "companies": [
+  "Square Enix"
+ ],
+ "category": "announcement",
+ "chip": "رسمي",
+ "template": "split",
+ "skin": "house",
+ "sound": "trailer (FF X/X-2 HD trailer music from 5.0 s, speech none)",
+ "genre": [
+  "RPG"
+ ],
+ "sensitive": "none",
+ "sources": [
+  {
+   "role": "primary",
+   "url": "https://www.jp.square-enix.com/music/sem/page/FF40th_THECRYSTAL/",
+   "note": "read 06:00Z and 06:41Z: 2027.1.6, vinyl 8,800 yen (2 LP), CD 3,960 yen, tax included, track list I to XVI"
+  },
+  {
+   "role": "outlet",
+   "url": "https://www.4gamer.net/games/991/G999109/20261026016/",
+   "note": "4Gamer 26 Oct, announced today"
+  },
+  {
+   "role": "outlet",
+   "url": "https://news.denfaminicogamer.jp/news/261026r"
+  },
+  {
+   "role": "footage",
+   "note": "Steam trailers: FF VII Rebirth launch (2909400), FF X/X-2 HD out now (359870), FF XVI (2515020); FF I Pixel Remaster trailer rejected (English text over every image)"
+  }
+ ],
+ "claims": [
+  {
+   "text": "Vinyl 8,800 yen, CD 3,960 yen, tax included, Japan, 6 Jan 2027",
+   "status": "✓ Square Enix page"
+  },
+  {
+   "text": "16 tracks, one from each mainline game I to XVI, incl. One-Winged Angel, To Zanarkand, Clash on the Big Bridge, Away",
+   "status": "✓ Square Enix track list"
+  }
+ ],
+ "drafts": {
+  "x": "أعلنت شركة سكوير (Square Enix) ألبومًا بمناسبة الذكرى الأربعين لسلسلة Final Fantasy، يضم 16 مقطوعة، واحدة من كل جزء رئيسي، ويصدر في اليابان يوم 6 يناير 2027.",
+  "threads": "same as x",
+  "source_comment_ig": "المصدر: موقع شركة سكوير الياباني، 26 أكتوبر",
+  "source_link_x": "https://www.jp.square-enix.com/music/sem/page/FF40th_THECRYSTAL/"
+ },
+ "notes": "Brief: family 2 (announcement), split; hook frame Cloud (FF VII Rebirth); one line each for the span I to XVI, One-Winged Angel on Sephiroth, To Zanarkand on Yuna's wedding, Away on FF XVI's Eikons; strip holds prices and date. DeepL forward pass on the whole story plus term variants (vinyl record, two vinyl LPs, tax included): أسطوانة فينيل, قرص مضغوط, شاملة الضريبة; DeepL's سكوير إنيكس overruled by the glossary (سكوير). Grammar stage: no required edits; optional «الفينيل» for the strip label. Back-check: meaning kept. v1 never rendered (headline too wide), v2 rendered then round 1 fixes, v3 published.",
+ "director": [
+  {
+   "round": 1,
+   "verdict": "FIX",
+   "fixes": [
+    "chocobo shot ran under FF XVI's burnt-in subtitle ', my boy.' (cut to 1.6 s)",
+    "Aerith eye close-up read as skin (replaced: Cait Sith, Meteor, Aerith casting)",
+    "Sephiroth lips close-up (replaced: Sephiroth in flight, focus right)"
+   ]
+  },
+  {
+   "round": 2,
+   "verdict": "PASS",
+   "note": "bottom band checked 3.6 to 5.2 s, no subtitle; cover Cloud readable; closes on FF XVI Eikon"
+  }
+ ],
+ "gate": "06:41Z: Square Enix page re-read, date, prices and tracks unchanged (Exit A, رسمي)",
+ "approved": "go: rolling queue; preview sent 06:44Z",
+ "status": "scheduled in Publer 07:30Z (11:30 Dubai) on Instagram, X and Threads; v3; media uploaded by the runner"
+}
