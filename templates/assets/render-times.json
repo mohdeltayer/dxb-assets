@@ -8371,5 +8371,43 @@
   "job_secs": 298,
   "setup_min": 1.12,
   "story": "final-fantasy-40th-crystal-edition"
+ },
+ {
+  "name": "tomb-raider-legacy-of-atlantis-tr30-teaser-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T06:54Z",
+  "stages": {
+   "checks": 5.3,
+   "montage": 37.9,
+   "text": 37.6,
+   "audio": 1.0,
+   "outro": 46.4
+  },
+  "total": 128.2,
+  "lane": "runner",
+  "queued_at": "2026-10-26T06:50:16Z",
+  "finished_at": "2026-10-26T06:54Z",
+  "render_min": 2.14,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 12.6,
+   "audio_secs": 41.1,
+   "music_pct": 84.2,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 10,
+   "mix_secs": 4.6,
+   "secs": 17.8
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 219,
+  "setup_min": 1.22,
+  "story": "tomb-raider-legacy-of-atlantis-tr30-teaser"
  }
 ]
