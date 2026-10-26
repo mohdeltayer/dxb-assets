@@ -52,13 +52,15 @@
   "seconds": "12.4 s before the end card"
  },
  "drafts": {
-  "x": "تعاون بين Overwatch و Stellar Blade يبدأ يوم 4 نوفمبر باسم EVE Protocol، حسب الحسابات الرسمية لبليزارد (Blizzard) وشيفت أب (Shift Up).",
-  "threads": "تعاون بين Overwatch و Stellar Blade يبدأ يوم 4 نوفمبر باسم EVE Protocol، حسب الحسابات الرسمية لبليزارد (Blizzard) وشيفت أب (Shift Up).",
-  "instagram": "تعاون بين Overwatch و Stellar Blade يبدأ يوم 4 نوفمبر.\n\nأعلنت شركة بليزارد (Blizzard) واستوديو شيفت أب (Shift Up) الكوري التعاون باسم EVE Protocol في حساباتهما الرسمية، ونشر الطرفان صورة رسمية تظهر فيها Eve و Lily وشخصيات أخرى من Stellar Blade مع موعد البدء.\n\nولم تُعلن تفاصيل المحتوى بعد، ولا الأبطال الذين سيحصلون على المظاهر الجديدة، واللقطات في الفيديو من اللعبتين.\n\n#ألعاب #أخبار_الألعاب #Overwatch #StellarBlade",
-  "ig_comment": "المصدر: حسابا Overwatch و Stellar Blade الرسميان، 25 أكتوبر 2026",
-  "x_reply": "المصدر: https://www.invenglobal.com/articles/27678/"
+  "x": "تعاون بين Overwatch و Stellar Blade باسم EVE Protocol يبدأ يوم 3 نوفمبر بتوقيت أمريكا ويوم 4 نوفمبر بتوقيت كوريا، حسب الحسابات الرسمية لبليزارد (Blizzard) وشيفت أب (Shift Up).",
+  "threads": "تعاون بين Overwatch و Stellar Blade باسم EVE Protocol يبدأ يوم 3 نوفمبر بتوقيت أمريكا ويوم 4 نوفمبر بتوقيت كوريا، حسب الحسابات الرسمية لبليزارد (Blizzard) وشيفت أب (Shift Up). واللقطات من العرضين الرسميين لإطلاق اللعبتين.",
+  "instagram": "تعاون بين Overwatch و Stellar Blade يبدأ مطلع نوفمبر.\n\nأعلنت شركة بليزارد (Blizzard) واستوديو شيفت أب (Shift Up) الكوري التعاون باسم EVE Protocol في حساباتهما الرسمية، ويبدأ يوم 3 نوفمبر بتوقيت أمريكا ويوم 4 نوفمبر بتوقيت كوريا، ولم تُعلن ساعة البدء بعد.\n\nونشر الطرفان صورة رسمية تظهر فيها Eve و Lily وشخصيات أخرى من Stellar Blade، ولم تُعلن تفاصيل المحتوى بعد.\n\nالمصدر: الحسابات الرسمية لـ Overwatch و Stellar Blade، واللقطات من العرضين الرسميين لإطلاق اللعبتين.\n\n#ألعاب #أخبار_الألعاب #Overwatch #StellarBlade",
+  "follow_up": {
+   "x": "المصدر: الحساب الرسمي لـ Stellar Blade https://x.com/StellarBlade/status/2114236717263994883",
+   "instagram": "المصدر: الحسابات الرسمية لـ Overwatch و Stellar Blade على X، 25 أكتوبر"
+  }
  },
- "status": "pulled 03:33Z (posts moved back to drafts in Publer); v3 to rebuild",
+ "status": "scheduled in Publer 10:30Z (14:30 Dubai) on Instagram, X and Threads; v4",
  "director": {
   "round1": {
    "reel": "no speech (transcribed); 12.4 s + end card",
@@ -107,6 +109,10 @@
     ]
    ],
    "verdict": "PASS"
+  },
+  "round3": {
+   "reel": "v4 (runner 08:29Z): same shots, sound and timing as v2 (passed round 2); headline «تعاون Overwatch / مع Stellar Blade في نوفمبر» and line 2 «يبدأ يوم 3 نوفمبر في أمريكا / ويوم 4 نوفمبر في كوريا»; dense strip read: text inside the safe zone, every line opens on an Arabic word, no damage",
+   "verdict": "PASS (text-only change)"
   }
  },
  "grammar": {
@@ -122,9 +128,10 @@
   "uncertain_cases": [],
   "checked": "X, Threads, Instagram, headline, lines, credit; companies Arabic then Latin; X names the accounts as source; on-screen lines never open on «و» followed by a Latin name (v1 lesson)"
  },
- "gate": "gate 02:50Z: Inven Global (25 Oct) and Game*Spark (26 Oct 01:23Z) both quote the official posts for 4 Nov; no change or denial found; time zone not stated in the posts as quoted, so no time is given. Exit A via the companies' own posts as quoted; chip رسمي.",
- "approved": "go: rolling queue; preview sent 02:56Z (inbox)",
+ "gate": "gate 02:50Z: Inven Global (25 Oct) and Game*Spark (26 Oct 01:23Z) both quote the official posts for 4 Nov; no change or denial found; time zone not stated in the posts as quoted, so no time is given. Exit A via the companies' own posts as quoted; chip رسمي. | gate 08:40Z: both official posts re-read via X syndication; no start hour, no change.",
+ "approved": "go: Mohammad's note on the art card (inbox 07:37Z): trailer with source under the video; preview sent 08:45Z",
  "notes": [
-  "03:33Z gate re-run after the advisor's trailer memo (adv-20261026-trailer-rule): the official Stellar Blade X post reads 'Nov 4 KST / Nov 3 PST' with no start hour, and Blizzard's post gives 3 Nov; our flat «4 نوفمبر» cannot be stated as the Gulf date. Part A of the memo also asks for the official art with motion instead of other footage when no collab trailer exists. The three 09:00 Dubai posts were moved back to drafts before publishing (rule 6). v3: official key art with motion, date written as the posts give it (3 Nov in the US, 4 Nov in Korea, start hour not announced). Skin pairings now reported by outlets from the art (Eve to Widowmaker, Lily to D.Va and so on) stay unnamed unless Blizzard states them."
+  "03:33Z gate re-run after the advisor's trailer memo (adv-20261026-trailer-rule): the official Stellar Blade X post reads 'Nov 4 KST / Nov 3 PST' with no start hour, and Blizzard's post gives 3 Nov; our flat «4 نوفمبر» cannot be stated as the Gulf date. Part A of the memo also asks for the official art with motion instead of other footage when no collab trailer exists. The three 09:00 Dubai posts were moved back to drafts before publishing (rule 6). v3: official key art with motion, date written as the posts give it (3 Nov in the US, 4 Nov in Korea, start hour not announced). Skin pairings now reported by outlets from the art (Eve to Widowmaker, Lily to D.Va and so on) stay unnamed unless Blizzard states them.",
+  "08:20Z Mohammad's answer on the art card: 'Add the trailer and mention the source under the video'. Checked 08:20 to 08:30Z: no official collab trailer or video on either official account, Blizzard news or Stellar Blade's site (PlayOverwatch 25 Oct 06:30Z: 'our newest collab on November 3'; StellarBlade 25 Oct 06:04Z: 'Nov 4 KST / Nov 3 PST'). v4 is built on both launch trailers as he asked, with the date as the posts give it, the stand-in credit on screen, and the source named in the caption under the video and in the follow-up comments. The v2 posts parked as drafts in Publer at 03:33Z stay there (Mohammad may delete them)."
  ]
 }
