@@ -8566,5 +8566,53 @@
   "min_disk_free_mb": 81834,
   "setup_min": 1.42,
   "story": "stellar-blade-nier-automata-vignette-switch-2"
+ },
+ {
+  "name": "resident-evil-film-million-japan-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T10:20Z",
+  "stages": {
+   "checks": 8.0,
+   "montage": 33.6,
+   "text": 48.3,
+   "audio": 1.0,
+   "outro": 50.2
+  },
+  "total": 141.0,
+  "lane": "runner",
+  "queued_at": "2026-10-26T10:16:01Z",
+  "finished_at": "2026-10-26T10:20Z",
+  "render_min": 2.35,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 12.0,
+   "audio_secs": 51.1,
+   "music_pct": 32.0,
+   "leak_pct": 38.5,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "reason": "music stem not clean (leftover 38.5% > 5.0%)",
+   "secs": 16.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 220,
+  "mem_total_mb": 15988,
+  "mem_start_mb": 1369,
+  "peak_mem_mb": 2313,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62826,
+  "peak_disk_mb": 65002,
+  "min_disk_free_mb": 82700,
+  "setup_min": 1.43,
+  "story": "resident-evil-film-million-japan"
  }
 ]
