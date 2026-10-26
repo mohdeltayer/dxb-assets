@@ -8518,5 +8518,53 @@
   "min_disk_free_mb": 81764,
   "setup_min": 3.43,
   "story": "nintendo-takedown-switch-2-datamine"
+ },
+ {
+  "name": "stellar-blade-nier-automata-vignette-switch-2-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T09:34Z",
+  "stages": {
+   "checks": 4.8,
+   "montage": 55.5,
+   "text": 51.4,
+   "audio": 1.2,
+   "outro": 55.2
+  },
+  "total": 168.2,
+  "lane": "runner",
+  "queued_at": "2026-10-26T09:29:56Z",
+  "finished_at": "2026-10-26T09:34Z",
+  "render_min": 2.8,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 7.5,
+   "audio_secs": 28.2,
+   "music_pct": 34.0,
+   "leak_pct": 0.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "reason": "music only 34.0% of the track (< 40.0%)",
+   "secs": 11.3
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 256,
+  "mem_total_mb": 15988,
+  "mem_start_mb": 1325,
+  "peak_mem_mb": 2451,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62826,
+  "peak_disk_mb": 65867,
+  "min_disk_free_mb": 81834,
+  "setup_min": 1.42,
+  "story": "stellar-blade-nier-automata-vignette-switch-2"
  }
 ]
