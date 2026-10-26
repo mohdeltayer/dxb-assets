@@ -92,5 +92,19 @@
    ],
    "verdict": "FIX (text only)"
   }
- }
+ },
+ "grammar": {
+  "required_edits": [
+   {
+    "original": "ونشرتا صورة",
+    "proposed": "ونشر الطرفان صورة",
+    "class": "grammar_morphology",
+    "explanation": "a company (feminine) and a studio (masculine) take the masculine dual; recast with الطرفان (applied while drafting)"
+   }
+  ],
+  "optional_style_suggestions": [],
+  "uncertain_cases": [],
+  "checked": "X, Threads, Instagram, headline, lines, credit; companies Arabic then Latin; X names the accounts as source; on-screen lines never open on «و» followed by a Latin name (v1 lesson)"
+ },
+ "gate": "gate 02:50Z: Inven Global (25 Oct) and Game*Spark (26 Oct 01:23Z) both quote the official posts for 4 Nov; no change or denial found; time zone not stated in the posts as quoted, so no time is given. Exit A via the companies' own posts as quoted; chip رسمي."
 }

@@ -25,3 +25,4 @@ Fix after 11:23: Square Enix pattern matched year archive pages (/eng/news/2026/
 | 2026-10-26T00:08Z | feeds: 6 outlet stories, 0 official; HoYoverse HSR feed reset | nothing to post: Phantom Blade Zero launch trailer (posted 22 Oct with Gulf prices; unlock time 24 Oct), film and TV items, 4Gamer BioWare column |
 | 2026-10-26T01:08Z | feeds: 1 outlet story, 1 official (eFootball live update notice, routine) ; Pure Xbox 403 | nothing to post |
 | 2026-10-26T02:08Z | feeds: 2 outlet stories, 1 official (eFootball site maintenance, routine) | Sonic 3M already building; Elden Ring film budget (posted 24 Oct) |
+| 2026-10-26T02:50Z | note | text check gap: a headline line opening on «و» + space + Latin name («و Stellar Blade في 4 نوفمبر») rendered in the wrong order on the runner; rtl_starts passed it. Workaround: open the line on a full Arabic word («مع»). Worth adding to reel.GLUED / rtl_starts. |
