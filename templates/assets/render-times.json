@@ -8447,5 +8447,43 @@
   "job_secs": 211,
   "setup_min": 1.03,
   "story": "minecraft-switch-2-edition-launch-eve"
+ },
+ {
+  "name": "overwatch-stellar-blade-eve-protocol-nov-4-reel-v4.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T08:28Z",
+  "stages": {
+   "checks": 4.1,
+   "montage": 42.1,
+   "text": 30.7,
+   "audio": 0.8,
+   "outro": 41.2
+  },
+  "total": 118.9,
+  "lane": "runner",
+  "queued_at": "2026-10-26T08:23:37Z",
+  "finished_at": "2026-10-26T08:28Z",
+  "render_min": 1.98,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 13.4,
+   "audio_secs": 45.3,
+   "music_pct": 48.9,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 9,
+   "mix_secs": 3.6,
+   "secs": 17.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 251,
+  "setup_min": 1.02,
+  "story": "overwatch-stellar-blade-eve-protocol-nov-4"
  }
 ]
