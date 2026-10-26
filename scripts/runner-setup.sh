@@ -94,15 +94,23 @@ log "box: ${PRETTY_NAME}, $(nproc) cores, $(free -g | awk '/Mem:/{print $2}') GB
 # ---------------------------------------------------------------------------------------------------- 1. packages
 log "apt: base tools, ffmpeg, tesseract, browser libraries"
 "${APT[@]}" update
-# Chromium (HyperFrames) needs these on 24.04 (t64 names); ffmpeg and tesseract are what render.yml installs
+# Everything the render loads, by what needs it (24.04 t64 names). Found missing on dxb-render-1 on 26 Oct and installed by
+# hand there: libatomic1 (pedalboard), libgomp1 (torch/OpenMP), libsndfile1 (soundfile), libgl1 (OpenCV), libglib2.0-0t64
+# (OpenCV, GLib), the Chromium libraries for HyperFrames, fontconfig and fonts (ffmpeg drawtext, Chromium), git-lfs.
+# `server-check.yml` (item g, ldd) lists anything still missing; add its apt names here.
 "${APT[@]}" install --no-install-recommends \
-  ca-certificates curl gnupg git jq unzip xz-utils ufw unattended-upgrades \
-  ffmpeg tesseract-ocr tesseract-ocr-eng libsndfile1 \
+  ca-certificates curl gnupg git git-lfs jq unzip xz-utils ufw unattended-upgrades \
+  ffmpeg tesseract-ocr tesseract-ocr-eng tesseract-ocr-ara \
   python3 python3-venv python3-pip \
-  fonts-liberation libnss3 libnspr4 libatk1.0-0t64 libatk-bridge2.0-0t64 libcups2t64 libdrm2 libxkbcommon0 \
+  libatomic1 libgomp1 libsndfile1 libgl1 libglib2.0-0t64 \
+  fontconfig fonts-liberation fonts-noto-core \
+  libnss3 libnspr4 libatk1.0-0t64 libatk-bridge2.0-0t64 libcups2t64 libdrm2 libxkbcommon0 \
   libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2t64 libpango-1.0-0 libcairo2 libx11-6 \
-  libxcb1 libxext6 libglib2.0-0t64 libdbus-1-3 libxshmfence1 \
-  libatomic1
+  libxcb1 libxext6 libdbus-1-3 libxshmfence1
+git lfs install --system >/dev/null 2>&1 || true
+for lib in libatomic.so.1 libgomp.so.1 libsndfile.so.1 libGL.so.1 libglib-2.0.so.0 libnss3.so libgbm.so.1 libasound.so.2 libcairo.so.2; do
+  ldconfig -p | grep -q "${lib}" || warn "shared library ${lib} is not visible to the loader after the apt install"
+done
 command -v ffmpeg >/dev/null && command -v tesseract >/dev/null || die "ffmpeg or tesseract did not install"
 
 if ! command -v node >/dev/null || [ "$(node -p 'process.versions.node.split(".")[0]')" != "${NODE_MAJOR}" ]; then
@@ -179,6 +187,9 @@ as_runner "${PY}" -m pip install -q --upgrade pip
 as_runner "${PY}" -m pip install -q --timeout 60 --retries 3 torch torchvision --index-url https://download.pytorch.org/whl/cpu
 as_runner "${PY}" -m pip install -q --timeout 60 --retries 3 pillow numpy soundfile pedalboard ultralytics opencv-python-headless pyloudnorm==0.1.1
 as_runner "${PY}" -m pip freeze > "${CACHE}/pip-freeze.txt"
+# the imports the render makes (a missing system library, e.g. libatomic1 for pedalboard, shows here and not mid-render)
+as_runner "${PY}" -c "import PIL, numpy, soundfile, pedalboard, cv2, torch, torchvision, ultralytics, pyloudnorm; print('python imports ok, torch', torch.__version__)" \
+  || warn "a render package does not import (see above); the render will fail at its Tools step until fixed"
 "${PY}" -V
 
 log "YOLOv8n weights (autofocus) in ${CACHE}/models"

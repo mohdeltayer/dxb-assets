@@ -1,0 +1,158 @@
+# Readiness check for the dxb-render server (advisor task, approved by Mohammad, 26 Oct 2026).
+#
+# Dispatch only. Posts nothing, commits nothing, uploads nothing to Publer: read-only token, no Publer secret.
+# FONTS_TOKEN only, for the Dubai fonts, which go to a temp folder of the job and are deleted at the end (an
+# always() step) and are never in an artifact. Every step is continue-on-error, so one failure does not hide the
+# rest; the table of PASS / FAIL / WARN / REVIEW per item goes to the job summary (scripts/server_check.py).
+#
+# Items: a Python packages (imported from what templates/ uses) | b ffmpeg encoders and filters | c HyperFrames
+# 0.8.143 + an Arabic Dubai test card (PNG artifact, needs a human look) | d Cocktail Fork on 10 s | e tesseract |
+# f fetch of dxb-assets and dxb-fonts | g ldd of every compiled library | h host, user, permissions |
+# i full test render of the Helldivers 2 Liberty Day Reel (not committed; mp4 and strip as artifacts, the Reel is public).
+#
+# Dispatch: gh workflow run server-check.yml --ref main            (all items)
+#           gh workflow run server-check.yml --ref main -f render=false     (skip the 3 minute test render)
+#           optional -f rev=<sha> picks the commit that holds the job file (default: the v3 job, d3d313c6).
+name: server-check
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      render:
+        description: 'Run the full test render (item i): true or false'
+        required: false
+        default: 'true'
+      rev:
+        description: 'Commit that holds jobs/render/helldivers-2-liberty-day-free-rifle.json (the v3 job)'
+        required: false
+        default: 'd3d313c643fb363721f505b2b0b181b00152abf4'
+
+jobs:
+  check:
+    if: github.repository == 'mohdeltayer/dxb-assets' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 45
+    concurrency:
+      group: server-check
+      cancel-in-progress: false
+    env:
+      RENDER_INPUT: ${{ inputs.render }}
+      REV_INPUT: ${{ inputs.rev }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            templates
+            scripts
+          persist-credentials: false
+
+      - name: Setup
+        continue-on-error: true
+        run: |
+          cache="${DXB_CACHE:-/var/cache/dxb-render}"; venv="${DXB_VENV:-/home/runner/venv}"
+          {
+            echo "SC_DIR=$RUNNER_TEMP/sc"
+            echo "DXB_CACHE=$cache"
+            echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts"
+            echo "DXB_UPLOADS=$RUNNER_TEMP/uploads"
+            echo "YOLO_WEIGHTS=$cache/models/yolov8n.pt"
+          } >> "$GITHUB_ENV"
+          echo "$venv/bin" >> "$GITHUB_PATH"
+          mkdir -p "$RUNNER_TEMP/uploads"
+          SC_DIR="$RUNNER_TEMP/sc" python3 scripts/server_check.py init
+
+      - name: h. Host, user, permissions
+        continue-on-error: true
+        run: python scripts/server_check.py host
+
+      - name: Fonts (dxb-fonts with FONTS_TOKEN, temp folder)
+        continue-on-error: true
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: python scripts/server_check.py fonts
+
+      - name: f. Fetch dxb-assets
+        continue-on-error: true
+        run: python scripts/server_check.py fetch
+
+      - name: a. Python packages
+        continue-on-error: true
+        run: python scripts/server_check.py imports
+
+      - name: b. ffmpeg
+        continue-on-error: true
+        run: python scripts/server_check.py ffmpeg
+
+      - name: e. tesseract
+        continue-on-error: true
+        run: python scripts/server_check.py tesseract
+
+      - name: d. Cocktail Fork audio split (install as render-live, then 10 s)
+        continue-on-error: true
+        timeout-minutes: 10
+        env:
+          SHA: 19b3de827ebc4bfb014570cf92dd32b4ee3b6921
+        run: |
+          d="$DXB_CACHE/cocktail-fork/$SHA"; mkdir -p "$d/checkpoints"
+          [ -s "$d/mrx.py" ] || curl -sSfL --retry 3 -o "$d/mrx.py" "https://raw.githubusercontent.com/merlresearch/cocktail-fork-separation/$SHA/mrx.py" || true
+          w="$d/checkpoints/default_mrx_pre_trained_weights.pth"
+          [ -s "$w" ] || curl -sSfL --retry 3 -o "$w" "https://media.githubusercontent.com/media/merlresearch/cocktail-fork-separation/$SHA/checkpoints/default_mrx_pre_trained_weights.pth" || true
+          python -c "import pyloudnorm" 2>/dev/null || python -m pip install -q --timeout 60 --retries 3 pyloudnorm==0.1.1 || true
+          export COCKTAIL_DIR="$d"
+          python scripts/server_check.py split
+
+      - name: c. HyperFrames and the Arabic test card
+        continue-on-error: true
+        timeout-minutes: 10
+        run: python scripts/server_check.py hyperframes
+
+      - name: g. Shared libraries (ldd)
+        continue-on-error: true
+        run: python scripts/server_check.py ldd
+
+      - name: i. Full test render (Helldivers 2 Liberty Day, not committed)
+        if: ${{ env.RENDER_INPUT != 'false' }}
+        continue-on-error: true
+        timeout-minutes: 25
+        run: python scripts/server_check.py render "$REV_INPUT"
+
+      - name: Summary table
+        if: always()
+        continue-on-error: true
+        run: python scripts/server_check.py summary
+
+      - name: Artifact, Arabic test card (a test card only; never fonts)
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: server-check-hf-test-card
+          path: ${{ runner.temp }}/sc/artifacts/hf-test-card.png
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Artifact, test render (mp4 and strip; this Reel is already public)
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: server-check-render
+          path: ${{ runner.temp }}/sc/artifacts/render/*
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Clean up (fonts, uploads, test render)
+        if: always()
+        continue-on-error: true
+        run: rm -rf "$DUBAI_FONTS" "$RUNNER_TEMP/dxb-fonts-check" "$RUNNER_TEMP/uploads" "$RUNNER_TEMP"/runner-stats.json* "$RUNNER_TEMP"/hfcard-* cards 2>/dev/null || true
+
+      # Last, and the only step without continue-on-error: everything above has already run and reported. A red run
+      # when any item failed or never reported, so it is seen from the Actions list; the table is in the job summary.
+      - name: Verdict
+        if: always()
+        run: python scripts/server_check.py verdict
