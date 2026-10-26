@@ -9219,5 +9219,54 @@
   "min_disk_free_mb": 81251,
   "setup_min": 0.97,
   "story": "steam-scream-5-gulf-deals"
+ },
+ {
+  "name": "sucker-punch-layoffs-report-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T18:34Z",
+  "stages": {
+   "checks": 14.6,
+   "montage": 88.4,
+   "text": 45.6,
+   "audio": 1.0,
+   "outro": 49.5
+  },
+  "total": 199.1,
+  "lane": "runner",
+  "queued_at": "2026-10-26T18:28:45Z",
+  "finished_at": "2026-10-26T18:34Z",
+  "render_min": 3.32,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 9.5,
+   "audio_secs": 28.4,
+   "music_pct": 56.7,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "effects_shots": 12,
+   "mix_secs": 5.1,
+   "secs": 15.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 379,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1288,
+  "peak_mem_mb": 2009,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62825,
+  "peak_disk_mb": 65611,
+  "min_disk_free_mb": 82091,
+  "setup_min": 1.48,
+  "story": "sucker-punch-layoffs-report"
  }
 ]
