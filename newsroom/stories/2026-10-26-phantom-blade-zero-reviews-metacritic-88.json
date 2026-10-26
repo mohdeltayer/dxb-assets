@@ -40,18 +40,52 @@
   "headline_note": "v1 headline «تقييمات Phantom Blade Zero / تصل قبل صدورها» refused by the runner's width check; now «لعبة Phantom Blade Zero / تحصد أول تقييماتها»"
  },
  "drafts": {
-  "x": "أول تقييمات Phantom Blade Zero: متوسط 88 على ميتاكريتيك (Metacritic) لنسخة الحاسب، قبل صدورها صباح الخميس.",
-  "threads": "أول تقييمات Phantom Blade Zero: متوسط 88 على ميتاكريتيك (Metacritic) لنسخة الحاسب، قبل صدورها صباح الخميس.",
-  "instagram": "تقييمات Phantom Blade Zero الأولى تمنحها متوسط 88 قبل صدورها بثلاثة أيام.\n\nحسب موقع ميتاكريتيك (Metacritic)، حصلت نسخة الحاسب على متوسط 88 من 31 مراجعة للنقاد، بعد رفع الحظر عن المراجعات فجر اليوم.\n\nواللعبة من تطوير استوديو إس-غيم (S-Game) الصيني، وهي لعبة قتال بالسيوف بأسلوب الووشيا، وتصدر صباح الخميس 29 أكتوبر بتوقيت الإمارات على PS5 والحاسب، وسعرها على Steam في الإمارات 219 درهمًا وفي السعودية 225 ريالًا.\n\n#ألعاب #أخبار_الألعاب #PhantomBladeZero #PS5",
+  "x": "أول تقييمات Phantom Blade Zero: متوسط 88 على ميتاكريتيك (Metacritic) لنسختي الحاسب وPS5، قبل صدورها صباح الخميس.",
+  "threads": "أول تقييمات Phantom Blade Zero: متوسط 88 على ميتاكريتيك (Metacritic) لنسختي الحاسب وPS5، قبل صدورها صباح الخميس.",
+  "instagram": "تقييمات Phantom Blade Zero الأولى تمنحها متوسط 88 قبل صدورها بثلاثة أيام.\n\nحسب موقع ميتاكريتيك (Metacritic)، حصلت نسختا الحاسب وPS5 على متوسط 88 لكل منهما من تقييمات النقاد، بعد رفع الحظر عن المراجعات فجر اليوم.\n\nواللعبة من تطوير استوديو إس-غيم (S-Game) الصيني، وهي لعبة قتال بالسيوف بأسلوب الووشيا، وتصدر صباح الخميس 29 أكتوبر بتوقيت الإمارات على PS5 والحاسب، وسعرها على Steam في الإمارات 219 درهمًا وفي السعودية 225 ريالًا.\n\n#ألعاب #أخبار_الألعاب #PhantomBladeZero #PS5",
   "ig_comment": "المصدر: موقع ميتاكريتيك (Metacritic) ومتجر Steam، 26 أكتوبر 2026",
   "x_reply": "المصدر: https://www.metacritic.com/game/phantom-blade-zero/"
  },
- "status": "render pushed (runner)",
+ "status": "scheduled in Publer 02:34Z for 04:00Z (08:00 Dubai) on Instagram (Reel, Dubai location, source comment), X (source link reply) and Threads; labels tpl:clipcard skin:house sound:trailer genre:action",
  "grammar": {
   "required_edits": [],
   "optional_style_suggestions": [],
   "uncertain_cases": [],
   "checked": "X, Threads, Instagram, headline, lines, card; studio named with its role (استوديو); Western digits; caption ends on the four hashtags"
  },
- "deepl": "forward pass 02:20Z: DeepL «بعد رفع الحظر على نشر التقييمات»; ours «بعد رفع الحظر عن المراجعات» (رفع ... عن is the usual pairing); «متوسط 88 من 31 مراجعة للنقاد» matches DeepL's «من أصل 31 تقييمًا للنقاد»; PC as «الحاسب» per house use, not «الكمبيوتر الشخصي»."
+ "deepl": "forward pass 02:20Z: DeepL «بعد رفع الحظر على نشر التقييمات»; ours «بعد رفع الحظر عن المراجعات» (رفع ... عن is the usual pairing); «متوسط 88 من 31 مراجعة للنقاد» matches DeepL's «من أصل 31 تقييمًا للنقاد»; PC as «الحاسب» per house use, not «الكمبيوتر الشخصي».",
+ "gate": "gate 02:30Z: Metacritic PC 88 (header 31 reviews, platform list 33) and PS5 88 (25 reviews); count dropped from the text as the page disagrees with itself; Steam unlock 29 Oct 02:00Z (06:00 UAE), 219 AED / 225 SR (02:20Z). Exit A, التقييمات.",
+ "director": {
+  "round1": {
+   "reel": "sound: pre-order trailer music from 27.0 s; a shout 'Hey!' at 0.8 s under the headline (allowed); no speech under story lines; 19.8 s + end card",
+   "table": [
+    [
+     "0-1 Soul close, the masked rider",
+     "0-4.5",
+     "PASS (note)",
+     "Soul's eyes sit under the headline band on frame 0; nose and mouth show; kept"
+    ],
+    [
+     "2-3 riders on the cart",
+     "4.5-9.2",
+     "PASS",
+     "studio line"
+    ],
+    [
+     "4 card",
+     "9.2-13",
+     "PASS",
+     "88 alone, no line"
+    ],
+    [
+     "5-6 cart head-on, hat close",
+     "13-19.6",
+     "PASS",
+     "release day line"
+    ]
+   ],
+   "verdict": "PASS"
+  }
+ },
+ "approved": "go: rolling queue; preview sent 02:33Z (inbox)"
 }
