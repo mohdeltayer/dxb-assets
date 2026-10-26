@@ -32,11 +32,25 @@
   "seconds": "17.1 s before the end card"
  },
  "drafts": {
-  "x": "تجاوزت Sonic X Shadow Generations ثلاثة ملايين نسخة حول العالم، حسب شركة سيغا (SEGA)، بعد عامين من صدورها.",
-  "threads": "تجاوزت Sonic X Shadow Generations ثلاثة ملايين نسخة حول العالم، حسب شركة سيغا (SEGA)، بعد عامين من صدورها.",
-  "instagram": "تجاوزت Sonic X Shadow Generations ثلاثة ملايين نسخة حول العالم.\n\nأعلنت شركة سيغا (SEGA) الرقم بعد عامين من صدور اللعبة في 25 أكتوبر 2024، وكانت قد تجاوزت مليوني نسخة في يناير 2025.\n\nوتضم اللعبة نسخة محسّنة من Sonic Generations وقصة جديدة يقودها Shadow، وهي متوفرة على PS5 وXbox Series X|S وPS4 وXbox One وNintendo Switch وNintendo Switch 2 والحاسب.\n\n#ألعاب #أخبار_الألعاب #SonicXShadowGenerations #Sonic",
+  "x": "تجاوزت مبيعات Sonic X Shadow Generations ثلاثة ملايين نسخة حول العالم، حسب شركة سيغا (SEGA)، بعد عامين من صدورها.",
+  "threads": "تجاوزت مبيعات Sonic X Shadow Generations ثلاثة ملايين نسخة حول العالم، حسب شركة سيغا (SEGA)، بعد عامين من صدورها.",
+  "instagram": "تجاوزت مبيعات Sonic X Shadow Generations ثلاثة ملايين نسخة حول العالم.\n\nأعلنت شركة سيغا (SEGA) الرقم بعد عامين من صدور اللعبة في 25 أكتوبر 2024، وكانت مبيعاتها قد تجاوزت مليوني نسخة في يناير 2025.\n\nوتضم اللعبة نسخة محسّنة من Sonic Generations وقصة جديدة يقودها Shadow، وهي متوفرة على PS5 وXbox Series X|S وPS4 وXbox One وNintendo Switch وNintendo Switch 2 والحاسب.\n\n#ألعاب #أخبار_الألعاب #SonicXShadowGenerations #Sonic",
   "ig_comment": "المصدر: حساب Sonic الرسمي من سيغا (SEGA)، 26 أكتوبر 2026",
   "x_reply": "المصدر: https://www.gematsu.com/2026/10/sonic-x-shadow-generations-sales-top-three-million"
  },
- "status": "render pushed (runner)"
+ "status": "render pushed (runner)",
+ "grammar": {
+  "required_edits": [
+   {
+    "original": "تجاوزت Sonic X Shadow Generations ثلاثة ملايين نسخة",
+    "proposed": "تجاوزت مبيعات Sonic X Shadow Generations ثلاثة ملايين نسخة",
+    "class": "grammar_morphology",
+    "explanation": "the sales pass the figure, not the game (DeepL reads it the same way)"
+   }
+  ],
+  "optional_style_suggestions": [],
+  "uncertain_cases": [],
+  "checked": "X, Threads, Instagram, headline, lines, card; Arabic first words; role and company names; X names SEGA as the source"
+ },
+ "deepl": "forward pass 02:20Z on the whole story: «تجاوزت مبيعات ... ثلاثة ملايين نسخة على مستوى العالم», «المليوني نسخة»; applied «مبيعات»; 'units' as «نسخة», not DeepL's «وحدة» (games are counted in copies)."
 }

@@ -36,7 +36,8 @@
    "4 the cart head-on and 5 the hat close: the release day line"
   ],
   "sensitive": "none",
-  "seconds": "19.8 s before the end card"
+  "seconds": "19.8 s before the end card",
+  "headline_note": "v1 headline «تقييمات Phantom Blade Zero / تصل قبل صدورها» refused by the runner's width check; now «لعبة Phantom Blade Zero / تحصد أول تقييماتها»"
  },
  "drafts": {
   "x": "أول تقييمات Phantom Blade Zero: متوسط 88 على ميتاكريتيك (Metacritic) لنسخة الحاسب، قبل صدورها صباح الخميس.",
@@ -45,5 +46,12 @@
   "ig_comment": "المصدر: موقع ميتاكريتيك (Metacritic) ومتجر Steam، 26 أكتوبر 2026",
   "x_reply": "المصدر: https://www.metacritic.com/game/phantom-blade-zero/"
  },
- "status": "render pushed (runner)"
+ "status": "render pushed (runner)",
+ "grammar": {
+  "required_edits": [],
+  "optional_style_suggestions": [],
+  "uncertain_cases": [],
+  "checked": "X, Threads, Instagram, headline, lines, card; studio named with its role (استوديو); Western digits; caption ends on the four hashtags"
+ },
+ "deepl": "forward pass 02:20Z: DeepL «بعد رفع الحظر على نشر التقييمات»; ours «بعد رفع الحظر عن المراجعات» (رفع ... عن is the usual pairing); «متوسط 88 من 31 مراجعة للنقاد» matches DeepL's «من أصل 31 تقييمًا للنقاد»; PC as «الحاسب» per house use, not «الكمبيوتر الشخصي»."
 }
