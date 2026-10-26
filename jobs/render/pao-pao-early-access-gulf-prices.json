@@ -1,6 +1,6 @@
 {
  "name": "pao-pao-early-access-gulf-prices",
- "out": "cards/2026-10/pao-pao-early-access-gulf-prices-reel-v1.mp4",
+ "out": "cards/2026-10/pao-pao-early-access-gulf-prices-reel-v2.mp4",
  "footage": [
   {
    "file": "paopao-release.mp4",
@@ -86,6 +86,18 @@
    ]
   ],
   [
+   "pao-pao-gfx-uae.png",
+   null,
+   3.0,
+   null
+  ],
+  [
+   "pao-pao-gfx-ksa.png",
+   null,
+   3.0,
+   null
+  ],
+  [
    "paopao-release.mp4",
    23.3,
    2.3,
@@ -134,8 +146,8 @@
    ]
   ],
   [
-   6,
-   7,
+   8,
+   9,
    [
     [
      "بخصم 40% للإطلاق\nفي الوصول المبكر على Steam",
@@ -146,26 +158,13 @@
    ]
   ]
  ],
- "strip": [
-  [
-   "في الإمارات",
-   [
-    "aed",
-    "25.20"
-   ]
-  ],
-  [
-   "في السعودية",
-   "19.77 ريال"
-  ]
- ],
  "headline": "لعبة الطبخ PAO PAO\nمتوفرة الآن على Steam",
  "label": "متوفر الآن",
  "source": "Steam",
  "date": "26 Oct 2026",
  "theme": "playful",
  "style": "glow",
- "template": "split",
+ "template": "comparison",
  "skin": "house",
  "track": [
   "paopao-release.mp4",
@@ -178,5 +177,26 @@
    "no press kit or 4K copy found on the publisher's pages"
   ],
   "result": "Steam's release trailer; the cinematic shots (stylised 3D) are enlarged 2.39x"
- }
+ },
+ "gfx": [
+  {
+   "file": "pao-pao-gfx-uae.png",
+   "kind": "fact",
+   "label": "في الإمارات",
+   "value": "25.20 درهم",
+   "note": "السعر بعد خصم الإطلاق"
+  },
+  {
+   "file": "pao-pao-gfx-ksa.png",
+   "kind": "fact",
+   "label": "في السعودية",
+   "value": "19.77 ريال",
+   "note": "السعر بعد خصم الإطلاق"
+  }
+ ],
+ "ground_theme": "playful",
+ "ground_footage": [
+  "paopao-release.mp4",
+  35.0
+ ]
 }
