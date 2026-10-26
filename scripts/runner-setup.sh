@@ -245,9 +245,12 @@ install -d -o "${RUNNER_USER}" -g "${RUNNER_USER}" -m 0755 "${RUNNER_DIR}" "${RU
 cat > "${RUNNER_HOME}/hooks/job-completed.sh" <<'EOF'
 #!/usr/bin/env bash
 # After every job: the Dubai fonts and per-job scratch go, whatever the job did. Never fails the job.
+# The runner runs hooks with bash -e -o pipefail, so every command here must not return non-zero
+# (pkill returns 1 when nothing matches, which stopped the hook and marked passing jobs failed, 26 Oct).
+set +e
 t="${RUNNER_TEMP:-}"
-if [ -n "$t" ] && [ -d "$t" ]; then rm -rf "$t/dubai-fonts" "$t/dxb-fonts" "$t/uploads" "$t/out" 2>/dev/null; fi
-pkill -u "$(id -u)" -f 'runner_stats.py loop' 2>/dev/null
+if [ -n "$t" ] && [ -d "$t" ]; then rm -rf "$t/dubai-fonts" "$t/dxb-fonts" "$t/uploads" "$t/out" 2>/dev/null || true; fi
+pkill -u "$(id -u)" -f 'runner_stats.py loop' 2>/dev/null || true
 exit 0
 EOF
 chown "${RUNNER_USER}:${RUNNER_USER}" "${RUNNER_HOME}/hooks/job-completed.sh"; chmod 0755 "${RUNNER_HOME}/hooks/job-completed.sh"
