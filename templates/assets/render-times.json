@@ -8333,5 +8333,43 @@
   "job_secs": 368,
   "setup_min": 1.12,
   "story": "final-fantasy-40th-crystal-edition"
+ },
+ {
+  "name": "final-fantasy-40th-crystal-edition-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T06:39Z",
+  "stages": {
+   "checks": 6.3,
+   "montage": 47.3,
+   "text": 66.3,
+   "audio": 0.9,
+   "outro": 44.3
+  },
+  "total": 165.1,
+  "lane": "runner",
+  "queued_at": "2026-10-26T06:34:15Z",
+  "finished_at": "2026-10-26T06:39Z",
+  "render_min": 2.75,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 17.3,
+   "audio_secs": 75.0,
+   "music_pct": 98.5,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 20,
+   "mix_secs": 4.2,
+   "secs": 22.0
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 298,
+  "setup_min": 1.12,
+  "story": "final-fantasy-40th-crystal-edition"
  }
 ]
