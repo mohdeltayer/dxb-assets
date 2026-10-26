@@ -23,3 +23,4 @@ Fix after 11:23: Square Enix pattern matched year archive pages (/eng/news/2026/
 | 2026-10-25T22:08Z | feeds: 7 outlet stories, 0 official; no new Gaming Watch digest | nothing to post: Mass Effect leak squadmate (posted), Phantom Blade Zero launch trailer (AR relay, PBZ unlock posted 24 Oct), film and TV items, Weekly 4Gamer roundup |
 | 2026-10-25T23:08Z | feeds: 4 outlet stories, 1 official (Square Enix FF Resonance help page) | nothing to post: PBZ launch trailer relays, MW4 guides, CD PROJEKT mod-makers relay (AR) |
 | 2026-10-26T00:08Z | feeds: 6 outlet stories, 0 official; HoYoverse HSR feed reset | nothing to post: Phantom Blade Zero launch trailer (posted 22 Oct with Gulf prices; unlock time 24 Oct), film and TV items, 4Gamer BioWare column |
+| 2026-10-26T01:08Z | feeds: 1 outlet story, 1 official (eFootball live update notice, routine) ; Pure Xbox 403 | nothing to post |
