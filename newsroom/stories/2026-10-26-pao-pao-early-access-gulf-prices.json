@@ -1,7 +1,7 @@
 {
  "id": "2026-10-26-pao-pao-early-access-gulf-prices",
  "title": "PAO PAO (ArtDock / Dreland Enterprises) out in Steam Early Access, 40% launch discount: 25.20 AED, 19.77 SAR until 9 Nov",
- "status": "rendering v3 on the runner",
+ "status": "scheduled",
  "lane": "Digital Lounge",
  "chip": "متوفر الآن",
  "template": "comparison",
@@ -58,6 +58,10 @@
   "v1 (split) rendered by the earlier push and uploaded to Publer; not used",
   "DeepL forward pass (whole story plus 'introductory offer ends', 'launch discount ends', 'launch sale runs until', 'available in Early Access'): خصم الإطلاق kept (DeepL's own pick); «في مرحلة الوصول المبكر» taken from DeepL for the captions; the on-screen line keeps «في الوصول المبكر» for width",
   "DeepL back-check (X text, caption paragraph, on-screen text): meaning intact",
-  "grammar stage: no required edits (ثلاثة لاعبين polarity, صدرت feminine for the game name, درهمًا/ريالًا accusative alif)"
- ]
+  "grammar stage: no required edits (ثلاثة لاعبين polarity, صدرت feminine for the game name, درهمًا/ريالًا accusative alif)",
+  "v3 (runner Steam download) opened black and put shot 3 on a HUD box; v4 renders from the judged local copy committed as live/2026-10-26/paopao-release.mp4 (decode clean)",
+  "director v4 PASS with a note: cover is the cat's face with the headline readable at grid size; line 1 at 6 s sits partly over the game's progress bar, still readable with its outline (round 2, passed); cards hold 3 s each; something changes every 3 s; last 2 s before the end card is the duck at the market; sound: trailer music stem (audio split applied, music 92%)"
+ ],
+ "approved": "go: rolling queue; preview sent 11:00Z (inbox prod-20261026-paopao-preview); gate 10:39Z: Steam store API cc=ae and cc=sa, offer countdown read",
+ "scheduled": "scheduled in Publer 10:59Z for 12:30Z (16:30 Dubai): Instagram Reel, X, Threads; source follow-up on X (link) and Instagram"
 }
