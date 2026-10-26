@@ -7955,5 +7955,42 @@
   "job_secs": 205,
   "setup_min": 1.38,
   "story": "sonic-x-shadow-generations-3-million"
+ },
+ {
+  "name": "phantom-blade-zero-reviews-metacritic-88-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T02:24Z",
+  "stages": {
+   "checks": 2.2,
+   "montage": 24.0,
+   "text": 26.9,
+   "audio": 0.7,
+   "outro": 35.7
+  },
+  "total": 89.4,
+  "lane": "runner",
+  "queued_at": "2026-10-26T02:20:38Z",
+  "finished_at": "2026-10-26T02:24Z",
+  "render_min": 1.49,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 7.9,
+   "audio_secs": 42.2,
+   "music_pct": 41.0,
+   "leak_pct": 21.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "reason": "music stem not clean (leftover 21.1% > 5.0%)",
+   "secs": 11.4
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 181,
+  "setup_min": 1.43,
+  "story": "phantom-blade-zero-reviews-metacritic-88"
  }
 ]
