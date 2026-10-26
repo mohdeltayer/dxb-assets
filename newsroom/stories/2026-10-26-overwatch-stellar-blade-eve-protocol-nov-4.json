@@ -54,5 +54,43 @@
   "ig_comment": "المصدر: حسابا Overwatch و Stellar Blade الرسميان، 25 أكتوبر 2026",
   "x_reply": "المصدر: https://www.invenglobal.com/articles/27678/"
  },
- "status": "render pushed (runner)"
+ "status": "render pushed (runner)",
+ "director": {
+  "round1": {
+   "reel": "no speech (transcribed); 12.4 s + end card",
+   "table": [
+    [
+     "headline",
+     "0-3.5",
+     "FIX",
+     "line 2 «و Stellar Blade في 4 نوفمبر» laid out in the wrong order (the و landed at the far left); now «تعاون Overwatch / مع Stellar Blade في 4 نوفمبر»"
+    ],
+    [
+     "credit",
+     "0-12.3",
+     "FIX",
+     "same «و Stellar Blade» pattern; now «ومن Stellar Blade»"
+    ],
+    [
+     "0 Eve close",
+     "0-1.7",
+     "PASS",
+     "face on the tile"
+    ],
+    [
+     "2-4 Overwatch heroes",
+     "3.5-8",
+     "PASS",
+     "announcement line"
+    ],
+    [
+     "5-8 Adam, Eve, Lily, Eve",
+     "8-12.3",
+     "PASS",
+     "covered outfits; name line"
+    ]
+   ],
+   "verdict": "FIX (text only)"
+  }
+ }
 }
