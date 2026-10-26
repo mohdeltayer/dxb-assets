@@ -1,0 +1,84 @@
+{
+ "id": "2026-10-26-nintendo-takedown-switch-2-datamine",
+ "genre": [
+  "industry/hardware",
+  "family"
+ ],
+ "kind": "policy",
+ "chip": "تقرير",
+ "tier": 2,
+ "sources": [
+  {
+   "role": "first report (the claimant)",
+   "who": "Centro Leaks on X",
+   "url": "https://x.com/CentroLeaks/status/2114556189531148341",
+   "time": "2026-10-26T03:14:16Z",
+   "text": "Nintendo is angry that datamines for Switch 2 games are now possible and have started issuing DMCA takedown notices.",
+   "media": "screenshot of a takedown request: 'Where is this infringement happening? Twitter'; the request text (Japanese) claims copyright in Princess Peach from the Super Mario series and names https://x.com/CentroLeaks/status/2113876243708010538 as the infringing post; sender name not shown"
+  },
+  {
+   "role": "the targeted post",
+   "who": "Centro Leaks on X",
+   "url": "https://x.com/CentroLeaks/status/2113876243708010538",
+   "time": "2026-10-24T06:12:25Z",
+   "note": "Duskbloods beta ROM datamine and a Peach model extracted from Mario Kart World; the image is not used, linked or described"
+  },
+  {
+   "role": "context",
+   "who": "Notebookcheck, 'Switch 2 jailbreak produces 1st game dumps even as Nintendo responds to piracy threat'",
+   "url": "https://www.notebookcheck.net/Switch-2-jailbreak-produces-1st-game-dumps-even-as-Nintendo-responds-to-piracy-threat.1433250.0.html",
+   "time": "2026-10-24T21:11Z"
+  }
+ ],
+ "claims": [
+  [
+   "a takedown request was filed with X in Nintendo's name against a Centro Leaks post showing Peach extracted from Mario Kart World",
+   "? Centro Leaks' screenshot only; Lumen database refused automated reads (proof-of-work page); no outlet or Nintendo statement found 08:25Z"
+  ],
+  [
+   "the request claims copyright in Peach and says no permission was given",
+   "✓ as written in the screenshot (attributed to the request's text)"
+  ],
+  [
+   "Nintendo has not commented",
+   "✓ none found"
+  ],
+  [
+   "a security researcher announced a Switch 2 jailbreak days earlier",
+   "✓ our 23 Oct story (pepsipu, 22 Oct)"
+  ]
+ ],
+ "brief": {
+  "family": "5 setback (legal)",
+  "template": "trailer",
+  "rule": "legal, piracy, hacking and leak-enforcement stories (26 Oct): neutral, attributed, no how-to, no tool links, never the extracted image, our bed, official footage",
+  "opening": "Peach in her pink dress, full figure, from frame one",
+  "hook": "surprise (a takedown in Nintendo's name)",
+  "cover": "Peach full figure with the headline",
+  "footage": "Nintendo's Princess Peach: Showtime! launch trailer (IGN 1080p; Nintendo's store copies are 720p), credited «لقطات من Princess Peach: Showtime!»; decode clean",
+  "sound": "our bed (neon rotation): legal-story rule; speech none",
+  "key shot": "the takedown line lands on Peach in her red performer outfit",
+  "sensitive": "legal rule applies: no datamined image, no how-to or tool names, no leaker framing ('Nintendo is angry' left out), attributed to Centro Leaks, Nintendo has not commented",
+  "seconds": "15.2 s before the end card",
+  "people": "none named on screen (Centro Leaks labelled as a leaks account)"
+ },
+ "drafts": {
+  "x": "قُدّم باسم نينتيندو (Nintendo) طلب إزالة بموجب حقوق النشر ضد صورة لشخصية Peach مستخرجة من ملفات Mario Kart World، حسب حساب Centro Leaks المختص بالتسريبات، ولم تعلّق نينتيندو بعد.",
+  "threads": "قُدّم باسم نينتيندو (Nintendo) طلب إزالة بموجب حقوق النشر ضد صورة لشخصية Peach مستخرجة من ملفات Mario Kart World، حسب حساب Centro Leaks المختص بالتسريبات، ولم تعلّق نينتيندو بعد.",
+  "instagram": "طلب إزالة لصورة Peach المستخرجة من Mario Kart World باسم نينتيندو.\n\nنشر حساب Centro Leaks المختص بالتسريبات في 26 أكتوبر لقطة لطلب إزالة بموجب حقوق النشر، قُدّم إلى منصة X باسم شركة نينتيندو (Nintendo)، ويطلب حذف منشور للحساب من 24 أكتوبر يضم صورة لشخصية Peach يقول إنها مستخرجة من ملفات Mario Kart World على Nintendo Switch 2.\n\nويقول نص الطلب إن الشركة تملك حقوق شخصية Peach من سلسلة Super Mario، وإنها لم تأذن بنشر الصورة.\n\nويأتي ذلك بعد أيام من إعلان باحث أمني كسر حماية الجهاز، ولم تعلّق نينتيندو على الأمر حتى الآن.\n\n#ألعاب #أخبار_الألعاب #Nintendo #NintendoSwitch2",
+  "follow_up": {
+   "x": "المصدر: حساب Centro Leaks https://x.com/CentroLeaks/status/2114556189531148341",
+   "instagram": "المصدر: حساب Centro Leaks على X، 26 أكتوبر"
+  }
+ },
+ "grammar": {
+  "required_edits": [],
+  "optional_style_suggestions": [],
+  "uncertain_cases": [],
+  "checked": "X, Threads, Instagram, headline, lines, credit; glossary نينتيندو; companies Arabic then Latin at first mention; X names the source; every paragraph and line opens on an Arabic word; no first person; neutral wording per the legal rule"
+ },
+ "translation": "DeepL forward pass on the whole story and the term 'takedown': DeepL gives «طلب إزالة» (adopted for the headline and texts; «حذف» kept as the verb on screen); back-check: v1 caption hook read as a removal already done («إزالة صورة ... بطلب»), rewritten as «طلب إزالة لصورة ...»; v1 line 2 «لحذف صورة نشرها» read as Nintendo's own post, rewritten «لحذف منشور الحساب»",
+ "gate": "gate 08:40Z: Centro Leaks post read via X syndication (03:14Z, screenshot of the request); Lumen database refused automated reads; no outlet coverage and no Nintendo comment found (VGC, Nintendo Life, GoNintendo, Eurogamer, The Verge, IGN, Kotaku, GamesRadar, Dexerto, Insider Gaming, Polygon, Automaton). Exit B, تقرير, attributed, «ولم تعلّق نينتيندو بعد».",
+ "approved": "held for Mohammad's preview (advisor memo adv-20261026-nintendo-dmca: preview before scheduling)",
+ "status": "rendering v1 on the runner"
+}
