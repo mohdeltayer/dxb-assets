@@ -8794,5 +8794,38 @@
   "min_disk_free_mb": 81855,
   "setup_min": 0.98,
   "story": "uk-chart-mw4-number-one"
+ },
+ {
+  "name": "ffr-steam-peak-series-record-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T11:56Z",
+  "stages": {
+   "checks": 4.2,
+   "montage": 45.9,
+   "text": 39.6,
+   "audio": 0.9,
+   "outro": 53.7
+  },
+  "total": 144.3,
+  "lane": "runner",
+  "queued_at": "2026-10-26T11:51:41Z",
+  "finished_at": "2026-10-26T11:56Z",
+  "render_min": 2.4,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 237,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1043,
+  "peak_mem_mb": 2059,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62526,
+  "peak_disk_mb": 64950,
+  "min_disk_free_mb": 82752,
+  "setup_min": 1.03,
+  "story": "ffr-steam-peak-series-record"
  }
 ]
