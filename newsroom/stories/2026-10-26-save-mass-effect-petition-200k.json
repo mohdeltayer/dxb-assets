@@ -5,7 +5,7 @@
   "RPG",
   "industry/hardware"
  ],
- "status": "rendering on the runner (05:17Z), for 06:00Z (10:00 Dubai)",
+ "status": "scheduled in Publer 06:30Z (10:30 Dubai) on Instagram, X and Threads; v1; media uploaded by the runner (media-only key)",
  "first_report": "Petition created 21 Oct 20:47Z on Change.org; IGN reported 200,000 at 02:03Z 26 Oct (06:03 Dubai); 170,000 filed 25 Oct by the scout, not posted",
  "sources": [
   {
@@ -69,5 +69,46 @@
   "source_comment_ig": "المصدر: موقع Change.org وموقع IGN، 26 أكتوبر",
   "source_link_x": "https://www.change.org/p/savemasseffect"
  },
- "director_model": "main session (Opus)"
+ "director_model": "main session (Opus)",
+ "approved": "go: rolling queue; preview sent 05:56Z; gate 05:52Z: Change.org page 203,962 (card shows the morning read 203,356 'حتى 26 أكتوبر', still true), news search: no EA statement or denial",
+ "director": [
+  {
+   "round": 1,
+   "at": "05:50Z",
+   "verdict": "PASS with note",
+   "table": [
+    [
+     "cover 0-0.75",
+     "PASS",
+     "Normandy under the headline, readable as a grid tile"
+    ],
+    [
+     "1-3.15",
+     "PASS",
+     "Collector and Saren close-ups, nothing graphic"
+    ],
+    [
+     "card 3.15-6.95",
+     "PASS (note)",
+     "count on moving dimmed footage; opens 0.35 s before the headline leaves"
+    ],
+    [
+     "line 1 7-9.5",
+     "PASS",
+     "explosion and Shepard for the closure line"
+    ],
+    [
+     "line 2 9.5-13.5",
+     "PASS",
+     "Grunt, omni-blade, glass roof (smear flag waived, clean source), Shepard from behind for the actors line"
+    ],
+    [
+     "line 3 13.5-17.6",
+     "PASS",
+     "Anderson and Shepard; closes on a picture"
+    ]
+   ],
+   "sound": "reveal trailer music from 36.0 s, speech: none; audio split not applied (music 26.8% of the track)"
+  }
+ ]
 }
