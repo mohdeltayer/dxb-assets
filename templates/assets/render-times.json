@@ -8926,5 +8926,38 @@
   "min_disk_free_mb": 82062,
   "setup_min": 1.02,
   "story": "helldivers-2-liberty-day-free-rifle"
+ },
+ {
+  "name": "helldivers-2-liberty-day-free-rifle-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T12:37Z",
+  "stages": {
+   "checks": 3.8,
+   "montage": 40.2,
+   "text": 45.8,
+   "audio": 0.5,
+   "outro": 53.8
+  },
+  "total": 144.0,
+  "lane": "runner",
+  "queued_at": "2026-10-26T12:30:39Z",
+  "finished_at": "2026-10-26T12:37Z",
+  "render_min": 2.4,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 193,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1115,
+  "peak_mem_mb": 2292,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 63455,
+  "peak_disk_mb": 66571,
+  "min_disk_free_mb": 81131,
+  "setup_min": 3.42,
+  "story": "helldivers-2-liberty-day-free-rifle"
  }
 ]
