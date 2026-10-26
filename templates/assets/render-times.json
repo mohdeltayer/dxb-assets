@@ -8761,5 +8761,38 @@
   "min_disk_free_mb": 82239,
   "setup_min": 1.07,
   "story": "pao-pao-early-access-gulf-prices"
+ },
+ {
+  "name": "uk-chart-mw4-number-one-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T11:40Z",
+  "stages": {
+   "checks": 7.1,
+   "montage": 52.0,
+   "text": 52.3,
+   "audio": 1.1,
+   "outro": 52.9
+  },
+  "total": 165.5,
+  "lane": "runner",
+  "queued_at": "2026-10-26T11:35:59Z",
+  "finished_at": "2026-10-26T11:40Z",
+  "render_min": 2.76,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 268,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1090,
+  "peak_mem_mb": 1923,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62526,
+  "peak_disk_mb": 65846,
+  "min_disk_free_mb": 81855,
+  "setup_min": 0.98,
+  "story": "uk-chart-mw4-number-one"
  }
 ]
