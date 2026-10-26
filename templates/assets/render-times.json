@@ -8409,5 +8409,43 @@
   "job_secs": 219,
   "setup_min": 1.22,
   "story": "tomb-raider-legacy-of-atlantis-tr30-teaser"
+ },
+ {
+  "name": "minecraft-switch-2-edition-launch-eve-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T07:15Z",
+  "stages": {
+   "checks": 4.3,
+   "montage": 35.0,
+   "text": 51.8,
+   "audio": 1.0,
+   "outro": 46.4
+  },
+  "total": 138.5,
+  "lane": "runner",
+  "queued_at": "2026-10-26T07:11:36Z",
+  "finished_at": "2026-10-26T07:15Z",
+  "render_min": 2.31,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 12.0,
+   "audio_secs": 38.9,
+   "music_pct": 95.3,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 8,
+   "mix_secs": 4.7,
+   "secs": 17.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 211,
+  "setup_min": 1.03,
+  "story": "minecraft-switch-2-edition-launch-eve"
  }
 ]
