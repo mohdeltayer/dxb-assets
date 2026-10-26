@@ -8827,5 +8827,38 @@
   "min_disk_free_mb": 82752,
   "setup_min": 1.03,
   "story": "ffr-steam-peak-series-record"
+ },
+ {
+  "name": "helldivers-2-liberty-day-free-rifle-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T12:22Z",
+  "stages": {
+   "checks": 4.4,
+   "montage": 43.8,
+   "text": 52.1,
+   "audio": 1.1,
+   "outro": 55.4
+  },
+  "total": 156.8,
+  "lane": "runner",
+  "queued_at": "2026-10-26T12:17:38Z",
+  "finished_at": "2026-10-26T12:22Z",
+  "render_min": 2.61,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 213,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1118,
+  "peak_mem_mb": 2015,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62526,
+  "peak_disk_mb": 65641,
+  "min_disk_free_mb": 82061,
+  "setup_min": 1.03,
+  "story": "helldivers-2-liberty-day-free-rifle"
  }
 ]
