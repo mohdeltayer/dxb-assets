@@ -1,0 +1,63 @@
+{
+ "id": "2026-10-26-pao-pao-early-access-gulf-prices",
+ "title": "PAO PAO (ArtDock / Dreland Enterprises) out in Steam Early Access, 40% launch discount: 25.20 AED, 19.77 SAR until 9 Nov",
+ "status": "rendering v3 on the runner",
+ "lane": "Digital Lounge",
+ "chip": "متوفر الآن",
+ "template": "comparison",
+ "skin": "house",
+ "sound": "trailer (release trailer's own music from 0.0 s, speech none)",
+ "genre": [
+  "family",
+  "indie"
+ ],
+ "sensitive": "none",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Steam store page, app 3024130",
+   "url": "https://store.steampowered.com/app/3024130/",
+   "time": "2026-10-26 (release date on the page)"
+  }
+ ],
+ "claims": [
+  {
+   "text": "out now in Early Access on Steam, 26 Oct",
+   "status": "official (store API: coming_soon false, date 26 Oct 2026)"
+  },
+  {
+   "text": "25.20 AED (from 42.00) and 19.77 SAR (from 32.95), 40% off",
+   "status": "official (store API cc=ae, cc=sa, read 10:39Z)"
+  },
+  {
+   "text": "introductory offer ends 9 November",
+   "status": "official (store page countdown, cc=ae)"
+  },
+  {
+   "text": "restaurant run solo or co-op with up to 3 other players; farming, fishing, decorating a home in a seaside town",
+   "status": "official (store description)"
+  },
+  {
+   "text": "developer ArtDock, publisher Dreland Enterprises",
+   "status": "official (store API)"
+  }
+ ],
+ "footage": "Steam Release_Trailer_Main (1920x1080; cinematic parts letterboxed to 802 rows, lowres_ok names the copies); decode clean",
+ "drafts": {
+  "instagram": "صدرت PAO PAO في مرحلة الوصول المبكر على Steam بخصم 40% للإطلاق.\n\nواللعبة من تطوير استوديو آرت دوك (ArtDock) ونشر شركة دريلاند إنتربرايزز (Dreland Enterprises)، ويحوّل فيها اللاعب مطبخًا صغيرًا إلى مطعم يديره منفردًا أو مع ثلاثة لاعبين آخرين، إلى جانب الزراعة والصيد وتزيين البيت في بلدة ساحلية.\n\nوسعرها على Steam في الإمارات 25.20 درهمًا وفي السعودية 19.77 ريالًا، بعد خصم الإطلاق الذي ينتهي يوم 9 نوفمبر.\n\n#ألعاب #أخبار_الألعاب #PAOPAO #Steam",
+  "x": "صدرت PAO PAO في مرحلة الوصول المبكر على Steam، وسعرها 25.20 درهمًا في الإمارات و19.77 ريالًا في السعودية بعد خصم الإطلاق البالغ 40% حتى 9 نوفمبر، حسب متجر Steam.",
+  "threads": "صدرت PAO PAO في مرحلة الوصول المبكر على Steam، وسعرها 25.20 درهمًا في الإمارات و19.77 ريالًا في السعودية بعد خصم الإطلاق البالغ 40% حتى 9 نوفمبر، حسب متجر Steam.",
+  "follow_up": {
+   "x": "المصدر: صفحة اللعبة على Steam https://store.steampowered.com/app/3024130/",
+   "instagram": "المصدر: صفحة اللعبة على Steam، 26 أكتوبر"
+  }
+ },
+ "notes": [
+  "template: split, trailer and clipcard each at four for the Dubai day; comparison (UAE and Saudi prices as two labelled states, hard cuts) has room (formats.py check ok)",
+  "v2 cancelled before render: its UAE card read «25.20 درهم»; the glossary puts the dirham symbol on screen, so cardgfx fact cards now take ['aed', digits] (v3)",
+  "v1 (split) rendered by the earlier push and uploaded to Publer; not used",
+  "DeepL forward pass (whole story plus 'introductory offer ends', 'launch discount ends', 'launch sale runs until', 'available in Early Access'): خصم الإطلاق kept (DeepL's own pick); «في مرحلة الوصول المبكر» taken from DeepL for the captions; the on-screen line keeps «في الوصول المبكر» for width",
+  "DeepL back-check (X text, caption paragraph, on-screen text): meaning intact",
+  "grammar stage: no required edits (ثلاثة لاعبين polarity, صدرت feminine for the game name, درهمًا/ريالًا accusative alif)"
+ ]
+}
