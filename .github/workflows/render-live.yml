@@ -1,0 +1,227 @@
+# Live render on the dxb-render server (advisor card adv-20261026-render-server-test-now, approved by Mohammad, 26 Oct 2026).
+#
+# ONE real Reel, rendered on the self-hosted runner end to end: the same steps as render.yml (text check, footage
+# fetch, render_job.py run with every check, audio split and design pass, peak memory and disk, the commit of the
+# mp4, strip, sheet and dense strip with its render-times entry, the Publer media-only upload and its receipt, and
+# the job file removed), minus the installs (the server has its tools from scripts/runner-setup.sh) and the
+# automatic retry. Everything else keeps rendering on GitHub through render.yml.
+#
+# Trigger: workflow_dispatch only, with `job` = a job file under jobs/live/. render.yml watches jobs/render/ only,
+# so pushing the file to jobs/live/ does not start the GitHub render. On failure nothing is committed and the
+# job file stays where it is; move it to jobs/render/ to render the same story on GitHub (the fallback).
+#
+# Safety while the repo is public: dispatch from main only, never pull_request; the guard step refuses any other
+# repository, ref, event or job path. Secrets used, as in render.yml: FONTS_TOKEN (fonts go to a temp folder of the
+# job and are deleted, never in the workspace) and PUBLER_MEDIA_KEY (media-only key; never printed).
+#
+# Dispatch: gh workflow run render-live.yml --ref main -f job=jobs/live/<name>.json
+name: render-live
+
+permissions:
+  contents: write
+  actions: read            # only to read this run's own job record (queue wait)
+
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: 'Job file under jobs/live/ on main (jobs/live/<name>.json)'
+        required: true
+
+jobs:
+  live:
+    if: github.repository == 'mohdeltayer/dxb-assets' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 25
+    # One run per job file at a time, as in render.yml.
+    concurrency:
+      group: render-live-${{ inputs.job }}
+      cancel-in-progress: false
+    env:
+      JOB: ${{ inputs.job }}
+    steps:
+      - name: Guard (this repository, main, a dispatch, a file under jobs/live/)
+        run: |
+          [ "${{ github.repository }}" = "mohdeltayer/dxb-assets" ] || { echo "wrong repository"; exit 1; }
+          [ "${{ github.ref }}" = "refs/heads/main" ] || { echo "not main"; exit 1; }
+          [ "${{ github.event_name }}" = "workflow_dispatch" ] || { echo "event not allowed"; exit 1; }
+          printf '%s' "$JOB" | grep -Eq '^jobs/live/[A-Za-z0-9._-]+\.json$' || { echo "job must be jobs/live/<name>.json"; exit 1; }
+
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            templates
+            jobs
+          clean: true
+
+      - name: Server
+        env:
+          GH_TOKEN: ${{ github.token }}
+          QUEUED_AT: ${{ github.event.head_commit.timestamp || '' }}
+        run: |
+          test -f "$JOB" || { echo "$JOB is not on main"; exit 1; }
+          cache="${DXB_CACHE:-/var/cache/dxb-render}"; venv="${DXB_VENV:-/home/runner/venv}"
+          {
+            echo "T_START=$(date +%s)"
+            echo "RENDER_LANE=selfhosted"
+            echo "RENDER_QUEUED_AT=$QUEUED_AT"
+            echo "DXB_CACHE=$cache"
+            echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts"
+            echo "DXB_UPLOADS=$RUNNER_TEMP/uploads"
+            echo "YOLO_WEIGHTS=$cache/models/yolov8n.pt"
+          } >> "$GITHUB_ENV"
+          echo "$venv/bin" >> "$GITHUB_PATH"
+          echo "cores $(nproc), $(free -g | awk '/Mem:/{print $2}') GB, $(lsb_release -ds), runner $RUNNER_NAME"
+          python3 - <<'PY' || true
+          import datetime as dt, json, os, urllib.request
+          q = '/repos/%s/actions/runs/%s/attempts/%s/jobs?per_page=100' % (os.environ['GITHUB_REPOSITORY'], os.environ['GITHUB_RUN_ID'], os.environ.get('GITHUB_RUN_ATTEMPT', '1'))
+          r = urllib.request.Request('https://api.github.com' + q, headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'})
+          jobs = json.load(urllib.request.urlopen(r, timeout=30))['jobs']
+          j = ([x for x in jobs if x['name'] == 'live'] or jobs)[0]
+          p = lambda s: dt.datetime.fromisoformat(s.replace('Z', '+00:00'))
+          w = int((p(j['started_at']) - p(j['created_at'])).total_seconds())
+          open(os.path.join(os.environ['RUNNER_TEMP'], 'queue-wait'), 'w').write(str(w))
+          print('queue wait %d s' % w)
+          PY
+
+      - name: Tools (installed by runner-setup.sh; nothing is installed here)
+        run: |
+          missing=""
+          for c in ffmpeg ffprobe tesseract python node; do command -v "$c" >/dev/null || missing="$missing $c"; done
+          [ -z "$missing" ] || { echo "missing on the server:$missing. Run scripts/runner-setup.sh again."; exit 1; }
+          ffmpeg -version | head -1; tesseract --version 2>&1 | head -1; python -V; node --version
+          python -c "import PIL, numpy, soundfile, pedalboard, ultralytics, cv2, torch, torchvision; print('python packages ok, torch', torch.__version__)"
+          test -s "$YOLO_WEIGHTS" || echo "YOLO weights not cached yet; they download on first use"
+          mkdir -p "$DXB_UPLOADS" "$(dirname "$YOLO_WEIGHTS")"
+
+      - name: Fonts (temp folder, outside the workspace)
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          repo="$RUNNER_TEMP/dxb-fonts"
+          git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+          mkdir -p "$DUBAI_FONTS"
+          unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$DUBAI_FONTS"
+          rm -rf "$repo"
+          for w in Light Regular Medium Bold; do test -f "$DUBAI_FONTS/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing from dubai.zip"; exit 1; }; done
+
+      - name: Text check (fails in seconds on a bad wrap)
+        run: python templates/render_job.py text "$JOB"
+
+      - name: HyperFrames (only for a job with an insert, a frame or kit moments)
+        run: |
+          if python -c "import json,sys; sys.exit(0 if json.load(open('$JOB')).get('insert') else 1)" \
+             || python templates/designpass.py need "$JOB"; then
+            cli="$DXB_CACHE/hf/node_modules/.bin/hyperframes"
+            if [ ! -x "$cli" ]; then
+              mkdir -p "$DXB_CACHE/hf" && cd "$DXB_CACHE/hf" && { [ -f package.json ] || echo '{"name":"dxb-hf","private":true}' > package.json; }
+              timeout 240 npm i -s --no-audit --no-fund hyperframes@0.8.143 || echo "HyperFrames install failed; the insert keeps its card, as on the GitHub runner"
+            fi
+            if [ -x "$cli" ]; then
+              timeout 240 "$cli" browser ensure && echo "HF_CLI=$cli" >> "$GITHUB_ENV" || echo "HyperFrames browser not ready; falling back as on the GitHub runner"
+            fi
+          fi
+
+      - name: Audio split (only for a trailer-track job)
+        id: split
+        run: |
+          if python templates/tracksplit.py need "$JOB"; then
+            echo "need=1" >> "$GITHUB_OUTPUT"
+            { echo "SPLIT_CACHE=$DXB_CACHE/tracksplit-stems"; echo "SPLIT_CACHE_NEW=$RUNNER_TEMP/split-cache-new"; } >> "$GITHUB_ENV"
+          fi
+
+      - name: Cocktail Fork (warm cache from setup; same pin as render.yml)
+        if: steps.split.outputs.need == '1'
+        continue-on-error: true
+        timeout-minutes: 4
+        env:
+          SHA: 19b3de827ebc4bfb014570cf92dd32b4ee3b6921
+        run: |
+          d="$DXB_CACHE/cocktail-fork/$SHA"; mkdir -p "$d/checkpoints" "$DXB_CACHE/tracksplit-stems"
+          [ -s "$d/mrx.py" ] || curl -sSfL --retry 3 -o "$d/mrx.py" "https://raw.githubusercontent.com/merlresearch/cocktail-fork-separation/$SHA/mrx.py"
+          w="$d/checkpoints/default_mrx_pre_trained_weights.pth"
+          [ -s "$w" ] || curl -sSfL --retry 3 -o "$w" "https://media.githubusercontent.com/media/merlresearch/cocktail-fork-separation/$SHA/checkpoints/default_mrx_pre_trained_weights.pth"
+          python -c "import pyloudnorm" 2>/dev/null || python -m pip install -q --timeout 60 --retries 3 pyloudnorm==0.1.1
+          python -c "import sys, torch; sys.path.insert(0, '$d'); import mrx; m = mrx.MRX(); m.load_state_dict(torch.load('$w', map_location='cpu', weights_only=True)); print('cocktail fork ready')"
+          echo "COCKTAIL_DIR=$d" >> "$GITHUB_ENV"
+
+      # Render fails the job, before anything is committed, when a fetched source reports decode errors twice,
+      # a shot's source stretch or the finished Reel shows a blocky smear (templates/decodecheck.py).
+      - name: Render
+        timeout-minutes: 15
+        run: |
+          start=$(date +%s)
+          echo "SETUP_SECS=$(( start - T_START ))" >> "$GITHUB_ENV"
+          stats="$RUNNER_TEMP/runner-stats.json"
+          python templates/runner_stats.py start "$stats" || true
+          trap 'python templates/runner_stats.py stop "$stats" || true' EXIT
+          python templates/render_job.py run "$JOB"
+          echo "RENDER_SECS=$(( $(date +%s) - start ))" >> "$GITHUB_ENV"
+          # keep this run's render-times entry; the commit step rebuilds on the latest main
+          python -c "import json, os; e = json.load(open('templates/assets/render-times.json'))[-1]; e['runner'] = 'selfhosted'; e['cores'] = $(nproc); e['job_secs'] = None; q = os.path.join('$RUNNER_TEMP', 'queue-wait'); e['queue_wait_secs'] = int(open(q).read()) if os.path.exists(q) else None; json.dump(e, open('$RUNNER_TEMP/render-time.json', 'w'))"
+          python templates/runner_stats.py stop "$stats" || true
+          python templates/runner_stats.py merge "$stats" "$RUNNER_TEMP/render-time.json" || true
+
+      - name: Commit back
+        run: |
+          out=$(python -c "import json; print(json.load(open('$JOB'))['out'])")
+          echo "OUT=$out" >> "$GITHUB_ENV"
+          stem="${out%.mp4}"; base="${stem%-reel-v*}"
+          files="$out $base-strip.jpg $base-sheet.jpg"
+          # 4 frames a second through the Reel (decodecheck.dense_strip), so the first second of every shot is seen
+          if [ -f "$base-dense.jpg" ]; then files="$files $base-dense.jpg"; fi
+          mkdir -p "$RUNNER_TEMP/out"
+          for f in $files; do cp --parents "$f" "$RUNNER_TEMP/out/"; done
+          git config user.name "dxb-render"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for i in 1 2 3 4 5; do
+            git fetch -q --depth=1 --filter=blob:none origin "$GITHUB_REF_NAME"
+            git reset -q --hard "origin/$GITHUB_REF_NAME"
+            cp -r "$RUNNER_TEMP/out/." .
+            python -c "import json; p = 'templates/assets/render-times.json'; d = json.load(open(p)); e = json.load(open('$RUNNER_TEMP/render-time.json')); e['job_secs'] = $RENDER_SECS; e['setup_min'] = round($SETUP_SECS / 60, 2); e['story'] = '$(basename "$JOB" .json)'; d.append(e); json.dump(d, open(p, 'w'), indent=1, ensure_ascii=False)"
+            git add --sparse -f $files templates/assets/render-times.json
+            if [ -f "$JOB" ]; then git rm -q "$JOB"; fi
+            git commit -q -m "Render $(basename "$JOB" .json) on the dxb-render server ($RENDER_SECS s, $(nproc) cores)"
+            if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
+            sleep $(( i * 5 ))
+          done
+          echo "push failed five times"; exit 1
+
+      # The finished Reel goes straight to Publer's media library with the media-only key (as render.yml). Never fails
+      # the job: no key, a failed upload or a timeout leaves a receipt saying so. The media id goes into the receipt
+      # only while the repo is private; nothing from Publer is printed.
+      - name: Publer upload
+        continue-on-error: true
+        timeout-minutes: 6
+        env:
+          PUBLER_MEDIA_KEY: ${{ secrets.PUBLER_MEDIA_KEY }}
+          REPO_PRIVATE: ${{ github.event.repository.private }}
+        run: |
+          base="${OUT%.mp4}"; receipt="$base-publer.json"
+          python templates/publer_upload.py "$RUNNER_TEMP/out/$OUT" "$RUNNER_TEMP/publer.json" || true
+          for i in 1 2 3 4 5; do
+            git fetch -q --depth=1 --filter=blob:none origin "$GITHUB_REF_NAME"
+            git reset -q --hard "origin/$GITHUB_REF_NAME"
+            mkdir -p "$(dirname "$receipt")"; cp "$RUNNER_TEMP/publer.json" "$receipt"
+            git add --sparse -f "$receipt"
+            git commit -q -m "Publer receipt $(basename "$base")"
+            if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
+            sleep $(( i * 5 ))
+          done
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### Live render on dxb-render: $(basename "$JOB" .json)"
+            echo "- queue wait: $(cat "$RUNNER_TEMP/queue-wait" 2>/dev/null || echo n/a) s, setup: ${SETUP_SECS:-n/a} s, render: ${RENDER_SECS:-n/a} s"
+            python -c "import json; e = json.load(open('$RUNNER_TEMP/render-time.json')); print('- peak memory %s of %s MB, peak disk %s MB, stages %s' % (e.get('peak_mem_mb'), e.get('mem_total_mb'), e.get('peak_disk_mb'), e.get('stages')))" 2>/dev/null || true
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # Last: the fonts and every scratch file leave the server. Runs on failure and cancel too; a failed run leaves
+      # the job file in jobs/live/ untouched.
+      - name: Clean up
+        if: always()
+        run: rm -rf "$DUBAI_FONTS" "$RUNNER_TEMP/dxb-fonts" "$DXB_UPLOADS" "$RUNNER_TEMP/out" "$RUNNER_TEMP"/runner-stats.json* cards 2>/dev/null || true
