@@ -1,0 +1,301 @@
+# Render shadow run on the dxb-render server (advisor memo, 26 Oct 2026, approved by Mohammad).
+#
+# Same triggers as render.yml. For every job file it renders a COPY on the self-hosted runner, to see what the
+# server would do (time, memory, disk, the audio split) before any cut-over. It commits nothing, pushes nothing,
+# deletes no job file, uploads nothing to Publer, has no Publer secret and a read-only token, and the checkout keeps
+# no credentials on the server. The Reel it makes stays on the server and is removed at the end; only a small
+# timings file leaves it (job summary + artifact `shadow-timings-<job>`). render.yml is not touched and goes on
+# rendering on GitHub's machines exactly as before.
+#
+# Safety while the repo is public (this server runs workflow code):
+#   - triggers are push to main (the job files), workflow_dispatch and nothing else; never pull_request or
+#     pull_request_target, nothing a stranger can start. Every self-hosted job also carries the guard
+#     `github.repository == ... && github.event_name != 'pull_request*' && github.ref == 'refs/heads/main'`,
+#     so a dispatch from another branch does nothing.
+#   - the only secret used is FONTS_TOKEN, as in render.yml: the Dubai fonts go to a temp folder of the job,
+#     never into the workspace or an artifact, and are deleted at the end (and by the runner's job-completed hook).
+#   - nothing is installed at run time (no sudo on the server); scripts/runner-setup.sh installed the tools.
+#
+# Fallback to GitHub's machine for the later cut-over (design, nothing switched on here): the `route` job below is
+# the whole mechanism, run here in observe mode. It dispatches runner-probe.yml (a one-second self-hosted job) and
+# waits 5 minutes for it to start; if it does not (server offline, or busy), it cancels the probe and reports lane
+# "hosted". The cut-over workflow then runs its render job with
+#     runs-on: ${{ needs.route.outputs.lane == 'self-hosted' && fromJSON('["self-hosted","dxb-render"]') || 'ubuntu-latest' }}
+# and render.yml's hosted-only steps (sudo apt, setup-python, setup-node) get `if: runner.environment == 'github-hosted'`.
+# No new token: the route job's own GITHUB_TOKEN with `actions: write` (the retry job already has it).
+#
+# Trial: merge to main, then push a job file under jobs/render/ (it shadows alongside the real render), or
+# Actions > render-shadow > Run workflow with `job` set to a job file that is still on main.
+name: render-shadow
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches: [main]
+    paths: ['jobs/render/*.json']
+  workflow_dispatch:
+    inputs:
+      job:
+        description: 'One job file (jobs/render/<name>.json) that exists on main; empty shadows every file there'
+        required: false
+        default: ''
+
+jobs:
+  list:
+    if: github.repository == 'mohdeltayer/dxb-assets' && github.event_name != 'pull_request' && github.event_name != 'pull_request_target' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    outputs:
+      jobs: ${{ steps.pick.outputs.jobs }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: jobs
+          persist-credentials: false
+      - id: pick
+        env:
+          BEFORE: ${{ github.event.before }}
+          INPUT: ${{ github.event.inputs.job }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -n "$INPUT" ]; then
+            files="$INPUT"
+          elif [ "${{ github.event_name }}" = "push" ] && [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ]; then
+            git fetch -q --depth=1 --filter=blob:none origin "$BEFORE"
+            files=$(git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- 'jobs/render/*.json')
+          else
+            files=$(ls jobs/render/*.json 2>/dev/null || true)
+          fi
+          echo "jobs=$(printf '%s\n' $files | python3 -c 'import json,sys; print(json.dumps([l.strip() for l in sys.stdin if l.strip()]))')" >> "$GITHUB_OUTPUT"
+
+  # Observe mode: does the server pick up a probe within 5 minutes? Recorded in the run summary only.
+  # Note the probe competes with the shadow render for the server's one runner, so on a busy server it
+  # reports "hosted", which is the overflow behaviour the cut-over would have.
+  route:
+    needs: list
+    if: needs.list.outputs.jobs != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: scripts
+          persist-credentials: false
+      - name: Would the server take it?
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/runner-route.sh
+
+  shadow:
+    needs: list
+    if: needs.list.outputs.jobs != '[]'
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 45
+    # One shadow run per job file at a time; different files queue on the server's runner (one job at a time).
+    concurrency:
+      group: render-shadow-${{ matrix.job }}
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      actions: read            # only to read this run's own job record (queue wait)
+    strategy:
+      fail-fast: false
+      matrix:
+        job: ${{ fromJSON(needs.list.outputs.jobs) }}
+    env:
+      JOB: ${{ matrix.job }}
+    steps:
+      # Defence in depth on top of the triggers: the server runs this job only for the repo itself, on main.
+      - name: Guard (self-hosted runs only for dxb-assets on main, never a pull request)
+        run: |
+          [ "${{ github.repository }}" = "mohdeltayer/dxb-assets" ] || { echo "wrong repository"; exit 1; }
+          [ "${{ github.ref }}" = "refs/heads/main" ] || { echo "not main"; exit 1; }
+          case "${{ github.event_name }}" in push|workflow_dispatch|schedule) ;; *) echo "event not allowed"; exit 1;; esac
+
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            templates
+            jobs
+          persist-credentials: false      # no token left in .git/config on the server; nothing here can push
+          clean: true
+
+      - name: Server
+        id: server
+        env:
+          GH_TOKEN: ${{ github.token }}
+          QUEUED_AT: ${{ github.event.head_commit.timestamp || '' }}
+        run: |
+          test -f "$JOB" || { echo "$JOB is not on main any more (the real render already committed and removed it); nothing to shadow"; exit 1; }
+          cache="${DXB_CACHE:-/var/cache/dxb-render}"; venv="${DXB_VENV:-/home/runner/venv}"
+          {
+            echo "T_START=$(date +%s)"
+            echo "RENDER_LANE=shadow-selfhosted"
+            echo "RENDER_QUEUED_AT=$QUEUED_AT"
+            echo "DXB_CACHE=$cache"
+            echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts"
+            echo "DXB_UPLOADS=$RUNNER_TEMP/uploads"
+            echo "YOLO_WEIGHTS=$cache/models/yolov8n.pt"
+            echo "SLUG=$(basename "$JOB" .json)"
+          } >> "$GITHUB_ENV"
+          echo "$venv/bin" >> "$GITHUB_PATH"
+          echo "cores $(nproc), $(free -g | awk '/Mem:/{print $2}') GB, $(lsb_release -ds), runner $RUNNER_NAME"
+          # queue wait of this very job (Actions API, the job's own read-only token); never fails the step
+          python3 - <<'PY' || true
+          import datetime as dt, json, os, urllib.request
+          q = '/repos/%s/actions/runs/%s/attempts/%s/jobs?per_page=100' % (os.environ['GITHUB_REPOSITORY'], os.environ['GITHUB_RUN_ID'], os.environ.get('GITHUB_RUN_ATTEMPT', '1'))
+          r = urllib.request.Request('https://api.github.com' + q, headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'})
+          jobs = json.load(urllib.request.urlopen(r, timeout=30))['jobs']
+          mine = [j for j in jobs if j['name'] == 'shadow (%s)' % os.environ['JOB']] or [j for j in jobs if j.get('runner_name') == os.environ.get('RUNNER_NAME') and j['status'] == 'in_progress']
+          p = lambda s: dt.datetime.fromisoformat(s.replace('Z', '+00:00'))
+          j = mine[0]; w = int((p(j['started_at']) - p(j['created_at'])).total_seconds())
+          open(os.path.join(os.environ['RUNNER_TEMP'], 'queue-wait'), 'w').write(str(w))
+          print('queue wait %d s%s' % (w, ' (over 5 minutes: a cut-over would have used GitHub\'s machine)' if w > 300 else ''))
+          PY
+
+      - name: Tools (installed by runner-setup.sh; nothing is installed here)
+        run: |
+          missing=""
+          for c in ffmpeg ffprobe tesseract python node; do command -v "$c" >/dev/null || missing="$missing $c"; done
+          [ -z "$missing" ] || { echo "missing on the server:$missing. Run scripts/runner-setup.sh again."; exit 1; }
+          ffmpeg -version | head -1; tesseract --version 2>&1 | head -1; python -V; node --version
+          python -c "import PIL, numpy, soundfile, pedalboard, ultralytics, cv2, torch, torchvision; print('python packages ok, torch', torch.__version__)"
+          test -s "$YOLO_WEIGHTS" || echo "YOLO weights not cached yet; they download on first use"
+          mkdir -p "$DXB_UPLOADS" "$(dirname "$YOLO_WEIGHTS")"
+
+      - name: Fonts (temp folder, outside the workspace)
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          repo="$RUNNER_TEMP/dxb-fonts"
+          git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+          mkdir -p "$DUBAI_FONTS"
+          unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$DUBAI_FONTS"
+          rm -rf "$repo"
+          for w in Light Regular Medium Bold; do test -f "$DUBAI_FONTS/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing from dubai.zip"; exit 1; }; done
+
+      - name: Text check (fails in seconds on a bad wrap)
+        run: python templates/render_job.py text "$JOB"
+
+      - name: HyperFrames (only for a job with an insert, a frame or kit moments)
+        run: |
+          if python -c "import json,sys; sys.exit(0 if json.load(open('$JOB')).get('insert') else 1)" \
+             || python templates/designpass.py need "$JOB"; then
+            cli="$DXB_CACHE/hf/node_modules/.bin/hyperframes"
+            if [ ! -x "$cli" ]; then
+              mkdir -p "$DXB_CACHE/hf" && cd "$DXB_CACHE/hf" && { [ -f package.json ] || echo '{"name":"dxb-hf","private":true}' > package.json; }
+              timeout 240 npm i -s --no-audit --no-fund hyperframes@0.8.143 || echo "HyperFrames install failed; the insert keeps its card, as on the GitHub runner"
+            fi
+            if [ -x "$cli" ]; then
+              timeout 240 "$cli" browser ensure && echo "HF_CLI=$cli" >> "$GITHUB_ENV" || echo "HyperFrames browser not ready; falling back as on the GitHub runner"
+            fi
+          fi
+
+      - name: Audio split (only for a trailer-track job)
+        id: split
+        run: |
+          if python templates/tracksplit.py need "$JOB"; then
+            echo "need=1" >> "$GITHUB_OUTPUT"
+            { echo "SPLIT_CACHE=$DXB_CACHE/tracksplit-stems"; echo "SPLIT_CACHE_NEW=$RUNNER_TEMP/split-cache-new"; } >> "$GITHUB_ENV"
+          fi
+
+      - name: Cocktail Fork (warm cache from setup; same pin as render.yml)
+        if: steps.split.outputs.need == '1'
+        continue-on-error: true
+        timeout-minutes: 4
+        env:
+          SHA: 19b3de827ebc4bfb014570cf92dd32b4ee3b6921
+        run: |
+          d="$DXB_CACHE/cocktail-fork/$SHA"; mkdir -p "$d/checkpoints" "$DXB_CACHE/tracksplit-stems"
+          [ -s "$d/mrx.py" ] || curl -sSfL --retry 3 -o "$d/mrx.py" "https://raw.githubusercontent.com/merlresearch/cocktail-fork-separation/$SHA/mrx.py"
+          w="$d/checkpoints/default_mrx_pre_trained_weights.pth"
+          [ -s "$w" ] || curl -sSfL --retry 3 -o "$w" "https://media.githubusercontent.com/media/merlresearch/cocktail-fork-separation/$SHA/checkpoints/default_mrx_pre_trained_weights.pth"
+          python -c "import pyloudnorm" 2>/dev/null || python -m pip install -q --timeout 60 --retries 3 pyloudnorm==0.1.1
+          python -c "import sys, torch; sys.path.insert(0, '$d'); import mrx; m = mrx.MRX(); m.load_state_dict(torch.load('$w', map_location='cpu', weights_only=True)); print('cocktail fork ready')"
+          echo "COCKTAIL_DIR=$d" >> "$GITHUB_ENV"
+
+      # Same render as render.yml, same checks (decode, smear, quality gate); only the commit and the Publer upload are absent.
+      - name: Render (shadow, nothing is committed)
+        id: render
+        timeout-minutes: 15
+        run: |
+          start=$(date +%s)
+          echo "SETUP_SECS=$(( start - T_START ))" >> "$GITHUB_ENV"
+          stats="$RUNNER_TEMP/runner-stats.json"
+          python templates/runner_stats.py start "$stats" || true
+          trap 'python templates/runner_stats.py stop "$stats" || true' EXIT
+          python templates/render_job.py run "$JOB"
+          echo "RENDER_SECS=$(( $(date +%s) - start ))" >> "$GITHUB_ENV"
+          python -c "import json; e = json.load(open('templates/assets/render-times.json'))[-1]; e['runner'] = 'self-hosted-shadow'; e['cores'] = $(nproc); json.dump(e, open('$RUNNER_TEMP/render-time.json', 'w'))"
+          python templates/runner_stats.py stop "$stats" || true
+          python templates/runner_stats.py merge "$stats" "$RUNNER_TEMP/render-time.json" || true
+
+      # Timings go to the job summary and a small artifact. Runs after a failed render too (peak memory of a failure is useful).
+      - name: Timings
+        if: ${{ !cancelled() }}
+        env:
+          RENDER_OUTCOME: ${{ steps.render.outcome }}
+        run: |
+          python - <<'PY'
+          import json, os, subprocess, time
+          t = os.environ['RUNNER_TEMP']; job = json.load(open(os.environ['JOB']))
+          def rd(p, d=None):
+              try: return json.load(open(p))
+              except Exception: return d
+          e = rd(t + '/render-time.json') or {}
+          st = rd(t + '/runner-stats.json') or {}
+          for k, v in st.items():
+              e.setdefault(k, v)
+          try: qw = int(open(t + '/queue-wait').read())
+          except Exception: qw = None
+          probe = {}
+          if os.path.exists(job['out']):
+              try:
+                  p = json.loads(subprocess.run(['ffprobe', '-v', 'error', '-count_frames', '-select_streams', 'v:0', '-show_entries', 'stream=nb_read_frames,width,height:format=duration,size', '-of', 'json', job['out']], capture_output=True, text=True, timeout=120).stdout)
+                  probe = {'frames': int(p['streams'][0]['nb_read_frames']), 'duration_s': round(float(p['format']['duration']), 3), 'size_mb': round(int(p['format']['size']) / 1048576, 1), 'wh': '%sx%s' % (p['streams'][0]['width'], p['streams'][0]['height'])}
+              except Exception as x:
+                  probe = {'error': str(x)[:200]}
+          now = int(time.time()); t0 = int(os.environ.get('T_START', now))
+          out = {'job': os.environ['SLUG'], 'render_outcome': os.environ.get('RENDER_OUTCOME'), 'runner': os.environ.get('RUNNER_NAME'),
+                 'cores': os.cpu_count(), 'queue_wait_secs': qw, 'would_fall_back': (qw or 0) > 300,
+                 'job_secs_so_far': now - t0, 'setup_secs': int(os.environ.get('SETUP_SECS', 0) or 0), 'render_secs': int(os.environ.get('RENDER_SECS', 0) or 0),
+                 'stages': e.get('stages'), 'audio_split': e.get('audio_split'), 'hf_insert': e.get('hf_insert'), 'design_pass': e.get('design_pass'),
+                 'peak_mem_mb': e.get('peak_mem_mb'), 'mem_total_mb': e.get('mem_total_mb'), 'peak_disk_mb': e.get('peak_disk_mb'),
+                 'min_disk_free_mb': e.get('min_disk_free_mb'), 'output': probe}
+          json.dump(out, open(t + '/shadow-timings.json', 'w'), indent=1, ensure_ascii=False)
+          a = out['audio_split'] or {}
+          rows = [('Render', out['render_outcome']), ('Queue wait (s)', qw), ('Setup before render (s)', out['setup_secs']), ('Render step (s)', out['render_secs']),
+                  ('Job so far (s)', out['job_secs_so_far'])] + [('Stage: ' + k, v) for k, v in (out['stages'] or {}).items()] + \
+                 [('Audio split', ('applied, %s s' % a.get('secs')) if a.get('applied') else ('not applied: %s' % a.get('reason', 'n/a'))),
+                  ('Peak memory (MB)', '%s of %s' % (out['peak_mem_mb'], out['mem_total_mb'])), ('Peak disk used (MB)', out['peak_disk_mb']),
+                  ('Output', json.dumps(probe))]
+          md = '### Shadow render: %s\n\n| | |\n|---|---|\n%s\n\nNothing was committed, uploaded or deleted.\n' % (out['job'], '\n'.join('| %s | %s |' % r for r in rows))
+          open(os.environ['GITHUB_STEP_SUMMARY'], 'a').write(md)
+          print(json.dumps(out, indent=1, ensure_ascii=False))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: shadow-timings-${{ env.SLUG }}
+          path: ${{ runner.temp }}/shadow-timings.json
+          retention-days: 30
+          if-no-files-found: ignore
+
+      # Last: the fonts, the Reel and every scratch file leave the server. Runs on failure and cancel too.
+      - name: Clean up
+        if: always()
+        run: |
+          rm -rf "$DUBAI_FONTS" "$RUNNER_TEMP/dxb-fonts" "$DXB_UPLOADS" "$RUNNER_TEMP/out" "$RUNNER_TEMP/runner-stats.json"* cards 2>/dev/null || true
+          git status --short | head -5 || true
+          echo "shadow done; nothing committed"
