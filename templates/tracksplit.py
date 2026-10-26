@@ -23,13 +23,20 @@ the split fails or takes over TIMEOUT seconds, or the music stem is not clean en
     energy as effects or speech (the test Reels measured 0.2 to 0.9%), or
   - MUSIC_MIN: the music stem carries under 40% of the track stretch's energy (an effects-led
     stretch; the test Reels measured 57 to 79%).
+Stem cache (26 Oct 2026, "Add all five", safeguard 5): with SPLIT_CACHE set (render.yml, saved and restored by the
+Actions cache like the weights, one entry per job file) every separation is stored as <key>.npy, the key being a hash
+of the model commit, the sample rate, the input gain target and the exact decoded samples handed to the model. The
+samples carry the source file's content, the start and the length in one, so a re-render of the same stretch from the
+same footage skips the ~20 s of separation, and any change to the file, the stretch or the model is a miss that
+separates exactly as before. The second pass over the music stem is cached the same way. Unset (the container), a
+failed read or a failed write: no cache, today's behaviour. The record gains `cache: {hit, miss}`.
 Skipped (today's audio, no split) for: our bed or no track, speech kept, a skin kit with its
 sting (pilot), the breaking profile or the عاجل chip (speed first), and `"audio_split": false`.
 
     python3 tracksplit.py need <job.json>      # exit 0 when the job needs the split (render.yml installs it then)
     python3 tracksplit.py mix <spec.json>      # the child process render_job runs under a timeout
 """
-import json, os, subprocess, sys, tempfile, time
+import hashlib, json, os, subprocess, sys, tempfile, time
 
 SR = 44100
 CARD = 2.0                 # outro.CARD: the end card and its jingle stay as rendered
@@ -40,6 +47,8 @@ TIMEOUT = 300              # seconds for the whole split; past it the Reel keeps
 LEAK_MAX = 5.0             # % of the music stem's energy a second pass still hears as effects or speech
 MUSIC_MIN = 40.0           # % of the track stretch's energy that must be music
 STILL = ('.jpg', '.jpeg', '.png', '.webp')
+CACHE_VER = 'v1'           # bump when _Cocktail.__call__ changes what it returns for the same samples
+CACHE_MAX_MB = 800         # the oldest stems go first past this, so one job's cache stays small
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -163,14 +172,70 @@ class _Cocktail:
         self.model = MRX().eval()
         w = os.path.join(os.environ['COCKTAIL_DIR'], 'checkpoints', 'default_mrx_pre_trained_weights.pth')
         self.model.load_state_dict(torch.load(w, map_location='cpu', weights_only=True))
+        # the model commit is the folder name render.yml installs into (.../cocktail-fork/<sha>)
+        self.commit = os.path.basename(os.environ['COCKTAIL_DIR'].rstrip('/'))
+        self.cache = os.environ.get('SPLIT_CACHE') or None
+        self.hits = self.misses = 0
+
+    def _path(self, mix):
+        import numpy as np
+        h = hashlib.blake2b(digest_size=20)
+        h.update(f'{CACHE_VER}|{self.commit}|{SR}|-27.0|{mix.dtype}|{mix.shape}'.encode())
+        h.update(np.ascontiguousarray(mix).tobytes())
+        return os.path.join(self.cache, h.hexdigest() + '.npy')
+
+    def _load(self, path, n):
+        import numpy as np
+        try:
+            y = np.load(path)
+            if y.ndim == 3 and y.shape[0] == 3 and y.shape[2] == n:
+                os.utime(path)                   # a hit keeps the entry young for the prune below
+                return y
+        except Exception:
+            pass
+        return None
+
+    def _store(self, path, y):
+        import numpy as np
+        try:
+            os.makedirs(self.cache, exist_ok=True)
+            files = sorted(((os.path.getmtime(f), os.path.getsize(f), f) for f in
+                            (os.path.join(self.cache, n) for n in os.listdir(self.cache)) if f.endswith('.npy')))
+            total = sum(sz for _, sz, _ in files) + y.nbytes
+            for _, sz, f in files:               # the oldest first, until the cache is back under its cap
+                if total <= CACHE_MAX_MB * 1024 * 1024:
+                    break
+                os.remove(f)
+                total -= sz
+            tmp = path + '.tmp'
+            with open(tmp, 'wb') as f:
+                np.save(f, y)
+            os.replace(tmp, path)
+            if os.environ.get('SPLIT_CACHE_NEW'):    # tells render.yml there is something new to save
+                open(os.environ['SPLIT_CACHE_NEW'], 'w').close()
+        except Exception:
+            pass                                 # a cache that cannot be written is not a failure
 
     def __call__(self, mix):
         """(2, n) -> stems; the repo's separate_soundtrack with its -27 LUFS input gain, consistency 'pass'."""
         import numpy as np, pyloudnorm
-        lufs = pyloudnorm.Meter(SR).integrated_loudness(mix.T.astype(np.float64))
-        gain = 10 ** ((-27.0 - lufs) / 20) if np.isfinite(lufs) else 1.0
-        with self.torch.no_grad():
-            y = (self.model(self.torch.tensor(mix, dtype=self.torch.float32) * gain) / gain).numpy()
+        path = y = None
+        if self.cache:
+            try:
+                path = self._path(mix)
+                y = self._load(path, mix.shape[1])
+            except Exception:
+                path = y = None
+        if y is not None:
+            self.hits += 1
+        else:
+            self.misses += 1
+            lufs = pyloudnorm.Meter(SR).integrated_loudness(mix.T.astype(np.float64))
+            gain = 10 ** ((-27.0 - lufs) / 20) if np.isfinite(lufs) else 1.0
+            with self.torch.no_grad():
+                y = (self.model(self.torch.tensor(mix, dtype=self.torch.float32) * gain) / gain).numpy()
+            if path:
+                self._store(path, y)
         return {'music': y[0], 'speech': y[1], 'sfx': y[2]}     # dnr_dataset.SOURCE_NAMES order
 
 
@@ -215,6 +280,8 @@ def mix(spec):
     ea = {k: _energy(v) for k, v in again.items()}
     res['leak_pct'] = round(100 * (ea['sfx'] + ea['speech']) / (sum(ea.values()) + 1e-12), 1)
     res['thresholds'] = {'leak_max_pct': LEAK_MAX, 'music_min_pct': MUSIC_MIN}
+    if sep.cache:
+        res['cache'] = {'hit': sep.hits, 'miss': sep.misses}
     if res['leak_pct'] > LEAK_MAX or res['music_pct'] < MUSIC_MIN:
         res['reason'] = (f"music stem not clean (leftover {res['leak_pct']}% > {LEAK_MAX}%)" if res['leak_pct'] > LEAK_MAX
                          else f"music only {res['music_pct']}% of the track (< {MUSIC_MIN}%)")

@@ -20,6 +20,10 @@ on:
         description: 'One job file (jobs/render/<name>.json); empty renders every file there'
         required: false
         default: ''
+      retry:
+        description: 'Set to 1 by the automatic retry of a lost runner (never retried again); leave empty by hand'
+        required: false
+        default: ''
 
 jobs:
   list:
@@ -52,6 +56,12 @@ jobs:
     if: needs.list.outputs.jobs != '[]'
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    # One run per job file at a time (26 Oct 2026): a second dispatch for the same file waits for the running render
+    # instead of cancelling it or racing it to the commit; different files still render in parallel. GitHub keeps one
+    # waiting run per group, so a third dispatch for the same file replaces the second.
+    concurrency:
+      group: render-${{ matrix.job }}
+      cancel-in-progress: false
     strategy:
       fail-fast: false
       matrix:
@@ -74,6 +84,7 @@ jobs:
             echo "T_START=$(date +%s)"
             echo "RENDER_LANE=runner"
             echo "RENDER_QUEUED_AT=${{ github.event.head_commit.timestamp || '' }}"
+            echo "RENDER_RETRY=${{ github.event.inputs.retry || '' }}"
             echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts"
             echo "DXB_UPLOADS=$RUNNER_TEMP/uploads"
             echo "YOLO_WEIGHTS=$RUNNER_TEMP/models/yolov8n.pt"
@@ -155,13 +166,27 @@ jobs:
       - name: Audio split (only for a trailer-track job)
         id: split
         run: |
-          if python templates/tracksplit.py need "$JOB"; then echo "need=1" >> "$GITHUB_OUTPUT"; fi
+          if python templates/tracksplit.py need "$JOB"; then
+            echo "need=1" >> "$GITHUB_OUTPUT"
+            # stem cache for this job file (tracksplit.py): SPLIT_CACHE_NEW is touched when a stretch was separated afresh
+            { echo "SPLIT_CACHE=$HOME/.cache/tracksplit-stems"; echo "SPLIT_CACHE_NEW=$RUNNER_TEMP/split-cache-new"; } >> "$GITHUB_ENV"
+          fi
 
       - uses: actions/cache@v4
         if: steps.split.outputs.need == '1'
         with:
           path: ~/.cache/cocktail-fork
           key: cocktail-fork-19b3de827ebc4bfb014570cf92dd32b4ee3b6921
+
+      # Separated stems per trailer stretch (26 Oct 2026): one cache entry per job file, newest restored by prefix, saved
+      # after the render only when a stretch was separated afresh. A miss separates exactly as before.
+      - uses: actions/cache/restore@v4
+        if: steps.split.outputs.need == '1'
+        with:
+          path: ~/.cache/tracksplit-stems
+          key: tracksplit-19b3de827ebc4bfb014570cf92dd32b4ee3b6921-${{ matrix.job }}-${{ github.run_id }}
+          restore-keys: |
+            tracksplit-19b3de827ebc4bfb014570cf92dd32b4ee3b6921-${{ matrix.job }}-
 
       - name: Cocktail Fork install
         if: steps.split.outputs.need == '1'
@@ -182,13 +207,33 @@ jobs:
       # a shot's source stretch or the finished Reel shows a blocky smear (templates/decodecheck.py; advisor,
       # 21 Oct 2026, after the Battlefield 1 Reel carried a damaged download)
       - name: Render
+        timeout-minutes: 15                        # a real hang fails here, clearly, and is not retried (Tools has 10, the job 60)
         run: |
           start=$(date +%s)
           echo "SETUP_SECS=$(( start - T_START ))" >> "$GITHUB_ENV"
+          # peak memory and disk during the render (templates/runner_stats.py): logged even when the render fails,
+          # and added to the render-times entry below; sampling never fails the step
+          stats="$RUNNER_TEMP/runner-stats.json"
+          python templates/runner_stats.py start "$stats" || true
+          trap 'python templates/runner_stats.py stop "$stats" || true' EXIT
           python templates/render_job.py run "$JOB"
           echo "RENDER_SECS=$(( $(date +%s) - start ))" >> "$GITHUB_ENV"
           # keep this run's render-times entry; the commit step rebuilds on the latest main
           python -c "import json; e = json.load(open('templates/assets/render-times.json'))[-1]; e['runner'] = 'actions'; e['cores'] = $(nproc); e['job_secs'] = None; json.dump(e, open('$RUNNER_TEMP/render-time.json', 'w'))"
+          python templates/runner_stats.py stop "$stats" || true
+          python templates/runner_stats.py merge "$stats" "$RUNNER_TEMP/render-time.json" || true
+
+      # Save the new stems even when a later check failed the render, so the fixed job's re-render skips the separation.
+      - name: Audio split cache, anything new?
+        id: splitnew
+        if: ${{ !cancelled() && steps.split.outputs.need == '1' }}
+        run: if [ -e "$SPLIT_CACHE_NEW" ]; then echo "new=1" >> "$GITHUB_OUTPUT"; fi
+
+      - uses: actions/cache/save@v4
+        if: ${{ !cancelled() && steps.splitnew.outputs.new == '1' }}
+        with:
+          path: ~/.cache/tracksplit-stems
+          key: tracksplit-19b3de827ebc4bfb014570cf92dd32b4ee3b6921-${{ matrix.job }}-${{ github.run_id }}
 
       - name: Commit back
         run: |
@@ -242,3 +287,34 @@ jobs:
       - name: Remove fonts
         if: always()
         run: rm -rf "$DUBAI_FONTS" "$RUNNER_TEMP/dxb-fonts"
+
+      # Last step. It runs only when one of our own steps failed (or a human cancelled), so a job that failed
+      # without it having run is a lost runner: the retry job below reads exactly that from the Actions API.
+      - name: Failure marker
+        if: ${{ failure() || cancelled() }}
+        run: echo "render failed through its own steps at $(date -u +%T); no automatic retry"
+
+  # One automatic retry (26 Oct 2026, "Add all five"). A lost runner cannot be retried from inside its job, so this
+  # follow-up job re-dispatches this workflow once for a job file whose render died without any error from our own
+  # steps and committed nothing (templates/render_retry.py has the rules). It is the only job that gets
+  # `actions: write` (workflow_dispatch needs it); the render job keeps `contents: write` alone, and this job has
+  # contents read only, no secrets and no checkout of anything but the templates.
+  retry:
+    needs: render
+    if: ${{ failure() && needs.render.result == 'failure' && github.event.inputs.retry != '1' && github.run_attempt == 1 }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: templates
+      - name: Retry a lost runner once
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RETRY_INPUT: ${{ github.event.inputs.retry }}
+        run: python3 templates/render_retry.py

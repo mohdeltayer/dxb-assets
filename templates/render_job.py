@@ -419,7 +419,7 @@ def audio_split(job, video):
         reel.X = keep
     rec = TS.apply(job, video, starts, xf, C.U)
     print('render_job: audio split: ' + ('applied' if rec.get('applied') else 'not applied, audio as rendered') +
-          ''.join(f'; {k} {rec[k]}' for k in ('reason', 'music_pct', 'leak_pct', 'separate_secs', 'secs') if k in rec), flush=True)
+          ''.join(f'; {k} {rec[k]}' for k in ('reason', 'music_pct', 'leak_pct', 'cache', 'separate_secs', 'secs') if k in rec), flush=True)
     try:
         led = json.load(open(reel.TIMES))
         for e in reversed(led):

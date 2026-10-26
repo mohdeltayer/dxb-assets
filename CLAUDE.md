@@ -1101,6 +1101,17 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      times the step out at 10 minutes. A hang shows as a Tools step past 3
      minutes: cancel, then start a fresh run on main (workflow_dispatch with
      the job), not a re-run of the old commit's workflow.
+  10. Safeguards (Mohammad, 26 Oct 2026, inbox: "Add all five", from the render-facts card):
+     peak memory and disk are sampled during every render (`templates/runner_stats.py`) and added
+     to its render-times entry (`peak_mem_mb`, `peak_disk_mb` and the totals); the Render step
+     times out at 15 minutes; a job that dies with no error from our own steps (its last step,
+     "Failure marker", never ran) and committed nothing is re-dispatched once with `retry=1` by
+     the `retry` job (`templates/render_retry.py`, the only job with `actions: write`), never
+     twice; one run per job file at a time (job-level concurrency, `cancel-in-progress: false`),
+     so a second dispatch waits instead of cancelling; separated audio stems are cached per
+     trailer stretch (`SPLIT_CACHE`, keyed on the decoded samples and the model commit, 800 MB
+     cap). Production reads a run's step times before cancelling it, and never calls a render
+     hung under 15 minutes.
 - Review of the Xbox Nano Reel, the first under the hook band (advisor,
   14 Oct 2026):
   1. Ten seconds on one still (0 to 10 s) broke the 3 to 4 s change rule.
