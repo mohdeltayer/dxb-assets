@@ -8959,5 +8959,53 @@
   "min_disk_free_mb": 81131,
   "setup_min": 3.42,
   "story": "helldivers-2-liberty-day-free-rifle"
+ },
+ {
+  "name": "scramble-knights-online-early-access-launch-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T17:09Z",
+  "stages": {
+   "checks": 4.5,
+   "montage": 46.0,
+   "text": 35.3,
+   "audio": 0.9,
+   "outro": 39.6
+  },
+  "total": 126.4,
+  "lane": "runner",
+  "queued_at": "2026-10-26T17:05:30Z",
+  "finished_at": "2026-10-26T17:09Z",
+  "render_min": 2.11,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 7.9,
+   "audio_secs": 42.1,
+   "music_pct": 39.8,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 7
+   },
+   "reason": "music only 39.8% of the track (< 40.0%)",
+   "secs": 10.6
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 203,
+  "mem_total_mb": 15988,
+  "mem_start_mb": 1148,
+  "peak_mem_mb": 2332,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62824,
+  "peak_disk_mb": 65458,
+  "min_disk_free_mb": 82244,
+  "setup_min": 1.22,
+  "story": "scramble-knights-online-early-access-launch"
  }
 ]
