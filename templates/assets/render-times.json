@@ -8295,5 +8295,43 @@
   "job_secs": 243,
   "setup_min": 1.07,
   "story": "save-mass-effect-petition-200k"
+ },
+ {
+  "name": "final-fantasy-40th-crystal-edition-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T06:28Z",
+  "stages": {
+   "checks": 7.3,
+   "montage": 56.5,
+   "text": 83.5,
+   "audio": 1.1,
+   "outro": 57.7
+  },
+  "total": 206.1,
+  "lane": "runner",
+  "queued_at": "2026-10-26T06:22:27Z",
+  "finished_at": "2026-10-26T06:28Z",
+  "render_min": 3.43,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 22.3,
+   "audio_secs": 72.3,
+   "music_pct": 98.6,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "effects_shots": 18,
+   "mix_secs": 5.6,
+   "secs": 28.6
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 368,
+  "setup_min": 1.12,
+  "story": "final-fantasy-40th-crystal-edition"
  }
 ]
