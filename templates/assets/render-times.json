@@ -8712,5 +8712,54 @@
   "min_disk_free_mb": 81358,
   "setup_min": 3.8,
   "story": "pao-pao-early-access-gulf-prices"
+ },
+ {
+  "name": "pao-pao-early-access-gulf-prices-reel-v4.mp4",
+  "profile": "standard",
+  "at": "2026-10-26T10:57Z",
+  "stages": {
+   "checks": 5.7,
+   "montage": 34.3,
+   "text": 32.8,
+   "audio": 0.7,
+   "outro": 32.7
+  },
+  "total": 106.1,
+  "lane": "runner",
+  "queued_at": "2026-10-26T10:53:50Z",
+  "finished_at": "2026-10-26T10:57Z",
+  "render_min": 1.77,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 5.9,
+   "audio_secs": 38.8,
+   "music_pct": 93.0,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 1,
+    "miss": 2
+   },
+   "effects_shots": 8,
+   "mix_secs": 3.9,
+   "secs": 10.4
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 177,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1296,
+  "peak_mem_mb": 2483,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62934,
+  "peak_disk_mb": 65462,
+  "min_disk_free_mb": 82239,
+  "setup_min": 1.07,
+  "story": "pao-pao-early-access-gulf-prices"
  }
 ]
