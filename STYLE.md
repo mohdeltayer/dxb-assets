@@ -266,6 +266,15 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     follows the news type (everyday, stats, launch, digest, breaking,
     hijaz; retro stays chip).
   - The jingle and end card always close the Reel; the card is 2 s (14 Oct).
+- **Trailer news shows the trailer (26 Oct):** when the news is a trailer or
+  teaser, the Reel shows that trailer, never stand-ins (only key art: the
+  official art with motion); an on-screen credit while it plays («المصدر:
+  الحساب الرسمي لـ ...»); the official file (publisher YouTube, press site,
+  Steam, or the official X post's video; no reposts); the trailer-showcase
+  layout (trailer at its own width, headline above, credit and facts below,
+  over a dimmed blurred moving copy) when 9:16 does not fit; its own sound.
+  Director check: trailer news, is it the actual trailer? (CLAUDE.md "Trailer
+  news shows the trailer").
 - **People stories show the person (23 Oct):** when a person is the news
   (honours, appointments, departures, interviews, quotes, retirements,
   tributes, a creator's new project), their official photo appears in a

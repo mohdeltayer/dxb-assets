@@ -1422,6 +1422,28 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   5. Posts published on 22 Oct stay as they are. The two Reels still scheduled
      that night (Dragon Ball Xenoverse 3, PlayStation Pulse) already ran on
      trailer music, so nothing was re-rendered.
+- Trailer news shows the trailer (advisor, 26 Oct 2026, approved by Mohammad;
+  his words, 07:00 Dubai: people want to see the trailer itself). When the news
+  is a trailer or teaser:
+  1. The Reel shows that trailer. No stand-in footage from other games or older
+     trailers in its place. When there is no collab or new trailer, only key art,
+     the Reel uses the official art with motion, not another game's footage.
+  2. A credit on screen while it plays («المصدر: الحساب الرسمي لـ Overwatch»),
+     plus the caption credit as usual.
+  3. The official file: the publisher's YouTube, press site, Steam, or the
+     official X post's video. If the only copy is on X, fetch that official
+     video; no reposts or fan uploads.
+  4. When 16:9 does not sit well in 9:16 (text cut, wide shots, a crop above 2x
+     on a weak source): the trailer-showcase layout, allowed for trailer news
+     only: the trailer at its own width in the middle, our headline above, the
+     credit and key facts below, over a dimmed, blurred, moving copy of the same
+     trailer.
+  5. The trailer's own sound (audio split rules apply).
+  6. The director check asks: trailer news, is it the actual trailer?
+  First case: Stellar Blade's NieR:Automata vignette for the Switch 2 edition
+  (26 Oct). The Overwatch x Stellar Blade EVE Protocol Reel, built on both games'
+  launch trailers, was pulled to drafts before its 09:00 Dubai slot and rebuilt
+  on the key art.
 - People stories show the person (advisor, 23 Oct 2026, from Mohammad). The
   Shigeru Miyamoto honour Reel ran Super Mario clips and music (good) but never
   showed Miyamoto, so viewers could not tell the story was about him.

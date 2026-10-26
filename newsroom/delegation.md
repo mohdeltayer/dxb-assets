@@ -92,6 +92,11 @@ the Reel carries today's mixed track and the same check applies to it: a
 mismatch there means another stretch, another trailer, or our bed with its
 reason. A voiced or subtitled Reel the director approves keeps its speech by
 `speech_ok` (or `"speech_keep": true`), which skips the split.
+Trailer news (advisor, 26 Oct 2026): when the news is a trailer or teaser, the
+director asks "is it the actual trailer?". Stand-in footage from other games or
+older trailers in its place is a send-back; with only key art, the official art
+with motion. The on-screen credit runs while the trailer plays, and the
+trailer-showcase layout is allowed when 9:16 cuts the trailer badly.
 People stories (advisor, 23 Oct 2026): when a person is the news, the director
 checks the person's photo window appears with the line that names them within
 the first 3 to 4 s, the face is visible, not cropped by the window or the plate,
