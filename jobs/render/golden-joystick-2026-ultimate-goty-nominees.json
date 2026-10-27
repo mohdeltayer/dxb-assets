@@ -1,7 +1,7 @@
 {
  "name": "golden-joystick-2026-ultimate-goty-nominees",
- "note": "رسمي: Golden Joystick Awards (organiser, GamesRadar+) on X, 26 Oct 14:00Z: the 12 Ultimate Game of the Year nominees, voting closes Fri 30 Oct. Footage: the organiser's own nominee montage from that post (3840x2160, pinned as 1080p under live/, decode clean); each game in the montage's own order, the centre of its circular frame; no gore (the Resident Evil creature close-up left out). Sound: the montage's own music, no speech. Crop fixed at 0.62 so the window sits inside the montage circle, clear of its name label; Dawnwalker moved before the hit at 12.2 s (blood).",
- "out": "cards/2026-10/golden-joystick-2026-ultimate-goty-nominees-reel-v1.mp4",
+ "note": "رسمي: Golden Joystick Awards (organiser, GamesRadar+) on X, 26 Oct 14:00Z: the 12 Ultimate Game of the Year nominees, voting closes Fri 30 Oct. Footage: the organiser's own nominee montage from that post (3840x2160, pinned as 1080p under live/, decode clean); each game in the montage's own order, the centre of its circular frame; no gore (the Resident Evil creature close-up left out). Sound: the montage's own music, no speech. Crop fixed at 0.62 so the window sits inside the montage circle, clear of its name label; Dawnwalker moved before the hit at 12.2 s (blood). v2: source smear flag at 45.73 to 46.27 s waived after looking (clean cut and iris wipe).",
+ "out": "cards/2026-10/golden-joystick-2026-ultimate-goty-nominees-reel-v2.mp4",
  "footage": [
   {
    "file": "gja-nominees-1080.mp4",
@@ -319,5 +319,13 @@
   "gja-nominees-1080.mp4",
   4.0
  ],
- "cut": true
+ "cut": true,
+ "block_ok": [
+  [
+   "gja-nominees-1080.mp4",
+   45.6,
+   46.4,
+   "looked at 10 fps: hard cut to the Pokopia Poke Mart scene (long straight brick and awning lines) then the montage's iris wipe; clean picture, no decode damage"
+  ]
+ ]
 }
