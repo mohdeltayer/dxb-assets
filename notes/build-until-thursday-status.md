@@ -32,7 +32,7 @@ branch and on the merged tree: identical for all three (`ok, clip 18.4 s`, `ok, 
 
 Prerender finding on Don't Nod v1: shots 0, 1 and 8 sit on black and fade frames (11.1 to 13.7 s, 16.3 to 17.2 s of the
 Aphelion trailer), shots 2, 5 and 7 are within 0.3 s of black or a smear, with a clean start suggested for each. This is
-the kind of fault that made v1 a re-render. For comparison, the standard Warhorse Reel took 232 s on the GitHub runner and
+the kind of fault the map is meant to catch before a job is committed. For comparison, the standard Warhorse Reel took 232 s on the GitHub runner and
 the standard Pokemon UNITE Reel 114 s render, 183 s job.
 
 Outputs (committed by the runs, in `cards/2026-10/`): `pokemon-unite-end-of-service-t0-reel-v1.mp4`, `-strip.jpg`,
