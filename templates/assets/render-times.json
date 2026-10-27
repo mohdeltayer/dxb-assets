@@ -10358,5 +10358,32 @@
   "job_secs": 21,
   "setup_min": 0.57,
   "story": "pokemon-unite-end-of-service-t0"
+ },
+ {
+  "name": "warhorse-cyberattack-t0-reel-v1.mp4",
+  "profile": "breaking-card",
+  "at": "2026-10-27T15:23Z",
+  "stages": {
+   "checks": 1.0,
+   "compose": 19.6,
+   "outro": 6.2
+  },
+  "total": 26.8,
+  "lane": "t0-server",
+  "queued_at": "2026-10-27T15:23Z",
+  "finished_at": "2026-10-27T15:23Z",
+  "render_min": 0.45,
+  "runner": "server",
+  "cores": 8,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 866,
+  "peak_mem_mb": 1380,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 7612,
+  "peak_disk_mb": 7702,
+  "min_disk_free_mb": 238404,
+  "job_secs": 49,
+  "setup_min": 0.33,
+  "story": "warhorse-cyberattack-t0"
  }
 ]
