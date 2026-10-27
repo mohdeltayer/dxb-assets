@@ -1,0 +1,12 @@
+[Unit]
+Description=DXB backup heartbeat check (alerts if no success for 26 hours)
+Documentation=file://%h/dxb-assets/ops/backoffice/backup/README.md
+
+[Service]
+Type=oneshot
+ExecStart=%h/dxb-assets/ops/backoffice/backup/mirror.sh heartbeat-check
+Nice=19
+IOSchedulingClass=idle
+IOSchedulingPriority=7
+TimeoutStartSec=2min
+NoNewPrivileges=yes

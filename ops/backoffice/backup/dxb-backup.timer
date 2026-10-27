@@ -1,0 +1,13 @@
+[Unit]
+Description=DXB nightly backup mirror at 05:00 Dubai, retry at 06:30 Dubai
+
+[Timer]
+# 01:00 UTC is 05:00 Dubai. The second entry is the retry for a night that was
+# skipped because a render was running; once tonight's run succeeded it does nothing.
+OnCalendar=*-*-* 01:00:00 UTC
+OnCalendar=*-*-* 02:30:00 UTC
+Persistent=true
+Unit=dxb-backup.service
+
+[Install]
+WantedBy=timers.target

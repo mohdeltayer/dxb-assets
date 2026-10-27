@@ -1,0 +1,16 @@
+[Unit]
+Description=DXB nightly backup mirror (git mirrors, text export, hard-linked snapshots)
+Documentation=file://%h/dxb-assets/ops/backoffice/backup/README.md
+
+[Service]
+Type=oneshot
+ExecStart=%h/dxb-assets/ops/backoffice/backup/mirror.sh nightly
+# Lowest priority so it never slows a render; the script also waits while one runs.
+Nice=19
+IOSchedulingClass=idle
+IOSchedulingPriority=7
+# The script exits 75 when a render kept the server busy; the timer tries again later tonight.
+SuccessExitStatus=75
+# The first clone of dxb-assets is about 24 GB.
+TimeoutStartSec=12h
+NoNewPrivileges=yes

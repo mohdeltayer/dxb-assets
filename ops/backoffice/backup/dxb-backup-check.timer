@@ -1,0 +1,11 @@
+[Unit]
+Description=DXB backup heartbeat check at 09:00 Dubai
+
+[Timer]
+# 05:00 UTC is 09:00 Dubai, four hours after the nightly run is due.
+OnCalendar=*-*-* 05:00:00 UTC
+Persistent=true
+Unit=dxb-backup-check.service
+
+[Install]
+WantedBy=timers.target
