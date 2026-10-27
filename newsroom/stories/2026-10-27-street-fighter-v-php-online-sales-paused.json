@@ -1,0 +1,51 @@
+{
+ "id": "2026-10-27-street-fighter-v-php-online-sales-paused",
+ "title": "Street Fighter V: online features off on PS4 and Steam for PHP security work; PS Store and Steam sales paused in stages until fixed",
+ "game": "Street Fighter V",
+ "companies": [
+  "Capcom"
+ ],
+ "category": "official",
+ "genre": [
+  "fighting"
+ ],
+ "priority": "🟡",
+ "status": "building",
+ "why": "A popular fighting game goes offline and off sale; part of this month's run of PHP security maintenance across Japanese publishers",
+ "sensitive": "none (security maintenance, neutral; no method)",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "@StreetFighterJA on X, 27 Oct 01:00Z",
+   "url": "https://x.com/StreetFighterJA/status/2114884791560786219"
+  },
+  {
+   "role": "report",
+   "name": "Game Spark 27 Oct",
+   "url": "https://www.gamespark.jp/article/2026/10/27/174119.html"
+  }
+ ],
+ "brief": {
+  "family": "setback",
+  "template": "split",
+  "hook": "the game name and the outage in the headline over Chun-Li",
+  "opening": "Chun-Li close-up",
+  "sound": "our bed: every stretch of the SFV CE launch trailer carries fighter call-outs (speechcheck 2-18, 30-52, 86-102, 108-124 s); the end slate is too short",
+  "length": "13.7 s"
+ },
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "template": "split",
+   "chip": "رسمي",
+   "time": "Tue 27 Oct 08:30Z (12:30 Dubai)",
+   "headline": "توقف Street Fighter V\nعبر الإنترنت",
+   "x": "توقفت ميزات اللعب عبر الإنترنت في Street Fighter V على PS4 وSteam، وتوقف بيعها مؤقتًا حتى إصلاح أمني، حسب كابكوم.",
+   "threads": "توقفت ميزات اللعب عبر الإنترنت في Street Fighter V على PS4 وSteam، وتوقف بيعها مؤقتًا حتى إصلاح أمني، حسب كابكوم. المصدر: حساب Street Fighter الرسمي في اليابان.",
+   "ig": "توقف Street Fighter V عبر الإنترنت على PS4 وSteam.\n\nأعلنت شركة كابكوم (Capcom) عبر حسابها الرسمي في اليابان أن المحتوى الذي يعتمد على الاتصال بالإنترنت في Street Fighter V على PS4 وSteam غير متاح حاليًا، بسبب أعمال لتعزيز الأمان تتعلق بلغة البرمجة PHP.\n\nوتجري الشركة صيانة مؤقتة لإصلاح المشكلة، وتوقف بيع اللعبة تدريجيًا على PlayStation Store وSteam حتى اكتمال الإصلاح، بينما يبقى اللعب دون اتصال متاحًا كالمعتاد. ولم تحدد كابكوم موعدًا لعودة الخدمة.\n\n#ألعاب #أخبار_الألعاب #StreetFighterV #Capcom",
+   "ig_follow_up": "المصدر: حساب Street Fighter الرسمي في اليابان على منصة X، 27 أكتوبر",
+   "x_follow_up": "المصدر: حساب Street Fighter الرسمي في اليابان\nhttps://x.com/StreetFighterJA/status/2114884791560786219"
+  }
+ },
+ "job": "jobs/render/street-fighter-v-php-online-sales-paused.json"
+}
