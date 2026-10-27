@@ -10234,5 +10234,54 @@
   "min_disk_free_mb": 82238,
   "setup_min": 1.07,
   "story": "dont-nod-union-job-cuts"
+ },
+ {
+  "name": "nintendo-indie-world-oct-28-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T14:33Z",
+  "stages": {
+   "checks": 4.6,
+   "montage": 53.3,
+   "text": 49.0,
+   "audio": 0.9,
+   "outro": 44.4
+  },
+  "total": 152.2,
+  "lane": "runner",
+  "queued_at": "2026-10-27T14:28:42Z",
+  "finished_at": "2026-10-27T14:33Z",
+  "render_min": 2.54,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 13.4,
+   "audio_secs": 44.7,
+   "music_pct": 58.6,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 6
+   },
+   "effects_shots": 7,
+   "mix_secs": 4.4,
+   "secs": 18.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 237,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1260,
+  "peak_mem_mb": 2606,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 61624,
+  "peak_disk_mb": 63989,
+  "min_disk_free_mb": 83712,
+  "setup_min": 1.15,
+  "story": "nintendo-indie-world-oct-28"
  }
 ]
