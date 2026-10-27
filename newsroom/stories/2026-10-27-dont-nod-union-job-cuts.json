@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-27-dont-nod-union-job-cuts",
+  "title": "Don't Nod: union STJV says the safeguard plan cuts nearly all non-managerial jobs (27 Oct)",
+  "game": "Aphelion, Lost Records",
+  "companies": [
+    "DON'T NOD"
+  ],
+  "category": "report",
+  "related": [
+    "2026-10-21-dont-nod-safeguard-proceedings"
+  ],
+  "status": "rendering (lane A, GitHub)",
+  "chip": "تقرير",
+  "template": "split",
+  "skin": "house",
+  "sound": "our bed (Aphelion and Lost Records launch trailers narrated; the Reel crosses two trailers)",
+  "genre": [
+    "industry/hardware"
+  ],
+  "sensitive": "none (labour story: neutral, the union's figures attributed, no company statement)",
+  "sources": [
+    {
+      "role": "primary (union)",
+      "name": "STJV, 'DON'T NOD: a corrupted safeguard', posted 27 Oct 2026",
+      "url": "https://www.stjv.fr/en/2026/10/dont-nod-a-corrupted-safeguard/"
+    },
+    {
+      "role": "first report",
+      "name": "Rock Paper Shotgun 12:21Z"
+    },
+    {
+      "role": "background",
+      "name": "DON'T NOD press release 20 Oct 17:30Z: safeguard proceedings; up to 85 positions in France",
+      "url": "https://www.dontnod-bourse.com/en/financial-information/press-releases?ID=ACTUS-0-100915"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "nearly all non-managerial jobs cut under the plan; programmers 18 of 22, animators 6 of 6, associate producers 6 of 6",
+      "status": "union claim (STJV)"
+    },
+    {
+      "claim": "target organisation not suited to finishing the last project in development, P14",
+      "status": "union claim (STJV)"
+    },
+    {
+      "claim": "staff representatives' opinion due 3 Nov",
+      "status": "union statement"
+    },
+    {
+      "claim": "DON'T NOD comment",
+      "status": "none found 27 Oct"
+    }
+  ],
+  "brief": {
+    "family": "setback (5)",
+    "template": "split (strip: staff representatives' opinion 3 Nov)",
+    "hook": "Aphelion's astronaut face under «النقابة: خطة Don't Nod تلغي معظم الوظائف»",
+    "length": "18.6 s"
+  },
+  "lanes": {
+    "dl": {
+      "lane": "Reel",
+      "template": "split",
+      "chip": "تقرير",
+      "time": "Tue 27 Oct 15:30Z (19:30 Dubai)",
+      "headline": "النقابة: خطة Don't Nod\nتلغي معظم الوظائف",
+      "x": "قالت نقابة STJV الفرنسية إن خطة إنقاذ استوديو Don't Nod، مطوّر Life is Strange، تلغي معظم الوظائف غير الإدارية فيه. ولم يعلّق الاستوديو بعد.",
+      "threads": "قالت نقابة STJV الفرنسية إن خطة إنقاذ استوديو Don't Nod، مطوّر Life is Strange، تلغي معظم الوظائف غير الإدارية فيه. ولم يعلّق الاستوديو بعد.\n\nالمصدر: بيان نقابة STJV",
+      "ig": "نقابة: خطة Don't Nod تلغي معظم وظائف الاستوديو.\n\nقالت نقابة STJV لعمال صناعة الألعاب في فرنسا في بيان اليوم إن الخطة التي يعمل عليها استوديو دونت نود (Don't Nod)، مطوّر Life is Strange وAphelion، ضمن إجراءات الحماية من الإفلاس، تلغي معظم الوظائف غير الإدارية، ومنها 18 وظيفة من أصل 22 للمبرمجين وكل وظائف فريق التحريك.\n\nوتقول النقابة إن الهيكل الجديد لا يناسب إكمال آخر مشاريع الاستوديو قيد التطوير، وإن ممثلي الموظفين سيقدّمون رأيهم في الخطة يوم 3 نوفمبر.\n\nولم يعلّق الاستوديو على بيان النقابة حتى الآن، وكان قد أعلن يوم 20 أكتوبر دخوله إجراءات الحماية، وقال إن الخطة قد تمس حتى 85 وظيفة في فرنسا.\n\n#ألعاب #أخبار_الألعاب #DontNod #LifeIsStrange",
+      "ig_follow_up": "المصدر: بيان نقابة STJV، 27 أكتوبر",
+      "x_follow_up": "المصدر: بيان نقابة STJV\nhttps://www.stjv.fr/en/2026/10/dont-nod-a-corrupted-safeguard/"
+    }
+  },
+  "job": "jobs/render/dont-nod-union-job-cuts.json"
+}
