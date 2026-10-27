@@ -9577,5 +9577,53 @@
   "min_disk_free_mb": 79033,
   "setup_min": 1.38,
   "story": "golden-joystick-2026-ultimate-goty-nominees"
+ },
+ {
+  "name": "microsoft-voluntary-exit-offer-xbox-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T04:30Z",
+  "stages": {
+   "checks": 5.3,
+   "montage": 41.6,
+   "text": 46.3,
+   "audio": 0.9,
+   "outro": 41.6
+  },
+  "total": 135.7,
+  "lane": "runner",
+  "queued_at": "2026-10-27T04:26:13Z",
+  "finished_at": "2026-10-27T04:30Z",
+  "render_min": 2.26,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 14.4,
+   "audio_secs": 43.7,
+   "music_pct": 25.0,
+   "leak_pct": 0.9,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 7
+   },
+   "reason": "music only 25.0% of the track (< 40.0%)",
+   "secs": 18.3
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 264,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1437,
+  "peak_mem_mb": 2233,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 61623,
+  "peak_disk_mb": 63997,
+  "min_disk_free_mb": 83705,
+  "setup_min": 1.15,
+  "story": "microsoft-voluntary-exit-offer-xbox"
  }
 ]
