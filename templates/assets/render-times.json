@@ -10830,5 +10830,53 @@
   "min_disk_free_mb": 82616,
   "setup_min": 1.13,
   "story": "nintendo-indie-world-reminder-oct-28"
+ },
+ {
+  "name": "archeage-chronicles-early-access-nov-3-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T18:43Z",
+  "stages": {
+   "checks": 17.3,
+   "montage": 104.7,
+   "text": 42.3,
+   "audio": 1.0,
+   "outro": 55.0
+  },
+  "total": 220.3,
+  "lane": "runner",
+  "queued_at": "2026-10-27T18:36:58Z",
+  "finished_at": "2026-10-27T18:43Z",
+  "render_min": 3.67,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 7.0,
+   "audio_secs": 19.9,
+   "music_pct": 26.6,
+   "leak_pct": 0.9,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "reason": "music only 26.6% of the track (< 40.0%)",
+   "secs": 11.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 449,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1293,
+  "peak_mem_mb": 2389,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62524,
+  "peak_disk_mb": 65411,
+  "min_disk_free_mb": 82290,
+  "setup_min": 1.22,
+  "story": "archeage-chronicles-early-access-nov-3"
  }
 ]
