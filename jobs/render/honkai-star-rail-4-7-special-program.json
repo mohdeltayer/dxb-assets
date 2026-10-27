@@ -1,7 +1,7 @@
 {
  "name": "honkai-star-rail-4-7-special-program",
- "note": "رسمي, watch guide: HoYoverse's Honkai: Star Rail post on HoYoLAB (26 Oct 10:00Z) sets the Version 4.7 'Now, Lay Laughter to All Stars' Special Program for 30 Oct 19:30 UTC+8 (15:30 UAE, 14:30 KSA), YouTube and Twitch; the 4.7 release date is not stated. Stand-in footage: HoYoverse's official Version 4.6 trailer (IGN 1080p copy, decode clean), credited on screen; centred characters and faces only. Sound: the same trailer's word-free closing music from 114.5 s (no speech per faster-whisper 110 to 235 s), raised 11 dB with a limiter; the pinned cut carries picture 24 to 100 s with that music as its track. Audio split off: the track is music only. v2: house spelling هويوفرس (as on the ZZZ story), v1 discarded. v3: line 1 too wide in Dubai (runner text check), name and bracket on their own line.",
- "out": "cards/2026-10/honkai-star-rail-4-7-special-program-reel-v3.mp4",
+ "note": "رسمي, watch guide: HoYoverse's Honkai: Star Rail post on HoYoLAB (26 Oct 10:00Z) sets the Version 4.7 'Now, Lay Laughter to All Stars' Special Program for 30 Oct 19:30 UTC+8 (15:30 UAE, 14:30 KSA), YouTube and Twitch; the 4.7 release date is not stated. Stand-in footage: HoYoverse's official Version 4.6 trailer (IGN 1080p copy, decode clean), credited on screen; centred characters and faces only. Sound: the same trailer's word-free closing music from 114.5 s (no speech per faster-whisper 110 to 235 s), raised 11 dB with a limiter; the pinned cut carries picture 24 to 100 s with that music as its track. Audio split off: the track is music only. v2: house spelling هويوفرس (as on the ZZZ story), v1 discarded. v3: line 1 too wide in Dubai (runner text check), name and bracket on their own line. v4: smear flag at 9.10 to 9.40 s waived after looking (the trailer's framed-stage border).",
+ "out": "cards/2026-10/honkai-star-rail-4-7-special-program-reel-v4.mp4",
  "footage": [
   {
    "file": "hsr46-cut.mp4",
@@ -181,5 +181,12 @@
   0.5
  ],
  "audio_split": false,
- "cut": true
+ "cut": true,
+ "block_ok": [
+  [
+   9.0,
+   9.6,
+   "the trailer's own ornate stage frame (straight red and gold border) comes in at source 58.0 s; frame read on the shot sheet at 58.1 s, clean picture, no decode damage"
+  ]
+ ]
 }
