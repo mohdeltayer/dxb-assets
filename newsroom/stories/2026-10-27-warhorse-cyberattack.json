@@ -6,7 +6,7 @@
     "Warhorse Studios"
   ],
   "category": "official",
-  "status": "rendering (lane A, GitHub, breaking lane)",
+  "status": "scheduled in Publer 13:00Z (Instagram, X, Threads)",
   "chip": "رسمي",
   "template": "clipcard",
   "skin": "house",
@@ -73,5 +73,42 @@
       "x_follow_up": "المصدر: بيان استوديو وارهورس (Warhorse)\nhttps://www.pcgamer.com/gaming-industry/kingdom-come-lord-of-the-rings-studio-warhorse-hit-by-a-cyberattack/"
     }
   },
-  "job": "jobs/render/warhorse-cyberattack.json"
+  "job": "jobs/render/warhorse-cyberattack.json",
+  "approved": "auto-go: no reply in 15 minutes (ping ~12:18Z, scheduled 12:38Z); gate 12:25Z: Warhorse X statement as quoted by PC Gamer (11:55Z), no update or denial found; grammar self-check and DeepL back-check keep the meaning",
+  "director": {
+    "verdict": "PASS (breaking)",
+    "table": [
+      [
+        "0-1 Henry armour, Hans",
+        "0.0-4.0",
+        "PASS",
+        "headline alone; credit line names the KCD2 footage"
+      ],
+      [
+        "2-3 street, woman",
+        "4.0-7.0",
+        "PASS",
+        "line 1 who"
+      ],
+      [
+        "4 card",
+        "7.0-10.0",
+        "PASS",
+        "statement card alone on dimmed footage"
+      ],
+      [
+        "5-6 Henry dust, knight shout, woman",
+        "10.0-13.2",
+        "PASS",
+        "line 2; no blood"
+      ],
+      [
+        "7-8 Henry mist, knight sword",
+        "13.2-16.9",
+        "PASS",
+        "line 3; last 2 s a picture"
+      ]
+    ],
+    "reel": "16.9 s, our bed, rendered on the GitHub runner in 232 s"
+  }
 }
