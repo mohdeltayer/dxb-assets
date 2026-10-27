@@ -9625,5 +9625,53 @@
   "min_disk_free_mb": 83705,
   "setup_min": 1.15,
   "story": "microsoft-voluntary-exit-offer-xbox"
+ },
+ {
+  "name": "pokemon-unite-end-of-service-march-2027-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T05:57Z",
+  "stages": {
+   "checks": 4.1,
+   "montage": 41.6,
+   "text": 34.0,
+   "audio": 0.8,
+   "outro": 33.9
+  },
+  "total": 114.3,
+  "lane": "runner",
+  "queued_at": "2026-10-27T05:53:30Z",
+  "finished_at": "2026-10-27T05:57Z",
+  "render_min": 1.91,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 7.7,
+   "audio_secs": 40.7,
+   "music_pct": 32.1,
+   "leak_pct": 0.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "reason": "music only 32.1% of the track (< 40.0%)",
+   "secs": 11.0
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 183,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1310,
+  "peak_mem_mb": 2276,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 61623,
+  "peak_disk_mb": 64817,
+  "min_disk_free_mb": 82885,
+  "setup_min": 1.08,
+  "story": "pokemon-unite-end-of-service-march-2027"
  }
 ]
