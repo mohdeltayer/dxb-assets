@@ -10135,5 +10135,38 @@
   "min_disk_free_mb": 83030,
   "setup_min": 0.93,
   "story": "the-division-50-million-agents"
+ },
+ {
+  "name": "dont-nod-union-job-cuts-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T13:58Z",
+  "stages": {
+   "checks": 4.6,
+   "montage": 50.8,
+   "text": 47.4,
+   "audio": 0.8,
+   "outro": 39.3
+  },
+  "total": 142.9,
+  "lane": "runner",
+  "queued_at": "2026-10-27T13:53:40Z",
+  "finished_at": "2026-10-27T13:58Z",
+  "render_min": 2.38,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 261,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1038,
+  "peak_mem_mb": 2403,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 61325,
+  "peak_disk_mb": 64287,
+  "min_disk_free_mb": 83414,
+  "setup_min": 0.95,
+  "story": "dont-nod-union-job-cuts"
  }
 ]
