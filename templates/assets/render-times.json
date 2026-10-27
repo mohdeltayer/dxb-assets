@@ -10616,5 +10616,54 @@
   "min_disk_free_mb": 84618,
   "setup_min": 0.82,
   "story": "bleach-mirrors-high-launch-oct-28"
+ },
+ {
+  "name": "pubg-ive-collab-nov-4-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T15:52Z",
+  "stages": {
+   "checks": 2.4,
+   "montage": 29.6,
+   "text": 42.6,
+   "audio": 0.5,
+   "outro": 38.8
+  },
+  "total": 113.8,
+  "lane": "runner",
+  "queued_at": "2026-10-27T15:46:20Z",
+  "finished_at": "2026-10-27T15:52Z",
+  "render_min": 1.9,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.0,
+   "audio_secs": 35.9,
+   "music_pct": 70.2,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 0
+   },
+   "effects_shots": 6,
+   "mix_secs": 0.6,
+   "secs": 3.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 174,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1435,
+  "peak_mem_mb": 2694,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 65019,
+  "peak_disk_mb": 67578,
+  "min_disk_free_mb": 80124,
+  "setup_min": 3.57,
+  "story": "pubg-ive-collab-nov-4"
  }
 ]
