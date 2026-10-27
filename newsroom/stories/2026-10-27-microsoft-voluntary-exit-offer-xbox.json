@@ -10,7 +10,7 @@
   "industry/hardware"
  ],
  "priority": "🟡",
- "status": "building",
+ "status": "scheduled",
  "why": "Xbox staff in Microsoft's second exit programme this year; official offer, size and Xbox part from two outlets; first report 26 Oct about 15:30Z",
  "sensitive": "none (neutral wording, no layoff framing beyond the sources)",
  "sources": [
@@ -70,8 +70,12 @@
    "ig": "عرض مغادرة طوعية في مايكروسوفت يشمل فرق Xbox حسب التقارير.\n\nأعلنت شركة مايكروسوفت (Microsoft) يوم 26 أكتوبر عرضًا جديدًا للمغادرة الطوعية، يُقدَّم لفترة محدودة لموظفين مؤهلين في فرق مشاركة في الولايات المتحدة وكندا وبريطانيا والهند، مع دعم مالي وموارد للتخطيط المهني، حسب رسالة نشرتها رئيسة شؤون الموظفين في الشركة إيمي كولمان (Amy Coleman).\n\nولم تذكر الشركة عدد المشمولين ولا أسماء الفرق، لكن موقع بزنس إنسايدر (Business Insider) أفاد بأن العرض يشمل نحو 60 ألف موظف، أي قرابة ربع موظفي الشركة، وذكرت وكالة بلومبرغ (Bloomberg) أن فرق Xbox من بين الفرق المشاركة.\n\nوهذا ثاني برنامج من نوعه في الشركة هذا العام بعد برنامج التقاعد الطوعي.\n\n#ألعاب #أخبار_الألعاب #Xbox #Microsoft",
    "ig_follow_up": "المصدر: مدونة مايكروسوفت الرسمية وبزنس إنسايدر وبلومبرغ، 26 أكتوبر",
    "x_follow_up": "المصدر: مدونة مايكروسوفت الرسمية\nhttps://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/",
-   "notes": "DeepL forward 04:28Z: whole story rendered 'voluntary exit' as «التقاعد الطوعي» (retirement, wrong); phrasings: 'voluntary exit offer' «عرض الخروج الطوعي», 'voluntary buyout' «الشراء الطوعي»; kept «المغادرة الطوعية» (the plain term for leaving voluntarily). 'chief people officer' «رئيس شؤون الموظفين», matches ours. Grammar stage: no required edits (العرض masculine: أعلنته، يشمل; Microsoft bracketed at first on-screen mention; people with role)."
+   "notes": "DeepL forward 04:28Z: whole story rendered 'voluntary exit' as «التقاعد الطوعي» (retirement, wrong); phrasings: 'voluntary exit offer' «عرض الخروج الطوعي», 'voluntary buyout' «الشراء الطوعي»; kept «المغادرة الطوعية» (the plain term for leaving voluntarily). 'chief people officer' «رئيس شؤون الموظفين», matches ours. Grammar stage: no required edits (العرض masculine: أعلنته، يشمل; Microsoft bracketed at first on-screen mention; people with role).",
+   "media": "cards/2026-10/microsoft-voluntary-exit-offer-xbox-reel-v1.mp4",
+   "render": "runner v1 (264 s); audio split not applied (music 25% of the stretch), trailer sound as is"
   }
  },
- "job": "jobs/render/microsoft-voluntary-exit-offer-xbox.json"
+ "job": "jobs/render/microsoft-voluntary-exit-offer-xbox.json",
+ "scheduled": "scheduled in Publer 07:30Z (11:30 Dubai 27 Oct): Instagram, X, Threads; gate 04:40Z: Microsoft blog post live and unchanged; 60,000 (Business Insider) and Xbox (Bloomberg) attributed",
+ "approved": "go: rolling queue (no previews, publishing memo); director PASS on the v1 strip and dense strip 04:40Z (Master Chief frame 0 under the headline, lines on Warthog, Ghost and Spartans, strip countries and limited period, silhouette close; pink Spartan is game footage). Sound: Halo story trailer music and action from 128.5 s, speech: none; reports at most one in three (CoD, GJA, this)"
 }
