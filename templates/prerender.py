@@ -56,7 +56,8 @@ OCR_STEP = 0.5        # seconds between OCR samples
 BLACK_Y = 22          # mean luma at or under this (video-range black is 16) is a black frame
 FREEZE_MIN = 0.6      # a freeze this long or longer is bad
 NEAR = 6.0            # seconds around each shot kept in the map from the whole-file luma pass
-GRID_SECS = 0.6       # text this soon after the first shot's start is on the grid tile
+TRIM_MIN = 1.2        # a clean piece of a failing shot this long or longer is offered as a trim
+GRID_SECS = 0.6      # text this soon after the first shot's start is on the grid tile
 ENDCARD = re.compile(r'^(rating|rated|ratings|esrb|pegi|usk|cero|classification|copyright|copyrights|rights|reserved|'
                      r'subscribe|trademark|trademarks|licensed|wishlist|presents|presented|www|http|https|follow)$', re.I)
 
@@ -208,13 +209,17 @@ def deep_shot(f, s, d, fo, dur, job, first=False, ocr=True):
 # ---------------------------------------------------------------- the job
 
 def _waiver(job):
-    return [w for w in job.get('prerender_ok', []) if len(w) >= 4 and len(str(w[3]).strip()) >= 5]
+    """(file, t0, t1, kind): `prerender_ok` entries waive any interval they overlap; the job's `block_ok` entries
+    (the render's own waiver for a smear someone has looked at) waive a smear whose start lies in them."""
+    out = [(w[0], w[1], w[2], None) for w in job.get('prerender_ok', []) if len(w) >= 4 and len(str(w[3]).strip()) >= 5]
+    return out + [(w[0], w[1], w[2], 'smear') for w in job.get('block_ok', []) if len(w) == 4 and str(w[3]).strip()]
 
 
 def _apply_waivers(f, iv, waive):
     keep, waived = [], []
     for a, b, r in iv:
-        w = next((w for w in waive if w[0] == f and w[1] < b and w[2] > a), None)
+        w = next((w for w in waive if w[0] == f and (w[1] <= a <= w[2] if w[3] else w[1] < b and w[2] > a)
+                  and (not w[3] or r.startswith(w[3]))), None)
         (waived if w else keep).append((a, b, r))
     return keep, waived
 
@@ -235,6 +240,10 @@ def analyse(job, ocr=True, check=True, workers=None, verify=True):
     shots = RJ.shots(job, build=False)
     foot = [(i, f, s, d, fo) for i, (f, s, d, fo) in enumerate(shots) if s is not None and reel._footage(f)]
     files = sorted({f for _, f, *_ in foot})
+    for i, (f, s, d, fo) in enumerate(shots):                # a shot whose file is not here is never read: say so
+        if s is not None and not any(i == x[0] for x in foot) and os.path.splitext(f)[1].lower() not in reel.STILL \
+                and not reel._ours(f) and not f.startswith((reel.CACHE + '/', reel.STILLS + '/')) and not os.path.exists(RJ.C.U + f):
+            problems.append(f'shot {i} {f}: the file is not in uploads (the footage list does not fetch it)')
     waive = _waiver(job)
     workers = workers or min(4, os.cpu_count() or 2)
     warnings = []
@@ -301,7 +310,12 @@ def analyse(job, ocr=True, check=True, workers=None, verify=True):
         exact = CM.overlaps(bad[f], s, s + d)
         near = [x for x in CM.overlaps(bad[f], s - MARGIN, s + d + MARGIN, tol=0.0) if x not in exact]
         row = {'i': i, 'file': f, 'start': s, 'secs': d, 'hard': [list(x) for x in exact], 'near': [list(x) for x in near],
-               'soft': [list(x) for x in soft.get(i, [])], 'suggest': None, 'note': None, 'q': deep[i][2]}
+               'soft': [list(x) for x in soft.get(i, [])], 'suggest': None, 'note': None, 'trim': None, 'q': deep[i][2]}
+        if exact:                                            # or keep the longest clean piece of the shot itself
+            pieces = [(max(a, s), min(b, s + d)) for a, b in CM.windows(exact, s + d) if min(b, s + d) - max(a, s) >= TRIM_MIN]
+            if pieces:
+                a, b = max(pieces, key=lambda p: p[1] - p[0])
+                row['trim'] = [round(a, 2), round(b - a, 2)]
         if exact:
             t0 = time.time()
             others = [u for u in used[f] if u[2] != f'used by shot {i}']
@@ -366,6 +380,8 @@ def summary(rep):
             out.append(f'      within 0.3 s: {a:.2f} to {b:.2f} s  {why}')
         if r['hard']:
             out.append(f"      nearest clean start with the same length: {r['suggest']}" if r['suggest'] is not None else f"      {r['note']}")
+            if r.get('trim'):
+                out.append(f"      or keep the clean part of this shot: start {r['trim'][0]}, {r['trim'][1]} s (the lines must still fit)")
         for a, b, why in r['soft'][:4]:
             out.append(f'      warn {a:.2f} to {b:.2f} s  {why}')
         if len(r['soft']) > 4:

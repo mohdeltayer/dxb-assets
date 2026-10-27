@@ -1,0 +1,237 @@
+# Pre-render footage checks (advisor card adv-20261027-build-until-thursday, item 1, approved by Mohammad, 27 Oct 2026).
+#
+# Reads a job's footage BEFORE the job is committed to jobs/render/ (templates/prerender.py): black frames, fades, frozen
+# stretches, a damaged-download smear, end cards, cut text, blocky or letterboxed shots, plus the text and timeline
+# checks of render_job.py. Prints which shots overlap a bad stretch and the nearest clean start, and a `clean_map` that
+# `python3 templates/prerender.py embed <job> <map>` puts into the job. Posts nothing, renders nothing, commits nothing.
+#
+# Where it runs: the dxb-render server first (runs-on [self-hosted, dxb-render]). If that job has not been picked up
+# after 5 minutes (the server is busy or down) the `gate` job lets a GitHub-hosted `fallback` job read the same footage;
+# a server that picks the job up late stands down when the fallback has already run.
+#
+# Safety, as in render.yml and render-live.yml: dispatch from main only, never pull_request; read-only token
+# (contents: read, actions: read, only to read this run's own job records); the code comes from main, and the job file
+# alone is read from `ref` (data, never executed), so a branch cannot run code on the server. The Dubai font (FONTS_TOKEN)
+# goes to a temp folder of the job for the text check and is deleted at the end; it is never in the workspace, an artifact
+# or the log. The only output is the job summary and the log: the report and the map, which carry what the job file
+# already says. No other secret is used.
+#
+# The job file may be anywhere in the repo the push does not render: put it in jobs/prerender/<name>.json (render.yml
+# watches jobs/render/*.json only), on main or on a scratch branch, then:
+#   gh workflow run prerender.yml --ref main -f job=jobs/prerender/<name>.json [-f ref=<branch or sha>]
+name: prerender
+
+permissions:
+  contents: read
+  actions: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: 'Job file: jobs/prerender/<name>.json (or jobs/render, jobs/live)'
+        required: true
+      ref:
+        description: 'Branch or commit that holds the job file (default: main). Only the file is read from it.'
+        required: false
+        default: ''
+      wait:
+        description: 'Seconds to wait for the server before the GitHub-hosted fallback runs'
+        required: false
+        default: '300'
+
+# A newer dispatch for the same file replaces an older one (this workflow only reads).
+concurrency:
+  group: prerender-${{ inputs.job }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    name: gate
+    if: github.repository == 'mohdeltayer/dxb-assets' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      fallback: ${{ steps.gate.outputs.fallback }}
+    env:
+      JOB: ${{ inputs.job }}
+      REF: ${{ inputs.ref }}
+    steps:
+      - name: Guard (this repository, main, a dispatch, a job file path, a plain ref)
+        run: |
+          printf '%s' "$JOB" | grep -Eq '^jobs/(render|live|prerender)/[A-Za-z0-9._-]+\.json$' || { echo "job must be jobs/(render|live|prerender)/<name>.json"; exit 1; }
+          [ -z "$REF" ] || printf '%s' "$REF" | grep -Eq '^[A-Za-z0-9._][A-Za-z0-9._/-]{0,99}$' || { echo "ref must be a plain branch or commit"; exit 1; }
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: templates
+          persist-credentials: false
+      - name: Wait for the server (up to 5 minutes), else the fallback runs
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PRERENDER_WAIT: ${{ inputs.wait }}
+        run: python3 templates/prerender_ci.py gate
+
+  server:
+    name: server
+    # No `needs`: this job joins the server's queue at once, and the gate watches it. If the server never picks it up the
+    # fallback reads the footage; this job then stays queued until the server returns (it stands down, see the first
+    # step) or until the next dispatch for the same file cancels the run.
+    if: github.repository == 'mohdeltayer/dxb-assets' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 20
+    env:
+      JOB: ${{ inputs.job }}
+      REF: ${{ inputs.ref }}
+    steps:
+      - name: Guard (a job file path, a plain ref)
+        run: |
+          printf '%s' "$JOB" | grep -Eq '^jobs/(render|live|prerender)/[A-Za-z0-9._-]+\.json$' || { echo "job must be jobs/(render|live|prerender)/<name>.json"; exit 1; }
+          [ -z "$REF" ] || printf '%s' "$REF" | grep -Eq '^[A-Za-z0-9._][A-Za-z0-9._/-]{0,99}$' || { echo "ref must be a plain branch or commit"; exit 1; }
+
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            templates
+            jobs
+          persist-credentials: false
+
+      - name: Stand down if the GitHub-hosted fallback already ran
+        id: yield
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 templates/prerender_ci.py yielded
+
+      - name: Environment
+        if: steps.yield.outputs.skip != '1'
+        run: |
+          cache="${DXB_CACHE:-/var/cache/dxb-render}"; venv="${DXB_VENV:-/home/runner/venv}"
+          {
+            echo "DXB_CACHE=$cache"
+            echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts"
+            echo "DXB_UPLOADS=$RUNNER_TEMP/uploads"
+          } >> "$GITHUB_ENV"
+          echo "$venv/bin" >> "$GITHUB_PATH"
+          mkdir -p "$RUNNER_TEMP/uploads" "$RUNNER_TEMP/job"
+          echo "cores $(nproc), $(free -g | awk '/Mem:/{print $2}') GB, runner $RUNNER_NAME"
+
+      - name: Tools (installed by runner-setup.sh; nothing is installed here)
+        if: steps.yield.outputs.skip != '1'
+        run: |
+          missing=""
+          for c in ffmpeg ffprobe tesseract python; do command -v "$c" >/dev/null || missing="$missing $c"; done
+          [ -z "$missing" ] || { echo "missing on the server:$missing. Run scripts/runner-setup.sh again."; exit 1; }
+          ffmpeg -version | head -1; tesseract --version 2>&1 | head -1; python -V
+          python -c "import PIL, numpy; print('python packages ok')"
+
+      - name: The job file (data only, from the ref)
+        if: steps.yield.outputs.skip != '1'
+        run: |
+          git fetch -q --depth=1 --filter=blob:none origin "${REF:-main}"
+          git show "FETCH_HEAD:$JOB" > "$RUNNER_TEMP/job/$(basename "$JOB")"
+          echo "PRERENDER_JOB=$RUNNER_TEMP/job/$(basename "$JOB")" >> "$GITHUB_ENV"
+
+      - name: Fonts (temp folder, outside the workspace)
+        if: steps.yield.outputs.skip != '1'
+        continue-on-error: true
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          repo="$RUNNER_TEMP/dxb-fonts"
+          git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+          mkdir -p "$DUBAI_FONTS"
+          unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$DUBAI_FONTS"
+          rm -rf "$repo"
+          for w in Light Regular Medium Bold; do test -f "$DUBAI_FONTS/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing from dubai.zip"; exit 1; }; done
+
+      - name: Checks (text check, then the footage)
+        if: steps.yield.outputs.skip != '1'
+        timeout-minutes: 15
+        run: |
+          rc=0
+          if [ -f "$DUBAI_FONTS/Dubai-Bold.ttf" ]; then
+            python templates/render_job.py text "$PRERENDER_JOB" || { echo "TEXT CHECK FAILED (above)"; rc=1; }
+          else
+            echo "no Dubai font here: the text check is skipped (the render still runs it)"
+          fi
+          python templates/prerender.py "$PRERENDER_JOB" --ci || rc=1
+          exit $rc
+
+      - name: Clean up (fonts, footage, job copy)
+        if: always()
+        run: rm -rf "$DUBAI_FONTS" "$RUNNER_TEMP/dxb-fonts" "$DXB_UPLOADS" "$RUNNER_TEMP/job" "$RUNNER_TEMP/uploads" 2>/dev/null || true
+
+  fallback:
+    name: fallback
+    needs: gate
+    if: needs.gate.outputs.fallback == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      JOB: ${{ inputs.job }}
+      REF: ${{ inputs.ref }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            templates
+            jobs
+          persist-credentials: false
+
+      - name: Job file (data only, from the ref)
+        run: |
+          mkdir -p "$RUNNER_TEMP/job" "$RUNNER_TEMP/uploads"
+          echo "DXB_UPLOADS=$RUNNER_TEMP/uploads" >> "$GITHUB_ENV"
+          git fetch -q --depth=1 --filter=blob:none origin "${REF:-main}"
+          git show "FETCH_HEAD:$JOB" > "$RUNNER_TEMP/job/$(basename "$JOB")"
+          echo "PRERENDER_JOB=$RUNNER_TEMP/job/$(basename "$JOB")" >> "$GITHUB_ENV"
+
+      - name: Fonts (temp folder, outside the workspace)
+        continue-on-error: true
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          repo="$RUNNER_TEMP/dxb-fonts"
+          fonts="$RUNNER_TEMP/dubai-fonts"
+          git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+          mkdir -p "$fonts"
+          unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$fonts"
+          rm -rf "$repo"
+          for w in Light Regular Medium Bold; do test -f "$fonts/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing from dubai.zip"; exit 1; }; done
+          echo "DUBAI_FONTS=$fonts" >> "$GITHUB_ENV"
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Tools
+        timeout-minutes: 10
+        run: |
+          sudo systemctl stop unattended-upgrades apt-daily.service apt-daily-upgrade.service apt-daily.timer apt-daily-upgrade.timer 2>/dev/null || true
+          APT="sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=120 -o Acquire::Retries=3 -o Acquire::http::Timeout=30"
+          need=""; command -v ffmpeg >/dev/null || need="ffmpeg"; command -v tesseract >/dev/null || need="$need tesseract-ocr tesseract-ocr-eng"
+          if [ -n "$need" ]; then $APT update -qq 2>&1 | tail -3; timeout 150 $APT install -y -q --no-install-recommends $need 2>&1 | tail -5 || true; fi
+          command -v ffmpeg; command -v tesseract || echo "tesseract missing: text checks will be skipped"
+          python -m pip install -q --timeout 60 --retries 3 pillow numpy soundfile pedalboard opencv-python-headless
+
+      - name: Checks (text check, then the footage)
+        timeout-minutes: 15
+        run: |
+          rc=0
+          if [ -f "$DUBAI_FONTS/Dubai-Bold.ttf" ]; then
+            python templates/render_job.py text "$PRERENDER_JOB" || { echo "TEXT CHECK FAILED (above)"; rc=1; }
+          else
+            echo "no Dubai font here: the text check is skipped (the render still runs it)"
+          fi
+          python templates/prerender.py "$PRERENDER_JOB" --ci || rc=1
+          exit $rc
+
+      - name: Clean up
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/dubai-fonts" "$RUNNER_TEMP/dxb-fonts" "$DXB_UPLOADS" "$RUNNER_TEMP/job" 2>/dev/null || true
