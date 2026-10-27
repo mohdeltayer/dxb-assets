@@ -9802,5 +9802,54 @@
   "min_disk_free_mb": 83551,
   "setup_min": 1.05,
   "story": "payday-aces-high-release-date-november-5"
+ },
+ {
+  "name": "barotrauma-home-harbor-december-2-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T07:08Z",
+  "stages": {
+   "checks": 4.4,
+   "montage": 35.8,
+   "text": 56.5,
+   "audio": 1.0,
+   "outro": 56.2
+  },
+  "total": 154.0,
+  "lane": "runner",
+  "queued_at": "2026-10-27T07:03:22Z",
+  "finished_at": "2026-10-27T07:08Z",
+  "render_min": 2.57,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 12.6,
+   "audio_secs": 39.2,
+   "music_pct": 69.5,
+   "leak_pct": 3.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "effects_shots": 6,
+   "mix_secs": 6.3,
+   "secs": 19.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 255,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1323,
+  "peak_mem_mb": 2232,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 61623,
+  "peak_disk_mb": 64226,
+  "min_disk_free_mb": 83476,
+  "setup_min": 1.37,
+  "story": "barotrauma-home-harbor-december-2"
  }
 ]
