@@ -51,10 +51,14 @@ runs:
       shell: bash
       run: |
         sudo systemctl stop unattended-upgrades apt-daily.service apt-daily-upgrade.service apt-daily.timer apt-daily-upgrade.timer 2>/dev/null || true
-        if ! command -v ffmpeg >/dev/null; then
-          sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=120 -o Acquire::Retries=3 -o Acquire::http::Timeout=30 update -qq 2>&1 | tail -2
-          timeout 150 sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=120 install -y -q --no-install-recommends ffmpeg 2>&1 | tail -2 || true
-        fi
+        # One slow mirror download stalled this step for 150 s and lost the first test render (27 Oct 2026): three short
+        # attempts instead of one long one, each with its own timeout, so a stalled download is dropped and retried.
+        for attempt in 1 2 3; do
+          command -v ffmpeg >/dev/null && break
+          echo "ffmpeg install attempt $attempt ($(date +%T))"
+          timeout 60 sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=60 -o Acquire::Retries=3 -o Acquire::http::Timeout=20 update -qq 2>&1 | tail -2 || true
+          timeout 75 sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=60 -o Acquire::http::Timeout=20 install -y -q --no-install-recommends ffmpeg 2>&1 | tail -2 || true
+        done
         command -v ffmpeg >/dev/null || { echo "ffmpeg missing"; exit 1; }
         python -m pip install -q --timeout 60 --retries 3 pillow numpy pedalboard soundfile
 
