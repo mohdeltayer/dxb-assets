@@ -151,5 +151,11 @@
   "pubg-steam.mp4",
   40.0
  ],
- "block_ok": []
+ "block_ok": [
+  [
+   12.4,
+   14.0,
+   "straight-edge false positive: source pubg-steam.mp4 decodes with no errors and its stretches at 46.6 and 50.6 s read clean on smear_times; flagged window moved with the shot change (12.60 then 12.97), containers and a drone's arms; the finished frames are checked on the dense strip before queuing"
+  ]
+ ]
 }
