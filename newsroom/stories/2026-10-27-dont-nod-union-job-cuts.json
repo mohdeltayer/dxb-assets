@@ -9,7 +9,7 @@
   "related": [
     "2026-10-21-dont-nod-safeguard-proceedings"
   ],
-  "status": "rendering (lane A, GitHub)",
+  "status": "scheduled in Publer 14:30Z for 15:30Z (19:30 Dubai) on Instagram, X and Threads (reel v2)",
   "chip": "تقرير",
   "template": "split",
   "skin": "house",
@@ -74,5 +74,48 @@
   },
   "job": "jobs/render/dont-nod-union-job-cuts.json",
   "gate": "gate 13:50Z: STJV statement read (27 Oct, no update note): 18/22 programmers, 6/6 animators, 6/6 associate producers, P14, CSE opinion 3 Nov; no Don't Nod response found",
-  "deepl": "back-check 13:50Z: X text and IG paragraph 3 match; 'آخر مشاريع' read as plural, changed to the singular"
+  "deepl": "back-check 13:50Z: X text and IG paragraph 3 match; 'آخر مشاريع' read as plural, changed to the singular",
+  "approved": "go: rolling queue (review 1730 ran as ranked); gate 13:50Z: STJV statement read (27 Oct, no update note): 18/22 programmers, 6/6 animators, 6/6 associate producers, P14, CSE opinion 3 Nov; no Don't Nod response found",
+  "director": {
+    "model": "opus (main session)",
+    "verdict": "PASS with note",
+    "table": [
+      [
+        "0-3.5",
+        "headline over the astronaut close-up",
+        "PASS",
+        "one-frame dip to black at the 3.5 s cut (the runner copy fades there); a blink at a cut, not a slate"
+      ],
+      [
+        "3.5-6.9",
+        "line 1 (STJV) over ice and the walking explorer",
+        "PASS",
+        ""
+      ],
+      [
+        "6.9-10.9",
+        "line 2 (18 of 22, animators) over the astronaut face and survivor",
+        "PASS",
+        ""
+      ],
+      [
+        "10.9-15.4",
+        "line 3 over the face and Lost Records",
+        "PASS",
+        "v1 black frames at 11.5 removed"
+      ],
+      [
+        "15.4-18.4",
+        "closing line over the snow field",
+        "PASS",
+        "plain picture, quiet close"
+      ],
+      [
+        "reel",
+        "18.4 s; split strip two items; our bed (two narrated trailers)",
+        "PASS",
+        "neutral wording, union attributed, studio silence stated"
+      ]
+    ]
+  }
 }
