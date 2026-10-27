@@ -24,6 +24,10 @@ unreleased material.
       "speech_ok": [[3.0, 7.5, "director's statement, subtitled"]],      # only for a quote or interview Reel (Reel time)
       "speech_keep": true,                                           # speech is the news without speech_ok: no audio split
       "audio_split": false,                                          # opt out of the trailer audio split (tracksplit.py)
+      "profile": "breaking",                                         # reel.PROFILES (T0, 27 Oct 2026): no picture finish, no demucs,
+                                                                     # veryfast crf 20; label «عاجل» defaults to it, "standard" opts out
+      "kind": "breaking",                                            # the T0 breaking card (templates/breaking.py): one image, one
+                                                                     # headline, one line, no footage shots; its job format is in that module
       "sound": null, "country": null, "pace_ok": false,
       "lowres_ok": "IGN, Nintendo store, publisher press site, Steam: none above 720p",   # never a bare true (below)
       "blocky_ok": [["arms-1.mp4", 28.0, "frames 28.0 to 30.6 looked at, phone size: blocks not visible"]],
@@ -95,7 +99,7 @@ import json, os, re, shutil, subprocess, sys, time, urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
-import cards as C, reel, numgfx as NG, trailer, decodecheck as DC, cardgfx as CG   # noqa: E402
+import cards as C, reel, numgfx as NG, trailer, decodecheck as DC, cardgfx as CG, breaking as BK   # noqa: E402
 
 UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36'
 
@@ -206,6 +210,8 @@ def focus(job, path):
     """Fill every null focus with reel.autofocus and write the job back, so the
     runner crops exactly what the shot sheet was judged on (20 Oct 2026: on the
     first runner test, autofocus there chose other subjects on three shots)."""
+    if job.get('kind') == 'breaking':          # one image, framed by the job's own focus (breaking.py)
+        return job
     for item in job.get('footage', []):
         fetch(item)
     for sh in job['shots']:
@@ -224,7 +230,23 @@ def place(job):
     return reel.by_shot([(a, b, [tuple(x) if isinstance(x, list) else x for x in texts]) for a, b, texts in job['lines']])
 
 
+def profile_of(job):
+    """reel()'s profile for a job (T0, 27 Oct 2026): "profile" as written, else "breaking" for the عاجل chip, else
+    None, the standard render. "standard" (or null) opts a عاجل job out. A job without the key and not عاجل renders
+    exactly as before."""
+    p = job.get('profile')
+    if p is None and job.get('label') == 'عاجل':
+        p = 'breaking'
+    if p in (None, 'standard'):
+        return None
+    if p not in reel.PROFILES:
+        raise ValueError(f'profile {p!r}: one of {", ".join(reel.PROFILES)} or "standard"')
+    return p
+
+
 def check(job):
+    if job.get('kind') == 'breaking':
+        return BK.check(job)
     keep = reel.X
     if job.get('cut'):
         reel.X = 0.04
@@ -291,6 +313,8 @@ def textcheck(job):
     leaves the safe zone stops in seconds (needs the Dubai font: the runner runs it first)."""
     if job.get('kind') == 'famitsu':           # sales_full draws its own rows; nothing to pre-check here
         return
+    if job.get('kind') == 'breaking':
+        return BK.textcheck(job)
     import tempfile
     tmp = tempfile.mkdtemp(prefix='textcheck-')
     try:
@@ -484,9 +508,33 @@ def design_pass(job, video, p, folder):
     return rec
 
 
+def breaking(job, draft=False):
+    """The T0 breaking card (templates/breaking.py): fetch the one image, build the card, then the same checks and
+    strips as every Reel. There is no shot sheet (no footage shots): `<name>-sheet.jpg` is the source image with the
+    9:16 window drawn on it, so the commit step finds the same files."""
+    t0 = time.time()
+    for item in job.get('footage', []):
+        fetch(item)
+    fetched = time.time() - t0
+    out = os.path.join(ROOT, job['out'])
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    video = BK.render(job, out, draft=draft)
+    stem = os.path.splitext(out)[0]
+    base = re.sub(r'-reel-v\d+$', '', stem)
+    if not draft:
+        DC.check(video, [])                    # decode errors and the blocky-smear flag on the Reel that ships
+        DC.dense_strip(video, base + '-dense.jpg')
+        reel.strip(video, base + '-strip.jpg')
+        BK.sheet(job, base + '-sheet.jpg')
+    print(f"render_job: {job['name']} done in {time.time() - t0:.0f} s (fetch {fetched:.0f} s): {video}", flush=True)
+    return video
+
+
 def run(job, draft=False):
     if job.get('kind') == 'famitsu':
         return famitsu(job, draft)
+    if job.get('kind') == 'breaking':
+        return breaking(job, draft)
     t0 = time.time()
     for item in job.get('footage', []):
         fetch(item)
@@ -508,7 +556,7 @@ def run(job, draft=False):
                      strip=strip_items(job) if job.get('strip') else None,
                      template=job.get('template'), pace_ok=job.get('pace_ok', False), lowres_ok=job.get('lowres_ok', False),
                      skin=job.get('skin'), person=[tuple(x) for x in job['person']] if job.get('person') else None,
-                     blocky_ok=job.get('blocky_ok'), apart=DP_apart)
+                     blocky_ok=job.get('blocky_ok'), apart=DP_apart, profile=profile_of(job))
     video = done[0] if isinstance(done, (list, tuple)) else done
     dp = design_pass(job, video, dp_plan, DP_folder) if DP_folder else None
     if job.get('insert') and not draft:
