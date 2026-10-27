@@ -10283,5 +10283,80 @@
   "min_disk_free_mb": 83712,
   "setup_min": 1.15,
   "story": "nintendo-indie-world-oct-28"
+ },
+ {
+  "name": "remothered-red-nuns-legacy-out-now-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T15:16Z",
+  "stages": {
+   "checks": 3.6,
+   "montage": 39.2,
+   "text": 25.7,
+   "audio": 0.3,
+   "outro": 29.4
+  },
+  "total": 98.2,
+  "lane": "runner",
+  "queued_at": "2026-10-27T15:09:53Z",
+  "finished_at": "2026-10-27T15:16Z",
+  "render_min": 1.64,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 11.7,
+   "audio_secs": 49.7,
+   "music_pct": 20.3,
+   "leak_pct": 5.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 6
+   },
+   "reason": "music stem not clean (leftover 5.3% > 5.0%)",
+   "secs": 15.0
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 188,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1360,
+  "peak_mem_mb": 2431,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62560,
+  "peak_disk_mb": 65069,
+  "min_disk_free_mb": 82633,
+  "setup_min": 3.83,
+  "story": "remothered-red-nuns-legacy-out-now"
+ },
+ {
+  "name": "pokemon-unite-end-of-service-t0-reel-v1.mp4",
+  "profile": "breaking-card",
+  "at": "2026-10-27T15:18Z",
+  "stages": {
+   "checks": 0.5,
+   "compose": 6.6,
+   "outro": 3.7
+  },
+  "total": 10.7,
+  "lane": "t0-hosted",
+  "queued_at": "2026-10-27T15:18Z",
+  "finished_at": "2026-10-27T15:18Z",
+  "render_min": 0.18,
+  "runner": "hosted",
+  "cores": 4,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1194,
+  "peak_mem_mb": 1470,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 60638,
+  "peak_disk_mb": 60760,
+  "min_disk_free_mb": 86941,
+  "job_secs": 21,
+  "setup_min": 0.57,
+  "story": "pokemon-unite-end-of-service-t0"
  }
 ]

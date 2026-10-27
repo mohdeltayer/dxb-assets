@@ -11,6 +11,11 @@
   "sources": [
     {
       "role": "primary",
+      "name": "Nintendo of America on X, 27 Oct 14:00:01Z ('roughly 15 minutes')",
+      "url": "https://x.com/NintendoAmerica/status/2115081085373550827"
+    },
+    {
+      "role": "primary",
       "name": "Nintendo on X (@Nintendo), 27 Oct 14:00:36Z",
       "url": "https://x.com/Nintendo/status/2115081230702289350"
     },
@@ -21,16 +26,16 @@
   ],
   "claims": [
     {
-      "claim": "Indie World 2026.10.28, tomorrow 23:00 JST (14:00Z, 18:00 UAE, 17:00 KSA)",
-      "status": "official"
+      "claim": "28 Oct 7am PT = 14:00Z = 18:00 UAE, 17:00 KSA",
+      "status": "official (NoA)"
     },
     {
-      "claim": "about 25 minutes; indie games playable on Switch 2 and Switch",
-      "status": "official"
+      "claim": "roughly 15 minutes (Western show); Japan's broadcast about 25 minutes",
+      "status": "official (NoA, Nintendo JP)"
     },
     {
-      "claim": "games not named",
-      "status": "official (none named)"
+      "claim": "indie games for Switch 2 and Switch; watch on Nintendo's official channels",
+      "status": "official"
     }
   ],
   "lanes": {
@@ -38,20 +43,20 @@
       "lane": "Reel",
       "template": "split",
       "chip": "رسمي",
-      "time": "Tue 27 Oct 16:30Z (20:30 Dubai)",
-      "headline": "عرض Indie World\nغدًا لمدة 25 دقيقة",
-      "x": "تبث نينتندو (Nintendo) عرض Indie World غدًا الأربعاء الساعة 6 مساءً بتوقيت الإمارات، ومدته نحو 25 دقيقة.",
-      "threads": "تبث نينتندو (Nintendo) عرض Indie World غدًا الأربعاء الساعة 6 مساءً بتوقيت الإمارات، ومدته نحو 25 دقيقة.\n\nالمصدر: حساب نينتندو على X",
-      "ig": "نينتندو تبث عرض Indie World غدًا.\n\nأعلنت شركة نينتندو (Nintendo) اليوم عبر حسابها الرسمي على X أنها ستبث عرض Indie World غدًا الأربعاء 28 أكتوبر، لتقديم ألعاب مستقلة قادمة لجهازي Nintendo Switch 2 و Nintendo Switch.\n\nيبدأ العرض الساعة 6 مساءً بتوقيت الإمارات و5 مساءً بتوقيت السعودية، ومدته نحو 25 دقيقة، ولم تكشف الشركة بعد عن الألعاب المشاركة فيه.\n\nاللقطات في الفيديو من لعبة Hollow Knight: Silksong.\n\n#ألعاب #أخبار_الألعاب #IndieWorld #NintendoSwitch2",
+      "time": "T0, next free slot",
+      "headline": "عرض Indie World\nغدًا",
+      "x": "تبث نينتندو (Nintendo) عرض Indie World غدًا الأربعاء الساعة 6 مساءً بتوقيت الإمارات، ومدته نحو 15 دقيقة، لألعاب مستقلة قادمة إلى Switch 2 و Switch.",
+      "threads": "تبث نينتندو (Nintendo) عرض Indie World غدًا الأربعاء الساعة 6 مساءً بتوقيت الإمارات، ومدته نحو 15 دقيقة، لألعاب مستقلة قادمة إلى Switch 2 و Switch.\n\nالمصدر: حساب نينتندو على X",
+      "ig": "نينتندو تبث عرض Indie World غدًا الساعة 6 مساءً.\n\nأعلنت شركة نينتندو (Nintendo) عبر حسابها الرسمي على X أنها ستبث عرض Indie World يوم الأربعاء 28 أكتوبر الساعة 6 مساءً بتوقيت الإمارات (5 مساءً بتوقيت السعودية)، ومدته نحو 15 دقيقة.\n\nويضم العرض إعلانات جديدة ومستجدات لألعاب مستقلة قادمة إلى Nintendo Switch 2 و Nintendo Switch، ويُبث على قنوات نينتندو الرسمية.\n\n#ألعاب #أخبار_الألعاب #IndieWorld #NintendoSwitch2",
       "ig_follow_up": "المصدر: حساب نينتندو على X، 27 أكتوبر",
-      "x_follow_up": "المصدر: نينتندو (Nintendo)\nhttps://x.com/Nintendo/status/2115081230702289350"
+      "x_follow_up": "المصدر: نينتندو (Nintendo)\nhttps://x.com/NintendoAmerica/status/2115081085373550827"
     }
   },
-  "footage": "stand-in: Hollow Knight: Silksong release trailer (Steam 1030300), credited on screen; score from 50.0 s, speech none",
+  "footage": "Nintendo of America's announcement art recomposed as three vertical stills (US times cropped out), credited; our bed. Earlier showcase intros are on YouTube only.",
   "breaking": "pinged 14:15Z (push + inbox prod-20261027-indie-world); auto-go at 14:31Z if no reply; third auto-go of 24 h",
   "deepl": "back-check 14:31Z: IG caption matches; X text matches",
-  "status": "scheduled in Publer 14:36Z for 16:30Z (20:30 Dubai) on Instagram, X and Threads",
-  "approved": "auto-go: no reply in 15 minutes (pinged 14:15Z; third auto-go in 24 h)",
+  "status": "T0 rendering on the runner since 15:17Z (job nintendo-indie-world-oct-28-t0)",
+  "approved": "T0: advisor card adv-20261027-indie-world-t0 (Mohammad 19:11 Dubai)",
   "director": {
     "model": "opus (main session)",
     "verdict": "PASS",
@@ -87,5 +92,16 @@
         "last line runs to the end card"
       ]
     ]
-  }
+  },
+  "history": [
+    "v1 (Silksong stand-in, 25 minutes from Nintendo Japan's post) built and scheduled for 16:30Z, pulled to drafts 15:14Z: the Western showcase is about 15 minutes (Nintendo of America), and the advisor card asked for T0 with Nintendo's own art and our bed"
+  ],
+  "coverage_plan": [
+    "Before: T0 announcement tonight; a short reminder Reel at 17:00 Dubai on 28 Oct (13:00Z) only if the hour's slot is free, reusing the T0 stills with «يبدأ بعد ساعة».",
+    "Prep on 28 Oct morning: shell job for a list roundup (template list, our bed), cache warm on dxb-render-1, a helper on standby from 13:55Z.",
+    "Watch: the mechanical watch is not live yet (waiting on Mohammad's root steps), so a helper polls @NintendoAmerica and @Nintendo (syndication), Nintendo's US store, Steam and the publishers' press pages every 2 minutes from 14:00Z, and fetches the best official copy of each trailer as it appears (assets.nintendo.com by nsuid, Steam, press kit; no YouTube).",
+    "During and right after (14:00 to 14:20Z): rank reveals by news value (known studio or game, release date, shadow drop, Arabic support); the strongest two or three get fast trailer Reels on their own official trailers with their own sound, first one queued by about 14:45Z (18:45 Dubai), the rest 30 minutes apart.",
+    "Roundup: a list Reel of the remaining notable announcements (title, date, platform), queued by about 16:00Z (20:00 Dubai).",
+    "Gate: every fact from Nintendo's own post or store page; dates and prices only from the primary."
+  ]
 }
