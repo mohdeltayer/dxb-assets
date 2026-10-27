@@ -10102,5 +10102,38 @@
   "min_disk_free_mb": 82938,
   "setup_min": 1.07,
   "story": "warhorse-cyberattack"
+ },
+ {
+  "name": "the-division-50-million-agents-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T13:39Z",
+  "stages": {
+   "checks": 3.3,
+   "montage": 33.9,
+   "text": 24.4,
+   "audio": 0.8,
+   "outro": 37.3
+  },
+  "total": 99.7,
+  "lane": "runner",
+  "queued_at": "2026-10-27T13:35:19Z",
+  "finished_at": "2026-10-27T13:39Z",
+  "render_min": 1.66,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 225,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1015,
+  "peak_mem_mb": 2143,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62481,
+  "peak_disk_mb": 64672,
+  "min_disk_free_mb": 83030,
+  "setup_min": 0.93,
+  "story": "the-division-50-million-agents"
  }
 ]
