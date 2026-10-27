@@ -9447,5 +9447,38 @@
   "min_disk_free_mb": 81968,
   "setup_min": 1.25,
   "story": "silent-hill-1-remake-2027-report"
+ },
+ {
+  "name": "honkai-star-rail-4-7-special-program-reel-v4.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T02:07Z",
+  "stages": {
+   "checks": 4.0,
+   "montage": 26.3,
+   "text": 29.9,
+   "audio": 0.7,
+   "outro": 34.2
+  },
+  "total": 95.0,
+  "lane": "runner",
+  "queued_at": "2026-10-27T02:03:55Z",
+  "finished_at": "2026-10-27T02:07Z",
+  "render_min": 1.58,
+  "audio_split": {
+   "applied": false,
+   "reason": "job sets audio_split false"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 154,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1071,
+  "peak_mem_mb": 1819,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 61325,
+  "peak_disk_mb": 63060,
+  "min_disk_free_mb": 84642,
+  "setup_min": 1.08,
+  "story": "honkai-star-rail-4-7-special-program"
  }
 ]
