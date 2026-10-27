@@ -10,7 +10,7 @@
     "industry/hardware"
   ],
   "priority": "🟢",
-  "status": "building v2 (lane B, dxb-render-1)",
+  "status": "scheduled in Publer 12:30Z (Instagram, X, Threads)",
   "why": "Evergreen list for the empty 16:30 Dubai slot; first lane-B job under the two-lanes card",
   "sensitive": "none (PBZ blood shots left out)",
   "lane": "B (evergreen, dxb-render-1; GitHub fallback after 5 minutes)",
@@ -57,5 +57,48 @@
       "v": 2,
       "note": "top four only (stable 1 to 4); PBZ shots out; headline over LNF 66 s"
     }
-  ]
+  ],
+  "approved": "go: rolling queue (evergreen, lane B); gate 10:55Z: Valve's Top Wishlisted order read on AE, US and SA (1 Deadlock, 2 Light No Fire, 3 Dear Passengers, 4 Fable; 5 Blight: Survival, 6 Phantom Blade Zero), so v2 is the top four; scheduled 11:05Z",
+  "director": {
+    "verdict": "PASS (v2)",
+    "table": [
+      [
+        "0 LNF dragon 66.0",
+        "0.0-3.4",
+        "PASS",
+        "rider head-on, centred; headline alone; grid tile readable"
+      ],
+      [
+        "1 Fable creature",
+        "3.4-4.3",
+        "PASS",
+        "short; line enters"
+      ],
+      [
+        "2 Fable woman",
+        "4.3-6.2",
+        "PASS",
+        "front face, centred"
+      ],
+      [
+        "3-4 Dear Passengers",
+        "6.2-9.0",
+        "PASS",
+        "characters centred"
+      ],
+      [
+        "5 LNF lake",
+        "9.0-11.8",
+        "PASS",
+        "same rider as the opening, new place; the payoff for #2"
+      ],
+      [
+        "6-7 Deadlock stills",
+        "11.8-14.9",
+        "PASS",
+        "pan pairs, smooth; last 2 s a picture"
+      ]
+    ],
+    "reel": "14.9 s, change every 3 s or less, our bed (four trailers, no single stretch fits; evergreen list), render 106 s on dxb-render-1 (job 219 s)"
+  }
 }
