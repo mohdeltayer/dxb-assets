@@ -9900,5 +9900,38 @@
   "min_disk_free_mb": 81997,
   "setup_min": 1.07,
   "story": "library-of-ruina-guinness-longest-story"
+ },
+ {
+  "name": "capcom-h1-2026-sales-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T09:22Z",
+  "stages": {
+   "checks": 2.3,
+   "montage": 26.3,
+   "text": 27.6,
+   "audio": 0.6,
+   "outro": 39.6
+  },
+  "total": 96.4,
+  "lane": "runner",
+  "queued_at": "2026-10-27T09:18:11Z",
+  "finished_at": "2026-10-27T09:22Z",
+  "render_min": 1.61,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 231,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1121,
+  "peak_mem_mb": 1980,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62526,
+  "peak_disk_mb": 63918,
+  "min_disk_free_mb": 83783,
+  "setup_min": 1.07,
+  "story": "capcom-h1-2026-sales"
  }
 ]
