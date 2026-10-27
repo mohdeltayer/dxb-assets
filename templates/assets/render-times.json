@@ -10418,5 +10418,38 @@
   "min_disk_free_mb": 85089,
   "setup_min": 0.97,
   "story": "nintendo-indie-world-oct-28-t0"
+ },
+ {
+  "name": "bleach-mirrors-high-launch-oct-28-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T15:34Z",
+  "stages": {
+   "checks": 0.9,
+   "montage": 37.9,
+   "text": 41.0,
+   "audio": 0.4,
+   "outro": 34.4
+  },
+  "total": 114.6,
+  "lane": "runner",
+  "queued_at": "2026-10-27T15:28:22Z",
+  "finished_at": "2026-10-27T15:34Z",
+  "render_min": 1.91,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 125,
+  "mem_total_mb": 15993,
+  "mem_start_mb": 1131,
+  "peak_mem_mb": 2041,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 63455,
+  "peak_disk_mb": 65204,
+  "min_disk_free_mb": 82497,
+  "setup_min": 3.42,
+  "story": "bleach-mirrors-high-launch-oct-28"
  }
 ]
