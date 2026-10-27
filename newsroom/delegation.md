@@ -173,6 +173,26 @@ ledger commit as the mp4),
 (`vb = 27*8192/dur - 192`, `-passlogfile` before the output), two renders at a
 time at most. Return paths and any error verbatim.
 
+**Render lanes (advisor card adv-20261027-two-lanes, approved by Mohammad 27 Oct 2026, 14:29 Dubai).**
+Two lanes run at the same time; the main session assigns and never waits on a render.
+- Lane A, news (unchanged): the job file goes to `jobs/render/`, the push starts render.yml on GitHub.
+  Breaking stories are always lane A. The main session watches for the `-publer.json` receipt with a
+  background poll (no agent needed).
+- Lane B, evergreen and non-urgent (lists, watch guides, series pieces, weekend pieces, reserve-bank
+  items): the job file goes to `jobs/live/` and render-live.yml is dispatched on dxb-render-1
+  (`runs-on: [self-hosted, dxb-render]`), same checks, same Publer upload.
+- **Lane B render helper (haiku), one per lane-B job.** Dispatches render-live.yml with the job,
+  watches the run, and falls back to GitHub by moving the job file to `jobs/render/` (git mv, commit,
+  push) when the server has not started the run within 5 minutes, or when the run fails for a server
+  reason (runner lost, tools, fonts, checkout, disk, footage fetch, timeout). A QA failure from
+  render_job.py or decodecheck is never a fallback: it is reported back with the error line. Done when
+  the `-publer.json` receipt is on main; limit 30 minutes. Reports lane, dispatch, start and end time,
+  render seconds, receipt, any error. The main session writes the fallback into the card it sends.
+- Measure for 48 hours from 27 Oct 10:40Z, then one card: per lane, Reels, median and slowest job
+  time, setup time, failures and fallbacks, peak memory and disk on the server, and any two lane-B
+  renders at once. Nothing moves lane A off GitHub until Mohammad decides after that card.
+- Quiet hours: refill the evergreen bank in lane B (most-wishlisted, release calendar, series).
+
 **Evening pre-fetch (sonnet), about 22:00 Dubai.** For every dated story in
 `newsroom/events.md` due the next day (and the next Famitsu Thursday): fetch
 the footage and official images through the allowed routes, make the seekmap
