@@ -1,0 +1,126 @@
+# T0 breaking render (advisor card adv-20261027-build-until-thursday, item 2, approved by Mohammad, 27 Oct 2026).
+#
+# A breaking job never waits in a queue. Three jobs:
+#   route    GitHub-hosted, seconds: the dxb-render server is free unless some run has a job on it queued or in progress
+#            (templates/render_route.py busy). Busy: lane hosted, straight to a GitHub runner. Free: lane server.
+#   server   [self-hosted, dxb-render], only when route said server. Warm caches, 8 cores.
+#   hosted   GitHub-hosted. Lane hosted: renders at once. Lane server: a standby that waits 25 s for the server job to start
+#            and renders on GitHub only if it did not (server offline or slow), so an offline server cannot hold a story.
+# No concurrency group on purpose: a second dispatch must never wait behind the first (it finds the server busy and goes to
+# GitHub). The same job file dispatched twice at once renders twice; the second commit rebases over an identical file.
+#
+# Jobs: jobs/breaking/<name>.json (production: rendered, committed with its strip and sheet, uploaded to Publer's media
+# library, the file consumed) or jobs/test/<name>.json (the side-by-side tests: rendered and committed, kept, no Publer).
+# render.yml watches jobs/render/ only and render-live.yml jobs/live/ by dispatch, so neither folder here triggers them.
+# Safety while the repo is public, as render-live.yml: dispatch from main only, never pull_request; the guard refuses any other
+# repository, ref, event or path. Secrets: FONTS_TOKEN (temp folder, deleted) and PUBLER_MEDIA_KEY (media-only; never printed).
+#
+# Dispatch: gh workflow run render-breaking.yml --ref main -f job=jobs/breaking/<name>.json
+#           optional -f lane=server|hosted forces a lane (default auto).
+name: render-breaking
+
+permissions:
+  contents: write
+  actions: read            # only to read this repository's run and job records (route, standby, claim)
+
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: 'jobs/breaking/<name>.json (production) or jobs/test/<name>.json (test) on main'
+        required: true
+      lane:
+        description: 'auto (server when idle, else GitHub), or force server or hosted'
+        required: false
+        default: 'auto'
+
+jobs:
+  route:
+    if: github.repository == 'mohdeltayer/dxb-assets' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    outputs:
+      lane: ${{ steps.lane.outputs.lane }}
+    steps:
+      - name: Guard (this repository, main, a dispatch, a file under jobs/breaking/ or jobs/test/)
+        env:
+          JOB: ${{ inputs.job }}
+        run: |
+          printf '%s' "$JOB" | grep -Eq '^jobs/(breaking|test)/[A-Za-z0-9._-]+\.json$' || { echo "job must be jobs/breaking/<name>.json or jobs/test/<name>.json"; exit 1; }
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            templates/render_route.py
+            jobs
+      - name: Is the server free?
+        id: lane
+        env:
+          GH_TOKEN: ${{ github.token }}
+          LANE_INPUT: ${{ inputs.lane }}
+          JOB: ${{ inputs.job }}
+        run: |
+          test -f "$JOB" || { echo "$JOB is not on main"; exit 1; }
+          python3 templates/render_route.py busy
+
+  server:
+    needs: route
+    if: needs.route.outputs.lane == 'server'
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            .github/actions
+            templates
+            jobs
+          clean: true
+      - name: Claim (stand down when GitHub already took this render)
+        id: claim
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 templates/render_route.py claim
+      - uses: ./.github/actions/t0-render
+        if: steps.claim.outputs.go == 'true'
+        with:
+          job: ${{ inputs.job }}
+          lane: server
+          fonts_token: ${{ secrets.FONTS_TOKEN }}
+          publer_key: ${{ secrets.PUBLER_MEDIA_KEY }}
+          repo_private: ${{ github.event.repository.private }}
+
+  hosted:
+    needs: route
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: needs.route.outputs.lane == 'hosted' || needs.route.outputs.lane == 'server'
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            .github/actions
+            templates
+            jobs
+      - name: Standby (on lane server, wait 25 s for the server to start)
+        id: standby
+        env:
+          GH_TOKEN: ${{ github.token }}
+          LANE: ${{ needs.route.outputs.lane }}
+        run: |
+          if [ "$LANE" = "hosted" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; else python3 templates/render_route.py standby; fi
+      - name: Hosted render claimed
+        if: steps.standby.outputs.go == 'true'
+        run: echo "this job renders on GitHub"
+      - uses: ./.github/actions/t0-render
+        if: steps.standby.outputs.go == 'true'
+        with:
+          job: ${{ inputs.job }}
+          lane: hosted
+          fonts_token: ${{ secrets.FONTS_TOKEN }}
+          publer_key: ${{ secrets.PUBLER_MEDIA_KEY }}
+          repo_private: ${{ github.event.repository.private }}

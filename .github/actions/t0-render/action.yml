@@ -1,0 +1,172 @@
+# The T0 breaking render steps, shared by the `server` and `hosted` jobs of render-breaking.yml so the two lanes cannot drift.
+# Only ever called from that workflow (main, workflow_dispatch). Fonts: cloned with FONTS_TOKEN into a temp folder outside the
+# workspace, never committed, never an artifact, never printed, deleted in the last step. Publer: the media-only key, never printed.
+name: t0-render
+description: Render one T0 breaking job, commit the Reel back, upload it to Publer (production jobs only)
+inputs:
+  job:
+    description: jobs/breaking/<name>.json (production, consumed) or jobs/test/<name>.json (kept, no Publer)
+    required: true
+  lane:
+    description: server or hosted
+    required: true
+  fonts_token:
+    required: true
+  publer_key:
+    required: false
+    default: ''
+  repo_private:
+    required: false
+    default: 'false'
+runs:
+  using: composite
+  steps:
+    - name: Environment
+      shell: bash
+      env:
+        JOB: ${{ inputs.job }}
+        LANE: ${{ inputs.lane }}
+      run: |
+        {
+          echo "JOB=$JOB"
+          echo "T_START=$(date +%s)"
+          echo "RENDER_LANE=t0-$LANE"
+          echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts"
+          echo "DXB_UPLOADS=$RUNNER_TEMP/uploads"
+        } >> "$GITHUB_ENV"
+        if [ "$LANE" = "server" ]; then
+          echo "${DXB_VENV:-/home/runner/venv}/bin" >> "$GITHUB_PATH"
+        fi
+        echo "cores $(nproc), $(free -g | awk '/Mem:/{print $2}') GB, runner $RUNNER_NAME, lane $LANE"
+        mkdir -p "$RUNNER_TEMP/uploads"
+
+    # GitHub lane only: a fresh VM has no ffmpeg and no Python packages. The T0 card needs neither torch, YOLO nor tesseract.
+    - uses: actions/setup-python@v6
+      if: inputs.lane == 'hosted'
+      with:
+        python-version: '3.11'
+
+    - name: Tools (GitHub lane)
+      if: inputs.lane == 'hosted'
+      shell: bash
+      run: |
+        sudo systemctl stop unattended-upgrades apt-daily.service apt-daily-upgrade.service apt-daily.timer apt-daily-upgrade.timer 2>/dev/null || true
+        if ! command -v ffmpeg >/dev/null; then
+          sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=120 -o Acquire::Retries=3 -o Acquire::http::Timeout=30 update -qq 2>&1 | tail -2
+          timeout 150 sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=120 install -y -q --no-install-recommends ffmpeg 2>&1 | tail -2 || true
+        fi
+        command -v ffmpeg >/dev/null || { echo "ffmpeg missing"; exit 1; }
+        python -m pip install -q --timeout 60 --retries 3 pillow numpy pedalboard soundfile
+
+    - uses: actions/cache@v4
+      if: inputs.lane == 'hosted'
+      with:
+        path: ~/.cache/digi-sound
+        key: t0-digi-sound-${{ hashFiles('templates/outro.py', 'templates/sonic.py', 'templates/breaking.py', 'templates/fast_ar.py', 'templates/ig_ar.py', 'templates/digi-mark.jpg') }}
+
+    - name: Tools (server)
+      if: inputs.lane == 'server'
+      shell: bash
+      run: |
+        missing=""
+        for c in ffmpeg ffprobe python; do command -v "$c" >/dev/null || missing="$missing $c"; done
+        [ -z "$missing" ] || { echo "missing on the server:$missing. Run scripts/runner-setup.sh again."; exit 1; }
+        python -c "import PIL, numpy, pedalboard; print('python packages ok')"
+
+    - name: Fonts (temp folder, outside the workspace)
+      shell: bash
+      env:
+        FONTS_TOKEN: ${{ inputs.fonts_token }}
+      run: |
+        repo="$RUNNER_TEMP/dxb-fonts"
+        git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+        mkdir -p "$DUBAI_FONTS"
+        unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$DUBAI_FONTS"
+        rm -rf "$repo"
+        for w in Light Regular Medium Bold; do test -f "$DUBAI_FONTS/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing from dubai.zip"; exit 1; }; done
+
+    - name: Text check (fails in seconds on a bad wrap)
+      shell: bash
+      run: python templates/render_job.py text "$JOB"
+
+    - name: Warm caches (plate, end card, bed; a hit costs nothing)
+      shell: bash
+      run: python templates/breaking.py warm "$JOB"
+
+    - name: Render
+      shell: bash
+      env:
+        LANE: ${{ inputs.lane }}
+      run: |
+        start=$(date +%s)
+        echo "SETUP_SECS=$(( start - T_START ))" >> "$GITHUB_ENV"
+        stats="$RUNNER_TEMP/runner-stats.json"
+        python templates/runner_stats.py start "$stats" || true
+        trap 'python templates/runner_stats.py stop "$stats" || true' EXIT
+        timeout 480 python templates/render_job.py run "$JOB"
+        echo "RENDER_SECS=$(( $(date +%s) - start ))" >> "$GITHUB_ENV"
+        python -c "import json; e = json.load(open('templates/assets/render-times.json'))[-1]; e['runner'] = '$LANE'; e['cores'] = $(nproc); json.dump(e, open('$RUNNER_TEMP/render-time.json', 'w'))"
+        python templates/runner_stats.py stop "$stats" || true
+        python templates/runner_stats.py merge "$stats" "$RUNNER_TEMP/render-time.json" || true
+
+    - name: Commit back
+      shell: bash
+      run: |
+        out=$(python -c "import json; print(json.load(open('$JOB'))['out'])")
+        echo "OUT=$out" >> "$GITHUB_ENV"
+        stem="${out%.mp4}"; base="${stem%-reel-v*}"
+        files="$out $base-strip.jpg $base-sheet.jpg"
+        if [ -f "$base-dense.jpg" ]; then files="$files $base-dense.jpg"; fi
+        mkdir -p "$RUNNER_TEMP/out"
+        for f in $files; do cp --parents "$f" "$RUNNER_TEMP/out/"; done
+        git config user.name "dxb-render"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        for i in 1 2 3 4 5; do
+          git fetch -q --depth=1 --filter=blob:none origin "$GITHUB_REF_NAME"
+          git reset -q --hard "origin/$GITHUB_REF_NAME"
+          cp -r "$RUNNER_TEMP/out/." .
+          python -c "import json; p = 'templates/assets/render-times.json'; d = json.load(open(p)); e = json.load(open('$RUNNER_TEMP/render-time.json')); e['job_secs'] = $RENDER_SECS; e['setup_min'] = round($SETUP_SECS / 60, 2); e['story'] = '$(basename "$JOB" .json)'; d.append(e); json.dump(d, open(p, 'w'), indent=1, ensure_ascii=False)"
+          git add --sparse -f $files templates/assets/render-times.json
+          case "$JOB" in jobs/breaking/*) [ -f "$JOB" ] && git rm -q "$JOB";; esac   # a production job is consumed; a test job stays
+          git commit -q -m "Render $(basename "$JOB" .json) as a T0 card on the ${{ inputs.lane }} lane ($RENDER_SECS s, $(nproc) cores)"
+          if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
+          sleep $(( i * 5 ))
+        done
+        echo "push failed five times"; exit 1
+
+    - name: Publer upload (production jobs only; never fails the job)
+      shell: bash
+      continue-on-error: true
+      env:
+        PUBLER_MEDIA_KEY: ${{ inputs.publer_key }}
+        REPO_PRIVATE: ${{ inputs.repo_private }}
+      run: |
+        case "$JOB" in jobs/breaking/*) ;; *) echo "test job: no Publer upload"; exit 0;; esac
+        base="${OUT%.mp4}"; receipt="$base-publer.json"
+        timeout 300 python templates/publer_upload.py "$RUNNER_TEMP/out/$OUT" "$RUNNER_TEMP/publer.json" || true
+        for i in 1 2 3 4 5; do
+          git fetch -q --depth=1 --filter=blob:none origin "$GITHUB_REF_NAME"
+          git reset -q --hard "origin/$GITHUB_REF_NAME"
+          mkdir -p "$(dirname "$receipt")"; cp "$RUNNER_TEMP/publer.json" "$receipt"
+          git add --sparse -f "$receipt"
+          git commit -q -m "Publer receipt $(basename "$base")"
+          if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
+          sleep $(( i * 5 ))
+        done
+
+    - name: Summary
+      if: always()
+      shell: bash
+      run: |
+        {
+          echo "### T0 render ($LANE lane): $(basename "$JOB" .json)"
+          echo "- setup ${SETUP_SECS:-n/a} s, render ${RENDER_SECS:-n/a} s"
+          python -c "import json; e = json.load(open('$RUNNER_TEMP/render-time.json')); print('- stages %s, peak memory %s of %s MB' % (e.get('stages'), e.get('peak_mem_mb'), e.get('mem_total_mb')))" 2>/dev/null || true
+        } >> "$GITHUB_STEP_SUMMARY"
+      env:
+        LANE: ${{ inputs.lane }}
+
+    - name: Clean up (fonts and scratch leave the machine)
+      if: always()
+      shell: bash
+      run: rm -rf "$DUBAI_FONTS" "$RUNNER_TEMP/dxb-fonts" "$DXB_UPLOADS" "$RUNNER_TEMP/out" "$RUNNER_TEMP"/runner-stats.json* cards 2>/dev/null || true
