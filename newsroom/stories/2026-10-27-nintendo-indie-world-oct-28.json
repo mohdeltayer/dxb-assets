@@ -50,6 +50,42 @@
   "footage": "stand-in: Hollow Knight: Silksong release trailer (Steam 1030300), credited on screen; score from 50.0 s, speech none",
   "breaking": "pinged 14:15Z (push + inbox prod-20261027-indie-world); auto-go at 14:31Z if no reply; third auto-go of 24 h",
   "deepl": "back-check 14:31Z: IG caption matches; X text matches",
-  "status": "rendering on the runner (lane A) since 14:28Z",
-  "approved": "auto-go: no reply in 15 minutes (pinged 14:15Z; third auto-go in 24 h)"
+  "status": "scheduled in Publer 14:36Z for 16:30Z (20:30 Dubai) on Instagram, X and Threads",
+  "approved": "auto-go: no reply in 15 minutes (pinged 14:15Z; third auto-go in 24 h)",
+  "director": {
+    "model": "opus (main session)",
+    "verdict": "PASS",
+    "table": [
+      [
+        "0-3.5",
+        "headline over Hornet close-up, then the orange platform",
+        "PASS",
+        "recognisable face on frame 0"
+      ],
+      [
+        "3.5-7.3",
+        "line 1 over Hornet action (green, snow)",
+        "PASS",
+        "stand-in credit at top from shot 1"
+      ],
+      [
+        "7.3-10.5",
+        "line 2 (Switch 2 and Switch) over the green meadow",
+        "PASS",
+        ""
+      ],
+      [
+        "10.5-14.4",
+        "line 3 over the orange and white arena",
+        "PASS",
+        "black shapes at 11 s are the game platforms"
+      ],
+      [
+        "reel",
+        "14.4 s; split strip UAE 6 pm, KSA 5 pm, Wed 28 Oct; Silksong release trailer score (no speech)",
+        "PASS",
+        "last line runs to the end card"
+      ]
+    ]
+  }
 }
