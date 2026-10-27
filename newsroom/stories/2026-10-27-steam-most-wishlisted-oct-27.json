@@ -1,51 +1,61 @@
 {
- "id": "2026-10-27-steam-most-wishlisted-oct-27",
- "title": "Steam's top wishlisted upcoming games, 27 Oct: 1 Deadlock, 2 Light No Fire, 3 Dear Passengers, 4 Fable, 5 Phantom Blade Zero (Valve's own order)",
- "game": "Deadlock, Light No Fire, Dear Passengers, Fable, Phantom Blade Zero",
- "companies": [
-  "Valve"
- ],
- "category": "official",
- "genre": [
-  "industry/hardware"
- ],
- "priority": "🟢",
- "status": "building (lane B, dxb-render-1)",
- "why": "Evergreen list for the empty 16:30 Dubai slot; first lane-B job under the two-lanes card",
- "sensitive": "none (PBZ blood shots left out)",
- "lane": "B (evergreen, dxb-render-1; GitHub fallback after 5 minutes)",
- "sources": [
-  {
-   "role": "primary",
-   "name": "Steam store search, Top Wishlisted order (filter=popularwishlist, cc AE), read 27 Oct 10:45Z",
-   "url": "https://store.steampowered.com/search/?filter=popularwishlist"
+  "id": "2026-10-27-steam-most-wishlisted-oct-27",
+  "title": "Steam's top wishlisted upcoming games, 27 Oct: 1 Deadlock, 2 Light No Fire, 3 Dear Passengers, 4 Fable (Valve's own order; v2 top four after the gate found Blight: Survival 5th, Phantom Blade Zero 6th)",
+  "game": "Deadlock, Light No Fire, Dear Passengers, Fable",
+  "companies": [
+    "Valve"
+  ],
+  "category": "official",
+  "genre": [
+    "industry/hardware"
+  ],
+  "priority": "🟢",
+  "status": "building v2 (lane B, dxb-render-1)",
+  "why": "Evergreen list for the empty 16:30 Dubai slot; first lane-B job under the two-lanes card",
+  "sensitive": "none (PBZ blood shots left out)",
+  "lane": "B (evergreen, dxb-render-1; GitHub fallback after 5 minutes)",
+  "sources": [
+    {
+      "role": "primary",
+      "name": "Steam store search, Top Wishlisted order (filter=popularwishlist, cc AE), read 27 Oct 10:45Z",
+      "url": "https://store.steampowered.com/search/?filter=popularwishlist"
+    },
+    {
+      "role": "primary",
+      "name": "Steam app pages: Dear Passengers (FLEXUS, Arabic supported, 2026), Light No Fire (Hello Games, TBA), Fable (Playground Games, 23 Feb 2027), Phantom Blade Zero (28 Oct 2026), Deadlock (Valve, TBA)",
+      "url": "https://store.steampowered.com/"
+    }
+  ],
+  "brief": {
+    "family": "numbers (list)",
+    "template": "list",
+    "hook": "Light No Fire's dragon flight over snow peaks under the headline: the four games Steam players wait for most",
+    "sound": "our bed (five trailers, no single stretch fits)",
+    "length": "14.9 s"
   },
-  {
-   "role": "primary",
-   "name": "Steam app pages: Dear Passengers (FLEXUS, Arabic supported, 2026), Light No Fire (Hello Games, TBA), Fable (Playground Games, 23 Feb 2027), Phantom Blade Zero (28 Oct 2026), Deadlock (Valve, TBA)",
-   "url": "https://store.steampowered.com/"
-  }
- ],
- "brief": {
-  "family": "numbers (list)",
-  "template": "list",
-  "hook": "Phantom Blade Zero's masked red figure under the headline: the five games Steam players wait for most",
-  "sound": "our bed (five trailers, no single stretch fits)",
-  "length": "17.9 s"
- },
- "lanes": {
-  "dl": {
-   "lane": "Reel",
-   "template": "list",
-   "chip": "أرقام",
-   "time": "Tue 27 Oct 12:30Z (16:30 Dubai)",
-   "headline": "أكثر 5 ألعاب ينتظرها\nلاعبو Steam",
-   "x": "أكثر 5 ألعاب في قوائم الأمنيات على Steam اليوم: Deadlock أولًا، ثم Light No Fire وDear Passengers وFable وPhantom Blade Zero، حسب ترتيب المتجر.",
-   "threads": "أكثر 5 ألعاب في قوائم الأمنيات على Steam اليوم: Deadlock أولًا، ثم Light No Fire وDear Passengers وFable وPhantom Blade Zero، حسب ترتيب المتجر. المصدر: متجر Steam.",
-   "ig": "لعبة Deadlock تتصدر قوائم الأمنيات على Steam.\n\nحسب ترتيب متجر Steam للألعاب الأكثر إضافة إلى قوائم الأمنيات اليوم، تتصدر Deadlock من شركة فالف (Valve) القائمة، تليها Light No Fire من استوديو هيلو جيمز (Hello Games)، ثم Dear Passengers من استوديو فليكسس (FLEXUS) التي تدعم اللغة العربية.\n\nوتحل Fable من استوديو بلاي جراوند (Playground Games) رابعةً، وهي منتظرة يوم 23 فبراير 2027، تليها Phantom Blade Zero التي تصدر هذا الأسبوع.\n\n#ألعاب #أخبار_الألعاب #Steam #Deadlock",
-   "ig_follow_up": "المصدر: ترتيب متجر Steam للألعاب الأكثر إضافة إلى قوائم الأمنيات، 27 أكتوبر",
-   "x_follow_up": "المصدر: متجر Steam\nhttps://store.steampowered.com/search/?filter=popularwishlist"
-  }
- },
- "job": "jobs/live/steam-most-wishlisted-oct-27.json"
+  "lanes": {
+    "dl": {
+      "lane": "Reel",
+      "template": "list",
+      "chip": "أرقام",
+      "time": "Tue 27 Oct 12:30Z (16:30 Dubai)",
+      "headline": "أكثر 4 ألعاب ينتظرها\nلاعبو Steam",
+      "x": "أكثر 4 ألعاب في قوائم الأمنيات على Steam اليوم: Deadlock أولًا، ثم Light No Fire وDear Passengers وFable، حسب ترتيب المتجر.",
+      "threads": "أكثر 4 ألعاب في قوائم الأمنيات على Steam اليوم: Deadlock أولًا، ثم Light No Fire وDear Passengers وFable، حسب ترتيب المتجر. المصدر: متجر Steam.",
+      "ig": "لعبة Deadlock تتصدر قوائم الأمنيات على Steam.\n\nحسب ترتيب متجر Steam للألعاب الأكثر إضافة إلى قوائم الأمنيات اليوم، تتصدر Deadlock من شركة فالف (Valve) القائمة، تليها Light No Fire من استوديو هيلو جيمز (Hello Games)، ثم Dear Passengers من استوديو فليكسس (FLEXUS) التي تدعم اللغة العربية.\n\nوتحل Fable من استوديو بلاي جراوند (Playground Games) رابعةً، وهي منتظرة يوم 23 فبراير 2027.\n\n#ألعاب #أخبار_الألعاب #Steam #Deadlock",
+      "ig_follow_up": "المصدر: ترتيب متجر Steam للألعاب الأكثر إضافة إلى قوائم الأمنيات، 27 أكتوبر",
+      "x_follow_up": "المصدر: متجر Steam\nhttps://store.steampowered.com/search/?filter=popularwishlist"
+    }
+  },
+  "job": "jobs/live/steam-most-wishlisted-oct-27.json",
+  "versions": [
+    {
+      "v": 1,
+      "note": "rendered lane B 10:4xZ; not posted: gate 10:55Z found Blight: Survival 5th and Phantom Blade Zero 6th in Valve's order (AE, US, SA), so v1's fifth place was wrong"
+    },
+    {
+      "v": 2,
+      "note": "top four only (stable 1 to 4); PBZ shots out; headline over LNF 66 s"
+    }
+  ]
 }
