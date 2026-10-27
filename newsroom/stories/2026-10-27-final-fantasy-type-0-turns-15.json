@@ -6,7 +6,7 @@
     "Square Enix"
   ],
   "category": "on this day",
-  "status": "building (lane B, dxb-render-1)",
+  "status": "scheduled in Publer 13:30Z (Instagram, X, Threads)",
   "chip": "في مثل هذا اليوم",
   "template": "trailer",
   "skin": "house",
@@ -70,5 +70,48 @@
     "v1 run stopped at the runner's text check (11:24Z): «صدرت Final Fantasy Type-0» too wide at 72 px; headline cut to «صدرت FF Type-0» (full name stays in the caption and posts), line 4 shortened",
     "run 2 stopped at the text check (11:41Z): «وXbox One» glued prefix; now «و Xbox One»; every line pre-checked with reel.rtl_starts in the container"
   ],
-  "job": "jobs/live/final-fantasy-type-0-turns-15.json"
+  "job": "jobs/live/final-fantasy-type-0-turns-15.json",
+  "approved": "go: rolling queue (gap filler, evergreen dated today); 5th trailer-template Reel of the Dubai day (cap 4): decision card to Mohammad, default Post at 13:15Z; gate 12:07Z: Famitsu article re-read, dates as on screen",
+  "director": {
+    "verdict": "PASS (v2)",
+    "table": [
+      [
+        "0 Ace's eyes",
+        "0.0-1.2",
+        "PASS",
+        "hook, face close-up; headline alone"
+      ],
+      [
+        "1 Machina lunge",
+        "1.2-3.6",
+        "PASS",
+        "headline alone to about 3.3 s (v1 overlapped by 0.7 s: FIX done)"
+      ],
+      [
+        "2-3 classroom, Ace blade, Cinque",
+        "3.6-7.6",
+        "PASS",
+        "line 1"
+      ],
+      [
+        "4-6 mech, eyepatch officer, Cid, Ace",
+        "7.6-11.6",
+        "PASS",
+        "line 2"
+      ],
+      [
+        "7 the card",
+        "11.6-15.0",
+        "PASS",
+        "line 3"
+      ],
+      [
+        "8-9 Class Zero, Ace with card",
+        "15.0-18.1",
+        "PASS",
+        "line 4; last 2 s a picture"
+      ]
+    ],
+    "reel": "18.1 s, our bed retro (narrated trailer), nothing graphic, rendered v1 and v2 on dxb-render-1 (v1 not posted)"
+  }
 }
