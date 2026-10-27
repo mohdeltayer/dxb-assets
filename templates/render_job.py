@@ -25,7 +25,7 @@ unreleased material.
       "speech_keep": true,                                           # speech is the news without speech_ok: no audio split
       "audio_split": false,                                          # opt out of the trailer audio split (tracksplit.py)
       "profile": "breaking",                                         # reel.PROFILES (T0, 27 Oct 2026): no picture finish, no demucs,
-                                                                     # veryfast crf 20; label «عاجل» defaults to it, "standard" opts out
+                                                                     # veryfast crf 20; opt-in only: a «عاجل» label does NOT select it
       "kind": "breaking",                                            # the T0 breaking card (templates/breaking.py): one image, one
                                                                      # headline, one line, no footage shots; its job format is in that module
       "sound": null, "country": null, "pace_ok": false,
@@ -231,12 +231,11 @@ def place(job):
 
 
 def profile_of(job):
-    """reel()'s profile for a job (T0, 27 Oct 2026): "profile" as written, else "breaking" for the عاجل chip, else
-    None, the standard render. "standard" (or null) opts a عاجل job out. A job without the key and not عاجل renders
-    exactly as before."""
+    """reel()'s profile for a job (T0, 27 Oct 2026): "profile" exactly as written in the job, opt-in only. A job without
+    the key, the «عاجل» label included, renders the standard way, exactly as before (Mohammad has not yet seen the
+    breaking profile on a live Reel; the label default was removed in review the same day). "standard" or null is the
+    standard render."""
     p = job.get('profile')
-    if p is None and job.get('label') == 'عاجل':
-        p = 'breaking'
     if p in (None, 'standard'):
         return None
     if p not in reel.PROFILES:

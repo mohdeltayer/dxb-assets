@@ -5,8 +5,9 @@ Branch `build/t0-breaking`. Nothing here changes render.yml, render-live.yml, pu
 ## What was built
 
 1. **Profile passthrough** (`templates/render_job.py`, `profile_of`). `"profile"` is read from the job and handed to `reel.reel(profile=)`.
-   A job whose label is «عاجل» defaults to `breaking` (no picture finish, no demucs, `-preset veryfast -crf 20`);
-   `"profile": "standard"` opts out. A job with neither key and a different label gets `None`, exactly the call it made before.
+   Opt-in only (changed in review, 27 Oct): a job renders on `breaking` (no picture finish, no demucs, `-preset veryfast -crf 20`)
+   only when it carries `"profile": "breaking"`; the «عاجل» label does not select it. `"standard"` or no key gives `None`, exactly
+   the call every job made before.
    tracksplit.py and designpass.py already skipped breaking by label or profile.
 2. **The T0 card** (`templates/breaking.py`, job `"kind": "breaking"`, format in its docstring). One image (a file, or the frame of a
    clip at a given second with the letterbox cropped), one headline, one line, credit line, chip, persistent mark, breaking bed
