@@ -10385,5 +10385,38 @@
   "job_secs": 49,
   "setup_min": 0.33,
   "story": "warhorse-cyberattack-t0"
+ },
+ {
+  "name": "nintendo-indie-world-oct-28-t0-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T15:31Z",
+  "stages": {
+   "checks": 0.6,
+   "montage": 25.5,
+   "text": 32.0,
+   "audio": 0.8,
+   "outro": 30.0
+  },
+  "total": 89.0,
+  "lane": "runner",
+  "queued_at": "2026-10-27T15:28:22Z",
+  "finished_at": "2026-10-27T15:31Z",
+  "render_min": 1.48,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 98,
+  "mem_total_mb": 15988,
+  "mem_start_mb": 1095,
+  "peak_mem_mb": 1864,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 61325,
+  "peak_disk_mb": 62612,
+  "min_disk_free_mb": 85089,
+  "setup_min": 0.97,
+  "story": "nintendo-indie-world-oct-28-t0"
  }
 ]
