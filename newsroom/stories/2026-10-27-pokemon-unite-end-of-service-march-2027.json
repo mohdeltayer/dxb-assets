@@ -12,7 +12,7 @@
   "live service/MMO"
  ],
  "priority": "🔴",
- "status": "building",
+ "status": "scheduled",
  "why": "End of a major Pokémon game played widely on mobile in the Gulf; official, 05:00Z",
  "sensitive": "none",
  "sources": [
@@ -46,15 +46,19 @@
    "lane": "Reel",
    "template": "split",
    "chip": "رسمي",
-   "time": "Tue 27 Oct 06:00Z (10:00 Dubai), breaking lane",
+   "time": "Tue 27 Oct 06:15Z (10:15 Dubai), breaking lane",
    "headline": "ستُغلق Pokémon UNITE\nفي مارس 2027",
    "x": "تتوقف Pokémon UNITE نهائيًا يوم 23 مارس 2027 على Switch والهواتف، وتوقفت مبيعات الجواهر اليوم، حسب الحساب الرسمي للعبة.",
    "threads": "تتوقف Pokémon UNITE نهائيًا يوم 23 مارس 2027 على Switch والهواتف، وتوقفت مبيعات الجواهر اليوم، حسب الحساب الرسمي للعبة. المصدر: الموقع الرسمي للعبة.",
    "ig": "إغلاق Pokémon UNITE نهائيًا يوم 23 مارس 2027.\n\nأعلنت شركة بوكيمون (The Pokémon Company) عبر الحساب الرسمي للعبة في اليابان أن خدمة Pokémon UNITE ستتوقف على Nintendo Switch والهواتف يوم الثلاثاء 23 مارس 2027، الساعة 04:00 فجرًا بتوقيت الإمارات و03:00 بتوقيت السعودية.\n\nوتوقفت اليوم مبيعات الجواهر (Aeos Gems) والاشتراكات الجديدة في UNITE Membership، ويمكن استخدام الجواهر الموجودة حتى الإغلاق، وتُسترد الجواهر المدفوعة غير المستخدمة بعد الإغلاق عبر نموذج داخل اللعبة.\n\nوتنطلق يوم 12 نوفمبر فعالية خاصة وتحديث يضيف ميزة «المكتبة» لعرض السجلات بعد الإغلاق، وتُقام بطولة Pokémon UNITE Aeos Crown 2027 Tokyo كما هو مقرر.\n\n#ألعاب #أخبار_الألعاب #PokemonUNITE #Pokemon",
    "ig_follow_up": "المصدر: الحساب والموقع الرسميان للعبة Pokémon UNITE في اليابان، 27 أكتوبر",
    "x_follow_up": "المصدر: الإعلان الرسمي\nhttps://www.pokemonunite.jp/ja/topics/notice/20261027/",
-   "notes": "Times: 09:00 JST = 00:00 UTC = 04:00 UAE, 03:00 KSA. Gems: «الجواهر» with Aeos Gems in brackets at first mention. Grammar: game names feminine (ستُغلق، تتوقف)."
+   "notes": "Times: 09:00 JST = 00:00 UTC = 04:00 UAE, 03:00 KSA. Gems: «الجواهر» with Aeos Gems in brackets at first mention. Grammar: game names feminine (ستُغلق، تتوقف).",
+   "media": "cards/2026-10/pokemon-unite-end-of-service-march-2027-reel-v2.mp4",
+   "render": "runner v2 (v1 stopped on the source smear check at the Empoleon art cut; trimmed and waived); audio split not applied (music 32%)"
   }
  },
- "job": "jobs/render/pokemon-unite-end-of-service-march-2027.json"
+ "job": "jobs/render/pokemon-unite-end-of-service-march-2027.json",
+ "scheduled": "scheduled in Publer 06:15Z (10:15 Dubai 27 Oct): Instagram, X, Threads; gate 05:58Z: official notice live and unchanged",
+ "approved": "auto-go: no reply in 15 minutes (pinged 05:30Z, breaking lane, official); director pass on the v2 dense strip 05:58Z (Charizard X under the headline, lines over Mega Charizard X, Dhelmise and Empoleon, picture close; one weak second at 7 s on the goal ring). Spacing: 15 minutes before Golden Joysticks (breaking may break spacing)"
 }
