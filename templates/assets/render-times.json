@@ -10878,5 +10878,54 @@
   "min_disk_free_mb": 82290,
   "setup_min": 1.22,
   "story": "archeage-chronicles-early-access-nov-3"
+ },
+ {
+  "name": "gta-6-ps5-install-size-210gb-report-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T22:39Z",
+  "stages": {
+   "checks": 12.3,
+   "montage": 53.9,
+   "text": 40.6,
+   "audio": 0.9,
+   "outro": 42.5
+  },
+  "total": 150.2,
+  "lane": "runner",
+  "queued_at": "2026-10-27T22:35:06Z",
+  "finished_at": "2026-10-27T22:39Z",
+  "render_min": 2.5,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.8,
+   "audio_secs": 44.4,
+   "music_pct": 93.6,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 4,
+    "miss": 0
+   },
+   "effects_shots": 10,
+   "mix_secs": 0.9,
+   "secs": 4.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 303,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1273,
+  "peak_mem_mb": 1836,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62839,
+  "peak_disk_mb": 65022,
+  "min_disk_free_mb": 82679,
+  "setup_min": 1.17,
+  "story": "gta-6-ps5-install-size-210gb-report"
  }
 ]
