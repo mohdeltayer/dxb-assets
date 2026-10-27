@@ -10201,5 +10201,38 @@
   "min_disk_free_mb": 82237,
   "setup_min": 0.93,
   "story": "dont-nod-union-job-cuts"
+ },
+ {
+  "name": "dont-nod-union-job-cuts-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T14:26Z",
+  "stages": {
+   "checks": 5.9,
+   "montage": 62.7,
+   "text": 56.3,
+   "audio": 1.0,
+   "outro": 50.8
+  },
+  "total": 176.6,
+  "lane": "runner",
+  "queued_at": "2026-10-27T14:21:10Z",
+  "finished_at": "2026-10-27T14:26Z",
+  "render_min": 2.94,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 268,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1068,
+  "peak_mem_mb": 2454,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62532,
+  "peak_disk_mb": 65464,
+  "min_disk_free_mb": 82238,
+  "setup_min": 1.07,
+  "story": "dont-nod-union-job-cuts"
  }
 ]
