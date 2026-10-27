@@ -75,6 +75,13 @@ Reel (reel.CHIP_SIZE, STRIP_VALUE_SIZES, STRIP_H). `frame` and `kit` opt a job i
   that part stays as reel.py drew it; the story is never held. Log: `render_job: design pass:`; render-times.json:
   `design_pass`. Without the keys, or without a HyperFrames CLI, the Reel renders as before.
 
+Pre-render map (27 Oct 2026, templates/prerender.py; format in templates/cleanmap.py): `python3 templates/prerender.py <job>`
+reads the job's footage before the job is committed and lists shots that sit on black frames, fades, frozen stretches,
+a damaged-download smear, end cards or cut text, with the nearest clean start. `--write` (or `prerender.py embed`) puts
+the result in the job as `clean_map`; with it, reel.quality_gate stops a shot that overlaps a bad interval, and
+`"clean_nudge": true` moves such a shot to the verified start instead. `prerender_ok` [[file, t0, t1, reason]] waives an
+interval someone has looked at. A job without `clean_map` renders exactly as before.
+
 Focus is resolved on the container before the shot sheet (`focus`), so the job
 carries the crop that was judged; a null left in the job is autofocused on the
 runner, which may pick another subject.
@@ -175,10 +182,30 @@ def _download(item, dst):
         raise ValueError(f"{item['file']}: footage needs steam, url or repo")
 
 
+_NUDGED = set()
+
+
+def clean_nudge(job, rows):
+    """Pre-render map (templates/prerender.py): with `"clean_nudge": true` and a `clean_map` in the job, a footage shot
+    whose span overlaps a bad interval starts at the start prerender verified instead (same length, same focus). Any
+    other job gets `rows` back untouched."""
+    cm = job.get('clean_map')
+    if not (cm and job.get('clean_nudge')):
+        return rows
+    import cleanmap as CM
+    out, moved = CM.nudge(cm, [tuple(r) for r in rows])
+    for i, old, new in moved:
+        if (job.get('name'), i, old) not in _NUDGED:
+            _NUDGED.add((job.get('name'), i, old))
+            print(f'render_job: clean map: shot {i} moved from {old} s to {new} s (clean_nudge)', flush=True)
+    return [list(r) for r in out] if moved else rows
+
+
 def shots(job, draft=False, build=True):
     """The job's shots as reel() takes them: autofocus where focus is null, graphics on the living ground."""
     out, t = [], 0.0
-    for i, (f, start, secs, fo) in enumerate(job['shots']):
+    rows = clean_nudge(job, job['shots'])
+    for i, (f, start, secs, fo) in enumerate(rows):
         if f.endswith('.png') and '-gfx-' in f:
             clip = f"{NG.SUB}/{job['name']}-{i}.mp4"
             if build:
@@ -225,6 +252,7 @@ def place(job):
 
 
 def check(job):
+    reel.CLEAN_MAP = job.get('clean_map')       # pre-render map (templates/prerender.py); None changes nothing
     keep = reel.X
     if job.get('cut'):
         reel.X = 0.04
@@ -333,7 +361,7 @@ def source_check(job):
     own scene cut). block_ok entries [file, t0, t1, reason] waive a stretch a person has looked at."""
     waive = [w for w in job.get('block_ok', []) if len(w) == 4]
     bad = []
-    for f, start, secs, _ in job['shots']:
+    for f, start, secs, _ in clean_nudge(job, job['shots']):
         if start is None or os.path.splitext(f)[1].lower() in reel.STILL or f.endswith('.png'):
             continue
         lo = max(0.0, start - 1.0)                 # read with context, report only what the shot uses
@@ -488,6 +516,7 @@ def run(job, draft=False):
     if job.get('kind') == 'famitsu':
         return famitsu(job, draft)
     t0 = time.time()
+    reel.CLEAN_MAP = job.get('clean_map')       # pre-render map (templates/prerender.py); None changes nothing
     for item in job.get('footage', []):
         fetch(item)
     gfx(job)
