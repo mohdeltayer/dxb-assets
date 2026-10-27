@@ -9,7 +9,7 @@
   "industry/hardware"
  ],
  "priority": "🟢",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "role": "primary",
@@ -52,8 +52,12 @@
    "x": "تتنافس 12 لعبة على لقب لعبة العام في جوائز Golden Joystick 2026، منها Resident Evil Requiem وPhantom Blade Zero وPokémon Pokopia، والتصويت مفتوح حتى 30 أكتوبر.",
    "threads": "تتنافس 12 لعبة على لقب لعبة العام في جوائز Golden Joystick 2026، منها Resident Evil Requiem وPhantom Blade Zero وPokémon Pokopia، والتصويت مفتوح حتى 30 أكتوبر. المصدر: حساب الجوائز على منصة X.",
    "ig": "جوائز Golden Joystick تكشف 12 مرشحًا للقب لعبة العام.\n\nأعلنت جوائز Golden Joystick، التي ينظمها موقع غيمز رادار (GamesRadar)، قائمة المرشحين لجائزة Ultimate Game of the Year لعام 2026، ويختار الجمهور الفائز بالتصويت على موقع الجوائز حتى يوم الجمعة 30 أكتوبر.\n\nوالمرشحون: 007 First Light وBig Walk وCONTROL Resonant وCrimson Desert وDispatch وForza Horizon 6 وPhantom Blade Zero وPokémon Pokopia وPRAGMATA وResident Evil Requiem وSTAR WARS: Galactic Racer وThe Blood of Dawnwalker.\n\nويُعلن الفائزون في حفل يُقام في لندن يوم 11 نوفمبر.\n\n#ألعاب #أخبار_الألعاب #GoldenJoystickAwards #GOTY",
-   "ig_follow_up": "المصدر: حساب جوائز Golden Joystick على منصة X، 26 أكتوبر"
+   "ig_follow_up": "المصدر: حساب جوائز Golden Joystick على منصة X، 26 أكتوبر",
+   "media": "cards/2026-10/golden-joystick-2026-ultimate-goty-nominees-reel-v3.mp4",
+   "render": "runner (v1 source smear at 45.7 s, v2 output smear at 15.9 s: both clean cuts, waived after looking; v3 599 s)"
   }
  },
- "job": "jobs/render/golden-joystick-2026-ultimate-goty-nominees.json"
+ "job": "jobs/render/golden-joystick-2026-ultimate-goty-nominees.json",
+ "scheduled": "scheduled in Publer 06:30Z (10:30 Dubai 27 Oct): Instagram, X, Threads; gate 04:26Z: organiser post live, list and 30 Oct voting close unchanged",
+ "approved": "go: rolling queue (no previews, publishing memo); director PASS on the v3 strip and dense strip 04:25Z (Pokopia frame 0 with headline, 12 labels each on its game, no gore, picture close on PBZ). Sound: organiser montage music, no speech"
 }
