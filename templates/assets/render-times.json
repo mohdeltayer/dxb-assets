@@ -10797,5 +10797,38 @@
   "min_disk_free_mb": 81916,
   "setup_min": 3.47,
   "story": "nintendo-indie-world-reminder-oct-28"
+ },
+ {
+  "name": "nintendo-indie-world-reminder-oct-28-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T17:35Z",
+  "stages": {
+   "checks": 3.3,
+   "montage": 35.9,
+   "text": 27.4,
+   "audio": 0.6,
+   "outro": 28.8
+  },
+  "total": 96.1,
+  "lane": "runner",
+  "queued_at": "2026-10-27T17:30:54Z",
+  "finished_at": "2026-10-27T17:35Z",
+  "render_min": 1.6,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 191,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1047,
+  "peak_mem_mb": 2238,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62482,
+  "peak_disk_mb": 65086,
+  "min_disk_free_mb": 82616,
+  "setup_min": 1.13,
+  "story": "nintendo-indie-world-reminder-oct-28"
  }
 ]
