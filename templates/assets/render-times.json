@@ -9706,5 +9706,53 @@
   "min_disk_free_mb": 82773,
   "setup_min": 1.12,
   "story": "street-fighter-v-php-online-sales-paused"
+ },
+ {
+  "name": "payday-aces-high-release-date-november-5-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T06:48Z",
+  "stages": {
+   "checks": 3.9,
+   "montage": 30.4,
+   "text": 18.1,
+   "audio": 0.6,
+   "outro": 29.5
+  },
+  "total": 82.5,
+  "lane": "runner",
+  "queued_at": "2026-10-27T06:45:35Z",
+  "finished_at": "2026-10-27T06:48Z",
+  "render_min": 1.37,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 9.8,
+   "audio_secs": 31.3,
+   "music_pct": 37.8,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "reason": "music only 37.8% of the track (< 40.0%)",
+   "secs": 12.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 155,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1319,
+  "peak_mem_mb": 2407,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62825,
+  "peak_disk_mb": 64111,
+  "min_disk_free_mb": 83590,
+  "setup_min": 1.05,
+  "story": "payday-aces-high-release-date-november-5"
  }
 ]
