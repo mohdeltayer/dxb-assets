@@ -9528,5 +9528,54 @@
   "min_disk_free_mb": 82259,
   "setup_min": 3.75,
   "story": "call-of-duty-40-billion-lifetime-revenue"
+ },
+ {
+  "name": "golden-joystick-2026-ultimate-goty-nominees-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T04:13Z",
+  "stages": {
+   "checks": 14.0,
+   "montage": 114.1,
+   "text": 221.8,
+   "audio": 2.2,
+   "outro": 99.6
+  },
+  "total": 451.7,
+  "lane": "runner",
+  "queued_at": "2026-10-27T04:04:00Z",
+  "finished_at": "2026-10-27T04:13Z",
+  "render_min": 7.53,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.9,
+   "audio_secs": 64.1,
+   "music_pct": 90.8,
+   "leak_pct": 0.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 0
+   },
+   "effects_shots": 13,
+   "mix_secs": 1.5,
+   "secs": 5.0
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 599,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1372,
+  "peak_mem_mb": 2592,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62925,
+  "peak_disk_mb": 68668,
+  "min_disk_free_mb": 79033,
+  "setup_min": 1.38,
+  "story": "golden-joystick-2026-ultimate-goty-nominees"
  }
 ]
