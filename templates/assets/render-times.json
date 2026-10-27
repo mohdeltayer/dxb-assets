@@ -9851,5 +9851,54 @@
   "min_disk_free_mb": 83476,
   "setup_min": 1.37,
   "story": "barotrauma-home-harbor-december-2"
+ },
+ {
+  "name": "library-of-ruina-guinness-longest-story-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T09:00Z",
+  "stages": {
+   "checks": 3.5,
+   "montage": 35.6,
+   "text": 48.8,
+   "audio": 1.1,
+   "outro": 55.7
+  },
+  "total": 144.6,
+  "lane": "runner",
+  "queued_at": "2026-10-27T08:56:00Z",
+  "finished_at": "2026-10-27T09:00Z",
+  "render_min": 2.41,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 9.6,
+   "audio_secs": 49.3,
+   "music_pct": 53.2,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 4,
+    "miss": 3
+   },
+   "effects_shots": 5,
+   "mix_secs": 6.1,
+   "secs": 16.1
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 255,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1443,
+  "peak_mem_mb": 2776,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62894,
+  "peak_disk_mb": 65705,
+  "min_disk_free_mb": 81997,
+  "setup_min": 1.07,
+  "story": "library-of-ruina-guinness-longest-story"
  }
 ]
