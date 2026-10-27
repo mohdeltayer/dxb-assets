@@ -675,6 +675,12 @@ MIN_SRC_H = int(H / MAX_ZOOM)   # so a clip must keep 960 rows of picture once i
 #    "..."}. A bare True stops the render (lowres_reason).
 LOWRES_EXAMPLE = 'IGN, Nintendo store, publisher press site, Steam: none above 720p'
 
+# Pre-render map (27 Oct 2026, templates/prerender.py, templates/cleanmap.py): a job that carries `clean_map` has had its
+# footage read for black frames, fades, frozen stretches, a damaged-download smear, end cards and text before it was
+# committed. render_job sets CLEAN_MAP from the job; quality_gate then stops a shot whose span overlaps a bad interval
+# and names the suggested start. None (a job without the key, every other caller) changes nothing.
+CLEAN_MAP = None
+
 
 def lowres_reason(v):
     """The waiver for a soft source as text, or None when there is none. lowres_ok must name the copies that were
@@ -769,6 +775,12 @@ def quality_gate(shots, lowres_ok=None, blocky_ok=None):
                                 f'{DC.BLOCK_MAX} enlarged {r["zoom"]}x (the source\'s own compression blocks will show); '
                                 'use another stretch or a better copy, or after looking pass '
                                 f'blocky_ok=[["{f}", {s}, "reason"]]')
+    if CLEAN_MAP:
+        import cleanmap as CM
+        clean_hits, clean_notes = CM.shot_problems(CLEAN_MAP, shots)
+        for n in clean_notes:
+            print(f'clean map: {n}', flush=True)
+        problems += [f'clean map (prerender): {m}' for m in clean_hits]
     if small and reason:
         print(f'source quality: under {MIN_SRC_H} rows: ' + ', '.join(small) + f'; lowres_ok: {reason}', flush=True)
     elif small:
