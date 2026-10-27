@@ -1,18 +1,49 @@
 {
  "id": "2026-10-27-archeage-chronicles-early-access-nov-3",
  "title": "ArcheAge Chronicles: Steam Early Access 3 Nov (4 Nov 03:00 UAE), pre-orders open; 88.99 AED / 69.99 SR",
- "genre": ["live service/MMO", "RPG"],
- "status": "rendering on the runner (v1); slot 21:00Z (01:00 Dubai 28 Oct)",
+ "genre": [
+  "live service/MMO",
+  "RPG"
+ ],
+ "status": "scheduled in Publer 21:00Z (01:00 Dubai 28 Oct) on Instagram, X and Threads; reel v1 (runner, 449 s)",
  "sources": [
-  {"kind": "primary", "who": "XLGAMES, Steam announcement", "url": "https://store.steampowered.com/news/app/3218230/view/707786527706455046", "time": "2026-10-27T15:08Z", "quote": "ArcheAge Chronicles will launch on Steam in Early Access on November 3, 2026, at 3:00 PM PST. Alongside the release date announcement, pre-orders are now available on Steam."},
-  {"kind": "primary", "who": "Steam store appdetails cc=ae / cc=sa", "time": "2026-10-27T18:30Z", "quote": "88.99 AED; 69.99 SR; languages English, Korean, Simplified and Traditional Chinese"},
-  {"kind": "footage", "who": "Official Release Date Trailer, IGN video page", "url": "https://www.ign.com/videos/archeage-chronicles-official-release-date-trailer", "time": "2026-10-27T15:00Z"}
+  {
+   "kind": "primary",
+   "who": "XLGAMES, Steam announcement",
+   "url": "https://store.steampowered.com/news/app/3218230/view/707786527706455046",
+   "time": "2026-10-27T15:08Z",
+   "quote": "ArcheAge Chronicles will launch on Steam in Early Access on November 3, 2026, at 3:00 PM PST. Alongside the release date announcement, pre-orders are now available on Steam."
+  },
+  {
+   "kind": "primary",
+   "who": "Steam store appdetails cc=ae / cc=sa",
+   "time": "2026-10-27T18:30Z",
+   "quote": "88.99 AED; 69.99 SR; languages English, Korean, Simplified and Traditional Chinese"
+  },
+  {
+   "kind": "footage",
+   "who": "Official Release Date Trailer, IGN video page",
+   "url": "https://www.ign.com/videos/archeage-chronicles-official-release-date-trailer",
+   "time": "2026-10-27T15:00Z"
+  }
  ],
  "claims": [
-  {"claim": "Early Access on Steam 3 Nov 3:00 PM PST = 4 Nov 03:00 UAE, 02:00 KSA", "status": "verified"},
-  {"claim": "Pre-orders open with an exclusive costume set (Dawn Pioneer Set)", "status": "verified"},
-  {"claim": "88.99 AED and 69.99 SR on Steam", "status": "verified"},
-  {"claim": "No Arabic language support", "status": "verified (Steam language list)"}
+  {
+   "claim": "Early Access on Steam 3 Nov 3:00 PM PST = 4 Nov 03:00 UAE, 02:00 KSA",
+   "status": "verified"
+  },
+  {
+   "claim": "Pre-orders open with an exclusive costume set (Dawn Pioneer Set)",
+   "status": "verified"
+  },
+  {
+   "claim": "88.99 AED and 69.99 SR on Steam",
+   "status": "verified"
+  },
+  {
+   "claim": "No Arabic language support",
+   "status": "verified (Steam language list)"
+  }
  ],
  "brief": {
   "family": "7 release (date reveal)",
@@ -25,5 +56,41 @@
   "sensitive": "none",
   "shots": "contiguous 47.0 to 64.9 s of the release-date trailer in source order; every shot a character in action, the window aimed at the fighter",
   "source_kind": "4K trailer (3840x2160, 15 Mbps, IGN), decode clean"
- }
+ },
+ "approved": "go: rolling queue; gate 18:47Z: XLGAMES Steam post unchanged (3 Nov 3:00 PM PST, pre-orders open); prices from Steam appdetails 18:30Z. 19:30Z passed over: split at its 4-a-day cap on 27 Oct Dubai",
+ "reel": "cards/2026-10/archeage-chronicles-early-access-nov-3-reel-v1.mp4",
+ "captions": {
+  "instagram_first_line": "تبدأ ArcheAge Chronicles وصولها المبكر على Steam يوم 4 نوفمبر.",
+  "deepl_back_check": "meaning intact (EN: begins its Early Access on Steam on November 4; 88.99 dirhams; no Arabic)"
+ },
+ "director": [
+  {
+   "shot": "0-1",
+   "time": "0-4.0",
+   "verdict": "PASS",
+   "note": "headline alone; white-robed caster and red warrior, moving from frame one; grid tile reads"
+  },
+  {
+   "shot": "2-3",
+   "time": "4.0-8.7",
+   "verdict": "PASS",
+   "note": "MMO line over the red creature and spell burst; bracket on its own line"
+  },
+  {
+   "shot": "4-5",
+   "time": "8.7-13.7",
+   "verdict": "PASS",
+   "note": "pre-order line over the fire and archer beats; strip pinned"
+  },
+  {
+   "shot": "6-7",
+   "time": "13.7-15.1",
+   "verdict": "PASS",
+   "note": "no-Arabic line, closes on the blue sphere picture"
+  },
+  {
+   "reel": "PASS",
+   "note": "15.1 s; trailer music and effects, speech none; no cut text, no subtitles; decode and smear clean on the runner; dense strip read"
+  }
+ ]
 }
