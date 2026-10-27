@@ -1,0 +1,13 @@
+[Unit]
+Description=DXB mechanical watch: poll every 5 minutes
+
+[Timer]
+# Each source has its own interval in sources.yaml; this tick only asks which are due.
+OnBootSec=2min
+OnCalendar=*:0/5
+AccuracySec=10s
+RandomizedDelaySec=15s
+Unit=dxb-watch-poll.service
+
+[Install]
+WantedBy=timers.target

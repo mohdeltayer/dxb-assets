@@ -1,0 +1,15 @@
+[Unit]
+Description=DXB mechanical watch: hourly digest for the news desk
+Documentation=file://%h/dxb-assets/ops/backoffice/watch/README.md
+
+[Service]
+Type=oneshot
+EnvironmentFile=-%h/backoffice/watch/watch.env
+# Pulls the repo first (the source lists and these scripts update themselves), polls once more, builds the digest.
+ExecStart=%h/backoffice/watch/venv/bin/python %h/dxb-assets/ops/backoffice/watch/watch.py digest
+Nice=10
+IOSchedulingClass=idle
+IOSchedulingPriority=7
+SuccessExitStatus=75
+TimeoutStartSec=8min
+NoNewPrivileges=yes

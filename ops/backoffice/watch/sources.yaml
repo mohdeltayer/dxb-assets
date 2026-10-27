@@ -1,0 +1,127 @@
+# Sources and cadence for the mechanical watch (service 1 of the back office).
+#
+# The lists in newsroom/watch_feeds.py (OFFICIAL, OUTLETS) and newsroom/watch_pages.py (PAGES)
+# are imported as they stand, so the news desk keeps one place to add a feed. This file only
+# sets how often each group is read and which sources are "breaking". Anything the watch reads
+# that those files do not hold is listed under `extra`.
+#
+# `interval_min`: a source is read when its last read is older than this. The poll timer wakes
+# every 5 minutes, so 5 is the floor. Failing sources back off (x2 per failure, up to x8).
+# `breaking: true`: a new item from this source is handed to the news desk within minutes of
+# the poll that finds it, not at the next hourly digest. It marks where the first-party news
+# appears, not that the item is breaking news: the Verifier still grades it.
+
+version: 1
+
+defaults:
+  interval_min: 15
+  breaking: false
+
+# What counts as new on the first read of a source. Everything older is recorded as already
+# seen (baseline) and never handed over, so a new source cannot flood the desk.
+first_poll_window_h: 2
+
+# Items first published more than this many days ago are recorded, not reported (as watch_feeds.py).
+report_max_age_days: 2
+
+imported:
+  watch_feeds:
+    official:     {interval_min: 5}    # first-party RSS/Atom feeds
+    parsed_pages: {interval_min: 15}   # first-party pages and APIs read by a parser (Bandai Namco, HoYoLAB, PUBG Mobile...)
+    gnews:        {interval_min: 30}   # Google News backstops, hours late by nature
+    outlets:      {interval_min: 10}   # the 31 outlet feeds; leads, never breaking
+  watch_pages:    {interval_min: 15}   # the no-feed official pages (Nintendo US, Capcom IR, EA, Riot, TGA, Famitsu...)
+  # Imported sources that are known not to work (listed under not_covered as well)
+  disabled: ["Konami JP"]
+  overrides:
+    "PlayStation Blog": {breaking: true, interval_min: 3}
+    "Xbox Wire":        {breaking: true, interval_min: 3}
+    "Nintendo Japan":   {breaking: true}
+    "Nintendo US":      {breaking: true}
+    "Take-Two":         {breaking: true}
+    "Bungie":           {breaking: true}
+    "The Game Awards":  {breaking: true}
+
+extra:
+  # Official YouTube channel feeds (plain RSS, no downloads). Channel ids resolved from the
+  # channel pages on 27 Oct 2026; each feed was read once to confirm the name.
+  - {id: yt-playstation,      name: "PlayStation (YouTube)",           kind: youtube, channel_id: UC-2Y8dQb0S6DtpxNgAKoJKA, interval_min: 5,  breaking: true}
+  - {id: yt-xbox,             name: "Xbox (YouTube)",                  kind: youtube, channel_id: UCjBp_7RuDBUYbd1LegWEJ8g, interval_min: 5,  breaking: true}
+  - {id: yt-nintendo-america, name: "Nintendo of America (YouTube)",   kind: youtube, channel_id: UCGIY_O-8vW4rfX98KlMkvRg, interval_min: 5,  breaking: true}
+  - {id: yt-rockstar,         name: "Rockstar Games (YouTube)",        kind: youtube, channel_id: UC6VcWc1rAoWdBCM0JxrRQ3A, interval_min: 5,  breaking: true}
+  - {id: yt-playstation-me,   name: "PlayStation Middle East (YouTube)", kind: youtube, channel_id: UCUYEXC6SW1kHVmponWfgnTQ, interval_min: 15}
+  - {id: yt-playstation-mena, name: "PlayStation MENA (YouTube)",      kind: youtube, channel_id: UCXgpMHY8UN2bfKNsrleOh9w, interval_min: 15}
+  - {id: yt-bethesda,         name: "Bethesda (YouTube)",              kind: youtube, channel_id: UCvZHe-SP3xC7DdOk4Ri8QBw, interval_min: 15}
+  - {id: yt-ubisoft,          name: "Ubisoft (YouTube)",               kind: youtube, channel_id: UC0KU8F9jJqSLS11LRXvFWmg, interval_min: 15}
+  - {id: yt-square-enix,      name: "Square Enix (YouTube)",           kind: youtube, channel_id: UC6SmH9mR82nj28_NNg_rZvA, interval_min: 15}
+  - {id: yt-sega,             name: "SEGA (YouTube)",                  kind: youtube, channel_id: UCVkqs_Q88BDmyaWwjYJ8_Ig, interval_min: 15}
+  - {id: yt-capcom-usa,       name: "Capcom USA (YouTube)",            kind: youtube, channel_id: UCW7h-1mymnJ96akzjrmiIgA, interval_min: 15}
+  - {id: yt-ea-fc,            name: "EA SPORTS FC (YouTube)",          kind: youtube, channel_id: UCoyaxd5LQSuP4ChkxK0pnZQ, interval_min: 15}
+  - {id: yt-call-of-duty,     name: "Call of Duty (YouTube)",          kind: youtube, channel_id: UC9YydG57epLqxA9cTzZXSeQ, interval_min: 15}
+  - {id: yt-blizzard,         name: "Blizzard (YouTube)",              kind: youtube, channel_id: UC3GriadTkHBnfgd2UFETGOA, interval_min: 15}
+  - {id: yt-fortnite,         name: "Fortnite (YouTube)",              kind: youtube, channel_id: UClG8odDC8TS6Zpqk9CGVQiQ, interval_min: 15}
+  - {id: yt-steam,            name: "Steam (YouTube)",                 kind: youtube, channel_id: UChmZ6QbxgHlmX3ISIHxIpQQ, interval_min: 15}
+  - {id: yt-riot,             name: "Riot Games (YouTube)",            kind: youtube, channel_id: UCJEGvSZnQ1pkVfHO8s5G8hA, interval_min: 15}
+  - {id: yt-bungie,           name: "Bungie (YouTube)",                kind: youtube, channel_id: UCxidp0WgNPBdIXpHZKQcoMw, interval_min: 15}
+  - {id: yt-cdpr,             name: "CD PROJEKT RED (YouTube)",        kind: youtube, channel_id: UCuCtanBJXOPAEIAUXf9944g, interval_min: 15}
+  - {id: yt-pokemon,          name: "Pokemon (YouTube)",               kind: youtube, channel_id: UCFctpiB_Hnlk3ejWfHqSm6Q, interval_min: 15}
+
+  # Official X accounts through X's public embedded-timeline page (no login, no API key).
+  # Unofficial endpoint: X can change or block it, it answers 429 when asked too often, and it
+  # lags the live timeline by minutes (retweets are skipped). It rate-limits hard: in the 27 Oct
+  # test five accounts read fine, then every request answered 429 for the next 15+ minutes, so
+  # the list is short, one request at a time with a gap, and a 429 backs the source off. Add
+  # accounts here only after watching the `failed` line for a day. Set `x_embed: false` below
+  # to switch the kind off. Gaming Watch (the scout digest) stays the fallback for X.
+  - {id: x-playstation,   name: "PlayStation (X)",       kind: x, handle: PlayStation,     interval_min: 15, breaking: true}
+  - {id: x-xbox,          name: "Xbox (X)",              kind: x, handle: XBOX,            interval_min: 15, breaking: true}
+  - {id: x-nintendo-us,   name: "Nintendo of America (X)", kind: x, handle: NintendoAmerica, interval_min: 15, breaking: true}
+  - {id: x-rockstar,      name: "Rockstar Games (X)",    kind: x, handle: RockstarGames,   interval_min: 15, breaking: true}
+  - {id: x-playstation-me, name: "PlayStation Middle East (X)", kind: x, handle: PlayStation_ME, interval_min: 15}
+
+  # Steam news from the scout source audit (notes/scout-source-audit-2026-09-28.md). The hub feed mixes
+  # developer posts with press articles, so it is read as an outlet (a lead, grouped with the others);
+  # the per-app feed is Valve's own.
+  - {id: steam-news,      name: "Steam News (hub)",      kind: outlet,   url: "https://store.steampowered.com/feeds/news/?l=english",   interval_min: 10}
+  - {id: steam-deck-news, name: "Steam Deck (Steam news)", kind: official, url: "https://store.steampowered.com/feeds/news/app/1675200/", interval_min: 15}
+
+  # Outlets that are leads only (scout audit, section 6): Japanese, Gulf and Nintendo sites.
+  - {id: out-denfami,     name: "Denfaminicogamer (JP)", kind: outlet, url: "https://news.denfaminicogamer.jp/feed",        interval_min: 10}
+  - {id: out-gamespark,   name: "Game*Spark (JP)",       kind: outlet, url: "https://www.gamespark.jp/rss/index.rdf",       interval_min: 10}
+  - {id: out-tweaktown,   name: "TweakTown",             kind: outlet, url: "https://www.tweaktown.com/feeds/news-mf.xml",  interval_min: 10}
+  - {id: out-tbreak,      name: "Tbreak (Gulf)",         kind: outlet, url: "https://www.tbreak.com/feed/",                 interval_min: 10}
+  - {id: out-nintendo-everything, name: "Nintendo Everything", kind: outlet, url: "https://nintendoeverything.com/feed/",   interval_min: 10}
+  - {id: out-gonintendo,  name: "GoNintendo",            kind: outlet, url: "https://gonintendo.com/feeds/all.xml",         interval_min: 10}
+  - {id: out-gol,         name: "GamingOnLinux",         kind: outlet, url: "https://www.gamingonlinux.com/article_rss.php", interval_min: 15}
+
+# Master switches (a switched-off kind is not read at all)
+kinds:
+  youtube: true
+  x_embed: true
+
+# How the digests reach the news desk. Environment variables of the same names in capitals
+# (WATCH_REMOTE, WATCH_BRANCH, WATCH_EMPTY_PUSH_H, WATCH_PUSH=off) override these.
+handoff:
+  # Recommended: a small private repo made for this, with no workflows, so a push costs no
+  # Actions minutes and the write token cannot reach the publisher. See README, "How the main
+  # session reads the digest" for why dxb-queue is the fallback, not the default.
+  remote: https://github.com/mohdeltayer/dxb-watch.git
+  branch: main
+  token_file: /etc/dxb-watch/github-token
+  # An hourly digest with nothing new is still pushed (it is the watch's heartbeat) unless the
+  # last push is younger than this many hours. Use 3 on dxb-queue, where every push runs gitleaks.
+  empty_push_min_gap_h: 1
+  # The history is squashed to one commit every this many days, so the repo stays a few hundred KB.
+  squash_days: 7
+  commit_name: dxb-watch
+  commit_email: noreply@github.com
+
+# Official sources that cannot be read mechanically. Printed in every digest under
+# "not covered" so the news desk (or the Gaming Watch digest) picks them up.
+not_covered:
+  - {name: "Official X accounts not listed above", reason: "no public page without login; read by Gaming Watch (scout digest) and the Verifier"}
+  - {name: "Konami JP topics", reason: "the list is drawn by script (the page carries one topic); Konami is covered by the outlets only"}
+  - {name: "Konami, EA and Activision YouTube channels", reason: "their channel feeds are empty; EA is read through its news page, Activision and Konami through the outlets"}
+  - {name: "PS Store UAE/Saudi, Xbox and Steam regional prices", reason: "price watching is its own job (scout audit section 6), not part of this service"}
+  - {name: "Epic Games, Sony Group press, GitHub releases", reason: "answer 403 to a script"}
+  - {name: "Saudi Esports Federation, GEA, UAE gaming bodies", reason: "refuse automated reads or carry no feed"}

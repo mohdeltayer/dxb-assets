@@ -1,0 +1,17 @@
+[Unit]
+Description=DXB mechanical watch: read the sources that are due, hand over breaking items
+Documentation=file://%h/dxb-assets/ops/backoffice/watch/README.md
+
+[Service]
+Type=oneshot
+# Optional non-secret overrides (WATCH_REMOTE, WATCH_BRANCH, WATCH_PAUSE_ALL=1 ...); the file may be absent.
+EnvironmentFile=-%h/backoffice/watch/watch.env
+ExecStart=%h/backoffice/watch/venv/bin/python %h/dxb-assets/ops/backoffice/watch/watch.py poll
+# Never competes with a render: lowest CPU and disk priority; the script also narrows itself
+# to the breaking sources while a render (render_job.py, Runner.Worker) is running.
+Nice=10
+IOSchedulingClass=idle
+IOSchedulingPriority=7
+SuccessExitStatus=75
+TimeoutStartSec=4min
+NoNewPrivileges=yes

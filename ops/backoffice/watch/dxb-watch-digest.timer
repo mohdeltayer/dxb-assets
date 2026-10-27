@@ -1,0 +1,12 @@
+[Unit]
+Description=DXB mechanical watch: hourly digest at :52
+
+[Timer]
+# Ready a few minutes before the news desk's hourly watch looks. Move the minute here if that changes.
+OnCalendar=*:52:00
+AccuracySec=10s
+Persistent=false
+Unit=dxb-watch-digest.service
+
+[Install]
+WantedBy=timers.target
