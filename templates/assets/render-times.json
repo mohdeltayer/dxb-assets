@@ -10731,5 +10731,38 @@
   "min_disk_free_mb": 82191,
   "setup_min": 1.17,
   "story": "age-of-empires-iv-turns-5"
+ },
+ {
+  "name": "nintendo-indie-world-reminder-oct-28-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T16:55Z",
+  "stages": {
+   "checks": 4.2,
+   "montage": 44.2,
+   "text": 32.5,
+   "audio": 0.4,
+   "outro": 40.4
+  },
+  "total": 121.6,
+  "lane": "runner",
+  "queued_at": "2026-10-27T16:48:59Z",
+  "finished_at": "2026-10-27T16:55Z",
+  "render_min": 2.03,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 219,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1114,
+  "peak_mem_mb": 2547,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62256,
+  "peak_disk_mb": 64612,
+  "min_disk_free_mb": 83090,
+  "setup_min": 3.45,
+  "story": "nintendo-indie-world-reminder-oct-28"
  }
 ]
