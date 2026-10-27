@@ -1,18 +1,51 @@
 {
  "id": "2026-10-28-gta-6-ps5-install-size-210gb-report",
  "title": "GTA VI on PS5 may need 210 GB (PlayStation Game Size datamine); Rockstar unconfirmed",
- "genre": ["open world", "shooter"],
- "status": "rendering on the runner (v1); slot 04:00Z (08:00 Dubai 28 Oct)",
+ "genre": [
+  "open world",
+  "shooter"
+ ],
+ "status": "scheduled in Publer 04:00Z (08:00 Dubai) on Instagram, X and Threads; reel v1 (runner, 303 s; first run stopped on a smear flag at 6.4-6.7 s, a crosswalk whip pan, waived after the source frames were checked)",
  "sources": [
-  {"kind": "report", "who": "PlayStation Game Size (X account that reads PS Store listing data)", "time": "2026-10-27T~17:00Z", "quote": "GTA VI PS5 210 GB (Standard)"},
-  {"kind": "outlet", "who": "Insider Gaming", "url": "https://insider-gaming.com/gta-6-install-size-revealed-210-gb/", "time": "2026-10-27T17:17Z"},
-  {"kind": "outlet", "who": "Polygon", "url": "https://www.polygon.com/gta-6-storage-size-install-ps5-xbox-series-x/", "time": "2026-10-27T18:11Z", "quote": "We also don't have data yet on the install sizes for Xbox Series X or Xbox Series S."},
-  {"kind": "outlet", "who": "GamesRadar", "url": "https://www.gamesradar.com/games/grand-theft-auto/gta-6-is-a-210gb-download-says-playstation-store-sleuth/", "quote": "This figure is obviously unconfirmed"}
+  {
+   "kind": "report",
+   "who": "PlayStation Game Size (X account that reads PS Store listing data)",
+   "time": "2026-10-27T~17:00Z",
+   "quote": "GTA VI PS5 210 GB (Standard)"
+  },
+  {
+   "kind": "outlet",
+   "who": "Insider Gaming",
+   "url": "https://insider-gaming.com/gta-6-install-size-revealed-210-gb/",
+   "time": "2026-10-27T17:17Z"
+  },
+  {
+   "kind": "outlet",
+   "who": "Polygon",
+   "url": "https://www.polygon.com/gta-6-storage-size-install-ps5-xbox-series-x/",
+   "time": "2026-10-27T18:11Z",
+   "quote": "We also don't have data yet on the install sizes for Xbox Series X or Xbox Series S."
+  },
+  {
+   "kind": "outlet",
+   "who": "GamesRadar",
+   "url": "https://www.gamesradar.com/games/grand-theft-auto/gta-6-is-a-210gb-download-says-playstation-store-sleuth/",
+   "quote": "This figure is obviously unconfirmed"
+  }
  ],
  "claims": [
-  {"claim": "210 GB on PS5", "status": "report (PlayStation Game Size), Rockstar has not stated it"},
-  {"claim": "No Xbox figure yet", "status": "verified (Polygon)"},
-  {"claim": "Release 19 Nov 2026", "status": "official"}
+  {
+   "claim": "210 GB on PS5",
+   "status": "report (PlayStation Game Size), Rockstar has not stated it"
+  },
+  {
+   "claim": "No Xbox figure yet",
+   "status": "verified (Polygon)"
+  },
+  {
+   "claim": "Release 19 Nov 2026",
+   "status": "official"
+  }
  ],
  "brief": {
   "family": "6 leak or rumour (datamine)",
@@ -24,5 +57,37 @@
   "total": "about 13.6 s",
   "sensitive": "none; guns, the shower and the intimate scenes kept out",
   "chip": "تقرير; reports in a row: none since the 26 Oct GTA reviews report"
- }
+ },
+ "approved": "go: rolling queue; gate 22:42Z: Insider Gaming and Polygon pages unchanged, no Rockstar statement or denial found; re-check due within the hour before 04:00Z",
+ "reel": "cards/2026-10/gta-6-ps5-install-size-210gb-report-reel-v1.mp4",
+ "director": [
+  {
+   "shot": "0-2",
+   "time": "0-3.7",
+   "verdict": "PASS",
+   "note": "headline alone over Lucia and Jason in the car, Jason on the phone, the seaplane; grid tile shows Lucia's face"
+  },
+  {
+   "shot": "3-4",
+   "time": "3.7-7.2",
+   "verdict": "PASS",
+   "note": "source line over Jason polishing and Ocean Drive; the 6.4-6.7 s flag is the crosswalk whip pan, clean in the source"
+  },
+  {
+   "shot": "5-6",
+   "time": "7.2-10.3",
+   "verdict": "PASS",
+   "note": "Rockstar line over Lucia in the vault doorway and the jet underside"
+  },
+  {
+   "shot": "7-9",
+   "time": "10.3-13.6",
+   "verdict": "PASS",
+   "note": "launch-day line over the couch, the bike jump and the beach; closes on a picture"
+  },
+  {
+   "reel": "PASS",
+   "note": "13.6 s; score from 13.6 s, speech none; no guns, shower or intimate scenes; DeepL back-check: meaning intact"
+  }
+ ]
 }
