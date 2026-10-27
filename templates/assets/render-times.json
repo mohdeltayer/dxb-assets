@@ -9754,5 +9754,53 @@
   "min_disk_free_mb": 83590,
   "setup_min": 1.05,
   "story": "payday-aces-high-release-date-november-5"
+ },
+ {
+  "name": "payday-aces-high-release-date-november-5-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-27T06:53Z",
+  "stages": {
+   "checks": 2.7,
+   "montage": 21.2,
+   "text": 11.9,
+   "audio": 0.4,
+   "outro": 18.0
+  },
+  "total": 54.1,
+  "lane": "runner",
+  "queued_at": "2026-10-27T06:50:36Z",
+  "finished_at": "2026-10-27T06:53Z",
+  "render_min": 0.9,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 1.7,
+   "audio_secs": 31.3,
+   "music_pct": 37.8,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 0
+   },
+   "reason": "music only 37.8% of the track (< 40.0%)",
+   "secs": 2.3
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 100,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1336,
+  "peak_mem_mb": 1720,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62865,
+  "peak_disk_mb": 64150,
+  "min_disk_free_mb": 83551,
+  "setup_min": 1.05,
+  "story": "payday-aces-high-release-date-november-5"
  }
 ]
