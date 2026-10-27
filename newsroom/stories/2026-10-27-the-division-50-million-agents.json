@@ -6,7 +6,7 @@
     "Ubisoft Massive"
   ],
   "category": "official",
-  "status": "rendering (lane A, GitHub)",
+  "status": "scheduled in Publer 13:47Z for 14:30Z (18:30 Dubai) on Instagram, X and Threads",
   "chip": "إنجاز",
   "template": "clipcard",
   "skin": "house",
@@ -58,5 +58,48 @@
       "x_follow_up": "المصدر: استوديو ماسيف (Massive)\nhttps://x.com/UbiMassive/status/2115020978929488145"
     }
   },
-  "job": "jobs/render/the-division-50-million-agents.json"
+  "job": "jobs/render/the-division-50-million-agents.json",
+  "approved": "go: rolling queue; gate 13:41Z: Massive post 2115020978929488145 live, text unchanged (10:01Z); no newer figure found",
+  "director": {
+    "model": "opus (main session)",
+    "verdict": "PASS",
+    "table": [
+      [
+        "0-3.5",
+        "headline over the agent at the fire",
+        "PASS",
+        "hook frame readable"
+      ],
+      [
+        "3.5-6.4",
+        "line 1 over the street fire and flamethrower",
+        "PASS",
+        "line in the lower third, clear"
+      ],
+      [
+        "6.5-9.3",
+        "50 million card on dimmed footage",
+        "PASS",
+        "one fact, card only"
+      ],
+      [
+        "9.5-13.3",
+        "line 2 over agents walking through fire, then the street",
+        "PASS",
+        ""
+      ],
+      [
+        "13.3-15.0",
+        "closing picture, street and vehicles",
+        "PASS",
+        "about 1.7 s of picture before the end card"
+      ],
+      [
+        "reel",
+        "length 15 s plus end card; our bed (milestone, our graphics)",
+        "PASS",
+        "no gore, no cut text"
+      ]
+    ]
+  }
 }
