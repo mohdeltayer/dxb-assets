@@ -1,0 +1,28 @@
+{
+ "name": "t0-sample-blue-prince",
+ "note": "T0 SAMPLE for Mohammad (adv-20261028-indie-world-t0-test), not for posting: Blue Prince shadow-dropped on Switch 2 at the March 2026 Indie World, built exactly as tonight's T0 Reels: breaking profile (no picture finish, veryfast encode), one continuous official clip (Nintendo's own Switch 2 trailer from the store page, the copy that appears first on show night), headline, one line with date and platforms, source credit, our breaking bed, focus set by hand (no autofocus wait). Clear of the trailer's title cards and end slate.",
+ "out": "cards/2026-10/t0-sample-blue-prince-reel-v1.mp4",
+ "footage": [{"file": "bp-ns2.mp4", "url": "https://assets.nintendo.com/video/upload/store/software/switch2/70010000109038/Video/707d185626b7c568312b840e2ea2ab2a62528887efbe61e35d6a7852602c53f3.mp4"}],
+ "shots": [
+  ["bp-ns2.mp4", 4.2, 3.6, 0.5],
+  ["bp-ns2.mp4", 24.2, 3.6, 0.5],
+  ["bp-ns2.mp4", 36.2, 3.8, 0.5]
+ ],
+ "lines": [
+  [1, 2, [["متوفرة الآن على متجر نينتيندو\nبعد عرضها في Indie World", {}]]]
+ ],
+ "credits": [[0, 2, "لقطات من متجر نينتيندو"]],
+ "headline": "وصلت Blue Prince فجأة\nإلى Switch 2",
+ "label": "متوفر الآن",
+ "source": "نينتيندو (Nintendo)",
+ "date": "3 Mar 2026",
+ "theme": "cold",
+ "style": "bold",
+ "template": "trailer",
+ "skin": "house",
+ "track": "bed",
+ "sound": "breaking",
+ "profile": "breaking",
+ "cut": true,
+ "lowres_ok": "Nintendo store: 720p is the only copy at reveal time on show night (Steam 1080p exists for this game, not used, to test the real path)"
+}
