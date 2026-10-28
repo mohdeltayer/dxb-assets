@@ -11491,5 +11491,55 @@
   "min_disk_free_mb": 81758,
   "setup_min": 1.33,
   "story": "moonlight-peaks-ps5-nov-17"
+ },
+ {
+  "name": "anomalith-out-today-oct-28-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T06:51Z",
+  "stages": {
+   "checks": 3.9,
+   "montage": 34.9,
+   "text": 27.4,
+   "audio": 0.9,
+   "outro": 42.1
+  },
+  "total": 109.2,
+  "lane": "runner",
+  "queued_at": "2026-10-28T06:47:39Z",
+  "finished_at": "2026-10-28T06:51Z",
+  "render_min": 1.82,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "design_pass": {
+   "hf": "0.8.143",
+   "notes": [
+    "frame without a strip: if the frame fails, nothing carries its facts"
+   ],
+   "pieces": [
+    {
+     "piece": "frame",
+     "ok": false,
+     "error": "ValueError: frame holds only 1.41 s still; it needs 2 to 3 s for reading (more secs)",
+     "render_secs": 3.2
+    }
+   ],
+   "blips": [],
+   "laid_back": [],
+   "secs": 3.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 193,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1324,
+  "peak_mem_mb": 1780,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62701,
+  "peak_disk_mb": 65395,
+  "min_disk_free_mb": 82307,
+  "setup_min": 1.1,
+  "story": "anomalith-out-today-oct-28"
  }
 ]
