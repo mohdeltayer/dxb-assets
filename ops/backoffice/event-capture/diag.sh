@@ -9,7 +9,7 @@
 set -u
 R="$RUNNER_TEMP/diag"; mkdir -p "$R"; S="$GITHUB_STEP_SUMMARY"
 say() { echo "$*"; echo "$*" >> "$S"; }
-block() { echo '```' >> "$S"; cat >> "$S"; echo '```' >> "$S"; }
+block() { echo '```' >> "$S"; tee -a "$S"; echo '```' >> "$S"; }
 
 say "## 1. capture.log from the Indie World test"
 LOGF="$CACHE/event-capture/2026-10-28-indie-world/capture.log"
@@ -17,7 +17,7 @@ if [ -f "$LOGF" ]; then
   say "Lines: $(wc -l < "$LOGF"). Reader errors (not our own HH:MM:SSZ notes), by count:"
   grep -vE '^[0-9]{2}:[0-9]{2}:[0-9]{2}Z ' "$LOGF" | sed -E 's/[0-9a-f]{16,}/<id>/g' | sort | uniq -c | sort -rn | head -40 | block
   say "First 25 error lines in order, with the note line before each run:"
-  grep -nE -B1 -v '^[0-9]{2}:[0-9]{2}:[0-9]{2}Z ' "$LOGF" | head -25 | block
+  grep -nE -v '^[0-9]{2}:[0-9]{2}:[0-9]{2}Z ' "$LOGF" | head -25 | block
 else
   say "capture.log not found at $LOGF"
 fi
@@ -66,7 +66,7 @@ timeout 60 "$VENV/bin/streamlink" --twitch-disable-ads https://www.twitch.tv/nin
 measure() {  # $1 label, $2 reader command (writes MPEG-TS to stdout)
   d="$R/$1"; mkdir -p "$d"; t0=$(date +%s.%N)
   timeout 70 bash -c "$2" 2>"$d/reader.err" | timeout 65 nice -n 19 ffmpeg -hide_banner -nostdin -progress "$d/prog.txt" -t 60 -i pipe:0 \
-      -map 0:v:0 -vf fps=1 -q:v 3 "$d/f-%03d.jpg" -map 0:v:0 -f null - 2>"$d/ff.err"
+      -map 0:v:0 -f null - -map 0:v:0 -vf fps=1 -q:v 3 "$d/f-%03d.jpg" 2>"$d/ff.err"
   t1=$(date +%s.%N); jpg=$(ls "$d"/f-*.jpg 2>/dev/null | wc -l)
   dec=$(grep -oE '^frame=[0-9]+' "$d/prog.txt" 2>/dev/null | tail -1 | cut -d= -f2)
   info=$(grep -m1 -oE 'Video: [^,]+, [^,]+, [0-9]+x[0-9]+[^,]*, [^,]*fps' "$d/ff.err" || grep -m1 -oE 'Video: .*' "$d/ff.err" | cut -c1-120)
