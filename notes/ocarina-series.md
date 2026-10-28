@@ -15,7 +15,7 @@ once a plain-MP4 route exists (YouTube only on 14 Oct). Official footage and sti
 | 3 | Sat 18 Oct | كيف وُلدت اللعبة: Miyamoto, Aonuma and Koizumi, the three-year build, the 64DD plan that became a cartridge, the slip from 1997 to Nov 1998; sourced from Nintendo's own interviews (Iwata Asks) before writing | explainer | to verify |
 | 4 | Tue 21 Oct | الأوكارينا والموسيقى: Koji Kondo's score, the twelve melodies, why the instrument became a character; the remake's orchestra and the microphone feature close the loop | quote or explainer | to verify |
 | 5 | Sat 24 Oct | خط الزمن: the Zelda timeline splits at Ocarina into three branches; Majora's Mask built on it in a year; what Wind Waker and Breath of the Wild owe it | explainer | researched 23 Oct 19:30Z (facts below); blocked: the series intro needs his Triforce Medley upload (oot-triforce-medley.mov, gone since the container reset) and the Dubai font for the days line |
-| 6 | Mon 27 Oct | معبد الماء: the dungeon players feared, what the 3DS version changed and what the remake changes (previews: redesigned puzzles, the Forest Temple acid pool) | comparison | to verify |
+| 6 (not built) | Mon 27 Oct | معبد الماء (replaced by the story-beat run, adv-20261027-road-to-ocarina, numbered 6 to 13 from 29 Oct): the dungeon players feared, what the 3DS version changed and what the remake changes (previews: redesigned puzzles, the Forest Temple acid pool) | comparison | to verify |
 | 7 | Thu 30 Oct | اللاعبون الذين لم يتوقفوا: speedrunning and the glitch found after 28 years that changes two boss fights (13 Oct, five outlets); official footage and our graphics only | explainer | to verify |
 | 8 | Sun 2 Nov | دليل الإطلاق للاعب الخليجي: price on the eShop in the UAE and Saudi, the $49.99 Electric Ocarina, amiibo, Zelda Notes, physical or digital | split (strip: price, date) | prices to check near the date |
 | 9 | Thu 5 Nov | متوفر الآن: launch day, reviews if the embargo has fallen | trailer | launch day |
@@ -46,6 +46,7 @@ same presentation is **P-IGN**, the same times).
 | 4 | The music (19 Oct) | A 31.0-34.3, 40.5-42.5, 34.9-37.65, 62.0-64.25; O 63.0-63.95, 71.6-74.75, 99.0-101.0, 15.2-17.1, 48.0-50.75, 152.6-155.2, 131.0-133.75 | A from 26.0 (repeats ep 3) |
 | 5 v2 | Z-targeting (20 Oct, published 07:00Z on X, Instagram, Threads), rebuilt 19 Oct 12:50Z | P 343.0-345.6, 28.3-31.1, 47.45-49.2, 366.0-368.5, 368.6-371.1, 39.4-41.8, 384.5-387.1, 347.4-349.5, 166.2-168.9, 846.0-848.4, 852.0-854.6 | P from 338.9, Aonuma narrating targeting over the Deku Tree music |
 | 5 v1 | Z-targeting, built 19 Oct 08:20Z, replaced by v2, not posted | O 95.0-97.5, 89.6-92.3, 99.0-101.25, 46.8-49.6, 186.0-188.4, 194.3-196.7; P 28.3-30.75, 47.6-49.85, 39.4-41.8, 378.0-380.75, 364.4-366.3 | A from 26.0 (repeats eps 3 and 4) |
+| 6 (story-beat run) | الفتى بلا جنية (29 Oct, scheduled 21:00 Dubai) | O 8.0-10.6, 13.2-14.8, 20.6-23.35, 50.6-53.15, 26.2-28.8, climax 30.7-35.7; A 109.3-110.9, 45.3-47.85; P 871.2-873.6; stills oot-store-1 (cover, twice), oot-store-2 (ground) | our bed (neon), no trailer audio |
 
 Repeats found on 19 Oct: A from 26.0 in eps 3, 4 and 5 (ep 1's A from 5.0 runs
 into it); the Hyrule Field with the castle in eps 1 and 4; A 61.6/62.0 (the

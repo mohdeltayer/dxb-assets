@@ -24,6 +24,7 @@ FORMATS = {
     'retro':     'on this day: the game on a real CRT photo, fact sheet then «هل تعلم؟» facts (retro_tv, 10 Oct 2026)',
     'edition':   'special and collector\'s editions, bundles, limited consoles, accessories, tier contents: trailer hook, each item as a press-render cut-out drifting onto the living ground, one composition frame with the price strip, footage close (edition.py, 14 Oct 2026)',
     'stills':    'three or four official images filling 9:16, cut not panned (subject cut-outs on a parallax ground where the art allows, else a 2 to 4% push-in), hard cuts on the bed, 3 s each, 12 to 14 s, four lines, neighbouring images differ in kind; the last resort after every motion source (reel.stills_clips, advisor 14 Oct 2026)',
+    'storybeat': 'a series episode told in short beats: key art cover with a two-word title, one official picture card per phrase over the blurred key art, one large word alone for the emotional beat, a word-by-word reveal for the twist, 4 to 6 s of full-screen footage with no text at the climax, ending on the opening line so it loops; our bed (storybeat.py builds the picture track; advisor card adv-20261027-road-to-ocarina, 27 Oct 2026)',
     'list':      'N items at 2 to 2.5 s each on their own art, rank or date on a small plate, progress cue n/N, one line per item at most, mosaic cover, closing frame of all tiles: Game Pass waves, leaving-soon, line-ups, awards, top fives, show recaps, weekly releases (advisor 14 Oct 2026)',
 }
 #: `tribute` is a variant of stills (reel(..., tribute=True)): cold, wave lines off, no chip, name and dates as the headline, lines
@@ -31,7 +32,10 @@ FORMATS = {
 #: crimson theme and the breaking bed (reel.py applies it from the chip).
 SKINS = {'عاجل': dict(theme='crimson', sound='breaking')}
 #: Templates outside the 12 to 20 s length target (advisor, 14 Oct 2026): every other template states its total in the brief.
-LENGTH_EXEMPT = ('handson', 'edition')
+LENGTH_EXEMPT = ('handson', 'edition', 'storybeat')
+#: Series templates do not count against the template caps (adv-20261027-road-to-ocarina): no third in a row, the card-led
+#: window and DAY_MAX skip them; the no-two-in-a-row rule on one game or publisher still applies.
+SERIES = ('storybeat',)
 #: No template more than DAY_MAX times in one day, any family (advisor, 14 Oct 2026).
 DAY_MAX = 4
 #: A closing question line is allowed only on stories readers argue about (advisor, 14 Oct 2026), never on launches or prices.
@@ -55,6 +59,7 @@ OPENERS = {
     'edition':    'the hero item: the trailer hook with the headline, then the hero cut-out first and largest',
     'stills':     'the strongest image, already pushing in, the headline over it; the first cut lands with the first line',
     'list':       'the mosaic of every item, the count in the headline; item 1 on the first cut',
+    'storybeat':  'the key art full screen with the two-word title and the series badge',
 }
 
 
@@ -230,7 +235,9 @@ def check(fmt, at=None):
     ledger is read in time order up to it, so a Reel moved into an earlier slot is checked where it lands."""
     import datetime
     t = datetime.datetime.strptime(at[:16], '%Y-%m-%dT%H:%M') if at else datetime.datetime.utcnow()
-    before = sorted((e for e in _load() if _at(e) and _at(e) < t), key=_at)
+    if fmt in SERIES:
+        return ''
+    before = sorted((e for e in _load() if _at(e) and _at(e) < t and e['format'] not in SERIES), key=_at)
     led = [e['format'] for e in before]
     last = led[-2:]
     if len(last) == 2 and all(f == fmt for f in last):

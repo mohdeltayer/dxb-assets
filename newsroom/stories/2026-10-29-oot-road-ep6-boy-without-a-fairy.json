@@ -5,7 +5,7 @@
   "open world",
   "rpg"
  ],
- "status": "rendering on dxb-render-1 as episode 6; slot 29 Oct 17:00Z (21:00 Dubai)",
+ "status": "scheduled in Publer 02:22Z for 29 Oct 17:00Z (21:00 Dubai) on Instagram, X and Threads; reel v1 (dxb-render-1, 325 s render, 496 s job)",
  "sources": [
   {
    "kind": "primary",
@@ -39,5 +39,58 @@
   "pace_ok": "the climax beat (22.75 to 27.75 s) holds the Deku Tree footage full screen for 5 s with no text, as the approved story-beat recipe asks (4 to 6 s); the footage moves throughout",
   "length": "32.6 s before the end card: outside the 12 to 20 s guide, inside the series card's 30 to 40 s"
  },
- "approved": "go: approved series card adv-20261027-road-to-ocarina (Mohammad 27 Oct); preview to him before scheduling, publishing does not wait"
+ "approved": "go: approved series card adv-20261027-road-to-ocarina (Mohammad 27 Oct); preview to him before scheduling, publishing does not wait; scheduled 02:22Z; preview card prod-20261028-ocarina-ep6-preview (default Approve at 16:00Z 29 Oct); gate again within the hour before it posts",
+ "reel": {
+  "file": "cards/2026-10/oot-road-ep6-boy-without-a-fairy-reel-v1.mp4",
+  "length_s": 34.6,
+  "story_s": 32.6,
+  "shots": 12,
+  "text_beats": 10
+ },
+ "drafts": {
+  "instagram": "الحلقة 6 من «الطريق إلى Ocarina»: الفتى بلا جنية. ... حتى تطلب شجرة Deku العظيمة من الجنية Navi أن ترافقه في مغامراته. ... #ألعاب #أخبار_الألعاب #Zelda #NintendoSwitch2",
+  "x": "الحلقة 6 من «الطريق إلى Ocarina»: لكل طفل في غابة Kokiri جنية، إلا Link، حسب وصف نينتيندو (Nintendo) للعبة.",
+  "notes": "grammar stage: no required edits; one uncertain case (bracket in the pinned comment) resolved by adding (Nintendo). DeepL back-check: meaning kept; forward pass gave مغامراته for adventures, taken over رحلته to match the primary."
+ },
+ "director": {
+  "verdict": "PASS with notes",
+  "checks": [
+   [
+    "0-3.5",
+    "cover: Link and Navi, headline readable at grid size",
+    "PASS"
+   ],
+   [
+    "3.5-12",
+    "cards: each clip shows its line (forest, Kokiri, Link, sleeping Link)",
+    "PASS"
+   ],
+   [
+    "12-14.6",
+    "one-word beat on the darker ground",
+    "PASS"
+   ],
+   [
+    "14.6-22.7",
+    "Deku Tree, Navi, reveal on أن ترافقه",
+    "PASS"
+   ],
+   [
+    "22.7-27.7",
+    "climax: Deku Tree full screen, no text, 1.7x",
+    "PASS (pace_ok, recipe)"
+   ],
+   [
+    "27.7-32.6",
+    "Castle Town card, then the cover again with the opening line",
+    "PASS"
+   ],
+   [
+    "reel",
+    "badge small and from 2 s; noted for Mohammad",
+    "NOTE"
+   ]
+  ],
+  "sound": "our bed (series recipe), no speech"
+ }
 }
