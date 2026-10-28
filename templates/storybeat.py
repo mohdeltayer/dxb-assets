@@ -24,6 +24,7 @@ W, H, FPS = 1080, 1920, 30
 CARD_W, CARD_H = 940, 528          # a 16:9 card, centred above the line band
 CARD_Y = 560                       # top of the card: clear of the headline zone's lower edge and of the low lines
 BORDER = 6
+CLIMAX_H = 1216                    # climax frame height: 1216/720 = 1.69x for a 720p source
 VIDEO = ('.mp4', '.mov', '.mkv', '.webm')
 
 
@@ -38,9 +39,9 @@ def _ground(bg, secs, seed, dark):
     frames = int(round(secs * FPS))
     zoom = "zoompan=z='1.06+0.0004*on':x='iw/2-(iw/zoom/2)+%d*sin(on/90)':y='ih/2-(ih/zoom/2)':d=%d:s=%dx%d:fps=%d" % (
         18 + 6 * (seed % 3), frames, W, H, FPS)
-    bright = -0.32 if dark else -0.20
+    bright = -0.26 if dark else -0.12
     return (f"scale={W*2}:{H*2}:force_original_aspect_ratio=increase,crop={W*2}:{H*2},{zoom},"
-            f"boxblur=26:3,eq=brightness={bright}:saturation=0.85")
+            f"boxblur=26:3,eq=brightness={bright}:saturation=1.1")
 
 
 def beat_clip(b, bg, out, seed):
@@ -49,12 +50,15 @@ def beat_clip(b, bg, out, seed):
     src = os.path.join(C.U, b['src']) if b.get('src') else None
     bw = ',hue=s=0' if b.get('bw') else ''
     frames = int(round(secs * FPS))
-    if kind == 'climax':                       # official footage full screen, the 9:16 window at `focus`
-        fx = float(b.get('focus', 0.5))
-        crop = f"crop=ih*9/16:ih:(iw-ih*9/16)*{fx}:0"
-        vf = f"{crop},scale={W}:{H}:flags=lanczos,fps={FPS}{bw},setsar=1"
-        _run(['ffmpeg', '-v', 'error', '-y', '-ss', str(b['t']), '-t', f'{secs:.3f}', '-i', src, '-an', '-vf', vf,
-              '-frames:v', str(frames), '-c:v', 'libx264', '-preset', 'medium', '-crf', '14', '-pix_fmt', 'yuv420p', out])
+    if kind == 'climax':                       # official footage at climax size: the frame CLIMAX_H tall (a 720p
+        fx = float(b.get('focus', 0.5))        # source stays under the 2x enlargement cap), cropped to the full
+        hh = int(b.get('height', CLIMAX_H))    # width at `focus`, over a blurred, dimmed copy of the same footage
+        fc = (f"[0:v]fps={FPS},split[a][b];"
+              f"[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},boxblur=30:3,eq=brightness=-0.28{bw}[g];"
+              f"[b]scale=-2:{hh}:flags=lanczos,crop={W}:{hh}:(iw-{W})*{fx}:0{bw}[f];"
+              f"[g][f]overlay=0:{(H - hh) // 2},setsar=1[v]")
+        _run(['ffmpeg', '-v', 'error', '-y', '-ss', str(b['t']), '-t', f'{secs:.3f}', '-i', src, '-an', '-filter_complex', fc,
+              '-map', '[v]', '-frames:v', str(frames), '-c:v', 'libx264', '-preset', 'medium', '-crf', '14', '-pix_fmt', 'yuv420p', out])
         return
     if kind == 'cover':                        # the key art full screen, a slow push-in, no blur
         fx = float(b.get('focus', 0.5))
