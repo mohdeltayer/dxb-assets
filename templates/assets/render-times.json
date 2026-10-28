@@ -11832,5 +11832,38 @@
   "min_disk_free_mb": 84618,
   "setup_min": 1.17,
   "story": "iw-tenjutsu-switch-2-2027"
+ },
+ {
+  "name": "iw-repo-switch-2-2027-v2-reel-v1.mp4",
+  "profile": "breaking",
+  "at": "2026-10-28T14:28Z",
+  "stages": {
+   "checks": 2.3,
+   "montage": 16.5,
+   "text": 20.7,
+   "audio": 0.3,
+   "outro": 18.0
+  },
+  "total": 57.7,
+  "lane": "runner",
+  "queued_at": "2026-10-28T14:25:21Z",
+  "finished_at": "2026-10-28T14:28Z",
+  "render_min": 0.96,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 88,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1037,
+  "peak_mem_mb": 1619,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62536,
+  "peak_disk_mb": 62845,
+  "min_disk_free_mb": 84857,
+  "setup_min": 1.1,
+  "story": "iw-repo-switch-2-2027-v2"
  }
 ]
