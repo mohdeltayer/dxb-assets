@@ -228,23 +228,8 @@
   ],
   [
    "sulfur-10-console.mp4",
-   55.0,
-   1.4,
-   [
-    [
-     0.0,
-     0.252
-    ],
-    [
-     0.696,
-     0.679
-    ]
-   ]
-  ],
-  [
-   "sulfur-10-console.mp4",
    17.0,
-   0.8,
+   0.7,
    [
     [
      0.0,
@@ -254,16 +239,31 @@
   ],
   [
    "sulfur-10-console.mp4",
-   56.0,
-   1.45,
+   45.0,
+   0.8,
    [
     [
      0.0,
-     0.678
+     0.446
+    ]
+   ]
+  ],
+  [
+   "sulfur-10-console.mp4",
+   55.0,
+   2.35,
+   [
+    [
+     0.0,
+     0.252
     ],
     [
-     0.73,
-     0.574
+     0.696,
+     0.67
+    ],
+    [
+     1.73,
+     0.606
     ]
    ]
   ]
@@ -290,8 +290,8 @@
    ]
   ],
   [
-   12,
-   14,
+   17,
+   19,
    [
     [
      "ولا تدعم اللعب الجماعي بعد",
@@ -314,9 +314,9 @@
   5.0
  ],
  "frame": {
-  "shot": 15,
-  "offset": 0.2,
-  "secs": 3.0,
+  "shot": 12,
+  "offset": 0.0,
+  "secs": 4.7,
   "data": {
    "platforms": [
     {
@@ -356,6 +356,11 @@
    40.42,
    40.6,
    "looked at 40.45 and 40.55: the cooking menu, flat UI art, no damage"
+  ],
+  [
+   8.3,
+   9.3,
+   "output check: shot 40.0 s, the cooking menu (flat UI art, long straight edges), looked at 40.45 and 40.55 in the source; the source stretch decodes clean"
   ]
  ]
 }
