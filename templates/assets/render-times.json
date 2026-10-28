@@ -12780,5 +12780,53 @@
   "min_disk_free_mb": 82489,
   "setup_min": 1.08,
   "story": "solo-leveling-arise-overdrive-consoles-nov-4"
+ },
+ {
+  "name": "solo-leveling-arise-overdrive-consoles-nov-4-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T22:57Z",
+  "stages": {
+   "checks": 5.7,
+   "montage": 54.9,
+   "text": 37.6,
+   "audio": 0.8,
+   "outro": 44.9
+  },
+  "total": 144.0,
+  "lane": "runner",
+  "queued_at": "2026-10-28T22:52:42Z",
+  "finished_at": "2026-10-28T22:57Z",
+  "render_min": 2.4,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 11.9,
+   "audio_secs": 56.9,
+   "music_pct": 18.3,
+   "leak_pct": 3.6,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 2
+   },
+   "reason": "music only 18.3% of the track (< 40.0%)",
+   "secs": 16.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 255,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1343,
+  "peak_mem_mb": 2811,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62958,
+  "peak_disk_mb": 65262,
+  "min_disk_free_mb": 82439,
+  "setup_min": 1.32,
+  "story": "solo-leveling-arise-overdrive-consoles-nov-4"
  }
 ]
