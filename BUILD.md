@@ -115,6 +115,7 @@ Tag: release-YYYY-MM-DD   Previous: release-YYYY-MM-DD   Merge commits: <sha> <s
 - <one line per thing ops must do differently, or "nothing changes for ops">
 
 ## Server
+- Server minutes of work, last 24 h: <n> (renders <n>, pre-render <n>, prepared trailers <n>, services <n>); Reels that touched the server: <n of N, %>
 - <services installed or changed, disk free, test render minutes, any root step sent to Mohammad>
 
 ## Rollback

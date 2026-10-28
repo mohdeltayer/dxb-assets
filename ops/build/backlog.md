@@ -8,22 +8,46 @@ file lists the work inside them.
 
 States: WAITS (on Mohammad or a root step), READY (can start tonight), IN PROGRESS (branch named), PARKED.
 
+## Order from 28 Oct night (adv-20261028-use-the-server, approved by Mohammad 13:09Z)
+Work that puts load on dxb-render-1 comes first. Tonight's build night (from 01:00 Dubai):
+1. B2, T0 on moving footage (first).
+2. B1, pre-render checks switched on at the 04:00 release for every job, "Go live" (server first, GitHub only
+   when the server is busy or down).
+3. B5's dispatcher install (tonight, as soon as the backup files exist; if the root steps are not done,
+   install under the runner user with its own read-token request card instead of waiting).
+4. B7, prepared trailers, next after the dispatcher, ahead of monitoring (B5's rest) and analytics (B6).
+5. Lane A fresh news (T1) onto dxb-render-1 with the 5-minute GitHub fallback: proposed in the 48-hour lane
+   report (29 Oct 10:40Z) with the numbers, if it shows no server-caused failures; Mohammad decides there.
+   T0 stays GitHub-first until the server has a priority rule (tonight's Indie World Reels render on GitHub).
+6. Every release note carries one line: server minutes of work in the last 24 hours (renders, pre-render,
+   prepared trailers, services) and the share of the day's Reels that touched the server.
+Unchanged: B8 (Ocarina) keeps its date pressure (episode due 29 Oct 21:00 Dubai); B3, B4, B6, B9 to B11
+after these; the test gate, the release window and BUILD.md apply.
+
 ## B1. Pre-render checks: go live
 - Card: adv-20261027-build-until-thursday item 1; readiness card prod-20261027-prerender-readiness (open:
   "Go live", "Go live, warnings only" or "Not yet").
 - Built and on main (live path unchanged): `templates/prerender.py`, `cleanmap.py`, `prerender_ci.py`,
   `.github/workflows/prerender.yml`; `clean_map`, `clean_nudge` and `prerender_ok` job keys.
-- Left: on "Go live", run prerender automatically before a routine render job is committed (blocking), or
+- Answer: "Go live" (Mohammad, advisor chat 13:09Z, adv-20261028-use-the-server): live at the 04:00 release
+  for every job, on dxb-render-1 first, GitHub when the server is busy or down.
+- Left: run prerender automatically before a routine render job is committed (blocking), or
   as notes only ("warnings only"); record retries per Reel and first-commit-to-receipt time for the Tuesday
   audit (before: 1.25 renders per Reel, median 10.3 min, `newsroom/render_retries.py`).
-- State: WAITS on Mohammad's answer.
+- State: READY (go live at the 04:00 release, 29 Oct).
 
 ## B2. T0 breaking path, and a distinctive عاجل look
 - Card: adv-20261027-build-until-thursday item 2; side by side prod-20261027-t0-side-by-side (answered
   with a note, no choice: "عاجل should attract attention a bit differently to make it distinctive").
 - Built and on main: `templates/breaking.py` (`"kind": "breaking"`), `reel.PROFILES['breaking']`,
   `"profile"` passed by render_job.py, `.github/workflows/render-breaking.yml` (server first, GitHub when busy).
-- Left: design a more distinctive عاجل look within the brand (crimson stays; no pink): for example a
+- First (adv-20261028-use-the-server): the T0 input is ONE official moving clip (a trailer stretch, an X
+  video post, an eShop or Steam trailer), 6 to 12 s, with headline, one line, date and platforms, source and
+  the breaking bed; a still only as a short full-bleed beat inside it (stills are not a Reel after the deleted
+  logo Reel). Under 60 s render on a warm server. Morning side-by-side card on two of tonight's Indie World
+  reveals (what was posted against the T0 version; production's posted Reels are in cards/2026-10/,
+  T0 log in the Indie World report card).
+- Then: design a more distinctive عاجل look within the brand (crimson stays; no pink): for example a
   pulsing crimson band, a stronger chip press, the breaking sting; one sample card to Mohammad with the
   current T0 look beside it on a real recent story, with timings. Go-live choice still open after that.
 - Test: the gate in BUILD.md; T0 render under 60 s on a warm server, whole job under 2 min.
@@ -78,6 +102,8 @@ States: WAITS (on Mohammad or a root step), READY (can start tonight), IN PROGRE
   audio once (Cocktail Fork), store keyed by trailer with cleanup after 7 days and a 40 GB disk floor. The
   render uses a prepared asset when one exists and falls back to today's path when not. Licences recorded
   before live use. Depends on back office 1 (the watch) being live.
+- Order: NEXT after the dispatcher install (adv-20261028-use-the-server), ahead of B5 monitoring and B6.
+  Readiness card with disk and CPU numbers and two examples.
 - State: WAITS on the watch go-live (back office 1, finishing in the day session).
 
 ## B8. Road to Ocarina: story-beat template, Mohammad's five points
