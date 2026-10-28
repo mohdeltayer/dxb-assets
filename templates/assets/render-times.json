@@ -12732,5 +12732,53 @@
   "min_disk_free_mb": 82708,
   "setup_min": 1.0,
   "story": "exodus-liberating-the-kay-40-minutes"
+ },
+ {
+  "name": "solo-leveling-arise-overdrive-consoles-nov-4-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T22:49Z",
+  "stages": {
+   "checks": 5.7,
+   "montage": 55.4,
+   "text": 40.0,
+   "audio": 0.9,
+   "outro": 44.0
+  },
+  "total": 146.0,
+  "lane": "runner",
+  "queued_at": "2026-10-28T22:45:11Z",
+  "finished_at": "2026-10-28T22:49Z",
+  "render_min": 2.43,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 19.4,
+   "audio_secs": 53.7,
+   "music_pct": 23.0,
+   "leak_pct": 4.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 1,
+    "miss": 4
+   },
+   "reason": "music only 23.0% of the track (< 40.0%)",
+   "secs": 24.3
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 257,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1338,
+  "peak_mem_mb": 2615,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62895,
+  "peak_disk_mb": 65212,
+  "min_disk_free_mb": 82489,
+  "setup_min": 1.08,
+  "story": "solo-leveling-arise-overdrive-consoles-nov-4"
  }
 ]
