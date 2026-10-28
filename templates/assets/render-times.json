@@ -11997,5 +11997,38 @@
   "min_disk_free_mb": 80407,
   "setup_min": 1.05,
   "story": "no-mans-sky-forsaken-ios"
+ },
+ {
+  "name": "ps-plus-essential-november-2026-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T15:56Z",
+  "stages": {
+   "checks": 3.9,
+   "montage": 37.6,
+   "text": 32.2,
+   "audio": 0.8,
+   "outro": 39.0
+  },
+  "total": 113.4,
+  "lane": "runner",
+  "queued_at": "2026-10-28T15:52:55Z",
+  "finished_at": "2026-10-28T15:56Z",
+  "render_min": 1.89,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 195,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1030,
+  "peak_mem_mb": 1680,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62536,
+  "peak_disk_mb": 64818,
+  "min_disk_free_mb": 82883,
+  "setup_min": 0.97,
+  "story": "ps-plus-essential-november-2026"
  }
 ]
