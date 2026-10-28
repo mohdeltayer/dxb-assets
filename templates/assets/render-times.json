@@ -11898,5 +11898,38 @@
   "min_disk_free_mb": 84874,
   "setup_min": 0.98,
   "story": "iw-sword-of-the-sea-switch-2"
+ },
+ {
+  "name": "iw-city-of-none-2027-reel-v1.mp4",
+  "profile": "breaking",
+  "at": "2026-10-28T14:37Z",
+  "stages": {
+   "checks": 2.1,
+   "montage": 16.8,
+   "text": 21.2,
+   "audio": 0.3,
+   "outro": 17.2
+  },
+  "total": 57.6,
+  "lane": "runner",
+  "queued_at": "2026-10-28T14:35:23Z",
+  "finished_at": "2026-10-28T14:37Z",
+  "render_min": 0.96,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 89,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1043,
+  "peak_mem_mb": 1584,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62280,
+  "peak_disk_mb": 62736,
+  "min_disk_free_mb": 84965,
+  "setup_min": 0.93,
+  "story": "iw-city-of-none-2027"
  }
 ]
