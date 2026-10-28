@@ -1,7 +1,7 @@
 {
  "id": "2026-10-29-phantom-blade-zero-out-now",
  "title": "Phantom Blade Zero out now on PC and PS5 (29 Oct 02:00Z, 06:00 UAE)",
- "status": "building",
+ "status": "scheduled",
  "genre": [
   "RPG"
  ],
@@ -28,7 +28,7 @@
  "template": "split (release; strip: platforms and the Steam UAE price with the dirham symbol)",
  "sound": "trailer music from 159.3 s, after the last spoken line; speech: none",
  "source_kind": "primary (store pages, S-GAME's Steam description and launch trailer)",
- "approved": "",
+ "approved": "go: rolling queue (dated launch, timed to the 02:00Z unlock); gate 18:40-18:45Z: Steam and PS Store UAE release 29 Oct 02:00Z, 219 AED / 225 SR / 239 AED; re-gate set 01:05Z (queued more than six hours ahead); director: PASS on v3 (v1 opened on the lord with the orb, v2 on burning ground; v3 opens on Soul; blood-free, speech none, last 2 s a picture)",
  "drafts": {
   "instagram": "صدرت Phantom Blade Zero اليوم على الحاسب و PS5.\n\nأطلق استوديو إس غيم (S-GAME) الصيني لعبة الأكشن Phantom Blade Zero، التي تجمع قصص فنون القتال الصينية مع قتال سريع، وهي مبنية بمحرك Unreal Engine 5.\n\nويؤدي اللاعب دور المحارب Soul الذي أمامه 66 يومًا فقط ليعيش، ويواجه القتلة المأجورين ومؤامرات تهدد العالم، حسب وصف الاستوديو.\n\nوسعر اللعبة في الإمارات 219 درهمًا على Steam و 239 درهمًا على متجر PlayStation، وفي السعودية 225 ريالًا على Steam. ولا تدعم اللعبة اللغة العربية.\n\n#ألعاب #أخبار_الألعاب #PhantomBladeZero #PS5",
   "x": "صدرت Phantom Blade Zero اليوم على الحاسب و PS5، وبطلها المحارب Soul أمامه 66 يومًا فقط ليعيش، حسب استوديو إس غيم (S-GAME).",
@@ -43,6 +43,12 @@
    "job": "jobs/render/phantom-blade-zero-out-now.json",
    "out": "cards/2026-10/phantom-blade-zero-out-now-reel-v1.mp4",
    "note": "split on S-GAME's launch trailer (Steam 1080p); not the pre-order (26 Oct) or release-date (24 Oct) trailers; launch trailer stretches differ from the 22 Oct Reel's opening (10.2 s on)"
+  },
+  {
+   "v": 3,
+   "out": "cards/2026-10/phantom-blade-zero-out-now-reel-v3.mp4",
+   "note": "headline «بطل Phantom Blade Zero / أمامه 66 يومًا ليعيش» (three tries at 72 px); opens on the hatted Soul"
   }
- ]
+ ],
+ "scheduled": "scheduled in Publer 02:00Z (06:00 Dubai 29 Oct) on Instagram, X, Threads; labels tpl:split skin:house sound:trailer genre:rpg"
 }
