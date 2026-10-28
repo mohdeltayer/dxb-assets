@@ -208,6 +208,7 @@ def clean_nudge(job, rows):
 def shots(job, draft=False, build=True):
     """The job's shots as reel() takes them: autofocus where focus is null, graphics on the living ground."""
     out, t = [], 0.0
+    reel.NOBARS.update(job.get('nobars', []))   # files whose dark edges are picture, not letterbox (a framed picture track)
     rows = clean_nudge(job, job['shots'])
     for i, (f, start, secs, fo) in enumerate(rows):
         if f.endswith('.png') and '-gfx-' in f:
