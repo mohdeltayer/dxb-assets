@@ -11433,5 +11433,63 @@
   "min_disk_free_mb": 81795,
   "setup_min": 1.22,
   "story": "sulfur-1-0-all-consoles-oct-28"
+ },
+ {
+  "name": "moonlight-peaks-ps5-nov-17-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T06:13Z",
+  "stages": {
+   "checks": 4.3,
+   "montage": 34.9,
+   "text": 32.9,
+   "audio": 0.9,
+   "outro": 37.3
+  },
+  "total": 110.3,
+  "lane": "runner",
+  "queued_at": "2026-10-28T06:09:28Z",
+  "finished_at": "2026-10-28T06:13Z",
+  "render_min": 1.84,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "design_pass": {
+   "hf": "0.8.143",
+   "notes": [
+    "frame without a strip: if the frame fails, nothing carries its facts"
+   ],
+   "pieces": [
+    {
+     "piece": "frame",
+     "still": [
+      9.94,
+      11.95
+     ],
+     "ok": true,
+     "at": 9.0,
+     "secs": 3.25,
+     "render_secs": 25.2
+    }
+   ],
+   "blips": [
+    9.27
+   ],
+   "laid_back": [],
+   "secs": 48.1,
+   "blips_dropped_for_speech": []
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 240,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1228,
+  "peak_mem_mb": 2559,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62701,
+  "peak_disk_mb": 65944,
+  "min_disk_free_mb": 81758,
+  "setup_min": 1.33,
+  "story": "moonlight-peaks-ps5-nov-17"
  }
 ]
