@@ -584,7 +584,8 @@ def run(job, draft=False):
                      strip=strip_items(job) if job.get('strip') else None,
                      template=job.get('template'), pace_ok=job.get('pace_ok', False), lowres_ok=job.get('lowres_ok', False),
                      skin=job.get('skin'), person=[tuple(x) for x in job['person']] if job.get('person') else None,
-                     blocky_ok=job.get('blocky_ok'), apart=DP_apart, profile=profile_of(job))
+                     blocky_ok=job.get('blocky_ok'), apart=DP_apart, profile=profile_of(job),
+                     reveal=job.get('reveal'))   # word-by-word reveal on the key line (story-beat twist, 28 Oct 2026)
     video = done[0] if isinstance(done, (list, tuple)) else done
     dp = design_pass(job, video, dp_plan, DP_folder) if DP_folder else None
     if job.get('insert') and not draft:
