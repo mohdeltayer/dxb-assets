@@ -12276,5 +12276,54 @@
   "min_disk_free_mb": 82731,
   "setup_min": 1.18,
   "story": "rayman-legends-retold-astro-bot-costume"
+ },
+ {
+  "name": "cronos-lazarus-dlc-dec-3-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T17:14Z",
+  "stages": {
+   "checks": 6.0,
+   "montage": 68.0,
+   "text": 50.1,
+   "audio": 0.9,
+   "outro": 46.3
+  },
+  "total": 171.2,
+  "lane": "runner",
+  "queued_at": "2026-10-28T17:09:18Z",
+  "finished_at": "2026-10-28T17:14Z",
+  "render_min": 2.85,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 18.3,
+   "audio_secs": 52.1,
+   "music_pct": 49.3,
+   "leak_pct": 0.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "effects_shots": 5,
+   "mix_secs": 5.9,
+   "secs": 24.8
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 287,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1360,
+  "peak_mem_mb": 3893,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62835,
+  "peak_disk_mb": 65339,
+  "min_disk_free_mb": 82362,
+  "setup_min": 1.12,
+  "story": "cronos-lazarus-dlc-dec-3"
  }
 ]
