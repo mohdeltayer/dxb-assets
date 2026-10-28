@@ -22,9 +22,9 @@ while [ "$(secs_to "$END_UTC")" -gt 5 ]; do
       -map 0:v:0 -vf fps=1 -q:v 3 -start_number "$start" "$OUT/fps/$src-%05d.jpg"
       -map 0:v:0 -vf "select='gt(scene,0.35)',scale=1280:-2" -fps_mode vfr -q:v 3 -start_number "$start" "$OUT/cuts/$src-$n-%05d.jpg")
   if [ "$src" = twitch ]; then
-    timeout "$left" "$VENV/bin/streamlink" --stdout --twitch-disable-ads "$TWITCH_URL" best 2>>"$LOG" | timeout "$left" "${ff[@]}" 2>>"$LOG"
+    timeout "$left" "$VENV/bin/streamlink" --stdout "$TWITCH_URL" best 2>>"$LOG" | timeout "$left" "${ff[@]}" 2>>"$LOG"
   else
-    hls=$(timeout 60 "$VENV/bin/yt-dlp" -q --no-warnings -g -f 'best[height<=1080]' "$YT_URL" 2>>"$LOG" | head -1)
+    hls=$(timeout 60 "$VENV/bin/yt-dlp" -q --no-warnings --js-runtimes node -g -f 'best[height<=1080]' "$YT_URL" 2>>"$LOG" | head -1)
     if [ -n "$hls" ]; then
       timeout "$left" nice -n 19 ffmpeg -hide_banner -loglevel error -nostdin -i "$hls" -c copy -f mpegts pipe:1 2>>"$LOG" | timeout "$left" "${ff[@]}" 2>>"$LOG"
     else
