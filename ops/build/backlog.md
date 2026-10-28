@@ -97,5 +97,21 @@ States: WAITS (on Mohammad or a root step), READY (can start tonight), IN PROGRE
 ## Not moved (stay where they are)
 - Back office 1, the watch go-live (`prod-20261027-backoffice-watch-readiness`): started in the day session
   on 28 Oct 03:50Z; finishes there.
-- Not named in the move, still open: the YOLO swap (prod-20261025-yolo-licence, "Swap, side-by-side first"),
-  the TGA co-stream live package (due 31 Oct), media toolbox tests E1 to E5. They move here if Mohammad says so.
+## B9. YOLO swap: Apache-2.0 detector for autofocus (moved 28 Oct, Mohammad's note on prod-20261028-build-md)
+- Card: prod-20261025-yolo-licence, answer "Swap (side-by-side first)".
+- Left: OpenCV Zoo detector (YOLOX or NanoDet, Apache-2.0) with YuNet (MIT) for faces, through the installed
+  OpenCV; side-by-side crops on three recent Reels to Mohammad before it replaces YOLO; YOLO stays until then.
+- State: READY.
+
+## B10. The Game Awards co-stream live package (moved 28 Oct; due 31 Oct)
+- Plan: notes/tga-costream-plan.md (OBS scenes in templates/live/: starting-soon with countdown, BRB,
+  right-to-left lower-third ticker in Dubai, corner mark, end card; ticker fed from the hourly watch).
+- Deadline: drafts to Mohammad by 31 Oct.
+- State: READY.
+
+## B11. Media toolbox tests E1 to E5 (moved 28 Oct)
+- Card trail: advisor memo of 25 Oct (CLAUDE.md "Media toolbox, step 1"), test 1 card posted 26 Oct.
+- Left, in order, one card each: E1 ffmpeg output checks plus two-pass loudnorm; E2 best official source
+  (yt-dlp, no login, result to Mohammad under the 28 Sep rule); E3 PaddleOCR; E4 PySceneDetect; E5
+  HyperFrames' own checks.
+- State: READY.
