@@ -1,0 +1,36 @@
+# Event capture diagnosis on the dxb-render server (Mohammad, 28 Oct 2026, after the Indie World shadow test read 0 frames).
+#
+# Dispatch only, main only. Reads the test's capture.log, upgrades streamlink and yt-dlp in the runner venv, puts Node in
+# the runner's home if yt-dlp asks for a JavaScript runtime, and reads one live YouTube and one live Twitch stream for
+# 60 s each. Results go to the job summary. Posts nothing, commits nothing, uploads nothing, uses no secret; test frames
+# are deleted at the end. Low priority: never ahead of a news render.
+#
+# Dispatch: gh workflow run event-diag.yml --ref main
+name: event-diag
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+
+jobs:
+  diag:
+    if: github.repository == 'mohdeltayer/dxb-assets' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 20
+    concurrency:
+      group: event-capture
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: ops/backoffice/event-capture
+          persist-credentials: false
+
+      - name: Diagnose
+        run: |
+          export VENV="${DXB_VENV:-/home/runner/venv}" CACHE="${DXB_CACHE:-/var/cache/dxb-render}"
+          nice -n 10 bash ops/backoffice/event-capture/diag.sh
