@@ -67,3 +67,11 @@ Castle Town, Lon Lon Ranch, the ocarina scenes at 762 and 804).
 - Iwata Asks, Majora's Mask 3D, "Make it in a Year": Iwata, "the development for Majora's Mask began when somebody requested that it be made in one year"; Aonuma, Miyamoto asked "whether we could make a game in one year if we repurpose the models"; footnote: "The story of Majora's Mask takes place a few months after the story of Ocarina of Time. Its game system and graphics were also used." Not "engine".
 - Breath of the Wild: Famitsu 1 Aug 2018 (famitsu.com/news/201808/01161782.html), Aonuma: 「それはもちろん最後ですよ。でもまあ…どのラインに続く最後なのか、という話ですよね？」; Fujibayashi: 「ご想像にお任せ、じゃないですか？」.
 - Stills: BotW 1920x1080 and the remake 1920x1080 and map on assets.nintendo.com (URLs in the research report of 23 Oct); zelda.nintendo.com images fail TLS verification here and are not fetched.
+
+## Story-beat run (episodes 6 to 13, adv-20261027-road-to-ocarina)
+
+Series badge (Mohammad, 28 Oct 2026, after the episode 6 preview: "Make the series badge bigger from episode 7"):
+from episode 7 the badge «الطريق إلى Ocarina · الحلقة N» is a credit with the options
+`{"from_start": true, "low": true, "size": 52, "band": true}`: on the cover from frame 0 (so it shows on the grid
+tile), 52 px on a soft dark band, low in the safe zone under the beat lines. It runs on every shot except the
+text-free climax. Episode 6 stays as rendered (36 px, from 2 s, top).
