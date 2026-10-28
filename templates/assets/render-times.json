@@ -12422,5 +12422,54 @@
   "min_disk_free_mb": 82626,
   "setup_min": 2.07,
   "story": "mw4-season-1-nov-6"
+ },
+ {
+  "name": "gundam-battle-operation-3-announced-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T19:17Z",
+  "stages": {
+   "checks": 4.7,
+   "montage": 40.5,
+   "text": 13.8,
+   "audio": 0.5,
+   "outro": 27.5
+  },
+  "total": 87.1,
+  "lane": "runner",
+  "queued_at": "2026-10-28T19:14:03Z",
+  "finished_at": "2026-10-28T19:17Z",
+  "render_min": 1.45,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 6.6,
+   "audio_secs": 28.4,
+   "music_pct": 74.3,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 10,
+   "mix_secs": 2.1,
+   "secs": 9.1
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 165,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1446,
+  "peak_mem_mb": 2766,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62835,
+  "peak_disk_mb": 64400,
+  "min_disk_free_mb": 83302,
+  "setup_min": 1.18,
+  "story": "gundam-battle-operation-3-announced"
  }
 ]
