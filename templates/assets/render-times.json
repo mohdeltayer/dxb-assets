@@ -12374,5 +12374,53 @@
   "min_disk_free_mb": 82141,
   "setup_min": 1.72,
   "story": "cronos-lazarus-dlc-dec-3"
+ },
+ {
+  "name": "mw4-season-1-nov-6-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T18:53Z",
+  "stages": {
+   "checks": 12.7,
+   "montage": 77.2,
+   "text": 32.4,
+   "audio": 0.8,
+   "outro": 38.0
+  },
+  "total": 161.1,
+  "lane": "runner",
+  "queued_at": "2026-10-28T18:43:26Z",
+  "finished_at": "2026-10-28T18:53Z",
+  "render_min": 2.69,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 3.0,
+   "audio_secs": 40.4,
+   "music_pct": 24.8,
+   "leak_pct": 4.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 4,
+    "miss": 0
+   },
+   "reason": "music only 24.8% of the track (< 40.0%)",
+   "secs": 3.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 555,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1263,
+  "peak_mem_mb": 1912,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62887,
+  "peak_disk_mb": 65075,
+  "min_disk_free_mb": 82626,
+  "setup_min": 2.07,
+  "story": "mw4-season-1-nov-6"
  }
 ]
