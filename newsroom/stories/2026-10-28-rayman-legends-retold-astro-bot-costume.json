@@ -34,7 +34,7 @@
  "source_kind": "Sony blog image (2560x1440) and Steam 1080p reveal trailer",
  "approved": "go: review card prod-20261028-review-1730 (Run 1, 2, 4 default); rolling queue",
  "published": null,
- "scheduled": "scheduled in Publer 17:15Z (21:15 Dubai): Instagram, X, Threads",
+ "scheduled": "scheduled in Publer 17:06Z for 17:15Z (21:15 Dubai): Instagram, X, Threads; labels tpl:comparison, skin:house, sound:trailer, genre:family",
  "versions": [
   {
    "v": 1,
@@ -45,6 +45,17 @@
    "v": 2,
    "at": "2026-10-28T16:38Z",
    "change": "Rayman shot starts 0.25 s later (previous scene's last frames)"
+  },
+  {
+   "v": 2,
+   "at": "2026-10-28T16:41Z",
+   "change": "Rayman shot start moved past the previous scene; not used: it ran 8 frames into the Globox scene under the line"
+  },
+  {
+   "v": 3,
+   "at": "2026-10-28T17:02Z",
+   "change": "the line runs over two Rayman shots (85.4 group shot, 89.2 close-up), each inside its scene"
   }
- ]
+ ],
+ "gate": "gate 17:04Z: PlayStation Blog post re-read, no update note; costume via Victor Velour, release 3 Dec on PS5 and PS5 Pro unchanged"
 }
