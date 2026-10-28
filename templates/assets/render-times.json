@@ -12666,5 +12666,38 @@
   "min_disk_free_mb": 82676,
   "setup_min": 1.13,
   "story": "phantom-blade-zero-out-now"
+ },
+ {
+  "name": "exodus-liberating-the-kay-40-minutes-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T20:10Z",
+  "stages": {
+   "checks": 3.2,
+   "montage": 30.8,
+   "text": 26.9,
+   "audio": 0.8,
+   "outro": 34.7
+  },
+  "total": 96.4,
+  "lane": "runner",
+  "queued_at": "2026-10-28T20:06:22Z",
+  "finished_at": "2026-10-28T20:10Z",
+  "render_min": 1.61,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 139,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1060,
+  "peak_mem_mb": 1734,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62536,
+  "peak_disk_mb": 64984,
+  "min_disk_free_mb": 82718,
+  "setup_min": 0.93,
+  "story": "exodus-liberating-the-kay-40-minutes"
  }
 ]
