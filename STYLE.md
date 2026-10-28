@@ -1,9 +1,31 @@
-# Digital Lounge: the rules in force (24 Oct 2026)
+# Digital Lounge: the rules in force (operations desk, from the release after 28 Oct 2026)
 
 One page of what applies today. CLAUDE.md is the full, dated history and wins
 on detail; each line here names its section there. Anything listed under
 "Not in force" is history, not a rule. Update this page in the same commit
 as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
+
+## Desks and the release window (28 Oct 2026)
+
+- **This session is the operations desk: news only.** Watch, verify, write,
+  render through job files, director QA, schedule and post, slot checks,
+  pinned and source comments, answer-the-why, news inbox cards, the morning
+  digest and the evergreen bank.
+- **No building.** No changes to tools, templates, render code, checks,
+  profiles, workflows, server services or the technical parts of these
+  instructions; no work on build cards. A bug in released code becomes a build
+  card (failure, job, log line) and a workaround inside the lane, never a
+  patch. The nightly build desk follows BUILD.md.
+- **Release window 04:00 Dubai daily.** Nothing that changes the system reaches
+  main outside it, except a security fix or a T0 instruction from Mohammad.
+  Ops's working data keeps flowing as now (story files, `jobs/render/`,
+  `live/`, the ledgers, watch-seen, digests-covered, the bank, the inbox). Ops
+  reads the release note at 05:30 and may revert a release merge when a slot is
+  at risk (change-log line and an fyi card), never patch it. Until the build
+  desk's task exists, ops performs the 04:00 merge of approved items, merge only.
+- **Reference:** how the render chain, checks and tools work, and the pilot
+  history: `ops/build/system-history.md`. Retired platforms and routes:
+  `notes/standing-history.md` (CLAUDE.md "Desks and the release window").
 
 ## Accounts
 
@@ -155,14 +177,10 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     multi-game charts and milestones. A game with footage takes `clipcard`,
     not `numbers` (`formats.pick(..., footage=True)`); multi-game charts
     keep the living ground with each game's art beside its row.
-  - Game skins (20 Oct, pilot): one game, its look (franchise skin, else
-    genre kit); several games or the industry, the house theme. Pilot kits:
-    sci-fi, fantasy, house with footage behind; `skin` logged in the format
-    ledger, compared after two weeks (kits built 20 Oct, `reel(..., skin=)`,
-    waiting on his side-by-side verdict). Card-led templates sit on the game's
-    dimmed, blurred, moving footage, never flat; nothing static in the first
-    3 s. Dubai type, mark, chip position, safe zone, end card and crimson
-    عاجل never change; no pixel copies of a game's UI or logo.
+  - Card-led templates sit on the game's dimmed, blurred, moving footage,
+    never flat; nothing static in the first 3 s. Dubai type, mark, chip
+    position, safe zone, end card and crimson عاجل never change. Game skins
+    are a build-desk pilot; no live Reel uses a kit until Mohammad's verdict.
   - Text cut by the crop (20 Oct): the shot sheet flags `cut-text`; drop the
     shot, or rebuild text that matters as a vertical card in the game's style.
   - A framed window on the ground plays a clip when footage exists, not a
@@ -353,13 +371,9 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   figures for history, the official map for places). No shot and no audio
   stretch in two episodes: `notes/ocarina-series.md` keeps the ledger
   (CLAUDE.md "Mini documentary").
-- **Web-style motion (pilot, 19 Oct):** HTML/CSS/JS pieces rendered frame by
-  frame in headless Chromium, palette and Dubai: the outro first (two or
-  three rotating variants) side by side with the current one for Mohammad's
-  verdict, then an Ocarina map piece. Readable at phone size first; safe
-  zone and reading pace apply; renders on the Mac once live; nothing
-  replaces a current piece until he approves (CLAUDE.md "Web-style motion
-  graphics").
+- **Pilots belong to the build desk** (web-style motion, game skins, the
+  motion-kit blocks, the media toolbox): nothing from them reaches a live Reel
+  until Mohammad approves its card (`ops/build/system-history.md`).
 - **HyperFrames inserts (24 Oct; pilot passed):** only numbers cards
   (count-ups, splits, rankings on the game's own footage) and rebuilt
   character, fact or UI cards in the game's style; footage, lines, sound,
@@ -374,16 +388,11 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   footage); two cards never half-faded together. The first three go to Mohammad as previews before
   Publer; then the normal rolling queue. Ledger note "hf insert"; render-times
   carries `hf_insert` (CLAUDE.md "HyperFrames inserts in live Reels").
-- **Motion kit pilot (24 Oct):** isolated on `pilot/motion-kit`, idle time
-  only, nothing posted, no change to the live render path. Elements: photo box
-  (play-triangle wipe, frame, name plate), number count with a small settle pop,
-  XP-style bar with one glint, chip press, record banner (real records only),
-  play-triangle card wipe, motif blips under the sound. Each under 0.5 s, only
-  where it helps reading, one or two per Reel, no flashing, shaking or loops;
-  skins change colours and plates, never the motion. Side by side with and
-  without, notes/motion-kit.md. Approved, all seven (24 Oct, inbox): they
-  join the HyperFrames inserts; photo box opens on frame 0 on the cover; first
-  three live uses previewed (CLAUDE.md "Digital Lounge motion kit").
+- **Motion kit (approved 24 Oct):** used only through the job's `"kit"` key
+  under the design-pass rules, one or two moments per Reel, never on the
+  breaking profile; the photo box opens on frame 0 on the cover; the director
+  QA asks whether each moment helps reading (CLAUDE.md "Digital Lounge motion
+  kit").
 - **People on the cover (24 Oct, inbox):** people stories open with the photo
   box and name plate beside the headline on frame 0; the box steps aside at
   3.5 s, then the lines (recipe 3 as amended).
@@ -398,30 +407,12 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   4. `final`, then `strip` again; the final strip and the shot sheet are
      committed to `cards/YYYY-MM/` as `<name>-strip.jpg` and
      `<name>-sheet.jpg` with the mp4 (14 Oct).
-  - Render time (14 Oct): one real encode per Reel at medium/18, lossless
-    intermediates, the picture pass cached per shot under uploads/cache,
-    end-card masters joined by concat; the breaking lane renders on the
-    `breaking` profile (no finish, veryfast/20, no draft); dated stories
-    have their footage cached the evening before; seconds per stage go to
-    `templates/assets/render-times.json`.
-  - Render runner (20 Oct): routine renders go to GitHub Actions
-    (`render.yml`, one job per `jobs/render/<name>.json`, run by
-    `templates/render_job.py`; fonts from dxb-fonts through `FONTS_TOKEN`,
-    never committed or logged). The job carries the focus judged on the
-    sheet (`render_job.py focus` before the sheet). Tested on the Cyberpunk
-    re-render (same length and text, 4 cores, 214 s a job) and reported to
-    Mohammad; the container is the fallback. Advisor memo of 20 Oct: a
-    runner Reel is held for his OK before it is scheduled; the container
-    renders the next story at the same time and takes over a runner job that
-    fails or passes 15 minutes; breaking stays on the container; both lanes
-    log story, lane, queued, finished, render and setup minutes.
-    Runner hold lifted (Mohammad, 20 Oct, about 17:17Z): runner Reels
-    follow the normal rolling-queue rules.
-  - Media toolbox (advisor, 25 Oct 2026, approved 01:08Z): ARMS is dropped (no third post).
-    Tools are automatic steps in render.yml or existing connectors, free first, licences recorded
-    for code and weights, each with a fallback to today's build, live only after his side-by-side
-    OK, inside the 45-minute fresh-reveal target. Test 1 (deblock, Real-ESRGAN, both, RAISR, framed
-    layout) on the ARMS footage, then tests E1 to E5 one card each (CLAUDE.md "Media toolbox").
+  - Rendering: commit `jobs/render/<name>.json` (keys in
+    `templates/render_job.py`) after `render_job.py check` and `focus`; the
+    runner commits the mp4, strip, sheet and dense strip and uploads to Publer;
+    a failed job keeps its file and its log names the check: fix the job, not
+    the code. Never call a run hung under 15 minutes. Breaking stories use the
+    breaking profile (CLAUDE.md "Rendering").
   - (CLAUDE.md "Full-screen format", "Creative brief and formats")
 
 ## Platforms
