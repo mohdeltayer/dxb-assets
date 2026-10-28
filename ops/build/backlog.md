@@ -147,3 +147,25 @@ after these; the test gate, the release window and BUILD.md apply.
   announcements land) needs X's own API. Tonight's Indie World runs on X as numbered posts quoting the root.
 - Scope: X API reply-to-own-post for show nights, keys requested by card, no posting rights beyond replies.
 - State: PARKED until after the order in "Order from 28 Oct night".
+
+## B13. Event package as a per-event setting (logged 28 Oct, adv-20261028-event-package, approved 17:21 Dubai)
+- Standing rule [newsroom]: every Reel from one showcase or event carries the same package: the event's official
+  logo as a badge on the chip row's left end beside our mark (Indie World option A: y 330 to 430, plate when needed),
+  one chip, bed flavour and accent per event, the same cover treatment, the recap list with the same badge; badge laid
+  on before upload. Logos from the organiser's assets only, recorded in the rights register.
+- Build: a per-event setting in the events calendar entry (event id, logo asset, plate, accent, bed flavour, chip
+  default, hashtag line), applied automatically to every job tagged with that event id. Tonight's Indie World run is
+  the reference and its numbers the default.
+- Order: after T0 moving footage (B2) and prepared trailers (B7); before 31 Oct for The Game Awards.
+- Test: side-by-side of two Reels from one event, badge by setting vs by hand, identical. One line in the release note.
+- State: READY (after B2 and B7).
+
+## B14. ffmpeg-skill trial, not adoption (logged 28 Oct, adv-20261028-ffmpeg-skill-trial, approved 20:53 Dubai)
+- Clone github.com/kajisho5/ffmpeg-skill (MIT) into the runner's home on dxb-render-1, run its doctor, rebuild one
+  of tonight's Indie World T0 Reels (Witchbrook or Tenjutsu) with its scripts alone (cut, fit, Dubai font via
+  --font-file, the Indie World badge in position A, our bed, loudness, Reels export, check, contact sheet).
+- Side-by-side card to Mohammad: published Reel vs the tool's version, time per step, check output, Arabic shaping and
+  font differences, what it cannot do that our pipeline does; one-paragraph recommendation on which of its 42 tools
+  would add to ours. Licence in the rights register as a trial. Nothing published, nothing adopted.
+- When: tonight if the queue allows, otherwise Thursday night.
+- State: READY.
