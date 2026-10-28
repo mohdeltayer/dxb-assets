@@ -141,3 +141,9 @@ after these; the test gate, the release window and BUILD.md apply.
   (yt-dlp, no login, result to Mohammad under the 28 Sep rule); E3 PaddleOCR; E4 PySceneDetect; E5
   HyperFrames' own checks.
 - State: READY.
+
+## B12. True X live threads (logged 28 Oct, adv-20261028-indie-world-live-thread)
+- Publer composes X thread replies only together with the root post, so a live thread on X (replies added as
+  announcements land) needs X's own API. Tonight's Indie World runs on X as numbered posts quoting the root.
+- Scope: X API reply-to-own-post for show nights, keys requested by card, no posting rights beyond replies.
+- State: PARKED until after the order in "Order from 28 Oct night".
