@@ -12063,5 +12063,38 @@
   "min_disk_free_mb": 83134,
   "setup_min": 1.07,
   "story": "ps5-prism-collection-transparent"
+ },
+ {
+  "name": "ps5-prism-collection-transparent-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T16:25Z",
+  "stages": {
+   "checks": 1.0,
+   "montage": 33.6,
+   "text": 43.0,
+   "audio": 0.9,
+   "outro": 33.9
+  },
+  "total": 112.4,
+  "lane": "runner",
+  "queued_at": "2026-10-28T16:21:45Z",
+  "finished_at": "2026-10-28T16:25Z",
+  "render_min": 1.87,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 122,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1048,
+  "peak_mem_mb": 2439,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62536,
+  "peak_disk_mb": 64590,
+  "min_disk_free_mb": 83112,
+  "setup_min": 1.1,
+  "story": "ps5-prism-collection-transparent"
  }
 ]
