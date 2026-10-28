@@ -11667,5 +11667,38 @@
   "min_disk_free_mb": 80968,
   "setup_min": 0.88,
   "story": "halloween-events-oct-28"
+ },
+ {
+  "name": "fm27-roshn-saudi-league-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T10:10Z",
+  "stages": {
+   "checks": 2.5,
+   "montage": 18.5,
+   "text": 26.4,
+   "audio": 0.6,
+   "outro": 26.0
+  },
+  "total": 74.0,
+  "lane": "runner",
+  "queued_at": "2026-10-28T10:07:30Z",
+  "finished_at": "2026-10-28T10:10Z",
+  "render_min": 1.23,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 121,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1061,
+  "peak_mem_mb": 1812,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 61330,
+  "peak_disk_mb": 63349,
+  "min_disk_free_mb": 84353,
+  "setup_min": 1.18,
+  "story": "fm27-roshn-saudi-league"
  }
 ]
