@@ -11931,5 +11931,38 @@
   "min_disk_free_mb": 84965,
   "setup_min": 0.93,
   "story": "iw-city-of-none-2027"
+ },
+ {
+  "name": "iw-recap-oct-28-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T15:07Z",
+  "stages": {
+   "checks": 6.8,
+   "montage": 66.2,
+   "text": 111.7,
+   "audio": 1.6,
+   "outro": 76.4
+  },
+  "total": 262.7,
+  "lane": "runner",
+  "queued_at": "2026-10-28T15:01:09Z",
+  "finished_at": "2026-10-28T15:07Z",
+  "render_min": 4.38,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 359,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1074,
+  "peak_mem_mb": 2144,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62280,
+  "peak_disk_mb": 66951,
+  "min_disk_free_mb": 80751,
+  "setup_min": 1.18,
+  "story": "iw-recap-oct-28"
  }
 ]
