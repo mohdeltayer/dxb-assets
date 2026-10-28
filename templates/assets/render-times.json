@@ -11733,5 +11733,38 @@
   "min_disk_free_mb": 84696,
   "setup_min": 0.97,
   "story": "t0-sample-blue-prince"
+ },
+ {
+  "name": "iw-witchbrook-jan-28-reel-v1.mp4",
+  "profile": "breaking",
+  "at": "2026-10-28T14:13Z",
+  "stages": {
+   "checks": 2.2,
+   "montage": 18.2,
+   "text": 21.2,
+   "audio": 0.4,
+   "outro": 18.2
+  },
+  "total": 60.3,
+  "lane": "runner",
+  "queued_at": "2026-10-28T14:09:26Z",
+  "finished_at": "2026-10-28T14:13Z",
+  "render_min": 1.0,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 106,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 988,
+  "peak_mem_mb": 1590,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62536,
+  "peak_disk_mb": 63333,
+  "min_disk_free_mb": 84368,
+  "setup_min": 1.87,
+  "story": "iw-witchbrook-jan-28"
  }
 ]
