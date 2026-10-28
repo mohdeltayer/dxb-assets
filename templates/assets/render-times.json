@@ -12568,5 +12568,54 @@
   "min_disk_free_mb": 82546,
   "setup_min": 0.93,
   "story": "phantom-blade-zero-out-now"
+ },
+ {
+  "name": "phantom-blade-zero-out-now-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T19:35Z",
+  "stages": {
+   "checks": 5.7,
+   "montage": 54.5,
+   "text": 34.0,
+   "audio": 0.8,
+   "outro": 40.4
+  },
+  "total": 135.3,
+  "lane": "runner",
+  "queued_at": "2026-10-28T19:31:05Z",
+  "finished_at": "2026-10-28T19:35Z",
+  "render_min": 2.26,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 5.6,
+   "audio_secs": 40.2,
+   "music_pct": 90.4,
+   "leak_pct": 0.6,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 2
+   },
+   "effects_shots": 11,
+   "mix_secs": 4.3,
+   "secs": 10.3
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 245,
+  "mem_total_mb": 15988,
+  "mem_start_mb": 1359,
+  "peak_mem_mb": 2632,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62890,
+  "peak_disk_mb": 65007,
+  "min_disk_free_mb": 82695,
+  "setup_min": 1.22,
+  "story": "phantom-blade-zero-out-now"
  }
 ]
