@@ -311,6 +311,21 @@ def repo_name(gitdir):
 def cmd_evidence(args):
     now = get_now(args.now)
     since = iso(now - timedelta(days=args.since_days))
+    if args.api:
+        # The Claude task's container: a slim clone has no history, so read it from the API with the
+        # session's own token (GH_TOKEN or GITHUB_TOKEN). Never printed.
+        cfg = config()
+        token = os.environ.get('GH_TOKEN') or os.environ.get('GITHUB_TOKEN') or ''
+        commits = []
+        for repo in cfg['evidence_repos']:
+            commits += fetch_commits(cfg, repo, since, token)
+        commits.sort(key=lambda c: c['at'])
+        out = {'commits': commits, 'runs': fetch_runs(cfg, token)}
+        sys.stdout.write(json.dumps(out, ensure_ascii=False, indent=1) + '\n')
+        return 0
+    if not args.git:
+        sys.stderr.write('evidence: give --git <repo_dir> or --api\n')
+        return 2
     refs = args.ref or ['origin/main']
     commits, seen = [], set()
     for gd in args.git:
@@ -911,7 +926,8 @@ def main(argv=None):
     p.add_argument('--now')
     p.set_defaults(fn=cmd_mirror)
     p = sub.add_parser('evidence')
-    p.add_argument('--git', action='append', required=True)
+    p.add_argument('--git', action='append')
+    p.add_argument('--api', action='store_true')
     p.add_argument('--ref', action='append')
     p.add_argument('--since-days', type=int, default=8)
     p.add_argument('--now')
