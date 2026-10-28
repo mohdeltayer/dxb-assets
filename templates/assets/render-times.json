@@ -11541,5 +11541,65 @@
   "min_disk_free_mb": 82307,
   "setup_min": 1.1,
   "story": "anomalith-out-today-oct-28"
+ },
+ {
+  "name": "anomalith-out-today-oct-28-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T07:04Z",
+  "stages": {
+   "checks": 3.9,
+   "montage": 35.2,
+   "text": 27.5,
+   "audio": 0.9,
+   "outro": 42.1
+  },
+  "total": 109.7,
+  "lane": "runner",
+  "queued_at": "2026-10-28T07:00:29Z",
+  "finished_at": "2026-10-28T07:04Z",
+  "render_min": 1.83,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "design_pass": {
+   "hf": "0.8.143",
+   "notes": [
+    "frame without a strip: if the frame fails, nothing carries its facts"
+   ],
+   "pieces": [
+    {
+     "piece": "frame",
+     "still": [
+      10.54,
+      12.9
+     ],
+     "ok": true,
+     "at": 9.0,
+     "secs": 4.2,
+     "render_secs": 36.1
+    }
+   ],
+   "blips": [
+    9.27,
+    9.57,
+    9.87
+   ],
+   "laid_back": [],
+   "secs": 61.1,
+   "blips_dropped_for_speech": []
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 253,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1196,
+  "peak_mem_mb": 2504,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62701,
+  "peak_disk_mb": 65394,
+  "min_disk_free_mb": 82308,
+  "setup_min": 1.33,
+  "story": "anomalith-out-today-oct-28"
  }
 ]
