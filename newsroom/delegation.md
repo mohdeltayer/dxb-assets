@@ -109,6 +109,19 @@ CLAUDE.md section of that name): the director checks the wording is neutral and
 attributed (no side taken, no leaker's framing), nothing leaked or extracted is
 on screen (not even blurred), there is no how-to or tool link, the footage is
 official, and the sound is our channel bed; any miss is a send-back.
+Answer the why (advisor card adv-20261027-answer-the-why, approved by Mohammad
+27 Oct 2026, 19:43 Dubai, after the Pokémon UNITE comments asked "for good or an
+update?" and "why?"). Every Reel, above all shutdowns, delays, price changes,
+layoffs, removals and bans: (1) the reason, attributed when the company gave one;
+when it gave none, the Reel or the caption says so in plain words («لم تعلن الشركة
+سبب الإغلاق» or the like); never a guessed reason, never context dressed as the
+reason; (2) what it means for players, answered from the primary: is it final, until
+when can I play, what happens to purchases and progress, which regions; (3) scope:
+which regions the announcement covers, and when the primary is regional (a Japanese
+account only) the text says so instead of implying a worldwide decision; (4) the
+pinned source comment carries the reason line and the key dates. Director question
+before upload: "What will the first comment ask?" If the Reel does not answer it,
+add a line or a card; a miss is a send-back.
 QA format (advisor, 23 Oct 2026; CLAUDE.md "Director QA format"). For every
 shot, pull one frame (the shot's middle, plus its first frame when a line
 enters there) and check: framing (subject in the 9:16 crop, no side-on face
