@@ -11766,5 +11766,38 @@
   "min_disk_free_mb": 84368,
   "setup_min": 1.87,
   "story": "iw-witchbrook-jan-28"
+ },
+ {
+  "name": "iw-repo-switch-2-2027-reel-v1.mp4",
+  "profile": "breaking",
+  "at": "2026-10-28T14:21Z",
+  "stages": {
+   "checks": 2.3,
+   "montage": 17.2,
+   "text": 21.3,
+   "audio": 0.2,
+   "outro": 18.6
+  },
+  "total": 59.7,
+  "lane": "runner",
+  "queued_at": "2026-10-28T14:19:19Z",
+  "finished_at": "2026-10-28T14:21Z",
+  "render_min": 0.99,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 107,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1023,
+  "peak_mem_mb": 1579,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62280,
+  "peak_disk_mb": 62676,
+  "min_disk_free_mb": 85026,
+  "setup_min": 1.15,
+  "story": "iw-repo-switch-2-2027"
  }
 ]
