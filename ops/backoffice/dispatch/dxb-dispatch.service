@@ -1,0 +1,16 @@
+[Unit]
+Description=DXB desk dispatcher: route inbox cards, notice pick-up, alert on late cards (no AI)
+Documentation=file://%h/dxb-assets/ops/backoffice/dispatch/README.md
+
+[Service]
+Type=oneshot
+# Optional non-secret overrides (DISPATCH_OPS_MIN, DISPATCH_STALE_H ...); the file may be absent.
+# The token and the ntfy topic are never put here: the script reads them from /etc/dxb-backup.
+EnvironmentFile=-%h/backoffice/dispatch/dispatch.env
+ExecStart=/usr/bin/python3 %h/dxb-assets/ops/backoffice/dispatch/dispatch.py tick
+# A few API calls and a JSON file: never competes with a render.
+Nice=10
+IOSchedulingClass=idle
+IOSchedulingPriority=7
+TimeoutStartSec=2min
+NoNewPrivileges=yes

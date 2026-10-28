@@ -1,0 +1,12 @@
+[Unit]
+Description=DXB desk dispatcher: one pass every 5 minutes
+
+[Timer]
+OnBootSec=3min
+OnCalendar=*:0/5
+AccuracySec=10s
+Persistent=true
+Unit=dxb-dispatch.service
+
+[Install]
+WantedBy=timers.target
