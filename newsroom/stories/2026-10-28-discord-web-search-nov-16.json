@@ -54,7 +54,7 @@
   "instagram_comment": "المصدر: مدونة ديسكورد، 27 أكتوبر. الإيقاف من إعدادات المستخدم، قسم البيانات والخصوصية."
  },
  "grammar": "04:08Z: no required edits; Discord kept in Latin as the platform name, the company with the bracket at first mention in the caption",
- "status": "scheduled in Publer 04:17Z for 06:00Z (10:00 Dubai) on Instagram, X and Threads; go: rolling queue",
+ "status": "published 06:00 to 06:01Z (10:00 Dubai) on Instagram, X and Threads; v2",
  "director": {
   "verdict": "PASS (04:15Z), v2",
   "table": [
@@ -98,5 +98,18 @@
   "v1": "rejected: the letterbox detector cropped the dark blurred ground and enlarged the image 1.8x, cutting its sides; v2 with nobars",
   "render": "runner"
  },
- "gate": "04:16Z: Discord blog post unchanged; no update or correction note"
+ "gate": "04:16Z: Discord blog post unchanged; no update or correction note",
+ "published": {
+  "at": "2026-10-28T06:00Z",
+  "platforms": [
+   "Instagram",
+   "X",
+   "Threads"
+  ],
+  "links": {
+   "Instagram": "https://www.instagram.com/reel/DfBvV0KjOCl/",
+   "X": "https://x.com/1748744375616643072/status/2115322879856255202",
+   "Threads": "https://www.threads.com/@the_digilounge/post/DfBvVxxjs54"
+  }
+ }
 }

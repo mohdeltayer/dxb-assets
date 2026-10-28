@@ -3,199 +3,52 @@
  "out": "cards/2026-10/moonlight-peaks-ps5-nov-17-reel-v1.mp4",
  "footage": [
   {
-   "file": "moonlight-release.mp4",
-   "steam": 2209900,
-   "trailer": "Release Date Trailer",
-   "start": 0,
-   "seconds": 180
-  },
-  {
-   "file": "moonlight-launch.mp4",
-   "steam": 2209900,
-   "trailer": "Launch Trailer",
-   "start": 0,
-   "seconds": 180
+   "file": "moonlight-peaks-picture.mp4",
+   "repo": "live/2026-10-28/moonlight-peaks-picture.mp4"
   }
  ],
  "shots": [
   [
-   "moonlight-release.mp4",
-   1.0,
-   2.2,
-   [
-    [
-     0.0,
-     0.316
-    ]
-   ]
+   "moonlight-peaks-picture.mp4",
+   0.0,
+   3.4,
+   0.5
   ],
   [
-   "moonlight-launch.mp4",
-   14.0,
-   1.8,
-   [
-    [
-     0.0,
-     0.508
-    ]
-   ]
+   "moonlight-peaks-picture.mp4",
+   3.4,
+   3.4,
+   0.5
   ],
   [
-   "moonlight-launch.mp4",
-   8.0,
-   1.4,
-   [
-    [
-     0.0,
-     0.646
-    ],
-    [
-     1.113,
-     0.546
-    ]
-   ]
+   "moonlight-peaks-picture.mp4",
+   6.8,
+   3.4,
+   0.5
   ],
   [
-   "moonlight-release.mp4",
-   15.0,
-   2.0,
-   [
-    [
-     0.0,
-     0.787
-    ]
-   ]
+   "moonlight-peaks-picture.mp4",
+   10.2,
+   3.4,
+   0.5
   ],
   [
-   "moonlight-release.mp4",
-   24.0,
-   2.0,
-   [
-    [
-     0.0,
-     0.507
-    ]
-   ]
+   "moonlight-peaks-picture.mp4",
+   13.6,
+   3.4,
+   0.5
   ],
   [
-   "moonlight-release.mp4",
-   28.5,
-   1.8,
-   [
-    [
-     0.0,
-     0.659
-    ]
-   ]
-  ],
-  [
-   "moonlight-launch.mp4",
-   32.0,
-   2.0,
-   [
-    [
-     0.0,
-     0.54
-    ]
-   ]
-  ],
-  [
-   "moonlight-release.mp4",
-   39.0,
-   2.0,
-   [
-    [
-     0.0,
-     0.696
-    ]
-   ]
-  ],
-  [
-   "moonlight-release.mp4",
-   43.5,
-   2.0,
-   [
-    [
-     0.0,
-     0.728
-    ]
-   ]
-  ],
-  [
-   "moonlight-release.mp4",
-   46.0,
-   1.4,
-   [
-    [
-     0.0,
-     0.0
-    ]
-   ]
-  ],
-  [
-   "moonlight-launch.mp4",
-   38.0,
-   2.0,
-   [
-    [
-     0.0,
-     0.523
-    ]
-   ]
-  ],
-  [
-   "moonlight-release.mp4",
-   57.0,
-   1.8,
-   [
-    [
-     0.0,
-     0.549
-    ]
-   ]
-  ],
-  [
-   "moonlight-release.mp4",
-   61.5,
-   2.2,
-   [
-    [
-     0.0,
-     0.741
-    ]
-   ]
-  ],
-  [
-   "moonlight-launch.mp4",
-   28.0,
-   1.5,
-   [
-    [
-     0.0,
-     0.297
-    ],
-    [
-     1.613,
-     0.522
-    ]
-   ]
-  ],
-  [
-   "moonlight-release.mp4",
-   67.5,
-   2.2,
-   [
-    [
-     0.0,
-     0.71
-    ]
-   ]
+   "moonlight-peaks-picture.mp4",
+   17.0,
+   3.4,
+   0.5
   ]
  ],
  "lines": [
   [
+   1,
    2,
-   4,
    [
     [
      "تؤدي فيها دور مصاص دماء\nيعيش ويزرع في بلدة سحرية",
@@ -204,21 +57,11 @@
    ]
   ],
   [
+   4,
    5,
-   7,
    [
     [
-     "وباعت أكثر من 300 ألف\nنسخة حول العالم",
-     {}
-    ]
-   ]
-  ],
-  [
-   11,
-   14,
-   [
-    [
-     "وهي متوفرة منذ يوليو على\nأجهزة نينتيندو والحاسب",
+     "وباعت أكثر من 300 ألف نسخة\nمنذ صدورها في يوليو",
      {}
     ]
    ]
@@ -230,17 +73,14 @@
  "date": "28 Oct 2026",
  "theme": "stylized",
  "style": "bold",
- "template": "clipcard",
+ "template": "stills",
  "skin": "house",
  "credits": [],
- "track": [
-  "moonlight-release.mp4",
-  0.0
- ],
+ "track": "bed",
  "frame": {
-  "shot": 8,
+  "shot": 3,
   "offset": 0.0,
-  "secs": 3.5,
+  "secs": 3.25,
   "data": {
    "platforms": [
     {
@@ -252,5 +92,6 @@
    "note": "نسخة رقمية فقط",
    "arabic": false
   }
- }
+ },
+ "sound": "neon_b"
 }
