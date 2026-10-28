@@ -11092,5 +11092,38 @@
   "min_disk_free_mb": 82988,
   "setup_min": 1.2,
   "story": "outlast-trials-switch-2-out-now"
+ },
+ {
+  "name": "conan-exiles-enhanced-aloft-ps5-2027-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T03:11Z",
+  "stages": {
+   "checks": 2.5,
+   "montage": 24.9,
+   "text": 22.4,
+   "audio": 0.6,
+   "outro": 30.5
+  },
+  "total": 80.7,
+  "lane": "runner",
+  "queued_at": "2026-10-28T03:07:26Z",
+  "finished_at": "2026-10-28T03:11Z",
+  "render_min": 1.35,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 199,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1016,
+  "peak_mem_mb": 1925,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62482,
+  "peak_disk_mb": 63823,
+  "min_disk_free_mb": 83879,
+  "setup_min": 0.92,
+  "story": "conan-exiles-enhanced-aloft-ps5-2027"
  }
 ]
