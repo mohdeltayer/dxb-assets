@@ -11354,5 +11354,84 @@
   "min_disk_free_mb": 81366,
   "setup_min": 1.08,
   "story": "palworld-ceo-switch-2-vgc"
+ },
+ {
+  "name": "sulfur-1-0-all-consoles-oct-28-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T05:34Z",
+  "stages": {
+   "checks": 8.9,
+   "montage": 89.0,
+   "text": 50.2,
+   "audio": 1.0,
+   "outro": 49.1
+  },
+  "total": 198.2,
+  "lane": "runner",
+  "queued_at": "2026-10-28T05:29:38Z",
+  "finished_at": "2026-10-28T05:34Z",
+  "render_min": 3.3,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 15.2,
+   "audio_secs": 54.4,
+   "music_pct": 66.4,
+   "leak_pct": 1.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 20,
+   "mix_secs": 5.4,
+   "secs": 21.2
+  },
+  "design_pass": {
+   "hf": "0.8.143",
+   "notes": [
+    "frame without a strip: if the frame fails, nothing carries its facts"
+   ],
+   "pieces": [
+    {
+     "piece": "frame",
+     "still": [
+      13.16,
+      15.2
+     ],
+     "ok": true,
+     "at": 10.8,
+     "secs": 4.7,
+     "render_secs": 34.7
+    }
+   ],
+   "blips": [
+    11.07,
+    11.37,
+    11.67,
+    11.97,
+    12.27,
+    12.57
+   ],
+   "laid_back": [],
+   "secs": 64.9,
+   "blips_dropped_for_speech": []
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 395,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1489,
+  "peak_mem_mb": 3913,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 63073,
+  "peak_disk_mb": 65906,
+  "min_disk_free_mb": 81795,
+  "setup_min": 1.22,
+  "story": "sulfur-1-0-all-consoles-oct-28"
  }
 ]
