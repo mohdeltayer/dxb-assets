@@ -125,6 +125,12 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - Companies, studios, outlets and people are written in Arabic with the
     Latin in brackets at first mention, on screen too.
   - Say what an unfamiliar name is («استوديو…», «صانع المحتوى…»).
+- **Release verbs [games]** (Mohammad, 28 Oct 2026): a release date takes
+  تصدر (تصدر اللعبة في 28 يناير 2027); out now is متوفرة الآن or صدرت اليوم;
+  coming to a platform is قادمة إلى or تصل إلى + the platform; announced with
+  no date is أُعلن عن; an event or product launch is تُطلق. Never a bare
+  تصل for a date (not «تصل اللعبة في 2027»). Glossary row in
+  `arabic/house-glossary.md`.
 - **Direction:** every post, paragraph and on-screen line opens on an Arabic
   word. reel.py now stops when a wrapped headline or story line opens on
   Latin, a digit or a bracket (13 Oct), and when an Arabic prefix is glued

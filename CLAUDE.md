@@ -231,6 +231,13 @@ Write "تصل DYNASTY WARRIORS 3", not "DYNASTY WARRIORS 3 تصل", and lead the
 hashtag line with #ألعاب #أخبار_الألعاب. Read every paragraph's first
 word before queuing.
 
+Release verbs (Mohammad, 28 Oct 2026, glossary rule [games]; advisor item
+adv-20261028-release-verbs): a release date takes تصدر; out now is متوفرة
+الآن or صدرت اليوم; coming to a platform is قادمة إلى or تصل إلى + the
+platform; announced with no date is أُعلن عن; an event or product launch is
+تُطلق. Never a bare تصل for a date: تصل on its own does not say a game is
+released. Glossary row and STYLE.md updated the same day.
+
 The two brands never share a mark; their palettes are kin
 (Mohammad, 26 Sep 2026). What tells a Digital Lounge card apart is the
 indigo ground, the play mark, Dubai type and the right-to-left footer.
