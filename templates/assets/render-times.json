@@ -12699,5 +12699,38 @@
   "min_disk_free_mb": 82718,
   "setup_min": 0.93,
   "story": "exodus-liberating-the-kay-40-minutes"
+ },
+ {
+  "name": "exodus-liberating-the-kay-40-minutes-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T20:15Z",
+  "stages": {
+   "checks": 4.4,
+   "montage": 38.8,
+   "text": 38.1,
+   "audio": 0.9,
+   "outro": 45.6
+  },
+  "total": 127.8,
+  "lane": "runner",
+  "queued_at": "2026-10-28T20:11:43Z",
+  "finished_at": "2026-10-28T20:15Z",
+  "render_min": 2.13,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 179,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 984,
+  "peak_mem_mb": 1760,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62538,
+  "peak_disk_mb": 64994,
+  "min_disk_free_mb": 82708,
+  "setup_min": 1.0,
+  "story": "exodus-liberating-the-kay-40-minutes"
  }
 ]
