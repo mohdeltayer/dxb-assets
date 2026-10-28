@@ -11700,5 +11700,38 @@
   "min_disk_free_mb": 84353,
   "setup_min": 1.18,
   "story": "fm27-roshn-saudi-league"
+ },
+ {
+  "name": "t0-sample-blue-prince-reel-v1.mp4",
+  "profile": "breaking",
+  "at": "2026-10-28T11:36Z",
+  "stages": {
+   "checks": 3.1,
+   "montage": 11.4,
+   "text": 21.0,
+   "audio": 0.3,
+   "outro": 19.3
+  },
+  "total": 55.1,
+  "lane": "runner",
+  "queued_at": "2026-10-28T11:34:09Z",
+  "finished_at": "2026-10-28T11:36Z",
+  "render_min": 0.92,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 77,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1072,
+  "peak_mem_mb": 1616,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62482,
+  "peak_disk_mb": 63006,
+  "min_disk_free_mb": 84696,
+  "setup_min": 0.97,
+  "story": "t0-sample-blue-prince"
  }
 ]
