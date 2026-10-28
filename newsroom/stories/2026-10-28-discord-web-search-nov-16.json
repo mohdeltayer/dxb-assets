@@ -1,20 +1,41 @@
 {
  "id": "2026-10-28-discord-web-search-nov-16",
  "title": "Discord: Discoverable Server pages from 16 Nov, public channel messages in web search from mid-December; member setting on by default in the Gulf",
- "genre": ["industry/hardware"],
+ "genre": [
+  "industry/hardware"
+ ],
  "kind": "policy",
  "chip": "رسمي",
  "tier": "T2",
  "sensitive": "none",
  "sources": [
-  {"role": "primary", "name": "Discord blog, 27 Oct 2026, 'Making content from Discoverable Servers easier to discover'", "url": "https://discord.com/blog/making-content-from-discoverable-servers-easier-to-discover"},
-  {"role": "relay", "name": "IGN 27 Oct 19:41Z, Kotaku, IGN ME Arabic, Automaton JP, Denfami (scout digest 05:54 Dubai)"}
+  {
+   "role": "primary",
+   "name": "Discord blog, 27 Oct 2026, 'Making content from Discoverable Servers easier to discover'",
+   "url": "https://discord.com/blog/making-content-from-discoverable-servers-easier-to-discover"
+  },
+  {
+   "role": "relay",
+   "name": "IGN 27 Oct 19:41Z, Kotaku, IGN ME Arabic, Automaton JP, Denfami (scout digest 05:54 Dubai)"
+  }
  ],
  "claims": [
-  {"claim": "Discoverable Servers (1,000+ members, 8+ weeks old) get Server Web Pages from 16 Nov 2026", "status": "primary"},
-  {"claim": "public channel messages roll out to web pages and search from mid-December 2026, gradually", "status": "primary"},
-  {"claim": "usernames and avatars not shown; DMs, group DMs and private servers excluded", "status": "primary"},
-  {"claim": "member setting off by default in the EU, UK, Canada, Brazil, Australia and South Korea; on elsewhere (so on in the Gulf); messages before mid-December never shown", "status": "primary"}
+  {
+   "claim": "Discoverable Servers (1,000+ members, 8+ weeks old) get Server Web Pages from 16 Nov 2026",
+   "status": "primary"
+  },
+  {
+   "claim": "public channel messages roll out to web pages and search from mid-December 2026, gradually",
+   "status": "primary"
+  },
+  {
+   "claim": "usernames and avatars not shown; DMs, group DMs and private servers excluded",
+   "status": "primary"
+  },
+  {
+   "claim": "member setting off by default in the EU, UK, Canada, Brazil, Australia and South Korea; on elsewhere (so on in the Gulf); messages before mid-December never shown",
+   "status": "primary"
+  }
  ],
  "why": "Most game communities, Gulf ones included, run on Discord, and the Gulf is in the on-by-default group.",
  "brief": {
@@ -33,5 +54,49 @@
   "instagram_comment": "المصدر: مدونة ديسكورد، 27 أكتوبر. الإيقاف من إعدادات المستخدم، قسم البيانات والخصوصية."
  },
  "grammar": "04:08Z: no required edits; Discord kept in Latin as the platform name, the company with the bracket at first mention in the caption",
- "status": "render job pushed 03:59Z (runner)"
+ "status": "scheduled in Publer 04:17Z for 06:00Z (10:00 Dubai) on Instagram, X and Threads; go: rolling queue",
+ "director": {
+  "verdict": "PASS (04:15Z), v2",
+  "table": [
+   [
+    "0 DBD server web page",
+    "0-3.5",
+    "PASS",
+    "headline over the top edge of the framed image, readable at grid size"
+   ],
+   [
+    "1 server types chart",
+    "3.5-7.9",
+    "PASS",
+    "line 1 under the frame"
+   ],
+   [
+    "2 server web page",
+    "7.9-12.0",
+    "PASS",
+    "line 2"
+   ],
+   [
+    "3 announcements page",
+    "12.0-16.5",
+    "PASS",
+    "line 3"
+   ],
+   [
+    "4 member setting",
+    "16.5-23.3",
+    "PASS",
+    "two sentences, the Gulf default on the setting itself"
+   ],
+   [
+    "5 admin settings",
+    "23.3-27.5",
+    "PASS",
+    "closing picture with line 5"
+   ]
+  ],
+  "v1": "rejected: the letterbox detector cropped the dark blurred ground and enlarged the image 1.8x, cutting its sides; v2 with nobars",
+  "render": "runner"
+ },
+ "gate": "04:16Z: Discord blog post unchanged; no update or correction note"
 }
