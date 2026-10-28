@@ -10961,5 +10961,54 @@
   "min_disk_free_mb": 233162,
   "setup_min": 0.22,
   "story": "oot-road-ep6-boy-without-a-fairy"
+ },
+ {
+  "name": "outlast-trials-switch-2-out-now-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T02:30Z",
+  "stages": {
+   "checks": 4.0,
+   "montage": 32.9,
+   "text": 29.9,
+   "audio": 0.7,
+   "outro": 31.1
+  },
+  "total": 98.6,
+  "lane": "runner",
+  "queued_at": "2026-10-28T02:25:30Z",
+  "finished_at": "2026-10-28T02:30Z",
+  "render_min": 1.64,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 6.3,
+   "audio_secs": 31.7,
+   "music_pct": 45.1,
+   "leak_pct": 2.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 3
+   },
+   "effects_shots": 6,
+   "mix_secs": 3.1,
+   "secs": 9.8
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 174,
+  "mem_total_mb": 15989,
+  "mem_start_mb": 1336,
+  "peak_mem_mb": 1934,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62571,
+  "peak_disk_mb": 64193,
+  "min_disk_free_mb": 83509,
+  "setup_min": 1.25,
+  "story": "outlast-trials-switch-2-out-now"
  }
 ]
