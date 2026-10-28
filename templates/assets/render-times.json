@@ -12178,5 +12178,54 @@
   "min_disk_free_mb": 83364,
   "setup_min": 1.02,
   "story": "ps5-prism-collection-transparent"
+ },
+ {
+  "name": "rayman-legends-retold-astro-bot-costume-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-28T16:40Z",
+  "stages": {
+   "checks": 2.2,
+   "montage": 547.8,
+   "text": 34.0,
+   "audio": 0.9,
+   "outro": 39.3
+  },
+  "total": 624.2,
+  "lane": "runner",
+  "queued_at": "2026-10-28T16:28:03Z",
+  "finished_at": "2026-10-28T16:40Z",
+  "render_min": 10.4,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 4.0,
+   "audio_secs": 25.6,
+   "music_pct": 68.1,
+   "leak_pct": 0.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 1
+   },
+   "effects_shots": 2,
+   "mix_secs": 0.8,
+   "secs": 5.3
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 687,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1298,
+  "peak_mem_mb": 1765,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62875,
+  "peak_disk_mb": 64777,
+  "min_disk_free_mb": 82925,
+  "setup_min": 1.12,
+  "story": "rayman-legends-retold-astro-bot-costume"
  }
 ]
