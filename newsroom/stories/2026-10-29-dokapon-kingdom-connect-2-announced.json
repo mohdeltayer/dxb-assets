@@ -90,7 +90,7 @@
    "decode": "clean"
   }
  },
- "status": "scheduled",
+ "status": "published",
  "published_version": "v3",
  "gate_prepublish": "gate 04:15Z: Steam appdetails re-read (coming 2027, Idea Factory International; developers Idea Factory, Compile Heart, Sting); trailer end slate Summer 2027 on Switch 2, Switch, Steam",
  "scheduled": "scheduled in Publer 09:00Z (13:00 Dubai) on Instagram, X and Threads; labels tpl:clipcard, skin:house, sound:trailer, genre:family; preview card prod-20261029-dokapon-connect-2-preview (default Approve 08:45Z)",
@@ -149,5 +149,13 @@
    "PASS",
    "25 s (over 20 s target, lines need the time); trailer music, no speech; one fact one place (date only on the card)"
   ]
- ]
+ ],
+ "published": {
+  "at": "2026-10-29T09:01Z",
+  "version": "v3",
+  "instagram": "https://www.instagram.com/reel/DfEo2MYEss-/",
+  "threads": "https://www.threads.com/@the_digilounge/post/DfEo2HyFWpZ",
+  "x": "https://x.com/1748744375616643072/status/2115730822149845350",
+  "checked": "09:05Z, all three Published"
+ }
 }
