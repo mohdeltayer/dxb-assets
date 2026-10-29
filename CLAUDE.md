@@ -513,6 +513,14 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   The container has no Dubai font, so wraps are only caught on the runner:
   keep a headline line under about 26 characters at 60 when it carries a
   Latin name.
+- Lines are one spoken paragraph (Mohammad, 29 Oct 2026, card
+  adv-20261029-lines-as-one-paragraph, from the Rayman Legends Retold Reel, whose lines
+  read as separate facts: «وهذا شكله المعتاد» before Rayman was named, two lines opening on
+  و, «الخياط» unexplained). Write the lines as one paragraph told to a friend, then cut it into
+  beats; read them aloud in order before the job is committed; the subject is named before any
+  pronoun; no line opens on و unless it continues the line before within 3 s; in-game terms are
+  explained in three words or replaced; a comparison labels both halves on screen. In the
+  director QA and, once live, the text-level pre-render checks.
 - Say what a name is (Mohammad, 2 Oct 2026, after the Miami HEAT Reel):
   many viewers only watch, so the on-screen text identifies any name an
   Arab gamer may not know, at its first appearance (headline or first
