@@ -13961,5 +13961,54 @@
   "min_disk_free_mb": 82996,
   "setup_min": 1.13,
   "story": "phantom-blade-zero-steam-peak-launch-day"
+ },
+ {
+  "name": "the-wolf-among-us-remastered-out-now-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T13:50Z",
+  "stages": {
+   "checks": 3.8,
+   "montage": 38.8,
+   "text": 53.3,
+   "audio": 1.0,
+   "outro": 44.2
+  },
+  "total": 141.1,
+  "lane": "runner",
+  "queued_at": "2026-10-29T13:44:36Z",
+  "finished_at": "2026-10-29T13:50Z",
+  "render_min": 2.35,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 13.9,
+   "audio_secs": 38.0,
+   "music_pct": 98.4,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 5
+   },
+   "effects_shots": 5,
+   "mix_secs": 6.0,
+   "secs": 20.4
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 242,
+  "mem_total_mb": 15988,
+  "mem_start_mb": 1323,
+  "peak_mem_mb": 2486,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62835,
+  "peak_disk_mb": 65587,
+  "min_disk_free_mb": 82115,
+  "setup_min": 1.98,
+  "story": "the-wolf-among-us-remastered-out-now"
  }
 ]
