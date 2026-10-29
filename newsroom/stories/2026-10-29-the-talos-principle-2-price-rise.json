@@ -64,8 +64,49 @@
  "answer_the_why": "reason given by Croteam (costs, inflation) on screen and in the caption; owners unaffected",
  "versions": {
   "v1": {
-   "pushed": "13:47Z"
+   "pushed": "13:47Z",
+   "rendered": "14:07Z",
+   "director": "FIX: blurred eye close-up as cover, soft close"
+  },
+  "v2": {
+   "pushed": "14:09Z",
+   "rendered": "14:44Z",
+   "notes": "two runner stops on flagged edges (window frames, particle effect), looked and waived"
   }
  },
- "status": "rendering"
+ "status": "scheduled",
+ "director": {
+  "verdict": "PASS (v2)",
+  "shots": [
+   [
+    "1",
+    "0-3.6",
+    "PASS",
+    "robot crowd: cover and headline"
+   ],
+   [
+    "2",
+    "3.6-7.8",
+    "PASS",
+    "robot statue and hands: Croteam line"
+   ],
+   [
+    "3",
+    "7.8-12.3",
+    "PASS",
+    "robots: the reason line"
+   ],
+   [
+    "4",
+    "12.3-14.1",
+    "PASS",
+    "robot at the window, robot faces: owners line, closing picture"
+   ]
+  ],
+  "sound": "release-date trailer music from 3.9 s, speech: none",
+  "model": "main session"
+ },
+ "deepl_backcheck": "14:00Z: meaning intact (X, caption, lines)",
+ "scheduled": "scheduled in Publer 16:30Z (20:30 Dubai): Instagram, X, Threads",
+ "approved": "go: rolling queue; preview sent 14:52Z; gate 14:50Z: Steam US $39.99, AE 119.99 AED, SA 86.99 SR"
 }
