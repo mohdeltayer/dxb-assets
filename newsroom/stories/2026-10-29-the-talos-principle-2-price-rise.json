@@ -1,0 +1,71 @@
+{
+ "id": "2026-10-29-the-talos-principle-2-price-rise",
+ "title": "The Talos Principle 2 base price rises from $29.99 to $39.99 on Steam",
+ "account": "Digital Lounge",
+ "chip": "السعر",
+ "template": "split",
+ "skin": "house",
+ "sound": "trailer",
+ "genre": [
+  "puzzle",
+  "indie"
+ ],
+ "first_report": "Croteam's Steam post 'Price Adjustment for The Talos Principle 2', 28 Oct 22:01Z (29 Oct 02:01 Dubai)",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://store.steampowered.com/news/app/835960",
+   "says": "base price $29.99 to $39.99 USD, regional prices adjusted; rising development and support costs, inflation; owners unaffected",
+   "read": "13:30Z"
+  },
+  {
+   "kind": "store",
+   "url": "https://store.steampowered.com/api/appdetails?appids=835960&cc=ae",
+   "says": "US $39.99, AE 119.99 AED, SA 86.99 SR",
+   "read": "13:30Z"
+  }
+ ],
+ "claims": [
+  {
+   "text": "$29.99 to $39.99",
+   "status": "confirmed (Croteam)"
+  },
+  {
+   "text": "UAE 119.99 AED, Saudi 86.99 SR now",
+   "status": "confirmed (store API 13:30Z); the old AED and SAR prices are not stated"
+  },
+  {
+   "text": "reason: rising development and support costs, inflation",
+   "status": "confirmed (Croteam, attributed)"
+  },
+  {
+   "text": "owners unaffected",
+   "status": "confirmed"
+  }
+ ],
+ "sensitive": "none (the launch trailer narration mentions New Jerusalem; it is not used, the sound is the release-date trailer music)",
+ "brief": {
+  "family": "setback (5)",
+  "hook": "number: price up 10 dollars",
+  "cover": "release-date trailer robot face (3.9 s)",
+  "key_shot": "robot statue under the price line",
+  "where_how_much": "strip: UAE Steam 119.99 AED, Saudi 86.99 SR, base $39.99",
+  "sound": "release-date trailer music from 3.9 s, speech none; launch and gameplay trailers checked, both narrated throughout",
+  "seconds": 13.6,
+  "read_aloud": "The Talos Principle 2 costs ten dollars more. Croteam raised the price on Steam today. The reason, the studio says, is rising development costs. Nothing changes for those who own it."
+ },
+ "drafts": {
+  "x": "رفعت كروتيم (Croteam) سعر The Talos Principle 2 على Steam من 29.99 إلى 39.99 دولار، وقالت إن تكاليف التطوير ارتفعت.",
+  "threads": "رفعت كروتيم (Croteam) سعر The Talos Principle 2 على Steam من 29.99 إلى 39.99 دولار، وقالت إن تكاليف التطوير ارتفعت.\n\nالمصدر: إعلان كروتيم (Croteam) على Steam",
+  "instagram": "سعر The Talos Principle 2 يرتفع 10 دولارات.\n\nرفعت شركة كروتيم (Croteam) السعر الأساسي للعبة The Talos Principle 2 على Steam من 29.99 إلى 39.99 دولار، وعدّلت أسعارها الإقليمية تبعًا لذلك.\n\nوأصبح سعرها على Steam في الإمارات 119.99 درهم، وفي السعودية 86.99 ريال.\n\nوقالت كروتيم إن تكاليف تطوير الألعاب ودعمها ارتفعت كثيرًا في السنوات الأخيرة بسبب التضخم، وإن من يملك اللعبة لن يتأثر بالتغيير.\n\n#ألعاب #أخبار_الألعاب #TheTalosPrinciple2 #Steam",
+  "ig_first_comment": "المصدر: إعلان كروتيم (Croteam) على Steam، 29 أكتوبر",
+  "x_reply": "المصدر: https://store.steampowered.com/news/app/835960"
+ },
+ "answer_the_why": "reason given by Croteam (costs, inflation) on screen and in the caption; owners unaffected",
+ "versions": {
+  "v1": {
+   "pushed": "13:47Z"
+  }
+ },
+ "status": "rendering"
+}
