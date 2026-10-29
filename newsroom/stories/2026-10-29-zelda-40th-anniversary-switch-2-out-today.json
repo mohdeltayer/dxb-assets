@@ -105,7 +105,11 @@
   },
   {
    "v": 8,
-   "note": "opening focus 0.46 on the Triforce Joy-Con (from reel's seek map)"
+   "note": "opening focus 0.46 on the Triforce Joy-Con (from reel's seek map); strip: only a sliver of the Joy-Con (cropdetect reads the black studio ground as bars: picture window x 604 to 1920)"
+  },
+  {
+   "v": 9,
+   "note": "opening focus 0.05 (window x 648 to 1093: the gold Triforce and pixel-art Link on the Joy-Con), checked on a frame before the render"
   }
  ],
  "status": "building",
