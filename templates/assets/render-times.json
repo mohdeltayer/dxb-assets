@@ -14059,5 +14059,54 @@
   "min_disk_free_mb": 82635,
   "setup_min": 1.18,
   "story": "the-talos-principle-2-price-rise"
+ },
+ {
+  "name": "the-wolf-among-us-remastered-out-now-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T14:12Z",
+  "stages": {
+   "checks": 4.3,
+   "montage": 43.5,
+   "text": 58.1,
+   "audio": 1.1,
+   "outro": 47.1
+  },
+  "total": 154.2,
+  "lane": "runner",
+  "queued_at": "2026-10-29T14:07:36Z",
+  "finished_at": "2026-10-29T14:12Z",
+  "render_min": 2.57,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 12.6,
+   "audio_secs": 42.8,
+   "music_pct": 98.5,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 3
+   },
+   "effects_shots": 6,
+   "mix_secs": 6.7,
+   "secs": 19.9
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 269,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1351,
+  "peak_mem_mb": 2605,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62891,
+  "peak_disk_mb": 65908,
+  "min_disk_free_mb": 81794,
+  "setup_min": 1.17,
+  "story": "the-wolf-among-us-remastered-out-now"
  }
 ]
