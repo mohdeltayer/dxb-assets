@@ -112,7 +112,65 @@
    "note": "opening focus 0.05 (window x 648 to 1093: the gold Triforce and pixel-art Link on the Joy-Con), checked on a frame before the render"
   }
  ],
- "status": "building",
+ "status": "scheduled",
  "grammar_review": "02:25Z: no required edits on post texts; Reel-line bracket for نينتيندو not applied (credit line carries «نينتيندو (Nintendo)» first at 2 s, the line is a later mention); release verb set to صدر/صدرت اليوم per glossary (was متوفر/متوفرة اليوم); Threads source line «موقع نينتيندو في اليابان»",
- "read_aloud": "02:35Z (rule adv-20261029-lines-as-one-paragraph): «جهاز Switch 2 بتصميم Zelda صدر اليوم في اليابان. في الذكرى الأربعين لسلسلة Zelda. رمز Triforce مرسوم على ظهر الجهاز. لكنه مخصص لليابان فقط، حسب نينتيندو.» No line opens on و; subject named in the headline before لكنه."
+ "read_aloud": "02:35Z (rule adv-20261029-lines-as-one-paragraph): «جهاز Switch 2 بتصميم Zelda صدر اليوم في اليابان. في الذكرى الأربعين لسلسلة Zelda. رمز Triforce مرسوم على ظهر الجهاز. لكنه مخصص لليابان فقط، حسب نينتيندو.» No line opens on و; subject named in the headline before لكنه.",
+ "published_version": "v9",
+ "gate_prepublish": "gate 02:44Z: Nintendo JP edition page re-read: 62,980 yen, 2026.10.29, Japan-only model, no game included; no update, correction or sold-out notice on the page",
+ "scheduled": "scheduled in Publer 02:45Z for 06:00Z (10:00 Dubai): Instagram Reel (first comment, Dubai location), X (source link reply), Threads (source line); labels tpl:split, skin:house, sound:bed, genre:family",
+ "director": [
+  {
+   "shot": 0,
+   "time": "0-1.9",
+   "verdict": "PASS",
+   "note": "Joy-Con with the gold Triforce and pixel-art Link under the headline (grid tile)"
+  },
+  {
+   "shot": 1,
+   "time": "1.9-2.8",
+   "verdict": "PASS",
+   "note": "Joy-Con rail, dark but readable"
+  },
+  {
+   "shot": 2,
+   "time": "2.8-4.3",
+   "verdict": "PASS",
+   "note": "stick close-up under «في الذكرى الأربعين»"
+  },
+  {
+   "shot": 3,
+   "time": "4.3-5.8",
+   "verdict": "PASS",
+   "note": "red crest (waived smear flag: clean line art)"
+  },
+  {
+   "shot": 4,
+   "time": "5.8-9.0",
+   "verdict": "PASS",
+   "note": "Triforce pattern on the back under its line"
+  },
+  {
+   "shot": 5,
+   "time": "9.0-10.7",
+   "verdict": "PASS",
+   "note": "blue crest under «لكنه مخصص لليابان فقط»"
+  },
+  {
+   "shot": 6,
+   "time": "10.7-12.4",
+   "verdict": "PASS",
+   "note": "green crest"
+  },
+  {
+   "shot": 7,
+   "time": "12.4-14.2",
+   "verdict": "PASS",
+   "note": "golden Triforce, last 2 s a picture"
+  },
+  {
+   "reel": "PASS",
+   "note": "sound: our bed (Nintendo's film is silent); strip carries date and Japan price, lines never repeat it; 14.2 s"
+  }
+ ],
+ "director_model": "main session"
 }
