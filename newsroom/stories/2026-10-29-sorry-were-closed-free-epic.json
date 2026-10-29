@@ -69,8 +69,48 @@
  },
  "versions": {
   "v1": {
-   "pushed": "15:22Z"
+   "pushed": "15:22Z",
+   "note": "director FIX: release-trailer opening flashes hallway and face every quarter second; last shot ran into the title card"
+  },
+  "v2": {
+   "pushed": "15:25Z",
+   "render": "runner 245 s",
+   "note": "file name kept -reel-v1.mp4 (job out not bumped); Publer media is the 15:31Z upload, 15,476,028 bytes"
   }
  },
- "status": "rendering"
+ "status": "scheduled",
+ "director": [
+  [
+   "1",
+   "0 to 2.9 s",
+   "PASS",
+   "corridor creature with Michelle, moving under the headline"
+  ],
+  [
+   "2",
+   "2.9 to 6.1 s",
+   "PASS",
+   "Michelle crouched, name line; creature and smoke beat inside the stretch"
+  ],
+  [
+   "3",
+   "6.1 to 9.0 s",
+   "PASS",
+   "creature close, fixed-camera line"
+  ],
+  [
+   "4-5",
+   "9.0 to 11.3 s",
+   "PASS",
+   "Michelle walking, then the shop counter under the keep-it line; no title card; last two seconds a picture"
+  ],
+  [
+   "Reel",
+   "11.3 s + end card",
+   "PASS",
+   "speech none, decode clean, pink is the game's own art"
+  ]
+ ],
+ "scheduled": "scheduled in Publer 19:15Z (23:15 Dubai): Instagram (Reel, first comment source, Dubai location), X (follow-up with the store link), Threads (source line); labels tpl:split, skin:house, sound:trailer, genre:horror",
+ "approved": "go: rolling queue; preview sent 15:40Z; gate 15:37Z: Epic free-games feed (AE) free 29 Oct 15:00Z to 5 Nov 16:00Z, regular 63.99 AED"
 }
