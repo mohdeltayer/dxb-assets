@@ -46,7 +46,7 @@
  "drafts": {
   "x": "أجّلت فروم سوفتوير (FromSoftware) لعبة The Duskbloods الحصرية لجهاز Switch 2 من 2026 إلى 2027، لضبط قواعد اللعب والتوازن، حسب إعلان الاستوديو.",
   "threads": "أجّلت فروم سوفتوير (FromSoftware) لعبة The Duskbloods الحصرية لجهاز Switch 2 من 2026 إلى 2027، لضبط قواعد اللعب والتوازن، حسب إعلان الاستوديو.\n\nالمصدر: الموقع الرسمي للعبة",
-  "instagram": "تأجيل The Duskbloods إلى 2027.\n\nأعلنت فروم سوفتوير (FromSoftware) تأجيل لعبتها The Duskbloods، الحصرية لجهاز Switch 2، من 2026 إلى 2027.\n\nوقال الاستوديو إنه قرر منح نفسه وقتًا للضبط النهائي لقواعد اللعب والتوازن، حتى يقدّم فكرة اللعبة التي أعجبت اللاعبين في اختبار الشبكة في أغسطس على نحو أفضل، وهي أن المتعة لا تقتصر على القتال المباشر، بل تشمل أساليب لعب واستراتيجيات متنوعة. واعتذر الاستوديو للاعبين المنتظرين.\n\nولم يحدد الاستوديو موعد الإصدار في 2027 بعد.\n\n#ألعاب #أخبار_الألعاب #TheDuskbloods #NintendoSwitch2",
+  "instagram": "تأجيل لعبة The Duskbloods الحصرية لجهاز Switch 2 إلى 2027.\n\nأعلنت فروم سوفتوير (FromSoftware) تأجيل لعبتها The Duskbloods، الحصرية لجهاز Switch 2، من 2026 إلى 2027.\n\nوقال الاستوديو إنه قرر منح نفسه وقتًا للضبط النهائي لقواعد اللعب والتوازن، حتى يقدّم فكرة اللعبة التي أعجبت اللاعبين في اختبار الشبكة في أغسطس على نحو أفضل، وهي أن المتعة لا تقتصر على القتال المباشر، بل تشمل أساليب لعب واستراتيجيات متنوعة. واعتذر الاستوديو للاعبين المنتظرين.\n\nولم يحدد الاستوديو موعد الإصدار في 2027 بعد.\n\n#ألعاب #أخبار_الألعاب #TheDuskbloods #NintendoSwitch2",
   "ig_first_comment": "المصدر: إعلان فروم سوفتوير (FromSoftware) على الموقع الرسمي للعبة، 29 أكتوبر",
   "x_reply": "المصدر: https://www.fromsoftware.jp/duskbloods/article/261029_1.html"
  },
@@ -58,9 +58,50 @@
   },
   "v2": {
    "pushed": "15:00Z",
-   "note": "4K IGN copy, music-only stretch 1.0 to 17.2 s, close on the castle; check: speech none, clip 13.8 s"
+   "note": "4K IGN copy, music-only stretch 1.0 to 17.2 s, close on the castle; check: speech none, clip 13.8 s",
+   "render": "runner 372 s"
   }
  },
- "status": "rendering",
- "tier": "T1 (official delay of a major exclusive)"
+ "status": "scheduled",
+ "tier": "T1 (official delay of a major exclusive)",
+ "director": [
+  [
+   "1",
+   "0 to 3.5 s",
+   "PASS",
+   "castle and graveyard, headline and chip clear, music"
+  ],
+  [
+   "2",
+   "3.5 to 6.75 s",
+   "PASS (note)",
+   "dark cathedral interior, weakest picture; line «من فروم سوفتوير (FromSoftware)» continues the headline"
+  ],
+  [
+   "3",
+   "6.75 to 9.9 s",
+   "PASS",
+   "hooded figure under the red arch, line on the reason"
+  ],
+  [
+   "4",
+   "9.9 to 12.0 s",
+   "PASS",
+   "castle under stars, attribution line"
+  ],
+  [
+   "5",
+   "12.0 to 13.8 s",
+   "PASS",
+   "candlelit hall, last two seconds a picture"
+  ],
+  [
+   "Reel",
+   "13.8 s + end card",
+   "PASS after round 2",
+   "speech none (stretch 1.0 to 17.2 s before the narration), no subtitles or red moon, decode clean; passes with the note on shot 2 per the two-round limit"
+  ]
+ ],
+ "scheduled": "scheduled in Publer 16:00Z (20:00 Dubai): Instagram (Reel, first comment source, Dubai location), X (follow-up with the FromSoftware link), Threads (source line); labels tpl:trailer, skin:house, sound:trailer, genre:action",
+ "approved": "go: rolling queue; preview sent 15:17Z; gate 15:14Z: fromsoftware.jp article 261029_1 read in full, 2026 to 2027, final adjustment of rules and balance after the August 2026 network test, apology; no other date; IG first line changed so it does not repeat the headline"
 }
