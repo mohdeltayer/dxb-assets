@@ -13257,5 +13257,38 @@
   "min_disk_free_mb": 83188,
   "setup_min": 1.0,
   "story": "honkai-star-rail-4-7-special-program-oct-30"
+ },
+ {
+  "name": "honkai-star-rail-4-7-special-program-oct-30-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T03:39Z",
+  "stages": {
+   "checks": 2.6,
+   "montage": 22.1,
+   "text": 21.4,
+   "audio": 0.5,
+   "outro": 25.7
+  },
+  "total": 72.2,
+  "lane": "runner",
+  "queued_at": "2026-10-29T03:32:28Z",
+  "finished_at": "2026-10-29T03:39Z",
+  "render_min": 1.2,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 128,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1008,
+  "peak_mem_mb": 2317,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62537,
+  "peak_disk_mb": 64517,
+  "min_disk_free_mb": 83185,
+  "setup_min": 0.95,
+  "story": "honkai-star-rail-4-7-special-program-oct-30"
  }
 ]
