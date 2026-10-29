@@ -68,8 +68,59 @@
  "deepl_backcheck": "13:50Z: caption intact; first X draft read the choices as coming from the deleted scenes, rewritten; last line read as a condition on the scenes, rewritten to «نقل القرارات يتطلب حساب تيلتيل (Telltale)»",
  "versions": {
   "v1": {
-   "pushed": "13:39Z"
+   "pushed": "13:39Z",
+   "rendered": "13:51Z",
+   "director": "FIX: the out-now line sat on 3 s of a dark torso close-up"
+  },
+  "v2": {
+   "pushed": "13:54Z (pace_ok 14:07Z)",
+   "rendered": "14:13Z"
   }
  },
- "status": "rendering"
+ "status": "scheduled",
+ "director": {
+  "verdict": "PASS (v2)",
+  "shots": [
+   [
+    "1",
+    "0-3.6",
+    "PASS",
+    "Bigby in colour, smoking: cover and headline"
+   ],
+   [
+    "2",
+    "3.6-7.4",
+    "PASS",
+    "Bigby colour close-up: out-now line"
+   ],
+   [
+    "3",
+    "7.4-12.2",
+    "PASS",
+    "colour to black and white on Bigby: the Noir line lands on the switch"
+   ],
+   [
+    "4",
+    "12.2-16.6",
+    "PASS",
+    "Toad, the bald man, the girl in noir: deleted scenes line"
+   ],
+   [
+    "5",
+    "16.6-18.4",
+    "PASS",
+    "Bigby in noir, dark; Telltale account line"
+   ],
+   [
+    "6",
+    "18.4-20.8",
+    "PASS",
+    "Bigby in colour: closing picture"
+   ]
+  ],
+  "sound": "Noir Mode trailer from 4.0 s, speech: none",
+  "model": "main session"
+ },
+ "scheduled": "scheduled in Publer 15:30Z (19:30 Dubai): Instagram, X, Threads",
+ "approved": "go: rolling queue; preview sent 14:16Z; gate 14:14Z: Steam AE 59.99 AED, released 29 Oct"
 }
