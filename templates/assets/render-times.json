@@ -13486,5 +13486,38 @@
   "min_disk_free_mb": 81080,
   "setup_min": 1.02,
   "story": "monster-hunter-outlanders-out-now"
+ },
+ {
+  "name": "alien-isolation-2-microphone-physical-edition-reel-v4.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T09:09Z",
+  "stages": {
+   "checks": 0.7,
+   "montage": 64.0,
+   "text": 35.9,
+   "audio": 0.8,
+   "outro": 27.6
+  },
+  "total": 129.0,
+  "lane": "runner",
+  "queued_at": "2026-10-29T09:05:53Z",
+  "finished_at": "2026-10-29T09:09Z",
+  "render_min": 2.15,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 137,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 988,
+  "peak_mem_mb": 3603,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62537,
+  "peak_disk_mb": 64759,
+  "min_disk_free_mb": 82943,
+  "setup_min": 0.8,
+  "story": "alien-isolation-2-microphone-physical-edition"
  }
 ]
