@@ -78,8 +78,76 @@
  "versions": {
   "v1": {
    "job": "jobs/render/dokapon-kingdom-connect-2-announced.json",
-   "pushed": "03:52Z"
+   "pushed": "03:52Z",
+   "result": "date card over a trailer caption (card background on the shared clock)"
+  },
+  "v2": {
+   "result": "same: card start is added to the Reel clock; fixed by offset in v3"
+  },
+  "v3": {
+   "mp4": "cards/2026-10/dokapon-kingdom-connect-2-announced-reel-v3.mp4",
+   "render": "runner 272 s",
+   "decode": "clean"
   }
  },
- "status": "rendering"
+ "status": "scheduled",
+ "published_version": "v3",
+ "gate_prepublish": "gate 04:15Z: Steam appdetails re-read (coming 2027, Idea Factory International; developers Idea Factory, Compile Heart, Sting); trailer end slate Summer 2027 on Switch 2, Switch, Steam",
+ "scheduled": "scheduled in Publer 09:00Z (13:00 Dubai) on Instagram, X and Threads; labels tpl:clipcard, skin:house, sound:trailer, genre:family; preview card prod-20261029-dokapon-connect-2-preview (default Approve 08:45Z)",
+ "director": [
+  [
+   "0 hero close-up",
+   0.0,
+   "PASS",
+   "headline on a moving centred character, readable grid tile"
+  ],
+  [
+   "1 boss",
+   2.0,
+   "PASS",
+   "giant golden boss, brief tease"
+  ],
+  [
+   "2 board spinners",
+   3.4,
+   "PASS",
+   "four-player line on the board"
+  ],
+  [
+   "3-4 creator screens",
+   7.0,
+   "PASS",
+   "line names what is shown; MAKING logo whole"
+  ],
+  [
+   "5 kraken",
+   11.0,
+   "PASS",
+   "party vs giant monster, line matches"
+  ],
+  [
+   "6 VS screen",
+   13.4,
+   "PASS",
+   "player against player for the friendship line"
+  ],
+  [
+   "7 date card",
+   16.5,
+   "PASS (v3)",
+   "clean dimmed footage behind; v1/v2 showed a caption"
+  ],
+  [
+   "8 closing figure",
+   19.0,
+   "PASS",
+   "last 2 s a picture"
+  ],
+  [
+   "reel",
+   "",
+   "PASS",
+   "25 s (over 20 s target, lines need the time); trailer music, no speech; one fact one place (date only on the card)"
+  ]
+ ]
 }
