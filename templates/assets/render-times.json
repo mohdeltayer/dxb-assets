@@ -14445,5 +14445,53 @@
   "min_disk_free_mb": 83032,
   "setup_min": 1.22,
   "story": "sorry-were-closed-free-epic"
+ },
+ {
+  "name": "sorry-were-closed-free-epic-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T15:29Z",
+  "stages": {
+   "checks": 4.2,
+   "montage": 41.3,
+   "text": 33.7,
+   "audio": 0.8,
+   "outro": 35.6
+  },
+  "total": 115.6,
+  "lane": "runner",
+  "queued_at": "2026-10-29T15:24:35Z",
+  "finished_at": "2026-10-29T15:29Z",
+  "render_min": 1.93,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 11.4,
+   "audio_secs": 30.7,
+   "music_pct": 31.3,
+   "leak_pct": 5.9,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 1,
+    "miss": 3
+   },
+   "reason": "music stem not clean (leftover 5.9% > 5.0%)",
+   "secs": 15.6
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 245,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1425,
+  "peak_mem_mb": 2448,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62880,
+  "peak_disk_mb": 64738,
+  "min_disk_free_mb": 82963,
+  "setup_min": 1.25,
+  "story": "sorry-were-closed-free-epic"
  }
 ]
