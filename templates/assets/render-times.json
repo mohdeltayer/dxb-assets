@@ -14946,5 +14946,54 @@
   "min_disk_free_mb": 82481,
   "setup_min": 2.12,
   "story": "world-of-warcraft-forever-launch-november-5-dubai"
+ },
+ {
+  "name": "crimson-desert-charting-the-unknown-out-now-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T23:34Z",
+  "stages": {
+   "checks": 12.0,
+   "montage": 87.3,
+   "text": 47.7,
+   "audio": 1.1,
+   "outro": 46.9
+  },
+  "total": 195.0,
+  "lane": "runner",
+  "queued_at": "2026-10-29T23:27:34Z",
+  "finished_at": "2026-10-29T23:34Z",
+  "render_min": 3.25,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.2,
+   "audio_secs": 40.6,
+   "music_pct": 59.6,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 0
+   },
+   "effects_shots": 6,
+   "mix_secs": 0.9,
+   "secs": 3.8
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 434,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1392,
+  "peak_mem_mb": 2020,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62898,
+  "peak_disk_mb": 66678,
+  "min_disk_free_mb": 81024,
+  "setup_min": 1.1,
+  "story": "crimson-desert-charting-the-unknown-out-now"
  }
 ]
