@@ -14397,5 +14397,53 @@
   "min_disk_free_mb": 82802,
   "setup_min": 0.97,
   "story": "konami-first-half-record-profit"
+ },
+ {
+  "name": "sorry-were-closed-free-epic-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T15:20Z",
+  "stages": {
+   "checks": 3.2,
+   "montage": 32.5,
+   "text": 26.7,
+   "audio": 0.6,
+   "outro": 27.5
+  },
+  "total": 90.5,
+  "lane": "runner",
+  "queued_at": "2026-10-29T15:16:55Z",
+  "finished_at": "2026-10-29T15:20Z",
+  "render_min": 1.51,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 10.1,
+   "audio_secs": 32.0,
+   "music_pct": 32.1,
+   "leak_pct": 7.7,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 5
+   },
+   "reason": "music stem not clean (leftover 7.7% > 5.0%)",
+   "secs": 13.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 189,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1451,
+  "peak_mem_mb": 2406,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62835,
+  "peak_disk_mb": 64669,
+  "min_disk_free_mb": 83032,
+  "setup_min": 1.22,
+  "story": "sorry-were-closed-free-epic"
  }
 ]
