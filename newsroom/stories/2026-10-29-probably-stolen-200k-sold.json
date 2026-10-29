@@ -92,8 +92,58 @@
   },
   "v4": {
    "pushed": "09:59Z",
-   "change": "note shot replaced by the customer montage at 65.65 s (source stretch reads clean)"
+   "change": "note shot replaced by the customer montage at 65.65 s (source stretch reads clean)",
+   "result": "rendered 10:04Z; director FIX: the thief speech box (English) cut by the crop"
+  },
+  "v5": {
+   "pushed": "10:06Z",
+   "rendered": "10:11Z",
+   "change": "thief on the clean second with the case (59.75 s), customer montage 65.65 s for 2.7 s, close on the woman at the counter 2.3 s"
   }
  },
- "status": "rendering"
+ "status": "scheduled",
+ "director": {
+  "verdict": "PASS (v5)",
+  "shots": [
+   [
+    "1",
+    "0-3.6",
+    "PASS",
+    "grinning faces under the headline; key art text at the bottom edge for half a second, under the caption zone"
+   ],
+   [
+    "2",
+    "3.6-7.1",
+    "PASS",
+    "store still, line 1; the inventory grid sits behind the line, outline holds it"
+   ],
+   [
+    "3",
+    "7.1-8.1",
+    "PASS",
+    "thief with the case as line 2 enters (stolen goods)"
+   ],
+   [
+    "4",
+    "8.1-10.8",
+    "PASS",
+    "customers at the counter, line 2 continues"
+   ],
+   [
+    "5",
+    "10.8-13.8",
+    "PASS",
+    "card: over 86,000 at once in 90 minutes, per the studio"
+   ],
+   [
+    "6",
+    "13.8-16.1",
+    "PASS",
+    "closing picture: customer at the counter, then her close-up"
+   ]
+  ],
+  "sound": "launch trailer music, one stretch from 21.0 s; speech: none"
+ },
+ "approved": "go: rolling queue; preview sent 10:15Z; gate 10:12Z: Steam news (no newer figure than 200,000; hotfix 1.0.0.2 only)",
+ "scheduled": "scheduled in Publer 13:00Z (17:00 Dubai): Instagram, X, Threads"
 }
