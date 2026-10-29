@@ -13585,5 +13585,38 @@
   "min_disk_free_mb": 82481,
   "setup_min": 0.9,
   "story": "donkey-kong-flyer-art-record-auction"
+ },
+ {
+  "name": "donkey-kong-flyer-art-record-auction-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T09:35Z",
+  "stages": {
+   "checks": 1.2,
+   "montage": 48.9,
+   "text": 60.6,
+   "audio": 1.1,
+   "outro": 37.4
+  },
+  "total": 149.2,
+  "lane": "runner",
+  "queued_at": "2026-10-29T09:31:43Z",
+  "finished_at": "2026-10-29T09:35Z",
+  "render_min": 2.49,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 168,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1018,
+  "peak_mem_mb": 2068,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62537,
+  "peak_disk_mb": 65218,
+  "min_disk_free_mb": 82484,
+  "setup_min": 0.98,
+  "story": "donkey-kong-flyer-art-record-auction"
  }
 ]
