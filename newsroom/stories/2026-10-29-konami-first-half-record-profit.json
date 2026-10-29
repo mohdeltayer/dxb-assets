@@ -62,8 +62,53 @@
  "answer_the_why": "Konami names the drivers (on screen and in the caption)",
  "versions": {
   "v1": {
-   "pushed": "14:33Z"
+   "note": "runner smear stop at 9.77 to 10.37 s (fusion swirl, waived after looking); director FIX: Cyber End Dragon card name and ATK cut by the crop under the story line"
+  },
+  "v2": {
+   "pushed": "15:17Z",
+   "render": "runner 205 s",
+   "note": "Dark Magician 22.4 s in place of the cut card"
   }
  },
- "status": "rendering"
+ "status": "scheduled",
+ "director": [
+  [
+   "1-2",
+   "0 to 3.5 s",
+   "PASS",
+   "MGS suited figure, headline gold theme"
+  ],
+  [
+   "3",
+   "3.5 to 6.9 s",
+   "PASS",
+   "card 111.3 bn yen on dimmed MGS footage, strip off"
+  ],
+  [
+   "4",
+   "6.9 to 10.7 s",
+   "PASS",
+   "Master Duel field and fusion swirl; reason line names eFootball and Yu-Gi-Oh (no eFootball footage, noted)"
+  ],
+  [
+   "5",
+   "9.75 to 11.0 s",
+   "PASS",
+   "Dark Magician centred, name plate whole"
+  ],
+  [
+   "6-8",
+   "11.0 to 13.8 s",
+   "PASS",
+   "Snake and Eva under the forecast line; last two seconds a picture"
+  ],
+  [
+   "Reel",
+   "13.8 s + end card",
+   "PASS",
+   "speech none, decode clean, smear waiver on the swirl"
+  ]
+ ],
+ "scheduled": "scheduled in Publer 17:30Z (21:30 Dubai): Instagram (Reel, first comment source, Dubai location), X (follow-up with the IR PDF), Threads (source line); labels tpl:clipcard, skin:house, sound:trailer, genre:industry/hardware",
+ "approved": "go: rolling queue; preview sent 15:30Z; gate 15:27Z: Konami IR PDF en1029_ych6cy read: revenue 307,975m (+37.0%), operating profit 111,264m (+73.1%), all categories record highs for the first half; forecast PDF en1029_hmbg26 read at 14:30Z (193bn)"
 }
