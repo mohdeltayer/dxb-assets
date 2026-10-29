@@ -76,8 +76,59 @@
  "versions": {
   "v1": {
    "job": "jobs/render/monster-hunter-outlanders-out-now.json",
-   "pushed": "05:37Z"
+   "pushed": "05:37Z",
+   "result": "failed on the runner: headline needed more than 2 lines at 72 px"
+  },
+  "v2": {
+   "mp4": "cards/2026-10/monster-hunter-outlanders-out-now-reel-v2.mp4",
+   "render": "runner 392 s",
+   "decode": "clean",
+   "headline": "صدرت للهواتف اليوم / لعبة Monster Hunter"
   }
  },
- "status": "rendering"
+ "status": "rendered; waiting on caps decision (card prod-20261029-review-1000, default Fill it 08:30Z)",
+ "director": [
+  [
+   "0-1 ice wyvern, hunter",
+   0.0,
+   "PASS",
+   "moving monster under the headline; grid tile reads"
+  ],
+  [
+   "2-3 hunter, beast",
+   3.5,
+   "PASS",
+   "TiMi line over the hunter close-up"
+  ],
+  [
+   "4 hunters in the dark",
+   6.6,
+   "PASS",
+   "Capcom line, one visual line"
+  ],
+  [
+   "5 hunter vs fire beast",
+   9.5,
+   "PASS",
+   "Charge Axe line over the axe fight"
+  ],
+  [
+   "6 elder dragon",
+   13.5,
+   "PASS",
+   "new-monsters line on the dragon reveal, the key shot"
+  ],
+  [
+   "7-8 golden wyvern, hunters",
+   17.6,
+   "PASS",
+   "last 2 s a picture; final half second is a fire flash"
+  ],
+  [
+   "reel",
+   "",
+   "PASS",
+   "23 s; trailer music, no speech; strip price and platforms, lines never repeat it"
+  ]
+ ]
 }
