@@ -86,7 +86,7 @@
    "headline": "صدرت للهواتف اليوم / لعبة Monster Hunter"
   }
  },
- "status": "rendered; waiting on caps decision (card prod-20261029-review-1000, default Fill it 08:30Z)",
+ "status": "scheduled",
  "director": [
   [
    "0-1 ice wyvern, hunter",
@@ -130,5 +130,8 @@
    "PASS",
    "23 s; trailer music, no speech; strip price and platforms, lines never repeat it"
   ]
- ]
+ ],
+ "published_version": "v2",
+ "gate_prepublish": "gate 08:32Z: Famitsu press release re-read (正式サービスを開始した, 29 Oct); UAE App Store read 05:31Z (free, Garena); 08:32Z store re-read returned no data (iTunes API), nothing contradicts",
+ "scheduled": "scheduled in Publer 10:00Z (14:00 Dubai) on Instagram, X and Threads; labels tpl:split, skin:house, sound:trailer, genre:mobile; go: rolling queue, over the split day cap by the default of card prod-20261029-review-1000 (Fill it today, applied 08:30Z)"
 }
