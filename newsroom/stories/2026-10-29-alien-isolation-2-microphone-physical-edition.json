@@ -1,0 +1,90 @@
+{
+ "id": "2026-10-29-alien-isolation-2-microphone-physical-edition",
+ "title": "Alien: Isolation 2 dev Q&A: optional real microphone input can draw the Xenomorph; physical edition; photo mode; outdoor areas",
+ "account": "Digital Lounge",
+ "chip": "رسمي",
+ "template": "stills",
+ "skin": "house",
+ "sound": "bed",
+ "genre": [
+  "horror"
+ ],
+ "first_report": "official 'Alien: Isolation 2 | Dev Q&A' video on the game's YouTube channel, 28 Oct (before IGN 18:47Z, Eurogamer 19:16Z); about 16 hours old at the 11:00Z slot",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.youtube.com/watch?v=qk3WHXemQ-I",
+   "says": "Dev Q&A by the Alien: Isolation 2 team",
+   "read": "title and channel via oEmbed 08:30Z; content not downloaded (YouTube)"
+  },
+  {
+   "kind": "outlet",
+   "url": "https://www.ign.com/articles/alien-isolation-2-team-confirms-physical-edition-photo-mode-and-new-gameplay-details",
+   "says": "optional microphone input feeds real noise into the game and can attract the Xenomorph; physical edition; photo mode; partly outdoors"
+  },
+  {
+   "kind": "outlet",
+   "url": "https://www.eurogamer.net/alien-isolation-2-commit-physical-edition",
+   "says": "devs commit to a physical edition"
+  },
+  {
+   "kind": "store",
+   "url": "https://store.steampowered.com/app/4665290/",
+   "says": "Creative Assembly / SEGA, Coming soon"
+  }
+ ],
+ "claims": [
+  {
+   "text": "optional microphone input; real noise can attract the Xenomorph",
+   "status": "official (dev video), via IGN"
+  },
+  {
+   "text": "physical edition",
+   "status": "official (dev video), via IGN and Eurogamer"
+  },
+  {
+   "text": "photo mode",
+   "status": "official (dev video), via IGN"
+  },
+  {
+   "text": "parts set in open areas",
+   "status": "official (dev video and trailer), via IGN"
+  },
+  {
+   "text": "no release date",
+   "status": "Steam: Coming soon"
+  }
+ ],
+ "sensitive": "none (horror: stills show the Xenomorph head, no gore)",
+ "footage": "Steam screenshots 5, 3, 4, 2, 1 (1920x1080, PRE-ALPHA CAPTURE mark kept outside the crop); reveal trailer not used (letterboxed ~800 rows, burnt-in subtitles)",
+ "sound_reason": "stills: our bed",
+ "brief": {
+  "family": "announcement",
+  "hook": "surprise (your real voice can give you away)",
+  "opening": "Xenomorph close-up under the headline",
+  "total_secs": 21.8
+ },
+ "read_aloud": {
+  "paragraph": "يمكن تشغيل الميكروفون لتلتقط اللعبة أصوات غرفتك. أي صرخة أو صوت عالٍ قد يجذب كائن Xenomorph. تدور أجزاء من اللعبة في أماكن مفتوحة. لها نسخة على أقراص إلى جانب وضع للتصوير.",
+  "checks": "game named in the headline; no line opens on و; Xenomorph named, not a pronoun; DeepL read «فتسمع» as 'you hear', rewritten «لتلتقط اللعبة»"
+ },
+ "drafts": {
+  "x": "في Alien: Isolation 2 قد يجذب صوتك الحقيقي كائن Xenomorph، إذ تتيح اللعبة تشغيل الميكروفون، حسب فريق كريتف أسمبلي (Creative Assembly).",
+  "threads": "في Alien: Isolation 2 قد يجذب صوتك الحقيقي كائن Xenomorph، إذ تتيح اللعبة تشغيل الميكروفون، حسب فريق كريتف أسمبلي (Creative Assembly).\n\nالمصدر: فيديو أسئلة وأجوبة على قناة اللعبة الرسمية",
+  "instagram": "في Alien: Isolation 2، صوتك الحقيقي قد يكشفك.\n\nكشف فريق كريتف أسمبلي (Creative Assembly) في فيديو أسئلة وأجوبة على قناة اللعبة الرسمية أن Alien: Isolation 2 تتيح خيار تشغيل الميكروفون، فيصل إلى اللعبة أي صوت في غرفة اللاعب، من صرخة إلى كوب يوضع على الطاولة، وقد يجذب ذلك كائن Xenomorph.\n\nوتدور أجزاء من اللعبة في أماكن مفتوحة، يستغل فيها الكائن الطقس والمساحات الواسعة للصيد، وأكد الفريق أن للعبة نسخة على أقراص، إلى جانب وضع للتصوير.\n\nواللعبة من نشر شركة سيغا (SEGA)، ولم يُحدد موعد إصدارها بعد.\n\n#ألعاب #أخبار_الألعاب #AlienIsolation2 #Alien"
+ },
+ "deepl_backcheck": "08:40Z: meaning held except line 1 («فتسمع» read as 'you hear'), rewritten",
+ "versions": {
+  "v1": {
+   "result": "failed: line 1 out of the safe zone"
+  },
+  "v2": {
+   "result": "failed: same"
+  },
+  "v3": {
+   "job": "jobs/render/alien-isolation-2-microphone-physical-edition.json",
+   "pushed": "08:55Z"
+  }
+ },
+ "status": "rendering"
+}
