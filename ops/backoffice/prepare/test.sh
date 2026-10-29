@@ -15,7 +15,7 @@ rc=0
 echo "=== compile"
 "$PY" -c 'import ast, sys; [ast.parse(open(f, encoding="utf-8").read(), f) for f in sys.argv[1:]]; print("ok", len(sys.argv) - 1, "files")' "$HERE"/*.py || rc=1
 echo "=== imports"
-(cd "$HERE" && "$PY" -c 'import prepare, acquire, analyse; print("ok")') || rc=1
+(cd "$HERE" && "$PY" -c 'import prepare, acquire, analyse, handover; print("ok")') || rc=1
 echo "=== tools"
 "$PY" - <<'EOF'
 import importlib, shutil

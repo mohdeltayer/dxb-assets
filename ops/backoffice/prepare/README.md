@@ -65,6 +65,15 @@ prepare.py cleanup [--dry-run] | status | list [--all] | show <key> | models | b
 Exit codes: 0 done or nothing to do, 1 failure, 75 paused for a render or held by the disk floor (the unit treats
 75 as success).
 
+## Hand-over to the news desk
+
+After each tick that changed the store, `handover.py` pushes `prepared/index.json` and the contact sheets of ready
+assets to the private dxb-watch repo, branch `prepared` (one commit, force-pushed; never the watch's `main`). It uses
+the watch's remote and token file from `../watch/sources.yaml` and the watch's push helper; no footage, no server
+paths and no URL query strings leave the server. A failed push is logged and retried on the next change; it never
+fails the tick. `prepare.py handover --force` pushes by hand; `PREPARE_HANDOFF=off` writes
+`~/backoffice/prepare/handover/out` only (the tests run that way).
+
 ## Server rules it keeps
 
 * Runs as the `runner` user from a user-level timer (`dxb-prepare.timer`, every 10 minutes at :03), at nice 10 and

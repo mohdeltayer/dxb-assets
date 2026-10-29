@@ -49,13 +49,21 @@ official feeds / YouTube channels / pages
 5. Gated like any render change: parity on three published jobs without the key, a feature job with it, off by
    default (the key), release note.
 
-### Hand-over to the main session (open, next increment)
+### Hand-over to the main session (built 29 Oct, build desk)
 
-The main session works in a cloud container and cannot read the server's disk. Footage must not go into dxb-assets
-(public) or an Actions artifact of a public repo. Proposed: prepare pushes `prepared/index.json` (one line per asset:
-key, game, trailer, method, rights basis and flags, scenes, flags, focus found, timings) and each `sheet.jpg` to the
-private dxb-watch repo with the watch's existing token and hand-over code (`handoff.py`). Source files stay on the
-server; the render job reaches them by key. Not built tonight; it needs no new secret.
+The main session works in a cloud container and cannot read the server's disk, and footage must not go into
+dxb-assets (public) or an Actions artifact of a public repo. So after every tick that changed the store, prepare
+pushes `prepared/index.json` (one entry per asset of the last 7 days: key, game, status, the watch item and its first
+seen time, source method and page, Steam trailer and whether it is likely the announced one, rights basis and credit,
+probe, flags, scene summary, focus found, timings) and `prepared/sheets/<key>.jpg` (the contact sheet of each ready
+asset) to the private dxb-watch repo, branch `prepared` (`handover.py`). The branch is replaced by one commit each
+time (force push), so expired sheets go and the repo stays small; the watch's `main` branch is never touched (the
+code refuses it). It reuses the watch's remote, token file and push plumbing (`handoff.git_env`); the watch's own
+code is unchanged and no new secret is needed. Query strings are stripped from every URL and no server path leaves
+the server. `prepare.py handover [--force]` runs it by hand; `PREPARE_HANDOFF=off` writes
+`~/backoffice/prepare/handover/out` only. Source files stay on the server; the render job reaches them by key
+(phase 2). The main session reads it with `git clone --depth 1 --branch prepared` of dxb-watch once the repo is
+attached to its session.
 
 ## Disk and CPU
 
@@ -118,5 +126,5 @@ prepare yet); Cocktail Fork MIT (optional). YOLOv8 is not used here.
 
 ## Not done tonight
 
-Steps 4 (Twitch) and 5 (YouTube) refuse; the hand-over to the main session; render_job pick-up; PaddleOCR; the
+Steps 4 (Twitch) and 5 (YouTube) refuse; render_job pick-up; PaddleOCR; the
 Cocktail Fork split was not run (no torch in the container); the units have not been loaded by a real user manager.

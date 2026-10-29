@@ -7,6 +7,7 @@ render later starts from a checked file and a shot map instead of a download.
     prepare.py one <steam appid | url> --name N [--title T] [--force]   prepare one source by hand
     prepare.py one <local file> --name N --rights <key> [--page P]      a file Mohammad or a publisher sent
     prepare.py from-watch [--max N] [--dry-run]                         items above the threshold from the watch
+    prepare.py handover [--force]                                       index and sheets to dxb-watch, branch prepared
     prepare.py cleanup [--dry-run]                                      7-day expiry and the 40 GB disk floor
     prepare.py status                                                   store, ledger, models, tools, disk
     prepare.py list [--all]                                             prepared assets, newest first
@@ -19,7 +20,8 @@ Environment (all optional): PREPARE_HOME (~/backoffice/prepare), PREPARE_STORE (
 PREPARE_WATCH_DIGEST (~/backoffice/watch/out/digest.json), PREPARE_MIN_SCORE (4), PREPARE_MAX_ITEMS (2 a tick),
 PREPARE_WINDOW_H (24), PREPARE_KEEP_DAYS (7), PREPARE_FLOOR_GB (40), PREPARE_MAX_STORE_GB (80),
 PREPARE_RENDER_CHECK=off, PREPARE_BUSY_PATTERN, PREPARE_PAUSE_WAIT (600 s), PREPARE_STEAM_SEARCH=off,
-PREPARE_SPLIT=on (with COCKTAIL_DIR), PREPARE_BEDS (extra bed folders, colon separated).
+PREPARE_SPLIT=on (with COCKTAIL_DIR), PREPARE_BEDS (extra bed folders, colon separated), PREPARE_HANDOFF=off (the
+hand-over writes ~/backoffice/prepare/handover/out only), PREPARE_HANDOFF_BRANCH (prepared).
 Exit codes: 0 done or nothing to do, 1 failure, 75 paused for a render or held by the disk floor.
 """
 import argparse
@@ -41,6 +43,7 @@ sys.path.insert(0, HERE)
 
 import acquire as AQ   # noqa: E402
 import analyse as AN   # noqa: E402
+import handover as HO   # noqa: E402
 
 PAUSED = 75
 HOME = os.environ.get('PREPARE_HOME') or os.path.expanduser('~/backoffice/prepare')
@@ -618,7 +621,15 @@ def cmd_from_watch(a):
                 log(f'beats: {n} new bed(s)')
         except Paused:
             return PAUSED
+        HO.run(c, store_dir(), HOME, iso(), log)   # index and sheets to the news desk when the store changed
         return rc
+
+
+def cmd_handover(a):
+    c = db()
+    res = HO.run(c, store_dir(), HOME, iso(), log, force=a.force)
+    log('handover:', res)
+    return 1 if res == 'failed' else 0
 
 
 def cmd_cleanup(a):
@@ -731,6 +742,9 @@ def main():
     p.add_argument('--max', type=int, default=None)
     p.add_argument('--dry-run', action='store_true')
     p.set_defaults(fn=cmd_from_watch)
+    p = sub.add_parser('handover')
+    p.add_argument('--force', action='store_true')
+    p.set_defaults(fn=cmd_handover)
     p = sub.add_parser('cleanup')
     p.add_argument('--dry-run', action='store_true')
     p.set_defaults(fn=cmd_cleanup)

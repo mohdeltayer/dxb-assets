@@ -13,7 +13,7 @@ import unittest
 
 TMP = tempfile.mkdtemp(prefix='dxb-prepare-unit-')
 os.environ.update({'PREPARE_HOME': os.path.join(TMP, 'home'), 'PREPARE_STORE': os.path.join(TMP, 'store'),
-                   'PREPARE_RENDER_CHECK': 'off', 'PREPARE_FLOOR_GB': '0', 'PREPARE_STEAM_SEARCH': 'off',
+                   'PREPARE_RENDER_CHECK': 'off', 'PREPARE_HANDOFF': 'off', 'PREPARE_FLOOR_GB': '0', 'PREPARE_STEAM_SEARCH': 'off',
                    'PREPARE_WATCH_DB': os.path.join(TMP, 'watch.db'),
                    'PREPARE_WATCH_DIGEST': os.path.join(TMP, 'digest.json')})
 os.environ.setdefault('PREPARE_MODELS', os.path.join(TMP, 'models'))
@@ -24,6 +24,7 @@ sys.path.insert(0, HERE)
 import acquire as AQ    # noqa: E402
 import analyse as AN    # noqa: E402
 import prepare as PR    # noqa: E402
+import handover as HO   # noqa: E402
 
 RIGHTS = AQ.load_rights()
 
@@ -471,6 +472,76 @@ class Housekeeping(Reset):
         self.assertTrue(any(abs(b['tempo'] - k * bpm) < 4 for k in (0.5, 1, 2)), b['tempo'])
         self.assertGreater(b['n'], 10)
         self.assertTrue(AN.beats(wav, cache)['cached'])
+
+
+class Handover(Reset):
+    """The index and sheets that go to dxb-watch (branch prepared): content, no local paths, unchanged-skip, push."""
+
+    def logs(self):
+        out = []
+        return out, (lambda *a: out.append(' '.join(str(x) for x in a)))
+
+    def test_index_and_sheets_dry(self):
+        c = PR.db()
+        st, key, _ = PR.prepare_item({'local': clip(), 'publisher': 'sega', 'page': 'https://www.sega.com/p?sig=x'},
+                                     'Synthetic', RIGHTS, c)
+        self.assertEqual(st, 'ready')
+        PR.put_asset(c, key='refused-one', name='YouTube only', status='refused', request='u', created_at=iso(),
+                     detail='youtube: step 5 is off')
+        if True:   # PREPARE_HANDOFF=off for the whole suite: nothing is ever pushed by a test
+            _, log = self.logs()
+            home = os.environ['PREPARE_HOME']
+            self.assertEqual(HO.run(c, os.environ['PREPARE_STORE'], home, iso(), log), 'dry')
+            out = os.path.join(home, 'handover', 'out', 'prepared')
+            with open(os.path.join(out, 'index.json')) as f:
+                idx = json.load(f)
+            self.assertEqual((idx['assets'], idx['ready']), (2, 1))
+            e = next(x for x in idx['entries'] if x['key'] == key)
+            self.assertEqual(e['rights']['register_key'], 'sega')
+            self.assertEqual(e['sheet'], f'prepared/sheets/{key}.jpg')
+            self.assertTrue(os.path.exists(os.path.join(out, 'sheets', key + '.jpg')))
+            self.assertIn('scenes', e['summary'])
+            text = json.dumps(idx)
+            self.assertNotIn(os.environ['PREPARE_STORE'], text)          # no server paths leave the server
+            self.assertNotIn(TMP, text)
+            self.assertNotIn('?sig=', text)                               # no signed query strings
+            r = next(x for x in idx['entries'] if x['key'] == 'refused-one')
+            self.assertEqual(r['status'], 'refused')
+            # nothing changed: no second write and no push
+            c.execute("INSERT OR REPLACE INTO meta VALUES ('handover_digest', ?)",
+                      (HO.digest(HO.build(os.environ['PREPARE_STORE'],
+                                          [dict(x) for x in c.execute('SELECT * FROM assets ORDER BY created_at DESC')])[0]),))
+            c.commit()
+            self.assertEqual(HO.run(c, os.environ['PREPARE_STORE'], home, iso(), log), 'unchanged')
+
+    def test_never_the_watch_branch(self):
+        os.environ['PREPARE_HANDOFF_BRANCH'] = 'main'
+        try:
+            with self.assertRaises(ValueError):
+                HO.config()
+        finally:
+            os.environ.pop('PREPARE_HANDOFF_BRANCH', None)
+
+    def test_push_replaces_the_branch(self):
+        bare = os.path.join(TMP, 'remote.git')
+        shutil.rmtree(bare, ignore_errors=True)
+        subprocess.run(['git', 'init', '-q', '--bare', bare], check=True)
+        tok = os.path.join(TMP, 'token')
+        with open(tok, 'w') as f:
+            f.write('not-a-token')
+        h = {'remote': bare, 'branch': 'prepared', 'token_file': tok}
+        work = os.path.join(TMP, 'ho-clone')
+        HO.push(work, {'prepared/index.json': b'{}\n', 'prepared/sheets/old.jpg': b'x'}, 'first', h)
+        HO.push(work, {'prepared/index.json': b'{"a": 1}\n'}, 'second', h)
+        ls = subprocess.run(['git', '--git-dir', bare, 'ls-tree', '-r', '--name-only', 'prepared'],
+                            capture_output=True, text=True, check=True).stdout.split()
+        self.assertEqual(ls, ['prepared/index.json'])                     # the expired sheet is gone
+        n = subprocess.run(['git', '--git-dir', bare, 'rev-list', '--count', 'prepared'],
+                           capture_output=True, text=True, check=True).stdout.strip()
+        self.assertEqual(n, '1')                                          # always one commit
+        heads = subprocess.run(['git', '--git-dir', bare, 'for-each-ref', '--format=%(refname)'],
+                               capture_output=True, text=True, check=True).stdout.split()
+        self.assertEqual(heads, ['refs/heads/prepared'])                  # nothing else touched
 
 
 if __name__ == '__main__':
