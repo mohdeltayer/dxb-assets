@@ -65,6 +65,17 @@ Measured in this container (4 cores, shared with another agent's render the whol
 |---|---|---|---|---|---|
 | Cyberpunk 2077 Steam trailer, 81 s, 1920x1080 30 fps, 5.6 Mbps | Steam HLS | 169 s | 254 CPU-s | 59 MB | smear 41 s, text 39 s, subjects 22 s, scenes 21 s, frames 16 s, decode 10 s |
 | synthetic 9 s, 1280x720 | local | 21 s | about 30 CPU-s | 1.6 MB | text, smear |
+| Kitsune: The Journey of Adashino, 60 s (watch item: Nintendo of America announcement) | Steam, by title search | 137 s | 170 CPU-s | 44 MB | smear 33 s, text 25 s, scenes 15 s, decode 10 s, fetch 15 s |
+| Slime Rancher 2, 58 s (watch item: Nintendo of America) | Steam, by title search | 171 s | 254 CPU-s | 42 MB | |
+| Spirit Crossing, 60 s (watch item: Nintendo of America) | Steam, by title search | 236 s | 303 CPU-s | 44 MB | |
+
+The last three are a real `from-watch --max 6` run on a watch ledger built in the container from the live feeds
+(29 Oct 13:17Z): the top six items were all Nintendo of America YouTube trailers; three found their game on Steam by
+exact name and were prepared, then the fourth stopped at the (test) disk floor as designed, because the shared
+container disk had fallen to 1.5 GB. Two of the three Steam trailers chosen were older trailers of the same game
+(`name_match` 0.0, `item_trailer: unknown`), which matters for "trailer news shows the trailer" (26 Oct rule): the
+manifest says so, and the brief must not treat such an asset as the announced trailer. The smear check flagged the
+stylised glitch transitions of the Kitsune PV (scenes 9, 10, 31 on its sheet): recorded, never a stop here.
 
 Rule of thumb: about 3 CPU-seconds and 0.75 MB per second of 1080p trailer (4K: about 2 MB/s). Tesseract runs with
 `OMP_THREAD_LIMIT=1`: with its default threads one frame took 13 s here, with one thread 0.3 s.
