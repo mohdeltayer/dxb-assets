@@ -13092,5 +13092,38 @@
   "min_disk_free_mb": 82686,
   "setup_min": 0.98,
   "story": "microsoft-q1-xbox-content-services-down-2"
+ },
+ {
+  "name": "microsoft-q1-xbox-content-services-down-2-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T03:01Z",
+  "stages": {
+   "checks": 13.1,
+   "montage": 85.0,
+   "text": 31.2,
+   "audio": 0.8,
+   "outro": 37.4
+  },
+  "total": 167.5,
+  "lane": "runner",
+  "queued_at": "2026-10-29T02:55:22Z",
+  "finished_at": "2026-10-29T03:01Z",
+  "render_min": 2.79,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 367,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1076,
+  "peak_mem_mb": 2132,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62537,
+  "peak_disk_mb": 64884,
+  "min_disk_free_mb": 82818,
+  "setup_min": 0.98,
+  "story": "microsoft-q1-xbox-content-services-down-2"
  }
 ]
