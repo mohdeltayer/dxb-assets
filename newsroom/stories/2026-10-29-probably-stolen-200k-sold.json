@@ -1,0 +1,87 @@
+{
+ "id": "2026-10-29-probably-stolen-200k-sold",
+ "title": "Probably Stolen sells 200,000 copies in its first hours",
+ "account": "Digital Lounge",
+ "chip": "أرقام",
+ "template": "clipcard",
+ "skin": "house",
+ "sound": "trailer",
+ "genre": [
+  "strategy/sim",
+  "indie"
+ ],
+ "first_report": "2026-10-28T18:30:44Z (Questing Goose Studio Steam announcement)",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://store.steampowered.com/news/app/4348910",
+   "says": "'200,000 Units Sold!' 28 Oct 18:30Z: 200,000 copies in the first few hours; 86,000+ peak concurrent players within 90 minutes; 95% positive from 400+ reviews; #2 Global Top Sellers",
+   "read": "Steam news API, full text read 09:14Z"
+  },
+  {
+   "kind": "store",
+   "url": "https://store.steampowered.com/app/4348910/",
+   "says": "released 28 Oct 2026, Windows, developer Questing Goose Studio, publisher tinyBuild; Overwhelmingly Positive, 97% of 1,371 (09:20Z); 42.29 AED with 10% launch discount"
+  },
+  {
+   "kind": "data",
+   "url": "https://steamdb.info/app/4348910/charts/",
+   "says": "peak 86,099 on 28 Oct (SteamDB post in the Steam news feed)"
+  },
+  {
+   "kind": "outlet",
+   "url": "https://80.lv/articles/this-indie-cyberpunk-shopkeeper-sim-sells-200-000-copies-in-hours",
+   "says": "200k in hours"
+  }
+ ],
+ "claims": [
+  {
+   "text": "200,000 copies in the first hours",
+   "status": "confirmed (studio)"
+  },
+  {
+   "text": "peak over 86,000 concurrent players on launch day",
+   "status": "confirmed (studio; SteamDB 86,099)"
+  },
+  {
+   "text": "Overwhelmingly Positive on Steam",
+   "status": "confirmed (store 09:20Z)"
+  },
+  {
+   "text": "out now on PC via Steam only",
+   "status": "confirmed (store)"
+  }
+ ],
+ "sensitive": "none (smuggling and possibly stolen goods are the game's premise, described as in the store text)",
+ "footage": "Steam Launch trailer 1080p60 5.7 Mbps, decode clean; one Steam screenshot (ss7)",
+ "sound_reason": "trailer music, one stretch from 21.0 s; the trailer has no speech (faster-whisper returned nothing)",
+ "brief": {
+  "family": "3 numbers (footage-led as clipcard, since the game has official footage)",
+  "hook": "number: 200 ألف نسخة in the headline over the trailer's grinning customer close-up",
+  "cover": "frame 0: pixel-art face close-up, headline with the game and the figure",
+  "shots": [
+   "0 80.0 s: customer close-up with rapid cuts (hook; headline alone)",
+   "1 ss7: a customer at the counter, line: you run a shop on a space station",
+   "2 58.4 s: the Thief at the counter with a red case, line: goods that may be stolen",
+   "3 card on a customer at the counter (65.7 s): peak players over 86 thousand, held alone",
+   "4 72.75 s: the shop's money counter, line: out now on Steam",
+   "5 86.0 s: key art, closing picture (before the AVAILABLE NOW slate)"
+  ],
+  "total": "about 14.8 s before the end card",
+  "one_fact_one_place": "200k in the headline only; 86k on the card only; Steam availability in a line only"
+ },
+ "read_aloud": "لعبة Probably Stolen باعت 200 ألف نسخة في ساعات. تدير فيها متجرًا في محطة فضائية، تبيع فيه بضائع قد تكون مسروقة. ذروة اللاعبين معًا يوم الصدور أكثر من 86 ألفًا، حسب الاستوديو. متوفرة الآن على Steam.",
+ "drafts": {
+  "x": "باعت لعبة Probably Stolen 200 ألف نسخة في ساعاتها الأولى على Steam، حسب استوديو كويستنغ غوس (Questing Goose).",
+  "threads": "باعت لعبة Probably Stolen 200 ألف نسخة في ساعاتها الأولى على Steam، حسب استوديو كويستنغ غوس (Questing Goose).\n\nالمصدر: إعلان الاستوديو على صفحة اللعبة في Steam",
+  "instagram": "مبيعات Probably Stolen تبلغ 200 ألف نسخة في ساعات.\n\nأعلن استوديو كويستنغ غوس (Questing Goose) أن Probably Stolen باعت 200 ألف نسخة في الساعات الأولى من صدورها على Steam يوم 28 أكتوبر، وأن عدد لاعبيها في وقت واحد تجاوز 86 ألفًا خلال 90 دقيقة من إطلاقها، وأنها حلّت ثانية في قائمة الأكثر مبيعًا عالميًا على المتجر.\n\nيدير اللاعب فيها متجرًا في محطة فضائية، يصنع فيه البضائع ويتاجر بها ويهرّبها، وكثير منها مجهول المصدر، بينما يرتفع الإيجار عليه شيئًا فشيئًا.\n\nوتقييماتها على Steam «إيجابية للغاية». واللعبة من نشر شركة تايني بيلد (tinyBuild)، وهي متوفرة الآن على PC عبر Steam.\n\n#ألعاب #أخبار_الألعاب #ProbablyStolen #Steam"
+ },
+ "deepl_backcheck": "09:21Z: X and caption read back as written (200,000 copies, first few hours, 86,000 within 90 minutes, #2 global best-sellers, Overwhelmingly Positive, tinyBuild, PC via Steam); on-screen lines read back with a 'she' for تدير (second person in Arabic, kept). Forward pass of the whole story: DeepL wrote اللاعبين المتزامنين and «تم إصدار ... من قبل»; kept «عدد لاعبيها في وقت واحد» (plainer); «مجهولة المصدر» matches ours. X wording 'نحو 200 ألف': the studio says 200,000 copies sold, so نحو dropped at the grammar pass.",
+ "versions": {
+  "v1": {
+   "job": "jobs/render/probably-stolen-200k-sold.json",
+   "pushed": "09:18Z"
+  }
+ },
+ "status": "rendering"
+}
