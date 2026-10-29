@@ -13437,5 +13437,54 @@
   "min_disk_free_mb": 82303,
   "setup_min": 1.47,
   "story": "dokapon-kingdom-connect-2-announced"
+ },
+ {
+  "name": "monster-hunter-outlanders-out-now-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T06:01Z",
+  "stages": {
+   "checks": 13.0,
+   "montage": 101.2,
+   "text": 45.7,
+   "audio": 1.1,
+   "outro": 54.5
+  },
+  "total": 215.5,
+  "lane": "runner",
+  "queued_at": "2026-10-29T05:55:38Z",
+  "finished_at": "2026-10-29T06:01Z",
+  "render_min": 3.59,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 8.8,
+   "audio_secs": 40.0,
+   "music_pct": 62.1,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 9,
+   "mix_secs": 4.1,
+   "secs": 13.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 392,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1346,
+  "peak_mem_mb": 3529,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62835,
+  "peak_disk_mb": 66622,
+  "min_disk_free_mb": 81080,
+  "setup_min": 1.02,
+  "story": "monster-hunter-outlanders-out-now"
  }
 ]
