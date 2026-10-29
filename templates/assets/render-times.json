@@ -14671,5 +14671,54 @@
   "min_disk_free_mb": 82196,
   "setup_min": 1.22,
   "story": "xbox-free-play-days-oct-29"
+ },
+ {
+  "name": "demon-slayer-hinokami-2-switch-2-out-now-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T15:59Z",
+  "stages": {
+   "checks": 3.7,
+   "montage": 52.3,
+   "text": 34.5,
+   "audio": 1.0,
+   "outro": 48.8
+  },
+  "total": 140.3,
+  "lane": "runner",
+  "queued_at": "2026-10-29T15:54:18Z",
+  "finished_at": "2026-10-29T15:59Z",
+  "render_min": 2.34,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 6.5,
+   "audio_secs": 21.3,
+   "music_pct": 62.2,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "effects_shots": 5,
+   "mix_secs": 4.0,
+   "secs": 11.0
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 252,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1335,
+  "peak_mem_mb": 2205,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62835,
+  "peak_disk_mb": 65343,
+  "min_disk_free_mb": 82358,
+  "setup_min": 1.18,
+  "story": "demon-slayer-hinokami-2-switch-2-out-now"
  }
 ]
