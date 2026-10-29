@@ -59,9 +59,60 @@
  "deepl_backcheck": "10:24Z: meaning intact ('peak concurrent players exceeded 450,000', 'the studio has not yet announced sales figures')",
  "versions": {
   "v1": {
-   "job": "jobs/render/phantom-blade-zero-steam-peak-launch-day.json",
-   "pushed": "10:21Z"
+   "pushed": "10:21Z",
+   "result": "runner text check: headline over two lines"
+  },
+  "v2": {
+   "pushed": "10:36Z",
+   "result": "runner text check: studio line out of the safe zone"
+  },
+  "v3": {
+   "pushed": "10:42Z",
+   "result": "rendered 10:47Z; director FIX: S-GAME logo slate for half a second at 2.75 s"
+  },
+  "v4": {
+   "pushed": "10:49Z",
+   "rendered": "10:54Z",
+   "change": "opening shot 35.0 s for 3.4 s, ends before the slate"
   }
  },
- "status": "rendering"
+ "status": "scheduled",
+ "director": {
+  "verdict": "PASS (v4)",
+  "shots": [
+   [
+    "1",
+    "0-3.4",
+    "PASS",
+    "armoured figure with the glowing orb, headline; no slate"
+   ],
+   [
+    "2",
+    "3.4-6.6",
+    "PASS",
+    "card: over 450,000 at once, on the dimmed red-cloaked figure"
+   ],
+   [
+    "3",
+    "6.6-9.4",
+    "PASS",
+    "fighters, studio line enters"
+   ],
+   [
+    "4",
+    "9.4-11.8",
+    "PASS",
+    "white-haired figure; line continues"
+   ],
+   [
+    "5",
+    "11.8-14.4",
+    "PASS",
+    "hatted Soul in the flames, closing picture"
+   ]
+  ],
+  "sound": "launch trailer music 117.5 s; speech: none"
+ },
+ "approved": "go: rolling queue; preview sent 10:58Z; gate 10:55Z: Steam API 474,777 now (the line says over 450,000)",
+ "scheduled": "scheduled in Publer 15:00Z (19:00 Dubai): Instagram, X, Threads"
 }
