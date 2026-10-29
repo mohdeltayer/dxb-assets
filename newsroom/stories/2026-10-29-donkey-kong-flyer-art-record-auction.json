@@ -78,8 +78,16 @@
  "versions": {
   "v1": {
    "job": "jobs/render/donkey-kong-flyer-art-record-auction.json",
-   "pushed": "09:25Z"
+   "pushed": "09:25Z",
+   "result": "rendered; white line on the paper ticket and stamp hard to read; cream board edge on the barrel shot"
+  },
+  "v2": {
+   "job": "pushed 09:31Z",
+   "result": "dark gradient under the line on dk-4 and dk-5; dk-6 trimmed; director PASS on the dense strip (every line readable, a change at most every 4 s, closing picture is the full painting)"
   }
  },
- "status": "rendering"
+ "status": "scheduled",
+ "gate": "gate 09:23Z and 09:50Z: Landry Pop lot 102 page shows result $329,400, estimate $100,000-150,000; no correction or update on the page",
+ "approved": "go: rolling queue; preview sent 09:53Z",
+ "scheduled": "scheduled in Publer 09:52Z for 12:00Z (16:00 Dubai): Instagram Reel (location Dubai, source comment), X (lot page link follow-up), Threads; labels tpl:stills, skin:house, sound:bed, genre:family"
 }
