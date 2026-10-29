@@ -13339,5 +13339,54 @@
   "min_disk_free_mb": 82377,
   "setup_min": 1.15,
   "story": "dokapon-kingdom-connect-2-announced"
+ },
+ {
+  "name": "dokapon-kingdom-connect-2-announced-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T04:05Z",
+  "stages": {
+   "checks": 2.3,
+   "montage": 62.8,
+   "text": 49.9,
+   "audio": 0.9,
+   "outro": 39.0
+  },
+  "total": 155.0,
+  "lane": "runner",
+  "queued_at": "2026-10-29T04:00:36Z",
+  "finished_at": "2026-10-29T04:05Z",
+  "render_min": 2.58,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.0,
+   "audio_secs": 28.1,
+   "music_pct": 98.0,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 0
+   },
+   "effects_shots": 3,
+   "mix_secs": 0.8,
+   "secs": 3.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 214,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1299,
+  "peak_mem_mb": 3460,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62886,
+  "peak_disk_mb": 65401,
+  "min_disk_free_mb": 82300,
+  "setup_min": 1.07,
+  "story": "dokapon-kingdom-connect-2-announced"
  }
 ]
