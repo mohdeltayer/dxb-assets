@@ -400,6 +400,49 @@ they launch at once even mid-render or mid-slot; only building a Reel for
 what they find waits for the current render, and a breaking story is
 pinged to him straight away.
 
+**Server watch first (advisor card adv-20261029-watch-reads-server-first,
+approved by Mohammad 29 Oct 2026, 19:13 Dubai; from the 20:07 Dubai run).**
+The mechanical watch on dxb-render-1 (`ops/backoffice/watch/`) reads the 100
+sources; the hourly run reads its list instead of launching helpers by habit.
+Quiet hours start no helper at all. This replaces "launch the Watcher every
+run" below; the breaking lane, auto-go, constant coverage, spacing and the
+gap alarm are unchanged.
+1. Read the server watch's new items for the last hour: `digest.json` and
+   `breaking.json` on `main` of `mohdeltayer/dxb-watch` (README "The files").
+   Process only items with a `seq` above the last one handled (kept as
+   `server_seq` in `newsroom/digests-covered.json`). Fallback, until the
+   service is installed and the repo exists, or when the push is stale
+   (`generated_at` over 2 hours old or `watcher.last_poll_at` over 15
+   minutes): run `python3 newsroom/watch_feeds.py` and `python3
+   newsroom/watch_pages.py` yourself (seconds, no tokens) and treat what
+   they print as new as the list; say "server watch not read: <why>" in the
+   commit. Not running either script and not launching the Watcher is the
+   normal case once the server list is read.
+2. Nothing new, or only items already seen or already posted (`ledger.py
+   find`): run the gap alarm, commit watch-seen, stop. No helper, no
+   Verifier, no message.
+3. Something new: triage it yourself in one pass. Start the Verifier
+   (sonnet) only for items that could be Digital Lounge posts, one Verifier
+   for the batch. Start the Watcher (haiku) only for the official pages the
+   server watch cannot read (list below), or for pages `watch_pages.py`
+   prints under "needs a look:" in the fallback.
+   Pages the server watch cannot read (its `not covered:` line, 28 Oct):
+   Konami JP topics (konami.com/games/jp/ja/topics/), Sony Group press, PS
+   Store UAE and Saudi, UAE gaming bodies. Epic, the Saudi Esports
+   Federation and GEA stay with Gaming Watch on X. When the server starts
+   reading one of these, drop it from this list.
+4. Log every run, one JSON line in `newsroom/helper-runs.jsonl`: `at` (UTC),
+   `list` ("server seq N" or "fallback: <why>"), `new_items`, `helpers`
+   (list of `{"role", "model", "count"}`, empty when none), `reason`. The
+   Friday usage review and the first release note after the change report
+   helper runs per day before and after. Before (estimate from this week's
+   watch commits, the old prompt launched the Watcher every run): about 24
+   Watcher (haiku) runs a day, and a Verifier (sonnet) on about one run in
+   four, about 6 a day.
+The "Inbox mirror for the desk dispatcher" hourly task ends the day the
+server dispatcher is installed; production disables it that day and says so
+in the release note.
+
 Every run also reads Mohammad's inbox (`items` on
 https://claude.ai/artifact/AwcHX88eyTrUAL9pc4j4AW, CLAUDE.md "Mohammad's
 inbox", 24 Oct 2026): act on answered production items and mark them done
