@@ -62,9 +62,49 @@
  },
  "versions": {
   "v1": {
-   "pushed": "15:48Z"
+   "pushed": "15:48Z",
+   "rendered": "runner 16:00Z (second run; first stopped on the smear check)",
+   "block_ok": "61.85-62.15 smoke transition, 71.4-72.0 speed lines, 75.4-75.9 light-pillar attack: drawn effects, local copy decodes clean"
   }
  },
- "status": "rendering",
- "slot": "planned 2026-10-30T02:00Z (06:00 Dubai)"
+ "status": "scheduled",
+ "slot": "2026-10-30T02:00Z (06:00 Dubai)",
+ "scheduled": "scheduled in Publer 16:10Z for 02:00Z: Instagram Reel, X, Threads",
+ "gate": "gate 16:08Z: SEGA press release (via The Outerhaven) and launch coverage, 29 Oct Switch 2 launch stands, no delay or change found; re-gate due within the hour before 02:00Z",
+ "director": [
+  {
+   "shot": 1,
+   "time": "0-3.5",
+   "verdict": "PASS",
+   "note": "Muichiro face on the first frame under the headline; smoke transition at 0.25 is the trailer's own"
+  },
+  {
+   "shot": 2,
+   "time": "3.5-7.9",
+   "verdict": "PASS",
+   "note": "line 1 (60 fps, better visuals) over Mitsuri and the green slash; readable"
+  },
+  {
+   "shot": 3,
+   "time": "7.9-10.8",
+   "verdict": "PASS",
+   "note": "54 characters line over the roster fights"
+  },
+  {
+   "shot": 4,
+   "time": "10.8-13.3",
+   "verdict": "PASS",
+   "note": "free upgrade line; demon fight at night, nothing graphic"
+  },
+  {
+   "shot": 5,
+   "time": "13.3-15.0",
+   "verdict": "PASS",
+   "note": "closing picture: close-up and special-attack flash in the last 0.5 s (note, not a fix)"
+  },
+  {
+   "reel": "PASS",
+   "note": "grid tile readable, 15 s story, change every 1 to 3 s, trailer music no speech, stand-in credit on screen"
+  }
+ ]
 }
