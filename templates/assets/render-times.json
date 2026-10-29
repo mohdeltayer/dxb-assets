@@ -14493,5 +14493,53 @@
   "min_disk_free_mb": 82963,
   "setup_min": 1.25,
   "story": "sorry-were-closed-free-epic"
+ },
+ {
+  "name": "repo-sunstone-update-arabic-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T15:34Z",
+  "stages": {
+   "checks": 4.4,
+   "montage": 42.1,
+   "text": 28.3,
+   "audio": 0.7,
+   "outro": 38.1
+  },
+  "total": 113.6,
+  "lane": "runner",
+  "queued_at": "2026-10-29T15:29:42Z",
+  "finished_at": "2026-10-29T15:34Z",
+  "render_min": 1.89,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 14.4,
+   "audio_secs": 38.6,
+   "music_pct": 18.6,
+   "leak_pct": 1.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 5
+   },
+   "reason": "music only 18.6% of the track (< 40.0%)",
+   "secs": 18.3
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 265,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1293,
+  "peak_mem_mb": 2352,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62835,
+  "peak_disk_mb": 64774,
+  "min_disk_free_mb": 82928,
+  "setup_min": 1.22,
+  "story": "repo-sunstone-update-arabic"
  }
 ]
