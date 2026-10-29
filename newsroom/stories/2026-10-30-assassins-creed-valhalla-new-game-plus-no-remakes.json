@@ -64,9 +64,54 @@
  "versions": {
   "v1": {
    "pushed": "21:47Z",
-   "note": "first run stopped on the pace check (internal cuts not seen); re-pushed with pace_ok"
+   "note": "first run stopped on the pace check (internal cuts not seen); re-pushed with pace_ok",
+   "rendered": "runner 200 s"
   }
  },
- "status": "rendering",
- "slot": "2026-10-30T05:00Z (09:00 Dubai)"
+ "status": "scheduled",
+ "slot": "2026-10-30T05:00Z (09:00 Dubai)",
+ "scheduled": "scheduled in Publer 22:00Z for 05:00Z (09:00 Dubai): Instagram Reel, X, Threads; labels tpl:trailer, skin:house, sound:trailer, genre:open world",
+ "approved": "go: rolling queue; preview sent 22:0xZ; gate 21:31Z: Ubisoft primary read in full; re-gate due 04:00-05:00Z (queued over 6 h ahead)",
+ "director": {
+  "verdict": "PASS",
+  "table": [
+   [
+    "1 hook",
+    "0-1.5",
+    "PASS",
+    "Eivor on the longship prow, headline readable, grid tile strong"
+   ],
+   [
+    "2",
+    "1.5-3.2",
+    "PASS",
+    "prow and snow, headline still"
+   ],
+   [
+    "3 40M",
+    "3.2-7.4",
+    "PASS",
+    "Valhalla battle run (torch, horned helmet, shield), no gore; line in a calm stretch"
+   ],
+   [
+    "4 remake",
+    "7.4-12.0",
+    "PASS",
+    "Black Flag ship, sunset, beach; credit on screen"
+   ],
+   [
+    "5 Hexe",
+    "12.0-16.6",
+    "PASS",
+    "dark battle stand-in, credited; nothing graphic"
+   ],
+   [
+    "6 close",
+    "16.6-18.2",
+    "PASS",
+    "Eivor arms raised in the hall, a picture before the end card"
+   ]
+  ],
+  "reel": "first frame works as a tile; 18 s of story; picture changes every 1 to 2 s inside the stretches; sound: Black Flag trailer music, no speech, audio split applied; nothing graphic"
+ }
 }
