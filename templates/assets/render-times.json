@@ -14898,5 +14898,53 @@
   "min_disk_free_mb": 81835,
   "setup_min": 1.02,
   "story": "assassins-creed-valhalla-new-game-plus-no-remakes"
+ },
+ {
+  "name": "world-of-warcraft-forever-launch-november-5-dubai-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T22:10Z",
+  "stages": {
+   "checks": 4.1,
+   "montage": 57.0,
+   "text": 43.5,
+   "audio": 1.1,
+   "outro": 51.2
+  },
+  "total": 156.9,
+  "lane": "runner",
+  "queued_at": "2026-10-29T22:04:00Z",
+  "finished_at": "2026-10-29T22:10Z",
+  "render_min": 2.61,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 17.6,
+   "audio_secs": 39.5,
+   "music_pct": 23.3,
+   "leak_pct": 0.8,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 6
+   },
+   "reason": "music only 23.3% of the track (< 40.0%)",
+   "secs": 23.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 311,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1302,
+  "peak_mem_mb": 2643,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62836,
+  "peak_disk_mb": 65221,
+  "min_disk_free_mb": 82481,
+  "setup_min": 2.12,
+  "story": "world-of-warcraft-forever-launch-november-5-dubai"
  }
 ]
