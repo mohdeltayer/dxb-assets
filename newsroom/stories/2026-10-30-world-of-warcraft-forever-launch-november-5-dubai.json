@@ -73,9 +73,49 @@
    "note": "cancelled for the dungeon wording"
   },
   "v2": {
-   "pushed": "22:03Z"
+   "pushed": "22:03Z",
+   "note": "text check stopped: first line ran out of the safe zone; line 1 now «إنها WoW: Forever / من بليزارد (Blizzard)», re-pushed 22:06Z",
+   "rendered": "runner 311 s (v1 file name)"
   }
  },
- "status": "rendering",
- "slot": "2026-10-30T06:00Z (10:00 Dubai)"
+ "status": "scheduled",
+ "slot": "2026-10-30T06:00Z (10:00 Dubai)",
+ "scheduled": "scheduled in Publer 22:13Z for 06:00Z (10:00 Dubai): Instagram Reel, X, Threads; labels tpl:split, skin:house, sound:trailer, genre:live service/MMO",
+ "approved": "go: rolling queue; preview sent 22:15Z; gate 22:00Z: both Blizzard articles read in full; re-gate due 05:00-06:00Z (queued over 6 h ahead)",
+ "director": {
+  "verdict": "PASS with a note",
+  "table": [
+   [
+    "1 hook",
+    "0-1.5",
+    "PASS",
+    "Skyborne-style mount close-up, headline readable"
+   ],
+   [
+    "2",
+    "1.5-3.9",
+    "PASS",
+    "orc in the city, troops at the gate; headline"
+   ],
+   [
+    "3 what",
+    "3.9-8.3",
+    "PASS (note)",
+    "airship rider, then 1 s of open landscape with only a wing at the edge (5.3 to 6.3), then the snow battle"
+   ],
+   [
+    "4 levels",
+    "8.3-12.7",
+    "PASS",
+    "dungeon fight, spell effects, purple forest"
+   ],
+   [
+    "5 close",
+    "12.7-14.6",
+    "PASS",
+    "desert road to the red city, a picture before the end card"
+   ]
+  ],
+  "reel": "strip (launch time, access) from 3.75 s; one fact one place; sound: trailer music 43 s on, effects-led (audio split not applied: music only 23% of the stretch), no speech; nothing graphic"
+ }
 }
