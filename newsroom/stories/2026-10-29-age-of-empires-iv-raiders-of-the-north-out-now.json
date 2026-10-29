@@ -7,20 +7,52 @@
  "template": "split",
  "skin": "house",
  "sound": "trailer (release trailer music 34 to 50 s, no speech)",
- "genre": ["strategy/sim"],
+ "genre": [
+  "strategy/sim"
+ ],
  "tier": "T2",
  "first_report": "announced Xbox Games Showcase June 2026 with a 29 Oct date; launched 29 Oct 2026 (Xbox 'Available Now' upload 17:00Z)",
  "sources": [
-  {"role": "primary", "name": "Steam store, Age of Empires IV: Raiders of the North (app 4336170): released 29 Oct 2026, 74.00 AED (AE), 79.00 SR (SA), read 17:25Z", "url": "https://store.steampowered.com/app/4336170/"},
-  {"role": "primary", "name": "Xbox YouTube, Raiders of the North | Available Now, 17:00Z (server watch seq 4)"},
-  {"role": "secondary", "name": "Xbox store listing and Notebookcheck: PC, Xbox, PS5, USD 19.99, needs the base game"}
+  {
+   "role": "primary",
+   "name": "Steam store, Age of Empires IV: Raiders of the North (app 4336170): released 29 Oct 2026, 74.00 AED (AE), 79.00 SR (SA), read 17:25Z",
+   "url": "https://store.steampowered.com/app/4336170/"
+  },
+  {
+   "role": "primary",
+   "name": "Xbox YouTube, Raiders of the North | Available Now, 17:00Z (server watch seq 4)"
+  },
+  {
+   "role": "secondary",
+   "name": "Xbox store listing and Notebookcheck: PC, Xbox, PS5, USD 19.99, needs the base game"
+  }
  ],
  "claims": [
-  {"text": "out 29 Oct 2026", "status": "confirmed", "source": "Steam store"},
-  {"text": "adds the Vikings and the Scots", "status": "confirmed", "source": "Steam store description and release trailer"},
-  {"text": "four new Crucible missions, Crucible co-op", "status": "confirmed", "source": "release trailer text"},
-  {"text": "74 AED and 79 SAR on Steam", "status": "confirmed", "source": "Steam store"},
-  {"text": "PC, Xbox and PS5", "status": "confirmed by the Xbox store listing; PS5 from Notebookcheck", "source": "Xbox store, Notebookcheck"}
+  {
+   "text": "out 29 Oct 2026",
+   "status": "confirmed",
+   "source": "Steam store"
+  },
+  {
+   "text": "adds the Vikings and the Scots",
+   "status": "confirmed",
+   "source": "Steam store description and release trailer"
+  },
+  {
+   "text": "four new Crucible missions, Crucible co-op",
+   "status": "confirmed",
+   "source": "release trailer text"
+  },
+  {
+   "text": "74 AED and 79 SAR on Steam",
+   "status": "confirmed",
+   "source": "Steam store"
+  },
+  {
+   "text": "PC, Xbox and PS5",
+   "status": "confirmed by the Xbox store listing; PS5 from Notebookcheck",
+   "source": "Xbox store, Notebookcheck"
+  }
  ],
  "sensitive": "none",
  "brief": "Family 7 release. Hook: the Viking fleet under «توسعة Age of Empires IV / الجديدة متوفرة الآن». Strip: Steam price in AED, platforms. Lines: the two civilisations on the charging army; a breathing shot on a Scottish village; challenge missions and co-op on the siege; close on the castle on the water. RTS footage is wide by nature; shots chosen for big shapes (fleet, army mass, walls, castle). 16.4 s.",
@@ -32,7 +64,50 @@
   "x_reply": "المصدر: https://store.steampowered.com/app/4336170/",
   "notes": "DeepL back-check 17:27Z: meaning intact on all three texts. Forward pass on the whole story and the phrases (two new civilizations / the Vikings and the Scots / co-op mode / requires the base game): DeepL writes الفايكنج with ج and الاسكتلنديون without hamza; kept الفايكنغ (the Gulf press spelling) and الإسكتلنديون. Grammar stage: حضارتا الفايكنغ (dual in iḍāfa, nominative), حضارتي (accusative dual in iḍāfa), 74 درهمًا and 79 ريالًا (tamyīz, accusative); no required edits. Variety: the Age of Empires IV anniversary posted 28 Oct 00:01Z named this expansion; only the launch and the prices are new."
  },
- "versions": {"v1": {"pushed": "17:22Z"}},
- "status": "rendering",
- "slot": "planned 2026-10-30T04:00Z (08:00 Dubai)"
+ "versions": {
+  "v1": {
+   "pushed": "17:22Z",
+   "rendered": "runner, first run clean"
+  }
+ },
+ "status": "scheduled",
+ "slot": "2026-10-30T04:00Z (08:00 Dubai)",
+ "scheduled": "scheduled in Publer 17:33Z for 04:00Z: Instagram Reel, X, Threads (Instagram call timed out; checked, created once)",
+ "gate": "gate 17:25Z: Steam store page (released 29 Oct, 74 AED, 79 SR) and Xbox Available Now upload; re-gate within the hour before 04:00Z",
+ "director": [
+  {
+   "shot": 1,
+   "time": "0-2.8",
+   "verdict": "PASS",
+   "note": "longship at sea under the headline; a weaker hook than usual (RTS footage is wide), readable as a grid tile"
+  },
+  {
+   "shot": 2,
+   "time": "2.8-7.4",
+   "verdict": "PASS",
+   "note": "Viking landing and army; line on the two civilisations"
+  },
+  {
+   "shot": 3,
+   "time": "7.4-10.4",
+   "verdict": "PASS",
+   "note": "Scottish village, breathing shot, strip only"
+  },
+  {
+   "shot": 4,
+   "time": "10.4-14.8",
+   "verdict": "PASS",
+   "note": "siege of the walls; line on challenge missions and co-op"
+  },
+  {
+   "shot": 5,
+   "time": "14.8-16.4",
+   "verdict": "PASS",
+   "note": "castle on the water, closing picture"
+  },
+  {
+   "reel": "PASS",
+   "note": "16.4 s, trailer music (no speech), strip AED price and platforms"
+  }
+ ]
 }
