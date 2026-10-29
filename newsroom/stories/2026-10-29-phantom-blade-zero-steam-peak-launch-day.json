@@ -1,0 +1,67 @@
+{
+ "id": "2026-10-29-phantom-blade-zero-steam-peak-launch-day",
+ "title": "Phantom Blade Zero passes 450,000 players at once on Steam on launch day",
+ "account": "Digital Lounge",
+ "chip": "أرقام",
+ "template": "clipcard",
+ "skin": "house",
+ "sound": "trailer",
+ "genre": [
+  "action",
+  "RPG"
+ ],
+ "first_report": "SteamDB automated post 29 Oct 10:05Z (peak 448,203); Steam Web API 455,671 at 10:17Z",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid=4115450",
+   "says": "player_count 455,671",
+   "read": "10:17Z"
+  },
+  {
+   "kind": "data",
+   "url": "https://steamdb.info/app/4115450/charts/",
+   "says": "peaked at 448,203 concurrent players on 29 October 2026 on release day (SteamDB RSS 10:05Z)"
+  },
+  {
+   "kind": "store",
+   "url": "https://store.steampowered.com/app/4115450/",
+   "says": "Phantom Blade Zero, S-GAME, released (28 Oct on Steam's US date; 29 Oct 06:00 Dubai)"
+  }
+ ],
+ "claims": [
+  {
+   "text": "more than 450,000 players at once on Steam on launch day",
+   "status": "confirmed (Steam's own player count)"
+  },
+  {
+   "text": "no sales figure from S-Game yet",
+   "status": "confirmed (Steam news, no figure; Alinea's 1M pre-launch estimate not used)"
+  }
+ ],
+ "sensitive": "none (footage avoids blood: shots at 36, 88, 120, 156, 160 s)",
+ "brief": {
+  "family": "numbers (3)",
+  "hook": "number: the game's name and 'hundreds of thousands' on the hatted figure",
+  "cover": "36.0 s armoured figure with the glowing orb",
+  "key_shot": "the 450,000 card on the dimmed red-cloaked figure (88 s)",
+  "sound": "launch trailer music 117.5 to 130.5 s, the long stretch without speech (speech elsewhere mapped with faster-whisper)",
+  "seconds": 13.0,
+  "read_aloud": "Phantom Blade Zero draws hundreds of thousands on Steam; over 450,000 at once on launch day; it comes from the Chinese studio S-GAME, on PC and PS5."
+ },
+ "drafts": {
+  "x": "تجاوز عدد لاعبي Phantom Blade Zero على Steam في وقت واحد 450 ألف لاعب يوم إطلاقها، حسب بيانات المتجر.",
+  "threads": "تجاوز عدد لاعبي Phantom Blade Zero على Steam في وقت واحد 450 ألف لاعب يوم إطلاقها، حسب بيانات المتجر.\n\nالمصدر: بيانات Steam لعدد اللاعبين",
+  "instagram": "ذروة Phantom Blade Zero على Steam تتجاوز 450 ألف لاعب.\n\nبلغ عدد لاعبي Phantom Blade Zero على Steam في وقت واحد أكثر من 450 ألف لاعب يوم إطلاقها، حسب بيانات المتجر.\n\nواللعبة من استوديو إس غيم (S-GAME) الصيني، وصدرت يوم 29 أكتوبر على الحاسب و PS5، ويؤدي فيها اللاعب دور المحارب Soul. ولم يعلن الاستوديو أرقام مبيعات بعد.\n\n#ألعاب #أخبار_الألعاب #PhantomBladeZero #Steam",
+  "ig_first_comment": "المصدر: بيانات Steam لعدد اللاعبين، 29 أكتوبر",
+  "x_reply": "المصدر: https://steamdb.info/app/4115450/charts/"
+ },
+ "deepl_backcheck": "10:24Z: meaning intact ('peak concurrent players exceeded 450,000', 'the studio has not yet announced sales figures')",
+ "versions": {
+  "v1": {
+   "job": "jobs/render/phantom-blade-zero-steam-peak-launch-day.json",
+   "pushed": "10:21Z"
+  }
+ },
+ "status": "rendering"
+}
