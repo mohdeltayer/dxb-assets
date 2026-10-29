@@ -5,7 +5,7 @@
   "open world",
   "rpg"
  ],
- "status": "moved to Publer drafts 03:40Z 29 Oct (all three): build desk B8 (your five points) not released at 04:00 Dubai, so per the approved BUILD.md card the episode does not post as sent back; the series starts a day later, rebuilt on the released template",
+ "status": "rebuild for 30 Oct: B8 template fixes on branch build/2026-10-29-ocarina-b8 (release 00:00Z); storyteller lines v3 written; re-render and preview before 17:00Z 30 Oct",
  "sources": [
   {
    "kind": "primary",
@@ -114,6 +114,30 @@
    "هنا بدأت الرحلة",
    "بلا جنية"
   ],
-  "caption_note": "the Instagram caption's «وحلقة الغد عن الأميرة...» changes with the new date when the episode is rescheduled"
+  "caption_note": "the Instagram caption's «وحلقة الغد عن الأميرة...» changes with the new date when the episode is rescheduled",
+  "v3_storyteller": {
+   "why": "Mohammad's point 4 on the ep6 preview: the wording should have a storyteller narrative; rebuilt for the re-render after the 30 Oct release (adv-20261029-server-handover)",
+   "paragraph": "بلا جنية. في قلب غابة Kokiri، كان لكل طفل جنية، إلا صبيًا اسمه Link. وحيدًا. حتى جاء يوم طلبت فيه شجرة Deku العظيمة من الجنية Navi أن ترافقه. من هنا بدأت الحكاية. بلا جنية.",
+   "beats": [
+    "في قلب غابة Kokiri",
+    "كان لكل طفل جنية",
+    "إلا صبيًا اسمه Link",
+    "وحيدًا",
+    "حتى جاء يوم",
+    "طلبت فيه شجرة Deku العظيمة",
+    "من الجنية Navi",
+    "أن ترافقه",
+    "من هنا بدأت الحكاية",
+    "بلا جنية"
+   ],
+   "checks": {
+    "storyteller voice": "opens on «في قلب», tells it as a tale (كان، حتى جاء يوم، من هنا بدأت الحكاية) in plain MSA, no first person",
+    "subject before pronoun": "Link named before «ترافقه»",
+    "no line opens on و": "pass («وحيدًا» is the word itself; the line after the climax opens on «من»)",
+    "in-game terms": "labels kept: غابة Kokiri، شجرة Deku العظيمة، الجنية Navi",
+    "grammar": "إلا صبيًا: exception after a complete affirmative, accusative; كان لكل طفل جنية: كان with a fronted predicate; agreement checked"
+   },
+   "reveal": "أن ترافقه"
+  }
  }
 }
