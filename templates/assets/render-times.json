@@ -13552,5 +13552,38 @@
   "min_disk_free_mb": 82949,
   "setup_min": 0.77,
   "story": "alien-isolation-2-microphone-physical-edition"
+ },
+ {
+  "name": "donkey-kong-flyer-art-record-auction-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T09:29Z",
+  "stages": {
+   "checks": 1.4,
+   "montage": 55.6,
+   "text": 67.4,
+   "audio": 1.2,
+   "outro": 43.7
+  },
+  "total": 169.4,
+  "lane": "runner",
+  "queued_at": "2026-10-29T09:25:48Z",
+  "finished_at": "2026-10-29T09:29Z",
+  "render_min": 2.82,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 189,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1032,
+  "peak_mem_mb": 2074,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62537,
+  "peak_disk_mb": 65221,
+  "min_disk_free_mb": 82481,
+  "setup_min": 0.9,
+  "story": "donkey-kong-flyer-art-record-auction"
  }
 ]
