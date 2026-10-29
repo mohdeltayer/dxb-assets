@@ -14638,5 +14638,38 @@
   "min_disk_free_mb": 82339,
   "setup_min": 1.28,
   "story": "gta-6-original-score-december-11"
+ },
+ {
+  "name": "xbox-free-play-days-oct-29-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T15:49Z",
+  "stages": {
+   "checks": 5.0,
+   "montage": 47.8,
+   "text": 47.3,
+   "audio": 1.1,
+   "outro": 48.5
+  },
+  "total": 149.7,
+  "lane": "runner",
+  "queued_at": "2026-10-29T15:43:49Z",
+  "finished_at": "2026-10-29T15:49Z",
+  "render_min": 2.5,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 294,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1000,
+  "peak_mem_mb": 1755,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62537,
+  "peak_disk_mb": 65506,
+  "min_disk_free_mb": 82196,
+  "setup_min": 1.22,
+  "story": "xbox-free-play-days-oct-29"
  }
 ]
