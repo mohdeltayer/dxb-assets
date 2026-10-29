@@ -77,5 +77,39 @@
    "pushed": "15:37Z"
   }
  },
- "status": "rendering"
+ "status": "scheduled",
+ "director": [
+  [
+   "1",
+   "0 to 3.5 s",
+   "PASS",
+   "Sunstone robot waving under «لعبة R.E.P.O / تدعم العربية الآن» (dot dropped)"
+  ],
+  [
+   "2",
+   "3.5 to 6.9 s",
+   "PASS",
+   "robots and HUD $11K centred, update line"
+  ],
+  [
+   "3-4",
+   "6.9 to 9.5 s",
+   "PASS",
+   "shop and robot face under the 21 languages line"
+  ],
+  [
+   "5",
+   "9.6 to 11.5 s",
+   "PASS",
+   "Sunstone robot close as a bookend; last two seconds a picture"
+  ],
+  [
+   "Reel",
+   "11.5 s + end card",
+   "PASS after round 2",
+   "Monster trailer music, speech none, decode clean"
+  ]
+ ],
+ "scheduled": "scheduled in Publer 18:30Z (22:30 Dubai): Instagram (Reel, first comment source, Dubai location), X (follow-up link), Threads (source line); labels tpl:split, skin:house, sound:trailer, genre:horror",
+ "approved": "go: rolling queue; preview sent 16:00Z; gate 15:58Z: Steam lists Arabic, price 27 AED (17.55 on sale), Sunstone notes unchanged"
 }
