@@ -12927,5 +12927,38 @@
   "min_disk_free_mb": 82067,
   "setup_min": 1.02,
   "story": "gta-6-edge-map-three-games"
+ },
+ {
+  "name": "zelda-40th-anniversary-switch-2-out-today-reel-v6.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T02:17Z",
+  "stages": {
+   "checks": 7.7,
+   "montage": 42.2,
+   "text": 32.9,
+   "audio": 0.7,
+   "outro": 31.9
+  },
+  "total": 115.4,
+  "lane": "runner",
+  "queued_at": "2026-10-29T02:13:42Z",
+  "finished_at": "2026-10-29T02:17Z",
+  "render_min": 1.92,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 164,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1079,
+  "peak_mem_mb": 2063,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62537,
+  "peak_disk_mb": 64958,
+  "min_disk_free_mb": 82744,
+  "setup_min": 0.95,
+  "story": "zelda-40th-anniversary-switch-2-out-today"
  }
 ]
