@@ -1,0 +1,83 @@
+{
+ "id": "2026-10-29-monster-hunter-outlanders-out-now",
+ "title": "Monster Hunter Outlanders launches worldwide on iOS and Android",
+ "account": "Digital Lounge",
+ "chip": "متوفر الآن",
+ "template": "split",
+ "skin": "house",
+ "sound": "trailer",
+ "genre": [
+  "mobile",
+  "RPG"
+ ],
+ "first_report": "TiMi Studio Group press release, 29 Oct 2026 (Famitsu 11:33 JST = 02:33Z); date announced 29 Sep (story 2026-09-29-mho-date)",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.famitsu.com/article/202610/92434",
+   "says": "official service began 29 Oct 2026; TiMi develops under licence from Capcom; mainland China 2027 or later; launch trailer reveals Charge Axe, unlocked at service start; original elder dragon",
+   "read": "05:30Z"
+  },
+  {
+   "kind": "store",
+   "url": "https://apps.apple.com/ae/ (Monster Hunter Outlanders)",
+   "says": "UAE: Free, seller Garena Online Private Ltd., languages without Arabic",
+   "read": "05:31Z via iTunes search API"
+  }
+ ],
+ "claims": [
+  {
+   "text": "out today on iOS and Android",
+   "status": "official"
+  },
+  {
+   "text": "developed by TiMi under licence from Capcom",
+   "status": "official"
+  },
+  {
+   "text": "free in the UAE App Store, no Arabic",
+   "status": "store listing"
+  },
+  {
+   "text": "Charge Axe available at launch",
+   "status": "official"
+  },
+  {
+   "text": "new monsters not seen in the series before (original elder dragon, unique ecology)",
+   "status": "official"
+  }
+ ],
+ "sensitive": "none",
+ "footage": "official launch trailer, IGN 3840 copy, 17.9 Mbps, decode clean; captioned stretches 52.5-55 and 67.5-71.5 s avoided",
+ "sound_reason": "trailer music, one stretch from 55.5 s; narration only at 17.6-23.3 and 40.8-44.7 s, outside the stretch",
+ "brief": {
+  "family": "release",
+  "hook": "surprise (new Monster Hunter on phones, out today)",
+  "template": "split (over the day cap only if Mohammad allows; card prod-20261029-review-1000)",
+  "strip": [
+   "السعر: مجانية",
+   "المنصات: هواتف iOS و Android"
+  ],
+  "total_secs": 24.7,
+  "opening": "hunter and ice wyvern, moving, headline over it",
+  "key_shot": "elder dragon reveal under the new-monsters line",
+  "close": "hunters in a group, 2 s picture"
+ },
+ "read_aloud": {
+  "paragraph": "اسمها Outlanders، وطورتها تيمي (TiMi) بترخيص من كابكوم (Capcom). يصل معها سلاح Charge Axe، سيف يتحول إلى فأس. تضم أيضًا وحوشًا جديدة لم تظهر في السلسلة من قبل.",
+  "checks": "05:36Z: the game is named in the headline before «اسمها»; no line opens on و; Charge Axe explained in four words"
+ },
+ "drafts": {
+  "x": "صدرت Monster Hunter Outlanders اليوم مجانًا على هواتف iOS وAndroid، من تطوير استوديو تيمي (TiMi) بترخيص من كابكوم (Capcom).",
+  "threads": "صدرت Monster Hunter Outlanders اليوم مجانًا على هواتف iOS وAndroid، من تطوير استوديو تيمي (TiMi) بترخيص من كابكوم (Capcom).\n\nالمصدر: بيان تيمي (TiMi) الصحفي",
+  "instagram": "صدرت Monster Hunter Outlanders اليوم مجانًا على الهواتف.\n\nأعلن استوديو تيمي (TiMi Studio Group) بدء الخدمة الرسمية للعبة Monster Hunter Outlanders، التي يطورها بترخيص من شركة كابكوم (Capcom)، على هواتف iOS وAndroid، على أن تصل النسخة الصينية في 2027 أو بعده.\n\nوتدور اللعبة في جزيرة جديدة يستكشفها اللاعب ويصطاد وحوشها، ومنها تنين أسطوري خاص باللعبة وأنواع جديدة من الوحوش، ويصل مع الإطلاق سلاح Charge Axe، وهو سيف يتحول إلى فأس ضخمة.\n\nواللعبة مجانية في متجر App Store في الإمارات، وتبيعها فيه شركة غارينا (Garena)، ولا تدعم اللغة العربية.\n\n#ألعاب #أخبار_الألعاب #MonsterHunter #MonsterHunterOutlanders"
+ },
+ "deepl_backcheck": "05:33Z: lines, X and caption read back as written (Garena wording then tightened to 'sells it in the App Store')",
+ "versions": {
+  "v1": {
+   "job": "jobs/render/monster-hunter-outlanders-out-now.json",
+   "pushed": "05:37Z"
+  }
+ },
+ "status": "rendering"
+}
