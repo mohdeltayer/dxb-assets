@@ -14301,5 +14301,53 @@
   "min_disk_free_mb": 82632,
   "setup_min": 1.18,
   "story": "the-duskbloods-delayed-to-2027"
+ },
+ {
+  "name": "konami-first-half-record-profit-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T15:10Z",
+  "stages": {
+   "checks": 2.8,
+   "montage": 28.9,
+   "text": 19.8,
+   "audio": 0.6,
+   "outro": 23.9
+  },
+  "total": 76.0,
+  "lane": "runner",
+  "queued_at": "2026-10-29T15:06:23Z",
+  "finished_at": "2026-10-29T15:10Z",
+  "render_min": 1.27,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 1.8,
+   "audio_secs": 32.8,
+   "music_pct": 31.0,
+   "leak_pct": 2.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 0
+   },
+   "reason": "music only 31.0% of the track (< 40.0%)",
+   "secs": 2.4
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 204,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1340,
+  "peak_mem_mb": 2438,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62882,
+  "peak_disk_mb": 64900,
+  "min_disk_free_mb": 82801,
+  "setup_min": 1.03,
+  "story": "konami-first-half-record-profit"
  }
 ]
