@@ -1,7 +1,7 @@
 {
  "id": "2026-10-29-gta-6-edge-map-three-games",
  "title": "GTA 6 map nearly as big as GTA IV, GTA V and RDR2 combined (Edge cover feature)",
- "status": "building",
+ "status": "scheduled",
  "genre": [
   "open world"
  ],
@@ -63,6 +63,59 @@
   "gate": "first report 00:01Z (Edge via GamesRadar+); no Rockstar denial expected; re-check before queuing"
  },
  "versions": {
-  "v1": "runner, line 2 reads «حركة» alone (to change in v2)"
+  "v1": "runner stopped it: output smear at 5.80-6.17 and 6.97-7.30 s (beach and biplane shot, red smoke on the 4.6 Mbps copy)",
+  "v2": "passed checks; closing shot ran into the ROCKSTAR GAMES PRESENTS title card; quote shot showed a figure aiming a pistol",
+  "v3": "cards/2026-10/gta-6-edge-map-three-games-reel-v3.mp4: closing on the skyscraper glass shot, quote over the rooftop at sunset"
+ },
+ "approved": "go: rolling queue; preview sent 01:52Z; gate 01:48Z: the Edge feature on GamesRadar+ still carries the map line word for word; no Rockstar statement against it",
+ "scheduled": "scheduled in Publer 01:50Z for 2026-10-29T05:00Z (09:00 Dubai): Instagram Reel, X, Threads; labels tpl:trailer, skin:house, sound:trailer, genre:open world",
+ "version_final": "gta-6-edge-map-three-games-reel-v3",
+ "director": {
+  "verdict": "PASS (v3, round 2)",
+  "table": [
+   [
+    "0-2.0",
+    "Lucia in the car",
+    "PASS",
+    "face under the headline; grid tile reads"
+   ],
+   [
+    "2.0-3.2",
+    "Vice City water at sunset",
+    "PASS",
+    ""
+   ],
+   [
+    "3.2-8.0",
+    "marina aerial, the Keys highway",
+    "PASS",
+    "line 1 (map)"
+   ],
+   [
+    "8.0-12.6",
+    "street with police car, lowrider crew",
+    "PASS",
+    "line 2 (600 ألف حركة رسومية)"
+   ],
+   [
+    "12.6-16.4",
+    "Lucia and Jason at the car, Jason on the phone",
+    "PASS",
+    "line 3a (Garbut and his role)"
+   ],
+   [
+    "16.4-19.1",
+    "night city, rooftop at sunset",
+    "PASS",
+    "quote line"
+   ],
+   [
+    "19.1-20.8",
+    "skyscraper glass shot",
+    "PASS",
+    "closing picture, no line"
+   ]
+  ],
+  "reel": "19.1 s plus end card; sound: one stretch of trailer music then its sung song (lyrics are music, speech_ok); no dialogue under lines; nothing graphic, no guns, no intimate scenes"
  }
 }
