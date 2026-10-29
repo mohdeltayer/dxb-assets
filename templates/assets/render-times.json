@@ -14801,5 +14801,53 @@
   "min_disk_free_mb": 81817,
   "setup_min": 1.2,
   "story": "age-of-empires-iv-raiders-of-the-north-out-now"
+ },
+ {
+  "name": "pubg-netflix-series-donald-glover-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T19:25Z",
+  "stages": {
+   "checks": 6.4,
+   "montage": 27.8,
+   "text": 37.5,
+   "audio": 0.7,
+   "outro": 37.6
+  },
+  "total": 110.0,
+  "lane": "runner",
+  "queued_at": "2026-10-29T19:21:03Z",
+  "finished_at": "2026-10-29T19:25Z",
+  "render_min": 1.83,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 11.1,
+   "audio_secs": 35.6,
+   "music_pct": 35.9,
+   "leak_pct": 12.9,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "reason": "music stem not clean (leftover 12.9% > 5.0%)",
+   "secs": 15.6
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 209,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1471,
+  "peak_mem_mb": 2714,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62836,
+  "peak_disk_mb": 64998,
+  "min_disk_free_mb": 82704,
+  "setup_min": 1.13,
+  "story": "pubg-netflix-series-donald-glover"
  }
 ]
