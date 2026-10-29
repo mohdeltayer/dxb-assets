@@ -13618,5 +13618,54 @@
   "min_disk_free_mb": 82484,
   "setup_min": 0.98,
   "story": "donkey-kong-flyer-art-record-auction"
+ },
+ {
+  "name": "wendyquest-wendys-rpg-announced-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T09:50Z",
+  "stages": {
+   "checks": 3.6,
+   "montage": 44.6,
+   "text": 26.1,
+   "audio": 0.8,
+   "outro": 35.0
+  },
+  "total": 110.1,
+  "lane": "runner",
+  "queued_at": "2026-10-29T09:46:50Z",
+  "finished_at": "2026-10-29T09:50Z",
+  "render_min": 1.83,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 10.5,
+   "audio_secs": 26.6,
+   "music_pct": 83.7,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 6,
+   "mix_secs": 4.3,
+   "secs": 15.3
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 176,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1334,
+  "peak_mem_mb": 2995,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62835,
+  "peak_disk_mb": 64784,
+  "min_disk_free_mb": 82918,
+  "setup_min": 1.17,
+  "story": "wendyquest-wendys-rpg-announced"
  }
 ]
