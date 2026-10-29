@@ -13765,5 +13765,54 @@
   "min_disk_free_mb": 83314,
   "setup_min": 1.08,
   "story": "wendyquest-wendys-rpg-announced"
+ },
+ {
+  "name": "probably-stolen-200k-sold-reel-v5.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T10:10Z",
+  "stages": {
+   "checks": 2.5,
+   "montage": 43.1,
+   "text": 28.9,
+   "audio": 0.7,
+   "outro": 32.4
+  },
+  "total": 107.6,
+  "lane": "runner",
+  "queued_at": "2026-10-29T10:06:11Z",
+  "finished_at": "2026-10-29T10:10Z",
+  "render_min": 1.79,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 10.4,
+   "audio_secs": 34.7,
+   "music_pct": 96.2,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 1,
+    "miss": 3
+   },
+   "effects_shots": 4,
+   "mix_secs": 4.9,
+   "secs": 15.7
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 176,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1453,
+  "peak_mem_mb": 2329,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62953,
+  "peak_disk_mb": 64666,
+  "min_disk_free_mb": 83036,
+  "setup_min": 2.1,
+  "story": "probably-stolen-200k-sold"
  }
 ]
