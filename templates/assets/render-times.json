@@ -13863,5 +13863,54 @@
   "min_disk_free_mb": 83061,
   "setup_min": 1.12,
   "story": "phantom-blade-zero-steam-peak-launch-day"
+ },
+ {
+  "name": "phantom-blade-zero-steam-peak-launch-day-reel-v4.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T10:53Z",
+  "stages": {
+   "checks": 3.1,
+   "montage": 37.5,
+   "text": 22.6,
+   "audio": 0.7,
+   "outro": 41.4
+  },
+  "total": 105.3,
+  "lane": "runner",
+  "queued_at": "2026-10-29T10:49:09Z",
+  "finished_at": "2026-10-29T10:53Z",
+  "render_min": 1.76,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 8.7,
+   "audio_secs": 28.8,
+   "music_pct": 68.3,
+   "leak_pct": 0.5,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 1,
+    "miss": 3
+   },
+   "effects_shots": 4,
+   "mix_secs": 4.5,
+   "secs": 13.7
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 223,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1402,
+  "peak_mem_mb": 2159,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62878,
+  "peak_disk_mb": 64673,
+  "min_disk_free_mb": 83028,
+  "setup_min": 1.42,
+  "story": "phantom-blade-zero-steam-peak-launch-day"
  }
 ]
