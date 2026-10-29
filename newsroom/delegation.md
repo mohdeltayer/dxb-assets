@@ -409,8 +409,11 @@ run" below; the breaking lane, auto-go, constant coverage, spacing and the
 gap alarm are unchanged.
 1. Read the server watch's new items for the last hour: `watch/digest.json`
    and `watch/breaking.json` on the branch `watch-digest` of dxb-assets
-   (`git fetch -q --depth 1 origin watch-digest && git show
-   FETCH_HEAD:watch/digest.json`). Since 29 Oct (adv-20261029-server-watch-
+   (`git fetch -q --depth 1 origin watch-digest:refs/remotes/origin/watch-digest
+   && git show origin/watch-digest:watch/digest.json`). If `generated_at` is
+   more than 50 minutes old (GitHub held back the :52 schedule on its first
+   day), dispatch `watch-digest.yml` on main and read again after it lands
+   (about 2 minutes). Since 29 Oct (adv-20261029-server-watch-
    publish-now, Mohammad: "Public branch, titles+links"), the workflow
    `watch-digest.yml` runs the watch's digest on the dxb-render server at :52
    and force-pushes those files there: titles, links, times, sources and media
