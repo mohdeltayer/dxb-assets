@@ -14541,5 +14541,53 @@
   "min_disk_free_mb": 82928,
   "setup_min": 1.22,
   "story": "repo-sunstone-update-arabic"
+ },
+ {
+  "name": "repo-sunstone-update-arabic-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T15:40Z",
+  "stages": {
+   "checks": 2.7,
+   "montage": 28.0,
+   "text": 18.9,
+   "audio": 0.5,
+   "outro": 22.8
+  },
+  "total": 72.8,
+  "lane": "runner",
+  "queued_at": "2026-10-29T15:37:27Z",
+  "finished_at": "2026-10-29T15:40Z",
+  "render_min": 1.21,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 6.4,
+   "audio_secs": 38.7,
+   "music_pct": 18.1,
+   "leak_pct": 1.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 1,
+    "miss": 4
+   },
+   "reason": "music only 18.1% of the track (< 40.0%)",
+   "secs": 9.0
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 169,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1453,
+  "peak_mem_mb": 2358,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62886,
+  "peak_disk_mb": 64848,
+  "min_disk_free_mb": 82854,
+  "setup_min": 0.9,
+  "story": "repo-sunstone-update-arabic"
  }
 ]
