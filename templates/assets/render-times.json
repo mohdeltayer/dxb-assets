@@ -13290,5 +13290,54 @@
   "min_disk_free_mb": 83185,
   "setup_min": 0.95,
   "story": "honkai-star-rail-4-7-special-program-oct-30"
+ },
+ {
+  "name": "dokapon-kingdom-connect-2-announced-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T03:57Z",
+  "stages": {
+   "checks": 2.4,
+   "montage": 62.7,
+   "text": 49.5,
+   "audio": 0.9,
+   "outro": 38.6
+  },
+  "total": 154.1,
+  "lane": "runner",
+  "queued_at": "2026-10-29T03:52:44Z",
+  "finished_at": "2026-10-29T03:57Z",
+  "render_min": 2.57,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 9.0,
+   "audio_secs": 28.1,
+   "music_pct": 98.0,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "effects_shots": 3,
+   "mix_secs": 6.2,
+   "secs": 15.8
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 238,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1307,
+  "peak_mem_mb": 3381,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62835,
+  "peak_disk_mb": 65325,
+  "min_disk_free_mb": 82377,
+  "setup_min": 1.15,
+  "story": "dokapon-kingdom-connect-2-announced"
  }
 ]
