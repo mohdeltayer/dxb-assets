@@ -5,7 +5,7 @@
   "open world",
   "rpg"
  ],
- "status": "scheduled in Publer 02:22Z for 29 Oct 17:00Z (21:00 Dubai) on Instagram, X and Threads; reel v1 (dxb-render-1, 325 s render, 496 s job)",
+ "status": "moved to Publer drafts 03:40Z 29 Oct (all three): build desk B8 (your five points) not released at 04:00 Dubai, so per the approved BUILD.md card the episode does not post as sent back; the series starts a day later, rebuilt on the released template",
  "sources": [
   {
    "kind": "primary",
@@ -92,5 +92,28 @@
    ]
   ],
   "sound": "our bed (series recipe), no speech"
+ },
+ "read_aloud": {
+  "rule": "adv-20261029-lines-as-one-paragraph (29 Oct)",
+  "v1_paragraph": "بلا جنية. في غابة Kokiri لكل طفل جنية، إلا Link. وحيدًا. حتى طلبت شجرة Deku من الجنية Navi أن ترافقه. وبدأت الرحلة. بلا جنية.",
+  "checks": {
+   "subject before pronoun": "pass: Link is named before «ترافقه»",
+   "no line opens on و": "fail: «وبدأت الرحلة» follows the 5 s text-free climax, so it continues nothing on screen (the و in «وحيدًا» is part of the word)",
+   "in-game terms": "pass: each name carries its label (غابة Kokiri، شجرة Deku، الجنية Navi)",
+   "one spoken paragraph": "pass apart from the line above"
+  },
+  "fix": "«وبدأت الرحلة» becomes «هنا بدأت الرحلة»",
+  "lines_v2": [
+   "في غابة Kokiri",
+   "لكل طفل جنية",
+   "إلا Link",
+   "وحيدًا",
+   "حتى طلبت شجرة Deku",
+   "من الجنية Navi",
+   "أن ترافقه",
+   "هنا بدأت الرحلة",
+   "بلا جنية"
+  ],
+  "caption_note": "the Instagram caption's «وحلقة الغد عن الأميرة...» changes with the new date when the episode is rescheduled"
  }
 }

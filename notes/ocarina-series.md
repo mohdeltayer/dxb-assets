@@ -75,3 +75,12 @@ from episode 7 the badge «الطريق إلى Ocarina · الحلقة N» is a 
 `{"from_start": true, "low": true, "size": 52, "band": true}`: on the cover from frame 0 (so it shows on the grid
 tile), 52 px on a soft dark band, low in the safe zone under the beat lines. It runs on every shot except the
 text-free climax. Episode 6 stays as rendered (36 px, from 2 s, top).
+
+## Script check (29 Oct 2026, adv-20261029-lines-as-one-paragraph)
+Before any episode's job is written: the headline and every beat are read aloud in order as one paragraph
+and the paragraph goes in the story file (`read_aloud`). The subject is named before any pronoun refers to it;
+no beat opens on the conjunction و unless it continues the beat before within 3 s (a text-free climax breaks
+the chain); every in-game name carries a plain label (غابة، شجرة، الجنية، المعبد) or is replaced.
+Episode 6 under the check: «وبدأت الرحلة» after the climax becomes «هنا بدأت الرحلة»; the other beats pass.
+Episode 6 moved to Publer drafts 29 Oct 03:40Z: template fixes (B8) not released at 04:00 Dubai, so per the
+approved BUILD.md card the series starts a day later on the released template.
