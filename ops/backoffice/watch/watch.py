@@ -9,7 +9,8 @@ timer, keeps what is new in SQLite, and hands the news desk a digest. No Claude 
     watch.py prune                              drop old rows
 
 Environment (all optional): WATCH_HOME (default ~/backoffice/watch), WATCH_PUSH=off (write files,
-push nothing, mark nothing handed over), WATCH_REMOTE, WATCH_BRANCH, WATCH_TOKEN_FILE,
+push nothing, mark nothing handed over), WATCH_PUSH=external (write files and mark them handed over;
+the caller publishes the out folder, as the watch-digest workflow does), WATCH_REMOTE, WATCH_BRANCH, WATCH_TOKEN_FILE,
 WATCH_EMPTY_PUSH_H, WATCH_CONFIG, WATCH_NEWSROOM, WATCH_RENDER_CHECK=off, WATCH_PAUSE_ALL=1,
 WATCH_FIRST_WINDOW_H, WATCH_SELF_UPDATE=off, WATCH_JOBS.
 Exit codes: 0 done or nothing to do, 1 failure, 75 paused for a render.
@@ -91,6 +92,10 @@ def handoff_cfg(cfg):
 
 def push_enabled():
     return os.environ.get('WATCH_PUSH', 'on').lower() != 'off'
+
+
+def push_external():
+    return os.environ.get('WATCH_PUSH', 'on').lower() == 'external'
 
 
 # ------------------------------------------------------------------ polling
@@ -177,6 +182,11 @@ def deliver(db, cfg, files, message, seq, n_items):
         close_handoff(db, seq, 'dry', n_items, 'WATCH_PUSH=off: files in ' + OUT)
         return False
     now = store.now_dt()
+    if push_external():
+        store.meta_set(db, 'last_push_at', store.iso_s(now))
+        close_handoff(db, seq, 'external', n_items, 'WATCH_PUSH=external: files in ' + OUT)
+        log('handoff #%d written for an external push (%d items)' % (seq, n_items))
+        return True
     try:
         squash = squash_due(db, h, now)
         res = handoff.push(CLONE, files, message, h, squash_due=squash)
@@ -215,7 +225,7 @@ def hourly(db, cfg, sources_total):
     rows = store.pending_digest(db, now, cfg.get('report_max_age_days', 2))
     db.commit()
     h = handoff_cfg(cfg)
-    last_h = db.execute("SELECT MAX(created_at) FROM handoffs WHERE kind='hourly' AND status IN ('pushed','dry')").fetchone()[0]
+    last_h = db.execute("SELECT MAX(created_at) FROM handoffs WHERE kind='hourly' AND status IN ('pushed','dry','external')").fetchone()[0]
     seq = new_seq(db, 'hourly', now)
     nc = cfg.get('not_covered', [])
     p = dg.hourly_payload(db, now, seq, rows, last_h, nc, sources_total)

@@ -1,0 +1,107 @@
+# Hourly hand-over of the mechanical watch (adv-20261029-server-watch-publish-now, Mohammad 29 Oct 2026: "Public
+# branch, titles+links").
+#
+# The server has no key that can push to dxb-queue or a private repo, so this job runs the watch's digest on the
+# dxb-render server (its store stays in ~/backoffice/watch, 60 days, never published) and commits the hourly digest
+# and the breaking lines to the branch `watch-digest` of this repository, with this run's own token. dxb-assets is
+# public, so the files carry titles, links, times, source names and media links only: the copied outlet text
+# (`summary`) is removed before the commit. The branch holds one commit (pushed with --force), so it never grows.
+#
+# Posts nothing, renders nothing, touches no other branch. A push to `watch-digest` fires no workflow (gitleaks and
+# render run on main only). Concurrency keeps one digest at a time; a render on the runner makes it wait its turn.
+#
+#   gh workflow run watch-digest.yml --ref main        # a digest now, outside the hourly schedule
+#
+# The hourly Claude watch reads watch/digest.json and watch/breaking.json from this branch first and falls back to
+# newsroom/watch_feeds.py and watch_pages.py only when generated_at is older than 90 minutes (newsroom/delegation.md).
+name: watch-digest
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: '52 * * * *'
+  workflow_dispatch:
+
+jobs:
+  digest:
+    if: github.repository == 'mohdeltayer/dxb-assets' && github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 12
+    concurrency:
+      group: watch-digest
+      cancel-in-progress: false
+    env:
+      WATCH_HOME: /home/runner/backoffice/watch
+      WATCH_PUSH: external
+      WATCH_EMPTY_PUSH_H: '0'
+      WATCH_SELF_UPDATE: 'off'
+      # This job is itself a Runner.Worker, which the watch would read as a render in progress.
+      WATCH_RENDER_CHECK: 'off'
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            ops/backoffice/watch
+            newsroom
+          persist-credentials: false
+
+      - name: Python with PyYAML
+        run: |
+          mkdir -p "$WATCH_HOME/state" "$WATCH_HOME/out"
+          chmod 700 "$WATCH_HOME"
+          [ -x "$WATCH_HOME/venv/bin/python" ] || python3 -m venv "$WATCH_HOME/venv"
+          "$WATCH_HOME/venv/bin/python" -c 'import yaml' 2>/dev/null || \
+            "$WATCH_HOME/venv/bin/pip" install -q --disable-pip-version-check -r ops/backoffice/watch/requirements.txt
+
+      - name: Digest (poll, breaking, hourly)
+        timeout-minutes: 9
+        run: |
+          rm -f "$WATCH_HOME"/out/*.json "$WATCH_HOME"/out/*.txt
+          nice -n 10 "$WATCH_HOME/venv/bin/python" ops/backoffice/watch/watch.py digest
+          ls -l "$WATCH_HOME/out"
+
+      - name: Public copy (no outlet text)
+        run: |
+          mkdir -p "$RUNNER_TEMP/pub/watch"
+          python3 - "$WATCH_HOME/out" "$RUNNER_TEMP/pub/watch" <<'PY'
+          import json, os, shutil, sys
+          src, dst = sys.argv[1], sys.argv[2]
+          def strip(x):
+              if isinstance(x, dict):
+                  return {k: strip(v) for k, v in x.items() if k != 'summary'}
+              if isinstance(x, list):
+                  return [strip(v) for v in x]
+              return x
+          for name in ('digest.json', 'breaking.json'):
+              d = strip(json.load(open(os.path.join(src, name), encoding='utf-8')))
+              json.dump(d, open(os.path.join(dst, name), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+          for name in ('digest.txt', 'breaking.txt'):
+              shutil.copy(os.path.join(src, name), os.path.join(dst, name))
+          d = json.load(open(os.path.join(dst, 'digest.json'), encoding='utf-8'))
+          print('digest seq %s generated %s: %d official, %d outlet stories' % (
+              d.get('seq'), d.get('generated_at'), len(d.get('official', [])), len(d.get('outlets', []))))
+          PY
+
+      - name: Commit to watch-digest (one commit, forced)
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          cd "$RUNNER_TEMP/pub"
+          git init -q
+          git checkout -q --orphan watch-digest
+          git add -A
+          gen=$(python3 -c "import json; print(json.load(open('watch/digest.json'))['generated_at'])")
+          git -c user.name=dxb-watch -c user.email=noreply@github.com -c commit.gpgsign=false \
+            commit -q -m "watch digest $gen"
+          auth=$(printf 'x-access-token:%s' "$TOKEN" | base64 -w0)
+          git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $auth" \
+            push -q --force "https://github.com/${GITHUB_REPOSITORY}.git" HEAD:refs/heads/watch-digest
+          echo "pushed watch-digest: $gen" | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Clean up
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/pub"

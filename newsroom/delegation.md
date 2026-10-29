@@ -407,13 +407,21 @@ sources; the hourly run reads its list instead of launching helpers by habit.
 Quiet hours start no helper at all. This replaces "launch the Watcher every
 run" below; the breaking lane, auto-go, constant coverage, spacing and the
 gap alarm are unchanged.
-1. Read the server watch's new items for the last hour: `digest.json` and
-   `breaking.json` on `main` of `mohdeltayer/dxb-watch` (README "The files").
-   Process only items with a `seq` above the last one handled (kept as
-   `server_seq` in `newsroom/digests-covered.json`). Fallback, until the
-   service is installed and the repo exists, or when the push is stale
-   (`generated_at` over 2 hours old or `watcher.last_poll_at` over 15
-   minutes): run `python3 newsroom/watch_feeds.py` and `python3
+1. Read the server watch's new items for the last hour: `watch/digest.json`
+   and `watch/breaking.json` on the branch `watch-digest` of dxb-assets
+   (`git fetch -q --depth 1 origin watch-digest && git show
+   FETCH_HEAD:watch/digest.json`). Since 29 Oct (adv-20261029-server-watch-
+   publish-now, Mohammad: "Public branch, titles+links"), the workflow
+   `watch-digest.yml` runs the watch's digest on the dxb-render server at :52
+   and force-pushes those files there: titles, links, times, sources and media
+   links only, no outlet text (dxb-assets is public). The 60-day item store
+   stays on the server. The server has no key for dxb-queue or a private repo;
+   if Mohammad later creates dxb-watch and its token, the output can move
+   there. Process only items with a `seq` above the last one handled (kept as
+   `server_seq` in `newsroom/digests-covered.json`; for breaking items, the
+   `recent` list with `breaking_seq` above it). Fallback only when the
+   digest's `generated_at` is more than 90 minutes old or the branch cannot
+   be read: run `python3 newsroom/watch_feeds.py` and `python3
    newsroom/watch_pages.py` yourself (seconds, no tokens) and treat what
    they print as new as the list; say "server watch not read: <why>" in the
    commit. Not running either script and not launching the Watcher is the
@@ -432,7 +440,7 @@ gap alarm are unchanged.
    Federation and GEA stay with Gaming Watch on X. When the server starts
    reading one of these, drop it from this list.
 4. Log every run, one JSON line in `newsroom/helper-runs.jsonl`: `at` (UTC),
-   `list` ("server seq N" or "fallback: <why>"), `new_items`, `helpers`
+   `list` ("server seq N, generated HH:MMZ" or "fallback: <why>"), `new_items`, `helpers`
    (list of `{"role", "model", "count"}`, empty when none), `reason`. The
    Friday usage review and the first release note after the change report
    helper runs per day before and after. Before (estimate from this week's

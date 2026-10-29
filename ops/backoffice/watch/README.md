@@ -5,7 +5,13 @@ what is new in SQLite, and hands the news desk a short digest every hour, and at
 marked `breaking`. No Claude tokens are used anywhere in the loop. It runs as the `runner` user
 from user-level systemd timers, at nice 10, and narrows itself while a render is active.
 
-**Status: in the repo only. Nothing is installed, nothing is live.** Today's hourly watch
+**Status (29 Oct 2026): live through `.github/workflows/watch-digest.yml`.** The server has no key for
+dxb-watch or dxb-queue, so an hourly Actions job on the dxb-render runner (cron :52) runs `watch.py digest`
+with `WATCH_PUSH=external` (files written to `~/backoffice/watch/out` and marked handed over) and
+force-pushes them, without the `summary` text, to `watch/` on the branch `watch-digest` of dxb-assets
+(adv-20261029-server-watch-publish-now, Mohammad: "Public branch, titles+links"). The systemd timers below
+(5-minute polls, a push of its own) are not installed; with them the breaking lines would arrive within
+minutes rather than at :52. Today's hourly watch
 (`newsroom/watch_feeds.py`, `watch_pages.py`, the Watcher and the Gaming Watch digest) is untouched
 and keeps running; this service has its own SQLite ledger and never writes `watch-seen.json`.
 
