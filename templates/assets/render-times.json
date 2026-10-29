@@ -14253,5 +14253,53 @@
   "min_disk_free_mb": 83523,
   "setup_min": 0.78,
   "story": "famitsu-oct19-25-sales"
+ },
+ {
+  "name": "the-duskbloods-delayed-to-2027-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T15:07Z",
+  "stages": {
+   "checks": 12.6,
+   "montage": 83.4,
+   "text": 34.6,
+   "audio": 0.9,
+   "outro": 39.7
+  },
+  "total": 171.3,
+  "lane": "runner",
+  "queued_at": "2026-10-29T15:00:00Z",
+  "finished_at": "2026-10-29T15:07Z",
+  "render_min": 2.86,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 9.2,
+   "audio_secs": 21.2,
+   "music_pct": 28.8,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "reason": "music only 28.8% of the track (< 40.0%)",
+   "secs": 13.9
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 372,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1405,
+  "peak_mem_mb": 2167,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62876,
+  "peak_disk_mb": 65069,
+  "min_disk_free_mb": 82632,
+  "setup_min": 1.18,
+  "story": "the-duskbloods-delayed-to-2027"
  }
 ]
