@@ -122,6 +122,12 @@ account only) the text says so instead of implying a worldwide decision; (4) the
 pinned source comment carries the reason line and the key dates. Director question
 before upload: "What will the first comment ask?" If the Reel does not answer it,
 add a line or a card; a miss is a send-back.
+Lines as one paragraph (advisor card adv-20261029-lines-as-one-paragraph, approved by
+Mohammad 29 Oct 2026, 06:01 Dubai; STYLE.md, The Reel). Read the headline and every line in
+order as one text, aloud: if nobody would say it that way, it goes back. Checks: the subject
+is named before any pronoun refers to it; no line opens on «و» unless it continues the line
+before within 3 s; in-game terms explained or replaced with plain words; a comparison Reel
+labels both halves on screen. The read-aloud text goes in the story file (`read_aloud`).
 QA format (advisor, 23 Oct 2026; CLAUDE.md "Director QA format"). For every
 shot, pull one frame (the shot's middle, plus its first frame when a line
 enters there) and check: framing (subject in the 9:16 crop, no side-on face

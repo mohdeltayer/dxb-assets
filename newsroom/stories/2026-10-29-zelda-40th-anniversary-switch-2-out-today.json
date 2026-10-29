@@ -54,8 +54,8 @@
   "headline": "جهاز Switch 2 بتصميم Zelda\nصدر اليوم في اليابان",
   "lines": [
    "في الذكرى الأربعين\nلسلسلة Zelda",
-   "بنقوش Triforce\nعلى ظهر الجهاز",
-   "والجهاز مخصص لليابان فقط\nحسب نينتيندو"
+   "رمز Triforce مرسوم\nعلى ظهر الجهاز",
+   "لكنه مخصص لليابان فقط\nحسب نينتيندو"
   ],
   "strip": [
    [
@@ -89,9 +89,14 @@
   },
   {
    "v": 4,
-   "note": "headline release verb صدر اليوم"
+   "note": "superseded: line opened on و (one-paragraph rule)"
+  },
+  {
+   "v": 5,
+   "note": "lines rewritten as one spoken paragraph"
   }
  ],
  "status": "building",
- "grammar_review": "02:25Z: no required edits on post texts; Reel-line bracket for نينتيندو not applied (credit line carries «نينتيندو (Nintendo)» first at 2 s, the line is a later mention); release verb set to صدر/صدرت اليوم per glossary (was متوفر/متوفرة اليوم); Threads source line «موقع نينتيندو في اليابان»"
+ "grammar_review": "02:25Z: no required edits on post texts; Reel-line bracket for نينتيندو not applied (credit line carries «نينتيندو (Nintendo)» first at 2 s, the line is a later mention); release verb set to صدر/صدرت اليوم per glossary (was متوفر/متوفرة اليوم); Threads source line «موقع نينتيندو في اليابان»",
+ "read_aloud": "02:35Z (rule adv-20261029-lines-as-one-paragraph): «جهاز Switch 2 بتصميم Zelda صدر اليوم في اليابان. في الذكرى الأربعين لسلسلة Zelda. رمز Triforce مرسوم على ظهر الجهاز. لكنه مخصص لليابان فقط، حسب نينتيندو.» No line opens on و; subject named in the headline before لكنه."
 }

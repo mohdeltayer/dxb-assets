@@ -142,6 +142,16 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 
 ## The Reel (templates/reel.py)
 
+- **Lines are one spoken paragraph [newsroom]** (Mohammad, 29 Oct 2026, card
+  adv-20261029-lines-as-one-paragraph, after the Rayman Legends Retold Reel): write the
+  on-screen lines first as one paragraph, as you would tell a friend, then cut it into
+  beats; never compose beats one fact at a time. Read every line in order aloud before the
+  job is committed; if nobody would say it that way, rewrite. Name the subject before any
+  pronoun points to it (the headline counts only if it names it). No line opens on «و»
+  unless it continues the previous line's sentence within 3 s. In-game terms are
+  explained in three words or replaced with plain ones («متجر الملابس في اللعبة», not
+  «الخياط»). A comparison Reel labels its two halves on screen («كما نعرفه» / «بالزي
+  الجديد»). Director QA and the text-level pre-render checks carry it.
 - **Frame:**
   - 9:16, footage full frame; nothing graphic.
   - Faces (21 Oct): front and three-quarter preferred; autofocus measures each
