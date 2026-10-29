@@ -12993,5 +12993,38 @@
   "min_disk_free_mb": 82729,
   "setup_min": 1.02,
   "story": "zelda-40th-anniversary-switch-2-out-today"
+ },
+ {
+  "name": "zelda-40th-anniversary-switch-2-out-today-reel-v8.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T02:30Z",
+  "stages": {
+   "checks": 9.7,
+   "montage": 53.3,
+   "text": 41.6,
+   "audio": 0.9,
+   "outro": 41.9
+  },
+  "total": 147.4,
+  "lane": "runner",
+  "queued_at": "2026-10-29T02:26:32Z",
+  "finished_at": "2026-10-29T02:30Z",
+  "render_min": 2.46,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 209,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1028,
+  "peak_mem_mb": 1979,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62537,
+  "peak_disk_mb": 65016,
+  "min_disk_free_mb": 82686,
+  "setup_min": 1.12,
+  "story": "zelda-40th-anniversary-switch-2-out-today"
  }
 ]
