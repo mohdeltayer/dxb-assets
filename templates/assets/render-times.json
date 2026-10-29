@@ -13519,5 +13519,38 @@
   "min_disk_free_mb": 82943,
   "setup_min": 0.8,
   "story": "alien-isolation-2-microphone-physical-edition"
+ },
+ {
+  "name": "alien-isolation-2-microphone-physical-edition-reel-v5.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T09:14Z",
+  "stages": {
+   "checks": 0.7,
+   "montage": 65.7,
+   "text": 37.2,
+   "audio": 0.8,
+   "outro": 28.1
+  },
+  "total": 132.5,
+  "lane": "runner",
+  "queued_at": "2026-10-29T09:11:34Z",
+  "finished_at": "2026-10-29T09:14Z",
+  "render_min": 2.21,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 140,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1047,
+  "peak_mem_mb": 3604,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62537,
+  "peak_disk_mb": 64753,
+  "min_disk_free_mb": 82949,
+  "setup_min": 0.77,
+  "story": "alien-isolation-2-microphone-physical-edition"
  }
 ]
