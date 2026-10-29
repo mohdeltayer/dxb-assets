@@ -14589,5 +14589,54 @@
   "min_disk_free_mb": 82854,
   "setup_min": 0.9,
   "story": "repo-sunstone-update-arabic"
+ },
+ {
+  "name": "gta-6-original-score-december-11-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T15:41Z",
+  "stages": {
+   "checks": 7.1,
+   "montage": 49.7,
+   "text": 43.5,
+   "audio": 0.9,
+   "outro": 47.1
+  },
+  "total": 148.4,
+  "lane": "runner",
+  "queued_at": "2026-10-29T15:36:42Z",
+  "finished_at": "2026-10-29T15:41Z",
+  "render_min": 2.47,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 15.9,
+   "audio_secs": 44.2,
+   "music_pct": 96.5,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "effects_shots": 9,
+   "mix_secs": 5.6,
+   "secs": 22.0
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 262,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1350,
+  "peak_mem_mb": 3195,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62835,
+  "peak_disk_mb": 65363,
+  "min_disk_free_mb": 82339,
+  "setup_min": 1.28,
+  "story": "gta-6-original-score-december-11"
  }
 ]
