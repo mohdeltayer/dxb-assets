@@ -12861,5 +12861,38 @@
   "min_disk_free_mb": 82064,
   "setup_min": 0.77,
   "story": "gta-6-edge-map-three-games"
+ },
+ {
+  "name": "gta-6-edge-map-three-games-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T01:46Z",
+  "stages": {
+   "checks": 8.8,
+   "montage": 60.8,
+   "text": 53.3,
+   "audio": 1.1,
+   "outro": 56.5
+  },
+  "total": 180.6,
+  "lane": "runner",
+  "queued_at": "2026-10-29T01:41:33Z",
+  "finished_at": "2026-10-29T01:46Z",
+  "render_min": 3.01,
+  "audio_split": {
+   "applied": false,
+   "reason": "speech is the news (speech_ok / speech_keep): voiced track kept"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 294,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1026,
+  "peak_mem_mb": 2645,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62537,
+  "peak_disk_mb": 65634,
+  "min_disk_free_mb": 82067,
+  "setup_min": 0.98,
+  "story": "gta-6-edge-map-three-games"
  }
 ]
