@@ -23,7 +23,7 @@ B8, Mohammad's points on the episode 6 preview (28 Oct 2026; build desk 29 Oct):
     from one part to another with the scenes playing"): the card and word beats sit as mounted pictures on one long
     page in our indigo (paper grain, soft lamp-light vignette, a small ornament under each picture), the scenes
     playing inside them, and the camera glides from one picture to the next between beats (`move`: seconds of the
-    glide, `pre` of them before the cut; default 0.9 and 0.3). The cover and the climax stay full screen, cut in
+    glide, `pre` of them before the cut; default 1.1 and 0.55). The cover and the climax stay full screen, cut in
     and out as in the classic look; the camera settles onto the page after them. A beat with `"stay": true` keeps
     the previous picture's place on the page (the scene changes inside the same frame with a short dissolve), so a
     line that runs over two beats is never pulled along by a camera move. build() returns `motion`: the page moves
@@ -103,7 +103,7 @@ def check(spec, files=False):
     for key in ('move', 'pre'):
         if key in spec and not (isinstance(spec[key], (int, float)) and spec[key] >= 0):
             errs.append(f'{key} must be a number of seconds')
-    if spec.get('pre', 0.3) > spec.get('move', 0.9):
+    if spec.get('pre', 0.55) > spec.get('move', 1.1):
         errs.append('pre is part of move: pre <= move')
     if errs:
         raise ValueError('storybeat spec: ' + '; '.join(errs))

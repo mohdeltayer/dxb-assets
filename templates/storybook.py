@@ -4,7 +4,7 @@ story book where the text is written and we are shifting the camera from one par
 Built by storybeat.build() when the spec has "look": "storybook". The card and word beats are mounted pictures on one
 long page in our palette (the panel indigo with a paper grain, a soft lamp-light vignette, a light mat and a soft shadow
 under each picture, a small play-mark ornament under each card), the trailer stretch or still playing inside each
-frame. The camera holds on one picture while its beat plays, then glides to the next picture (an eased move of `move`
+frame. The camera holds on one picture while its beat plays, then glides to the next picture (a sine-eased move of `move`
 seconds, `pre` of them before the cut, so the move straddles the beat boundary while no line is on screen). Pictures
 alternate a little left and right down the page, so every glide is a diagonal; the next picture just shows at the foot
 of the frame, under the Reels caption area, as a page that continues. The cover and the climax stay full screen
@@ -34,15 +34,17 @@ SIDE, SWAY = 160, 60           # page margin either side of the frame; pictures 
 STEP_MIN = 1280                # page distance between two pictures: the next one just shows at the frame's foot (y >= 1840)
 TOP = 700                      # page above the first picture, so the first settle starts on paper
 ENTRY, ENTRY_SECS = 260, 0.7   # after a full-screen beat the camera settles onto the page from ENTRY px above
-MOVE, PRE = 0.9, 0.3           # the glide between pictures: MOVE seconds, PRE of them before the cut
+MOVE, PRE = 1.1, 0.55          # the glide between pictures: MOVE seconds, PRE of them before the cut (the line
+                               # leaving rides out with its page; the next line enters at +0.25 s as the page settles)
 HOLD_MIN = 0.6                 # a picture holds still at least this long between its two glides
 XF = 0.2                       # a `stay` beat dissolves into the same frame over XF seconds
 
 
 def ease(u):
-    """Cubic ease in and out on [0, 1]; reel.py uses the same curve for the lines (page_expr)."""
+    """Sine ease in and out on [0, 1] (peak speed pi/2 of the mean, so a 1280 px glide over 1.1 s tops out near 60 px a
+    frame); reel.py moves the lines on the same curve (reel._ease_expr)."""
     u = min(1.0, max(0.0, u))
-    return 4 * u ** 3 if u < 0.5 else 1 - (2 - 2 * u) ** 3 / 2
+    return (1 - math.cos(math.pi * u)) / 2
 
 
 def window(kind):

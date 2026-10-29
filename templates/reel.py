@@ -314,27 +314,41 @@ def reveal_dt(text, a, z):
 def reveal_layers(text, kw, a, z, stem, skin=None):
     """The word-by-word reveal without a flash (B8, Mohammad on the episode 6 preview: "Sometimes the text flashes when
     words are added to the screen"). The old reveal made each step a line of its own, so the line-after-line trim
-    faded each step out before the next faded in and every word already on screen blinked at every step, and a
-    two-line sentence was re-wrapped per step. Now step 1 is the first word in its final place, and each later step is
-    only the pixels its new word changes (alpha worked out so step k over step k-1 is exactly the sentence's first k
-    words), entering on top while everything before stays put; all steps leave together. [(png, a, z)]."""
+    faded each step out before the next faded in: every word already on screen blinked at every step, and a two-line
+    sentence was wrapped again at each step. Now the whole sentence is drawn once and cut into one piece per word (its
+    visual line's band, from the middle of the space before it to the middle of the space after it, right to left), so
+    the pieces add up to exactly the sentence: each word fades in on its own and nothing already up is redrawn or moves;
+    all pieces leave together. [(png, a, z)], the first word first."""
     import numpy as np
     dt, n = reveal_dt(text, a, z)
-    out, prev = [], None
-    for k in range(1, n + 1):
-        p = f'{stem}-r{k}.png'
-        line_layer(text, p, skin=skin, upto=k, **kw)
-        cur = np.asarray(Image.open(p).convert('RGBA'), dtype=np.float32) / 255.0
-        if prev is not None:
-            ca, pa = cur[..., 3:], prev[..., 3:]
-            diff = (np.abs(cur - prev).max(axis=2, keepdims=True) > 1.5 / 255)
-            ad = np.where(pa >= 0.999, np.where(diff, 1.0, 0.0), np.clip((ca - pa) / np.maximum(1 - pa, 1e-3), 0, 1))
-            ad = np.where(diff & (ad < 1e-3), ca, ad)          # same cover, new colour (outline turned ink): take the new pixel
-            col = np.where(ad > 1e-3, (cur[..., :3] * ca - prev[..., :3] * pa * (1 - ad)) / np.maximum(ad, 1e-3), 0)
-            d = np.concatenate([np.clip(col, 0, 1), np.where(diff, ad, 0)], axis=2)
-            Image.fromarray((d * 255 + 0.5).astype('uint8'), 'RGBA').save(p)
-        out.append((p, a + (k - 1) * dt, z))
-        prev = cur
+    geo = {}
+    line_layer(text, f'{stem}-full.png', skin=skin, geometry=geo, **kw)
+    full = np.asarray(Image.open(f'{stem}-full.png').convert('RGBA'))
+    probe = ImageDraw.Draw(Image.new('L', (8, 8)))
+    tl = lambda x: probe.textlength(x, font=geo['font'], **G.AR)
+    space = tl(' ')
+    lines, base0, step = geo['lines'], geo['base0'], geo['step']
+    regions = []                            # per word: (y0, y1, x0, x1) in the full image
+    for i, ln in enumerate(lines):
+        b = base0 + i * step
+        y0 = 0 if i == 0 else int(round(b - step + step / 3))
+        y1 = H if i == len(lines) - 1 else int(round(b + step / 3))
+        ws = ln.split()
+        right = W                           # the first word of a line takes the margin to its right (outline, shadow)
+        for j in range(1, len(ws) + 1):
+            left = 0 if j == len(ws) else int(round(W - R - tl(' '.join(ws[:j])) - space / 2))
+            regions.append((y0, y1, left, right))
+            right = left
+    if len(regions) > n:                    # a price drawn after the last word joins the last word's piece
+        y0, y1, _, x1 = regions[n - 1]
+        regions = regions[:n - 1] + [(y0, y1, 0, x1)]
+    out = []
+    for k, (y0, y1, x0, x1) in enumerate(regions):
+        piece = np.zeros_like(full)
+        piece[y0:y1, x0:x1] = full[y0:y1, x0:x1]
+        p = f'{stem}-r{k + 1}.png'
+        Image.fromarray(piece, 'RGBA').save(p)
+        out.append((p, a + k * dt, z))
     return out
 
 
@@ -377,12 +391,12 @@ def clear_badge(text, kw, a, z, creds, tmp, skin=None):
 
 def _ease_expr(s0, d):
     u = f'clip((t-{s0:.3f})/{d:.3f}\\,0\\,1)'
-    return f'if(lt({u}\\,0.5)\\,4*pow({u}\\,3)\\,1-pow(2-2*{u}\\,3)/2)'
+    return f'(1-cos(PI*{u}))/2'
 
 
 def page_positions(groups, moves):
     """{png: (x expr, y expr)}: every layer of a line moves with the storybook page during the camera's glide into and
-    out of its picture (the same cubic ease as storybook.ease). A move while the line is up stops the render."""
+    out of its picture (the same sine ease as storybook.ease). A move while the line is up stops the render."""
     out = {}
     for g in groups:
         a, z = g[0][1], max(zz for _, _, zz in g)
@@ -454,12 +468,11 @@ def stills_clips(images, name, secs=3.0, push=0.03, focus=0.5, cutout=False, the
     return out
 
 
-def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96, lift=0, ink=None, skin=None, upto=None):
+def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96, lift=0, ink=None, skin=None, geometry=None):
     """One sentence, right-aligned; bottom line on SAFE_BOTTOM - 40, or
     under SAFE_TOP with top=True. `lift` raises a low line (the split template
     lifts them over its fact strip). `skin` takes the kit's outline and ink.
-    `upto=n` draws only the first n words, each where it sits in the whole sentence (the same breaks, the same
-    height, right-aligned on the same edge), so a word-by-word reveal adds words without moving the ones before."""
+    `geometry` (a dict) receives the visual lines, the first baseline, the line step and the font, for reveal_layers."""
     f = A.F('Bold', size); probe = ImageDraw.Draw(Image.new('L', (W, H)))
     tw = lambda s: probe.textlength(s, font=f, **G.AR)
     full = text + (f' {price}' if price else '')
@@ -480,19 +493,12 @@ def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96,
         raise ValueError(f'{len(lines)} lines; keep a sentence to {cap}' + (' over the strip' if lift else '') + f': {text}')
     rtl_starts(lines, 'story')
     base0 = G.SAFE_TOP + 110 if top else G.SAFE_BOTTOM - 40 - lift - step * (len(lines) - 1)
-    show = lines
-    if upto is not None:                   # a reveal step: the sentence's own layout, its first `upto` words only
-        left, show = upto, []
-        for ln in lines:
-            ws = ln.split()
-            show.append(ln if left >= len(ws) else ' '.join(ws[:max(0, left)]))
-            left -= len(ws)
-        price = price if left >= 0 else None
+    if geometry is not None:
+        geometry.update(lines=lines, base0=base0, step=step, font=f, size=size)
     mask = Image.new('L', (W, H), 0); d = ImageDraw.Draw(mask)
     for i, ln in enumerate(lines):
         b = base0 + i * step
-        if show[i]:
-            d.text((W - R, b), show[i], font=f, fill=255, anchor='rs', **G.AR)
+        d.text((W - R, b), ln, font=f, fill=255, anchor='rs', **G.AR)
         if price and i == len(lines) - 1:
             _, y0, _, y1 = d.textbbox((0, b), price, font=f, anchor='ls')
             dh = y1 - y0
