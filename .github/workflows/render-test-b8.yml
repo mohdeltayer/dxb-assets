@@ -1,0 +1,120 @@
+# B8 test render (build desk, 29 Oct 2026; BUILD.md section 5): renders one test job under jobs/test/ from a build
+# branch on a GitHub-hosted runner and commits the Reel, strip, sheet and dense strip under cards/test/ on that branch.
+# Dispatch only, never on push or pull_request; refuses main and any job outside jobs/test/; no Publer upload, no
+# render-times entry, nothing under cards/YYYY-MM/. The Dubai font is handled exactly as in render.yml (temp folder,
+# never committed, never printed, deleted at the end). Test workflow: removed from the branch before the release.
+name: render-test-b8
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: 'Test job file (jobs/test/<name>.json) on this build branch'
+        required: true
+
+concurrency:
+  group: render-test-b8-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  render:
+    if: startsWith(github.ref_name, 'build/')
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      JOB: ${{ github.event.inputs.job }}
+    steps:
+      - name: Guard
+        run: |
+          printf '%s' "$JOB" | grep -Eq '^jobs/test/[A-Za-z0-9._-]+\.json$' || { echo "job must be jobs/test/<name>.json"; exit 1; }
+
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            templates
+            jobs
+
+      - name: Runner
+        run: |
+          echo "cores $(nproc), $(free -g | awk '/Mem:/{print $2}') GB"
+          out=$(python3 -c "import json; print(json.load(open('$JOB'))['out'])")
+          case "$out" in cards/test/*) ;; *) echo "out must be under cards/test/"; exit 1;; esac
+          {
+            echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts"
+            echo "DXB_UPLOADS=$RUNNER_TEMP/uploads"
+            echo "YOLO_WEIGHTS=$RUNNER_TEMP/models/yolov8n.pt"
+            echo "OUT=$out"
+          } >> "$GITHUB_ENV"
+
+      - name: Fonts (temp folder, outside the workspace)
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          repo="$RUNNER_TEMP/dxb-fonts"
+          git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+          mkdir -p "$DUBAI_FONTS"
+          unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$DUBAI_FONTS"
+          rm -rf "$repo"
+          for w in Light Regular Medium Bold; do test -f "$DUBAI_FONTS/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing"; exit 1; }; done
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Tools
+        timeout-minutes: 12
+        run: |
+          sudo systemctl stop unattended-upgrades apt-daily.service apt-daily-upgrade.service apt-daily.timer apt-daily-upgrade.timer 2>/dev/null || true
+          APT="sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=120 -o Acquire::Retries=3"
+          need=""; command -v ffmpeg >/dev/null || need="ffmpeg"; command -v tesseract >/dev/null || need="$need tesseract-ocr tesseract-ocr-eng"
+          if [ -n "$need" ]; then $APT update -qq 2>&1 | tail -3; timeout 150 $APT install -y -q --no-install-recommends $need 2>&1 | tail -5 || true; fi
+          if ! command -v ffmpeg >/dev/null; then
+            curl -sSL --retry 3 --max-time 180 -o "$RUNNER_TEMP/ff.tar.xz" https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz
+            tar -xJf "$RUNNER_TEMP/ff.tar.xz" -C "$RUNNER_TEMP" && sudo cp "$RUNNER_TEMP"/ffmpeg-master-latest-linux64-gpl/bin/ff* /usr/local/bin/
+          fi
+          python -m pip install -q --upgrade pip
+          python -m pip install -q --timeout 60 --retries 3 torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -q --timeout 60 --retries 3 pillow numpy soundfile pedalboard ultralytics opencv-python-headless
+          mkdir -p "$DXB_UPLOADS" "$(dirname "$YOLO_WEIGHTS")"
+
+      - name: Check and text check
+        run: |
+          python templates/render_job.py check "$JOB"
+          python templates/render_job.py text "$JOB"
+
+      - name: Render
+        timeout-minutes: 20
+        run: |
+          start=$(date +%s)
+          python templates/render_job.py run "$JOB"
+          echo "render $(( $(date +%s) - start )) s on $(nproc) cores"
+
+      - name: Commit back (cards/test/ only)
+        run: |
+          stem="${OUT%.mp4}"; base="${stem%-reel-v*}"
+          files="$OUT $base-strip.jpg $base-sheet.jpg"
+          if [ -f "$base-dense.jpg" ]; then files="$files $base-dense.jpg"; fi
+          for f in $files; do case "$f" in cards/test/*) ;; *) echo "refusing $f"; exit 1;; esac; done
+          mkdir -p "$RUNNER_TEMP/out"
+          for f in $files; do cp --parents "$f" "$RUNNER_TEMP/out/"; done
+          git config user.name "dxb-render"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for i in 1 2 3 4 5; do
+            git fetch -q --depth=1 --filter=blob:none origin "$GITHUB_REF_NAME"
+            git reset -q --hard "origin/$GITHUB_REF_NAME"
+            cp -r "$RUNNER_TEMP/out/." .
+            git add --sparse -f $files
+            git commit -q -m "B8 test render $(basename "$JOB" .json) on the runner (cards/test/)"
+            if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
+            sleep $(( i * 5 ))
+          done
+          echo "push failed five times"; exit 1
+
+      - name: Remove fonts
+        if: always()
+        run: rm -rf "$DUBAI_FONTS" "$RUNNER_TEMP/dxb-fonts"

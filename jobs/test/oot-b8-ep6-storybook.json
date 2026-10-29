@@ -1,0 +1,266 @@
+{
+ "name": "oot-b8-ep6-storybook",
+ "footage": [
+  {
+   "file": "oot-b8-ep6-storybook-picture.mp4",
+   "repo": "cards/test/oot-b8-ep6-storybook-picture.mp4"
+  }
+ ],
+ "nobars": [
+  "oot-b8-ep6-storybook-picture.mp4"
+ ],
+ "shots": [
+  [
+   "oot-b8-ep6-storybook-picture.mp4",
+   0.0,
+   3.5,
+   0.5
+  ],
+  [
+   "oot-b8-ep6-storybook-picture.mp4",
+   3.5,
+   2.6,
+   0.5
+  ],
+  [
+   "oot-b8-ep6-storybook-picture.mp4",
+   6.1,
+   1.6,
+   0.5
+  ],
+  [
+   "oot-b8-ep6-storybook-picture.mp4",
+   7.7,
+   1.6,
+   0.5
+  ],
+  [
+   "oot-b8-ep6-storybook-picture.mp4",
+   9.3,
+   2.733,
+   0.5
+  ],
+  [
+   "oot-b8-ep6-storybook-picture.mp4",
+   12.033,
+   2.534,
+   0.5
+  ],
+  [
+   "oot-b8-ep6-storybook-picture.mp4",
+   14.567,
+   2.8,
+   0.5
+  ],
+  [
+   "oot-b8-ep6-storybook-picture.mp4",
+   17.367,
+   2.6,
+   0.5
+  ],
+  [
+   "oot-b8-ep6-storybook-picture.mp4",
+   19.967,
+   2.733,
+   0.5
+  ],
+  [
+   "oot-b8-ep6-storybook-picture.mp4",
+   22.7,
+   5.0,
+   0.5
+  ],
+  [
+   "oot-b8-ep6-storybook-picture.mp4",
+   27.7,
+   2.533,
+   0.5
+  ],
+  [
+   "oot-b8-ep6-storybook-picture.mp4",
+   30.233,
+   2.734,
+   0.5
+  ]
+ ],
+ "headline": "بلا جنية",
+ "label": null,
+ "source": "متجر نينتيندو",
+ "date": "29 Oct 2026",
+ "theme": "playful",
+ "style": "glow",
+ "template": "storybeat",
+ "track": "bed",
+ "sound": "neon",
+ "cut": true,
+ "lines": [
+  [
+   1,
+   1,
+   [
+    "في غابة Kokiri"
+   ]
+  ],
+  [
+   2,
+   3,
+   [
+    "لكل طفل جنية"
+   ]
+  ],
+  [
+   4,
+   4,
+   [
+    "إلا Link"
+   ]
+  ],
+  [
+   5,
+   5,
+   [
+    [
+     "وحيدًا",
+     {
+      "size": 150
+     }
+    ]
+   ]
+  ],
+  [
+   6,
+   6,
+   [
+    "حتى طلبت شجرة Deku"
+   ]
+  ],
+  [
+   7,
+   7,
+   [
+    "من الجنية Navi"
+   ]
+  ],
+  [
+   8,
+   8,
+   [
+    "أن ترافقه"
+   ]
+  ],
+  [
+   10,
+   10,
+   [
+    "هنا بدأت الرحلة"
+   ]
+  ],
+  [
+   11,
+   11,
+   [
+    "بلا جنية"
+   ]
+  ]
+ ],
+ "reveal": 6,
+ "credits": [
+  [
+   0,
+   8,
+   "الطريق إلى Ocarina · الحلقة 6",
+   {
+    "from_start": true,
+    "low": true,
+    "size": 52,
+    "band": true
+   }
+  ],
+  [
+   10,
+   11,
+   "الطريق إلى Ocarina · الحلقة 6",
+   {
+    "from_start": true,
+    "low": true,
+    "size": 52,
+    "band": true
+   }
+  ]
+ ],
+ "intro": {
+  "series": "ocarina",
+  "days": 6
+ },
+ "out": "cards/test/oot-b8-ep6-storybook-reel-v1.mp4",
+ "pace_ok": true,
+ "block_ok": [
+  [
+   "oot-b8-ep6-storybook-picture.mp4",
+   0.0,
+   32.967,
+   "B8 test of the story-beat track: card mounts and page edges are straight lines by design; frames looked at"
+  ]
+ ],
+ "page_motion": {
+  "track": "oot-b8-ep6-storybook-picture.mp4",
+  "moves": [
+   [
+    3.5,
+    0.0,
+    0.7,
+    0,
+    260
+   ],
+   [
+    6.1,
+    0.3,
+    0.6,
+    120,
+    1280
+   ],
+   [
+    9.3,
+    0.3,
+    0.6,
+    -120,
+    1280
+   ],
+   [
+    12.033,
+    0.3,
+    0.6,
+    120,
+    1280
+   ],
+   [
+    14.567,
+    0.3,
+    0.6,
+    -120,
+    1520
+   ],
+   [
+    17.367,
+    0.3,
+    0.6,
+    120,
+    1280
+   ],
+   [
+    19.967,
+    0.3,
+    0.6,
+    -120,
+    1280
+   ],
+   [
+    27.7,
+    0.0,
+    0.7,
+    0,
+    260
+   ]
+  ]
+ }
+}

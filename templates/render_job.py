@@ -86,6 +86,17 @@ the result in the job as `clean_map`; with it, reel.quality_gate stops a shot th
 `"clean_nudge": true` moves such a shot to the verified start instead. `prerender_ok` [[file, t0, t1, reason]] waives an
 interval someone has looked at. A job without `clean_map` renders exactly as before.
 
+Road to Ocarina, story-beat episodes (B8, Mohammad's points on the episode 6 preview, build desk 29 Oct 2026):
+  - `"intro": {"series": "ocarina", "days": N}`: the series intro (templates/ocarina_intro.py, «باقي N يومًا» over his
+    Triforce Medley) is rendered here, where the Dubai font is, and joined ahead of the finished Reel (end card
+    included) with the concat demuxer, no re-encode; the Reel keeps its own sound after it (our bed on story-beat
+    episodes). The strips and checks read the joined file. Without the key nothing changes.
+  - `"page_motion": {"track": <picture-track file>, "moves": [[t, pre, post, dx, dy], ...]}`: what storybeat.py prints
+    as `motion` for a "look": "storybook" picture track (t in track seconds). The moves are mapped onto the cut through
+    the shots taken from that file, and reel.py moves each story line with its page during the camera's glides. A line
+    on screen across a move stops `check`. Without the key nothing changes.
+  - `reveal`: the word-by-word reveal no longer flashes (reel.reveal_layers: the words already up stay put).
+
 Focus is resolved on the container before the shot sheet (`focus`), so the job
 carries the crop that was judged; a null left in the job is autofocused on the
 runner, which may pick another subject.
@@ -271,9 +282,47 @@ def profile_of(job):
     return p
 
 
+def page_moves(job, starts):
+    """The job's `page_motion` (storybeat.py's `motion`, track seconds) as reel()'s `page`: [(t, pre, post, dx, dy)] in
+    Reel seconds, through the shots cut from the picture track. A move at no shot of that file is dropped, with a note."""
+    pm = job.get('page_motion')
+    if not pm:
+        return None
+    rows = clean_nudge(job, job['shots'])
+    out = []
+    for t, pre, post, dx, dy in pm['moves']:
+        hit = None
+        for i, (f, s0, secs, _) in enumerate(rows):
+            if f != pm['track'] or s0 is None or i >= len(starts):
+                continue
+            if abs(t - s0) < 0.02:
+                hit = (i, s0)
+                break
+            if hit is None and s0 < t < s0 + secs:
+                hit = (i, s0)
+        if hit is None:
+            print(f'render_job: page move at {t} s of {pm["track"]} is in no shot; dropped', flush=True)
+            continue
+        out.append((round(starts[hit[0]] + t - hit[1], 3), float(pre), float(post), dx, dy))
+    return out
+
+
+def _starts(job):
+    keep = reel.X
+    if job.get('cut'):
+        reel.X = 0.04
+    try:
+        return reel.timeline(shots(job, build=False))
+    finally:
+        reel.X = keep
+
+
 def check(job):
     if job.get('kind') == 'breaking':
         return BK.check(job)
+    if job.get('intro') is not None:
+        import ocarina_intro as OI
+        OI.check(job['intro'])
     reel.CLEAN_MAP = job.get('clean_map')       # pre-render map (templates/prerender.py); None changes nothing
     keep = reel.X
     if job.get('cut'):
@@ -286,6 +335,10 @@ def check(job):
         reel.check_reading(place(job)(st, end), end)
     finally:
         reel.X = keep
+    if job.get('page_motion'):                 # a line across a page move stops here (storybook look, B8)
+        lines = place(job)(st, end)
+        reel.page_positions([[(f'l{i}', a, min(z, end))] for i, (_, a, z, _) in enumerate(lines)], page_moves(job, st))
+        print(f"page motion: {len(page_moves(job, st))} moves on the cut", flush=True)
     speech_check(job, end)
     if job.get('kit') or job.get('frame'):     # what the design pass will do, or drop, on the runner
         import designpass as DP
@@ -362,6 +415,9 @@ def textcheck(job):
             reel.strip_layer(strip_items(job), f'{tmp}/s.png', job['theme'], skin=skin)
         for c in job.get('credits') or []:
             reel.credit_layer(c[2], f'{tmp}/c.png')
+        if job.get('intro') is not None:       # the series intro's title and days line (Dubai font)
+            import ocarina_intro as OI
+            OI.layers(job['intro']['days'], tmp)
         for x in job.get('person') or []:          # needs the photo in uploads: fetched like footage before this runs
             o = x[5] if len(x) > 5 else {}
             if os.path.exists(C.U + x[0]):
@@ -536,6 +592,21 @@ def design_pass(job, video, p, folder):
     return rec
 
 
+def intro(job, video):
+    """The series intro joined ahead of the finished Reel (B8): rendered at the Reel's final encode, concat, no re-encode."""
+    import tempfile, ocarina_intro as OI
+    t0 = time.time()
+    d = tempfile.mkdtemp(prefix='intro-')
+    try:
+        OI.join(OI.intro(job['intro']['days'], f'{d}/intro.mp4', final=True), video, video)
+    finally:
+        shutil.rmtree(d, ignore_errors=True)
+    music = 'his upload' if os.path.exists(OI.SRC) else 'the published intro (assets/ocarina/intro-medley.flac)'
+    print(f"render_job: series intro joined ({OI.days_line(job['intro']['days'])}, medley from {music}) in {time.time() - t0:.0f} s",
+          flush=True)
+    _times_note(job, 'intro', {'days': job['intro']['days'], 'secs': round(time.time() - t0, 1)})
+
+
 def breaking(job, draft=False):
     """The T0 breaking card (templates/breaking.py): fetch the one image, build the card, then the same checks and
     strips as every Reel. There is no shot sheet (no footage shots): `<name>-sheet.jpg` is the source image with the
@@ -586,7 +657,8 @@ def run(job, draft=False):
                      template=job.get('template'), pace_ok=job.get('pace_ok', False), lowres_ok=job.get('lowres_ok', False),
                      skin=job.get('skin'), person=[tuple(x) for x in job['person']] if job.get('person') else None,
                      blocky_ok=job.get('blocky_ok'), apart=DP_apart, profile=profile_of(job),
-                     reveal=job.get('reveal'))   # word-by-word reveal on the key line (story-beat twist, 28 Oct 2026)
+                     reveal=job.get('reveal'),   # word-by-word reveal on the key line (story-beat twist, 28 Oct 2026)
+                     page=page_moves(job, _starts(job)[0]) if job.get('page_motion') else None)   # storybook (B8)
     video = done[0] if isinstance(done, (list, tuple)) else done
     dp = design_pass(job, video, dp_plan, DP_folder) if DP_folder else None
     if job.get('insert') and not draft:
@@ -600,6 +672,8 @@ def run(job, draft=False):
         _times_note(job, 'design_pass', dp)
         print('render_job: design pass: ' + json.dumps({k: dp[k] for k in ('secs', 'blips', 'notes') if k in dp},
                                                       ensure_ascii=False), flush=True)
+    if job.get('intro') is not None and not draft:
+        intro(job, video)                       # after the sound is final, before the checks read the file
     stem = os.path.splitext(out)[0]
     base = re.sub(r'-reel-v\d+$', '', stem)   # matches the workflow's ${stem%-reel-v*}, so v2 and later commit too
     if not draft:
