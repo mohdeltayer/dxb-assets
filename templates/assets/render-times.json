@@ -13059,5 +13059,38 @@
   "min_disk_free_mb": 82570,
   "setup_min": 0.97,
   "story": "zelda-40th-anniversary-switch-2-out-today"
+ },
+ {
+  "name": "microsoft-q1-xbox-content-services-down-2-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-29T02:51Z",
+  "stages": {
+   "checks": 13.6,
+   "montage": 83.5,
+   "text": 34.9,
+   "audio": 0.7,
+   "outro": 33.7
+  },
+  "total": 166.3,
+  "lane": "runner",
+  "queued_at": "2026-10-29T02:46:30Z",
+  "finished_at": "2026-10-29T02:51Z",
+  "render_min": 2.77,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 348,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 984,
+  "peak_mem_mb": 2109,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62538,
+  "peak_disk_mb": 65015,
+  "min_disk_free_mb": 82686,
+  "setup_min": 0.98,
+  "story": "microsoft-q1-xbox-content-services-down-2"
  }
 ]
