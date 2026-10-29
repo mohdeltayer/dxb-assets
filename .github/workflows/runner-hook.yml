@@ -1,0 +1,47 @@
+# Installs the job-completed hook on dxb-render-1 (build desk, 29 Oct 2026; card adv-20261029-server-handover,
+# "install the end-of-job hook fix"). Dispatch only, from main. Commits nothing, no secrets.
+#
+# The hook in /home/runner/hooks/job-completed.sh is owned by the runner user, so no root step is needed.
+# The old hook exited 1 when pkill matched nothing (the runner runs hooks with bash -e -o pipefail), so every
+# server job ended red after its work had succeeded. This copies ops/runner/job-completed.sh over it, keeps the
+# old one as job-completed.sh.prev, and runs the new one under bash -e -o pipefail to prove it exits 0.
+# The run itself ends with the newly installed hook, so it is its own first green check.
+#
+# Dispatch: gh workflow run runner-hook.yml --ref main
+name: runner-hook
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+
+jobs:
+  install:
+    if: github.repository == 'mohdeltayer/dxb-assets' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 5
+    concurrency:
+      group: runner-hook
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            ops/runner
+          persist-credentials: false
+
+      - name: Install the hook
+        run: |
+          hook="${ACTIONS_RUNNER_HOOK_JOB_COMPLETED:-$HOME/hooks/job-completed.sh}"
+          echo "hook path: $hook (user $(id -un))"
+          test -d "$(dirname "$hook")"
+          if [ -f "$hook" ]; then cp -p "$hook" "$hook.prev"; echo "old hook kept as $hook.prev"; fi
+          install -m 0755 ops/runner/job-completed.sh "$hook"
+          cmp ops/runner/job-completed.sh "$hook" && echo "installed: identical to ops/runner/job-completed.sh"
+
+      - name: Prove it exits 0 with nothing to clean
+        run: |
+          hook="${ACTIONS_RUNNER_HOOK_JOB_COMPLETED:-$HOME/hooks/job-completed.sh}"
+          RUNNER_TEMP="$(mktemp -d)" bash -e -o pipefail "$hook"; echo "exit $? (expected 0)"
