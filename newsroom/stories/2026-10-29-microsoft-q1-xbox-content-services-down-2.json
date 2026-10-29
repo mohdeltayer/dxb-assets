@@ -1,0 +1,77 @@
+{
+ "id": "2026-10-29-microsoft-q1-xbox-content-services-down-2",
+ "title": "Microsoft FY27 Q1: Xbox content and services revenue down 2%",
+ "account": "Digital Lounge",
+ "chip": "أرقام",
+ "template": "trailer",
+ "skin": "house",
+ "sound": "bed",
+ "genre": [
+  "industry/hardware"
+ ],
+ "first_report": "Microsoft FY27 Q1 release and 8-K, 28 Oct 2026 (filed 16:04 EDT, about 20:04Z)",
+ "sources": [
+  {
+   "kind": "primary",
+   "url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/press-release-webcast",
+   "says": "XBOX content and services revenue decreased 2% (down 1% in constant currency); product table XBOX $5,379M vs $5,508M"
+  },
+  {
+   "kind": "primary",
+   "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-ex99_1.htm",
+   "says": "same text, 8-K exhibit 99.1"
+  }
+ ],
+ "claims": [
+  {
+   "text": "Xbox content and services -2%",
+   "status": "confirmed (primary)"
+  },
+  {
+   "text": "Xbox revenue $5.38B vs $5.51B",
+   "status": "confirmed (primary product table)"
+  },
+  {
+   "text": "hardware -14%",
+   "status": "outlets only, not in Microsoft's documents: not used"
+  },
+  {
+   "text": "reason for the decline",
+   "status": "none given in the release: said so in the caption (answer-the-why)"
+  }
+ ],
+ "sensitive": "none",
+ "footage": "Fable official release-date trailer (Xbox Games Showcase 2026), IGN 3840 copy, decode clean; stand-in credited «لقطات من Fable»; no blood or fire shots",
+ "sound_reason": "our bed: the Fable trailer's dialogue runs nearly throughout and is unrelated to the results (only music-led stretch 142.1 to 152.6 s, too short; transcribed 60 to 163 s); stand-in footage for a results story",
+ "brief": "numbers family on footage (results with no footage of their own). Hook: Xbox revenue falling, in news words. Lines as one paragraph: what content and services means, total Xbox revenue, a year ago, per Microsoft. About 14 s.",
+ "read_aloud": "«إيرادات محتوى Xbox تتراجع 2 بالمئة. أي مبيعات الألعاب والاشتراكات مثل Game Pass. إجمالي إيرادات Xbox بلغ 5.38 مليار دولار، مقابل 5.51 مليار قبل عام، حسب مايكروسوفت.»",
+ "drafts": {
+  "headline": "إيرادات محتوى Xbox\nتتراجع 2 بالمئة",
+  "lines": [
+   "أي مبيعات الألعاب\nوالاشتراكات مثل Game Pass",
+   "إجمالي إيرادات Xbox\nبلغ 5.38 مليار دولار",
+   "مقابل 5.51 مليار قبل عام\nحسب مايكروسوفت"
+  ],
+  "ig_caption": "تتراجع إيرادات محتوى وخدمات Xbox بنسبة 2% في الربع الأخير، حسب نتائج مايكروسوفت.\n\nأعلنت شركة مايكروسوفت (Microsoft) نتائج الربع الأول من سنتها المالية 2027، الممتد من يوليو إلى سبتمبر 2026، وقالت إن إيرادات محتوى وخدمات Xbox تراجعت 2% مقارنة بالفترة نفسها من العام الماضي. ويشمل هذا البند مبيعات الألعاب والمحتوى داخلها والاشتراكات مثل Game Pass.\n\nوبلغت إيرادات Xbox الإجمالية في جدول نتائج الشركة 5.38 مليار دولار، مقابل 5.51 مليار دولار قبل عام. ولم تذكر الشركة في بيانها سبب التراجع.\n\nوالمشاهد المعروضة من لعبة Fable من استوديوهات Xbox، التي تصدر يوم 23 فبراير 2027.\n\n#ألعاب #أخبار_الألعاب #Xbox #Microsoft",
+  "x": "تراجعت إيرادات محتوى وخدمات Xbox بنسبة 2% في الربع من يوليو إلى سبتمبر، حسب نتائج شركة مايكروسوفت (Microsoft).",
+  "threads": "تراجعت إيرادات محتوى وخدمات Xbox بنسبة 2% في الربع من يوليو إلى سبتمبر، حسب نتائج شركة مايكروسوفت (Microsoft).\n\nالمصدر: بيان نتائج مايكروسوفت",
+  "ig_first_comment": "المصدر: بيان نتائج مايكروسوفت (Microsoft) للربع الأول من سنتها المالية 2027",
+  "x_reply": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/press-release-webcast"
+ },
+ "deepl_backcheck": "03:00Z whole caption, X and headline: meaning holds",
+ "versions": [
+  {
+   "v": 1,
+   "note": "failed text check: line 1 outside the safe zone; then rendered: headless first frame, fight at 6.75 s, comic close"
+  },
+  {
+   "v": 2,
+   "note": "opens on Isabel's face, knight shot trimmed, ends on Isabel; headline «2 بالمئة»; strip: opening face sat under the headline band"
+  },
+  {
+   "v": 3,
+   "note": "opens on Isabel standing (face clear below the band); face close-up moved to the first line"
+  }
+ ],
+ "status": "building"
+}
