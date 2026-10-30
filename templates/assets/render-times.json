@@ -15239,5 +15239,54 @@
   "min_disk_free_mb": 82101,
   "setup_min": 1.25,
   "story": "elder-scrolls-vi-sentinel-report"
+ },
+ {
+  "name": "elder-scrolls-vi-sentinel-report-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-30T05:11Z",
+  "stages": {
+   "checks": 6.3,
+   "montage": 67.2,
+   "text": 43.6,
+   "audio": 1.0,
+   "outro": 48.5
+  },
+  "total": 166.6,
+  "lane": "runner",
+  "queued_at": "2026-10-30T05:06:10Z",
+  "finished_at": "2026-10-30T05:11Z",
+  "render_min": 2.78,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.5,
+   "audio_secs": 26.4,
+   "music_pct": 60.2,
+   "leak_pct": 0.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 0
+   },
+   "effects_shots": 12,
+   "mix_secs": 1.1,
+   "secs": 4.0
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 258,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1342,
+  "peak_mem_mb": 2710,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62963,
+  "peak_disk_mb": 65737,
+  "min_disk_free_mb": 81964,
+  "setup_min": 2.05,
+  "story": "elder-scrolls-vi-sentinel-report"
  }
 ]
