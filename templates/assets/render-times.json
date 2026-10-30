@@ -15791,5 +15791,38 @@
   "min_disk_free_mb": 81919,
   "setup_min": 1.08,
   "story": "kirby-air-riders-halloween-event-cancelled"
+ },
+ {
+  "name": "dune-awakening-blood-and-ice-free-expansion-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-30T10:51Z",
+  "stages": {
+   "checks": 3.6,
+   "montage": 39.7,
+   "text": 61.4,
+   "audio": 1.1,
+   "outro": 55.7
+  },
+  "total": 161.5,
+  "lane": "runner",
+  "queued_at": "2026-10-30T10:46:04Z",
+  "finished_at": "2026-10-30T10:51Z",
+  "render_min": 2.69,
+  "audio_split": {
+   "applied": false,
+   "reason": "speech is the news (speech_ok / speech_keep): voiced track kept"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 306,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1043,
+  "peak_mem_mb": 2046,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62541,
+  "peak_disk_mb": 65496,
+  "min_disk_free_mb": 82205,
+  "setup_min": 0.93,
+  "story": "dune-awakening-blood-and-ice-free-expansion"
  }
 ]
