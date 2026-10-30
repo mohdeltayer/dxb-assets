@@ -16,6 +16,9 @@ allows. Nothing is queued without his "go".
 - Writing the Arabic (both skills, glossary, references) and reading the review.
 - Looking at shot sheets, draft strips and final strips, and deciding fixes.
 - Everything said to Mohammad, and deciding what is ready to publish.
+- Status lives in cards (adv-20261030-save-claude-usage, 30 Oct 2026): progress goes into the Inbox card for its
+  topic, one card per topic, updated in place; no progress messages to the advisor. A watch or check that finds
+  nothing new ends its turn with no helper, no card and no message.
 
 ## Task cards
 
@@ -364,8 +367,11 @@ line once its first Reels are posted.
 
 He reviews at four fixed times, Dubai time: **06:30, 10:00, 14:00, 17:30**.
 A trigger wakes the main session about 35 minutes before each slot:
-1. Launch in parallel: the Digest digest card (all digests since `covered_through`) and the
-   Internal scout card (window since the previous slot).
+1. Read the server digest (branch `watch-digest` of dxb-assets: `watch/digest.json` and `watch/breaking.json`,
+   items since the last review), not the email digests: the Digest digest helper is not launched
+   (adv-20261030-save-claude-usage, Mohammad 30 Oct 2026). The Internal scout card runs at the 06:30 and 14:00
+   slots only and its report is saved as `notes/scout-YYYY-MM-DD-HHMM.md`; the 10:00 and 17:30 slots reuse the
+   last scout note and launch no helper.
 2. Main session: merge both lists, run `ledger.py find`, verify the
    candidates against their primaries, decide lanes, chips, themes, accounts
    and proposed times, and note anything the email scout missed.

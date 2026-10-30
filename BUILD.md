@@ -148,3 +148,8 @@ Tag: release-YYYY-MM-DD   Previous: release-YYYY-MM-DD   Merge commits: <sha> <s
 Start (01:00): read section 2; pick at most two items for the night; create their branches; set
 `picked_up_at` on their cards. End (03:45): stop tests, write the release note, merge what passed at 04:00,
 post the release card, update cards, delete nothing that another desk owns.
+
+## One agent at a time (adv-20261030-save-claude-usage, Mohammad 30 Oct 2026)
+
+Build nights run serially: one branch and one agent at a time, in build-queue order; no parallel branches and
+no parallel helper agents. Stop by 03:45 Dubai as before; what is not done waits for the next night.
