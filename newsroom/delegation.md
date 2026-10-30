@@ -157,7 +157,9 @@ inside the safe zone, first word Arabic, up long enough); picture (no decode
 damage or blockiness, no title card or slate, nothing graphic); sound (what
 plays under the shot: music, voiced and subtitled, or our bed; no word cut at
 the cut; every sound heard matches what is on screen, the music track is
-clean); reason (the shot shows what its line says). Return a compact table,
+clean; no trailer effect from another moment of the trailer, no effect of ours
+over footage, the `sfx cue` lines in the check output each tied to a visible
+event, adv-20261030-sfx-mismatch); reason (the shot shows what its line says). Return a compact table,
 one row per shot: shot, time (Reel seconds and source seconds), PASS or FIX
 with the one change needed. Then the Reel-level checks once: cover as a grid
 tile, length against the template target, a change every 3 to 4 s, the last

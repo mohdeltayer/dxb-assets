@@ -340,6 +340,8 @@ def check(job):
         reel.page_positions([[(f'l{i}', a, min(z, end))] for i, (_, a, z, _) in enumerate(lines)], page_moves(job, st))
         print(f"page motion: {len(page_moves(job, st))} moves on the cut", flush=True)
     speech_check(job, end)
+    import sfxplan as SF                       # sound effects match the picture (adv-20261030-sfx-mismatch, 30 Oct 2026)
+    SF.check(job, st, place(job)(st, end), profile_of(job))
     if job.get('kit') or job.get('frame'):     # what the design pass will do, or drop, on the runner
         import designpass as DP
         keep = reel.X
@@ -528,6 +530,12 @@ def audio_split(job, video):
     rec = TS.apply(job, video, starts, xf, C.U)
     print('render_job: audio split: ' + ('applied' if rec.get('applied') else 'not applied, audio as rendered') +
           ''.join(f'; {k} {rec[k]}' for k in ('reason', 'music_pct', 'leak_pct', 'cache', 'separate_secs', 'secs') if k in rec), flush=True)
+    import sfxplan as SF                       # a fallback on a track under other moments' shots fails the job
+    try:
+        SF.guard(job, rec, starts)
+    except ValueError:
+        _times_note(job, 'audio_split', rec)
+        raise
     try:
         led = json.load(open(reel.TIMES))
         for e in reversed(led):

@@ -270,6 +270,15 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     leftover above 5% or music under 40% keeps today's audio (`audio_split` in
     render-times.json). Director QA: every sound heard matches what is on
     screen, the music track is clean (CLAUDE.md "Trailer audio split, live").
+  - Sound effects match the picture (30 Oct, adv-20261030-sfx-mismatch): under
+    footage only the trailer sound from the picture's own moment, the music
+    stem with each shot's own effects, or our bed; our effects only on our
+    graphics, on the event's frame, one family (kit blips); no whoosh or
+    impact on footage cuts. `templates/sfxplan.py` in `render_job.check` lists
+    the cues and fails a cue over footage or a trailer track under shots from
+    other moments when no split will run; the runner fails if the split falls
+    back on such a track; `sfx_ok` with a measured reason waives it (CLAUDE.md
+    "Sound effects match the picture").
   - Trailer sound is the default (23 Oct). Our bed only for: sales charts
     (Famitsu), numbers Reels and our graphics; stills and silent footage;
     retro and on-this-day (retro flavour), tribute (calm bed); breaking news

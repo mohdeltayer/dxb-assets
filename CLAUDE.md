@@ -1445,6 +1445,38 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
      line, so he can object before it posts.
   4. The Tuesday audit counts Reels by sound (trailer, voiced and subtitled, our
      bed); our bed on a footage Reel should be the rare exception.
+- Sound effects match the picture (advisor card adv-20261030-sfx-mismatch,
+  Mohammad 30 Oct 2026, 19:09 Dubai; live from the next render, 30 Oct about
+  15:40Z). Case: the 19:00 Dubai Slay the Spire 2 Reel added none of our
+  effects, but ran one stretch of the trailer's own sound (0.5 s onward: the
+  opening fight's slashes, sword clangs, slams and rubble) under shots cut
+  from 24 to 97 s of the same trailer (the armoured knight, the bandaged arm,
+  the card-battle screen, the red card art); the audio split, which puts each
+  shot's own effects back, fell back because the stretch was effects-led
+  (music 28.9%).
+  1. Footage keeps its own sound: under footage the only sound is the
+     trailer's audio from the moment its picture comes from, the trailer's
+     music stem with each shot's own effects (the audio split), or our bed.
+     No added effects over footage; no trailer effects from another moment.
+  2. Our effects belong to our graphics only (a card entering, a counter
+     ticking, a chip appearing, the end card), on that event's frame; none
+     without a visible event.
+  3. One effect family per Reel (the motion kit's motif blips); no whoosh or
+     impact on footage cuts (the skin kits' sting at the first line is out
+     wherever that line sits on footage).
+  4. `templates/sfxplan.py`, called by `render_job.check` (so by
+     `prerender.py`, `t0make` and the runner): prints every cue with its time
+     and event, fails a cue over footage, and fails a trailer track under shots
+     from other moments (more than 0.5 s off the trailer second heard under
+     them, or another file) when the split will not run (voiced `speech_ok` /
+     `speech_keep`, breaking, `audio_split` false, a skin kit). When the split
+     runs and falls back, `sfxplan.guard` fails the runner job. In sync means
+     shot start = track start + the shot's place on the timeline (crossfades
+     included). A director who measured the stretch as music or voice with no
+     effects waives it with `"sfx_ok": "<reason>"`.
+  5. Audit of Reels published since 28 Oct with trailer effects under other
+     moments' shots is on the card; nothing deleted or reposted, Mohammad
+     decides.
   5. Posts published on 22 Oct stay as they are. The two Reels still scheduled
      that night (Dragon Ball Xenoverse 3, PlayStation Pulse) already ran on
      trailer music, so nothing was re-rendered.
