@@ -1470,6 +1470,17 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   (26 Oct). The Overwatch x Stellar Blade EVE Protocol Reel, built on both games'
   launch trailers, was pulled to drafts before its 09:00 Dubai slot and rebuilt
   on the key art.
+- Credit on every clip (advisor card adv-20261030-download-automation-and-credits, Part B,
+  approved by Mohammad 30 Oct 2026, effective at once, first applied to the Death Stranding
+  Isolations Reel). Every clip that is not ours carries an on-screen credit for as long as that
+  clip is shown, in the credit position under the chip row: the publisher or platform name, and
+  the studio where it differs («المصدر: ديزني بلس وكوجيما بروداكشنز (Kojima Productions)»;
+  «المصدر: نينتيندو (Nintendo)»; «المصدر: سكوير إنكس (Square Enix)»). The trailer rule already did
+  this for trailers; it now covers all footage, including gameplay captures, press assets and
+  event feeds. The pinned comment keeps the source link. Text check before render, with the
+  read-aloud: `credits` in the job cover every footage shot, open on an Arabic word, no flipping
+  sign. Build queue: the credit visible from frame 0 beside the headline, and a `render_job.py
+  check` stop on any footage shot without a credit (both behind Part A, the download automation).
 - People stories show the person (advisor, 23 Oct 2026, from Mohammad). The
   Shigeru Miyamoto honour Reel ran Super Mario clips and music (good) but never
   showed Miyamoto, so viewers could not tell the story was about him.

@@ -296,6 +296,12 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   over a dimmed blurred moving copy) when 9:16 does not fit; its own sound.
   Director check: trailer news, is it the actual trailer? (CLAUDE.md "Trailer
   news shows the trailer").
+- **Credit on every clip (30 Oct):** every clip that is not ours carries an
+  on-screen credit for as long as it is shown: publisher or platform, and the
+  studio where it differs («المصدر: ديزني بلس وكوجيما بروداكشنز (Kojima
+  Productions)»). Trailers, gameplay captures, press assets and event feeds
+  alike; the pinned comment keeps the source link. Text check before render:
+  `credits` cover every footage shot. (CLAUDE.md "Credit on every clip")
 - **People stories show the person (23 Oct):** when a person is the news
   (honours, appointments, departures, interviews, quotes, retirements,
   tributes, a creator's new project), their official photo appears in a

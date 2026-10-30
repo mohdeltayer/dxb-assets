@@ -131,6 +131,17 @@ order as one text, aloud: if nobody would say it that way, it goes back. Checks:
 is named before any pronoun refers to it; no line opens on «و» unless it continues the line
 before within 3 s; in-game terms explained or replaced with plain words; a comparison Reel
 labels both halves on screen. The read-aloud text goes in the story file (`read_aloud`).
+Credit on every clip (advisor card adv-20261030-download-automation-and-credits, Part B,
+approved by Mohammad 30 Oct 2026). Every clip that is not ours carries an on-screen credit
+for as long as it is shown: the publisher or platform, and the studio where it differs
+(«المصدر: ديزني بلس وكوجيما بروداكشنز (Kojima Productions)», «المصدر: نينتيندو (Nintendo)»,
+«المصدر: سكوير إنكس (Square Enix)»). It covers trailers, gameplay captures, press assets and
+event feeds alike; our own graphics, his capture and our bed need none. Text check before
+render, beside the read-aloud: the job's `credits` cover every footage shot from the first to
+the last, the line opens on an Arabic word and carries no sign that flips (no «+»: ديزني بلس
+spelled out), and the pinned comment keeps the source link as before. Until the build item
+lands, the credit line is held off during the headline (one focus), so the first 2 s of the
+cover show no credit; that gap is known and closes with the build item. A miss is a send-back.
 QA format (advisor, 23 Oct 2026; CLAUDE.md "Director QA format"). For every
 shot, pull one frame (the shot's middle, plus its first frame when a line
 enters there) and check: framing (subject in the 9:16 crop, no side-on face

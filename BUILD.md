@@ -26,6 +26,10 @@ Principle (part E): Claude judges and writes; scripts, the server and outside sc
 5. The server's state: no render running on dxb-render-1 (renders always come first), free disk at
    least 40 GB, the last runs of render.yml, render-live.yml and render-breaking.yml.
 
+Head of the queue (Mohammad, 30 Oct 2026): adv-20261030-download-automation-and-credits Part A (yt-dlp
+with the JS runtime, one fetch script on the acquisition order, X posts as a source) comes before
+everything else, then its Part B build items (credit from frame 0, the coverage stop in render_job check).
+
 Order of work: an item Mohammad has answered "go live" on comes first; then items with a date (an episode
 slot, a show); then the backlog order. One item at a time to a finished state beats three half-done.
 
