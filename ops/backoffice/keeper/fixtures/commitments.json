@@ -1,0 +1,20 @@
+{
+ "about": "Test rows for keeper/test.sh. The clock in the tests is 2026-11-01T12:00:00Z (16:00 Dubai).",
+ "rows": [
+  {"id": "ahead", "title": "Far ahead", "kind": "reel", "slot": "2026-11-01T20:00+04:00", "platforms": ["instagram", "x", "threads"], "fallback": "bank-piece", "held_by_mohammad": false},
+  {"id": "t90", "title": "T-90 window", "kind": "reel", "slot": "2026-11-01T17:15+04:00", "fallback": "bank-piece", "held_by_mohammad": false},
+  {"id": "t45", "title": "Editor busy, card waiting", "kind": "reel", "slot": "2026-11-01T16:40+04:00", "fallback": "publish-last-passed", "held_by_mohammad": false},
+  {"id": "t15", "title": "Template release delayed", "kind": "series episode", "series": "s", "slot": "2026-11-01T16:10+04:00", "production": "blocked", "fallback": "shift-series-one-day", "held_by_mohammad": false},
+  {"id": "missed", "title": "Fresh session, no repo", "kind": "reel", "slot": "2026-11-01T15:30+04:00", "fallback": "bank-piece", "held_by_mohammad": false},
+  {"id": "held", "title": "Held by Mohammad", "kind": "reel", "slot": "2026-11-01T15:30+04:00", "fallback": "card-only", "held_by_mohammad": true},
+  {"id": "sched", "title": "Scheduled on all three", "kind": "reel", "slot": "2026-11-01T17:00+04:00", "delivery": {"instagram": "scheduled", "x": "scheduled", "threads": "scheduled"}},
+  {"id": "legacy", "title": "Older row, free text", "kind": "reel", "slot": "2026-11-01T18:00+04:00", "evidence": "scheduled in Publer 17:54Z on all three"},
+  {"id": "timeout", "title": "Publer timeout on an accepted request", "kind": "reel", "slot": "2026-11-01T17:30+04:00", "delivery": {"instagram": {"state": "uncertain"}, "x": "scheduled", "threads": "scheduled"}},
+  {"id": "xfail", "title": "X failed alone", "kind": "reel", "slot": "2026-11-01T18:30+04:00", "delivery": {"instagram": "scheduled", "x": "failed", "threads": "scheduled"}},
+  {"id": "unconf", "title": "Not confirmed at T+5", "kind": "reel", "slot": "2026-11-01T15:50+04:00", "delivery": {"instagram": "published", "x": "scheduled", "threads": "scheduled"}},
+  {"id": "badqc", "title": "Known bad composition", "kind": "reel", "slot": "2026-11-01T16:20+04:00", "production": "rejected", "fallback": "publish-last-passed"},
+  {"id": "ontime", "title": "Published on time", "kind": "reel", "slot": "2026-11-01T14:00+04:00", "logged": true, "delivery": {"instagram": {"state": "published", "at": "2026-11-01T10:01Z"}, "x": {"state": "published", "at": "2026-11-01T10:01Z"}, "threads": {"state": "published", "at": "2026-11-01T10:02Z"}}},
+  {"id": "moved", "title": "Series episode moved a day", "kind": "series episode", "slot": "2026-11-01T14:00+04:00", "original_due_at": "2026-10-31T14:00+04:00", "delivery": {"instagram": {"state": "published", "at": "2026-11-01T10:01Z"}, "x": {"state": "published", "at": "2026-11-01T10:01Z"}, "threads": {"state": "published", "at": "2026-11-01T10:01Z"}}},
+  {"id": "noslot", "title": "Row without a slot", "kind": "reel"}
+ ]
+}

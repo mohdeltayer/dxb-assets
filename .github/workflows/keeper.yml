@@ -1,0 +1,87 @@
+# The promise keeper (adv-20261030-promise-keeper, addendum_2251; Mohammad 30 Oct 2026). Every 5 minutes it reads
+# newsroom/commitments.json from main, places each open promise on the ladder from its slot (T-90, T-45, T-30, T-15,
+# T+5), sends one ntfy alarm per row and rung, and force-pushes its status (one line, six lines, rows, state, log) to
+# the branch `keeper-status` of this repository, one commit, so the branch never grows. Every scheduled session reads
+# `git show origin/keeper-status:keeper/status.txt` first.
+#
+# It runs on GitHub's runners, not on dxb-render-1: the server cannot run user timers until root enables lingering for
+# the runner user, and its only push token is scoped to dxb-watch. No load on the render server, no Claude.
+# Alarm-only (KEEPER_MODE) until a release switches fallback on after the seven shadow tests pass.
+# Posts nothing, schedules nothing, deletes nothing, renders nothing, touches no other branch. A push to
+# `keeper-status` fires no workflow (gitleaks scans main only). The ntfy topic comes from the secret NTFY_TOPIC; without
+# it the alarms stay in the status branch for the sessions to act on.
+#
+#   gh workflow run keeper.yml --ref main      # one pass now
+name: keeper
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: keeper
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    if: github.repository == 'mohdeltayer/dxb-assets' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      KEEPER_MODE: alarm-only
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            ops/backoffice/keeper
+            newsroom/commitments.json
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+
+      - name: Last state from keeper-status
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/pub/keeper"
+          auth=$(printf 'x-access-token:%s' "$TOKEN" | base64 -w0)
+          if git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $auth" \
+               fetch -q --depth 1 "https://github.com/${GITHUB_REPOSITORY}.git" keeper-status 2>/dev/null; then
+            for f in state.json keeper.log; do
+              git show "FETCH_HEAD:keeper/$f" > "$RUNNER_TEMP/pub/keeper/$f" 2>/dev/null || rm -f "$RUNNER_TEMP/pub/keeper/$f"
+            done
+            echo "previous state read"
+          else
+            echo "no keeper-status branch yet: first pass, cold start"
+          fi
+
+      - name: Tick
+        env:
+          KEEPER_NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: |
+          set +e
+          python3 ops/backoffice/keeper/keeper.py tick --commitments newsroom/commitments.json \
+            --out "$RUNNER_TEMP/pub/keeper" | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "commit $(git rev-parse --short HEAD)" >> "$RUNNER_TEMP/pub/keeper/keeper.log"
+          exit 0   # an unreadable commitments file is in the status and the log; the push below still happens
+
+      - name: Push keeper-status (one commit, forced)
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          cd "$RUNNER_TEMP/pub"
+          git init -q
+          git checkout -q --orphan keeper-status
+          git add -A
+          gen=$(python3 -c "import json; print(json.load(open('keeper/status.json'))['generated_at'])")
+          git -c user.name=dxb-keeper -c user.email=noreply@github.com -c commit.gpgsign=false \
+            commit -q -m "keeper $gen"
+          auth=$(printf 'x-access-token:%s' "$TOKEN" | base64 -w0)
+          git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $auth" \
+            push -q --force "https://github.com/${GITHUB_REPOSITORY}.git" HEAD:refs/heads/keeper-status
+          echo "pushed keeper-status: $gen" | tee -a "$GITHUB_STEP_SUMMARY"
