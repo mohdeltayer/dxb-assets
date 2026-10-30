@@ -563,6 +563,11 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - Never re-run a failed publish.
   - Check PUBLISHED after the slot, then strip posted media.
 
+## Full frame (adv-20261030-one-piece-fortnite-hold, 30 Oct 2026)
+- No blurred fill or pillarbox box for footage. A source that cannot fill 9:16 within the 2x cap takes the full-frame treatment: footage as large as the cap allows between designed bands in the template colour.
+- Main footage under 60% of the frame height, or over 5% blur, fails `fillcheck.py` in render_job.check (storybeat page exempt from the 60% part only).
+- Headline in the safe band, never over a face or the shot's subject. Collaboration stories use the game's official trailer.
+
 ## Promises (adv-20261030-promise-keeper, 30 Oct 2026)
 - Every scheduling action writes its row in newsroom/commitments.json (slot, platforms, job or card, fallback, held_by_mohammad).
 - A build dependency never cancels a slot: unreleased fix at slot time means the current template, unless held_by_mohammad.

@@ -424,6 +424,10 @@ captured as they land and checked against the official page before
 posting), and a wrap-up slot after it; set one-off triggers only after he
 agrees each one.
 
+## Full-frame check (adv-20261030-one-piece-fortnite-hold, Mohammad 30 Oct 2026)
+Director QA adds two questions on every Reel: is any footage a box in a blur (fail), and does the headline sit over a
+face or the shot's subject (fail)? render_job.check runs templates/fillcheck.py before every render.
+
 ## Promises first (adv-20261030-promise-keeper, Mohammad 30 Oct 2026)
 Every scheduled session (hourly watch, review slots, morning digest, build desk) prints first
 'overdue commitments: N, at risk: M' from newsroom/keeper-status.json (until the keeper exists: count the open rows of

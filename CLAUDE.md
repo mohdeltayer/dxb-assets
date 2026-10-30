@@ -2686,6 +2686,22 @@ and news.xbox.com refuse automated requests at their end; use a press
 article that carries the same image. Say plainly when something is
 corroborated by search rather than read from the primary.
 
+## Full frame, never a box in a blurred fill (advisor card adv-20261030-one-piece-fortnite-hold, Mohammad 30 Oct 2026, 21:40 Dubai)
+
+The One Piece x Fortnite Reel put a small clip in the middle of a blur of itself, with the headline across a face.
+1. No blurred-fill or pillarbox box for footage. When the best source cannot fill 9:16 at full height without going
+   below 1080 px on its short side (or past the 2x cap), the Reel uses the full-frame treatment: the footage as large as
+   the 2x cap allows, with a designed band in the template colour (chip row, headline, credit) above and below, never a
+   blur of the same picture. Until reel.py has the layout, ops composes it as a picture track (the Fortnite v2 frame,
+   `live/2026-10-30/fn/`: ground #141332 above with a 4 px azure rule, the trailer at 2.0x in 1080x1200 below).
+2. A render whose main footage occupies less than 60% of the frame height fails. `templates/fillcheck.py`, called by
+   `render_job.check` (so by prerender, t0make and the runner), reads three frames of every portrait footage source and
+   fails a shot whose frame holds over 5% blur or under 60% footage; the storybeat template's page is exempt from the
+   60% part (the storybook look Mohammad chose), not from the blur part. `fill_ok` waives one shot after a look.
+3. Headlines go in the safe band, never over a face or the subject of the shot.
+4. A collaboration or trailer story uses the game's official trailer (Epic for Fortnite), credited on screen; footage
+   from the other side of the collaboration (the anime) is illustration only.
+
 ## Promises, not just work (advisor card adv-20261030-promise-keeper, Mohammad 30 Oct 2026, 21:31 Dubai)
 
 Ocarina episode 6, the Switch 2 Lite post, the server watch and the published log slipped because the system

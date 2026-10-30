@@ -341,6 +341,8 @@ def check(job):
         print(f"page motion: {len(page_moves(job, st))} moves on the cut", flush=True)
     speech_check(job, end)
     first_frame_check(job)
+    import fillcheck as FC                     # footage full frame, never a box in a blurred fill (adv-20261030-one-piece-fortnite-hold)
+    FC.check(job, C.U)
     import sfxplan as SF                       # sound effects match the picture (adv-20261030-sfx-mismatch, 30 Oct 2026)
     SF.check(job, st, place(job)(st, end), profile_of(job))
     if job.get('kit') or job.get('frame'):     # what the design pass will do, or drop, on the runner
