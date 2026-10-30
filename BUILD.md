@@ -29,6 +29,9 @@ Principle (part E): Claude judges and writes; scripts, the server and outside sc
 Head of the queue (Mohammad, 30 Oct 2026): adv-20261030-download-automation-and-credits Part A (yt-dlp
 with the JS runtime, one fetch script on the acquisition order, X posts as a source) comes before
 everything else, then its Part B build items (credit from frame 0, the coverage stop in render_job check).
+Next after it (Mohammad, 30 Oct 2026, 19:13 Dubai): adv-20261030-audience-loop, ops/build/backlog.md B15. Part A
+(weekly Reel table) first, Part B (daily comments) once its tokens exist. Both are server scripts under the runner
+user; Claude only reads their output files.
 
 Order of work: an item Mohammad has answered "go live" on comes first; then items with a date (an episode
 slot, a show); then the backlog order. One item at a time to a finished state beats three half-done.
