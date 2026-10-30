@@ -16486,5 +16486,38 @@
   "min_disk_free_mb": 81174,
   "setup_min": 0.95,
   "story": "ea-closed-bioware-for-battlefront-3-report"
+ },
+ {
+  "name": "ea-closed-bioware-for-battlefront-3-report-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-30T18:49Z",
+  "stages": {
+   "checks": 5.6,
+   "montage": 75.3,
+   "text": 114.6,
+   "audio": 1.4,
+   "outro": 65.8
+  },
+  "total": 262.7,
+  "lane": "runner",
+  "queued_at": "2026-10-30T18:41:55Z",
+  "finished_at": "2026-10-30T18:49Z",
+  "render_min": 4.38,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 398,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1020,
+  "peak_mem_mb": 3130,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62541,
+  "peak_disk_mb": 66512,
+  "min_disk_free_mb": 81190,
+  "setup_min": 1.05,
+  "story": "ea-closed-bioware-for-battlefront-3-report"
  }
 ]
