@@ -15354,5 +15354,54 @@
   "min_disk_free_mb": 83919,
   "setup_min": 0.88,
   "story": "circana-ps5-ps4-xbox-series-month-71"
+ },
+ {
+  "name": "cairn-on-the-trail-deep-water-free-dlc-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-30T07:40Z",
+  "stages": {
+   "checks": 5.2,
+   "montage": 53.7,
+   "text": 33.7,
+   "audio": 0.8,
+   "outro": 36.7
+  },
+  "total": 130.1,
+  "lane": "runner",
+  "queued_at": "2026-10-30T07:35:36Z",
+  "finished_at": "2026-10-30T07:40Z",
+  "render_min": 2.17,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.4,
+   "audio_secs": 19.8,
+   "music_pct": 100.0,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 0
+   },
+   "effects_shots": 11,
+   "mix_secs": 0.8,
+   "secs": 3.6
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 239,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1334,
+  "peak_mem_mb": 2687,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62872,
+  "peak_disk_mb": 64902,
+  "min_disk_free_mb": 82799,
+  "setup_min": 1.1,
+  "story": "cairn-on-the-trail-deep-water-free-dlc"
  }
 ]
