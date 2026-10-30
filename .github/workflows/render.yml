@@ -239,6 +239,9 @@ jobs:
         run: |
           out=$(python -c "import json; print(json.load(open('$JOB'))['out'])")
           echo "OUT=$out" >> "$GITHUB_ENV"
+          # B8 test runs (build branch, jobs/test/): outputs under cards/test/ only, no render-times entry
+          TEST=0; case "$JOB" in jobs/test/*) TEST=1;; esac
+          if [ $TEST = 1 ]; then case "$out" in cards/test/*) ;; *) echo "a test job writes under cards/test/ only"; exit 1;; esac; fi
           stem="${out%.mp4}"; base="${stem%-reel-v*}"
           files="$out $base-strip.jpg $base-sheet.jpg"
           # 4 frames a second through the Reel (decodecheck.dense_strip), so the first second of every shot is seen
@@ -251,8 +254,8 @@ jobs:
             git fetch -q --depth=1 --filter=blob:none origin "$GITHUB_REF_NAME"
             git reset -q --hard "origin/$GITHUB_REF_NAME"
             cp -r "$RUNNER_TEMP/out/." .
-            python -c "import json; p = 'templates/assets/render-times.json'; d = json.load(open(p)); e = json.load(open('$RUNNER_TEMP/render-time.json')); e['job_secs'] = $RENDER_SECS; e['setup_min'] = round($SETUP_SECS / 60, 2); e['story'] = '$(basename "$JOB" .json)'; d.append(e); json.dump(d, open(p, 'w'), indent=1, ensure_ascii=False)"
-            git add --sparse -f $files templates/assets/render-times.json
+            [ $TEST = 1 ] || python -c "import json; p = 'templates/assets/render-times.json'; d = json.load(open(p)); e = json.load(open('$RUNNER_TEMP/render-time.json')); e['job_secs'] = $RENDER_SECS; e['setup_min'] = round($SETUP_SECS / 60, 2); e['story'] = '$(basename "$JOB" .json)'; d.append(e); json.dump(d, open(p, 'w'), indent=1, ensure_ascii=False)"
+            if [ $TEST = 1 ]; then git add --sparse -f $files; else git add --sparse -f $files templates/assets/render-times.json; fi
             if [ -f "$JOB" ]; then git rm -q "$JOB"; fi
             git commit -q -m "Render $(basename "$JOB" .json) on the runner ($RENDER_SECS s, $(nproc) cores)"
             if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
@@ -266,6 +269,7 @@ jobs:
       # The media id goes into the receipt only while the repo is private; otherwise production finds the
       # file in Publer by its name. Nothing from Publer is printed.
       - name: Publer upload
+        if: ${{ !startsWith(env.JOB, 'jobs/test/') }}
         continue-on-error: true
         timeout-minutes: 6
         env:

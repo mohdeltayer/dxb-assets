@@ -305,25 +305,115 @@ def close_note(shots):
     return f'close: the last {CLOSE:.0f} s are a card ({f}); end on a picture' if _ours(f) else ''
 
 
-def _reveal(lines, idx):
-    """Word-by-word reveal of one line (the key line only, advisor 14 Oct 2026): the line
-    becomes cumulative prefixes, each a layer, entering a quarter second apart."""
-    text, a, z, kw = lines[idx]
-    toks = re.findall(r'\S+|\n', text)
-    words = [t for t in toks if t != '\n']
-    dt = min(0.25, (z - a) * 0.4 / max(len(words), 1))
-    out, k = [], 0
-    for n in range(1, len(words) + 1):
-        pre, c = [], 0
-        for t in toks:
-            if t == '\n':
-                if pre: pre.append('\n')
-            else:
-                if c == n: break
-                pre.append(t); c += 1
-        txt = ' '.join(pre).replace(' \n ', '\n').strip()
-        out.append((txt, a + (n - 1) * dt, z, kw))
-    return lines[:idx] + out + lines[idx + 1:]
+def reveal_dt(text, a, z):
+    """Seconds between the words of a reveal (the key line only, advisor 14 Oct 2026): a quarter second at most."""
+    words = [t for t in re.findall(r'\S+', text)]
+    return min(0.25, (z - a) * 0.4 / max(len(words), 1)), len(words)
+
+
+def reveal_layers(text, kw, a, z, stem, skin=None):
+    """The word-by-word reveal without a flash (B8, Mohammad on the episode 6 preview: "Sometimes the text flashes when
+    words are added to the screen"). The old reveal made each step a line of its own, so the line-after-line trim
+    faded each step out before the next faded in: every word already on screen blinked at every step, and a two-line
+    sentence was wrapped again at each step. Now the whole sentence is drawn once and cut into one piece per word (its
+    visual line's band, from the middle of the space before it to the middle of the space after it, right to left), so
+    the pieces add up to exactly the sentence: each word fades in on its own and nothing already up is redrawn or moves;
+    all pieces leave together. [(png, a, z)], the first word first."""
+    import numpy as np
+    dt, n = reveal_dt(text, a, z)
+    geo = {}
+    line_layer(text, f'{stem}-full.png', skin=skin, geometry=geo, **kw)
+    full = np.asarray(Image.open(f'{stem}-full.png').convert('RGBA'))
+    probe = ImageDraw.Draw(Image.new('L', (8, 8)))
+    tl = lambda x: probe.textlength(x, font=geo['font'], **G.AR)
+    space = tl(' ')
+    lines, base0, step = geo['lines'], geo['base0'], geo['step']
+    regions = []                            # per word: (y0, y1, x0, x1) in the full image
+    for i, ln in enumerate(lines):
+        b = base0 + i * step
+        y0 = 0 if i == 0 else int(round(b - step + step / 3))
+        y1 = H if i == len(lines) - 1 else int(round(b + step / 3))
+        ws = ln.split()
+        right = W                           # the first word of a line takes the margin to its right (outline, shadow)
+        for j in range(1, len(ws) + 1):
+            left = 0 if j == len(ws) else int(round(W - R - tl(' '.join(ws[:j])) - space / 2))
+            regions.append((y0, y1, left, right))
+            right = left
+    if len(regions) > n:                    # a price drawn after the last word joins the last word's piece
+        y0, y1, _, x1 = regions[n - 1]
+        regions = regions[:n - 1] + [(y0, y1, 0, x1)]
+    out = []
+    for k, (y0, y1, x0, x1) in enumerate(regions):
+        piece = np.zeros_like(full)
+        piece[y0:y1, x0:x1] = full[y0:y1, x0:x1]
+        p = f'{stem}-r{k + 1}.png'
+        Image.fromarray(piece, 'RGBA').save(p)
+        out.append((p, a + k * dt, z))
+    return out
+
+
+def credit_specs(credits, lines, starts, end, head_secs, strip, tmp):
+    """The credits as reel() places them: [{'png', 'a', 'z', 'low', 'box'}] (box: the drawn pixels, band included)."""
+    out = []
+    for j, (first, last, text, *opt) in enumerate(credits or []):
+        opt = opt[0] if opt else {}
+        # {'from_start': True, 'low': True, 'size': 42, 'band': True}: a stand-in credit readable on the grid tile, low so it
+        # clears the headline (23 Oct 2026, the Mass Effect leak Reel, where stand-in footage sat under «تسرب عرض»)
+        a = 0.0 if opt.get('from_start') and first == 0 else max(starts[first] + 0.2, head_secs + 0.1)   # not under the headline
+        z = starts[last + 1] if last + 1 < len(starts) else end
+        low = opt.get('low', any(kw.get('top') and la < z and lz > a for _, la, lz, kw in lines))
+        if z - a > 0.5:                                        # a low credit sits just above the strip, not on it
+            png = credit_layer(text, f'{tmp}/c{j}.png', low=low, size=opt.get('size', 36),
+                               y=STRIP_TOP - 12 if low and strip else None, band=opt.get('band', False))
+            out.append(dict(png=png, a=a, z=z, low=low, box=Image.open(png).getbbox()))
+    return out
+
+
+BADGE_GAP = 14      # px between a low credit (the series badge) and the story line it would otherwise sit on
+
+
+def clear_badge(text, kw, a, z, creds, tmp, skin=None):
+    """A low story line that would sit on a low credit showing at the same time (the Road to Ocarina badge from episode
+    7: 52 px, on a band, under the beat lines; notes/ocarina-series.md) is lifted just clear of it. Lines that do not
+    touch a credit keep their place, so every other Reel draws exactly as before."""
+    if kw.get('top'):
+        return kw
+    hits = [c for c in creds if c['low'] and c['box'] and c['a'] < z and c['z'] > a]
+    if not hits:
+        return kw
+    probe = line_layer(text, f'{tmp}/probe.png', skin=skin, **kw)
+    box = Image.open(probe).getbbox()
+    top = min(c['box'][1] for c in hits)
+    if box and box[3] > top - BADGE_GAP:
+        kw = dict(kw, lift=kw.get('lift', 0) + box[3] - (top - BADGE_GAP))
+    return kw
+
+
+def _ease_expr(s0, d):
+    u = f'clip((t-{s0:.3f})/{d:.3f}\\,0\\,1)'
+    return f'(1-cos(PI*{u}))/2'
+
+
+def page_positions(groups, moves):
+    """{png: (x expr, y expr)}: every layer of a line moves with the storybook page during the camera's glide into and
+    out of its picture (the same sine ease as storybook.ease). A move while the line is up stops the render."""
+    out = {}
+    for g in groups:
+        a, z = g[0][1], max(zz for _, _, zz in g)
+        tx, ty = [], []
+        for t, pre, post, dx, dy in moves:
+            if a + 0.05 < t < z - 0.05:
+                raise ValueError(f'a line runs across a page move at {t:.2f} s ({a:.2f} to {z:.2f} s): mark that beat stay '
+                                 'in the storybeat spec, or end the line at the cut')
+            e = _ease_expr(t - pre, pre + post)
+            if t <= a + 0.05 and t + post > a - 0.25:          # the glide into this picture: from (dx, dy) to place
+                tx.append(f'({dx})*(1-{e})'); ty.append(f'({dy})*(1-{e})')
+            elif t >= z - 0.05 and t - pre < z:                # the glide out: the page carries it away
+                tx.append(f'({-dx})*{e}'); ty.append(f'({-dy})*{e}')
+        if tx:
+            for p, _, _ in g:
+                out[p] = ('+'.join(tx), '+'.join(ty))
+    return out
 
 
 STILLS = 'stills'   # push-in clips are written under uploads/stills/
@@ -378,10 +468,11 @@ def stills_clips(images, name, secs=3.0, push=0.03, focus=0.5, cutout=False, the
     return out
 
 
-def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96, lift=0, ink=None, skin=None):
+def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96, lift=0, ink=None, skin=None, geometry=None):
     """One sentence, right-aligned; bottom line on SAFE_BOTTOM - 40, or
     under SAFE_TOP with top=True. `lift` raises a low line (the split template
-    lifts them over its fact strip). `skin` takes the kit's outline and ink."""
+    lifts them over its fact strip). `skin` takes the kit's outline and ink.
+    `geometry` (a dict) receives the visual lines, the first baseline, the line step and the font, for reveal_layers."""
     f = A.F('Bold', size); probe = ImageDraw.Draw(Image.new('L', (W, H)))
     tw = lambda s: probe.textlength(s, font=f, **G.AR)
     full = text + (f' {price}' if price else '')
@@ -402,6 +493,8 @@ def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96,
         raise ValueError(f'{len(lines)} lines; keep a sentence to {cap}' + (' over the strip' if lift else '') + f': {text}')
     rtl_starts(lines, 'story')
     base0 = G.SAFE_TOP + 110 if top else G.SAFE_BOTTOM - 40 - lift - step * (len(lines) - 1)
+    if geometry is not None:
+        geometry.update(lines=lines, base0=base0, step=step, font=f, size=size)
     mask = Image.new('L', (W, H), 0); d = ImageDraw.Draw(mask)
     for i, ln in enumerate(lines):
         b = base0 + i * step
@@ -1679,8 +1772,12 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
          lowres_ok=False, read_check=True, track=None, draft=False, head_size=HEAD_SIZE, cut=False, credits=None, strip=None,
          products=None, template=None, tribute=False, reveal=None, profile=None, pace_ok=False, skin=None,
-         person=None, blocky_ok=None, apart=None):
-    """`apart`: the design pass (designpass.py, 24 Oct 2026), {'dir': folder, 'chip': bool, 'person': bool,
+         person=None, blocky_ok=None, apart=None, page=None):
+    """`page`: [(t, pre, post, dx, dy)], the storybook camera's moves in Reel seconds (storybook.py, B8 29 Oct 2026;
+    render_job maps the job's `page_motion` onto the cut): the camera glides by (dx, dy) on the page from t - pre to
+    t + post, and each story line moves with its page, so the words stay written where the picture is. A line that
+    would be on screen across a move stops the render (mark the next beat `stay`). None (the default) moves nothing.
+    `apart`: the design pass (designpass.py, 24 Oct 2026), {'dir': folder, 'chip': bool, 'person': bool,
     'strip': bool}: the chip row, the first person window when it opens on frame 0, and the split strip are left out
     of the burnt-in text and written to `dir` as layers, with their times and fades in `dir`/apart.json, so the kit
     can press or open them over the Reel's own frames, or lay them back exactly as drawn when a step fails. None (the
@@ -1744,7 +1841,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, credits=credits, strip=strip,
                         products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok,
-                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart)
+                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart, page=page)
         finally:
             X = keep
     global FINISH
@@ -1754,7 +1851,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, cut, credits=credits, strip=strip,
                         products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok,
-                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart)
+                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart, page=page)
         finally:
             FINISH = keep_f
     if profile and not PROFILES[profile].get('music', True) and isinstance(track, (tuple, list)) and len(track) > 2:
@@ -1789,8 +1886,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             raise ValueError(pn + '; cut to a second angle, add a line or a strip, or pass pace_ok=True with the reason in the brief')
         for note in (pn, close_note(shots)):
             if note: print(note)               # attention rules (advisor, 14 Oct 2026)
-        if reveal is not None:                 # word-by-word reveal on the key line only
-            lines = _reveal(lines, reveal)
+        if reveal is not None and not 0 <= reveal < len(lines):
+            raise ValueError(f'reveal {reveal}: there are {len(lines)} lines')
         if tribute:
             lines = [(t, a, z, {**kw, 'ink': A.BODY}) for t, a, z, kw in lines]
         if strip:                              # lines rise over the strip; a repeated fact or a bad strip stops here
@@ -1835,11 +1932,21 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         layers.insert(0, (mark_layer(f'{tmp}/mark.png'), 0, end))
     fixed = len(layers)                     # these never get trimmed by the next line
     layers.append((f'{tmp}/meta.png', min(CREDIT_AT, head_secs - 0.5), head_secs))   # the credit line enters at 2 s
+    creds = credit_specs(credits, lines, starts, end, head_secs, strip, tmp)   # drawn now, laid after the lines as before
+    groups = []                             # one per line: [(png, a, z)]; a reveal line is its word steps (B8)
     for i, (text, a, z, kw) in enumerate(lines):
-        layers.append((line_layer(text, f'{tmp}/l{i}.png', skin=skin, **kw), a, min(z, end)))
-    line_paths = {f'{tmp}/l{i}.png' for i in range(len(lines))}
-    for i in range(fixed + 1, len(layers) - 1):    # a line leaves before the next arrives (the head and credit are not lines)
-        p, a, z = layers[i]; layers[i] = (p, a, min(z, layers[i + 1][1]))
+        kw = clear_badge(text, kw, a, min(z, end), creds, tmp, skin)
+        if i == reveal:
+            groups.append(reveal_layers(text, kw, a, min(z, end), f'{tmp}/l{i}', skin))
+        else:
+            groups.append([(line_layer(text, f'{tmp}/l{i}.png', skin=skin, **kw), a, min(z, end))])
+    line_paths = {g[0][0] for g in groups}
+    for i in range(len(groups) - 1):       # a line leaves before the next arrives (the head and credit are not lines)
+        zz = groups[i + 1][0][1]
+        groups[i] = [(p, a, min(z, zz)) for p, a, z in groups[i]]
+    pos_of = page_positions(groups, page) if page else {}
+    for g in groups:
+        layers.extend(g)
     if strip:                              # after the trim: the strip stays for the rest of the clip, fading in over 0.4 s
         if comp is None:                   # it hides under a card (advisor review, 14 Oct 2026): never card, frame line and strip stacked
             a0, segs = head_secs, []
@@ -1869,16 +1976,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             continue
         layers.append((person_layer(photo, name, role, f'{tmp}/p{j}.png', theme=theme, focus=tuple(opt.get('focus', (0.5, 0.33))),
                                     credit=opt.get('credit')), a, z))
-    for j, (first, last, text, *opt) in enumerate(credits or []):   # after the trim: credits overlap the lines
-        opt = opt[0] if opt else {}
-        # {'from_start': True, 'low': True, 'size': 42, 'band': True}: a stand-in credit readable on the grid tile, low so it
-        # clears the headline (23 Oct 2026, the Mass Effect leak Reel, where stand-in footage sat under «تسرب عرض»)
-        a = 0.0 if opt.get('from_start') and first == 0 else max(starts[first] + 0.2, head_secs + 0.1)   # not under the headline
-        z = starts[last + 1] if last + 1 < len(starts) else end
-        low = opt.get('low', any(kw.get('top') and la < z and lz > a for _, la, lz, kw in lines))
-        if z - a > 0.5:                                        # a low credit sits just above the strip, not on it
-            layers.append((credit_layer(text, f'{tmp}/c{j}.png', low=low, size=opt.get('size', 36),
-                                        y=STRIP_TOP - 12 if low and strip else None, band=opt.get('band', False)), a, z))
+    for c in creds:                         # after the trim: credits overlap the lines
+        layers.append((c['png'], c['a'], c['z']))
     if skin and SK.leak_layer(f'{tmp}/leak.png', skin):   # fantasy: a warm light leak over each cut
         for s0 in starts[1:]:
             if s0 + 0.35 < end:
@@ -1892,13 +1991,15 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         args += ['-loop', '1', '-t', f'{end:.2f}', '-i', p]
     fc = ['[0:v]setsar=1,fps=30[v0]']
     for i, (p, a, z) in enumerate(layers, 1):
-        moving = bool(ent) and p in line_paths and a > 0 and (ent[0] or ent[1])
+        moving = bool(ent) and p in line_paths and a > 0 and (ent[0] or ent[1]) and p not in pos_of
         fd = 0.4 if strip and p == f'{tmp}/strip.png' else (round(ent[2] * 0.8, 2) if moving else 0.2)
         fin = f",fade=t=in:st={a:.2f}:d={fd}:alpha=1" if a > 0 else ''
         fout = f',fade=t=out:st={z - 0.2:.2f}:d=0.2:alpha=1' if z < end - 0.01 else ''
         if moving:                          # the kit's entrance: in from dx right and dy below, easing out over its duration
             u = f'min(1\\,max(0\\,(t-{a:.2f})/{ent[2]}))'
             pos = f"x='{ent[0]}*pow(1-{u}\\,3)':y='{ent[1]}*pow(1-{u}\\,3)':eval=frame"
+        elif p in pos_of:                   # the storybook page carries the line (B8)
+            pos = f"x='{pos_of[p][0]}':y='{pos_of[p][1]}':eval=frame"
         else:
             pos = '0:0'
         fc += [f'[{i}:v]format=rgba{fin}{fout}[l{i}]', f'[v{i - 1}][l{i}]overlay={pos}:shortest=1[v{i}]']

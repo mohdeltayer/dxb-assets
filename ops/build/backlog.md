@@ -118,7 +118,25 @@ after these; the test gate, the release window and BUILD.md apply.
 - Deadline: episode 6 posts 29 Oct 21:00 Dubai (17:00Z). If the template is not released at 04:00 Dubai on
   29 Oct, see the note on the BUILD.md card for what happens to episode 6.
 - Test: the gate, plus episode 6 re-rendered from the branch and its strip looked at against the five points.
-- State: READY (needs the first build night).
+- State: BUILT on `build/2026-10-29-ocarina-b8` (29 Oct, day build desk), waiting for the release.
+  Keys: job `"intro": {"series": "ocarina", "days": N}`; storybeat spec `"look": "storybook"` (classic is the
+  default), word beats need `src`, `"stay": true` keeps a picture's place; job `"page_motion"` = storybeat's
+  `motion`; the reveal fix needs no key. Test outputs in `cards/test/oot-b8-ep6-*`.
+  Lessons: his medley upload is not in git: the intro now uses the published intro's 4.2 s
+  (`templates/assets/ocarina/intro-medley.flac`); ask him to upload `oot-triforce-medley.mov` again for a clean
+  master. A full local render needs about 6 GB of temp and cache: run parity on the runner or with crf 8
+  intermediates, never two at once on the shared container. Dispatch-only test workflows that exist only on a
+  branch cannot be dispatched (404); test jobs go through render.yml with `--ref` and the jobs/test guard.
+- Gate (build desk, 29 Oct 15:40Z): self: the five changed modules import cleanly (ocarina_intro, reel, render_job,
+  storybeat, storybook). Parity 3/3 on GitHub runners from the branch, against the published renders: Alien: Isolation 2
+  microphone v5 (stills) 657 frames 21.921 s identical, worst blurred PSNR 54.4 dB, audio corr 1.0; The Duskbloods
+  delay v2 (trailer, IGN 4K) byte-identical; Monster Hunter Outlanders out now v2 (split) 699 frames 23.321 s
+  identical, worst 53.2 dB, audio corr 0.998; end cards identical; every output decodes clean. Feature: ep6 classic
+  and storybook v2 strips looked at against the five points: intro joined (0 to 4.2 s), «وحيدًا» sits on a dimmed
+  picture (16.5 to 18 s), no flash seen at 4 fps, storybook page with glides. Switches: `intro`, `"look":
+  "storybook"` (classic default), `page_motion`; off unless a job asks. For Mohammad with the ep6 preview: in the
+  storybook look the pictures fill about half the width and several glide frames are mostly empty indigo (10.2,
+  16.0, 21.2, 23.7 s); the lines read smaller than a normal Reel's.
 
 ## Not moved (stay where they are)
 - Back office 1, the watch go-live (`prod-20261027-backoffice-watch-readiness`): started in the day session
