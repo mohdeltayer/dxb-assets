@@ -15872,5 +15872,53 @@
   "min_disk_free_mb": 81509,
   "setup_min": 0.92,
   "story": "slay-the-spire-2-next-beta-patch-november-12"
+ },
+ {
+  "name": "slay-the-spire-2-next-beta-patch-november-12-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-30T12:33Z",
+  "stages": {
+   "checks": 12.3,
+   "montage": 72.2,
+   "text": 64.9,
+   "audio": 1.2,
+   "outro": 56.1
+  },
+  "total": 206.7,
+  "lane": "runner",
+  "queued_at": "2026-10-30T12:27:36Z",
+  "finished_at": "2026-10-30T12:33Z",
+  "render_min": 3.44,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 5.3,
+   "audio_secs": 56.5,
+   "music_pct": 28.9,
+   "leak_pct": 1.7,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 4,
+    "miss": 1
+   },
+   "reason": "music only 28.9% of the track (< 40.0%)",
+   "secs": 5.8
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 341,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1262,
+  "peak_mem_mb": 2202,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62919,
+  "peak_disk_mb": 66279,
+  "min_disk_free_mb": 81422,
+  "setup_min": 1.07,
+  "story": "slay-the-spire-2-next-beta-patch-november-12"
  }
 ]
