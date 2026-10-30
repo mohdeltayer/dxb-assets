@@ -78,7 +78,7 @@
       "rendered": "runner 311 s (v1 file name)"
     }
   },
-  "status": "scheduled",
+  "status": "published",
   "slot": "2026-10-30T06:00Z (10:00 Dubai)",
   "scheduled": "scheduled in Publer 22:13Z for 06:00Z (10:00 Dubai): Instagram Reel, X, Threads; labels tpl:split, skin:house, sound:trailer, genre:live service/MMO",
   "approved": "go: rolling queue; preview sent 22:15Z; gate 22:00Z: both Blizzard articles read in full; re-gate due 05:00-06:00Z (queued over 6 h ahead)",
@@ -120,5 +120,14 @@
   },
   "gates": [
     "gate 05:19Z: news.blizzard.com 24315820 and 24302093 re-read (Playwright): November 4 3:00 p.m. PST, access with Subscription or Game Time, 1,000+ quests, nine dungeons, raids December 9; no update or correction note. Unchanged."
-  ]
+  ],
+  "published": {
+    "at": "2026-10-30T06:01Z",
+    "platforms": [
+      "Instagram",
+      "X",
+      "Threads"
+    ],
+    "checked": "06:06Z"
+  }
 }
