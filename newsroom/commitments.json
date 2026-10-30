@@ -225,6 +225,31 @@
    },
    "status": "scheduled",
    "evidence": "Publer scheduled 20:53Z for 2026-10-31T03:00+04:00 on Instagram, X, Threads (v2)"
+  },
+  {
+   "id": "steam-horror-most-played-halloween",
+   "title": "Halloween: Steam's most-played horror games (أرقام, list)",
+   "kind": "reel",
+   "slot": "2026-10-31T05:00+04:00",
+   "original_due_at": "2026-10-31T05:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/steam-horror-most-played-halloween.json",
+   "card": "prod-20261031-steam-horror",
+   "fallback": "bank-piece",
+   "held_by_mohammad": false,
+   "done": false,
+   "production": "rendering",
+   "delivery": {
+    "instagram": "pending",
+    "x": "pending",
+    "threads": "pending"
+   },
+   "status": "building",
+   "evidence": "runner render started 22:27Z"
   }
  ]
 }
