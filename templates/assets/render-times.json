@@ -16383,5 +16383,42 @@
   "min_disk_free_mb": 79798,
   "setup_min": 0.9,
   "story": "oot-road-ep6-boy-without-a-fairy"
+ },
+ {
+  "name": "oot-road-ep6-boy-without-a-fairy-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-30T18:08Z",
+  "stages": {
+   "checks": 3.1,
+   "montage": 50.9,
+   "text": 154.3,
+   "audio": 1.9,
+   "outro": 62.9
+  },
+  "total": 273.1,
+  "lane": "runner",
+  "queued_at": "2026-10-30T18:00:35Z",
+  "finished_at": "2026-10-30T18:08Z",
+  "render_min": 4.55,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "intro": {
+   "days": 5,
+   "secs": 8.0
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 389,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 997,
+  "peak_mem_mb": 2500,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62541,
+  "peak_disk_mb": 67900,
+  "min_disk_free_mb": 79801,
+  "setup_min": 1.07,
+  "story": "oot-road-ep6-boy-without-a-fairy"
  }
 ]
