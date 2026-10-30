@@ -55,12 +55,27 @@
   "source_kind": "Steam 1080p trailer (letterboxed, 2.33x), decode clean, two dark stretches swapped for blockiness"
  },
  "gate": "gate 11:25Z: Mega Crit Steam post read (30 Oct 01:24Z), no update note",
- "approved": null,
+ "approved": "go: rolling queue (caps card prod-20261030-fill-tonight default 'Fill it tonight' applied 12:45Z); preview sent 13:01Z; gate 11:25Z (Mega Crit Steam post), re-read 12:59Z; scheduled in Publer 13:00Z for 15:00Z (19:00 Dubai) on Instagram, X, Threads; v3",
  "versions": [
   {
    "v": 1,
    "at": "2026-10-30T11:28Z",
    "change": "runner render; held for the caps decision (card prod-20261030-fill-tonight)"
+  },
+  {
+   "v": 2,
+   "at": "2026-10-30T12:27Z",
+   "change": "hook and shot 7 replaced"
+  },
+  {
+   "v": 3,
+   "at": "2026-10-30T12:36Z",
+   "change": "hook on trailer 24 s"
   }
- ]
+ ],
+ "director": {
+  "v1": "FIX: cover on legs (trailer tilt-up), in-game text screen cut by crop at 16.8 s",
+  "v2": "FIX: opening still legs then an orb; the hooded character close-up is at trailer 24 s",
+  "v3": "PASS: cover the hooded character with dagger under a readable headline; lines on clean footage; credit on every shot; closing picture before the end card; speech none"
+ }
 }
