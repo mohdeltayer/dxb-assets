@@ -131,6 +131,13 @@ order as one text, aloud: if nobody would say it that way, it goes back. Checks:
 is named before any pronoun refers to it; no line opens on «و» unless it continues the line
 before within 3 s; in-game terms explained or replaced with plain words; a comparison Reel
 labels both halves on screen. The read-aloud text goes in the story file (`read_aloud`).
+Every beat says what must be seen (advisor card adv-20261030-shot-selection, Part A, approved by
+Mohammad 30 Oct 2026): the brief lists per beat what the viewer learns, the fact, what must be visible,
+what the footage cannot prove, full frame or crop, and evidence_role (demonstration or illustration).
+The director checks shot, excerpt and crop separately and asks the five questions before upload: does
+every beat add something; does the picture support the sentence; is the Arabic natural read aloud; does
+the clip keep the action needed to understand the point; does the ending fulfil the hook. A miss is a
+send-back. CLAUDE.md "Every beat says what must be seen" has the shapes per story kind.
 Credit on every clip (advisor card adv-20261030-download-automation-and-credits, Part B,
 approved by Mohammad 30 Oct 2026). Every clip that is not ours carries an on-screen credit
 for as long as it is shown: the publisher or platform, and the studio where it differs

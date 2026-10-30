@@ -1470,6 +1470,26 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
   (26 Oct). The Overwatch x Stellar Blade EVE Protocol Reel, built on both games'
   launch trailers, was pulled to drafts before its 09:00 Dubai slot and rebuilt
   on the key art.
+- Every beat says what must be seen (advisor card adv-20261030-shot-selection, Part A, approved by
+  Mohammad 30 Oct 2026 06:22 Dubai, from that day). Before any footage is chosen, each beat in the brief
+  states: what the viewer should learn; the verified fact behind it; what must be visible (subjects,
+  action, relationship, text); what the footage would not establish by itself; whether the full frame
+  must be kept. Three separate checks: the shot (matches the sentence), the excerpt (keeps start, action
+  and result), the crop (the required subject, relationship or text survives 9:16 for the whole excerpt;
+  a 9:16 crop keeps under a third of a 16:9 frame). Permitted crop outcomes: a stable crop, a tracked
+  crop, the full frame in a designed vertical layout (trailer showcase), two labelled panels for a
+  comparison, or a different shot; keeping the full frame is a valid decision. Dialogue and cutscenes
+  frame on faces; gameplay and action keep the action whole or the full frame. Footage is illustration
+  unless it demonstrates the claim: a trailer never proves a frame rate, resolution, performance or
+  player count (those come from the announcement, as a line or card); each beat is labelled
+  evidence_role demonstration or illustration. Story roles per beat: hook, explanation, demonstration,
+  consequence, payoff; shapes: reveal (premise, distinctive gameplay, why it matters, availability),
+  update (change, demonstration, effect on play, availability or limit), delay (new date, stated reason,
+  what changes, what is unknown), report (finding, evidence, consequence, limits). Review before upload,
+  five questions: does every beat add something; does the picture support the sentence; is the Arabic
+  natural read aloud; does the clip keep the action needed to understand the point; does the ending fulfil
+  the hook (the credit check of 30 Oct rides with these). Part B (a corrections log of 20 recent Reels)
+  is on the card.
 - Credit on every clip (advisor card adv-20261030-download-automation-and-credits, Part B,
   approved by Mohammad 30 Oct 2026, effective at once, first applied to the Death Stranding
   Isolations Reel). Every clip that is not ours carries an on-screen credit for as long as that

@@ -296,6 +296,11 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   over a dimmed blurred moving copy) when 9:16 does not fit; its own sound.
   Director check: trailer news, is it the actual trailer? (CLAUDE.md "Trailer
   news shows the trailer").
+- **Every beat says what must be seen (30 Oct):** each beat states what the viewer learns, the fact
+  behind it, what must be visible, what the footage cannot prove, and whether the full frame stays;
+  shot, excerpt and crop checked separately; footage is illustration unless it demonstrates the claim
+  (`evidence_role`); five questions before upload (every beat adds, picture supports sentence, Arabic
+  natural aloud, action kept whole, ending pays off the hook). (CLAUDE.md "Every beat says what must be seen")
 - **Credit on every clip (30 Oct):** every clip that is not ours carries an
   on-screen credit for as long as it is shown: publisher or platform, and the
   studio where it differs («المصدر: ديزني بلس وكوجيما بروداكشنز (Kojima
