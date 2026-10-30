@@ -15693,5 +15693,54 @@
   "min_disk_free_mb": 81413,
   "setup_min": 2.03,
   "story": "kirby-air-riders-halloween-event-cancelled"
+ },
+ {
+  "name": "kirby-air-riders-halloween-event-cancelled-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-30T10:23Z",
+  "stages": {
+   "checks": 7.3,
+   "montage": 68.6,
+   "text": 39.2,
+   "audio": 0.9,
+   "outro": 48.2
+  },
+  "total": 164.3,
+  "lane": "runner",
+  "queued_at": "2026-10-30T10:16:46Z",
+  "finished_at": "2026-10-30T10:23Z",
+  "render_min": 2.74,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.7,
+   "audio_secs": 28.3,
+   "music_pct": 81.7,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 0
+   },
+   "effects_shots": 15,
+   "mix_secs": 0.8,
+   "secs": 4.1
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 404,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1341,
+  "peak_mem_mb": 3161,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62927,
+  "peak_disk_mb": 66142,
+  "min_disk_free_mb": 81560,
+  "setup_min": 1.13,
+  "story": "kirby-air-riders-halloween-event-cancelled"
  }
 ]
