@@ -1,0 +1,122 @@
+# Rights terms the prepare service relies on, per publisher (machine-readable side of ops/rights-register.md).
+# Names, hosts and terms only; never a token, a login or a private link.
+#
+# basis:          the terms relied on (press grant | per-kit editorial terms | fan guidelines | unreviewed)
+# excerpt_only:   true when the terms are fan guidelines, not a press licence: short excerpts, credit on screen
+# on_screen_credit: the Reel names the publisher on screen while its footage plays
+# music_flag:     trailer music is restricted or flagged separately by this publisher: check before using the sound
+# hosts:          domain suffixes the publisher serves its pages and files from (step 1, publisher-issued file)
+# press_hosts:    domain suffixes of its public press-asset sites (step 2); confirm on first use
+# steam_names:    publisher names as Steam's store data writes them (step 3)
+#
+# A file from a host no entry claims is never taken at step 1 or 2. A Steam trailer whose publisher has no entry is
+# prepared with basis "unreviewed" and rights_review: true, so the brief sees it before any use.
+
+cdn_suffixes:          # generic CDNs: accepted at step 1 only when the page that links the file is the publisher's own
+  - akamaized.net
+  - akamaihd.net
+  - cloudfront.net
+  - azureedge.net
+  - fastly.net
+
+publishers:
+  square-enix:
+    name: Square Enix
+    basis: press grant
+    terms: Square Enix press site grant for editorial use of its press assets (trailers, screenshots, key art) in news coverage.
+    excerpt_only: false
+    on_screen_credit: true
+    music_flag: null
+    hosts: [square-enix.com, square-enix-games.com, square-enix.co.jp, jp.square-enix.com, na.square-enix.com, eu.square-enix.com]
+    press_hosts: [press.square-enix.com, press.square-enix-games.com, sqex-press.com]
+    steam_names: [Square Enix, SQUARE ENIX]
+  ubisoft:
+    name: Ubisoft
+    basis: per-kit editorial terms
+    terms: Each Ubisoft press kit states its own editorial terms; the kit's terms page is the basis for that asset.
+    excerpt_only: false
+    on_screen_credit: true
+    music_flag: Ubisoft flags trailer music separately; read the kit's music note before using the trailer sound.
+    hosts: [ubisoft.com, ubi.com, staticctf.ubisoft.com, news.ubisoft.com]
+    press_hosts: [press.ubisoft.com, ubisoftpress.com]
+    steam_names: [Ubisoft]
+  sega:
+    name: SEGA
+    basis: per-kit editorial terms
+    terms: Each SEGA press release or kit states its editorial terms; the release that links the file is the basis.
+    excerpt_only: false
+    on_screen_credit: true
+    music_flag: null
+    hosts: [sega.com, sega.co.jp, sega.jp, segaamerica.com, sega-europe.com, atlus.com, atlus.co.jp]
+    press_hosts: [press.sega.com, sega.press]
+    steam_names: [SEGA, Sega, ATLUS]
+  bandai-namco:
+    name: Bandai Namco Entertainment
+    basis: per-kit editorial terms
+    terms: Each Bandai Namco press kit states its editorial terms; the kit's terms are the basis for that asset.
+    excerpt_only: false
+    on_screen_credit: true
+    music_flag: null
+    hosts: [bandainamcoent.com, bandainamcoent.eu, bandainamcoent.co.jp, bandainamcoent.asia, bandainamco-mirai.com]
+    press_hosts: [press.bandainamcoent.eu, bandainamcopress.com]
+    steam_names: [Bandai Namco Entertainment, BANDAI NAMCO Entertainment]
+  nintendo:
+    name: Nintendo
+    basis: fan guidelines
+    terms: Nintendo's Game Content Guidelines for online video and image sharing; not a press licence. Short excerpts only, credited on screen.
+    excerpt_only: true
+    on_screen_credit: true
+    music_flag: null
+    hosts: [nintendo.com, nintendo.co.jp, nintendo.co.uk, nintendo.de, nintendo.fr, nintendo.com.au, assets.nintendo.com]
+    press_hosts: []
+    steam_names: [Nintendo]
+  epic:
+    name: Epic Games
+    basis: fan guidelines
+    terms: Epic's fan content policy; not a press licence. Short excerpts only, credited on screen.
+    excerpt_only: true
+    on_screen_credit: true
+    music_flag: null
+    hosts: [epicgames.com, fortnite.com, unrealengine.com, cdn2.unrealengine.com]
+    press_hosts: []
+    steam_names: [Epic Games, Epic Games Publishing]
+  capcom:
+    name: Capcom
+    basis: unreviewed
+    terms: Not yet reviewed; editorial use of official trailers pending a register entry.
+    excerpt_only: false
+    on_screen_credit: true
+    music_flag: Capcom flags trailer music separately; check before using the trailer sound.
+    hosts: [capcom.com, capcom.co.jp, capcom-games.com, capcomusa.com]
+    press_hosts: [press.capcom.com, capcom-europe.com]
+    steam_names: ["CAPCOM Co., Ltd.", CAPCOM, Capcom]
+  ea:
+    name: Electronic Arts
+    basis: unreviewed
+    terms: Not yet reviewed; editorial use of official trailers pending a register entry.
+    excerpt_only: false
+    on_screen_credit: true
+    music_flag: EA flags trailer music separately (licensed tracks in sports and racing trailers); check before using the sound.
+    hosts: [ea.com, media.contentapi.ea.com]
+    press_hosts: []
+    steam_names: [Electronic Arts, EA Sports, EA SPORTS]
+  sony:
+    name: Sony Interactive Entertainment
+    basis: unreviewed
+    terms: Not yet reviewed; PlayStation Blog and gmedia clips are used today for news, terms pending a register entry.
+    excerpt_only: false
+    on_screen_credit: true
+    music_flag: null
+    hosts: [playstation.com, gmedia.playstation.com, blog.playstation.com, sie.com]
+    press_hosts: []
+    steam_names: [PlayStation Publishing LLC, PlayStation PC LLC, Sony Interactive Entertainment]
+  microsoft:
+    name: Xbox (Microsoft)
+    basis: unreviewed
+    terms: Not yet reviewed; Xbox Wire press assets, terms pending a register entry.
+    excerpt_only: false
+    on_screen_credit: true
+    music_flag: null
+    hosts: [xbox.com, news.xbox.com, microsoft.com]
+    press_hosts: [news.xbox.com]
+    steam_names: [Xbox Game Studios, Microsoft Studios, Bethesda Softworks]

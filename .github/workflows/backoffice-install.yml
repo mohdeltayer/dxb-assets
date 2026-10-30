@@ -1,0 +1,109 @@
+# Install (or re-install) one back-office service on the dxb-render server, as the runner user, from main.
+# adv-20261029-server-handover, phase 1 INTAKE (Mohammad approved, 29 Oct 2026).
+#
+# Dispatch only, main only, this repository only. No secrets: the watch's token stays in /etc/dxb-watch, which
+# install.sh only checks is readable (its content is never read or printed here). Posts nothing, commits nothing,
+# uploads nothing. Runs the service's install.sh, then its test.sh, then prints the status of its user units.
+#
+# The services run from a stable clone at ~/dxb-assets (sparse: ops/backoffice, newsroom, templates), never from this
+# job's workspace, which other workflows check out over. The clone is fast-forwarded to main first; a clone with local
+# changes, on another branch or with another remote stops the job without touching it.
+#
+#   gh workflow run backoffice-install.yml --ref main -f service=watch                  # go-live of the watch
+#   gh workflow run backoffice-install.yml --ref main -f service=prepare                # install, timer OFF
+#   gh workflow run backoffice-install.yml --ref main -f service=prepare -f enable=true # after Mohammad's go
+#
+# The watch's install.sh always enables its timers (dispatching it is the go-live). prepare's timer starts only
+# with enable=true; enable=false on an installed prepare leaves its timer as it is (use install.sh --disable by
+# dispatching with service=prepare and enable=disable).
+name: backoffice-install
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      service:
+        description: 'Service to install: watch or prepare'
+        required: true
+        default: 'watch'
+      enable:
+        description: 'prepare only: true starts the timer, disable stops it, false installs with the timer untouched/off'
+        required: false
+        default: 'false'
+
+jobs:
+  install:
+    if: github.repository == 'mohdeltayer/dxb-assets' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 30
+    concurrency:
+      group: backoffice-install
+      cancel-in-progress: false
+    env:
+      SERVICE: ${{ inputs.service }}
+      ENABLE: ${{ inputs.enable }}
+      CLONE_URL: https://github.com/mohdeltayer/dxb-assets.git
+    steps:
+      - name: Inputs and user
+        run: |
+          case "$SERVICE" in watch|prepare) ;; *) echo "service must be watch or prepare"; exit 1;; esac
+          case "$ENABLE" in true|false|disable) ;; *) echo "enable must be true, false or disable"; exit 1;; esac
+          if [ "$SERVICE" = watch ] && [ "$ENABLE" != false ]; then echo "enable applies to prepare only"; exit 1; fi
+          if [ "$(id -u)" = 0 ]; then echo "refusing to run as root"; exit 1; fi
+          echo "user $(id -un), home $HOME, host $(hostname)"
+          df -h "$HOME" | tail -1
+
+      - name: Stable clone at ~/dxb-assets (fast-forward to main)
+        run: |
+          R="$HOME/dxb-assets"
+          if [ ! -d "$R/.git" ]; then
+            git clone -q --depth 1 --filter=blob:none --sparse --branch main "$CLONE_URL" "$R"
+          fi
+          [ "$(git -C "$R" remote get-url origin)" = "$CLONE_URL" ] || { echo "~/dxb-assets has another remote; not touching it"; exit 1; }
+          [ "$(git -C "$R" rev-parse --abbrev-ref HEAD)" = main ] || { echo "~/dxb-assets is not on main; not touching it"; exit 1; }
+          git -C "$R" diff --quiet && git -C "$R" diff --cached --quiet || { echo "~/dxb-assets has local changes; not touching it"; exit 1; }
+          if git -C "$R" sparse-checkout list >/dev/null 2>&1; then
+            git -C "$R" sparse-checkout add ops/backoffice newsroom templates
+          fi
+          GIT_TERMINAL_PROMPT=0 git -C "$R" pull -q --ff-only origin main
+          echo "clone at $(git -C "$R" rev-parse --short HEAD) (this run: ${GITHUB_SHA::7})"
+
+      - name: Install
+        run: |
+          R="$HOME/dxb-assets/ops/backoffice/$SERVICE"
+          if [ "$SERVICE" = watch ]; then
+            if [ -r /etc/dxb-watch/github-token ]; then echo "token file: readable by $(id -un)"; else echo "token file: missing or unreadable (the watch writes digests locally and hands nothing over)"; fi
+            "$R/install.sh"
+          else
+            case "$ENABLE" in true) "$R/install.sh" --enable;; disable) "$R/install.sh" --disable;; *) "$R/install.sh";; esac
+          fi
+
+      - name: Test
+        run: |
+          R="$HOME/dxb-assets/ops/backoffice/$SERVICE"
+          if [ "$SERVICE" = watch ]; then
+            # This job is itself a Runner.Worker, which the watch reads as a render; switch that check off for the test only.
+            WATCH_RENDER_CHECK=off WATCH_PYTHON="$HOME/backoffice/watch/venv/bin/python" "$R/test.sh"
+          else
+            PREPARE_PYTHON="$HOME/backoffice/prepare/venv/bin/python" "$R/test.sh"
+          fi
+
+      - name: Status
+        if: always()
+        run: |
+          export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+          export DBUS_SESSION_BUS_ADDRESS="${DBUS_SESSION_BUS_ADDRESS:-unix:path=$XDG_RUNTIME_DIR/bus}"
+          {
+            echo "## backoffice-install: $SERVICE"
+            echo '```'
+            systemctl --user list-timers 'dxb-*' --no-pager 2>&1 || true
+            if [ "$SERVICE" = watch ]; then
+              "$HOME/backoffice/watch/venv/bin/python" "$HOME/dxb-assets/ops/backoffice/watch/watch.py" status 2>&1 | head -40 || true
+            else
+              "$HOME/backoffice/prepare/venv/bin/python" "$HOME/dxb-assets/ops/backoffice/prepare/prepare.py" status 2>&1 | head -40 || true
+            fi
+            df -h "$HOME" /var/cache/dxb-render 2>/dev/null | tail -2
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,17 @@
+[Unit]
+Description=DXB prepared trailers: fetch and check the official trailer of new watch items
+Documentation=file://%h/dxb-assets/ops/backoffice/prepare/README.md
+
+[Service]
+Type=oneshot
+# Optional non-secret overrides (PREPARE_MIN_SCORE, PREPARE_MAX_ITEMS, PREPARE_STORE ...); the file may be absent.
+EnvironmentFile=-%h/backoffice/prepare/prepare.env
+ExecStart=%h/backoffice/prepare/venv/bin/python %h/dxb-assets/ops/backoffice/prepare/prepare.py from-watch
+# Renders always win: lowest CPU and disk priority, and the script exits (75) when a render is running at the start
+# of a tick and waits, then gives up the tick, when one starts mid-asset (render_job.py, Runner.Worker).
+Nice=10
+IOSchedulingClass=idle
+IOSchedulingPriority=7
+SuccessExitStatus=75
+TimeoutStartSec=40min
+NoNewPrivileges=yes

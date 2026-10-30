@@ -1,0 +1,14 @@
+[Unit]
+Description=DXB prepared trailers: every 10 minutes
+
+[Timer]
+# Three minutes off the watch's five-minute poll, so the two never start together. A tick still running when the
+# next is due is not started twice (oneshot unit, and prepare.py holds a lock).
+OnBootSec=5min
+OnCalendar=*:03/10
+AccuracySec=30s
+RandomizedDelaySec=20s
+Unit=dxb-prepare.service
+
+[Install]
+WantedBy=timers.target
