@@ -1,0 +1,130 @@
+{
+  "name": "circana-ps5-ps4-xbox-series-month-71",
+  "out": "cards/2026-10/circana-ps5-ps4-xbox-series-month-71-reel-v1.mp4",
+  "footage": [
+    {
+      "file": "ps5-hero.mp4",
+      "url": "https://gmedia.playstation.com/is/content/SIEPDC/global_pdc/en/hardware/ps5/channel-specific-content/pdc/2025/overview/hero/ps5-overview-evergreen-hero-desktop-video-01-en-16oct25.mp4"
+    },
+    {
+      "file": "xsx-sound.mp4",
+      "url": "https://assets.xboxservices.com/assets/05/96/0596061a-f61b-4291-a2c2-2a27a2c0fc2b.mp4?n=Xbox-Series-X_Sound_1920x1250_02.mp4"
+    }
+  ],
+  "shots": [
+    [
+      "ps5-hero.mp4",
+      0.0,
+      3.6,
+      1.0
+    ],
+    [
+      "cir-gfx-ps5.png",
+      [
+        "ps5-hero.mp4",
+        3.6
+      ],
+      3.2,
+      null
+    ],
+    [
+      "xsx-sound.mp4",
+      0.5,
+      3.8,
+      0.3
+    ],
+    [
+      "cir-gfx-xbs.png",
+      [
+        "xsx-sound.mp4",
+        5.0
+      ],
+      3.2,
+      null
+    ],
+    [
+      "xsx-sound.mp4",
+      7.0,
+      3.0,
+      0.3
+    ],
+    [
+      "ps5-hero.mp4",
+      7.0,
+      2.9,
+      1.0
+    ]
+  ],
+  "lines": [
+    [
+      2,
+      2,
+      [
+        [
+          "أما جهاز Xbox Series\nفيتأخر عن سابقه",
+          {}
+        ]
+      ]
+    ],
+    [
+      4,
+      5,
+      [
+        [
+          "حسب المحلل\nماثيو بيسكاتيلا\nمن سيركانا (Circana)",
+          {}
+        ]
+      ]
+    ]
+  ],
+  "credits": [
+    [
+      0,
+      1,
+      "المصدر: سوني (Sony)"
+    ],
+    [
+      2,
+      4,
+      "المصدر: مايكروسوفت (Microsoft)"
+    ],
+    [
+      5,
+      5,
+      "المصدر: سوني (Sony)"
+    ]
+  ],
+  "headline": "مبيعات PS5 تسبق PS4\nبفارق 1% فقط في أمريكا",
+  "label": "أرقام",
+  "source": "سيركانا (Circana)",
+  "date": "29 Oct 2026",
+  "theme": "gold",
+  "style": null,
+  "template": "numbers",
+  "skin": "house",
+  "track": null,
+  "sound": "stats",
+  "profile": null,
+  "cut": false,
+  "person": [],
+  "strip": [],
+  "pace_ok": false,
+  "ground_theme": "gold",
+  "gfx": [
+    {
+      "file": "cir-gfx-ps5.png",
+      "kind": "fact",
+      "value": "1%",
+      "label": "تفوّق PS5 على PS4",
+      "note": "في أول 71 شهرًا بأمريكا"
+    },
+    {
+      "file": "cir-gfx-xbs.png",
+      "kind": "fact",
+      "value": "28%",
+      "label": "تأخر Xbox Series عن Xbox One",
+      "note": "في أول 71 شهرًا بأمريكا"
+    }
+  ],
+  "note": "Circana via Mat Piscatella's own Bluesky post (29 Oct 2026 14:00Z, read 06:24Z): US LTD units through month 71, PS5 +40% vs PS3 and +1% vs PS4; XBS -35% vs 360 and -28% vs XBO. Footage: Sony's PS5 overview hero (playstation.com) and Microsoft's Xbox Series X sound clip (xbox.com), credited; silent product clips, so the stats bed. No minus or plus signs on screen (RTL flip)."
+}
