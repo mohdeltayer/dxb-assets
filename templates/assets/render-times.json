@@ -16585,5 +16585,38 @@
   "min_disk_free_mb": 82596,
   "setup_min": 1.0,
   "story": "warframe-tau-december"
+ },
+ {
+  "name": "steam-horror-most-played-halloween-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-30T22:32Z",
+  "stages": {
+   "checks": 4.8,
+   "montage": 43.7,
+   "text": 50.4,
+   "audio": 0.9,
+   "outro": 47.3
+  },
+  "total": 147.1,
+  "lane": "runner",
+  "queued_at": "2026-10-30T22:27:41Z",
+  "finished_at": "2026-10-30T22:32Z",
+  "render_min": 2.45,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 248,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 994,
+  "peak_mem_mb": 1984,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62541,
+  "peak_disk_mb": 65075,
+  "min_disk_free_mb": 82626,
+  "setup_min": 1.03,
+  "story": "steam-horror-most-played-halloween"
  }
 ]
