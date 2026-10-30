@@ -15093,5 +15093,54 @@
   "min_disk_free_mb": 81944,
   "setup_min": 1.1,
   "story": "resonance-of-fate-enhanced-remaster-out-now"
+ },
+ {
+  "name": "resonance-of-fate-enhanced-remaster-out-now-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-30T02:22Z",
+  "stages": {
+   "checks": 5.9,
+   "montage": 56.6,
+   "text": 43.3,
+   "audio": 0.8,
+   "outro": 36.5
+  },
+  "total": 143.2,
+  "lane": "runner",
+  "queued_at": "2026-10-30T02:17:20Z",
+  "finished_at": "2026-10-30T02:22Z",
+  "render_min": 2.39,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 16.8,
+   "audio_secs": 59.6,
+   "music_pct": 47.5,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 5
+   },
+   "effects_shots": 12,
+   "mix_secs": 4.9,
+   "secs": 22.1
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 300,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1403,
+  "peak_mem_mb": 2828,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 63017,
+  "peak_disk_mb": 65810,
+  "min_disk_free_mb": 81892,
+  "setup_min": 1.47,
+  "story": "resonance-of-fate-enhanced-remaster-out-now"
  }
 ]
