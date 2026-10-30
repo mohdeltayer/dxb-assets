@@ -1,7 +1,7 @@
 {
   "id": "2026-10-30-circana-ps5-ps4-xbox-series-month-71",
   "title": "Circana US month 71: PS5 1% ahead of PS4, Xbox Series 28% behind Xbox One",
-  "status": "rendering",
+  "status": "scheduled",
   "chip": "أرقام",
   "template": "numbers",
   "skin": "house",
@@ -82,5 +82,23 @@
   },
   "deepl_back": "06:27Z: X, caption, lines and cards read back as meant (Piscatella named Matthew by DeepL; our text says Mat)",
   "grammar": "06:28Z: one fix, «أقل من مبيعات Xbox One» (sales compared with sales); signs dropped on screen and in text",
-  "slot": "09:00Z (13:00 Dubai) on Instagram, X and Threads"
+  "slot": "09:00Z (13:00 Dubai) on Instagram, X and Threads",
+  "render": {
+    "version": "v2",
+    "file": "cards/2026-10/circana-ps5-ps4-xbox-series-month-71-reel-v2.mp4",
+    "history": "v1 named him ماثيو; v2 مات (Mat Piscatella)"
+  },
+  "director": {
+    "v2": "PASS 06:22Z: PS5 on Sony hero clip with headline (grid tile readable), card 1% on the blurred PS5 clip, Xbox green-ring clip under the bridging line, card 28%, closing source line with role over Xbox then PS5 (white text with indigo outline, readable at full size), last 2 s a picture; credits on every clip; stats bed (silent product clips, numbers Reel); no signs on screen."
+  },
+  "scheduled": {
+    "publer": "09:00Z (13:00 Dubai)",
+    "platforms": [
+      "Instagram",
+      "X",
+      "Threads"
+    ],
+    "at": "06:24Z"
+  },
+  "approved": "go: rolling queue (10:00 review, default Run as ranked); preview sent 06:25Z"
 }
