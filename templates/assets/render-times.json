@@ -16215,5 +16215,54 @@
   "min_disk_free_mb": 81390,
   "setup_min": 1.22,
   "story": "crimson-desert-charting-the-unknown-approved-saudi-arabia"
+ },
+ {
+  "name": "john-romero-shooter-new-publisher-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-30T15:38Z",
+  "stages": {
+   "checks": 6.2,
+   "montage": 71.8,
+   "text": 89.0,
+   "audio": 1.2,
+   "outro": 54.6
+  },
+  "total": 222.7,
+  "lane": "runner",
+  "queued_at": "2026-10-30T15:31:09Z",
+  "finished_at": "2026-10-30T15:38Z",
+  "render_min": 3.71,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 18.7,
+   "audio_secs": 51.9,
+   "music_pct": 92.0,
+   "leak_pct": 0.6,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 7
+   },
+   "effects_shots": 8,
+   "mix_secs": 7.2,
+   "secs": 26.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 366,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1332,
+  "peak_mem_mb": 2873,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62840,
+  "peak_disk_mb": 66066,
+  "min_disk_free_mb": 81636,
+  "setup_min": 2.27,
+  "story": "john-romero-shooter-new-publisher"
  }
 ]
