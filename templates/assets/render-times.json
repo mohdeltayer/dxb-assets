@@ -15500,5 +15500,53 @@
   "min_disk_free_mb": 81099,
   "setup_min": 1.1,
   "story": "forza-turn-10-greenawalt-retiring"
+ },
+ {
+  "name": "dark-souls-2-3-servers-down-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-30T09:18Z",
+  "stages": {
+   "checks": 4.0,
+   "montage": 53.0,
+   "text": 39.3,
+   "audio": 0.9,
+   "outro": 38.2
+  },
+  "total": 135.4,
+  "lane": "runner",
+  "queued_at": "2026-10-30T09:14:19Z",
+  "finished_at": "2026-10-30T09:18Z",
+  "render_min": 2.26,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 10.2,
+   "audio_secs": 44.1,
+   "music_pct": 16.8,
+   "leak_pct": 6.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 5
+   },
+   "reason": "music stem not clean (leftover 6.0% > 5.0%)",
+   "secs": 14.8
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 254,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1447,
+  "peak_mem_mb": 2867,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62840,
+  "peak_disk_mb": 66588,
+  "min_disk_free_mb": 81113,
+  "setup_min": 0.92,
+  "story": "dark-souls-2-3-servers-down"
  }
 ]
