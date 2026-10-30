@@ -161,6 +161,29 @@
    "evidence": "Publer scheduled 18:51Z for 2026-10-31T02:00+04:00 on Instagram, X, Threads (v3)",
    "note": "rendering; director check, then Publer moved 18:10Z to 02:00 Dubai; our bed",
    "status": "scheduled"
+  },
+  {
+   "id": "warframe-tau-december",
+   "title": "Warframe: Tau in December (رسمي, stills)",
+   "kind": "reel",
+   "slot": "2026-10-31T03:00+04:00",
+   "original_due_at": "2026-10-31T03:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/warframe-tau-december.json",
+   "card": "prod-20261030-warframe-tau",
+   "fallback": "card-only",
+   "held_by_mohammad": false,
+   "done": false,
+   "production": "qc_passed",
+   "delivery": {
+    "instagram": "submitting",
+    "x": "submitting",
+    "threads": "submitting"
+   }
   }
  ]
 }
