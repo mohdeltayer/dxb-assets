@@ -340,6 +340,7 @@ def check(job):
         reel.page_positions([[(f'l{i}', a, min(z, end))] for i, (_, a, z, _) in enumerate(lines)], page_moves(job, st))
         print(f"page motion: {len(page_moves(job, st))} moves on the cut", flush=True)
     speech_check(job, end)
+    first_frame_check(job)
     import sfxplan as SF                       # sound effects match the picture (adv-20261030-sfx-mismatch, 30 Oct 2026)
     SF.check(job, st, place(job)(st, end), profile_of(job))
     if job.get('kit') or job.get('frame'):     # what the design pass will do, or drop, on the runner
@@ -355,6 +356,29 @@ def check(job):
         print(f"design pass: moments {p['moments']}, frame {'at %.2f s for %.1f s' % (p['frame']['at'], p['frame']['secs']) if p['frame'] else 'none'}"
               + ''.join(f'; {n}' for n in p['notes']), flush=True)
     return end
+
+
+def first_frame_check(job):
+    """A footage shot that ends before its file's first video frame has no picture at all, and the montage's xfade then
+    waits for it forever (Romero v2, 30 Oct 2026: three runner runs hung 15 minutes on an Empire of Sin shot cut from
+    0.8 s for 1.6 s, the file's video starting at 2.84 s). Stop it here; a shot that starts before the first frame
+    but runs past it is printed, since it loses its opening."""
+    for i, sh in enumerate(job.get('shots') or []):
+        f, st, du = sh[0], sh[1], sh[2]
+        path = C.U + str(f)
+        if st is None or not os.path.exists(path) or os.path.splitext(f)[1].lower() in ('.jpg', '.jpeg', '.png', '.webp'):
+            continue
+        try:
+            v0 = float(subprocess.check_output(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries',
+                                                'stream=start_time', '-of', 'csv=p=0', path], text=True).strip() or 0)
+        except (subprocess.CalledProcessError, ValueError):
+            continue
+        if st + du <= v0 + 0.05:
+            raise ValueError(f'shot {i} {f} from {st} s for {du} s ends before the first video frame ({v0:.2f} s): '
+                             f'no picture, the montage would hang; start it at {v0:.2f} s or later')
+        if st < v0 - 0.05:
+            print(f'first frame: shot {i} {f} starts at {st} s, the video at {v0:.2f} s; its first '
+                  f'{v0 - st:.2f} s are lost', flush=True)
 
 
 def speech_check(job, end):
