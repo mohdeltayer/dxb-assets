@@ -96,9 +96,29 @@
    "card": "prod-20261030-romero-publisher",
    "fallback": "card-only",
    "held_by_mohammad": false,
-   "done": false,
+   "done": true,
    "evidence": "scheduled in Publer 17:54Z on all three",
-   "note": "moved 18:10Z to 23:00 Dubai (gap alarm 22:00-24:00 Dubai, no third trailer in a row)"
+   "note": "moved 18:10Z to 23:00 Dubai (gap alarm 22:00-24:00 Dubai, no third trailer in a row)",
+   "delivery": {
+    "instagram": {
+     "state": "published",
+     "at": "2026-10-30T19:03Z",
+     "url": "https://www.instagram.com/reel/DfISfEyFQoi/"
+    },
+    "x": {
+     "state": "published",
+     "at": "2026-10-30T19:03Z",
+     "url": "https://x.com/1748744375616643072/status/2116244522912919688"
+    },
+    "threads": {
+     "state": "published",
+     "at": "2026-10-30T19:03Z",
+     "url": "https://www.threads.com/@the_digilounge/post/DfIScZIiLb8"
+    }
+   },
+   "logged": true,
+   "commitment": "fulfilled_on_time",
+   "status": "published"
   },
   {
    "id": "ea-closed-bioware-battlefront-3",
