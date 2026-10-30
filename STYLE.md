@@ -563,6 +563,11 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - Never re-run a failed publish.
   - Check PUBLISHED after the slot, then strip posted media.
 
+## Promises (adv-20261030-promise-keeper, 30 Oct 2026)
+- Every scheduling action writes its row in newsroom/commitments.json (slot, platforms, job or card, fallback, held_by_mohammad).
+- A build dependency never cancels a slot: unreleased fix at slot time means the current template, unless held_by_mohammad.
+- Scheduled sessions start with 'overdue commitments: N, at risk: M' (newsroom/keeper-status.json); keeper alarms first.
+
 ## YouTube lane (trial from 17 Oct 2026)
 
 - Original material only: Famitsu weekly, numbers, list, Gulf prices, retro,

@@ -424,6 +424,15 @@ captured as they land and checked against the official page before
 posting), and a wrap-up slot after it; set one-off triggers only after he
 agrees each one.
 
+## Promises first (adv-20261030-promise-keeper, Mohammad 30 Oct 2026)
+Every scheduled session (hourly watch, review slots, morning digest, build desk) prints first
+'overdue commitments: N, at risk: M' from newsroom/keeper-status.json (until the keeper exists: count the open rows of
+newsroom/commitments.json whose slot has passed or falls within 60 minutes without a Publer post) and acts on keeper
+alarms before anything else. Every scheduling action writes its row in newsroom/commitments.json. A dependency on
+build work never cancels a slot: if the fix is not released by the slot, the post goes out on the current template
+unless held_by_mohammad is true. The dispatcher's evidence step is binding for ops cards: no card is closed as done
+without evidence.
+
 ## Hourly watch and the breaking lane (Mohammad, 11 Oct 2026)
 
 He wants Digital Lounge on top of the latest news even when he is away.

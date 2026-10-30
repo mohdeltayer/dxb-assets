@@ -26,7 +26,11 @@ Principle (part E): Claude judges and writes; scripts, the server and outside sc
 5. The server's state: no render running on dxb-render-1 (renders always come first), free disk at
    least 40 GB, the last runs of render.yml, render-live.yml and render-breaking.yml.
 
-Head of the queue (Mohammad, 30 Oct 2026): adv-20261030-download-automation-and-credits Part A (yt-dlp
+Head of the queue, ahead of everything (Mohammad, 30 Oct 2026, 21:31 Dubai): adv-20261030-promise-keeper,
+ops/build/backlog.md B16: the commitments file, the keeper timer every 5 minutes on dxb-render-1 (runner user, no
+Claude), the keeper line at the start of every scheduled session; alarm-only for 31 Oct, fallback publishing from
+the 1 Nov 04:00 release if the alarms were right. Nothing else enters the queue until it is released.
+Then (Mohammad, 30 Oct 2026): adv-20261030-download-automation-and-credits Part A (yt-dlp
 with the JS runtime, one fetch script on the acquisition order, X posts as a source) comes before
 everything else, then its Part B build items (credit from frame 0, the coverage stop in render_job check).
 Next after it (Mohammad, 30 Oct 2026, 19:13 Dubai): adv-20261030-audience-loop, ops/build/backlog.md B15. Part A

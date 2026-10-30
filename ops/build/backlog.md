@@ -217,3 +217,30 @@ never in the repo, a log or a card. Nothing posts, replies, hides or deletes. Co
   file carries `platform` and `beat` from 30 Oct 19:30 Dubai. The table is for learning what converts, never for
   dropping coverage.
 - State: Part A READY once the key exists; Part B WAITS for the Meta and Threads tokens (Mohammad).
+
+## B16. Promise keeper (adv-20261030-promise-keeper, approved 30 Oct 21:31 Dubai; FIRST, ahead of every other item)
+- Why: the system tracks work, not promises. A scheduled post blocked on a template fix, a missing repo or compacted
+  context slipped silently (Ocarina episode 6, Switch 2 Lite, the server watch, the published log).
+- `newsroom/commitments.json` (written by ops on every scheduling action; Ocarina 6 to 8 written by hand 30 Oct): one
+  row per promise: id, title, kind (reel, series episode, link post, live-thread recap, review card, digest card), slot
+  (ISO, Dubai), platforms, job or card id, fallback (publish-last-passed, bank-piece, shift-series-one-day, card-only),
+  held_by_mohammad, done, evidence.
+- The keeper (`ops/backoffice/keeper/`, systemd timer every 5 minutes, runner user, no Claude): per open row, evidence
+  = a Publer post scheduled or published for that slot and platforms, plus a passed director record in the repo.
+  a. 60 minutes before the slot with no evidence: one alarm card (lane news, 'At risk: <title> <slot>'), one ntfy push,
+     a line in `newsroom/keeper.log`.
+  b. At the slot, no evidence, not held: apply the row's fallback and record it on the alarm card (publish-last-passed:
+     the last director-passed render at the next free slot the spacing allows; bank-piece: a piece from
+     newsroom/evergreen.md; shift-series-one-day: move the series' remaining rows one day and say so on the series card;
+     card-only: card and push).
+  c. Done only with evidence: the Publer post id and the Inbox published entry (written by the keeper if missing).
+  Writes `newsroom/keeper-status.json` ({overdue, at_risk, rows}) every pass.
+- Every scheduled session (hourly watch, four reviews, morning digest, build desk) prints first:
+  'overdue commitments: N, at risk: M' from keeper-status.json.
+- Publer read: the server's media-only key cannot read posts. Publer has no read-only posts scope: 'posts' manages
+  posts (create, delete). Options for Mohammad on the card: (1) a key with posts + workspaces + accounts, stored
+  root-owned, used read-only by the keeper; or (2) evidence from our own side only (the scheduling receipt ops writes
+  into the commitments row at submit, then the platform's public post URL once published).
+- Shadow: alarm-only on 31 Oct; fallback publishing on at the 1 Nov 04:00 release if the alarms were right; first
+  day's alarms reported on the card.
+- State: QUEUED FIRST for the 31 Oct build night (01:00 Dubai).

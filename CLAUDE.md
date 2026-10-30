@@ -2686,6 +2686,23 @@ and news.xbox.com refuse automated requests at their end; use a press
 article that carries the same image. Say plainly when something is
 corroborated by search rather than read from the primary.
 
+## Promises, not just work (advisor card adv-20261030-promise-keeper, Mohammad 30 Oct 2026, 21:31 Dubai)
+
+Ocarina episode 6, the Switch 2 Lite post, the server watch and the published log slipped because the system
+tracked work, not promises: a scheduled post blocked on a template fix, a missing repo or compacted context
+stopped being anyone's.
+1. Every scheduling action (a Publer submit, a series plan, a review slot) writes its row in
+   `newsroom/commitments.json`: id, title, kind, slot (Dubai), platforms, job or card id, fallback
+   (publish-last-passed, bank-piece, shift-series-one-day, card-only), held_by_mohammad.
+2. A dependency on build work never cancels a slot. If the fix is not released by the slot, the post goes out on
+   the current template unless held_by_mohammad is true. Blocked is not a terminal state for a scheduled post.
+3. The keeper on dxb-render-1 (build item B16, first in the 31 Oct build night) checks every open row every 5
+   minutes: an alarm card and a push 60 minutes before a slot with no evidence; the row's fallback at the slot; done
+   only with evidence (the Publer post and the Inbox published entry). Alarm-only on 31 Oct; fallback publishing
+   from the 1 Nov 04:00 release if the alarms were right.
+4. Every scheduled session (hourly watch, the four reviews, the morning digest, the build desk) starts by printing
+   'overdue commitments: N, at risk: M' from `newsroom/keeper-status.json`, and acts on keeper alarms first.
+
 ## Verification without delay (advisor, 18 Oct 2026, agreed with Mohammad)
 
 Avoid corrections by verifying harder, never by waiting: news is never held
