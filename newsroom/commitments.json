@@ -242,14 +242,14 @@
    "fallback": "bank-piece",
    "held_by_mohammad": false,
    "done": false,
-   "production": "rendering",
+   "production": "qc_passed",
    "delivery": {
-    "instagram": "pending",
-    "x": "pending",
-    "threads": "pending"
+    "instagram": "scheduled",
+    "x": "scheduled",
+    "threads": "scheduled"
    },
-   "status": "building",
-   "evidence": "runner render started 22:27Z"
+   "status": "scheduled",
+   "evidence": "Publer scheduled 22:38Z for 2026-10-31T05:00+04:00 on Instagram, X, Threads (v1)"
   }
  ]
 }
