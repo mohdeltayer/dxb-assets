@@ -301,7 +301,11 @@ failure is rescheduled once, then reported with Publer's reason. Once all
 three read Published, write the slot to dxb-queue `ops/heartbeat.json`
 (`last_published` UTC, `story`, `checked_at`) and push it: the stall alarm
 (dxb-queue `stall-alarm.yml`, 25 Oct 2026) pages Mohammad when it is over
-3 hours old between 08:00 and 02:00 Dubai. Story file:
+3 hours old between 08:00 and 02:00 Dubai. In the same step (adv-20261030-close-published-cards,
+Mohammad 30 Oct 2026): write the Inbox `published` entry (doc id = story id; title, chip,
+template, sound, platforms, links, published_at UTC, route) and close the story's preview card
+(status done, outcome with the Dubai time, the platforms and the Instagram link); a card whose
+deadline passed with the default applied closes the same way. Story file:
 "scheduled in Publer HH:MMZ" with the platforms; ledger slot. No IDs or tokens
 in public files.
 Then `python3 newsroom/ledger.py genres 7` for the audit's one line, stories
