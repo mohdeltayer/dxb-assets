@@ -177,10 +177,29 @@
    "card": null,
    "fallback": "bank-piece",
    "held_by_mohammad": false,
-   "done": false,
+   "done": true,
    "evidence": "Publer scheduled 18:51Z for 2026-10-31T02:00+04:00 on Instagram, X, Threads (v3)",
    "note": "rendering; director check, then Publer moved 18:10Z to 02:00 Dubai; our bed",
-   "status": "scheduled"
+   "status": "published",
+   "delivery": {
+    "instagram": {
+     "state": "published",
+     "at": "2026-10-30T22:03Z",
+     "url": "https://www.instagram.com/reel/DfIm73lAk0I/"
+    },
+    "x": {
+     "state": "published",
+     "at": "2026-10-30T22:02Z",
+     "url": "https://x.com/1748744375616643072/status/2116289563563896934"
+    },
+    "threads": {
+     "state": "published",
+     "at": "2026-10-30T22:02Z",
+     "url": "https://www.threads.com/@the_digilounge/post/DfIm7K9lIt9"
+    }
+   },
+   "logged": true,
+   "commitment": "fulfilled_on_time"
   },
   {
    "id": "warframe-tau-december",
