@@ -15824,5 +15824,53 @@
   "min_disk_free_mb": 82205,
   "setup_min": 0.93,
   "story": "dune-awakening-blood-and-ice-free-expansion"
+ },
+ {
+  "name": "slay-the-spire-2-next-beta-patch-november-12-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-30T12:25Z",
+  "stages": {
+   "checks": 7.9,
+   "montage": 48.7,
+   "text": 42.7,
+   "audio": 0.8,
+   "outro": 33.3
+  },
+  "total": 133.4,
+  "lane": "runner",
+  "queued_at": "2026-10-30T12:20:53Z",
+  "finished_at": "2026-10-30T12:25Z",
+  "render_min": 2.22,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 13.2,
+   "audio_secs": 57.5,
+   "music_pct": 28.9,
+   "leak_pct": 1.7,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 6
+   },
+   "reason": "music only 28.9% of the track (< 40.0%)",
+   "secs": 18.0
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 245,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1350,
+  "peak_mem_mb": 2981,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62840,
+  "peak_disk_mb": 66193,
+  "min_disk_free_mb": 81509,
+  "setup_min": 0.92,
+  "story": "slay-the-spire-2-next-beta-patch-november-12"
  }
 ]
