@@ -20,6 +20,10 @@ allows. Nothing is queued without his "go".
   topic, one card per topic, updated in place; no progress messages to the advisor. A watch or check that finds
   nothing new ends its turn with no helper, no card and no message.
 
+Job and story files carry `platform` (PC, PlayStation, Nintendo, Xbox, mobile, multi) and `beat` (free, out now,
+new addition or update, trailer or first look, delay, servers or outage, people, sales or numbers, event, Arabic
+support, other) from 30 Oct 2026 (adv-20261030-audience-loop addendum), so the weekly table can group by them.
+
 ## Task cards
 
 **Digest digest (sonnet).** Read every digest in

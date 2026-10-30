@@ -208,4 +208,12 @@ never in the repo, a log or a card. Nothing posts, replies, hides or deletes. Co
   X replies only with a paid X API tier (the free tier cannot read replies), otherwise X is counted from Publer only.
   Writes `analytics/comments/YYYY-MM-DD.json` (text, platform, post, time; no handles kept beyond the day). Claude
   reads it once: corrections, questions, requests; the rest a count.
+- Addendum (Mohammad, 19:25 Dubai): per Reel also follows gained and completion rate where the platform gives them
+  (Instagram only, through the Meta token: Meta's per-Reel watch-time metrics give completion as average watch time
+  over length; follows per post where Meta reports it; X and Threads give neither per post, so n/a), a `platform`
+  field (PC, PlayStation, Nintendo, Xbox, mobile, multi) and a `beat` field (free, out now, new addition or update,
+  trailer or first look, delay, servers or outage, people, sales or numbers, event, Arabic support, other), and the
+  minutes from the publisher's own post to ours (story file primary time to published_at). Every job file and story
+  file carries `platform` and `beat` from 30 Oct 19:30 Dubai. The table is for learning what converts, never for
+  dropping coverage.
 - State: Part A READY once the key exists; Part B WAITS for the Meta and Threads tokens (Mohammad).
