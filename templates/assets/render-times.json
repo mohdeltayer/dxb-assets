@@ -15190,5 +15190,54 @@
   "min_disk_free_mb": 82436,
   "setup_min": 1.02,
   "story": "death-stranding-isolations-teaser-t0"
+ },
+ {
+  "name": "elder-scrolls-vi-sentinel-report-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-30T04:21Z",
+  "stages": {
+   "checks": 6.0,
+   "montage": 62.8,
+   "text": 45.5,
+   "audio": 1.1,
+   "outro": 48.7
+  },
+  "total": 164.0,
+  "lane": "runner",
+  "queued_at": "2026-10-30T04:15:44Z",
+  "finished_at": "2026-10-30T04:21Z",
+  "render_min": 2.73,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 10.1,
+   "audio_secs": 23.9,
+   "music_pct": 61.9,
+   "leak_pct": 0.7,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 8,
+   "mix_secs": 6.1,
+   "secs": 16.8
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 302,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1330,
+  "peak_mem_mb": 2860,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62840,
+  "peak_disk_mb": 65600,
+  "min_disk_free_mb": 82101,
+  "setup_min": 1.25,
+  "story": "elder-scrolls-vi-sentinel-report"
  }
 ]
