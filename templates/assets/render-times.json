@@ -15321,5 +15321,38 @@
   "min_disk_free_mb": 83920,
   "setup_min": 0.98,
   "story": "circana-ps5-ps4-xbox-series-month-71"
+ },
+ {
+  "name": "circana-ps5-ps4-xbox-series-month-71-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-30T06:17Z",
+  "stages": {
+   "checks": 1.9,
+   "montage": 24.4,
+   "text": 37.6,
+   "audio": 0.0,
+   "outro": 32.1
+  },
+  "total": 95.9,
+  "lane": "runner",
+  "queued_at": "2026-10-30T06:10:56Z",
+  "finished_at": "2026-10-30T06:17Z",
+  "render_min": 1.6,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 133,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1059,
+  "peak_mem_mb": 2031,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62541,
+  "peak_disk_mb": 63782,
+  "min_disk_free_mb": 83919,
+  "setup_min": 0.88,
+  "story": "circana-ps5-ps4-xbox-series-month-71"
  }
 ]
