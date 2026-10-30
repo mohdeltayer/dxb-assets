@@ -216,15 +216,21 @@
    "card": "prod-20261030-warframe-tau",
    "fallback": "card-only",
    "held_by_mohammad": false,
-   "done": false,
+   "done": true,
    "production": "qc_passed",
    "delivery": {
-    "instagram": "scheduled",
-    "x": "scheduled",
-    "threads": "scheduled"
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
    },
-   "status": "scheduled",
-   "evidence": "Publer scheduled 20:53Z for 2026-10-31T03:00+04:00 on Instagram, X, Threads (v2)"
+   "status": "published",
+   "evidence": "Published 23:02-23:03Z on Instagram, X, Threads (Publer); Inbox published entry written 23:06Z; card closed (default Approve)",
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DfIt0M0FXwm/",
+    "x": "https://x.com/1748744375616643072/status/2116304697061458018",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfIt0KAgazy"
+   },
+   "logged": true
   },
   {
    "id": "steam-horror-most-played-halloween",
