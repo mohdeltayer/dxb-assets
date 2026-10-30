@@ -15142,5 +15142,53 @@
   "min_disk_free_mb": 81892,
   "setup_min": 1.47,
   "story": "resonance-of-fate-enhanced-remaster-out-now"
+ },
+ {
+  "name": "death-stranding-isolations-teaser-t0-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-30T03:11Z",
+  "stages": {
+   "checks": 1.0,
+   "montage": 25.5,
+   "text": 44.2,
+   "audio": 0.7,
+   "outro": 23.8
+  },
+  "total": 95.1,
+  "lane": "runner",
+  "queued_at": "2026-10-30T03:08:23Z",
+  "finished_at": "2026-10-30T03:11Z",
+  "render_min": 1.59,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 7.0,
+   "audio_secs": 27.1,
+   "music_pct": 12.1,
+   "leak_pct": 71.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "reason": "music stem not clean (leftover 71.2% > 5.0%)",
+   "secs": 11.9
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 135,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1358,
+  "peak_mem_mb": 3030,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62840,
+  "peak_disk_mb": 65266,
+  "min_disk_free_mb": 82436,
+  "setup_min": 1.02,
+  "story": "death-stranding-isolations-teaser-t0"
  }
 ]
