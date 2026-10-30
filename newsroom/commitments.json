@@ -180,10 +180,12 @@
    "done": false,
    "production": "qc_passed",
    "delivery": {
-    "instagram": "submitting",
-    "x": "submitting",
-    "threads": "submitting"
-   }
+    "instagram": "scheduled",
+    "x": "scheduled",
+    "threads": "scheduled"
+   },
+   "status": "scheduled",
+   "evidence": "Publer scheduled 20:53Z for 2026-10-31T03:00+04:00 on Instagram, X, Threads (v2)"
   }
  ]
 }
