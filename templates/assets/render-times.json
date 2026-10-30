@@ -15644,5 +15644,54 @@
   "min_disk_free_mb": 81038,
   "setup_min": 1.43,
   "story": "forza-turn-10-greenawalt-retiring"
+ },
+ {
+  "name": "kirby-air-riders-halloween-event-cancelled-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-30T10:02Z",
+  "stages": {
+   "checks": 6.2,
+   "montage": 58.3,
+   "text": 35.7,
+   "audio": 0.8,
+   "outro": 39.4
+  },
+  "total": 140.4,
+  "lane": "runner",
+  "queued_at": "2026-10-30T09:54:49Z",
+  "finished_at": "2026-10-30T10:02Z",
+  "render_min": 2.34,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.0,
+   "audio_secs": 28.6,
+   "music_pct": 79.5,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 0
+   },
+   "effects_shots": 15,
+   "mix_secs": 0.7,
+   "secs": 3.3
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 358,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1312,
+  "peak_mem_mb": 3113,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62884,
+  "peak_disk_mb": 66289,
+  "min_disk_free_mb": 81413,
+  "setup_min": 2.03,
+  "story": "kirby-air-riders-halloween-event-cancelled"
  }
 ]
