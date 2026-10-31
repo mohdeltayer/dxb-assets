@@ -16772,5 +16772,60 @@
   "min_disk_free_mb": 79826,
   "setup_min": 1.07,
   "story": "altman-dram-gamers-react"
+ },
+ {
+  "name": "altman-dram-gamers-react-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-31T04:20Z",
+  "stages": {
+   "checks": 6.6,
+   "montage": 77.4,
+   "text": 78.2,
+   "audio": 1.1,
+   "outro": 43.3
+  },
+  "total": 206.7,
+  "lane": "runner",
+  "queued_at": "2026-10-31T04:15:56Z",
+  "finished_at": "2026-10-31T04:20Z",
+  "render_min": 3.44,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "design_pass": {
+   "hf": "0.8.143",
+   "notes": [],
+   "pieces": [
+    {
+     "piece": "cover",
+     "moments": [
+      "photobox"
+     ],
+     "ok": true,
+     "at": 0.0,
+     "secs": 3.7,
+     "render_secs": 15.6
+    }
+   ],
+   "blips": [
+    3.34
+   ],
+   "laid_back": [],
+   "secs": 43.9,
+   "blips_dropped_for_speech": []
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 330,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1230,
+  "peak_mem_mb": 3164,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 63016,
+  "peak_disk_mb": 67861,
+  "min_disk_free_mb": 79841,
+  "setup_min": 0.9,
+  "story": "altman-dram-gamers-react"
  }
 ]
