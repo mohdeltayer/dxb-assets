@@ -17279,5 +17279,54 @@
   "min_disk_free_mb": 81030,
   "setup_min": 0.93,
   "story": "queens-domain-out-now"
+ },
+ {
+  "name": "chronicles-medieval-studio-funding-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-31T09:59Z",
+  "stages": {
+   "checks": 4.7,
+   "montage": 66.2,
+   "text": 55.4,
+   "audio": 1.2,
+   "outro": 60.9
+  },
+  "total": 188.5,
+  "lane": "runner",
+  "queued_at": "2026-10-31T09:53:57Z",
+  "finished_at": "2026-10-31T09:59Z",
+  "render_min": 3.14,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 12.6,
+   "audio_secs": 57.2,
+   "music_pct": 85.7,
+   "leak_pct": 0.9,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "effects_shots": 6,
+   "mix_secs": 5.2,
+   "secs": 18.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 279,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1506,
+  "peak_mem_mb": 3279,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62840,
+  "peak_disk_mb": 66612,
+  "min_disk_free_mb": 81089,
+  "setup_min": 1.27,
+  "story": "chronicles-medieval-studio-funding"
  }
 ]
