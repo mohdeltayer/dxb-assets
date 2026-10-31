@@ -17193,5 +17193,42 @@
   "min_disk_free_mb": 4287,
   "setup_min": 1.18,
   "story": "oot-road-ep7-princess-and-the-desert-man"
+ },
+ {
+  "name": "oot-road-ep7-princess-and-the-desert-man-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-31T09:15Z",
+  "stages": {
+   "checks": 3.3,
+   "montage": 57.5,
+   "text": 154.6,
+   "audio": 3.6,
+   "outro": 62.0
+  },
+  "total": 281.0,
+  "lane": "runner",
+  "queued_at": "2026-10-31T09:08:50Z",
+  "finished_at": "2026-10-31T09:15Z",
+  "render_min": 4.68,
+  "audio_split": {
+   "applied": false,
+   "reason": "job sets audio_split false"
+  },
+  "intro": {
+   "days": 5,
+   "secs": 6.3
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 432,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1050,
+  "peak_mem_mb": 2699,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62541,
+  "peak_disk_mb": 69314,
+  "min_disk_free_mb": 78388,
+  "setup_min": 0.82,
+  "story": "oot-road-ep7-princess-and-the-desert-man"
  }
 ]
