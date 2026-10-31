@@ -17156,5 +17156,42 @@
   "min_disk_free_mb": 81903,
   "setup_min": 0.9,
   "story": "cheating-bans-ai-explainer"
+ },
+ {
+  "name": "oot-road-ep7-princess-and-the-desert-man-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-31T08:57Z",
+  "stages": {
+   "checks": 3.9,
+   "montage": 68.3,
+   "text": 156.2,
+   "audio": 2.2,
+   "outro": 71.8
+  },
+  "total": 302.4,
+  "lane": "runner",
+  "queued_at": "2026-10-31T08:50:44Z",
+  "finished_at": "2026-10-31T08:57Z",
+  "render_min": 5.04,
+  "audio_split": {
+   "applied": false,
+   "reason": "job sets audio_split false"
+  },
+  "intro": {
+   "days": 5,
+   "secs": 6.3
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 457,
+  "mem_total_mb": 15701,
+  "mem_start_mb": 1015,
+  "peak_mem_mb": 2702,
+  "disk_total_mb": 73325,
+  "disk_start_mb": 62222,
+  "peak_disk_mb": 69021,
+  "min_disk_free_mb": 4287,
+  "setup_min": 1.18,
+  "story": "oot-road-ep7-princess-and-the-desert-man"
  }
 ]
