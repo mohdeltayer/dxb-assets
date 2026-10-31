@@ -2,7 +2,7 @@
  "id": "chronicles-medieval-studio-funding",
  "title": "Chronicles: Medieval studio at risk of closing after losing its funding",
  "game": "Chronicles: Medieval",
- "status": "building: runner render pushed 09:53Z; slot 11:30Z (15:30 Dubai)",
+ "status": "scheduled",
  "chip": "رسمي",
  "template": "split",
  "skin": "house",
@@ -74,8 +74,54 @@
   "threads": "استوديو رو باور جيمز (Raw Power Games)، مطوّر Chronicles: Medieval، مهدد بالإغلاق بعد توقف تمويله قبيل الوصول المبكر، حسب بيان الاستوديو نفسه.\n\nالمصدر: بيان رو باور جيمز على Steam وX، 30 أكتوبر 2026",
   "instagram": "استوديو Chronicles: Medieval مهدد بالإغلاق بعد توقف تمويله، قبل أن تصل اللعبة إلى الوصول المبكر.\n\nقال استوديو رو باور جيمز (Raw Power Games) إن التمويل اللازم لعمله لم يعد متوفرًا لأسباب خارجة عن إرادته، وإنه لا يستطيع مواصلة تطوير Chronicles: Medieval من دونه. وأضاف أن الوصول المبكر أصبح قريبًا، وأنه يجري محادثات جادة مع كل من قد يساعده على إيجاد مخرج، دون أن يعد بنهاية سعيدة.\n\nولم يذكر الاستوديو اسم الجهة الممولة ولا سبب توقف التمويل. واللعبة من نوع الأكشن والاستراتيجية وتدور في أوروبا خلال حرب المئة عام، وموعدها المعلن على Steam هو 2027.\n\n#ألعاب #أخبار_الألعاب #ChroniclesMedieval #Steam",
   "ig_first_comment": "المصدر: بيان رو باور جيمز (Raw Power Games) على Steam وX، 30 أكتوبر 2026",
-  "x_reply": "https://store.steampowered.com/news/app/2231020"
+  "x_reply": "https://store.steampowered.com/news/app/2231020",
+  "note_v2": "v2 shots: 38.6, 64.0, 33.6, 76.0, 69.0, 82.3"
  },
  "notes": "Age: Steam statement 30 Oct 13:26Z, 22 h at the 11:30Z slot (under 24 h). DeepL back-check 09:55Z: meaning holds (EN back: 'facing closure after its funding dried up just before the early access launch, according to a statement from the studio itself'; 'serious talks with anyone who might help it find a way forward, though it makes no promises of a happy ending'; 'did not name the funder'). Name on screen: the credit carries رو باور جيمز (Raw Power Games) from frame 0, so the lines use الاستوديو. Grammar pass: حرب المئة عام; أصبح قريبًا accusative; no line opens on و; Western digits; no em dash.",
- "approved": ""
+ "approved": "go: rolling queue; preview sent 10:14Z; gate 10:12Z (Raw Power Games statement still the latest Steam post, no update or closure notice); scheduled in Publer 10:12Z for 11:30Z on Instagram, X, Threads",
+ "director": {
+  "verdict": "PASS (round 2)",
+  "round1": "v1 failed: a bloodied close-up at 0.5 to 1.0 s (source 52.5 to 53.2) and a sunset silhouette striking a fallen soldier near the end (source 90 to 92.6); shots replaced in v2",
+  "shots": [
+   [
+    "0 lancers charge (cover)",
+    "0-3.6",
+    "PASS",
+    ""
+   ],
+   [
+    "1 cavalry and army",
+    "3.6-8.3",
+    "PASS",
+    "game-name line"
+   ],
+   [
+    "2 field and archers",
+    "8.3-12.9",
+    "PASS",
+    "funding line"
+   ],
+   [
+    "3 sunset field and knights",
+    "12.9-16.9",
+    "PASS",
+    "early access line"
+   ],
+   [
+    "4 march and dusk army",
+    "16.9-21.5",
+    "PASS",
+    "talks line"
+   ],
+   [
+    "5 army on the hill",
+    "21.5-23.9",
+    "PASS",
+    "closing picture"
+   ]
+  ],
+  "sound": "gameplay trailer music from 26 s (narration at 3 to 18 s not used); audio split applied, music 82%",
+  "speech": "none",
+  "length": "21.9 s plus end card"
+ }
 }
