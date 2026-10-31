@@ -17525,5 +17525,54 @@
   "min_disk_free_mb": 82046,
   "setup_min": 1.02,
   "story": "bioware-closed-for-battlefront-3-report"
+ },
+ {
+  "name": "probably-stolen-500k-sold-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-31T11:48Z",
+  "stages": {
+   "checks": 3.8,
+   "montage": 55.2,
+   "text": 53.0,
+   "audio": 1.0,
+   "outro": 41.5
+  },
+  "total": 154.6,
+  "lane": "runner",
+  "queued_at": "2026-10-31T11:43:48Z",
+  "finished_at": "2026-10-31T11:48Z",
+  "render_min": 2.58,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.7,
+   "audio_secs": 36.6,
+   "music_pct": 82.2,
+   "leak_pct": 3.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 0
+   },
+   "effects_shots": 5,
+   "mix_secs": 0.9,
+   "secs": 4.1
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 226,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1348,
+  "peak_mem_mb": 2070,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62897,
+  "peak_disk_mb": 65412,
+  "min_disk_free_mb": 82290,
+  "setup_min": 1.08,
+  "story": "probably-stolen-500k-sold"
  }
 ]
