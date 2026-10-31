@@ -302,14 +302,14 @@
    "card": "prod-20261031-xbox-game-pass",
    "fallback": "publish-last-passed",
    "held_by_mohammad": false,
-   "production": "rendering",
+   "production": "qc_passed",
    "delivery": {
-    "instagram": "pending",
-    "x": "pending",
-    "threads": "pending"
+    "instagram": "scheduled",
+    "x": "scheduled",
+    "threads": "scheduled"
    },
-   "status": "open",
-   "evidence": "job pushed 03:24Z (a3c659d7); v2 headline fix after v1 lands"
+   "status": "scheduled",
+   "evidence": "job pushed 03:24Z (a3c659d7); v2 headline fix after v1 lands; v3 runner 326 s (86135ace); director PASS 03:41Z; submitting for 04:30Z; scheduled in Publer 03:42Z on all three"
   }
  ]
 }
