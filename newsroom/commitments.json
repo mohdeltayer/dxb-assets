@@ -262,6 +262,31 @@
     "threads": "https://www.threads.com/@the_digilounge/post/DfI7jI_CXuC"
    },
    "logged": true
+  },
+  {
+   "id": "ffxiv-evercold-february-23-2027",
+   "title": "FFXIV Evercold dates (تقرير, trailer)",
+   "kind": "reel",
+   "slot": "2026-10-31T07:00+04:00",
+   "original_due_at": "2026-10-31T07:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/ffxiv-evercold-february-23-2027.json",
+   "card": "prod-20261031-ffxiv-evercold",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": false,
+   "production": "rendering",
+   "delivery": {
+    "instagram": "pending",
+    "x": "pending",
+    "threads": "pending"
+   },
+   "status": "building",
+   "evidence": "runner render v2 queued 02:35Z"
   }
  ]
 }
