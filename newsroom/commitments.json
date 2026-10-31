@@ -333,6 +333,29 @@
    },
    "status": "scheduled",
    "evidence": "job pushed 03:49Z (a0860928); v1 runner failed pace check; v1 render had block damage on grille (runner download); v2 41535600 clean, director PASS 04:25Z; submitting for 05:30Z; scheduled in Publer 04:27Z on all three"
+  },
+  {
+   "id": "silver-palace-december-14",
+   "title": "Silver Palace launches 14 Dec",
+   "kind": "post",
+   "slot": "2026-10-31T10:30+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/silver-palace-december-14.json",
+   "card": "prod-20261031-silver-palace",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "production": "rendering",
+   "delivery": {
+    "instagram": "pending",
+    "x": "pending",
+    "threads": "pending"
+   },
+   "status": "open",
+   "evidence": "job pushed 05:18Z (6651f6a7)"
   }
  ]
 }
