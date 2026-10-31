@@ -16717,5 +16717,60 @@
   "min_disk_free_mb": 82153,
   "setup_min": 0.93,
   "story": "xbox-game-pass-next-week-nov-2"
+ },
+ {
+  "name": "altman-dram-gamers-react-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-31T04:10Z",
+  "stages": {
+   "checks": 8.5,
+   "montage": 104.9,
+   "text": 89.8,
+   "audio": 1.5,
+   "outro": 64.4
+  },
+  "total": 269.1,
+  "lane": "runner",
+  "queued_at": "2026-10-31T04:03:54Z",
+  "finished_at": "2026-10-31T04:10Z",
+  "render_min": 4.49,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "design_pass": {
+   "hf": "0.8.143",
+   "notes": [],
+   "pieces": [
+    {
+     "piece": "cover",
+     "moments": [
+      "photobox"
+     ],
+     "ok": true,
+     "at": 0.0,
+     "secs": 3.7,
+     "render_secs": 19.9
+    }
+   ],
+   "blips": [
+    3.34
+   ],
+   "laid_back": [],
+   "secs": 62.8,
+   "blips_dropped_for_speech": []
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 467,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1258,
+  "peak_mem_mb": 3141,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 63016,
+  "peak_disk_mb": 67875,
+  "min_disk_free_mb": 79826,
+  "setup_min": 1.07,
+  "story": "altman-dram-gamers-react"
  }
 ]
