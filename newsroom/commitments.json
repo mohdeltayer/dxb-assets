@@ -435,6 +435,24 @@
    "delivery": "published",
    "evidence": "Publer Published 09:31-09:32Z on Instagram, X, Threads; Inbox published entry cheating-bans-ai-explainer",
    "logged": true
+  },
+  {
+   "id": "queens-domain-out-now",
+   "title": "Queen's Domain out now on four platforms",
+   "kind": "news",
+   "slot": "2026-10-31T14:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/queens-domain-out-now.json",
+   "card": "prod-20261031-queens-domain",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": false,
+   "delivery": "scheduled",
+   "evidence": null
   }
  ]
 }

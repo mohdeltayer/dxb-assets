@@ -2,7 +2,7 @@
  "id": "queens-domain-out-now",
  "title": "Queen's Domain out now on four platforms",
  "game": "Queen's Domain",
- "status": "building: runner render pushed 09:37Z; slot 10:30Z (14:30 Dubai)",
+ "status": "scheduled",
  "chip": "متوفر الآن",
  "template": "split",
  "skin": "house",
@@ -82,5 +82,49 @@
   "x_reply": "https://store.steampowered.com/app/1799840/"
  },
  "notes": "Age: released 30 Oct ~17:00Z (Steam news 16:57Z), under 24 h at shortlisting 09:30Z. DeepL back-check 09:45Z: meaning holds (EN back: 'more than 300,000 players added the game to their wishlists', prices and dates as written). Forward pass: DeepL writes قوائم رغباتهم; kept قوائم الأمنيات (Steam's Arabic store term). Grammar pass: صدرت (release verb, out), أضافها 300 ألف لاعب (verb before subject, singular), درهمًا/ريالًا tamyiz accusative; Western digits; no em dash; every paragraph opens on an Arabic word. Dropped today on age: Dune Awakening Blood and Ice (primary 29 Oct 15:01Z, posted 30 Oct), Pokémon x Fender (Pokémon Japan page 30 Oct JST), Activision Itaewon apology (Korean statement 30 Oct KST, over 24 h; families' objection 28 Oct).",
- "approved": ""
+ "approved": "go: rolling queue; preview sent 10:03Z; gate 10:00Z (Steam AE 67.99/57.79 until 6 Nov unchanged; Steam news, Xbox Wire, Nintendo store re-read 09:30Z); scheduled in Publer 10:01Z for 10:30Z on Instagram, X, Threads",
+ "director": {
+  "verdict": "PASS",
+  "shots": [
+   [
+    "0 creature (cover)",
+    "0-3.6",
+    "PASS",
+    "headline band clear of the subject"
+   ],
+   [
+    "1 boss and dragon",
+    "3.6-7.7",
+    "PASS",
+    "genre line"
+   ],
+   [
+    "2 statue and golden hall",
+    "7.7-11.8",
+    "PASS",
+    "island line"
+   ],
+   [
+    "3 halls and corridors",
+    "11.8-15.4",
+    "PASS",
+    "wishlist line; smear flag on the hall crossfade waived after a look"
+   ],
+   [
+    "4 throne creature",
+    "15.4-19.6",
+    "PASS",
+    "studio line at 58 px; pace waiver, trailer cuts inside"
+   ],
+   [
+    "5 corridor creature",
+    "19.6-21.3",
+    "PASS",
+    "closing picture, no line"
+   ]
+  ],
+  "sound": "launch trailer music from 6 s with audio split applied (music 59%, leak 0.6%)",
+  "speech": "none",
+  "length": "21.3 s plus end card"
+ }
 }
