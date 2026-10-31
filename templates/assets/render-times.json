@@ -17057,5 +17057,38 @@
   "min_disk_free_mb": 81953,
   "setup_min": 0.92,
   "story": "star-wars-jedi-3-far-in-development"
+ },
+ {
+  "name": "star-wars-jedi-3-far-in-development-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-10-31T07:25Z",
+  "stages": {
+   "checks": 11.5,
+   "montage": 72.1,
+   "text": 34.2,
+   "audio": 0.7,
+   "outro": 31.0
+  },
+  "total": 149.4,
+  "lane": "runner",
+  "queued_at": "2026-10-31T07:20:13Z",
+  "finished_at": "2026-10-31T07:25Z",
+  "render_min": 2.49,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 320,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1130,
+  "peak_mem_mb": 2583,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62541,
+  "peak_disk_mb": 65569,
+  "min_disk_free_mb": 82133,
+  "setup_min": 0.77,
+  "story": "star-wars-jedi-3-far-in-development"
  }
 ]
