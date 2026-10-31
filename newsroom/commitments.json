@@ -348,14 +348,14 @@
    "card": "prod-20261031-silver-palace",
    "fallback": "publish-last-passed",
    "held_by_mohammad": false,
-   "production": "rendering",
+   "production": "qc_passed",
    "delivery": {
-    "instagram": "pending",
-    "x": "pending",
-    "threads": "pending"
+    "instagram": "scheduled",
+    "x": "scheduled",
+    "threads": "scheduled"
    },
-   "status": "open",
-   "evidence": "job pushed 05:18Z (6651f6a7)"
+   "status": "scheduled",
+   "evidence": "job pushed 05:18Z (6651f6a7); v1 cover headline over face; v2 191d550e director PASS 05:40Z, audio split applied clean; submitting for 06:30Z; scheduled in Publer 05:38Z on all three"
   }
  ]
 }
