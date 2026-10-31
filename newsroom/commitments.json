@@ -353,12 +353,18 @@
    "held_by_mohammad": false,
    "production": "qc_passed",
    "delivery": {
-    "instagram": "scheduled",
-    "x": "scheduled",
-    "threads": "scheduled"
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
    },
-   "status": "scheduled",
-   "evidence": "job pushed 05:18Z (6651f6a7); v1 cover headline over face; v2 191d550e director PASS 05:40Z, audio split applied clean; submitting for 06:30Z; scheduled in Publer 05:38Z on all three"
+   "status": "fulfilled",
+   "evidence": "job pushed 05:18Z (6651f6a7); v1 cover headline over face; v2 191d550e director PASS 05:40Z, audio split applied clean; submitting for 06:30Z; scheduled in Publer 05:38Z on all three; published 06:31Z on all three, Inbox entry written",
+   "logged": true,
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DfJhLKtk8oi/",
+    "x": "https://x.com/1748744375616643072/status/2116417640516157886",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfJhKvgkiiI"
+   }
   },
   {
    "id": "ffxiv-35-million-accounts",
