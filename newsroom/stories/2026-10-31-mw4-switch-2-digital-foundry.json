@@ -2,7 +2,7 @@
  "id": "mw4-switch-2-digital-foundry",
  "title": "Digital Foundry on Modern Warfare 4 for Switch 2",
  "game": "Call of Duty: Modern Warfare 4",
- "status": "building: runner render pushed 10:06Z; slot 12:30Z (16:30 Dubai)",
+ "status": "scheduled",
  "chip": "تقرير",
  "template": "clipcard",
  "skin": "house",
@@ -53,5 +53,50 @@
   "x_reply": "https://www.nintendolife.com/news/2026/10/digital-foundry-delivers-its-tech-verdict-on-call-of-duty-modern-warfare-4-on-switch-2"
  },
  "notes": "Age: Nintendo Life relay 30 Oct 18:45Z; DF's own video time not read (YouTube), so first report is no later than that: under 24 h at the 12:30Z slot. DF site and Eurogamer refuse automated fetch; figures from Nintendo Life's relay, attributed to DF. Variety: last MW4 post 28 Oct (season 1); different angle (performance). DeepL back-check 10:07Z: meaning holds ('runs at 60 frames per second in multiplayer and 30 in the campaign on Switch 2, according to an analysis by Digital Foundry, which described the version as a polished product').",
- "approved": ""
+ "approved": "go: rolling queue; preview sent 10:28Z; gate 10:26Z (Nintendo Life relay unchanged; DF verdict as quoted); scheduled in Publer 10:27Z for 12:30Z on Instagram, X, Threads",
+ "director": {
+  "verdict": "PASS",
+  "shots": [
+   [
+    "0 SWAT under the tower (cover)",
+    "0-3.6",
+    "PASS",
+    "headline over sky"
+   ],
+   [
+    "1 store fight, helicopter, rooftops",
+    "3.6-8.4",
+    "PASS",
+    "DF line; glitch transition waived after a look"
+   ],
+   [
+    "2 card 60 fps on dimmed footage",
+    "8.4-11.0",
+    "PASS",
+    "card holds alone"
+   ],
+   [
+    "3 operator and sparks",
+    "11.0-14.8",
+    "PASS",
+    "campaign 30 fps"
+   ],
+   [
+    "4 snow convoy, squad, rifle",
+    "14.8-19.7",
+    "PASS",
+    "resolution line"
+   ],
+   [
+    "5 riot shield and launcher",
+    "19.7-22.1",
+    "PASS",
+    "verdict line; smear waived after a look"
+   ]
+  ],
+  "sound": "multiplayer trailer music with audio split (music 47.6%, leak 3.2%)",
+  "speech": "none",
+  "length": "22.1 s plus end card",
+  "graphic": "the 88 s store hit (red spray) and the 113 s fallen soldier left out"
+ }
 }
