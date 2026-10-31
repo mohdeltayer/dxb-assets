@@ -47,6 +47,7 @@ same presentation is **P-IGN**, the same times).
 | 5 v2 | Z-targeting (20 Oct, published 07:00Z on X, Instagram, Threads), rebuilt 19 Oct 12:50Z | P 343.0-345.6, 28.3-31.1, 47.45-49.2, 366.0-368.5, 368.6-371.1, 39.4-41.8, 384.5-387.1, 347.4-349.5, 166.2-168.9, 846.0-848.4, 852.0-854.6 | P from 338.9, Aonuma narrating targeting over the Deku Tree music |
 | 5 v1 | Z-targeting, built 19 Oct 08:20Z, replaced by v2, not posted | O 95.0-97.5, 89.6-92.3, 99.0-101.25, 46.8-49.6, 186.0-188.4, 194.3-196.7; P 28.3-30.75, 47.6-49.85, 39.4-41.8, 378.0-380.75, 364.4-366.3 | A from 26.0 (repeats eps 3 and 4) |
 | 6 (story-beat run) | الفتى بلا جنية (29 Oct, scheduled 21:00 Dubai) | O 8.0-10.6, 13.2-14.8, 20.6-23.35, 50.6-53.15, 26.2-28.8, climax 30.7-35.7; A 109.3-110.9, 45.3-47.85; P 871.2-873.6; stills oot-store-1 (cover, twice), oot-store-2 (ground) | our bed (neon), no trailer audio |
+| 7 (story-beat run) | حلم Zelda: the princess and the man from the desert (31 Oct, 21:00 Dubai) | A 121.5-123.9, 134.0-137.8; frames A 120.2, 139.3; O 75.3-76.7, 36.0-39.8, climax 43.4-46.9; frames O 41.8, 90.0, 228.3; Nintendo's character artwork (Zelda on the cover over the tapestry, Ganondorf) | our bed by scene (Mohammad 31 Oct): musicbox for the dream, hijaz oud for the man from the desert, strings for the request and the climax, musicbox again for the loop; live/2026-10-31/oot/oot-road-ep7-bed.flac |
 
 Repeats found on 19 Oct: A from 26.0 in eps 3, 4 and 5 (ep 1's A from 5.0 runs
 into it); the Hyrule Field with the castle in eps 1 and 4; A 61.6/62.0 (the

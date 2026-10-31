@@ -389,6 +389,11 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   figures for history, the official map for places). No shot and no audio
   stretch in two episodes: `notes/ocarina-series.md` keeps the ledger
   (CLAUDE.md "Mini documentary").
+  From episode 7 (31 Oct): the bed changes with each episode's scenes (our
+  palettes, crossfaded at the turns; the medley stays on the intro), named
+  with its reason on the episode's card and checked in the final file; every
+  storybook page shows its picture first, then the line, never under 2.5 s
+  (CLAUDE.md "Music by scene, pages that breathe").
 - **Web-style motion (pilot, 19 Oct):** HTML/CSS/JS pieces rendered frame by
   frame in headless Chromium, palette and Dubai: the outro first (two or
   three rotating variants) side by side with the current one for Mohammad's
