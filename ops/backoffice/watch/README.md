@@ -15,6 +15,14 @@ minutes rather than at :52. Today's hourly watch
 (`newsroom/watch_feeds.py`, `watch_pages.py`, the Watcher and the Gaming Watch digest) is untouched
 and keeps running; this service has its own SQLite ledger and never writes `watch-seen.json`.
 
+**Five-minute poll of the selected official sources (31 Oct 2026, promise keeper addendum F).**
+`.github/workflows/watch-fast.yml` runs `watch.py poll --only-breaking` on the dxb-render runner every 5 minutes (GitHub's
+clock, the server's poll), and when something new was handed over it replaces `watch/breaking.json` and `breaking.txt`
+on `watch-digest` (the digest files stay). The selected sources are the `breaking: true` ones. It steps aside when a job
+is already queued for the runner, holds it for about 30 seconds otherwise, and has its own concurrency group. Each item's
+`first_seen` is the detection time `templates/admission.py` measures breaking latency from. The user timers stay the
+target once root has run `loginctl enable-linger runner` and the server has a push key.
+
 ## What it reads (100 sources, 15 of them breaking; `watch.py sources` lists them)
 
 | Group | Count | Read every | Breaking | Where the list lives |

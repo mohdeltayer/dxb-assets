@@ -1,0 +1,141 @@
+# Five-minute poll of the selected official sources on the dxb-render server (adv-20261030-promise-keeper,
+# addendum_2251 item F, Mohammad 30 Oct 2026: "selected official sources get a 5-minute server poll instead of the
+# hourly digest"). The selected sources are the watch's `breaking` ones (`watch.py sources` lists them: PlayStation
+# Blog, Xbox Wire, Nintendo Japan and US, Take-Two, Bungie, The Game Awards, the four platform YouTube channels and
+# the official X accounts); sources.yaml is where the list changes.
+#
+# Every 5 minutes: `watch.py poll --only-breaking` on the server (each source keeps its own interval, so PS Blog and
+# Xbox Wire are read every 3 to 5 minutes and pages every 15), and when something new was handed over, its
+# breaking.json and breaking.txt replace those on the branch `watch-digest` (the hourly digest's files stay; the
+# outlet text, `summary`, is removed as in watch-digest.yml). Each item carries `first_seen`, the detection time that
+# templates/admission.py measures breaking latency from.
+#
+# Renders first: the job holds the runner for about 30 seconds, and it steps aside without polling when a job is
+# already queued for the dxb-render runner. The T0 route reads it as "server busy" and renders on GitHub, as designed.
+# Same rules as the hourly digest: posts nothing, renders nothing, touches no other branch, no secret but this run's
+# token. Its own concurrency group, so it never displaces a waiting hourly digest.
+#
+#   gh workflow run watch-fast.yml --ref main        # one pass now
+name: watch-fast
+
+permissions:
+  contents: write
+  actions: read
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  fast:
+    if: github.repository == 'mohdeltayer/dxb-assets' && github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 4
+    concurrency:
+      group: watch-fast
+      cancel-in-progress: false
+    env:
+      WATCH_HOME: /home/runner/backoffice/watch
+      WATCH_PUSH: external
+      WATCH_SELF_UPDATE: 'off'
+      WATCH_RENDER_CHECK: 'off'        # this job is itself a Runner.Worker
+    steps:
+      - name: Step aside for a queued render
+        id: yield
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          repo, me = os.environ['GITHUB_REPOSITORY'], os.environ['GITHUB_RUN_ID']
+          def get(path):
+              req = urllib.request.Request('https://api.github.com/repos/%s/%s' % (repo, path),
+                                           headers={'Authorization': 'Bearer ' + os.environ['TOKEN'],
+                                                    'Accept': 'application/vnd.github+json'})
+              with urllib.request.urlopen(req, timeout=15) as r:
+                  return json.load(r)
+          waiting = []
+          try:
+              for run in get('actions/runs?status=queued&per_page=30').get('workflow_runs', []):
+                  if str(run['id']) == me or run.get('name') in ('watch-fast', 'watch-digest'):
+                      continue
+                  for job in get('actions/runs/%s/jobs?per_page=50' % run['id']).get('jobs', []):
+                      if job.get('status') == 'queued' and 'dxb-render' in (job.get('labels') or []):
+                          waiting.append(run.get('name'))
+          except Exception as e:                 # the check never blocks the poll on its own failure
+              print('yield check skipped: %s' % str(e)[:120])
+          go = 'false' if waiting else 'true'
+          print('queued for dxb-render: %s' % (', '.join(waiting) or 'none'))
+          open(os.environ['GITHUB_OUTPUT'], 'a').write('go=%s\n' % go)
+          PY
+
+      - uses: actions/checkout@v5
+        if: steps.yield.outputs.go == 'true'
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            ops/backoffice/watch
+            newsroom
+          persist-credentials: false
+
+      - name: Poll the selected official sources
+        id: poll
+        if: steps.yield.outputs.go == 'true'
+        timeout-minutes: 3
+        run: |
+          mkdir -p "$WATCH_HOME/state" "$WATCH_HOME/out"
+          [ -x "$WATCH_HOME/venv/bin/python" ] || { echo "watch venv missing: the hourly digest sets it up"; exit 0; }
+          rm -f "$WATCH_HOME"/out/breaking.json "$WATCH_HOME"/out/breaking.txt
+          nice -n 10 "$WATCH_HOME/venv/bin/python" ops/backoffice/watch/watch.py poll --only-breaking
+          if [ -f "$WATCH_HOME/out/breaking.json" ]; then echo "new=1" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Breaking lines to watch-digest (digest files kept)
+        if: steps.poll.outputs.new == '1'
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          pub="$RUNNER_TEMP/pub"; rm -rf "$pub"; mkdir -p "$pub"; cd "$pub"
+          auth=$(printf 'x-access-token:%s' "$TOKEN" | base64 -w0)
+          url="https://github.com/${GITHUB_REPOSITORY}.git"
+          git init -q
+          for i in 1 2 3; do
+            base=""
+            if git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $auth" \
+                 fetch -q --depth 1 "$url" +refs/heads/watch-digest:refs/remotes/origin/watch-digest 2>/dev/null; then
+              base=$(git rev-parse origin/watch-digest)
+              git checkout -q -f origin/watch-digest -- . 2>/dev/null || true
+            fi
+            mkdir -p watch
+            python3 - "$WATCH_HOME/out" watch <<'PY'
+          import json, os, shutil, sys
+          src, dst = sys.argv[1], sys.argv[2]
+          def strip(x):
+              if isinstance(x, dict):
+                  return {k: strip(v) for k, v in x.items() if k != 'summary'}
+              if isinstance(x, list):
+                  return [strip(v) for v in x]
+              return x
+          d = strip(json.load(open(os.path.join(src, 'breaking.json'), encoding='utf-8')))
+          json.dump(d, open(os.path.join(dst, 'breaking.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+          shutil.copy(os.path.join(src, 'breaking.txt'), os.path.join(dst, 'breaking.txt'))
+          print('breaking seq %s: %d new items' % (d.get('seq'), len(d.get('items', []))))
+          PY
+            git checkout -q --orphan "fast-$i"
+            git add -A watch
+            gen=$(python3 -c "import json; print(json.load(open('watch/breaking.json'))['generated_at'])")
+            git -c user.name=dxb-watch -c user.email=noreply@github.com -c commit.gpgsign=false \
+              commit -q -m "watch breaking $gen (5-minute poll)"
+            lease="--force-with-lease=refs/heads/watch-digest:${base}"
+            if git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $auth" \
+                 push -q $lease "$url" HEAD:refs/heads/watch-digest; then
+              echo "pushed watch-digest breaking: $gen" | tee -a "$GITHUB_STEP_SUMMARY"; exit 0
+            fi
+            sleep $(( i * 5 ))
+          done
+          echo "push failed three times; the hourly digest carries these lines at :52"; exit 1
+
+      - name: Clean up
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/pub"
