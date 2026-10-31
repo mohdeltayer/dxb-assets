@@ -2,7 +2,7 @@
  "id": "2026-10-31-warframe-tau-december",
  "title": "Warframe: Tau coming December 2026 (رسمي)",
  "game": "Warframe",
- "status": "rendering",
+ "status": "dropped",
  "chip": "رسمي",
  "template": "stills",
  "skin": "house",
@@ -82,7 +82,9 @@
  },
  "notes": [
   "Age: posted 30 Oct 14:30 (zone not shown); schedule before 14:30Z today to stay inside 24 hours on the strictest reading",
-  "Variety: Soulframe (also Digital Extremes) not used today (its 6 Nov date was posted 15 Oct)"
+  "Variety: Soulframe (also Digital Extremes) not used today (its 6 Nov date was posted 15 Oct)",
+  "Dropped 31 Oct 11:27Z: duplicate of 2026-10-30-warframe-tau-december (published 30 Oct 23:02Z). Built without running ledger.py find first (production miss); not scheduled anywhere. The render outputs stay unused.",
+  "The 31 Oct runner render wrote cards/2026-10/warframe-tau-december-reel-v1.mp4 and its strip, sheet and dense files over the 30 Oct v1 of the same name (the published Reel was 30 Oct v2, untouched); the 30 Oct v1 is in git history at 9dfc30f8~1"
  ],
  "approved": "",
  "director": []
