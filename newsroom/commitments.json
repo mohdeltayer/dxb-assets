@@ -267,7 +267,7 @@
    "id": "ffxiv-evercold-february-23-2027",
    "title": "FFXIV Evercold dates (تقرير, trailer)",
    "kind": "reel",
-   "slot": "2026-10-31T07:00+04:00",
+   "slot": "2026-10-31T07:20+04:00",
    "original_due_at": "2026-10-31T07:00+04:00",
    "platforms": [
     "instagram",
@@ -279,14 +279,14 @@
    "fallback": "publish-last-passed",
    "held_by_mohammad": false,
    "done": false,
-   "production": "rendering",
+   "production": "qc_passed",
    "delivery": {
-    "instagram": "pending",
-    "x": "pending",
-    "threads": "pending"
+    "instagram": "scheduled",
+    "x": "scheduled",
+    "threads": "scheduled"
    },
-   "status": "building",
-   "evidence": "runner render v2 queued 02:35Z"
+   "status": "scheduled",
+   "evidence": "runner render 210 s (f22c62d); director PASS 03:09Z; submitting 03:10Z for 07:20 Dubai (original slot 07:00, two runner text stops); scheduled in Publer 03:10Z for 03:20Z on all three"
   }
  ]
 }
