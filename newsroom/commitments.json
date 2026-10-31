@@ -247,15 +247,21 @@
    "card": "prod-20261031-steam-horror",
    "fallback": "bank-piece",
    "held_by_mohammad": false,
-   "done": false,
+   "done": true,
    "production": "qc_passed",
    "delivery": {
-    "instagram": "scheduled",
-    "x": "scheduled",
-    "threads": "scheduled"
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
    },
-   "status": "scheduled",
-   "evidence": "Publer scheduled 22:38Z for 2026-10-31T05:00+04:00 on Instagram, X, Threads (v1)"
+   "status": "published",
+   "evidence": "Published 01:02-01:03Z on Instagram, X, Threads (Publer); Inbox published entry 01:06Z; card closed (default Approve)",
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DfI7jKGjuGZ/",
+    "x": "https://x.com/1748744375616643072/status/2116334903822352762",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfI7jI_CXuC"
+   },
+   "logged": true
   }
  ]
 }
