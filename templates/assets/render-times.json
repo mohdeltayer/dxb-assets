@@ -16991,5 +16991,38 @@
   "min_disk_free_mb": 9215,
   "setup_min": 1.23,
   "story": "ffxiv-35-million-accounts"
+ },
+ {
+  "name": "star-wars-jedi-3-far-in-development-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-31T07:07Z",
+  "stages": {
+   "checks": 18.3,
+   "montage": 115.9,
+   "text": 58.5,
+   "audio": 1.1,
+   "outro": 59.5
+  },
+  "total": 253.3,
+  "lane": "runner",
+  "queued_at": "2026-10-31T06:59:15Z",
+  "finished_at": "2026-10-31T07:07Z",
+  "render_min": 4.22,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 519,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 983,
+  "peak_mem_mb": 2667,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62541,
+  "peak_disk_mb": 65750,
+  "min_disk_free_mb": 81952,
+  "setup_min": 1.13,
+  "story": "star-wars-jedi-3-far-in-development"
  }
 ]
