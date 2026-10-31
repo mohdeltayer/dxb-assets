@@ -16618,5 +16618,38 @@
   "min_disk_free_mb": 82626,
   "setup_min": 1.03,
   "story": "steam-horror-most-played-halloween"
+ },
+ {
+  "name": "ffxiv-evercold-february-23-2027-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-31T03:07Z",
+  "stages": {
+   "checks": 2.5,
+   "montage": 35.3,
+   "text": 45.8,
+   "audio": 0.9,
+   "outro": 53.5
+  },
+  "total": 138.0,
+  "lane": "runner",
+  "queued_at": "2026-10-31T03:02:49Z",
+  "finished_at": "2026-10-31T03:07Z",
+  "render_min": 2.3,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 210,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1072,
+  "peak_mem_mb": 1803,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62541,
+  "peak_disk_mb": 65179,
+  "min_disk_free_mb": 82523,
+  "setup_min": 1.02,
+  "story": "ffxiv-evercold-february-23-2027"
  }
 ]
