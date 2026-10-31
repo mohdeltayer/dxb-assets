@@ -430,9 +430,16 @@ face or the shot's subject (fail)? render_job.check runs templates/fillcheck.py 
 
 ## Promises first (adv-20261030-promise-keeper, Mohammad 30 Oct 2026)
 Every scheduled session (hourly watch, review slots, morning digest, build desk) prints first
-'overdue commitments: N, at risk: M' from newsroom/keeper-status.json (until the keeper exists: count the open rows of
-newsroom/commitments.json whose slot has passed or falls within 60 minutes without a Publer post) and acts on keeper
-alarms before anything else. Every scheduling action writes its row in newsroom/commitments.json. A dependency on
+'overdue commitments: N, at risk: M' from the keeper's status branch and acts on keeper alarms before anything else:
+`git fetch -q --depth 1 origin +keeper-status:refs/remotes/origin/keeper-status && git show
+origin/keeper-status:keeper/status.txt` (the line, then the six lines: closest promise to failure, uncertain submissions,
+failed destinations, confirmed coverage and largest gap, published posts not yet logged). If the branch is missing or
+its pass is more than 20 minutes old, say so and count locally: `python3 ops/backoffice/keeper/keeper.py line`.
+Each row carries its delivery per platform (`"delivery": {"instagram": "scheduled", "x": ..., "threads": ...}`; states
+not_submitted, submitting, scheduled, published, failed, uncertain): write `submitting` before calling Publer, then
+`scheduled` from its answer; on a timeout write `uncertain` and look the post up before any retry, never resubmit blind;
+the slot check writes `published` with the post links and `logged: true` once the Inbox entry exists. A moved slot keeps
+`original_due_at` and adds a `history` line (old slot, who decided, why); a missed series episode stays missed. Every scheduling action writes its row in newsroom/commitments.json. A dependency on
 build work never cancels a slot: if the fix is not released by the slot, the post goes out on the current template
 unless held_by_mohammad is true. The dispatcher's evidence step is binding for ops cards: no card is closed as done
 without evidence.
