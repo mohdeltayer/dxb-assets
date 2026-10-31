@@ -310,6 +310,29 @@
    },
    "status": "scheduled",
    "evidence": "job pushed 03:24Z (a3c659d7); v2 headline fix after v1 lands; v3 runner 326 s (86135ace); director PASS 03:41Z; submitting for 04:30Z; scheduled in Publer 03:42Z on all three"
+  },
+  {
+   "id": "altman-dram-gamers-react",
+   "title": "Altman on home-PC memory, gamers react (debate)",
+   "kind": "post",
+   "slot": "2026-10-31T09:30+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/altman-dram-gamers-react.json",
+   "card": "prod-20261031-altman-dram",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "production": "rendering",
+   "delivery": {
+    "instagram": "pending",
+    "x": "pending",
+    "threads": "pending"
+   },
+   "status": "open",
+   "evidence": "job pushed 03:49Z (a0860928)"
   }
  ]
 }
