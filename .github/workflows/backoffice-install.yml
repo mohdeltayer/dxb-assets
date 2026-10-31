@@ -13,6 +13,8 @@
 #   gh workflow run backoffice-install.yml --ref main -f service=prepare                # install, timer OFF
 #   gh workflow run backoffice-install.yml --ref main -f service=prepare -f enable=true # after Mohammad's go
 #   gh workflow run backoffice-install.yml --ref main -f service=keeper                 # the keeper's 5-minute timer
+#   gh workflow run backoffice-install.yml --ref main -f service=watch -f enable=fast   # only the watch's 5-minute poll of
+#                                                                   the selected official sources (fast-disable stops it)
 #   gh workflow run backoffice-install.yml --ref main -f service=keeper -f enable=disable  # stop it
 #
 # The watch's install.sh always enables its timers (dispatching it is the go-live). prepare's timer starts only
@@ -31,7 +33,7 @@ on:
         required: true
         default: 'watch'
       enable:
-        description: 'prepare: true starts the timer, disable stops it, false installs with the timer untouched/off; keeper: disable stops it'
+        description: 'prepare: true starts the timer, disable stops it, false installs with the timer untouched/off; keeper: disable stops it; watch: fast installs only the 5-minute poll of the selected sources, fast-disable stops it'
         required: false
         default: 'false'
 
@@ -51,8 +53,9 @@ jobs:
       - name: Inputs and user
         run: |
           case "$SERVICE" in watch|prepare|keeper) ;; *) echo "service must be watch, prepare or keeper"; exit 1;; esac
-          case "$ENABLE" in true|false|disable) ;; *) echo "enable must be true, false or disable"; exit 1;; esac
-          if [ "$SERVICE" = watch ] && [ "$ENABLE" != false ]; then echo "enable applies to prepare and keeper only"; exit 1; fi
+          case "$ENABLE" in true|false|disable|fast|fast-disable) ;; *) echo "enable must be true, false, disable, fast or fast-disable"; exit 1;; esac
+          if [ "$SERVICE" != watch ]; then case "$ENABLE" in fast|fast-disable) echo "fast applies to the watch only"; exit 1;; esac; fi
+          if [ "$SERVICE" = watch ]; then case "$ENABLE" in false|fast|fast-disable) ;; *) echo "watch: enable is false, fast or fast-disable"; exit 1;; esac; fi
           if [ "$SERVICE" = keeper ] && [ "$ENABLE" = true ]; then echo "keeper: the install starts the timer; enable=disable stops it"; exit 1; fi
           if [ "$(id -u)" = 0 ]; then echo "refusing to run as root"; exit 1; fi
           echo "user $(id -un), home $HOME, host $(hostname)"
@@ -78,7 +81,7 @@ jobs:
           R="$HOME/dxb-assets/ops/backoffice/$SERVICE"
           if [ "$SERVICE" = watch ]; then
             if [ -r /etc/dxb-watch/github-token ]; then echo "token file: readable by $(id -un)"; else echo "token file: missing or unreadable (the watch writes digests locally and hands nothing over)"; fi
-            "$R/install.sh"
+            case "$ENABLE" in fast) "$R/install.sh" --fast-only;; fast-disable) "$R/install.sh" --fast-disable;; *) "$R/install.sh";; esac
           elif [ "$SERVICE" = keeper ]; then
             if [ "$ENABLE" = disable ]; then "$R/install.sh" --disable; else "$R/install.sh"; fi
           else
