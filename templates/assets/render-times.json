@@ -17230,5 +17230,54 @@
   "min_disk_free_mb": 78388,
   "setup_min": 0.82,
   "story": "oot-road-ep7-princess-and-the-desert-man"
+ },
+ {
+  "name": "queens-domain-out-now-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-31T09:58Z",
+  "stages": {
+   "checks": 3.6,
+   "montage": 47.8,
+   "text": 47.4,
+   "audio": 0.9,
+   "outro": 41.3
+  },
+  "total": 141.1,
+  "lane": "runner",
+  "queued_at": "2026-10-31T09:54:36Z",
+  "finished_at": "2026-10-31T09:58Z",
+  "render_min": 2.35,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 1.9,
+   "audio_secs": 41.8,
+   "music_pct": 59.0,
+   "leak_pct": 0.6,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 0
+   },
+   "effects_shots": 6,
+   "mix_secs": 0.7,
+   "secs": 3.3
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 198,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1524,
+  "peak_mem_mb": 1991,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62904,
+  "peak_disk_mb": 66671,
+  "min_disk_free_mb": 81030,
+  "setup_min": 0.93,
+  "story": "queens-domain-out-now"
  }
 ]
