@@ -144,6 +144,33 @@ class Passes(unittest.TestCase):
             with open(os.path.join(d, 'state.json'), encoding='utf-8') as f:
                 self.assertTrue(any(k.startswith('t15|at-risk') for k in json.load(f)['sent']))
 
+    # Addendum D: only a bound QC record counts as a pass.
+    def test_qc_prose_pass_is_not_a_pass(self):
+        r = {'id': 'p', 'title': 'Prose pass', 'slot': '2026-11-01T16:30+04:00', 'production': 'qc_passed',
+             'evidence': 'director passed', 'fallback': 'card-only'}
+        a = K.assess(r, NOW, 'alarm-only')
+        self.assertEqual(a['production'], 'rendered')
+        self.assertEqual(a['qc'], 'claimed')
+        self.assertIn('cannot authorise scheduling', a['note'])
+
+    def test_qc_bound_pass(self):
+        q = {'result': 'PASS', 'binding': 'a' * 64, 'video_sha256': 'b' * 64, 'post_text_bound': True}
+        r = {'id': 'b', 'title': 'Bound pass', 'slot': '2026-11-01T16:30+04:00', 'production': 'qc_passed', 'qc': q}
+        a = K.assess(r, NOW, 'alarm-only')
+        self.assertEqual((a['production'], a['qc']), ('qc_passed', 'PASS'))
+        self.assertIsNone(a['note'])
+        r['qc'] = dict(q, post_text_bound=False)
+        self.assertIn('post text is not bound', K.assess(r, NOW, 'alarm-only')['note'])
+        r['qc'] = dict(q, binding='not a digest')
+        self.assertEqual(K.assess(r, NOW, 'alarm-only')['production'], 'rendered')
+
+    def test_qc_reject_named(self):
+        q = {'result': 'REJECT', 'binding': 'a' * 64, 'video_sha256': 'b' * 64}
+        r = {'id': 'r', 'title': 'Rejected file', 'slot': '2026-11-01T16:30+04:00', 'production': 'rendered', 'qc': q}
+        a = K.assess(r, NOW, 'alarm-only')
+        self.assertEqual(a['qc'], 'REJECT')
+        self.assertIn('must not be scheduled', a['note'])
+
     def test_unreadable_commitments(self):
         with tempfile.TemporaryDirectory() as d:
             p = self.run_tick(d, commitments=os.path.join(d, 'missing.json'))

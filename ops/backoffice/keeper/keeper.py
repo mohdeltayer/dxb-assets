@@ -109,11 +109,42 @@ def delivery_of(row):
     return out
 
 
+HEX64 = re.compile(r'^[0-9a-f]{64}$')
+
+
+def qc_of(row):
+    """The row's QC record as `qcrecord.py gate` prints it for the row (addendum D): ('bound', result) when it carries a
+    result, a binding digest and the video hash; ('claimed', None) when only prose or a bare state says it passed;
+    (None, None) when there is nothing."""
+    q = row.get('qc')
+    if isinstance(q, dict) and q.get('result') in ('PASS', 'REPAIR', 'FALLBACK', 'REJECT') \
+            and HEX64.match(str(q.get('binding') or '')) and HEX64.match(str(q.get('video_sha256') or '')):
+        return 'bound', q['result'], bool(q.get('post_text_bound'))
+    if q or str(row.get('production') or '').lower().replace(' ', '_') == 'qc_passed':
+        return 'claimed', None, False
+    return None, None, False
+
+
 def production_of(row):
     p = str(row.get('production') or '').lower().replace(' ', '_')
+    if p == 'qc_passed':                       # a prose pass cannot authorise scheduling: only a bound PASS record
+        kind, result, _ = qc_of(row)
+        return 'qc_passed' if (kind, result) == ('bound', 'PASS') else 'rendered'
     if p in PRODUCTION:
         return p
     return 'queued'
+
+
+def qc_note(row):
+    kind, result, text = qc_of(row)
+    if kind == 'claimed':
+        return 'QC passed is claimed without a bound QC record (qcrecord.py gate): a sentence cannot authorise scheduling'
+    if kind == 'bound' and result != 'PASS':
+        return 'QC %s: this file must not be scheduled; %s' % (
+            result, 'one repair, then QC again' if result == 'REPAIR' else 'the fallback applies')
+    if kind == 'bound' and not text:
+        return 'QC PASS, but the post text is not bound yet (qcrecord.py bind)'
+    return None
 
 
 def due_of(row):
@@ -130,7 +161,9 @@ def assess(row, now, mode):
     """One row's place on the ladder. Returns a dict the status, the alarms and the tests read."""
     slot, orig = due_of(row)
     title = row.get('title') or row.get('id')
+    qk, qr, _ = qc_of(row)
     a = {'id': row.get('id'), 'title': title, 'kind': row.get('kind'), 'slot': row.get('slot'),
+         'qc': qr if qk == 'bound' else qk,
          'slot_dubai': dubai(slot) if slot else None, 'fallback': row.get('fallback'),
          'held': bool(row.get('held_by_mohammad')), 'production': production_of(row),
          'delivery': {p: d['state'] for p, d in delivery_of(row).items()}, 'stage': None, 'commitment': 'open',
@@ -206,6 +239,9 @@ def assess(row, now, mode):
     if a['production'] == 'blocked':
         a['note'] = ((a['note'] + '; ') if a['note'] else '') + \
             'production blocked: the post goes out on the current template unless Mohammad holds it'
+    qn = qc_note(row)
+    if qn:
+        a['note'] = ((a['note'] + '; ') if a['note'] else '') + qn
     return a
 
 

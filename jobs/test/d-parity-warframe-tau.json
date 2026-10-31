@@ -1,0 +1,114 @@
+{
+ "name": "warframe-tau-december",
+ "out": "cards/test/d-parity-warframe-tau-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "wf-brysko.jpg",
+   "repo": "live/2026-10-30/wf/wf-brysko.jpg"
+  },
+  {
+   "file": "wf-tau-chart.jpg",
+   "repo": "live/2026-10-30/wf/wf-tau-chart.jpg"
+  },
+  {
+   "file": "wf-perita.jpg",
+   "repo": "live/2026-10-30/wf/wf-perita.jpg"
+  }
+ ],
+ "shots": [
+  [
+   "wf-tau-chart.jpg",
+   null,
+   3.6,
+   0.62
+  ],
+  [
+   "wf-tau-chart.jpg",
+   null,
+   4.8,
+   0.15
+  ],
+  [
+   "wf-perita.jpg",
+   null,
+   5.0,
+   0.25
+  ],
+  [
+   "wf-brysko.jpg",
+   null,
+   6.6,
+   0.4
+  ],
+  [
+   "wf-tau-chart.jpg",
+   null,
+   4.2,
+   0.85
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "تنتقل اللعبة لأول مرة\nإلى نظام نجمي جديد اسمه Tau",
+     {}
+    ]
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    [
+     "وتبدأ الرحلة في ديسمبر\nبمدينة Fornax وصحراء Perita",
+     {}
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "وبطل التحديث الجديد Brysko\nمحقق يؤدي صوته الممثل\nماثيو ميرسر (Matt Mercer)",
+     {}
+    ]
+   ]
+  ],
+  [
+   4,
+   4,
+   [
+    [
+     "ويعد الاستوديو بعوالم أخرى\nفي تحديثات لاحقة",
+     {}
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   4,
+   "المصدر: ديجيتال إكستريمز (Digital Extremes)"
+  ]
+ ],
+ "headline": "تحديث Warframe الضخم\nيصدر في ديسمبر",
+ "label": "رسمي",
+ "source": "ديجيتال إكستريمز (Digital Extremes)",
+ "date": "30 Oct 2026",
+ "theme": "cold",
+ "style": null,
+ "template": "stills",
+ "skin": "house",
+ "track": "bed",
+ "sound": null,
+ "profile": null,
+ "cut": false,
+ "note": "build desk 31 Oct test (addendum D): parity, no qc key; copy of the published job",
+ "pace_ok": "official stills only (no Tau footage off YouTube); each line holds its reading time on one image with a slow push-in (longest 6.0 s, the three-line Brysko line)",
+ "director": "v1 20:40Z FIX: the headline sat across Brysko's helmet on the cover (headlines never over a face); cover moved to the Tau star chart (the ship over the planet, the news itself), the Tau line on the chart's planets (another part of the image), Brysko keeps his line where the helmet is clear. Lines, credit, bed, decode pass."
+}

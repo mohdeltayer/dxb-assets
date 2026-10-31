@@ -97,6 +97,11 @@ Road to Ocarina, story-beat episodes (B8, Mohammad's points on the episode 6 pre
     on screen across a move stops `check`. Without the key nothing changes.
   - `reveal`: the word-by-word reveal no longer flashes (reel.reveal_layers: the words already up stay put).
 
+QC bound to the file (promise keeper, addendum D, build desk 31 Oct 2026): `"qc": true` (or "portrait_crop",
+"wide_preserve", {"profile": ...}) makes templates/qcrecord.py read the finished Reel at its shot boundaries and text
+changes and write <base>-qc.json beside it (PASS, REPAIR, FALLBACK or REJECT, with the video, text, manifest, template
+and rules hashes). A record, never a stop. Without the key nothing changes.
+
 Focus is resolved on the container before the shot sheet (`focus`), so the job
 carries the crop that was judged; a null left in the job is autofocused on the
 runner, which may pick another subject.
@@ -663,6 +668,21 @@ def breaking(job, draft=False):
     return video
 
 
+def qc_record(job, video, base):
+    """QC bound to the file (promise keeper addendum D), only when the job asks: `"qc": true`, `"portrait_crop"` or
+    `"wide_preserve"` (or {"profile": ...}). Writes <base>-qc.json beside the Reel, committed with it. A record, never a
+    stop: the render and its commit go ahead whatever the result; scheduling reads the record through
+    `qcrecord.py gate`. A failure to make the record is printed and leaves no file."""
+    try:
+        import qcrecord as QC
+        rec = QC.make(video, job, uploads=C.U, quiet=True)
+        QC._write(base + '-qc.json', rec)
+        print('render_job: qc %s%s (%s): %s' % (rec['result'], (' ' + rec['repair']) if rec['repair'] else '',
+                                                rec['profile'], rec['reason']), flush=True)
+    except Exception as e:                      # never stops the job: the record is evidence, not a gate here
+        print('render_job: qc record not made: %s' % str(e)[:200], flush=True)
+
+
 def run(job, draft=False):
     if job.get('kind') == 'famitsu':
         return famitsu(job, draft)
@@ -715,6 +735,8 @@ def run(job, draft=False):
         DC.dense_strip(video, base + '-dense.jpg')
         reel.strip(video, base + '-strip.jpg')
         reel.shotsheet([s for s in shots(job, build=False) if not s[0].startswith(NG.SUB + '/')], base + '-sheet.jpg')
+        if job.get('qc'):
+            qc_record(job, video, base)
     print(f"render_job: {job['name']} done in {time.time() - t0:.0f} s (fetch {fetched:.0f} s): {video}", flush=True)
     return video
 

@@ -246,6 +246,8 @@ jobs:
           files="$out $base-strip.jpg $base-sheet.jpg"
           # 4 frames a second through the Reel (decodecheck.dense_strip), so the first second of every shot is seen
           if [ -f "$base-dense.jpg" ]; then files="$files $base-dense.jpg"; fi
+          # QC record bound to the file (templates/qcrecord.py), only for a job with "qc": the gate for scheduling reads it
+          if [ -f "$base-qc.json" ]; then files="$files $base-qc.json"; fi
           mkdir -p "$RUNNER_TEMP/out"
           for f in $files; do cp --parents "$f" "$RUNNER_TEMP/out/"; done
           git config user.name "dxb-render"
