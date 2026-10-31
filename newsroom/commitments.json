@@ -325,14 +325,14 @@
    "card": "prod-20261031-altman-dram",
    "fallback": "publish-last-passed",
    "held_by_mohammad": false,
-   "production": "rendering",
+   "production": "qc_passed",
    "delivery": {
-    "instagram": "pending",
-    "x": "pending",
-    "threads": "pending"
+    "instagram": "scheduled",
+    "x": "scheduled",
+    "threads": "scheduled"
    },
-   "status": "open",
-   "evidence": "job pushed 03:49Z (a0860928)"
+   "status": "scheduled",
+   "evidence": "job pushed 03:49Z (a0860928); v1 runner failed pace check; v1 render had block damage on grille (runner download); v2 41535600 clean, director PASS 04:25Z; submitting for 05:30Z; scheduled in Publer 04:27Z on all three"
   }
  ]
 }
