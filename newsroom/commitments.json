@@ -287,6 +287,29 @@
    },
    "status": "fulfilled",
    "evidence": "runner render 210 s (f22c62d); director PASS 03:09Z; submitting 03:10Z for 07:20 Dubai (original slot 07:00, two runner text stops); scheduled in Publer 03:10Z for 03:20Z on all three; Publer Published 03:20-03:21Z on all three; Inbox published entry"
+  },
+  {
+   "id": "xbox-game-pass-next-week-nov-2",
+   "title": "Four games join Game Pass 2 to 5 Nov (list)",
+   "kind": "post",
+   "slot": "2026-10-31T08:30+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/xbox-game-pass-next-week-nov-2.json",
+   "card": "prod-20261031-xbox-game-pass",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "production": "rendering",
+   "delivery": {
+    "instagram": "pending",
+    "x": "pending",
+    "threads": "pending"
+   },
+   "status": "open",
+   "evidence": "job pushed 03:24Z (a3c659d7); v2 headline fix after v1 lands"
   }
  ]
 }
