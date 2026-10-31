@@ -28,5 +28,14 @@ fallback as decided for ops; the keeper itself never posts.
     python3 ops/backoffice/keeper/keeper.py line                 # the one line, counted locally
     python3 -m unittest discover -s ops/backoffice/keeper        # tests, including addendum H simulated
 
-Server route (later): once root has run `loginctl enable-linger runner`, the same `keeper.py tick` can run from a user
-timer on dxb-render-1; the push needs a token that can write this repository's `keeper-status` branch.
+Server route (addendum_0615, build desk 31 Oct 2026): the 5-minute clock is the server's. `dxb-keeper.timer` (a systemd
+user timer of the runner user on dxb-render-1, every 5 minutes at :02, nice 10) runs `server_tick.sh`: it fetches
+`newsroom/commitments.json` from main (public, no token; the stable clone's working tree is never touched), runs
+`keeper.py tick` into `~/backoffice/keeper`, sends its alarms to the phone from the server (topic file
+`/etc/dxb-backup/ntfy-topic`), then `keeper.py compare` reads GitHub's `keeper-status` and alarms when GitHub's keeper is
+stale (its schedule delayed or dropped) or when the two disagree on the same commitments for two passes in a row.
+GitHub cannot read the server (the server has no push key), so the comparison runs on the server; keeper.yml stays the
+status sessions read. Install or stop through `backoffice-install.yml` (`-f service=keeper`, `-f enable=disable`).
+
+    ~/dxb-assets/ops/backoffice/keeper/install.sh [--disable]     # as the runner user
+    ops/backoffice/keeper/test.sh                                 # unit tests and one pass in a temp home, pushes off

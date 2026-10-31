@@ -1,0 +1,12 @@
+[Unit]
+Description=DXB promise keeper: every 5 minutes
+
+[Timer]
+# Two minutes off the watch's five-minute poll (:00/5) and clear of prepare (:03/10).
+OnBootSec=2min
+OnCalendar=*:02/5
+AccuracySec=10s
+Unit=dxb-keeper.service
+
+[Install]
+WantedBy=timers.target
