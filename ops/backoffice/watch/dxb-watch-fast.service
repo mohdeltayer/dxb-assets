@@ -1,0 +1,18 @@
+[Unit]
+Description=DXB mechanical watch: the selected official (breaking) sources every 5 minutes, detection times only
+Documentation=file://%h/dxb-assets/ops/backoffice/watch/README.md
+
+[Service]
+Type=oneshot
+# The server's clock for the selected official sources (promise keeper addendum F). WATCH_PUSH=off: items are stored
+# with their first_seen (the detection time breaking latency is measured from) and left pending, so the GitHub
+# publication (watch-fast.yml every 5 minutes when GitHub runs it, the hourly digest at :52 always) hands them over.
+# No EnvironmentFile: watch.env could set WATCH_PUSH, and this unit must never hand anything over itself.
+Environment=WATCH_PUSH=off
+ExecStart=%h/backoffice/watch/venv/bin/python %h/dxb-assets/ops/backoffice/watch/watch.py poll --only-breaking
+Nice=10
+IOSchedulingClass=idle
+IOSchedulingPriority=7
+SuccessExitStatus=75
+TimeoutStartSec=4min
+NoNewPrivileges=yes

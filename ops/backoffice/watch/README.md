@@ -15,13 +15,19 @@ minutes rather than at :52. Today's hourly watch
 (`newsroom/watch_feeds.py`, `watch_pages.py`, the Watcher and the Gaming Watch digest) is untouched
 and keeps running; this service has its own SQLite ledger and never writes `watch-seen.json`.
 
-**Five-minute poll of the selected official sources (31 Oct 2026, promise keeper addendum F).**
-`.github/workflows/watch-fast.yml` runs `watch.py poll --only-breaking` on the dxb-render runner every 5 minutes (GitHub's
-clock, the server's poll), and when something new was handed over it replaces `watch/breaking.json` and `breaking.txt`
-on `watch-digest` (the digest files stay). The selected sources are the `breaking: true` ones. It steps aside when a job
-is already queued for the runner, holds it for about 30 seconds otherwise, and has its own concurrency group. Each item's
-`first_seen` is the detection time `templates/admission.py` measures breaking latency from. The user timers stay the
-target once root has run `loginctl enable-linger runner` and the server has a push key.
+**Five-minute poll of the selected official sources (31 Oct 2026, promise keeper addendum F).** The selected sources
+are the `breaking: true` ones. Two pieces:
+
+* The clock is the server's: `dxb-watch-fast.timer` (`install.sh --fast-only`, or `backoffice-install.yml -f
+  service=watch -f enable=fast`) runs `watch.py poll --only-breaking` every 5 minutes with `WATCH_PUSH=off`, so each
+  item's `first_seen` (the detection time `templates/admission.py` measures breaking latency from) is on the server's
+  clock, and the items stay pending for publication. The full poll and digest timers stay off until the server has a
+  push key.
+* Publication: `.github/workflows/watch-fast.yml` (GitHub's 5-minute schedule, on the dxb-render runner) polls the same
+  sources and, when something new is pending, replaces `watch/breaking.json` and `breaking.txt` on `watch-digest`
+  (the digest files stay). It steps aside when a job is already queued for the runner, holds it about 30 seconds
+  otherwise, and has its own concurrency group. GitHub drops many scheduled runs (keeper.yml ran once in 7.5 hours on
+  31 Oct), so a dropped run only delays publication; the hourly digest at :52 always carries what is pending.
 
 ## What it reads (100 sources, 15 of them breaking; `watch.py sources` lists them)
 

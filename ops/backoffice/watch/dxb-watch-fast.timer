@@ -1,0 +1,12 @@
+[Unit]
+Description=DXB mechanical watch: selected official sources every 5 minutes
+
+[Timer]
+# :01/5, clear of the keeper (:02/5) and prepare (:03/10). Each source still keeps its own interval (sources.yaml).
+OnBootSec=3min
+OnCalendar=*:01/5
+AccuracySec=10s
+Unit=dxb-watch-fast.service
+
+[Install]
+WantedBy=timers.target

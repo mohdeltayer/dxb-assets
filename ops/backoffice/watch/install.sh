@@ -15,6 +15,16 @@ WHOME=${WATCH_HOME:-$HOME/backoffice/watch}
 UNIT_DIR=${WATCH_UNIT_DIR:-$HOME/.config/systemd/user}
 TOKEN=${WATCH_TOKEN_FILE:-/etc/dxb-watch/github-token}
 UNITS=(dxb-watch-poll.service dxb-watch-poll.timer dxb-watch-digest.service dxb-watch-digest.timer)
+# --fast-only (promise keeper addendum F, 31 Oct 2026): only the 5-minute poll of the selected official sources, with
+# WATCH_PUSH=off in its unit (detection times on the server's clock; GitHub's jobs publish). The full timers above stay
+# off; --fast-disable stops it again.
+FAST=""
+case "${1:-}" in
+  '') ;;
+  --fast-only) FAST=on; UNITS=(dxb-watch-fast.service dxb-watch-fast.timer) ;;
+  --fast-disable) FAST=off; UNITS=(dxb-watch-fast.service dxb-watch-fast.timer) ;;
+  *) echo "usage: install.sh [--fast-only | --fast-disable]" >&2; exit 2 ;;
+esac
 
 if [[ $(id -u) -eq 0 ]]; then
   echo "install.sh: run this as the runner user, not root." >&2; exit 1
@@ -61,7 +71,14 @@ if [[ -z ${WATCH_NO_SYSTEMD:-} ]]; then
   fi
   export DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS:-unix:path=$XDG_RUNTIME_DIR/bus}
   systemctl --user daemon-reload
-  systemctl --user enable --now dxb-watch-poll.timer dxb-watch-digest.timer
+  if [[ $FAST == on ]]; then
+    systemctl --user enable --now dxb-watch-fast.timer
+    systemctl --user start dxb-watch-fast.service || true      # the first pass now
+  elif [[ $FAST == off ]]; then
+    systemctl --user disable --now dxb-watch-fast.timer || true
+  else
+    systemctl --user enable --now dxb-watch-poll.timer dxb-watch-digest.timer
+  fi
   systemctl --user list-timers 'dxb-watch*' --no-pager || true
 fi
 
