@@ -2,7 +2,7 @@
  "id": "2026-10-31-altman-dram-gamers-react",
  "title": "Altman: PCs holding DRAM is 'quite terrible'; gamers react (debate)",
  "game": "multi",
- "status": "approved to build (Mohammad, option A, 31 Oct ~02:30Z); opinion piece, no rush: after the FFXIV keynote reveal",
+ "status": "building (photo and quote done; footage open); no rush, slot after the morning news",
  "chip": "رأي",
  "template": "quote",
  "family": "debate",
@@ -15,7 +15,8 @@
  "sources": [
   {
    "kind": "primary",
-   "who": "Cheeky Pint (Stripe), episode 'Why Sam Altman is against a single superintelligence', YouTube iMsUcCYNKqY, about 29:00; channel and title confirmed by oEmbed, audio not played here; wording as transcribed by Tom's Hardware 30 Oct 16:28Z"
+   "who": "Cheeky Pint (Stripe), episode 'Why Sam Altman is against a single superintelligence', YouTube iMsUcCYNKqY, about 29:00; channel and title confirmed by oEmbed, audio not played here; wording as transcribed by Tom's Hardware 30 Oct 16:28Z",
+   "quote": "\"From a global allocation perspective, actually, it's quite terrible to have everybody have a bunch of the world's limited supply of DRAM sitting in their own computer and being used 5% of the time. You want maximum utilization in the cloud if you're trying to deal with this very supply-constrained environment. And somehow many people's intuition is the opposite of that.\" (Tom's Hardware, 30 Oct 16:28Z, re-read 03:47Z 31 Oct; said while discussing local inference on home computers)"
   },
   {
    "kind": "reaction",
@@ -24,6 +25,16 @@
  ],
  "notes": [
   "First report 29 Oct (over 24 h by 31 Oct); Mohammad chose to run it as an opinion/debate piece for gamers (option A), knowing the scope (AI) and the age.",
-  "Brief: debate family, hook = Altman photo + «رئيس OpenAI: ذاكرة جهازك هدر»; fact = his full sentence with '5% of the time'; views: gamers (AI firms caused the shortage), outlets (ignores gaming; makers serve data centers first, PC prices up), the other side (retail RAM still available at normal prices); question last. Photo: licensed (Wikimedia Commons), credited; name plate with role. Footage: gaming PC hardware from official sources (a RAM maker's press images or product video), no AI imagery."
+  "Brief: debate family, hook = Altman photo + «رئيس OpenAI: ذاكرة جهازك هدر»; fact = his full sentence with '5% of the time'; views: gamers (AI firms caused the shortage), outlets (ignores gaming; makers serve data centers first, PC prices up), the other side (retail RAM still available at normal prices); question last. Photo: licensed (Wikimedia Commons), credited; name plate with role. Footage: gaming PC hardware from official sources (a RAM maker's press images or product video), no AI imagery.",
+  "31 Oct 03:50Z: context matters: he said it while discussing local AI inference on home computers; the Reel must say so (not gaming specifically). Footage candidates: Valve's Steam Machine unboxing (white ground, weak for text); still looking for official RAM or PC-internals footage. Commons API rate-limited from the container (429); FilePath download works."
+ ],
+ "person": [
+  {
+   "name": "سام ألتمان (Sam Altman)",
+   "role": "الرئيس التنفيذي لشركة OpenAI",
+   "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Sam_Altman_CropEdit_James_Tamim.jpg?width=1200",
+   "licence": "CC BY 2.0, author TechCrunch (TechCrunch Disrupt SF 2019, 3 Oct 2019); crop by James Tamim",
+   "credit": "الصورة: تك كرانش (TechCrunch)، CC BY 2.0"
+  }
  ]
 }
