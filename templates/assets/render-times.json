@@ -17426,5 +17426,38 @@
   "min_disk_free_mb": 81629,
   "setup_min": 1.65,
   "story": "mw4-switch-2-digital-foundry"
+ },
+ {
+  "name": "uncharted-3-turns-15-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-31T10:39Z",
+  "stages": {
+   "checks": 4.1,
+   "montage": 42.3,
+   "text": 56.5,
+   "audio": 1.0,
+   "outro": 51.9
+  },
+  "total": 155.9,
+  "lane": "runner",
+  "queued_at": "2026-10-31T10:35:33Z",
+  "finished_at": "2026-10-31T10:39Z",
+  "render_min": 2.6,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 209,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1074,
+  "peak_mem_mb": 1970,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62541,
+  "peak_disk_mb": 65607,
+  "min_disk_free_mb": 82094,
+  "setup_min": 0.9,
+  "story": "uncharted-3-turns-15"
  }
 ]
