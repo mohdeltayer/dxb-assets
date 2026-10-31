@@ -17574,5 +17574,38 @@
   "min_disk_free_mb": 82290,
   "setup_min": 1.08,
   "story": "probably-stolen-500k-sold"
+ },
+ {
+  "name": "next-week-releases-nov-2-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-31T11:52Z",
+  "stages": {
+   "checks": 6.6,
+   "montage": 44.0,
+   "text": 90.9,
+   "audio": 1.3,
+   "outro": 62.6
+  },
+  "total": 205.5,
+  "lane": "runner",
+  "queued_at": "2026-10-31T11:47:14Z",
+  "finished_at": "2026-10-31T11:52Z",
+  "render_min": 3.43,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 280,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1045,
+  "peak_mem_mb": 2112,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62541,
+  "peak_disk_mb": 66278,
+  "min_disk_free_mb": 81423,
+  "setup_min": 0.95,
+  "story": "next-week-releases-nov-2"
  }
 ]
