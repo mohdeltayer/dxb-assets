@@ -281,12 +281,12 @@
    "done": false,
    "production": "qc_passed",
    "delivery": {
-    "instagram": "scheduled",
-    "x": "scheduled",
-    "threads": "scheduled"
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
    },
-   "status": "scheduled",
-   "evidence": "runner render 210 s (f22c62d); director PASS 03:09Z; submitting 03:10Z for 07:20 Dubai (original slot 07:00, two runner text stops); scheduled in Publer 03:10Z for 03:20Z on all three"
+   "status": "fulfilled",
+   "evidence": "runner render 210 s (f22c62d); director PASS 03:09Z; submitting 03:10Z for 07:20 Dubai (original slot 07:00, two runner text stops); scheduled in Publer 03:10Z for 03:20Z on all three; Publer Published 03:20-03:21Z on all three; Inbox published entry"
   }
  ]
 }
