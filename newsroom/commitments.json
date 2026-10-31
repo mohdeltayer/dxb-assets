@@ -382,6 +382,29 @@
    },
    "status": "scheduled",
    "evidence": "job pushed 05:56Z (d6b716ec), gate 05:43Z Exit A on the Square Enix press release; v2 be1dd6d1 director PASS 06:05Z; scheduled in Publer 06:06Z on all three"
+  },
+  {
+   "id": "star-wars-jedi-3-far-in-development",
+   "title": "Star Wars Jedi 3 far in development (تقرير, Schreier)",
+   "kind": "post",
+   "slot": "2026-10-31T12:30+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/star-wars-jedi-3-far-in-development.json",
+   "card": "prod-20261031-jedi-3",
+   "fallback": "bank-piece",
+   "held_by_mohammad": false,
+   "production": "rendering",
+   "delivery": {
+    "instagram": "pending",
+    "x": "pending",
+    "threads": "pending"
+   },
+   "status": "open",
+   "evidence": "gate 06:20Z Exit B (Schreier Bluesky 30 Oct 14:17Z, outlets; no EA statement)"
   }
  ]
 }
