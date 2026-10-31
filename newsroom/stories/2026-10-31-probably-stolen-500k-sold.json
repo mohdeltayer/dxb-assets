@@ -2,7 +2,7 @@
  "id": "2026-10-31-probably-stolen-500k-sold",
  "title": "Probably Stolen passes half a million sold (أرقام)",
  "game": "Probably Stolen",
- "status": "rendering",
+ "status": "scheduled",
  "chip": "أرقام",
  "template": "clipcard",
  "skin": "house",
@@ -80,6 +80,43 @@
   "Variety: the 29 Oct 200k Reel used the launch trailer; this one uses the Release Date + Demo trailer, no shared shots",
   "Ledger find: 2026-10-29-probably-stolen-200k-sold is the earlier figure; this is a follow-up with a new number"
  ],
- "approved": "",
- "director": []
+ "approved": "go: rolling queue; preview sent 11:56Z; gate 11:52Z (tinyBuild Steam post unchanged, 500k; no newer figure found); scheduled in Publer 11:53Z for 13:30Z on Instagram, X, Threads",
+ "director": [
+  {
+   "shot": 1,
+   "time": "0-3.5",
+   "verdict": "PASS",
+   "note": "customer and the shop in the trailer's own fast cuts; headline readable"
+  },
+  {
+   "shot": 2,
+   "time": "3.5-7",
+   "verdict": "PASS",
+   "note": "Mercenary at the counter, then the Wanted board; release line low, game dialog box above it"
+  },
+  {
+   "shot": 3,
+   "time": "7-10.5",
+   "verdict": "PASS",
+   "note": "card 112 thousand peak on dimmed footage, held alone"
+  },
+  {
+   "shot": 4,
+   "time": "10.5-14.5",
+   "verdict": "PASS",
+   "note": "magnifier on goods, the shop, the grinning thief: the premise line"
+  },
+  {
+   "shot": 5,
+   "time": "14.5-19.8",
+   "verdict": "PASS with note",
+   "note": "water-value menu then the counter under the reviews line; menu text is English UI"
+  },
+  {
+   "shot": "Reel",
+   "time": "19.8 s",
+   "verdict": "PASS",
+   "note": "trailer music with each shot's effects (split applied, music 82.2%); speech none; output smear at 6.2-6.8 s waived after a look (pixel-art hard cut)"
+  }
+ ]
 }

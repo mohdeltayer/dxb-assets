@@ -509,6 +509,24 @@
    "done": false,
    "delivery": "scheduled",
    "evidence": null
+  },
+  {
+   "id": "probably-stolen-500k-sold",
+   "title": "Probably Stolen passes half a million (أرقام)",
+   "kind": "news",
+   "slot": "2026-10-31T17:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/probably-stolen-500k-sold.json",
+   "card": "prod-20261031-probably-stolen-500k",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": false,
+   "delivery": "scheduled",
+   "evidence": null
   }
  ]
 }
