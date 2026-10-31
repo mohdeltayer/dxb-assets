@@ -356,6 +356,29 @@
    },
    "status": "scheduled",
    "evidence": "job pushed 05:18Z (6651f6a7); v1 cover headline over face; v2 191d550e director PASS 05:40Z, audio split applied clean; submitting for 06:30Z; scheduled in Publer 05:38Z on all three"
+  },
+  {
+   "id": "ffxiv-35-million-accounts",
+   "title": "FFXIV 35M accounts, Evercold confirmed (رسمي update)",
+   "kind": "post",
+   "slot": "2026-10-31T11:30+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/ffxiv-35-million-accounts.json",
+   "card": "prod-20261031-ffxiv-35m",
+   "fallback": "bank-piece",
+   "held_by_mohammad": false,
+   "production": "rendering",
+   "delivery": {
+    "instagram": "pending",
+    "x": "pending",
+    "threads": "pending"
+   },
+   "status": "open",
+   "evidence": "job pushed 05:56Z (d6b716ec), gate 05:43Z Exit A on the Square Enix press release"
   }
  ]
 }
