@@ -371,14 +371,14 @@
    "card": "prod-20261031-ffxiv-35m",
    "fallback": "bank-piece",
    "held_by_mohammad": false,
-   "production": "rendering",
+   "production": "qc_passed",
    "delivery": {
-    "instagram": "pending",
-    "x": "pending",
-    "threads": "pending"
+    "instagram": "scheduled",
+    "x": "scheduled",
+    "threads": "scheduled"
    },
-   "status": "open",
-   "evidence": "job pushed 05:56Z (d6b716ec), gate 05:43Z Exit A on the Square Enix press release"
+   "status": "scheduled",
+   "evidence": "job pushed 05:56Z (d6b716ec), gate 05:43Z Exit A on the Square Enix press release; v2 be1dd6d1 director PASS 06:05Z; scheduled in Publer 06:06Z on all three"
   }
  ]
 }
