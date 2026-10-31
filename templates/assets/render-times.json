@@ -16958,5 +16958,38 @@
   "min_disk_free_mb": 83314,
   "setup_min": 0.78,
   "story": "ffxiv-35-million-accounts"
+ },
+ {
+  "name": "ffxiv-35-million-accounts-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-10-31T06:03Z",
+  "stages": {
+   "checks": 3.0,
+   "montage": 24.2,
+   "text": 22.2,
+   "audio": 0.6,
+   "outro": 27.2
+  },
+  "total": 77.2,
+  "lane": "runner",
+  "queued_at": "2026-10-31T06:00:27Z",
+  "finished_at": "2026-10-31T06:03Z",
+  "render_min": 1.29,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 121,
+  "mem_total_mb": 15701,
+  "mem_start_mb": 1091,
+  "peak_mem_mb": 2203,
+  "disk_total_mb": 73325,
+  "disk_start_mb": 62222,
+  "peak_disk_mb": 64094,
+  "min_disk_free_mb": 9215,
+  "setup_min": 1.23,
+  "story": "ffxiv-35-million-accounts"
  }
 ]
