@@ -382,12 +382,18 @@
    "held_by_mohammad": false,
    "production": "qc_passed",
    "delivery": {
-    "instagram": "scheduled",
-    "x": "scheduled",
-    "threads": "scheduled"
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
    },
-   "status": "scheduled",
-   "evidence": "job pushed 05:56Z (d6b716ec), gate 05:43Z Exit A on the Square Enix press release; v2 be1dd6d1 director PASS 06:05Z; scheduled in Publer 06:06Z on all three"
+   "status": "fulfilled",
+   "evidence": "job pushed 05:56Z (d6b716ec), gate 05:43Z Exit A on the Square Enix press release; v2 be1dd6d1 director PASS 06:05Z; scheduled in Publer 06:06Z on all three; published 07:30-07:31Z on all three, Inbox entry written",
+   "logged": true,
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DfJoBS_AFJg/",
+    "x": "https://x.com/1748744375616643072/status/2116432698604466648",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfJoA0ZFY9r"
+   }
   },
   {
    "id": "star-wars-jedi-3-far-in-development",
