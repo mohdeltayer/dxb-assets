@@ -17377,5 +17377,54 @@
   "min_disk_free_mb": 81089,
   "setup_min": 1.27,
   "story": "chronicles-medieval-studio-funding"
+ },
+ {
+  "name": "mw4-switch-2-digital-foundry-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-31T10:24Z",
+  "stages": {
+   "checks": 4.6,
+   "montage": 63.1,
+   "text": 66.8,
+   "audio": 1.2,
+   "outro": 63.0
+  },
+  "total": 198.7,
+  "lane": "runner",
+  "queued_at": "2026-10-31T10:18:39Z",
+  "finished_at": "2026-10-31T10:24Z",
+  "render_min": 3.31,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 3.1,
+   "audio_secs": 48.0,
+   "music_pct": 47.6,
+   "leak_pct": 3.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 5,
+    "miss": 0
+   },
+   "effects_shots": 5,
+   "mix_secs": 1.1,
+   "secs": 4.7
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 287,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1376,
+  "peak_mem_mb": 2079,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62911,
+  "peak_disk_mb": 66073,
+  "min_disk_free_mb": 81629,
+  "setup_min": 1.65,
+  "story": "mw4-switch-2-digital-foundry"
  }
 ]
