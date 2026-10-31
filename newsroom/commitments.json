@@ -490,6 +490,24 @@
    "done": false,
    "delivery": "scheduled",
    "evidence": null
+  },
+  {
+   "id": "uncharted-3-turns-15",
+   "title": "Uncharted 3 turns 15 (في مثل هذا اليوم)",
+   "kind": "evergreen",
+   "slot": "2026-11-01T00:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/uncharted-3-turns-15.json",
+   "card": "prod-20261031-uncharted-3",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": false,
+   "delivery": "scheduled",
+   "evidence": null
   }
  ]
 }
