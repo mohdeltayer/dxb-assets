@@ -16827,5 +16827,54 @@
   "min_disk_free_mb": 79841,
   "setup_min": 0.9,
   "story": "altman-dram-gamers-react"
+ },
+ {
+  "name": "silver-palace-december-14-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-31T05:24Z",
+  "stages": {
+   "checks": 8.9,
+   "montage": 81.6,
+   "text": 71.2,
+   "audio": 1.2,
+   "outro": 57.7
+  },
+  "total": 220.6,
+  "lane": "runner",
+  "queued_at": "2026-10-31T05:18:30Z",
+  "finished_at": "2026-10-31T05:24Z",
+  "render_min": 3.68,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 16.8,
+   "audio_secs": 50.0,
+   "music_pct": 90.1,
+   "leak_pct": 0.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 6
+   },
+   "effects_shots": 7,
+   "mix_secs": 6.8,
+   "secs": 24.1
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 400,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1338,
+  "peak_mem_mb": 2732,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62840,
+  "peak_disk_mb": 66492,
+  "min_disk_free_mb": 81210,
+  "setup_min": 1.02,
+  "story": "silver-palace-december-14"
  }
 ]
