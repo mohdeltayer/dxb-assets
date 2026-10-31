@@ -17492,5 +17492,38 @@
   "min_disk_free_mb": 83458,
   "setup_min": 1.35,
   "story": "warframe-tau-december"
+ },
+ {
+  "name": "bioware-closed-for-battlefront-3-report-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-10-31T11:25Z",
+  "stages": {
+   "checks": 3.8,
+   "montage": 44.2,
+   "text": 66.5,
+   "audio": 1.1,
+   "outro": 59.6
+  },
+  "total": 175.2,
+  "lane": "runner",
+  "queued_at": "2026-10-31T11:20:33Z",
+  "finished_at": "2026-10-31T11:25Z",
+  "render_min": 2.92,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 248,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1004,
+  "peak_mem_mb": 2160,
+  "disk_total_mb": 147718,
+  "disk_start_mb": 62541,
+  "peak_disk_mb": 65655,
+  "min_disk_free_mb": 82046,
+  "setup_min": 1.02,
+  "story": "bioware-closed-for-battlefront-3-report"
  }
 ]
