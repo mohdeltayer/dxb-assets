@@ -17804,5 +17804,38 @@
   "min_disk_free_mb": 83877,
   "setup_min": 0.87,
   "story": "bend-studio-next-game-2027-report"
+ },
+ {
+  "name": "bend-studio-next-game-2027-report-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-01T13:55Z",
+  "stages": {
+   "checks": 4.1,
+   "montage": 41.7,
+   "text": 46.0,
+   "audio": 0.9,
+   "outro": 36.4
+  },
+  "total": 129.0,
+  "lane": "runner",
+  "queued_at": "2026-11-01T13:52:10Z",
+  "finished_at": "2026-11-01T13:55Z",
+  "render_min": 2.15,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 197,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1097,
+  "peak_mem_mb": 3467,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60637,
+  "peak_disk_mb": 64095,
+  "min_disk_free_mb": 83702,
+  "setup_min": 0.85,
+  "story": "bend-studio-next-game-2027-report"
  }
 ]
