@@ -65,15 +65,15 @@
   "angle": "the free demo lands tomorrow, announced on the first Pikmin Day",
   "hook": "surprise (free demo tomorrow)",
   "format": "split; opens on Oatchi rushing through the flower garden",
-  "cover": "Oatchi in the garden, headline «نسخة Pikmin 4 التجريبية / تصل إلى Switch 2 غدًا»",
+  "cover": "Pikmin carrying a giant grape cluster with Oatchi, headline «نسخة Pikmin 4 التجريبية / تصل إلى Switch 2 غدًا»",
   "shots": [
-   "8.8 Oatchi rushing through the flowers: headline",
-   "90.0 then 124.3 Pikmin carrying treasure in the garden, then red Pikmin with an apple: Pikmin Day line",
-   "2.8 then 47.6 the explorer and Oatchi in the opening garden, then a Dandori Academy stage start: free demo line",
-   "60.5 then 66.0 a Dandori Academy stage from above: demo contents line",
-   "80.0 explorer with a squad and treasure: save transfer line",
-   "19.6 voice-command demonstration with the mic window: Oatchi voice line",
-   "99.6 the pumpkin garden: closing picture"
+   "80.0 Pikmin carrying a grape cluster, Oatchi in front: headline (v1 opened on the flower field with the PIKMIN 4 logo fading in at 10.3 s)",
+   "90.0 then 57.3 Pikmin carrying treasure in the garden, then a squad carrying a giant creature: Pikmin Day line",
+   "47.6 then 50.3 a Dandori Academy stage starting: free demo line",
+   "60.5 then 66.0 a Dandori Academy stage from above and in play: demo contents line",
+   "93.0 the garden with the pumpkin: save transfer line",
+   "19.6 voice-command demonstration: Oatchi voice line",
+   "132.8 the bright mushroom field with Oatchi: closing picture"
   ],
   "strip": "النسخة الكاملة 12 نوفمبر · لمالكي Pikmin 4: حزمة ترقية (dates not repeated in lines)",
   "total_secs": "28.8 s of story plus the end card"
@@ -100,6 +100,14 @@
   {
    "v": 1,
    "note": "runner run 1 failed the pace check (three 5 s shots); shots split into two angles each, no change above 3.9 s"
+  },
+  {
+   "v": 1,
+   "note": "rendered; director FIX: ESRB rating card at 2.8 s source, Master Board UI with fine print at 124.3, burnt-in English caption on the closing shot, cover subject at the frame edge"
+  },
+  {
+   "v": 2,
+   "note": "shots replaced: no rating card, no UI fine print, no captions; cover on the grape-carrying Pikmin"
   }
  ]
 }
