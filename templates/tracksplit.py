@@ -36,7 +36,7 @@ sting (pilot), the breaking profile or the عاجل chip (speed first), and `"au
     python3 tracksplit.py need <job.json>      # exit 0 when the job needs the split (render.yml installs it then)
     python3 tracksplit.py mix <spec.json>      # the child process render_job runs under a timeout
 """
-import hashlib, json, os, subprocess, sys, tempfile, time
+import hashlib, json, os, shutil, subprocess, sys, tempfile, time
 
 SR = 44100
 CARD = 2.0                 # outro.CARD: the end card and its jingle stay as rendered
@@ -93,7 +93,7 @@ def apply(job, video, starts, xfade, uploads):
         if p.returncode != 0:
             rec['reason'] = 'split failed: ' + (p.stderr.strip().splitlines() or ['no output'])[-1][:300]
         elif rec.get('clean') and os.path.exists(spec['out']):
-            os.replace(spec['out'], video)
+            shutil.move(spec['out'], video)   # the temp dir can sit on another device than the workspace (runner: EXDEV)
             rec['applied'] = True
         elif 'reason' not in rec:
             rec['reason'] = 'no output'
