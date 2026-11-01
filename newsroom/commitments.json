@@ -626,6 +626,25 @@
    "evidence": "Publer Published 15:31-15:33Z on Instagram, X and Threads (default Approve applied); https://www.instagram.com/reel/DfND4IRj48T/",
    "delivery": "published",
    "logged": true
+  },
+  {
+   "id": "sonic-generations-turns-15",
+   "title": "لعبة Sonic Generations تكمل 15 عامًا",
+   "kind": "reel",
+   "slot": "2026-11-01T23:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/sonic-generations-turns-15.json",
+   "card": "prod-20261101-sonic-generations-15",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": false,
+   "evidence": null,
+   "delivery": "scheduled",
+   "logged": false
   }
  ]
 }

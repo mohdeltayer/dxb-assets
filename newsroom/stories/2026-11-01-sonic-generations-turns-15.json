@@ -2,7 +2,7 @@
  "id": "2026-11-01-sonic-generations-turns-15",
  "title": "Sonic Generations turns 15 (في مثل هذا اليوم)",
  "game": "Sonic Generations",
- "status": "rendering",
+ "status": "scheduled",
  "chip": "في مثل هذا اليوم",
  "template": "trailer",
  "skin": "house",
@@ -65,7 +65,7 @@
  "drafts": {
   "headline": "لعبة Sonic Generations\nتكمل 15 عامًا",
   "lines": [
-   "صدرت لجهازي PS3 وXbox 360 / في 1 نوفمبر 2011",
+   "صدرت لجهازي PS3 و Xbox 360 / في 1 نوفمبر 2011",
    "في الذكرى العشرين / لانطلاق السلسلة",
    "جمعت جيلَي Sonic",
    "عادت في 2024 بنسخة محسّنة / ضمن Sonic X Shadow Generations"
@@ -80,5 +80,53 @@
  "notes": [
   "Ledger grep: Sonic X Shadow Generations 3 million (26 Oct, launch trailer from 48 s) is the only recent Generations story; this one is the 2011 anniversary on a different trailer (Coming Soon Trailer)",
   "Credit on every shot: «لقطات من Sonic X Shadow Generations · المصدر: سيغا (SEGA)»"
- ]
+ ],
+ "approved": "go: rolling queue (evergreen gap fill); preview sent 15:50Z; gate 15:48Z: SEGA release date (1 Nov 2011 NA, PS3 and Xbox 360) and Steam page re-read, no change",
+ "scheduled": "scheduled in Publer 15:49Z for 19:30Z (23:30 Dubai 1 Nov): Instagram, X, Threads",
+ "director": {
+  "v3": [
+   [
+    "0",
+    "0-1.7 s",
+    "PASS",
+    "Sonic face close under the headline, readable at grid size; the face clears the headline"
+   ],
+   [
+    "1",
+    "1.7-6.1",
+    "PASS",
+    "Green Hill classic, the chomper, Modern Sonic boost: release line"
+   ],
+   [
+    "2",
+    "6.1-10.3",
+    "PASS",
+    "City Escape and green run: 20th-anniversary line"
+   ],
+   [
+    "3",
+    "10.3-13.2",
+    "PASS",
+    "official art, Modern Sonic with Classic Sonic in frame for «جمعت جيلَي Sonic» (v2 framed Shadow instead)"
+   ],
+   [
+    "4",
+    "13.2-16.1",
+    "PASS",
+    "Shadow and the Biolizard eye for the 2024 return; dark, nothing graphic"
+   ],
+   [
+    "5",
+    "16.1-18.4",
+    "PASS",
+    "both Sonics standing, closing picture"
+   ],
+   [
+    "reel",
+    "16.4 s + end card",
+    "PASS",
+    "retro bed (on-this-day rule), credit on every shot «لقطات من نسخة 2024 · المصدر: سيغا (SEGA)»; v1 fixed (headline over art close-up, pan into an empty field), v2 fixed (Shadow under the generations line)"
+   ]
+  ]
+ }
 }
