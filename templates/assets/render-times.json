@@ -18044,5 +18044,38 @@
   "min_disk_free_mb": 81016,
   "setup_min": 1.22,
   "story": "oot-road-ep8-seven-years"
+ },
+ {
+  "name": "sonic-generations-turns-15-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-01T15:30Z",
+  "stages": {
+   "checks": 5.0,
+   "montage": 58.6,
+   "text": 58.1,
+   "audio": 1.0,
+   "outro": 52.9
+  },
+  "total": 175.6,
+  "lane": "runner",
+  "queued_at": "2026-11-01T15:26:27Z",
+  "finished_at": "2026-11-01T15:30Z",
+  "render_min": 2.93,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 242,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1035,
+  "peak_mem_mb": 3387,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60637,
+  "peak_disk_mb": 63500,
+  "min_disk_free_mb": 84296,
+  "setup_min": 0.87,
+  "story": "sonic-generations-turns-15"
  }
 ]
