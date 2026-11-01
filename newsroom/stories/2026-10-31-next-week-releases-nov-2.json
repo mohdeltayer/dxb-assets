@@ -2,7 +2,7 @@
  "id": "2026-10-31-next-week-releases-nov-2",
  "title": "Next week's releases, 2 to 7 Nov (ملخص)",
  "game": "several",
- "status": "rendering",
+ "status": "scheduled",
  "chip": "ملخص",
  "template": "list",
  "skin": "house",
@@ -91,8 +91,12 @@
  },
  "notes": [
   "Ledger check (grep of newsroom/stories) before building: 2026-10-24-next-week-releases-oct-26 covered the previous week; Ocarina series runs separately; Game Pass list (31 Oct 04:30Z) covered VOID/BREAKER and Escape Academy 2 as Game Pass items",
-  "Nintendo store videos are 1280x720 at 2.7 to 2.9 Mbps (lowbit, enlarged 2.7x); lowres_ok names the copies searched"
+  "Nintendo store videos are 1280x720 at 2.7 to 2.9 Mbps (lowbit, enlarged 2.7x); lowres_ok names the copies searched",
+  "1 Nov: v2 re-rendered (opening shot focus [[0,0.24],[1.6,0.42],[2.6,0.62]]) because v1 frame 0 cut Epona at the left edge; v1 never posted (session at limit 31 Oct 12:00Z onward)"
  ],
- "approved": "",
- "director": []
+ "approved": "go: rolling queue; preview sent 13:26Z; gate 13:24Z: Nintendo US store re-read (Ocarina 59.99, Guardians 39.99 regular with 35.99 pre-order, both 5 Nov); Steam and Xbox Wire unchanged",
+ "director": {
+  "v2": "first frame: Link on Epona in the frame, headline readable at grid size, Link small under the second headline line (accepted); shots 2-6 as v1 (smear waivers on GotG cuts after a look); last 2 s picture; our bed (launch) with reason: four games, no single trailer"
+ },
+ "scheduled": "scheduled in Publer 13:25Z for 14:30Z (18:30 Dubai 1 Nov): Instagram, X, Threads"
 }
