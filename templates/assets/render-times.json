@@ -17874,5 +17874,38 @@
   "min_disk_free_mb": 81137,
   "setup_min": 0.98,
   "story": "oot-road-ep8-seven-years"
+ },
+ {
+  "name": "pikmin-4-switch-2-demo-nov-2-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-01T13:57Z",
+  "stages": {
+   "checks": 9.5,
+   "montage": 54.2,
+   "text": 106.4,
+   "audio": 1.6,
+   "outro": 73.8
+  },
+  "total": 245.5,
+  "lane": "runner",
+  "queued_at": "2026-11-01T13:51:54Z",
+  "finished_at": "2026-11-01T13:57Z",
+  "render_min": 4.09,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 322,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1024,
+  "peak_mem_mb": 3726,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60653,
+  "peak_disk_mb": 65616,
+  "min_disk_free_mb": 82180,
+  "setup_min": 0.97,
+  "story": "pikmin-4-switch-2-demo-nov-2"
  }
 ]
