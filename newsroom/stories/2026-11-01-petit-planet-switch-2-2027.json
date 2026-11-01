@@ -3,11 +3,11 @@
  "title": "Petit Planet coming to Switch 2 in 2027 (رسمي)",
  "game": "Petit Planet",
  "publisher": "HoYoverse",
- "status": "rendering",
+ "status": "scheduled",
  "chip": "رسمي",
  "template": "trailer",
  "skin": "house",
- "sound": "trailer: one continuous stretch of the official trailer from 119.0 s (music, no speech; transcript: speech only at 0.3 to 18.3 s and 152.5 to 154.5 s)",
+ "sound": "trailer: one continuous stretch of the official trailer from 119.15 s, in sync with the picture (music 99.5% by Cocktail Fork); the audio split itself did not apply on v2 (runner error: cross-device rename of the split file), so the Reel carries the trailer stretch as rendered, which is the same moment as every shot",
  "genre": [
   "family",
   "anime"
@@ -97,6 +97,61 @@
   "Grammar review (arabic-grammar-review stage on headline, lines, X, Threads, Instagram): no required edits; house rules: company Arabic then Latin at first mention, Arabic-first lines, قادمة إلى for a platform, تصدر for dates, «لجهاز Switch 2» on screen (no glued prefix), no em dash, X without hashtags",
   "Footage source kind: 1080p official trailer from the publisher's own site (no 4K or vertical cut found on the site; Steam has no listing; YouTube not used)",
   "render_job.py check 13:32Z: ok, clip 31.3 s; speech in the stretch: none",
-  "Runner v1 attempt 13:33Z stopped at the text check: «تصدر أولًا على الحاسب والجوال» ran out of the safe zone; line rewrapped after الحاسب"
+  "Runner v1 attempt 13:33Z stopped at the text check: «تصدر أولًا على الحاسب والجوال» ran out of the safe zone; line rewrapped after الحاسب",
+  "Runner v2 attempt 13:45Z stopped on pace (holds over 4 s); closing shot cut to 4.5 s and pace_ok given with the reason (one continuous trailer stretch)"
+ ],
+ "approved": "go: rolling queue; preview sent 14:20Z; gate 14:15Z: official X post (via Famitsu embed) and the press release text unchanged, Gematsu with no update note, no denial",
+ "scheduled": "scheduled in Publer 14:17Z for 15:30Z (19:30 Dubai) on Instagram (Reel, first comment, Dubai location), X (follow-up with the official post link) and Threads; labels tpl:trailer, skin:house, sound:trailer, genre:family",
+ "render": {
+  "v1": "cards/2026-11/petit-planet-switch-2-2027-reel-v1.mp4 (not used: frame 0 was the tail of the guitar close-up, crop on the heroine under the headline)",
+  "v2": "cards/2026-11/petit-planet-switch-2-2027-reel-v2.mp4, 30.1 s with the end card, runner 253 s"
+ },
+ "director": [
+  {
+   "shot": 0,
+   "time": "0.0-1.85",
+   "verdict": "PASS",
+   "note": "red panda moving from frame 0, headline above its eyes, chip clear of the grid corner; cover readable at 3:4"
+  },
+  {
+   "shot": 1,
+   "time": "1.85-4.85",
+   "verdict": "PASS",
+   "note": "card game, picture breathes under the headline (no line)"
+  },
+  {
+   "shot": 2,
+   "time": "4.85-5.85",
+   "verdict": "PASS",
+   "note": "picnic food"
+  },
+  {
+   "shot": 3,
+   "time": "5.85-14.85",
+   "verdict": "PASS",
+   "note": "group round the cake; HoYoverse line then Switch 2 2027 line; trailer camera moves and the pot appears at 131 s (pace_ok)"
+  },
+  {
+   "shot": 4,
+   "time": "14.85-17.85",
+   "verdict": "PASS",
+   "note": "hands and pot under the caring and cooking line"
+  },
+  {
+   "shot": 5,
+   "time": "17.85-23.85",
+   "verdict": "PASS",
+   "note": "neighbours gather; 4 Dec PC and mobile line"
+  },
+  {
+   "shot": 6,
+   "time": "23.85-28.35",
+   "verdict": "PASS",
+   "note": "night festival, 10 million payoff; closing picture before the end card"
+  },
+  {
+   "reel": "PASS",
+   "note": "trailer music throughout, no speech in the stretch; nothing graphic; lines Arabic-first, inside the safe zone; the trailer's small \"In development\" disclaimer sits under the Reels caption area at the bottom edge, cut by the crop on some frames (publisher legal text, below the safe zone, present on every shot of the trailer); decode and smear checks passed on the runner"
+  }
  ]
 }
