@@ -3,7 +3,7 @@
  "title": "Bend Studio's next game: reveal and release in 2027, third person, co-op (تقرير, MP1st)",
  "game": "Bend Studio new project (unannounced)",
  "publisher": "Sony Interactive Entertainment",
- "status": "rendering",
+ "status": "scheduled",
  "first_report": "2026-10-31T21:24Z (MP1st, anonymous sources)",
  "chip": "تقرير",
  "template": "trailer",
@@ -81,5 +81,51 @@
   "Gate 13:50Z: web search for a denial or update: none; MP1st article read in full (no update or correction note)",
   "Reports at most one in three: tonight 14:30 list (ملخص), 15:30 Petit Planet, 16:30 Pikmin, 17:00 Ocarina, 18:00 Cook Man (جديد), 19:00 this (تقرير)",
   "v1 headline too long for two lines at 72 px on the runner; cut to «لعبة مطور Days Gone / قد تصدر في 2027»"
- ]
+ ],
+ "approved": "go: rolling queue; preview sent 13:59Z; gate 13:50Z and 13:58Z: MP1st article unchanged, web search found no denial or comment from Sony or Bend; chip تقرير, «لم تؤكد سوني» on screen and in text",
+ "scheduled": "scheduled in Publer 13:58Z for 19:00Z (23:00 Dubai 1 Nov): Instagram, X, Threads",
+ "director": {
+  "v1": "FIX: frame 0 a dark skid shot, no face (seek offset on the Steam HLS copy)",
+  "v2": [
+   {
+    "shot": 0,
+    "time": "0-2.0",
+    "verdict": "PASS (note)",
+    "note": "Deacon running from the bear; his face sits just above the headline, partly cut at the top edge; recognisable at grid size"
+   },
+   {
+    "shot": 1,
+    "time": "2.0-4.3",
+    "verdict": "PASS",
+    "note": "Deacon with the rifle; bodies in the source frame are outside the 9:16 window"
+   },
+   {
+    "shot": "2-3",
+    "time": "4.3-8.8",
+    "verdict": "PASS",
+    "note": "walk with the fuel can, then at the bike in the snow: line «يقول موقع MP1st»"
+   },
+   {
+    "shot": "4-5",
+    "time": "8.8-13.4",
+    "verdict": "PASS",
+    "note": "bike in the grass, bike parts: third person and co-op line"
+   },
+   {
+    "shot": "6-7",
+    "time": "13.4-17.6",
+    "verdict": "PASS",
+    "note": "fog ride, garage bike: not live service, not Days Gone 2"
+   },
+   {
+    "shot": 8,
+    "time": "17.6-20.6",
+    "verdict": "PASS (note)",
+    "note": "diner window with the bike outside; small figures by the pumps, nothing graphic; «لم تؤكد سوني» line"
+   },
+   {
+    "reel": "20.6 s + end card; credit «لقطات من Days Gone · المصدر: سوني (Sony)» on every shot; our bed with the stated reason (all four Days Gone Steam trailers narrated or letterboxed); speech: none; no gore"
+   }
+  ]
+ }
 }
