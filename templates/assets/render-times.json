@@ -17956,5 +17956,56 @@
   "min_disk_free_mb": 82154,
   "setup_min": 1.02,
   "story": "petit-planet-switch-2-2027"
+ },
+ {
+  "name": "petit-planet-switch-2-2027-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-01T14:14Z",
+  "stages": {
+   "checks": 3.6,
+   "montage": 58.4,
+   "text": 64.6,
+   "audio": 1.4,
+   "outro": 53.6
+  },
+  "total": 181.5,
+  "lane": "runner",
+  "queued_at": "2026-11-01T14:09:29Z",
+  "finished_at": "2026-11-01T14:14Z",
+  "render_min": 3.02,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 7.1,
+   "audio_secs": 30.3,
+   "music_pct": 99.5,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 7,
+   "mix_secs": 5.9,
+   "reason": "split failed: [Errno 18] Invalid cross-device link: '/tmp/tracksplit-76520j91/split.mp4' -> '/home/runner/work/dxb-assets/dxb-assets/cards/2026-11/petit-planet-switch-2-2027-reel-v2.mp4'",
+   "secs": 13.4
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 253,
+  "mem_total_mb": 15700,
+  "mem_start_mb": 1474,
+  "peak_mem_mb": 5925,
+  "disk_total_mb": 73317,
+  "disk_start_mb": 56742,
+  "peak_disk_mb": 58134,
+  "min_disk_free_mb": 15166,
+  "peak_tmp_mb": 3427,
+  "setup_min": 1.12,
+  "story": "petit-planet-switch-2-2027"
  }
 ]
