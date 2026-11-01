@@ -18110,5 +18110,38 @@
   "min_disk_free_mb": 84437,
   "setup_min": 0.8,
   "story": "sonic-generations-turns-15"
+ },
+ {
+  "name": "sonic-generations-turns-15-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-11-01T15:45Z",
+  "stages": {
+   "checks": 4.6,
+   "montage": 56.0,
+   "text": 55.0,
+   "audio": 1.0,
+   "outro": 52.0
+  },
+  "total": 168.6,
+  "lane": "runner",
+  "queued_at": "2026-11-01T15:41:09Z",
+  "finished_at": "2026-11-01T15:45Z",
+  "render_min": 2.81,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 234,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1063,
+  "peak_mem_mb": 3352,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60637,
+  "peak_disk_mb": 63358,
+  "min_disk_free_mb": 84438,
+  "setup_min": 1.05,
+  "story": "sonic-generations-turns-15"
  }
 ]
