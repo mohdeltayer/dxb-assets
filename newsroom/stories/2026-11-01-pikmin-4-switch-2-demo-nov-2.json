@@ -2,7 +2,7 @@
  "id": "2026-11-01-pikmin-4-switch-2-demo-nov-2",
  "title": "Pikmin 4 Switch 2 Edition free demo arrives 2 Nov; Pikmin Day declared (رسمي)",
  "game": "Pikmin 4 – Nintendo Switch 2 Edition + Dandori Academy",
- "status": "rendering",
+ "status": "scheduled",
  "chip": "رسمي",
  "template": "split",
  "skin": "house",
@@ -108,6 +108,61 @@
   {
    "v": 2,
    "note": "shots replaced: no rating card, no UI fine print, no captions; cover on the grape-carrying Pikmin"
+  },
+  {
+   "v": 2,
+   "note": "rendered on the runner after two smear waivers/shot moves; scheduled"
   }
- ]
+ ],
+ "out": "cards/2026-11/pikmin-4-switch-2-demo-nov-2-reel-v2.mp4",
+ "gate": "gate 13:59Z: Nintendo US store page (read 13:20Z) still lists 12 Nov and no price; demo 2 Nov from the Pikmin Day Direct via Nintendo Life (1 Nov) and Nintendo Everything (31 Oct), both agree; no update or denial found",
+ "director": {
+  "v1": "FIX: 2.8 s source shot shows the ESRB rating card; 124.3 opens on the Master Board UI with fine print cut by the crop; closing shot carries a burnt-in English caption; cover subject at the frame edge with the PIKMIN 4 logo fading in",
+  "v2": [
+   [
+    "0 cover, 80.0",
+    "0.0-3.5",
+    "PASS",
+    "grape-carrying Pikmin and Oatchi, headline readable at grid size"
+   ],
+   [
+    "L1 90.0 / 57.3",
+    "3.5-8.7",
+    "PASS",
+    "Pikmin carrying treasure, then a squad carrying a creature"
+   ],
+   [
+    "L2 47.6 / 50.3",
+    "8.7-14.1",
+    "PASS",
+    "Dandori stage start; the game's own 'Go' banner is cut at the crop edge (game UI, not text that matters)"
+   ],
+   [
+    "L3 60.5 / 63.4",
+    "14.1-19.7",
+    "PASS",
+    "Dandori stage from above then in play; smear at the trailer's own cut waived after a look"
+   ],
+   [
+    "L4 93.0",
+    "19.7-23.6",
+    "PASS",
+    "garden with the pumpkin, no captions"
+   ],
+   [
+    "L5 19.6 / 132.8",
+    "23.6-30.0",
+    "PASS",
+    "voice-command scene, then the bright mushroom field as the closing picture"
+   ],
+   [
+    "Reel",
+    "31.7 s",
+    "PASS",
+    "nothing graphic; sound: our bed (reason in 'sound'); change at most every 3.9 s; last 2 s a picture"
+   ]
+  ]
+ },
+ "approved": "go: rolling queue; preview sent 14:02Z (card prod-20261101-pikmin-4-demo, default Approve 16:15Z)",
+ "scheduled": "scheduled in Publer 14:01Z for 16:30Z (20:30 Dubai): Instagram Reel, X, Threads"
 }
