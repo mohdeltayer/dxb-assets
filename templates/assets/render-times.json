@@ -17689,5 +17689,38 @@
   "min_disk_free_mb": 84932,
   "setup_min": 1.0,
   "story": "mega-man-dual-override-cook-man"
+ },
+ {
+  "name": "pikmin-4-switch-2-demo-nov-2-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-01T13:40Z",
+  "stages": {
+   "checks": 7.3,
+   "montage": 41.0,
+   "text": 71.7,
+   "audio": 1.5,
+   "outro": 61.3
+  },
+  "total": 182.7,
+  "lane": "runner",
+  "queued_at": "2026-11-01T13:35:45Z",
+  "finished_at": "2026-11-01T13:40Z",
+  "render_min": 3.05,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 240,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1112,
+  "peak_mem_mb": 3807,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60637,
+  "peak_disk_mb": 65662,
+  "min_disk_free_mb": 82135,
+  "setup_min": 0.8,
+  "story": "pikmin-4-switch-2-demo-nov-2"
  }
 ]
