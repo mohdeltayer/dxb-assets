@@ -3,26 +3,53 @@
  "title": "Mega Man: Dual Override reveals Cook Man, the fourth boss (جديد)",
  "game": "Mega Man: Dual Override",
  "publisher": "Capcom",
- "status": "rendering",
+ "status": "scheduled",
  "first_report": "2026-11-01T04:58Z (Capcom, @ROCKMAN_UNITY video post)",
  "chip": "جديد",
  "template": "split",
  "skin": "house",
  "theme": "cold",
  "sound": "trailer: the reveal video's own music and effects as one stretch from 2.4 s; shots from 16.4, 19.8, 24.0 s rely on the audio split (no speech in the video: faster-whisper found no words)",
- "genre": ["family", "anime"],
+ "genre": [
+  "family",
+  "anime"
+ ],
  "sensitive": "none",
  "family": "announcement (character reveal)",
  "sources": [
-  {"kind": "primary", "what": "Capcom official Mega Man (Rockman) account post with the Cook Man video, 1 Nov 04:58Z", "url": "https://x.com/ROCKMAN_UNITY/status/2116756803619102976"},
-  {"kind": "primary", "what": "Capcom's Steam announcements for the game: twelfth mainline entry, Spring 2027, 40th anniversary in 2027, Mega Man and Proto Man playable", "url": "https://store.steampowered.com/app/4223290/"},
-  {"kind": "outlet", "what": "Denfaminicogamer 1 Nov 06:53Z: Capcom's description of Cook Man (wandering cooking robot, kung fu cooking, wish for recognition ran amok, rampaging in a large restaurant); faces Proto Man in a giant-pot stage", "url": "https://news.denfaminicogamer.jp/news/261101h"}
+  {
+   "kind": "primary",
+   "what": "Capcom official Mega Man (Rockman) account post with the Cook Man video, 1 Nov 04:58Z",
+   "url": "https://x.com/ROCKMAN_UNITY/status/2116756803619102976"
+  },
+  {
+   "kind": "primary",
+   "what": "Capcom's Steam announcements for the game: twelfth mainline entry, Spring 2027, 40th anniversary in 2027, Mega Man and Proto Man playable",
+   "url": "https://store.steampowered.com/app/4223290/"
+  },
+  {
+   "kind": "outlet",
+   "what": "Denfaminicogamer 1 Nov 06:53Z: Capcom's description of Cook Man (wandering cooking robot, kung fu cooking, wish for recognition ran amok, rampaging in a large restaurant); faces Proto Man in a giant-pot stage",
+   "url": "https://news.denfaminicogamer.jp/news/261101h"
+  }
  ],
  "claims": [
-  {"claim": "Cook Man is the fourth boss of Mega Man: Dual Override, revealed 1 Nov", "status": "confirmed (Capcom post)"},
-  {"claim": "a wandering cooking robot whose kung fu cooking style he wants recognised; rampaging in a large restaurant", "status": "Capcom's description as quoted by Denfaminicogamer from the official post"},
-  {"claim": "Spring 2027, twelfth mainline entry, 40th anniversary, two playable heroes", "status": "confirmed (Capcom Steam announcements)"},
-  {"claim": "platforms (Switch, Switch 2, PS4, PS5, Xbox, Steam, Epic)", "status": "not used: Capcom's site refuses automated reads; only an outlet lists them"}
+  {
+   "claim": "Cook Man is the fourth boss of Mega Man: Dual Override, revealed 1 Nov",
+   "status": "confirmed (Capcom post)"
+  },
+  {
+   "claim": "a wandering cooking robot whose kung fu cooking style he wants recognised; rampaging in a large restaurant",
+   "status": "Capcom's description as quoted by Denfaminicogamer from the official post"
+  },
+  {
+   "claim": "Spring 2027, twelfth mainline entry, 40th anniversary, two playable heroes",
+   "status": "confirmed (Capcom Steam announcements)"
+  },
+  {
+   "claim": "platforms (Switch, Switch 2, PS4, PS5, Xbox, Steam, Epic)",
+   "status": "not used: Capcom's site refuses automated reads; only an outlet lists them"
+  }
  ],
  "brief": {
   "angle": "a kung fu chef robot as Mega Man's newest boss",
@@ -44,7 +71,10 @@
  },
  "drafts": {
   "headline": "طاهٍ آلي يتحدى Mega Man\nفي لعبته الجديدة",
-  "lines": ["اسمه Cook Man / وهو رابع زعماء اللعبة", "يطبخ بحركات الكونغ فو / ويقاتل بأدوات المطبخ"],
+  "lines": [
+   "اسمه Cook Man / وهو رابع زعماء اللعبة",
+   "يطبخ بحركات الكونغ فو / ويقاتل بأدوات المطبخ"
+  ],
   "strip": "الموعد · ربيع 2027",
   "x": "كشفت كابكوم (Capcom) عن Cook Man، رابع زعماء Mega Man: Dual Override، وهو طاهٍ آلي يطبخ بحركات الكونغ فو. تصدر اللعبة في ربيع 2027.",
   "threads": "كشفت كابكوم (Capcom) عن Cook Man، رابع زعماء Mega Man: Dual Override، وهو طاهٍ آلي يطبخ بحركات الكونغ فو. تصدر اللعبة في ربيع 2027.\n\nالمصدر: الحساب الرسمي لسلسلة Mega Man من كابكوم",
@@ -61,5 +91,45 @@
   "Ledger check: grep of newsroom/stories for Mega Man / Dual Override / Rockman: no earlier story",
   "Footage: Capcom's own 4K video from the official post (video.twimg.com, 3840x2160, 60 fps, decode clean); no copy on Steam or Capcom's site (403); trailer rule: official X video when it is the only copy",
   "Kutaragi interview dropped: GamesIndustry.biz primary 28 Oct 13:30Z, over 24 h; War Thunder 'Eagle's Shadow' trailer dropped: Gaijin 29 Oct 21:26Z, over 24 h"
- ]
+ ],
+ "approved": "go: rolling queue; preview sent 13:52Z; gate 13:50Z: Capcom post re-read (still up, unchanged); Steam page Spring 2027 unchanged; no correction found",
+ "scheduled": "scheduled in Publer 13:51Z for 18:00Z (22:00 Dubai 1 Nov): Instagram, X, Threads",
+ "director": {
+  "v1": "FIX: frame 0 was the empty bridge before Cook Man walks in",
+  "v2": [
+   {
+    "shot": 0,
+    "time": "0.0-1.75",
+    "verdict": "PASS",
+    "note": "Cook Man full figure on the bridge, headline above his head, grid tile reads"
+   },
+   {
+    "shot": 1,
+    "time": "1.75-3.85",
+    "verdict": "PASS",
+    "note": "close-up with blade; COOKMAN name card text outside the 9:16 window; white flash at 4.8 s in the source cut out"
+   },
+   {
+    "shot": 2,
+    "time": "3.85-7.25",
+    "verdict": "PASS (note)",
+    "note": "fight in the pot stage; characters small in the vertical crop of a wide 2D stage, action readable; line in the pause"
+   },
+   {
+    "shot": 3,
+    "time": "7.25-9.15",
+    "verdict": "PASS",
+    "note": "blade-hair swing"
+   },
+   {
+    "shot": 4,
+    "time": "9.15-11.0",
+    "verdict": "PASS",
+    "note": "Override close-up, last picture before the end card"
+   },
+   {
+    "reel": "length 11.0 s + end card; changes every 2-3 s; sound: trailer music stem 82.8% with each shot's own effects (audio split applied); speech: none; nothing graphic; strobe flash excluded"
+   }
+  ]
+ }
 }
