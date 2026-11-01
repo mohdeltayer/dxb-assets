@@ -67,17 +67,17 @@
     "basis": "slow piano on suspended major sevenths: time passing, a lullaby for the seven years"
    },
    {
-    "scene": "Hyrule under Ganondorf and the climax (adult Link, Ganondorf, the fight), 23.3 to 35.8 s",
+    "scene": "Hyrule under Ganondorf and the climax (adult Link, Ganondorf, the fight), 23.3 to 36.5 s",
     "music": "sonic.py synth palette on neon_e (B minor loop)",
     "basis": "the minor turn carries the dark kingdom and the adult hero's fight"
    },
    {
-    "scene": "the closing cover (the loop to «سبع سنوات»), 35.8 s to the end card",
+    "scene": "the closing cover (the loop to «سبع سنوات»), 36.5 s to the end card",
     "music": "celesta again",
     "basis": "returns to the opening colour so the episode loops on its first page"
    }
   ],
-  "turns": "1 s crossfades centred on the cuts at 15.9, 23.3 and 35.8 s; no Nintendo music (series card), the Triforce medley only on the intro; ep 7 used musicbox, oud and strings, so no palette repeats"
+  "turns": "1 s crossfades centred on the cuts at 15.9, 23.3 and 36.5 s; no Nintendo music (series card), the Triforce medley only on the intro; ep 7 used musicbox, oud and strings, so no palette repeats"
  },
  "pacing": "every page opens on its picture alone (1.0 s, 0.5 s on the closing cover), then the line; pages 3.6 to 6.2 s; body 38.8 s plus the intro and the end card",
  "drafts": {
@@ -96,6 +96,10 @@
   "notes": "«يلاحقهما» dual for Zelda and Impa; «صغيرًا جدًا» tanwin alif kept; «شابًا» hal accusative; first words Arabic on every line"
  },
  "notes": [
-  "ledger: frames A 154.4, A 140.3, O 224.3, O 217.3; clip O 200.0-203.8; climax A 166.3-169.0; store still 6; Child-to-Adult art; all outside eps 1 to 7 (A 139.3 in ep 7 is Ganondorf's hand, a different shot)"
- ]
+  "ledger: frames A 154.4, A 140.3, O 224.3, O 217.3; clip O 200.0-203.8; climax A 165.0-168.4; store still 6; Child-to-Adult art; all outside eps 1 to 7 (A 139.3 in ep 7 is Ganondorf's hand, a different shot)"
+ ],
+ "director": {
+  "v1": "FIX: climax ran 0.3 s into the trailer cut to the burning town (39.0-39.25 s in the Reel); scene bed present (found at 4.245 s, rms matches the bed in every scene)",
+  "v2": "pending"
+ }
 }
