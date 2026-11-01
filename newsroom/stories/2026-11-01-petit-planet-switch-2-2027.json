@@ -8,22 +8,55 @@
  "template": "trailer",
  "skin": "house",
  "sound": "trailer: one continuous stretch of the official trailer from 119.0 s (music, no speech; transcript: speech only at 0.3 to 18.3 s and 152.5 to 154.5 s)",
- "genre": ["family", "anime"],
+ "genre": [
+  "family",
+  "anime"
+ ],
  "sensitive": "none",
  "family": "announcement",
  "first_report": "2026-11-01 ~11:30Z (official X @PetitPlanet_JP post, carried by Denfaminicogamer 11:31Z, Gematsu 12:00Z, Famitsu)",
  "sources": [
-  {"kind": "primary", "what": "Official X @PetitPlanet_JP, 1 Nov 2026 (status 2116855146009579596), as embedded by Famitsu: Switch 2 version in 2027", "url": "https://x.com/PetitPlanet_JP/status/2116855146009579596"},
-  {"kind": "primary", "what": "HoYoverse press release (Japanese), as printed in full by Famitsu and Denfaminicogamer: worldwide release 4 Dec 2026, pre-download 1 Dec, pre-registrations over 10 million, pre-registration on App Store, Google Play, Epic Games Store", "url": "https://www.famitsu.com/article/202611/92790"},
-  {"kind": "outlet", "what": "Gematsu quoting miHoYo: PC via Epic Games Store and client download, iOS, Android on 4 Dec; Switch 2 in 2027", "url": "https://www.gematsu.com/2026/11/petit-planet-coming-to-switch-2-in-2027"},
-  {"kind": "footage", "what": "Official trailer from planet.hoyoverse.com (fastcdn.hoyoverse.com, 1920x1080, 7.2 Mbps, decode clean)"}
+  {
+   "kind": "primary",
+   "what": "Official X @PetitPlanet_JP, 1 Nov 2026 (status 2116855146009579596), as embedded by Famitsu: Switch 2 version in 2027",
+   "url": "https://x.com/PetitPlanet_JP/status/2116855146009579596"
+  },
+  {
+   "kind": "primary",
+   "what": "HoYoverse press release (Japanese), as printed in full by Famitsu and Denfaminicogamer: worldwide release 4 Dec 2026, pre-download 1 Dec, pre-registrations over 10 million, pre-registration on App Store, Google Play, Epic Games Store",
+   "url": "https://www.famitsu.com/article/202611/92790"
+  },
+  {
+   "kind": "outlet",
+   "what": "Gematsu quoting miHoYo: PC via Epic Games Store and client download, iOS, Android on 4 Dec; Switch 2 in 2027",
+   "url": "https://www.gematsu.com/2026/11/petit-planet-coming-to-switch-2-in-2027"
+  },
+  {
+   "kind": "footage",
+   "what": "Official trailer from planet.hoyoverse.com (fastcdn.hoyoverse.com, 1920x1080, 7.2 Mbps, decode clean)"
+  }
  ],
  "claims": [
-  {"claim": "Switch 2 version in 2027", "status": "confirmed (official X post)"},
-  {"claim": "Worldwide release 4 Dec 2026 on PC, iOS, Android; pre-download 1 Dec", "status": "confirmed (press release; PC via Epic per pre-registration list and Gematsu)"},
-  {"claim": "Pre-registrations over 10 million", "status": "confirmed (press release, 事前登録者数1,000万人突破)"},
-  {"claim": "skips PS5 (outlet headline)", "status": "not used: the primary names no PS5 version and says nothing about PS5"},
-  {"claim": "free-to-play", "status": "not used on screen (Gematsu only); not in the Japanese release text read"}
+  {
+   "claim": "Switch 2 version in 2027",
+   "status": "confirmed (official X post)"
+  },
+  {
+   "claim": "Worldwide release 4 Dec 2026 on PC, iOS, Android; pre-download 1 Dec",
+   "status": "confirmed (press release; PC via Epic per pre-registration list and Gematsu)"
+  },
+  {
+   "claim": "Pre-registrations over 10 million",
+   "status": "confirmed (press release, 事前登録者数1,000万人突破)"
+  },
+  {
+   "claim": "skips PS5 (outlet headline)",
+   "status": "not used: the primary names no PS5 version and says nothing about PS5"
+  },
+  {
+   "claim": "free-to-play",
+   "status": "not used on screen (Gematsu only); not in the Japanese release text read"
+  }
  ],
  "brief": {
   "angle": "HoYoverse's cosy life game gets a Switch 2 date year, after its 4 Dec mobile and PC launch",
@@ -49,7 +82,7 @@
    "من هويوفيرس (HoYoverse) / صانعة Genshin Impact",
    "تصدر نسختها لجهاز Switch 2 / في عام 2027",
    "ترعى كوكبك الصغير / وتطبخ وتتعرف على جيرانك",
-   "تصدر أولًا على الحاسب والجوال / يوم 4 ديسمبر",
+   "تصدر أولًا على الحاسب / والجوال يوم 4 ديسمبر",
    "أكثر من 10 ملايين لاعب / سجلوا فيها مسبقًا"
   ],
   "x": "قادمة إلى Nintendo Switch 2 في 2027: لعبة Petit Planet من هويوفيرس (HoYoverse)، صانعة Genshin Impact، حسب الحساب الرسمي للعبة.",
@@ -63,6 +96,7 @@
   "DeepL back-check 13:30Z: meaning held. Line «تصدر نسخة Switch 2» read back as 'Switch 2 is set to be released', so it became «تصدر نسختها لجهاز Switch 2»; «تزرع كوكبك» read back as 'grow your own food', so it became «ترعى كوكبك الصغير». Forward pass: DeepL «تجاوز عدد المسجلين مسبقًا 10 ملايين» matches ours; 'slow-life game' rendered «لعبة الحياة البطيئة» (calque), ours «لعبة الحياة الهادئة» kept",
   "Grammar review (arabic-grammar-review stage on headline, lines, X, Threads, Instagram): no required edits; house rules: company Arabic then Latin at first mention, Arabic-first lines, قادمة إلى for a platform, تصدر for dates, «لجهاز Switch 2» on screen (no glued prefix), no em dash, X without hashtags",
   "Footage source kind: 1080p official trailer from the publisher's own site (no 4K or vertical cut found on the site; Steam has no listing; YouTube not used)",
-  "render_job.py check 13:32Z: ok, clip 31.3 s; speech in the stretch: none"
+  "render_job.py check 13:32Z: ok, clip 31.3 s; speech in the stretch: none",
+  "Runner v1 attempt 13:33Z stopped at the text check: «تصدر أولًا على الحاسب والجوال» ran out of the safe zone; line rewrapped after الحاسب"
  ]
 }
