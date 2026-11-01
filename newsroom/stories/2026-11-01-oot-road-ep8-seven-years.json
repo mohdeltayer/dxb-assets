@@ -44,13 +44,13 @@
  ],
  "read_aloud": {
   "rule": "adv-20261029-lines-as-one-paragraph, storyteller voice",
-  "paragraph": "سبع سنوات. في ليلة ممطرة، هربت الأميرة Zelda. في معبد الزمن، سحب Link سيف Master Sword. لكنه كان صغيرًا جدًا، فنام سبع سنوات. ثم استيقظ شابًا، فوجد Ganondorf يحكم مملكة Hyrule. سبع سنوات.",
+  "paragraph": "سبع سنوات. في ليلة ممطرة، هربت الأميرة Zelda. في معبد الزمن، سحب Link السيف الأسطوري. لكنه كان صغيرًا جدًا، فنام سبع سنوات. ثم استيقظ شابًا، فوجد Ganondorf يحكم مملكة Hyrule. سبع سنوات.",
   "checks": {
    "subject before pronoun": "Link named in «سحب Link» before «لكنه»",
    "no line opens on و": "pass",
-   "in-game terms": "labels kept: الأميرة Zelda، معبد الزمن، سيف Master Sword، مملكة Hyrule",
+   "in-game terms": "labels kept: الأميرة Zelda، معبد الزمن، مملكة Hyrule; the sword is «السيف الأسطوري» on screen (the runner refused «سيف Master Sword», which wrapped onto a Latin line start), Master Sword named in the caption and the X text",
    "line continuation": "«فنام» continues «لكنه كان صغيرًا جدًا» across one page glide; «يحكم مملكة Hyrule» continues «فوجد Ganondorf» on the same page",
-   "words per beat": "at most 4 (the series card), «سحب Link سيف Master Sword» counts the sword's name as one"
+   "words per beat": "at most 4 (the series card)"
   }
  },
  "music": {
