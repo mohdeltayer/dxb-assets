@@ -159,8 +159,11 @@ def beat_clip(b, bg, out, seed):
     if kind == 'climax':                       # official footage at climax size: the frame CLIMAX_H tall (a 720p
         fx = float(b.get('focus', 0.5))        # source stays under the 2x enlargement cap), cropped to the full
         hh = int(b.get('height', CLIMAX_H))    # width at `focus`, over a blurred, dimmed copy of the same footage
-        fc = (f"[0:v]fps={FPS},split[a][b];"
-              f"[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},boxblur=30:3,eq=brightness=-0.28{bw}[g];"
+        if b.get('band'):                      # adv-20261030-one-piece-fortnite-hold: designed bands in the ground colour, no blur
+            g = f"[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},drawbox=x=0:y=0:w={W}:h={H}:color=0x141332:t=fill[g];"
+        else:
+            g = f"[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},boxblur=30:3,eq=brightness=-0.28{bw}[g];"
+        fc = (f"[0:v]fps={FPS},split[a][b];" + g +
               f"[b]scale=-2:{hh}:flags=lanczos,crop={W}:{hh}:(iw-{W})*{fx}:0{bw}[f];"
               f"[g][f]overlay=0:{(H - hh) // 2},setsar=1[v]")
         _run(['ffmpeg', '-v', 'error', '-y', '-ss', str(b['t']), '-t', f'{secs:.3f}', '-i', src, '-an', '-filter_complex', fc,

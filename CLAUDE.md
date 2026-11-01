@@ -2125,6 +2125,24 @@ castle appears in episodes 1 and 4; only 4 and 5 opened on the series intro.
    its shots checked against the ledger; had there been no time, it would
    have posted as built and the rule started at episode 6.
 
+Music by scene, pages that breathe (Mohammad, 31 Oct 2026, on episode 6: "close
+to the intent"; from episode 7, inside the current storybook template, no build
+work). The aim is the Warframe effect: an outlet that respects the source
+material, which Zelda fans will feel.
+1. Pictures, wording, footage and music move together with each episode's
+   story. The bed changes with the scenes of that episode (our own sonic.py
+   palettes, one per scene, crossfaded at the scene turns, laid as the job's
+   `track` with `audio_split` false), never one track across the series. The
+   Triforce medley stays on the series intro. The episode's inbox card names
+   each scene's music and why it fits, and the final file's audio is checked
+   for it (track in the render log, the scene turns heard where the cut says)
+   before scheduling.
+2. Storybook pages slow down: picture first, then the text. Each page opens on
+   its picture alone (about 1 s; 0.6 s on a stay page) and the line enters
+   after it; no page under 2.5 s. In the job each page is two shots of the
+   picture track (picture, then the line's shot), so the line waits without
+   new code. The Reel may run longer.
+
 ## Web-style motion graphics (pilot, advisor, 19 Oct 2026, agreed with Mohammad)
 
 Modern web-style animation, written in HTML, CSS and JavaScript and rendered

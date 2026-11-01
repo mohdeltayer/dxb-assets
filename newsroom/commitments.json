@@ -61,13 +61,15 @@
     "x",
     "threads"
    ],
-   "job": null,
+   "job": "jobs/render/oot-road-ep7-princess-and-the-desert-man.json",
    "card": "adv-20261027-road-to-ocarina",
    "fallback": "shift-series-one-day",
    "held_by_mohammad": false,
-   "done": false,
-   "evidence": null,
-   "note": "was 30 Oct; moved one day"
+   "done": true,
+   "evidence": "Publer Published 2026-10-31T17:03Z on Instagram, X and Threads (slot check 1 Nov catch-up); https://www.instagram.com/reel/DfKphj_iih-/",
+   "note": "was 30 Oct; moved one day; 31 Oct: built under Mohammad's music-by-scene and picture-first rules, preview card before scheduling; v2 scheduled in Publer 09:19Z for 17:00Z, all three platforms",
+   "delivery": "published",
+   "logged": true
   },
   {
    "id": "oot-road-ep8",
@@ -80,13 +82,15 @@
     "x",
     "threads"
    ],
-   "job": null,
-   "card": "adv-20261027-road-to-ocarina",
+   "job": "jobs/render/oot-road-ep8-seven-years.json",
+   "card": "prod-20261101-ocarina-ep8",
    "fallback": "shift-series-one-day",
    "held_by_mohammad": false,
-   "done": false,
-   "evidence": null,
-   "note": "was 31 Oct; moved one day; light spoiler marker (تحذير: حرق)"
+   "done": true,
+   "evidence": "Publer Published 17:03-17:05Z on Instagram, X and Threads (default Approve applied); https://www.instagram.com/reel/DfNObAbj1Cu/",
+   "note": "was 31 Oct; moved one day; light spoiler marker (تحذير: حرق); 1 Nov 13:40Z: built under Mohammad 31 Oct rules (scene bed: celesta, piano, synth, celesta; picture-first pages), runner render; v2 (climax fix) scheduled in Publer 14:21Z for 17:00Z on Instagram, X and Threads; preview card prod-20261101-ocarina-ep8 (hold or fix before 16:45Z)",
+   "delivery": "published",
+   "logged": true
   },
   {
    "id": "fortnite-treasure-hunters-v2",
@@ -382,12 +386,18 @@
    "held_by_mohammad": false,
    "production": "qc_passed",
    "delivery": {
-    "instagram": "scheduled",
-    "x": "scheduled",
-    "threads": "scheduled"
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
    },
-   "status": "scheduled",
-   "evidence": "job pushed 05:56Z (d6b716ec), gate 05:43Z Exit A on the Square Enix press release; v2 be1dd6d1 director PASS 06:05Z; scheduled in Publer 06:06Z on all three"
+   "status": "fulfilled",
+   "evidence": "job pushed 05:56Z (d6b716ec), gate 05:43Z Exit A on the Square Enix press release; v2 be1dd6d1 director PASS 06:05Z; scheduled in Publer 06:06Z on all three; published 07:30-07:31Z on all three, Inbox entry written",
+   "logged": true,
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DfJoBS_AFJg/",
+    "x": "https://x.com/1748744375616643072/status/2116432698604466648",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfJoA0ZFY9r"
+   }
   },
   {
    "id": "star-wars-jedi-3-far-in-development",
@@ -403,14 +413,240 @@
    "card": "prod-20261031-jedi-3",
    "fallback": "bank-piece",
    "held_by_mohammad": false,
-   "production": "rendering",
-   "delivery": {
-    "instagram": "pending",
-    "x": "pending",
-    "threads": "pending"
-   },
-   "status": "open",
-   "evidence": "gate 06:20Z Exit B (Schreier Bluesky 30 Oct 14:17Z, outlets; no EA statement)"
+   "production": "qc_passed",
+   "delivery": "published",
+   "status": "scheduled",
+   "evidence": "Publer published IG and X 08:30-08:31Z, Threads 08:36Z; Inbox published entry star-wars-jedi-3-far-in-development",
+   "done": true,
+   "logged": true
+  },
+  {
+   "id": "cheating-bans-ai-explainer",
+   "title": "Cheating explainer: PUBG bans, Activision AI, Steam terms (تحليل)",
+   "kind": "explainer",
+   "slot": "2026-10-31T13:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "cards/2026-10/cheating-bans-ai-explainer-reel-v2.mp4",
+   "card": "prod-20261031-cheating-explainer",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "delivery": "published",
+   "evidence": "Publer Published 09:31-09:32Z on Instagram, X, Threads; Inbox published entry cheating-bans-ai-explainer",
+   "logged": true
+  },
+  {
+   "id": "queens-domain-out-now",
+   "title": "Queen's Domain out now on four platforms",
+   "kind": "news",
+   "slot": "2026-10-31T14:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/queens-domain-out-now.json",
+   "card": "prod-20261031-queens-domain",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "delivery": "published",
+   "evidence": "Publer Published 10:31Z on Instagram, X, Threads; Inbox published entry queens-domain-out-now",
+   "logged": true
+  },
+  {
+   "id": "chronicles-medieval-studio-funding",
+   "title": "Chronicles: Medieval studio at risk of closing",
+   "kind": "news",
+   "slot": "2026-10-31T15:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/chronicles-medieval-studio-funding.json",
+   "card": "prod-20261031-chronicles",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "delivery": "published",
+   "evidence": "Publer Published 11:31-11:32Z on Instagram, X, Threads; Inbox published entry chronicles-medieval-studio-funding",
+   "logged": true
+  },
+  {
+   "id": "mw4-switch-2-digital-foundry",
+   "title": "Digital Foundry on MW4 for Switch 2",
+   "kind": "news",
+   "slot": "2026-10-31T16:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/mw4-switch-2-digital-foundry.json",
+   "card": "prod-20261031-mw4-df",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "delivery": "published",
+   "evidence": "Publer Published 2026-10-31T12:31Z on Instagram, X and Threads (slot check 1 Nov catch-up); https://www.instagram.com/reel/DfKKY_BFfDb/",
+   "logged": true
+  },
+  {
+   "id": "uncharted-3-turns-15",
+   "title": "Uncharted 3 turns 15 (في مثل هذا اليوم)",
+   "kind": "evergreen",
+   "slot": "2026-11-01T00:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/uncharted-3-turns-15.json",
+   "card": "prod-20261031-uncharted-3",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "delivery": "published",
+   "evidence": "Publer Published 2026-10-31T20:02Z on Instagram, X and Threads (slot check 1 Nov catch-up); https://www.instagram.com/reel/DfK-AKqgY0T/",
+   "logged": true
+  },
+  {
+   "id": "probably-stolen-500k-sold",
+   "title": "Probably Stolen passes half a million (أرقام)",
+   "kind": "news",
+   "slot": "2026-10-31T17:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/probably-stolen-500k-sold.json",
+   "card": "prod-20261031-probably-stolen-500k",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "delivery": "published",
+   "evidence": "Publer Published 2026-10-31T13:31Z on Instagram, X and Threads (slot check 1 Nov catch-up); https://www.instagram.com/reel/DfKRQ_UkbLP/",
+   "logged": true
+  },
+  {
+   "id": "next-week-releases-nov-2",
+   "title": "من Zelda إلى Godzilla: إصدارات الأسبوع المقبل",
+   "kind": "reel",
+   "slot": "2026-11-01T18:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/next-week-releases-nov-2.json",
+   "card": "prod-20261101-next-week-releases",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer Published 2026-11-01T14:31Z on Instagram, X and Threads (slot check 1 Nov); https://www.instagram.com/reel/DfM88USDqUw/",
+   "delivery": "published",
+   "logged": true
+  },
+  {
+   "id": "mega-man-dual-override-cook-man",
+   "title": "طاهٍ آلي يتحدى Mega Man (Cook Man)",
+   "kind": "reel",
+   "slot": "2026-11-01T22:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/mega-man-dual-override-cook-man.json",
+   "card": "prod-20261101-cook-man",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer Published 18:03Z on Instagram, X and Threads (default applied); https://www.instagram.com/reel/DfNVLTsjRmA/",
+   "delivery": "published",
+   "logged": true
+  },
+  {
+   "id": "bend-studio-next-game-2027-report",
+   "title": "لعبة مطور Days Gone قد تصدر في 2027 (تقرير)",
+   "kind": "reel",
+   "slot": "2026-11-01T23:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/bend-studio-next-game-2027-report.json",
+   "card": "prod-20261101-bend-report",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer Published 19:02-19:03Z on Instagram, X and Threads (default applied); https://www.instagram.com/reel/DfNcBNnj8PI/",
+   "delivery": "published",
+   "logged": true
+  },
+  {
+   "id": "pikmin-4-switch-2-demo-nov-2",
+   "title": "Pikmin 4 Switch 2 Edition free demo tomorrow (رسمي)",
+   "kind": "news",
+   "slot": "2026-11-01T20:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/pikmin-4-switch-2-demo-nov-2.json",
+   "card": "prod-20261101-pikmin-4-demo",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "delivery": "published",
+   "evidence": "Publer Published 16:31-16:32Z on Instagram, X and Threads (default Approve applied); https://www.instagram.com/reel/DfNKri9DXee/",
+   "logged": true
+  },
+  {
+   "id": "petit-planet-switch-2-2027",
+   "title": "لعبة Petit Planet قادمة إلى Switch 2 في 2027 (رسمي)",
+   "kind": "reel",
+   "slot": "2026-11-01T19:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/petit-planet-switch-2-2027.json",
+   "card": "prod-20261101-petit-planet",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer Published 15:31-15:33Z on Instagram, X and Threads (default Approve applied); https://www.instagram.com/reel/DfND4IRj48T/",
+   "delivery": "published",
+   "logged": true
+  },
+  {
+   "id": "sonic-generations-turns-15",
+   "title": "لعبة Sonic Generations تكمل 15 عامًا",
+   "kind": "reel",
+   "slot": "2026-11-01T23:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/sonic-generations-turns-15.json",
+   "card": "prod-20261101-sonic-generations-15",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer Published 19:31-19:35Z on Instagram, X and Threads (default applied); https://www.instagram.com/reel/DfNfnALghki/",
+   "delivery": "published",
+   "logged": true
   }
  ]
 }
