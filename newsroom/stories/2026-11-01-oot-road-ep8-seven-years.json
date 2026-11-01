@@ -2,7 +2,7 @@
  "id": "2026-11-01-oot-road-ep8-seven-years",
  "title": "Road to Ocarina episode 8: seven years (the Master Sword and the time skip; story-beat, storybook look)",
  "game": "The Legend of Zelda: Ocarina of Time",
- "status": "rendering",
+ "status": "scheduled",
  "chip": null,
  "template": "storybeat",
  "skin": "house",
@@ -100,6 +100,65 @@
  ],
  "director": {
   "v1": "FIX: climax ran 0.3 s into the trailer cut to the burning town (39.0-39.25 s in the Reel); scene bed present (found at 4.245 s, rms matches the bed in every scene)",
-  "v2": "pending"
- }
+  "v2": "PASS: climax A 165.0-168.4 ends before the cut; first frame is the series intro; cover at 4.6 s carries the headline over the Child-to-Adult art; lines Arabic-first and inside the safe zone; nothing graphic; climax between ground-colour bands. Audio: scene bed found at 4.245 s in the final file, correlation night-temple 0.50, sleep 0.50, ganondorf-climax 0.71, loop 0.56 (control 0.06), rms equal to the bed in every scene"
+ },
+ "table": [
+  [
+   "cover",
+   "0-3.5",
+   "PASS",
+   "headline over the Child-to-Adult art, badge and spoiler credit"
+  ],
+  [
+   "Zelda's flight",
+   "3.5-9.7",
+   "PASS",
+   "A 154.4 frame, two lines"
+  ],
+  [
+   "Temple of Time",
+   "9.7-15.9",
+   "PASS",
+   "store still 6, sword line"
+  ],
+  [
+   "young Link",
+   "15.9-19.7",
+   "PASS",
+   "O 224.3"
+  ],
+  [
+   "word beat",
+   "19.7-23.3",
+   "PASS",
+   "A 140.3 dimmed, «فنام سبع سنوات»"
+  ],
+  [
+   "adult Link",
+   "23.3-27.1",
+   "PASS",
+   "O 200.0 clip"
+  ],
+  [
+   "Ganondorf",
+   "27.1-33.1",
+   "PASS",
+   "O 217.3, two lines"
+  ],
+  [
+   "climax",
+   "33.1-36.5",
+   "PASS (v2)",
+   "A 165.0-168.4, no text"
+  ],
+  [
+   "loop cover",
+   "36.5-39.5",
+   "PASS",
+   "«سبع سنوات»"
+  ]
+ ],
+ "gate": "gate 14:20Z: Nintendo US store page lists the Switch 2 release as 5 Nov 2026 (releaseDate 2026-11-05); story beats are the 1998 game",
+ "approved": "go: series slot (21:00 Dubai 1 Nov, unchanged); scheduled in Publer 14:21Z for 17:00Z on Instagram, X and Threads; preview card prod-20261101-ocarina-ep8 sent 14:24Z (hold or fix before 16:45Z pulls it); audio checked in the final file before scheduling",
+ "out": "cards/2026-11/oot-road-ep8-seven-years-reel-v2.mp4"
 }
