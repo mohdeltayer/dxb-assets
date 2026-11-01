@@ -17907,5 +17907,54 @@
   "min_disk_free_mb": 82180,
   "setup_min": 0.97,
   "story": "pikmin-4-switch-2-demo-nov-2"
+ },
+ {
+  "name": "petit-planet-switch-2-2027-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-01T14:03Z",
+  "stages": {
+   "checks": 3.9,
+   "montage": 66.2,
+   "text": 84.9,
+   "audio": 1.4,
+   "outro": 56.0
+  },
+  "total": 212.5,
+  "lane": "runner",
+  "queued_at": "2026-11-01T13:57:54Z",
+  "finished_at": "2026-11-01T14:03Z",
+  "render_min": 3.54,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 9.6,
+   "audio_secs": 30.5,
+   "music_pct": 99.5,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 7,
+   "mix_secs": 7.9,
+   "secs": 18.1
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 294,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1311,
+  "peak_mem_mb": 3793,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60935,
+  "peak_disk_mb": 65642,
+  "min_disk_free_mb": 82154,
+  "setup_min": 1.02,
+  "story": "petit-planet-switch-2-2027"
  }
 ]
