@@ -17607,5 +17607,38 @@
   "min_disk_free_mb": 81423,
   "setup_min": 0.95,
   "story": "next-week-releases-nov-2"
+ },
+ {
+  "name": "next-week-releases-nov-2-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-01T13:19Z",
+  "stages": {
+   "checks": 6.3,
+   "montage": 42.7,
+   "text": 85.2,
+   "audio": 1.2,
+   "outro": 61.1
+  },
+  "total": 196.5,
+  "lane": "runner",
+  "queued_at": "2026-11-01T13:13:45Z",
+  "finished_at": "2026-11-01T13:19Z",
+  "render_min": 3.28,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 275,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1044,
+  "peak_mem_mb": 3933,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60637,
+  "peak_disk_mb": 64354,
+  "min_disk_free_mb": 83442,
+  "setup_min": 1.58,
+  "story": "next-week-releases-nov-2"
  }
 ]
