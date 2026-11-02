@@ -18143,5 +18143,38 @@
   "min_disk_free_mb": 84438,
   "setup_min": 1.05,
   "story": "sonic-generations-turns-15"
+ },
+ {
+  "name": "call-of-duty-infinite-warfare-turns-10-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-02T03:27Z",
+  "stages": {
+   "checks": 3.7,
+   "montage": 31.6,
+   "text": 27.8,
+   "audio": 0.6,
+   "outro": 25.0
+  },
+  "total": 88.8,
+  "lane": "runner",
+  "queued_at": "2026-11-02T03:24:43Z",
+  "finished_at": "2026-11-02T03:27Z",
+  "render_min": 1.48,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 156,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1100,
+  "peak_mem_mb": 3264,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60637,
+  "peak_disk_mb": 63048,
+  "min_disk_free_mb": 84749,
+  "setup_min": 0.78,
+  "story": "call-of-duty-infinite-warfare-turns-10"
  }
 ]
