@@ -83,7 +83,7 @@ def apply(job, video, starts, xfade, uploads):
             'shots': [[uploads + f, float(s), float(d), st] if _footage(f, s) else None
                       for (f, s, d, _), st in zip(job['shots'], starts)],
             'durations': [float(sh[2]) for sh in job['shots']], 'starts': list(starts),
-            'music_only': bool(job.get('music_only')), 'music_fade': job.get('music_fade')}
+            'music_only': bool(job.get('music_only')), 'music_fade': job.get('music_fade'), 'leak_max': job.get('music_leak_max')}
     json.dump(spec, open(f'{tmp}/spec.json', 'w'))
     rec = {'applied': False, 'tool': 'cocktail-fork'}
     try:
@@ -284,8 +284,9 @@ def mix(spec):
     if sep.cache:
         res['cache'] = {'hit': sep.hits, 'miss': sep.misses}
     mo = bool(spec.get('music_only'))     # Mohammad, 2 Nov 2026: music only, no effects (the score of an effects-led stretch is fine)
-    if res['leak_pct'] > LEAK_MAX or (res['music_pct'] < MUSIC_MIN and not mo):
-        res['reason'] = (f"music stem not clean (leftover {res['leak_pct']}% > {LEAK_MAX}%)" if res['leak_pct'] > LEAK_MAX
+    lmax = float(spec.get('leak_max') or LEAK_MAX)   # a music_only job may allow a little more (named in the job, looked at)
+    if res['leak_pct'] > lmax or (res['music_pct'] < MUSIC_MIN and not mo):
+        res['reason'] = (f"music stem not clean (leftover {res['leak_pct']}% > {lmax}%)" if res['leak_pct'] > lmax
                          else f"music only {res['music_pct']}% of the track (< {MUSIC_MIN}%)")
         json.dump(res, open(spec['result'], 'w'))
         return
