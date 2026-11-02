@@ -739,14 +739,19 @@
    "card": "prod-20261102-review-0630",
    "fallback": "publish-last-passed",
    "held_by_mohammad": false,
-   "done": false,
-   "evidence": null,
-   "delivery": {
-    "instagram": "scheduled",
-    "x": "scheduled",
-    "threads": "scheduled"
+   "done": true,
+   "evidence": {
+    "instagram": "https://www.instagram.com/reel/DfOn8AdjnCd/",
+    "x": "https://x.com/1748744375616643072/status/2117136037151375612",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfOn2qljj3S",
+    "published_at": "2026-11-02T06:05:00Z"
    },
-   "logged": false,
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
    "note": "gap fill for the 10:15 Dubai gap rule; dated bank piece (Steam release 3 Nov, Atari, Pipeworks); Production 2 posting lane"
   }
  ]
