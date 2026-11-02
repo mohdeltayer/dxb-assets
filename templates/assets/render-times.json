@@ -18225,5 +18225,38 @@
   "min_disk_free_mb": 83615,
   "setup_min": 1.18,
   "story": "suda51-travis-touchdown-will-return-famitsu"
+ },
+ {
+  "name": "nagoshi-studio-dissolved-gazette-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-02T04:33Z",
+  "stages": {
+   "checks": 0.7,
+   "montage": 51.7,
+   "text": 53.4,
+   "audio": 0.0,
+   "outro": 31.2
+  },
+  "total": 137.1,
+  "lane": "runner",
+  "queued_at": "2026-11-02T04:30:20Z",
+  "finished_at": "2026-11-02T04:33Z",
+  "render_min": 2.28,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 146,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1032,
+  "peak_mem_mb": 4458,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60637,
+  "peak_disk_mb": 62369,
+  "min_disk_free_mb": 85427,
+  "setup_min": 0.85,
+  "story": "nagoshi-studio-dissolved-gazette"
  }
 ]
