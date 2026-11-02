@@ -18258,5 +18258,38 @@
   "min_disk_free_mb": 85427,
   "setup_min": 0.85,
   "story": "nagoshi-studio-dissolved-gazette"
+ },
+ {
+  "name": "nagoshi-studio-dissolved-gazette-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-02T04:40Z",
+  "stages": {
+   "checks": 1.2,
+   "montage": 65.1,
+   "text": 85.2,
+   "audio": 0.0,
+   "outro": 49.5
+  },
+  "total": 200.9,
+  "lane": "runner",
+  "queued_at": "2026-11-02T04:35:26Z",
+  "finished_at": "2026-11-02T04:40Z",
+  "render_min": 3.35,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 214,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 991,
+  "peak_mem_mb": 4428,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60637,
+  "peak_disk_mb": 62373,
+  "min_disk_free_mb": 85424,
+  "setup_min": 0.97,
+  "story": "nagoshi-studio-dissolved-gazette"
  }
 ]
