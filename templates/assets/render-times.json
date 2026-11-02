@@ -18598,5 +18598,57 @@
   "min_disk_free_mb": 82510,
   "setup_min": 1.27,
   "story": "zelda-ocarina-developers-interview-ask-the-developer-24"
+ },
+ {
+  "name": "zelda-ocarina-developers-interview-ask-the-developer-24-reel-v5.mp4",
+  "profile": "standard",
+  "at": "2026-11-02T14:42Z",
+  "stages": {
+   "checks": 6.1,
+   "montage": 35.0,
+   "text": 63.4,
+   "audio": 1.2,
+   "outro": 53.0
+  },
+  "total": 158.6,
+  "lane": "runner",
+  "queued_at": "2026-11-02T14:37:59Z",
+  "finished_at": "2026-11-02T14:42Z",
+  "render_min": 2.64,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 8.3,
+   "audio_secs": 25.2,
+   "music_pct": 32.2,
+   "leak_pct": 1.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "reason": "music only 32.2% of the track (< 40.0%)",
+   "secs": 14.4
+  },
+  "intro": {
+   "days": 3,
+   "secs": 7.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 229,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1436,
+  "peak_mem_mb": 3415,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61046,
+  "peak_disk_mb": 64781,
+  "min_disk_free_mb": 83015,
+  "setup_min": 1.1,
+  "story": "zelda-ocarina-developers-interview-ask-the-developer-24"
  }
 ]
