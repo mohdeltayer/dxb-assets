@@ -86,3 +86,26 @@ the chain); every in-game name carries a plain label (غابة، شجرة، ال
 Episode 6 under the check: «وبدأت الرحلة» after the climax becomes «هنا بدأت الرحلة»; the other beats pass.
 Episode 6 moved to Publer drafts 29 Oct 03:40Z: template fixes (B8) not released at 04:00 Dubai, so per the
 approved BUILD.md card the series starts a day later on the released template.
+
+## Developer quotes for episodes 9 and 10 (2 Nov 2026, Mohammad's request)
+Source: Nintendo, «Ask the Developer Vol. 24, The Legend of Zelda: Ocarina of Time, Chapter 1»
+(nintendo.com/en-gb, 2 Nov 2026, translated from Japanese; Chapter 2 published the same day, Chapters 3 and 4
+due 3 Nov, so more quotes can follow). Interview rule: short attributed quotes, never the whole piece. Names:
+إيجي أونوما (Eiji Aonuma), منتج سلسلة Zelda; هيديمارو فوجيباياشي (Hidemaro Fujibayashi), منتج. Photos from
+Nintendo's page, credited «الصورة: نينتندو (Nintendo)». The حوار Reel of 2 Nov uses quotes 1 to 3; the episodes
+should lead with different ones where they can.
+Quotes (English as published; Arabic is the episode's own wording, short):
+1. Aonuma, why the remake (40th anniversary): "I started to wonder how they'd interpret The Legend of Zelda:
+   Ocarina of Time as they go about developing future The Legend of Zelda games." (a younger team; used in the
+   حوار Reel, so not the lead of an episode).
+2. Fujibayashi, the rule of the remake: "it was important to clearly define early on what to change and what to
+   leave unchanged." (used in the حوار Reel; suits an episode on what stays, such as the world or the music).
+3. Aonuma, warp points: "even though I was the one who proposed adding warp points, they just weren't working for
+   me in the end, so I got the team to take them all back out again." (used in the حوار Reel; the episode on
+   places and discovery can refer to it without repeating the line).
+4. Aonuma on the last boss theme (not yet used): Kondo came back "the very next day" with the battle theme
+   players know today; "we sometimes joke that Kondo-san must've had two versions prepared." Suggested for the
+   music or final-battle beat of episode 9 (launch day) or 10.
+Suggestions only: placement is the episode's director's call, and each quote is re-read against the page before
+it goes on screen. Ledger: footage for the حوار Reel is Overview Trailer (O) 8 to 34 s, the unused 0 to 45 s
+stretch; episodes 9 and 10 must not reuse O 8 to 34 s.
