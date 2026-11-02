@@ -854,14 +854,18 @@
    "card": "user-request-2026-11-02-zelda-interview",
    "fallback": "publish-last-passed",
    "held_by_mohammad": false,
-   "done": false,
-   "evidence": null,
-   "delivery": {
-    "instagram": "scheduled",
-    "x": "scheduled",
-    "threads": "scheduled"
+   "done": true,
+   "evidence": {
+    "instagram": "https://www.instagram.com/reel/DfPqQToirdp/",
+    "x": "https://x.com/1748744375616643072/status/2117282023232483454",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfPqPHxClgG"
    },
-   "logged": false,
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
    "note": "Mohammad's request 2 Nov; interview rule (2 to 3 attributed quotes); Nintendo developer photos credited; Overview Trailer 8 to 34 s; v4 render; scheduled 14:13Z for 18:30 Dubai; HELD by Mohammad 14:2xZ (comments to come); all three pulled back to Publer drafts, do not schedule or publish until he says; Mohammad said go 15:2xZ; v7 (music stem only, series intro); Instagram scheduled 19:45 Dubai, X timed out (look up before retry), Threads media too large to proxy (retry after other downloads); all three scheduled 19:45 Dubai (X and Threads from the Publer library copy after the 46 MB url fetch failed); old v4 drafts still in Publer drafts"
   },
   {
