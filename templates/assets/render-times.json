@@ -18703,5 +18703,54 @@
   "min_disk_free_mb": 82539,
   "setup_min": 1.18,
   "story": "zelda-ocarina-developers-interview-ask-the-developer-24"
+ },
+ {
+  "name": "derelikt-ps5-nov-13-ps1-style-horror-reel-v4.mp4",
+  "profile": "standard",
+  "at": "2026-11-02T15:36Z",
+  "stages": {
+   "checks": 4.7,
+   "montage": 50.3,
+   "text": 50.3,
+   "audio": 1.2,
+   "outro": 45.1
+  },
+  "total": 151.7,
+  "lane": "runner",
+  "queued_at": "2026-11-02T15:31:56Z",
+  "finished_at": "2026-11-02T15:36Z",
+  "render_min": 2.53,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 1.9,
+   "audio_secs": 54.4,
+   "music_pct": 22.6,
+   "leak_pct": 6.7,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 0
+   },
+   "effects_shots": 0,
+   "mix_secs": 0.8,
+   "secs": 3.4
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 219,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1352,
+  "peak_mem_mb": 3077,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61100,
+  "peak_disk_mb": 65321,
+  "min_disk_free_mb": 82476,
+  "setup_min": 0.95,
+  "story": "derelikt-ps5-nov-13-ps1-style-horror"
  }
 ]
