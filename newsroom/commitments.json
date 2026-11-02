@@ -710,14 +710,19 @@
    "card": "prod-20261102-review-0630",
    "fallback": "publish-last-passed",
    "held_by_mohammad": false,
-   "done": false,
-   "evidence": null,
-   "delivery": {
-    "instagram": "scheduled",
-    "x": "scheduled",
-    "threads": "scheduled"
+   "done": true,
+   "evidence": {
+    "instagram": "https://www.instagram.com/reel/DfOiIisI5Ds/",
+    "x": "https://x.com/1748744375616643072/status/2117123438376563196",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfOiIrbkuyZ",
+    "published_at": "2026-11-02T05:15:00Z"
    },
-   "logged": false,
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
    "note": "found by the 04:07Z watch run (Famitsu, Gematsu, Automaton citing the 2 Nov Kanpo); Verifier NEW; Production 2 posting lane"
   }
  ]
