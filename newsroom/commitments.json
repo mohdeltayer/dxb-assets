@@ -910,15 +910,43 @@
    "card": "hourly-watch-1707Z",
    "fallback": "publish-last-passed",
    "held_by_mohammad": false,
+   "done": true,
+   "evidence": {
+    "instagram": "https://www.instagram.com/reel/DfP3-U1DQAp/",
+    "x": "https://x.com/1748744375616643072/status/2117312201581093189",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfP392MiZlx"
+   },
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "gap fill after Derelikt 20:30; Gematsu 15:21Z, Steam page primary for date and price; scheduled 17:35Z for 21:45 Dubai; gate 17:30Z Steam page primary (date, price) read 17:15Z, Gematsu for platforms"
+  },
+  {
+   "id": "ova-magica-consoles-nov-10",
+   "title": "Ova Magica تصدر للكونسول 10 نوفمبر",
+   "kind": "reel",
+   "slot": "2026-11-02T23:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/ova-magica-consoles-nov-10.json",
+   "card": "hourly-watch-1807Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
    "done": false,
    "evidence": null,
    "delivery": {
-    "instagram": "scheduled",
-    "x": "scheduled",
-    "threads": "scheduled"
+    "instagram": "pending",
+    "x": "pending",
+    "threads": "pending"
    },
    "logged": false,
-   "note": "gap fill after Derelikt 20:30; Gematsu 15:21Z, Steam page primary for date and price; scheduled 17:35Z for 21:45 Dubai; gate 17:30Z Steam page primary (date, price) read 17:15Z, Gematsu for platforms"
+   "note": "gap fill (nothing scheduled after Thief 21:45); Gematsu 17:18Z; Steam for PC facts"
   }
  ]
 }
