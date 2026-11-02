@@ -1,0 +1,38 @@
+{
+ "id": "2026-11-02-phantom-blade-zero-4-million-72-hours",
+ "title": "Phantom Blade Zero passes 4 million copies in 72 hours",
+ "game": "Phantom Blade Zero",
+ "status": "scheduled",
+ "chip": "إنجاز",
+ "template": "split",
+ "skin": "house",
+ "sound": "trailer (Steam Launch Trailer 26.0 to 38.2 s, one continuous stretch, audio split run by the runner)",
+ "genre": [
+  "action",
+  "fighting"
+ ],
+ "sensitive": "none",
+ "sources": [
+  {
+   "kind": "primary",
+   "what": "@pbzero_official post 2 Nov 2026 ('sold over 4 million copies in just 72 hours'), read as embedded in Famitsu 202611/92836 (2 Nov 14:50 JST)"
+  },
+  {
+   "kind": "secondary",
+   "what": "SteamDB peak 830K+ concurrent, as reported by Famitsu (attributed to SteamDB in the caption, not on screen)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "4 million copies in about 72 hours from the 29 Oct JST release",
+   "status": "confirmed (studio post)"
+  },
+  {
+   "claim": "PS5 and PC (Epic Games, Steam)",
+   "status": "confirmed (Famitsu quoting the release)"
+  }
+ ],
+ "gate": "gate 07:08Z and 07:41Z: Famitsu article read in full, studio post embedded, no correction or update; first report 2 Nov 06:xxZ, under 24 h",
+ "notes": "render took four runs: headline width, pace, reading time (all text checks, none about the footage); strip read 07:41Z: chip, headline, credit, strip, no blood; Arabic reviewed by sonnet subagent, no required edits; studio written إس جيم (S-GAME) after the glossary note (new, add a glossary row on approval); X and Threads attached by URL, Instagram by library id; Publer labels tpl:split skin:house sound:trailer genre:action",
+ "approved": "go: standing order, Production 2 posting lane (rolling queue, review-1000 rank 1); scheduled 11:55 Dubai, gap rule already past 11:05"
+}
