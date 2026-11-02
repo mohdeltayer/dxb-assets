@@ -18502,5 +18502,53 @@
   "min_disk_free_mb": 85381,
   "setup_min": 0.87,
   "story": "team-liquid-algs-split-2-playoffs-winners"
+ },
+ {
+  "name": "zelda-ocarina-developers-interview-ask-the-developer-24-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-02T13:52Z",
+  "stages": {
+   "checks": 7.9,
+   "montage": 46.5,
+   "text": 94.3,
+   "audio": 1.5,
+   "outro": 65.6
+  },
+  "total": 215.8,
+  "lane": "runner",
+  "queued_at": "2026-11-02T13:46:24Z",
+  "finished_at": "2026-11-02T13:52Z",
+  "render_min": 3.6,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 10.6,
+   "audio_secs": 28.3,
+   "music_pct": 40.6,
+   "leak_pct": 10.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "reason": "music stem not clean (leftover 10.4% > 5.0%)",
+   "secs": 18.9
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 339,
+  "mem_total_mb": 15987,
+  "mem_start_mb": 1327,
+  "peak_mem_mb": 3697,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60936,
+  "peak_disk_mb": 65237,
+  "min_disk_free_mb": 82560,
+  "setup_min": 0.98,
+  "story": "zelda-ocarina-developers-interview-ask-the-developer-24"
  }
 ]
