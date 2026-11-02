@@ -556,6 +556,9 @@ def audio_split(job, video):
     rec = TS.apply(job, video, starts, xf, C.U)
     print('render_job: audio split: ' + ('applied' if rec.get('applied') else 'not applied, audio as rendered') +
           ''.join(f'; {k} {rec[k]}' for k in ('reason', 'music_pct', 'leak_pct', 'cache', 'separate_secs', 'secs') if k in rec), flush=True)
+    if job.get('music_only') and not rec.get('applied'):   # asked for no effects: never ship the trailer's own mix instead
+        raise ValueError('music_only: the music stem could not be separated cleanly (' + str(rec.get('reason')) + '); '
+                         'use another stretch or track "bed"')
     import sfxplan as SF                       # a fallback on a track under other moments' shots fails the job
     try:
         SF.guard(job, rec, starts)

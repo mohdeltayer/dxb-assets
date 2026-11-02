@@ -2333,6 +2333,13 @@ Cocktail Fork's code and weights are MIT. Mohammad adopted Cocktail Fork.
    Cost: about 21 s of render per split Reel and about 10 s of install, far inside the 45-minute
    fresh-reveal target.
 
+## Music-only trailer sound, opt-in (Mohammad, 2 Nov 2026, Zelda interview Reel)
+He asked that a trailer's music never sound clipped and that sound effects not confuse the readers. A job may set
+`"music_only": true` (and `"music_fade": [in, out]` seconds, default 0.3 and 0.6): the audio split keeps only the
+trailer's music stem under the whole Reel with those fades, adds no effects, skips the 40% music floor, and the job
+FAILS when the stem is not clean (a second pass still hears over 5% effects or speech) instead of shipping the trailer's
+own mix. Narration in the stretch is removed with the other stems. Without the key nothing changes.
+
 ## Media toolbox, step 1 (advisor, 25 Oct 2026, approved by Mohammad in the inbox 01:08Z)
 
 Mohammad, 24 Oct 21:52 and 21:55 Dubai: the ARMS v5 Reel still looked bad, so it is dropped, and he

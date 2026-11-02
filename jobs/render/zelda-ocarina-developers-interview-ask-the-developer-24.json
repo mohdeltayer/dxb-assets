@@ -1,6 +1,6 @@
 {
  "name": "zelda-ocarina-developers-interview-ask-the-developer-24",
- "out": "cards/2026-11/zelda-ocarina-developers-interview-ask-the-developer-24-reel-v6.mp4",
+ "out": "cards/2026-11/zelda-ocarina-developers-interview-ask-the-developer-24-reel-v7.mp4",
  "footage": [
   {
    "file": "ocarina-overview.mp4",
@@ -153,10 +153,15 @@
  ],
  "lowres_ok": "Nintendo's Switch 2 store trailers (US nsuid 70010000130792, 1280x720, three videos) are the only official copies; Nintendo's YouTube channel is not reachable here (sign-in wall) and no 1080p press-kit file is public",
  "block_ok": [],
- "note": "Primary: Nintendo, Ask the Developer Vol. 24 (four chapters; Chapters 1 and 2 published 2 Nov). Reel v5 after Mohammad's comments: story framed as the new four-part interview, tidbits not a translation; footage Overview Trailer 187.1 to 212.9 s, the stretch with no narration (whisper: speech ends 186.7 s, resumes 214.8 s); fixed horizontal crops (no autofocus pan); the Triforce shot centred on the triforce; series intro «باقي 3 أيام» joined ahead.",
+ "note": "Primary: Nintendo, Ask the Developer Vol. 24 (four chapters; Chapters 1 and 2 published 2 Nov). Reel v5 after Mohammad's comments: story framed as the new four-part interview, tidbits not a translation; footage Overview Trailer 187.1 to 212.9 s, the stretch with no narration (whisper: speech ends 186.7 s, resumes 214.8 s); fixed horizontal crops (no autofocus pan); the Triforce shot centred on the triforce; series intro «باقي 3 أيام» joined ahead. Sound (Mohammad, 2 Nov): the trailer's music stem only, no effects, 1.2 s fade in and 1.6 s fade out so the stretch does not sound clipped; the job fails rather than shipping the trailer's own mix if the stem is not clean.",
  "intro": {
   "series": "ocarina",
   "days": 3
  },
- "blocky_ok": []
+ "blocky_ok": [],
+ "music_only": true,
+ "music_fade": [
+  1.2,
+  1.6
+ ]
 }

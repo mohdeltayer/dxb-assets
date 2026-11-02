@@ -82,7 +82,8 @@ def apply(job, video, starts, xfade, uploads):
             'track': [uploads + job['track'][0], float(job['track'][1])],
             'shots': [[uploads + f, float(s), float(d), st] if _footage(f, s) else None
                       for (f, s, d, _), st in zip(job['shots'], starts)],
-            'durations': [float(sh[2]) for sh in job['shots']], 'starts': list(starts)}
+            'durations': [float(sh[2]) for sh in job['shots']], 'starts': list(starts),
+            'music_only': bool(job.get('music_only')), 'music_fade': job.get('music_fade')}
     json.dump(spec, open(f'{tmp}/spec.json', 'w'))
     rec = {'applied': False, 'tool': 'cocktail-fork'}
     try:
@@ -282,16 +283,20 @@ def mix(spec):
     res['thresholds'] = {'leak_max_pct': LEAK_MAX, 'music_min_pct': MUSIC_MIN}
     if sep.cache:
         res['cache'] = {'hit': sep.hits, 'miss': sep.misses}
-    if res['leak_pct'] > LEAK_MAX or res['music_pct'] < MUSIC_MIN:
+    mo = bool(spec.get('music_only'))     # Mohammad, 2 Nov 2026: music only, no effects (the score of an effects-led stretch is fine)
+    if res['leak_pct'] > LEAK_MAX or (res['music_pct'] < MUSIC_MIN and not mo):
         res['reason'] = (f"music stem not clean (leftover {res['leak_pct']}% > {LEAK_MAX}%)" if res['leak_pct'] > LEAK_MAX
                          else f"music only {res['music_pct']}% of the track (< {MUSIC_MIN}%)")
         json.dump(res, open(spec['result'], 'w'))
         return
-    music = _fade(trk['music'], 0.3, 0.6)
+    fin, fout = spec.get('music_fade') or (0.3, 0.6)      # a job may ask for longer fades so the stretch never sounds clipped
+    music = _fade(trk['music'], fin, fout)
     sfx = np.zeros_like(music)
     g, edge = 10 ** (SFX_DB / 20), (x if x > 0.1 else 0.03)
     shots = 0
     for sh, st, d in zip(spec['shots'], spec['starts'], spec['durations']):
+        if mo:
+            break
         a0, n = int(round(st * SR)), int(round(min(d, body - st) * SR))
         if not sh or n <= 0:
             continue
