@@ -686,15 +686,39 @@
    "card": "prod-20261102-review-0630",
    "fallback": "publish-last-passed",
    "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer Published 04:45-04:46Z (08:45-08:46 Dubai) on X, Instagram and Threads; https://www.instagram.com/reel/DfOetGADqYf/",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "06:30 shortlist item 1 (Suda51 and Fortnite free shop); built by Production 2 under the posting orders of 2 Nov"
+  },
+  {
+   "id": "nagoshi-studio-dissolved-gazette",
+   "title": "إغلاق استوديو ناغوشي (الجريدة الرسمية اليابانية)",
+   "kind": "reel",
+   "slot": "2026-11-02T09:15:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/nagoshi-studio-dissolved-gazette.json",
+   "card": "prod-20261102-review-0630",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
    "done": false,
    "evidence": null,
    "delivery": {
-    "instagram": "scheduled",
-    "x": "scheduled",
-    "threads": "scheduled"
+    "instagram": "submitting",
+    "x": "submitting",
+    "threads": "submitting"
    },
    "logged": false,
-   "note": "06:30 shortlist item 1 (Suda51 and Fortnite free shop); built by Production 2 under the posting orders of 2 Nov"
+   "note": "found by the 04:07Z watch run (Famitsu, Gematsu, Automaton citing the 2 Nov Kanpo); Verifier NEW; Production 2 posting lane"
   }
  ]
 }
