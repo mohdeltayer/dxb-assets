@@ -18373,5 +18373,53 @@
   "min_disk_free_mb": 83443,
   "setup_min": 1.08,
   "story": "godzilla-melee-remastered-steam-nov-3"
+ },
+ {
+  "name": "phantom-blade-zero-4-million-72-hours-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-02T07:39Z",
+  "stages": {
+   "checks": 3.4,
+   "montage": 37.7,
+   "text": 32.9,
+   "audio": 0.8,
+   "outro": 36.3
+  },
+  "total": 111.1,
+  "lane": "runner",
+  "queued_at": "2026-11-02T07:35:51Z",
+  "finished_at": "2026-11-02T07:39Z",
+  "render_min": 1.85,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 6.6,
+   "audio_secs": 14.2,
+   "music_pct": 29.8,
+   "leak_pct": 0.6,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "reason": "music only 29.8% of the track (< 40.0%)",
+   "secs": 10.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 169,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1338,
+  "peak_mem_mb": 3014,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60936,
+  "peak_disk_mb": 62874,
+  "min_disk_free_mb": 84922,
+  "setup_min": 1.03,
+  "story": "phantom-blade-zero-4-million-72-hours"
  }
 ]
