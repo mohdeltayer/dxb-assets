@@ -18867,5 +18867,38 @@
   "min_disk_free_mb": 82727,
   "setup_min": 0.95,
   "story": "ova-magica-consoles-nov-10"
+ },
+ {
+  "name": "ova-magica-consoles-nov-10-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-02T18:31Z",
+  "stages": {
+   "checks": 0.9,
+   "montage": 65.1,
+   "text": 76.8,
+   "audio": 0.0,
+   "outro": 49.8
+  },
+  "total": 192.6,
+  "lane": "runner",
+  "queued_at": "2026-11-02T18:25:14Z",
+  "finished_at": "2026-11-02T18:31Z",
+  "render_min": 3.21,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 207,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1041,
+  "peak_mem_mb": 4443,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60637,
+  "peak_disk_mb": 62468,
+  "min_disk_free_mb": 85328,
+  "setup_min": 1.53,
+  "story": "ova-magica-consoles-nov-10"
  }
 ]
