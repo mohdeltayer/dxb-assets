@@ -18900,5 +18900,38 @@
   "min_disk_free_mb": 85328,
   "setup_min": 1.53,
   "story": "ova-magica-consoles-nov-10"
+ },
+ {
+  "name": "game-pass-leaving-14-games-november-2026-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-02T19:15Z",
+  "stages": {
+   "checks": 0.7,
+   "montage": 55.8,
+   "text": 63.7,
+   "audio": 0.0,
+   "outro": 39.1
+  },
+  "total": 159.2,
+  "lane": "runner",
+  "queued_at": "2026-11-02T19:10:34Z",
+  "finished_at": "2026-11-02T19:15Z",
+  "render_min": 2.65,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 174,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1068,
+  "peak_mem_mb": 4452,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60654,
+  "peak_disk_mb": 62456,
+  "min_disk_free_mb": 85340,
+  "setup_min": 0.95,
+  "story": "game-pass-leaving-14-games-november-2026"
  }
 ]
