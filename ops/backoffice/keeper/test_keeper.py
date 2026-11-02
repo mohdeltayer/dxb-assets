@@ -151,5 +151,36 @@ class Passes(unittest.TestCase):
             self.assertIn('unreadable', p.stdout)
 
 
+class Compare(unittest.TestCase):
+    """addendum_0615: the server's keeper checks GitHub's."""
+
+    def test_compare_agree_stale_unreadable(self):
+        mine = {'generated_at': '2026-11-01T12:00:00Z', 'line': 'overdue commitments: 0, at risk: 1', 'overdue': 0,
+                'at_risk': 1, 'commitments_sha': 'abc'}
+        st = {}
+        line, alarm = K.compare(mine, dict(mine, generated_at='2026-11-01T11:57:00Z'), st, NOW)
+        self.assertIn('agrees', line)
+        self.assertIsNone(alarm)
+        line, alarm = K.compare(mine, dict(mine, generated_at='2026-11-01T11:30:00Z'), st, NOW)
+        self.assertEqual(alarm['title'], 'Keeper check: GitHub keeper stale')
+        line, alarm = K.compare(mine, dict(mine, generated_at='2026-11-01T11:30:00Z'), st, NOW)
+        self.assertIsNone(alarm)                                               # once an hour
+        line, alarm = K.compare(mine, None, st, NOW)
+        self.assertEqual(alarm['title'], 'Keeper check: GitHub status unreadable')
+
+    def test_compare_disagreement_needs_two_passes(self):
+        mine = {'generated_at': '2026-11-01T12:00:00Z', 'line': 'overdue commitments: 1, at risk: 0', 'overdue': 1,
+                'at_risk': 0, 'commitments_sha': 'abc'}
+        theirs = dict(mine, generated_at='2026-11-01T11:58:00Z', line='overdue commitments: 0, at risk: 0', overdue=0)
+        st = {}
+        line, alarm = K.compare(mine, theirs, st, NOW)
+        self.assertIsNone(alarm)
+        self.assertIn('once', line)
+        line, alarm = K.compare(mine, theirs, st, K.parse_time('2026-11-01T12:05:00Z'))
+        self.assertEqual(alarm['title'], 'Keepers disagree')
+        other = dict(theirs, commitments_sha='def')                           # different inputs: not comparable
+        self.assertIn('agrees', K.compare(mine, other, {}, NOW)[0])
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=1)

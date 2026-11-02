@@ -12,6 +12,8 @@
 #   gh workflow run backoffice-install.yml --ref main -f service=watch                  # go-live of the watch
 #   gh workflow run backoffice-install.yml --ref main -f service=prepare                # install, timer OFF
 #   gh workflow run backoffice-install.yml --ref main -f service=prepare -f enable=true # after Mohammad's go
+#   gh workflow run backoffice-install.yml --ref main -f service=keeper                 # the keeper's 5-minute timer
+#   gh workflow run backoffice-install.yml --ref main -f service=keeper -f enable=disable  # stop it
 #
 # The watch's install.sh always enables its timers (dispatching it is the go-live). prepare's timer starts only
 # with enable=true; enable=false on an installed prepare leaves its timer as it is (use install.sh --disable by
@@ -25,11 +27,11 @@ on:
   workflow_dispatch:
     inputs:
       service:
-        description: 'Service to install: watch or prepare'
+        description: 'Service to install: watch, prepare or keeper'
         required: true
         default: 'watch'
       enable:
-        description: 'prepare only: true starts the timer, disable stops it, false installs with the timer untouched/off'
+        description: 'prepare: true starts the timer, disable stops it, false installs with the timer untouched/off; keeper: disable stops it'
         required: false
         default: 'false'
 
@@ -48,9 +50,10 @@ jobs:
     steps:
       - name: Inputs and user
         run: |
-          case "$SERVICE" in watch|prepare) ;; *) echo "service must be watch or prepare"; exit 1;; esac
+          case "$SERVICE" in watch|prepare|keeper) ;; *) echo "service must be watch, prepare or keeper"; exit 1;; esac
           case "$ENABLE" in true|false|disable) ;; *) echo "enable must be true, false or disable"; exit 1;; esac
-          if [ "$SERVICE" = watch ] && [ "$ENABLE" != false ]; then echo "enable applies to prepare only"; exit 1; fi
+          if [ "$SERVICE" = watch ] && [ "$ENABLE" != false ]; then echo "enable applies to prepare and keeper only"; exit 1; fi
+          if [ "$SERVICE" = keeper ] && [ "$ENABLE" = true ]; then echo "keeper: the install starts the timer; enable=disable stops it"; exit 1; fi
           if [ "$(id -u)" = 0 ]; then echo "refusing to run as root"; exit 1; fi
           echo "user $(id -un), home $HOME, host $(hostname)"
           df -h "$HOME" | tail -1
@@ -76,6 +79,8 @@ jobs:
           if [ "$SERVICE" = watch ]; then
             if [ -r /etc/dxb-watch/github-token ]; then echo "token file: readable by $(id -un)"; else echo "token file: missing or unreadable (the watch writes digests locally and hands nothing over)"; fi
             "$R/install.sh"
+          elif [ "$SERVICE" = keeper ]; then
+            if [ "$ENABLE" = disable ]; then "$R/install.sh" --disable; else "$R/install.sh"; fi
           else
             case "$ENABLE" in true) "$R/install.sh" --enable;; disable) "$R/install.sh" --disable;; *) "$R/install.sh";; esac
           fi
@@ -86,6 +91,8 @@ jobs:
           if [ "$SERVICE" = watch ]; then
             # This job is itself a Runner.Worker, which the watch reads as a render; switch that check off for the test only.
             WATCH_RENDER_CHECK=off WATCH_PYTHON="$HOME/backoffice/watch/venv/bin/python" "$R/test.sh"
+          elif [ "$SERVICE" = keeper ]; then
+            "$R/test.sh"
           else
             PREPARE_PYTHON="$HOME/backoffice/prepare/venv/bin/python" "$R/test.sh"
           fi
@@ -101,6 +108,9 @@ jobs:
             systemctl --user list-timers 'dxb-*' --no-pager 2>&1 || true
             if [ "$SERVICE" = watch ]; then
               "$HOME/backoffice/watch/venv/bin/python" "$HOME/dxb-assets/ops/backoffice/watch/watch.py" status 2>&1 | head -40 || true
+            elif [ "$SERVICE" = keeper ]; then
+              cat "$HOME/backoffice/keeper/status.txt" "$HOME/backoffice/keeper/compare.txt" 2>&1 | head -12 || true
+              tail -5 "$HOME/backoffice/keeper/keeper.log" 2>&1 || true
             else
               "$HOME/backoffice/prepare/venv/bin/python" "$HOME/dxb-assets/ops/backoffice/prepare/prepare.py" status 2>&1 | head -40 || true
             fi

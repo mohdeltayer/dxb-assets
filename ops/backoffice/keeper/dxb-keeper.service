@@ -1,0 +1,15 @@
+[Unit]
+Description=DXB promise keeper: the ladder for every open commitment, alarms, and a check against GitHub's keeper
+Documentation=file://%h/dxb-assets/ops/backoffice/keeper/README.md
+
+[Service]
+Type=oneshot
+# Optional non-secret overrides (KEEPER_MODE, KEEPER_NTFY=off, KEEPER_TOPIC_FILE ...); the file may be absent.
+EnvironmentFile=-%h/backoffice/keeper/keeper.env
+ExecStart=%h/dxb-assets/ops/backoffice/keeper/server_tick.sh
+# A few seconds of stdlib Python and two shallow fetches; renders always win.
+Nice=10
+IOSchedulingClass=idle
+IOSchedulingPriority=7
+TimeoutStartSec=3min
+NoNewPrivileges=yes

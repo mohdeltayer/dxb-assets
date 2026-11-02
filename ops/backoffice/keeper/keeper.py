@@ -14,6 +14,7 @@ the slot check. Older rows that carry only a free-text `evidence` are read as be
   keeper.py tick   [--commitments F] [--state S] [--out DIR] [--now ISO]   one pass: status files, alarms
   keeper.py line   [--status F | --commitments F] [--now ISO]                'overdue commitments: N, at risk: M'
   keeper.py show   [--commitments F] [--now ISO]                            the ladder per row, sends nothing
+  keeper.py compare --mine S --theirs G --state F [--out F]                 the server's status against GitHub's
 
 Environment: KEEPER_MODE (alarm-only, the default, or fallback), KEEPER_NTFY (on or off), KEEPER_NTFY_TOPIC (the
 topic itself, from an Actions secret) or KEEPER_TOPIC_FILE (a root-owned file on the server). The topic is never
@@ -426,6 +427,69 @@ def cmd_show(args):
     return 0
 
 
+# ---------------------------------------------------------------------------------------------
+# Two keepers (addendum_0615): the server's timer is the clock; GitHub's keeper.yml is the secondary
+# ---------------------------------------------------------------------------------------------
+STALE_MIN = 15              # GitHub's status older than this, against the server's own pass: alarm
+CMP_WINDOW_MIN = 10         # two passes this close (and on the same commitments) must agree
+
+
+def compare(mine, theirs, state, now):
+    """Compare the server's status with GitHub's (keeper-status). Returns (line, alarm or None). A disagreement alarms
+    only when it holds on two server passes in a row (a row can cross a rung between the two passes); a stale or
+    unreadable GitHub status alarms once an hour. The server can read GitHub's public branch; GitHub cannot read the
+    server, so the comparison runs here."""
+    cmp = state.setdefault('compare', {})
+    if not theirs or not theirs.get('generated_at'):
+        line, key = 'compare: GitHub keeper status unreadable', 'unreadable'
+    else:
+        tm, tt = parse_time(mine.get('generated_at')) or now, parse_time(theirs['generated_at'])
+        age = mins(tm - tt)
+        if age > STALE_MIN:
+            line, key = 'compare: GitHub keeper status is %d min old (its schedule was delayed or dropped)' % age, 'stale'
+        elif abs(age) <= CMP_WINDOW_MIN and mine.get('commitments_sha') == theirs.get('commitments_sha') and \
+                (mine.get('overdue'), mine.get('at_risk')) != (theirs.get('overdue'), theirs.get('at_risk')):
+            line = 'compare: keepers disagree: server "%s", GitHub "%s"' % (mine.get('line'), theirs.get('line'))
+            key = 'disagree|%s|%s' % (mine.get('line'), theirs.get('line'))
+        else:
+            cmp['pending'] = None
+            return 'compare: GitHub keeper agrees (%s, %+d min)' % (theirs.get('line'), -age), None
+    if key.startswith('disagree'):
+        if cmp.get('pending') != key:                 # first sighting: wait one pass
+            cmp['pending'] = key
+            return line + ' (once; alarms if it holds on the next pass)', None
+    last = parse_time((cmp.get('alarmed') or {}).get(key.split('|')[0]))
+    if last and now - last < timedelta(minutes=60):
+        return line + ' (alarmed within the hour)', None
+    cmp.setdefault('alarmed', {})[key.split('|')[0]] = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+    title = {'unreadable': 'Keeper check: GitHub status unreadable', 'stale': 'Keeper check: GitHub keeper stale',
+             'disagree': 'Keepers disagree'}[key.split('|')[0]]
+    return line, {'title': title, 'lines': [line, 'server: %s' % mine.get('line')], 'priority': 'default',
+                  'tags': 'alarm_clock'}
+
+
+def cmd_compare(args):
+    now = parse_time(args.now) if args.now else datetime.now(timezone.utc)
+    mine = load_json(args.mine, {})
+    theirs = load_json(args.theirs, None)
+    state = load_json(args.state, {})
+    line, alarm = compare(mine, theirs, state, now)
+    log = []
+    if alarm:
+        send(alarm, log, now)
+    write(args.state, json.dumps(state, ensure_ascii=False, indent=1) + '\n')
+    if args.out:
+        write(args.out, line + '\n')
+    try:
+        with open(os.path.join(os.path.dirname(args.state), 'keeper.log'), 'a', encoding='utf-8') as f:
+            for l in log + ['%s %s' % (now.strftime('%Y-%m-%dT%H:%MZ'), line)]:
+                f.write(l + '\n')
+    except OSError:
+        pass
+    print(line)
+    return 0
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split('\n')[0])
     sub = ap.add_subparsers(dest='cmd', required=True)
@@ -438,11 +502,17 @@ def main(argv=None):
     l.add_argument('--status')
     l.add_argument('--commitments', default='newsroom/commitments.json')
     l.add_argument('--now')
+    c = sub.add_parser('compare')
+    c.add_argument('--mine', required=True)
+    c.add_argument('--theirs', required=True)
+    c.add_argument('--state', required=True)
+    c.add_argument('--out')
+    c.add_argument('--now')
     s = sub.add_parser('show')
     s.add_argument('--commitments', default='newsroom/commitments.json')
     s.add_argument('--now')
     args = ap.parse_args(argv)
-    return {'tick': cmd_tick, 'line': cmd_line, 'show': cmd_show}[args.cmd](args)
+    return {'tick': cmd_tick, 'line': cmd_line, 'show': cmd_show, 'compare': cmd_compare}[args.cmd](args)
 
 
 if __name__ == '__main__':
