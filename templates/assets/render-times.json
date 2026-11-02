@@ -18176,5 +18176,54 @@
   "min_disk_free_mb": 84749,
   "setup_min": 0.78,
   "story": "call-of-duty-infinite-warfare-turns-10"
+ },
+ {
+  "name": "suda51-travis-touchdown-will-return-famitsu-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-02T04:09Z",
+  "stages": {
+   "checks": 5.4,
+   "montage": 56.3,
+   "text": 50.5,
+   "audio": 1.2,
+   "outro": 53.6
+  },
+  "total": 167.1,
+  "lane": "runner",
+  "queued_at": "2026-11-02T04:03:40Z",
+  "finished_at": "2026-11-02T04:09Z",
+  "render_min": 2.78,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 6.9,
+   "audio_secs": 21.8,
+   "music_pct": 60.0,
+   "leak_pct": 0.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 10,
+   "mix_secs": 5.0,
+   "secs": 12.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 316,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1383,
+  "peak_mem_mb": 3562,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60935,
+  "peak_disk_mb": 64182,
+  "min_disk_free_mb": 83615,
+  "setup_min": 1.18,
+  "story": "suda51-travis-touchdown-will-return-famitsu"
  }
 ]
