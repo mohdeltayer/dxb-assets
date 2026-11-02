@@ -2831,6 +2831,22 @@ framing, pacing, the director QA). CLAUDE.md and STYLE.md stay the authority
 on exact numbers and wording; where a skill and a repo rule differ, the repo
 rule wins and the difference is raised with Mohammad.
 
+## Desk board (advisor card adv-20261102-desk-board, Mohammad 2 Nov 2026)
+
+The two production accounts align through a shared record, not through Mohammad: dxb-queue branch desk,
+`desk/board.md` (human-readable) and `desk/board.json` (same content, edited together in one commit). Sections:
+1. Roles, one owner per line, changed only by an advisor card Mohammad approved (2 Nov: posting lane and hourly
+   watch Production 2; review preps, morning digest, disk cleanup and inbox mirror Production 1 until moved; build
+   desk Production 1; studio Production 1 on Mohammad's request, on a branch, never live templates; advisor cards only).
+2. Digest lock: before dispatching watch-digest.yml write {dispatching_by, seq_expected, at}; clear it after reading.
+   The other account waits up to 3 minutes instead of dispatching; never overwrite a list the other has not read.
+3. Handoffs: one entry per item (id, from, to, done, next, evidence, must_not_repeat). Review prep writes
+   'shortlist card posted: <id>'; Production 2 writes 'built and scheduled: <Publer id>, <slot>'. Both read before
+   acting on any item.
+4. Questions for Mohammad: one list, each with its card id; the advisor's daily status reads it.
+Every scheduled task on both accounts opens with: 'Read dxb-queue desk/board.md first; write your handoff there
+before you stop.'
+
 ## Mohammad's inbox (advisor, 24 Oct 2026, agreed with Mohammad)
 
 Anything that needs Mohammad goes to his inbox page, not only into the chat,

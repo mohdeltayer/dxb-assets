@@ -578,6 +578,12 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 - A build dependency never cancels a slot: unreleased fix at slot time means the current template, unless held_by_mohammad.
 - Scheduled sessions start with 'overdue commitments: N, at risk: M' (newsroom/keeper-status.json); keeper alarms first.
 
+## Desk board (adv-20261102-desk-board, 2 Nov 2026)
+
+- The two production accounts align through dxb-queue branch desk, `desk/board.md` and `desk/board.json` (same content, one commit): roles (one owner per duty; changed only by an advisor card Mohammad approved), the digest lock, handoffs (id, from, to, done, next, evidence, must_not_repeat) and questions for Mohammad (each with its card id).
+- Every scheduled task reads the board first and writes its handoff last. Review prep writes 'shortlist card posted: <id>'; Production 2 writes 'built and scheduled: <Publer id>, <slot>'.
+- Digest lock: before dispatching watch-digest.yml write {dispatching_by, seq_expected, at} and clear it after reading; the other account waits up to 3 minutes instead of dispatching.
+
 ## YouTube lane (trial from 17 Oct 2026)
 
 - Original material only: Famitsu weekly, numbers, list, Gulf prices, retro,
