@@ -584,6 +584,15 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 - Every scheduled task reads the board first and writes its handoff last. Review prep writes 'shortlist card posted: <id>'; Production 2 writes 'built and scheduled: <Publer id>, <slot>'.
 - Digest lock: before dispatching watch-digest.yml write {dispatching_by, seq_expected, at} and clear it after reading; the other account waits up to 3 minutes instead of dispatching.
 
+## Story brief (adv-20261102-story-brief, 2 Nov 2026)
+
+- Angle before lines: hook, why now, what it means for players here, payoff, plus the story type's required items
+  with sources, written into the job file before any line.
+- Every hold, correction or praise from Mohammad goes into `newsroom/editorial-memory.md` the same day; a brief
+  reads the entries of its story type first.
+- An interview Reel carries the two or three tidbits that are news as short attributed quotes, never only "an
+  interview was published" and never the whole interview.
+
 ## YouTube lane (trial from 17 Oct 2026)
 
 - Original material only: Famitsu weekly, numbers, list, Gulf prices, retro,

@@ -2854,6 +2854,24 @@ The two production accounts align through a shared record, not through Mohammad:
 Every scheduled task on both accounts opens with: 'Read dxb-queue desk/board.md first; write your handoff there
 before you stop.'
 
+## Story brief and editorial memory (advisor card adv-20261102-story-brief, Mohammad 2 Nov 2026)
+
+The building session understands the story, not just the source (the Zelda interview Reel named the interview but
+left out what was said in it). Live from 2 Nov:
+- Angle before lines: before writing any line, the job file gets four lines (hook, the one surprising thing; why
+  now; what it means for players here; payoff) plus each item the story type requires, with its source. No script
+  without them; the Reel checklist enforces it once built.
+- `newsroom/editorial-memory.md`: one entry per hold, correction or praise from Mohammad (date, Reel, story type,
+  what was wrong or right, the rule in one line), added the same day. A brief reads the entries of its story type.
+- Prompt line for every build and watch task on both accounts: 'Before writing, read the story brief: what is
+  new, the context pages, the editorial memory for this story type; write the angle and the story-type items first.'
+Build queue (after the Reel checklist and the OpenMontage checks): the server's what-is-new packet (primary text and
+a diff against the ledger and our past posts), backstory pages in `newsroom/context/<slug>.md`, and the story-type
+rules in `newsroom/reel-check.md` (interview: who, where, the two or three tidbits as short attributed quotes;
+delay: old date, new date, reason or none given; out now: platforms, AED price where listed, what it is; numbers:
+figure, period, source, comparison; trailer or first look: what the footage shows that is new; people: who, role,
+the news; event: Dubai time, where to watch).
+
 ## Mohammad's inbox (advisor, 24 Oct 2026, agreed with Mohammad)
 
 Anything that needs Mohammad goes to his inbox page, not only into the chat,
