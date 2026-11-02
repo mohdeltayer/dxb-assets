@@ -19032,5 +19032,38 @@
   "min_disk_free_mb": 85271,
   "setup_min": 0.92,
   "story": "football-manager-27-launch-preview-free-until-nov-3"
+ },
+ {
+  "name": "loftia-early-access-nov-3-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-02T22:15Z",
+  "stages": {
+   "checks": 0.9,
+   "montage": 66.1,
+   "text": 77.5,
+   "audio": 0.0,
+   "outro": 52.1
+  },
+  "total": 196.6,
+  "lane": "runner",
+  "queued_at": "2026-11-02T22:10:05Z",
+  "finished_at": "2026-11-02T22:15Z",
+  "render_min": 3.28,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 213,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1042,
+  "peak_mem_mb": 4479,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60640,
+  "peak_disk_mb": 62484,
+  "min_disk_free_mb": 85313,
+  "setup_min": 0.92,
+  "story": "loftia-early-access-nov-3"
  }
 ]
