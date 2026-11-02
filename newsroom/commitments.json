@@ -768,14 +768,19 @@
    "card": "prod-20261102-review-1000",
    "fallback": "publish-last-passed",
    "held_by_mohammad": false,
-   "done": false,
-   "evidence": null,
-   "delivery": {
-    "instagram": "scheduled",
-    "x": "scheduled",
-    "threads": "scheduled"
+   "done": true,
+   "evidence": {
+    "instagram": "https://www.instagram.com/reel/DfO0cioiCGK/",
+    "x": "https://x.com/1748744375616643072/status/2117163704865194090",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfO0cZsjeZz",
+    "published_at": "2026-11-02T07:55:00Z"
    },
-   "logged": false,
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
    "note": "review-1000 rank 1; official studio post 2 Nov on X (via Famitsu 92836); gap rule already past 11:05 Dubai; Production 2 posting lane"
   }
  ]
