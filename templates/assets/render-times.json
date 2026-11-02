@@ -18818,5 +18818,54 @@
   "min_disk_free_mb": 85130,
   "setup_min": 0.93,
   "story": "thief-dark-project-remastered-dec-3"
+ },
+ {
+  "name": "ova-magica-consoles-nov-10-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-02T18:23Z",
+  "stages": {
+   "checks": 4.3,
+   "montage": 48.7,
+   "text": 50.0,
+   "audio": 1.2,
+   "outro": 37.4
+  },
+  "total": 141.6,
+  "lane": "runner",
+  "queued_at": "2026-11-02T18:17:37Z",
+  "finished_at": "2026-11-02T18:23Z",
+  "render_min": 2.36,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 11.8,
+   "audio_secs": 51.7,
+   "music_pct": 82.2,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "effects_shots": 0,
+   "mix_secs": 5.7,
+   "secs": 17.9
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 294,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1355,
+  "peak_mem_mb": 3660,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60936,
+  "peak_disk_mb": 65070,
+  "min_disk_free_mb": 82727,
+  "setup_min": 0.95,
+  "story": "ova-magica-consoles-nov-10"
  }
 ]
