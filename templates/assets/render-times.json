@@ -18933,5 +18933,38 @@
   "min_disk_free_mb": 85340,
   "setup_min": 0.95,
   "story": "game-pass-leaving-14-games-november-2026"
+ },
+ {
+  "name": "borderlands-series-100-million-sold-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-02T20:14Z",
+  "stages": {
+   "checks": 0.9,
+   "montage": 65.6,
+   "text": 77.2,
+   "audio": 0.0,
+   "outro": 52.3
+  },
+  "total": 196.0,
+  "lane": "runner",
+  "queued_at": "2026-11-02T20:09:27Z",
+  "finished_at": "2026-11-02T20:14Z",
+  "render_min": 3.27,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 211,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1035,
+  "peak_mem_mb": 4461,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60637,
+  "peak_disk_mb": 62499,
+  "min_disk_free_mb": 85297,
+  "setup_min": 0.92,
+  "story": "borderlands-series-100-million-sold"
  }
 ]
