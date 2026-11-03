@@ -19589,5 +19589,38 @@
   "min_disk_free_mb": 85344,
   "setup_min": 0.85,
   "story": "final-fantasy-resonance-producer-wanted-more-than-a-port"
+ },
+ {
+  "name": "final-fantasy-resonance-producer-wanted-more-than-a-port-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-11-03T07:20Z",
+  "stages": {
+   "checks": 0.9,
+   "montage": 70.3,
+   "text": 81.7,
+   "audio": 0.0,
+   "outro": 51.3
+  },
+  "total": 204.2,
+  "lane": "runner",
+  "queued_at": "2026-11-03T07:15:47Z",
+  "finished_at": "2026-11-03T07:20Z",
+  "render_min": 3.4,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 218,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 977,
+  "peak_mem_mb": 4445,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60640,
+  "peak_disk_mb": 62525,
+  "min_disk_free_mb": 85272,
+  "setup_min": 0.85,
+  "story": "final-fantasy-resonance-producer-wanted-more-than-a-port"
  }
 ]
