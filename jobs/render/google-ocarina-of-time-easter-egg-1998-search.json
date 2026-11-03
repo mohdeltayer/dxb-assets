@@ -1,6 +1,6 @@
 {
  "name": "google-ocarina-of-time-easter-egg-1998-search",
- "out": "cards/2026-11/google-ocarina-of-time-easter-egg-1998-search-reel-v2.mp4",
+ "out": "cards/2026-11/google-ocarina-of-time-easter-egg-1998-search-reel-v3.mp4",
  "footage": [
   {
    "file": "ocarina-overview.mp4",
@@ -16,14 +16,14 @@
   ],
   [
    "ocarina-overview.mp4",
-   130.4,
-   2.2,
+   17.0,
+   2.4,
    null
   ],
   [
    "ocarina-overview.mp4",
-   132.6,
-   2.2,
+   25.0,
+   2.4,
    null
   ],
   [
@@ -40,13 +40,13 @@
   ],
   [
    "ocarina-overview.mp4",
-   17.0,
+   19.0,
    2.4,
    null
   ],
   [
    "ocarina-overview.mp4",
-   25.0,
+   21.0,
    2.4,
    null
   ]
@@ -115,7 +115,14 @@
  "profile": null,
  "pace_ok": false,
  "lowres_ok": "Nintendo's Switch 2 store trailers (US nsuid 70010000130792, 1280x720, three videos) are the only official copies; Nintendo's YouTube channel is not reachable here (sign-in wall) and no 1080p press-kit file is public",
- "block_ok": [],
+ "block_ok": [
+  [
+   "ocarina-overview.mp4",
+   129.4,
+   129.74,
+   "frames at 129.2 to 129.9 looked at: a fast cut from the plaza to Link playing the ocarina with the game's own music-staff panel; no decode damage"
+  ]
+ ],
  "music_only": true,
  "music_fade": [
   1.0,
