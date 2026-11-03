@@ -19819,5 +19819,54 @@
   "min_disk_free_mb": 84564,
   "setup_min": 1.82,
   "story": "playstation-store-black-friday-deals-start-nov-4"
+ },
+ {
+  "name": "wow-forever-launch-time-dubai-riyadh-nov-5-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-03T12:21Z",
+  "stages": {
+   "checks": 7.6,
+   "montage": 84.0,
+   "text": 89.2,
+   "audio": 1.7,
+   "outro": 72.8
+  },
+  "total": 255.4,
+  "lane": "runner",
+  "queued_at": "2026-11-03T12:14:57Z",
+  "finished_at": "2026-11-03T12:21Z",
+  "render_min": 4.26,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 21.8,
+   "audio_secs": 58.0,
+   "music_pct": 8.3,
+   "leak_pct": 0.8,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "effects_shots": 0,
+   "mix_secs": 9.2,
+   "secs": 31.6
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 406,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1219,
+  "peak_mem_mb": 4291,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60939,
+  "peak_disk_mb": 65438,
+  "min_disk_free_mb": 82358,
+  "setup_min": 1.08,
+  "story": "wow-forever-launch-time-dubai-riyadh-nov-5"
  }
 ]
