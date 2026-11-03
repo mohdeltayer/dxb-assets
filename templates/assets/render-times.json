@@ -20163,5 +20163,54 @@
   "min_disk_free_mb": 81083,
   "setup_min": 1.37,
   "story": "ocarina-ask-the-developer-chapters-3-4-nov-3"
+ },
+ {
+  "name": "ocarina-ask-the-developer-chapters-3-4-nov-3-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-11-03T15:55Z",
+  "stages": {
+   "checks": 11.4,
+   "montage": 63.5,
+   "text": 121.2,
+   "audio": 2.0,
+   "outro": 94.6
+  },
+  "total": 292.8,
+  "lane": "runner",
+  "queued_at": "2026-11-03T15:48:30Z",
+  "finished_at": "2026-11-03T15:55Z",
+  "render_min": 4.88,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 5.6,
+   "audio_secs": 83.1,
+   "music_pct": 82.5,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 4,
+    "miss": 3
+   },
+   "effects_shots": 0,
+   "mix_secs": 11.3,
+   "secs": 17.4
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 393,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1444,
+  "peak_mem_mb": 3642,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61087,
+  "peak_disk_mb": 66773,
+  "min_disk_free_mb": 81023,
+  "setup_min": 1.08,
+  "story": "ocarina-ask-the-developer-chapters-3-4-nov-3"
  }
 ]
