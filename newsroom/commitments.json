@@ -1,1214 +1,1235 @@
 {
-  "about": "One row per promise (adv-20261030-promise-keeper, Mohammad 30 Oct 2026). Every scheduling action writes its row; the keeper on dxb-render-1 checks evidence and raises alarms (alarm-only on 31 Oct). Slots in Dubai time. Rows are done only with evidence (Publer post id and the Inbox published entry).",
-  "fallbacks": [
-    "publish-last-passed",
-    "bank-piece",
-    "shift-series-one-day",
-    "card-only"
-  ],
-  "rows": [
-    {
-      "id": "oot-road-ep6",
-      "title": "الطريق إلى Ocarina 6: الفتى بلا جنية (storybook re-render)",
-      "kind": "series episode",
-      "series": "road-to-ocarina",
-      "slot": "2026-10-31T00:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/oot-road-ep6-boy-without-a-fairy.json",
-      "card": "adv-20261027-road-to-ocarina",
-      "fallback": "shift-series-one-day",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer scheduled 18:22Z for 2026-10-31T00:00+04:00 on Instagram, X, Threads (v3)",
-      "note": "originally 29 Oct 21:00 Dubai; storybook re-render missed on 30 Oct (ops miss); posts tonight at the next free slot only if the director check passes; the 29 Oct version stays in Publer drafts and is not posted; slot 02:00 Dubai so trailer Reels do not run three in a row; v3 rendering (climax between solid bands) moved 18:10Z to 00:00 Dubai, the next free slot, between Romero and Fortnite (breaks the trailer run)",
-      "status": "published",
-      "original_due_at": "2026-10-29T21:00+04:00",
-      "delivery": {
-        "instagram": {
-          "state": "published",
-          "at": "2026-10-30T20:03Z",
-          "url": "https://www.instagram.com/reel/DfIZRFqkZ_Q/"
-        },
-        "x": {
-          "state": "published",
-          "at": "2026-10-30T20:02Z",
-          "url": "https://x.com/1748744375616643072/status/2116259516220121581"
-        },
-        "threads": {
-          "state": "published",
-          "at": "2026-10-30T20:03Z",
-          "url": "https://www.threads.com/@the_digilounge/post/DfIZQ7AgoYt"
-        }
-      },
-      "logged": true,
-      "commitment": "fulfilled_late",
-      "history": [
-        "missed on 29 Oct 21:00 Dubai (storybook re-render not built), moved to 31 Oct 00:00 Dubai by production; published 00:03 Dubai"
-      ]
+ "about": "One row per promise (adv-20261030-promise-keeper, Mohammad 30 Oct 2026). Every scheduling action writes its row; the keeper on dxb-render-1 checks evidence and raises alarms (alarm-only on 31 Oct). Slots in Dubai time. Rows are done only with evidence (Publer post id and the Inbox published entry).",
+ "fallbacks": [
+  "publish-last-passed",
+  "bank-piece",
+  "shift-series-one-day",
+  "card-only"
+ ],
+ "rows": [
+  {
+   "id": "oot-road-ep6",
+   "title": "الطريق إلى Ocarina 6: الفتى بلا جنية (storybook re-render)",
+   "kind": "series episode",
+   "series": "road-to-ocarina",
+   "slot": "2026-10-31T00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/oot-road-ep6-boy-without-a-fairy.json",
+   "card": "adv-20261027-road-to-ocarina",
+   "fallback": "shift-series-one-day",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer scheduled 18:22Z for 2026-10-31T00:00+04:00 on Instagram, X, Threads (v3)",
+   "note": "originally 29 Oct 21:00 Dubai; storybook re-render missed on 30 Oct (ops miss); posts tonight at the next free slot only if the director check passes; the 29 Oct version stays in Publer drafts and is not posted; slot 02:00 Dubai so trailer Reels do not run three in a row; v3 rendering (climax between solid bands) moved 18:10Z to 00:00 Dubai, the next free slot, between Romero and Fortnite (breaks the trailer run)",
+   "status": "published",
+   "original_due_at": "2026-10-29T21:00+04:00",
+   "delivery": {
+    "instagram": {
+     "state": "published",
+     "at": "2026-10-30T20:03Z",
+     "url": "https://www.instagram.com/reel/DfIZRFqkZ_Q/"
     },
-    {
-      "id": "oot-road-ep7",
-      "title": "الطريق إلى Ocarina 7: الأميرة والرجل من الصحراء",
-      "kind": "series episode",
-      "series": "road-to-ocarina",
-      "slot": "2026-10-31T21:00:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/oot-road-ep7-princess-and-the-desert-man.json",
-      "card": "adv-20261027-road-to-ocarina",
-      "fallback": "shift-series-one-day",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer Published 2026-10-31T17:03Z on Instagram, X and Threads (slot check 1 Nov catch-up); https://www.instagram.com/reel/DfKphj_iih-/",
-      "note": "was 30 Oct; moved one day; 31 Oct: built under Mohammad's music-by-scene and picture-first rules, preview card before scheduling; v2 scheduled in Publer 09:19Z for 17:00Z, all three platforms",
-      "delivery": "published",
-      "logged": true
+    "x": {
+     "state": "published",
+     "at": "2026-10-30T20:02Z",
+     "url": "https://x.com/1748744375616643072/status/2116259516220121581"
     },
-    {
-      "id": "oot-road-ep8",
-      "title": "الطريق إلى Ocarina 8: سبع سنوات",
-      "kind": "series episode",
-      "series": "road-to-ocarina",
-      "slot": "2026-11-01T21:00:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/oot-road-ep8-seven-years.json",
-      "card": "prod-20261101-ocarina-ep8",
-      "fallback": "shift-series-one-day",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer Published 17:03-17:05Z on Instagram, X and Threads (default Approve applied); https://www.instagram.com/reel/DfNObAbj1Cu/",
-      "note": "was 31 Oct; moved one day; light spoiler marker (تحذير: حرق); 1 Nov 13:40Z: built under Mohammad 31 Oct rules (scene bed: celesta, piano, synth, celesta; picture-first pages), runner render; v2 (climax fix) scheduled in Publer 14:21Z for 17:00Z on Instagram, X and Threads; preview card prod-20261101-ocarina-ep8 (hold or fix before 16:45Z)",
-      "delivery": "published",
-      "logged": true
-    },
-    {
-      "id": "fortnite-treasure-hunters-v2",
-      "title": "عالم ONE PIECE قادم إلى Fortnite (v2, Epic trailer)",
-      "kind": "reel",
-      "slot": "2026-10-31T01:00:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "cards/2026-10/fortnite-treasure-hunters-one-piece-november-1-reel-v2.mp4",
-      "card": "adv-20261030-one-piece-fortnite-hold",
-      "fallback": "card-only",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "scheduled in Publer 18:12Z on all three",
-      "delivery": {
-        "instagram": {
-          "state": "published",
-          "at": "2026-10-30T21:03Z",
-          "url": "https://www.instagram.com/reel/DfIgIizmCb8/"
-        },
-        "x": {
-          "state": "published",
-          "at": "2026-10-30T21:02Z",
-          "url": "https://x.com/1748744375616643072/status/2116274446038098210"
-        },
-        "threads": {
-          "state": "published",
-          "at": "2026-10-30T21:02Z",
-          "url": "https://www.threads.com/@the_digilounge/post/DfIgDmxiKZi"
-        }
-      },
-      "logged": true,
-      "commitment": "fulfilled_on_time",
-      "status": "published"
-    },
-    {
-      "id": "romero-new-publisher",
-      "title": "Romero shooter new publisher",
-      "kind": "reel",
-      "slot": "2026-10-30T23:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "cards/2026-10/john-romero-shooter-new-publisher-reel-v2.mp4",
-      "card": "prod-20261030-romero-publisher",
-      "fallback": "card-only",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "scheduled in Publer 17:54Z on all three",
-      "note": "moved 18:10Z to 23:00 Dubai (gap alarm 22:00-24:00 Dubai, no third trailer in a row)",
-      "delivery": {
-        "instagram": {
-          "state": "published",
-          "at": "2026-10-30T19:03Z",
-          "url": "https://www.instagram.com/reel/DfISfEyFQoi/"
-        },
-        "x": {
-          "state": "published",
-          "at": "2026-10-30T19:03Z",
-          "url": "https://x.com/1748744375616643072/status/2116244522912919688"
-        },
-        "threads": {
-          "state": "published",
-          "at": "2026-10-30T19:03Z",
-          "url": "https://www.threads.com/@the_digilounge/post/DfIScZIiLb8"
-        }
-      },
-      "logged": true,
-      "commitment": "fulfilled_on_time",
-      "status": "published"
-    },
-    {
-      "id": "ea-closed-bioware-battlefront-3",
-      "title": "EA closed BioWare for Battlefront 3 (Bloomberg, تقرير)",
-      "kind": "reel",
-      "slot": "2026-10-31T02:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/ea-closed-bioware-for-battlefront-3-report.json",
-      "card": null,
-      "fallback": "bank-piece",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer scheduled 18:51Z for 2026-10-31T02:00+04:00 on Instagram, X, Threads (v3)",
-      "note": "rendering; director check, then Publer moved 18:10Z to 02:00 Dubai; our bed",
-      "status": "published",
-      "delivery": {
-        "instagram": {
-          "state": "published",
-          "at": "2026-10-30T22:03Z",
-          "url": "https://www.instagram.com/reel/DfIm73lAk0I/"
-        },
-        "x": {
-          "state": "published",
-          "at": "2026-10-30T22:02Z",
-          "url": "https://x.com/1748744375616643072/status/2116289563563896934"
-        },
-        "threads": {
-          "state": "published",
-          "at": "2026-10-30T22:02Z",
-          "url": "https://www.threads.com/@the_digilounge/post/DfIm7K9lIt9"
-        }
-      },
-      "logged": true,
-      "commitment": "fulfilled_on_time"
-    },
-    {
-      "id": "warframe-tau-december",
-      "title": "Warframe: Tau in December (رسمي, stills)",
-      "kind": "reel",
-      "slot": "2026-10-31T03:00+04:00",
-      "original_due_at": "2026-10-31T03:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/warframe-tau-december.json",
-      "card": "prod-20261030-warframe-tau",
-      "fallback": "card-only",
-      "held_by_mohammad": false,
-      "done": true,
-      "production": "qc_passed",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "status": "published",
-      "evidence": "Published 23:02-23:03Z on Instagram, X, Threads (Publer); Inbox published entry written 23:06Z; card closed (default Approve)",
-      "links": {
-        "instagram": "https://www.instagram.com/reel/DfIt0M0FXwm/",
-        "x": "https://x.com/1748744375616643072/status/2116304697061458018",
-        "threads": "https://www.threads.com/@the_digilounge/post/DfIt0KAgazy"
-      },
-      "logged": true
-    },
-    {
-      "id": "steam-horror-most-played-halloween",
-      "title": "Halloween: Steam's most-played horror games (أرقام, list)",
-      "kind": "reel",
-      "slot": "2026-10-31T05:00+04:00",
-      "original_due_at": "2026-10-31T05:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/steam-horror-most-played-halloween.json",
-      "card": "prod-20261031-steam-horror",
-      "fallback": "bank-piece",
-      "held_by_mohammad": false,
-      "done": true,
-      "production": "qc_passed",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "status": "published",
-      "evidence": "Published 01:02-01:03Z on Instagram, X, Threads (Publer); Inbox published entry 01:06Z; card closed (default Approve)",
-      "links": {
-        "instagram": "https://www.instagram.com/reel/DfI7jKGjuGZ/",
-        "x": "https://x.com/1748744375616643072/status/2116334903822352762",
-        "threads": "https://www.threads.com/@the_digilounge/post/DfI7jI_CXuC"
-      },
-      "logged": true
-    },
-    {
-      "id": "ffxiv-evercold-february-23-2027",
-      "title": "FFXIV Evercold dates (تقرير, trailer)",
-      "kind": "reel",
-      "slot": "2026-10-31T07:20+04:00",
-      "original_due_at": "2026-10-31T07:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/ffxiv-evercold-february-23-2027.json",
-      "card": "prod-20261031-ffxiv-evercold",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": false,
-      "production": "qc_passed",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "status": "fulfilled",
-      "evidence": "runner render 210 s (f22c62d); director PASS 03:09Z; submitting 03:10Z for 07:20 Dubai (original slot 07:00, two runner text stops); scheduled in Publer 03:10Z for 03:20Z on all three; Publer Published 03:20-03:21Z on all three; Inbox published entry",
-      "logged": true
-    },
-    {
-      "id": "xbox-game-pass-next-week-nov-2",
-      "title": "Four games join Game Pass 2 to 5 Nov (list)",
-      "kind": "post",
-      "slot": "2026-10-31T08:30+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/xbox-game-pass-next-week-nov-2.json",
-      "card": "prod-20261031-xbox-game-pass",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "production": "qc_passed",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "status": "fulfilled",
-      "evidence": "job pushed 03:24Z (a3c659d7); v2 headline fix after v1 lands; v3 runner 326 s (86135ace); director PASS 03:41Z; submitting for 04:30Z; scheduled in Publer 03:42Z on all three; Publer Published 04:30-04:31Z on all three; Inbox published entry",
-      "logged": true
-    },
-    {
-      "id": "altman-dram-gamers-react",
-      "title": "Altman on home-PC memory, gamers react (debate)",
-      "kind": "post",
-      "slot": "2026-10-31T09:30+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/altman-dram-gamers-react.json",
-      "card": "prod-20261031-altman-dram",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "production": "qc_passed",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "status": "fulfilled",
-      "evidence": "job pushed 03:49Z (a0860928); v1 runner failed pace check; v1 render had block damage on grille (runner download); v2 41535600 clean, director PASS 04:25Z; submitting for 05:30Z; scheduled in Publer 04:27Z on all three; Publer Published 05:30-05:31Z on all three; Inbox published entry",
-      "logged": true
-    },
-    {
-      "id": "silver-palace-december-14",
-      "title": "Silver Palace launches 14 Dec",
-      "kind": "post",
-      "slot": "2026-10-31T10:30+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/silver-palace-december-14.json",
-      "card": "prod-20261031-silver-palace",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "production": "qc_passed",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "status": "fulfilled",
-      "evidence": "job pushed 05:18Z (6651f6a7); v1 cover headline over face; v2 191d550e director PASS 05:40Z, audio split applied clean; submitting for 06:30Z; scheduled in Publer 05:38Z on all three; published 06:31Z on all three, Inbox entry written",
-      "logged": true,
-      "links": {
-        "instagram": "https://www.instagram.com/reel/DfJhLKtk8oi/",
-        "x": "https://x.com/1748744375616643072/status/2116417640516157886",
-        "threads": "https://www.threads.com/@the_digilounge/post/DfJhKvgkiiI"
-      }
-    },
-    {
-      "id": "ffxiv-35-million-accounts",
-      "title": "FFXIV 35M accounts, Evercold confirmed (رسمي update)",
-      "kind": "post",
-      "slot": "2026-10-31T11:30+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/ffxiv-35-million-accounts.json",
-      "card": "prod-20261031-ffxiv-35m",
-      "fallback": "bank-piece",
-      "held_by_mohammad": false,
-      "production": "qc_passed",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "status": "fulfilled",
-      "evidence": "job pushed 05:56Z (d6b716ec), gate 05:43Z Exit A on the Square Enix press release; v2 be1dd6d1 director PASS 06:05Z; scheduled in Publer 06:06Z on all three; published 07:30-07:31Z on all three, Inbox entry written",
-      "logged": true,
-      "links": {
-        "instagram": "https://www.instagram.com/reel/DfJoBS_AFJg/",
-        "x": "https://x.com/1748744375616643072/status/2116432698604466648",
-        "threads": "https://www.threads.com/@the_digilounge/post/DfJoA0ZFY9r"
-      }
-    },
-    {
-      "id": "star-wars-jedi-3-far-in-development",
-      "title": "Star Wars Jedi 3 far in development (تقرير, Schreier)",
-      "kind": "post",
-      "slot": "2026-10-31T12:30+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/star-wars-jedi-3-far-in-development.json",
-      "card": "prod-20261031-jedi-3",
-      "fallback": "bank-piece",
-      "held_by_mohammad": false,
-      "production": "qc_passed",
-      "delivery": "published",
-      "status": "scheduled",
-      "evidence": "Publer published IG and X 08:30-08:31Z, Threads 08:36Z; Inbox published entry star-wars-jedi-3-far-in-development",
-      "done": true,
-      "logged": true
-    },
-    {
-      "id": "cheating-bans-ai-explainer",
-      "title": "Cheating explainer: PUBG bans, Activision AI, Steam terms (تحليل)",
-      "kind": "explainer",
-      "slot": "2026-10-31T13:30:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "cards/2026-10/cheating-bans-ai-explainer-reel-v2.mp4",
-      "card": "prod-20261031-cheating-explainer",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "delivery": "published",
-      "evidence": "Publer Published 09:31-09:32Z on Instagram, X, Threads; Inbox published entry cheating-bans-ai-explainer",
-      "logged": true
-    },
-    {
-      "id": "queens-domain-out-now",
-      "title": "Queen's Domain out now on four platforms",
-      "kind": "news",
-      "slot": "2026-10-31T14:30:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/queens-domain-out-now.json",
-      "card": "prod-20261031-queens-domain",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "delivery": "published",
-      "evidence": "Publer Published 10:31Z on Instagram, X, Threads; Inbox published entry queens-domain-out-now",
-      "logged": true
-    },
-    {
-      "id": "chronicles-medieval-studio-funding",
-      "title": "Chronicles: Medieval studio at risk of closing",
-      "kind": "news",
-      "slot": "2026-10-31T15:30:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/chronicles-medieval-studio-funding.json",
-      "card": "prod-20261031-chronicles",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "delivery": "published",
-      "evidence": "Publer Published 11:31-11:32Z on Instagram, X, Threads; Inbox published entry chronicles-medieval-studio-funding",
-      "logged": true
-    },
-    {
-      "id": "mw4-switch-2-digital-foundry",
-      "title": "Digital Foundry on MW4 for Switch 2",
-      "kind": "news",
-      "slot": "2026-10-31T16:30:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/mw4-switch-2-digital-foundry.json",
-      "card": "prod-20261031-mw4-df",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "delivery": "published",
-      "evidence": "Publer Published 2026-10-31T12:31Z on Instagram, X and Threads (slot check 1 Nov catch-up); https://www.instagram.com/reel/DfKKY_BFfDb/",
-      "logged": true
-    },
-    {
-      "id": "uncharted-3-turns-15",
-      "title": "Uncharted 3 turns 15 (في مثل هذا اليوم)",
-      "kind": "evergreen",
-      "slot": "2026-11-01T00:00:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/uncharted-3-turns-15.json",
-      "card": "prod-20261031-uncharted-3",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "delivery": "published",
-      "evidence": "Publer Published 2026-10-31T20:02Z on Instagram, X and Threads (slot check 1 Nov catch-up); https://www.instagram.com/reel/DfK-AKqgY0T/",
-      "logged": true
-    },
-    {
-      "id": "probably-stolen-500k-sold",
-      "title": "Probably Stolen passes half a million (أرقام)",
-      "kind": "news",
-      "slot": "2026-10-31T17:30:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/probably-stolen-500k-sold.json",
-      "card": "prod-20261031-probably-stolen-500k",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "delivery": "published",
-      "evidence": "Publer Published 2026-10-31T13:31Z on Instagram, X and Threads (slot check 1 Nov catch-up); https://www.instagram.com/reel/DfKRQ_UkbLP/",
-      "logged": true
-    },
-    {
-      "id": "next-week-releases-nov-2",
-      "title": "من Zelda إلى Godzilla: إصدارات الأسبوع المقبل",
-      "kind": "reel",
-      "slot": "2026-11-01T18:30:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/next-week-releases-nov-2.json",
-      "card": "prod-20261101-next-week-releases",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer Published 2026-11-01T14:31Z on Instagram, X and Threads (slot check 1 Nov); https://www.instagram.com/reel/DfM88USDqUw/",
-      "delivery": "published",
-      "logged": true
-    },
-    {
-      "id": "mega-man-dual-override-cook-man",
-      "title": "طاهٍ آلي يتحدى Mega Man (Cook Man)",
-      "kind": "reel",
-      "slot": "2026-11-01T22:00:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/mega-man-dual-override-cook-man.json",
-      "card": "prod-20261101-cook-man",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer Published 18:03Z on Instagram, X and Threads (default applied); https://www.instagram.com/reel/DfNVLTsjRmA/",
-      "delivery": "published",
-      "logged": true
-    },
-    {
-      "id": "bend-studio-next-game-2027-report",
-      "title": "لعبة مطور Days Gone قد تصدر في 2027 (تقرير)",
-      "kind": "reel",
-      "slot": "2026-11-01T23:00:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/bend-studio-next-game-2027-report.json",
-      "card": "prod-20261101-bend-report",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer Published 19:02-19:03Z on Instagram, X and Threads (default applied); https://www.instagram.com/reel/DfNcBNnj8PI/",
-      "delivery": "published",
-      "logged": true
-    },
-    {
-      "id": "pikmin-4-switch-2-demo-nov-2",
-      "title": "Pikmin 4 Switch 2 Edition free demo tomorrow (رسمي)",
-      "kind": "news",
-      "slot": "2026-11-01T20:30:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/pikmin-4-switch-2-demo-nov-2.json",
-      "card": "prod-20261101-pikmin-4-demo",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "delivery": "published",
-      "evidence": "Publer Published 16:31-16:32Z on Instagram, X and Threads (default Approve applied); https://www.instagram.com/reel/DfNKri9DXee/",
-      "logged": true
-    },
-    {
-      "id": "petit-planet-switch-2-2027",
-      "title": "لعبة Petit Planet قادمة إلى Switch 2 في 2027 (رسمي)",
-      "kind": "reel",
-      "slot": "2026-11-01T19:30:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/petit-planet-switch-2-2027.json",
-      "card": "prod-20261101-petit-planet",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer Published 15:31-15:33Z on Instagram, X and Threads (default Approve applied); https://www.instagram.com/reel/DfND4IRj48T/",
-      "delivery": "published",
-      "logged": true
-    },
-    {
-      "id": "sonic-generations-turns-15",
-      "title": "لعبة Sonic Generations تكمل 15 عامًا",
-      "kind": "reel",
-      "slot": "2026-11-01T23:30:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/sonic-generations-turns-15.json",
-      "card": "prod-20261101-sonic-generations-15",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer Published 19:31-19:35Z on Instagram, X and Threads (default applied); https://www.instagram.com/reel/DfNfnALghki/",
-      "delivery": "published",
-      "logged": true
-    },
-    {
-      "id": "call-of-duty-infinite-warfare-turns-10",
-      "title": "بعد يومين تكمل Call of Duty: Infinite Warfare عشر سنوات",
-      "kind": "reel",
-      "slot": "2026-11-02T08:00:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/call-of-duty-infinite-warfare-turns-10.json",
-      "card": null,
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer Published 04:01-04:02Z (08:01-08:02 Dubai) on X, Instagram and Threads; https://www.instagram.com/reel/DfOZqdCFCfx/",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "pulled forward from Wed 4 Nov (Mohammad, 2 Nov 2026); gap fill after the 19:31Z Sonic Generations post; our bed (retro); moved from 07:45 to 08:00 (07:45 had passed during the upload)"
-    },
-    {
-      "id": "suda51-travis-touchdown-will-return-famitsu",
-      "title": "سودا يعد بعودة Travis Touchdown (فاميتسو)",
-      "kind": "reel",
-      "slot": "2026-11-02T08:45:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/suda51-travis-touchdown-will-return-famitsu.json",
-      "card": "prod-20261102-review-0630",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer Published 04:45-04:46Z (08:45-08:46 Dubai) on X, Instagram and Threads; https://www.instagram.com/reel/DfOetGADqYf/",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "06:30 shortlist item 1 (Suda51 and Fortnite free shop); built by Production 2 under the posting orders of 2 Nov"
-    },
-    {
-      "id": "nagoshi-studio-dissolved-gazette",
-      "title": "إغلاق استوديو ناغوشي (الجريدة الرسمية اليابانية)",
-      "kind": "reel",
-      "slot": "2026-11-02T09:15:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/nagoshi-studio-dissolved-gazette.json",
-      "card": "prod-20261102-review-0630",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": {
-        "instagram": "https://www.instagram.com/reel/DfOiIisI5Ds/",
-        "x": "https://x.com/1748744375616643072/status/2117123438376563196",
-        "threads": "https://www.threads.com/@the_digilounge/post/DfOiIrbkuyZ",
-        "published_at": "2026-11-02T05:15:00Z"
-      },
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "found by the 04:07Z watch run (Famitsu, Gematsu, Automaton citing the 2 Nov Kanpo); Verifier NEW; Production 2 posting lane"
-    },
-    {
-      "id": "godzilla-melee-remastered-steam-nov-3",
-      "title": "Godzilla: Destroy All Monsters Melee Remastered تصدر غدًا على Steam",
-      "kind": "reel",
-      "slot": "2026-11-02T10:05:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/godzilla-melee-remastered-steam-nov-3.json",
-      "card": "prod-20261102-review-0630",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": {
-        "instagram": "https://www.instagram.com/reel/DfOn8AdjnCd/",
-        "x": "https://x.com/1748744375616643072/status/2117136037151375612",
-        "threads": "https://www.threads.com/@the_digilounge/post/DfOn2qljj3S",
-        "published_at": "2026-11-02T06:05:00Z"
-      },
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "gap fill for the 10:15 Dubai gap rule; dated bank piece (Steam release 3 Nov, Atari, Pipeworks); Production 2 posting lane"
-    },
-    {
-      "id": "phantom-blade-zero-4-million-72-hours",
-      "title": "Phantom Blade Zero تتجاوز 4 ملايين نسخة خلال 72 ساعة",
-      "kind": "reel",
-      "slot": "2026-11-02T11:55:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/phantom-blade-zero-4-million-72-hours.json",
-      "card": "prod-20261102-review-1000",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": {
-        "instagram": "https://www.instagram.com/reel/DfO0cioiCGK/",
-        "x": "https://x.com/1748744375616643072/status/2117163704865194090",
-        "threads": "https://www.threads.com/@the_digilounge/post/DfO0cZsjeZz",
-        "published_at": "2026-11-02T07:55:00Z"
-      },
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "review-1000 rank 1; official studio post 2 Nov on X (via Famitsu 92836); gap rule already past 11:05 Dubai; Production 2 posting lane"
-    },
-    {
-      "id": "dave-bautista-kratos-20-pounds-muscle",
-      "title": "دايف باوتيستا يكسب 20 رطلًا من العضلات لدور Kratos",
-      "kind": "reel",
-      "slot": "2026-11-02T15:00:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/dave-bautista-kratos-20-pounds-muscle.json",
-      "card": "prod-20261102-review-1400",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": {
-        "instagram": "https://www.instagram.com/reel/DfPJ35ajFKu/",
-        "x": "https://x.com/1748744375616643072/status/2117210889849881056",
-        "threads": "https://www.threads.com/@the_digilounge/post/DfPJ330iiEs",
-        "published_at": "2026-11-02T11:03:00Z"
-      },
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "review-1400 rank 1; his Instagram story via IGN 2 Nov 03:37Z and DiscussingFilm 1 Nov; people story, Skidmore CC BY-SA photo, GoW 2018 Announce trailer stand-in credit; gap rule already broken; Production 2 posting lane"
-    },
-    {
-      "id": "team-liquid-algs-split-2-playoffs-winners",
-      "title": "Team Liquid بطل ALGS Split 2 Playoffs",
-      "kind": "reel",
-      "slot": "2026-11-02T17:40:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/team-liquid-algs-split-2-playoffs-winners.json",
-      "card": "prod-20261102-review-1400",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": {
-        "instagram": "https://www.instagram.com/reel/DfPb7anjgri/",
-        "x": "https://x.com/1748744375616643072/status/2117250535577338347",
-        "threads": "https://www.threads.com/@the_digilounge/post/DfPb7V2jvvH"
-      },
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "review-1400 rank 2, built on Mohammad's 17:12 Dubai order; result from the Team Liquid and ALGS X posts as quoted by Insider Gaming 2 Nov; Apex Steam screenshots with stand-in credit; Production 2 posting lane"
-    },
-    {
-      "id": "zelda-ocarina-developers-interview-ask-the-developer-24",
-      "title": "حوار مطوري Ocarina of Time (Ask the Developer Vol. 24)",
-      "kind": "reel",
-      "slot": "2026-11-02T19:45:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/zelda-ocarina-developers-interview-ask-the-developer-24.json",
-      "card": "user-request-2026-11-02-zelda-interview",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": {
-        "instagram": "https://www.instagram.com/reel/DfPqQToirdp/",
-        "x": "https://x.com/1748744375616643072/status/2117282023232483454",
-        "threads": "https://www.threads.com/@the_digilounge/post/DfPqPHxClgG"
-      },
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "Mohammad's request 2 Nov; interview rule (2 to 3 attributed quotes); Nintendo developer photos credited; Overview Trailer 8 to 34 s; v4 render; scheduled 14:13Z for 18:30 Dubai; HELD by Mohammad 14:2xZ (comments to come); all three pulled back to Publer drafts, do not schedule or publish until he says; Mohammad said go 15:2xZ; v7 (music stem only, series intro); Instagram scheduled 19:45 Dubai, X timed out (look up before retry), Threads media too large to proxy (retry after other downloads); all three scheduled 19:45 Dubai (X and Threads from the Publer library copy after the 46 MB url fetch failed); old v4 drafts still in Publer drafts"
-    },
-    {
-      "id": "derelikt-ps5-nov-13-ps1-style-horror",
-      "title": "Derelikt تصدر على PS5 في 13 نوفمبر",
-      "kind": "reel",
-      "slot": "2026-11-02T20:30:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/derelikt-ps5-nov-13-ps1-style-horror.json",
-      "card": "hourly-watch-1507Z",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": {
-        "instagram": "https://www.instagram.com/reel/DfPvgVegduE/",
-        "x": "https://x.com/1748744375616643072/status/2117293586966307164",
-        "threads": "https://www.threads.com/@the_digilounge/post/DfPvgMIDSCx"
-      },
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "gap fill (nothing scheduled since ALGS 17:40 Dubai; Zelda held by Mohammad); PlayStation Blog 15:00Z primary; scheduled 16:18Z for 20:30 Dubai from the Publer library copy; gate 16:12Z: PlayStation Blog primary read 15:07Z, no denial found"
-    },
-    {
-      "id": "thief-dark-project-remastered-dec-3",
-      "title": "Thief: The Dark Project Remastered تصدر 3 ديسمبر",
-      "kind": "reel",
-      "slot": "2026-11-02T21:45:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/thief-dark-project-remastered-dec-3.json",
-      "card": "hourly-watch-1707Z",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": {
-        "instagram": "https://www.instagram.com/reel/DfP3-U1DQAp/",
-        "x": "https://x.com/1748744375616643072/status/2117312201581093189",
-        "threads": "https://www.threads.com/@the_digilounge/post/DfP392MiZlx"
-      },
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "gap fill after Derelikt 20:30; Gematsu 15:21Z, Steam page primary for date and price; scheduled 17:35Z for 21:45 Dubai; gate 17:30Z Steam page primary (date, price) read 17:15Z, Gematsu for platforms"
-    },
-    {
-      "id": "ova-magica-consoles-nov-10",
-      "title": "Ova Magica تصدر للكونسول 10 نوفمبر",
-      "kind": "reel",
-      "slot": "2026-11-02T22:55:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/ova-magica-consoles-nov-10.json",
-      "card": "hourly-watch-1807Z",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer: read as Published (Borderlands 0:46 Dubai confirmed; Ova Magica and Game Pass slots passed)",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "gap fill (nothing scheduled after Thief 21:45); Gematsu 17:18Z; Steam for PC facts; v2 stills Reel; scheduled 18:36Z for 22:55 Dubai from the Publer library copy; gate 18:30Z: Gematsu 17:18Z read, Steam page for PC facts"
-    },
-    {
-      "id": "game-pass-leaving-14-games-november-2026",
-      "title": "14 لعبة تغادر Game Pass في نوفمبر",
-      "kind": "reel",
-      "slot": "2026-11-02T23:45:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/game-pass-leaving-14-games-november-2026.json",
-      "card": "hourly-watch-1907Z",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer: read as Published (Borderlands 0:46 Dubai confirmed; Ova Magica and Game Pass slots passed)",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "gap fill; Pure Xbox report (Xbox app list), 4 outlets; label تقرير; the open board question prod2-20261102-gamepass-leaving is answered by the whole-chain card title (build, do not wait); scheduled 19:22Z for 23:45 Dubai from the Publer library copy; gate 19:15Z Pure Xbox read, four outlets agree, no denial found"
-    },
-    {
-      "id": "borderlands-series-100-million-sold",
-      "title": "سلسلة Borderlands تتخطى مئة مليون نسخة",
-      "kind": "reel",
-      "slot": "2026-11-03T00:45:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/borderlands-series-100-million-sold.json",
-      "card": "hourly-watch-2007Z",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer: read as Published (Borderlands 0:46 Dubai confirmed; Ova Magica and Game Pass slots passed)",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "official Borderlands message 18:07Z; 60 minute night spacing after Game Pass 23:45; v2 (Claptrap centred); scheduled 20:20Z for 00:45 Dubai from the Publer library copy; gate 20:12Z official message read"
-    },
-    {
-      "id": "loftia-early-access-nov-3",
-      "title": "لعبة Loftia تصدر بالوصول المبكر 3 نوفمبر",
-      "kind": "reel",
-      "slot": "2026-11-03T02:40:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/loftia-early-access-nov-3.json",
-      "card": "hourly-watch-2207Z",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer: Instagram reel DfQZuonDoE1 2:41, X 2:40, Threads 2:41 Dubai 3 Nov",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "Steam page app 2320980 (3 Nov, Windows and Mac, Early Access); stills Reel; night gap rule (last post 00:45 Dubai); scheduled 22:21Z for 02:40 Dubai (Instagram via library copy, X and Threads by media_url after library 500); gate 22:12Z Steam page read, grammar review clean"
-    },
-    {
-      "id": "sonic-racing-crossworlds-year-two-starts-nov-3",
-      "title": "السنة الثانية من Sonic Racing: CrossWorlds تبدأ اليوم",
-      "kind": "reel",
-      "slot": "2026-11-03T06:00:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/sonic-racing-crossworlds-year-two-starts-nov-3.json",
-      "card": "hourly-watch-0107Z",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer: Instagram reel DfQwxSdAQa7 6:02, X 6:01, Threads 6:02 Dubai 3 Nov",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "SEGA Steam post (Year Two live 3 Nov) plus Nintendo Life patch preview; launch-day angle; stills Reel; gap alarm (last post 02:40 Dubai); v2 (cropped gadget UI shot swapped); scheduled 01:26Z for 06:00 Dubai (Instagram via library copy, X and Threads by media_url); gate 01:25Z: SEGA Steam post (Year Two live 3 Nov, Duel Mode, Bayonetta, Godzilla pack) and Nintendo Life patch 2.0.0 preview read; grammar review: caption verb fixed to تتوفر"
-    },
-    {
-      "id": "voidbreaker-1-0-launches-nov-4",
-      "title": "لعبة VOID/BREAKER تصدر بنسختها الكاملة غدًا",
-      "kind": "reel",
-      "slot": "2026-11-03T07:00:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/voidbreaker-1-0-launches-nov-4.json",
-      "card": "hourly-watch-0207Z",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "scheduled 07:00 Dubai 3 Nov; read as sent before the 08:00 slot",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "Steam page and Playstack post, Xbox Wire Game Pass 4 Nov; release-eve; night spacing 60 min after Sonic 06:00 Dubai; scheduled 02:20Z for 07:00 Dubai (Instagram via library copy, X and Threads by media_url); gate 02:15Z: Steam page, Playstack post and Xbox Wire read; grammar review: ناشرها fixed"
-    },
-    {
-      "id": "geekay-ocarina-midnight-pickup-riyadh-nov-4",
-      "title": "استلام Ocarina of Time عند منتصف الليل في الرياض بارك (جيكي)",
-      "kind": "reel",
-      "slot": "2026-11-03T08:00:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/geekay-ocarina-midnight-pickup-riyadh-nov-4.json",
-      "card": "mohammad-request-0306Z",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer: Instagram reel DfQ-cXOmuJN 8:02, X 8:01, Threads 8:01 Dubai 3 Nov",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "Mohammad's request 3 Nov: Geekay midnight pickup, Riyadh Park, 4 Nov 11:59 PM KSA; event Reel; Instagram caption mentions @geekay_games; v2 scheduled 03:30Z for 08:00 Dubai (Instagram via library copy, X and Threads by media_url); gate 03:28Z Geekay post re-read; grammar review clean, caption softened per its notes; music stem leak 9.4% accepted (limit 10)"
-    },
-    {
-      "id": "geekay-ocarina-midnight-pickup-reminder-nov-4",
-      "title": "تذكير X وThreads: استلام جيكي الليلة",
-      "kind": "text",
-      "slot": "2026-11-04T19:00:00+04:00",
-      "platforms": [
-        "x",
-        "threads"
-      ],
-      "job": null,
-      "card": "mohammad-request-0306Z",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": false,
-      "evidence": null,
-      "delivery": {
-        "x": "scheduled",
-        "threads": "scheduled"
-      },
-      "logged": false,
-      "note": "one-line text reminder on 4 Nov evening (Mohammad's request); text only, no media; scheduled 03:31Z"
-    },
-    {
-      "id": "genshin-impact-7-2-maintenance-preinstall-nov-4",
-      "title": "تحديث Genshin 7.2 غدًا بصيانة في الثانية فجرًا",
-      "kind": "reel",
-      "slot": "2026-11-03T09:00:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/genshin-impact-7-2-maintenance-preinstall-nov-4.json",
-      "card": "hourly-watch-0407Z",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": true,
-      "evidence": "Publer: Instagram reel DfRFUUciUTl 9:02, X 9:01, Threads 9:01 Dubai 3 Nov",
-      "delivery": {
-        "instagram": "published",
-        "x": "published",
-        "threads": "published"
-      },
-      "logged": true,
-      "note": "HoYoLAB maintenance preview 2 Nov (read in full); IGN official trailer 1080p; day gap rule (last post 08:01 Dubai); v3 scheduled 04:33Z for 09:00 Dubai (Instagram via library copy, X and Threads by media_url); gate 04:30Z HoYoLAB notice read in full; grammar review clean; music stem 12% limit"
-    },
-    {
-      "id": "stellar-blade-switch-2-first-reviews-nov-3",
-      "title": "أولى مراجعات Stellar Blade على Switch 2 قبل 5 نوفمبر",
-      "kind": "reel",
-      "slot": "2026-11-03T10:00:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/stellar-blade-switch-2-first-reviews-nov-3.json",
-      "card": "hourly-watch-0507Z",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": false,
-      "evidence": "scheduled 10:00 Dubai 3 Nov; read as sent",
-      "delivery": {
-        "instagram": "scheduled",
-        "x": "scheduled",
-        "threads": "scheduled"
-      },
-      "logged": false,
-      "note": "review embargo lifted 2 Nov 22:00Z (Nintendo Life 7/10, Polygon); day gap rule (last 09:00 Dubai); v3 scheduled 05:30Z for 10:00 Dubai (Instagram via library copy, X and Threads by media_url); gate 05:28Z Nintendo Life review read in full (7/10), Polygon headline only; grammar review: Nintendo spelling fixed, Polygon line softened"
-    },
-    {
-      "id": "google-ocarina-of-time-easter-egg-1998-search",
-      "title": "مفاجأة في Google قبل إطلاق Ocarina of Time",
-      "kind": "reel",
-      "slot": "2026-11-03T10:40:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/google-ocarina-of-time-easter-egg-1998-search.json",
-      "card": "hourly-watch-0607Z",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": false,
-      "evidence": "scheduled 10:40 Dubai 3 Nov",
-      "delivery": {
-        "instagram": "scheduled",
-        "x": "scheduled",
-        "threads": "scheduled"
-      },
-      "logged": false,
-      "note": "13 outlets 2 Nov (Nintendo Life read); day gap rule (last 10:00 Dubai); links to the Ocarina launch-day series; v3 scheduled 06:20Z for 10:40 Dubai (Instagram via library copy, X and Threads by media_url); gate 06:18Z Nintendo Life read; grammar review: Google takes the Arabic form جوجل (Google)"
-    },
-    {
-      "id": "final-fantasy-resonance-producer-wanted-more-than-a-port",
-      "title": "منتج Final Fantasy Resonance: الإدارة فضلت نقلًا بسيطًا",
-      "kind": "reel",
-      "slot": "2026-11-03T11:45:00+04:00",
-      "platforms": [
-        "instagram",
-        "x",
-        "threads"
-      ],
-      "job": "jobs/render/final-fantasy-resonance-producer-wanted-more-than-a-port.json",
-      "card": "hourly-watch-0707Z",
-      "fallback": "publish-last-passed",
-      "held_by_mohammad": false,
-      "done": false,
-      "evidence": null,
-      "delivery": {
-        "instagram": "scheduled",
-        "x": "scheduled",
-        "threads": "scheduled"
-      },
-      "logged": false,
-      "note": "Bloomberg interview via GamesRadar 2 Nov; interview story on stills; day gap rule (last 10:40 Dubai)"
+    "threads": {
+     "state": "published",
+     "at": "2026-10-30T20:03Z",
+     "url": "https://www.threads.com/@the_digilounge/post/DfIZQ7AgoYt"
     }
-  ]
+   },
+   "logged": true,
+   "commitment": "fulfilled_late",
+   "history": [
+    "missed on 29 Oct 21:00 Dubai (storybook re-render not built), moved to 31 Oct 00:00 Dubai by production; published 00:03 Dubai"
+   ]
+  },
+  {
+   "id": "oot-road-ep7",
+   "title": "الطريق إلى Ocarina 7: الأميرة والرجل من الصحراء",
+   "kind": "series episode",
+   "series": "road-to-ocarina",
+   "slot": "2026-10-31T21:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/oot-road-ep7-princess-and-the-desert-man.json",
+   "card": "adv-20261027-road-to-ocarina",
+   "fallback": "shift-series-one-day",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer Published 2026-10-31T17:03Z on Instagram, X and Threads (slot check 1 Nov catch-up); https://www.instagram.com/reel/DfKphj_iih-/",
+   "note": "was 30 Oct; moved one day; 31 Oct: built under Mohammad's music-by-scene and picture-first rules, preview card before scheduling; v2 scheduled in Publer 09:19Z for 17:00Z, all three platforms",
+   "delivery": "published",
+   "logged": true
+  },
+  {
+   "id": "oot-road-ep8",
+   "title": "الطريق إلى Ocarina 8: سبع سنوات",
+   "kind": "series episode",
+   "series": "road-to-ocarina",
+   "slot": "2026-11-01T21:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/oot-road-ep8-seven-years.json",
+   "card": "prod-20261101-ocarina-ep8",
+   "fallback": "shift-series-one-day",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer Published 17:03-17:05Z on Instagram, X and Threads (default Approve applied); https://www.instagram.com/reel/DfNObAbj1Cu/",
+   "note": "was 31 Oct; moved one day; light spoiler marker (تحذير: حرق); 1 Nov 13:40Z: built under Mohammad 31 Oct rules (scene bed: celesta, piano, synth, celesta; picture-first pages), runner render; v2 (climax fix) scheduled in Publer 14:21Z for 17:00Z on Instagram, X and Threads; preview card prod-20261101-ocarina-ep8 (hold or fix before 16:45Z)",
+   "delivery": "published",
+   "logged": true
+  },
+  {
+   "id": "fortnite-treasure-hunters-v2",
+   "title": "عالم ONE PIECE قادم إلى Fortnite (v2, Epic trailer)",
+   "kind": "reel",
+   "slot": "2026-10-31T01:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "cards/2026-10/fortnite-treasure-hunters-one-piece-november-1-reel-v2.mp4",
+   "card": "adv-20261030-one-piece-fortnite-hold",
+   "fallback": "card-only",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "scheduled in Publer 18:12Z on all three",
+   "delivery": {
+    "instagram": {
+     "state": "published",
+     "at": "2026-10-30T21:03Z",
+     "url": "https://www.instagram.com/reel/DfIgIizmCb8/"
+    },
+    "x": {
+     "state": "published",
+     "at": "2026-10-30T21:02Z",
+     "url": "https://x.com/1748744375616643072/status/2116274446038098210"
+    },
+    "threads": {
+     "state": "published",
+     "at": "2026-10-30T21:02Z",
+     "url": "https://www.threads.com/@the_digilounge/post/DfIgDmxiKZi"
+    }
+   },
+   "logged": true,
+   "commitment": "fulfilled_on_time",
+   "status": "published"
+  },
+  {
+   "id": "romero-new-publisher",
+   "title": "Romero shooter new publisher",
+   "kind": "reel",
+   "slot": "2026-10-30T23:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "cards/2026-10/john-romero-shooter-new-publisher-reel-v2.mp4",
+   "card": "prod-20261030-romero-publisher",
+   "fallback": "card-only",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "scheduled in Publer 17:54Z on all three",
+   "note": "moved 18:10Z to 23:00 Dubai (gap alarm 22:00-24:00 Dubai, no third trailer in a row)",
+   "delivery": {
+    "instagram": {
+     "state": "published",
+     "at": "2026-10-30T19:03Z",
+     "url": "https://www.instagram.com/reel/DfISfEyFQoi/"
+    },
+    "x": {
+     "state": "published",
+     "at": "2026-10-30T19:03Z",
+     "url": "https://x.com/1748744375616643072/status/2116244522912919688"
+    },
+    "threads": {
+     "state": "published",
+     "at": "2026-10-30T19:03Z",
+     "url": "https://www.threads.com/@the_digilounge/post/DfIScZIiLb8"
+    }
+   },
+   "logged": true,
+   "commitment": "fulfilled_on_time",
+   "status": "published"
+  },
+  {
+   "id": "ea-closed-bioware-battlefront-3",
+   "title": "EA closed BioWare for Battlefront 3 (Bloomberg, تقرير)",
+   "kind": "reel",
+   "slot": "2026-10-31T02:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/ea-closed-bioware-for-battlefront-3-report.json",
+   "card": null,
+   "fallback": "bank-piece",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer scheduled 18:51Z for 2026-10-31T02:00+04:00 on Instagram, X, Threads (v3)",
+   "note": "rendering; director check, then Publer moved 18:10Z to 02:00 Dubai; our bed",
+   "status": "published",
+   "delivery": {
+    "instagram": {
+     "state": "published",
+     "at": "2026-10-30T22:03Z",
+     "url": "https://www.instagram.com/reel/DfIm73lAk0I/"
+    },
+    "x": {
+     "state": "published",
+     "at": "2026-10-30T22:02Z",
+     "url": "https://x.com/1748744375616643072/status/2116289563563896934"
+    },
+    "threads": {
+     "state": "published",
+     "at": "2026-10-30T22:02Z",
+     "url": "https://www.threads.com/@the_digilounge/post/DfIm7K9lIt9"
+    }
+   },
+   "logged": true,
+   "commitment": "fulfilled_on_time"
+  },
+  {
+   "id": "warframe-tau-december",
+   "title": "Warframe: Tau in December (رسمي, stills)",
+   "kind": "reel",
+   "slot": "2026-10-31T03:00+04:00",
+   "original_due_at": "2026-10-31T03:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/warframe-tau-december.json",
+   "card": "prod-20261030-warframe-tau",
+   "fallback": "card-only",
+   "held_by_mohammad": false,
+   "done": true,
+   "production": "qc_passed",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "status": "published",
+   "evidence": "Published 23:02-23:03Z on Instagram, X, Threads (Publer); Inbox published entry written 23:06Z; card closed (default Approve)",
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DfIt0M0FXwm/",
+    "x": "https://x.com/1748744375616643072/status/2116304697061458018",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfIt0KAgazy"
+   },
+   "logged": true
+  },
+  {
+   "id": "steam-horror-most-played-halloween",
+   "title": "Halloween: Steam's most-played horror games (أرقام, list)",
+   "kind": "reel",
+   "slot": "2026-10-31T05:00+04:00",
+   "original_due_at": "2026-10-31T05:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/steam-horror-most-played-halloween.json",
+   "card": "prod-20261031-steam-horror",
+   "fallback": "bank-piece",
+   "held_by_mohammad": false,
+   "done": true,
+   "production": "qc_passed",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "status": "published",
+   "evidence": "Published 01:02-01:03Z on Instagram, X, Threads (Publer); Inbox published entry 01:06Z; card closed (default Approve)",
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DfI7jKGjuGZ/",
+    "x": "https://x.com/1748744375616643072/status/2116334903822352762",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfI7jI_CXuC"
+   },
+   "logged": true
+  },
+  {
+   "id": "ffxiv-evercold-february-23-2027",
+   "title": "FFXIV Evercold dates (تقرير, trailer)",
+   "kind": "reel",
+   "slot": "2026-10-31T07:20+04:00",
+   "original_due_at": "2026-10-31T07:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/ffxiv-evercold-february-23-2027.json",
+   "card": "prod-20261031-ffxiv-evercold",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": false,
+   "production": "qc_passed",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "status": "fulfilled",
+   "evidence": "runner render 210 s (f22c62d); director PASS 03:09Z; submitting 03:10Z for 07:20 Dubai (original slot 07:00, two runner text stops); scheduled in Publer 03:10Z for 03:20Z on all three; Publer Published 03:20-03:21Z on all three; Inbox published entry",
+   "logged": true
+  },
+  {
+   "id": "xbox-game-pass-next-week-nov-2",
+   "title": "Four games join Game Pass 2 to 5 Nov (list)",
+   "kind": "post",
+   "slot": "2026-10-31T08:30+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/xbox-game-pass-next-week-nov-2.json",
+   "card": "prod-20261031-xbox-game-pass",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "production": "qc_passed",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "status": "fulfilled",
+   "evidence": "job pushed 03:24Z (a3c659d7); v2 headline fix after v1 lands; v3 runner 326 s (86135ace); director PASS 03:41Z; submitting for 04:30Z; scheduled in Publer 03:42Z on all three; Publer Published 04:30-04:31Z on all three; Inbox published entry",
+   "logged": true
+  },
+  {
+   "id": "altman-dram-gamers-react",
+   "title": "Altman on home-PC memory, gamers react (debate)",
+   "kind": "post",
+   "slot": "2026-10-31T09:30+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/altman-dram-gamers-react.json",
+   "card": "prod-20261031-altman-dram",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "production": "qc_passed",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "status": "fulfilled",
+   "evidence": "job pushed 03:49Z (a0860928); v1 runner failed pace check; v1 render had block damage on grille (runner download); v2 41535600 clean, director PASS 04:25Z; submitting for 05:30Z; scheduled in Publer 04:27Z on all three; Publer Published 05:30-05:31Z on all three; Inbox published entry",
+   "logged": true
+  },
+  {
+   "id": "silver-palace-december-14",
+   "title": "Silver Palace launches 14 Dec",
+   "kind": "post",
+   "slot": "2026-10-31T10:30+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/silver-palace-december-14.json",
+   "card": "prod-20261031-silver-palace",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "production": "qc_passed",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "status": "fulfilled",
+   "evidence": "job pushed 05:18Z (6651f6a7); v1 cover headline over face; v2 191d550e director PASS 05:40Z, audio split applied clean; submitting for 06:30Z; scheduled in Publer 05:38Z on all three; published 06:31Z on all three, Inbox entry written",
+   "logged": true,
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DfJhLKtk8oi/",
+    "x": "https://x.com/1748744375616643072/status/2116417640516157886",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfJhKvgkiiI"
+   }
+  },
+  {
+   "id": "ffxiv-35-million-accounts",
+   "title": "FFXIV 35M accounts, Evercold confirmed (رسمي update)",
+   "kind": "post",
+   "slot": "2026-10-31T11:30+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/ffxiv-35-million-accounts.json",
+   "card": "prod-20261031-ffxiv-35m",
+   "fallback": "bank-piece",
+   "held_by_mohammad": false,
+   "production": "qc_passed",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "status": "fulfilled",
+   "evidence": "job pushed 05:56Z (d6b716ec), gate 05:43Z Exit A on the Square Enix press release; v2 be1dd6d1 director PASS 06:05Z; scheduled in Publer 06:06Z on all three; published 07:30-07:31Z on all three, Inbox entry written",
+   "logged": true,
+   "links": {
+    "instagram": "https://www.instagram.com/reel/DfJoBS_AFJg/",
+    "x": "https://x.com/1748744375616643072/status/2116432698604466648",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfJoA0ZFY9r"
+   }
+  },
+  {
+   "id": "star-wars-jedi-3-far-in-development",
+   "title": "Star Wars Jedi 3 far in development (تقرير, Schreier)",
+   "kind": "post",
+   "slot": "2026-10-31T12:30+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/star-wars-jedi-3-far-in-development.json",
+   "card": "prod-20261031-jedi-3",
+   "fallback": "bank-piece",
+   "held_by_mohammad": false,
+   "production": "qc_passed",
+   "delivery": "published",
+   "status": "scheduled",
+   "evidence": "Publer published IG and X 08:30-08:31Z, Threads 08:36Z; Inbox published entry star-wars-jedi-3-far-in-development",
+   "done": true,
+   "logged": true
+  },
+  {
+   "id": "cheating-bans-ai-explainer",
+   "title": "Cheating explainer: PUBG bans, Activision AI, Steam terms (تحليل)",
+   "kind": "explainer",
+   "slot": "2026-10-31T13:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "cards/2026-10/cheating-bans-ai-explainer-reel-v2.mp4",
+   "card": "prod-20261031-cheating-explainer",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "delivery": "published",
+   "evidence": "Publer Published 09:31-09:32Z on Instagram, X, Threads; Inbox published entry cheating-bans-ai-explainer",
+   "logged": true
+  },
+  {
+   "id": "queens-domain-out-now",
+   "title": "Queen's Domain out now on four platforms",
+   "kind": "news",
+   "slot": "2026-10-31T14:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/queens-domain-out-now.json",
+   "card": "prod-20261031-queens-domain",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "delivery": "published",
+   "evidence": "Publer Published 10:31Z on Instagram, X, Threads; Inbox published entry queens-domain-out-now",
+   "logged": true
+  },
+  {
+   "id": "chronicles-medieval-studio-funding",
+   "title": "Chronicles: Medieval studio at risk of closing",
+   "kind": "news",
+   "slot": "2026-10-31T15:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/chronicles-medieval-studio-funding.json",
+   "card": "prod-20261031-chronicles",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "delivery": "published",
+   "evidence": "Publer Published 11:31-11:32Z on Instagram, X, Threads; Inbox published entry chronicles-medieval-studio-funding",
+   "logged": true
+  },
+  {
+   "id": "mw4-switch-2-digital-foundry",
+   "title": "Digital Foundry on MW4 for Switch 2",
+   "kind": "news",
+   "slot": "2026-10-31T16:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/mw4-switch-2-digital-foundry.json",
+   "card": "prod-20261031-mw4-df",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "delivery": "published",
+   "evidence": "Publer Published 2026-10-31T12:31Z on Instagram, X and Threads (slot check 1 Nov catch-up); https://www.instagram.com/reel/DfKKY_BFfDb/",
+   "logged": true
+  },
+  {
+   "id": "uncharted-3-turns-15",
+   "title": "Uncharted 3 turns 15 (في مثل هذا اليوم)",
+   "kind": "evergreen",
+   "slot": "2026-11-01T00:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/uncharted-3-turns-15.json",
+   "card": "prod-20261031-uncharted-3",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "delivery": "published",
+   "evidence": "Publer Published 2026-10-31T20:02Z on Instagram, X and Threads (slot check 1 Nov catch-up); https://www.instagram.com/reel/DfK-AKqgY0T/",
+   "logged": true
+  },
+  {
+   "id": "probably-stolen-500k-sold",
+   "title": "Probably Stolen passes half a million (أرقام)",
+   "kind": "news",
+   "slot": "2026-10-31T17:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/probably-stolen-500k-sold.json",
+   "card": "prod-20261031-probably-stolen-500k",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "delivery": "published",
+   "evidence": "Publer Published 2026-10-31T13:31Z on Instagram, X and Threads (slot check 1 Nov catch-up); https://www.instagram.com/reel/DfKRQ_UkbLP/",
+   "logged": true
+  },
+  {
+   "id": "next-week-releases-nov-2",
+   "title": "من Zelda إلى Godzilla: إصدارات الأسبوع المقبل",
+   "kind": "reel",
+   "slot": "2026-11-01T18:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/next-week-releases-nov-2.json",
+   "card": "prod-20261101-next-week-releases",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer Published 2026-11-01T14:31Z on Instagram, X and Threads (slot check 1 Nov); https://www.instagram.com/reel/DfM88USDqUw/",
+   "delivery": "published",
+   "logged": true
+  },
+  {
+   "id": "mega-man-dual-override-cook-man",
+   "title": "طاهٍ آلي يتحدى Mega Man (Cook Man)",
+   "kind": "reel",
+   "slot": "2026-11-01T22:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/mega-man-dual-override-cook-man.json",
+   "card": "prod-20261101-cook-man",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer Published 18:03Z on Instagram, X and Threads (default applied); https://www.instagram.com/reel/DfNVLTsjRmA/",
+   "delivery": "published",
+   "logged": true
+  },
+  {
+   "id": "bend-studio-next-game-2027-report",
+   "title": "لعبة مطور Days Gone قد تصدر في 2027 (تقرير)",
+   "kind": "reel",
+   "slot": "2026-11-01T23:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/bend-studio-next-game-2027-report.json",
+   "card": "prod-20261101-bend-report",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer Published 19:02-19:03Z on Instagram, X and Threads (default applied); https://www.instagram.com/reel/DfNcBNnj8PI/",
+   "delivery": "published",
+   "logged": true
+  },
+  {
+   "id": "pikmin-4-switch-2-demo-nov-2",
+   "title": "Pikmin 4 Switch 2 Edition free demo tomorrow (رسمي)",
+   "kind": "news",
+   "slot": "2026-11-01T20:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/pikmin-4-switch-2-demo-nov-2.json",
+   "card": "prod-20261101-pikmin-4-demo",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "delivery": "published",
+   "evidence": "Publer Published 16:31-16:32Z on Instagram, X and Threads (default Approve applied); https://www.instagram.com/reel/DfNKri9DXee/",
+   "logged": true
+  },
+  {
+   "id": "petit-planet-switch-2-2027",
+   "title": "لعبة Petit Planet قادمة إلى Switch 2 في 2027 (رسمي)",
+   "kind": "reel",
+   "slot": "2026-11-01T19:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/petit-planet-switch-2-2027.json",
+   "card": "prod-20261101-petit-planet",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer Published 15:31-15:33Z on Instagram, X and Threads (default Approve applied); https://www.instagram.com/reel/DfND4IRj48T/",
+   "delivery": "published",
+   "logged": true
+  },
+  {
+   "id": "sonic-generations-turns-15",
+   "title": "لعبة Sonic Generations تكمل 15 عامًا",
+   "kind": "reel",
+   "slot": "2026-11-01T23:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/sonic-generations-turns-15.json",
+   "card": "prod-20261101-sonic-generations-15",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer Published 19:31-19:35Z on Instagram, X and Threads (default applied); https://www.instagram.com/reel/DfNfnALghki/",
+   "delivery": "published",
+   "logged": true
+  },
+  {
+   "id": "call-of-duty-infinite-warfare-turns-10",
+   "title": "بعد يومين تكمل Call of Duty: Infinite Warfare عشر سنوات",
+   "kind": "reel",
+   "slot": "2026-11-02T08:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/call-of-duty-infinite-warfare-turns-10.json",
+   "card": null,
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer Published 04:01-04:02Z (08:01-08:02 Dubai) on X, Instagram and Threads; https://www.instagram.com/reel/DfOZqdCFCfx/",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "pulled forward from Wed 4 Nov (Mohammad, 2 Nov 2026); gap fill after the 19:31Z Sonic Generations post; our bed (retro); moved from 07:45 to 08:00 (07:45 had passed during the upload)"
+  },
+  {
+   "id": "suda51-travis-touchdown-will-return-famitsu",
+   "title": "سودا يعد بعودة Travis Touchdown (فاميتسو)",
+   "kind": "reel",
+   "slot": "2026-11-02T08:45:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/suda51-travis-touchdown-will-return-famitsu.json",
+   "card": "prod-20261102-review-0630",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer Published 04:45-04:46Z (08:45-08:46 Dubai) on X, Instagram and Threads; https://www.instagram.com/reel/DfOetGADqYf/",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "06:30 shortlist item 1 (Suda51 and Fortnite free shop); built by Production 2 under the posting orders of 2 Nov"
+  },
+  {
+   "id": "nagoshi-studio-dissolved-gazette",
+   "title": "إغلاق استوديو ناغوشي (الجريدة الرسمية اليابانية)",
+   "kind": "reel",
+   "slot": "2026-11-02T09:15:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/nagoshi-studio-dissolved-gazette.json",
+   "card": "prod-20261102-review-0630",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": {
+    "instagram": "https://www.instagram.com/reel/DfOiIisI5Ds/",
+    "x": "https://x.com/1748744375616643072/status/2117123438376563196",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfOiIrbkuyZ",
+    "published_at": "2026-11-02T05:15:00Z"
+   },
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "found by the 04:07Z watch run (Famitsu, Gematsu, Automaton citing the 2 Nov Kanpo); Verifier NEW; Production 2 posting lane"
+  },
+  {
+   "id": "godzilla-melee-remastered-steam-nov-3",
+   "title": "Godzilla: Destroy All Monsters Melee Remastered تصدر غدًا على Steam",
+   "kind": "reel",
+   "slot": "2026-11-02T10:05:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/godzilla-melee-remastered-steam-nov-3.json",
+   "card": "prod-20261102-review-0630",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": {
+    "instagram": "https://www.instagram.com/reel/DfOn8AdjnCd/",
+    "x": "https://x.com/1748744375616643072/status/2117136037151375612",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfOn2qljj3S",
+    "published_at": "2026-11-02T06:05:00Z"
+   },
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "gap fill for the 10:15 Dubai gap rule; dated bank piece (Steam release 3 Nov, Atari, Pipeworks); Production 2 posting lane"
+  },
+  {
+   "id": "phantom-blade-zero-4-million-72-hours",
+   "title": "Phantom Blade Zero تتجاوز 4 ملايين نسخة خلال 72 ساعة",
+   "kind": "reel",
+   "slot": "2026-11-02T11:55:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/phantom-blade-zero-4-million-72-hours.json",
+   "card": "prod-20261102-review-1000",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": {
+    "instagram": "https://www.instagram.com/reel/DfO0cioiCGK/",
+    "x": "https://x.com/1748744375616643072/status/2117163704865194090",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfO0cZsjeZz",
+    "published_at": "2026-11-02T07:55:00Z"
+   },
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "review-1000 rank 1; official studio post 2 Nov on X (via Famitsu 92836); gap rule already past 11:05 Dubai; Production 2 posting lane"
+  },
+  {
+   "id": "dave-bautista-kratos-20-pounds-muscle",
+   "title": "دايف باوتيستا يكسب 20 رطلًا من العضلات لدور Kratos",
+   "kind": "reel",
+   "slot": "2026-11-02T15:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/dave-bautista-kratos-20-pounds-muscle.json",
+   "card": "prod-20261102-review-1400",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": {
+    "instagram": "https://www.instagram.com/reel/DfPJ35ajFKu/",
+    "x": "https://x.com/1748744375616643072/status/2117210889849881056",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfPJ330iiEs",
+    "published_at": "2026-11-02T11:03:00Z"
+   },
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "review-1400 rank 1; his Instagram story via IGN 2 Nov 03:37Z and DiscussingFilm 1 Nov; people story, Skidmore CC BY-SA photo, GoW 2018 Announce trailer stand-in credit; gap rule already broken; Production 2 posting lane"
+  },
+  {
+   "id": "team-liquid-algs-split-2-playoffs-winners",
+   "title": "Team Liquid بطل ALGS Split 2 Playoffs",
+   "kind": "reel",
+   "slot": "2026-11-02T17:40:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/team-liquid-algs-split-2-playoffs-winners.json",
+   "card": "prod-20261102-review-1400",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": {
+    "instagram": "https://www.instagram.com/reel/DfPb7anjgri/",
+    "x": "https://x.com/1748744375616643072/status/2117250535577338347",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfPb7V2jvvH"
+   },
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "review-1400 rank 2, built on Mohammad's 17:12 Dubai order; result from the Team Liquid and ALGS X posts as quoted by Insider Gaming 2 Nov; Apex Steam screenshots with stand-in credit; Production 2 posting lane"
+  },
+  {
+   "id": "zelda-ocarina-developers-interview-ask-the-developer-24",
+   "title": "حوار مطوري Ocarina of Time (Ask the Developer Vol. 24)",
+   "kind": "reel",
+   "slot": "2026-11-02T19:45:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/zelda-ocarina-developers-interview-ask-the-developer-24.json",
+   "card": "user-request-2026-11-02-zelda-interview",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": {
+    "instagram": "https://www.instagram.com/reel/DfPqQToirdp/",
+    "x": "https://x.com/1748744375616643072/status/2117282023232483454",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfPqPHxClgG"
+   },
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "Mohammad's request 2 Nov; interview rule (2 to 3 attributed quotes); Nintendo developer photos credited; Overview Trailer 8 to 34 s; v4 render; scheduled 14:13Z for 18:30 Dubai; HELD by Mohammad 14:2xZ (comments to come); all three pulled back to Publer drafts, do not schedule or publish until he says; Mohammad said go 15:2xZ; v7 (music stem only, series intro); Instagram scheduled 19:45 Dubai, X timed out (look up before retry), Threads media too large to proxy (retry after other downloads); all three scheduled 19:45 Dubai (X and Threads from the Publer library copy after the 46 MB url fetch failed); old v4 drafts still in Publer drafts"
+  },
+  {
+   "id": "derelikt-ps5-nov-13-ps1-style-horror",
+   "title": "Derelikt تصدر على PS5 في 13 نوفمبر",
+   "kind": "reel",
+   "slot": "2026-11-02T20:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/derelikt-ps5-nov-13-ps1-style-horror.json",
+   "card": "hourly-watch-1507Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": {
+    "instagram": "https://www.instagram.com/reel/DfPvgVegduE/",
+    "x": "https://x.com/1748744375616643072/status/2117293586966307164",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfPvgMIDSCx"
+   },
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "gap fill (nothing scheduled since ALGS 17:40 Dubai; Zelda held by Mohammad); PlayStation Blog 15:00Z primary; scheduled 16:18Z for 20:30 Dubai from the Publer library copy; gate 16:12Z: PlayStation Blog primary read 15:07Z, no denial found"
+  },
+  {
+   "id": "thief-dark-project-remastered-dec-3",
+   "title": "Thief: The Dark Project Remastered تصدر 3 ديسمبر",
+   "kind": "reel",
+   "slot": "2026-11-02T21:45:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/thief-dark-project-remastered-dec-3.json",
+   "card": "hourly-watch-1707Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": {
+    "instagram": "https://www.instagram.com/reel/DfP3-U1DQAp/",
+    "x": "https://x.com/1748744375616643072/status/2117312201581093189",
+    "threads": "https://www.threads.com/@the_digilounge/post/DfP392MiZlx"
+   },
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "gap fill after Derelikt 20:30; Gematsu 15:21Z, Steam page primary for date and price; scheduled 17:35Z for 21:45 Dubai; gate 17:30Z Steam page primary (date, price) read 17:15Z, Gematsu for platforms"
+  },
+  {
+   "id": "ova-magica-consoles-nov-10",
+   "title": "Ova Magica تصدر للكونسول 10 نوفمبر",
+   "kind": "reel",
+   "slot": "2026-11-02T22:55:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/ova-magica-consoles-nov-10.json",
+   "card": "hourly-watch-1807Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer: read as Published (Borderlands 0:46 Dubai confirmed; Ova Magica and Game Pass slots passed)",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "gap fill (nothing scheduled after Thief 21:45); Gematsu 17:18Z; Steam for PC facts; v2 stills Reel; scheduled 18:36Z for 22:55 Dubai from the Publer library copy; gate 18:30Z: Gematsu 17:18Z read, Steam page for PC facts"
+  },
+  {
+   "id": "game-pass-leaving-14-games-november-2026",
+   "title": "14 لعبة تغادر Game Pass في نوفمبر",
+   "kind": "reel",
+   "slot": "2026-11-02T23:45:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/game-pass-leaving-14-games-november-2026.json",
+   "card": "hourly-watch-1907Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer: read as Published (Borderlands 0:46 Dubai confirmed; Ova Magica and Game Pass slots passed)",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "gap fill; Pure Xbox report (Xbox app list), 4 outlets; label تقرير; the open board question prod2-20261102-gamepass-leaving is answered by the whole-chain card title (build, do not wait); scheduled 19:22Z for 23:45 Dubai from the Publer library copy; gate 19:15Z Pure Xbox read, four outlets agree, no denial found"
+  },
+  {
+   "id": "borderlands-series-100-million-sold",
+   "title": "سلسلة Borderlands تتخطى مئة مليون نسخة",
+   "kind": "reel",
+   "slot": "2026-11-03T00:45:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/borderlands-series-100-million-sold.json",
+   "card": "hourly-watch-2007Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer: read as Published (Borderlands 0:46 Dubai confirmed; Ova Magica and Game Pass slots passed)",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "official Borderlands message 18:07Z; 60 minute night spacing after Game Pass 23:45; v2 (Claptrap centred); scheduled 20:20Z for 00:45 Dubai from the Publer library copy; gate 20:12Z official message read"
+  },
+  {
+   "id": "loftia-early-access-nov-3",
+   "title": "لعبة Loftia تصدر بالوصول المبكر 3 نوفمبر",
+   "kind": "reel",
+   "slot": "2026-11-03T02:40:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/loftia-early-access-nov-3.json",
+   "card": "hourly-watch-2207Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer: Instagram reel DfQZuonDoE1 2:41, X 2:40, Threads 2:41 Dubai 3 Nov",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "Steam page app 2320980 (3 Nov, Windows and Mac, Early Access); stills Reel; night gap rule (last post 00:45 Dubai); scheduled 22:21Z for 02:40 Dubai (Instagram via library copy, X and Threads by media_url after library 500); gate 22:12Z Steam page read, grammar review clean"
+  },
+  {
+   "id": "sonic-racing-crossworlds-year-two-starts-nov-3",
+   "title": "السنة الثانية من Sonic Racing: CrossWorlds تبدأ اليوم",
+   "kind": "reel",
+   "slot": "2026-11-03T06:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/sonic-racing-crossworlds-year-two-starts-nov-3.json",
+   "card": "hourly-watch-0107Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer: Instagram reel DfQwxSdAQa7 6:02, X 6:01, Threads 6:02 Dubai 3 Nov",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "SEGA Steam post (Year Two live 3 Nov) plus Nintendo Life patch preview; launch-day angle; stills Reel; gap alarm (last post 02:40 Dubai); v2 (cropped gadget UI shot swapped); scheduled 01:26Z for 06:00 Dubai (Instagram via library copy, X and Threads by media_url); gate 01:25Z: SEGA Steam post (Year Two live 3 Nov, Duel Mode, Bayonetta, Godzilla pack) and Nintendo Life patch 2.0.0 preview read; grammar review: caption verb fixed to تتوفر"
+  },
+  {
+   "id": "voidbreaker-1-0-launches-nov-4",
+   "title": "لعبة VOID/BREAKER تصدر بنسختها الكاملة غدًا",
+   "kind": "reel",
+   "slot": "2026-11-03T07:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/voidbreaker-1-0-launches-nov-4.json",
+   "card": "hourly-watch-0207Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "scheduled 07:00 Dubai 3 Nov; read as sent before the 08:00 slot",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "Steam page and Playstack post, Xbox Wire Game Pass 4 Nov; release-eve; night spacing 60 min after Sonic 06:00 Dubai; scheduled 02:20Z for 07:00 Dubai (Instagram via library copy, X and Threads by media_url); gate 02:15Z: Steam page, Playstack post and Xbox Wire read; grammar review: ناشرها fixed"
+  },
+  {
+   "id": "geekay-ocarina-midnight-pickup-riyadh-nov-4",
+   "title": "استلام Ocarina of Time عند منتصف الليل في الرياض بارك (جيكي)",
+   "kind": "reel",
+   "slot": "2026-11-03T08:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/geekay-ocarina-midnight-pickup-riyadh-nov-4.json",
+   "card": "mohammad-request-0306Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer: Instagram reel DfQ-cXOmuJN 8:02, X 8:01, Threads 8:01 Dubai 3 Nov",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "Mohammad's request 3 Nov: Geekay midnight pickup, Riyadh Park, 4 Nov 11:59 PM KSA; event Reel; Instagram caption mentions @geekay_games; v2 scheduled 03:30Z for 08:00 Dubai (Instagram via library copy, X and Threads by media_url); gate 03:28Z Geekay post re-read; grammar review clean, caption softened per its notes; music stem leak 9.4% accepted (limit 10)"
+  },
+  {
+   "id": "geekay-ocarina-midnight-pickup-reminder-nov-4",
+   "title": "تذكير X وThreads: استلام جيكي الليلة",
+   "kind": "text",
+   "slot": "2026-11-04T19:00:00+04:00",
+   "platforms": [
+    "x",
+    "threads"
+   ],
+   "job": null,
+   "card": "mohammad-request-0306Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": false,
+   "evidence": null,
+   "delivery": {
+    "x": "scheduled",
+    "threads": "scheduled"
+   },
+   "logged": false,
+   "note": "one-line text reminder on 4 Nov evening (Mohammad's request); text only, no media; scheduled 03:31Z"
+  },
+  {
+   "id": "genshin-impact-7-2-maintenance-preinstall-nov-4",
+   "title": "تحديث Genshin 7.2 غدًا بصيانة في الثانية فجرًا",
+   "kind": "reel",
+   "slot": "2026-11-03T09:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/genshin-impact-7-2-maintenance-preinstall-nov-4.json",
+   "card": "hourly-watch-0407Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": true,
+   "evidence": "Publer: Instagram reel DfRFUUciUTl 9:02, X 9:01, Threads 9:01 Dubai 3 Nov",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "logged": true,
+   "note": "HoYoLAB maintenance preview 2 Nov (read in full); IGN official trailer 1080p; day gap rule (last post 08:01 Dubai); v3 scheduled 04:33Z for 09:00 Dubai (Instagram via library copy, X and Threads by media_url); gate 04:30Z HoYoLAB notice read in full; grammar review clean; music stem 12% limit"
+  },
+  {
+   "id": "stellar-blade-switch-2-first-reviews-nov-3",
+   "title": "أولى مراجعات Stellar Blade على Switch 2 قبل 5 نوفمبر",
+   "kind": "reel",
+   "slot": "2026-11-03T10:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/stellar-blade-switch-2-first-reviews-nov-3.json",
+   "card": "hourly-watch-0507Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": false,
+   "evidence": "scheduled 10:00 Dubai 3 Nov; read as sent",
+   "delivery": {
+    "instagram": "scheduled",
+    "x": "scheduled",
+    "threads": "scheduled"
+   },
+   "logged": false,
+   "note": "review embargo lifted 2 Nov 22:00Z (Nintendo Life 7/10, Polygon); day gap rule (last 09:00 Dubai); v3 scheduled 05:30Z for 10:00 Dubai (Instagram via library copy, X and Threads by media_url); gate 05:28Z Nintendo Life review read in full (7/10), Polygon headline only; grammar review: Nintendo spelling fixed, Polygon line softened"
+  },
+  {
+   "id": "google-ocarina-of-time-easter-egg-1998-search",
+   "title": "مفاجأة في Google قبل إطلاق Ocarina of Time",
+   "kind": "reel",
+   "slot": "2026-11-03T10:40:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/google-ocarina-of-time-easter-egg-1998-search.json",
+   "card": "hourly-watch-0607Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": false,
+   "evidence": "scheduled 10:40 Dubai 3 Nov",
+   "delivery": {
+    "instagram": "scheduled",
+    "x": "scheduled",
+    "threads": "scheduled"
+   },
+   "logged": false,
+   "note": "13 outlets 2 Nov (Nintendo Life read); day gap rule (last 10:00 Dubai); links to the Ocarina launch-day series; v3 scheduled 06:20Z for 10:40 Dubai (Instagram via library copy, X and Threads by media_url); gate 06:18Z Nintendo Life read; grammar review: Google takes the Arabic form جوجل (Google)"
+  },
+  {
+   "id": "final-fantasy-resonance-producer-wanted-more-than-a-port",
+   "title": "منتج Final Fantasy Resonance: الإدارة فضلت نقلًا بسيطًا",
+   "kind": "reel",
+   "slot": "2026-11-03T11:45:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/final-fantasy-resonance-producer-wanted-more-than-a-port.json",
+   "card": "hourly-watch-0707Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": false,
+   "evidence": null,
+   "delivery": {
+    "instagram": "scheduled",
+    "x": "scheduled",
+    "threads": "scheduled"
+   },
+   "logged": false,
+   "note": "Bloomberg interview via GamesRadar 2 Nov; interview story on stills; day gap rule (last 10:40 Dubai)"
+  },
+  {
+   "id": "remedy-q3-revenue-triples-control-resonant",
+   "title": "Remedy Q3 revenue triples after Control Resonant",
+   "kind": "post",
+   "slot": "2026-11-03T14:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "remedy-q3-revenue-triples-control-resonant",
+   "card": "hourly-watch-0707Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "delivery": {
+    "instagram": "submitting",
+    "x": "submitting",
+    "threads": "submitting"
+   },
+   "note": "Bloomberg interview via GamesRadar 2 Nov; interview story on stills; day gap rule (last 10:40 Dubai)"
+  }
+ ]
 }
