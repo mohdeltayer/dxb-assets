@@ -109,3 +109,13 @@ Quotes (English as published; Arabic is the episode's own wording, short):
 Suggestions only: placement is the episode's director's call, and each quote is re-read against the page before
 it goes on screen. Ledger: footage for the حوار Reel is Overview Trailer (O) 8 to 34 s, the unused 0 to 45 s
 stretch; episodes 9 and 10 must not reuse O 8 to 34 s.
+
+## Geekay midnight pickup, Riyadh Park (Mohammad, 3 Nov 2026)
+A standalone event Reel (not an episode; no series intro): Geekay's official Instagram post (DfPx3VXAlcr) announces a
+midnight pickup for Ocarina of Time on Switch 2 at Riyadh Park, Riyadh, Wednesday 4 Nov 11:59 PM Saudi time (00:59 on
+5 Nov Dubai time), with exclusive gifts per the poster (notebook, keychain, wall poster, stickers, Spiritual Stones).
+Reel footage: Overview Trailer 27.0 to 41.4 s (Link and Navi, the Deku Tree, the Triforce) with its music stem only,
+plus Geekay's poster as a 1080x1920 still. Not in the episode ledger above; episodes 9 and later should not reuse O 27 to 41.
+Link to the launch-day episodes: episode 9 (Thu 5 Nov, متوفر الآن) and any 4 Nov countdown episode mention the Geekay pickup
+in the caption («ضمن سلسلة الطريق إلى Ocarina»), neutral wording, no prices; an X and Threads reminder goes out the
+evening of 4 Nov.
