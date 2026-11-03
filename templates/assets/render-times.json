@@ -19507,5 +19507,54 @@
   "min_disk_free_mb": 83861,
   "setup_min": 1.08,
   "story": "stellar-blade-switch-2-first-reviews-nov-3"
+ },
+ {
+  "name": "google-ocarina-of-time-easter-egg-1998-search-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-11-03T06:16Z",
+  "stages": {
+   "checks": 4.5,
+   "montage": 20.9,
+   "text": 33.3,
+   "audio": 0.8,
+   "outro": 27.9
+  },
+  "total": 87.5,
+  "lane": "runner",
+  "queued_at": "2026-11-03T06:13:16Z",
+  "finished_at": "2026-11-03T06:16Z",
+  "render_min": 1.46,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 9.0,
+   "audio_secs": 40.2,
+   "music_pct": 15.1,
+   "leak_pct": 6.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "effects_shots": 0,
+   "mix_secs": 3.8,
+   "secs": 13.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 163,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1324,
+  "peak_mem_mb": 3192,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60939,
+  "peak_disk_mb": 63982,
+  "min_disk_free_mb": 83815,
+  "setup_min": 0.87,
+  "story": "google-ocarina-of-time-easter-egg-1998-search"
  }
 ]
