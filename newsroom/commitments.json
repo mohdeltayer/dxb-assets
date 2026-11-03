@@ -1067,6 +1067,45 @@
    },
    "logged": false,
    "note": "Steam page and Playstack post, Xbox Wire Game Pass 4 Nov; release-eve; night spacing 60 min after Sonic 06:00 Dubai; scheduled 02:20Z for 07:00 Dubai (Instagram via library copy, X and Threads by media_url); gate 02:15Z: Steam page, Playstack post and Xbox Wire read; grammar review: ناشرها fixed"
+  },
+  {
+   "id": "geekay-ocarina-midnight-pickup-riyadh-nov-4",
+   "title": "استلام Ocarina of Time عند منتصف الليل في الرياض بارك (جيكي)",
+   "kind": "reel",
+   "slot": "2026-11-03T13:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/geekay-ocarina-midnight-pickup-riyadh-nov-4.json",
+   "card": "mohammad-request-0306Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": false,
+   "evidence": null,
+   "delivery": {},
+   "logged": false,
+   "note": "Mohammad's request 3 Nov: Geekay midnight pickup, Riyadh Park, 4 Nov 11:59 PM KSA; event Reel; Instagram caption mentions @geekay_games"
+  },
+  {
+   "id": "geekay-ocarina-midnight-pickup-reminder-nov-4",
+   "title": "تذكير X وThreads: استلام جيكي الليلة",
+   "kind": "text",
+   "slot": "2026-11-04T19:00:00+04:00",
+   "platforms": [
+    "x",
+    "threads"
+   ],
+   "job": null,
+   "card": "mohammad-request-0306Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": false,
+   "evidence": null,
+   "delivery": {},
+   "logged": false,
+   "note": "one-line text reminder on 4 Nov evening (Mohammad's request); text only, no media"
   }
  ]
 }
