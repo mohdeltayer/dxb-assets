@@ -20343,5 +20343,38 @@
   "min_disk_free_mb": 81601,
   "setup_min": 1.1,
   "story": "gta-vi-pre-load-november-10-gulf-times"
+ },
+ {
+  "name": "xbox-game-pass-wave-1-november-3-17-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-03T19:19Z",
+  "stages": {
+   "checks": 1.1,
+   "montage": 98.3,
+   "text": 73.0,
+   "audio": 0.0,
+   "outro": 46.9
+  },
+  "total": 219.2,
+  "lane": "runner",
+  "queued_at": "2026-11-03T19:12:14Z",
+  "finished_at": "2026-11-03T19:19Z",
+  "render_min": 3.65,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 234,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1062,
+  "peak_mem_mb": 3470,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60640,
+  "peak_disk_mb": 62333,
+  "min_disk_free_mb": 85464,
+  "setup_min": 1.33,
+  "story": "xbox-game-pass-wave-1-november-3-17"
  }
 ]
