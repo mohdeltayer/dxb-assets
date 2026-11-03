@@ -19311,5 +19311,54 @@
   "min_disk_free_mb": 84106,
   "setup_min": 1.17,
   "story": "genshin-impact-7-2-maintenance-preinstall-nov-4"
+ },
+ {
+  "name": "genshin-impact-7-2-maintenance-preinstall-nov-4-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-03T04:23Z",
+  "stages": {
+   "checks": 5.0,
+   "montage": 49.9,
+   "text": 48.5,
+   "audio": 1.0,
+   "outro": 47.7
+  },
+  "total": 152.2,
+  "lane": "runner",
+  "queued_at": "2026-11-03T04:18:08Z",
+  "finished_at": "2026-11-03T04:23Z",
+  "render_min": 2.54,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 11.2,
+   "audio_secs": 29.1,
+   "music_pct": 74.4,
+   "leak_pct": 0.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "effects_shots": 0,
+   "mix_secs": 5.5,
+   "secs": 17.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 295,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1396,
+  "peak_mem_mb": 3216,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60973,
+  "peak_disk_mb": 63694,
+  "min_disk_free_mb": 84102,
+  "setup_min": 1.2,
+  "story": "genshin-impact-7-2-maintenance-preinstall-nov-4"
  }
 ]
