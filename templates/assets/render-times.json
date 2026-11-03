@@ -19983,5 +19983,54 @@
   "min_disk_free_mb": 85072,
   "setup_min": 1.23,
   "story": "helldivers-2-noxious-terminids-bug-caves-nov-3"
+ },
+ {
+  "name": "battlefield-6-season-5-phase-2-european-casino-nov-10-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-03T14:18Z",
+  "stages": {
+   "checks": 9.5,
+   "montage": 84.2,
+   "text": 67.2,
+   "audio": 1.9,
+   "outro": 88.7
+  },
+  "total": 251.5,
+  "lane": "runner",
+  "queued_at": "2026-11-03T14:12:23Z",
+  "finished_at": "2026-11-03T14:18Z",
+  "render_min": 4.19,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 17.0,
+   "audio_secs": 61.4,
+   "music_pct": 57.8,
+   "leak_pct": 0.7,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "effects_shots": 0,
+   "mix_secs": 7.1,
+   "secs": 25.0
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 405,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1347,
+  "peak_mem_mb": 3237,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60939,
+  "peak_disk_mb": 65440,
+  "min_disk_free_mb": 82357,
+  "setup_min": 1.23,
+  "story": "battlefield-6-season-5-phase-2-european-casino-nov-10"
  }
 ]
