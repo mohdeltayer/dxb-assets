@@ -20212,5 +20212,38 @@
   "min_disk_free_mb": 81023,
   "setup_min": 1.08,
   "story": "ocarina-ask-the-developer-chapters-3-4-nov-3"
+ },
+ {
+  "name": "elder-scrolls-vi-sentinel-teaser-nov-3-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-03T16:07Z",
+  "stages": {
+   "checks": 0.4,
+   "montage": 94.5,
+   "text": 104.9,
+   "audio": 3.3,
+   "outro": 133.1
+  },
+  "total": 336.2,
+  "lane": "runner",
+  "queued_at": "2026-11-03T15:59:56Z",
+  "finished_at": "2026-11-03T16:07Z",
+  "render_min": 5.6,
+  "audio_split": {
+   "applied": false,
+   "reason": "job sets audio_split false"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 380,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1024,
+  "peak_mem_mb": 2403,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60640,
+  "peak_disk_mb": 69364,
+  "min_disk_free_mb": 78433,
+  "setup_min": 1.93,
+  "story": "elder-scrolls-vi-sentinel-teaser-nov-3"
  }
 ]
