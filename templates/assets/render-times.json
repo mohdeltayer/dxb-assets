@@ -20294,5 +20294,54 @@
   "min_disk_free_mb": 81457,
   "setup_min": 1.35,
   "story": "gta-vi-pre-load-november-10-gulf-times"
+ },
+ {
+  "name": "gta-vi-pre-load-november-10-gulf-times-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-11-03T17:03Z",
+  "stages": {
+   "checks": 35.1,
+   "montage": 122.1,
+   "text": 82.2,
+   "audio": 1.6,
+   "outro": 73.2
+  },
+  "total": 314.2,
+  "lane": "runner",
+  "queued_at": "2026-11-03T16:55:21Z",
+  "finished_at": "2026-11-03T17:03Z",
+  "render_min": 5.24,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.7,
+   "audio_secs": 52.5,
+   "music_pct": 98.6,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 4,
+    "miss": 0
+   },
+   "effects_shots": 0,
+   "mix_secs": 1.0,
+   "secs": 4.2
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 669,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1424,
+  "peak_mem_mb": 3163,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61104,
+  "peak_disk_mb": 66196,
+  "min_disk_free_mb": 81601,
+  "setup_min": 1.1,
+  "story": "gta-vi-pre-load-november-10-gulf-times"
  }
 ]
