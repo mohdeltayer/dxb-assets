@@ -19409,5 +19409,54 @@
   "min_disk_free_mb": 84046,
   "setup_min": 1.18,
   "story": "genshin-impact-7-2-maintenance-preinstall-nov-4"
+ },
+ {
+  "name": "stellar-blade-switch-2-first-reviews-nov-3-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-03T05:20Z",
+  "stages": {
+   "checks": 6.1,
+   "montage": 33.6,
+   "text": 54.1,
+   "audio": 1.1,
+   "outro": 53.5
+  },
+  "total": 148.4,
+  "lane": "runner",
+  "queued_at": "2026-11-03T05:16:03Z",
+  "finished_at": "2026-11-03T05:20Z",
+  "render_min": 2.47,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 15.0,
+   "audio_secs": 42.7,
+   "music_pct": 60.5,
+   "leak_pct": 0.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 5
+   },
+   "effects_shots": 0,
+   "mix_secs": 6.2,
+   "secs": 21.7
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 254,
+  "mem_total_mb": 15987,
+  "mem_start_mb": 1405,
+  "peak_mem_mb": 3141,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60939,
+  "peak_disk_mb": 63863,
+  "min_disk_free_mb": 83934,
+  "setup_min": 1.03,
+  "story": "stellar-blade-switch-2-first-reviews-nov-3"
  }
 ]
