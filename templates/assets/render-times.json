@@ -20245,5 +20245,54 @@
   "min_disk_free_mb": 78433,
   "setup_min": 1.93,
   "story": "elder-scrolls-vi-sentinel-teaser-nov-3"
+ },
+ {
+  "name": "gta-vi-pre-load-november-10-gulf-times-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-03T16:39Z",
+  "stages": {
+   "checks": 26.8,
+   "montage": 97.9,
+   "text": 72.5,
+   "audio": 1.4,
+   "outro": 61.4
+  },
+  "total": 260.1,
+  "lane": "runner",
+  "queued_at": "2026-11-03T16:32:11Z",
+  "finished_at": "2026-11-03T16:39Z",
+  "render_min": 4.33,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.2,
+   "audio_secs": 55.2,
+   "music_pct": 98.3,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 0
+   },
+   "effects_shots": 0,
+   "mix_secs": 0.9,
+   "secs": 3.7
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 536,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1362,
+  "peak_mem_mb": 3239,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61024,
+  "peak_disk_mb": 66339,
+  "min_disk_free_mb": 81457,
+  "setup_min": 1.35,
+  "story": "gta-vi-pre-load-november-10-gulf-times"
  }
 ]
