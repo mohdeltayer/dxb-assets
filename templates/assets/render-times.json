@@ -19655,5 +19655,54 @@
   "min_disk_free_mb": 85003,
   "setup_min": 0.92,
   "story": "remedy-q3-revenue-triples-control-resonant"
+ },
+ {
+  "name": "ocarina-uk-midnight-launch-london-nov-4-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-03T10:15Z",
+  "stages": {
+   "checks": 8.8,
+   "montage": 53.0,
+   "text": 81.3,
+   "audio": 1.6,
+   "outro": 81.1
+  },
+  "total": 225.9,
+  "lane": "runner",
+  "queued_at": "2026-11-03T10:09:44Z",
+  "finished_at": "2026-11-03T10:15Z",
+  "render_min": 3.76,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 17.3,
+   "audio_secs": 54.4,
+   "music_pct": 50.1,
+   "leak_pct": 1.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "effects_shots": 0,
+   "mix_secs": 8.9,
+   "secs": 26.6
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 322,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1371,
+  "peak_mem_mb": 3264,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60939,
+  "peak_disk_mb": 65557,
+  "min_disk_free_mb": 82240,
+  "setup_min": 0.98,
+  "story": "ocarina-uk-midnight-launch-london-nov-4"
  }
 ]
