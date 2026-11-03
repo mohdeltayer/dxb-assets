@@ -19556,5 +19556,38 @@
   "min_disk_free_mb": 83815,
   "setup_min": 0.87,
   "story": "google-ocarina-of-time-easter-egg-1998-search"
+ },
+ {
+  "name": "final-fantasy-resonance-producer-wanted-more-than-a-port-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-03T07:13Z",
+  "stages": {
+   "checks": 0.9,
+   "montage": 67.0,
+   "text": 78.7,
+   "audio": 0.0,
+   "outro": 49.2
+  },
+  "total": 195.8,
+  "lane": "runner",
+  "queued_at": "2026-11-03T07:09:16Z",
+  "finished_at": "2026-11-03T07:13Z",
+  "render_min": 3.26,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 207,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1028,
+  "peak_mem_mb": 4442,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60640,
+  "peak_disk_mb": 62452,
+  "min_disk_free_mb": 85344,
+  "setup_min": 0.85,
+  "story": "final-fantasy-resonance-producer-wanted-more-than-a-port"
  }
 ]
