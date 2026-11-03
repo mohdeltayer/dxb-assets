@@ -19753,5 +19753,38 @@
   "min_disk_free_mb": 81995,
   "setup_min": 1.23,
   "story": "ocarina-uk-midnight-launch-london-nov-4"
+ },
+ {
+  "name": "playstation-store-black-friday-deals-start-nov-4-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-03T11:15Z",
+  "stages": {
+   "checks": 0.7,
+   "montage": 71.0,
+   "text": 66.0,
+   "audio": 0.0,
+   "outro": 40.3
+  },
+  "total": 178.1,
+  "lane": "runner",
+  "queued_at": "2026-11-03T11:11:29Z",
+  "finished_at": "2026-11-03T11:15Z",
+  "render_min": 2.97,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 192,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1041,
+  "peak_mem_mb": 4860,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60640,
+  "peak_disk_mb": 63230,
+  "min_disk_free_mb": 84567,
+  "setup_min": 0.87,
+  "story": "playstation-store-black-friday-deals-start-nov-4"
  }
 ]
