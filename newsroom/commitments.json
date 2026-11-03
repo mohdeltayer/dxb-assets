@@ -938,14 +938,14 @@
    "card": "hourly-watch-1807Z",
    "fallback": "publish-last-passed",
    "held_by_mohammad": false,
-   "done": false,
-   "evidence": null,
+   "done": true,
+   "evidence": "Publer: read as Published (Borderlands 0:46 Dubai confirmed; Ova Magica and Game Pass slots passed)",
    "delivery": {
-    "instagram": "scheduled",
-    "x": "scheduled",
-    "threads": "scheduled"
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
    },
-   "logged": false,
+   "logged": true,
    "note": "gap fill (nothing scheduled after Thief 21:45); Gematsu 17:18Z; Steam for PC facts; v2 stills Reel; scheduled 18:36Z for 22:55 Dubai from the Publer library copy; gate 18:30Z: Gematsu 17:18Z read, Steam page for PC facts"
   },
   {
@@ -962,14 +962,14 @@
    "card": "hourly-watch-1907Z",
    "fallback": "publish-last-passed",
    "held_by_mohammad": false,
-   "done": false,
-   "evidence": null,
+   "done": true,
+   "evidence": "Publer: read as Published (Borderlands 0:46 Dubai confirmed; Ova Magica and Game Pass slots passed)",
    "delivery": {
-    "instagram": "scheduled",
-    "x": "scheduled",
-    "threads": "scheduled"
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
    },
-   "logged": false,
+   "logged": true,
    "note": "gap fill; Pure Xbox report (Xbox app list), 4 outlets; label تقرير; the open board question prod2-20261102-gamepass-leaving is answered by the whole-chain card title (build, do not wait); scheduled 19:22Z for 23:45 Dubai from the Publer library copy; gate 19:15Z Pure Xbox read, four outlets agree, no denial found"
   },
   {
@@ -986,14 +986,14 @@
    "card": "hourly-watch-2007Z",
    "fallback": "publish-last-passed",
    "held_by_mohammad": false,
-   "done": false,
-   "evidence": null,
+   "done": true,
+   "evidence": "Publer: read as Published (Borderlands 0:46 Dubai confirmed; Ova Magica and Game Pass slots passed)",
    "delivery": {
-    "instagram": "scheduled",
-    "x": "scheduled",
-    "threads": "scheduled"
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
    },
-   "logged": false,
+   "logged": true,
    "note": "official Borderlands message 18:07Z; 60 minute night spacing after Game Pass 23:45; v2 (Claptrap centred); scheduled 20:20Z for 00:45 Dubai from the Publer library copy; gate 20:12Z official message read"
   },
   {
@@ -1137,6 +1137,26 @@
    },
    "logged": false,
    "note": "HoYoLAB maintenance preview 2 Nov (read in full); IGN official trailer 1080p; day gap rule (last post 08:01 Dubai); v3 scheduled 04:33Z for 09:00 Dubai (Instagram via library copy, X and Threads by media_url); gate 04:30Z HoYoLAB notice read in full; grammar review clean; music stem 12% limit"
+  },
+  {
+   "id": "stellar-blade-switch-2-first-reviews-nov-3",
+   "title": "أولى مراجعات Stellar Blade على Switch 2 قبل 5 نوفمبر",
+   "kind": "reel",
+   "slot": "2026-11-03T10:00:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/stellar-blade-switch-2-first-reviews-nov-3.json",
+   "card": "hourly-watch-0507Z",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "done": false,
+   "evidence": null,
+   "delivery": {},
+   "logged": false,
+   "note": "review embargo lifted 2 Nov 22:00Z (Nintendo Life 7/10, Polygon); day gap rule (last 09:00 Dubai)"
   }
  ]
 }
