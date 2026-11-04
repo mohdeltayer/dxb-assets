@@ -21647,5 +21647,54 @@
   "min_disk_free_mb": 80237,
   "setup_min": 3.47,
   "story": "wow-forever-now-live-worldwide-nov-5"
+ },
+ {
+  "name": "lightyear-frontier-1-0-out-now-nov-4-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-04T23:55Z",
+  "stages": {
+   "checks": 9.5,
+   "montage": 106.3,
+   "text": 105.0,
+   "audio": 2.0,
+   "outro": 87.9
+  },
+  "total": 310.7,
+  "lane": "runner",
+  "queued_at": "2026-11-04T23:48:29Z",
+  "finished_at": "2026-11-04T23:55Z",
+  "render_min": 5.18,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 16.9,
+   "audio_secs": 49.6,
+   "music_pct": 79.4,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 0,
+   "mix_secs": 10.7,
+   "secs": 28.1
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 457,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1380,
+  "peak_mem_mb": 3639,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60705,
+  "peak_disk_mb": 66335,
+  "min_disk_free_mb": 81462,
+  "setup_min": 1.03,
+  "story": "lightyear-frontier-1-0-out-now-nov-4"
  }
 ]
