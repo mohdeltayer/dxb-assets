@@ -21212,5 +21212,38 @@
   "min_disk_free_mb": 83920,
   "setup_min": 1.08,
   "story": "dragon-ball-gekishin-squadra-overhaul-delayed-march-2027"
+ },
+ {
+  "name": "ocarina-of-time-review-scores-nov-4-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-04T14:05Z",
+  "stages": {
+   "checks": 9.1,
+   "montage": 58.9,
+   "text": 153.5,
+   "audio": 0.0,
+   "outro": 83.6
+  },
+  "total": 305.0,
+  "lane": "runner",
+  "queued_at": "2026-11-04T13:57:19Z",
+  "finished_at": "2026-11-04T14:05Z",
+  "render_min": 5.08,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 440,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1072,
+  "peak_mem_mb": 4903,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60407,
+  "peak_disk_mb": 64406,
+  "min_disk_free_mb": 83391,
+  "setup_min": 0.98,
+  "story": "ocarina-of-time-review-scores-nov-4"
  }
 ]
