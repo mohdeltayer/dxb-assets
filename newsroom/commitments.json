@@ -1569,6 +1569,29 @@
     "threads": "scheduled"
    },
    "evidence": "gate 06:12Z: exit A. AMD IR release read (Gaming 773M, -40% from 1,298M, lower semi-custom and graphics); call transcript on StockAnalysis read (Su on memory costs and 2027 planning assumption)."
+  },
+  {
+   "id": "nikke-pc-launcher-tampering-notice-nov-4",
+   "title": "NIKKE PC launcher scripts may have been tampered with (official notice 4 Nov)",
+   "kind": "post",
+   "slot": "2026-11-04T11:30:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "nikke-pc-launcher-tampering-notice-nov-4",
+   "card": "prod2-20261104-review-1000",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "status": "scheduled",
+   "done": false,
+   "delivery": {
+    "instagram": "submitting",
+    "x": "submitting",
+    "threads": "submitting"
+   },
+   "evidence": "gate 06:22Z: exit A for the notice. @NIKKE_japan post read through search, Game*Spark and Automaton agree; malware claim is Inven Global via Automaton, not confirmed by the company and labelled so on the card. 02:30 taken as Japan time (official Japanese account), source does not state the zone."
   }
  ]
 }
