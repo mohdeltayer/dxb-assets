@@ -20556,5 +20556,54 @@
   "min_disk_free_mb": 82632,
   "setup_min": 0.82,
   "story": "amd-gaming-revenue-down-40-q3-2026"
+ },
+ {
+  "name": "arkane-lyon-ubisoft-bid-bloomberg-nov-4-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-04T06:08Z",
+  "stages": {
+   "checks": 4.9,
+   "montage": 50.0,
+   "text": 62.9,
+   "audio": 1.2,
+   "outro": 53.5
+  },
+  "total": 172.5,
+  "lane": "runner",
+  "queued_at": "2026-11-04T06:03:22Z",
+  "finished_at": "2026-11-04T06:08Z",
+  "render_min": 2.88,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.3,
+   "audio_secs": 78.8,
+   "music_pct": 69.4,
+   "leak_pct": 0.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 5,
+    "miss": 0
+   },
+   "effects_shots": 10,
+   "mix_secs": 0.9,
+   "secs": 3.7
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 271,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1379,
+  "peak_mem_mb": 3637,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61046,
+  "peak_disk_mb": 65236,
+  "min_disk_free_mb": 82561,
+  "setup_min": 1.35,
+  "story": "arkane-lyon-ubisoft-bid-bloomberg-nov-4"
  }
 ]
