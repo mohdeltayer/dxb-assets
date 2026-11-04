@@ -6,6 +6,11 @@ angle is written. Add the entry the same day; when the rule belongs in `newsroom
 
 Story types: INTERVIEW, DELAY, OUT NOW, NUMBERS, TRAILER OR FIRST LOOK, PEOPLE, EVENT, REPORT, LIST, SERIES (add as needed).
 
+## 2026-11-04 · Macronix and Ocarina Reels on the same picture · PICTURE VARIETY AND VIDEO FIRST · rule
+Wrong: the Macronix breaking card (15:03) and the Ocarina unlock-time Reel (16:03) both used the Ocarina of Time key art from Nintendo's store page; on the grid the two tiles looked identical (Mohammad's screenshot, 216 and 1 views). Both were one-image cards although a Nintendo video route existed for Ocarina and Switch.
+Rule: never the same picture in two Reels back to back (check the last 5 Reels' pictures before choosing); Reels are video first, official footage before any still, a single-image card only when no footage is reachable, with the sources tried in the job note.
+Sources: Mohammad, 4 Nov 2026 16:10 Dubai; commitments rows macronix-exits-switch-rom-chips-nov-4 and ocarina-of-time-switch-2-unlock-time-nov-5.
+
 ## 2026-11-04 · Macronix leaves Switch ROM chips · BREAKING / SUPPLY · praise and rule
 Right: Mohammad sent the X post, asked to verify and post as breaking; verified against Taipei Times (chairman quote), built on the T0 card, published 15:02 Dubai.
 Rule: breaking news posts immediately, not at the next slot: when verified and breaking, submit with when now as soon as the render passes (his words, 4 Nov 15:05 Dubai); label by certainty and name what is not confirmed.
