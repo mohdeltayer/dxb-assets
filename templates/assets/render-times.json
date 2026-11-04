@@ -21465,5 +21465,38 @@
   "min_disk_free_mb": 84417,
   "setup_min": 1.1,
   "story": "metroid-ravenous-teaser-nov-4"
+ },
+ {
+  "name": "xbox-cloud-gaming-phone-controller-nano-preview-nov-4-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-04T19:47Z",
+  "stages": {
+   "checks": 3.9,
+   "montage": 34.8,
+   "text": 54.0,
+   "audio": 0.0,
+   "outro": 42.8
+  },
+  "total": 135.5,
+  "lane": "runner",
+  "queued_at": "2026-11-04T19:42:30Z",
+  "finished_at": "2026-11-04T19:47Z",
+  "render_min": 2.26,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 238,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1024,
+  "peak_mem_mb": 3083,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60641,
+  "peak_disk_mb": 62581,
+  "min_disk_free_mb": 85215,
+  "setup_min": 1.63,
+  "story": "xbox-cloud-gaming-phone-controller-nano-preview-nov-4"
  }
 ]
