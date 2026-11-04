@@ -21417,5 +21417,53 @@
   "min_disk_free_mb": 84454,
   "setup_min": 1.07,
   "story": "metroid-ravenous-teaser-nov-4"
+ },
+ {
+  "name": "metroid-ravenous-teaser-nov-4-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-04T19:26Z",
+  "stages": {
+   "checks": 3.7,
+   "montage": 33.2,
+   "text": 52.6,
+   "audio": 1.1,
+   "outro": 38.1
+  },
+  "total": 128.6,
+  "lane": "runner",
+  "queued_at": "2026-11-04T19:22:03Z",
+  "finished_at": "2026-11-04T19:26Z",
+  "render_min": 2.14,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 2.3,
+   "audio_secs": 19.0,
+   "music_pct": 12.4,
+   "leak_pct": 12.6,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 0
+   },
+   "reason": "music stem not clean (leftover 12.6% > 5.0%)",
+   "secs": 2.8
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 231,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1346,
+  "peak_mem_mb": 3133,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60975,
+  "peak_disk_mb": 63379,
+  "min_disk_free_mb": 84417,
+  "setup_min": 1.1,
+  "story": "metroid-ravenous-teaser-nov-4"
  }
 ]
