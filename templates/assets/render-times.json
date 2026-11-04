@@ -20926,5 +20926,32 @@
   "min_disk_free_mb": 86978,
   "setup_min": 0.87,
   "story": "macronix-exits-switch-rom-chips-nov-4"
+ },
+ {
+  "name": "ocarina-of-time-switch-2-unlock-time-nov-5-reel-v1.mp4",
+  "profile": "breaking-card",
+  "at": "2026-11-04T11:45Z",
+  "stages": {
+   "checks": 0.9,
+   "compose": 10.2,
+   "outro": 16.0
+  },
+  "total": 27.1,
+  "lane": "runner",
+  "queued_at": "2026-11-04T11:43:46Z",
+  "finished_at": "2026-11-04T11:45Z",
+  "render_min": 0.45,
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 32,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 970,
+  "peak_mem_mb": 1681,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60407,
+  "peak_disk_mb": 60578,
+  "min_disk_free_mb": 87219,
+  "setup_min": 0.88,
+  "story": "ocarina-of-time-switch-2-unlock-time-nov-5"
  }
 ]
