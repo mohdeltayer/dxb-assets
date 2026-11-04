@@ -6,6 +6,11 @@ angle is written. Add the entry the same day; when the rule belongs in `newsroom
 
 Story types: INTERVIEW, DELAY, OUT NOW, NUMBERS, TRAILER OR FIRST LOOK, PEOPLE, EVENT, REPORT, LIST, SERIES (add as needed).
 
+## 2026-11-04 · Macronix leaves Switch ROM chips · BREAKING / SUPPLY · praise and rule
+Right: Mohammad sent the X post, asked to verify and post as breaking; verified against Taipei Times (chairman quote), built on the T0 card, published 15:02 Dubai.
+Rule: breaking news posts immediately, not at the next slot: when verified and breaking, submit with when now as soon as the render passes (his words, 4 Nov 15:05 Dubai); label by certainty and name what is not confirmed.
+Sources: Mohammad, 4 Nov 2026; commitments row macronix-exits-switch-rom-chips-nov-4.
+
 ## 2026-11-04 · NIKKE PC launcher notice (Reel of 11:31 Dubai) · SECURITY NOTICE / CARDS ONLY · deleted by Mohammad
 Wrong: a Reel of text cards on our bed with no picture of the game ("ماذا حدث" and "تعديل محتمل" panels on a flat ground); 58 views on Instagram, then deleted.
 Rule: every Reel shows the game: official footage first, or official key art and screenshots; a notice, a figure or a warning is a line or strip over the game, never the whole picture. Cards only is not a Reel.
