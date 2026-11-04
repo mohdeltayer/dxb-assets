@@ -21245,5 +21245,54 @@
   "min_disk_free_mb": 83391,
   "setup_min": 0.98,
   "story": "ocarina-of-time-review-scores-nov-4"
+ },
+ {
+  "name": "osrs-hardcore-worlds-launch-nov-4-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-04T17:18Z",
+  "stages": {
+   "checks": 5.1,
+   "montage": 47.0,
+   "text": 59.3,
+   "audio": 1.0,
+   "outro": 39.5
+  },
+  "total": 151.9,
+  "lane": "runner",
+  "queued_at": "2026-11-04T17:12:54Z",
+  "finished_at": "2026-11-04T17:18Z",
+  "render_min": 2.53,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 7.3,
+   "audio_secs": 22.1,
+   "music_pct": 80.2,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 10,
+   "mix_secs": 5.6,
+   "secs": 13.4
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 289,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1264,
+  "peak_mem_mb": 3675,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60939,
+  "peak_disk_mb": 64114,
+  "min_disk_free_mb": 83682,
+  "setup_min": 1.32,
+  "story": "osrs-hardcore-worlds-launch-nov-4"
  }
 ]
