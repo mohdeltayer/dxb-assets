@@ -21498,5 +21498,38 @@
   "min_disk_free_mb": 85215,
   "setup_min": 1.63,
   "story": "xbox-cloud-gaming-phone-controller-nano-preview-nov-4"
+ },
+ {
+  "name": "xbox-cloud-gaming-phone-controller-nano-preview-nov-4-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-04T20:01Z",
+  "stages": {
+   "checks": 3.4,
+   "montage": 33.6,
+   "text": 53.5,
+   "audio": 0.0,
+   "outro": 41.8
+  },
+  "total": 132.4,
+  "lane": "runner",
+  "queued_at": "2026-11-04T19:56:24Z",
+  "finished_at": "2026-11-04T20:01Z",
+  "render_min": 2.21,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 225,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 987,
+  "peak_mem_mb": 3169,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60641,
+  "peak_disk_mb": 62590,
+  "min_disk_free_mb": 85207,
+  "setup_min": 1.7,
+  "story": "xbox-cloud-gaming-phone-controller-nano-preview-nov-4"
  }
 ]
