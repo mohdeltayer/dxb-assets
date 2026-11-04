@@ -2392,6 +2392,20 @@ E. Next tests, each its own card, in this order (free, commercial-use licences):
    yt-dlp was refused then; any yt-dlp test uses no login and no third-party downloader, and its result
    goes to him on the card.
 
+## Review-scores template (studio, adv-20261104-review-scores-template, Mohammad 4 Nov 2026)
+
+For review roundups of one game. Template `reviewscores` (`templates/formats.py`; first choice for the `reviews` kind),
+card-led, cards over the game's own moving footage, chip «التقييمات». Beats: hook on the critics' number over the
+strongest moving shot (never a question first); the spread card (`cardgfx` kind `scores`: 4 to 6 outlets, Arabic then
+the Latin in brackets, each score exactly as the outlet printed it, a word kept as a word, the review date); one high and
+one low `verdict` card (score, «ما أعجبه» and «ما انتقده», each a faithful attributed excerpt of 15 words at most); the
+`totals` card (Metacritic score and review count, OpenCritic top critic average, top critics and «يوصي بها N بالمئة منهم»,
+the read time in Dubai time, «والعدد يزداد» while fresh); a footage payoff that repeats no card. Numbers never typed by
+hand: `templates/reviewscores.py fetch --mc <slug> --oc <id>/<slug>` reads both aggregators' pages (read-only, cached,
+`read_at`), and `render_job.check` refuses a job whose `review_scores.totals_read_at` is over 180 minutes old. No user
+scores unless the story is about them; outlet names as text. Full spec, checklist lines and names: `notes/review-scores-template.md`;
+example: `jobs/test/ocarina-of-time-review-scores-example.json`.
+
 ## Explainers from the source's own drawings (trial, 27 Sep 2026)
 
 For "how does it work" stories (patents, hardware, new features),

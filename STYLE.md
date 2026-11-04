@@ -593,6 +593,15 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 - An interview Reel carries the two or three tidbits that are news as short attributed quotes, never only "an
   interview was published" and never the whole interview.
 
+## Review scores (adv-20261104-review-scores-template, 4 Nov 2026)
+
+- Template `reviewscores`, chip «التقييمات»: hook number, spread card, high and low verdict cards, totals card, footage payoff.
+- Every score on the outlet's own scale as printed; a word stays a word. Outlets in Arabic then Latin.
+- Quotes: faithful excerpts, 15 words at most, outlet and reviewer named («بقلم»).
+- Metacritic and OpenCritic only from `reviewscores.py`, read within 180 minutes of the render, read time on the card.
+- No % sign after a number on screen: «100 بالمئة». No user scores unless they are the story.
+- Spec: `notes/review-scores-template.md`.
+
 ## YouTube lane (trial from 17 Oct 2026)
 
 - Original material only: Famitsu weekly, numbers, list, Gulf prices, retro,
