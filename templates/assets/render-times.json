@@ -20802,5 +20802,54 @@
   "min_disk_free_mb": 82268,
   "setup_min": 1.1,
   "story": "age-of-wonders-4-the-silver-seas-out-now-nov-3"
+ },
+ {
+  "name": "stardew-valley-1-7-largest-update-barone-nov-4-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-04T08:30Z",
+  "stages": {
+   "checks": 7.0,
+   "montage": 73.0,
+   "text": 70.5,
+   "audio": 1.5,
+   "outro": 53.0
+  },
+  "total": 205.1,
+  "lane": "runner",
+  "queued_at": "2026-11-04T08:23:46Z",
+  "finished_at": "2026-11-04T08:30Z",
+  "render_min": 3.42,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 10.2,
+   "audio_secs": 25.4,
+   "music_pct": 43.9,
+   "leak_pct": 0.5,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 9,
+   "mix_secs": 8.0,
+   "secs": 18.8
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 388,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1299,
+  "peak_mem_mb": 3259,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60956,
+  "peak_disk_mb": 65075,
+  "min_disk_free_mb": 82721,
+  "setup_min": 1.22,
+  "story": "stardew-valley-1-7-largest-update-barone-nov-4"
  }
 ]
