@@ -142,11 +142,12 @@ def _is_word(score):
     return any('؀' <= ch <= 'ۿ' for ch in str(score))
 
 
-def scores(path, rows, title=None, theme='cold'):
+def scores(path, rows, title=None, theme='cold', show=None):
     """The spread: 3 to 6 outlets, one row each in two lines: the outlet (Arabic, then the Latin in brackets) across the
     row, then the score as the outlet printed it on the left in the theme accent and the review date on the right.
     `rows`: [{"outlet": "آي جي إن (IGN)", "score": "9/10", "date": "في 4 نوفمبر"}, ...]; `title` an optional frame line
-    above («تقييمات المواقع»)."""
+    above («تقييمات المواقع»). `show` draws only the first N rows on the full-size plate, so the card can build in two
+    beats (pace rule: something changes every 3 to 4 s) without the plate jumping."""
     if not 3 <= len(rows) <= 6:
         raise ValueError(f'the spread holds 3 to 6 outlets, not {len(rows)}')
     RL.rtl_starts([r['outlet'] for r in rows] + [r['date'] for r in rows] + ([title] if title else []), 'scores card')
@@ -171,7 +172,7 @@ def scores(path, rows, title=None, theme='cold'):
     if title:
         d.text((X1 - 48, y + 50), title, font=A.F('Medium', 48), fill=A.BODY, anchor='rs', **G.AR)
         y += title_h
-    for i, r in enumerate(rows):
+    for i, r in enumerate(rows[:show] if show else rows):
         if i:
             d.line([X0 + 40, y, X1 - 40, y], fill=right + (70,), width=2)
         d.text((X1 - 48, y + 60), r['outlet'], font=A.F('Bold', name_size), fill=A.INK, anchor='rs', **G.AR)
@@ -184,10 +185,11 @@ def scores(path, rows, title=None, theme='cold'):
     return path
 
 
-def verdict(path, outlet, reviewer, score, positive, negative, score_note=None, theme='cold'):
+def verdict(path, outlet, reviewer, score, positive, negative, score_note=None, theme='cold', stage=2):
     """One outlet's review: the outlet and reviewer, the score as printed (or the outlet's word), then one line it liked
     and one it did not, each a short faithful excerpt in «» (15 words at most). `positive` and `negative` are the Arabic
-    text; the job keeps the original wording beside it for the translation check."""
+    text; the job keeps the original wording beside it for the translation check. `stage=1` draws the outlet and the
+    score only on the full plate (the first beat), `stage=2` the whole card."""
     RL.rtl_starts([outlet, reviewer, positive, negative] + ([score_note] if score_note else []), 'verdict card')
     for q in (positive, negative):
         if len(q.split()) > 15:
@@ -216,7 +218,7 @@ def verdict(path, outlet, reviewer, score, positive, negative, score_note=None, 
     if score_note:
         d.text((cx, y + 44), score_note, font=A.F('Medium', 44), fill=A.BODY, anchor='ms', **G.AR); y += 52
     y += 30
-    for tag, colour, lines in (('ما أعجبه', right, plines), ('ما انتقده', NEG, nlines)):
+    for tag, colour, lines in ((('ما أعجبه', right, plines), ('ما انتقده', NEG, nlines)) if stage >= 2 else ()):
         tf = A.F('Bold', 42)
         tw = d.textlength(tag, font=tf, **G.AR)
         d.rounded_rectangle([xr - tw - 36, y, xr, y + 56], radius=10, fill=colour + (230,))
@@ -229,12 +231,13 @@ def verdict(path, outlet, reviewer, score, positive, negative, score_note=None, 
     return path
 
 
-def totals(path, metacritic, opencritic, read, growing=True, theme='cold'):
+def totals(path, metacritic, opencritic, read, growing=True, theme='cold', stage=2):
     """The two aggregators side by side, numbers only from their pages (reviewscores.py) and the time they were read.
     `metacritic`: {"score": 96, "reviews": 81}; `opencritic`: {"average": 96, "recommended": 100, "critics": 17};
     `read`: «حتى الساعة 17:05 بتوقيت الإمارات\nيوم 4 نوفمبر» (a hand break keeps a date off the start of a line).
     `growing` adds «والعدد يزداد» (a fresh game's count is still rising). The percentage is written «100 بالمئة»: a % sign
-    after a number flips to its far side in right-to-left text (22 Oct 2026)."""
+    after a number flips to its far side in right-to-left text (22 Oct 2026). `stage=1` draws Metacritic only on the full
+    plate (the first beat), `stage=2` both and the read time."""
     foot = read + ('، والعدد يزداد' if growing else '')
     mc_lines = ['ميتاكريتيك (Metacritic)', f"من {metacritic['reviews']} مراجعة"]
     oc_lines = ['أوبن كريتيك (OpenCritic)', f"متوسط {opencritic['critics']} ناقدًا بارزًا",
@@ -254,8 +257,8 @@ def totals(path, metacritic, opencritic, read, growing=True, theme='cold'):
     im = NG.canvas()
     d, left, right = _plate(im, y0, y1, theme)
     cx, y = (X0 + X1) // 2, y0 + 40
-    for (name, value, notes), block in zip(((mc_lines[0], str(metacritic['score']), mc_lines[1:]),
-                                            (oc_lines[0], str(opencritic['average']), oc_lines[1:])), blocks):
+    both = ((mc_lines[0], str(metacritic['score']), mc_lines[1:]), (oc_lines[0], str(opencritic['average']), oc_lines[1:]))
+    for (name, value, notes), block in zip(both[:1] if stage < 2 else both, blocks):
         d.text((cx, y + 46), name, font=A.F('Bold', _fits(probe, name, 'Bold', (50, 46, 42), room)), fill=A.INK,
                anchor='ms', **G.AR)
         d.text((cx, y + 52 + 118), value, font=A.F('Bold', 120), fill=right, anchor='ms')
@@ -267,7 +270,7 @@ def totals(path, metacritic, opencritic, read, growing=True, theme='cold'):
             d.line([X0 + 120, y + 10, X1 - 120, y + 10], fill=right + (70,), width=2)
             y += 20
     y += 20
-    for ln in flines:
+    for ln in (flines if stage >= 2 else []):
         d.text((cx, y + 42), ln, font=A.F('Medium', NG.MIN_TEXT + 2), fill=A.BODY, anchor='ms', **G.AR); y += 50
     im.save(path)
     return path

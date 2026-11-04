@@ -32,7 +32,13 @@ moving footage (`ground_footage`, or per card `["x-gfx-a.png", [file, start], se
 5. PAYOFF (about 4 s): footage, one line: what it means for players here (worth it at launch, wait for a patch,
    divisive), or the pointer to the full reviews in the pinned comment. It never repeats a card's fact.
 
-Length: about 29 s (no cap since 24 Oct; every card holds its own reading time). No story line over a card: the card is
+Every card builds in two beats so something changes every 3 to 4 s (the pace rule stopped a 5.6 s card in the first
+draft): the spread shows its first rows, then all (`show`); a verdict shows the outlet and score, then the two quotes
+(`stage` 1 then 2); the totals show Metacritic, then OpenCritic and the read time (`stage`). The plate is drawn at full
+size in both beats, so only the content arrives. In the job: two `gfx` entries per card and two shots, the ground
+footage running on (`[file, start]` per shot).
+
+Length: about 30 s (no cap since 24 Oct; every card holds its own reading time). No story line over a card: the card is
 the beat (one fact, one place).
 
 ## How to build one

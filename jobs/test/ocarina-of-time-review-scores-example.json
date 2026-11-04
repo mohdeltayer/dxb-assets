@@ -96,7 +96,40 @@
  ],
  "gfx": [
   {
-   "file": "ocarina-rs-gfx-spread.png",
+   "file": "ocarina-rs-gfx-spread-a.png",
+   "kind": "scores",
+   "title": "تقييمات المواقع",
+   "rows": [
+    {
+     "outlet": "آي جي إن (IGN)",
+     "score": "9/10",
+     "date": "في 4 نوفمبر"
+    },
+    {
+     "outlet": "يوروغيمر (Eurogamer)",
+     "score": "5/5",
+     "date": "في 4 نوفمبر"
+    },
+    {
+     "outlet": "نينتيندو لايف (Nintendo Life)",
+     "score": "9/10",
+     "date": "في 4 نوفمبر"
+    },
+    {
+     "outlet": "في جي سي (VGC)",
+     "score": "5/5",
+     "date": "في 4 نوفمبر"
+    },
+    {
+     "outlet": "سعودي جيمر (Saudi Gamer)",
+     "score": "أسطورية",
+     "date": "في 4 نوفمبر"
+    }
+   ],
+   "show": 3
+  },
+  {
+   "file": "ocarina-rs-gfx-spread-b.png",
    "kind": "scores",
    "title": "تقييمات المواقع",
    "rows": [
@@ -128,7 +161,18 @@
    ]
   },
   {
-   "file": "ocarina-rs-gfx-high.png",
+   "file": "ocarina-rs-gfx-high-a.png",
+   "kind": "verdict",
+   "outlet": "سعودي جيمر (Saudi Gamer)",
+   "reviewer": "بقلم عصام الشهوان",
+   "score": "أسطورية",
+   "score_note": "أعلى درجة في مقياس الموقع",
+   "positive": "هذه تجربة ساحرة تنضح بالأفكار وبروح المغامرة",
+   "negative": "انخفاض الدقة يجعل الصورة أحيانًا غير ثابتة",
+   "stage": 1
+  },
+  {
+   "file": "ocarina-rs-gfx-high-b.png",
    "kind": "verdict",
    "outlet": "سعودي جيمر (Saudi Gamer)",
    "reviewer": "بقلم عصام الشهوان",
@@ -138,7 +182,18 @@
    "negative": "انخفاض الدقة يجعل الصورة أحيانًا غير ثابتة"
   },
   {
-   "file": "ocarina-rs-gfx-low.png",
+   "file": "ocarina-rs-gfx-low-a.png",
+   "kind": "verdict",
+   "outlet": "آر بي جي سايت (RPG Site)",
+   "reviewer": "بقلم سكوت وايت (Scott White)",
+   "score": "8/10",
+   "score_note": "أدنى تقييم حتى الآن",
+   "positive": "ربما اللعبة الأكثر إبهارًا بصريًا على Switch 2 حتى الآن",
+   "negative": "لماذا لا توجد سوى خانة حفظ واحدة؟!",
+   "stage": 1
+  },
+  {
+   "file": "ocarina-rs-gfx-low-b.png",
    "kind": "verdict",
    "outlet": "آر بي جي سايت (RPG Site)",
    "reviewer": "بقلم سكوت وايت (Scott White)",
@@ -148,7 +203,22 @@
    "negative": "لماذا لا توجد سوى خانة حفظ واحدة؟!"
   },
   {
-   "file": "ocarina-rs-gfx-totals.png",
+   "file": "ocarina-rs-gfx-totals-a.png",
+   "kind": "totals",
+   "metacritic": {
+    "score": 96,
+    "reviews": 81
+   },
+   "opencritic": {
+    "average": 96,
+    "recommended": 100,
+    "critics": 17
+   },
+   "read": "حتى الساعة 17:05 بتوقيت الإمارات\nيوم 4 نوفمبر",
+   "stage": 1
+  },
+  {
+   "file": "ocarina-rs-gfx-totals-b.png",
    "kind": "totals",
    "metacritic": {
     "score": 96,
@@ -175,39 +245,75 @@
    0.47
   ],
   [
-   "ocarina-rs-gfx-spread.png",
+   "ocarina-rs-gfx-spread-a.png",
    [
     "ocarina-overview.mp4",
     20.0
    ],
-   6.0,
+   3.0,
    null
   ],
   [
-   "ocarina-rs-gfx-high.png",
+   "ocarina-rs-gfx-spread-b.png",
+   [
+    "ocarina-overview.mp4",
+    23.0
+   ],
+   3.6,
+   null
+  ],
+  [
+   "ocarina-rs-gfx-high-a.png",
    [
     "ocarina-overview.mp4",
     30.0
    ],
-   6.0,
+   2.6,
    null
   ],
   [
-   "ocarina-rs-gfx-low.png",
+   "ocarina-rs-gfx-high-b.png",
+   [
+    "ocarina-overview.mp4",
+    32.6
+   ],
+   3.8,
+   null
+  ],
+  [
+   "ocarina-rs-gfx-low-a.png",
    [
     "ocarina-overview.mp4",
     38.0
    ],
-   6.0,
+   2.6,
    null
   ],
   [
-   "ocarina-rs-gfx-totals.png",
+   "ocarina-rs-gfx-low-b.png",
+   [
+    "ocarina-overview.mp4",
+    40.6
+   ],
+   3.8,
+   null
+  ],
+  [
+   "ocarina-rs-gfx-totals-a.png",
    [
     "ocarina-overview.mp4",
     60.0
    ],
-   5.0,
+   2.6,
+   null
+  ],
+  [
+   "ocarina-rs-gfx-totals-b.png",
+   [
+    "ocarina-overview.mp4",
+    62.6
+   ],
+   3.4,
    null
   ],
   [
@@ -219,8 +325,8 @@
  ],
  "lines": [
   [
-   5,
-   5,
+   9,
+   9,
    [
     [
      "إجماع النقاد قبل صدورها غدًا\nعلى Switch 2",
@@ -241,7 +347,7 @@
  "credits": [
   [
    0,
-   5,
+   9,
    "المصدر: نينتيندو (Nintendo)"
   ]
  ],
