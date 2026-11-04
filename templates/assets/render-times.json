@@ -21098,5 +21098,38 @@
   "min_disk_free_mb": 83377,
   "setup_min": 1.07,
   "story": "arc-raiders-ceo-pve-door-open-nov-4"
+ },
+ {
+  "name": "arc-raiders-ceo-pve-door-open-nov-4-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-04T13:10Z",
+  "stages": {
+   "checks": 3.1,
+   "montage": 12.3,
+   "text": 13.1,
+   "audio": 0.4,
+   "outro": 20.0
+  },
+  "total": 48.9,
+  "lane": "runner",
+  "queued_at": "2026-11-04T13:08:14Z",
+  "finished_at": "2026-11-04T13:10Z",
+  "render_min": 0.82,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 97,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 972,
+  "peak_mem_mb": 2547,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60641,
+  "peak_disk_mb": 61830,
+  "min_disk_free_mb": 85966,
+  "setup_min": 0.85,
+  "story": "arc-raiders-ceo-pve-door-open-nov-4"
  }
 ]
