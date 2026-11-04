@@ -21598,5 +21598,54 @@
   "peak_tmp_mb": 1418,
   "setup_min": 1.2,
   "story": "fortnite-crew-four-tiers-december-5"
+ },
+ {
+  "name": "wow-forever-now-live-worldwide-nov-5-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-04T23:50Z",
+  "stages": {
+   "checks": 8.2,
+   "montage": 80.5,
+   "text": 90.0,
+   "audio": 1.9,
+   "outro": 63.4
+  },
+  "total": 243.9,
+  "lane": "runner",
+  "queued_at": "2026-11-04T23:41:58Z",
+  "finished_at": "2026-11-04T23:50Z",
+  "render_min": 4.07,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 25.6,
+   "audio_secs": 93.5,
+   "music_pct": 6.5,
+   "leak_pct": 1.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 8
+   },
+   "effects_shots": 0,
+   "mix_secs": 10.1,
+   "secs": 36.3
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 408,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1336,
+  "peak_mem_mb": 3225,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61872,
+  "peak_disk_mb": 67559,
+  "min_disk_free_mb": 80237,
+  "setup_min": 3.47,
+  "story": "wow-forever-now-live-worldwide-nov-5"
  }
 ]
