@@ -20605,5 +20605,38 @@
   "min_disk_free_mb": 82561,
   "setup_min": 1.35,
   "story": "arkane-lyon-ubisoft-bid-bloomberg-nov-4"
+ },
+ {
+  "name": "nikke-pc-launcher-tampering-notice-nov-4-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-04T06:17Z",
+  "stages": {
+   "checks": 0.0,
+   "montage": 65.8,
+   "text": 22.4,
+   "audio": 0.0,
+   "outro": 22.8
+  },
+  "total": 111.1,
+  "lane": "runner",
+  "queued_at": "2026-11-04T06:13:45Z",
+  "finished_at": "2026-11-04T06:17Z",
+  "render_min": 1.85,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 146,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 982,
+  "peak_mem_mb": 2392,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60642,
+  "peak_disk_mb": 61006,
+  "min_disk_free_mb": 86790,
+  "setup_min": 0.95,
+  "story": "nikke-pc-launcher-tampering-notice-nov-4"
  }
 ]
