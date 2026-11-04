@@ -1623,14 +1623,22 @@
    "title": "تحديث Stardew Valley 1.7 الأكبر على الإطلاق (تقرير، جيمز رادار)",
    "kind": "reel",
    "slot": "2026-11-04T13:00:00+04:00",
-   "platforms": ["instagram", "x", "threads"],
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
    "job": "jobs/render/stardew-valley-1-7-largest-update-barone-nov-4.json",
    "card": "prod2-20261104-review-1230",
    "fallback": "bank-piece",
    "held_by_mohammad": false,
    "status": "scheduled",
    "done": false,
-   "delivery": {"instagram": "scheduled", "x": "scheduled", "threads": "scheduled"},
+   "delivery": {
+    "instagram": "scheduled",
+    "x": "scheduled",
+    "threads": "scheduled"
+   },
    "evidence": "gate 08:40Z exit B: GamesRadar headline and Barone quotes read via search, Denfaminico relay 4 Nov; primary page text truncated. Publer scheduled 13:00 Dubai x3, v3 render run 41800827541, audio split applied (v1)",
    "note": "built by the takeover session at Mohammad's order (gap now, game footage only)"
   },
@@ -1639,14 +1647,22 @@
    "title": "ماكرونيكس تنسحب من رقائق Switch (عاجل، تايبيه تايمز)",
    "kind": "reel",
    "slot": "2026-11-04T15:00:00+04:00",
-   "platforms": ["instagram", "x", "threads"],
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
    "job": "jobs/render/macronix-exits-switch-rom-chips-nov-4.json",
    "card": "mohammad-order-20261104-1443",
    "fallback": "publish-last-passed",
    "held_by_mohammad": false,
    "status": "scheduled",
    "done": false,
-   "delivery": {"instagram": "scheduled", "x": "scheduled", "threads": "scheduled"},
+   "delivery": {
+    "instagram": "scheduled",
+    "x": "scheduled",
+    "threads": "scheduled"
+   },
    "evidence": "gate 10:50Z: Taipei Times 29 Oct (chairman Miin Wu: gradually phasing out ROM) read; no-new-ROM and last-separate-quarter wording from Gibbo X post and IG News only; Nintendo no statement found. Render run 41816805291; Publer 15:00 Dubai x3",
    "note": "Mohammad's order 14:43 Dubai: verify and post as breaking"
   },
@@ -1654,17 +1670,48 @@
    "id": "stellar-blade-complete-edition-switch-2-launch-nov-5",
    "title": "غدًا Stellar Blade على Switch 2 (رسمي، شيفت أب)",
    "kind": "reel",
-   "slot": "2026-11-04T16:03:00+04:00",
-   "platforms": ["instagram", "x", "threads"],
+   "slot": "2026-11-04T16:33:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
    "job": "jobs/render/stellar-blade-complete-edition-switch-2-launch-nov-5.json",
    "card": "mohammad-go-20261104-1545",
    "fallback": "bank-piece",
    "held_by_mohammad": false,
-   "status": "open",
+   "status": "scheduled",
    "done": false,
-   "delivery": {"instagram": "not_submitted", "x": "not_submitted", "threads": "not_submitted"},
-   "evidence": "",
+   "delivery": {
+    "instagram": "scheduled",
+    "x": "scheduled",
+    "threads": "scheduled"
+   },
+   "evidence": "gate 11:52Z: Shift Up press release read via search (date, time 00:00 KST, full game on cartridge); price 59.99 USD from press coverage only; render run 41823329862; Publer 16:33 Dubai x3",
    "note": "candidate 2 of Mohammad's 'go ahead with all 4' (4 Nov 15:45 Dubai)"
+  },
+  {
+   "id": "ocarina-of-time-switch-2-unlock-time-nov-5",
+   "title": "تصدر Ocarina of Time على Switch 2 غدًا (تقرير، غيم رانت)",
+   "kind": "reel",
+   "slot": "2026-11-04T16:03:00+04:00",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/render/ocarina-of-time-switch-2-unlock-time-nov-5.json",
+   "card": "mohammad-go-20261104-1545",
+   "fallback": "bank-piece",
+   "held_by_mohammad": false,
+   "status": "scheduled",
+   "done": false,
+   "delivery": {
+    "instagram": "scheduled",
+    "x": "scheduled",
+    "threads": "scheduled"
+   },
+   "evidence": "gate 11:46Z exit B: no Nintendo statement of the unlock hour found; midnight local is an expectation (Game Rant and others); render run 41823288292; Publer 16:03 Dubai x3"
   }
  ]
 }
