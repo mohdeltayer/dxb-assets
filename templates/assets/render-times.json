@@ -20442,5 +20442,53 @@
   "min_disk_free_mb": 84798,
   "setup_min": 1.2,
   "story": "bill-and-teds-excellent-adventure-arcade-announced"
+ },
+ {
+  "name": "archeage-chronicles-early-access-steam-nov-4-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-04T03:07Z",
+  "stages": {
+   "checks": 9.4,
+   "montage": 99.3,
+   "text": 106.8,
+   "audio": 1.7,
+   "outro": 76.1
+  },
+  "total": 293.2,
+  "lane": "runner",
+  "queued_at": "2026-11-04T06:59:07+04:00",
+  "finished_at": "2026-11-04T03:07Z",
+  "render_min": 4.89,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 11.2,
+   "audio_secs": 32.9,
+   "music_pct": 29.3,
+   "leak_pct": 12.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "reason": "music stem not clean (leftover 12.3% > 5.0%)",
+   "secs": 20.0
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 489,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1303,
+  "peak_mem_mb": 3699,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60939,
+  "peak_disk_mb": 65684,
+  "min_disk_free_mb": 82112,
+  "setup_min": 1.07,
+  "story": "archeage-chronicles-early-access-steam-nov-4"
  }
 ]
