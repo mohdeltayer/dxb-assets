@@ -20953,5 +20953,54 @@
   "min_disk_free_mb": 87219,
   "setup_min": 0.88,
   "story": "ocarina-of-time-switch-2-unlock-time-nov-5"
+ },
+ {
+  "name": "stellar-blade-complete-edition-switch-2-launch-nov-5-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-04T11:48Z",
+  "stages": {
+   "checks": 6.1,
+   "montage": 35.2,
+   "text": 52.5,
+   "audio": 1.1,
+   "outro": 55.6
+  },
+  "total": 150.5,
+  "lane": "runner",
+  "queued_at": "2026-11-04T11:44:04Z",
+  "finished_at": "2026-11-04T11:48Z",
+  "render_min": 2.51,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 15.1,
+   "audio_secs": 44.0,
+   "music_pct": 60.5,
+   "leak_pct": 0.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 5
+   },
+   "effects_shots": 0,
+   "mix_secs": 6.0,
+   "secs": 21.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 255,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1266,
+  "peak_mem_mb": 3225,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60939,
+  "peak_disk_mb": 63810,
+  "min_disk_free_mb": 83986,
+  "setup_min": 1.27,
+  "story": "stellar-blade-complete-edition-switch-2-launch-nov-5"
  }
 ]
