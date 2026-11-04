@@ -20,7 +20,7 @@ moving footage (`ground_footage`, or per card `["x-gfx-a.png", [file, start], se
 ## Story beats
 
 1. HOOK (about 3.5 s): the game's strongest moving shot; the headline carries the critics' number (the average, or the
-   highest or lowest score), never a question first (hook rule, 24 Oct). Example: «متوسط 96 من النقاد\nلنسخة Ocarina الجديدة».
+   highest or lowest score), never a question first (hook rule, 24 Oct). Example: «متوسط النقاد 96\nلنسخة Ocarina».
 2. THE SPREAD (about 6 s): `scores` card, 4 to 6 outlets by relevance: the big international ones plus every
    Arabic-language outlet that scored it. Each row: outlet in Arabic then the Latin in brackets, the score exactly as the
    outlet printed it (9/10, 5/5, 95/100, or its word: Saudi Gamer's «أسطورية»), and «في 4 نوفمبر».
