@@ -21531,5 +21531,38 @@
   "min_disk_free_mb": 85207,
   "setup_min": 1.7,
   "story": "xbox-cloud-gaming-phone-controller-nano-preview-nov-4"
+ },
+ {
+  "name": "fortnite-crew-four-tiers-december-5-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-04T20:44Z",
+  "stages": {
+   "checks": 4.1,
+   "montage": 35.7,
+   "text": 55.5,
+   "audio": 0.0,
+   "outro": 42.9
+  },
+  "total": 138.2,
+  "lane": "runner",
+  "queued_at": "2026-11-04T20:39:57Z",
+  "finished_at": "2026-11-04T20:44Z",
+  "render_min": 2.3,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 246,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1041,
+  "peak_mem_mb": 3094,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60641,
+  "peak_disk_mb": 62735,
+  "min_disk_free_mb": 85061,
+  "setup_min": 1.23,
+  "story": "fortnite-crew-four-tiers-december-5"
  }
 ]
