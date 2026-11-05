@@ -9,6 +9,7 @@ original. Sweeps read it; nothing here posts anything.
 
     python3 newsroom/ledger.py sync              # pick up new queue folders and receipts
     python3 newsroom/ledger.py find kena delay   # dedup check before shortlisting
+    python3 newsroom/ledger.py find kena delay --record <story id>   # same, written into the story file (build gate)
     python3 newsroom/ledger.py card <story_id>   # the approval card
     python3 newsroom/ledger.py lags [days]       # where the time goes
     python3 newsroom/ledger.py genres [days]     # stories per genre (Tuesday audit line)
@@ -70,8 +71,21 @@ def save(story):
 
 
 def stories():
+    """Every story file. A file without an id (8 such on 30 Oct) takes its file name, with one line on stderr,
+    instead of crashing every caller (adv-20261105-p2-audit-fixes, item 1)."""
     for f in sorted(STORIES.glob('*.json')):
-        yield json.loads(f.read_text())
+        try:
+            s = json.loads(f.read_text())
+        except ValueError as e:
+            print(f'ledger: {f.name}: not readable JSON ({e}); skipped', file=sys.stderr)
+            continue
+        if not isinstance(s, dict):
+            print(f'ledger: {f.name}: not a story object; skipped', file=sys.stderr)
+            continue
+        if not s.get('id'):
+            print(f'ledger: {f.name}: no id; using the file name', file=sys.stderr)
+            s['id'] = f.stem
+        yield s
 
 
 def plain(content):
@@ -151,8 +165,10 @@ def _posts(s):
     return [p for p in ps if isinstance(p, dict) and 'folder' in p]
 
 
-def find(words):
-    """Stories whose title, game, folders or notes contain every word."""
+def find(words, record=None):
+    """Stories whose title, game, folders or notes contain every word. With record=<story id>, the search is
+    written into that story file as `ledger_find` (at, words, hits): render_job's build gate refuses a job whose
+    story has none (adv-20261105-p2-audit-fixes, item 1)."""
     words = [w.lower() for w in words]
     hits = []
     for s in stories():
@@ -170,6 +186,15 @@ def find(words):
             print(f'    posted: {", ".join(where)}, first {dubai(s.get("times", {}).get("posted"))} Dubai')
     if not hits:
         print('no match: new story')
+    if record:
+        path = STORIES / f'{record}.json'
+        if not path.exists():
+            raise SystemExit(f'ledger: --record {record}: no story file {path}; write the story file first')
+        story = json.loads(path.read_text())
+        story['ledger_find'] = {'at': datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+                                'words': words, 'hits': [s['id'] for s in hits if s['id'] != record][-20:]}
+        path.write_text(json.dumps(story, ensure_ascii=False, indent=1) + '\n')
+        print(f'recorded in {path.name}: {len(story["ledger_find"]["hits"])} other hits')
 
 
 MARK = {'verified': '✓', 'reported': '~', 'rumour': '?', 'unverified': '?',
@@ -249,7 +274,14 @@ if __name__ == '__main__':
     if cmd == 'sync':
         sync()
     elif cmd == 'find':
-        find(rest)
+        rec = None
+        if '--record' in rest:
+            i = rest.index('--record')
+            rec = rest[i + 1] if i + 1 < len(rest) else None
+            if not rec:
+                raise SystemExit('ledger: --record needs a story id')
+            rest = rest[:i] + rest[i + 2:]
+        find(rest, rec)
     elif cmd == 'card':
         card(rest[0])
     elif cmd == 'lags':

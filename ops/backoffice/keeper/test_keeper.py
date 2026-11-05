@@ -99,7 +99,7 @@ class Passes(unittest.TestCase):
             p2 = self.run_tick(d, now='2026-11-01T12:01:00Z')
             self.assertEqual(p2.stdout.count('alarm:'), 0, p2.stdout)           # same rungs: no second alarm
             with open(os.path.join(d, 'status.txt'), encoding='utf-8') as f:
-                self.assertEqual(len(f.read().splitlines()), 7)
+                self.assertEqual(len(f.read().splitlines()), 8)   # the line, the six, and the bank line (5 Nov)
 
     def test_next_rung_alarms_again(self):
         with tempfile.TemporaryDirectory() as d:
@@ -184,3 +184,67 @@ class Compare(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main(verbosity=1)
+
+
+class Desk(unittest.TestCase):
+    """Desk alarms (prod-20261102-build-status-json)."""
+
+    def setUp(self):
+        import tempfile
+        self.t = tempfile.TemporaryDirectory()
+        self.d = self.t.name
+
+    def tearDown(self):
+        self.t.cleanup()
+
+    def files(self, started=False, release=False, last_watch='2026-11-06T00:30Z'):
+        board = os.path.join(self.d, 'board.json')
+        h = [{'id': 'build-20261106-started'}] if started else [{'id': 'other'}]
+        with open(board, 'w') as f:
+            json.dump({'handoffs': h}, f)
+        rel = os.path.join(self.d, 'releases')
+        os.makedirs(rel, exist_ok=True)
+        if release:
+            open(os.path.join(rel, '2026-11-06.md'), 'w').close()
+        runs = os.path.join(self.d, 'runs.jsonl')
+        with open(runs, 'w') as f:
+            f.write(json.dumps({'at': last_watch, 'run': 'hourly-watch'}) + '\n')
+        return board, rel, runs
+
+    def test_quiet_before_the_times(self):
+        b, r, w = self.files()
+        lines, alarms = K.desk_checks(K.parse_time('2026-11-05T21:10Z'), b, r, w)   # 01:10 Dubai
+        self.assertEqual(alarms, [])
+        self.assertTrue(any('missing' in l for l in lines))
+
+    def test_started_and_release_alarms(self):
+        b, r, w = self.files(last_watch='2026-11-06T00:00Z')
+        _, a1 = K.desk_checks(K.parse_time('2026-11-05T21:25Z'), b, r, w)            # 01:25 Dubai
+        self.assertEqual([x['key'].split('|')[1] for x in a1], ['started'])
+        _, a2 = K.desk_checks(K.parse_time('2026-11-06T00:20Z'), b, r, w)            # 04:20 Dubai
+        self.assertEqual(sorted(x['key'].split('|')[1] for x in a2), ['release', 'started'])
+
+    def test_present_means_no_alarm(self):
+        b, r, w = self.files(started=True, release=True, last_watch='2026-11-06T00:00Z')
+        _, a = K.desk_checks(K.parse_time('2026-11-06T00:20Z'), b, r, w)
+        self.assertEqual(a, [])
+
+    def test_watch_gap_once(self):
+        b, r, w = self.files(started=True, release=True, last_watch='2026-11-06T06:00Z')
+        _, a = K.desk_checks(K.parse_time('2026-11-06T07:40Z'), None, None, w)      # 100 min
+        self.assertEqual(len(a), 1)
+        state = {}
+        os.environ['KEEPER_NTFY'] = 'off'
+        r1, _ = K.raise_desk(a, state, K.parse_time('2026-11-06T07:40Z'))
+        r2, _ = K.raise_desk(a, state, K.parse_time('2026-11-06T07:45Z'))
+        self.assertEqual((len(r1), len(r2)), (1, 0))
+
+    def test_stale_log_never_pages(self):
+        b, r, w = self.files(started=True, release=True, last_watch='2026-11-05T00:02Z')
+        lines, a = K.desk_checks(K.parse_time('2026-11-06T07:40Z'), None, None, w)
+        self.assertEqual(a, [])
+        self.assertTrue(any('stale' in l for l in lines))
+
+    def test_not_asked_is_silent(self):
+        self.assertEqual(K.desk_checks(K.parse_time('2026-11-06T00:20Z')), ([], []))
+

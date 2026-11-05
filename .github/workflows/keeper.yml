@@ -41,6 +41,8 @@ jobs:
           sparse-checkout: |
             ops/backoffice/keeper
             newsroom/commitments.json
+            newsroom/helper-runs.jsonl
+            ops/build/releases
           sparse-checkout-cone-mode: false
           persist-credentials: false
 
@@ -60,13 +62,30 @@ jobs:
             echo "no keeper-status branch yet: first pass, cold start"
           fi
 
+      # The board is in dxb-queue, which this repository's token cannot read: with the read-only secret
+      # QUEUE_READ_TOKEN (dxb-queue, Contents read) the started-line alarm runs; without it the status says
+      # "board not read" and that alarm stays off. Release notes and the watch log come from this checkout.
+      - name: Board (optional, read-only)
+        env:
+          QTOKEN: ${{ secrets.QUEUE_READ_TOKEN }}
+        run: |
+          if [ -n "$QTOKEN" ]; then
+            curl -fsS -m 20 -H "Authorization: Bearer $QTOKEN" -H "Accept: application/vnd.github.raw" \
+              "https://api.github.com/repos/mohdeltayer/dxb-queue/contents/desk/board.json?ref=desk" \
+              -o "$RUNNER_TEMP/board.json" && echo "BOARD_ARG=--board $RUNNER_TEMP/board.json" >> "$GITHUB_ENV" \
+              || echo "board not read"
+          else
+            echo "no QUEUE_READ_TOKEN: started-line check off"
+          fi
+
       - name: Tick
         env:
           KEEPER_NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: |
           set +e
           python3 ops/backoffice/keeper/keeper.py tick --commitments newsroom/commitments.json \
-            --out "$RUNNER_TEMP/pub/keeper" | tee -a "$GITHUB_STEP_SUMMARY"
+            --out "$RUNNER_TEMP/pub/keeper" --releases ops/build/releases --runs newsroom/helper-runs.jsonl \
+            ${BOARD_ARG:-} | tee -a "$GITHUB_STEP_SUMMARY"
           echo "commit $(git rev-parse --short HEAD)" >> "$RUNNER_TEMP/pub/keeper/keeper.log"
           exit 0   # an unreadable commitments file is in the status and the log; the push below still happens
 

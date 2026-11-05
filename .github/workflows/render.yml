@@ -79,6 +79,7 @@ jobs:
           sparse-checkout: |
             templates
             jobs
+            newsroom/stories
 
       - name: Runner
         run: |

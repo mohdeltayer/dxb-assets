@@ -12,6 +12,7 @@ Evidence comes from our side (option 2 on the card): ops writes each row's deliv
 the slot check. Older rows that carry only a free-text `evidence` are read as before ("scheduled", "published").
 
   keeper.py tick   [--commitments F] [--state S] [--out DIR] [--now ISO]   one pass: status files, alarms
+                   [--board F] [--releases DIR] [--runs F]                 desk alarms (prod-20261102-build-status-json)
   keeper.py line   [--status F | --commitments F] [--now ISO]                'overdue commitments: N, at risk: M'
   keeper.py show   [--commitments F] [--now ISO]                            the ladder per row, sends nothing
   keeper.py compare --mine S --theirs G --state F [--out F]                 the server's status against GitHub's
@@ -335,6 +336,126 @@ def raise_alarms(status, state, now):
 
 
 # ---------------------------------------------------------------------------------------------
+# Desk alarms (prod-20261102-build-status-json, Mohammad 2 Nov 2026): 01:20 Dubai with no build started line,
+# 04:15 Dubai with no release note, 90 minutes without a Production 2 hourly watch run. Each input is optional; a
+# missing input gives a status line that says so and never an alarm. One push per gap (deduplicated in the state).
+# ---------------------------------------------------------------------------------------------
+STARTED_AT = (1, 20)        # Dubai: the build desk starts 01:07
+RELEASE_AT = (4, 15)        # Dubai: the release is 04:00
+WINDOW_END = (6, 0)         # Dubai: the build night's alarms stop here
+WATCH_GAP_MIN = 90
+LOG_STALE_MIN = 24 * 60      # a log with no run for a day is not being written: report, never alarm
+
+
+def _night(now):
+    """(release date as YYYYMMDD and YYYY-MM-DD, Dubai time) for the build night now falls in."""
+    d = now.astimezone(DUBAI)
+    return d.strftime('%Y%m%d'), d.strftime('%Y-%m-%d'), d
+
+
+def _past(d, hm):
+    return (d.hour, d.minute) >= hm
+
+
+def started_line(board, ymd):
+    j = board if isinstance(board, dict) else {}
+    want = 'build-%s-started' % ymd
+    for h in j.get('handoffs') or []:
+        if isinstance(h, dict) and str(h.get('id', '')).startswith(want):
+            return True
+    return False
+
+
+def last_watch(runs_path):
+    last = None
+    try:
+        with open(runs_path, encoding='utf-8') as f:
+            for line in f:
+                try:
+                    r = json.loads(line)
+                except ValueError:
+                    continue
+                if not str(r.get('run', '')).startswith('hourly-watch'):
+                    continue
+                t = parse_time(str(r.get('at', '')))
+                if t and (last is None or t > last):
+                    last = t
+    except OSError:
+        return None, False
+    return last, True
+
+
+def desk_checks(now, board_path=None, releases=None, runs=None):
+    """([status lines], [alarms as {key, title, lines}])."""
+    if not (board_path or releases or runs):
+        return [], []                            # not asked: the status is exactly as before
+    ymd, ymd_dash, d = _night(now)
+    lines, alarms = [], []
+    in_night = _past(d, (0, 0)) and not _past(d, WINDOW_END)
+    # 1. started line
+    if board_path:
+        board = load_json(board_path, None)
+        if board is None:
+            lines.append('build started line: board not readable')
+        else:
+            ok = started_line(board, ymd)
+            lines.append('build started line %s: %s' % (ymd, 'present' if ok else 'missing'))
+            if not ok and in_night and _past(d, STARTED_AT):
+                alarms.append({'key': 'desk|started|' + ymd, 'title': 'Build desk: no started line',
+                               'lines': ['Build desk: no started line build-%s-started at %s Dubai' % (ymd, d.strftime('%H:%M')),
+                                         'The 01:07 Dubai run did not write its line on dxb-queue desk/board.md.']})
+    else:
+        lines.append('build started line: board not read (no token for dxb-queue)')
+    # 2. release note
+    if releases:
+        f = os.path.join(releases, ymd_dash + '.md')
+        ok = os.path.exists(f)
+        lines.append('release note %s: %s' % (ymd_dash, 'present' if ok else 'missing'))
+        if not ok and in_night and _past(d, RELEASE_AT):
+            alarms.append({'key': 'desk|release|' + ymd, 'title': 'Build desk: no release note',
+                           'lines': ['Build desk: no ops/build/releases/%s.md on main at %s Dubai' % (ymd_dash, d.strftime('%H:%M')),
+                                     'The 04:00 release (or its skipped-release note) is missing.']})
+    # 3. Production 2 hourly watch
+    if runs:
+        last, readable = last_watch(runs)
+        if not readable:
+            lines.append('hourly watch: runs log not readable')
+        elif last is None:
+            lines.append('hourly watch: no run logged')
+        else:
+            gap = mins(now - last)
+            if gap >= LOG_STALE_MIN:             # nobody is logging here: say so, never page on it
+                lines.append('hourly watch: log stale, last run %s, %d min ago (is Production 2 logging to '
+                             'newsroom/helper-runs.jsonl?)' % (dubai(last), gap))
+                return lines, alarms
+            lines.append('hourly watch: last run %s, %d min ago' % (dubai(last), gap))
+            if gap >= WATCH_GAP_MIN:
+                alarms.append({'key': 'desk|watch|' + last.strftime('%Y-%m-%dT%H:%MZ'),
+                               'title': 'Hourly watch: %d min without a run' % gap,
+                               'lines': ['Hourly watch: no run logged for %d min (last %s Dubai)' % (gap, dubai(last)),
+                                         'Production 2 logs each run in newsroom/helper-runs.jsonl.']})
+    return lines, alarms
+
+
+def raise_desk(alarms, state, now):
+    sent = state.setdefault('sent_desk', {})
+    log, raised = [], []
+    for a in alarms:
+        if a['key'] in sent:
+            continue
+        ok = send({'title': a['title'], 'lines': a['lines'], 'priority': 'high', 'tags': 'alarm_clock'}, log, now)
+        sent[a['key']] = {'at': now.strftime('%Y-%m-%dT%H:%M:%SZ'), 'pushed': ok}
+        raised.append({'key': a['key'], 'title': a['title'], 'lines': a['lines'], 'pushed': ok})
+        log.append('%s ALARM %s' % (now.strftime('%H:%MZ'), a['lines'][0]))
+    old = now - timedelta(days=3)
+    for k, v in list(sent.items()):
+        t = parse_time(v.get('at', ''))
+        if t and t < old:
+            del sent[k]
+    return raised, log
+
+
+# ---------------------------------------------------------------------------------------------
 # Files
 # ---------------------------------------------------------------------------------------------
 def load_json(path, default):
@@ -351,6 +472,29 @@ def write(path, text):
     with open(tmp, 'w', encoding='utf-8') as f:
         f.write(text)
     os.replace(tmp, path)
+
+
+BANK_MIN = 3
+
+
+def bank_line(commitments_path):
+    """Finished, undated Reels in the evergreen bank (newsroom/evergreen.md, first table, Status starting 'ready').
+    Under BANK_MIN is an at-risk line (adv-20261105-p2-audit-fixes, item 5). Returns (count or None, line)."""
+    path = os.path.join(os.path.dirname(os.path.abspath(commitments_path)), 'evergreen.md')
+    try:
+        with open(path, encoding='utf-8') as f:
+            text = f.read()
+    except OSError:
+        return None, 'bank: not read (no newsroom/evergreen.md)'
+    table = text.split('\n## ', 1)[0]
+    n = 0
+    for row in table.splitlines():
+        cells = [c.strip() for c in row.strip().strip('|').split('|')]
+        if len(cells) >= 5 and cells[-1].lower().startswith('ready'):
+            n += 1
+    if n < BANK_MIN:
+        return n, 'bank: at risk, %d ready Reels (minimum %d)' % (n, BANK_MIN)
+    return n, 'bank: %d ready Reels' % n
 
 
 def rows_of(commitments):
@@ -379,6 +523,15 @@ def cmd_tick(args):
     else:
         status = summarise(rows_of(commitments), now, mode)
         raised, alog = raise_alarms(status, state, now)
+        status['bank_ready'], bl = bank_line(args.commitments)
+        status['six'].append(bl)
+    dlines, dalarms = desk_checks(now, args.board, args.releases, args.runs)
+    draised, dlog = raise_desk(dalarms, state, now)
+    status['desk'] = dlines
+    status.setdefault('six', [])
+    status['six'] += dlines
+    raised = list(raised) + draised
+    alog = list(alog) + dlog
     digest = hashlib.sha256(json.dumps(commitments, sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:12] \
         if commitments is not None else None
     status['commitments_sha'] = digest
@@ -417,6 +570,7 @@ def cmd_line(args):
 def cmd_show(args):
     now = parse_time(args.now) if args.now else datetime.now(timezone.utc)
     s = summarise(rows_of(load_json(args.commitments, {})), now, os.environ.get('KEEPER_MODE', 'alarm-only'))
+    s['six'].append(bank_line(args.commitments)[1])
     print(s['line'])
     for l in s['six']:
         print('  ' + l)
@@ -498,6 +652,9 @@ def main(argv=None):
     t.add_argument('--state')
     t.add_argument('--out', default=os.path.expanduser('~/backoffice/keeper'))
     t.add_argument('--now')
+    t.add_argument('--board', help='dxb-queue desk/board.json (optional)')
+    t.add_argument('--releases', help='ops/build/releases (optional)')
+    t.add_argument('--runs', help='newsroom/helper-runs.jsonl (optional)')
     l = sub.add_parser('line')
     l.add_argument('--status')
     l.add_argument('--commitments', default='newsroom/commitments.json')
