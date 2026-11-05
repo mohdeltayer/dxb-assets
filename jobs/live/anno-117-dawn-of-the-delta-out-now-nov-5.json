@@ -104,11 +104,8 @@
  "style": null,
  "template": "trailer",
  "skin": "house",
- "track": [
-  "anno-frame.mp4",
-  5.0
- ],
- "sound": null,
+ "track": "bed",
+ "sound": "launch",
  "profile": null,
  "cut": true,
  "pace_ok": true,
@@ -119,18 +116,13 @@
   "angle": "hook: Roman Egypt arrives in Anno 117; why now: out 5 Nov, free base-game weekend to 9 Nov; players here: Egypt setting, free to try base game; payoff: free weekend without DLC",
   "type": "OUT NOW: platforms not stated by Anno Union so not claimed on screen",
   "footage": "Steam Gameplay Trailer of the base game, subtitles cropped out, credited as base-game footage; the DLC launch trailer is YouTube only",
-  "sound": "music_only stem of the trailer; narration removed with the other stems; job fails if not clean",
+  "sound": "our bed (launch): Steam Gameplay Trailer narration runs through the whole trailer and the music stem was not clean (7.7% leftover, run 24); Accolades and Year 1 trailers are text cards",
   "picture": "differs from last 5 Reels",
   "names": "Anno 117 and Dawn of the Delta Latin; Ubisoft bracketed in credit; إضافة per glossary",
   "sensitive": "none"
  },
- "note": "v2: subtitles and narration. Steam Gameplay Trailer (app 3274580, 1080p) composed locally into a framed picture track live/2026-11-05/anno-frame.mp4: ground #141332 above with the azure rule, source rows 0 to 960 (burnt-in English subtitles at rows 985 to 1040 cropped out) at 1.25x in 1080x1200, no blur. Sound: music_only (Cocktail Fork music stem; the job fails if the stem is not clean, then fall back to our bed). Shot times as v1.",
+ "note": "v2: subtitles and narration. Steam Gameplay Trailer (app 3274580, 1080p) composed locally into a framed picture track live/2026-11-05/anno-frame.mp4: ground #141332 above with the azure rule, source rows 0 to 960 (burnt-in English subtitles at rows 985 to 1040 cropped out) at 1.25x in 1080x1200, no blur. Sound: music_only (Cocktail Fork music stem; the job fails if the stem is not clean, then fall back to our bed). Shot times as v1. v3: music_only run 24 failed the clean check (leftover 7.7% > 5%, narration leaks into the stem), so our bed (launch flavour). Trailer checked: Steam Gameplay Trailer, narration runs through every stretch; Accolades trailer is review-quote text.",
  "nobars": [
   "anno-frame.mp4"
- ],
- "music_only": true,
- "music_fade": [
-  0.3,
-  0.6
  ]
 }
