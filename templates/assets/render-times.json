@@ -22220,5 +22220,38 @@
   "min_disk_free_mb": 84289,
   "setup_min": 1.12,
   "story": "cat-me-if-you-can-switch-xbox-december-10-nov-5"
+ },
+ {
+  "name": "famitsu-oct26-nov1-switch-2-hardware-triples-nov-5-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-05T13:55Z",
+  "stages": {
+   "checks": 1.2,
+   "montage": 71.7,
+   "text": 92.1,
+   "audio": 0.0,
+   "outro": 52.1
+  },
+  "total": 217.1,
+  "lane": "runner",
+  "queued_at": "2026-11-05T13:49:01Z",
+  "finished_at": "2026-11-05T13:55Z",
+  "render_min": 3.62,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 234,
+  "mem_total_mb": 15987,
+  "mem_start_mb": 983,
+  "peak_mem_mb": 4587,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60407,
+  "peak_disk_mb": 62212,
+  "min_disk_free_mb": 85584,
+  "setup_min": 2.62,
+  "story": "famitsu-oct26-nov1-switch-2-hardware-triples-nov-5"
  }
 ]
