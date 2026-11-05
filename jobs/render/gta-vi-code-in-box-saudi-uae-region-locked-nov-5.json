@@ -106,5 +106,12 @@
  "profile": null,
  "sound": null,
  "note": "Story type RELEASE/EXPLAINER (regional, Gulf). Primary read: PlayStation UAE support page playstation.com/en-ae/support/games/gta-vi-compatibility (5 Nov 2026): GTA VI Code-in-Box codes work only with PlayStation accounts registered to the region on the code; Saudi Arabia and United Arab Emirates are separate entries ('Code can only be used by users holding an account for PlayStation registered to Saudi Arabia / the United Arab Emirates'); page gives no dates; launch 19 Nov 2026 per Rockstar trailer end card (PS5, Xbox Series X|S). Footage: Rockstar official Trailer 2 (media-rockstargames-com.akamaized.net/VI/downloads/videos/GTAVI_Trailer_2), cut to two 1080p stretches (28 to 70 s and 138 to 152 s of the original), shots chosen clean: no violence, no sexual content, no slate. Illustration only. Sensitive: none. genre: open world. pace_ok: each shot is official trailer footage in motion with its own lines entering on the cut; reading pace needs 4.4 s per two-line sentence, a 0.4 s overshoot of the 4 s change rule. Source: Rockstar's 4K master cropped to its 2.22:1 picture area (letterbox removed) and scaled to 2560x1152, so enlargement stays under 2x.",
- "pace_ok": true
+ "pace_ok": true,
+ "block_ok": [
+  [
+   16.0,
+   17.2,
+   "frames checked: hard cut inside Rockstar's trailer from a cash-register scene to a highway driving shot, straight road, sign and building edges, no decode damage in the source stretch (full decode clean)"
+  ]
+ ]
 }
