@@ -589,6 +589,19 @@ def _times_note(job, key, value):
         print(f'render_job: render-times not updated with {key}: {e}', flush=True)
 
 
+def lifeless_note(job, video):
+    """Lifeless score of the finished Reel (adv-20261102-borrow-openmontage, part 1): report only, never a stop.
+    Printed as `render_job: lifeless:` and kept in render-times.json as `lifeless`."""
+    try:
+        import lifeless as LF
+        r = LF.score(video, storybook=job.get('template') == 'storybeat')
+        r['over'] = r['score'] >= LF.REPAIR_AT
+        print('render_job: lifeless: ' + json.dumps(r), flush=True)
+        _times_note(job, 'lifeless', r)
+    except Exception as e:                      # report only: a failure here never touches the Reel
+        print(f'render_job: lifeless: not measured ({type(e).__name__}: {e})', flush=True)
+
+
 def design_plan(job):
     """(plan, apart folder) for the design pass, or (None, None) when the job does not ask for it, is breaking, or
     HyperFrames is not installed (then the Reel renders exactly as before; the reason is printed)."""
@@ -718,6 +731,7 @@ def run(job, draft=False):
         DC.dense_strip(video, base + '-dense.jpg')
         reel.strip(video, base + '-strip.jpg')
         reel.shotsheet([s for s in shots(job, build=False) if not s[0].startswith(NG.SUB + '/')], base + '-sheet.jpg')
+        lifeless_note(job, video)
     print(f"render_job: {job['name']} done in {time.time() - t0:.0f} s (fetch {fetched:.0f} s): {video}", flush=True)
     return video
 
