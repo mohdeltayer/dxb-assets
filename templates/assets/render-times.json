@@ -21696,5 +21696,54 @@
   "min_disk_free_mb": 81462,
   "setup_min": 1.03,
   "story": "lightyear-frontier-1-0-out-now-nov-4"
+ },
+ {
+  "name": "ocarina-of-time-nintendo-music-seven-songs-nov-5-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-05T02:05Z",
+  "stages": {
+   "checks": 4.7,
+   "montage": 35.1,
+   "text": 54.9,
+   "audio": 1.0,
+   "outro": 46.3
+  },
+  "total": 142.0,
+  "lane": "runner",
+  "queued_at": "2026-11-05T02:00:55Z",
+  "finished_at": "2026-11-05T02:05Z",
+  "render_min": 2.37,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 9.1,
+   "audio_secs": 20.0,
+   "music_pct": 77.0,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 8,
+   "mix_secs": 6.8,
+   "secs": 16.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 274,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1224,
+  "peak_mem_mb": 3168,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60939,
+  "peak_disk_mb": 63319,
+  "min_disk_free_mb": 84477,
+  "setup_min": 1.22,
+  "story": "ocarina-of-time-nintendo-music-seven-songs-nov-5"
  }
 ]
