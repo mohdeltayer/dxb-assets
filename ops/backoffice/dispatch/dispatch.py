@@ -268,7 +268,7 @@ def cmd_mirror(args):
     cards = []
     skipped = 0
     for name in sorted(os.listdir(src)):
-        if not name.endswith('.json'):
+        if not name.endswith('.json') or name == 'index.json':   # dxb-queue cards/ holds index.json (cards in git, 5 Nov)
             continue
         try:
             with open(os.path.join(src, name), encoding='utf-8') as f:
