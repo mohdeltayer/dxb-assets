@@ -159,7 +159,14 @@ def published(commitment, sid, links, queue=None):
         print(f'heartbeat written: {hb} (commit and push it in dxb-queue)')
     else:
         print('heartbeat not written: pass --queue <dxb-queue clone> (ops/heartbeat.json), then push it')
-    print(f'published recorded: {sid} in newsroom/published.jsonl and the story file')
+    try:                                         # backstory pages (adv-20261102-story-brief part 2): one log line each
+        sys.path.insert(0, str(REPO / 'newsroom'))
+        import context
+        pages = context.append(sid)
+        print('context pages: ' + (', '.join(f'newsroom/context/{p}.md' for p in pages) or 'none match'))
+    except Exception as e:                       # never blocks the published record
+        print(f'context pages not updated ({type(e).__name__}: {e})')
+    print(f'published recorded: {sid} in newsroom/published.jsonl and the story file (commit the context pages too)')
 
 
 def show(commitment):

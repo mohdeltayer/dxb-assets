@@ -37,6 +37,7 @@ Add `notes` or `.claude` only when needed. One old file: `git show <rev>:<path>`
 1. Story file `newsroom/stories/<date>-<slug>.json` with `sources` (url), `first_report`, `source_type` (primary or
    secondary), `footage` (stills: why, and the footage sources tried), `lane`, `beat`; then
    `python3 newsroom/ledger.py find <words> --record <story id>` and the Publer list for the last 7 days.
+   Read the backstory pages it touches: `python3 newsroom/context.py match <story id>` (newsroom/context/).
 2. Gate: primary read, chip on the ladder, `gate HH:MMZ` in the story file.
 3. Job file with `"story"`, `"render_lane": "server"` (default), `"reel_check"` filled from reel-check.md and a
    `"decision_log"` (per beat: shot and alternatives, crop, music and why); a stills Reel also needs `"stills_reason":
