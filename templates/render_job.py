@@ -323,6 +323,11 @@ def check(job):
     if job.get('intro') is not None:
         import ocarina_intro as OI
         OI.check(job['intro'])
+    if job.get('template') == 'reviewscores':  # totals read from the pages and recent, own-scale scores, short quotes
+        import reviewscores as RS             # (adv-20261104-review-scores-template, 4 Nov 2026)
+        errs = RS.check_job(job)
+        if errs:
+            raise SystemExit('render_job: review scores: ' + '; '.join(errs))
     reel.CLEAN_MAP = job.get('clean_map')       # pre-render map (templates/prerender.py); None changes nothing
     keep = reel.X
     if job.get('cut'):

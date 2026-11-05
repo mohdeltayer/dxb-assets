@@ -1,0 +1,366 @@
+{
+ "name": "ocarina-of-time-review-scores-example",
+ "out": "cards/test/ocarina-of-time-review-scores-example-v1.mp4",
+ "note": "STUDIO EXAMPLE (adv-20261104-review-scores-template), jobs/test only: never copied to jobs/render as is. Before a live render, run reviewscores.py fetch again and copy the new totals and read_at; the job is refused when totals_read_at is over 180 minutes old. Reviews embargo lifted 4 Nov 2026; game out 5 Nov on Switch 2. Totals read 4 Nov 13:05Z: Metacritic 96 from 81 critic reviews (80 positive); OpenCritic top critic average 96, 100% recommend, 17 top critics, 30 reviews. Spread scores as each outlet printed them (OpenCritic ScoreFormat): IGN 9/10 (Logan Plant), Eurogamer 5/5 (Christian Donlan), Nintendo Life 9/10 (Oliver Reynolds), VGC 5/5 (Andy Robinson), Saudi Gamer verdict «أسطورية», the top of its five-word scale (Issam Al-Shahwan, read on saudigamer.com; OpenCritic records it as 5/5). Lowest on both aggregators: RPG Site 8/10 (Scott White, with Alex Donaldson). Footage: Nintendo store Overview trailer (720p, the only official copy, as on the 3 Nov UK launch job). picture: ocarina-overview.mp4 at 72 s (hook) and 94 s (payoff), new stretches. Sound: our bed (neon_b). The Overview trailer is narrated almost end to end (faster-whisper, 4 Nov: longest speech-free stretch 186.7 to 211.4 s, 24.8 s, shorter than the Reel), and a card-led numbers Reel may take our bed (trailer-sound rule, 23 Oct, point 1). The 'music_only' split is the alternative once speech_check reads the music stem. sensitive: none.",
+ "angle": {
+  "hook": "the critics' average, 96 on Metacritic, for a 1998 classic rebuilt",
+  "why_now": "the review embargo lifted on 4 Nov, the day before launch",
+  "players_here": "out tomorrow on Switch 2; Saudi Gamer, the Arabic review in the count, calls it legendary",
+  "payoff": "a critics' consensus the day before launch (the low card already shows the 8/10 and its save-slot complaint)"
+ },
+ "story_type": "REVIEWS",
+ "review_scores": {
+  "totals_read_at": "2026-11-04T13:05:18+00:00",
+  "metacritic": {
+   "score": 96,
+   "reviews": 81,
+   "url": "https://www.metacritic.com/game/the-legend-of-zelda-ocarina-of-time-2026/"
+  },
+  "opencritic": {
+   "average": 96,
+   "recommended": 100,
+   "critics": 17,
+   "reviews": 30,
+   "url": "https://opencritic.com/game/21344/the-legend-of-zelda-ocarina-of-time"
+  },
+  "spread": [
+   {
+    "outlet": "IGN",
+    "score": "9/10",
+    "date": "2026-11-04",
+    "reviewer": "Logan Plant",
+    "url": "https://www.ign.com/articles/the-legend-of-zelda-ocarina-of-time-review-remake"
+   },
+   {
+    "outlet": "Eurogamer",
+    "score": "5/5",
+    "date": "2026-11-04",
+    "reviewer": "Christian Donlan",
+    "url": "https://www.eurogamer.net/the-legend-of-zelda-ocarina-of-time-remake-review"
+   },
+   {
+    "outlet": "Nintendo Life",
+    "score": "9/10",
+    "date": "2026-11-04",
+    "reviewer": "Oliver Reynolds",
+    "url": "https://www.nintendolife.com/reviews/nintendo-switch-2/the-legend-of-zelda-ocarina-of-time"
+   },
+   {
+    "outlet": "VGC",
+    "score": "5/5",
+    "date": "2026-11-04",
+    "reviewer": "Andy Robinson",
+    "url": "https://www.videogameschronicle.com/review/zelda-ocarina-of-time-remake-review/"
+   },
+   {
+    "outlet": "Saudi Gamer",
+    "score": "أسطورية",
+    "date": "2026-11-04",
+    "reviewer": "عصام الشهوان",
+    "url": "https://www.saudigamer.com/review/the-legend-of-zelda-ocarina-of-time/"
+   }
+  ],
+  "verdicts": [
+   {
+    "outlet": "Saudi Gamer",
+    "reviewer": "عصام الشهوان",
+    "score": "أسطورية",
+    "arabic_source": true,
+    "positive": {
+     "ar": "هذه تجربة ساحرة تنضح بالأفكار وبروح المغامرة"
+    },
+    "negative": {
+     "ar": "انخفاض الدقة يجعل الصورة أحيانًا غير ثابتة"
+    }
+   },
+   {
+    "outlet": "RPG Site",
+    "reviewer": "Scott White",
+    "score": "8/10",
+    "positive": {
+     "en": "quite possibly the most visually striking title on the Switch 2 platform yet",
+     "ar": "ربما اللعبة الأكثر إبهارًا بصريًا على Switch 2 حتى الآن"
+    },
+    "negative": {
+     "en": "WHY IS THERE ONLY A SINGLE SAVE SLOT?!",
+     "ar": "لماذا لا توجد سوى خانة حفظ واحدة؟!"
+    }
+   }
+  ]
+ },
+ "footage": [
+  {
+   "file": "ocarina-overview.mp4",
+   "url": "https://assets.nintendo.com/video/upload/store/software/switch2/70010000130792/Video/f08cd130c1feb8fd6c5f9445079e27c11f60fec66d8fcb4bcc748c66a1b94361.mp4"
+  }
+ ],
+ "gfx": [
+  {
+   "file": "ocarina-rs-gfx-spread-a.png",
+   "kind": "scores",
+   "title": "تقييمات المواقع",
+   "rows": [
+    {
+     "outlet": "آي جي إن (IGN)",
+     "score": "9/10",
+     "date": "في 4 نوفمبر"
+    },
+    {
+     "outlet": "يوروغيمر (Eurogamer)",
+     "score": "5/5",
+     "date": "في 4 نوفمبر"
+    },
+    {
+     "outlet": "نينتيندو لايف (Nintendo Life)",
+     "score": "9/10",
+     "date": "في 4 نوفمبر"
+    },
+    {
+     "outlet": "في جي سي (VGC)",
+     "score": "5/5",
+     "date": "في 4 نوفمبر"
+    },
+    {
+     "outlet": "سعودي جيمر (Saudi Gamer)",
+     "score": "أسطورية",
+     "date": "في 4 نوفمبر"
+    }
+   ],
+   "show": 3
+  },
+  {
+   "file": "ocarina-rs-gfx-spread-b.png",
+   "kind": "scores",
+   "title": "تقييمات المواقع",
+   "rows": [
+    {
+     "outlet": "آي جي إن (IGN)",
+     "score": "9/10",
+     "date": "في 4 نوفمبر"
+    },
+    {
+     "outlet": "يوروغيمر (Eurogamer)",
+     "score": "5/5",
+     "date": "في 4 نوفمبر"
+    },
+    {
+     "outlet": "نينتيندو لايف (Nintendo Life)",
+     "score": "9/10",
+     "date": "في 4 نوفمبر"
+    },
+    {
+     "outlet": "في جي سي (VGC)",
+     "score": "5/5",
+     "date": "في 4 نوفمبر"
+    },
+    {
+     "outlet": "سعودي جيمر (Saudi Gamer)",
+     "score": "أسطورية",
+     "date": "في 4 نوفمبر"
+    }
+   ]
+  },
+  {
+   "file": "ocarina-rs-gfx-high-a.png",
+   "kind": "verdict",
+   "outlet": "سعودي جيمر (Saudi Gamer)",
+   "reviewer": "بقلم عصام الشهوان",
+   "score": "أسطورية",
+   "score_note": "أعلى درجة في مقياس الموقع",
+   "positive": "هذه تجربة ساحرة تنضح بالأفكار وبروح المغامرة",
+   "negative": "انخفاض الدقة يجعل الصورة أحيانًا غير ثابتة",
+   "stage": 1
+  },
+  {
+   "file": "ocarina-rs-gfx-high-b.png",
+   "kind": "verdict",
+   "outlet": "سعودي جيمر (Saudi Gamer)",
+   "reviewer": "بقلم عصام الشهوان",
+   "score": "أسطورية",
+   "score_note": "أعلى درجة في مقياس الموقع",
+   "positive": "هذه تجربة ساحرة تنضح بالأفكار وبروح المغامرة",
+   "negative": "انخفاض الدقة يجعل الصورة أحيانًا غير ثابتة"
+  },
+  {
+   "file": "ocarina-rs-gfx-low-a.png",
+   "kind": "verdict",
+   "outlet": "آر بي جي سايت (RPG Site)",
+   "reviewer": "بقلم سكوت وايت (Scott White)",
+   "score": "8/10",
+   "score_note": "أدنى تقييم حتى الآن",
+   "positive": "ربما اللعبة الأكثر إبهارًا بصريًا\nعلى Switch 2 حتى الآن",
+   "negative": "لماذا لا توجد سوى خانة حفظ واحدة؟!",
+   "stage": 1
+  },
+  {
+   "file": "ocarina-rs-gfx-low-b.png",
+   "kind": "verdict",
+   "outlet": "آر بي جي سايت (RPG Site)",
+   "reviewer": "بقلم سكوت وايت (Scott White)",
+   "score": "8/10",
+   "score_note": "أدنى تقييم حتى الآن",
+   "positive": "ربما اللعبة الأكثر إبهارًا بصريًا\nعلى Switch 2 حتى الآن",
+   "negative": "لماذا لا توجد سوى خانة حفظ واحدة؟!"
+  },
+  {
+   "file": "ocarina-rs-gfx-totals-a.png",
+   "kind": "totals",
+   "metacritic": {
+    "score": 96,
+    "reviews": 81
+   },
+   "opencritic": {
+    "average": 96,
+    "recommended": 100,
+    "critics": 17
+   },
+   "read": "حتى الساعة 17:05 بتوقيت الإمارات\nيوم 4 نوفمبر",
+   "stage": 1
+  },
+  {
+   "file": "ocarina-rs-gfx-totals-b.png",
+   "kind": "totals",
+   "metacritic": {
+    "score": 96,
+    "reviews": 81
+   },
+   "opencritic": {
+    "average": 96,
+    "recommended": 100,
+    "critics": 17
+   },
+   "read": "حتى الساعة 17:05 بتوقيت الإمارات\nيوم 4 نوفمبر"
+  }
+ ],
+ "ground_footage": [
+  "ocarina-overview.mp4",
+  20.0
+ ],
+ "ground_theme": "playful",
+ "shots": [
+  [
+   "ocarina-overview.mp4",
+   72.0,
+   3.6,
+   0.47
+  ],
+  [
+   "ocarina-rs-gfx-spread-a.png",
+   [
+    "ocarina-overview.mp4",
+    20.0
+   ],
+   3.0,
+   null
+  ],
+  [
+   "ocarina-rs-gfx-spread-b.png",
+   [
+    "ocarina-overview.mp4",
+    23.0
+   ],
+   3.6,
+   null
+  ],
+  [
+   "ocarina-rs-gfx-high-a.png",
+   [
+    "ocarina-overview.mp4",
+    30.0
+   ],
+   2.6,
+   null
+  ],
+  [
+   "ocarina-rs-gfx-high-b.png",
+   [
+    "ocarina-overview.mp4",
+    32.6
+   ],
+   3.8,
+   null
+  ],
+  [
+   "ocarina-rs-gfx-low-a.png",
+   [
+    "ocarina-overview.mp4",
+    38.0
+   ],
+   2.6,
+   null
+  ],
+  [
+   "ocarina-rs-gfx-low-b.png",
+   [
+    "ocarina-overview.mp4",
+    40.6
+   ],
+   3.8,
+   null
+  ],
+  [
+   "ocarina-rs-gfx-totals-a.png",
+   [
+    "ocarina-overview.mp4",
+    60.0
+   ],
+   2.6,
+   null
+  ],
+  [
+   "ocarina-rs-gfx-totals-b.png",
+   [
+    "ocarina-overview.mp4",
+    62.6
+   ],
+   3.4,
+   null
+  ],
+  [
+   "ocarina-overview.mp4",
+   94.0,
+   3.8,
+   0.5
+  ]
+ ],
+ "lines": [
+  [
+   9,
+   9,
+   [
+    [
+     "إجماع النقاد قبل صدورها غدًا\nعلى Switch 2",
+     {
+      "size": 50
+     }
+    ]
+   ]
+  ]
+ ],
+ "headline": "متوسط النقاد 96\nلنسخة Ocarina",
+ "label": "التقييمات",
+ "source": "ميتاكريتيك وأوبن كريتيك",
+ "date": "4 Nov 2026",
+ "theme": "playful",
+ "style": "glow",
+ "template": "reviewscores",
+ "credits": [
+  [
+   0,
+   9,
+   "المصدر: نينتيندو (Nintendo)"
+  ]
+ ],
+ "track": null,
+ "lowres_ok": {
+  "searched": [
+   "Nintendo US store",
+   "IGN video page",
+   "Nintendo press site"
+  ],
+  "result": "the Overview trailer at 720p is the only official copy (as on the 3 Nov UK launch job)"
+ },
+ "pace_ok": false,
+ "skin": "house",
+ "sound": "neon_b"
+}
