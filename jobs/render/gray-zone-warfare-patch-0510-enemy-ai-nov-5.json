@@ -1,48 +1,86 @@
 {
  "name": "gray-zone-warfare-patch-0510-enemy-ai-nov-5",
- "out": "cards/2026-11/gray-zone-warfare-patch-0510-enemy-ai-nov-5-reel-v1.mp4",
+ "out": "cards/2026-11/gray-zone-warfare-patch-0510-enemy-ai-nov-5-reel-v2.mp4",
  "footage": [
   {
-   "file": "gzw-rundown.mp4",
-   "repo": "live/2026-11-05/gzw-rundown.mp4"
+   "file": "gz-s0.jpg",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2479810/2fa64e158672ee4026a37d5d4fd6029972225c00/ss_2fa64e158672ee4026a37d5d4fd6029972225c00.1920x1080.jpg?t=1793787050"
+  },
+  {
+   "file": "gz-s11.jpg",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2479810/f0a123797ade72ee83d8ab9a554b4517012444a3/ss_f0a123797ade72ee83d8ab9a554b4517012444a3.1920x1080.jpg?t=1793787050"
+  },
+  {
+   "file": "gz-s3.jpg",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2479810/76b7460537ef52f21ebd95faa2dd769e54c2cace/ss_76b7460537ef52f21ebd95faa2dd769e54c2cace.1920x1080.jpg?t=1793787050"
+  },
+  {
+   "file": "gz-s5.jpg",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2479810/8fa7f3adb3b7d0252f157e0c9322c9d25c9f3ec9/ss_8fa7f3adb3b7d0252f157e0c9322c9d25c9f3ec9.1920x1080.jpg?t=1793787050"
+  },
+  {
+   "file": "gz-s10.jpg",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2479810/8e058f615120bba63ad612870ab05297f7288e60/ss_8e058f615120bba63ad612870ab05297f7288e60.1920x1080.jpg?t=1793787050"
+  },
+  {
+   "file": "gz-s1.jpg",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2479810/5e7aa829f4b6374289fb5048bca4e1840f851dc5/ss_5e7aa829f4b6374289fb5048bca4e1840f851dc5.1920x1080.jpg?t=1793787050"
   }
  ],
  "shots": [
   [
-   "gzw-rundown.mp4",
-   1.2,
+   "gz-s0.jpg",
+   null,
    3.6,
-   null
+   [
+    0.5,
+    0.5
+   ]
   ],
   [
-   "gzw-rundown.mp4",
-   23.0,
-   3.6,
-   null
+   "gz-s11.jpg",
+   null,
+   4.0,
+   [
+    0.5,
+    0.55
+   ]
   ],
   [
-   "gzw-rundown.mp4",
-   43.0,
-   3.6,
-   null
+   "gz-s3.jpg",
+   null,
+   4.0,
+   [
+    0.55,
+    0.55
+   ]
   ],
   [
-   "gzw-rundown.mp4",
-   50.0,
-   3.6,
-   null
+   "gz-s5.jpg",
+   null,
+   4.0,
+   [
+    0.3,
+    0.5
+   ]
   ],
   [
-   "gzw-rundown.mp4",
-   65.4,
-   3.6,
-   null
+   "gz-s10.jpg",
+   null,
+   4.0,
+   [
+    0.55,
+    0.5
+   ]
   ],
   [
-   "gzw-rundown.mp4",
-   69.4,
-   3.4,
-   null
+   "gz-s1.jpg",
+   null,
+   4.0,
+   [
+    0.7,
+    0.5
+   ]
   ]
  ],
  "lines": [
@@ -104,22 +142,19 @@
  "date": "5 Nov 2026",
  "theme": "cold",
  "style": null,
- "template": "trailer",
+ "template": "stills",
  "skin": "house",
  "credits": [
   [
    0,
-   21.4,
+   23.6,
    "المصدر: ماد فينجر (MADFINGER Games)، Steam"
   ]
  ],
- "track": [
-  "gzw-rundown.mp4",
-  1.2
- ],
- "cut": true,
+ "track": null,
+ "cut": false,
  "person": [],
  "profile": null,
  "sound": null,
- "note": "Story type UPDATE (patch). Primary: MADFINGER Games Steam changelog Patch 0.5.1.0 (store.steampowered.com/news/app/2479810, gid 1848664643340628, 5 Nov 2026 ~14:18 Dubai): over 40 changes to AI perception, combat behaviour, movement and cover; sound gives only an approximate location, accuracy falls with distance; AI shares approximate location by shouting; moving slowly lowers footstep detection; enemies react to light and use flashlights; Hideout economy rebalance; fix for 'different game version' invite error. Footage: Steam Rundown Trailer (official), committed copy, decode checked. Illustration, not demonstration. Sensitive: none, no violence shown. genre: shooter."
+ "note": "v2: the Rundown trailer carried burnt-in text cards and smear flags through the chosen stretches, so this is built on six official Steam screenshots (store API, 1920x1080), no gore or bodies. Story type UPDATE (patch). Primary: MADFINGER Games Steam changelog Patch 0.5.1.0 (store.steampowered.com/news/app/2479810, gid 1848664643340628, 5 Nov 2026 ~14:18 Dubai): over 40 changes to AI perception, combat behaviour, movement and cover; sound gives only an approximate location, accuracy falls with distance; AI shares approximate location by shouting; moving slowly lowers footstep detection; enemies react to light and use flashlights; Hideout economy rebalance; fix for 'different game version' invite error. Footage: Steam Rundown Trailer (official), committed copy, decode checked. Illustration, not demonstration. Sensitive: none, no violence shown. genre: shooter."
 }
