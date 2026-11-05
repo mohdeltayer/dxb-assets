@@ -77,6 +77,7 @@ jobs:
             .github/actions
             templates
             jobs
+            newsroom/stories
           clean: true
       - name: Claim (stand down when GitHub already took this render)
         id: claim
@@ -106,6 +107,7 @@ jobs:
             .github/actions
             templates
             jobs
+            newsroom/stories
       - name: Standby (on lane server, wait 25 s for the server to start)
         id: standby
         env:

@@ -99,7 +99,7 @@ class Passes(unittest.TestCase):
             p2 = self.run_tick(d, now='2026-11-01T12:01:00Z')
             self.assertEqual(p2.stdout.count('alarm:'), 0, p2.stdout)           # same rungs: no second alarm
             with open(os.path.join(d, 'status.txt'), encoding='utf-8') as f:
-                self.assertEqual(len(f.read().splitlines()), 7)
+                self.assertEqual(len(f.read().splitlines()), 8)   # the line, the six, and the bank line (5 Nov)
 
     def test_next_rung_alarms_again(self):
         with tempfile.TemporaryDirectory() as d:

@@ -353,6 +353,29 @@ def write(path, text):
     os.replace(tmp, path)
 
 
+BANK_MIN = 3
+
+
+def bank_line(commitments_path):
+    """Finished, undated Reels in the evergreen bank (newsroom/evergreen.md, first table, Status starting 'ready').
+    Under BANK_MIN is an at-risk line (adv-20261105-p2-audit-fixes, item 5). Returns (count or None, line)."""
+    path = os.path.join(os.path.dirname(os.path.abspath(commitments_path)), 'evergreen.md')
+    try:
+        with open(path, encoding='utf-8') as f:
+            text = f.read()
+    except OSError:
+        return None, 'bank: not read (no newsroom/evergreen.md)'
+    table = text.split('\n## ', 1)[0]
+    n = 0
+    for row in table.splitlines():
+        cells = [c.strip() for c in row.strip().strip('|').split('|')]
+        if len(cells) >= 5 and cells[-1].lower().startswith('ready'):
+            n += 1
+    if n < BANK_MIN:
+        return n, 'bank: at risk, %d ready Reels (minimum %d)' % (n, BANK_MIN)
+    return n, 'bank: %d ready Reels' % n
+
+
 def rows_of(commitments):
     rows = commitments.get('rows') if isinstance(commitments, dict) else commitments
     return [r for r in (rows or []) if isinstance(r, dict)]
@@ -379,6 +402,8 @@ def cmd_tick(args):
     else:
         status = summarise(rows_of(commitments), now, mode)
         raised, alog = raise_alarms(status, state, now)
+        status['bank_ready'], bl = bank_line(args.commitments)
+        status['six'].append(bl)
     digest = hashlib.sha256(json.dumps(commitments, sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:12] \
         if commitments is not None else None
     status['commitments_sha'] = digest
@@ -417,6 +442,7 @@ def cmd_line(args):
 def cmd_show(args):
     now = parse_time(args.now) if args.now else datetime.now(timezone.utc)
     s = summarise(rows_of(load_json(args.commitments, {})), now, os.environ.get('KEEPER_MODE', 'alarm-only'))
+    s['six'].append(bank_line(args.commitments)[1])
     print(s['line'])
     for l in s['six']:
         print('  ' + l)
