@@ -38,16 +38,19 @@ Add `notes` or `.claude` only when needed. One old file: `git show <rev>:<path>`
    secondary), `footage` (stills: why, and the footage sources tried), `lane`, `beat`; then
    `python3 newsroom/ledger.py find <words> --record <story id>` and the Publer list for the last 7 days.
 2. Gate: primary read, chip on the ladder, `gate HH:MMZ` in the story file.
-3. Job file with `"story"`, `"render_lane": "server"` (default) and `"reel_check"` filled from reel-check.md;
+3. Job file with `"story"`, `"render_lane": "server"` (default), `"reel_check"` filled from reel-check.md and a
+   `"decision_log"` (per beat: shot and alternatives, crop, music and why); a stills Reel also needs `"stills_reason":
+   {"why": sales|business|people|delay|outage|no_footage, "tried": [sources]}`. Keep a local copy of the job.
    `python3 templates/buildgate.py <job>` then `python3 templates/render_job.py check <job>`.
 4. Render on the server: the job in `jobs/live/<name>.json`, then workflow_dispatch `render-live.yml` with input `job`.
    GitHub's runner only with `"render_lane": "hosted"` and a `"lane_reason"`: the job in `jobs/render/` (render.yml,
    input `job`; a run with no job named is refused). Breaking: `render-breaking.yml` with `job` and `lane`.
    Done when `cards/YYYY-MM/<name>-reel-vN-publer.json` lands on main with the mp4, strip, sheet and dense.
 5. Director check on the strip, dense and sheet (Director card, delegation.md), then
-   `python3 templates/presubmit.py director <story> PASS <out.mp4>`.
+   `python3 templates/presubmit.py director <story> PASS <out.mp4> --job <your copy of the job>` (the gate runs again
+   on the job; its "out" must be this file).
 6. Per platform: `presubmit.py intent <commitment> <platform> <story> <out.mp4>` (refuses without a director PASS
-   for this exact file, and refuses a second submit), then `submit_publer_posts`, then `presubmit.py result ...
+   with a passed checklist for this exact file, and refuses a second submit), then `submit_publer_posts`, then `presubmit.py result ...
    scheduled|failed`. A failed or timed-out submit: look the post up in Publer before anything else.
 7. Records: the `newsroom/commitments.json` row, `python3 templates/formats.py add`; after publishing,
    `presubmit.py published <commitment> <story> --links <ig> <x> <threads> --queue <dxb-queue clone>` (story file,

@@ -16,6 +16,12 @@ A job must carry:
                  "hosted" (GitHub's runner through jobs/render/ and render.yml) with "lane_reason"
   "reel_check":  newsroom/reel-check.md filled in, at least MIN_LINES answers, none of them "no": either a list of
                  {"line", "answer": "yes" | "n/a", "evidence"} or a dict {line: "yes: evidence" | "n/a: why"}
+  "stills_reason": only for a stills job (template "stills", or every picture shot an image; adv-20261102-reel-checklist,
+                 addendum of 3 Nov: footage first). {"why": one of STILLS_WHY, "tried": [the footage sources looked at]};
+                 "tried" may be empty only for sales, business, people, delay or outage stories.
+
+Report only (printed, never a refusal): a job without "decision_log" (adv-20261102-borrow-openmontage, part 2: per beat
+the shot chosen and the alternatives, the crop decision, the music and why). The director reads it.
 
 Jobs under jobs/test/ (examples and test renders) are not gated. There is no switch to turn the gate off.
 
@@ -32,14 +38,20 @@ MIN_LINES = 8
 STORY_FIELDS = ('first_report', 'source_type', 'footage', 'lane', 'beat')
 SERVER_DIRS = ('jobs/live/', 'jobs/breaking/', 'jobs/prerender/')
 HOSTED_DIRS = ('jobs/render/', 'jobs/breaking/', 'jobs/prerender/')
+STILL = ('.jpg', '.jpeg', '.png', '.webp')          # reel.STILL
+STILLS_WHY = ('sales', 'business', 'people', 'delay', 'outage', 'no_footage')
+STILLS_FREE = ('sales', 'business', 'people', 'delay', 'outage')   # no footage search needed (reel-check.md PICTURE)
+CARD_LED = ('storybeat', 'numbers', 'list', 'retro', 'edition', 'reviewscores', 'explainer', 'quote')  # our graphics or declared
 
 
 def _rel(path):
     p = pathlib.Path(path).resolve()
     try:
         return p.relative_to(REPO).as_posix()
-    except ValueError:
-        return str(path).replace(os.sep, '/').lstrip('./')
+    except ValueError:                       # another clone or a scratch copy: keep the part from jobs/ on
+        s = p.as_posix()
+        i = s.rfind('/jobs/')
+        return s[i + 1:] if i >= 0 else str(path).replace(os.sep, '/').lstrip('./')
 
 
 def _answers(rc):
@@ -53,6 +65,38 @@ def _answers(rc):
                 yield str(item.get('answer', '')), str(item.get('line', '?'))
             else:
                 yield str(item), '?'
+
+
+def is_stills_job(job):
+    """True when the Reel's picture is stills: template "stills", or every non-graphics shot is an image."""
+    if job.get('template') == 'stills':
+        return True
+    if job.get('template') in CARD_LED or job.get('kind') in ('famitsu', 'breaking'):
+        return False
+    pics = [sh[0] for sh in job.get('shots') or []
+            if isinstance(sh, (list, tuple)) and sh and isinstance(sh[0], str) and '-gfx-' not in sh[0]]
+    return bool(pics) and all(os.path.splitext(f)[1].lower() in STILL for f in pics)
+
+
+def stills_problems(job):
+    if not is_stills_job(job):
+        return []
+    r = job.get('stills_reason')
+    if not isinstance(r, dict) or r.get('why') not in STILLS_WHY:
+        return ['stills job: footage first. Add "stills_reason": {"why": ' + ' | '.join(STILLS_WHY) +
+                ', "tried": [footage sources looked at]} or use official footage']
+    if r['why'] not in STILLS_FREE and not [t for t in r.get('tried') or [] if str(t).strip()]:
+        return ['stills job with why "no_footage": list the footage sources tried in "stills_reason": {"tried": [...]}']
+    return []
+
+
+def notes(job):
+    """Report-only lines (never refusals)."""
+    out = []
+    if not job.get('decision_log'):
+        out.append('no "decision_log" (per beat: shot and alternatives, crop decision, music and why); the director '
+                   'reads it (adv-20261102-borrow-openmontage); report only')
+    return out
 
 
 def problems(path, job):
@@ -100,6 +144,8 @@ def problems(path, job):
             if fo.startswith('stills') and len(fo) < 20:
                 out.append('story file: stills need the reason and the footage sources tried')
 
+    out += stills_problems(job)
+
     rc = job.get('reel_check')
     if not rc:
         out.append('reel_check missing: fill newsroom/reel-check.md into the job as "reel_check"')
@@ -122,6 +168,8 @@ def enforce(path, job):
         raise SystemExit('build gate refused ' + _rel(path) + ':\n  - ' + '\n  - '.join(p))
     if not _rel(path).startswith('jobs/test/'):
         print(f'build gate: ok ({job.get("render_lane")} lane, story {job.get("story")})', flush=True)
+        for n in notes(job):
+            print('build gate note:', n, flush=True)
 
 
 if __name__ == '__main__':
@@ -134,4 +182,6 @@ if __name__ == '__main__':
         print('refused:', line)
     if not p:
         print('build gate: ok')
+        for n in notes(job):
+            print('note:', n)
     sys.exit(1 if p else 0)

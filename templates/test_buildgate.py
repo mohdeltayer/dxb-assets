@@ -73,3 +73,25 @@ class Gate(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class Stills(unittest.TestCase):
+    def test_detection(self):
+        self.assertTrue(BG.is_stills_job({'template': 'stills'}))
+        self.assertTrue(BG.is_stills_job({'shots': [['a.jpg', 0, 3, None], ['card-gfx-1.png', 0, 2, None]]}))
+        self.assertFalse(BG.is_stills_job({'shots': [['a.jpg', 0, 3, None], ['t.mp4', 1, 3, None]]}))
+        self.assertFalse(BG.is_stills_job({'template': 'storybeat', 'shots': [['p.png', 0, 3, None]]}))
+        self.assertFalse(BG.is_stills_job({'kind': 'famitsu'}))
+
+    def test_reason_rules(self):
+        j = {'template': 'stills'}
+        self.assertTrue(BG.stills_problems(j))
+        self.assertEqual(BG.stills_problems(dict(j, stills_reason={'why': 'sales', 'tried': []})), [])
+        self.assertTrue(BG.stills_problems(dict(j, stills_reason={'why': 'no_footage', 'tried': []})))
+        self.assertEqual(BG.stills_problems(dict(j, stills_reason={'why': 'no_footage',
+                                                                  'tried': ['Steam app 1: no trailer']})), [])
+        self.assertTrue(BG.stills_problems(dict(j, stills_reason={'why': 'looks nice'})))
+
+    def test_decision_log_is_report_only(self):
+        self.assertTrue(BG.notes({}))
+        self.assertEqual(BG.notes({'decision_log': [{'beat': 1}]}), [])

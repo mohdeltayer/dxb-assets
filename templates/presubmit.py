@@ -6,14 +6,19 @@ code cannot stand in front of it; this script is the step the session runs aroun
 instead of letting a skipped step through. The file a check passed is bound by its git blob id: any re-render
 changes the id and the director check must be run again.
 
-    python3 templates/presubmit.py director <story> PASS <out.mp4> [--note "..."]   # after the director check
+    python3 templates/presubmit.py director <story> PASS <out.mp4> --job <job.json> [--note "..."]   # after the director check
     python3 templates/presubmit.py intent <commitment> <platform> <story> <out.mp4>    # before submit_publer_posts
     python3 templates/presubmit.py result <commitment> <platform> scheduled|failed     # after the submit returns
     python3 templates/presubmit.py published <commitment> <story> --links <ig> <x> <threads> [--queue <dxb-queue clone>]
     python3 templates/presubmit.py show <commitment>
 
+director PASS needs --job: the job file that rendered this Reel (the local copy the build wrote; the render removes it
+from main). Its "out" must be this file and the build gate (templates/buildgate.py: story, lane, reel_check with no
+"no", stills reason) must pass; the result is recorded with the job's sha256 (adv-20261102-reel-checklist point 3).
+
 intent refuses (exit 1) when:
   - the story has no director PASS for exactly this file (its blob id on origin/main),
+  - that PASS carries no passed checklist (reel_check) from the job that made the file,
   - the same commitment and platform already have an intent that is not marked failed: look the post up in Publer
     (list_publer_posts by caption) first; never submit it again.
 published writes the story's `published` block, one line in newsroom/published.jsonl and, with --queue, the
@@ -22,6 +27,7 @@ newsroom/submissions.jsonl: commit it with the story file after each step.
 Platforms: instagram, x, threads.
 """
 import datetime
+import hashlib
 import json
 import pathlib
 import subprocess
@@ -72,11 +78,31 @@ def last_state(commitment, platform):
     return rows[-1] if rows else None
 
 
-def director(sid, verdict, out, note=''):
+def checklist(job_path, out):
+    """The job's checklist verdict: {'job', 'sha256', 'ok', 'problems'} (build gate on the job that made `out`)."""
+    sys.path.insert(0, str(REPO / 'templates'))
+    import buildgate
+    raw = pathlib.Path(job_path).read_bytes()
+    job = json.loads(raw)
+    probs = buildgate.problems(job_path, job)
+    if job.get('out') and job['out'] != out:
+        probs.append(f'job "out" is {job["out"]}, not {out}')
+    return {'job': buildgate._rel(job_path), 'sha256': hashlib.sha256(raw).hexdigest(), 'ok': not probs,
+            'problems': probs}
+
+
+def director(sid, verdict, out, note='', job=None):
     if verdict not in ('PASS', 'FIX'):
         raise SystemExit('presubmit: verdict is PASS or FIX')
     f, s = story(sid)
-    s['director_check'] = {'verdict': verdict, 'out': out, 'blob': blob(out), 'at': now(), 'note': note}
+    cl = checklist(job, out) if job else None
+    if verdict == 'PASS':
+        if not cl:
+            raise SystemExit('presubmit: director PASS needs --job <the job file that rendered it> (its reel_check)')
+        if not cl['ok']:
+            raise SystemExit('presubmit refused: the job does not pass the build gate:\n  - ' + '\n  - '.join(cl['problems']))
+    s['director_check'] = {'verdict': verdict, 'out': out, 'blob': blob(out), 'at': now(), 'note': note,
+                           'checklist': cl}
     f.write_text(json.dumps(s, ensure_ascii=False, indent=1) + '\n')
     print(f'director {verdict} recorded for {out} ({s["director_check"]["blob"][:10]})')
 
@@ -89,7 +115,10 @@ def intent(commitment, platform, sid, out):
     b = blob(out)
     if d.get('verdict') != 'PASS' or d.get('blob') != b:
         raise SystemExit(f'presubmit refused: no director PASS for this file ({out}, {b[:10]}); '
-                         f'run the director check, then presubmit.py director {sid} PASS {out}')
+                         f'run the director check, then presubmit.py director {sid} PASS {out} --job <job>')
+    if not (d.get('checklist') or {}).get('ok'):
+        raise SystemExit(f'presubmit refused: the director PASS for {out} carries no passed checklist; '
+                         f'record it again with --job <job file> (reel_check, story, lane)')
     prev = last_state(commitment, platform)
     if prev and prev.get('state') != 'failed':
         raise SystemExit(f'presubmit refused: {commitment} on {platform} already has a submit ({prev.get("state")} '
@@ -146,7 +175,8 @@ if __name__ == '__main__':
     cmd = a[0]
     if cmd == 'director' and len(a) >= 4:
         note = a[a.index('--note') + 1] if '--note' in a else ''
-        director(a[1], a[2], a[3], note)
+        jobp = a[a.index('--job') + 1] if '--job' in a else None
+        director(a[1], a[2], a[3], note, jobp)
     elif cmd == 'intent' and len(a) == 5:
         intent(*a[1:5])
     elif cmd == 'result' and len(a) == 4:
