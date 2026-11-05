@@ -13,8 +13,8 @@ PY=${DISPATCH_PYTHON:-python3}
 
 export DISPATCH_HOME=$TMP/home DISPATCH_NTFY=off DISPATCH_MIRROR_FILE=$TMP/mirror.json
 export DISPATCH_EVIDENCE_FILE=$TMP/ev.json DISPATCH_TOKEN_FILE=$TMP/token DISPATCH_TOPIC_FILE=$TMP/topic
-SECRET_TOKEN=ghp_TESTSECRETabcdef0123456789
-SECRET_TOPIC=testtopicsecretxyz987
+SECRET_TOKEN=ghp_TESTSECRETabcdef0123456789  # gitleaks:allow (fake value: the test checks it never leaks)
+SECRET_TOPIC=testtopicsecretxyz987  # gitleaks:allow
 printf '%s\n' "$SECRET_TOKEN" >"$TMP/token"
 printf '%s\n' "$SECRET_TOPIC" >"$TMP/topic"
 

@@ -11,6 +11,8 @@ Raw file, no clone: `https://raw.githubusercontent.com/mohdeltayer/dxb-assets/ma
 - `newsroom/delegation.md`: "Task cards" (Director, Footage, Render lanes, Publer post, Pre-publish gate),
   "Promises first", "Full-frame check", "Hourly watch and the breaking lane"
 - dxb-queue branch `desk`, `desk/board.md` (first and last thing every run)
+- Cards (from the cards-in-git cutover, see the board): dxb-queue branch `main`, `cards/index.json` at the start of every
+  run and `cards/<id>.json` when acting on one; write status with `python3 ops/cards.py set <id> progress="..."` (dxb-queue)
 
 ## 2. Files without a full clone
 ```
