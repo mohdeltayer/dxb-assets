@@ -21794,5 +21794,53 @@
   "peak_tmp_mb": 2287,
   "setup_min": 1.4,
   "story": "bioware-petition-canada-house-of-commons-nov-5"
+ },
+ {
+  "name": "bioware-petition-canada-house-of-commons-nov-5-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-05T03:40Z",
+  "stages": {
+   "checks": 2.7,
+   "montage": 24.0,
+   "text": 30.2,
+   "audio": 0.8,
+   "outro": 31.9
+  },
+  "total": 89.6,
+  "lane": "runner",
+  "queued_at": "2026-11-05T03:37:11Z",
+  "finished_at": "2026-11-05T03:40Z",
+  "render_min": 1.49,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 5.8,
+   "audio_secs": 15.5,
+   "music_pct": 26.9,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "reason": "music only 26.9% of the track (< 40.0%)",
+   "secs": 9.4
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 166,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1290,
+  "peak_mem_mb": 2938,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60980,
+  "peak_disk_mb": 63243,
+  "min_disk_free_mb": 84553,
+  "setup_min": 1.15,
+  "story": "bioware-petition-canada-house-of-commons-nov-5"
  }
 ]
