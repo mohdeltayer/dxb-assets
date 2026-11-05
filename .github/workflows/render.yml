@@ -17,7 +17,7 @@ on:
   workflow_dispatch:
     inputs:
       job:
-        description: 'One job file (jobs/render/<name>.json); empty renders every file there'
+        description: 'One job file (jobs/render/<name>.json); required: a run with no job named refuses to start'
         required: false
         default: ''
       retry:
@@ -47,7 +47,10 @@ jobs:
             git fetch -q --depth=1 --filter=blob:none origin "$BEFORE"
             files=$(git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- 'jobs/render/*.json')
           else
-            files=$(ls jobs/render/*.json 2>/dev/null || true)
+            # No job named (a dispatch with an empty job, or a push with no previous commit to compare): refuse,
+            # never render the whole folder (Mohammad, 5 Nov 2026, after an unposted stills draft sat in jobs/render).
+            echo "::error::No job named. Run again with job=jobs/render/<name>.json; this workflow never renders the whole folder."
+            exit 1
           fi
           echo "jobs=$(printf '%s\n' $files | python3 -c 'import json,sys; print(json.dumps([l.strip() for l in sys.stdin if l.strip()]))')" >> "$GITHUB_OUTPUT"
 
