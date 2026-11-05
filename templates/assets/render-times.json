@@ -21842,5 +21842,54 @@
   "min_disk_free_mb": 84553,
   "setup_min": 1.15,
   "story": "bioware-petition-canada-house-of-commons-nov-5"
+ },
+ {
+  "name": "ocarina-of-time-switch-2-out-now-nov-5-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-05T04:41Z",
+  "stages": {
+   "checks": 2.9,
+   "montage": 19.6,
+   "text": 23.0,
+   "audio": 0.7,
+   "outro": 30.3
+  },
+  "total": 76.5,
+  "lane": "runner",
+  "queued_at": "2026-11-05T04:38:26Z",
+  "finished_at": "2026-11-05T04:41Z",
+  "render_min": 1.27,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 4.3,
+   "audio_secs": 15.8,
+   "music_pct": 99.4,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 6,
+   "mix_secs": 3.0,
+   "secs": 7.6
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 147,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1379,
+  "peak_mem_mb": 3058,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60705,
+  "peak_disk_mb": 62503,
+  "min_disk_free_mb": 85293,
+  "setup_min": 1.08,
+  "story": "ocarina-of-time-switch-2-out-now-nov-5"
  }
 ]
