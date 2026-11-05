@@ -38,6 +38,8 @@ Add `notes` or `.claude` only when needed. One old file: `git show <rev>:<path>`
    secondary), `footage` (stills: why, and the footage sources tried), `lane`, `beat`; then
    `python3 newsroom/ledger.py find <words> --record <story id>` and the Publer list for the last 7 days.
    Read the backstory pages it touches: `python3 newsroom/context.py match <story id>` (newsroom/context/).
+   What is new: `python3 newsroom/whatsnew.py packet <story id>` (primary text kept local, summary into the story file;
+   needs `python3 -m pip install trafilatura==2.3.1 dateparser==1.5.0`). Write the angle from its "new" sentences.
 2. Gate: primary read, chip on the ladder, `gate HH:MMZ` in the story file.
 3. Job file with `"story"`, `"render_lane": "server"` (default), `"reel_check"` filled from reel-check.md and a
    `"decision_log"` (per beat: shot and alternatives, crop, music and why); a stills Reel also needs `"stills_reason":
