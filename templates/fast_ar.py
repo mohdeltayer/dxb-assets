@@ -57,6 +57,10 @@ PICKS = ('عاجل', 'جديد', 'رسمي', 'تقرير', 'تسريب', 'شائ
 ALTERNATIVES = ('الآن', 'وصل للتو', 'حسب تقارير', 'إشاعة', 'أول نظرة',
                 'متاح الآن', 'صدر', 'مؤجل', 'سعر', 'تجربة')
 
+#: Card-lane chips (CLAUDE.md, 26 Sep 2026), for reference: not enforced by fast_ar. التقييمات is the review-scores chip
+#: (adv-20261104-review-scores-template, 4 Nov 2026: the studio picked التقييمات over مراجعات, the card set's agreed pick).
+CARD_PICKS = ('نظرة أولى', 'رأي', 'حوار', 'تحليل', 'أرقام', 'إنجاز', 'التقييمات', 'تحديث', 'فعالية', 'ملخص', 'مقارنة')
+
 #: A regional story names its country, never "the Gulf".
 COUNTRIES = ('الإمارات', 'السعودية', 'قطر', 'الكويت', 'البحرين', 'عُمان',
              'مصر', 'الأردن', 'المغرب', 'العراق', 'لبنان', 'تونس', 'الجزائر',
