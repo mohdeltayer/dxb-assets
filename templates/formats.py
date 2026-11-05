@@ -25,6 +25,7 @@ FORMATS = {
     'edition':   'special and collector\'s editions, bundles, limited consoles, accessories, tier contents: trailer hook, each item as a press-render cut-out drifting onto the living ground, one composition frame with the price strip, footage close (edition.py, 14 Oct 2026)',
     'stills':    'three or four official images filling 9:16, cut not panned (subject cut-outs on a parallax ground where the art allows, else a 2 to 4% push-in), hard cuts on the bed, 3 s each, 12 to 14 s, four lines, neighbouring images differ in kind; the last resort after every motion source (reel.stills_clips, advisor 14 Oct 2026)',
     'storybeat': 'a series episode told in short beats: key art cover with a two-word title, one official picture card per phrase over the blurred key art, one large word alone for the emotional beat, a word-by-word reveal for the twist, 4 to 6 s of full-screen footage with no text at the climax, ending on the opening line so it loops; our bed (storybeat.py builds the picture track; advisor card adv-20261027-road-to-ocarina, 27 Oct 2026)',
+    'reviewscores': "review scores for one game (adv-20261104-review-scores-template, 4 Nov 2026): hook on the critics' number over the game's footage, the spread card (4 to 6 outlets, each on its own scale with its date), one high and one low verdict card (score, one liked and one disliked line, attributed, 15 words at most), the Metacritic and OpenCritic totals with the time they were read (templates/reviewscores.py fetches them; never typed by hand), a footage payoff; cards over the game's own moving footage (ground_footage), chip التقييمات",
     'list':      'N items at 2 to 2.5 s each on their own art, rank or date on a small plate, progress cue n/N, one line per item at most, mosaic cover, closing frame of all tiles: Game Pass waves, leaving-soon, line-ups, awards, top fives, show recaps, weekly releases (advisor 14 Oct 2026)',
 }
 #: `tribute` is a variant of stills (reel(..., tribute=True)): cold, wave lines off, no chip, name and dates as the headline, lines
@@ -59,6 +60,7 @@ OPENERS = {
     'edition':    'the hero item: the trailer hook with the headline, then the hero cut-out first and largest',
     'stills':     'the strongest image, already pushing in, the headline over it; the first cut lands with the first line',
     'list':       'the mosaic of every item, the count in the headline; item 1 on the first cut',
+    'reviewscores': "the game's strongest moving shot with the critics' number in the headline (the highest or lowest score, or the average); never a question first (hook rule, 24 Oct)",
     'storybeat':  'the key art full screen with the two-word title and the series badge',
 }
 
@@ -70,7 +72,7 @@ def opener(fmt):
 # figures or a portrait on screen. Besides "no third in a row", card-led Reels are at most one in three over the last six.
 FAMILIES = {
     'footage': ('trailer', 'split', 'clipcard', 'handson', 'stills'),
-    'card':    ('numbers', 'explainer', 'quote', 'retro', 'edition', 'list'),
+    'card':    ('numbers', 'explainer', 'quote', 'retro', 'edition', 'list', 'reviewscores'),
 }
 FAMILY = {fmt: fam for fam, fmts in FAMILIES.items() for fmt in fmts}
 FAMILY['comparison'] = 'footage'   # two labelled states of the footage or store screens, hard cuts
@@ -99,7 +101,7 @@ NEWS_MAP = {
     'preorder':      ['split'],
     'free':          ['split'],                       # free weekends, giveaways, free-to-play switches
     'shutdown':      ['split', 'explainer'],
-    'reviews':       ['clipcard', 'numbers'],
+    'reviews':       ['reviewscores', 'clipcard', 'numbers'],   # review-scores template first (adv-20261104-review-scores-template)
     'awards':        ['list'],
     'esports':       ['split', 'numbers'],
     'controversy':   ['quote', 'clipcard'],
