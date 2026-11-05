@@ -1,0 +1,327 @@
+{
+ "updated": "2026-11-05",
+ "card": "adv-20261104-desk-manifest",
+ "preflight_standard": "disk (under 5 GB: clean first; under 2 GB: alarm on the board and stop); repo at origin/main; board readable; then the started line",
+ "rule": "A change to a desk's duties is made here first, by an approved card. A desk that moves accounts is not done until the desk audit passes for it.",
+ "desks": [
+  {
+   "id": "newsroom",
+   "name": "Production 2 newsroom",
+   "account": "Production 2",
+   "duties": [
+    "posting lane (build, schedule, publish)",
+    "hourly watch",
+    "review preps 06:30, 10:00, 14:00, 17:30 Dubai"
+   ],
+   "tasks": [
+    {
+     "name": "hourly watch",
+     "schedule": "hourly at :07 Dubai",
+     "session": "fresh",
+     "auto_approve": true,
+     "started_id": null,
+     "evidence": "newsroom/helper-runs.jsonl line within 90 minutes",
+     "max_gap_min": 90
+    },
+    {
+     "name": "review prep 06:30",
+     "schedule": "05:55 Dubai",
+     "session": "fresh",
+     "auto_approve": true,
+     "started_id": null,
+     "evidence": "shortlist card or board line by 06:30"
+    },
+    {
+     "name": "review prep 10:00",
+     "schedule": "09:25 Dubai",
+     "session": "fresh",
+     "auto_approve": true,
+     "started_id": null,
+     "evidence": "shortlist card or board line by 10:00"
+    },
+    {
+     "name": "review prep 14:00",
+     "schedule": "13:25 Dubai",
+     "session": "fresh",
+     "auto_approve": true,
+     "started_id": null,
+     "evidence": "shortlist card or board line by 14:00"
+    },
+    {
+     "name": "review prep 17:30",
+     "schedule": "16:55 Dubai",
+     "session": "fresh",
+     "auto_approve": true,
+     "started_id": null,
+     "evidence": "shortlist card or board line by 17:30"
+    }
+   ],
+   "housekeeping": [
+    {
+     "name": "disk cleanup",
+     "status": "MISSING",
+     "note": "never carried over when posting moved to Production 2 (its disk filled overnight 3 to 4 Nov); Production 2 to add a daily task running newsroom/disk_cleanup.sh, or a preflight clean in every fresh task"
+    }
+   ],
+   "preflight": "disk (under 5 GB: clean first; under 2 GB: alarm on the board and stop); repo at origin/main; board readable; then the started line; Publer answers (list_publer_posts)",
+   "alarms": [
+    "keeper: 90 minutes without a Production 2 watch run (planned, build night 5 to 6 Nov)",
+    "gap alarm: formats.py gaps 2 in every watch"
+   ],
+   "reads_each_run": [
+    "dxb-queue desk/board.md",
+    "CLAUDE.md",
+    "STYLE.md",
+    "newsroom/delegation.md",
+    "newsroom/editorial-memory.md (story type)",
+    "newsroom/commitments.json"
+   ],
+   "gaps": [
+    "task names, schedules and approval mode not visible from Production 1; Production 2 to confirm its rows here"
+   ]
+  },
+  {
+   "id": "studio",
+   "name": "Production 1 studio",
+   "account": "Production 1",
+   "duties": [
+    "templates, themes, series specs on a branch, on Mohammad's request",
+    "live builds only on his direct order"
+   ],
+   "tasks": [],
+   "housekeeping": [
+    {
+     "name": "disk cleanup",
+     "status": "retired 3 Nov (Mohammad)",
+     "note": "sessions are fresh or slim clones; the morning digest and build preflight clean when under 5 GB"
+    }
+   ],
+   "preflight": "disk (under 5 GB: clean first; under 2 GB: alarm on the board and stop); repo at origin/main; board readable; then the started line",
+   "alarms": [],
+   "reads_each_run": [
+    "dxb-queue desk/board.md",
+    "CLAUDE.md",
+    "STYLE.md"
+   ]
+  },
+  {
+   "id": "build",
+   "name": "Build desk",
+   "account": "Production 1",
+   "duties": [
+    "nightly build 01:07 to 03:45 Dubai, release 04:00",
+    "BUILD.md gate"
+   ],
+   "tasks": [
+    {
+     "name": "Build desk nightly (fresh)",
+     "schedule": "01:07 Dubai daily",
+     "session": "fresh",
+     "auto_approve": true,
+     "started_id": "build-{date}-started",
+     "due": "01:20",
+     "status": "FAILING: fired 3, 4 and 5 Nov, ended after 39 to 67 s with no started line"
+    },
+    {
+     "name": "Build desk nightly (01:07 Dubai)",
+     "schedule": "01:07 Dubai daily",
+     "session": "bound",
+     "auto_approve": true,
+     "started_id": "build-{date}-started",
+     "due": "01:20",
+     "status": "fallback; did the work on 5 Nov; stays on until the fresh task writes its own line"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "release note",
+     "path": "ops/build/releases/YYYY-MM-DD.md",
+     "due": "04:15"
+    }
+   ],
+   "housekeeping": [
+    {
+     "name": "disk",
+     "status": "preflight clean under 5 GB"
+    }
+   ],
+   "preflight": "disk (under 5 GB: clean first; under 2 GB: alarm on the board and stop); repo at origin/main; board readable; then the started line; dxb-render-1 reachable (last self-hosted run); no render running",
+   "alarms": [
+    "keeper: 01:20 Dubai no started line (planned, 5 to 6 Nov)",
+    "keeper: 04:15 Dubai no release note (planned)"
+   ],
+   "reads_each_run": [
+    "BUILD.md",
+    "dxb-queue desk/board.md",
+    "desk/build-queue.md",
+    "ops/build/backlog.md",
+    "ops/build/releases/ (newest)"
+   ]
+  },
+  {
+   "id": "digest",
+   "name": "Morning digest",
+   "account": "Production 1",
+   "duties": [
+    "Inbox card prod-YYYYMMDD-morning-digest by 07:30 Dubai",
+    "desk audit line at its top (from ops/desk_audit.py)"
+   ],
+   "tasks": [
+    {
+     "name": "Morning digest (fresh)",
+     "schedule": "07:12 Dubai daily",
+     "session": "fresh",
+     "auto_approve": true,
+     "started_id": "digest-{date}-started",
+     "due": "07:20",
+     "status": "FAILING: 4 Nov ran 39 s with no started line; the bound task posted the card"
+    },
+    {
+     "name": "Morning digest for Mohammad (07:30 Dubai)",
+     "schedule": "07:12 Dubai daily",
+     "session": "bound",
+     "auto_approve": true,
+     "started_id": "digest-{date}-started",
+     "due": "07:30",
+     "status": "fallback"
+    }
+   ],
+   "housekeeping": [],
+   "preflight": "disk (under 5 GB: clean first; under 2 GB: alarm on the board and stop); repo at origin/main; board readable; then the started line; Publer answers; Inbox reads",
+   "alarms": [
+    "none yet: the desk audit reports a missing card at 07:45"
+   ],
+   "reads_each_run": [
+    "dxb-queue desk/board.md",
+    "CLAUDE.md",
+    "STYLE.md",
+    "ops/desks.json"
+   ]
+  },
+  {
+   "id": "mirror",
+   "name": "Inbox mirror",
+   "account": "Production 1",
+   "tasks": [
+    {
+     "name": "Inbox mirror for the desk dispatcher",
+     "schedule": "hourly at :48",
+     "session": "bound",
+     "auto_approve": true,
+     "started_id": null,
+     "evidence": "commit 'Inbox mirror' on dxb-queue desk within 2 hours",
+     "max_gap_min": 120
+    }
+   ],
+   "housekeeping": [],
+   "preflight": "dxb-assets at origin/main; desk branch clones",
+   "alarms": [],
+   "reads_each_run": [
+    "ops/backoffice/dispatch"
+   ]
+  },
+  {
+   "id": "advisor-status",
+   "name": "Advisor daily status",
+   "account": "Production 1 (Claude Desktop, Mohammad's Mac)",
+   "tasks": [
+    {
+     "name": "Daily project status (07:45 Dubai)",
+     "schedule": "07:45 Dubai, one-shot re-armed daily",
+     "session": "bound (desktop)",
+     "auto_approve": null
+    }
+   ],
+   "reads_each_run": [
+    "Inbox items updated in 24 h",
+    "board questions"
+   ],
+   "housekeeping": [],
+   "alarms": []
+  },
+  {
+   "id": "keeper",
+   "name": "Server keeper",
+   "account": "dxb-render-1 (runner user) and GitHub",
+   "tasks": [
+    {
+     "name": "dxb-keeper.timer",
+     "schedule": "every 5 minutes",
+     "session": "systemd"
+    },
+    {
+     "name": "keeper.yml",
+     "schedule": "GitHub schedule",
+     "session": "workflow",
+     "secrets": [
+      "NTFY_TOPIC"
+     ]
+    }
+   ],
+   "outputs": [
+    {
+     "name": "newsroom/keeper-status.json",
+     "due": "every 5 minutes"
+    }
+   ],
+   "housekeeping": [],
+   "preflight": "server-check.yml",
+   "alarms": [
+    "slot with no evidence 60 minutes ahead (alarm-only)"
+   ]
+  },
+  {
+   "id": "watch",
+   "name": "Server watch",
+   "account": "dxb-render-1",
+   "tasks": [
+    {
+     "name": "watch-digest.yml",
+     "schedule": "hourly at :52 (GitHub holds it back; sessions dispatch it when over 50 minutes old)",
+     "session": "workflow (self-hosted)"
+    },
+    {
+     "name": "dxb-watch-poll / dxb-watch-digest services",
+     "schedule": "systemd",
+     "session": "systemd"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "branch watch-digest, watch/digest.json",
+     "max_age_min": 50
+    }
+   ],
+   "source_order": "1 server digest; 2 dispatch watch-digest.yml when over 50 minutes old; 3 when still over 90 minutes: watch_feeds.py and watch_pages.py locally plus the latest Grok digests as a lead list (never a source; Mohammad 4 Nov 17:31)",
+   "housekeeping": [],
+   "alarms": []
+  },
+  {
+   "id": "prepare",
+   "name": "Phase 1 prepare",
+   "account": "dxb-render-1",
+   "tasks": [
+    {
+     "name": "dxb-prepare.service timer",
+     "session": "systemd",
+     "note": "install needed root linger (card sent 30 Oct)"
+    }
+   ],
+   "housekeeping": [],
+   "alarms": []
+  },
+  {
+   "id": "backup",
+   "name": "Server backup",
+   "account": "dxb-render-1 (dxbbackup user)",
+   "tasks": [
+    {
+     "name": "dxb-backup.service and dxb-backup-check.service",
+     "session": "systemd"
+    }
+   ],
+   "housekeeping": [],
+   "alarms": []
+  }
+ ]
+}
