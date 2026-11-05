@@ -22122,5 +22122,54 @@
   "min_disk_free_mb": 85400,
   "setup_min": 0.93,
   "story": "gray-zone-warfare-patch-0510-enemy-ai-nov-5"
+ },
+ {
+  "name": "cat-me-if-you-can-switch-xbox-december-10-nov-5-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-05T12:43Z",
+  "stages": {
+   "checks": 3.4,
+   "montage": 47.6,
+   "text": 45.9,
+   "audio": 1.0,
+   "outro": 37.0
+  },
+  "total": 135.0,
+  "lane": "runner",
+  "queued_at": "2026-11-05T12:38:29Z",
+  "finished_at": "2026-11-05T12:43Z",
+  "render_min": 2.25,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 12.3,
+   "audio_secs": 36.5,
+   "music_pct": 85.0,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "effects_shots": 4,
+   "mix_secs": 4.9,
+   "secs": 17.6
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 228,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1344,
+  "peak_mem_mb": 3216,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60940,
+  "peak_disk_mb": 63574,
+  "min_disk_free_mb": 84222,
+  "setup_min": 1.55,
+  "story": "cat-me-if-you-can-switch-xbox-december-10-nov-5"
  }
 ]
