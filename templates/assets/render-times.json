@@ -21745,5 +21745,54 @@
   "min_disk_free_mb": 84477,
   "setup_min": 1.22,
   "story": "ocarina-of-time-nintendo-music-seven-songs-nov-5"
+ },
+ {
+  "name": "bioware-petition-canada-house-of-commons-nov-5-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-05T02:49Z",
+  "stages": {
+   "checks": 3.8,
+   "montage": 31.0,
+   "text": 35.7,
+   "audio": 1.0,
+   "outro": 38.7
+  },
+  "total": 110.1,
+  "lane": "runner",
+  "queued_at": "2026-11-05T02:45:10Z",
+  "finished_at": "2026-11-05T02:49Z",
+  "render_min": 1.84,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 1.7,
+   "audio_secs": 21.0,
+   "music_pct": 21.6,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 0
+   },
+   "reason": "music only 21.6% of the track (< 40.0%)",
+   "secs": 2.1
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 203,
+  "mem_total_mb": 15700,
+  "mem_start_mb": 1434,
+  "peak_mem_mb": 4675,
+  "disk_total_mb": 73317,
+  "disk_start_mb": 56725,
+  "peak_disk_mb": 57598,
+  "min_disk_free_mb": 15702,
+  "peak_tmp_mb": 2287,
+  "setup_min": 1.4,
+  "story": "bioware-petition-canada-house-of-commons-nov-5"
  }
 ]
