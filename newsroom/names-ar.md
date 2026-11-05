@@ -1,0 +1,167 @@
+# Names and terms (adv-20261102-story-brief, addendum_2020_sources and addendum_2040_terms; Mohammad, 2 and 3 Nov 2026)
+
+One agreed Arabic form per person, company, studio, outlet and recurring term. Read with `newsroom/reel-check.md` and
+`newsroom/editorial-memory.md` before any build. Every name and recurring term in a Reel, caption or X and Threads text
+matches this list; a new one is added here with the form used and flagged on the board for Mohammad. Every wording
+correction Mohammad gives goes into this list the same day.
+
+Authority: `arabic/house-glossary.md` holds the approved house rules and overrides this list; where they differ, the
+glossary wins and the difference is raised. House rules in short: game, series, character and platform names stay in
+English as the publisher writes them (PS5, Nintendo Switch 2, Steam, Xbox Series X|S); companies, studios, outlets and
+people are written in Arabic with the Latin in brackets at first mention, Arabic alone after; a person takes a role word
+at first mention (المخرج، المنتج، الرئيس التنفيذي، الممثل)
+and an unfamiliar name says what it is; every line starts with an Arabic word.
+
+Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (consistent in our posts, not yet approved) ·
+**Proposed** (on the board for Mohammad) · **Check** (our posts disagree; the form given is the one to use until he decides).
+
+## 1. Names
+
+### Platform holders and publishers
+| Latin | Arabic | Status |
+|---|---|---|
+| Nintendo | نينتيندو | Approved 26 Sep (never نينتندو; posts as late as 4 Nov used it) |
+| Nintendo of America | نينتيندو أوف أمريكا | In use |
+| Sony | سوني | In use |
+| Microsoft | مايكروسوفت | In use |
+| Xbox (the company, as subject) | إكس بوكس | In use (the platform name stays Xbox) |
+| Square Enix | سكوير | Approved 5 Oct (not سكوير إنكس) |
+| Bandai Namco | بانداي نامكو | Approved 27 Sep (never باندا نامكو) |
+| SEGA | سيغا | Proposed 3 Nov |
+| Capcom | كابكوم | In use |
+| Ubisoft | يوبيسوفت | In use |
+| Activision | أكتيفيجن | Suggested 5 Oct (not أكتيفجن) |
+| Take-Two Interactive | تيك-تو إنتراكتيف، then تيك-تو | Suggested 1 Oct (bare تيك تو reads as TikTok) |
+| Rockstar Games | روكستار | In use |
+| Bethesda | بيثيسدا | In use |
+| Blizzard | بليزارد | Proposed 3 Nov |
+| Epic Games | إيبك غيمز | Check: posts used both إيبك غيمز and إيبك جيمز |
+| HoYoverse | هويوفيرس | Proposed 3 Nov |
+| NetEase Games | نت إيز غيمز | In use |
+| Marvelous | مارفيلوس | In use |
+| Atari | أتاري | In use |
+| Playstack | بلايستاك | Proposed 3 Nov |
+| Disney+ | ديزني بلس | In use |
+
+### Studios
+| Latin | Arabic | Status |
+|---|---|---|
+| BioWare | بايوير | Approved 24 Oct (not بايووير) |
+| Kojima Productions | كوجيما بروداكشنز | In use |
+| Grasshopper Manufacture | غراسهوبر مانيوفاكتشر | Seeded 2 Nov (card example) |
+| Nagoshi Studio | استوديو ناغوشي | In use |
+| FromSoftware | فروم سوفتوير | In use |
+| Arkane | أركين | In use |
+| Arrowhead | أروهيد | Proposed 3 Nov |
+| Jagex | جاجكس | Approved 4 Oct (on-screen bracket example) |
+| Remedy | ريميدي | In use |
+| Infinity Ward | إنفينيتي وارد | In use |
+| Santa Monica Studio | سانتا مونيكا ستوديو | In use |
+| Turn 10 | ترن 10 | In use |
+| Playground Games | بلاي غراوند | In use |
+| Gearbox | غيربوكس | In use |
+| Nightdive Studios | نايتدايف ستوديوز | In use |
+| Pipeworks Studios | بايبوركس | In use |
+| Mega Crit | ميغا كريت | In use |
+| The Game Bakers | ذا غيم بيكرز | In use |
+| tri-Ace | تراي إيس | In use |
+| Shift Up | شيفت أب | In use |
+| XLGAMES | إكس إل غيمز | In use |
+| Coffee Stain | كوفي ستين | In use |
+| Funcom | فانكوم | In use |
+| Pearl Abyss | بيرل أبيس | In use |
+| Pocketpair | بوكيت بير | In use |
+| Romero Games | روميرو غيمز | In use |
+| S-GAME | إس جيم | In use |
+| E&H production | إي آند إتش برودكشن | In use |
+| Stubby Games | ستابي غيمز | Proposed 3 Nov |
+| Qloud Games | كلاود غيمز | Proposed 3 Nov |
+| Wild Unlimited | وايلد أنليميتد | In use |
+
+### Outlets and data sources
+| Latin | Arabic | Status |
+|---|---|---|
+| Famitsu | فاميتسو | In use |
+| IGN | آي جي إن | Proposed 3 Nov |
+| VGC (Video Games Chronicle) | في جي سي (فيديو غيمز كرونيكل in full) | In use |
+| The Verge | ذا فيرج | In use |
+| Bloomberg | بلومبرغ | In use |
+| Gematsu | جيماتسو | In use |
+| GamesRadar | غيمز رادار | Proposed 3 Nov |
+| Pure Xbox | بيور إكس بوكس | In use |
+| Xbox Wire | إكس بوكس واير | In use |
+| PlayStation Blog | مدونة بلايستيشن | In use |
+| Nintendo Life | نينتيندو لايف | Approved 26 Sep |
+| Nintendo Everything | نينتيندو إفريثينغ | Suggested 29 Sep |
+| Insider Gaming | إنسايدر غيمنغ | In use |
+| Game Rant | غيم رانت | In use |
+| GamesIndustry.biz | غيمز إندستري | In use |
+| Eurogamer | يوروغيمر | In use |
+| Polygon | بوليغون | In use |
+| PC Gamer | بي سي غيمر | Check: posted as بي سي جيمر; house spelling of "Games" is غيمز |
+| Saudi Gamer | سعودي جيمر | In use (the outlet's own Arabic name) |
+| Metacritic | ميتاكريتيك | In use |
+| OpenCritic | أوبن كريتيك | In use |
+| Taipei Times | تايبيه تايمز | In use |
+| Puck | بك | Approved 24 Oct |
+| Game*Spark | غيم سبارك | In use |
+| Inven | إنفن | In use |
+| Circana | سيركانا (شركة الأبحاث) | In use |
+
+### People (role word at first mention)
+| Latin | Arabic | Role used | Status |
+|---|---|---|---|
+| Hideo Kojima | هيديو كوجيما | المنتج التنفيذي / مبتكر | In use |
+| Shigeru Miyamoto | شيغيرو مياموتو | مبتكر Mario وZelda | In use |
+| Eiji Aonuma | إيجي أونوما | المنتج | In use |
+| Hidemaro Fujibayashi | هيديمارو فوجيباياشي | المنتج | In use |
+| Koji Kondo | كوجي كوندو | الموسيقار | In use |
+| Goichi Suda (Suda51) | غويتشي سودا (سودا51) | مبتكر No More Heroes | In use |
+| Toshihiro Nagoshi | توشيهيرو ناغوشي | مبتكر Yakuza | In use |
+| Tim Sweeney | تيم سويني | الرئيس التنفيذي لإيبك غيمز | In use |
+| Lisa Su | ليزا سو | رئيسة AMD | In use |
+| John Romero | جون روميرو | أحد مبتكري DOOM | In use |
+| Takuro Mizobe | تاكورو ميزوبي | الرئيس التنفيذي لبوكيت بير | In use |
+| Eric Barone | إريك بارون | مطوّر Stardew Valley | In use |
+| Dan Greenawalt | دان غرينوالت | رئيس Forza | In use |
+| Tom Warren | توم وارن | الصحفي | In use |
+| Jason Schreier | جيسون شراير | الصحفي | In use |
+| Mat Piscatella | مات بيسكاتيلا | المحلل في سيركانا | In use |
+| Takayuki Sano | تاكايوكي سانو | المخرج | In use |
+| Tow Ubukata | تو أوبوكاتا | الكاتب | In use |
+| Dave Bautista | دايف باوتيستا | الممثل | In use |
+| Kit Harington | كيت هارينغتون | الممثل | In use |
+| Ma Dong-seok | ما دونغ سوك | الممثل | In use |
+| Romain Toutain | رومان توتان | (French reading, not روماين) | Suggested 25 Oct |
+
+### Places and bodies
+| Latin | Arabic | Status |
+|---|---|---|
+| GMEDIA (Saudi General Authority for Media Regulation) | الهيئة العامة لتنظيم الإعلام | In use |
+| DMCC | مركز دبي للسلع المتعددة | In use |
+| Geekay | جيكي | Proposed 3 Nov (retail rule: never name the shop behind a price) |
+| Google | جوجل | Proposed 3 Nov |
+
+## 2. Terms
+
+| English | Arabic | Not | Status |
+|---|---|---|---|
+| Teaser | مقطع تشويقي (also الإعلان التشويقي) | تشويقة | Approved 3 Nov |
+| Expansion (DLC) | إضافة، الإضافتان | توسعة، توسيع | Approved 27 Sep. Check: posts on 30 Oct (Dune, Crimson Desert, Cairn, Age of Empires IV) used توسعة |
+| Pre-order | الحجز المسبق | الطلب المسبق | Approved 15 Oct |
+| Release verbs | تصدر (date); متوفرة الآن / صدرت اليوم; قادمة إلى / تصل إلى + platform; أُعلن عن (no date); تُطلق (event or product) | a bare تصل for a date | Approved 28 Oct |
+| Update released today | تطرح … اليوم تحديثًا / أصبح … متوفرًا الآن | يصل اليوم | Approved 29 Sep |
+| While supplies last | حتى نفاد الكمية (countable); المخزون only for bulk goods | ما دام المخزون متوفرًا، نفاذ | Approved 15 Oct |
+| Countdown | باقي 23 يومًا، باقي يومان، باقي يوم واحد | يتبقى | Approved 11 Oct |
+| Hands on (chip) | نظرة أولى (fallback انطباعات) | تجربة | Approved 26 Sep |
+| Silent hardware revision | تعديل خفي | تعديل صامت | Approved 3 Oct |
+| Physical edition | leave it out, or name what the reader holds | النسخة المادية | Approved 30 Sep |
+| UAE price | the dirham symbol left of the digits; درهمًا in written text | AED beside the symbol | Approved 30 Sep |
+| Steam in a country | متجر Steam في الإمارات | متجر Steam الإمارات | Suggested 29 Sep |
+| Docked / handheld (Switch) | وضع التلفاز / الوضع المحمول | وضع الإرساء | Suggested 27 Sep |
+| Service ends | تنتهي خدمة <game> / تُوقف <company> خدمة <game> | تتوقف <game> | Suggested 29 Sep |
+| Sample of players | شريحة من اللاعبين | عينة (except real research) | Advisor 20 Oct |
+| Black Friday | الجمعة البيضاء | | Proposed 3 Nov |
+| Stims (Helldivers 2) | Stim in English in game text, glossed once as حقنة Stim | المنشطات | Proposed 3 Nov |
+| Pokémon | Pokémon in Latin | البوكيمون | Suggested 18 Oct |
+| Sensitive content (relationships, evolution, bans) | the general word; the authority's own wording | the specific type, a judgement | Approved 21 Oct (glossary rows) |
