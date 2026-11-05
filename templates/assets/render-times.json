@@ -22171,5 +22171,54 @@
   "min_disk_free_mb": 84222,
   "setup_min": 1.55,
   "story": "cat-me-if-you-can-switch-xbox-december-10-nov-5"
+ },
+ {
+  "name": "cat-me-if-you-can-switch-xbox-december-10-nov-5-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-05T12:49Z",
+  "stages": {
+   "checks": 3.4,
+   "montage": 43.9,
+   "text": 45.2,
+   "audio": 1.0,
+   "outro": 34.3
+  },
+  "total": 127.7,
+  "lane": "runner",
+  "queued_at": "2026-11-05T12:45:17Z",
+  "finished_at": "2026-11-05T12:49Z",
+  "render_min": 2.13,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 11.8,
+   "audio_secs": 31.3,
+   "music_pct": 88.7,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "effects_shots": 4,
+   "mix_secs": 5.1,
+   "secs": 17.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 218,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1343,
+  "peak_mem_mb": 3164,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60992,
+  "peak_disk_mb": 63507,
+  "min_disk_free_mb": 84289,
+  "setup_min": 1.12,
+  "story": "cat-me-if-you-can-switch-xbox-december-10-nov-5"
  }
 ]
