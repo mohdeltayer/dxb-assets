@@ -54,6 +54,7 @@ jobs:
           sparse-checkout: |
             templates
             jobs
+            newsroom/stories
           clean: true
 
       - name: Server

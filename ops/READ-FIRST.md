@@ -30,23 +30,33 @@ Add `notes` or `.claude` only when needed. One old file: `git show <rev>:<path>`
   spoken story cut into beats, each page shown alone before its line, scene music named in the note, and every
   waiver explained after a look at the frames.
 
-## 4. A build, step by step
-1. Ledger `python3 newsroom/ledger.py find <game>`, then the Publer list for the last 7 days: no repeat without new facts.
-2. Gate: primary read, chip on the ladder, `gate HH:MMZ` noted in the story file `newsroom/stories/<date>-<slug>.json`.
-3. Job file `jobs/render/<name>.json`, with the angle lines and the filled `reel_check` first.
-   Check it with `python3 templates/render_job.py check jobs/render/<name>.json` (or `templates/prerender.py`).
-4. Render. News goes to lane A: push the job to main and `render.yml` runs it (manual run: workflow_dispatch with
-   input `job`). Evergreen and series go to lane B: the job in `jobs/live/`, then workflow_dispatch `render-live.yml`
-   with input `job` on dxb-render-1. Breaking goes to `render-breaking.yml` with inputs `job` (`jobs/breaking/...`)
-   and `lane`. Done when `cards/YYYY-MM/<name>-reel-vN-publer.json` lands on main with the mp4, strip, sheet and dense.
-5. Director check: the strip, dense and sheet against the job (Director card, delegation.md), one table per shot,
-   PASS or FIX. A FIX means a re-render.
-6. Publer: the media is already uploaded by the render; then one `submit_publer_posts` per account at the same
-   minute: Instagram reel with caption and labels, X with the short text, Threads with its text, source follow-ups.
-7. Records: the `newsroom/commitments.json` row, the story file ("scheduled in Publer HH:MMZ"), and the format ledger
-   (`python3 templates/formats.py add`). After publishing: all three read Published, the Inbox `published` entry,
-   and the preview card closed.
-8. Board: one handoff on `desk/board.md` and `desk/board.json` in one commit to `desk`: "built and scheduled: <story>, <slot>".
+## 4. A build, step by step (each step is checked: render_job refuses a job that skipped one)
+0. Digest, always fresh from GitHub, never from a file on disk:
+   `git fetch -q --depth 1 origin +watch-digest:refs/remotes/origin/watch-digest && git show origin/watch-digest:watch/digest.json`
+   (or https://raw.githubusercontent.com/mohdeltayer/dxb-assets/watch-digest/watch/digest.json); check `generated_at`.
+1. Story file `newsroom/stories/<date>-<slug>.json` with `sources` (url), `first_report`, `source_type` (primary or
+   secondary), `footage` (stills: why, and the footage sources tried), `lane`, `beat`; then
+   `python3 newsroom/ledger.py find <words> --record <story id>` and the Publer list for the last 7 days.
+2. Gate: primary read, chip on the ladder, `gate HH:MMZ` in the story file.
+3. Job file with `"story"`, `"render_lane": "server"` (default), `"reel_check"` filled from reel-check.md and a
+   `"decision_log"` (per beat: shot and alternatives, crop, music and why); a stills Reel also needs `"stills_reason":
+   {"why": sales|business|people|delay|outage|no_footage, "tried": [sources]}`. Keep a local copy of the job.
+   `python3 templates/buildgate.py <job>` then `python3 templates/render_job.py check <job>`.
+4. Render on the server: the job in `jobs/live/<name>.json`, then workflow_dispatch `render-live.yml` with input `job`.
+   GitHub's runner only with `"render_lane": "hosted"` and a `"lane_reason"`: the job in `jobs/render/` (render.yml,
+   input `job`; a run with no job named is refused). Breaking: `render-breaking.yml` with `job` and `lane`.
+   Done when `cards/YYYY-MM/<name>-reel-vN-publer.json` lands on main with the mp4, strip, sheet and dense.
+5. Director check on the strip, dense and sheet (Director card, delegation.md), then
+   `python3 templates/presubmit.py director <story> PASS <out.mp4> --job <your copy of the job>` (the gate runs again
+   on the job; its "out" must be this file).
+6. Per platform: `presubmit.py intent <commitment> <platform> <story> <out.mp4>` (refuses without a director PASS
+   with a passed checklist for this exact file, and refuses a second submit), then `submit_publer_posts`, then `presubmit.py result ...
+   scheduled|failed`. A failed or timed-out submit: look the post up in Publer before anything else.
+7. Records: the `newsroom/commitments.json` row, `python3 templates/formats.py add`; after publishing,
+   `presubmit.py published <commitment> <story> --links <ig> <x> <threads> --queue <dxb-queue clone>` (story file,
+   newsroom/published.jsonl, heartbeat), then push both repos.
+8. Board: one handoff on `desk/board.md` and `desk/board.json`: "built and scheduled: <story>, <slot>".
+   Keep at least 3 finished undated Reels in `newsroom/evergreen.md` (Status "ready"); the keeper flags fewer.
 
 ## 5. Never
 - Clone dxb-assets in full (33 GB), or run `git log --stat`, `-p` or blame (each pulls media blobs).

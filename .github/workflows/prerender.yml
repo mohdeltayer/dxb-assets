@@ -98,6 +98,7 @@ jobs:
           sparse-checkout: |
             templates
             jobs
+            newsroom/stories
           persist-credentials: false
 
       - name: Stand down if the GitHub-hosted fallback already ran
@@ -182,6 +183,7 @@ jobs:
           sparse-checkout: |
             templates
             jobs
+            newsroom/stories
           persist-credentials: false
 
       - name: Job file (data only, from the ref)
