@@ -22253,5 +22253,54 @@
   "min_disk_free_mb": 85584,
   "setup_min": 2.62,
   "story": "famitsu-oct26-nov1-switch-2-hardware-triples-nov-5"
+ },
+ {
+  "name": "gta-vi-code-in-box-saudi-uae-region-locked-nov-5-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-05T15:35Z",
+  "stages": {
+   "checks": 4.7,
+   "montage": 44.1,
+   "text": 63.5,
+   "audio": 0.8,
+   "outro": 58.0
+  },
+  "total": 171.0,
+  "lane": "runner",
+  "queued_at": "2026-11-05T15:28:00Z",
+  "finished_at": "2026-11-05T15:35Z",
+  "render_min": 2.85,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 11.9,
+   "audio_secs": 45.4,
+   "music_pct": 61.1,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 1,
+    "miss": 2
+   },
+   "effects_shots": 5,
+   "mix_secs": 7.2,
+   "secs": 19.5
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 285,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1386,
+  "peak_mem_mb": 3041,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61719,
+  "peak_disk_mb": 65318,
+  "min_disk_free_mb": 82479,
+  "setup_min": 3.58,
+  "story": "gta-vi-code-in-box-saudi-uae-region-locked-nov-5"
  }
 ]
