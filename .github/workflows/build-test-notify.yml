@@ -1,0 +1,24 @@
+# Branch-only test for notify-build (BUILD.md section 5); deleted before the merge, never on main.
+name: build-test-notify
+on:
+  push:
+    branches: ['build/2026-11-07-notify-build']
+permissions:
+  contents: read
+jobs:
+  t:
+    if: github.repository == 'mohdeltayer/dxb-assets'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with: {fetch-depth: 1, sparse-checkout: ops/build, persist-credentials: false}
+      - name: Unit tests and dry runs
+        run: |
+          python3 -m unittest -q ops/build/test_notify_build.py
+          NOTIFY_DRY_RUN=1 python3 ops/build/notify_build.py release ops/build/releases/2026-11-06.md
+          NOTIFY_DRY_RUN=1 python3 ops/build/notify_build.py started "test"
+      - name: One real test push
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python3 ops/build/notify_build.py test
