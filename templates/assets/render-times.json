@@ -23109,5 +23109,50 @@
   "min_disk_free_mb": 232193,
   "setup_min": 0.13,
   "story": "switch-2-25-million-sell-through-nintendo-nov-6"
+ },
+ {
+  "name": "nintendo-hardware-price-revision-possible-nov-6-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-06T14:46Z",
+  "stages": {
+   "checks": 0.6,
+   "montage": 7.8,
+   "text": 12.0,
+   "audio": 0.6,
+   "outro": 18.7
+  },
+  "total": 39.8,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-06T14:45Z",
+  "finished_at": "2026-11-06T14:46Z",
+  "render_min": 0.66,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 7.46,
+   "held_under_text": 0.0,
+   "secs": 6.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 56,
+  "queue_wait_secs": 1,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 900,
+  "peak_mem_mb": 1890,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 12256,
+  "peak_disk_mb": 13261,
+  "min_disk_free_mb": 232845,
+  "setup_min": 0.13,
+  "story": "nintendo-hardware-price-revision-possible-nov-6"
  }
 ]
