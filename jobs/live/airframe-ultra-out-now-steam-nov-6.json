@@ -132,5 +132,18 @@
     "credit": "yes: credit on every clip 0 to 4",
     "text_pace": "yes: render_job text and reading checks on the runner; pace_ok with the reason in the note"
   },
-  "note": "Server lane. Chip متوفر الآن: store page confirms release 5 Nov; discount end date not stated so not given. One continuous trailer stretch with its own sound; pace_ok because reading time forces 4 s holds on moving footage. Stylised violence only, no gore in the stretch."
+  "note": "Server lane. Chip متوفر الآن: store page confirms release 5 Nov; discount end date not stated so not given. One continuous trailer stretch with its own sound; pace_ok because reading time forces 4 s holds on moving footage. Stylised violence only, no gore in the stretch.",
+  "block_ok": [
+    [
+      "af.mp4",
+      38.9,
+      39.5,
+      "looked at source frames 38.9-39.5 s: lightning impact flash with sparks on a consistent scene, no decode damage"
+    ],
+    [
+      16.7,
+      17.7,
+      "same stretch in the output: lightning flash with sparks, frames looked at, no decode damage"
+    ]
+  ]
 }
