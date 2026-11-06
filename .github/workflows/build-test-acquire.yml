@@ -31,7 +31,7 @@ jobs:
           "$v/bin/python" -m yt_dlp --help | grep -c -- '--js-runtimes' || true
           d="$RUNNER_TEMP/acq"; mkdir -p "$d"
           cd ops/backoffice/prepare
-          for u in 'https://www.youtube.com/watch?v=ruIT6Xez6tw' 'https://x.com/fromsoftware_sp/status/2116062995394760959'; do
+          for u in 'https://x.com/ROCKMAN_UNITY/status/2116756803619102976' 'https://x.com/StreetFighterJA/status/2114884791560786219' 'https://x.com/SLA_OVERDRIVE/status/2115489050153103469' 'https://youtu.be/7-1lQh551UY'; do
             echo "== $u"; start=$(date +%s)
             PREPARE_PYTHON="$v/bin/python" PREPARE_MAX_MB=800 "$v/bin/python" acquire.py fetch "$u" --dest "$d/$(date +%s%N)" \
               | python3 -c "import json,sys; r=json.load(sys.stdin); s=r.get('source') or {}; p=s.get('platform') or {}; print(json.dumps({'file': bool(r.get('file')), 'bytes': s.get('bytes'), 'extractor': p.get('extractor'), 'channel': p.get('channel'), 'height': p.get('height'), 'duration': p.get('duration'), 'files': p.get('files'), 'tried': r.get('tried')}, ensure_ascii=False))" || true
