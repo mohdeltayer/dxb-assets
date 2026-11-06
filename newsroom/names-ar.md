@@ -69,6 +69,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | XLGAMES | إكس إل غيمز | In use |
 | Coffee Stain | كوفي ستين | In use |
 | Funcom | فانكوم | In use |
+| Digital Extremes | ديجيتال إكستريمز | Proposed 6 Nov (Soulframe Reel; flagged on the board for Mohammad) |
 | Pearl Abyss | بيرل أبيس | In use |
 | Pocketpair | بوكيت بير | In use |
 | Romero Games | روميرو غيمز | In use |
