@@ -46,6 +46,7 @@ Add `notes` or `.claude` only when needed. One old file: `git show <rev>:<path>`
 3. Job file with `"story"`, `"render_lane": "server"` (default), `"reel_check"` filled from reel-check.md and a
    `"decision_log"` (per beat: shot and alternatives, crop, music and why); a stills Reel also needs `"stills_reason":
    {"why": sales|business|people|delay|outage|no_footage, "tried": [sources]}`. Keep a local copy of the job.
+   Every footage shot (anything that is not our "-gfx-" card) sits inside a "credits" range, «المصدر: ...».
    `python3 templates/buildgate.py <job>` then `python3 templates/render_job.py check <job>`.
 4. Render on the server: the job in `jobs/live/<name>.json`, then workflow_dispatch `render-live.yml` with input `job`.
    GitHub's runner only with `"render_lane": "hosted"` and a `"lane_reason"`: the job in `jobs/render/` (render.yml,

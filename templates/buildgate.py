@@ -20,7 +20,12 @@ A job must carry:
                  addendum of 3 Nov: footage first). {"why": one of STILLS_WHY, "tried": [the footage sources looked at]};
                  "tried" may be empty only for sales, business, people, delay or outage stories.
 
-Report only (printed, never a refusal): a job without "decision_log" (adv-20261102-borrow-openmontage, part 2: per beat
+  "credits":     every footage shot (any shot that is not one of our "-gfx-" cards) inside at least one credit's
+                 [first_shot, last_shot] (adv-20261030-download-automation-and-credits, Part B: every clip that is not
+                 ours carries an on-screen credit for as long as it shows). Breaking and Famitsu jobs draw their own.
+
+Report only (printed, never a refusal): a credit covering footage that names no source («المصدر», «لقطات من»,
+«الصورة»); a job without "decision_log" (adv-20261102-borrow-openmontage, part 2: per beat
 the shot chosen and the alternatives, the crop decision, the music and why). The director reads it.
 
 Jobs under jobs/test/ (examples and test renders) are not gated. There is no switch to turn the gate off.
@@ -90,9 +95,48 @@ def stills_problems(job):
     return []
 
 
+SOURCE_WORDS = ('المصدر', 'لقطات من', 'الصورة')
+
+
+def _footage_shots(job):
+    return [i for i, sh in enumerate(job.get('shots') or [])
+            if isinstance(sh, (list, tuple)) and sh and isinstance(sh[0], str) and '-gfx-' not in sh[0]]
+
+
+def _credit_ranges(job):
+    out = []
+    for c in job.get('credits') or []:
+        if isinstance(c, (list, tuple)) and len(c) >= 3:
+            try:
+                out.append((int(c[0]), int(c[1]), str(c[2])))
+            except (TypeError, ValueError):
+                continue
+    return out
+
+
+def credit_problems(job):
+    if job.get('kind') in ('famitsu', 'breaking'):
+        return []
+    rng = _credit_ranges(job)
+    bare = [i for i in _footage_shots(job) if not any(a <= i <= b for a, b, _ in rng)]
+    if bare:
+        return ['credits: footage shot%s %s %s no on-screen credit; add "credits": [[first, last, "المصدر: ..."]] '
+                'covering every clip that is not ours' % ('s' if len(bare) > 1 else '', ', '.join(map(str, bare)),
+                                                           'have' if len(bare) > 1 else 'has')]
+    return []
+
+
 def notes(job):
     """Report-only lines (never refusals)."""
     out = []
+    if job.get('kind') not in ('famitsu', 'breaking'):
+        rng = _credit_ranges(job)
+        unsourced = [i for i in _footage_shots(job)
+                     if any(a <= i <= b for a, b, _ in rng)
+                     and not any(a <= i <= b and t.strip().startswith(SOURCE_WORDS) for a, b, t in rng)]
+        if unsourced:
+            out.append('credits: shots %s are covered only by credits that name no source (%s); report only'
+                       % (', '.join(map(str, unsourced[:8])), ' / '.join(SOURCE_WORDS)))
     if not job.get('decision_log'):
         out.append('no "decision_log" (per beat: shot and alternatives, crop decision, music and why); the director '
                    'reads it (adv-20261102-borrow-openmontage); report only')
@@ -145,6 +189,7 @@ def problems(path, job):
                 out.append('story file: stills need the reason and the footage sources tried')
 
     out += stills_problems(job)
+    out += credit_problems(job)
 
     rc = job.get('reel_check')
     if not rc:

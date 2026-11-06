@@ -95,3 +95,23 @@ class Stills(unittest.TestCase):
     def test_decision_log_is_report_only(self):
         self.assertTrue(BG.notes({}))
         self.assertEqual(BG.notes({'decision_log': [{'beat': 1}]}), [])
+
+
+class Credits(unittest.TestCase):
+    SH = [['t.mp4', 0, 3, None], ['card-gfx-1.png', 0, 2, None], ['t.mp4', 5, 3, None]]
+
+    def test_uncovered_footage_refused(self):
+        p = BG.credit_problems({'shots': self.SH, 'credits': [[0, 0, 'المصدر: نينتيندو (Nintendo)']]})
+        self.assertTrue(p and ' 2 ' in p[0])
+
+    def test_gfx_needs_no_credit(self):
+        self.assertEqual(BG.credit_problems({'shots': self.SH, 'credits': [[0, 0, 'المصدر: أ'], [2, 2, 'المصدر: أ']]}), [])
+
+    def test_no_credits_at_all(self):
+        self.assertTrue(BG.credit_problems({'shots': self.SH}))
+        self.assertEqual(BG.credit_problems({'kind': 'breaking', 'shots': self.SH}), [])
+
+    def test_badge_only_is_a_note(self):
+        j = {'shots': self.SH, 'credits': [[0, 2, 'الطريق إلى Ocarina · الحلقة 7']], 'decision_log': [1]}
+        self.assertEqual(BG.credit_problems(j), [])
+        self.assertTrue(any('name no source' in n for n in BG.notes(j)))
