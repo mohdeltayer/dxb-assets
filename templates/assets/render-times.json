@@ -22718,5 +22718,66 @@
   "min_disk_free_mb": 230940,
   "setup_min": 0.23,
   "story": "airframe-ultra-out-now-steam-nov-6"
+ },
+ {
+  "name": "airframe-ultra-out-now-steam-nov-6-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-06T06:10Z",
+  "stages": {
+   "checks": 2.3,
+   "montage": 23.1,
+   "text": 20.3,
+   "audio": 0.9,
+   "outro": 14.7
+  },
+  "total": 61.3,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-06T06:09Z",
+  "finished_at": "2026-11-06T06:10Z",
+  "render_min": 1.02,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 4.2,
+   "audio_secs": 13.0,
+   "music_pct": 99.4,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 3,
+   "mix_secs": 2.3,
+   "secs": 7.6
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 9.26,
+   "held_under_text": 0.0,
+   "secs": 10.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 132,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1038,
+  "peak_mem_mb": 2049,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 11868,
+  "peak_disk_mb": 13766,
+  "min_disk_free_mb": 232340,
+  "setup_min": 0.18,
+  "story": "airframe-ultra-out-now-steam-nov-6"
  }
 ]
