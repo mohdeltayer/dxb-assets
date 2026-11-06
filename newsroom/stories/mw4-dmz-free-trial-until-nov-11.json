@@ -55,5 +55,18 @@
    "trial"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/mw4-dmz-free-trial-until-nov-11-reel-v1.mp4",
+  "blob": "0b29d068371c3b976b6774d9405ed8f61984b678",
+  "at": "2026-11-06T21:43:15Z",
+  "note": "director (main session) 21:46Z: dense strip, sheet and 3 full frames looked at; first frame masked operator under chip and headline, readable at grid size; credit 0-10.4 s; lines inside the safe zone; no blood or gore (stretch ends before the 12.07 cut; KILL BLOCK title and the 27 s blood excluded); in-game tablet UI text for about 0.5 s at 2.2 s under the headline, game UI not a slate, accepted; full decode clean, 12.54 s, -12.4 LUFS; trailer own sound from 1.4 s (gameplay effects), not transcribed in the container",
+  "checklist": {
+   "job": "jobs/live/mw4-dmz-free-trial-until-nov-11.json",
+   "sha256": "a00474a274c78c8b69213c102ca9edd1b415fc67d8e9e1810f48d8089b23344a",
+   "ok": true,
+   "problems": []
+  }
  }
 }
