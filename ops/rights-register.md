@@ -54,6 +54,8 @@ Never: logins, cookies, third-party downloaders, social-media rippers, reposts o
 | librosa | 0.11.0 | ISC | beat grid per music bed and per trailer | prepare venv |
 | numpy | 2.2.6 | BSD-3-Clause | everything numeric | prepare venv |
 | PyYAML | 6.0.2 | MIT | reading rights.yaml | prepare venv |
+| yt-dlp (`yt-dlp[default]`) | 2026.10.21 | Unlicense | step 5: one attempt on a YouTube video or an X post, no cookies, no login, run with the Node JS runtime (adv-20261030-download-automation-and-credits Part A) | prepare venv |
+| yt-dlp-ejs (pulled by `[default]`) | 0.8.0 | Unlicense AND MIT AND ISC | the JavaScript challenge solver yt-dlp runs on Node; updated together with yt-dlp, as a pair | prepare venv |
 | tesseract-ocr | system package | Apache-2.0 | burnt-in text (PaddleOCR, Apache-2.0, later: media toolbox E3) | apt (already on the server for render checks) |
 | ffmpeg / ffprobe | system package | LGPL-2.1+ / GPL build | probe, decode check, stream copy from Steam | apt (already on the server) |
 | streamlink | not installed by prepare | BSD-2-Clause | step 4, live feeds (stub; event capture installs it today) | runner venv |
