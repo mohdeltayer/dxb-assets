@@ -1,0 +1,81 @@
+{
+ "name": "nintendo-hardware-price-revision-possible-nov-6",
+ "out": "cards/2026-11/nintendo-hardware-price-revision-possible-nov-6-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "hw-frame.mp4",
+   "repo": "live/2026-11-06/hw-frame.mp4"
+  }
+ ],
+ "shots": [
+  [
+   "hw-frame.mp4",
+   0.0,
+   3.4,
+   null
+  ],
+  [
+   "hw-frame.mp4",
+   3.4,
+   3.4,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "تحاول أولًا امتصاص\nالتكاليف بنفسها",
+     {
+      "size": 46
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   1,
+   "المصدر: نينتيندو (Nintendo)"
+  ]
+ ],
+ "headline": "نينتيندو لا تستبعد مراجعة\nأسعار الأجهزة مستقبلًا",
+ "label": "تقرير",
+ "source": "Nintendo Everything",
+ "date": "6 Nov 2026",
+ "theme": "cold",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "track": "bed",
+ "sound": "digest",
+ "profile": null,
+ "cut": true,
+ "pace_ok": true,
+ "platform": "multi",
+ "beat": "report",
+ "reel_check": {
+  "source": "yes: Furukawa's earnings Q&A reported by Game*Spark JP (Japanese quote read) and Nintendo Everything, 6 Nov; Nintendo's own Q&A text not read, so chip تقرير; Switch 2 price rises already in Nintendo IR slide 21; Publer and board checked, not posted",
+  "angle": "yes: hook: Nintendo does not rule out raising hardware prices; why now: Q&A at the half-year briefing today; players here: Switch 2 prices already rose in September outside Japan; payoff: the condition, only if costs cannot be absorbed over the medium to long term",
+  "type": "yes: REPORT: the finding (Nintendo would consider a revision), the evidence (Furukawa's Q&A), the consequence (none announced), the limits (no named product, no date)",
+  "footage": "yes: Nintendo's own Switch 2 hardware montage from nintendo.com, 1520x700, crop 630x700 at 1.71x; it shows the console the report is about",
+  "sound": "yes: our bed (digest): the montage is 7 s with a short jingle, no coherent stretch for a two-shot Reel",
+  "picture": "yes: differs from the last 5 Reels (Switch 2 25M Pokopia, GeForce, Tarkov, Psycho-Sleuth, Ocarina scores)",
+  "names": "yes: Nintendo with Latin in the credit, Nintendo Everything Latin as the outlet",
+  "sensitive": "n/a: none",
+  "not_posted": "yes: ledger find recorded; the 25M post covers sell-through and Pokopia, not pricing",
+  "credit": "yes: credit on shots 0 to 1",
+  "text_pace": "yes: headline on shot 0, one line of 32 characters on a 3.4 s shot"
+ },
+ "note": "Server lane. 6.8 s: one fact, two shots; the source footage is only 7 s. Chip تقرير: two outlets, Nintendo's own Q&A text not read.",
+ "nobars": [
+  "hw-frame.mp4"
+ ],
+ "story": "nintendo-hardware-price-revision-possible-nov-6",
+ "render_lane": "server",
+ "block_ok": [],
+ "lowres_ok": "Nintendo US Switch 2 page montage is the only hardware footage; 1520x700, crop enlargement 1.71x under the 2x cap; YouTube not reachable"
+}
