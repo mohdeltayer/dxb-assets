@@ -1,0 +1,41 @@
+# Branch-only test for the platform step of ops/backoffice/prepare/acquire.py on dxb-render-1 (BUILD.md section 5).
+# Unit tests with the server's prepare venv, then one real attempt each on a YouTube video and an X post with the
+# pinned yt-dlp in a temp venv (no cookies, no login). Files are deleted at the end; nothing is committed.
+name: build-test-acquire
+on:
+  push:
+    branches: ['build/2026-11-07-download-automation']
+permissions:
+  contents: read
+jobs:
+  t:
+    if: github.repository == 'mohdeltayer/dxb-assets'
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 20
+    concurrency: {group: build-test-acquire, cancel-in-progress: false}
+    steps:
+      - uses: actions/checkout@v5
+        with: {fetch-depth: 1, sparse-checkout: ops/backoffice/prepare, persist-credentials: false}
+      - name: Unit tests (server prepare venv when present)
+        run: |
+          cd ops/backoffice/prepare
+          py="$HOME/backoffice/prepare/venv/bin/python"; [ -x "$py" ] || py=python3
+          echo "python: $py"; "$py" -m unittest -q test_prepare 2>&1 | tail -3
+      - name: Real attempts with the pinned yt-dlp
+        run: |
+          set -u
+          node --version || echo "node missing"
+          v="$RUNNER_TEMP/ytv"; python3 -m venv "$v"
+          "$v/bin/pip" install -q --disable-pip-version-check 'yt-dlp[default]==2026.10.21' PyYAML==6.0.2
+          "$v/bin/python" -m yt_dlp --version
+          "$v/bin/python" -m yt_dlp --help | grep -c -- '--js-runtimes' || true
+          d="$RUNNER_TEMP/acq"; mkdir -p "$d"
+          cd ops/backoffice/prepare
+          for u in 'https://www.youtube.com/watch?v=ruIT6Xez6tw' 'https://x.com/fromsoftware_sp/status/2116062995394760959'; do
+            echo "== $u"; start=$(date +%s)
+            PREPARE_PYTHON="$v/bin/python" PREPARE_MAX_MB=800 "$v/bin/python" acquire.py fetch "$u" --dest "$d/$(date +%s%N)" \
+              | python3 -c "import json,sys; r=json.load(sys.stdin); s=r.get('source') or {}; p=s.get('platform') or {}; print(json.dumps({'file': bool(r.get('file')), 'bytes': s.get('bytes'), 'extractor': p.get('extractor'), 'channel': p.get('channel'), 'height': p.get('height'), 'duration': p.get('duration'), 'files': p.get('files'), 'tried': r.get('tried')}, ensure_ascii=False))" || true
+            echo "secs: $(( $(date +%s) - start ))"
+          done
+          ls -la "$d"/*/ 2>/dev/null | grep -v '^total' | awk '{print $5, $9}'
+          rm -rf "$d" "$v"

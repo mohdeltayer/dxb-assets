@@ -8,8 +8,13 @@ Order (adv-20261029-server-handover, phase 1; a rule, not a preference):
   3 steam            Steam store data: each trailer is a streaming manifest ffmpeg reads with no login.
   4 live_feed        an authorised live feed (Twitch via streamlink). Stub: refuses; live shows are the
                      event-capture service's job (ops/backoffice/event-capture) until it is wired here.
-  5 youtube          bounded fallback: one attempt, no retry loops, never cookies. Stub: refuses until Mohammad
-                     answers the 28 Sep rule (YouTube asks for a sign-in; media toolbox E2).
+  5 youtube / x     bounded fallback (adv-20261030-download-automation-and-credits Part A, Mohammad 30 Oct 2026):
+                     yt-dlp with the Node JS runtime, ONE attempt, never cookies or a login, no third-party
+                     downloader. A YouTube video or an X post (a post with several videos returns all of them; the
+                     first is used, the rest are listed). Writes the file plus .info.json, .description and the
+                     thumbnail beside it, named %(extractor_key)s_%(id)s. Off with PREPARE_PLATFORM=off; refuses when
+                     yt-dlp is not installed. The uploader and channel go into the source record, so a person can
+                     check it is the official account before use.
 
 Nothing here logs in, sends cookies or uses a third-party downloader. Every candidate carries its rights record
 (rights.yaml, mirrored in ops/rights-register.md) and the embargo and music notes found on its page.
@@ -32,7 +37,9 @@ VIDEO_EXT = ('.mp4', '.mov', '.m4v')
 STEPS = {1: 'publisher_file', 2: 'press_asset', 3: 'steam', 4: 'live_feed', 5: 'youtube'}
 YOUTUBE = ('youtube.com', 'youtu.be', 'youtube-nocookie.com')
 TWITCH = ('twitch.tv',)
-NO_PAGE = YOUTUBE + TWITCH + ('x.com', 'twitter.com')    # pages not read (login walls, consent pages)
+XPOSTS = ('x.com', 'twitter.com')
+NO_PAGE = YOUTUBE + TWITCH + XPOSTS    # pages not read (login walls, consent pages)
+PLATFORM_MAX_SECS = int(os.environ.get('PREPARE_PLATFORM_MAX_SECS') or 900)   # longest platform video taken
 
 
 class Refused(Exception):
@@ -312,7 +319,11 @@ def plan(item, rights, http=None, steam_lookup=True):
             break
     for u in [url] + found:
         if suffix_match(host_of(u), YOUTUBE):
-            cands.append({'step': 5, 'method': STEPS[5], 'url': u, 'page': u})
+            cands.append({'step': 5, 'method': 'youtube', 'url': u, 'page': u})
+            break
+    for u in [url] + found:
+        if suffix_match(host_of(u), XPOSTS) and '/status/' in u:
+            cands.append({'step': 5, 'method': 'x', 'url': u, 'page': u})
             break
     # dedup (same step and url), keep order by step
     seen, out = set(), []
@@ -354,8 +365,7 @@ def fetch(cand, dst, rights, item_title='', http=None, max_mb=None):
         raise Refused('live feed (Twitch via streamlink) is not wired into prepare yet; live shows go through '
                       'ops/backoffice/event-capture')
     if step == 5:
-        raise Refused('YouTube fallback is off: one attempt, no cookies, only after Mohammad answers the 28 Sep rule '
-                      '(media toolbox E2)')
+        return platform_fetch(cand, dst, rights, max_mb or MAX_MB)
     if step in (1, 2):
         n, ctype = http_stream(cand['url'], dst, max_bytes)
         rec = rights_record(rights, cand.get('publisher'))
@@ -377,5 +387,107 @@ def fetch(cand, dst, rights, item_title='', http=None, max_mb=None):
     raise Refused(f'unknown step {step}')
 
 
+def ytdlp_cmd():
+    """The yt-dlp command (module in this venv, else the binary), or None when it is not installed."""
+    try:
+        import yt_dlp  # noqa: F401
+        return [os.environ.get('PREPARE_PYTHON') or __import__('sys').executable, '-m', 'yt_dlp']
+    except ImportError:
+        b = shutil.which('yt-dlp')
+        return [b] if b else None
+
+
+def platform_args(cmd):
+    """Flags this yt-dlp understands: the JS runtime (YouTube needs it since Nov 2025) only when offered."""
+    try:
+        helptext = subprocess.run(cmd + ['--help'], capture_output=True, text=True, timeout=60).stdout
+    except (OSError, subprocess.TimeoutExpired):
+        helptext = ''
+    out = []
+    if '--js-runtimes' in helptext and shutil.which('node'):
+        out += ['--js-runtimes', 'node']
+    return out
+
+
+def platform_fetch(cand, dst, rights, max_mb):
+    """Step 5: one yt-dlp attempt, no cookies, no login. Returns (source, rights record). Raises Refused."""
+    if os.environ.get('PREPARE_PLATFORM', 'on').lower() == 'off':
+        raise Refused('platform fallback switched off (PREPARE_PLATFORM=off)')
+    cmd = ytdlp_cmd()
+    if not cmd:
+        raise Refused('yt-dlp is not installed (ops/backoffice/prepare/requirements.txt)')
+    folder = os.path.dirname(os.path.abspath(dst)) or '.'
+    os.makedirs(folder, exist_ok=True)
+    tmpl = os.path.join(folder, '%(extractor_key)s_%(id)s.%(ext)s')
+    args = cmd + platform_args(cmd) + [
+        '--ignore-config', '--no-cookies-from-browser', '--no-progress', '--newline', '--retries', '1',
+        '--fragment-retries', '1', '-f', 'bv*[height<=2160]+ba/b[height<=2160]/b', '--merge-output-format', 'mp4',
+        '--max-filesize', f'{int(max_mb)}M', '--match-filter', f'duration < {PLATFORM_MAX_SECS}',
+        '--write-info-json', '--write-description', '--write-thumbnail',
+        '--print', 'after_move:filepath', '-o', tmpl, cand['url']]
+    try:
+        r = subprocess.run(args, capture_output=True, text=True, timeout=PLATFORM_MAX_SECS + 300)
+    except subprocess.TimeoutExpired:
+        raise Refused('yt-dlp timed out (one attempt)')
+    files = [ln.strip() for ln in r.stdout.splitlines() if ln.strip() and os.path.exists(ln.strip())]
+    if r.returncode != 0 or not files:
+        last = (r.stderr.strip().splitlines() or ['no output'])[-1]
+        raise Refused(f'yt-dlp, one attempt: {last[:240]}')
+    first = files[0]
+    info = {}
+    try:
+        with open(os.path.splitext(first)[0] + '.info.json', encoding='utf-8') as f:
+            info = json.load(f)
+    except (OSError, ValueError):
+        pass
+    if os.path.abspath(first) != os.path.abspath(dst):
+        shutil.copy2(first, dst)
+    n = os.path.getsize(dst)
+    who = info.get('channel') or info.get('uploader') or 'unknown account'
+    rec = rights_record(rights, None, [who])
+    rec['rights_review'] = True
+    src = {'step': 5, 'method': cand.get('method') or 'youtube', 'url': cand['url'], 'page': cand.get('page'),
+           'bytes': n, 'platform': {
+               'extractor': info.get('extractor_key'), 'id': info.get('id'), 'title': info.get('title'),
+               'channel': info.get('channel'), 'uploader': info.get('uploader'),
+               'uploader_id': info.get('uploader_id'), 'upload_date': info.get('upload_date'),
+               'duration': info.get('duration'), 'height': info.get('height'),
+               'files': [os.path.basename(x) for x in files], 'info_json': os.path.basename(
+                   os.path.splitext(first)[0] + '.info.json')}}
+    return src, rec
+
+
 def ffmpeg_available():
     return shutil.which('ffmpeg') is not None
+
+
+def _cli(argv):
+    """python3 acquire.py fetch <url> [--dest DIR] [--title T]: try every candidate in the agreed order, one attempt
+    each, stop at the first file; print the source record as JSON (sessions use it for a hand request)."""
+    import sys
+    if len(argv) < 2 or argv[0] != 'fetch':
+        raise SystemExit(_cli.__doc__)
+    url = argv[1]
+    dest = argv[argv.index('--dest') + 1] if '--dest' in argv else os.path.join(os.getcwd(), 'acquired')
+    title = argv[argv.index('--title') + 1] if '--title' in argv else ''
+    rights = load_rights()
+    cands, notes, pn = plan({'url': url, 'title': title}, rights)
+    tried = []
+    for c in cands:
+        dst = os.path.join(dest, 'acquired-%d.mp4' % c['step'])
+        try:
+            src, rec = fetch(c, dst, rights, title)
+            print(json.dumps({'file': dst, 'source': src, 'rights': rec, 'tried': tried, 'notes': notes,
+                              'page_notes': pn}, ensure_ascii=False, indent=1))
+            return 0
+        except Refused as e:
+            tried.append({'step': c['step'], 'method': c['method'], 'refused': str(e)[:300]})
+        except Exception as e:  # noqa: BLE001
+            tried.append({'step': c['step'], 'method': c['method'], 'failed': f'{type(e).__name__}: {str(e)[:200]}'})
+    print(json.dumps({'file': None, 'tried': tried, 'notes': notes}, ensure_ascii=False, indent=1))
+    return 1
+
+
+if __name__ == '__main__':
+    import sys
+    sys.exit(_cli(sys.argv[1:]))
