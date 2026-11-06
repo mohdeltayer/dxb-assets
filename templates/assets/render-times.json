@@ -22597,5 +22597,65 @@
   "min_disk_free_mb": 231498,
   "setup_min": 0.17,
   "story": "nier-automata-steam-update-366gb-nov-5"
+ },
+ {
+  "name": "soulframe-open-preludes-opens-nov-6-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-06T03:49Z",
+  "stages": {
+   "checks": 4.2,
+   "montage": 36.9,
+   "text": 43.6,
+   "audio": 1.3,
+   "outro": 31.2
+  },
+  "total": 117.2,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-06T03:47Z",
+  "finished_at": "2026-11-06T03:49Z",
+  "render_min": 1.95,
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 2.9,
+   "audio_secs": 21.2,
+   "music_pct": 37.7,
+   "leak_pct": 19.7,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 0
+   },
+   "reason": "music stem not clean (leftover 19.7% > 5.0%)",
+   "secs": 3.9
+  },
+  "lifeless": {
+   "score": 0.9,
+   "still_share": 0.011,
+   "longest_still": 0.1,
+   "cuts_per_10s": 4.74,
+   "held_under_text": 0.0,
+   "secs": 19.0,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 210,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1043,
+  "peak_mem_mb": 2293,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 11743,
+  "peak_disk_mb": 14881,
+  "min_disk_free_mb": 231225,
+  "setup_min": 0.18,
+  "story": "soulframe-open-preludes-opens-nov-6"
  }
 ]
