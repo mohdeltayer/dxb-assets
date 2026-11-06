@@ -118,14 +118,19 @@
  "platform": "multi",
  "beat": "update",
  "reel_check": {
-  "source": "yes: Steam Community announcement 'Update Content' 5 Nov 15:26Z (patch notes: Simplified Chinese, Traditional Chinese, Korean) read via Steam news API; the 366 GB install size is a report by VGC, PC Gamer-class outlets and Outputlag (checked: Square Enix and PlatinumGames had not commented; actual download about 107.7 MB); first report VGC 5 Nov; not posted (Publer 7 days, board must_not_repeat)",
-  "angle": "hook: Steam shows NieR:Automata at 366 GB; why now: language update 5 Nov; players here: PC players holding the update; payoff: no comment from Square Enix yet",
-  "type": "REPORT: finding, evidence, consequence, limits; chip تقرير, outlet named",
-  "footage": "Steam Gameplay Trailer of the game (app 524220, 1080p), official, frame sheet checked: no text cards between 3.0 and 31.0 s, rating card at 0 s avoided; one continuous stretch 3.0-21.6",
-  "sound": "the trailer's own sound, one stretch from 3.0 s; no speech in the stretch seen on the sheet; audio split on the runner",
-  "picture": "differs from last 5 Reels",
-  "names": "NieR: Automata Latin; سكوير; في جي سي (VGC)",
-  "sensitive": "none"
+  "source": "yes: yes: Steam Community announcement 'Update Content' 5 Nov 15:26Z (patch notes: Simplified Chinese, Traditional Chinese, Korean) read via Steam news API; the 366 GB install size is a report by VGC, PC Gamer-class outlets and Outputlag (checked: Square Enix and PlatinumGames had not commented; actual download about 107.7 MB); first report VGC 5 Nov; not posted (Publer 7 days, board must_not_repeat)",
+  "angle": "yes: hook: Steam shows NieR:Automata at 366 GB; why now: language update 5 Nov; players here: PC players holding the update; payoff: no comment from Square Enix yet",
+  "type": "yes: REPORT: finding, evidence, consequence, limits; chip تقرير, outlet named",
+  "footage": "yes: Steam Gameplay Trailer of the game (app 524220, 1080p), official, frame sheet checked: no text cards between 3.0 and 31.0 s, rating card at 0 s avoided; one continuous stretch 3.0-21.6",
+  "sound": "yes: the trailer's own sound, one stretch from 3.0 s; no speech in the stretch seen on the sheet; audio split on the runner",
+  "picture": "yes: differs from last 5 Reels",
+  "names": "yes: NieR: Automata Latin; سكوير; في جي سي (VGC)",
+  "sensitive": "n/a: none",
+  "not_posted": "yes: Publer 7 days and board must_not_repeat checked, not posted; ledger find recorded in the story file",
+  "credit": "yes: credit on every clip for its whole duration (0 to 4)",
+  "text_pace": "yes: lines checked by render_job text and reading checks; pace_ok with the reason in the note"
  },
- "note": "Server lane. Frame sheet with timestamps checked locally. Single-outlet report labelled تقرير, outlet named on screen and in the X text, Square Enix not commented."
+ "note": "Server lane. Frame sheet with timestamps checked locally. Single-outlet report labelled تقرير, outlet named on screen and in the X text, Square Enix not commented.",
+ "story": "nier-automata-steam-update-366gb-nov-5",
+ "render_lane": "server"
 }

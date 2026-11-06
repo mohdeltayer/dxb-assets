@@ -1,0 +1,50 @@
+{
+ "id": "nier-automata-steam-update-366gb-nov-5",
+ "title": "NieR:Automata Steam update adds languages; Steam shows 366 GB install size (report)",
+ "game": "NieR:Automata",
+ "status": "building",
+ "genre": [
+  "RPG",
+  "industry/hardware"
+ ],
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Steam Community announcement 'Update Content' (Square Enix, 5 Nov 2026 15:26Z): Simplified Chinese, Traditional Chinese, Korean",
+   "url": "https://store.steampowered.com/news/app/524220"
+  },
+  {
+   "role": "report",
+   "name": "VGC: Nier: Automata's latest update increases game size from 50GB to 366GB",
+   "url": "https://www.videogameschronicle.com/news/nier-automatas-latest-update-increases-game-size-from-50gb-to-366gb/"
+  },
+  {
+   "role": "report",
+   "name": "Outputlag: Nier: Automata's new Steam patch asks for 366GB to install, up from 50GB",
+   "url": "https://outputlag.com/news/nier-automatas-new-steam-patch-asks-for-366gb-to-install-up-from-50gb/"
+  }
+ ],
+ "first_report": "Steam patch notes 5 Nov 2026 15:26Z (languages); the 366 GB size first reported by outlets on 5 Nov (4Gamer Japan 23:40Z, VGC, Outputlag, English first by VGC); digest seq 130 23:52Z",
+ "source_type": "primary",
+ "footage": "Steam Gameplay Trailer of NieR:Automata (app 524220), official, one continuous stretch 3.0 to 21.6 s, frame sheet checked: no text cards or subtitles; no stills",
+ "lane": "Digital Lounge",
+ "beat": "report",
+ "claims": [
+  {
+   "text": "the update adds Simplified Chinese, Traditional Chinese and Korean",
+   "status": "confirmed"
+  },
+  {
+   "text": "Steam shows about 366 GB instead of about 50 GB",
+   "status": "reported by VGC and others, Square Enix not commented"
+  }
+ ],
+ "gate": "gate 00:45Z: exit B for the size (report, outlet named); exit A for the languages",
+ "ledger_find": {
+  "at": "2026-11-06T00:39:42Z",
+  "words": [
+   "nier automata"
+  ],
+  "hits": []
+ }
+}
