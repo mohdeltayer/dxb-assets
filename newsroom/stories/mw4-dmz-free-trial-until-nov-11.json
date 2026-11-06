@@ -2,7 +2,7 @@
  "id": "mw4-dmz-free-trial-until-nov-11",
  "title": "Modern Warfare 4 DMZ free trial until 11 Nov (Activision)",
  "game": "Call of Duty: Modern Warfare 4",
- "status": "in build",
+ "status": "scheduled in Publer 22:00Z (02:00 Dubai 7 Nov) on Instagram, X, Threads",
  "genre": [
   "shooter"
  ],
@@ -46,7 +46,7 @@
    "status": "widely reported (GGRecon, Games of Food); not stated in the official title"
   }
  ],
- "gate": "gate 21:45Z: primary title read (Activision, Steam news hub feed), chip رسمي, time converted PST (UTC-8 after 1 Nov) to Dubai 22:00 Wed 11 Nov",
+ "gate": "gate 21:45Z: primary title read (Activision, Steam news hub feed), chip رسمي, time converted PST (UTC-8 after 1 Nov) to Dubai 22:00 Wed 11 Nov; gate 21:50Z: no denial or change found (Insider Gaming report stands; official CoD blog posts carry no conflicting date); Steam post body not read (WebFetch refused unapproved URL)",
  "ledger_find": {
   "at": "2026-11-06T21:30:37Z",
   "words": [
@@ -68,5 +68,27 @@
    "ok": true,
    "problems": []
   }
- }
+ },
+ "scheduled": "scheduled in Publer 22:00Z (02:00 Dubai 7 Nov) on Instagram, X, Threads; labels tpl:trailer skin:house sound:trailer genre:shooter; IG first comment and X source reply as follow-ups",
+ "sound": "trailer (MW4 Multiplayer trailer own sound, one stretch from 1.4 s of the pinned 110-145 s cut)",
+ "template": "trailer",
+ "skin": "house",
+ "chip": "رسمي",
+ "drafts": {
+  "headline": "طور DMZ مجاني\nحتى 11 نوفمبر",
+  "lines": [
+   "تجربة مجانية لطور DMZ / في Modern Warfare 4",
+   "تنتهي الأربعاء / الساعة 10 مساءً بتوقيت دبي"
+  ],
+  "x": "تجربة مجانية لطور DMZ في Modern Warfare 4 تستمر حتى 11 نوفمبر الساعة 10 مساءً بتوقيت دبي، حسب أكتيفيجن (Activision).",
+  "grammar": "arabic-grammar-review (sonnet subagent) 21:55Z: no required edits; caption «الذي يضيف» changed to «وهو يضيف» on its ambiguity note"
+ },
+ "director_model": "main session (routine)",
+ "versions": [
+  {
+   "v": 1,
+   "out": "cards/2026-11/mw4-dmz-free-trial-until-nov-11-reel-v1.mp4",
+   "run": "render-live 42298312977, 154 s"
+  }
+ ]
 }
