@@ -1,0 +1,156 @@
+# Build-night test for build/2026-11-07-combined-test only (BUILD.md section 5): renders the review-scores example
+# job (jobs/test/) on dxb-render-1 with the branch's code and commits the mp4, strip, sheet and dense strip to
+# cards/test/ on this branch only. Same fonts route as render-live (FONTS_TOKEN, temp folder, deleted). No Publer.
+# Deleted from the branch before the merge: it never reaches main.
+name: build-test-combined-1107
+
+permissions:
+  contents: write
+  actions: read
+
+on:
+  push:
+    branches: ['build/2026-11-07-combined-test']
+
+jobs:
+  live:
+    if: github.repository == 'mohdeltayer/dxb-assets' && github.ref == 'refs/heads/build/2026-11-07-combined-test'
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 25
+    concurrency:
+      group: build-test-combined-1107
+      cancel-in-progress: false
+    env:
+      JOB: jobs/test/ocarina-of-time-review-scores-example.json
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            templates
+            jobs
+            newsroom/stories
+            ops/exemplars
+            ops/build
+          clean: true
+
+      - name: Server
+        env:
+          GH_TOKEN: ${{ github.token }}
+          QUEUED_AT: ${{ github.event.head_commit.timestamp || '' }}
+        run: |
+          test -f "$JOB" || { echo "$JOB is not on main"; exit 1; }
+          cache="${DXB_CACHE:-/var/cache/dxb-render}"; venv="${DXB_VENV:-/home/runner/venv}"
+          {
+            echo "T_START=$(date +%s)"
+            echo "RENDER_LANE=selfhosted"
+            echo "RENDER_QUEUED_AT=$QUEUED_AT"
+            echo "DXB_CACHE=$cache"
+            echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts"
+            echo "DXB_UPLOADS=$RUNNER_TEMP/uploads"
+            echo "YOLO_WEIGHTS=$cache/models/yolov8n.pt"
+          } >> "$GITHUB_ENV"
+          echo "$venv/bin" >> "$GITHUB_PATH"
+          echo "cores $(nproc), $(free -g | awk '/Mem:/{print $2}') GB, $(lsb_release -ds), runner $RUNNER_NAME"
+          python3 - <<'PY' || true
+          import datetime as dt, json, os, urllib.request
+          q = '/repos/%s/actions/runs/%s/attempts/%s/jobs?per_page=100' % (os.environ['GITHUB_REPOSITORY'], os.environ['GITHUB_RUN_ID'], os.environ.get('GITHUB_RUN_ATTEMPT', '1'))
+          r = urllib.request.Request('https://api.github.com' + q, headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'})
+          jobs = json.load(urllib.request.urlopen(r, timeout=30))['jobs']
+          j = ([x for x in jobs if x['name'] == 'live'] or jobs)[0]
+          p = lambda s: dt.datetime.fromisoformat(s.replace('Z', '+00:00'))
+          w = int((p(j['started_at']) - p(j['created_at'])).total_seconds())
+          open(os.path.join(os.environ['RUNNER_TEMP'], 'queue-wait'), 'w').write(str(w))
+          print('queue wait %d s' % w)
+          PY
+
+      - name: Tools (installed by runner-setup.sh; nothing is installed here)
+        run: |
+          missing=""
+          for c in ffmpeg ffprobe tesseract python node; do command -v "$c" >/dev/null || missing="$missing $c"; done
+          [ -z "$missing" ] || { echo "missing on the server:$missing. Run scripts/runner-setup.sh again."; exit 1; }
+          ffmpeg -version | head -1; tesseract --version 2>&1 | head -1; python -V; node --version
+          python -c "import PIL, numpy, soundfile, pedalboard, ultralytics, cv2, torch, torchvision; print('python packages ok, torch', torch.__version__)"
+          test -s "$YOLO_WEIGHTS" || echo "YOLO weights not cached yet; they download on first use"
+          mkdir -p "$DXB_UPLOADS" "$(dirname "$YOLO_WEIGHTS")"
+
+      - name: Fonts (temp folder, outside the workspace)
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          repo="$RUNNER_TEMP/dxb-fonts"
+          git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+          mkdir -p "$DUBAI_FONTS"
+          unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$DUBAI_FONTS"
+          rm -rf "$repo"
+          for w in Light Regular Medium Bold; do test -f "$DUBAI_FONTS/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing from dubai.zip"; exit 1; }; done
+
+      - name: Text check (fails in seconds on a bad wrap)
+        run: python templates/render_job.py text "$JOB"
+
+      - name: HyperFrames (only for a job with an insert, a frame or kit moments)
+        run: |
+          if python -c "import json,sys; sys.exit(0 if json.load(open('$JOB')).get('insert') else 1)" \
+             || python templates/designpass.py need "$JOB"; then
+            cli="$DXB_CACHE/hf/node_modules/.bin/hyperframes"
+            if [ ! -x "$cli" ]; then
+              mkdir -p "$DXB_CACHE/hf" && cd "$DXB_CACHE/hf" && { [ -f package.json ] || echo '{"name":"dxb-hf","private":true}' > package.json; }
+              timeout 240 npm i -s --no-audit --no-fund hyperframes@0.8.143 || echo "HyperFrames install failed; the insert keeps its card, as on the GitHub runner"
+            fi
+            if [ -x "$cli" ]; then
+              timeout 240 "$cli" browser ensure && echo "HF_CLI=$cli" >> "$GITHUB_ENV" || echo "HyperFrames browser not ready; falling back as on the GitHub runner"
+            fi
+          fi
+
+      - name: Audio split (only for a trailer-track job)
+        id: split
+        run: |
+          if python templates/tracksplit.py need "$JOB"; then
+            echo "need=1" >> "$GITHUB_OUTPUT"
+            { echo "SPLIT_CACHE=$DXB_CACHE/tracksplit-stems"; echo "SPLIT_CACHE_NEW=$RUNNER_TEMP/split-cache-new"; } >> "$GITHUB_ENV"
+          fi
+
+      - name: Cocktail Fork (warm cache from setup; same pin as render.yml)
+        if: steps.split.outputs.need == '1'
+        continue-on-error: true
+        timeout-minutes: 4
+        env:
+          SHA: 19b3de827ebc4bfb014570cf92dd32b4ee3b6921
+        run: |
+          d="$DXB_CACHE/cocktail-fork/$SHA"; mkdir -p "$d/checkpoints" "$DXB_CACHE/tracksplit-stems"
+          [ -s "$d/mrx.py" ] || curl -sSfL --retry 3 -o "$d/mrx.py" "https://raw.githubusercontent.com/merlresearch/cocktail-fork-separation/$SHA/mrx.py"
+          w="$d/checkpoints/default_mrx_pre_trained_weights.pth"
+          [ -s "$w" ] || curl -sSfL --retry 3 -o "$w" "https://media.githubusercontent.com/media/merlresearch/cocktail-fork-separation/$SHA/checkpoints/default_mrx_pre_trained_weights.pth"
+          python -c "import pyloudnorm" 2>/dev/null || python -m pip install -q --timeout 60 --retries 3 pyloudnorm==0.1.1
+          python -c "import sys, torch; sys.path.insert(0, '$d'); import mrx; m = mrx.MRX(); m.load_state_dict(torch.load('$w', map_location='cpu', weights_only=True)); print('cocktail fork ready')"
+          echo "COCKTAIL_DIR=$d" >> "$GITHUB_ENV"
+
+      # Render fails the job, before anything is committed, when a fetched source reports decode errors twice,
+      # a shot's source stretch or the finished Reel shows a blocky smear (templates/decodecheck.py).
+      - name: Render
+        timeout-minutes: 15
+        run: |
+          start=$(date +%s)
+          echo "SETUP_SECS=$(( start - T_START ))" >> "$GITHUB_ENV"
+          stats="$RUNNER_TEMP/runner-stats.json"
+          python templates/runner_stats.py start "$stats" || true
+          trap 'python templates/runner_stats.py stop "$stats" || true' EXIT
+          python templates/render_job.py run "$JOB" 2>&1 | tee "$RUNNER_TEMP/render.log"
+          test "${PIPESTATUS[0]}" = 0
+          echo "RENDER_SECS=$(( $(date +%s) - start ))" >> "$GITHUB_ENV"
+          # keep this run's render-times entry; the commit step rebuilds on the latest main
+          python -c "import json, os; e = json.load(open('templates/assets/render-times.json'))[-1]; e['runner'] = 'selfhosted'; e['cores'] = $(nproc); e['job_secs'] = None; q = os.path.join('$RUNNER_TEMP', 'queue-wait'); e['queue_wait_secs'] = int(open(q).read()) if os.path.exists(q) else None; json.dump(e, open('$RUNNER_TEMP/render-time.json', 'w'))"
+          python templates/runner_stats.py stop "$stats" || true
+          python templates/runner_stats.py merge "$stats" "$RUNNER_TEMP/render-time.json" || true
+
+      - name: Gate on the exemplars, all test suites
+        run: |
+          out=$(python -c "import json; print(json.load(open('$JOB'))['out'])"); ls -la "$out"
+          for f in ops/exemplars/*.json; do python templates/buildgate.py "$f" | tail -2; done
+          python -m unittest -q templates/test_buildgate.py templates/test_presubmit.py templates/test_lifeless.py ops/build/test_notify_build.py
+          echo "render secs: $RENDER_SECS"
+
+      - name: Clean up
+        if: always()
+        run: rm -rf "$DUBAI_FONTS" "$RUNNER_TEMP/dxb-fonts" "$DXB_UPLOADS" "$RUNNER_TEMP/out" "$RUNNER_TEMP"/runner-stats.json* cards 2>/dev/null || true
