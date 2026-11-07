@@ -1,0 +1,57 @@
+name: build-test-release1-1108
+# Branch-only test for the 8 Nov build, release 1 (fill check, evidence and coverage). Never merged to main.
+on:
+  push:
+    branches: [build/2026-11-08-release1-test]
+permissions:
+  contents: read
+concurrency:
+  group: build-test-release1-1108
+  cancel-in-progress: false
+jobs:
+  test:
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          sparse-checkout: |
+            templates
+            ops
+            newsroom
+            jobs/test
+            live/2026-11-07/dr-frame.mp4
+          sparse-checkout-cone-mode: false
+          clean: true
+      - name: Suites
+        run: |
+          python3 -m unittest -q templates/test_fillcheck.py templates/test_presubmit.py templates/test_buildgate.py templates/test_lifeless.py ops/test_desk_audit.py ops/build/test_notify_build.py 2>&1 | grep -v '^fill:' | tail -4
+          (cd ops/backoffice/keeper && python3 -m unittest discover -q 2>&1 | tail -3)
+      - name: Fill check on the Danganronpa band-layout job (should refuse)
+        run: |
+          mkdir -p "$RUNNER_TEMP/up" && cp live/2026-11-07/dr-frame.mp4 "$RUNNER_TEMP/up/"
+          cd templates && python3 - <<'PY'
+          import json, os, fillcheck as FC
+          j = json.load(open('../jobs/test/danganronpa-band-layout-check.json'))
+          up = os.environ['RUNNER_TEMP'] + '/up'
+          try:
+              FC.check(j, up); print('UNEXPECTED: passed')
+          except ValueError as e:
+              print('refused as expected:', str(e)[:220])
+          j['lowres_ok'] = {'searched': ['Steam 1080p trailer', 'IGN'], 'result': 'test only'}
+          FC.check(j, up); print('with a named weak source: passed')
+          PY
+      - name: Keeper pass with the Publer read (counts only; nothing pushed, no ids printed)
+        env:
+          KEEPER_NTFY: 'off'
+          KEEPER_COVER_ALARMS: 'off'
+        run: |
+          if [ -r /etc/dxb-keeper/publer.key ]; then echo "publer key file: readable"; else echo "publer key file: not readable by the runner"; fi
+          python3 ops/backoffice/keeper/keeper.py tick --commitments newsroom/commitments.json --out "$RUNNER_TEMP/k" >/dev/null
+          head -14 "$RUNNER_TEMP/k/status.txt"
+          python3 -c "import json;s=json.load(open('$RUNNER_TEMP/k/status.json'));print('alarms now:', [a['title'] for a in s['alarms_now']])"
+          rm -rf "$RUNNER_TEMP/k" "$RUNNER_TEMP/up"
+      - name: Desk audit
+        run: |
+          git fetch -q --depth 1 https://github.com/mohdeltayer/dxb-queue.git desk && git show FETCH_HEAD:desk/board.json > "$RUNNER_TEMP/board.json"
+          python3 ops/desk_audit.py --board "$RUNNER_TEMP/board.json" --runs newsroom/helper-runs.jsonl
