@@ -1,0 +1,175 @@
+{
+ "name": "chill-with-you-anniversary-update-dlc-nov-7",
+ "story": "chill-with-you-anniversary-update-dlc-nov-7",
+ "render_lane": "server",
+ "out": "cards/2026-11/chill-with-you-anniversary-update-dlc-nov-7-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "cwy-pv.mp4",
+   "steam": 3548580,
+   "trailer": "PV_EN2",
+   "start": 0,
+   "seconds": 64
+  }
+ ],
+ "shots": [
+  [
+   "cwy-pv.mp4",
+   1.0,
+   2.0,
+   0.5
+  ],
+  [
+   "cwy-pv.mp4",
+   16.6,
+   3.0,
+   0.5
+  ],
+  [
+   "cwy-pv.mp4",
+   31.9,
+   4.2,
+   0.5
+  ],
+  [
+   "cwy-pv.mp4",
+   36.18,
+   3.79,
+   0.5
+  ],
+  [
+   "cwy-pv.mp4",
+   57.45,
+   2.65,
+   0.5
+  ]
+ ],
+ "lines": [
+  [
+   2,
+   2,
+   [
+    [
+     "تحتفل نيستوبي (Nestopi)\nبعام اللعبة الأول",
+     {}
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "تحديث مجاني لقصة\nالرفيقة Satone",
+     {}
+    ],
+    [
+     "وإضافة مدفوعة تضيف\nالسرير والدرج",
+     {}
+    ]
+   ]
+  ]
+ ],
+ "strip": [
+  [
+   "التحديث المجاني",
+   "25 نوفمبر"
+  ],
+  [
+   "الإضافة المدفوعة",
+   "25 نوفمبر · السعر لم يُعلن"
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   4,
+   "المصدر: نيستوبي (Nestopi)"
+  ]
+ ],
+ "headline": "تحديث قصة مجاني\nفي Chill with You",
+ "label": "رسمي",
+ "source": "Nestopi",
+ "date": "7 Nov 2026",
+ "theme": "stylized",
+ "style": "bold",
+ "template": "split",
+ "skin": "house",
+ "track": [
+  "cwy-pv.mp4",
+  16.5
+ ],
+ "music_only": true,
+ "cut": false,
+ "beat": "update",
+ "reel_check": {
+  "SOURCE 1 primary read": "yes: Nestopi release read in full via Denfami and Automaton (both reproduce it); Steam DLC page app 3718890 read; 7 Nov 2026",
+  "SOURCE 2 not already posted": "yes: ledger find 'chill with you lo-fi' 0 hits; Publer 7-8 Nov scheduled list checked, no Chill with You post",
+  "SOURCE 3 age": "yes: first report is the Nestopi release of 7 Nov, under 24 h",
+  "ANGLE hook": "yes: free story chapter showing Satone a year later; why now: first anniversary announced today; payoff: both on 25 Nov, DLC price not announced",
+  "ANGLE type items (update)": "yes: change = free story update, effect = story set a year later, availability = 25 Nov Steam and phones, DLC price unknown (said on the strip)",
+  "STORY one paragraph": "yes: Nestopi marks a year; the free update tells Satone a year on; a paid DLC adds bed and stairs",
+  "STORY subject before pronoun": "yes: headline names the game, L1 names Nestopi, no pronoun-first line",
+  "STORY release verbs": "yes: no bare تصل with a date; dates sit on the strip as numbers; تأتي معه for the DLC",
+  "STORY names": "yes: نيستوبي (Nestopi) first mention with Latin, Satone and Chill with You as the publisher writes them; Nestopi added to names-ar as Proposed",
+  "WRITING headline": "yes: تحديث قصة مجاني في Chill with You, news word and game in the first five words",
+  "WRITING lines": "yes: three lines read aloud in order, each on its shot",
+  "WRITING caption": "yes: caption names the game by the second sentence, ends #ألعاب #أخبار_الألعاب then two game tags",
+  "WRITING X text": "yes: short, names the company, no hashtags",
+  "WRITING pinned comment": "yes: source line Nestopi release, no link on Instagram",
+  "WRITING urgency": "yes: chip رسمي, official company announcement; not عاجل",
+  "WRITING tone": "yes: neutral",
+  "SOUND own sound": "yes: the trailer's own lo-fi music stem (cwy-pv.mp4 from 16.5 s), music_only; speech: none (faster-whisper found no speech in the 64 s file)",
+  "SOUND no speech under lines": "yes: no speech in the trailer",
+  "SOUND stems last resort": "n/a: music-only stretch of the trailer, split keeps the music stem only",
+  "SOUND our effects": "yes: none over footage; no kit blips",
+  "PICTURE footage first": "yes: Steam trailer PV_EN2, 1920x1080",
+  "PICTURE shows the game": "yes: Satone's room throughout",
+  "PICTURE not the same as last 5 Reels": "yes: picture: Chill with You trailer, no earlier Reel uses it",
+  "PICTURE one requirement per beat": "yes: see decision_log",
+  "PICTURE crop judged": "yes: 9:16 crop at focus 0.5 keeps Satone whole (1 fps crop sheet); no band layout",
+  "PICTURE headline in band": "yes: headline in the band over the soft area",
+  "PICTURE text moves on entry/exit": "yes: reel.py layers",
+  "PICTURE credit": "yes: credits cover shots 0 to 4",
+  "PICTURE lifeless": "n/a: report only"
+ },
+ "decision_log": [
+  {
+   "beat": "hook 0-2",
+   "shot": "cwy-pv 1.0-3.0 (Satone's face, sunset room)",
+   "alternatives": "title cards 6-11 s (black), 12 s Level circle at crop edge",
+   "crop": "focus 0.5, face whole",
+   "music": "trailer music stem from 16.5 s"
+  },
+  {
+   "beat": "2-5 breath after headline",
+   "shot": "cwy-pv 16.6-19.6 (Satone at the window)",
+   "alternatives": "22-26 s To-Do UI cut by the crop",
+   "crop": "focus 0.5",
+   "music": "same stem"
+  },
+  {
+   "beat": "L1 company and one year",
+   "shot": "31.9-36.1 (window turning to night, fish)",
+   "alternatives": "30-31.5 s label 'backgrounds' at the crop edge",
+   "crop": "focus 0.5",
+   "music": "same stem"
+  },
+  {
+   "beat": "L2 free update for Satone's story",
+   "shot": "36.18-39.97 (sunset room, Satone from behind)",
+   "alternatives": "40-43 s label 'ory.' cut at edge",
+   "crop": "focus 0.5",
+   "music": "same stem"
+  },
+  {
+   "beat": "L3 DLC bed and stairs",
+   "shot": "57.45-60.1 (Satone stretching)",
+   "alternatives": "45-57.4 s burnt-in English subtitles; fade to the logo from 60.2 s",
+   "crop": "focus 0.5",
+   "music": "same stem; fade before the end card"
+  }
+ ],
+ "note": "Chill with You anniversary update and DLC (Nestopi press release 7 Nov). Source kind: Steam 1080p trailer (no publisher vertical cut or press kit video found). Satone in the 9:16 crop at focus 0.5. Audio: music stem of the trailer, speech none. sensitive: none. picture: Chill with You trailer, new to the feed. Steam lists the DLC as 24 Nov (US date), Nestopi says 25 Nov (JST): the Reel states 25 Nov as the publisher's date.",
+ "block_ok": []
+}
