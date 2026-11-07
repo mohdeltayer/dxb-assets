@@ -20,6 +20,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 ### Platform holders and publishers
 | Latin | Arabic | Status |
 |---|---|---|
+| Nestopi | نيستوبي | Proposed 7 Nov 2026 (Japanese studio behind Chill with You; first on-screen mention carries the Latin in brackets) |
 | Nintendo | نينتيندو | Approved 26 Sep (never نينتندو; posts as late as 4 Nov used it) |
 | Nintendo of America | نينتيندو أوف أمريكا | In use |
 | Sony | سوني | In use |
