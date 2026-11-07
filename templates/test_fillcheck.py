@@ -2,9 +2,11 @@
 import os
 import subprocess
 import tempfile
+import sys
 import unittest
 
-import fillcheck as FC
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import fillcheck as FC  # noqa: E402
 
 
 def make(path, band=True, secs=8):
