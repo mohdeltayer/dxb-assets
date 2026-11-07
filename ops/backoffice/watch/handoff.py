@@ -99,5 +99,57 @@ def push(workdir, files, message, h, squash_due=False):
     raise PushError('push: ' + scrub(err))
 
 
+def strip_public(name, text):
+    """The public copy (dxb-assets is public): a JSON file loses every `summary` (the copied outlet text); the text
+    files carry titles, links and times only and go as they are."""
+    if not name.endswith('.json'):
+        return text
+    import json
+
+    def strip(x):
+        if isinstance(x, dict):
+            return {k: strip(v) for k, v in x.items() if k != 'summary'}
+        if isinstance(x, list):
+            return [strip(v) for v in x]
+        return x
+    return json.dumps(strip(json.loads(text)), ensure_ascii=False, indent=1)
+
+
+def push_public(workdir, files, message, h):
+    """The public branch of dxb-assets (adv-20261107-watch-token-live): the files go under h['dir'] (watch/) with the
+    outlet text removed, the other files of the branch are kept, and the branch is one commit, force-pushed, exactly
+    as watch-digest.yml publishes it. Returns 'pushed'. Raises PushError; the caller leaves the items pending."""
+    token = h['token_file']
+    if not os.access(token, os.R_OK):
+        raise PushError('token file %s is missing or not readable by %s' % (token, os.environ.get('USER', 'this user')))
+    env = git_env(token)
+    remote, branch, sub = h['remote'], h['branch'], h.get('dir') or 'watch'
+    ident = ['-c', 'user.name=' + h.get('commit_name', 'dxb-watch'), '-c', 'user.email=' + h.get('commit_email', 'noreply@github.com'),
+             '-c', 'commit.gpgsign=false']
+    shutil.rmtree(workdir, ignore_errors=True)
+    os.makedirs(workdir)
+    git(['init', '-q'], workdir, env)
+    git(['remote', 'add', 'origin', remote], workdir, env)
+    fetched = git(['fetch', '-q', '--depth', '1', '--no-tags', 'origin', branch], workdir, env, check=False)
+    if fetched.returncode == 0:
+        git(['checkout', '-q', '--orphan', 'work', 'FETCH_HEAD'], workdir, env)
+    elif 'find remote ref' in (fetched.stderr or ''):
+        git(['checkout', '-q', '--orphan', 'work'], workdir, env)
+    else:
+        raise PushError('fetch: ' + scrub(fetched.stderr))
+    os.makedirs(os.path.join(workdir, sub), exist_ok=True)
+    for name, text in files.items():
+        with open(os.path.join(workdir, sub, name), 'w', encoding='utf-8') as f:
+            f.write(strip_public(name, text))
+    git(['add', '-A'], workdir, env)
+    git(ident + ['commit', '-q', '-m', message], workdir, env)
+    for wait in (0, 2, 4):
+        time.sleep(wait)
+        p = git(['push', '-q', '--force', 'origin', 'HEAD:refs/heads/' + branch], workdir, env, check=False)
+        if p.returncode == 0:
+            return 'pushed'
+    raise PushError('push: ' + scrub(p.stderr or ''))
+
+
 def reset(workdir):
     shutil.rmtree(workdir, ignore_errors=True)

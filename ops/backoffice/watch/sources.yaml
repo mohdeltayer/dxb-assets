@@ -73,11 +73,13 @@ extra:
   # the list is short, one request at a time with a gap, and a 429 backs the source off. Add
   # accounts here only after watching the `failed` line for a day. Set `x_embed: false` below
   # to switch the kind off. Gaming Watch (the scout digest) stays the fallback for X.
-  - {id: x-playstation,   name: "PlayStation (X)",       kind: x, handle: PlayStation,     interval_min: 15, breaking: true}
-  - {id: x-xbox,          name: "Xbox (X)",              kind: x, handle: XBOX,            interval_min: 15, breaking: true}
-  - {id: x-nintendo-us,   name: "Nintendo of America (X)", kind: x, handle: NintendoAmerica, interval_min: 15, breaking: true}
-  - {id: x-rockstar,      name: "Rockstar Games (X)",    kind: x, handle: RockstarGames,   interval_min: 15, breaking: true}
-  - {id: x-playstation-me, name: "PlayStation Middle East (X)", kind: x, handle: PlayStation_ME, interval_min: 15}
+  # X's syndication timeline answers 429 to frequent reads from one address (7 Nov 2026: all five, from the server and
+  # elsewhere): the five accounts are read 60 to 100 minutes apart, staggered so no two fall due together.
+  - {id: x-playstation,   name: "PlayStation (X)",       kind: x, handle: PlayStation,     interval_min: 60, breaking: true}
+  - {id: x-xbox,          name: "Xbox (X)",              kind: x, handle: XBOX,            interval_min: 70, breaking: true}
+  - {id: x-nintendo-us,   name: "Nintendo of America (X)", kind: x, handle: NintendoAmerica, interval_min: 80, breaking: true}
+  - {id: x-rockstar,      name: "Rockstar Games (X)",    kind: x, handle: RockstarGames,   interval_min: 90, breaking: true}
+  - {id: x-playstation-me, name: "PlayStation Middle East (X)", kind: x, handle: PlayStation_ME, interval_min: 100}
 
   # Steam news from the scout source audit (notes/scout-source-audit-2026-09-28.md). The hub feed mixes
   # developer posts with press articles, so it is read as an outlet (a lead, grouped with the others);
@@ -102,16 +104,19 @@ kinds:
 # How the digests reach the news desk. Environment variables of the same names in capitals
 # (WATCH_REMOTE, WATCH_BRANCH, WATCH_EMPTY_PUSH_H, WATCH_PUSH=off) override these.
 handoff:
-  # Recommended: a small private repo made for this, with no workflows, so a push costs no
-  # Actions minutes and the write token cannot reach the publisher. See README, "How the main
-  # session reads the digest" for why dxb-queue is the fallback, not the default.
-  remote: https://github.com/mohdeltayer/dxb-watch.git
-  branch: main
+  # Since 8 Nov 2026 (adv-20261107-watch-token-live): the service pushes the public branch watch-digest of
+  # dxb-assets itself with the token in /etc/dxb-watch/github-token (Contents read and write on dxb-assets only).
+  # public: the outlet text (`summary`) is removed, the files go under watch/, and the branch is one commit,
+  # force-pushed, as watch-digest.yml publishes it (now its dispatch-only fallback). The earlier plan, a private
+  # dxb-watch repo, was not created; WATCH_REMOTE and WATCH_BRANCH still override.
+  remote: https://github.com/mohdeltayer/dxb-assets.git
+  branch: watch-digest
+  public: true
+  dir: watch
   token_file: /etc/dxb-watch/github-token
-  # An hourly digest with nothing new is still pushed (it is the watch's heartbeat) unless the
-  # last push is younger than this many hours. Use 3 on dxb-queue, where every push runs gitleaks.
-  empty_push_min_gap_h: 1
-  # The history is squashed to one commit every this many days, so the repo stays a few hundred KB.
+  # An hourly digest with nothing new is still pushed (it is the watch's heartbeat): a push to watch-digest fires
+  # no workflow (gitleaks and render run on main only), so every hour.
+  empty_push_min_gap_h: 0
   squash_days: 7
   commit_name: dxb-watch
   commit_email: noreply@github.com

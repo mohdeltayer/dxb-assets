@@ -35,7 +35,7 @@ PAGES = [
     ('EA', 'https://www.ea.com/news', r'ea\.com/news/[a-z0-9-]+$', 5),
     ('Ubisoft', 'https://news.ubisoft.com/en-us/', r'news\.ubisoft\.com/en-us/article/[A-Za-z0-9]+/[a-z0-9-]+$', 3),
     ('Riot', 'https://www.riotgames.com/en/news', r'riotgames\.com/en/news/[a-z0-9-]+$', 5),
-    ('The Game Awards', 'https://thegameawards.com/news', r'thegameawards\.com/news/[a-z0-9-]+$', 3),
+    ('The Game Awards', 'https://thegameawards.com/news', r'thegameawards\.com/news/[a-z0-9-]+$', 1),   # 1 (was 3): the page lists two articles between shows (7 Nov 2026)
     ('Famitsu', 'https://www.famitsu.com/', r'famitsu\.com/article/\d{6}/\d+$', 10),
 ]
 
