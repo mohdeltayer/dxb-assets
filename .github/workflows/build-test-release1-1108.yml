@@ -52,7 +52,3 @@ jobs:
           head -14 "$RUNNER_TEMP/k/status.txt"
           python3 -c "import json;s=json.load(open('$RUNNER_TEMP/k/status.json'));print('alarms now:', [a['title'] for a in s['alarms_now']])"
           rm -rf "$RUNNER_TEMP/k" "$RUNNER_TEMP/up"
-      - name: Desk audit
-        run: |
-          git fetch -q --depth 1 https://github.com/mohdeltayer/dxb-queue.git desk && git show FETCH_HEAD:desk/board.json > "$RUNNER_TEMP/board.json"
-          python3 ops/desk_audit.py --board "$RUNNER_TEMP/board.json" --runs newsroom/helper-runs.jsonl
