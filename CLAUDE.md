@@ -2737,6 +2737,14 @@ The One Piece x Fortnite Reel put a small clip in the middle of a blur of itself
    `render_job.check` (so by prerender, t0make and the runner), reads three frames of every portrait footage source and
    fails a shot whose frame holds over 5% blur or under 60% footage; the storybeat template's page is exempt from the
    60% part (the storybook look Mohammad chose), not from the blur part. `fill_ok` waives one shot after a look.
+   Band layout is the weak-source exception (adv-20261107-band-layout-drift, Mohammad 7 Nov 2026, 11:38 Dubai, after
+   the band became the default on Production 2's Reels from 1 Nov): a 16:9 trailer or gameplay source fills 9:16,
+   cropped to the subject (enlargement up to 2x), headline and lines on the soft band over the picture; publisher 9:16
+   cuts are used as they are. The band layout is only for a source that cannot fill inside the 2x cap, the brief names
+   the sources tried, and the headline stays in the band for the whole Reel (a band holding only a credit line is empty
+   space). fillcheck's second test refuses a band-layout shot (15% of the height or more as band) after the headline
+   unless `lowres_ok` names at least two sources tried or reads "A, B: what they had". Exemplars: Silver Palace (the
+   default) and One Piece x Fortnite (the weak-source exception) in `ops/exemplars/`.
 3. Headlines go in the safe band, never over a face or the subject of the shot.
 4. A collaboration or trailer story uses the game's official trailer (Epic for Fortnite), credited on screen; footage
    from the other side of the collaboration (the anime) is illustration only.

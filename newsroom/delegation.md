@@ -427,6 +427,10 @@ agrees each one.
 ## Full-frame check (adv-20261030-one-piece-fortnite-hold, Mohammad 30 Oct 2026)
 Director QA adds two questions on every Reel: is any footage a box in a blur (fail), and does the headline sit over a
 face or the shot's subject (fail)? render_job.check runs templates/fillcheck.py before every render.
+Third question (adv-20261107-band-layout-drift, Mohammad 7 Nov 2026): is the picture filling the frame, and if not,
+why? A 16:9 source fills 9:16 cropped to the subject; the band layout is only for a source that cannot fill inside the
+2x cap, with the sources tried named in lowres_ok and the headline in the band for the whole Reel. fillcheck refuses a
+band-layout shot after the headline without that reason.
 
 ## Promises first (adv-20261030-promise-keeper, Mohammad 30 Oct 2026)
 Every scheduled session (hourly watch, review slots, morning digest, build desk) prints first

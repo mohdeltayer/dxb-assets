@@ -14,6 +14,15 @@ without detail: a blur). A shot fails when blurred rows pass BLUR_MAX of the hei
 (its page is the look Mohammad chose on 30 Oct), when footage rows are under FOOTAGE_MIN of the height.
 `"fill_ok": [[file, start, reason]]` waives one shot after someone has looked at it.
 
+Second test, the band layout is the weak-source exception (adv-20261107-band-layout-drift, Mohammad 7 Nov 2026, 11:38
+Dubai): a 16:9 trailer or gameplay source fills 9:16, cropped to the subject. The full-frame band layout (indigo band
+above and below, footage at its own width) is only for a source that cannot fill 9:16 inside the 2x cap, and the brief
+names the sources tried. So a portrait footage shot that plays after the headline's last frame and carries a designed
+band (BAND_MIN of the height or more) fails unless the job's lowres_ok names the sources tried: a list of at least two
+sources, {"searched": [...], "result": "..."} with at least two, or a string in the form "A, B: what they had". A credit
+line in the band changes nothing (it is still band), and a lowres_ok that names no source never counts. fill_ok waives
+one shot as before; the storybeat page is exempt as before.
+
     python3 fillcheck.py <video> [t ...]     prints the row classes of frames at those times
 """
 import os, subprocess, sys
@@ -22,6 +31,8 @@ import numpy as np
 
 FOOTAGE_MIN = 0.60
 BLUR_MAX = 0.05
+BAND_MIN = 0.15            # a designed band this tall, after the headline, is the band layout
+HEAD_SECS = 3.5            # reel.reel's default head_secs; a job may set its own
 W, H = 270, 480                 # frames are read at a quarter of 1080x1920
 DETAIL, SOFT, FLAT = 2.0, 1.0, 6.0   # segment detail above DETAIL is footage, under SOFT a blur or a band (a band when
                                    # its rows have spread under FLAT); between the two, footage only next to footage
@@ -77,8 +88,32 @@ def _size(path):
     return int(out[0]), int(out[1])
 
 
-def check(job, upload_dir):
-    """Raise ValueError naming every footage shot that sits in a blurred fill or fills under 60% of the height."""
+def weak_source(v):
+    """The sources tried, when lowres_ok names at least two (or 'A, B: result'); else None."""
+    if isinstance(v, dict):
+        got = v.get('searched') or v.get('sources') or v.get('checked') or []
+        got = [x for x in (got if isinstance(got, (list, tuple)) else str(got).split(',')) if str(x).strip()]
+        return ', '.join(map(str, got)) if len(got) >= 2 else None
+    if isinstance(v, (list, tuple)):
+        got = [x for x in v if isinstance(x, str) and x.strip()]
+        return ', '.join(got) if len(got) >= 2 else None
+    if isinstance(v, str) and ':' in v:
+        names = [x for x in v.split(':', 1)[0].split(',') if x.strip()]
+        return v.strip() if len(names) >= 2 and v.split(':', 1)[1].strip() else None
+    return None
+
+
+def check(job, upload_dir, starts=None):
+    """Raise ValueError naming every footage shot that sits in a blurred fill or fills under 60% of the height, and
+    every band-layout shot after the headline without a weak-source reason. starts: each shot's start on the timeline
+    (render_job's timeline); without it the shots are taken back to back."""
+    weak = weak_source(job.get('lowres_ok'))
+    head = float(job.get('head_secs') or HEAD_SECS)
+    if starts is None:
+        starts, t0 = [], 0.0
+        for sh in job.get('shots') or []:
+            starts.append(t0)
+            t0 += float(sh[2])
     waived = {(str(w[0]), round(float(w[1]), 2)) for w in (job.get('fill_ok') or []) if len(w) >= 3 and len(str(w[2])) >= 10}
     storybeat = job.get('template') == 'storybeat'
     bad, sizes = [], {}
@@ -112,10 +147,21 @@ def check(job, upload_dir):
             bad.append(f'shot {i} {f} at {t:.2f} s: {blur:.0%} of the height is a blurred fill')
         elif not storybeat and foot < FOOTAGE_MIN:
             bad.append(f'shot {i} {f} at {t:.2f} s: footage fills {foot:.0%} of the height (under {FOOTAGE_MIN:.0%})')
+        elif not storybeat and flat >= BAND_MIN and i < len(starts) and float(starts[i]) + du > head + 0.05:
+            if weak:
+                print(f'fill: shot {i} band layout after the headline, weak source named: {weak}', flush=True)
+            else:
+                bad.append(f'shot {i} {f} from {max(float(starts[i]), head):.2f} s: band layout ({flat:.0%} band, '
+                           f'footage {foot:.0%}) after the headline with no weak source named; the footage fills 9:16 '
+                           'cropped to the subject unless no copy fills inside the 2x cap, and then lowres_ok names the '
+                           'sources tried ("IGN, publisher press site, Steam: none above 720p") '
+                           '(adv-20261107-band-layout-drift)')
     if bad:
-        raise ValueError('footage in a box or a blurred fill (adv-20261030-one-piece-fortnite-hold): ' + '; '.join(bad)
-                         + '. Use the full-frame treatment (the footage as large as the 2x cap allows between designed '
-                           'bands in the template colour), or fill_ok=[[file, start, reason]] after a look.')
+        raise ValueError('footage does not fill the frame (adv-20261030-one-piece-fortnite-hold, '
+                         'adv-20261107-band-layout-drift): ' + '; '.join(bad)
+                         + '. A 16:9 source fills 9:16 cropped to the subject; the band layout (footage as large as '
+                           'the 2x cap allows between designed bands) is for a weak source with the sources named in '
+                           'lowres_ok; never a blurred fill. fill_ok=[[file, start, reason]] after a look.')
 
 
 if __name__ == '__main__':

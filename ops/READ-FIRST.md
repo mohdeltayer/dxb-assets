@@ -22,9 +22,14 @@ cd dxb-assets && git sparse-checkout set templates jobs newsroom ops arabic
 Add `notes` or `.claude` only when needed. One old file: `git show <rev>:<path>`.
 
 ## 3. Exemplar job files (accepted by Mohammad, last two weeks): `ops/exemplars/`
-- `fortnite-treasure-hunters-one-piece-november-1.json` (trailer): the rebuild after his hold. The game's own official
-  trailer in one stretch in source order, full frame at the 2x cap between solid bands, headline in the band and never
-  over a face, credit on every shot, and our bed with the reason written down (narration under every line).
+- `silver-palace-december-14.json` (split, the default layout): a 16:9 official gameplay trailer filling 9:16, cropped to
+  the subject (enlargement under 2x), headline and lines on the soft band over the picture, the fact strip low, a credit
+  on every shot, the trailer's own sound. Every 16:9 trailer or gameplay Reel looks like this.
+- `fortnite-treasure-hunters-one-piece-november-1.json` (trailer): the WEAK-SOURCE EXCEPTION, not the default. The only
+  official copy was 1280x720, so it cannot fill 9:16 inside the 2x cap: full frame at the cap between solid bands, the
+  headline in the band, the sources tried named in `lowres_ok`. Credit on every shot, our bed with the reason written
+  down (narration under every line). The band layout without a named weak source is refused after the headline
+  (templates/fillcheck.py, adv-20261107-band-layout-drift); a band holding only a credit line is empty space.
 - `suda51-travis-touchdown-will-return-famitsu.json` (interview, people): the news tidbit as a short attributed quote,
   role words and names per the list, a licensed photo box with its credit in the first 3.4 s, and known background
   kept to one line.
