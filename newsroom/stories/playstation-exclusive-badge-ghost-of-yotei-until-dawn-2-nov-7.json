@@ -2,7 +2,7 @@
  "id": "playstation-exclusive-badge-ghost-of-yotei-until-dawn-2-nov-7",
  "title": "PlayStation.com pages for Ghost of Yotei and Until Dawn 2 now carry a 'PlayStation Exclusive' badge",
  "game": "Ghost of Yotei, Until Dawn 2",
- "status": "building",
+ "status": "scheduled in Publer 17:30Z (21:30 Dubai) on instagram, x, threads",
  "genre": [
   "industry/hardware",
   "open world"
@@ -57,5 +57,19 @@
    "badge"
   ],
   "hits": []
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/playstation-exclusive-badge-ghost-of-yotei-until-dawn-2-nov-7-reel-v1.mp4",
+  "blob": "6534dfca657bddb50c81b7964a68f8896ed06d21",
+  "at": "2026-11-07T17:02:23Z",
+  "note": "director 17:04Z (3rd render): strip and dense read. Frame 0: Ghost of Yotei art with headline and chip. The page captures carry their own small text; story lines for the two page shots sit at the top, clear of the page text; the credit sits on a band over the page text and reads. Note: the Ghost of Yotei page shot has the line over the pale sky and the samurai hat (outlined, readable, not ideal). Stills Reel, reason no_footage, sources tried in the job. Sound: our bed neon_c, reason stills. Nothing graphic (Until Dawn 2 key art is a stylised skull and hourglass). Measurements only, not heard by ear.",
+  "checklist": {
+   "job": "jobs/live/playstation-exclusive-badge-ghost-of-yotei-until-dawn-2-nov-7.json",
+   "sha256": "9a337adc1ee1dfba49d514efc96653d822ef976759b4f1e4a4c72c92089b89f5",
+   "ok": true,
+   "problems": []
+  }
+ },
+ "approved": "go: rolling queue; gate 17:00Z: badge read on the live playstation.com (UAE) pages of both games, Push Square report 15:30Z, no Sony statement found"
 }
