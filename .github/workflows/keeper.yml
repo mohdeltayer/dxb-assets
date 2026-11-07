@@ -42,6 +42,7 @@ jobs:
             ops/backoffice/keeper
             newsroom/commitments.json
             newsroom/helper-runs.jsonl
+            newsroom/evergreen.md
             ops/build/releases
           sparse-checkout-cone-mode: false
           persist-credentials: false
