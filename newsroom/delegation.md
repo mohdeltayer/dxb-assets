@@ -259,6 +259,11 @@ pass is cached under `uploads/cache/` before the day (advisor, 14 Oct 2026, rule
 3. Bank evergreen pieces (Ocarina episodes, retro on-this-day, list,
    explainer), each rendered and ready to queue, listed in
    `newsroom/evergreen.md` with what would date it.
+   Mandatory (adv-20261107-keeper-blind-and-lost-submit, 7 Nov 2026): a run
+   that builds no news builds one bank piece while the bank is under 6 ready
+   Reels (the keeper alarms under the floor), and a run whose first line reads
+   `coverage: GAP` ends with a scheduled submit or a banked piece queued; an
+   empty run writes `FAILED RUN` on the board with the leads it rejected.
 Real news always comes first: every verified story landing overnight is
 built and queued at the overnight spacing (60 minutes, 00:00 to 08:00 Dubai;
 constant coverage, 16 Oct 2026); mornings stay at one post per 30 minutes at
