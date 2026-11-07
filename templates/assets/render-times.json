@@ -23484,5 +23484,66 @@
   "min_disk_free_mb": 232144,
   "setup_min": 0.1,
   "story": "wardogs-season-3-sabatulo-november-12-nov-7"
+ },
+ {
+  "name": "chill-with-you-anniversary-update-dlc-nov-7-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-07T15:06Z",
+  "stages": {
+   "checks": 4.5,
+   "montage": 35.2,
+   "text": 29.8,
+   "audio": 1.0,
+   "outro": 20.9
+  },
+  "total": 91.4,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-07T15:05Z",
+  "finished_at": "2026-11-07T15:06Z",
+  "render_min": 1.52,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 7.4,
+   "audio_secs": 36.1,
+   "music_pct": 98.7,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "effects_shots": 0,
+   "mix_secs": 3.1,
+   "secs": 11.5
+  },
+  "lifeless": {
+   "score": 10.6,
+   "still_share": 0.103,
+   "longest_still": 0.5,
+   "cuts_per_10s": 1.94,
+   "held_under_text": 0.032,
+   "secs": 15.5,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 149,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1116,
+  "peak_mem_mb": 2820,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 12899,
+  "peak_disk_mb": 15300,
+  "min_disk_free_mb": 230806,
+  "setup_min": 0.17,
+  "story": "chill-with-you-anniversary-update-dlc-nov-7"
  }
 ]
