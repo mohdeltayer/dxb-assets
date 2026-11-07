@@ -17,6 +17,7 @@ os.environ.update({'PREPARE_HOME': os.path.join(TMP, 'home'), 'PREPARE_STORE': o
                    'PREPARE_WATCH_DB': os.path.join(TMP, 'watch.db'),
                    'PREPARE_WATCH_DIGEST': os.path.join(TMP, 'digest.json')})
 os.environ.setdefault('PREPARE_MODELS', os.path.join(TMP, 'models'))
+os.environ['PREPARE_PLATFORM'] = 'off'      # no test reaches YouTube or X; the fake-yt-dlp test turns it on
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 sys.path.insert(0, HERE)
@@ -190,11 +191,50 @@ class Acquisition(Reset):
         self.assertIsNone(AQ.accept_publisher_file(RIGHTS, 'https://d1.cloudfront.net/t.mp4', 'https://www.ign.com/x'))
         self.assertIsNone(AQ.accept_publisher_file(RIGHTS, 'https://notubisoft.com/t.mp4', None))
 
-    def test_youtube_and_twitch_refuse(self):
-        for step in (4, 5):
-            with self.assertRaises(AQ.Refused):
-                AQ.fetch({'step': step, 'method': AQ.STEPS[step], 'url': 'https://x'}, os.path.join(TMP, 'n.mp4'),
-                         RIGHTS)
+    def test_twitch_refuses_and_platform_switch_off(self):
+        with self.assertRaises(AQ.Refused):
+            AQ.fetch({'step': 4, 'method': AQ.STEPS[4], 'url': 'https://x'}, os.path.join(TMP, 'n.mp4'), RIGHTS)
+        with self.assertRaises(AQ.Refused):     # PREPARE_PLATFORM=off for the whole suite
+            AQ.fetch({'step': 5, 'method': 'youtube', 'url': 'https://x'}, os.path.join(TMP, 'n.mp4'), RIGHTS)
+
+    def test_x_post_is_a_platform_candidate(self):
+        def boom(*a, **k):
+            raise AssertionError('X page read')
+        cands, _, _ = AQ.plan({'url': 'https://x.com/NintendoAmerica/status/123', 'title': 'x'}, RIGHTS, boom,
+                              steam_lookup=False)
+        self.assertEqual([(c['step'], c['method']) for c in cands], [(5, 'x')])
+
+    def test_platform_fetch_with_a_fake_ytdlp(self):
+        import json as _j
+        import sys as _s
+        import tempfile as _t
+        d = _t.mkdtemp()
+        fake = os.path.join(d, 'fake_ytdlp.py')
+        with open(fake, 'w') as f:
+            f.write("import sys, os, json\n"
+                    "if '--help' in sys.argv: print('--js-runtimes'); sys.exit(0)\n"
+                    "tmpl = sys.argv[sys.argv.index('-o') + 1]\n"
+                    "assert '--cookies' not in sys.argv and '--username' not in sys.argv\n"
+                    "p = tmpl.replace('%(extractor_key)s', 'Youtube').replace('%(id)s', 'abc').replace('%(ext)s', 'mp4')\n"
+                    "open(p, 'wb').write(b'0' * 1000)\n"
+                    "json.dump({'extractor_key': 'Youtube', 'id': 'abc', 'title': 'T', 'channel': 'Nintendo of America',"
+                    " 'uploader': 'Nintendo of America', 'upload_date': '20261106', 'duration': 90, 'height': 2160},"
+                    " open(p[:-4] + '.info.json', 'w'))\n"
+                    "print(p)\n")
+        keep = AQ.ytdlp_cmd
+        AQ.ytdlp_cmd = lambda: [_s.executable, fake]
+        os.environ['PREPARE_PLATFORM'] = 'on'
+        try:
+            dst = os.path.join(d, 'out', 'acquired-5.mp4')
+            src, rec = AQ.fetch({'step': 5, 'method': 'youtube', 'url': 'https://www.youtube.com/watch?v=abc'},
+                                dst, RIGHTS)
+        finally:
+            AQ.ytdlp_cmd = keep
+            os.environ['PREPARE_PLATFORM'] = 'off'
+        self.assertTrue(os.path.exists(dst))
+        self.assertEqual(src['platform']['channel'], 'Nintendo of America')
+        self.assertEqual(src['platform']['files'], ['Youtube_abc.mp4'])
+        self.assertTrue(rec['rights_review'])
 
     def test_youtube_page_is_never_read(self):
         def boom(*a, **k):
@@ -334,7 +374,7 @@ class Asset(Reset):
         c = PR.db()
         st, key, detail = PR.prepare_item({'url': 'https://www.youtube.com/watch?v=q', 'title': 'q'}, 'YT', RIGHTS, c)
         self.assertEqual(st, 'refused')
-        self.assertIn('YouTube fallback is off', detail)
+        self.assertIn('platform fallback switched off', detail)
         self.assertFalse(os.path.exists(os.path.join(os.environ['PREPARE_STORE'], key)))
 
     def test_focus_and_nanodet_decode(self):
