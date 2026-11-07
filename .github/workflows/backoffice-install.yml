@@ -70,7 +70,11 @@ jobs:
           if git -C "$R" sparse-checkout list >/dev/null 2>&1; then
             git -C "$R" sparse-checkout add ops/backoffice newsroom templates
           fi
-          GIT_TERMINAL_PROMPT=0 git -C "$R" pull -q --ff-only origin main
+          # The clone is shallow and the keeper's 5-minute fetches move origin/main with --depth 1, so a pull finds
+          # no shared history ("Not possible to fast-forward", 7 Nov). It is a deploy clone with no local work (checked
+          # just above), so it takes main's tip as it is.
+          GIT_TERMINAL_PROMPT=0 git -C "$R" fetch -q --depth 1 origin +refs/heads/main:refs/remotes/origin/main
+          git -C "$R" reset -q --keep refs/remotes/origin/main
           echo "clone at $(git -C "$R" rev-parse --short HEAD) (this run: ${GITHUB_SHA::7})"
 
       - name: Install
