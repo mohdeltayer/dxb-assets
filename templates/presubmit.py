@@ -8,7 +8,8 @@ changes the id and the director check must be run again.
 
     python3 templates/presubmit.py director <story> PASS <out.mp4> --job <job.json> [--note "..."]   # after the director check
     python3 templates/presubmit.py intent <commitment> <platform> <story> <out.mp4>    # before submit_publer_posts
-    python3 templates/presubmit.py result <commitment> <platform> scheduled|failed     # after the submit returns
+    python3 templates/presubmit.py result <commitment> <platform> scheduled|failed --job-status complete|failed
+                                                                     # after get_publer_job_status reads back
     python3 templates/presubmit.py published <commitment> <story> --links <ig> <x> <threads> [--queue <dxb-queue clone>]
     python3 templates/presubmit.py show <commitment>
 
@@ -21,6 +22,12 @@ intent refuses (exit 1) when:
   - that PASS carries no passed checklist (reel_check) from the job that made the file,
   - the same commitment and platform already have an intent that is not marked failed: look the post up in Publer
     (list_publer_posts by caption) first; never submit it again.
+result (adv-20261107-keeper-blind-and-lost-submit, item 1, 7 Nov 2026): a submit is done only when the post's own
+Publer job status has been read back (get_publer_job_status) and reads complete; 'scheduled' refuses without
+--job-status complete, and a job status of failed records 'failed'. Publer's posts list lags (the Danganronpa post was
+missing from it for hours while live), so the list is a secondary read, never the proof. The board 'scheduled' line
+quotes the printed line: platform, job status and the read time. Publer post and job ids stay out of the repository
+and the board (both are public); the server keeper matches posts by network and slot time.
 published writes the story's `published` block, one line in newsroom/published.jsonl and, with --queue, the
 heartbeat (ops/heartbeat.json in the dxb-queue clone; commit and push it there). Intents live in
 newsroom/submissions.jsonl: commit it with the story file after each step.
@@ -128,14 +135,24 @@ def intent(commitment, platform, sid, out):
     print(f'intent recorded: {commitment} {platform}; submit now, then presubmit.py result')
 
 
-def result(commitment, platform, state):
+def result(commitment, platform, state, job_status=None):
     if state not in ('scheduled', 'failed', 'published'):
         raise SystemExit('presubmit: state is scheduled, failed or published')
+    js = (job_status or '').lower()
+    if state in ('scheduled', 'published') and js != 'complete':
+        raise SystemExit(f'presubmit refused: {state} needs the job status read back: call get_publer_job_status on '
+                         'the submit until it reads complete, then --job-status complete (a failed job: --job-status '
+                         'failed and state failed). The posts list lags; it is not the proof.')
+    if js == 'failed' and state != 'failed':
+        raise SystemExit('presubmit refused: the job status reads failed; record state failed')
     prev = last_state(commitment, platform)
     if not prev:
         raise SystemExit(f'presubmit: no intent for {commitment} {platform}')
-    append(LOG, dict(prev, state=state, at=now()))
-    print(f'{commitment} {platform}: {state}')
+    at = now()
+    append(LOG, dict(prev, state=state, at=at, job_status=js or None, job_read_at=at if js else None))
+    print(f'{commitment} {platform}: {state}' + (f'; Publer job status {js} (read {at[11:16]}Z)' if js else '')
+          + ('; board line: "scheduled: ' + commitment + ' ' + platform + f', job status complete {at[11:16]}Z"'
+             if state == 'scheduled' else ''))
 
 
 def published(commitment, sid, links, queue=None):
@@ -186,8 +203,9 @@ if __name__ == '__main__':
         director(a[1], a[2], a[3], note, jobp)
     elif cmd == 'intent' and len(a) == 5:
         intent(*a[1:5])
-    elif cmd == 'result' and len(a) == 4:
-        result(*a[1:4])
+    elif cmd == 'result' and len(a) >= 4:
+        js = a[a.index('--job-status') + 1] if '--job-status' in a else None
+        result(a[1], a[2], a[3], js)
     elif cmd == 'published' and len(a) >= 3:
         links = a[a.index('--links') + 1:a.index('--links') + 4] if '--links' in a else []
         q = a[a.index('--queue') + 1] if '--queue' in a else None

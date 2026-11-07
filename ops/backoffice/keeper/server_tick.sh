@@ -17,6 +17,10 @@ PY=${KEEPER_PYTHON:-python3}
 mkdir -p "$KHOME"
 export KEEPER_MODE=${KEEPER_MODE:-alarm-only}
 export KEEPER_TOPIC_FILE=${KEEPER_TOPIC_FILE:-/etc/dxb-backup/ntfy-topic}
+# Coverage and bank alarms push from GitHub's keeper.yml only (one push per gap); the server keeps them in its status.
+export KEEPER_COVER_ALARMS=${KEEPER_COVER_ALARMS:-off}
+# Publer as a second evidence source (adv-20261107-keeper-blind-and-lost-submit): the posts-scope key file, if readable.
+export KEEPER_PUBLER_KEY_FILE=${KEEPER_PUBLER_KEY_FILE:-/etc/dxb-keeper/publer.key}
 now=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 
 if timeout 60 git -C "$REPO" fetch -q --depth 1 origin +refs/heads/main:refs/remotes/origin/main 2>/dev/null &&
