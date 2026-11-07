@@ -92,7 +92,9 @@
    [
     [
      "يبدأ الحدث في 10 نوفمبر\nويستمر حتى 1 ديسمبر",
-     {}
+     {
+      "size": 60
+     }
     ]
    ]
   ],
@@ -102,7 +104,9 @@
    [
     [
      "تتعرض خريطة Storm Point\nلضربات أشعة Godzilla",
-     {}
+     {
+      "size": 60
+     }
     ]
    ]
   ],
@@ -111,8 +115,10 @@
    3,
    [
     [
-     "في مناطق الضربات صندوق\nيمنح نسخة خاصة من Devotion",
-     {}
+     "في مناطق الضربات\nصندوق يمنح نسخة\nخاصة من Devotion",
+     {
+      "size": 60
+     }
     ]
    ]
   ],
@@ -122,7 +128,9 @@
    [
     [
      "عشرة أزياء جديدة\nللشخصيات بطابع Godzilla",
-     {}
+     {
+      "size": 60
+     }
     ]
    ]
   ],
@@ -132,7 +140,9 @@
    [
     [
      "سكين Dorsal Dagger تشبه\nزعانف ظهر Godzilla",
-     {}
+     {
+      "size": 60
+     }
     ]
    ]
   ]
@@ -219,7 +229,7 @@
   "picture": "yes: EA images, none used in the last 5 Reels (PoE2 frame, Probably Stolen, MW4 multiplayer, Soulframe, NieR); picture: drop-assets.ea.com event screens",
   "crop": "yes: focus per beat from EA's own crop points; subject in the 9:16 column",
   "credit": "yes: credit on shots 0 to 5, opens on an Arabic word",
-  "text_pace": "yes: headline on shot 0 (3.6 s); five lines of 39 to 44 characters on 4.0 s shots, visual lines 16 to 24 characters",
+  "text_pace": "yes: headline on shot 0 (3.6 s); five lines of 39 to 44 characters on 4.0 s shots at size 60; line 3 in three visual lines after the runner's safe-zone refusal",
   "graphic": "n/a: no blood or gore in the stills (cartoon heat-ray action)",
   "not_posted": "yes: Publer and ledger clear; previous Apex post was ALGS 2 Nov",
   "arabic": "yes: arabic-grammar-review subagent 04:50Z: no required edits; applied its meaning fix on line 3 (نسخة خاصة من Devotion)"
