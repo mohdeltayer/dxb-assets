@@ -11,7 +11,7 @@
   "live service/MMO"
  ],
  "category": "event",
- "status": "building (hourly watch 04:31Z run)",
+ "status": "scheduling in Publer 09:05 Dubai 7 Nov (instagram, x, threads)",
  "sources": [
   {
    "role": "primary",
@@ -80,5 +80,21 @@
    "godzilla"
   ],
   "hits": []
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/apex-legends-godzilla-event-november-10-nov-7-reel-v2.mp4",
+  "blob": "9b6c52bc07e2b29b2655466d4386a3f29b4e0b52",
+  "at": "2026-11-07T04:49:00Z",
+  "note": "director look by the hourly-watch run on the v2 dense strip and sheet (second round): cover shows Godzilla firing the beam under the headline; dates on the care-package screen with Godzilla behind; Storm Point line on the singed POI; Devotion beat shows the beam with a cut APEX/GODZILLA corner logo at the top edge, passed with this note; skins on the roster; Dorsal Dagger close-up; lines readable, credit on every shot, our bed (stills), no gore; 25 s plus end card",
+  "checklist": {
+   "job": "jobs/live/apex-legends-godzilla-event-november-10-nov-7.json",
+   "sha256": "b84a0bde1cba01d1cc93815fd627a4dc165f39ef2defa81c0f6a92d9b715f20e",
+   "ok": true,
+   "problems": []
+  }
+ },
+ "gate": "gate 04:50Z: EA's own post 'Survive a Godzilla attack' re-read (5 Nov): 10 Nov to 1 Dec, Storm Point Heat Ray strikes, Care Package Devotion, free and 950 AC tracks, 10 legend skins, Dorsal Dagger, platforms; no update or new date in the search; exit A, chip رسمي",
+ "director_model": "the run itself (opus), two rounds",
+ "sound": "our bed (stills Reel)"
 }
