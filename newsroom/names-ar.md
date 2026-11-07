@@ -38,6 +38,8 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Epic Games | إيبك غيمز | Check: posts used both إيبك غيمز and إيبك جيمز |
 | HoYoverse | هويوفيرس | Proposed 3 Nov |
 | NetEase Games | نت إيز غيمز | In use |
+| Electronic Arts | إلكترونيك آرتس | In use (posts 5 and 6 Nov; added 7 Nov by Production 2) |
+| Respawn | ريسبون | Proposed 7 Nov (Production 2) |
 | Marvelous | مارفيلوس | In use |
 | Atari | أتاري | In use |
 | Playstack | بلايستاك | Proposed 3 Nov |
