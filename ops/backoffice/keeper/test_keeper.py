@@ -344,3 +344,22 @@ class Evidence(unittest.TestCase):
 
     def test_bank_floor_is_six(self):
         self.assertEqual(K.BANK_MIN, 6)
+
+
+class Formats(unittest.TestCase):
+    """7 Nov audit: Production 2 writes slots as '2026-11-07 12:15 Dubai'; 36 rows were unreadable."""
+    def test_dubai_slot_form(self):
+        self.assertEqual(K.parse_time('2026-11-07 12:15 Dubai'), K.parse_time('2026-11-07T08:15:00Z'))
+        self.assertEqual(K.parse_time('2026-11-07 06:40 Dubai (T0, published at once)'), K.parse_time('2026-11-07T02:40:00Z'))
+
+    def test_old_rows_never_page(self):
+        os.environ['KEEPER_NTFY'] = 'off'
+        rows = [row('old', '2026-11-01T03:00+04:00'), row('live', '2026-11-01T15:40+04:00')]   # 23:00Z the day before; 11:40Z
+        st = K.summarise(rows, NOW, 'alarm-only')
+        raised, _ = K.raise_alarms(st, {}, NOW)
+        self.assertEqual([a['key'].split('|')[0] for a in raised], ['live'])
+
+    def test_scheduled_slot_that_passed_counts_for_coverage(self):
+        rows = [row('s', '2026-11-01T15:30+04:00', status='submitted to Publer 3/3; in the scheduled list')]
+        st = K.summarise(rows, NOW, 'alarm-only')
+        self.assertEqual(K.last_published(st['rows'], rows, None, NOW), K.parse_time('2026-11-01T11:30:00Z'))
