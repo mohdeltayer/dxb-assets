@@ -2,7 +2,7 @@
  "id": "sony-pulse-elevate-speakers-delay-nov-7",
  "title": "Sony delays the Pulse Elevate wireless speakers (due 12 Nov) over a production issue",
  "game": "PlayStation Pulse Elevate",
- "status": "building",
+ "status": "scheduled in Publer 18:15Z (22:15 Dubai) on instagram, x, threads",
  "genre": [
   "industry/hardware"
  ],
@@ -52,5 +52,19 @@
    "delay"
   ],
   "hits": []
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/sony-pulse-elevate-speakers-delay-nov-7-reel-v1.mp4",
+  "blob": "7882ea0f76596cf7d86b28434e9b257b7c7cc64d",
+  "at": "2026-11-07T17:45:51Z",
+  "note": "director 17:46Z: strip and dense read. Frame 0: the PlayStation product film with headline and chip تأجيل (dark, logo; hardware hook). Each speaker is framed whole at 9:16, lines readable on the white clip (outlined), the strip carries the old date and the unknown new one, credit from frame 0. Sound: our bed, reason: the official product loops have no audio. Nothing graphic. Measurements only, not heard by ear.",
+  "checklist": {
+   "job": "jobs/live/sony-pulse-elevate-speakers-delay-nov-7.json",
+   "sha256": "5ab444136a2ab74d758573423012e7fc4a9dbad43bbfb1d088c46e78a98a7b98",
+   "ok": true,
+   "problems": []
+  }
+ },
+ "approved": "go: rolling queue; gate 17:30Z: PlayStation Blog update read in full, statement quoted, no newer update found"
 }
