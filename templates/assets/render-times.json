@@ -23545,5 +23545,66 @@
   "min_disk_free_mb": 230806,
   "setup_min": 0.17,
   "story": "chill-with-you-anniversary-update-dlc-nov-7"
+ },
+ {
+  "name": "chill-with-you-anniversary-update-dlc-nov-7-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-07T15:14Z",
+  "stages": {
+   "checks": 3.2,
+   "montage": 31.1,
+   "text": 26.7,
+   "audio": 0.9,
+   "outro": 12.9
+  },
+  "total": 74.8,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-07T15:12Z",
+  "finished_at": "2026-11-07T15:14Z",
+  "render_min": 1.25,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 7.0,
+   "audio_secs": 34.1,
+   "music_pct": 98.8,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 1,
+    "miss": 3
+   },
+   "effects_shots": 0,
+   "mix_secs": 2.2,
+   "secs": 10.0
+  },
+  "lifeless": {
+   "score": 12.6,
+   "still_share": 0.079,
+   "longest_still": 0.5,
+   "cuts_per_10s": 1.43,
+   "held_under_text": 0.036,
+   "secs": 14.0,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 128,
+  "queue_wait_secs": 1,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1078,
+  "peak_mem_mb": 2254,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 12969,
+  "peak_disk_mb": 15141,
+  "min_disk_free_mb": 230965,
+  "setup_min": 0.17,
+  "story": "chill-with-you-anniversary-update-dlc-nov-7"
  }
 ]
