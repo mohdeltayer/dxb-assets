@@ -58,6 +58,7 @@ PRODUCTION = ('queued', 'claimed', 'ready', 'rendered', 'qc_passed', 'blocked', 
 MATCH_MIN = 10              # a Publer post within 10 minutes of a row's slot, on the row's network, is that row's post
 MISS_GAP_MIN = 10           # two Publer reads this far apart must both miss a post before it counts as missing
 T_CLAIM = -20               # a claimed slot with no post 20 minutes before it alarms
+ALARM_MAX_AGE_H = 6         # a row whose slot passed more than 6 hours ago is reported, never pushed
 COVER_DAY_MIN, COVER_NIGHT_MIN = 60, 120
 DELIVERY = ('not_submitted', 'submitting', 'scheduled', 'published', 'failed', 'uncertain')
 
@@ -69,7 +70,11 @@ def parse_time(s):
     """ISO time with an offset (Dubai slots: 2026-10-31T00:00+04:00). A time without an offset is Dubai time."""
     if not s:
         return None
-    s = str(s).strip().replace('Z', '+00:00')
+    s = str(s).strip()
+    d = re.match(r'^(\d{4}-\d\d-\d\d)[ T](\d\d?):(\d\d)\s*(Dubai|GST)\b', s, re.I)
+    if d:                                    # Production 2's rows: "2026-11-07 12:15 Dubai" (7 Nov audit: 36 rows unread)
+        s = '%sT%02d:%s+04:00' % (d.group(1), int(d.group(2)), d.group(3))
+    s = s.replace('Z', '+00:00')
     m = re.match(r'^(\d{4}-\d\d-\d\dT\d\d:\d\d)(:\d\d)?(\.\d+)?([+-]\d\d:?\d\d)?$', s)
     if not m:
         return None
@@ -369,6 +374,9 @@ def raise_alarms(status, state, now):
     for a in status['rows']:
         if not a.get('alarm'):
             continue
+        t = parse_time(a.get('slot'))
+        if t and now - t > timedelta(hours=ALARM_MAX_AGE_H):
+            continue                       # an old row stays in the status, it never pages (one push per live slot)
         k = alarm_key(a)
         if k in sent:
             continue
@@ -640,13 +648,19 @@ def read_publer(rows, state, now, reader=None):
 # ---------------------------------------------------------------------------------------------
 # Coverage (item 5) and the bank floor (item 6)
 # ---------------------------------------------------------------------------------------------
-def last_published(status_rows, rows, publer_last=None):
-    """Latest published time: a row's delivery 'at', else the slot of a row whose every platform is published,
-    else Publer's own latest published post."""
+def last_published(status_rows, rows, publer_last=None, now=None):
+    """Latest post time: a row's delivery 'at', else the slot of a row published (or scheduled on every platform with
+    its slot passed), else Publer's own latest published post."""
     by_id = {r.get('id'): r for r in rows}
     best = publer_last
+    now = now or datetime.now(timezone.utc)
     for a in status_rows:
-        if a['stage'] != 'published' and a.get('commitment') not in ('fulfilled_on_time', 'fulfilled_late'):
+        slot = parse_time(a.get('slot'))
+        delivered = a['stage'] == 'published' or a.get('commitment') in ('fulfilled_on_time', 'fulfilled_late')
+        # a row scheduled on every platform whose slot has passed counts as a post for coverage, even before
+        # production confirms it published (the confirmation gap is its own alarm, 'publication unconfirmed')
+        went = a['stage'] in ('scheduled', 'publication unconfirmed') and slot is not None and slot <= now
+        if not (delivered or went):
             continue
         r = by_id.get(a['id']) or {}
         ats = [parse_time(d.get('at')) for d in delivery_of(r).values() if d.get('at')]
@@ -743,13 +757,13 @@ def cmd_tick(args):
         status['bank_ready'], bl = bank_line(args.commitments)
         status['six'].append(bl)
         status['six'].append(pline)
-        cline, cgap, cover_over = coverage(last_published(status['rows'], rows, plast), now)
+        cline, cgap, cover_over = coverage(last_published(status['rows'], rows, plast, now), now)
         status['coverage'] = cline
         status['coverage_gap_min'] = cgap
         status['six'].insert(0, cline)
         extra = []
         if cover_over:
-            lp = last_published(status['rows'], rows, plast)
+            lp = last_published(status['rows'], rows, plast, now)
             extra.append({'key': 'cover|' + lp.strftime('%Y-%m-%dT%H:%MZ'), 'title': 'Coverage gap: %d min' % cgap,
                           'lines': [cline, 'Production 2: the next run ends with a scheduled submit or a banked piece queued.']})
         if status['bank_ready'] is not None and status['bank_ready'] < BANK_MIN:
@@ -801,7 +815,7 @@ def cmd_line(args):
         return 2
     st = summarise(rows_of(c), now, 'alarm-only')
     print(st['line'] + ' (counted locally, not from the keeper)')
-    print(coverage(last_published(st['rows'], rows_of(c)), now)[0])
+    print(coverage(last_published(st['rows'], rows_of(c), None, now), now)[0])
     return 0
 
 
