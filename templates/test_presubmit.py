@@ -59,6 +59,20 @@ class Pre(unittest.TestCase):
         PS.result('c1', 'instagram', 'failed')
         PS.intent('c1', 'instagram', 's1', OUT)
 
+    def test_scheduled_needs_the_job_status(self):
+        PS.director('s1', 'PASS', OUT, job=self.write(self.good))
+        PS.intent('c3', 'x', 's1', OUT)
+        with self.assertRaises(SystemExit):
+            PS.result('c3', 'x', 'scheduled')                    # the list alone is not proof
+        with self.assertRaises(SystemExit):
+            PS.result('c3', 'x', 'scheduled', 'working')
+        with self.assertRaises(SystemExit):
+            PS.result('c3', 'x', 'scheduled', 'failed')
+        PS.result('c3', 'x', 'scheduled', 'complete')
+        last = PS.last_state('c3', 'x')
+        self.assertEqual((last['state'], last['job_status']), ('scheduled', 'complete'))
+        self.assertTrue(last['job_read_at'])
+
     def test_intent_refused_without_checklist(self):
         s = dict(STORY, director_check={'verdict': 'PASS', 'out': OUT, 'blob': 'b' * 40})
         (PS.STORIES / 's1.json').write_text(json.dumps(s))

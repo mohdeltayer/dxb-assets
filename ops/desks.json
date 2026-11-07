@@ -54,6 +54,26 @@
      "auto_approve": true,
      "started_id": null,
      "evidence": "shortlist card or board line by 17:30"
+    },
+    {
+     "name": "posting session :30 (even-hour slots)",
+     "session": "fresh",
+     "period_min": 60,
+     "dead_after_runs": 2,
+     "board_from": "^Production 2( \\(.*:30.*\\))?$",
+     "runs_match": ":30",
+     "evidence": "board handoff or helper-runs line each run",
+     "note": "slot rule (adv-20261107-keeper-blind-and-lost-submit): owns even-hour slots; a claimed slot not delivered is released by a board line within 20 minutes"
+    },
+    {
+     "name": "posting session :35 (odd-hour slots)",
+     "session": "fresh",
+     "period_min": 60,
+     "dead_after_runs": 2,
+     "board_from": ":35",
+     "runs_match": ":35",
+     "evidence": "board handoff or helper-runs line each run",
+     "note": "slot rule (adv-20261107-keeper-blind-and-lost-submit): owns odd-hour slots; same release rule"
     }
    ],
    "housekeeping": [

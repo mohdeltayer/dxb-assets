@@ -23,6 +23,12 @@ Duties: posting lane (build, schedule, publish); hourly watch; review preps 06:3
 - Task: review prep 10:00, 09:25 Dubai, fresh, automatic approval, evidence: shortlist card or board line by 10:00
 - Task: review prep 14:00, 13:25 Dubai, fresh, automatic approval, evidence: shortlist card or board line by 14:00
 - Task: review prep 17:30, 16:55 Dubai, fresh, automatic approval, evidence: shortlist card or board line by 17:30
+- Task: posting session :30 (even-hour slots), hourly, fresh, evidence: board handoff or helper-runs line each run; DEAD in the desk audit after 2 silent runs
+- Task: posting session :35 (odd-hour slots), hourly, fresh, evidence: board handoff or helper-runs line each run; DEAD in the desk audit after 2 silent runs
+- Slot rule (adv-20261107-keeper-blind-and-lost-submit, 7 Nov 2026): the :30 session owns even-hour slots, the :35 session odd-hour slots; a claimed slot not delivered is released by a board line within 20 minutes; the keeper alarms on a claimed slot with no post 20 minutes before it.
+- Submit evidence: a submit is done when get_publer_job_status reads complete and `presubmit.py result ... --job-status complete` is recorded; the board line quotes it. Publer's list lags; the keeper calls a post missing only when two reads 10 minutes apart agree. No Publer ids in public files.
+- Coverage: every run's first line is the keeper's coverage line; past 60 minutes by day or 120 by night without a published post, the run ends with a scheduled submit or a banked piece; an empty run writes FAILED RUN on the board with the leads it rejected.
+- Bank floor: 6 ready Reels in newsroom/evergreen.md; under it is a keeper alarm, and the idle card's bank step is mandatory in any run that builds nothing.
 - Housekeeping: disk cleanup: MISSING (never carried over when posting moved to Production 2 (its disk filled overnight 3 to 4 Nov); Production 2 to add a daily task running newsroom/disk_cleanup.sh, or a preflight clean in every fresh task)
 - Preflight: disk (under 5 GB: clean first; under 2 GB: alarm on the board and stop); repo at origin/main; board readable; then the started line; Publer answers (list_publer_posts)
 - Alarm: keeper: 90 minutes without a Production 2 watch run (planned, build night 5 to 6 Nov)
@@ -74,6 +80,8 @@ Duties: Inbox card prod-YYYYMMDD-morning-digest by 07:30 Dubai; desk audit line 
 - Task: keeper.yml, GitHub schedule, workflow
 - Preflight: server-check.yml
 - Alarm: slot with no evidence 60 minutes ahead (alarm-only)
+- Evidence (7 Nov 2026): on the server, Publer's own scheduled and published posts (posts-scope key file /etc/dxb-keeper/publer.key) matched by network and slot time; a post production did not log is a yellow evidence-gap alarm; missing only after two reads 10 minutes apart. Ids stay in the server's private state.
+- Alarm: claimed slot with no post 20 minutes before it; coverage gap (60 min by day, 120 by night; pushed by keeper.yml); bank under 6 ready Reels (keeper.yml, once a day)
 
 ## Server watch (dxb-render-1)
 

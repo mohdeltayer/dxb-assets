@@ -38,6 +38,13 @@ Add `notes` or `.claude` only when needed. One old file: `git show <rev>:<path>`
   waiver explained after a look at the frames.
 
 ## 4. A build, step by step (each step is checked: render_job refuses a job that skipped one)
+First line of every run (adv-20261107-keeper-blind-and-lost-submit, 7 Nov 2026): the keeper's line and its coverage
+line, `git fetch -q --depth 1 origin +keeper-status:refs/remotes/origin/keeper-status && git show
+origin/keeper-status:keeper/status.txt | head -2`. When it reads `coverage: GAP`, the run ends with a scheduled submit
+or a banked piece queued: no-build is not an allowed outcome. A run that ends empty writes `FAILED RUN` on the board
+with each lead it rejected and why. Slots: the :30 session owns even-hour slots, the :35 session odd-hour slots; a
+claimed slot that will not be delivered is released by a board line within 20 minutes (the keeper alarms on a claimed
+slot with no post 20 minutes before it).
 0. Digest, always fresh from GitHub, never from a file on disk:
    `git fetch -q --depth 1 origin +watch-digest:refs/remotes/origin/watch-digest && git show origin/watch-digest:watch/digest.json`
    (or https://raw.githubusercontent.com/mohdeltayer/dxb-assets/watch-digest/watch/digest.json); check `generated_at`.
@@ -61,13 +68,18 @@ Add `notes` or `.claude` only when needed. One old file: `git show <rev>:<path>`
    `python3 templates/presubmit.py director <story> PASS <out.mp4> --job <your copy of the job>` (the gate runs again
    on the job; its "out" must be this file).
 6. Per platform: `presubmit.py intent <commitment> <platform> <story> <out.mp4>` (refuses without a director PASS
-   with a passed checklist for this exact file, and refuses a second submit), then `submit_publer_posts`, then `presubmit.py result ...
-   scheduled|failed`. A failed or timed-out submit: look the post up in Publer before anything else.
+   with a passed checklist for this exact file, and refuses a second submit), then `submit_publer_posts`, then
+   `get_publer_job_status` on that submit until it reads complete (or failed), then `presubmit.py result <commitment>
+   <platform> scheduled --job-status complete` (failed: `failed --job-status failed`). The submit is done only then; the
+   posts list lags and is never the proof. A failed or timed-out submit: read the job status, then look the post up in
+   Publer twice 10 minutes apart before anything else; never submit again on one empty list. No Publer ids in any file.
 7. Records: the `newsroom/commitments.json` row, `python3 templates/formats.py add`; after publishing,
    `presubmit.py published <commitment> <story> --links <ig> <x> <threads> --queue <dxb-queue clone>` (story file,
    newsroom/published.jsonl, heartbeat), then push both repos.
-8. Board: one handoff on `desk/board.md` and `desk/board.json`: "built and scheduled: <story>, <slot>".
-   Keep at least 3 finished undated Reels in `newsroom/evergreen.md` (Status "ready"); the keeper flags fewer.
+8. Board: one handoff on `desk/board.md` and `desk/board.json`: "built and scheduled: <story>, <slot>, job status
+   complete HH:MMZ on <platforms>" (the line presubmit prints).
+   Keep at least 6 finished undated Reels in `newsroom/evergreen.md` (Status "ready"); fewer is a keeper alarm, and a
+   run that builds no news builds a bank piece (the idle card's bank step is mandatory then).
 
 ## 5. Never
 - Clone dxb-assets in full (33 GB), or run `git log --stat`, `-p` or blame (each pulls media blobs).

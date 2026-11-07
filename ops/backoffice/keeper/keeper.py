@@ -20,6 +20,20 @@ the slot check. Older rows that carry only a free-text `evidence` are read as be
 Environment: KEEPER_MODE (alarm-only, the default, or fallback), KEEPER_NTFY (on or off), KEEPER_NTFY_TOPIC (the
 topic itself, from an Actions secret) or KEEPER_TOPIC_FILE (a root-owned file on the server). The topic is never
 printed or logged.
+
+Evidence and coverage (adv-20261107-keeper-blind-and-lost-submit, 7 Nov 2026, with its corrections of 07:30Z and 13:10Z):
+  - Publer as a second evidence source, on the server only: with the posts-scope key file KEEPER_PUBLER_KEY_FILE
+    (default /etc/dxb-keeper/publer.key; workspace by name, KEEPER_PUBLER_WORKSPACE) each pass reads Publer's scheduled
+    and published posts and matches them to rows by network and slot time (within MATCH_MIN). A Publer post confirms a
+    platform even when production's entry is missing; the missing entry is a yellow 'evidence gap' alarm, not a red
+    'no post'. Publer's list lags (the Danganronpa post was absent from it for six hours while live), so a slot is
+    called missed only when two Publer reads at least MISS_GAP_MIN apart both miss it; one empty read is never evidence.
+    Post ids stay in the server's private state, never in a public file. Without the key file nothing changes.
+  - A claimed slot (production 'claimed' or claimed_by) with no post 20 minutes before it alarms: deliver it, or release
+    it with a board line (slot rule: the :30 session owns even hours, the :35 session odd hours).
+  - Coverage: the gap since the last published post; past 60 minutes by day (08:00 to 24:00 Dubai) or 120 by night the
+    status line reads 'GAP: build or bank; no-build is not an allowed outcome' and alarms once per gap.
+  - The bank floor is BANK_MIN ready Reels (6); under it is an alarm like coverage, once a day.
 """
 import argparse
 import hashlib
@@ -41,6 +55,11 @@ ON_TIME_MIN = 15            # published within 15 minutes of the slot counts as 
 LOG_KEEP = 500              # lines of keeper.log kept on the status branch
 
 PRODUCTION = ('queued', 'claimed', 'ready', 'rendered', 'qc_passed', 'blocked', 'rejected')
+MATCH_MIN = 10              # a Publer post within 10 minutes of a row's slot, on the row's network, is that row's post
+MISS_GAP_MIN = 10           # two Publer reads this far apart must both miss a post before it counts as missing
+T_CLAIM = -20               # a claimed slot with no post 20 minutes before it alarms
+ALARM_MAX_AGE_H = 6         # a row whose slot passed more than 6 hours ago is reported, never pushed
+COVER_DAY_MIN, COVER_NIGHT_MIN = 60, 120
 DELIVERY = ('not_submitted', 'submitting', 'scheduled', 'published', 'failed', 'uncertain')
 
 
@@ -51,7 +70,11 @@ def parse_time(s):
     """ISO time with an offset (Dubai slots: 2026-10-31T00:00+04:00). A time without an offset is Dubai time."""
     if not s:
         return None
-    s = str(s).strip().replace('Z', '+00:00')
+    s = str(s).strip()
+    d = re.match(r'^(\d{4}-\d\d-\d\d)[ T](\d\d?):(\d\d)\s*(Dubai|GST)\b', s, re.I)
+    if d:                                    # Production 2's rows: "2026-11-07 12:15 Dubai" (7 Nov audit: 36 rows unread)
+        s = '%sT%02d:%s+04:00' % (d.group(1), int(d.group(2)), d.group(3))
+    s = s.replace('Z', '+00:00')
     m = re.match(r'^(\d{4}-\d\d-\d\dT\d\d:\d\d)(:\d\d)?(\.\d+)?([+-]\d\d:?\d\d)?$', s)
     if not m:
         return None
@@ -128,8 +151,9 @@ def due_of(row):
 # ---------------------------------------------------------------------------------------------
 # The ladder
 # ---------------------------------------------------------------------------------------------
-def assess(row, now, mode):
-    """One row's place on the ladder. Returns a dict the status, the alarms and the tests read."""
+def assess(row, now, mode, pub=None):
+    """One row's place on the ladder. Returns a dict the status, the alarms and the tests read. pub: the Publer
+    evidence for this row ({'seen': {platform: state}, 'confirmed_missing': bool, 'read': bool}), or None."""
     slot, orig = due_of(row)
     title = row.get('title') or row.get('id')
     a = {'id': row.get('id'), 'title': title, 'kind': row.get('kind'), 'slot': row.get('slot'),
@@ -142,6 +166,19 @@ def assess(row, now, mode):
         return a
     to_slot = mins(slot - now)
     a['minutes_to_slot'] = to_slot
+    gap_platforms = []
+    if pub and pub.get('seen'):                           # Publer's own state confirms what production did not write
+        for p, st in pub['seen'].items():
+            have = a['delivery'].get(p)
+            if have is None:
+                continue
+            rank = {'not_submitted': 0, 'submitting': 1, 'uncertain': 1, 'scheduled': 2, 'published': 3}
+            if st in ('scheduled', 'published') and rank.get(have, 0) < rank[st]:
+                if have in ('not_submitted', 'submitting', 'uncertain'):
+                    gap_platforms.append(p)
+                a['delivery'][p] = st
+        if gap_platforms:
+            a['evidence_gap'] = gap_platforms
     states = list(a['delivery'].values())
     published = [p for p, s in a['delivery'].items() if s == 'published']
     exceptions = {p: s for p, s in a['delivery'].items() if s in ('failed', 'uncertain')}
@@ -158,6 +195,10 @@ def assess(row, now, mode):
             a['commitment'] = 'fulfilled_late'           # moved slot: the promise was kept late, never on time
         a['stage'] = 'published'
         a['logged'] = bool(row.get('logged') or row.get('inbox_published'))
+        if a.get('evidence_gap'):
+            a['alarm'] = 'evidence-gap'
+            a['note'] = 'Publer shows it on %s; production wrote no entry: write it (presubmit.py published)' % \
+                ', '.join(a['evidence_gap'])
         return a
     if a['held']:
         a['stage'] = 'held by Mohammad'
@@ -180,6 +221,10 @@ def assess(row, now, mode):
                 ', '.join(p for p, s in a['delivery'].items() if s != 'published'), T_CONFIRM)
         else:
             a['stage'] = 'scheduled'
+            if a.get('evidence_gap'):
+                a['alarm'] = 'evidence-gap'
+                a['note'] = 'Publer shows it scheduled on %s; production wrote no entry: record the result' % \
+                    ', '.join(a['evidence_gap'])
         return a
 
     # Not scheduled on every platform yet.
@@ -193,10 +238,18 @@ def assess(row, now, mode):
     elif to_slot > -T_EVIDENCE:
         a['stage'] = 'T-30: submit now'
         a['commitment'] = 'at_risk'
+        if to_slot <= -T_CLAIM and (a['production'] == 'claimed' or row.get('claimed_by')):
+            a['alarm'] = 'claim'
+            a['note'] = 'claimed by %s with no post 20 minutes before the slot: deliver it, or release it with a board ' \
+                        'line (the :30 session owns even hours, the :35 session odd hours)' % (row.get('claimed_by') or 'a session')
     elif to_slot > 0:
         a['stage'] = 'T-15: no evidence it is scheduled'
         a['commitment'] = 'at_risk'
         a['alarm'] = 'at-risk'
+    elif pub and pub.get('read') and not pub.get('confirmed_missing'):
+        a['stage'] = 'slot passed, Publer read once'          # one empty read is not evidence (13:10Z note)
+        a['commitment'] = 'at_risk'
+        a['note'] = 'not in Publer on one read; a second read %d minutes later decides' % MISS_GAP_MIN
     else:
         a['stage'] = 'slot passed, not scheduled'
         a['commitment'] = 'missed' if to_slot <= -60 else 'at_risk'
@@ -211,8 +264,9 @@ def assess(row, now, mode):
     return a
 
 
-def summarise(rows, now, mode):
-    assessed = [assess(r, now, mode) for r in rows]
+def summarise(rows, now, mode, pubs=None):
+    pubs = pubs or {}
+    assessed = [assess(r, now, mode, pubs.get(r.get('id'))) for r in rows]
     open_rows = [a for a in assessed if a['stage'] not in ('closed', 'published')]
     overdue = [a for a in open_rows if a['stage'] == 'slot passed, not scheduled']
     at_risk = [a for a in open_rows if a['commitment'] == 'at_risk' and a not in overdue]
@@ -261,14 +315,16 @@ def alarm_key(a):
 
 def alarm_message(a):
     title = {'at-risk': 'At risk', 'missed': 'Missed slot', 'delivery': 'Delivery exception',
-             'unconfirmed': 'Publication unconfirmed', 'bad-row': 'Commitment row unreadable'}[a['alarm']]
+             'unconfirmed': 'Publication unconfirmed', 'bad-row': 'Commitment row unreadable',
+             'evidence-gap': 'Evidence gap', 'claim': 'Claimed slot, no post'}[a['alarm']]
     lines = ['%s: %s, %s' % (title, a['title'], a['slot_dubai'] or a['slot']),
              'stage: %s; production %s; delivery %s' % (a['stage'], a['production'],
                                                          ', '.join('%s %s' % kv for kv in a['delivery'].items()))]
     if a.get('note'):
         lines.append(a['note'])
     return {'title': '%s: %s' % (title, cut(a['title'], 60)), 'lines': lines,
-            'priority': 'high' if a['alarm'] in ('missed', 'delivery', 'at-risk') else 'default', 'tags': 'alarm_clock'}
+            'priority': 'high' if a['alarm'] in ('missed', 'delivery', 'at-risk', 'claim') else 'default',
+            'tags': 'warning' if a['alarm'] == 'evidence-gap' else 'alarm_clock'}
 
 
 def cut(s, n):
@@ -318,6 +374,9 @@ def raise_alarms(status, state, now):
     for a in status['rows']:
         if not a.get('alarm'):
             continue
+        t = parse_time(a.get('slot'))
+        if t and now - t > timedelta(hours=ALARM_MAX_AGE_H):
+            continue                       # an old row stays in the status, it never pages (one push per live slot)
         k = alarm_key(a)
         if k in sent:
             continue
@@ -455,6 +514,173 @@ def raise_desk(alarms, state, now):
     return raised, log
 
 
+
+# ---------------------------------------------------------------------------------------------
+# Publer as a second evidence source (adv-20261107-keeper-blind-and-lost-submit item 2, with the 07:30Z and 13:10Z
+# corrections). Server only: the key file is root-owned on dxb-render-1. Post ids stay in the private state.
+# ---------------------------------------------------------------------------------------------
+PUBLER_API = 'https://app.publer.com/api/v1'
+NETWORKS = {'instagram': 'instagram', 'twitter': 'x', 'x': 'x', 'threads': 'threads'}
+
+
+def publer_key():
+    f = os.environ.get('KEEPER_PUBLER_KEY_FILE', '/etc/dxb-keeper/publer.key')
+    try:
+        with open(f, encoding='utf-8') as fh:
+            k = re.sub(r'\s+', '', fh.read())
+        return k or None
+    except OSError:
+        return None
+
+
+def _publer_get(path, key, workspace=None, timeout=30):
+    headers = {'Authorization': 'Bearer-API ' + key, 'User-Agent': 'dxb-keeper', 'Accept': 'application/json'}
+    if workspace:
+        headers['Publer-Workspace-Id'] = workspace
+    req = urllib.request.Request(PUBLER_API + path, headers=headers)
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return json.loads(r.read().decode('utf-8') or 'null')
+
+
+class PublerReader:
+    """Reads scheduled and published posts between two times. fetch() returns [{'network', 'state', 'at', 'id',
+    'link'}] or raises; errors are reported with the key and ids removed."""
+
+    def __init__(self, key, workspace_name=None, get=None):
+        self.key, self.get = key, get or _publer_get
+        self.workspace_name = workspace_name or os.environ.get('KEEPER_PUBLER_WORKSPACE', 'The Digi-Lounge')
+        self.workspace = os.environ.get('KEEPER_PUBLER_WORKSPACE_ID') or None
+
+    def _workspace(self):
+        if self.workspace:
+            return self.workspace
+        ws = self.get('/workspaces', self.key)
+        ws = ws.get('workspaces', ws) if isinstance(ws, dict) else ws
+        for w in ws or []:
+            if str(w.get('name', '')).strip().lower() == self.workspace_name.strip().lower():
+                self.workspace = str(w.get('id'))
+                return self.workspace
+        if ws and len(ws) == 1:
+            self.workspace = str(ws[0].get('id'))
+            return self.workspace
+        raise RuntimeError('workspace %r not found' % self.workspace_name)
+
+    def fetch(self, start, end):
+        ws, out = self._workspace(), []
+        q = 'state[]=scheduled&state[]=published&from=%s&to=%s' % (start.strftime('%Y-%m-%dT%H:%M:%SZ'),
+                                                                  end.strftime('%Y-%m-%dT%H:%M:%SZ'))
+        for page in range(0, 10):
+            r = self.get('/posts?%s&page=%d' % (q, page), self.key, ws)
+            posts = (r or {}).get('posts') or []
+            for p in posts:
+                net = NETWORKS.get(str(p.get('network') or p.get('provider') or '').lower())
+                at = parse_time(str(p.get('scheduled_at') or p.get('published_at') or ''))
+                if net and at:
+                    st = str(p.get('state') or '').lower()
+                    out.append({'network': net, 'state': 'published' if st.startswith('publish') else 'scheduled'
+                                if st.startswith('schedul') else st, 'at': at, 'id': str(p.get('id') or ''),
+                                'link': p.get('post_link') or ''})
+            total = (r or {}).get('total_pages')
+            if not posts or (total is not None and page + 1 >= int(total)):
+                break
+        return out
+
+
+def publer_evidence(rows, posts, state, now):
+    """{row id: {'seen': {platform: state}, 'read': True, 'confirmed_missing': bool}} and the misses kept in state
+    (two reads MISS_GAP_MIN apart must both miss a platform). Ids go to state['publer_ids'] (private, server only)."""
+    misses = state.setdefault('publer_miss', {})
+    ids = state.setdefault('publer_ids', {})
+    out = {}
+    for r in rows:
+        slot = parse_time(r.get('slot'))
+        if not slot or not r.get('id'):
+            continue
+        seen, missing_now = {}, []
+        for p in platforms_of(r):
+            best = None
+            for post in posts:
+                if post['network'] == p and abs(mins(post['at'] - slot)) <= MATCH_MIN:
+                    if best is None or (post['state'] == 'published' and best['state'] != 'published'):
+                        best = post
+            k = '%s|%s' % (r['id'], p)
+            if best:
+                seen[p] = best['state']
+                ids[k] = {'id': best['id'], 'seen': now.strftime('%Y-%m-%dT%H:%M:%SZ')}
+                misses.pop(k, None)
+            elif slot - timedelta(minutes=30) <= now:      # only from T-30 does a missing post matter
+                first = parse_time(misses.get(k))
+                if first is None:
+                    misses[k] = now.strftime('%Y-%m-%dT%H:%M:%SZ')
+                    missing_now.append((p, False))
+                else:
+                    missing_now.append((p, mins(now - first) >= MISS_GAP_MIN))
+        confirmed = bool(missing_now) and all(c for _, c in missing_now)
+        out[r['id']] = {'seen': seen, 'read': True, 'confirmed_missing': confirmed}
+    old = now - timedelta(days=3)
+    for d in (misses, ids):
+        for k in list(d):
+            t = parse_time(d[k] if isinstance(d[k], str) else d[k].get('seen'))
+            if t and t < old:
+                del d[k]
+    return out
+
+
+def read_publer(rows, state, now, reader=None):
+    """(evidence per row or {}, status line, latest published time seen in Publer or None)."""
+    if reader is None:
+        key = publer_key()
+        if not key:
+            return {}, 'publer: not read (no key file; evidence from production only)', None
+        reader = PublerReader(key)
+    try:
+        posts = reader.fetch(now - timedelta(hours=36), now + timedelta(hours=48))
+    except Exception as e:                                  # never blocks the pass; the key never reaches the text
+        msg = re.sub(r'[A-Za-z0-9_\-]{24,}', '[redacted]', str(e))[:120]
+        return {}, 'publer: read failed (%s); evidence from production only' % msg, None
+    ev = publer_evidence(rows, posts, state, now)
+    pub = [p['at'] for p in posts if p['state'] == 'published' and p['at'] <= now]
+    n_s = sum(1 for p in posts if p['state'] == 'scheduled')
+    return ev, 'publer: read %s, %d published and %d scheduled in the window' % (now.strftime('%H:%MZ'), len(pub), n_s), \
+        (max(pub) if pub else None)
+
+
+# ---------------------------------------------------------------------------------------------
+# Coverage (item 5) and the bank floor (item 6)
+# ---------------------------------------------------------------------------------------------
+def last_published(status_rows, rows, publer_last=None, now=None):
+    """Latest post time: a row's delivery 'at', else the slot of a row published (or scheduled on every platform with
+    its slot passed), else Publer's own latest published post."""
+    by_id = {r.get('id'): r for r in rows}
+    best = publer_last
+    now = now or datetime.now(timezone.utc)
+    for a in status_rows:
+        slot = parse_time(a.get('slot'))
+        delivered = a['stage'] == 'published' or a.get('commitment') in ('fulfilled_on_time', 'fulfilled_late')
+        # a row scheduled on every platform whose slot has passed counts as a post for coverage, even before
+        # production confirms it published (the confirmation gap is its own alarm, 'publication unconfirmed')
+        went = a['stage'] in ('scheduled', 'publication unconfirmed') and slot is not None and slot <= now
+        if not (delivered or went):
+            continue
+        r = by_id.get(a['id']) or {}
+        ats = [parse_time(d.get('at')) for d in delivery_of(r).values() if d.get('at')]
+        t = max([x for x in ats if x], default=None) or parse_time(r.get('slot'))
+        if t and (best is None or t > best):
+            best = t
+    return best
+
+
+def coverage(last, now):
+    """(line, gap minutes or None, over the limit?)."""
+    if last is None:
+        return 'coverage: no published post on record', None, False
+    gap = mins(now - last)
+    limit = COVER_NIGHT_MIN if now.astimezone(DUBAI).hour < 8 else COVER_DAY_MIN
+    if gap > limit:
+        return ('coverage: GAP %d min since the last post (%s); build or bank; no-build is not an allowed outcome'
+                % (gap, dubai(last))), gap, True
+    return 'coverage: last post %s, %d min ago (limit %d)' % (dubai(last), gap, limit), gap, False
+
 # ---------------------------------------------------------------------------------------------
 # Files
 # ---------------------------------------------------------------------------------------------
@@ -474,7 +700,7 @@ def write(path, text):
     os.replace(tmp, path)
 
 
-BANK_MIN = 3
+BANK_MIN = 6                # ready Reels (adv-20261107-keeper-blind-and-lost-submit item 6; was 3)
 
 
 def bank_line(commitments_path):
@@ -521,10 +747,32 @@ def cmd_tick(args):
                   'overdue': None, 'at_risk': None, 'six': [], 'rows': [], 'error': 'commitments file unreadable'}
         raised, alog = [], ['%s ERROR commitments file unreadable: %s' % (now.strftime('%H:%MZ'), args.commitments)]
     else:
-        status = summarise(rows_of(commitments), now, mode)
+        rows = rows_of(commitments)
+        if os.environ.get('KEEPER_PUBLER', 'on').lower() == 'off':
+            pubs, pline, plast = {}, 'publer: off', None
+        else:
+            pubs, pline, plast = read_publer(rows, state, now)
+        status = summarise(rows, now, mode, pubs)
         raised, alog = raise_alarms(status, state, now)
         status['bank_ready'], bl = bank_line(args.commitments)
         status['six'].append(bl)
+        status['six'].append(pline)
+        cline, cgap, cover_over = coverage(last_published(status['rows'], rows, plast, now), now)
+        status['coverage'] = cline
+        status['coverage_gap_min'] = cgap
+        status['six'].insert(0, cline)
+        extra = []
+        if cover_over:
+            lp = last_published(status['rows'], rows, plast, now)
+            extra.append({'key': 'cover|' + lp.strftime('%Y-%m-%dT%H:%MZ'), 'title': 'Coverage gap: %d min' % cgap,
+                          'lines': [cline, 'Production 2: the next run ends with a scheduled submit or a banked piece queued.']})
+        if status['bank_ready'] is not None and status['bank_ready'] < BANK_MIN:
+            extra.append({'key': 'bank|%s|%d' % (now.astimezone(DUBAI).strftime('%Y%m%d'), status['bank_ready']),
+                          'title': 'Bank under the floor: %d ready' % status['bank_ready'],
+                          'lines': [bl, 'Any run that builds no news builds a bank piece (idle card, mandatory).']})
+        if os.environ.get('KEEPER_COVER_ALARMS', 'on').lower() != 'off':   # the server sets off: GitHub's keeper pushes
+            xr, xl = raise_desk(extra, state, now)
+            raised, alog = list(raised) + xr, list(alog) + xl
     dlines, dalarms = desk_checks(now, args.board, args.releases, args.runs)
     draised, dlog = raise_desk(dalarms, state, now)
     status['desk'] = dlines
@@ -557,13 +805,17 @@ def cmd_line(args):
             if t:
                 age = ' (keeper pass %s, %d min ago)' % (t.strftime('%H:%MZ'), mins(datetime.now(timezone.utc) - t))
             print(s['line'] + age)
+            if s.get('coverage'):
+                print(s['coverage'])
             return 0
     now = parse_time(args.now) if args.now else datetime.now(timezone.utc)
     c = load_json(args.commitments, None)
     if c is None:
         print('overdue commitments: ?, at risk: ? (no keeper status and no commitments file)')
         return 2
-    print(summarise(rows_of(c), now, 'alarm-only')['line'] + ' (counted locally, not from the keeper)')
+    st = summarise(rows_of(c), now, 'alarm-only')
+    print(st['line'] + ' (counted locally, not from the keeper)')
+    print(coverage(last_published(st['rows'], rows_of(c), None, now), now)[0])
     return 0
 
 

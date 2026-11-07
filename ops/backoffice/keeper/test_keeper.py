@@ -99,7 +99,7 @@ class Passes(unittest.TestCase):
             p2 = self.run_tick(d, now='2026-11-01T12:01:00Z')
             self.assertEqual(p2.stdout.count('alarm:'), 0, p2.stdout)           # same rungs: no second alarm
             with open(os.path.join(d, 'status.txt'), encoding='utf-8') as f:
-                self.assertEqual(len(f.read().splitlines()), 8)   # the line, the six, and the bank line (5 Nov)
+                self.assertEqual(len(f.read().splitlines()), 10)  # the line, coverage, the six, bank (5 Nov), publer (7 Nov)
 
     def test_next_rung_alarms_again(self):
         with tempfile.TemporaryDirectory() as d:
@@ -248,3 +248,118 @@ class Desk(unittest.TestCase):
     def test_not_asked_is_silent(self):
         self.assertEqual(K.desk_checks(K.parse_time('2026-11-06T00:20Z')), ([], []))
 
+
+
+class FakeReader:
+    def __init__(self, posts):
+        self.posts = posts
+
+    def fetch(self, start, end):
+        return list(self.posts)
+
+
+def row(i, slot, **kw):
+    r = {'id': i, 'title': i, 'kind': 'post', 'slot': slot, 'platforms': ['instagram', 'x', 'threads'],
+         'fallback': 'bank-piece', 'held_by_mohammad': False}
+    r.update(kw)
+    return r
+
+
+class Evidence(unittest.TestCase):
+    """adv-20261107-keeper-blind-and-lost-submit items 2, 3, 5 and 6 (with the 07:30Z and 13:10Z corrections)."""
+    def setUp(self):
+        os.environ['KEEPER_NTFY'] = 'off'
+
+    def test_publer_confirms_a_post_production_never_logged(self):
+        rows = [row('dr', '2026-11-01T15:00+04:00')]            # 11:00Z; now 12:00Z: slot passed, no production entry
+        posts = [{'network': n, 'state': 'published', 'at': K.parse_time('2026-11-01T11:00:30Z'), 'id': 'p' + n,
+                  'link': ''} for n in ('instagram', 'x', 'threads')]
+        state = {}
+        ev, line, last = K.read_publer(rows, state, NOW, FakeReader(posts))
+        a = by_id(K.summarise(rows, NOW, 'alarm-only', ev))['dr']
+        self.assertEqual(a['stage'], 'published')
+        self.assertEqual(a['alarm'], 'evidence-gap')             # yellow, not 'missed'
+        self.assertIn('publer: read', line)
+        self.assertEqual(last, K.parse_time('2026-11-01T11:00:30Z'))
+        self.assertIn('dr|x', state['publer_ids'])               # ids kept in the private state only
+        self.assertEqual(K.alarm_message(a)['priority'], 'default')
+
+    def test_missing_needs_two_reads_ten_minutes_apart(self):
+        rows = [row('lost', '2026-11-01T15:30+04:00')]          # 11:30Z, slot passed by 30 min at NOW
+        state = {}
+        ev, _, _ = K.read_publer(rows, state, NOW, FakeReader([]))
+        a = by_id(K.summarise(rows, NOW, 'alarm-only', ev))['lost']
+        self.assertEqual(a['stage'], 'slot passed, Publer read once')
+        self.assertIsNone(a['alarm'])
+        later = K.parse_time('2026-11-01T12:11:00Z')
+        ev, _, _ = K.read_publer(rows, state, later, FakeReader([]))
+        a = by_id(K.summarise(rows, later, 'alarm-only', ev))['lost']
+        self.assertEqual(a['alarm'], 'missed')
+
+    def test_a_post_that_shows_up_clears_the_miss(self):
+        rows = [row('late', '2026-11-01T15:30+04:00')]
+        state = {}
+        K.read_publer(rows, state, NOW, FakeReader([]))
+        posts = [{'network': n, 'state': 'scheduled', 'at': K.parse_time('2026-11-01T11:30:00Z'), 'id': n, 'link': ''}
+                 for n in ('instagram', 'x', 'threads')]
+        ev, _, _ = K.read_publer(rows, state, K.parse_time('2026-11-01T12:11:00Z'), FakeReader(posts))
+        self.assertFalse(ev['late']['confirmed_missing'])
+        self.assertEqual(state['publer_miss'], {})
+
+    def test_no_key_changes_nothing(self):
+        os.environ['KEEPER_PUBLER_KEY_FILE'] = '/nonexistent/publer.key'
+        try:
+            ev, line, last = K.read_publer([row('x1', '2026-11-01T15:30+04:00')], {}, NOW)
+        finally:
+            del os.environ['KEEPER_PUBLER_KEY_FILE']
+        self.assertEqual(ev, {})
+        self.assertIn('no key file', line)
+        a = by_id(K.summarise([row('x1', '2026-11-01T15:30+04:00')], NOW, 'alarm-only', ev))['x1']
+        self.assertEqual(a['alarm'], 'missed')                   # production evidence only, as before
+
+    def test_read_failure_never_prints_the_key(self):
+        class Bad:
+            def fetch(self, a, b):
+                raise RuntimeError('401 for key ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789')
+        ev, line, _ = K.read_publer([row('x2', '2026-11-01T16:30+04:00')], {}, NOW, Bad())
+        self.assertEqual(ev, {})
+        self.assertNotIn('ABCDEFGHIJKLMNOPQRSTUVWXYZ', line)
+
+    def test_claimed_slot_with_no_post_twenty_minutes_before(self):
+        rows = [row('c1', '2026-11-01T16:18+04:00', production='claimed', claimed_by=':30 session'),
+                row('c2', '2026-11-01T16:18+04:00')]
+        a = by_id(K.summarise(rows, NOW, 'alarm-only'))
+        self.assertEqual(a['c1']['alarm'], 'claim')
+        self.assertIn('release it with a board line', a['c1']['note'])
+        self.assertIsNone(a['c2']['alarm'])
+
+    def test_coverage_day_and_night(self):
+        last = K.parse_time('2026-11-01T10:30:00Z')                # 14:30 Dubai
+        line, gap, over = K.coverage(last, NOW)                     # 16:00 Dubai: 90 min, day limit 60
+        self.assertTrue(over)
+        self.assertIn('no-build is not an allowed outcome', line)
+        night = K.parse_time('2026-11-01T23:00:00Z')                # 03:00 Dubai
+        self.assertFalse(K.coverage(K.parse_time('2026-11-01T21:30:00Z'), night)[2])   # 90 min, night limit 120
+        self.assertTrue(K.coverage(K.parse_time('2026-11-01T20:30:00Z'), night)[2])    # 150 min
+
+    def test_bank_floor_is_six(self):
+        self.assertEqual(K.BANK_MIN, 6)
+
+
+class Formats(unittest.TestCase):
+    """7 Nov audit: Production 2 writes slots as '2026-11-07 12:15 Dubai'; 36 rows were unreadable."""
+    def test_dubai_slot_form(self):
+        self.assertEqual(K.parse_time('2026-11-07 12:15 Dubai'), K.parse_time('2026-11-07T08:15:00Z'))
+        self.assertEqual(K.parse_time('2026-11-07 06:40 Dubai (T0, published at once)'), K.parse_time('2026-11-07T02:40:00Z'))
+
+    def test_old_rows_never_page(self):
+        os.environ['KEEPER_NTFY'] = 'off'
+        rows = [row('old', '2026-11-01T03:00+04:00'), row('live', '2026-11-01T15:40+04:00')]   # 23:00Z the day before; 11:40Z
+        st = K.summarise(rows, NOW, 'alarm-only')
+        raised, _ = K.raise_alarms(st, {}, NOW)
+        self.assertEqual([a['key'].split('|')[0] for a in raised], ['live'])
+
+    def test_scheduled_slot_that_passed_counts_for_coverage(self):
+        rows = [row('s', '2026-11-01T15:30+04:00', status='submitted to Publer 3/3; in the scheduled list')]
+        st = K.summarise(rows, NOW, 'alarm-only')
+        self.assertEqual(K.last_published(st['rows'], rows, None, NOW), K.parse_time('2026-11-01T11:30:00Z'))
