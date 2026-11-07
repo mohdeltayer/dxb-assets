@@ -13,6 +13,8 @@ jobs:
     runs-on: [self-hosted, dxb-render]
     timeout-minutes: 20
     steps:
+      - name: Render venv on PATH (numpy and the rest, as render-live uses)
+        run: echo "${DXB_VENV:-/home/runner/venv}/bin" >> "$GITHUB_PATH"
       - uses: actions/checkout@v5
         with:
           sparse-checkout: |
@@ -24,12 +26,12 @@ jobs:
           clean: true
       - name: Suites
         run: |
-          python3 -m unittest -q templates/test_fillcheck.py templates/test_presubmit.py templates/test_buildgate.py templates/test_lifeless.py ops/test_desk_audit.py ops/build/test_notify_build.py 2>&1 | grep -v '^fill:' | tail -4
+          python -m unittest -q templates/test_fillcheck.py templates/test_presubmit.py templates/test_buildgate.py templates/test_lifeless.py ops/test_desk_audit.py ops/build/test_notify_build.py 2>&1 | grep -v '^fill:' | tail -4
           (cd ops/backoffice/keeper && python3 -m unittest discover -q 2>&1 | tail -3)
       - name: Fill check on the Danganronpa band-layout job (should refuse)
         run: |
           mkdir -p "$RUNNER_TEMP/up" && cp live/2026-11-07/dr-frame.mp4 "$RUNNER_TEMP/up/"
-          cd templates && python3 - <<'PY'
+          cd templates && python - <<'PY'
           import json, os, fillcheck as FC
           j = json.load(open('../jobs/test/danganronpa-band-layout-check.json'))
           up = os.environ['RUNNER_TEMP'] + '/up'
