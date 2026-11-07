@@ -19,9 +19,11 @@ name: watch-digest
 permissions:
   contents: write
 
+# Dispatch only from 8 Nov 2026 (adv-20261107-watch-token-live): the watch service on dxb-render-1 pushes this branch
+# itself every hour (and breaking lines within minutes) with its own token; GitHub's hourly schedule, which throttling
+# made unreliable, is removed. This workflow stays as the fallback a session dispatches when the digest is over 50
+# minutes old.
 on:
-  schedule:
-    - cron: '52 * * * *'
   workflow_dispatch:
 
 jobs:

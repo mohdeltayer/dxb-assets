@@ -84,7 +84,7 @@ def lock(wait_s=0):
 def handoff_cfg(cfg):
     h = dict(cfg.get('handoff', {}))
     for k, env in (('remote', 'WATCH_REMOTE'), ('branch', 'WATCH_BRANCH'), ('token_file', 'WATCH_TOKEN_FILE'),
-                   ('empty_push_min_gap_h', 'WATCH_EMPTY_PUSH_H')):
+                   ('empty_push_min_gap_h', 'WATCH_EMPTY_PUSH_H'), ('public', 'WATCH_PUBLIC'), ('dir', 'WATCH_DIR')):
         if os.environ.get(env):
             h[k] = os.environ[env]
     return h
@@ -188,8 +188,12 @@ def deliver(db, cfg, files, message, seq, n_items):
         log('handoff #%d written for an external push (%d items)' % (seq, n_items))
         return True
     try:
-        squash = squash_due(db, h, now)
-        res = handoff.push(CLONE, files, message, h, squash_due=squash)
+        if str(h.get('public', '')).lower() in ('1', 'true', 'yes'):
+            squash = False                             # the public branch is always one commit
+            res = handoff.push_public(CLONE, files, message, h)
+        else:
+            squash = squash_due(db, h, now)
+            res = handoff.push(CLONE, files, message, h, squash_due=squash)
     except (handoff.PushError, OSError, subprocess.SubprocessError) as e:
         close_handoff(db, seq, 'failed', n_items, str(e))
         log('handoff failed:', str(e)[:200])
