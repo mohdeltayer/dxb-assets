@@ -1,0 +1,30 @@
+# Build test only (branch build/2026-11-08-install-clone, never merged): the install's clone step on a copy of the
+# server's deploy clone. Touches nothing outside a temp folder.
+name: build-test-install-1108
+permissions:
+  contents: read
+on:
+  push:
+    branches: [build/2026-11-08-install-clone]
+    paths: [.github/workflows/build-test-install-1108.yml]
+jobs:
+  t:
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 10
+    steps:
+      - run: |
+          set -u
+          T=$(mktemp -d); trap 'rm -rf "$T"' EXIT
+          cp -a "$HOME/dxb-assets" "$T/c"; R="$T/c"
+          echo "copy at $(git -C "$R" rev-parse --short HEAD), shallow: $(git -C "$R" rev-parse --is-shallow-repository)"
+          git -C "$R" log --format='%h %cI %s' -1
+          echo "old step:"; GIT_TERMINAL_PROMPT=0 git -C "$R" pull -q --ff-only origin main && echo "old: ok" || echo "old: failed as on the install"
+          git -C "$R" diff --quiet && git -C "$R" diff --cached --quiet && echo clean
+          echo "new step:"
+          GIT_TERMINAL_PROMPT=0 git -C "$R" fetch -q --depth 1 origin +refs/heads/main:refs/remotes/origin/main
+          git -C "$R" reset -q --keep refs/remotes/origin/main
+          echo "new: clone at $(git -C "$R" rev-parse --short HEAD), main $(git ls-remote https://github.com/mohdeltayer/dxb-assets.git refs/heads/main | cut -c1-8)"
+          git -C "$R" sparse-checkout list
+          test -f "$R/ops/backoffice/watch/test_handoff.py" && echo "release 2 files present"
+          grep -c KEEPER_COVER_ALARMS "$R/ops/backoffice/keeper/server_tick.sh"
+          echo "the live clone, untouched: $(git -C "$HOME/dxb-assets" rev-parse --short HEAD)"
