@@ -1,0 +1,181 @@
+{
+ "name": "sony-pulse-elevate-speakers-delay-nov-7",
+ "story": "sony-pulse-elevate-speakers-delay-nov-7",
+ "render_lane": "server",
+ "out": "cards/2026-11/sony-pulse-elevate-speakers-delay-nov-7-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "pe-block.mp4",
+   "url": "https://gmedia.playstation.com/is/content/SIEPDC/global_pdc/en/hardware/accessories/pulse-elevate-speakers/channel-specific-content/pdc/2025/videos/Pulse-Elevate-Speakers-video-block-01-en-23sep25.mp4"
+  },
+  {
+   "file": "pe-tilt.mp4",
+   "url": "https://gmedia.playstation.com/is/content/SIEPDC/global_pdc/en/hardware/accessories/pulse-elevate-speakers/channel-specific-content/pdc/2025/videos/Elevate-Speakers-tilt-animation-video-01-en-12sep25.mp4"
+  }
+ ],
+ "shots": [
+  [
+   "pe-block.mp4",
+   0.0,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "pe-block.mp4",
+   3.0,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "pe-tilt.mp4",
+   0.0,
+   4.4,
+   [
+    [
+     0.0,
+     0.33
+    ]
+   ]
+  ],
+  [
+   "pe-tilt.mp4",
+   4.4,
+   4.4,
+   [
+    [
+     0.0,
+     0.66
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   2,
+   2,
+   [
+    [
+     "أعلنت سوني (Sony) تأجيل\nمكبرات Pulse Elevate",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "بسبب مشكلة في الإنتاج\nولم تحدد موعدًا جديدًا",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "strip": [
+  [
+   "الموعد الأصلي",
+   "12 نوفمبر"
+  ],
+  [
+   "الموعد الجديد",
+   "لم يُعلن بعد"
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   3,
+   "المصدر: بلايستيشن (PlayStation)"
+  ]
+ ],
+ "headline": "سوني تؤجل إطلاق\nمكبرات PlayStation",
+ "label": "تأجيل",
+ "source": "PlayStation Blog",
+ "date": "7 Nov 2026",
+ "theme": "cold",
+ "style": "bold",
+ "template": "split",
+ "skin": "house",
+ "track": "bed",
+ "sound": "neon",
+ "cut": false,
+ "beat": "delay",
+ "reel_check": {
+  "SOURCE 1 primary read": "yes: PlayStation Blog post 'Update on Pulse Elevate wireless speakers launch', Update 6 Nov 2026 read in full (statement quoted); modified 6 Nov 15:15 PST",
+  "SOURCE 2 not already posted": "yes: ledger find 'pulse elevate speakers' 0 hits; Publer 7-8 Nov list checked",
+  "SOURCE 3 age": "yes: Sony update 6 Nov 23:15Z, about 18.6 h before the build",
+  "ANGLE hook": "yes: a week before launch Sony pulled its speakers; why now: update on 6 Nov; players here: pre-orders open worldwide; payoff: no new date",
+  "ANGLE type items (delay)": "yes: old date 12 Nov, new date not given, reason production issue found in quality testing (Sony's words), what is unknown: the new date",
+  "STORY one paragraph": "yes: Sony announced the delay of Pulse Elevate, the date was 12 Nov, the reason is a production issue, no new date",
+  "STORY subject before pronoun": "yes: Sony and the product are named before any pronoun",
+  "STORY release verbs": "n/a: no release verb; the date sits on the strip",
+  "STORY names": "yes: سوني (Sony) at first mention; Pulse Elevate as the publisher writes it",
+  "WRITING headline": "yes: news word تأجيل and the company in the first five words",
+  "WRITING lines": "yes: two lines read aloud, each on its shot",
+  "WRITING caption": "yes: names the product by the second sentence, ends #ألعاب #أخبار_الألعاب then two tags",
+  "WRITING X text": "yes: attributes to Sony's update, no hashtags",
+  "WRITING pinned comment": "yes: source line",
+  "WRITING urgency": "yes: chip تأجيل, official statement, not عاجل",
+  "WRITING tone": "yes: neutral, Sony's words attributed",
+  "SOUND own sound": "yes: the product videos carry no audio; our bed neon with the reason: silent official footage",
+  "SOUND no speech under lines": "yes: none",
+  "SOUND stems last resort": "n/a: bed",
+  "SOUND our effects": "yes: none over footage",
+  "PICTURE footage first": "yes: official product videos from playstation.com",
+  "PICTURE shows the game": "yes: the product itself (the speakers)",
+  "PICTURE not the same as last 5 Reels": "yes: picture: Pulse Elevate product videos, new to the feed",
+  "PICTURE one requirement per beat": "yes: see decision_log",
+  "PICTURE crop judged": "yes: product centred at focus 0.5 on the blue film; each speaker framed alone on the white clip (0.33 left, 0.66 right)",
+  "PICTURE headline in band": "yes: headline band over the dark film",
+  "PICTURE text moves on entry/exit": "yes: reel.py layers",
+  "PICTURE credit": "yes: credits cover all four shots",
+  "PICTURE lifeless": "n/a: report only"
+ },
+ "decision_log": [
+  {
+   "beat": "hook 0-3",
+   "shot": "pe2 0-3 s: PlayStation logo and the speaker body in blue light",
+   "alternatives": "pe1 3 s hero loop 2560x956",
+   "crop": "focus 0.5",
+   "music": "bed neon"
+  },
+  {
+   "beat": "3-6 breath",
+   "shot": "pe2 3-6 s: speaker turning in the ring of light",
+   "alternatives": "none",
+   "crop": "focus 0.5",
+   "music": "same bed"
+  },
+  {
+   "beat": "L1 Sony delays Pulse Elevate",
+   "shot": "pe3 0-4.4 s, the left speaker of the pair",
+   "alternatives": "pair together at full frame (cut by 9:16)",
+   "crop": "focus 0.33 keeps one speaker whole",
+   "music": "same bed"
+  },
+  {
+   "beat": "L2 reason and no new date",
+   "shot": "pe3 4.4-8.8 s, the right speaker",
+   "alternatives": "none",
+   "crop": "focus 0.66 keeps one speaker whole",
+   "music": "same bed"
+  }
+ ],
+ "lowres_ok": "playstation.com page videos (6 s and 8.9 s, 1920x1080, no sound), IGN and YouTube trailers: none exist for this delay; the only official copies are these loops",
+ "note": "Delay Reel: Sony's blog update of 6 Nov (read in full). Source kind: official product loops from playstation.com, 1080p, no audio. Audio: our bed (silent footage). sensitive: none. picture: Pulse Elevate product videos, new to the feed. The Pulse Elevate price and the Gulf availability are not stated, so not claimed.",
+ "block_ok": []
+}
