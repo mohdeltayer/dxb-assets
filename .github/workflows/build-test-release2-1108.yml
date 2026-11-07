@@ -1,0 +1,69 @@
+name: build-test-release2-1108
+# Branch-only test for the 8 Nov build, release 2 (the watch pushes itself, failing sources). Never merged to main.
+# Pushes one throwaway branch (watch-digest-test) with the server's watch token and deletes it again; the live
+# branch watch-digest is not touched.
+on:
+  push:
+    branches: [build/2026-11-08-release2-test]
+permissions:
+  contents: read
+concurrency:
+  group: build-test-release2-1108
+  cancel-in-progress: false
+jobs:
+  test:
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 20
+    env:
+      WPY: /home/runner/backoffice/watch/venv/bin/python
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          sparse-checkout: |
+            ops/backoffice/watch
+            newsroom
+          clean: true
+      - name: Unit test (public push against a local bare repo)
+        run: |
+          "$WPY" -m unittest -q ops/backoffice/watch/test_handoff.py 2>&1 | tail -3
+      - name: Watch status on the server (read only)
+        run: |
+          WATCH_HOME=/home/runner/backoffice/watch "$WPY" ops/backoffice/watch/watch.py status 2>&1 | head -40 || true
+          systemctl --user list-timers 'dxb-watch*' --no-pager 2>&1 | head -5 || true
+          if [ -r /etc/dxb-watch/github-token ]; then echo "token file: readable"; else echo "token file: NOT readable"; fi
+      - name: Failing sources, read with the watch's own fetcher from this server
+        run: |
+          cd ops/backoffice/watch && WATCH_NEWSROOM="$GITHUB_WORKSPACE/newsroom" timeout 300 "$WPY" - <<'PY'
+          import sources as S, fetchers as F, urllib.request
+          srcs = S.build(S.load_config())
+          want = [s for s in srcs if s.id.startswith(('yt-', 'x-')) or 'Game Awards' in s.name or 'Manga' in s.name]
+          for s in want:
+              try:
+                  body, et, lm = F.http_get(s.target)
+                  print('ok  ', s.id, len(F.read_source(s, body)))
+              except Exception as e:
+                  print('FAIL', s.id, F.error_text(e))
+          # the same YouTube feed with a plain browser user agent and no conditional headers
+          u = 'https://www.youtube.com/feeds/videos.xml?channel_id=UC-2Y8dQb0S6DtpxNgAKoJKA'
+          for ua in ('Mozilla/5.0', None):
+              req = urllib.request.Request(u, headers={'User-Agent': ua} if ua else {})
+              try:
+                  with urllib.request.urlopen(req, timeout=20) as r:
+                      print('youtube plain', ua, r.status, len(r.read()))
+              except Exception as e:
+                  print('youtube plain', ua, F.error_text(e))
+          PY
+      - name: Token push to a throwaway branch, then delete it
+        run: |
+          cd ops/backoffice/watch && "$WPY" - <<'PY'
+          import json, os, subprocess, tempfile, handoff as H
+          h = {'remote': 'https://github.com/mohdeltayer/dxb-assets.git', 'branch': 'watch-digest-test', 'dir': 'watch',
+               'token_file': '/etc/dxb-watch/github-token'}
+          d = {'seq': 0, 'generated_at': 'test', 'official': [{'title': 'build test', 'summary': 'removed'}], 'outlets': []}
+          w = tempfile.mkdtemp()
+          print('push:', H.push_public(w + '/c', {'digest.json': json.dumps(d), 'digest.txt': 'build test\n'}, 'build test (deleted at once)', h))
+          env = H.git_env(h['token_file'])
+          p = subprocess.run(['git', 'push', '-q', 'origin', '--delete', 'watch-digest-test'], cwd=w + '/c', env=env,
+                             capture_output=True, text=True)
+          print('delete:', 'ok' if p.returncode == 0 else H.scrub(p.stderr))
+          PY
