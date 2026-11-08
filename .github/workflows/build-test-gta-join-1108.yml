@@ -1,0 +1,67 @@
+# Build test only (branch studio/gta-join-test, never merged): the real episode 1 job of «الطريق إلى GTA VI» on
+# dxb-render-1 with the intro join fallback (templates/gta_intro.py join), after run 42464451752 on main failed the
+# output decode check at the stream-copy join. Commits the mp4, strip, sheet, dense strip and the log to this branch.
+name: build-test-gta-join-1108
+permissions:
+  contents: write
+on:
+  push:
+    branches: [studio/gta-join-test]
+    paths: [.github/workflows/build-test-gta-join-1108.yml]
+concurrency:
+  group: build-test-gta
+  cancel-in-progress: false
+jobs:
+  t:
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            templates
+            jobs
+            newsroom/stories
+          persist-credentials: true
+      - name: Env
+        run: |
+          cache="${DXB_CACHE:-/var/cache/dxb-render}"
+          {
+            echo "DXB_CACHE=$cache"
+            echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts"
+            echo "DXB_UPLOADS=$RUNNER_TEMP/uploads"
+            echo "YOLO_WEIGHTS=$cache/models/yolov8n.pt"
+            echo "SPLIT_CACHE=$cache/tracksplit-stems"
+            echo "SPLIT_CACHE_NEW=$RUNNER_TEMP/split-cache-new"
+            echo "COCKTAIL_DIR=$cache/cocktail-fork/19b3de827ebc4bfb014570cf92dd32b4ee3b6921"
+            echo "RENDER_LANE=selfhosted"
+          } >> "$GITHUB_ENV"
+          echo "${DXB_VENV:-/home/runner/venv}/bin" >> "$GITHUB_PATH"
+          mkdir -p "$RUNNER_TEMP/uploads"
+      - name: Fonts
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          repo="$RUNNER_TEMP/dxb-fonts"
+          git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+          mkdir -p "$DUBAI_FONTS"; unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$DUBAI_FONTS"; rm -rf "$repo"
+      - name: Self-tests
+        run: python templates/test_gta_intro.py
+      - name: Render the episode 1 job
+        run: |
+          set -o pipefail
+          out=live/2026-11-08/gta-join-test; mkdir -p $out
+          python templates/render_job.py run jobs/live/gta-vi-road-ep1-why-it-matters.json 2>&1 | tee $out/render.log
+          b=cards/2026-11/gta-vi-road-ep1-why-it-matters-reel-v1
+          cp $b.mp4 $b-strip.jpg $b-sheet.jpg $out/ ; [ -f $b-dense.jpg ] && cp $b-dense.jpg $out/ || true
+          ffprobe -v error -show_entries stream=codec_type,duration,nb_frames:format=duration -of compact $b.mp4 | tee -a $out/render.log
+      - name: Commit outputs to this branch
+        if: always()
+        run: |
+          git config user.name "dxb-build-test"; git config user.email "noreply@anthropic.com"
+          git add -f --sparse live/2026-11-08/gta-join-test
+          git commit -q -m "GTA join test outputs (dxb-render-1)" && git push -q origin HEAD:studio/gta-join-test || true
+      - name: Clean
+        if: always()
+        run: rm -rf "$DUBAI_FONTS" "$RUNNER_TEMP/uploads" cards
