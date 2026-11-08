@@ -53,7 +53,7 @@
   }
  ],
  "gate": "gate 17:50Z: Fact Book 2026 fetched (WebFetch saved the PDF), text extracted with pdftotext, the series block read line by line; nothing spoofed. Exit A for what is on screen.",
- "status": "banked (not scheduled)",
+ "status": "banked (rendered, director PASS, not scheduled)",
  "ledger_find": {
   "at": "2026-11-08T17:39:07Z",
   "words": [
@@ -62,5 +62,47 @@
    "fact-book"
   ],
   "hits": []
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/bandai-namco-series-top-five-reel-v1.mp4",
+  "blob": "42e063c1219e6461c0f45c545914259fa51ff076",
+  "at": "2026-11-08T17:42:18Z",
+  "note": "Director QA (sonnet, evergreen numbers) on strip, dense and sheet. First frame: headline readable at grid size, TEKKEN 8 cover card 62.70 under it, chip clear of the grid corner. Shots: 0 hero PASS; 1-4 countdown rank 5 to 2 PASS; 5 full table with the DARK SOULS overseas-only line PASS; 6 and 7 two official TEKKEN 8 Steam screenshots (Kazuya, Jin), no blood, line spans both PASS (the table crossfades out over shot 6 for 0.4 s, normal). Reel 19.3 s before the end card, changes every 2.2 to 3.9 s, last 2 s a game image. Credit on every shot. Sound: our bed stats flavour, judged from the build not by ear, speech none. Wording: شحنات (shipments) as Bandai Namco's Fact Book heading. Scope: the Fact Book's table of major home console series only, said in the caption. Grammar: no required edits.",
+  "checklist": {
+   "job": "jobs/live/bandai-namco-series-top-five.json",
+   "sha256": "ddcfd89088b6b6675df6accaa49a7002ee14dfd92f75539e52ea95e8e4e9e3c0",
+   "ok": true,
+   "problems": []
+  }
+ },
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "أرقام",
+   "format": "numbers",
+   "skin": "house",
+   "theme": "cold",
+   "style": "bold",
+   "sound": "our bed, stats",
+   "genre": [
+    "industry/hardware"
+   ],
+   "headline": "سلسلة TEKKEN تتصدر\nألعاب بانداي نامكو",
+   "lines": [
+    "رقم DARK SOULS يخص مبيعات\nالخارج فقط",
+    "تشمل الشحنات نسخ الحاسب أيضًا\nولا تقتصر على الكونسول"
+   ],
+   "credit": "المصدر: بانداي نامكو (Bandai Namco) حتى مارس 2026",
+   "ig": "أرقام بانداي نامكو (Bandai Namco): سلسلة TEKKEN في صدارة سلاسل ألعابها الكبرى بـ62.70 مليون شحنة.\n\nهذه أكبر خمس سلاسل في جدول ألعاب الكونسول الرئيسية في كتاب الحقائق (Fact Book 2026) الصادر عن الشركة، وهو إجمالي الشحنات التراكمية (ويشمل نسخ الحاسب) حتى مارس 2026:\nالأولى: TEKKEN، 62.70 مليون شحنة.\nالثانية: NARUTO، 46.58 مليون شحنة.\nالثالثة: DARK SOULS، 41.80 مليون شحنة.\nالرابعة: Tales of، 32.13 مليون شحنة.\nالخامسة: LITTLE NIGHTMARES، 24.54 مليون شحنة.\n\nيخص رقم DARK SOULS مبيعات الخارج التي باعتها بانداي نامكو فقط، وتستثني مبيعات اليابان لدى FromSoftware، كما يذكر الكتاب.\n\nالجدول يضم السلاسل الكبرى التي اختارتها الشركة، وليس كل سلاسلها.\n\n#ألعاب #أخبار_الألعاب #TEKKEN #DARKSOULS",
+   "x": "سلسلة TEKKEN تتصدر سلاسل ألعاب بانداي نامكو (Bandai Namco) الكبرى بـ62.70 مليون شحنة، تليها NARUTO بـ46.58 مليونًا، حسب كتاب الحقائق للشركة حتى مارس 2026.",
+   "threads": "سلسلة TEKKEN تتصدر سلاسل ألعاب بانداي نامكو (Bandai Namco) الكبرى بـ62.70 مليون شحنة، تليها NARUTO بـ46.58 مليونًا، حسب كتاب الحقائق للشركة حتى مارس 2026.",
+   "source_comment_ig": "المصدر: كتاب الحقائق (Fact Book 2026) لمجموعة بانداي نامكو، جدول «Major home console game titles: Cumulative total number of shipments by series (including PC versions)»، حتى مارس 2026. رقم DARK SOULS يخص مبيعات الخارج فقط وفق ملاحظة الكتاب.",
+   "source_comment_x": "المصدر: كتاب الحقائق (Fact Book 2026) لمجموعة بانداي نامكو، جدول «Major home console game titles: Cumulative total number of shipments by series (including PC versions)»، حتى مارس 2026. رقم DARK SOULS يخص مبيعات الخارج فقط وفق ملاحظة الكتاب. https://www.bandainamco.co.jp/en/ir/library/assets/pdf/2026/factbook2026_en.pdf",
+   "media": "cards/2026-11/bandai-namco-series-top-five-reel-v1.mp4",
+   "strip": "cards/2026-11/bandai-namco-series-top-five-strip.jpg",
+   "sheet": "cards/2026-11/bandai-namco-series-top-five-sheet.jpg"
+  }
+ },
+ "director_model": "sonnet"
 }
