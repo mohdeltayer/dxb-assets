@@ -27,7 +27,7 @@ Launch date, the only source of the countdown: **19 November 2026**, PS5 and Xbo
 
 | # | Dubai date | Days | Subject | Family / template | Status |
 |---|---|---|---|---|---|
-| 1 | Sun 8 Nov | 11 | Why this launch matters: the series in Take-Two's own numbers (GTA V lifetime units, years since its launch, the gap since GTA IV) | numbers, clipcard on Rockstar footage | building |
+| 1 | Sun 8 Nov | 11 | Why this launch matters: the series in Take-Two's own numbers (GTA V lifetime units, years since its launch, the gap since GTA IV) | numbers, clipcard on Rockstar footage | rendering (server) |
 | 2 | Mon 9 Nov | 10 | Trailer 1 read closely: what each shot confirms | trailer breakdown | to research |
 | 3 | Tue 10 Nov | 9 | Vice City then and now: Vice City (2002) against 2026 Leonida, Rockstar footage both sides, both halves labelled | comparison, hard cuts | to research (needs Rockstar's own Vice City footage) |
 | 4 | Wed 11 Nov | 8 | Lucia, Jason and the cast Rockstar has named | people beat sheet, official art | to research |
@@ -53,3 +53,4 @@ against this table before its shot sheet; add its row once final. Times are seek
 | # | Shots (source: start to end) | Sound (source: stretch) |
 |---|---|---|
 | intro | L 25.15 to 27.18 (fixed, every episode) | gtavi jingle (fixed) |
+| 1 | L 54.55 to 56.35; L 66.45 to 67.85; L 2.2 to 5.8 (card 1 ground); L 46.35 to 50.65; L 6.4 to 10.0 (card 2 ground); L 67.9 to 69.25; L 73.2 to 75.6 | L music stem from 28.7 for 16.0 s (music_only) |
