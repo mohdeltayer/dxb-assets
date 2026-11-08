@@ -178,3 +178,4 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Stims (Helldivers 2) | Stim in English in game text, glossed once as حقنة Stim | المنشطات | Proposed 3 Nov |
 | Pokémon | Pokémon in Latin | البوكيمون | Suggested 18 Oct |
 | Sensitive content (relationships, evolution, bans) | the general word; the authority's own wording | the specific type, a judgement | Approved 21 Oct (glossary rows) |
+| Bunnyhop | بانيهوب | Proposed 8 Nov 2026 (Brick Buddies developer; publisher BunnyhopHome not named on screen) |
