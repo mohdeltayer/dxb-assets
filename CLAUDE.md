@@ -2749,6 +2749,8 @@ The One Piece x Fortnite Reel put a small clip in the middle of a blur of itself
 4. A collaboration or trailer story uses the game's official trailer (Epic for Fortnite), credited on screen; footage
    from the other side of the collaboration (the anime) is illustration only.
 
+5. Trailer layout, corrected (Mohammad, 8 Nov 2026, replacing the loose "band layout" wording above; from the next Reel). The 16:9 layout is allowed when the trailer is the focus or the footage cannot fill 9:16, but it must use the whole layout: the trailer at its own width in the middle of the frame; top band: the chip and the headline for the whole Reel; bottom band: the story lines and the key facts (date, price, platforms) and the credit, as text on the band, never over the picture. No empty band at any second and no blur. The shape not to repeat is the Fortnite Pirate Shop Access Reel of 8 Nov (trailer at the bottom, top band empty after the headline). It is the layout, not a placement of the picture: a band is never left with only a credit line in it.
+
 ## Promises, not just work (advisor card adv-20261030-promise-keeper, Mohammad 30 Oct 2026, 21:31 Dubai)
 
 Ocarina episode 6, the Switch 2 Lite post, the server watch and the published log slipped because the system

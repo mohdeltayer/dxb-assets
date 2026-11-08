@@ -572,6 +572,7 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 - No blurred fill or pillarbox box for footage. A source that cannot fill 9:16 within the 2x cap takes the full-frame treatment: footage as large as the cap allows between designed bands in the template colour.
 - Main footage under 60% of the frame height, or over 5% blur, fails `fillcheck.py` in render_job.check (storybeat page exempt from the 60% part only).
 - Band layout only for a weak source (7 Nov 2026): a 16:9 source fills 9:16 cropped to the subject; a band after the headline fails unless `lowres_ok` names the sources tried (two or more, or "A, B: result"); the headline stays in the band; a credit line alone in a band is empty space.
+- Trailer layout (Mohammad, 8 Nov 2026, from the next Reel): trailer at its own width in the middle; top band the chip and headline for the whole Reel; bottom band the story lines, key facts (date, price, platforms) and the credit as text on the band, never over the picture; no empty band at any second, no blur. Allowed when the trailer is the focus or the footage cannot fill 9:16. Not to repeat: the Fortnite Pirate Shop Reel of 8 Nov (top band empty after the headline).
 - Headline in the safe band, never over a face or the shot's subject. Collaboration stories use the game's official trailer.
 
 ## Promises (adv-20261030-promise-keeper, 30 Oct 2026)
