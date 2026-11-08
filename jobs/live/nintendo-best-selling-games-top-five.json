@@ -1,0 +1,481 @@
+{
+ "name": "nintendo-best-selling-games-top-five",
+ "out": "cards/2026-11/nintendo-best-selling-games-top-five-reel-v1.mp4",
+ "story": "2026-11-08-nintendo-best-selling-games-top-five",
+ "render_lane": "server",
+ "story_type": "NUMBERS",
+ "angle": {
+  "hook": "Wii Sports, 82.79 million, still leads Nintendo's sales pages ahead of Mario Kart 8 Deluxe",
+  "why_now": "evergreen: Switch pages as of 30 Sep 2026",
+  "players_here": "Wii Sports, Mario Kart and Animal Crossing are what many readers grew up on",
+  "payoff": "two Mario Kart games in the top five, and Mario Kart World already at 16.48 million on Switch 2"
+ },
+ "genre": [
+  "industry/hardware"
+ ],
+ "footage": [
+  {
+   "file": "nintendo-mkw-art3.jpg",
+   "url": "https://assets.nintendo.com/image/upload/store/software/switch2/70010000095431/b8ca3bbb06f7a4149bea701e6764ed302b9ec0b41b3d7137d52eddb6ed05d704"
+  },
+  {
+   "file": "nintendo-mkw-art4.jpg",
+   "url": "https://assets.nintendo.com/image/upload/store/software/switch2/70010000095431/bbe82fcb30221d01b574da4526ca167e4a1bb911bf013a813c0f656d087d11f6"
+  }
+ ],
+ "gfx": [
+  {
+   "file": "nintendo-games-gfx-hero.png",
+   "kind": "product",
+   "image": "wii-sports",
+   "name": "Wii Sports",
+   "value": "82.79",
+   "unit": "مليون نسخة على Wii",
+   "label": "المركز الأول",
+   "tile": [
+    300,
+    210
+   ]
+  },
+  {
+   "file": "nintendo-games-gfx-rank1.png",
+   "kind": "ranking",
+   "rows": [
+    {
+     "rank": "1",
+     "name": "Wii Sports",
+     "value": "82.79",
+     "unit": "مليون على Wii",
+     "image": "wii-sports",
+     "n": 82.79
+    },
+    {
+     "rank": "2",
+     "name": "Mario Kart 8 Deluxe",
+     "value": "72.00",
+     "unit": "مليون على Switch",
+     "image": "mario-kart-8-deluxe",
+     "n": 72.0
+    },
+    {
+     "rank": "3",
+     "name": "Animal Crossing: New Horizons",
+     "value": "50.63",
+     "unit": "مليون على Switch",
+     "image": "animal-crossing-new-horizons",
+     "n": 50.63
+    },
+    {
+     "rank": "4",
+     "name": "Super Smash Bros. Ultimate",
+     "value": "38.50",
+     "unit": "مليون على Switch",
+     "image": "smash-ultimate",
+     "n": 38.5
+    },
+    {
+     "rank": "5",
+     "name": "Mario Kart Wii",
+     "value": "36.83",
+     "unit": "مليون على Wii",
+     "image": "mario-kart-wii",
+     "n": 36.83
+    }
+   ],
+   "title": "ألعاب نينتيندو الأكثر مبيعًا",
+   "show": 1
+  },
+  {
+   "file": "nintendo-games-gfx-rank2.png",
+   "kind": "ranking",
+   "rows": [
+    {
+     "rank": "1",
+     "name": "Wii Sports",
+     "value": "82.79",
+     "unit": "مليون على Wii",
+     "image": "wii-sports",
+     "n": 82.79
+    },
+    {
+     "rank": "2",
+     "name": "Mario Kart 8 Deluxe",
+     "value": "72.00",
+     "unit": "مليون على Switch",
+     "image": "mario-kart-8-deluxe",
+     "n": 72.0
+    },
+    {
+     "rank": "3",
+     "name": "Animal Crossing: New Horizons",
+     "value": "50.63",
+     "unit": "مليون على Switch",
+     "image": "animal-crossing-new-horizons",
+     "n": 50.63
+    },
+    {
+     "rank": "4",
+     "name": "Super Smash Bros. Ultimate",
+     "value": "38.50",
+     "unit": "مليون على Switch",
+     "image": "smash-ultimate",
+     "n": 38.5
+    },
+    {
+     "rank": "5",
+     "name": "Mario Kart Wii",
+     "value": "36.83",
+     "unit": "مليون على Wii",
+     "image": "mario-kart-wii",
+     "n": 36.83
+    }
+   ],
+   "title": "ألعاب نينتيندو الأكثر مبيعًا",
+   "show": 2
+  },
+  {
+   "file": "nintendo-games-gfx-rank3.png",
+   "kind": "ranking",
+   "rows": [
+    {
+     "rank": "1",
+     "name": "Wii Sports",
+     "value": "82.79",
+     "unit": "مليون على Wii",
+     "image": "wii-sports",
+     "n": 82.79
+    },
+    {
+     "rank": "2",
+     "name": "Mario Kart 8 Deluxe",
+     "value": "72.00",
+     "unit": "مليون على Switch",
+     "image": "mario-kart-8-deluxe",
+     "n": 72.0
+    },
+    {
+     "rank": "3",
+     "name": "Animal Crossing: New Horizons",
+     "value": "50.63",
+     "unit": "مليون على Switch",
+     "image": "animal-crossing-new-horizons",
+     "n": 50.63
+    },
+    {
+     "rank": "4",
+     "name": "Super Smash Bros. Ultimate",
+     "value": "38.50",
+     "unit": "مليون على Switch",
+     "image": "smash-ultimate",
+     "n": 38.5
+    },
+    {
+     "rank": "5",
+     "name": "Mario Kart Wii",
+     "value": "36.83",
+     "unit": "مليون على Wii",
+     "image": "mario-kart-wii",
+     "n": 36.83
+    }
+   ],
+   "title": "ألعاب نينتيندو الأكثر مبيعًا",
+   "show": 3
+  },
+  {
+   "file": "nintendo-games-gfx-rank4.png",
+   "kind": "ranking",
+   "rows": [
+    {
+     "rank": "1",
+     "name": "Wii Sports",
+     "value": "82.79",
+     "unit": "مليون على Wii",
+     "image": "wii-sports",
+     "n": 82.79
+    },
+    {
+     "rank": "2",
+     "name": "Mario Kart 8 Deluxe",
+     "value": "72.00",
+     "unit": "مليون على Switch",
+     "image": "mario-kart-8-deluxe",
+     "n": 72.0
+    },
+    {
+     "rank": "3",
+     "name": "Animal Crossing: New Horizons",
+     "value": "50.63",
+     "unit": "مليون على Switch",
+     "image": "animal-crossing-new-horizons",
+     "n": 50.63
+    },
+    {
+     "rank": "4",
+     "name": "Super Smash Bros. Ultimate",
+     "value": "38.50",
+     "unit": "مليون على Switch",
+     "image": "smash-ultimate",
+     "n": 38.5
+    },
+    {
+     "rank": "5",
+     "name": "Mario Kart Wii",
+     "value": "36.83",
+     "unit": "مليون على Wii",
+     "image": "mario-kart-wii",
+     "n": 36.83
+    }
+   ],
+   "title": "ألعاب نينتيندو الأكثر مبيعًا",
+   "show": 4
+  },
+  {
+   "file": "nintendo-games-gfx-full.png",
+   "kind": "ranking",
+   "rows": [
+    {
+     "rank": "1",
+     "name": "Wii Sports",
+     "value": "82.79",
+     "unit": "مليون على Wii",
+     "image": "wii-sports",
+     "n": 82.79
+    },
+    {
+     "rank": "2",
+     "name": "Mario Kart 8 Deluxe",
+     "value": "72.00",
+     "unit": "مليون على Switch",
+     "image": "mario-kart-8-deluxe",
+     "n": 72.0
+    },
+    {
+     "rank": "3",
+     "name": "Animal Crossing: New Horizons",
+     "value": "50.63",
+     "unit": "مليون على Switch",
+     "image": "animal-crossing-new-horizons",
+     "n": 50.63
+    },
+    {
+     "rank": "4",
+     "name": "Super Smash Bros. Ultimate",
+     "value": "38.50",
+     "unit": "مليون على Switch",
+     "image": "smash-ultimate",
+     "n": 38.5
+    },
+    {
+     "rank": "5",
+     "name": "Mario Kart Wii",
+     "value": "36.83",
+     "unit": "مليون على Wii",
+     "image": "mario-kart-wii",
+     "n": 36.83
+    }
+   ],
+   "title": "ألعاب نينتيندو الأكثر مبيعًا"
+  }
+ ],
+ "shots": [
+  [
+   "nintendo-games-gfx-hero.png",
+   0,
+   3.4,
+   null
+  ],
+  [
+   "nintendo-games-gfx-rank1.png",
+   0,
+   3.6,
+   null
+  ],
+  [
+   "nintendo-games-gfx-rank2.png",
+   0,
+   2.4,
+   null
+  ],
+  [
+   "nintendo-games-gfx-rank3.png",
+   0,
+   2.4,
+   null
+  ],
+  [
+   "nintendo-games-gfx-rank4.png",
+   0,
+   2.4,
+   null
+  ],
+  [
+   "nintendo-games-gfx-full.png",
+   0,
+   3.6,
+   null
+  ],
+  [
+   "nintendo-mkw-art3.jpg",
+   null,
+   2.6,
+   [
+    0.4,
+    0.5
+   ]
+  ],
+  [
+   "nintendo-mkw-art4.jpg",
+   null,
+   2.6,
+   [
+    0.66,
+    0.72
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "تبدأ القائمة بلعبة سباقات\nعلى Wii",
+     {
+      "size": 56
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   5,
+   [
+    [
+     "لعبتا Mario Kart ضمن\nأول خمس ألعاب",
+     {
+      "size": 56
+     }
+    ]
+   ]
+  ],
+  [
+   6,
+   7,
+   [
+    [
+     "أما Mario Kart World على Switch 2\nفبلغت 16.48 مليونًا",
+     {
+      "size": 56
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   7,
+   "المصدر: نينتيندو (Nintendo) حتى 2026، ولـ Wii حتى 2016"
+  ]
+ ],
+ "headline": "لعبة Wii Sports تتصدر\nمبيعات نينتيندو (Nintendo)",
+ "label": "أرقام",
+ "source": "نينتيندو",
+ "date": "30 Sep 2026",
+ "theme": "gold",
+ "ground_theme": "gold",
+ "style": "bold",
+ "template": "numbers",
+ "skin": "house",
+ "sound": "stats",
+ "track": null,
+ "pace_ok": false,
+ "reel_check": {
+  "SOURCE primary read in full": "yes: Nintendo IR software pages (Switch, Switch 2, Wii, DS, 3DS, Wii U) read 8 Nov 2026 about 08:30Z; as-of dates 30 Sep 2026 (Switch, Switch 2), 30 Sep 2016 (Wii, DS), 31 Dec 2016 (3DS, Wii U); evergreen",
+  "SOURCE not already posted": "yes: ledger find recorded (0 hits); different from the 17 Oct consoles Reel and from the 8 Nov hardware top five; no Mario Kart or Wii Sports post in the story files of the last week",
+  "SOURCE older than 24h": "n/a: evergreen; dated by Nintendo's next Switch page update (early Feb 2027)",
+  "ANGLE": "yes: see angle block",
+  "TYPE NUMBERS": "yes: figure per game, period life-to-date as of the dates above, source Nintendo IR, comparison = bars against the leader and Mario Kart World's 16.48M on the closing line",
+  "STORY one spoken paragraph": "yes: 'تبدأ القائمة بلعبة سباقات على Wii. لعبتا Mario Kart ضمن أول خمس ألعاب. أما Mario Kart World على Switch 2 فبلغت 16.48 مليونًا.' read aloud",
+  "STORY subject named, no و opening": "yes",
+  "STORY release verbs": "n/a: no release",
+  "STORY names match names-ar.md": "yes: نينتيندو (Nintendo) bracketed at first mention in the headline; game and platform names in Latin as Nintendo writes them (a colon in a long title breaks the line and is dropped on screen only)",
+  "POST Arabic grammar and direction": "yes: every line and caption paragraph opens on an Arabic word; Western digits; no sign after a Latin name",
+  "POST X and Threads short, source named": "yes: «حسب صفحات الشركة»",
+  "POST source comment": "yes: pages, as-of dates and Nintendo's 'consolidated sales' wording, link on X only",
+  "SOUND": "yes: our bed, stats flavour (graphics and a still, no footage sound); no effects over footage",
+  "PICTURE footage first": "n/a: numbers evergreen on Nintendo's package images; no single official clip covers the five games; the closing beat is an official game image, not a card",
+  "PICTURE not same picture as last 5 Reels": "yes: Wii Sports, Switch package art and Mario Kart World store art; the last Reels are other games",
+  "PICTURE one visual requirement per beat, subject whole": "yes: one package per row, whole at 1x or smaller; hero Wii Sports enlarged 1.6x at most from Nintendo's 150x120 image; closing still 1920x1080 cropped to 9:16 at 1.78x, Mario and Luigi kept in frame",
+  "PICTURE headline in band, no blur": "yes: headline in the top band; no blurred fill",
+  "PICTURE credit on every non-ours image": "yes: credits 0 to 7",
+  "CHECKS decision log": "yes"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "product card Wii Sports 82.79 (package image from Nintendo's Wii page)",
+   "alternatives": "Mario Kart World (not in the ranking)",
+   "crop": "none",
+   "music": "our bed stats",
+   "evidence_role": "illustration"
+  },
+  {
+   "beat": "1",
+   "shot": "ranking, rank 5 Mario Kart Wii; line gives the genre",
+   "crop": "none",
+   "music": "bed"
+  },
+  {
+   "beat": "2",
+   "shot": "ranking, rank 4 Smash Ultimate, card alone",
+   "music": "bed"
+  },
+  {
+   "beat": "3",
+   "shot": "ranking, rank 3 Animal Crossing, card alone",
+   "music": "bed"
+  },
+  {
+   "beat": "4",
+   "shot": "ranking, rank 2 Mario Kart 8 Deluxe, card alone",
+   "music": "bed"
+  },
+  {
+   "beat": "5 payoff",
+   "shot": "full ranking; line: two Mario Kart in the top five",
+   "music": "bed"
+  },
+  {
+   "beat": "6 close",
+   "shot": "official Mario Kart World store art, two images (Mario and Luigi, then Daisy on a jet ski), game images not a card; line spans both and gives 16.48M on Switch 2, not on a card",
+   "alternatives": "MKW key art with logo (carries an awards badge), other store frames",
+   "crop": "focus 0.40 to 0.50, 1.78x",
+   "music": "bed, end card jingle after"
+  }
+ ],
+ "grammar_review": {
+  "stage": "arabic-grammar-review run 8 Nov 2026",
+  "required_edits": [
+   {
+    "original": "ضمن الخمسة الأولى",
+    "proposed": "ضمن أول خمس ألعاب",
+    "class": "grammar_morphology",
+    "category": "العدد والمعدود",
+    "explanation": "The elided counted noun is لعبة (feminine), so the number is خمس; an explicit counted noun avoids an ungendered definite number"
+   }
+  ],
+  "uncertain_cases": [
+   {
+    "text": "credit repeats the bracket",
+    "issue": "later mentions Arabic alone",
+    "why_uncertain": "credit position is its own line",
+    "options": [
+     "keep",
+     "drop"
+    ]
+   }
+  ]
+ },
+ "note": "Evergreen bank piece, 8 Nov 2026. Scope is the games on Nintendo's IR sales pages; never says 'of all time'."
+}
