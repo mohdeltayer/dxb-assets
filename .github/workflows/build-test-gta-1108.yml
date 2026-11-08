@@ -1,0 +1,62 @@
+# Build test only (branch studio/gta-series-test, never merged): renders the GTA VI series intro with the Dubai font
+# on dxb-render-1, runs the kit's self-tests and an Ocarina intro for parity, and commits the outputs to this branch.
+name: build-test-gta-1108
+permissions:
+  contents: write
+on:
+  push:
+    branches: [studio/gta-series-test]
+    paths: [.github/workflows/build-test-gta-1108.yml]
+concurrency:
+  group: build-test-gta
+  cancel-in-progress: false
+jobs:
+  t:
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            templates
+          persist-credentials: true
+      - name: Env
+        run: |
+          echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts" >> "$GITHUB_ENV"
+          echo "${DXB_VENV:-/home/runner/venv}/bin" >> "$GITHUB_PATH"
+      - name: Fonts
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          repo="$RUNNER_TEMP/dxb-fonts"
+          git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+          mkdir -p "$DUBAI_FONTS"; unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$DUBAI_FONTS"; rm -rf "$repo"
+      - name: Self-tests
+        run: python templates/test_gta_intro.py
+      - name: Render
+        run: |
+          out=live/2026-11-08/gta-kit-test; mkdir -p $out
+          cd templates
+          t0=$(date +%s)
+          python -c "import gta_intro as G; G.intro(11, '../$out/gta-intro-ep1-11.mp4', episode=1, final=True)"
+          python -c "import gta_intro as G; G.intro(1, '../$out/gta-intro-ep11-1.mp4', episode=11)"
+          python -c "import gta_intro as G; G.intro(10, '../$out/gta-intro-ep2-10.mp4', episode=2)"
+          echo "intro renders: $(( $(date +%s) - t0 )) s"
+          python -c "import sonic; sonic.jingle('gtavi','../$out/gtavi-jingle.wav'); sonic.arrange('gtavi','../$out/gtavi-bed-30.wav',30)"
+          cd ../$out
+          for f in gta-intro-ep1-11 gta-intro-ep11-1 gta-intro-ep2-10; do
+            ffmpeg -v error -y -i $f.mp4 -vf "select='eq(n\,0)+eq(n\,43)+eq(n\,86)',scale=540:-1,tile=3x1" -frames:v 1 $f-frames.jpg
+            ffprobe -v error -show_entries format=duration -of csv=p=0 $f.mp4
+          done
+          ffmpeg -v error -y -i gtavi-jingle.wav -c:a libmp3lame -b:a 192k gtavi-jingle.mp3; ffmpeg -v error -y -i gtavi-bed-30.wav -c:a libmp3lame -b:a 160k gtavi-bed-30.mp3; rm -f *.wav
+          ls -la
+      - name: Commit outputs to this branch
+        run: |
+          git config user.name "dxb-build-test"; git config user.email "noreply@anthropic.com"
+          git add -f live/2026-11-08/gta-kit-test
+          git commit -q -m "GTA kit test outputs (dxb-render-1)"
+          git push -q origin HEAD:studio/gta-series-test
+      - name: Clean
+        if: always()
+        run: rm -rf "$DUBAI_FONTS"
