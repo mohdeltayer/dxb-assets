@@ -99,5 +99,5 @@ Sources: adv-20261102-story-brief (listed there without a date; confirm the Reel
 
 ## 8 Nov 2026 · Fortnite Pirate Shop Access Reel · 16:9 trailer layout · trailer news
 Wrong: the trailer sat at the bottom of the frame and the top band was empty after the 3.5 s headline.
-Rule: a 16:9 trailer Reel uses the full layout: trailer at its own width in the middle, chip and headline in the top band for the whole Reel, story lines, key facts and credit as text on the bottom band; no empty band at any second, no blur.
+Rule: the normal Reel is the 16:9 trailer cropped to the subject filling 9:16; the showcase layout (trailer at its own width in the middle, chip and headline top band for the whole Reel, story lines, key facts and credit as text in the bottom band, no empty band, no blur) only when the trailer itself is the news or the enlarged source fails the quality gate (under 1080p, over 2x, lowbit, blocky) with no better official copy after the publisher's site and other trailers are checked. Low quality is the trigger, not aspect ratio.
 Sources: Mohammad, 8 Nov 2026 (correction to the 7 Nov band-layout rule).
