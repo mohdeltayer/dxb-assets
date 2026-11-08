@@ -3,7 +3,7 @@
  "title": "Halo: Combat Evolved and the original Xbox turn 25 (15 Nov 2001)",
  "game": "Halo: Combat Evolved",
  "category": "on this day",
- "status": "bank piece, built 8 Nov 2026, for Sun 15 Nov 2026 (the anniversary)",
+ "status": "bank piece ready (v2 rendered 8 Nov 2026, director PASS), for Sun 15 Nov 2026",
  "chip": "في مثل هذا اليوم",
  "template": "trailer",
  "skin": "house",
@@ -109,10 +109,11 @@
   "sound: Available Now trailer score from 64.5 s (speech-free 63.5-105.9 s), music_only stem, no effects; speech none",
   "grammar stage: no required edits; pronoun fix applied (the X text says حملة اللعبة الأولى, not حملتها); uncertain: بانجي spelling and هالو ستوديوز are proposed names, flagged on names-ar.md",
   "sensitive: none; no Gulf angle and no sales figure (no primary)",
-  "post on Sun 15 Nov 2026 (the anniversary day); the main session reruns the gate within the hour before"
+  "post on Sun 15 Nov 2026 (the anniversary day); the main session reruns the gate within the hour before",
+  "render: v1 (96.9 s gameplay: caption tag, strobing explosions, night-vision green) was replaced by v2 on reveal-trailer vehicle shots; v1 mp4 removed. Labels: tpl trailer, skin house, sound trailer, genre shooter"
  ],
  "approved": "",
- "director": "",
+ "director": "v2 PASS (see director_check)",
  "ledger_find": {
   "at": "2026-11-08T07:00:27Z",
   "words": [
@@ -123,5 +124,18 @@
   ],
   "hits": []
  },
- "gate": "gate 06:55Z 8 Nov 2026: primaries read (Microsoft Source 15 Nov 2001 and 8 Apr 2002, Xbox Wire 2021 and 23 Jul 2026, Halo Waypoint, Steam 2806050); no denial or change found; exit A confirmed; recheck within the hour before it posts (queued ahead more than 6 h)"
+ "gate": "gate 06:55Z 8 Nov 2026: primaries read (Microsoft Source 15 Nov 2001 and 8 Apr 2002, Xbox Wire 2021 and 23 Jul 2026, Halo Waypoint, Steam 2806050); no denial or change found; exit A confirmed; recheck within the hour before it posts (queued ahead more than 6 h)",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/halo-combat-evolved-xbox-turn-25-reel-v2.mp4",
+  "blob": "44d144eb49005d9982904537232b81bab53e7007",
+  "at": "2026-11-08T08:50:53Z",
+  "note": "v2 PASS: Chief from behind on frame 0 with the headline; vehicle shots from the reveal trailer on lines 2 and 3, cast and Chief face last; sound the Available Now trailer score, music stem only, speech none; notes: 24.4 s before the end card (guide 12-20, five lines at reading pace), cinematic shots enlarge 2.33x (lowres_ok names the copies), two smear flags waived after looking (doorway frame, bridge consoles), a tiny publisher pre-release note sits at the bottom edge of the reveal-trailer stretch (under the Reels caption zone); footage is the remake, credited",
+  "checklist": {
+   "job": "jobs/live/halo-combat-evolved-xbox-turn-25.json",
+   "sha256": "4e02842e4a29bff6751c53d37f2bccf6bdbf00f6cf79ec9f7ae6c739c18fa4ea",
+   "ok": true,
+   "problems": []
+  }
+ }
 }
