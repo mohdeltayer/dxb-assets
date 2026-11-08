@@ -1,0 +1,219 @@
+{
+ "name": "ps3-turns-20",
+ "story": "2026-11-17-ps3-turns-20",
+ "render_lane": "server",
+ "out": "cards/2026-11/ps3-turns-20-reel-v2.mp4",
+ "footage": [
+  {
+   "file": "ps3-wallpaper.jpg",
+   "repo": "live/2026-11-08/ps3-turns-20-wallpaper-crop.jpg"
+  },
+  {
+   "file": "ps3-advert.jpg",
+   "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps3-intro-advert-image-block-02-en-23oct24?$native$"
+  },
+  {
+   "file": "ps3-console.jpg",
+   "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps3-console-image-block-01-en-18nov24?$native$"
+  },
+  {
+   "file": "ps3-resistance.jpg",
+   "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps3-game-resistancefallofman-image-block-01-en-09oct24?$native$"
+  },
+  {
+   "file": "ps3-xmb.jpg",
+   "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps3-xrossmediabar-image-block-02-en-17oct24?$native$"
+  }
+ ],
+ "shots": [
+  [
+   "ps3-wallpaper.jpg",
+   0,
+   3.4,
+   0.5
+  ],
+  [
+   "ps3-advert.jpg",
+   0,
+   2.3,
+   0.31
+  ],
+  [
+   "ps3-xmb.jpg",
+   0,
+   2.3,
+   0.3
+  ],
+  [
+   "ps3-advert.jpg",
+   0,
+   2.0,
+   0.55
+  ],
+  [
+   "ps3-xmb.jpg",
+   0,
+   2.1,
+   0.72
+  ],
+  [
+   "ps3-resistance.jpg",
+   0,
+   2.6,
+   0.5
+  ],
+  [
+   "ps3-advert.jpg",
+   0,
+   2.0,
+   0.45
+  ],
+  [
+   "ps3-xmb.jpg",
+   0,
+   2.4,
+   0.5
+  ],
+  [
+   "ps3-advert.jpg",
+   0,
+   2.6,
+   0.31
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "في 17 نوفمبر 2006 بدأ بيع\nجهاز PS3 في أمريكا الشمالية",
+     {}
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "بدأ السعر من 499 دولارًا\nلنسخة 20 غيغابايت",
+     {}
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "كانت Resistance: Fall of Man\nمن ألعاب الإطلاق",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   7,
+   8,
+   [
+    [
+     "وفق موقع بلايستيشن، تجاوزت\nمبيعات PS3 87 مليون جهاز",
+     {}
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   8,
+   "المصدر: صور بلايستيشن (PlayStation) وسوني (Sony)"
+  ]
+ ],
+ "headline": "قبل 20 عامًا\nصدرت PlayStation 3",
+ "label": "في مثل هذا اليوم",
+ "source": "PlayStation",
+ "date": "17 Nov 2026",
+ "theme": "cold",
+ "style": "bold",
+ "template": "stills",
+ "skin": "house",
+ "cut": true,
+ "stills_reason": {
+  "why": "no_footage",
+  "tried": [
+   "PlayStation.com PS3 start-up clip (10.9 s, 1080p, a TV on a white ground: a 9:16 crop enlarges about 3x and cuts the logo; the showcase layout is not built in reel.py)",
+   "Steam (no PS3 titles)",
+   "PS3-era game trailers (YouTube only, not fetchable)",
+   "Sony Interactive press images (spec tables only)"
+  ]
+ },
+ "lowres_ok": {
+  "searched": [
+   "PlayStation.com history page and 30th-anniversary page",
+   "Sony Interactive press-release images",
+   "PS Store (not reachable)"
+  ],
+  "result": "the Resistance: Fall of Man box art is 592x840 and the largest official copy found (2.3x in the 9:16 frame); the other four images fill 9:16 at under 2x"
+ },
+ "reel_check": {
+  "SOURCE primary read": "yes: SCEA release 17 Nov 2006 and 19 Oct 2006 (Sony mediaroom), PlayStation.com PS3 history page, SCEI releases 8 May, 22 Sep, 3 Oct 2006 (Sony Interactive); gate 8 Nov 2026 in the story file",
+  "SOURCE not already posted": "yes: ledger find recorded, 0 hits; main session checks Publer 7 days",
+  "SOURCE age": "yes: anniversary dated by 17 Nov 2026 itself",
+  "ANGLE hook/why now/players/payoff": "yes: hook the console that launched 20 years ago; why now 20th anniversary of the NA launch; players: price and the launch game; payoff: over 87 million sold per PlayStation's own page",
+  "STORY TYPE items": "yes: anniversary: date and place, price, launch title, later sales, each with its Sony source",
+  "STORY one spoken paragraph": "yes: sales began on 17 Nov 2006 in North America; the price started at $499 for the 20 GB model; Resistance: Fall of Man was a launch game; PlayStation's site says it passed 87 million",
+  "STORY subject before pronoun, no line on و": "yes: PS3 is in the headline and line 1; lines open on في, بدأ, كانت, وفق",
+  "STORY release verbs": "yes: بدأ بيع, صدرت in the headline; no bare تصل",
+  "STORY names": "yes: سوني and بلايستيشن follow names-ar; no new names",
+  "WRITING headline/lines/caption/X/Threads/comment": "yes: drafts in the story file; game and news word in the first five words; no hashtags on X; IG ends #ألعاب #أخبار_الألعاب #PlayStation3 #PS3",
+  "WRITING sensitive": "n/a: none",
+  "SOUND footage's own sound": "n/a: official stills, our bed (stills Reel, nothing has sound of its own); the PS3 start-up clip's sound was not usable without its picture",
+  "SOUND our effects": "yes: none over footage",
+  "PICTURE footage first": "yes: no usable official footage: stills_reason lists the footage tried",
+  "PICTURE not same as last five": "yes: picture: PS3 hardware and box art, no PS3 Reel before",
+  "PICTURE vertical, nothing graphic": "yes: product images cropped to the vertical window; nothing graphic",
+  "PICTURE credit": "yes: one credit over shots 0 to 8",
+  "CHECKS": "yes: what I see: the PS3 console, the red launch advert, the XMB and the Resistance box; what I hear: our bed"
+ },
+ "decision_log": [
+  {
+   "beat": "hook (0-3.4 s)",
+   "shot": "the official PS3 and SIXAXIS portrait image (30th-anniversary wallpaper, pre-cropped to 1200x2133 so the bottom 30th logo is out)",
+   "alternatives": "horizontal console image on white (v1 crops were abstract stripes and the white ground made the lines hard to read: dropped)",
+   "crop": "native 9:16 window",
+   "music": "our bed"
+  },
+  {
+   "beat": "L1 on sale in North America",
+   "shot": "red launch advert (crop on the console), XrossMediaBar icons",
+   "alternatives": "Blu-ray drive close-up (1080x612, 3.1x: refused)",
+   "crop": "focus on the subject",
+   "music": "same"
+  },
+  {
+   "beat": "L2 price",
+   "shot": "red advert (right of the console), XMB right side",
+   "alternatives": "SIXAXIS image (996x627, 3x)",
+   "crop": "focus",
+   "music": "same"
+  },
+  {
+   "beat": "L3 launch title",
+   "shot": "Resistance: Fall of Man box art (592x840, 2.3x, lowres_ok names the search), red advert",
+   "alternatives": "MotorStorm art (launch window, not in the 17 Nov release)",
+   "crop": "centre",
+   "music": "same"
+  },
+  {
+   "beat": "L4 87 million, closing picture",
+   "shot": "XMB centre, the red advert console last",
+   "alternatives": "portrait console image (white ground under the lines)",
+   "crop": "focus",
+   "music": "same"
+  }
+ ],
+ "note": "Stills Reel from official PlayStation.com images (no usable footage); dated Tue 17 Nov 2026 (NA), Japan's 20th is Wed 11 Nov."
+}
