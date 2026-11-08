@@ -3,7 +3,7 @@
  "title": "Eight games join Game Pass Essential on 15 Nov 2026 (Xbox's 25th anniversary)",
  "game": "Xbox Game Pass",
  "category": "game pass",
- "status": "built 8 Nov 2026 for 19:30 Dubai",
+ "status": "built 8 Nov 2026 (v2 render, director PASS) for 19:30 Dubai",
  "chip": "رسمي",
  "template": "stills",
  "skin": "house",
@@ -78,10 +78,11 @@
  },
  "notes": [
   "gate 14:45Z 8 Nov: Xbox Wire wave post read via WebFetch (news.xbox.com refuses curl); no denial found",
-  "sensitive: none; no Halo: Combat Evolved; Gears and Perfect Dark art mature-rated but images are key art and action screenshots without gore"
+  "sensitive: none; no Halo: Combat Evolved; Gears and Perfect Dark art mature-rated but images are key art and action screenshots without gore",
+  "final: cards/2026-11/game-pass-essential-xbox-25th-nov-15-reel-v2.mp4; labels tpl stills, skin house, sound our bed, genre industry/hardware"
  ],
  "approved": "",
- "director": "",
+ "director": "v2 PASS (see director_check)",
  "ledger_find": {
   "at": "2026-11-08T14:40:07Z",
   "words": [
@@ -92,5 +93,18 @@
    "25th"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/game-pass-essential-xbox-25th-nov-15-reel-v2.mp4",
+  "blob": "8ad3cfae300545bb6fdef2354bb1038c095d554f",
+  "at": "2026-11-08T14:51:12Z",
+  "note": "v2 PASS (stills Reel, official Xbox Store art, stills_reason no_footage with the tried sources logged; default 9:16 crop): Gears of War: Judgment action shot with the headline (no face under it), Banjo-Kazooie, two Gears shots, Perfect Dark hero art, two Viva Pinata shots, four lines; sound our bed; notes: line 2 over the second Gears shot is pale on grey mist, the Banjo shot is a low-poly crab (a game screenshot), 19.8 s before the end card; v1's Banjo hero art put the headline over the bear's face and cut the title, so it was replaced",
+  "checklist": {
+   "job": "jobs/live/game-pass-essential-xbox-25th-nov-15.json",
+   "sha256": "8a26f13663b00b73452138e334bf47c2a94996e78d67bd3e803f5e115cd4a097",
+   "ok": true,
+   "problems": []
+  }
  }
 }
