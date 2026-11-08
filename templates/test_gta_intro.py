@@ -64,5 +64,30 @@ class Sound(unittest.TestCase):
             self.assertGreater(os.path.getsize(f'{d}/j.wav'), 100000)
 
 
+class Join(unittest.TestCase):
+    def test_fallback_encode(self):
+        """A stream-copy join that does not decode clean is joined again with one encode (8 Nov episode 1 failure)."""
+        import subprocess, decodecheck
+        with tempfile.TemporaryDirectory() as d:
+            for n, secs in (('a', 1), ('b', 2)):
+                subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-f', 'lavfi', '-i', f'testsrc2=s=320x568:r=30:d={secs}',
+                                '-f', 'lavfi', '-i', f'sine=d={secs}:sample_rate=48000', '-ac', '2', '-c:v', 'libx264',
+                                '-preset', 'ultrafast', '-c:a', 'aac', f'{d}/{n}.mp4'], check=True)
+            real, calls = decodecheck.decode_errors, []
+            def fake(p, *a, **k):
+                calls.append(p)
+                return ['dts error'] if len(calls) == 1 else real(p, *a, **k)
+            decodecheck.decode_errors = fake
+            try:
+                G.join(f'{d}/a.mp4', f'{d}/b.mp4', f'{d}/j.mp4')
+            finally:
+                decodecheck.decode_errors = real
+            self.assertEqual(G.JOINED['mode'], 'encode')
+            self.assertEqual(real(f'{d}/j.mp4'), [])
+            n = subprocess.run(['ffprobe', '-v', 'error', '-count_frames', '-select_streams', 'v', '-show_entries',
+                                'stream=nb_read_frames', '-of', 'csv=p=0', f'{d}/j.mp4'], capture_output=True, text=True).stdout
+            self.assertEqual(int(n), 90)
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=1)
