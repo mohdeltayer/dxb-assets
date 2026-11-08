@@ -41,6 +41,10 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | NetEase Games | نت إيز غيمز | In use |
 | Electronic Arts | إلكترونيك آرتس | In use (posts 5 and 6 Nov; added 7 Nov by Production 2) |
 | Respawn | ريسبون | Proposed 7 Nov (Production 2) |
+| Shiny Shoe | شايني شو | Proposed 8 Nov 2026 (Production 2; Monster Train 2 developer) |
+| Auroch Digital | أوروك ديجيتال | Proposed 8 Nov 2026 (Production 2; Warhammer Survivors developer) |
+| Atlus | أتلس | Proposed 8 Nov 2026 (Production 2) |
+| Bulkhead | بلكهيد | Proposed 8 Nov 2026 (Production 2; WARDOGS developer) |
 | Marvelous | مارفيلوس | In use |
 | Atari | أتاري | In use |
 | Playstack | بلايستاك | Proposed 3 Nov |
