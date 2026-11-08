@@ -1,0 +1,202 @@
+{
+ "name": "ocarina-of-time-uk-launch-dring",
+ "story": "2026-11-08-ocarina-of-time-uk-launch-dring",
+ "render_lane": "server",
+ "out": "cards/2026-11/ocarina-of-time-uk-launch-dring-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "oot-uk-showcase.mp4",
+   "repo": "live/2026-11-08/oot-uk-showcase.mp4"
+  }
+ ],
+ "shots": [
+  [
+   "oot-uk-showcase.mp4",
+   0,
+   3.6,
+   0.5
+  ],
+  [
+   "oot-uk-showcase.mp4",
+   3.6,
+   3.6,
+   0.5
+  ],
+  [
+   "oot-uk-showcase.mp4",
+   7.2,
+   3.7,
+   0.5
+  ],
+  [
+   "oot-uk-showcase.mp4",
+   10.9,
+   4.0,
+   0.5
+  ],
+  [
+   "oot-uk-showcase.mp4",
+   14.9,
+   3.0,
+   0.5
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "أسبوع Ocarina of Time\nالأول في بريطانيا",
+     {}
+    ]
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    [
+     "أعلى بنحو 35 بالمئة\nمن Breath of the Wild",
+     {}
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "نحو نصف الأسبوع الأول\nمن Tears of the Kingdom",
+     {}
+    ]
+   ]
+  ],
+  [
+   4,
+   4,
+   [
+    [
+     "لم تنشر نينتيندو\nأرقامًا بعد",
+     {}
+    ]
+   ]
+  ]
+ ],
+ "persist": {
+  "head": [
+   [
+    0,
+    4
+   ]
+  ],
+  "lines": [
+   [
+    0,
+    "حسب ذا غيم بيزنس (The Game Business)"
+   ]
+  ],
+  "line_size": 46,
+  "band_h": 676
+ },
+ "credits": [
+  [
+   0,
+   4,
+   "المصدر: نينتيندو (Nintendo)"
+  ]
+ ],
+ "headline": "ثاني أكبر إطلاق مادي\nلسلسلة Zelda في بريطانيا",
+ "label": "تقرير",
+ "source": "ذا غيم بيزنس (The Game Business)",
+ "date": "8 Nov 2026",
+ "theme": "playful",
+ "style": "bold",
+ "template": "trailer",
+ "skin": "house",
+ "track": [
+  "oot-uk-showcase.mp4",
+  0.0
+ ],
+ "cut": true,
+ "nobars": [
+  "oot-uk-showcase.mp4"
+ ],
+ "pace_ok": false,
+ "platform": "multi",
+ "beat": "numbers",
+ "angle": {
+  "hook": "Ocarina of Time is the UK's second-biggest Zelda launch ever on physical sales, per Christopher Dring",
+  "why_now": "Dring posted the first launch-week read on 8 Nov, three days after the 5 Nov Switch 2 release, using NielsenIQ UK physical data.",
+  "what_it_means_here": "It shows the remake selling about a third above Breath of the Wild and about half of Tears of the Kingdom in physical copies in one market; digital sales are not included, no unit figure was given, and Nintendo has not published figures.",
+  "payoff": "the two comparisons and the missing Nintendo figure, in the closing lines"
+ },
+ "story_type": "NUMBERS",
+ "sensitive": "none",
+ "lowres_ok": {
+  "searched": [
+   "Nintendo US store (3 official videos, all 720p, about 2.6 Mbps)",
+   "IGN (no copy)",
+   "Nintendo press site (no copy)",
+   "YouTube (refused without sign-in)"
+  ],
+  "result": "720p only; at 2x cap it cannot fill 9:16, so showcase layout at 1080 wide, no enlargement"
+ },
+ "reel_check": {
+  "1 SOURCE primary read": "yes: Dring's Substack note read in full 20:55Z via WebFetch (all numbers, NielsenIQ, 5:42 PM 8 Nov)",
+  "1 SOURCE not already posted": "yes: ledger find 20:45Z, 0 hits; user-score Reel (Metacritic) of 8 Nov is a different fact",
+  "1 SOURCE age": "yes: first report 8 Nov 17:42 note time, under 24 h",
+  "2 ANGLE written": "yes: story file angle (hook, why_now, what_it_means_here, payoff)",
+  "3 NUMBERS items": "yes: figure 35 percent and about half, period launch week, source Dring/NielsenIQ UK physical, comparison BotW 2017 and TotK",
+  "4 STORY one paragraph": "yes: read aloud in order: attribution, Ocarina's first week, 35 percent above BotW, about half of TotK, Nintendo no figures",
+  "4 STORY subject before pronoun": "yes: Ocarina of Time named in line 1 before any pronoun",
+  "4 STORY release verbs": "n/a: no release verb used",
+  "4 STORY names": "yes: Dring and The Game Business with Latin brackets; NielsenIQ proposed in names-ar; game names English",
+  "5 WRITING hashtags/caption": "yes: caption first words name Ocarina and report word, hashtags last",
+  "5 NEUTRAL tone report": "yes: label تقرير, attributed, 'لم تنشر نينتيندو أرقامًا'",
+  "6 SOUND trailer own": "yes: store Overview trailer 186.9 to 204.6 s, music and effects, no speech (whisper), audio_split decides",
+  "6 SOUND no effects over footage": "yes: no kit, blips off",
+  "7 PICTURE footage first": "yes: official Nintendo trailer",
+  "7 PICTURE crop": "yes: showcase layout, full frame at 1080 wide (no enlargement), source 720p cannot fill 9:16 inside 2x cap",
+  "7 PICTURE credit": "yes: credits cover all shots",
+  "7 PICTURE headline in band": "yes: headline in top band all shots via persist",
+  "8 CHECKS decision log": "yes: decision_log"
+ },
+ "decision_log": [
+  {
+   "beat": "0 attribution",
+   "shot": "187 s Link raises the sword (iconic, moving, centred)",
+   "alternatives": "128 s ocarina, 224 s young Link close-up",
+   "crop": "full frame 1080x608 in the middle band",
+   "evidence_role": "illustration"
+  },
+  {
+   "beat": "1 Ocarina first week UK",
+   "shot": "192 s Link torso and sword, same stretch",
+   "crop": "full frame",
+   "evidence_role": "illustration"
+  },
+  {
+   "beat": "2 35 percent above BotW",
+   "shot": "195 s Triforce puzzle platform",
+   "crop": "full frame",
+   "evidence_role": "illustration"
+  },
+  {
+   "beat": "3 about half of TotK",
+   "shot": "198 s fire, 201 s dungeon",
+   "crop": "full frame",
+   "evidence_role": "illustration"
+  },
+  {
+   "beat": "4 Nintendo no figures",
+   "shot": "204 s red corridor, calm close",
+   "crop": "full frame",
+   "evidence_role": "illustration"
+  },
+  {
+   "music": "trailer's own stretch 186.9 to 204.6 s, one continuous, speech-free by faster-whisper; ends before 'Gatekeeper' at 205.0; audio split runs on the runner and falls back to the mix if effects-led; avoided earlier Ocarina stretches (8-24, 20-44, 60-66, 72-76, 94-98 s)"
+  }
+ ],
+ "note": "Showcase layout (CLAUDE.md 8 Nov point 5b): picture track composed on the container (live/2026-11-08/oot-uk-showcase.mp4: ground #141332, azure rules, trailer 1080x608 at y 680, no enlargement). The suggested split strip of the two comparisons does not fit: the strip (y 1284 to 1456) and the lines it lifts would sit over the picture (ends y 1288), so the two comparisons are story lines and the template is logged trailer. picture: Overview trailer 186.9 to 204.6 s. speech: none."
+}

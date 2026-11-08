@@ -51,6 +51,9 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Atari | أتاري | In use |
 | Playstack | بلايستاك | Proposed 3 Nov |
 | Disney+ | ديزني بلس | In use |
+| The Game Business | ذا غيم بيزنس | Proposed 8 Nov 2026 (Production 2; Christopher Dring's outlet; Latin in brackets at first mention) |
+| NielsenIQ | نيلسن آي كيو | Proposed 8 Nov 2026 (Production 2; Dring writes «Nielsen IQ»; Latin in brackets at first mention) |
+| Christopher Dring | كريستوفر درينغ | Proposed 8 Nov 2026 (Production 2; writes at The Game Business; no role word verified, never «محلل المبيعات») |
 
 ### Studios
 | Latin | Arabic | Status |
