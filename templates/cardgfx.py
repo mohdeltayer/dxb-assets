@@ -422,8 +422,46 @@ def ranking(path, rows, title=None, theme='cold', show=None):
     return path
 
 
+# ---------------------------------------------------------------- two scores side by side (8 Nov 2026)
+def duo(path, title, right, left, footer=None, theme='cold'):
+    """Two scores beside each other on one plate (users beside critics): `right` and `left` are
+    {"label": "تقييم اللاعبين", "value": "9.6", "note": "من 5,668 تقييمًا"}; the right column is read first.
+    `title` the frame line above (the aggregator), `footer` the read time. Labels and notes open on an Arabic word."""
+    RL.rtl_starts([title, right['label'], left['label'], right['note'], left['note'], right.get('scale') or title, left.get('scale') or title] + ([footer] if footer else []), 'duo card')
+    probe = ImageDraw.Draw(Image.new('L', (NG.W, NG.H)))
+    col = (X1 - X0 - 48) // 2
+    for c in (right, left):
+        for t, w, sz in ((c['label'], 'Bold', 46), (c['note'], 'Medium', NG.MIN_TEXT), (c.get('scale') or c['note'], 'Medium', NG.MIN_TEXT)):
+            if probe.textlength(t, font=A.F(w, sz), **G.AR) > col - 30:
+                raise ValueError(f'duo card text is wider than its column: {t}')
+    h = 40 + 80 + 70 + 160 + 50 + 70 + (70 if footer else 0) + 40
+    y0 = 560
+    y1 = y0 + h
+    if y1 > 1290:
+        raise ValueError(f'duo card ({y0}-{y1}) is too tall')
+    im = NG.canvas()
+    d, lft, rgt = _plate(im, y0, y1, theme)
+    cx = (X0 + X1) // 2
+    d.text((X1 - 44, y0 + 40 + 44), title, font=A.F('Medium', 46), fill=A.BODY, anchor='rs', **G.AR)
+    d.line([cx, y0 + 140, cx, y1 - (110 if footer else 50)], fill=rgt + (110,), width=3)
+    for c, mid in ((right, (cx + X1 - 24) // 2 + 0), (left, (X0 + 24 + cx) // 2)):
+        y = y0 + 150
+        d.text((mid, y + 46), c['label'], font=A.F('Bold', 46), fill=A.BODY, anchor='ms', **G.AR)
+        y += 70
+        d.text((mid, y + 128), c['value'], font=A.F('Bold', 128), fill=A.INK, anchor='ms')
+        y += 150
+        if c.get('scale'):
+            d.text((mid, y + 40), c['scale'], font=A.F('Medium', NG.MIN_TEXT), fill=A.INK, anchor='ms', **G.AR)
+            y += 50
+        d.text((mid, y + 40), c['note'], font=A.F('Medium', NG.MIN_TEXT), fill=rgt, anchor='ms', **G.AR)
+    if footer:
+        d.text((cx, y1 - 36), footer, font=A.F('Medium', NG.MIN_TEXT), fill=A.BODY, anchor='ms', **G.AR)
+    im.save(path)
+    return path
+
+
 KINDS = {'fact': fact, 'scores': scores, 'verdict': verdict, 'totals': totals,
-         'product': product, 'ranking': ranking}
+         'product': product, 'ranking': ranking, 'duo': duo}
 
 
 def build(item, path, theme):
