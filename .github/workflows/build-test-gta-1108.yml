@@ -1,4 +1,4 @@
-# Build test only (branch studio/gta-series-test, never merged): renders the GTA VI series intro with the Dubai font
+# Build test only (branch studio/gta-series-test, never merged; run 2: commit with --sparse): renders the GTA VI series intro with the Dubai font
 # on dxb-render-1, runs the kit's self-tests and an Ocarina intro for parity, and commits the outputs to this branch.
 name: build-test-gta-1108
 permissions:
@@ -54,7 +54,7 @@ jobs:
       - name: Commit outputs to this branch
         run: |
           git config user.name "dxb-build-test"; git config user.email "noreply@anthropic.com"
-          git add -f live/2026-11-08/gta-kit-test
+          git add -f --sparse live/2026-11-08/gta-kit-test
           git commit -q -m "GTA kit test outputs (dxb-render-1)"
           git push -q origin HEAD:studio/gta-series-test
       - name: Clean
