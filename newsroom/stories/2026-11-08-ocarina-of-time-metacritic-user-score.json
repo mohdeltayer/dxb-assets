@@ -42,7 +42,7 @@
   }
  ],
  "gate": "gate 11:40Z: Metacritic page fetched and read (WebFetch, scores, counts, split, platform, dates). The page cannot be read for an update/correction note (aggregator). Exit A for what is on screen with the read time; user scores move.",
- "status": "built, director PASS, not scheduled",
+ "status": "built (re-render with persistent bands), director PASS, not scheduled",
  "ledger_find": {
   "at": "2026-11-08T11:39:59Z",
   "words": [
@@ -55,12 +55,12 @@
  "director_check": {
   "verdict": "PASS",
   "out": "cards/2026-11/ocarina-of-time-metacritic-user-score-reel-v1.mp4",
-  "blob": "8c4086e5fbadbdb2bfbda1a259f7c6c4167d3c5f",
-  "at": "2026-11-08T11:53:25Z",
-  "note": "Director QA (sonnet) on strip, dense, sheet. First frame: Link from the official trailer in the showcase layout, headline in the top band, chip clear of the grid corner. Shots: 0 showcase hook PASS; 1 score card beat 1 (players alone) over dimmed moving trailer PASS; 2 card beat 2 (players beside critics, read time 15:35 Dubai on it) PASS; 3 and 4 showcase with the positive/negative split lines in the bottom band PASS (shot 4 opens on a dark trailer moment, accepted); 5 official store screenshot, Link on Epona, game image not a card, PASS. Reel 18.2 s before end card, changes every 2.4 to 3.6 s, last 2 s a game image. Known deviation from the 8 Nov showcase rule: the headline is on screen only the first 3.5 s (reel.py head_secs), so the top band is empty in shots 3 and 4 (a persistent headline needs code, flagged to the coordinator). Quality: all three official Nintendo store videos are 1280x720 (YouTube refused), so showcase used; lowbit flag expected. Sound: the trailer's own stretch 8 to 24 s as one continuous track, no added effects, judged from the build not by ear, runner speech check passed. Grammar stage: no required edits.",
+  "blob": "318880dee6d0a0172bb7477b9d76b5c8d9d55d8f",
+  "at": "2026-11-08T11:58:17Z",
+  "note": "Director QA on the re-render (persist overlay) of the changed shots, strip and dense. Showcase shots 0, 3 and 4 now carry the chip and the headline in the top band for the whole shot (reel.head_layer, same size and place, cropped to the band above the picture) and a line in the bottom band at every second: shot 0 'بعد ثلاثة أيام من صدور اللعبة' (baked over 0 to 3.56 s, reel.py's own lines start after 3.6 s so nothing doubles), shots 3 and 4 the reel.py lines. No band empty, no text doubled, nothing over the picture. The card shots (1, 2) have no band (the score card sits on a dimmed moving trailer) and the closing Epona screenshot is full-bleed; neither is a showcase shot. Shot 3 opens on a dark trailer moment (accepted). Reel 18.2 s, last 2 s a game image, sound the trailer's own stretch, judged from the build not by ear. Grammar: new line checked (no required edit).",
   "checklist": {
    "job": "jobs/live/ocarina-of-time-metacritic-user-score.json",
-   "sha256": "b442ed5b9762b90155c30b28a484aa17165f36a07bac136bc5e113de70d4aefe",
+   "sha256": "cf34b1d48a512a1d48f2e7bfad258f9d7271b91f234e8b96d84351348b56b1e0",
    "ok": true,
    "problems": []
   }
@@ -79,6 +79,7 @@
    ],
    "headline": "لعبة Ocarina of Time\nاللاعبون يوافقون النقاد",
    "lines": [
+    "بعد ثلاثة أيام من صدور اللعبة",
     "نسبة الإيجابي منها 96 بالمئة",
     "والسلبي منها 3 بالمئة",
     "صدرت اللعبة على Switch 2\nفي 5 نوفمبر"
