@@ -42,7 +42,7 @@
   }
  ],
  "gate": "gate 11:40Z: Metacritic page fetched and read (WebFetch, scores, counts, split, platform, dates). The page cannot be read for an update/correction note (aggregator). Exit A for what is on screen with the read time; user scores move.",
- "status": "built, not scheduled",
+ "status": "built, director PASS, not scheduled",
  "ledger_find": {
   "at": "2026-11-08T11:39:59Z",
   "words": [
@@ -51,5 +51,48 @@
    "user-score"
   ],
   "hits": []
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/ocarina-of-time-metacritic-user-score-reel-v1.mp4",
+  "blob": "8c4086e5fbadbdb2bfbda1a259f7c6c4167d3c5f",
+  "at": "2026-11-08T11:53:25Z",
+  "note": "Director QA (sonnet) on strip, dense, sheet. First frame: Link from the official trailer in the showcase layout, headline in the top band, chip clear of the grid corner. Shots: 0 showcase hook PASS; 1 score card beat 1 (players alone) over dimmed moving trailer PASS; 2 card beat 2 (players beside critics, read time 15:35 Dubai on it) PASS; 3 and 4 showcase with the positive/negative split lines in the bottom band PASS (shot 4 opens on a dark trailer moment, accepted); 5 official store screenshot, Link on Epona, game image not a card, PASS. Reel 18.2 s before end card, changes every 2.4 to 3.6 s, last 2 s a game image. Known deviation from the 8 Nov showcase rule: the headline is on screen only the first 3.5 s (reel.py head_secs), so the top band is empty in shots 3 and 4 (a persistent headline needs code, flagged to the coordinator). Quality: all three official Nintendo store videos are 1280x720 (YouTube refused), so showcase used; lowbit flag expected. Sound: the trailer's own stretch 8 to 24 s as one continuous track, no added effects, judged from the build not by ear, runner speech check passed. Grammar stage: no required edits.",
+  "checklist": {
+   "job": "jobs/live/ocarina-of-time-metacritic-user-score.json",
+   "sha256": "b442ed5b9762b90155c30b28a484aa17165f36a07bac136bc5e113de70d4aefe",
+   "ok": true,
+   "problems": []
+  }
+ },
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "أرقام",
+   "format": "clipcard",
+   "skin": "house",
+   "theme": "stylized",
+   "style": "glow",
+   "sound": "trailer's own stretch",
+   "genre": [
+    "family"
+   ],
+   "headline": "لعبة Ocarina of Time\nاللاعبون يوافقون النقاد",
+   "lines": [
+    "نسبة الإيجابي منها 96 بالمئة",
+    "والسلبي منها 3 بالمئة",
+    "صدرت اللعبة على Switch 2\nفي 5 نوفمبر"
+   ],
+   "credit": "المصدر: نينتيندو (Nintendo) وميتاكريتيك",
+   "ig": "تقييم اللاعبين للعبة The Legend of Zelda: Ocarina of Time على Switch 2 يبلغ 9.6 من 10 على ميتاكريتيك (Metacritic).\n\nالرقم مبني على 5,668 تقييمًا من المستخدمين: نسبة الإيجابي منها 96 بالمئة، والمتوسط 1 بالمئة، والسلبي 3 بالمئة.\n\nأما تقييم النقاد (Metascore) على الموقع نفسه فيبلغ 96 من 100، حسب 87 مراجعة لنسخة Switch 2.\n\nتتغير تقييمات اللاعبين مع وصول تقييمات جديدة، وقد قُرئت الأرقام في صفحة اللعبة حتى 15:35 بتوقيت دبي يوم 8 نوفمبر 2026.\n\nصدرت اللعبة على Nintendo Switch 2 في 5 نوفمبر 2026.\n\n#ألعاب #أخبار_الألعاب #OcarinaOfTime #Switch2",
+   "x": "لاعبو Ocarina of Time على Switch 2 يمنحونها 9.6 من 10 على ميتاكريتيك (Metacritic) حتى 15:35 بتوقيت دبي، والنقاد 96 من 100.",
+   "threads": "لاعبو Ocarina of Time على Switch 2 يمنحونها 9.6 من 10 على ميتاكريتيك (Metacritic) حتى 15:35 بتوقيت دبي، والنقاد 96 من 100.",
+   "source_comment_ig": "المصدر: صفحة اللعبة على ميتاكريتيك (Metacritic)، نسخة Nintendo Switch 2، قُرئت حتى 15:35 بتوقيت دبي يوم 8 نوفمبر 2026: تقييم المستخدمين 9.6 من 5,668 تقييمًا (96 بالمئة إيجابية و1 بالمئة متوسطة و3 بالمئة سلبية)، وتقييم النقاد 96 من 87 مراجعة.",
+   "source_comment_x": "المصدر: صفحة اللعبة على ميتاكريتيك (Metacritic)، نسخة Nintendo Switch 2، قُرئت حتى 15:35 بتوقيت دبي يوم 8 نوفمبر 2026: تقييم المستخدمين 9.6 من 5,668 تقييمًا (96 بالمئة إيجابية و1 بالمئة متوسطة و3 بالمئة سلبية)، وتقييم النقاد 96 من 87 مراجعة. https://www.metacritic.com/game/the-legend-of-zelda-ocarina-of-time-2026/",
+   "media": "cards/2026-11/ocarina-of-time-metacritic-user-score-reel-v1.mp4",
+   "strip": "cards/2026-11/ocarina-of-time-metacritic-user-score-strip.jpg",
+   "sheet": "cards/2026-11/ocarina-of-time-metacritic-user-score-sheet.jpg"
+  }
+ },
+ "director_model": "sonnet"
 }
