@@ -2,7 +2,7 @@
  "id": "weekly-releases-nov-9-13-list",
  "title": "This week, 9 to 13 Nov: GTA VI pre-load, Apex x Godzilla, Monster Train 2 DLC, Warhammer Survivors, Metaphor on Switch 2, WARDOGS Season 3",
  "game": "weekly list",
- "status": "building",
+ "status": "scheduled in Publer 03:15Z (07:15 Dubai 8 Nov) on instagram, x, threads",
  "genre": [
   "industry/hardware",
   "shooter",
@@ -88,5 +88,19 @@
   "hits": [
    "2026-10-24-november-big-releases"
   ]
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/weekly-releases-nov-9-13-list-reel-v1.mp4",
+  "blob": "ac57ed62656a053b1893ae02ec495106e430e1ce",
+  "at": "2026-11-08T02:44:18Z",
+  "note": "director 02:47Z: strip and dense read. Frame 0: Rockstar's Miami skyline with the headline and chip ملخص. Six items, one official image each, every line on its picture and readable; credits name the publisher or developer per shot. Notes: the Metaphor line sits over the game's button-hint bar (readable) and the Warhammer Survivors image is busy; stills Reel for a weekly list, reason and sources tried in the job; our bed neon_e. Nothing graphic. Measurements only, not heard by ear.",
+  "checklist": {
+   "job": "jobs/live/weekly-releases-nov-9-13-list.json",
+   "sha256": "905a94d58bb8eac5a470541e05bae6f1dca76fb5546976ab1d963d906d0d53ea",
+   "ok": true,
+   "problems": []
+  }
+ },
+ "approved": "go: rolling queue; gate 02:45Z: every date read from the publisher page today, no change found"
 }
