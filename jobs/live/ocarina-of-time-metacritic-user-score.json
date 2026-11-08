@@ -29,6 +29,25 @@
  ],
  "gfx": [
   {
+   "file": "ocarina-mc-gfx-duo1.png",
+   "kind": "duo",
+   "title": "على ميتاكريتيك (Metacritic)",
+   "right": {
+    "label": "تقييم اللاعبين",
+    "value": "9.6",
+    "scale": "من 10",
+    "note": "من 5,668 تقييمًا"
+   },
+   "left": {
+    "label": "تقييم النقاد",
+    "value": "96",
+    "scale": "من 100",
+    "note": "من 87 مراجعة"
+   },
+   "footer": "حتى 15:35 بتوقيت دبي",
+   "stage": 1
+  },
+  {
    "file": "ocarina-mc-gfx-duo.png",
    "kind": "duo",
    "title": "على ميتاكريتيك (Metacritic)",
@@ -55,18 +74,33 @@
    0.5
   ],
   [
+   "ocarina-mc-gfx-duo1.png",
+   [
+    "ocarina-trailer.mp4",
+    11.6
+   ],
+   2.4,
+   null
+  ],
+  [
    "ocarina-mc-gfx-duo.png",
    [
     "ocarina-trailer.mp4",
-    19.6
+    14.0
    ],
-   4.4,
+   2.4,
    null
   ],
   [
    "ocarina-showcase.mp4",
-   8.0,
-   4.4,
+   8.4,
+   3.2,
+   0.5
+  ],
+  [
+   "ocarina-showcase.mp4",
+   11.6,
+   3.2,
    0.5
   ],
   [
@@ -81,11 +115,11 @@
  ],
  "lines": [
   [
-   2,
-   2,
+   3,
+   3,
    [
     [
-     "نسبة الإيجابي منها 96 بالمئة،\nوالسلبي 3 بالمئة",
+     "نسبة الإيجابي منها 96 بالمئة",
      {
       "size": 54
      }
@@ -93,8 +127,20 @@
    ]
   ],
   [
-   3,
-   3,
+   4,
+   4,
+   [
+    [
+     "والسلبي منها 3 بالمئة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   5,
    [
     [
      "صدرت اللعبة على Switch 2\nفي 5 نوفمبر",
@@ -108,7 +154,7 @@
  "credits": [
   [
    0,
-   3,
+   5,
    "المصدر: نينتيندو (Nintendo) وميتاكريتيك"
   ]
  ],
@@ -129,7 +175,7 @@
  "cut": true,
  "pace_ok": false,
  "audio_split": false,
- "sfx_ok": "one continuous stretch of the trailer's own sound (8 to 24 s) under the cut, picture cut in source order (3.6 s, card 4.4 s, 4.4 s) so the sound stays in sync within crossfades; no added effects over footage",
+ "sfx_ok": "one continuous stretch of the trailer's own sound (8 to 24 s) under the cut, picture cut in source order so the sound stays in sync within crossfades; no added effects over footage",
  "nobars": [
   "ocarina-showcase.mp4"
  ],
@@ -141,7 +187,12 @@
   ],
   [
    "ocarina-showcase.mp4",
-   8.0,
+   8.4,
+   "showcase layout looked at: same"
+  ],
+  [
+   "ocarina-showcase.mp4",
+   11.6,
    "showcase layout looked at: same"
   ]
  ],
@@ -179,7 +230,7 @@
   },
   {
    "beat": "1 card",
-   "shot": "two scores on a card over a dimmed moving copy of the trailer (19.6 s source)",
+   "shot": "two beats of the score card over a dimmed moving copy of the trailer: players alone, then beside the critics",
    "music": "same stretch continues"
   },
   {
