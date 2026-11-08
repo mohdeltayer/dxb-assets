@@ -233,6 +233,14 @@ def shots(job, draft=False, build=True):
                          seed=sum(map(ord, job['name'])), t0=t, fast=draft,
                          footage=(C.U + gf[0], gf[1]) if gf else None)
             out.append((clip, 0.0, secs, 0.5))
+        elif job.get('template') == 'stills' and os.path.splitext(f)[1].lower() in reel.STILL and not isinstance(fo, list):
+            # the stills template (formats.py, 14 Oct 2026): a 3% push-in clip per image, hard cuts (job "cut": true);
+            # fo is the crop position 0 (left) to 1 (right). Only jobs with template "stills" take this path.
+            if build:
+                clip = reel.stills_clips([f], f"{job['name']}-{i}", secs, focus=0.5 if fo is None else fo, fast=draft)[0][0]
+            else:
+                clip = f"{reel.STILLS}/{job['name']}-{i}-still-0-{reel.STILLS_VER}.mp4"
+            out.append((clip, 0.0, secs, 0.5))
         elif os.path.splitext(f)[1].lower() in reel.STILL:   # an official still: (art, null, secs, [from, to]) pans
             out.append((f, None, secs, tuple(fo) if isinstance(fo, list) else (0.5 if fo is None else fo)))
         else:

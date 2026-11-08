@@ -63,6 +63,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Jagex | جاجكس | Approved 4 Oct (on-screen bracket example) |
 | Remedy | ريميدي | In use |
 | Infinity Ward | إنفينيتي وارد | In use |
+| Sledgehammer Games | سليدجهامر غيمز | Proposed 8 Nov 2026 (MW3 turns 15; flagged for Mohammad) |
 | Santa Monica Studio | سانتا مونيكا ستوديو | In use |
 | Turn 10 | ترن 10 | In use |
 | Playground Games | بلاي غراوند | In use |
