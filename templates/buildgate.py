@@ -24,6 +24,16 @@ A job must carry:
                  [first_shot, last_shot] (adv-20261030-download-automation-and-credits, Part B: every clip that is not
                  ours carries an on-screen credit for as long as it shows). Breaking and Famitsu jobs draw their own.
 
+  "angle":       for a تقرير or تسريب job (its "label"), the story file's (or the job's) "angle" with "why_now" and
+                 "what_it_means_here" (or "what_it_means"), each at least REPORT_MIN_WORDS words and not a restatement
+                 of the headline (adv-20261107-context-in-reports, 9 Nov 2026: a report built on a sighting says what
+                 the sighting usually means, the precedent, and what is not confirmed; if the brief cannot fill these,
+                 the item is not a Reel).
+
+  cover:         the first shot is never one of our "-gfx-" cards on the plain living ground: a card that opens a
+                 Reel has the game's trailer behind it ("ground_footage", or the card's own [file, start]); otherwise
+                 open on footage, key art or a trailer frame (adv-20261108-numbers-cards-grid item 2, 9 Nov 2026).
+
 Report only (printed, never a refusal): a credit covering footage that names no source («المصدر», «لقطات من»,
 «الصورة»); a job without "decision_log" (adv-20261102-borrow-openmontage, part 2: per beat
 the shot chosen and the alternatives, the crop decision, the music and why). The director reads it.
@@ -46,6 +56,8 @@ HOSTED_DIRS = ('jobs/render/', 'jobs/breaking/', 'jobs/prerender/')
 STILL = ('.jpg', '.jpeg', '.png', '.webp')          # reel.STILL
 STILLS_WHY = ('sales', 'business', 'people', 'delay', 'outage', 'no_footage')
 STILLS_FREE = ('sales', 'business', 'people', 'delay', 'outage')   # no footage search needed (reel-check.md PICTURE)
+REPORT_CHIPS = ('تقرير', 'تسريب')
+REPORT_MIN_WORDS = 8
 CARD_LED = ('storybeat', 'numbers', 'list', 'retro', 'edition', 'reviewscores', 'explainer', 'quote')  # our graphics or declared
 
 
@@ -143,6 +155,41 @@ def notes(job):
     return out
 
 
+def _words(t):
+    return [w for w in str(t or '').replace('\n', ' ').split() if w.strip('.,،:;«»"()')]
+
+
+def report_angle_problems(job, story):
+    """adv-20261107-context-in-reports: a تقرير or تسريب needs a real 'why now' and 'what it means for players'."""
+    if str(job.get('label') or '').strip() not in REPORT_CHIPS:
+        return []
+    angle = story.get('angle') if isinstance(story.get('angle'), dict) else None
+    angle = angle or (job.get('angle') if isinstance(job.get('angle'), dict) else {})
+    head = set(_words(job.get('headline')))
+    out = []
+    for key, alts in (('why_now', ('why_now',)), ('what_it_means_here', ('what_it_means_here', 'what_it_means'))):
+        val = next((angle.get(a) for a in alts if angle.get(a)), '')
+        w = _words(val)
+        if len(w) < REPORT_MIN_WORDS:
+            out.append(f'report brief: angle "{key}" has {len(w)} words (at least {REPORT_MIN_WORDS}): say what the '
+                       f'sighting usually means, the precedent and what is not confirmed, or it is not a Reel')
+        elif head and len(set(w) & head) >= 0.8 * len(set(w)):
+            out.append(f'report brief: angle "{key}" restates the headline; give the context instead')
+    return out
+
+
+def cover_problems(job):
+    """adv-20261108-numbers-cards-grid item 2: the cover (first frame) is never a card on the plain ground."""
+    sh = (job.get('shots') or [None])[0]
+    if not (isinstance(sh, list) and sh and str(sh[0]).endswith('.png') and '-gfx-' in str(sh[0])):
+        return []
+    behind = (len(sh) > 1 and isinstance(sh[1], list)) or bool(job.get('ground_footage'))
+    if behind:
+        return []
+    return ['cover: the first shot is a card on the plain living ground; put the game\'s trailer behind it '
+            '("ground_footage" or the card\'s own [file, start]) or open on footage, key art or a trailer frame']
+
+
 def problems(path, job):
     """The list of refusals for this job file (empty when it may render)."""
     rel = _rel(path)
@@ -184,12 +231,14 @@ def problems(path, job):
                     out.append(f'story file: "{k}" missing')
             if s.get('source_type') and s.get('source_type') not in ('primary', 'secondary'):
                 out.append('story file: "source_type" must be primary or secondary')
+            out += report_angle_problems(job, s)
             fo = str(s.get('footage') or '').strip().lower()
             if fo.startswith('stills') and len(fo) < 20:
                 out.append('story file: stills need the reason and the footage sources tried')
 
     out += stills_problems(job)
     out += credit_problems(job)
+    out += cover_problems(job)
 
     rc = job.get('reel_check')
     if not rc:

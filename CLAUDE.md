@@ -2703,6 +2703,11 @@ news value, as now.
 
 ## Verify against primary sources
 
+Excluded sources (Mohammad, 8 Nov 2026, card adv-20261108-source-exclusion-and-scenario-format): Al Jazeera and its
+affiliated outlets, institutes, educational platforms and resources are never used, cited, linked or relied on, on any
+topic, and never through a republishing site. `newsroom/watch_feeds.py` reads no feed from them (`excluded`), and an item
+whose only source is one of them is not a lead. The games-news-editor skill's source list carries the same line.
+
 The digest is a lead sheet, not proof. Check claims independently before
 they go on a card — it has had real errors (it named "Romancing SaGa 4
 Destiny United" for what is *Romancing SaGa 3: Destinies Unite*).

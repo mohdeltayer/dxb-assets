@@ -312,6 +312,19 @@ def items(raw, base=''):
     return out
 
 
+EXCLUDED_HOSTS = ('aljazeera.com', 'aljazeera.net', 'ajplus.net', 'aja.me', 'ajnet.me')
+EXCLUDED_NAME = re.compile(r'\s[-|]\s*(Al Jazeera|AJ\+|الجزيرة)', re.I)
+
+
+def excluded(link, title='', src=''):
+    """Standing source exclusion (Mohammad, 8 Nov 2026, adv-20261108-source-exclusion-and-scenario-format): Al Jazeera and
+    its affiliated outlets, institutes and platforms are never a feed or a lead, on any topic, nor through a site that
+    republishes them."""
+    host = urllib.parse.urlparse(link).netloc.lower()
+    return (any(host == h or host.endswith('.' + h) for h in EXCLUDED_HOSTS) or bool(EXCLUDED_NAME.search(title))
+            or 'al jazeera' in src.lower())
+
+
 def load(feed):
     src, url, *parser = feed   # an optional third field names the parser for pages that are not RSS or Atom
     try:
@@ -331,13 +344,16 @@ def main(dry):
     day = (T - dt.timedelta(hours=24)).strftime('%Y-%m-%dT%H:%MZ')
     new, junk, failed = [], [], []
     with ThreadPoolExecutor(12) as ex:
-        results = list(ex.map(load, OFFICIAL + OUTLETS))
+        results = list(ex.map(load, [f for f in OFFICIAL + OUTLETS
+                                     if not excluded(f[1].full_url if isinstance(f[1], urllib.request.Request) else f[1], '', f[0])]))
     for src, got, err in results:
         if err:
             failed.append(err); continue
         for pub, title, link in got[:30]:
             if link in urls or (src, title) in titles:
                 continue
+            if excluded(link, title, src):
+                continue   # standing source exclusion (8 Nov 2026): never a lead, not even recorded
             if 'Google News' in src and (title.lstrip().startswith('-') or len(title.split(' - ')[0].split()) < 3 or 'Shop' in title):
                 continue   # store, cart and section pages, not news
             urls.add(link); titles.add((src, title))
