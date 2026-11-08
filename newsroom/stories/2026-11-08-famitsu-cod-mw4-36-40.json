@@ -3,7 +3,7 @@
  "title": "Famitsu gives Call of Duty: Modern Warfare 4 36/40 (9/9/9/9)",
  "game": "Call of Duty: Modern Warfare 4",
  "category": "report",
- "status": "built 8 Nov 2026 for 19:00 Dubai",
+ "status": "built 8 Nov 2026 (v1 render, director PASS) for 19:00 Dubai",
  "chip": "تقرير",
  "template": "split",
  "skin": "house",
@@ -72,10 +72,11 @@
  "notes": [
   "gate 13:45Z 8 Nov: Nintendo Everything read in full; Steam page read; Famitsu's own page not found; no denial found",
   "angle: hook the 36/40; why now: Famitsu's weekly scores out today; players: the first Japanese review score for the game; payoff: the four 9s; attribution chain Famitsu via Nintendo Everything",
-  "sensitive: none; no Modern Warfare 3 mention"
+  "sensitive: none; no Modern Warfare 3 mention",
+  "final: cards/2026-11/famitsu-cod-mw4-36-40-reel-v1.mp4; labels tpl split, skin house, sound trailer, genre shooter"
  ],
  "approved": "",
- "director": "",
+ "director": "v1 PASS (see director_check)",
  "ledger_find": {
   "at": "2026-11-08T13:41:03Z",
   "words": [
@@ -88,5 +89,18 @@
    "famitsu"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/famitsu-cod-mw4-36-40-reel-v1.mp4",
+  "blob": "8734c4364a97ac52da091502179d1990d07b1847",
+  "at": "2026-11-08T14:06:35Z",
+  "note": "v1 PASS (split, default 9:16 crop, official Steam Multiplayer trailer, 1080p full frame): masked operators on frame 0 with the headline, strip الناشر and الصدور pinned low, three lines in the pauses, credit on every shot, sound the trailer's own, one in-sync stretch from 95.0 s (no speech); notes: line 2 (the four scores) sits over bright cloud for about 1.7 s (legible, pale), line 3 is at size 48 to fit the Latin outlet name; one scene-cut smear flag waived after looking at the source frames; no blood in 95-113 s; chip تقرير (single outlet via Nintendo Everything, Famitsu's own page not found); 17.9 s before the end card",
+  "checklist": {
+   "job": "jobs/live/famitsu-cod-mw4-36-40.json",
+   "sha256": "a229e85e0de33ed45c1e4ba483c1fffce482de40fd1353a326436b319c887d0c",
+   "ok": true,
+   "problems": []
+  }
  }
 }
