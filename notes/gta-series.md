@@ -27,7 +27,7 @@ Launch date, the only source of the countdown: **19 November 2026**, PS5 and Xbo
 
 | # | Dubai date | Days | Subject | Family / template | Status |
 |---|---|---|---|---|---|
-| 1 | Sun 8 Nov | 11 | Why this launch matters: the series in Take-Two's own numbers (GTA V lifetime units, years since its launch, the gap since GTA IV) | numbers, clipcard on Rockstar footage | rendering (server) |
+| 1 | Sun 8 Nov | 11 | Why this launch matters: the series in Take-Two's own numbers (GTA V lifetime units, years since its launch, the gap since GTA IV) | numbers, clipcard on Rockstar footage | built v3, director PASS; handed to Production 2 for 8 Nov ~20:00 Dubai |
 | 2 | Mon 9 Nov | 10 | Trailer 1 read closely: what each shot confirms | trailer breakdown | to research |
 | 3 | Tue 10 Nov | 9 | Vice City then and now: Vice City (2002) against 2026 Leonida, Rockstar footage both sides, both halves labelled | comparison, hard cuts | to research (needs Rockstar's own Vice City footage) |
 | 4 | Wed 11 Nov | 8 | Lucia, Jason and the cast Rockstar has named | people beat sheet, official art | to research |
