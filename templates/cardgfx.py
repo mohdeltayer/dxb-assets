@@ -276,7 +276,133 @@ def totals(path, metacritic, opencritic, read, growing=True, theme='cold', stage
     return path
 
 
-KINDS = {'fact': fact, 'scores': scores, 'verdict': verdict, 'totals': totals}
+
+# ---------------------------------------------------------------- hardware ranking (8 Nov 2026)
+# `product` and `ranking`: a console's official product shot (templates/assets/consoles/, sources in SOURCES.md) on a
+# white rounded tile, with the maker's own figure. Built for the Nintendo hardware top five; any maker's lifetime
+# hardware figures can use them. Images are shown at 1x or smaller, never enlarged.
+import os
+CONSOLES = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'consoles')
+BAR_TRACK = (255, 255, 255, 30)
+
+
+def _tile(name, w, h, radius=24):
+    """The product shot on a white rounded tile of w x h (white ground, the shot fitted inside with a margin)."""
+    src = Image.open(os.path.join(CONSOLES, name + '.png')).convert('RGBA')
+    pad = max(8, round(min(w, h) * 0.06))
+    k = min((w - 2 * pad) / src.width, (h - 2 * pad) / src.height)
+    if k > 1.0:
+        raise ValueError(f'console image {name}.png ({src.width}x{src.height}) would be enlarged {k:.2f}x in a {w}x{h} tile; '
+                         'use a smaller tile or a larger source (never enlarge)')
+    src = src.resize((max(1, round(src.width * k)), max(1, round(src.height * k))), Image.LANCZOS)
+    tile = Image.new('RGBA', (w, h), (255, 255, 255, 255))
+    tile.alpha_composite(src, ((w - src.width) // 2, (h - src.height) // 2))
+    mask = Image.new('L', (w, h), 0)
+    ImageDraw.Draw(mask).rounded_rectangle([0, 0, w - 1, h - 1], radius=radius, fill=255)
+    tile.putalpha(mask)
+    return tile
+
+
+def product(path, image, name, value, unit, label, note=None, theme='cold', tile=(440, 220)):
+    """One console, large: a label (the rank, «المركز الأول»), the product tile, the name, the figure, its unit, and an
+    optional note. `value` is the figure as the maker printed it ("157.20"); `unit` the words after it («مليون جهاز»)."""
+    RL.rtl_starts([label, unit] + ([note] if note else []), 'product card')
+    probe = ImageDraw.Draw(Image.new('L', (NG.W, NG.H)))
+    room = X1 - X0 - 72
+    tw, th = tile
+    vs = next((s for s in (112, 104, 92, 84) if probe.textlength(value, font=A.F('Bold', s)) <= room), None)
+    if vs is None:
+        raise ValueError(f'product value is wider than the plate: {value}')
+    for t, w, s in ((label, 'Medium', LABEL), (unit, 'Medium', NOTE), (note, 'Medium', NG.MIN_TEXT), (name, 'Bold', 48)):
+        if t and probe.textlength(t, font=A.F(w, s), **G.AR) > room:
+            raise ValueError(f'product card text is wider than the plate: {t}')
+    h = 40 + (LABEL + 34) + (th + 22) + (50 + 12) + (vs + 16) + (NOTE + 14) + ((NG.MIN_TEXT + 18) if note else 0) + 34
+    y0 = 690
+    y1 = y0 + h
+    if y1 > G.SAFE_BOTTOM - 120:
+        raise ValueError(f'product card ({y0}-{y1}) runs into the story lines; use a smaller tile')
+    im = NG.canvas()
+    d, left, right = _plate(im, y0, y1, theme)
+    cx, y = (X0 + X1) // 2, y0 + 40
+    d.text((cx, y + LABEL), label, font=A.F('Medium', LABEL), fill=A.BODY, anchor='ms', **G.AR)
+    d.rounded_rectangle([cx - 60, y + LABEL + 14, cx + 60, y + LABEL + 20], radius=3, fill=right)
+    y += LABEL + 34
+    im.alpha_composite(_tile(image, tw, th), (cx - tw // 2, y))
+    y += th + 22
+    d = ImageDraw.Draw(im)
+    d.text((cx, y + 46), name, font=A.F('Bold', 48), fill=A.INK, anchor='ms', **G.AR)
+    y += 50 + 12
+    d.text((cx, y + vs), value, font=A.F('Bold', vs), fill=right, anchor='ms')
+    y += vs + 16
+    d.text((cx, y + NOTE), unit, font=A.F('Medium', NOTE), fill=A.INK, anchor='ms', **G.AR)
+    y += NOTE + 14
+    if note:
+        d.text((cx, y + NG.MIN_TEXT + 8), note, font=A.F('Medium', NG.MIN_TEXT), fill=A.BODY, anchor='ms', **G.AR)
+    im.save(path)
+    return path
+
+
+def ranking(path, rows, title=None, theme='cold', show=None):
+    """The countdown table: `rows` in rank order, first (the leader) first, 3 to 6 of them, each
+    {"rank": "5", "name": "Game Boy Advance", "value": "81.51", "unit": "مليون جهاز", "image": "gba", "n": 81.51}.
+    Every row: the rank badge, the product tile, the name, the figure with its unit, and a bar whose length follows `n`
+    against the largest. `show` reveals that many rows from the bottom up (the countdown: show=1 is rank 5 alone); rows
+    not yet revealed stay as faint empty slots, so the plate never jumps."""
+    if not 3 <= len(rows) <= 6:
+        raise ValueError(f'the ranking holds 3 to 6 rows, not {len(rows)}')
+    RL.rtl_starts([r['unit'] for r in rows] + ([title] if title else []), 'ranking card')
+    probe = ImageDraw.Draw(Image.new('L', (NG.W, NG.H)))
+    n_rows = len(rows)
+    shown = n_rows if show is None else show
+    row_h, tile, title_h = 146, 118, (84 if title else 0)
+    h = title_h + row_h * n_rows + 48
+    y0 = max(TOP, 940 - h // 2)
+    y1 = y0 + h
+    if y1 > G.SAFE_BOTTOM - 100:
+        raise ValueError(f'ranking card ({y0}-{y1}) runs into the story lines; fewer rows')
+    big = max(float(r['n']) for r in rows)
+    im = NG.canvas()
+    d, left, right = _plate(im, y0, y1, theme)
+    y = y0 + 24
+    if title:
+        d.text((X1 - 44, y + 52), title, font=A.F('Medium', 46), fill=A.BODY, anchor='rs', **G.AR)
+        y += title_h
+    bx_r = X1 - 44                                   # the badge's right edge
+    for i, r in enumerate(rows):
+        revealed = i >= n_rows - shown
+        cy = y + row_h // 2
+        d = ImageDraw.Draw(im)
+        if i:
+            d.line([X0 + 40, y, X1 - 40, y], fill=right + (60,), width=2)
+        d.ellipse([bx_r - 64, cy - 32, bx_r, cy + 32], fill=(right + (230,)) if revealed else (255, 255, 255, 26))
+        d.text((bx_r - 32, cy + 4), str(r['rank']), font=A.F('Bold', 40), fill=A.GROUND if revealed else A.BODY,
+               anchor='mm')
+        tx1 = bx_r - 64 - 16                          # tile right edge
+        if not revealed:
+            d.rounded_rectangle([tx1 - tile, cy - tile // 2, tx1, cy + tile // 2], radius=20, outline=(255, 255, 255, 40), width=2)
+            d.rounded_rectangle([X0 + 48, cy - 7, tx1 - tile - 20, cy + 7], radius=7, fill=BAR_TRACK)
+            y += row_h
+            continue
+        im.alpha_composite(_tile(r['image'], tile, tile, radius=20), (tx1 - tile, cy - tile // 2))
+        d = ImageDraw.Draw(im)
+        tr = tx1 - tile - 20                          # text right edge
+        room = tr - (X0 + 48)
+        d.text((tr, cy - 30), r['name'], font=A.F('Bold', 44), fill=A.INK, anchor='rs', **G.AR)
+        d.text((tr, cy + 24), r['value'] + ' ' + r['unit'], font=A.F('Medium', NG.MIN_TEXT + 2), fill=A.BODY,
+               anchor='rs', **G.AR)
+        if probe.textlength(r['value'] + ' ' + r['unit'], font=A.F('Medium', NG.MIN_TEXT + 2), **G.AR) > room or \
+                probe.textlength(r['name'], font=A.F('Bold', 44), **G.AR) > room:
+            raise ValueError(f"ranking row does not fit: {r['name']} / {r['value']} {r['unit']}")
+        blen = max(24, round(room * float(r['n']) / big))
+        d.rounded_rectangle([tr - room, cy + 40, tr, cy + 52], radius=6, fill=BAR_TRACK)
+        d.rounded_rectangle([tr - blen, cy + 40, tr, cy + 52], radius=6, fill=right + (255,))
+        y += row_h
+    im.save(path)
+    return path
+
+
+KINDS = {'fact': fact, 'scores': scores, 'verdict': verdict, 'totals': totals,
+         'product': product, 'ranking': ranking}
 
 
 def build(item, path, theme):
