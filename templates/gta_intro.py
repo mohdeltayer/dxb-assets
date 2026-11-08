@@ -153,7 +153,11 @@ def intro(n, out, episode=1, d=None, final=False):
 
 
 def join(intro_mp4, reel_mp4, out):
-    """The intro ahead of a finished Reel (end card included): concat demuxer, stream copy."""
+    """The intro ahead of a finished Reel (end card included). First the concat demuxer with stream copy; if the joined
+    file does not decode clean (the 8 Nov episode 1 render on dxb-render-1 failed the output decode check with "non
+    monotonically increasing dts" after the stream-copy join), the two are joined again with the concat filter at the
+    Reel's final encode, so the decode check never sees a broken seam."""
+    import decodecheck
     tmp = tempfile.mkdtemp(prefix='gta-join-')
     try:
         lst = f'{tmp}/list.txt'
@@ -161,10 +165,36 @@ def join(intro_mp4, reel_mp4, out):
         part = f'{tmp}/joined.mp4'
         subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', lst, '-c', 'copy',
                         '-movflags', '+faststart', part], check=True)
+        errs = decodecheck.decode_errors(part)
+        if errs:
+            print(f'gta_intro: stream-copy join did not decode clean ({errs[0][:120]}); joining again with one encode',
+                  flush=True)
+            reencode(intro_mp4, reel_mp4, part)
+            errs = decodecheck.decode_errors(part)
+            if errs:
+                raise ValueError(f'gta_intro: joined Reel still has decode errors: {errs[0]}')
+            JOINED['mode'] = 'encode'
+        else:
+            JOINED['mode'] = 'copy'
         shutil.move(part, out)
         return out
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
+
+
+JOINED = {'mode': None}                                             # how the last join was made, for the render log
+
+
+def reencode(intro_mp4, reel_mp4, out):
+    """Concat filter, video and audio, at the Reel's final encode (reel.FINAL_ENC, outro.FINAL_A)."""
+    import reel, outro
+    fc = ('[0:v]setpts=PTS-STARTPTS,fps=30,format=yuv420p[v0];[1:v]setpts=PTS-STARTPTS,fps=30,format=yuv420p[v1];'
+          '[0:a]aresample=48000,asetpts=PTS-STARTPTS[a0];[1:a]aresample=48000,asetpts=PTS-STARTPTS[a1];'
+          '[v0][a0][v1][a1]concat=n=2:v=1:a=1[v][a]')
+    subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', intro_mp4, '-i', reel_mp4, '-filter_complex', fc,
+                    '-map', '[v]', '-map', '[a]', '-c:v', 'libx264'] + reel.FINAL_ENC
+                   + ['-pix_fmt', 'yuv420p', '-profile:v', 'high', '-video_track_timescale', '15360'] + outro.FINAL_A
+                   + ['-movflags', '+faststart', out], check=True)
 
 
 def check(spec):

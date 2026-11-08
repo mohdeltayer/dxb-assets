@@ -684,7 +684,7 @@ def intro(job, video):
     finally:
         shutil.rmtree(d, ignore_errors=True)
     if job['intro'].get('series') == 'gtavi':
-        music = 'our gtavi flavour (sonic.py)'
+        music = f"our gtavi flavour (sonic.py); join: {OI.JOINED['mode']}"
     else:
         music = 'his upload' if os.path.exists(OI.SRC) else 'the published intro (assets/ocarina/intro-medley.flac)'
     print(f"render_job: series intro joined ({OI.days_line(job['intro']['days'])}, medley from {music}) in {time.time() - t0:.0f} s",
