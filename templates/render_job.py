@@ -87,6 +87,9 @@ the result in the job as `clean_map`; with it, reel.quality_gate stops a shot th
 interval someone has looked at. A job without `clean_map` renders exactly as before.
 
 Road to Ocarina, story-beat episodes (B8, Mohammad's points on the episode 6 preview, build desk 29 Oct 2026):
+  - `"intro": {"series": "gtavi", "days": N, "episode": E, "date": "YYYY-MM-DD"}` (8 Nov 2026): the «الطريق إلى GTA VI»
+    intro (templates/gta_intro.py), joined the same way; days must equal the count from date to the launch date in
+    gta_intro.LAUNCH, or check() stops the job.
   - `"intro": {"series": "ocarina", "days": N}`: the series intro (templates/ocarina_intro.py, «باقي N يومًا» over his
     Triforce Medley) is rendered here, where the Dubai font is, and joined ahead of the finished Reel (end card
     included) with the concat demuxer, no re-encode; the Reel keeps its own sound after it (our bed on story-beat
@@ -329,8 +332,7 @@ def check(job):
     if job.get('kind') == 'breaking':
         return BK.check(job)
     if job.get('intro') is not None:
-        import ocarina_intro as OI
-        OI.check(job['intro'])
+        _intro_mod(job['intro']).check(job['intro'])
     if job.get('template') == 'reviewscores':  # totals read from the pages and recent, own-scale scores, short quotes
         import reviewscores as RS             # (adv-20261104-review-scores-template, 4 Nov 2026)
         errs = RS.check_job(job)
@@ -457,8 +459,11 @@ def textcheck(job):
         for c in job.get('credits') or []:
             reel.credit_layer(c[2], f'{tmp}/c.png')
         if job.get('intro') is not None:       # the series intro's title and days line (Dubai font)
-            import ocarina_intro as OI
-            OI.layers(job['intro']['days'], tmp)
+            OI = _intro_mod(job['intro'])
+            if job['intro'].get('series') == 'gtavi':
+                OI.layers(job['intro']['days'], tmp, job['intro']['episode'])
+            else:
+                OI.layers(job['intro']['days'], tmp)
         for x in job.get('person') or []:          # needs the photo in uploads: fetched like footage before this runs
             o = x[5] if len(x) > 5 else {}
             if os.path.exists(C.U + x[0]):
@@ -655,16 +660,33 @@ def design_pass(job, video, p, folder):
     return rec
 
 
+def _intro_mod(spec):
+    """The series intro module for a job's `intro` key: ocarina (templates/ocarina_intro.py, the default, as before)
+    or gtavi (templates/gta_intro.py, «الطريق إلى GTA VI», studio-gta-vi-series, 8 Nov 2026)."""
+    if isinstance(spec, dict) and spec.get('series') == 'gtavi':
+        import gta_intro
+        return gta_intro
+    import ocarina_intro
+    return ocarina_intro
+
+
 def intro(job, video):
     """The series intro joined ahead of the finished Reel (B8): rendered at the Reel's final encode, concat, no re-encode."""
-    import tempfile, ocarina_intro as OI
+    import tempfile
+    OI = _intro_mod(job['intro'])
     t0 = time.time()
     d = tempfile.mkdtemp(prefix='intro-')
     try:
-        OI.join(OI.intro(job['intro']['days'], f'{d}/intro.mp4', final=True), video, video)
+        if job['intro'].get('series') == 'gtavi':
+            OI.join(OI.intro(job['intro']['days'], f'{d}/intro.mp4', episode=job['intro']['episode'], final=True), video, video)
+        else:
+            OI.join(OI.intro(job['intro']['days'], f'{d}/intro.mp4', final=True), video, video)
     finally:
         shutil.rmtree(d, ignore_errors=True)
-    music = 'his upload' if os.path.exists(OI.SRC) else 'the published intro (assets/ocarina/intro-medley.flac)'
+    if job['intro'].get('series') == 'gtavi':
+        music = 'our gtavi flavour (sonic.py)'
+    else:
+        music = 'his upload' if os.path.exists(OI.SRC) else 'the published intro (assets/ocarina/intro-medley.flac)'
     print(f"render_job: series intro joined ({OI.days_line(job['intro']['days'])}, medley from {music}) in {time.time() - t0:.0f} s",
           flush=True)
     _times_note(job, 'intro', {'days': job['intro']['days'], 'secs': round(time.time() - t0, 1)})

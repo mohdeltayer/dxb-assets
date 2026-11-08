@@ -85,6 +85,15 @@ FLAVOURS = {
     'digest':    dict(NEON, lead='bell', arp='bell', bpm=96, step=0.16, drums='soft'),
     'retro':     dict(NEON, lead='square', arp='square12', bpm=132, step=0.13, drums='chip',
                       chip=True, pattern=[0, 1, 2, 3, 2, 1, 2, 3]),
+    # «الطريق إلى GTA VI» (Mohammad, 8 Nov 2026: "a new sonic.py flavour for it, our own motif, warm 80s synth feel,
+    # nothing licensed"). The house motif D F# A E on a warm poly synth (two detuned pulse waves through a closing
+    # filter, no saw and no noise, so it never reads as a whoosh), over the B minor turn the night-drive sound is
+    # known for, with the motif's last two notes echoing back like a tape delay.
+    'gtavi':     dict(NEON, prog=[['B2', 'D3', 'F#3', 'B3'], ['G2', 'B2', 'D3', 'G3'],
+                                  ['D3', 'F#3', 'A3', 'D4'], ['A2', 'C#3', 'E3', 'A3']],
+                      chord=['B2', 'F#3', 'B3', 'D4', 'F#4'],
+                      lead='synth80', arp='synth80', bpm=100, step=0.15, drums='light', echo=True,
+                      pattern=[0, 2, 1, 3, 2, 3, 1, 2]),
     # background beds for clips with no sound of their own (Mohammad, 1 Oct
     # 2026: the one bed under every still Reel had gone stale). Each keeps the
     # motif (it still surfaces every 8 bars) but changes the progression,
@@ -132,6 +141,7 @@ PALETTES = {
     'qanun':    dict(arp='qanun', pad='strings', drums=None, lead='oud', rate=4),
     'musicbox': dict(arp='musicbox', pad='hold', drums=None, lead='musicbox'),
     'celesta':  dict(arp='celesta', pad='strings', drums='sleigh_soft', lead='glock+bell'),
+    'synth80':  dict(arp='synth80', pad='hold', drums='light', lead='synth80', arp_lvl=0.9),
 }
 SECTION = 8     # bars per palette (about 20 s at 96 bpm)
 XFADE = 1       # bars of overlap at a change
@@ -154,6 +164,7 @@ ARRANGE = {
     'eid':       ['qanun', 'oud', 'strings'],
     'halloween': ['musicbox', 'strings', 'musicbox'],
     'christmas': ['celesta', 'bells', 'strings', 'celesta'],
+    'gtavi':     ['synth80', 'synth', 'synth80', 'epiano'],
 }
 
 
@@ -318,7 +329,23 @@ def voice(name, freq, dur):
             'triangle': lambda: triangle(freq, dur),
             'piano': lambda: piano(freq, dur),
             'epiano': lambda: epiano(freq, dur),
-            'flute': lambda: flute(freq, dur)}[name]()
+            'flute': lambda: flute(freq, dur),
+            'synth80': lambda: synth80(freq, dur)}[name]()
+
+
+def synth80(freq, dur):
+    """Warm 80s poly synth (the GTA VI series voice, 8 Nov 2026): two pulse waves detuned a few cents, built from
+    odd harmonics only (band-limited, no aliasing), whose upper partials die away like a closing low-pass filter.
+    No saw and no noise, so nothing reads as a whoosh."""
+    t = t_(dur)
+    x = np.zeros(len(t))
+    for det, ph in ((0.9965, 0.0), (1.0035, 0.7)):
+        f = freq * det
+        for k in range(1, 14, 2):
+            if f * k > 9000:
+                break
+            x += np.sin(2 * np.pi * f * k * t + ph * k) / k * np.exp(-t * (k - 1) / 1.4)
+    return 0.55 * x * env(len(t), a=0.012, d=0.5, s=0.35, r=0.12)
 
 
 def piano(freq, dur):
