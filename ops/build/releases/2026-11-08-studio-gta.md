@@ -1,5 +1,5 @@
 # Release 2026-11-08, studio: «الطريق إلى GTA VI» series kit (day release, 8 Nov ~13:00 Dubai)
-Previous: 2026-11-08 (release 2)   Merge commit: @@MERGE@@
+Previous: 2026-11-08 (release 2)   Merge commit: 69212807
 Run: studio request studio-gta-vi-series (Mohammad, 8 Nov 2026; verbatim on the dxb-queue board). Date first: 19 Nov
 2026 confirmed on Rockstar's GTA VI page (read 03:40Z) and Take-Two's fiscal Q1 2027 release (7 Aug 2026).
 
@@ -22,4 +22,4 @@ Run: studio request studio-gta-vi-series (Mohammad, 8 Nov 2026; verbatim on the 
   Branch: studio/gta-series (test branch studio/gta-series-test, never merged)
 
 ## Rollback
-- git revert -m 1 @@MERGE@@, push to main. Episode jobs carrying the gtavi intro key then fail their check.
+- git revert -m 1 69212807, push to main. Episode jobs carrying the gtavi intro key then fail their check.
