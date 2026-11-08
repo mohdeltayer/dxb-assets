@@ -23,3 +23,17 @@ Run: studio request studio-gta-vi-series (Mohammad, 8 Nov 2026; verbatim on the 
 
 ## Rollback
 - git revert -m 1 69212807, push to main. Episode jobs carrying the gtavi intro key then fail their check.
+
+## Addendum, 8 Nov ~13:10 Dubai: intro join fallback (branch studio/gta-join-fix, merge e96745a)
+- Cause: the first live render of episode 1 on dxb-render-1 (run 42464451752) passed every stage, then failed the
+  output decode check after the stream-copy join of the intro ("non monotonically increasing dts to muxer in stream
+  0: 73 >= 73"). The same join of synthetic bodies decoded clean on the container, so the seam depends on the real
+  body; not reproduced off the server.
+- Fix: templates/gta_intro.py join() decodes the joined file; if it is not clean, it joins again with the concat
+  filter at the Reel's final encode (reel.FINAL_ENC, outro.FINAL_A) and checks again; the render log says
+  "join: copy" or "join: encode". gtavi jobs only (gta_intro is imported only for the gtavi series); Ocarina's join and
+  every other job are unchanged, so parity does not apply.
+- Tests: self 11/11 (new: the fallback path, frame count kept); server run 42465187732 on dxb-render-1 (test branch
+  studio/gta-join-test, never merged): the real episode 1 job, the copy join failed with the same error, the
+  fallback joined in 26 s, output decode and smear checks clean, done in 221 s. gitleaks clean.
+- Rollback: git revert -m 1 e96745a (episode jobs then fail at the join again, as before).
