@@ -234,5 +234,17 @@
    "IGN video search (no Halo: Campaign Evolved MP4 found)"
   ],
   "result": "every 1080p copy has the cinematic scenes letterboxed to about 824 rows, so the character shots enlarge 2.33x (blocks read 1.02 to 1.33, under 1.5); gameplay shots are full frame"
- }
+ },
+ "block_ok": [
+  [
+   7.6,
+   8.2,
+   "source frames 98.0-98.5 s looked at: clean decode, the straight edges are the ruined structure and fence in the shot (a false positive)"
+  ],
+  [
+   15.4,
+   16.0,
+   "source frames 107.2-107.7 s looked at: clean decode, the straight edges are the bridge consoles and panels"
+  ]
+ ]
 }
