@@ -1,0 +1,10 @@
+build gate: ok (server lane, story 2026-11-08-gta-vi-road-ep1-why-it-matters)
+decode clean: gta6-launch.mp4
+length 16.0 s before the end card (target 12 to 20 s)
+render times {'name': 'gta-vi-road-ep1-why-it-matters-reel-v1.mp4', 'profile': 'standard', 'at': '2026-11-08T09:01Z', 'stages': {'checks': 4.7, 'montage': 35.1, 'text': 28.5, 'audio': 1.0, 'outro': 19.1}, 'total': 88.5, 'lane': 'selfhosted', 'queued_at': '2026-11-08T08:59Z', 'finished_at': '2026-11-08T09:01Z', 'render_min': 1.48}
+render_job: audio split: applied; music_pct 98.7; leak_pct 0.1; cache {'hit': 3, 'miss': 0}; separate_secs 4.0; secs 6.3
+gta_intro: stream-copy join did not decode clean ([null @ 0x606c5367f4c0] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 73 >= 73); joining again with one encode
+render_job: series intro joined (باقي 11 يومًا, medley from our gtavi flavour (sonic.py); join: encode) in 26 s
+shotsheet: face model unavailable (ModuleNotFoundError: No module named 'mediapipe'), faces not measured
+render_job: lifeless: {"score": 4.8, "still_share": 0.058, "longest_still": 0.5, "cuts_per_10s": 4.76, "held_under_text": 0.005, "secs": 18.9, "storybook": false, "mode": "report-only", "over": false}
+render_job: gta-vi-road-ep1-why-it-matters done in 221 s (fetch 27 s): /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/gta-vi-road-ep1-why-it-matters-reel-v1.mp4
