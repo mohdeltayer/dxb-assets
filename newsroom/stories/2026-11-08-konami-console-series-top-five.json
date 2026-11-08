@@ -41,7 +41,7 @@
   }
  ],
  "gate": "gate 18:35Z: Konami page read in full (WebFetch and plain fetch, honest client name, no workaround); as-of dates and footnote recorded. Exit A.",
- "status": "banked (not scheduled)",
+ "status": "banked (rendered, director PASS, not scheduled)",
  "ledger_find": {
   "at": "2026-11-08T18:38:50Z",
   "words": [
@@ -50,5 +50,47 @@
    "series"
   ],
   "hits": []
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/konami-series-top-five-reel-v1.mp4",
+  "blob": "dd4840b455f4958e7af303b977867cc62a5c2ae7",
+  "at": "2026-11-08T18:52:10Z",
+  "note": "Director QA (sonnet, evergreen numbers) on strip, dense, sheet. First frame: headline readable at grid size, METAL GEAR key art card 67.7 under it, chip clear of the grid corner. Shots: 0 hero PASS; 1-4 countdown rank 5 to 2 PASS (Yu-Gi-Oh shown without the trailing exclamation mark, which would flip in right-to-left text); 5 full table with the SILENT HILL footnote line PASS; 6 and 7 two official eFootball Steam screenshots with the closing line (it crosses the jersey logo but stays readable) PASS. Reel 19.7 s before the end card, last 2 s a game image. Credit on every shot. Sound: our bed stats flavour, judged from the build not by ear. Wording: Konami's page says cumulative sales; the Reel says وحدات and never shipped except in the SILENT HILL footnote. Grammar: no required edits.",
+  "checklist": {
+   "job": "jobs/live/konami-series-top-five.json",
+   "sha256": "01847957acc455689244571eb93f88cfd27d311c9f9d3f691cba85de896097b6",
+   "ok": true,
+   "problems": []
+  }
+ },
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "أرقام",
+   "format": "numbers",
+   "skin": "house",
+   "theme": "emerald",
+   "style": "lines",
+   "sound": "our bed, stats",
+   "genre": [
+    "industry/hardware"
+   ],
+   "headline": "ألعاب كونامي (Konami)\nتتصدرها METAL GEAR",
+   "lines": [
+    "رقم SILENT HILL يشمل\nالاشتراكات والتنزيلات",
+    "أما eFootball فتبلغ مبيعاتها\nوتنزيلاتها ألف مليون حتى أبريل 2026"
+   ],
+   "credit": "المصدر: كونامي (Konami) حتى سبتمبر 2026",
+   "ig": "أرقام كونامي (Konami): سلسلة METAL GEAR في صدارة سلاسل ألعاب الكونسول لدى الشركة بـ67.7 مليون وحدة.\n\nهذه أكبر خمس سلاسل في جدول ألعاب الكونسول بصفحة كونامي، وهو إجمالي المبيعات التراكمية حتى نهاية سبتمبر 2026:\nالأولى: METAL GEAR، 67.7 مليون وحدة.\nالثانية: Yu-Gi-Oh!، 32.7 مليون وحدة.\nالثالثة: PAWAFURU PUROYAKYU، 26.9 مليون وحدة.\nالرابعة: Momotaro Dentetsu، 20.2 مليون وحدة.\nالخامسة: SILENT HILL، 19.2 مليون وحدة.\n\nتذكر الصفحة أن رقم SILENT HILL يشمل الوحدات المشحونة وتنزيلات المتاجر والاشتراكات.\n\nوفي جدول آخر للألعاب على الكونسول والجوال، تبلغ مبيعات سلسلة eFootball وتنزيلاتها ألف مليون حتى أبريل 2026.\n\n#ألعاب #أخبار_الألعاب #METALGEAR #SILENTHILL",
+   "x": "سلسلة METAL GEAR تتصدر سلاسل ألعاب كونامي (Konami) على الكونسول بـ67.7 مليون وحدة، تليها Yu-Gi-Oh! بـ32.7 مليونًا، حسب صفحة الشركة حتى سبتمبر 2026.",
+   "threads": "سلسلة METAL GEAR تتصدر سلاسل ألعاب كونامي (Konami) على الكونسول بـ67.7 مليون وحدة، تليها Yu-Gi-Oh! بـ32.7 مليونًا، حسب صفحة الشركة حتى سبتمبر 2026.",
+   "source_comment_ig": "المصدر: صفحة قطاع الترفيه الرقمي في موقع كونامي (Konami)، جدول ألعاب الكونسول «Total Cumulative Sales»، حتى نهاية سبتمبر 2026. تضيف الشركة أن رقم SILENT HILL يشمل الوحدات المشحونة وتنزيلات المتاجر والاشتراكات.",
+   "source_comment_x": "المصدر: صفحة قطاع الترفيه الرقمي في موقع كونامي (Konami)، جدول ألعاب الكونسول «Total Cumulative Sales»، حتى نهاية سبتمبر 2026. تضيف الشركة أن رقم SILENT HILL يشمل الوحدات المشحونة وتنزيلات المتاجر والاشتراكات. https://www.konami.com/corporate/en/business/digitalentertainment.html",
+   "media": "cards/2026-11/konami-series-top-five-reel-v1.mp4",
+   "strip": "cards/2026-11/konami-series-top-five-strip.jpg",
+   "sheet": "cards/2026-11/konami-series-top-five-sheet.jpg"
+  }
+ },
+ "director_model": "sonnet"
 }
