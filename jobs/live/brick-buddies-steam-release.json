@@ -123,17 +123,9 @@
  "style": "glow",
  "template": "split",
  "skin": "house",
- "track": [
-  "brick-buddies.mp4",
-  0.0
- ],
- "music_only": true,
- "music_fade": [
-  0.3,
-  0.6
- ],
+ "track": "bed",
  "cut": true,
- "note": "Steam main trailer (1080p, full frame), cropped to the build at the centre of the table; split strip with platform and price; the trailer's own music stem.",
+ "note": "Steam main trailer (1080p, full frame), cropped to the build at the centre of the table; split strip with platform and price; the trailer's own music stem. Sound: our bed because the trailer's music stem was not clean (7.7%).",
  "block_ok": [],
  "reel_check": {
   "SOURCE primary read": "yes: Steam page and appdetails read 8 Nov 16:38Z; release Nov 8 2026, coming soon, no price, no Arabic",
@@ -147,7 +139,7 @@
   "STORY names": "yes: Bunnyhop with Arabic and Latin in credit and caption",
   "WRITING headline/lines/caption/X/Threads/comment": "yes: no first person, no em dash, Arabic first",
   "WRITING sensitive": "yes: none",
-  "SOUND footage's own sound": "yes: trailer music stem, no speech",
+  "SOUND footage's own sound": "yes: our bed, with the reason: Steam main trailer music stem measured not clean (leftover 7.7% over the 5% limit, music 57.5%, run 42501230395), and the shots from different moments cannot run as one in-sync stretch; no other official trailer exists (one Steam trailer); the preview says our bed",
   "SOUND our effects": "yes: none over footage",
   "PICTURE footage first": "yes: split on Steam trailer",
   "PICTURE not same as last five": "yes: indie cosy build, different from recent Reels",
@@ -161,7 +153,7 @@
    "shot": "main trailer: lighthouse model 0.3 s, box 3.2 s, brick pile 14 s, ship 20 s, table builds 27 to 36 s",
    "alternatives": "menu cards at 10, 16, 24 s (black placeholders), black at 36 s, logo slate at 42 s skipped",
    "crop": "builds sit at the centre of the table",
-   "music": "trailer score from 0 s, music stem"
+   "music": "our bed (everyday rotation); Steam trailer's music stem failed the cleanliness check at 7.7% leftover; the only trailer; director to sign off"
   }
  ]
 }
