@@ -286,12 +286,16 @@ CONSOLES = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'c
 BAR_TRACK = (255, 255, 255, 30)
 
 
-def _tile(name, w, h, radius=24):
+GAMES = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'games')
+
+
+def _tile(name, w, h, radius=24, max_k=1.0):
     """The product shot on a white rounded tile of w x h (white ground, the shot fitted inside with a margin)."""
-    src = Image.open(os.path.join(CONSOLES, name + '.png')).convert('RGBA')
+    folder = CONSOLES if os.path.exists(os.path.join(CONSOLES, name + '.png')) else GAMES
+    src = Image.open(os.path.join(folder, name + '.png')).convert('RGBA')
     pad = max(8, round(min(w, h) * 0.06))
     k = min((w - 2 * pad) / src.width, (h - 2 * pad) / src.height)
-    if k > 1.0:
+    if k > max_k:
         raise ValueError(f'console image {name}.png ({src.width}x{src.height}) would be enlarged {k:.2f}x in a {w}x{h} tile; '
                          'use a smaller tile or a larger source (never enlarge)')
     src = src.resize((max(1, round(src.width * k)), max(1, round(src.height * k))), Image.LANCZOS)
@@ -326,7 +330,7 @@ def product(path, image, name, value, unit, label, note=None, theme='cold', tile
     d.text((cx, y + LABEL), label, font=A.F('Medium', LABEL), fill=A.BODY, anchor='ms', **G.AR)
     d.rounded_rectangle([cx - 60, y + LABEL + 14, cx + 60, y + LABEL + 20], radius=3, fill=right)
     y += LABEL + 34
-    im.alpha_composite(_tile(image, tw, th), (cx - tw // 2, y))
+    im.alpha_composite(_tile(image, tw, th, max_k=1.6), (cx - tw // 2, y))
     y += th + 22
     d = ImageDraw.Draw(im)
     d.text((cx, y + 46), name, font=A.F('Bold', 48), fill=A.INK, anchor='ms', **G.AR)
@@ -353,11 +357,11 @@ def ranking(path, rows, title=None, theme='cold', show=None):
     probe = ImageDraw.Draw(Image.new('L', (NG.W, NG.H)))
     n_rows = len(rows)
     shown = n_rows if show is None else show
-    row_h, tile, title_h = 128, 104, (80 if title else 0)
+    row_h, tile, title_h = 140, 104, (80 if title else 0)
     h = title_h + row_h * n_rows + 48
     y0 = TOP                                         # story lines run from about y 1320: the plate ends well above them
     y1 = y0 + h
-    if y1 > 1290:
+    if y1 > 1300:
         raise ValueError(f'ranking card ({y0}-{y1}) runs into the story lines; fewer rows')
     big = max(float(r['n']) for r in rows)
     im = NG.canvas()
@@ -386,15 +390,33 @@ def ranking(path, rows, title=None, theme='cold', show=None):
         d = ImageDraw.Draw(im)
         tr = tx1 - tile - 20                          # text right edge
         room = tr - (X0 + 48)
-        d.text((tr, cy - 26), r['name'], font=A.F('Bold', 44), fill=A.INK, anchor='rs', **G.AR)
-        d.text((tr, cy + 20), r['value'] + ' ' + r['unit'], font=A.F('Medium', NG.MIN_TEXT + 2), fill=A.BODY,
-               anchor='rs', **G.AR)
-        if probe.textlength(r['value'] + ' ' + r['unit'], font=A.F('Medium', NG.MIN_TEXT + 2), **G.AR) > room or \
-                probe.textlength(r['name'], font=A.F('Bold', 44), **G.AR) > room:
-            raise ValueError(f"ranking row does not fit: {r['name']} / {r['value']} {r['unit']}")
+        name_f = A.F('Bold', 44)
+        vtxt = r['value'] + ' ' + r['unit']
+        val_f = A.F('Medium', NG.MIN_TEXT)
+        if probe.textlength(vtxt, font=val_f, **G.AR) > room:
+            raise ValueError(f"ranking row does not fit: {r['name']} / {vtxt}")
+        if probe.textlength(r['name'], font=name_f, **G.AR) <= room:
+            name_lines, ys = [r['name']], [cy - 22]
+            vy, by = cy + 22, cy + 38
+        else:                                          # a long title breaks after its colon, two lines of 40 px
+            name_f = A.F('Bold', NG.MIN_TEXT)
+            words = r['name'].split(' ')               # two balanced lines, a colon keeps its word
+            best = None
+            for k in range(1, len(words)):
+                a, b = ' '.join(words[:k]), ' '.join(words[k:])
+                w = max(probe.textlength(a, font=name_f, **G.AR), probe.textlength(b, font=name_f, **G.AR))
+                if best is None or w < best[0]:
+                    best = (w, [a, b])
+            name_lines = [t.rstrip(':') for t in best[1]] if best else [r['name']]   # a colon at a line end flips to the far side in RTL
+            if any(probe.textlength(t, font=name_f, **G.AR) > room for t in name_lines):
+                raise ValueError(f"ranking row does not fit: {r['name']}")
+            ys, vy, by = [cy - 46, cy - 6], cy + 36, cy + 50
+        for t, ty in zip(name_lines, ys):
+            d.text((tr, ty), t, font=name_f, fill=A.INK, anchor='rs', **G.AR)
+        d.text((tr, vy), vtxt, font=val_f, fill=A.BODY, anchor='rs', **G.AR)
         blen = max(24, round(room * float(r['n']) / big))
-        d.rounded_rectangle([tr - room, cy + 34, tr, cy + 44], radius=5, fill=BAR_TRACK)
-        d.rounded_rectangle([tr - blen, cy + 34, tr, cy + 44], radius=6, fill=right + (255,))
+        d.rounded_rectangle([tr - room, by, tr, by + 9], radius=5, fill=BAR_TRACK)
+        d.rounded_rectangle([tr - blen, by, tr, by + 9], radius=5, fill=right + (255,))
         y += row_h
     im.save(path)
     return path

@@ -1,0 +1,3 @@
+Package images for the Nintendo best-selling games ranking (8 Nov 2026). All are the package shots on Nintendo's own IR pages (Japanese packages, 'Package images shown above are for Japanese market'), used unchanged at 1x or smaller (the Wii Sports hero tile enlarges a 150x120 image up to 1.6x):
+- wii-sports.png, mario-kart-wii.png: https://www.nintendo.co.jp/ir/en/sale/software/img/data_wii_001.jpg and data_wii_002.jpg
+- mario-kart-8-deluxe.png, animal-crossing-new-horizons.png, smash-ultimate.png: https://www.nintendo.co.jp/ir/en/finance/software/img/data_switch_002.png, data_switch_017.png, data_switch_011.png
