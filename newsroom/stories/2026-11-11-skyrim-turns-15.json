@@ -3,7 +3,7 @@
  "title": "The Elder Scrolls V: Skyrim turns 15 (11 Nov 2011, 11/11/11)",
  "game": "The Elder Scrolls V: Skyrim",
  "category": "on this day",
- "status": "bank piece, built 8 Nov 2026, for Wed 11 Nov 2026 (the anniversary)",
+ "status": "bank piece ready (v3 rendered 8 Nov 2026, director PASS), for Wed 11 Nov 2026",
  "chip": "في مثل هذا اليوم",
  "template": "trailer",
  "skin": "house",
@@ -76,10 +76,11 @@
  },
  "notes": [
   "layout (CLAUDE.md 'Full frame' point 5, 8 Nov 2026): default 9:16 crop, no trailer-in-bands layout: the footage is 1080p full frame and fills 9:16 at 1.78x inside the 2x cap, and the trailer is not the story's focus; so no band exists to be empty",
-  "v2: the 2016 Special Edition line was cut from the Reel (about 20 s of clean scenery in the trailers); it stays in the X, Threads and Instagram text. v1 had the mammoth (a body under it), a dark dip and a grey bridge in its spans, because each shot shows d + 0.4 s of source (crossfade padding)"
+  "v2: the 2016 Special Edition line was cut from the Reel (about 20 s of clean scenery in the trailers); it stays in the X, Threads and Instagram text. v1 had the mammoth (a body under it), a dark dip and a grey bridge in its spans, because each shot shows d + 0.4 s of source (crossfade padding)",
+  "final: cards/2026-11/skyrim-turns-15-reel-v3.mp4 (v1 had the mammoth with a body under it, a dark dip and a grey bridge in its spans; v2 a black dip at 2 s; both removed). Labels: tpl trailer, skin house, sound trailer, genre RPG and open world. Check before posting: an unconfirmed second-hand report says Bethesda may announce something on 11 Nov 2026"
  ],
  "approved": "",
- "director": "",
+ "director": "v3 PASS (see director_check)",
  "ledger_find": {
   "at": "2026-11-08T08:57:03Z",
   "words": [
@@ -88,5 +89,18 @@
   "hits": [
    "2026-10-28-skyrim-special-edition-turns-10"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/skyrim-turns-15-reel-v3.mp4",
+  "blob": "e07f01ee63cb139227faceb8aadb54042dddcf60",
+  "at": "2026-11-08T09:52:34Z",
+  "note": "v3 PASS: dragon over a burning landscape on frame 0 with the headline; then scenic shots (Whiterun guard statue, Nord tower, elk at sunset, misty lake, valley) with three lines in the pauses; sound the Special Edition trailer score from 5.0 s, music stem only (music 55 percent, leak 0.6 percent), speech none; layout default 9:16 crop (1080p, 1.78x, quality gate clean, trailer not the news, so no showcase layout); notes: footage is the remaster and VR trailers, credited, no combat shots; the original 2011 Steam trailers are 940x528 and unusable; line 1 is pale over the elk sunset; 20.8 s before the end card",
+  "checklist": {
+   "job": "jobs/live/skyrim-turns-15.json",
+   "sha256": "43cfda3afa44d65c3c4370605883dd9dedd93a51f4d79342193907fe09d0ff0b",
+   "ok": true,
+   "problems": []
+  }
  }
 }
