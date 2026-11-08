@@ -24313,5 +24313,70 @@
   "min_disk_free_mb": 228317,
   "setup_min": 0.2,
   "story": "halo-combat-evolved-xbox-turn-25"
+ },
+ {
+  "name": "gta-vi-road-ep1-why-it-matters-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-08T09:08Z",
+  "stages": {
+   "checks": 5.7,
+   "montage": 32.1,
+   "text": 27.9,
+   "audio": 1.0,
+   "outro": 18.6
+  },
+  "total": 85.3,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-08T09:07Z",
+  "finished_at": "2026-11-08T09:08Z",
+  "render_min": 1.42,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 3.4,
+   "audio_secs": 40.8,
+   "music_pct": 98.7,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 0
+   },
+   "effects_shots": 0,
+   "mix_secs": 1.1,
+   "secs": 5.6
+  },
+  "intro": {
+   "days": 11,
+   "secs": 22.6
+  },
+  "lifeless": {
+   "score": 4.8,
+   "still_share": 0.058,
+   "longest_still": 0.5,
+   "cuts_per_10s": 4.76,
+   "held_under_text": 0.005,
+   "secs": 18.9,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 213,
+  "queue_wait_secs": 1,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1109,
+  "peak_mem_mb": 2358,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 13674,
+  "peak_disk_mb": 15368,
+  "min_disk_free_mb": 230738,
+  "setup_min": 0.22,
+  "story": "gta-vi-road-ep1-why-it-matters"
  }
 ]
