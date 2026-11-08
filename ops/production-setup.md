@@ -191,3 +191,28 @@ Build night. Read BUILD.md, then the build queue (cards with desk = build that a
 ```
 Daily project status check, 07:45 Dubai (Mohammad asked for one every morning, 31 Oct). Do this with as few tool calls as possible: one ArtifactData query of Inbox items updated in the last 24 hours, read the morning digest card and any build or keeper cards. Then send Mohammad, with SendUserMessage, a short status in this fixed shape: (1) milestone status against the project plan M1 to M11 (only the ones that moved or are due this week: done, on track, late, with the evidence), (2) keeper line and any alarms or slips in the last 24 hours, (3) published count and anything flagged in the digest, (4) decisions waiting on him, each one line, (5) today's expected events with times. No recap of yesterday's chat, no em dashes, under 200 words. After sending, schedule the next check with send_later for 03:45Z the following day with this same message, same name.
 ```
+
+## Production 2: lines every run prompt carries (build 9 Nov 2026)
+
+Production 2's tasks live on its own account; it pastes these lines into each of its run prompts (posting sessions,
+review preps, the watch) and confirms on the board. They also stand in the board's section 0 as standing order 12, so
+a run that has not been updated still reads them.
+
+1. Handoffs before the digest (Mohammad, 8 Nov 2026: "Production 2's run prompt reads the board Handoffs addressed to
+   it before the digest and acknowledges each"): after reading desk/board.md and before the digest, list every entry
+   in section 3 whose "to" names Production 2 and that no earlier Production 2 line has acknowledged. In this run's
+   board entry write one line per id: `ack: <id> (scheduled HH:MM Dubai | building, target HH:MM Dubai | declined:
+   <reason with the section cited>)`, and put the ids in board.json's entry as `"ack": [ids]`. A story Mohammad named
+   and the studio handed over is scheduled in the next free slot (adv-20261107-studio-owns-named-stories); a series
+   episode keeps its date. The desk audit lists as UNACKED any such handoff no Production 2 line names within 70
+   minutes, at the top of the morning digest.
+2. Search before asking (adv-20261108-no-decision-stalls): a run never ends on "decision needed" when the repo holds the
+   answer. Search CLAUDE.md, STYLE.md and newsroom/ for the subject and cite the section; if the answer is truly absent,
+   build the written fallback and put the question on the board's Questions list (section 4), never in the run's
+   closing line. The desk audit lists a decision line without a cited section as NOT-FOLLOWING-RULES.
+3. Bank sources, by name (CLAUDE.md Overnight cadence 1c, Constant coverage 3; adv-20261108-numbers-cards-grid): the
+   bank floor (6 ready Reels with a template and a verified source in newsroom/evergreen.md) is Production 2's job in
+   every run that builds no news. Sources: on-this-day anniversaries with the game's own footage («في مثل هذا اليوم»),
+   "how it happened" explainers, list pieces with each game's art, the Gulf price roundup, and numbers from a company's
+   public figures (at most one in six, always on the game's art, never the plain ground). Story-led and footage-led
+   first. The «الطريق إلى Ocarina» series closed on 5 Nov; «الطريق إلى GTA VI» episodes come from the studio.

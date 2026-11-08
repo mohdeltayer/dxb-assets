@@ -180,7 +180,7 @@ SKINS = ['house', 'scifi', 'fantasy']
 SKINS_LATER = ['military', 'horror', 'anime', 'retro', 'sports', 'cosy']
 
 
-def add(name, fmt, skin=None):
+def add(name, fmt, skin=None, bank=None):
     if fmt not in FORMATS:
         raise ValueError(f'{fmt}: not a format ({", ".join(FORMATS)})')
     if skin is not None and skin not in SKINS:
@@ -191,7 +191,9 @@ def add(name, fmt, skin=None):
     import datetime
     at = old.get('at') or datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%MZ')   # a re-render keeps its day
     sk = skin or old.get('skin')
+    bk = old.get('bank') if bank is None else bank   # a bank piece (newsroom/evergreen.md); the Tuesday audit counts them
     led.append({'name': name, 'format': fmt, 'at': at, **({'skin': sk} if sk else {}),
+                **({'bank': True} if bk else {}),
                 **({'views': old['views']} if 'views' in old else {})})
     json.dump(led[-200:], open(LEDGER, 'w'), indent=1)
 
@@ -296,8 +298,16 @@ def family(fmt):
 
 if __name__ == '__main__':
     a = sys.argv[1:]
-    if a[:1] == ['add']:                           # python3 formats.py add <reel name> <fmt> [skin]
-        add(a[1], a[2], a[3] if len(a) > 3 else None); print('ok')
+    if a[:1] == ['add']:                           # python3 formats.py add <reel name> <fmt> [skin] [--bank]
+        bank = '--bank' in a                       # a bank piece (adv-20261108-numbers-cards-grid item 4, 9 Nov 2026)
+        a = [x for x in a if x != '--bank']
+        add(a[1], a[2], a[3] if len(a) > 3 else None, bank=bank or None); print('ok')
+    elif a[:1] == ['bank']:                        # python3 formats.py bank [days]: bank pieces in the ledger, per week
+        import datetime
+        since = (datetime.datetime.utcnow() - datetime.timedelta(days=float(a[1]) if len(a) > 1 else 7)).strftime('%Y-%m-%dT%H:%MZ')
+        rows = [e for e in _load() if e.get('at', '') >= since]
+        b = [e for e in rows if e.get('bank')]
+        print(f'{len(b)} of {len(rows)} Reels were bank pieces since {since}: ' + ', '.join(e['name'] for e in b))
     elif a[:1] == ['views']:                       # python3 formats.py views <reel name> <instagram views>
         views(a[1], a[2]); print('ok')
     elif a[:1] == ['templates']:                   # views per template, for the Tuesday audit

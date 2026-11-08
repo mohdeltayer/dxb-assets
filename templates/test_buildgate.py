@@ -67,6 +67,30 @@ class Gate(unittest.TestCase):
         d['footage first'] = 'no: stills'
         self.assertTrue(any('answered no' in x for x in BG.problems('jobs/live/x.json', self.job(reel_check=d))))
 
+    def test_report_needs_real_angle(self):
+        """adv-20261107-context-in-reports (9 Nov): a تقرير job without a real why-now and what-it-means is refused."""
+        path = 'jobs/live/x.json'
+        bad = BG.problems(path, self.job(label='تقرير', headline='شارة جديدة على صفحة اللعبة', credits=[[0, 0, 'المصدر: x']]))
+        self.assertTrue(any('report brief: angle "why_now"' in p for p in bad), bad)
+        story = dict(STORY, angle={'why_now': 'Sony has moved its first-party games to PC a year or two after release, and this badge is the first sign for these titles',
+                                   'what_it_means_here': 'players in the Gulf may see these games on Steam with Arabic support; Sony has said nothing yet'})
+        (BG.STORIES / 's1.json').write_text(json.dumps(story))
+        ok = BG.problems(path, self.job(label='تقرير', headline='شارة جديدة على صفحة اللعبة', credits=[[0, 0, 'المصدر: x']]))
+        self.assertFalse(any('report brief' in p for p in ok), ok)
+        self.assertFalse(any('report brief' in p for p in BG.problems(path, self.job(label='رسمي'))))
+
+    def test_cover_card_needs_footage_behind(self):
+        """adv-20261108-numbers-cards-grid item 2 (9 Nov): no Reel opens on a card over the plain ground."""
+        path = 'jobs/live/x.json'
+        plain = self.job(shots=[['x-gfx-a.png', 0, 3, None], ['t.mp4', 1, 3, None]], credits=[[0, 1, 'المصدر: x']])
+        self.assertTrue(any(p.startswith('cover:') for p in BG.problems(path, plain)))
+        own = self.job(shots=[['x-gfx-a.png', ['t.mp4', 2], 3, None]], credits=[[0, 0, 'المصدر: x']])
+        self.assertFalse(any(p.startswith('cover:') for p in BG.problems(path, own)))
+        job_ground = self.job(shots=[['x-gfx-a.png', 0, 3, None]], ground_footage=['t.mp4', 4], credits=[[0, 0, 'المصدر: x']])
+        self.assertFalse(any(p.startswith('cover:') for p in BG.problems(path, job_ground)))
+        footage_first = self.job(shots=[['t.mp4', 1, 3, None], ['x-gfx-a.png', 0, 3, None]], credits=[[0, 1, 'المصدر: x']])
+        self.assertFalse(any(p.startswith('cover:') for p in BG.problems(path, footage_first)))
+
     def test_test_jobs_not_gated(self):
         self.assertEqual(BG.problems('jobs/test/x.json', {'name': 'x'}), [])
 

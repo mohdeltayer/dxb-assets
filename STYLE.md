@@ -44,6 +44,11 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     numbers to the company.
   - Outlets are leads, not proof. Ten articles citing one report are one
     source.
+  - Excluded sources (Mohammad, 8 Nov 2026): Al Jazeera and its affiliated
+    outlets, institutes, educational platforms and resources are never used,
+    cited, linked or relied on, on any topic, and never through a
+    republishing site. `newsroom/watch_feeds.py` reads no feed from them, and
+    an item whose only source is one of them is not a lead.
   - People take their role at first mention, on screen and in text
     («المخرج سولفريم ليانغ»), never a bare name, above all when the name is
     also a game or studio. X and Threads name the source of every quote,

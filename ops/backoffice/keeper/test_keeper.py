@@ -345,12 +345,38 @@ class Evidence(unittest.TestCase):
     def test_bank_floor_is_six(self):
         self.assertEqual(K.BANK_MIN, 6)
 
+    def test_bank_counts_only_verified_sources(self):
+        """9 Nov (adv-20261108-no-decision-stalls item 3): a ready row counts only with a template and a source."""
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            open(os.path.join(d, 'evergreen.md'), 'w').write(
+                '| Name | Template | Reel | Dates it | Source | Status |\n|---|---|---|---|---|---|\n'
+                '| a | trailer | x | - | Steam app 1 | ready |\n'
+                '| b | numbers | x | - |  | ready |\n'
+                '| c | trailer | x | - | outlets, no primary | ready (v2) |\n'
+                '| d | trailer | x | - | Nintendo IR | published |\n'
+                '\n## Planned\n| e | trailer | x | y | ready |\n')
+            n, line = K.bank_line(os.path.join(d, 'commitments.json'))
+            self.assertEqual(n, 1)
+            self.assertIn('2 ready without a verified source not counted', line)
+            open(os.path.join(d, 'evergreen.md'), 'w').write(
+                '| Name | Template | Reel | Dates it | Status |\n|---|---|---|---|---|\n| a | trailer | x | - | ready |\n')
+            n, line = K.bank_line(os.path.join(d, 'commitments.json'))
+            self.assertEqual(n, 1)
+            self.assertIn('no Source column', line)
+
 
 class Formats(unittest.TestCase):
     """7 Nov audit: Production 2 writes slots as '2026-11-07 12:15 Dubai'; 36 rows were unreadable."""
     def test_dubai_slot_form(self):
         self.assertEqual(K.parse_time('2026-11-07 12:15 Dubai'), K.parse_time('2026-11-07T08:15:00Z'))
         self.assertEqual(K.parse_time('2026-11-07 06:40 Dubai (T0, published at once)'), K.parse_time('2026-11-07T02:40:00Z'))
+
+    def test_weekday_slot_form(self):
+        """8 Nov: Production 2 writes 'Sun 08 Nov 22:30 Dubai (18:30Z)'; the 9 Nov build tick read none of them."""
+        self.assertEqual(K.parse_time('Sun 08 Nov 22:30 Dubai (18:30Z)'), K.parse_time('2026-11-08T18:30:00Z'))
+        self.assertEqual(K.parse_time('Sat 7 Nov 2026 09:05 Dubai'), K.parse_time('2026-11-07T05:05:00Z'))
+        self.assertIsNone(K.parse_time('Sun 08 Foo 22:30 Dubai'))
 
     def test_old_rows_never_page(self):
         os.environ['KEEPER_NTFY'] = 'off'

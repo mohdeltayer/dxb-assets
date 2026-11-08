@@ -66,6 +66,9 @@ DELIVERY = ('not_submitted', 'submitting', 'scheduled', 'published', 'failed', '
 # ---------------------------------------------------------------------------------------------
 # Time
 # ---------------------------------------------------------------------------------------------
+MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+
 def parse_time(s):
     """ISO time with an offset (Dubai slots: 2026-10-31T00:00+04:00). A time without an offset is Dubai time."""
     if not s:
@@ -74,6 +77,16 @@ def parse_time(s):
     d = re.match(r'^(\d{4}-\d\d-\d\d)[ T](\d\d?):(\d\d)\s*(Dubai|GST)\b', s, re.I)
     if d:                                    # Production 2's rows: "2026-11-07 12:15 Dubai" (7 Nov audit: 36 rows unread)
         s = '%sT%02d:%s+04:00' % (d.group(1), int(d.group(2)), d.group(3))
+    w = re.match(r'^(?:[A-Za-z]{3},?\s+)?(\d\d?)\s+([A-Za-z]{3})[a-z]*\.?(?:\s+(\d{4}))?,?\s+(\d\d?):(\d\d)\s*(Dubai|GST)\b', s, re.I)
+    if w and w.group(2).title() in MONTHS:   # "Sun 08 Nov 22:30 Dubai (18:30Z)" (Production 2 from 8 Nov): the keeper read
+        mo, day = MONTHS.index(w.group(2).title()) + 1, int(w.group(1))   # none of them on 9 Nov's build-night tick
+        if w.group(3):
+            year = int(w.group(3))
+        else:                                # no year written: the year that puts the slot nearest to now
+            ref = datetime.now(timezone.utc)
+            year = min((ref.year - 1, ref.year, ref.year + 1),
+                       key=lambda y: abs((datetime(y, mo, min(day, 28), tzinfo=timezone.utc) - ref).days))
+        s = '%04d-%02d-%02dT%02d:%s+04:00' % (year, mo, day, int(w.group(4)), w.group(5))
     s = s.replace('Z', '+00:00')
     m = re.match(r'^(\d{4}-\d\d-\d\dT\d\d:\d\d)(:\d\d)?(\.\d+)?([+-]\d\d:?\d\d)?$', s)
     if not m:
@@ -703,9 +716,18 @@ def write(path, text):
 BANK_MIN = 6                # ready Reels (adv-20261107-keeper-blind-and-lost-submit item 6; was 3)
 
 
+def _verified_source(cell):
+    """A bank row's Source cell counts when it names a primary (adv-20261108-no-decision-stalls, 9 Nov 2026): not
+    empty, not '?', 'unverified', 'none' or '-', and not marked 'no primary'."""
+    c = (cell or '').strip().lower()
+    return bool(c) and not c.startswith(('?', 'unverified', 'none', '-')) and 'no primary' not in c
+
+
 def bank_line(commitments_path):
-    """Finished, undated Reels in the evergreen bank (newsroom/evergreen.md, first table, Status starting 'ready').
-    Under BANK_MIN is an at-risk line (adv-20261105-p2-audit-fixes, item 5). Returns (count or None, line)."""
+    """Finished Reels in the evergreen bank (newsroom/evergreen.md, first table, Status starting 'ready').
+    Under BANK_MIN is an at-risk line (adv-20261105-p2-audit-fixes, item 5). Since 9 Nov a row counts only with a
+    template and a verified source (adv-20261108-no-decision-stalls item 3); a table without a Source column counts
+    as before, with a note. Returns (count or None, line)."""
     path = os.path.join(os.path.dirname(os.path.abspath(commitments_path)), 'evergreen.md')
     try:
         with open(path, encoding='utf-8') as f:
@@ -713,14 +735,26 @@ def bank_line(commitments_path):
     except OSError:
         return None, 'bank: not read (no newsroom/evergreen.md)'
     table = text.split('\n## ', 1)[0]
-    n = 0
+    head, n, skipped = None, 0, 0
     for row in table.splitlines():
         cells = [c.strip() for c in row.strip().strip('|').split('|')]
-        if len(cells) >= 5 and cells[-1].lower().startswith('ready'):
-            n += 1
+        if head is None and cells and cells[0].lower() == 'name':
+            head = [c.lower() for c in cells]
+            continue
+        if len(cells) < 5 or not cells[-1].lower().startswith('ready'):
+            continue
+        if head and 'source' in head and len(cells) == len(head):
+            tpl = cells[head.index('template')] if 'template' in head else 'x'
+            if not tpl.strip() or not _verified_source(cells[head.index('source')]):
+                skipped += 1
+                continue
+        n += 1
+    note = '' if head and 'source' in head else ' (no Source column: sources not checked)'
+    if skipped:
+        note += ', %d ready without a verified source not counted' % skipped
     if n < BANK_MIN:
-        return n, 'bank: at risk, %d ready Reels (minimum %d)' % (n, BANK_MIN)
-    return n, 'bank: %d ready Reels' % n
+        return n, 'bank: at risk, %d ready Reels (minimum %d)%s' % (n, BANK_MIN, note)
+    return n, 'bank: %d ready Reels%s' % (n, note)
 
 
 def rows_of(commitments):
