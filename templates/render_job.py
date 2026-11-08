@@ -692,6 +692,23 @@ def breaking(job, draft=False):
     return video
 
 
+def gfx_sheet(job, out):
+    """A contact sheet of the job's cards (no footage shots to sheet): each card on the indigo ground, in shot order."""
+    from PIL import Image
+    cards = [sh[0] for sh in job['shots'] if sh[0].endswith('.png') and '-gfx-' in sh[0]]
+    k = len(cards)
+    cols = min(4, k)
+    rows = -(-k // cols)
+    tw, th = 270, 480
+    sheet = Image.new('RGB', (cols * tw, rows * th), (20, 19, 50))
+    for i, f in enumerate(cards):
+        im = Image.open(C.U + f).convert('RGBA').resize((tw, th))
+        bg = Image.new('RGBA', (tw, th), (20, 19, 50, 255))
+        bg.alpha_composite(im)
+        sheet.paste(bg.convert('RGB'), ((i % cols) * tw, (i // cols) * th))
+    sheet.save(out, quality=88)
+
+
 def run(job, draft=False):
     if job.get('kind') == 'famitsu':
         return famitsu(job, draft)
@@ -743,7 +760,11 @@ def run(job, draft=False):
         DC.check(video, [w for w in job.get('block_ok', []) if len(w) == 3])   # stops before anything is committed
         DC.dense_strip(video, base + '-dense.jpg')
         reel.strip(video, base + '-strip.jpg')
-        reel.shotsheet([s for s in shots(job, build=False) if not s[0].startswith(NG.SUB + '/')], base + '-sheet.jpg')
+        footage_shots = [s for s in shots(job, build=False) if not s[0].startswith(NG.SUB + '/')]
+        if footage_shots:
+            reel.shotsheet(footage_shots, base + '-sheet.jpg')
+        else:                                   # a numbers Reel of our own cards only (8 Nov 2026): the sheet is the cards
+            gfx_sheet(job, base + '-sheet.jpg')
         lifeless_note(job, video)
     print(f"render_job: {job['name']} done in {time.time() - t0:.0f} s (fetch {fetched:.0f} s): {video}", flush=True)
     return video
