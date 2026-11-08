@@ -731,6 +731,48 @@ def gfx_sheet(job, out):
     sheet.save(out, quality=88)
 
 
+
+def persist_overlay(job, video, out):
+    """Layers baked over finished showcase shots (8 Nov 2026): the showcase layout keeps the chip and headline in its top
+    band, and its lines in the bottom band, for the whole shot, but reel.py shows the headline for 3.5 s and lines only
+    after it. `"persist": {"head": [[first_shot, last_shot], ...], "lines": [[shot, text], ...]}`: reel.head_layer's own
+    chip and headline (same size, place and style, cropped to the band above the picture) laid over those shots, and
+    the given lines (reel.line_layer, same style) over the named shots. Only where reel.py shows no text of its own."""
+    import tempfile
+    spec = job['persist']
+    starts, total = _starts(job)
+    n = len(starts)
+    span = lambda a, b: (starts[a], starts[b + 1] if b + 1 < n else total)
+    tmp = tempfile.mkdtemp(prefix='persist-')
+    try:
+        hs = job.get('head_size', reel.HEAD_SIZE)
+        head = reel.head_layer(job['headline'], job['label'], f'{tmp}/h.png', job['source'], job['date'], job.get('country'),
+                               hs=hs, hst=hs + 20, vivid=True, theme=job['theme'], seed=sum(map(ord, out)),
+                               style=job.get('style'), meta_path=f'{tmp}/m.png', skin=job.get('skin'))
+        band = spec.get('band_h', 676)
+        cmd = ['ffmpeg', '-nostdin', '-y', '-v', 'error', '-i', video]
+        flt, last, k = [], '0:v', 1
+        if spec.get('head'):
+            cmd += ['-loop', '1', '-i', head]
+            flt.append(f'[{k}:v]crop=1080:{band}:0:0[hd]')
+            en = '+'.join(f'between(t,{a:.3f},{b:.3f})' for a, b in (span(*x) for x in spec['head']))
+            flt.append(f"[{last}][hd]overlay=0:0:enable='{en}'[v{k}]")
+            last, k = f'v{k}', k + 1
+        for shot, text in spec.get('lines', []):
+            reel.line_layer(text, f'{tmp}/l{k}.png', skin=job.get('skin'), size=spec.get('line_size', 54))
+            cmd += ['-loop', '1', '-i', f'{tmp}/l{k}.png']
+            a, b = span(shot, shot)
+            flt.append(f"[{last}][{k}:v]overlay=0:0:enable='between(t,{a:.3f},{b:.3f})'[v{k}]")
+            last, k = f'v{k}', k + 1
+        tmpv = f'{tmp}/out.mp4'
+        cmd += ['-filter_complex', ';'.join(flt), '-map', f'[{last}]', '-map', '0:a?', '-c:v', 'libx264'] + reel.FINAL_ENC + \
+               ['-pix_fmt', 'yuv420p', '-c:a', 'copy', '-shortest', tmpv]
+        subprocess.run(cmd, check=True)
+        os.replace(tmpv, video)
+        print(f"render_job: persist overlay laid: head {spec.get('head')}, lines {[x[0] for x in spec.get('lines', [])]}", flush=True)
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
 def run(job, draft=False):
     if job.get('kind') == 'famitsu':
         return famitsu(job, draft)
@@ -762,6 +804,8 @@ def run(job, draft=False):
                      reveal=job.get('reveal'),   # word-by-word reveal on the key line (story-beat twist, 28 Oct 2026)
                      page=page_moves(job, _starts(job)[0]) if job.get('page_motion') else None)   # storybook (B8)
     video = done[0] if isinstance(done, (list, tuple)) else done
+    if job.get('persist') and not draft:
+        persist_overlay(job, video, out)
     dp = design_pass(job, video, dp_plan, DP_folder) if DP_folder else None
     if job.get('insert') and not draft:
         inserts(job, video)
