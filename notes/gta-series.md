@@ -53,4 +53,4 @@ against this table before its shot sheet; add its row once final. Times are seek
 | # | Shots (source: start to end) | Sound (source: stretch) |
 |---|---|---|
 | intro | L 25.15 to 27.18 (fixed, every episode) | gtavi jingle (fixed) |
-| 1 | L 54.55 to 56.35; L 66.45 to 67.85; L 2.2 to 5.8 (card 1 ground); L 46.35 to 50.65; L 6.4 to 10.0 (card 2 ground); L 67.9 to 69.25; L 73.2 to 75.6 | L music stem from 28.7 for 16.0 s (music_only) |
+| 1 | L 54.55 to 56.35; L 39.95 to 41.35; L 2.2 to 5.8 (card 1 ground); L 46.35 to 50.65; L 6.4 to 10.0 (card 2 ground); L 67.9 to 69.25; L 73.2 to 75.6 | L music stem from 28.7 for 16.0 s (music_only) |
