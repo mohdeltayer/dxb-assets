@@ -303,7 +303,7 @@ def _tile(name, w, h, radius=24):
     return tile
 
 
-def product(path, image, name, value, unit, label, note=None, theme='cold', tile=(440, 220)):
+def product(path, image, name, value, unit, label, note=None, theme='cold', tile=(440, 220), y0=690):
     """One console, large: a label (the rank, «المركز الأول»), the product tile, the name, the figure, its unit, and an
     optional note. `value` is the figure as the maker printed it ("157.20"); `unit` the words after it («مليون جهاز»)."""
     RL.rtl_starts([label, unit] + ([note] if note else []), 'product card')
@@ -317,7 +317,6 @@ def product(path, image, name, value, unit, label, note=None, theme='cold', tile
         if t and probe.textlength(t, font=A.F(w, s), **G.AR) > room:
             raise ValueError(f'product card text is wider than the plate: {t}')
     h = 40 + (LABEL + 34) + (th + 22) + (50 + 12) + (vs + 16) + (NOTE + 14) + ((NG.MIN_TEXT + 18) if note else 0) + 34
-    y0 = 690
     y1 = y0 + h
     if y1 > G.SAFE_BOTTOM - 120:
         raise ValueError(f'product card ({y0}-{y1}) runs into the story lines; use a smaller tile')
@@ -354,11 +353,11 @@ def ranking(path, rows, title=None, theme='cold', show=None):
     probe = ImageDraw.Draw(Image.new('L', (NG.W, NG.H)))
     n_rows = len(rows)
     shown = n_rows if show is None else show
-    row_h, tile, title_h = 146, 118, (84 if title else 0)
+    row_h, tile, title_h = 128, 104, (80 if title else 0)
     h = title_h + row_h * n_rows + 48
-    y0 = max(TOP, 940 - h // 2)
+    y0 = TOP                                         # story lines run from about y 1320: the plate ends well above them
     y1 = y0 + h
-    if y1 > G.SAFE_BOTTOM - 100:
+    if y1 > 1290:
         raise ValueError(f'ranking card ({y0}-{y1}) runs into the story lines; fewer rows')
     big = max(float(r['n']) for r in rows)
     im = NG.canvas()
@@ -387,15 +386,15 @@ def ranking(path, rows, title=None, theme='cold', show=None):
         d = ImageDraw.Draw(im)
         tr = tx1 - tile - 20                          # text right edge
         room = tr - (X0 + 48)
-        d.text((tr, cy - 30), r['name'], font=A.F('Bold', 44), fill=A.INK, anchor='rs', **G.AR)
-        d.text((tr, cy + 24), r['value'] + ' ' + r['unit'], font=A.F('Medium', NG.MIN_TEXT + 2), fill=A.BODY,
+        d.text((tr, cy - 26), r['name'], font=A.F('Bold', 44), fill=A.INK, anchor='rs', **G.AR)
+        d.text((tr, cy + 20), r['value'] + ' ' + r['unit'], font=A.F('Medium', NG.MIN_TEXT + 2), fill=A.BODY,
                anchor='rs', **G.AR)
         if probe.textlength(r['value'] + ' ' + r['unit'], font=A.F('Medium', NG.MIN_TEXT + 2), **G.AR) > room or \
                 probe.textlength(r['name'], font=A.F('Bold', 44), **G.AR) > room:
             raise ValueError(f"ranking row does not fit: {r['name']} / {r['value']} {r['unit']}")
         blen = max(24, round(room * float(r['n']) / big))
-        d.rounded_rectangle([tr - room, cy + 40, tr, cy + 52], radius=6, fill=BAR_TRACK)
-        d.rounded_rectangle([tr - blen, cy + 40, tr, cy + 52], radius=6, fill=right + (255,))
+        d.rounded_rectangle([tr - room, cy + 34, tr, cy + 44], radius=5, fill=BAR_TRACK)
+        d.rounded_rectangle([tr - blen, cy + 34, tr, cy + 44], radius=6, fill=right + (255,))
         y += row_h
     im.save(path)
     return path
