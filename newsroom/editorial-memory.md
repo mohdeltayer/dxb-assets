@@ -96,3 +96,8 @@ Sources: adv-20261102-borrow-openmontage (calibration set); story file 2026-10-2
 Wrong: faces in the footage sat under the person's photo box, so the frame had two faces competing.
 Rule: when the photo box is open, the footage behind it shows no face; pick a shot without one or move the box.
 Sources: adv-20261102-story-brief (listed there without a date; confirm the Reel from Mohammad's note).
+
+## 8 Nov 2026 · Fortnite Pirate Shop Access Reel · 16:9 trailer layout · trailer news
+Wrong: the trailer sat at the bottom of the frame and the top band was empty after the 3.5 s headline.
+Rule: the normal Reel is the 16:9 trailer cropped to the subject filling 9:16; the showcase layout (trailer at its own width in the middle, chip and headline top band for the whole Reel, story lines, key facts and credit as text in the bottom band, no empty band, no blur) only when the trailer itself is the news or the enlarged source fails the quality gate (under 1080p, over 2x, lowbit, blocky) with no better official copy after the publisher's site and other trailers are checked. Low quality is the trigger, not aspect ratio.
+Sources: Mohammad, 8 Nov 2026 (correction to the 7 Nov band-layout rule).

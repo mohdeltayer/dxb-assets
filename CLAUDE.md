@@ -2749,6 +2749,8 @@ The One Piece x Fortnite Reel put a small clip in the middle of a blur of itself
 4. A collaboration or trailer story uses the game's official trailer (Epic for Fortnite), credited on screen; footage
    from the other side of the collaboration (the anime) is illustration only.
 
+5. Trailer layout, corrected twice (Mohammad, 8 Nov 2026; replaces the earlier wording of this point and the loose "band layout" wording above; from the next Reel). The normal Reel is the 16:9 trailer cropped to the subject, filling 9:16. The showcase layout (the trailer at its own width in the middle of the frame; chip and headline in the top band for the whole Reel; story lines, key facts (date, price, platforms) and the credit as text in the bottom band, never over the picture; no empty band at any second, no blur) is used in two cases only: (a) the trailer itself is the news; (b) the source fails the quality gate when enlarged (under 1080p, over the 2x cap, lowbit or blocky) and no better official copy exists after checking the publisher's own site and the game's other trailers, the brief naming what was checked. Low quality is the trigger, not aspect ratio. The shape not to repeat is the Fortnite Pirate Shop Access Reel of 8 Nov (trailer at the bottom, top band empty after the headline).
+
 ## Promises, not just work (advisor card adv-20261030-promise-keeper, Mohammad 30 Oct 2026, 21:31 Dubai)
 
 Ocarina episode 6, the Switch 2 Lite post, the server watch and the published log slipped because the system
