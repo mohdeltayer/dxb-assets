@@ -45,7 +45,7 @@
   }
  ],
  "gate": "gate 12:15Z: Capcom IR Platinum Titles page read in full (curl with a browser user agent; WebFetch 403); as-of June 30, 2026; notes and footnotes read; no update note. Exit A.",
- "status": "banked (not scheduled)",
+ "status": "banked (rendered, director PASS, not scheduled)",
  "ledger_find": {
   "at": "2026-11-08T12:38:25Z",
   "words": [
@@ -54,5 +54,47 @@
    "monster-hunter"
   ],
   "hits": []
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/capcom-platinum-titles-top-five-reel-v1.mp4",
+  "blob": "6a552dcacf4a03815b4651447f81023e1a56f699",
+  "at": "2026-11-08T13:02:19Z",
+  "note": "Director QA (sonnet, evergreen numbers) on strip, dense, sheet. First frame: headline readable at grid size, MHW cover card 22.40 under it, chip clear of the grid corner. Shots: 0 hero PASS; 1-4 countdown rank 5 to 2 PASS (long titles break to two lines, nothing overlaps the story lines); 5 full table with line 'ثلاث ألعاب منها لسلسلة Monster Hunter' PASS; 6 and 7 two official MHW Steam screenshots (wyvern in flight, hunter on ice), clean, no gore, line spans both PASS (the card crossfades out over shot 6 for 0.4 s, normal). Reel 20.2 s before the end card, changes every 2.2 to 4.0 s, last 2 s a game image. Credit on all shots. Sound: our bed stats flavour, judged from the build not by ear, speech none. Wording: units (وحدات) as Capcom's page, no shipped or sold-to-players claim. Grammar: no required edits.",
+  "checklist": {
+   "job": "jobs/live/capcom-platinum-titles-top-five.json",
+   "sha256": "88915b3ec5b7cbd1c8ff518488fcdaa06061b654908666575603cb7e21619748",
+   "ok": true,
+   "problems": []
+  }
+ },
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "أرقام",
+   "format": "numbers",
+   "skin": "house",
+   "theme": "spectacle",
+   "style": "frame",
+   "sound": "our bed, stats",
+   "genre": [
+    "industry/hardware"
+   ],
+   "headline": "ألعاب كابكوم (Capcom)\nتتصدرها Monster Hunter",
+   "lines": [
+    "ثلاث ألعاب منها\nلسلسلة Monster Hunter",
+    "مع إضافة Iceborne Master Edition\nيبلغ رقم Monster Hunter: World 30.40 مليونًا"
+   ],
+   "credit": "المصدر: كابكوم (Capcom) حتى 30 يونيو 2026",
+   "ig": "أرقام كابكوم (Capcom): لعبة Monster Hunter: World في صدارة أكبر ألعاب الشركة، بـ22.40 مليون وحدة.\n\nهذه أكبر خمس ألعاب لكابكوم حسب قائمة Platinum Titles في صفحة المستثمرين، حتى 30 يونيو 2026:\nالأولى: Monster Hunter: World، 22.40 مليون وحدة.\nالثانية: Resident Evil 2، 19.70 مليون وحدة.\nالثالثة: Monster Hunter Rise، 19.30 مليون وحدة.\nالرابعة: Resident Evil 7 biohazard، 18.40 مليون وحدة.\nالخامسة: Monster Hunter World: Iceborne، 16.70 مليون وحدة.\n\nثلاث من الخمس لسلسلة Monster Hunter، واثنتان لسلسلة Resident Evil.\n\nتشير الصفحة إلى أن رقم Monster Hunter: World لا يشمل شحنات Iceborne Master Edition، وأن الرقم يبلغ 30.40 مليون وحدة معها. وتذكر أن بند التنزيل الرقمي يشمل كل وحدات التنزيل الرقمي الكامل لكل منصة.\n\n#ألعاب #أخبار_الألعاب #MonsterHunter #ResidentEvil",
+   "x": "لعبة Monster Hunter: World تتصدر ألعاب كابكوم (Capcom) بـ22.40 مليون وحدة، تليها Resident Evil 2 بـ19.70 مليونًا، حسب قائمة الشركة حتى 30 يونيو 2026.",
+   "threads": "لعبة Monster Hunter: World تتصدر ألعاب كابكوم (Capcom) بـ22.40 مليون وحدة، تليها Resident Evil 2 بـ19.70 مليونًا، حسب قائمة الشركة حتى 30 يونيو 2026.",
+   "source_comment_ig": "المصدر: صفحة Platinum Titles في موقع كابكوم (Capcom) للمستثمرين، حتى 30 يونيو 2026. الأرقام بوحدات (units) وتشمل التنزيلات الرقمية الكاملة، ورقم Monster Hunter: World لا يشمل شحنات Iceborne Master Edition (30.40 مليون وحدة معها).",
+   "source_comment_x": "المصدر: صفحة Platinum Titles في موقع كابكوم (Capcom) للمستثمرين، حتى 30 يونيو 2026. الأرقام بوحدات (units) وتشمل التنزيلات الرقمية الكاملة، ورقم Monster Hunter: World لا يشمل شحنات Iceborne Master Edition (30.40 مليون وحدة معها). https://www.capcom.co.jp/ir/english/business/million.html",
+   "media": "cards/2026-11/capcom-platinum-titles-top-five-reel-v1.mp4",
+   "strip": "cards/2026-11/capcom-platinum-titles-top-five-strip.jpg",
+   "sheet": "cards/2026-11/capcom-platinum-titles-top-five-sheet.jpg"
+  }
+ },
+ "director_model": "sonnet"
 }
