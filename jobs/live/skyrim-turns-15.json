@@ -1,0 +1,220 @@
+{
+ "name": "skyrim-turns-15",
+ "story": "2026-11-11-skyrim-turns-15",
+ "render_lane": "server",
+ "out": "cards/2026-11/skyrim-turns-15-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "skyrim-se.mp4",
+   "steam": 489830,
+   "trailer": "Skyrim Special Edition Trailer",
+   "start": 0,
+   "seconds": 40
+  },
+  {
+   "file": "skyrim-vr.mp4",
+   "steam": 611670,
+   "trailer": "Skyrim VR Trailer",
+   "start": 0,
+   "seconds": 70
+  }
+ ],
+ "shots": [
+  [
+   "skyrim-se.mp4",
+   24.4,
+   1.0,
+   null
+  ],
+  [
+   "skyrim-se.mp4",
+   15.5,
+   2.6,
+   null
+  ],
+  [
+   "skyrim-se.mp4",
+   19.0,
+   2.6,
+   null
+  ],
+  [
+   "skyrim-se.mp4",
+   21.0,
+   2.6,
+   null
+  ],
+  [
+   "skyrim-se.mp4",
+   17.4,
+   2.4,
+   null
+  ],
+  [
+   "skyrim-vr.mp4",
+   8.0,
+   2.3,
+   null
+  ],
+  [
+   "skyrim-vr.mp4",
+   5.0,
+   2.6,
+   null
+  ],
+  [
+   "skyrim-vr.mp4",
+   40.0,
+   2.6,
+   null
+  ],
+  [
+   "skyrim-vr.mp4",
+   38.0,
+   2.7,
+   null
+  ],
+  [
+   "skyrim-se.mp4",
+   14.0,
+   2.6,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   2,
+   3,
+   [
+    [
+     "اصطف عشرات الآلاف\nعند منتصف ليل 11 نوفمبر 2011\nلشراء Skyrim",
+     {}
+    ]
+   ]
+  ],
+  [
+   4,
+   5,
+   [
+    [
+     "طورتها بيثيسدا (Bethesda)\nلمنصات Xbox 360 و PS3 و PC",
+     {}
+    ]
+   ]
+  ],
+  [
+   6,
+   7,
+   [
+    [
+     "في 16 نوفمبر أعلنت\nالشركة الأم لبيثيسدا\nشحن سبعة ملايين نسخة",
+     {}
+    ]
+   ]
+  ],
+  [
+   8,
+   9,
+   [
+    [
+     "ثم أعادت بيثيسدا\nإصدارها عام 2016\nبنسخة Special Edition",
+     {
+      "size": 60
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   9,
+   "لقطات من Special Edition و Skyrim VR · بيثيسدا (Bethesda)"
+  ]
+ ],
+ "headline": "قبل 15 عامًا\nصدرت Skyrim",
+ "label": "في مثل هذا اليوم",
+ "source": "ZeniMax Media",
+ "date": "11 Nov 2026",
+ "theme": "stylized",
+ "style": "lines",
+ "template": "trailer",
+ "skin": "house",
+ "track": [
+  "skyrim-se.mp4",
+  5.0
+ ],
+ "music_only": true,
+ "music_fade": [
+  0.3,
+  0.6
+ ],
+ "cut": true,
+ "lowres_ok": {
+  "searched": [
+   "Steam 72850 Skyrim 'Full Trailer' and 'Live Action Trailer' (940x528, letterboxed to 400 rows: 4.8x, unusable)",
+   "Steam 489830 SE trailers (1080p, used)",
+   "Steam 611670 VR trailer (1080p, used)",
+   "IGN and Bethesda assets (not reachable from the build container)"
+  ],
+  "result": "the shots used are 1080p, full frame, enlarged 1.78x (under the 2x cap)"
+ },
+ "reel_check": {
+  "SOURCE primary read": "yes: ZeniMax Media press release 16 Nov 2011 (read on the Spong mirror) and the Steam pages 72850 and 489830; gate 8 Nov 2026 in the story file",
+  "SOURCE not already posted": "yes: ledger find recorded; the only hit is the SE turns-10 Reel of 28 Oct (a different angle: the 2011 release); main session checks Publer 7 days before scheduling",
+  "SOURCE age": "yes: anniversary dated by 11 Nov 2026 itself",
+  "ANGLE hook/why now/players/payoff": "yes: hook tens of thousands queueing at midnight on 11/11/11; why now the 15th anniversary; for players the 2016 Special Edition; payoff seven million shipped (ZeniMax)",
+  "STORY TYPE items": "yes: anniversary: date 11 Nov 2011 and platforms from ZeniMax; developer Bethesda Game Studios per ZeniMax and Steam; later 2016 from Steam",
+  "STORY one spoken paragraph": "yes: tens of thousands queued at midnight to buy Skyrim; Bethesda made it for Xbox 360, PS3 and PC; on 16 Nov the parent company said seven million were shipped; Bethesda re-released it as Special Edition in 2016",
+  "STORY subject before pronoun, no line on و": "yes: Skyrim is in the headline and line 1 before طورتها; lines open on اصطف, طورتها, في, ثم",
+  "STORY release verbs": "yes: صدرت for the past release, no bare تصل",
+  "STORY names": "yes: بيثيسدا matches names-ar; زينيماكس ميديا and بيثيسدا غيم ستوديوز added as Proposed 8 Nov",
+  "WRITING headline/lines/caption/X/Threads/comment": "yes: drafts in the story file; game and news word in the first five words; no hashtags on X; IG ends #ألعاب #أخبار_الألعاب #Skyrim #TheElderScrolls",
+  "WRITING sensitive": "n/a: none",
+  "SOUND footage's own sound": "yes: the Special Edition trailer's score from 5.0 s, music stem only (music_only), no speech from 2.7 s on",
+  "SOUND our effects": "yes: none over footage",
+  "PICTURE footage first": "yes: official Steam trailers, credited as the remaster and VR footage",
+  "PICTURE not same as last five": "yes: picture: Skyrim landscapes, no Skyrim Reel in the last 7 days except the SE turns-10 of 28 Oct",
+  "PICTURE vertical, nothing graphic": "yes: scenery and the dragon, judged on the vertical crop sheet; no combat shots, no gore",
+  "PICTURE credit": "yes: one credit over shots 0 to 9",
+  "CHECKS": "yes: what I see: landscapes and a dragon from the remaster and VR trailers (credited); what I hear: the trailer's music"
+ },
+ "decision_log": [
+  {
+   "beat": "hook (0-3.5 s)",
+   "shot": "SE trailer 24.4 s dragon over a burning landscape, then 15.5 s Dragonsreach in Whiterun",
+   "alternatives": "mammoth 23 s (a body at the bottom of frame, skipped); captioned comparison scenes 4-13 s (captions sit in the crop)",
+   "crop": "vertical column, caption-free 14-25 s only",
+   "music": "SE trailer score from 5.0 s, music stem"
+  },
+  {
+   "beat": "L1 queue at midnight",
+   "shot": "SE 19.0 s Nord tower with a waterfall, 21.0 s elk at sunset",
+   "alternatives": "forest 5-9 s (REMASTERED captions in the crop)",
+   "crop": "centre",
+   "music": "same stretch"
+  },
+  {
+   "beat": "L2 developer and platforms",
+   "shot": "SE 17.4 s valley and ruined bridge, VR 8.0 s misty mountains",
+   "alternatives": "VR combat shots (first-person weapons, skipped)",
+   "crop": "centre",
+   "music": "same stretch"
+  },
+  {
+   "beat": "L3 seven million",
+   "shot": "VR 5.0 s misty lake, VR 40.0 s sunset mountains",
+   "alternatives": "VR 33 s waterfall (1 s only)",
+   "crop": "centre",
+   "music": "same stretch"
+  },
+  {
+   "beat": "L5 Special Edition, closing picture",
+   "shot": "VR 38.0 s field with ruins, SE 14.0 s lake at sunset last",
+   "alternatives": "SE end slate 26 s (text)",
+   "crop": "centre",
+   "music": "same stretch, faded before the end card"
+  }
+ ],
+ "note": "Evergreen bank Reel for Wed 11 Nov 2026 (anniversary). Footage is the remaster and VR trailers, credited; the 2011 Steam trailers are 940x528 and unusable."
+}

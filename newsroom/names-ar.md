@@ -45,6 +45,8 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Auroch Digital | أوروك ديجيتال | Proposed 8 Nov 2026 (Production 2; Warhammer Survivors developer) |
 | Atlus | أتلس | Proposed 8 Nov 2026 (Production 2) |
 | Bulkhead | بلكهيد | Proposed 8 Nov 2026 (Production 2; WARDOGS developer) |
+| ZeniMax Media | زينيماكس ميديا | Proposed 8 Nov 2026 (Skyrim turns 15 Reel; Bethesda's parent company) |
+| Bethesda Game Studios | بيثيسدا غيم ستوديوز | Proposed 8 Nov 2026 (Skyrim turns 15 Reel; on screen the Reel says بيثيسدا (Bethesda)) |
 | Marvelous | مارفيلوس | In use |
 | Atari | أتاري | In use |
 | Playstack | بلايستاك | Proposed 3 Nov |
