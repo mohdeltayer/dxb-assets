@@ -64,7 +64,7 @@
   }
  ],
  "gate": "gate 10:40Z: 10-Q read via WebFetch (units, form type, period); press releases read; Steam page and Roblox/Epic were tried first and had no readable primary record figure (Steam stats page shows live counts only, Roblox Q3 letter claims no record, Epic news page returned 403). Exit A.",
- "status": "banked (not scheduled)",
+ "status": "banked (rendered, director PASS, not scheduled)",
  "ledger_find": {
   "at": "2026-11-08T09:57:45Z",
   "words": [
@@ -74,5 +74,46 @@
    "sold-in"
   ],
   "hits": []
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/take-two-gta-rdr2-sold-in-june-2026-reel-v1.mp4",
+  "blob": "573dd9c1e53548cc3e30984da4dc65213b27c228",
+  "at": "2026-11-08T10:11:25Z",
+  "note": "Director QA (sonnet, evergreen numbers) on strip and sheet. First frame: headline readable at grid size, series card 470 under it, chip clear of the grid corner. Shots: 0 series card PASS; 1 GTA V card PASS; 2 RDR2 card PASS; 3 official RDR2 Steam screenshot (Arthur's face, crop re-centred after the first render cut it) PASS; 4 official screenshot (tree and light) PASS. Reel 14.6 s before the end card (short of the 12 to 20 s guide's upper end, inside it), changes every 3.0 to 3.4 s, the last 2 s are a game image not a card, one line spans the two closing images, nothing graphic (no raised guns), sound our bed stats flavour judged from the build not by ear, speech none. Dating note: Take-Two reports on 9 Nov 2026 and the next 10-Q may update the three figures, so post before it or re-check. Grammar stage: no required edits.",
+  "checklist": {
+   "job": "jobs/live/take-two-gta-rdr2-sold-in-june-2026.json",
+   "sha256": "bbff3070ad4021f75ff0a49dacb43d3b0c4a4401fc920882eae9a565a217de1d",
+   "ok": true,
+   "problems": []
+  }
+ },
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "أرقام",
+   "format": "numbers",
+   "skin": "house",
+   "theme": "gold",
+   "style": "lines",
+   "sound": "our bed, stats",
+   "genre": [
+    "industry/hardware"
+   ],
+   "headline": "سلسلة Grand Theft Auto\nلدى تيك-تو (Take-Two)",
+   "lines": [
+    "تتجاوز مبيعات Grand Theft Auto V\nضعف مبيعات Red Dead Redemption 2"
+   ],
+   "credit": "المصدر: تيك-تو (Take-Two) حتى 30 يونيو 2026",
+   "ig": "أرقام تيك-تو إنتراكتيف (Take-Two Interactive): سلسلة Grand Theft Auto تتجاوز 470 مليون نسخة مباعة حول العالم.\n\nهذه أرقام الشركة نفسها في تقريرها الفصلي (النموذج 10-Q) عن الربع المنتهي في 30 يونيو 2026:\nسلسلة Grand Theft Auto: أكثر من 470 مليون نسخة.\nلعبة Grand Theft Auto V: أكثر من 230 مليون نسخة.\nلعبة Red Dead Redemption 2: أكثر من 85 مليون نسخة.\n\nأي أن مبيعات Grand Theft Auto V تتجاوز ضعف مبيعات Red Dead Redemption 2.\n\nتستخدم الشركة تعبير sold-in، وتعرّف مبيعاتها بأنها ما يباع رقميًا أو يباع إلى المتاجر والموزعين، وليس بالضرورة ما اشتراه اللاعبون. ولم يذكر التقرير رقمًا إجماليًا لسلسلة Red Dead.\n\n#ألعاب #أخبار_الألعاب #GTA #RedDeadRedemption2",
+   "x": "سلسلة Grand Theft Auto تتجاوز 470 مليون نسخة مباعة، ولعبة Grand Theft Auto V وحدها أكثر من 230 مليونًا، حسب تقرير تيك-تو إنتراكتيف (Take-Two Interactive) الفصلي حتى 30 يونيو 2026.",
+   "threads": "سلسلة Grand Theft Auto تتجاوز 470 مليون نسخة مباعة، ولعبة Grand Theft Auto V وحدها أكثر من 230 مليونًا، حسب تقرير تيك-تو إنتراكتيف (Take-Two Interactive) الفصلي حتى 30 يونيو 2026.",
+   "source_comment_ig": "المصدر: النموذج 10-Q لتيك-تو إنتراكتيف عن الربع المنتهي في 30 يونيو 2026، قسم Rockstar Games: Grand Theft Auto أكثر من 470 مليون نسخة، وGrand Theft Auto V أكثر من 230 مليونًا، وRed Dead Redemption 2 أكثر من 85 مليونًا، بتعبير sold-in.",
+   "source_comment_x": "المصدر: النموذج 10-Q لتيك-تو إنتراكتيف عن الربع المنتهي في 30 يونيو 2026، قسم Rockstar Games: Grand Theft Auto أكثر من 470 مليون نسخة، وGrand Theft Auto V أكثر من 230 مليونًا، وRed Dead Redemption 2 أكثر من 85 مليونًا، بتعبير sold-in. https://www.sec.gov/Archives/edgar/data/946581/000162828026054870/ttwo-20260630.htm",
+   "media": "cards/2026-11/take-two-gta-rdr2-sold-in-june-2026-reel-v1.mp4",
+   "strip": "cards/2026-11/take-two-gta-rdr2-sold-in-june-2026-strip.jpg",
+   "sheet": "cards/2026-11/take-two-gta-rdr2-sold-in-june-2026-sheet.jpg"
+  }
+ },
+ "director_model": "sonnet"
 }
