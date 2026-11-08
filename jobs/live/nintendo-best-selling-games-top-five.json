@@ -17,6 +17,10 @@
   {
    "file": "nintendo-mkw-art3.jpg",
    "url": "https://assets.nintendo.com/image/upload/store/software/switch2/70010000095431/b8ca3bbb06f7a4149bea701e6764ed302b9ec0b41b3d7137d52eddb6ed05d704"
+  },
+  {
+   "file": "nintendo-mkw-art4.jpg",
+   "url": "https://assets.nintendo.com/image/upload/store/software/switch2/70010000095431/bbe82fcb30221d01b574da4526ca167e4a1bb911bf013a813c0f656d087d11f6"
   }
  ],
  "gfx": [
@@ -313,10 +317,19 @@
   [
    "nintendo-mkw-art3.jpg",
    null,
-   4.8,
+   2.6,
    [
     0.4,
     0.5
+   ]
+  ],
+  [
+   "nintendo-mkw-art4.jpg",
+   null,
+   2.6,
+   [
+    0.66,
+    0.72
    ]
   ]
  ],
@@ -347,7 +360,7 @@
   ],
   [
    6,
-   6,
+   7,
    [
     [
      "أما Mario Kart World على Switch 2\nفبلغت 16.48 مليونًا",
@@ -361,7 +374,7 @@
  "credits": [
   [
    0,
-   6,
+   7,
    "المصدر: نينتيندو (Nintendo): Switch 2026، Wii 2016"
   ]
  ],
@@ -395,7 +408,7 @@
   "PICTURE not same picture as last 5 Reels": "yes: Wii Sports, Switch package art and Mario Kart World store art; the last Reels are other games",
   "PICTURE one visual requirement per beat, subject whole": "yes: one package per row, whole at 1x or smaller; hero Wii Sports enlarged 1.6x at most from Nintendo's 150x120 image; closing still 1920x1080 cropped to 9:16 at 1.78x, Mario and Luigi kept in frame",
   "PICTURE headline in band, no blur": "yes: headline in the top band; no blurred fill",
-  "PICTURE credit on every non-ours image": "yes: credits 0 to 6",
+  "PICTURE credit on every non-ours image": "yes: credits 0 to 7",
   "CHECKS decision log": "yes"
  },
  "decision_log": [
@@ -435,7 +448,7 @@
   },
   {
    "beat": "6 close",
-   "shot": "official Mario Kart World store art (Mario and Luigi), a game image not a card; line gives 16.48M on Switch 2, not on a card",
+   "shot": "official Mario Kart World store art, two images (Mario and Luigi, then Daisy on a jet ski), game images not a card; line spans both and gives 16.48M on Switch 2, not on a card",
    "alternatives": "MKW key art with logo (carries an awards badge), other store frames",
    "crop": "focus 0.40 to 0.50, 1.78x",
    "music": "bed, end card jingle after"
