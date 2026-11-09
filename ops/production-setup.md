@@ -256,3 +256,15 @@ a run that has not been updated still reads them.
    branch head, no server Publer read in 15 minutes) each reach Mohammad's phone and stay at the top of the next work
    order until a line clears them. A work order older than 70 minutes is said in `done` and the run goes on from the
    board as before.
+6. The gate's own steps (release 2026-11-10, rules into the gate; code refuses each, so a run that skips one stops):
+   the job carries `"built_by": "production-2"`; the director is a separate agent and records its verdict with
+   `presubmit.py director <story> PASS <out> --job <job> --by <director>` (refused when it is the builder); every
+   intent carries the Publer labels `--labels kind:<news|evergreen|series|breaking>,tpl:<template>` (tpl:showcase for
+   the showcase layout) and, for kind:evergreen, `--slot <ISO>` (refused when the post before it is evergreen or the
+   last evergreen is under 3 hours away between 08:00 and 24:00 Dubai: the slot stays empty); the board's scheduled
+   line is the one `presubmit.py line <commitment> --ids ig:<last6> x:<last6> th:<last6>` prints after every platform's
+   job status is read back (only the last six characters of each Publer post id, on the board only). Evergreen jobs
+   take chip دليل and none of the «ليست خبرًا جديدًا» family (newsroom/names-ar.md, Evergreen openers). Every card
+   stands on footage or art: "ground": "rotate" is refused. The scout returns each rejected lead with one reason from
+   `no_source, denied, harmful_or_out_of_scope, duplicate` (JSON: {lead, reason, evidence}); the board line names the
+   reason word; the desk audit lists any other as BAD-REJECTION.

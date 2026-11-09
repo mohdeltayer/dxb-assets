@@ -2812,6 +2812,25 @@ Every failure on 9 Nov was a session not reading what another wrote; Mohammad wa
 4. The work order is public (a branch of dxb-assets): ids of handoffs and orders, titles, times and rule names only;
    never a Publer id, a post link, a token or a card body. Code: `ops/backoffice/keeper/workorder.py`.
 
+## Rules into the gate (release 2026-11-10, Mohammad's build of 9 Nov evening)
+
+The 9 Nov rules are code now; a run that skips one is refused, not reminded.
+1. No plain ground on any Reel: `templates/buildgate.py` refuses "ground": "rotate", any "-gfx-" card without footage
+   or art behind it, and a card-led job without "ground_footage" or "ground_still" (storybeat and retro draw their own).
+2. Evergreen: the job (post_kind evergreen, chip دليل or bank) takes no news chip and none of the «ليست خبرًا جديدًا»
+   family in the headline, lines or the first line of a caption (approved openers: `newsroom/names-ar.md` section 3);
+   the grammar stage checks the same as a house rule. `presubmit.py intent ... --labels kind:evergreen,... --slot` refuses
+   two evergreen in a row and an evergreen within 3 hours of the last between 08:00 and 24:00 Dubai: the slot stays empty.
+3. Labels: every intent carries kind:<news|evergreen|series|breaking> and tpl:<template>, tpl:showcase for the showcase
+   layout, matched against the job the director passed.
+4. Separate director: the job names `"built_by"`; `presubmit.py director ... --by` refuses a PASS from the builder.
+5. Scheduled line: `presubmit.py line <commitment> --ids ig:<last6> x:<last6> th:<last6>` prints it only after every
+   platform's job status was read back as complete; the last six characters of each Publer post id go on the board only.
+6. Rejections name one of no_source, denied, harmful_or_out_of_scope, duplicate (scout output and the board line); the
+   desk audit lists any other as BAD-REJECTION.
+7. `presubmit.py published` marks an evergreen story's bank row 'used <date>' in newsroom/evergreen.md; the keeper's
+   bank floor counts only undated ready pieces (a row tied to one day, an anniversary or a countdown, cannot fill a gap).
+
 ## Verification without delay (advisor, 18 Oct 2026, agreed with Mohammad)
 
 Avoid corrections by verifying harder, never by waiting: news is never held

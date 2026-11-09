@@ -41,6 +41,12 @@ A job must carry:
                  then the job says so: "ground": "rotate" with "ground_reason" (adv-20261108-numbers-cards-grid item
                  3, build 9 Nov 2026).
 
+  backdrop:      (release 2026-11-10) no plain ground on any Reel: "ground": "rotate" is refused, every card sits on
+                 footage or art, and a card-led job carries "ground_footage" or "ground_still".
+  evergreen:     a job with "post_kind": "evergreen" (or the دليل chip, or "bank") takes no news chip and no
+                 «ليست خبرًا جديدًا» family in its headline, lines or captions' first line.
+  built_by:      the building session; the director PASS must come from another (presubmit.py director --by).
+
   layout:        "layout": "showcase" carries "showcase_reason" naming one of its two cases, the trailer itself is
                  the news or the source fails the quality gate enlarged with no better copy (reel.showcase_reason).
 
@@ -214,19 +220,76 @@ def plate_cover_problems(job):
     return []
 
 
+BACKDROP_EXEMPT = ('storybeat', 'retro')        # the storybook page and the CRT den draw their own picture
+
+
 def ground_problems(job):
-    """adv-20261108-numbers-cards-grid item 3: numbers cards sit on the game's art, never the plain ground by default."""
+    """No plain ground on any Reel (Mohammad, 9 Nov 2026 about 12:30 Dubai; release 2026-11-10): every "-gfx-" card sits
+    on moving footage or art ("ground_footage", the card's own [file, start], or "ground_still"), and a card-led job
+    carries a backdrop at job level. The living wave ground, the glow and the dotted grid are never a card's ground by
+    themselves, so "ground": "rotate" is refused (it was the 9 Nov morning escape for multi-game charts)."""
+    out = []
+    if job.get('kind') in ('famitsu', 'breaking'):
+        return out
+    has = bool(job.get('ground_footage') or job.get('ground_still'))
+    if job.get('ground') == 'rotate':
+        out.append('ground: "rotate" is refused since 9 Nov (no Reel on the plain indigo ground, whatever the story): '
+                   'give "ground_footage" (the company\'s latest trailer or press footage, the platform\'s own clip) or '
+                   '"ground_still" (key art); with neither, the story is not a card-led Reel')
     cards = [sh for sh in job.get('shots') or [] if isinstance(sh, list) and sh and '-gfx-' in str(sh[0])]
-    if not cards or job.get('ground_footage') or job.get('ground_still'):
-        return []
     bare = [str(sh[0]) for sh in cards if not (len(sh) > 1 and isinstance(sh[1], list))]
-    if not bare:
+    if bare and not has:
+        out.append(f'ground: {", ".join(bare)} would sit on the plain living ground; give the game\'s art '
+                   '("ground_footage": [file, start], or "ground_still": its key art)')
+    if job.get('template') in CARD_LED and job.get('template') not in BACKDROP_EXEMPT and not has:
+        out.append(f'backdrop: a card-led job ({job.get("template")}) carries "ground_footage" or "ground_still" '
+                   '(moving footage or art, dimmed and credited); with neither, pick a footage-led template')
+    return out
+
+
+#: The «ليست خبرًا جديدًا» family (Mohammad, 9 Nov 2026; newsroom/editorial-memory.md 9 Nov, Elden Ring): an evergreen
+#: piece never reads as news and never apologises for not being news. Approved openers: newsroom/names-ar.md.
+EVERGREEN_BAD = re.compile(
+    r'لي?س(?:ت)?\s+(?:هذا\s+|هذه\s+)?(?:ب?خبر[اًٌ]*\s*)?جديد[اًةٌ]*|خبر[اًٌ]*\s+قديم|قديم[ةٌ]?\b|من\s+زمان|'
+    r'نعتذر|عذر[اًٌ]*|للتذكير\s+فقط|ليس(?:ت)?\s+بجديد')
+EVERGREEN_CHIPS_BAD = ('جديد', 'رسمي', 'متوفر الآن', 'عاجل')
+
+
+def is_evergreen(job):
+    return str(job.get('post_kind') or '').lower() == 'evergreen' or job.get('label') == 'دليل' or bool(job.get('bank'))
+
+
+def evergreen_problems(job):
+    """kind:evergreen jobs: chip دليل (or the بالعربية plate), never a news chip; no «ليست خبرًا جديدًا» family in the
+    headline, the lines or the first line of any caption the job carries (caption, x_text, threads_text)."""
+    if not is_evergreen(job):
         return []
-    if job.get('ground') == 'rotate' and len(str(job.get('ground_reason') or '').split()) >= 4:
+    out = []
+    if job.get('label') in EVERGREEN_CHIPS_BAD:
+        out.append(f'evergreen: chip {job.get("label")} reads as news; use دليل (or the بالعربية plate)')
+    texts = [('headline', job.get('headline'))]
+    lines = job.get('lines') or []
+    for g in lines if isinstance(lines, list) else []:
+        for x in (g if isinstance(g, list) else [g]):
+            texts.append(('line', x if isinstance(x, str) else (x[0] if isinstance(x, list) and x else '')))
+    for k in ('caption', 'x_text', 'threads_text'):
+        if job.get(k):
+            texts.append((k + ' first line', str(job[k]).strip().split('\n')[0]))
+    for where, tx in texts:
+        m = EVERGREEN_BAD.search(str(tx or ''))
+        if m:
+            out.append(f'evergreen: {where} says «{m.group(0)}»; an evergreen piece opens as a guide or a useful fact, '
+                       'never as "not new" or an apology (approved openers: newsroom/names-ar.md, "Evergreen openers")')
+    return out
+
+
+def builder_problems(job):
+    """Separate director (release 2026-11-10): the job names who built it, so the director PASS can be refused when the
+    same session signs it (templates/presubmit.py director --by)."""
+    if str(job.get('built_by') or '').strip() or job.get('kind') == 'breaking':   # T0 never waits on it
         return []
-    return [f'numbers ground: {", ".join(bare)} would sit on the plain living ground; give the game\'s art '
-            '("ground_footage": [file, start], or "ground_still": its key art), or for a chart of several games or a '
-            'company\'s figures "ground": "rotate" with "ground_reason"']
+    return ['built_by missing: set "built_by": "<the building session, e.g. production-2>"; the director PASS must '
+            'come from someone else (presubmit.py director ... --by <director>)']
 
 
 def layout_problems(job):
@@ -295,6 +358,8 @@ def problems(path, job):
     out += plate_cover_problems(job)
     out += ground_problems(job)
     out += layout_problems(job)
+    out += evergreen_problems(job)
+    out += builder_problems(job)
 
     rc = job.get('reel_check')
     if not rc:

@@ -71,7 +71,7 @@ class Gate(unittest.TestCase):
         self.assertEqual(BG.ground_problems({'shots': sh, 'ground_still': 'art.jpg'}), [])
         self.assertEqual(BG.ground_problems({'shots': sh, 'ground_footage': ['t.mp4', 4]}), [])
         self.assertTrue(BG.ground_problems({'shots': sh, 'ground': 'rotate'}))
-        self.assertEqual(BG.ground_problems({'shots': sh, 'ground': 'rotate', 'ground_reason': 'ten games, one chart each'}), [])
+        self.assertTrue(BG.ground_problems({'shots': sh, 'ground': 'rotate', 'ground_reason': 'ten games, one chart each'}))  # refused since 10 Nov
 
     def test_plate_cover(self):
         self.assertTrue(BG.plate_cover_problems({'shots': [['gta6-logo-plate.png', None, 3, None]]}))

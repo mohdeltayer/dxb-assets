@@ -77,6 +77,17 @@ its topic.
   Western digits; no em dash; every paragraph and line starts with an Arabic
   word; no first person; X posts carry no hashtags, Instagram captions end on
   `#ألعاب #أخبار_الألعاب` plus two tags.
+- Evergreen openers (Mohammad, 9 Nov 2026; release 2026-11-10), also
+  `house_rule`: on a kind:evergreen post (chip دليل, the بالعربية plate, or a
+  bank piece) the «ليست خبرًا جديدًا» family is a required edit anywhere in the
+  headline and lines and in the first line of the caption, X or Threads text:
+  «ليست خبرًا جديدًا»، «ليس جديدًا»، «ليست جديدة»، «خبر قديم»، «قديم»، «من زمان»،
+  an apology («نعتذر») or a disclaimer. The replacement opens as a guide or a
+  useful fact (approved openers: `newsroom/names-ar.md`, "Evergreen openers");
+  the release date is stated as a fact inside the text. News chips (جديد، رسمي،
+  متوفر الآن) on an evergreen post are a required edit to دليل. The build gate
+  (templates/buildgate.py evergreen_problems) refuses the same family before a
+  render.
 - Culturally sensitive details (21 Oct 2026), also `house_rule`: a specific
   description of LGBTQ content (the kind of marriage, romance or identity)
   where the general word belongs («الزواج»، «العلاقات العاطفية»، «خيارات

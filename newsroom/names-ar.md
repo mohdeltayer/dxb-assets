@@ -197,3 +197,19 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Koei Tecmo | كوي تكمو | Proposed 9 Nov 2026 (first mention with the Latin in brackets; Arabic outlets also write كوي تيكمو) |
 | STUDIO 909 | استوديو 909 | Proposed 9 Nov 2026 |
 | Kazuhide Oka | كازوهيدي أوكا | Proposed 9 Nov 2026 (role word المخرج at first mention) |
+
+## 3. Evergreen openers (Mohammad, 9 Nov 2026; release 2026-11-10)
+
+An evergreen post (chip دليل or the بالعربية plate) never reads as news and never apologises for not being news. The
+first line of the caption, X and Threads text opens as a guide or a useful fact in the outlet voice; the date is a
+fact inside the text (the release date), then why it matters now. Refused by the build gate and the grammar stage:
+«ليست خبرًا جديدًا»، «ليس جديدًا»، «ليست جديدة»، «خبر قديم»، «قديم»، «من زمان»، an apology or a disclaimer.
+
+| Opener | Use | Status |
+|---|---|---|
+| دليل اللاعب العربي: <Game> بواجهة وترجمة عربية | Arabic support | Approved 9 Nov (Mohammad, the Cyberpunk caption) |
+| هل تعلم أن <Game> ... | a little-known fact about a game | Approved 10 Nov (build; Mohammad may strike) |
+| قبل أن تشتري <Game>: ... | price, editions, languages on the store | Approved 10 Nov (build; Mohammad may strike) |
+| أرقام <Company> الرسمية: ... | a company's own figures (numbers bank) | Approved 10 Nov (build; Mohammad may strike) |
+| في مثل هذا اليوم من عام <YYYY> صدرت <Game> | an anniversary on its day | In use (retro chip) |
+

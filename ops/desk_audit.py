@@ -114,6 +114,31 @@ SEQ_READ = re.compile(r'digest seq read:?\s*#?(\d+)(?:\s*\(branch head\s*#?(\d+)
 SEQ_OLD = re.compile(r'digest\b[^.;]{0,30}?\bseq\s*#?(\d+)', re.I)
 
 
+REASONS = ('no_source', 'denied', 'harmful_or_out_of_scope', 'duplicate')   # CLAUDE.md, 9 Nov 2026 (release 2026-11-10)
+REJECTED = re.compile(r'\b(?:rejected|dropped|declined)\b[^.;]*', re.I)
+
+
+def bad_rejections(board, now):
+    """BAD-REJECTION: a Production 2 line of the last 24 hours (from the release) that rejects or drops a lead without
+    one of the four reasons by name (no_source, denied, harmful_or_out_of_scope, duplicate). Age, relay and no trailer
+    are not reasons on their own (Mohammad, 9 Nov 2026)."""
+    out = []
+    for h in board.get('handoffs', []):
+        if not isinstance(h, dict) or not P2.search(str(h.get('from', ''))):
+            continue
+        at = _t(h.get('at', ''))
+        if not at or at < _t('2026-11-09T16:25:00Z') or (now - at).total_seconds() > 24 * 3600:
+            continue
+        for m in REJECTED.finditer(str(h.get('done', ''))):
+            if 'ack:' in m.group(0).lower():
+                continue
+            if not any(r in m.group(0) for r in REASONS):
+                out.append(f"BAD-REJECTION {h.get('from', '?')}: {h.get('id', '?')} \"{m.group(0)[:90]}\" names no reason "
+                           f"from {', '.join(REASONS)}")
+                break
+    return out
+
+
 def _digest_point(text):
     try:
         d = json.loads(text)
@@ -213,8 +238,9 @@ def audit(desks, board, runs, now, history=None):
                 out.append(f"MISSING {d['name']}: {h['name']}: {h.get('note', '')}")
         for g in d.get('gaps', []):
             out.append(f"GAP {d['name']}: {g}")
-    out += unacked(board, now) + stale_digest(board, history or [], now) + not_following(board, now)
-    order = {'DEAD': 0, 'UNACKED': 1, 'STALE-DIGEST': 2, 'MISSING': 3, 'FAILING': 4, 'LATE': 5,
+    out += unacked(board, now) + stale_digest(board, history or [], now) + not_following(board, now) + \
+        bad_rejections(board, now)
+    order = {'BAD-REJECTION': 3, 'DEAD': 0, 'UNACKED': 1, 'STALE-DIGEST': 2, 'MISSING': 3, 'FAILING': 4, 'LATE': 5,
              'NOT-FOLLOWING-RULES': 6, 'GAP': 7}
     return sorted(out, key=lambda s: order.get(s.split()[0], 9)) or ['desk audit: all present']
 

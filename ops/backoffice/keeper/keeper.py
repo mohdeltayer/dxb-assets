@@ -777,6 +777,17 @@ def _verified_source(cell):
     return bool(c) and not c.startswith(('?', 'unverified', 'none', '-')) and 'no primary' not in c
 
 
+DATED = re.compile(r'release day|\bdated\b|«باقي|intro counts|only on|\b(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w* \d{1,2} '
+                   r'(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w* 20\d\d', re.I)
+
+
+def _dated(cell):
+    """A bank row tied to one day (an anniversary's release day, a series countdown, 'dated 10 Nov only') cannot fill
+    any gap, so the floor does not count it (release 2026-11-10). 'what would date it' text such as 'Nintendo results in
+    early November' is a staleness note, not a fixed day."""
+    return bool(DATED.search(cell or ''))
+
+
 def bank_line(commitments_path):
     """Finished Reels in the evergreen bank (newsroom/evergreen.md, first table, Status starting 'ready').
     Under BANK_MIN is an at-risk line (adv-20261105-p2-audit-fixes, item 5). Since 9 Nov a row counts only with a
@@ -789,7 +800,7 @@ def bank_line(commitments_path):
     except OSError:
         return None, 'bank: not read (no newsroom/evergreen.md)'
     table = text.split('\n## ', 1)[0]
-    head, n, skipped = None, 0, 0
+    head, n, skipped, dated = None, 0, 0, 0
     for row in table.splitlines():
         cells = [c.strip() for c in row.strip().strip('|').split('|')]
         if head is None and cells and cells[0].lower() == 'name':
@@ -802,13 +813,18 @@ def bank_line(commitments_path):
             if not tpl.strip() or not _verified_source(cells[head.index('source')]):
                 skipped += 1
                 continue
+        if head and 'dates it' in head and len(cells) == len(head) and _dated(cells[head.index('dates it')]):
+            dated += 1
+            continue
         n += 1
     note = '' if head and 'source' in head else ' (no Source column: sources not checked)'
     if skipped:
         note += ', %d ready without a verified source not counted' % skipped
+    if dated:
+        note += ', %d ready but tied to one day not counted' % dated
     if n < BANK_MIN:
-        return n, 'bank: at risk, %d ready Reels (minimum %d)%s' % (n, BANK_MIN, note)
-    return n, 'bank: %d ready Reels%s' % (n, note)
+        return n, 'bank: at risk, %d undated ready Reels (minimum %d)%s' % (n, BANK_MIN, note)
+    return n, 'bank: %d undated ready Reels%s' % (n, note)
 
 
 def rows_of(commitments):

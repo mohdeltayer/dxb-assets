@@ -57,6 +57,7 @@ EVERGREEN_GAP_H = 3          # CLAUDE.md "Evergreen spacing and the news search"
 SPACING = {'day': 30, 'night': 60}
 MAX_GAP = {'day': 60, 'night': 120}
 ID_TOKEN = re.compile(r'\b[0-9a-f]{24}\b|\b\d{9,}\b|\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b', re.I)
+ID6 = re.compile(r'\b(?:ig|x|th|instagram|threads):[0-9A-Za-z]{6}\b')   # presubmit.py line: last six of each id
 SCHEDULED_LINE = re.compile(r'(?:^|[\s.;(])scheduled:\s', re.I)
 
 
@@ -467,11 +468,11 @@ def hop_alarms(board, now, posts, mirror=None, server=None, history=None, server
             continue
         done = str(h.get('done', ''))
         if SCHEDULED_LINE.search(done):
-            need, have = _needed_ids(done), len(ID_TOKEN.findall(text_of(h, ('done', 'evidence'))))
+            need, have = _needed_ids(done), len(ID6.findall(text_of(h, ('done', 'evidence'))))
             if have < need:
                 out.append({'key': 'hop|no-ids|' + str(h['id']), 'kind': 'no-ids',
-                            'line': 'scheduled line %s carries %d of %d Publer post ids' % (h['id'], have, need),
-                            'clears': 'a line naming the three Publer post ids from the job status read (board only, never public)'})
+                            'line': 'scheduled line %s carries %d of %d Publer post id suffixes' % (h['id'], have, need),
+                            'clears': 'the line printed by templates/presubmit.py line <commitment> --ids ig:<last6> x:<last6> th:<last6> (job status read back)'})
     # caps
     for b in cap_breaches(posts, now):
         out.append({'key': 'hop|caps|%s|%s' % (b['at'], b['why']), 'kind': 'caps',

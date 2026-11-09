@@ -116,5 +116,18 @@ class NineNov(unittest.TestCase):
         self.assertFalse(any(l.startswith('UNACKED') for l in DA.audit({'desks': []}, {'handoffs': hs}, [], self.NOW)))
 
 
+
+class Rejections(unittest.TestCase):
+    def test_reason_named(self):
+        import datetime as dt
+        now = dt.datetime(2026, 11, 9, 20, 0, tzinfo=dt.timezone.utc)
+        b = {'handoffs': [
+            {'id': 'a', 'from': 'production-2', 'at': '2026-11-09T18:00:00Z', 'done': 'Lead 2 rejected: too old.'},
+            {'id': 'b', 'from': 'production-2', 'at': '2026-11-09T18:30:00Z', 'done': 'Lead 3 rejected: no_source (no post found).'},
+        ]}
+        out = DA.bad_rejections(b, now)
+        self.assertEqual(len(out), 1)
+        self.assertIn(': a ', out[0])
+
 if __name__ == '__main__':
     unittest.main()

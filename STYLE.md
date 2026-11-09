@@ -603,6 +603,13 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   'scheduled:' without the Publer ids; a post outside the caps; mirror over 2 h; digest below the head; no server Publer
   read in 15 min.
 
+## Rules into the gate (release 2026-11-10)
+- Every card on footage or art; "ground": "rotate" refused; card-led jobs carry ground_footage or ground_still.
+- Evergreen: chip دليل, no «ليست خبرًا جديدًا» family (newsroom/names-ar.md §3); intent refuses two in a row and under 3 h by day.
+- Intent labels kind:<news|evergreen|series|breaking>,tpl:<template> (tpl:showcase); director PASS --by someone other than built_by.
+- Board scheduled line from `presubmit.py line` (job status read back, id suffixes ig:/x:/th: last six only).
+- Rejection reasons: no_source, denied, harmful_or_out_of_scope, duplicate. Bank floor counts undated ready pieces.
+
 ## Desk board (adv-20261102-desk-board, 2 Nov 2026)
 
 - The two production accounts align through dxb-queue branch desk, `desk/board.md` and `desk/board.json` (same content, one commit): roles (one owner per duty; changed only by an advisor card Mohammad approved), the digest lock, handoffs (id, from, to, done, next, evidence, must_not_repeat) and questions for Mohammad (each with its card id).
