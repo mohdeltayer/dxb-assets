@@ -679,3 +679,12 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
    reasons; after an evergreen, none for 3 hours by day, never two in a row.
 4. The editor session stays on Opus for judgement; scout and build helpers on Haiku. The board line of every run reports
    the scout's list.
+
+## When in doubt, publish with the honest label (Mohammad, 9 Nov 2026, effective at once)
+
+1. When in doubt, publish with the honest label (تقرير / شائعة / تسريب, source named). What the text states stays verified:
+   only what the source actually says, attributed.
+2. A lead is rejected only for a listed reason: no source found; denied by the primary; harmful or out of scope; or a
+   duplicate with nothing new. The board line cites the reason.
+3. Not reasons on their own: age (date it from the first report), relay (trace it to the first report), no trailer
+   (build it on stills or the showcase layout). Variety rules decide the order of posts, not whether a story runs.
