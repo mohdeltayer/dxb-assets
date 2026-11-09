@@ -1,0 +1,132 @@
+{
+ "name": "dreadmoor-early-access-steam-v3",
+ "story": "2026-11-09-dreadmoor-early-access-steam",
+ "render_lane": "server",
+ "out": "cards/2026-11/dreadmoor-early-access-steam-reel-v3.mp4",
+ "footage": [
+  {
+   "file": "dreadmoor-gameplay.mp4",
+   "steam": 3629430,
+   "trailer": "Gameplay Trailer",
+   "trailer_id": "1370208294",
+   "start": 0,
+   "seconds": 70
+  }
+ ],
+ "shots": [
+  [
+   "dreadmoor-gameplay.mp4",
+   41.0,
+   3.0,
+   null
+  ],
+  [
+   "dreadmoor-gameplay.mp4",
+   44.0,
+   2.3,
+   null
+  ],
+  [
+   "dreadmoor-gameplay.mp4",
+   46.3,
+   2.3,
+   null
+  ],
+  [
+   "dreadmoor-gameplay.mp4",
+   48.6,
+   3.5,
+   null
+  ],
+  [
+   "dreadmoor-gameplay.mp4",
+   55.2,
+   3.6,
+   null
+  ],
+  [
+   "dreadmoor-gameplay.mp4",
+   58.8,
+   3.9,
+   null
+  ],
+  [
+   "dreadmoor-gameplay.mp4",
+   60.0,
+   3.9,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   0,
+   2,
+   [
+    [
+     "تصدر DREADMOOR اليوم\nبالوصول المبكر على الحاسب",
+     {}
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "حسب وصف المطوّر، تصطاد\nفي مياه عكرة وتطوّر قاربك",
+     {}
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "لم يُعلن السعر بعد\nولا تدعم العربية",
+     {}
+    ]
+   ]
+  ]
+ ],
+ "headline": "صيد ورعب تحت الماء\nتصدر اليوم على Steam",
+ "label": "جديد",
+ "source": "صفحة Steam",
+ "date": "9 Nov 2026",
+ "theme": "cold",
+ "style": "lines",
+ "template": "trailer",
+ "skin": "house",
+ "strip": [],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: ديجيتال فورتكس (Digital Vortex Entertainment)"
+  ]
+ ],
+ "track": [
+  "dreadmoor-gameplay.mp4",
+  41.0
+ ],
+ "cut": true,
+ "reel_check": {
+  "source: primary read (Steam store page, app 3629430, cc=ae)": "yes: appdetails and store page read 9 Nov 2026; coming soon, date 9 Nov 2026, no time",
+  "source: not already posted": "yes: ledger find, zero published hits",
+  "angle: hook, why now, players here, payoff written in the story file": "yes: newsroom/stories/2026-11-09-dreadmoor-early-access-steam.json angle",
+  "story type release: store facts quoted (price not listed, Arabic not supported)": "yes: store_facts in story file",
+  "lines: one paragraph cut into beats, names before pronouns": "yes: L1 names DREADMOOR; L2 subject is the game (حسب وصف المطوّر)",
+  "release verbs: تصدر for a date, no bare تصل": "yes: تصدر اليوم, تصدر DREADMOOR اليوم",
+  "footage first, trailer, credited on every shot": "yes: Steam Gameplay Trailer 41.0 to 63.5 s, credit 0 to 6",
+  "picture: no title card, no end slate, nothing graphic": "yes: 40 s title card and 64 s end card excluded; no dissection frames",
+  "sound: trailer's own audio, one stretch, no speech under lines": "yes: speechcheck --stretch 41.0 22.5: speech none",
+  "headline in the band, never over a face or subject": "yes: band layout top, trailer template",
+  "chip and label on the ladder": "yes: جديد (JUST IN ladder), not out now"
+ },
+ "decision_log": {
+  "audio": "trailer's own sound, one continuous stretch 41.0 to 63.5 s (music and effects; no speech)",
+  "shots": "contiguous 41.0 to 52.1 s (village, creatures, statue ship), merchants from 55.2 s (FISH STOCK sign clear), creature with clock 58.8 s, boat 60.0 to 63.9 s; director round 2 (babd8e3)",
+  "crop": "autofocus (null); to be judged on the shot sheet",
+  "excluded": "13-14 s and 39-40 s title cards; 52.8-53.8 s merchants crop cut by FISH STOCK sign; 64 s+ end card"
+ }
+}
