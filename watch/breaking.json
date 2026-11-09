@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-09T18:52:05Z",
- "seq": 239,
+ "generated_at": "2026-11-09T19:15:19Z",
+ "seq": 240,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 9793,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "For The King II - A Mother Below Free Update/Dust To Dust Paid Character Pack DLC | PS5 & PS4 Games",
+   "url": "https://www.youtube.com/watch?v=o-nRCd6YHls",
+   "published": "2026-11-09T19:00Z",
+   "first_seen": "2026-11-09T19:15:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/o-nRCd6YHls/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=o-nRCd6YHls"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 240
+  }
+ ],
  "recent": [
   {
    "id": 9705,
@@ -172,13 +194,14 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-09T18:50:04Z",
+  "last_poll_at": "2026-11-09T19:15:15Z",
   "sources_enabled": 100,
-  "sources_ok": 92,
-  "sources_failing": 7,
+  "sources_ok": 91,
+  "sources_failing": 8,
   "failed": [
    "Arab Hardware (AR) (HTTP 500, 6x)",
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 7x)",
+   "Kotaku (HTTP 522, 2x)",
    "Nintendo of America (X) (HTTP 429, 56x)",
    "PlayStation (X) (HTTP 429, 72x)",
    "PlayStation Middle East (X) (HTTP 429, 4x)",
