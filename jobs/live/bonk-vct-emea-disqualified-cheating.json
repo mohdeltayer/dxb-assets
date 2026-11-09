@@ -1,0 +1,140 @@
+{
+ "name": "bonk-vct-emea-disqualified-cheating",
+ "story": "2026-11-08-bonk-vct-emea-disqualified-cheating",
+ "render_lane": "server",
+ "out": "cards/2026-11/bonk-vct-emea-disqualified-cheating-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "valorant-agent-cinematic.mp4",
+   "url": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/news_live/74d9d9fd8664d1c431b4b82d007f968eacb3e8b4.mp4?accountingTag=VAL"
+  },
+  {
+   "file": "valorant-skin-gameplay.mp4",
+   "url": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/f6ccf20dfe3f6a24ea9216bb8afaaa66740c715d.mp4?accountingTag=VAL"
+  }
+ ],
+ "shots": [
+  [
+   "valorant-agent-cinematic.mp4",
+   0.8,
+   3.6,
+   null
+  ],
+  [
+   "valorant-agent-cinematic.mp4",
+   4.4,
+   3.7,
+   null
+  ],
+  [
+   "valorant-agent-cinematic.mp4",
+   8.1,
+   2.83,
+   null
+  ],
+  [
+   "valorant-skin-gameplay.mp4",
+   2.8,
+   3.5,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "قالت ريوت إن فريق BONK\nاستخدم غشًا",
+     {}
+    ]
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    [
+     "أُوقف لاعبوه مؤقتًا",
+     {}
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "ستعيد ريوت دورين بعد\nفوزه على Aurora",
+     {}
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   3,
+   "المصدر: ريوت غيمز (Riot Games)، لقطات من VALORANT"
+  ]
+ ],
+ "headline": "استبعاد BONK بسبب غش\nفي تصفيات VALORANT",
+ "label": "رسمي",
+ "source": "ريوت غيمز (Riot Games)",
+ "date": "8 Nov 2026",
+ "theme": "cold",
+ "style": "glow",
+ "template": "trailer",
+ "skin": "house",
+ "track": "bed",
+ "platform": "multi",
+ "beat": "esports",
+ "angle": {
+  "hook": "Riot disqualified team BONK from the VCT EMEA Kickoff Europe Qualifier after confirming a participant used unauthorised cheating software, days after BONK knocked out Masters champion Derke's Aurora Gaming",
+  "why_now": "Riot announced it on 8 Nov 2026 (VCT EMEA post 12:51Z); the result against Aurora stood on 6 Nov",
+  "what_it_means_here": "A confirmed cheating disqualification in a top regional qualifier: all BONK members provisionally suspended, individual sanctions pending, and Riot replays the two rounds after the Aurora win as an exceptional measure that sets no precedent",
+  "payoff": "the replay of two rounds for Aurora Gaming, closing line"
+ },
+ "story_type": "REPORT",
+ "sensitive": "none; legal/cheating rule: neutral, attributed to Riot, no tool names, no how-to, official footage only, our bed",
+ "decision_log": [
+  {
+   "beat": "0 cheat confirmed",
+   "shot": "VALORANT news-page agent cinematic 0.8 s, Reyna close-up, face centred",
+   "alternatives": "gameplay skin loop (first-person weapon at frame edge, skipped)",
+   "crop": "autofocus on person, 1440p to 9:16 under 1.4x",
+   "evidence_role": "illustration"
+  },
+  {
+   "beat": "1 suspension",
+   "shot": "4.3 s Reyna aiming",
+   "crop": "autofocus",
+   "evidence_role": "illustration"
+  },
+  {
+   "beat": "2 replay for Aurora",
+   "shot": "7.9 s two agents; last shot: skin-showcase weapon close-up 2.8 s on (first-person, weapon centred, nothing graphic)",
+   "crop": "autofocus",
+   "evidence_role": "illustration"
+  },
+  {
+   "music": "our channel bed (legal/cheating rule, CLAUDE.md 26 Oct point 3); the clip's own track not used"
+  }
+ ],
+ "note": "Stand-in footage: Riot's VALORANT news-page cinematic (no VCT footage reachable: valorantesports.com and playvalorant.com checked, only two news-loop mp4s on cmsassets.rgpub.io, a gameplay skin loop (first-person, weapon at edge) and this 1440p cinematic). Credit names the stand-in. Sound: our bed, reason in the story file. About 10 s of footage, under the 12 to 20 s target: only reachable official footage.",
+ "reel_check": {
+  "1 SOURCE primary read": "partial: VCT EMEA X post exists (og text 'Competition Update: BONK, Kickoff Europe Qualifier #1', id time 12:51Z 8 Nov); statement wording read through Dexerto quote",
+  "1 SOURCE not already posted": "yes: ledger find Valorant and VCT, no BONK hit",
+  "1 SOURCE age": "yes: under 24 h, expires about 12:51Z 9 Nov",
+  "2 ANGLE written": "yes",
+  "3 REPORT items": "finding, evidence (Riot statement via Dexerto), consequence, limits (individual sanctions pending)",
+  "4 STORY one paragraph": "yes: cheat confirmed, suspension, replay",
+  "4 STORY subject before pronoun": "yes: BONK in headline and line 1",
+  "4 STORY release verbs": "n/a",
+  "4 STORY names": "Riot, Aurora Gaming with Latin; BONK and VALORANT Latin",
+  "5 NEUTRAL tone": "yes, attributed to Riot, no tool names",
+  "6 SOUND": "our bed, reason: legal/cheating rule",
+  "7 PICTURE credit": "yes, all shots",
+  "8 CHECKS decision log": "yes"
+ }
+}
