@@ -11,7 +11,7 @@
  ],
  "category": "report",
  "priority": "news",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://nintendoeverything.com/hollow-knight-silksong-will-seemingly-have-multiple-free-dlcs-new-sea-of-sorrow-information/",
@@ -71,9 +71,26 @@
  "metrics": {},
  "ledger_find": "silksong: no hit this month",
  "lane": "news",
- "director_check": null,
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/hollow-knight-silksong-free-content-packs-reel-v5.mp4",
+  "blob": "a57bcacfcac95c965a1201b00eb60c0a1b7f3362",
+  "at": "2026-11-09T22:05:42Z",
+  "note": "pass with note after two rounds; round 2 trims applied in v5 and checked on the dense strip",
+  "checklist": {
+   "job": "jobs/live/hollow-knight-silksong-free-content-packs.json",
+   "sha256": "d5f87f0c418e0ff4e07fa626bf86bd71be0abbbafd1b2b65233ed9c386fc353c",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-sonnet"
+ },
  "published": null,
  "template": "trailer",
  "chip": "تقرير",
- "approved": null
+ "approved": "go: rolling queue; scheduled in Publer 23:45Z (03:45 Dubai) instagram, x, threads"
 }
