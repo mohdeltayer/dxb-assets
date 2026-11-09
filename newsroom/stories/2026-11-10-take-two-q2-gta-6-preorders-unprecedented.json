@@ -12,7 +12,7 @@
  ],
  "category": "results",
  "priority": "high",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://www.take2games.com/ir/news/take-two-interactive-software-inc-reports-results-fiscal-4",
@@ -89,8 +89,8 @@
  "ledger_find": "GTA VI Festival (9 Nov) and preload (9 Nov) stories exist; this is new: quarterly results with the pre-order statement",
  "versions": [
   {
-   "v": 5,
-   "file": "cards/2026-11/take-two-q2-gta-6-preorders-unprecedented-reel-v5.mp4",
+   "v": 7,
+   "file": "cards/2026-11/take-two-q2-gta-6-preorders-unprecedented-reel-v7.mp4",
    "note": "v1 text check (line opened on a digit), v2 pace stop, v3 band over Lucia's face, driving crop missed Jason, a TV over a gun-shop wall; v4 band over Jason's face; v5 hook on the highway"
   }
  ],
@@ -111,5 +111,24 @@
   "uncertain": [
    "credit «روكستار غيمز (Rockstar Games)»: names-ar lists روكستار; kept as the full name"
   ]
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/take-two-q2-gta-6-preorders-unprecedented-reel-v7.mp4",
+  "blob": "2e15431f10083d3c9d543694153247bb175f247c",
+  "at": "2026-11-09T23:25:21Z",
+  "note": "round 2 PASS on v7",
+  "checklist": {
+   "job": "jobs/live/take-two-q2-gta-6-preorders-unprecedented.json",
+   "sha256": "aef727d8c8a64a8d39962956e4a5dd881d0dd7a6472ccca9d00b12b4437d0b33",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-sonnet"
+ },
+ "approved": "go: rolling queue; scheduled in Publer 00:45Z (04:45 Dubai) instagram, x, threads"
 }
