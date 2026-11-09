@@ -10,7 +10,7 @@
  ],
  "category": "numbers",
  "priority": "🟢",
- "status": "building (Production 2, this chat, 9 Nov 15:40Z)",
+ "status": "scheduled in Publer 16:30Z (20:30 Dubai), instagram x threads",
  "sources": [
   {
    "role": "primary",
@@ -52,7 +52,7 @@
    "status": "read on the primary"
   }
  ],
- "gate": "gate 15:20Z: Valve's survey page read in full (combined platform); no update or correction note; outlets agree on the figures (Guru3D, Inven Global, TweakTown). Exit A for the figures: chip أرقام. No cause stated by Valve; the text gives the sample shift Valve's own page shows and no reason of ours.",
+ "gate": "gate 15:20Z: Valve's survey page read in full (combined platform); no update or correction note; outlets agree on the figures (Guru3D, Inven Global, TweakTown). Exit A for the figures: chip أرقام. No cause stated by Valve; the text gives the sample shift Valve's own page shows and no reason of ours. Re-check 16:00Z: figures unchanged on Valve's page.",
  "angle": {
   "hook": "16 GB is back on top of Steam's RAM chart, one month after 32 GB took the lead",
   "why_now": "Valve's October survey, published early November; not yet carried in Arabic by the outlets the scout read",
@@ -83,6 +83,11 @@
    "v": 1,
    "at": "2026-11-09T15:40:00Z",
    "change": "first draft"
+  },
+  {
+   "v": 2,
+   "at": "2026-11-09T15:58:00Z",
+   "change": "director round 1: grille shot replaced, credit 44 px; earlier renders stopped on a digit-led line, reading time, pace, and the letterboxed Steam Deck trailer"
   }
  ],
  "posts": [],
@@ -97,5 +102,18 @@
    "ram"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/steam-hardware-survey-october-16gb-reel-v2.mp4",
+  "blob": "019dc71cbdca00e6088fff332f755b97e98c235f",
+  "at": "2026-11-09T16:00:40Z",
+  "note": "director (haiku helper, did not build): round 1 FIX (grille wordmark cut, credit on light frames), round 2 PASS with note (card at the 4 s pace limit; frame-0 credit is a build-queue item)",
+  "checklist": {
+   "job": "jobs/live/steam-hardware-survey-october-16gb.json",
+   "sha256": "0bc4d51ebea9d9f5afa5d71091258f91ddb8231636c1761aeb0c1ddc507d3025",
+   "ok": true,
+   "problems": []
+  }
  }
 }
