@@ -125,6 +125,15 @@ class Stale(unittest.TestCase):
         self.assertEqual(wb[0]['fields']['status'], 'done')
         self.assertEqual(wb[0]['fields']['outcome'], 'auto-closed, stale')
 
+    def test_same_decision_from_the_desk_mirror(self):
+        t = tempfile.mkdtemp()
+        m = {'generated_at': '2026-11-09T03:00:00Z', 'cards': [
+            {'id': 'old-open', 'status': 'open', 'created_at': '2026-10-30T00:00:00Z', 'updated_at': None},
+            {'id': 'answered', 'status': 'answered', 'created_at': '2026-10-20T00:00:00Z', 'answer_at': '2026-11-05T00:00:00Z'},
+            {'id': 'done', 'status': 'done', 'created_at': '2026-10-01T00:00:00Z'}]}
+        json.dump(m, open(os.path.join(t, 'mirror.json'), 'w'))
+        self.assertEqual([w['id'] for w in O.stale_writebacks(None, NOW, mirror=os.path.join(t, 'mirror.json'))], ['old-open'])
+
 
 BOARD = {'handoffs': [
     {'id': 'mohammad-story', 'from': 'Production 1 (relaying Mohammad)', 'to': 'Production 2',
