@@ -1,0 +1,116 @@
+{
+ "id": "2026-11-09-hogwarts-legacy-arabic-support-steam",
+ "title": "Hogwarts Legacy: Arabic support and price on Steam (UAE), evergreen guide",
+ "game": "Hogwarts Legacy",
+ "companies": [
+  "Avalanche Software",
+  "Warner Bros. Games"
+ ],
+ "genre": [
+  "RPG"
+ ],
+ "category": "evergreen",
+ "kind": "evergreen",
+ "evergreen": true,
+ "priority": "🟡",
+ "status": "shortlisted: bank piece, building",
+ "sensitive": "none (a family-rated open-world wizard school; no graphic footage; no author or franchise commentary)",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Steam store page and appdetails, app 990080 (cc=ae)",
+   "url": "https://store.steampowered.com/app/990080/Hogwarts_Legacy/",
+   "who": "Arabic: interface yes, full audio no, subtitles yes; 220.00 AED standard, 260.00 AED Digital Deluxe, no discount; release 10 Feb 2023; developer Avalanche Software; publisher Warner Bros. Games; PC only",
+   "kind": "primary",
+   "read": "2026-11-09T07:58Z"
+  }
+ ],
+ "first_report": "Evergreen; Steam page dated release 10 Feb 2023. The page does not date the Arabic support, so no date is claimed for it. Earlier Reel 2026-10-18-hogwarts-legacy-22-aed-steam (published 18 Oct) was a 90% off price story.",
+ "source_type": "primary",
+ "footage": "Steam Launch Trailer WW (app 990080): 1920x1080 59.94 fps 5.76 Mbps, decode clean, decodecheck smear 13.31-13.75 s. Dialogue and narration through the trailer (faster-whisper), so our bed. Steam lists no other trailer.",
+ "lane": "Digital Lounge only (X, Instagram, Threads); DXB-KNIGHT on hold",
+ "beat": "evergreen: guide",
+ "angle": {
+  "hook": "Hogwarts Legacy offers an Arabic interface and Arabic subtitles on Steam, but no Arabic voice",
+  "why_now": "evergreen, no date; the game came out on PC on 10 Feb 2023",
+  "what_it_means_here": "Arab players can read menus and dialogue in Arabic; the full audio stays English; 220 AED standard price in the UAE store at the read time",
+  "payoff": "the exact Arabic columns from Steam and the price"
+ },
+ "claims": [
+  {
+   "text": "Arabic interface and subtitles, no full audio",
+   "status": "verified",
+   "source": "Steam language table"
+  },
+  {
+   "text": "220.00 AED standard, 260.00 AED Digital Deluxe",
+   "status": "verified",
+   "source": "Steam appdetails cc=ae 07:58Z"
+  },
+  {
+   "text": "Release 10 Feb 2023",
+   "status": "verified",
+   "source": "Steam"
+  }
+ ],
+ "why": "Evergreen bank piece with a regional hook.",
+ "versions": [],
+ "posts": [],
+ "corrections": [],
+ "metrics": [],
+ "pre_render": {
+  "steam_read": {
+   "cmd": "appdetails 990080 cc=ae l=english and the store page language table",
+   "at": "2026-11-09T07:58Z",
+   "result": "Arabic interface yes, full audio no, subtitles yes; 220.00 AED, Deluxe 260.00 AED; 10 Feb 2023; Avalanche Software / Warner Bros. Games"
+  },
+  "ledger_find": {
+   "cmd": "ledger.py find hogwarts legacy arabic --record <id>",
+   "result": "0 other hits (the 18 Oct price story 2026-10-18-hogwarts-legacy-22-aed-steam was found earlier with 'hogwarts legacy': published, a price story, different angle)"
+  },
+  "context_match": "no backstory page",
+  "whatsnew": "packet run; Steam description sentences are the 'new' lines",
+  "footage_decode": {
+   "cmd": "ffmpeg -v error -i hl-launch.mp4 -f null -; decodecheck.py",
+   "result": "decode clean; smear 13.31 to 13.75 s only (avoided)"
+  },
+  "speech": {
+   "cmd": "faster-whisper small on the whole trailer",
+   "result": "dialogue/narration 0.4 to 120 s and at 129 s; no music-only stretch for school scenes, so our bed"
+  },
+  "buildgate": {
+   "cmd": "buildgate.py jobs/live/hogwarts-legacy-arabic-support-steam-guide.json",
+   "result": "build gate: ok"
+  },
+  "render_job_check": {
+   "cmd": "render_job.py check jobs/live/hogwarts-legacy-arabic-support-steam-guide.json",
+   "result": "build gate: ok (server lane, story 2026-11-09-hogwarts-legacy-arabic-support-steam)\nsfx cue: end jingle: end card (graphic)\nhogwarts-legacy-arabic-support-steam-guide ok, clip 20.3 s"
+  }
+ },
+ "ledger_find": {
+  "at": "2026-11-09T08:05:06Z",
+  "words": [
+   "hogwarts",
+   "legacy",
+   "arabic"
+  ],
+  "hits": []
+ },
+ "whats_new": {
+  "read_at": "2026-11-09T08:05:37Z",
+  "url": "https://store.steampowered.com/app/990080/Hogwarts_Legacy/",
+  "matcher": "word overlap",
+  "sentences": 17,
+  "counts": {
+   "new": 17,
+   "known": 0,
+   "posted": 0
+  },
+  "dates_found": [
+   "2023 -> 2023-11-01"
+  ],
+  "closest_stories": [],
+  "packet": "/root/.cache/dxb-packets/2026-11-09-hogwarts-legacy-arabic-support-steam.md",
+  "context_pages": []
+ }
+}

@@ -187,3 +187,5 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 
 | FromSoftware | فروم سوفتوير | Proposed 9 Nov 2026 (Elden Ring Arabic-support post) |
 | Ubisoft Montpellier | يوبيسوفت مونبلييه | Proposed 9 Nov 2026 (Prince of Persia bank piece; the city spelling مونبلييه is new) |
+| Warner Bros. Games | وارنر براذرز غيمز | Proposed 9 Nov 2026 (Hogwarts Legacy Arabic-support guide) |
+| Avalanche Software | أفالانش سوفتوير | Proposed 9 Nov 2026 (Hogwarts Legacy Arabic-support guide; not on screen) |
