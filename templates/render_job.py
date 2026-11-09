@@ -34,6 +34,11 @@ unreleased material.
       "ground_theme": "gold",                                        # for -gfx- graphics on the living ground
       "ground_footage": ["cp-er-trailer.mp4", 40.0],                 # card-led: the game's trailer behind the cards, moving
                                                                      # (a -gfx- shot may name its own: [png, [file, start], secs, null])
+      "ground_still": "gta6-key-art.jpg",                            # or the game's key art behind the cards (numgfx 'still'); a card
+                                                                     # on the plain ground needs "ground": "rotate" + "ground_reason"
+      "layout": "showcase",                                          # trailer news or a weak source only (9 Nov 2026): the footage at
+      "showcase_reason": "the news is the trailer itself: Trailer 3", # its own width between the bands, headline up all the way,
+                                                                     # lines, strip (as key facts) and credits as text below it
       "skin": "house",                                               # game skins pilot: house, scifi or fantasy (format ledger)
       "person": [["miyamoto.jpg", "شيغيرو مياموتو", "مبتكر Mario وZelda", 0.4, 3.8,      # people stories show the person
                   {"focus": [0.5, 0.3], "credit": null}]],                      # (23 Oct 2026); photo fetched as footage
@@ -232,9 +237,11 @@ def shots(job, draft=False, build=True):
                 gf = job.get('ground_footage')    # [file, start]: the game's own trailer behind the card (advisor, 20 Oct 2026)
                 if isinstance(start, list):       # per card: ["x-gfx-a.png", [file, start], secs, null] (multi-game numbers)
                     gf = start
+                gs = job.get('ground_still')      # the game's key art behind the card, blurred and dimmed (9 Nov 2026)
                 NG.slide(C.U + f, secs, job.get('ground_theme', job['theme']), C.U + clip,
                          seed=sum(map(ord, job['name'])), t0=t, fast=draft,
-                         footage=(C.U + gf[0], gf[1]) if gf else None)
+                         footage=(C.U + gf[0], gf[1]) if gf else None,
+                         still=C.U + gs if gs and not gf else None)
             out.append((clip, 0.0, secs, 0.5))
         elif job.get('template') == 'stills' and os.path.splitext(f)[1].lower() in reel.STILL and not isinstance(fo, list):
             # the stills template (formats.py, 14 Oct 2026): a 3% push-in clip per image, hard cuts (job "cut": true);
@@ -277,7 +284,8 @@ def strip_items(job):
 
 
 def place(job):
-    return reel.by_shot([(a, b, [tuple(x) if isinstance(x, list) else x for x in texts]) for a, b, texts in job['lines']])
+    return reel.by_shot([(a, b, [tuple(x) if isinstance(x, list) else x for x in texts]) for a, b, texts in job['lines']],
+                        first=0.0 if job.get('layout') == 'showcase' else 3.6)
 
 
 def profile_of(job):
@@ -328,9 +336,38 @@ def _starts(job):
         reel.X = keep
 
 
+def showcase_of(job):
+    """The showcase reason of a job with "layout": "showcase" (reel.showcase_reason stops a missing or bare one), else
+    None. Any other layout value stops: there is one."""
+    lay = job.get('layout')
+    if lay in (None, '', 'fill'):
+        if job.get('showcase_reason'):
+            raise SystemExit('render_job: showcase_reason without "layout": "showcase"')
+        return None
+    if lay != 'showcase':
+        raise SystemExit(f'render_job: layout {lay!r}: "showcase" or none')
+    try:
+        return reel.showcase_reason(job.get('showcase_reason') or True)
+    except ValueError as e:
+        raise SystemExit(f'render_job: {e}')
+
+
+def look(job):
+    """Theme and style for this render on the live path (no three in a row, 9 Nov 2026): the job's style, or the rested
+    one when that would make three in a row (looks.py); a theme that would make three in a row stops here."""
+    import looks
+    if job.get('kind') in ('breaking', 'famitsu') or job.get('skin') not in (None, 'house'):
+        return job.get('style')
+    style, problems = looks.resolve(job)
+    if problems:
+        raise SystemExit('render_job: ' + '; '.join(problems))
+    return style
+
+
 def check(job):
     if job.get('kind') == 'breaking':
         return BK.check(job)
+    look(job)
     if job.get('intro') is not None:
         _intro_mod(job['intro']).check(job['intro'])
     if job.get('template') == 'reviewscores':  # totals read from the pages and recent, own-scale scores, short quotes
@@ -345,7 +382,8 @@ def check(job):
     try:
         # the runner stops on a letterboxed or small clip, a blocky enlarged shot or a bare lowres_ok; catch it here
         # first (source quality, 24 Oct 2026); bitrate flags are printed. Shots not in uploads are skipped.
-        reel.quality_gate(shots(job, build=False), job.get('lowres_ok'), job.get('blocky_ok'))
+        show = showcase_of(job)               # a showcase job names its reason; nothing is enlarged to fill (9 Nov 2026)
+        reel.quality_gate(shots(job, build=False), job.get('lowres_ok'), job.get('blocky_ok'), boxed=bool(show))
         st, end = reel.timeline(shots(job, build=False))
         reel.check_reading(place(job)(st, end), end)
     finally:
@@ -356,6 +394,7 @@ def check(job):
         print(f"page motion: {len(page_moves(job, st))} moves on the cut", flush=True)
     speech_check(job, end)
     first_frame_check(job)
+    cover_picture_check(job)
     import fillcheck as FC                     # footage full frame, never a box in a blurred fill (adv-20261030-one-piece-fortnite-hold)
     FC.check(job, C.U, st)
     import sfxplan as SF                       # sound effects match the picture (adv-20261030-sfx-mismatch, 30 Oct 2026)
@@ -396,6 +435,32 @@ def first_frame_check(job):
         if st < v0 - 0.05:
             print(f'first frame: shot {i} {f} starts at {st} s, the video at {v0:.2f} s; its first '
                   f'{v0 - st:.2f} s are lost', flush=True)
+
+
+PLATE_FLAT = 0.72          # share of a still cover's pixels with no detail above which it is a plate on a plain ground
+
+
+def cover_picture_check(job):
+    """adv-20261108-numbers-cards-grid item 2 (build 9 Nov 2026): a still that opens the Reel is a picture (key art, a
+    trailer frame), never a logo plate or a figure on the plain ground. Read at a quarter of 9:16: when over PLATE_FLAT
+    of its pixels have no detail, the render stops."""
+    sh = (job.get('shots') or [None])[0]
+    if not sh or os.path.splitext(str(sh[0]))[1].lower() not in ('.jpg', '.jpeg', '.png', '.webp') or '-gfx-' in str(sh[0]):
+        return None
+    path = C.U + str(sh[0])
+    if not os.path.exists(path):
+        return None
+    from PIL import Image, ImageFilter
+    import numpy as np
+    im = Image.open(path).convert('L')
+    im = im.resize((270, max(1, round(im.height * 270 / im.width))))
+    g = np.asarray(im.filter(ImageFilter.FIND_EDGES), dtype=np.float32)[1:-1, 1:-1]
+    flat = float((g < 6).mean())
+    print(f'cover picture: {sh[0]}: {flat:.0%} of it has no detail', flush=True)
+    if flat > PLATE_FLAT:
+        raise ValueError(f'cover: {sh[0]} is {flat:.0%} flat, a plate or a figure on a plain ground; open on footage, '
+                         'key art or a trailer frame (adv-20261108-numbers-cards-grid)')
+    return flat
 
 
 def speech_check(job, end):
@@ -793,8 +858,9 @@ def run(job, draft=False):
         import designpass as DP
         DP_apart = DP.apart_spec(dp_plan, DP_folder)
     tup = lambda v: v if v is None or isinstance(v, str) else tuple(tuple(x) if isinstance(x, list) else x for x in v)
+    style = look(job)
     done = reel.reel(shots(job, draft), job['headline'], job['label'], place(job), job['source'], job['date'], out,
-                     theme=job['theme'], style=job.get('style'), sound=job.get('sound'), country=job.get('country'),
+                     theme=job['theme'], style=style, sound=job.get('sound'), country=job.get('country'),
                      head_size=job.get('head_size', reel.HEAD_SIZE), draft=draft, track=tup(job.get('track')), cut=job.get('cut', False),
                      credits=[tuple(c) for c in job['credits']] if job.get('credits') else None,
                      strip=strip_items(job) if job.get('strip') else None,
@@ -802,7 +868,8 @@ def run(job, draft=False):
                      skin=job.get('skin'), person=[tuple(x) for x in job['person']] if job.get('person') else None,
                      blocky_ok=job.get('blocky_ok'), apart=DP_apart, profile=profile_of(job),
                      reveal=job.get('reveal'),   # word-by-word reveal on the key line (story-beat twist, 28 Oct 2026)
-                     page=page_moves(job, _starts(job)[0]) if job.get('page_motion') else None)   # storybook (B8)
+                     page=page_moves(job, _starts(job)[0]) if job.get('page_motion') else None,   # storybook (B8)
+                     showcase=showcase_of(job))   # trailer at its own width between the bands (9 Nov 2026)
     video = done[0] if isinstance(done, (list, tuple)) else done
     if job.get('persist') and not draft:
         persist_overlay(job, video, out)
@@ -824,6 +891,12 @@ def run(job, draft=False):
     base = re.sub(r'-reel-v\d+$', '', stem)   # matches the workflow's ${stem%-reel-v*}, so v2 and later commit too
     if not draft:
         DC.check(video, [w for w in job.get('block_ok', []) if len(w) == 3])   # stops before anything is committed
+        import fillcheck as FC                 # no empty band at any second, read on the Reel that ships (9 Nov 2026)
+        st_, end_ = _starts(job)
+        FC.empty_bands(video, job, st_, end_, C.U)
+        import looks
+        if job.get('kind') not in ('breaking', 'famitsu'):
+            looks.record(job, style or reel.pick_style(out))
         DC.dense_strip(video, base + '-dense.jpg')
         reel.strip(video, base + '-strip.jpg')
         footage_shots = [s for s in shots(job, build=False) if not s[0].startswith(NG.SUB + '/')]

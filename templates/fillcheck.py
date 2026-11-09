@@ -23,7 +23,14 @@ sources, {"searched": [...], "result": "..."} with at least two, or a string in 
 line in the band changes nothing (it is still band), and a lowres_ok that names no source never counts. fill_ok waives
 one shot as before; the storybeat page is exempt as before.
 
+Third test, no empty band (Mohammad, 8 Nov 2026, the Fortnite Pirate Shop Access Reel: trailer at the bottom, top band
+empty after the headline; build 9 Nov 2026). A band is never empty at any second, whatever lowres_ok says: a band-layout
+shot after the headline fails unless the job keeps the headline in the band over it (persist.head), and the finished
+Reel of a showcase or band-layout job is read once more (empty_bands): any frame with a run of empty rows (flat ground,
+no text and no picture) taller than EMPTY_MAX inside the safe zone fails the render.
+
     python3 fillcheck.py <video> [t ...]     prints the row classes of frames at those times
+    python3 fillcheck.py empty <video> [t ...]   the longest empty run in the safe zone at those times
 """
 import os, subprocess, sys
 
@@ -33,6 +40,9 @@ FOOTAGE_MIN = 0.60
 BLUR_MAX = 0.05
 BAND_MIN = 0.15            # a designed band this tall, after the headline, is the band layout
 HEAD_SECS = 3.5            # reel.reel's default head_secs; a job may set its own
+SAFE = (285, 1480)         # the Reels safe zone rows (ig_ar.SAFE_TOP, SAFE_BOTTOM)
+EMPTY_MAX = 160            # px: a taller run of empty rows inside the safe zone is an empty band
+EMPTY_DETAIL, EMPTY_SPREAD = 0.6, 4.0   # a row with less detail and spread than this is empty (flat ground or a soft band)
 W, H = 270, 480                 # frames are read at a quarter of 1080x1920
 DETAIL, SOFT, FLAT = 2.0, 1.0, 6.0   # segment detail above DETAIL is footage, under SOFT a blur or a band (a band when
                                    # its rows have spread under FLAT); between the two, footage only next to footage
@@ -103,6 +113,70 @@ def weak_source(v):
     return None
 
 
+def _persisted(job, i):
+    """True when the job keeps the headline in the band over shot i (persist.head spans)."""
+    for span in (job.get('persist') or {}).get('head') or []:
+        if len(span) >= 2 and int(span[0]) <= i <= int(span[1]):
+            return True
+    return False
+
+
+def empty_run(img):
+    """(height in px at 1080x1920, top row) of the longest run of empty rows inside the safe zone."""
+    det = np.abs(np.diff(img, axis=1)).mean(axis=1)
+    spr = img.std(axis=1)
+    empty = (det < EMPTY_DETAIL) & (spr < EMPTY_SPREAD)
+    k = 1920 // img.shape[0]
+    best, top, run = 0, None, 0
+    for y in range(SAFE[0] // k, SAFE[1] // k):
+        run = run + 1 if empty[y] else 0
+        if run > best:
+            best, top = run, y - run + 1
+    return best * k, (top * k if top is not None else None)
+
+
+def band_job(job, upload_dir):
+    """True for a job whose Reel has designed bands: the showcase layout, or a portrait footage source (band layout)."""
+    if job.get('layout') == 'showcase':
+        return True
+    for sh in job.get('shots') or []:
+        f = str(sh[0]); path = os.path.join(upload_dir, f)
+        if sh[1] is None or '-gfx-' in f or os.path.splitext(f)[1].lower() in ('.jpg', '.jpeg', '.png', '.webp'):
+            continue
+        if os.path.exists(path):
+            w, h = _size(path)
+            if h > w:
+                return True
+    return False
+
+
+def empty_bands(video, job, starts, end, upload_dir):
+    """Read the finished Reel of a band job at the middle of every shot and at the first frame: an empty run taller than
+    EMPTY_MAX inside the safe zone fails (no empty band at any second). Storybeat pages and our cards are not read."""
+    if job.get('template') == 'storybeat' or not band_job(job, upload_dir):
+        return []
+    times = [0.05]
+    for i, sh in enumerate(job.get('shots') or []):
+        if '-gfx-' in str(sh[0]) or i >= len(starts):
+            continue
+        z = starts[i + 1] if i + 1 < len(starts) else end
+        times.append((starts[i] + z) / 2)
+    bad = []
+    for t in times:
+        img = frame(video, t)
+        if img is None:
+            continue
+        h, top = empty_run(img)
+        print(f'fill: empty run at {t:.2f} s: {h} px' + (f' from y {top}' if top is not None else ''), flush=True)
+        if h > EMPTY_MAX:
+            bad.append(f'{t:.2f} s: {h} px of empty band from y {top}')
+    if bad:
+        raise ValueError('an empty band in the finished Reel (no empty band at any second, Mohammad 8 Nov 2026): '
+                         + '; '.join(bad) + '. Keep the headline in the top band and a line in the bottom band at every '
+                         'second (showcase layout), or fill the frame cropped to the subject.')
+    return times
+
+
 def check(job, upload_dir, starts=None):
     """Raise ValueError naming every footage shot that sits in a blurred fill or fills under 60% of the height, and
     every band-layout shot after the headline without a weak-source reason. starts: each shot's start on the timeline
@@ -148,7 +222,11 @@ def check(job, upload_dir, starts=None):
         elif not storybeat and foot < FOOTAGE_MIN:
             bad.append(f'shot {i} {f} at {t:.2f} s: footage fills {foot:.0%} of the height (under {FOOTAGE_MIN:.0%})')
         elif not storybeat and flat >= BAND_MIN and i < len(starts) and float(starts[i]) + du > head + 0.05:
-            if weak:
+            if not _persisted(job, i) and job.get('layout') != 'showcase':
+                bad.append(f'shot {i} {f} from {max(float(starts[i]), head):.2f} s: band layout ({flat:.0%} band) with the '
+                           'band empty after the headline; whatever lowres_ok says, the headline stays in the band for '
+                           'the whole Reel (persist.head, or the showcase layout: "layout": "showcase")')
+            elif weak:
                 print(f'fill: shot {i} band layout after the headline, weak source named: {weak}', flush=True)
             else:
                 bad.append(f'shot {i} {f} from {max(float(starts[i]), head):.2f} s: band layout ({flat:.0%} band, '
@@ -165,6 +243,11 @@ def check(job, upload_dir, starts=None):
 
 
 if __name__ == '__main__':
+    if sys.argv[1] == 'empty':
+        p = sys.argv[2]
+        for t in [float(x) for x in sys.argv[3:]] or [1.0]:
+            print(t, 'longest empty run %d px from y %s' % empty_run(frame(p, t)))
+        raise SystemExit(0)
     p = sys.argv[1]
     for t in [float(x) for x in sys.argv[2:]] or [1.0]:
         img = frame(p, t)

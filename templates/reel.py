@@ -163,6 +163,9 @@ HEAD_SIZE, HEAD_MIN, HEAD_LINES, HEAD_BAND = 100, 72, 2, 225
 CHIP_SIZE = 50
 
 
+HEAD_GEOM = {}                           # head_layer's last headline row (end) and credit row (meta_y), for the showcase box
+
+
 def grid_corner_clear(im, what='head'):
     """Stop when anything drawn on `im` (RGBA, W x H) reaches the grid tile's top-right corner."""
     box = (W - GRID_CORNER, GRID_TOP, W, GRID_TOP + GRID_CORNER)
@@ -171,13 +174,14 @@ def grid_corner_clear(im, what='head'):
 
 
 def head_layer(headline, label, path, source, date, country=None, hs=HEAD_SIZE, hst=None,
-               vivid=False, theme='cold', seed=0, style='lines', meta_path=None, skin=None, chip_path=None):
+               vivid=False, theme='cold', seed=0, style='lines', meta_path=None, skin=None, chip_path=None, band_to=None):
     """Chip and headline on a soft band at the top; the credit line (rule, source · date)
     is written to `meta_path` as its own layer when given, else drawn with the head. `vivid`
     colours the chip with the theme and lays the theme's wave lines in the band. `skin` (a game
     skins pilot kit, skins.KITS) lays the kit's band decoration and a plate behind chip and
     headline instead, and colours the chip and the credit rule with the kit; the chip's place
-    and the grid-corner rule do not change."""
+    and the grid-corner rule do not change. `band_to` (the showcase layout) stops the soft band and the
+    wave lines at that row, above the picture box. HEAD_GEOM keeps the headline's last row and the credit row."""
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     probe = ImageDraw.Draw(Image.new('RGBA', (W, H)))
     room = W - R - L
@@ -207,12 +211,14 @@ def head_layer(headline, label, path, source, date, country=None, hs=HEAD_SIZE, 
     acc = SK.load(skin)['accent'] if skin else G._ACC
     end = G._head(probe, headline, HEAD_TOP, label, country, hs, hst, right=R, left=hl, chip_size=CHIP_SIZE)
     meta_y = end + 30
-    _band(im, 0, meta_y + 220, True, HEAD_BAND)
+    HEAD_GEOM.update(end=end, meta_y=meta_y, size=hs)
+    lo = (lambda y: min(y, band_to)) if band_to else (lambda y: y)
+    _band(im, 0, lo(meta_y + 220), True, HEAD_BAND)
     if skin:                               # the kit's decoration and its plate behind chip and headline
-        SK.top(im, meta_y + 140, skin, seed)
+        SK.top(im, lo(meta_y + 140), skin, seed)
         SK.plate(im, (max(L - 20, hl - 28), HEAD_TOP - 18, W - R + 20, end + 14), skin)
     elif vivid:
-        _colour(im, meta_y + 140, theme, seed, style)
+        _colour(im, lo(meta_y + 140), theme, seed, style)
     t = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(t)
     G._head(d, headline, HEAD_TOP, label, country, hs, hst, right=R, left=hl, chip=chip, chip_size=CHIP_SIZE)
     grid_corner_clear(t)
@@ -545,6 +551,91 @@ def credit_layer(text, path, low=False, size=36, y=None, band=False):
     im.save(path); return path
 
 
+#: Showcase layout (Mohammad, 8 Nov 2026, CLAUDE.md "Full frame", point 5; built into reel.py 9 Nov 2026). For two
+#: cases only: (a) the trailer itself is the news, (b) the source fails the quality gate enlarged (under 1080p, over the
+#: 2x cap, lowbit or blocky) and no better official copy exists. The footage plays uncropped at its own width (never
+#: wider than the frame, never enlarged to fill it), centred between two designed bands on the flat ground, no blur.
+#: The chip and the headline stay in the top band for the whole Reel; the story lines, the key facts (date, price,
+#: platforms) and the credit are text in the bottom band, never over the picture. No band is ever empty: the lines run
+#: back to back from SHOW_FIRST to the end card, and the credit row holds the clip's credit or source and date.
+#: reel(..., showcase=<reason>) or "layout": "showcase" with "showcase_reason" in a job file; a bare True stops.
+SHOWCASE = None                          # the picture box (x, y, w, h) while reel() builds a showcase cut
+SHOW_LINE = (56, 72)                     # story line size and step in the bottom band
+SHOW_FACT, SHOW_CREDIT = 40, 34          # key facts and credit sizes
+SHOW_CREDIT_Y = G.SAFE_BOTTOM - 6        # credit baseline, the lowest row
+SHOW_FACT_Y = SHOW_CREDIT_Y - 58         # key facts baseline, above the credit
+SHOW_GAP = 26                            # between a band's text and the picture
+SHOW_MIN_W = 760                         # a narrower picture box: cut the headline to one line
+SHOW_FIRST = 0.0                         # the first line is up from frame 0 (the headline is up all the way)
+SHOW_CASES = re.compile(r'trailer|teaser|تريلر|العرض الدعائي|الإعلان|lowbit|blocky|720p|under 1080|2x|cap|weak|quality', re.I)
+
+
+def showcase_reason(v):
+    """The reason a Reel takes the showcase layout, or None. A bare True, a short phrase or a reason naming neither
+    case stops the render."""
+    if v is None or v is False or v == '':
+        return None
+    if not isinstance(v, str) or len(v.split()) < 5 or not SHOW_CASES.search(v):
+        raise ValueError('showcase needs its reason (showcase_reason, five words or more) naming one of the two cases: '
+                         'the trailer itself is the news ("the news is the trailer: Rockstar\'s Trailer 3"), or the source '
+                         'fails the quality gate enlarged and no better copy exists ("720p only: IGN, publisher site, '
+                         'Steam checked"); never a bare true')
+    return v.strip()
+
+
+def showcase_box(head_end, facts, rows=2):
+    """(x, y, w, h, lift) for the showcase picture: as wide as the frame when it fits between the bands, centred, 16:9;
+    `lift` places the story lines' last baseline above the key facts (or the credit)."""
+    size, step = SHOW_LINE
+    last = (SHOW_FACT_Y - SHOW_FACT if facts else SHOW_CREDIT_Y - SHOW_CREDIT) - 30
+    band_top = last - step * (rows - 1) - size
+    y0, y1 = head_end + SHOW_GAP, band_top - SHOW_GAP
+    bw = min(W, int((y1 - y0) * 16 / 9)) // 2 * 2
+    bh = (bw * 9 // 16) // 2 * 2
+    if bw < SHOW_MIN_W:
+        raise ValueError(f'showcase: the picture box would be {bw} px wide between the headline and the bottom band; '
+                         'cut the headline to one line or drop the key facts')
+    return (W - bw) // 2, y0 + (y1 - y0 - bh) // 2, bw, bh, (G.SAFE_BOTTOM - 40) - last
+
+
+def facts_layer(items, path, y=SHOW_FACT_Y, size=SHOW_FACT):
+    """The showcase's key facts as one text row in the bottom band, right to left: each label in body grey, its value
+    in ink, a dot between items. A value is a string or ('aed', '149') for the dirham sign left of the digits."""
+    fv, fl = A.F('Bold', size), A.F('Medium', size - 6)
+    probe = ImageDraw.Draw(Image.new('L', (W, H)))
+    ink, body = Image.new('L', (W, H), 0), Image.new('L', (W, H), 0)
+    di, db = ImageDraw.Draw(ink), ImageDraw.Draw(body)
+    rtl_starts([str(lab) for lab, _ in items], 'key fact label')
+    x = W - R
+    for k, (lab, val) in enumerate(items):
+        if k:
+            db.text((x, y), '·', font=fv, fill=255, anchor='rs'); x -= probe.textlength('·', font=fv) + 22
+        db.text((x, y), str(lab), font=fl, fill=255, anchor='rs', **G.AR); x -= probe.textlength(str(lab), font=fl, **G.AR) + 14
+        aed = isinstance(val, (list, tuple)) and len(val) == 2 and val[0] == 'aed'
+        txt = str(val[1] if aed else val.get('unknown', 'لم يُعلن بعد') if isinstance(val, dict) else _strip_text(val))
+        di.text((x, y), txt, font=fv, fill=255, anchor='rs', **G.AR); x -= probe.textlength(txt, font=fv, **G.AR)
+        if aed:                            # the Central Bank's dirham sign, left of the digits
+            _, y0, _, y1 = di.textbbox((0, y), txt, font=fv, anchor='ls'); dh = y1 - y0
+            sym = SYM.resize((round(SYM.width * dh / SYM.height), dh), Image.LANCZOS)
+            x -= round(dh * 0.3) + sym.width; ink.paste(255, (int(x), y - dh), sym)
+        x -= 22
+    if x + 22 < L:
+        raise ValueError('showcase key facts run out of the safe zone; two or three short items: ' + str(items))
+    im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    both = Image.new('L', (W, H), 0); both.paste(255, (0, 0), ink); both.paste(255, (0, 0), body)
+    for col, m in [(A.GROUND, both.filter(ImageFilter.MaxFilter(5))), (A.BODY, body), (A.INK, ink)]:
+        lay = Image.new('RGBA', (W, H), col + (255,)); lay.putalpha(m); im.alpha_composite(lay)
+    im.save(path); return path
+
+
+def _show_pad(bars, pre, post):
+    """The showcase picture pass for footage: bars cut, scaled into the box uncropped, padded onto the flat ground."""
+    x, y, bw, bh = SHOWCASE
+    g = '0x%02X%02X%02X' % A.GROUND
+    return (f"{bars}{pre}scale={bw}:{bh}:force_original_aspect_ratio=decrease:flags=lanczos{post},"
+            f"pad={W}:{H}:(ow-iw)/2:{y}+({bh}-ih)/2:color={g}")
+
+
 #: People stories show the person (advisor, 23 Oct 2026, from Mohammad, after the Miyamoto honour Reel never
 #: showed Miyamoto): the person's official photo in a framed window over the running footage, a name plate
 #: with their role under the name, in the first 3 to 4 seconds, then back to full footage. The window sits
@@ -831,10 +922,13 @@ def _waived(f, s, blocky_ok):
     return None
 
 
-def quality_gate(shots, lowres_ok=None, blocky_ok=None):
+def quality_gate(shots, lowres_ok=None, blocky_ok=None, boxed=False):
     """Before the render: print every source-quality flag, then stop on a bare lowres_ok, a clip under MIN_SRC_H
     rows or a still past MAX_ZOOM with no lowres reason, or a blocky shot that blocky_ok does not waive. All the
-    problems are listed in one error. Returns source_quality's report."""
+    problems are listed in one error. Returns source_quality's report. `boxed` (the showcase layout, or reel() while
+    SHOWCASE is set): nothing is enlarged to fill the frame, so the rows, zoom and block checks do not apply; the
+    bitrate flags still print."""
+    boxed = boxed or bool(SHOWCASE)
     problems = []
     try:
         reason = lowres_reason(lowres_ok)
@@ -845,7 +939,7 @@ def quality_gate(shots, lowres_ok=None, blocky_ok=None):
     for i, (f, s, d, fo) in enumerate(shots):
         if os.path.splitext(f)[1].lower() in STILL and os.path.exists(C.U + f):
             z = zoom((f, s, d, fo))
-            if z > MAX_ZOOM and not reason:
+            if z > MAX_ZOOM and not reason and not boxed:
                 problems.append(f'{f}: a still enlarged {z:.1f}x to fill 9:16; find a larger image or name the copies '
                                 'checked in lowres_ok')
             continue
@@ -855,6 +949,8 @@ def quality_gate(shots, lowres_ok=None, blocky_ok=None):
         if r['bitrate'] and f not in seen:
             print(f'source quality: {f}: {r["bitrate"]} (lowbit)', flush=True)
         seen.add(f)
+        if boxed:
+            continue
         if r['rows'] < MIN_SRC_H:
             small.append(f'{f} at {s} ({r["rows"]} rows, enlarged {r["zoom"]}x)')
         if r['block']:
@@ -1269,9 +1365,12 @@ def montage(shots, out, lowres_ok=False, fast=False):
             if isinstance(fo, Pan):
                 a, b = fo[0][1], fo[1][1]
             z = zoom((f, s, d, fo))
-            if z > MAX_ZOOM and not lowres_ok:
+            if z > MAX_ZOOM and not lowres_ok and not SHOWCASE:
                 raise ValueError(f'{f}: a still enlarged {z:.1f}x to fill 9:16; find a larger image or name the copies checked in lowres_ok')
             args += ['-loop', '1', '-framerate', '30', '-t', str(d), '-i', C.U + f]
+            if SHOWCASE:                           # the showcase: the still uncropped in the box, on the flat ground
+                fc.append(f"[{i}:v]{_show_pad('', '', _still_finish(f))},fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]")
+                continue
             sw, sh = W * SUB, H * SUB              # pan at 4x, scale down last (18 Oct 2026: whole-pixel pans judder)
             fc.append(f'[{i}:v]scale={sw}:{sh}:force_original_aspect_ratio=increase:flags=lanczos,'
                       f"crop={sw}:{sh}:x='(iw-{sw})*({a}+({b}-{a})*t/{d})':y='(ih-{sh})/2',"
@@ -1286,14 +1385,16 @@ def montage(shots, out, lowres_ok=False, fast=False):
             # for letterboxed trailers): lanczos keeps edges and the FINISH chain
             # cleans and sharpens around it (lighter on 4K, which is not enlarged).
             bars, rows = _bars(C.U + f, s, d)
-            if rows < MIN_SRC_H and not lowres_ok:
+            if rows < MIN_SRC_H and not lowres_ok and not SHOWCASE:
                 raise ValueError(f'{f}: only {rows} rows of picture (bars cut), enlarged {H / rows:.1f}x; '
                                  f'find a 4K or unletterboxed copy, or name the copies checked in lowres_ok ("{LOWRES_EXAMPLE}")')
             if FINISH and not _ours(f):     # the standard finish (12 Oct 2026): denoise, enlarge, adaptive sharpen, grade
                 pre, post = f'{DENOISE},', f",cas={0.7 if rows < H else 0.4},{GRADE}"
             else:                           # our graphics, or FINISH off: the old lanczos + light unsharp
                 pre, post = '', (',unsharp=5:5:0.5:5:5:0.0' if rows < H else '')
-            fc.append(f"[{i}:v]{bars}{pre}scale=-2:{H}:flags=lanczos,crop={W}:{H}:x='(iw-{W})*({_fo_expr(fo, d)})':y=0{post},fps=30,tpad=stop_mode=clone:stop_duration=0.5,trim=duration={d},setpts=PTS-STARTPTS,settb=AVTB,setsar=1,format=yuv420p[v{i}]")   # padded and trimmed to exactly d: a clip a few frames short ended the xfade chain early (12 Oct)
+            pic = (_show_pad(bars, pre, post) if SHOWCASE else
+                   f"{bars}{pre}scale=-2:{H}:flags=lanczos,crop={W}:{H}:x='(iw-{W})*({_fo_expr(fo, d)})':y=0{post}")
+            fc.append(f"[{i}:v]{pic},fps=30,tpad=stop_mode=clone:stop_duration=0.5,trim=duration={d},setpts=PTS-STARTPTS,settb=AVTB,setsar=1,format=yuv420p[v{i}]")   # padded and trimmed to exactly d: a clip a few frames short ended the xfade chain early (12 Oct)
     if sound:
         for i, ((f, s, d, fo), st) in enumerate(zip(shots, stills)):
             if st or not _has_audio(C.U + f):
@@ -1353,7 +1454,8 @@ def inter_enc():
 def _shot_key(f, s, d, fo):
     import hashlib
     src = C.U + f
-    raw = json.dumps([f, s, d, repr(fo), FINISH, MAX_ZOOM, DENOISE, GRADE, os.path.getmtime(src), os.path.getsize(src)])
+    raw = json.dumps([f, s, d, repr(fo), FINISH, MAX_ZOOM, DENOISE, GRADE, os.path.getmtime(src), os.path.getsize(src)]
+                     + ([list(SHOWCASE)] if SHOWCASE else []))      # a showcase box is its own picture pass
     return hashlib.sha1(raw.encode()).hexdigest()[:16]
 
 
@@ -1369,14 +1471,16 @@ def cached_shot(f, s, d, fo, lowres_ok=False):
     if os.path.exists(C.U + rel):
         return rel
     bars, rows = _bars(C.U + f, s, d)
-    if rows < MIN_SRC_H and not lowres_ok:
+    if rows < MIN_SRC_H and not lowres_ok and not SHOWCASE:
         raise ValueError(f'{f}: only {rows} rows of picture (bars cut), enlarged {H / rows:.1f}x; '
                          f'find a 4K or unletterboxed copy, or name the copies checked in lowres_ok ("{LOWRES_EXAMPLE}")')
     if FINISH and not _ours(f):
         pre, post = f'{DENOISE},', f",cas={0.7 if rows < H else 0.4},{GRADE}"
     else:
         pre, post = '', (',unsharp=5:5:0.5:5:5:0.0' if rows < H else '')
-    vf = (f"{bars}{pre}scale=-2:{H}:flags=lanczos,crop={W}:{H}:x='(iw-{W})*({_fo_expr(fo, d)})':y=0{post},"
+    pic = (_show_pad(bars, pre, post) if SHOWCASE else
+           f"{bars}{pre}scale=-2:{H}:flags=lanczos,crop={W}:{H}:x='(iw-{W})*({_fo_expr(fo, d)})':y=0{post}")
+    vf = (f"{pic},"
           f"fps=30,tpad=stop_mode=clone:stop_duration=0.5,trim=duration={d},setpts=PTS-STARTPTS,setsar=1,format=yuv420p")
     a = ['-map', '0:a?', '-c:a', 'pcm_s16le', '-ar', '48000', '-ac', '2'] if _has_audio(C.U + f) else ['-an']
     tmp = C.U + rel + '.part.mkv'
@@ -1658,14 +1762,16 @@ def spread(texts, t0, t1, gap=0.0):
     return out
 
 
-def by_shot(groups):
+def by_shot(groups, first=3.6):
     """groups: [(first_shot, last_shot, [texts or (text, opts)])]; each group's
     sentences share the time from the first shot's start to the next shot
-    after the last one. Returns a function for reel(lines=...)."""
+    after the last one. Returns a function for reel(lines=...). `first`: where
+    a line on the first shot starts (3.6, after the head band; 0 for the
+    showcase layout, whose headline stays up in its own band)."""
     def place(starts, end):
         out = []
         for a, b, texts in groups:
-            t0 = starts[a] + (0.25 if a else 3.6)   # the first line waits for the head band
+            t0 = starts[a] + (0.25 if a else first)   # the first line waits for the head band
             t1 = starts[b + 1] if b + 1 < len(starts) else end
             span = (t1 - t0) / len(texts)
             for i, x in enumerate(texts):
@@ -1772,8 +1878,12 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
          lowres_ok=False, read_check=True, track=None, draft=False, head_size=HEAD_SIZE, cut=False, credits=None, strip=None,
          products=None, template=None, tribute=False, reveal=None, profile=None, pace_ok=False, skin=None,
-         person=None, blocky_ok=None, apart=None, page=None):
-    """`page`: [(t, pre, post, dx, dy)], the storybook camera's moves in Reel seconds (storybook.py, B8 29 Oct 2026;
+         person=None, blocky_ok=None, apart=None, page=None, showcase=None):
+    """`showcase`: the reason this Reel takes the showcase layout (showcase_reason; see SHOWCASE above): the footage
+    uncropped in a box between the bands, the headline up for the whole Reel, the lines, `strip` (as key facts) and the
+    credits as text in the bottom band, the lines back to back so no band is ever empty. Cards, products, person
+    windows, the storybook page, the design pass and the tribute variant are not part of it and stop the render.
+    `page`: [(t, pre, post, dx, dy)], the storybook camera's moves in Reel seconds (storybook.py, B8 29 Oct 2026;
     render_job maps the job's `page_motion` onto the cut): the camera glides by (dx, dy) on the page from t - pre to
     t + post, and each story line moves with its page, so the words stay written where the picture is. A line that
     would be on screen across a move stops the render (mark the next beat `stay`). None (the default) moves nothing.
@@ -1826,6 +1936,13 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     the render stops otherwise, so a short story gets more related footage."""
     global X
     lowres_ok = lowres_reason(lowres_ok)   # a bare True stops here, before anything is built (24 Oct 2026)
+    show = showcase_reason(showcase)       # a bare True or a reason naming neither case stops here (9 Nov 2026)
+    if show and (products or person or page or apart or tribute):
+        raise ValueError('showcase: products, person windows, the storybook page, the design pass and the tribute '
+                         'variant are not part of the layout')
+    if show and any(_ours(sh[0]) or sh[0].startswith(STILLS + '/') for sh in shots):
+        raise ValueError('showcase: our cards and pre-cut stills clips are not part of the layout; the key facts go in '
+                         'the bottom band (strip=) and the footage or official stills play in the box')
     if label == 'عاجل':                    # عاجل is a skin on any template (advisor, 14 Oct 2026): crimson and the breaking bed
         theme, sound = 'crimson', sound or 'breaking'
         skin = None                        # and stays crimson on any game skin (advisor, 20 Oct 2026)
@@ -1841,7 +1958,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, credits=credits, strip=strip,
                         products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok,
-                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart, page=page)
+                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart, page=page, showcase=showcase)
         finally:
             X = keep
     global FINISH
@@ -1851,7 +1968,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, cut, credits=credits, strip=strip,
                         products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok,
-                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart, page=page)
+                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart, page=page, showcase=showcase)
         finally:
             FINISH = keep_f
     if profile and not PROFILES[profile].get('music', True) and isinstance(track, (tuple, list)) and len(track) > 2:
@@ -1878,7 +1995,21 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         if callable(lines):                    # lines placed against the cut's own shot starts
             lines = lines(starts, end)
         if lines and isinstance(lines[0], str):
-            lines = spread(lines, head_secs + 0.1, end)
+            lines = spread(lines, SHOW_FIRST if show else head_secs + 0.1, end)
+        global SHOWCASE
+        if show:                               # the box between the bands, the lines in the bottom band, back to back
+            if not lines:
+                raise ValueError('showcase: the bottom band carries the story lines; a Reel with no lines would leave it empty')
+            head_layer(headline, label, f'{tmp}/probe.png', source, date, country, hs=head_size, hst=head_size + 20,
+                       theme=theme, meta_path=f'{tmp}/probe-meta.png', skin=skin)
+            bx, by, bw, bh, lift = showcase_box(HEAD_GEOM['end'], bool(strip))
+            SHOWCASE = (bx, by, bw, bh)
+            print(f'showcase: picture box {bw}x{bh} at y {by} ({show})', flush=True)
+            drop = ('top', 'lift', 'size', 'step', 'shade')
+            lines = sorted(lines, key=lambda x: x[1])
+            lines = [(t, (min(a, SHOW_FIRST) if k == 0 else a), (lines[k + 1][1] if k + 1 < len(lines) else end),
+                      {**{q: v for q, v in kw.items() if q not in drop}, 'size': SHOW_LINE[0], 'step': SHOW_LINE[1], 'lift': lift})
+                     for k, (t, a, z, kw) in enumerate(lines)]
         if read_check and not voice:
             check_reading(lines, end)
         pn = pace_note(starts, end, lines, head_secs if strip else None)
@@ -1890,7 +2021,9 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             raise ValueError(f'reveal {reveal}: there are {len(lines)} lines')
         if tribute:
             lines = [(t, a, z, {**kw, 'ink': A.BODY}) for t, a, z, kw in lines]
-        if strip:                              # lines rise over the strip; a repeated fact or a bad strip stops here
+        if strip and show:                     # the showcase's key facts: a text row in the bottom band, not the strip
+            strip_check(strip, lines); facts_layer(strip, f'{tmp}/facts.png')
+        elif strip:                            # lines rise over the strip; a repeated fact or a bad strip stops here
             strip_check(strip, lines); strip_layer(strip, f'{tmp}/strip.png', theme, skin=skin)
             if comp is None:
                 lines = [(t, a, z, kw if kw.get('top') else {**kw, 'lift': STRIP_LIFT}) for t, a, z, kw in lines]
@@ -1901,7 +2034,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
                         raise ValueError(f'the composition frame ({sa:.1f} to {sz:.1f}s) carries the strip only, never a line: {t}')
         for i, (text, _, _, kw) in enumerate(lines):   # a line outside the safe zone stops here, not after the encode
             line_layer(text, f'{tmp}/l{i}.png', skin=skin, **kw)
-        quality_gate(shots, lowres_ok, blocky_ok)   # bitrate floor, block check, named lowres_ok (24 Oct 2026)
+        quality_gate(shots, lowres_ok, blocky_ok, boxed=bool(show))   # bitrate floor, block check, named lowres_ok (24 Oct 2026)
         lap('checks')
         ext = 'mp4' if draft else 'mkv'             # lossless intermediates for the real render (advisor, 14 Oct 2026)
         global TRANSITION
@@ -1916,12 +2049,15 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     except Exception:
         shutil.rmtree(tmp, ignore_errors=True)
         raise
+    finally:
+        SHOWCASE = None                        # the box is for this cut only
     style = style or ('lines' if skin else pick_style(out))   # after the checks, so a stopped render takes no turn; a skin takes none
     layers = [(head_layer(headline, label, f'{tmp}/head.png', source, date, country, hs=head_size,   # HEAD_SIZE unless a job asks for more; never below HEAD_MIN
                           hst=head_size + 20, vivid=vivid, theme=theme, seed=sum(map(ord, out)), style=style,
                           meta_path=f'{tmp}/meta.png', skin=skin,
-                          chip_path=os.path.join(apart['dir'], 'chip.png') if apart and apart.get('chip') else None),
-               0, head_secs)]
+                          chip_path=os.path.join(apart['dir'], 'chip.png') if apart and apart.get('chip') else None,
+                          band_to=(by - 4) if show else None),
+               0, end if show else head_secs)]
     kept = []                               # the design pass's layers, left out of the burn (apart)
     if apart and apart.get('chip') and os.path.exists(os.path.join(apart['dir'], 'chip.json')):
         kept.append(dict(json.load(open(os.path.join(apart['dir'], 'chip.json'))), what='chip',
@@ -1931,8 +2067,26 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     if MARK_PERSIST:                        # the play mark, small and half transparent, for the whole Reel (14 Oct 2026)
         layers.insert(0, (mark_layer(f'{tmp}/mark.png'), 0, end))
     fixed = len(layers)                     # these never get trimmed by the next line
-    layers.append((f'{tmp}/meta.png', min(CREDIT_AT, head_secs - 0.5), head_secs))   # the credit line enters at 2 s
-    creds = credit_specs(credits, lines, starts, end, head_secs, strip, tmp)   # drawn now, laid after the lines as before
+    if show:                                # the credit row: each clip's credit over its shots, else source and date
+        creds, row, k = [], [], 0
+        for a_s, b_s, text in (credits or []):
+            a0, z0 = starts[a_s], (starts[b_s + 1] if b_s + 1 < len(starts) else end)
+            row.append((a0, z0, credit_layer(text, f'{tmp}/sc{k}.png', size=SHOW_CREDIT, y=SHOW_CREDIT_Y))); k += 1
+        meta = credit_layer(f'{source}\u200f  ·  \u200f{A.arabic_date(date)}', f'{tmp}/smeta.png', size=SHOW_CREDIT,
+                            y=SHOW_CREDIT_Y)
+        t0 = 0.0
+        for a0, z0, _ in sorted(row):
+            if a0 - t0 > 0.05:
+                layers.append((meta, t0, a0))
+            t0 = max(t0, z0)
+        if end - t0 > 0.05:
+            layers.append((meta, t0, end))
+        layers += [(png, a0, z0) for a0, z0, png in row]
+        if strip:
+            layers.append((f'{tmp}/facts.png', 0, end))
+    else:
+        layers.append((f'{tmp}/meta.png', min(CREDIT_AT, head_secs - 0.5), head_secs))   # the credit line enters at 2 s
+        creds = credit_specs(credits, lines, starts, end, head_secs, strip, tmp)   # drawn now, laid after the lines as before
     groups = []                             # one per line: [(png, a, z)]; a reveal line is its word steps (B8)
     for i, (text, a, z, kw) in enumerate(lines):
         kw = clear_badge(text, kw, a, min(z, end), creds, tmp, skin)
@@ -1947,7 +2101,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     pos_of = page_positions(groups, page) if page else {}
     for g in groups:
         layers.extend(g)
-    if strip:                              # after the trim: the strip stays for the rest of the clip, fading in over 0.4 s
+    if strip and not show:                 # after the trim: the strip stays for the rest of the clip, fading in over 0.4 s
         if comp is None:                   # it hides under a card (advisor review, 14 Oct 2026): never card, frame line and strip stacked
             a0, segs = head_secs, []
             for i, (f, _, _, _) in enumerate(shots):

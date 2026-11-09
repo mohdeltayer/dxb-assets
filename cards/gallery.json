@@ -1,0 +1,457 @@
+{
+ "generated_at": "2026-11-09T03:26:56Z",
+ "templates": [
+  {
+   "template": "trailer",
+   "family": "footage",
+   "what": "official footage runs the whole Reel with its own sound; the lines ride on the picture; no card (the default when a trailer exists)",
+   "opener": "the strongest shot of the stretch, moving from frame one, the headline over it",
+   "kinds": [
+    "adaptation",
+    "crossover",
+    "date",
+    "delay",
+    "launch",
+    "mods",
+    "remake",
+    "report",
+    "reveal",
+    "update"
+   ],
+   "runs_30d": 78,
+   "last_run": "2026-11-09T02:03Z",
+   "examples": [
+    {
+     "story": "2026-11-08-bonk-vct-emea-disqualified-cheating",
+     "at": "2026-11-09T02:03Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/bonk-vct-emea-disqualified-cheating-reel-v1.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/bonk-vct-emea-disqualified-cheating-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/bonk-vct-emea-disqualified-cheating-sheet.jpg"
+    },
+    {
+     "story": "2026-11-08-ocarina-of-time-uk-launch-dring",
+     "at": "2026-11-08T20:53Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/ocarina-of-time-uk-launch-dring-reel-v1.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/ocarina-of-time-uk-launch-dring-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/ocarina-of-time-uk-launch-dring-sheet.jpg"
+    },
+    {
+     "story": "wardogs-season-3-sabatulo-november-12-nov-7",
+     "at": "2026-11-07T07:46Z",
+     "skin": null,
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/wardogs-season-3-sabatulo-november-12-nov-7-reel-v1.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/wardogs-season-3-sabatulo-november-12-nov-7-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/wardogs-season-3-sabatulo-november-12-nov-7-sheet.jpg"
+    }
+   ]
+  },
+  {
+   "template": "split",
+   "family": "footage",
+   "what": "footage runs the whole Reel with a slim pinned fact strip (date, price, platforms; 2 or 3 items) low in the safe zone; the lines never repeat the strip (reel(..., strip=[...]), 14 Oct 2026)",
+   "opener": "the footage moving from frame one; the strip pins when the headline leaves",
+   "kinds": [
+    "arabic",
+    "beta",
+    "date",
+    "delay",
+    "edition",
+    "esports",
+    "event",
+    "expansion",
+    "free",
+    "hardware",
+    "launch",
+    "players",
+    "preorder",
+    "price",
+    "shutdown",
+    "soundtrack",
+    "watch_guide"
+   ],
+   "runs_30d": 40,
+   "last_run": "pulled",
+   "examples": [
+    {
+     "story": "nintendo-indie-world-oct-28",
+     "at": "pulled",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/nintendo-indie-world-oct-28-reel-v1.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/nintendo-indie-world-oct-28-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/nintendo-indie-world-oct-28-sheet.jpg"
+    },
+    {
+     "story": "2026-11-08-famitsu-cod-mw4-36-40",
+     "at": "2026-11-08T14:07Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/famitsu-cod-mw4-36-40-reel-v1.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/famitsu-cod-mw4-36-40-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/famitsu-cod-mw4-36-40-sheet.jpg"
+    },
+    {
+     "story": "2026-11-08-fortnite-pirate-shop-access-drop-rates",
+     "at": "2026-11-08T08:18Z",
+     "skin": null,
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/fortnite-pirate-shop-access-drop-rates-reel-v3.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/fortnite-pirate-shop-access-drop-rates-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/fortnite-pirate-shop-access-drop-rates-sheet.jpg"
+    }
+   ]
+  },
+  {
+   "template": "clipcard",
+   "family": "footage",
+   "what": "footage for the hook and story, ONE card at the key beat (price table, date, figure), then footage again; the card holds its beat alone or under a one-line frame",
+   "opener": "the footage hook, moving; the card comes only at the key beat",
+   "kinds": [
+    "controversy",
+    "price",
+    "rating_leak",
+    "report",
+    "reviews",
+    "sales",
+    "update"
+   ],
+   "runs_30d": 20,
+   "last_run": "2026-11-08T11:59Z",
+   "examples": [
+    {
+     "story": "2026-11-08-ocarina-of-time-metacritic-user-score",
+     "at": "2026-11-08T11:59Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/ocarina-of-time-metacritic-user-score-reel-v1.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/ocarina-of-time-metacritic-user-score-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/ocarina-of-time-metacritic-user-score-sheet.jpg"
+    },
+    {
+     "story": "gta-vi-road-ep1-why-it-matters",
+     "at": "2026-11-08T09:37Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/gta-vi-road-ep1-why-it-matters-reel-v3.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/gta-vi-road-ep1-why-it-matters-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/gta-vi-road-ep1-why-it-matters-sheet.jpg"
+    },
+    {
+     "story": "probably-stolen-500k-sold",
+     "at": "2026-10-31T13:30:00Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/probably-stolen-500k-sold-reel-v1.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/probably-stolen-500k-sold-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/probably-stolen-500k-sold-sheet.jpg"
+    }
+   ]
+  },
+  {
+   "template": "numbers",
+   "family": "card",
+   "what": "our own graphics on the living ground for the whole Reel, only when no footage shows the news: sales charts, results, rankings; a one-game card wears the game (its art blurred behind, its plated logo above the figure; numgfx.put_logo, 20 Oct 2026)",
+   "opener": "the number alone, large, on the living ground (one game: under its plated logo, on its blurred art); the chart builds after it",
+   "kinds": [
+    "business",
+    "esports",
+    "results",
+    "reviews",
+    "sales"
+   ],
+   "runs_30d": 11,
+   "last_run": "2026-11-08T18:53Z",
+   "examples": [
+    {
+     "story": "2026-11-08-konami-console-series-top-five",
+     "at": "2026-11-08T18:53Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/konami-series-top-five-reel-v1.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/konami-series-top-five-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/konami-series-top-five-sheet.jpg"
+    },
+    {
+     "story": "2026-11-08-bandai-namco-fact-book-series-top-five",
+     "at": "2026-11-08T17:44Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/bandai-namco-series-top-five-reel-v1.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/bandai-namco-series-top-five-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/bandai-namco-series-top-five-sheet.jpg"
+    },
+    {
+     "story": "2026-11-08-capcom-platinum-titles-top-five",
+     "at": "2026-11-08T13:03Z",
+     "skin": null,
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/capcom-platinum-titles-top-five-reel-v1.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/capcom-platinum-titles-top-five-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/capcom-platinum-titles-top-five-sheet.jpg"
+    }
+   ]
+  },
+  {
+   "template": "comparison",
+   "family": "other",
+   "what": "two states with labels and hard cuts: prices by country, specs, before and after (reel(..., cut=True))",
+   "opener": "the first state with its label; the second state is the cut",
+   "kinds": [
+    "crossplay",
+    "hardware_price",
+    "performance",
+    "price",
+    "remake"
+   ],
+   "runs_30d": 1,
+   "last_run": "2026-10-28T17:15Z",
+   "examples": [
+    {
+     "story": "rayman-legends-retold-astro-bot-costume",
+     "at": "2026-10-28T17:15Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/rayman-legends-retold-astro-bot-costume-reel-v1.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/rayman-legends-retold-astro-bot-costume-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/rayman-legends-retold-astro-bot-costume-sheet.jpg"
+    }
+   ]
+  },
+  {
+   "template": "quote",
+   "family": "card",
+   "what": "the speaker's line leads, in «» right after the headline; then footage of what they talked about",
+   "opener": "the quote itself in «», over the speaker or the thing they spoke of; the portrait never holds the whole Reel",
+   "kinds": [
+    "business",
+    "cast",
+    "controversy",
+    "layoffs",
+    "quote"
+   ],
+   "runs_30d": 1,
+   "last_run": "2026-10-28T07:00Z",
+   "examples": [
+    {
+     "story": "palworld-ceo-switch-2-vgc",
+     "at": "2026-10-28T07:00Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/palworld-ceo-switch-2-vgc-reel-v1.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/palworld-ceo-switch-2-vgc-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/palworld-ceo-switch-2-vgc-sheet.jpg"
+    }
+   ]
+  },
+  {
+   "template": "explainer",
+   "family": "card",
+   "what": "the source's own figures or screens step by step (patents, features, store pages)",
+   "opener": "the source's first figure or screen, the part the story turns on ringed",
+   "kinds": [
+    "acquisition",
+    "breach",
+    "business",
+    "event",
+    "firmware",
+    "format",
+    "hardware",
+    "policy",
+    "shutdown"
+   ],
+   "runs_30d": 1,
+   "last_run": "2026-10-31T09:30:00Z",
+   "examples": [
+    {
+     "story": "cheating-bans-ai-explainer",
+     "at": "2026-10-31T09:30:00Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/cheating-bans-ai-explainer-reel-v2.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/cheating-bans-ai-explainer-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/cheating-bans-ai-explainer-sheet.jpg"
+    }
+   ]
+  },
+  {
+   "template": "handson",
+   "family": "footage",
+   "what": "his gameplay: natural colours, text after the action, numbered tips",
+   "opener": "the action, his play, before any text",
+   "kinds": [
+    "community_record",
+    "handson"
+   ],
+   "runs_30d": 0,
+   "last_run": null,
+   "examples": []
+  },
+  {
+   "template": "retro",
+   "family": "card",
+   "what": "on this day: the game on a real CRT photo, fact sheet then «هل تعلم؟» facts (retro_tv, 10 Oct 2026)",
+   "opener": "the game running on the CRT, the date over it",
+   "kinds": [
+    "anniversary"
+   ],
+   "runs_30d": 0,
+   "last_run": null,
+   "examples": []
+  },
+  {
+   "template": "edition",
+   "family": "card",
+   "what": "special and collector's editions, bundles, limited consoles, accessories, tier contents: trailer hook, each item as a press-render cut-out drifting onto the living ground, one composition frame with the price strip, footage close (edition.py, 14 Oct 2026)",
+   "opener": "the hero item: the trailer hook with the headline, then the hero cut-out first and largest",
+   "kinds": [
+    "edition",
+    "soundtrack"
+   ],
+   "runs_30d": 0,
+   "last_run": null,
+   "examples": []
+  },
+  {
+   "template": "stills",
+   "family": "footage",
+   "what": "three or four official images filling 9:16, cut not panned (subject cut-outs on a parallax ground where the art allows, else a 2 to 4% push-in), hard cuts on the bed, 3 s each, 12 to 14 s, four lines, neighbouring images differ in kind; the last resort after every motion source (reel.stills_clips, advisor 14 Oct 2026)",
+   "opener": "the strongest image, already pushing in, the headline over it; the first cut lands with the first line",
+   "kinds": [
+    "adaptation",
+    "layoffs"
+   ],
+   "runs_30d": 34,
+   "last_run": "2026-11-08T14:52Z",
+   "examples": [
+    {
+     "story": "2026-11-08-game-pass-essential-xbox-25th-nov-15",
+     "at": "2026-11-08T14:52Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/game-pass-essential-xbox-25th-nov-15-reel-v2.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/game-pass-essential-xbox-25th-nov-15-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/game-pass-essential-xbox-25th-nov-15-sheet.jpg"
+    },
+    {
+     "story": "2026-11-08-call-of-duty-modern-warfare-3-turns-15",
+     "at": "2026-11-08T07:16Z",
+     "skin": null,
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/call-of-duty-modern-warfare-3-turns-15-reel-v3.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/call-of-duty-modern-warfare-3-turns-15-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/call-of-duty-modern-warfare-3-turns-15-sheet.jpg"
+    },
+    {
+     "story": "weekly-releases-nov-9-13-list",
+     "at": "2026-11-08T02:44Z",
+     "skin": null,
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/weekly-releases-nov-9-13-list-reel-v1.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/weekly-releases-nov-9-13-list-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/weekly-releases-nov-9-13-list-sheet.jpg"
+    }
+   ]
+  },
+  {
+   "template": "storybeat",
+   "family": "other",
+   "what": "a series episode told in short beats: key art cover with a two-word title, one official picture card per phrase over the blurred key art, one large word alone for the emotional beat, a word-by-word reveal for the twist, 4 to 6 s of full-screen footage with no text at the climax, ending on the opening line so it loops; our bed (storybeat.py builds the picture track; advisor card adv-20261027-road-to-ocarina, 27 Oct 2026)",
+   "opener": "the key art full screen with the two-word title and the series badge",
+   "kinds": [],
+   "runs_30d": 3,
+   "last_run": "2026-11-01T17:00:00Z",
+   "examples": [
+    {
+     "story": "oot-road-ep8-seven-years",
+     "at": "2026-11-01T17:00:00Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/oot-road-ep8-seven-years-reel-v2.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/oot-road-ep8-seven-years-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/oot-road-ep8-seven-years-sheet.jpg"
+    },
+    {
+     "story": "oot-road-ep7-princess-and-the-desert-man",
+     "at": "2026-10-31T17:00:00Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/oot-road-ep7-princess-and-the-desert-man-reel-v2.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/oot-road-ep7-princess-and-the-desert-man-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/oot-road-ep7-princess-and-the-desert-man-sheet.jpg"
+    },
+    {
+     "story": "oot-road-ep6-boy-without-a-fairy",
+     "at": "2026-10-30T20:00:00Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/oot-road-ep6-boy-without-a-fairy-reel-v3.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/oot-road-ep6-boy-without-a-fairy-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/oot-road-ep6-boy-without-a-fairy-sheet.jpg"
+    }
+   ]
+  },
+  {
+   "template": "reviewscores",
+   "family": "card",
+   "what": "review scores for one game (adv-20261104-review-scores-template, 4 Nov 2026): hook on the critics' number over the game's footage, the spread card (4 to 6 outlets, each on its own scale with its date), one high and one low verdict card (score, one liked and one disliked line, attributed, 15 words at most), the Metacritic and OpenCritic totals with the time they were read (templates/reviewscores.py fetches them; never typed by hand), a footage payoff; cards over the game's own moving footage (ground_footage), chip التقييمات",
+   "opener": "the game's strongest moving shot with the critics' number in the headline (the highest or lowest score, or the average); never a question first (hook rule, 24 Oct)",
+   "kinds": [
+    "reviews"
+   ],
+   "runs_30d": 1,
+   "last_run": "2026-11-06T07:41Z",
+   "examples": [
+    {
+     "story": "ocarina-of-time-switch-2-review-scores-nov-6",
+     "at": "2026-11-06T07:41Z",
+     "skin": null,
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/ocarina-of-time-switch-2-review-scores-nov-6-reel-v1.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/ocarina-of-time-switch-2-review-scores-nov-6-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/ocarina-of-time-switch-2-review-scores-nov-6-sheet.jpg"
+    }
+   ]
+  },
+  {
+   "template": "list",
+   "family": "card",
+   "what": "N items at 2 to 2.5 s each on their own art, rank or date on a small plate, progress cue n/N, one line per item at most, mosaic cover, closing frame of all tiles: Game Pass waves, leaving-soon, line-ups, awards, top fives, show recaps, weekly releases (advisor 14 Oct 2026)",
+   "opener": "the mosaic of every item, the count in the headline; item 1 on the first cut",
+   "kinds": [
+    "awards",
+    "gamepass",
+    "leaving",
+    "lineup",
+    "recap",
+    "top",
+    "weekly"
+   ],
+   "runs_30d": 10,
+   "last_run": "2026-11-03T19:59:00Z",
+   "examples": [
+    {
+     "story": "xbox-game-pass-wave-1-november-3-17",
+     "at": "2026-11-03T19:59:00Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/xbox-game-pass-wave-1-november-3-17-reel-v2.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/xbox-game-pass-wave-1-november-3-17-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-11/xbox-game-pass-wave-1-november-3-17-sheet.jpg"
+    },
+    {
+     "story": "next-week-releases-nov-2",
+     "at": "2026-11-01T14:30:00Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/next-week-releases-nov-2-reel-v2.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/next-week-releases-nov-2-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/next-week-releases-nov-2-sheet.jpg"
+    },
+    {
+     "story": "xbox-game-pass-next-week-nov-2",
+     "at": "2026-10-31T04:30:00Z",
+     "skin": "house",
+     "reel": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/xbox-game-pass-next-week-nov-2-reel-v3.mp4",
+     "strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/xbox-game-pass-next-week-nov-2-strip.jpg",
+     "sheet": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/2026-10/xbox-game-pass-next-week-nov-2-sheet.jpg"
+    }
+   ]
+  }
+ ],
+ "layouts": [
+  {
+   "layout": "fill",
+   "what": "the default: 16:9 footage fills 9:16, cropped to the subject (up to 2x); headline on the soft band over the picture for 3.5 s, lines low on the picture"
+  },
+  {
+   "layout": "showcase",
+   "what": "trailer news, or a source that fails the quality gate enlarged: the footage uncropped at its own width between two bands on the flat ground; chip and headline in the top band all the way; lines, key facts and credit as text in the bottom band; never an empty band, never a blur; \"layout\": \"showcase\" with \"showcase_reason\" (9 Nov 2026)"
+  }
+ ],
+ "rules": {
+  "card_led_max": "2 in 6",
+  "day_max": 4,
+  "no_third_in_a_row": true
+ }
+}

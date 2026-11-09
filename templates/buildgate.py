@@ -30,9 +30,19 @@ A job must carry:
                  the sighting usually means, the precedent, and what is not confirmed; if the brief cannot fill these,
                  the item is not a Reel).
 
-  cover:         the first shot is never one of our "-gfx-" cards on the plain living ground: a card that opens a
-                 Reel has the game's trailer behind it ("ground_footage", or the card's own [file, start]); otherwise
-                 open on footage, key art or a trailer frame (adv-20261108-numbers-cards-grid item 2, 9 Nov 2026).
+  cover:         the first shot is never one of our "-gfx-" cards on the plain living ground, nor a logo plate alone:
+                 a card that opens a Reel has the game's trailer or key art behind it ("ground_footage", the card's
+                 own [file, start], or "ground_still"); otherwise open on footage, key art or a trailer frame
+                 (adv-20261108-numbers-cards-grid item 2, 9 Nov 2026; render_job also reads a still cover's pixels).
+
+  numbers ground: every "-gfx-" card sits on the game's own picture: "ground_footage" (its trailer, moving), the card's
+                 own [file, start], or "ground_still" (its official key art, blurred and dimmed; numgfx 'still'
+                 ground). The plain rotating ground is only for a chart of several games or a company's figures, and
+                 then the job says so: "ground": "rotate" with "ground_reason" (adv-20261108-numbers-cards-grid item
+                 3, build 9 Nov 2026).
+
+  layout:        "layout": "showcase" carries "showcase_reason" naming one of its two cases, the trailer itself is
+                 the news or the source fails the quality gate enlarged with no better copy (reel.showcase_reason).
 
 Report only (printed, never a refusal): a credit covering footage that names no source («المصدر», «لقطات من»,
 «الصورة»); a job without "decision_log" (adv-20261102-borrow-openmontage, part 2: per beat
@@ -43,6 +53,7 @@ Jobs under jobs/test/ (examples and test renders) are not gated. There is no swi
     python3 templates/buildgate.py jobs/live/<name>.json      # prints the refusals, exit 1 when there are any
 """
 import json
+import re
 import os
 import pathlib
 import sys
@@ -183,11 +194,53 @@ def cover_problems(job):
     sh = (job.get('shots') or [None])[0]
     if not (isinstance(sh, list) and sh and str(sh[0]).endswith('.png') and '-gfx-' in str(sh[0])):
         return []
-    behind = (len(sh) > 1 and isinstance(sh[1], list)) or bool(job.get('ground_footage'))
+    behind = (len(sh) > 1 and isinstance(sh[1], list)) or bool(job.get('ground_footage')) or bool(job.get('ground_still'))
     if behind:
         return []
-    return ['cover: the first shot is a card on the plain living ground; put the game\'s trailer behind it '
-            '("ground_footage" or the card\'s own [file, start]) or open on footage, key art or a trailer frame']
+    return ['cover: the first shot is a card on the plain living ground; put the game\'s trailer or key art behind it '
+            '("ground_footage", the card\'s own [file, start], or "ground_still") or open on footage, key art or a '
+            'trailer frame']
+
+
+PLATE_NAME = re.compile(r'(^|[-_/])(logo|plate|wordmark)([-_.]|$)', re.I)
+
+
+def plate_cover_problems(job):
+    """adv-20261108-numbers-cards-grid item 2: a cover whose picture is a logo plate alone (by name; render_job reads the
+    pixels of a still cover too)."""
+    sh = (job.get('shots') or [None])[0]
+    if isinstance(sh, list) and sh and PLATE_NAME.search(str(sh[0])):
+        return [f'cover: the first shot {sh[0]} is a logo plate; open on footage, key art or a trailer frame']
+    return []
+
+
+def ground_problems(job):
+    """adv-20261108-numbers-cards-grid item 3: numbers cards sit on the game's art, never the plain ground by default."""
+    cards = [sh for sh in job.get('shots') or [] if isinstance(sh, list) and sh and '-gfx-' in str(sh[0])]
+    if not cards or job.get('ground_footage') or job.get('ground_still'):
+        return []
+    bare = [str(sh[0]) for sh in cards if not (len(sh) > 1 and isinstance(sh[1], list))]
+    if not bare:
+        return []
+    if job.get('ground') == 'rotate' and len(str(job.get('ground_reason') or '').split()) >= 4:
+        return []
+    return [f'numbers ground: {", ".join(bare)} would sit on the plain living ground; give the game\'s art '
+            '("ground_footage": [file, start], or "ground_still": its key art), or for a chart of several games or a '
+            'company\'s figures "ground": "rotate" with "ground_reason"']
+
+
+def layout_problems(job):
+    if job.get('layout') != 'showcase':
+        return []
+    try:
+        import reel
+        reel.showcase_reason(job.get('showcase_reason') or True)
+    except ValueError as e:
+        return [f'layout: {e}']
+    except Exception:                          # reel needs the fonts; render_job checks it again on the runner
+        if len(str(job.get('showcase_reason') or '').split()) < 5:
+            return ['layout: showcase needs "showcase_reason" naming its case']
+    return []
 
 
 def problems(path, job):
@@ -239,6 +292,9 @@ def problems(path, job):
     out += stills_problems(job)
     out += credit_problems(job)
     out += cover_problems(job)
+    out += plate_cover_problems(job)
+    out += ground_problems(job)
+    out += layout_problems(job)
 
     rc = job.get('reel_check')
     if not rc:
