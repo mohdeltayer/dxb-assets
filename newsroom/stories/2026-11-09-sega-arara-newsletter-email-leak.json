@@ -91,5 +91,20 @@
    "https://x.com/1748744375616643072/status/2119679107055186354",
    "https://www.threads.com/@the_digilounge/post/DfgsUvvOJ_t"
   ]
+ },
+ "pre_render": {
+  "note": "run 9 Nov 06:44 to 07:05Z, AFTER the v3 render and schedule (audit fault 8; the steps were skipped at build time)",
+  "ledger_find": [
+   "ledger: 2026-10-30-kojima-od-knock-red-door-exhibition.json: no id; using the file name",
+   "ledger: 2026-10-30-slay-the-spire-2-next-beta-patch-november-12.json: no id; using the file name",
+   "2026-11-09-sega-arara-newsletter-email-leak  [built]  SEGA says 2,196,044 newsletter email addresses leaked from vendor Arar"
+  ],
+  "context_match": [
+   "no context page matched"
+  ],
+  "whatsnew": "packet written 06:44Z (primary SEGA notice read in Japanese; new sentences recorded in the story file; extra fact not used: SEGA Account addresses are not affected)",
+  "buildgate": "build gate: ok (server lane), run 05:54Z and by presubmit director at 06:02Z",
+  "render_job_check": "sega-arara-newsletter-email-leak-november-9 ok, clip 15.2 s (05:58Z)",
+  "exemplar": "ops/exemplars/silver-palace-december-14.json read; numbers template on blurred key art chosen because no official footage exists for a breach notice"
  }
 }
