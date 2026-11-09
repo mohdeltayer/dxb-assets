@@ -29612,5 +29612,66 @@
   "min_disk_free_mb": 226071,
   "setup_min": 0.18,
   "story": "beholder-4-announced"
+ },
+ {
+  "name": "beholder-4-announced-reel-v4.mp4",
+  "profile": "standard",
+  "at": "2026-11-09T23:58Z",
+  "stages": {
+   "checks": 2.6,
+   "montage": 24.6,
+   "text": 29.8,
+   "audio": 1.0,
+   "outro": 13.0
+  },
+  "total": 71.0,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-09T23:57Z",
+  "finished_at": "2026-11-09T23:58Z",
+  "render_min": 1.18,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.3,
+   "audio_secs": 16.5,
+   "music_pct": 88.0,
+   "leak_pct": 1.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 0
+   },
+   "effects_shots": 4,
+   "mix_secs": 0.9,
+   "secs": 4.2
+  },
+  "lifeless": {
+   "score": 1.0,
+   "still_share": 0.014,
+   "longest_still": 0.1,
+   "cuts_per_10s": 4.2,
+   "held_under_text": 0.0,
+   "secs": 14.3,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 107,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1067,
+  "peak_mem_mb": 2333,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 17862,
+  "peak_disk_mb": 20067,
+  "min_disk_free_mb": 226039,
+  "setup_min": 0.17,
+  "story": "beholder-4-announced"
  }
 ]
