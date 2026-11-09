@@ -583,13 +583,29 @@ def showcase_reason(v):
     return v.strip()
 
 
-def showcase_box(head_end, facts, rows=2):
+SHOW_FITS = ('fit', 'wide', 'tall')     # studio options (idle build 10 Nov 2026; Mohammad picks in the gallery)
+
+
+def showcase_box(head_end, facts, rows=2, fit='fit'):
     """(x, y, w, h, lift) for the showcase picture: as wide as the frame when it fits between the bands, centred, 16:9;
-    `lift` places the story lines' last baseline above the key facts (or the credit)."""
+    `lift` places the story lines' last baseline above the key facts (or the credit).
+    Studio options (not live until Mohammad picks): 'wide' takes the full frame width (1080x608) and pushes the bottom
+    band down to the safe floor; 'tall' is a 4:3 box (a light centre crop of the 16:9 source) as large as fits."""
     size, step = SHOW_LINE
     last = (SHOW_FACT_Y - SHOW_FACT if facts else SHOW_CREDIT_Y - SHOW_CREDIT) - 30
     band_top = last - step * (rows - 1) - size
     y0, y1 = head_end + SHOW_GAP, band_top - SHOW_GAP
+    if fit == 'wide':
+        bw, bh = W, W * 9 // 16 // 2 * 2
+        if y0 + bh > y1 + SHOW_GAP:            # the bands may tighten to their own gap, never overlap the picture
+            raise ValueError(f'showcase wide: {bh} px picture under a headline ending at {head_end} leaves no room for '
+                             'the bottom band; cut the headline to one line or drop the key facts')
+        y = y0 + max(0, (y1 - y0 - bh) // 2)
+        return 0, y, bw, bh, (G.SAFE_BOTTOM - 40) - last
+    if fit == 'tall':
+        bh = min(y1 - y0, int(W * 3 / 4)) // 2 * 2
+        bw = min(W, bh * 4 // 3) // 2 * 2
+        return (W - bw) // 2, y0 + (y1 - y0 - bh) // 2, bw, bh, (G.SAFE_BOTTOM - 40) - last
     bw = min(W, int((y1 - y0) * 16 / 9)) // 2 * 2
     bh = (bw * 9 // 16) // 2 * 2
     if bw < SHOW_MIN_W:
@@ -646,6 +662,8 @@ def _show_pad(bars, pre, post):
     """The showcase picture pass for footage: bars cut, scaled into the box uncropped, padded onto the flat ground."""
     x, y, bw, bh = SHOWCASE
     g = '0x%02X%02X%02X' % A.GROUND
+    if bw * 9 < bh * 16 - 32:                  # a box narrower than 16:9 ('tall'): crop the centre to its aspect first
+        pre = f"crop='min(iw,ih*{bw}/{bh})':ih,{pre}"
     return (f"{bars}{pre}scale={bw}:{bh}:force_original_aspect_ratio=decrease:flags=lanczos{post},"
             f"pad={W}:{H}:(ow-iw)/2:{y}+({bh}-ih)/2:color={g}")
 
@@ -1892,7 +1910,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
          lowres_ok=False, read_check=True, track=None, draft=False, head_size=HEAD_SIZE, cut=False, credits=None, strip=None,
          products=None, template=None, tribute=False, reveal=None, profile=None, pace_ok=False, skin=None,
-         person=None, blocky_ok=None, apart=None, page=None, showcase=None):
+         person=None, blocky_ok=None, apart=None, page=None, showcase=None, showcase_fit='fit'):
     """`showcase`: the reason this Reel takes the showcase layout (showcase_reason; see SHOWCASE above): the footage
     uncropped in a box between the bands, the headline up for the whole Reel, the lines, `strip` (as key facts) and the
     credits as text in the bottom band, the lines back to back so no band is ever empty. Cards, products, person
@@ -1972,7 +1990,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, credits=credits, strip=strip,
                         products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok,
-                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart, page=page, showcase=showcase)
+                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart, page=page, showcase=showcase, showcase_fit=showcase_fit)
         finally:
             X = keep
     global FINISH
@@ -1982,7 +2000,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, cut, credits=credits, strip=strip,
                         products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok,
-                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart, page=page, showcase=showcase)
+                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart, page=page, showcase=showcase, showcase_fit=showcase_fit)
         finally:
             FINISH = keep_f
     if profile and not PROFILES[profile].get('music', True) and isinstance(track, (tuple, list)) and len(track) > 2:
@@ -2016,9 +2034,9 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
                 raise ValueError('showcase: the bottom band carries the story lines; a Reel with no lines would leave it empty')
             head_layer(headline, label, f'{tmp}/probe.png', source, date, country, hs=head_size, hst=head_size + 20,
                        theme=theme, meta_path=f'{tmp}/probe-meta.png', skin=skin)
-            bx, by, bw, bh, lift = showcase_box(HEAD_GEOM['end'], bool(strip))
+            bx, by, bw, bh, lift = showcase_box(HEAD_GEOM['end'], bool(strip), fit=showcase_fit)
             SHOWCASE = (bx, by, bw, bh)
-            print(f'showcase: picture box {bw}x{bh} at y {by} ({show})', flush=True)
+            print(f'showcase: picture box {bw}x{bh} at y {by}, fit {showcase_fit} ({show})', flush=True)
             drop = ('top', 'lift', 'size', 'step', 'shade')
             lines = sorted(lines, key=lambda x: x[1])
             lines = [(t, (min(a, SHOW_FIRST) if k == 0 else a), (lines[k + 1][1] if k + 1 < len(lines) else end),
