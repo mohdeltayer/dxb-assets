@@ -54,6 +54,9 @@ STRENGTH = 0.45
 #: The agreed picks, then the alternatives used only when Mohammad asks.
 PICKS = ('عاجل', 'جديد', 'رسمي', 'تقرير', 'تسريب', 'شائعة', 'نظرة أولى',
          'متوفر الآن', 'تأجيل', 'السعر', 'انطباعات')
+#: Chip for kind:evergreen pieces (Mohammad, 9 Nov 2026, after the Elden Ring Arabic-support comment 'من زمان تدعم'): an evergreen piece never wears
+#: جديد, رسمي or متوفر الآن. دليل (a guide) and, for Arabic-support stories, the country-style plate بالعربية.
+EVERGREEN = ('دليل',)
 ALTERNATIVES = ('الآن', 'وصل للتو', 'حسب تقارير', 'إشاعة', 'أول نظرة',
                 'متاح الآن', 'صدر', 'مؤجل', 'سعر', 'تجربة')
 
@@ -203,7 +206,7 @@ def fast_ar(media, date, source, out, label=None, country=None, theme='cold',
             raise ValueError('animate is for still cards; a clip already moves')
         return _animated(media, date, source, out, label, country, theme, crop,
                          seed, animate)
-    if label and label not in PICKS + ALTERNATIVES:
+    if label and label not in PICKS + ALTERNATIVES + EVERGREEN:
         raise ValueError(f'"{label}" is not an Arabic fast chip: {"، ".join(PICKS)}')
     if country and country not in COUNTRIES:
         raise ValueError(f'"{country}" is not a country chip: {"، ".join(COUNTRIES)}')

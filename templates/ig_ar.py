@@ -233,7 +233,7 @@ def slideshow(images, name, seconds=8, fade=0.5):
 def _check(label, country, theme):
     if theme not in A.THEMES:
         raise ValueError(f'theme is one of {", ".join(A.THEMES)}')
-    if label and label not in A.PICKS + A.ALTERNATIVES:
+    if label and label not in A.PICKS + A.ALTERNATIVES + A.EVERGREEN:
         raise ValueError(f'"{label}" is not an Arabic fast chip: {"، ".join(A.PICKS)}')
     if country and country not in A.COUNTRIES:
         raise ValueError(f'"{country}" is not a country chip: {"، ".join(A.COUNTRIES)}')
