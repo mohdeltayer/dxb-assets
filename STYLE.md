@@ -602,6 +602,7 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 - Hop alarms (ntfy, top of the next order, `hop` in keeper-status): handoff unacked 20 min; no Production 2 line by :50;
   'scheduled:' without the Publer ids; a post outside the caps; mirror over 2 h; digest below the head; no server Publer
   read in 15 min.
+- Pipeline: desk/pipeline.json by Production 2's record keeper (pipeline.py set) on each state change; mirror every 15 minutes.
 
 ## Rules into the gate (release 2026-11-10)
 - Every card on footage or art; "ground": "rotate" refused; card-led jobs carry ground_footage or ground_still.

@@ -2811,6 +2811,11 @@ Every failure on 9 Nov was a session not reading what another wrote; Mohammad wa
    hours; a digest read below the branch head; no server Publer read in 15 minutes.
 4. The work order is public (a branch of dxb-assets): ids of handoffs and orders, titles, times and rule names only;
    never a Publer id, a post link, a token or a card body. Code: `ops/backoffice/keeper/workorder.py`.
+5. Pipeline (release 2026-11-10 r3): Production 2's record keeper writes dxb-queue desk/pipeline.json on every state
+   change of a story or build handoff (`ops/backoffice/dispatch/pipeline.py set`; rows only from a handoff or a story,
+   closed on published, dropped or superseded); the inbox mirror, every 15 minutes, shows it in the inbox's `pipeline`
+   collection with the commitments. The morning digest and the daily status read the board only through the forced
+   refspec and count published posts from Publer's published list, citing the lines counted.
 
 ## Rules into the gate (release 2026-11-10, Mohammad's build of 9 Nov evening)
 
