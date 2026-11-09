@@ -119,5 +119,76 @@
     "render_commit": "82dd9e73b591d4a9001cebe2a223a8118e1bd835",
     "run": "render-live 42605047706 (head dba5eda), success, 318 s on dxb-render-1",
     "publer_receipt": "ed93e05 (media-only upload receipt written by the runner; nothing scheduled)"
+  },
+  "director_qa": {
+    "reel": "cards/2026-11/dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-reel-v1.mp4",
+    "checked_at": "2026-11-09",
+    "method": "strip, sheet and dense read; 1 s frame grid at Reel 0.5 to 21.5 s; full-res crops of cover and strip; speechcheck: none; ffprobe 1080x1920 30 fps, 22.98 s",
+    "rows": [
+      {
+        "shot": "1 cover (src 8.0)",
+        "time": "0.0-3.0 s (logo 0-2.2 s)",
+        "verdict": "FIX",
+        "note": "first 2 s show the DRAGON QUEST III HD-2D REMAKE logo slate on white under the headline (title card on frame 0); move start to src 10.8 (forest clean from there)"
+      },
+      {
+        "shot": "2 ruin corridor (src 14.0)",
+        "time": "3.0-6.0 s",
+        "verdict": "PASS",
+        "note": "forest then ruin hall, clean; line 1 on it; reason fits (game shown for the catalog news)"
+      },
+      {
+        "shot": "3 monsters (src 20.0)",
+        "time": "6.0-9.4 s",
+        "verdict": "FIX",
+        "note": "in-game battle text 'A group of enemies appears!' and damage text cut at the frame edge (sheet cut-text flag); drop the shot or use the snow stretch at src 23.2 (clean)"
+      },
+      {
+        "shot": "4 STORY banner (src 28.0)",
+        "time": "9.4-12.6 s",
+        "verdict": "FIX",
+        "note": "in-game chapter banner reads as a title card for about 2 s; use the bedroom shot at src 31.0 or cut the shot (see length)"
+      },
+      {
+        "shot": "5 bedroom, village (src 32.0)",
+        "time": "12.6-15.6 s",
+        "verdict": "FIX",
+        "note": "pale white transition at about 15.5 s; trim the last 0.3 s"
+      },
+      {
+        "shot": "6 red hall (src 54.0)",
+        "time": "15.6-18.6 s",
+        "verdict": "PASS",
+        "note": "subject centred, line 3 readable, inside safe zone, first word Arabic; 3 s hold with the line change at about 16.5 s"
+      },
+      {
+        "shot": "7 village fountain (src 57.0)",
+        "time": "18.6-21.2 s",
+        "verdict": "FIX",
+        "note": "dims to near-black from about 20.0 s to the end card (20.5 s frame is black with the credit only); the last 2 s must be a picture, hold full brightness"
+      }
+    ],
+    "reel_checks": {
+      "cover_grid_tile": "FIX: the 3:4 cover shows the publisher logo slate, and the credit is absent for the first 2 s (known gap per Part B; closes with the build item). Headline and chip read well at full size",
+      "headline": "PASS: لعبتان كبيرتان / تنضمان إلى PS Plus, chip رسمي, top band, no face",
+      "credit": "PASS with note: المصدر: سكوير (Square Enix) on every footage frame from 2.5 s; small at the top edge, check at phone size; absent 0-2 s (see cover)",
+      "strip": "PASS: نوفمبر Dragon Quest III and ديسمبر Dynasty Warriors on the pill, readable at full size, small on the grid",
+      "change_every_3_4s": "PASS: a cut or line change at least every 3.5 s throughout",
+      "last_2s_picture": "FIX: 19.0 to 21.0 s dims toward black (shot 7)",
+      "length": "21.0 s of story before the end card (22.98 s total, 2 s card): 1 s over the 20 s upper target. A cut would help: drop shot 4 (the STORY banner, 2.5 s) and the Reel lands near 18.5 s",
+      "showcase": "not needed (not trailer news)",
+      "sound_choice": "PASS: Announce trailer music under gameplay picture, one stretch 8.0 to 24.0 s of that trailer, music from another official trailer of the same game (rule satisfied, recorded in reel_check); speechcheck: none; audio split applied (music 53.8%, leak 2.3% under the 5% limit, clean, 7 shots with effects put back)",
+      "sound_matches_picture": "judged from the render log and the split measurements, not by ear: the battle effects on shot 3 must go with shot 3 if it stays; re-check after fixes"
+    },
+    "verdict": "FIX",
+    "fixes": [
+      "Cover: start shot 1 at src 10.8 (no logo slate), and put the credit on frame 0 once the build item lands, or hold the credit off only with a note",
+      "Shot 3: drop the battle-text stretch (cut text), use the clean snow stretch at src 23.2",
+      "Shot 4: remove the STORY banner (replace with src 31.0 bedroom, or cut it: this also brings the length near 18.5 s)",
+      "Shot 5: trim the last 0.3 s (white transition)",
+      "Shot 7: no dimming into the end card; hold full brightness to the card"
+    ],
+    "notes": "Render log: audio split applied, decode and smear checks not recorded in render-times.json's last entry for this job; the director could not see them and asks the runner log to confirm. Story length 21 s is over the target by about 1 s. Second look only on the changed shots after fixes.",
+    "preview_first_line": "FIX before preview: the cover opens on the DRAGON QUEST logo for 2 s, the Reel has a STORY banner and battle text, and the last 2 s dim to black. Sound is the Announce trailer's music, no speech."
   }
 }
