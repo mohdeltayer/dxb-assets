@@ -90,7 +90,23 @@
   "speech": "faster-whisper on the Gameplay trailer: narration from 14.6 s to 308.4 s with no gap over 8 s: our bed",
   "decode": "ffmpeg -v error -i f -f null -: clean for Gameplay, City of Dreams, Launch, Broken Dreams, Features Overview, 2.1 Update",
   "decodecheck_whole_source": "templates/decodecheck.py cp-gameplay.mp4 started 08:07Z; decode clean, smear read pending (runner repeats it on every fetched source)",
-  "buildgate_and_render_job_check": "build gate: ok (server lane, story ...); sfx cue: end jingle: end card (graphic); cyberpunk-2077-arabic-support-steam-evergreen ok, clip 21.0 s"
+  "buildgate_and_render_job_check": "build gate: ok (server lane, story ...); sfx cue: end jingle: end card (graphic); cyberpunk-2077-arabic-support-steam-evergreen ok, clip 21.0 s",
+  "arabic_grammar_review": {
+   "opened": "house glossary rows, perfect-arabic SKILL.md and its references list, arabic-writing orthography.md and conventions.md",
+   "result": {
+    "required_edits": [],
+    "optional_style_suggestions": [],
+    "uncertain_cases": [
+     {
+      "text": "قُرئت الصفحة في 9 نوفمبر 2026",
+      "issue": "reading-time note in a caption",
+      "why_uncertain": "style only, grammatical"
+     }
+    ]
+   },
+   "note": "no required edits; 'since when' is the release date from the Steam page, no claim about when Arabic was added (the page does not date it)"
+  },
+  "render": "v1 (runner copy smear fixes), v2 re-cut after the sheet, v3 hook shot 0.7 s; see the job decision_log"
  },
  "ledger_find": {
   "at": "2026-11-09T08:08:02Z",
@@ -120,5 +136,10 @@
   "context_pages": [
    "newsroom/context/cyberpunk.md"
   ]
+ },
+ "texts": {
+  "x": "ليست خبرًا جديدًا، لكنها دليل لمن يبحث عن واجهة عربية: لعبة Cyberpunk 2077 الصادرة في 9 ديسمبر 2020 تعرض العربية في الواجهة والترجمة على Steam، دون أداء صوتي عربي. وسعرها 229 درهمًا في المتجر الإماراتي.",
+  "ig": "دليل Cyberpunk 2077 للاعب العربي: واجهة وترجمة بالعربية\nليست هذه معلومة جديدة، فاللعبة صدرت في 9 ديسمبر 2020، لكنها تفيد من لم يجربها بعد ويبحث عن واجهة عربية. تعرض صفحة Cyberpunk 2077 على Steam اللغة العربية في الواجهة والترجمة، أما الأداء الصوتي فليس بالعربية. وتضم الصفحة 19 لغة بينها الإنجليزية. تطوير ونشر سي دي بروجكت ريد (CD PROJEKT RED)، وسعرها 229 درهمًا في متجر Steam في الإمارات (قُرئت الصفحة في 9 نوفمبر 2026).\n#ألعاب #أخبار_الألعاب #Cyberpunk2077 #Steam",
+  "threads": "X text + «المصدر: صفحة اللعبة على Steam، قُرئت في 9 نوفمبر 2026»"
  }
 }
