@@ -54,5 +54,18 @@
    "2026-11-03-sonic-racing-crossworlds-year-two-starts-nov-3",
    "persona-4-revival-wishlist-2-million-nov-6"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/sega-arara-newsletter-email-leak-november-9-reel-v2.mp4",
+  "blob": "f99ca85f4bf5da435053291c4590adbcd81e1181",
+  "at": "2026-11-09T06:02:05Z",
+  "note": "round 2, pass with note: breach notice has no official footage, SEGA site art 700x470 fails gate at 4.1x, so numbers on blurred key art; closing shot is a fact card (rule 17 deviation); sound our bed (breach rule); card c says residence addresses; card e matches notice",
+  "checklist": {
+   "job": "jobs/live/sega-arara-newsletter-email-leak-november-9.json",
+   "sha256": "b5b8559405fda1a2198df5b74c011c33fb12d2f8c40ab5d7c2bf749d96057de9",
+   "ok": true,
+   "problems": []
+  }
  }
 }
