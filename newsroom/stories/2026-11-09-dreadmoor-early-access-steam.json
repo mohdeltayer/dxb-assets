@@ -224,6 +224,56 @@
       "preview_first_line": "FIX before preview (v2): the merchants shot still shows the FISH STO sign at its left edge for about 0.2 s before the cut, and the creatures line runs over a clock and a dock with no creature in frame; v3 before it reaches you.",
       "checked_at": "2026-11-09",
       "checked_by": "director (independent, Haiku 5.5)"
+    },
+    "round_3": {
+      "reel": "cards/2026-11/dreadmoor-early-access-steam-reel-v3.mp4",
+      "render_commit": "4959d37",
+      "job": "fcfa892:jobs/live/dreadmoor-early-access-steam-v3.json",
+      "verdict": "FAIL",
+      "reason": "the 'STOCK' sign of the merchants stall is still on screen at the bottom edge in the last 0.5 s of shot 48.6 (about 10.5 to 11.1 s), before the merchant shot at 11.1 s. The editor asked for it to be gone, including the last frames of that shot. The fix is to end shot 48.6 at about 10.3 s or use a crop without the sign.",
+      "shots": [
+        {
+          "shot": "41.0 village",
+          "time": "0.0-3.0",
+          "verdict": "PASS (credit 0-2 s is the known CREDIT_AT build item)"
+        },
+        {
+          "shot": "44.0 creature",
+          "time": "3.0-5.3",
+          "verdict": "PASS"
+        },
+        {
+          "shot": "46.3 creature",
+          "time": "5.3-7.6",
+          "verdict": "PASS"
+        },
+        {
+          "shot": "48.6 statue ship and merchants stall",
+          "time": "7.6-11.1",
+          "verdict": "FAIL: sign at the bottom edge, last 0.5 s; the line 'حسب وصف المطوّر، تصطاد' is over dark village frames at 8.5 to 9.5 s, weak but not a fail"
+        },
+        {
+          "shot": "55.2 sack",
+          "time": "11.1-14.7",
+          "verdict": "PASS (sack and hands under the 'تصطاد' line; no sign)"
+        },
+        {
+          "shot": "58.8 clock and dock",
+          "time": "14.7-18.6",
+          "verdict": "PASS (the price line over clock and dock; no creature under it, which the editor has now accepted by removing the creatures line)"
+        },
+        {
+          "shot": "60.0 boat at night",
+          "time": "18.6-22.5",
+          "verdict": "PASS"
+        }
+      ],
+      "nothing_graphic": "pass: no dissection, organs or body parts in sampled frames",
+      "speech": "speechcheck: none",
+      "audio_split": "applied: music 99.1%, leak 0.1%, 7 effects shots, clean (render-times 13:06Z, 306 s)",
+      "lines": "three lines now; release line over village and creatures, fishing line over statue and merchants, price line over clock/dock and boat; each line fits its shot",
+      "checked_at": "2026-11-09",
+      "checked_by": "director (independent, Haiku 5.5)"
     }
   }
 }
