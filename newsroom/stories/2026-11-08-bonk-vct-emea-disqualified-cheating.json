@@ -11,7 +11,7 @@
   "regional/esports"
  ],
  "category": "esports",
- "status": "building",
+ "status": "built, director PASS, not submitted",
  "why": "Confirmed cheat DQ reversing a result against Masters champion Derke's Aurora Gaming; Riot replays two rounds.",
  "sources": [
   {
@@ -33,7 +33,7 @@
  "lane": "Digital Lounge",
  "beat": "esports",
  "sound": "our bed: legal/cheating rule (CLAUDE.md 26 Oct 2026 point 3)",
- "gate": "gate 01:55Z: X post read (shell only, text 'Competition Update: BONK'), Dexerto read in full (statement quotes, 16:02Z); ledger find Valorant, VCT: no BONK hit. Chip رسمي because Riot's own post is confirmed; statement details via Dexerto. Scope: confirmed cheat DQ reversing a result against a Masters champion's team.",
+ "gate": "gate 01:55Z: X post read (shell only, text 'Competition Update: BONK'), Dexerto read in full (statement quotes, 16:02Z); ledger find Valorant, VCT: no BONK hit. Chip رسمي because Riot's own post is confirmed; statement details via Dexerto. Scope: confirmed cheat DQ reversing a result against a Masters champion's team. Re-gate before submit: expires about 12:51Z 9 Nov; recheck for a Riot update on sanctions.",
  "angle": {
   "hook": "Riot disqualified team BONK from the VCT EMEA Kickoff Europe Qualifier after confirming a participant used unauthorised cheating software, days after BONK knocked out Masters champion Derke's Aurora Gaming",
   "why_now": "Riot announced it on 8 Nov 2026 (VCT EMEA post 12:51Z); the result against Aurora stood on 6 Nov",
@@ -85,5 +85,46 @@
    "vct"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/bonk-vct-emea-disqualified-cheating-reel-v1.mp4",
+  "at": "2026-11-09T02:05:00Z",
+  "note": "Director QA by Production 2 helper on strip, dense, sheet and 1.5 fps contact sheet; sound judged from measurements/design (our bed), not by ear."
+ },
+ "draft_notes": {
+  "qa_table": [
+   [
+    "0 (0-3.5 s)",
+    "agent overhead shot, headline in band, chip رسمي, credit",
+    "PASS",
+    "first frame readable as grid tile; headline two lines, ~100 px; no question"
+   ],
+   [
+    "1 (3.5-7.1)",
+    "Reyna close-ups then aiming, line 1",
+    "PASS",
+    "face centred; line 'قالت ريوت إن فريق BONK استخدم غشًا' readable; 'برنامج' dropped for reading time, IG/X carry it"
+   ],
+   [
+    "2 (7.1-10.0)",
+    "hooded agent, then green-haired agent; line 2",
+    "PASS",
+    "dissolve ghosts face over room for 0.3 s; nothing graphic"
+   ],
+   [
+    "3 (10.0-12.3)",
+    "skin showcase first-person weapon/room, line 3",
+    "PASS with note",
+    "weapon sits lower right in the final 2 s (first-person, against the 12 Oct crop rule; no other official VCT footage reachable); smear flag at 10.4-10.6 s waived after looking at source frames (native pan, decode clean)"
+   ]
+  ],
+  "reel_level": "14.32 s with end card (about 12.3 s story, under the 12 to 20 s target by little); changes every 3 to 4 s; sound our bed (legal/cheating rule), speech none; decode clean; footage is a stand-in, credited on screen; grammar review done by reading the skill rules against the text (references not re-opened); DeepL not available in this helper: forward/back checks NOT run, Mohammad's session should run them; 'no VCT footage' deviation noted.",
+  "deviations": [
+   "stand-in footage (agent cinematic + skin showcase) in place of VCT footage",
+   "about 10 s source; L1 says 'غشًا' not 'برنامج غش' on screen",
+   "chip رسمي on Riot's VCT EMEA post existing; statement wording read via Dexerto only (X shell shows only the title)",
+   "face model (mediapipe) missing on the render server: faces not measured; framing by saliency, judged on strip"
+  ]
  }
 }
