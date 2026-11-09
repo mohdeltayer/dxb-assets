@@ -9,8 +9,14 @@ from user-level systemd timers, at nice 10, and narrows itself while a render is
 `/etc/dxb-watch/github-token` (root:runner 0640, fine-grained, Contents read and write on dxb-assets only) and
 enabled linger for `runner` on 7 Nov. The systemd timers below poll every 5 minutes and push the branch
 `watch-digest` of dxb-assets themselves (`handoff: public: true` in sources.yaml): the files go to `watch/`, the
-outlet text (`summary`) is removed (dxb-assets is public), and the branch stays one commit, force-pushed, exactly
-the shape `watch-digest.yml` published since 29 Oct. Breaking lines arrive within minutes, the hourly digest at :52;
+outlet text (`summary`) is removed (dxb-assets is public). Since 9 Nov 2026 (release 2026-11-09-r3, addendum_0700 of
+adv-20261107-watch-token-live) each push is a normal commit on top of the branch tip, never forced, and every hourly
+digest is also kept as `watch/digests/<seq>.json` (the newest 48; older ones are removed in the same commit). Read it
+with `git fetch -q origin +watch-digest:refs/remotes/origin/watch-digest` and `git show
+origin/watch-digest:watch/digest.json`. A push the remote rejects (the branch moved) is fetched again and retried, three
+attempts in all. Before 9 Nov the branch was one force-pushed commit, so a plain fetch kept a stale copy and digests 213
+and 214 are lost. The hourly digest run first brings `~/dxb-assets` to main's tip (fetch with depth 1 and `reset
+--keep`; a `git pull` cannot fast-forward a shallow clone the keeper moves). Breaking lines arrive within minutes, the hourly digest at :52;
 `seq` continues from the same store. `watch-digest.yml` is now dispatch-only, the fallback a session runs when the
 digest is over 50 minutes old. Today's hourly watch
 (`newsroom/watch_feeds.py`, `watch_pages.py`, the Watcher and the Gaming Watch digest) is untouched

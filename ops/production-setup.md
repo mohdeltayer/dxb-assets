@@ -111,8 +111,21 @@ Hourly inbox mirror for the desk dispatcher (advisor card adv-20261028-three-des
 4. Apply "$W/plan/writeback.json" (list of {"id","fields"}) with ArtifactData "batch" (up to 50 per call): op "update", collection "items", doc_id = id, data = exactly that entry's fields, if_version = the version from step 2. Skip any entry refused for a changed version.
 4b. If desk/writeback-p2.json exists in the clone and is not empty, apply its entries with the same ArtifactData batch update (doc_id = id, data = fields, if_version from step 2), skip any refused for a changed version, then write an empty list to the file and include it in the commit.
 5. cd "$W/q" && git add desk/mirror.json desk/ops-queue.md desk/build-queue.md && git -c user.name=Claude -c user.email=noreply@anthropic.com commit -q -m "Inbox mirror $(date -u +%Y-%m-%dT%H:%MZ): <N> write-backs" && git push -q origin desk (skip if nothing changed; on a push conflict re-clone, redo the cp and commit once).
-6. Reply in one line (cards, write-backs applied/skipped, per-desk counts), delete $W, and stop.
+6. Operations feed (adv-20261108-stories-tab addendum_0710, step 6): git -C <checkout> fetch -q --depth 1 origin +keeper-status:refs/remotes/origin/keeper-status && git -C <checkout> show refs/remotes/origin/keeper-status:keeper/status.json > "$W/keeper.json". Publer (ToolSearch "+Publer list posts" if not loaded; reads only, never a change to any post): list_publer_posts state "scheduled", days 2, limit 100, and list_publer_posts state "published", from = the Dubai date two days ago, to = today, limit 200; save each whole result as JSON to "$W/scheduled.json" and "$W/published.json" (when a result is saved to a file instead, copy that file). Never print or commit a Publer post id. python3 $D/dispatch.py feed --keeper "$W/keeper.json" --commitments <checkout>/newsroom/commitments.json --scheduled "$W/scheduled.json" --published "$W/published.json" --out "$W/feed.json"; then ArtifactData "set", collection "ops", doc_id "feed", file_path "$W/feed.json" (if_version = the version of ops/feed from an ArtifactData "get" of it; omit when it does not exist yet).
+7. Published (step 7): ArtifactData "list", collection "published", query {"limit": 1000}, out_dir "$W/inbox" (keep the versions it lists). python3 $D/dispatch.py published --posts "$W/published.json" --existing "$W/inbox/published" --out "$W/pub.json". Each entry {doc_id, data, if_version?} is one ArtifactData batch write (op "set", collection "published", data = its data; if_version = the version the list showed for that doc_id, none for a new doc_id), up to 50 per call. Reels already recorded by production under another id are skipped by the script.
+8. Stale cards (step 8): python3 $D/dispatch.py stale --items "$W/inbox/items" --out "$W/stale.json"; apply each {id, fields} as in step 4 (op "update", collection "items", if_version from step 2).
+9. Stories (card body, addendum_2106): ArtifactData "list", collection "stories", query {"limit": 1000}, out_dir "$W/inbox" (keep the versions). python3 $D/dispatch.py stories --board "$W/q/desk/board.json" --commitments <checkout>/newsroom/commitments.json --keeper "$W/keeper.json" --published "$W/published.json" --existing "$W/inbox/stories" --out "$W/stories.json". Apply each entry with ArtifactData batch: op as given ("set" with data, or "delete"), collection "stories", doc_id, if_version = the listed version for an existing doc_id. Skip any entry refused for a changed version.
+10. Reply in one line (cards, write-backs applied/skipped, per-desk counts, feed gap and next slot, published/stale/stories writes), delete $W, and stop.
 ```
+
+Steps 6 to 9 (release 2026-11-09-r3) run on every mirror pass. The documents: ops/feed {last_post, last_post_at, next_slot
+("HH:MM Dubai · title"), next_slot_at, gap_min, gap_rule_min (60 from 08:00 to 24:00 Dubai, 120 overnight), posts_today,
+bank_ready, alarms[], keeper_at, written_at}; published {title, published_at, platforms, chip, template, sound, skin,
+genre, links, series} per Reel of the last 48 hours, id = the Publer post id's last six characters ('u' and the last six
+of the post link when the export carries no id); stories {title, kind, from, to, state (waiting_pickup | building |
+scheduled | published | dropped), since, slot, due (ISO; default 60 minutes after the handoff), due_dubai, held,
+publer_ids_last6, evidence, card, closed_at}, closed rows deleted 3 days after closing. Code: ops/backoffice/dispatch/
+opsdata.py, tests test_opsdata.py (run by test.sh).
 
 ## TGA co-stream: read the co-stream policy (week before) (on, bound, `once`)
 
@@ -216,3 +229,13 @@ a run that has not been updated still reads them.
    "how it happened" explainers, list pieces with each game's art, the Gulf price roundup, and numbers from a company's
    public figures (at most one in six, always on the game's art, never the plain ground). Story-led and footage-led
    first. The «الطريق إلى Ocarina» series closed on 5 Nov; «الطريق إلى GTA VI» episodes come from the studio.
+4. The digest, fetched the one way that moves (adv-20261107-watch-token-live addendum_0700, adv-20261108-stories-tab
+   addendum_0545; release 2026-11-09-r3): read the server digest only with
+   `git fetch -q origin +watch-digest:refs/remotes/origin/watch-digest` and then
+   `git show origin/watch-digest:watch/digest.json` (never a local branch copy, never a pull, never a plain
+   `git fetch origin watch-digest`, which left the remote-tracking ref at seq 207 from 8 Nov 18:30 to 9 Nov 06:35
+   Dubai). Read the branch head's seq the same way (`seq` in that file) and print in this run's board handoff, in
+   `done`: `digest seq read: N (branch head N)`. The branch now keeps its history and the last 48 hourly digests as
+   watch/digests/<seq>.json, so a missed hour is read from there (`git show origin/watch-digest:watch/digests/<seq>.json`).
+   The desk audit lists as STALE-DIGEST a run whose printed seq is lower than the branch head at the time of the run,
+   and the keeper's coverage alarm names the branch seq, so a gap is never put down to the server without it.

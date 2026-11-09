@@ -31,7 +31,14 @@ else
   echo "$now fetch of main failed; using the last commitments copy" >> "$KHOME/keeper.log"
 fi
 
-"$PY" "$HERE/keeper.py" tick --commitments "$KHOME/commitments.json" --out "$KHOME"
+# The watch's branch head for the coverage alarm (adv-20261108-stories-tab addendum_0545); a remote ref, the tree untouched.
+DIGEST_ARG=()
+if timeout 60 git -C "$REPO" fetch -q --depth 1 origin +refs/heads/watch-digest:refs/remotes/origin/watch-digest 2>/dev/null &&
+   git -C "$REPO" show refs/remotes/origin/watch-digest:watch/digest.json > "$KHOME/watch-digest.json" 2>/dev/null; then
+  DIGEST_ARG=(--digest "$KHOME/watch-digest.json")
+fi
+
+"$PY" "$HERE/keeper.py" tick --commitments "$KHOME/commitments.json" --out "$KHOME" "${DIGEST_ARG[@]}"
 rc=$?
 
 if timeout 60 git -C "$REPO" fetch -q --depth 1 origin +refs/heads/keeper-status:refs/remotes/origin/keeper-status 2>/dev/null &&

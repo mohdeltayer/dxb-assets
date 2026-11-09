@@ -142,6 +142,15 @@ systemctl --user start dxb-dispatch.service                     # one pass now
 | `dispatch.py tick` | the server pass |
 | `dispatch.py sample --mirror M [--evidence E] [--now ISO]` | print the ntfy messages, send nothing |
 | `dispatch.py status` | last tick, mirror age, counts, last alerts, whether the token and topic files are readable (never their content) |
+| `dispatch.py feed --keeper K --commitments C [--scheduled S] [--published P] --out F` | the inbox document ops/feed (last post, gap against the rule, next slot, posts today, bank, keeper alarms) |
+| `dispatch.py published --posts P [--existing DIR] --out F` | the inbox `published` collection: one document per Reel of the last 48 hours from Publer's published list |
+| `dispatch.py stale --items DIR [--days 7] --out F` | write-backs closing cards with no update for 7 days (`done`, "auto-closed, stale") |
+| `dispatch.py stories --board B --commitments C [--keeper K] [--published P] [--existing DIR] --out F` | the inbox `stories` collection from board handoffs to Production 2 and commitments rows |
+
+The last four (release 2026-11-09-r3, card adv-20261108-stories-tab) live in `opsdata.py` and are run by the hourly
+inbox mirror task, steps 6 to 9 in `ops/production-setup.md`; tests in `test_opsdata.py`, run by `test.sh`. They read
+only the files given and write only `--out`; the Publer post ids they see are cut to the last six characters, and the
+output goes to the private inbox, never into a repository file.
 
 Write-backs (`writeback.json`, a list of `{id, fields}`) only ever propose what is missing: `desk`
 (not for a production card that is still open, whose desk changes when he answers), `picked_up_at`

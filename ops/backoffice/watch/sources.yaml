@@ -106,8 +106,9 @@ kinds:
 handoff:
   # Since 8 Nov 2026 (adv-20261107-watch-token-live): the service pushes the public branch watch-digest of
   # dxb-assets itself with the token in /etc/dxb-watch/github-token (Contents read and write on dxb-assets only).
-  # public: the outlet text (`summary`) is removed, the files go under watch/, and the branch is one commit,
-  # force-pushed, as watch-digest.yml publishes it (now its dispatch-only fallback). The earlier plan, a private
+  # public: the outlet text (`summary`) is removed, the files go under watch/, and since 9 Nov each push is a commit
+  # on top of the tip (no force) keeping the last 48 hourly digests as watch/digests/<seq>.json, as watch-digest.yml
+  # (the dispatch-only fallback) does too. The earlier plan, a private
   # dxb-watch repo, was not created; WATCH_REMOTE and WATCH_BRANCH still override.
   remote: https://github.com/mohdeltayer/dxb-assets.git
   branch: watch-digest

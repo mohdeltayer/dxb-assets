@@ -189,7 +189,7 @@ def deliver(db, cfg, files, message, seq, n_items):
         return True
     try:
         if str(h.get('public', '')).lower() in ('1', 'true', 'yes'):
-            squash = False                             # the public branch is always one commit
+            squash = False                             # the public branch keeps its history (since 9 Nov)
             res = handoff.push_public(CLONE, files, message, h)
         else:
             squash = squash_due(db, h, now)
@@ -257,16 +257,39 @@ def hourly(db, cfg, sources_total):
 # ------------------------------------------------------------------ commands
 
 def self_update():
-    if os.environ.get('WATCH_SELF_UPDATE') == 'off' or not os.path.isdir(os.path.join(handoff_repo(), '.git')):
+    """Bring the stable clone to main's tip before the hourly digest. The clone is shallow and the keeper's 5-minute
+    fetches move origin/main with --depth 1, so `git pull --ff-only` finds no shared history and fails (the same fault
+    backoffice-install.yml met on 8 Nov). Like that workflow: a deploy clone on main with no local changes takes the
+    fetched tip (reset --keep, which refuses to overwrite local edits); anything else is left alone and logged."""
+    repo = handoff_repo()
+    if os.environ.get('WATCH_SELF_UPDATE') == 'off' or not os.path.isdir(os.path.join(repo, '.git')):
         return
     env = dict(os.environ, GIT_TERMINAL_PROMPT='0')
     tf = os.environ.get('WATCH_PULL_TOKEN_FILE')
     if tf and os.access(tf, os.R_OK):
         env = handoff.git_env(tf)
+
+    def run(*a):
+        return subprocess.run(['git', '-C', repo] + list(a), env=env, capture_output=True, text=True, timeout=120)
     try:
-        p = subprocess.run(['git', '-C', handoff_repo(), 'pull', '--ff-only', '-q'], env=env, capture_output=True, text=True, timeout=120)
+        if run('rev-parse', '--abbrev-ref', 'HEAD').stdout.strip() != 'main':
+            log('self-update skipped: the clone is not on main')
+            return
+        if run('diff', '--quiet').returncode or run('diff', '--cached', '--quiet').returncode:
+            log('self-update skipped: the clone has local changes')
+            return
+        p = run('fetch', '-q', '--depth', '1', 'origin', '+refs/heads/main:refs/remotes/origin/main')
         if p.returncode:
             log('self-update skipped:', handoff.scrub(p.stderr)[:150])
+            return
+        before = run('rev-parse', '--short', 'HEAD').stdout.strip()
+        p = run('reset', '-q', '--keep', 'refs/remotes/origin/main')
+        if p.returncode:
+            log('self-update skipped:', handoff.scrub(p.stderr)[:150])
+            return
+        after = run('rev-parse', '--short', 'HEAD').stdout.strip()
+        if after != before:
+            log('self-update: %s -> %s' % (before, after))
     except (OSError, subprocess.SubprocessError) as e:
         log('self-update skipped:', type(e).__name__)
 

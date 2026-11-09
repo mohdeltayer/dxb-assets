@@ -683,15 +683,29 @@ def last_published(status_rows, rows, publer_last=None, now=None):
     return best
 
 
-def coverage(last, now):
+def digest_note(path, now):
+    """The watch's branch head for the coverage alarm (adv-20261108-stories-tab addendum_0545): a gap is never blamed
+    on the server's digest without the seq the branch actually held. path: watch/digest.json fetched from the
+    watch-digest branch. Returns ('watch-digest branch: seq N at HH:MM Dubai, M min old', seq) or a 'not read' line."""
+    if not path:
+        return None, None
+    d = load_json(path, None)
+    if not isinstance(d, dict) or d.get('seq') is None:
+        return 'watch-digest branch: not read', None
+    t = parse_time(d.get('generated_at'))
+    age = ', %d min old' % mins(now - t) if t else ''
+    return 'watch-digest branch: seq %s at %s%s' % (d.get('seq'), dubai(t) if t else '?', age), d.get('seq')
+
+
+def coverage(last, now, digest_line=None):
     """(line, gap minutes or None, over the limit?)."""
     if last is None:
         return 'coverage: no published post on record', None, False
     gap = mins(now - last)
     limit = COVER_NIGHT_MIN if now.astimezone(DUBAI).hour < 8 else COVER_DAY_MIN
     if gap > limit:
-        return ('coverage: GAP %d min since the last post (%s); build or bank; no-build is not an allowed outcome'
-                % (gap, dubai(last))), gap, True
+        return ('coverage: GAP %d min since the last post (%s); build or bank; no-build is not an allowed outcome%s'
+                % (gap, dubai(last), ('; ' + digest_line) if digest_line else '')), gap, True
     return 'coverage: last post %s, %d min ago (limit %d)' % (dubai(last), gap, limit), gap, False
 
 # ---------------------------------------------------------------------------------------------
@@ -791,7 +805,10 @@ def cmd_tick(args):
         status['bank_ready'], bl = bank_line(args.commitments)
         status['six'].append(bl)
         status['six'].append(pline)
-        cline, cgap, cover_over = coverage(last_published(status['rows'], rows, plast, now), now)
+        dline, dseq = digest_note(getattr(args, 'digest', None), now)
+        if dline:
+            status['watch_digest'] = {'line': dline, 'seq': dseq}
+        cline, cgap, cover_over = coverage(last_published(status['rows'], rows, plast, now), now, dline)
         status['coverage'] = cline
         status['coverage_gap_min'] = cgap
         status['six'].insert(0, cline)
@@ -941,6 +958,7 @@ def main(argv=None):
     t.add_argument('--board', help='dxb-queue desk/board.json (optional)')
     t.add_argument('--releases', help='ops/build/releases (optional)')
     t.add_argument('--runs', help='newsroom/helper-runs.jsonl (optional)')
+    t.add_argument('--digest', help='watch/digest.json from the watch-digest branch (optional): the coverage alarm names its seq')
     l = sub.add_parser('line')
     l.add_argument('--status')
     l.add_argument('--commitments', default='newsroom/commitments.json')
