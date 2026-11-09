@@ -18,32 +18,56 @@
   [
    "gta6-trailer-2.mp4",
    44.0,
-   4.8,
+   2.65,
+   null
+  ],
+  [
+   "gta6-trailer-2.mp4",
+   14.0,
+   2.65,
    null
   ],
   [
    "gta6-trailer-2.mp4",
    37.5,
-   5.0,
+   2.7,
+   null
+  ],
+  [
+   "gta6-trailer-2.mp4",
+   10.0,
+   2.7,
    null
   ],
   [
    "gta6-trailer-2.mp4",
    48.0,
-   4.1,
+   2.3,
+   null
+  ],
+  [
+   "gta6-trailer-2.mp4",
+   18.0,
+   2.3,
    null
   ],
   [
    "gta6-trailer-2.mp4",
    29.0,
-   4.4,
+   2.35,
+   null
+  ],
+  [
+   "gta6-trailer-2.mp4",
+   64.0,
+   2.35,
    null
   ]
  ],
  "lines": [
   [
    1,
-   1,
+   2,
    [
     [
      "أعلنت روكستار غيمز\nبدء التحميل المسبق\nيوم 10 نوفمبر",
@@ -52,8 +76,8 @@
    ]
   ],
   [
-   2,
-   2,
+   3,
+   4,
    [
     [
      "حسب تقارير، يبدأ على PS5\nمنتصف الليل\nبالتوقيت المحلي",
@@ -62,8 +86,8 @@
    ]
   ],
   [
-   3,
-   3,
+   5,
+   6,
    [
     [
      "وعلى أجهزة Xbox\nمنتصف الليل\nبتوقيت غرينتش",
@@ -72,8 +96,8 @@
    ]
   ],
   [
-   4,
-   4,
+   7,
+   8,
    [
     [
      "وقد يصل حجمها\nحتى 212 غيغابايت\nوتصدر في 19 نوفمبر",
@@ -116,6 +140,26 @@
    4,
    4,
    "المصدر: روكستار غيمز (Rockstar Games)"
+  ],
+  [
+   5,
+   5,
+   "المصدر: روكستار غيمز (Rockstar Games)"
+  ],
+  [
+   6,
+   6,
+   "المصدر: روكستار غيمز (Rockstar Games)"
+  ],
+  [
+   7,
+   7,
+   "المصدر: روكستار غيمز (Rockstar Games)"
+  ],
+  [
+   8,
+   8,
+   "المصدر: روكستار غيمز (Rockstar Games)"
   ]
  ],
  "track": [
@@ -123,7 +167,7 @@
   25.6
  ],
  "cut": false,
- "note": "Trailer 2 from Rockstar's own media server (the brief named IGN; Rockstar is the primary and the file is 4K, so no enlargement). Track 25.6 s for 19.0 s: the trailer's own sound, speech none (speechcheck --stretch 25.6 19.0, both ends in a pause). Shots: 26.0 shirtless man at a door (headline hook, the strongest figure, clear of the ESRB card at 0 s); 44.0 man in shorts at a shop door, centred (L1); 37.5 Vice City airport signs and a plane (L2, place shot); 48.0 police car at night, driver in frame (L3); 29.0 driver at the wheel (L4, payoff). Shots are not from the 15 Oct launch trailer file. Lines: outlet-report facts (PS5 midnight local, Xbox midnight GMT, up to 212 GB) are labelled in the text; NZ not claimed. Open for the editor: L1 names the company without a bracket (rule: the first on-screen mention takes «(Rockstar Games)»); L3 opens on و and continues L2 (rule: within 3 s); the headline has the Latin GTA VI first word-run after an Arabic word.",
+ "note": "Trailer 2 from Rockstar's own media server (the brief named IGN; Rockstar is the primary and the file is 4K, so no enlargement). Track 25.6 s for 19.0 s: the trailer's own sound, speech none (speechcheck --stretch 25.6 19.0, both ends in a pause). Shots (split per editor decision b; each over 4.0 s now two halves): 26.0 shirtless man at a door (headline hook, the strongest figure, clear of the ESRB card at 0 s); 44.0 man in shorts at a shop door, centred (L1); 37.5 Vice City airport signs and a plane (L2, place shot); 48.0 police car at night, driver in frame (L3); 29.0 driver at the wheel (L4, payoff). Shots are not from the 15 Oct launch trailer file. Lines: outlet-report facts (PS5 midnight local, Xbox midnight GMT, up to 212 GB) are labelled in the text; NZ not claimed. Open for the editor: L1 names the company without a bracket (rule: the first on-screen mention takes «(Rockstar Games)»); L3 opens on و and continues L2 (rule: within 3 s); the headline has the Latin GTA VI first word-run after an Arabic word.",
  "reel_check": [
   "yes: SOURCE primary read: Rockstar newswire title and meta description; outlets labelled",
   "yes: ANGLE hook, why now, players here, payoff written in the story file brief",
@@ -137,17 +181,16 @@
  "decision_log": [
   {
    "beat": "headline (0 to 3.6 s)",
-   "shot": "26.0 s, shirtless man at a door",
+   "shot": "26.0 s shirtless man at a door",
    "alternatives": [
-    "29.0 s driver",
-    "40 s bench press (wide)"
+    "29.0 s driver"
    ],
-   "crop": "autofocus, centred figure",
+   "crop": "autofocus",
    "music": "trailer track"
   },
   {
-   "beat": "L1 announcement",
-   "shot": "44.0 s man at shop door, centred",
+   "beat": "L1 announcement (3.6 to 8.4 s)",
+   "shot": "44.0 s man at shop door (first half); 14.0 s man beside the truck (second angle, daytime)",
    "alternatives": [
     "37.5 s airport signs"
    ],
@@ -156,26 +199,28 @@
   },
   {
    "beat": "L2 PS5 midnight local (report)",
-   "shot": "37.5 s airport signs and plane (place)",
+   "shot": "37.5 s Vice City airport signs and plane (first half); 10.0 s man and truck (second angle)",
    "alternatives": [
-    "33 s counter (wide two-shot, rejected)"
+    "34 s counter (wide, rejected)"
    ],
    "crop": "autofocus",
    "music": "trailer track"
   },
   {
    "beat": "L3 Xbox midnight GMT (report)",
-   "shot": "48.0 s police car at night",
+   "shot": "48.0 s police car at night (first half); 18.0 s man by the truck facing camera (second angle, daytime)",
    "alternatives": [
-    "none better in the speech-free window"
+    "46 s police car (same frame, rejected)"
    ],
    "crop": "autofocus",
    "music": "trailer track"
   },
   {
    "beat": "L4 size and 19 Nov (payoff)",
-   "shot": "29.0 s driver at the wheel",
+   "shot": "29.0 s driver at the wheel (first half); 64.0 s Lucia, face to camera, centred, daytime (second angle; replaces the pier shot 22.0)",
    "alternatives": [
+    "22.0 s pier wide (rejected: no centred subject)",
+    "42 s man walking into shop (too close to L1)",
     "162 s logo rejected: title card"
    ],
    "crop": "autofocus",
