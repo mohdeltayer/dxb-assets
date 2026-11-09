@@ -1,0 +1,227 @@
+{
+ "name": "resident-evil-village-arabic-support-steam-price",
+ "story": "2026-11-09-resident-evil-village-arabic-support-steam",
+ "render_lane": "server",
+ "out": "cards/2026-11/resident-evil-village-arabic-support-steam-price-reel-v3.mp4",
+ "footage": [
+  {
+   "file": "re8-pv3.mp4",
+   "steam": 1196590,
+   "trailer": "Village_PV3",
+   "start": 0,
+   "seconds": 160
+  }
+ ],
+ "shots": [
+  [
+   "re8-pv3.mp4",
+   123.0,
+   2.2,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "re8-pv3.mp4",
+   22.0,
+   2.6,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "re8-pv3.mp4",
+   26.0,
+   1.6,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "re8-pv3.mp4",
+   76.8,
+   2.5,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "re8-pv3.mp4",
+   8.0,
+   3.3,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "re8-pv3.mp4",
+   111.5,
+   1.6,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "من تطوير كابكوم (Capcom)\nوإصدارها على Steam",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "صدرت في 6 مايو 2021",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   5,
+   [
+    [
+     "تتوفر واجهة وترجمة بالعربية\nدون دبلجة، حسب صفحة Steam",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "strip": [
+  [
+   "السعر على Steam",
+   [
+    "aed",
+    "139.92"
+   ]
+  ],
+  [
+   "المنصات",
+   "الحاسب · Steam"
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   5,
+   "المصدر: كابكوم (Capcom)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "لعبة Resident Evil Village\nبواجهة عربية على Steam",
+ "label": "دليل",
+ "country": "بالعربية",
+ "source": "كابكوم (Capcom)",
+ "date": "9 Nov 2026",
+ "theme": "cold",
+ "style": "bold",
+ "template": "split",
+ "skin": "house",
+ "track": "bed",
+ "cut": true,
+ "pace_ok": false,
+ "genre": [
+  "horror",
+  "action-adventure"
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam store page and appdetails (cc=ae) read 9 Nov 07:58Z; Capcom page not read (Steam lists Capcom as developer and publisher)",
+  "SOURCE: not already posted": "yes: ledger find recorded in the story file",
+  "SOURCE: age": "yes: evergreen, Steam release 6 May 2021; caption says since when and why now",
+  "ANGLE before lines": "yes: angle in the story file and decision_log",
+  "STORY TYPE out now": "yes: platform (Steam, PC) and the AED price in the strip, what it is in the headline and L1, Arabic support in L3",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names the game; L1 maker; L2 date; L3 Arabic; no line opens on و",
+  "STORY: release verbs": "yes: L2 صدرت للحاسب في 6 مايو 2021 (a past date)",
+  "STORY: names match names-ar.md": "yes: كابكوم (Capcom) first mention in L1; game names English; Capcom in names-ar as كابكوم",
+  "POST: Arabic passes": "yes: arabic-games-film-editor, arabic-writing and arabic-grammar-review run with perfect-arabic references opened; see story file",
+  "SOUND: footage sound or bed with reason": "yes: our bed, reason: PV3 and the 2nd trailer both carry narration and dialogue across most of their length (whole files transcribed: PV3 words at 2-13, 20-32, 39-66, 76-83, 120-124, 139-145 s; 2nd at 12-25, 40-50, 63-69, 74-114, 122-123, 151-153 s); the audio split on PV3 from 98 s was refused by the runner (music stem 8.7%, leak 11.1% over the 5% limit, run 42583942242); the announce trailer was fetched but not transcribed",
+  "SOUND: no speech under Arabic lines": "yes: bed only, trailer sound off",
+  "PICTURE: footage first": "yes: official Steam trailer PV3 (app 1196590), 1080p 5.1 Mbps, decode clean",
+  "PICTURE: not the same as last 5 Reels": "yes: picture: RE Village PV3; no Capcom Reel in the last 5",
+  "PICTURE: crop per beat": "yes: focus judged on the shot sheet",
+  "PICTURE: credit on every clip": "yes: credit 0 to end on every shot",
+  "PICTURE: headline not over a face": "yes: checked on the cover frame",
+  "NOTHING GRAPHIC": "yes: contact sheets read: no gore, wound or kill; no nude figure (45 to 70 s dropped); gun not used",
+  "CHECKS: decision log": "yes: decision_log in the job"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "123.0 to 125.9 s Lady Dimitrescu close-up",
+   "alternatives": "109 to 110 s embrace (dropped), 45 to 70 s kneeling figure (dropped)",
+   "crop": "x 0.5",
+   "music": "our bed"
+  },
+  {
+   "beat": "L1 maker",
+   "shot": "22.0 to 24.6 s then 26.0 to 27.8 s snow village, scarecrow and castle (places), between the black and fade intervals 24.83 to 25.91 and 27.90 to 29.58 s",
+   "alternatives": "29 to 33 s dark path",
+   "crop": "x 0.5",
+   "music": "our bed"
+  },
+  {
+   "beat": "L2 date",
+   "shot": "77.0 to 79.6 s the chandelier hall (place)",
+   "alternatives": "87.0 s scarecrow (only 1.3 s clean before black at 88.31 s), 92 to 93 s gun",
+   "crop": "x 0.5",
+   "music": "our bed"
+  },
+  {
+   "beat": "L3 Arabic",
+   "shot": "8.0 to 11.0 s a figure at a lit window in a room, then 111.0 to 113.0 s shrine and gilded hall (before the fade at 113.06 s)",
+   "alternatives": "121 s Dimitrescu behind doors, 144 to 150 s crowd in a cellar (not clear enough to judge)",
+   "crop": "x 0.5",
+   "music": "our bed"
+  },
+  {
+   "beat": "v2 fixes",
+   "shot": "v1 sheet showed black frames at 125.8 s (end of shot 0), 27.7 s (dark), 79.4 s and 111.2 s (start of shot 5); shots shortened or moved to 111.5 s",
+   "alternatives": "-",
+   "crop": "x 0.5",
+   "music": "our bed"
+  },
+  {
+   "beat": "v3 fixes",
+   "shot": "v2 sheet still showed black frames at 125.3 s (shot 0 now ends 125.2) and 79.4 s (shot 3 now 76.8 to 79.3 s)",
+   "alternatives": "-",
+   "crop": "x 0.5",
+   "music": "our bed"
+  }
+ ],
+ "note": "Evergreen bank piece. Source: Steam PV3 trailer 1920x1080 5.1 Mbps, decode clean, decodecheck run on the whole source before shot choice. The trailer is very dark; shots are the lit ones. Nothing graphic.",
+ "sound": null
+}
