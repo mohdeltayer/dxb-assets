@@ -120,5 +120,67 @@
   "closest_stories": [],
   "packet": "/root/.cache/dxb-packets/2026-11-09-elden-ring-arabic-support-steam.md",
   "context_pages": []
+ },
+ "director_qa": {
+  "verdict": "PASS",
+  "at": "2026-11-09T07:2xZ",
+  "method": "strip, sheet, ffprobe, full decode clean, faster-whisper on the final mp4 (no words, 23.06 s), loudness -17.3 LUFS; sound judged from transcript and measurements, not by ear",
+  "table": [
+   [
+    "0 hook",
+    "0-1.5s",
+    "PASS",
+    "dark bonfire frame; headline+chip legible at grid size; stop-power marginal (dark), picture brightens by 1.5 s"
+   ],
+   [
+    "1 rider/torch",
+    "1.5-4s",
+    "PASS",
+    "subject centred, headline over sky, no cut text"
+   ],
+   [
+    "2 knight/glow",
+    "4-7s",
+    "PASS",
+    "line 1 in safe zone, strip clear"
+   ],
+   [
+    "3 landscape",
+    "7-10s",
+    "PASS",
+    "line 2 readable, opens Arabic"
+   ],
+   [
+    "4 bridge/bell",
+    "10-13s",
+    "PASS",
+    "line 3 text in pause, no speech"
+   ],
+   [
+    "5 beast/rider",
+    "13-21s",
+    "PASS",
+    "line 4 last picture before end card; creature not graphic"
+   ]
+  ],
+  "reel": "PASS: contiguous stretch 42.6-63.6 s of the trailer's own sound, in sync with picture, no words; credit from ~2 s over all shots; 21 s story (above 12-20 guide, not a cap); no em dash, Western digits, dirham sign",
+  "notes": [
+   "job copy given to director shows older non-contiguous shots (44,52,100...) and track 28.0; sheet/strip show contiguous 42.8-63.5 matching track 42.6; render judged as shipped",
+   "optional: credit could add FromSoftware",
+   "IG first line is close to the headline (caption rule wants a different hook)"
+  ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/elden-ring-arabic-support-steam-evergreen-reel-v1.mp4",
+  "blob": "3502401678e86beb3ded5925ecacaa477ac6e15d",
+  "at": "2026-11-09T07:19:19Z",
+  "note": "director PASS: contiguous trailer sound, no speech, facts match Steam",
+  "checklist": {
+   "job": "jobs/live/elden-ring-arabic-support-steam-evergreen.json",
+   "sha256": "bdb4acb582a5da80123fdbd2cad851b4d1a37fa78c7e6761c64cb68a59bcd7a4",
+   "ok": true,
+   "problems": []
+  }
  }
 }
