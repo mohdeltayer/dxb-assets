@@ -3429,3 +3429,17 @@ the publisher's concurrency group, so it never runs during a publish.
    17 Oct for stories with no Arabic coverage; the first report still dates it, and the text says when it broke).
 4. Applied 9 Nov: the AC Mirage 00:30 Tue piece is pulled if another evergreen ran within 3 hours before it;
    the overnight bank pieces (Hogwarts Legacy, Resident Evil Village) run only with a news post between them.
+
+## News scout at the start of every run (Mohammad, 9 Nov 2026, effective at once)
+
+1. Every Production 2 run starts with a scout helper on Haiku, before anything else. Its only job: read the server digest
+   (fresh fetch, print seq), the latest Grok email digests, and the official sources directly (publisher newsrooms,
+   PlayStation Blog, Xbox Wire, Nintendo news, Steam news). It returns at most five ranked news leads, each with the
+   primary source URL, the first-report time, whether Arabic outlets have carried it, the footage route found (trailer,
+   press clip, Steam movie) and a one-line angle. It builds nothing.
+2. Production builds from the scout's list first. A lead is rejected only with the rule cited. A story the Arabic press
+   has not carried is still news at 24 to 48 hours.
+3. Evergreen only if the scout's list is empty or every lead failed verification, written on the board with the leads and
+   reasons; after an evergreen, none for 3 hours by day, never two in a row.
+4. The editor session stays on Opus for judgement; scout and build helpers on Haiku. The board line of every run reports
+   the scout's list.
