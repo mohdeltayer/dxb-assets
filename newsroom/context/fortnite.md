@@ -17,3 +17,4 @@ without checking them against the story's own primary.
 ## Log (one line per published post, added by presubmit.py published)
 - 2026-11-08 · تقرير · split · Fortnite Treasure Hunters: Pirate Shop Access chest drop rates published (Fortnite Status, 7 Nov 2026, per IGN 8 Nov) (`2026-11-08-fortnite-pirate-shop-access-drop-rates`)
 - 2026-11-09 · no chip · DMCC Gaming Centre and Wild Unlimited: 'Dubai Developed in Fortnite 2033' UEFN island goes live worldwide 11 Nov with 10 Dubai landmarks (`2026-11-09-dubai-developed-in-fortnite-2033`)
+- 2026-11-05 · no chip · Fortnite Crew four tiers from 5 Dec (Epic, cross-read; Epic page 403) (`2026-11-05-fortnite-crew-four-tiers-december-5`)

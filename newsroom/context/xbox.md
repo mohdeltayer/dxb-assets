@@ -29,3 +29,5 @@ without checking them against the story's own primary.
 
 ## Log (one line per published post, added by presubmit.py published)
 - 2026-11-08 · رسمي · stills · Eight games join Game Pass Essential on 15 Nov 2026 (Xbox's 25th anniversary) (`2026-11-08-game-pass-essential-xbox-25th-nov-15`)
+- 2026-11-05 · no chip · Xbox Cloud Gaming previews: phone as controller, Nano Controller cloud connect (`2026-11-05-xbox-cloud-gaming-phone-controller-nano-preview`)
+- 2026-11-05 · no chip · Cat Me If You Can comes to Switch and Xbox Series X|S on 10 December (`2026-11-05-cat-me-if-you-can-switch-xbox-december-10`)

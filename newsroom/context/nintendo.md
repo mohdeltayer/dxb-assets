@@ -38,3 +38,7 @@ without checking them against the story's own primary.
 - 2026-11-08 · no chip · Ocarina of Time (Switch 2): Metacritic user score 9.6 from 5,668 ratings beside the critics' Metascore 96 (read 15:35 Dubai) (`2026-11-08-ocarina-of-time-metacritic-user-score`)
 - 2026-11-08 · no chip · Ocarina of Time (Switch 2): second-biggest Zelda launch in UK history by physical sales, per Christopher Dring (The Game Business), NielsenIQ data (`2026-11-08-ocarina-of-time-uk-launch-dring`)
 - 2026-11-09 · no chip · Rumour: Pokemon Winds and Waves were planned for November 2026 and moved to November 2027 (CentroLeaks via MyNintendoNews) (`2026-11-09-pokemon-winds-waves-delay-rumour`)
+- 2026-11-05 · no chip · Ocarina of Time: 7 more songs on Nintendo Music (Nintendo of America post), intro cinematic and its music (`2026-11-05-ocarina-of-time-nintendo-music-seven-songs`)
+- 2026-11-05 · no chip · Switch 2 passes 26 million (Nintendo IR sales data, 30 Sep) (`2026-11-05-nintendo-switch-2-26-million-sales-data`)
+- 2026-11-05 · no chip · Nintendo H1 FY27 results: operating profit +49.1%, Switch 2 6.49 M, forecast unchanged (`2026-11-05-nintendo-first-half-results-profit-up`)
+- 2026-11-05 · no chip · Nintendo Switch 2 lineup through 2027 v6: earliest to latest, upbeat launch bed (`2026-11-05-nintendo-switch-2-lineup-through-2027-v6`)

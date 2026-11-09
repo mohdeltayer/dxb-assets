@@ -35,3 +35,5 @@ without checking them against the story's own primary.
 - 2026-11-09 · no chip · Ocarina of Time on Switch 2: critics average 96 on Metacritic (`ocarina-of-time-switch-2-review-scores-nov-6`)
 - 2026-11-08 · no chip · Ocarina of Time (Switch 2): Metacritic user score 9.6 from 5,668 ratings beside the critics' Metascore 96 (read 15:35 Dubai) (`2026-11-08-ocarina-of-time-metacritic-user-score`)
 - 2026-11-08 · no chip · Ocarina of Time (Switch 2): second-biggest Zelda launch in UK history by physical sales, per Christopher Dring (The Game Business), NielsenIQ data (`2026-11-08-ocarina-of-time-uk-launch-dring`)
+- 2026-11-05 · no chip · Ocarina of Time: 7 more songs on Nintendo Music (Nintendo of America post), intro cinematic and its music (`2026-11-05-ocarina-of-time-nintendo-music-seven-songs`)
+- 2026-11-05 · no chip · Ocarina of Time out now on Switch 2 (launch day), intro cinematic first stretch (`2026-11-05-ocarina-of-time-switch-2-out-now`)
