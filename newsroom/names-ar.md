@@ -184,3 +184,6 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Sensitive content (relationships, evolution, bans) | the general word; the authority's own wording | the specific type, a judgement | Approved 21 Oct (glossary rows) |
 | Bunnyhop | بانيهوب | Proposed 8 Nov 2026 (Brick Buddies developer; publisher BunnyhopHome not named on screen) |
 | MyNintendoNews | ماي نينتيندو نيوز (MyNintendoNews) | Suggested 9 Nov 2026 |
+
+| FromSoftware | فروم سوفتوير | Proposed 9 Nov 2026 (Elden Ring Arabic-support post) |
+| Ubisoft Montpellier | يوبيسوفت مونبلييه | Proposed 9 Nov 2026 (Prince of Persia bank piece; the city spelling مونبلييه is new) |

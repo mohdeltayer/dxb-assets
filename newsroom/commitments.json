@@ -2735,6 +2735,21 @@
    "fallback": "publish-last-passed",
    "held_by_mohammad": false,
    "status": "scheduled in Publer for 10:30 Dubai 9 Nov (06:30Z), 3/3 in scheduled list, read 06:12Z (submit returned done; job ids not returned by connector)"
+  },
+  {
+   "id": "elden-ring-arabic-20261109-0730z",
+   "title": "Elden Ring Arabic support on Steam (bank piece, kind evergreen)",
+   "kind": "post",
+   "slot": "Mon 09 Nov 11:30 Dubai (07:30Z)",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/live/elden-ring-arabic-support-steam-evergreen.json (git a1196c5)",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "status": "scheduled in Publer for 11:30 Dubai 9 Nov (07:30Z), 3/3 in the scheduled list read 07:21Z with labels incl. kind:evergreen (submit returned done; no job id from the connector)"
   }
  ]
 }
