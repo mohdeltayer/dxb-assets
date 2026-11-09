@@ -26599,5 +26599,50 @@
   "min_disk_free_mb": 226359,
   "setup_min": 0.13,
   "story": "assassins-creed-mirage-baghdad-ninth-century"
+ },
+ {
+  "name": "assassins-creed-mirage-baghdad-ninth-century-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-11-09T07:38Z",
+  "stages": {
+   "checks": 5.4,
+   "montage": 48.1,
+   "text": 58.0,
+   "audio": 1.6,
+   "outro": 26.5
+  },
+  "total": 139.7,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-09T07:36Z",
+  "finished_at": "2026-11-09T07:38Z",
+  "render_min": 2.33,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 6.97,
+   "held_under_text": 0.0,
+   "secs": 24.4,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 210,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 940,
+  "peak_mem_mb": 2417,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 15671,
+  "peak_disk_mb": 19811,
+  "min_disk_free_mb": 226295,
+  "setup_min": 0.15,
+  "story": "assassins-creed-mirage-baghdad-ninth-century"
  }
 ]
