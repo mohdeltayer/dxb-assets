@@ -1,0 +1,226 @@
+{
+ "name": "elden-ring-arabic-support-steam-evergreen",
+ "story": "2026-11-09-elden-ring-arabic-support-steam",
+ "render_lane": "server",
+ "out": "cards/2026-11/elden-ring-arabic-support-steam-evergreen-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "er-gameplay.mp4",
+   "steam": 1245620,
+   "trailer": "ELDEN RING - Official Gameplay",
+   "start": 0,
+   "seconds": 181
+  }
+ ],
+ "shots": [
+  [
+   "er-gameplay.mp4",
+   44.0,
+   3.4,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "er-gameplay.mp4",
+   52.0,
+   3.8,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "er-gameplay.mp4",
+   100.0,
+   3.8,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "er-gameplay.mp4",
+   104.0,
+   3.6,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "er-gameplay.mp4",
+   132.0,
+   3.6,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "er-gameplay.mp4",
+   152.0,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "واجهة اللعبة وقوائمها\nمتوفرة بالعربية",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    [
+     "والترجمة أيضًا، حسب\nصفحتها على Steam",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "أما الأداء الصوتي\nفليس بالعربية",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   4,
+   [
+    [
+     "وتضم اللعبة 15 لغة\nبينها الإنجليزية",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "strip": [
+  [
+   "السعر على Steam",
+   [
+    "aed",
+    "249"
+   ]
+  ],
+  [
+   "تاريخ الصدور",
+   "24 فبراير 2022"
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: بانداي نامكو (Bandai Namco)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "تدعم Elden Ring\nاللغة العربية",
+ "label": "رسمي",
+ "source": "بانداي نامكو (Bandai Namco)",
+ "date": "9 Nov 2026",
+ "theme": "spectacle",
+ "style": "lines",
+ "template": "split",
+ "skin": "house",
+ "track": [
+  "er-gameplay.mp4",
+  42.6
+ ],
+ "cut": true,
+ "pace_ok": false,
+ "sound": null,
+ "genre": [
+  "RPG",
+  "open world"
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam store page store.steampowered.com/app/1245620 (cc=ae, English) read 9 Nov 06:45Z: language table and price",
+  "SOURCE: not already posted": "yes: ledger find Elden Ring: no hit; last Elden Ring story was the A24 film budget on 24 Oct, 16 days ago",
+  "SOURCE: age": "yes: evergreen, no date; the page is re-read before it posts",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE out now": "n/a: evergreen language-support piece; price in the strip (249 AED on the page), platform Steam, what it is in the headline",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names Elden Ring; L1 واجهة اللعبة, L2 والترجمة, L3 الأداء الصوتي, L4 اللعبة named",
+  "STORY: release verbs": "n/a: no release claim",
+  "STORY: names match names-ar.md": "yes: بانداي نامكو (Bandai Namco) in the credit; games English only",
+  "POST: Arabic passes": "yes: arabic-games-film-editor and arabic-writing run; grammar review recorded in the story file",
+  "SOUND: footage sound or bed with reason": "yes: the Official Gameplay trailer's own score, one stretch from 42.6 s (faster-whisper word timings: no speech from 42.4 to 63.9 s), audio split",
+  "SOUND: no speech under Arabic lines": "yes: narration 'The golden order is broken to its core' ends 42.4 s, next speech 63.9 s; stretch 42.6 to 63.6 s clear",
+  "PICTURE: footage first": "yes: official Steam trailer, 1920x1080 5.8 Mbps, decode clean, enlargement under 2x",
+  "PICTURE: not the same as last 5 Reels": "yes: picture: Elden Ring trailer, no Elden Ring Reel before",
+  "PICTURE: crop per beat": "yes: centre focus 0.5, checked on the shot sheet",
+  "PICTURE: credit on every clip": "yes: credit 0 to 6 covers all six shots",
+  "PICTURE: headline not over a face": "yes: top band over sky or scenery",
+  "CHECKS: decision log": "yes: decision_log in the job"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook L1",
+   "shot": "44.0 s rider with a torch seen from behind; 52.0 s wide landscape",
+   "alternatives": "title card 12 s, FromSoftware slate",
+   "crop": "x 0.5",
+   "music": "trailer score from 42.6 s (speech-free gap 42.4 to 63.9 s)"
+  },
+  {
+   "beat": "L2 subtitles",
+   "shot": "100.0 s rider in the grass at sunset; 104.0 s sorcerer casting",
+   "alternatives": "76 s combat with blood",
+   "crop": "x 0.5",
+   "music": "trailer score from 42.6 s (speech-free gap 42.4 to 63.9 s)"
+  },
+  {
+   "beat": "L3 audio",
+   "shot": "132.0 s knight in gold coins",
+   "alternatives": "136 s fight",
+   "crop": "x 0.5",
+   "music": "trailer score from 42.6 s (speech-free gap 42.4 to 63.9 s)"
+  },
+  {
+   "beat": "L4 languages",
+   "shot": "152.0 s blue spell, the closing visual",
+   "alternatives": "title logo 176 s",
+   "crop": "x 0.5",
+   "music": "trailer score from 42.6 s (speech-free gap 42.4 to 63.9 s)"
+  }
+ ],
+ "note": "Evergreen bank piece: Arabic support in Elden Ring per its Steam page (Interface and Subtitles ticked, Full Audio not). Official Steam Official Gameplay trailer, 1080p."
+}

@@ -1,0 +1,124 @@
+{
+ "id": "2026-11-09-elden-ring-arabic-support-steam",
+ "title": "Elden Ring supports Arabic (interface and subtitles) per its Steam page; 249 AED",
+ "game": "Elden Ring",
+ "companies": [
+  "FromSoftware",
+  "Bandai Namco"
+ ],
+ "genre": [
+  "RPG",
+  "open world"
+ ],
+ "category": "evergreen",
+ "kind": "evergreen",
+ "evergreen": true,
+ "status": "built v1, not director-checked, not scheduled",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Steam store page (Elden Ring, app 1245620, cc=ae, l=english)",
+   "url": "https://store.steampowered.com/app/1245620/ELDEN_RING/",
+   "time": "read 2026-11-09T06:45Z"
+  }
+ ],
+ "first_report": "Evergreen, no date. Steam page language table read 9 Nov 2026 06:45Z: Arabic ticked under Interface and Subtitles, blank under Full Audio (15 languages in all).",
+ "source_type": "primary",
+ "footage": "Official Steam trailer 'ELDEN RING - Official Gameplay Trailer' (app 1245620), 1920x1080 5.8 Mbps. Also fetched and judged: 'Rise, Tarnished | Official Launch Trailer' (more dark/blood-leaning, title cards), not used.",
+ "lane": "Digital Lounge",
+ "beat": "evergreen",
+ "claims": [
+  {
+   "text": "Arabic supported: Interface yes, Full Audio no, Subtitles yes",
+   "status": "read on primary"
+  },
+  {
+   "text": "249.00 AED on Steam UAE store",
+   "status": "read on primary"
+  },
+  {
+   "text": "English and 14 more languages",
+   "status": "read on primary"
+  },
+  {
+   "text": "Release 24 Feb 2022",
+   "status": "read on primary"
+  }
+ ],
+ "angle": {
+  "hook": "Elden Ring speaks Arabic on screen: interface and subtitles, per Steam",
+  "why_now": "evergreen, no date",
+  "what_it_means_here": "Arab players can read menus and story text in Arabic; voices stay non-Arabic; 249 AED on Steam UAE",
+  "payoff": "the voice acting is not in Arabic, so the honest answer is interface and subtitles only"
+ },
+ "sensitive": "none (no religion or politics handled; no gore in chosen shots)",
+ "gate": "gate 06:45Z: Steam page is the primary; checked page for edition prices (249.00 AED standard). Re-read before posting; a language-table change dates the piece.",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "رسمي",
+   "format": "split",
+   "theme": "spectacle"
+  }
+ },
+ "versions": [
+  {
+   "v": 1,
+   "change": "first build"
+  }
+ ],
+ "posts": [],
+ "pre_render": {
+  "steam_read": {
+   "cmd": "curl store.steampowered.com/app/1245620/?l=english&cc=ae (age cookies)",
+   "time": "2026-11-09T06:45Z",
+   "result": "Languages (15): Arabic row: Interface tick, Full Audio blank, Subtitles tick. Price 249.00 AED (Buy ELDEN RING). Developer FromSoftware, Inc.; publisher FromSoftware, Inc., Bandai Namco Entertainment. Released 24 Feb 2022. Hades II, Baldur's Gate 3, Helldivers 2 pages read: no Arabic. Cyberpunk 2077, Hogwarts Legacy (posted 18 Oct), RE Village: Arabic interface and subtitles."
+  },
+  "ledger_find": {
+   "cmd": "python3 newsroom/ledger.py find Elden Ring Steam Arabic --record 2026-11-09-elden-ring-arabic-support-steam",
+   "result": "recorded: 0 other hits (last Elden Ring story: film budget 24 Oct)"
+  },
+  "context_match": {
+   "cmd": "python3 newsroom/context.py match 2026-11-09-elden-ring-arabic-support-steam",
+   "result": "no page matched"
+  },
+  "whatsnew": {
+   "cmd": "python3 newsroom/whatsnew.py packet 2026-11-09-elden-ring-arabic-support-steam",
+   "result": "2 sentences, both age-gate boilerplate of the Steam page; nothing new, evergreen"
+  },
+  "decode": {
+   "cmd": "ffmpeg -v error -i gameplay.mp4 -f null -",
+   "result": "decode clean (1920x1080, 5.83 Mbps, 180.9 s; Launch trailer also clean, not used)"
+  },
+  "speech": {
+   "cmd": "faster-whisper word timings on the whole trailer",
+   "result": "narration 21.3-26.8, 36.8-42.4, 63.9-71.8, 73.9-84.3, 89.5-98.4, 116-122.9, 124-138, 162.9-169.4; track from 42.6 s is speech-free for 21 s"
+  },
+  "buildgate_and_render_job_check": "build gate: ok\nbuild gate: ok (server lane, story 2026-11-09-elden-ring-arabic-support-steam)\nspeech check: er-gameplay.mp4 from 42.6 s for 21.0 s, speech: none\nsfx cue: end jingle: end card (graphic)\nsfx: 6 shot(s) off the track's own seconds (shot 0 er-gameplay.mp4 @44.0 hears 42.6 s (+1.4 s); shot 1 er-gameplay.mp4 @52.0 hears 45.96 s (+6.0 s); shot 2 er-gameplay.mp4 @100.0 hears 49.72 s (+50.3 s); shot 3 er-gameplay.mp4 @104.0 hears 53.48 s (+50.5 s); shot 4 er-gameplay.mp4 @132.0 hears 57.04 s (+75.0 s); shot 5 er-gameplay.mp4 @152.0 hears 60.6 s (+91.4 s)); the audio split must apply, or the runner stops (guard)\nelden-ring-arabic-support-steam-evergreen ok, clip 21.0 s\n"
+ },
+ "ledger_find": {
+  "at": "2026-11-09T06:48:55Z",
+  "words": [
+   "elden",
+   "ring",
+   "steam",
+   "arabic"
+  ],
+  "hits": []
+ },
+ "whats_new": {
+  "read_at": "2026-11-09T06:49:29Z",
+  "url": "https://store.steampowered.com/app/1245620/ELDEN_RING/",
+  "matcher": "word overlap",
+  "sentences": 2,
+  "counts": {
+   "new": 2,
+   "known": 0,
+   "posted": 0
+  },
+  "dates_found": [],
+  "closest_stories": [],
+  "packet": "/root/.cache/dxb-packets/2026-11-09-elden-ring-arabic-support-steam.md",
+  "context_pages": []
+ }
+}
