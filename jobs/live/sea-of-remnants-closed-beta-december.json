@@ -27,18 +27,7 @@
   ],
   [
    "sor-gamescom.mp4",
-   95.0,
-   2.4,
-   [
-    [
-     0.0,
-     0.5
-    ]
-   ]
-  ],
-  [
-   "sor-gamescom.mp4",
-   100.5,
+   103.8,
    2.3,
    [
     [
@@ -48,10 +37,21 @@
    ]
   ],
   [
+   "sor-gamescom.mp4",
+   106.0,
+   1.95,
+   [
+    [
+     0.0,
+     0.55
+    ]
+   ]
+  ],
+  [
    "sor-gfx-cbt-date.png",
    [
     "sor-gamescom.mp4",
-    103.0
+    136.0
    ],
    4.0,
    null
@@ -69,7 +69,7 @@
   ],
   [
    "sor-gamescom.mp4",
-   130.0,
+   128.5,
    2.5,
    [
     [
@@ -80,7 +80,7 @@
   ],
   [
    "sor-gamescom.mp4",
-   135.5,
+   133.0,
    2.5,
    [
     [
@@ -112,7 +112,7 @@
  ],
  "ground_footage": [
   "sor-gamescom.mp4",
-  103.0
+  136.0
  ],
  "lines": [
   [
@@ -225,7 +225,7 @@
   },
   {
    "beat": "1 L1 source",
-   "shot": "95.0 s ship at sunset, 100.5 s the glowing orb",
+   "shot": "103.8 s glowing orbs, 106.0 s the red-sailed ship (v1's 95 to 103 s carried the in-game caption 'Wind of Memory', director round 1; 108 s carries a subtitle)",
    "alternatives": "105 s hand close-up",
    "crop": "x 0.5",
    "music": "trailer music stem",
@@ -233,7 +233,7 @@
   },
   {
    "beat": "2 card",
-   "shot": "date card on the 103 s footage (v1's ground showed a faint «That's the spirit!» subtitle)",
+   "shot": "date card on the 136 to 140 s footage, clean of subtitles",
    "alternatives": "strip (split at its daily cap)",
    "crop": "n/a",
    "music": "trailer music stem",
@@ -249,7 +249,7 @@
   },
   {
    "beat": "4 L3 sign-up",
-   "shot": "130.0 and 135.5 s naval combat",
+   "shot": "128.5 and 133.0 s naval combat on deck",
    "alternatives": "145 s night battle",
    "crop": "x 0.5",
    "music": "trailer music stem",
@@ -264,5 +264,6 @@
    "evidence_role": "illustration"
   }
  ],
- "note": "Sea of Remnants closed beta dates (Game*Spark from NetEase), Production 2 (this chat), 9 Nov 20:35 Dubai run. Source: Steam 'Gamescom 2026 Extended Gameplay Showcase' 1920x1080 5.8 Mbps, decode clean; shots only from the full-frame gameplay stretch 95 to 143 s (0 to 90 s letterboxed to 816 rows). clipcard: trailer and split at six today (cap four); second clipcard in a row (allowed). Theme spectacle, style frame (last three looks gold/bold, cold/glow, spectacle/lines). v2: burnt-in English subtitles in the gameplay (126 s, 143 s) kept out of every shot and the card ground."
+ "note": "Sea of Remnants closed beta dates (Game*Spark from NetEase), Production 2 (this chat), 9 Nov 20:35 Dubai run. Source: Steam 'Gamescom 2026 Extended Gameplay Showcase' 1920x1080 5.8 Mbps, decode clean; shots only from the full-frame gameplay stretch 95 to 143 s (0 to 90 s letterboxed to 816 rows). clipcard: trailer and split at six today (cap four); second clipcard in a row (allowed). Theme spectacle, style frame (last three looks gold/bold, cold/glow, spectacle/lines). v2: burnt-in English subtitles in the gameplay (126 s, 143 s) kept out of every shot and the card ground. Director round 1 FIX: shots 1 and 2 moved off the 'Wind of Memory' caption; card ground to 136 s; frame-0 credit is a build-queue item not yet live.",
+ "built_by": "production-2"
 }
