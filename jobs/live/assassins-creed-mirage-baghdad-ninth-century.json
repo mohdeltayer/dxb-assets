@@ -48,7 +48,7 @@
   ],
   [
    "ac-mirage-gameplay.mp4",
-   103.2,
+   103.1,
    4.5,
    [
     [
@@ -59,8 +59,8 @@
   ],
   [
    "ac-mirage-gameplay.mp4",
-   72.0,
-   4.4,
+   58.4,
+   4.1,
    [
     [
      0.0,
@@ -155,7 +155,7 @@
  "credits": [
   [
    0,
-   24.7,
+   24.4,
    "المصدر: يوبيسوفت (Ubisoft)",
    {
     "size": 40,
@@ -185,7 +185,7 @@
   "STORY: release verbs": "yes: none needed (no date); strip says متوفرة الآن",
   "STORY: names match names-ar.md": "yes: يوبيسوفت (Ubisoft) in the credit; Basim stays Latin (character); الكرخ and المدينة المدورة are Ubisoft's districts",
   "POST: Arabic passes": "yes: arabic-games-film-editor, arabic-writing refs grammar/conventions/orthography opened; grammar review in story file",
-  "SOUND: footage sound or bed with reason": "our bed (neon rotation). Reason: runner audio split on the Gameplay trailer stretch from 21 s measured music at 26.7% of the track (effects-led, under the 40% floor, run 42577699012 07:19Z) and the clean shots come from other moments than the stretch, so trailer effects would not match the picture (sfx guard). Trailers checked: Steam Gameplay (effects-led at 21 s) and Steam Free Major Update Trailer (fetched, not analysed for sound); Ubisoft World Trailer is YouTube-only. Director to sign off.",
+  "SOUND: footage sound or bed with reason": "our bed (neon rotation). Reason: runner audio split on the Gameplay trailer stretch from 21 s measured music at 26.7% of the track (effects-led, under the 40% floor, run 42577699012 07:19Z) and the clean shots come from other moments than the stretch, so trailer effects would not match the picture (sfx guard). Trailers checked: Steam Gameplay (effects-led at 21 s) and Steam Free Major Update Trailer (fetched, not analysed for sound); Ubisoft World Trailer is YouTube-only. Director to sign off. The Steam Free Major Update Trailer covers Valley of Memory (AlUla), not Baghdad, so it could not supply these shots.",
   "SOUND: no speech under Arabic lines": "yes: bed only, trailer sound off",
   "PICTURE: footage first": "yes: Steam Gameplay Trailer, decode clean; re-fetched once (identical file); smear flags at 31.93-32.87, 37.70-38.28, 40.90-42.02, 42.63-42.80 (runner seek time) avoided with 0.3 s margin; no block_ok",
   "PICTURE: not the same as last 5 Reels": "yes: picture: Mirage Baghdad rooftops and domes, no earlier Mirage Reel",
@@ -218,15 +218,15 @@
   },
   {
    "beat": "3 figures/city",
-   "shot": "103.2-107.7 s assassin on a blue dome, then aerial Baghdad skyline (v1 and v2 reached the end slate at 108.8 s; local frames show the skyline until about 108.1 and black after)",
+   "shot": "103.1-107.6 s assassin on a blue dome then aerial skyline (black starts about 107.9 s and the end slate about 108.4 s: director FIX)",
    "alternatives": "68-69 and 81 s smears avoided",
    "crop": "x 0.5",
    "music": "our bed"
   },
   {
    "beat": "4 parkour",
-   "shot": "72.0-76.4 s spectral jump and roll (smear 68.25-69.33 is before)",
-   "alternatives": "fight shots 78-99 s (violence)",
+   "shot": "58.4-62.5 s stealth interiors and a courtyard room, no contact (v2's 72.0 s shot held a stealth grab at about 74 to 75.5 s: director FIX)",
+   "alternatives": "72-76 s (grab), 54-57 s knife close-ups, 78-99 s fights",
    "crop": "x 0.5",
    "music": "our bed"
   },
