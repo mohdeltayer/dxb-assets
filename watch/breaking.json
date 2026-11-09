@@ -1,10 +1,23 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-09T21:52:05Z",
- "seq": 247,
+ "generated_at": "2026-11-09T22:25:17Z",
+ "seq": 248,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 9928,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/09/26 Season 1 Arrives in Call of Duty: Modern Warfare 4 and Call of Duty: Warzone The hunt is on in Season 1 of Call of Duty: Modern Warfare 4, a major upda",
+   "url": "https://www.nintendo.com/us/whatsnew/season-1-arrives-in-call-of-duty-modern-warfare-4-and-call-of-duty-warzone/",
+   "published": null,
+   "first_seen": "2026-11-09T22:25:14Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 248
+  }
+ ],
  "recent": [
   {
    "id": 9889,
@@ -294,9 +307,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-09T21:50:05Z",
+  "last_poll_at": "2026-11-09T22:25:14Z",
   "sources_enabled": 100,
-  "sources_ok": 94,
+  "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 9x)",
