@@ -11,7 +11,7 @@
     "action"
   ],
   "category": "news",
-  "status": "rendered v2, awaiting Arabic passes, director QA and Mohammad preview",
+  "status": "rendered v3, awaiting Arabic passes, director QA and Mohammad preview",
   "chip": "رسمي",
   "lane": "reel",
   "beat": "catalog addition",
@@ -304,5 +304,52 @@
       ]
     ],
     "supersedes": "v1 (render 82dd9e7) after director FIX 7b2a6b0; v2 failed decode smear at 8.13 to 8.50 s (tavern src 30.0)"
+  },
+  "render_v3": {
+    "mp4": "cards/2026-11/dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-reel-v3.mp4",
+    "strip": "cards/2026-11/dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-strip.jpg",
+    "sheet": "cards/2026-11/dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-sheet.jpg",
+    "dense": "cards/2026-11/dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-dense.jpg",
+    "render_commit": "472afbd630e18bd0158e49937b4360516651d88b",
+    "run": "render-live 42609496086 (head 1fdc444), success, 236 s on dxb-render-1",
+    "job_head": "1fdc444",
+    "clip_s": 19.9,
+    "shots_src_s": [
+      [
+        10.8,
+        3.4
+      ],
+      [
+        14.0,
+        3.0
+      ],
+      [
+        32.0,
+        2.7
+      ],
+      [
+        34.5,
+        2.8
+      ],
+      [
+        36.0,
+        2.6
+      ],
+      [
+        47.0,
+        2.8
+      ],
+      [
+        54.0,
+        2.8
+      ]
+    ],
+    "lines": {
+      "L1": "shots 1-2",
+      "L2": "shots 3-4",
+      "L3": "shots 5-6",
+      "close": "shot 7 (no line)"
+    },
+    "supersedes": "v2 (render b400b1d); director round 2 FIX a7dab20: snow 22.4 dropped"
   }
 }
