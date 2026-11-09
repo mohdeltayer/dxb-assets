@@ -13,7 +13,7 @@
  ],
  "category": "report",
  "priority": "🟢",
- "status": "building (Production 2, this chat, 9 Nov 16:50Z)",
+ "status": "scheduled in Publer 17:30Z (21:30 Dubai), instagram x threads",
  "sources": [
   {
    "role": "secondary",
@@ -52,7 +52,7 @@
    "status": "Game*Spark: to be announced on the official site and X"
   }
  ],
- "gate": "gate 16:45Z: Game*Spark read in full; NetEase's own text not found (official site's news list newest 10 Mar; Steam news only a PlayGround.ru repost without the dates; YouTube refuses automated reads). Exit B: chip تقرير, Game*Spark named, dates attributed.",
+ "gate": "gate 16:45Z: Game*Spark read in full; NetEase's own text not found (official site's news list newest 10 Mar; Steam news only a PlayGround.ru repost without the dates; YouTube refuses automated reads). Exit B: chip تقرير, Game*Spark named, dates attributed. Re-check 17:03Z: Game*Spark still reads 12月4日.",
  "angle": {
   "hook": "Sea of Remnants' closed beta has dates: 4 to 18 Dec",
   "why_now": "announced today with trailers on PlayStation's and Xbox's channels",
@@ -94,5 +94,23 @@
   ],
   "hits": []
  },
- "lane": "Digital Lounge"
+ "lane": "Digital Lounge",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/sea-of-remnants-closed-beta-december-reel-v3.mp4",
+  "blob": "99c2ebb6c021f4df936193ee55ec056f003eb7e6",
+  "at": "2026-11-09T17:01:56Z",
+  "note": "director (haiku helper, did not build): round 1 FIX (Wind of Memory caption, 143 s subtitle), round 2 FIX (107 s subtitle in shot 2); v3 changes only shot 2 (116 s), checked on the 4 fps strip by production: no subtitle; frame-0 credit is a build-queue item",
+  "checklist": {
+   "job": "jobs/live/sea-of-remnants-closed-beta-december.json",
+   "sha256": "a48e3a81d4a59648b274809b1a5a640adb2b9b4a2add63ccec6743ed8afae910",
+   "ok": true,
+   "problems": [],
+   "template": "clipcard",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-haiku"
+ }
 }
