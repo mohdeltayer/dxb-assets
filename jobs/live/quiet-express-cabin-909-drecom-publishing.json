@@ -1,0 +1,242 @@
+{
+ "name": "quiet-express-cabin-909-drecom-publishing",
+ "story": "2026-11-09-quiet-express-cabin-909-drecom-publishing",
+ "render_lane": "server",
+ "out": "cards/2026-11/quiet-express-cabin-909-drecom-publishing-reel-v3.mp4",
+ "footage": [
+  {
+   "file": "qe909-trailer.mp4",
+   "steam": 3962240,
+   "trailer": "OFFICIAL TRAILER",
+   "start": 0,
+   "seconds": 90
+  }
+ ],
+ "shots": [
+  [
+   "qe909-trailer.mp4",
+   1.0,
+   3.2,
+   [
+    [
+     0.0,
+     0.3
+    ]
+   ]
+  ],
+  [
+   "qe909-trailer.mp4",
+   4.3,
+   1.9,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "qe909-trailer.mp4",
+   22.0,
+   3.2,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "qe909-trailer.mp4",
+   25.2,
+   1.8,
+   [
+    [
+     0.0,
+     0.4
+    ]
+   ]
+  ],
+  [
+   "qe909-trailer.mp4",
+   57.9,
+   2.4,
+   [
+    [
+     0.0,
+     0.45
+    ]
+   ]
+  ],
+  [
+   "qe909-trailer.mp4",
+   47.6,
+   2.6,
+   [
+    [
+     0.0,
+     0.55
+    ]
+   ]
+  ],
+  [
+   "qe909-trailer.mp4",
+   49.9,
+   2.8,
+   [
+    [
+     0.0,
+     0.55
+    ]
+   ]
+  ],
+  [
+   "qe909-trailer.mp4",
+   52.5,
+   1.9,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "qe909-trailer.mp4",
+   64.3,
+   2.4,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "qe909-trailer.mp4",
+   61.0,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "أعلنت دريكوم (Drecom) أنها\nتتولى نشر هذه اللعبة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   5,
+   [
+    [
+     "يبحث اللاعب في قطار يعبر قارة\nعن غرفة لا وجود لها",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   6,
+   8,
+   [
+    [
+     "تنتهي أيام الرحلة السبعة بحادث\nفيعيدها اللاعب مرة بعد مرة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   9,
+   9,
+   [
+    [
+     "كما تتوفر نسخة تجريبية\nعلى Steam",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "strip": [
+  [
+   "الإصدار",
+   "2027"
+  ],
+  [
+   "المنصة",
+   "PC · Steam"
+  ],
+  [
+   "السعر",
+   "لم يُعلن بعد"
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   9,
+   "المصدر: دريكوم (Drecom) واستوديو 909",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "لغز القطار Quiet Express\nتنشره دريكوم",
+ "label": "جديد",
+ "source": "دريكوم (Drecom)",
+ "date": "9 Nov 2026",
+ "theme": "stylized",
+ "style": "lines",
+ "template": "split",
+ "skin": "house",
+ "track": "bed",
+ "sound": null,
+ "cut": true,
+ "pace_ok": false,
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: see story file and decision_log",
+  "SOURCE: not already posted": "yes: see story file and decision_log",
+  "SOURCE: age": "yes: see story file and decision_log",
+  "ANGLE before lines": "yes: see story file and decision_log",
+  "STORY: spoken paragraph, subject before pronoun": "yes: see story file and decision_log",
+  "STORY: release verbs": "yes: see story file and decision_log",
+  "STORY: names match names-ar.md": "yes: see story file and decision_log",
+  "POST: Arabic passes": "yes: see story file and decision_log",
+  "PICTURE: footage first": "yes: see story file and decision_log",
+  "PICTURE: crop per beat": "yes: see story file and decision_log",
+  "PICTURE: credit on every clip": "yes: see story file and decision_log",
+  "PICTURE: headline not over a face": "yes: see story file and decision_log",
+  "CHECKS: decision log": "yes: see story file and decision_log"
+ },
+ "decision_log": [
+  {
+   "beat": "hook",
+   "shot": "0.4 to 3.6 s anime girl in red, opening of the trailer",
+   "alternatives": "70 s onward title slate",
+   "crop": "x 0.3",
+   "music": "bed"
+  }
+ ],
+ "genre": [
+  "indie"
+ ],
+ "note": "Official Steam trailer, 1080p 5.4 Mbps decode clean, cropped 1.78x. Sound: our bed. Reason: the trailer is narrated in English from its first second (\"Ladies and gentlemen, welcome to the Quiet Express. We will soon be...\", 50 words transcribed from 1.0 s; render_job.check speech_check refuses the stretch), so no music-only stretch exists; audio split not applicable. Shots end before the dark door (6.2 s), the cheesecake UI bar (27.0 s) and the glitch frames at source 54.4 s."
+}
