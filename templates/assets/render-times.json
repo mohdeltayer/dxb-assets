@@ -26207,5 +26207,50 @@
   "min_disk_free_mb": 230104,
   "setup_min": 0.12,
   "story": "dragon-quest-rpg-cursed-tree-chosen-isle-announced"
+ },
+ {
+  "name": "sega-arara-newsletter-email-leak-november-9-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-09T05:39Z",
+  "stages": {
+   "checks": 0.0,
+   "montage": 4.1,
+   "text": 11.1,
+   "audio": 0.1,
+   "outro": 4.8
+  },
+  "total": 20.2,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-09T05:39Z",
+  "finished_at": "2026-11-09T05:39Z",
+  "render_min": 0.34,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 66.3,
+   "still_share": 0.862,
+   "longest_still": 3.0,
+   "cuts_per_10s": 0.0,
+   "held_under_text": 0.0,
+   "secs": 12.3,
+   "storybook": false,
+   "mode": "report-only",
+   "over": true
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 41,
+  "queue_wait_secs": 1,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 987,
+  "peak_mem_mb": 1771,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 15460,
+  "peak_disk_mb": 15493,
+  "min_disk_free_mb": 230613,
+  "setup_min": 0.13,
+  "story": "sega-arara-newsletter-email-leak-november-9"
  }
 ]
