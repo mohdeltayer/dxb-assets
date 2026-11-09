@@ -1,0 +1,186 @@
+{
+ "name": "beholder-4-announced",
+ "story": "2026-11-10-beholder-4-announced",
+ "render_lane": "server",
+ "built_by": "production-2",
+ "out": "cards/2026-11/beholder-4-announced-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "beholder4-teaser.mp4",
+   "steam": 5522030,
+   "trailer": "Announcement Teaser",
+   "trailer_id": 780218672,
+   "start": 0,
+   "seconds": 33
+  }
+ ],
+ "shots": [
+  [
+   "beholder4-teaser.mp4",
+   2.0,
+   2.7,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "beholder4-teaser.mp4",
+   4.7,
+   4.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "beholder4-teaser.mp4",
+   8.7,
+   3.4,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "beholder4-teaser.mp4",
+   12.1,
+   3.5,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "كشفت عنها ألاوار (Alawar)\nبإعلان تشويقي قصير",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    [
+     "اللاعب فيها موظف\nفي وزارة دولة شمولية",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "يعمل سرًا للمقاومة،\nحسب وصف الاستوديو",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "strip": [
+  [
+   "المنصة",
+   "PC"
+  ],
+  [
+   "الموعد",
+   "لم يُعلن بعد"
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   3,
+   "المصدر: ألاوار (Alawar)",
+   {
+    "size": 44,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "بعد 10 سنوات من السلسلة\nأُعلن عن Beholder 4",
+ "label": "رسمي",
+ "source": "ألاوار (Alawar)",
+ "date": "10 Nov 2026",
+ "theme": "cold",
+ "style": "frame",
+ "template": "split",
+ "skin": "house",
+ "track": [
+  "beholder4-teaser.mp4",
+  2.0
+ ],
+ "sound": null,
+ "note": "Beholder 4 announcement; the teaser's own sound as one stretch from 2.0 s; shots contiguous in source order",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam page and Alawar's Steam post read 23:48Z",
+  "SOURCE: not already posted": "yes: no Beholder story in the ledger or Publer",
+  "SOURCE: age": "yes: Alawar post 9 Nov 21:21Z, under 3 hours old",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE trailer or first look": "yes: what the teaser shows (a state rally, guards) is the picture; no gameplay shown",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names Beholder 4; L1 عنها and L2 فيها refer to it; L3 continues L2's official; no line opens on و",
+  "STORY: release verbs": "yes: أُعلن عن (no date)",
+  "STORY: names match names-ar.md": "yes: ألاوار (Alawar) at first mention (new name, added to the proposed list)",
+  "POST: Arabic passes": "yes: arabic-games-film-editor then arabic-grammar-review",
+  "SOUND: footage sound or bed with reason": "yes: the teaser's own sound, one stretch from 2.0 s in sync with the shots",
+  "SOUND: no speech under Arabic lines": "yes: faster-whisper found no speech in the teaser",
+  "PICTURE: footage first": "yes: official Steam Announcement Teaser 1080p 5.0 Mbps",
+  "PICTURE: not the same as last 5 Reels": "yes: first Beholder Reel",
+  "PICTURE: crop per beat": "yes: armband close-up, rally screen, guards before the screen; centred 0.5",
+  "PICTURE: credit on every clip": "yes: credit 0 to 3",
+  "PICTURE: headline not over a face": "yes: armband close-up, no face",
+  "CHECKS: decision log": "yes: decision_log in the job"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "2.0 armband with the state emblem (1.0 to 2.0 carries the printed NEW TOMORROW text, skipped for the first frame)",
+   "alternatives": "5.0 rally screen",
+   "crop": "x 0.5",
+   "music": "teaser"
+  },
+  {
+   "beat": "1 L1 Alawar, anniversary",
+   "shot": "4.7 the rally before a giant screen",
+   "alternatives": "",
+   "crop": "x 0.5",
+   "music": "teaser"
+  },
+  {
+   "beat": "2 L2 Ministry official",
+   "shot": "8.7 uniformed guards before the screen",
+   "alternatives": "",
+   "crop": "x 0.5",
+   "music": "teaser"
+  },
+  {
+   "beat": "3 L3 resistance, payoff",
+   "shot": "12.1 guards and crowd, the push-in to the end of the footage",
+   "alternatives": "logo 20 to 25 (out of sync with the track)",
+   "crop": "x 0.5",
+   "music": "teaser"
+  }
+ ],
+ "cut": true
+}
