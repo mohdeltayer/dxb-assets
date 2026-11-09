@@ -29,6 +29,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Square Enix | سكوير | Approved 5 Oct (not سكوير إنكس) |
 | Bandai Namco | بانداي نامكو | Approved 27 Sep (never باندا نامكو) |
 | SEGA | سيغا | Proposed 3 Nov |
+| Arara (newsletter vendor) | آرارا | Proposed 9 Nov |
 | Capcom | كابكوم | In use |
 | Ubisoft | يوبيسوفت | In use |
 | Activision | أكتيفيجن | Suggested 5 Oct (not أكتيفجن) |

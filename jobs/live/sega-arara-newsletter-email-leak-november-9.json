@@ -1,0 +1,142 @@
+{
+ "name": "sega-arara-newsletter-email-leak-november-9",
+ "story": "2026-11-09-sega-arara-newsletter-email-leak",
+ "render_lane": "server",
+ "out": "cards/2026-11/sega-arara-newsletter-email-leak-november-9-reel-v2.mp4",
+ "footage": [
+  {
+   "file": "sega-key-art.jpg",
+   "url": "https://www.sega.co.jp/common/images/top_key_img_01.jpg"
+  }
+ ],
+ "ground_still": "sega-key-art.jpg",
+ "gfx": [
+  {
+   "file": "sega-arara-newsletter-email-leak-november-9-gfx-a.png",
+   "kind": "logofact",
+   "label": "عناوين بريد إلكتروني تسربت",
+   "value": "2,196,044",
+   "note": "عبر مزوّد الإرسال آرارا (Arara)",
+   "note2": "حسب إشعار سيغا الرسمي"
+  },
+  {
+   "file": "sega-arara-newsletter-email-leak-november-9-gfx-b.png",
+   "kind": "logofact",
+   "top": "جزء من التسريب",
+   "label": "سجلات مرفقة ببيانات الإرسال",
+   "value": "92,273",
+   "note": "ولم تحدد سيغا تفاصيلها بعد",
+   "note2": "من العناوين المتسربة"
+  },
+  {
+   "file": "sega-arara-newsletter-email-leak-november-9-gfx-c.png",
+   "kind": "logofact",
+   "top": "ما لم يتسرب حسب سيغا",
+   "label": "الأسماء والعناوين وبيانات البطاقات",
+   "value": "لم تتسرب",
+   "note": "ولا كلمات المرور",
+   "note2": "ولم يُؤكَّد أي استغلال حتى الآن"
+  },
+  {
+   "file": "sega-arara-newsletter-email-leak-november-9-gfx-d.png",
+   "kind": "logofact",
+   "top": "نصيحة سيغا",
+   "label": "تنصح سيغا بالحذر من",
+   "value": "رسائل منتحلة",
+   "note": "ولا تفتح روابط أو مرفقات غير متوقعة",
+   "note2": "ولن تطلب كلمات المرور عبر البريد"
+  }
+ ],
+ "shots": [
+  [
+   "sega-arara-newsletter-email-leak-november-9-gfx-a.png",
+   null,
+   3.4,
+   null
+  ],
+  [
+   "sega-arara-newsletter-email-leak-november-9-gfx-b.png",
+   null,
+   3.4,
+   null
+  ],
+  [
+   "sega-arara-newsletter-email-leak-november-9-gfx-c.png",
+   null,
+   3.4,
+   null
+  ],
+  [
+   "sega-arara-newsletter-email-leak-november-9-gfx-d.png",
+   null,
+   3.4,
+   null
+  ],
+  [
+   "sega-key-art.jpg",
+   null,
+   3.2,
+   [
+    0.15,
+    0.85
+   ]
+  ]
+ ],
+ "lines": [],
+ "credits": [
+  [
+   0,
+   16.5,
+   "المصدر: سيغا (SEGA)"
+  ]
+ ],
+ "headline": "سيغا تعلن تسرب 2.2 مليون\nعنوان بريد إلكتروني",
+ "label": "رسمي",
+ "source": "سيغا (SEGA)",
+ "date": "9 Nov 2026",
+ "theme": "cold",
+ "style": "lines",
+ "template": "numbers",
+ "skin": "house",
+ "track": "bed",
+ "sound": null,
+ "pace_ok": false,
+ "genre": [
+  "industry/hardware"
+ ],
+ "platform": "multi",
+ "beat": "breach",
+ "story_type": "BREACH",
+ "angle": {
+  "hook": "SEGA says 2,196,044 newsletter email addresses leaked from its delivery vendor Arara, and nothing else such as names or card details",
+  "why_now": "SEGA published its notice on 9 Nov 2026; Arara confirmed the leak to SEGA on 3 Nov",
+  "what_it_means_here": "Only email addresses are affected per SEGA, so the risk is phishing; SEGA advises caution with emails impersonating it",
+  "payoff": "what SEGA says did not leak, and its advice"
+ },
+ "sensitive": "none; breach rule: SEGA's own notice only, no methods, no third-party claims, no leaked material, our bed",
+ "decision_log": [
+  {
+   "beat": "cards 1-4",
+   "shot": "four logofact cards (SEGA logo plate, large figure, label, two lines) on the site key art ground, then the key art unblurred panning as the closing picture",
+   "alternatives": "no official footage of the story exists; leaked material never shown",
+   "crop": "n/a",
+   "evidence_role": "illustration"
+  },
+  {
+   "music": "our channel bed (legal/leak rule, CLAUDE.md 26 Oct point 3); no footage sound exists"
+  }
+ ],
+ "note": "Numbers on SEGA's own site art (700x470 key image from sega.co.jp, blurred and dimmed as ground only). Unrelated game art used only as a ground; credit names SEGA. v2 (director fixes): SEGA logo (official site logo-sega.svg rendered to PNG, templates/assets/brands/sega-logo.png) on a white plate, larger figures, cards fill the safe zone, last shot the key art unblurred.",
+ "reel_check": {
+  "1 SOURCE primary read": "yes: SEGA notice sega.co.jp/release/261109_1.html read in full 05:37Z",
+  "1 SOURCE not already posted": "yes: ledger find SEGA, no hit",
+  "1 SOURCE age": "yes: 9 Nov 2026",
+  "2 ANGLE written": "yes",
+  "3 BREACH items": "what leaked, what did not, unknown, vendor, advice, no misuse confirmed",
+  "4 STORY one paragraph": "cards alone",
+  "5 NEUTRAL tone": "yes, attributed to SEGA, no methods",
+  "6 SOUND": "our bed, leak rule",
+  "7 PICTURE credit": "yes",
+  "8 CHECKS decision log": "yes"
+ }
+}

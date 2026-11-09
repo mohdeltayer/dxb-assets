@@ -462,7 +462,60 @@ def duo(path, title, right, left, footer=None, theme='cold', stage=2):
     return path
 
 
-KINDS = {'fact': fact, 'scores': scores, 'verdict': verdict, 'totals': totals,
+# ---------- logofact (9 Nov 2026, SEGA Arara leak v2): brand plate, large figure, fills the safe zone ----------
+FILL_SIZES = (170, 156, 144, 132, 120, 108, 96, 84)
+
+
+def logofact(path, value, label, note, note2=None, top=None, logo=None, theme='cold'):
+    """A numbers card that wears its brand and uses the frame: an optional top line (Bold 62, under the chip row),
+    the official logo on a white plate at LOGO_BOX, then one plate down to the safe floor holding the label, the
+    figure (the largest size that fits the plate's width) and up to two supporting lines."""
+    import os
+    for t, what in ((top, 'card top'), (label, 'card label'), (note, 'card note'), (note2, 'card note2')):
+        if t:
+            for ln in t.split('\n'):
+                RL.rtl_starts([ln], what)
+    left, right = A.THEMES[theme][:2]
+    probe = ImageDraw.Draw(Image.new('L', (NG.W, NG.H)))
+    room = X1 - X0 - 44
+    vs = next((s for s in FILL_SIZES if probe.textlength(value, font=A.F('Bold', s), **G.AR) <= room), None)
+    if vs is None:
+        raise ValueError(f'card value too wide: {value}')
+    for t, w, s in ((label, 'Medium', 52), (note, 'Medium', 54), (note2, 'Medium', 46)):
+        if t and probe.textlength(t, font=A.F(w, s), **G.AR) > room:
+            raise ValueError(f'card text is wider than the plate: {t}')
+    im = NG.canvas()
+    cx = (X0 + X1) // 2
+    d = ImageDraw.Draw(im)
+    if top:
+        ys = 372
+        for ln in top.split('\n'):
+            d.text((cx, ys), ln, font=A.F('Bold', 62), fill=A.INK, anchor='ms', **G.AR)
+            ys += 78
+    bx = NG.LOGO_BOX
+    w, h = bx[2] - bx[0], bx[3] - bx[1]
+    plate = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+    ImageDraw.Draw(plate).rounded_rectangle([1, 1, w - 2, h - 2], 26, fill=(255, 255, 255, 245), outline=tuple(right[:3]) + (255,), width=4)
+    art = Image.open(logo or os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'brands', 'sega-logo.png')).convert('RGBA')
+    art = art.crop(art.getbbox())
+    k = min((w - 80) / art.width, (h - 50) / art.height)
+    art = art.resize((round(art.width * k), round(art.height * k)), Image.LANCZOS)
+    plate.alpha_composite(art, ((w - art.width) // 2, (h - art.height) // 2))
+    im.alpha_composite(plate, (bx[0], bx[1]))
+    y0, y1 = 930, G.SAFE_BOTTOM - 10
+    d, _, right = _plate(im, y0, y1, theme, alpha=215)
+    d.text((cx, y0 + 90), label, font=A.F('Medium', 52), fill=A.BODY, anchor='ms', **G.AR)
+    d.rounded_rectangle([cx - 60, y0 + 110, cx + 60, y0 + 116], radius=3, fill=right)
+    d.text((cx, y0 + 130 + vs), value, font=A.F('Bold', vs), fill=A.INK, anchor='ms', **G.AR)
+    yn = y0 + 130 + vs + 84
+    d.text((cx, yn), note, font=A.F('Medium', 54), fill=A.INK, anchor='ms', **G.AR)
+    if note2:
+        d.text((cx, yn + 70), note2, font=A.F('Medium', 46), fill=A.BODY, anchor='ms', **G.AR)
+    im.save(path)
+    return path
+
+
+KINDS = {'logofact': logofact, 'fact': fact, 'scores': scores, 'verdict': verdict, 'totals': totals,
          'product': product, 'ranking': ranking, 'duo': duo}
 
 
