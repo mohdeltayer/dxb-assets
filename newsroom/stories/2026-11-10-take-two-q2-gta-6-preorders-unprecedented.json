@@ -87,8 +87,29 @@
  "template": "trailer",
  "chip": "رسمي",
  "ledger_find": "GTA VI Festival (9 Nov) and preload (9 Nov) stories exist; this is new: quarterly results with the pre-order statement",
- "versions": [],
- "posts": [],
+ "versions": [
+  {
+   "v": 5,
+   "file": "cards/2026-11/take-two-q2-gta-6-preorders-unprecedented-reel-v5.mp4",
+   "note": "v1 text check (line opened on a digit), v2 pace stop, v3 band over Lucia's face, driving crop missed Jason, a TV over a gun-shop wall; v4 band over Jason's face; v5 hook on the highway"
+  }
+ ],
+ "posts": {
+  "x": "قالت تيك-تو إنتراكتيف (Take-Two Interactive) إن حجوزات GTA 6 المسبقة «تواصل بلوغ مستويات غير مسبوقة»، قبل صدورها في 19 نوفمبر."
+ },
  "corrections": [],
- "metrics": {}
+ "metrics": {},
+ "arabic": {
+  "passes": "arabic-games-film-editor then arabic-grammar-review",
+  "required_edits": [
+   {
+    "original": "لكن مبيعاتها تراجعت",
+    "proposed": "لكن مبيعات الشركة تراجعت",
+    "why": "after «أما GTA 5 فباعت» the pronoun read as GTA 5's sales"
+   }
+  ],
+  "uncertain": [
+   "credit «روكستار غيمز (Rockstar Games)»: names-ar lists روكستار; kept as the full name"
+  ]
+ }
 }
