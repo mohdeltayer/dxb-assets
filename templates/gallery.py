@@ -94,6 +94,16 @@ def build(ref='HEAD', now=None):
                                        'the bottom band; never an empty band, never a blur; "layout": "showcase" with '
                                        '"showcase_reason" (9 Nov 2026)'},
     ]
+    st = 'https://raw.githubusercontent.com/mohdeltayer/dxb-assets/studio/showcase-options/cards/test/'
+    pub = RAW + 'cards/2026-11/ocarina-master-quest-dlc-datamine-'
+    layouts[1]['options'] = [   # studio, idle build 10 Nov 2026: Mohammad picks; nothing live changes until he does
+        {'option': 'today (fit)', 'what': '16:9 box as wide as fits between a two-line headline and the bottom band',
+         'reel': pub + 'reel-v1.mp4', 'strip': pub + 'strip.jpg'},
+        {'option': 'A wide', 'what': 'the trailer at the full frame width (1080x608); needs a one-line headline',
+         'reel': st + 'mq-showcase-wide-reel-v1.mp4', 'strip': st + 'mq-showcase-wide-strip.jpg', 'job_key': '"showcase_fit": "wide"'},
+        {'option': 'B tall', 'what': 'a 4:3 centre crop of the trailer, taller picture; needs a one-line headline',
+         'reel': st + 'mq-showcase-tall-reel-v2.mp4', 'strip': st + 'mq-showcase-tall-strip.jpg', 'job_key': '"showcase_fit": "tall"'},
+    ]
     return {'generated_at': now.strftime('%Y-%m-%dT%H:%M:%SZ'), 'templates': out, 'layouts': layouts,
             'rules': {'card_led_max': f'{F.CARD_MAX} in {F.WINDOW}', 'day_max': F.DAY_MAX,
                       'no_third_in_a_row': True}}
