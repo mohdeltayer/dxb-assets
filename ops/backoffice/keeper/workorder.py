@@ -412,6 +412,8 @@ def orders_open(orders, board, now):
 
 LEADS = (re.compile(r'Leads carried:\s*(.+)', re.I | re.S), re.compile(r'Ranked leads:\s*(.+)', re.I | re.S),
          re.compile(r'(Scout \(Haiku\).+)', re.I | re.S))
+NOT_REASONS = re.compile(r'single[- ]outlet|no primary read|no written primary|only in (?:the |a )?(?:youtube )?video|'
+                         r'arabic[- ]only|held for (?:a |the )?(?:statement|trace)|not on (?:the )?newsroom', re.I)
 REJECT = re.compile(r'\b(?:reject\w*|no_source|denied|harmful_or_out_of_scope|duplicate)\b', re.I)
 
 
@@ -578,9 +580,15 @@ def markdown(wo):
              '"digest seq read: N (branch head N)".' % (num(), 'seq %s at %s, %s min old' % (dh['seq'], dub(t(dh['generated_at'])), dh['age_min']) if dh else 'not read'))
     sc = wo['scout']
     L.append('%d. Scout first (Haiku, at most five leads, rejection reasons: no_source, denied, harmful_or_out_of_scope, '
-             'duplicate). Carried from %s: %s' % (num(), sc['from_line'] or 'no recent run', sc['leads'] or 'no leads carried'))
+             'duplicate). The orders and handoffs above are not scout leads to judge: build them from the source they name. '
+             'Coverage over caution (r4): search for each story itself (a web search, the outlet it came from, the press '
+             'wires); a credible outlet is a source (تقرير), an official video or press release a primary; no_source only '
+             'after that search, confirmed by the editor. Carried from %s: %s' % (
+                 num(), sc['from_line'] or 'no recent run', sc['leads'] or 'no leads carried'))
     for r in sc['rejections']:
-        L.append('   - last run rejected: %s' % r)
+        bad = NOT_REASONS.search(r)
+        L.append('   - last run rejected: %s%s' % (r, ' <- "%s" is not a reason: re-check and build as تقرير' % bad.group(0)
+                                                   if bad else ''))
     L += ['', '## 5. Next slot']
     L.append('%d. %s' % (num(), wo['next_slot']['line']))
     c = wo['caps']

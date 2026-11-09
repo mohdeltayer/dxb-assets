@@ -3506,3 +3506,27 @@ the publisher's concurrency group, so it never runs during a publish.
    duplicate with nothing new. The board line cites the reason.
 3. Not reasons on their own: age (date it from the first report), relay (trace it to the first report), no trailer
    (build it on stills or the showcase layout). Variety rules decide the order of posts, not whether a story runs.
+
+## Coverage over caution: what counts as a source (Mohammad, 9 Nov 2026 evening; release 2026-11-10 r4)
+
+Case: A Little to the Left's Switch 2 Edition, a shadow drop on 9 Nov, carried by the publisher's press release on
+GamesPress and by Nintendo Everything, and handed to Production 2 as T0. Production 2's Haiku scout dropped it at 15:35
+Dubai as "single outlet" and at 16:35 as "no source found", without reading the handoff: its sweep reads only the newest
+posts on a few newsroom front pages (several answered 403 or 503) and never searched for the story. The same reading
+held Sea of Remnants ("the date is only in the YouTube video"), Skydance and Bit Reactor ("held for a statement").
+Mohammad: "I want to fix the strict rules in production 2 because it's limiting the coverage... It could've checked
+Nintendo Everything to verify."
+1. Orders and handoffs come before the scout and are never its leads to judge: built from the source they name; only
+   Mohammad drops one.
+2. The scout searches for each story itself (a web search for the game and the claim, the outlet the lead came from,
+   the press wires, the publisher's channels). A newsroom front page that does not show it proves nothing.
+3. A primary is the company's site or store page, its official YouTube or X post (an official video is a primary for
+   what it shows and says), a press wire or a filing. One credible outlet is a source: the story runs as تقرير naming
+   the outlet. Lists in `newsroom/sources.md`.
+4. no_source only when that search found neither; the scout proposes it with what it searched, the editor confirms
+   after its own search. No silent holds: a carried lead names what it waits for and is decided by the next run.
+5. Not reasons: single outlet, no primary read, no written primary, the date only in a video, a traced Arabic relay,
+   waiting for a statement, under 48 hours with no Arabic coverage, no trailer, variety. Code: `newsroom/scout_file.py`
+   refuses a rejected handoff, a no_source with a primary or credible link in hand, without `searched` or without the
+   editor's confirmation, and a carried lead without `waiting_for`; the desk audit and the work order flag the phrases
+   above (Production 2 line 9 in `ops/production-setup.md`).

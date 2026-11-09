@@ -284,3 +284,19 @@ a run that has not been updated still reads them.
    decision (built, carried, rejected, ordered), reason (only when rejected: no_source, denied, harmful_or_out_of_scope,
    duplicate), slot, publer_ids_last6 and story_id; then post_this_hour and gap_min. `python3 newsroom/scout_file.py
    check <file>` must print ok before the file is committed with the run's board line.
+9. Coverage over caution (release 2026-11-10 r4; Mohammad, 9 Nov 2026 evening, after A Little to the Left was dropped
+   as "no source found": "It could've checked Nintendo Everything to verify"). a. Orders and handoffs come before the
+   scout and are never its leads to judge: a story Mohammad ordered or the studio handed over is built from the source
+   it names; only Mohammad drops one (a Newsdesk lead with `"handoff"` cannot be rejected). b. The scout searches for
+   each story itself: a web search for the game and the claim, the outlet the lead came from, the press wires
+   (GamesPress, PR Newswire, Business Wire, GlobeNewswire) and the publisher's channels. A newsroom front page that does
+   not show it, or a 403/404/503, proves nothing. c. What counts (newsroom/sources.md): a primary (the company's site,
+   store page, official YouTube or X post, press wire, filing; an official video is a primary for what it shows and
+   says) or one credible outlet (a source: publish as تقرير naming the outlet, «لم تؤكد [الشركة] الخبر بعد»). d.
+   no_source only when that search found neither; the scout proposes it with `"searched"` (3 or more places, one a web
+   search), and the editor runs its own search before confirming (`"confirmed_by": "editor"`; the same for denied).
+   e. No silent holds: a carried lead names `"waiting_for"`, and the next run builds it (as تقرير if the primary is
+   still missing) or rejects it with a listed reason. f. Not reasons: single outlet, no primary read, no written
+   primary, the date only in a video, a traced Arabic relay, waiting for a statement, under 48 hours with no Arabic
+   coverage, no trailer, variety. The desk audit lists these phrases in a rejection or hold as BAD-REJECTION, and the
+   work order marks a previous run's rejection that used one.
