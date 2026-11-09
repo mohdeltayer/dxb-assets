@@ -173,7 +173,12 @@
    ]
   ],
   "sound": "trailer score, one stretch, audio split applied; faster-whisper: one Korean 'subscribe' hallucination at 6.8 to 8.2 s (was 9.2 to 10.6 in v1, a different trailer moment), so music artefact, speech none by transcript; not checked by ear",
-  "facts": "Steam cc=ae 114.99 AED, 8 Aug 2024, Windows only, Arabic interface and subtitles, no Arabic audio: matches screen"
+  "facts": "Steam cc=ae 114.99 AED, 8 Aug 2024, Windows only, Arabic interface and subtitles, no Arabic audio: matches screen",
+  "v3": {
+   "reel": "cards/2026-11/prince-of-persia-lost-crown-steam-arabic-price-reel-v3.mp4",
+   "verdict": "PASS",
+   "note": "chip-only change of v2: chips «دليل» + «بالعربية»; both end at x 910, y 355 to 432, clear of grid corner (x 940 to 1080, y 240 to 380) and the headline (from y 470); blurred frame diff vs v2 only in the chip region at 0 to 1 s, identical at 6, 14, 19 s; audio correlation 1.0 with v2; decode clean; 22.14 s"
+  }
  },
  "director_check": {
   "verdict": "PASS",
