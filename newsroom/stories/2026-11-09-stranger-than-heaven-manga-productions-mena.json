@@ -1,0 +1,114 @@
+{
+ "id": "2026-11-09-stranger-than-heaven-manga-productions-mena",
+ "title": "Manga Productions (Misk) publishes STRANGER THAN HEAVEN (SEGA, RGG Studio) in MENA; release 15 Jan 2027",
+ "game": "STRANGER THAN HEAVEN",
+ "companies": [
+  "Manga Productions",
+  "Misk",
+  "SEGA",
+  "RGG Studio"
+ ],
+ "genre": [
+  "action"
+ ],
+ "category": "announcement",
+ "related": [
+  "2026-10-17-stranger-than-heaven-act-1-kokura-trailer",
+  "2026-10-21-stranger-than-heaven-show-business-hands-on",
+  "2026-09-24-stranger-than-heaven-cast"
+ ],
+ "why": "A Saudi publisher (Misk subsidiary) takes RGG's new game to MENA; Arabic-region regional publishing news",
+ "sources": [
+  {
+   "url": "https://manga.com.sa/news/manga-productions-to-publish-stranger-than-heaven-in-mena-building-on-strategic-partnership-with-sega",
+   "time": "2026-11-09",
+   "role": "primary",
+   "name": "Manga Productions press release, Riyadh 9 Nov 2026"
+  },
+  {
+   "url": "https://store.steampowered.com/app/4260840/?cc=ae",
+   "time": "2026-11-09",
+   "role": "store",
+   "name": "Steam page app 4260840 (cc=ae, read-only): Release Date 14 Jan 2027 (time-zone display; not used), Pre-Purchase 255.00 AED, Deluxe 325.00 AED; Languages: English and 12 more; no Arabic in the Interface, Full Audio or Subtitles columns"
+  },
+  {
+   "url": "https://www.ign.com/videos/stranger-than-heaven-official-act-1-kokura-story-trailer",
+   "time": "2026-10-16",
+   "role": "footage",
+   "name": "Official Act 1: Kokura story trailer, IGN 2560 copy (letterboxed picture rows ~80 to 1150)"
+  }
+ ],
+ "claims": [
+  {
+   "text": "Manga Productions (Misk subsidiary) will publish STRANGER THAN HEAVEN in MENA",
+   "status": "verified",
+   "source": "manga.com.sa primary"
+  },
+  {
+   "text": "Release 15 Jan 2027 on PS5, Xbox Series X|S, XBOX on PC, Xbox Cloud, PC (Steam), Game Pass",
+   "status": "verified",
+   "source": "manga.com.sa primary; SEGA end slate 17 Oct"
+  },
+  {
+   "text": "Steam shows 14 Jan 2027",
+   "status": "verified",
+   "source": "Steam page; a time-zone display, the publisher date 15 Jan is used"
+  },
+  {
+   "text": "Digital pre-orders open at major storefronts",
+   "status": "verified",
+   "source": "manga.com.sa primary"
+  },
+  {
+   "text": "Countries, physical vs digital, Arabic localisation",
+   "status": "unverified",
+   "source": "not stated by the primary or Steam (no Arabic in Steam language list)"
+  },
+  {
+   "text": "Previous partnership Sonic Racing: CrossWorlds published in MENA",
+   "status": "reported",
+   "source": "Manga primary (as stated by the release); not re-checked this run"
+  }
+ ],
+ "status": "building: render dispatched on the server lane",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "رسمي",
+   "format": "trailer",
+   "headline": "مانجا للإنتاج تنشر\nلعبة Stranger Than Heaven",
+   "country": "السعودية"
+  }
+ },
+ "gate": "gate 10:05Z: primary read in full (manga.com.sa, 9 Nov 2026); Steam cc=ae read; 17 Oct chain checked; no denial found",
+ "notes": [
+  "Footage: the 17 Oct IGN 2560 copy (same URL as the Act 1 trailer). Track: trailer's song, 200 to 221 s, speech-free by faster-whisper (speech resumes at 227 s)."
+ ],
+ "first_report": "2026-11-09 (Manga Productions release, Riyadh)",
+ "source_type": "primary",
+ "footage": "Official Act 1 trailer (IGN 2560 copy, 16 Oct), shots 200 to 221 s; no stills; footage tried: IGN 2560 (used, same as 17 Oct)",
+ "lane": "Reel, announcement, trailer template, رسمي, السعودية",
+ "beat": "regional publishing deal, announced today",
+ "ledger_find": {
+  "at": "2026-11-09T10:01:13Z",
+  "words": [
+   "stranger",
+   "manga",
+   "misk"
+  ],
+  "hits": []
+ },
+ "steam_cc_ae": {
+  "read": "2026-11-09 read-only",
+  "price_aed": "255.00 (Pre-Purchase); Deluxe 325.00",
+  "arabic_interface_or_subtitles": "no",
+  "release_shown": "14 Jan 2027 (time-zone display)",
+  "publisher_release": "15 Jan 2027 (used)"
+ },
+ "precheck": {
+  "formats_check_trailer": "ok",
+  "buildgate": "ok",
+  "render_job_check": "ok, clip 23.2 s (after focus)"
+ },
+ "sound": "our bed (neon): Act 1 trailer sung lyrics throughout (speechcheck, no gap over 12 s); Show Business overview trailer longest wordless gap 7.0 s (no 26 s stretch)"
+}
