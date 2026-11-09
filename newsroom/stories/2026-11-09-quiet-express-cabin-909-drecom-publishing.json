@@ -103,5 +103,13 @@
   "ig_comment": "المصدر: بيان دريكوم، 9 نوفمبر 2026، وصفحة اللعبة على Steam.",
   "x_reply": "المصدر: بيان دريكوم https://prtimes.jp/main/html/rd/p/000000644.000080650.html"
  },
- "sound_reason": "the trailer is narrated in English from 1.0 s (in-fiction announcer, about 50 words), the speech check refuses any stretch"
+ "sound_reason": "the trailer is narrated in English from 1.0 s (in-fiction announcer, about 50 words), the speech check refuses any stretch",
+ "director_qa": {
+  "v4": {
+   "reel": "cards/2026-11/quiet-express-cabin-909-drecom-publishing-reel-v4.mp4",
+   "verdict": "PASS",
+   "at": "2026-11-09",
+   "note": "v4 = v3 with shot 7 trimmed (52.5 s for 1.3 s). Checked: no blocky or glitch frames at Reel 17 to 21 s (dense strip); no black 'Open' or 'Buy cheesecake' frames; frames before 18.75 s identical to v3, later frames shifted 0.6 s as expected; decode clean; 26.25 s; last 2 s a clean picture (train interior) into the end card; lines: L1 «أعلنت دريكوم (Drecom) أنها تتولى نشر هذه اللعبة», L2 «يبحث اللاعب في قطار يعبر قارة عن غرفة لا وجود لها», L3 «تنتهي أيام الرحلة السبعة بحادث فيعيدها اللاعب مرة بعد مرة», L4 «كما تتوفر نسخة تجريبية على Steam». Sound: OUR BED; reason on file: English announcer narration from 1.0 s, speech check refuses the stretch (in-fiction narration, not the news); transcript: 0.0-24.0  Music | 24.0-26.0  Sound Effects | 26.0-28.0  You; not checked by ear. Facts match Drecom's release (PR Times 9 Nov 2026): Steam, 2027, price undecided, demo, languages JA/EN/ZH-S/ZH-T/KO (no Arabic), 7-day loop ending in an accident, passengers, Room 909. Texts: IG fixes applied per director review."
+  }
+ }
 }
