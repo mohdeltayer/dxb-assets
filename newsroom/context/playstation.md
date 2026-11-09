@@ -33,3 +33,4 @@ without checking them against the story's own primary.
 - 2026-11-09 · no chip · Sony announces Japan-only PlayStation Portal Player Midnight Black, 39,980 yen, 10 Dec (`2026-11-09-playstation-portal-japan-midnight-black`)
 - 2026-11-09 · رسمي · trailer · GTA VI pre-load begins 10 November (PS5 at midnight local, Xbox at midnight GMT per outlets; launch 19 November) (`2026-11-09-gta-vi-preload-november-10`)
 - 2026-11-09 · no chip · Sea of Remnants closed beta 4 to 18 Dec 2026 (pre-download 1 Dec), PC, PS5, Xbox Series X, mobile, per Game*Spark from NetEase (`2026-11-09-sea-of-remnants-closed-beta-december`)
+- 2026-11-09 · رسمي · split · GTA VI: The Festival, Rockstar and PlayStation launch concert in Miami on 21 Nov (`2026-11-09-gta-vi-the-festival-miami-november-21`)

@@ -98,9 +98,14 @@
  "metrics": {},
  "ledger_find": "festival: no GTA hit",
  "lane": "news",
- "director_check": "round 2 PASS v3 (director-sonnet); frame-0 credit is the build-queue item",
+ "director_check": {
+  "verdict": "PASS",
+  "round": 2,
+  "by": "director-sonnet",
+  "note": "v3: beach crowd and VICE fragment removed; frame-0 credit is the build-queue item"
+ },
  "published": {
-  "at": "2026-11-09T18:39:30Z",
+  "at": "2026-11-09T18:39:46Z",
   "commitment": "gta-vi-festival-20261109-1830z",
   "links": [
    "https://www.instagram.com/reel/Dfh-1eEkg8J/",
