@@ -31,3 +31,4 @@ without checking them against the story's own primary.
 - 2026-11-08 · أرقام · clipcard · «الطريق إلى GTA VI» episode 1: the series in Take-Two's own numbers (GTA V over 225 million sold in; 13 years since GTA V against 5 between GTA IV and GTA V) (`2026-11-08-gta-vi-road-ep1-why-it-matters`)
 - 2026-11-08 · no chip · Take-Two's own sold-in figures: Grand Theft Auto series over 470M, GTA V over 230M, Red Dead Redemption 2 more than 85M (10-Q, quarter ended 30 Jun 2026) (`2026-11-08-take-two-gta-rdr2-sold-in-june-2026`)
 - 2026-11-05 · no chip · GTA VI code-in-box: Saudi and UAE codes only redeem on accounts registered to that country (`2026-11-05-gta-vi-code-in-box-saudi-uae-region-locked`)
+- 2026-11-09 · رسمي · trailer · GTA VI pre-load begins 10 November (PS5 at midnight local, Xbox at midnight GMT per outlets; launch 19 November) (`2026-11-09-gta-vi-preload-november-10`)
