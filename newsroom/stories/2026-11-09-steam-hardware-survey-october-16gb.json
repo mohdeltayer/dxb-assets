@@ -1,0 +1,101 @@
+{
+ "id": "2026-11-09-steam-hardware-survey-october-16gb",
+ "title": "Steam Hardware Survey, October 2026: 16 GB RAM back on top (41.42%), 32 GB down to 37.06% (Valve)",
+ "game": "Steam (Valve)",
+ "companies": [
+  "Valve"
+ ],
+ "genre": [
+  "industry/hardware"
+ ],
+ "category": "numbers",
+ "priority": "🟢",
+ "status": "building (Production 2, this chat, 9 Nov 15:40Z)",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Valve, Steam Hardware & Software Survey: October 2026 (combined)",
+   "url": "https://store.steampowered.com/hwsurvey/?platform=combined",
+   "time": "read 2026-11-09 15:18Z"
+  },
+  {
+   "role": "secondary",
+   "name": "Guru3D, 3 Nov 2026 15:55Z",
+   "url": "https://www.guru3d.com/story/steam-hardware-survey-october-2026-16-gb-ram-regains-lead-over-32-gb/"
+  }
+ ],
+ "first_report": "Valve's survey page, published early November (earliest outlet found: Guru3D 2026-11-03 15:55Z). Six days old; the honest-label rule of 9 Nov: age alone is not a reason, the text dates it (مطلع نوفمبر). Mohammad named the story at 19:15 Dubai.",
+ "source_type": "primary",
+ "footage": "Valve's own Steam store trailers: Steam Machine (app 4165910, trailer 275597255, 1920x1080, 5.4 Mbps, no audio, decode clean) and Steam Deck 'Available Now' (app 1675200, trailer 1749094849, 1920x1080, 5.1 Mbps, decode clean). Illustration only: the figures come from the survey page.",
+ "lane": "Digital Lounge",
+ "beat": "sales or numbers",
+ "platform": "PC",
+ "claims": [
+  {
+   "text": "16 GB 41.42%, +3.60",
+   "status": "read on the primary"
+  },
+  {
+   "text": "32 GB 37.06%, -5.16 (so 42.22% and first in September)",
+   "status": "read on the primary (change column)"
+  },
+  {
+   "text": "Simplified Chinese 21.98%, -9.41; English 39.04%, +4.84",
+   "status": "read on the primary"
+  },
+  {
+   "text": "Linux 3.95%, +0.90; Windows 11 72.51%",
+   "status": "read on the primary"
+  },
+  {
+   "text": "Participation in the survey is optional, and anonymous",
+   "status": "read on the primary"
+  }
+ ],
+ "gate": "gate 15:20Z: Valve's survey page read in full (combined platform); no update or correction note; outlets agree on the figures (Guru3D, Inven Global, TweakTown). Exit A for the figures: chip أرقام. No cause stated by Valve; the text gives the sample shift Valve's own page shows and no reason of ours.",
+ "angle": {
+  "hook": "16 GB is back on top of Steam's RAM chart, one month after 32 GB took the lead",
+  "why_now": "Valve's October survey, published early November; not yet carried in Arabic by the outlets the scout read",
+  "what_it_means_here": "the most common gaming PC on Steam still has 16 GB; and the survey's sample moved (fewer Simplified Chinese respondents), so a one-month swing is not a market trend",
+  "payoff": "Linux at 3.95% of Steam machines"
+ },
+ "story_items": {
+  "figure": "41.42% (16 GB), 37.06% (32 GB)",
+  "period": "October 2026",
+  "source": "Valve, Steam Hardware & Software Survey",
+  "comparison": "September (from Valve's change column: 16 GB 37.82, 32 GB 42.22)"
+ },
+ "sensitive": "none",
+ "why": "The biggest single swing in the RAM chart this year, a number every PC player can place themselves in.",
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "أرقام",
+   "format": "clipcard",
+   "skin": "house",
+   "theme": "gold",
+   "style": "bold",
+   "sound": "our bed (Steam Machine trailer has no audio; numbers Reel)"
+  }
+ },
+ "versions": [
+  {
+   "v": 1,
+   "at": "2026-11-09T15:40:00Z",
+   "change": "first draft"
+  }
+ ],
+ "posts": [],
+ "corrections": [],
+ "metrics": [],
+ "ledger_find": {
+  "at": "2026-11-09T15:24:32Z",
+  "words": [
+   "steam",
+   "hardware",
+   "survey",
+   "ram"
+  ],
+  "hits": []
+ }
+}
