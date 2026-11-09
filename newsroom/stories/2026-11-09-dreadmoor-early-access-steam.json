@@ -192,6 +192,38 @@
     "fix_rounds": "1 of 2",
     "preview_first_line": "FIX before preview: the Dreadmoor Reel (v1) has a cut-off 'FISH STOCK' sign in the merchants shot, no credit for its first 2 seconds, and a sack shot under a creatures line; re-render as v2 before it reaches you.",
     "checked_at": "2026-11-09",
-    "checked_by": "director (independent, Haiku 5.5)"
+    "checked_by": "director (independent, Haiku 5.5)",
+    "round_2": {
+      "reel": "cards/2026-11/dreadmoor-early-access-steam-reel-v2.mp4",
+      "render_commit": "9872422",
+      "job": "cdf131b:jobs/live/dreadmoor-early-access-steam-v2.json",
+      "verdict": "FIX",
+      "fix_round": "2 of 2",
+      "changed_shots": [
+        {
+          "shot": "54.8 merchants (about 11.0 to 14.9 s output)",
+          "cut_text": "FIX: the 'FISH STO' sign is still at the bottom-left edge of the frame at about 10.8 to 11.0 s, in the shot before the merchant face and sack frames, which are clean. Start the shot at about 11.2 s or trim the previous shot's end so the sign is out of frame.",
+          "nothing_graphic": "pass",
+          "reason": "pass, merchant creatures under the line about hunting",
+          "verdict": "FIX"
+        },
+        {
+          "shot": "58.8 creature (about 14.9 to 18.8 s output)",
+          "fits_line": "FIX: the creatures line 'تواجه وحوشًا في الماء وعلى اليابسة' runs at 14.9 to 18.4 s over a clock, then a moonlit dock and a moored boat. No creature is on screen under it; the creature frames (about 14.2 to 14.7 s) sit under the previous line. Check the shot's start and the line's timing against the ledger, or move the creature frame under this line.",
+          "nothing_graphic": "pass, nothing gory seen",
+          "verdict": "FIX"
+        }
+      ],
+      "carried_over": {
+        "credit_0_2s": "not fixed: reel.py CREDIT_AT, a known build item (noted, not failed, per the coordinator)",
+        "unchanged_shots": "41.0, 44.0, 46.3, 48.6, 60.0 unchanged from v1: PASS"
+      },
+      "speech": "speechcheck: none",
+      "audio_split": "applied: music 99.1%, leak 0.1%, 7 effects shots, clean (render-times, 9 Nov 12:57Z, 310 s on the runner)",
+      "lifeless": "score 0.0, report-only",
+      "preview_first_line": "FIX before preview (v2): the merchants shot still shows the FISH STO sign at its left edge for about 0.2 s before the cut, and the creatures line runs over a clock and a dock with no creature in frame; v3 before it reaches you.",
+      "checked_at": "2026-11-09",
+      "checked_by": "director (independent, Haiku 5.5)"
+    }
   }
 }
