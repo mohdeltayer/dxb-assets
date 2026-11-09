@@ -32,3 +32,6 @@ without checking them against the story's own primary.
 - 2026-09-25 · no chip · Ubisoft once pitched Nintendo a Zelda game. Nintendo asked for Ganondorf in the lead, then killed it anyway. (`2026-09-25-ubisoft-zelda-goliath`)
 
 ## Log (one line per published post, added by presubmit.py published)
+- 2026-11-09 · no chip · Ocarina of Time on Switch 2: critics average 96 on Metacritic (`ocarina-of-time-switch-2-review-scores-nov-6`)
+- 2026-11-08 · no chip · Ocarina of Time (Switch 2): Metacritic user score 9.6 from 5,668 ratings beside the critics' Metascore 96 (read 15:35 Dubai) (`2026-11-08-ocarina-of-time-metacritic-user-score`)
+- 2026-11-08 · no chip · Ocarina of Time (Switch 2): second-biggest Zelda launch in UK history by physical sales, per Christopher Dring (The Game Business), NielsenIQ data (`2026-11-08-ocarina-of-time-uk-launch-dring`)

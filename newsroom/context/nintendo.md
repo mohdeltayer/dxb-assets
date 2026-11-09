@@ -31,3 +31,10 @@ without checking them against the story's own primary.
 - 2026-10-19 · no chip · Metacritic's five highest-rated games of all time (Ocarina of Time 99 first) (`2026-10-19-metacritic-highest-rated-games`)
 
 ## Log (one line per published post, added by presubmit.py published)
+- 2026-11-09 · no chip · Nintendo: Switch 2 cumulative sell-through passes 25 million (end of October) (`switch-2-25-million-sell-through-nintendo-nov-6`)
+- 2026-11-09 · no chip · Nintendo does not rule out hardware price revision if cost rises cannot be absorbed (Furukawa Q&A) (`nintendo-hardware-price-revision-possible-nov-6`)
+- 2026-11-08 · no chip · Nintendo's five best-selling hardware of all time, by Nintendo's own lifetime figures (as of 30 Sep 2026) (`2026-11-08-nintendo-best-selling-hardware-top-five`)
+- 2026-11-08 · no chip · Nintendo's best-selling games, top five across the games on Nintendo's own IR sales pages (Wii Sports leads, 82.79M) (`2026-11-08-nintendo-best-selling-games-top-five`)
+- 2026-11-08 · no chip · Ocarina of Time (Switch 2): Metacritic user score 9.6 from 5,668 ratings beside the critics' Metascore 96 (read 15:35 Dubai) (`2026-11-08-ocarina-of-time-metacritic-user-score`)
+- 2026-11-08 · no chip · Ocarina of Time (Switch 2): second-biggest Zelda launch in UK history by physical sales, per Christopher Dring (The Game Business), NielsenIQ data (`2026-11-08-ocarina-of-time-uk-launch-dring`)
+- 2026-11-09 · no chip · Rumour: Pokemon Winds and Waves were planned for November 2026 and moved to November 2027 (CentroLeaks via MyNintendoNews) (`2026-11-09-pokemon-winds-waves-delay-rumour`)

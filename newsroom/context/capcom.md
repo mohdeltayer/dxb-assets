@@ -28,3 +28,4 @@ without checking them against the story's own primary.
 - 2026-10-03 · no chip · Capcom REX: RE Engine upgrades toward an engine AI can work with; ties to the RAM shortage (`2026-10-03-capcom-rex`)
 
 ## Log (one line per published post, added by presubmit.py published)
+- 2026-11-08 · no chip · Capcom's Platinum Titles: the five biggest by units, Monster Hunter: World first (Capcom IR, as of June 30, 2026) (`2026-11-08-capcom-platinum-titles-top-five`)

@@ -28,3 +28,6 @@ without checking them against the story's own primary.
 - 2026-10-23 · no chip · Metro Redux free next-gen update out on PC (22 Oct); PS5 and Xbox Series 29 Oct (`2026-10-23-metro-redux-next-gen-update-out-pc`)
 
 ## Log (one line per published post, added by presubmit.py published)
+- 2026-11-09 · no chip · PlayStation.com pages for Ghost of Yotei and Until Dawn 2 now carry a 'PlayStation Exclusive' badge (`playstation-exclusive-badge-ghost-of-yotei-until-dawn-2-nov-7`)
+- 2026-11-09 · no chip · Sony delays the Pulse Elevate wireless speakers (due 12 Nov) over a production issue (`sony-pulse-elevate-speakers-delay-nov-7`)
+- 2026-11-09 · no chip · Sony announces Japan-only PlayStation Portal Player Midnight Black, 39,980 yen, 10 Dec (`2026-11-09-playstation-portal-japan-midnight-black`)

@@ -12,3 +12,4 @@ without checking them against the story's own primary.
 - 2026-10-28 · no chip · Five official Halloween events running this week (Pokémon GO, Roblox, CoD Mobile, Apex Legends, Overwatch) (`2026-10-28-halloween-events-oct-28`)
 
 ## Log (one line per published post, added by presubmit.py published)
+- 2026-11-09 · no chip · Apex Legends x Godzilla event: Storm Point takeover 10 Nov to 1 Dec (EA / Respawn) (`apex-legends-godzilla-event-november-10-nov-7`)

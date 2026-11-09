@@ -25,3 +25,6 @@ without checking them against the story's own primary.
 - 2026-09-30 · no chip · كشفت مدونة Call of Duty الرسمية عن نمط Collateral الجديد في Call of Duty: Modern Warfare 4، ويتناوب فيه الفريقان على مها (`2026-09-30-mw4-collateral`)
 
 ## Log (one line per published post, added by presubmit.py published)
+- 2026-11-09 · رسمي · trailer · Modern Warfare 4 DMZ free trial until 11 Nov (Activision) (`mw4-dmz-free-trial-until-nov-11`)
+- 2026-11-08 · في مثل هذا اليوم · stills · Call of Duty: Modern Warfare 3 turns 15 (8 Nov 2011) (`2026-11-08-call-of-duty-modern-warfare-3-turns-15`)
+- 2026-11-08 · تقرير · split · Famitsu gives Call of Duty: Modern Warfare 4 36/40 (9/9/9/9) (`2026-11-08-famitsu-cod-mw4-36-40`)

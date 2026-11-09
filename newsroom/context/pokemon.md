@@ -17,3 +17,4 @@ without checking them against the story's own primary.
 - 2026-09-27 · no chip · تسريبات جديدة من Pokémon Winds وPokémon Waves. (`2026-09-27-pokemon-winds-waves-leak`)
 
 ## Log (one line per published post, added by presubmit.py published)
+- 2026-11-09 · no chip · Rumour: Pokemon Winds and Waves were planned for November 2026 and moved to November 2027 (CentroLeaks via MyNintendoNews) (`2026-11-09-pokemon-winds-waves-delay-rumour`)

@@ -14,3 +14,4 @@ without checking them against the story's own primary.
 - 2026-10-17 · no chip · World of Warcraft: Forever free stress test open to all on 19 Oct; characters wiped; launch 4 Nov (`2026-10-17-world-of-warcraft-forever-free-stress-test`)
 
 ## Log (one line per published post, added by presubmit.py published)
+- 2026-11-05 · متوفر الآن · trailer · WoW Forever now live worldwide (`2026-11-05-wow-forever-now-live-worldwide`)

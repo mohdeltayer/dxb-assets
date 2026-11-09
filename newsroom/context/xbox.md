@@ -28,3 +28,4 @@ without checking them against the story's own primary.
 - 2026-10-23 · تقرير · trailer · Le Monde: Microsoft wants to close Arkane Lyon, 217 jobs threatened; Blade nearing completion per union (`2026-10-23-arkane-lyon-closure-report`)
 
 ## Log (one line per published post, added by presubmit.py published)
+- 2026-11-08 · رسمي · stills · Eight games join Game Pass Essential on 15 Nov 2026 (Xbox's 25th anniversary) (`2026-11-08-game-pass-essential-xbox-25th-nov-15`)
