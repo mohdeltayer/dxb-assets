@@ -41,12 +41,6 @@
     ],
     [
       "dq-gameplay.mp4",
-      30.0,
-      2.0,
-      0.5
-    ],
-    [
-      "dq-gameplay.mp4",
       32.0,
       2.7,
       0.5
@@ -55,6 +49,12 @@
       "dq-gameplay.mp4",
       34.5,
       2.8,
+      0.5
+    ],
+    [
+      "dq-gameplay.mp4",
+      36.0,
+      2.6,
       0.5
     ],
     [
@@ -160,6 +160,6 @@
     "PICTURE: not the same as last 5 Reels": "yes: no earlier Reel on this trailer in the ledger; picture: Announce trailer, 8 to 30 s",
     "CHECKS: decision log": "yes: decision_log in the job"
   },
-  "decision_log": "v2 (director FIX 7b2a6b0): shot 1 from src 10.8 (no logo slate on frame 0); battle-text shot at 20.0 dropped; snow at src 22.4 (1.8 s; purple fire from about 24.0, so 23.2 would leave under 1 s clean); STORY banner at 28.0 cut; tavern 30.0 added for line 2's reading time, and 32.0 trimmed by 0.3 s (2.7 s), so the white transition is out; village 34.5 (bright, 2.8 s) and bridge 47.0 (bright, 2.8 s) carry line 3; close is red hall 54.0 (2.8 s, full brightness, no line); fountain 57.0 dropped (dims to black). Sound: Announce music stretch 8.0 to 24.0 s, unchanged.",
+  "decision_log": "v2 (director FIX 7b2a6b0): shot 1 from src 10.8 (no logo slate on frame 0); battle-text shot at 20.0 dropped; snow at src 22.4 (1.8 s; purple fire from about 24.0, so 23.2 would leave under 1 s clean); STORY banner at 28.0 cut; tavern 30.0 added for line 2's reading time, and 32.0 trimmed by 0.3 s (2.7 s), so the white transition is out; village 34.5 (bright, 2.8 s) and bridge 47.0 (bright, 2.8 s) carry line 3; close is red hall 54.0 (2.8 s, full brightness, no line); fountain 57.0 dropped (dims to black). Sound: Announce music stretch 8.0 to 24.0 s, unchanged. v3 (decode smear on v2 at reel 8.13 to 8.50 s, peak 23.7, in the tavern shot src 30.0 (about 31.1 to 31.5 s)): tavern 30.0 removed; village 36.0 (2.6 s, clean through 38.6 s, t39 is dark) takes its place after 34.5; shot order is 10.8, 14.0, 22.4, 32.0, 34.5, 36.0, 47.0, 54.0. Line 2 now on shots 3 to 5, line 3 on 6 to 7, close is red hall 54.0.",
   "note": "Japanese PlayStation Blog, Portal post of 9 Nov 2026 (the catalog paragraph): 今月11月 for Dragon Quest III (そして伝説へ... = the HD-2D Remake) and 12月 for Dynasty Warriors: Origins. Editor decision (a): built on the primary's wording, no day; the Denfami 17 November is not used; tiers and platforms out. Footage: Steam Gameplay trailer (ESRB EN Gameplay, app 2701660); its narration rules out its own sound under the lines. Sound: Announce trailer music, one stretch, speech-free."
 }
