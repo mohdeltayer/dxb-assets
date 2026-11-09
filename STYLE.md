@@ -604,6 +604,10 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   read in 15 min.
 - Pipeline: desk/pipeline.json by Production 2's record keeper (pipeline.py set) on each state change; mirror every 15 minutes.
 
+## Showcase redesign (Mohammad, 9 Nov 2026 evening)
+- Showcase layout: the trailer at full width (1080x608) on the same footage enlarged, blurred and dimmed behind it;
+  one-line headline (a two-line one falls back to the fitted box). Replaces the flat ground for the showcase only.
+
 ## Rules into the gate (release 2026-11-10)
 - Every card on footage or art; "ground": "rotate" refused; card-led jobs carry ground_footage or ground_still.
 - Evergreen: chip دليل, no «ليست خبرًا جديدًا» family (newsroom/names-ar.md §3); intent refuses two in a row and under 3 h by day.

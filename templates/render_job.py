@@ -512,7 +512,10 @@ def textcheck(job):
                         hs=job.get('head_size', reel.HEAD_SIZE), skin=skin)
         show = showcase_of(job)                # the showcase draws its lines, facts and credits in the bottom band
         if show:
-            lift = reel.showcase_box(reel.HEAD_GEOM['end'], bool(job.get('strip')))[4]
+            try:
+                lift = reel.showcase_box(reel.HEAD_GEOM['end'], bool(job.get('strip')), fit=job.get('showcase_fit') or 'wide')[4]
+            except ValueError:
+                lift = reel.showcase_box(reel.HEAD_GEOM['end'], bool(job.get('strip')))[4]
         for a, b, texts in job['lines']:
             for x in texts:
                 text, kw = (x, {}) if isinstance(x, str) else (x[0], x[1] if len(x) > 1 else {})
@@ -880,7 +883,7 @@ def run(job, draft=False):
                      blocky_ok=job.get('blocky_ok'), apart=DP_apart, profile=profile_of(job),
                      reveal=job.get('reveal'),   # word-by-word reveal on the key line (story-beat twist, 28 Oct 2026)
                      page=page_moves(job, _starts(job)[0]) if job.get('page_motion') else None,   # storybook (B8)
-                     showcase=showcase_of(job), showcase_fit=job.get('showcase_fit', 'fit'), showcase_bg=job.get('showcase_bg', 'flat'))   # trailer at its own width between the bands (9 Nov 2026)
+                     showcase=showcase_of(job), showcase_fit=job.get('showcase_fit'), showcase_bg=job.get('showcase_bg', 'blur'))   # trailer at its own width between the bands (9 Nov 2026)
     video = done[0] if isinstance(done, (list, tuple)) else done
     if job.get('persist') and not draft:
         persist_overlay(job, video, out)

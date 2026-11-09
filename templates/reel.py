@@ -1925,7 +1925,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
          lowres_ok=False, read_check=True, track=None, draft=False, head_size=HEAD_SIZE, cut=False, credits=None, strip=None,
          products=None, template=None, tribute=False, reveal=None, profile=None, pace_ok=False, skin=None,
-         person=None, blocky_ok=None, apart=None, page=None, showcase=None, showcase_fit='fit', showcase_bg='flat'):
+         person=None, blocky_ok=None, apart=None, page=None, showcase=None, showcase_fit=None, showcase_bg='blur'):
     """`showcase`: the reason this Reel takes the showcase layout (showcase_reason; see SHOWCASE above): the footage
     uncropped in a box between the bands, the headline up for the whole Reel, the lines, `strip` (as key facts) and the
     credits as text in the bottom band, the lines back to back so no band is ever empty. Cards, products, person
@@ -2049,7 +2049,16 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
                 raise ValueError('showcase: the bottom band carries the story lines; a Reel with no lines would leave it empty')
             head_layer(headline, label, f'{tmp}/probe.png', source, date, country, hs=head_size, hst=head_size + 20,
                        theme=theme, meta_path=f'{tmp}/probe-meta.png', skin=skin)
-            bx, by, bw, bh, lift = showcase_box(HEAD_GEOM['end'], bool(strip), fit=showcase_fit)
+            try:                               # Mohammad, 9 Nov 2026 evening: wide is the default; a two-line headline
+                fit_used = showcase_fit or 'wide'   # that leaves no room for it falls back to the fitted box
+                bx, by, bw, bh, lift = showcase_box(HEAD_GEOM['end'], bool(strip), fit=fit_used)
+            except ValueError:
+                if showcase_fit:
+                    raise
+                fit_used = 'fit'
+                bx, by, bw, bh, lift = showcase_box(HEAD_GEOM['end'], bool(strip), fit='fit')
+                print('showcase: the headline needs two lines, so the fitted box (cut it to one line for the wide one)', flush=True)
+            showcase_fit = fit_used
             SHOWCASE = (bx, by, bw, bh)
             global SHOW_BG
             SHOW_BG = 'blur' if showcase_bg == 'blur' else 'flat'
