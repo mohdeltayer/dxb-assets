@@ -1,0 +1,141 @@
+{
+ "id": "2026-11-09-assassins-creed-mirage-baghdad-ninth-century",
+ "title": "Assassin's Creed Mirage is set in ninth-century Baghdad (evergreen)",
+ "game": "Assassin's Creed Mirage",
+ "companies": [
+  "Ubisoft",
+  "Ubisoft Bordeaux"
+ ],
+ "genre": [
+  "open world"
+ ],
+ "category": "evergreen",
+ "kind": "evergreen",
+ "evergreen": true,
+ "priority": "🟡",
+ "status": "shortlisted: bank piece, building",
+ "sensitive": "Setting stated as the publisher states it (ninth-century Baghdad, Abbasid Caliphate, Golden Age of Baghdad); no religious or political commentary; footage without violence",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Ubisoft Assassin's Creed Mirage page",
+   "url": "https://www.ubisoft.com/en-us/game/assassins-creed/mirage",
+   "who": "ninth-century Baghdad per Steam/Ubisoft, four districts (Karkh, Round City), historical figures of the Golden Age of Baghdad, platforms",
+   "kind": "primary",
+   "read": "2026-11-09T06:55Z"
+  },
+  {
+   "role": "primary",
+   "name": "Ubisoft announcement 'Assassin's Creed Mirage Takes Players to Ninth Century Baghdad'",
+   "url": "https://www.ubisoft.com/en-us/game/assassins-creed/news/X57crX0zRRYloBRjj18Pa/assassins-creed-mirage-takes-players-to-ninth-century-baghdad",
+   "kind": "primary",
+   "read": "2026-11-09T06:58Z"
+  },
+  {
+   "role": "primary",
+   "name": "Steam store page (appdetails 3035570)",
+   "url": "https://store.steampowered.com/app/3035570",
+   "who": "Ubisoft Bordeaux, publisher Ubisoft, release Oct 17 2024 on Steam, Arabic listed, Valley of Memory (AlUla)",
+   "kind": "primary",
+   "read": "2026-11-09T06:50Z"
+  }
+ ],
+ "first_report": "Setting announced by Ubisoft in 2022 and detailed in its 2023 announcement; evergreen, no date. The year 861 AD is not stated on any Ubisoft page read, so it is not used.",
+ "source_type": "primary",
+ "footage": "Steam Gameplay Trailer (app 3035570), 1920x1080 60 fps 5.76 Mbps, decode clean; also tried: Steam Free Major Update Trailer (20 MB, not used). Ubisoft's World Trailer is on YouTube only (not fetched: sign-in rule).",
+ "lane": "Digital Lounge only (X, Instagram, Threads); DXB-KNIGHT on hold",
+ "beat": "evergreen: setting",
+ "angle": {
+  "hook": "A major Ubisoft game is set in ninth-century Baghdad, with districts like Karkh and the Round City",
+  "why_now": "evergreen, no date",
+  "what_it_means_here": "Arab players walk through a recreation of the Abbasid capital, and the game lists Arabic support on Steam",
+  "payoff": "the districts and the Golden Age of Baghdad as Ubisoft describes them, and Arabic support"
+ },
+ "claims": [
+  {
+   "text": "Set in ninth-century Baghdad",
+   "status": "verified",
+   "source": "Ubisoft announcement, Steam"
+  },
+  {
+   "text": "Four districts from industrial Karkh to the gardens of the Round City",
+   "status": "verified",
+   "source": "Ubisoft Mirage page"
+  },
+  {
+   "text": "Historical figures of the Golden Age of Baghdad",
+   "status": "verified",
+   "source": "Ubisoft Mirage page"
+  },
+  {
+   "text": "Arabic listed on Steam",
+   "status": "verified",
+   "source": "Steam appdetails"
+  },
+  {
+   "text": "Year 861",
+   "status": "unverified: not on a Ubisoft primary",
+   "source": "none"
+  }
+ ],
+ "why": "Evergreen bank piece with a regional hook.",
+ "versions": [],
+ "posts": [],
+ "corrections": [],
+ "metrics": [],
+ "pre_render": {
+  "ledger_find": {
+   "cmd": "ledger.py find assassin creed mirage baghdad --record <id>",
+   "at": "2026-11-09 ~06:50Z",
+   "result": "no match: new story; recorded, 0 other hits"
+  },
+  "context_match": {
+   "cmd": "context.py match <id>",
+   "result": "no output beyond header (no backstory page)"
+  },
+  "whatsnew": {
+   "cmd": "whatsnew.py packet <id>",
+   "result": "new sentences from Ubisoft Mirage page: Valley of Memory/AlUla free update, Basim street thief; setting and districts sentences matched as primary"
+  },
+  "footage_decode": {
+   "cmd": "ffmpeg -v error -i ac-mirage-gameplay.mp4 -f null -",
+   "result": "decode clean (1920x1080 60fps, 5.76 Mbps, 114.3 s)"
+  },
+  "buildgate": {
+   "cmd": "buildgate.py jobs/live/assassins-creed-mirage-baghdad-ninth-century.json",
+   "result": "build gate: ok"
+  },
+  "render_job_check": {
+   "cmd": "render_job.py check jobs/live/assassins-creed-mirage-baghdad-ninth-century.json",
+   "result": "build gate: ok (server lane, story 2026-11-09-assassins-creed-mirage-baghdad-ninth-century)\nspeech check: ac-mirage-gameplay.mp4 not in uploads, skipped\nsfx cue: end jingle: end card (graphic)\nsfx: 5 shot(s) off the track's own seconds (shot 1 ac-mirage-gameplay.mp4 @27.0 hears 24.36 s (+2.6 s); shot 2 ac-mirage-gameplay.mp4 @30.5 hears 28.52 s (+2.0 s); shot 3 ac-mirage-gameplay.mp4 @36.5 hears 32.98 s (+3.5 s); shot 4 ac-mirage-gameplay.mp4 @40.5 hears 37.54 s (+3.0 s); shot 5 ac-mirage-gameplay.mp4 @44.8 hears 41.9 s (+2.9 s)); the audio split must apply, or the runner stops (guard)\nassassins-creed-mirage-baghdad-ninth-century ok, clip 24.3 s"
+  },
+  "prerender": {
+   "result": "not run: footage not local (runner fetches the Steam trailer)"
+  }
+ },
+ "ledger_find": {
+  "at": "2026-11-09T06:47:30Z",
+  "words": [
+   "assassin",
+   "creed",
+   "mirage",
+   "baghdad"
+  ],
+  "hits": []
+ },
+ "whats_new": {
+  "read_at": "2026-11-09T06:48:01Z",
+  "url": "https://www.ubisoft.com/en-us/game/assassins-creed/mirage",
+  "matcher": "word overlap",
+  "sentences": 25,
+  "counts": {
+   "new": 25,
+   "known": 0,
+   "posted": 0
+  },
+  "dates_found": [],
+  "closest_stories": [],
+  "packet": "/root/.cache/dxb-packets/2026-11-09-assassins-creed-mirage-baghdad-ninth-century.md",
+  "context_pages": []
+ }
+}
