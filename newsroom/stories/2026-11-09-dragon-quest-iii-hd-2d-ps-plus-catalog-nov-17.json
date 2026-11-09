@@ -258,6 +258,69 @@
         "Cut about 1.6 s: trim shots 5 and 6 by about 0.8 s each (or drop a 2.7 s hold)"
       ],
       "preview_first_line": "FIX before preview: no slate on the cover now, but the credit is still missing for the first 2.5 s, the snow party is under the line and strip, and the Reel is 1.6 s over the target. Sound is the trailer's music, no speech."
+    },
+    "round3": {
+      "reel": "cards/2026-11/dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-reel-v3.mp4 (472afbd)",
+      "checked_at": "2026-11-09",
+      "method": "v3 strip, sheet, dense; 1 s frame grid 0.2 to 19.2 s; full-res frames at 9.5, 12.5, 14.2, 16.2, 17.8; speechcheck: none; ffprobe 21.89 s",
+      "rows": [
+        {
+          "shot": "1 forest (src 10.8), first frame",
+          "time": "0.0-3.4 s",
+          "verdict": "PASS",
+          "note": "no slate, headline and chip readable at 3:4; credit absent until about 2.2 s (known reel.py build item, noted, not failed)"
+        },
+        {
+          "shot": "2 ruin hall (src 14.0)",
+          "time": "3.4-6.4 s",
+          "verdict": "PASS",
+          "note": "clean, line 1 on it"
+        },
+        {
+          "shot": "3 bedroom (src 32.0)",
+          "time": "6.4-9.1 s",
+          "verdict": "PASS",
+          "note": "clean interior, line 2 starts on the tavern, subject clear"
+        },
+        {
+          "shot": "4 tavern exterior (src 34.5)",
+          "time": "9.1-11.9 s",
+          "verdict": "PASS",
+          "note": "line 2 sits on the lower grass, the party is above it; tiny figure touches the line top at 9.5 s, minor"
+        },
+        {
+          "shot": "5 village square (src 36.0)",
+          "time": "11.9-14.5 s",
+          "verdict": "FIX-NOTE",
+          "note": "at 14.2 s the party stands behind line 2 (the faces and the mage's hat under the Arabic text); passed with a note, the text is on the grass and the party stays readable"
+        },
+        {
+          "shot": "6 gate (src 47.0)",
+          "time": "14.5-17.3 s",
+          "verdict": "FIX-NOTE",
+          "note": "at 16.2 s the hero stands under line 3 (his upper body behind 'المناطق بعد'); passed with a note; a white fade at about 17.0 s between 47.0 and 54.0 is a 0.4 s transition"
+        },
+        {
+          "shot": "7 red hall, close (src 54.0, no line)",
+          "time": "17.3-19.9 s",
+          "verdict": "PASS",
+          "note": "brightness held to the last frame, no dimming; line 3 sits over the red floor, hero partly behind it"
+        }
+      ],
+      "reel_checks": {
+        "length": "21.89 s total, 2 s card: about 19.9 s of story, inside the 12 to 20 s target",
+        "last_2s": "PASS: 18.3 to 19.9 s a picture, full brightness",
+        "change_every_3_4s": "PASS",
+        "speech": "none (speechcheck)",
+        "sound": "unchanged from v1 and v2 by intent (Announce trailer music, one stretch); v3 render-times not re-read"
+      },
+      "verdict": "PASS",
+      "notes": [
+        "Pass with a note after two fix rounds (the two-rounds rule): line 2 covers the party at 14.2 s and line 3 covers the hero at 16.2 s for about 1 s each. Both are over the grass and the gate, readable, and accepted; not repeated in later Reels of this format without a reframe.",
+        "Frame-0 credit gap is the known reel.py build item, noted only.",
+        "Shot 6 to 7 fade to white for 0.4 s at about 17.0 s is a transition, accepted."
+      ],
+      "preview_first_line": "PASS with a note: the Reel is 19.9 s and has no logo slate; the credit appears at 2.2 s (build item), and line 2 and line 3 each cover a character for about a second. Sound is the trailer's music, no speech."
     }
   },
   "render_v2": {
