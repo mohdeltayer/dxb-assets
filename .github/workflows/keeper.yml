@@ -93,15 +93,27 @@ jobs:
           QTOKEN: ${{ secrets.QUEUE_READ_TOKEN }}
         run: |
           if [ -n "$QTOKEN" ]; then
-            curl -fsS -m 20 -H "Authorization: Bearer $QTOKEN" -H "Accept: application/vnd.github.raw" \
+            curl -fsS -m 20 -H "Authorization: Bearer $QTOKEN" -H "Accept: application/vnd.github.raw+json" \
               "https://api.github.com/repos/mohdeltayer/dxb-queue/contents/desk/board.json?ref=desk" \
               -o "$RUNNER_TEMP/board.json" && echo "BOARD_ARG=--board $RUNNER_TEMP/board.json" >> "$GITHUB_ENV" \
               || echo "board not read"
             # the work order also reads the inbox mirror's age and Mohammad's orders (desk/orders/*.json, may be absent)
-            curl -fsS -m 20 -H "Authorization: Bearer $QTOKEN" -H "Accept: application/vnd.github.raw" \
+            curl -fsS -m 20 -H "Authorization: Bearer $QTOKEN" -H "Accept: application/vnd.github.raw+json" \
               "https://api.github.com/repos/mohdeltayer/dxb-queue/contents/desk/mirror.json?ref=desk" \
               -o "$RUNNER_TEMP/mirror.json" && echo "MIRROR_ARG=--mirror $RUNNER_TEMP/mirror.json" >> "$GITHUB_ENV" \
               || echo "mirror not read"
+            # the contents API answers with its JSON wrapper (base64) when the raw type is not honoured: unwrap it
+            for f in "$RUNNER_TEMP/board.json" "$RUNNER_TEMP/mirror.json"; do
+              [ -s "$f" ] && python3 - "$f" <<'PYEOF'
+          import base64, json, sys
+          p = sys.argv[1]
+          d = json.load(open(p))
+          if isinstance(d, dict) and d.get('encoding') == 'base64' and 'content' in d:
+              open(p, 'wb').write(base64.b64decode(d['content']))
+              print('unwrapped', p.rsplit('/', 1)[-1])
+          PYEOF
+            done
+            python3 -c "import json,sys; b=json.load(open(sys.argv[1])); print('board read:', len(b.get('handoffs', [])), 'handoffs')" "$RUNNER_TEMP/board.json" || true
             mkdir -p "$RUNNER_TEMP/orders"
             if curl -fsS -m 20 -H "Authorization: Bearer $QTOKEN" -H "Accept: application/vnd.github+json" \
                  "https://api.github.com/repos/mohdeltayer/dxb-queue/contents/desk/orders?ref=desk" -o "$RUNNER_TEMP/orders.json" 2>/dev/null; then
@@ -113,7 +125,7 @@ jobs:
           PYEOF
               while read -r n; do
                 case "$n" in *[!A-Za-z0-9._-]*) continue;; esac
-                curl -fsS -m 20 -H "Authorization: Bearer $QTOKEN" -H "Accept: application/vnd.github.raw" \
+                curl -fsS -m 20 -H "Authorization: Bearer $QTOKEN" -H "Accept: application/vnd.github.raw+json" \
                   "https://api.github.com/repos/mohdeltayer/dxb-queue/contents/desk/orders/$n?ref=desk" -o "$RUNNER_TEMP/orders/$n" || true
               done < "$RUNNER_TEMP/orders.txt"
               echo "orders read: $(ls "$RUNNER_TEMP/orders" | wc -l)"
