@@ -279,22 +279,38 @@ def last_touch(d):
     return max(ts) if ts else None
 
 
-def stale_writebacks(items_dir, now, days=STALE_DAYS):
+def _cards(items_dir=None, mirror=None):
+    """(id, card) from a folder of exported cards, or from the desk mirror (desk/mirror.json, whose cards carry
+    status, created_at, updated_at, answer_at and picked_up_at: enough to see a stale card)."""
+    if mirror:
+        m = load(mirror, {}) or {}
+        for c in m.get('cards') or []:
+            if isinstance(c, dict) and c.get('id'):
+                d = dict(c)
+                if c.get('answer_at'):
+                    d['answer'] = {'at': c['answer_at']}
+                yield c['id'], d
+    if items_dir:
+        for name in sorted(os.listdir(items_dir)):
+            if name.endswith('.json') and name != 'index.json':
+                d = load(os.path.join(items_dir, name))
+                if isinstance(d, dict):
+                    yield str(d.get('id') or name[:-5]), d
+
+
+def stale_writebacks(items_dir, now, days=STALE_DAYS, mirror=None):
     """[{id, fields}] for every card not done whose last update is older than `days` (addendum_0710 step 8)."""
-    out = []
-    for name in sorted(os.listdir(items_dir)):
-        if not name.endswith('.json') or name == 'index.json':
+    out, seen = [], set()
+    for cid, d in _cards(items_dir, mirror):
+        if cid in seen:
             continue
-        d = load(os.path.join(items_dir, name))
-        if not isinstance(d, dict):
-            continue
+        seen.add(cid)
         if str(d.get('status') or 'open').lower() == 'done':
             continue
         t = last_touch(d)
         if t is None or (now - t).total_seconds() <= days * 86400:
             continue
-        out.append({'id': str(d.get('id') or name[:-5]),
-                    'fields': {'status': 'done', 'outcome': 'auto-closed, stale', 'updated_at': iso(now)}})
+        out.append({'id': cid, 'fields': {'status': 'done', 'outcome': 'auto-closed, stale', 'updated_at': iso(now)}})
     return out
 
 

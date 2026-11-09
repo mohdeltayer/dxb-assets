@@ -15,7 +15,7 @@ Subcommands
   status                               last tick, mirror age, counts per desk and state, readability
   feed --keeper K --commitments C [--scheduled S] [--published P] --out F     the ops/feed document
   published --posts P [--existing E] --out F       the `published` collection (Reels of the last 48 hours)
-  stale --items DIR [--days 7] --out F             write-backs closing cards with no update for 7 days
+  stale --items DIR | --mirror M [--days 7] --out F  write-backs closing cards with no update for 7 days
   stories --board B --commitments C [--keeper K] [--published P] [--existing E] --out F   the `stories` collection
   (feed, published, stale and stories: opsdata.py, card adv-20261108-stories-tab)
 
@@ -954,7 +954,9 @@ def cmd_published(args):
 
 def cmd_stale(args):
     od = _opsdata()
-    wb = od.stale_writebacks(args.items, get_now(args.now), args.days)
+    if not args.items and not args.mirror:
+        sys.exit('stale: give --items DIR or --mirror desk/mirror.json')
+    wb = od.stale_writebacks(args.items, get_now(args.now), args.days, args.mirror)
     write_atomic(args.out, dump_json(wb))
     print('stale: %d cards to auto-close (no update for %d days)' % (len(wb), args.days))
     return 0
@@ -1021,7 +1023,8 @@ def main(argv=None):
     p.add_argument('--out', required=True)
     p.set_defaults(fn=cmd_published)
     p = sub.add_parser('stale')
-    p.add_argument('--items', required=True)
+    p.add_argument('--items', help='a folder of exported cards')
+    p.add_argument('--mirror', help='desk/mirror.json (the same decision from the mirror rows)')
     p.add_argument('--days', type=int, default=7)
     p.add_argument('--now')
     p.add_argument('--out', required=True)
