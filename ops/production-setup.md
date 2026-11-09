@@ -229,8 +229,8 @@ a run that has not been updated still reads them.
    "how it happened" explainers, list pieces with each game's art, the Gulf price roundup, and numbers from a company's
    public figures (at most one in six, always on the game's art, never the plain ground). Story-led and footage-led
    first. The «الطريق إلى Ocarina» series closed on 5 Nov; «الطريق إلى GTA VI» episodes come from the studio.
-4. The digest, fetched the one way that moves (adv-20261107-watch-token-live addendum_0700, adv-20261108-stories-tab
-   addendum_0545; release 2026-11-09-r3): read the server digest only with
+4. The digest, fetched the one way that moves (release 2026-11-09-r3; addendum_0545 of adv-20261108-stories-tab and
+   addendum_0700 of the watch card adv-20261107-watch-token-live): read the server digest only with
    `git fetch -q origin +watch-digest:refs/remotes/origin/watch-digest` and then
    `git show origin/watch-digest:watch/digest.json` (never a local branch copy, never a pull, never a plain
    `git fetch origin watch-digest`, which left the remote-tracking ref at seq 207 from 8 Nov 18:30 to 9 Nov 06:35
