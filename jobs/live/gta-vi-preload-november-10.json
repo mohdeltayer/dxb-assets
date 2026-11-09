@@ -1,0 +1,230 @@
+{
+ "name": "gta-vi-preload-november-10",
+ "story": "2026-11-09-gta-vi-preload-november-10",
+ "out": "cards/2026-11/gta-vi-preload-november-10-reel-v2.mp4",
+ "footage": [
+  {
+   "file": "gta6-trailer-2.mp4",
+   "url": "https://media-rockstargames-com.akamaized.net/VI/downloads/videos/GTAVI_Trailer_2/GTAVI_Trailer_2.mp4"
+  }
+ ],
+ "shots": [
+  [
+   "gta6-trailer-2.mp4",
+   26.0,
+   3.6,
+   null
+  ],
+  [
+   "gta6-trailer-2.mp4",
+   50.0,
+   2.65,
+   null
+  ],
+  [
+   "gta6-trailer-2.mp4",
+   14.0,
+   2.65,
+   null
+  ],
+  [
+   "gta6-trailer-2.mp4",
+   37.5,
+   2.7,
+   null
+  ],
+  [
+   "gta6-trailer-2.mp4",
+   10.0,
+   2.7,
+   null
+  ],
+  [
+   "gta6-trailer-2.mp4",
+   48.0,
+   2.3,
+   null
+  ],
+  [
+   "gta6-trailer-2.mp4",
+   18.0,
+   2.3,
+   null
+  ],
+  [
+   "gta6-trailer-2.mp4",
+   31.0,
+   2.35,
+   null
+  ],
+  [
+   "gta6-trailer-2.mp4",
+   64.0,
+   2.35,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "أعلنت روكستار غيمز\nبدء التحميل المسبق\nيوم 10 نوفمبر",
+     {}
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "حسب تقارير، يبدأ على PS5\nمنتصف الليل\nبالتوقيت المحلي",
+     {}
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "وعلى أجهزة Xbox\nمنتصف الليل\nبتوقيت غرينتش",
+     {}
+    ]
+   ]
+  ],
+  [
+   7,
+   8,
+   [
+    [
+     "وقد يصل حجمها\nحتى 212 غيغابايت\nوتصدر في 19 نوفمبر",
+     {}
+    ]
+   ]
+  ]
+ ],
+ "headline": "تحميل GTA VI المسبق\nيبدأ 10 نوفمبر",
+ "label": "رسمي",
+ "source": "روكستار غيمز",
+ "date": "3 Nov 2026",
+ "theme": "spectacle",
+ "style": "lines",
+ "template": "trailer",
+ "skin": "house",
+ "strip": null,
+ "credits": [
+  [
+   0,
+   0,
+   "المصدر: روكستار غيمز (Rockstar Games)"
+  ],
+  [
+   1,
+   1,
+   "المصدر: روكستار غيمز (Rockstar Games)"
+  ],
+  [
+   2,
+   2,
+   "المصدر: روكستار غيمز (Rockstar Games)"
+  ],
+  [
+   3,
+   3,
+   "المصدر: روكستار غيمز (Rockstar Games)"
+  ],
+  [
+   4,
+   4,
+   "المصدر: روكستار غيمز (Rockstar Games)"
+  ],
+  [
+   5,
+   5,
+   "المصدر: روكستار غيمز (Rockstar Games)"
+  ],
+  [
+   6,
+   6,
+   "المصدر: روكستار غيمز (Rockstar Games)"
+  ],
+  [
+   7,
+   7,
+   "المصدر: روكستار غيمز (Rockstar Games)"
+  ],
+  [
+   8,
+   8,
+   "المصدر: روكستار غيمز (Rockstar Games)"
+  ]
+ ],
+ "track": "bed",
+ "cut": false,
+ "note": "Trailer 2 from Rockstar's own media server (the brief named IGN; Rockstar is the primary and the file is 4K, so no enlargement). Track 25.6 s for 19.0 s: the trailer's own sound, speech none (speechcheck --stretch 25.6 19.0, both ends in a pause). Shots (split per editor decision b; each over 4.0 s now two halves): 26.0 shirtless man at a door (headline hook, the strongest figure, clear of the ESRB card at 0 s); 44.0 man in shorts at a shop door, centred (L1); 37.5 Vice City airport signs and a plane (L2, place shot); 48.0 police car at night, driver in frame (L3); 29.0 driver at the wheel (L4, payoff). Shots are not from the 15 Oct launch trailer file. Lines: outlet-report facts (PS5 midnight local, Xbox midnight GMT, up to 212 GB) are labelled in the text; NZ not claimed. Open for the editor: L1 names the company without a bracket (rule: the first on-screen mention takes «(Rockstar Games)»); L3 opens on و and continues L2 (rule: within 3 s); the headline has the Latin GTA VI first word-run after an Arabic word. v2 (director FIX on v1, story director_qa, 91dc0f5): track is our bed (vocal song in both trailers); shot 1 is 50.0 s instead of 44.0 s.",
+ "reel_check": [
+  "yes: SOURCE primary read: Rockstar newswire title and meta description; outlets labelled",
+  "yes: ANGLE hook, why now, players here, payoff written in the story file brief",
+  "yes: STORY TYPE out now/date: date 10 Nov and launch 19 Nov; platforms and size as outlet reports",
+  "yes: picture: official Trailer 2, footage first; no stills",
+  "yes: credit on all 5 shots, text «المصدر: روكستار غيمز (Rockstar Games)»",
+  "yes: STORY lines are the editor's text (9 Nov, exact); open points flagged in note: L1 company bracket, L3 opens on و",
+  "yes: SOUND (director FIX, v2): track bed. Trailer 2 runs a vocal song through the whole cut (speechcheck on v1 heard lyrics at 1.65 to 9.87 s); Trailer 1 is also built on a vocal song; no instrumental stretch. Our bed, named first in the preview.",
+  "yes: PICTURE (director FIX, v2): shot 1 moved from 44.0 (cut text at the frame edge) to 50.0 s (prison tower, daytime, no text, nothing graphic), same 2.65 s length; checked by eye on frame stills, reel.shotsheet not run.",
+  "yes: decode clean on the full 4K source (ffmpeg -v error -f null: no output); no slate on the first frame (shot starts at 26.0 s, past the ESRB card)"
+ ],
+ "decision_log": [
+  {
+   "beat": "headline (0 to 3.6 s)",
+   "shot": "26.0 s shirtless man at a door",
+   "alternatives": [
+    "29.0 s driver"
+   ],
+   "crop": "autofocus",
+   "music": "trailer track"
+  },
+  {
+   "beat": "L1 announcement (3.6 to 8.4 s)",
+   "shot": "50.0 s prison tower in daytime (first half; replaces 44.0, cut text at the edge); 14.0 s man beside the white truck (second angle)",
+   "alternatives": [
+    "37.5 s airport signs"
+   ],
+   "crop": "autofocus",
+   "music": "trailer track"
+  },
+  {
+   "beat": "L2 PS5 midnight local (report)",
+   "shot": "37.5 s Vice City airport signs and plane (first half); 10.0 s man and truck (second angle)",
+   "alternatives": [
+    "34 s counter (wide, rejected)"
+   ],
+   "crop": "autofocus",
+   "music": "trailer track"
+  },
+  {
+   "beat": "L3 Xbox midnight GMT (report)",
+   "shot": "48.0 s police car at night (first half); 18.0 s man by the truck facing camera (second angle, daytime)",
+   "alternatives": [
+    "46 s police car (same frame, rejected)"
+   ],
+   "crop": "autofocus",
+   "music": "trailer track"
+  },
+  {
+   "beat": "L4 size and 19 Nov (payoff)",
+   "shot": "31.0 s driver at the wheel (first half, moved from 29.0 after the decode smear at reel 17.37 s; probe 27 to 35 s clean at 31 to 33 s); 64.0 s Lucia, face to camera, centred, daytime (second angle)",
+   "alternatives": [
+    "22.0 s pier wide (rejected: no centred subject)",
+    "42 s man walking into shop (too close to L1)",
+    "162 s logo rejected: title card"
+   ],
+   "crop": "autofocus",
+   "music": "trailer track"
+  }
+ ],
+ "picture": "Rockstar GTA VI Trailer 2 official 4K, window 26 to 48 s",
+ "render_lane": "server"
+}

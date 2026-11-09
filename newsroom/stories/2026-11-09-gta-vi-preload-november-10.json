@@ -132,6 +132,11 @@
    "v": 1,
    "at": "2026-11-09T11:40:00Z",
    "change": "first build from editor text"
+  },
+  {
+   "v": 2,
+   "at": "2026-11-09T12:30:00Z",
+   "change": "director FIX: our bed (vocal song in both trailers); shot 1 at 50.0 s replaces 44.0 s (cut text at the edge)"
   }
  ],
  "posts": [],
@@ -162,73 +167,8 @@
   ]
  },
  "director_qa": {
-  "reviewer": "independent director (Production 2)",
-  "reel": "cards/2026-11/gta-vi-preload-november-10-reel-v1.mp4",
-  "commit": "dd6cdec",
-  "verdict": "FIX",
-  "fixes": [
-   "AUDIO: speechcheck heard English speech under the headline and lines at reel 1.65 to 9.87 s ('We have a name for each other', repeated). Story lines must not sit on speech (21 Oct rule). Re-cut the track to a speech-free stretch or subtitle the speech; re-run speechcheck before any preview. The story file's 'speech: none' for 25.6 to 44.6 s does not match the finished Reel: check the stretch's offset and the split output.",
-   "SHOT 44.0 s (L1): sheet flags cut text at 44.1 s (a red-box text overlay at the edge). Drop the shot or move the crop to the subject.",
-   "LINE L1: company first on-screen mention is in the credit line with bracket, so the rule is met; the L1 line itself names روكستار غيمز without a bracket (acceptable under the first-mention rule since the credit carries it; note only)."
-  ],
-  "shot_table": [
-   [
-    "26.0 headline",
-    "PASS",
-    "shirtless man at door; clear of ESRB card; crop centred; no graphic content seen"
-   ],
-   [
-    "44.0 L1 (first half)",
-    "FIX",
-    "cut-text flag at 44.1 s"
-   ],
-   [
-    "14.0 L1 (second angle)",
-    "PASS",
-    "man beside truck; daytime"
-   ],
-   [
-    "37.5 L2",
-    "PASS",
-    "Vice City airport signs and plane; place shot fits PS5 line"
-   ],
-   [
-    "10.0 L2 (second angle)",
-    "PASS",
-    "man and truck; fits PS5 line; no graphic"
-   ],
-   [
-    "48.0 L3",
-    "PASS",
-    "police car at night, driver in frame; no weapon; fits Xbox line"
-   ],
-   [
-    "18.0 L3 (second angle)",
-    "PASS",
-    "man at roof edge; no graphic"
-   ],
-   [
-    "31.0 L4 (first half)",
-    "PASS",
-    "driver at wheel; decode smear moved from 29 s, probe clean"
-   ],
-   [
-    "64.0 L4 (second angle)",
-    "PASS",
-    "Lucia face to camera, centred; fits size and date line"
-   ]
-  ],
-  "reel_level": {
-   "first_frame_3x4": "readable: headline and chip legible at grid size; first frame not a slate (strip frame 0)",
-   "length": "about 22.3 s incl. end card; within trailer target",
-   "change_every_3_4s": "pass: cuts at roughly 2.3 to 3.6 s, lines enter on cuts",
-   "last_2s_picture": "pass: end card begins at about 20.5 s; picture to 20.25 s",
-   "credit": "visible from frame 0 on every footage shot, text as specified",
-   "sound": "trailer sound chosen; fails on speech under lines (see fixes)",
-   "outlet_labelling": "L2 carries حسب تقارير; L3 Xbox midnight GMT line lacks حسب تقارير (fine only if covered by the L2 attribution; flag for the editor)",
-   "decode": "no decode smear seen in strip or dense frames; render-times shows no decode field for this job"
-  },
-  "under_the_cut": "English trailer speech ('We have a name for each other') under the headline and L1/L2 (speechcheck); the stated trailer music stretch does not match the finished audio",
-  "preview_line": "FIX: English speech plays under the headline and lines; not sent to Mohammad until re-cut and re-checked."
+  "v1": "FIX",
+  "sound": "track bed: Trailer 2 runs a vocal song through the whole cut (speechcheck on v1 heard lyrics at 1.65 to 9.87 s); Trailer 1 is also built on a vocal song; no instrumental stretch. Our bed, named first in the preview.",
+  "picture": "shot at 44.0 s had cut text at the frame edge; replaced with 50.0 s prison tower (daytime, no text)"
  }
 }
