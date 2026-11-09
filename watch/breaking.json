@@ -1,16 +1,16 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-09T11:52:05Z",
- "seq": 227,
+ "generated_at": "2026-11-09T12:52:05Z",
+ "seq": 228,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-09T11:50:05Z",
+  "last_poll_at": "2026-11-09T12:50:05Z",
   "sources_enabled": 100,
-  "sources_ok": 94,
+  "sources_ok": 81,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 4x)",
