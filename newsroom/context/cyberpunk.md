@@ -22,3 +22,4 @@ without checking them against the story's own primary.
 - 2026-10-09 · no chip · تعمل باراماونت (Paramount) على فيلم سينمائي بممثلين حقيقيين مقتبس من Cyberpunk 2077، بالشراكة مع سي دي بروجكت ريد (CD PR (`2026-10-09-cyberpunk-2077-film`)
 
 ## Log (one line per published post, added by presubmit.py published)
+- 2026-11-09 · no chip · Cyberpunk 2077 supports Arabic (interface and subtitles) per its Steam page; 229 AED (`2026-11-09-cyberpunk-2077-arabic-support-steam`)
