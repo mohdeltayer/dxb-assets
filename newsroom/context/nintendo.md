@@ -42,3 +42,4 @@ without checking them against the story's own primary.
 - 2026-11-05 · no chip · Switch 2 passes 26 million (Nintendo IR sales data, 30 Sep) (`2026-11-05-nintendo-switch-2-26-million-sales-data`)
 - 2026-11-05 · no chip · Nintendo H1 FY27 results: operating profit +49.1%, Switch 2 6.49 M, forecast unchanged (`2026-11-05-nintendo-first-half-results-profit-up`)
 - 2026-11-05 · no chip · Nintendo Switch 2 lineup through 2027 v6: earliest to latest, upbeat launch bed (`2026-11-05-nintendo-switch-2-lineup-through-2027-v6`)
+- 2026-11-09 · متوفر الآن · split · A Little to the Left: Nintendo Switch 2 Edition out now (shadow drop), free upgrade (`2026-11-09-a-little-to-the-left-switch-2-edition-out-now`)
