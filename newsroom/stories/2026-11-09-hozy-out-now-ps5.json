@@ -12,7 +12,7 @@
  ],
  "category": "out_now",
  "priority": "news",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://blog.playstation.com/2026/11/06/hozy-brings-calm-tactile-home-restoration-to-ps5-on-november-9/",
@@ -74,9 +74,26 @@
  "metrics": {},
  "ledger_find": "hozy: no hit",
  "lane": "news",
- "director_check": null,
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/hozy-out-now-ps5-reel-v2.mp4",
+  "blob": "044ff83f34d65f0d4c0b81dc4083493f4b4b5869",
+  "at": "2026-11-09T19:53:48Z",
+  "note": "round 2 PASS: R title frame removed; smear waiver on the desk close after a look",
+  "checklist": {
+   "job": "jobs/live/hozy-out-now-ps5.json",
+   "sha256": "f104fd8cf3d6f1281ed45cb2004030851fd12deaf89caf41ec342aa6a97b62b9",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-sonnet"
+ },
  "published": null,
  "template": "trailer",
  "chip": "متوفر الآن",
- "approved": null
+ "approved": "go: rolling queue (Mohammad: build Hozy next); scheduled in Publer 20:45Z IG/X/Threads"
 }
