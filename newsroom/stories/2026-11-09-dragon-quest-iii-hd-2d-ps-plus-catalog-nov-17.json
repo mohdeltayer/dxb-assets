@@ -11,7 +11,7 @@
     "action"
   ],
   "category": "news",
-  "status": "rendered, awaiting Arabic passes, director QA and Mohammad preview",
+  "status": "rendered v2, awaiting Arabic passes, director QA and Mohammad preview",
   "chip": "رسمي",
   "lane": "reel",
   "beat": "catalog addition",
@@ -190,5 +190,50 @@
     ],
     "notes": "Render log: audio split applied, decode and smear checks not recorded in render-times.json's last entry for this job; the director could not see them and asks the runner log to confirm. Story length 21 s is over the target by about 1 s. Second look only on the changed shots after fixes.",
     "preview_first_line": "FIX before preview: the cover opens on the DRAGON QUEST logo for 2 s, the Reel has a STORY banner and battle text, and the last 2 s dim to black. Sound is the Announce trailer's music, no speech."
+  },
+  "render_v2": {
+    "mp4": "cards/2026-11/dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-reel-v2.mp4",
+    "strip": "cards/2026-11/dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-strip.jpg",
+    "sheet": "cards/2026-11/dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-sheet.jpg",
+    "dense": "cards/2026-11/dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-dense.jpg",
+    "render_commit": "b400b1dde5710f9307e0d6bfe10c0567dbef19d2",
+    "run": "render-live 42607825752 (head e4e911f), success, 244 s on dxb-render-1",
+    "job_head": "e4e911f",
+    "publer_receipt": "e9705d0 (media-only receipt written by the runner; nothing scheduled)",
+    "shots_src_s": [
+      [
+        10.8,
+        3.4
+      ],
+      [
+        14.0,
+        3.0
+      ],
+      [
+        22.4,
+        1.8
+      ],
+      [
+        32.0,
+        2.7
+      ],
+      [
+        34.5,
+        2.8
+      ],
+      [
+        36.0,
+        2.6
+      ],
+      [
+        47.0,
+        2.8
+      ],
+      [
+        54.0,
+        2.8
+      ]
+    ],
+    "supersedes": "v1 (render 82dd9e7) after director FIX 7b2a6b0; v2 failed decode smear at 8.13 to 8.50 s (tavern src 30.0)"
   }
 }
