@@ -189,3 +189,10 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Ubisoft Montpellier | يوبيسوفت مونبلييه | Proposed 9 Nov 2026 (Prince of Persia bank piece; the city spelling مونبلييه is new) |
 | Warner Bros. Games | وارنر براذرز غيمز | Proposed 9 Nov 2026 (Hogwarts Legacy Arabic-support guide) |
 | Avalanche Software | أفالانش سوفتوير | Proposed 9 Nov 2026 (Hogwarts Legacy Arabic-support guide; not on screen) |
+
+### Proposed 9 Nov 2026 (Quiet Express: Cabin 909)
+| Latin | Arabic | Status |
+|---|---|---|
+| Drecom | دريكوم | Proposed 9 Nov 2026 (first on-screen mention with the Latin in brackets) |
+| STUDIO 909 | استوديو 909 | Proposed 9 Nov 2026 |
+| Kazuhide Oka | كازوهيدي أوكا | Proposed 9 Nov 2026 (role word المخرج at first mention) |
