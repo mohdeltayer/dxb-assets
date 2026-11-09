@@ -71,6 +71,8 @@ slot with no post 20 minutes before it).
    with a passed checklist for this exact file, and refuses a second submit), then `submit_publer_posts`, then
    `get_publer_job_status` on that submit until it reads complete (or failed), then `presubmit.py result <commitment>
    <platform> scheduled --job-status complete` (failed: `failed --job-status failed`). The submit is done only then; the
+   posts list lags and is never the proof. Labels: newsroom/publer-labels.md (one spelling, a `kind:` label on every post, `tpl:showcase`).
+   After every submit read `list_publer_posts state scheduled` and quote what it shows (platform, slot, labels) in the board line.
    posts list lags and is never the proof. A failed or timed-out submit: read the job status, then look the post up in
    Publer twice 10 minutes apart before anything else; never submit again on one empty list. No Publer ids in any file.
 7. Records: the `newsroom/commitments.json` row, `python3 templates/formats.py add`; after publishing,
