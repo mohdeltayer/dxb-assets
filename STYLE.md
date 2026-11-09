@@ -651,3 +651,5 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 - **Superseded settings:**
   - The azure-only chip, replaced by the vivid themes on 2 Oct.
   - The fixed 46/33 Reel text sizes.
+
+- 9 Nov 2026 (Mohammad): no Reel on the plain indigo ground: card-led Reels sit on moving footage or art, dimmed and credited, else they are not card-led. News before evergreen: evergreen overnight (00:00 to 07:00) or in a daytime gap only when no verified news is buildable, never two evergreen in a row by day. Full text in CLAUDE.md.

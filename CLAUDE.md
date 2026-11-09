@@ -3404,3 +3404,16 @@ run with workflow_dispatch on main.
 A weekly workflow in dxb-queue (`.github/workflows/cleanup.yml`, Sunday
 03:00 Dubai, also runnable by hand) does the same as a backstop; it shares
 the publisher's concurrency group, so it never runs during a publish.
+
+## No plain indigo ground, and news before evergreen (Mohammad, 9 Nov 2026, about 12:30 Dubai, effective at once)
+
+1. No Reel on the plain indigo ground, whatever the story. A card-led Reel (numbers, quote, explainer, edition, list,
+   reviewscores and the like) sits on moving footage or art, dimmed and credited: the company's latest trailer or press
+   footage, the platform's own clip, or key art in parallax. When none of these exists, the story is not a card-led Reel
+   (it is a different template, or it waits). The living wave ground, the glow and the dotted grid are not grounds a card
+   may stand on by themselves. Overrides the rotating ground styles for card-led Reels; the end card keeps its indigo.
+2. News first. Evergreen pieces (`kind:evergreen`) run in the overnight window (00:00 to 07:00 Dubai), and by day only to fill
+   a gap when no verified news is buildable for that slot; never two evergreen posts in a row by day. After an evergreen post
+   by day the next daytime post is news, or the gap is logged on the board as a failed run with each rejected lead; a
+   second evergreen is not used to close it. Evergreen chips and captions follow the 9 Nov evergreen rule (دليل, since when,
+   why now). Applied 9 Nov 12:33: Mirage moved from 13:00 to 00:30 Tue 10 Nov (a third evergreen in a row by day).
