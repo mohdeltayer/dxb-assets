@@ -27,7 +27,7 @@
   [
    "fm27-gameplay.mp4",
    110.6,
-   2.5,
+   2.8,
    [
     [
      0.0,
@@ -37,8 +37,8 @@
   ],
   [
    "fm27-gameplay.mp4",
-   113.1,
-   2.5,
+   113.4,
+   2.8,
    [
     [
      0.0,
@@ -71,7 +71,7 @@
   [
    "fm27-gameplay.mp4",
    218.8,
-   3.5,
+   1.5,
    [
     [
      0.0,
@@ -92,8 +92,30 @@
   ],
   [
    "fm27-gameplay.mp4",
-   99.4,
-   2.2,
+   56.0,
+   2.4,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "fm27-gameplay.mp4",
+   98.0,
+   2.3,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "fm27-gameplay.mp4",
+   100.4,
+   2.4,
    [
     [
      0.0,
@@ -117,7 +139,7 @@
   ],
   [
    3,
-   4,
+   5,
    [
     [
      "بتطوير سبورتس إنتراكتيف\nونشر سيغا (SEGA)",
@@ -128,8 +150,8 @@
    ]
   ],
   [
-   5,
-   5,
+   6,
+   7,
    [
     [
      "تتوفر في Game Pass\nيوم الإصدار",
@@ -140,8 +162,8 @@
    ]
   ],
   [
-   6,
-   7,
+   8,
+   9,
    [
     [
      "تدعم اللغة العربية\nحسب صفحتها على Steam",
@@ -168,7 +190,7 @@
  "credits": [
   [
    0,
-   7,
+   9,
    "المصدر: سبورتس إنتراكتيف (Sports Interactive)"
   ]
  ],
@@ -206,36 +228,36 @@
  "decision_log": [
   {
    "beat": "0 hook",
-   "shot": "87.2 to 90.8 s (seek time): Kulusevski near the goal, subtitle 680-1239 px",
-   "alternatives": "title card 0 to 6 s (slate), tactical UI (unreadable cropped)",
+   "shot": "87.2 to 90.8 s: Kulusevski near the goal, subtitle 680-1239 px",
+   "alternatives": "title card 0 to 6 s (slate); tactical UI (unreadable cropped)",
    "crop": "x 0.5, subtitle whole in window",
    "music": "bed"
   },
   {
    "beat": "1 L1 release",
-   "shot": "110.6 to 115.6 s: pitch with both teams around the box, subtitle 671-1248 then 793-1127",
-   "alternatives": "101 s distant pitch (players tiny)",
+   "shot": "110.6 to 116.2 s in two shots: pitch around the box, then the penalty area; subtitles 671-1248 then 793-1127",
+   "alternatives": "101 s distant pitch",
    "crop": "x 0.5",
    "music": "bed"
   },
   {
    "beat": "2 L2 makers",
-   "shot": "211.0 to 215.2 s: goalmouth attack, subtitle 667-1252 then 816-1101",
-   "alternatives": "89 s goal net empty",
+   "shot": "211.0 to 215.2 s goalmouth attack in two shots, then 218.8 to 220.3 s keeper dive; subtitles 667-1253, 816-1101",
+   "alternatives": "89 s empty net",
    "crop": "x 0.5",
    "music": "bed"
   },
   {
    "beat": "3 L3 Game Pass",
-   "shot": "218.8 to 222.3 s: keeper dive and defenders, subtitle 667-1253",
+   "shot": "123.8 to 126.6 s scrum in the box, then 56.0 to 58.4 s run at the box; subtitles 671-1248, 704-1216",
    "alternatives": "143 s tactic menu overlay",
    "crop": "x 0.5",
    "music": "bed"
   },
   {
-   "beat": "4 L4 Arabic (two shots)",
-   "shot": "123.8 to 126.6 s scrum in the box (subtitle 671-1248) then 99.4 to 101.6 s penalty area (695-1224)",
-   "alternatives": "54.6 to 58 s (white pitch lines read as subtitle width, clean only 56.0 to 58.4); 163 to 166 s tactics menu overlay",
+   "beat": "4 L4 Arabic",
+   "shot": "98.0 to 100.3 s and 100.4 to 102.8 s penalty area wide; subtitles 770-1149, 695-1224, 711-1207",
+   "alternatives": "163 to 166 s tactics menu overlay; UI dashboards unreadable at 608 px",
    "crop": "x 0.5",
    "music": "bed; reason: narration under every second of both Steam trailers (Gameplay and Tactic Training)"
   }
