@@ -1,0 +1,118 @@
+{
+ "schema": 1,
+ "file": "digest",
+ "generated_at": "2026-11-09T08:52:05Z",
+ "seq": 224,
+ "kind": "hourly",
+ "since": "2026-11-09T07:52:05Z",
+ "official": [],
+ "outlets": [
+  {
+   "count": 1,
+   "published": "2026-11-09T07:52Z",
+   "title": "Mass Effect: Legendary Edition Hits Its Highest Player Count Since Launch",
+   "url": "https://www.thegamer.com/mass-effect-legendary-edition-highest-player-count-since-2021/",
+   "sources": [
+    "TheGamer"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2026/11/mass-effect-legendary-edition-officially-announced-for-2021_q4ym.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "TheGamer",
+     "title": "Mass Effect: Legendary Edition Hits Its Highest Player Count Since Launch",
+     "url": "https://www.thegamer.com/mass-effect-legendary-edition-highest-player-count-since-2021/",
+     "published": "2026-11-09T07:52Z"
+    }
+   ]
+  }
+ ],
+ "failed": [
+  "Bethesda (YouTube) (HTTP 404, 6x)",
+  "Blizzard (YouTube) (HTTP 404, 6x)",
+  "Bungie (YouTube) (HTTP 404, 6x)",
+  "CD PROJEKT RED (YouTube) (HTTP 404, 6x)",
+  "Call of Duty (YouTube) (HTTP 404, 6x)",
+  "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 2x)",
+  "Capcom USA (YouTube) (HTTP 404, 6x)",
+  "EA SPORTS FC (YouTube) (HTTP 404, 6x)",
+  "Fortnite (YouTube) (HTTP 404, 6x)",
+  "Manga Productions (ValueError: no items found, page changed?, 3x)",
+  "Nintendo of America (X) (HTTP 429, 55x)",
+  "PlayStation (X) (HTTP 429, 71x)",
+  "PlayStation MENA (YouTube) (HTTP 404, 6x)",
+  "PlayStation Middle East (X) (HTTP 429, 3x)",
+  "PlayStation Middle East (YouTube) (HTTP 404, 6x)",
+  "Pokemon (YouTube) (HTTP 404, 6x)",
+  "Riot Games (YouTube) (HTTP 404, 6x)",
+  "Rockstar Games (X) (HTTP 429, 28x)",
+  "SEGA (YouTube) (HTTP 404, 6x)",
+  "Square Enix (YouTube) (HTTP 404, 6x)",
+  "Steam (YouTube) (HTTP 404, 6x)",
+  "Ubisoft (YouTube) (HTTP 404, 6x)",
+  "Xbox (X) (HTTP 429, 72x)"
+ ],
+ "not_covered": [
+  {
+   "name": "Official X accounts not listed above",
+   "reason": "no public page without login; read by Gaming Watch (scout digest) and the Verifier"
+  },
+  {
+   "name": "Konami JP topics",
+   "reason": "the list is drawn by script (the page carries one topic); Konami is covered by the outlets only"
+  },
+  {
+   "name": "Konami, EA and Activision YouTube channels",
+   "reason": "their channel feeds are empty; EA is read through its news page, Activision and Konami through the outlets"
+  },
+  {
+   "name": "PS Store UAE/Saudi, Xbox and Steam regional prices",
+   "reason": "price watching is its own job (scout audit section 6), not part of this service"
+  },
+  {
+   "name": "Epic Games, Sony Group press, GitHub releases",
+   "reason": "answer 403 to a script"
+  },
+  {
+   "name": "Saudi Esports Federation, GEA, UAE gaming bodies",
+   "reason": "refuse automated reads or carry no feed"
+  }
+ ],
+ "watcher": {
+  "host": "dxb-render-1",
+  "last_poll_at": "2026-11-09T08:50:14Z",
+  "sources_enabled": 100,
+  "sources_ok": 77,
+  "sources_failing": 23,
+  "failed": [
+   "Bethesda (YouTube) (HTTP 404, 6x)",
+   "Blizzard (YouTube) (HTTP 404, 6x)",
+   "Bungie (YouTube) (HTTP 404, 6x)",
+   "CD PROJEKT RED (YouTube) (HTTP 404, 6x)",
+   "Call of Duty (YouTube) (HTTP 404, 6x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 2x)",
+   "Capcom USA (YouTube) (HTTP 404, 6x)",
+   "EA SPORTS FC (YouTube) (HTTP 404, 6x)",
+   "Fortnite (YouTube) (HTTP 404, 6x)",
+   "Manga Productions (ValueError: no items found, page changed?, 3x)",
+   "Nintendo of America (X) (HTTP 429, 55x)",
+   "PlayStation (X) (HTTP 429, 71x)",
+   "PlayStation MENA (YouTube) (HTTP 404, 6x)",
+   "PlayStation Middle East (X) (HTTP 429, 3x)",
+   "PlayStation Middle East (YouTube) (HTTP 404, 6x)",
+   "Pokemon (YouTube) (HTTP 404, 6x)",
+   "Riot Games (YouTube) (HTTP 404, 6x)",
+   "Rockstar Games (X) (HTTP 429, 28x)",
+   "SEGA (YouTube) (HTTP 404, 6x)",
+   "Square Enix (YouTube) (HTTP 404, 6x)",
+   "Steam (YouTube) (HTTP 404, 6x)",
+   "Ubisoft (YouTube) (HTTP 404, 6x)",
+   "Xbox (X) (HTTP 429, 72x)"
+  ]
+ }
+}
