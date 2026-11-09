@@ -176,6 +176,15 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     multi-game charts and milestones. A game with footage takes `clipcard`,
     not `numbers` (`formats.pick(..., footage=True)`); multi-game charts
     keep the living ground with each game's art beside its row.
+    Default from 9 Nov (build, release 2): a job's cards take `ground_footage`
+    or `ground_still` (the game's key art); the plain ground needs `"ground":
+    "rotate"` with `ground_reason` (several games, a company's figures). A
+    cover that is a card on the plain ground or a logo plate alone is refused
+    (buildgate, and render_job reads a still cover's pixels).
+  - Look rotation on the live path (9 Nov): no theme and no style three Reels
+    in a row. `templates/looks.py` reads `assets/look-ledger.json` (written by
+    every render, committed by render-live and render): a third style in a row
+    is swapped for the one rested longest, a third theme stops at check.
   - Game skins (20 Oct, pilot): one game, its look (franchise skin, else
     genre kit); several games or the industry, the house theme. Pilot kits:
     sci-fi, fantasy, house with footage behind; `skin` logged in the format
@@ -577,7 +586,7 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 - No blurred fill or pillarbox box for footage. A source that cannot fill 9:16 within the 2x cap takes the full-frame treatment: footage as large as the cap allows between designed bands in the template colour.
 - Main footage under 60% of the frame height, or over 5% blur, fails `fillcheck.py` in render_job.check (storybeat page exempt from the 60% part only).
 - Band layout only for a weak source (7 Nov 2026): a 16:9 source fills 9:16 cropped to the subject; a band after the headline fails unless `lowres_ok` names the sources tried (two or more, or "A, B: result"); the headline stays in the band; a credit line alone in a band is empty space.
-- Trailer layout (Mohammad, 8 Nov 2026, corrected twice, from the next Reel): the normal Reel is the 16:9 trailer cropped to the subject, filling 9:16. The showcase layout (trailer at its own width in the middle; chip and headline in the top band for the whole Reel; story lines, key facts and credit as text in the bottom band; no empty band, no blur) only when the trailer itself is the news, or the source fails the quality gate enlarged (under 1080p, over the 2x cap, lowbit, blocky) and no better official copy exists (publisher's site and the game's other trailers checked). Low quality is the trigger, not aspect ratio. Not to repeat: the Fortnite Pirate Shop Reel of 8 Nov.
+- Trailer layout (Mohammad, 8 Nov 2026, corrected twice, from the next Reel): the normal Reel is the 16:9 trailer cropped to the subject, filling 9:16. The showcase layout (trailer at its own width in the middle; chip and headline in the top band for the whole Reel; story lines, key facts and credit as text in the bottom band; no empty band, no blur) only when the trailer itself is the news, or the source fails the quality gate enlarged (under 1080p, over the 2x cap, lowbit, blocky) and no better official copy exists (publisher's site and the game's other trailers checked). Low quality is the trigger, not aspect ratio. Not to repeat: the Fortnite Pirate Shop Reel of 8 Nov. Built into reel.py 9 Nov: `"layout": "showcase"` with `"showcase_reason"` naming the case (a bare true stops); the lines run back to back from frame 0, the strip becomes the key facts row, credits sit in the bottom band; fillcheck refuses an empty band whatever lowres_ok says, and reads the finished Reel (no run of empty rows over 160 px in the safe zone).
 - Headline in the safe band, never over a face or the shot's subject. Collaboration stories use the game's official trailer.
 
 ## Promises (adv-20261030-promise-keeper, 30 Oct 2026)

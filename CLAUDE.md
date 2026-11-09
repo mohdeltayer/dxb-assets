@@ -1182,6 +1182,16 @@ YouTube. Empty space is gone: no footer, no panel, no blurred fill.
     text readable: the chart's text area is checked for contrast (the ground
     behind the type stays at or below the indigo's brightness) before the
     render.
+- Numbers on the game's art by default (adv-20261108-numbers-cards-grid items 2 and 3, daytime build 9 Nov 2026): a
+  job's `-gfx-` cards take `"ground_footage"` (the trailer behind, moving) or `"ground_still"` (the key art, numgfx
+  'still' ground); the plain rotating ground needs `"ground": "rotate"` with `"ground_reason"` (several games, company
+  figures). The cover is never a card on the plain ground or a logo plate alone: buildgate refuses it by the job, and
+  render_job refuses a still cover over 72% flat.
+- Look rotation (daytime build 9 Nov 2026): Production 2's jobs carry their own style, so reel.pick_style's ledger never
+  turned for them and the server committed no ledger; on 9 Nov three glows ran in a row (Bonk, FM27, Portal).
+  `templates/looks.py` and `assets/look-ledger.json` (written by every render, committed by render-live and render):
+  a style that would be the third in a row is swapped for the one rested longest (printed); a theme that would be the
+  third stops the render at check with the free themes named. Breaking, Famitsu and skin kits are outside it.
 - Numbers wear their game (advisor, 20 Oct 2026; Mohammad on the GTA 6
   pre-orders Reel: "looks a bit generic, adding a logo or a theme close to
   the game is more attractive"):
@@ -2755,6 +2765,15 @@ The One Piece x Fortnite Reel put a small clip in the middle of a blur of itself
    from the other side of the collaboration (the anime) is illustration only.
 
 5. Trailer layout, corrected twice (Mohammad, 8 Nov 2026; replaces the earlier wording of this point and the loose "band layout" wording above; from the next Reel). The normal Reel is the 16:9 trailer cropped to the subject, filling 9:16. The showcase layout (the trailer at its own width in the middle of the frame; chip and headline in the top band for the whole Reel; story lines, key facts (date, price, platforms) and the credit as text in the bottom band, never over the picture; no empty band at any second, no blur) is used in two cases only: (a) the trailer itself is the news; (b) the source fails the quality gate when enlarged (under 1080p, over the 2x cap, lowbit or blocky) and no better official copy exists after checking the publisher's own site and the game's other trailers, the brief naming what was checked. Low quality is the trigger, not aspect ratio. The shape not to repeat is the Fortnite Pirate Shop Access Reel of 8 Nov (trailer at the bottom, top band empty after the headline).
+   Built into reel.py (daytime build of 9 Nov 2026, release 2, Mohammad: "No approval gate"): a job sets `"layout":
+   "showcase"` and `"showcase_reason"` (five words or more naming case a or b; a bare true stops). reel.py places the
+   footage uncropped in a 16:9 box as wide as fits between the bands (the frame width when the headline is one line), on
+   the flat ground, no blur; the headline stays up the whole Reel; the lines (56 px, back to back from frame 0 to the end
+   card), the strip as a key facts row (40 px, down to 32) and the credits (or source and date) sit in the bottom band.
+   Cards, person windows, products, the storybook page, the design pass and the tribute variant stop the render.
+   fillcheck: a band-layout picture track whose band is empty after the headline fails whatever lowres_ok says (keep
+   the headline with persist.head, or use the showcase layout), and render_job reads the finished Reel of every band
+   job (no run of empty rows over 160 px inside the safe zone at the first frame or the middle of any shot).
 
 ## Promises, not just work (advisor card adv-20261030-promise-keeper, Mohammad 30 Oct 2026, 21:31 Dubai)
 
