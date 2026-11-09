@@ -49,6 +49,8 @@ For anything first seen in an Arabic outlet, find and give its first report's
 time; over 24 hours old at the origin goes under "stale relay", not in the
 lists (Mohammad, 17 Oct 2026).
 
+**Separate director (release 2026-11-10).** The director is never the session that built the Reel: the job names its builder (`"built_by"`) and the PASS is recorded with `presubmit.py director <story> PASS <out> --job <job> --by <director>`, which refuses a PASS signed by the builder. A building session spawns the director as its own agent and quotes its verdict; it never writes PASS itself.
+
 **Director (advisor, 21 Oct 2026; model by tier from 25 Oct, Phase 1 step 4).** Model: sonnet for routine
 and evergreen Reels; opus for fresh reveals, anything with speech (voiced or subtitled), debates and the
 first Reel of a new format or template. The story file records it as `"director_model"`, so the week's

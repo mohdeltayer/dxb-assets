@@ -27,7 +27,7 @@ class Gate(unittest.TestCase):
         self.tmp.cleanup()
 
     def job(self, **kw):
-        j = {'name': 'x', 'story': 's1', 'render_lane': 'server', 'reel_check': RC}
+        j = {'name': 'x', 'story': 's1', 'render_lane': 'server', 'reel_check': RC, 'built_by': 'production-2'}
         j.update(kw)
         return {k: v for k, v in j.items() if v is not None}
 
@@ -44,7 +44,22 @@ class Gate(unittest.TestCase):
 
     def test_missing_lane_story_reel_check(self):
         p = BG.problems('jobs/live/x.json', {'name': 'x'})
-        self.assertEqual(len(p), 3)
+        self.assertEqual(len(p), 4)          # lane, story, reel_check and (since 10 Nov) built_by
+
+    def test_evergreen_opener_and_chip(self):
+        j = {'post_kind': 'evergreen', 'label': 'رسمي', 'headline': 'Cyberpunk 2077 بالعربية',
+             'lines': [['ليست خبرًا جديدًا لكنها مفيدة']], 'caption': 'دليل اللاعب العربي: Cyberpunk 2077\nسطر'}
+        p = BG.evergreen_problems(j)
+        self.assertEqual(len(p), 2)
+        self.assertTrue(any('chip' in x for x in p) and any('ليست خبرًا جديدًا' in x for x in p))
+        ok = dict(j, label='دليل', lines=[['واجهة وترجمة عربية منذ صدورها في 2020']])
+        self.assertEqual(BG.evergreen_problems(ok), [])
+        self.assertEqual(BG.evergreen_problems({'label': 'جديد', 'headline': 'ليس جديدًا'}), [])   # news jobs untouched
+
+    def test_card_led_needs_backdrop(self):
+        self.assertTrue(BG.ground_problems({'template': 'quote'}))
+        self.assertEqual(BG.ground_problems({'template': 'quote', 'ground_still': 'art.jpg'}), [])
+        self.assertEqual(BG.ground_problems({'template': 'storybeat'}), [])
 
     def test_no_ledger_find(self):
         s = dict(STORY); s.pop('ledger_find')

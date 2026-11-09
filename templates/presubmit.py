@@ -6,8 +6,10 @@ code cannot stand in front of it; this script is the step the session runs aroun
 instead of letting a skipped step through. The file a check passed is bound by its git blob id: any re-render
 changes the id and the director check must be run again.
 
-    python3 templates/presubmit.py director <story> PASS <out.mp4> --job <job.json> [--note "..."]   # after the director check
-    python3 templates/presubmit.py intent <commitment> <platform> <story> <out.mp4>    # before submit_publer_posts
+    python3 templates/presubmit.py director <story> PASS <out.mp4> --job <job.json> --by <director> [--note "..."]
+    python3 templates/presubmit.py intent <commitment> <platform> <story> <out.mp4> --labels kind:news,tpl:trailer [--slot ISO]
+                                                                     # before submit_publer_posts
+    python3 templates/presubmit.py line <commitment> --ids ig:<last6> x:<last6> th:<last6>   # the board's scheduled line
     python3 templates/presubmit.py result <commitment> <platform> scheduled|failed --job-status complete|failed
                                                                      # after get_publer_job_status reads back
     python3 templates/presubmit.py published <commitment> <story> --links <ig> <x> <threads> [--queue <dxb-queue clone>]
@@ -32,6 +34,17 @@ published writes the story's `published` block, one line in newsroom/published.j
 heartbeat (ops/heartbeat.json in the dxb-queue clone; commit and push it there). Intents live in
 newsroom/submissions.jsonl: commit it with the story file after each step.
 Platforms: instagram, x, threads.
+
+Release 2026-11-10 (rules into the gate):
+  director PASS needs --by <director>: the job's "built_by" must be someone else (a separate director).
+  intent needs --labels kind:<news|evergreen|series|breaking>,tpl:<template> (tpl:showcase for a showcase layout,
+    which must match the job the director passed); kind:evergreen also needs --slot <ISO time>: never two evergreen in a
+    row, and 3 hours from the last evergreen between 08:00 and 24:00 Dubai; otherwise the slot stays empty. The posts
+    are read from keeper-status (the server's Publer read), else the commitments and the format ledger.
+  line <commitment> --ids ig:<last6> x:<last6> th:<last6>: the board's 'scheduled:' line, refused unless every platform
+    has a 'scheduled' result with its job status read back as complete. Only the last six characters of each Publer
+    post id are given and printed (the board is the only place they go; never into this repository).
+  published marks the evergreen bank row of an evergreen story 'used <date>' in newsroom/evergreen.md.
 """
 import datetime
 import hashlib
@@ -45,6 +58,9 @@ STORIES = REPO / 'newsroom' / 'stories'
 LOG = REPO / 'newsroom' / 'submissions.jsonl'
 PUBLISHED = REPO / 'newsroom' / 'published.jsonl'
 PLATFORMS = ('instagram', 'x', 'threads')
+KINDS = ('news', 'evergreen', 'series', 'breaking')
+SHORT = {'ig': 'instagram', 'instagram': 'instagram', 'x': 'x', 'th': 'threads', 'threads': 'threads'}
+BANK = REPO / 'newsroom' / 'evergreen.md'
 
 
 def now():
@@ -95,10 +111,15 @@ def checklist(job_path, out):
     if job.get('out') and job['out'] != out:
         probs.append(f'job "out" is {job["out"]}, not {out}')
     return {'job': buildgate._rel(job_path), 'sha256': hashlib.sha256(raw).hexdigest(), 'ok': not probs,
-            'problems': probs}
+            'problems': probs, 'template': job.get('template'), 'layout': job.get('layout'),
+            'evergreen': buildgate.is_evergreen(job), 'built_by': job.get('built_by')}
 
 
-def director(sid, verdict, out, note='', job=None):
+def _who(x):
+    return ' '.join(str(x or '').lower().replace('_', '-').split())
+
+
+def director(sid, verdict, out, note='', job=None, by=None):
     if verdict not in ('PASS', 'FIX'):
         raise SystemExit('presubmit: verdict is PASS or FIX')
     f, s = story(sid)
@@ -108,17 +129,76 @@ def director(sid, verdict, out, note='', job=None):
             raise SystemExit('presubmit: director PASS needs --job <the job file that rendered it> (its reel_check)')
         if not cl['ok']:
             raise SystemExit('presubmit refused: the job does not pass the build gate:\n  - ' + '\n  - '.join(cl['problems']))
+        if not _who(by):
+            raise SystemExit('presubmit refused: director PASS needs --by <the director> (a separate agent or session)')
+        if _who(by) == _who(cl.get('built_by')) or _who(cl.get('built_by')) in _who(by).split():
+            raise SystemExit(f'presubmit refused: the director ({by}) is the builder ({cl.get("built_by")}); the PASS '
+                             'comes from a separate director (release 2026-11-10)')
     s['director_check'] = {'verdict': verdict, 'out': out, 'blob': blob(out), 'at': now(), 'note': note,
-                           'checklist': cl}
+                           'checklist': cl, 'by': by}
     f.write_text(json.dumps(s, ensure_ascii=False, indent=1) + '\n')
     print(f'director {verdict} recorded for {out} ({s["director_check"]["blob"][:10]})')
 
 
-def intent(commitment, platform, sid, out):
+def labels_problems(labels, cl):
+    """kind and tpl labels against the job the director passed."""
+    ls = {x.strip().split(':', 1)[0].lower(): x.strip().split(':', 1)[1].strip().lower()
+          for x in (labels or '').split(',') if ':' in x}
+    out = []
+    kind, tpl = ls.get('kind'), ls.get('tpl')
+    if kind not in KINDS:
+        out.append(f'label kind:<{"|".join(KINDS)}> missing or unknown ({kind})')
+    want = 'showcase' if (cl or {}).get('layout') == 'showcase' else (cl or {}).get('template')
+    if not tpl:
+        out.append(f'label tpl:<template> missing{(" (tpl:" + want + ")") if want else ""}')
+    elif want and tpl != want:
+        out.append(f'label tpl:{tpl} does not match the job the director passed (tpl:{want})')
+    if (cl or {}).get('evergreen') and kind != 'evergreen':
+        out.append('the job is evergreen (post_kind, دليل chip or bank): label kind:evergreen')
+    return out, kind
+
+
+def evergreen_slot_problems(slot):
+    """CLAUDE.md 'Evergreen spacing and the news search' (9 Nov 2026): never two evergreen in a row; 3 hours from the
+    last evergreen between 08:00 and 24:00 Dubai; the slot stays empty otherwise."""
+    sys.path.insert(0, str(REPO / 'ops' / 'backoffice' / 'keeper'))
+    import workorder as W
+    at = W.t(slot)
+    if not at:
+        return ['--slot <ISO time> is needed for kind:evergreen']
+    subprocess.run(['git', '-C', str(REPO), 'fetch', '-q', '--depth', '1', 'origin',
+                    '+keeper-status:refs/remotes/origin/keeper-status'], check=False, capture_output=True)
+    r = subprocess.run(['git', '-C', str(REPO), 'show', 'refs/remotes/origin/keeper-status:keeper/server-in.json'],
+                       capture_output=True, text=True)
+    posts = []
+    try:
+        srv = json.loads(r.stdout) if r.returncode == 0 else None
+        if srv and srv.get('posts') is not None:
+            posts = W.posts_from_server(srv)
+    except ValueError:
+        pass
+    if not posts:
+        rows = json.loads((REPO / 'newsroom' / 'commitments.json').read_text()).get('rows', [])
+        led = json.loads((REPO / 'templates' / 'assets' / 'format-ledger.json').read_text())
+        posts = W.posts_from_commitments(rows, led)
+    before = [p for p in posts if p['at'] < at]
+    me = {'at': at, 'labels': {'kind:evergreen'}, 'state': 'scheduled'}
+    return [w for w in W.problems_for(me, before, None) if 'evergreen' in w]
+
+
+def intent(commitment, platform, sid, out, labels=None, slot=None):
     if platform not in PLATFORMS:
         raise SystemExit(f'presubmit: platform is one of {", ".join(PLATFORMS)}')
     _, s = story(sid)
     d = s.get('director_check') or {}
+    lp, kind = labels_problems(labels, d.get('checklist'))
+    if lp:
+        raise SystemExit('presubmit refused: Publer labels (release 2026-11-10):\n  - ' + '\n  - '.join(lp))
+    if kind == 'evergreen':
+        ep = evergreen_slot_problems(slot)
+        if ep:
+            raise SystemExit('presubmit refused: evergreen at this slot: ' + '; '.join(ep) +
+                             '. The slot stays empty unless news fills it (CLAUDE.md, Evergreen spacing, 9 Nov 2026).')
     b = blob(out)
     if d.get('verdict') != 'PASS' or d.get('blob') != b:
         raise SystemExit(f'presubmit refused: no director PASS for this file ({out}, {b[:10]}); '
@@ -131,7 +211,7 @@ def intent(commitment, platform, sid, out):
         raise SystemExit(f'presubmit refused: {commitment} on {platform} already has a submit ({prev.get("state")} '
                          f'at {prev.get("at")}). Look the post up in Publer first; never submit it twice.')
     append(LOG, {'commitment': commitment, 'platform': platform, 'story': sid, 'file_blob': b,
-                 'state': 'intent', 'at': now()})
+                 'state': 'intent', 'at': now(), 'labels': labels})
     print(f'intent recorded: {commitment} {platform}; submit now, then presubmit.py result')
 
 
@@ -155,6 +235,52 @@ def result(commitment, platform, state, job_status=None):
              if state == 'scheduled' else ''))
 
 
+ID6 = __import__('re').compile(r'^[0-9a-zA-Z]{6}$')
+
+
+def line(commitment, ids, slot=None):
+    """The board's 'scheduled:' line: every platform scheduled with its job status read back, and the last six
+    characters of each Publer post id (never more; never stored here)."""
+    got = {}
+    for x in ids or []:
+        k, _, v = x.partition(':')
+        p = SHORT.get(k.lower())
+        if not p or not ID6.match(v or ''):
+            raise SystemExit(f'presubmit refused: id "{x}": give <ig|x|th>:<the last six characters of the Publer post id>')
+        got[p] = v
+    rows = {p: last_state(commitment, p) for p in PLATFORMS}
+    sent = [p for p, r in rows.items() if r]
+    bad = [p for p in sent if not (rows[p].get('state') in ('scheduled', 'published') and rows[p].get('job_status') == 'complete')]
+    if not sent or bad:
+        raise SystemExit(f'presubmit refused: no job status read back as complete for {", ".join(bad or PLATFORMS)}; '
+                         'run presubmit.py result ... --job-status complete first')
+    missing = [p for p in sent if p not in got]
+    if missing:
+        raise SystemExit(f'presubmit refused: Publer post id (last six) missing for {", ".join(missing)}')
+    read = max(rows[p].get('job_read_at') or '' for p in sent)
+    ab = {'instagram': 'ig', 'x': 'x', 'threads': 'th'}
+    print(f'scheduled: {commitment}{(" at " + slot) if slot else ""}, {len(sent)}/{len(sent)}, job status complete '
+          f'(read {read[11:16]}Z), ids ' + ' '.join(f'{ab[p]}:{got[p]}' for p in sent))
+
+
+def mark_bank_used(s, out, at):
+    """An evergreen story's bank row in newsroom/evergreen.md becomes 'used <date>' when it publishes."""
+    if not BANK.exists() or not out:
+        return None
+    import re
+    base = re.sub(r'-reel-v\d+\.mp4$', '', pathlib.Path(out).name)
+    lines = BANK.read_text().split('\n')
+    for i, row in enumerate(lines):
+        if row.startswith('|') and base and base in row:
+            cells = row.split('|')
+            if len(cells) >= 3:
+                cells[-2] = f' used {at[:10]} (published {at[11:16]}Z) '
+                lines[i] = '|'.join(cells)
+                BANK.write_text('\n'.join(lines))
+                return base
+    return None
+
+
 def published(commitment, sid, links, queue=None):
     f, s = story(sid)
     rows = {p: last_state(commitment, p) for p in PLATFORMS}
@@ -167,6 +293,11 @@ def published(commitment, sid, links, queue=None):
     at = now()
     s['published'] = {'at': at, 'commitment': commitment, 'links': links}
     f.write_text(json.dumps(s, ensure_ascii=False, indent=1) + '\n')
+    cl = (s.get('director_check') or {}).get('checklist') or {}
+    if cl.get('evergreen') or s.get('bank') or str(s.get('post_kind', '')).lower() == 'evergreen':
+        used = mark_bank_used(s, (s.get('director_check') or {}).get('out'), at)
+        print(f'evergreen bank: {"row " + used + " marked used" if used else "no matching row in newsroom/evergreen.md"} '
+              '(commit newsroom/evergreen.md)')
     append(PUBLISHED, {'story': sid, 'commitment': commitment, 'title': s.get('title'), 'chip': s.get('chip'),
                        'template': s.get('template'), 'published_at': at, 'links': links})
     if queue:
@@ -200,9 +331,17 @@ if __name__ == '__main__':
     if cmd == 'director' and len(a) >= 4:
         note = a[a.index('--note') + 1] if '--note' in a else ''
         jobp = a[a.index('--job') + 1] if '--job' in a else None
-        director(a[1], a[2], a[3], note, jobp)
-    elif cmd == 'intent' and len(a) == 5:
-        intent(*a[1:5])
+        by = a[a.index('--by') + 1] if '--by' in a else None
+        director(a[1], a[2], a[3], note, jobp, by)
+    elif cmd == 'intent' and len(a) >= 5:
+        labels = a[a.index('--labels') + 1] if '--labels' in a else None
+        slot = a[a.index('--slot') + 1] if '--slot' in a else None
+        intent(*a[1:5], labels=labels, slot=slot)
+    elif cmd == 'line' and len(a) >= 3:
+        ids = a[a.index('--ids') + 1:] if '--ids' in a else []
+        ids = [x for x in ids if not x.startswith('--')]
+        slot = None
+        line(a[1], ids, slot)
     elif cmd == 'result' and len(a) >= 4:
         js = a[a.index('--job-status') + 1] if '--job-status' in a else None
         result(a[1], a[2], a[3], js)
