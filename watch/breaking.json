@@ -1,10 +1,53 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-09T19:52:05Z",
- "seq": 241,
+ "generated_at": "2026-11-09T20:10:07Z",
+ "seq": 242,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 9832,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Delta Force | Official Season \"Aurora\" Cinematic Trailer",
+   "url": "https://www.youtube.com/watch?v=HD75JDFaYvg",
+   "published": "2026-11-09T19:57Z",
+   "first_seen": "2026-11-09T20:10:05Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/HD75JDFaYvg/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=HD75JDFaYvg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 242
+  },
+  {
+   "id": 9833,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "The Spotter: Dig or Die - Official Date Announcement Trailer | XBOX Series X|S",
+   "url": "https://www.youtube.com/watch?v=j9zeok7DQjI",
+   "published": "2026-11-09T19:51Z",
+   "first_seen": "2026-11-09T20:10:05Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/j9zeok7DQjI/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=j9zeok7DQjI"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 242
+  }
+ ],
  "recent": [
   {
    "id": 9793,
@@ -193,14 +236,14 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-09T19:50:05Z",
+  "last_poll_at": "2026-11-09T20:10:05Z",
   "sources_enabled": 100,
-  "sources_ok": 93,
+  "sources_ok": 92,
   "sources_failing": 7,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 8x)",
-   "Kotaku (HTTP 522, 2x)",
-   "Nintendo of America (X) (HTTP 429, 56x)",
+   "Kotaku (HTTP 522, 3x)",
+   "Nintendo of America (X) (HTTP 429, 57x)",
    "PlayStation (X) (HTTP 429, 72x)",
    "PlayStation Middle East (X) (HTTP 429, 4x)",
    "Rockstar Games (X) (HTTP 429, 29x)",
