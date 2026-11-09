@@ -117,5 +117,62 @@
   "render_job_check": "ok, clip 20.5 s; speech check: none; sfx: 4 shots off the track's own seconds, audio split must apply (runner guard)",
   "prerender": "CLEAN (shot 1 near a 63.51 to 63.56 s black frame, shot 3 near a 75.53 to 75.67 s smear, both before the shot start)",
   "grammar_review": "read in this run: house glossary, arabic-writing conventions.md and grammar.md section 7; perfect-arabic references NOT opened this run. Required edits: none found. Uncertain: 'تتوفر واجهة وترجمة بالعربية' (adjective vs prepositional form) fine; Western digits, no em dash, every line opens on Arabic."
+ },
+ "director_qa": {
+  "reel": "cards/2026-11/prince-of-persia-lost-crown-steam-arabic-price-reel-v2.mp4",
+  "verdict": "PASS",
+  "at": "2026-11-09",
+  "table": [
+   [
+    "0 hook, Sargon (54.4 s)",
+    "0 to 3.3",
+    "PASS",
+    "Cover: headline (y 470 to 640) clear of face (head from y 820); moving figure, readable at 3:4; chip clear of grid corner"
+   ],
+   [
+    "1 ruins gate (63.6)",
+    "3.3 to 5.6",
+    "PASS",
+    "Gate fills the window with the figure near its right edge; brief, advisory only"
+   ],
+   [
+    "2 pedestals / wall (65.9)",
+    "5.6 to 8.0",
+    "PASS",
+    "Pedestal screen and wall climb, figure inside window"
+   ],
+   [
+    "3 dome fight (68.3)",
+    "8.0 to 10.8",
+    "PASS",
+    "Fix applied: fighter and dome inside window; one bright sun frame at about 10.25 s, under 0.5 s"
+   ],
+   [
+    "4 beast on cliff (71.9)",
+    "10.8 to 12.8",
+    "PASS",
+    "Fix applied: beast whole inside window (focus x 0.28)"
+   ],
+   [
+    "5 run, characters (75.9)",
+    "12.8 to 15.9",
+    "PASS",
+    "Figure half at right window edge at 12.25 to 12.75 for about 0.5 s only (action burst), then centred; waived"
+   ],
+   [
+    "6 Vahram / Sargon (94.0)",
+    "15.9 to 18.3",
+    "PASS",
+    "Faces centred, front or three-quarter"
+   ],
+   [
+    "7 close-up fight (96.4)",
+    "18.3 to 20.0",
+    "PASS",
+    "Ends on a picture before end card"
+   ]
+  ],
+  "sound": "trailer score, one stretch, audio split applied; faster-whisper: one Korean 'subscribe' hallucination at 6.8 to 8.2 s (was 9.2 to 10.6 in v1, a different trailer moment), so music artefact, speech none by transcript; not checked by ear",
+  "facts": "Steam cc=ae 114.99 AED, 8 Aug 2024, Windows only, Arabic interface and subtitles, no Arabic audio: matches screen"
  }
 }
