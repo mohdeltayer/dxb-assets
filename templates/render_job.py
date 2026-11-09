@@ -510,13 +510,24 @@ def textcheck(job):
         skin = job.get('skin') if job.get('skin') in reel.SK.KITS and job.get('label') != 'عاجل' else None
         reel.head_layer(job['headline'], job['label'], f'{tmp}/h.png', job['source'], job['date'], job.get('country'),
                         hs=job.get('head_size', reel.HEAD_SIZE), skin=skin)
+        show = showcase_of(job)                # the showcase draws its lines, facts and credits in the bottom band
+        if show:
+            lift = reel.showcase_box(reel.HEAD_GEOM['end'], bool(job.get('strip')))[4]
         for a, b, texts in job['lines']:
             for x in texts:
                 text, kw = (x, {}) if isinstance(x, str) else (x[0], x[1] if len(x) > 1 else {})
-                if job.get('strip') and 'lift' not in kw:
+                if show:
+                    kw = dict({k: v for k, v in kw.items() if k not in ('top', 'lift', 'size', 'step', 'shade')},
+                              size=reel.SHOW_LINE[0], step=reel.SHOW_LINE[1], lift=lift)
+                elif job.get('strip') and 'lift' not in kw:
                     kw = dict(kw, lift=reel.STRIP_LIFT) if hasattr(reel, 'STRIP_LIFT') else kw
                 reel.line_layer(text, f'{tmp}/l.png', skin=skin, **kw)
-        if job.get('strip'):
+        if show:
+            if job.get('strip'):
+                reel.facts_layer(strip_items(job), f'{tmp}/f.png')
+            for c in job.get('credits') or []:
+                reel.credit_layer(c[2], f'{tmp}/c.png', size=reel.SHOW_CREDIT, y=reel.SHOW_CREDIT_Y)
+        elif job.get('strip'):
             # the same one-fact-one-place check reel() runs, so a repeat fails here in seconds
             reel.strip_check(strip_items(job), [(x if isinstance(x, str) else x[0], 0, 0, {} if isinstance(x, str) else (x[1] if len(x) > 1 else {}))
                                                 for _, _, texts in job['lines'] for x in texts])
