@@ -1,0 +1,99 @@
+{
+ "schema": 1,
+ "file": "digest",
+ "generated_at": "2026-11-09T06:52:08Z",
+ "seq": 222,
+ "kind": "hourly",
+ "since": "2026-11-09T06:45:01Z",
+ "official": [],
+ "outlets": [],
+ "failed": [
+  "Bethesda (YouTube) (HTTP 404, 5x)",
+  "Blizzard (YouTube) (HTTP 404, 5x)",
+  "Bungie (YouTube) (HTTP 404, 5x)",
+  "CD PROJEKT RED (YouTube) (HTTP 404, 5x)",
+  "Call of Duty (YouTube) (HTTP 404, 5x)",
+  "Capcom USA (YouTube) (HTTP 404, 5x)",
+  "EA SPORTS FC (YouTube) (HTTP 404, 5x)",
+  "Fortnite (YouTube) (HTTP 404, 5x)",
+  "Manga Productions (ValueError: no items found, page changed?, 2x)",
+  "Nintendo of America (X) (HTTP 429, 55x)",
+  "Nintendo of America (YouTube) (HTTP 404, 8x)",
+  "PlayStation (X) (HTTP 429, 71x)",
+  "PlayStation (YouTube) (HTTP 404, 13x)",
+  "PlayStation MENA (YouTube) (HTTP 404, 5x)",
+  "PlayStation Middle East (X) (HTTP 429, 3x)",
+  "PlayStation Middle East (YouTube) (HTTP 404, 5x)",
+  "Pokemon (YouTube) (HTTP 404, 5x)",
+  "Riot Games (YouTube) (HTTP 404, 5x)",
+  "Rockstar Games (X) (HTTP 429, 28x)",
+  "Rockstar Games (YouTube) (HTTP 404, 13x)",
+  "SEGA (YouTube) (HTTP 404, 5x)",
+  "Square Enix (YouTube) (HTTP 404, 5x)",
+  "Steam (YouTube) (HTTP 404, 5x)",
+  "Ubisoft (YouTube) (HTTP 404, 5x)",
+  "Xbox (X) (HTTP 429, 72x)",
+  "Xbox (YouTube) (HTTP 404, 13x)"
+ ],
+ "not_covered": [
+  {
+   "name": "Official X accounts not listed above",
+   "reason": "no public page without login; read by Gaming Watch (scout digest) and the Verifier"
+  },
+  {
+   "name": "Konami JP topics",
+   "reason": "the list is drawn by script (the page carries one topic); Konami is covered by the outlets only"
+  },
+  {
+   "name": "Konami, EA and Activision YouTube channels",
+   "reason": "their channel feeds are empty; EA is read through its news page, Activision and Konami through the outlets"
+  },
+  {
+   "name": "PS Store UAE/Saudi, Xbox and Steam regional prices",
+   "reason": "price watching is its own job (scout audit section 6), not part of this service"
+  },
+  {
+   "name": "Epic Games, Sony Group press, GitHub releases",
+   "reason": "answer 403 to a script"
+  },
+  {
+   "name": "Saudi Esports Federation, GEA, UAE gaming bodies",
+   "reason": "refuse automated reads or carry no feed"
+  }
+ ],
+ "watcher": {
+  "host": "dxb-render-1",
+  "last_poll_at": "2026-11-09T06:52:05Z",
+  "sources_enabled": 100,
+  "sources_ok": 73,
+  "sources_failing": 26,
+  "failed": [
+   "Bethesda (YouTube) (HTTP 404, 5x)",
+   "Blizzard (YouTube) (HTTP 404, 5x)",
+   "Bungie (YouTube) (HTTP 404, 5x)",
+   "CD PROJEKT RED (YouTube) (HTTP 404, 5x)",
+   "Call of Duty (YouTube) (HTTP 404, 5x)",
+   "Capcom USA (YouTube) (HTTP 404, 5x)",
+   "EA SPORTS FC (YouTube) (HTTP 404, 5x)",
+   "Fortnite (YouTube) (HTTP 404, 5x)",
+   "Manga Productions (ValueError: no items found, page changed?, 2x)",
+   "Nintendo of America (X) (HTTP 429, 55x)",
+   "Nintendo of America (YouTube) (HTTP 404, 8x)",
+   "PlayStation (X) (HTTP 429, 71x)",
+   "PlayStation (YouTube) (HTTP 404, 13x)",
+   "PlayStation MENA (YouTube) (HTTP 404, 5x)",
+   "PlayStation Middle East (X) (HTTP 429, 3x)",
+   "PlayStation Middle East (YouTube) (HTTP 404, 5x)",
+   "Pokemon (YouTube) (HTTP 404, 5x)",
+   "Riot Games (YouTube) (HTTP 404, 5x)",
+   "Rockstar Games (X) (HTTP 429, 28x)",
+   "Rockstar Games (YouTube) (HTTP 404, 13x)",
+   "SEGA (YouTube) (HTTP 404, 5x)",
+   "Square Enix (YouTube) (HTTP 404, 5x)",
+   "Steam (YouTube) (HTTP 404, 5x)",
+   "Ubisoft (YouTube) (HTTP 404, 5x)",
+   "Xbox (X) (HTTP 429, 72x)",
+   "Xbox (YouTube) (HTTP 404, 13x)"
+  ]
+ }
+}
