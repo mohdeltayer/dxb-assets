@@ -27515,5 +27515,66 @@
   "min_disk_free_mb": 227587,
   "setup_min": 0.12,
   "story": "resident-evil-village-arabic-support-steam-price"
+ },
+ {
+  "name": "dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-09T11:05Z",
+  "stages": {
+   "checks": 6.3,
+   "montage": 44.2,
+   "text": 42.1,
+   "audio": 1.4,
+   "outro": 21.3
+  },
+  "total": 115.3,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-09T11:04Z",
+  "finished_at": "2026-11-09T11:05Z",
+  "render_min": 1.92,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 12.9,
+   "audio_secs": 59.6,
+   "music_pct": 53.8,
+   "leak_pct": 2.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "effects_shots": 7,
+   "mix_secs": 4.0,
+   "secs": 18.0
+  },
+  "lifeless": {
+   "score": 8.9,
+   "still_share": 0.124,
+   "longest_still": 0.8,
+   "cuts_per_10s": 4.31,
+   "held_under_text": 0.0,
+   "secs": 20.9,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 318,
+  "queue_wait_secs": 266,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1003,
+  "peak_mem_mb": 2705,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 16280,
+  "peak_disk_mb": 19878,
+  "min_disk_free_mb": 226228,
+  "setup_min": 0.2,
+  "story": "dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17"
  }
 ]
