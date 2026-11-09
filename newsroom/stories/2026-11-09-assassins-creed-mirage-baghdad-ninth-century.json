@@ -139,5 +139,50 @@
   "context_pages": []
  },
  "sound_reason": "Our bed: the Steam Gameplay trailer stretch from 21 s measured 26.7% music (effects-led, under the 40% floor). The Steam Free Major Update Trailer covers Valley of Memory (AlUla), not Baghdad, so it could not supply these shots. Ubisoft's World Trailer is YouTube-only.",
- "director_v2": "FIX (editor message): shot 3 ended in black and the end slate (cut to 107.6 s); shot 4 held a stealth grab (replaced by 58.4-62.5 s); Instagram first line must differ from the headline."
+ "director_v2": "FIX (editor message): shot 3 ended in black and the end slate (cut to 107.6 s); shot 4 held a stealth grab (replaced by 58.4-62.5 s); Instagram first line must differ from the headline.",
+ "director_qa": {
+  "reel": "cards/2026-11/assassins-creed-mirage-baghdad-ninth-century-reel-v3.mp4",
+  "verdict": "PASS",
+  "at": "2026-11-09",
+  "table": [
+   [
+    "0 parkour hook (21.0)",
+    "0 to 3.4",
+    "PASS",
+    "Moving figure, headline readable at grid size; credit enters about 2 s"
+   ],
+   [
+    "1 rooftops (27.0)",
+    "3.4 to 7.6",
+    "PASS",
+    "City and traversal, figure in window"
+   ],
+   [
+    "2 hooded figures (43.5)",
+    "7.6 to 11.8",
+    "PASS",
+    "No violence; dark but readable"
+   ],
+   [
+    "3 aerial Baghdad (103.1, 4.5 s)",
+    "11.8 to 16.3",
+    "PASS",
+    "Fix applied: no black frames, no end slate"
+   ],
+   [
+    "4 stealth interiors (58.4)",
+    "16.3 to 20.4",
+    "PASS",
+    "Fix applied: crouching and walking figures, no contact, grab or stab at 16.6, 17.3, 18.2, 19.0, 19.6"
+   ],
+   [
+    "5 lattice window, assassin at lantern (62.5)",
+    "20.4 to 24.2",
+    "PASS",
+    "No violence; framing fine"
+   ]
+  ],
+  "sound": "our bed (neon rotation); reason in reel_check; add: Free Major Update Trailer covers AlUla, not Baghdad. Transcript only music tags, speech none; not checked by ear",
+  "facts": "Ubisoft page (four districts, Karkh to Round City, Golden Age figures) and Steam (Arabic, 17 Oct 2024) match"
+ }
 }
