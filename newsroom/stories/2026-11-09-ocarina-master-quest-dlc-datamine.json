@@ -1,0 +1,50 @@
+{
+  "id": "2026-11-09-ocarina-master-quest-dlc-datamine",
+  "status": "built, render check pending",
+  "family": "leak or rumour",
+  "chip": "تسريب",
+  "template": "trailer (not built)",
+  "ledger_find": "2026-11-09: no Master Quest story in newsroom/stories; Ocarina stories are related only (metacritic, UK launch, review scores, road-to-Ocarina episodes).",
+  "claim": "Master Quest data is in the Switch 2 remake files; it would be unlocked by owning DLC, not an update; the world is mirrored and dungeons modified (cows in Jabu-Jabu's Belly). Data reported as incomplete.",
+  "sources": [
+    {
+      "outlet": "Nintendo Everything",
+      "url": "https://nintendoeverything.com/master-quest-references-potentially-found-in-zelda-ocarina-of-time-remake-files/",
+      "date": "2026-11-07 (author Brian; time not shown)",
+      "says": "MrCheeze found 'MQ' references and exefs strings HasMQ, IsMQModeExist, NewGameMQ, ReleaseMQ. Later update: OatmealDome's further datamine reports say Master Quest unlocks by owning DLC, not a download update; world mirrored, dungeons modified (cows in Jabu-Jabu's Belly). Aonuma, asked by IGN why MQ is missing, would not 'announce anything specific at this time'."
+    },
+    {
+      "outlet": "Video Games Chronicle",
+      "url": "https://www.videogameschronicle.com/news/zelda-ocarina-of-time-switch-2-could-be-getting-master-quest-dlc/",
+      "date": "2026-11-09 10:48 (Andy Robinson)",
+      "says": "Attributes 'According to OatmealDome on X, the Switch 2 files suggest dungeons will again be changed, and the world flipped.' Attributes the quoted lines ('There is data in the game files for Master Quest. It will be unlocked by owning DLC - it is not just an update.' / 'The data is incomplete, but I can confirm that the world is mirrored and dungeons are modified (e.g. cows in Jabu-Jabu's Belly).') to MrCheeze's embedded post. Names the first lead as social media user 'MrCheese' ('references to MQ'). No Nintendo comment stated."
+    },
+    {
+      "outlet": "X, OatmealDome (primary for the attribution)",
+      "url": "https://x.com/OatmealDome/status/2119183149510893976",
+      "date": "not read",
+      "says": "Not readable: HTTP 402 to WebFetch. Search index text only: '[Ocarina of Time] There is data in the game files for Master Quest. It will be unlocked by owning DLC - it is not just an update. The data is incomplete, but I can confirm that the world is mirrored and dungeons are modified (e.g. cows in Jabu-Jabu's Belly).' Index does not confirm the account's posting time."
+    }
+  ],
+  "conflict": "VGC attaches the DLC/mirrored/Jabu-Jabu lines to MrCheeze's post and names OatmealDome only for the 'world flipped' line. Nintendo Everything and the search index attach them to OatmealDome. Not resolved from what can be read. Coordinator stop condition applies until resolved.",
+  "nintendo": "No Nintendo statement on the datamine found. Aonuma told IGN he would not 'announce anything specific at this time' about Master Quest (NE). That is about the mode's absence, not the leak; the on-screen line 'لم تعلّق نينتيندو على التسريب بعد' is accurate for the leak only.",
+  "gate": "gate 2026-11-09: VGC, NE, X index checked; no Nintendo statement found.",
+  "next": "Resolve the attribution: read OatmealDome's post and MrCheeze's post from another route (their own pages or a press copy), then rebuild with the verified name on the line. Not rendered; not queued.",
+  "first_report": "Nintendo Everything, 7 Nov 2026 (time not shown; MrCheeze datamine strings; OatmealDome update same article)",
+  "source_type": "secondary",
+  "footage": "Nintendo US store overview trailer (720p, 283 s, nsuid 70010000130792), official; shots 113 to 128 s on the showcase layout, credit on each shot; no slate, no UI text, nothing graphic. Track: trailer stretch 111.0 to 125.8 s (speechcheck: none).",
+  "lane": "leak (تسريب), account Digital Lounge only",
+  "beat": "leak or rumour (family 6): claim with the ladder chip, who found it, what is claimed, what is not confirmed",
+  "angle": {
+    "why_now": "The datamine turned up in the first days after launch and a second dataminer report (VGC, 9 Nov) added the DLC detail; Nintendo has not commented on the leak.",
+    "what_it_means_here": "Master Quest is the harder, mirrored remix of the 1998 dungeons from the GameCube release; if the data is real, the mode would be paid DLC, not part of the base game, and nothing is announced.",
+    "payoff": "Nothing confirmed: the data is incomplete, Nintendo has not commented, Aonuma has not announced anything specific."
+  },
+  "decision_log": [
+    "shot 1 113.0 s, submerged dungeon with Link",
+    "shot 2 117.4 s, Link on the bird over water",
+    "shot 3 120.6 s, Link underwater (cut near 122.4 s; director to check)",
+    "shot 4 126.0 s, Link on the temple plaza",
+    "track: overview score 111.0 to 125.8 s, speech none; audio split default"
+  ]
+}
