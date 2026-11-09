@@ -27865,5 +27865,66 @@
   "min_disk_free_mb": 224938,
   "setup_min": 0.17,
   "story": "gta-vi-preload-november-10"
+ },
+ {
+  "name": "dreadmoor-early-access-steam-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-09T12:47Z",
+  "stages": {
+   "checks": 7.8,
+   "montage": 65.1,
+   "text": 61.3,
+   "audio": 2.0,
+   "outro": 29.9
+  },
+  "total": 166.2,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-09T12:44Z",
+  "finished_at": "2026-11-09T12:47Z",
+  "render_min": 2.77,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 7.6,
+   "audio_secs": 24.5,
+   "music_pct": 99.1,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 7,
+   "mix_secs": 5.4,
+   "secs": 14.2
+  },
+  "lifeless": {
+   "score": 0.1,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 5.86,
+   "held_under_text": 0.005,
+   "secs": 22.2,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 342,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1090,
+  "peak_mem_mb": 2328,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 16486,
+  "peak_disk_mb": 20065,
+  "min_disk_free_mb": 226041,
+  "setup_min": 0.22,
+  "story": "dreadmoor-early-access-steam"
  }
 ]
