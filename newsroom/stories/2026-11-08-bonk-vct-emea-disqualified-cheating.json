@@ -89,8 +89,15 @@
  "director_check": {
   "verdict": "PASS",
   "out": "cards/2026-11/bonk-vct-emea-disqualified-cheating-reel-v1.mp4",
-  "at": "2026-11-09T02:05:00Z",
-  "note": "Director QA by Production 2 helper on strip, dense, sheet and 1.5 fps contact sheet; sound judged from measurements/design (our bed), not by ear."
+  "blob": "02fffec9e4538bc3a8dc6c12449ce35c7a27a1b3",
+  "at": "2026-11-09T02:01:52Z",
+  "note": "Director QA by Production 2 helper on strip, dense, sheet and 1.5 fps contact sheet; sound judged from measurements/design (our bed), not by ear. Table in draft_notes.",
+  "checklist": {
+   "job": "jobs/live/bonk-vct-emea-disqualified-cheating.json",
+   "sha256": "a3ffc35e918fd4926b8cc3a3eb8f850b48814b64cfa0330f7244fceb9a617aaf",
+   "ok": true,
+   "problems": []
+  }
  },
  "draft_notes": {
   "qa_table": [
