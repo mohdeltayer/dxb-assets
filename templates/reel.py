@@ -600,7 +600,21 @@ def showcase_box(head_end, facts, rows=2):
 
 def facts_layer(items, path, y=SHOW_FACT_Y, size=SHOW_FACT):
     """The showcase's key facts as one text row in the bottom band, right to left: each label in body grey, its value
-    in ink, a dot between items. A value is a string or ('aed', '149') for the dirham sign left of the digits."""
+    in ink, a dot between items. A value is a string or ('aed', '149') for the dirham sign left of the digits. The row
+    steps down to SHOW_FACT_MIN when it does not fit, then stops."""
+    while True:
+        try:
+            return _facts_row(items, path, y, size)
+        except ValueError:
+            if size - 4 < SHOW_FACT_MIN:
+                raise
+            size -= 4
+
+
+SHOW_FACT_MIN = 32
+
+
+def _facts_row(items, path, y, size):
     fv, fl = A.F('Bold', size), A.F('Medium', size - 6)
     probe = ImageDraw.Draw(Image.new('L', (W, H)))
     ink, body = Image.new('L', (W, H), 0), Image.new('L', (W, H), 0)
