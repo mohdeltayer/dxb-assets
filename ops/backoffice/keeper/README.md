@@ -39,3 +39,20 @@ status sessions read. Install or stop through `backoffice-install.yml` (`-f serv
 
     ~/dxb-assets/ops/backoffice/keeper/install.sh [--disable]     # as the runner user
     ops/backoffice/keeper/test.sh                                 # unit tests and one pass in a temp home, pushes off
+
+## The work order and the hop alarms (release 2026-11-10, adv-20261109-coordination-in-code)
+
+GitHub's `*/5` schedule ran keeper.yml only every 4 to 8 hours on 8 and 9 Nov, so the server's timer is now the clock for
+it too: `server_tick.sh` writes `server-summary.json` (its Publer read: times, networks, states, labels; no ids, no links,
+the code revision) and, every 10 minutes and at :25 to :29, sends it to keeper.yml as a `repository_dispatch`
+(`keeper-server`) with the watch's token (`/etc/dxb-watch/github-token`, Contents write on dxb-assets only; read by curl
+from a header on stdin, never on a command line). `KEEPER_DISPATCH=off` stops it; test.sh runs with it off.
+
+keeper.yml then takes the server's read as Publer evidence while it is under 20 minutes old (`tick --server`), and runs
+`workorder.py`: `keeper/work-order.md` and `.json` hourly from :25 Dubai, `keeper/hop.json` every pass, the hop alarms in
+status.json (`hop`) and status.txt, one ntfy push per alarm key. Details and the seven alarms: the docstring of
+`workorder.py`; tests `test_workorder.py`.
+
+    python3 ops/backoffice/keeper/workorder.py --board <desk/board.json> --mirror <desk/mirror.json> \
+      --digest <watch/digest.json> --commitments newsroom/commitments.json --ledger templates/assets/format-ledger.json \
+      --out /tmp/wo --force          # a work order now, from local copies

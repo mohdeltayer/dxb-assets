@@ -115,7 +115,8 @@ Hourly inbox mirror for the desk dispatcher (advisor card adv-20261028-three-des
 7. Published (step 7): ArtifactData "query", collection "published", query {"where": [["published_at", ">=", <ISO time 49 hours ago>]], "limit": 200}; save each returned document as "$W/pubx/<doc_id>.json" (its data) with a Python heredoc, and keep the versions. python3 $D/dispatch.py published --posts "$W/published.json" --existing "$W/pubx" --out "$W/pub.json". Each entry {doc_id, data, if_version?} is one ArtifactData batch write: op "set", collection "published", doc_id, data, if_version = the version you kept for that doc_id (none for a new doc_id); up to 50 per call. The script already skips Reels production recorded under another id.
 8. Stale cards (step 8): ArtifactData "query", collection "items", query {"where": [["status", "in", ["open", "answered"]]], "limit": 1000} (page with the cursor); save each as "$W/open/<id>.json" with only status, created_at, updated_at, answer {at}, picked_up_at (Python heredoc), keeping versions. python3 $D/dispatch.py stale --items "$W/open" --out "$W/stale.json"; apply each {id, fields} with ArtifactData batch update (collection "items", if_version = the version you kept). Skip any entry refused for a changed version.
 9. Stories (card body and addendum_2106): ArtifactData "list", collection "stories", query {"limit": 1000}; save each as "$W/stox/<doc_id>.json" (its data), keeping versions. python3 $D/dispatch.py stories --board "$W/q/desk/board.json" --commitments <checkout>/newsroom/commitments.json --keeper "$W/keeper.json" --published "$W/published.json" --existing "$W/stox" --out "$W/stories.json". Apply each entry with ArtifactData batch: op as given ("set" with its data, or "delete"), collection "stories", doc_id, if_version = the kept version for an existing doc_id. Skip any entry refused for a changed version.
-10. Reply in one line (cards, write-backs applied/skipped, per-desk counts; feed gap and next slot; published, stale and stories writes), delete $W, and stop.
+9b. Work order and board_recent (adv-20261109-coordination-in-code, release 2026-11-10): git -C <checkout> show refs/remotes/origin/keeper-status:keeper/work-order.json > "$W/q/desk/work-order.json" and the same for keeper/work-order.md and keeper/hop.json (the keeper-status ref fetched in step 6); python3 $D/dispatch.py recent --board "$W/q/desk/board.json" --out "$W/q/desk/board_recent.md"; commit the four files to desk with the mirror commit (or one commit "Desk: work order <generated_at>" when step 5 had nothing) and push. Never edit the work order by hand.
+10. Reply in one line (cards, write-backs applied/skipped, per-desk counts; feed gap and next slot; published, stale and stories writes; work order time and alarm count), delete $W, and stop.
 ```
 
 Steps 6 to 9 (release 2026-11-09-r3) run on every mirror pass, also when no card changed. The block above is the
@@ -240,3 +241,18 @@ a run that has not been updated still reads them.
    watch/digests/<seq>.json, so a missed hour is read from there (`git show origin/watch-digest:watch/digests/<seq>.json`).
    The desk audit lists as STALE-DIGEST a run whose printed seq is lower than the branch head at the time of the run,
    and the keeper's coverage alarm names the branch seq, so a gap is never put down to the server without it.
+5. Execute the work order (adv-20261109-coordination-in-code, release 2026-11-10; Mohammad, 9 Nov 20:05 Dubai: "the
+   server coordinates, sessions execute"). Every run starts here, before items 1 to 4 above, which the work order
+   carries: `git fetch -q --depth 1 https://github.com/mohdeltayer/dxb-assets.git +keeper-status:refs/remotes/origin/keeper-status`
+   then `git show refs/remotes/origin/keeper-status:keeper/work-order.md` and `keeper/hop.json` (the alarms since the
+   order was written; the desk copies in dxb-queue desk/ lag up to an hour). The keeper writes it every hour from :25
+   Dubai: 1 alarms to clear first, 2 Mohammad's orders (T0 first), 3 open handoffs to Production 2 oldest first with
+   due, 4 the digest head and the previous scout's carried leads and rejections, 5 the next slot due under the
+   cadence, 6 the caps (evergreen allowed and when it reopens, numbers allowed, the card-led window). Execute it top to
+   bottom and report each item in this run's board line with evidence: `wo <generated_at> item <n>: <outcome>
+   (<evidence>)`; an item not done says why, with the rule or section. Print `work order: <generated_at>` first in
+   `done`. The hop alarms (a handoff unacknowledged 20 minutes, no Production 2 line by :50, a 'scheduled:' line
+   without the three Publer post ids, a post outside the caps, the mirror over 2 hours old, a digest below the
+   branch head, no server Publer read in 15 minutes) each reach Mohammad's phone and stay at the top of the next work
+   order until a line clears them. A work order older than 70 minutes is said in `done` and the run goes on from the
+   board as before.

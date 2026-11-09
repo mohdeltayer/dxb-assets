@@ -592,7 +592,7 @@ class PublerReader:
                     st = str(p.get('state') or '').lower()
                     out.append({'network': net, 'state': 'published' if st.startswith('publish') else 'scheduled'
                                 if st.startswith('schedul') else st, 'at': at, 'id': str(p.get('id') or ''),
-                                'link': p.get('post_link') or ''})
+                                'link': p.get('post_link') or '', 'labels': label_names(p.get('labels'))})
             total = (r or {}).get('total_pages')
             if not posts or (total is not None and page + 1 >= int(total)):
                 break
@@ -639,8 +639,46 @@ def publer_evidence(rows, posts, state, now):
     return out
 
 
+def label_names(x):
+    out = []
+    for l in x or []:
+        out.append(str(l.get('name', '')) if isinstance(l, dict) else str(l))
+    return [l.strip() for l in out if l and l.strip()][:12]
+
+
+class PayloadReader:
+    """Posts from the server's Publer read (server-summary.json, sent with the repository_dispatch; build 10 Nov 2026):
+    GitHub's keeper has no Publer key, so it takes the server's read when it is fresh. No ids in it."""
+
+    def __init__(self, summary):
+        self.summary = summary or {}
+
+    def fetch(self, start, end):
+        out = []
+        for p in self.summary.get('posts') or []:
+            at = parse_time(str(p.get('at') or ''))
+            if at and start <= at <= end and p.get('network') in ('instagram', 'x', 'threads'):
+                out.append({'network': p['network'], 'state': p.get('state', ''), 'at': at, 'id': '', 'link': '',
+                            'labels': label_names(p.get('labels'))})
+        return out
+
+
+LAST_READ = {}               # the last read of this pass: {'at', 'posts'} or {'at', 'error'} (for server-summary.json)
+
+
+def server_summary(now, line):
+    """What the server sends GitHub's keeper: its Publer read without ids or links."""
+    posts = [{'at': p['at'].strftime('%Y-%m-%dT%H:%M:%SZ'), 'network': p['network'], 'state': p['state'],
+              'labels': p.get('labels') or []} for p in LAST_READ.get('posts') or []]
+    return {'generated_at': now.strftime('%Y-%m-%dT%H:%M:%SZ'),
+            'publer_read_at': LAST_READ['at'] if LAST_READ.get('posts') is not None else None,
+            'publer': line, 'posts': posts if LAST_READ.get('posts') is not None else None,
+            'code': os.environ.get('KEEPER_CODE_REV') or None}
+
+
 def read_publer(rows, state, now, reader=None):
     """(evidence per row or {}, status line, latest published time seen in Publer or None)."""
+    LAST_READ.clear()
     if reader is None:
         key = publer_key()
         if not key:
@@ -650,7 +688,9 @@ def read_publer(rows, state, now, reader=None):
         posts = reader.fetch(now - timedelta(hours=36), now + timedelta(hours=48))
     except Exception as e:                                  # never blocks the pass; the key never reaches the text
         msg = re.sub(r'[A-Za-z0-9_\-]{24,}', '[redacted]', str(e))[:120]
+        LAST_READ.update({'at': now.strftime('%Y-%m-%dT%H:%M:%SZ'), 'error': msg})
         return {}, 'publer: read failed (%s); evidence from production only' % msg, None
+    LAST_READ.update({'at': now.strftime('%Y-%m-%dT%H:%M:%SZ'), 'posts': posts})
     ev = publer_evidence(rows, posts, state, now)
     pub = [p['at'] for p in posts if p['state'] == 'published' and p['at'] <= now]
     n_s = sum(1 for p in posts if p['state'] == 'scheduled')
@@ -796,10 +836,18 @@ def cmd_tick(args):
         raised, alog = [], ['%s ERROR commitments file unreadable: %s' % (now.strftime('%H:%MZ'), args.commitments)]
     else:
         rows = rows_of(commitments)
+        server = load_json(getattr(args, 'server', None), None) if getattr(args, 'server', None) else None
+        sat = parse_time(str((server or {}).get('publer_read_at') or ''))
         if os.environ.get('KEEPER_PUBLER', 'on').lower() == 'off':
             pubs, pline, plast = {}, 'publer: off', None
+        elif server and sat and (server or {}).get('posts') is not None and mins(now - sat) <= SERVER_FRESH_MIN:
+            pubs, pline, plast = read_publer(rows, state, now, PayloadReader(server))
+            LAST_READ['at'] = sat.strftime('%Y-%m-%dT%H:%M:%SZ')
+            pline = pline.replace('publer: read %s' % now.strftime('%H:%MZ'),
+                                  "publer: the server's read of %s" % sat.strftime('%H:%MZ'), 1)
         else:
             pubs, pline, plast = read_publer(rows, state, now)
+        write(os.path.join(out, 'server-summary.json'), json.dumps(server_summary(now, pline), ensure_ascii=False) + '\n')
         status = summarise(rows, now, mode, pubs)
         raised, alog = raise_alarms(status, state, now)
         status['bank_ready'], bl = bank_line(args.commitments)
@@ -887,6 +935,7 @@ def cmd_show(args):
 # ---------------------------------------------------------------------------------------------
 # Two keepers (addendum_0615): the server's timer is the clock; GitHub's keeper.yml is the secondary
 # ---------------------------------------------------------------------------------------------
+SERVER_FRESH_MIN = 20       # GitHub's keeper takes the server's Publer read when it is this fresh
 STALE_MIN = 15              # GitHub's status older than this, against the server's own pass: alarm
 CMP_WINDOW_MIN = 10         # two passes this close (and on the same commitments) must agree
 
@@ -958,6 +1007,7 @@ def main(argv=None):
     t.add_argument('--board', help='dxb-queue desk/board.json (optional)')
     t.add_argument('--releases', help='ops/build/releases (optional)')
     t.add_argument('--runs', help='newsroom/helper-runs.jsonl (optional)')
+    t.add_argument('--server', help="server-summary.json from dxb-render-1's repository_dispatch (optional): its Publer read")
     t.add_argument('--digest', help='watch/digest.json from the watch-digest branch (optional): the coverage alarm names its seq')
     l = sub.add_parser('line')
     l.add_argument('--status')
