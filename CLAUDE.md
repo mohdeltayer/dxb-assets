@@ -2792,6 +2792,26 @@ stopped being anyone's.
 4. Every scheduled session (hourly watch, the four reviews, the morning digest, the build desk) starts by printing
    'overdue commitments: N, at risk: M' from `newsroom/keeper-status.json`, and acts on keeper alarms first.
 
+## The work order: the server coordinates, sessions execute (adv-20261109-coordination-in-code, Mohammad 9 Nov 2026, 20:05 Dubai; release 2026-11-10)
+
+Every failure on 9 Nov was a session not reading what another wrote; Mohammad was the only part reliably reading both.
+1. The clock is dxb-render-1's keeper timer (GitHub's */5 schedule ran keeper.yml only every 4 to 8 hours on 8 and 9 Nov).
+   Every 10 minutes it wakes keeper.yml with a repository_dispatch carrying its Publer read (times, networks, states,
+   labels; never an id). keeper.yml reads the board, desk/orders/ and desk/mirror.json, the digest branch, the commitments
+   and the format ledger.
+2. Work order: every hour from :25 Dubai, keeper-status `keeper/work-order.md` and `.json`: 1 alarms to clear first;
+   2 Mohammad's orders, T0 first; 3 open handoffs to Production 2, oldest first, with due; 4 the digest head seq and the
+   previous scout's carried leads and rejections; 5 the next slot due under the cadence; 6 the caps (evergreen allowed and
+   when it reopens, numbers allowed, the card-led window). The inbox mirror copies it to dxb-queue desk/ with
+   desk/board_recent.md (dispatch.py recent). Production 2's run prompt: execute the work order top to bottom and report
+   each item on the board with evidence (`ops/production-setup.md`, Production 2 line 5).
+3. Hop alarms, each a line at the top of the next work order that the next run clears first, one ntfy push and a `hop`
+   row in keeper-status: a handoff to Production 2 unacknowledged 20 minutes; no Production 2 board line in the hour by
+   :50 Dubai; a 'scheduled:' line without the Publer post ids; a post outside the caps; the inbox mirror older than 2
+   hours; a digest read below the branch head; no server Publer read in 15 minutes.
+4. The work order is public (a branch of dxb-assets): ids of handoffs and orders, titles, times and rule names only;
+   never a Publer id, a post link, a token or a card body. Code: `ops/backoffice/keeper/workorder.py`.
+
 ## Verification without delay (advisor, 18 Oct 2026, agreed with Mohammad)
 
 Avoid corrections by verifying harder, never by waiting: news is never held

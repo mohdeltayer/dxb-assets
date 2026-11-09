@@ -594,6 +594,15 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
 - A build dependency never cancels a slot: unreleased fix at slot time means the current template, unless held_by_mohammad.
 - Scheduled sessions start with 'overdue commitments: N, at risk: M' (newsroom/keeper-status.json); keeper alarms first.
 
+## The work order (adv-20261109-coordination-in-code, 9 Nov 2026; release 2026-11-10)
+- The server coordinates, sessions execute. Hourly from :25 Dubai the keeper writes keeper-status `keeper/work-order.md`
+  (alarms, Mohammad's orders T0 first, open handoffs to Production 2 with due, digest head and carried leads, next slot,
+  caps); the mirror copies it to dxb-queue desk/ with desk/board_recent.md.
+- Production 2 runs it top to bottom and reports each item on the board: `wo <generated_at> item <n>: <outcome> (<evidence>)`.
+- Hop alarms (ntfy, top of the next order, `hop` in keeper-status): handoff unacked 20 min; no Production 2 line by :50;
+  'scheduled:' without the Publer ids; a post outside the caps; mirror over 2 h; digest below the head; no server Publer
+  read in 15 min.
+
 ## Desk board (adv-20261102-desk-board, 2 Nov 2026)
 
 - The two production accounts align through dxb-queue branch desk, `desk/board.md` and `desk/board.json` (same content, one commit): roles (one owner per duty; changed only by an advisor card Mohammad approved), the digest lock, handoffs (id, from, to, done, next, evidence, must_not_repeat) and questions for Mohammad (each with its card id).

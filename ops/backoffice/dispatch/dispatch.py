@@ -976,6 +976,42 @@ def cmd_stories(args):
     return 0
 
 
+def recent_markdown(board, now, hours=6, limit=40):
+    """desk/board_recent.md (adv-20261109-coordination-in-code, build 10 Nov 2026): the board's handoffs of the last
+    `hours`, newest first, one short line each, so a session reads what the others wrote in one screen instead of the
+    whole board. The open questions follow. Written by the inbox mirror with the work order."""
+    hs = []
+    for h in (board or {}).get('handoffs', []) or []:
+        at = parse_ts(h.get('at')) if isinstance(h, dict) else None
+        if at and now - at <= timedelta(hours=hours):
+            hs.append((at, h))
+    hs.sort(key=lambda x: x[0], reverse=True)
+    lines = ['# Board, last %d hours (%s)' % (hours, dubai_str(now)), '',
+             'Generated from desk/board.json by dispatch.py recent; the full lines are in desk/board.md.', '']
+    for at, h in hs[:limit]:
+        lines.append('- %s [%s] %s -> %s: %s%s' % (
+            dubai_str(at), h.get('id'), cut(h.get('from'), 50), cut(h.get('to'), 40), cut(h.get('done'), 320),
+            (' Next: ' + cut(h.get('next'), 200)) if h.get('next') else ''))
+    if len(hs) > limit:
+        lines.append('- ... %d more in desk/board.md' % (len(hs) - limit))
+    if not hs:
+        lines.append('- no handoff in the last %d hours' % hours)
+    qs = [q for q in (board or {}).get('questions', []) or [] if isinstance(q, dict)
+          and str(q.get('status', 'open')).lower() not in ('answered', 'closed', 'done')]
+    lines += ['', '## Open questions for Mohammad (%d)' % len(qs)]
+    for q in qs[-10:]:
+        lines.append('- [%s] %s' % (q.get('id') or q.get('card') or '?', cut(q.get('question') or q.get('text') or q.get('title'), 200)))
+    return '\n'.join(lines) + '\n'
+
+
+def cmd_recent(args):
+    board = read_json(args.board, {})
+    now = get_now(args.now)
+    write_atomic(args.out, recent_markdown(board, now, args.hours))
+    print('board_recent: written %s (%d hours)' % (args.out, args.hours))
+    return 0
+
+
 # ---------------------------------------------------------------------------------------------
 def main(argv=None):
     ap = argparse.ArgumentParser(prog='dispatch.py', description=__doc__.split('\n')[0])
@@ -1038,6 +1074,12 @@ def main(argv=None):
     p.add_argument('--now')
     p.add_argument('--out', required=True)
     p.set_defaults(fn=cmd_stories)
+    p = sub.add_parser('recent')
+    p.add_argument('--board', required=True)
+    p.add_argument('--hours', type=int, default=6)
+    p.add_argument('--now')
+    p.add_argument('--out', required=True)
+    p.set_defaults(fn=cmd_recent)
     args = ap.parse_args(argv)
     return args.fn(args)
 
