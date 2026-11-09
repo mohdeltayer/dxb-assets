@@ -11,7 +11,7 @@
     "action"
   ],
   "category": "news",
-  "status": "built",
+  "status": "rendered, awaiting Arabic passes, director QA and Mohammad preview",
   "chip": "رسمي",
   "lane": "reel",
   "beat": "catalog addition",
@@ -110,5 +110,14 @@
       "2026-10-21-wolf-among-us-remastered-owners-up-to-50-off",
       "2026-10-28-ps-plus-essential-november-2026"
     ]
+  },
+  "render": {
+    "mp4": "cards/2026-11/dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-reel-v1.mp4",
+    "strip": "cards/2026-11/dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-strip.jpg",
+    "sheet": "cards/2026-11/dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-sheet.jpg",
+    "dense": "cards/2026-11/dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-dense.jpg",
+    "render_commit": "82dd9e73b591d4a9001cebe2a223a8118e1bd835",
+    "run": "render-live 42605047706 (head dba5eda), success, 318 s on dxb-render-1",
+    "publer_receipt": "ed93e05 (media-only upload receipt written by the runner; nothing scheduled)"
   }
 }
