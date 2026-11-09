@@ -45,6 +45,15 @@
    "value": "رسائل منتحلة",
    "note": "ولا تفتح روابط أو مرفقات غير متوقعة",
    "note2": "ولن تطلب كلمات المرور عبر البريد"
+  },
+  {
+   "file": "sega-arara-newsletter-email-leak-november-9-gfx-e.png",
+   "kind": "logofact",
+   "top": "ما تفعله سيغا",
+   "label": "الإرسال عبر آرارا",
+   "value": "موقوف",
+   "note": "وستبلغ الجهة المعنية بحماية البيانات",
+   "note2": "حسب إشعار سيغا الرسمي"
   }
  ],
  "shots": [
@@ -73,13 +82,10 @@
    null
   ],
   [
-   "sega-key-art.jpg",
+   "sega-arara-newsletter-email-leak-november-9-gfx-e.png",
    null,
    3.2,
-   [
-    0.15,
-    0.85
-   ]
+   null
   ]
  ],
  "lines": [],
@@ -126,7 +132,7 @@
    "music": "our channel bed (legal/leak rule, CLAUDE.md 26 Oct point 3); no footage sound exists"
   }
  ],
- "note": "Numbers on SEGA's own site art (700x470 key image from sega.co.jp, blurred and dimmed as ground only). Unrelated game art used only as a ground; credit names SEGA. v2 (director fixes): SEGA logo (official site logo-sega.svg rendered to PNG, templates/assets/brands/sega-logo.png) on a white plate, larger figures, cards fill the safe zone, last shot the key art unblurred.",
+ "note": "Numbers on SEGA's own site art (700x470 key image from sega.co.jp, blurred and dimmed as ground only). Unrelated game art used only as a ground; credit names SEGA. v2 (director fixes): SEGA logo (official site logo-sega.svg rendered to PNG, templates/assets/brands/sega-logo.png) on a white plate, larger figures, cards fill the safe zone, last shot the key art unblurred. v2 fix 9 Nov: the unblurred key art closing shot was a 700x470 still enlarged 4.1x and stopped the quality gate; replaced by a fifth fact card (SEGA's steps). The last 2 s before the end card are a card, not a picture (close_note warns only).",
  "reel_check": {
   "1 SOURCE primary read": "yes: SEGA notice sega.co.jp/release/261109_1.html read in full 05:37Z",
   "1 SOURCE not already posted": "yes: ledger find SEGA, no hit",
