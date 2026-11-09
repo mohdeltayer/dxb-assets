@@ -70,7 +70,7 @@
    "source": "Manga primary (as stated by the release); not re-checked this run"
   }
  ],
- "status": "building: re-dispatched after headline fix",
+ "status": "held",
  "lanes": {
   "dl": {
    "lane": "Reel",
@@ -114,5 +114,91 @@
  "headline_change": "Headline changed for the 72 px limit (run #245 text step refused «مانجا للإنتاج تنشر / لعبة Stranger Than Heaven», 'needs more than 2 lines at 72 px'). Editor decision: «ناشر سعودي\\nللعبة RGG الجديدة»; the game is named in line 1 of the story lines.",
  "onscreen_brackets": "On-screen brackets dropped for the safe zone (run 42599970693 refused the first visual line «مانجا للإنتاج (Manga Productions)» as out of the safe zone). Captions keep the Latin in brackets.",
  "template_note": "formats.py check split refused (third split in a row); kept trailer with the editor's fallback line 3.",
- "source_damage": "sth-act1-2560.mp4 has blocky smear at 215.68 to 216.52 s (run 42601179644 source_check). Shots rebuilt to start at 217.0 and end the 213.0 shot at 215.4 (editor option B, no waiver)."
+ "source_damage": "sth-act1-2560.mp4 has blocky smear at 215.68 to 216.52 s (run 42601179644 source_check). Shots rebuilt to start at 217.0 and end the 213.0 shot at 215.4 (editor option B, no waiver).",
+ "renders": [
+  {
+   "run": "42599449811",
+   "stopped_at": "text: headline needs more than 2 lines at 72 px",
+   "changed": "headline changed to ناشر سعودي / للعبة RGG الجديدة"
+  },
+  {
+   "run": "42599711407",
+   "stopped_at": "text: line 1 is 4 visual lines (keep to 3)",
+   "changed": "line 1 kept, then brackets dropped"
+  },
+  {
+   "run": "42599970693",
+   "stopped_at": "text: line 1 out of the safe zone (مانجا للإنتاج (Manga Productions))",
+   "changed": "brackets dropped from on-screen line 1"
+  },
+  {
+   "run": "42600248944",
+   "stopped_at": "text: line 2 out of the safe zone (وتدور عبر خمسة عقود في اليابان)",
+   "changed": "line 2 hand-broken into three"
+  },
+  {
+   "run": "42600507832",
+   "stopped_at": "text: line 3 out of the safe zone (وضمن Game Pass من اليوم الأول)",
+   "changed": "line 3 split over shots 5 to 7"
+  },
+  {
+   "run": "42600741578",
+   "stopped_at": "text: glued prefix (وXbox) refused",
+   "changed": "line 3 wording changed to وأجهزة Xbox"
+  },
+  {
+   "run": "42600967712",
+   "stopped_at": "text: line 3 out of the safe zone (على PS5 وأجهزة Xbox والحاسب)",
+   "changed": "line 3 as three short visual lines"
+  },
+  {
+   "run": "42601179644",
+   "stopped_at": "source check: blocky smear 215.68 to 216.52 s",
+   "changed": "shots rebuilt to skip the stretch (option B)"
+  },
+  {
+   "run": "42601550804",
+   "stopped_at": "source check: blocky smear 226.23 to 226.40 s",
+   "changed": "tail re-laid to end at 226.1 s"
+  },
+  {
+   "run": "42601970820",
+   "stopped_at": "finished Reel: blocky smear 13.87 to 14.20 s",
+   "changed": "shot 5 and 6 merged (A)"
+  },
+  {
+   "run": "42602984958",
+   "stopped_at": "render: pace, nothing changes 4.2 s at 9.2 s",
+   "changed": "shots merged and shortened, lines 2 and 4 shortened"
+  },
+  {
+   "run": "42603817095",
+   "stopped_at": "finished Reel: blocky smear 13.40 to 14.47 s",
+   "changed": "shot 5 re-timed, 9 shots, lines 2 and 4 shorter"
+  },
+  {
+   "run": "42604927538",
+   "stopped_at": "finished Reel: blocky smear 12.80 to 13.10 s",
+   "changed": "shot 4 re-timed to skip 212 to 213.5 s"
+  },
+  {
+   "run": "42606504923",
+   "stopped_at": "finished Reel: blocky smear 5.87 to 6.53 s and 19.03 to 19.50 s",
+   "changed": "shots re-picked from 146 to 198 s (editor B)"
+  },
+  {
+   "run": "42607402565",
+   "stopped_at": "finished Reel: blocky smear 6.67 to 6.93 s and 21.03 to 21.87 s",
+   "changed": "hard cuts; last shot moved to 194 s"
+  }
+ ],
+ "final_job": {
+  "commit": "0930f44fa7d4405b0f24435ee56b91f055cf845b",
+  "cut": true,
+  "shots": "146.0 3.25; 152.0 2.6; 158.0 2.6; 162.0 3.5; 166.0 1.9; 184.0 2.7; 187.0 2.7; 190.0 2.0; 194.0 1.7 (source sth-act1-2560.mp4, 1440p IGN copy)",
+  "lines": "headline ناشر سعودي / للعبة RGG الجديدة; line 1 مانجا للإنتاج السعودية / تنشر Stranger Than Heaven; line 2 من استوديو RGG التابع لسيغا / وتدور في اليابان; line 3 تصدر في 15 يناير 2027 / على PS5 وأجهزة Xbox / والحاسب; line 4 وفي Game Pass / من اليوم الأول",
+  "credits": "[0,8] المصدر: سيغا (SEGA)",
+  "track": "bed (neon)"
+ },
+ "next": "a frame dump of the flagged seconds on failure, or a local render once the Dubai font is on the container, then block_ok after a look"
 }
