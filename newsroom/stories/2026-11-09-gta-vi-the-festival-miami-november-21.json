@@ -12,7 +12,7 @@
  ],
  "category": "event",
  "priority": "news",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://www.rockstargames.com/VI/gtavi-thefestival",
@@ -79,12 +79,28 @@
  "lanes": {
   "digital_lounge": "Reel IG/X/Threads"
  },
- "versions": [],
+ "versions": [
+  {
+   "v": 1,
+   "change": "first render"
+  },
+  {
+   "v": 2,
+   "change": "shot 3 off the Rockstar slate; VICE framing"
+  },
+  {
+   "v": 3,
+   "change": "director FIX: beach crowd removed, close on the sunset"
+  }
+ ],
  "posts": [],
  "corrections": [],
  "metrics": {},
  "ledger_find": "festival: no GTA hit",
  "lane": "news",
- "director_check": null,
- "published": null
+ "director_check": "round 2 PASS v3 (director-sonnet); frame-0 credit is the build-queue item",
+ "published": null,
+ "template": "split",
+ "chip": "رسمي",
+ "approved": "go: rolling queue; scheduled in Publer 18:30Z IG/X/Threads"
 }
