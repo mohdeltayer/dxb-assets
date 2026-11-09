@@ -1,6 +1,6 @@
 {
   "id": "2026-11-09-ocarina-master-quest-dlc-datamine",
-  "status": "built, render check pending",
+  "status": "rendered v1, director FIX",
   "family": "leak or rumour",
   "chip": "تسريب",
   "template": "trailer (not built)",
@@ -46,5 +46,92 @@
     "shot 3 120.6 s, Link underwater (cut near 122.4 s; director to check)",
     "shot 4 126.0 s, Link on the temple plaza",
     "track: overview score 111.0 to 125.8 s, speech none; audio split default"
-  ]
+  ],
+  "director_qa": {
+    "by": "director (independent, 9 Nov 2026)",
+    "reel": "cards/2026-11/ocarina-master-quest-dlc-datamine-reel-v1.mp4 (142cf66), 16.42 s total, body 14.42 s + 2 s end card",
+    "checks": {
+      "speech": "speechcheck: none in body (before card 14.42); stretch 111.4 s + 14.8 s starts and ends in pauses",
+      "decode": "full ffmpeg decode clean; no smear flagged on sheet",
+      "audio_split": "applied, clean, music 40.2%, leak 0.1%, 5 effects shots (render-times 12:06Z)",
+      "sound_plays": "trailer score from Nintendo store overview 111.4 to 126.2 s; effects follow the picture as split; not judged by ear"
+    },
+    "table": [
+      {
+        "shot": "1 (reel 0.0 to 2.4)",
+        "time": "0.0 to 2.4",
+        "verdict": "PASS",
+        "note": "teal dungeon, Link small mid-frame; line 1 readable; reason fits the dataminers line, weak in scale (figure small)"
+      },
+      {
+        "shot": "2 (2.4 to 5.0)",
+        "time": "2.4 to 5.0",
+        "verdict": "PASS",
+        "note": "ruin and bird over water; bird whole in frame; line 1 holds 5 s across two picture changes (pace ok)"
+      },
+      {
+        "shot": "3 (5.0 to 8.4)",
+        "time": "5.0 to 8.4",
+        "verdict": "PASS",
+        "note": "dim hall with Link, line 2 'تُفتح بمحتوى إضافي' fits the DLC unlock claim; underwater Link (sheet 121.2 s) sits here, not in shot 4"
+      },
+      {
+        "shot": "4 (8.4 to 12.6)",
+        "time": "8.4 to 12.6",
+        "verdict": "FIX",
+        "note": "decision log says 'Link underwater'; picture is red-mouthed Jabu-Jabu interior 8.4 to about 9.3 s, cut at about 9.3 s (source 122.4) to a Link close-up on a ledge to 12.6 s. Reason for the mouth shot on line 3 (GameCube temples) is fine; the log must describe what plays"
+      },
+      {
+        "shot": "5 (12.6 to 14.42)",
+        "time": "12.6 to 14.42",
+        "verdict": "PASS with note",
+        "note": "temple plaza, grey sky, Link small; reason for 'no comment from Nintendo' is weak (scenery under the line); acceptable, no word on it"
+      }
+    ],
+    "lines": [
+      {
+        "line": "1 منقّبو بيانات: ملفات الريميك تضم نسخة Master Quest",
+        "time": "0 to 5",
+        "verdict": "PASS",
+        "note": "dataminers named as source; subject named"
+      },
+      {
+        "line": "2 تُفتح بمحتوى إضافي مع عالم معكوس",
+        "time": "5 to 8",
+        "verdict": "PASS with note",
+        "note": "states the DLC unlock as a flat fact; the datamine claim is attributed by line 1 only. Consider 'حسب بيانات الملفات' if a second line of hedge is wanted"
+      },
+      {
+        "line": "3 وهي نسخة بمعابد أصعب صدرت على GameCube",
+        "time": "8 to 11.5",
+        "verdict": "PASS",
+        "note": "وهي refers to Master Quest named in line 1; release verb صدرت is correct"
+      },
+      {
+        "line": "4 ولم تعلّق نينتيندو بعد",
+        "time": "11.5 to 14.42",
+        "verdict": "PASS with note",
+        "note": "opens on و 0.5 s after line 3 ends and continues it (Nintendo's silence on the same mode): allowed under the no-و rule"
+      }
+    ],
+    "reel_level": {
+      "first_frame_3x4": "headline 2 lines in top band, legible in strip at grid size; chip تسريب at about y 377 px, x up to about 920 px, outside the grid corner (940 to 1080, 240 to 380) by estimate, not measured",
+      "headline": "تسريب يكشف بيانات / نسخة Master Quest: matches the chip; the headline is not louder than the source; no individual named on screen",
+      "source_credit": "«في جي سي (VGC)» in the source field; the on-screen credit is «المصدر: نينتيندو (Nintendo)» on every shot (0 to 4): the credit text is small in the strip (approx 24 px), readable only at full size",
+      "datamined_material": "none: the footage is Nintendo's official store overview trailer",
+      "nintendo_line": "«ولم تعلّق نينتيندو بعد» present on line 4",
+      "changes": "picture changes at 2.4, 5.0, 8.4 and about 9.3 s; the longest hold is line 1 over 5 s with four picture changes; no hold over 4.2 s",
+      "last_2s": "picture (plaza, fade to the ground from 14.25 s); no card",
+      "length": "14.42 s body, 16.42 s total, matches the job's 14.4 s"
+    },
+    "reel_check_gaps": [
+      "Section 1 'Primary read in full' is 'n/a' in the job, not 'yes'. The story's own 'next' says: resolve the attribution (OatmealDome's post and MrCheeze's post via another route) before rebuilding; the story is marked 'not rendered; not queued'. The render went ahead on the joint attribution decided by the editor. Not cleared: the source gate must be resolved or Mohammad must accept the joint attribution before the preview."
+    ],
+    "fixes": [
+      "Source gate: read the OatmealDome and MrCheeze posts by another route, or record Mohammad's decision on the joint attribution. The on-screen wording names no individual, so the picture and lines hold for either version.",
+      "Decision log: rewrite shots 3 and 4 to match the picture (underwater Link is in shot 3; shot 4 is the Jabu-Jabu interior, then a Link close-up from about 9.3 s, cut at source 122.4 s). Record the cut as a separate beat."
+    ],
+    "verdict": "FIX",
+    "preview_first_line": "not sent: the verdict is FIX, so no preview until the source gate and the log are cleared"
+  }
 }
