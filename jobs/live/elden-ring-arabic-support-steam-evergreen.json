@@ -15,7 +15,7 @@
  "shots": [
   [
    "er-gameplay.mp4",
-   44.0,
+   42.6,
    3.4,
    [
     [
@@ -26,7 +26,7 @@
   ],
   [
    "er-gameplay.mp4",
-   52.0,
+   45.96,
    3.8,
    [
     [
@@ -37,7 +37,7 @@
   ],
   [
    "er-gameplay.mp4",
-   100.0,
+   49.72,
    3.8,
    [
     [
@@ -48,7 +48,7 @@
   ],
   [
    "er-gameplay.mp4",
-   148.0,
+   53.48,
    3.6,
    [
     [
@@ -59,7 +59,7 @@
   ],
   [
    "er-gameplay.mp4",
-   132.0,
+   57.04,
    3.6,
    [
     [
@@ -70,7 +70,7 @@
   ],
   [
    "er-gameplay.mp4",
-   152.0,
+   60.6,
    3.0,
    [
     [
@@ -183,7 +183,7 @@
   "STORY: release verbs": "n/a: no release claim",
   "STORY: names match names-ar.md": "yes: بانداي نامكو (Bandai Namco) in the credit; games English only",
   "POST: Arabic passes": "yes: arabic-games-film-editor and arabic-writing run; grammar review recorded in the story file",
-  "SOUND: footage sound or bed with reason": "yes: the Official Gameplay trailer's own score, one stretch from 42.6 s (faster-whisper word timings: no speech from 42.4 to 63.9 s), audio split",
+  "SOUND: footage sound or bed with reason": "yes: the Official Gameplay trailer's own sound, one stretch 42.6 to 63.6 s with the shots from the same seconds; effects-led in parts but in sync; audio split off",
   "SOUND: no speech under Arabic lines": "yes: narration 'The golden order is broken to its core' ends 42.4 s, next speech 63.9 s; stretch 42.6 to 63.6 s clear",
   "PICTURE: footage first": "yes: official Steam trailer, 1920x1080 5.8 Mbps, decode clean, enlargement under 2x",
   "PICTURE: not the same as last 5 Reels": "yes: picture: Elden Ring trailer, no Elden Ring Reel before",
@@ -194,33 +194,41 @@
  },
  "decision_log": [
   {
-   "beat": "0 hook L1",
-   "shot": "44.0 s rider with a torch seen from behind; 52.0 s wide landscape",
+   "beat": "0 hook",
+   "shot": "42.6 s rider on a ridge, then 45.96 s glowing figure",
    "alternatives": "title card 12 s, FromSoftware slate",
    "crop": "x 0.5",
-   "music": "trailer score from 42.6 s (speech-free gap 42.4 to 63.9 s)"
+   "music": "trailer's own sound, one stretch from 42.6 s, shots taken from the same seconds so picture and sound stay in sync (audio split off: it measured music 32.1% of the stretch, effects-led, v1 try failed the sfx guard)"
+  },
+  {
+   "beat": "L1 interface",
+   "shot": "49.72 s landscape",
+   "alternatives": "104 s sorcerer (smear in source 106.25 s)",
+   "crop": "x 0.5",
+   "music": "same stretch"
   },
   {
    "beat": "L2 subtitles",
-   "shot": "100.0 s rider in the grass at sunset; 148.0 s robed figure in a dark hall (v1 first try used 104.0 s, whose 106.25 to 106.42 s has a smear in the source, stopped by the runner)",
-   "alternatives": "76 s combat with blood",
+   "shot": "53.48 s tree and bridge",
+   "alternatives": "-",
    "crop": "x 0.5",
-   "music": "trailer score from 42.6 s (speech-free gap 42.4 to 63.9 s)"
+   "music": "same stretch"
   },
   {
    "beat": "L3 audio",
-   "shot": "132.0 s knight in gold coins",
-   "alternatives": "136 s fight",
+   "shot": "57.04 s creatures with a cart and riders",
+   "alternatives": "76 s combat with blood",
    "crop": "x 0.5",
-   "music": "trailer score from 42.6 s (speech-free gap 42.4 to 63.9 s)"
+   "music": "same stretch; speech-free 42.4 to 63.9 s"
   },
   {
-   "beat": "L4 languages",
-   "shot": "152.0 s blue spell, the closing visual",
-   "alternatives": "title logo 176 s",
+   "beat": "closing picture",
+   "shot": "60.6 s to 63.6 s",
+   "alternatives": "-",
    "crop": "x 0.5",
-   "music": "trailer score from 42.6 s (speech-free gap 42.4 to 63.9 s)"
+   "music": "same stretch ends before 63.9 s narration"
   }
  ],
- "note": "Evergreen bank piece: Arabic support in Elden Ring per its Steam page (Interface and Subtitles ticked, Full Audio not). Official Steam Official Gameplay trailer, 1080p."
+ "note": "Evergreen bank piece: Arabic support in Elden Ring per its Steam page (Interface and Subtitles ticked, Full Audio not). Official Steam Official Gameplay trailer, 1080p.",
+ "audio_split": false
 }
