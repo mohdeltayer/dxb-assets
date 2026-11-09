@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-09T17:52:05Z",
- "seq": 238,
+ "generated_at": "2026-11-09T18:52:05Z",
+ "seq": 239,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -172,16 +172,16 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-09T17:50:15Z",
+  "last_poll_at": "2026-11-09T18:50:04Z",
   "sources_enabled": 100,
-  "sources_ok": 93,
+  "sources_ok": 92,
   "sources_failing": 7,
   "failed": [
-   "Arab Hardware (AR) (HTTP 500, 5x)",
+   "Arab Hardware (AR) (HTTP 500, 6x)",
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 7x)",
    "Nintendo of America (X) (HTTP 429, 56x)",
    "PlayStation (X) (HTTP 429, 72x)",
-   "PlayStation Middle East (X) (HTTP 429, 3x)",
+   "PlayStation Middle East (X) (HTTP 429, 4x)",
    "Rockstar Games (X) (HTTP 429, 29x)",
    "Xbox (X) (HTTP 429, 73x)"
   ]
