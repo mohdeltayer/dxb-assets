@@ -158,6 +158,7 @@ jobs:
           stats="$RUNNER_TEMP/runner-stats.json"
           python templates/runner_stats.py start "$stats" || true
           trap 'python templates/runner_stats.py stop "$stats" || true' EXIT
+          export LOOK_ENTRY="$RUNNER_TEMP/look.json"    # theme and style of the Reel, for the look ledger (no three in a row)
           python templates/render_job.py run "$JOB"
           echo "RENDER_SECS=$(( $(date +%s) - start ))" >> "$GITHUB_ENV"
           # keep this run's render-times entry; the commit step rebuilds on the latest main
@@ -182,7 +183,8 @@ jobs:
             git reset -q --hard "origin/$GITHUB_REF_NAME"
             cp -r "$RUNNER_TEMP/out/." .
             python -c "import json; p = 'templates/assets/render-times.json'; d = json.load(open(p)); e = json.load(open('$RUNNER_TEMP/render-time.json')); e['job_secs'] = $RENDER_SECS; e['setup_min'] = round($SETUP_SECS / 60, 2); e['story'] = '$(basename "$JOB" .json)'; d.append(e); json.dump(d, open(p, 'w'), indent=1, ensure_ascii=False)"
-            git add --sparse -f $files templates/assets/render-times.json
+            looks=""; if [ -f "$RUNNER_TEMP/look.json" ]; then python templates/looks.py add "$RUNNER_TEMP/look.json" && looks=templates/assets/look-ledger.json; fi
+            git add --sparse -f $files templates/assets/render-times.json $looks
             if [ -f "$JOB" ]; then git rm -q "$JOB"; fi
             git commit -q -m "Render $(basename "$JOB" .json) on the dxb-render server ($RENDER_SECS s, $(nproc) cores)"
             if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi

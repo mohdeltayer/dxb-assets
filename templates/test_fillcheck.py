@@ -43,8 +43,15 @@ class Band(unittest.TestCase):
             FC.check(self.job('band.mp4', lowres_ok='1080p Steam trailer, crop enlargement 1.2x'), self.d)
 
     def test_weak_source_named_passes(self):
-        FC.check(self.job('band.mp4', lowres_ok={'searched': ['IGN', 'publisher press site'], 'result': 'none above 720p'}), self.d)
-        FC.check(self.job('band.mp4', lowres_ok='IGN, Nintendo store, Steam: none above 720p'), self.d)
+        keep = {'persist': {'head': [[0, 1]]}}          # the headline stays in the band (9 Nov 2026)
+        FC.check(self.job('band.mp4', lowres_ok={'searched': ['IGN', 'publisher press site'], 'result': 'none above 720p'}, **keep), self.d)
+        FC.check(self.job('band.mp4', lowres_ok='IGN, Nintendo store, Steam: none above 720p', **keep), self.d)
+
+    def test_empty_band_refused_whatever_lowres_ok(self):
+        """Mohammad, 8 Nov 2026: no empty band at any second; a weak source named does not excuse it (9 Nov 2026)."""
+        with self.assertRaises(ValueError) as e:
+            FC.check(self.job('band.mp4', lowres_ok='IGN, Nintendo store, Steam: none above 720p'), self.d)
+        self.assertIn('band empty after the headline', str(e.exception))
 
     def test_band_only_under_the_headline_passes(self):
         FC.check({'template': 'trailer', 'shots': [['band.mp4', 0.0, 3.4, 0.5], ['full.mp4', 3.4, 4.0, 0.5]]}, self.d)
