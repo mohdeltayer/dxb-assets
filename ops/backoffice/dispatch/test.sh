@@ -294,6 +294,7 @@ hasnt "$log" "$SECRET_TOPIC" "log has no topic"
 
 echo "== operations data (feed, published, stale, stories; adv-20261108-stories-tab)"
 if out=$("$PY" -m unittest discover -s "$HERE" -p 'test_opsdata.py' 2>&1); then ok "opsdata unit tests ($(grep -o 'Ran [0-9]* tests' <<<"$out"))"; else bad "opsdata unit tests"; echo "$out" | tail -20; fi
+if out=$("$PY" -m unittest discover -s "$HERE" -p 'test_pipeline.py' 2>&1); then ok "pipeline unit tests ($(grep -o 'Ran [0-9]* tests' <<<"$out"))"; else bad "pipeline unit tests"; echo "$out" | tail -20; fi
 
 echo
 echo "passed: $pass, failed: $fail"
