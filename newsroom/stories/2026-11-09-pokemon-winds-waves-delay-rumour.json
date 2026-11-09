@@ -11,7 +11,7 @@
  ],
  "category": "rumour",
  "priority": "green",
- "status": "building",
+ "status": "built v1, director PASS 04:50Z, not submitted",
  "why": "Gen 10 is the most anticipated Switch 2 Pokémon release; a labelled rumour about a delay behind the official 2027 window.",
  "sources": [
   {
@@ -80,5 +80,18 @@
    "pokemon winds"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/pokemon-winds-waves-delay-rumour-reel-v1.mp4",
+  "blob": "e88af8e555015560baef99daf97535bf5369755e",
+  "at": "2026-11-09T04:47:49Z",
+  "note": "Director 04:50Z: strip, sheet and 8 full frames read. 6 shots PASS: official Nintendo store images, no baked text, subjects whole at x crops; lines readable, inside safe zone, each opens on an Arabic word, credit TPC on every shot, strip official status only; first frame shows Pokemon starter and headline readable at grid size; 28.2 s incl. end card; last two seconds a picture; sound our bed (stills only), speech none; sensitive none. Notes: pace waived (4.4 to 5 s holds for reading pace); credit line touches the trainer's hat on the volcano shot. Limits: judged from frames, not by ear.",
+  "checklist": {
+   "job": "jobs/live/pokemon-winds-waves-delay-rumour.json",
+   "sha256": "249e4959dcf919d86e8c390c66d58d2fb8b53a609b956faa80252eab04784fb0",
+   "ok": true,
+   "problems": []
+  }
  }
 }
