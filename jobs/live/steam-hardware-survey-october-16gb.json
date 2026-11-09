@@ -13,12 +13,12 @@
    "seconds": 24
   },
   {
-   "file": "steam-deck-trailer.mp4",
-   "steam": 1675200,
-   "trailer": "Steam Deck Available Now",
-   "trailer_id": 1749094849,
+   "file": "steam-machine-unboxing.mp4",
+   "steam": 4165910,
+   "trailer": "Steam Machine Unboxing",
+   "trailer_id": 1255819847,
    "start": 0,
-   "seconds": 31
+   "seconds": 70
   }
  ],
  "shots": [
@@ -54,8 +54,8 @@
    null
   ],
   [
-   "steam-deck-trailer.mp4",
-   13.6,
+   "steam-machine-unboxing.mp4",
+   40.0,
    3.3,
    [
     [
@@ -65,19 +65,19 @@
    ]
   ],
   [
-   "steam-deck-trailer.mp4",
-   7.6,
+   "steam-machine-unboxing.mp4",
+   46.0,
    2.8,
    [
     [
      0.0,
-     0.45
+     0.55
     ]
    ]
   ],
   [
-   "steam-deck-trailer.mp4",
-   22.6,
+   "steam-machine-unboxing.mp4",
+   58.0,
    2.5,
    [
     [
@@ -212,7 +212,7 @@
   "SOUND: no speech under Arabic lines": "yes: bed only",
   "PICTURE: footage first": "yes: Valve's own Steam Machine and Steam Deck trailers throughout; the one card stands on the Steam Machine trailer (ground_footage)",
   "PICTURE: not the same as last 5 Reels": "yes: no Valve hardware footage in the last five (DQ3, Master Quest, GTA VI, DREADMOOR, Cyberpunk)",
-  "PICTURE: crop per beat": "yes: product shots centred, x 0.5; hammock x 0.45; LED close-up x 0.55",
+  "PICTURE: crop per beat": "yes: product shots centred, x 0.5; unboxing hands x 0.5 to 0.55; LED close-up x 0.55; Steam Deck trailer dropped (letterboxed 900 rows, over the 2x cap)",
   "PICTURE: credit on every clip": "yes: «المصدر: فالف (Valve)» over shots 0 to 6",
   "PICTURE: headline not over a face": "yes: shot 0 is the Steam Machine on a desk, no face",
   "CHECKS: decision log": "yes"
@@ -244,17 +244,17 @@
   },
   {
    "beat": "3 L2 September",
-   "shot": "Steam Deck trailer 13.6 s, a desk PC setup with monitors: PC players' machines",
-   "alternatives": "Steam Machine edge",
+   "shot": "Steam Machine Unboxing 40.0 s, a hand on the box: a player's machine",
+   "alternatives": "Steam Deck trailer 13.6 s (letterboxed, 900 rows, 2.13x: refused by the quality gate)",
    "crop": "x 0.5",
    "music": "bed",
    "evidence_role": "illustration"
   },
   {
    "beat": "4 L3 sample",
-   "shot": "Steam Deck 7.6 s (hammock) then 22.6 s (couch): the people who answer the survey",
-   "alternatives": "9.0 s two players",
-   "crop": "x 0.45, 0.5",
+   "shot": "Unboxing 46.0 s, the machine lifted out, then 58.0 s the machine on white",
+   "alternatives": "Steam Deck hammock and couch (letterboxed, refused)",
+   "crop": "x 0.55, 0.5",
    "music": "bed",
    "evidence_role": "illustration"
   },
@@ -267,5 +267,5 @@
    "evidence_role": "illustration"
   }
  ],
- "note": "Steam Hardware Survey October 2026, Production 2 (this chat), named by Mohammad 9 Nov 19:15 Dubai. Sources: Valve's Steam Machine trailer (1920x1080, 5.4 Mbps, no audio) and Steam Deck trailer (1920x1080, 5.1 Mbps), both decode clean, crop 1.78x. clipcard because split had six today (cap four) and trailer would be a third in a row. Theme gold and style bold: the last look was cold/glow."
+ "note": "Steam Hardware Survey October 2026, Production 2 (this chat), named by Mohammad 9 Nov 19:15 Dubai. Sources: Valve's Steam Machine trailer (1920x1080, 5.4 Mbps, no audio) and Steam Machine Unboxing trailer (1920x1080, 5.5 Mbps, no letterbox), both decode clean; the Steam Deck trailer was dropped (letterboxed to 900 rows), crop 1.78x. clipcard because split had six today (cap four) and trailer would be a third in a row. Theme gold and style bold: the last look was cold/glow."
 }
