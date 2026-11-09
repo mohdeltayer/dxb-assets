@@ -27,3 +27,4 @@ without checking them against the story's own primary.
 - 2026-10-01 · no chip · أصبحت Octopath Traveler وOctopath Traveler II من سكوير إنكس (Square Enix) متوفرتين الآن بنسختين مخصصتين لجهاز Nintendo S (`2026-10-01-octopath-switch2`)
 
 ## Log (one line per published post, added by presubmit.py published)
+- 2026-11-09 · رسمي · split · Dragon Quest III HD-2D Remake and Dynasty Warriors: Origins join the PS Plus Game Catalog (Japan) (`2026-11-09-dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17`)
