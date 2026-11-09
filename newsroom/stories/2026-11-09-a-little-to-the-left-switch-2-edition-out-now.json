@@ -12,7 +12,7 @@
  ],
  "category": "out_now",
  "priority": "news",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://www.nintendo.com/us/store/products/a-little-to-the-left-nintendo-switch-2-edition-switch-2/",
@@ -78,9 +78,26 @@
  "metrics": {},
  "ledger_find": "little to the left: no hit",
  "lane": "news",
- "director_check": null,
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/a-little-to-the-left-switch-2-edition-out-now-reel-v3.mp4",
+  "blob": "c4d7174ebd334d70670e4358c269c46736076fb1",
+  "at": "2026-11-09T19:26:12Z",
+  "note": "round 3 pass with note (two-round limit): shot 6 near-repeat and a 0.25 s flash; no Switch 1 hardware; no title screen",
+  "checklist": {
+   "job": "jobs/live/a-little-to-the-left-switch-2-edition-out-now.json",
+   "sha256": "57f99236cc68c0db6e4c5311dad10640b7420fe1eb3f0f7383ddfa05cbf6464f",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-sonnet"
+ },
  "published": null,
  "template": "split",
  "chip": "متوفر الآن",
- "approved": null
+ "approved": "go: Mohammad's T0 order; scheduled in Publer 19:45Z IG/X/Threads"
 }
