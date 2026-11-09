@@ -37,3 +37,4 @@ without checking them against the story's own primary.
 - 2026-11-08 · no chip · Ocarina of Time (Switch 2): second-biggest Zelda launch in UK history by physical sales, per Christopher Dring (The Game Business), NielsenIQ data (`2026-11-08-ocarina-of-time-uk-launch-dring`)
 - 2026-11-05 · no chip · Ocarina of Time: 7 more songs on Nintendo Music (Nintendo of America post), intro cinematic and its music (`2026-11-05-ocarina-of-time-nintendo-music-seven-songs`)
 - 2026-11-05 · no chip · Ocarina of Time out now on Switch 2 (launch day), intro cinematic first stretch (`2026-11-05-ocarina-of-time-switch-2-out-now`)
+- 2026-11-09 · تسريب · trailer (not built) · 2026-11-09-ocarina-master-quest-dlc-datamine (`2026-11-09-ocarina-master-quest-dlc-datamine`)

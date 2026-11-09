@@ -1,215 +1,224 @@
 {
-  "id": "2026-11-09-ocarina-master-quest-dlc-datamine",
-  "status": "rendered v1, director PASS",
-  "family": "leak or rumour",
-  "chip": "تسريب",
-  "template": "trailer (not built)",
-  "ledger_find": "2026-11-09: no Master Quest story in newsroom/stories; Ocarina stories are related only (metacritic, UK launch, review scores, road-to-Ocarina episodes).",
-  "claim": "Master Quest data is in the Switch 2 remake files; it would be unlocked by owning DLC, not an update; the world is mirrored and dungeons modified (cows in Jabu-Jabu's Belly). Data reported as incomplete.",
-  "sources": [
-    {
-      "outlet": "Nintendo Everything",
-      "url": "https://nintendoeverything.com/master-quest-references-potentially-found-in-zelda-ocarina-of-time-remake-files/",
-      "date": "2026-11-07 (author Brian; time not shown)",
-      "says": "MrCheeze found 'MQ' references and exefs strings HasMQ, IsMQModeExist, NewGameMQ, ReleaseMQ. Later update: OatmealDome's further datamine reports say Master Quest unlocks by owning DLC, not a download update; world mirrored, dungeons modified (cows in Jabu-Jabu's Belly). Aonuma, asked by IGN why MQ is missing, would not 'announce anything specific at this time'."
-    },
-    {
-      "outlet": "Video Games Chronicle",
-      "url": "https://www.videogameschronicle.com/news/zelda-ocarina-of-time-switch-2-could-be-getting-master-quest-dlc/",
-      "date": "2026-11-09 10:48 (Andy Robinson)",
-      "says": "Attributes 'According to OatmealDome on X, the Switch 2 files suggest dungeons will again be changed, and the world flipped.' Attributes the quoted lines ('There is data in the game files for Master Quest. It will be unlocked by owning DLC - it is not just an update.' / 'The data is incomplete, but I can confirm that the world is mirrored and dungeons are modified (e.g. cows in Jabu-Jabu's Belly).') to MrCheeze's embedded post. Names the first lead as social media user 'MrCheese' ('references to MQ'). No Nintendo comment stated."
-    },
-    {
-      "outlet": "X, OatmealDome (primary for the attribution)",
-      "url": "https://x.com/OatmealDome/status/2119183149510893976",
-      "date": "not read",
-      "says": "Not readable: HTTP 402 to WebFetch. Search index text only: '[Ocarina of Time] There is data in the game files for Master Quest. It will be unlocked by owning DLC - it is not just an update. The data is incomplete, but I can confirm that the world is mirrored and dungeons are modified (e.g. cows in Jabu-Jabu's Belly).' Index does not confirm the account's posting time."
-    }
-  ],
-  "conflict": "VGC attaches the DLC/mirrored/Jabu-Jabu lines to MrCheeze's post and names OatmealDome only for the 'world flipped' line. Nintendo Everything and the search index attach them to OatmealDome. Not resolved from what can be read. Coordinator stop condition applies until resolved.",
-  "nintendo": "No Nintendo statement on the datamine found. Aonuma told IGN he would not 'announce anything specific at this time' about Master Quest (NE). That is about the mode's absence, not the leak; the on-screen line 'لم تعلّق نينتيندو على التسريب بعد' is accurate for the leak only.",
-  "gate": "gate 2026-11-09: VGC, NE, X index checked; no Nintendo statement found.",
-  "next": "Resolve the attribution: read OatmealDome's post and MrCheeze's post from another route (their own pages or a press copy), then rebuild with the verified name on the line. Not rendered; not queued.",
-  "first_report": "Nintendo Everything, 7 Nov 2026 (time not shown; MrCheeze datamine strings; OatmealDome update same article)",
-  "source_type": "secondary",
-  "footage": "Nintendo US store overview trailer (720p, 283 s, nsuid 70010000130792), official; shots 113 to 128 s on the showcase layout, credit on each shot; no slate, no UI text, nothing graphic. Track: trailer stretch 111.0 to 125.8 s (speechcheck: none).",
-  "lane": "leak (تسريب), account Digital Lounge only",
-  "beat": "leak or rumour (family 6): claim with the ladder chip, who found it, what is claimed, what is not confirmed",
-  "angle": {
-    "why_now": "The datamine turned up in the first days after launch and a second dataminer report (VGC, 9 Nov) added the DLC detail; Nintendo has not commented on the leak.",
-    "what_it_means_here": "Master Quest is the harder, mirrored remix of the 1998 dungeons from the GameCube release; if the data is real, the mode would be paid DLC, not part of the base game, and nothing is announced.",
-    "payoff": "Nothing confirmed: the data is incomplete, Nintendo has not commented, Aonuma has not announced anything specific."
+ "id": "2026-11-09-ocarina-master-quest-dlc-datamine",
+ "status": "rendered v1, director PASS",
+ "family": "leak or rumour",
+ "chip": "تسريب",
+ "template": "trailer (not built)",
+ "ledger_find": "2026-11-09: no Master Quest story in newsroom/stories; Ocarina stories are related only (metacritic, UK launch, review scores, road-to-Ocarina episodes).",
+ "claim": "Master Quest data is in the Switch 2 remake files; it would be unlocked by owning DLC, not an update; the world is mirrored and dungeons modified (cows in Jabu-Jabu's Belly). Data reported as incomplete.",
+ "sources": [
+  {
+   "outlet": "Nintendo Everything",
+   "url": "https://nintendoeverything.com/master-quest-references-potentially-found-in-zelda-ocarina-of-time-remake-files/",
+   "date": "2026-11-07 (author Brian; time not shown)",
+   "says": "MrCheeze found 'MQ' references and exefs strings HasMQ, IsMQModeExist, NewGameMQ, ReleaseMQ. Later update: OatmealDome's further datamine reports say Master Quest unlocks by owning DLC, not a download update; world mirrored, dungeons modified (cows in Jabu-Jabu's Belly). Aonuma, asked by IGN why MQ is missing, would not 'announce anything specific at this time'."
   },
-  "decision_log": [
-    "shot 1 113.0 s, submerged dungeon with Link",
-    "shot 2 117.4 s, Link on the bird over water",
-    "shot 3 120.6 s, Link underwater (cut near 122.4 s; director to check)",
-    "shot 4 126.0 s, Link on the temple plaza",
-    "track: overview score 111.0 to 125.8 s, speech none; audio split default"
-  ],
-  "director_qa": {
-    "by": "director (independent, 9 Nov 2026)",
-    "reel": "cards/2026-11/ocarina-master-quest-dlc-datamine-reel-v1.mp4 (142cf66), 16.42 s total, body 14.42 s + 2 s end card",
-    "checks": {
-      "speech": "speechcheck: none in body (before card 14.42); stretch 111.4 s + 14.8 s starts and ends in pauses",
-      "decode": "full ffmpeg decode clean; no smear flagged on sheet",
-      "audio_split": "applied, clean, music 40.2%, leak 0.1%, 5 effects shots (render-times 12:06Z)",
-      "sound_plays": "trailer score from Nintendo store overview 111.4 to 126.2 s; effects follow the picture as split; not judged by ear"
-    },
-    "table": [
-      {
-        "shot": "1 (reel 0.0 to 2.4)",
-        "time": "0.0 to 2.4",
-        "verdict": "PASS",
-        "note": "teal dungeon, Link small mid-frame; line 1 readable; reason fits the dataminers line, weak in scale (figure small)"
-      },
-      {
-        "shot": "2 (2.4 to 5.0)",
-        "time": "2.4 to 5.0",
-        "verdict": "PASS",
-        "note": "ruin and bird over water; bird whole in frame; line 1 holds 5 s across two picture changes (pace ok)"
-      },
-      {
-        "shot": "3 (5.0 to 8.4)",
-        "time": "5.0 to 8.4",
-        "verdict": "PASS",
-        "note": "dim hall with Link, line 2 'تُفتح بمحتوى إضافي' fits the DLC unlock claim; underwater Link (sheet 121.2 s) sits here, not in shot 4"
-      },
-      {
-        "shot": "4 (8.4 to 12.6)",
-        "time": "8.4 to 12.6",
-        "verdict": "FIX",
-        "note": "decision log says 'Link underwater'; picture is red-mouthed Jabu-Jabu interior 8.4 to about 9.3 s, cut at about 9.3 s (source 122.4) to a Link close-up on a ledge to 12.6 s. Reason for the mouth shot on line 3 (GameCube temples) is fine; the log must describe what plays"
-      },
-      {
-        "shot": "5 (12.6 to 14.42)",
-        "time": "12.6 to 14.42",
-        "verdict": "PASS with note",
-        "note": "temple plaza, grey sky, Link small; reason for 'no comment from Nintendo' is weak (scenery under the line); acceptable, no word on it"
-      }
-    ],
-    "lines": [
-      {
-        "line": "1 منقّبو بيانات: ملفات الريميك تضم نسخة Master Quest",
-        "time": "0 to 5",
-        "verdict": "PASS",
-        "note": "dataminers named as source; subject named"
-      },
-      {
-        "line": "2 تُفتح بمحتوى إضافي مع عالم معكوس",
-        "time": "5 to 8",
-        "verdict": "PASS with note",
-        "note": "states the DLC unlock as a flat fact; the datamine claim is attributed by line 1 only. Consider 'حسب بيانات الملفات' if a second line of hedge is wanted"
-      },
-      {
-        "line": "3 وهي نسخة بمعابد أصعب صدرت على GameCube",
-        "time": "8 to 11.5",
-        "verdict": "PASS",
-        "note": "وهي refers to Master Quest named in line 1; release verb صدرت is correct"
-      },
-      {
-        "line": "4 ولم تعلّق نينتيندو بعد",
-        "time": "11.5 to 14.42",
-        "verdict": "PASS with note",
-        "note": "opens on و 0.5 s after line 3 ends and continues it (Nintendo's silence on the same mode): allowed under the no-و rule"
-      }
-    ],
-    "reel_level": {
-      "first_frame_3x4": "headline 2 lines in top band, legible in strip at grid size; chip تسريب at about y 377 px, x up to about 920 px, outside the grid corner (940 to 1080, 240 to 380) by estimate, not measured",
-      "headline": "تسريب يكشف بيانات / نسخة Master Quest: matches the chip; the headline is not louder than the source; no individual named on screen",
-      "source_credit": "«في جي سي (VGC)» in the source field; the on-screen credit is «المصدر: نينتيندو (Nintendo)» on every shot (0 to 4): the credit text is small in the strip (approx 24 px), readable only at full size",
-      "datamined_material": "none: the footage is Nintendo's official store overview trailer",
-      "nintendo_line": "«ولم تعلّق نينتيندو بعد» present on line 4",
-      "changes": "picture changes at 2.4, 5.0, 8.4 and about 9.3 s; the longest hold is line 1 over 5 s with four picture changes; no hold over 4.2 s",
-      "last_2s": "picture (plaza, fade to the ground from 14.25 s); no card",
-      "length": "14.42 s body, 16.42 s total, matches the job's 14.4 s"
-    },
-    "reel_check_gaps": [
-      "Section 1 'Primary read in full' is 'n/a' in the job, not 'yes'. The story's own 'next' says: resolve the attribution (OatmealDome's post and MrCheeze's post via another route) before rebuilding; the story is marked 'not rendered; not queued'. The render went ahead on the joint attribution decided by the editor. Not cleared: the source gate must be resolved or Mohammad must accept the joint attribution before the preview."
-    ],
-    "fixes": [
-      "Source gate: read the OatmealDome and MrCheeze posts by another route, or record Mohammad's decision on the joint attribution. The on-screen wording names no individual, so the picture and lines hold for either version.",
-      "Decision log: rewrite shots 3 and 4 to match the picture (underwater Link is in shot 3; shot 4 is the Jabu-Jabu interior, then a Link close-up from about 9.3 s, cut at source 122.4 s). Record the cut as a separate beat."
-    ],
-    "verdict": "FIX",
-    "preview_first_line": "not sent: the verdict is FIX, so no preview until the source gate and the log are cleared",
-    "round": 2,
-    "round_2": {
-      "at": "2026-11-09 (second look after the editor's fixes 12432e7 and 922580b)",
-      "fix_1_source_gate": "done in the story file: the editor's decision (12:11Z) cites the honest-label rule (CLAUDE.md, 9 Nov 2026). It holds: a تسريب with the source named and no individual on screen. The dataminer posts are unreadable here, so reel_check line 1 stays n/a with that reason. Accepted for the label, not as a verified primary.",
-      "fix_2_decision_log": "done: decision_log_shots now matches the picture (shot 3 holds the underwater Link; shot 4 is two beats, the Jabu-Jabu interior to about 9.3 s and the Link close-up after the cut at source 122.4 s). Checked against frames at 8.0, 9.0, 9.5, 10.5 and 12.0 s.",
-      "notes": [
-        "L2 states the mirrored world and the DLC unlock as flat facts. L1 attributes them to the dataminers and L2 continues the same paragraph; accepted for a تسريب with the chip on screen.",
-        "The caption carries «حسب المنقّبين» per the coordinator; I could not read the caption from the repo (not in the job file), so this is taken on that statement.",
-        "Credit text is small in the strip; full-size check is for the preview.",
-        "The first-frame grid corner is estimated, not measured."
-      ],
-      "verdict": "PASS with note",
-      "presubmit": "templates/presubmit.py director PASS recorded for cards/2026-11/ocarina-master-quest-dlc-datamine-reel-v1.mp4 (850abbec9c); job restored from c3a4598 for the check and deleted after; not committed",
-      "preview_first_line": "تسريب: منقّبو بيانات يجدون نسخة Master Quest في ملفات ريميك Ocarina of Time، والصوت من المقطع الرسمي لنينتيندو، ولم تعلّق نينتيندو بعد"
-    }
+  {
+   "outlet": "Video Games Chronicle",
+   "url": "https://www.videogameschronicle.com/news/zelda-ocarina-of-time-switch-2-could-be-getting-master-quest-dlc/",
+   "date": "2026-11-09 10:48 (Andy Robinson)",
+   "says": "Attributes 'According to OatmealDome on X, the Switch 2 files suggest dungeons will again be changed, and the world flipped.' Attributes the quoted lines ('There is data in the game files for Master Quest. It will be unlocked by owning DLC - it is not just an update.' / 'The data is incomplete, but I can confirm that the world is mirrored and dungeons are modified (e.g. cows in Jabu-Jabu's Belly).') to MrCheeze's embedded post. Names the first lead as social media user 'MrCheese' ('references to MQ'). No Nintendo comment stated."
   },
-  "decisions": [
-    {
-      "at": "2026-11-09T12:11Z",
-      "by": "editor (Production 2)",
-      "decision": "Joint attribution stands. The dataminers' own posts cannot be read here (OatmealDome's X post returns 402); the first readable reports are Nintendo Everything (7 Nov, MrCheeze found the MQ strings; update attributes the DLC and mirrored lines to OatmealDome) and VGC (9 Nov 10:48Z, attributes the quoted lines to MrCheeze in its embed). Under Mohammad's 9 Nov order (when in doubt publish with the honest label, source named, the text stating only what is verified), the Reel runs as تسريب with no individual named on screen and both outlets and both dataminers named in the captions. The primary for a datamine is the datamine post; it is unreadable here, so reel_check line 1 stays n/a with this reason.",
-      "rule": "CLAUDE.md 'When in doubt, publish with the honest label' (9 Nov 2026)"
-    }
-  ],
-  "decision_log_shots": [
-    {
-      "shot": 1,
-      "src": 113.0,
-      "secs": 2.4,
-      "reel": "0.0-2.4",
-      "shows": "teal dungeon, Link small",
-      "line": "L1"
-    },
-    {
-      "shot": 2,
-      "src": 115.4,
-      "secs": 2.6,
-      "reel": "2.4-5.0",
-      "shows": "ruin, then the bird over water",
-      "line": "L1"
-    },
-    {
-      "shot": 3,
-      "src": 118.0,
-      "secs": 3.4,
-      "reel": "5.0-8.4",
-      "shows": "dim hall with Link, Link underwater",
-      "line": "L2"
-    },
-    {
-      "shot": 4,
-      "src": 121.4,
-      "secs": 4.2,
-      "reel": "8.4-12.6",
-      "shows": "Jabu-Jabu interior to about 9.3 s, then (source 122.4) a cut to Link close-up on a ledge: two beats inside one shot",
-      "line": "L3 and the start of L4"
-    },
-    {
-      "shot": 5,
-      "src": 126.0,
-      "secs": 1.82,
-      "reel": "12.6-14.42",
-      "shows": "temple plaza, fade from 14.25",
-      "line": "L4"
-    }
-  ],
-  "director_check": {
-    "verdict": "PASS",
-    "out": "cards/2026-11/ocarina-master-quest-dlc-datamine-reel-v1.mp4",
-    "blob": "850abbec9c1bad7f7a227ba2cb7ad1ac996e22e6",
-    "at": "2026-11-09T12:11:38Z",
-    "note": "",
-    "checklist": {
-      "job": "jobs/live/ocarina-master-quest-dlc-datamine.json",
-      "sha256": "7b6fd24e577ac1e772ebd7fe64d2c05e6c07b93e0ed1e8d76d3cca961df2ad15",
-      "ok": true,
-      "problems": []
-    }
+  {
+   "outlet": "X, OatmealDome (primary for the attribution)",
+   "url": "https://x.com/OatmealDome/status/2119183149510893976",
+   "date": "not read",
+   "says": "Not readable: HTTP 402 to WebFetch. Search index text only: '[Ocarina of Time] There is data in the game files for Master Quest. It will be unlocked by owning DLC - it is not just an update. The data is incomplete, but I can confirm that the world is mirrored and dungeons are modified (e.g. cows in Jabu-Jabu's Belly).' Index does not confirm the account's posting time."
   }
+ ],
+ "conflict": "VGC attaches the DLC/mirrored/Jabu-Jabu lines to MrCheeze's post and names OatmealDome only for the 'world flipped' line. Nintendo Everything and the search index attach them to OatmealDome. Not resolved from what can be read. Coordinator stop condition applies until resolved.",
+ "nintendo": "No Nintendo statement on the datamine found. Aonuma told IGN he would not 'announce anything specific at this time' about Master Quest (NE). That is about the mode's absence, not the leak; the on-screen line 'لم تعلّق نينتيندو على التسريب بعد' is accurate for the leak only.",
+ "gate": "gate 2026-11-09: VGC, NE, X index checked; no Nintendo statement found.",
+ "next": "Resolve the attribution: read OatmealDome's post and MrCheeze's post from another route (their own pages or a press copy), then rebuild with the verified name on the line. Not rendered; not queued.",
+ "first_report": "Nintendo Everything, 7 Nov 2026 (time not shown; MrCheeze datamine strings; OatmealDome update same article)",
+ "source_type": "secondary",
+ "footage": "Nintendo US store overview trailer (720p, 283 s, nsuid 70010000130792), official; shots 113 to 128 s on the showcase layout, credit on each shot; no slate, no UI text, nothing graphic. Track: trailer stretch 111.0 to 125.8 s (speechcheck: none).",
+ "lane": "leak (تسريب), account Digital Lounge only",
+ "beat": "leak or rumour (family 6): claim with the ladder chip, who found it, what is claimed, what is not confirmed",
+ "angle": {
+  "why_now": "The datamine turned up in the first days after launch and a second dataminer report (VGC, 9 Nov) added the DLC detail; Nintendo has not commented on the leak.",
+  "what_it_means_here": "Master Quest is the harder, mirrored remix of the 1998 dungeons from the GameCube release; if the data is real, the mode would be paid DLC, not part of the base game, and nothing is announced.",
+  "payoff": "Nothing confirmed: the data is incomplete, Nintendo has not commented, Aonuma has not announced anything specific."
+ },
+ "decision_log": [
+  "shot 1 113.0 s, submerged dungeon with Link",
+  "shot 2 117.4 s, Link on the bird over water",
+  "shot 3 120.6 s, Link underwater (cut near 122.4 s; director to check)",
+  "shot 4 126.0 s, Link on the temple plaza",
+  "track: overview score 111.0 to 125.8 s, speech none; audio split default"
+ ],
+ "director_qa": {
+  "by": "director (independent, 9 Nov 2026)",
+  "reel": "cards/2026-11/ocarina-master-quest-dlc-datamine-reel-v1.mp4 (142cf66), 16.42 s total, body 14.42 s + 2 s end card",
+  "checks": {
+   "speech": "speechcheck: none in body (before card 14.42); stretch 111.4 s + 14.8 s starts and ends in pauses",
+   "decode": "full ffmpeg decode clean; no smear flagged on sheet",
+   "audio_split": "applied, clean, music 40.2%, leak 0.1%, 5 effects shots (render-times 12:06Z)",
+   "sound_plays": "trailer score from Nintendo store overview 111.4 to 126.2 s; effects follow the picture as split; not judged by ear"
+  },
+  "table": [
+   {
+    "shot": "1 (reel 0.0 to 2.4)",
+    "time": "0.0 to 2.4",
+    "verdict": "PASS",
+    "note": "teal dungeon, Link small mid-frame; line 1 readable; reason fits the dataminers line, weak in scale (figure small)"
+   },
+   {
+    "shot": "2 (2.4 to 5.0)",
+    "time": "2.4 to 5.0",
+    "verdict": "PASS",
+    "note": "ruin and bird over water; bird whole in frame; line 1 holds 5 s across two picture changes (pace ok)"
+   },
+   {
+    "shot": "3 (5.0 to 8.4)",
+    "time": "5.0 to 8.4",
+    "verdict": "PASS",
+    "note": "dim hall with Link, line 2 'تُفتح بمحتوى إضافي' fits the DLC unlock claim; underwater Link (sheet 121.2 s) sits here, not in shot 4"
+   },
+   {
+    "shot": "4 (8.4 to 12.6)",
+    "time": "8.4 to 12.6",
+    "verdict": "FIX",
+    "note": "decision log says 'Link underwater'; picture is red-mouthed Jabu-Jabu interior 8.4 to about 9.3 s, cut at about 9.3 s (source 122.4) to a Link close-up on a ledge to 12.6 s. Reason for the mouth shot on line 3 (GameCube temples) is fine; the log must describe what plays"
+   },
+   {
+    "shot": "5 (12.6 to 14.42)",
+    "time": "12.6 to 14.42",
+    "verdict": "PASS with note",
+    "note": "temple plaza, grey sky, Link small; reason for 'no comment from Nintendo' is weak (scenery under the line); acceptable, no word on it"
+   }
+  ],
+  "lines": [
+   {
+    "line": "1 منقّبو بيانات: ملفات الريميك تضم نسخة Master Quest",
+    "time": "0 to 5",
+    "verdict": "PASS",
+    "note": "dataminers named as source; subject named"
+   },
+   {
+    "line": "2 تُفتح بمحتوى إضافي مع عالم معكوس",
+    "time": "5 to 8",
+    "verdict": "PASS with note",
+    "note": "states the DLC unlock as a flat fact; the datamine claim is attributed by line 1 only. Consider 'حسب بيانات الملفات' if a second line of hedge is wanted"
+   },
+   {
+    "line": "3 وهي نسخة بمعابد أصعب صدرت على GameCube",
+    "time": "8 to 11.5",
+    "verdict": "PASS",
+    "note": "وهي refers to Master Quest named in line 1; release verb صدرت is correct"
+   },
+   {
+    "line": "4 ولم تعلّق نينتيندو بعد",
+    "time": "11.5 to 14.42",
+    "verdict": "PASS with note",
+    "note": "opens on و 0.5 s after line 3 ends and continues it (Nintendo's silence on the same mode): allowed under the no-و rule"
+   }
+  ],
+  "reel_level": {
+   "first_frame_3x4": "headline 2 lines in top band, legible in strip at grid size; chip تسريب at about y 377 px, x up to about 920 px, outside the grid corner (940 to 1080, 240 to 380) by estimate, not measured",
+   "headline": "تسريب يكشف بيانات / نسخة Master Quest: matches the chip; the headline is not louder than the source; no individual named on screen",
+   "source_credit": "«في جي سي (VGC)» in the source field; the on-screen credit is «المصدر: نينتيندو (Nintendo)» on every shot (0 to 4): the credit text is small in the strip (approx 24 px), readable only at full size",
+   "datamined_material": "none: the footage is Nintendo's official store overview trailer",
+   "nintendo_line": "«ولم تعلّق نينتيندو بعد» present on line 4",
+   "changes": "picture changes at 2.4, 5.0, 8.4 and about 9.3 s; the longest hold is line 1 over 5 s with four picture changes; no hold over 4.2 s",
+   "last_2s": "picture (plaza, fade to the ground from 14.25 s); no card",
+   "length": "14.42 s body, 16.42 s total, matches the job's 14.4 s"
+  },
+  "reel_check_gaps": [
+   "Section 1 'Primary read in full' is 'n/a' in the job, not 'yes'. The story's own 'next' says: resolve the attribution (OatmealDome's post and MrCheeze's post via another route) before rebuilding; the story is marked 'not rendered; not queued'. The render went ahead on the joint attribution decided by the editor. Not cleared: the source gate must be resolved or Mohammad must accept the joint attribution before the preview."
+  ],
+  "fixes": [
+   "Source gate: read the OatmealDome and MrCheeze posts by another route, or record Mohammad's decision on the joint attribution. The on-screen wording names no individual, so the picture and lines hold for either version.",
+   "Decision log: rewrite shots 3 and 4 to match the picture (underwater Link is in shot 3; shot 4 is the Jabu-Jabu interior, then a Link close-up from about 9.3 s, cut at source 122.4 s). Record the cut as a separate beat."
+  ],
+  "verdict": "FIX",
+  "preview_first_line": "not sent: the verdict is FIX, so no preview until the source gate and the log are cleared",
+  "round": 2,
+  "round_2": {
+   "at": "2026-11-09 (second look after the editor's fixes 12432e7 and 922580b)",
+   "fix_1_source_gate": "done in the story file: the editor's decision (12:11Z) cites the honest-label rule (CLAUDE.md, 9 Nov 2026). It holds: a تسريب with the source named and no individual on screen. The dataminer posts are unreadable here, so reel_check line 1 stays n/a with that reason. Accepted for the label, not as a verified primary.",
+   "fix_2_decision_log": "done: decision_log_shots now matches the picture (shot 3 holds the underwater Link; shot 4 is two beats, the Jabu-Jabu interior to about 9.3 s and the Link close-up after the cut at source 122.4 s). Checked against frames at 8.0, 9.0, 9.5, 10.5 and 12.0 s.",
+   "notes": [
+    "L2 states the mirrored world and the DLC unlock as flat facts. L1 attributes them to the dataminers and L2 continues the same paragraph; accepted for a تسريب with the chip on screen.",
+    "The caption carries «حسب المنقّبين» per the coordinator; I could not read the caption from the repo (not in the job file), so this is taken on that statement.",
+    "Credit text is small in the strip; full-size check is for the preview.",
+    "The first-frame grid corner is estimated, not measured."
+   ],
+   "verdict": "PASS with note",
+   "presubmit": "templates/presubmit.py director PASS recorded for cards/2026-11/ocarina-master-quest-dlc-datamine-reel-v1.mp4 (850abbec9c); job restored from c3a4598 for the check and deleted after; not committed",
+   "preview_first_line": "تسريب: منقّبو بيانات يجدون نسخة Master Quest في ملفات ريميك Ocarina of Time، والصوت من المقطع الرسمي لنينتيندو، ولم تعلّق نينتيندو بعد"
+  }
+ },
+ "decisions": [
+  {
+   "at": "2026-11-09T12:11Z",
+   "by": "editor (Production 2)",
+   "decision": "Joint attribution stands. The dataminers' own posts cannot be read here (OatmealDome's X post returns 402); the first readable reports are Nintendo Everything (7 Nov, MrCheeze found the MQ strings; update attributes the DLC and mirrored lines to OatmealDome) and VGC (9 Nov 10:48Z, attributes the quoted lines to MrCheeze in its embed). Under Mohammad's 9 Nov order (when in doubt publish with the honest label, source named, the text stating only what is verified), the Reel runs as تسريب with no individual named on screen and both outlets and both dataminers named in the captions. The primary for a datamine is the datamine post; it is unreadable here, so reel_check line 1 stays n/a with this reason.",
+   "rule": "CLAUDE.md 'When in doubt, publish with the honest label' (9 Nov 2026)"
+  }
+ ],
+ "decision_log_shots": [
+  {
+   "shot": 1,
+   "src": 113.0,
+   "secs": 2.4,
+   "reel": "0.0-2.4",
+   "shows": "teal dungeon, Link small",
+   "line": "L1"
+  },
+  {
+   "shot": 2,
+   "src": 115.4,
+   "secs": 2.6,
+   "reel": "2.4-5.0",
+   "shows": "ruin, then the bird over water",
+   "line": "L1"
+  },
+  {
+   "shot": 3,
+   "src": 118.0,
+   "secs": 3.4,
+   "reel": "5.0-8.4",
+   "shows": "dim hall with Link, Link underwater",
+   "line": "L2"
+  },
+  {
+   "shot": 4,
+   "src": 121.4,
+   "secs": 4.2,
+   "reel": "8.4-12.6",
+   "shows": "Jabu-Jabu interior to about 9.3 s, then (source 122.4) a cut to Link close-up on a ledge: two beats inside one shot",
+   "line": "L3 and the start of L4"
+  },
+  {
+   "shot": 5,
+   "src": 126.0,
+   "secs": 1.82,
+   "reel": "12.6-14.42",
+   "shows": "temple plaza, fade from 14.25",
+   "line": "L4"
+  }
+ ],
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/ocarina-master-quest-dlc-datamine-reel-v1.mp4",
+  "blob": "850abbec9c1bad7f7a227ba2cb7ad1ac996e22e6",
+  "at": "2026-11-09T12:11:38Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/ocarina-master-quest-dlc-datamine.json",
+   "sha256": "7b6fd24e577ac1e772ebd7fe64d2c05e6c07b93e0ed1e8d76d3cca961df2ad15",
+   "ok": true,
+   "problems": []
+  }
+ },
+ "published": {
+  "at": "2026-11-09T12:47:57Z",
+  "commitment": "ocarina-mq-leak-20261109-1245z",
+  "links": [
+   "https://www.instagram.com/reel/DfhXOOTlBrg/",
+   "https://x.com/1748744375616643072/status/2119773445613297780",
+   "https://www.threads.com/@the_digilounge/post/DfhXOIFgQt_"
+  ]
+ }
 }
