@@ -274,6 +274,23 @@
       "lines": "three lines now; release line over village and creatures, fishing line over statue and merchants, price line over clock/dock and boat; each line fits its shot",
       "checked_at": "2026-11-09",
       "checked_by": "director (independent, Haiku 5.5)"
+    },
+    "round_4": {
+      "reel": "cards/2026-11/dreadmoor-early-access-steam-reel-v4.mp4",
+      "render_commit": "70f5fc0",
+      "job": "8ef1dcf:jobs/live/dreadmoor-early-access-steam-v4.json",
+      "verdict": "PASS",
+      "notes": [
+        "the statue shot 48.6 is now 2.7 s (7.6 to 10.3 s); the bottom-crop strip at 7.4 to 10.6 s shows no STOCK sign, and the merchants shot after it is clean",
+        "carried-over note: credit 0 to 2 s is the known reel.py CREDIT_AT build item",
+        "a weak line over dark village frames in v1 and v3 is now shorter"
+      ],
+      "shots": "41.0, 44.0, 46.3 (unchanged), 48.6 (2.7 s, clean), 55.2, 58.8, 60.0: PASS",
+      "nothing_graphic": "pass",
+      "speech": "speechcheck: none",
+      "audio_split": "applied: music 99.1%, leak 0.1%, 7 effects shots, clean (render-times 13:13Z, 138.2 s total)",
+      "checked_at": "2026-11-09",
+      "checked_by": "director (independent, Haiku 5.5)"
     }
   }
 }
