@@ -1,0 +1,271 @@
+{
+ "name": "steam-hardware-survey-october-16gb",
+ "story": "2026-11-09-steam-hardware-survey-october-16gb",
+ "render_lane": "server",
+ "out": "cards/2026-11/steam-hardware-survey-october-16gb-reel-v2.mp4",
+ "footage": [
+  {
+   "file": "steam-machine-trailer.mp4",
+   "steam": 4165910,
+   "trailer": "Steam Machine",
+   "trailer_id": 275597255,
+   "start": 0,
+   "seconds": 24
+  },
+  {
+   "file": "steam-machine-unboxing.mp4",
+   "steam": 4165910,
+   "trailer": "Steam Machine Unboxing",
+   "trailer_id": 1255819847,
+   "start": 0,
+   "seconds": 70
+  }
+ ],
+ "shots": [
+  [
+   "steam-machine-trailer.mp4",
+   20.8,
+   3.2,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "steam-machine-trailer.mp4",
+   0.0,
+   4.2,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "steam-survey-gfx-ram.png",
+   [
+    "steam-machine-trailer.mp4",
+    12.0
+   ],
+   4.0,
+   null
+  ],
+  [
+   "steam-machine-unboxing.mp4",
+   40.0,
+   3.3,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "steam-machine-unboxing.mp4",
+   46.0,
+   2.8,
+   [
+    [
+     0.0,
+     0.55
+    ]
+   ]
+  ],
+  [
+   "steam-machine-unboxing.mp4",
+   58.0,
+   2.5,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "steam-machine-trailer.mp4",
+   4.6,
+   3.5,
+   [
+    [
+     0.0,
+     0.55
+    ]
+   ]
+  ]
+ ],
+ "gfx": [
+  {
+   "file": "steam-survey-gfx-ram.png",
+   "kind": "duo",
+   "title": "ذاكرة أجهزة مستخدمي Steam",
+   "right": {
+    "label": "سعة 16 جيجابايت",
+    "value": "41.42",
+    "scale": "بالمئة",
+    "note": "بارتفاع 3.60 نقطة"
+   },
+   "left": {
+    "label": "سعة 32 جيجابايت",
+    "value": "37.06",
+    "scale": "بالمئة",
+    "note": "بانخفاض 5.16 نقطة"
+   },
+   "footer": "استبيان فالف لشهر أكتوبر 2026"
+  }
+ ],
+ "ground_footage": [
+  "steam-machine-trailer.mp4",
+  12.0
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "حسب استبيان فالف (Valve)\nلشهر أكتوبر",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "تصدرت ذاكرة 32 جيجابايت\nفي سبتمبر",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   5,
+   [
+    [
+     "الاستبيان اختياري، وتراجعت فيه\nمشاركة مستخدمي الصينية المبسطة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   6,
+   6,
+   [
+    [
+     "أما نظام Linux فبلغت\nحصته 3.95 بالمئة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: فالف (Valve)",
+   {
+    "size": 44,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "ذاكرة 16 جيجابايت\nتعود إلى صدارة Steam",
+ "label": "أرقام",
+ "source": "فالف (Valve)",
+ "date": "9 Nov 2026",
+ "theme": "gold",
+ "style": "bold",
+ "template": "clipcard",
+ "skin": "house",
+ "track": "bed",
+ "sound": null,
+ "cut": true,
+ "pace_ok": false,
+ "genre": [
+  "industry/hardware"
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: store.steampowered.com/hwsurvey (combined) read 15:18Z, every figure on screen from it",
+  "SOURCE: not already posted": "yes: ledger find 'steam hardware survey' no match; no survey story in newsroom/stories",
+  "SOURCE: age": "yes: published early Nov (earliest outlet 3 Nov 15:55Z); honest-label rule 9 Nov, dated in the caption (مطلع نوفمبر); named by Mohammad 9 Nov 19:15 Dubai",
+  "ANGLE before lines": "yes: angle and story items in the story file",
+  "STORY TYPE numbers": "yes: figure 41.42 and 37.06, period October 2026, source Valve's survey, comparison September from Valve's change column",
+  "STORY: spoken paragraph, subject before pronoun": "yes: read aloud in order; L2 names ذاكرة 32 جيجابايت; L4 حصته after نظام Linux",
+  "STORY: release verbs": "n/a: no release",
+  "STORY: names match names-ar.md": "yes: فالف (Valve) at first mention",
+  "POST: Arabic passes": "yes: written with the editor rules, grammar-review stage (sonnet helper) all blocks OK, its subject suggestion taken",
+  "SOUND: footage sound or bed with reason": "bed: numbers Reel (CLAUDE.md trailer-sound rule 1) and the Steam Machine trailer has no audio stream",
+  "SOUND: no speech under Arabic lines": "yes: bed only",
+  "PICTURE: footage first": "yes: Valve's own Steam Machine and Steam Deck trailers throughout; the one card stands on the Steam Machine trailer (ground_footage)",
+  "PICTURE: not the same as last 5 Reels": "yes: no Valve hardware footage in the last five (DQ3, Master Quest, GTA VI, DREADMOOR, Cyberpunk)",
+  "PICTURE: crop per beat": "yes: product shots centred, x 0.5; unboxing hands x 0.5 to 0.55; LED close-up x 0.55; Steam Deck trailer dropped (letterboxed 900 rows, over the 2x cap)",
+  "PICTURE: credit on every clip": "yes: «المصدر: فالف (Valve)» over shots 0 to 6",
+  "PICTURE: headline not over a face": "yes: shot 0 is the Steam Machine on a desk, no face",
+  "CHECKS: decision log": "yes"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "Steam Machine 20.8 to 24.0 s, the machine lit on the desk",
+   "alternatives": "0 to 3 s cube (STEAM MACHINE wordmark top centre)",
+   "crop": "x 0.5",
+   "music": "bed",
+   "evidence_role": "illustration"
+  },
+  {
+   "beat": "1 L1 source",
+   "shot": "Steam Machine 0.0 to 4.2 s, the cube centred on the desk (v2: the VALVE grille shot cut its wordmark at the crop edge, director round 1)",
+   "alternatives": "16.6 s VALVE grille",
+   "crop": "x 0.5",
+   "music": "bed",
+   "evidence_role": "illustration"
+  },
+  {
+   "beat": "2 card",
+   "shot": "duo card 16 GB vs 32 GB on the Steam Machine trailer 12.0 s (dark edge, moving)",
+   "alternatives": "fact card (one figure only; the story is the swap)",
+   "crop": "n/a",
+   "music": "bed",
+   "evidence_role": "demonstration (Valve's figures)"
+  },
+  {
+   "beat": "3 L2 September",
+   "shot": "Steam Machine Unboxing 40.0 s, a hand on the box: a player's machine",
+   "alternatives": "Steam Deck trailer 13.6 s (letterboxed, 900 rows, 2.13x: refused by the quality gate)",
+   "crop": "x 0.5",
+   "music": "bed",
+   "evidence_role": "illustration"
+  },
+  {
+   "beat": "4 L3 sample",
+   "shot": "Unboxing 46.0 s, the machine lifted out, then 58.0 s the machine on white",
+   "alternatives": "Steam Deck hammock and couch (letterboxed, refused)",
+   "crop": "x 0.55, 0.5",
+   "music": "bed",
+   "evidence_role": "illustration"
+  },
+  {
+   "beat": "5 L4 payoff Linux",
+   "shot": "Steam Machine 4.6 s LED close-up (the Steam Machine runs SteamOS, Linux-based); picture in the last two seconds",
+   "alternatives": "lit front 21 s (used as hook)",
+   "crop": "x 0.55",
+   "music": "bed",
+   "evidence_role": "illustration"
+  }
+ ],
+ "note": "Steam Hardware Survey October 2026, Production 2 (this chat), named by Mohammad 9 Nov 19:15 Dubai. Sources: Valve's Steam Machine trailer (1920x1080, 5.4 Mbps, no audio) and Steam Machine Unboxing trailer (1920x1080, 5.5 Mbps, no letterbox), both decode clean; the Steam Deck trailer was dropped (letterboxed to 900 rows), crop 1.78x. clipcard because split had six today (cap four) and trailer would be a third in a row. Theme gold and style bold: the last look was cold/glow. v2 after director round 1: grille shot replaced (cut wordmark), credit 44 px with its band for the light unboxing frames; card kept at 4.0 s (the pace limit) and the frame-0 credit is a build-queue item not yet live."
+}
