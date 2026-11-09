@@ -22,53 +22,98 @@
   [
    "dubai-fortnite-2033-art.jpg",
    null,
-   4.2,
+   2.25,
    [
     0.35,
-    0.7
+    0.55
    ]
   ],
   [
    "dubai-fortnite-2033-art.jpg",
    null,
-   4.4,
+   2.25,
    [
-    0.7,
+    0.55,
+    0.75
+   ]
+  ],
+  [
+   "dubai-fortnite-2033-art.jpg",
+   null,
+   2.2,
+   [
+    0.75,
     1.0
    ]
   ],
   [
    "dubai-fortnite-2033-art.jpg",
    null,
-   5.0,
+   2.2,
    [
     1.0,
+    0.85
+   ]
+  ],
+  [
+   "dubai-fortnite-2033-art.jpg",
+   null,
+   2.5,
+   [
+    0.85,
     0.6
    ]
   ],
   [
    "dubai-fortnite-2033-art.jpg",
    null,
-   4.0,
+   2.5,
    [
     0.5,
-    0.15
+    0.2
    ]
   ],
   [
    "dubai-fortnite-2033-art.jpg",
    null,
-   4.5,
+   2.0,
    [
-    0.45,
-    0.55
+    0.2,
+    0.0
+   ]
+  ],
+  [
+   "dubai-fortnite-2033-art.jpg",
+   null,
+   2.0,
+   [
+    0.0,
+    0.3
+   ]
+  ],
+  [
+   "dubai-fortnite-2033-art.jpg",
+   null,
+   2.4,
+   [
+    0.3,
+    0.5
+   ]
+  ],
+  [
+   "dubai-fortnite-2033-art.jpg",
+   null,
+   2.4,
+   [
+    0.5,
+    0.6
    ]
   ]
  ],
  "lines": [
   [
    1,
-   1,
+   2,
    [
     [
      "بنتها وايلد أنليميتد (Wild Unlimited)\nبمحرر UEFN",
@@ -79,8 +124,8 @@
    ]
   ],
   [
-   2,
-   2,
+   3,
+   4,
    [
     [
      "تضم عشرة معالم من دبي، منها\nحصن الفهيدي وبرج الماس",
@@ -91,8 +136,8 @@
    ]
   ],
   [
-   3,
-   3,
+   5,
+   6,
    [
     [
      "يوم الإطلاق تُقام فعالية عامة\nفي سولت (SALT) على كايت بيتش",
@@ -103,8 +148,8 @@
    ]
   ],
   [
-   4,
-   4,
+   7,
+   8,
    [
     [
      "لم يُعلن بعد رمز الجزيرة أو سعرها\nأو منصاتها",
@@ -115,8 +160,8 @@
    ]
   ],
   [
-   5,
-   5,
+   9,
+   10,
    [
     [
      "مشروع مستقل لا ترعاه ولا تديره\nإيبك غيمز (Epic Games)",
@@ -130,7 +175,7 @@
  "credits": [
   [
    0,
-   5,
+   10,
    "المصدر: مركز دبي للسلع المتعددة (DMCC)",
    {
     "size": 44,
@@ -182,7 +227,7 @@
   ],
   "result": "only a 1920x1080 still exists; 9:16 crop is 1.78x, under the 2x cap"
  },
- "note": "Stills with motion on the only official image: pans across the DMCC key art (30 Oct and 26 Oct rulings: official art with motion when there is no trailer). Sound: our bed, no footage with sound exists. Stand-in not used.",
+ "note": "Stills with motion on the only official image: pans across the DMCC key art (30 Oct and 26 Oct rulings: official art with motion when there is no trailer). Sound: our bed, no footage with sound exists. Stand-in not used. Each line spans two pan shots so something changes every 4 s.",
  "reel_check": {
   "1 SOURCE primary read": "yes: DMCC release read via WebFetch 02:50Z, Tbreak and Whats On read",
   "1 SOURCE not already posted": "yes: ledger find Fortnite, DMCC: no hit on this island",
@@ -202,45 +247,38 @@
  },
  "decision_log": [
   {
-   "beat": "0 line 1",
-   "shot": "DMCC key art, pan",
-   "alternatives": "none: single image",
-   "crop": "pan [0.0, 0.35], 1.78x",
+   "beat": "line 1",
+   "shot": "DMCC key art, two pans of the same image",
+   "alternatives": "none: single official image exists",
+   "crop": "pans at 1.78x",
    "evidence_role": "illustration"
   },
   {
-   "beat": "1 line 2",
-   "shot": "DMCC key art, pan",
-   "alternatives": "none: single image",
-   "crop": "pan [0.35, 0.7], 1.78x",
+   "beat": "line 2",
+   "shot": "DMCC key art, two pans of the same image",
+   "alternatives": "none: single official image exists",
+   "crop": "pans at 1.78x",
    "evidence_role": "illustration"
   },
   {
-   "beat": "2 line 3",
-   "shot": "DMCC key art, pan",
-   "alternatives": "none: single image",
-   "crop": "pan [0.7, 1.0], 1.78x",
+   "beat": "line 3",
+   "shot": "DMCC key art, two pans of the same image",
+   "alternatives": "none: single official image exists",
+   "crop": "pans at 1.78x",
    "evidence_role": "illustration"
   },
   {
-   "beat": "3 line 4",
-   "shot": "DMCC key art, pan",
-   "alternatives": "none: single image",
-   "crop": "pan [1.0, 0.6], 1.78x",
+   "beat": "line 4",
+   "shot": "DMCC key art, two pans of the same image",
+   "alternatives": "none: single official image exists",
+   "crop": "pans at 1.78x",
    "evidence_role": "illustration"
   },
   {
-   "beat": "4 line 5",
-   "shot": "DMCC key art, pan",
-   "alternatives": "none: single image",
-   "crop": "pan [0.5, 0.15], 1.78x",
-   "evidence_role": "illustration"
-  },
-  {
-   "beat": "5 line 6",
-   "shot": "DMCC key art, pan",
-   "alternatives": "none: single image",
-   "crop": "pan [0.45, 0.55], 1.78x",
+   "beat": "line 5",
+   "shot": "DMCC key art, two pans of the same image",
+   "alternatives": "none: single official image exists",
+   "crop": "pans at 1.78x",
    "evidence_role": "illustration"
   },
   {
