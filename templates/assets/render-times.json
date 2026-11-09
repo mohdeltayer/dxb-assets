@@ -28883,5 +28883,66 @@
   "min_disk_free_mb": 226042,
   "setup_min": 0.17,
   "story": "warhammer-40k-dark-heresy-january-28-2027"
+ },
+ {
+  "name": "warhammer-40k-dark-heresy-january-28-2027-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-09T20:45Z",
+  "stages": {
+   "checks": 4.6,
+   "montage": 36.5,
+   "text": 30.1,
+   "audio": 1.1,
+   "outro": 18.1
+  },
+  "total": 90.5,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-09T20:43Z",
+  "finished_at": "2026-11-09T20:45Z",
+  "render_min": 1.51,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 3.0,
+   "audio_secs": 32.8,
+   "music_pct": 55.6,
+   "leak_pct": 3.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 0
+   },
+   "effects_shots": 0,
+   "mix_secs": 1.0,
+   "secs": 5.0
+  },
+  "lifeless": {
+   "score": 15.0,
+   "still_share": 0.139,
+   "longest_still": 2.1,
+   "cuts_per_10s": 10.13,
+   "held_under_text": 0.0,
+   "secs": 15.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 167,
+  "queue_wait_secs": 168,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1125,
+  "peak_mem_mb": 2330,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 17503,
+  "peak_disk_mb": 20095,
+  "min_disk_free_mb": 226011,
+  "setup_min": 0.18,
+  "story": "warhammer-40k-dark-heresy-january-28-2027"
  }
 ]
