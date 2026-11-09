@@ -169,6 +169,18 @@
  "director_qa": {
   "v1": "FIX",
   "sound": "track bed: Trailer 2 runs a vocal song through the whole cut (speechcheck on v1 heard lyrics at 1.65 to 9.87 s); Trailer 1 is also built on a vocal song; no instrumental stretch. Our bed, named first in the preview.",
-  "picture": "shot at 44.0 s had cut text at the frame edge; replaced with 50.0 s prison tower (daytime, no text)"
+  "picture": "shot at 44.0 s had cut text at the frame edge; replaced with 50.0 s prison tower (daytime, no text)",
+  "v2": {
+   "reel": "cards/2026-11/gta-vi-preload-november-10-reel-v2.mp4",
+   "commit": "3308058",
+   "verdict": "PASS with note",
+   "speech": "speechcheck: none (exit 0)",
+   "sound": "our bed (track bed, neon); audio_split not applied (no trailer track). Reason signed off: Trailer 2 vocal song throughout, Trailer 1 also a vocal song, no instrumental stretch (v1 speechcheck heard lyrics). No trailer audio under any shot.",
+   "shot_1": "50.0 s prison tower, fence and birds, then a daytime office shot near 5.4 s reel time: no text across the 9:16 edge (credit line sits centred at top), nothing graphic, subject readable. Note: the place shot reads weakly under the announcement line; acceptable.",
+   "length": "22.39 s file, 2 s end card, so about 20.4 s body: accepted.",
+   "decode": "full decode of v2 clean (ffmpeg -v error: no output).",
+   "note": "L3 Xbox line carries no حسب تقارير of its own; L2 does. Editor to decide; not a blocker.",
+   "preview_first_line": "Our bed (no trailer sound: both trailers use vocal songs); the story is GTA VI pre-load from 10 November, with outlet times labelled."
+  }
  }
 }
