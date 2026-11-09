@@ -151,10 +151,7 @@
  "style": "bold",
  "template": "split",
  "skin": "house",
- "track": [
-  "re8-pv3.mp4",
-  98.0
- ],
+ "track": "bed",
  "cut": true,
  "pace_ok": false,
  "genre": [
@@ -171,8 +168,8 @@
   "STORY: release verbs": "yes: L2 صدرت للحاسب في 6 مايو 2021 (a past date)",
   "STORY: names match names-ar.md": "yes: كابكوم (Capcom) first mention in L1; game names English; Capcom in names-ar as كابكوم",
   "POST: Arabic passes": "yes: arabic-games-film-editor, arabic-writing and arabic-grammar-review run with perfect-arabic references opened; see story file",
-  "SOUND: footage sound or bed with reason": "yes: trailer's own sound, one continuous stretch, audio split on the runner",
-  "SOUND: no speech under Arabic lines": "yes: whole PV3 transcribed (narration at 2 to 13, 20 to 32, 39 to 66, 76 to 83, 120 to 124, 139 to 145 s); the track runs 98 s onward, a 37 s gap with no words (83 to 120 s)",
+  "SOUND: footage sound or bed with reason": "yes: our bed, reason: PV3 and the 2nd trailer both carry narration and dialogue across most of their length (whole files transcribed: PV3 words at 2-13, 20-32, 39-66, 76-83, 120-124, 139-145 s; 2nd at 12-25, 40-50, 63-69, 74-114, 122-123, 151-153 s); the audio split on PV3 from 98 s was refused by the runner (music stem 8.7%, leak 11.1% over the 5% limit, run 42583942242); the announce trailer was fetched but not transcribed",
+  "SOUND: no speech under Arabic lines": "yes: bed only, trailer sound off",
   "PICTURE: footage first": "yes: official Steam trailer PV3 (app 1196590), 1080p 5.1 Mbps, decode clean",
   "PICTURE: not the same as last 5 Reels": "yes: picture: RE Village PV3; no Capcom Reel in the last 5",
   "PICTURE: crop per beat": "yes: focus judged on the shot sheet",
@@ -187,29 +184,30 @@
    "shot": "123.0 to 125.9 s Lady Dimitrescu close-up",
    "alternatives": "109 to 110 s embrace (dropped), 45 to 70 s kneeling figure (dropped)",
    "crop": "x 0.5",
-   "music": "trailer"
+   "music": "our bed"
   },
   {
    "beat": "L1 maker",
    "shot": "22.0 to 24.6 s then 26.0 to 27.8 s snow village, scarecrow and castle (places), between the black and fade intervals 24.83 to 25.91 and 27.90 to 29.58 s",
    "alternatives": "29 to 33 s dark path",
    "crop": "x 0.5",
-   "music": "trailer"
+   "music": "our bed"
   },
   {
    "beat": "L2 date",
    "shot": "77.0 to 79.6 s the chandelier hall (place)",
    "alternatives": "87.0 s scarecrow (only 1.3 s clean before black at 88.31 s), 92 to 93 s gun",
    "crop": "x 0.5",
-   "music": "trailer"
+   "music": "our bed"
   },
   {
    "beat": "L3 Arabic",
    "shot": "8.0 to 11.0 s a figure at a lit window in a room, then 111.0 to 113.0 s shrine and gilded hall (before the fade at 113.06 s)",
    "alternatives": "121 s Dimitrescu behind doors, 144 to 150 s crowd in a cellar (not clear enough to judge)",
    "crop": "x 0.5",
-   "music": "trailer"
+   "music": "our bed"
   }
  ],
- "note": "Evergreen bank piece. Source: Steam PV3 trailer 1920x1080 5.1 Mbps, decode clean, decodecheck run on the whole source before shot choice. The trailer is very dark; shots are the lit ones. Nothing graphic."
+ "note": "Evergreen bank piece. Source: Steam PV3 trailer 1920x1080 5.1 Mbps, decode clean, decodecheck run on the whole source before shot choice. The trailer is very dark; shots are the lit ones. Nothing graphic.",
+ "sound": null
 }
