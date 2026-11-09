@@ -116,6 +116,11 @@ SEQ_OLD = re.compile(r'digest\b[^.;]{0,30}?\bseq\s*#?(\d+)', re.I)
 
 REASONS = ('no_source', 'denied', 'harmful_or_out_of_scope', 'duplicate')   # CLAUDE.md, 9 Nov 2026 (release 2026-11-10)
 REJECTED = re.compile(r'\b(?:rejected|dropped|declined)\b[^.;]*', re.I)
+# Coverage over caution (Mohammad, 9 Nov 2026 evening; release 2026-11-10 r4): these are not reasons, wherever they sit
+# in a rejection or a hold. A credible outlet is a source (تقرير); an official video or press release is a primary.
+NOT_REASONS = re.compile(r'single[- ]outlet|no primary read|no written primary|only in (?:the |a )?(?:youtube )?video|'
+                         r'arabic[- ]only|held for (?:a |the )?(?:statement|trace)|not on (?:the )?newsroom', re.I)
+HELD = re.compile(r'\b(?:held|holding|rejected|dropped)\b[^;]*', re.I)
 
 
 def bad_rejections(board, now):
@@ -135,6 +140,12 @@ def bad_rejections(board, now):
             if not any(r in m.group(0) for r in REASONS):
                 out.append(f"BAD-REJECTION {h.get('from', '?')}: {h.get('id', '?')} \"{m.group(0)[:90]}\" names no reason "
                            f"from {', '.join(REASONS)}")
+                break
+        for m in HELD.finditer(str(h.get('done', ''))):
+            bad = NOT_REASONS.search(m.group(0))
+            if bad:
+                out.append(f"BAD-REJECTION {h.get('from', '?')}: {h.get('id', '?')} \"{bad.group(0)}\" is not a reason: a "
+                           "credible outlet is a source (تقرير), an official video or press release a primary; build it")
                 break
     return out
 

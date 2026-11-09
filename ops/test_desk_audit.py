@@ -129,5 +129,18 @@ class Rejections(unittest.TestCase):
         self.assertEqual(len(out), 1)
         self.assertIn(': a ', out[0])
 
+    def test_not_reasons(self):
+        import datetime as dt
+        now = dt.datetime(2026, 11, 9, 20, 0, tzinfo=dt.timezone.utc)
+        b = {'handoffs': [
+            {'id': 'c', 'from': 'production-2', 'at': '2026-11-09T18:00:00Z',
+             'done': 'Little to the Left rejected: no_source (single outlet).'},
+            {'id': 'd', 'from': 'production-2', 'at': '2026-11-09T18:10:00Z',
+             'done': 'Sea of Remnants HELD: the date is only in the YouTube video, no written primary found.'},
+        ]}
+        out = DA.bad_rejections(b, now)
+        self.assertEqual(len(out), 2)
+        self.assertTrue(all('not a reason' in o for o in out))
+
 if __name__ == '__main__':
     unittest.main()

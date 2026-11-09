@@ -25,6 +25,24 @@ class Scout(unittest.TestCase):
         ps = S.problems(bad, 'run.json')
         self.assertEqual(len(ps), 4)
 
+    def test_coverage_over_caution(self):
+        lead = {'rank': 1, 'title': 'A Little to the Left Switch 2 Edition', 'primary_url': 'https://nintendoeverything.com/x/',
+                'first_report': 'publisher release 9 Nov', 'arabic_coverage': False, 'footage_route': 'none',
+                'decision': 'rejected', 'reason': 'no_source', 'handoff': 'mohammad-a-little-to-the-left-switch-2-t0'}
+        d = dict(GOOD, leads=[lead])
+        ps = S.problems(d, '20261109-1635.json')
+        self.assertTrue(any('never rejects it' in p for p in ps))          # a handoff is never rejected
+        self.assertTrue(any('credible outlet link in hand' in p for p in ps))
+        self.assertTrue(any('"searched"' in p for p in ps))
+        self.assertTrue(any('confirmed_by' in p for p in ps))
+        ok = dict(lead, primary_url='https://example.org/nothing', handoff=None, confirmed_by='editor',
+                  searched=['search: "A Little to the Left" Switch 2', 'gamespress.com', 'nintendo.com eShop'])
+        self.assertEqual(S.problems(dict(GOOD, leads=[ok]), '20261109-1635.json'), [])
+        held = dict(GOOD['leads'][0], decision='carried')
+        self.assertTrue(any('waiting_for' in p for p in S.problems(dict(GOOD, leads=[held]), '20261109-1635.json')))
+        self.assertEqual(S.host_kind('https://www.gamespress.com/en-US/A-LITTLE'), 'primary')
+        self.assertEqual(S.host_kind('https://nintendoeverything.com/a/'), 'credible')
+
     def test_docs_last_48h(self):
         d = tempfile.mkdtemp()
         for n in ('20261109-2035.json', '20261101-1000.json'):
