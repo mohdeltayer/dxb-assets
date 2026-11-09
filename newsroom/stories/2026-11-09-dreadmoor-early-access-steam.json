@@ -1,98 +1,197 @@
 {
- "id": "2026-11-09-dreadmoor-early-access-steam",
- "title": "DREADMOOR enters Steam Early Access (store date 9 Nov 2026)",
- "game": "DREADMOOR",
- "companies": [
-  "Dream Dock (developer)",
-  "Digital Vortex Entertainment (publisher)"
- ],
- "genre": [
-  "horror",
-  "indie"
- ],
- "category": "release",
- "family": "release",
- "lane": "news",
- "chip": "جديد",
- "status": "building",
- "sources": [
-  {
-   "role": "primary",
-   "name": "Steam store page, app 3629430 (cc=ae, read 9 Nov 2026)",
-   "url": "https://store.steampowered.com/app/3629430/",
-   "time": "2026-11-09"
+  "id": "2026-11-09-dreadmoor-early-access-steam",
+  "title": "DREADMOOR enters Steam Early Access (store date 9 Nov 2026)",
+  "game": "DREADMOOR",
+  "companies": [
+    "Dream Dock (developer)",
+    "Digital Vortex Entertainment (publisher)"
+  ],
+  "genre": [
+    "horror",
+    "indie"
+  ],
+  "category": "release",
+  "family": "release",
+  "lane": "news",
+  "chip": "جديد",
+  "status": "building",
+  "sources": [
+    {
+      "role": "primary",
+      "name": "Steam store page, app 3629430 (cc=ae, read 9 Nov 2026)",
+      "url": "https://store.steampowered.com/app/3629430/",
+      "time": "2026-11-09"
+    },
+    {
+      "role": "radar",
+      "name": "Gematsu: DREADMOOR launches in Early Access on November 9",
+      "url": "https://www.gematsu.com/2026/10/dreadmoor-launches-in-early-access-on-november-9"
+    },
+    {
+      "role": "radar",
+      "name": "Destructoid: DREADMOOR release countdown (rejected earlier as a countdown lead)",
+      "url": "https://www.destructoid.com/dreadmoor-release-countdown-exact-date-and-time/"
+    }
+  ],
+  "store_facts": {
+    "app_id": 3629430,
+    "status": "coming_soon true; store page reads 'Coming Soon To Early Access' with 'Release Date: 9 Nov, 2026' (no time of day given)",
+    "developer": "Dream Dock",
+    "publisher": "Digital Vortex Entertainment",
+    "platforms": "Windows",
+    "price_aed": "not listed (price_overview None)",
+    "arabic": "not in supported languages",
+    "short_description": "DREADMOOR is a dark first-person fishing adventure game set in a submerged world, rotting from a past catastrophe. Fish in murky waters, upgrade your boat, craft survival gear, and fight monstrous creatures that lurk under the water and on the land.",
+    "content_notes": "horror themes; gore and dissection (fish dissected for organs and body parts); no sexual content",
+    "early_access_text": "'Coming Soon To Early Access. The developers of this game intend to release as a work in progress, developing with the feedback of players.' (no separate what's-included list found)"
   },
-  {
-   "role": "radar",
-   "name": "Gematsu: DREADMOOR launches in Early Access on November 9",
-   "url": "https://www.gematsu.com/2026/10/dreadmoor-launches-in-early-access-on-november-9"
+  "claims": [
+    {
+      "text": "DREADMOOR is in Early Access on Steam from 9 Nov 2026",
+      "status": "reported: store says release date 9 Nov 2026, coming soon at time of read; editor decision 9 Nov to build as a release-day story, not as out now",
+      "source": "Steam store page"
+    },
+    {
+      "text": "Developer Dream Dock, publisher Digital Vortex Entertainment",
+      "status": "verified",
+      "source": "Steam store page"
+    },
+    {
+      "text": "Windows only; price not listed in AED; no Arabic support",
+      "status": "verified",
+      "source": "Steam store page"
+    }
+  ],
+  "why": "A horror fishing game with a regional audience's common platform, out or due on Steam the same day.",
+  "angle": {
+    "hook": "a horror fishing game on Steam, due today",
+    "why_now": "Early Access opens 9 Nov 2026 per the store page",
+    "players_here": "price and Arabic support as the store states (no AED price, no Arabic)",
+    "payoff": "what Early Access is, in the developer's own words",
+    "what_it_means_here": "The store lists Windows only and no AED price, and no Arabic support; the Reel says so instead of guessing, so Arab players know what is and is not confirmed",
+    "what_it_means": "The store lists Windows only and no AED price, and no Arabic support; the Reel says so instead of guessing, so Arab players know what is and is not confirmed"
   },
-  {
-   "role": "radar",
-   "name": "Destructoid: DREADMOOR release countdown (rejected earlier as a countdown lead)",
-   "url": "https://www.destructoid.com/dreadmoor-release-countdown-exact-date-and-time/"
-  }
- ],
- "store_facts": {
-  "app_id": 3629430,
-  "status": "coming_soon true; store page reads 'Coming Soon To Early Access' with 'Release Date: 9 Nov, 2026' (no time of day given)",
-  "developer": "Dream Dock",
-  "publisher": "Digital Vortex Entertainment",
-  "platforms": "Windows",
-  "price_aed": "not listed (price_overview None)",
-  "arabic": "not in supported languages",
-  "short_description": "DREADMOOR is a dark first-person fishing adventure game set in a submerged world, rotting from a past catastrophe. Fish in murky waters, upgrade your boat, craft survival gear, and fight monstrous creatures that lurk under the water and on the land.",
-  "content_notes": "horror themes; gore and dissection (fish dissected for organs and body parts); no sexual content",
-  "early_access_text": "'Coming Soon To Early Access. The developers of this game intend to release as a work in progress, developing with the feedback of players.' (no separate what's-included list found)"
- },
- "claims": [
-  {
-   "text": "DREADMOOR is in Early Access on Steam from 9 Nov 2026",
-   "status": "reported: store says release date 9 Nov 2026, coming soon at time of read; editor decision 9 Nov to build as a release-day story, not as out now",
-   "source": "Steam store page"
-  },
-  {
-   "text": "Developer Dream Dock, publisher Digital Vortex Entertainment",
-   "status": "verified",
-   "source": "Steam store page"
-  },
-  {
-   "text": "Windows only; price not listed in AED; no Arabic support",
-   "status": "verified",
-   "source": "Steam store page"
-  }
- ],
- "why": "A horror fishing game with a regional audience's common platform, out or due on Steam the same day.",
- "angle": {
-  "hook": "a horror fishing game on Steam, due today",
+  "media": [
+    {
+      "file": "dreadmoor-gameplay.mp4",
+      "source_url": "https://store.steampowered.com/app/3629430/ (Gameplay Trailer, id 1370208294, 1920x1080 top rendition, 70 s)",
+      "kind": "official gameplay trailer",
+      "fetched": "2026-11-09",
+      "decode": "ffmpeg -v error full decode: clean",
+      "trailer_sound": "speech none in 41.0 to 63.5 s (speechcheck --stretch)"
+    }
+  ],
+  "excluded_frames": "0 to 40 s: title cards ('TAKE WHAT THE DEPTHS PROVIDE' 13 to 14 s, 'PAY THE PRICE' 39 to 40 s); 64 s on: end card with demo date and wishlist slate",
+  "sensitive": "none, beyond the store's own gore note: no dissection, organs or body parts on screen; creature frames chosen without blood",
+  "versions": [
+    {
+      "v": 1,
+      "change": "first draft: trailer template, footage 41.0 to 63.5 s, lines pending from editor"
+    }
+  ],
+  "ledger_find": "find dreadmoor: 0 published hits; helper-runs and watch-seen only (see sources)",
+  "first_report": "Gematsu (Oct 2026): DREADMOOR launches in Early Access on November 9; store page read 9 Nov 2026 (coming soon, date 9 Nov 2026, no time given)",
+  "source_type": "primary",
+  "footage": "official Steam Gameplay Trailer 41.0 to 63.5 s (1080p): village, creature, statue ship, merchants, boat at night; no title card, no end slate, no dissection; footage tried: Steam Gameplay Trailer (1080p) first; no publisher vertical cut found",
+  "beat": "release",
   "why_now": "Early Access opens 9 Nov 2026 per the store page",
-  "players_here": "price and Arabic support as the store states (no AED price, no Arabic)",
-  "payoff": "what Early Access is, in the developer's own words",
-  "what_it_means_here": "The store lists Windows only and no AED price, and no Arabic support; the Reel says so instead of guessing, so Arab players know what is and is not confirmed",
-  "what_it_means": "The store lists Windows only and no AED price, and no Arabic support; the Reel says so instead of guessing, so Arab players know what is and is not confirmed"
- },
- "media": [
-  {
-   "file": "dreadmoor-gameplay.mp4",
-   "source_url": "https://store.steampowered.com/app/3629430/ (Gameplay Trailer, id 1370208294, 1920x1080 top rendition, 70 s)",
-   "kind": "official gameplay trailer",
-   "fetched": "2026-11-09",
-   "decode": "ffmpeg -v error full decode: clean",
-   "trailer_sound": "speech none in 41.0 to 63.5 s (speechcheck --stretch)"
+  "director_qa": {
+    "reel": "cards/2026-11/dreadmoor-early-access-steam-reel-v1.mp4",
+    "render_commit": "6315e94",
+    "verdict": "FIX",
+    "fixes": [
+      "52.0 merchants: the in-world 'FISH STOCK' sign is cut by the 9:16 crop at the bottom and left edge (sheet flag cut-text at 52.1). Start the shot at about 52.8 or pick a stable crop with the sign out of frame, then re-render.",
+      "Credit: the credit line is not on screen 0 to 2 s (it enters at 2 s). The brief requires the credit visible from frame 0 beside the headline. Show it from 0 s.",
+      "56.0 sack and clock: the picture is a sack, hands and a clock under the line about creatures. Replace with a creature shot (58.0 already has one) or show the creature at the line's moment."
+    ],
+    "shots": [
+      {
+        "shot": "41.0 village",
+        "time": "0.0-3.0",
+        "framing": "pass",
+        "text": "pass (headline readable, first word Arabic; credit missing 0-2 s: see fixes)",
+        "picture": "pass, no graphic",
+        "sound": "trailer music, speech none",
+        "reason": "pass: village is the opening scene for the release line",
+        "verdict": "PASS (credit fix applies)"
+      },
+      {
+        "shot": "44.0 creature",
+        "time": "3.0-5.3",
+        "framing": "pass",
+        "text": "pass",
+        "picture": "pass, creature jaw in shadow, no wound",
+        "sound": "trailer music, speech none",
+        "reason": "pass: the creature line",
+        "verdict": "PASS"
+      },
+      {
+        "shot": "46.3 creature",
+        "time": "5.3-7.6",
+        "framing": "pass, spined limb centred",
+        "text": "pass",
+        "picture": "pass",
+        "sound": "trailer music, speech none",
+        "reason": "pass",
+        "verdict": "PASS"
+      },
+      {
+        "shot": "48.6 statue ship",
+        "time": "7.6-11.0",
+        "framing": "pass",
+        "text": "pass",
+        "picture": "pass",
+        "sound": "trailer music, speech none",
+        "reason": "pass: the ship and boat line",
+        "verdict": "PASS"
+      },
+      {
+        "shot": "52.0 merchants",
+        "time": "11.0-15.0",
+        "framing": "FIX: 'FISH STOCK' sign cut at the bottom and left edge (cut-text)",
+        "text": "pass",
+        "picture": "pass, no dissection",
+        "sound": "trailer music, speech none",
+        "reason": "pass",
+        "verdict": "FIX"
+      },
+      {
+        "shot": "56.0 sack and clock",
+        "time": "15.0-19.0",
+        "framing": "pass",
+        "text": "pass",
+        "picture": "pass",
+        "sound": "trailer music, speech none",
+        "reason": "FIX: sack and hands do not show the creatures the line names",
+        "verdict": "FIX"
+      },
+      {
+        "shot": "60.0 boat at night",
+        "time": "19.0-22.5",
+        "framing": "pass, boat lantern centred",
+        "text": "pass ('لم يُعلن السعر بعد' fits the boat)",
+        "picture": "pass, moon and boat only",
+        "sound": "trailer music, speech none",
+        "reason": "pass: last shot before the end card, a picture",
+        "verdict": "PASS"
+      }
+    ],
+    "reel_level": {
+      "first_frame_3x4_readable_and_stopping": "pass: headline 'صيد ورعب تحت الماء / تصدر اليوم على Steam' and chip جديد read at grid size; creature and village in the band",
+      "headline_and_chip": "pass: chip جديد, headline has 'تصدر اليوم' (a date, not out now)",
+      "text_never_says_out_now": "pass",
+      "credit_every_shot": "FIX: credit missing 0-2 s",
+      "change_every_3_4s": "pass (cuts at 3.0, 5.3, 7.6, 11.0, 15.0, 19.0; lines on cuts)",
+      "last_2s_picture": "pass: boat frames run to the end card at about 22.3 s",
+      "length": "story 22.3 s + 2 s end card; over the 12 to 20 s target, allowed as a guide, not a cap (no length cap rule)",
+      "speech": "speechcheck: none",
+      "sound": "audio split applied (music 99.1%, leak 0.1%, 7 effects shots); what plays under the cut: trailer music with each shot's own effects. Listen-check not possible here; judged from measurements"
+    },
+    "nothing_graphic": "pass: no dissection, organs or body parts in any sampled frame; creatures in shadow or mid-splash only",
+    "decode_damage": "none seen on the sheet or dense strip",
+    "fix_rounds": "1 of 2",
+    "preview_first_line": "FIX before preview: the Dreadmoor Reel (v1) has a cut-off 'FISH STOCK' sign in the merchants shot, no credit for its first 2 seconds, and a sack shot under a creatures line; re-render as v2 before it reaches you.",
+    "checked_at": "2026-11-09",
+    "checked_by": "director (independent, Haiku 5.5)"
   }
- ],
- "excluded_frames": "0 to 40 s: title cards ('TAKE WHAT THE DEPTHS PROVIDE' 13 to 14 s, 'PAY THE PRICE' 39 to 40 s); 64 s on: end card with demo date and wishlist slate",
- "sensitive": "none, beyond the store's own gore note: no dissection, organs or body parts on screen; creature frames chosen without blood",
- "versions": [
-  {
-   "v": 1,
-   "change": "first draft: trailer template, footage 41.0 to 63.5 s, lines pending from editor"
-  }
- ],
- "ledger_find": "find dreadmoor: 0 published hits; helper-runs and watch-seen only (see sources)",
- "first_report": "Gematsu (Oct 2026): DREADMOOR launches in Early Access on November 9; store page read 9 Nov 2026 (coming soon, date 9 Nov 2026, no time given)",
- "source_type": "primary",
- "footage": "official Steam Gameplay Trailer 41.0 to 63.5 s (1080p): village, creature, statue ship, merchants, boat at night; no title card, no end slate, no dissection; footage tried: Steam Gameplay Trailer (1080p) first; no publisher vertical cut found",
- "beat": "release",
- "why_now": "Early Access opens 9 Nov 2026 per the store page"
 }
