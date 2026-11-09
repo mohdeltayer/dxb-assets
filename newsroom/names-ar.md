@@ -194,5 +194,6 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Latin | Arabic | Status |
 |---|---|---|
 | Drecom | دريكوم | Proposed 9 Nov 2026 (first on-screen mention with the Latin in brackets) |
+| Koei Tecmo | كوي تكمو | Proposed 9 Nov 2026 (first mention with the Latin in brackets; Arabic outlets also write كوي تيكمو) |
 | STUDIO 909 | استوديو 909 | Proposed 9 Nov 2026 |
 | Kazuhide Oka | كازوهيدي أوكا | Proposed 9 Nov 2026 (role word المخرج at first mention) |
