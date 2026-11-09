@@ -106,3 +106,9 @@ Sources: Mohammad, 8 Nov 2026 (correction to the 7 Nov band-layout rule).
 Wrong: the Reel (chip رسمي, caption «متوفرة الآن»-style opening) presented a long-standing Steam language list as news; a reader commented «من زمان تدعم خبر قديم» (it has supported it for a long time, old news). The post said what the page shows but not since when it had been true or why it was posted now. The same shape was on the Prince of Persia and Assassin's Creed Mirage bank Reels (chips رسمي and متوفر الآن) and was caught before 12:15 and 12:45.
 Rule: an evergreen piece never reads as news. Chip دليل (or the بالعربية plate for Arabic-support stories), never جديد, رسمي or متوفر الآن on kind:evergreen; the first line of every caption and X/Threads text opens as a guide or a useful fact in a confident outlet voice («دليل اللاعب العربي: Cyberpunk 2077 بواجهة وترجمة عربية ...»), the date is stated as a fact inside the text (the release date), then why it matters now (for whom it helps). Never «ليست خبرًا جديدًا», «ليست جديدة», «قديم», an apology or a disclaimer in the first line (Mohammad, 9 Nov 2026, after the 14:30 and 00:30 captions). Never claim a start date or an audio language the source page does not give.
 Sources: Mohammad, 9 Nov 2026 (about 12:00 Dubai); live post stays as it is; Prince of Persia and Mirage captions fixed in Publer and both Reels re-rendered with the دليل chip (PoP v3, Mirage v4).
+
+## 9 Nov 2026 · Ocarina Master Quest leak · showcase layout · trailer news
+Wrong: the showcase box sat small between two bands on a flat indigo ground, half the frame unused.
+Rule: showcase is the trailer at full width with the same footage blurred and dimmed behind it, and a one-line headline; the indigo ground stays for our cards and the end card.
+Sources: Mohammad, 9 Nov 2026 evening ("use wide and instead of indigo colors ... an obscured expansion of the footage as a background").
+

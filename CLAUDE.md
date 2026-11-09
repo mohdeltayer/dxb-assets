@@ -2774,6 +2774,13 @@ The One Piece x Fortnite Reel put a small clip in the middle of a blur of itself
    fillcheck: a band-layout picture track whose band is empty after the headline fails whatever lowres_ok says (keep
    the headline with persist.head, or use the showcase layout), and render_job reads the finished Reel of every band
    job (no run of empty rows over 160 px inside the safe zone at the first frame or the middle of any shot).
+   Redesign (Mohammad, 9 Nov 2026 evening, after the Ocarina Master Quest options: "use wide and instead of indigo
+   colors let's have a looping animation or an obscured expansion of the footage as a background"): the showcase box
+   is the full frame width (1080x608, `showcase_fit` wide, the default) and the ground behind it is the same footage
+   enlarged to fill 9:16, blurred and dimmed, moving with the picture (`showcase_bg` blur, the default; `flat` keeps
+   the old ground). This replaces "on the flat ground, no blur" for the showcase layout only; the 30 Oct rule against a
+   small box in a blur of itself still holds for every other layout. Wide needs a one-line headline; a two-line one
+   falls back to the fitted box on the same blurred ground and says so. Sample: cards/test/mq-showcase-wide-blur-reel-v1.mp4.
 
 ## Promises, not just work (advisor card adv-20261030-promise-keeper, Mohammad 30 Oct 2026, 21:31 Dubai)
 
