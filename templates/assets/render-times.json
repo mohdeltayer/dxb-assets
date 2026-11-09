@@ -29249,5 +29249,66 @@
   "min_disk_free_mb": 225967,
   "setup_min": 0.2,
   "story": "hollow-knight-silksong-free-content-packs"
+ },
+ {
+  "name": "hollow-knight-silksong-free-content-packs-reel-v5.mp4",
+  "profile": "standard",
+  "at": "2026-11-09T22:04Z",
+  "stages": {
+   "checks": 3.7,
+   "montage": 31.1,
+   "text": 25.4,
+   "audio": 1.0,
+   "outro": 15.9
+  },
+  "total": 77.0,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-09T22:03Z",
+  "finished_at": "2026-11-09T22:04Z",
+  "render_min": 1.28,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 6.7,
+   "audio_secs": 31.3,
+   "music_pct": 59.6,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "effects_shots": 0,
+   "mix_secs": 2.7,
+   "secs": 10.3
+  },
+  "lifeless": {
+   "score": 0.8,
+   "still_share": 0.007,
+   "longest_still": 0.1,
+   "cuts_per_10s": 10.27,
+   "held_under_text": 0.007,
+   "secs": 14.6,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 143,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1118,
+  "peak_mem_mb": 2323,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 17657,
+  "peak_disk_mb": 19983,
+  "min_disk_free_mb": 226123,
+  "setup_min": 0.18,
+  "story": "hollow-knight-silksong-free-content-packs"
  }
 ]
