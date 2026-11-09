@@ -653,3 +653,15 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   - The fixed 46/33 Reel text sizes.
 
 - 9 Nov 2026 (Mohammad): no Reel on the plain indigo ground: card-led Reels sit on moving footage or art, dimmed and credited, else they are not card-led. News before evergreen: evergreen overnight (00:00 to 07:00) or in a daytime gap only when no verified news is buildable, never two evergreen in a row by day. Full text in CLAUDE.md.
+
+## Evergreen spacing and the news search (Mohammad, 9 Nov 2026, about 15:05 Dubai, effective at once)
+
+1. After an evergreen post, no evergreen for at least 3 hours between 08:00 and 24:00 Dubai, and never two
+   evergreen posts in a row at any hour. If no news is buildable at a slot, the slot stays empty: the gap rule
+   and the bank floor do not override this.
+2. Before any evergreen, the board handoff shows that news was searched beyond the digest (publisher newsrooms,
+   PlayStation Blog, Xbox Wire, Nintendo, Steam news) and names each lead rejected and why.
+3. A story the Arabic press has not carried is still news at 24 to 48 hours (this loosens the 24-hour drop of
+   17 Oct for stories with no Arabic coverage; the first report still dates it, and the text says when it broke).
+4. Applied 9 Nov: the AC Mirage 00:30 Tue piece is pulled if another evergreen ran within 3 hours before it;
+   the overnight bank pieces (Hogwarts Legacy, Resident Evil Village) run only with a news post between them.

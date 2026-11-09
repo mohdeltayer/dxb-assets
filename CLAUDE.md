@@ -3417,3 +3417,15 @@ the publisher's concurrency group, so it never runs during a publish.
    by day the next daytime post is news, or the gap is logged on the board as a failed run with each rejected lead; a
    second evergreen is not used to close it. Evergreen chips and captions follow the 9 Nov evergreen rule (دليل, since when,
    why now). Applied 9 Nov 12:33: Mirage moved from 13:00 to 00:30 Tue 10 Nov (a third evergreen in a row by day).
+
+## Evergreen spacing and the news search (Mohammad, 9 Nov 2026, about 15:05 Dubai, effective at once)
+
+1. After an evergreen post, no evergreen for at least 3 hours between 08:00 and 24:00 Dubai, and never two
+   evergreen posts in a row at any hour. If no news is buildable at a slot, the slot stays empty: the gap rule
+   and the bank floor do not override this.
+2. Before any evergreen, the board handoff shows that news was searched beyond the digest (publisher newsrooms,
+   PlayStation Blog, Xbox Wire, Nintendo, Steam news) and names each lead rejected and why.
+3. A story the Arabic press has not carried is still news at 24 to 48 hours (this loosens the 24-hour drop of
+   17 Oct for stories with no Arabic coverage; the first report still dates it, and the text says when it broke).
+4. Applied 9 Nov: the AC Mirage 00:30 Tue piece is pulled if another evergreen ran within 3 hours before it;
+   the overnight bank pieces (Hogwarts Legacy, Resident Evil Village) run only with a news post between them.
