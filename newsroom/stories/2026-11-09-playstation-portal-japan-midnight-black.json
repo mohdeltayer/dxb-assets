@@ -10,7 +10,7 @@
  ],
  "category": "announcement",
  "priority": "green",
- "status": "built v2, awaiting director QA",
+ "status": "built v3, director PASS 03:25Z, not submitted",
  "why": "Hardware news, Portal is widely used; framed honestly as Japan-only.",
  "sources": [
   {
@@ -72,5 +72,18 @@
  "posts": [],
  "corrections": [],
  "metrics": {},
- "ledger_find": "find 'Portal': only 2026-09-25-ps-portal-7-1-7 (DXB-KNIGHT update); no duplicate"
+ "ledger_find": "find 'Portal': only 2026-09-25-ps-portal-7-1-7 (DXB-KNIGHT update); no duplicate",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/playstation-portal-japan-midnight-black-december-10-reel-v3.mp4",
+  "blob": "32f8fef335ddb01782e4eb8dee2cb70695ca66a6",
+  "at": "2026-11-09T03:22:52Z",
+  "note": "Director v3 03:25Z: strip, dense and 9 full-res frames read. Shots 0-10 PASS: device cut-outs on indigo glow, no baked-in text, no cut text; lines readable, inside safe zone, each line opens on an Arabic word, credit Sony on every shot; decode clean, smear none; 29.7 s incl. end card; change every 2 to 3.6 s; sound our bed (stills only), speech none; sensitive none. Limits: judged from frames and measurements, not by ear; angle shot trims the left grip.",
+  "checklist": {
+   "job": "jobs/live/playstation-portal-japan-midnight-black-december-10.json",
+   "sha256": "02c42eedb46e609d46b54db3eeeb2787896d2be6ab2a1c59b3594cbe9f863c50",
+   "ok": true,
+   "problems": []
+  }
+ }
 }
