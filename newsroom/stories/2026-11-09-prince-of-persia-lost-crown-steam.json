@@ -87,5 +87,35 @@
   "closest_stories": [],
   "packet": "/root/.cache/dxb-packets/2026-11-09-prince-of-persia-lost-crown-steam.md",
   "context_pages": []
+ },
+ "pre_render": {
+  "ledger_find": {
+   "command": "python3 newsroom/ledger.py find 'prince of persia' --record <id>",
+   "time": "2026-11-09 06:44Z",
+   "result": "no match: new story; recorded, 0 other hits"
+  },
+  "context_match": {
+   "command": "python3 newsroom/context.py match <id>",
+   "result": "no context page touched"
+  },
+  "whatsnew": {
+   "command": "python3 newsroom/whatsnew.py packet <id>",
+   "result": "27 sentences, 27 new, 0 known, 0 posted (evergreen, no date)"
+  },
+  "angle": {
+   "hook": "Steam lists an Arabic interface and subtitles for Prince of Persia: The Lost Crown (no Arabic voice), at 114.99 AED",
+   "why_now": "evergreen, no date",
+   "players_here": "price in dirhams on the UAE store, Arabic text support, what the game is",
+   "payoff": "the AED price and the Arabic line last, no date to expire except the Steam price"
+  },
+  "footage": {
+   "source": "Steam Launch Trailer app 2751000, 1920x1080, 60 fps, 5.7 Mbps, 100.2 s",
+   "decode": "decode clean (ffmpeg -v error -i f -f null -)",
+   "tried": "Mask of Darkness trailer 1280x720 2.5 Mbps (fails floor; not used); Ubisoft page embeds YouTube only (sign-in, not used)"
+  },
+  "buildgate": "build gate: ok (server lane, story 2026-11-09-prince-of-persia-lost-crown-steam)",
+  "render_job_check": "ok, clip 20.5 s; speech check: none; sfx: 4 shots off the track's own seconds, audio split must apply (runner guard)",
+  "prerender": "CLEAN (shot 1 near a 63.51 to 63.56 s black frame, shot 3 near a 75.53 to 75.67 s smear, both before the shot start)",
+  "grammar_review": "read in this run: house glossary, arabic-writing conventions.md and grammar.md section 7; perfect-arabic references NOT opened this run. Required edits: none found. Uncertain: 'تتوفر واجهة وترجمة بالعربية' (adjective vs prepositional form) fine; Western digits, no em dash, every line opens on Arabic."
  }
 }

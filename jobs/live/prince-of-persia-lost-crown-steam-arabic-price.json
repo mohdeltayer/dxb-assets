@@ -27,7 +27,18 @@
   [
    "pop-launch-trailer.mp4",
    63.6,
-   4.4,
+   2.3,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "pop-launch-trailer.mp4",
+   65.9,
+   2.2,
    [
     [
      0.0,
@@ -38,7 +49,18 @@
   [
    "pop-launch-trailer.mp4",
    68.0,
-   4.9,
+   2.5,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "pop-launch-trailer.mp4",
+   70.5,
+   2.5,
    [
     [
      0.0,
@@ -60,7 +82,18 @@
   [
    "pop-launch-trailer.mp4",
    94.0,
-   4.6,
+   2.4,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "pop-launch-trailer.mp4",
+   96.4,
+   2.3,
    [
     [
      0.0,
@@ -72,7 +105,7 @@
  "lines": [
   [
    1,
-   1,
+   2,
    [
     [
      "لعبة The Lost Crown\nمن سلسلة Prince of Persia",
@@ -83,8 +116,8 @@
    ]
   ],
   [
-   2,
-   2,
+   3,
+   4,
    [
     [
      "من تطوير استوديو يوبيسوفت\nمونبلييه (Ubisoft Montpellier)",
@@ -95,8 +128,8 @@
    ]
   ],
   [
-   3,
-   3,
+   5,
+   5,
    [
     [
      "صدرت على Steam\nفي 8 أغسطس 2024",
@@ -107,8 +140,8 @@
    ]
   ],
   [
-   4,
-   4,
+   6,
+   7,
    [
     [
      "تتوفر واجهة وترجمة بالعربية\nدون دبلجة، حسب صفحة Steam",
@@ -135,7 +168,7 @@
  "credits": [
   [
    0,
-   4,
+   7,
    "المصدر: يوبيسوفت (Ubisoft)",
    {
     "size": 40,
@@ -190,14 +223,14 @@
   },
   {
    "beat": "L1 what it is",
-   "shot": "63.6 to 68.0 s time-power figure, platform, gate (start moved past a 63.51 to 63.56 black frame, prerender)",
+   "shot": "63.6 to 65.9 s then 65.9 to 68.1 s (two shots, one continuous stretch; start past a 63.51 to 63.56 black frame)",
    "alternatives": "60 s blade",
    "crop": "x 0.5",
    "music": "trailer"
   },
   {
    "beat": "L2 makers",
-   "shot": "68.0 to 72.9 s corridor, bubble fight",
+   "shot": "68.0 to 70.5 s then 70.5 to 73.0 s corridor, bubble fight (two shots for the 4 s pace rule)",
    "alternatives": "66 s gate",
    "crop": "x 0.5",
    "music": "trailer"
@@ -211,7 +244,7 @@
   },
   {
    "beat": "L4 Arabic",
-   "shot": "94.0 to 98.6 s Vahram and Sargon close-ups, after 'Define your destiny' at 92 s",
+   "shot": "94.0 to 96.4 s then 96.4 to 98.7 s Vahram and Sargon close-ups, after 'Define your destiny' at 92 s",
    "alternatives": "96 s",
    "crop": "x 0.5",
    "music": "trailer"
