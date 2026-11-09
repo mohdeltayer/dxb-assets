@@ -189,7 +189,76 @@
       "Shot 7: no dimming into the end card; hold full brightness to the card"
     ],
     "notes": "Render log: audio split applied, decode and smear checks not recorded in render-times.json's last entry for this job; the director could not see them and asks the runner log to confirm. Story length 21 s is over the target by about 1 s. Second look only on the changed shots after fixes.",
-    "preview_first_line": "FIX before preview: the cover opens on the DRAGON QUEST logo for 2 s, the Reel has a STORY banner and battle text, and the last 2 s dim to black. Sound is the Announce trailer's music, no speech."
+    "preview_first_line": "FIX before preview: the cover opens on the DRAGON QUEST logo for 2 s, the Reel has a STORY banner and battle text, and the last 2 s dim to black. Sound is the Announce trailer's music, no speech.",
+    "round2": {
+      "reel": "cards/2026-11/dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-reel-v2.mp4 (b400b1d)",
+      "checked_at": "2026-11-09",
+      "method": "v2 strip, sheet, dense; 1 s frame grid 0.2 to 22.2 s; full-res frames at 0.2, 7.2, 14.0, 16.2, 21.0; speechcheck: none; ffprobe 23.65 s",
+      "rows": [
+        {
+          "shot": "1 forest (src 10.8), first frame",
+          "time": "0.0-3.4 s",
+          "verdict": "FIX",
+          "note": "no logo slate, headline and chip readable at 3:4; no credit on frame 0 (credit first appears about 2.5 s); the build item is still open"
+        },
+        {
+          "shot": "2 ruin hall (src 14.0)",
+          "time": "3.4-6.4 s",
+          "verdict": "PASS",
+          "note": "clean, line 1 on it, credit visible"
+        },
+        {
+          "shot": "3 snow (src 22.4)",
+          "time": "6.4-8.2 s",
+          "verdict": "FIX",
+          "note": "no cut text and no slate, but the party is in the lower third and the line and the split strip sit over them; reframe with the subject higher, or move the line"
+        },
+        {
+          "shot": "4 bedroom (src 32.0, trimmed)",
+          "time": "8.2-10.9 s",
+          "verdict": "PASS",
+          "note": "clean interior, credit visible, no white transition"
+        },
+        {
+          "shot": "5 village exterior (src 34.5)",
+          "time": "10.9-13.7 s",
+          "verdict": "PASS",
+          "note": "house and garden clean, line 2 readable in the safe zone"
+        },
+        {
+          "shot": "6 village square (src 36.0, replaces tavern)",
+          "time": "13.7-16.3 s",
+          "verdict": "PASS",
+          "note": "no cut text, no slate; figures at the right edge are small but whole"
+        },
+        {
+          "shot": "7 glow and gate (src 47.0)",
+          "time": "16.3-19.1 s",
+          "verdict": "PASS",
+          "note": "the split strip covers the hero's upper body at 16.2 s; acceptable for the strip but note it"
+        },
+        {
+          "shot": "8 red hall, close (src 54.0, no line)",
+          "time": "19.1-21.6 s",
+          "verdict": "PASS",
+          "note": "brightness held to 21.2 s, no dimming; line 3 over the hero's head at 21.0 s, minor"
+        }
+      ],
+      "reel_checks": {
+        "first_frame": "FIX: no slate; credit missing for the first 2.5 s",
+        "length": "23.65 s total, 2 s card, so about 21.6 s of story: 1.6 s over the 20 s target. A cut is still needed: trim shot 5 and shot 6 by about 0.8 s each, or drop one 2.7 s hold",
+        "last_2s": "PASS: 19 to 21.6 s is a picture at full brightness",
+        "change_every_3_4s": "PASS",
+        "sound": "unchanged in intent: speechcheck none; the render-times entry for v2 was not checked, so the audio split outcome is not re-verified"
+      },
+      "verdict": "FIX",
+      "fixes": [
+        "Credit on frame 0 (build item), so the first 2.5 s carry the credit line",
+        "Shot 3 snow: subject higher in frame or line moved off the party",
+        "Cut about 1.6 s: trim shots 5 and 6 by about 0.8 s each (or drop a 2.7 s hold)"
+      ],
+      "preview_first_line": "FIX before preview: no slate on the cover now, but the credit is still missing for the first 2.5 s, the snow party is under the line and strip, and the Reel is 1.6 s over the target. Sound is the trailer's music, no speech."
+    }
   },
   "render_v2": {
     "mp4": "cards/2026-11/dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17-reel-v2.mp4",
