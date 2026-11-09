@@ -658,14 +658,29 @@ def _facts_row(items, path, y, size):
     im.save(path); return path
 
 
+SHOW_BG = 'flat'          # 'flat' (the ground) or 'blur' (Mohammad, 9 Nov 2026 evening: behind the wide showcase the
+                          # footage itself, enlarged to fill 9:16, blurred and dimmed, moving with the picture)
+SHOW_BG_BLUR, SHOW_BG_DIM = 28, 0.38      # gblur sigma; the background's brightness (blue kept a little higher, toward the house indigo)
+_SHOW_N = [0]
+
+
 def _show_pad(bars, pre, post):
-    """The showcase picture pass for footage: bars cut, scaled into the box uncropped, padded onto the flat ground."""
+    """The showcase picture pass for footage: bars cut, scaled into the box uncropped, on the flat ground or (SHOW_BG
+    'blur') on an enlarged, blurred, dimmed copy of the same footage."""
     x, y, bw, bh = SHOWCASE
     g = '0x%02X%02X%02X' % A.GROUND
     if bw * 9 < bh * 16 - 32:                  # a box narrower than 16:9 ('tall'): crop the centre to its aspect first
         pre = f"crop='min(iw,ih*{bw}/{bh})':ih,{pre}"
-    return (f"{bars}{pre}scale={bw}:{bh}:force_original_aspect_ratio=decrease:flags=lanczos{post},"
-            f"pad={W}:{H}:(ow-iw)/2:{y}+({bh}-ih)/2:color={g}")
+    fg = f"{pre}scale={bw}:{bh}:force_original_aspect_ratio=decrease:flags=lanczos{post}"
+    if SHOW_BG != 'blur':
+        return f"{bars}{fg},pad={W}:{H}:(ow-iw)/2:{y}+({bh}-ih)/2:color={g}"
+    _SHOW_N[0] += 1
+    n = _SHOW_N[0]
+    return (f"{bars}split=2[sf{n}][sb{n}];"
+            f"[sb{n}]scale=-2:{H // 4},crop={W // 4}:{H // 4},gblur=sigma={SHOW_BG_BLUR / 4:.1f},"
+            f"scale={W}:{H}:flags=bicubic,eq=saturation=0.85,"
+            f"colorchannelmixer=rr={SHOW_BG_DIM:.2f}:gg={SHOW_BG_DIM:.2f}:bb={SHOW_BG_DIM + 0.1:.2f}[sbg{n}];"
+            f"[sf{n}]{fg}[sfg{n}];[sbg{n}][sfg{n}]overlay=(W-w)/2:{y}+({bh}-h)/2")
 
 
 #: People stories show the person (advisor, 23 Oct 2026, from Mohammad, after the Miyamoto honour Reel never
@@ -1487,7 +1502,7 @@ def _shot_key(f, s, d, fo):
     import hashlib
     src = C.U + f
     raw = json.dumps([f, s, d, repr(fo), FINISH, MAX_ZOOM, DENOISE, GRADE, os.path.getmtime(src), os.path.getsize(src)]
-                     + ([list(SHOWCASE)] if SHOWCASE else []))      # a showcase box is its own picture pass
+                     + ([list(SHOWCASE), SHOW_BG] if SHOWCASE else []))      # a showcase box is its own picture pass
     return hashlib.sha1(raw.encode()).hexdigest()[:16]
 
 
@@ -1910,7 +1925,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
          country=None, head_secs=3.5, vivid=True, style=None, voice=None, duck_db=18,
          lowres_ok=False, read_check=True, track=None, draft=False, head_size=HEAD_SIZE, cut=False, credits=None, strip=None,
          products=None, template=None, tribute=False, reveal=None, profile=None, pace_ok=False, skin=None,
-         person=None, blocky_ok=None, apart=None, page=None, showcase=None, showcase_fit='fit'):
+         person=None, blocky_ok=None, apart=None, page=None, showcase=None, showcase_fit='fit', showcase_bg='flat'):
     """`showcase`: the reason this Reel takes the showcase layout (showcase_reason; see SHOWCASE above): the footage
     uncropped in a box between the bands, the headline up for the whole Reel, the lines, `strip` (as key facts) and the
     credits as text in the bottom band, the lines back to back so no band is ever empty. Cards, products, person
@@ -1990,7 +2005,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, credits=credits, strip=strip,
                         products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok,
-                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart, page=page, showcase=showcase, showcase_fit=showcase_fit)
+                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart, page=page, showcase=showcase, showcase_fit=showcase_fit, showcase_bg=showcase_bg)
         finally:
             X = keep
     global FINISH
@@ -2000,7 +2015,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             return reel(shots, headline, label, lines, source, date, out, theme, sound, country, head_secs, vivid,
                         style, voice, duck_db, lowres_ok, read_check, track, draft, head_size, cut, credits=credits, strip=strip,
                         products=products, template=template, tribute=tribute, reveal=reveal, profile=profile, pace_ok=pace_ok,
-                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart, page=page, showcase=showcase, showcase_fit=showcase_fit)
+                        skin=skin, person=person, blocky_ok=blocky_ok, apart=apart, page=page, showcase=showcase, showcase_fit=showcase_fit, showcase_bg=showcase_bg)
         finally:
             FINISH = keep_f
     if profile and not PROFILES[profile].get('music', True) and isinstance(track, (tuple, list)) and len(track) > 2:
@@ -2036,6 +2051,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
                        theme=theme, meta_path=f'{tmp}/probe-meta.png', skin=skin)
             bx, by, bw, bh, lift = showcase_box(HEAD_GEOM['end'], bool(strip), fit=showcase_fit)
             SHOWCASE = (bx, by, bw, bh)
+            global SHOW_BG
+            SHOW_BG = 'blur' if showcase_bg == 'blur' else 'flat'
             print(f'showcase: picture box {bw}x{bh} at y {by}, fit {showcase_fit} ({show})', flush=True)
             drop = ('top', 'lift', 'size', 'step', 'shade')
             lines = sorted(lines, key=lambda x: x[1])
@@ -2083,6 +2100,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         raise
     finally:
         SHOWCASE = None                        # the box is for this cut only
+        SHOW_BG = 'flat'
     style = style or ('lines' if skin else pick_style(out))   # after the checks, so a stopped render takes no turn; a skin takes none
     layers = [(head_layer(headline, label, f'{tmp}/head.png', source, date, country, hs=head_size,   # HEAD_SIZE unless a job asks for more; never below HEAD_MIN
                           hst=head_size + 20, vivid=vivid, theme=theme, seed=sum(map(ord, out)), style=style,

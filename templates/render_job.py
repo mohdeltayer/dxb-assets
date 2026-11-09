@@ -880,7 +880,7 @@ def run(job, draft=False):
                      blocky_ok=job.get('blocky_ok'), apart=DP_apart, profile=profile_of(job),
                      reveal=job.get('reveal'),   # word-by-word reveal on the key line (story-beat twist, 28 Oct 2026)
                      page=page_moves(job, _starts(job)[0]) if job.get('page_motion') else None,   # storybook (B8)
-                     showcase=showcase_of(job), showcase_fit=job.get('showcase_fit', 'fit'))   # trailer at its own width between the bands (9 Nov 2026)
+                     showcase=showcase_of(job), showcase_fit=job.get('showcase_fit', 'fit'), showcase_bg=job.get('showcase_bg', 'flat'))   # trailer at its own width between the bands (9 Nov 2026)
     video = done[0] if isinstance(done, (list, tuple)) else done
     if job.get('persist') and not draft:
         persist_overlay(job, video, out)
