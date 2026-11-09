@@ -141,5 +141,52 @@
   "x": "ليست خبرًا جديدًا، لكنها دليل لمن يبحث عن واجهة عربية: لعبة Cyberpunk 2077 الصادرة في 9 ديسمبر 2020 تعرض العربية في الواجهة والترجمة على Steam، دون أداء صوتي عربي. وسعرها 229 درهمًا على متجر Steam في الإمارات.",
   "ig": "دليل Cyberpunk 2077 للاعب العربي: واجهة وترجمة بالعربية\nليست هذه معلومة جديدة، فاللعبة صدرت في 9 ديسمبر 2020، لكنها تفيد من لم يجرب اللعبة بعد ويبحث عن واجهة عربية. تعرض صفحة Cyberpunk 2077 على Steam اللغة العربية في الواجهة والترجمة، أما الأداء الصوتي فليس بالعربية. وتضم الصفحة 19 لغة بينها الإنجليزية. من تطوير ونشر سي دي بروجكت ريد (CD PROJEKT RED)، وسعرها 229 درهمًا في متجر Steam في الإمارات (قُرئت الصفحة في 9 نوفمبر 2026).\n#ألعاب #أخبار_الألعاب #Cyberpunk2077 #Steam",
   "threads": "X text + «المصدر: صفحة اللعبة على Steam، قُرئت في 9 نوفمبر 2026»"
+ },
+ "director_qa": {
+  "reel": "cards/2026-11/cyberpunk-2077-arabic-support-steam-evergreen-reel-v6.mp4",
+  "verdict": "PASS",
+  "at": "2026-11-09",
+  "table": [
+   [
+    "0 V from behind (290.0)",
+    "0 to 1.5",
+    "PASS",
+    "Cover: head above headline band, no face; headline crosses the printed SAMURAI collar text but reads; chips clear of grid corner"
+   ],
+   [
+    "1 club (87.2)",
+    "1.5 to 5.0",
+    "PASS",
+    "Moving; host's head briefly out of frame about 2.5 to 3.4 s, headline gone at 3.5; advisory"
+   ],
+   [
+    "2 diner man (108.0)",
+    "5.0 to 8.8",
+    "PASS",
+    "Face centred, front view; L2 «والترجمة كذلك، حسب صفحتها على Steam»"
+   ],
+   [
+    "3 blue-haired woman (153.0, 2.7 s)",
+    "8.8 to 11.6",
+    "PASS",
+    "L3 «والأداء الصوتي / ليس بالعربية»; tiny neon sign cut-text waived; cigarette woman removed. Waived: 2-frame crossfade at 11.6 to 11.65 s ghosts the next scene's cigarette woman and red boots faintly (about 0.07 s, not noticeable at 30 fps); optional trim 0.1 s"
+   ],
+   [
+    "4 sunglasses man (45.0)",
+    "11.6 to 14.9",
+    "PASS",
+    "Face clear of the headline (gone by 3.5 s); L4 «وتضم اللعبة 19 لغة بينها الإنجليزية»"
+   ],
+   [
+    "5 V pulled back (289.4, 3.4 s)",
+    "14.9 to 18.4",
+    "PASS",
+    "Last 2 s a clean picture, crossfade to end card, no glitch or black"
+   ]
+  ],
+  "sound": "our bed (reason on file: Gameplay trailer narrated whole length, City of Dreams letterboxed, Launch graphic, others burnt-in labels); transcript: Music, then 'Thank you for watching!' over the end chime; speech none; not checked by ear; -21.5 LUFS",
+  "facts": "Steam cc=ae: 229.00 AED, 9 Dec 2020, CD PROJEKT RED developer and publisher, 19 languages, Arabic interface and subtitles ticked, full audio blank: matches screen",
+  "chip": "دليل + بالعربية (evergreen rule met)",
+  "decode": "clean, 20.39 s"
  }
 }
