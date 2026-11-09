@@ -188,5 +188,18 @@
   "facts": "Steam cc=ae: 229.00 AED, 9 Dec 2020, CD PROJEKT RED developer and publisher, 19 languages, Arabic interface and subtitles ticked, full audio blank: matches screen",
   "chip": "دليل + بالعربية (evergreen rule met)",
   "decode": "clean, 20.39 s"
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/cyberpunk-2077-arabic-support-steam-evergreen-reel-v6.mp4",
+  "blob": "fddd6aa7f97a3173be6c8805be8af57aecac557e",
+  "at": "2026-11-09T08:53:50Z",
+  "note": "v6: cover clear of face, clean ending, 2-frame crossfade ghost waived",
+  "checklist": {
+   "job": "jobs/live/cyberpunk-2077-arabic-support-steam-evergreen.json",
+   "sha256": "b57aef3f95a4980c2bf7d1310de55724597b05be51d720861f103a55841fd5b5",
+   "ok": true,
+   "problems": []
+  }
  }
 }
