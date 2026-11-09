@@ -118,6 +118,7 @@ Inbox mirror for the desk dispatcher, every 15 minutes (advisor card adv-2026102
 9. Stories (card body and addendum_2106): ArtifactData "list", collection "stories", query {"limit": 1000}; save each as "$W/stox/<doc_id>.json" (its data), keeping versions. python3 $D/dispatch.py stories --board "$W/q/desk/board.json" --commitments <checkout>/newsroom/commitments.json --keeper "$W/keeper.json" --published "$W/published.json" --existing "$W/stox" --out "$W/stories.json". Apply each entry with ArtifactData batch: op as given ("set" with its data, or "delete"), collection "stories", doc_id, if_version = the kept version for an existing doc_id. Skip any entry refused for a changed version.
 9b. Work order and board_recent (adv-20261109-coordination-in-code, release 2026-11-10): git -C <checkout> show refs/remotes/origin/keeper-status:keeper/work-order.json > "$W/q/desk/work-order.json" and the same for keeper/work-order.md and keeper/hop.json (the keeper-status ref fetched in step 6); python3 $D/dispatch.py recent --board "$W/q/desk/board.json" --out "$W/q/desk/board_recent.md"; commit the four files to desk with the mirror commit (or one commit "Desk: work order <generated_at>" when step 5 had nothing) and push. Never edit the work order by hand.
 9c. Pipeline (release 2026-11-10 r3): ArtifactData "list", collection "pipeline", query {"limit": 1000}; save each as "$W/pipx/<doc_id>.json", keeping versions. python3 $D/pipeline.py docs --file "$W/q/desk/pipeline.json" --commitments <checkout>/newsroom/commitments.json --existing "$W/pipx" --out "$W/pipe.json"; apply each entry with ArtifactData batch (op as given, collection "pipeline", doc_id, data, if_version = the kept version for an existing doc_id). No desk/pipeline.json yet: skip.
+9d. Newsdesk (addendum 20:25 Dubai): ArtifactData "list", collection "leads", query {"limit": 1000}; save each as "$W/leadx/<doc_id>.json", keeping versions. python3 <checkout>/newsroom/scout_file.py docs <checkout>/newsroom/scout "$W/leads.json" "$W/leadx"; apply each entry with ArtifactData batch (op as given, collection "leads", doc_id, data, if_version = the kept version for an existing doc_id).
 10. Reply in one line (cards, write-backs applied/skipped, per-desk counts; feed gap and next slot; published, stale and stories writes; work order time and alarm count; pipeline open rows), delete $W, and stop.
 ```
 
@@ -276,3 +277,10 @@ a run that has not been updated still reads them.
    "Record keeper" in newsroom/delegation.md) one line, and it writes desk/pipeline.json with
    ops/backoffice/dispatch/pipeline.py set. Rows only from a story or build handoff; closed on published, dropped or
    superseded. The inbox mirror shows them every 15 minutes.
+8. Newsdesk file (adv-20261109-coordination-in-code, addendum 20:25 Dubai, 9 Nov 2026: Mohammad's focus is the news
+   and post timeline, what is approved and what is rejected): every run writes newsroom/scout/<YYYYMMDD-HHMM>.json
+   (`python3 newsroom/scout_file.py new` makes it; the run start in Dubai time) with run_at, digest_seq, digest_head,
+   emails_read and the scout's leads in rank order, each with primary_url, first_report, arabic_coverage, footage_route,
+   decision (built, carried, rejected, ordered), reason (only when rejected: no_source, denied, harmful_or_out_of_scope,
+   duplicate), slot, publer_ids_last6 and story_id; then post_this_hour and gap_min. `python3 newsroom/scout_file.py
+   check <file>` must print ok before the file is committed with the run's board line.

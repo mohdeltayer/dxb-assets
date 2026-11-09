@@ -2816,6 +2816,9 @@ Every failure on 9 Nov was a session not reading what another wrote; Mohammad wa
    closed on published, dropped or superseded); the inbox mirror, every 15 minutes, shows it in the inbox's `pipeline`
    collection with the commitments. The morning digest and the daily status read the board only through the forced
    refspec and count published posts from Publer's published list, citing the lines counted.
+6. Newsdesk (addendum 20:25 Dubai, 9 Nov 2026): every Production 2 run writes newsroom/scout/<YYYYMMDD-HHMM>.json, its
+   leads with their decisions (built, carried, rejected with one of the four reasons, ordered), slot and id suffixes
+   (`newsroom/scout_file.py`); the mirror copies the last 48 hours into the inbox `leads` collection for the Newsdesk tab.
 
 ## Rules into the gate (release 2026-11-10, Mohammad's build of 9 Nov evening)
 
