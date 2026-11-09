@@ -115,10 +115,35 @@ def strip_public(name, text):
     return json.dumps(strip(json.loads(text)), ensure_ascii=False, indent=1)
 
 
-def push_public(workdir, files, message, h):
+KEEP_DIGESTS = 48            # adv-20261107-watch-token-live addendum_0700: the last 48 hourly digests stay as files
+
+
+def digest_seq(text):
+    import json
+    try:
+        return int(json.loads(text).get('seq'))
+    except (ValueError, TypeError, AttributeError):
+        return None
+
+
+def prune_digests(folder, keep=KEEP_DIGESTS):
+    """Keep the `keep` newest <seq>.json files in folder (by seq number); returns the names removed."""
+    if not os.path.isdir(folder):
+        return []
+    seqs = sorted((int(n[:-5]), n) for n in os.listdir(folder) if n.endswith('.json') and n[:-5].isdigit())
+    gone = [n for _, n in seqs[:-keep]] if len(seqs) > keep else []
+    for n in gone:
+        os.remove(os.path.join(folder, n))
+    return gone
+
+
+def push_public(workdir, files, message, h, keep=KEEP_DIGESTS, attempts=3):
     """The public branch of dxb-assets (adv-20261107-watch-token-live): the files go under h['dir'] (watch/) with the
-    outlet text removed, the other files of the branch are kept, and the branch is one commit, force-pushed, exactly
-    as watch-digest.yml publishes it. Returns 'pushed'. Raises PushError; the caller leaves the items pending."""
+    outlet text removed, the other files of the branch are kept. Since 9 Nov (addendum_0700) every hourly digest is
+    also kept as watch/digests/<seq>.json, the newest `keep` of them, and the commit goes on top of the branch tip and
+    is pushed without force, so a reader's plain fetch always moves and no digest is lost between two reads. A
+    rejected push (the branch moved: the fallback workflow or another pass) re-fetches and tries again, `attempts`
+    times in all. Returns 'pushed' or 'unchanged'. Raises PushError; the caller leaves the items pending."""
     token = h['token_file']
     if not os.access(token, os.R_OK):
         raise PushError('token file %s is missing or not readable by %s' % (token, os.environ.get('USER', 'this user')))
@@ -126,29 +151,44 @@ def push_public(workdir, files, message, h):
     remote, branch, sub = h['remote'], h['branch'], h.get('dir') or 'watch'
     ident = ['-c', 'user.name=' + h.get('commit_name', 'dxb-watch'), '-c', 'user.email=' + h.get('commit_email', 'noreply@github.com'),
              '-c', 'commit.gpgsign=false']
-    shutil.rmtree(workdir, ignore_errors=True)
-    os.makedirs(workdir)
-    git(['init', '-q'], workdir, env)
-    git(['remote', 'add', 'origin', remote], workdir, env)
-    fetched = git(['fetch', '-q', '--depth', '1', '--no-tags', 'origin', branch], workdir, env, check=False)
-    if fetched.returncode == 0:
-        git(['checkout', '-q', '--orphan', 'work', 'FETCH_HEAD'], workdir, env)
-    elif 'find remote ref' in (fetched.stderr or ''):
-        git(['checkout', '-q', '--orphan', 'work'], workdir, env)
-    else:
-        raise PushError('fetch: ' + scrub(fetched.stderr))
-    os.makedirs(os.path.join(workdir, sub), exist_ok=True)
-    for name, text in files.items():
-        with open(os.path.join(workdir, sub, name), 'w', encoding='utf-8') as f:
-            f.write(strip_public(name, text))
-    git(['add', '-A'], workdir, env)
-    git(ident + ['commit', '-q', '-m', message], workdir, env)
-    for wait in (0, 2, 4):
-        time.sleep(wait)
-        p = git(['push', '-q', '--force', 'origin', 'HEAD:refs/heads/' + branch], workdir, env, check=False)
+    err = ''
+    for attempt in range(attempts):
+        if attempt:
+            time.sleep(2 * attempt)
+        shutil.rmtree(workdir, ignore_errors=True)
+        os.makedirs(workdir)
+        git(['init', '-q'], workdir, env)
+        git(['remote', 'add', 'origin', remote], workdir, env)
+        fetched = git(['fetch', '-q', '--depth', '1', '--no-tags', 'origin', branch], workdir, env, check=False)
+        if fetched.returncode == 0:
+            git(['checkout', '-q', '-B', 'work', 'FETCH_HEAD'], workdir, env)
+        elif 'find remote ref' in (fetched.stderr or ''):
+            git(['checkout', '-q', '--orphan', 'work'], workdir, env)
+        else:
+            raise PushError('fetch: ' + scrub(fetched.stderr))
+        os.makedirs(os.path.join(workdir, sub), exist_ok=True)
+        for name, text in files.items():
+            public = strip_public(name, text)
+            with open(os.path.join(workdir, sub, name), 'w', encoding='utf-8') as f:
+                f.write(public)
+            if name == 'digest.json':
+                seq = digest_seq(public)
+                if seq is not None:
+                    os.makedirs(os.path.join(workdir, sub, 'digests'), exist_ok=True)
+                    with open(os.path.join(workdir, sub, 'digests', '%d.json' % seq), 'w', encoding='utf-8') as f:
+                        f.write(public)
+        prune_digests(os.path.join(workdir, sub, 'digests'), keep)
+        git(['add', '-A'], workdir, env)
+        if git(['diff', '--cached', '--quiet'], workdir, env, check=False).returncode == 0:
+            return 'unchanged'
+        git(ident + ['commit', '-q', '-m', message], workdir, env)
+        p = git(['push', '-q', 'origin', 'HEAD:refs/heads/' + branch], workdir, env, check=False)
         if p.returncode == 0:
             return 'pushed'
-    raise PushError('push: ' + scrub(p.stderr or ''))
+        err = p.stderr or ''
+        if not ('rejected' in err or 'non-fast-forward' in err or 'fetch first' in err or 'stale info' in err):
+            break
+    raise PushError('push: ' + scrub(err))
 
 
 def reset(workdir):

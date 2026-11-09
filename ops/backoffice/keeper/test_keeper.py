@@ -342,6 +342,20 @@ class Evidence(unittest.TestCase):
         self.assertFalse(K.coverage(K.parse_time('2026-11-01T21:30:00Z'), night)[2])   # 90 min, night limit 120
         self.assertTrue(K.coverage(K.parse_time('2026-11-01T20:30:00Z'), night)[2])    # 150 min
 
+    def test_coverage_alarm_names_the_branch_seq(self):
+        """9 Nov (adv-20261108-stories-tab addendum_0545): the gap line carries the watch-digest seq."""
+        t = tempfile.mkdtemp()
+        p = os.path.join(t, 'digest.json')
+        with open(p, 'w') as f:
+            json.dump({'seq': 215, 'generated_at': '2026-11-01T11:52:05Z'}, f)
+        dline, seq = K.digest_note(p, NOW)
+        self.assertEqual((dline, seq), ('watch-digest branch: seq 215 at Sun 01 Nov 15:52 Dubai, 7 min old', 215))
+        line, _, over = K.coverage(K.parse_time('2026-11-01T10:30:00Z'), NOW, dline)
+        self.assertTrue(over)
+        self.assertTrue(line.endswith('; watch-digest branch: seq 215 at Sun 01 Nov 15:52 Dubai, 7 min old'), line)
+        self.assertEqual(K.digest_note(os.path.join(t, 'missing.json'), NOW)[0], 'watch-digest branch: not read')
+        self.assertEqual(K.digest_note(None, NOW), (None, None))
+
     def test_bank_floor_is_six(self):
         self.assertEqual(K.BANK_MIN, 6)
 

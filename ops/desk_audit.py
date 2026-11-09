@@ -18,7 +18,18 @@ no acknowledgement. Listed with its age, oldest first.
 
 NOT-FOLLOWING-RULES (adv-20261108-no-decision-stalls): a handoff from the last 24 hours whose text says a decision is
 needed ("decision", "need Mohammad", "needs Mohammad") without citing where the repo was searched (CLAUDE.md, STYLE.md,
-BUILD.md, a newsroom/ or notes/ file, or a card id). A question put on the board's Questions list is the right place."""
+BUILD.md, a newsroom/ or notes/ file, or a card id). A question put on the board's Questions list is the right place.
+Since 9 Nov (adv-20261108-stories-tab addendum_0545) the decision words include a run that ends blocked on or waiting
+for Mohammad's choice, call or answer, or on an open question, and must_not_repeat is read too: the 04:35 and 05:35
+Dubai runs of 9 Nov ("FM27 blocked on Mohammad's footage choice", "open question stale-lead rule") were missed.
+
+STALE-DIGEST (addendum_0545, adv-20261107-watch-token-live addendum_0700): a Production 2 handoff that prints the digest
+seq it read (`digest seq read: N (branch head M)`, or the older "digest still seq N") lower than the branch's newest
+hourly digest at the time of the run. The branch's history comes from watch/digests/<seq>.json on watch-digest
+(--digest-git fetches it, --digests reads a folder); the run is taken to start RUN_MARGIN_MIN before its handoff, so a
+digest pushed while the run was writing is not held against it. A printed head above the printed seq flags as well.
+
+    python3 ops/desk_audit.py ... [--digest-git <dxb-assets clone> | --digests <folder of <seq>.json>]"""
 import argparse, datetime as dt, json, os, re
 
 DUBAI = dt.timezone(dt.timedelta(hours=4))
@@ -53,8 +64,10 @@ def last_seen(t, board, runs):
 
 ACK_MIN = 70                 # one hourly run plus its writing time
 ACK_FROM = '2026-11-08T16:00:00Z'   # the first handoffs written under the rule (Pokémon, GTA VI ep1)
-P2 = re.compile(r'production 2', re.I)
-DECISION = re.compile(r'\bdecision\b|\bneeds? mohammad', re.I)
+P2 = re.compile(r'production[\s_-]*2', re.I)     # Production 2 writes "production-2" since 8 Nov
+DECISION = re.compile(r"\bdecision\b|\bneeds? mohammad|blocked on mohammad|waiting (?:on|for) mohammad|"
+                      r"mohammad[’']s (?:\w+ )?(?:choice|call|answer|pick|go)\b|if mohammad answers|"
+                      r"\bopen question\b|\b(?:his|the user[’']s) (?:choice|call)\b", re.I)
 CITED = re.compile(r'CLAUDE\.md|STYLE\.md|BUILD\.md|newsroom/|notes/|\badv-20\d{6}-|\bprod-20\d{6}-', re.I)
 
 
@@ -88,7 +101,7 @@ def not_following(board, now):
         at = _t(h.get('at', ''))
         if not at or (now - at).total_seconds() > 24 * 3600:
             continue
-        text = ' '.join(str(h.get(k, '')) for k in ('done', 'next'))
+        text = ' '.join(str(h.get(k, '')) for k in ('done', 'next', 'must_not_repeat'))
         if DECISION.search(text) and not CITED.search(text):
             out.append(f"NOT-FOLLOWING-RULES {h.get('from', '?')}: {h.get('id', '?')} asks for a decision without "
                        f"citing the section searched (search CLAUDE.md, STYLE.md, newsroom/ first; questions go on "
@@ -96,7 +109,71 @@ def not_following(board, now):
     return out
 
 
-def audit(desks, board, runs, now):
+RUN_MARGIN_MIN = 20          # a :35 run writes its handoff up to ~20 minutes after it read the digest
+SEQ_READ = re.compile(r'digest seq read:?\s*#?(\d+)(?:\s*\(branch head\s*#?(\d+)\))?', re.I)
+SEQ_OLD = re.compile(r'digest\b[^.;]{0,30}?\bseq\s*#?(\d+)', re.I)
+
+
+def _digest_point(text):
+    try:
+        d = json.loads(text)
+        return _t(d.get('generated_at')), int(d.get('seq'))
+    except (ValueError, TypeError, AttributeError):
+        return None
+
+
+def digest_history(folder=None, git_repo=None):
+    """[(generated_at, seq)] of the hourly digests on watch-digest, oldest first."""
+    pts = []
+    if git_repo:
+        import subprocess
+
+        def run(*a):
+            return subprocess.run(['git', '-C', git_repo] + list(a), capture_output=True, text=True, timeout=120)
+        ref = 'refs/remotes/origin/watch-digest'
+        run('fetch', '-q', '--depth', '1', 'origin', '+watch-digest:' + ref)
+        names = run('ls-tree', '--name-only', ref + ':watch/digests').stdout.split()
+        for path in ['watch/digests/' + n for n in names] + ['watch/digest.json']:
+            pts.append(_digest_point(run('show', ref + ':' + path).stdout))
+    if folder and os.path.isdir(folder):
+        for n in os.listdir(folder):
+            if n.endswith('.json'):
+                try:
+                    with open(os.path.join(folder, n), encoding='utf-8') as f:
+                        pts.append(_digest_point(f.read()))
+                except OSError:
+                    pass
+    return sorted({p for p in pts if p and p[0]}, key=lambda p: p[0])
+
+
+def stale_digest(board, history, now):
+    """Production 2 handoffs of the last 24 hours that read an older digest than the branch head at the time."""
+    out = []
+    for h in board.get('handoffs', []):
+        if not isinstance(h, dict) or not P2.search(str(h.get('from', ''))):
+            continue
+        at = _t(h.get('at', ''))
+        if not at or (now - at).total_seconds() > 24 * 3600:
+            continue
+        text = ' '.join(str(h.get(k, '')) for k in ('done', 'next', 'evidence'))
+        m = SEQ_READ.search(text)
+        read, printed = (int(m.group(1)), int(m.group(2)) if m.group(2) else None) if m else (None, None)
+        if read is None:
+            m = SEQ_OLD.search(text)
+            read = int(m.group(1)) if m else None
+        if read is None:
+            continue
+        start = at - dt.timedelta(minutes=RUN_MARGIN_MIN)
+        head = max((s for t, s in history if t <= start), default=None)
+        if printed is not None and (head is None or printed > head):
+            head = printed
+        if head is not None and read < head:
+            out.append(f"STALE-DIGEST {h.get('from', '?')}: {h.get('id', '?')} read digest seq {read}, the branch head "
+                       f"was {head} (fetch +watch-digest:refs/remotes/origin/watch-digest; ops/production-setup.md)")
+    return out
+
+
+def audit(desks, board, runs, now, history=None):
     today = now.astimezone(DUBAI)
     ids = {h.get('id') for h in board.get('handoffs', [])}
     out = []
@@ -136,8 +213,9 @@ def audit(desks, board, runs, now):
                 out.append(f"MISSING {d['name']}: {h['name']}: {h.get('note', '')}")
         for g in d.get('gaps', []):
             out.append(f"GAP {d['name']}: {g}")
-    out += unacked(board, now) + not_following(board, now)
-    order = {'DEAD': 0, 'UNACKED': 1, 'MISSING': 2, 'FAILING': 3, 'LATE': 4, 'NOT-FOLLOWING-RULES': 5, 'GAP': 6}
+    out += unacked(board, now) + stale_digest(board, history or [], now) + not_following(board, now)
+    order = {'DEAD': 0, 'UNACKED': 1, 'STALE-DIGEST': 2, 'MISSING': 3, 'FAILING': 4, 'LATE': 5,
+             'NOT-FOLLOWING-RULES': 6, 'GAP': 7}
     return sorted(out, key=lambda s: order.get(s.split()[0], 9)) or ['desk audit: all present']
 
 
@@ -147,8 +225,11 @@ if __name__ == '__main__':
     ap.add_argument('--board', required=True)
     ap.add_argument('--runs')
     ap.add_argument('--now')
+    ap.add_argument('--digests', help='a folder of watch/digests/<seq>.json files')
+    ap.add_argument('--digest-git', help='a dxb-assets clone: fetches watch-digest and reads its digests')
     a = ap.parse_args()
     now = dt.datetime.fromisoformat(a.now.replace('Z', '+00:00')) if a.now else dt.datetime.now(dt.timezone.utc)
     runs = [json.loads(l) for l in open(a.runs) if l.strip()] if a.runs and os.path.exists(a.runs) else None
-    for line in audit(json.load(open(a.desks)), json.load(open(a.board)), runs, now):
+    hist = digest_history(a.digests, a.digest_git) if (a.digests or a.digest_git) else []
+    for line in audit(json.load(open(a.desks)), json.load(open(a.board)), runs, now, hist):
         print(line)

@@ -13,6 +13,11 @@ Subcommands
   tick                                 the server pass (every 5 minutes): fetch, decide, alert
   sample --mirror M [--evidence E]     print the ntfy messages a tick would send now, send nothing
   status                               last tick, mirror age, counts per desk and state, readability
+  feed --keeper K --commitments C [--scheduled S] [--published P] --out F     the ops/feed document
+  published --posts P [--existing E] --out F       the `published` collection (Reels of the last 48 hours)
+  stale --items DIR [--days 7] --out F             write-backs closing cards with no update for 7 days
+  stories --board B --commitments C [--keeper K] [--published P] [--existing E] --out F   the `stories` collection
+  (feed, published, stale and stories: opsdata.py, card adv-20261108-stories-tab)
 
 Desks: ops (news, today), build (nightly), mohammad (waiting on him).
 Environment (all optional): DISPATCH_HOME, DISPATCH_REPO, DISPATCH_BRANCH, DISPATCH_PATH,
@@ -917,6 +922,59 @@ def cmd_status(args):
 
 
 # ---------------------------------------------------------------------------------------------
+# Operations data for the inbox (adv-20261108-stories-tab): the mirror task saves Publer and inbox reads as JSON,
+# these commands turn them into documents, the task writes them with ArtifactData.
+# ---------------------------------------------------------------------------------------------
+def _opsdata():
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import opsdata
+    return opsdata
+
+
+def cmd_feed(args):
+    od = _opsdata()
+    now = get_now(args.now)
+    doc = od.feed_doc(od.load(args.keeper, {}), od.load(args.commitments, {}), od.load(args.scheduled),
+                      od.load(args.published), now)
+    write_atomic(args.out, dump_json(doc))
+    print('feed: last post %s (gap %s min, rule %s), next %s, %s posts today, bank %s, %d alarms' % (
+        doc['last_post_at'], doc['gap_min'], doc['gap_rule_min'], doc['next_slot_at'], doc['posts_today'],
+        doc['bank_ready'], len(doc['alarms'])))
+    return 0
+
+
+def cmd_published(args):
+    od = _opsdata()
+    now = get_now(args.now)
+    docs = od.published_docs(od.load(args.posts), now, args.hours, od.load_existing(args.existing))
+    write_atomic(args.out, dump_json(docs))
+    print('published: %d documents to write (Reels of the last %d h)' % (len(docs), args.hours))
+    return 0
+
+
+def cmd_stale(args):
+    od = _opsdata()
+    wb = od.stale_writebacks(args.items, get_now(args.now), args.days)
+    write_atomic(args.out, dump_json(wb))
+    print('stale: %d cards to auto-close (no update for %d days)' % (len(wb), args.days))
+    return 0
+
+
+def cmd_stories(args):
+    od = _opsdata()
+    now = get_now(args.now)
+    ws = od.stories_docs(od.load(args.board, {}), od.load(args.commitments, {}), now, od.load(args.keeper, {}),
+                         od.load(args.published), od.load_existing(args.existing))
+    write_atomic(args.out, dump_json(ws))
+    n = {}
+    for w in ws:
+        k = w['data']['state'] if w['op'] == 'set' else 'delete'
+        n[k] = n.get(k, 0) + 1
+    print('stories: %d writes (%s)' % (len(ws), ', '.join('%s %d' % kv for kv in sorted(n.items())) or 'none'))
+    return 0
+
+
+# ---------------------------------------------------------------------------------------------
 def main(argv=None):
     ap = argparse.ArgumentParser(prog='dispatch.py', description=__doc__.split('\n')[0])
     sub = ap.add_subparsers(dest='cmd', required=True)
@@ -947,6 +1005,36 @@ def main(argv=None):
     p.set_defaults(fn=cmd_sample)
     p = sub.add_parser('status')
     p.set_defaults(fn=cmd_status)
+    p = sub.add_parser('feed')
+    p.add_argument('--keeper', required=True, help='keeper status.json (branch keeper-status, keeper/status.json)')
+    p.add_argument('--commitments', required=True)
+    p.add_argument('--scheduled', help="Publer's scheduled posts, saved as JSON")
+    p.add_argument('--published', help="Publer's published posts, saved as JSON")
+    p.add_argument('--now')
+    p.add_argument('--out', required=True)
+    p.set_defaults(fn=cmd_feed)
+    p = sub.add_parser('published')
+    p.add_argument('--posts', required=True)
+    p.add_argument('--existing')
+    p.add_argument('--hours', type=int, default=48)
+    p.add_argument('--now')
+    p.add_argument('--out', required=True)
+    p.set_defaults(fn=cmd_published)
+    p = sub.add_parser('stale')
+    p.add_argument('--items', required=True)
+    p.add_argument('--days', type=int, default=7)
+    p.add_argument('--now')
+    p.add_argument('--out', required=True)
+    p.set_defaults(fn=cmd_stale)
+    p = sub.add_parser('stories')
+    p.add_argument('--board', required=True)
+    p.add_argument('--commitments', required=True)
+    p.add_argument('--keeper')
+    p.add_argument('--published')
+    p.add_argument('--existing')
+    p.add_argument('--now')
+    p.add_argument('--out', required=True)
+    p.set_defaults(fn=cmd_stories)
     args = ap.parse_args(argv)
     return args.fn(args)
 

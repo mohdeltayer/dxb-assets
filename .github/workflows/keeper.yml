@@ -79,6 +79,17 @@ jobs:
             echo "no QUEUE_READ_TOKEN: started-line check off"
           fi
 
+      # The watch's branch head, so the coverage alarm names the seq the branch held (adv-20261108-stories-tab
+      # addendum_0545). Public branch: a plain read.
+      - name: Watch digest head (optional)
+        run: |
+          if git fetch -q --depth 1 "https://github.com/${GITHUB_REPOSITORY}.git" +watch-digest:refs/remotes/origin/watch-digest 2>/dev/null &&
+             git show refs/remotes/origin/watch-digest:watch/digest.json > "$RUNNER_TEMP/digest.json" 2>/dev/null; then
+            echo "DIGEST_ARG=--digest $RUNNER_TEMP/digest.json" >> "$GITHUB_ENV"
+          else
+            echo "watch-digest not read"
+          fi
+
       - name: Tick
         env:
           KEEPER_NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
@@ -86,7 +97,7 @@ jobs:
           set +e
           python3 ops/backoffice/keeper/keeper.py tick --commitments newsroom/commitments.json \
             --out "$RUNNER_TEMP/pub/keeper" --releases ops/build/releases --runs newsroom/helper-runs.jsonl \
-            ${BOARD_ARG:-} | tee -a "$GITHUB_STEP_SUMMARY"
+            ${BOARD_ARG:-} ${DIGEST_ARG:-} | tee -a "$GITHUB_STEP_SUMMARY"
           echo "commit $(git rev-parse --short HEAD)" >> "$RUNNER_TEMP/pub/keeper/keeper.log"
           exit 0   # an unreadable commitments file is in the status and the log; the push below still happens
 

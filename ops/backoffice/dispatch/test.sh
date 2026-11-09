@@ -292,6 +292,9 @@ log=$(cat "$DISPATCH_HOME/dispatch.log")
 hasnt "$log" "$SECRET_TOKEN" "log has no token"
 hasnt "$log" "$SECRET_TOPIC" "log has no topic"
 
+echo "== operations data (feed, published, stale, stories; adv-20261108-stories-tab)"
+if out=$("$PY" -m unittest discover -s "$HERE" -p 'test_opsdata.py' 2>&1); then ok "opsdata unit tests ($(grep -o 'Ran [0-9]* tests' <<<"$out"))"; else bad "opsdata unit tests"; echo "$out" | tail -20; fi
+
 echo
 echo "passed: $pass, failed: $fail"
 [[ $fail -eq 0 ]]
