@@ -2780,6 +2780,21 @@
    "fallback": "publish-last-passed",
    "held_by_mohammad": false,
    "status": "scheduled in Publer for 13:00 Dubai 9 Nov (moved from 12:45 at 08:03Z); captions rewritten 08:05Z; media swapped to v4 via update_publer_post at 08:14Z (to confirm after publishing)"
+  },
+  {
+   "id": "quiet-express-drecom-20261109-0930z",
+   "title": "Drecom publishes Quiet Express: Cabin 909 (news, chip جديد)",
+   "kind": "post",
+   "slot": "Mon 09 Nov 13:30 Dubai (09:30Z)",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "jobs/live/quiet-express-cabin-909-drecom-publishing.json (render ed7662d)",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "status": "intent pending director QA; gate 09:05Z: primary read (Drecom PR TIMES release 9 Nov 16:00 JST: publishing title, Steam, 2027, price undecided, demo out, languages JA/EN/ZH x2/KO)"
   }
  ]
 }
