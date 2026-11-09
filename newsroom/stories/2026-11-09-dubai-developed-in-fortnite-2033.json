@@ -13,7 +13,7 @@
  ],
  "category": "announcement",
  "priority": "green",
- "status": "building",
+ "status": "built, director PASS, not submitted (held for Production 2)",
  "why": "Regional story the wider press missed; launch in two days; Gulf readers can attend the SALT event.",
  "sources": [
   {
@@ -73,16 +73,41 @@
    "lane": "Reel",
    "chip": "رسمي",
    "country": "الإمارات",
-   "format": "stills (key art with motion)",
+   "format": "trailer template, showcase layout on the one official image (composed picture track)",
    "skin": "house",
    "theme": "spectacle",
    "style": "lines",
    "sound": "our bed (no footage)"
   }
  },
- "versions": [],
+ "versions": [
+  {
+   "v": 4,
+   "out": "cards/2026-11/dubai-developed-in-fortnite-2033-november-11-reel-v4.mp4",
+   "note": "v1 pans over art (lines over logo), v2 lines at top (unreadable on pale sky), v3 showcase, v4 larger lines and credit; v4 is final"
+  }
+ ],
  "posts": [],
  "corrections": [],
  "metrics": {},
- "ledger_find": "Fortnite: last story 8 Nov pirate shop drop rates (building, not a Reel of this subject); no DMCC Fortnite hit"
+ "ledger_find": "Fortnite: last story 8 Nov pirate shop drop rates (building, not a Reel of this subject); no DMCC Fortnite hit",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/dubai-developed-in-fortnite-2033-november-11-reel-v4.mp4",
+  "blob": "93d3ce82071efbc3804e321fa093fcdf7defaa19",
+  "at": "2026-11-09T03:26:51Z",
+  "note": "Director QA 03:30Z: strip, dense and frames read. Shots 0-10 PASS: art window (subjects whole, DMCC and Wild logos visible), headline band readable at grid size, lines legible in lower band at 56 px, credit on all shots, no decode or smear flag from the runner, sound our bed (no footage sound exists), speech none. Reel checks: first frame readable (headline, chips); something changes at every cut (2.2 to 3.6 s); last two seconds are a picture before the end card; length 25.9 s before end card, above the 12-20 s target, accepted because five lines carry the facts and the not-Epic disclaimer. Limits: sound judged from the job, not by ear; one image only, so no beat has a new subject.",
+  "checklist": {
+   "job": "jobs/live/dubai-developed-in-fortnite-2033-november-11.json",
+   "sha256": "271bbf9d3d7ff7b11a01c532d4fa87b4fd66975bf419cdff95cf8abfc44d3f9c",
+   "ok": true,
+   "problems": []
+  }
+ },
+ "posts_text": {
+  "x": "جزيرة Fortnite تضم عشرة معالم من دبي تُطلق عالميًا في 11 نوفمبر، حسب إعلان مركز دبي للسلع المتعددة (DMCC). لم يُعلن رمز الجزيرة ولا سعرها بعد.",
+  "threads": "جزيرة Fortnite تضم عشرة معالم من دبي تُطلق عالميًا في 11 نوفمبر، حسب إعلان مركز دبي للسلع المتعددة (DMCC). لم يُعلن رمز الجزيرة ولا سعرها بعد.\nالمصدر: مركز دبي للسلع المتعددة (DMCC)",
+  "x_reply": "المصدر: بيان مركز دبي للسلع المتعددة (DMCC) المؤرخ 2 نوفمبر 2026 https://dmcc.ae/latest-news/dmcc-gaming-centre-and-wild-unlimited-announce-dubai-developed-in-fortnite-2033",
+  "ig_first_comment": "المصدر: بيان مركز دبي للسلع المتعددة (DMCC) المؤرخ 2 نوفمبر 2026."
+ }
 }
