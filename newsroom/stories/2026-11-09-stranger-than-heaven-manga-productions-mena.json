@@ -70,7 +70,7 @@
    "source": "Manga primary (as stated by the release); not re-checked this run"
   }
  ],
- "status": "building: render dispatched on the server lane",
+ "status": "building: re-dispatched after headline fix",
  "lanes": {
   "dl": {
    "lane": "Reel",
@@ -110,5 +110,6 @@
   "buildgate": "ok",
   "render_job_check": "ok, clip 23.2 s (after focus)"
  },
- "sound": "our bed (neon): Act 1 trailer sung lyrics throughout (speechcheck, no gap over 12 s); Show Business overview trailer longest wordless gap 7.0 s (no 26 s stretch)"
+ "sound": "our bed (neon): Act 1 trailer sung lyrics throughout (speechcheck, no gap over 12 s); Show Business overview trailer longest wordless gap 7.0 s (no 26 s stretch)",
+ "headline_change": "Headline changed for the 72 px limit (run #245 text step refused «مانجا للإنتاج تنشر / لعبة Stranger Than Heaven», 'needs more than 2 lines at 72 px'). Editor decision: «ناشر سعودي\\nللعبة RGG الجديدة»; the game is named in line 1 of the story lines."
 }
