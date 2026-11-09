@@ -29127,5 +29127,66 @@
   "min_disk_free_mb": 226280,
   "setup_min": 0.17,
   "story": "warhammer-40k-dark-heresy-january-28-2027"
+ },
+ {
+  "name": "hollow-knight-silksong-free-content-packs-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-11-09T21:55Z",
+  "stages": {
+   "checks": 4.2,
+   "montage": 35.1,
+   "text": 30.5,
+   "audio": 1.2,
+   "outro": 18.4
+  },
+  "total": 89.3,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-09T21:54Z",
+  "finished_at": "2026-11-09T21:55Z",
+  "render_min": 1.49,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 6.4,
+   "audio_secs": 38.7,
+   "music_pct": 59.7,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 2
+   },
+   "effects_shots": 0,
+   "mix_secs": 3.6,
+   "secs": 11.1
+  },
+  "lifeless": {
+   "score": 0.8,
+   "still_share": 0.006,
+   "longest_still": 0.1,
+   "cuts_per_10s": 10.18,
+   "held_under_text": 0.006,
+   "secs": 16.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 166,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1131,
+  "peak_mem_mb": 2363,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 17572,
+  "peak_disk_mb": 20218,
+  "min_disk_free_mb": 225888,
+  "setup_min": 0.18,
+  "story": "hollow-knight-silksong-free-content-packs"
  }
 ]
