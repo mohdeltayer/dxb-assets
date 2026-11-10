@@ -50,11 +50,11 @@
    "time": "2026-11-08 22:57 EST (the 9 Nov JST announcement)"
   }
  ],
- "first_report": "2026-11-09 about 12:10 JST = 03:10Z (about 1.5 hours old at build)",
- "source_type": "secondary",
- "footage": "stills: reason no_footage. The announcement trailer premieres on YouTube 10 Nov 20:00 JST (11:00 UTC, 15:00 Dubai); no trailer exists yet. Tried: Square Enix JP site (no item), dragonquest.jp (no item), the official X post (HTTP 402), Gamebiz (company image only), Famitsu, 4Gamer (240x180 and 512x287 thumbnails; the 1310x735 screenshot page is the same graphic), Gematsu. Only one official image exists, the announcement key art in an English (UTC time) and a Japanese (JST time) variant, 1280x720, the largest copy found. Showcase layout (not enlarged).",
- "lane": "Digital Lounge",
- "beat": "announcement",
+ "first_report": "Official account @DQRPG_JP announcement 9 Nov 2026 (Gamebiz 12:28 JST, Famitsu 12:17 JST, 4Gamer 12:13 JST, Gematsu); announcement trailer premiered 10 Nov 2026 15:00 Dubai",
+ "source_type": "primary",
+ "footage": "Official announcement trailer, 1920x1080, 141.6 s, supplied by Mohammad from Google Drive on 10 Nov (English version with beta card); cut 100 to 141.5 s committed under live/2026-11-10/ for the render server; decode clean",
+ "lane": "Digital Lounge only (X, Instagram, Threads); DXB-KNIGHT on hold",
+ "beat": "beta: what it is, platforms, closed beta sign-up deadline",
  "claims": [
   {
    "text": "New Dragon Quest series command RPG for smartphones, iOS and Android",
@@ -75,6 +75,14 @@
   {
    "text": "Copyright: ARMOR PROJECT / BIRD STUDIO / SQUARE ENIX",
    "status": "on the key art; no developer named by any outlet"
+  },
+  {
+   "text": "Closed beta test: apply now, deadline 23 Nov 2026 14:59 UTC (18:59 Dubai), iOS and Android",
+   "status": "official: on the closing card of the announcement trailer (supplied by Mohammad; read by a helper at 132 s)"
+  },
+  {
+   "text": "On-screen text: 'A new DRAGON QUEST adventure awaits on your smartphone', turn-based battles with allies, build up your home base",
+   "status": "official: the trailer's own text"
   }
  ],
  "gate": "gate 04:38-04:50Z: Square Enix's JP site and dragonquest.jp read, no item yet; X post refused (402). Four outlets (Gamebiz, Famitsu, 4Gamer, Gematsu) agree on name, platforms, trailer time, no date or price; the publisher's own key art (EN and JP) read directly confirms the English subtitle, iOS/Android and the premiere time. No denial or update found. Exit B: chip تقرير (no Square Enix page read), attributed to the official account via outlets.",
@@ -85,11 +93,14 @@
   "payoff": "what is not announced: date and price; trailer tomorrow 15:00 Dubai"
  },
  "ledger_find": {
-  "at": "2026-11-09T04:38:09Z",
+  "at": "2026-11-10T17:04:26Z",
   "words": [
    "dragon",
    "quest",
-   "rpg"
+   "cursed",
+   "tree",
+   "chosen",
+   "isle"
   ],
   "hits": []
  },
@@ -109,5 +120,6 @@
   "context_pages": [
    "newsroom/context/square-enix.md"
   ]
- }
+ },
+ "sensitive": "none"
 }
