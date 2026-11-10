@@ -31539,5 +31539,66 @@
   "min_disk_free_mb": 224493,
   "setup_min": 0.2,
   "story": "bandai-namco-closes-reflector-unknown-9"
+ },
+ {
+  "name": "bandai-namco-closes-reflector-unknown-9-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-11-10T06:52Z",
+  "stages": {
+   "checks": 3.6,
+   "montage": 27.2,
+   "text": 40.3,
+   "audio": 1.3,
+   "outro": 22.0
+  },
+  "total": 94.3,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-10T06:50Z",
+  "finished_at": "2026-11-10T06:52Z",
+  "render_min": 1.57,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 4.2,
+   "audio_secs": 43.7,
+   "music_pct": 87.7,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 2
+   },
+   "effects_shots": 0,
+   "mix_secs": 1.3,
+   "secs": 6.5
+  },
+  "lifeless": {
+   "score": 0.1,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 6.25,
+   "held_under_text": 0.005,
+   "secs": 20.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 168,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1176,
+  "peak_mem_mb": 2286,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 18697,
+  "peak_disk_mb": 21656,
+  "min_disk_free_mb": 224450,
+  "setup_min": 0.2,
+  "story": "bandai-namco-closes-reflector-unknown-9"
  }
 ]
