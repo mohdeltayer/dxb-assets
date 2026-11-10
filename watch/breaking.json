@@ -1,10 +1,70 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T16:15:32Z",
- "seq": 286,
+ "generated_at": "2026-11-10T16:35:36Z",
+ "seq": 287,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 10657,
+   "source": "PlayStation Blog",
+   "source_kind": "official",
+   "title": "PlayStation Plus Game Catalog for November: Death Stranding 2: On the Beach, Like a Dragon: Pirate Yakuza in Hawaii, Atomfall, Dragon Quest III HD-2D Remake and more",
+   "url": "https://blog.playstation.com/2026/11/10/playstation-plus-game-catalog-for-november-death-stranding-2-on-the-beach-like-a-dragon-pirate-yakuza-in-hawaii-atomfall-dragon-quest-iii-hd-2d-remake-and-more/",
+   "published": "2026-11-10T16:30Z",
+   "first_seen": "2026-11-10T16:35:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/tachyon/2026/11/be07500b8d288a2ac8b3bdd91247f5a62b972d68.jpg?fit=1024%2C1024"
+    },
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/tachyon/2026/11/be07500b8d288a2ac8b3bdd91247f5a62b972d68.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/tachyon/2026/11/0f9cbfa84d97aacff67d89beb5d26cd741adf9ec.jpg?fit=1024%2C1024"
+    },
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/tachyon/2026/11/0f9cbfa84d97aacff67d89beb5d26cd741adf9ec.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/tachyon/2026/11/3dd25d1cd2330dd434593ae7c888a90966956aa1.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/tachyon/2026/11/7b190a5bdff74d3fe44ef889710e6e31c7f022f2.jpg?fit=1024%2C1024"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 287
+  },
+  {
+   "id": 10666,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Marvel Cosmic Invasion - The Siege of Castle Doom DLC #2 Launch Trailer | PS5 & PS4 Games",
+   "url": "https://www.youtube.com/watch?v=n0eYRkaw8sc",
+   "published": "2026-11-10T16:15Z",
+   "first_seen": "2026-11-10T16:35:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/n0eYRkaw8sc/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=n0eYRkaw8sc"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 287
+  }
+ ],
+ "recent": [
   {
    "id": 10635,
    "source": "PlayStation (YouTube)",
@@ -25,9 +85,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 286
-  }
- ],
- "recent": [
+  },
   {
    "id": 10611,
    "source": "PlayStation (YouTube)",
@@ -695,7 +753,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T16:15:15Z",
+  "last_poll_at": "2026-11-10T16:35:14Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
