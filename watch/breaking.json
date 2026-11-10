@@ -1,10 +1,75 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T17:15:06Z",
- "seq": 289,
+ "generated_at": "2026-11-10T17:20:23Z",
+ "seq": 290,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 10701,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Shrek 2 Remastered | Launch Trailer",
+   "url": "https://www.youtube.com/watch?v=fOJFlgLL6rY",
+   "published": "2026-11-10T17:00Z",
+   "first_seen": "2026-11-10T17:20:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/fOJFlgLL6rY/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=fOJFlgLL6rY"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 290
+  },
+  {
+   "id": 10702,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Star Trek Online | Rediscovered Launch Trailer",
+   "url": "https://www.youtube.com/watch?v=iXG8wL03W00",
+   "published": "2026-11-10T17:00Z",
+   "first_seen": "2026-11-10T17:20:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/iXG8wL03W00/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=iXG8wL03W00"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 290
+  },
+  {
+   "id": 10703,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Football Manager 27 | Make The Call",
+   "url": "https://www.youtube.com/watch?v=TzSSPYE9DPc",
+   "published": "2026-11-10T17:00Z",
+   "first_seen": "2026-11-10T17:20:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/TzSSPYE9DPc/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=TzSSPYE9DPc"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 290
+  }
+ ],
+ "recent": [
   {
    "id": 10700,
    "source": "PlayStation (YouTube)",
@@ -25,9 +90,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 289
-  }
- ],
- "recent": [
+  },
   {
    "id": 10666,
    "source": "PlayStation (YouTube)",
@@ -774,17 +837,17 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T17:15:06Z",
+  "last_poll_at": "2026-11-10T17:20:15Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 18x)",
-   "Nintendo of America (X) (HTTP 429, 58x)",
+   "Nintendo of America (X) (HTTP 429, 59x)",
    "PlayStation (X) (HTTP 429, 75x)",
    "PlayStation Middle East (X) (HTTP 429, 5x)",
    "Rockstar Games (X) (HTTP 429, 31x)",
-   "Xbox (X) (HTTP 429, 75x)"
+   "Xbox (X) (HTTP 429, 76x)"
   ]
  }
 }
