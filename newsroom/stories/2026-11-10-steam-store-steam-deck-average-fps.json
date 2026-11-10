@@ -1,0 +1,74 @@
+{
+ "id": "2026-11-10-steam-store-steam-deck-average-fps",
+ "title": "Steam store pages show a game's average frame rate on Steam Deck (Automaton report)",
+ "game": "Steam Deck",
+ "companies": [
+  "Valve"
+ ],
+ "genre": [
+  "industry/hardware"
+ ],
+ "category": "report",
+ "priority": "medium",
+ "status": "building",
+ "sources": [
+  {
+   "url": "https://automaton-media.com/articles/newsjp/20261110-478374/",
+   "type": "outlet",
+   "read_at": "2026-11-10T05:42Z",
+   "note": "store pages, Steam Deck compatibility details: average frame rate, histogram, stutter frequency; opt-in data; Steam Deck first, more devices later; Valve announced 10 Nov"
+  },
+  {
+   "url": "https://store.steampowered.com/app/1675200/",
+   "type": "primary",
+   "note": "Valve's Steam Deck trailer (footage)"
+  }
+ ],
+ "first_report": "2026-11-10T04:05Z (Automaton)",
+ "source_type": "secondary",
+ "platform": [
+  "Steam Deck",
+  "PC"
+ ],
+ "beat": "report",
+ "footage": {
+  "files": "Valve's Steam Deck Available Now trailer (Steam, 1080p)",
+  "sound": "the trailer's music stem (music_only)"
+ },
+ "claims": [
+  {
+   "claim": "store pages show average frame rate on Steam Deck",
+   "status": "reported",
+   "source": "Automaton"
+  },
+  {
+   "claim": "data from users who opted in",
+   "status": "reported",
+   "source": "Automaton"
+  },
+  {
+   "claim": "more devices later",
+   "status": "reported",
+   "source": "Automaton"
+  }
+ ],
+ "gate": "gate 05:42Z: Automaton read; Valve's own post not found (search found only the April and October developer-side reports); Exit B تقرير naming Automaton",
+ "angle": {
+  "hook": "Steam now tells you how well a game runs on Steam Deck before you buy",
+  "why_now": "rolled out to store pages on 10 Nov after developers got the same data in Steamworks earlier this year; Valve's own post not yet read",
+  "what_it_means_here": "Steam Deck owners see real performance from other players",
+  "payoff": "more devices to follow"
+ },
+ "story_items": {
+  "report": "finding: average fps on store pages; evidence: Automaton; consequence: buyers see performance; limits: Valve post not read, opt-in data"
+ },
+ "sensitive": "none",
+ "lane": "Digital Lounge only",
+ "template": "clipcard",
+ "chip": "تقرير",
+ "ledger_find": "no Steam fps story",
+ "versions": [],
+ "posts": [],
+ "corrections": [],
+ "metrics": {}
+}
