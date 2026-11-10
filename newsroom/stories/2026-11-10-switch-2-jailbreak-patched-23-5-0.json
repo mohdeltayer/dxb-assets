@@ -10,7 +10,7 @@
  ],
  "category": "report",
  "priority": "high",
- "status": "building",
+ "status": "scheduled",
  "order": "Mohammad T0, 10 Nov about 03:35Z",
  "sources": [
   {
@@ -68,12 +68,37 @@
  "template": "split",
  "chip": "تقرير",
  "ledger_find": "no Switch 2 jailbreak story",
- "versions": [],
+ "versions": [
+  {
+   "v": 4,
+   "file": "cards/2026-11/switch-2-jailbreak-patched-23-5-0-reel-v4.mp4",
+   "director": "PASS"
+  }
+ ],
  "posts": [],
  "corrections": [],
  "metrics": {},
  "footage": {
   "files": "Nintendo's Switch 2 page videos: TV-mode montage (Mario Kart World, Donkey Kong Bananza, Metroid Prime 4) and handheld montage (Donkey Kong Bananza), 1080p",
   "sound": "our bed (legal and hacking rule, 26 Oct)"
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/switch-2-jailbreak-patched-23-5-0-reel-v4.mp4",
+  "blob": "3a058b5842345c9e19dc26a3cc3c98dda4af71a2",
+  "at": "2026-11-10T03:57:30Z",
+  "note": "PASS on v2 content; v4 chip تقرير on breaking profile confirmed",
+  "checklist": {
+   "job": "jobs/live/switch-2-jailbreak-patched-23-5-0.json",
+   "sha256": "91f90c65b2c897c3bbff22b76faa68a176d6c72bfe95774cf18690f31a7a32b2",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-sonnet"
+ },
+ "approved": "go: Mohammad T0; out the minute it passed, Publer 04:02Z (08:02 Dubai) IG, X, Threads. Chip تقرير, not عاجل: one outlet, no Nintendo statement (chip ladder); crimson breaking profile kept"
 }
