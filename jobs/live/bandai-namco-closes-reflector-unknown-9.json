@@ -1,0 +1,215 @@
+{
+ "name": "bandai-namco-closes-reflector-unknown-9",
+ "story": "2026-11-10-bandai-namco-closes-reflector-unknown-9",
+ "render_lane": "server",
+ "built_by": "production-2",
+ "out": "cards/2026-11/bandai-namco-closes-reflector-unknown-9-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "u9-launch.mp4",
+   "steam": 1477940,
+   "trailer": "Unknown 9: Awakening - Cinematic Launch Trailer",
+   "trailer_id": 773199,
+   "start": 0,
+   "seconds": 148
+  }
+ ],
+ "gfx": [
+  {
+   "file": "u9-gfx-1.png",
+   "kind": "fact",
+   "label": "خسارة استثنائية متوقعة",
+   "value": "21 مليون يورو",
+   "note": "حسب بانداي نامكو"
+  }
+ ],
+ "shots": [
+  [
+   "u9-launch.mp4",
+   26.5,
+   3.4,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "u9-launch.mp4",
+   44.0,
+   2.5,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "u9-launch.mp4",
+   90.0,
+   2.7,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "u9-gfx-1.png",
+   [
+    "u9-launch.mp4",
+    77.0
+   ],
+   3.4,
+   null
+  ],
+  [
+   "u9-launch.mp4",
+   94.0,
+   2.4,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "u9-launch.mp4",
+   96.0,
+   2.4,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "u9-launch.mp4",
+   8.0,
+   2.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "u9-launch.mp4",
+   46.0,
+   2.4,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "بانداي نامكو (Bandai Namco)\nتحل استوديو ريفلكتور (Reflector)",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   5,
+   [
+    [
+     "والسبب حسب الشركة مراجعة خططها\nوإمكانية تحقيق الربح",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   6,
+   7,
+   [
+    [
+     "لم يُحدد موعد الإغلاق،\nوالاستوديو في مونتريال بكندا",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   7,
+   "المصدر: بانداي نامكو (Bandai Namco)",
+   {
+    "size": 44,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "بانداي نامكو تغلق\nاستوديو Unknown 9: Awakening",
+ "label": "رسمي",
+ "source": "بانداي نامكو (Bandai Namco)",
+ "date": "10 Nov 2026",
+ "theme": "cold",
+ "style": "frame",
+ "template": "clipcard",
+ "skin": "house",
+ "track": [
+  "u9-launch.mp4",
+  26.5
+ ],
+ "music_only": true,
+ "cut": true,
+ "reel_check": {
+  "SOURCE: primary read in full": "Bandai Namco Holdings notice PDF",
+  "SOURCE: not already posted": "yes",
+  "SOURCE: age": "under 2 hours",
+  "ANGLE before lines": "yes",
+  "STORY TYPE layoffs": "who, what, reason as stated, staff count not given, figure",
+  "STORY: spoken paragraph, subject before pronoun": "yes",
+  "SOUND: footage sound or bed with reason": "trailer music stem",
+  "PICTURE: footage first": "Steam 1080p story trailer",
+  "PICTURE: credit on every clip": "credit 0 to 7",
+  "PICTURE: headline not over a face": "checked on strip"
+ },
+ "decision_log": [
+  {
+   "beat": "hook",
+   "shot": "26.5 Haroona in her hood, then her face"
+  },
+  {
+   "beat": "L1 decision",
+   "shot": "44.0 Haroona with the blue energy, 90.0 her face"
+  },
+  {
+   "beat": "card",
+   "shot": "the loss figure over the moving trailer at 84 to 87"
+  },
+  {
+   "beat": "L2 reason",
+   "shot": "94.0 her hands, 96.0 her face in the light"
+  },
+  {
+   "beat": "L3 timing and place",
+   "shot": "8.0 the spectral hand, 46.0 the blue orb to close"
+  },
+  {
+   "beat": "source",
+   "shot": "Story trailer is letterboxed (818 rows); the Cinematic Launch trailer is full frame (1072 rows); fight and knife beats skipped"
+  }
+ ]
+}
