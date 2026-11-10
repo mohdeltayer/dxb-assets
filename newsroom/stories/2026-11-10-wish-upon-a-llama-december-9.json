@@ -12,7 +12,7 @@
  ],
  "category": "release date",
  "priority": "medium",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://store.steampowered.com/app/2262630/Wish_Upon_A_Llama/",
@@ -81,8 +81,37 @@
  "template": "split",
  "chip": "رسمي",
  "ledger_find": "no Wish Upon a Llama story",
- "versions": [],
- "posts": [],
+ "versions": [
+  {
+   "v": 5,
+   "file": "cards/2026-11/wish-upon-a-llama-december-9-reel-v5.mp4"
+  }
+ ],
+ "posts": {
+  "x": "تصدر Wish Upon a Llama في 9 ديسمبر على PS5 وXbox وSwitch وPC، حسب ناشرتها وايتثورن غيمز (Whitethorn Games): بلدة لاما وأرانب ومركز للتبني."
+ },
  "corrections": [],
- "metrics": {}
+ "metrics": {},
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/wish-upon-a-llama-december-9-reel-v5.mp4",
+  "blob": "b364a937413d72743b1b5e3262703144ad2168ce",
+  "at": "2026-11-10T01:27:51Z",
+  "note": "round 2 fix applied in v5, checked",
+  "checklist": {
+   "job": "jobs/live/wish-upon-a-llama-december-9.json",
+   "sha256": "7b4f2989f5626f3763a3bfd16c82ccd725bf730b69d12bc826f693cb3413d5c4",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-sonnet"
+ },
+ "arabic": {
+  "passes": "arabic-games-film-editor then arabic-grammar-review (self-run): no required edits"
+ },
+ "approved": "go: rolling queue; scheduled in Publer 02:45Z (06:45 Dubai) instagram, x, threads"
 }
