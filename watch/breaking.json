@@ -1,10 +1,41 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T15:10:18Z",
- "seq": 282,
+ "generated_at": "2026-11-10T15:45:42Z",
+ "seq": 283,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 10592,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Grand Theft Auto VI Comes to XBOX One and XBOX Series X|S Through XBOX Cloud Gaming on November 19",
+   "url": "https://news.xbox.com/en-us/2026/11/10/grand-theft-auto-6-comes-to-xbox-cloud-gaming-november-19/",
+   "published": "2026-11-10T15:45Z",
+   "first_seen": "2026-11-10T15:45:15Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 283
+  },
+  {
+   "id": 10591,
+   "source": "PlayStation Blog",
+   "source_kind": "official",
+   "title": "Pre-load Grand Theft Auto VI on PS5 starting today",
+   "url": "https://blog.playstation.com/2026/11/10/pre-load-grand-theft-auto-vi-on-ps5-starting-today/",
+   "published": "2026-11-10T15:41Z",
+   "first_seen": "2026-11-10T15:45:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 283
+  }
+ ],
+ "recent": [
   {
    "id": 10559,
    "source": "PlayStation (YouTube)",
@@ -25,9 +56,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 282
-  }
- ],
- "recent": [
+  },
   {
    "id": 10493,
    "source": "PlayStation (YouTube)",
@@ -661,9 +690,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T15:10:15Z",
+  "last_poll_at": "2026-11-10T15:45:15Z",
   "sources_enabled": 100,
-  "sources_ok": 94,
+  "sources_ok": 92,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 17x)",
