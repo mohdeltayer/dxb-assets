@@ -31356,5 +31356,66 @@
   "min_disk_free_mb": 225418,
   "setup_min": 0.2,
   "story": "steam-store-steam-deck-average-fps"
+ },
+ {
+  "name": "steam-store-steam-deck-average-fps-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-11-10T05:50Z",
+  "stages": {
+   "checks": 5.7,
+   "montage": 20.1,
+   "text": 32.6,
+   "audio": 1.0,
+   "outro": 17.2
+  },
+  "total": 76.7,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-10T05:49Z",
+  "finished_at": "2026-11-10T05:50Z",
+  "render_min": 1.28,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.7,
+   "audio_secs": 23.2,
+   "music_pct": 98.1,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 0
+   },
+   "effects_shots": 0,
+   "mix_secs": 1.1,
+   "secs": 4.8
+  },
+  "lifeless": {
+   "score": 4.8,
+   "still_share": 0.057,
+   "longest_still": 0.5,
+   "cuts_per_10s": 9.33,
+   "held_under_text": 0.01,
+   "secs": 19.3,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 130,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1150,
+  "peak_mem_mb": 2224,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 18601,
+  "peak_disk_mb": 20702,
+  "min_disk_free_mb": 225405,
+  "setup_min": 0.18,
+  "story": "steam-store-steam-deck-average-fps"
  }
 ]
