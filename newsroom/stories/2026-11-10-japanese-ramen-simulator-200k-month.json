@@ -80,16 +80,16 @@
  "metrics": {},
  "director_check": {
   "verdict": "PASS",
-  "out": "cards/2026-11/japanese-ramen-simulator-200k-month-reel-v4.mp4",
-  "blob": "44100c948e561dabb0b653c01cba26782cab5ea3",
-  "at": "2026-11-10T04:22:25Z",
-  "note": "round 2 PASS on v4",
+  "out": "cards/2026-11/japanese-ramen-simulator-200k-month-reel-v5.mp4",
+  "blob": "5af7546939475bc686e1eb6b8a68922e132b9b8f",
+  "at": "2026-11-10T04:41:46Z",
+  "note": "v5 clipcard (trailer cap); card and close PASS",
   "checklist": {
    "job": "jobs/live/japanese-ramen-simulator-200k-month.json",
-   "sha256": "60d638af20edbeef102ce093a495e962260918ffa41487619793cb74efafeb6a",
+   "sha256": "43348b869086eeb40e1e4921e4325db54620feae6d9f4d6572a903d3c0a81c7b",
    "ok": true,
    "problems": [],
-   "template": "trailer",
+   "template": "clipcard",
    "layout": null,
    "evergreen": false,
    "built_by": "production-2"
