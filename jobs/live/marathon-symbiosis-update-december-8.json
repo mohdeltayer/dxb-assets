@@ -11,18 +11,153 @@
    "url": "https://blog.playstation.com/uploads/2048/11/89c4e7e5b2913044a36c11667b03283d0c589e25.mp4"
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "marathon-symbiosis-update-december-8-trailer.mp4",
+   0.0,
+   1.6,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "marathon-symbiosis-update-december-8-trailer.mp4",
+   3.0,
+   2.2,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "marathon-symbiosis-update-december-8-trailer.mp4",
+   5.2,
+   2.6,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "marathon-symbiosis-update-december-8-trailer.mp4",
+   7.8,
+   2.5,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   0,
+   1,
+   [
+    [
+     "يصدر التحديث في 8 ديسمبر",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   3,
+   [
+    [
+     "وضع جديد للعب ضد البيئة\nومباريات Deathmatch التجريبية",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   3,
+   "المصدر: مدونة بلايستيشن (PlayStation Blog)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "تحديث Marathon الجديد\nيضيف وضع PvE",
  "label": "رسمي",
  "source": "مدونة بلايستيشن (PlayStation Blog)",
  "date": "10 Nov 2026",
  "theme": "cold",
- "style": null,
+ "style": "frame",
  "template": "trailer",
  "skin": "house",
  "cut": false,
- "track": "bed",
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "track": [
+  "marathon-symbiosis-update-december-8-trailer.mp4",
+  0.0
+ ],
+ "layout": "showcase",
+ "showcase_reason": "the news is the trailer itself: the Symbiosis update trailer from PlayStation Blog",
+ "strip": [
+  [
+   "الإصدار",
+   "8 ديسمبر"
+  ],
+  [
+   "أسبوع اللعب المفتوح",
+   "من 8 إلى 15 ديسمبر"
+  ]
+ ],
+ "genre": [
+  "shooter",
+  "live service/MMO"
+ ],
+ "sound": null,
+ "pace_ok": false,
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: PlayStation Blog 10 Nov 14:00Z read in full 15:26Z; the Bungie article returned no text and is not used",
+  "SOURCE: not already posted": "yes: ledger find Marathon hits the 7 Oct Symbiosis story and the Alinea correction; this is the 8 Dec date and mode list, new",
+  "SOURCE: age": "yes: first report 10 Nov 14:00Z, under 2 hours at build",
+  "ANGLE before lines": "yes: hook new PvE mode; why now the 8 Dec date; for players Expedition and Deathmatch beta; payoff Open Play Week 8 to 15 Dec in the strip",
+  "STORY TYPE update": "yes: change (Symbiosis update 8 Dec), demonstration (the trailer), effect on play (PvE Expedition, 3v3 Deathmatch beta), limit (strip: Open Play Week dates)",
+  "STORY: spoken paragraph": "yes: يصدر التحديث في 8 ديسمبر، وضع جديد للعب ضد البيئة ومباريات Deathmatch التجريبية",
+  "PICTURE: trailer is the news": "yes: showcase layout, the official clip from PlayStation Blog; only 11.75 s exists, whole stretch used except the ESRB card at 2.2 to 3.0 s and the smear at 10.4 s",
+  "SOUND": "trailer's own sound, audio split applies; speech check by the server",
+  "CREDIT": "yes: credit on all four shots"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "0.0 to 1.6 s Expedition title and first scene",
+   "alternatives": "none: only one official clip of the update exists (PS Blog 1080p 11.75 s; Steam has only older trailers)",
+   "crop": "showcase, full frame",
+   "music": "trailer"
+  },
+  {
+   "beat": "1 date",
+   "shot": "3.0 to 5.2 s",
+   "alternatives": "skipped 2.2 to 3.0 s (ESRB rating card)",
+   "crop": "showcase",
+   "music": "trailer"
+  },
+  {
+   "beat": "2 modes",
+   "shot": "5.2 to 7.8 s and 7.8 to 10.3 s",
+   "alternatives": "stopped before the smear flag at 10.38 s",
+   "crop": "showcase",
+   "music": "trailer"
+  }
+ ],
+ "note": "Marathon Symbiosis update, 8 Dec. Source: PlayStation Blog official MP4 (1920x1080, 11.75 s, decode clean). Trailer news so showcase layout, no crop. Our bed not used. Gap rule over caps: trailer 4 and split 5 on the Dubai day, gap 154 min vs 60; open question q-20261108-gap-vs-cap."
 }
