@@ -33301,5 +33301,109 @@
   "story": "dragon-quest-rpg-cursed-tree-chosen-isle-closed-beta-november-23",
   "job_sha": "8360668081dfd83a93bd82a511815ff0ff571200",
   "dispatches": 3
+ },
+ {
+  "name": "dragon-quest-rpg-cursed-tree-chosen-isle-closed-beta-november-23-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-10T17:36Z",
+  "stages": {
+   "checks": 3.3,
+   "montage": 20.8,
+   "text": 22.2,
+   "audio": 0.9,
+   "outro": 13.0
+  },
+  "total": 60.3,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-10T17:35Z",
+  "finished_at": "2026-11-10T17:36Z",
+  "render_min": 1.0,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "dragon-quest-rpg-cursed-tree-chosen-isle-open-trailer.mp4",
+    "start": 2.85,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 12.52,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "dragon-quest-rpg-cursed-tree-chosen-isle-open-trailer.mp4",
+    "start": 5.45,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 12.52,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "dragon-quest-rpg-cursed-tree-chosen-isle-open-trailer.mp4",
+    "start": 8.05,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 12.52,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "dragon-quest-rpg-cursed-tree-chosen-isle-open-trailer.mp4",
+    "start": 16.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 12.52,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 7.3,
+   "still_share": 0.084,
+   "longest_still": 0.6,
+   "cuts_per_10s": 2.8,
+   "held_under_text": 0.065,
+   "secs": 10.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 103,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1189,
+  "peak_mem_mb": 2310,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 20025,
+  "peak_disk_mb": 21802,
+  "min_disk_free_mb": 224304,
+  "setup_min": 0.15,
+  "story": "dragon-quest-rpg-cursed-tree-chosen-isle-closed-beta-november-23",
+  "job_sha": "8402c6f79a5ec75849ed4bcb249b581a216a762a",
+  "dispatches": 4
  }
 ]
