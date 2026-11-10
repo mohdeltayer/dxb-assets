@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T15:55:19Z",
- "seq": 285,
+ "generated_at": "2026-11-10T16:15:32Z",
+ "seq": 286,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 10635,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "TMNT: Splintered Fate - Shell Squad Co-op Update Trailer | PS5 & PS4 Games",
+   "url": "https://www.youtube.com/watch?v=n0BRuZI6OJE",
+   "published": "2026-11-10T16:00Z",
+   "first_seen": "2026-11-10T16:15:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/n0BRuZI6OJE/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=n0BRuZI6OJE"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 286
+  }
+ ],
+ "recent": [
   {
    "id": 10611,
    "source": "PlayStation (YouTube)",
@@ -25,9 +48,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 285
-  }
- ],
- "recent": [
+  },
   {
    "id": 10592,
    "source": "Xbox Wire",
@@ -670,53 +691,16 @@
    ],
    "breaking_source": true,
    "breaking_seq": 236
-  },
-  {
-   "id": 9564,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "FragPunk Reveals Farlands: New Delivery PvPvE Adventure Now Available in Early Access",
-   "url": "https://news.xbox.com/en-us/2026/11/09/fragpunk-farlands-early-access/",
-   "published": "2026-11-09T16:00Z",
-   "first_seen": "2026-11-09T16:00:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/HighresScreenshot_2026.10.23-18.54.20-fac883fc0e2ba59ade98-scaled.png"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Solo-on-Boss-0175b319686eb3d884a4.png"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/On-Snow5-2.mp4.00_00_03_064.Still001-29b7abc154a644b05368.png"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Vehicle-Station-Upgrade-f045f70d56e9a09be2c7.png"
-    },
-    {
-     "type": "image",
-     "url": "https://store-images.s-microsoft.com/image/apps.25465.13848987134544813.b9397189-e630-434e-b4ea-da4764f01b90.c8470771-5d33-4194-9c26-0745775b3361?w=400&h=600"
-    },
-    {
-     "type": "image",
-     "url": "https://assets.onestore.ms/cdnfiles/sfw-service-web-onestore-onerf-2017-11-8-12/store/common/images/xpalogo_black.png"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 234
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T15:55:15Z",
+  "last_poll_at": "2026-11-10T16:15:15Z",
   "sources_enabled": 100,
-  "sources_ok": 92,
+  "sources_ok": 94,
   "sources_failing": 6,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 17x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 18x)",
    "Nintendo of America (X) (HTTP 429, 58x)",
    "PlayStation (X) (HTTP 429, 75x)",
    "PlayStation Middle East (X) (HTTP 429, 5x)",
