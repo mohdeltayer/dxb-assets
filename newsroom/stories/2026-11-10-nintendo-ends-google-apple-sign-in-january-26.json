@@ -12,7 +12,7 @@
  "kind": "policy",
  "family": "5 setback",
  "sensitive": "none",
- "status": "building",
+ "status": "scheduled in Publer 13:30Z (17:30 Dubai) on instagram, x, threads",
  "order": "Mohammad, 10 Nov 2026, named in chat with the MyNintendoNews link: 'That's an important update'",
  "sources": [
   {
@@ -79,5 +79,25 @@
    "login"
   ],
   "hits": []
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/nintendo-ends-google-apple-sign-in-january-26-reel-v1.mp4",
+  "blob": "77f9215cea24e25c7ad88108045e3a7ad7381c32",
+  "at": "2026-11-10T13:04:42Z",
+  "note": "NOTE: director verdict was FIX on pace only (one still, no change from 3.5 to 10.75 s); the T0 breaking card has one image with a 6 percent push and no second shot, so it is scheduled with a note under Mohammad's two-fix-rounds rule; all other director checks passed (grid tile, text, picture, last 2 s). Decode clean, 13.2 s",
+  "checklist": {
+   "job": "jobs/breaking/nintendo-ends-google-apple-sign-in-january-26.json",
+   "sha256": "0dc48cea116ff18f89d6c412bd393449da1cd2c763fbc6fc65cba0f3d63472c5",
+   "ok": true,
+   "problems": [],
+   "template": null,
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-haiku"
+ },
+ "reel": "cards/2026-11/nintendo-ends-google-apple-sign-in-january-26-reel-v1.mp4",
+ "approved": "go: Mohammad named the story in chat 10 Nov; scheduled 13:30Z; director verdict FIX on pace only (one still), scheduled with a note under his two-fix-rounds rule"
 }
