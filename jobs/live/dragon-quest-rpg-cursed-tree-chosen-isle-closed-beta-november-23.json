@@ -1,0 +1,115 @@
+{
+ "name": "dragon-quest-rpg-cursed-tree-chosen-isle-closed-beta-november-23",
+ "story": "2026-11-09-dragon-quest-rpg-cursed-tree-chosen-isle",
+ "kind_news": "beta",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/dragon-quest-rpg-cursed-tree-chosen-isle-closed-beta-november-23-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "dragon-quest-rpg-cursed-tree-chosen-isle-open-trailer.mp4",
+   "url": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/live/2026-11-10/dq-cursed-tree-chosen-isle-trailer-open.mp4"
+  }
+ ],
+ "shots": [
+  [
+   "dragon-quest-rpg-cursed-tree-chosen-isle-open-trailer.mp4",
+   0.0,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "لعبة Dragon Quest جديدة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   3,
+   [
+    [
+     "قتال بالأدوار مع فريق الحلفاء\nوبناء قاعدة مع تقدم الرحلة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   3,
+   "المصدر: سكوير (Square Enix)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "لعبة Dragon Quest\nالتسجيل للاختبار مفتوح",
+ "label": "رسمي",
+ "source": "سكوير (Square Enix)",
+ "date": "10 Nov 2026",
+ "theme": "stylized",
+ "style": "glow",
+ "template": "split",
+ "skin": "house",
+ "cut": false,
+ "track": "bed",
+ "strip": [
+  [
+   "الاختبار المغلق",
+   "حتى 23 نوفمبر"
+  ],
+  [
+   "المنصات",
+   "iOS · Android"
+  ]
+ ],
+ "genre": [
+  "RPG",
+  "mobile"
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: the official announcement trailer itself (supplied by Mohammad, 141.6 s, read by a helper at 3 s intervals; closing card at 132 s: Closed Beta, Apply Now, deadline 23 Nov 2026 14:59 UTC, iOS and Android); announcement by the official @DQRPG_JP account 9 Nov (Gamebiz, Famitsu, 4Gamer, Gematsu)",
+  "SOURCE: not already posted": "yes: ledger find: only the 9 Nov story file, status building, never posted",
+  "SOURCE: age": "yes: announced 9 Nov, trailer premiered 10 Nov 15:00 Dubai, under 24 h",
+  "ANGLE before lines": "yes: hook a new Dragon Quest for phones opens closed-beta sign-up; why now the trailer premiered today and the deadline is 23 Nov; for players turn-based party battles and a home base; payoff release date and price still open (strip)",
+  "STORY TYPE beta": "yes: what it is (lines), platforms and deadline (strip), no date or price stated",
+  "STORY: spoken paragraph": "yes: لعبة Dragon Quest جديدة، قتال بالأدوار مع فريق الحلفاء وبناء قاعدة مع تقدم الرحلة",
+  "PICTURE: one continuous stretch": "yes: trailer cut 6.51 to 16.6 s (source 106.5 to 116.6 s), shot picker clean, no text, cinematic",
+  "CREDIT": "yes: all shots"
+ },
+ "decision_log": [
+  {
+   "beat": "0 to 3 hook",
+   "shot": "cut 6.51 to 9.5 s (source 106.5 s)",
+   "alternatives": "0 to 6.5 s of the cut carries burnt-in subtitles and menu UI, the closing card is text only",
+   "crop": "picker focus 0.617",
+   "music": "trailer"
+  },
+  {
+   "beat": "3 to 10 what it is",
+   "shot": "cut 9.11 to 16.6 s",
+   "alternatives": "16.6 s onward carries text",
+   "crop": "picker focus 0.617, 0.483",
+   "music": "trailer"
+  }
+ ],
+ "note": "Dragon Quest RPG: The Cursed Tree and the Chosen Isle, closed beta sign-up to 23 Nov. Mohammad's named story (message 10 Nov), official trailer file supplied by him from Google Drive, cut to 41.5 s and committed under live/2026-11-10/. Gap rule over caps (split and trailer full)."
+}
