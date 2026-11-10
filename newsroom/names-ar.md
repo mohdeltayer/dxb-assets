@@ -213,3 +213,5 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | أرقام <Company> الرسمية: ... | a company's own figures (numbers bank) | Approved 10 Nov (build; Mohammad may strike) |
 | في مثل هذا اليوم من عام <YYYY> صدرت <Game> | an anniversary on its day | In use (retro chip) |
 
+
+| Nitrome | نايتروم | Proposed 10 Nov 2026 (Production 2; grammar stage accepted the transliteration) |

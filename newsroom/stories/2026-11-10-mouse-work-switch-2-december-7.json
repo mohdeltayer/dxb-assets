@@ -11,7 +11,7 @@
  ],
  "category": "release date",
  "priority": "medium",
- "status": "building",
+ "status": "scheduled",
  "order": "Mohammad: build Mouse Work on official art, developer Nitrome, publisher left out",
  "sources": [
   {
@@ -80,8 +80,33 @@
  "template": "stills",
  "chip": "رسمي",
  "ledger_find": "no Mouse Work story",
- "versions": [],
+ "versions": [
+  {
+   "v": 3,
+   "file": "cards/2026-11/mouse-work-dec7-final-reel-v1.mp4",
+   "director": "pass with a note (round 2)"
+  }
+ ],
  "posts": [],
  "corrections": [],
- "metrics": {}
+ "metrics": {},
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/mouse-work-dec7-final-reel-v1.mp4",
+  "blob": "454e89ec7887d9756336a3f6821159d6b84fd7b1",
+  "at": "2026-11-10T09:34:26Z",
+  "note": "round 2 pass with a note: line 1 sits on the climbing screenshot whose top shows an anvil; the barber image runs two crops (4.7 s read as one hold); first round was my own mislabelled images, fixed",
+  "checklist": {
+   "job": "jobs/live/mouse-work-dec7-final.json",
+   "sha256": "2beb0faf63771a2b8d67f24d809e3039ed52213817f35d0020414ee42a25581b",
+   "ok": true,
+   "problems": [],
+   "template": "stills",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-haiku"
+ },
+ "approved": "go: Mohammad order; scheduled in Publer 10:00Z (14:00 Dubai) IG, X, Threads; route: official stills from the Nintendo Store Japan listing"
 }
