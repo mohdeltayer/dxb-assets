@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T10:52:05Z",
- "seq": 271,
+ "generated_at": "2026-11-10T11:15:09Z",
+ "seq": 272,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 10325,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Aeterna Lucis - Lore Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=OuklilOy5hk",
+   "published": "2026-11-10T11:00Z",
+   "first_seen": "2026-11-10T11:15:05Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/OuklilOy5hk/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=OuklilOy5hk"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 272
+  }
+ ],
  "recent": [
   {
    "id": 10268,
@@ -534,9 +556,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T10:50:05Z",
+  "last_poll_at": "2026-11-10T11:15:05Z",
   "sources_enabled": 100,
-  "sources_ok": 94,
+  "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 15x)",
