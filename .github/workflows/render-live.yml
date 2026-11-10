@@ -25,7 +25,7 @@ on:
   workflow_dispatch:
     inputs:
       job:
-        description: 'Job file under jobs/live/ on main (jobs/live/<name>.json)'
+        description: 'Job name, or jobs/live/<name>.json, on main'
         required: true
 
 jobs:
@@ -38,14 +38,14 @@ jobs:
       group: render-live-${{ inputs.job }}
       cancel-in-progress: false
     env:
-      JOB: ${{ inputs.job }}
+      JOB_INPUT: ${{ inputs.job }}
     steps:
       - name: Guard (this repository, main, a dispatch, a file under jobs/live/)
         run: |
           [ "${{ github.repository }}" = "mohdeltayer/dxb-assets" ] || { echo "wrong repository"; exit 1; }
           [ "${{ github.ref }}" = "refs/heads/main" ] || { echo "not main"; exit 1; }
           [ "${{ github.event_name }}" = "workflow_dispatch" ] || { echo "event not allowed"; exit 1; }
-          printf '%s' "$JOB" | grep -Eq '^jobs/live/[A-Za-z0-9._-]+\.json$' || { echo "job must be jobs/live/<name>.json"; exit 1; }
+          printf '%s' "$JOB_INPUT" | grep -Eq '^(jobs/live/)?[A-Za-z0-9][A-Za-z0-9._-]*$' || { echo "job must be a name or jobs/live/<name>.json"; exit 1; }
 
       - uses: actions/checkout@v5
         with:
@@ -56,6 +56,12 @@ jobs:
             jobs
             newsroom/stories
           clean: true
+
+      - name: Job (a name or a path, adv-20261110-one-render-per-reel B)
+        run: |
+          j=$(python3 templates/jobpath.py live "$JOB_INPUT") || exit 1
+          echo "JOB=$j" >> "$GITHUB_ENV"; echo "job: $j"
+          echo "JOB_SHA=$(git hash-object "$j")" >> "$GITHUB_ENV"
 
       - name: Server
         env:
@@ -159,6 +165,7 @@ jobs:
           python templates/runner_stats.py start "$stats" || true
           trap 'python templates/runner_stats.py stop "$stats" || true' EXIT
           export LOOK_ENTRY="$RUNNER_TEMP/look.json"    # theme and style of the Reel, for the look ledger (no three in a row)
+          python templates/jobsha.py check "$(basename "$JOB" .json)" "$JOB_SHA"
           python templates/render_job.py run "$JOB"
           echo "RENDER_SECS=$(( $(date +%s) - start ))" >> "$GITHUB_ENV"
           # keep this run's render-times entry; the commit step rebuilds on the latest main
@@ -182,11 +189,12 @@ jobs:
             git fetch -q --depth=1 --filter=blob:none origin "$GITHUB_REF_NAME"
             git reset -q --hard "origin/$GITHUB_REF_NAME"
             cp -r "$RUNNER_TEMP/out/." .
-            python -c "import json; p = 'templates/assets/render-times.json'; d = json.load(open(p)); e = json.load(open('$RUNNER_TEMP/render-time.json')); e['job_secs'] = $RENDER_SECS; e['setup_min'] = round($SETUP_SECS / 60, 2); e['story'] = '$(basename "$JOB" .json)'; d.append(e); json.dump(d, open(p, 'w'), indent=1, ensure_ascii=False)"
+            DISPATCHES=$(python templates/jobsha.py count "$(basename "$JOB" .json)")
+            python -c "import json; p = 'templates/assets/render-times.json'; d = json.load(open(p)); e = json.load(open('$RUNNER_TEMP/render-time.json')); e['job_secs'] = $RENDER_SECS; e['setup_min'] = round($SETUP_SECS / 60, 2); e['story'] = '$(basename "$JOB" .json)'; e['job_sha'] = '$JOB_SHA'; e['dispatches'] = $DISPATCHES; d.append(e); json.dump(d, open(p, 'w'), indent=1, ensure_ascii=False)"
             looks=""; if [ -f "$RUNNER_TEMP/look.json" ]; then python templates/looks.py add "$RUNNER_TEMP/look.json" && looks=templates/assets/look-ledger.json; fi
             git add --sparse -f $files templates/assets/render-times.json $looks
             if [ -f "$JOB" ]; then git rm -q "$JOB"; fi
-            git commit -q -m "Render $(basename "$JOB" .json) on the dxb-render server ($RENDER_SECS s, $(nproc) cores)"
+            git commit -q -m "Render $(basename "$JOB" .json) on the dxb-render server ($RENDER_SECS s, $(nproc) cores, job ${JOB_SHA:0:8}, dispatch $DISPATCHES)"
             if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
             sleep $(( i * 5 ))
           done

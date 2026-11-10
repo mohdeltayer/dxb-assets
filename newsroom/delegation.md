@@ -53,6 +53,13 @@ lists (Mohammad, 17 Oct 2026).
 
 **Separate director (release 2026-11-10).** The director is never the session that built the Reel: the job names its builder (`"built_by"`) and the PASS is recorded with `presubmit.py director <story> PASS <out> --job <job> --by <director>`, which refuses a PASS signed by the builder. A building session spawns the director as its own agent and quotes its verdict; it never writes PASS itself.
 
+**Director, graphic content and finality (adv-20261110-one-render-per-reel, item F, Mohammad 10 Nov 2026).** The
+no-gore rule (12 Oct) covers realistic blood, wounds, dismemberment and finishing kills only. Pixel-art, cartoon and
+stylised hit effects (red splats, sparks, damage numbers, flashes) are not blood or gore and are never a reason to cut
+a stretch. A director PASS is final: the builder schedules it and adds no checks of its own afterwards; anything the
+builder doubts goes back to the director as a question before the PASS, never as a re-cut after it. (On 10 Nov
+Warhammer Survivors' pixel-art red splats were cut as blood after a PASS, which cost two renders.)
+
 **Director (advisor, 21 Oct 2026; model by tier from 25 Oct, Phase 1 step 4).** Model: sonnet for routine
 and evergreen Reels; opus for fresh reveals, anything with speech (voiced or subtitled), debates and the
 first Reel of a new format or template. The story file records it as `"director_model"`, so the week's

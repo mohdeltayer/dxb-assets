@@ -29,12 +29,16 @@ on:
   workflow_dispatch:
     inputs:
       job:
-        description: 'Job file: jobs/prerender/<name>.json (or jobs/render, jobs/live)'
+        description: 'Job name, or a path: jobs/prerender/<name>.json (or jobs/render, jobs/live, jobs/breaking, jobs/test)'
         required: true
       ref:
         description: 'Branch or commit that holds the job file (default: main). Only the file is read from it.'
         required: false
         default: ''
+      mode:
+        description: 'text: the text check alone (every error in one pass, 10 to 20 s, no footage); shots: text check and the clean stretches of every footage file (shots.json); full: text and footage checks'
+        required: false
+        default: 'full'
       wait:
         description: 'Seconds to wait for the server before the GitHub-hosted fallback runs'
         required: false
@@ -56,10 +60,11 @@ jobs:
     env:
       JOB: ${{ inputs.job }}
       REF: ${{ inputs.ref }}
+      MODE: ${{ inputs.mode }}
     steps:
       - name: Guard (this repository, main, a dispatch, a job file path, a plain ref)
         run: |
-          printf '%s' "$JOB" | grep -Eq '^jobs/(render|live|prerender|test)/[A-Za-z0-9._-]+\.json$' || { echo "job must be jobs/(render|live|prerender|test)/<name>.json"; exit 1; }
+          printf '%s' "$JOB" | grep -Eq '^(jobs/(render|live|prerender|test|breaking)/)?[A-Za-z0-9][A-Za-z0-9._-]*$' || { echo "job must be a name or jobs/(render|live|prerender|test|breaking)/<name>.json"; exit 1; }
           [ -z "$REF" ] || printf '%s' "$REF" | grep -Eq '^[A-Za-z0-9._][A-Za-z0-9._/-]{0,99}$' || { echo "ref must be a plain branch or commit"; exit 1; }
       - uses: actions/checkout@v5
         with:
@@ -85,10 +90,11 @@ jobs:
     env:
       JOB: ${{ inputs.job }}
       REF: ${{ inputs.ref }}
+      MODE: ${{ inputs.mode }}
     steps:
       - name: Guard (a job file path, a plain ref)
         run: |
-          printf '%s' "$JOB" | grep -Eq '^jobs/(render|live|prerender|test)/[A-Za-z0-9._-]+\.json$' || { echo "job must be jobs/(render|live|prerender|test)/<name>.json"; exit 1; }
+          printf '%s' "$JOB" | grep -Eq '^(jobs/(render|live|prerender|test|breaking)/)?[A-Za-z0-9][A-Za-z0-9._-]*$' || { echo "job must be a name or jobs/(render|live|prerender|test|breaking)/<name>.json"; exit 1; }
           [ -z "$REF" ] || printf '%s' "$REF" | grep -Eq '^[A-Za-z0-9._][A-Za-z0-9._/-]{0,99}$' || { echo "ref must be a plain branch or commit"; exit 1; }
 
       - uses: actions/checkout@v5
@@ -133,8 +139,21 @@ jobs:
         if: steps.yield.outputs.skip != '1'
         run: |
           git fetch -q --depth=1 --filter=blob:none origin "${REF:-main}"
-          git show "FETCH_HEAD:$JOB" > "$RUNNER_TEMP/job/$(basename "$JOB")"
-          echo "PRERENDER_JOB=$RUNNER_TEMP/job/$(basename "$JOB")" >> "$GITHUB_ENV"
+          # a bare name is looked up in the job folders of the ref (adv-20261110-one-render-per-reel B)
+          case "$JOB" in
+            jobs/*) path="$JOB";;
+            *) n="${JOB%.json}"; path=""
+               for d in prerender live render breaking test; do
+                 if git cat-file -e "FETCH_HEAD:jobs/$d/$n.json" 2>/dev/null; then
+                   [ -z "$path" ] || { echo "$n is in more than one job folder; give the path"; exit 1; }
+                   path="jobs/$d/$n.json"
+                 fi
+               done
+               [ -n "$path" ] || { echo "no job named $n on ${REF:-main}"; exit 1; };;
+          esac
+          echo "job: $path"
+          git show "FETCH_HEAD:$path" > "$RUNNER_TEMP/job/$(basename "$path")"
+          echo "PRERENDER_JOB=$RUNNER_TEMP/job/$(basename "$path")" >> "$GITHUB_ENV"
 
       - name: Fonts (temp folder, outside the workspace)
         if: steps.yield.outputs.skip != '1'
@@ -154,10 +173,19 @@ jobs:
         timeout-minutes: 15
         run: |
           rc=0
-          if [ -f "$DUBAI_FONTS/Dubai-Bold.ttf" ]; then
-            python templates/render_job.py text "$PRERENDER_JOB" || { echo "TEXT CHECK FAILED (above)"; rc=1; }
-          else
-            echo "no Dubai font here: the text check is skipped (the render still runs it)"
+          # every text error in one pass, as JSON in the summary and the log (adv-20261110-one-render-per-reel A);
+          # without the Dubai font it runs the font-free rules and says the drawn checks were not run
+          python templates/render_job.py text "$PRERENDER_JOB" --json "$RUNNER_TEMP/text.json" || { echo "TEXT CHECK FAILED (above)"; rc=1; }
+          if [ -f "$RUNNER_TEMP/text.json" ]; then
+            { echo "### Text check"; echo '```json'; cat "$RUNNER_TEMP/text.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ "$MODE" = "text" ]; then echo "mode text: footage not read"; exit $rc; fi
+          if [ "$MODE" = "shots" ]; then   # clean stretches of every footage file (adv-20261110-one-render-per-reel C)
+            python templates/shotpick.py job "$PRERENDER_JOB" --out "$RUNNER_TEMP/shots.json" || rc=1
+            if [ -f "$RUNNER_TEMP/shots.json" ]; then
+              { echo "### Clean stretches (shots.json)"; echo '```json'; cat "$RUNNER_TEMP/shots.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+            fi
+            exit $rc
           fi
           python templates/prerender.py "$PRERENDER_JOB" --ci || rc=1
           exit $rc
@@ -175,6 +203,7 @@ jobs:
     env:
       JOB: ${{ inputs.job }}
       REF: ${{ inputs.ref }}
+      MODE: ${{ inputs.mode }}
     steps:
       - uses: actions/checkout@v5
         with:
@@ -191,8 +220,21 @@ jobs:
           mkdir -p "$RUNNER_TEMP/job" "$RUNNER_TEMP/uploads"
           echo "DXB_UPLOADS=$RUNNER_TEMP/uploads" >> "$GITHUB_ENV"
           git fetch -q --depth=1 --filter=blob:none origin "${REF:-main}"
-          git show "FETCH_HEAD:$JOB" > "$RUNNER_TEMP/job/$(basename "$JOB")"
-          echo "PRERENDER_JOB=$RUNNER_TEMP/job/$(basename "$JOB")" >> "$GITHUB_ENV"
+          # a bare name is looked up in the job folders of the ref (adv-20261110-one-render-per-reel B)
+          case "$JOB" in
+            jobs/*) path="$JOB";;
+            *) n="${JOB%.json}"; path=""
+               for d in prerender live render breaking test; do
+                 if git cat-file -e "FETCH_HEAD:jobs/$d/$n.json" 2>/dev/null; then
+                   [ -z "$path" ] || { echo "$n is in more than one job folder; give the path"; exit 1; }
+                   path="jobs/$d/$n.json"
+                 fi
+               done
+               [ -n "$path" ] || { echo "no job named $n on ${REF:-main}"; exit 1; };;
+          esac
+          echo "job: $path"
+          git show "FETCH_HEAD:$path" > "$RUNNER_TEMP/job/$(basename "$path")"
+          echo "PRERENDER_JOB=$RUNNER_TEMP/job/$(basename "$path")" >> "$GITHUB_ENV"
 
       - name: Fonts (temp folder, outside the workspace)
         continue-on-error: true
@@ -226,10 +268,19 @@ jobs:
         timeout-minutes: 15
         run: |
           rc=0
-          if [ -f "$DUBAI_FONTS/Dubai-Bold.ttf" ]; then
-            python templates/render_job.py text "$PRERENDER_JOB" || { echo "TEXT CHECK FAILED (above)"; rc=1; }
-          else
-            echo "no Dubai font here: the text check is skipped (the render still runs it)"
+          # every text error in one pass, as JSON in the summary and the log (adv-20261110-one-render-per-reel A);
+          # without the Dubai font it runs the font-free rules and says the drawn checks were not run
+          python templates/render_job.py text "$PRERENDER_JOB" --json "$RUNNER_TEMP/text.json" || { echo "TEXT CHECK FAILED (above)"; rc=1; }
+          if [ -f "$RUNNER_TEMP/text.json" ]; then
+            { echo "### Text check"; echo '```json'; cat "$RUNNER_TEMP/text.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ "$MODE" = "text" ]; then echo "mode text: footage not read"; exit $rc; fi
+          if [ "$MODE" = "shots" ]; then   # clean stretches of every footage file (adv-20261110-one-render-per-reel C)
+            python templates/shotpick.py job "$PRERENDER_JOB" --out "$RUNNER_TEMP/shots.json" || rc=1
+            if [ -f "$RUNNER_TEMP/shots.json" ]; then
+              { echo "### Clean stretches (shots.json)"; echo '```json'; cat "$RUNNER_TEMP/shots.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+            fi
+            exit $rc
           fi
           python templates/prerender.py "$PRERENDER_JOB" --ci || rc=1
           exit $rc
