@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T08:52:06Z",
- "seq": 265,
+ "generated_at": "2026-11-10T09:52:08Z",
+ "seq": 266,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -434,7 +434,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T08:50:05Z",
+  "last_poll_at": "2026-11-10T09:50:15Z",
   "sources_enabled": 100,
   "sources_ok": 90,
   "sources_failing": 9,
