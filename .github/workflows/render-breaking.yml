@@ -41,24 +41,37 @@ jobs:
     timeout-minutes: 3
     outputs:
       lane: ${{ steps.lane.outputs.lane }}
+      job: ${{ steps.job.outputs.job }}
     steps:
       - name: Guard (this repository, main, a dispatch, a file under jobs/breaking/ or jobs/test/)
         env:
           JOB: ${{ inputs.job }}
         run: |
-          printf '%s' "$JOB" | grep -Eq '^jobs/(breaking|test)/[A-Za-z0-9._-]+\.json$' || { echo "job must be jobs/breaking/<name>.json or jobs/test/<name>.json"; exit 1; }
+          printf '%s' "$JOB" | grep -Eq '^(jobs/(breaking|test)/)?[A-Za-z0-9][A-Za-z0-9._-]*$' || { echo "job must be a name, jobs/breaking/<name>.json or jobs/test/<name>.json"; exit 1; }
       - uses: actions/checkout@v5
         with:
           fetch-depth: 1
           sparse-checkout: |
             templates/render_route.py
             jobs
+      - name: Job (a name or a path, adv-20261110-one-render-per-reel B)
+        id: job
+        env:
+          JOB: ${{ inputs.job }}
+        run: |
+          case "$JOB" in
+            jobs/*) j="$JOB";;
+            *) n="${JOB%.json}"; j=""
+               for d in breaking test; do [ -f "jobs/$d/$n.json" ] && { [ -z "$j" ] || { echo "$n is in both folders; give the path"; exit 1; }; j="jobs/$d/$n.json"; }; done
+               [ -n "$j" ] || { echo "no job named $n in jobs/breaking or jobs/test on main"; exit 1; };;
+          esac
+          echo "job=$j" >> "$GITHUB_OUTPUT"; echo "job: $j"
       - name: Is the server free?
         id: lane
         env:
           GH_TOKEN: ${{ github.token }}
           LANE_INPUT: ${{ inputs.lane }}
-          JOB: ${{ inputs.job }}
+          JOB: ${{ steps.job.outputs.job }}
         run: |
           test -f "$JOB" || { echo "$JOB is not on main"; exit 1; }
           python3 templates/render_route.py busy
@@ -87,7 +100,7 @@ jobs:
       - uses: ./.github/actions/t0-render
         if: steps.claim.outputs.go == 'true'
         with:
-          job: ${{ inputs.job }}
+          job: ${{ needs.route.outputs.job }}
           lane: server
           fonts_token: ${{ secrets.FONTS_TOKEN }}
           publer_key: ${{ secrets.PUBLER_MEDIA_KEY }}
@@ -121,7 +134,7 @@ jobs:
       - uses: ./.github/actions/t0-render
         if: steps.standby.outputs.go == 'true'
         with:
-          job: ${{ inputs.job }}
+          job: ${{ needs.route.outputs.job }}
           lane: hosted
           fonts_token: ${{ secrets.FONTS_TOKEN }}
           publer_key: ${{ secrets.PUBLER_MEDIA_KEY }}

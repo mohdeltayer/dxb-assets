@@ -3530,3 +3530,26 @@ Nintendo Everything to verify."
    refuses a rejected handoff, a no_source with a primary or credible link in hand, without `searched` or without the
    editor's confirmation, and a carried lead without `waiting_for`; the desk audit and the work order flag the phrases
    above (Production 2 line 9 in `ops/production-setup.md`).
+
+## One render per Reel (adv-20261110-one-render-per-reel, Mohammad 10 Nov 2026; release 2026-11-10 r5)
+
+Case: Warhammer Survivors took seven dispatches (10 Nov, 15:40 to 16:35 Dubai): a job path refused, three text errors
+found one per server run (headline too long, «وPS5», «10%»), shots on the trailer's burnt-in text, a smear flag on our own
+card, pixel-art splats cut as blood after a director PASS, and an older job version restored by hand.
+A. Every text error in one pass: `templates/textrules.py <job>` (no font; runs in the session in under a second: glued
+   prefix, flipping %/+ sign, Latin-first line, line count, reading time, headline length as an estimate) and
+   `render_job.py text <job> [--json out]` (the same rules, then every drawn piece with the Dubai font, all failures
+   listed, `TEXTCHECK_JSON:` in the log). `prerender.yml` with `mode: text` runs it on the server in 10 to 20 s with no
+   footage; the render runs the same function, so it refuses nothing the prerender passed.
+B. Every render and prerender dispatch takes a bare job name or a path (`templates/jobpath.py`).
+C. `prerender.yml` with `mode: shots` (`templates/shotpick.py`): the clean stretches of every footage file (no black,
+   frozen, smear, end card, text in the 9:16 window or cut text, no unframeable profile face), in source order, with
+   focus, as shots.json in the summary and `SHOTS_JSON:` in the log. Shots come from it, not from frames viewed by eye.
+D. `templates/t0make.py <kind> <name> --story --source --trailer [--shots shots.json]`: a job valid in shape for the
+   template formats.pick returns, card shot, ground and credits included; the session fills only the TODO texts.
+E. Our own -gfx- cards and 1 s either side are exempt from the smear flag on the finished Reel (decode errors never).
+F. Director: pixel-art and stylised hit effects are not blood or gore; a director PASS is final (newsroom/delegation.md).
+G. Every server render records the job's blob sha (`job_sha`) and `dispatches` in render-times.json and in its commit
+   message; a job that is an older version than the last one rendered is refused (`templates/jobsha.py`).
+Measure: `dispatches` per Reel, target 1; the work order raises a `dispatches` alarm at 3 (keeper reads
+render-times.json). H (server QC verdict) and I (parallel runners) follow as their own release and report.

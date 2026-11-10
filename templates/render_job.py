@@ -336,6 +336,26 @@ def _starts(job):
         reel.X = keep
 
 
+GFX_SMEAR_PAD = 1.0          # seconds either side of our own card: its crossfade, and the smear flag reads 1 s windows
+
+
+def gfx_spans(job):
+    """[(t0, t1, reason)] in Reel time for each of our own -gfx- cards and its crossfades (adv-20261110-one-render-per-
+    reel, item E). The smear check reads long straight edges; our pixel-art and price cards are made of them, so the flag
+    on the Warhammer Survivors card crossfade (12.0 to 12.7 s) was waived by hand. These spans are exempt from the
+    smear flag on the finished Reel; decode errors are never exempt."""
+    try:
+        st, _end = _starts(job)
+    except Exception:                            # noqa: BLE001
+        return []
+    out = []
+    for i, sh in enumerate(job.get('shots') or []):
+        if i < len(st) and str(sh[0]).endswith('.png') and '-gfx-' in str(sh[0]):
+            out.append((round(max(0.0, st[i] - GFX_SMEAR_PAD), 2), round(st[i] + float(sh[2]) + GFX_SMEAR_PAD, 2),
+                        'our own card and its crossfade'))
+    return out
+
+
 def showcase_of(job):
     """The showcase reason of a job with "layout": "showcase" (reel.showcase_reason stops a missing or bare one), else
     None. Any other layout value stops: there is one."""
@@ -497,61 +517,97 @@ def speech_check(job, end):
     print(f'speech check: {f} from {start} s for {end:.1f} s, speech: ' + ('inside speech_ok only' if heard else 'none'), flush=True)
 
 
-def textcheck(job):
+def textcheck(job, collect=None):
     """Headline, lines, strip and credits drawn alone, so a line that wraps onto a Latin word or
-    leaves the safe zone stops in seconds (needs the Dubai font: the runner runs it first)."""
+    leaves the safe zone stops in seconds (needs the Dubai font: the runner runs it first).
+    Every error in one pass (adv-20261110-one-render-per-reel, item A): the font-free rules (textrules.py) first, then
+    each drawn piece on its own, each failure added to the list instead of stopping at the first. Raises ValueError with
+    all of them, or, with `collect` (a list), appends them there and returns."""
     if job.get('kind') == 'famitsu':           # sales_full draws its own rows; nothing to pre-check here
         return
     if job.get('kind') == 'breaking':
         return BK.textcheck(job)
     import tempfile
+    import textrules as TR
+    errs = [] if collect is None else collect
+    for f in TR.hard(TR.check(job)):
+        errs.append({'where': f['where'], 'rule': f['rule'], 'text': f['text'], 'fix': f['fix']})
+
+    def _do(where, fn, *a, **kw):
+        try:
+            return fn(*a, **kw)
+        except (ValueError, SystemExit, OSError) as e:
+            msg = str(e)
+            if not any(x.get('detail') == msg for x in errs):
+                errs.append({'where': where, 'rule': 'font_check', 'text': '', 'fix': '', 'detail': msg})
+            return None
+    import fast_ar as _FA
+    if not os.path.exists(_FA.FONTS + 'Dubai-Bold.ttf'):   # the session: the font-free rules only, the rest on the server
+        for f in TR.check(job):
+            if f not in TR.hard([f]):
+                print(f"text check (estimate): {f['where']}: {f['text']!r} -> {f['fix']}", flush=True)
+        print('text check: no Dubai font here, so the drawn checks (wraps, safe zone, cards) run on the server; '
+              'dispatch prerender.yml with mode text for them (10 to 20 s, no footage)', flush=True)
+        if errs and collect is None:
+            raise ValueError(text_report(errs))
+        return
     tmp = tempfile.mkdtemp(prefix='textcheck-')
     try:
         skin = job.get('skin') if job.get('skin') in reel.SK.KITS and job.get('label') != 'عاجل' else None
-        reel.head_layer(job['headline'], job['label'], f'{tmp}/h.png', job['source'], job['date'], job.get('country'),
-                        hs=job.get('head_size', reel.HEAD_SIZE), skin=skin)
+        _do('headline', reel.head_layer, job['headline'], job['label'], f'{tmp}/h.png', job['source'], job['date'],
+            job.get('country'), hs=job.get('head_size', reel.HEAD_SIZE), skin=skin)
         show = showcase_of(job)                # the showcase draws its lines, facts and credits in the bottom band
         if show:
             try:
                 lift = reel.showcase_box(reel.HEAD_GEOM['end'], bool(job.get('strip')), fit=job.get('showcase_fit') or 'wide')[4]
             except ValueError:
                 lift = reel.showcase_box(reel.HEAD_GEOM['end'], bool(job.get('strip')))[4]
+        n = 0
         for a, b, texts in job['lines']:
             for x in texts:
+                n += 1
                 text, kw = (x, {}) if isinstance(x, str) else (x[0], x[1] if len(x) > 1 else {})
                 if show:
                     kw = dict({k: v for k, v in kw.items() if k not in ('top', 'lift', 'size', 'step', 'shade')},
                               size=reel.SHOW_LINE[0], step=reel.SHOW_LINE[1], lift=lift)
                 elif job.get('strip') and 'lift' not in kw:
                     kw = dict(kw, lift=reel.STRIP_LIFT) if hasattr(reel, 'STRIP_LIFT') else kw
-                reel.line_layer(text, f'{tmp}/l.png', skin=skin, **kw)
+                _do(f'line {n}', reel.line_layer, text, f'{tmp}/l.png', skin=skin, **kw)
         if show:
             if job.get('strip'):
-                reel.facts_layer(strip_items(job), f'{tmp}/f.png')
-            for c in job.get('credits') or []:
-                reel.credit_layer(c[2], f'{tmp}/c.png', size=reel.SHOW_CREDIT, y=reel.SHOW_CREDIT_Y)
+                _do('strip', reel.facts_layer, strip_items(job), f'{tmp}/f.png')
+            for i, c in enumerate(job.get('credits') or [], 1):
+                _do(f'credit {i}', reel.credit_layer, c[2], f'{tmp}/c.png', size=reel.SHOW_CREDIT, y=reel.SHOW_CREDIT_Y)
         elif job.get('strip'):
             # the same one-fact-one-place check reel() runs, so a repeat fails here in seconds
-            reel.strip_check(strip_items(job), [(x if isinstance(x, str) else x[0], 0, 0, {} if isinstance(x, str) else (x[1] if len(x) > 1 else {}))
+            _do('strip', reel.strip_check, strip_items(job), [(x if isinstance(x, str) else x[0], 0, 0, {} if isinstance(x, str) else (x[1] if len(x) > 1 else {}))
                                                 for _, _, texts in job['lines'] for x in texts])
-            reel.strip_layer(strip_items(job), f'{tmp}/s.png', job['theme'], skin=skin)
-        for c in job.get('credits') or []:
-            reel.credit_layer(c[2], f'{tmp}/c.png')
+            _do('strip', reel.strip_layer, strip_items(job), f'{tmp}/s.png', job['theme'], skin=skin)
+        for i, c in enumerate(job.get('credits') or [], 1):
+            _do(f'credit {i}', reel.credit_layer, c[2], f'{tmp}/c.png')
         if job.get('intro') is not None:       # the series intro's title and days line (Dubai font)
             OI = _intro_mod(job['intro'])
             if job['intro'].get('series') == 'gtavi':
-                OI.layers(job['intro']['days'], tmp, job['intro']['episode'])
+                _do('intro', OI.layers, job['intro']['days'], tmp, job['intro']['episode'])
             else:
-                OI.layers(job['intro']['days'], tmp)
+                _do('intro', OI.layers, job['intro']['days'], tmp)
         for x in job.get('person') or []:          # needs the photo in uploads: fetched like footage before this runs
             o = x[5] if len(x) > 5 else {}
             if os.path.exists(C.U + x[0]):
-                reel.person_layer(x[0], x[1], x[2], f'{tmp}/p.png', job['theme'], focus=tuple(o.get('focus', (0.5, 0.33))),
-                                  credit=o.get('credit'))
-        gfx(job, tmp)
+                _do('person', reel.person_layer, x[0], x[1], x[2], f'{tmp}/p.png', job['theme'],
+                    focus=tuple(o.get('focus', (0.5, 0.33))), credit=o.get('credit'))
+        _do('gfx', gfx, job, tmp)
     finally:
         import shutil as _sh
         _sh.rmtree(tmp, ignore_errors=True)
+    if errs and collect is None:
+        raise ValueError(text_report(errs))
+
+
+def text_report(errs):
+    """One block naming every text error (render_job.py text prints it; the JSON goes with --json)."""
+    return 'text check: %d problem%s\n' % (len(errs), '' if len(errs) == 1 else 's') + '\n'.join(
+        f"  - {e['where']}: {e['rule']}: " + (e.get('detail') or f"{e['text']!r} -> {e['fix']}") for e in errs)
 
 
 def gfx(job, where=None):
@@ -904,7 +960,10 @@ def run(job, draft=False):
     stem = os.path.splitext(out)[0]
     base = re.sub(r'-reel-v\d+$', '', stem)   # matches the workflow's ${stem%-reel-v*}, so v2 and later commit too
     if not draft:
-        DC.check(video, [w for w in job.get('block_ok', []) if len(w) == 3])   # stops before anything is committed
+        spans = gfx_spans(job)                 # our own cards are exempt from the smear flag (item E)
+        if spans:
+            print('smear check: exempt ' + ', '.join(f'{a:.2f} to {b:.2f} s' for a, b, _ in spans) + ' (our own cards)', flush=True)
+        DC.check(video, [w for w in job.get('block_ok', []) if len(w) == 3] + spans)   # stops before anything is committed
         import fillcheck as FC                 # no empty band at any second, read on the Reel that ships (9 Nov 2026)
         st_, end_ = _starts(job)
         FC.empty_bands(video, job, st_, end_, C.U)
@@ -932,7 +991,21 @@ if __name__ == '__main__':
     if step == 'check':
         print(job['name'], 'ok, clip %.1f s' % check(job))
     elif step == 'text':
-        textcheck(job); print(job['name'], 'text ok')
+        errs = []
+        try:
+            textcheck(job, collect=errs)
+        except Exception as e:             # anything unforeseen still reports with the rest
+            errs.append({'where': 'text check', 'rule': 'error', 'text': '', 'fix': '', 'detail': f'{type(e).__name__}: {e}'})
+        if '--json' in sys.argv[3:]:
+            out = sys.argv[sys.argv.index('--json') + 1]
+            json.dump({'job': job.get('name'), 'ok': not errs, 'problems': errs}, open(out, 'w', encoding='utf-8'),
+                      ensure_ascii=False, indent=1)
+        if errs:
+            print(text_report(errs))
+            print('TEXTCHECK_JSON: ' + json.dumps({'job': job.get('name'), 'ok': False, 'problems': errs}, ensure_ascii=False))
+            sys.exit(1)
+        print(job['name'], 'text ok')
+        print('TEXTCHECK_JSON: ' + json.dumps({'job': job.get('name'), 'ok': True, 'problems': []}))
     elif step == 'focus':
         focus(job, path); print(job['name'], 'focus written')
     elif step == 'run':

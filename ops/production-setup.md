@@ -300,3 +300,12 @@ a run that has not been updated still reads them.
    primary, the date only in a video, a traced Arabic relay, waiting for a statement, under 48 hours with no Arabic
    coverage, no trailer, variety. The desk audit lists these phrases in a rejection or hold as BAD-REJECTION, and the
    work order marks a previous run's rejection that used one.
+10. One render per Reel (release 2026-11-10 r5, adv-20261110-one-render-per-reel). Before any render dispatch: a. start
+   the job with `python3 templates/t0make.py <kind> <name> --story <id> --source "<source>" --trailer
+   steam:<appid>:<name>|<url>`; b. dispatch prerender.yml with `job=<name>` and `mode=shots`, read `SHOTS_JSON:` from the
+   log and run t0make again with `--shots`; take shots only from that list; c. fill the TODO texts, then
+   `python3 templates/textrules.py jobs/live/<name>.json` until clean (it needs no font); d. dispatch prerender.yml with
+   `mode=text` and fix everything its one list names (`TEXTCHECK_JSON:`); e. only then dispatch render-live.yml with
+   `job=<name>` (a bare name is fine). A fix goes onto the current job file, never a restore of an older commit (the
+   render refuses an older version). Our own cards never trip the smear flag. A director PASS is final; pixel-art hit
+   effects are not gore. Target: one render per Reel; three in 24 hours raise a work-order alarm.

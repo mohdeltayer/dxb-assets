@@ -56,6 +56,7 @@ jobs:
             ops/desk_audit.py
             templates/formats.py
             templates/assets/format-ledger.json
+            templates/assets/render-times.json
           sparse-checkout-cone-mode: false
           persist-credentials: false
 
@@ -167,7 +168,8 @@ jobs:
             python3 ops/backoffice/keeper/workorder.py ${BOARD_ARG} ${MIRROR_ARG:-} ${DIGEST_ARG:-} \
               --orders "$RUNNER_TEMP/orders" --digests "$RUNNER_TEMP/digests" \
               --server "$RUNNER_TEMP/pub/keeper/server-in.json" --commitments newsroom/commitments.json \
-              --ledger templates/assets/format-ledger.json --out "$RUNNER_TEMP/pub/keeper" \
+              --ledger templates/assets/format-ledger.json --times templates/assets/render-times.json \
+              --out "$RUNNER_TEMP/pub/keeper" \
               --state "$RUNNER_TEMP/pub/keeper/state.json" | tee -a "$GITHUB_STEP_SUMMARY"
           else
             echo "workorder: board not read, no work order this pass" | tee -a "$GITHUB_STEP_SUMMARY"

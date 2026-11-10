@@ -512,8 +512,29 @@ def hop_alarms(board, now, posts, mirror=None, server=None, history=None, server
 # ----------------------------------------------------------------------------------------------------------------
 # the work order
 # ----------------------------------------------------------------------------------------------------------------
-def build(board, now, posts, orders=None, mirror=None, digest=None, server=None, history=None, server_at=None):
-    alarms = hop_alarms(board, now, posts, mirror, server, history, server_at)
+DISPATCH_ALARM = 3        # renders of one story in 24 hours (adv-20261110-one-render-per-reel: target 1, alarm at 3)
+
+
+def dispatch_alarms(times, now):
+    """One alarm per story whose latest server render recorded `dispatches` >= DISPATCH_ALARM in the last 24 hours."""
+    worst = {}
+    for e in times or []:
+        if not isinstance(e, dict) or not isinstance(e.get('dispatches'), int):
+            continue
+        at = t(e.get('finished_at') or e.get('at'))
+        if not at or now - at > dt.timedelta(hours=24):
+            continue
+        st = str(e.get('story') or e.get('name') or '?')
+        worst[st] = max(worst.get(st, 0), e['dispatches'])
+    return [{'key': 'hop|dispatches|' + st, 'kind': 'dispatches',
+             'line': 'Reel %s took %d renders in 24 hours (target 1): run textrules.py and prerender mode text before '
+                     'dispatching, and take shots from prerender mode shots' % (st, n),
+             'clears': 'the next render of a story passes in one dispatch'}
+            for st, n in sorted(worst.items()) if n >= DISPATCH_ALARM]
+
+
+def build(board, now, posts, orders=None, mirror=None, digest=None, server=None, history=None, server_at=None, times=None):
+    alarms = hop_alarms(board, now, posts, mirror, server, history, server_at) + dispatch_alarms(times, now)
     hand = open_handoffs(board, now)
     nxt = next_slot(posts, now)
     cp = caps(posts, now, max(now, t(nxt['earliest']) or now))
@@ -665,7 +686,8 @@ def run(args):
     if args.digests and os.path.isdir(args.digests):
         import desk_audit as DA
         history = DA.digest_history(folder=args.digests)
-    wo = build(board, now, posts, orders, mirror, digest, server if sp else None, history, server_at)
+    times = load(getattr(args, 'times', None), []) if getattr(args, 'times', None) else []
+    wo = build(board, now, posts, orders, mirror, digest, server if sp else None, history, server_at, times)
     out = args.out
     os.makedirs(out, exist_ok=True)
     hop = {'generated_at': iso(now), 'alarms': wo['alarms']}
@@ -693,7 +715,7 @@ def run(args):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split('\n')[0])
-    for a in ('board', 'orders', 'mirror', 'digest', 'digests', 'server', 'commitments', 'ledger', 'now', 'state'):
+    for a in ('board', 'orders', 'mirror', 'digest', 'digests', 'server', 'commitments', 'ledger', 'now', 'state', 'times'):
         ap.add_argument('--' + a)
     ap.add_argument('--out', default='.')
     ap.add_argument('--force', action='store_true')

@@ -42,7 +42,9 @@ jobs:
           INPUT: ${{ github.event.inputs.job }}
         run: |
           if [ -n "$INPUT" ]; then
-            files="$INPUT"
+            # a bare name is jobs/render/<name>.json (adv-20261110-one-render-per-reel B)
+            case "$INPUT" in jobs/*) files="$INPUT";; *) files="jobs/render/${INPUT%.json}.json";; esac
+            test -f "$files" || { echo "::error::$files is not on main"; exit 1; }
           elif [ "${{ github.event_name }}" = "push" ] && [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ]; then
             git fetch -q --depth=1 --filter=blob:none origin "$BEFORE"
             files=$(git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- 'jobs/render/*.json')
