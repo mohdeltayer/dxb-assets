@@ -11,7 +11,7 @@
  ],
  "category": "milestone",
  "priority": "medium",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://www.capcom.co.jp/ir/english/business/million.html",
@@ -82,8 +82,33 @@
  "template": "numbers",
  "chip": "أرقام",
  "ledger_find": "no Mega Man Zero/ZX story",
- "versions": [],
+ "versions": [
+  {
+   "v": 6,
+   "file": "cards/2026-11/mega-man-zero-zx-legacy-million-reel-v6.mp4",
+   "director": "PASS round 2"
+  }
+ ],
  "posts": [],
  "corrections": [],
- "metrics": {}
+ "metrics": {},
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/mega-man-zero-zx-legacy-million-reel-v6.mp4",
+  "blob": "6310a26e585f1f00eed1e18927d1c7eb3818e4b6",
+  "at": "2026-11-10T03:44:48Z",
+  "note": "round 2 PASS on v6: opener, flash-free grounds, card 3 note, 2 s close with credit",
+  "checklist": {
+   "job": "jobs/live/mega-man-zero-zx-legacy-million.json",
+   "sha256": "eb4a389bab647da8b439eacfcdefb4abd76b7d7633a1f714401b37c0a86182ff",
+   "ok": true,
+   "problems": [],
+   "template": "numbers",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-sonnet"
+ },
+ "approved": "go: rolling queue; scheduled in Publer 04:45Z (08:45 Dubai) IG, X, Threads"
 }
