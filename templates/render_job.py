@@ -1004,13 +1004,15 @@ def run(job, draft=False):
 if __name__ == '__main__':
     step, path = sys.argv[1], sys.argv[2]
     job = json.load(open(path))
-    if step in ('check', 'text', 'run'):
+    if step in ('check', 'run'):
         import buildgate                        # ledger, story file, lane, reel-check before anything (adv-20261105-p2-audit-fixes)
         buildgate.enforce(path, job)
     if step == 'check':
         print(job['name'], 'ok, clip %.1f s' % check(job))
     elif step == 'text':
-        errs = []
+        import buildgate                        # the gate's findings join the text findings: one pass lists every error
+        errs = [{'where': 'build gate', 'rule': 'gate', 'text': '', 'fix': '', 'detail': p}
+                for p in buildgate.problems(path, job)]
         try:
             textcheck(job, collect=errs)
         except Exception as e:             # anything unforeseen still reports with the rest
