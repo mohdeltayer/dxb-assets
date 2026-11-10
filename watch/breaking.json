@@ -1,10 +1,23 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T21:52:05Z",
- "seq": 303,
+ "generated_at": "2026-11-10T22:40:18Z",
+ "seq": 304,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 11047,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Microsoft Flight Simulator 2024 Celebrates Halo’s 25th Anniversary with the Release of the Halo Pelican",
+   "url": "https://news.xbox.com/en-us/2026/11/10/microsoft-flight-simulator-2024-celebrates-halos-25th-anniversary-with-the-release-of-the-halo-pelican/",
+   "published": "2026-11-10T22:00Z",
+   "first_seen": "2026-11-10T22:40:15Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 304
+  }
+ ],
  "recent": [
   {
    "id": 10923,
@@ -884,30 +897,18 @@
    ],
    "breaking_source": true,
    "breaking_seq": 250
-  },
-  {
-   "id": 9928,
-   "source": "Nintendo US",
-   "source_kind": "page",
-   "title": "11/09/26 Season 1 Arrives in Call of Duty: Modern Warfare 4 and Call of Duty: Warzone The hunt is on in Season 1 of Call of Duty: Modern Warfare 4, a major upda",
-   "url": "https://www.nintendo.com/us/whatsnew/season-1-arrives-in-call-of-duty-modern-warfare-4-and-call-of-duty-warzone/",
-   "published": null,
-   "first_seen": "2026-11-09T22:25:14Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 248
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T21:50:14Z",
+  "last_poll_at": "2026-11-10T22:40:15Z",
   "sources_enabled": 100,
-  "sources_ok": 94,
+  "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 20x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 21x)",
    "Nintendo of America (X) (HTTP 429, 59x)",
-   "PlayStation (X) (HTTP 429, 75x)",
+   "PlayStation (X) (HTTP 429, 76x)",
    "PlayStation Middle East (X) (HTTP 429, 6x)",
    "Rockstar Games (X) (HTTP 429, 31x)",
    "Xbox (X) (HTTP 429, 76x)"
