@@ -32488,5 +32488,112 @@
   "story": "project-motor-racing-world-endurance-pack-november-10",
   "job_sha": "defa34a5acfb7c939df40f1e2478a14e227d37b9",
   "dispatches": 2
+ },
+ {
+  "name": "marathon-symbiosis-update-december-8-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-10T15:56Z",
+  "stages": {
+   "checks": 11.1,
+   "montage": 20.2,
+   "text": 13.4,
+   "audio": 0.6,
+   "outro": 6.2
+  },
+  "total": 51.4,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-10T15:55Z",
+  "finished_at": "2026-11-10T15:56Z",
+  "render_min": 0.86,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "marathon-symbiosis-update-december-8-trailer.mp4",
+    "start": 3.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 74.48,
+    "rows": 822,
+    "zoom": 2.34,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "marathon-symbiosis-update-december-8-trailer.mp4",
+    "start": 4.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 74.48,
+    "rows": 824,
+    "zoom": 2.33,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "marathon-symbiosis-update-december-8-trailer.mp4",
+    "start": 7.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 74.48,
+    "rows": 820,
+    "zoom": 2.34,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 2.34,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 4.9,
+   "audio_secs": 8.5,
+   "music_pct": 19.2,
+   "leak_pct": 4.9,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "reason": "music only 19.2% of the track (< 40.0%)",
+   "secs": 7.3
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 4.69,
+   "held_under_text": 0.0,
+   "secs": 6.4,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 112,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1074,
+  "peak_mem_mb": 1953,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 19765,
+  "peak_disk_mb": 20201,
+  "min_disk_free_mb": 225905,
+  "setup_min": 0.23,
+  "story": "marathon-symbiosis-update-december-8",
+  "job_sha": "4aa1e58fe336f7ceeca4ec2412360d0d79a35ecf",
+  "dispatches": 1
  }
 ]
