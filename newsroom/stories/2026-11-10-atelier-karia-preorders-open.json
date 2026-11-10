@@ -12,7 +12,7 @@
  ],
  "category": "preorder",
  "priority": "medium",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://www.gematsu.com/2026/11/atelier-karia-the-night-kingdom-the-guide-of-memories-story-trailer-digital-pre-orders-now-available",
@@ -73,8 +73,37 @@
  "template": "trailer",
  "chip": "رسمي",
  "ledger_find": "no Atelier Karia story",
- "versions": [],
- "posts": [],
+ "versions": [
+  {
+   "v": 6,
+   "file": "cards/2026-11/atelier-karia-preorders-open-reel-v6.mp4"
+  }
+ ],
+ "posts": {
+  "x": "فُتح الحجز المسبق الرقمي للعبة Atelier Karia، حسب موقع جيماتسو (Gematsu): تصدر في 25 فبراير 2027، والنسخة العادية بسعر 69.99 دولارًا."
+ },
  "corrections": [],
- "metrics": {}
+ "metrics": {},
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/atelier-karia-preorders-open-reel-v6.mp4",
+  "blob": "e9b36fb97b76cc6a337e2a9363d1410e96c290ec",
+  "at": "2026-11-10T02:28:22Z",
+  "note": "round 2 fix applied in v6, checked",
+  "checklist": {
+   "job": "jobs/live/atelier-karia-preorders-open.json",
+   "sha256": "4dc8009e1b654074ff1b6c7002c3d3c6345a44c3a4c28770948d1a8ce8981d04",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-sonnet"
+ },
+ "arabic": {
+  "passes": "arabic-games-film-editor then arabic-grammar-review (self-run): headline uses the glossary's الحجز المسبق مفتوح; no required edits"
+ },
+ "approved": "go: rolling queue; scheduled in Publer 03:45Z (07:45 Dubai) instagram, x, threads"
 }
