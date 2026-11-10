@@ -1,0 +1,46 @@
+{
+ "kind": "breaking",
+ "name": "nintendo-ends-google-apple-sign-in-january-26",
+ "story": "2026-11-10-nintendo-ends-google-apple-sign-in-january-26",
+ "render_lane": "server",
+ "built_by": "production-2",
+ "out": "cards/2026-11/nintendo-ends-google-apple-sign-in-january-26-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "my-nintendo-page.png",
+   "repo": "live/2026-11-10/nintendo-account/my-nintendo-page.png"
+  }
+ ],
+ "image": "my-nintendo-page.png",
+ "focus": [
+  0.5,
+  0.3
+ ],
+ "headline": "نهاية دخول نينتيندو\nعبر Google و Apple",
+ "line": "من 26 يناير 2027 ينتهي دخول\nحساب نينتيندو (Nintendo) عبر\nحساب Google أو Apple",
+ "label": "رسمي",
+ "source": "نينتيندو (Nintendo)، إشعار الدعم في اليابان",
+ "date": "10 Nov 2026",
+ "theme": "cold",
+ "style": "lines",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Nintendo Japan support notice support.nintendo.com/jp/information/2026/1110 read through the fetch tool (summary; the site refuses curl with 403); MyNintendoNews 10 Nov carries the same dates",
+  "SOURCE: not already posted": "yes: ledger find nintendo account login: no hit",
+  "SOURCE: age": "yes: notice dated 10 Nov 2026, named by Mohammad at about 16:58 Dubai",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE policy": "yes: what ends (Google and Apple sign-in to Nintendo Account), the date (26 Jan 2027), what to do (email or login ID with password, or passkey), the limit (Japanese support notice, date may slip)",
+  "STORY: names match names-ar.md": "yes: نينتيندو (Nintendo) at first on-screen mention in the line; Google and Apple in Latin as platforms",
+  "SOUND: footage sound or bed with reason": "our bed: T0 breaking card, one still, no footage sound",
+  "PICTURE: credit on every clip": "yes: the credit line names Nintendo (the capture of its own My Nintendo page)",
+  "PICTURE: crop per beat": "yes: portrait capture 2160x3840, no enlargement"
+ },
+ "decision_log": [
+  {
+   "beat": "T0 card",
+   "shot": "capture of Nintendo's own My Nintendo page (Create account, Sign in), portrait 2160x3840",
+   "alternatives": "accounts.nintendo.com login (error page), nintendo.com whats-new page (404), Japan support page (403 to scripts)",
+   "crop": "focus 0.5, 0.3",
+   "music": "breaking bed"
+  }
+ ]
+}
