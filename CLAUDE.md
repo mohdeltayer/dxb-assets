@@ -3553,3 +3553,24 @@ G. Every server render records the job's blob sha (`job_sha`) and `dispatches` i
    message; a job that is an older version than the last one rendered is refused (`templates/jobsha.py`).
 Measure: `dispatches` per Reel, target 1; the work order raises a `dispatches` alarm at 3 (keeper reads
 render-times.json). H (server QC verdict) and I (parallel runners) follow as their own release and report.
+
+## Server QC verdict and picture quality (release 2026-11-10 r6; adv-20261110-one-render-per-reel H and I, adv-20261110-picture-quality-on-server 1, 3, 2; Mohammad 10 Nov 2026)
+
+1. One verdict per Reel (H): every server render writes `<name>-qc.json` beside the Reel (pass, the notes the render
+   printed, anything the server fixed, job_sha, dispatches, source summary). Mechanical text faults are fixed by the
+   server once, before the render (`textrules.py fix`: a space after a glued prefix, % spelt out «بالمئة», + dropped);
+   a Latin-first line, length or reading time is never changed by the server. A render that stops writes its fail
+   verdict and every finding to the run summary. The session opens a Reel only on fail.
+2. Source record (picture 1): every render-times entry carries `sources` per shot (file, start, width, height, fps,
+   Mbps, rows after the letterbox crop, enlargement, lowbit) and `source_summary` (lowest height, largest enlargement,
+   lowbit shots), plus `final_enc` and `quality`.
+3. "quality": "hq" in a job (picture 3 and 2): final encode at slow/16 and the weak-source path (deblock before the
+   denoise on a lowbit shot or one enlarged past 1.5x; RAISR in place of lanczos once the server's ffmpeg has the raisr
+   filter; 60 s per Reel at most; any failure falls back to today's chain). The breaking profile and عاجل keep base.
+   Proof on 10 Nov (cards/gallery.json, `quality`): on the 4-core GitHub runner the hq encode added 11 to 40 s and doubled
+   the file (about 20 Mbps against 10), and the deblock pass took 14 to 17 s per Reel (about 4 s a shot); on one Dune shot
+   at 2x from a clean 5.7 Mbps source the deblock is barely visible. Base stays the default until Mohammad picks; RAISR
+   needs the raisr filter built into the server's ffmpeg (root, cutover night).
+4. Parallel renders (I): the picture-pass cache and the end-card master now write per-process temp files, so two server
+   jobs never collide; uploads and temp folders are per job already. A second runner instance on dxb-render-1 needs a
+   runner registration as root (lines in the release note).

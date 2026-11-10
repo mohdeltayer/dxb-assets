@@ -104,7 +104,19 @@ def build(ref='HEAD', now=None):
         {'option': 'B tall', 'what': 'a 4:3 centre crop of the trailer, taller picture; needs a one-line headline',
          'reel': st + 'mq-showcase-tall-reel-v2.mp4', 'strip': st + 'mq-showcase-tall-strip.jpg', 'job_key': '"showcase_fit": "tall"'},
     ]
-    return {'generated_at': now.strftime('%Y-%m-%dT%H:%M:%SZ'), 'templates': out, 'layouts': layouts,
+    pq = 'https://raw.githubusercontent.com/mohdeltayer/dxb-assets/studio/picture-quality/cards/test/'
+    quality = {   # adv-20261110-picture-quality-on-server proof (10 Nov 2026); runner seconds on 4 cores
+        'what': 'base: today (final encode medium/18, no weak-source path); hq: "quality": "hq" in the job (final encode '
+                'slow/16, deblock before the denoise on lowbit or >1.5x shots, RAISR when the server has it)',
+        'reels': [{'story': n, 'base': pq + f'pq-{n}-base-reel-v1.mp4', 'hq': pq + f'pq-{n}-hq-reel-v1.mp4',
+                   'base_strip': pq + f'pq-{n}-base-strip.jpg', 'hq_strip': pq + f'pq-{n}-hq-strip.jpg', **m}
+                  for n, m in (('dune', {'outro_secs': [56.9, 67.8], 'weak_secs': 14.3, 'mb': [30.9, 64.7]}),
+                               ('deck', {'outro_secs': [47.6, 88.0], 'weak_secs': 17.2, 'mb': [24.7, 49.2]}))],
+        'frames': [pq + f'pq-dune-shot{s}-base-vs-hq.png' for s in (30, 81, 111)],
+        'note': 'Steam streams differ per download, so whole Reels are not frame-matched; the frames are one shot each '
+                'from the same source copy, base left, hq right. The jailbreak test job carries the breaking profile, '
+                'which keeps base by rule.'}
+    return {'generated_at': now.strftime('%Y-%m-%dT%H:%M:%SZ'), 'templates': out, 'layouts': layouts, 'quality': quality,
             'rules': {'card_led_max': f'{F.CARD_MAX} in {F.WINDOW}', 'day_max': F.DAY_MAX,
                       'no_third_in_a_row': True}}
 
