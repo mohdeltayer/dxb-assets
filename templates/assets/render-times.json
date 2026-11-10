@@ -30222,5 +30222,50 @@
   "min_disk_free_mb": 225990,
   "setup_min": 0.17,
   "story": "atelier-karia-preorders-open"
+ },
+ {
+  "name": "nintendo-switch-digital-gifting-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-11-10T02:14Z",
+  "stages": {
+   "checks": 1.0,
+   "montage": 5.3,
+   "text": 40.3,
+   "audio": 0.9,
+   "outro": 16.7
+  },
+  "total": 64.1,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-10T02:13Z",
+  "finished_at": "2026-11-10T02:14Z",
+  "render_min": 1.07,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 24.0,
+   "still_share": 0.3,
+   "longest_still": 2.2,
+   "cuts_per_10s": 4.04,
+   "held_under_text": 0.085,
+   "secs": 22.3,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 276,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 965,
+  "peak_mem_mb": 5331,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 18047,
+  "peak_disk_mb": 19737,
+  "min_disk_free_mb": 226369,
+  "setup_min": 0.1,
+  "story": "nintendo-switch-digital-gifting"
  }
 ]
