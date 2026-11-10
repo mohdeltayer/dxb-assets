@@ -1,0 +1,208 @@
+{
+ "name": "dune-awakening-offline-single-player",
+ "story": "2026-11-10-dune-awakening-offline-single-player",
+ "render_lane": "server",
+ "built_by": "production-2",
+ "out": "cards/2026-11/dune-awakening-offline-single-player-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "dune-sp.mp4",
+   "steam": 1172710,
+   "trailer": "Dune: Awakening - Console and Single Player Launch Trailer",
+   "trailer_id": 1254541118,
+   "start": 0,
+   "seconds": 161
+  }
+ ],
+ "gfx": [
+  {
+   "file": "dune-gfx-1.png",
+   "kind": "fact",
+   "label": "رقم التحديث",
+   "value": "1.5.20.0",
+   "note": "متوفر على كل المنصات"
+  }
+ ],
+ "shots": [
+  [
+   "dune-sp.mp4",
+   30.0,
+   3.6,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "dune-sp.mp4",
+   9.0,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "dune-sp.mp4",
+   81.0,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "dune-gfx-1.png",
+   [
+    "dune-sp.mp4",
+    86.0
+   ],
+   3.4,
+   null
+  ],
+  [
+   "dune-sp.mp4",
+   111.0,
+   2.8,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "dune-sp.mp4",
+   117.0,
+   2.8,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "dune-sp.mp4",
+   120.0,
+   4.4,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "أضافت شركة فانكوم (Funcom) وضعًا\nفرديًا دون اتصال بالإنترنت",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   5,
+   [
+    [
+     "يشمل إنشاء الشخصيات وحذفها،\nمع زر للعودة إلى الإنترنت",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   6,
+   6,
+   [
+    [
+     "إعدادات الخادم الفردي تُحفظ\nفي السحابة بين الأجهزة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: فانكوم (Funcom)",
+   {
+    "size": 44,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "اللعب دون إنترنت\nيصل إلى Dune: Awakening",
+ "label": "تحديث",
+ "source": "فانكوم (Funcom)",
+ "date": "9 Nov 2026",
+ "theme": "spectacle",
+ "style": "frame",
+ "template": "clipcard",
+ "skin": "house",
+ "track": [
+  "dune-sp.mp4",
+  21.0
+ ],
+ "music_only": true,
+ "cut": true,
+ "lowres_ok": {
+  "searched": [
+   "Steam app 1172710 movies (all 1920x1080 letterboxed 1920x960)",
+   "other Funcom trailers on Steam have the same frame"
+  ],
+  "result": "no unletterboxed copy; exactly 2.0x on a 5.7 Mbps 1080p source"
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Funcom patch notes read in full",
+  "SOURCE: not already posted": "yes",
+  "SOURCE: age": "yes: 21 hours at the slot",
+  "ANGLE before lines": "yes",
+  "STORY TYPE update": "change, demonstration, effect, availability (card)",
+  "STORY: spoken paragraph, subject before pronoun": "yes: Funcom named in L1; no line opens on و",
+  "STORY: names match names-ar.md": "Funcom as فانكوم (Funcom)",
+  "SOUND: footage sound or bed with reason": "yes: the trailer's music stem",
+  "PICTURE: footage first": "yes: official Steam trailer",
+  "PICTURE: credit on every clip": "yes: credit 0 to 6",
+  "SENSITIVE": "yes: nothing sensitive in the story"
+ },
+ "decision_log": [
+  {
+   "beat": "hook",
+   "shot": "30.0 lone figure in the desert with vehicles"
+  },
+  {
+   "beat": "L1",
+   "shot": "9.0 ornithopter over dunes, 81.0 character at a structure"
+  },
+  {
+   "beat": "card",
+   "shot": "patch number over moving desert footage"
+  },
+  {
+   "beat": "L2",
+   "shot": "111.0 character running, 117.0 vehicle in canyon"
+  },
+  {
+   "beat": "L3",
+   "shot": "120.0 character walking, the closing picture"
+  }
+ ]
+}
