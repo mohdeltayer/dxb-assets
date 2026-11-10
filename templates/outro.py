@@ -210,8 +210,8 @@ def card_master(style, accent=None, quiet=False, platforms=PLATFORMS):
     vf = f'[0:v]trim=duration={CARD:.3f},setpts=PTS-STARTPTS,fps={FPS},fade=t=in:st=0:d={LEAD}:color={GROUND_HEX},setsar=1,format=yuv420p[v]'
     subprocess.run(cmd + ['-filter_complex', vf + ';' + af, '-map', '[v]', '-map', '[a]', '-t', f'{CARD:.3f}',
                           '-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-pix_fmt', 'yuv420p', '-profile:v', 'high',
-                          '-video_track_timescale', '15360'] + FINAL_A + [p + '.part.mp4'], check=True)
-    os.replace(p + '.part.mp4', p)
+                          '-video_track_timescale', '15360'] + FINAL_A + [p + f'.{os.getpid()}.part.mp4'], check=True)
+    os.replace(p + f'.{os.getpid()}.part.mp4', p)   # per process: two renders may build the same master at once
     shutil.rmtree(tmp, ignore_errors=True)
     return p
 

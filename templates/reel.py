@@ -1608,7 +1608,7 @@ def cached_shot(f, s, d, fo, lowres_ok=False):
         return (f"{pic},"
                 f"fps=30,tpad=stop_mode=clone:stop_duration=0.5,trim=duration={d},setpts=PTS-STARTPTS,setsar=1,format=yuv420p")
     a = ['-map', '0:a?', '-c:a', 'pcm_s16le', '-ar', '48000', '-ac', '2'] if _has_audio(C.U + f) else ['-an']
-    tmp = C.U + rel + '.part.mkv'
+    tmp = C.U + rel + f'.{os.getpid()}.part.mkv'   # per process: two renders may build the same shot at once (item I)
 
     def run(vf):
         subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-ss', str(s), '-t', str(d), '-i', C.U + f, '-vf', vf,
