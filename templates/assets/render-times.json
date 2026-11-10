@@ -30373,5 +30373,66 @@
   "min_disk_free_mb": 226368,
   "setup_min": 0.13,
   "story": "nintendo-switch-digital-gifting"
+ },
+ {
+  "name": "atelier-karia-preorders-open-reel-v6.mp4",
+  "profile": "standard",
+  "at": "2026-11-10T02:26Z",
+  "stages": {
+   "checks": 2.4,
+   "montage": 18.1,
+   "text": 17.9,
+   "audio": 0.9,
+   "outro": 13.1
+  },
+  "total": 52.5,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-10T02:25Z",
+  "finished_at": "2026-11-10T02:26Z",
+  "render_min": 0.87,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 3.7,
+   "audio_secs": 35.4,
+   "music_pct": 29.9,
+   "leak_pct": 0.9,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 1
+   },
+   "effects_shots": 0,
+   "mix_secs": 0.7,
+   "secs": 5.2
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 6.9,
+   "held_under_text": 0.0,
+   "secs": 11.6,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 104,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1089,
+  "peak_mem_mb": 1986,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 18103,
+  "peak_disk_mb": 20171,
+  "min_disk_free_mb": 225935,
+  "setup_min": 0.18,
+  "story": "atelier-karia-preorders-open"
  }
 ]
