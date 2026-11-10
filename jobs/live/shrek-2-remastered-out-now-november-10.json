@@ -14,18 +14,143 @@
    "seconds": 240
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "shrek-2-remastered-out-now-november-10-trailer.mp4",
+   22.0,
+   3.5,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "shrek-2-remastered-out-now-november-10-trailer.mp4",
+   25.1,
+   3.5,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "shrek-2-remastered-out-now-november-10-trailer.mp4",
+   28.2,
+   3.5,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "shrek-2-remastered-out-now-november-10-trailer.mp4",
+   31.3,
+   3.5,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   0,
+   1,
+   [
+    [
+     "صدرت اليوم لعبة Shrek 2 Remastered\nعلى Steam",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   3,
+   [
+    [
+     "مغامرة تعاونية بشخصيات Shrek المحبوبة\nمع لعب جماعي ورسومات محسنة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   3,
+   "المصدر: أسبير ميديا (Aspyr Media)"
+  ]
+ ],
+ "headline": "صدرت اليوم Shrek 2",
  "label": "متوفر الآن",
  "source": "أسبير ميديا (Aspyr Media)",
  "date": "10 Nov 2026",
  "theme": "emerald",
- "style": null,
+ "style": "lines",
  "template": "trailer",
  "skin": "house",
  "cut": false,
- "track": "bed",
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "track": [
+  "shrek-2-remastered-out-now-november-10-trailer.mp4",
+  22.0
+ ],
+ "layout": "showcase",
+ "showcase_reason": "the news is the launch trailer itself: the Steam Shrek 2 Remastered Launch Trailer, whose feature captions run through every shot",
+ "strip": [
+  [
+   "السعر على Steam",
+   [
+    "aed",
+    "89.99"
+   ]
+  ],
+  [
+   "خصم الإطلاق",
+   "10 بالمئة"
+  ]
+ ],
+ "genre": [
+  "family",
+  "adventure"
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam page and appdetails cc=ae read 18:38Z (released 10 Nov 2026, 99.99 AED, 10% off, Aspyr Media, English audio only)",
+  "SOURCE: not already posted": "yes: ledger find shrek: the 18 Oct announcement and the 20 Oct pre-order story; today's launch with the UAE price is new",
+  "SOURCE: age": "yes: launch day 10 Nov",
+  "ANGLE before lines": "yes: hook released today; why now launch day and a 10% launch discount; for players UAE price and English-only audio; payoff no Arabic support",
+  "STORY TYPE out now": "yes: platform Steam (console versions not restated), AED price in the strip, what it is in the lines",
+  "STORY: spoken paragraph": "yes: صدرت اليوم لعبة Shrek 2 Remastered على Steam، مغامرة تعاونية بشخصيات Shrek المحبوبة مع لعب جماعي ورسومات محسنة",
+  "PICTURE: trailer is the news": "yes: showcase layout, Steam Launch Trailer 22.0 to 34.8 s full frame (the captions ONLINE MULTIPLAYER, COUCH COOP, REMASTERED GRAPHICS are the trailer's own)",
+  "SOUND": "trailer's own sound, shots in sync with the track; speech unchecked",
+  "CREDIT": "yes: all shots"
+ },
+ "decision_log": [
+  {
+   "beat": "0 to 7 released today",
+   "shot": "trailer 22.0 to 28.6 s",
+   "alternatives": "shot picker found only 3 clean stretches under 2.6 s each because every shot carries a caption; showcase keeps the full frame",
+   "crop": "none (showcase)",
+   "music": "trailer"
+  },
+  {
+   "beat": "7 to 13 what it is",
+   "shot": "trailer 28.2 to 34.8 s",
+   "alternatives": "ESRB card at the start and the trademark end card from 56 s avoided",
+   "crop": "none",
+   "music": "trailer"
+  }
+ ],
+ "note": "Shrek 2 Remastered launch day. Source Steam page and the Steam Launch Trailer. Gap rule over caps (trailer 5 today, nothing scheduled after 22:00 Dubai)."
 }
