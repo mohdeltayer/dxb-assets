@@ -31645,5 +31645,50 @@
   "min_disk_free_mb": 225052,
   "setup_min": 0.15,
   "story": "mouse-work-switch-2-december-7"
+ },
+ {
+  "name": "mouse-work-switch-2-dec7-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-10T09:23Z",
+  "stages": {
+   "checks": 1.7,
+   "montage": 7.9,
+   "text": 71.9,
+   "audio": 1.5,
+   "outro": 26.0
+  },
+  "total": 109.0,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-10T09:21Z",
+  "finished_at": "2026-11-10T09:23Z",
+  "render_min": 1.82,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 0.3,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 3.52,
+   "held_under_text": 0.018,
+   "secs": 28.4,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 313,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 978,
+  "peak_mem_mb": 2358,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 18829,
+  "peak_disk_mb": 21079,
+  "min_disk_free_mb": 225027,
+  "setup_min": 0.17,
+  "story": "mouse-work-switch-2-dec7"
  }
 ]
