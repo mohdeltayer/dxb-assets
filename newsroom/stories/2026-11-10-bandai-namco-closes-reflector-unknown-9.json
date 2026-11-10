@@ -11,7 +11,7 @@
  ],
  "category": "business",
  "priority": "high",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://www.bandainamco.co.jp/files/E_HP_Clean__E980A3E7B590E5AD90E4BC9AE7A4BEE381AEE8.pdf",
@@ -74,8 +74,33 @@
  "template": "clipcard",
  "chip": "رسمي",
  "ledger_find": "no Reflector story",
- "versions": [],
+ "versions": [
+  {
+   "v": 3,
+   "file": "cards/2026-11/bandai-namco-closes-reflector-unknown-9-reel-v3.mp4",
+   "director": "PASS round 2"
+  }
+ ],
  "posts": [],
  "corrections": [],
- "metrics": {}
+ "metrics": {},
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/bandai-namco-closes-reflector-unknown-9-reel-v3.mp4",
+  "blob": "ebe4ab6418ad84d8d373a63ae5e52928ef16a5d1",
+  "at": "2026-11-10T06:54:02Z",
+  "note": "round 2 PASS on v3",
+  "checklist": {
+   "job": "jobs/live/bandai-namco-closes-reflector-unknown-9.json",
+   "sha256": "13b5135a8ba7d110404ae5a4083942643eecda654232d2faff854ba9935d0d8f",
+   "ok": true,
+   "problems": [],
+   "template": "clipcard",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-sonnet"
+ },
+ "approved": "go: rolling queue; scheduled in Publer 07:00Z (11:00 Dubai) IG, X, Threads"
 }
