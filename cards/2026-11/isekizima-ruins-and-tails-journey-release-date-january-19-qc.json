@@ -1,0 +1,22 @@
+{
+ "name": "isekizima-ruins-and-tails-journey-release-date-january-19",
+ "out": "cards/2026-11/isekizima-ruins-and-tails-journey-release-date-january-19-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-10T16:46:18Z",
+ "findings": [],
+ "notes": [
+  "length 8.3 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 96.2; leak_pct 0.0; cache {'hit': 0, 'miss': 2}; separate_secs 4.2; secs 7.1",
+  "render_job: lifeless: {\"score\": 8.7, \"still_share\": 0.134, \"longest_still\": 0.5, \"cuts_per_10s\": 4.88, \"held_under_text\": 0.037, \"secs\": 8.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "1f0210ddd0f36b7c56d39fd4f75585d39f9acb2a",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18"
+}
