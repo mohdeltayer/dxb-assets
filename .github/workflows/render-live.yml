@@ -114,8 +114,16 @@ jobs:
           rm -rf "$repo"
           for w in Light Regular Medium Bold; do test -f "$DUBAI_FONTS/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing from dubai.zip"; exit 1; }; done
 
-      - name: Text check (fails in seconds on a bad wrap)
-        run: python templates/render_job.py text "$JOB"
+      - name: Text check (every error in one pass; mechanical faults fixed once by the server, item H)
+        run: |
+          set +e
+          python templates/render_job.py text "$JOB" > "$RUNNER_TEMP/text.log" 2>&1; rc=$?; cat "$RUNNER_TEMP/text.log"
+          if [ $rc -ne 0 ] && python templates/textrules.py fix "$JOB" "$RUNNER_TEMP/autofix.json"; then
+            echo "the server fixed mechanical text faults (above); checking again"
+            python templates/render_job.py text "$JOB" > "$RUNNER_TEMP/text2.log" 2>&1; rc=$?; cat "$RUNNER_TEMP/text2.log"
+            cat "$RUNNER_TEMP/text2.log" >> "$RUNNER_TEMP/text.log"
+          fi
+          exit $rc
 
       - name: HyperFrames (only for a job with an insert, a frame or kit moments)
         run: |
@@ -166,7 +174,8 @@ jobs:
           trap 'python templates/runner_stats.py stop "$stats" || true' EXIT
           export LOOK_ENTRY="$RUNNER_TEMP/look.json"    # theme and style of the Reel, for the look ledger (no three in a row)
           python templates/jobsha.py check "$(basename "$JOB" .json)" "$JOB_SHA"
-          python templates/render_job.py run "$JOB"
+          set -o pipefail
+          python templates/render_job.py run "$JOB" 2>&1 | tee "$RUNNER_TEMP/render.log"
           echo "RENDER_SECS=$(( $(date +%s) - start ))" >> "$GITHUB_ENV"
           # keep this run's render-times entry; the commit step rebuilds on the latest main
           python -c "import json, os; e = json.load(open('templates/assets/render-times.json'))[-1]; e['runner'] = 'selfhosted'; e['cores'] = $(nproc); e['job_secs'] = None; q = os.path.join('$RUNNER_TEMP', 'queue-wait'); e['queue_wait_secs'] = int(open(q).read()) if os.path.exists(q) else None; json.dump(e, open('$RUNNER_TEMP/render-time.json', 'w'))"
@@ -179,6 +188,11 @@ jobs:
           echo "OUT=$out" >> "$GITHUB_ENV"
           stem="${out%.mp4}"; base="${stem%-reel-v*}"
           files="$out $base-strip.jpg $base-sheet.jpg"
+          # one verdict per Reel (item H): pass, the soft notes and anything the server fixed
+          export DISPATCHES=$(python templates/jobsha.py count "$(basename "$JOB" .json)")
+          python templates/qc.py write "$JOB" "$out" "$base-qc.json" --autofix "$RUNNER_TEMP/autofix.json" --log "$RUNNER_TEMP/render.log" \
+            && files="$files $base-qc.json" || echo "qc file not written"
+
           # 4 frames a second through the Reel (decodecheck.dense_strip), so the first second of every shot is seen
           if [ -f "$base-dense.jpg" ]; then files="$files $base-dense.jpg"; fi
           mkdir -p "$RUNNER_TEMP/out"
@@ -233,6 +247,13 @@ jobs:
 
       # Last: the fonts and every scratch file leave the server. Runs on failure and cancel too; a failed run leaves
       # the job file in jobs/live/ untouched.
+      - name: QC verdict on a failed render (item H)
+        if: failure()
+        run: |
+          cat "$RUNNER_TEMP/text.log" "$RUNNER_TEMP/render.log" > "$RUNNER_TEMP/all.log" 2>/dev/null || true
+          python templates/qc.py fail "$JOB" "$RUNNER_TEMP/qc.json" --log "$RUNNER_TEMP/all.log" || true
+          [ -f "$RUNNER_TEMP/qc.json" ] && { echo "### QC: fail"; echo '```json'; cat "$RUNNER_TEMP/qc.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY" || true
+
       - name: Clean up
         if: always()
         run: rm -rf "$DUBAI_FONTS" "$RUNNER_TEMP/dxb-fonts" "$DXB_UPLOADS" "$RUNNER_TEMP/out" "$RUNNER_TEMP"/runner-stats.json* cards 2>/dev/null || true

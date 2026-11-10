@@ -179,6 +179,66 @@ def hard(findings):
     return [f for f in findings if f['rule'] != 'headline_long' or f.get('hard')]
 
 
+PCT_WORD = ' بالمئة'
+
+
+def _fix_text(t):
+    """Mechanical fixes only (item H): a space after an Arabic prefix glued to a Latin word or digit, a percent sign
+    spelt out, a plus sign dropped. Returns (new text, [what changed])."""
+    out, ch = t, []
+    new = re.sub(r'([\u0621-\u064A\u0640])([A-Za-z0-9])', r'\1 \2', out)
+    if new != out:
+        ch.append('space after a glued prefix'); out = new
+    new = re.sub(r'(\d)\s*[%٪]', lambda m: m.group(1) + PCT_WORD, out)
+    new = re.sub(r'[%٪]\s*(\d+(?:[.,]\d+)?)', lambda m: m.group(1) + PCT_WORD, new)
+    if new != out:
+        ch.append('percent sign spelt out'); out = new
+    new = re.sub(r'(?<=[0-9A-Za-z])\+|\+(?=[0-9A-Za-z])', '', out)
+    if new != out:
+        ch.append('plus sign dropped'); out = new
+    return out, ch
+
+
+def fix(job):
+    """The job with its mechanical text faults fixed, and [(where, before, after, what)]. Latin-first lines, length and
+    reading time are never changed here: they need a writer."""
+    import copy
+    j, changes = copy.deepcopy(job), []
+
+    def one(where, t):
+        new, ch = _fix_text(t)
+        if ch:
+            changes.append({'where': where, 'before': t, 'after': new, 'what': ', '.join(ch)})
+        return new
+    if isinstance(j.get('headline'), str):
+        j['headline'] = one('headline', j['headline'])
+    n = 0
+    for grp in j.get('lines') or []:
+        if not isinstance(grp, list) or len(grp) < 3:
+            continue
+        for k, x in enumerate(grp[2]):
+            n += 1
+            if isinstance(x, str):
+                grp[2][k] = one(f'line {n}', x)
+            elif isinstance(x, list) and x and isinstance(x[0], str):
+                x[0] = one(f'line {n}', x[0])
+    for i, it in enumerate(j.get('strip') or [], 1):
+        if isinstance(it, list) and it:
+            if isinstance(it[0], str):
+                it[0] = one(f'strip {i}', it[0])
+            if len(it) > 1 and isinstance(it[1], str):
+                it[1] = one(f'strip {i}', it[1])
+    for i, c in enumerate(j.get('credits') or [], 1):
+        if isinstance(c, list) and len(c) > 2 and isinstance(c[2], str):
+            c[2] = one(f'credit {i}', c[2])
+    for i, g in enumerate(j.get('gfx') or [], 1):
+        if isinstance(g, dict):
+            for k in ('title', 'headline', 'line', 'note', 'caption', 'label'):
+                if isinstance(g.get(k), str):
+                    g[k] = one(f'gfx {i} {k}', g[k])
+    return j, changes
+
+
 def report(findings):
     if not findings:
         return 'text rules: clean'
@@ -191,6 +251,17 @@ if __name__ == '__main__':
     a = sys.argv[1:]
     if not a:
         raise SystemExit(__doc__)
+    if a[0] == 'fix':                         # textrules.py fix <job> <changes.json>: rewrites the job in place
+        job = json.load(open(a[1], encoding='utf-8'))
+        new, ch = fix(job)
+        if ch:
+            json.dump(new, open(a[1], 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+        if len(a) > 2:
+            json.dump(ch, open(a[2], 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+        for c in ch:
+            print(f"autofix: {c['where']}: {c['what']}: {c['before']!r} -> {c['after']!r}")
+        print(f'autofix: {len(ch)} change(s)')
+        sys.exit(0 if ch else 3)
     job = json.load(open(a[0], encoding='utf-8'))
     fs = check(job)
     print(report(fs))
