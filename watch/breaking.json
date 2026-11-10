@@ -1,10 +1,48 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T09:52:08Z",
- "seq": 266,
+ "generated_at": "2026-11-10T10:00:17Z",
+ "seq": 267,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 10235,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Warhammer Survivors Out Now on XBOX Game Pass! Defeat the Gloomspite Gitz With These Tips",
+   "url": "https://news.xbox.com/en-us/2026/11/10/warhammer-survivors-gloomspite-gitz/",
+   "published": "2026-11-10T10:00Z",
+   "first_seen": "2026-11-10T10:00:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/WS_SCREENSHOT_RELEASE-DATE_01_3840x2160-d7d72aeea17c09098d92.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/WS_Sprite_MoonclanStabba-135a6700f297e9efdc3a.gif"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/WS_Sprite_Squighopper-3d6f4e79abce97ae5808.gif"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/WS_Sprite_ManglerSquig-3263bee0c18624bf315f.gif"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/WS_Sprite_Troggoth-10cc06a9a472121a95c5.gif"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/WS_Sprite_Trugg-45d16fd62fb2ff43c085.gif"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 267
+  }
+ ],
  "recent": [
   {
    "id": 10155,
@@ -434,19 +472,16 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T09:50:15Z",
+  "last_poll_at": "2026-11-10T10:00:15Z",
   "sources_enabled": 100,
-  "sources_ok": 90,
-  "sources_failing": 9,
+  "sources_ok": 93,
+  "sources_failing": 6,
   "failed": [
-   "Bethesda (YouTube) (HTTP 404, 4x)",
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 14x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 15x)",
    "Nintendo of America (X) (HTTP 429, 58x)",
    "PlayStation (X) (HTTP 429, 74x)",
-   "PlayStation MENA (YouTube) (HTTP 404, 4x)",
    "PlayStation Middle East (X) (HTTP 429, 5x)",
    "Rockstar Games (X) (HTTP 429, 30x)",
-   "Steam (YouTube) (HTTP 404, 4x)",
    "Xbox (X) (HTTP 429, 75x)"
   ]
  }
