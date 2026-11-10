@@ -60,12 +60,12 @@
    "by": "scout"
   }
  ],
- "status": "building",
+ "status": "queued",
  "lanes": {
   "digital_lounge": "trailer Reel (official PS Blog video), رسمي, X Instagram Threads",
   "dxb_knight": "on hold"
  },
- "approved": "pending: director then Publer; gate 15:26Z PS Blog read in full; gap rule over caps (trailer 4, split 5, clipcard third in a row; gap 154 min vs 60)",
+ "approved": "go: rolling queue (Production 2 run 15:35Z); gate 15:26Z PS Blog read in full; director PASS round 2 with a note (the trailer's own burnt-in caption kept, full frame); gap rule over caps (trailer 4, split 5; gap 154 min vs 60), open question q-20261108-gap-vs-cap; DeepL both ways run 15:40Z (back-check ok; 'Runner shell' lost as 'Runner'; cross-save chosen as حفظ التقدم عبر المنصات); grammar review by helper, 2 house-rule edits applied; sensitive: none",
  "sensitive": "none",
  "recipe": "2 trailer drop (update kind)",
  "first_report": "PlayStation Blog 10 Nov 2026 14:00Z (Sony Interactive Entertainment; Bungie's own article the same hour, not readable here); first seen by the server watch 14:05Z",
@@ -81,5 +81,24 @@
    "update"
   ],
   "hits": []
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/marathon-symbiosis-update-december-8-reel-v1.mp4",
+  "blob": "e9699be284554d960646f33207a1a74d44d363ef",
+  "at": "2026-11-10T16:08:36Z",
+  "note": "round 2 of 2: ESRB badge fixed (stretch from 4.4 s); remaining note: the trailer's own burnt-in red caption CO-OP PVE ROGUELITE is kept, showcase shows the full official frame, no crop; passes with a note per the two-round limit",
+  "checklist": {
+   "job": "jobs/live/marathon-symbiosis-update-december-8.json",
+   "sha256": "f6f70f28ffa8d2c3488fa4f57c388bcf8e601e2ecf0c98c01d045a75ef1dd337",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": "showcase",
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-haiku-r2"
+ },
+ "queued_at": "2026-11-10T16:09Z"
 }
