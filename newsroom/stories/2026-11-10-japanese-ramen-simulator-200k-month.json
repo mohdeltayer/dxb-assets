@@ -11,7 +11,7 @@
  ],
  "category": "milestone",
  "priority": "medium",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://news.denfaminicogamer.jp/news/261110j",
@@ -68,8 +68,33 @@
  "template": "trailer",
  "chip": "أرقام",
  "ledger_find": "no Ramen Simulator story",
- "versions": [],
+ "versions": [
+  {
+   "v": 4,
+   "file": "cards/2026-11/japanese-ramen-simulator-200k-month-reel-v4.mp4",
+   "director": "PASS round 2"
+  }
+ ],
  "posts": [],
  "corrections": [],
- "metrics": {}
+ "metrics": {},
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/japanese-ramen-simulator-200k-month-reel-v4.mp4",
+  "blob": "44100c948e561dabb0b653c01cba26782cab5ea3",
+  "at": "2026-11-10T04:22:25Z",
+  "note": "round 2 PASS on v4",
+  "checklist": {
+   "job": "jobs/live/japanese-ramen-simulator-200k-month.json",
+   "sha256": "60d638af20edbeef102ce093a495e962260918ffa41487619793cb74efafeb6a",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-sonnet"
+ },
+ "approved": "go: rolling queue; scheduled in Publer 05:15Z (09:15 Dubai) IG, X, Threads"
 }
