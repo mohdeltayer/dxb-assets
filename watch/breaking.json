@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T16:35:36Z",
- "seq": 287,
+ "generated_at": "2026-11-10T16:52:11Z",
+ "seq": 288,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
+  {
+   "id": 10666,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Marvel Cosmic Invasion - The Siege of Castle Doom DLC #2 Launch Trailer | PS5 & PS4 Games",
+   "url": "https://www.youtube.com/watch?v=n0eYRkaw8sc",
+   "published": "2026-11-10T16:15Z",
+   "first_seen": "2026-11-10T16:35:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/n0eYRkaw8sc/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=n0eYRkaw8sc"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 287
+  },
   {
    "id": 10657,
    "source": "PlayStation Blog",
@@ -42,29 +64,6 @@
    "breaking_source": true,
    "breaking_seq": 287
   },
-  {
-   "id": 10666,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Marvel Cosmic Invasion - The Siege of Castle Doom DLC #2 Launch Trailer | PS5 & PS4 Games",
-   "url": "https://www.youtube.com/watch?v=n0eYRkaw8sc",
-   "published": "2026-11-10T16:15Z",
-   "first_seen": "2026-11-10T16:35:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/n0eYRkaw8sc/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=n0eYRkaw8sc"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 287
-  }
- ],
- "recent": [
   {
    "id": 10635,
    "source": "PlayStation (YouTube)",
@@ -753,9 +752,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T16:35:14Z",
+  "last_poll_at": "2026-11-10T16:52:05Z",
   "sources_enabled": 100,
-  "sources_ok": 94,
+  "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 18x)",
