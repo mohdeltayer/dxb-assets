@@ -1,10 +1,24 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T01:05:19Z",
- "seq": 253,
+ "generated_at": "2026-11-10T01:15:08Z",
+ "seq": 254,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 9993,
+   "source": "Nintendo Japan",
+   "source_kind": "official",
+   "title": "Nintendo Switch 2 / Nintendo Switchの本体機能をバージョンアップ。新しい機能をご紹介します。",
+   "url": "https://www.nintendo.com/jp/topics/article/31e57164-941c-4103-bd30-f04744073cc3",
+   "published": "2026-11-10T01:02Z",
+   "first_seen": "2026-11-10T01:15:04Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 254
+  }
+ ],
+ "recent": [
   {
    "id": 9989,
    "source": "Nintendo Japan",
@@ -16,9 +30,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 253
-  }
- ],
- "recent": [
+  },
   {
    "id": 9958,
    "source": "Nintendo of America (YouTube)",
@@ -336,9 +348,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T01:05:14Z",
+  "last_poll_at": "2026-11-10T01:15:04Z",
   "sources_enabled": 100,
-  "sources_ok": 74,
+  "sources_ok": 75,
   "sources_failing": 24,
   "failed": [
    "Bethesda (YouTube) (HTTP 404, 2x)",
@@ -351,9 +363,9 @@
    "EA SPORTS FC (YouTube) (HTTP 404, 2x)",
    "Fortnite (YouTube) (HTTP 404, 2x)",
    "Nintendo of America (X) (HTTP 429, 57x)",
-   "Nintendo of America (YouTube) (HTTP 404, 3x)",
+   "Nintendo of America (YouTube) (HTTP 404, 4x)",
    "PlayStation (X) (HTTP 429, 73x)",
-   "PlayStation (YouTube) (HTTP 500, 3x)",
+   "PlayStation (YouTube) (HTTP 404, 4x)",
    "PlayStation MENA (YouTube) (HTTP 404, 2x)",
    "PlayStation Middle East (X) (HTTP 429, 4x)",
    "PlayStation Middle East (YouTube) (HTTP 404, 2x)",
