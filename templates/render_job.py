@@ -908,6 +908,24 @@ def persist_overlay(job, video, out):
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 
+def quality(job):
+    """The picture-quality setting for this render (adv-20261110-picture-quality-on-server): the job's "quality"
+    ("hq" or "base"), else DXB_QUALITY, else base. hq: the final encode at reel.HQ_ENC and the weak-source path;
+    the breaking profile and drafts always keep today's settings."""
+    q = job.get('quality') or os.environ.get('DXB_QUALITY') or 'base'
+    if q not in ('hq', 'base'):
+        raise ValueError(f'quality {q!r}: "hq" or "base"')
+    if profile_of(job) or job.get('label') == 'عاجل':
+        q = 'base'
+    reel.QUALITY = q
+    if q == 'hq':
+        reel.FINAL_ENC = list(reel.HQ_ENC)
+    print(f'render_job: quality {q} (final encode {" ".join(reel.FINAL_ENC)}; weak-source path '
+          f'{"on, raisr " + ("available" if reel.has_raisr() else "not installed: deblock only") if q == "hq" else "off"})',
+          flush=True)
+    return q
+
+
 def run(job, draft=False):
     if job.get('kind') == 'famitsu':
         return famitsu(job, draft)
@@ -915,6 +933,7 @@ def run(job, draft=False):
         return breaking(job, draft)
     t0 = time.time()
     reel.CLEAN_MAP = job.get('clean_map')       # pre-render map (templates/prerender.py); None changes nothing
+    quality(job)
     for item in job.get('footage', []):
         fetch(item)
     gfx(job)

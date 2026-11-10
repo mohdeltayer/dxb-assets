@@ -29,7 +29,7 @@ strip: [(label, value), ...] (2 or 3) pins the `split` template's fact strip low
        lines rise above it and never repeat a value. A value is a string, or
        ('aed', '149') for digits with the dirham symbol left of them.
 """
-import json, math, os, re, shutil, subprocess, sys, tempfile
+import json, math, os, re, shutil, subprocess, sys, tempfile, time
 from PIL import Image, ImageDraw, ImageFilter
 import cards as C, fast_ar as A, ig_ar as G, outro, sonic
 import skins as SK
@@ -882,6 +882,20 @@ def _height(p):
 #: Instagram's re-encode. Applied to footage and official stills, never to our own graphics
 #: (numgfx clips under uploads/numbers/), which stay clean. FINISH = False turns it off.
 FINISH = True
+#: Picture quality on the server (adv-20261110-picture-quality-on-server, items 2 and 3, Mohammad 10 Nov 2026). QUALITY
+#: 'hq' (a job's "quality": "hq", or DXB_QUALITY=hq) turns on the final encode at HQ_ENC and the weak-source path:
+#: a shot flagged lowbit or enlarged past WEAK_ZOOM gets a deblock before the denoise and, when this ffmpeg has the
+#: raisr filter (OpenVisualCloud Video Super Resolution, BSD-3), a RAISR upscale in place of lanczos; cached per shot
+#: like the picture pass. The weak path stops after WEAK_BUDGET seconds per Reel (the rest keeps today's chain), and
+#: any failure falls back to today's chain. 'base' is today's look, unchanged.
+QUALITY = os.environ.get('DXB_QUALITY', 'base')
+HQ_ENC = ['-preset', 'slow', '-crf', '16']
+WEAK_ZOOM = 1.5
+WEAK_BUDGET = 60.0
+DEBLOCK = 'deblock=filter=strong:block=8'
+WEAK_SPENT = 0.0
+WEAK_SHOTS = []           # [(file, start, how)] the weak path touched in this render
+_RAISR = None
 DENOISE = 'hqdn3d=1.5:1.5:4:4'
 GRADE = 'eq=contrast=1.04:saturation=1.06,noise=alls=3:allf=t'
 
@@ -959,6 +973,36 @@ def source_quality(shots):
             blk = DC.block_ratio(C.U + f, s, d, crop)
         out[i] = {'zoom': round(z, 2), 'rows': rows, 'bitrate': DC.bitrate_flag(C.U + f), 'block': blk,
                   'blocky': bool(blk and blk[1] > DC.BLOCK_MAX)}
+    return out
+
+
+SOURCES = None             # the last reel()'s per-shot source record, written into its render-times entry
+
+
+def sources_record(shots, q=None):
+    """Per shot: what the footage was (adv-20261110-picture-quality-on-server, item 1). Until 10 Nov nothing recorded
+    the size of a Reel's footage, so a soft Reel could not be told from a good one. Footage: file, start, width and
+    height of the source, fps, video Mbps, rows of picture after the letterbox crop, enlargement to 9:16 and the
+    lowbit flag; stills: file and enlargement. Our own graphics are left out."""
+    q = q if q is not None else source_quality(shots)
+    out = []
+    for i, (f, s, d, fo) in enumerate(shots):
+        if _ours(f) or str(f).startswith((CACHE + '/', STILLS + '/')) or not os.path.exists(C.U + f):
+            continue
+        if os.path.splitext(f)[1].lower() in STILL:
+            try:
+                out.append({'shot': i, 'file': f, 'still': True, 'zoom': round(zoom((f, s, d, fo)), 2)})
+            except Exception:              # noqa: BLE001
+                pass
+            continue
+        try:
+            w, h, fps, bps = DC.probe(C.U + f)
+        except Exception:                  # noqa: BLE001
+            continue
+        r = q.get(i) or {}
+        out.append({'shot': i, 'file': f, 'start': s, 'width': w, 'height': h, 'fps': round(fps, 2),
+                    'mbps': round(bps / 1e6, 2) if bps else None, 'rows': r.get('rows'), 'zoom': r.get('zoom'),
+                    'lowbit': bool(r.get('bitrate'))})
     return out
 
 
@@ -1498,11 +1542,37 @@ def inter_enc():
     return INTER_ENC if free > 3e9 else ['-preset', 'ultrafast', '-crf', '8']
 
 
+def has_raisr():
+    global _RAISR
+    if _RAISR is None:
+        try:
+            r = subprocess.run(['ffmpeg', '-hide_banner', '-filters'], capture_output=True, text=True, timeout=20)
+            _RAISR = bool(re.search(r'\sraisr\s', r.stdout))
+        except Exception:                    # noqa: BLE001
+            _RAISR = False
+    return _RAISR
+
+
+def weak_source(f, s, d, rows=None):
+    """'deblock' or 'deblock+raisr' when the hq weak-source path applies to this shot, else None."""
+    if QUALITY != 'hq' or _ours(f) or WEAK_SPENT >= WEAK_BUDGET:
+        return None
+    try:
+        rows = rows or _bars(C.U + f, s, d)[1]
+        low = bool(DC.bitrate_flag(C.U + f))
+    except Exception:                        # noqa: BLE001
+        return None
+    if not (low or H / rows > WEAK_ZOOM):
+        return None
+    return 'deblock+raisr' if has_raisr() else 'deblock'
+
+
 def _shot_key(f, s, d, fo):
     import hashlib
     src = C.U + f
     raw = json.dumps([f, s, d, repr(fo), FINISH, MAX_ZOOM, DENOISE, GRADE, os.path.getmtime(src), os.path.getsize(src)]
-                     + ([list(SHOWCASE), SHOW_BG] if SHOWCASE else []))      # a showcase box is its own picture pass
+                     + ([list(SHOWCASE), SHOW_BG] if SHOWCASE else [])       # a showcase box is its own picture pass
+                     + ([weak_source(f, s, d)] if QUALITY == 'hq' else []))   # the weak-source path is its own pass
     return hashlib.sha1(raw.encode()).hexdigest()[:16]
 
 
@@ -1525,14 +1595,36 @@ def cached_shot(f, s, d, fo, lowres_ok=False):
         pre, post = f'{DENOISE},', f",cas={0.7 if rows < H else 0.4},{GRADE}"
     else:
         pre, post = '', (',unsharp=5:5:0.5:5:5:0.0' if rows < H else '')
-    pic = (_show_pad(bars, pre, post) if SHOWCASE else
-           f"{bars}{pre}scale=-2:{H}:flags=lanczos,crop={W}:{H}:x='(iw-{W})*({_fo_expr(fo, d)})':y=0{post}")
-    vf = (f"{pic},"
-          f"fps=30,tpad=stop_mode=clone:stop_duration=0.5,trim=duration={d},setpts=PTS-STARTPTS,setsar=1,format=yuv420p")
+    weak = weak_source(f, s, d, rows) if FINISH and not SHOWCASE else None
+
+    def chain(weak):
+        p0, sc = pre, f'scale=-2:{H}:flags=lanczos'
+        if weak:
+            p0 = f'{DEBLOCK},' + pre
+            if 'raisr' in weak:              # RAISR to 2x, then lanczos to the frame height
+                sc = f'raisr=ratio=2:bits=8:range=low:threadcount={max(1, (os.cpu_count() or 2) - 1)},scale=-2:{H}:flags=lanczos'
+        pic = (_show_pad(bars, p0, post) if SHOWCASE else
+               f"{bars}{p0}{sc},crop={W}:{H}:x='(iw-{W})*({_fo_expr(fo, d)})':y=0{post}")
+        return (f"{pic},"
+                f"fps=30,tpad=stop_mode=clone:stop_duration=0.5,trim=duration={d},setpts=PTS-STARTPTS,setsar=1,format=yuv420p")
     a = ['-map', '0:a?', '-c:a', 'pcm_s16le', '-ar', '48000', '-ac', '2'] if _has_audio(C.U + f) else ['-an']
-    tmp = C.U + rel + '.part.mkv'
-    subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-ss', str(s), '-t', str(d), '-i', C.U + f, '-vf', vf,
-                    '-map', '0:v', '-c:v', 'libx264', '-pix_fmt', 'yuv420p'] + inter_enc() + a + ['-t', str(d), tmp], check=True)
+    tmp = C.U + rel + f'.{os.getpid()}.part.mkv'   # per process: two renders may build the same shot at once (item I)
+
+    def run(vf):
+        subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-ss', str(s), '-t', str(d), '-i', C.U + f, '-vf', vf,
+                        '-map', '0:v', '-c:v', 'libx264', '-pix_fmt', 'yuv420p'] + inter_enc() + a + ['-t', str(d), tmp], check=True)
+    if weak:
+        global WEAK_SPENT
+        t0 = time.time()
+        try:
+            run(chain(weak))
+            WEAK_SHOTS.append((f, s, weak))
+        except Exception as e:               # noqa: BLE001  the weak path never holds a render: today's chain
+            print(f'weak-source path: {f} at {s}: {e}; today\'s chain', flush=True)
+            run(chain(None))
+        WEAK_SPENT += time.time() - t0
+    else:
+        run(chain(None))
     os.replace(tmp, C.U + rel)
     return rel
 
@@ -1560,6 +1652,21 @@ def _record_times(name, profile, stages):
                     lane=os.environ.get('RENDER_LANE', 'container'),
                     queued_at=os.environ.get('RENDER_QUEUED_AT') or (now - datetime.timedelta(seconds=total)).strftime('%Y-%m-%dT%H:%MZ'),
                     finished_at=now.strftime('%Y-%m-%dT%H:%MZ'), render_min=round(total / 60, 2)))
+    global SOURCES
+    if SOURCES is not None:
+        led[-1]['sources'] = SOURCES
+        zs = [x['zoom'] for x in SOURCES if x.get('zoom')]
+        hs = [x['height'] for x in SOURCES if x.get('height')]
+        led[-1]['source_summary'] = {'min_height': min(hs) if hs else None, 'max_zoom': max(zs) if zs else None,
+                                     'lowbit_shots': sum(1 for x in SOURCES if x.get('lowbit'))}
+        SOURCES = None
+    led[-1]['final_enc'] = ' '.join(FINAL_ENC) if (profile or 'standard') == 'standard' else (profile or '')
+    led[-1]['quality'] = QUALITY
+    global WEAK_SPENT
+    if WEAK_SHOTS:
+        led[-1]['weak_path'] = {'shots': [{'file': f, 'start': st, 'how': how} for f, st, how in WEAK_SHOTS],
+                                'secs': round(WEAK_SPENT, 1), 'raisr': has_raisr()}
+    WEAK_SHOTS.clear(); WEAK_SPENT = 0.0
     json.dump(led[-100:], open(TIMES, 'w'), indent=1)
     return led[-1]
 PINK_FLAG = False         # Mohammad, 4 Oct 2026: pink in game footage and official art is fine
@@ -2092,7 +2199,13 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
                         raise ValueError(f'the composition frame ({sa:.1f} to {sz:.1f}s) carries the strip only, never a line: {t}')
         for i, (text, _, _, kw) in enumerate(lines):   # a line outside the safe zone stops here, not after the encode
             line_layer(text, f'{tmp}/l{i}.png', skin=skin, **kw)
-        quality_gate(shots, lowres_ok, blocky_ok, boxed=bool(show))   # bitrate floor, block check, named lowres_ok (24 Oct 2026)
+        global SOURCES
+        qg = quality_gate(shots, lowres_ok, blocky_ok, boxed=bool(show))   # bitrate floor, block check, named lowres_ok (24 Oct 2026)
+        try:                                        # what the footage was, for render-times.json (10 Nov 2026)
+            SOURCES = sources_record(shots, qg if isinstance(qg, dict) else None)
+        except Exception as e:                      # noqa: BLE001  never holds a render
+            print(f'source record: skipped ({e})', flush=True)
+            SOURCES = None
         lap('checks')
         ext = 'mp4' if draft else 'mkv'             # lossless intermediates for the real render (advisor, 14 Oct 2026)
         global TRANSITION

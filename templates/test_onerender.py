@@ -30,6 +30,15 @@ class Rules(unittest.TestCase):
         self.assertIn('line_count', {f['rule'] for f in TR.check(j)})
 
 
+class Autofix(unittest.TestCase):
+    def test_mechanical_only(self):
+        new, ch = TR.fix(JOB)
+        self.assertEqual({c['what'] for c in ch} >= {'space after a glued prefix', 'percent sign spelt out'}, True)
+        rules = {f['rule'] for f in TR.hard(TR.check(new))}
+        self.assertNotIn('glued', rules); self.assertNotIn('sign', rules)
+        self.assertIn('latin_first', rules)          # a Latin-first line needs a writer, never the server
+
+
 class Paths(unittest.TestCase):
     def test_name_or_path(self):
         d = tempfile.mkdtemp()
