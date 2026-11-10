@@ -2,16 +2,16 @@
  "name": "dragon-quest-rpg-cursed-tree-chosen-isle-closed-beta-november-23",
  "out": "cards/2026-11/dragon-quest-rpg-cursed-tree-chosen-isle-closed-beta-november-23-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-10T17:15:28Z",
+ "at": "2026-11-10T17:24:27Z",
  "findings": [],
  "notes": [
-  "length 10.1 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: applied; music_pct 88.6; leak_pct 0.2; cache {'hit': 2, 'miss': 0}; separate_secs 2.9; secs 5.2",
-  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 3.0, \"held_under_text\": 0.0, \"secs\": 10.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 10.8 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 78.7% > 5.0%); music_pct 3.4; leak_pct 78.7; cache {'hit': 0, 'miss': 2}; separate_secs 4.8; secs 7.4",
+  "render_job: lifeless: {\"score\": 7.3, \"still_share\": 0.084, \"longest_still\": 0.6, \"cuts_per_10s\": 3.74, \"held_under_text\": 0.065, \"secs\": 10.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "8845204be12e0f0c80c3997571cd06ad0a6ba6a6",
- "dispatches": 2,
+ "job_sha": "8360668081dfd83a93bd82a511815ff0ff571200",
+ "dispatches": 4,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
