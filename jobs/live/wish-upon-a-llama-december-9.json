@@ -18,7 +18,7 @@
   [
    "llama-release.mp4",
    8.1,
-   1.8,
+   1.7,
    [
     [
      0.0,
@@ -73,7 +73,7 @@
   [
    "llama-release.mp4",
    27.5,
-   1.5,
+   1.35,
    [
     [
      0.0,
@@ -83,8 +83,8 @@
   ],
   [
    "llama-release.mp4",
-   25.5,
-   0.8,
+   25.6,
+   0.7,
    [
     [
      0.0,
@@ -133,7 +133,7 @@
    7,
    [
     [
-     "تربّي الأرانب\nوالكابيبارا والخيول",
+     "تربّي الأرانب\nوالكابيبارا",
      {
       "size": 54
      }
@@ -245,5 +245,25 @@
    "music": "trailer music stem"
   }
  ],
- "cut": true
+ "cut": true,
+ "block_ok": [
+  [
+   "llama-release.mp4",
+   9.87,
+   10.4,
+   "pixel art: scene cut in the trailer, read as straight edges; source decode clean, frames looked at on the sheet (no smear)"
+  ],
+  [
+   "llama-release.mp4",
+   28.9,
+   29.37,
+   "pixel art: scene cut in the trailer, read as straight edges; source decode clean, frames looked at on the sheet (no smear)"
+  ],
+  [
+   "llama-release.mp4",
+   25.03,
+   25.55,
+   "pixel art: scene cut in the trailer, read as straight edges; source decode clean, frames looked at on the sheet (no smear)"
+  ]
+ ]
 }
