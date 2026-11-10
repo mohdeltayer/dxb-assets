@@ -14,7 +14,7 @@
  "kind": "out-now",
  "family": "7 release",
  "sensitive": "none",
- "status": "building",
+ "status": "scheduled in Publer 14:15Z (18:15 Dubai) on instagram, x, threads",
  "recipe": "2 trailer drop (notes/scenario-recipes.md): 0-3.5 headline over the strongest moving shot (the tanuki's face) · 3.5-8 trailer plays, no line (bike delivery, gameplay) · 8-11.4 line 1 on the postman shot (what you play) · 11.4-14.4 price card alone, no line · 14.4-17.4 closing shot, no new text in the last 2 s",
  "sources": [
   {
@@ -95,5 +95,25 @@
    "tanuki"
   ],
   "hits": []
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/tanuki-pons-summer-out-now-november-10-reel-v1.mp4",
+  "blob": "25cf4f89be5522e0afcc4fbdaa4c8b5747930c2e",
+  "at": "2026-11-10T13:51:09Z",
+  "note": "NOTE under the two-fix-rounds rule: director verdict FIX in round 1 (a game UI panel cut at the edge: fixed by swapping the shot; a line it misread: on-screen text is the correct 'يرمم ضريحًا'; a second fact on the price card: kept, as on the Warhammer card). Not re-reviewed after round 2. Audio split applied, music 64.7 percent, leak 0.1; decode clean",
+  "checklist": {
+   "job": "jobs/live/tanuki-pons-summer-out-now-november-10.json",
+   "sha256": "08002bc25f7ec3f8a834043ce9295876ef4c02e71e3a2c74b47570fae306d873",
+   "ok": true,
+   "problems": [],
+   "template": "clipcard",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-haiku"
+ },
+ "reel": "cards/2026-11/tanuki-pons-summer-out-now-november-10-reel-v1.mp4",
+ "approved": "go: rolling queue; scheduled 14:15Z; director FIX round 1 handled, scheduled with a note after round 2 (rule: two fix rounds)"
 }
