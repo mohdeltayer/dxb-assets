@@ -1,0 +1,23 @@
+{
+ "name": "project-motor-racing-world-endurance-pack-november-10",
+ "out": "cards/2026-11/project-motor-racing-world-endurance-pack-november-10-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-10T14:45:26Z",
+ "findings": [],
+ "notes": [
+  "length 18.4 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 75.0; leak_pct 0.8; cache {'hit': 0, 'miss': 4}; separate_secs 7.8; secs 12.8",
+  "smear check: exempt 12.00 to 17.00 s (our own cards)",
+  "render_job: lifeless: {\"score\": 1.5, \"still_share\": 0.011, \"longest_still\": 0.2, \"cuts_per_10s\": 9.29, \"held_under_text\": 0.011, \"secs\": 18.3, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "cd0fd9bcaadc5a255b7595219986d9bad81d0ee8",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18"
+}
