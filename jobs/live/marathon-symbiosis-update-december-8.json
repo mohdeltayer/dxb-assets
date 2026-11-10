@@ -14,17 +14,6 @@
  "shots": [
   [
    "marathon-symbiosis-update-december-8-trailer.mp4",
-   0.0,
-   1.6,
-   [
-    [
-     0.0,
-     0.5
-    ]
-   ]
-  ],
-  [
-   "marathon-symbiosis-update-december-8-trailer.mp4",
    3.0,
    2.2,
    [
@@ -37,7 +26,7 @@
   [
    "marathon-symbiosis-update-december-8-trailer.mp4",
    5.2,
-   2.6,
+   2.9,
    [
     [
      0.0,
@@ -47,8 +36,8 @@
   ],
   [
    "marathon-symbiosis-update-december-8-trailer.mp4",
-   7.8,
-   2.5,
+   8.1,
+   2.2,
    [
     [
      0.0,
@@ -63,7 +52,7 @@
    1,
    [
     [
-     "يصدر التحديث لجميع اللاعبين",
+     "وضع جديد للعب ضد البيئة\nومباريات Deathmatch التجريبية",
      {
       "size": 54
      }
@@ -72,10 +61,10 @@
   ],
   [
    2,
-   3,
+   2,
    [
     [
-     "وضع جديد للعب ضد البيئة\nومباريات Deathmatch التجريبية",
+     "يصدر لجميع اللاعبين",
      {
       "size": 54
      }
@@ -86,7 +75,7 @@
  "credits": [
   [
    0,
-   3,
+   2,
    "المصدر: مدونة بلايستيشن (PlayStation Blog)"
   ]
  ],
@@ -101,7 +90,7 @@
  "cut": false,
  "track": [
   "marathon-symbiosis-update-december-8-trailer.mp4",
-  0.0
+  3.0
  ],
  "layout": "showcase",
  "showcase_reason": "the news is the trailer itself: the Symbiosis update trailer from PlayStation Blog",
@@ -128,28 +117,21 @@
   "ANGLE before lines": "yes: hook new PvE mode; why now the 8 Dec date; for players Expedition and Deathmatch beta; payoff Open Play Week 8 to 15 Dec in the strip",
   "STORY TYPE update": "yes: change (Symbiosis update 8 Dec), demonstration (the trailer), effect on play (PvE Expedition, 3v3 Deathmatch beta), limit (strip: Open Play Week dates)",
   "STORY: spoken paragraph": "yes: يصدر التحديث في 8 ديسمبر، وضع جديد للعب ضد البيئة ومباريات Deathmatch التجريبية",
-  "PICTURE: trailer is the news": "yes: showcase layout, the official clip from PlayStation Blog; only 11.75 s exists, whole stretch used except the ESRB card at 2.2 to 3.0 s and the smear at 10.4 s",
+  "PICTURE: trailer is the news": "yes: showcase layout, official PS Blog clip, only 11.75 s exists; one continuous stretch 3.0 to 10.3 s with its own sound (skips the opening Expedition title 0 to 2.2 s, the ESRB card 2.2 to 3.0 s, the smear flag at 10.4 s)",
   "SOUND": "trailer's own sound, audio split applies; speech check by the server",
   "CREDIT": "yes: credit on all four shots"
  },
  "decision_log": [
   {
-   "beat": "0 hook",
-   "shot": "0.0 to 1.6 s Expedition title and first scene",
-   "alternatives": "none: only one official clip of the update exists (PS Blog 1080p 11.75 s; Steam has only older trailers)",
+   "beat": "0 modes",
+   "shot": "3.0 to 7.8 s continuous",
+   "alternatives": "opener 0 to 2.2 s dropped (title card and ESRB slate); an out-of-order cut failed the audio split (music stem 11.4% leftover)",
    "crop": "showcase, full frame",
-   "music": "trailer"
+   "music": "trailer, one continuous stretch from 3.0 s"
   },
   {
-   "beat": "1 date",
-   "shot": "3.0 to 5.2 s",
-   "alternatives": "skipped 2.2 to 3.0 s (ESRB rating card)",
-   "crop": "showcase",
-   "music": "trailer"
-  },
-  {
-   "beat": "2 modes",
-   "shot": "5.2 to 7.8 s and 7.8 to 10.3 s",
+   "beat": "1 availability",
+   "shot": "7.8 to 10.3 s",
    "alternatives": "stopped before the smear flag at 10.38 s",
    "crop": "showcase",
    "music": "trailer"
