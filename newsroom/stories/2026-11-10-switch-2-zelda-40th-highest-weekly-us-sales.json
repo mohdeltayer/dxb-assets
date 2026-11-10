@@ -74,5 +74,32 @@
    "zelda"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/switch-2-zelda-40th-highest-weekly-us-sales-reel-v1.mp4",
+  "blob": "c6384f5d30509b7ad52008eb7dddcc63aea642ab",
+  "at": "2026-11-10T12:51:44Z",
+  "note": "T0 director helper PASS: headline reads at grid size, 3 visual lines start Arabic, crop acceptable, nothing graphic; credit line brief by T0 design; decode clean, 13.3 s",
+  "checklist": {
+   "job": "jobs/breaking/switch-2-zelda-40th-highest-weekly-us-sales.json",
+   "sha256": "80e061efba957f3bcf3d9f99625c847bd6163f02e607c7dd28b8b256b04975e6",
+   "ok": true,
+   "problems": [],
+   "template": null,
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-haiku"
+ },
+ "published": {
+  "at": "2026-11-10T12:54:21Z",
+  "commitment": "switch2-zelda40-circana-20261110-t0",
+  "links": [
+   "https://www.instagram.com/reel/Dfj8wu_q9GY/",
+   "https://x.com/1748744375616643072/status/2120137664376475991",
+   "https://www.threads.com/@the_digilounge/post/Dfj85YLBozM"
+  ]
  }
 }

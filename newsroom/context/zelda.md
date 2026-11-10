@@ -38,3 +38,4 @@ without checking them against the story's own primary.
 - 2026-11-05 · no chip · Ocarina of Time: 7 more songs on Nintendo Music (Nintendo of America post), intro cinematic and its music (`2026-11-05-ocarina-of-time-nintendo-music-seven-songs`)
 - 2026-11-05 · no chip · Ocarina of Time out now on Switch 2 (launch day), intro cinematic first stretch (`2026-11-05-ocarina-of-time-switch-2-out-now`)
 - 2026-11-09 · تسريب · trailer (not built) · 2026-11-09-ocarina-master-quest-dlc-datamine (`2026-11-09-ocarina-master-quest-dlc-datamine`)
+- 2026-11-10 · no chip · Switch 2 highest weekly US dollar sales of 2026 so far, Zelda 40th Anniversary Edition (Circana, w/e Oct 31) (`2026-11-10-switch-2-zelda-40th-highest-weekly-us-sales`)
