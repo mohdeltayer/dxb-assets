@@ -30749,5 +30749,50 @@
   "min_disk_free_mb": 227216,
   "setup_min": 0.12,
   "story": "mega-man-zero-zx-legacy-million"
+ },
+ {
+  "name": "switch-2-jailbreak-patched-23-5-0-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-10T03:42Z",
+  "stages": {
+   "checks": 6.4,
+   "montage": 39.4,
+   "text": 46.4,
+   "audio": 1.4,
+   "outro": 26.3
+  },
+  "total": 119.9,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-10T03:40Z",
+  "finished_at": "2026-11-10T03:42Z",
+  "render_min": 2.0,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 5.41,
+   "held_under_text": 0.0,
+   "secs": 22.2,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 193,
+  "queue_wait_secs": 60,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 884,
+  "peak_mem_mb": 2379,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 18200,
+  "peak_disk_mb": 22071,
+  "min_disk_free_mb": 224035,
+  "setup_min": 0.15,
+  "story": "switch-2-jailbreak-patched-23-5-0"
  }
 ]
