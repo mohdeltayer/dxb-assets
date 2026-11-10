@@ -14,10 +14,67 @@
    "seconds": 120
   }
  ],
- "shots": [],
+ "shots": [
+  [
+   "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
+   0.0,
+   1.6,
+   [
+    [
+     0.0,
+     0.674
+    ]
+   ]
+  ],
+  [
+   "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
+   26.81,
+   2.57,
+   [
+    [
+     0.0,
+     0.646
+    ]
+   ]
+  ],
+  [
+   "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
+   58.0,
+   2.8,
+   [
+    [
+     0.0,
+     0.63
+    ]
+   ]
+  ],
+  [
+   "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
+   70.05,
+   3.3,
+   [
+    [
+     0.0,
+     0.292
+    ]
+   ]
+  ]
+ ],
  "lines": [
   [
    1,
+   2,
+   [
+    [
+     "إضافة ثانية للعبة Cosmic Invasion",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
    4,
    [
     [
@@ -49,10 +106,7 @@
  "template": "split",
  "skin": "house",
  "cut": false,
- "track": [
-  "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
-  0.2
- ],
+ "track": "bed",
  "strip": [
   [
    "السعر على Steam",
@@ -87,30 +141,31 @@
   "PICTURE: credit on every clip": "yes: see story file",
   "PICTURE: headline not over a face": "yes: see story file",
   "CHECKS: decision log": "yes: see story file",
-  "SOUND: footage sound or bed with reason": "yes: the Steam Launch Trailer's own music from 0 s, audio split",
-  "SOUND: no speech under Arabic lines": "yes: Launch Trailer is music and effects; director checks"
+  "SOUND: footage sound or bed with reason": "our bed: the Launch trailer's render stalled 3x on the server; the Game Mode trailer is Italian-localised with speech unverifiable (no transcript) and its four stretches are from different moments, so one trailer stretch would not match the shots; director signs off",
+  "SOUND: no speech under Arabic lines": "yes: our bed only"
  },
  "decision_log": [
   {
    "beat": "0 hook",
-   "shot": "0 to 1.6 s opening hero shot",
+   "shot": "0 to 1.6 s",
    "alternatives": "1.75 s onward carries MARVEL GAMES slate",
-   "crop": "x 0.68",
-   "music": "trailer"
+   "crop": "x 0.67",
+   "music": "bed"
   },
   {
    "beat": "1 L1",
-   "shot": "4.88 to 6.7 s",
-   "alternatives": "black plus smear at 4.68",
-   "crop": "x 0.56",
-   "music": "trailer"
+   "shot": "26.81 to 29.38 s",
+   "alternatives": "22.45 to 25 s Italian name plates",
+   "crop": "x 0.65",
+   "music": "bed"
   },
   {
-   "beat": "2 L2 characters",
-   "shot": "21.28 to 22.95 and 24.51 to 26.78 s",
-   "alternatives": "character title cards carry cut text INVISIBLE, DOCTOR",
-   "crop": "x 0.36 and 0.59",
-   "music": "trailer"
+   "beat": "2 L2",
+   "shot": "58.0 to 60.8 and 70.05 to 73.35 s",
+   "alternatives": "text-heavy upgrade screens 35 to 50 s",
+   "crop": "x 0.63 and 0.29",
+   "music": "bed"
   }
- ]
+ ],
+ "audio_split": false
 }
