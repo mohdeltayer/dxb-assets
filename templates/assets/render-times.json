@@ -30990,5 +30990,66 @@
   "min_disk_free_mb": 223989,
   "setup_min": 0.18,
   "story": "japanese-ramen-simulator-200k-month"
+ },
+ {
+  "name": "japanese-ramen-simulator-200k-month-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-10T04:10Z",
+  "stages": {
+   "checks": 4.9,
+   "montage": 30.4,
+   "text": 40.2,
+   "audio": 1.5,
+   "outro": 19.8
+  },
+  "total": 96.8,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-10T04:09Z",
+  "finished_at": "2026-11-10T04:10Z",
+  "render_min": 1.61,
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 7.2,
+   "audio_secs": 40.6,
+   "music_pct": 99.3,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "effects_shots": 0,
+   "mix_secs": 3.8,
+   "secs": 11.9
+  },
+  "lifeless": {
+   "score": 1.4,
+   "still_share": 0.015,
+   "longest_still": 0.1,
+   "cuts_per_10s": 10.29,
+   "held_under_text": 0.025,
+   "secs": 20.4,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 174,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1082,
+  "peak_mem_mb": 2448,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 18429,
+  "peak_disk_mb": 21869,
+  "min_disk_free_mb": 224237,
+  "setup_min": 0.17,
+  "story": "japanese-ramen-simulator-200k-month"
  }
 ]
