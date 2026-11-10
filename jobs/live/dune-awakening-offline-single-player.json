@@ -168,11 +168,7 @@
  "style": "frame",
  "template": "clipcard",
  "skin": "house",
- "track": [
-  "dune-sp.mp4",
-  21.0
- ],
- "music_only": true,
+ "track": "bed",
  "cut": true,
  "lowres_ok": {
   "searched": [
@@ -189,7 +185,7 @@
   "STORY TYPE update": "change, demonstration, effect, availability (card)",
   "STORY: spoken paragraph, subject before pronoun": "yes: Funcom named in L1; no line opens on و",
   "STORY: names match names-ar.md": "Funcom as فانكوم (Funcom)",
-  "SOUND: footage sound or bed with reason": "yes: the trailer's music stem",
+  "SOUND: footage sound or bed with reason": "yes: our bed; reason: the Console and Single Player Launch Trailer has narration/effects-led audio, music stem separation left 10.3% effects (limit 5%) on its only usable stretch; Steam has no other music-led Dune trailer in the cut",
   "PICTURE: footage first": "yes: official Steam trailer",
   "PICTURE: credit on every clip": "yes: credit 0 to 6",
   "SENSITIVE": "yes: nothing sensitive in the story"
@@ -215,5 +211,6 @@
    "beat": "L3",
    "shot": "120.0 character walking, the closing picture"
   }
- ]
+ ],
+ "sound": null
 }
