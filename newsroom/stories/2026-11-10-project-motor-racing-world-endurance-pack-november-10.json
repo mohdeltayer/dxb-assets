@@ -13,7 +13,7 @@
  "kind": "dlc",
  "family": "2 announcement",
  "sensitive": "none",
- "status": "building",
+ "status": "scheduled in Publer 15:15Z (19:15 Dubai) on instagram, x, threads",
  "recipe": "2 trailer drop (notes/scenario-recipes.md): 0-3.4 headline over the strongest moving shot (head-on LMP car) · 3.4-8 trailer plays, no line · 8-12 line 1 on two car shots (what the pack adds) · 12-15 price card alone, no line · 15-17.4 closing picture, no new text in the last 2 s",
  "cap_note": "clipcard is the fifth template use of the Dubai day (cap 4); trailer and split are also at their caps. Gap 18:15 to 20:15 Dubai is 120 min against a 60 min maximum: gap rule over caps, precedent 17, 23 and 24 Oct, open question q-20261108-gap-vs-cap",
  "sources": [
@@ -79,5 +79,25 @@
    "project motor racing"
   ],
   "hits": []
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/project-motor-racing-world-endurance-pack-november-10-reel-v1.mp4",
+  "blob": "5a285c3b914174f59b3f9276a5867d460db787ed",
+  "at": "2026-11-10T14:51:45Z",
+  "note": "director helper: round 1 FIX (a car-name caption cut at the edge, fixed by moving the shot), round 2 PASS on the changed shot; sheet shows no cut-text flag; audio split applied music 75.0 percent leak 0.8; decode clean; cap note: fifth clipcard of the Dubai day, gap rule over caps",
+  "checklist": {
+   "job": "jobs/live/project-motor-racing-world-endurance-pack-november-10.json",
+   "sha256": "4b64a8a49acd6ec9fb1068316ebc9484d72aa82f338989f98f8ebea94f63a149",
+   "ok": true,
+   "problems": [],
+   "template": "clipcard",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-haiku"
+ },
+ "reel": "cards/2026-11/project-motor-racing-world-endurance-pack-november-10-reel-v1.mp4",
+ "approved": "go: rolling queue; scheduled 15:15Z; gap rule over the template caps (clipcard 5th of the day), logged on the board"
 }
