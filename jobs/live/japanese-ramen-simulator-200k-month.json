@@ -1,0 +1,229 @@
+{
+ "name": "japanese-ramen-simulator-200k-month",
+ "story": "2026-11-10-japanese-ramen-simulator-200k-month",
+ "render_lane": "server",
+ "built_by": "production-2",
+ "out": "cards/2026-11/japanese-ramen-simulator-200k-month-reel-v4.mp4",
+ "footage": [
+  {
+   "file": "ramen-ea.mp4",
+   "steam": 4968640,
+   "trailer": "Early Access Trailer",
+   "trailer_id": 1771509590,
+   "start": 0,
+   "seconds": 76
+  }
+ ],
+ "shots": [
+  [
+   "ramen-ea.mp4",
+   26.5,
+   2.6,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ramen-ea.mp4",
+   11.6,
+   1.8,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ramen-ea.mp4",
+   42.3,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ramen-ea.mp4",
+   34.0,
+   2.4,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ramen-ea.mp4",
+   48.5,
+   2.4,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ramen-ea.mp4",
+   57.6,
+   2.9,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ramen-ea.mp4",
+   54.0,
+   2.3,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ramen-ea.mp4",
+   29.2,
+   3.45,
+   [
+    [
+     0.0,
+     0.45
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "في اللعبة تدير محل رامن ياباني\nمن الطبخ حتى خدمة الزبائن",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "يمكن لستة لاعبين إدارة المحل\nمعًا عبر الإنترنت",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "حسب استوديو وايلد دوغ (Wild Dog)\nالذي أضاف أطباقًا جديدة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   7,
+   7,
+   [
+    [
+     "باعت 200 ألف نسخة في شهر",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   7,
+   "المصدر: وايلد دوغ (Wild Dog)",
+   {
+    "size": 44,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "لعبة محل رامن باعت\nأكثر من 200 ألف نسخة",
+ "label": "أرقام",
+ "source": "وايلد دوغ (Wild Dog)",
+ "date": "10 Nov 2026",
+ "theme": "playful",
+ "style": "bold",
+ "template": "trailer",
+ "skin": "house",
+ "track": [
+  "ramen-ea.mp4",
+  26.5
+ ],
+ "music_only": true,
+ "cut": true,
+ "note": "Wild Dog's 200k milestone; the Early Access trailer's music stem under the whole Reel (music_only), so no effects land on the wrong shot",
+ "reel_check": {
+  "SOURCE: primary read in full": "Wild Dog release via Denfaminicogamer, Steam page",
+  "SOURCE: not already posted": "yes",
+  "SOURCE: age": "under 2 hours",
+  "ANGLE before lines": "yes",
+  "STORY TYPE numbers": "figure, period, source; no comparison given",
+  "STORY: spoken paragraph, subject before pronoun": "yes",
+  "SOUND: footage sound or bed with reason": "trailer music stem",
+  "PICTURE: footage first": "Steam 1080p trailer",
+  "PICTURE: credit on every clip": "credit 0 to 7",
+  "PICTURE: headline not over a face": "ramen bowl"
+ },
+ "decision_log": [
+  {
+   "beat": "hook",
+   "shot": "26.0 ramen bowl close-up"
+  },
+  {
+   "beat": "L1 what it is",
+   "shot": "chef at the board 11.5, customers at the counter 41.0"
+  },
+  {
+   "beat": "L2 co-op",
+   "shot": "busy kitchen 32.0, the kitchen fire 48.5"
+  },
+  {
+   "beat": "L3 updates, attribution",
+   "shot": "ticket machine 57.5, rice cooker 54.0"
+  },
+  {
+   "beat": "L4 where",
+   "shot": "a customer eating 60.0"
+  },
+  {
+   "beat": "v2",
+   "shot": "runner copy about 0.5 s behind the local one: close on the bowl and the man eating noodles (30.15), not the masked thief; overhead kitchen for L2"
+  },
+  {
+   "beat": "v3",
+   "shot": "close 0.35 s earlier so it ends on the man eating, not the overhead dining room"
+  },
+  {
+   "beat": "v4 director round 1",
+   "shot": "L1 on the chef at the board and the counter with chefs; L3 says new dishes and ingredients over the food shots; the close restates 200k in a month over the bowl and the diner"
+  }
+ ]
+}
