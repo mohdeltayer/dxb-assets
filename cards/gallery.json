@@ -496,14 +496,32 @@
      24.7,
      49.2
     ]
+   },
+   {
+    "story": "arms",
+    "source": "Nintendo US store trailer, 1280x720, about 2.6 Mbps, enlarged 2.7x (media toolbox test 1 footage)",
+    "base": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/studio/picture-quality/cards/test/pq-arms-base-reel-v1.mp4",
+    "hq": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/studio/picture-quality/cards/test/pq-arms-hq-reel-v1.mp4",
+    "base_strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/studio/picture-quality/cards/test/pq-arms-base-strip.jpg",
+    "hq_strip": "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/studio/picture-quality/cards/test/pq-arms-hq-strip.jpg",
+    "job_secs": [
+     203,
+     232
+    ],
+    "mb": [
+     34.5,
+     57.2
+    ],
+    "verdict": "the hoop swing (Reel 10.4 to 13.0 s) shows the same large blocks in both; hq does not remove source block damage"
    }
   ],
   "frames": [
    "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/studio/picture-quality/cards/test/pq-dune-shot30-base-vs-hq.png",
    "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/studio/picture-quality/cards/test/pq-dune-shot81-base-vs-hq.png",
-   "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/studio/picture-quality/cards/test/pq-dune-shot111-base-vs-hq.png"
+   "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/studio/picture-quality/cards/test/pq-dune-shot111-base-vs-hq.png",
+   "https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/cards/test/pq-arms-t12-base-vs-hq.png"
   ],
-  "note": "Steam streams differ per download, so whole Reels are not frame-matched; the frames are one shot each from the same source copy, base left, hq right. The jailbreak test job carries the breaking profile, which keeps base by rule."
+  "note": "Steam streams differ per download, so whole Reels are not frame-matched; the frames are one shot each from the same source copy, base left, hq right. The third sample is ARMS (the weak 720p source of media toolbox test 1) in place of the jailbreak job, which ran on the breaking profile where hq does not apply."
  },
  "rules": {
   "card_led_max": "2 in 6",
