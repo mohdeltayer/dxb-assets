@@ -1,0 +1,201 @@
+{
+ "name": "tanuki-pons-summer-out-now-november-10",
+ "story": "2026-11-10-tanuki-pons-summer-out-now-november-10",
+ "render_lane": "server",
+ "built_by": "production-2",
+ "out": "cards/2026-11/tanuki-pons-summer-out-now-november-10-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "tanuki-launch.mp4",
+   "steam": 3218570,
+   "trailer": "Launch Trailer",
+   "start": 0,
+   "seconds": 119
+  }
+ ],
+ "shots": [
+  [
+   "tanuki-launch.mp4",
+   1.5,
+   3.4,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "tanuki-launch.mp4",
+   40.5,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "tanuki-launch.mp4",
+   47.5,
+   2.5,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "tanuki-launch.mp4",
+   95.9,
+   3.6,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "tanuki-gfx-price.png",
+   null,
+   3.0,
+   null
+  ],
+  [
+   "tanuki-launch.mp4",
+   116.0,
+   2.6,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "gfx": [
+  {
+   "file": "tanuki-gfx-price.png",
+   "kind": "fact",
+   "label": "السعر على Steam",
+   "value": [
+    "aed",
+    "49.99"
+   ],
+   "note": "لا تدعم العربية"
+  }
+ ],
+ "ground_footage": [
+  "tanuki-launch.mp4",
+  104.0
+ ],
+ "lines": [
+  [
+   3,
+   3,
+   [
+    [
+     "تانوكي ساعي بريد يرمم\nضريحًا قبل المهرجان",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   3,
+   "المصدر: كريتيكال ريفلكس (Critical Reflex)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ],
+  [
+   5,
+   5,
+   "المصدر: كريتيكال ريفلكس (Critical Reflex)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "صدرت لعبة Tanuki\nعلى الحاسب والكونسول",
+ "label": "متوفر الآن",
+ "source": "كريتيكال ريفلكس (Critical Reflex)",
+ "date": "10 Nov 2026",
+ "theme": "playful",
+ "style": "frame",
+ "template": "clipcard",
+ "skin": "house",
+ "track": [
+  "tanuki-launch.mp4",
+  1.5
+ ],
+ "cut": true,
+ "pace_ok": false,
+ "sound": null,
+ "genre": [
+  "indie",
+  "simulation"
+ ],
+ "recipe": "2 trailer drop (notes/scenario-recipes.md): 0-3.5 headline over the strongest moving shot (the tanuki's face) · 3.5-8 trailer plays, no line (bike delivery, gameplay) · 8-11.4 line 1 on the postman shot (what you play) · 11.4-14.4 price card alone, no line · 14.4-17.4 closing shot, no new text in the last 2 s",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam appdetails (cc=ae) and the developer's Steam 'OUT NOW' post read 10 Nov; PlayStation and Xbox launch trailers 10:00Z from the digest",
+  "SOURCE: not already posted": "yes: ledger find tanuki: no match; Publer 10 Nov list has no Tanuki post",
+  "SOURCE: age": "yes: launch day 10 Nov",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE out now": "yes: platforms in the headline, AED price and Arabic support on the card, what it is in line 1",
+  "STORY: spoken paragraph, subject before pronoun": "yes: one line, the player is the subject, no line opens on و",
+  "STORY: release verbs": "yes: صدرت لعبة, chip متوفر الآن",
+  "STORY: names match names-ar.md": "Critical Reflex written كريتيكال ريفلكس (Critical Reflex), a proposed spelling, not yet in names-ar.md",
+  "SOUND: footage sound or bed with reason": "trailer sound, one stretch, audio split decides",
+  "PICTURE: footage first": "yes: official Steam Launch Trailer 1080p 5.8 Mbps, decode clean",
+  "PICTURE: credit on every clip": "yes: credits on shots 0 to 3 and 5",
+  "PICTURE: crop per beat": "yes: centred tanuki, bike and post-office shots at x 0.5; shots chosen clear of the game's dialogue UI",
+  "CHECKS: decision log": "yes: decision_log in the job"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "1.5-4.9 s tanuki's face over the newspaper",
+   "alternatives": "0-1.4 newspaper only",
+   "crop": "x 0.5",
+   "music": "trailer"
+  },
+  {
+   "beat": "1 trailer plays",
+   "shot": "40.5-43.5 tanuki on the bike, 47.5-50 delivery gameplay",
+   "alternatives": "51-53 dialogue UI",
+   "crop": "x 0.5",
+   "music": "trailer"
+  },
+  {
+   "beat": "2 line 1",
+   "shot": "95.9-99.5 s illustrated sequence and the tanuki in the postman cap, ending before the source smear at 99.68 s (the 112 s post-office stretch showed a cut game UI panel)",
+   "alternatives": "100 s interior with UI",
+   "crop": "x 0.5",
+   "music": "trailer"
+  },
+  {
+   "beat": "3 price card",
+   "shot": "gfx card over the trailer at 104 s",
+   "alternatives": "strip (split cap reached)",
+   "crop": "n/a",
+   "music": "trailer"
+  },
+  {
+   "beat": "4 close",
+   "shot": "116.0-118.6 s the box hand-over (last frames of the trailer)",
+   "alternatives": "116-118 box hand-over",
+   "crop": "x 0.5",
+   "music": "trailer"
+  }
+ ]
+}
