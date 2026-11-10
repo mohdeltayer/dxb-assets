@@ -33405,5 +33405,125 @@
   "story": "dragon-quest-rpg-cursed-tree-chosen-isle-closed-beta-november-23",
   "job_sha": "8402c6f79a5ec75849ed4bcb249b581a216a762a",
   "dispatches": 4
+ },
+ {
+  "name": "shrek-2-remastered-out-now-november-10-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-10T18:46Z",
+  "stages": {
+   "checks": 3.4,
+   "montage": 31.3,
+   "text": 20.1,
+   "audio": 0.6,
+   "outro": 19.4
+  },
+  "total": 74.8,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-10T18:45Z",
+  "finished_at": "2026-11-10T18:46Z",
+  "render_min": 1.25,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "shrek-2-remastered-out-now-november-10-trailer.mp4",
+    "start": 22.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "shrek-2-remastered-out-now-november-10-trailer.mp4",
+    "start": 25.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "shrek-2-remastered-out-now-november-10-trailer.mp4",
+    "start": 28.2,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "shrek-2-remastered-out-now-november-10-trailer.mp4",
+    "start": 31.3,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 5.3,
+   "audio_secs": 14.8,
+   "music_pct": 75.4,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 4,
+   "mix_secs": 2.9,
+   "secs": 9.3
+  },
+  "lifeless": {
+   "score": 15.4,
+   "still_share": 0.213,
+   "longest_still": 1.4,
+   "cuts_per_10s": 5.51,
+   "held_under_text": 0.0,
+   "secs": 12.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 146,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1064,
+  "peak_mem_mb": 2025,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 20142,
+  "peak_disk_mb": 21131,
+  "min_disk_free_mb": 224975,
+  "setup_min": 0.22,
+  "story": "shrek-2-remastered-out-now-november-10",
+  "job_sha": "4d43b797b30c8bba5ac3a69bc066a22b42739a38",
+  "dispatches": 1
  }
 ]
