@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T10:05:10Z",
- "seq": 268,
+ "generated_at": "2026-11-10T10:20:19Z",
+ "seq": 269,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 10257,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "TANUKI: Pon's Summer | Launch Trailer",
+   "url": "https://www.youtube.com/watch?v=UwRcePRxAZg",
+   "published": "2026-11-10T10:00Z",
+   "first_seen": "2026-11-10T10:20:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/UwRcePRxAZg/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=UwRcePRxAZg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 269
+  }
+ ],
+ "recent": [
   {
    "id": 10246,
    "source": "PlayStation (YouTube)",
@@ -25,9 +48,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 268
-  }
- ],
- "recent": [
+  },
   {
    "id": 10235,
    "source": "Xbox Wire",
@@ -493,9 +514,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T10:05:05Z",
+  "last_poll_at": "2026-11-10T10:20:15Z",
   "sources_enabled": 100,
-  "sources_ok": 93,
+  "sources_ok": 94,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 15x)",
