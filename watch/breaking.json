@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T08:15:20Z",
- "seq": 264,
+ "generated_at": "2026-11-10T08:52:06Z",
+ "seq": 265,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 10155,
    "source": "Xbox (YouTube)",
@@ -25,9 +26,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 264
-  }
- ],
- "recent": [
+  },
   {
    "id": 10153,
    "source": "Xbox (YouTube)",
@@ -435,21 +434,18 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T08:15:15Z",
+  "last_poll_at": "2026-11-10T08:50:05Z",
   "sources_enabled": 100,
-  "sources_ok": 88,
-  "sources_failing": 12,
+  "sources_ok": 90,
+  "sources_failing": 9,
   "failed": [
    "Bethesda (YouTube) (HTTP 404, 4x)",
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 14x)",
    "Nintendo of America (X) (HTTP 429, 58x)",
-   "Nintendo of America (YouTube) (HTTP 404, 10x)",
    "PlayStation (X) (HTTP 429, 74x)",
    "PlayStation MENA (YouTube) (HTTP 404, 4x)",
    "PlayStation Middle East (X) (HTTP 429, 5x)",
    "Rockstar Games (X) (HTTP 429, 30x)",
-   "Rockstar Games (YouTube) (HTTP 404, 8x)",
-   "SEGA (YouTube) (HTTP 404, 4x)",
    "Steam (YouTube) (HTTP 404, 4x)",
    "Xbox (X) (HTTP 429, 75x)"
   ]
