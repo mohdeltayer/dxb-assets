@@ -11,7 +11,7 @@
  ],
  "category": "firmware",
  "priority": "high",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://www.nintendo.com/jp/topics/article/31e57164-941c-4103-bd30-f04744073cc3",
@@ -74,9 +74,38 @@
  "template": "stills",
  "chip": "رسمي",
  "ledger_find": "no gifting story; Mohammad sent the Japanese page 10 Nov",
- "versions": [],
- "posts": [],
+ "versions": [
+  {
+   "v": 5,
+   "file": "cards/2026-11/nintendo-switch-digital-gifting-reel-v5.mp4"
+  }
+ ],
+ "posts": {
+  "x": "أعلنت نينتيندو (Nintendo) أن متجر eShop على Switch وSwitch 2 سيتيح إهداء الألعاب الرقمية لأفراد مجموعة العائلة ابتداءً من 16 نوفمبر."
+ },
  "corrections": [],
  "metrics": {},
- "order": "Mohammad, 10 Nov 02:00Z: 'New feature on the Nintendo switch 2' with the Nintendo Japan link"
+ "order": "Mohammad, 10 Nov 02:00Z: 'New feature on the Nintendo switch 2' with the Nintendo Japan link",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/nintendo-switch-digital-gifting-reel-v5.mp4",
+  "blob": "2f761b9d5884ee0e87d19beaf531dbdd040d31b2",
+  "at": "2026-11-10T02:32:56Z",
+  "note": "round 2 PASS on v5",
+  "checklist": {
+   "job": "jobs/live/nintendo-switch-digital-gifting.json",
+   "sha256": "f78381bba22d339a4783fb41690c27297adfc214ea7a5707023a1cc172da5b7a",
+   "ok": true,
+   "problems": [],
+   "template": "stills",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-sonnet"
+ },
+ "arabic": {
+  "passes": "arabic-games-film-editor then arabic-grammar-review (self-run): no required edits"
+ },
+ "approved": "go: Mohammad sent the lead; scheduled in Publer 04:15Z (08:15 Dubai) instagram, x, threads"
 }
