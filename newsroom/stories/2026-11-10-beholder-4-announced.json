@@ -11,7 +11,7 @@
  ],
  "category": "announcement",
  "priority": "medium",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://store.steampowered.com/app/5522030/Beholder_4/",
@@ -74,8 +74,37 @@
  "template": "split",
  "chip": "رسمي",
  "ledger_find": "no Beholder story in the ledger",
- "versions": [],
- "posts": [],
+ "versions": [
+  {
+   "v": 5,
+   "file": "cards/2026-11/beholder-4-announced-reel-v5.mp4"
+  }
+ ],
+ "posts": {
+  "x": "أعلنت ألاوار (Alawar) عن Beholder 4: موظف في وزارة دولة شمولية يعمل سرًا لصالح المقاومة، حسب وصف الاستوديو. لا موعد صدور بعد."
+ },
  "corrections": [],
- "metrics": {}
+ "metrics": {},
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/beholder-4-announced-reel-v5.mp4",
+  "blob": "e882442419293bf2ee48592ed0bb5fc09d51138a",
+  "at": "2026-11-10T00:02:51Z",
+  "note": "round 2 PASS on v5",
+  "checklist": {
+   "job": "jobs/live/beholder-4-announced.json",
+   "sha256": "263b2d4194e2d49d6801eaa2d7b9892f199b80da75f2c308616e0f0c9766ff19",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-sonnet"
+ },
+ "arabic": {
+  "passes": "arabic-games-film-editor then arabic-grammar-review (self-run): no required edits; house rule applied: attribution in the same line as the political description"
+ },
+ "approved": "go: rolling queue; scheduled in Publer 01:45Z (05:45 Dubai) instagram, x, threads"
 }
