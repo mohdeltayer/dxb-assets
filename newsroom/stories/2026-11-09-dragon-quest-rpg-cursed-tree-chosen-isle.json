@@ -11,7 +11,7 @@
  ],
  "category": "announcement",
  "priority": "green",
- "status": "building",
+ "status": "queued",
  "why": "A new Dragon Quest game, announced by surprise, with its trailer due in under 36 hours; Dragon Quest is a first-rank series. Nothing is announced on release date or price.",
  "sources": [
   {
@@ -121,5 +121,29 @@
    "newsroom/context/square-enix.md"
   ]
  },
- "sensitive": "none"
+ "sensitive": "none",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/dragon-quest-rpg-cursed-tree-chosen-isle-closed-beta-november-23-reel-v1.mp4",
+  "blob": "8e74eeae6bf472f81d3a71e2a3d0cbf49df9cbd0",
+  "at": "2026-11-10T17:38:29Z",
+  "note": "two rounds used. Round 1: burnt-in English title across shots 2 to 4, fixed by the clean opening stretch. Round 2: line 2 contrast over a bright glow in shot 4 (shot replaced by a darker stretch of the same clean section, not re-viewed) and speech under the lines unverifiable (no transcript), so our bed replaced the trailer audio. Passes with a note per the two-round limit",
+  "checklist": {
+   "job": "jobs/live/dragon-quest-rpg-cursed-tree-chosen-isle-closed-beta-november-23.json",
+   "sha256": "22586d0a854924dae70be86e92e0049f3141d0b10016d19f882dfe951f748c0b",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-haiku-r3"
+ },
+ "queued_at": "2026-11-10T17:45Z",
+ "lanes": {
+  "digital_lounge": "split Reel on the official trailer (supplied by Mohammad), رسمي, X Instagram Threads",
+  "dxb_knight": "on hold"
+ },
+ "approved": "go: Mohammad's named story (message 10 Nov, trailer file from Google Drive, 'schedule within the night'); gate 17:00Z the trailer itself plus 4 outlets citing the official account; director pass after two rounds with a note (round 1 burnt-in English title across shots, round 2 line contrast over a bright glow and speech under the lines unverifiable); sound: our bed, reason in the job decision log (the trailer stretch was not music-led: audio split music 3.4 percent, and no transcript); DeepL both ways run 17:08Z (back-check ok; closed beta term الاختبار المغلق chosen over DeepL's الاختبار التجريبي المغلق); grammar review by a helper (Square Enix house name سكوير applied); gap rule over caps; sensitive: none"
 }
