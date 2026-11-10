@@ -10,7 +10,7 @@
  ],
  "category": "report",
  "priority": "medium",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://automaton-media.com/articles/newsjp/20261110-478374/",
@@ -67,8 +67,33 @@
  "template": "clipcard",
  "chip": "تقرير",
  "ledger_find": "no Steam fps story",
- "versions": [],
+ "versions": [
+  {
+   "v": 3,
+   "file": "cards/2026-11/steam-store-steam-deck-average-fps-reel-v3.mp4",
+   "director": "PASS"
+  }
+ ],
  "posts": [],
  "corrections": [],
- "metrics": {}
+ "metrics": {},
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/steam-store-steam-deck-average-fps-reel-v3.mp4",
+  "blob": "e0e5e20fd864c5f16302cf8fd570b5d9e88eae4b",
+  "at": "2026-11-10T05:52:22Z",
+  "note": "PASS v3; line 1 kept as illustration",
+  "checklist": {
+   "job": "jobs/live/steam-store-steam-deck-average-fps.json",
+   "sha256": "317da749814ef7136d8b1479aa58c601a597754c833093042c6c3bf8eb07898c",
+   "ok": true,
+   "problems": [],
+   "template": "clipcard",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-sonnet"
+ },
+ "approved": "go: rolling queue; scheduled in Publer 06:15Z (10:15 Dubai) IG, X, Threads"
 }
