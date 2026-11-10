@@ -30884,5 +30884,50 @@
   "min_disk_free_mb": 225755,
   "setup_min": 0.12,
   "story": "switch-2-jailbreak-patched-23-5-0"
+ },
+ {
+  "name": "switch-2-jailbreak-patched-23-5-0-reel-v4.mp4",
+  "profile": "breaking",
+  "at": "2026-11-10T03:55Z",
+  "stages": {
+   "checks": 6.4,
+   "montage": 28.1,
+   "text": 44.7,
+   "audio": 0.8,
+   "outro": 18.4
+  },
+  "total": 98.5,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-10T03:54Z",
+  "finished_at": "2026-11-10T03:55Z",
+  "render_min": 1.64,
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 5.99,
+   "held_under_text": 0.0,
+   "secs": 21.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 168,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 979,
+  "peak_mem_mb": 2404,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 18356,
+  "peak_disk_mb": 20387,
+  "min_disk_free_mb": 225719,
+  "setup_min": 0.12,
+  "story": "switch-2-jailbreak-patched-23-5-0"
  }
 ]
