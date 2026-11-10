@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T20:00:18Z",
- "seq": 301,
+ "generated_at": "2026-11-10T20:52:05Z",
+ "seq": 302,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 10923,
    "source": "Xbox Wire",
@@ -41,9 +42,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 301
-  }
- ],
- "recent": [
+  },
   {
    "id": 10912,
    "source": "Xbox (YouTube)",
@@ -956,58 +955,16 @@
    ],
    "breaking_source": true,
    "breaking_seq": 244
-  },
-  {
-   "id": 9833,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "The Spotter: Dig or Die - Official Date Announcement Trailer | XBOX Series X|S",
-   "url": "https://www.youtube.com/watch?v=j9zeok7DQjI",
-   "published": "2026-11-09T19:51Z",
-   "first_seen": "2026-11-09T20:10:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/j9zeok7DQjI/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=j9zeok7DQjI"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 242
-  },
-  {
-   "id": 9832,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Delta Force | Official Season \"Aurora\" Cinematic Trailer",
-   "url": "https://www.youtube.com/watch?v=HD75JDFaYvg",
-   "published": "2026-11-09T19:57Z",
-   "first_seen": "2026-11-09T20:10:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/HD75JDFaYvg/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=HD75JDFaYvg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 242
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T20:00:15Z",
+  "last_poll_at": "2026-11-10T20:50:05Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 19x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 20x)",
    "Nintendo of America (X) (HTTP 429, 59x)",
    "PlayStation (X) (HTTP 429, 75x)",
    "PlayStation Middle East (X) (HTTP 429, 5x)",
