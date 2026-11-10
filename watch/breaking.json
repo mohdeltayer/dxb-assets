@@ -1,10 +1,62 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T14:05:18Z",
- "seq": 277,
+ "generated_at": "2026-11-10T14:10:29Z",
+ "seq": 278,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 10474,
+   "source": "Bungie",
+   "source_kind": "official",
+   "title": "Marathon Symbiosis: Open Play Week and Crew Up Event",
+   "url": "https://www.bungie.net/7/en/News/Article/symbiosis_open_play_week_crew_up",
+   "published": "2026-11-10T14:00Z",
+   "first_seen": "2026-11-10T14:10:25Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 278
+  },
+  {
+   "id": 10476,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Raccoin: Chaos Max Edition - Launch Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=KaEsH28aGxQ",
+   "published": "2026-11-10T14:00Z",
+   "first_seen": "2026-11-10T14:10:25Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/KaEsH28aGxQ/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=KaEsH28aGxQ"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 278
+  },
+  {
+   "id": 10477,
+   "source": "Rockstar Games (YouTube)",
+   "source_kind": "youtube",
+   "title": "Grand Theft Auto VI: Pre-Load Now",
+   "url": "https://www.youtube.com/shorts/TIPlpDAsfWo",
+   "published": "2026-11-10T13:55Z",
+   "first_seen": "2026-11-10T14:10:25Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/TIPlpDAsfWo/hqdefault.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 278
+  }
+ ],
+ "recent": [
   {
    "id": 10456,
    "source": "PlayStation Blog",
@@ -21,9 +73,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 277
-  }
- ],
- "recent": [
+  },
   {
    "id": 10429,
    "source": "Rockstar Games (YouTube)",
@@ -611,7 +661,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T14:05:15Z",
+  "last_poll_at": "2026-11-10T14:10:25Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
