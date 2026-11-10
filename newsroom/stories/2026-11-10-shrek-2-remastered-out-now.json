@@ -44,7 +44,7 @@
    "by": "-"
   }
  ],
- "status": "building",
+ "status": "queued",
  "lanes": {
   "digital_lounge": "trailer Reel (Steam Launch Trailer), متوفر الآن, X Instagram Threads",
   "dxb_knight": "on hold"
@@ -67,5 +67,25 @@
   "hits": [
    "2026-10-18-shrek-2-remastered-leak-gta-6-parody"
   ]
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/shrek-2-remastered-out-now-november-10-reel-v1.mp4",
+  "blob": "b3667b33a978c86e53e8dbd66db2f75318d7452b",
+  "at": "2026-11-10T18:51:03Z",
+  "note": "round 1 PASS, no fixes",
+  "checklist": {
+   "job": "jobs/live/shrek-2-remastered-out-now-november-10.json",
+   "sha256": "a86dbdea69a3bf9ed4ea39b0bd27e63d6f976e84ea7ec35b9b707d01e2e53bc5",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": "showcase",
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-haiku-r4"
+ },
+ "queued_at": "2026-11-10T18:53Z",
+ "approved": "go: rolling queue (Production 2 run 18:35Z); gate 18:38Z Steam page and appdetails cc=ae read; director PASS round 1; showcase layout (the launch trailer's captions run through every shot; picker found only 3 stretches under 2.6 s); trailer audio, split applied, music 75%; DeepL both ways run 18:41Z (back-check ok); grammar review by a helper, no required edits (Aspyr Media rendered أسبير ميديا, not in names-ar.md, flagged for Mohammad); gap rule over caps (nothing scheduled after 22:00 Dubai); sensitive: none"
 }
