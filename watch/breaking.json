@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T15:52:08Z",
- "seq": 284,
+ "generated_at": "2026-11-10T15:55:19Z",
+ "seq": 285,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 10611,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Grand Theft Auto VI - Features Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=8L0CzL2V72c",
+   "published": "2026-11-10T15:40Z",
+   "first_seen": "2026-11-10T15:55:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/8L0CzL2V72c/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=8L0CzL2V72c"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 285
+  }
+ ],
  "recent": [
   {
    "id": 10592,
@@ -689,7 +711,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T15:52:05Z",
+  "last_poll_at": "2026-11-10T15:55:15Z",
   "sources_enabled": 100,
   "sources_ok": 92,
   "sources_failing": 6,
