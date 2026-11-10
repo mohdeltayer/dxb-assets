@@ -6,10 +6,6 @@
  "out": "cards/2026-11/mega-man-zero-zx-legacy-million-reel-v1.mp4",
  "footage": [
   {
-   "file": "mm-capsule.jpg",
-   "url": "https://cdn.akamai.steamstatic.com/steam/apps/999020/library_600x900_2x.jpg"
-  },
-  {
    "file": "mmzx-pv1.mp4",
    "steam": 999020,
    "trailer": "ZERO-ZX_PV1",
@@ -41,7 +37,6 @@
    "note": "على PS4 و Xbox و Switch و PC"
   }
  ],
- "ground_still": "mm-capsule.jpg",
  "shots": [
   [
    "mm-gfx-1.png",
@@ -150,5 +145,9 @@
    "crop": "x 0.5",
    "music": "bed"
   }
+ ],
+ "ground_footage": [
+  "mmzx-pv1.mp4",
+  13.0
  ]
 }
