@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T18:52:05Z",
- "seq": 298,
+ "generated_at": "2026-11-10T19:45:17Z",
+ "seq": 299,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 10912,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "MARVEL Cosmic Invasion: The Siege of Castle Doom | DLC #2 out NOW!",
+   "url": "https://www.youtube.com/watch?v=viF_AHt8uDs",
+   "published": "2026-11-10T19:29Z",
+   "first_seen": "2026-11-10T19:45:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/viF_AHt8uDs/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=viF_AHt8uDs"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 299
+  }
+ ],
  "recent": [
   {
    "id": 10835,
@@ -939,32 +961,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 242
-  },
-  {
-   "id": 9793,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "For The King II - A Mother Below Free Update/Dust To Dust Paid Character Pack DLC | PS5 & PS4 Games",
-   "url": "https://www.youtube.com/watch?v=o-nRCd6YHls",
-   "published": "2026-11-09T19:00Z",
-   "first_seen": "2026-11-09T19:15:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/o-nRCd6YHls/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=o-nRCd6YHls"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 240
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T18:50:04Z",
+  "last_poll_at": "2026-11-10T19:45:15Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
