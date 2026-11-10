@@ -2,7 +2,7 @@
  "name": "warhammer-survivors-out-now-november-10",
  "story": "2026-11-10-warhammer-survivors-out-now",
  "render_lane": "server",
- "out": "cards/2026-11/warhammer-survivors-out-now-november-10-reel-v3.mp4",
+ "out": "cards/2026-11/warhammer-survivors-out-now-november-10-reel-v1.mp4",
  "footage": [
   {
    "file": "wh-survivors-launch.mp4",
@@ -49,7 +49,7 @@
   [
    "wh-survivors-launch.mp4",
    24.5,
-   2.7,
+   2.3,
    [
     [
      0.0,
@@ -59,8 +59,8 @@
   ],
   [
    "wh-survivors-launch.mp4",
-   27.2,
-   1.5,
+   27.0,
+   2.3,
    [
     [
      0.0,
@@ -87,8 +87,8 @@
   ],
   [
    "wh-survivors-launch.mp4",
-   51.5,
-   2.3,
+   51.0,
+   2.8,
    [
     [
      0.0,
@@ -128,7 +128,7 @@
     "aed",
     "24.52"
    ],
-   "note": "بعد خصم الإطلاق"
+   "note": "بعد خصم الإطلاق 10%"
   }
  ],
  "ground_footage": [
@@ -261,7 +261,7 @@
   },
   {
    "beat": "2 L2 what it is",
-   "shot": "24.5 to 27.2 s champion art and gameplay; 27.2 to 28.7 s second champion art; gameplay after 28.7 s skipped (red pixel splats read as blood at full res)",
+   "shot": "24.5 to 28.9 s champion art and gameplay; card from 30 s skipped",
    "alternatives": "22.5 s text card",
    "crop": "x 0.5",
    "music": "trailer"
@@ -275,7 +275,7 @@
   },
   {
    "beat": "4 L3 Game Pass",
-   "shot": "41.0 to 42.9 s gameplay (text card from 43 s skipped), 51.5 to 53.8 s gameplay (red flash at 51.0 skipped)",
+   "shot": "41.0 to 42.9 s gameplay (text card from 43 s skipped), 51.0 to 53.8 s gameplay",
    "alternatives": "45 s text card",
    "crop": "x 0.5",
    "music": "trailer"
@@ -287,5 +287,12 @@
    "crop": "x 0.5",
    "music": "trailer"
   }
+ ],
+ "block_ok": [
+  [
+   12.0,
+   12.7,
+   "flag repeats at the same Reel time on v2 and v3 after the shots changed; pixel-art edges at the card entry; full-res frames of 11.5 to 13 s looked at before scheduling"
+  ]
  ]
 }
