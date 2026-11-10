@@ -54,7 +54,7 @@
    "by": "press release"
   }
  ],
- "status": "building",
+ "status": "queued",
  "lanes": {
   "digital_lounge": "trailer Reel (Steam Release Date Trailer), رسمي, X Instagram Threads",
   "dxb_knight": "on hold"
@@ -73,5 +73,25 @@
    "tails"
   ],
   "hits": []
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/isekizima-ruins-and-tails-journey-release-date-january-19-reel-v1.mp4",
+  "blob": "30c6e2ed5540a5706681e3929b855b841aafab8f",
+  "at": "2026-11-10T16:54:12Z",
+  "note": "two rounds used; round 1 fixed the trailer end card and date, round 2 notes only: a hit burst under the line in shot 2 and a creature cut at the left edge in shot 3; scheduled with a note per the two-round limit",
+  "checklist": {
+   "job": "jobs/live/isekizima-ruins-and-tails-journey-release-date-january-19.json",
+   "sha256": "ea5a89b7fad6708e3aa5e176c4a1c962771e0e437f795b3205e670d8ba3a720a",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-haiku-r2"
+ },
+ "queued_at": "2026-11-10T16:55Z",
+ "approved": "go: rolling queue (Production 2 run 16:35Z); gate 16:46Z Steam appdetails and the press release via Famitsu read in full; director pass after two rounds with a note (a hit burst under the line in shot 2, a creature cut at the left edge in shot 3); gap rule over caps (split 5, trailer 6; next slot due 21:45), open question q-20261108-gap-vs-cap; DeepL both ways run 16:48Z (back-check ok); grammar review by a helper, no required edits; sensitive: none"
 }
