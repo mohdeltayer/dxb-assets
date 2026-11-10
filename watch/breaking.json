@@ -1,10 +1,82 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T18:00:11Z",
- "seq": 293,
+ "generated_at": "2026-11-10T18:05:17Z",
+ "seq": 294,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 10774,
+   "source": "PlayStation Blog",
+   "source_kind": "official",
+   "title": "The Outer Worlds 2’s first DLC arrives December 2",
+   "url": "https://blog.playstation.com/2026/11/10/the-outer-worlds-2s-first-dlc-arrives-december-2/",
+   "published": "2026-11-10T18:00Z",
+   "first_seen": "2026-11-10T18:05:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg"
+    },
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55632582320_0a7410acf8_6k.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55632159101_a212b0d208_6k.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55632362119_7736b1eb31_6k.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55632582325_d5799c1525_6k.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55632582435_fa995d0d2f_6k.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 294
+  },
+  {
+   "id": 10775,
+   "source": "Nintendo of America (YouTube)",
+   "source_kind": "youtube",
+   "title": "Just Dance: Decades of Hits – Every Era One Floor Trailer – Nintendo Switch 2",
+   "url": "https://www.youtube.com/watch?v=AFclxMTQ2hI",
+   "published": "2026-11-10T18:00Z",
+   "first_seen": "2026-11-10T18:05:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/AFclxMTQ2hI/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=AFclxMTQ2hI"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 294
+  }
+ ],
+ "recent": [
+  {
+   "id": 10767,
+   "source": "Bungie",
+   "source_kind": "official",
+   "title": "Marathon Update 1.1.9.7",
+   "url": "https://www.bungie.net/7/en/News/Article/marathon_update_1_1_9_7",
+   "published": "2026-11-10T17:00Z",
+   "first_seen": "2026-11-10T18:00:05Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 293
+  },
   {
    "id": 10766,
    "source": "Xbox Wire",
@@ -42,20 +114,6 @@
    "breaking_source": true,
    "breaking_seq": 293
   },
-  {
-   "id": 10767,
-   "source": "Bungie",
-   "source_kind": "official",
-   "title": "Marathon Update 1.1.9.7",
-   "url": "https://www.bungie.net/7/en/News/Article/marathon_update_1_1_9_7",
-   "published": "2026-11-10T17:00Z",
-   "first_seen": "2026-11-10T18:00:05Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 293
-  }
- ],
- "recent": [
   {
    "id": 10749,
    "source": "PlayStation (YouTube)",
@@ -844,12 +902,12 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T18:00:05Z",
+  "last_poll_at": "2026-11-10T18:05:14Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 18x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 19x)",
    "Nintendo of America (X) (HTTP 429, 59x)",
    "PlayStation (X) (HTTP 429, 75x)",
    "PlayStation Middle East (X) (HTTP 429, 5x)",
