@@ -14,10 +14,78 @@
    "seconds": 240
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
+   0.0,
+   1.6,
+   [
+    [
+     0.0,
+     0.679
+    ]
+   ]
+  ],
+  [
+   "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
+   4.88,
+   1.82,
+   [
+    [
+     0.0,
+     0.559
+    ]
+   ]
+  ],
+  [
+   "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
+   21.28,
+   1.67,
+   [
+    [
+     0.0,
+     0.361
+    ]
+   ]
+  ],
+  [
+   "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
+   24.51,
+   2.27,
+   [
+    [
+     0.0,
+     0.593
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   4,
+   [
+    [
+     "تضيف Doctor Doom مع Invisible Woman",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   3,
+   "المصدر: متجر Steam",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "صدرت إضافة جديدة\nللعبة Cosmic Invasion",
  "label": "متوفر الآن",
  "source": "متجر Steam",
  "date": "10 Nov 2026",
@@ -26,16 +94,68 @@
  "template": "split",
  "skin": "house",
  "cut": false,
- "track": "bed",
+ "track": [
+  "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
+  0.0
+ ],
  "strip": [
   [
-   "TODO",
-   "TODO"
+   "السعر على Steam",
+   [
+    "aed",
+    "24.52"
+   ]
   ],
   [
-   "TODO",
-   "TODO"
+   "طور جديد",
+   "Castle Doomstadt"
   ]
  ],
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "pace_ok": false,
+ "genre": [
+  "action",
+  "indie"
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam appdetails cc=ae read 10 Nov 20:50Z (released 10 Nov 2026, 24.52 AED after 10% off 27.25, Tribute Games, Dotemu, short description), Steam trailer list",
+  "SOURCE: not already posted": "yes: see story file",
+  "SOURCE: age": "yes: see story file",
+  "ANGLE before lines": "yes: see story file",
+  "STORY TYPE out now": "yes: see story file",
+  "STORY: spoken paragraph, subject before pronoun": "yes: see story file",
+  "STORY: release verbs": "yes: see story file",
+  "STORY: names match names-ar.md": "yes: see story file",
+  "POST: Arabic passes": "yes: see story file",
+  "PICTURE: footage first": "yes: see story file",
+  "PICTURE: not the same as last 5 Reels": "yes: see story file",
+  "PICTURE: crop per beat": "yes: see story file",
+  "PICTURE: credit on every clip": "yes: see story file",
+  "PICTURE: headline not over a face": "yes: see story file",
+  "CHECKS: decision log": "yes: see story file",
+  "SOUND: footage sound or bed with reason": "yes: the Steam Launch Trailer's own music from 0 s, audio split",
+  "SOUND: no speech under Arabic lines": "yes: Launch Trailer is music and effects; director checks"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "0 to 1.6 s opening hero shot",
+   "alternatives": "1.75 s onward carries MARVEL GAMES slate",
+   "crop": "x 0.68",
+   "music": "trailer"
+  },
+  {
+   "beat": "1 L1",
+   "shot": "4.88 to 6.7 s",
+   "alternatives": "black plus smear at 4.68",
+   "crop": "x 0.56",
+   "music": "trailer"
+  },
+  {
+   "beat": "2 L2 characters",
+   "shot": "21.28 to 22.95 and 24.51 to 26.78 s",
+   "alternatives": "character title cards carry cut text INVISIBLE, DOCTOR",
+   "crop": "x 0.36 and 0.59",
+   "music": "trailer"
+  }
+ ]
 }
