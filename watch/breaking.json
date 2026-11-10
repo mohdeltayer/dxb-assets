@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-10T14:20:19Z",
- "seq": 280,
+ "generated_at": "2026-11-10T14:52:08Z",
+ "seq": 281,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 10493,
    "source": "PlayStation (YouTube)",
@@ -25,9 +26,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 280
-  }
- ],
- "recent": [
+  },
   {
    "id": 10484,
    "source": "Xbox (YouTube)",
@@ -636,62 +635,20 @@
    ],
    "breaking_source": true,
    "breaking_seq": 234
-  },
-  {
-   "id": 9501,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Atelier Karia: The Night Kingdom & the Guide of Memories - Story Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=lsm3cSU_S8E",
-   "published": "2026-11-09T14:00Z",
-   "first_seen": "2026-11-09T14:25:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/lsm3cSU_S8E/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=lsm3cSU_S8E"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 231
-  },
-  {
-   "id": 9500,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Sea of Remnants - Dawnbreaker CBT Date Announcement | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=BFYX7V0WyGE",
-   "published": "2026-11-09T14:15Z",
-   "first_seen": "2026-11-09T14:25:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/BFYX7V0WyGE/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=BFYX7V0WyGE"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 231
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-10T14:20:15Z",
+  "last_poll_at": "2026-11-10T14:52:06Z",
   "sources_enabled": 100,
-  "sources_ok": 94,
+  "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 17x)",
    "Nintendo of America (X) (HTTP 429, 58x)",
-   "PlayStation (X) (HTTP 429, 74x)",
+   "PlayStation (X) (HTTP 429, 75x)",
    "PlayStation Middle East (X) (HTTP 429, 5x)",
-   "Rockstar Games (X) (HTTP 429, 30x)",
+   "Rockstar Games (X) (HTTP 429, 31x)",
    "Xbox (X) (HTTP 429, 75x)"
   ]
  }
