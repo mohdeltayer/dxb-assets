@@ -13,7 +13,7 @@
  "kind": "out-now",
  "family": "7 release",
  "sensitive": "none",
- "status": "building",
+ "status": "scheduled in Publer 13:00Z (17:00 Dubai) on instagram, x, threads",
  "sources": [
   {
    "url": "https://store.steampowered.com/app/3669620",
@@ -80,10 +80,10 @@
  ],
  "texts": {
   "headline": "لعبة Warhammer\nمتوفرة الآن",
-  "x": "صدرت Warhammer Survivors اليوم على الحاسب وPS5، وتتوفر في Game Pass يوم الإصدار، حسب صفحة اللعبة على Steam ومدونة Xbox Wire.",
-  "threads": "صدرت Warhammer Survivors اليوم على الحاسب وPS5، وتتوفر في Game Pass يوم الإصدار، حسب صفحة اللعبة على Steam ومدونة Xbox Wire.\n\nالمصدر: صفحة اللعبة على Steam، 10 نوفمبر 2026",
-  "ig": "صدرت Warhammer Survivors اليوم على الحاسب وPS5\n\nصدرت اللعبة اليوم على Steam وPS5، وتتوفر في Game Pass يوم الإصدار حسب مدونة إكس بوكس واير (Xbox Wire). وتطورها شركة أوروك ديجيتال (Auroch Digital)، وتقدم موجات لا تنتهي من الأعداء مع أكثر من 40 بطلًا. سعرها على Steam في الإمارات 24.52 درهمًا بعد خصم الإطلاق 10%، ولا تدعم اللغة العربية حسب صفحتها.\n\n#ألعاب #أخبار_الألعاب #WarhammerSurvivors #Steam",
-  "status": "drafted; grammar and DeepL passes still to run"
+  "x": "صدرت Warhammer Survivors اليوم على الحاسب وPS5، وتتوفر في Game Pass يوم الإصدار، حسب Steam ومدونة إكس بوكس واير (Xbox Wire) وقناة بلايستيشن (PlayStation).",
+  "threads": "صدرت Warhammer Survivors اليوم على الحاسب وPS5، وتتوفر في Game Pass يوم الإصدار، حسب Steam ومدونة إكس بوكس واير (Xbox Wire) وقناة بلايستيشن (PlayStation).\n\nالمصدر: صفحة اللعبة على Steam، 10 نوفمبر 2026",
+  "ig": "صدرت Warhammer Survivors على الحاسب وPS5\n\nصدرت اللعبة اليوم على Steam وPS5، وتتوفر في Game Pass يوم الإصدار، حسب مدونة إكس بوكس واير (Xbox Wire) وقناة بلايستيشن (PlayStation). وتطورها شركة أوروك ديجيتال (Auroch Digital)، وتقدم موجات لا تنتهي من الأعداء مع أكثر من 40 بطلًا. سعرها على Steam في الإمارات 24.52 درهمًا بعد خصم الإطلاق 10%، ولا تدعم اللغة العربية حسب صفحتها.\n\n#ألعاب #أخبار_الألعاب #WarhammerSurvivors #Steam",
+  "status": "grammar review by editor (skills loaded 10 Nov; glossary names applied: Xbox Wire as إكس بوكس واير); DeepL connector not available in this session, forward and back passes NOT run; uncertain: 'تطورها أوروك ديجيتال' on screen has no 'شركة' label (line width), caption has it"
  },
  "labels": {
   "template": "clipcard",
@@ -91,7 +91,7 @@
   "sound": "trailer",
   "genre": "action"
  },
- "approved": null,
+ "approved": "go: rolling queue; scheduled in Publer 13:00Z, preview to Mohammad via board; director helper PASS round 3 (red-splat flags answered with full-res frames: tank fireball, white pixel splat)",
  "ledger_find": {
   "at": "2026-11-10T11:43:36Z",
   "words": [
@@ -102,5 +102,25 @@
    "2026-10-07-warhammer-survivors-nov10",
    "weekly-releases-nov-9-13-list"
   ]
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/warhammer-survivors-out-now-november-10-reel-v3.mp4",
+  "blob": "ec3bf6f77e40f23407918cbe69ef81662418a2ff",
+  "at": "2026-11-10T12:44:13Z",
+  "note": "director helper: PASS after 3 rounds; v3 full-res frames 10.8-13.6 s and 15.9-17.1 s looked at (white pixel splat, tank fireball, no blood); 12.0-12.7 s smear flag waived, pixel-art edges; sound: trailer music via audio split (music 76.5%, leak 0.8%), speech none",
+  "checklist": {
+   "job": "jobs/live/warhammer-survivors-out-now-november-10.json",
+   "sha256": "d987b19d32c0440227eeeefa03d90c7adc4b39b5fe7e9e408a286220bc2297c0",
+   "ok": true,
+   "problems": [],
+   "template": "clipcard",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-haiku"
+ },
+ "reel": "cards/2026-11/warhammer-survivors-out-now-november-10-reel-v3.mp4",
+ "gate": "gate 12:20Z: Steam appdetails and developer Steam post read 10 Nov; Xbox Wire refused (403), headline from digest; PlayStation launch trailer title from digest; no denial or change found; price 24.52 AED (list 27.25) to re-read by publish time"
 }
