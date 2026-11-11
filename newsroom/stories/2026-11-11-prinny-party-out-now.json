@@ -12,7 +12,7 @@
  ],
  "category": "launch",
  "priority": "medium",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://store.steampowered.com/app/4509300/",
@@ -73,7 +73,12 @@
  "lane": "Digital Lounge only",
  "template": "split",
  "chip": "متوفر الآن",
- "versions": [],
+ "versions": [
+  {
+   "v": 1,
+   "file": "cards/2026-11/prinny-party-going-overboard-out-now-november-11-reel-v1.mp4"
+  }
+ ],
  "ledger_find": {
   "at": "2026-11-11T20:08:42Z",
   "words": [
@@ -84,5 +89,13 @@
  "footage": {
   "file": "Steam official Launch and Announcement trailers, app 4509300, 8 clean stretches (shotpick), our bed",
   "sound": "our bed: shots from two trailers 3 to 74 s apart, no single coherent music-led stretch; both carry voices and burnt-in text"
+ },
+ "approved": "scheduled in Publer 21:15Z (01:15 Dubai Thu 12 Nov) Instagram, X, Threads; buffer slot helper A, no preview/go needed per assignment; hosted runner render 207 s (server queue held GTA batch); grammar review no required edits; DeepL whole-story forward pass matched wording (alternatives: المعدات for العتاد, تم إطلاق for صدرت kept ours)",
+ "texts": {
+  "x_threads": "صدرت اليوم Prinny Party: Going Overboard، لعبة حفلات بطابع تقمّص الأدوار لأربعة لاعبين، من نيبون إيتشي سوفتوير (Nippon Ichi Software).\n\nمتوفرة رقميًا على PS5 وSwitch 2 وSwitch وSteam، حسب الناشر إن آي إس أمريكا (NIS America).",
+  "reel": {
+   "headline": "لعبة Prinny Party / صدرت على أربع منصات",
+   "strip": "سعر Steam في الإمارات 88.99 AED symbol; اللغة العربية غير مدعومة"
+  }
  }
 }
