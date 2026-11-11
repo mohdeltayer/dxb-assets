@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-11T12:52:11Z",
- "seq": 325,
+ "generated_at": "2026-11-11T13:10:17Z",
+ "seq": 326,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 11625,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Clive Barker's Hellraiser: Revival - Demo Trailer",
+   "url": "https://www.youtube.com/watch?v=BUT-8qn-jtg",
+   "published": "2026-11-11T13:00Z",
+   "first_seen": "2026-11-11T13:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/BUT-8qn-jtg/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=BUT-8qn-jtg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 326
+  }
+ ],
  "recent": [
   {
    "id": 11453,
@@ -734,49 +756,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 277
-  },
-  {
-   "id": 10429,
-   "source": "Rockstar Games (YouTube)",
-   "source_kind": "youtube",
-   "title": "Grand Theft Auto VI: The Festival",
-   "url": "https://www.youtube.com/shorts/AvBcfBrBl60",
-   "published": "2026-11-10T12:59Z",
-   "first_seen": "2026-11-10T13:05:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/AvBcfBrBl60/hqdefault.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 275
-  },
-  {
-   "id": 10428,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Project Motor Racing - World Endurance Pack Launch Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=CC4UYBpF4Ns",
-   "published": "2026-11-10T13:00Z",
-   "first_seen": "2026-11-10T13:05:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/CC4UYBpF4Ns/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=CC4UYBpF4Ns"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 275
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T12:52:06Z",
+  "last_poll_at": "2026-11-11T13:10:14Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
