@@ -1,24 +1,24 @@
 {
  "name": "gta-vi-road-ep5-gta-iii-to-vi",
- "out": "cards/2026-11/gta-vi-road-ep5-gta-iii-to-vi-reel-v3.mp4",
+ "out": "cards/2026-11/gta-vi-road-ep5-gta-iii-to-vi-reel-v4.mp4",
  "verdict": "pass",
- "at": "2026-11-11T21:26:10Z",
+ "at": "2026-11-11T22:12:53Z",
  "findings": [],
  "notes": [
-  "length 21.8 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "source quality: shot 0 gta5-trailer-2014.mp4 at 15.4 for 1.6 s, enlarged 2.22x: block ratio median 1.08, peak 1.23 (ok)",
-  "source quality: shot 1 gta5-trailer-2014.mp4 at 38.4 for 1.5 s, enlarged 2.22x: block ratio median 1.21, peak 1.28 (ok)",
+  "length 21.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "source quality: shot 0 gta5-trailer-2014.mp4 at 15.0 for 1.5 s, enlarged 2.22x: block ratio median 1.08, peak 1.12 (ok)",
+  "source quality: shot 1 gta5-trailer-2014.mp4 at 37.95 for 1.15 s, enlarged 2.22x: block ratio median 1.24, peak 1.28 (ok)",
   "source quality: shot 9 gta5-trailer-2014.mp4 at 24.6 for 1.95 s, enlarged 2.22x: block ratio median 1.21, peak 1.31 (ok)",
   "source quality: shot 10 gta5-trailer-2014.mp4 at 29.35 for 1.2 s, enlarged 2.22x: block ratio median 0.0, peak 0.0 (ok)",
   "source quality: shot 11 gta5-trailer-2014.mp4 at 44.7 for 1.5 s, enlarged 2.22x: block ratio median 1.07, peak 1.15 (ok)",
-  "source quality: under 960 rows: gta5-trailer-2014.mp4 at 15.4 (864 rows, enlarged 2.22x), gta5-trailer-2014.mp4 at 38.4 (864 rows, enlarged 2.22x), gta5-trailer-2014.mp4 at 24.6 (864 rows, enlarged 2.22x), gta5-trailer-2014.mp4 at 29.35 (864 rows, enlarged 2.22x), gta5-trailer-2014.mp4 at 44.7 (864 rows, enlarged 2.22x); lowres_ok: IGN video page 'Grand Theft Auto V trailer' (2014 next-gen trailer): 1920 is the largest copy, letterboxed to 864 rows, IGN video page 'GTA V PC launch trailer': 1920 is the largest copy, Rockstar's GTA V pages (rockstargames.com/V/videos and /gta-v, read 11 Nov 18:45Z): script-only shell, no mp4 link: no copy above 864 rows of the 2014 GTA V trailer; four shots enlarged 2.22x, block ratio read on each (peak 1.4 at most after the 33.4 swap)",
+  "source quality: under 960 rows: gta5-trailer-2014.mp4 at 15.0 (864 rows, enlarged 2.22x), gta5-trailer-2014.mp4 at 37.95 (864 rows, enlarged 2.22x), gta5-trailer-2014.mp4 at 24.6 (864 rows, enlarged 2.22x), gta5-trailer-2014.mp4 at 29.35 (864 rows, enlarged 2.22x), gta5-trailer-2014.mp4 at 44.7 (864 rows, enlarged 2.22x); lowres_ok: IGN video page 'Grand Theft Auto V trailer' (2014 next-gen trailer): 1920 is the largest copy, letterboxed to 864 rows, IGN video page 'GTA V PC launch trailer': 1920 is the largest copy, Rockstar's GTA V pages (rockstargames.com/V/videos and /gta-v, read 11 Nov 18:45Z): script-only shell, no mp4 link: no copy above 864 rows of the 2014 GTA V trailer; four shots enlarged 2.22x, block ratio read on each (peak 1.4 at most after the 33.4 swap)",
   "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
   "smear check: exempt 0.00 to 2.90 s (our own cards)",
-  "render_job: lifeless: {\"score\": 1.9, \"still_share\": 0.024, \"longest_still\": 0.2, \"cuts_per_10s\": 5.28, \"held_under_text\": 0.0, \"secs\": 24.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: lifeless: {\"score\": 2.0, \"still_share\": 0.025, \"longest_still\": 0.2, \"cuts_per_10s\": 5.46, \"held_under_text\": 0.0, \"secs\": 23.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "f7253d556051a1edc8b4b64c1c42b867b438b841",
- "dispatches": 4,
+ "job_sha": "bae298a17af82034999c6bb211c4d64288614531",
+ "dispatches": 5,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 2.22,
