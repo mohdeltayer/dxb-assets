@@ -218,10 +218,7 @@
  "template": "trailer",
  "skin": "house",
  "cut": false,
- "track": [
-  "witcher-3-songs-of-the-past-ai-voice-geralt-november-11-trailer.mp4",
-  4.88
- ],
+ "track": "bed",
  "genre": [
   "RPG"
  ],
@@ -235,8 +232,8 @@
   "STORY: release verbs": "yes: التوسعة تصدر في 2027 (a year, taken from CDPR's press page)",
   "STORY: names match names-ar.md": "yes: company and person with the Latin at first mention; Respeecher, Geralt, Songs of the Past in Latin; CD Projekt Red transliteration is new, flagged",
   "POST: Arabic passes": "yes: both skills read, house glossary applied; DeepL checks in the story file",
-  "SOUND: footage sound or bed with reason": "yes: trailer own sound, one stretch from 4.88 s, audio split",
-  "SOUND: no speech under Arabic lines": "yes: server speech check decides",
+  "SOUND: footage sound or bed with reason": "yes: our bed (neon rotation); reason: Announcement Trailer's audio split failed on the runner (music stem leftover 5.8% over the 5% limit, run 43120431818), shots come from many moments so no single stretch fits; the Launch Trailer is the same remaster footage with the same score; trailer sound unusable",
+  "SOUND: no speech under Arabic lines": "yes: bed only, trailer sound off",
   "PICTURE: footage first": "yes: official Witcher 3 Remastered announcement trailer (Steam 292030) as stand-in, credited; no Songs of the Past footage reachable",
   "PICTURE: not the same as last 5 Reels": "yes: picture: Witcher 3 Remastered announcement trailer; none of the last five used it",
   "PICTURE: credit on every clip": "yes: one credit over shots 0 to 10 from frame 0",
