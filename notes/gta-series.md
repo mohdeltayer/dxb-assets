@@ -54,3 +54,38 @@ against this table before its shot sheet; add its row once final. Times are seek
 |---|---|---|
 | intro | L 25.15 to 27.18 (fixed, every episode) | gtavi jingle (fixed) |
 | 1 | L 54.55 to 56.35; L 20.65 to 22.05; L 2.2 to 5.8 (card 1 ground); L 46.35 to 50.65; L 6.4 to 10.0 (card 2 ground); L 67.9 to 69.25; L 74.0 to 75.9 | L music stem from 28.7 for 15.5 s (music_only) |
+
+## Batch of 11 Nov 2026 (studio order, Mohammad): episodes 2 to 9, one a day at 20:00 Dubai, 12 to 19 Nov
+
+This plan replaces the 8 Nov plan above from episode 2 on (episodes 2 to 12 of that plan were never built; episode 1 ran
+8 Nov). Countdown from gta_intro.LAUNCH (19 Nov 2026). Footage: Rockstar's own masters (Launch Trailer `Lm` and the
+Extended Look `XL`, read by stream), Trailers 1 and 2 (`T1`, `T2`, IGN 3840 copies), PlayStation's PS5 features
+trailer, the Pre-Load Now and cover art videos, the Trilogy Definitive Edition trailer (2021) and the GTA V trailer
+(2014). Sources: newsroom/context/gta-vi.md and gta-series-history.md; prices and store times re-read on the day.
+
+| # | Dubai date | Days | Subject | Template |
+|---|---|---|---|---|
+| 2 | Thu 12 Nov | 7 | Leonida's six places, from Rockstar's own descriptions | trailer |
+| 3 | Fri 13 Nov | 6 | Jason and Lucia, from Rockstar's character pages | trailer |
+| 4 | Sat 14 Nov | 5 | The three trailers, least to most surprising | trailer |
+| 5 | Sun 15 Nov | 4 | From GTA III to GTA VI (years from Take-Two's filings) | trailer, our bed |
+| 6 | Mon 16 Nov | 3 | What you can do: the Extended Look's activities; PS5 controller features | trailer |
+| 7 | Tue 17 Nov | 2 | Editions, Gulf prices (WHERE AND HOW MUCH frame), pre-load | split |
+| 8 | Wed 18 Nov | 1 | The unlock hour in the UAE and Saudi Arabia (PS Store), Xbox hour not given | trailer |
+| 9 | Thu 19 Nov | 0 | Out now; the series closes | trailer |
+
+No numbers card in the batch (the order allows at most one). Music: Mohammad listed seven subjects for eight slots; the
+eighth is the gameplay episode (6). A music episode was not built: no official score file is published.
+
+Ledger rows (shots and sound; times are seek seconds in the named source):
+
+| # | Shots | Sound |
+|---|---|---|
+| 2 | T1 11.4 to 14.7; T1 31.1 to 34.4; T1 40.05 to 40.9; still rs-leonida-keys-01.jpg; T1 36 to 37.3; T1 19 to 22.0; still rs-grassrivers-05.jpg; still rs-port-gellhorn-06.jpg; still rs-ambrosia-04.jpg; still rs-mount-kalaga-national-park-04.jpg; T1 23.2 to 26.3 | T1 music stem from 11.4 (music_only) |
+| 3 | T2 140.2 to 142.4; T2 88.4 to 89.8; T2 63.3 to 66.3; T2 115.2 to 118.0; Lucia clip 0 to 1.5; T2 27.4 to 31.2; Jason clip 0 to 1.0; T2 66.4 to 69.5; T2 98.4 to 100.2; T2 145.9 to 146.9; T2 153.6 to 156.0 | T2 music stem from 25.6 (music_only) |
+| 4 | Lm 40.4 to 42.2; Lm 33.3 to 34.9; Lm 12.4 to 15.4; T2 50.4 to 52.2; T2 81.3 to 83.3; T2 83.3 to 85.5; T2 52.6 to 55.9; T1 3.6 to 6.4; T1 61 to 63.5; T1 13.3 to 15.1; T1 70.4 to 72.0; T1 21.3 to 22.5; T1 27.4 to 29.6 | T2 music stem from 117.3 (music_only) |
+| 5 | V14 15.4 to 17.0; V14 38.4 to 40.2; TRI 11.8 to 14.2; TRI 28.4 to 30.2; TRI 16.4 to 19.4; TRI 34.6 to 36.2; TRI 21.3 to 23.4; TRI 45.4 to 47.4; V14 24.4 to 26.4; V14 33.4 to 35.3; XL 992.8 to 999.2 | our gtavi bed |
+| 6 | XL 1037.0 to 1038.9; XL 1039.1 to 1042.1; XL 1062.1 to 1064.3; XL 1064.3 to 1067.2; XL 1086.1 to 1089.5; XL 1115.4 to 1118.8; PS5 19.4 to 22.2; PS5 34.4 to 36.6; XL 1128.8 to 1133.4; XL 1133.6 to 1136.0 | PS5 music stem from 3 (music_only) |
+| 7 | PL 11.3 to 13.3; PL 19.4 to 21.0; XL 758.0 to 761.0; XL 770.0 to 772.6; XL 843.0 to 847.6; XL 782.3 to 785.9; COV 15.6 to 18.8 | COV music stem from 7.5 (music_only) |
+| 8 | XL 1208.0 to 1211.6; XL 1211.6 to 1213.9; XL 1214.0 to 1215.9; XL 1545.0 to 1548.9; XL 1232.0 to 1234.9; XL 1549.0 to 1551.0; XL 1573.2 to 1576.0 | Lm music stem from 3 (music_only) |
+| 9 | T2 149.4 to 151.4; Lm 63.3 to 64.6; T2 147.4 to 148.4; T2 138.6 to 139.7; T2 134.4 to 137.0; T2 119.4 to 120.4; T2 142.5 to 144.4; Lm 70.4 to 71.4; Lm 71.4 to 72.4; XL 1551.0 to 1552.9; Lm 18.4 to 19.4 | Lm music stem from 44.5 (music_only) |
