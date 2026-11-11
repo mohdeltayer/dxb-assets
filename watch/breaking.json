@@ -1,10 +1,45 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-11T20:20:08Z",
- "seq": 344,
+ "generated_at": "2026-11-11T20:45:15Z",
+ "seq": 345,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 11888,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Answer the Call This Veterans Day",
+   "url": "https://news.xbox.com/en-us/2026/11/11/answer-the-call-this-veterans-day/",
+   "published": "2026-11-11T20:43Z",
+   "first_seen": "2026-11-11T20:45:14Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 345
+  }
+ ],
+ "recent": [
+  {
+   "id": 11887,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Exterminauts | Wishlist Trailer",
+   "url": "https://www.youtube.com/watch?v=jp0cNm3xpcs",
+   "published": "2026-11-11T20:00Z",
+   "first_seen": "2026-11-11T20:20:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/jp0cNm3xpcs/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=jp0cNm3xpcs"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 344
+  },
   {
    "id": 11886,
    "source": "PlayStation (YouTube)",
@@ -26,29 +61,6 @@
    "breaking_source": true,
    "breaking_seq": 344
   },
-  {
-   "id": 11887,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Exterminauts | Wishlist Trailer",
-   "url": "https://www.youtube.com/watch?v=jp0cNm3xpcs",
-   "published": "2026-11-11T20:00Z",
-   "first_seen": "2026-11-11T20:20:04Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/jp0cNm3xpcs/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=jp0cNm3xpcs"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 344
-  }
- ],
- "recent": [
   {
    "id": 11885,
    "source": "Nintendo of America (YouTube)",
@@ -448,7 +460,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T20:20:04Z",
+  "last_poll_at": "2026-11-11T20:45:14Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
