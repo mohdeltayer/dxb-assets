@@ -88,4 +88,4 @@ Ledger rows (shots and sound; times are seek seconds in the named source):
 | 6 | XL 1037 to 1038.9; XL 1030 to 1032.8; XL 1062 to 1064.55; XL 1064.55 to 1067.45; XL 1086.1 to 1089.5; XL 1033.05 to 1035.9; PS5 19.4 to 23; PS5 34.45 to 35.7; still rs-vice-city-17.jpg | PS5 music stem from 3 (music_only) |
 | 7 | PL 11.25 to 12.6; XL 776 to 777.5; XL 758 to 761; XL 770 to 772.6; XL 765 to 769.6; XL 782.3 to 785.9 | COV music stem from 7.5 (music_only) |
 | 8 | XL 1208 to 1211.3; XL 1211.3 to 1213.95; XL 1214.05 to 1215.65; XL 1545 to 1548.4; XL 1231.4 to 1232.7; still rs-vice-city-08.jpg; still rs-vice-city-27.jpg | Lm music stem from 3 (music_only) |
-| 9 | T2m 149.6 to 150.75; Lm 3.5 to 4.85; T2m 139 to 139.9; XL 1104.3 to 1107.3; T2m 142 to 143.4; XL 1115.3 to 1117.3; XL 1551 to 1552.35; Lm 21 to 22.4; Lm 18 to 18.9; still rs-vice-city-10.jpg | Lm music stem from 44.5 (music_only) |
+| 9 | Lm 2.6 to 4.9; XL 1104.3 to 1107.7; T2m 142 to 143.4; XL 1551 to 1552.45; Lm 21 to 22.45; still rs-vice-city-10.jpg | Lm music stem from 44.5 (music_only) |
