@@ -1,45 +1,67 @@
 {
  "schema": 1,
  "file": "digest",
- "generated_at": "2026-11-11T19:52:05Z",
- "seq": 343,
+ "generated_at": "2026-11-11T20:52:06Z",
+ "seq": 346,
  "kind": "hourly",
- "since": "2026-11-11T18:52:07Z",
+ "since": "2026-11-11T19:52:05Z",
  "official": [
   {
-   "id": 11885,
-   "source": "Nintendo of America (YouTube)",
+   "id": 11888,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Answer the Call This Veterans Day",
+   "url": "https://news.xbox.com/en-us/2026/11/11/answer-the-call-this-veterans-day/",
+   "published": "2026-11-11T20:43Z",
+   "first_seen": "2026-11-11T20:45:14Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 345,
+   "digest_seq": 346
+  },
+  {
+   "id": 11886,
+   "source": "PlayStation (YouTube)",
    "source_kind": "youtube",
-   "title": "Castlebound – Launch Trailer – Nintendo Switch 2",
-   "url": "https://www.youtube.com/watch?v=sDLjFDQpy_o",
-   "published": "2026-11-11T19:00Z",
-   "first_seen": "2026-11-11T19:15:04Z",
+   "title": "Exterminauts - Gameplay Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=619N217d480",
+   "published": "2026-11-11T20:00Z",
+   "first_seen": "2026-11-11T20:20:04Z",
    "media": [
     {
      "type": "image",
-     "url": "https://i4.ytimg.com/vi/sDLjFDQpy_o/hqdefault.jpg"
+     "url": "https://i3.ytimg.com/vi/619N217d480/hqdefault.jpg"
     },
     {
      "type": "video",
-     "url": "https://www.youtube.com/watch?v=sDLjFDQpy_o"
+     "url": "https://www.youtube.com/watch?v=619N217d480"
     }
    ],
    "breaking_source": true,
-   "breaking_seq": 342,
-   "digest_seq": 343
+   "breaking_seq": 344,
+   "digest_seq": 346
   },
   {
-   "id": 11884,
-   "source": "Nintendo US",
-   "source_kind": "page",
-   "title": "11/11/26 Ready up for an RPG—the world needs you! Are you looking to embark on an epic journey that’s likely full of impending doom, character growth, and many",
-   "url": "https://www.nintendo.com/us/whatsnew/ready-up-for-an-rpg-the-world-needs-you/",
-   "published": null,
-   "first_seen": "2026-11-11T19:10:14Z",
-   "media": [],
+   "id": 11887,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Exterminauts | Wishlist Trailer",
+   "url": "https://www.youtube.com/watch?v=jp0cNm3xpcs",
+   "published": "2026-11-11T20:00Z",
+   "first_seen": "2026-11-11T20:20:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/jp0cNm3xpcs/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=jp0cNm3xpcs"
+    }
+   ],
    "breaking_source": true,
-   "breaking_seq": 341,
-   "digest_seq": 343
+   "breaking_seq": 344,
+   "digest_seq": 346
   }
  ],
  "outlets": [],
@@ -79,7 +101,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T19:50:14Z",
+  "last_poll_at": "2026-11-11T20:50:05Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
