@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-11T14:52:05Z",
- "seq": 331,
+ "generated_at": "2026-11-11T15:05:21Z",
+ "seq": 332,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 11703,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Prinny Party: Going Overboard! - Launch Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=3g39ieG_fls",
+   "published": "2026-11-11T15:00Z",
+   "first_seen": "2026-11-11T15:05:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/3g39ieG_fls/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=3g39ieG_fls"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 332
+  }
+ ],
  "recent": [
   {
    "id": 11682,
@@ -725,9 +747,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T14:50:15Z",
+  "last_poll_at": "2026-11-11T15:05:15Z",
   "sources_enabled": 100,
-  "sources_ok": 93,
+  "sources_ok": 94,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 29x)",
