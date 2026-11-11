@@ -75,5 +75,23 @@
    "2026-11-19-gta-vi-road-ep9-out-now",
    "weekly-releases-nov-9-13-list"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/gta-vi-road-ep7-editions-gulf-prices-reel-v4.mp4",
+  "blob": "036a451c00cdcfa7e6f946ee0578f50ca045849e",
+  "at": "2026-11-11T22:21:31Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/gta-vi-road-ep7-editions-gulf-prices.json",
+   "sha256": "6ada8a3dd6bd8b2978a23eb0e9b226f0093b900d3e65fac4b054c318b2639135",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-1 (studio)"
+  },
+  "by": "director-agent (separate, sonnet)"
  }
 }
