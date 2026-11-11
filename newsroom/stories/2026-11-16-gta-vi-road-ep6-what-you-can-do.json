@@ -69,5 +69,23 @@
    "2026-11-19-gta-vi-road-ep9-out-now",
    "weekly-releases-nov-9-13-list"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/gta-vi-road-ep6-what-you-can-do-reel-v4.mp4",
+  "blob": "ec0f0c9de01893d9314b1574c3dff948b479ac3d",
+  "at": "2026-11-11T21:37:45Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/gta-vi-road-ep6-what-you-can-do.json",
+   "sha256": "8d815852bd57e6712cd2f9dd02641cb327c8aee1df96902981faad66d009754f",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-1 (studio)"
+  },
+  "by": "director-agent (separate, sonnet)"
  }
 }
