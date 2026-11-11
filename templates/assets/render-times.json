@@ -33617,5 +33617,97 @@
   "story": "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10",
   "job_sha": "938c151eff2b8b3918bdb0d970a828e3733577a2",
   "dispatches": 1
+ },
+ {
+  "name": "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-11T02:47Z",
+  "stages": {
+   "checks": 1.4,
+   "montage": 16.1,
+   "text": 9.7,
+   "audio": 0.5,
+   "outro": 7.4
+  },
+  "total": 35.2,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-11T02:46Z",
+  "finished_at": "2026-11-11T02:47Z",
+  "render_min": 0.59,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
+    "start": 27.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.53,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
+    "start": 58.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.53,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
+    "start": 70.05,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.53,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 2.1,
+   "still_share": 0.029,
+   "longest_still": 0.2,
+   "cuts_per_10s": 8.57,
+   "held_under_text": 0.0,
+   "secs": 7.0,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 68,
+  "queue_wait_secs": 5,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1004,
+  "peak_mem_mb": 1998,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 20032,
+  "peak_disk_mb": 21216,
+  "min_disk_free_mb": 224891,
+  "setup_min": 0.12,
+  "story": "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10",
+  "job_sha": "1aec1fd97ad04fabd9efa9ccecf5a15b9adfb51d",
+  "dispatches": 2
  }
 ]
