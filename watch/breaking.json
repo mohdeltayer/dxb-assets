@@ -1,10 +1,53 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-11T19:52:05Z",
- "seq": 343,
+ "generated_at": "2026-11-11T20:20:08Z",
+ "seq": 344,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 11886,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Exterminauts - Gameplay Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=619N217d480",
+   "published": "2026-11-11T20:00Z",
+   "first_seen": "2026-11-11T20:20:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/619N217d480/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=619N217d480"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 344
+  },
+  {
+   "id": 11887,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Exterminauts | Wishlist Trailer",
+   "url": "https://www.youtube.com/watch?v=jp0cNm3xpcs",
+   "published": "2026-11-11T20:00Z",
+   "first_seen": "2026-11-11T20:20:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/jp0cNm3xpcs/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=jp0cNm3xpcs"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 344
+  }
+ ],
  "recent": [
   {
    "id": 11885,
@@ -401,48 +444,11 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 304
-  },
-  {
-   "id": 10923,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "Football Manager 27 Out Now with Game Pass: Discover 5 Unmissable Additions",
-   "url": "https://news.xbox.com/en-us/2026/11/10/football-manager-27-game-pass-pc-console-xbox/",
-   "published": "2026-11-10T20:00Z",
-   "first_seen": "2026-11-10T20:00:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/7_Tactical-Tweaks-5f00039b178e6f8dbbef.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Player-Instruction-2-e32620667f1f824c3508.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/6a_ME1-bc4f2e96dd28a718a72b.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Tactical-Effectiveness-7ec1913b7208271a1b07.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/2_Match-Prep-f18f9812525d5b79a750.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Draft-1-a06ba38e84322416e4b6.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 301
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T19:50:14Z",
+  "last_poll_at": "2026-11-11T20:20:04Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
