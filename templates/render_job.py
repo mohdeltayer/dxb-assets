@@ -181,6 +181,16 @@ def _download(item, dst):
         got = C.U + trailer.fetch(hls[0], stem, item.get('start', 0), item.get('seconds', 120))
         if os.path.abspath(got) != os.path.abspath(dst):
             shutil.move(got, dst)
+    elif 'url' in item and item.get('stream'):
+        # "stream": true (GTA VI batch, 11 Nov 2026): read only the named stretch over HTTP range requests, for a master
+        # too large to download whole (Rockstar's Extended Look is 14 GB; 20 s of it reads in about 2 s). Needs "seconds".
+        if 'seconds' not in item:
+            raise ValueError(f"{item['file']}: \"stream\" needs \"seconds\" (and \"start\", default 0)")
+        hdr = f'Referer: {item["referer"]}\r\n' if item.get('referer') else ''
+        subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-ss', str(item.get('start', 0)), '-user_agent', UA]
+                       + (['-headers', hdr] if hdr else []) + ['-i', item['url'], '-t', str(item['seconds']),
+                       '-c', 'copy', dst + '.part.mp4'], check=True, timeout=600)
+        os.replace(dst + '.part.mp4', dst)
     elif 'url' in item:
         hdr = {'User-Agent': UA}
         if item.get('referer'):                   # IGN's asset hosts refuse requests without their own referer
