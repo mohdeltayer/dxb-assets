@@ -1,18 +1,18 @@
 {
  "name": "gta-vi-road-ep4-three-trailers",
- "out": "cards/2026-11/gta-vi-road-ep4-three-trailers-reel-v5.mp4",
+ "out": "cards/2026-11/gta-vi-road-ep4-three-trailers-reel-v6.mp4",
  "verdict": "pass",
- "at": "2026-11-11T22:28:18Z",
+ "at": "2026-11-11T22:51:30Z",
  "findings": [],
  "notes": [
-  "length 22.6 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: applied; music_pct 60.5; leak_pct 3.1; cache {'hit': 9, 'miss': 4}; separate_secs 8.6; secs 13.0",
+  "length 22.7 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 61.0; leak_pct 3.0; cache {'hit': 9, 'miss': 3}; separate_secs 6.5; secs 11.1",
   "smear check: exempt 0.00 to 2.90 s (our own cards)",
-  "render_job: lifeless: {\"score\": 8.3, \"still_share\": 0.071, \"longest_still\": 1.2, \"cuts_per_10s\": 9.06, \"held_under_text\": 0.008, \"secs\": 25.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: lifeless: {\"score\": 9.7, \"still_share\": 0.09, \"longest_still\": 1.3, \"cuts_per_10s\": 9.02, \"held_under_text\": 0.012, \"secs\": 25.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "a9a42475d7876432bf8bad2a6245a75262088c2e",
- "dispatches": 5,
+ "job_sha": "79f451208141c44599edaa2df3253259f04ef368",
+ "dispatches": 6,
  "source_summary": {
   "min_height": 2160,
   "max_zoom": 1.11,
