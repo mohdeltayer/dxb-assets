@@ -38484,5 +38484,154 @@
   "story": "gta-vi-road-ep5-gta-iii-to-vi",
   "job_sha": "f23c42062d070a9a2d56617ba8c7915add91baca",
   "dispatches": 2
+ },
+ {
+  "name": "prinny-party-going-overboard-out-now-november-11-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-11T20:14Z",
+  "stages": {
+   "checks": 4.4,
+   "montage": 39.7,
+   "text": 40.1,
+   "audio": 0.8,
+   "outro": 38.4
+  },
+  "total": 123.5,
+  "lane": "runner",
+  "queued_at": "2026-11-11T20:11:10Z",
+  "finished_at": "2026-11-11T20:14Z",
+  "render_min": 2.06,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "prinny-party-going-overboard-out-now-november-11-announcement.mp4",
+    "start": 3.4,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "prinny-party-going-overboard-out-now-november-11-announcement.mp4",
+    "start": 10.01,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "prinny-party-going-overboard-out-now-november-11-trailer.mp4",
+    "start": 12.75,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.67,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "prinny-party-going-overboard-out-now-november-11-announcement.mp4",
+    "start": 26.55,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "prinny-party-going-overboard-out-now-november-11-trailer.mp4",
+    "start": 74.31,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.67,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "prinny-party-going-overboard-out-now-november-11-announcement.mp4",
+    "start": 35.21,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "prinny-party-going-overboard-out-now-november-11-announcement.mp4",
+    "start": 56.05,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "prinny-party-going-overboard-out-now-november-11-announcement.mp4",
+    "start": 63.88,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 10.94,
+   "held_under_text": 0.0,
+   "secs": 12.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 207,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1008,
+  "peak_mem_mb": 3109,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60440,
+  "peak_disk_mb": 62782,
+  "min_disk_free_mb": 85014,
+  "setup_min": 0.93,
+  "story": "prinny-party-going-overboard-out-now-november-11"
  }
 ]
