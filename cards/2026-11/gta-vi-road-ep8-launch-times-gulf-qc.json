@@ -1,0 +1,23 @@
+{
+ "name": "gta-vi-road-ep8-launch-times-gulf",
+ "out": "cards/2026-11/gta-vi-road-ep8-launch-times-gulf-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-11T19:40:10Z",
+ "findings": [],
+ "notes": [
+  "length 17.4 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 47.5; leak_pct 0.2; cache {'hit': 0, 'miss': 5}; separate_secs 8.8; secs 13.1",
+  "smear check: exempt 0.00 to 2.90 s (our own cards)",
+  "render_job: lifeless: {\"score\": 23.4, \"still_share\": 0.248, \"longest_still\": 2.2, \"cuts_per_10s\": 1.98, \"held_under_text\": 0.0, \"secs\": 20.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "08eff8eed58147150cd6c32e165f9fee5ff7fdf1",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 2160,
+  "max_zoom": 0.91,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18"
+}
