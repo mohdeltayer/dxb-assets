@@ -147,7 +147,11 @@ def credit_problems(job):
     if job.get('kind') in ('famitsu', 'breaking'):
         return []
     rng = _credit_ranges(job)
-    bare = [i for i in _footage_shots(job) if not any(a <= i <= b for a, b, _ in rng)]
+    # The WHERE AND HOW MUCH frame's own shot: designpass.py refuses a credit under the frame (one focus at a time,
+    # memo of 24 Oct), so that shot carries the frame, with the credit on the shots either side (11 Nov 2026).
+    fr = job.get('frame') if isinstance(job.get('frame'), dict) else {}
+    framed = {int(fr['shot'])} if isinstance(fr.get('shot'), int) else set()
+    bare = [i for i in _footage_shots(job) if i not in framed and not any(a <= i <= b for a, b, _ in rng)]
     if bare:
         return ['credits: footage shot%s %s %s no on-screen credit; add "credits": [[first, last, "المصدر: ..."]] '
                 'covering every clip that is not ours' % ('s' if len(bare) > 1 else '', ', '.join(map(str, bare)),
