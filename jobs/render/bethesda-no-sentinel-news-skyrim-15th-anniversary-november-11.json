@@ -3,7 +3,7 @@
  "story": "2026-11-11-bethesda-no-sentinel-news",
  "kind_news": "report",
  "built_by": "production-2",
- "render_lane": "server",
+ "render_lane": "hosted",
  "out": "cards/2026-11/bethesda-no-sentinel-news-skyrim-15th-anniversary-november-11-reel-v1.mp4",
  "footage": [
   {
@@ -164,5 +164,6 @@
    "crop": "picker focus per scene",
    "music": "trailer own sound, audio split"
   }
- ]
+ ],
+ "lane_reason": "dxb-render server saturated by the GTA VI batch (render-live queue cancelled my dispatch at 17:50Z and held 18:00Z to 18:15Z); slot 00:15 Dubai needs the file by 19:30Z"
 }
