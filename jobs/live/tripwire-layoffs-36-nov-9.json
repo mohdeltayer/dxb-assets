@@ -14,10 +14,135 @@
    "seconds": 240
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "tripwire-layoffs-36-nov-9-trailer.mp4",
+   2.3,
+   1.88,
+   [
+    [
+     0.0,
+     0.489
+    ]
+   ]
+  ],
+  [
+   "tripwire-layoffs-36-nov-9-trailer.mp4",
+   12.3,
+   1.88,
+   [
+    [
+     0.0,
+     0.556
+    ]
+   ]
+  ],
+  [
+   "tripwire-layoffs-36-nov-9-trailer.mp4",
+   17.13,
+   3.55,
+   [
+    [
+     0.0,
+     0.543
+    ]
+   ]
+  ],
+  [
+   "tripwire-layoffs-36-nov-9-gfx-1.png",
+   null,
+   3.0,
+   null
+  ],
+  [
+   "tripwire-layoffs-36-nov-9-trailer.mp4",
+   27.73,
+   1.83,
+   [
+    [
+     0.0,
+     0.417
+    ]
+   ]
+  ],
+  [
+   "tripwire-layoffs-36-nov-9-trailer.mp4",
+   29.56,
+   2.63,
+   [
+    [
+     0.0,
+     0.578
+    ]
+   ]
+  ],
+  [
+   "tripwire-layoffs-36-nov-9-trailer.mp4",
+   35.18,
+   2.9,
+   [
+    [
+     0.0,
+     0.451
+    ]
+   ]
+  ],
+  [
+   "tripwire-layoffs-36-nov-9-trailer.mp4",
+   49.88,
+   2.32,
+   [
+    [
+     0.0,
+     0.554
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    "أعلن ستوديو\nتريب واير (Tripwire)\nتقليص فريقه"
+   ]
+  ],
+  [
+   4,
+   5,
+   [
+    "لم يذكر البيان\nسبب التسريح"
+   ]
+  ],
+  [
+   6,
+   7,
+   [
+    "العمل مستمر على Maneater 2\nمع دعم لعبة Killing Floor 3"
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   2,
+   "المصدر: ستوديو تريب واير (Tripwire Interactive)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ],
+  [
+   4,
+   7,
+   "المصدر: ستوديو تريب واير (Tripwire Interactive)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "ستوديو Killing Floor 3\nيسرّح 36 موظفًا",
  "label": "رسمي",
  "source": "ستوديو تريب واير (Tripwire Interactive)",
  "date": "9 Nov 2026",
@@ -26,6 +151,29 @@
  "template": "quote",
  "skin": "house",
  "cut": false,
- "track": "bed",
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "track": [
+  "tripwire-layoffs-36-nov-9-trailer.mp4",
+  2.3
+ ],
+ "gfx": [
+  {
+   "file": "tripwire-layoffs-36-nov-9-gfx-1.png",
+   "kind": "fact",
+   "label": "وصفت تريب واير القرار بأنه",
+   "value": "«ضروري للمؤسسة»"
+  }
+ ],
+ "ground_footage": [
+  "tripwire-layoffs-36-nov-9-trailer.mp4",
+  12.3
+ ],
+ "sensitive": "none; layoffs: neutral, attributed to the studio statement, no commentary, no reason guessed (none given); the cofounder comments are not used",
+ "angle": {
+  "hook": "The studio behind Killing Floor 3 cut 36 jobs, its second round this year",
+  "why_now": "Tripwire's statement 'An Update on Our Studio' was posted 9 Nov 2026",
+  "what_it_means_here": "The studio gave no reason; work continues on Maneater 2, Killing Floor 3 and Tripwire Presents publishing",
+  "payoff": "the remaining work, closing line"
+ },
+ "story_type": "layoffs",
+ "note": "Stand-in footage: Killing Floor 3 Steam trailer 'Operation Deep Freeze' (the studio's own game), picker-clean stretches, credit on screen. Sound: trailer's own."
 }
