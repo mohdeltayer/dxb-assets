@@ -64,7 +64,18 @@
    "change": "first draft"
   }
  ],
- "posts": [],
+ "posts": [
+  {
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "account": "Digital Lounge",
+   "scheduled": "2026-11-11T16:15:00Z",
+   "note": "scheduled in Publer 16:15Z (20:15 Dubai), go: rolling queue (buffer order), gate 15:05Z; ids last six e4496 (ig, 0e4496 form), 6597b (x), 659f0 (threads)"
+  }
+ ],
  "corrections": [],
  "metrics": [],
  "ledger_find": {
@@ -88,8 +99,8 @@
  },
  "arabic_passes": "arabic-games-film-editor then grammar review by hand: agreement (باتت منطقة ... مجانية، المتاحة تعود إلى Greymoor، أصبحتا مجانيتين مع منطقة وقصة), hamza, Latin names unglued, every paragraph opens on an Arabic word",
  "director_check": {
-  "verdict": "pending server qc",
-  "by": "server qc.json",
+  "verdict": "PASS",
+  "by": "server qc.json pass 15:10Z, 0 findings, dispatches 2 (render-live), length 25.0 s",
   "out": "cards/2026-11/eso-markarth-free-base-game-november-11-reel-v1.mp4"
  }
 }
