@@ -196,10 +196,7 @@
  "template": "split",
  "skin": "house",
  "cut": false,
- "track": [
-  "outer-worlds-2-side-effects-guaranteed-dlc-december-2-trailer.mp4",
-  0.0
- ],
+ "track": "bed",
  "strip": [
   [
    "السعر",
@@ -225,8 +222,8 @@
   "STORY: release verbs": "yes: headline and L4 use تصدر with a date",
   "STORY: names match names-ar.md": "yes: أوبسيديان (Obsidian) in the credit, Xbox Wire إكس بوكس واير, PlayStation Blog مدونة بلايستيشن in captions",
   "POST: Arabic passes": "yes: both Arabic passes and DeepL back and forward checks, see story file",
-  "SOUND: footage sound or bed with reason": "yes: trailer's own sound from 0 s as one stretch; audio split applies; not heard, judged by the server qc",
-  "SOUND: no speech under Arabic lines": "yes: to be read from qc.json speech check; trailer is a story-DLC announce with a video message, fix once if flagged",
+  "SOUND: footage sound or bed with reason": "yes: our bed; reason: the Steam DLC announce trailer is dialogue and effects led (server audio split measured music 9.3% of the stretch, leftover 61.2%, so it cannot be split); no other official trailer of the DLC exists yet (the Steam page carries one video; Xbox and PlayStation YouTube copies are the same cut)",
+  "SOUND: no speech under Arabic lines": "yes: bed only, trailer sound off",
   "PICTURE: footage first": "yes: official Steam DLC announce trailer, 113.9 s, decode clean per prerender",
   "PICTURE: not the same as last 5 Reels": "yes: picture: Outer Worlds 2 DLC trailer; no earlier Outer Worlds Reel",
   "PICTURE: crop per beat": "yes: server shot picker focus per shot, text-free 9:16 window",
@@ -271,5 +268,5 @@
    "music": "trailer"
   }
  ],
- "note": "Outer Worlds 2 DLC announce, source Steam DLC trailer (app 4465910), picker-chosen clean stretches, trailer sound, expansion kind -> split, chip رسمي."
+ "note": "Outer Worlds 2 DLC announce, source Steam DLC trailer (app 4465910), picker-chosen clean stretches, trailer sound, expansion kind -> split, chip رسمي. v1 render stopped at the audio split guard (music 9.3%, leak 61.2%); rebuilt on our bed with the reason in reel_check."
 }
