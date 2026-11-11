@@ -81,9 +81,9 @@ Ledger rows (shots and sound; times are seek seconds in the named source):
 
 | # | Shots | Sound |
 |---|---|---|
-| 2 | T1 11.4 to 14.7; T1 31.1 to 34.4; T1 40.05 to 40.9; still rs-leonida-keys-01.jpg; T1 36 to 37.3; T1 19 to 22.0; still rs-grassrivers-05.jpg; still rs-port-gellhorn-06.jpg; still rs-ambrosia-04.jpg; still rs-mount-kalaga-national-park-04.jpg; T1 23.2 to 26.3 | T1 music stem from 11.4 (music_only) |
+| 2 | T1 11.4 to 14.7; T1 31.1 to 34.4; T1 40.05 to 40.95; still rs-leonida-keys-01.jpg; T1 36 to 37.3; T1 19 to 21.6; still rs-grassrivers-05.jpg; still rs-port-gellhorn-06.jpg; still rs-ambrosia-04.jpg; still rs-mount-kalaga-national-park-04.jpg; T1 23.2 to 26.3 | T1 music stem from 11.4 (music_only) |
 | 3 | T2 140.2 to 142.4; T2 88.4 to 89.8; T2 63.3 to 66.3; T2 115.2 to 118.0; Lucia clip 0 to 1.5; T2 27.4 to 31.2; Jason clip 0 to 1.0; T2 66.4 to 69.5; T2 98.4 to 100.2; T2 145.9 to 146.9; T2 153.6 to 156.0 | T2 music stem from 25.6 (music_only) |
-| 4 | Lm 40.4 to 42.2; Lm 33.3 to 34.9; Lm 12.4 to 15.4; T2 50.4 to 52.2; T2 81.3 to 83.3; T2 83.3 to 85.5; T2 52.6 to 55.9; T1 3.6 to 6.4; T1 61 to 63.5; T1 13.3 to 15.1; T1 70.4 to 72.0; T1 21.3 to 22.5; T1 27.4 to 29.6 | T2 music stem from 117.3 (music_only) |
+| 4 | Lm 40.4 to 42.2; Lm 33.3 to 34.9; Lm 12.4 to 15.4; T2 50.4 to 52.2; T2 81.3 to 83.3; T2 83.3 to 85.5; T2 52.6 to 55.9; T1 3.6 to 6.4; T1 61 to 63.5; T1 45.4 to 46.7; T1 70.4 to 72.5; T1 10.3 to 11.2; T1 27.4 to 29.6 | T2 music stem from 117.3 (music_only) |
 | 5 | V14 15.4 to 17.0; V14 38.4 to 40.2; TRI 11.8 to 14.2; TRI 28.4 to 30.2; TRI 16.4 to 19.4; TRI 34.6 to 36.2; TRI 21.3 to 23.4; TRI 45.4 to 47.4; V14 24.4 to 26.4; V14 33.4 to 35.3; XL 992.8 to 999.2 | our gtavi bed |
 | 6 | XL 1037.0 to 1038.9; XL 1039.1 to 1042.1; XL 1062.1 to 1064.3; XL 1064.3 to 1067.2; XL 1086.1 to 1089.5; XL 1115.4 to 1118.8; PS5 19.4 to 22.2; PS5 34.4 to 36.6; XL 1128.8 to 1133.4; XL 1133.6 to 1136.0 | PS5 music stem from 3 (music_only) |
 | 7 | PL 11.3 to 13.3; PL 19.4 to 21.0; XL 758.0 to 761.0; XL 770.0 to 772.6; XL 843.0 to 847.6; XL 782.3 to 785.9; COV 15.6 to 18.8 | COV music stem from 7.5 (music_only) |
