@@ -1,0 +1,23 @@
+{
+ "name": "gta-vi-road-ep9-out-now",
+ "out": "cards/2026-11/gta-vi-road-ep9-out-now-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-11T20:06:00Z",
+ "findings": [],
+ "notes": [
+  "length 12.7 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 95.8; leak_pct 0.0; cache {'hit': 8, 'miss': 0}; separate_secs 4.2; secs 5.9",
+  "smear check: exempt 0.00 to 2.90 s (our own cards)",
+  "render_job: lifeless: {\"score\": 8.8, \"still_share\": 0.103, \"longest_still\": 1.0, \"cuts_per_10s\": 8.97, \"held_under_text\": 0.0, \"secs\": 15.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "6f3ce9fb99955722220925fb64b2b335b20a33b8",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 2160,
+  "max_zoom": 1.11,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18"
+}
