@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-11T02:15:17Z",
- "seq": 312,
+ "generated_at": "2026-11-11T02:52:05Z",
+ "seq": 313,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 11136,
    "source": "PlayStation (YouTube)",
@@ -21,9 +22,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 312
-  }
- ],
- "recent": [
+  },
   {
    "id": 11098,
    "source": "Nintendo Japan",
@@ -919,30 +918,31 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T02:15:14Z",
+  "last_poll_at": "2026-11-11T02:50:14Z",
   "sources_enabled": 100,
-  "sources_ok": 80,
-  "sources_failing": 19,
+  "sources_ok": 75,
+  "sources_failing": 20,
   "failed": [
-   "Blizzard (YouTube) (HTTP 404, 2x)",
-   "Bungie (YouTube) (HTTP 404, 2x)",
-   "CD PROJEKT RED (YouTube) (HTTP 500, 2x)",
-   "Call of Duty (YouTube) (HTTP 404, 2x)",
+   "Blizzard (YouTube) (HTTP 404, 3x)",
+   "Bungie (YouTube) (HTTP 404, 3x)",
+   "CD PROJEKT RED (YouTube) (HTTP 404, 3x)",
+   "Call of Duty (YouTube) (HTTP 404, 3x)",
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 23x)",
-   "Capcom USA (YouTube) (HTTP 404, 2x)",
-   "EA SPORTS FC (YouTube) (HTTP 404, 2x)",
-   "Fortnite (YouTube) (HTTP 404, 2x)",
+   "Capcom USA (YouTube) (HTTP 500, 3x)",
    "Nintendo of America (X) (HTTP 429, 59x)",
+   "Nintendo of America (YouTube) (HTTP 404, 3x)",
    "PlayStation (X) (HTTP 429, 76x)",
-   "PlayStation MENA (YouTube) (HTTP 404, 2x)",
+   "PlayStation (YouTube) (HTTP 404, 2x)",
+   "PlayStation MENA (YouTube) (HTTP 404, 3x)",
    "PlayStation Middle East (X) (HTTP 429, 6x)",
-   "PlayStation Middle East (YouTube) (HTTP 404, 2x)",
-   "Pokemon (YouTube) (HTTP 500, 2x)",
-   "Riot Games (YouTube) (HTTP 404, 2x)",
-   "Rockstar Games (X) (HTTP 429, 31x)",
-   "Square Enix (YouTube) (HTTP 404, 2x)",
-   "Ubisoft (YouTube) (HTTP 404, 2x)",
-   "Xbox (X) (HTTP 429, 76x)"
+   "PlayStation Middle East (YouTube) (HTTP 500, 3x)",
+   "Pokemon (YouTube) (HTTP 404, 3x)",
+   "Riot Games (YouTube) (HTTP 404, 3x)",
+   "Rockstar Games (X) (HTTP 429, 32x)",
+   "Rockstar Games (YouTube) (HTTP 404, 2x)",
+   "Square Enix (YouTube) (HTTP 404, 3x)",
+   "Xbox (X) (HTTP 429, 77x)",
+   "Xbox (YouTube) (HTTP 404, 2x)"
   ]
  }
 }
