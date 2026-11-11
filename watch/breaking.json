@@ -1,27 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-11T18:10:19Z",
- "seq": 339,
+ "generated_at": "2026-11-11T18:52:07Z",
+ "seq": 340,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
-  {
-   "id": 11830,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "The Saros: Zenith update brings more ways to play for newcomers and veterans alike.",
-   "url": "https://www.youtube.com/shorts/tA9jqklCSd8",
-   "published": "2026-11-11T18:00Z",
-   "first_seen": "2026-11-11T18:10:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/tA9jqklCSd8/hqdefault.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 339
-  },
+ "items": [],
+ "recent": [
   {
    "id": 11831,
    "source": "Xbox (YouTube)",
@@ -42,9 +26,24 @@
    ],
    "breaking_source": true,
    "breaking_seq": 339
-  }
- ],
- "recent": [
+  },
+  {
+   "id": 11830,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "The Saros: Zenith update brings more ways to play for newcomers and veterans alike.",
+   "url": "https://www.youtube.com/shorts/tA9jqklCSd8",
+   "published": "2026-11-11T18:00Z",
+   "first_seen": "2026-11-11T18:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/tA9jqklCSd8/hqdefault.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 339
+  },
   {
    "id": 11797,
    "source": "Nintendo of America (YouTube)",
@@ -427,79 +426,16 @@
    ],
    "breaking_source": true,
    "breaking_seq": 299
-  },
-  {
-   "id": 10835,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "RELEASE DATE TRAILER | WARHAMMER 40,000: DARK HERESY",
-   "url": "https://www.youtube.com/watch?v=QRA_JmNiLnk",
-   "published": "2026-11-10T18:29Z",
-   "first_seen": "2026-11-10T18:45:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/QRA_JmNiLnk/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=QRA_JmNiLnk"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 297
-  },
-  {
-   "id": 10829,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Monster Train 2: The Punished - Launch Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=zyxriGmW3BI",
-   "published": "2026-11-10T18:15Z",
-   "first_seen": "2026-11-10T18:30:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/zyxriGmW3BI/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=zyxriGmW3BI"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 296
-  },
-  {
-   "id": 10802,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "The Outer Worlds 2 - Side Effects Guaranteed Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=WjlWK1Wl6dc",
-   "published": "2026-11-10T18:00Z",
-   "first_seen": "2026-11-10T18:15:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/WjlWK1Wl6dc/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=WjlWK1Wl6dc"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 295
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T18:10:14Z",
+  "last_poll_at": "2026-11-11T18:50:05Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 30x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 31x)",
    "Nintendo of America (X) (HTTP 429, 61x)",
    "PlayStation (X) (HTTP 429, 78x)",
    "PlayStation Middle East (X) (HTTP 429, 7x)",
