@@ -12,20 +12,6 @@
    "trailer": "TEKKEN 8 - Story Trailer",
    "start": 0,
    "seconds": 240
-  },
-  {
-   "file": "harada-xbox-series-s-wish-wouldnt-release-november-11-gamescom.mp4",
-   "steam": 1778820,
-   "trailer": "TEKKEN 8 - Gamescom Trailer",
-   "start": 0,
-   "seconds": 240
-  },
-  {
-   "file": "harada-xbox-series-s-wish-wouldnt-release-november-11-teaser.mp4",
-   "steam": 1778820,
-   "trailer": "TEKKEN 8 - Teaser Trailer",
-   "start": 0,
-   "seconds": 240
   }
  ],
  "shots": [
@@ -52,23 +38,6 @@
    ]
   ],
   [
-   "harada-xbox-series-s-wish-wouldnt-release-november-11-gamescom.mp4",
-   6.28,
-   2.67,
-   [
-    [
-     0.0,
-     0.316
-    ]
-   ]
-  ],
-  [
-   "harada-xbox-series-s-wish-wouldnt-release-november-11-gfx-1.png",
-   null,
-   3.0,
-   null
-  ],
-  [
    "harada-xbox-series-s-wish-wouldnt-release-november-11-story.mp4",
    61.8,
    2.3,
@@ -80,35 +49,41 @@
    ]
   ],
   [
-   "harada-xbox-series-s-wish-wouldnt-release-november-11-gamescom.mp4",
-   128.23,
+   "harada-xbox-series-s-wish-wouldnt-release-november-11-gfx-1.png",
+   null,
+   3.0,
+   null
+  ],
+  [
+   "harada-xbox-series-s-wish-wouldnt-release-november-11-story.mp4",
+   119.41,
+   1.65,
+   [
+    [
+     0.0,
+     0.489
+    ]
+   ]
+  ],
+  [
+   "harada-xbox-series-s-wish-wouldnt-release-november-11-story.mp4",
+   138.08,
    2.43,
    [
     [
      0.0,
-     0.586
+     0.585
     ]
    ]
   ],
   [
-   "harada-xbox-series-s-wish-wouldnt-release-november-11-gamescom.mp4",
-   58.63,
-   1.62,
-   [
-    [
-     0.0,
-     0.375
-    ]
-   ]
-  ],
-  [
-   "harada-xbox-series-s-wish-wouldnt-release-november-11-gamescom.mp4",
-   134.36,
+   "harada-xbox-series-s-wish-wouldnt-release-november-11-story.mp4",
+   144.21,
    1.8,
    [
     [
      0.0,
-     0.47
+     0.472
     ]
    ]
   ]
@@ -128,22 +103,10 @@
   ],
   [
    4,
-   5,
+   6,
    [
     [
      "ذاكرته قليلة وأداؤه أضعف من Series X",
-     {
-      "size": 54
-     }
-    ]
-   ]
-  ],
-  [
-   6,
-   7,
-   [
-    [
-     "لاعبو الجهاز يلومون المطورين",
      {
       "size": 54
      }
@@ -163,7 +126,7 @@
   ],
   [
    4,
-   7,
+   6,
    "لقطات Tekken 8: بانداي نامكو (Bandai Namco)",
    {
     "size": 40,
@@ -208,9 +171,9 @@
   "STORY: release verbs": "n/a: no release in the story, chip تقرير",
   "STORY: names match names-ar.md": "yes: يوروغيمر, بانداي نامكو, مايكروسوفت per names-ar.md; Harada first mention with the Latin bracket",
   "POST: Arabic passes": "yes: arabic-games-film-editor then arabic-grammar-review, DeepL forward and back, see story file",
-  "SOUND: footage sound or bed with reason": "yes: our bed; reason: v1 render on the Tekken 8 Story Trailer's own sound stopped at the server audio split guard (music stem not clean, leftover 34.2% over the 5% limit, a fighting-game trailer with effects and voices), and the stand-in footage comes from two trailers (Story and Gamescom) cut out of order, so no single clean stretch exists; the story is a quote report with stand-in footage, not a trailer story",
+  "SOUND: footage sound or bed with reason": "yes: our bed; reason: v1 render on the Tekken 8 Story Trailer's own sound stopped at the server audio split guard (music stem not clean, leftover 34.2% over the 5% limit, a fighting-game trailer with effects and voices); the story is a quote report with stand-in footage, not a trailer story",
   "SOUND: no speech under Arabic lines": "yes: bed only, trailer sound off",
-  "PICTURE: footage first": "yes: official Steam trailers TEKKEN 8 Story and Gamescom, decode clean per shotpick",
+  "PICTURE: footage first": "yes: official Steam trailer TEKKEN 8 - Story Trailer, decode clean per shotpick",
   "PICTURE: not the same as last 5 Reels": "yes: no earlier Tekken Reel since 12 Oct (Roger Jr date)",
   "PICTURE: crop per beat": "yes: picker focus per shot; texts rejected by shotpick",
   "PICTURE: credit on every clip": "yes: credit on every footage shot with the stand-in wording",
@@ -227,7 +190,7 @@
   },
   {
    "beat": "1-2 who",
-   "shot": "story 24.36 s, gamescom 6.28 s",
+   "shot": "story trailer 24.36 and 61.8 s",
    "alternatives": "none",
    "crop": "picker focus",
    "music": "our bed"
@@ -241,11 +204,11 @@
   },
   {
    "beat": "4-7 the complaint",
-   "shot": "story 61.8 s, gamescom 128.23, 58.63 and 134.36 s (replaced after smear flags in v2 and v3: story 144.21 s, then gamescom 113.9 s)",
+   "shot": "story 119.41, 138.08 and 144.21 s (all from the Story Trailer; v2 to v4 with Gamescom Trailer shots hit the render smear flag at three different places, so they were dropped)",
    "alternatives": "none",
    "crop": "picker focus",
    "music": "our bed"
   }
  ],
- "note": "Harada on Xbox Series S, report via Eurogamer; stand-in footage from Tekken 8 trailers (his series), credited. v1 stopped at the audio split guard (leftover 34.2%); rebuilt on our bed with the reason in reel_check."
+ "note": "Harada on Xbox Series S, report via Eurogamer; stand-in footage from Tekken 8 trailers (his series), credited. v1 stopped at the audio split guard (leftover 34.2%); rebuilt on our bed with the reason in reel_check. v5: Story Trailer shots only."
 }
