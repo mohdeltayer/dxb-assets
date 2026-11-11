@@ -33861,5 +33861,37 @@
   "story": "fairgames-cancelled-bloomberg-nov-11",
   "job_sha": "89517760e4e6c5794cdfd99c912ec0101fc418f4",
   "dispatches": 1
+ },
+ {
+  "name": "fairgames-cancelled-bloomberg-nov-11-reel-v2.mp4",
+  "profile": "breaking-card",
+  "at": "2026-11-11T07:10Z",
+  "stages": {
+   "checks": 0.8,
+   "compose": 10.3,
+   "outro": 4.6
+  },
+  "total": 15.7,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-11T07:10Z",
+  "finished_at": "2026-11-11T07:10Z",
+  "render_min": 0.26,
+  "final_enc": "breaking-card",
+  "quality": "base",
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 21,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 920,
+  "peak_mem_mb": 1439,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 20054,
+  "peak_disk_mb": 20143,
+  "min_disk_free_mb": 225963,
+  "setup_min": 0.13,
+  "story": "fairgames-cancelled-bloomberg-nov-11",
+  "job_sha": "b1d92f7f3853e64ea70b58a2d66470ee015a5670",
+  "dispatches": 2
  }
 ]
