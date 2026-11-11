@@ -1,10 +1,54 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-11T21:10:18Z",
- "seq": 347,
+ "generated_at": "2026-11-11T21:15:06Z",
+ "seq": 348,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 12007,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "The Road of Dust and Sorrow - Release Date Announcement | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=pBzUGSI03Xw",
+   "published": "2026-11-11T21:00Z",
+   "first_seen": "2026-11-11T21:15:05Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/pBzUGSI03Xw/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=pBzUGSI03Xw"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 348
+  }
+ ],
+ "recent": [
+  {
+   "id": 12006,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "The Road of Dust and Sorrow | Official New Release Date Announcement",
+   "url": "https://www.youtube.com/watch?v=LduxuM387hc",
+   "published": "2026-11-11T21:00Z",
+   "first_seen": "2026-11-11T21:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/LduxuM387hc/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=LduxuM387hc"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 347
+  },
   {
    "id": 12005,
    "source": "Xbox (YouTube)",
@@ -26,29 +70,6 @@
    "breaking_source": true,
    "breaking_seq": 347
   },
-  {
-   "id": 12006,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "The Road of Dust and Sorrow | Official New Release Date Announcement",
-   "url": "https://www.youtube.com/watch?v=LduxuM387hc",
-   "published": "2026-11-11T21:00Z",
-   "first_seen": "2026-11-11T21:10:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/LduxuM387hc/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=LduxuM387hc"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 347
-  }
- ],
- "recent": [
   {
    "id": 11888,
    "source": "Xbox Wire",
@@ -502,7 +523,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T21:10:14Z",
+  "last_poll_at": "2026-11-11T21:15:05Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 6,
