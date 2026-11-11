@@ -37440,5 +37440,183 @@
   "story": "gta-vi-road-ep6-what-you-can-do",
   "job_sha": "1efd1fe149434873df8f1f822d1946063f4ed85f",
   "dispatches": 2
+ },
+ {
+  "name": "gta-vi-road-ep7-editions-gulf-prices-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-11T19:31Z",
+  "stages": {
+   "checks": 14.6,
+   "montage": 58.7,
+   "text": 25.6,
+   "audio": 1.1,
+   "outro": 16.8
+  },
+  "total": 116.9,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-11T19:29Z",
+  "finished_at": "2026-11-11T19:31Z",
+  "render_min": 1.95,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "gta6-preload.mp4",
+    "start": 11.25,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 69.76,
+    "rows": 1920,
+    "zoom": 1.0,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "gta6-xl-drive.mp4",
+    "start": 18.5,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 70.04,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "gta6-xl-drive.mp4",
+    "start": 0.5,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 70.04,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "gta6-xl-drive.mp4",
+    "start": 12.5,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 70.04,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "gta6-xl-tower.mp4",
+    "start": 0.2,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 70.3,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "gta6-xl-drive.mp4",
+    "start": 24.8,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 70.04,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 2160,
+   "max_zoom": 1.0,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 10.3,
+   "audio_secs": 48.9,
+   "music_pct": 99.9,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 4
+   },
+   "effects_shots": 0,
+   "mix_secs": 3.3,
+   "secs": 14.7
+  },
+  "design_pass": {
+   "hf": "0.8.143",
+   "notes": [],
+   "pieces": [
+    {
+     "piece": "cover",
+     "moments": [
+      "chip"
+     ],
+     "ok": true,
+     "at": 0.0,
+     "secs": 3.6,
+     "render_secs": 16.7
+    },
+    {
+     "piece": "frame",
+     "ok": false,
+     "error": "ValueError: frame holds only 1.84 s still; it needs 2 to 3 s for reading (more secs)",
+     "render_secs": 2.6
+    }
+   ],
+   "blips": [
+    0.37
+   ],
+   "laid_back": [
+    "strip"
+   ],
+   "secs": 35.2,
+   "blips_dropped_for_speech": []
+  },
+  "intro": {
+   "days": 2,
+   "secs": 7.5
+  },
+  "lifeless": {
+   "score": 2.4,
+   "still_share": 0.035,
+   "longest_still": 0.2,
+   "cuts_per_10s": 5.81,
+   "held_under_text": 0.0,
+   "secs": 17.2,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 360,
+  "queue_wait_secs": 1652,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1044,
+  "peak_mem_mb": 2418,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 25696,
+  "peak_disk_mb": 28665,
+  "min_disk_free_mb": 217441,
+  "setup_min": 0.18,
+  "story": "gta-vi-road-ep7-editions-gulf-prices",
+  "job_sha": "5d3ef2edc4a30865c5e3c546a6578ffef37180b4",
+  "dispatches": 2
  }
 ]
