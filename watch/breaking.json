@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-11T21:15:06Z",
- "seq": 348,
+ "generated_at": "2026-11-11T21:52:05Z",
+ "seq": 349,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 12007,
    "source": "PlayStation (YouTube)",
@@ -25,9 +26,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 348
-  }
- ],
- "recent": [
+  },
   {
    "id": 12006,
    "source": "Xbox (YouTube)",
@@ -523,7 +522,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T21:15:05Z",
+  "last_poll_at": "2026-11-11T21:50:14Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 6,
@@ -533,7 +532,7 @@
    "PlayStation (X) (HTTP 429, 78x)",
    "PlayStation Middle East (X) (HTTP 429, 7x)",
    "Rockstar Games (X) (HTTP 429, 33x)",
-   "Xbox (X) (HTTP 429, 78x)"
+   "Xbox (X) (HTTP 429, 79x)"
   ]
  }
 }
