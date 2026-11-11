@@ -37962,5 +37962,85 @@
   "story": "gta-vi-road-ep3-jason-and-lucia",
   "job_sha": "efbefe987c5386b5125abb95ae500969c40a54d3",
   "dispatches": 2
+ },
+ {
+  "name": "conan-the-black-pyramid-announced-pc-2027-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-11T20:01Z",
+  "stages": {
+   "checks": 1.9,
+   "montage": 51.4,
+   "text": 59.8,
+   "audio": 1.2,
+   "outro": 53.1
+  },
+  "total": 167.4,
+  "lane": "runner",
+  "queued_at": "2026-11-11T19:56:38Z",
+  "finished_at": "2026-11-11T20:01Z",
+  "render_min": 2.79,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "conan-the-black-pyramid-announced-pc-2027-trailer.mp4",
+    "start": 6.53,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.81,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 8.9,
+   "audio_secs": 21.5,
+   "music_pct": 25.2,
+   "leak_pct": 0.5,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "reason": "music only 25.2% of the track (< 40.0%)",
+   "secs": 15.4
+  },
+  "lifeless": {
+   "score": 15.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 0.0,
+   "held_under_text": 0.0,
+   "secs": 19.4,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 235,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1349,
+  "peak_mem_mb": 3112,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60739,
+  "peak_disk_mb": 63732,
+  "min_disk_free_mb": 84065,
+  "setup_min": 1.12,
+  "story": "conan-the-black-pyramid-announced-pc-2027"
  }
 ]
