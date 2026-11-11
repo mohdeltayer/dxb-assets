@@ -1,10 +1,23 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-11T18:52:07Z",
- "seq": 340,
+ "generated_at": "2026-11-11T19:10:15Z",
+ "seq": 341,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 11884,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/11/26 Ready up for an RPG—the world needs you! Are you looking to embark on an epic journey that’s likely full of impending doom, character growth, and many",
+   "url": "https://www.nintendo.com/us/whatsnew/ready-up-for-an-rpg-the-world-needs-you/",
+   "published": null,
+   "first_seen": "2026-11-11T19:10:14Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 341
+  }
+ ],
  "recent": [
   {
    "id": 11831,
@@ -430,7 +443,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T18:50:05Z",
+  "last_poll_at": "2026-11-11T19:10:14Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
