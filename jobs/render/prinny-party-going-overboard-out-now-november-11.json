@@ -3,7 +3,7 @@
  "story": "2026-11-11-prinny-party-out-now",
  "kind_news": "launch",
  "built_by": "production-2",
- "render_lane": "server",
+ "render_lane": "hosted",
  "out": "cards/2026-11/prinny-party-going-overboard-out-now-november-11-reel-v1.mp4",
  "footage": [
   {
@@ -224,5 +224,6 @@
    "music": "bed"
   }
  ],
- "note": "Prinny Party out now. Sources: Steam Launch and Announcement trailers, 8 clean stretches (about 15.6 s). Sound: our bed (two trailers, no coherent stretch)."
+ "note": "Prinny Party out now. Sources: Steam Launch and Announcement trailers, 8 clean stretches (about 15.6 s). Sound: our bed (two trailers, no coherent stretch).",
+ "lane_reason": "dxb-render server queue held four GTA VI batch renders; hosted runner for parallel capacity, slot 01:15 Dubai"
 }
