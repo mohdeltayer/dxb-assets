@@ -1,10 +1,49 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-11T17:52:05Z",
- "seq": 338,
+ "generated_at": "2026-11-11T18:10:19Z",
+ "seq": 339,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 11830,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "The Saros: Zenith update brings more ways to play for newcomers and veterans alike.",
+   "url": "https://www.youtube.com/shorts/tA9jqklCSd8",
+   "published": "2026-11-11T18:00Z",
+   "first_seen": "2026-11-11T18:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/tA9jqklCSd8/hqdefault.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 339
+  },
+  {
+   "id": 11831,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Rayman Legends Retold - Vortex Outfit Trailer (XBOX-Exclusive)",
+   "url": "https://www.youtube.com/watch?v=enLchT36ens",
+   "published": "2026-11-11T17:50Z",
+   "first_seen": "2026-11-11T18:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/enLchT36ens/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=enLchT36ens"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 339
+  }
+ ],
  "recent": [
   {
    "id": 11797,
@@ -451,118 +490,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 295
-  },
-  {
-   "id": 10775,
-   "source": "Nintendo of America (YouTube)",
-   "source_kind": "youtube",
-   "title": "Just Dance: Decades of Hits – Every Era One Floor Trailer – Nintendo Switch 2",
-   "url": "https://www.youtube.com/watch?v=AFclxMTQ2hI",
-   "published": "2026-11-10T18:00Z",
-   "first_seen": "2026-11-10T18:05:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/AFclxMTQ2hI/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=AFclxMTQ2hI"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 294
-  },
-  {
-   "id": 10774,
-   "source": "PlayStation Blog",
-   "source_kind": "official",
-   "title": "The Outer Worlds 2’s first DLC arrives December 2",
-   "url": "https://blog.playstation.com/2026/11/10/the-outer-worlds-2s-first-dlc-arrives-december-2/",
-   "published": "2026-11-10T18:00Z",
-   "first_seen": "2026-11-10T18:05:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55632582320_0a7410acf8_6k.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55632159101_a212b0d208_6k.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55632362119_7736b1eb31_6k.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55632582325_d5799c1525_6k.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55632582435_fa995d0d2f_6k.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 294
-  },
-  {
-   "id": 10767,
-   "source": "Bungie",
-   "source_kind": "official",
-   "title": "Marathon Update 1.1.9.7",
-   "url": "https://www.bungie.net/7/en/News/Article/marathon_update_1_1_9_7",
-   "published": "2026-11-10T17:00Z",
-   "first_seen": "2026-11-10T18:00:05Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 293
-  },
-  {
-   "id": 10766,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "Side Effects Guaranteed in the First DLC For The Outer Worlds 2, Coming December 2",
-   "url": "https://news.xbox.com/en-us/2026/11/10/side-effects-guaranteed-the-outer-worlds-2-dlc/",
-   "published": "2026-11-10T18:00Z",
-   "first_seen": "2026-11-10T18:00:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/tow2-dlc1-npc-gordon-001-3a3c5f396763e34891f0.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/tow2-dlc1-cmbt-primal-sprat-001-0d6cc27e4df55d0ae5d2.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/tow2-dlc1-env-microlab-001-897938a09c411428d604.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/tow2-dlc1-player-armor-001-a2e9272f0668356ec3a0.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://store-images.s-microsoft.com/image/apps.18776.14630721915617614.186c5f7e-6b53-449d-92d0-bf528d5efe0b.9025a49c-7c2b-4bc0-b94c-6713d8b1c2f2?w=400&h=600"
-    },
-    {
-     "type": "image",
-     "url": "https://assets.onestore.ms/cdnfiles/sfw-service-web-onestore-onerf-2017-11-8-12/store/common/images/xpalogo_black.png"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 293
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T17:50:14Z",
+  "last_poll_at": "2026-11-11T18:10:14Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
