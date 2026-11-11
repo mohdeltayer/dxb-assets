@@ -180,10 +180,7 @@
  "template": "clipcard",
  "skin": "house",
  "cut": false,
- "track": [
-  "harada-xbox-series-s-wish-wouldnt-release-november-11-story.mp4",
-  0.0
- ],
+ "track": "bed",
  "gfx": [
   {
    "file": "harada-xbox-series-s-wish-wouldnt-release-november-11-gfx-1.png",
@@ -211,8 +208,8 @@
   "STORY: release verbs": "n/a: no release in the story, chip تقرير",
   "STORY: names match names-ar.md": "yes: يوروغيمر, بانداي نامكو, مايكروسوفت per names-ar.md; Harada first mention with the Latin bracket",
   "POST: Arabic passes": "yes: arabic-games-film-editor then arabic-grammar-review, DeepL forward and back, see story file",
-  "SOUND: footage sound or bed with reason": "yes: Tekken 8 Story Trailer own sound, one stretch from 0 s, audio split on the server",
-  "SOUND: no speech under Arabic lines": "yes: the split keeps the music stem and no dialogue",
+  "SOUND: footage sound or bed with reason": "yes: our bed; reason: v1 render on the Tekken 8 Story Trailer's own sound stopped at the server audio split guard (music stem not clean, leftover 34.2% over the 5% limit, a fighting-game trailer with effects and voices), and the stand-in footage comes from two trailers (Story and Gamescom) cut out of order, so no single clean stretch exists; the story is a quote report with stand-in footage, not a trailer story",
+  "SOUND: no speech under Arabic lines": "yes: bed only, trailer sound off",
   "PICTURE: footage first": "yes: official Steam trailers TEKKEN 8 Story and Gamescom, decode clean per shotpick",
   "PICTURE: not the same as last 5 Reels": "yes: no earlier Tekken Reel since 12 Oct (Roger Jr date)",
   "PICTURE: crop per beat": "yes: picker focus per shot; texts rejected by shotpick",
@@ -226,29 +223,29 @@
    "shot": "story trailer 0 to 2.85 s",
    "alternatives": "launch trailer rejected: burnt-in text in almost every scene",
    "crop": "picker focus",
-   "music": "trailer own sound, music stem"
+   "music": "our bed"
   },
   {
    "beat": "1-2 who",
    "shot": "story 24.36 s, gamescom 6.28 s",
    "alternatives": "none",
    "crop": "picker focus",
-   "music": "trailer"
+   "music": "our bed"
   },
   {
    "beat": "3 quote card",
    "shot": "card on the story trailer at 61.8 s, dimmed",
    "alternatives": "none",
    "crop": "-",
-   "music": "trailer"
+   "music": "our bed"
   },
   {
    "beat": "4-7 the complaint",
    "shot": "story 61.8 and 144.21 s, gamescom 128.23 and 113.9 s",
    "alternatives": "none",
    "crop": "picker focus",
-   "music": "trailer"
+   "music": "our bed"
   }
  ],
- "note": "Harada on Xbox Series S, report via Eurogamer; stand-in footage from Tekken 8 trailers (his series), credited."
+ "note": "Harada on Xbox Series S, report via Eurogamer; stand-in footage from Tekken 8 trailers (his series), credited. v1 stopped at the audio split guard (leftover 34.2%); rebuilt on our bed with the reason in reel_check."
 }
