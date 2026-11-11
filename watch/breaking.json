@@ -1,10 +1,45 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-11T14:15:18Z",
- "seq": 329,
+ "generated_at": "2026-11-11T14:25:18Z",
+ "seq": 330,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 11682,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/11/26 The Legend of Zelda: Ocarina of Time for Nintendo Switch 2 sells over 5.2 million units worldwide in first four days Link’s Reborn Adventure Becomes Ni",
+   "url": "https://www.nintendo.com/us/whatsnew/the-legend-of-zelda-ocarina-of-time-for-nintendo-switch-2-sells-over-5-2-million-units-worldwide-in-first-four-days/",
+   "published": null,
+   "first_seen": "2026-11-11T14:25:13Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 330
+  }
+ ],
+ "recent": [
+  {
+   "id": 11674,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Thronefall - Launch Trailer",
+   "url": "https://www.youtube.com/watch?v=uRjiHf8OKb0",
+   "published": "2026-11-11T14:00Z",
+   "first_seen": "2026-11-11T14:15:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/uRjiHf8OKb0/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=uRjiHf8OKb0"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 329
+  },
   {
    "id": 11673,
    "source": "PlayStation (YouTube)",
@@ -26,29 +61,6 @@
    "breaking_source": true,
    "breaking_seq": 329
   },
-  {
-   "id": 11674,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Thronefall - Launch Trailer",
-   "url": "https://www.youtube.com/watch?v=uRjiHf8OKb0",
-   "published": "2026-11-11T14:00Z",
-   "first_seen": "2026-11-11T14:15:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/uRjiHf8OKb0/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=uRjiHf8OKb0"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 329
-  }
- ],
- "recent": [
   {
    "id": 11633,
    "source": "PlayStation (YouTube)",
@@ -710,34 +722,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 282
-  },
-  {
-   "id": 10493,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "The Falconeer: Revolution Remaster - Release Date Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=h78a3MUvXsw",
-   "published": "2026-11-10T14:15Z",
-   "first_seen": "2026-11-10T14:20:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/h78a3MUvXsw/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=h78a3MUvXsw"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 280
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T14:15:14Z",
+  "last_poll_at": "2026-11-11T14:25:13Z",
   "sources_enabled": 100,
-  "sources_ok": 94,
+  "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 29x)",
