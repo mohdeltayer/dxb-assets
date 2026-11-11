@@ -1,18 +1,18 @@
 {
  "name": "gta-vi-road-ep9-out-now",
- "out": "cards/2026-11/gta-vi-road-ep9-out-now-reel-v2.mp4",
+ "out": "cards/2026-11/gta-vi-road-ep9-out-now-reel-v3.mp4",
  "verdict": "pass",
- "at": "2026-11-11T21:11:44Z",
+ "at": "2026-11-11T22:05:30Z",
  "findings": [],
  "notes": [
-  "length 12.0 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 95.8; leak_pct 0.0; cache {'hit': 4, 'miss': 4}; separate_secs 8.7; secs 12.1",
+  "length 12.6 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 95.6; leak_pct 0.0; cache {'hit': 2, 'miss': 8}; separate_secs 9.8; secs 12.8",
   "smear check: exempt 0.00 to 2.90 s (our own cards)",
-  "render_job: lifeless: {\"score\": 9.0, \"still_share\": 0.107, \"longest_still\": 1.0, \"cuts_per_10s\": 9.4, \"held_under_text\": 0.0, \"secs\": 14.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: lifeless: {\"score\": 15.9, \"still_share\": 0.168, \"longest_still\": 2.0, \"cuts_per_10s\": 7.74, \"held_under_text\": 0.0, \"secs\": 15.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "95df6a2058c0512d0120f8ab81ec6cab01931cc6",
- "dispatches": 3,
+ "job_sha": "3608d5e2b40d1998bd0a986cf6979d7ca6401394",
+ "dispatches": 4,
  "source_summary": {
   "min_height": 2160,
   "max_zoom": 1.11,
