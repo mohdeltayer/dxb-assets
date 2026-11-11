@@ -68,5 +68,23 @@
    "2026-11-19-gta-vi-road-ep9-out-now",
    "weekly-releases-nov-9-13-list"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/gta-vi-road-ep3-jason-and-lucia-reel-v7.mp4",
+  "blob": "bb17d3e3f083f706b054f646b2d0a87632f2b4ef",
+  "at": "2026-11-11T23:18:28Z",
+  "note": "round 2 on v7: Lucia opens on her, Jason drive clear of the passer-by, counter shot clean",
+  "checklist": {
+   "job": "jobs/live/gta-vi-road-ep3-jason-and-lucia.json",
+   "sha256": "47fbac42a88758702c1b1f2f59eddfb19117ad8001036486685c715501c13c6f",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-1 (studio)"
+  },
+  "by": "director-agent (separate, sonnet)"
  }
 }
