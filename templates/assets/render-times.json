@@ -38633,5 +38633,189 @@
   "min_disk_free_mb": 85014,
   "setup_min": 0.93,
   "story": "prinny-party-going-overboard-out-now-november-11"
+ },
+ {
+  "name": "gta-vi-road-ep6-what-you-can-do-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-11-11T20:19Z",
+  "stages": {
+   "checks": 27.9,
+   "montage": 91.1,
+   "text": 58.5,
+   "audio": 1.4,
+   "outro": 23.5
+  },
+  "total": 202.4,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-11T20:15Z",
+  "finished_at": "2026-11-11T20:19Z",
+  "render_min": 3.37,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "gta6-xl-dive-gym.mp4",
+    "start": 0.1,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 70.37,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "gta6-xl-boat.mp4",
+    "start": 0.1,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 70.24,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "gta6-xl-race.mp4",
+    "start": 0.0,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 69.81,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "gta6-xl-race.mp4",
+    "start": 2.55,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 69.81,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "gta6-xl-bike.mp4",
+    "start": 0.1,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 69.95,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "gta6-xl-hoop.mp4",
+    "start": 0.05,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 70.0,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "gta6-ps5-features.mp4",
+    "start": 19.4,
+    "width": 3840,
+    "height": 2160,
+    "fps": 29.97,
+    "mbps": 10.9,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "gta6-ps5-features.mp4",
+    "start": 34.45,
+    "width": 3840,
+    "height": 2160,
+    "fps": 29.97,
+    "mbps": 10.9,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "gta6-xl-sky.mp4",
+    "start": 5.0,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 70.17,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 2160,
+   "max_zoom": 0.89,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 9.2,
+   "audio_secs": 56.8,
+   "music_pct": 71.3,
+   "leak_pct": 0.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 5,
+    "miss": 4
+   },
+   "effects_shots": 0,
+   "mix_secs": 3.3,
+   "secs": 13.5
+  },
+  "intro": {
+   "days": 3,
+   "secs": 28.2
+  },
+  "lifeless": {
+   "score": 2.0,
+   "still_share": 0.026,
+   "longest_still": 0.2,
+   "cuts_per_10s": 8.12,
+   "held_under_text": 0.0,
+   "secs": 23.4,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 509,
+  "queue_wait_secs": 2563,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1157,
+  "peak_mem_mb": 2714,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 25826,
+  "peak_disk_mb": 29819,
+  "min_disk_free_mb": 216287,
+  "setup_min": 0.2,
+  "story": "gta-vi-road-ep6-what-you-can-do",
+  "job_sha": "a3b9b6fe9f71bee28890a2d51d326715c2b089d6",
+  "dispatches": 3
  }
 ]

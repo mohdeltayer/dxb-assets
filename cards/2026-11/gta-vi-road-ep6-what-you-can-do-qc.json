@@ -1,18 +1,18 @@
 {
  "name": "gta-vi-road-ep6-what-you-can-do",
- "out": "cards/2026-11/gta-vi-road-ep6-what-you-can-do-reel-v2.mp4",
+ "out": "cards/2026-11/gta-vi-road-ep6-what-you-can-do-reel-v3.mp4",
  "verdict": "pass",
- "at": "2026-11-11T19:27:34Z",
+ "at": "2026-11-11T20:23:01Z",
  "findings": [],
  "notes": [
-  "length 19.8 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 72.9; leak_pct 0.3; cache {'hit': 2, 'miss': 7}; separate_secs 11.7; secs 16.7",
+  "length 20.6 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 71.3; leak_pct 0.3; cache {'hit': 5, 'miss': 4}; separate_secs 9.2; secs 13.5",
   "smear check: exempt 0.00 to 2.90 s (our own cards)",
-  "render_job: lifeless: {\"score\": 2.0, \"still_share\": 0.027, \"longest_still\": 0.2, \"cuts_per_10s\": 9.29, \"held_under_text\": 0.0, \"secs\": 22.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: lifeless: {\"score\": 2.0, \"still_share\": 0.026, \"longest_still\": 0.2, \"cuts_per_10s\": 8.12, \"held_under_text\": 0.0, \"secs\": 23.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "1efd1fe149434873df8f1f822d1946063f4ed85f",
- "dispatches": 3,
+ "job_sha": "a3b9b6fe9f71bee28890a2d51d326715c2b089d6",
+ "dispatches": 4,
  "source_summary": {
   "min_height": 2160,
   "max_zoom": 0.89,
