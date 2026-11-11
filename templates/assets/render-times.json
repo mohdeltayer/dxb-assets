@@ -38965,5 +38965,189 @@
   "story": "gta-vi-road-ep8-launch-times-gulf",
   "job_sha": "fc7866fdda9d76f71680463696b4c68ad32eb81f",
   "dispatches": 2
+ },
+ {
+  "name": "gta-vi-road-ep3-jason-and-lucia-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-11-11T20:50Z",
+  "stages": {
+   "checks": 9.8,
+   "montage": 49.9,
+   "text": 38.8,
+   "audio": 1.2,
+   "outro": 18.7
+  },
+  "total": 118.4,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-11T20:48Z",
+  "finished_at": "2026-11-11T20:50Z",
+  "render_min": 1.97,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "gta6-launch-master.mp4",
+    "start": 26.45,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 69.92,
+    "rows": 1920,
+    "zoom": 1.0,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "gta6-t2.mp4",
+    "start": 63.3,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "gta6-t2.mp4",
+    "start": 115.2,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "gta6-lucia-clip.mp4",
+    "start": 0.0,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 83.35,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "gta6-t2.mp4",
+    "start": 27.4,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "gta6-jason-clip.mp4",
+    "start": 0.0,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 87.18,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "gta6-t2.mp4",
+    "start": 66.4,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "gta6-t2.mp4",
+    "start": 98.4,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "gta6-t2.mp4",
+    "start": 152.6,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 2160,
+   "max_zoom": 1.11,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 6.3,
+   "audio_secs": 56.9,
+   "music_pct": 68.7,
+   "leak_pct": 3.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 8,
+    "miss": 2
+   },
+   "effects_shots": 0,
+   "mix_secs": 3.0,
+   "secs": 10.4
+  },
+  "intro": {
+   "days": 6,
+   "secs": 22.7
+  },
+  "lifeless": {
+   "score": 2.1,
+   "still_share": 0.029,
+   "longest_still": 0.2,
+   "cuts_per_10s": 5.34,
+   "held_under_text": 0.0,
+   "secs": 20.6,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 366,
+  "queue_wait_secs": 0,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1201,
+  "peak_mem_mb": 2654,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 25879,
+  "peak_disk_mb": 29866,
+  "min_disk_free_mb": 216240,
+  "setup_min": 0.2,
+  "story": "gta-vi-road-ep3-jason-and-lucia",
+  "job_sha": "9ce84131ce0379d84f269f6ac2d81f4bef69b3d3",
+  "dispatches": 3
  }
 ]
