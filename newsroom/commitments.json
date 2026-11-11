@@ -3360,6 +3360,38 @@
    "held_by_mohammad": false,
    "status": "scheduled in Publer for 09:15 Dubai Wed 11 Nov, 3/3 (ids ig:45bf88 x:45bf92 th:6534b4), director passed with a note",
    "by": "production-2"
+  },
+  {
+   "id": "fairgames-cancelled-bloomberg-20261111-0745z",
+   "title": "Sony cancels Fairgame$ (Bloomberg report), breaking card, our bed",
+   "kind": "news",
+   "slot": "Wed 11 Nov 11:45 Dubai (07:45Z)",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "fairgames-cancelled-bloomberg-nov-11",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "status": "scheduled in Publer for 11:45 Dubai Wed 11 Nov, 3/3 (ids ig:6559fa x:45e89a th:0d2f40), director PASS by a helper (not bound by presubmit.py: that step was not run)",
+   "by": "production-2"
+  },
+  {
+   "id": "fortis-games-closes-gamesbeat-20261111-0815z",
+   "title": "Fortis Games closes (GamesBeat report), breaking card, our bed",
+   "kind": "news",
+   "slot": "Wed 11 Nov 12:15 Dubai (08:15Z)",
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "job": "fortis-games-closes-gamesbeat-nov-11",
+   "fallback": "publish-last-passed",
+   "held_by_mohammad": false,
+   "status": "scheduled in Publer for 12:15 Dubai Wed 11 Nov, 3/3 (ids ig:0d35df x:655eb2 th:655eb7), director PASS by a helper (not bound by presubmit.py: that step was not run)",
+   "by": "production-2"
   }
  ]
 }
