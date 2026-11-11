@@ -75,5 +75,23 @@
    "2026-11-19-gta-vi-road-ep9-out-now",
    "weekly-releases-nov-9-13-list"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/gta-vi-road-ep8-launch-times-gulf-reel-v2.mp4",
+  "blob": "70b22e1fab0c9db69f725836df86ca34d98927cd",
+  "at": "2026-11-11T20:53:26Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/gta-vi-road-ep8-launch-times-gulf.json",
+   "sha256": "ae1c9a09b88bd2481de36c7c70788553f9a18d19d9db0bcb1101f7693f334d36",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-1 (studio)"
+  },
+  "by": "director-agent (separate, sonnet)"
  }
 }
