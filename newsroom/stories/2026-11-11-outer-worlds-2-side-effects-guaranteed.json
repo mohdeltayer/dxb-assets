@@ -79,7 +79,18 @@
    "change": "first draft"
   }
  ],
- "posts": [],
+ "posts": [
+  {
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "account": "Digital Lounge",
+   "scheduled": "2026-11-11T14:15:00Z",
+   "note": "scheduled in Publer 14:15Z (18:15 Dubai), go: rolling queue, gate 13:50Z; ids last six 0e0c42 (x), 46b414 (ig), 662340 (threads)"
+  }
+ ],
  "corrections": [],
  "metrics": [],
  "ledger_find": {
@@ -101,5 +112,10 @@
   "forward_whole_story": "DeepL wrote «وادي إليسيوم» and «الإصدار المميز» (game names stay English by house rule, kept Elysium Valley and Premium Edition) and «ريسبيك» (ours: إعادة توزيع مهارات الشخصية)",
   "terms_alternatives": "story expansion -> DeepL توسيع القصة, house glossary says DLC = إضافة (not توسعة/توسيع), kept إضافة قصصية; level cap -> الحد الأقصى للمستوى (kept); perks and flaws -> المزايا والعيوب (kept مزايا وعيوب); will be released on Dec 2 -> سيصدر في 2 ديسمبر (kept تصدر per release-verb rule)"
  },
- "arabic_passes": "arabic-games-film-editor then grammar review by hand on headline, 4 lines, X, Threads, IG caption: agreement (الإضافة تضيف، ترفع، يصل معها), hamza, no first person, Latin names unglued, every paragraph opens on an Arabic word"
+ "arabic_passes": "arabic-games-film-editor then grammar review by hand on headline, 4 lines, X, Threads, IG caption: agreement (الإضافة تضيف، ترفع، يصل معها), hamza, no first person, Latin names unglued, every paragraph opens on an Arabic word",
+ "director_check": {
+  "verdict": "PASS",
+  "by": "server qc.json pass 13:50Z, 0 findings, dispatches 2 (first render stopped at the audio split guard, rebuilt on our bed)",
+  "out": "cards/2026-11/outer-worlds-2-side-effects-guaranteed-dlc-december-2-reel-v1.mp4"
+ }
 }
