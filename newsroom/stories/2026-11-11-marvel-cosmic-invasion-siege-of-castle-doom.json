@@ -65,5 +65,23 @@
   "hits": [
    "2026-10-26-marvel-cosmic-invasion-castle-doom-mode"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-reel-v1.mp4",
+  "blob": "db7d5671fddc1dafc31e6f0d3d0b21caf1772e86",
+  "at": "2026-11-11T02:49:54Z",
+  "note": "two rounds: round 1 FIX (first frame smear, credit over HUD, dark fade) round 2 PASS; credit enters at 2 s by design; length 7.1 s outside target (short clean stretches); our bed with reason in reel_check",
+  "checklist": {
+   "job": "jobs/live/marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10.json",
+   "sha256": "5de00b60d30f9acf125eeaa92a21255065cf5744a5cec95e28e0a55ab0fa190d",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "haiku-director-r2"
  }
 }
