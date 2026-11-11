@@ -1,0 +1,22 @@
+{
+ "name": "worst-class-ever-launch-nov-9",
+ "out": "cards/2026-11/worst-class-ever-launch-nov-9-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-11T09:41:56Z",
+ "findings": [],
+ "notes": [
+  "length 12.3 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 99.0; leak_pct 0.0; cache {'hit': 0, 'miss': 3}; separate_secs 10.3; secs 14.5",
+  "render_job: lifeless: {\"score\": 2.7, \"still_share\": 0.041, \"longest_still\": 0.2, \"cuts_per_10s\": 10.66, \"held_under_text\": 0.0, \"secs\": 12.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "7970d9b3b5f0c2dc0bc358e434cd432e4cd4c923",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18"
+}
