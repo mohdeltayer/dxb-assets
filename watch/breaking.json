@@ -1,10 +1,53 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-11T20:52:06Z",
- "seq": 346,
+ "generated_at": "2026-11-11T21:10:18Z",
+ "seq": 347,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 12005,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Hope in the City Out Now!",
+   "url": "https://www.youtube.com/watch?v=AQc8khSSd-4",
+   "published": "2026-11-11T21:00Z",
+   "first_seen": "2026-11-11T21:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/AQc8khSSd-4/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=AQc8khSSd-4"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 347
+  },
+  {
+   "id": 12006,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "The Road of Dust and Sorrow | Official New Release Date Announcement",
+   "url": "https://www.youtube.com/watch?v=LduxuM387hc",
+   "published": "2026-11-11T21:00Z",
+   "first_seen": "2026-11-11T21:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/LduxuM387hc/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=LduxuM387hc"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 347
+  }
+ ],
  "recent": [
   {
    "id": 11888,
@@ -459,12 +502,12 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T20:50:05Z",
+  "last_poll_at": "2026-11-11T21:10:14Z",
   "sources_enabled": 100,
-  "sources_ok": 94,
+  "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 31x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 32x)",
    "Nintendo of America (X) (HTTP 429, 61x)",
    "PlayStation (X) (HTTP 429, 78x)",
    "PlayStation Middle East (X) (HTTP 429, 7x)",
