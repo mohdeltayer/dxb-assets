@@ -42615,5 +42615,207 @@
   "story": "dota-2-esports-world-cup-2027-november-11",
   "job_sha": "d913eb774fcc3138be73bf33c5062abda29d565d",
   "dispatches": 1
+ },
+ {
+  "name": "gta-vi-road-ep3-jason-and-lucia-reel-v7.mp4",
+  "profile": "standard",
+  "at": "2026-11-11T23:13Z",
+  "stages": {
+   "checks": 8.9,
+   "montage": 54.8,
+   "text": 35.9,
+   "audio": 1.1,
+   "outro": 17.0
+  },
+  "total": 117.7,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-11T23:11Z",
+  "finished_at": "2026-11-11T23:13Z",
+  "render_min": 1.96,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "gta6-launch-master.mp4",
+    "start": 26.45,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 69.92,
+    "rows": 1920,
+    "zoom": 1.0,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "gta6-t2.mp4",
+    "start": 152.85,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "gta6-t2.mp4",
+    "start": 63.3,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "gta6-t2r-lucia.mp4",
+    "start": 0.0,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 36.46,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "gta6-lucia-clip.mp4",
+    "start": 0.5,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 83.35,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "gta6-t2r-drive1.mp4",
+    "start": 0.0,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 53.61,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "gta6-t2r-drive2.mp4",
+    "start": 0.0,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 58.9,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "gta6-t2r-counter.mp4",
+    "start": 0.0,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 67.64,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "gta6-t2.mp4",
+    "start": 66.4,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 9,
+    "file": "gta6-t2.mp4",
+    "start": 98.4,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 10,
+    "file": "rs-vice-city-22.jpg",
+    "still": true,
+    "zoom": 0.89
+   }
+  ],
+  "source_summary": {
+   "min_height": 2160,
+   "max_zoom": 1.11,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 7.1,
+   "audio_secs": 56.6,
+   "music_pct": 68.5,
+   "leak_pct": 3.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 5,
+    "miss": 6
+   },
+   "effects_shots": 0,
+   "mix_secs": 2.5,
+   "secs": 10.4
+  },
+  "intro": {
+   "days": 6,
+   "secs": 21.0
+  },
+  "lifeless": {
+   "score": 14.7,
+   "still_share": 0.132,
+   "longest_still": 2.1,
+   "cuts_per_10s": 6.83,
+   "held_under_text": 0.0,
+   "secs": 20.5,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 339,
+  "queue_wait_secs": 42,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1152,
+  "peak_mem_mb": 3611,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 26532,
+  "peak_disk_mb": 30485,
+  "min_disk_free_mb": 215621,
+  "setup_min": 0.18,
+  "story": "gta-vi-road-ep3-jason-and-lucia",
+  "job_sha": "e44725086d4ff91c1da56facc0e693eccadd8041",
+  "dispatches": 7
  }
 ]
