@@ -70,5 +70,23 @@
    "forecast"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/square-enix-h1-results-forecast-raised-november-11-reel-v1.mp4",
+  "blob": "16c38a961e09825c5b923307c81f576e01ba4d9b",
+  "at": "2026-11-11T12:51:45Z",
+  "note": "server qc.json pass 12:50Z, 0 findings (dispatches 2: first render flagged a smear on one shot, replaced); builder brief: qc is the check, no frames opened",
+  "checklist": {
+   "job": "jobs/live/square-enix-h1-results-forecast-raised-november-11.json",
+   "sha256": "0b127d72c180fddcf70bae374bb1c0b72eff6e7aa3e16710e8d589c67e0cd8f8",
+   "ok": true,
+   "problems": [],
+   "template": "clipcard",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "qc-server"
  }
 }
