@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-11T19:15:09Z",
- "seq": 342,
+ "generated_at": "2026-11-11T19:52:05Z",
+ "seq": 343,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 11885,
    "source": "Nintendo of America (YouTube)",
@@ -25,9 +26,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 342
-  }
- ],
- "recent": [
+  },
   {
    "id": 11884,
    "source": "Nintendo US",
@@ -439,32 +438,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 301
-  },
-  {
-   "id": 10912,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "MARVEL Cosmic Invasion: The Siege of Castle Doom | DLC #2 out NOW!",
-   "url": "https://www.youtube.com/watch?v=viF_AHt8uDs",
-   "published": "2026-11-10T19:29Z",
-   "first_seen": "2026-11-10T19:45:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/viF_AHt8uDs/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=viF_AHt8uDs"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 299
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T19:15:04Z",
+  "last_poll_at": "2026-11-11T19:50:14Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,

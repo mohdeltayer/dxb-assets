@@ -1,0 +1,95 @@
+{
+ "schema": 1,
+ "file": "digest",
+ "generated_at": "2026-11-11T19:52:05Z",
+ "seq": 343,
+ "kind": "hourly",
+ "since": "2026-11-11T18:52:07Z",
+ "official": [
+  {
+   "id": 11885,
+   "source": "Nintendo of America (YouTube)",
+   "source_kind": "youtube",
+   "title": "Castlebound – Launch Trailer – Nintendo Switch 2",
+   "url": "https://www.youtube.com/watch?v=sDLjFDQpy_o",
+   "published": "2026-11-11T19:00Z",
+   "first_seen": "2026-11-11T19:15:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/sDLjFDQpy_o/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=sDLjFDQpy_o"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 342,
+   "digest_seq": 343
+  },
+  {
+   "id": 11884,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/11/26 Ready up for an RPG—the world needs you! Are you looking to embark on an epic journey that’s likely full of impending doom, character growth, and many",
+   "url": "https://www.nintendo.com/us/whatsnew/ready-up-for-an-rpg-the-world-needs-you/",
+   "published": null,
+   "first_seen": "2026-11-11T19:10:14Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 341,
+   "digest_seq": 343
+  }
+ ],
+ "outlets": [],
+ "failed": [
+  "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 31x)",
+  "Nintendo of America (X) (HTTP 429, 61x)",
+  "PlayStation (X) (HTTP 429, 78x)",
+  "PlayStation Middle East (X) (HTTP 429, 7x)",
+  "Rockstar Games (X) (HTTP 429, 33x)",
+  "Xbox (X) (HTTP 429, 78x)"
+ ],
+ "not_covered": [
+  {
+   "name": "Official X accounts not listed above",
+   "reason": "no public page without login; read by Gaming Watch (scout digest) and the Verifier"
+  },
+  {
+   "name": "Konami JP topics",
+   "reason": "the list is drawn by script (the page carries one topic); Konami is covered by the outlets only"
+  },
+  {
+   "name": "Konami, EA and Activision YouTube channels",
+   "reason": "their channel feeds are empty; EA is read through its news page, Activision and Konami through the outlets"
+  },
+  {
+   "name": "PS Store UAE/Saudi, Xbox and Steam regional prices",
+   "reason": "price watching is its own job (scout audit section 6), not part of this service"
+  },
+  {
+   "name": "Epic Games, Sony Group press, GitHub releases",
+   "reason": "answer 403 to a script"
+  },
+  {
+   "name": "Saudi Esports Federation, GEA, UAE gaming bodies",
+   "reason": "refuse automated reads or carry no feed"
+  }
+ ],
+ "watcher": {
+  "host": "dxb-render-1",
+  "last_poll_at": "2026-11-11T19:50:14Z",
+  "sources_enabled": 100,
+  "sources_ok": 94,
+  "sources_failing": 6,
+  "failed": [
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 31x)",
+   "Nintendo of America (X) (HTTP 429, 61x)",
+   "PlayStation (X) (HTTP 429, 78x)",
+   "PlayStation Middle East (X) (HTTP 429, 7x)",
+   "Rockstar Games (X) (HTTP 429, 33x)",
+   "Xbox (X) (HTTP 429, 78x)"
+  ]
+ }
+}
