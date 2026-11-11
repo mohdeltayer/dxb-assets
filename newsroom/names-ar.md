@@ -215,3 +215,4 @@ fact inside the text (the release date), then why it matters now. Refused by the
 
 
 | Nitrome | نايتروم | Proposed 10 Nov 2026 (Production 2; grammar stage accepted the transliteration) |
+| Mythwright (Thronefall developer) | ميثرايت | Suggested 11 Nov 2026 |
