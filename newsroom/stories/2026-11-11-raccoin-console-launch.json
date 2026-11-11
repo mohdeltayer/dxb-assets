@@ -40,7 +40,7 @@
    "by": "-"
   }
  ],
- "status": "building",
+ "status": "queued",
  "lanes": {
   "digital_lounge": "split Reel, متوفر الآن, X Instagram Threads",
   "dxb_knight": "on hold"
@@ -58,5 +58,24 @@
    "raccoin"
   ],
   "hits": []
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/raccoin-console-launch-switch-2-ps5-xbox-november-10-reel-v1.mp4",
+  "blob": "63ac42e8f91d285cc235b1b8f41ce9ab99fa18b1",
+  "at": "2026-11-11T04:54:52Z",
+  "note": "round 1 FIX items (credit enters at 2 s by design; line 1 contrast over a pale shot; RACCOIN title art cut at the left edge in the last shot; small dark mark near the credit) not applied: the one fix render failed the blocky-smear check at 5.8 s, so the qc-passed render stands; passed with a note under the two-round limit; no gore, no decode damage found by the server checks; trailer music, audio split applied, music 93.8 percent",
+  "checklist": {
+   "job": "jobs/live/raccoin-console-launch-switch-2-ps5-xbox-november-10.json",
+   "sha256": "f9b019ae6c60c865bcd4decb4dd2fe1f847e67aac1a9c94bb61f65ab90a9b2b6",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "haiku-director-r1"
+ },
+ "approved": "go: rolling queue, gap rule; scheduled in Publer 05:15Z (09:15 Dubai); director passed with a note"
 }
