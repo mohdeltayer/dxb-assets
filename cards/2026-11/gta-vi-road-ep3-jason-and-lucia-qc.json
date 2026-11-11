@@ -1,0 +1,23 @@
+{
+ "name": "gta-vi-road-ep3-jason-and-lucia",
+ "out": "cards/2026-11/gta-vi-road-ep3-jason-and-lucia-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-11T17:41:09Z",
+ "findings": [],
+ "notes": [
+  "length 20.0 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 64.7; leak_pct 3.2; cache {'hit': 10, 'miss': 0}; separate_secs 4.0; secs 6.1",
+  "smear check: exempt 0.00 to 2.90 s (our own cards)",
+  "render_job: lifeless: {\"score\": 2.0, \"still_share\": 0.026, \"longest_still\": 0.2, \"cuts_per_10s\": 7.02, \"held_under_text\": 0.0, \"secs\": 22.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "836e4163494cba1411b33db0485d138a7f7d5d3b",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 2160,
+  "max_zoom": 1.11,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18"
+}

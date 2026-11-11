@@ -35747,5 +35747,213 @@
   "story": "gta-vi-road-ep2-leonida-map",
   "job_sha": "e9077605540303cfef085418acf485e5a962e528",
   "dispatches": 1
+ },
+ {
+  "name": "gta-vi-road-ep3-jason-and-lucia-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-11T17:39Z",
+  "stages": {
+   "checks": 10.5,
+   "montage": 58.5,
+   "text": 43.7,
+   "audio": 1.3,
+   "outro": 21.8
+  },
+  "total": 135.8,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-11T17:36Z",
+  "finished_at": "2026-11-11T17:39Z",
+  "render_min": 2.26,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "gta6-t2.mp4",
+    "start": 140.2,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "gta6-t2.mp4",
+    "start": 88.4,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "gta6-t2.mp4",
+    "start": 63.3,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "gta6-t2.mp4",
+    "start": 115.2,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "gta6-lucia-clip.mp4",
+    "start": 0.0,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 83.35,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "gta6-t2.mp4",
+    "start": 27.4,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "gta6-jason-clip.mp4",
+    "start": 0.0,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 87.18,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "gta6-t2.mp4",
+    "start": 66.4,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "gta6-t2.mp4",
+    "start": 98.4,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 9,
+    "file": "gta6-t2.mp4",
+    "start": 145.9,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   },
+   {
+    "shot": 10,
+    "file": "gta6-t2.mp4",
+    "start": 153.6,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.98,
+    "rows": 1728,
+    "zoom": 1.11,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 2160,
+   "max_zoom": 1.11,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 4.0,
+   "audio_secs": 61.8,
+   "music_pct": 64.7,
+   "leak_pct": 3.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 10,
+    "miss": 0
+   },
+   "effects_shots": 0,
+   "mix_secs": 0.9,
+   "secs": 6.1
+  },
+  "intro": {
+   "days": 6,
+   "secs": 25.6
+  },
+  "lifeless": {
+   "score": 2.0,
+   "still_share": 0.026,
+   "longest_still": 0.2,
+   "cuts_per_10s": 7.02,
+   "held_under_text": 0.0,
+   "secs": 22.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 319,
+  "queue_wait_secs": 386,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1051,
+  "peak_mem_mb": 3211,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 22698,
+  "peak_disk_mb": 26171,
+  "min_disk_free_mb": 219935,
+  "setup_min": 0.22,
+  "story": "gta-vi-road-ep3-jason-and-lucia",
+  "job_sha": "836e4163494cba1411b33db0485d138a7f7d5d3b",
+  "dispatches": 1
  }
 ]
