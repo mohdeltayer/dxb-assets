@@ -1,0 +1,23 @@
+{
+ "name": "gta-vi-road-ep2-leonida-map",
+ "out": "cards/2026-11/gta-vi-road-ep2-leonida-map-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-11T17:28:59Z",
+ "findings": [],
+ "notes": [
+  "length 26.1 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 97.4; leak_pct 0.0; cache {'hit': 2, 'miss': 0}; separate_secs 3.3; secs 5.8",
+  "smear check: exempt 0.00 to 2.90 s (our own cards)",
+  "render_job: lifeless: {\"score\": 29.4, \"still_share\": 0.37, \"longest_still\": 3.0, \"cuts_per_10s\": 4.15, \"held_under_text\": 0.014, \"secs\": 28.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "e9077605540303cfef085418acf485e5a962e528",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 2160,
+  "max_zoom": 0.89,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18"
+}

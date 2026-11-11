@@ -35569,5 +35569,183 @@
   "story": "rock-band-simulator-steam-release-november-20",
   "job_sha": "b06354d0c38c6cd9922eb4c3a29a9905c2f8322e",
   "dispatches": 1
+ },
+ {
+  "name": "gta-vi-road-ep2-leonida-map-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-11T17:27Z",
+  "stages": {
+   "checks": 7.4,
+   "montage": 82.9,
+   "text": 76.8,
+   "audio": 2.0,
+   "outro": 26.7
+  },
+  "total": 195.8,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-11T17:24Z",
+  "finished_at": "2026-11-11T17:27Z",
+  "render_min": 3.26,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "gta6-t1.mp4",
+    "start": 11.4,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.96,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "gta6-t1.mp4",
+    "start": 31.1,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.96,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "gta6-t1.mp4",
+    "start": 40.05,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.96,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "rs-leonida-keys-01.jpg",
+    "still": true,
+    "zoom": 0.89
+   },
+   {
+    "shot": 4,
+    "file": "gta6-t1.mp4",
+    "start": 36.0,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.96,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "gta6-t1.mp4",
+    "start": 19.0,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.96,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "rs-grassrivers-05.jpg",
+    "still": true,
+    "zoom": 0.89
+   },
+   {
+    "shot": 7,
+    "file": "rs-port-gellhorn-06.jpg",
+    "still": true,
+    "zoom": 0.89
+   },
+   {
+    "shot": 8,
+    "file": "rs-ambrosia-04.jpg",
+    "still": true,
+    "zoom": 0.89
+   },
+   {
+    "shot": 9,
+    "file": "rs-mount-kalaga-national-park-04.jpg",
+    "still": true,
+    "zoom": 0.89
+   },
+   {
+    "shot": 10,
+    "file": "gta6-t1.mp4",
+    "start": 23.2,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 11.96,
+    "rows": 2160,
+    "zoom": 0.89,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 2160,
+   "max_zoom": 0.89,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 3.3,
+   "audio_secs": 31.5,
+   "music_pct": 97.4,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 0
+   },
+   "effects_shots": 0,
+   "mix_secs": 1.3,
+   "secs": 5.8
+  },
+  "intro": {
+   "days": 7,
+   "secs": 7.5
+  },
+  "lifeless": {
+   "score": 29.4,
+   "still_share": 0.37,
+   "longest_still": 3.0,
+   "cuts_per_10s": 4.15,
+   "held_under_text": 0.014,
+   "secs": 28.9,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 308,
+  "queue_wait_secs": 408,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1099,
+  "peak_mem_mb": 3734,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 21161,
+  "peak_disk_mb": 24991,
+  "min_disk_free_mb": 221115,
+  "setup_min": 0.25,
+  "story": "gta-vi-road-ep2-leonida-map",
+  "job_sha": "e9077605540303cfef085418acf485e5a962e528",
+  "dispatches": 1
  }
 ]
