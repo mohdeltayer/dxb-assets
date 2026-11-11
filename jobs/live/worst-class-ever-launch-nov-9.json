@@ -1,0 +1,198 @@
+{
+ "name": "worst-class-ever-launch-nov-9",
+ "story": "2026-11-09-worst-class-ever",
+ "kind_news": "launch",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/worst-class-ever-launch-nov-9-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "worst-class-ever-launch-nov-9-trailer.mp4",
+   "steam": 5175310,
+   "trailer": "pv_en",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [
+  [
+   "worst-class-ever-launch-nov-9-trailer.mp4",
+   13.71,
+   2.9,
+   [
+    [
+     0.0,
+     0.516
+    ]
+   ]
+  ],
+  [
+   "worst-class-ever-launch-nov-9-trailer.mp4",
+   23.55,
+   2.23,
+   [
+    [
+     0.0,
+     0.833
+    ]
+   ]
+  ],
+  [
+   "worst-class-ever-launch-nov-9-trailer.mp4",
+   33.71,
+   1.63,
+   [
+    [
+     0.0,
+     0.348
+    ]
+   ]
+  ],
+  [
+   "worst-class-ever-launch-nov-9-trailer.mp4",
+   38.25,
+   2.93,
+   [
+    [
+     0.0,
+     0.347
+    ]
+   ]
+  ],
+  [
+   "worst-class-ever-launch-nov-9-trailer.mp4",
+   41.18,
+   1.67,
+   [
+    [
+     0.0,
+     0.452
+    ]
+   ]
+  ],
+  [
+   "worst-class-ever-launch-nov-9-trailer.mp4",
+   47.18,
+   1.63,
+   [
+    [
+     0.0,
+     0.499
+    ]
+   ]
+  ],
+  [
+   "worst-class-ever-launch-nov-9-trailer.mp4",
+   53.51,
+   1.7,
+   [
+    [
+     0.0,
+     0.513
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    "صدرت على Steam في 9 Nov 2026."
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    "سعرها 4.54 دولار بعد خصم 35 بالمئة."
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: المتجر الرسمي على Steam",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "لعبة Worst Class Ever متوفرة الآن على Steam",
+ "label": "متوفر الآن",
+ "source": "المتجر الرسمي على Steam",
+ "date": "9 Nov 2026",
+ "theme": "cold",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "worst-class-ever-launch-nov-9-trailer.mp4",
+  13.71
+ ],
+ "reel_check": [
+  {
+   "line": "Primary read in full (publisher, platform, store)",
+   "answer": "yes",
+   "evidence": "Steam store page app 5175310, read 09:30Z: release Nov 9 2026, Windows only, $6.99 / $4.54 at 35% off"
+  },
+  {
+   "line": "Not already posted (ledger find)",
+   "answer": "yes",
+   "evidence": "ledger find 'worst class ever': 0 hits, recorded 09:38Z"
+  },
+  {
+   "line": "Older than 24 hours at first report and nothing new since",
+   "answer": "yes",
+   "evidence": "first report 9 Nov; story is 48 h old and no Arabic coverage found, so it runs under the 9 Nov 24 to 48 hour rule"
+  },
+  {
+   "line": "Hook: the one surprising thing, why now, payoff",
+   "answer": "n/a",
+   "evidence": "launch report, not a تقرير or تسريب job; angle not required"
+  },
+  {
+   "line": "Subject named before any pronoun; release verbs correct",
+   "answer": "yes",
+   "evidence": "line 1 names the game and uses صدرت; headline uses متوفرة الآن"
+  },
+  {
+   "line": "Names match names-ar.md",
+   "answer": "n/a",
+   "evidence": "no studio or person named on screen; game name kept in English"
+  },
+  {
+   "line": "Footage keeps its own sound; music named by file",
+   "answer": "yes",
+   "evidence": "track = trailer pv_en from 13.71 s, audio split as the job's default; no bed"
+  },
+  {
+   "line": "No speech under story lines",
+   "answer": "n/a",
+   "evidence": "speech check runs at render (speech_director); not verified by hand"
+  },
+  {
+   "line": "Footage first (official trailer)",
+   "answer": "yes",
+   "evidence": "7 official trailer shots from the Steam pv_en file"
+  },
+  {
+   "line": "Credit on every clip that is not ours",
+   "answer": "yes",
+   "evidence": "credits 0-6 cover every footage shot: المصدر: المتجر الرسمي على Steam"
+  },
+  {
+   "line": "Chip present",
+   "answer": "yes",
+   "evidence": "label متوفر الآن"
+  },
+  {
+   "line": "Crop judged per beat",
+   "answer": "n/a",
+   "evidence": "crop from server clean-stretch focus values only; shot sheet not opened per brief"
+  }
+ ]
+}
