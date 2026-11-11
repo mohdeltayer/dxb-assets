@@ -181,6 +181,25 @@ def _download(item, dst):
         got = C.U + trailer.fetch(hls[0], stem, item.get('start', 0), item.get('seconds', 120))
         if os.path.abspath(got) != os.path.abspath(dst):
             shutil.move(got, dst)
+    elif 'url' in item and item.get('stream'):
+        # "stream": true (GTA VI batch, 11 Nov 2026): read only the named stretch over HTTP range requests, for a master
+        # too large to download whole (Rockstar's Extended Look is 14 GB; 20 s of it reads in about 2 s). Needs "seconds".
+        if 'seconds' not in item:
+            raise ValueError(f"{item['file']}: \"stream\" needs \"seconds\" (and \"start\", default 0)")
+        hdr = f'Referer: {item["referer"]}\r\n' if item.get('referer') else ''
+        cmd = (['ffmpeg', '-nostdin', '-y', '-v', 'error', '-ss', str(item.get('start', 0)), '-user_agent', UA]
+               + (['-headers', hdr] if hdr else []) + ['-i', item['url'], '-t', str(item['seconds']),
+               '-c', 'copy', dst + '.part.mp4'])
+        for attempt in range(3):                  # a range read can end early ("Stream ends prematurely"); try again
+            try:
+                subprocess.run(cmd, check=True, timeout=600)
+                break
+            except (subprocess.CalledProcessError, subprocess.TimeoutExpired):
+                if attempt == 2:
+                    raise
+                print(f"stream read of {item['file']} failed, attempt {attempt + 1}; trying again", flush=True)
+                time.sleep(5)
+        os.replace(dst + '.part.mp4', dst)
     elif 'url' in item:
         hdr = {'User-Agent': UA}
         if item.get('referer'):                   # IGN's asset hosts refuse requests without their own referer
@@ -372,11 +391,17 @@ def showcase_of(job):
         raise SystemExit(f'render_job: {e}')
 
 
+def series(job):
+    """A series episode (a job with a series intro, gtavi or ocarina) keeps the series' own look and is outside the
+    rotation, like Famitsu: a batch of episodes renders back to back in one theme (GTA VI batch, 11 Nov 2026)."""
+    return isinstance(job.get('intro'), dict) and bool(job['intro'].get('series'))
+
+
 def look(job):
     """Theme and style for this render on the live path (no three in a row, 9 Nov 2026): the job's style, or the rested
     one when that would make three in a row (looks.py); a theme that would make three in a row stops here."""
     import looks
-    if job.get('kind') in ('breaking', 'famitsu') or job.get('skin') not in (None, 'house'):
+    if job.get('kind') in ('breaking', 'famitsu') or job.get('skin') not in (None, 'house') or series(job):
         return job.get('style')
     style, problems = looks.resolve(job)
     if problems:
@@ -987,7 +1012,7 @@ def run(job, draft=False):
         st_, end_ = _starts(job)
         FC.empty_bands(video, job, st_, end_, C.U)
         import looks
-        if job.get('kind') not in ('breaking', 'famitsu'):
+        if job.get('kind') not in ('breaking', 'famitsu') and not series(job):
             looks.record(job, style or reel.pick_style(out))
         DC.dense_strip(video, base + '-dense.jpg')
         reel.strip(video, base + '-strip.jpg')

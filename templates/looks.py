@@ -11,7 +11,8 @@ The check: every render on the live path (render_job check and run) reads the la
  - Theme: a theme both of the last two share stops the render at check (the theme follows the game's palette, so the
    session picks the next nearest one); the error names the themes still free.
 After a render that ships, render_job records {name, theme, style, at}; the render workflows commit LEDGER with the Reel.
-Breaking (T0) and Famitsu renders are neither checked nor recorded; a game skin keeps its own look.
+Breaking (T0), Famitsu and series episodes (a series intro) are neither checked nor recorded; a game skin keeps its
+own look. The gtavi theme belongs to «الطريق إلى GTA VI» and is not in the news rotation.
 
     python3 looks.py last [n]          the last n looks (default 6)
     python3 looks.py add <entry.json>  append an entry (the render workflows, after a fresh checkout)

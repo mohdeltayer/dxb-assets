@@ -777,3 +777,11 @@ render-times.json). H (server QC verdict) and I (parallel runners) follow as the
 4. Parallel renders (I): the picture-pass cache and the end-card master now write per-process temp files, so two server
    jobs never collide; uploads and temp folders are per job already. A second runner instance on dxb-render-1 needs a
    runner registration as root (lines in the release note).
+
+## «الطريق إلى GTA VI» batch (Mohammad, 11 Nov 2026)
+1. Episodes 12 to 18 Nov and launch day 19 Nov at 20:00 Dubai, scheduled by the studio for this batch only; board lines
+   carry the Publer id suffixes. Countdown from Rockstar's page (19 Nov; midnight local per Rockstar Support).
+2. One subject, its own official footage and sound per episode; no shot or audio stretch repeated (notes/gta-series.md);
+   at most one numbers card in the batch; facts from Rockstar or Take-Two only, Gulf prices from the stores.
+3. Theme `gtavi`: teal into blue violet lines, sunset amber chip, no pink; series only, outside the look rotation
+   (render_job.series). Each episode re-gated on its day before 20:00 Dubai.
