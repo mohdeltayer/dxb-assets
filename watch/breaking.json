@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-11T17:10:08Z",
- "seq": 337,
+ "generated_at": "2026-11-11T17:52:05Z",
+ "seq": 338,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 11797,
    "source": "Nintendo of America (YouTube)",
@@ -25,9 +26,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 337
-  }
- ],
- "recent": [
+  },
   {
    "id": 11712,
    "source": "Xbox Wire",
@@ -559,116 +558,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 293
-  },
-  {
-   "id": 10749,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Armatus - The Ghoul & The Surgeon | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=xQVTlPZILa0",
-   "published": "2026-11-10T17:15Z",
-   "first_seen": "2026-11-10T17:30:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/xQVTlPZILa0/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=xQVTlPZILa0"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 291
-  },
-  {
-   "id": 10703,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Football Manager 27 | Make The Call",
-   "url": "https://www.youtube.com/watch?v=TzSSPYE9DPc",
-   "published": "2026-11-10T17:00Z",
-   "first_seen": "2026-11-10T17:20:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/TzSSPYE9DPc/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=TzSSPYE9DPc"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 290
-  },
-  {
-   "id": 10702,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Star Trek Online | Rediscovered Launch Trailer",
-   "url": "https://www.youtube.com/watch?v=iXG8wL03W00",
-   "published": "2026-11-10T17:00Z",
-   "first_seen": "2026-11-10T17:20:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/iXG8wL03W00/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=iXG8wL03W00"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 290
-  },
-  {
-   "id": 10701,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Shrek 2 Remastered | Launch Trailer",
-   "url": "https://www.youtube.com/watch?v=fOJFlgLL6rY",
-   "published": "2026-11-10T17:00Z",
-   "first_seen": "2026-11-10T17:20:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/fOJFlgLL6rY/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=fOJFlgLL6rY"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 290
-  },
-  {
-   "id": 10700,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Shrek 2 Remastered - Launch Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=is1iINNnzuw",
-   "published": "2026-11-10T17:00Z",
-   "first_seen": "2026-11-10T17:15:06Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/is1iINNnzuw/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=is1iINNnzuw"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 289
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T17:10:05Z",
+  "last_poll_at": "2026-11-11T17:50:14Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
