@@ -36567,5 +36567,98 @@
   "story": "gta-vi-road-ep2-leonida-map",
   "job_sha": "c93f38bd720bfcb8193163f45acfd71cd83a8e76",
   "dispatches": 3
+ },
+ {
+  "name": "bethesda-no-sentinel-news-skyrim-15th-anniversary-november-11-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-11T18:35Z",
+  "stages": {
+   "checks": 1.8,
+   "montage": 34.4,
+   "text": 33.1,
+   "audio": 0.8,
+   "outro": 32.5
+  },
+  "total": 102.6,
+  "lane": "runner",
+  "queued_at": "2026-11-11T18:31:51Z",
+  "finished_at": "2026-11-11T18:35Z",
+  "render_min": 1.71,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "bethesda-no-sentinel-news-skyrim-15th-anniversary-november-11-trailer.mp4",
+    "start": 3.9,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.38,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "bethesda-no-sentinel-news-skyrim-15th-anniversary-november-11-trailer.mp4",
+    "start": 11.89,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.38,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 7.1,
+   "audio_secs": 20.4,
+   "music_pct": 66.5,
+   "leak_pct": 0.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 2,
+   "mix_secs": 4.3,
+   "secs": 11.8
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 4.23,
+   "held_under_text": 0.0,
+   "secs": 14.2,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 143,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1316,
+  "peak_mem_mb": 2896,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60773,
+  "peak_disk_mb": 63151,
+  "min_disk_free_mb": 84646,
+  "setup_min": 1.07,
+  "story": "bethesda-no-sentinel-news-skyrim-15th-anniversary-november-11"
  }
 ]
