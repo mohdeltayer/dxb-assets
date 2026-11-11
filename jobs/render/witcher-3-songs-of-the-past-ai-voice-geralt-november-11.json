@@ -3,7 +3,7 @@
  "story": "2026-11-11-witcher-3-songs-of-the-past-ai-voice",
  "kind_news": "report",
  "built_by": "production-2",
- "render_lane": "server",
+ "render_lane": "hosted",
  "out": "cards/2026-11/witcher-3-songs-of-the-past-ai-voice-geralt-november-11-reel-v1.mp4",
  "footage": [
   {
@@ -251,5 +251,6 @@
    "crop": "picker focus",
    "music": "trailer sound, audio split"
   }
- ]
+ ],
+ "lane_reason": "server queue not picking the job up for 10 minutes; slot 00:15Z"
 }
