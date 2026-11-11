@@ -43,6 +43,9 @@ THEMES = {
     'emerald':   (hx('#1FB59A'), hx('#B8E36A'), 5.0, 30, 15),  # general news, a change from blue
     'gold':      (hx('#D99A1E'), hx('#F5D06B'), 3.0, 38, 15),  # numbers and milestones (أرقام، إنجاز)
     'crimson':   (hx('#E5383B'), hx('#FFB547'), 7.0, 30, 13),  # breaking only (عاجل); red into amber, never pink
+    # «الطريق إلى GTA VI» only (Mohammad, 11 Nov 2026: "Miami neon, sunset amber, azure, teal, violet, no pink"): wave
+    # lines teal into a blue violet (the blend passes through azure, never magenta), the chip sunset amber.
+    'gtavi':     (hx('#2EE6D6'), hx('#7C6CFF'), 5.5, 38, 12),
 }
 #: The source sits between the name and the date. Wider than this, the
 #: Latin in brackets is dropped and the Arabic stands alone.

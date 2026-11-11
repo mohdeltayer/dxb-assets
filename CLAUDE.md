@@ -2098,6 +2098,26 @@ window capture and a USB mic.
   week before (a check-in is set for 3 Dec). Plan and checklist:
   `notes/tga-costream-plan.md`.
 
+## «الطريق إلى GTA VI» batch (Mohammad, 11 Nov 2026, studio order)
+
+The series (studio-gta-vi-series, 8 Nov; plan and ledger in `notes/gta-series.md`) resumes as one batch: one episode a
+day at 20:00 Dubai from 12 Nov to 18 Nov and a launch-day episode on 19 Nov, scheduled in Publer by the studio on this
+order (an exception to "the studio never schedules" for this batch only), each written on the board with its Publer id
+suffixes so the news lane leaves 20:00 Dubai free on those days.
+1. Countdown from Rockstar only: launch 19 Nov 2026 (rockstargames.com/VI, re-read 11 Nov 03:35Z); unlock at midnight
+   local time on PS5 and Xbox Series X|S per Rockstar Support's regional pre-load and release times article (read
+   through the search index on 11 Nov; the page answered 503 to a direct read; re-read before the launch-times episode).
+2. One subject per episode, each on its own official footage and sound; no shot and no audio stretch in two episodes
+   (ledger). Footage first: at most one numbers card in the whole batch. Every fact from Rockstar's or Take-Two's own
+   pages; Gulf prices from the PlayStation and Xbox stores, as the store shows them.
+3. The GTA VI look (Mohammad: "Miami neon, sunset amber, azure, teal, violet, no pink"): theme `gtavi` (fast_ar.THEMES:
+   wave lines teal #2EE6D6 into blue violet #7C6CFF, blending through azure; ig_ar.ACCENTS: sunset amber #FFB547 for the
+   chip and rules) with the series intro's azure to amber title. The theme is for this series only, not the news rotation.
+4. Series episodes (a job with a series intro) are outside the look rotation like Famitsu: render_job.series(job); a
+   batch renders back to back in one theme without the no-three-in-a-row stop, and is not recorded in the look ledger.
+5. Each episode is re-gated on its day before 20:00 Dubai (queued more than six hours ahead); a fact that changed is
+   fixed by the studio, deleted and requeued, and noted on the board.
+
 ## «الطريق إلى Ocarina» (Mohammad, 11 Oct 2026)
 
 A Digital Lounge spotlight series running up to the Switch 2 launch of The

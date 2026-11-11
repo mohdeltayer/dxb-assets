@@ -372,11 +372,17 @@ def showcase_of(job):
         raise SystemExit(f'render_job: {e}')
 
 
+def series(job):
+    """A series episode (a job with a series intro, gtavi or ocarina) keeps the series' own look and is outside the
+    rotation, like Famitsu: a batch of episodes renders back to back in one theme (GTA VI batch, 11 Nov 2026)."""
+    return isinstance(job.get('intro'), dict) and bool(job['intro'].get('series'))
+
+
 def look(job):
     """Theme and style for this render on the live path (no three in a row, 9 Nov 2026): the job's style, or the rested
     one when that would make three in a row (looks.py); a theme that would make three in a row stops here."""
     import looks
-    if job.get('kind') in ('breaking', 'famitsu') or job.get('skin') not in (None, 'house'):
+    if job.get('kind') in ('breaking', 'famitsu') or job.get('skin') not in (None, 'house') or series(job):
         return job.get('style')
     style, problems = looks.resolve(job)
     if problems:
@@ -987,7 +993,7 @@ def run(job, draft=False):
         st_, end_ = _starts(job)
         FC.empty_bands(video, job, st_, end_, C.U)
         import looks
-        if job.get('kind') not in ('breaking', 'famitsu'):
+        if job.get('kind') not in ('breaking', 'famitsu') and not series(job):
             looks.record(job, style or reel.pick_style(out))
         DC.dense_strip(video, base + '-dense.jpg')
         reel.strip(video, base + '-strip.jpg')
