@@ -154,6 +154,7 @@ jobs:
           echo "job: $path"
           git show "FETCH_HEAD:$path" > "$RUNNER_TEMP/job/$(basename "$path")"
           echo "PRERENDER_JOB=$RUNNER_TEMP/job/$(basename "$path")" >> "$GITHUB_ENV"
+          echo "PRERENDER_SRC=$path" >> "$GITHUB_ENV"
 
       - name: Fonts (temp folder, outside the workspace)
         if: steps.yield.outputs.skip != '1'
@@ -235,6 +236,7 @@ jobs:
           echo "job: $path"
           git show "FETCH_HEAD:$path" > "$RUNNER_TEMP/job/$(basename "$path")"
           echo "PRERENDER_JOB=$RUNNER_TEMP/job/$(basename "$path")" >> "$GITHUB_ENV"
+          echo "PRERENDER_SRC=$path" >> "$GITHUB_ENV"
 
       - name: Fonts (temp folder, outside the workspace)
         continue-on-error: true

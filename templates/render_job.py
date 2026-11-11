@@ -1036,8 +1036,9 @@ if __name__ == '__main__':
         print(job['name'], 'ok, clip %.1f s' % check(job))
     elif step == 'text':
         import buildgate                        # the gate's findings join the text findings: one pass lists every error
-        errs = [{'where': 'build gate', 'rule': 'gate', 'text': '', 'fix': '', 'detail': p}
-                for p in buildgate.problems(path, job)]
+        gate_path = os.environ.get('PRERENDER_SRC') or path   # prerender copies the job to a temp folder; the gate
+        errs = [{'where': 'build gate', 'rule': 'gate', 'text': '', 'fix': '', 'detail': p}   # reads its repo path
+                for p in buildgate.problems(gate_path, job)]
         try:
             textcheck(job, collect=errs)
         except Exception as e:             # anything unforeseen still reports with the rest
