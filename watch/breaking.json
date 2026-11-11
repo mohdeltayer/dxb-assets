@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-11T16:52:05Z",
- "seq": 336,
+ "generated_at": "2026-11-11T17:10:08Z",
+ "seq": 337,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 11797,
+   "source": "Nintendo of America (YouTube)",
+   "source_kind": "youtube",
+   "title": "MARVEL Cosmic Invasion: The Siege of Castle Doom – DLC Trailer – Nintendo Switch 2",
+   "url": "https://www.youtube.com/watch?v=B_bw2zq6nEU",
+   "published": "2026-11-11T17:00Z",
+   "first_seen": "2026-11-11T17:10:05Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/B_bw2zq6nEU/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=B_bw2zq6nEU"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 337
+  }
+ ],
  "recent": [
   {
    "id": 11712,
@@ -646,7 +668,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T16:50:04Z",
+  "last_poll_at": "2026-11-11T17:10:05Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
