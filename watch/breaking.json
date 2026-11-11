@@ -1,10 +1,40 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-11T15:52:05Z",
- "seq": 334,
+ "generated_at": "2026-11-11T16:00:28Z",
+ "seq": 335,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 11712,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "How Luma Island Was Built For Everyone on XBOX Series X|S",
+   "url": "https://news.xbox.com/en-us/2026/11/11/how-luma-island-was-built-for-everyone-on-xbox-series-xs/",
+   "published": "2026-11-11T16:00Z",
+   "first_seen": "2026-11-11T16:00:24Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Luma-Temple-dcac7f05a39951d998bb.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Luma-Outside-a2159e714078bb14329a.png"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Luma-Farming-5bbb35fdd18702b9289b.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.61404.13857298238869519.be64044e-3963-4fcf-a65c-83c61efb7f01.5f034226-c8de-49f0-81ec-4ba89305c9d0?w=400&h=600"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 335
+  }
+ ],
  "recent": [
   {
    "id": 11711,
@@ -692,32 +722,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 286
-  },
-  {
-   "id": 10611,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Grand Theft Auto VI - Features Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=8L0CzL2V72c",
-   "published": "2026-11-10T15:40Z",
-   "first_seen": "2026-11-10T15:55:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/8L0CzL2V72c/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=8L0CzL2V72c"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 285
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-11T15:50:14Z",
+  "last_poll_at": "2026-11-11T16:00:24Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
