@@ -1,0 +1,22 @@
+{
+ "name": "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10",
+ "out": "cards/2026-11/marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-11T02:42:53Z",
+ "findings": [],
+ "notes": [
+  "length 7.9 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 2.0, \"still_share\": 0.026, \"longest_still\": 0.2, \"cuts_per_10s\": 8.97, \"held_under_text\": 0.0, \"secs\": 7.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "938c151eff2b8b3918bdb0d970a828e3733577a2",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18"
+}
