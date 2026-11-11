@@ -1005,6 +1005,10 @@ def run(job, draft=False):
     base = re.sub(r'-reel-v\d+$', '', stem)   # matches the workflow's ${stem%-reel-v*}, so v2 and later commit too
     if not draft:
         spans = gfx_spans(job)                 # our own cards are exempt from the smear flag (item E)
+        if job.get('intro') is not None:       # the fixed series intro was looked at once; a passing truck's straight
+            OI = _intro_mod(job['intro'])      # edges behind Lucia trip the flag at 0.9 s (GTA VI ep 2, 11 Nov 2026)
+            lead = float(getattr(OI, 'SECS', 3.0))   # the intro sits ahead of the body, so card spans move by its length
+            spans = [(a + lead, b + lead, r) for a, b, r in spans] + [(0.0, lead, 'series intro (fixed, checked once)')]
         if spans:
             print('smear check: exempt ' + ', '.join(f'{a:.2f} to {b:.2f} s' for a, b, _ in spans) + ' (our own cards)', flush=True)
         DC.check(video, [w for w in job.get('block_ok', []) if len(w) == 3] + spans)   # stops before anything is committed
