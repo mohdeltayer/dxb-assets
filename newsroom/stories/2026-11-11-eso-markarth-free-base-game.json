@@ -1,0 +1,95 @@
+{
+ "id": "2026-11-11-eso-markarth-free-base-game",
+ "title": "The Elder Scrolls Online: Markarth zone and story now free in the base game",
+ "game": "The Elder Scrolls Online",
+ "companies": [
+  "ZeniMax Online Studios",
+  "Bethesda"
+ ],
+ "kind": "update",
+ "lane": "digital-lounge",
+ "beat": "mmo",
+ "genre": [
+  "live service/MMO",
+  "RPG"
+ ],
+ "category": "update",
+ "sources": [
+  {
+   "name": "ZeniMax Online Studios, Steam news post 'Markarth DLC Now Part of ESO's Base Game', 11 Nov 2026 14:00Z (app 306130)",
+   "url": "https://store.steampowered.com/news/app/306130/view/687521869930169435",
+   "type": "primary"
+  }
+ ],
+ "first_report": "Steam post 11 Nov 2026 14:00Z (18:00 Dubai); digest 18:30 Dubai; no Arabic outlet seen",
+ "source_type": "primary",
+ "footage": "Steam trailer 'This is ESO EN' (app 306130), official, credited to ZeniMax Online Studios; Season Two Tomes had 0 clean stretches (burnt-in text); decode clean",
+ "angle": {
+  "hook": "Markarth and its story are now free in The Elder Scrolls Online",
+  "why_now": "ZeniMax Online posted it on 11 Nov, Skyrim's 15th anniversary day",
+  "what_it_means_here": "Players can start the zone from Collections, Stories, Zone DLC at no cost; Greymoor is also free under Season Two",
+  "payoff": "The zone concludes the saga that began with Greymoor"
+ },
+ "checked": "gate 15:05Z: Steam news API post read in full (text above), digest status confirmed by primary; no denial seen; no AED price involved",
+ "claims": [
+  {
+   "text": "Markarth zone and storyline free in the base game and Season Two",
+   "status": "verified",
+   "source": "Steam post"
+  },
+  {
+   "text": "Greymoor also free under Season Two",
+   "status": "verified",
+   "source": "Steam post"
+  },
+  {
+   "text": "Start from Collections, Stories, Zone DLC",
+   "status": "verified",
+   "source": "Steam post"
+  }
+ ],
+ "lanes": {
+  "dl": {
+   "lane": "Reel",
+   "chip": "رسمي",
+   "template": "trailer",
+   "time": "2026-11-11T16:15:00Z"
+  }
+ },
+ "sensitive": "none",
+ "versions": [
+  {
+   "v": 1,
+   "at": "2026-11-11T15:05:00Z",
+   "change": "first draft"
+  }
+ ],
+ "posts": [],
+ "corrections": [],
+ "metrics": [],
+ "ledger_find": {
+  "at": "2026-11-11T14:48:00Z",
+  "words": [
+   "elder scrolls online",
+   "markarth"
+  ],
+  "hits": []
+ },
+ "drafts": {
+  "x": "باتت منطقة Markarth وقصتها مجانية ضمن اللعبة الأساسية في The Elder Scrolls Online، حسب زينيماكس أونلاين ستوديوز (ZeniMax Online Studios). وتتوفر Greymoor مجانًا أيضًا ضمن Season Two.",
+  "threads": "باتت منطقة Markarth وقصتها مجانية ضمن اللعبة الأساسية في The Elder Scrolls Online، حسب زينيماكس أونلاين ستوديوز (ZeniMax Online Studios). وتتوفر Greymoor مجانًا أيضًا ضمن Season Two.\n\nالمصدر: زينيماكس أونلاين ستوديوز (ZeniMax Online Studios)، 11 نوفمبر 2026",
+  "instagram": "أصبحت Markarth مجانية في The Elder Scrolls Online\n\nأعلنت زينيماكس أونلاين ستوديوز (ZeniMax Online Studios) أن منطقة Markarth وقصتها أصبحتا مجانيتين ضمن اللعبة الأساسية في The Elder Scrolls Online وضمن Season Two.\n\nوتتيح المنطقة استكشاف جزء من جنوب غرب Skyrim يُعرف باسم The Reach، إضافة إلى منطقة Blackreach الموسّعة، وتختتم القصة التي بدأت مع Greymoor، وهي متاحة أيضًا مجانًا ضمن Season Two.\n\nللبدء، تُفتح قائمة Collections ثم Stories، وتظهر Markarth تحت Zone DLC مع المهمة الأولى.\n\nالمصدر: زينيماكس أونلاين ستوديوز (ZeniMax Online Studios)، 11 نوفمبر 2026\n\n#ألعاب #أخبار_الألعاب #TheElderScrollsOnline #Skyrim"
+ },
+ "new_name_flag": "زينيماكس أونلاين ستوديوز (ZeniMax Online Studios): new form, proposed for names-ar.md (ZeniMax Media is زينيماكس ميديا)",
+ "deepl": {
+  "back_check": "passed by forward pass: DeepL wrote the zone and story as available free as part of the base game and Season Two, matching ours",
+  "forward_whole_story": "DeepL translated Markarth, Greymoor, Collections, Stories, Zone DLC into Arabic; house rule keeps game terms in English",
+  "terms_alternatives": "free in base game -> متوفر مجانًا في/كجزء من اللعبة الأساسية (DeepL x3), ours باتت مجانية ضمن اللعبة الأساسية; the Reach -> الريتش (ours The Reach, English); chapter -> فصل (ours: not used)"
+ },
+ "arabic_passes": "arabic-games-film-editor then grammar review by hand: agreement (باتت منطقة ... مجانية، المتاحة تعود إلى Greymoor، أصبحتا مجانيتين مع منطقة وقصة), hamza, Latin names unglued, every paragraph opens on an Arabic word",
+ "director_check": {
+  "verdict": "pending server qc",
+  "by": "server qc.json",
+  "out": "cards/2026-11/eso-markarth-free-base-game-november-11-reel-v1.mp4"
+ }
+}
