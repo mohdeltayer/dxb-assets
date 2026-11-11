@@ -57,5 +57,23 @@
    "2026-09-30-gta6-leonida",
    "2026-11-16-gta-vi-road-ep6-what-you-can-do"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/gta-vi-road-ep2-leonida-map-reel-v4.mp4",
+  "blob": "ce76b69b9d79c1ba2ac7cc62553663717bfd426f",
+  "at": "2026-11-11T18:20:43Z",
+  "note": "ep2 v4: per-shot table PASS; strict content rule clean incl. crossfades; sound judged from the job",
+  "checklist": {
+   "job": "jobs/live/gta-vi-road-ep2-leonida-map.json",
+   "sha256": "9c29f3379066ad74b7fa0d88673ddd50559b435945f2d824fabf66a367ab160d",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-1 (studio)"
+  },
+  "by": "director-agent (separate, sonnet)"
  }
 }
