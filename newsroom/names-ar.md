@@ -71,6 +71,8 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Bungie | بانجي | Proposed 8 Nov 2026 (Halo turns 25 Reel; flagged for Mohammad) |
 | Halo Studios | هالو ستوديوز | Proposed 8 Nov 2026 (Halo turns 25 Reel; flagged for Mohammad) |
 | Infinity Ward | إنفينيتي وارد | In use |
+| Treyarch | تريارك | Proposed 11 Nov 2026 (MW4 Ranked caption) |
+| Raven Software | ريفين سوفتوير | Proposed 11 Nov 2026 (MW4 Ranked caption) |
 | Sledgehammer Games | سليدجهامر غيمز | Proposed 8 Nov 2026 (MW3 turns 15; flagged for Mohammad) |
 | Santa Monica Studio | سانتا مونيكا ستوديو | In use |
 | Turn 10 | ترن 10 | In use |
