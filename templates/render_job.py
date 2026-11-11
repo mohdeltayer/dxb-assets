@@ -187,9 +187,18 @@ def _download(item, dst):
         if 'seconds' not in item:
             raise ValueError(f"{item['file']}: \"stream\" needs \"seconds\" (and \"start\", default 0)")
         hdr = f'Referer: {item["referer"]}\r\n' if item.get('referer') else ''
-        subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-ss', str(item.get('start', 0)), '-user_agent', UA]
-                       + (['-headers', hdr] if hdr else []) + ['-i', item['url'], '-t', str(item['seconds']),
-                       '-c', 'copy', dst + '.part.mp4'], check=True, timeout=600)
+        cmd = (['ffmpeg', '-nostdin', '-y', '-v', 'error', '-ss', str(item.get('start', 0)), '-user_agent', UA]
+               + (['-headers', hdr] if hdr else []) + ['-i', item['url'], '-t', str(item['seconds']),
+               '-c', 'copy', dst + '.part.mp4'])
+        for attempt in range(3):                  # a range read can end early ("Stream ends prematurely"); try again
+            try:
+                subprocess.run(cmd, check=True, timeout=600)
+                break
+            except (subprocess.CalledProcessError, subprocess.TimeoutExpired):
+                if attempt == 2:
+                    raise
+                print(f"stream read of {item['file']} failed, attempt {attempt + 1}; trying again", flush=True)
+                time.sleep(5)
         os.replace(dst + '.part.mp4', dst)
     elif 'url' in item:
         hdr = {'User-Agent': UA}
