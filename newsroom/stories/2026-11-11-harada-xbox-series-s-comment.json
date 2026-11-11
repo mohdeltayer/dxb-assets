@@ -71,5 +71,38 @@
    "series s"
   ],
   "hits": []
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "at": "2026-11-11T16:06:00Z",
+  "by": "helper-b-director",
+  "note": "server qc.json pass, 0 findings, 2 dispatches; builder brief: qc is the check, no frames opened",
+  "out": "cards/2026-11/harada-xbox-series-s-wish-wouldnt-release-november-11-reel-v1.mp4"
+ },
+ "drafts": {
+  "instagram_caption": "تقرير: مخرج Tekken السابق ينتقد Xbox Series S\n\nقال كاتسوهيرو هارادا (Katsuhiro Harada)، المخرج السابق لسلسلة Tekken، إنه يتمنى ألا تصدر أجهزة مثل Xbox Series S، وذلك بحضور مسؤول كبير من Xbox، حسب ما نقلته يوروغيمر (Eurogamer) عن موقع إنفن غلوبال (Inven Global).\n\nجاء حديثه في ندوة بمؤتمر مطوري ألعاب الكونسول في كوريا الجنوبية. وقال إن الذاكرة القليلة مشكلة، لكن الأصعب أن الجهاز شبيه بجهاز Series X مع أداء أقل بصورة غريبة، وإن لاعبي Series S يوجهون شكواهم إلى المطورين لا إلى مايكروسوفت (Microsoft).\n\nوقال مطور آخر شارك في الندوة إن الجهاز يضعهم أمام تحديات مستمرة ويفرض عليهم تحسين الكود بعناية.\n\n#ألعاب #أخبار_الألعاب #Tekken #Xbox",
+  "x_text": "مخرج Tekken السابق كاتسوهيرو هارادا (Katsuhiro Harada) يقول إنه يتمنى ألا تصدر أجهزة مثل Xbox Series S، وبحضور مسؤول كبير من Xbox، حسب يوروغيمر (Eurogamer).",
+  "threads_text": "مخرج Tekken السابق كاتسوهيرو هارادا (Katsuhiro Harada) يقول إنه يتمنى ألا تصدر أجهزة مثل Xbox Series S، وبحضور مسؤول كبير من Xbox، حسب يوروغيمر (Eurogamer).\n\nالمصدر: يوروغيمر نقلًا عن إنفن غلوبال",
+  "first_comment": "المصدر: يوروغيمر (Eurogamer) نقلًا عن إنفن غلوبال (Inven Global)، 11 نوفمبر 2026",
+  "x_follow_up": "المصدر: يوروغيمر https://www.eurogamer.net/katsuhiro-harada-xbox-series-s-wish-it-wouldnt-release"
+ },
+ "deepl": {
+  "forward": "whole story sent to DeepL in one piece; it reads Harada as the former Tekken director, uses «أتمنى ألا تصدر/يطرح» and «ينتقد»; ours matches the meaning; Console Game Developers Conference kept as مؤتمر مطوري ألعاب الكونسول (DeepL: ألعاب أجهزة الألعاب, rejected as clumsy)",
+  "back_check": "Former Tekken director Harada says he wishes consoles like the Xbox Series S wouldn't be released, in the presence of a senior Xbox executive, according to Eurogamer, citing Inven Global; panel at the Console Game Developers Conference in South Korea; limited memory a problem, console similar to Series X with strangely lower performance, players blame developers rather than Microsoft; another developer says it forces them to optimise code carefully: meaning matches"
+ },
+ "arabic_passes": "arabic-games-film-editor and arabic-grammar-review applied by the builder; no required edits",
+ "sound": "our bed; Story Trailer split failed (music stem leftover 34.2%), reason in the job's reel_check",
+ "gate": "gate 16:05Z: Eurogamer page re-read, no update or denial note; single outlet, label تقرير, scheduled 1h10m ahead (under the 3 hours for a report)",
+ "posts": [
+  {
+   "platforms": [
+    "instagram",
+    "x",
+    "threads"
+   ],
+   "account": "Digital Lounge",
+   "scheduled": "2026-11-11T17:15:00Z",
+   "note": "scheduled in Publer 17:15Z (21:15 Dubai), go: buffer fill (Mohammad 11 Nov), gate 16:05Z, server qc pass 16:05Z; ids last six 669c16 (ig), 0e699f (x), 471c9f (threads); re-check the Eurogamer article before it publishes (report)"
+  }
+ ]
 }
