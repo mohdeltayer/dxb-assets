@@ -1,6 +1,6 @@
 {
  "name": "gta-vi-road-ep4-three-trailers",
- "out": "cards/2026-11/gta-vi-road-ep4-three-trailers-reel-v1.mp4",
+ "out": "cards/2026-11/gta-vi-road-ep4-three-trailers-reel-v2.mp4",
  "story": "2026-11-14-gta-vi-road-ep4-three-trailers",
  "render_lane": "server",
  "built_by": "production-1 (studio)",
@@ -22,6 +22,10 @@
   {
    "file": "gta6-t1.mp4",
    "url": "https://assets.ign.com/videos/zencoder/2023/12/04/3840/f46855f3-fcba-4dc2-bc90-bd7544e2ed50-1701731584.mp4"
+  },
+  {
+   "file": "rs-vice-city-11.jpg",
+   "repo": "live/2026-11-11/gta/rs-vice-city-11.jpg"
   }
  ],
  "shots": [
@@ -71,8 +75,8 @@
   ],
   [
    "gta6-t2.mp4",
-   81.3,
-   2.0,
+   81.6,
+   1.7,
    [
     [
      0.0,
@@ -127,7 +131,7 @@
   [
    "gta6-t1.mp4",
    45.4,
-   1.3,
+   1.1,
    [
     [
      0.0,
@@ -160,12 +164,21 @@
   [
    "gta6-t1.mp4",
    27.4,
-   2.2,
+   1.4,
    [
     [
      0.0,
      0.5
     ]
+   ]
+  ],
+  [
+   "rs-vice-city-11.jpg",
+   null,
+   2.0,
+   [
+    0.5,
+    0.5
    ]
   ]
  ],
@@ -222,7 +235,7 @@
   ],
   [
    11,
-   12,
+   13,
    [
     [
      "بعد 5 أيام ينتهي الانتظار",
@@ -234,7 +247,7 @@
  "credits": [
   [
    0,
-   12,
+   13,
    "المصدر: روكستار غيمز (Rockstar Games)"
   ]
  ],
@@ -271,12 +284,16 @@
   "PICTURE: footage first": "yes: Rockstar's three trailers, each line on its own trailer",
   "PICTURE: every Reel shows the game": "yes",
   "PICTURE: not the same picture as the last 5 Reels": "yes: picture: Jason and Lucia at the car (launch trailer 40.4); not in the last five",
-  "PICTURE: credit on every clip": "yes: shots 0 to 12",
+  "PICTURE: credit on every clip": "yes: shots 0 to 13",
   "PICTURE: headline not over a face": "yes: headline in the band",
   "Nothing graphic, nothing leaked": "yes",
   "Countdown from the verified date": "yes: 5 days, 14 Nov to 19 Nov"
  },
  "decision_log": [
+  {
+   "beat": "content",
+   "shot": "Trailer 1 cuts read frame by frame: 27.4 street ends 28.8 (nightclub from 29.0); 45.4 night lot ends 46.5 (a phone-video clip from 46.6); Trailer 2 dock from 81.6, clear of the bar at about 80.5; closing on Rockstar's Vice City sunset still"
+  },
   {
    "beat": "hook",
    "shot": "LT 40.4 the pair at the car; LT 33.3 boat",
