@@ -1,18 +1,18 @@
 {
  "name": "gta-vi-road-ep3-jason-and-lucia",
- "out": "cards/2026-11/gta-vi-road-ep3-jason-and-lucia-reel-v4.mp4",
+ "out": "cards/2026-11/gta-vi-road-ep3-jason-and-lucia-reel-v5.mp4",
  "verdict": "pass",
- "at": "2026-11-11T21:18:45Z",
+ "at": "2026-11-11T21:59:16Z",
  "findings": [],
  "notes": [
-  "length 17.8 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 68.7; leak_pct 3.1; cache {'hit': 10, 'miss': 0}; separate_secs 4.0; secs 6.0",
+  "length 19.0 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 65.3; leak_pct 4.1; cache {'hit': 6, 'miss': 4}; separate_secs 10.4; secs 15.6",
   "smear check: exempt 0.00 to 2.90 s (our own cards)",
-  "render_job: lifeless: {\"score\": 2.1, \"still_share\": 0.029, \"longest_still\": 0.2, \"cuts_per_10s\": 5.34, \"held_under_text\": 0.0, \"secs\": 20.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: lifeless: {\"score\": 14.3, \"still_share\": 0.124, \"longest_still\": 2.1, \"cuts_per_10s\": 5.5, \"held_under_text\": 0.0, \"secs\": 21.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "af48a15b3b00f9a147658106c4928196928cae8a",
- "dispatches": 5,
+ "job_sha": "5416844375f068efaffe5fda2fe9d84c1ae7137f",
+ "dispatches": 6,
  "source_summary": {
   "min_height": 2160,
   "max_zoom": 1.11,
