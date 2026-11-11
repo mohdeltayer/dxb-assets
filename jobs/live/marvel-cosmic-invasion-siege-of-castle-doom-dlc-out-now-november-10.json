@@ -1,0 +1,135 @@
+{
+ "name": "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10",
+ "story": "2026-11-11-marvel-cosmic-invasion-siege-of-castle-doom",
+ "kind_news": "expansion",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
+   "steam": 5032670,
+   "trailer": "Game Mode",
+   "start": 0,
+   "seconds": 120
+  }
+ ],
+ "shots": [
+  [
+   "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
+   27.1,
+   2.2,
+   [
+    [
+     0.0,
+     0.646
+    ]
+   ]
+  ],
+  [
+   "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
+   58.0,
+   2.8,
+   [
+    [
+     0.0,
+     0.63
+    ]
+   ]
+  ],
+  [
+   "marvel-cosmic-invasion-siege-of-castle-doom-dlc-out-now-november-10-trailer.mp4",
+   70.05,
+   2.9,
+   [
+    [
+     0.0,
+     0.292
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "تضيف Doctor Doom مع Invisible Woman",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   2,
+   "المصدر: متجر Steam",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "صدرت إضافة جديدة\nللعبة Cosmic Invasion",
+ "label": "متوفر الآن",
+ "source": "متجر Steam",
+ "date": "10 Nov 2026",
+ "theme": "spectacle",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": "bed",
+ "pace_ok": false,
+ "genre": [
+  "action",
+  "indie"
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam appdetails cc=ae read 10 Nov 20:50Z (released 10 Nov 2026, 24.52 AED after 10% off 27.25, Tribute Games, Dotemu, short description), Steam trailer list",
+  "SOURCE: not already posted": "yes: see story file",
+  "SOURCE: age": "yes: see story file",
+  "ANGLE before lines": "yes: see story file",
+  "STORY TYPE out now": "yes: see story file",
+  "STORY: spoken paragraph, subject before pronoun": "yes: see story file",
+  "STORY: release verbs": "yes: see story file",
+  "STORY: names match names-ar.md": "yes: see story file",
+  "POST: Arabic passes": "yes: see story file",
+  "PICTURE: footage first": "yes: see story file",
+  "PICTURE: not the same as last 5 Reels": "yes: see story file",
+  "PICTURE: crop per beat": "yes: see story file",
+  "PICTURE: credit on every clip": "yes: see story file",
+  "PICTURE: headline not over a face": "yes: see story file",
+  "CHECKS: decision log": "yes: see story file",
+  "SOUND: footage sound or bed with reason": "our bed: the Launch trailer's render stalled 3x on the server; the Game Mode trailer is Italian-localised with speech unverifiable (no transcript) and its four stretches are from different moments, so one trailer stretch would not match the shots; director signs off",
+  "SOUND: no speech under Arabic lines": "yes: our bed only"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "26.81 to 29.38 s (the 0.0 s opening shot dropped: every stalled render began on a shot at the file start, where Steam trailers have no picture for 2 to 3 s)",
+   "alternatives": "1.75 s onward carries MARVEL GAMES slate",
+   "crop": "x 0.67",
+   "music": "bed"
+  },
+  {
+   "beat": "1 L1",
+   "shot": "26.81 to 29.38 s",
+   "alternatives": "22.45 to 25 s Italian name plates",
+   "crop": "x 0.65",
+   "music": "bed"
+  },
+  {
+   "beat": "2 L2",
+   "shot": "58.0 to 60.8 and 70.05 to 73.35 s",
+   "alternatives": "text-heavy upgrade screens 35 to 50 s",
+   "crop": "x 0.63 and 0.29",
+   "music": "bed"
+  }
+ ],
+ "audio_split": false
+}
