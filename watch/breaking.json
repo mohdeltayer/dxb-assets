@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T22:05:19Z",
- "seq": 409,
+ "generated_at": "2026-11-12T22:30:18Z",
+ "seq": 410,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 13278,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "25 Years of XBOX Bundle",
+   "url": "https://www.youtube.com/watch?v=YKiN_h38Gzo",
+   "published": "2026-11-12T22:15Z",
+   "first_seen": "2026-11-12T22:30:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/YKiN_h38Gzo/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=YKiN_h38Gzo"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 410
+  }
+ ],
+ "recent": [
   {
    "id": 13254,
    "source": "Xbox Wire",
@@ -21,9 +44,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 409
-  }
- ],
- "recent": [
+  },
   {
    "id": 13189,
    "source": "Xbox Wire",
@@ -794,34 +815,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 353
-  },
-  {
-   "id": 12008,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Where Winds Meet - Hutuo Gameplay Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=tFRa1e712Jw",
-   "published": "2026-11-11T22:00Z",
-   "first_seen": "2026-11-11T22:20:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/tFRa1e712Jw/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=tFRa1e712Jw"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 350
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T22:05:15Z",
+  "last_poll_at": "2026-11-12T22:30:14Z",
   "sources_enabled": 100,
-  "sources_ok": 94,
+  "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 44x)",
