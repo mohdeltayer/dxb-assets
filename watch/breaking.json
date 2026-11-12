@@ -1,10 +1,36 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T22:52:11Z",
- "seq": 411,
+ "generated_at": "2026-11-12T23:00:18Z",
+ "seq": 412,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 13295,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Available for XBOX Insiders: More Ways to Personalize Your Home, Library, and Guide",
+   "url": "https://news.xbox.com/en-us/2026/11/12/xbox-insiders-january-2027-console-features-1/",
+   "published": "2026-11-12T23:00Z",
+   "first_seen": "2026-11-12T23:00:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/1.-Dynamic-backgrounds-Fable-ee33373b7f07f14b7620.png"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/2.-Disc-to-digital-options-61ae8c6f483ed29703b9.png"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/4.-Guide-right-ff1f41ab7bc9ed2e13f4.png"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 412
+  }
+ ],
  "recent": [
   {
    "id": 13278,
@@ -818,7 +844,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T22:52:05Z",
+  "last_poll_at": "2026-11-12T23:00:14Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
