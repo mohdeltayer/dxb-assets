@@ -1,10 +1,28 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T21:52:05Z",
- "seq": 408,
+ "generated_at": "2026-11-12T22:05:19Z",
+ "seq": 409,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 13254,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Candy Crush Saga Gives Halo, Fallout, Forza and More a Sweet Makeover for XBOX’s 25th",
+   "url": "https://news.xbox.com/en-us/2026/11/12/candy-crush-saga-game-on-halo-fallout-sea-of-thieves-xbox-25/",
+   "published": "2026-11-12T22:00Z",
+   "first_seen": "2026-11-12T22:05:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/GameOnSeason_SpotifyArtwork_1-385e3c0787211ecf55a3.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 409
+  }
+ ],
  "recent": [
   {
    "id": 13189,
@@ -801,7 +819,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T21:50:05Z",
+  "last_poll_at": "2026-11-12T22:05:15Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
