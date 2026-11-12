@@ -15,9 +15,56 @@
   }
  ],
  "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "lines": [
+  [
+   3.5,
+   7,
+   [
+    [
+     "تضيف راو فيوري (Raw Fury)\nإضافة Pharaoh Lands للعبة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   7,
+   10.5,
+   [
+    [
+     "تدور في وادي الملوك،\nبأجواء مستوحاة من مصر القديمة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   10.5,
+   14,
+   [
+    [
+     "يستكشف اللاعب عالم آلهة\nقوية بحثًا عن مصدر الفوضى",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   14,
+   "المصدر: راو فيوري (Raw Fury)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "إضافة بطابع مصري قديم\nفي Kingdom Two Crowns",
  "label": "رسمي",
  "source": "ستيم (Steam)",
  "date": "12 Nov 2026",
@@ -29,12 +76,16 @@
  "track": "bed",
  "strip": [
   [
-   "TODO",
-   "TODO"
+   "التاريخ",
+   "1 ديسمبر 2026"
   ],
   [
-   "TODO",
-   "TODO"
+   "المنصة",
+   "Windows عبر Steam"
+  ],
+  [
+   "السعر",
+   "لم يُعلن بعد"
   ]
  ],
  "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
