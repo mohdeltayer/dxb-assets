@@ -14,10 +14,102 @@
    "seconds": 240
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "big-hops-together-switch-2-december-24-trailer.mp4",
+   19.25,
+   2.46,
+   [
+    [
+     0.0,
+     0.503
+    ]
+   ]
+  ],
+  [
+   "big-hops-together-switch-2-december-24-trailer.mp4",
+   21.71,
+   2.9,
+   [
+    [
+     0.0,
+     0.398
+    ]
+   ]
+  ],
+  [
+   "big-hops-together-switch-2-december-24-trailer.mp4",
+   24.61,
+   3.17,
+   [
+    [
+     0.0,
+     0.585
+    ]
+   ]
+  ],
+  [
+   "big-hops-together-switch-2-december-24-trailer.mp4",
+   27.78,
+   3.33,
+   [
+    [
+     0.0,
+     0.45
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "ظهرت اللعبة على متجر eShop",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    [
+     "النسخة تدعم 8 لاعبين تعاونيًا",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "صدرت على Steam في يناير 2026",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   3,
+   "المصدر: لاكشوت غيمز (Luckshot Games)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "لعبة Big Hops Together\nقادمة إلى Switch 2",
  "label": "تقرير",
  "source": "نينتيندو إفريثينغ (Nintendo Everything)",
  "date": "11 Nov 2026",
@@ -25,17 +117,23 @@
  "style": null,
  "template": "split",
  "skin": "house",
- "cut": false,
- "track": "bed",
+ "cut": true,
+ "track": [
+  "big-hops-together-switch-2-december-24-trailer.mp4",
+  19.25
+ ],
  "strip": [
   [
-   "TODO",
-   "TODO"
+   "المنصة",
+   "Nintendo Switch 2"
   ],
   [
-   "TODO",
-   "TODO"
+   "الموعد",
+   "24 ديسمبر 2026"
+  ],
+  [
+   "السعر",
+   "لم يُعلن بعد"
   ]
- ],
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ ]
 }
