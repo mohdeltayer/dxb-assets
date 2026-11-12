@@ -109,6 +109,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | GamesRadar | غيمز رادار | Proposed 3 Nov |
 | Pure Xbox | بيور إكس بوكس | In use |
 | Xbox Wire | إكس بوكس واير | In use |
+| Skymap Games | سكاي ماب جيمز | Proposed 12 Nov (Zero Hour console publisher) |
 | PlayStation Blog | مدونة بلايستيشن | In use |
 | Nintendo Life | نينتيندو لايف | Approved 26 Sep |
 | Nintendo Everything | نينتيندو إفريثينغ | Suggested 29 Sep |
