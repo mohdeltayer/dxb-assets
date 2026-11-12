@@ -44665,5 +44665,60 @@
   "story": "romancing-saga-3-destinies-united-date-moved-up-november-12",
   "job_sha": "995d3f7bbbcbda7b0c79ecdfdf4d375bbd742d03",
   "dispatches": 1
+ },
+ {
+  "name": "roblox-saudi-arabic-games-visits-november-12-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-12T08:52Z",
+  "stages": {
+   "checks": 0.2,
+   "montage": 4.2,
+   "text": 14.2,
+   "audio": 0.0,
+   "outro": 12.3
+  },
+  "total": 31.0,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-12T08:52Z",
+  "finished_at": "2026-11-12T08:52Z",
+  "render_min": 0.52,
+  "sources": [],
+  "source_summary": {
+   "min_height": null,
+   "max_zoom": null,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 68.0,
+   "still_share": 0.882,
+   "longest_still": 3.2,
+   "cuts_per_10s": 0.0,
+   "held_under_text": 0.0,
+   "secs": 12.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": true
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 47,
+  "queue_wait_secs": 134,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1029,
+  "peak_mem_mb": 1798,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 27374,
+  "peak_disk_mb": 27409,
+  "min_disk_free_mb": 218698,
+  "setup_min": 0.12,
+  "story": "roblox-saudi-arabic-games-visits-november-12",
+  "job_sha": "0c7c3a0dd699cbd64b928d84bc77684d45b84c0f",
+  "dispatches": 1
  }
 ]
