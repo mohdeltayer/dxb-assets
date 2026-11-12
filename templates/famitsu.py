@@ -54,6 +54,11 @@ TITLES = {
     '真・三國無双2 with 猛将伝 Remastered': 'DYNASTY WARRIORS 3: Complete Edition Remastered',
     'Minecraft Dungeons II': 'Minecraft Dungeons II',
     'ゼノブレイド2 Nintendo Switch 2 Edition': 'Xenoblade Chronicles 2',
+    'ゼルダの伝説 時のオカリナ': 'The Legend of Zelda: Ocarina of Time',
+    'Nintendo Switch Sports Resort': 'Nintendo Switch Sports Resort',
+    'リズム天国 ミラクルスターズ': 'Rhythm Heaven Groove',
+    'Stellar Blade（ステラーブレイド） コンプリートエディション': 'Stellar Blade Complete Edition',
+    'ファイナルファンタジー レゾナンス': 'FINAL FANTASY RESONANCE',
 }
 
 PLATFORMS = {'Switch2': 'NS2', 'Switch': 'NS', 'PS5': 'PS5', 'PS4': 'PS4',
