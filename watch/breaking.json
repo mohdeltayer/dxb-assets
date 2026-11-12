@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T19:52:05Z",
- "seq": 402,
+ "generated_at": "2026-11-12T20:05:18Z",
+ "seq": 403,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 13163,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "9 Kings - 1.0 Launch Trailer",
+   "url": "https://www.youtube.com/watch?v=gSMS9m0k_nI",
+   "published": "2026-11-12T20:00Z",
+   "first_seen": "2026-11-12T20:05:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/gSMS9m0k_nI/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=gSMS9m0k_nI"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 403
+  }
+ ],
  "recent": [
   {
    "id": 13115,
@@ -852,9 +874,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T19:50:05Z",
+  "last_poll_at": "2026-11-12T20:05:14Z",
   "sources_enabled": 100,
-  "sources_ok": 94,
+  "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 43x)",
