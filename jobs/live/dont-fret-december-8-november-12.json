@@ -208,10 +208,7 @@
  "template": "clipcard",
  "skin": "house",
  "cut": false,
- "track": [
-  "dont-fret-december-8-november-12-winter.mp4",
-  0.0
- ],
+ "track": "bed",
  "gfx": [
   {
    "file": "dont-fret-december-8-november-12-gfx-1.png",
@@ -239,7 +236,7 @@
   "STORY: release verbs": "yes: the date sits on the card; caption uses تصدر",
   "STORY: names match names-ar.md": "yes: ديجيتال بيجامز (Digital Pajamas) in the credit from frame 0; game and platform names in Latin",
   "POST: Arabic passes": "yes: house glossary, grammar review, DeepL forward and back-check, جيتار kept over غيتار, تصدر kept over ستصدر",
-  "SOUND: footage sound or bed with reason": "yes: the Winter trailer own sound with the audio split",
+  "SOUND: footage sound or bed with reason": "our bed (neon rotation); reason: both official trailers checked (Date Tease 20 s, Winter 58 s): the audio split ran on the Winter trailer and its music stem was not clean (31.3% effects leftover, over the 5% limit), and the Date Tease has only 6.4 s of clean picture; director sign-off in the story file",
   "SOUND: no speech under Arabic lines": "yes: server speech check",
   "PICTURE: footage first": "yes: the official Date Tease and Winter trailers of the game",
   "PICTURE: not the same as last 5 Reels": "yes",
@@ -253,28 +250,28 @@
    "shot": "Date Tease 2.26 to 5.1 s, clean stretch from shotpick",
    "alternatives": "0 to 1.88 s too short; burnt-in DECEMBER stretches rejected",
    "crop": "focus 0.406 from the picker",
-   "music": "Winter trailer own sound, audio split"
+   "music": "our bed (reason in reel_check)"
   },
   {
    "beat": "1 to 5 premise, Harmonic Heights, tuner HUD",
    "shot": "Winter trailer clean stretches 0, 2.9, 5.9, 16.78, 28.54 s in source order",
    "alternatives": "other stretches rejected by the picker",
    "crop": "picker focus",
-   "music": "trailer own sound"
+   "music": "our bed (reason in reel_check)"
   },
   {
    "beat": "6 card: release date",
    "shot": "fact card on the Winter trailer footage behind",
    "alternatives": "none",
    "crop": "card",
-   "music": "trailer own sound"
+   "music": "our bed (reason in reel_check)"
   },
   {
    "beat": "7 to 8 instrument puzzles, languages",
    "shot": "Winter 35.45 and 38.79 s clean stretches",
    "alternatives": "none",
    "crop": "picker focus",
-   "music": "trailer own sound"
+   "music": "our bed (reason in reel_check)"
   }
  ],
  "angle": "hook: a horror game whose hero is a living guitar has a date; why now: date announced 11 Nov; here: PC on Steam, no Arabic among nine languages, no price; payoff: tuner is the health bar and puzzles use instruments",
