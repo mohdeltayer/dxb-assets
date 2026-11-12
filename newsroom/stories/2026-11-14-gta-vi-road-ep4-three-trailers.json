@@ -68,5 +68,23 @@
    "2026-11-19-gta-vi-road-ep9-out-now",
    "weekly-releases-nov-9-13-list"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/gta-vi-road-ep4-three-trailers-reel-v8.mp4",
+  "blob": "14da2b8bce146ddf5c2288ed48dbdc88ac84f183",
+  "at": "2026-11-12T00:09:03Z",
+  "note": "round 2 on v8: pier ends before the boathouse sign, car shot opens on the driver; full review of v7 passed every other shot",
+  "checklist": {
+   "job": "jobs/live/gta-vi-road-ep4-three-trailers.json",
+   "sha256": "383098c20f2fe0f61684cbac673944613e91cf3b49b9d30ef974d3e889a9401c",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-1 (studio)"
+  },
+  "by": "director-agent (separate, sonnet)"
  }
 }
