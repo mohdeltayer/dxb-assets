@@ -1,0 +1,25 @@
+{
+ "name": "halo-firefight-free-update-nov-12",
+ "out": "cards/2026-11/halo-firefight-free-update-nov-12-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-12T21:05:32Z",
+ "findings": [],
+ "notes": [
+  "length 15.3 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 5.26, \"held_under_text\": 0.0, \"secs\": 15.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "8b38d781022a452bbed09df8d95b3188a75b29d8",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.88,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "bed:neon_b (Steam 'Available Now' trailer (126 s, the store page's launch trailer; the page's other trailers are older Cinematic Story, New Missions and Skulls and Remix cuts) checked: audio split on the server 12 Nov found the music stem not clean (leftover 6.0% over the 5.0% limit) and no continuous clean stretch of 12 s or more exists (clean shotpick stretches are separated by title text, black and letterboxed scenes); trailer effects from other moments would not match the picture, so our bed)"
+}
