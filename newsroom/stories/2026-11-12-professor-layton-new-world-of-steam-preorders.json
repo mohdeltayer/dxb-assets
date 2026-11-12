@@ -70,5 +70,25 @@
   "x_threads": "بدأ الحجز المسبق للنسخة الرقمية من Professor Layton and the New World of Steam على PS5 وSteam بسعر 64.99 دولارًا، حسب إعلان ليفل فايف (LEVEL-5). تصدر اللعبة في 10 ديسمبر.",
   "instagram": "حجز Professor Layton and the New World of Steam أصبح مفتوحًا على PS5 وSteam، حسب إعلان ليفل فايف (LEVEL-5).\n\nتصدر اللعبة في 10 ديسمبر 2026، وسعر النسخة الرقمية 64.99 دولارًا. ومن يحجز نسخته الرقمية حتى نهاية 9 ديسمبر بتوقيت اليابان يحصل على 11 مقطوعة من موسيقى السلسلة، تظهر داخل اللعبة في قائمة المحتوى السري.\n\nأما الحجز على Nintendo Switch 2 وNintendo Switch فسيُعلن عنه لاحقًا. ولا تضم لغات اللعبة على Steam العربية، حسب صفحتها على المتجر.\n\n#ألعاب #أخبار_الألعاب #ProfessorLayton #PS5"
  },
- "grammar_review": "arabic-grammar-review stage: house glossary, perfect-arabic SKILL and orthography opened; one required edit (meaning, house accuracy): قبل 9 ديسمبر -> حتى نهاية 9 ديسمبر (LEVEL-5: by 11:59 PM Dec 9 JST) in line 2 and the caption; no grammar edits; uncertain: headline لعبة Layton ... تفتح (the company opens pre-orders, valid as a store-level phrase)"
+ "grammar_review": "arabic-grammar-review stage: house glossary, perfect-arabic SKILL and orthography opened; one required edit (meaning, house accuracy): قبل 9 ديسمبر -> حتى نهاية 9 ديسمبر (LEVEL-5: by 11:59 PM Dec 9 JST) in line 2 and the caption; no grammar edits; uncertain: headline لعبة Layton ... تفتح (the company opens pre-orders, valid as a store-level phrase)",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/professor-layton-new-world-of-steam-preorders-november-12-reel-v1.mp4",
+  "blob": "3f22a67bcf31499b57df1bd0ccceb5b9886b68a4",
+  "at": "2026-11-12T18:00:05Z",
+  "note": "server qc.json verdict pass, no findings; sound: our bed (neon) with reason in job, trailer audio split 29.4% music",
+  "checklist": {
+   "job": "jobs/live/professor-layton-new-world-of-steam-preorders-november-12.json",
+   "sha256": "260dd3a42f16b557a04d8d57c40ba3a2ab275e45b3860bf9156fa382483a196a",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "server-qc",
+  "qc": "pass",
+  "looked": null
+ }
 }
