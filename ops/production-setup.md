@@ -317,3 +317,9 @@ a run that has not been updated still reads them.
    and list cards now count up and reveal rows by themselves (`"animate": false` turns it off); still-ground art needs
    a short side of 720 px; a logofact logo is a transparent cut-out. For numbers, list, explainer, quote and edition,
    read the three `<name>-look-N.jpg` frames beside qc.json and pass `--looked "<what they show>"` with the PASS.
+12. People stories (release 2026-11-12 r2, adv-20261111-person-stories-gate). Every story file carries
+   "subject_person": null, or {"name", "role", "photo_source"} when a person is the news (a quote, an interview, an
+   appointment, an award, a departure). When set, or the kind is quote, people or cast, the job copies subject_person and
+   carries a "person" window opening at 0.0 s (photo box and name plate on the cover); no licensed photo: "person_photo":
+   "none" with "searched": [where you looked] and the window shows their best-known work. "report" is never the kind of
+   a one-game story: use what happened (date, delay, reveal, sales, update, people, quote) and put تقرير in the label.
