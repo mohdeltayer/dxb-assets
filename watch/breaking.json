@@ -1,10 +1,23 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T18:52:05Z",
- "seq": 400,
+ "generated_at": "2026-11-12T19:20:19Z",
+ "seq": 401,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 13115,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Fable – New Quest Gameplay for XBOX’s 25th Anniversary",
+   "url": "https://news.xbox.com/en-us/2026/11/12/fable-new-quest-gameplay-for-xboxs-25th-anniversary/",
+   "published": "2026-11-12T19:00Z",
+   "first_seen": "2026-11-12T19:20:14Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 401
+  }
+ ],
  "recent": [
   {
    "id": 13054,
@@ -836,46 +849,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 344
-  },
-  {
-   "id": 11885,
-   "source": "Nintendo of America (YouTube)",
-   "source_kind": "youtube",
-   "title": "Castlebound – Launch Trailer – Nintendo Switch 2",
-   "url": "https://www.youtube.com/watch?v=sDLjFDQpy_o",
-   "published": "2026-11-11T19:00Z",
-   "first_seen": "2026-11-11T19:15:04Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/sDLjFDQpy_o/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=sDLjFDQpy_o"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 342
-  },
-  {
-   "id": 11884,
-   "source": "Nintendo US",
-   "source_kind": "page",
-   "title": "11/11/26 Ready up for an RPG—the world needs you! Are you looking to embark on an epic journey that’s likely full of impending doom, character growth, and many",
-   "url": "https://www.nintendo.com/us/whatsnew/ready-up-for-an-rpg-the-world-needs-you/",
-   "published": null,
-   "first_seen": "2026-11-11T19:10:14Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 341
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T18:50:04Z",
+  "last_poll_at": "2026-11-12T19:20:14Z",
   "sources_enabled": 100,
-  "sources_ok": 93,
+  "sources_ok": 94,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 42x)",
