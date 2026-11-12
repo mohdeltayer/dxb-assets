@@ -180,5 +180,17 @@
   "CREDIT: on every clip": "yes: credit over shots 0 to 6",
   "SENSITIVE": "yes: none"
  },
- "music_only": true
+ "music_only": true,
+ "block_ok": [
+  [
+   2.0,
+   2.5,
+   "stylised OutRun-style game art with long straight road edges; source stretches passed decode and smear checks in the shots prerender (decode clean, 6 clean stretches)"
+  ],
+  [
+   5.8,
+   7.5,
+   "stylised OutRun-style game art with long straight road edges; source stretches passed decode and smear checks in the shots prerender (decode clean, 6 clean stretches)"
+  ]
+ ]
 }
