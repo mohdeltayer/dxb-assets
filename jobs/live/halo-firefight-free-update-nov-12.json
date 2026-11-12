@@ -162,10 +162,7 @@
  "template": "trailer",
  "skin": "house",
  "cut": false,
- "track": [
-  "halo-firefight-free-update-nov-12-trailer.mp4",
-  37.62
- ],
+ "track": "bed",
  "reel_check": {
   "SOURCE: primary read in full": "yes: Xbox Wire read via fetch 20:55Z, digest VERDICT CONFIRMED",
   "SOURCE: not already posted": "yes: ledger find, no Halo Firefight story",
@@ -184,5 +181,6 @@
    "crop": "picker focus",
    "music": "trailer own sound"
   }
- ]
+ ],
+ "bed_reason": "Steam 'Available Now' trailer (126 s, the store page's launch trailer; the page's other trailers are older Cinematic Story, New Missions and Skulls and Remix cuts) checked: audio split on the server 12 Nov found the music stem not clean (leftover 6.0% over the 5.0% limit) and no continuous clean stretch of 12 s or more exists (clean shotpick stretches are separated by title text, black and letterboxed scenes); trailer effects from other moments would not match the picture, so our bed"
 }
