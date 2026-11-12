@@ -14,28 +14,155 @@
    "seconds": 240
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "herdling-switch-2-edition-november-12-trailer.mp4",
+   42.97,
+   3.0,
+   [
+    [
+     0.0,
+     0.552
+    ]
+   ]
+  ],
+  [
+   "herdling-switch-2-edition-november-12-trailer.mp4",
+   45.97,
+   3.0,
+   [
+    [
+     0.0,
+     0.318
+    ]
+   ]
+  ],
+  [
+   "herdling-switch-2-edition-november-12-trailer.mp4",
+   48.97,
+   3.0,
+   [
+    [
+     0.0,
+     0.493
+    ]
+   ]
+  ],
+  [
+   "herdling-switch-2-edition-november-12-trailer.mp4",
+   51.97,
+   3.0,
+   [
+    [
+     0.0,
+     0.493
+    ]
+   ]
+  ],
+  [
+   "herdling-switch-2-edition-november-12-trailer.mp4",
+   54.97,
+   3.0,
+   [
+    [
+     0.0,
+     0.493
+    ]
+   ]
+  ],
+  [
+   "herdling-switch-2-edition-november-12-trailer.mp4",
+   57.97,
+   3.0,
+   [
+    [
+     0.0,
+     0.493
+    ]
+   ]
+  ],
+  [
+   "herdling-switch-2-edition-november-12-trailer.mp4",
+   60.97,
+   1.04,
+   [
+    [
+     0.0,
+     0.493
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "ظهرت على متجر eShop\nنسخة جديدة من Herdling",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "تعد النسخة بدقة أعلى\nوتفاصيل وأداء أفضل",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "نسخة اللعبة على Steam\nتدعم اللغة العربية",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: أوكوموتيف (Okomotive)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "لعبة Herdling تحصل على\nنسخة Switch 2 جديدة",
  "label": "تقرير",
- "source": "نينتندو إيفريثينغ (Nintendo Everything)",
+ "source": "نينتيندو إفريثينغ (Nintendo Everything)",
  "date": "11 Nov 2026",
- "theme": "cold",
+ "theme": "emerald",
  "style": null,
  "template": "split",
  "skin": "house",
- "cut": false,
- "track": "bed",
+ "cut": true,
+ "track": [
+  "herdling-switch-2-edition-november-12-trailer.mp4",
+  42.97
+ ],
  "strip": [
   [
-   "TODO",
-   "TODO"
+   "المنصة",
+   "Nintendo Switch 2"
   ],
   [
-   "TODO",
-   "TODO"
+   "السعر",
+   "لم يُعلن بعد"
   ]
- ],
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ ]
 }
