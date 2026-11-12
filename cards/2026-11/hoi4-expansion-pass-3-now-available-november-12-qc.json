@@ -1,0 +1,25 @@
+{
+ "name": "hoi4-expansion-pass-3-now-available-november-12",
+ "out": "cards/2026-11/hoi4-expansion-pass-3-now-available-november-12-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-12T16:55:19Z",
+ "findings": [],
+ "notes": [
+  "length 12.4 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 4.88, \"held_under_text\": 0.0, \"secs\": 12.3, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "8aa630ca8714abef2fff013ca3f2c7c02cd49713",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "bed:launch (Steam store has one official trailer, To the Bitter End RDA Trailer (appid 4758580), checked: audio split ran and measured music at 26.9% of the track (effects-led, under the 40% floor) and the clean shots come from scenes 0 to 8 out of order, so its effects would not match the picture; no other official trailer or clip for Expansion Pass 3 found on the store page)"
+}
