@@ -44891,5 +44891,149 @@
   "story": "tdu-solar-crown-initial-d-collab-november-12",
   "job_sha": "b8cf1768c7c020218c282f94ca3e695bee5141e1",
   "dispatches": 1
+ },
+ {
+  "name": "exterminauts-beta-november-12-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-12T12:03Z",
+  "stages": {
+   "checks": 3.9,
+   "montage": 42.7,
+   "text": 45.2,
+   "audio": 1.4,
+   "outro": 23.3
+  },
+  "total": 116.5,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-12T12:01Z",
+  "finished_at": "2026-11-12T12:03Z",
+  "render_min": 1.94,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "exterminauts-beta-november-12-trailer.mp4",
+    "start": 0.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "exterminauts-beta-november-12-trailer.mp4",
+    "start": 28.4,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "exterminauts-beta-november-12-trailer.mp4",
+    "start": 47.16,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "exterminauts-beta-november-12-trailer.mp4",
+    "start": 69.9,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "exterminauts-beta-november-12-trailer.mp4",
+    "start": 89.4,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "exterminauts-beta-november-12-trailer.mp4",
+    "start": 99.63,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 6.6,
+   "audio_secs": 49.9,
+   "music_pct": 38.3,
+   "leak_pct": 0.5,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 4,
+    "miss": 3
+   },
+   "effects_shots": 0,
+   "mix_secs": 3.4,
+   "secs": 11.1
+  },
+  "lifeless": {
+   "score": 0.8,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 8.53,
+   "held_under_text": 0.052,
+   "secs": 21.1,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 199,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1136,
+  "peak_mem_mb": 3016,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 27258,
+  "peak_disk_mb": 30666,
+  "min_disk_free_mb": 215440,
+  "setup_min": 0.2,
+  "story": "exterminauts-beta-november-12",
+  "job_sha": "f554ca05f9b65cbb448d14905e00965f181bc1c3",
+  "dispatches": 1
  }
 ]
