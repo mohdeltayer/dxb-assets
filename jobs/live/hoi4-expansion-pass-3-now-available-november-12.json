@@ -73,7 +73,7 @@
   [
    "hoi4-expansion-pass-3-now-available-november-12-trailer.mp4",
    26.97,
-   4.0,
+   4.88,
    [
     [
      0.0,
@@ -84,53 +84,48 @@
  ],
  "lines": [
   [
-   1,
-   1,
-   [
-    "TODO"
-   ]
-  ],
-  [
-   2,
-   2,
-   [
-    "TODO"
-   ]
-  ],
-  [
-   3,
+   0,
    3,
    [
-    "TODO"
+    [
+     "صدرت اليوم حزمة إضافات\nثالثة لهذه اللعبة",
+     {
+      "size": 54
+     }
+    ]
    ]
   ],
   [
    4,
-   4,
-   [
-    "TODO"
-   ]
-  ],
-  [
-   5,
    5,
    [
-    "TODO"
+    [
+     "أبرز ما فيها تحديث\nللولايات المتحدة",
+     {
+      "size": 54
+     }
+    ],
+    [
+     "مع تغييرات في الصناعة\nوالدبلوماسية",
+     {
+      "size": 54
+     }
+    ]
    ]
   ]
  ],
  "credits": [
   [
    0,
-   5,
-   "المصدر: ستيم (Steam)",
+   6,
+   "المصدر: باراداكس إنتراكتيف (Paradox Interactive)",
    {
     "size": 40,
     "band": true
    }
   ]
  ],
- "headline": "TODO",
+ "headline": "لعبة Hearts of Iron IV\nتحصل على حزمة جديدة",
  "label": "متوفر الآن",
  "source": "ستيم (Steam)",
  "date": "12 Nov 2026",
@@ -145,12 +140,46 @@
  ],
  "strip": [
   [
-   "TODO",
-   "TODO"
+   "المنصة",
+   "الحاسب عبر Steam"
   ],
   [
-   "TODO",
-   "TODO"
+   "السعر",
+   [
+    "aed",
+    "168"
+   ]
   ]
- ]
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam store page via appdetails (cc=ae) and Paradox Steam news post read 16:45Z; no denial expected for an official release",
+  "SOURCE: not already posted": "yes: ledger find hearts, iron: 0 hits",
+  "SOURCE: age": "yes: first report Paradox Steam news 15:24Z 12 Nov, under 24 hours",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE update": "yes: change (third pass out), what it adds (US rework per store page), availability (PC, 168 AED)",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names the game, L1 says الحزمة الثالثة للعبة, L2 says فيها, L3 كما تضم; no line opens on و",
+  "STORY: release verbs": "yes: صدرت اليوم for a release today",
+  "STORY: names match names-ar.md": "yes: Paradox Interactive with bracket in credit, Steam in English",
+  "POST: Arabic passes": "yes: two skills applied, western digits, no first person; DeepL whole-story forward pass matched (إعادة صياغة طال انتظارها), alternatives التوسع/بطاقة التوسعة rejected per glossary (إضافة), الحاسب kept for أجهزة الكمبيوتر",
+  "SOUND: footage sound or bed with reason": "yes: trailer own sound, one continuous stretch from 0 s; server speech check is final",
+  "SOUND: no speech under Arabic lines": "yes: server speech check is final",
+  "PICTURE: footage first": "yes: official Steam store trailer, clean stretches from shotpick in source order, text-free picks",
+  "PICTURE: not the same as last 5 reels": "yes: HoI4 footage, no other Reel uses it",
+  "CREDIT: on every clip": "yes: المصدر: باراداكس إنتراكتيف (Paradox Interactive) over shots 0 to 6"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "0 to 3.1 s",
+   "alternatives": "3.25 to 3.75 s rejected, cut text",
+   "crop": "picker focus",
+   "music": "trailer own sound"
+  }
+ ],
+ "angle": {
+  "hook": "Hearts of Iron IV gets its third Expansion Pass, with the United States rework as the highlight",
+  "why_now": "Paradox put the pass on Steam on 12 Nov with a livestream",
+  "what_it_means_here": "Windows only on Steam, 168 AED on the UAE store",
+  "payoff": "168 AED for the pass, US rework the headline feature"
+ }
 }
