@@ -17,78 +17,56 @@
  "shots": [
   [
    "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
-   0.0,
-   2.91,
+   99.7,
+   3.58,
    [
     [
      0.0,
-     0.476
-    ]
-   ]
-  ],
-  [
-   "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
-   17.26,
-   1.63,
-   [
-    [
-     0.0,
-     0.502
-    ]
-   ]
-  ],
-  [
-   "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
-   42.13,
-   1.87,
-   [
-    [
-     0.0,
-     0.659
-    ]
-   ]
-  ],
-  [
-   "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
-   70.11,
-   3.1,
-   [
-    [
-     0.0,
-     0.573
-    ]
-   ]
-  ],
-  [
-   "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
-   84.35,
-   1.66,
-   [
-    [
-     0.0,
-     0.551
-    ]
-   ]
-  ],
-  [
-   "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
-   118.4,
-   1.85,
-   [
-    [
-     0.0,
-     0.428
+     0.51
     ]
    ]
   ],
   [
    "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
    103.28,
-   2.23,
+   3.0,
    [
     [
      0.0,
-     0.609
+     0.51
+    ]
+   ]
+  ],
+  [
+   "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
+   106.28,
+   1.4,
+   [
+    [
+     0.0,
+     0.51
+    ]
+   ]
+  ],
+  [
+   "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
+   107.68,
+   3.0,
+   [
+    [
+     0.0,
+     0.51
+    ]
+   ]
+  ],
+  [
+   "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
+   110.68,
+   3.2,
+   [
+    [
+     0.0,
+     0.51
     ]
    ]
   ]
@@ -96,7 +74,7 @@
  "lines": [
   [
    1,
-   2,
+   1,
    [
     [
      "الوضع يصدر في 16 نوفمبر",
@@ -107,8 +85,8 @@
    ]
   ],
   [
+   2,
    3,
-   4,
    [
     [
      "تحدٍّ قتالي بلا نهاية\nوجولات تزداد صعوبة",
@@ -119,11 +97,11 @@
    ]
   ],
   [
-   5,
-   6,
+   4,
+   4,
    [
     [
-     "مجاني لمن يملك إضافة Revelations",
+     "مجاني لمالكي إضافة Revelations",
      {
       "size": 54
      }
@@ -134,7 +112,7 @@
  "credits": [
   [
    0,
-   6,
+   4,
    "المصدر: بيثيسدا (Bethesda)، لقطات Revelations",
    {
     "size": 40,
@@ -153,7 +131,7 @@
  "cut": false,
  "track": [
   "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
-  0.0
+  99.7
  ],
  "reel_check": {
   "SOURCE: primary read in full": "yes: Bethesda Slayers Club post read 23:10Z, Gematsu second outlet, no denial; label رسمي",
@@ -179,28 +157,12 @@
  },
  "decision_log": [
   {
-   "beat": "0 hook",
-   "shot": "0 to 2.91 s",
-   "crop": "picker focus",
-   "music": "trailer own sound"
-  },
-  {
-   "beat": "1-2 date",
-   "shot": "17.26 and 42.13",
-   "crop": "picker focus",
-   "music": "trailer own sound"
-  },
-  {
-   "beat": "3-4 challenge",
-   "shot": "70.11 and 84.35",
-   "crop": "picker focus",
-   "music": "trailer own sound"
-  },
-  {
-   "beat": "5-6 free for owners",
-   "shot": "118.4 and 103.28 (136.4 was letterboxed, 824 rows)",
-   "crop": "picker focus",
-   "music": "trailer own sound"
+   "beat": "0-4 one continuous stretch 99.7 to 113.88 s",
+   "shot": "picker clean shots 99.7, 103.28, 107.58 (split into 2-4 s cuts)",
+   "alternatives": "earlier stretches: letterboxed or split hung twice",
+   "crop": "focus 0.51",
+   "music": "trailer own sound, continuous, audio_split false (hung twice on the server)"
   }
- ]
+ ],
+ "audio_split": false
 }
