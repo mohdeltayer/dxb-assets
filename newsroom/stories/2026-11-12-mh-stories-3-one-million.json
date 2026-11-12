@@ -11,7 +11,7 @@
  ],
  "category": "numbers",
  "priority": "medium",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://www.gematsu.com/2026/11/monster-hunter-stories-3-twisted-reflection-sales-top-one-million",
@@ -56,7 +56,12 @@
  "template": "split",
  "chip": "تقرير",
  "footage": "Steam official PV6 trailer, app 2852190, clean stretches via shotpick",
- "versions": [],
+ "versions": [
+  {
+   "v": 1,
+   "file": "cards/2026-11/monster-hunter-stories-3-one-million-sales-november-12-reel-v1.mp4"
+  }
+ ],
  "ledger_find": {
   "at": "2026-11-12T04:46Z",
   "words": [
@@ -70,6 +75,10 @@
   "instagram": "مبيعات Monster Hunter Stories 3 تتجاوز مليون نسخة.\n\nأعلنت كابكوم (Capcom) أن مبيعات لعبة Monster Hunter Stories 3: Twisted Reflection تجاوزت مليون نسخة حول العالم، وذلك بعد ثمانية أشهر من إطلاقها في مارس، حسب موقع جيماتسو (Gematsu). صدرت اللعبة على PS5 وXbox Series X|S وNintendo Switch 2 والحاسوب عبر Steam، وتدعم نسخة Steam اللغة العربية.\n\n#ألعاب #أخبار_الألعاب #MonsterHunterStories3 #Capcom"
  },
  "grammar_review": "no required edits found on own pass (glossary, orthography and agreement checked; names with brackets at first mention; Western digits; DeepL forward pass on the story and the phrases read, kept ours; DeepL writes روغلايك style, not used here)",
- "approved": "pending",
- "director_check": {}
+ "approved": "scheduled in Publer 06:15Z (10:15 Dubai Thu 12 Nov) Instagram, X, Threads, buffer slot helper A; qc.json pass (3 dispatches: audio-sync fixes); gate 04:55Z; تقرير, re-check before publish; sound: PV4 trailer own sound, split not applied (music 25.8%), cut true",
+ "director_check": {
+  "verdict": "PASS",
+  "by": "server-qc",
+  "note": "server qc.json pass, no findings; length 8.7 s under target (continuous clean stretch only)"
+ }
 }
