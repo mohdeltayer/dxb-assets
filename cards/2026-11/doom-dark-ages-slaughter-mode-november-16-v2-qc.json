@@ -1,0 +1,25 @@
+{
+ "name": "doom-dark-ages-slaughter-mode-november-16-v2",
+ "out": "cards/2026-11/doom-dark-ages-slaughter-mode-november-16-v2-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-12T23:54:24Z",
+ "findings": [],
+ "notes": [
+  "length 12.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 63.3; leak_pct 1.1; cache {'hit': 0, 'miss': 3}; separate_secs 6.2; secs 9.6",
+  "render_job: lifeless: {\"score\": 5.6, \"still_share\": 0.059, \"longest_still\": 0.7, \"cuts_per_10s\": 7.56, \"held_under_text\": 0.0, \"secs\": 11.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "b7da4fc19a386b5ac7005f06270179a38d330185",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "trailer"
+}
