@@ -1,10 +1,24 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T14:15:18Z",
- "seq": 379,
+ "generated_at": "2026-11-12T14:25:07Z",
+ "seq": 380,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 12688,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/12/26 Nintendo announces Black Friday offers to help spread joy this holiday season Mark your calendar for holiday specials featuring the Nintendo Switch 2 s",
+   "url": "https://www.nintendo.com/us/whatsnew/nintendo-announces-black-friday-offers-to-help-spread-joy-this-holiday-season/",
+   "published": null,
+   "first_seen": "2026-11-12T14:25:03Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 380
+  }
+ ],
+ "recent": [
   {
    "id": 12671,
    "source": "PlayStation (YouTube)",
@@ -25,9 +39,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 379
-  }
- ],
- "recent": [
+  },
   {
    "id": 12658,
    "source": "Xbox (YouTube)",
@@ -621,7 +633,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T14:15:14Z",
+  "last_poll_at": "2026-11-12T14:25:03Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
