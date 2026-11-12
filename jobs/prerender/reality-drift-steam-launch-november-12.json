@@ -14,18 +14,174 @@
    "seconds": 240
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "reality-drift-steam-launch-november-12-trailer.mp4",
+   13.5,
+   1.96,
+   [
+    [
+     0.0,
+     0.585
+    ]
+   ]
+  ],
+  [
+   "reality-drift-steam-launch-november-12-trailer.mp4",
+   15.46,
+   3.8,
+   [
+    [
+     0.0,
+     0.688
+    ]
+   ]
+  ],
+  [
+   "reality-drift-steam-launch-november-12-trailer.mp4",
+   24.41,
+   1.67,
+   [
+    [
+     0.0,
+     0.635
+    ]
+   ]
+  ],
+  [
+   "reality-drift-steam-launch-november-12-trailer.mp4",
+   31.15,
+   3.97,
+   [
+    [
+     0.0,
+     0.531
+    ]
+   ]
+  ],
+  [
+   "reality-drift-steam-launch-november-12-trailer.mp4",
+   59.11,
+   1.7,
+   [
+    [
+     0.0,
+     0.595
+    ]
+   ]
+  ],
+  [
+   "reality-drift-steam-launch-november-12-trailer.mp4",
+   66.96,
+   3.2,
+   [
+    [
+     0.0,
+     0.151
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "لعبة سباقات تختار فيها\nالترقيات والمسار التالي",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "المصمم كيتا تاكاهاشي\nمبتكر Katamari Damacy",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   5,
+   [
+    [
+     "صمّم لها مسارًا\nيمر داخل جسم الإنسان",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   5,
+   "المصدر: أرغانويد إندستريز (Arganoid Industries)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "لعبة Reality Drift\nمتوفرة الآن على Steam",
  "label": "متوفر الآن",
- "source": "فور جيمر (4Gamer)",
+ "source": "متجر Steam وفور جيمر (4Gamer)",
  "date": "12 Nov 2026",
- "theme": "cold",
+ "theme": "playful",
  "style": null,
- "template": "trailer",
+ "template": "split",
  "skin": "house",
- "cut": false,
- "track": "bed",
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "cut": true,
+ "track": [
+  "reality-drift-steam-launch-november-12-trailer.mp4",
+  13.5
+ ],
+ "strip": [
+  [
+   "المنصة",
+   "الحاسب"
+  ],
+  [
+   "السعر في الإمارات",
+   [
+    "aed",
+    "44.19"
+   ]
+  ],
+  [
+   "خصم الإطلاق",
+   "15 بالمئة حتى 22 نوفمبر"
+  ]
+ ],
+ "angle": {
+  "hook": "a strange OutRun-style roguelike racer is out on Steam, with a Katamari creator's course through a human body",
+  "why_now": "launched on Steam 11 Nov (12 Nov in Japan); 4Gamer reported it today",
+  "what_it_means_here": "Steam UAE price 44.19 AED after a 15% launch discount to 22 Nov; no Arabic language support",
+  "payoff": "a course through the human body by Keita Takahashi"
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam appdetails (AE) read 12 Nov: release 11 Nov 2026, 51.99 AED, 15% off to 44.19, Windows; 4Gamer read for Takahashi and the 22 Nov end of discount",
+  "SOURCE: not already posted": "yes: ledger find reality drift, no match",
+  "SOURCE: age": "yes: released 11-12 Nov, 4Gamer 12 Nov 07:15 Dubai, under 24 hours",
+  "ANGLE before lines": "yes: angle in the job and story file",
+  "STORY TYPE out now": "yes: platform in the strip and headline, AED price in the strip, what it is in line 1",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names the game, lines follow, line 3 names Takahashi before the pronoun",
+  "STORY: release verbs": "yes: متوفرة الآن, صدرت in the text",
+  "STORY: names match names-ar.md": "yes: Arganoid and 4Gamer with brackets, Takahashi labelled by role",
+  "POST: Arabic passes": "yes: two skills applied, grammar review no required edits, DeepL whole-story and phrase pass matched (مسار, ترقيات kept)",
+  "SOUND: footage sound or bed with reason": "yes: Steam release date trailer own sound, one stretch from 13.5 s",
+  "SOUND: no speech under Arabic lines": "yes: server speech check final",
+  "PICTURE: footage first": "yes: official Steam trailer",
+  "PICTURE: not the same as last 5 reels": "yes",
+  "CREDIT: on every clip": "yes: credit over shots 0 to 6",
+  "SENSITIVE": "yes: none"
+ }
 }
