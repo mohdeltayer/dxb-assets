@@ -3,7 +3,7 @@
  "story": "2026-11-12-fatal-fury-laocorn-gaudeamus-dlc",
  "kind_news": "crossover",
  "built_by": "production-2",
- "render_lane": "runner",
+ "render_lane": "hosted",
  "out": "cards/2026-11/fatal-fury-laocorn-gaudeamus-dlc-november-19-reel-v1.mp4",
  "footage": [
   {
@@ -195,5 +195,6 @@
    "crop": "centre",
    "music": "bed"
   }
- ]
+ ],
+ "lane_reason": "the dxb-render server runner left the live dispatch queued for several minutes with a 21:15 Dubai slot waiting, so the story renders on GitHub's hosted runner"
 }
