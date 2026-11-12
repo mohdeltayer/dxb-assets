@@ -45035,5 +45035,73 @@
   "story": "exterminauts-beta-november-12",
   "job_sha": "f554ca05f9b65cbb448d14905e00965f181bc1c3",
   "dispatches": 1
+ },
+ {
+  "name": "dubai-fortnite-map-now-live-november-12-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-12T12:37Z",
+  "stages": {
+   "checks": 2.8,
+   "montage": 11.3,
+   "text": 20.4,
+   "audio": 0.0,
+   "outro": 18.3
+  },
+  "total": 52.8,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-12T12:36Z",
+  "finished_at": "2026-11-12T12:37Z",
+  "render_min": 0.88,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "dubai-fortnite-map-live-dmcc-promo.mp4",
+    "start": 0.0,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "mbps": 0.99,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   }
+  ],
+  "source_summary": {
+   "min_height": 720,
+   "max_zoom": 2.67,
+   "lowbit_shots": 1
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 17.8,
+   "still_share": 0.034,
+   "longest_still": 0.3,
+   "cuts_per_10s": 0.0,
+   "held_under_text": 0.0,
+   "secs": 14.6,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 82,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1018,
+  "peak_mem_mb": 1889,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 27524,
+  "peak_disk_mb": 28188,
+  "min_disk_free_mb": 217918,
+  "setup_min": 0.15,
+  "story": "dubai-fortnite-map-now-live-november-12",
+  "job_sha": "9d3705635016e428969f31d271236bfde129d5af",
+  "dispatches": 1
  }
 ]
