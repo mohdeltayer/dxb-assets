@@ -44545,5 +44545,125 @@
   "story": "metaphor-refantazio-switch-2-launch-november-12",
   "job_sha": "22273cf92105c1a3232cd3fb6806ef00460a4999",
   "dispatches": 1
+ },
+ {
+  "name": "romancing-saga-3-destinies-united-date-moved-up-november-12-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-12T07:50Z",
+  "stages": {
+   "checks": 2.4,
+   "montage": 22.0,
+   "text": 23.2,
+   "audio": 0.9,
+   "outro": 13.2
+  },
+  "total": 61.7,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-12T07:49Z",
+  "finished_at": "2026-11-12T07:50Z",
+  "render_min": 1.03,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "romancing-saga-3-destinies-united-date-moved-up-november-12-trailer.mp4",
+    "start": 3.53,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "romancing-saga-3-destinies-united-date-moved-up-november-12-trailer.mp4",
+    "start": 10.04,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "romancing-saga-3-destinies-united-date-moved-up-november-12-trailer.mp4",
+    "start": 20.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "romancing-saga-3-destinies-united-date-moved-up-november-12-trailer.mp4",
+    "start": 59.99,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 5.8,
+   "audio_secs": 24.1,
+   "music_pct": 42.4,
+   "leak_pct": 2.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "effects_shots": 0,
+   "mix_secs": 2.9,
+   "secs": 9.7
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 3.62,
+   "held_under_text": 0.0,
+   "secs": 13.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 123,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1178,
+  "peak_mem_mb": 2157,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 27359,
+  "peak_disk_mb": 29195,
+  "min_disk_free_mb": 216911,
+  "setup_min": 0.18,
+  "story": "romancing-saga-3-destinies-united-date-moved-up-november-12",
+  "job_sha": "995d3f7bbbcbda7b0c79ecdfdf4d375bbd742d03",
+  "dispatches": 1
  }
 ]
