@@ -14,18 +14,145 @@
    "seconds": 240
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
+   0.0,
+   2.91,
+   [
+    [
+     0.0,
+     0.476
+    ]
+   ]
+  ],
+  [
+   "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
+   17.26,
+   1.63,
+   [
+    [
+     0.0,
+     0.502
+    ]
+   ]
+  ],
+  [
+   "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
+   42.13,
+   1.87,
+   [
+    [
+     0.0,
+     0.659
+    ]
+   ]
+  ],
+  [
+   "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
+   70.11,
+   3.1,
+   [
+    [
+     0.0,
+     0.573
+    ]
+   ]
+  ],
+  [
+   "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
+   84.35,
+   1.66,
+   [
+    [
+     0.0,
+     0.551
+    ]
+   ]
+  ],
+  [
+   "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
+   118.4,
+   1.85,
+   [
+    [
+     0.0,
+     0.428
+    ]
+   ]
+  ],
+  [
+   "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
+   136.4,
+   2.23,
+   [
+    [
+     0.0,
+     0.481
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "الوضع يصدر في 16 نوفمبر",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "تحدٍّ قتالي بلا نهاية\nوجولات تزداد صعوبة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "مجاني لمن يملك إضافة Revelations",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: بيثيسدا (Bethesda)، ولقطات من إضافة Revelations",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "لعبة DOOM تحصل على\nوضع Slaughter Mode",
  "label": "رسمي",
- "source": "الصفحة الرسمية لنادي القتلة من بيثيسدا",
+ "source": "بيثيسدا (Bethesda)",
  "date": "12 Nov 2026",
  "theme": "cold",
  "style": null,
  "template": "trailer",
  "skin": "house",
  "cut": false,
- "track": "bed",
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "track": [
+  "doom-dark-ages-slaughter-mode-november-16-trailer.mp4",
+  0.0
+ ]
 }
