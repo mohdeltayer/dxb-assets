@@ -159,5 +159,14 @@
    "music": "trailer"
   }
  ],
- "note": "Slay the Spire 2 beta v0.113.0, 12 Nov. Footage: Steam Early Access trailer (appid 2868840), 1080p, decode clean; the Gameplay trailer was full of card text (5 clean stretches, 11.7 s). One contiguous clean stretch 16.05 to 31.04 s so the picture and the trailer sound stay in sync. Footage is illustration: the trailer predates The Fool, Blitz and Dread. Sound: trailer, speech not checked by ear."
+ "note": "Slay the Spire 2 beta v0.113.0, 12 Nov. Footage: Steam Early Access trailer (appid 2868840), 1080p, decode clean; the Gameplay trailer was full of card text (5 clean stretches, 11.7 s). One contiguous clean stretch 16.05 to 31.04 s so the picture and the trailer sound stay in sync. Footage is illustration: the trailer predates The Fool, Blitz and Dread. Sound: trailer, speech not checked by ear. Weak-source note: letterboxed 824 rows, enlarged 2.33x, block check passes (peak 1.38).",
+ "lowres_ok": {
+  "searched": [
+   "Steam Early Access trailer (1080p, letterboxed to 824 rows)",
+   "Steam Gameplay trailer (full of burnt-in card text, 11.7 s clean in all)",
+   "Steam Reveal trailer (2025 teaser, older than the news)",
+   "publisher YouTube not reachable here (sign-in wall)"
+  ],
+  "result": "no unletterboxed official copy above 960 rows; Early Access trailer used at 2.33x, block ratio peak 1.38 under the 1.5 limit"
+ }
 }
