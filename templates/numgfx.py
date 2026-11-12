@@ -405,7 +405,19 @@ def slide(graphic, secs, theme, out, seed=0, t0=0.0, fast=False, ground=None, st
     `ground` is one of GROUNDS; None takes the one rested longest in the
     ledger (keyed by the file name; shots() resolves it once per Reel).
     `still` is the official image the 'still' ground blurs. The ground is
-    measured under the graphic's text first (`check=False` skips it)."""
+    measured under the graphic's text first (`check=False` skips it).
+
+    `graphic` may be staged (adv-20261112-qc-notes-become-failures item 4): a list [(png, from second), ...] in time order,
+    the first from 0; each stage shows from its second until the next one's, the last to the end (a count-up's frames,
+    a ranking's rows revealed one by one). The ground is measured under the last stage, which carries the most text."""
+    stages = None
+    if isinstance(graphic, (list, tuple)):
+        stages = [(g, float(t)) for g, t in graphic]
+        if not stages or stages[0][1] != 0.0 or any(b[1] <= a[1] for a, b in zip(stages, stages[1:])):
+            raise ValueError('staged graphic: stages in time order, the first from 0')
+        if stages[-1][1] >= secs:
+            raise ValueError(f'staged graphic: the last stage starts at {stages[-1][1]} s, past the slide ({secs} s)')
+        graphic = stages[-1][0]
     ground = _resolve(ground, out, still, footage)
     dimmed = ground in ('still', 'footage')
     dim = _still_dim(graphic, ground, theme, seed, t0, still, footage) if (check and dimmed) else None
@@ -415,10 +427,21 @@ def slide(graphic, secs, theme, out, seed=0, t0=0.0, fast=False, ground=None, st
     try:
         files, graph = _build_ground(ground, theme, seed, t0, tmp, still=still, dim=dim, footage=footage,
                                      region=text_region(graphic) if ground == 'footage' else None)
-        Image.open(graphic).convert('RGBA').resize((W, H), Image.LANCZOS).save(f'{tmp}/f.png')
         n = len(files)
-        fc = f"{graph};[gw][{n}:v]overlay=0:0:format=auto,fps={FPS},format=yuv420p[v]"
-        args = ['ffmpeg', '-nostdin', '-y', '-v', 'error'] + _run_inputs(files + [f'{tmp}/f.png'], secs)
+        if stages is None:
+            Image.open(graphic).convert('RGBA').resize((W, H), Image.LANCZOS).save(f'{tmp}/f.png')
+            fc = f"{graph};[gw][{n}:v]overlay=0:0:format=auto,fps={FPS},format=yuv420p[v]"
+            pngs = [f'{tmp}/f.png']
+        else:
+            pngs, chain, last = [], [graph], 'gw'
+            for k, (g, t) in enumerate(stages):
+                Image.open(g).convert('RGBA').resize((W, H), Image.LANCZOS).save(f'{tmp}/f{k}.png')
+                pngs.append(f'{tmp}/f{k}.png')
+                t1 = stages[k + 1][1] if k + 1 < len(stages) else secs + 1
+                chain.append(f"[{last}][{n + k}:v]overlay=0:0:format=auto:enable='gte(t,{t:.3f})*lt(t,{t1:.3f})'[s{k}]")
+                last = f's{k}'
+            fc = ';'.join(chain) + f";[{last}]fps={FPS},format=yuv420p[v]"
+        args = ['ffmpeg', '-nostdin', '-y', '-v', 'error'] + _run_inputs(files + pngs, secs)
         enc = RL.DRAFT_ENC if fast else RL.FINAL_ENC
         subprocess.run(args + ['-filter_complex', fc, '-map', '[v]', '-c:v', 'libx264', '-pix_fmt', 'yuv420p']
                        + enc + [out], check=True)
@@ -441,7 +464,8 @@ def shots(slides, theme, name, fast=False, ground=None, still=None, footage=None
     out, t = [], 0.0
     for i, (g, secs) in enumerate(slides):
         f = f'{SUB}/{name}-{i + 1}.mp4'
-        slide(C.U + g, secs, theme, C.U + f, seed=seed, t0=t, fast=fast, ground=ground, still=still, footage=footage)
+        src = [(C.U + x, st) for x, st in g] if isinstance(g, (list, tuple)) else C.U + g
+        slide(src, secs, theme, C.U + f, seed=seed, t0=t, fast=fast, ground=ground, still=still, footage=footage)
         out.append((f, 0.0, secs, 0.5))
         t += secs - RL.X                         # the next slide starts inside this one's crossfade
     return out

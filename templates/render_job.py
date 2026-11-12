@@ -257,7 +257,8 @@ def shots(job, draft=False, build=True):
                 if isinstance(start, list):       # per card: ["x-gfx-a.png", [file, start], secs, null] (multi-game numbers)
                     gf = start
                 gs = job.get('ground_still')      # the game's key art behind the card, blurred and dimmed (9 Nov 2026)
-                NG.slide(C.U + f, secs, job.get('ground_theme', job['theme']), C.U + clip,
+                src = card_stages(job, f, secs)   # the figure counts up, rows come in (on in numbers and list, 12 Nov 2026)
+                NG.slide(src, secs, job.get('ground_theme', job['theme']), C.U + clip,
                          seed=sum(map(ord, job['name'])), t0=t, fast=draft,
                          footage=(C.U + gf[0], gf[1]) if gf else None,
                          still=C.U + gs if gs and not gf else None)
@@ -280,6 +281,27 @@ def shots(job, draft=False, build=True):
             out.append((f, start, secs, 0.5 if fo is None else fo))
         t += secs - reel.X
     return out
+
+
+def card_stages(job, f, secs):
+    """The -gfx- shot `f` as numgfx.slide takes it: the card's file in uploads, or its stages [(png, from second)] when
+    the card moves (cardgfx.animated: on by default in the numbers and list templates; adv-20261112-qc-notes-become-
+    failures item 4). The stages are drawn next to the card in uploads; the card itself is the last stage."""
+    items = {g.get('file'): g for g in job.get('gfx') or []}
+    item = items.get(f)
+    if not item or job.get('profile') == 'breaking' or not CG.animated(item, job):
+        return C.U + f
+    start = 0
+    names = [str(sh[0]) for sh in job.get('shots') or []]
+    i = names.index(f) if f in names else 0
+    prev = items.get(names[i - 1]) if i else None     # a countdown split over two cards carries on from the first
+    if item.get('kind') == 'ranking' and prev and prev.get('kind') == 'ranking' and prev.get('rows') == item.get('rows'):
+        start = int(prev.get('show') or len(prev['rows']))
+    st = CG.stages(item, C.U + f, job.get('ground_theme', job['theme']), secs, start=start)
+    if st:
+        print(f"render_job: card {f}: {len(st)} stages ({'rows in' if item.get('kind') == 'ranking' else 'count-up'})",
+              flush=True)
+    return st or C.U + f
 
 
 def focus(job, path):
@@ -440,6 +462,7 @@ def check(job):
     speech_check(job, end)
     first_frame_check(job)
     cover_picture_check(job)
+    card_art_check(job)
     import fillcheck as FC                     # footage full frame, never a box in a blurred fill (adv-20261030-one-piece-fortnite-hold)
     FC.check(job, C.U, st)
     import sfxplan as SF                       # sound effects match the picture (adv-20261030-sfx-mismatch, 30 Oct 2026)
@@ -506,6 +529,51 @@ def cover_picture_check(job):
         raise ValueError(f'cover: {sh[0]} is {flat:.0%} flat, a plate or a figure on a plain ground; open on footage, '
                          'key art or a trailer frame (adv-20261108-numbers-cards-grid)')
     return flat
+
+
+ART_MIN_SIDE = 720         # the still ground's art: its short side at least this (a store thumbnail blurred full-bleed is mush)
+LOGO_CLEAR = 0.05          # a logo is a cut-out: at least this share of it transparent, else it is a picture on a white plate
+
+
+def _asset(path):
+    """A job's asset path: in uploads, as given (the runner's working directory is the repo root), or under the repo."""
+    for p in (C.U + str(path), str(path), os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), str(path))):
+        if os.path.exists(p):
+            return p
+    return None
+
+
+def card_art_check(job):
+    """adv-20261112-qc-notes-become-failures item 5 (the Roblox Saudi games Reel, 12 Nov 2026): a numbers Reel with no
+    footage wears the game's art full-bleed and blurred (the still ground), never a thumbnail on a white plate over the
+    plain ground. The still ground's art has a short side of ART_MIN_SIDE or more; a logofact's logo is a cut-out (at
+    least LOGO_CLEAR of it transparent), not a game tile or a photo on the white plate. Files not on disk are skipped."""
+    from PIL import Image
+    import numpy as np
+    errs = []
+    gs = job.get('ground_still')
+    p = _asset(gs) if gs and not job.get('ground_footage') else None
+    if p:
+        with Image.open(p) as im:
+            w, h = im.size
+        if min(w, h) < ART_MIN_SIDE:
+            errs.append(f'ground_still {gs} is {w}x{h}, a thumbnail: blurred full-bleed it is a smear; give the game\'s key '
+                        f'art with a short side of {ART_MIN_SIDE} px or more (store hero, press kit, Steam library hero), '
+                        'or "ground_footage" (its trailer)')
+    for g in job.get('gfx') or []:
+        if g.get('kind') != 'logofact' or not g.get('logo'):
+            continue
+        p = _asset(g['logo'])
+        if not p:
+            continue
+        a = np.asarray(Image.open(p).convert('RGBA'))[..., 3]
+        clear = float((a < 16).mean())
+        if clear < LOGO_CLEAR:
+            errs.append(f"card {g.get('file')}: logo {g['logo']} has no transparent edge ({clear:.0%} clear), a game tile or "
+                        'a photo on the white plate; use the official logo as a cut-out PNG (press kit, store page), or the '
+                        'fact card with the art behind it on the still ground')
+    if errs:
+        raise ValueError('card art: ' + '; '.join(errs))
 
 
 def speech_check(job, end):
@@ -587,7 +655,7 @@ def textcheck(job, collect=None):
                 lift = reel.showcase_box(reel.HEAD_GEOM['end'], bool(job.get('strip')), fit=job.get('showcase_fit') or 'wide')[4]
             except ValueError:
                 lift = reel.showcase_box(reel.HEAD_GEOM['end'], bool(job.get('strip')))[4]
-        n = 0
+        n, drawn = 0, []
         for a, b, texts in job['lines']:
             for x in texts:
                 n += 1
@@ -597,7 +665,9 @@ def textcheck(job, collect=None):
                               size=reel.SHOW_LINE[0], step=reel.SHOW_LINE[1], lift=lift)
                 elif job.get('strip') and 'lift' not in kw:
                     kw = dict(kw, lift=reel.STRIP_LIFT) if hasattr(reel, 'STRIP_LIFT') else kw
-                _do(f'line {n}', reel.line_layer, text, f'{tmp}/l.png', skin=skin, **kw)
+                geo = {}
+                if _do(f'line {n}', reel.line_layer, text, f'{tmp}/l{n}.png', skin=skin, geometry=geo, **kw) is not None:
+                    drawn.append((n, a, b, text, f'{tmp}/l{n}.png', len(geo.get('lines') or [])))
         if show:
             if job.get('strip'):
                 _do('strip', reel.facts_layer, strip_items(job), f'{tmp}/f.png')
@@ -622,11 +692,55 @@ def textcheck(job, collect=None):
                 _do('person', reel.person_layer, x[0], x[1], x[2], f'{tmp}/p.png', job['theme'],
                     focus=tuple(o.get('focus', (0.5, 0.33))), credit=o.get('credit'))
         _do('gfx', gfx, job, tmp)
+        for p in card_line_problems(job, drawn, tmp):
+            errs.append({'where': p['where'], 'rule': 'card_line', 'text': p['text'], 'fix': '', 'detail': p['detail']})
     finally:
         import shutil as _sh
         _sh.rmtree(tmp, ignore_errors=True)
     if errs and collect is None:
         raise ValueError(text_report(errs))
+
+
+def _alpha_box(path, cut=40):
+    """(x0, y0, x1, y1) of a layer's visible pixels, or None."""
+    from PIL import Image as _I
+    a = _I.open(path).convert('RGBA').getchannel('A').point(lambda v: 255 if v > cut else 0)
+    return a.getbbox()
+
+
+def card_line_problems(job, drawn, where):
+    """One fact, one place (14 Oct 2026), enforced (adv-20261112-qc-notes-become-failures item 1): a story line over one of
+    our cards is one visual line at most and sits clear of the card's text box, or it is dropped. `drawn` is
+    [(n, first shot, last shot, text, layer png, visual lines)] from the text check; the cards are drawn in `where`.
+    Shots under a HyperFrames insert are left out (the insert covers the Reel's own lines and card)."""
+    covered = set()
+    for ins in job.get('insert') or []:
+        sh = ins.get('shot')
+        i0, i1 = (sh, sh) if isinstance(sh, int) else (int(sh[0]), int(sh[1]))
+        covered.update(range(i0, i1 + 1))
+    out = []
+    for n, a, b, text, layer, nlines in drawn:
+        cards = [job['shots'][i][0] for i in range(a, b + 1) if i < len(job['shots']) and i not in covered
+                 and job['shots'][i][0].endswith('.png') and '-gfx-' in job['shots'][i][0]]
+        if not cards:
+            continue
+        short = text.replace('\n', ' / ')
+        if nlines > 1:
+            out.append({'where': f'line {n}', 'text': short, 'detail': f'over a card a story line is one visual line '
+                        f'at most ({nlines} here); shorten it or drop it (one fact, one place)'})
+        lb = _alpha_box(layer) if os.path.exists(layer) else None
+        for c in cards:
+            cp = os.path.join(where, c)
+            cb = _alpha_box(cp) if os.path.exists(cp) else None
+            if not (lb and cb):
+                continue
+            pad = 8
+            if lb[0] < cb[2] + pad and cb[0] < lb[2] + pad and lb[1] < cb[3] + pad and cb[1] < lb[3] + pad:
+                out.append({'where': f'line {n}', 'text': short, 'detail': f'collision: the line (y {lb[1]} to {lb[3]}) '
+                            f'is drawn over the card {c} (its text box y {cb[1]} to {cb[3]}); move the line to a footage '
+                            'shot, drop it, or use a card that leaves the line band clear'})
+                break
+    return out
 
 
 def text_report(errs):

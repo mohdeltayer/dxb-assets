@@ -6,7 +6,7 @@ code cannot stand in front of it; this script is the step the session runs aroun
 instead of letting a skipped step through. The file a check passed is bound by its git blob id: any re-render
 changes the id and the director check must be run again.
 
-    python3 templates/presubmit.py director <story> PASS <out.mp4> --job <job.json> --by <director> [--note "..."]
+    python3 templates/presubmit.py director <story> PASS <out.mp4> --job <job.json> --by <director> [--note "..."] [--looked "<what the three look frames show>"]
     python3 templates/presubmit.py intent <commitment> <platform> <story> <out.mp4> --labels kind:news,tpl:trailer [--slot ISO]
                                                                      # before submit_publer_posts
     python3 templates/presubmit.py line <commitment> --ids ig:<last6> x:<last6> th:<last6>   # the board's scheduled line
@@ -119,12 +119,40 @@ def _who(x):
     return ' '.join(str(x or '').lower().replace('_', '-').split())
 
 
-def director(sid, verdict, out, note='', job=None, by=None):
+def qc_of(out):
+    """The server's qc.json beside a Reel (<base>-qc.json), from disk or git (the slim clone has no cards/), or None."""
+    import re as _re
+    rel = _re.sub(r'-reel-v\d+$', '', str(out)[:-4] if str(out).endswith('.mp4') else str(out)) + '-qc.json'
+    p = REPO / rel
+    if p.exists():
+        return json.loads(p.read_text(encoding='utf-8'))
+    for rev in ('HEAD', 'origin/main'):
+        r = subprocess.run(['git', '-C', str(REPO), 'show', f'{rev}:{rel}'], capture_output=True, text=True)
+        if r.returncode == 0:
+            try:
+                return json.loads(r.stdout)
+            except ValueError:
+                return None
+    return None
+
+
+def director(sid, verdict, out, note='', job=None, by=None, looked=None):
     if verdict not in ('PASS', 'FIX'):
         raise SystemExit('presubmit: verdict is PASS or FIX')
     f, s = story(sid)
     cl = checklist(job, out) if job else None
+    qc = qc_of(out)
     if verdict == 'PASS':
+        # the server's verdict is final on what it measured (adv-20261112-qc-notes-become-failures)
+        if qc and qc.get('verdict') == 'fail':
+            raise SystemExit('presubmit refused: the server QC failed this Reel:\n  - ' + '\n  - '.join(
+                f"{x.get('check')}: {x.get('detail')}" for x in qc.get('findings') or []) + '\nfix the job and render again')
+        if qc and qc.get('look_frames') and not (looked or '').strip():
+            raise SystemExit('presubmit refused: a card-led Reel: read its three look frames ('
+                             + ', '.join(qc['look_frames']) + ') and say what they show with --looked "<one line>" '
+                             '(adv-20261112-qc-notes-become-failures item 6)')
+        if qc is None:
+            print(f'presubmit: no qc.json beside {out} (fetch main, or a render.yml Reel): the server verdict was not read')
         if not cl:
             raise SystemExit('presubmit: director PASS needs --job <the job file that rendered it> (its reel_check)')
         if not cl['ok']:
@@ -135,7 +163,7 @@ def director(sid, verdict, out, note='', job=None, by=None):
             raise SystemExit(f'presubmit refused: the director ({by}) is the builder ({cl.get("built_by")}); the PASS '
                              'comes from a separate director (release 2026-11-10)')
     s['director_check'] = {'verdict': verdict, 'out': out, 'blob': blob(out), 'at': now(), 'note': note,
-                           'checklist': cl, 'by': by}
+                           'checklist': cl, 'by': by, 'qc': (qc or {}).get('verdict'), 'looked': looked}
     f.write_text(json.dumps(s, ensure_ascii=False, indent=1) + '\n')
     print(f'director {verdict} recorded for {out} ({s["director_check"]["blob"][:10]})')
 
@@ -332,7 +360,8 @@ if __name__ == '__main__':
         note = a[a.index('--note') + 1] if '--note' in a else ''
         jobp = a[a.index('--job') + 1] if '--job' in a else None
         by = a[a.index('--by') + 1] if '--by' in a else None
-        director(a[1], a[2], a[3], note, jobp, by)
+        looked = a[a.index('--looked') + 1] if '--looked' in a else None
+        director(a[1], a[2], a[3], note, jobp, by, looked)
     elif cmd == 'intent' and len(a) >= 5:
         labels = a[a.index('--labels') + 1] if '--labels' in a else None
         slot = a[a.index('--slot') + 1] if '--slot' in a else None

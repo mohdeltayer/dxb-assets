@@ -192,6 +192,11 @@ jobs:
           export DISPATCHES=$(python templates/jobsha.py count "$(basename "$JOB" .json)")
           python templates/qc.py write "$JOB" "$out" "$base-qc.json" --autofix "$RUNNER_TEMP/autofix.json" --log "$RUNNER_TEMP/render.log" \
             && files="$files $base-qc.json" || echo "qc file not written"
+          # card-led templates: three 360 px frames beside qc.json, read by the builder before scheduling (item 6)
+          for f in "$base"-look-[123].jpg; do [ -f "$f" ] && files="$files $f"; done
+          # a measured problem fails the Reel (adv-20261112-qc-notes-become-failures): committed as evidence, never uploaded
+          QC_VERDICT=$(python -c "import json; print(json.load(open('$base-qc.json')).get('verdict', 'pass'))" 2>/dev/null || echo pass)
+          echo "QC_VERDICT=$QC_VERDICT" >> "$GITHUB_ENV"
 
           # 4 frames a second through the Reel (decodecheck.dense_strip), so the first second of every shot is seen
           if [ -f "$base-dense.jpg" ]; then files="$files $base-dense.jpg"; fi
@@ -208,8 +213,16 @@ jobs:
             looks=""; if [ -f "$RUNNER_TEMP/look.json" ]; then python templates/looks.py add "$RUNNER_TEMP/look.json" && looks=templates/assets/look-ledger.json; fi
             git add --sparse -f $files templates/assets/render-times.json $looks
             if [ -f "$JOB" ]; then git rm -q "$JOB"; fi
-            git commit -q -m "Render $(basename "$JOB" .json) on the dxb-render server ($RENDER_SECS s, $(nproc) cores, job ${JOB_SHA:0:8}, dispatch $DISPATCHES)"
-            if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
+            git commit -q -m "Render $(basename "$JOB" .json) on the dxb-render server ($RENDER_SECS s, $(nproc) cores, job ${JOB_SHA:0:8}, dispatch $DISPATCHES, qc $QC_VERDICT)"
+            if git push -q origin "HEAD:$GITHUB_REF_NAME"; then
+              if [ "$QC_VERDICT" = "fail" ]; then
+                { echo "### QC: fail (Reel committed as evidence, not uploaded to Publer)"; echo '```json'
+                  python -c "import json; d = json.load(open('$base-qc.json')); print(json.dumps(d['findings'], ensure_ascii=False, indent=1))"
+                  echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+                echo "qc: fail; fix the job and render again"; exit 1
+              fi
+              exit 0
+            fi
             sleep $(( i * 5 ))
           done
           echo "push failed five times"; exit 1
@@ -248,7 +261,7 @@ jobs:
       # Last: the fonts and every scratch file leave the server. Runs on failure and cancel too; a failed run leaves
       # the job file in jobs/live/ untouched.
       - name: QC verdict on a failed render (item H)
-        if: failure()
+        if: failure() && env.QC_VERDICT != 'fail'
         run: |
           cat "$RUNNER_TEMP/text.log" "$RUNNER_TEMP/render.log" > "$RUNNER_TEMP/all.log" 2>/dev/null || true
           python templates/qc.py fail "$JOB" "$RUNNER_TEMP/qc.json" --log "$RUNNER_TEMP/all.log" || true
