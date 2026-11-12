@@ -1,10 +1,50 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T17:45:07Z",
- "seq": 396,
+ "generated_at": "2026-11-12T17:50:19Z",
+ "seq": 397,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 12980,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Grand Theft Auto VI: Pre-Load Now",
+   "url": "https://www.youtube.com/watch?v=Qk4R02ZS1BQ",
+   "published": "2026-11-12T17:43Z",
+   "first_seen": "2026-11-12T17:50:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/Qk4R02ZS1BQ/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=Qk4R02ZS1BQ"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 397
+  }
+ ],
+ "recent": [
+  {
+   "id": 12979,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Phoenix Cyclops knows how to strike a pose, even mid-battle in MARVEL Tokon: Fighting Souls.",
+   "url": "https://www.youtube.com/shorts/W_Wjpk-oUbc",
+   "published": "2026-11-12T17:31Z",
+   "first_seen": "2026-11-12T17:45:07Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/W_Wjpk-oUbc/hqdefault.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 396
+  },
   {
    "id": 12978,
    "source": "PlayStation (YouTube)",
@@ -22,25 +62,6 @@
    "breaking_source": true,
    "breaking_seq": 396
   },
-  {
-   "id": 12979,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Phoenix Cyclops knows how to strike a pose, even mid-battle in MARVEL Tokon: Fighting Souls.",
-   "url": "https://www.youtube.com/shorts/W_Wjpk-oUbc",
-   "published": "2026-11-12T17:31Z",
-   "first_seen": "2026-11-12T17:45:07Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/W_Wjpk-oUbc/hqdefault.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 396
-  }
- ],
- "recent": [
   {
    "id": 12977,
    "source": "Nintendo US",
@@ -870,7 +891,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T17:45:07Z",
+  "last_poll_at": "2026-11-12T17:50:14Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 6,
