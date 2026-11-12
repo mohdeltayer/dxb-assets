@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T07:52:07Z",
- "seq": 365,
+ "generated_at": "2026-11-12T08:52:06Z",
+ "seq": 366,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -525,62 +525,25 @@
    ],
    "breaking_source": true,
    "breaking_seq": 322
-  },
-  {
-   "id": 11342,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Mistfall Hunter Season 2: Fires of the Past is LIVE!",
-   "url": "https://www.youtube.com/watch?v=umQBBI0374A",
-   "published": "2026-11-11T08:00Z",
-   "first_seen": "2026-11-11T08:05:04Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/umQBBI0374A/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=umQBBI0374A"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 319
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T07:52:05Z",
+  "last_poll_at": "2026-11-12T08:50:14Z",
   "sources_enabled": 100,
-  "sources_ok": 73,
-  "sources_failing": 26,
+  "sources_ok": 90,
+  "sources_failing": 10,
   "failed": [
    "Bethesda (YouTube) (HTTP 404, 4x)",
-   "Blizzard (YouTube) (HTTP 404, 4x)",
-   "Bungie (YouTube) (HTTP 404, 4x)",
    "CD PROJEKT RED (YouTube) (HTTP 404, 4x)",
-   "Call of Duty (YouTube) (HTTP 404, 4x)",
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 37x)",
-   "Capcom USA (YouTube) (HTTP 404, 4x)",
-   "EA SPORTS FC (YouTube) (HTTP 404, 4x)",
-   "Fortnite (YouTube) (HTTP 404, 4x)",
    "Nintendo of America (X) (HTTP 429, 62x)",
-   "Nintendo of America (YouTube) (HTTP 404, 9x)",
    "PlayStation (X) (HTTP 429, 80x)",
-   "PlayStation (YouTube) (HTTP 404, 9x)",
    "PlayStation MENA (YouTube) (HTTP 404, 4x)",
    "PlayStation Middle East (X) (HTTP 429, 8x)",
-   "PlayStation Middle East (YouTube) (HTTP 404, 4x)",
-   "Pokemon (YouTube) (HTTP 404, 4x)",
-   "Riot Games (YouTube) (HTTP 404, 4x)",
    "Rockstar Games (X) (HTTP 429, 34x)",
-   "Rockstar Games (YouTube) (HTTP 404, 7x)",
-   "SEGA (YouTube) (HTTP 404, 4x)",
-   "Square Enix (YouTube) (HTTP 404, 4x)",
    "Steam (YouTube) (HTTP 500, 4x)",
-   "Ubisoft (YouTube) (HTTP 404, 4x)",
-   "Xbox (X) (HTTP 429, 80x)",
-   "Xbox (YouTube) (HTTP 404, 9x)"
+   "Xbox (X) (HTTP 429, 80x)"
   ]
  }
 }
