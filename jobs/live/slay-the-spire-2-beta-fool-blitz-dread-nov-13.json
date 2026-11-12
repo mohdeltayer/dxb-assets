@@ -9,30 +9,145 @@
   {
    "file": "slay-the-spire-2-beta-fool-blitz-dread-nov-13-trailer.mp4",
    "steam": 2868840,
-   "trailer": "Slay the Spire 2 - Gameplay",
-   "start": 0,
-   "seconds": 240
-  },
-  {
-   "file": "slay-the-spire-2-beta-fool-blitz-dread-nov-13-trailer2.mp4",
-   "steam": 2868840,
    "trailer": "Slay the Spire 2 - Early Access",
    "start": 0,
    "seconds": 240
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "slay-the-spire-2-beta-fool-blitz-dread-nov-13-trailer.mp4",
+   16.05,
+   5.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "slay-the-spire-2-beta-fool-blitz-dread-nov-13-trailer.mp4",
+   21.05,
+   5.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "slay-the-spire-2-beta-fool-blitz-dread-nov-13-trailer.mp4",
+   26.05,
+   4.99,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "نشرت ميغا كريت (Mega Crit)\nتحديثًا تجريبيًا جديدًا",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    [
+     "يضيف التحديث شخصية جديدة\nاسمها The Fool، موسيقي بقوس",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "وضعان جديدان: Blitz مكثف،\nأما Dread فشديد الصعوبة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   2,
+   "المصدر: ميغا كريت (Mega Crit)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "شخصية جديدة ووضعان\nفي Slay the Spire 2",
  "label": "رسمي",
- "source": "ستيم (Steam)",
+ "source": "ميغا كريت (Mega Crit)",
  "date": "12 Nov 2026",
  "theme": "stylized",
  "style": null,
  "template": "trailer",
  "skin": "house",
  "cut": false,
- "track": "bed",
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "track": [
+  "slay-the-spire-2-beta-fool-blitz-dread-nov-13-trailer.mp4",
+  16.05
+ ],
+ "genre": [
+  "indie",
+  "strategy/sim"
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam announcement 'Beta Patch Notes - v0.113.0' read in full 12 Nov 22:50Z (posted 20:30Z)",
+  "SOURCE: not already posted": "yes: ledger find 'slay-the-spire' hits the 30 Oct pre-announcement of this patch only; this is the patch itself",
+  "SOURCE: age": "yes: first report 12 Nov 20:30Z, about 2 h",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE trailer/update": "yes: the news is the beta patch: character, two modes, beta-only; footage is the game's Early Access trailer, credited",
+  "STORY: spoken paragraph, subject before pronoun": "yes: L1 names Mega Crit and the beta, L2 The Fool, L3 Blitz, L4 Dread; no line opens on و",
+  "STORY: names match": "yes: ميغا كريت from names-ar.md; game and mode names Latin as published",
+  "PICTURE: not same as last 5 Reels": "yes: picture: Early Access trailer 16.05 to 31.05 s, new to the ledger",
+  "SOUND": "trailer's own sound in sync with its picture (one stretch 16.05 to 31.05 s); no effects added"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook + L1",
+   "shot": "16.05 to 21.05 s",
+   "alternatives": "0 to 5 s (slate/title), 6.17 s",
+   "crop": "x 0.5 centre (server detector unavailable)",
+   "music": "trailer"
+  },
+  {
+   "beat": "1 The Fool",
+   "shot": "21.05 to 26.05 s",
+   "alternatives": "contiguity kept for sound sync",
+   "crop": "x 0.5",
+   "music": "trailer"
+  },
+  {
+   "beat": "2 Blitz and Dread",
+   "shot": "26.05 to 31.04 s",
+   "alternatives": "-",
+   "crop": "x 0.5",
+   "music": "trailer"
+  }
+ ],
+ "note": "Slay the Spire 2 beta v0.113.0, 12 Nov. Footage: Steam Early Access trailer (appid 2868840), 1080p, decode clean; the Gameplay trailer was full of card text (5 clean stretches, 11.7 s). One contiguous clean stretch 16.05 to 31.04 s so the picture and the trailer sound stay in sync. Footage is illustration: the trailer predates The Fool, Blitz and Dread. Sound: trailer, speech not checked by ear."
 }
