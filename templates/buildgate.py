@@ -224,6 +224,39 @@ def plate_cover_problems(job):
     return []
 
 
+VIDEO = ('.mp4', '.mov', '.webm', '.mkv', '.m4v')
+BED_TEMPLATES = ('numbers', 'stills', 'retro', 'storybeat')   # our graphics, stills, retro: the bed belongs (23 Oct 2026)
+BED_KINDS = ('sales', 'results')                              # charts and company figures
+BED_REASON_MIN = 20
+
+
+def footage_job(job):
+    """True when any shot plays a video file that is not one of our own cards."""
+    return any(isinstance(sh, list) and sh and str(sh[0]).lower().endswith(VIDEO) and '-gfx-' not in str(sh[0])
+               for sh in job.get('shots') or [])
+
+
+def sound_problems(job):
+    """Trailer sound is the default (23 Oct 2026), in code (adv-20261112-sound-by-code item 2): a footage job carries a
+    `track` (the trailer its shots come from, from the first shot's source second; t0make writes it) unless it names
+    the trailers checked in `bed_reason`, or its template or kind takes our bed (numbers, stills, retro, storybeat;
+    sales, results; tribute; a legal story, "legal": true; the breaking profile with silent footage says so in
+    bed_reason)."""
+    if job.get('kind') in ('famitsu', 'breaking') or not footage_job(job):
+        return []
+    tr = job.get('track')
+    if tr and tr != 'bed':
+        return []
+    if (job.get('template') in BED_TEMPLATES or job.get('kind_news') in BED_KINDS or job.get('tribute')
+            or job.get('legal')):
+        return []
+    if len(str(job.get('bed_reason') or '').strip()) >= BED_REASON_MIN:
+        return []
+    return ['sound: a footage Reel plays its trailer\'s own sound: set "track": [trailer file, the first shot\'s source '
+            'second] (t0make does), or "bed_reason" naming each trailer checked and why it was unusable (23 Oct rule; '
+            'adv-20261112-sound-by-code)']
+
+
 PERSON_KINDS = ('quote', 'people', 'cast')     # kinds whose subject is a person; layoffs only with a subject_person
 PERSON_OPEN = 0.05                              # the person window opens on frame 0 (seconds)
 
@@ -416,6 +449,7 @@ def problems(path, job):
     out += layout_problems(job)
     out += evergreen_problems(job)
     out += builder_problems(job)
+    out += sound_problems(job)
 
     rc = job.get('reel_check')
     if not rc:

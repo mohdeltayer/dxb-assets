@@ -304,6 +304,37 @@ def card_stages(job, f, secs):
     return st or C.U + f
 
 
+def sound_for(job, out, draft=False):
+    """(sound for reel(), the label qc.json records) (adv-20261112-sound-by-code item 3). With a trailer track the
+    footage carries its own sound (the job's `sound` only names the end card's flavour, as before): "trailer", or
+    "trailer-voiced" when its speech is kept. With no track the server picks the bed: the chip's flavour from
+    ig_ar.SOUNDS (عاجل breaking, متوفر الآن launch, أرقام stats, retro), the tribute's calm neon_c, an occasion or retro
+    flavour the job names; otherwise the everyday bed rested longest in templates/assets/bed-ledger.json, whatever the
+    job says (an everyday bed is never left to the default). The ledger entry is written to $RUNNER_TEMP/bed.json for the
+    commit step, which appends it to the fresh ledger; a draft takes no ledger entry."""
+    import ig_ar as _G
+    import sonic as _S
+    tr = job.get('track')
+    if tr and tr != 'bed':
+        voiced = bool(job.get('speech_ok') or job.get('speech_keep'))
+        return job.get('sound'), 'trailer-voiced' if voiced else 'trailer'
+    named = job.get('sound')
+    if job.get('tribute'):
+        pick = named or 'neon_c'
+    elif _G.SOUNDS.get(job.get('label')):
+        pick = _G.SOUNDS[job['label']]
+    elif named and named not in _S.EVERYDAY:
+        pick = named
+    elif draft:
+        pick = 'neon'
+    else:
+        pick = _S.rotate(os.path.basename(out))
+        if os.environ.get('RUNNER_TEMP'):
+            json.dump([os.path.basename(out), pick], open(os.path.join(os.environ['RUNNER_TEMP'], 'bed.json'), 'w'))
+    why = str(job.get('bed_reason') or '').strip()
+    return pick, f'bed:{pick}' + (f' ({why})' if why else '')
+
+
 def focus(job, path):
     """Fill every null focus with reel.autofocus and write the job back, so the
     runner crops exactly what the shot sheet was judged on (20 Oct 2026: on the
@@ -1087,8 +1118,10 @@ def run(job, draft=False):
         DP_apart = DP.apart_spec(dp_plan, DP_folder)
     tup = lambda v: v if v is None or isinstance(v, str) else tuple(tuple(x) if isinstance(x, list) else x for x in v)
     style = look(job)
+    snd, snd_label = sound_for(job, out, draft)
+    print(f'render_job: sound: {snd_label}', flush=True)
     done = reel.reel(shots(job, draft), job['headline'], job['label'], place(job), job['source'], job['date'], out,
-                     theme=job['theme'], style=style, sound=job.get('sound'), country=job.get('country'),
+                     theme=job['theme'], style=style, sound=snd, country=job.get('country'),
                      head_size=job.get('head_size', reel.HEAD_SIZE), draft=draft, track=tup(job.get('track')), cut=job.get('cut', False),
                      credits=[tuple(c) for c in job['credits']] if job.get('credits') else None,
                      strip=strip_items(job) if job.get('strip') else None,

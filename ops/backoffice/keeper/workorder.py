@@ -533,8 +533,30 @@ def dispatch_alarms(times, now):
             for st, n in sorted(worst.items()) if n >= DISPATCH_ALARM]
 
 
+BED_RUN = 3               # footage Reels in a row on our bed (adv-20261112-sound-by-code item 4)
+
+
+def bed_alarms(times, now):
+    """An alarm when the last BED_RUN footage Reels rendered in 24 hours all played our bed, not their trailer."""
+    rows = []
+    for e in times or []:
+        if not isinstance(e, dict) or not e.get('footage') or not isinstance(e.get('sound'), str):
+            continue
+        at = t(e.get('finished_at') or e.get('at'))
+        if at and now - at <= dt.timedelta(hours=24):
+            rows.append(e)
+    last = rows[-BED_RUN:]
+    if len(last) < BED_RUN or not all(e['sound'].startswith('bed:') for e in last):
+        return []
+    names = ', '.join(str(e.get('story') or e.get('name') or '?') for e in last)
+    return [{'key': 'hop|bed|' + str(last[-1].get('story') or last[-1].get('name') or '?'), 'kind': 'bed',
+             'line': '%d footage Reels in a row on our bed (%s): trailer sound is the default (23 Oct); set "track" from '
+                     'the trailer, or "bed_reason" naming the trailers checked' % (BED_RUN, names),
+             'clears': 'the next footage Reel renders on its trailer track'}]
+
+
 def build(board, now, posts, orders=None, mirror=None, digest=None, server=None, history=None, server_at=None, times=None):
-    alarms = hop_alarms(board, now, posts, mirror, server, history, server_at) + dispatch_alarms(times, now)
+    alarms = hop_alarms(board, now, posts, mirror, server, history, server_at) + dispatch_alarms(times, now) + bed_alarms(times, now)
     hand = open_handoffs(board, now)
     nxt = next_slot(posts, now)
     cp = caps(posts, now, max(now, t(nxt['earliest']) or now))

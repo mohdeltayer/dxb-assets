@@ -323,3 +323,8 @@ a run that has not been updated still reads them.
    carries a "person" window opening at 0.0 s (photo box and name plate on the cover); no licensed photo: "person_photo":
    "none" with "searched": [where you looked] and the window shows their best-known work. "report" is never the kind of
    a one-game story: use what happened (date, delay, reveal, sales, update, people, quote) and put تقرير in the label.
+13. Sound by code (release 2026-11-12 r3, adv-20261112-sound-by-code). A footage Reel carries "track": [the trailer, the
+   first shot's source second] (t0make writes it); the gate refuses a footage job without one unless "bed_reason" names
+   each trailer checked and why it was unusable, or the Reel is numbers, stills, retro, storybeat, sales, results,
+   tribute or "legal": true. Do not choose an everyday bed: the server picks it from the ledger (the chip's flavour for
+   عاجل, متوفر الآن, أرقام). qc.json says "sound"; three footage Reels in a row on a bed raise a work-order alarm.

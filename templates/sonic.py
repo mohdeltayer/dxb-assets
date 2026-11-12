@@ -168,6 +168,21 @@ ARRANGE = {
 }
 
 
+def ledger_add(path):
+    """Append one [key, bed] entry (written by render_job.sound_for on the server) to the bed ledger after the commit
+    step's reset, so the rotation the server chose is committed with the render (adv-20261112-sound-by-code item 3)."""
+    import json
+    led_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'bed-ledger.json')
+    try:
+        ledger = json.load(open(led_path))
+    except (OSError, ValueError):
+        ledger = []
+    key, bed = json.load(open(path))
+    ledger = [e for e in ledger if e[0] != key] + [[key, bed]]
+    json.dump(ledger[-200:], open(led_path, 'w'), indent=0)
+    return key, bed
+
+
 def rotate(key):
     """An everyday bed for a post, never the one used most recently: the
     ledger (assets/bed-ledger.json) remembers which bed each post got, so a
@@ -815,6 +830,9 @@ def sting(kit, path):
 
 if __name__ == '__main__':
     import sys
+    if sys.argv[1:2] == ['ledger-add']:         # python3 sonic.py ledger-add <bed.json> (the render's commit step)
+        print('bed ledger:', ledger_add(sys.argv[2]))
+        sys.exit()
     out = sys.argv[1] if len(sys.argv) > 1 else '.'
     os.makedirs(out, exist_ok=True)
     if '--arrange' in sys.argv:                 # python3 sonic.py <dir> --arrange 60 [flavour ...]
