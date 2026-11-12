@@ -1,10 +1,54 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T14:05:08Z",
- "seq": 377,
+ "generated_at": "2026-11-12T14:10:19Z",
+ "seq": 378,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 12657,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Edge of Memories | Official Animated Opening",
+   "url": "https://www.youtube.com/watch?v=iNYtvpobCPU",
+   "published": "2026-11-12T14:00Z",
+   "first_seen": "2026-11-12T14:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/iNYtvpobCPU/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=iNYtvpobCPU"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 378
+  },
+  {
+   "id": 12658,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "The Grinch 2: Saving Chirstmas | Grinchy Gadgets | US | ESRB",
+   "url": "https://www.youtube.com/watch?v=B07PpsJGZEg",
+   "published": "2026-11-12T14:00Z",
+   "first_seen": "2026-11-12T14:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/B07PpsJGZEg/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=B07PpsJGZEg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 378
+  }
+ ],
+ "recent": [
   {
    "id": 12639,
    "source": "Bungie",
@@ -16,9 +60,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 377
-  }
- ],
- "recent": [
+  },
   {
    "id": 12617,
    "source": "PlayStation (YouTube)",
@@ -600,7 +642,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T14:05:04Z",
+  "last_poll_at": "2026-11-12T14:10:14Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 6,
