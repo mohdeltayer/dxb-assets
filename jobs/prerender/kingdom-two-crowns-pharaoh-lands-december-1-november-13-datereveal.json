@@ -1,0 +1,142 @@
+{
+ "name": "kingdom-two-crowns-pharaoh-lands-december-1-november-13-datereveal",
+ "story": "2026-11-13-kingdom-two-crowns-pharaoh-lands-dec-1",
+ "kind_news": "expansion",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/kingdom-two-crowns-pharaoh-lands-december-1-november-13-datereveal-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "kingdom-two-crowns-pharaoh-lands-december-1-november-13-datereveal-trailer.mp4",
+   "steam": 4742120,
+   "trailer": "Date Reveal",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "تضيف راو فيوري (Raw Fury)\nإضافة Pharaoh Lands للعبة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "تدور في وادي الملوك بأجواء\nمصر القديمة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "يستكشف اللاعب عالم آلهة\nقوية بحثًا عن مصدر الفوضى",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: راو فيوري (Raw Fury)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "إضافة بطابع مصري قديم\nفي Kingdom Two Crowns",
+ "label": "رسمي",
+ "source": "ستيم (Steam)",
+ "date": "12 Nov 2026",
+ "theme": "spectacle",
+ "style": null,
+ "template": "split",
+ "skin": "house",
+ "cut": true,
+ "track": [
+  "kingdom-two-crowns-pharaoh-lands-december-1-november-13-trailer.mp4",
+  13.48
+ ],
+ "strip": [
+  [
+   "التاريخ",
+   "1 ديسمبر 2026"
+  ],
+  [
+   "المنصة",
+   "Windows"
+  ]
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam store page and appdetails 12 Nov 20:30Z; GoNintendo second",
+  "SOURCE: not already posted": "yes: ledger find kingdom-two-crowns, 0 hits",
+  "SOURCE: age": "yes: first report 12 Nov, under 24 hours",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE expansion": "yes: date, setting, what the player does, platform and price unknown stated on strip",
+  "STORY: spoken paragraph, subject before pronoun": "yes: L1 names Pharaoh Lands, L2 continues the DLC, L3 the player",
+  "STORY: release verbs": "yes: no verb needed on screen, date on strip; text uses تصدر",
+  "STORY: names match names-ar.md": "yes: Raw Fury with bracket in line 1 and credit, Aurora Punks in caption",
+  "POST: Arabic passes": "yes: two skills applied, western digits, no first person; DeepL whole-story forward pass compared (DeepL says المحتوى الإضافي/التوسعة, house word إضافة kept; مصدر الفوضى matches)",
+  "SOUND: footage sound": "yes: trailer own sound, split",
+  "SOUND: no speech under Arabic lines": "yes: trailer has no narration; server speech check final",
+  "PICTURE: footage first": "yes: official Steam announcement trailer",
+  "PICTURE: not the same as last 5 reels": "yes: new game",
+  "CREDIT: on every clip": "yes: Raw Fury credit over all shots"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "13.48 to 16.98",
+   "alternatives": "0 to 7.1 logo animation",
+   "crop": "picker",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "1 L1 DLC",
+   "shot": "17.45 to 19.58",
+   "alternatives": "none",
+   "crop": "picker",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "2 L2 setting",
+   "shot": "38.38 to 43.16",
+   "alternatives": "text shots rejected",
+   "crop": "picker",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "3 L3 gods and chaos",
+   "shot": "43.16 to 48.91",
+   "alternatives": "end card rejected",
+   "crop": "picker",
+   "music": "trailer own sound"
+  }
+ ],
+ "angle": {
+  "hook": "Kingdom Two Crowns heads to ancient Egypt with the Pharaoh Lands DLC",
+  "why_now": "Steam page and Raw Fury press release 12 Nov 2026 give the date",
+  "what_it_means_here": "an Egypt-inspired expansion that Arab players will notice; Windows only for now, no price, no Arabic in the language list",
+  "payoff": "1 Dec 2026"
+ }
+}
