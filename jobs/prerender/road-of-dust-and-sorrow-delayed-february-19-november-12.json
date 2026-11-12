@@ -1,7 +1,7 @@
 {
  "name": "road-of-dust-and-sorrow-delayed-february-19-november-12",
  "story": "2026-11-12-road-of-dust-and-sorrow-delay-feb-19",
- "kind_news": "rating_leak",
+ "kind_news": "delay",
  "built_by": "production-2",
  "render_lane": "server",
  "out": "cards/2026-11/road-of-dust-and-sorrow-delayed-february-19-november-12-reel-v1.mp4",
@@ -11,13 +11,139 @@
    "steam": 3895110,
    "trailer": "New Release",
    "start": 0,
-   "seconds": 240
+   "seconds": 90
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "road-of-dust-and-sorrow-delayed-february-19-november-12-trailer.mp4",
+   7.41,
+   3.6,
+   [
+    [
+     0.0,
+     0.405
+    ]
+   ]
+  ],
+  [
+   "road-of-dust-and-sorrow-delayed-february-19-november-12-trailer.mp4",
+   13.78,
+   3.1,
+   [
+    [
+     0.0,
+     0.732
+    ]
+   ]
+  ],
+  [
+   "road-of-dust-and-sorrow-delayed-february-19-november-12-trailer.mp4",
+   17.4,
+   1.78,
+   [
+    [
+     0.0,
+     0.61
+    ]
+   ]
+  ],
+  [
+   "road-of-dust-and-sorrow-delayed-february-19-november-12-gfx-1.png",
+   null,
+   3.0,
+   null
+  ],
+  [
+   "road-of-dust-and-sorrow-delayed-february-19-november-12-trailer.mp4",
+   55.91,
+   3.6,
+   [
+    [
+     0.0,
+     0.386
+    ],
+    [
+     1.72,
+     0.504
+    ]
+   ]
+  ],
+  [
+   "road-of-dust-and-sorrow-delayed-february-19-november-12-trailer.mp4",
+   62.3,
+   3.3,
+   [
+    [
+     0.0,
+     0.611
+    ],
+    [
+     2.76,
+     0.437
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "ملاحظات اللاعبين على النسخة\nالتجريبية دفعت الفريق للتأجيل",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   4,
+   [
+    [
+     "وأعلن الفريق نسخة PS5\nفي علبة للحجز المسبق",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   5,
+   [
+    [
+     "وذلك قبل أقل من شهر\nمن الموعد القديم",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   2,
+   "المصدر: سيلفر لاينينغ إنتراكتيف (Silver Lining Interactive)",
+   {
+    "size": 36,
+    "band": true
+   }
+  ],
+  [
+   4,
+   5,
+   "المصدر: سيلفر لاينينغ إنتراكتيف (Silver Lining Interactive)",
+   {
+    "size": 36,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "موعد The Road of Dust and Sorrow\nيتأجل إلى 19 فبراير",
  "label": "تأجيل",
  "source": "سيلفر لاينينغ إنتراكتيف (Silver Lining Interactive)",
  "date": "11 Nov 2026",
@@ -25,7 +151,30 @@
  "style": null,
  "template": "clipcard",
  "skin": "house",
- "cut": false,
- "track": "bed",
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "cut": true,
+ "track": [
+  "road-of-dust-and-sorrow-delayed-february-19-november-12-trailer.mp4",
+  7.41
+ ],
+ "gfx": [
+  {
+   "file": "road-of-dust-and-sorrow-delayed-february-19-november-12-gfx-1.png",
+   "kind": "fact",
+   "label": "موعد الإصدار الجديد",
+   "value": "19 فبراير 2027",
+   "note": "بدل 3 ديسمبر 2026"
+  }
+ ],
+ "ground_footage": [
+  "road-of-dust-and-sorrow-delayed-february-19-november-12-trailer.mp4",
+  17.4
+ ],
+ "music_only": true,
+ "angle": {
+  "hook": "The Road of Dust and Sorrow moves from Dec 3, 2026 to Feb 19, 2027",
+  "why_now": "developers' Steam post 11 Nov 19:46Z, new trailer shown at the Golden Joystick showcase",
+  "what_it_means_here": "Switch 2, PS5, Xbox and PC players wait about 11 weeks longer; a boxed PS5 edition opens for pre-order",
+  "payoff": "stated reason: feedback from the extended Next Fest demo"
+ },
+ "sensitive": "none"
 }
