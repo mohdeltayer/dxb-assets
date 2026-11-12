@@ -86,17 +86,6 @@
      0.5
     ]
    ]
-  ],
-  [
-   "exterminauts-beta-november-12-trailer.mp4",
-   113.4,
-   4.0,
-   [
-    [
-     0.0,
-     0.5
-    ]
-   ]
   ]
  ],
  "lines": [
@@ -147,18 +136,6 @@
      }
     ]
    ]
-  ],
-  [
-   7,
-   7,
-   [
-    [
-     "الواجهة بأربع لغات\nليس بينها العربية",
-     {
-      "size": 54
-     }
-    ]
-   ]
   ]
  ],
  "credits": [
@@ -173,7 +150,7 @@
   ],
   [
    4,
-   7,
+   6,
    "المصدر: ليفل إنفينيت (Level Infinite)",
    {
     "size": 40,
@@ -252,7 +229,7 @@
    "music": "trailer own sound"
   },
   {
-   "beat": "4 to 7 rewards, platform, languages",
+   "beat": "4 to 6 rewards, platform",
    "shot": "69.9, 89.4, 99.63 s and last picker stretch, source order",
    "alternatives": "fade stretches rejected",
    "crop": "picker focus",
@@ -270,6 +247,13 @@
    "shot": "113.4 to 117.4 s",
    "alternatives": "123.66 s stretch replaced after the smear check flagged the last 0.3 s of the first music_only render (peak 17.4)",
    "crop": "picker focus",
+   "music": "trailer music stem"
+  },
+  {
+   "beat": "7 dropped",
+   "shot": "closing shot and languages line removed",
+   "alternatives": "two source stretches (123.66, 113.4) both flagged by the smear check inside the last shot; the languages fact stays in X, Threads and the caption",
+   "crop": "n/a",
    "music": "trailer music stem"
   }
  ],
