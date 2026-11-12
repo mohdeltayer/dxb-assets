@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T17:52:13Z",
- "seq": 398,
+ "generated_at": "2026-11-12T18:15:18Z",
+ "seq": 399,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 13054,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Microsoft Flight Simulator 2024 - The Airbus A380 | PS5 & PS VR2 Games",
+   "url": "https://www.youtube.com/watch?v=W2DPDjuL7Do",
+   "published": "2026-11-12T18:00Z",
+   "first_seen": "2026-11-12T18:15:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/W2DPDjuL7Do/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=W2DPDjuL7Do"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 399
+  }
+ ],
  "recent": [
   {
    "id": 12980,
@@ -848,51 +870,13 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 341
-  },
-  {
-   "id": 11831,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Rayman Legends Retold - Vortex Outfit Trailer (XBOX-Exclusive)",
-   "url": "https://www.youtube.com/watch?v=enLchT36ens",
-   "published": "2026-11-11T17:50Z",
-   "first_seen": "2026-11-11T18:10:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/enLchT36ens/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=enLchT36ens"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 339
-  },
-  {
-   "id": 11830,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "The Saros: Zenith update brings more ways to play for newcomers and veterans alike.",
-   "url": "https://www.youtube.com/shorts/tA9jqklCSd8",
-   "published": "2026-11-11T18:00Z",
-   "first_seen": "2026-11-11T18:10:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/tA9jqklCSd8/hqdefault.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 339
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T17:52:07Z",
+  "last_poll_at": "2026-11-12T18:15:14Z",
   "sources_enabled": 100,
-  "sources_ok": 93,
+  "sources_ok": 94,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 42x)",
