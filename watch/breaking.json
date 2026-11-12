@@ -1,10 +1,45 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T17:25:18Z",
- "seq": 394,
+ "generated_at": "2026-11-12T17:40:11Z",
+ "seq": 395,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 12977,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/12/26 Set off on a great adventure with the Straw Hat Crew in Fortnite Chapter 7: Treasure Hunters Read more",
+   "url": "https://www.nintendo.com/us/whatsnew/set-off-on-a-great-adventure-with-the-straw-hat-crew-in-fortnite-chapter-7-treasure-hunters/",
+   "published": null,
+   "first_seen": "2026-11-12T17:40:11Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 395
+  }
+ ],
+ "recent": [
+  {
+   "id": 12951,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "🐪 Kingdom Two Crowns: Pharaoh Lands | Launching December 1st, 2026! ☀️",
+   "url": "https://www.youtube.com/watch?v=sEQOI49VJlA",
+   "published": "2026-11-12T17:00Z",
+   "first_seen": "2026-11-12T17:25:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/sEQOI49VJlA/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=sEQOI49VJlA"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 394
+  },
   {
    "id": 12950,
    "source": "Xbox (YouTube)",
@@ -26,29 +61,6 @@
    "breaking_source": true,
    "breaking_seq": 394
   },
-  {
-   "id": 12951,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "🐪 Kingdom Two Crowns: Pharaoh Lands | Launching December 1st, 2026! ☀️",
-   "url": "https://www.youtube.com/watch?v=sEQOI49VJlA",
-   "published": "2026-11-12T17:00Z",
-   "first_seen": "2026-11-12T17:25:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/sEQOI49VJlA/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=sEQOI49VJlA"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 394
-  }
- ],
- "recent": [
   {
    "id": 12934,
    "source": "PlayStation (YouTube)",
@@ -824,12 +836,12 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T17:25:15Z",
+  "last_poll_at": "2026-11-12T17:40:11Z",
   "sources_enabled": 100,
-  "sources_ok": 94,
+  "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 41x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 42x)",
    "Nintendo of America (X) (HTTP 429, 63x)",
    "PlayStation (X) (HTTP 429, 81x)",
    "PlayStation Middle East (X) (HTTP 429, 9x)",
