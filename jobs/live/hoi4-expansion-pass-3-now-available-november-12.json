@@ -123,10 +123,7 @@
  "template": "split",
  "skin": "house",
  "cut": false,
- "track": [
-  "hoi4-expansion-pass-3-now-available-november-12-trailer.mp4",
-  0.0
- ],
+ "track": "bed",
  "strip": [
   [
    "المنصة",
@@ -150,7 +147,7 @@
   "STORY: release verbs": "yes: صدرت اليوم for a release today",
   "STORY: names match names-ar.md": "yes: Paradox Interactive with bracket in credit, Steam in English",
   "POST: Arabic passes": "yes: two skills applied, western digits, no first person; DeepL whole-story forward pass matched (إعادة صياغة طال انتظارها), alternatives التوسع/بطاقة التوسعة rejected per glossary (إضافة), الحاسب kept for أجهزة الكمبيوتر",
-  "SOUND: footage sound or bed with reason": "yes: trailer own sound, one continuous stretch from 0 s; server speech check is final",
+  "SOUND: footage sound or bed with reason": "no: our bed with reason, trailer checked and effects-led (music 26.9%), see bed_reason",
   "SOUND: no speech under Arabic lines": "yes: server speech check is final",
   "PICTURE: footage first": "yes: official Steam store trailer, clean stretches from shotpick in source order, text-free picks",
   "PICTURE: not the same as last 5 reels": "yes: HoI4 footage, no other Reel uses it",
@@ -170,5 +167,6 @@
   "why_now": "Paradox put the pass on Steam on 12 Nov with a livestream",
   "what_it_means_here": "Windows only on Steam, 168 AED on the UAE store",
   "payoff": "168 AED for the pass, US rework the headline feature"
- }
+ },
+ "bed_reason": "Steam store has one official trailer, To the Bitter End RDA Trailer (appid 4758580), checked: audio split ran and measured music at 26.9% of the track (effects-led, under the 40% floor) and the clean shots come from scenes 0 to 8 out of order, so its effects would not match the picture; no other official trailer or clip for Expansion Pass 3 found on the store page"
 }
