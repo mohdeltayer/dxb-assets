@@ -1,31 +1,223 @@
 {
  "name": "tdu-solar-crown-initial-d-collab-november-12",
  "story": "tdu-solar-crown-initial-d-collab-20261112",
- "kind_news": "price",
+ "kind_news": "crossover",
  "built_by": "production-2",
  "render_lane": "server",
  "out": "cards/2026-11/tdu-solar-crown-initial-d-collab-november-12-reel-v1.mp4",
  "footage": [
   {
-   "file": "tdu-solar-crown-initial-d-collab-november-12-trailer.mp4",
-   "steam": 1249970,
-   "trailer": "Season 7",
-   "start": 0,
-   "seconds": 240
+   "file": "tdu-solar-crown-initial-d-collab-november-12-art0.jpg",
+   "url": "https://clan.fastly.steamstatic.com/images/38247908/138a0b30606ee810054ed1cfa02391ff37ec63c1.jpg"
+  },
+  {
+   "file": "tdu-solar-crown-initial-d-collab-november-12-art1.jpg",
+   "url": "https://clan.fastly.steamstatic.com/images/38247908/80e4ba0367abcb688d911761d6572763436bbe8b.jpg"
+  },
+  {
+   "file": "tdu-solar-crown-initial-d-collab-november-12-art2.jpg",
+   "url": "https://clan.fastly.steamstatic.com/images/38247908/521b69a685f0f074aa162ac4d2dd793eb26106dc.jpg"
+  },
+  {
+   "file": "tdu-solar-crown-initial-d-collab-november-12-art3.jpg",
+   "url": "https://clan.fastly.steamstatic.com/images/38247908/8910b3e3f3bef2515336fb3ff9142f3c590fd81e.jpg"
+  },
+  {
+   "file": "tdu-solar-crown-initial-d-collab-november-12-art4.jpg",
+   "url": "https://clan.fastly.steamstatic.com/images/38247908/a43f7cae2328bf4fb0d2a3f373c287ea57a9960f.jpg"
+  },
+  {
+   "file": "tdu-solar-crown-initial-d-collab-november-12-art5.jpg",
+   "url": "https://clan.fastly.steamstatic.com/images/38247908/7976d0873ae9bd635c3bfc9e0d0bf54d572cfc8f.jpg"
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
- "label": "تحديث",
+ "shots": [
+  [
+   "tdu-solar-crown-initial-d-collab-november-12-art0.jpg",
+   0,
+   3.1,
+   null
+  ],
+  [
+   "tdu-solar-crown-initial-d-collab-november-12-art1.jpg",
+   0,
+   4.4,
+   null
+  ],
+  [
+   "tdu-solar-crown-initial-d-collab-november-12-art2.jpg",
+   0,
+   4.7,
+   null
+  ],
+  [
+   "tdu-solar-crown-initial-d-collab-november-12-art3.jpg",
+   0,
+   3.9,
+   null
+  ],
+  [
+   "tdu-solar-crown-initial-d-collab-november-12-art4.jpg",
+   0,
+   3.9,
+   null
+  ],
+  [
+   "tdu-solar-crown-initial-d-collab-november-12-art5.jpg",
+   0,
+   3.9,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "سباق ليلي ضد Keisuke Takahashi\nعلى جبال هونغ كونغ",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    [
+     "وضع Duel الجديد: سباق فردي\nتخسره إن تضررت سيارتك",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "حزمة المتجر تضم سيارة RX-7\nبقوة 450 حصانًا",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   4,
+   [
+    [
+     "مرشح Initial D يمنح السباقات\nمظهر المانغا",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   5,
+   [
+    [
+     "الجزء الأول من الفعالية\nمن 12 إلى 26 نوفمبر",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   5,
+   "المصدر: ناكون (Nacon)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "سباقات Initial D ليلًا\nتبدأ في Solar Crown",
+ "label": "رسمي",
  "source": "ناكون (Nacon)",
  "date": "12 Nov 2026",
- "theme": "cold",
- "style": null,
- "template": "clipcard",
+ "theme": "spectacle",
+ "style": "bold",
+ "template": "stills",
  "skin": "house",
- "cut": false,
  "track": "bed",
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "sound": null,
+ "cut": true,
+ "pace_ok": false,
+ "genre": [
+  "racing",
+  "live service/MMO"
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Nacon/KT Racing Solar Club Letter November 2026 (Steam news, 11 Nov 22:51Z) read in full 12 Nov 10:55Z; Steam news API re-read, no update or correction note",
+  "SOURCE: not already posted": "yes: ledger find 'Solar Crown' 'Initial D' 0 other hits; not in the done-in-the-last-day list",
+  "SOURCE: age": "yes: letter 11 Nov 22:51Z, event live 12 Nov; dated from the letter",
+  "ANGLE before lines": "yes: angle in the story file (hook, why now, what it means here, payoff)",
+  "STORY TYPE crossover": "yes: what it is (Initial D collaboration, Duel mode), dates of Volume 1, the bundle car spec, source Nacon",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names Initial D and Solar Crown; L1 the race against Keisuke, L2 Duel, L3 the store bundle, L4 the filter, L5 the event dates; no line opens on و",
+  "STORY: release verbs": "yes: تبدأ for an event start, no bare تصل",
+  "STORY: names match names-ar.md": "yes: ناكون (Nacon) in the credit from frame 0; game, series, character and car names in Latin",
+  "POST: Arabic passes": "yes: arabic-games-film-editor, arabic-writing, grammar review; DeepL whole-story forward pass and phrase alternatives (وضع Duel الجديد adopted from DeepL)",
+  "SOUND: footage sound or bed with reason": "yes: our bed: stills Reel, no footage sound; the Initial D trailer is on YouTube only (no clean official file route) and Steam's only trailer is the September Season 7 trailer, 3 clean stretches of 5.5 s over the online-shop UI, rejected by shotpick",
+  "SOUND: no speech under Arabic lines": "yes: bed only",
+  "PICTURE: footage first": "yes with reason: motion sources checked (YouTube trailer not fetchable, Steam store video = Season 7 trailer with shop text); stills from the publisher letter, 1920x1080, enlargement 1.78x",
+  "PICTURE: not the same as last 5 Reels": "yes: no Solar Crown Reel in the ledger",
+  "PICTURE: credit on every clip": "yes: one credit over all shots from frame 0",
+  "PICTURE: headline not over a face": "yes: top band",
+  "CHECKS: decision_log": "yes: decision_log in the job"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "letter image 1: the yellow RX-7 FD (Keisuke's car), the series' best-known image",
+   "alternatives": "letter header banner (kept for the close)",
+   "crop": "centre, autofocus",
+   "music": "our bed (stills)"
+  },
+  {
+   "beat": "1 L1 race vs Keisuke",
+   "shot": "letter image 13, Volume 1 event picture",
+   "alternatives": "none",
+   "crop": "centre",
+   "music": "bed"
+  },
+  {
+   "beat": "2 L2 Duel mode",
+   "shot": "letter image 4, Duel race picture",
+   "alternatives": "panel images with UI text",
+   "crop": "centre",
+   "music": "bed"
+  },
+  {
+   "beat": "3 L3 bundle car",
+   "shot": "letter image 2, Manga Style livery on the RX-7",
+   "alternatives": "bundle contents image (UI text)",
+   "crop": "centre",
+   "music": "bed"
+  },
+  {
+   "beat": "4 L4 filter",
+   "shot": "letter image 17, the Initial D filter",
+   "alternatives": "none",
+   "crop": "centre",
+   "music": "bed"
+  },
+  {
+   "beat": "5 L5 dates",
+   "shot": "letter header banner image 0",
+   "alternatives": "none",
+   "crop": "centre",
+   "music": "bed"
+  }
+ ]
 }
