@@ -1,10 +1,57 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T17:00:11Z",
- "seq": 392,
+ "generated_at": "2026-11-12T17:10:18Z",
+ "seq": 393,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 12932,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/12/26 See what’s sprouting in Pikmin 4 – Nintendo Switch 2 Edition + Dandori Academy, available now! Howdy, explorers! It’s time to go on an enhanced expedit",
+   "url": "https://www.nintendo.com/us/whatsnew/see-whats-sprouting-in-pikmin-4-nintendo-switch-2-edition-dandori-academy-available-now/",
+   "published": null,
+   "first_seen": "2026-11-12T17:10:14Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 393
+  },
+  {
+   "id": 12933,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/12/26 It's almost the final lap! Join us for the Mario Kart World Open Nov. 2026 event! The year may be nearing its final lap, but we’ve still got a few even",
+   "url": "https://www.nintendo.com/us/whatsnew/competitive-play-its-almost-the-final-lap-join-us-for-the-mario-kart-world-open-nov-2026-event/",
+   "published": null,
+   "first_seen": "2026-11-12T17:10:14Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 393
+  },
+  {
+   "id": 12934,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Ball x Pit - Risen Ballbylon Launch Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=enGnEY2-YTQ",
+   "published": "2026-11-12T17:00Z",
+   "first_seen": "2026-11-12T17:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/enGnEY2-YTQ/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=enGnEY2-YTQ"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 393
+  }
+ ],
+ "recent": [
   {
    "id": 12870,
    "source": "Xbox Wire",
@@ -16,9 +63,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 392
-  }
- ],
- "recent": [
+  },
   {
    "id": 12861,
    "source": "Xbox Wire",
@@ -733,32 +778,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 339
-  },
-  {
-   "id": 11797,
-   "source": "Nintendo of America (YouTube)",
-   "source_kind": "youtube",
-   "title": "MARVEL Cosmic Invasion: The Siege of Castle Doom – DLC Trailer – Nintendo Switch 2",
-   "url": "https://www.youtube.com/watch?v=B_bw2zq6nEU",
-   "published": "2026-11-11T17:00Z",
-   "first_seen": "2026-11-11T17:10:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/B_bw2zq6nEU/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=B_bw2zq6nEU"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 337
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T17:00:05Z",
+  "last_poll_at": "2026-11-12T17:10:14Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
