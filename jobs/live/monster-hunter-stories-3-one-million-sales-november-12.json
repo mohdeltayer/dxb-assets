@@ -7,55 +7,44 @@
  "out": "cards/2026-11/monster-hunter-stories-3-one-million-sales-november-12-reel-v1.mp4",
  "footage": [
   {
-   "file": "monster-hunter-stories-3-one-million-sales-november-12-pv5.mp4",
+   "file": "monster-hunter-stories-3-one-million-sales-november-12-pv4.mp4",
    "steam": 2852190,
-   "trailer": "50063_MHST3_PV5",
+   "trailer": "40063_GOLD_PV4",
    "start": 0,
    "seconds": 240
   }
  ],
  "shots": [
   [
-   "monster-hunter-stories-3-one-million-sales-november-12-pv5.mp4",
-   144.92,
-   3.5,
-   [
-    [
-     0.0,
-     0.473
-    ]
-   ]
-  ],
-  [
-   "monster-hunter-stories-3-one-million-sales-november-12-pv5.mp4",
-   148.42,
-   3.56,
-   [
-    [
-     0.0,
-     0.473
-    ]
-   ]
-  ],
-  [
-   "monster-hunter-stories-3-one-million-sales-november-12-pv5.mp4",
-   152.28,
-   2.37,
-   [
-    [
-     0.0,
-     0.748
-    ]
-   ]
-  ],
-  [
-   "monster-hunter-stories-3-one-million-sales-november-12-pv5.mp4",
-   154.65,
+   "monster-hunter-stories-3-one-million-sales-november-12-pv4.mp4",
+   56.22,
    4.0,
    [
     [
      0.0,
-     0.674
+     0.59
+    ]
+   ]
+  ],
+  [
+   "monster-hunter-stories-3-one-million-sales-november-12-pv4.mp4",
+   60.44,
+   1.98,
+   [
+    [
+     0.0,
+     0.607
+    ]
+   ]
+  ],
+  [
+   "monster-hunter-stories-3-one-million-sales-november-12-pv4.mp4",
+   62.43,
+   2.8,
+   [
+    [
+     0.0,
+     0.48
     ]
    ]
   ]
@@ -63,22 +52,10 @@
  "lines": [
   [
    1,
-   1,
-   [
-    [
-     "أعلنت كابكوم الرقم\nحول العالم",
-     {
-      "size": 54
-     }
-    ]
-   ]
-  ],
-  [
    2,
-   3,
    [
     [
-     "حسب جيماتسو (Gematsu)، تحقق ذلك\nبعد ثمانية أشهر من الإطلاق",
+     "أعلنت كابكوم الرقم بعد\nثمانية أشهر من الإطلاق",
      {
       "size": 54
      }
@@ -89,7 +66,7 @@
  "credits": [
   [
    0,
-   3,
+   2,
    "المصدر: كابكوم (Capcom)",
    {
     "size": 40,
@@ -107,8 +84,8 @@
  "skin": "house",
  "cut": false,
  "track": [
-  "monster-hunter-stories-3-one-million-sales-november-12-pv5.mp4",
-  144.92
+  "monster-hunter-stories-3-one-million-sales-november-12-pv4.mp4",
+  56.22
  ],
  "strip": [
   [
@@ -131,30 +108,23 @@
   "STORY: release verbs": "yes: no release verb used, تجاوزت for sales",
   "STORY: names match names-ar.md": "yes: Capcom and Gematsu with brackets, game names in English",
   "POST: Arabic passes": "yes: two skills applied, western digits, no first person; DeepL forward pass whole story and phrase alternatives read",
-  "SOUND: footage sound or bed with reason": "yes: PV5 trailer own sound, one continuous stretch from 144.92 s",
+  "SOUND: footage sound or bed with reason": "yes: PV4 trailer own sound, one continuous stretch from 56.22 s",
   "SOUND: no speech under Arabic lines": "server speech check is final",
-  "PICTURE: footage first": "yes: official Steam PV5, stretch 144.92 to 158.65 s clean per shotpick",
+  "PICTURE: footage first": "yes: official Steam PV4, stretch 56.22 to 65.23 s clean per shotpick",
   "PICTURE: not the same as last 5 reels": "yes: Monster Hunter Stories 3 not used by any Reel in the last days",
-  "CREDIT: on every clip": "yes: المصدر: كابكوم (Capcom) over shots 0 to 3"
+  "CREDIT: on every clip": "yes: المصدر: كابكوم (Capcom) over shots 0 to 2"
  },
  "decision_log": [
   {
    "beat": "0 hook",
-   "shot": "144.92 to 148.42 s",
-   "alternatives": "PV6 and PV4K have almost no clean shots (text overlays)",
+   "shot": "56.22 to 60.22 s",
+   "alternatives": "PV5 stretch is effects-led (music 22%)",
    "crop": "picker focus",
    "music": "trailer own sound"
   },
   {
-   "beat": "1 L1 Capcom announced",
-   "shot": "148.42 to 151.98 s",
-   "alternatives": "none",
-   "crop": "picker focus",
-   "music": "trailer own sound"
-  },
-  {
-   "beat": "2 L2 eight months after launch",
-   "shot": "152.28 to 158.65 s",
+   "beat": "1 L1 Capcom announced, eight months",
+   "shot": "60.44 to 65.23 s",
    "alternatives": "none",
    "crop": "picker focus",
    "music": "trailer own sound"
