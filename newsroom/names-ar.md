@@ -218,3 +218,6 @@ fact inside the text (the release date), then why it matters now. Refused by the
 
 | Nitrome | نايتروم | Proposed 10 Nov 2026 (Production 2; grammar stage accepted the transliteration) |
 | Mythwright (Thronefall developer) | ميثرايت | Suggested 11 Nov 2026 |
+| THQ Nordic | ثي إتش كيو نورديك | Proposed 12 Nov 2026 (Production, Black Forest Games story; Latin in brackets at first mention) |
+| Black Forest Games | بلاك فورست جيمز | Proposed 12 Nov 2026 (grammar stage accepted the transliteration) |
+| Third Signal | ثيرد سيغنال | Proposed 12 Nov 2026 |

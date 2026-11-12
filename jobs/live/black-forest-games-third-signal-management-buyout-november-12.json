@@ -1,0 +1,208 @@
+{
+ "name": "black-forest-games-third-signal-management-buyout-november-12",
+ "story": "2026-11-12-black-forest-games-third-signal",
+ "kind_news": "players",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/black-forest-games-third-signal-management-buyout-november-12-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "black-forest-games-third-signal-management-buyout-november-12-trailer.mp4",
+   "steam": 1266700,
+   "trailer": "Gameplay Trailer",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [
+  [
+   "black-forest-games-third-signal-management-buyout-november-12-trailer.mp4",
+   56.08,
+   3.0,
+   [
+    [
+     0.0,
+     0.335
+    ]
+   ]
+  ],
+  [
+   "black-forest-games-third-signal-management-buyout-november-12-trailer.mp4",
+   59.08,
+   3.0,
+   [
+    [
+     0.0,
+     0.35
+    ]
+   ]
+  ],
+  [
+   "black-forest-games-third-signal-management-buyout-november-12-trailer.mp4",
+   62.08,
+   3.0,
+   [
+    [
+     0.0,
+     0.35
+    ]
+   ]
+  ],
+  [
+   "black-forest-games-third-signal-management-buyout-november-12-trailer.mp4",
+   65.08,
+   3.17,
+   [
+    [
+     0.0,
+     0.701
+    ]
+   ]
+  ],
+  [
+   "black-forest-games-third-signal-management-buyout-november-12-trailer.mp4",
+   69.05,
+   3.0,
+   [
+    [
+     0.0,
+     0.701
+    ]
+   ]
+  ],
+  [
+   "black-forest-games-third-signal-management-buyout-november-12-trailer.mp4",
+   72.05,
+   1.98,
+   [
+    [
+     0.0,
+     0.584
+    ]
+   ]
+  ],
+  [
+   "black-forest-games-third-signal-management-buyout-november-12-trailer.mp4",
+   74.18,
+   2.23,
+   [
+    [
+     0.0,
+     0.431
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "استوديو بلاك فورست جيمز (Black Forest Games)\nيشتري استقلاله من ناشره",
+     {
+      "size": 46
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "يشارك في تأسيس مجموعة\nثيرد سيغنال (Third Signal) المستقلة",
+     {
+      "size": 46
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "التعاون مع الناشر مستمر\nولا تفاصيل مالية معلنة",
+     {
+      "size": 46
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: ثي إتش كيو نورديك (THQ Nordic)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "بلاك فورست جيمز يستقل\nعن ناشره THQ Nordic",
+ "label": "رسمي",
+ "source": "بيان صحفي من بلاك فورست جيمز (Black Forest Games)",
+ "date": "11 Nov 2026",
+ "theme": "cold",
+ "style": null,
+ "template": "split",
+ "skin": "house",
+ "cut": true,
+ "track": [
+  "black-forest-games-third-signal-management-buyout-november-12-trailer.mp4",
+  56.08
+ ],
+ "strip": [
+  [
+   "أشهر ألعابه",
+   "Destroy All Humans"
+  ],
+  [
+   "المجموعة الجديدة",
+   "Third Signal"
+  ]
+ ],
+ "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots",
+ "angle": {
+  "hook": "the studio behind the Destroy All Humans! remakes buys itself out of THQ Nordic",
+  "why_now": "company release of 11 Nov, under 24 hours, no Arabic coverage found",
+  "what_it_means_here": "Destroy All Humans! and Giana Sisters players: the studio goes independent but keeps working with THQ Nordic; no price or deal terms disclosed",
+  "payoff": "Third Signal is a new independent studio group for premium PC and console games"
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Games Press company release 11 Nov read 02:40Z (via fetch summary); Eurogamer second outlet; no denial",
+  "SOURCE: not already posted": "yes: ledger find recorded, 0 hits",
+  "SOURCE: age": "yes: release 11 Nov, under 24 hours, no Arabic outlet found",
+  "ANGLE before lines": "yes: in the job",
+  "STORY TYPE business": "yes: who, what changed, what stays (collaboration, own label), what is not disclosed (terms)",
+  "STORY: spoken paragraph, subject before pronoun": "yes: L1 names the studio, L2 the group, L3 the collaboration; no line opens on و",
+  "STORY: release verbs": "n/a, no release date",
+  "STORY: names match names-ar.md": "yes: Arabic then Latin at first mention; THQ Nordic, Third Signal added to names-ar.md",
+  "POST: Arabic passes": "yes: two skills, grammar stage no required edits, DeepL whole-story forward pass: استحواذ إداري taken over DeepL-literal wording",
+  "SOUND: footage sound or bed with reason": "yes: trailer own sound, split applies, one stretch from 56.08 s",
+  "SOUND: no speech under Arabic lines": "yes: gameplay trailer; server speech check is final",
+  "PICTURE: footage first": "yes: official Steam Destroy All Humans! 2 Reprobed Gameplay Trailer, clean stretches from shotpick",
+  "PICTURE: not the same as last 5 reels": "yes",
+  "CREDIT: on every clip": "yes: المصدر: ثي إتش كيو نورديك (THQ Nordic) over shots 0 to 6"
+ },
+ "decision_log": [
+  {
+   "beat": "hook",
+   "shot": "56.08 to 59.08",
+   "alternatives": "0 to 5 s",
+   "crop": "picker",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "L1 to L3",
+   "shot": "59.08 to 76.41 clean stretches, 0.8 s gap at 68.25",
+   "alternatives": "31.81 to 43.61",
+   "crop": "picker",
+   "music": "trailer own sound, split"
+  }
+ ],
+ "sensitive": "none"
+}
