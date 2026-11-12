@@ -61,5 +61,25 @@
   ],
   "hits": []
  },
- "approved": "rendered qc pass (cards/2026-11/doom-dark-ages-slaughter-mode-november-16-reel-v1.mp4, 14.0 s, trailer sound, 5 render dispatches: source quality, 2 timeouts in the audio step, sfx sync, then pass); NOT scheduled: the director PASS needs a separate director and none was available to this helper | v1 director FAIL (gore: blood-soaked saw ~103.4 s, hanging demon). v2: cards/2026-11/doom-dark-ages-slaughter-mode-november-16-v2-reel-v1.mp4, 12.0 s, qc pass, audio split applied (trailer music stem plus each shot's effects), shots from Revelations 100.0-101.9, 108.75-111.45, 112.6-114.0, 36.4-37.9, 38.0-39.4, 40.0-41.9, 42.5-43.9 checked at 4 fps as 9:16 crops, no blood; 117.1 shot dropped for a decode smear. NOT scheduled; director PASS pending from a separate director."
+ "approved": "rendered qc pass (cards/2026-11/doom-dark-ages-slaughter-mode-november-16-reel-v1.mp4, 14.0 s, trailer sound, 5 render dispatches: source quality, 2 timeouts in the audio step, sfx sync, then pass); NOT scheduled: the director PASS needs a separate director and none was available to this helper | v1 director FAIL (gore: blood-soaked saw ~103.4 s, hanging demon). v2: cards/2026-11/doom-dark-ages-slaughter-mode-november-16-v2-reel-v1.mp4, 12.0 s, qc pass, audio split applied (trailer music stem plus each shot's effects), shots from Revelations 100.0-101.9, 108.75-111.45, 112.6-114.0, 36.4-37.9, 38.0-39.4, 40.0-41.9, 42.5-43.9 checked at 4 fps as 9:16 crops, no blood; 117.1 shot dropped for a decode smear. NOT scheduled; director PASS pending from a separate director.",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/doom-dark-ages-slaughter-mode-november-16-v2-reel-v1.mp4",
+  "blob": "9417f8b5fe5bbc3fe4e8e05cf73373a1222dd24e",
+  "at": "2026-11-12T23:57:46Z",
+  "note": "gore re-check at 4 fps clean; speech none by transcript and RMS",
+  "checklist": {
+   "job": "jobs/live/doom-dark-ages-slaughter-mode-november-16-v2.json",
+   "sha256": "d5a8d19a539074e591d66d7fde1225d4e5980ea4a9bd124977ec5ea9233e5970",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-2",
+  "qc": "pass",
+  "looked": "first, middle and last story frames clean: headline over trailer, credit, no blood or gore; speech: none (Whisper output was hallucination on music)"
+ }
 }
