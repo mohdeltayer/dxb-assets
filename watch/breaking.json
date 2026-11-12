@@ -1,10 +1,45 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T16:25:17Z",
- "seq": 389,
+ "generated_at": "2026-11-12T16:30:20Z",
+ "seq": 390,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 12861,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Free Play Days – Sumerian Six, Hypnospace Outlaw, Sunderfolk and STUFFED",
+   "url": "https://news.xbox.com/en-us/2026/11/12/free-play-days-11-12-2026/",
+   "published": "2026-11-12T16:30Z",
+   "first_seen": "2026-11-12T16:30:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.4048.13554005851870537.3319872c-832c-4efd-8db0-c97fc34987e8.4d85c40b-bab1-40d4-8eb0-e026f396525f?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.30063.14305718799508027.42641e91-23d0-46ea-ba6f-12aa317fe516.a189d063-dacb-440b-b6a7-3ecae63b3ab4?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://assets.onestore.ms/cdnfiles/sfw-service-web-onestore-onerf-2017-11-8-12/store/common/images/xpalogo_black.png"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.25309.13654665046959384.df020ac8-b391-48be-af22-4d9c1c64ee2a.6c8b3d62-8acf-4830-8718-28b2172089db?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.54878.13943253638206228.5d8d88fa-8d15-4449-97da-d3090d2d02c8.eedb04e0-bddc-4e2d-b26d-32a1408e737d?w=400&h=600"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 390
+  }
+ ],
+ "recent": [
   {
    "id": 12860,
    "source": "PlayStation (YouTube)",
@@ -25,9 +60,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 389
-  }
- ],
- "recent": [
+  },
   {
    "id": 12789,
    "source": "Xbox Wire",
@@ -713,7 +746,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T16:25:14Z",
+  "last_poll_at": "2026-11-12T16:30:15Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 6,
