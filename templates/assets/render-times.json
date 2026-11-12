@@ -44417,5 +44417,133 @@
   "story": "pikmin-4-switch-2-edition-out-now-november-12",
   "job_sha": "6200e2d44382340402567d9ba0286c46c8c9a2de",
   "dispatches": 1
+ },
+ {
+  "name": "metaphor-refantazio-switch-2-launch-november-12-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-12T05:56Z",
+  "stages": {
+   "checks": 2.9,
+   "montage": 27.0,
+   "text": 20.1,
+   "audio": 1.0,
+   "outro": 15.0
+  },
+  "total": 66.1,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-12T05:55Z",
+  "finished_at": "2026-11-12T05:56Z",
+  "render_min": 1.1,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "metaphor-refantazio-switch-2-launch-november-12-trailer.mp4",
+    "start": 0.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "metaphor-refantazio-switch-2-launch-november-12-trailer.mp4",
+    "start": 11.46,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "metaphor-refantazio-switch-2-launch-november-12-trailer.mp4",
+    "start": 34.41,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "metaphor-refantazio-switch-2-launch-november-12-trailer.mp4",
+    "start": 41.66,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "metaphor-refantazio-switch-2-launch-november-12-trailer.mp4",
+    "start": 51.66,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "metaphor-refantazio-switch-2-launch-november-12-trailer.mp4",
+    "start": 79.03,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 0.8,
+   "still_share": 0.007,
+   "longest_still": 0.1,
+   "cuts_per_10s": 5.71,
+   "held_under_text": 0.007,
+   "secs": 14.0,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 113,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1005,
+  "peak_mem_mb": 2046,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 27326,
+  "peak_disk_mb": 29691,
+  "min_disk_free_mb": 216415,
+  "setup_min": 0.12,
+  "story": "metaphor-refantazio-switch-2-launch-november-12",
+  "job_sha": "22273cf92105c1a3232cd3fb6806ef00460a4999",
+  "dispatches": 1
  }
 ]
