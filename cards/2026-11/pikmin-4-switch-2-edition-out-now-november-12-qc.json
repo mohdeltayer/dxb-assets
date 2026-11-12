@@ -1,0 +1,29 @@
+{
+ "name": "pikmin-4-switch-2-edition-out-now-november-12",
+ "out": "cards/2026-11/pikmin-4-switch-2-edition-out-now-november-12-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-12T05:53:08Z",
+ "findings": [],
+ "notes": [
+  "length 17.7 s before the end card (target 12 to 20 s)",
+  "source quality: pikmin-4-switch-2-edition-out-now-november-12-trailer.mp4: low bitrate 2.4 Mbps (floor 3.0 Mbps for 1280x720 at 30 fps) (lowbit)",
+  "source quality: shot 0 pikmin-4-switch-2-edition-out-now-november-12-trailer.mp4 at 16.63 for 3.6 s, enlarged 2.67x: block ratio median 1.01, peak 1.16 (ok)",
+  "source quality: shot 1 pikmin-4-switch-2-edition-out-now-november-12-trailer.mp4 at 20.23 for 3.6 s, enlarged 2.67x: block ratio median 1.04, peak 1.08 (ok)",
+  "source quality: shot 2 pikmin-4-switch-2-edition-out-now-november-12-trailer.mp4 at 23.83 for 3.7 s, enlarged 2.67x: block ratio median 1.05, peak 1.09 (ok)",
+  "source quality: shot 3 pikmin-4-switch-2-edition-out-now-november-12-trailer.mp4 at 27.63 for 3.5 s, enlarged 2.67x: block ratio median 1.04, peak 1.06 (ok)",
+  "source quality: shot 4 pikmin-4-switch-2-edition-out-now-november-12-trailer.mp4 at 31.13 for 3.45 s, enlarged 2.67x: block ratio median 1.05, peak 1.07 (ok)",
+  "source quality: under 960 rows: pikmin-4-switch-2-edition-out-now-november-12-trailer.mp4 at 16.63 (720 rows, enlarged 2.67x), pikmin-4-switch-2-edition-out-now-november-12-trailer.mp4 at 20.23 (720 rows, enlarged 2.67x), pikmin-4-switch-2-edition-out-now-november-12-trailer.mp4 at 23.83 (720 rows, enlarged 2.67x), pikmin-4-switch-2-edition-out-now-november-12-trailer.mp4 at 27.63 (720 rows, enlarged 2.67x), pikmin-4-switch-2-edition-out-now-november-12-trailer.mp4 at 31.13 (720 rows, enlarged 2.67x); lowres_ok: Nintendo US store page (the only video listed under the game's nsuid, 720p), Nintendo store other nsuids: none for this game, Pikmin Day Direct and Nintendo's trailers: YouTube only, sign-in blocked, Steam: not on Steam: only copy is 720p",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 26.5, \"still_share\": 0.244, \"longest_still\": 0.9, \"cuts_per_10s\": 1.14, \"held_under_text\": 0.239, \"secs\": 17.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "6200e2d44382340402567d9ba0286c46c8c9a2de",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 720,
+  "max_zoom": 2.67,
+  "lowbit_shots": 5
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18"
+}

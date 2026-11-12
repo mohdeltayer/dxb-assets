@@ -44301,5 +44301,121 @@
   "story": "monster-hunter-stories-3-one-million-sales-november-12",
   "job_sha": "841cd53e1565cf31922b3557269072c62e57f8ff",
   "dispatches": 1
+ },
+ {
+  "name": "pikmin-4-switch-2-edition-out-now-november-12-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-12T05:52Z",
+  "stages": {
+   "checks": 4.6,
+   "montage": 19.5,
+   "text": 32.8,
+   "audio": 1.1,
+   "outro": 15.6
+  },
+  "total": 73.7,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-12T05:51Z",
+  "finished_at": "2026-11-12T05:52Z",
+  "render_min": 1.23,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "pikmin-4-switch-2-edition-out-now-november-12-trailer.mp4",
+    "start": 16.63,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.35,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 1,
+    "file": "pikmin-4-switch-2-edition-out-now-november-12-trailer.mp4",
+    "start": 20.23,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.35,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 2,
+    "file": "pikmin-4-switch-2-edition-out-now-november-12-trailer.mp4",
+    "start": 23.83,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.35,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 3,
+    "file": "pikmin-4-switch-2-edition-out-now-november-12-trailer.mp4",
+    "start": 27.63,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.35,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 4,
+    "file": "pikmin-4-switch-2-edition-out-now-november-12-trailer.mp4",
+    "start": 31.13,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.35,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   }
+  ],
+  "source_summary": {
+   "min_height": 720,
+   "max_zoom": 2.67,
+   "lowbit_shots": 5
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 26.5,
+   "still_share": 0.244,
+   "longest_still": 0.9,
+   "cuts_per_10s": 1.14,
+   "held_under_text": 0.239,
+   "secs": 17.6,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 111,
+  "queue_wait_secs": 100,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1050,
+  "peak_mem_mb": 2308,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 27306,
+  "peak_disk_mb": 30186,
+  "min_disk_free_mb": 215920,
+  "setup_min": 0.13,
+  "story": "pikmin-4-switch-2-edition-out-now-november-12",
+  "job_sha": "6200e2d44382340402567d9ba0286c46c8c9a2de",
+  "dispatches": 1
  }
 ]
