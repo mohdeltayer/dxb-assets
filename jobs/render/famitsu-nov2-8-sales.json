@@ -231,5 +231,61 @@
  "date": "12 Nov 2026",
  "hook": "تصدّرت Ocarina of Time مبيعات اليابان",
  "lowres_ok": "Nintendo store, publisher press site: Rhythm Heaven Groove and Tomodachi Life screenshots exist at 1280x720 only",
- "note": "Famitsu 2 to 8 Nov 2026 (article 202611/93799), last week 202611/93151 for change; sound stats; theme gold."
+ "note": "Famitsu 2 to 8 Nov 2026 (article 202611/93799), last week 202611/93151 for change; sound stats; theme gold.",
+ "render_lane": "hosted",
+ "lane_reason": "the container has no Dubai font; sales_full renders on the runner",
+ "story": "2026-11-12-famitsu-nov2-8-sales",
+ "built_by": "builder-famitsu",
+ "reel_check": [
+  {
+   "line": "Source",
+   "answer": "yes",
+   "evidence": "Famitsu 202611/93799 read in full via famitsu.py parse; last week 93151; hardware family sums reproduce last week's Gematsu figures"
+  },
+  {
+   "line": "Not already posted",
+   "answer": "yes",
+   "evidence": "newsroom/stories ledger find recorded: 0 hits; Publer checked before scheduling"
+  },
+  {
+   "line": "Freshness",
+   "answer": "yes",
+   "evidence": "Famitsu 22:00 JST 12 Nov, under 24 h"
+  },
+  {
+   "line": "Numbers",
+   "answer": "yes",
+   "evidence": "figure, period 2 to 8 Nov, Famitsu, last week comparison on every row"
+  },
+  {
+   "line": "Arabic names",
+   "answer": "yes",
+   "evidence": "games English, Famitsu as فاميتسو (Famitsu); names-ar not needed beyond that"
+  },
+  {
+   "line": "Sound",
+   "answer": "yes",
+   "evidence": "our bed (stats): chart story, allowed"
+  },
+  {
+   "line": "Picture",
+   "answer": "yes",
+   "evidence": "official Nintendo screenshots per game, panning, no gore; not the same as last Famitsu Reel's stills except FFR/Minecraft screens of a different pan"
+  },
+  {
+   "line": "Credit and chip",
+   "answer": "yes",
+   "evidence": "source «فاميتسو (Famitsu)» drawn on every entry; chip أرقام style stats"
+  },
+  {
+   "line": "Release verbs",
+   "answer": "yes",
+   "evidence": "none used"
+  },
+  {
+   "line": "Sensitive",
+   "answer": "yes",
+   "evidence": "none"
+  }
+ ]
 }

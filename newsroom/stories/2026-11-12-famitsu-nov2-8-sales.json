@@ -10,8 +10,50 @@
  "claimed_by": "builder",
  "first_report": "2026-11-12T13:00:00Z (Famitsu 22:00 JST)",
  "sources": [
-  {"role": "primary", "name": "Famitsu", "url": "https://www.famitsu.com/article/202611/93799"},
-  {"role": "primary", "name": "Famitsu (last week, for change)", "url": "https://www.famitsu.com/article/202611/93151"}
+  {
+   "role": "primary",
+   "name": "Famitsu",
+   "url": "https://www.famitsu.com/article/202611/93799"
+  },
+  {
+   "role": "primary",
+   "name": "Famitsu (last week, for change)",
+   "url": "https://www.famitsu.com/article/202611/93151"
+  }
  ],
- "sensitive": "none"
+ "sensitive": "none",
+ "ledger_find": {
+  "at": "2026-11-12T13:44:14Z",
+  "words": [
+   "famitsu",
+   "weekly",
+   "sales"
+  ],
+  "hits": []
+ },
+ "source_type": "primary",
+ "footage": "official Nintendo store screenshots (Ocarina, Switch Sports Resort, FFR, Minecraft, Stellar Blade), 1280x720 Nintendo screens for Rhythm Heaven Groove and Tomodachi Life, Fire Emblem key screens; sales_full countdown, our bed (stats)",
+ "beat": "Ocarina of Time remake debuts No. 1 in Japan with 537,041 copies in Famitsu's 2 to 8 Nov chart; Switch 2 hardware 53,104 against 68,733",
+ "genre": [
+  "industry/hardware",
+  "family"
+ ],
+ "game": "The Legend of Zelda: Ocarina of Time",
+ "claims": [
+  {
+   "text": "No. 1 Ocarina of Time (Switch 2) 537,041, new",
+   "status": "confirmed",
+   "source": "Famitsu 202611/93799"
+  },
+  {
+   "text": "No. 2 Switch Sports Resort 16,621 (104,719 total); No. 3 Rhythm Heaven Groove (Switch) 8,793; No. 4 Stellar Blade Complete Edition (Switch 2) 8,042 new",
+   "status": "confirmed",
+   "source": "Famitsu"
+  },
+  {
+   "text": "Hardware: Switch 2 53,104 (last 68,733); PS5 family 11,699 (16,226); Switch family 5,148 (5,853); Xbox Series 1,241 (892); sums from Famitsu model rows, last week from 202611/93151",
+   "status": "confirmed",
+   "source": "Famitsu"
+  }
+ ]
 }
