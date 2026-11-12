@@ -211,6 +211,9 @@ jobs:
             DISPATCHES=$(python templates/jobsha.py count "$(basename "$JOB" .json)")
             python -c "import json; p = 'templates/assets/render-times.json'; d = json.load(open(p)); e = json.load(open('$RUNNER_TEMP/render-time.json')); e['job_secs'] = $RENDER_SECS; e['setup_min'] = round($SETUP_SECS / 60, 2); e['story'] = '$(basename "$JOB" .json)'; e['job_sha'] = '$JOB_SHA'; e['dispatches'] = $DISPATCHES; d.append(e); json.dump(d, open(p, 'w'), indent=1, ensure_ascii=False)"
             looks=""; if [ -f "$RUNNER_TEMP/look.json" ]; then python templates/looks.py add "$RUNNER_TEMP/look.json" && looks=templates/assets/look-ledger.json; fi
+            # the bed the server picked (adv-20261112-sound-by-code): its ledger entry and the sound on the render-times entry
+            if [ -f "$RUNNER_TEMP/bed.json" ]; then python templates/sonic.py ledger-add "$RUNNER_TEMP/bed.json" && looks="$looks templates/assets/bed-ledger.json"; fi
+            python templates/qc.py sound-entry "$JOB" "$RUNNER_TEMP/render.log" templates/assets/render-times.json || true
             git add --sparse -f $files templates/assets/render-times.json $looks
             if [ -f "$JOB" ]; then git rm -q "$JOB"; fi
             git commit -q -m "Render $(basename "$JOB" .json) on the dxb-render server ($RENDER_SECS s, $(nproc) cores, job ${JOB_SHA:0:8}, dispatch $DISPATCHES, qc $QC_VERDICT)"

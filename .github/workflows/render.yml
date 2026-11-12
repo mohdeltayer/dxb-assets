@@ -263,6 +263,7 @@ jobs:
             cp -r "$RUNNER_TEMP/out/." .
             [ $TEST = 1 ] || python -c "import json; p = 'templates/assets/render-times.json'; d = json.load(open(p)); e = json.load(open('$RUNNER_TEMP/render-time.json')); e['job_secs'] = $RENDER_SECS; e['setup_min'] = round($SETUP_SECS / 60, 2); e['story'] = '$(basename "$JOB" .json)'; d.append(e); json.dump(d, open(p, 'w'), indent=1, ensure_ascii=False)"
             looks=""; if [ $TEST = 0 ] && [ -f "$RUNNER_TEMP/look.json" ]; then python templates/looks.py add "$RUNNER_TEMP/look.json" && looks=templates/assets/look-ledger.json; fi
+            if [ $TEST = 0 ] && [ -f "$RUNNER_TEMP/bed.json" ]; then python templates/sonic.py ledger-add "$RUNNER_TEMP/bed.json" && looks="$looks templates/assets/bed-ledger.json"; fi
             if [ $TEST = 1 ]; then git add --sparse -f $files; else git add --sparse -f $files templates/assets/render-times.json $looks; fi
             if [ -f "$JOB" ]; then git rm -q "$JOB"; fi
             git commit -q -m "Render $(basename "$JOB" .json) on the runner ($RENDER_SECS s, $(nproc) cores)"

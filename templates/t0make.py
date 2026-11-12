@@ -49,6 +49,19 @@ def _spread(stretches, n):
     return [stretches[round(i * step)] for i in range(n)]
 
 
+def _silent(f):
+    """True when the trailer is in uploads and has no audio stream (the track is the trailer's own sound otherwise:
+    adv-20261112-sound-by-code item 1). A file not fetched yet counts as having sound."""
+    import subprocess
+    import cards as C
+    path = f if os.path.isabs(f) else C.U + f
+    if not os.path.exists(path):
+        return False
+    r = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'a', '-show_entries', 'stream=index', '-of', 'csv=p=0',
+                        path], capture_output=True, text=True)
+    return r.returncode == 0 and not r.stdout.strip()
+
+
 def make(kind, name, story, source, trailer, shots_json=None, theme='cold', label=None, date=None):
     import formats
     if kind not in formats.NEWS_MAP:
@@ -102,6 +115,9 @@ def make(kind, name, story, source, trailer, shots_json=None, theme='cold', labe
         'template': template, 'skin': 'house', 'cut': False,
         'track': [f, shots[foot_idx[0]][1]] if foot_idx else 'bed',
     }
+    if foot_idx and _silent(f):                            # footage with no audio stream: our bed, said why (12 Nov 2026)
+        job['track'] = 'bed'
+        job['bed_reason'] = f'silent footage: {f} has no audio stream'
     if sp or kind in buildgate.PERSON_KINDS:              # people stories show the person on frame 0 (23 Oct, 11 Nov)
         job['subject_person'] = sp
         job['person'] = [[TODO + ' (photo file in footage, or their best-known work with person_photo none)',

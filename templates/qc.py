@@ -120,6 +120,19 @@ def look_frames(job, out, tail=2.0):
     return paths
 
 
+def sound_of(job, log=None):
+    """adv-20261112-sound-by-code item 4: "trailer", "trailer-voiced" or "bed:<flavour>" (with the job's bed_reason),
+    from the render log's "render_job: sound:" line, else from the job."""
+    for ln in reversed(_log_lines(log) if log else []):
+        if ln.startswith('render_job: sound: '):
+            return ln[len('render_job: sound: '):].strip()
+    tr = job.get('track')
+    if tr and tr != 'bed':
+        return 'trailer-voiced' if (job.get('speech_ok') or job.get('speech_keep')) else 'trailer'
+    why = str(job.get('bed_reason') or '').strip()
+    return f"bed:{job.get('sound') or 'neon'}" + (f' ({why})' if why else '')
+
+
 def person_shown(job):
     """adv-20261111-person-stories-gate item 4: true when the job's first person window opens on frame 0, false when a
     person is its subject (subject_person, or the kind quote, people or cast) and none opens there, else "n/a"."""
@@ -149,7 +162,7 @@ def write(job, out, qc_path, autofix=None, log=None):
          'autofixed': autofix or [], 'job_sha': os.environ.get('JOB_SHA'),
          'dispatches': int(os.environ['DISPATCHES']) if os.environ.get('DISPATCHES', '').isdigit() else None,
          'source_summary': t.get('source_summary'), 'quality': t.get('quality'), 'final_enc': t.get('final_enc'),
-         'look_frames': look_frames(job, out), 'person_shown': person_shown(job)}
+         'look_frames': look_frames(job, out), 'person_shown': person_shown(job), 'sound': sound_of(job, log)}
     json.dump(d, open(qc_path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     return d
 
@@ -182,6 +195,15 @@ if __name__ == '__main__':
               f"{len(r['notes'])} notes, {len(r['look_frames'])} look frames")
         if r['verdict'] == 'fail':
             print('QC_JSON: ' + json.dumps(r, ensure_ascii=False))
+    elif a[:1] == ['sound-entry'] and len(a) >= 4:   # the render's commit step: sound and footage on its render-times entry
+        job = json.load(open(a[1], encoding='utf-8'))
+        import buildgate
+        times = json.load(open(a[3], encoding='utf-8'))
+        if times and isinstance(times[-1], dict):
+            times[-1]['sound'] = sound_of(job, a[2])
+            times[-1]['footage'] = buildgate.footage_job(job)
+            json.dump(times, open(a[3], 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
+            print(f"qc: sound {times[-1]['sound']}, footage {times[-1]['footage']}")
     elif a[:1] == ['fail'] and len(a) >= 3:
         r = fail(json.load(open(a[1], encoding='utf-8')), a[2], opt('--log'))
         print(f"qc: {r['name']}: fail, {len(r['findings'])} findings")
