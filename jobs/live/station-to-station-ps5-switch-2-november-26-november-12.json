@@ -244,6 +244,13 @@
    "alternatives": "none",
    "crop": "picker focus",
    "music": "trailer own sound"
+  },
+  {
+   "beat": "sound",
+   "shot": "track from 5.5 s",
+   "alternatives": "audio split with effects: 39.3% music, under the 40% floor (effects-led)",
+   "music": "music_only: the trailer's music stem alone (leak 0.1%), no effects, because the shots come from other moments"
   }
- ]
+ ],
+ "music_only": true
 }
