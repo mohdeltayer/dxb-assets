@@ -67,5 +67,25 @@
    "v": 1,
    "file": "cards/2026-11/kingdom-two-crowns-pharaoh-lands-december-1-november-13-reel-v1.mp4"
   }
- ]
+ ],
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/kingdom-two-crowns-pharaoh-lands-december-1-november-13-reel-v1.mp4",
+  "blob": "8aa4b7bebac1318c88578eae3f8d0a3d80b6df74",
+  "at": "2026-11-12T20:57:39Z",
+  "note": "qc pass, 0 findings, sound our bed neon_e with bed_reason (two trailers checked); length 16.4 s",
+  "checklist": {
+   "job": "jobs/live/kingdom-two-crowns-pharaoh-lands-december-1-november-13.json",
+   "sha256": "a546e60eed94319a8d3c011633a5ea2cc6cd8568a1504429527fa01370814068",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "qc-server",
+  "qc": "pass",
+  "looked": null
+ }
 }
