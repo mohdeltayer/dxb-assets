@@ -202,5 +202,15 @@
    "crop": "picker focus",
    "music": "trailer own sound"
   }
- ]
+ ],
+ "layout": "showcase",
+ "showcase_reason": "source fails the quality gate when enlarged 2.2x: Steam trailer is letterboxed with only 866 to 948 rows of picture",
+ "lowres_ok": {
+  "searched": [
+   "Steam store trailers (all seven, the launch trailer is the best 1080p copy, letterboxed)",
+   "Games Press (assets need a login)",
+   "PlayStation Store and Xbox Store pages (no separate video)"
+  ],
+  "result": "no copy with 1080 rows of picture"
+ }
 }
