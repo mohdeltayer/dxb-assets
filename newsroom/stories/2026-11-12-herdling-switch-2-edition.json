@@ -12,7 +12,7 @@
  ],
  "category": "launch",
  "priority": "medium",
- "status": "building",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://nintendoeverything.com/herdling-just-got-a-nintendo-switch-2-edition/",
@@ -54,7 +54,12 @@
  "template": "split",
  "chip": "تقرير",
  "footage": "Steam official Gameplay Trailer, app 3047750, clean continuous stretch 42.97 to 62.0 s (shotpick), trailer own sound",
- "versions": [],
+ "versions": [
+  {
+   "v": 1,
+   "file": "cards/2026-11/herdling-switch-2-edition-november-12-reel-v1.mp4"
+  }
+ ],
  "ledger_find": {
   "at": "2026-11-12T00:43:54Z",
   "words": [
@@ -67,5 +72,23 @@
   "instagram": "ظهرت نسخة جديدة من Herdling لجهاز Nintendo Switch 2 على متجر eShop، حسب موقع نينتيندو إفريثينغ (Nintendo Everything).\n\nوعدت النسخة بدقة أعلى وتفاصيل أدق وأداء أفضل. اللعبة من تطوير أوكوموتيف (Okomotive) ونشر بانيك (Panic)، وصدرت سابقًا على Nintendo Switch. لم يُعلن السعر بعد، وقد تحتاج النسخة يومًا لتظهر في بعض المناطق.\n\nنسخة اللعبة على Steam تدعم اللغة العربية، حسب صفحتها على المتجر.\n\n#ألعاب #أخبار_الألعاب #Herdling #NintendoSwitch2"
  },
  "grammar_review": "no required edits (house glossary, perfect-arabic skill and orthography read); DeepL whole-story forward pass matched; back-check meaning ok",
- "approved": "buffer slot helper B: Thu 12 Nov 06:15 Dubai (02:15Z), Instagram, X, Threads; تقرير, re-check before it publishes"
+ "approved": "scheduled in Publer 02:15Z (06:15 Dubai Thu 12 Nov) Instagram, X, Threads, buffer slot helper B; qc.json pass, one dispatch (render 166 s); gate 00:35Z; تقرير, re-check before publish; sound: trailer own sound, audio split applied (music 64.9%)",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/herdling-switch-2-edition-november-12-reel-v1.mp4",
+  "blob": "40c6fa8e344ca65089baffcb42e6d8582e076a04",
+  "at": "2026-11-12T00:55:57Z",
+  "note": "server qc.json verdict pass, no findings",
+  "checklist": {
+   "job": "jobs/live/herdling-switch-2-edition-november-12.json",
+   "sha256": "40f637f5e02f9d03728743cdf36febd32946ddbbb373e613aeadbc3b089e843c",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "server-qc"
+ }
 }
