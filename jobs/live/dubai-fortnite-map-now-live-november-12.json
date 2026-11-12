@@ -67,5 +67,36 @@
  "layout": "showcase",
  "showcase_reason": "the source video is the news itself and only 720p",
  "lowres_ok": "DMCC promo (Mohammad's file) 1280x720: DMCC site, Wild Unlimited, Epic and YouTube have no video of the live island",
- "sound": null
+ "sound": "neon_b",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: DMCC promo video read frame by frame (headline and subline), DMCC release 2 Nov and Tbreak read; live status rests on the video, label متوفر الآن with DMCC named",
+  "SOURCE: not already posted": "yes: ledger find recorded; 9 Nov Reel was the pre-launch announcement, this is the live update",
+  "SOURCE: age": "yes: video 12 Nov, launch day 11 Nov, under 24 hours of the live claim",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE launch": "yes: what, who built it, what it is not (Epic), platforms and code not claimed",
+  "STORY: spoken paragraph, subject before pronoun": "yes: L1 names الجزيرة and DMCC, L2 فيها, L3 الجزيرة; no line opens on و",
+  "STORY: release verbs": "yes: متاحة للعب الآن, no bare تصل",
+  "STORY: names match names-ar.md": "yes: DMCC مركز دبي للسلع المتعددة, Wild Unlimited وايلد أنليميتد, Epic Games إيبك غيمز, brackets at first mention",
+  "POST: Arabic passes": "yes: two skills applied, western digits, DeepL whole-story back-check matched (متاحة/available, ولا ترعاها/not sponsored), forward pass picked ours",
+  "SOUND: footage sound or bed with reason": "yes: our bed, the promo audio is near silent at -42 dB mean, nothing to keep",
+  "SOUND: no speech under Arabic lines": "yes: no speech in the file",
+  "PICTURE: footage first": "yes: the DMCC promo itself, showcase layout because 720p and burnt-in text would be cut by a 9:16 crop",
+  "CREDIT: on every clip": "yes: المصدر: مركز دبي للسلع المتعددة (DMCC) over shot 0",
+  "PICTURE: not the same as last 5 reels": "yes: no other Reel uses it"
+ },
+ "angle": {
+  "hook": "The Dubai Fortnite island is now live, says DMCC",
+  "why_now": "Launch day was 11 Nov; DMCC promo went out saying the map is live",
+  "what_it_means_here": "Ten Dubai landmarks playable worldwide in Fortnite; independent island by Wild Unlimited, not Epic's",
+  "payoff": "Epic neither sponsors nor runs it"
+ },
+ "decision_log": [
+  {
+   "beat": "0 whole clip",
+   "shot": "0 to 14.7 s",
+   "alternatives": "9:16 crop cuts the burnt-in headline and logos, 2.7x enlargement",
+   "crop": "showcase layout",
+   "music": "our bed"
+  }
+ ]
 }
