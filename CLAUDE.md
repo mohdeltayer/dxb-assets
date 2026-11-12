@@ -3594,3 +3594,26 @@ render-times.json). H (server QC verdict) and I (parallel runners) follow as the
 4. Parallel renders (I): the picture-pass cache and the end-card master now write per-process temp files, so two server
    jobs never collide; uploads and temp folders are per job already. A second runner instance on dxb-render-1 needs a
    runner registration as root (lines in the release note).
+
+## What the server measures fails the Reel (adv-20261112-qc-notes-become-failures, Mohammad 12 Nov 2026; release 2026-11-12 r1)
+
+Case: the Roblox Saudi games Reel (12 Nov, deleted by Mohammad about 13:00 Dubai) had qc verdict pass with its own notes
+saying lifeless 68 (88% still), "close: the last 2 s are a card", story lines drawn across the card's text, a still
+figure, a thumbnail on a white plate and two empty placeholder rows.
+1. One fact, one place, in code: over one of our -gfx- cards a story line is one visual line at most and its box stays
+   clear of the card's text box (8 px margin), or it is dropped. The text check refuses it (`card_line`, "collision:")
+   before the render, on the server and in prerender mode text.
+2. qc.json findings (verdict fail): lifeless `over` (storybeat and tribute exempt), "close:" (the last two seconds are a
+   card; storybeat exempt), length under 12 s before the end card (formats.LENGTH_EXEMPT and the breaking profile
+   exempt). In the last 60 renders that is 9 footage Reels under 12 s, 1 close on a card, 1 lifeless.
+3. A failed verdict on dxb-render: the Reel, strip, sheet and qc.json are committed as evidence, the run fails, and the
+   Publer upload does not run. `presubmit.py director ... PASS` refuses a Reel whose qc.json says fail.
+4. Motion on our cards, on by default in the numbers and list templates (was an opt-in HyperFrames insert): a fact or
+   logofact figure counts up over 0.9 s and settles (dates, years, times and scores do not count); a ranking reveals its
+   rows from the last rank up, about 0.55 s a row, carrying on from the card before when a countdown is split over two
+   cards. Rows not yet revealed are not drawn: never an empty placeholder. `"animate": false` on a card turns it off,
+   `"animate": true` turns it on in any template. Breaking skips it.
+5. Art behind numbers: the still ground's image has a short side of 720 px or more (a store thumbnail is refused), and a
+   logofact's logo is a cut-out PNG with transparency (a game tile or photo on the white plate is refused).
+6. Card-led templates (numbers, list, explainer, quote, edition): the server writes three 360 px look frames (first,
+   middle, last story frame) beside qc.json; the director PASS needs `--looked "<what they show>"`.

@@ -785,3 +785,12 @@ render-times.json). H (server QC verdict) and I (parallel runners) follow as the
    at most one numbers card in the batch; facts from Rockstar or Take-Two only, Gulf prices from the stores.
 3. Theme `gtavi`: teal into blue violet lines, sunset amber chip, no pink; series only, outside the look rotation
    (render_job.series). Each episode re-gated on its day before 20:00 Dubai.
+
+## What the server measures fails the Reel (adv-20261112-qc-notes-become-failures, 12 Nov 2026)
+1. Over one of our cards a story line is one visual line, clear of the card's text, or dropped (text check `card_line`).
+2. qc verdict fail on: lifeless over (storybeat, tribute exempt), the last 2 s a card, under 12 s before the end card
+   (LENGTH_EXEMPT and breaking exempt). A failed Reel is committed as evidence, never uploaded; the director PASS refuses it.
+3. Numbers and list cards move by default: the figure counts up, ranking rows come in one by one; no empty placeholder
+   rows. `"animate": false` to turn off.
+4. Still-ground art 720 px or more on its short side; a logofact logo is a transparent cut-out, never a game tile.
+5. Card-led templates: three look frames beside qc.json; the director PASS carries `--looked`.

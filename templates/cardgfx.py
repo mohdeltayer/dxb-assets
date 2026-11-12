@@ -11,6 +11,9 @@ Each card is drawn on a transparent canvas (numgfx.canvas) and the shot that nam
 (`-gfx-` in the file name) lays it on the ground as before (numgfx.slide; `ground_footage`
 puts the game's trailer behind it). One fact per card, held alone or under a one-line frame
 (CLAUDE.md, 14 Oct 2026: one fact, one place)."""
+import os
+import re
+
 from PIL import Image, ImageDraw, ImageFilter
 import fast_ar as A, ig_ar as G, numgfx as NG, reel as RL
 
@@ -30,7 +33,7 @@ def _vwidth(probe, value, size):
     return probe.textlength(value, font=f, **G.AR), 0
 
 
-def fact(path, value, label=None, note=None, theme='cold'):
+def fact(path, value, label=None, note=None, theme='cold', fit=None):
     """One figure or date, large, on a soft plate tinted with the theme; an optional label above
     it (body colour, accent rule under it) and an optional note below (ink). Label and note open
     on an Arabic word; nothing leaves the safe zone; no text under numgfx.MIN_TEXT."""
@@ -44,7 +47,8 @@ def fact(path, value, label=None, note=None, theme='cold'):
     left, right = A.THEMES[theme][:2]
     probe = ImageDraw.Draw(Image.new('L', (NG.W, NG.H)))
     room = X1 - X0 - 72
-    vs = next((s for s in VALUE_SIZES if _vwidth(probe, value, s)[0] <= room), None)
+    fv = value if fit is None else (tuple(fit) if isinstance(fit, list) else fit)   # a count-up frame keeps the final size
+    vs = next((s for s in VALUE_SIZES if _vwidth(probe, fv, s)[0] <= room), None)
     if vs is None:
         raise ValueError(f'card value is wider than the plate at {VALUE_SIZES[-1]} px: {value}')
     for t, w, s in ((label, 'Medium', LABEL), (note, 'Medium', NOTE)):
@@ -349,8 +353,9 @@ def ranking(path, rows, title=None, theme='cold', show=None):
     """The countdown table: `rows` in rank order, first (the leader) first, 3 to 6 of them, each
     {"rank": "5", "name": "Game Boy Advance", "value": "81.51", "unit": "مليون جهاز", "image": "gba", "n": 81.51}.
     Every row: the rank badge, the product tile, the name, the figure with its unit, and a bar whose length follows `n`
-    against the largest. `show` reveals that many rows from the bottom up (the countdown: show=1 is rank 5 alone); rows
-    not yet revealed stay as faint empty slots, so the plate never jumps."""
+    against the largest. `show` reveals that many rows from the bottom up (the countdown: show=1 is rank 5 alone); a row
+    not yet revealed is not drawn at all, its place on the plate left clear so the plate never jumps (never an empty
+    placeholder in a finished frame: adv-20261112-qc-notes-become-failures item 4)."""
     if not 3 <= len(rows) <= 6:
         raise ValueError(f'the ranking holds 3 to 6 rows, not {len(rows)}')
     RL.rtl_starts([r['unit'] for r in rows] + ([title] if title else []), 'ranking card')
@@ -375,17 +380,14 @@ def ranking(path, rows, title=None, theme='cold', show=None):
         revealed = i >= n_rows - shown
         cy = y + row_h // 2
         d = ImageDraw.Draw(im)
-        if i:
-            d.line([X0 + 40, y, X1 - 40, y], fill=right + (60,), width=2)
-        d.ellipse([bx_r - 64, cy - 32, bx_r, cy + 32], fill=(right + (230,)) if revealed else (255, 255, 255, 26))
-        d.text((bx_r - 32, cy + 4), str(r['rank']), font=A.F('Bold', 40), fill=A.GROUND if revealed else A.BODY,
-               anchor='mm')
-        tx1 = bx_r - 64 - 16                          # tile right edge
-        if not revealed:
-            d.rounded_rectangle([tx1 - tile, cy - tile // 2, tx1, cy + tile // 2], radius=20, outline=(255, 255, 255, 40), width=2)
-            d.rounded_rectangle([X0 + 48, cy - 7, tx1 - tile - 20, cy + 7], radius=7, fill=BAR_TRACK)
+        if not revealed:                              # nothing drawn: no faint slot, no empty bar track
             y += row_h
             continue
+        if i and i > n_rows - shown:                  # the rule between two revealed rows only
+            d.line([X0 + 40, y, X1 - 40, y], fill=right + (60,), width=2)
+        d.ellipse([bx_r - 64, cy - 32, bx_r, cy + 32], fill=right + (230,))
+        d.text((bx_r - 32, cy + 4), str(r['rank']), font=A.F('Bold', 40), fill=A.GROUND, anchor='mm')
+        tx1 = bx_r - 64 - 16                          # tile right edge
         im.alpha_composite(_tile(r['image'], tile, tile, radius=20), (tx1 - tile, cy - tile // 2))
         d = ImageDraw.Draw(im)
         tr = tx1 - tile - 20                          # text right edge
@@ -466,7 +468,7 @@ def duo(path, title, right, left, footer=None, theme='cold', stage=2):
 FILL_SIZES = (170, 156, 144, 132, 120, 108, 96, 84)
 
 
-def logofact(path, value, label, note, note2=None, top=None, logo=None, theme='cold'):
+def logofact(path, value, label, note, note2=None, top=None, logo=None, theme='cold', fit=None):
     """A numbers card that wears its brand and uses the frame: an optional top line (Bold 62, under the chip row),
     the official logo on a white plate at LOGO_BOX, then one plate down to the safe floor holding the label, the
     figure (the largest size that fits the plate's width) and up to two supporting lines."""
@@ -478,7 +480,7 @@ def logofact(path, value, label, note, note2=None, top=None, logo=None, theme='c
     left, right = A.THEMES[theme][:2]
     probe = ImageDraw.Draw(Image.new('L', (NG.W, NG.H)))
     room = X1 - X0 - 44
-    vs = next((s for s in FILL_SIZES if probe.textlength(value, font=A.F('Bold', s), **G.AR) <= room), None)
+    vs = next((s for s in FILL_SIZES if probe.textlength(fit or value, font=A.F('Bold', s), **G.AR) <= room), None)
     if vs is None:
         raise ValueError(f'card value too wide: {value}')
     for t, w, s in ((label, 'Medium', 52), (note, 'Medium', 54), (note2, 'Medium', 46)):
@@ -521,5 +523,78 @@ KINDS = {'logofact': logofact, 'fact': fact, 'scores': scores, 'verdict': verdic
 
 def build(item, path, theme):
     """One card from a job file's "gfx" entry."""
-    kw = {k: v for k, v in item.items() if k not in ('file', 'kind')}
+    kw = {k: v for k, v in item.items() if k not in ('file', 'kind', 'animate')}
     return KINDS[item.get('kind', 'fact')](path, theme=kw.pop('theme', theme), **kw)
+
+
+# ---------- motion on our own cards (adv-20261112-qc-notes-become-failures item 4, Mohammad 12 Nov 2026) ----------
+# The figure counts up and a ranking's rows come in one by one, on by default in the numbers and list templates (it was an
+# opt-in HyperFrames insert). Each card becomes a few stages that numgfx.slide lays over the moving ground in turn.
+ANIMATED = ('numbers', 'list')    # templates where our cards move by default; "animate": false on a card turns it off
+COUNT_SECS = 0.9                  # the count-up runs this long, then the figure holds
+COUNT_STEPS = 12
+ROW_STEP = 0.55                   # one ranking row every this many seconds, bottom (the last rank) first
+_NUM = re.compile(r'\d[\d,]*(?:\.\d+)?')
+
+
+def animated(item, job):
+    """True when this card moves: "animate" on the card wins, else the job's template is in ANIMATED."""
+    if 'animate' in item:
+        return bool(item['animate'])
+    return job.get('template') in ANIMATED and item.get('kind', 'fact') in ('ranking', 'fact', 'logofact')
+
+
+MONTHS = ('يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر')
+
+
+def _counted(value, k):
+    """`value` with its first number at share k (0 to 1) of the way up, in the same format (decimals, thousands commas).
+    None when it is not a figure to count: a date (a month name, a bare year), a time, a score or a ratio (':' or '/')."""
+    m = _NUM.search(value)
+    if not m or any(x in value for x in MONTHS) or ':' in value or '/' in value:
+        return None
+    if re.fullmatch(r'(19|20)\d\d', m.group(0)):
+        return None
+    raw = m.group(0)
+    dec = len(raw.split('.')[1]) if '.' in raw else 0
+    n = float(raw.replace(',', '')) * k
+    txt = f'{n:,.{dec}f}' if ',' in raw else f'{n:.{dec}f}'
+    return value[:m.start()] + txt + value[m.end():]
+
+
+def stages(item, path, theme, secs, start=0):
+    """[(png, from second)] for an animated card (the last stage is the card itself, already at `path`), or None when
+    the card has nothing to move (no number in its figure, a kind without motion). A ranking reveals its rows up to its
+    own `show` (all rows by default); `start` is how many rows the card before it already showed (a countdown split over
+    two cards carries on from there instead of starting again)."""
+    kind = item.get('kind', 'fact')
+    base = os.path.splitext(path)[0]
+    if kind == 'ranking':
+        n = len(item['rows'])
+        final = min(n, int(item.get('show') or n))
+        ks = list(range(start, final)) if start > 0 else list(range(1, final))
+        if not ks:
+            return None
+        step = min(ROW_STEP, max(0.25, (secs - 1.2) / len(ks)))
+        out = []
+        for i, k in enumerate(ks):
+            f = f'{base}-stage{k}.png'
+            build(dict(item, show=k), f, theme)
+            out.append((f, round(i * step, 3)))
+        return out + [(path, round(len(ks) * step, 3))]
+    if kind not in ('fact', 'logofact'):
+        return None
+    value = item.get('value')
+    tail = value[1] if isinstance(value, (list, tuple)) else value
+    if not isinstance(tail, str) or _counted(tail, 1.0) is None:
+        return None
+    dur = min(COUNT_SECS, max(0.3, secs - 1.2))
+    out = []
+    for k in range(COUNT_STEPS):
+        share = 1 - (1 - k / COUNT_STEPS) ** 3             # ease out: fast, then settling on the figure
+        v = _counted(tail, share)
+        v = [value[0], v] if isinstance(value, (list, tuple)) else v
+        f = f'{base}-count{k}.png'
+        build(dict(item, value=v, fit=value), f, theme)
+        out.append((f, round(k * dur / COUNT_STEPS, 3)))
+    return out + [(path, round(dur, 3))]
