@@ -3640,3 +3640,14 @@ Case: 7 of 17 footage news Reels on 10 and 11 Nov had no trailer track, and the 
    else the everyday bed rested longest in templates/assets/bed-ledger.json; the entry is committed with the render.
 4. qc.json and render-times carry "sound" (trailer, trailer-voiced, bed:<flavour> with its reason); the work order alarms
    on three footage Reels in a row on a bed.
+
+## Scout verdicts on the work order (adv-20261111-scout-verdicts-on-work-order, Mohammad 11 Nov 2026; release 2026-11-12 r4)
+
+1. The server reads the digest inbox read only (key in /etc/dxb-scout/agentmail.key) and parses each item's VERDICT,
+   LABEL, FACTS, FOOTAGE and NOT CONFIRMED (ops/backoffice/scout/verdicts.py).
+2. It opens each Primary and checks the FACTS: source_confirmed, source_unreadable or mismatch.
+3. The work order lists each lead with link, label, facts, footage and what is not confirmed. رسمي only when
+   source_confirmed on a company page; otherwise the scout's label, never stronger; a CONFIRMED on a page not opened is
+   تقرير. DENIED is listed, never built.
+4. Production 2 builds a source_confirmed lead without searching; its text still matches the named source.
+5. Items with no verdict lines pass through as today. Measure: source_confirmed per day on the work order.

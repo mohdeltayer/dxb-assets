@@ -328,3 +328,8 @@ a run that has not been updated still reads them.
    each trailer checked and why it was unusable, or the Reel is numbers, stills, retro, storybeat, sales, results,
    tribute or "legal": true. Do not choose an everyday bed: the server picks it from the ledger (the chip's flavour for
    عاجل, متوفر الآن, أرقام). qc.json says "sound"; three footage Reels in a row on a bed raise a work-order alarm.
+14. Scout verdict leads (release 2026-11-12 r4, adv-20261111-scout-verdicts-on-work-order). Section 4 of the work order
+   lists the scout's checked leads. "source_confirmed": the server opened the primary and found the facts, so skip the
+   search and build with the label given (never stronger). "source_unreadable": open it yourself, or build as تقرير
+   naming the outlet. "mismatch": the listed facts were not on the page; fix them from the page or label تقرير. "DENIED":
+   do not build. The text still says only what the named source says.
