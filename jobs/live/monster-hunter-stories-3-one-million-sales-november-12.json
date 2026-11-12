@@ -7,20 +7,6 @@
  "out": "cards/2026-11/monster-hunter-stories-3-one-million-sales-november-12-reel-v1.mp4",
  "footage": [
   {
-   "file": "monster-hunter-stories-3-one-million-sales-november-12-pv4k.mp4",
-   "steam": 2852190,
-   "trailer": "PV_Steam_EN-US",
-   "start": 0,
-   "seconds": 240
-  },
-  {
-   "file": "monster-hunter-stories-3-one-million-sales-november-12-pv4.mp4",
-   "steam": 2852190,
-   "trailer": "40063_GOLD_PV4",
-   "start": 0,
-   "seconds": 240
-  },
-  {
    "file": "monster-hunter-stories-3-one-million-sales-november-12-pv5.mp4",
    "steam": 2852190,
    "trailer": "50063_MHST3_PV5",
@@ -28,28 +14,156 @@
    "seconds": 240
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "monster-hunter-stories-3-one-million-sales-november-12-pv5.mp4",
+   144.92,
+   3.5,
+   [
+    [
+     0.0,
+     0.473
+    ]
+   ]
+  ],
+  [
+   "monster-hunter-stories-3-one-million-sales-november-12-pv5.mp4",
+   148.42,
+   3.56,
+   [
+    [
+     0.0,
+     0.473
+    ]
+   ]
+  ],
+  [
+   "monster-hunter-stories-3-one-million-sales-november-12-pv5.mp4",
+   152.28,
+   2.37,
+   [
+    [
+     0.0,
+     0.748
+    ]
+   ]
+  ],
+  [
+   "monster-hunter-stories-3-one-million-sales-november-12-pv5.mp4",
+   154.65,
+   4.0,
+   [
+    [
+     0.0,
+     0.674
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "كابكوم: مبيعاتها تجاوزت\nمليون نسخة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   3,
+   [
+    [
+     "حسب جيماتسو (Gematsu)، تحقق ذلك\nبعد ثمانية أشهر من الإطلاق",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   3,
+   "المصدر: كابكوم (Capcom)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "مبيعات تتجاوز المليون\nلعبة Monster Hunter Stories 3",
  "label": "تقرير",
  "source": "جيماتسو (Gematsu)",
  "date": "11 Nov 2026",
- "theme": "cold",
+ "theme": "spectacle",
  "style": null,
  "template": "split",
  "skin": "house",
  "cut": false,
- "track": "bed",
+ "track": [
+  "monster-hunter-stories-3-one-million-sales-november-12-pv5.mp4",
+  144.92
+ ],
  "strip": [
   [
-   "TODO",
-   "TODO"
+   "المنصات",
+   "PS5 · Xbox · Switch 2 · PC"
   ],
   [
-   "TODO",
-   "TODO"
+   "العربية",
+   "مدعومة على Steam"
   ]
  ],
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots",
+ "reel_check": {
+  "SOURCE: primary read in full": "partial: Gematsu read in full 04:50Z, RPG Site second outlet via search, Steam page read; Capcom's own post not opened, so label تقرير",
+  "SOURCE: not already posted": "yes: ledger find monster hunter stories, 0 hits for the sales story",
+  "SOURCE: age": "yes: first report Gematsu 10 Nov 20:58 EST, under 24 hours at build, not in Arabic outlets",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE numbers": "yes: figure over one million, period eight months after launch, source Capcom via Gematsu, no comparison stated",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names the game, L1 names Capcom, no line opens on و",
+  "STORY: release verbs": "yes: no release verb used, تجاوزت for sales",
+  "STORY: names match names-ar.md": "yes: Capcom and Gematsu with brackets, game names in English",
+  "POST: Arabic passes": "yes: two skills applied, western digits, no first person; DeepL forward pass whole story and phrase alternatives read",
+  "SOUND: footage sound or bed with reason": "yes: PV5 trailer own sound, one continuous stretch from 144.92 s",
+  "SOUND: no speech under Arabic lines": "server speech check is final",
+  "PICTURE: footage first": "yes: official Steam PV5, stretch 144.92 to 158.65 s clean per shotpick",
+  "PICTURE: not the same as last 5 reels": "yes: Monster Hunter Stories 3 not used by any Reel in the last days",
+  "CREDIT: on every clip": "yes: المصدر: كابكوم (Capcom) over shots 0 to 3"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "144.92 to 148.42 s",
+   "alternatives": "PV6 and PV4K have almost no clean shots (text overlays)",
+   "crop": "picker focus",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "1 L1 Capcom announced",
+   "shot": "148.42 to 151.98 s",
+   "alternatives": "none",
+   "crop": "picker focus",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "2 L2 eight months after launch",
+   "shot": "152.28 to 158.65 s",
+   "alternatives": "none",
+   "crop": "picker focus",
+   "music": "trailer own sound"
+  }
+ ],
+ "angle": {
+  "hook": "Capcom's turn-based Monster Hunter spin-off has passed one million sales",
+  "why_now": "announced 10 Nov, first reported by Gematsu, no Arabic outlet coverage found",
+  "what_it_means_here": "the Steam version supports Arabic",
+  "payoff": "one million in eight months on four platforms"
+ }
 }
