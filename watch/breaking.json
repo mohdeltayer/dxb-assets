@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T13:15:09Z",
- "seq": 374,
+ "generated_at": "2026-11-12T13:20:17Z",
+ "seq": 375,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 12617,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "World War Z - Viral State Launch Trailer | PS5 & PS4 Games",
+   "url": "https://www.youtube.com/watch?v=qLUWYcbddJA",
+   "published": "2026-11-12T13:15Z",
+   "first_seen": "2026-11-12T13:20:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/qLUWYcbddJA/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=qLUWYcbddJA"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 375
+  }
+ ],
+ "recent": [
   {
    "id": 12600,
    "source": "PlayStation (YouTube)",
@@ -25,9 +48,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 374
-  }
- ],
- "recent": [
+  },
   {
    "id": 12591,
    "source": "PlayStation Blog",
@@ -563,32 +584,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 329
-  },
-  {
-   "id": 11633,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Clive Barker's Hellraiser: Revival - Demo Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=u81XGvb_OZw",
-   "published": "2026-11-11T13:00Z",
-   "first_seen": "2026-11-11T13:20:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/u81XGvb_OZw/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=u81XGvb_OZw"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 327
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T13:15:04Z",
+  "last_poll_at": "2026-11-12T13:20:14Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
