@@ -12,7 +12,7 @@
  ],
  "category": "awards",
  "priority": "medium",
- "status": "dropped",
+ "status": "scheduled",
  "sources": [
   {
    "url": "https://www.gamesradar.com/games/all-the-golden-joystick-awards-2026-winners-revealed/",
@@ -73,15 +73,15 @@
  "chip": "رسمي",
  "versions": [
   {
-   "v": 1,
-   "file": "cards/2026-11/resident-evil-requiem-golden-joystick-ultimate-goty-november-12-reel-v1.mp4"
+   "v": 2,
+   "file": "cards/2026-11/resident-evil-requiem-golden-joystick-ugoty-pv3-november-12-reel-v1.mp4"
   }
  ],
  "footage": {
-  "file": "Capcom official Resident Evil Requiem PV1 (Steam app 3764200), clean stretches, credited",
-  "sound": "our bed"
+  "file": "Capcom official Resident Evil Requiem PV3 (Steam app 3764200), six clean stretches via shotpick, decode clean, credited",
+  "sound": "our bed (PV3 stretches 20 to 100 s apart, no coherent stretch)"
  },
- "approved": "not scheduled: render failed 7 times on blocky smear / corrupt cache in Capcom PV1 (Steam HLS copy has NAL errors; server cache clip EBML error twice). Facts verified (GamesRadar). Retry on another trailer copy (PV3 or Launch PV from Capcom's site) if still wanted.",
+ "approved": "scheduled in Publer 03:15Z (07:15 Dubai Thu 12 Nov) Instagram, X, Threads (buffer slot); ids ending 7d37 (IG), fbca (X), 7d5f (Threads); gate 01:20Z: GamesRadar read earlier 00:40Z, no denial; رسمي; qc pass, 2 dispatches (first stopped on a letterboxed shot at 40.6 s, replaced); DeepL back-check matched",
  "ledger_find": {
   "at": "2026-11-12T00:40:00Z",
   "words": [
@@ -89,5 +89,8 @@
    "resident evil requiem"
   ],
   "hits": []
+ },
+ "texts": {
+  "x_threads": "لعبة Resident Evil Requiem تتوّج بلقب لعبة العام في جوائز غولدن جويستيك (Golden Joystick Awards) 2026، وتنال أيضًا جائزة أفضل مقطع دعائي، حسب موقع غيمز رادار (GamesRadar)."
  }
 }
