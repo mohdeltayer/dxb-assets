@@ -1,10 +1,37 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T15:10:09Z",
- "seq": 383,
+ "generated_at": "2026-11-12T15:15:18Z",
+ "seq": 384,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 12756,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "25 Years of XBOX",
+   "url": "https://news.xbox.com/en-us/2026/11/12/25-years-of-xbox/",
+   "published": "2026-11-12T15:13Z",
+   "first_seen": "2026-11-12T15:15:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Adventure_MSFT-Founders_16x9-7fa018e1614372382bf9.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/FlightSim_Quake_16x9-90252d6bdc97d20e9d8a.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Xbox_Launch_Ad_16x9-22a03660357dd1de6104.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 384
+  }
+ ],
+ "recent": [
   {
    "id": 12748,
    "source": "Nintendo of America (YouTube)",
@@ -25,9 +52,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 383
-  }
- ],
- "recent": [
+  },
   {
    "id": 12707,
    "source": "PlayStation (YouTube)",
@@ -638,32 +663,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 335
-  },
-  {
-   "id": 11711,
-   "source": "Nintendo of America (YouTube)",
-   "source_kind": "youtube",
-   "title": "Hello! Pikmin – #03 Bowling – Nintendo",
-   "url": "https://www.youtube.com/watch?v=qOFd1pHYTmc",
-   "published": "2026-11-11T15:00Z",
-   "first_seen": "2026-11-11T15:10:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/qOFd1pHYTmc/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=qOFd1pHYTmc"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 333
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T15:10:04Z",
+  "last_poll_at": "2026-11-12T15:15:14Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 6,
