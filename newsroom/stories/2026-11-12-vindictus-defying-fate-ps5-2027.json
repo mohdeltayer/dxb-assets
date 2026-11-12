@@ -52,5 +52,25 @@
   "ig_caption": "رسميًا، لعبة الأكشن Vindictus: Defying Fate قادمة إلى PS5\n\nأعلنت نكسون كوريا (Nexon Korea) عبر مدونة بلايستيشن (PlayStation Blog) أن Vindictus: Defying Fate قادمة إلى PS5 العام المقبل. وقال المخرج الرئيسي دونغسوك أوه (Dongseok Oh) إنها لعبة أكشن وتقمص أدوار بعالم خيالي من العصور الوسطى، مستوحى من الأساطير الكلتية، وتدور أحداثها حول حرب بين البشر وكائنات Fomors.\n\nيختار اللاعب بين أربعة أبطال، هم Lann وFiona وDelia وKarok، ولكل منهم أسلوب قتال مختلف، ويصنع أسلحته ويخصص مظهر بطله. كما يحضّر الفريق محتوى للعب الجماعي.\n\nلم يُعلن موعد الإصدار ولا السعر بعد، وصفحة اللعبة متاحة الآن في متجر PS Store لإضافتها إلى قائمة الأمنيات.\n\n#ألعاب #أخبار_الألعاب #Vindictus #PS5",
   "x": "رسميًا: Vindictus: Defying Fate قادمة إلى PS5 العام المقبل، حسب مدونة بلايستيشن (PlayStation Blog). لعبة أكشن وتقمص أدوار بأجواء الأساطير الكلتية من نكسون كوريا (Nexon Korea)، ولم يُعلن الموعد ولا السعر بعد."
  },
- "grammar_review": "self-run 16:50Z, glossary and rules read: no required edits; DeepL whole-story forward pass and phrase alternatives compared: kept قادمة إلى (house rule) over ستصدر, قائمة الأمنيات over قائمة رغباتك, أكشن وتقمص أدوار over DeepL's تقمص أدوار وحركة"
+ "grammar_review": "self-run 16:50Z, glossary and rules read: no required edits; DeepL whole-story forward pass and phrase alternatives compared: kept قادمة إلى (house rule) over ستصدر, قائمة الأمنيات over قائمة رغباتك, أكشن وتقمص أدوار over DeepL's تقمص أدوار وحركة",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/vindictus-defying-fate-ps5-2027-november-12-reel-v1.mp4",
+  "blob": "af6acef60d921a39c588cc5f7df578aede54148e",
+  "at": "2026-11-12T16:56:48Z",
+  "note": "server qc.json pass: 0 findings, sound bed:neon_c, stills reason no_footage",
+  "checklist": {
+   "job": "jobs/live/vindictus-defying-fate-ps5-2027-november-12.json",
+   "sha256": "9ed2aab70ee2616e4d57c21112d5ef90cb28c2fc7229f871666bcca5098cc6fc",
+   "ok": true,
+   "problems": [],
+   "template": "stills",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "qc-server",
+  "qc": "pass",
+  "looked": null
+ }
 }

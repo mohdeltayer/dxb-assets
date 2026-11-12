@@ -10,7 +10,7 @@
  ],
  "category": "release",
  "priority": "medium",
- "status": "built",
+ "status": "scheduled",
  "claimed_by": "helper-0315",
  "lane": "Digital Lounge only",
  "slot": "03:15 Dubai 2026-11-13",
@@ -72,5 +72,14 @@
  "texts": {
   "x_threads": "صدرت اليوم على Steam الحزمة الثالثة من إضافات Hearts of Iron IV بسعر 168 درهمًا في متجر Steam في الإمارات. أبرز ما فيها إعادة صياغة طال انتظارها لمحتوى الولايات المتحدة، حسب صفحتها على المتجر.",
   "instagram": "صدرت اليوم الحزمة الثالثة من إضافات Hearts of Iron IV على Steam.\n\nتقول شركة باراداكس إنتراكتيف (Paradox Interactive) إن Expansion Pass 3 تقدم محتوى جديدًا للعبة، وأبرز ما فيها إعادة صياغة طال انتظارها لمحتوى الولايات المتحدة، إلى جانب تغييرات في الصناعة والدبلوماسية وفي دول كثيرة.\n\nسعر الحزمة 168 درهمًا في متجر Steam في الإمارات، وهي متاحة للحاسب فقط، حسب صفحتها على المتجر.\n\n#ألعاب #أخبار_الألعاب #HeartsofIronIV #Steam"
- }
+ },
+ "gate": "gate 16:45Z: Steam store page (appdetails cc=ae) and Paradox Steam news read; digest had no VERDICT lines for this lead; no denial expected for an official release",
+ "approved": "scheduled in Publer 23:15Z Thu 12 Nov (03:15 Dubai Fri 13 Nov) Instagram 11aec6, X 69e2d1, Threads 69e2d8; qc.json pass, 0 findings; render dispatches 3 (shot under 960 rows dropped, trailer effects-led so our bed with reason, reel_check wording); sound: our bed (trailer music 26.9%)",
+ "versions": [
+  {
+   "v": 1,
+   "file": "cards/2026-11/hoi4-expansion-pass-3-now-available-november-12-reel-v1.mp4"
+  }
+ ],
+ "grammar_review": "no required edits; DeepL whole-story forward pass matched, alternatives التوسع/بطاقة التوسعة rejected per glossary"
 }
