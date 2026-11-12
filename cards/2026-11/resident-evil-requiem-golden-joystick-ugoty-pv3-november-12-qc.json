@@ -1,0 +1,22 @@
+{
+ "name": "resident-evil-requiem-golden-joystick-ugoty-pv3-november-12",
+ "out": "cards/2026-11/resident-evil-requiem-golden-joystick-ugoty-pv3-november-12-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-12T01:30:08Z",
+ "findings": [],
+ "notes": [
+  "length 17.0 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 0.7, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 2.96, \"held_under_text\": 0.047, \"secs\": 16.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "80c68bb24c0e4f80bbc7e862cc36441e3053adc8",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.83,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18"
+}
