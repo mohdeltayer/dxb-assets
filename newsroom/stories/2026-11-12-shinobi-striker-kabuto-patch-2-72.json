@@ -11,7 +11,7 @@
  ],
  "category": "update",
  "priority": "medium",
- "status": "building",
+ "status": "scheduled",
  "claimed_by": "production-2 helper 00:15 slot",
  "claimed_at": "2026-11-12T15:45Z",
  "sources": [
@@ -66,5 +66,32 @@
   "x_threads": "تحديث جديد للعبة Shinobi Striker من بانداي نامكو (Bandai Namco) يضيف شخصية Kabuto Yakushi بنمط Sage Mode، ويمكن لجميع اللاعبين اللعب بها عند صدور الحزمة، حسب صفحة الشركة الرسمية.",
   "instagram": "ينضم Kabuto Yakushi بنمط Sage Mode إلى Shinobi Striker مع التحديث 2.72، حسب صفحة بانداي نامكو (Bandai Namco) الرسمية.\n\nتضيف حزمة Master Character Training Pack 50 هذه الشخصية، وهي الثالثة من فئة Master Character في Season Pass 10، ويمكن لجميع اللاعبين اللعب بها عند صدور الحزمة. كما يعدّل التحديث هجمات Deidara وKonan، ويرفع مدة تأثير Body Activation من 5 إلى 10 ثوانٍ.\n\nتتوفر اللعبة على PS4 وXbox One وSteam.\n\n#ألعاب #أخبار_الألعاب #ShinobiStriker #Naruto"
  },
- "grammar_review": "required edits applied before build: لشخصيتي (reads as my characters) to لكل من; ثالث شخصية to الشخصية الثالثة; DeepL whole-story forward pass read, alternatives سيتمكن/متاح, kept ours; no optional suggestions"
+ "grammar_review": "required edits applied before build: لشخصيتي (reads as my characters) to لكل من; ثالث شخصية to الشخصية الثالثة; DeepL whole-story forward pass read, alternatives سيتمكن/متاح, kept ours; no optional suggestions",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/shinobi-striker-kabuto-patch-2-72-november-12-reel-v1.mp4",
+  "blob": "d73c586d9bd8c02af171d7852425d2a0b403a853",
+  "at": "2026-11-12T16:18:23Z",
+  "note": "qc.json pass, no findings; trailer sound, audio split applied",
+  "checklist": {
+   "job": "jobs/live/shinobi-striker-kabuto-patch-2-72-november-12.json",
+   "sha256": "d88c2c79883259bc770936d305126972037d359f8291e0057d982e22238586ab",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-helper",
+  "qc": "pass",
+  "looked": null
+ },
+ "approved": "scheduled in Publer 20:15Z (00:15 Dubai Fri 13 Nov) Instagram, X, Threads; qc.json pass, one dispatch; gate 15:50Z, primary Bandai Namco page; sound: trailer, audio split applied; recheck within the hour before publish",
+ "versions": [
+  {
+   "v": 1,
+   "file": "cards/2026-11/shinobi-striker-kabuto-patch-2-72-november-12-reel-v1.mp4"
+  }
+ ]
 }
