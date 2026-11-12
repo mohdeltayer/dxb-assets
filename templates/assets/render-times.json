@@ -45407,5 +45407,57 @@
   "story": "famitsu-nov2-8-sales",
   "job_sha": "23e6f4c0c87c7dd320e91a2d611d31bded2631c6",
   "dispatches": 1
+ },
+ {
+  "name": "fatal-fury-laocorn-gaudeamus-dlc-november-19-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-12T14:53Z",
+  "stages": {
+   "checks": 0.7,
+   "montage": 7.8,
+   "text": 44.1,
+   "audio": 0.7,
+   "outro": 28.6
+  },
+  "total": 81.9,
+  "lane": "runner",
+  "queued_at": "2026-11-12T14:48:57Z",
+  "finished_at": "2026-11-12T14:53Z",
+  "render_min": 1.37,
+  "sources": [],
+  "source_summary": {
+   "min_height": null,
+   "max_zoom": null,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 21.0,
+   "still_share": 0.172,
+   "longest_still": 3.0,
+   "cuts_per_10s": 3.52,
+   "held_under_text": 0.053,
+   "secs": 22.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 263,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1025,
+  "peak_mem_mb": 3148,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 60444,
+  "peak_disk_mb": 62449,
+  "min_disk_free_mb": 85347,
+  "setup_min": 0.77,
+  "story": "fatal-fury-laocorn-gaudeamus-dlc-november-19"
  }
 ]
