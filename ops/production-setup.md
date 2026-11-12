@@ -309,3 +309,17 @@ a run that has not been updated still reads them.
    `job=<name>` (a bare name is fine). A fix goes onto the current job file, never a restore of an older commit (the
    render refuses an older version). Our own cards never trip the smear flag. A director PASS is final; pixel-art hit
    effects are not gore. Target: one render per Reel; three in 24 hours raise a work-order alarm.
+11. QC failures (release 2026-11-12 r1, adv-20261112-qc-notes-become-failures). A Reel whose qc.json says `fail` is
+   not posted: render-live commits it as evidence, fails the run with the findings in its summary and skips the Publer
+   upload; `presubmit.py director ... PASS` refuses it. Failures: lifeless over 38 (storybeat and tribute exempt), the
+   last two seconds a card, under 12 s before the end card (handson, edition, storybeat and breaking exempt), a story
+   line of two visual lines over a card or touching its text (the text check refuses it before the render). Numbers
+   and list cards now count up and reveal rows by themselves (`"animate": false` turns it off); still-ground art needs
+   a short side of 720 px; a logofact logo is a transparent cut-out. For numbers, list, explainer, quote and edition,
+   read the three `<name>-look-N.jpg` frames beside qc.json and pass `--looked "<what they show>"` with the PASS.
+12. People stories (release 2026-11-12 r2, adv-20261111-person-stories-gate). Every story file carries
+   "subject_person": null, or {"name", "role", "photo_source"} when a person is the news (a quote, an interview, an
+   appointment, an award, a departure). When set, or the kind is quote, people or cast, the job copies subject_person and
+   carries a "person" window opening at 0.0 s (photo box and name plate on the cover); no licensed photo: "person_photo":
+   "none" with "searched": [where you looked] and the window shows their best-known work. "report" is never the kind of
+   a one-game story: use what happened (date, delay, reveal, sales, update, people, quote) and put تقرير in the label.
