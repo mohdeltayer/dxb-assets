@@ -1,0 +1,179 @@
+{
+ "name": "resident-evil-requiem-golden-joystick-ugoty-pv3-november-12",
+ "story": "2026-11-12-re-requiem-golden-joystick",
+ "kind_news": "awards",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/resident-evil-requiem-golden-joystick-ugoty-pv3-november-12-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "resident-evil-requiem-golden-joystick-ugoty-pv3-november-12-trailer.mp4",
+   "steam": 3764200,
+   "trailer": "RE9_PV3",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [
+  [
+   "resident-evil-requiem-golden-joystick-ugoty-pv3-november-12-trailer.mp4",
+   9.01,
+   3.0,
+   [
+    [
+     0.0,
+     0.294
+    ]
+   ]
+  ],
+  [
+   "resident-evil-requiem-golden-joystick-ugoty-pv3-november-12-trailer.mp4",
+   30.73,
+   3.0,
+   [
+    [
+     0.0,
+     0.294
+    ]
+   ]
+  ],
+  [
+   "resident-evil-requiem-golden-joystick-ugoty-pv3-november-12-trailer.mp4",
+   40.64,
+   3.0,
+   [
+    [
+     0.0,
+     0.294
+    ]
+   ]
+  ],
+  [
+   "resident-evil-requiem-golden-joystick-ugoty-pv3-november-12-trailer.mp4",
+   79.51,
+   4.0,
+   [
+    [
+     0.0,
+     0.705
+    ]
+   ]
+  ],
+  [
+   "resident-evil-requiem-golden-joystick-ugoty-pv3-november-12-trailer.mp4",
+   100.96,
+   3.0,
+   [
+    [
+     0.0,
+     0.072
+    ]
+   ]
+  ],
+  [
+   "resident-evil-requiem-golden-joystick-ugoty-pv3-november-12-trailer.mp4",
+   123.8,
+   3.0,
+   [
+    [
+     0.0,
+     0.108
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "جوائز غولدن جويستيك تتوّج\nلعبة Resident Evil Requiem",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "كما نالت اللعبة جائزة\nأفضل مقطع دعائي",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   5,
+   [
+    [
+     "أما جائزة أفضل أداء رئيسي\nفكانت للممثلة أنجيلا سانت ألبانو",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   5,
+   "المصدر: كابكوم (Capcom)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "تتويج Requiem بلقب\nلعبة العام",
+ "label": "رسمي",
+ "source": "غيمز رادار (GamesRadar)",
+ "date": "12 Nov 2026",
+ "theme": "spectacle",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": "bed",
+ "sound": null,
+ "pace_ok": false,
+ "genre": [
+  "horror",
+  "industry/hardware"
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: GamesRadar (the Golden Joystick organiser's outlet) winners page, headline and category list read 12 Nov 00:40Z; Output Lag and Inven Global corroborate",
+  "SOURCE: not already posted": "yes: ledger find 'Golden Joystick' and 'Resident Evil Requiem' no hits",
+  "SOURCE: age": "yes: ceremony 11 Nov evening London, first report under 12 hours",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE esports": "n/a: awards result",
+  "STORY: spoken paragraph, subject before pronoun": "yes: L1 names the game, L2 اللعبة, L3 names the award and the actress",
+  "STORY: release verbs": "n/a: no release",
+  "STORY: names match names-ar.md": "yes: Golden Joystick, Capcom credit with Arabic then Latin, game name English only",
+  "POST: Arabic passes": "yes: arabic-games-film-editor then grammar pass, DeepL whole-story forward pass matched",
+  "SOUND: footage sound or bed with reason": "yes: our bed; six stretches 20 to 100 s apart in PV3, trailer audio would sit under other moments' shots",
+  "SOUND: no speech under Arabic lines": "yes: bed only",
+  "PICTURE: footage first": "yes: Capcom's official Resident Evil Requiem PV3 (Steam app 3764200), decode clean, shotpick clean map",
+  "PICTURE: not the same as last 5 Reels": "yes: Dota 2 footage not used in recent Reels",
+  "PICTURE: crop per beat": "yes: shotpick focus per shot, gameplay montage, no text at window edge",
+  "PICTURE: credit on every clip": "yes: credit 0 to 7 over every shot",
+  "PICTURE: headline not over a face": "yes: focus per shotpick, shot sheet read by the qc",
+  "CHECKS: decision log": "yes: decision_log in the job"
+ },
+ "decision_log": [
+  {
+   "beat": "all",
+   "shot": "six 3 s stretches of Capcom PV3 from shotpick clean map (9.0 to 124 s, source order)",
+   "alternatives": "PV1 Steam copy (smear), Launch PV (ESRB card, text)",
+   "crop": "shotpick focus",
+   "music": "our bed: PV3 stretches 20 to 100 s apart, no single coherent stretch"
+  }
+ ],
+ "note": "Golden Joystick 2026: Resident Evil Requiem Ultimate Game of the Year. Footage Capcom PV3 (Steam), our bed."
+}
