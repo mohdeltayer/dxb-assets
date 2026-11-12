@@ -1,6 +1,6 @@
 {
  "id": "2026-11-12-zero-hour-ps5-xbox-series-december-3",
- "status": "building",
+ "status": "scheduled",
  "claimed_by": "helper-0515",
  "lane": "Digital Lounge only",
  "slot": "05:15 Dubai 2026-11-13",
@@ -61,6 +61,18 @@
   "ig_first_comment": "المصدر: بيان سكاي ماب جيمز (Skymap Games)، 12 نوفمبر 2026"
  },
  "grammar_review": "self-run 17:55Z, glossary and rules read: no required edits; DeepL whole-story forward pass and phrase alternatives compared (kept اللعب المشترك over اللعب المتبادل, لتخصيص مظهر الأسلحة over حزم تجميلية, التعاون over اللعب التعاوني on screen for length); back-check matches meaning",
- "approved": "go: rolling queue; slot 05:15 Dubai Fri 13 Nov",
- "versions": []
+ "approved": "go: rolling queue; scheduled in Publer for 01:15Z (05:15 Dubai Fri 13 Nov) Instagram, X, Threads; qc pass",
+ "versions": [
+  {
+   "v": 1,
+   "file": "cards/2026-11/zero-hour-ps5-xbox-series-december-3-november-12-reel-v1.mp4"
+  }
+ ],
+ "director_check": {
+  "verdict": "PASS",
+  "by": "qc-server",
+  "qc": "pass",
+  "at": "2026-11-12T18:03Z",
+  "note": "qc pass, 0 findings, sound trailer (audio split music 85.6%), showcase layout for weak 1080p-letterboxed source; round 1 failed source quality, round 2 length 11.0 s, round 3 pass (dispatch 3 plus one empty-job dispatch)"
+ }
 }
