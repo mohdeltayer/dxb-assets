@@ -14,9 +14,155 @@
    "seconds": 240
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
+ "shots": [
+  [
+   "station-to-station-ps5-switch-2-november-26-november-12-trailer.mp4",
+   0.0,
+   2.31,
+   [
+    [
+     0.0,
+     0.271
+    ]
+   ]
+  ],
+  [
+   "station-to-station-ps5-switch-2-november-26-november-12-trailer.mp4",
+   3.75,
+   1.75,
+   [
+    [
+     0.0,
+     0.271
+    ]
+   ]
+  ],
+  [
+   "station-to-station-ps5-switch-2-november-26-november-12-trailer.mp4",
+   9.1,
+   4.0,
+   [
+    [
+     0.0,
+     0.802
+    ]
+   ]
+  ],
+  [
+   "station-to-station-ps5-switch-2-november-26-november-12-gfx-1.png",
+   null,
+   3.0,
+   null
+  ],
+  [
+   "station-to-station-ps5-switch-2-november-26-november-12-trailer.mp4",
+   18.28,
+   4.0,
+   [
+    [
+     0.0,
+     0.536
+    ]
+   ]
+  ],
+  [
+   "station-to-station-ps5-switch-2-november-26-november-12-trailer.mp4",
+   25.15,
+   3.01,
+   [
+    [
+     0.0,
+     0.531
+    ]
+   ]
+  ],
+  [
+   "station-to-station-ps5-switch-2-november-26-november-12-trailer.mp4",
+   46.83,
+   1.8,
+   [
+    [
+     0.0,
+     0.7
+    ]
+   ]
+  ],
+  [
+   "station-to-station-ps5-switch-2-november-26-november-12-trailer.mp4",
+   59.8,
+   2.75,
+   [
+    [
+     0.0,
+     0.47
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    "TODO"
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    "TODO"
+   ]
+  ],
+  [
+   4,
+   4,
+   [
+    "TODO"
+   ]
+  ],
+  [
+   5,
+   5,
+   [
+    "TODO"
+   ]
+  ],
+  [
+   6,
+   6,
+   [
+    "TODO"
+   ]
+  ],
+  [
+   7,
+   7,
+   [
+    "TODO"
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   2,
+   "المصدر: إنجن سوفتوير (Engine Software)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ],
+  [
+   4,
+   7,
+   "المصدر: إنجن سوفتوير (Engine Software)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
  "headline": "TODO",
  "label": "رسمي",
  "source": "إنجن سوفتوير (Engine Software)",
@@ -26,6 +172,21 @@
  "template": "clipcard",
  "skin": "house",
  "cut": false,
- "track": "bed",
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "track": [
+  "station-to-station-ps5-switch-2-november-26-november-12-trailer.mp4",
+  0.0
+ ],
+ "gfx": [
+  {
+   "file": "station-to-station-ps5-switch-2-november-26-november-12-gfx-1.png",
+   "kind": "fact",
+   "label": "TODO",
+   "value": "TODO",
+   "note": "TODO"
+  }
+ ],
+ "ground_footage": [
+  "station-to-station-ps5-switch-2-november-26-november-12-trailer.mp4",
+  3.75
+ ]
 }

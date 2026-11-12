@@ -3,7 +3,7 @@
  "story": "2026-11-12-fatal-fury-laocorn-gaudeamus-dlc",
  "kind_news": "crossover",
  "built_by": "production-2",
- "render_lane": "server",
+ "render_lane": "runner",
  "out": "cards/2026-11/fatal-fury-laocorn-gaudeamus-dlc-november-19-reel-v1.mp4",
  "footage": [
   {
@@ -140,5 +140,60 @@
    "SNK game site (background loop only, no Laocorn trailer file)",
    "Steam news (no Laocorn post yet)"
   ]
- }
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Gematsu article read in full 12 Nov (quotes SNK's release text); SNK page has no Laocorn entry yet; labelled تقرير, source named; first report Gematsu 17:22 Dubai",
+  "SOURCE: not already posted": "yes: ledger find fatal fury laocorn: 0 other hits",
+  "SOURCE: age": "yes: same day",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE release": "yes: fighter, date 19 Nov, base-game platforms, source Gematsu citing SNK; trailer not shown, said in stills_reason",
+  "STORY: spoken paragraph, subject before pronoun": "yes: L1 names Laocorn Gaudeamus, L2 هو refers to it; no line opens on و",
+  "STORY: release verbs": "yes: تصدر for the date, متوفرة الآن for the base game, no bare تصل",
+  "STORY: names match names-ar.md": "yes: إس إن كيه (SNK) first mention in the credit; game, character and item names in Latin",
+  "POST: Arabic passes": "yes: arabic-games-film-editor, arabic-writing, grammar pass inline; DeepL whole-story forward and back-check matched",
+  "SOUND: footage sound or bed with reason": "yes: our bed: stills Reel; the Laocorn trailer is YouTube only, no downloadable official file",
+  "SOUND: no speech under Arabic lines": "yes: bed only",
+  "PICTURE: footage first": "yes: with reason: motion sources checked, see stills_reason",
+  "PICTURE: not the same as last 5 Reels": "yes: no Fatal Fury Reel in the ledger today",
+  "PICTURE: credit on every clip": "yes: one SNK credit over all shots from frame 0",
+  "PICTURE: headline not over a face": "yes: headline in the top band",
+  "CHECKS: decision_log": "yes: decision_log in the job"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "Gematsu/SNK key screenshot of Laocorn (2560x1440)",
+   "alternatives": "none",
+   "crop": "autofocus",
+   "music": "our bed (stills)"
+  },
+  {
+   "beat": "1 L1 date",
+   "shot": "SNK character art of Laocorn, portrait",
+   "alternatives": "banner strip (too short for 9:16)",
+   "crop": "centre",
+   "music": "bed"
+  },
+  {
+   "beat": "2 L2 film villain",
+   "shot": "Steam screenshot of the game (illustration)",
+   "alternatives": "none",
+   "crop": "centre",
+   "music": "bed"
+  },
+  {
+   "beat": "3 L3 armor",
+   "shot": "Steam screenshot of the game (illustration)",
+   "alternatives": "none",
+   "crop": "centre",
+   "music": "bed"
+  },
+  {
+   "beat": "4 L4 platforms",
+   "shot": "hook image again",
+   "alternatives": "none",
+   "crop": "centre",
+   "music": "bed"
+  }
+ ]
 }
