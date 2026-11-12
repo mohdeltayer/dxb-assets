@@ -1,10 +1,46 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T17:40:11Z",
- "seq": 395,
+ "generated_at": "2026-11-12T17:45:07Z",
+ "seq": 396,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 12978,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Resident Evil makes a home delivery on Sony Pictures Core",
+   "url": "https://www.youtube.com/shorts/gaF0dsDkiLc",
+   "published": "2026-11-12T17:35Z",
+   "first_seen": "2026-11-12T17:45:07Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/gaF0dsDkiLc/hqdefault.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 396
+  },
+  {
+   "id": 12979,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Phoenix Cyclops knows how to strike a pose, even mid-battle in MARVEL Tokon: Fighting Souls.",
+   "url": "https://www.youtube.com/shorts/W_Wjpk-oUbc",
+   "published": "2026-11-12T17:31Z",
+   "first_seen": "2026-11-12T17:45:07Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/W_Wjpk-oUbc/hqdefault.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 396
+  }
+ ],
+ "recent": [
   {
    "id": 12977,
    "source": "Nintendo US",
@@ -16,9 +52,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 395
-  }
- ],
- "recent": [
+  },
   {
    "id": 12951,
    "source": "Xbox (YouTube)",
@@ -836,7 +870,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T17:40:11Z",
+  "last_poll_at": "2026-11-12T17:45:07Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 6,
