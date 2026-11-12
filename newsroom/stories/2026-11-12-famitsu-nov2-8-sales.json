@@ -6,7 +6,7 @@
  "chip": "أرقام",
  "template": "numbers",
  "kind": "famitsu",
- "status": "building",
+ "status": "scheduled",
  "claimed_by": "builder",
  "first_report": "2026-11-12T13:00:00Z (Famitsu 22:00 JST)",
  "sources": [
@@ -56,5 +56,12 @@
    "source": "Famitsu"
   }
  ],
- "subject_person": null
+ "subject_person": null,
+ "sound": "our bed (stats)",
+ "drafts": {
+  "x": "تصدّرت Ocarina of Time قائمة مبيعات اليابان في أسبوع إطلاقها على Switch 2 بـ 537,041 نسخة، بينما حلّت Nintendo Switch Sports Resort ثانية بـ 16,621 نسخة، حسب مجلة فاميتسو (Famitsu).",
+  "notes": "DeepL back-check: meaning intact both ways (top seller, launch week, 537,041; second 16,621; hardware 53,104 vs 68,733). Grammar: game names feminine, Western digits, countable جهازًا. No server qc.json on the hosted lane; strip checked by eye."
+ },
+ "approved": "go: rolling queue; gate 14:00Z: Famitsu 202611/93799 and 93151 read in full, every figure from the article, hardware sums reproduce last week's numbers",
+ "scheduled": "scheduled in Publer 14:45Z (18:45 Dubai): Instagram (Reel, first comment source, Dubai location), X (follow-up with the Famitsu link), Threads; labels tpl:numbers, skin:house, sound:our bed"
 }
