@@ -152,10 +152,7 @@
  "template": "clipcard",
  "skin": "house",
  "cut": true,
- "track": [
-  "road-of-dust-and-sorrow-delayed-february-19-november-12-trailer.mp4",
-  7.41
- ],
+ "track": "bed",
  "gfx": [
   {
    "file": "road-of-dust-and-sorrow-delayed-february-19-november-12-gfx-1.png",
@@ -169,7 +166,6 @@
   "road-of-dust-and-sorrow-delayed-february-19-november-12-trailer.mp4",
   17.4
  ],
- "music_only": true,
  "angle": {
   "hook": "The Road of Dust and Sorrow moves from Dec 3, 2026 to Feb 19, 2027",
   "why_now": "developers' Steam post 11 Nov 19:46Z, new trailer shown at the Golden Joystick showcase",
@@ -188,7 +184,7 @@
   "STORY: names match names-ar.md": "yes: company Arabic then Latin at first mention; game and platforms Latin; physical edition avoided per glossary (نسخة في علبة)",
   "WRITING: headline and lines": "yes: headline hook is the delay to 19 Feb; lines do not repeat the card",
   "WRITING: X text names source": "yes: حسب إعلان مطوّري اللعبة على Steam",
-  "SOUND: footage sound or bed": "yes: music_only trailer stem",
-  "SOUND: no speech under lines": "yes: music_only strips voices"
+  "SOUND: footage sound or bed": "our bed. Reason: music_only stem of the Steam New Release Date Announcement Trailer measured 9.7% leftover (over the 5% limit), render stopped; other Steam trailers of the game not tried for time",
+  "SOUND: no speech under lines": "yes: our bed, footage sound not used"
  }
 }
