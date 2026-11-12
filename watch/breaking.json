@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T13:10:17Z",
- "seq": 373,
+ "generated_at": "2026-11-12T13:15:09Z",
+ "seq": 374,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 12600,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Vindictus: Defying Fate - Game Overview Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=R4Ql9j5O858",
+   "published": "2026-11-12T13:00Z",
+   "first_seen": "2026-11-12T13:15:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/R4Ql9j5O858/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=R4Ql9j5O858"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 374
+  }
+ ],
+ "recent": [
   {
    "id": 12591,
    "source": "PlayStation Blog",
@@ -41,9 +64,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 373
-  }
- ],
- "recent": [
+  },
   {
    "id": 12427,
    "source": "PlayStation (YouTube)",
@@ -567,7 +588,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T13:10:14Z",
+  "last_poll_at": "2026-11-12T13:15:04Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
@@ -575,7 +596,7 @@
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 39x)",
    "Nintendo of America (X) (HTTP 429, 63x)",
    "PlayStation (X) (HTTP 429, 80x)",
-   "PlayStation Middle East (X) (HTTP 429, 8x)",
+   "PlayStation Middle East (X) (HTTP 429, 9x)",
    "Rockstar Games (X) (HTTP 429, 34x)",
    "Xbox (X) (HTTP 429, 80x)"
   ]
