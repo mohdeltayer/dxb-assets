@@ -806,3 +806,8 @@ render-times.json). H (server QC verdict) and I (parallel runners) follow as the
    bed template or kind (numbers, stills, retro, storybeat, sales, results, tribute, legal).
 2. The server picks the bed from the ledger and commits it; jobs do not name an everyday bed.
 3. qc.json "sound"; three footage Reels in a row on a bed is a work-order alarm.
+
+## Scout verdicts (adv-20261111-scout-verdicts-on-work-order, 12 Nov 2026)
+1. The work order lists the scout's leads checked on the server: source_confirmed (build, no search), source_unreadable
+   (open it or build as تقرير), mismatch (fix or تقرير), denied (never).
+2. Label never stronger than the scout's; رسمي only when confirmed on a company page.
