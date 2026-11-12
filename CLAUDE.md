@@ -3628,3 +3628,15 @@ Case: the Harada Reel (11 Nov, 20:15 Dubai) had kind "report", TEKKEN 8 stand-in
    window shows the person's best-known work with the name plate and role.
 3. "report" is a label (تقرير), not a kind, for a one-game story: formats.pick refuses it; the kind is what happened.
 4. qc.json carries person_shown: true, false (a finding) or "n/a".
+
+## Sound by code (adv-20261112-sound-by-code, Mohammad 12 Nov 2026; release 2026-11-12 r3)
+
+Case: 7 of 17 footage news Reels on 10 and 11 Nov had no trailer track, and the bed ledger had not moved since 9 Nov.
+1. The scaffold (t0make) sets "track" from the trailer the shots come from, at the first shot's source second, whenever
+   the footage has an audio stream; silent footage gets "bed" with its bed_reason written.
+2. build_gate refuses a footage job with no track unless "bed_reason" names the trailers checked, or the template or
+   kind takes our bed (numbers, stills, retro, storybeat; sales, results; tribute; "legal": true).
+3. The server picks the bed: the chip's flavour (ig_ar.SOUNDS), the tribute's neon_c, a named occasion or retro flavour,
+   else the everyday bed rested longest in templates/assets/bed-ledger.json; the entry is committed with the render.
+4. qc.json and render-times carry "sound" (trailer, trailer-voiced, bed:<flavour> with its reason); the work order alarms
+   on three footage Reels in a row on a bed.
