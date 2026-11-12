@@ -555,6 +555,15 @@ def bed_alarms(times, now):
              'clears': 'the next footage Reel renders on its trailer track'}]
 
 
+def scout_verdicts(server):
+    """The scout's verdict lines, checked on the server against their primaries (adv-20261111-scout-verdicts-on-work-
+    order): {'leads': [...], 'measure': {...}} or {'unavailable': why}."""
+    sc = (server or {}).get('scout')
+    if not isinstance(sc, dict):
+        return {'unavailable': 'no server read'}
+    return sc
+
+
 def build(board, now, posts, orders=None, mirror=None, digest=None, server=None, history=None, server_at=None, times=None):
     alarms = hop_alarms(board, now, posts, mirror, server, history, server_at) + dispatch_alarms(times, now) + bed_alarms(times, now)
     hand = open_handoffs(board, now)
@@ -573,6 +582,7 @@ def build(board, now, posts, orders=None, mirror=None, digest=None, server=None,
         'handoffs': hand,
         'digest_head': head,
         'scout': scout_carry(board, now),
+        'verdicts': scout_verdicts(server),
         'next_slot': nxt,
         'caps': cp,
         'instructions': 'Production 2: execute this work order top to bottom. Clear the alarms first, then the orders '
@@ -632,6 +642,23 @@ def markdown(wo):
         bad = NOT_REASONS.search(r)
         L.append('   - last run rejected: %s%s' % (r, ' <- "%s" is not a reason: re-check and build as تقرير' % bad.group(0)
                                                    if bad else ''))
+    v = wo.get('verdicts') or {}
+    if v.get('unavailable'):
+        L.append('   - scout verdict lines: not read on the server (%s)' % v['unavailable'])
+    for ld in v.get('leads') or []:
+        if ld.get('denied'):
+            L.append('   - DENIED (do not build): %s (%s)' % (ld['headline'], ld.get('link') or 'no link'))
+            continue
+        how = {'source_confirmed': 'source_confirmed: build it, no search needed',
+               'source_unreadable': 'source_unreadable: open it yourself or build as تقرير naming the outlet',
+               'mismatch': 'mismatch: not found on the page: ' + '; '.join(ld.get('missing') or [])}[ld['result']]
+        L.append('%d. LEAD %s. Label %s (scout %s, verdict %s). %s. Link %s. Facts: %s. Footage: %s. Not confirmed: %s.' % (
+            num(), ld['headline'], ld.get('label'), ld.get('scout_label') or '?', ld.get('verdict') or '?', how,
+            ld.get('link') or 'none', ' / '.join(ld.get('facts') or []) or 'none', ld.get('footage') or 'none',
+            ld.get('not_confirmed') or 'nothing listed'))
+    if v.get('measure'):
+        L.append('   - measure, %s: %s of %s leads source_confirmed' % (v['measure'].get('day_dubai'),
+                 v['measure'].get('source_confirmed'), v['measure'].get('leads')))
     L += ['', '## 5. Next slot']
     L.append('%d. %s' % (num(), wo['next_slot']['line']))
     c = wo['caps']

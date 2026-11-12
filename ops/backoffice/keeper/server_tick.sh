@@ -58,12 +58,25 @@ fi
 # 4. Wake keeper.yml on this clock (every 10 minutes, and at :25 to :29 for the :30 work order).
 min=$((10#$(date -u +%M)))
 if [ "${KEEPER_DISPATCH:-on}" != off ] && [ -s "$KHOME/server-summary.json" ] && { [ $((min % 10)) -lt 5 ] || { [ "$min" -ge 25 ] && [ "$min" -lt 30 ]; }; }; then
+  # scout verdict lines checked against their primaries (adv-20261112-scout-verdicts-on-work-order); read only, and only
+  # when the digest inbox key is installed (/etc/dxb-scout/agentmail.key); otherwise the work order says so
+  SCOUT_KEY_FILE=${SCOUT_KEY_FILE:-/etc/dxb-scout/agentmail.key}
+  rm -f "$KHOME/scout-leads.json"
+  if [ -r "$SCOUT_KEY_FILE" ]; then
+    timeout 240 "$PY" "$REPO/ops/backoffice/scout/verdicts.py" run --key-file "$SCOUT_KEY_FILE" --out "$KHOME/scout-leads.json" \
+      >> "$KHOME/keeper.log" 2>&1 || true
+  fi
   if [ -r "$DISPATCH_TOKEN_FILE" ]; then
-    "$PY" - "$KHOME/server-summary.json" > "$KHOME/dispatch-body.json" <<'PYEOF'
-import json, sys
+    "$PY" - "$KHOME/server-summary.json" "$KHOME/scout-leads.json" "$SCOUT_KEY_FILE" > "$KHOME/dispatch-body.json" <<'PYEOF'
+import json, os, sys
 s = json.load(open(sys.argv[1]))
-print(json.dumps({'event_type': 'keeper-server', 'client_payload': {k: s.get(k) for k in
-      ('generated_at', 'publer_read_at', 'publer', 'posts', 'code')}}))
+p = {k: s.get(k) for k in ('generated_at', 'publer_read_at', 'publer', 'posts', 'code')}
+try:
+    sc = json.load(open(sys.argv[2]))
+    p['scout'] = {'generated_at': sc.get('generated_at'), 'leads': (sc.get('leads') or [])[:8], 'measure': sc.get('measure')}
+except (OSError, ValueError):
+    p['scout'] = {'unavailable': 'key not installed' if not os.access(sys.argv[3], os.R_OK) else 'read failed'}
+print(json.dumps({'event_type': 'keeper-server', 'client_payload': p}, ensure_ascii=False))
 PYEOF
     code=$(printf 'Authorization: Bearer %s\n' "$(tr -d '[:space:]' < "$DISPATCH_TOKEN_FILE")" |
       curl -sS -m 20 -o /dev/null -w '%{http_code}' -H @- -H 'Accept: application/vnd.github+json' \
