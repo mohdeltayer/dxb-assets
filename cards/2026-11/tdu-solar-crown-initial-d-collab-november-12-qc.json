@@ -1,0 +1,22 @@
+{
+ "name": "tdu-solar-crown-initial-d-collab-november-12",
+ "out": "cards/2026-11/tdu-solar-crown-initial-d-collab-november-12-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-12T10:53:04Z",
+ "findings": [],
+ "notes": [
+  "length 22.7 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 26.6, \"still_share\": 0.168, \"longest_still\": 2.9, \"cuts_per_10s\": 2.65, \"held_under_text\": 0.465, \"secs\": 22.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "b8cf1768c7c020218c282f94ca3e695bee5141e1",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": null,
+  "max_zoom": null,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18"
+}
