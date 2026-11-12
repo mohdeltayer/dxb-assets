@@ -3,7 +3,7 @@
  "story": "2026-11-12-re-requiem-golden-joystick",
  "kind_news": "awards",
  "built_by": "production-2",
- "render_lane": "server",
+ "render_lane": "hosted",
  "out": "cards/2026-11/resident-evil-requiem-golden-joystick-ultimate-goty-november-12-reel-v1.mp4",
  "footage": [
   {
@@ -237,5 +237,6 @@
    "music": "bed"
   }
  ],
- "note": "Golden Joystick 2026: Resident Evil Requiem Ultimate Game of the Year. Footage Capcom PV1, our bed."
+ "note": "Golden Joystick 2026: Resident Evil Requiem Ultimate Game of the Year. Footage Capcom PV1, our bed.",
+ "lane_reason": "server render failed twice on a corrupt cache clip (EBML error); 05:15 slot"
 }
