@@ -149,5 +149,21 @@
   "what_it_means_here": "Nintendo has no UAE or Saudi eShop, so the only price is the US store's 69.99 dollars",
   "payoff": "72 Dandori Academy stages released over time, voice commands, improved visuals; upgrade pack sold separately"
  },
- "sensitive": "none"
+ "sensitive": "none",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Nintendo US store page read in full 05:45Z (date, price, features); gate 05:50Z",
+  "SOURCE: not already posted": "yes: ledger find pikmin; earlier Pikmin posts were the 2 Nov demo story, not the launch",
+  "SOURCE: age": "yes: release day 12 Nov, under 24 hours, not in Arabic outlets",
+  "ANGLE before lines": "yes: angle in the job and story file",
+  "STORY TYPE launch": "yes: platform, date, price (US store only), what is new, upgrade pack in caption",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names Pikmin 4, L1 names النسخة, L2 continues, L3 كما تشمل النسخة; no line opens on و",
+  "STORY: release verbs": "yes: صدرت (out now), no bare تصل",
+  "STORY: names match names-ar.md": "yes: Nintendo as نينتيندو (Nintendo) in the credit; games and platforms in Latin",
+  "POST: Arabic passes": "yes: two skills, grammar review no required edits, DeepL whole-story and phrase pass matched",
+  "SOUND: footage sound or bed with reason": "yes: trailer music stem only (music_only); bed fallback only if the stem is unclean, reason: the whole store trailer is narrated",
+  "SOUND: no speech under Arabic lines": "yes: voices removed with the stem split; speech check is final",
+  "PICTURE: footage first": "yes: official Nintendo store trailer, one clean stretch 16.63 to 34.58 s",
+  "PICTURE: not the same as last 5 reels": "yes: no recent Reel uses Pikmin footage",
+  "CREDIT: on every clip": "yes: المصدر: نينتيندو (Nintendo) over shots 0 to 4"
+ }
 }
