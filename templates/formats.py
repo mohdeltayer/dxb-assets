@@ -131,6 +131,7 @@ NEWS_MAP = {
     'firmware':      ['explainer'],
     'format':        ['explainer'],                   # a new format, service or feature explained
     'cast':          ['quote'],
+    'people':        ['trailer', 'quote'],             # a person is the news: their photo box on frame 0 over their work (12 Nov 2026)
     'soundtrack':    ['edition', 'split'],
     'community_record': ['handson'],                  # permission and on-screen credit required
     'watch_guide':   ['split'],                       # times in Gulf time
@@ -148,12 +149,19 @@ JUDGEMENT = {
 }
 
 
-def pick(kind, facts=None, footage=None):
+REPORT_IS_A_LABEL = ('report: a label (the chip تقرير), not a kind of story (adv-20261111-person-stories-gate): a report '
+                     'about one game takes the kind of what happened (date, delay, reveal, sales, update, people, quote and '
+                     'so on) with "label": "تقرير"')
+
+
+def pick(kind, facts=None, footage=None, single_game=False):
     """The template for a kind of news: its first choice unless the ledger refuses it (a third in a row, a third
     card-led Reel in six, or a fifth of the day). `facts` is the brief's item count: a price story with more than three
     facts can never be split (advisor, 14 Oct 2026). `footage=True` (the game has official footage) turns `numbers`
     into `clipcard`: a trailer hook, one card with the figure, back to footage (advisor, 20 Oct 2026); numbers alone
     is for stories with no footage (Famitsu-style charts, company results, multi-game rankings)."""
+    if kind == 'report' and single_game:
+        raise ValueError(REPORT_IS_A_LABEL)
     opts = list(NEWS_MAP[kind])
     if kind == 'price' and facts is not None and facts > 3:
         opts = [f for f in opts if f != 'split'] or ['clipcard']

@@ -8,7 +8,7 @@ import unittest
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import buildgate as BG  # noqa: E402
 
-STORY = {'id': 's1', 'sources': [{'role': 'primary', 'url': 'https://example.com/a'}],
+STORY = {'id': 's1', 'subject_person': None, 'sources': [{'role': 'primary', 'url': 'https://example.com/a'}],
          'first_report': 'Publisher post, 5 Nov 09:00Z', 'source_type': 'primary',
          'footage': 'official trailer, Steam app 1', 'lane': 'digital-lounge', 'beat': 'trailer',
          'ledger_find': {'at': '2026-11-05T19:00:00Z', 'words': ['x'], 'hits': []}}

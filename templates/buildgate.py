@@ -224,6 +224,57 @@ def plate_cover_problems(job):
     return []
 
 
+PERSON_KINDS = ('quote', 'people', 'cast')     # kinds whose subject is a person; layoffs only with a subject_person
+PERSON_OPEN = 0.05                              # the person window opens on frame 0 (seconds)
+
+
+def single_game(story):
+    """True when the story is about one game (its "game" is one title, not a list or empty)."""
+    g = story.get('game')
+    return isinstance(g, str) and bool(g.strip()) and not re.search(r'\s(?:and|و)\s|,|،', g)
+
+
+def person_problems(job, story):
+    """People stories show the person (adv-20261111-person-stories-gate, Mohammad 11 Nov 2026; the Harada Reel went out
+    with no face and no name plate because "report" stood for the kind of story). The story file carries
+    "subject_person": null or {"name", "role", "photo_source"}. When it is set, or the kind is quote, people or cast, the
+    job carries "subject_person" (the same), a "person" entry opening on frame 0, and a kind other than report; with no
+    licensed photo, "person_photo": "none" and "searched": [where] and the person entry's picture is their best-known work
+    (the name plate with the role still shows). A report about one game takes the kind of what happened."""
+    out = []
+    if 'subject_person' not in story:
+        out.append('story file: "subject_person" missing: null, or {"name", "role", "photo_source"} when a person is the '
+                   'subject (adv-20261111-person-stories-gate)')
+    sp = story.get('subject_person')
+    if sp is not None and not (isinstance(sp, dict) and all(str(sp.get(k) or '').strip() for k in ('name', 'role', 'photo_source'))):
+        out.append('story file: "subject_person" is null or {"name", "role", "photo_source"} with all three filled')
+        sp = None
+    kind = job.get('kind_news')
+    if kind == 'report' and (sp or single_game(story)):
+        import formats
+        out.append('kind_news ' + formats.REPORT_IS_A_LABEL)
+    if not (sp or kind in PERSON_KINDS):
+        return out
+    if sp and job.get('subject_person') != sp:
+        out.append('job: "subject_person" is the story file\'s, copied (the server reads it for qc person_shown)')
+    p = job.get('person') or []
+    if not p:
+        who = f"{sp['name']} ({sp['role']})" if sp else 'the speaker'
+        out.append(f'person: a person is the subject ({who}): the job carries "person": [[photo, name, role, 0, t1, '
+                   '{...}]], the photo box and name plate opening on frame 0 (people rule, 23 Oct; face on the cover, 24 Oct)')
+    else:
+        try:
+            t0 = float(p[0][3])
+        except (IndexError, TypeError, ValueError):
+            t0 = None
+        if t0 is None or t0 > PERSON_OPEN:
+            out.append(f'person: the first person window opens at {t0} s; it opens on frame 0 (0.0), so the cover shows the face')
+    if str(job.get('person_photo') or '').strip().lower() == 'none':
+        if not [x for x in job.get('searched') or [] if str(x).strip()]:
+            out.append('person_photo "none" needs "searched": [the press site, the organiser, licensed sources checked]')
+    return out
+
+
 BACKDROP_EXEMPT = ('storybeat', 'retro')        # the storybook page and the CRT den draw their own picture
 
 
@@ -352,6 +403,7 @@ def problems(path, job):
             if s.get('source_type') and s.get('source_type') not in ('primary', 'secondary'):
                 out.append('story file: "source_type" must be primary or secondary')
             out += report_angle_problems(job, s)
+            out += person_problems(job, s)
             fo = str(s.get('footage') or '').strip().lower()
             if fo.startswith('stills') and len(fo) < 20:
                 out.append('story file: stills need the reason and the footage sources tried')
