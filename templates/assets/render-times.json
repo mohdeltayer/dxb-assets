@@ -45103,5 +45103,157 @@
   "story": "dubai-fortnite-map-now-live-november-12",
   "job_sha": "9d3705635016e428969f31d271236bfde129d5af",
   "dispatches": 1
+ },
+ {
+  "name": "dont-fret-december-8-november-12-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-12T12:52Z",
+  "stages": {
+   "checks": 5.0,
+   "montage": 48.8,
+   "text": 53.5,
+   "audio": 1.2,
+   "outro": 22.4
+  },
+  "total": 130.9,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-12T12:50Z",
+  "finished_at": "2026-11-12T12:52Z",
+  "render_min": 2.18,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "dont-fret-december-8-november-12-trailer.mp4",
+    "start": 2.26,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.58,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "dont-fret-december-8-november-12-winter.mp4",
+    "start": 0.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.75,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "dont-fret-december-8-november-12-winter.mp4",
+    "start": 2.9,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.75,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "dont-fret-december-8-november-12-winter.mp4",
+    "start": 5.9,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.75,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "dont-fret-december-8-november-12-winter.mp4",
+    "start": 16.78,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.75,
+    "rows": 970,
+    "zoom": 1.98,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "dont-fret-december-8-november-12-winter.mp4",
+    "start": 28.54,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.75,
+    "rows": 1058,
+    "zoom": 1.81,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "dont-fret-december-8-november-12-winter.mp4",
+    "start": 35.45,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.75,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "dont-fret-december-8-november-12-winter.mp4",
+    "start": 38.79,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.75,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.98,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 1.7,
+   "still_share": 0.017,
+   "longest_still": 0.2,
+   "cuts_per_10s": 8.19,
+   "held_under_text": 0.004,
+   "secs": 23.2,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 202,
+  "queue_wait_secs": 1,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1002,
+  "peak_mem_mb": 2708,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 27540,
+  "peak_disk_mb": 30781,
+  "min_disk_free_mb": 215325,
+  "setup_min": 0.13,
+  "story": "dont-fret-december-8-november-12",
+  "job_sha": "23e6f4c0c87c7dd320e91a2d611d31bded2631c6",
+  "dispatches": 1
  }
 ]
