@@ -53,7 +53,17 @@ def make(kind, name, story, source, trailer, shots_json=None, theme='cold', labe
     import formats
     if kind not in formats.NEWS_MAP:
         raise SystemExit(f't0make: kind {kind!r}: one of {", ".join(sorted(formats.NEWS_MAP))}')
-    template = formats.pick(kind, footage=True)
+    sf = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'newsroom', 'stories', f'{story}.json')
+    st = json.load(open(sf, encoding='utf-8')) if story and os.path.exists(sf) else {}
+    if story and 'subject_person' not in st:
+        raise SystemExit(f't0make: the story file needs "subject_person": null, or {{"name", "role", "photo_source"}} '
+                         f'when a person is the subject ({sf}; adv-20261111-person-stories-gate)')
+    sp = st.get('subject_person')
+    import buildgate
+    try:
+        template = formats.pick(kind, footage=True, single_game=buildgate.single_game(st) or bool(sp))
+    except ValueError as e:
+        raise SystemExit(f't0make: {e}')
     foot = _footage(trailer, name)
     f = foot['file']
     shots, note = [], None
@@ -92,6 +102,11 @@ def make(kind, name, story, source, trailer, shots_json=None, theme='cold', labe
         'template': template, 'skin': 'house', 'cut': False,
         'track': [f, shots[foot_idx[0]][1]] if foot_idx else 'bed',
     }
+    if sp or kind in buildgate.PERSON_KINDS:              # people stories show the person on frame 0 (23 Oct, 11 Nov)
+        job['subject_person'] = sp
+        job['person'] = [[TODO + ' (photo file in footage, or their best-known work with person_photo none)',
+                          (sp or {}).get('name') or TODO, (sp or {}).get('role') or TODO, 0.0, 3.5,
+                          {'credit': TODO}]]
     if template == 'split':
         job['strip'] = [[TODO, TODO], [TODO, TODO]]
     if gfx:

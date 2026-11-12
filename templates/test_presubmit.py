@@ -10,7 +10,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import buildgate as BG  # noqa: E402
 import presubmit as PS  # noqa: E402
 
-STORY = {'id': 's1', 'sources': [{'url': 'https://example.com/a'}], 'first_report': 'post, 5 Nov 09:00Z',
+STORY = {'id': 's1', 'subject_person': None, 'sources': [{'url': 'https://example.com/a'}], 'first_report': 'post, 5 Nov 09:00Z',
          'source_type': 'primary', 'footage': 'official trailer', 'lane': 'digital-lounge', 'beat': 'trailer',
          'ledger_find': {'at': 'x', 'words': ['x'], 'hits': []}}
 RC = [{'line': f'l{i}', 'answer': 'yes', 'evidence': 'e'} for i in range(9)]

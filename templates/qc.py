@@ -120,19 +120,36 @@ def look_frames(job, out, tail=2.0):
     return paths
 
 
+def person_shown(job):
+    """adv-20261111-person-stories-gate item 4: true when the job's first person window opens on frame 0, false when a
+    person is its subject (subject_person, or the kind quote, people or cast) and none opens there, else "n/a"."""
+    p = job.get('person') or []
+    try:
+        opens = bool(p) and float(p[0][3]) <= 0.05
+    except (IndexError, TypeError, ValueError):
+        opens = False
+    if opens:
+        return True
+    if job.get('subject_person') or job.get('kind_news') in ('quote', 'people', 'cast'):
+        return False
+    return 'n/a'
+
+
 def write(job, out, qc_path, autofix=None, log=None):
     import textrules as TR
     notes = [ln.strip() for ln in _log_lines(log) if NOTE.match(ln.strip())] if log else []
     soft = [f for f in TR.check(job) if f not in TR.hard([f])]
     t = _times(os.path.basename(out))
     found = findings_from_notes(job, notes)
+    if person_shown(job) is False:                 # the people rule: the gate refuses it; a Reel that slips through fails
+        found.append({'check': 'person', 'detail': 'a person is the subject and no photo box opens on frame 0'})
     d = {'name': job.get('name'), 'out': out, 'verdict': 'fail' if found else 'pass',
          'at': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
          'findings': found, 'notes': notes[:60] + [f"estimate: {f['where']}: {f['fix']}" for f in soft],
          'autofixed': autofix or [], 'job_sha': os.environ.get('JOB_SHA'),
          'dispatches': int(os.environ['DISPATCHES']) if os.environ.get('DISPATCHES', '').isdigit() else None,
          'source_summary': t.get('source_summary'), 'quality': t.get('quality'), 'final_enc': t.get('final_enc'),
-         'look_frames': look_frames(job, out)}
+         'look_frames': look_frames(job, out), 'person_shown': person_shown(job)}
     json.dump(d, open(qc_path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     return d
 
