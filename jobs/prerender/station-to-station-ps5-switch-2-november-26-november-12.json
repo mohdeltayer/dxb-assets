@@ -117,7 +117,7 @@
    3,
    [
     [
-     "54 مرحلة في 7 مناطق\nمع وضع إبداعي",
+     "تضم 54 مرحلة في 7 مناطق\nمع وضع إبداعي",
      {
       "size": 54
      }
@@ -160,7 +160,7 @@
    }
   ]
  ],
- "headline": "لعبة Station to Station\nإلى PS5 و Switch 2",
+ "headline": "لعبة Station to Station\nقادمة إلى PS5 و Switch 2",
  "label": "رسمي",
  "source": "إنجن سوفتوير (Engine Software)",
  "date": "12 Nov 2026",
@@ -185,5 +185,65 @@
  "ground_footage": [
   "station-to-station-ps5-switch-2-november-26-november-12-trailer.mp4",
   9.1
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Engine Software and Galaxy Grove press release on Games Press, dateline Utrecht 12 Nov 2026, read in full 14:55Z; Steam appdetails read; Gematsu, Nintendo Everything and Nintendo Life carry it; release's About paragraph says Oct 29 for console launch, a conflict with Nov 26 elsewhere in the same release, which Gematsu, Nintendo Everything and Nintendo Life all repeat as Nov 26, so Nov 26 is used",
+  "SOURCE: not already posted": "yes: ledger find station to station recorded, no earlier Station to Station story",
+  "SOURCE: age": "yes: first report 12 Nov 2026 (press release), under 24 hours",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE date": "yes: date 26 Nov, platforms PS5 and Switch 2, price $17.99 with 20 percent eShop discount, what it is, each from the press release",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names the game, L1 says what it is, card gives date and pre-order price, L2 levels and regions, L3 Switch 2 mouse, L4 Steam Arabic; no line opens on و",
+  "STORY: release verbs": "yes: قادمة إلى in the headline, no bare تصل",
+  "STORY: names match names-ar.md": "yes: Games Press not named on screen; Galaxy Grove credited with bracket; Engine Software as source with bracket",
+  "POST: Arabic passes": "yes: arabic-games-film-editor and arabic-writing loaded fresh, conventions read; DeepL whole-story forward pass and phrase alternatives compared: kept مرحلة (puzzle levels) over DeepL's مستوى, الحجز المسبق (glossary) over الطلبات المسبقة, الوضع الإبداعي kept",
+  "SOUND: footage sound or bed with reason": "yes: trailer own sound, stretch from 5.5 s of the Steam launch trailer",
+  "SOUND: no speech under Arabic lines": "yes: voiceless launch trailer; server speech check is final",
+  "PICTURE: footage first": "yes: official Steam launch trailer of Station to Station, clipcard with one date and price card",
+  "PICTURE: not the same as last 5 reels": "yes: picture: Station to Station, no other Reel uses it",
+  "CREDIT: on every clip": "yes: المصدر: غالاكسي غروف (Galaxy Grove) over shots 0 to 7"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "5.5 to 8.3 s",
+   "alternatives": "0 to 2.31 s (logo slate stretch)",
+   "crop": "picker focus 0.802",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "1 what it is",
+   "shot": "9.1 to 13.5 s",
+   "alternatives": "none needed",
+   "crop": "picker focus",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "2 date and price card",
+   "shot": "card over the trailer at 9.1 s",
+   "alternatives": "strip (split at daily cap)",
+   "crop": "n/a",
+   "music": "trailer"
+  },
+  {
+   "beat": "3 levels",
+   "shot": "18.28 to 22.58 s",
+   "alternatives": "46.83 s",
+   "crop": "picker focus",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "4 Switch 2 mouse",
+   "shot": "25.15 s and 29.71 s",
+   "alternatives": "none",
+   "crop": "picker focus",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "5 Steam Arabic",
+   "shot": "59.8 s and 46.83 s",
+   "alternatives": "none",
+   "crop": "picker focus",
+   "music": "trailer own sound"
+  }
  ]
 }
