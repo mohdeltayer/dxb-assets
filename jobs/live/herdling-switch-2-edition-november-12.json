@@ -1,0 +1,220 @@
+{
+ "name": "herdling-switch-2-edition-november-12",
+ "story": "2026-11-12-herdling-switch-2-edition",
+ "kind_news": "date",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/herdling-switch-2-edition-november-12-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "herdling-switch-2-edition-november-12-trailer.mp4",
+   "steam": 3047750,
+   "trailer": "Herdling - Gameplay",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [
+  [
+   "herdling-switch-2-edition-november-12-trailer.mp4",
+   42.97,
+   3.0,
+   [
+    [
+     0.0,
+     0.552
+    ]
+   ]
+  ],
+  [
+   "herdling-switch-2-edition-november-12-trailer.mp4",
+   45.97,
+   3.0,
+   [
+    [
+     0.0,
+     0.318
+    ]
+   ]
+  ],
+  [
+   "herdling-switch-2-edition-november-12-trailer.mp4",
+   48.97,
+   3.0,
+   [
+    [
+     0.0,
+     0.493
+    ]
+   ]
+  ],
+  [
+   "herdling-switch-2-edition-november-12-trailer.mp4",
+   51.97,
+   3.0,
+   [
+    [
+     0.0,
+     0.493
+    ]
+   ]
+  ],
+  [
+   "herdling-switch-2-edition-november-12-trailer.mp4",
+   54.97,
+   3.0,
+   [
+    [
+     0.0,
+     0.493
+    ]
+   ]
+  ],
+  [
+   "herdling-switch-2-edition-november-12-trailer.mp4",
+   57.97,
+   3.0,
+   [
+    [
+     0.0,
+     0.493
+    ]
+   ]
+  ],
+  [
+   "herdling-switch-2-edition-november-12-trailer.mp4",
+   60.97,
+   1.04,
+   [
+    [
+     0.0,
+     0.493
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "ظهرت على متجر eShop\nنسخة جديدة من Herdling",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "تعد النسخة بدقة أعلى\nوتفاصيل وأداء أفضل",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "نسخة اللعبة على Steam\nتدعم اللغة العربية",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: أوكوموتيف (Okomotive)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "لعبة Herdling تحصل على\nنسخة Switch 2 جديدة",
+ "label": "تقرير",
+ "source": "نينتيندو إفريثينغ (Nintendo Everything)",
+ "date": "11 Nov 2026",
+ "theme": "emerald",
+ "style": null,
+ "template": "split",
+ "skin": "house",
+ "cut": true,
+ "track": [
+  "herdling-switch-2-edition-november-12-trailer.mp4",
+  42.97
+ ],
+ "strip": [
+  [
+   "المنصة",
+   "Nintendo Switch 2"
+  ],
+  [
+   "السعر",
+   "لم يُعلن بعد"
+  ]
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Nintendo Everything read in full 00:34Z, Big-N second outlet, Steam appdetails read 00:30Z; eShop page not reachable, so label تقرير",
+  "SOURCE: not already posted": "yes: ledger find herdling, 0 hits",
+  "SOURCE: age": "yes: first report Nintendo Everything 11 Nov, under 24 hours, not in Arabic outlets",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE report": "yes: finding, evidence and limits (no price, rollout by region) in the story file; trailer credited",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names Herdling, L1 names the edition and eShop, L2 says النسخة, L3 names اللعبة على Steam; no line opens on و",
+  "STORY: release verbs": "yes: ظهرت (appeared on the store), no bare تصل",
+  "STORY: names match names-ar.md": "yes: Okomotive in the credit with bracket, Nintendo Everything نينتيندو إفريثينغ per glossary",
+  "POST: Arabic passes": "yes: two skills applied, western digits, no first person; DeepL whole-story forward pass matched, alternatives تم إطلاق/صدرت, إصدار/نسخة kept ours",
+  "SOUND: footage sound or bed with reason": "yes: trailer own sound, one continuous stretch from 42.97 s",
+  "SOUND: no speech under Arabic lines": "yes: Gameplay trailer has no narration; server speech check is final",
+  "PICTURE: footage first": "yes: official Steam Gameplay Trailer, one continuous clean stretch",
+  "PICTURE: not the same as last 5 reels": "yes: picture: Herdling, no other Reel uses it",
+  "CREDIT: on every clip": "yes: المصدر: أوكوموتيف (Okomotive) over shots 0 to 6"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "42.97 to 45.97 s",
+   "alternatives": "0 to 5.5 s title slate",
+   "crop": "x 0.552 picker",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "1 L1 edition on eShop",
+   "shot": "45.97 to 51.97 s continuous",
+   "alternatives": "10 to 25 s stretch has burnt text",
+   "crop": "picker focus",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "2 L2 upgrades promised",
+   "shot": "51.97 to 57.97 s",
+   "alternatives": "none clean elsewhere",
+   "crop": "picker focus",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "3 L3 Arabic on Steam",
+   "shot": "57.97 to 62.01 s, ends before the end slate (62.16 s frozen)",
+   "alternatives": "end slate",
+   "crop": "picker focus",
+   "music": "trailer own sound"
+  }
+ ],
+ "angle": {
+  "hook": "the cat-cow herding adventure Herdling now has a dedicated Switch 2 Edition on the eShop, reported by Nintendo Everything",
+  "why_now": "Nintendo Everything reported the edition went live on the eShop on 11 Nov, regional rollout still under way over the next day, and the Arabic press has not carried it yet",
+  "what_it_means_here": "Switch 1 and Switch 2 players in the Gulf may find it in the eShop as it rolls out, the price is not stated by the outlet, and the Steam version supports Arabic",
+  "payoff": "better resolution and performance are promised, price unconfirmed, Arabic support is confirmed only on Steam"
+ }
+}
