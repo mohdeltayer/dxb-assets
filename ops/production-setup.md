@@ -309,3 +309,22 @@ a run that has not been updated still reads them.
    `job=<name>` (a bare name is fine). A fix goes onto the current job file, never a restore of an older commit (the
    render refuses an older version). Our own cards never trip the smear flag. A director PASS is final; pixel-art hit
    effects are not gore. Target: one render per Reel; three in 24 hours raise a work-order alarm.
+11. QC failures (release 2026-11-12 r1, adv-20261112-qc-notes-become-failures). A Reel whose qc.json says `fail` is
+   not posted: render-live commits it as evidence, fails the run with the findings in its summary and skips the Publer
+   upload; `presubmit.py director ... PASS` refuses it. Failures: lifeless over 38 (storybeat and tribute exempt), the
+   last two seconds a card, under 12 s before the end card (handson, edition, storybeat and breaking exempt), a story
+   line of two visual lines over a card or touching its text (the text check refuses it before the render). Numbers
+   and list cards now count up and reveal rows by themselves (`"animate": false` turns it off); still-ground art needs
+   a short side of 720 px; a logofact logo is a transparent cut-out. For numbers, list, explainer, quote and edition,
+   read the three `<name>-look-N.jpg` frames beside qc.json and pass `--looked "<what they show>"` with the PASS.
+12. People stories (release 2026-11-12 r2, adv-20261111-person-stories-gate). Every story file carries
+   "subject_person": null, or {"name", "role", "photo_source"} when a person is the news (a quote, an interview, an
+   appointment, an award, a departure). When set, or the kind is quote, people or cast, the job copies subject_person and
+   carries a "person" window opening at 0.0 s (photo box and name plate on the cover); no licensed photo: "person_photo":
+   "none" with "searched": [where you looked] and the window shows their best-known work. "report" is never the kind of
+   a one-game story: use what happened (date, delay, reveal, sales, update, people, quote) and put تقرير in the label.
+13. Sound by code (release 2026-11-12 r3, adv-20261112-sound-by-code). A footage Reel carries "track": [the trailer, the
+   first shot's source second] (t0make writes it); the gate refuses a footage job without one unless "bed_reason" names
+   each trailer checked and why it was unusable, or the Reel is numbers, stills, retro, storybeat, sales, results,
+   tribute or "legal": true. Do not choose an everyday bed: the server picks it from the ledger (the chip's flavour for
+   عاجل, متوفر الآن, أرقام). qc.json says "sound"; three footage Reels in a row on a bed raise a work-order alarm.

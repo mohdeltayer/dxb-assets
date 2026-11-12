@@ -794,3 +794,15 @@ render-times.json). H (server QC verdict) and I (parallel runners) follow as the
    rows. `"animate": false` to turn off.
 4. Still-ground art 720 px or more on its short side; a logofact logo is a transparent cut-out, never a game tile.
 5. Card-led templates: three look frames beside qc.json; the director PASS carries `--looked`.
+
+## People stories (adv-20261111-person-stories-gate, 12 Nov 2026)
+1. Story files carry "subject_person": null or {name, role, photo_source}.
+2. A person subject (or kind quote, people, cast): "person" window from 0.0 s, never kind report; no photo: person_photo
+   none with searched, the plate over their best-known work.
+3. report is the تقرير label, not a kind, for one-game stories. qc.json lists person_shown.
+
+## Sound by code (adv-20261112-sound-by-code, 12 Nov 2026)
+1. Footage Reels carry the trailer track (t0make sets it); no track needs bed_reason naming the trailers checked, or a
+   bed template or kind (numbers, stills, retro, storybeat, sales, results, tribute, legal).
+2. The server picks the bed from the ledger and commits it; jobs do not name an everyday bed.
+3. qc.json "sound"; three footage Reels in a row on a bed is a work-order alarm.

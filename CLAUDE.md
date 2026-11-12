@@ -3617,3 +3617,26 @@ figure, a thumbnail on a white plate and two empty placeholder rows.
    logofact's logo is a cut-out PNG with transparency (a game tile or photo on the white plate is refused).
 6. Card-led templates (numbers, list, explainer, quote, edition): the server writes three 360 px look frames (first,
    middle, last story frame) beside qc.json; the director PASS needs `--looked "<what they show>"`.
+
+## People stories show the person; report is a label (adv-20261111-person-stories-gate, Mohammad 11 Nov 2026; release 2026-11-12 r2)
+
+Case: the Harada Reel (11 Nov, 20:15 Dubai) had kind "report", TEKKEN 8 stand-in footage and no person entry; qc passed.
+1. Every story file carries "subject_person": null, or {"name", "role", "photo_source"}; build_gate refuses a story
+   without the key and t0make stops on it.
+2. When subject_person is set, or the kind is quote, people or cast: the job copies subject_person, carries "person"
+   opening at 0.0 s, and its kind is not report. No licensed photo: "person_photo": "none", "searched": [...], and the
+   window shows the person's best-known work with the name plate and role.
+3. "report" is a label (تقرير), not a kind, for a one-game story: formats.pick refuses it; the kind is what happened.
+4. qc.json carries person_shown: true, false (a finding) or "n/a".
+
+## Sound by code (adv-20261112-sound-by-code, Mohammad 12 Nov 2026; release 2026-11-12 r3)
+
+Case: 7 of 17 footage news Reels on 10 and 11 Nov had no trailer track, and the bed ledger had not moved since 9 Nov.
+1. The scaffold (t0make) sets "track" from the trailer the shots come from, at the first shot's source second, whenever
+   the footage has an audio stream; silent footage gets "bed" with its bed_reason written.
+2. build_gate refuses a footage job with no track unless "bed_reason" names the trailers checked, or the template or
+   kind takes our bed (numbers, stills, retro, storybeat; sales, results; tribute; "legal": true).
+3. The server picks the bed: the chip's flavour (ig_ar.SOUNDS), the tribute's neon_c, a named occasion or retro flavour,
+   else the everyday bed rested longest in templates/assets/bed-ledger.json; the entry is committed with the render.
+4. qc.json and render-times carry "sound" (trailer, trailer-voiced, bed:<flavour> with its reason); the work order alarms
+   on three footage Reels in a row on a bed.
