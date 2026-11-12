@@ -1,10 +1,54 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T14:25:07Z",
- "seq": 380,
+ "generated_at": "2026-11-12T14:35:08Z",
+ "seq": 381,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 12706,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Edge of Memories - Animated Opening | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=YsdViJ1v1fc",
+   "published": "2026-11-12T14:15Z",
+   "first_seen": "2026-11-12T14:35:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/YsdViJ1v1fc/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=YsdViJ1v1fc"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 381
+  },
+  {
+   "id": 12707,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Barbie Rewind - Launch Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=-9ffzWW-jhg",
+   "published": "2026-11-12T14:13Z",
+   "first_seen": "2026-11-12T14:35:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/-9ffzWW-jhg/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=-9ffzWW-jhg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 381
+  }
+ ],
+ "recent": [
   {
    "id": 12688,
    "source": "Nintendo US",
@@ -16,9 +60,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 380
-  }
- ],
- "recent": [
+  },
   {
    "id": 12671,
    "source": "PlayStation (YouTube)",
@@ -617,23 +659,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 332
-  },
-  {
-   "id": 11682,
-   "source": "Nintendo US",
-   "source_kind": "page",
-   "title": "11/11/26 The Legend of Zelda: Ocarina of Time for Nintendo Switch 2 sells over 5.2 million units worldwide in first four days Link’s Reborn Adventure Becomes Ni",
-   "url": "https://www.nintendo.com/us/whatsnew/the-legend-of-zelda-ocarina-of-time-for-nintendo-switch-2-sells-over-5-2-million-units-worldwide-in-first-four-days/",
-   "published": null,
-   "first_seen": "2026-11-11T14:25:13Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 330
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T14:25:03Z",
+  "last_poll_at": "2026-11-12T14:35:04Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
