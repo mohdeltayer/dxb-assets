@@ -1,6 +1,6 @@
 {
  "id": "2026-11-13-slay-the-spire-2-fool-blitz-dread-beta",
- "status": "built",
+ "status": "scheduled",
  "claimed_by": "helper-1115",
  "lane": "Digital Lounge only",
  "slot": "11:15 Dubai 2026-11-13",
@@ -56,5 +56,27 @@
   "x_follow_up": "المصدر: ملاحظات التحديث التجريبي من ميغا كريت (Mega Crit): https://store.steampowered.com/news/app/2868840/view/708914333639245837"
  },
  "gate": "gate 22:50Z: Steam announcement (v0.113.0 beta patch notes) read in full; GamesRadar and Insider Gaming carry it; search found no denial or update; primary says beta branch only, which the text states",
- "grammar_review": "self-run 23:00Z, glossary, perfect-arabic SKILL.md and orthography.md opened: no required edits, no uncertain cases. DeepL whole-story forward pass (AR) compared: kept بناء الأوراق over حزمة البطاقات (DeepL), جولة, مرحلة الوصول المبكر, الفرع التجريبي over فرع بيتا (alternatives: فرع بيتا, فرع الإصدار التجريبي); back-check (EN) matches meaning (DeepL wrote Mega Crete, house spelling kept)"
+ "grammar_review": "self-run 23:00Z, glossary, perfect-arabic SKILL.md and orthography.md opened: no required edits, no uncertain cases. DeepL whole-story forward pass (AR) compared: kept بناء الأوراق over حزمة البطاقات (DeepL), جولة, مرحلة الوصول المبكر, الفرع التجريبي over فرع بيتا (alternatives: فرع بيتا, فرع الإصدار التجريبي); back-check (EN) matches meaning (DeepL wrote Mega Crete, house spelling kept)",
+ "approved": "go: standing order 11:15 slot, official primary (gate 22:50Z); scheduled in Publer 07:15Z (11:15 Dubai Fri 13 Nov) Instagram, X, Threads; qc pass (131 s, dispatch 5 incl. job-file fixes); X and Threads first failed once with a Publer 'thumbnail' error until post_type video was set, nothing was created by those failures",
+ "versions": [
+  {
+   "v": 1,
+   "file": "cards/2026-11/slay-the-spire-2-beta-fool-blitz-dread-nov-13-reel-v1.mp4"
+  }
+ ],
+ "director_check": {
+  "verdict": "PASS",
+  "by": "qc-server",
+  "qc": "pass",
+  "at": "2026-11-12T23:40Z",
+  "note": "qc pass; sound trailer (one contiguous stretch 16.05 to 31.04 s); weak-source note: letterboxed Early Access trailer enlarged 2.33x, lowres_ok names the copies checked"
+ },
+ "publer": {
+  "slot": "2026-11-13T07:15Z",
+  "ids_last6": {
+   "instagram": "12c3ea",
+   "x": "12c436",
+   "threads": "6af37e"
+  }
+ }
 }
