@@ -1,1 +1,45 @@
-{"id":"2026-11-12-pikmin-4-switch-2-edition-launch","status":"claimed","builder":"helper B buffer 13:15"}
+{
+ "id": "2026-11-12-pikmin-4-switch-2-edition-launch",
+ "title": "Pikmin 4 Nintendo Switch 2 Edition + Dandori Academy out today (Nintendo store page)",
+ "game": "Pikmin 4",
+ "companies": [
+  "Nintendo"
+ ],
+ "genre": [
+  "family"
+ ],
+ "category": "launch",
+ "status": "building",
+ "sources": [
+  {
+   "url": "https://www.nintendo.com/us/store/products/pikmin-4-nintendo-switch-2-edition-plus-dandori-academy-switch-2/",
+   "type": "primary",
+   "read_at": "2026-11-12T05:45Z",
+   "note": "Release date November 12, 2026; digital price $69.99; Dandori Academy 72 exam stages released over time; Oatchi voice commands via Switch 2 microphone; improved visuals; GameShare for Dandori Battles; Upgrade Pack sold separately and requires Pikmin 4"
+  },
+  {
+   "url": "https://www.gematsu.com/2026/09/pikmin-4-nintendo-switch-2-edition-dandori-academy-announced",
+   "type": "outlet",
+   "note": "announcement 9 Sep Direct, 12 Nov date"
+  }
+ ],
+ "builder": "helper B buffer 13:15",
+ "lane": "Digital Lounge only",
+ "beat": "launch (out now)",
+ "sensitive": "none",
+ "first_report": "store page 12 Nov (release date announced 9 Sep Direct); digest 09:31 Dubai listed launch today",
+ "footage": "Nintendo US store trailer (nsuid 70010000135059), clean stretch 16.63 to 34.58 s, music stem only (music_only)",
+ "gate": "gate 05:50Z: Nintendo US store page read (date, price, features), web search found no delay or change",
+ "x_threads": "صدرت اليوم نسخة Pikmin 4 لجهاز Switch 2 مع وضع Dandori Academy وأوامر صوتية للكلب Oatchi، حسب متجر نينتيندو (Nintendo).",
+ "threads_extra": "\n\nالمصدر: متجر نينتيندو (Nintendo) الأمريكي",
+ "ig_caption": "نسخة Pikmin 4 لجهاز Switch 2 متوفرة الآن\n\nصدرت اليوم Pikmin 4 – Nintendo Switch 2 Edition + Dandori Academy، حسب صفحة اللعبة في متجر نينتيندو (Nintendo) الأمريكي. وسعر النسخة الرقمية 69.99 دولارًا.\n\nتضيف النسخة وضع Dandori Academy الذي يضم 72 مرحلة اختبار تصدر تباعًا، وتتيح إعطاء أوامر صوتية للكلب Oatchi عبر ميكروفون Switch 2، إلى جانب تحسينات في الصورة. ويمكن عبر GameShare تحدي الأصدقاء في Dandori Battles حتى لو لم يملكوا اللعبة. أما لمن يملك Pikmin 4 فتُباع حزمة الترقية بشكل منفصل.\n\n#ألعاب #أخبار_الألعاب #Pikmin4 #NintendoSwitch2",
+ "arabic_checks": "both skills applied; grammar review: no required edits; DeepL whole-story forward pass matched (مرحلة امتحان vs ours اختبار, kept; متوفر الآن, يباع بشكل منفصل matched)",
+ "brief": {
+  "family": "release/launch",
+  "template": "trailer",
+  "chip": "متوفر الآن",
+  "total": "17.9 s before end card",
+  "sound": "trailer music stem only; fallback our bed if stem unclean (earlier Pikmin story: whole trailer narrated)"
+ },
+ "approved": "scheduling at 09:15Z (13:15 Dubai) per assignment; buffer slot"
+}
