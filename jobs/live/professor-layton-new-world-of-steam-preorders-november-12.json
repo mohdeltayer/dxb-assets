@@ -151,10 +151,7 @@
  "template": "split",
  "skin": "house",
  "cut": false,
- "track": [
-  "professor-layton-new-world-of-steam-preorders-november-12-trailer.mp4",
-  6.73
- ],
+ "track": "bed",
  "strip": [
   [
    "المنصات",
@@ -220,5 +217,6 @@
    "crop": "shotpick focus",
    "music": "trailer own sound"
   }
- ]
+ ],
+ "bed_reason": "Steam store Trailer (the only official trailer on the Steam page, 174 s) checked: audio split rendered on the server 12 Nov and found music only 29.4% of the track (effects-led, under the 40% floor), and no continuous clean stretch of 12 s or more exists (clean shotpick stretches are separated by title text and black); trailer effects from other moments would not match the picture, so our bed"
 }
