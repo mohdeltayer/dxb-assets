@@ -1,10 +1,23 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T16:52:06Z",
- "seq": 391,
+ "generated_at": "2026-11-12T17:00:11Z",
+ "seq": 392,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 12870,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Halo: Campaign Evolved Players Can Jump Into Firefight for Free This Winter",
+   "url": "https://news.xbox.com/en-us/2026/11/12/halo-campaign-evolved-firefight-free-update-this-winter/",
+   "published": "2026-11-12T17:00Z",
+   "first_seen": "2026-11-12T17:00:05Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 392
+  }
+ ],
  "recent": [
   {
    "id": 12861,
@@ -745,9 +758,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T16:50:05Z",
+  "last_poll_at": "2026-11-12T17:00:05Z",
   "sources_enabled": 100,
-  "sources_ok": 93,
+  "sources_ok": 94,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 41x)",
