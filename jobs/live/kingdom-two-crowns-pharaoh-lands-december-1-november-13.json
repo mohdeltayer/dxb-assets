@@ -159,10 +159,7 @@
  "template": "split",
  "skin": "house",
  "cut": true,
- "track": [
-  "kingdom-two-crowns-pharaoh-lands-december-1-november-13-trailer.mp4",
-  13.48
- ],
+ "track": "bed",
  "strip": [
   [
    "التاريخ",
@@ -183,7 +180,7 @@
   "STORY: release verbs": "yes: no verb needed on screen, date on strip; text uses تصدر",
   "STORY: names match names-ar.md": "yes: Raw Fury with bracket in line 1 and credit, Aurora Punks in caption",
   "POST: Arabic passes": "yes: two skills applied, western digits, no first person; DeepL whole-story forward pass compared (DeepL says المحتوى الإضافي/التوسعة, house word إضافة kept; مصدر الفوضى matches)",
-  "SOUND: footage sound": "yes: trailer own sound, split",
+  "SOUND: footage sound": "our bed, reason in bed_reason (two trailers checked); preview says our bed",
   "SOUND: no speech under Arabic lines": "yes: trailer has no narration; server speech check final",
   "PICTURE: footage first": "yes: official Steam announcement trailer",
   "PICTURE: not the same as last 5 reels": "yes: new game",
@@ -224,5 +221,6 @@
   "why_now": "Steam page and Raw Fury press release 12 Nov 2026 give the date",
   "what_it_means_here": "an Egypt-inspired expansion that Arab players will notice; Windows only for now, no price, no Arabic in the language list",
   "payoff": "1 Dec 2026"
- }
+ },
+ "bed_reason": "Announcement trailer (Steam 4742120): the 13.48 s stretch measured music 11.4% with 6.0% leakage, effects-led, audio split refused on dxb-render 20:47Z; its other clean stretches are cut by burnt-in text; Date Reveal trailer (55 s): only one in-sync clean stretch, 34.9 to 46.6 s = 11.7 s, under the 12 s minimum, the rest cut by feature text and the end slate; no other official trailer exists"
 }
