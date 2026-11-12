@@ -131,7 +131,7 @@
    "kind": "fact",
    "label": "موعد الإصدار الجديد",
    "value": "4 فبراير 2027",
-   "note": "بدل 16 فبراير، الساعة 9 مساءً بتوقيت الإمارات"
+   "note": "بدل 16 فبراير 2027"
   }
  ],
  "ground_footage": [
@@ -145,5 +145,19 @@
   "what_it_means_here": "Steam UAE lists the game at 200 AED; Digital Deluxe early access starts earlier too",
   "payoff": "the move-up, no reason given by the company"
  },
- "sensitive": "none"
+ "sensitive": "none",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam post of Square Enix read in full 07:35Z, posted 07:11Z",
+  "SOURCE: not already posted": "yes: ledger find romancing saga: no date-change story, 2 older stories",
+  "SOURCE: age": "yes: first report 07:11Z today, under 1 hour, not in Arabic outlets",
+  "ANGLE before lines": "yes: angle in the job",
+  "STORY TYPE delay or date change": "yes: old date 16 Feb and new date 4 Feb on the card, no reason given stated in caption",
+  "STORY: spoken paragraph, subject before pronoun": "yes: L1 names Square Enix, L2 names early access of the edition; no line opens on و",
+  "STORY: release verbs": "yes: headline يتقدّم, caption تصدر; no bare تصل",
+  "STORY: names match names-ar.md": "yes: سكوير (Square Enix) per glossary, Steam and game names Latin",
+  "WRITING: headline and lines": "yes: headline hook is the 12 days; lines do not repeat the card",
+  "WRITING: X text names source": "yes: حسب إعلان سكوير على Steam",
+  "SOUND: footage sound or bed": "yes: music_only trailer stem, else bed with reason",
+  "SOUND: no speech under lines": "yes: music_only strips voices"
+ }
 }
