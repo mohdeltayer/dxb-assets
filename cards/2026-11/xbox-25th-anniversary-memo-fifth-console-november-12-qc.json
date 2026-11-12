@@ -1,25 +1,20 @@
 {
  "name": "xbox-25th-anniversary-memo-fifth-console-november-12",
  "out": "cards/2026-11/xbox-25th-anniversary-memo-fifth-console-november-12-reel-v1.mp4",
- "verdict": "fail",
- "at": "2026-11-12T16:07:59Z",
- "findings": [
-  {
-   "check": "lifeless",
-   "detail": "lifeless score 40.4 (still_share 0.538, longest still 3.3 s): too much of the Reel holds still; footage behind the cards, the count-up and row reveal, more cuts"
-  }
- ],
+ "verdict": "pass",
+ "at": "2026-11-12T16:16:26Z",
+ "findings": [],
  "notes": [
   "length 27.5 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
   "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
-  "render_job: lifeless: {\"score\": 40.4, \"still_share\": 0.538, \"longest_still\": 3.3, \"cuts_per_10s\": 2.55, \"held_under_text\": 0.16, \"secs\": 27.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": true}"
+  "render_job: lifeless: {\"score\": 6.3, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 1.45, \"held_under_text\": 0.0, \"secs\": 27.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "5e70c0d376369291bd7b13ae71005b217d362d22",
- "dispatches": 2,
+ "job_sha": "4b3e39e838b8f2cd27b1d8410f4b5439bf9a6062",
+ "dispatches": 3,
  "source_summary": {
   "min_height": null,
-  "max_zoom": null,
+  "max_zoom": 1.78,
   "lowbit_shots": 0
  },
  "quality": "base",
