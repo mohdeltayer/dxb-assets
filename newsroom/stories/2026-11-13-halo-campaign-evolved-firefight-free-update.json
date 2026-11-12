@@ -11,7 +11,7 @@
  ],
  "category": "update",
  "priority": "high",
- "status": "built",
+ "status": "scheduled",
  "claimed_by": "helper-0815",
  "lane": "Digital Lounge only",
  "slot": "08:15 Dubai 2026-11-13",
@@ -80,5 +80,26 @@
   "x_threads": "وضع Firefight التعاوني لأربعة لاعبين قادم إلى Halo: Campaign Evolved في تحديث مجاني هذا الشتاء، حسب موقع إكس بوكس واير (Xbox Wire). لم يُعلن موعد الإصدار ولا المنصات بعد.",
   "instagram": "تحديث مجاني للعبة Halo: Campaign Evolved يضيف وضع Firefight التعاوني.\n\nأعلنت إكس بوكس (Xbox) عبر موقع إكس بوكس واير (Xbox Wire) أن اللعبة ستحصل على Firefight، وهو وضع تعاوني لأربعة لاعبين ضد أعداء اللعبة، ضمن تحديث مجاني هذا الشتاء.\n\nوكان حضور فعالية XBOX FanFest أول من جرّبه مساء الخميس. وتقول إكس بوكس إن المزيد من التفاصيل سيأتي في Halo Fest يومي 12 و13 ديسمبر في سياتل، وإن زوار الفعالية سيتمكنون من لعبه طوال عطلة الأسبوع.\n\nلم يُعلن موعد الإصدار ولا المنصات التي يشملها التحديث بعد.\n\n#ألعاب #أخبار_الألعاب #Halo #Xbox"
  },
- "review_notes": "DeepL whole-story pass matched (alternatives: ستتضمن/ستحصل, لاعب ضد البيئة/ضد أعداء اللعبة kept ours); grammar review: no required edits; plain Arabic, first words Arabic"
+ "review_notes": "DeepL whole-story pass matched (alternatives: ستتضمن/ستحصل, لاعب ضد البيئة/ضد أعداء اللعبة kept ours); grammar review: no required edits; plain Arabic, first words Arabic",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/halo-firefight-free-update-nov-12-reel-v1.mp4",
+  "blob": "b0fc8292e6b4f523442f5d050dfa34d48c246922",
+  "at": "2026-11-12T21:07:23Z",
+  "note": "server qc.json pass, 0 findings; our bed with stated reason (split refused, leftover 6.0%)",
+  "checklist": {
+   "job": "jobs/live/halo-firefight-free-update-nov-12.json",
+   "sha256": "476507674a57f96f7bca059ed14f19b190c5892f7d5286bd8e7c5b58eb038d50",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "qc-director-helper",
+  "qc": "pass",
+  "looked": null
+ },
+ "approved": "scheduled in Publer 08:15 Dubai 2026-11-13 on Instagram, X, Threads; go: standing order (helper slot); qc pass; our bed (split refused, reason in job); 3 renders failed on source quality, pace, credit, sfx before pass"
 }
