@@ -1,0 +1,22 @@
+{
+ "name": "monster-hunter-stories-3-one-million-sales-november-12",
+ "out": "cards/2026-11/monster-hunter-stories-3-one-million-sales-november-12-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-12T05:18:42Z",
+ "findings": [],
+ "notes": [
+  "length 8.7 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason music only 25.8% of the track (< 40.0%); music_pct 25.8; leak_pct 0.8; cache {'hit': 1, 'miss': 1}; separate_secs 2.1; secs 3.9",
+  "render_job: lifeless: {\"score\": 5.4, \"still_share\": 0.07, \"longest_still\": 0.5, \"cuts_per_10s\": 6.98, \"held_under_text\": 0.012, \"secs\": 8.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "841cd53e1565cf31922b3557269072c62e57f8ff",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18"
+}
