@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T22:30:18Z",
- "seq": 410,
+ "generated_at": "2026-11-12T22:52:11Z",
+ "seq": 411,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 13278,
    "source": "Xbox (YouTube)",
@@ -25,9 +26,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 410
-  }
- ],
- "recent": [
+  },
   {
    "id": 13254,
    "source": "Xbox Wire",
@@ -819,14 +818,14 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T22:30:14Z",
+  "last_poll_at": "2026-11-12T22:52:05Z",
   "sources_enabled": 100,
-  "sources_ok": 93,
+  "sources_ok": 94,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 44x)",
-   "Nintendo of America (X) (HTTP 429, 63x)",
-   "PlayStation (X) (HTTP 429, 81x)",
+   "Nintendo of America (X) (HTTP 429, 64x)",
+   "PlayStation (X) (HTTP 429, 82x)",
    "PlayStation Middle East (X) (HTTP 429, 9x)",
    "Rockstar Games (X) (HTTP 429, 35x)",
    "Xbox (X) (HTTP 429, 81x)"
