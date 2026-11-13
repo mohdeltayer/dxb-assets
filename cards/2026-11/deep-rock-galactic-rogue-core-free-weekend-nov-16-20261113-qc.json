@@ -2,16 +2,16 @@
  "name": "deep-rock-galactic-rogue-core-free-weekend-nov-16-20261113",
  "out": "cards/2026-11/deep-rock-galactic-rogue-core-free-weekend-nov-16-20261113-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-13T11:59:52Z",
+ "at": "2026-11-13T12:05:34Z",
  "findings": [],
  "notes": [
-  "length 13.0 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 19.4; leak_pct 3.7; cache {'hit': 5, 'miss': 0}; separate_secs 3.3; secs 5.4",
-  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 4.65, \"held_under_text\": 0.0, \"secs\": 12.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 12.6 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 19.5; leak_pct 3.5; cache {'hit': 2, 'miss': 2}; separate_secs 4.8; secs 8.6",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 7.14, \"held_under_text\": 0.0, \"secs\": 12.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "8783e321e437f79cf11a79bc8d2202e046795969",
- "dispatches": 2,
+ "job_sha": "b25c169acddf60da96529256eeaa39169b86e2a5",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
