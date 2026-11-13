@@ -2,7 +2,7 @@
  "id": "fable-gameplay-feb-23-aed-269-20261113",
  "game": "Fable",
  "lane": "digital-lounge",
- "status": "built, qc pass (v1, 4 dispatches: 3 refused early, 1 render); planned 23:15 Dubai Fri 13 Nov; awaiting separate director (not signed, not scheduled)",
+ "status": "scheduled in Publer 23:15 Dubai Fri 13 Nov (ig, x, threads), director PASS director-19; effects-led trailer sound signed off",
  "subject_person": null,
  "ledger_find": {
   "at": "2026-11-13T07:55:40Z",
@@ -58,5 +58,25 @@
  "render_checks": "qc pass no findings; length 22.3 s before the end card (guide 12 to 20, six lines needed for the pace and reading rules); layout showcase wide (trailer is the news); whisper on the final Reel: no speech under the story lines (only a 'Thank you for watching' hallucination at 20.9 to 24.3 s with no VAD speech, over the trailer's effects fade and the end card jingle); credit visible frames 0 to 3 s; dense strip 4 fps judged as 9:16 and 3:4: no blood or gore, red and pink cursed-magic particle bursts at 9.7 to 11 s, 17.5 s and 20 to 22 s (magic effects, no wounds); sound: trailer own sound, audio split not applied (music 20.4%, effects-led), speech none",
  "arabic_review": "two skills applied; grammar stage manual pass, no required edits; DeepL whole-story forward pass: picked منبع النهر over مصدر النهر, kept قيد التطوير (DeepL نسخة تجريبية is wrong), الحجز المسبق (house) over DeepL الطلب المسبق, تصدر (house) over من المقرر إطلاق; back-check matches the English (line 5 first wording «بلا عربية بين اللغات» read back wrongly, reworded to «لغات اللعبة على Steam لا تضم العربية حتى الآن»); X text and caption unchanged by the job lines",
  "stage_minutes": "source 22, footage 14, Arabic 12, renders 4 dispatches (3 refused within 3 min each, final 287 s) 24, total about 80",
- "uncertainties": "first report about 24 h old at the slot; Steam UAE price and language list read 13 Nov 07:5xZ, director to re-read before 23:15; Xbox Game Pass and Cloud availability come from IGN's copy of the official description, not the Steam page; company form إكس بوكس غيم ستوديوز is new in names-ar.md (proposed)"
+ "uncertainties": "first report about 24 h old at the slot; Steam UAE price and language list read 13 Nov 07:5xZ, director to re-read before 23:15; Xbox Game Pass and Cloud availability come from IGN's copy of the official description, not the Steam page; company form إكس بوكس غيم ستوديوز is new in names-ar.md (proposed)",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/fable-gameplay-feb-23-aed-269-november-13-reel-v1.mp4",
+  "blob": "9a1cbbf2374352d0eb3e312e3941658db27b8993",
+  "at": "2026-11-13T08:29:30Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/fable-gameplay-feb-23-aed-269-november-13.json",
+   "sha256": "3eb60b853028176c7d90eb1fc4b6c24cf6f7a30c54d02dc2b25aa5a0a271c3a6",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": "showcase",
+   "evergreen": false,
+   "built_by": "builder-2315"
+  },
+  "by": "director-19",
+  "qc": "pass",
+  "looked": "strip 4fps, dense strip and full-res frames 0/2/5/10/10.5/17.5/21.5 s: showcase layout (wide trailer box, blurred ground, headline up all Reel, lines, key facts row date and 269 AED, credit from frame 0 in bottom band), no empty band, no flipping signs, every Arabic line opens on an Arabic word; red/pink particle bursts at 9.7-11, 17.5, 20-22 s are cursed-magic particles and petals, not blood or gore; burnt-in HUD is the game's own work-in-progress line, readable and uncropped; whisper VAD on the final mp4: no speech anywhere; effects-led sound SIGNED OFF: -13.7 LUFS, LRA 3.7, low-frequency weight, no harsh or noisy passage; Steam appdetails cc=ae re-read: 23 Feb 2027, 269.00 AED, Playground Games / Xbox Game Studios, no Arabic; no Fable post on Publer in last 7 days"
+ }
 }
