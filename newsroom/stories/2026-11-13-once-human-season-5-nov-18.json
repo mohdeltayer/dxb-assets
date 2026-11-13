@@ -1,7 +1,7 @@
 {
  "id": "2026-11-13-once-human-season-5-nov-18",
  "title": "Once Human Season 5 \"Dissonant Resonance\": free, launches 18 Nov; four-player Colossus Raid (PlayStation Blog, Starry Studio designer)",
- "state": "v3 building",
+ "state": "v3 built, awaiting director",
  "claimed_by": "production-2 builder 13:15 Dubai slot",
  "claimed_at": "2026-11-13T00:45:00Z",
  "ledger_find": {
@@ -94,21 +94,22 @@
  "template": "trailer (showcase layout)",
  "kind": "update",
  "recipe": "trailer drop with showcase (720p official clip)",
- "reel": "cards/2026-11/once-human-season-5-dissonant-resonance-november-18-v2-reel-v1.mp4",
- "job": "once-human-season-5-dissonant-resonance-november-18-v2",
- "job_commit": "4da5619",
- "job_sha": "895d57dbafb44f006a1c47d5d26510d22589a35f",
+ "reel": "cards/2026-11/once-human-season-5-dissonant-resonance-november-18-v3-reel-v1.mp4",
+ "job": "once-human-season-5-dissonant-resonance-november-18-v3",
+ "job_commit": "2fa46e9",
+ "job_sha": "8a61a7f5ad45ec968add56358f6488e19db743c7",
  "planned_slot": "13:15 Dubai Fri 13 Nov 2026",
  "chip": "رسمي",
- "theme": "stylized",
+ "theme": "spectacle",
  "skin": "house",
  "sound": "trailer (Ocean Expansion music stem, audio split music_only)",
- "qc": "v2 pass, 0 findings, 17.8 s before the end card",
+ "qc": "v3 pass, 0 findings, 17.8 s before the end card",
  "uncertain": [
   "speech not checked by ear; server speech check passed",
-  "gore: every frame of the v2 dense strip judged by eye, no blood or gore (red-lit ruin at 12.5 s is scenery)",
-  "date conflict stated, not resolved: blog 18 Nov, press release 19 Nov, no hour from either",
-  "shots 1 to 6 are earlier Ocean addition footage, credited; mediapipe missing so faces not measured"
+  "gore: every frame of the v3 dense strip judged by eye, no blood or gore",
+  "03:00 Dubai 19 Nov is the update start from Starry's Steam notice, not the go-live; reopening time not stated",
+  "the 4 Nov Steam notice says 'next update' and does not name Season 5; the 12 Nov dev blog says 'after the November 18 (PT) version update'; the blog and press release give the same date",
+  "shots 1 to 6 are earlier Ocean addition footage, credited; mediapipe missing"
  ],
  "v1": {
   "reel": "cards/2026-11/once-human-season-5-dissonant-resonance-november-18-reel-v1.mp4",
