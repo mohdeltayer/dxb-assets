@@ -47557,5 +47557,163 @@
   "dispatches": 1,
   "sound": "trailer",
   "footage": true
+ },
+ {
+  "name": "once-human-season-5-dissonant-resonance-november-18-v2-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-13T01:07Z",
+  "stages": {
+   "checks": 4.9,
+   "montage": 29.5,
+   "text": 31.2,
+   "audio": 0.6,
+   "outro": 14.3
+  },
+  "total": 80.4,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-13T01:06Z",
+  "finished_at": "2026-11-13T01:07Z",
+  "render_min": 1.34,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "once-human-s5-clip.mp4",
+    "start": 2.3,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "mbps": 8.54,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "once-human-ocean-trailer.mp4",
+    "start": 2.9,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.76,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "once-human-ocean-trailer.mp4",
+    "start": 5.2,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.76,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "once-human-ocean-trailer.mp4",
+    "start": 13.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.76,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "once-human-ocean-trailer.mp4",
+    "start": 16.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.76,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "once-human-ocean-trailer.mp4",
+    "start": 26.2,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.76,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "once-human-ocean-trailer.mp4",
+    "start": 28.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.76,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 720,
+   "max_zoom": 2.67,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 5.8,
+   "audio_secs": 32.4,
+   "music_pct": 68.3,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 1,
+    "miss": 3
+   },
+   "effects_shots": 0,
+   "mix_secs": 2.8,
+   "secs": 9.6
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 3.39,
+   "held_under_text": 0.0,
+   "secs": 17.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 145,
+  "queue_wait_secs": 1,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1075,
+  "peak_mem_mb": 2147,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 29207,
+  "peak_disk_mb": 30357,
+  "min_disk_free_mb": 215749,
+  "setup_min": 0.18,
+  "story": "once-human-season-5-dissonant-resonance-november-18-v2",
+  "job_sha": "895d57dbafb44f006a1c47d5d26510d22589a35f",
+  "dispatches": 1,
+  "sound": "trailer",
+  "footage": true
  }
 ]
