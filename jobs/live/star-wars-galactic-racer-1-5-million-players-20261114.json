@@ -17,67 +17,78 @@
  "shots": [
   [
    "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
-   44.96,
-   2.15,
+   0.0,
+   3.6,
    [
     [
      0.0,
-     0.629
+     0.51
     ]
    ]
   ],
   [
    "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
-   47.11,
-   1.93,
+   4.66,
+   2.02,
    [
     [
      0.0,
-     0.64
+     0.708
     ]
    ]
   ],
   [
    "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
-   50.93,
-   2.05,
+   10.7,
+   1.77,
    [
     [
      0.0,
-     0.46
+     0.547
     ]
    ]
   ],
   [
    "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
-   53.98,
-   4.0,
+   14.85,
+   1.9,
    [
     [
      0.0,
-     0.46
+     0.279
     ]
    ]
   ],
   [
    "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
-   57.98,
-   3.05,
+   16.75,
+   1.9,
    [
     [
      0.0,
-     0.402
+     0.573
     ]
    ]
   ],
   [
    "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
-   63.76,
-   4.0,
+   18.65,
+   3.13,
    [
     [
      0.0,
-     0.488
+     0.438
+    ]
+   ]
+  ],
+  [
+   "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
+   25.91,
+   3.84,
+   [
+    [
+     0.0,
+     0.536
     ]
    ]
   ]
@@ -97,7 +108,7 @@
   ],
   [
    3,
-   4,
+   5,
    [
     [
      "لا يوضح المنشور إن كان الرقم\nمبيعات أم لاعبين دخلوا اللعبة",
@@ -108,11 +119,11 @@
    ]
   ],
   [
-   5,
-   5,
+   6,
+   6,
    [
     [
-     "العربية بين لغات اللعبة\nعلى Steam",
+     "العربية بين اللغات المدعومة",
      {
       "size": 54
      }
@@ -123,7 +134,7 @@
  "credits": [
   [
    0,
-   5,
+   6,
    "المصدر: سيكرت مود (Secret Mode)"
   ]
  ],
@@ -138,7 +149,7 @@
  "cut": false,
  "track": [
   "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
-  44.96
+  0.0
  ],
  "music_only": true,
  "music_fade": [
@@ -163,31 +174,31 @@
   "STORY: release verbs": "yes: no release verb needed, launch is past",
   "STORY: names match names-ar.md": "yes: Secret Mode, Push Square rows with Latin in brackets in the credit and source",
   "POST: Arabic passes": "yes: arabic-games-film-editor and arabic-writing applied, western digits, no first person, DeepL whole story forward and back run",
-  "SOUND: footage sound or bed with reason": "yes: Launch Trailer music-only stretch from 44.96 s (speech-free 42.7 to 69.2 s by faster-whisper vad on and off), music_only",
-  "SOUND: no speech under Arabic lines": "yes: whisper found no speech between 42.7 and 69.2 s",
-  "PICTURE: footage first": "yes: official Steam Launch Trailer in the showcase layout (letterboxed source, picker shots 44.96 to 67.76 s)",
+  "SOUND: footage sound or bed with reason": "yes: Launch Trailer music-only stretch from 0 s (speech-free 0 to 35 s by faster-whisper vad on and off); the 44.96 s stretch failed the stem check (leftover 5.8%, music 38.6%)",
+  "SOUND: no speech under Arabic lines": "yes: whisper found no speech between 0 and 35 s",
+  "PICTURE: footage first": "yes: official Steam Launch Trailer in the showcase layout (letterboxed source, picker shots 0 to 29.75 s)",
   "PICTURE: not the same as last 5 reels": "yes: no recent Reel uses Galactic Racer",
   "CREDIT: on every clip": "yes: credit from frame 0 over every footage shot"
  },
  "decision_log": [
   {
    "beat": "0 hook + L1",
-   "shot": "44.96 to 52.98 s",
-   "alternatives": "3.75 s and 7.63 s text; 49.5 s cut text",
-   "crop": "showcase box, full width of the letterboxed picture, no crop",
+   "shot": "0 to 3.6 s, 4.66 to 6.68 s, 10.7 to 12.46 s",
+   "alternatives": "3.75 s text, 7.63 s text",
+   "crop": "showcase box",
    "music": "trailer music stem, music_only"
   },
   {
    "beat": "1 L2 not clarified",
-   "shot": "53.98 to 61.03 s",
-   "alternatives": "none",
+   "shot": "14.85 to 21.78 s",
+   "alternatives": "22.88 s cut text",
    "crop": "showcase",
    "music": "trailer music stem"
   },
   {
    "beat": "2 L3 Arabic",
-   "shot": "63.76 to 67.76 s",
-   "alternatives": "68.21 s text TAN, speech from 69.2 s",
+   "shot": "25.91 to 29.75 s",
+   "alternatives": "25.26 s text, speech from 35.5 s",
    "crop": "showcase",
    "music": "trailer music stem"
   }
