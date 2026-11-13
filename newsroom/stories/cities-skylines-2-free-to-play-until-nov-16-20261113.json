@@ -3,7 +3,7 @@
  "title": "Cities: Skylines II free to play on Steam until Mon 16 Nov 22:00 Dubai, 30% off (AED 133.70) until 19 Nov",
  "game": "Cities: Skylines II",
  "lane": "digital-lounge",
- "status": "built, qc pending; planned 18:15 Dubai Fri 13 Nov (builder 18:15; director to sign and schedule)",
+ "status": "built, qc pass (v3, dispatch 4); planned 18:15 Dubai Fri 13 Nov; awaiting separate director (not signed, not scheduled)",
  "kind": "free",
  "subject_person": null,
  "sources": [
@@ -30,7 +30,7 @@
   "x_threads_ar": "تتيح باراداكس (Paradox Interactive) اللعب المجاني للعبة Cities: Skylines II على Steam حتى الاثنين 16 نوفمبر الساعة 10 مساءً بتوقيت دبي، مع خصم 30 بالمئة على الشراء حتى 19 نوفمبر.",
   "instagram_ar": "لعبة Cities: Skylines II مجانية على Steam حتى الاثنين\n\nتتيح باراداكس (Paradox Interactive) تجربة اللعبة مجانًا على Steam حتى الاثنين 16 نوفمبر الساعة 10 مساءً بتوقيت دبي. ويستمر خصم 30 بالمئة على شراء اللعبة حتى 19 نوفمبر، فيبلغ سعرها في متجر Steam في الإمارات 133.70 درهمًا بدلًا من 191.00 درهمًا. وتصدر توسعة Park Adventures في 2 ديسمبر 2026.\n\nالمصدر: صفحة اللعبة على Steam وإعلان باراداكس.\n\n#ألعاب #أخبار_الألعاب #CitiesSkylines2 #Steam"
  },
- "job": "jobs/live/cities-skylines-2-free-to-play-until-nov-16-20261113.json",
+ "job": "job file commit c7f107a (jobs/live/cities-skylines-2-free-to-play-until-nov-16-20261113.json), job_sha 57236aadaa5cdb44fed79b1f3f54207cefa802d1",
  "kind_news": "free",
  "template": "split",
  "recipe": "deals/free split (strip: discount, AED price, deal end)",
@@ -61,5 +61,8 @@
   "PICTURE: footage first": "yes: official Steam trailer, five clean stretches",
   "PICTURE: not the same as last 5 reels": "yes",
   "CREDIT: on every clip": "yes: from frame 0 over shots 0 to 4"
- }
+ },
+ "reel_path": "cards/2026-11/cities-skylines-2-free-to-play-until-nov-16-20261113-reel-v3.mp4",
+ "render_checks": "qc pass no findings; whisper on final Reel: no speech; credit visible frames 0 to 3 s; shot 23.45 s dropped (burnt-in text); block_ok waiver 2.4 to 3.4 s (crossfade of lit tower facades, looked at frames); shot at 53.3 s shows tiny game HUD map labels at the window's left edge (not trailer text); sound trailer, audio split applied music 56.8%",
+ "built_by": "builder-1815"
 }
