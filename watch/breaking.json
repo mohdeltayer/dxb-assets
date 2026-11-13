@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T14:05:18Z",
- "seq": 437,
+ "generated_at": "2026-11-13T14:52:07Z",
+ "seq": 438,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 13815,
    "source": "PlayStation Blog",
@@ -29,9 +30,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 437
-  }
- ],
- "recent": [
+  },
   {
    "id": 13790,
    "source": "PlayStation (YouTube)",
@@ -736,137 +735,20 @@
    ],
    "breaking_source": true,
    "breaking_seq": 383
-  },
-  {
-   "id": 12707,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Barbie Rewind - Launch Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=-9ffzWW-jhg",
-   "published": "2026-11-12T14:13Z",
-   "first_seen": "2026-11-12T14:35:04Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/-9ffzWW-jhg/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=-9ffzWW-jhg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 381
-  },
-  {
-   "id": 12706,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Edge of Memories - Animated Opening | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=YsdViJ1v1fc",
-   "published": "2026-11-12T14:15Z",
-   "first_seen": "2026-11-12T14:35:04Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/YsdViJ1v1fc/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=YsdViJ1v1fc"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 381
-  },
-  {
-   "id": 12688,
-   "source": "Nintendo US",
-   "source_kind": "page",
-   "title": "11/12/26 Nintendo announces Black Friday offers to help spread joy this holiday season Mark your calendar for holiday specials featuring the Nintendo Switch 2 s",
-   "url": "https://www.nintendo.com/us/whatsnew/nintendo-announces-black-friday-offers-to-help-spread-joy-this-holiday-season/",
-   "published": null,
-   "first_seen": "2026-11-12T14:25:03Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 380
-  },
-  {
-   "id": 12671,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "I Am Security - Launch Trailer | PS VR2 Games",
-   "url": "https://www.youtube.com/watch?v=VQjDInADRMM",
-   "published": "2026-11-12T14:00Z",
-   "first_seen": "2026-11-12T14:15:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/VQjDInADRMM/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=VQjDInADRMM"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 379
-  },
-  {
-   "id": 12658,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "The Grinch 2: Saving Chirstmas | Grinchy Gadgets | US | ESRB",
-   "url": "https://www.youtube.com/watch?v=B07PpsJGZEg",
-   "published": "2026-11-12T14:00Z",
-   "first_seen": "2026-11-12T14:10:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/B07PpsJGZEg/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=B07PpsJGZEg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 378
-  },
-  {
-   "id": 12657,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Edge of Memories | Official Animated Opening",
-   "url": "https://www.youtube.com/watch?v=iNYtvpobCPU",
-   "published": "2026-11-12T14:00Z",
-   "first_seen": "2026-11-12T14:10:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/iNYtvpobCPU/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=iNYtvpobCPU"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 378
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T14:05:14Z",
+  "last_poll_at": "2026-11-13T14:50:14Z",
   "sources_enabled": 100,
-  "sources_ok": 93,
+  "sources_ok": 94,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 52x)",
    "Nintendo of America (X) (HTTP 429, 65x)",
-   "PlayStation (X) (HTTP 429, 83x)",
+   "PlayStation (X) (HTTP 429, 84x)",
    "PlayStation Middle East (X) (HTTP 429, 10x)",
-   "Rockstar Games (X) (HTTP 429, 36x)",
+   "Rockstar Games (X) (HTTP 429, 37x)",
    "Xbox (X) (HTTP 429, 83x)"
   ]
  }
