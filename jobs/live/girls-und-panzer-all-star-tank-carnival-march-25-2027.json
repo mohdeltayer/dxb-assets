@@ -18,7 +18,7 @@
   [
    "gup-trailer.mp4",
    0.0,
-   3.4,
+   3.8,
    [
     [
      0.0,
@@ -77,7 +77,7 @@
    0,
    [
     [
-     "اللعبة مقتبسة من أنمي Girls und Panzer",
+     "اللعبة مقتبسة من أنمي\nدبابات Girls und Panzer",
      {
       "size": 54
      }
@@ -183,5 +183,32 @@
   "payoff": "over 90 characters in new art, story mode with an original story, 6,980 yen"
  },
  "layout": "showcase",
- "showcase_reason": "case a: the news is the new trailer itself, which shows the three platform logos and the date"
+ "showcase_reason": "case a: the news is the new trailer itself, which shows the three platform logos and the date",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: D3 Publisher page d3p.co.jp/garupan read 04:3xZ 13 Nov, no update or correction notice; Steam page and trailer read",
+  "SOURCE: not already posted": "yes: ledger find girls und panzer, 0 other hits",
+  "SOURCE: age": "yes: first report Gematsu 02:05Z 13 Nov (06:05 Dubai), under 3 hours at build, no Arabic outlet found",
+  "ANGLE before lines": "yes: angle in story file and job",
+  "STORY TYPE date/announcement": "yes: what it is, platforms, date (Japan), price, what you do, no Arabic, nothing outside Japan announced",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline and L1 name the game and the anime; no line opens on و",
+  "STORY: release verbs": "yes: headline تصل إلى + platforms; the date sits in the strip as a fact, no bare تصل for a date",
+  "STORY: names match names-ar.md": "yes: دي ثري ببليشر (D3 Publisher) added to names-ar.md, bracket at first mention in the credit",
+  "POST: Arabic passes": "yes: three skills loaded fresh, grammar pass, DeepL whole-story forward (أوراي and اللعب المشترك taken from it) and back-check; Western digits, no first person",
+  "SOUND: footage sound or bed with reason": "yes: the official trailer's music stem (audio split, music_only) under the whole cut",
+  "SOUND: no speech under Arabic lines": "yes: faster-whisper on the full trailer audio found no speech (one spurious word on the end card at 60 s, outside the cut); music_only strips voices anyway",
+  "PICTURE: footage first": "yes: the game's own official Steam trailer, showcase layout case a (the trailer is the news: platform logos and date)",
+  "PICTURE: not graphic": "yes: all five stretches judged on 2 s contact sheets: tanks, street scenes, UI cards, characters; one shell-hit explosion outside the cut; no blood or gore",
+  "CREDIT: on every clip": "yes: credit covers shots 0 to 4",
+  "SENSITIVE": "yes: checked, nothing sensitive (anime tank action)",
+  "DATE: primary check": "yes: Steam shows Mar 24, 2027 (US zone), D3P and the trailer end card say 25 Mar 2027 JST; 25 March used and labelled Japan"
+ },
+ "decision_log": [
+  "shot 0 (0 to 3.4 s): tank with the girls, the first moving recognisable frame, before the title card at 4 s",
+  "shot 1 (8.0 s): the protagonist walking in the anime's town, for the exploration line; alternatives 10 to 18 s have captions only",
+  "shot 2 (31.0 s): the three platform logos and crossplay caption, for the crossplay line; trailer proves nothing about frame rate",
+  "shot 3 (38.0 s): story-mode dialogue screen for the story line",
+  "shot 4 (44.0 s): the 90 plus character group art, the payoff",
+  "crop: showcase layout, full frame at its own width so the burnt-in Japanese captions and logos are never cropped",
+  "music: trailer music stem via the split, music_only, continuous from 0.0 s"
+ ]
 }
