@@ -84,8 +84,8 @@
  ],
  "lines": [
   [
-   3.6,
-   7.0,
+   3,
+   7,
    [
     [
      "لعبة تقمص أدوار بالبكسل\nبقتال بنظام الأدوار",
@@ -96,8 +96,8 @@
    ]
   ],
   [
-   7.2,
-   10.6,
+   7,
+   10,
    [
     [
      "أكثر من 40 ممثلًا صوتيًا\nوأكثر من 100 مقطوعة",
@@ -108,8 +108,8 @@
    ]
   ],
   [
-   10.8,
-   12.4,
+   10,
+   12,
    [
     [
      "نسخة Switch بعد أسبوع",
@@ -123,7 +123,7 @@
  "credits": [
   [
    0,
-   12.4,
+   12,
    "المصدر: ديك 13 سبوتلايت (Deck13 Spotlight)",
    {
     "size": 40,
@@ -160,5 +160,51 @@
   "why_now": "Deck13 Spotlight and ShrooMoon announced it on 12 Nov with a release date trailer",
   "what_it_means_here": "a retro turn-based RPG for PC, PlayStation and Xbox on 8 Dec, Switch a week later; no Arabic, no price yet",
   "payoff": "8 Dec 2026, Switch 15 Dec"
- }
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Games Press press release 12 Nov 2026 (Deck13 Spotlight and ShrooMoon) and the Steam page read in full",
+  "SOURCE: not already posted": "yes: ledger find elements destiny recorded, 0 other hits",
+  "SOURCE: age": "yes: first report press release 12 Nov 2026, Gematsu 12 Nov 14:13Z; about 46 hours at the 12:15Z slot; Arabic press not carried (digests, search)",
+  "ANGLE before lines": "yes: angle in the story file and job",
+  "STORY TYPE date": "yes: release date trailer shows the game; date, platforms and Switch week in strip and one line, once each",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names the game; L1 genre, L2 voice and music, L3 Switch; no line opens on و as a new fact",
+  "STORY: release verbs": "yes: تصدر only; no bare تصل",
+  "STORY: names match names-ar.md": "yes: Deck13 Spotlight Arabic then Latin in the credit at frame 0, rows added",
+  "POST: Arabic passes": "yes: three skills, DeepL forward whole story and back-check, notes in the story file",
+  "SOUND: footage sound or bed with reason": "yes: trailer own music from 0.3 s, audio split",
+  "SOUND: no speech under Arabic lines": "yes: faster-whisper VAD on and off: first speech 17.8 s of the trailer, stretch 0.3 to about 13 s clean",
+  "PICTURE: footage first": "yes: official Steam Release Date trailer, six picker stretches in source order",
+  "PICTURE: not the same as last 5 reels": "yes: no other Reel uses this game",
+  "CREDIT: on every clip": "yes: credit from frame 0 over every shot"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "9.63 to 12.33 s four heroines on the ice (picker, clean)",
+   "alternatives": "0 to 7 s map and pixel scenes: picker flagged text and smear",
+   "crop": "picker focus 0.232",
+   "music": "trailer music from 0.3 s, audio split"
+  },
+  {
+   "beat": "1",
+   "shot": "15.38 to 17.68 s heroines art; stops before speech at 17.8 s",
+   "alternatives": "-",
+   "crop": "picker focus",
+   "music": "split"
+  },
+  {
+   "beat": "2 L2",
+   "shot": "34.81 to 36.93 s, 37.53 to 39.55 s dragon and battle",
+   "alternatives": "dialogue boxes 18 to 33 s",
+   "crop": "picker focus",
+   "music": "split"
+  },
+  {
+   "beat": "3 L3",
+   "shot": "70.03 s and 74.26 s colour scene and boss battle",
+   "alternatives": "end card with date 77 s on",
+   "crop": "picker focus",
+   "music": "split"
+  }
+ ]
 }

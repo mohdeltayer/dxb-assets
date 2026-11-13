@@ -247,3 +247,7 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | Ghost Ship Games (Deep Rock Galactic: Rogue Core developer) | غوست شيب | Proposed 13 Nov 2026 (Rogue Core free weekend Reel; Latin in brackets at first mention) |
 | Epic Games Store (and Epic Games, the company, in a Reel line) | متجر إيبك غيمز (Epic Games Store); إيبك غيمز (Epic Games) | Proposed 14 Nov 2026 (free-games Reel; matches the Epic Games row above) |
 | Light Up Games (Mark of the Deep publisher) | لايت أب غيمز (Light Up Games) | Proposed 14 Nov 2026 (free-games Reel credit; Latin in brackets at first mention) |
+| Knights Peak (Hela: of Mice & Magic publisher) | نايتس بيك (Knights Peak) | Proposed 14 Nov 2026 (Hela Reel credit; Latin in brackets at first mention) |
+| Windup (Windup Games, Hela developer) | ويندأب (Windup) | Proposed 14 Nov 2026 (Hela caption; Latin in brackets at first mention) |
+| Deck13 Spotlight (Elements Destiny publisher) | ديك 13 سبوتلايت (Deck13 Spotlight) | Proposed 14 Nov 2026 (Elements Destiny Reel credit; Latin in brackets at first mention) |
+| ShrooMoon (Elements Destiny developer) | شرومون (ShrooMoon) | Proposed 14 Nov 2026 (Elements Destiny caption; Latin in brackets at first mention) |
