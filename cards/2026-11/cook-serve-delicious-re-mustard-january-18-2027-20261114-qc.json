@@ -1,0 +1,30 @@
+{
+ "name": "cook-serve-delicious-re-mustard-january-18-2027-20261114",
+ "out": "cards/2026-11/cook-serve-delicious-re-mustard-january-18-2027-20261114-reel-v1.mp4",
+ "verdict": "fail",
+ "at": "2026-11-13T12:21:04Z",
+ "findings": [
+  {
+   "check": "lifeless",
+   "detail": "lifeless score 41.9 (still_share 0.728, longest still 2.2 s): too much of the Reel holds still; footage behind the cards, the count-up and row reveal, more cuts"
+  }
+ ],
+ "notes": [
+  "length 17.4 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 41.9, \"still_share\": 0.728, \"longest_still\": 2.2, \"cuts_per_10s\": 2.89, \"held_under_text\": 0.0, \"secs\": 17.3, \"storybook\": false, \"mode\": \"report-only\", \"over\": true}"
+ ],
+ "autofixed": [],
+ "job_sha": "e15994bc27e6362f17f867bf4cfa4e88098d9623",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "bed:neon_d (Release Date Trailer (Steam 2139040): faster-whisper word level finds customer voice lines at 10.0 to 10.5 s and 23.1 to 24.5 s, the only voice-free stretches are 11.6 to 22.9 s and 26.0 to 36.4 s, which are not one continuous stretch (raw chicken from 36.5 s, so the picture skips 23 to 26 s); First Gameplay Look (80 s) is music only but is not the date trailer; Teaser Trailer (40 s) carries sung or spoken vocals (whisper: Ha ha ha go) over the whole clip)"
+}
