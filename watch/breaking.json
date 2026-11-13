@@ -1,10 +1,54 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T19:20:17Z",
- "seq": 452,
+ "generated_at": "2026-11-13T19:30:17Z",
+ "seq": 453,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 14121,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Where Winds Meet - Hutuo Official Gameplay Trailer | 1st Anniversary",
+   "url": "https://www.youtube.com/watch?v=3gNaAp_KPV0",
+   "published": "2026-11-13T19:18Z",
+   "first_seen": "2026-11-13T19:30:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/3gNaAp_KPV0/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=3gNaAp_KPV0"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 453
+  },
+  {
+   "id": 14122,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Fable: Deep Dive Into New Gameplay With Playground Games | Official XBOX Podcast",
+   "url": "https://www.youtube.com/watch?v=RoIL8hDHF9A",
+   "published": "2026-11-13T19:10Z",
+   "first_seen": "2026-11-13T19:30:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/RoIL8hDHF9A/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=RoIL8hDHF9A"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 453
+  }
+ ],
+ "recent": [
   {
    "id": 14114,
    "source": "Xbox (YouTube)",
@@ -25,9 +69,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 452
-  }
- ],
- "recent": [
+  },
   {
    "id": 14108,
    "source": "Xbox Wire",
@@ -620,9 +662,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T19:20:14Z",
+  "last_poll_at": "2026-11-13T19:30:15Z",
   "sources_enabled": 100,
-  "sources_ok": 93,
+  "sources_ok": 94,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 54x)",
