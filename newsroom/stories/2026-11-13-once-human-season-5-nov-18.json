@@ -1,7 +1,7 @@
 {
  "id": "2026-11-13-once-human-season-5-nov-18",
  "title": "Once Human Season 5 \"Dissonant Resonance\": free, launches 18 Nov; four-player Colossus Raid (PlayStation Blog, Starry Studio designer)",
- "state": "claimed",
+ "state": "built, awaiting director",
  "claimed_by": "production-2 builder 13:15 Dubai slot",
  "claimed_at": "2026-11-13T00:45:00Z",
  "ledger_find": {
@@ -76,5 +76,24 @@
  },
  "grammar_review": "separate pass 13 Nov 01:10Z on headline, four lines, X/Threads, caption: no required edits after fixes (line 0 changed from 'عملاق الأرغن' to 'عملاق على شكل أرغن' after the DeepL back-check read it as 'organ'); optional: DeepL forward used أورغن and سيُطلق, ours أرغن and يصدر (house release verb)",
  "deepl": "forward (whole story EN to AR, one piece) and back (AR to EN) 13 Nov: meaning matched; alternatives أرغن/أورغن, يصدر/سيُطلق; kept ours",
- "approved": "go: scheduled by the dispatcher's director step; builder stops before director and Publer"
+ "approved": "go: scheduled by the dispatcher's director step; builder stops before director and Publer",
+ "template": "trailer (showcase layout)",
+ "kind": "update",
+ "recipe": "trailer drop with showcase (720p official clip)",
+ "reel": "cards/2026-11/once-human-season-5-dissonant-resonance-november-18-reel-v1.mp4",
+ "job": "once-human-season-5-dissonant-resonance-november-18",
+ "job_commit": "20d87c1",
+ "job_sha": "b08229564d59041e12cb82138446696ed589daa3",
+ "planned_slot": "13:15 Dubai Fri 13 Nov 2026",
+ "chip": "رسمي",
+ "theme": "stylized",
+ "skin": "house",
+ "sound": "trailer (Ocean Expansion music stem, audio split music_only)",
+ "qc": "pass, 0 findings, 16.5 s, 1 render dispatch of 2 failures before pass (pace, credits format)",
+ "uncertain": [
+  "speech not checked by ear; server speech check passed",
+  "gore check by eye on strip, dense and contact sheets: no blood or gore in any frame",
+  "shots 1 to 4 are earlier official Ocean Expansion footage as stand-in, credited on screen",
+  "local face-direction check not run (mediapipe missing on runner)"
+ ]
 }
