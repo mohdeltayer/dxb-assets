@@ -227,3 +227,5 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | THQ Nordic | ثي إتش كيو نورديك | Proposed 12 Nov 2026 (Production, Black Forest Games story; Latin in brackets at first mention) |
 | Black Forest Games | بلاك فورست جيمز | Proposed 12 Nov 2026 (grammar stage accepted the transliteration) |
 | Third Signal | ثيرد سيغنال | Proposed 12 Nov 2026 |
+| NC (Cinder City publisher) | إن سي | Proposed 13 Nov 2026 (Cinder City alpha Reel; Latin in brackets at first mention) |
+| BigFire Games (Cinder City developer; the Steam page writes BIG FIRE GAMES) | بيغ فاير غيمز | Proposed 13 Nov 2026 (Cinder City alpha Reel) |
