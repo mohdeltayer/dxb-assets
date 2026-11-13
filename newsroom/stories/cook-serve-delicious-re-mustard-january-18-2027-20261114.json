@@ -1,7 +1,7 @@
 {
  "id": "cook-serve-delicious-re-mustard-january-18-2027-20261114",
  "title": "Cook, Serve, Delicious! Re-Mustard launches 18 Jan 2027 on Steam (Vertigo Gaming)",
- "status": "built by builder-0915, render qc pass (v1, job_sha 5aa1b4a9), awaiting separate director; planned slot 09:15 Dubai Sat 14 Nov (05:15Z), ig, x, threads",
+ "status": "director FAIL on v1 (showcase layout empty space, title cards, bed); v2 plain 9:16 crop blocked by the source: see notes_open; not scheduled",
  "lane": "digital-lounge",
  "game": "Cook, Serve, Delicious! Re-Mustard",
  "subject_person": null,
@@ -73,5 +73,5 @@
  "approved": "not yet: separate director then schedule 09:15 Dubai Sat 14 Nov",
  "job": "job file commit 8ece34c (jobs/live/cook-serve-delicious-re-mustard-january-18-2027-20261114.json, deleted by the render commit d2bf028), job_sha 5aa1b4a9dfd9afaeade4c9e32950082f57603c48; reel cards/2026-11/cook-serve-delicious-re-mustard-january-18-2027-20261114-reel-v1.mp4 (17.4 s before the end card, 19.4 s in all); strip, sheet, dense strip and qc.json beside it; 5 render dispatches (pace, credits, smear flags on UI edges waived after looking at frames, lifeless 41.9 fixed by choosing moving gameplay stretches)",
  "picture": "cartoon restaurant UI, nothing graphic (checked at 1 fps contact sheets and the finished 1 fps strip; no raw meat shown); credit «المصدر: فيرتيغو غيمينغ (Vertigo Gaming)» in the bottom band visible at frames 0, 1, 2, 3 s (checked on the finished Reel); first frame is the pan gameplay, a Releases On card appears at about 2 s",
- "notes_open": "bed instead of trailer sound (needs director sign-off); showcase fitted box is small (two-line headline); first 4 s include a 'Releases On' title card at 2 s inside the picture box; some picture stretches are static menu screens (lifeless 35.9 under threshold); consoles later in 2027 from Gematsu only, attributed in the caption, not in the Reel; the game's Steam title is 'Cook, Serve, Delicious: Remustard!' and the trailer logo 'Re-Mustard!'"
+ "notes_open": "v2 blocked: server shot picker over the three Steam trailers (Release Date, First Gameplay Look, Teaser) gives 7.9 s of strictly clean stretches in all (gp 67.45 to 69.25, date 0 to 1.66, teaser 20.65 to 23.35 and 32.08 to 33.78) against the 12 s floor; relaxing to stretches with only fully-inside text (gp 18.0 to 22.1, 42.0 to 46.2, 60.3 to 62.9, 67.4 to 69.3, teaser 19.35 to 23.4) still shows the bottom ticket text clipped at the 9:16 window edges at 4 fps ('ked', 'pecial'), and the bar sits at y 0.79 to 0.86 so no crop inside the 2x cap removes it; options: another lead, or showcase tall/wide with a one-line headline if the director accepts the blur ground"
 }
