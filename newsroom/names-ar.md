@@ -148,6 +148,9 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Hideo Kojima | هيديو كوجيما | المنتج التنفيذي / مبتكر | In use |
 | Shigeru Miyamoto | شيغيرو مياموتو | مبتكر Mario وZelda | In use |
 | Eiji Aonuma | إيجي أونوما | المنتج | In use |
+| Yasunori Mitsuda | ياسونوري ميتسودا | ملحن Chrono Trigger، رئيس بروسيون ستوديو (Procyon Studio) | Proposed 13 Nov 2026 (mitsuda-dragon-quest blog Reel) |
+| Yuji Horii | يوجي هوري | مبتكر Dragon Quest | Proposed 13 Nov 2026 |
+| Akira Toriyama | أكيرا توريياما | مصمم شخصيات Dragon Quest وChrono Trigger، الراحل | Proposed 13 Nov 2026 (always with respect and attribution; Reel lines use the Arabic alone) |
 | Hidemaro Fujibayashi | هيديمارو فوجيباياشي | المنتج | In use |
 | Koji Kondo | كوجي كوندو | الموسيقار | In use |
 | Goichi Suda (Suda51) | غويتشي سودا (سودا51) | مبتكر No More Heroes | In use |
