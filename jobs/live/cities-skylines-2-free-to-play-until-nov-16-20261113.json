@@ -151,9 +151,20 @@
  },
  "bed_reason": null,
  "reel_check": {
-  "SOURCE": "Steam store page read in full 13 Nov: free_weekend 1794506400 to 1794852000 (Thu 12 Nov 22:00 to Mon 16 Nov 22:00 Dubai), weekend deal -30% to 19 Nov, AED 191.00 to 133.70 via appdetails cc=ae; Steam announcement 10 Nov read for Park Adventures date",
-  "SOUND": "trailer own sound from 36.98 s (audio split); whisper on the whole trailer: sung vocals 2.1 to 17.9 s only, none after 18 s, chosen stretch 36.98 s onward clean",
-  "PICTURE": "Steam 'Release Trailer 2026' 1080p60 5.7 Mbps decode clean; shots 36.98, 53.3, 57.46, 60.31, 106.0 judged at 4 fps as 9:16 crops, no text in window, no graphic content (city builder)",
-  "CREDIT": "from frame 0 over all shots"
- }
+  "SOURCE: primary read in full": "yes: Steam store page read 13 Nov (free_weekend, weekend deal, UAE price) and Paradox's Steam announcement of 10 Nov; gate 06:00Z",
+  "SOURCE: not already posted": "yes: ledger find cities skylines recorded, only the Oct 8 Switch 2 story",
+  "SOURCE: age": "yes: free play began 12 Nov 18:00Z, about 20 hours old at the slot, running until 16 Nov",
+  "ANGLE before lines": "yes: angle in the job",
+  "STORY TYPE free": "yes: free window with Dubai time, discount, AED price, deal end; Arabic not supported (not claimed)",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names the game, L1 names Paradox, L2 says when it ends; no line opens on و",
+  "STORY: release verbs": "yes: تصدر for Park Adventures in the caption",
+  "STORY: names match names-ar.md": "yes: Paradox Interactive as باراداكس (Paradox Interactive) at first mention",
+  "POST: Arabic passes": "yes: two skills, grammar stage no required edits, DeepL forward and back-check",
+  "SOUND: footage sound or bed with reason": "yes: trailer own sound from 36.98 s",
+  "SOUND: no speech under Arabic lines": "yes: whisper: sung vocals 2.1 to 17.9 s only; stretch from 36.98 s clean; server check final",
+  "PICTURE: footage first": "yes: official Steam trailer, five clean stretches",
+  "PICTURE: not the same as last 5 reels": "yes",
+  "CREDIT: on every clip": "yes: from frame 0 over shots 0 to 4"
+ },
+ "beat": "free"
 }
