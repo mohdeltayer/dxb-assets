@@ -39,8 +39,8 @@
   ],
   [
    "cinder-city-alpha-playtest-december-4-6-trailer.mp4",
-   7.1,
-   2.2,
+   6.9,
+   2.1,
    [
     [
      0.0,
@@ -94,7 +94,7 @@
   ],
   [
    "cinder-city-alpha-playtest-december-4-6-trailer.mp4",
-   139.2,
+   140.2,
    3.0,
    [
     [
@@ -105,8 +105,8 @@
   ],
   [
    "cinder-city-alpha-playtest-december-4-6-trailer.mp4",
-   152.3,
-   3.0,
+   151.1,
+   2.85,
    [
     [
      0.0,
@@ -157,7 +157,7 @@
    8,
    [
     [
-     "لكن القائمة لا تضم أي دولة عربية",
+     "لكن القائمة بلا دولة عربية",
      {
       "size": 54
      }
@@ -218,5 +218,23 @@
   "why_now": "NC and BigFire Games posted the alpha playtest sign-ups on Steam on 12 Nov 2026",
   "what_it_means_here": "No Gulf or Arab country is on the eligible list, so Gulf players cannot sign up for this alpha",
   "payoff": "the dates (4 to 6 Dec PST, sign-ups to 30 Nov) and the country list"
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam community announcement (12 Nov 14:00Z) and store page read in full 04:45Z 13 Nov; Steam news API shows nothing newer, no update or correction",
+  "SOURCE: not already posted": "yes: ledger find cinder city, 0 hits",
+  "SOURCE: age": "yes: first report 12 Nov 14:00Z, about 15 hours at build, no Arabic outlet found",
+  "ANGLE before lines": "yes: angle in story file and job",
+  "STORY TYPE beta/availability": "yes: what it is (sci-fi shooter, Seoul), who (NC publisher, BigFire Games developer), dates, platform, eligibility, no Arab country",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names the game, L1 what it is, L2 who, L3 who may join, L4 the Arab-country gap; no line opens on و",
+  "STORY: release verbs": "yes: no release date is stated; the test dates are plain facts",
+  "STORY: names match names-ar.md": "yes: NC إن سي (NC) and BigFire Games بيغ فاير غيمز (BigFire Games) with brackets at first mention; both new, proposed for names-ar.md",
+  "POST: Arabic passes": "yes: three skills loaded fresh, grammar stage, DeepL whole-story forward and back; Western digits, no first person, no em dash",
+  "SOUND: footage sound or bed with reason": "yes: Official Game Trailer music stem (audio split, music_only) from 1.0 s; whisper on 0-30 s and 100-138 s found no speech; the other Steam videos are dev interviews with narration and burnt-in subtitles",
+  "SOUND: no speech under Arabic lines": "yes: music stem only; server speech check is final",
+  "PICTURE: footage first": "yes: official Steam Official Game Trailer 1080p, full-height 9:16 crop to the subject (no enlargement past 1.8x at 1080p); shot list taken from the server's clean stretches",
+  "PICTURE: not graphic": "yes: contact sheets and 4 fps 9:16 crops of every chosen stretch judged: ruined city, robots, explosion, armoured characters, two faces; no blood, gore or wounds (the trailer's blood and mutant stretches are unused)",
+  "CREDIT: on every clip": "yes: one credit for all nine shots, NC and BigFire Games",
+  "SENSITIVE": "none",
+  "DATE: primary check": "yes: Steam writes Dec 4 to 6 and sign-ups Nov 12 to 30 in PST; kept as PST (regional hours not announced), no Dubai conversion stated on screen; PST = UTC-8"
  }
 }
