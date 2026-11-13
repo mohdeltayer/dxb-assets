@@ -18,7 +18,7 @@
   [
    "wolfenstein-3-in-production-machinegames-november-13-trailer.mp4",
    161.0,
-   2.0,
+   5.8,
    [
     [
      0.0,
@@ -28,19 +28,8 @@
   ],
   [
    "wolfenstein-3-in-production-machinegames-november-13-trailer.mp4",
-   163.0,
-   5.6,
-   [
-    [
-     0.0,
-     0.46
-    ]
-   ]
-  ],
-  [
-   "wolfenstein-3-in-production-machinegames-november-13-trailer.mp4",
-   168.6,
-   5.5,
+   166.8,
+   6.4,
    [
     [
      0.0,
@@ -51,8 +40,8 @@
  ],
  "lines": [
   [
-   1,
-   1,
+   0,
+   0,
    [
     [
      "أعلنت ذلك\nآشا شارما (Asha Sharma)،\nالرئيسة التنفيذية لإكس بوكس",
@@ -63,8 +52,8 @@
    ]
   ],
   [
-   2,
-   2,
+   1,
+   1,
    [
     [
      "يعود الممثلان\nبراين بلوم (Brian Bloom)\nوديبرا ويلسون (Debra Wilson)",
@@ -78,7 +67,7 @@
  "credits": [
   [
    0,
-   2,
+   1,
    "لقطات من Wolfenstein II · بيثيسدا (Bethesda)",
    {
     "size": 36,
@@ -92,7 +81,7 @@
  "date": "12 Nov 2026",
  "theme": "cold",
  "style": null,
- "template": "split",
+ "template": "trailer",
  "skin": "house",
  "cut": false,
  "track": [
@@ -139,18 +128,8 @@
    "music": "trailer own sound"
   }
  ],
- "strip": [
-  [
-   "المنصات",
-   "لم تُعلن بعد"
-  ],
-  [
-   "الموعد",
-   "لم يُعلن بعد"
-  ]
- ],
  "pace_ok": true,
- "pace_reason": "the source's own cut inside the stretch and the strip carry the change; splitting the L2 shot would need frames after 174.1 s, which are red-lit and ambiguous (judged not clean)",
+ "pace_reason": "two beats of one continuous stretch; the lines change at 5.8 s; the next clean source cut after 173 s is red-lit and ambiguous, so no further split",
  "layout": "showcase",
  "showcase_reason": "case b: Steam's Wolfenstein II E3 Trailer is letterboxed 2.35:1 (816 rows, enlarged 2.35x); Steam's Gameplay and Launch trailers are the same 2.35:1 and no Wolfenstein 3 footage exists, no better official copy found"
 }
