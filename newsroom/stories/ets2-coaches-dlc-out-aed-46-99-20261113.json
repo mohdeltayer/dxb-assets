@@ -3,7 +3,7 @@
  "title": "Euro Truck Simulator 2 Coaches DLC out on Steam, AED 46.99 on the UAE store (SCS Software)",
  "game": "Euro Truck Simulator 2",
  "lane": "digital-lounge",
- "status": "built, qc pass (v1, dispatch 2); planned 21:15 Dubai Fri 13 Nov; awaiting separate director (not signed, not scheduled)",
+ "status": "scheduled in Publer 21:15 Dubai Fri 13 Nov (instagram, x, threads), director PASS director-16 (bed reason signed off; disclaimer and last-shot framing accepted with notes)",
  "subject_person": null,
  "ledger_find": {
   "at": "2026-11-13T06:50:50Z",
@@ -50,5 +50,25 @@
  "arabic_review": "two skills applied (glossary: إضافة, متجر Steam في الإمارات, الشركة alone after first mention); grammar stage: no required edits (ثلاث حافلات مرخصة رسميًا agreement ok); DeepL forward whole-story pass: matched except DeepL wrote «حزمة المحتوى الإضافي» (house: إضافة), «مدربين» for coaches (wrong, حافلات), «درهم إماراتي» (house: درهمًا) and «مهام تعاقدية» (kept عقودًا بجداول زمنية); alternatives for contract jobs: وظائف تعاقدية; for tourist jobs: رحلات سياحية إلى المعالم الشهيرة (kept معالم أوروبا); back-check: SCS Software released the Coaches DLC for ETS2 on Steam, three officially licensed coaches, quick jobs, contracts with timetables, tourist trips, AED 46.99 on the UAE store",
  "job": "job file commit aa93ac3 (jobs/live/ets2-coaches-dlc-out-aed-46-99-20261113.json), job_sha c7aea86e7f176a11865f60e4dd9004048976bd25; reel cards/2026-11/ets2-coaches-dlc-out-aed-46-99-20261113-reel-v1.mp4",
  "sound": "our bed (launch flavour) with bed_reason: only official trailer is narrated 2.0 to 245.4 s (whisper), music_only stem left 34.8% residue (failed dispatch 1); final Reel whisper: no speech; audio continuous to the end card",
- "notes_open": "burnt-in Steam trailer disclaimer 'SOME FOOTAGE MAY CONTAIN CONTENT FROM OTHER DLCS' is faintly visible, partly cropped, at the very top of the frame from 4 s (above the chip row); last shot (224.5 s) shows the red MAN coach half cut at the right edge; length 21.5 s before the end card (over the 20 s guide)"
+ "notes_open": "burnt-in Steam trailer disclaimer 'SOME FOOTAGE MAY CONTAIN CONTENT FROM OTHER DLCS' is faintly visible, partly cropped, at the very top of the frame from 4 s (above the chip row); last shot (224.5 s) shows the red MAN coach half cut at the right edge; length 21.5 s before the end card (over the 20 s guide)",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/ets2-coaches-dlc-out-aed-46-99-20261113-reel-v1.mp4",
+  "blob": "e81dcb20005ab7fa43321eb8ddd60d4159feeb4b",
+  "at": "2026-11-13T07:13:18Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/ets2-coaches-dlc-out-aed-46-99-20261113.json",
+   "sha256": "3a96541a384a22c343b5ed83f07820634e2286229454eda3c7897f93496ef570",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-2115"
+  },
+  "by": "director-16",
+  "qc": "pass",
+  "looked": "Watched strip, 4 fps dense strip, 3:4 first frame, frames at 4.5/12.2/20.3 s; whisper on final audio: no speech (bed only, launch flavour). Primaries re-read: SCS blog 12 Nov 2026 10:00+01:00 (CET) = 09:00Z = 13:00 Dubai; Steam appid 3809270 released 12 Nov, UAE 46.99 AED, no Arabic in languages; three coaches and Quick/Contract/Tourist jobs match. Bed reason SIGNED OFF: only one official trailer (same video on Steam and the 1 Nov blog, no other clips), narrated through, music stem failed at 34.8 percent leftover. Framing issue 1 (burnt-in Steam disclaimer faint at top from 4 s, runs off the right edge): inherent to every shot of the only footage, faint, English legal note, above the chip row after the headline; accepted. Framing issue 2 (last shot, red MAN coach front cut at the right edge for 2.5 s): cab, driver and livery readable, still a picture for the last 2 s; accepted with note. Length 21.5 s accepted, a new image every 2 to 4 s, lines Arabic-first, no flipping signs, strip holds price and date once, credit from frame 0, nothing graphic. Hook note: the headline names Steam, not the game, in the first 3.5 s; acceptable, the game is named in line 1."
+ }
 }
