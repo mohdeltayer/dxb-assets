@@ -3,9 +3,9 @@
  "title": "Nintendo Black Friday: Switch 2 + Mario Kart World bundle $499.99, 22 Nov to 5 Dec (US)",
  "game": "Nintendo Switch 2",
  "account": "Digital Lounge",
- "status": "built, QC pass, awaiting director (builder 08:15 Sat 14 Nov slot)",
+ "status": "v2 built, QC pass, awaiting director (target 12:15 to 14:15 Dubai Sat 14 Nov)",
  "claimed_by": "builder 08:15 Sat 14 Nov",
- "slot": "2026-11-14T04:15Z (08:15 Dubai Sat 14 Nov)",
+ "slot": "2026-11-14T08:15Z to 10:15Z (12:15 to 14:15 Dubai Sat 14 Nov), moved off the 08:15 peak by the director",
  "subject_person": null,
  "ledger_find": {
   "at": "2026-11-13T10:52:00Z",
@@ -67,10 +67,11 @@
    "أعلنت نينتيندو (Nintendo)\nعروض الجمعة السوداء في أمريكا",
    "تجمع الحزمة جهاز Switch 2\nولعبة Mario Kart World",
    "مع اشتراك لمدة 3 أشهر\nفي Nintendo Switch Online",
-   "تخفض نينتيندو 20 دولارًا من\nسعر ألعاب فعلية مختارة",
+   "تستمر حزمة Mario Kart\nحتى نفاد الكمية",
+   "تخفيض 20 دولارًا أمريكيًا\nعلى ألعاب فعلية مختارة",
    "يستمر هذا التخفيض\nحتى 29 نوفمبر"
   ],
-  "strip": "السعر 499.99 دولارًا | من 22 نوفمبر | حتى 5 ديسمبر",
+  "strip": "سعر الحزمة 499.99 دولارًا | تبدأ 22 نوفمبر | تنتهي 5 ديسمبر",
   "credit": "المصدر: نينتيندو (Nintendo)",
   "x_threads": "أعلنت نينتيندو (Nintendo) عروض الجمعة السوداء في الولايات المتحدة: حزمة Switch 2 مع Mario Kart World بسعر 499.99 دولارًا، أي بخصم 50 دولارًا، من 22 نوفمبر إلى 5 ديسمبر حتى نفاد الكمية.",
   "threads": "أعلنت نينتيندو (Nintendo) عروض الجمعة السوداء في الولايات المتحدة: حزمة Switch 2 مع Mario Kart World بسعر 499.99 دولارًا، أي بخصم 50 دولارًا، من 22 نوفمبر إلى 5 ديسمبر حتى نفاد الكمية.",
@@ -80,11 +81,19 @@
  "versions": [
   {
    "v": 1,
+   "note": "director FAIL: block_ok waiver rejected (macroblocking at 45.3 s), strip dates vs 29 Nov lines, supplies line missing",
    "file": "cards/2026-11/nintendo-black-friday-switch-2-mario-kart-bundle-november-22-reel-v1.mp4",
    "job_sha": "07d726397f84daef3ca5087ca4fc2fe73d372bdc",
    "job_commit": "5c83eec"
+  },
+  {
+   "v": 2,
+   "file": "cards/2026-11/nintendo-black-friday-switch-2-mario-kart-bundle-november-22-v2-reel-v1.mp4",
+   "job": "nintendo-black-friday-switch-2-mario-kart-bundle-november-22-v2",
+   "job_sha": "c01836a93568df344567c2a35fd55802152555b0",
+   "job_commit": "1c4ea60"
   }
  ],
- "qc_notes": "qc pass, 0 findings (render 191 s, dispatch 2 after earlier text, pace and credit stops); length 23.2 s before end card (above the 12 to 20 guide, no cap); showcase layout (720p 2.6 Mbps only official copies); audio split applied music 98.4% leak 0.0%; whisper on final Reel: first 3 s no speech (VAD on: empty; VAD off: 'You' on music), whole Reel no speech (end-card jingle hallucination only); credit visible frames 0 to 3 s (bottom band, from frame 0); gore check 4 fps dense strip: none (Mario Kart World gameplay, no violence); block_ok at 45.23 to 45.5 s: smear flag was the rainbow road edge; decode clean; 'MARIOKART' in-world sign at 53 s only",
- "reel": "cards/2026-11/nintendo-black-friday-switch-2-mario-kart-bundle-november-22-reel-v1.mp4"
+ "qc_notes": "v2: qc pass, 0 findings (render 204 s, 1 live dispatch); source stretch 45.2 to 45.9 s (rainbow road macroblock) no longer used, no waiver; second stretch from 45.9 s, audio split applied (music 98.6%, leak 0.0); strip scoped to the bundle (سعر الحزمة, تبدأ, تنتهي); line added: تستمر حزمة Mario Kart حتى نفاد الكمية; theme stylized (playful would be third in a row); whisper on final Reel: first 3 s empty with VAD on, VAD off 'Music'; whole Reel VAD on empty, VAD off 'Music' plus end-card jingle hallucination; credit visible frames 0 to 3 s; dense strip 4 fps and frames at 15.9, 22.6, 24.6, 26.0 s: no macroblocking, no gore; length 26.9 s before end card (guide 12 to 20, not a stop); the Sports Resort bundle (no dates given) is in the caption only",
+ "reel": "cards/2026-11/nintendo-black-friday-switch-2-mario-kart-bundle-november-22-v2-reel-v1.mp4"
 }
