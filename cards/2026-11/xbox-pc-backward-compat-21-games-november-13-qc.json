@@ -1,0 +1,25 @@
+{
+ "name": "xbox-pc-backward-compat-21-games-november-13",
+ "out": "cards/2026-11/xbox-pc-backward-compat-21-games-november-13-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-13T03:04:54Z",
+ "findings": [],
+ "notes": [
+  "length 25.5 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 3.0, \"still_share\": 0.027, \"longest_still\": 0.4, \"cuts_per_10s\": 11.76, \"held_under_text\": 0.004, \"secs\": 25.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "820974c922c998e9c1bf4beb92be1b7a006d6003",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "bed:neon_d (checked the Steam gameplay captures of Jedi Academy, Battlefront II, KOTOR and KOTOR II (the four with footage; Xbox Wire's post has no video): spectrograms show broadband impulsive in-game effects and voices throughout with no music-led stretch, so no usable trailer music; Morrowind (640x480) and Republic Commando (HUD only) not used)"
+}
