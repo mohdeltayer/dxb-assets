@@ -15,7 +15,7 @@
  ],
  "category": "update",
  "priority": "medium",
- "status": "rebuilt v2 after director FAIL, qc pending (builder-1415)",
+ "status": "built v2, qc pass after director fixes, awaiting director (builder-1415); planned slot 14:15 Dubai Sat 14 Nov (10:15Z)",
  "lane": "Digital Lounge only",
  "sources": [
   {
@@ -70,10 +70,11 @@
    "v": 1,
    "file": "cards/2026-11/ps5-qssr-spider-man-2-control-resonant-november-13-reel-v1.mp4",
    "job": "ps5-qssr-spider-man-2-control-resonant-november-13",
-   "job_sha": "af59483c0101508cadcad77719068c6291f9be82",
-   "job_commit": "ace6153"
+   "job_sha": "08459205ba31a4decd1aa06eb4b97efed010dca9",
+   "job_commit": "4a476f6",
+   "note": "re-rendered over v1 after the director FAIL"
   }
  ],
  "sound": "bed:neon, reason in job bed_reason (Spider-Man 2 Steam trailers voiced throughout)",
- "qc": "pass, 5 dispatches"
+ "qc": "pass, 6 dispatches"
 }
