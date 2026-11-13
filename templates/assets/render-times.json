@@ -56830,5 +56830,147 @@
   "dispatches": 3,
   "sound": "bed:neon_c (trailers checked: Alien: Isolation Gamescom CGI trailer (the chosen shots, 76.9 to 95.75 s; render server audio split measured the 81 to 96 s stretch of the same scenes at 3.3% music with 36.9% effects left in the music stem, an ambient effects-led drone with no score, so no clean music); Alien: Isolation E3 trailer (narration 32 to 46 s, burning human face, burnt-in RUN and SURVIVE text, near-black stretches); Alien: Isolation Announce trailer (dialogue throughout); Mark of the Deep Cinematic trailer (used for the last shot only, picture from 29.5 s, its voice lines start at 41 s, a different game so its sound cannot run under the Alien shots); Mark of the Deep gameplay trailer (HUD and dialogue boxes). Our bed under all six shots, house jingle on the end card)",
   "footage": true
+ },
+ {
+  "name": "ps5-qssr-spider-man-2-control-resonant-november-13-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-13T17:57Z",
+  "stages": {
+   "checks": 4.4,
+   "montage": 37.6,
+   "text": 51.4,
+   "audio": 1.4,
+   "outro": 21.9
+  },
+  "total": 116.7,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-13T17:55Z",
+  "finished_at": "2026-11-13T17:57Z",
+  "render_min": 1.94,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "ps5-qssr-spider-man-2-control-resonant-november-13-sm.mp4",
+    "start": 10.25,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "ps5-qssr-spider-man-2-control-resonant-november-13-sm.mp4",
+    "start": 24.01,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "ps5-qssr-spider-man-2-control-resonant-november-13-sm.mp4",
+    "start": 40.4,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "ps5-qssr-spider-man-2-control-resonant-november-13-sm.mp4",
+    "start": 15.4,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "ps5-qssr-spider-man-2-control-resonant-november-13-cr.mp4",
+    "start": 68.85,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "ps5-qssr-spider-man-2-control-resonant-november-13-fn.mp4",
+    "start": 3.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "ps5-qssr-spider-man-2-control-resonant-november-13-nm.mp4",
+    "start": 3.3,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 2.7,
+   "still_share": 0.022,
+   "longest_still": 0.4,
+   "cuts_per_10s": 5.95,
+   "held_under_text": 0.005,
+   "secs": 18.5,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 218,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 938,
+  "peak_mem_mb": 2668,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 34062,
+  "peak_disk_mb": 37372,
+  "min_disk_free_mb": 208734,
+  "setup_min": 0.13,
+  "story": "ps5-qssr-spider-man-2-control-resonant-november-13",
+  "job_sha": "69dc8cc15d2eee6a55cd6f8430674a716afd4c1c",
+  "dispatches": 2,
+  "sound": "bed:neon (Spider-Man 2 Steam trailers (Launch, PC Features, Reveal) checked with faster-whisper: dialogue through all three, no 12 s speech-free stretch; Control Resonant, THE FINALS and No Man's Sky trailers are single-game and cannot run under cuts across four games without effects from other moments; the blog's own QSSR videos are YouTube-only)",
+  "footage": true
  }
 ]
