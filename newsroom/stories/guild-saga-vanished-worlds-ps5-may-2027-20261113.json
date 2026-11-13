@@ -1,7 +1,7 @@
 {
  "id": "guild-saga-vanished-worlds-ps5-may-2027-20261113",
  "title": "Guild Saga: Vanished Worlds announced for PS5, May 2027 (PlayStation Blog, Ocelot Technologies)",
- "status": "v2 built by builder-0915 after the director's fail of v1 (dialogue box and relationship dialogue text at 9.0 s); render qc pass (job guild-saga-vanished-worlds-ps5-may-2027-20261113-v2, job_sha 905da690); awaiting separate director; planned slot 09:15 Dubai Sat 14 Nov (05:15Z), ig, x, threads",
+ "status": "v2 director PASS director-29 (file blob 86e984e7f0); scheduled in Publer 09:15 Dubai Sat 14 Nov (05:15Z), ig+x+threads 3/3 (ids ig:14f79c x:4de6a0 th:4de6fc)",
  "lane": "digital-lounge",
  "game": "Guild Saga: Vanished Worlds",
  "subject_person": null,
@@ -68,9 +68,29 @@
  },
  "read_aloud": "لعبة Guild Saga قادمة إلى PS5 في مايو 2027. لعبة تقمص أدوار تكتيكية يضم قتالها نحو 200 مهارة. سيُعلن يوم الإصدار قبيل موعده.",
  "arabic_review": "arabic-games-film-editor, arabic-writing and arabic-grammar-review loaded fresh; glossary and conventions read; grammar stage on job lines, X text and caption: no required edits, no uncertain cases (feminine agreement for the game, release verbs قادمة إلى and تصدر, digits Western, first word of every line Arabic, no flipping signs). DeepL forward whole-story pass (EN to AR) agreed in meaning; alternatives kept ours: بنظام الأدوار (DeepL القتال بالتناوب), نحو (حوالي), قبيل موعده (مع اقتراب موعد الإطلاق); adopted مهامه (DeepL) over مهماته; DeepL wrote «أوسيلوت تكنولوجيز» in guillemets and Guild Saga in quotes (house form kept). Back-check AR to EN: Ocelot Technologies said on the PlayStation Blog that Guild Saga is coming to PS5 in May 2027, turn-based tactical RPG, exact date closer to launch, about 200 skills across ten specialisations, weather and terrain affect battles, each team member has a story and missions, Early Access on Steam since Oct 2024 without Arabic, no PS5 price mentioned",
- "approved": "not yet: separate director then schedule at 09:15 Dubai Sat 14 Nov",
+ "approved": "go: rolling queue; gate 16:30Z: PS Blog read in full, Steam page (Early Access since 10 Oct 2024, to Q2 2027, no Arabic) and Gematsu (PC and PS5 May 2027) re-read, no denial or update, no earlier Guild Saga post in Publer; dispatcher re-runs the gate within the hour before the slot",
  "job": "v2: job file commit 053aba2 (jobs/live/guild-saga-vanished-worlds-ps5-may-2027-20261113-v2.json, removed by the render commit 77d2795), job_sha 905da6906acdf27a86734811badac006742bfbe3; reel cards/2026-11/guild-saga-vanished-worlds-ps5-may-2027-20261113-v2-reel-v1.mp4 (12.8 s before the end card, 14.8 s in all); the beach shot now stops at 19.9 s, before the dialogue box (20.0 s); added gold-pillar stretch 3.81 to 5.51 s; theme cold (look rotation refused a third stylized). v1 (job_sha ef8a9c0e) is superseded and must not be scheduled",
  "picture": "official Steam Gameplay Trailer (1080p60, 1.78x): party art hook (76.83 s), boss in the roots, slime and skull lab, beach and the two sprites, portrait, ship deck; every frame of every chosen stretch viewed at 4 fps as 9:16 crops: nothing graphic (v1 had a creature over a body with blood from 54.0 s, removed); credit «المصدر: أوسيلوت تكنولوجيز (Ocelot Technologies)» visible at frames 0 to 3 s; the Steam HLS fetch loses the picture before 3.02 s so scene 0 is not available; v2: all first and last frames of every stretch checked at 4 fps for dialogue boxes and text: none",
  "sound": "trailer's own music (audio split applied, music 99.3%, leak 0%); speech: none (faster-whisper small on the whole trailer and on the final Reel: VAD on returns nothing; VAD off only the usual 'Music' and 'Chime' hallucinations)",
- "notes_open": "the ship deck stops at 54.0 s (blood from there); margin over the 12 s floor is 0.8 s; the gold-pillar stretch (3.81 to 5.51 s) is dim but moving; PS5 price not stated by the source; Arabic press not checked beyond the digest"
+ "notes_open": "the ship deck stops at 54.0 s (blood from there); margin over the 12 s floor is 0.8 s; the gold-pillar stretch (3.81 to 5.51 s) is dim but moving; PS5 price not stated by the source; Arabic press not checked beyond the digest",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/guild-saga-vanished-worlds-ps5-may-2027-20261113-v2-reel-v1.mp4",
+  "blob": "86e984e7f072d4d7d74bf9df42be72178241331b",
+  "at": "2026-11-13T16:30:42Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/guild-saga-vanished-worlds-ps5-may-2027-20261113-v2.json",
+   "sha256": "9fe47d4033118a3c55958bcae86781a17278c8f4cfe84b920ef35bbb2591de0f",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-0915"
+  },
+  "by": "director-29",
+  "qc": "pass",
+  "looked": "v2: 4 fps dense strip, every frame: no dialogue box or dialogue text anywhere (beach shot stops before the box; frames 9.1 and 9.6 s checked at size: clean beach, no text), no romance-adjacent wording in any line, headline, caption or X/Threads text; no blood or gore, skulls are decorative (boss shot, green skull lab); gold-pillar stretch 4.0 to 5.75 s is dim but gold and moving, not near-black; first frame party art, credit from frame 0, 3:4 tile readable; picture changes every 1.5 to 2.5 s; last 2 s a ship-deck picture; trailer music only, whisper VAD on returns nothing; PS Blog, Steam (Early Access to Q2 2027) and Gematsu re-read, no Guild Saga post in Publer"
+ }
 }
