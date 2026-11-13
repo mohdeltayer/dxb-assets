@@ -8,12 +8,51 @@
  "subject_person": null,
  "title": "Pig King leaves the pen: the party brawler is out in Steam Early Access, AED 17 at launch",
  "kind": "launch",
- "genre": ["indie", "family"],
- "companies": ["TwoPeaks", "Isle of Strays"],
+ "genre": [
+  "indie",
+  "family"
+ ],
+ "companies": [
+  "TwoPeaks",
+  "Isle of Strays"
+ ],
  "platform": "Windows (Steam)",
  "sources": [
-  {"url": "https://store.steampowered.com/app/4563590/", "type": "primary", "read_at": "2026-11-13T09:05Z", "note": "Steam store page and appdetails (cc=ae): Early Access, 12 Nov 2026, Windows only, AED 17.00 after 17% launch discount (20.49 before), developer TwoPeaks, publisher Isle of Strays; up to 4 players, PvP and co-op; Steam Deck tested by the developer"},
-  {"url": "https://store.steampowered.com/news/app/4563590/view/1849192144184225", "type": "primary", "read_at": "2026-11-13T09:10Z", "note": "TwoPeaks Steam announcement 'PIG KING IS OUT NOW IN EARLY ACCESS!': limited 17% early access discount, launch stream 7 PM CET, Dev Bash 27 Nov"}
+  {
+   "url": "https://store.steampowered.com/app/4563590/",
+   "type": "primary",
+   "read_at": "2026-11-13T09:05Z",
+   "note": "Steam store page and appdetails (cc=ae): Early Access, 12 Nov 2026, Windows only, AED 17.00 after 17% launch discount (20.49 before), developer TwoPeaks, publisher Isle of Strays; up to 4 players, PvP and co-op; Steam Deck tested by the developer"
+  },
+  {
+   "url": "https://store.steampowered.com/news/app/4563590/view/1849192144184225",
+   "type": "primary",
+   "read_at": "2026-11-13T09:10Z",
+   "note": "TwoPeaks Steam announcement 'PIG KING IS OUT NOW IN EARLY ACCESS!': limited 17% early access discount, launch stream 7 PM CET, Dev Bash 27 Nov"
+  }
  ],
- "first_report": "TwoPeaks Steam announcement 12 Nov 2026 about 16:00Z (5 PM CET launch); Famitsu covered it 13 Nov 07:52Z; about 30 h old at the slot, no Arabic coverage found, so it runs as a story the Arabic press has not carried"
+ "first_report": "TwoPeaks Steam announcement 12 Nov 2026 about 16:00Z (5 PM CET launch); Famitsu covered it 13 Nov 07:52Z; about 30 h old at the slot, no Arabic coverage found, so it runs as a story the Arabic press has not carried",
+ "ledger_find": {
+  "at": "2026-11-13T08:44:22Z",
+  "words": [
+   "pig",
+   "king"
+  ],
+  "hits": []
+ },
+ "source_type": "primary",
+ "beat": "launch",
+ "category": "early access launch",
+ "chip": "متوفر الآن",
+ "template": "split",
+ "recipe": "7 release (family 7), own focus timeline",
+ "sensitive": "none (cartoon pig brawler; the Steam page lists no content descriptors; zombie pigs and weapons described neutrally as the page does; no gore shown)",
+ "footage": "official Steam Early Access trailer (appid 4563590, 1080p60, 5.7 Mbps, decode clean), stretches 25.6, 31.96, 36.96 to 40.91, 42.1 to 45.98, 8.98 and 13.05 from the server shot picker; its own sound with the audio split; transcribed 16 kHz VAD: no speech",
+ "gate": "gate 09:20Z: Steam store page and appdetails (cc=ae) and the TwoPeaks Steam announcement read in full; no Update or Correction on the page; web and Steam news show no denial or change; Famitsu 13 Nov covers it; no Arabic coverage found",
+ "angle": {
+  "hook": "a party brawler where you play a pig and the loser comes back as a zombie pig",
+  "why_now": "Early Access went live on Steam 12 Nov 2026 with a 17 percent launch discount",
+  "what_it_means_here": "AED 17 on the UAE Steam store, Windows only, no Arabic in the language list",
+  "payoff": "the price in dirhams"
+ }
 }
