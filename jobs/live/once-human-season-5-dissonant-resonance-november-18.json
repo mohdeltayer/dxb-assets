@@ -66,6 +66,18 @@
  ],
  "lines": [
   [
+   0,
+   0,
+   [
+    [
+     "يتفاعل عملاق الأرغن\nمع إطلاق النار",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
    1,
    1,
    [
@@ -166,10 +178,12 @@
   "POST: Arabic passes": "yes: two skills, grammar stage, DeepL whole-story forward and back; Western digits, no first person",
   "SOUND: footage sound or bed with reason": "yes: trailer music stem (Ocean Expansion 2.0 s on, audio split music_only); the Season 5 clip is only 6 s so no single trailer covers the cut",
   "SOUND: no speech under Arabic lines": "yes: Ocean trailer music stem only (music_only, narration and effects removed); server speech check is final, not checked by ear",
-  "PICTURE: footage first": "yes: official Season 5 clip as the hook, Ocean Expansion trailer as credited earlier footage, no Season 5 footage longer than 6 s exists",
+  "PICTURE: footage first": "yes: official Season 5 clip (PlayStation Blog, 720p) in the showcase layout because 2.67x enlargement fails the gate, then the Ocean Expansion trailer credited as earlier footage",
   "PICTURE: not graphic": "yes: S5 clip frames and 20 Ocean frames judged on contact sheets: no blood, gore or wounds",
   "CREDIT: on every clip": "yes: shot 0 PlayStation Blog, shots 1-3 earlier-footage credit naming Starry Studio",
   "SENSITIVE": "n/a: none, no LGBTQ, religious or political content"
  },
- "stand_in_note": "shots 1 to 3 are earlier official footage of the same game, credited on screen"
+ "stand_in_note": "shots 1 to 3 are earlier official footage of the same game, credited on screen",
+ "layout": "showcase",
+ "showcase_reason": "case b: the only Season 5 clip is 720p enlarged 2.67x; PlayStation Blog, Steam trailers and flickr 4K stills checked, no better official copy"
 }
