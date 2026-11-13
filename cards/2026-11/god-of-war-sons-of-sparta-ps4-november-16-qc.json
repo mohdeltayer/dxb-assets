@@ -1,0 +1,26 @@
+{
+ "name": "god-of-war-sons-of-sparta-ps4-november-16",
+ "out": "cards/2026-11/god-of-war-sons-of-sparta-ps4-november-16-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-13T15:57:13Z",
+ "findings": [],
+ "notes": [
+  "length 23.8 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "source quality: god-of-war-sons-of-sparta-ps4-november-16-trailer.mp4: low bitrate 3.9 Mbps (floor 5.0 Mbps for 1920x1080 at 60 fps) (lowbit)",
+  "render_job: audio split: applied; music_pct 44.5; leak_pct 4.2; cache {'hit': 0, 'miss': 3}; separate_secs 9.2; secs 15.7",
+  "render_job: lifeless: {\"score\": 4.7, \"still_share\": 0.038, \"longest_still\": 0.6, \"cuts_per_10s\": 5.49, \"held_under_text\": 0.03, \"secs\": 23.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "5ad7a4364984cbfac7be8d4a113038a686f822f3",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 10
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "trailer"
+}
