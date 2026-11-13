@@ -1,6 +1,6 @@
 {
  "id": "2026-11-14-pig-king-early-access-aed-17",
- "status": "building",
+ "status": "built, qc pass, awaiting director",
  "claimed_by": "builder 02:15 Sat 14 Nov",
  "lane": "Digital Lounge only",
  "slot": "02:15 Dubai Sat 14 Nov 2026",
@@ -71,5 +71,18 @@
   "ig_caption": "لعبة Pig King متوفرة الآن في مرحلة الوصول المبكر\n\nأطلقت توبيكس (TwoPeaks) لعبة Pig King في الوصول المبكر على Steam يوم 12 نوفمبر 2026، ونشرتها آيل أوف ستريز (Isle of Strays). هي لعبة قتال جماعي خفيفة يتنافس فيها حتى أربعة لاعبين في ساحة واحدة بأسلحة مضحكة، واللاعب الذي يُهزم يعود خنزيرًا زومبي يواصل الهجوم لكنه لا يستطيع استخدام الأسلحة.\n\nسعر اللعبة في متجر Steam في الإمارات 17 درهمًا بعد خصم الإطلاق البالغ 17 بالمئة، وتعمل على Windows فقط حتى الآن. وتقول توبيكس إنها جرّبت اللعبة على Steam Deck وإنها تعمل بسلاسة. ولا تضم قائمة اللغات المدعومة العربية.\n\n#ألعاب #أخبار_الألعاب #PigKing #Steam",
   "ig_first_comment": "المصدر: صفحة Pig King الرسمية على Steam وإعلان توبيكس (TwoPeaks) هناك"
  },
- "grammar_review": "self-run 09:40Z, glossary and arabic-writing opened: no required edits (non-human plural feminine agreement, number 4 with لاعبين, ساحة kept from DeepL, حتى not repeated); DeepL whole-story forward pass: Steam Early Access as «برنامج»/«في المائة»/«أسلحة مضحكة» compared, house الوصول المبكر, بالمئة and مضحكة kept; term alternatives (out now, launch discount, arena party brawler) compared, ساحة chosen over حلبة, مرحلة الوصول المبكر used in the caption; back-check passes (meaning only). Names TwoPeaks and Isle of Strays are not yet in names-ar.md (توبيكس، آيل أوف ستريز proposed)."
+ "grammar_review": "self-run 09:40Z, glossary and arabic-writing opened: no required edits (non-human plural feminine agreement, number 4 with لاعبين, ساحة kept from DeepL, حتى not repeated); DeepL whole-story forward pass: Steam Early Access as «برنامج»/«في المائة»/«أسلحة مضحكة» compared, house الوصول المبكر, بالمئة and مضحكة kept; term alternatives (out now, launch discount, arena party brawler) compared, ساحة chosen over حلبة, مرحلة الوصول المبكر used in the caption; back-check passes (meaning only). Names TwoPeaks and Isle of Strays are not yet in names-ar.md (توبيكس، آيل أوف ستريز proposed).",
+ "versions": [
+  {
+   "v": 3,
+   "file": "cards/2026-11/pig-king-early-access-aed-17-november-13-reel-v3.mp4",
+   "job": "jobs/live/pig-king-early-access-aed-17-november-13.json",
+   "job_commit": "1cf8e5b",
+   "job_sha": "eb129953a026dca78d7bef74d9c82c4719bd861e",
+   "note": "v1 (vocal 'oh yeah' in the music stretch, washed-out hook) and v2 (zombie-pig shot with flesh-like textures) not used"
+  }
+ ],
+ "sound_note": "trailer own sound, audio split applied (music 97.6%, leak 0.1%), track from 31.96 s; whisper (VAD) on the final Reel: no speech; the trailer's 36 to 48 s in-game voice lines are split out",
+ "picture_note": "shots 42.1, 31.96, 36.96, 38.85, 25.6, 13.05 from the server picker's clean stretches; dense strip at 4 fps looked at: cartoon pigs, no blood or gore; zombie-pig shot (8.98 s) dropped; block_ok 6.7 to 7.15 s waived after looking (game geometry)",
+ "slot_planned": "02:15 Dubai Sat 14 Nov 2026 (22:15Z Fri), Instagram, X, Threads"
 }
