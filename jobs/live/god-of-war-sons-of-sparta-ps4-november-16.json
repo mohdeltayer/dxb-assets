@@ -207,15 +207,6 @@
  "template": "trailer",
  "skin": "house",
  "cut": true,
- "track": [
-  "god-of-war-sons-of-sparta-ps4-november-16-trailer.mp4",
-  50.4
- ],
- "music_only": true,
- "music_fade": [
-  0.3,
-  0.6
- ],
  "subject_person": null,
  "genre": [
   "action",
@@ -247,5 +238,6 @@
   "CREDIT: on every clip": "yes: credit over shots 0 to 8",
   "SENSITIVE": "n/a: none"
  },
- "sound_note": "trailer music stem (audio split, music_only) from 50.4 s: v1 from 36.27 s leaked battle cries (whisper VAD off heard 'Press your attack... Never on our backs' at 4.9 to 13.6 s, leak 4.2%); 50.4 s starts after them"
+ "track": "bed",
+ "bed_reason": "our bed, trailers checked: (1) the official reveal and launch trailer on playstation.com (vulcan.dl.playstation.net, 104 s) has narration and shouted battle cries from 13 to 80 s and its only speech-free stretch is 26.0 to 33.7 s (7.7 s, shorter than the 24 s cut); music_only stem tried twice with the audio split: track from 36.27 s ran clean by the numbers (leak 4.2%) but whisper with VAD off still heard 'Press your attack... Never on our backs... Always united' under lines 1 and 2 at 4.9 to 13.6 s; track from 50.4 s failed the stem check (leftover 9.0% over 5.0%); (2) the playstation.com hero loop (2560x956, 8 s) is silent; (3) the four YouTube trailers embedded on the PlayStation Blog post (YLwmJ1pSkxA, MPy_8uf2TOA, TgkxVAIAEcw, Hk3aJzrcgu4) cannot be fetched (yt-dlp: sign in to confirm you are not a bot), no other official copy exists on IGN or Steam (PS-exclusive)"
 }
