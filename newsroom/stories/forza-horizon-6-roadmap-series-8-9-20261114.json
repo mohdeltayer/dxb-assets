@@ -1,14 +1,14 @@
 {
  "id": "forza-horizon-6-roadmap-series-8-9-20261114",
  "title": "Forza Horizon 6 content roadmap: Series 8 and 9 before year end, first expansion January 2027 (Pure Xbox, Playground Games video, 13 Nov 2026)",
- "status": "blocked at footage (14 Nov 02:50 Dubai): Steam Launch Trailer carries a burnt-in IN-ENGINE FOOTAGE line in the 9:16 window on almost every frame; picker run 43521053933 found only 4 clean stretches (6.62-9.86, 15.73-18.8, 58.84-60.64, 62.74-64.54 = 10.1 s, under the 12.5 s needed); Accolades trailer not checked (review quotes burnt in). Whisper clean: no speech (vad hallucinations only at 0-6 s). Needs another official copy (Playground roadmap video / press kit) or Mohammad to decide.",
+ "status": "v1 job built, awaiting render",
  "lane": "digital-lounge",
  "game": "Forza Horizon 6",
  "subject_person": null,
  "kind": "update",
  "kind_news": "update",
  "label": "تقرير",
- "template": "trailer",
+ "template": "stills",
  "genre": [
   "racing",
   "open world"
@@ -43,5 +43,22 @@
  "deepl": {
   "forward": "whole story run once; DeepL wrote السلسلة 8 and التوسع (house terms: Series stays English, إضافة); فتصدر/ستصدر for dates matches glossary",
   "back_check": "not run"
- }
+ },
+ "ledger_find": {
+  "at": "2026-11-13T22:50:03Z",
+  "words": [
+   "forza",
+   "horizon"
+  ],
+  "hits": [
+   "2026-10-08-forza-horizon6-ps5-leak",
+   "2026-10-09-forza-horizon-6-ps5-date",
+   "2026-10-14-alinea-first-party-2026-estimates"
+  ]
+ },
+ "beat": "announcement",
+ "footage": "official Steam Launch Trailer (appid 2483190, 1080p 5.6 Mbps, decode clean): four picker-clean stretches 6.62-9.86, 15.73-18.8, 58.84-60.64, 62.74-64.54 s (burnt-in IN-ENGINE FOOTAGE line and logo appear on the other frames); plus five official Steam screenshots 1920x1080 as stills. Playground roadmap video not downloadable here.",
+ "gate": "gate 03:3xZ: Pure Xbox article read in full; roadmap video not readable; forza.net news index no roadmap post; web search found no denial and no other outlet carrying the Series 8/9 names; January 2027 expansion with PS5 version corroborated by Traxion and Pure Xbox related article (21 Jan date not used). Run as تقرير naming Pure Xbox",
+ "chip": "تقرير",
+ "recipe": "announcement (roadmap), stills plus footage"
 }
