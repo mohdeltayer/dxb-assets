@@ -2,7 +2,7 @@
  "id": "warhammer-40000-dawn-of-war-iv-system-requirements-20261113",
  "game": "Warhammer 40,000: Dawn of War IV",
  "lane": "digital-lounge",
- "status": "building (22:15 Dubai Fri 13 Nov slot)",
+ "status": "built, qc pass (v1, dispatch 2); planned 22:15 Dubai Fri 13 Nov; awaiting separate director (not signed, not scheduled)",
  "subject_person": null,
  "ledger_find": {
   "words": [
@@ -43,5 +43,10 @@
  },
  "beat": "preorder",
  "kind_news": "preorder",
- "recipe": "trailer drop / split with strip (date, system)"
+ "recipe": "trailer drop / split with strip (date, system)",
+ "reel_path": "cards/2026-11/warhammer-40000-dawn-of-war-iv-system-requirements-20261113-reel-v1.mp4",
+ "built_by": "builder-2215",
+ "render_checks": "qc pass no findings; length 22.2 s before end card (guide 12 to 20); whisper on final Reel: no speech (only 'Music' hallucination on our bed neon_b); credit visible frames 0 to 3 s; dense strip 4 fps judged, no blood or gore, one bright flare shot at 1.75 s (muzzle flash, not graphic); sound our bed with bed_reason (every Dawn of War IV trailer voiced, music_only stem test failed 11.9% leakage)",
+ "job": "job file commit (see git log -- jobs/live), job_sha 2eff5b2370ae48a313e0a41462ef35702315ab1f",
+ "arabic_review": "two skills applied; grammar stage manual pass: one comma removed before relative clause; DeepL forward whole-story pass matched (جيجابايت house usage, اعتبارًا من vs من 30 نوفمبر, إتاحة الوصول المبكر); back-check: Steam page published official requirements, 16 GB RAM min, 125 GB, Windows 11, release 3 Dec, early access Commander Edition from 30 Nov; GeForce NOW and price only in the caption"
 }
