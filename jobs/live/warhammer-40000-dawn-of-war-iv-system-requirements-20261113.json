@@ -95,7 +95,7 @@
   [
    "warhammer-40000-dawn-of-war-iv-system-requirements-20261113-trailer.mp4",
    193.2,
-   2.68,
+   2.0,
    [
     [
      0.0,
@@ -106,7 +106,7 @@
   [
    "warhammer-40000-dawn-of-war-iv-system-requirements-20261113-trailer.mp4",
    204.18,
-   3.0,
+   2.2,
    [
     [
      0.0,
@@ -117,7 +117,7 @@
   [
    "warhammer-40000-dawn-of-war-iv-system-requirements-20261113-trailer.mp4",
    217.98,
-   2.87,
+   2.3,
    [
     [
      0.0,
@@ -128,33 +128,11 @@
   [
    "warhammer-40000-dawn-of-war-iv-system-requirements-20261113-trailer.mp4",
    223.48,
-   2.8,
+   2.7,
    [
     [
      0.0,
      0.498
-    ]
-   ]
-  ],
-  [
-   "warhammer-40000-dawn-of-war-iv-system-requirements-20261113-trailer.mp4",
-   231.28,
-   2.8,
-   [
-    [
-     0.0,
-     0.518
-    ]
-   ]
-  ],
-  [
-   "warhammer-40000-dawn-of-war-iv-system-requirements-20261113-trailer.mp4",
-   236.05,
-   2.1,
-   [
-    [
-     0.0,
-     0.375
     ]
    ]
   ]
@@ -201,18 +179,6 @@
    10,
    [
     [
-     "ستتوفر اللعبة كذلك على\nخدمة GeForce NOW",
-     {
-      "size": 54
-     }
-    ]
-   ]
-  ],
-  [
-   11,
-   12,
-   [
-    [
      "الوصول المبكر في 30 نوفمبر\nلأصحاب نسخة Commander Edition",
      {
       "size": 54
@@ -224,7 +190,7 @@
  "credits": [
   [
    0,
-   12,
+   10,
    "المصدر: ديب سيلفر (Deep Silver)",
    {
     "size": 40,
@@ -243,12 +209,8 @@
  "template": "split",
  "skin": "house",
  "cut": true,
- "track": [
-  "warhammer-40000-dawn-of-war-iv-system-requirements-20261113-trailer.mp4",
-  18.53
- ],
- "music_only": true,
- "bed_reason": null,
+ "track": "bed",
+ "bed_reason": "Every official Dawn of War IV trailer on the Steam page carries speech under the picture: Adeptus Mechanicus Gameplay Trailer (narrated throughout, music stem only 9 percent of the track, a second separation pass still heard 11.9 percent leakage, so the clean-stem test failed), Gameplay Overview Trailer (8.7 minute developer walkthrough with voice), Skulls Trailer (narrated 1 to 115 s), Space Marines CGI Trailer (dialogue and a monologue), Necrons CGI Trailer (monologue), Ork Faction Trailer (narrated), Story Trailer, ANNOUNCE and IN-Engine trailers (voice lines and unit barks), Dark Angels Trailer (battle shouts), Battlefield Reports (developer talking); none has a stretch with music and no voice, so the Reel runs our bed",
  "strip": [
   [
    "الإطلاق",
@@ -279,8 +241,8 @@
   "STORY: release verbs": "yes: يبدأ الوصول المبكر, ستتوفر; date in the strip only",
   "STORY: names match names-ar.md": "yes: Deep Silver in the credit with bracket",
   "POST: Arabic passes": "yes: arabic-games-film-editor, arabic-writing, grammar stage, DeepL whole-story pass",
-  "SOUND: footage sound or bed with reason": "yes: trailer music stem only (music_only), Adeptus Mechanicus Gameplay Trailer from 18.53 s",
-  "SOUND: no speech under Arabic lines": "yes: music_only removes the trailer narration; whisper on the final Reel checked",
+  "SOUND: footage sound or bed with reason": "yes: our bed with the reason in bed_reason (every Dawn of War IV trailer is voiced; the music stem test failed)",
+  "SOUND: no speech under Arabic lines": "yes: our bed has no speech; whisper on the final Reel checked",
   "PICTURE: footage first": "yes: official Steam trailer, gameplay stretches judged at 4 fps",
   "PICTURE: not the same as last 5 reels": "yes: Dawn of War IV not in any recent Reel",
   "CREDIT: on every clip": "yes: المصدر: ديب سيلفر (Deep Silver) from frame 0 over every shot"
@@ -291,42 +253,35 @@
    "shot": "18.53 s army and Knight Castellan",
    "alternatives": "letterboxed cinematic 0 to 14 s",
    "crop": "picker focus .515",
-   "music": "trailer music stem"
+   "music": "our bed"
   },
   {
    "beat": "L1 specs published",
    "shot": "65.91 to 77.58 s skitarii and robots striding",
    "alternatives": "orc melee shots with blood (rejected)",
    "crop": "picker focus",
-   "music": "trailer music stem"
+   "music": "our bed"
   },
   {
    "beat": "L2 minimum",
    "shot": "82.51 to 86.2 s",
    "alternatives": "none",
    "crop": "picker focus",
-   "music": "trailer music stem"
+   "music": "our bed"
   },
   {
    "beat": "L3 recommended",
    "shot": "108.68 to 111 s, 193.2 s",
    "alternatives": "explosion shot",
    "crop": "picker focus",
-   "music": "trailer music stem"
+   "music": "our bed"
   },
   {
-   "beat": "L4 GeForce NOW",
-   "shot": "204.18 to 220 s base buildings",
-   "alternatives": "none",
-   "crop": "picker focus",
-   "music": "trailer music stem"
-  },
-  {
-   "beat": "L5 early access",
+   "beat": "L4 early access",
    "shot": "223.48 to 233 s",
    "alternatives": "236.05 end",
    "crop": "picker focus",
-   "music": "trailer music stem"
+   "music": "our bed"
   }
  ],
  "sensitive": "none (war strategy game, shots without blood or gore)"
