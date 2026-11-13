@@ -64,5 +64,25 @@
  },
  "reel_path": "cards/2026-11/cities-skylines-2-free-to-play-until-nov-16-20261113-reel-v3.mp4",
  "render_checks": "qc pass no findings; whisper on final Reel: no speech; credit visible frames 0 to 3 s; shot 23.45 s dropped (burnt-in text); block_ok waiver 2.4 to 3.4 s (crossfade of lit tower facades, looked at frames); shot at 53.3 s shows tiny game HUD map labels at the window's left edge (not trailer text); sound trailer, audio split applied music 56.8%",
- "built_by": "builder-1815"
+ "built_by": "builder-1815",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/cities-skylines-2-free-to-play-until-nov-16-20261113-reel-v3.mp4",
+  "blob": "e158671a5962032d427ba5f1abc231068f36060e",
+  "at": "2026-11-13T06:19:48Z",
+  "note": "Steam page and appdetails re-read 13 Nov: free_weekend 1794506400 to 1794852000 = 12 Nov 18:00Z to 16 Nov 18:00Z = Thu 22:00 to Mon 22:00 Dubai; -30% AED 191.00 to 133.70; Offer ends 19 November (date only); Arabic not a Steam language (not claimed); Park Adventures 2 Dec sourced to Paradox Steam announcement 10 Nov; whisper: no speech (hallucination on music only)",
+  "checklist": {
+   "job": "jobs/live/cities-skylines-2-free-to-play-until-nov-16-20261113.json",
+   "sha256": "112f8f03f39c85eba10369236658e1e80089bf456373d0f823740df0ecb0110f",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-1815"
+  },
+  "by": "director-15",
+  "qc": "pass",
+  "looked": "Strip, dense 4fps and 9 frames: headline alone 0 to 2.5 s, credit from frame 0, chip clear of 3:4 corner; line 1 enters 2.5 s while headline fades by 3.5 s (1 s overlap in separate zones, accepted); block_ok waiver 2.4-3.4 s: frames 2.6, 3.0, 3.4 are crisp lit tower facades in a crossfade, no blocky smear, waiver upheld; HUD bus-panel text at left edge of overhead shot is game UI, tiny, accepted; strip shows discount, AED 133.70 with dirham sign, deal end, not repeated in lines; last 2 s aurora picture; sound trailer music only"
+ }
 }
