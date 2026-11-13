@@ -56176,5 +56176,163 @@
   "dispatches": 1,
   "sound": "bed:neon_d (our bed, trailers checked: (1) the official reveal and launch trailer on playstation.com (vulcan.dl.playstation.net, 104 s) has narration and shouted battle cries from 13 to 80 s and its only speech-free stretch is 26.0 to 33.7 s (7.7 s, shorter than the 24 s cut); music_only stem tried twice with the audio split: track from 36.27 s ran clean by the numbers (leak 4.2%) but whisper with VAD off still heard 'Press your attack... Never on our backs... Always united' under lines 1 and 2 at 4.9 to 13.6 s; track from 50.4 s failed the stem check (leftover 9.0% over 5.0%); (2) the playstation.com hero loop (2560x956, 8 s) is silent; (3) the four YouTube trailers embedded on the PlayStation Blog post (YLwmJ1pSkxA, MPy_8uf2TOA, TgkxVAIAEcw, Hk3aJzrcgu4) cannot be fetched (yt-dlp: sign in to confirm you are not a bot), no other official copy exists on IGN or Steam (PS-exclusive))",
   "footage": true
+ },
+ {
+  "name": "guild-saga-vanished-worlds-ps5-may-2027-20261113-v2-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-13T16:26Z",
+  "stages": {
+   "checks": 4.6,
+   "montage": 31.1,
+   "text": 21.2,
+   "audio": 1.1,
+   "outro": 14.1
+  },
+  "total": 72.1,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-13T16:25Z",
+  "finished_at": "2026-11-13T16:26Z",
+  "render_min": 1.2,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "guild-saga-vanished-worlds-ps5-may-2027-20261113-v2-trailer.mp4",
+    "start": 76.83,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "guild-saga-vanished-worlds-ps5-may-2027-20261113-v2-trailer.mp4",
+    "start": 10.86,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "guild-saga-vanished-worlds-ps5-may-2027-20261113-v2-trailer.mp4",
+    "start": 3.81,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "guild-saga-vanished-worlds-ps5-may-2027-20261113-v2-trailer.mp4",
+    "start": 12.85,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "guild-saga-vanished-worlds-ps5-may-2027-20261113-v2-trailer.mp4",
+    "start": 18.36,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "guild-saga-vanished-worlds-ps5-may-2027-20261113-v2-trailer.mp4",
+    "start": 27.3,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "guild-saga-vanished-worlds-ps5-may-2027-20261113-v2-trailer.mp4",
+    "start": 52.15,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 7.0,
+   "audio_secs": 29.6,
+   "music_pct": 99.4,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 1,
+    "miss": 4
+   },
+   "effects_shots": 7,
+   "mix_secs": 2.7,
+   "secs": 10.9
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 6.3,
+   "held_under_text": 0.0,
+   "secs": 12.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 152,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1161,
+  "peak_mem_mb": 2067,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 34066,
+  "peak_disk_mb": 36213,
+  "min_disk_free_mb": 209893,
+  "setup_min": 0.18,
+  "story": "guild-saga-vanished-worlds-ps5-may-2027-20261113-v2",
+  "job_sha": "905da6906acdf27a86734811badac006742bfbe3",
+  "dispatches": 1,
+  "sound": "trailer",
+  "footage": true
  }
 ]
