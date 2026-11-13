@@ -85,5 +85,25 @@
   "layout": "showcase wide 1080x606 on blurred moving copy",
   "sound": "our bed with bed_reason",
   "renders": "3 dispatches for v2: line width (text check), pace, then pass"
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/star-wars-galactic-racer-1-5-million-players-20261114-reel-v1.mp4",
+  "blob": "a9995e11560351a6db2690f9e81369e3ef152a71",
+  "at": "2026-11-13T21:39:42Z",
+  "note": "gate 21:4xZ: Push Square re-read (1.5M, doubt is Push Square's), second outlet Techtroduce, no denial, no Fuse/Secret Mode text readable; 1M+ day-43 figure was Star Wars Zero Company; bed only, mean -22 dB, no speech; DeepL back-check passed; red smoke is a racing powder trail",
+  "checklist": {
+   "job": "jobs/live/star-wars-galactic-racer-1-5-million-players-20261114.json",
+   "sha256": "8d3fb6c19abe5be33ca33146c350b5c64a2b3af095d85b5cad3ff2527b3083b6",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": "showcase",
+   "evergreen": false,
+   "built_by": "builder-1715"
+  },
+  "by": "director-galactic",
+  "qc": "pass",
+  "looked": "first frame: wide 1080 box on blurred footage, headline one line, chip, credit; 4 fps strip: pod racing, red powder smoke at 12-14 s is a smoke trail on snow, no gore; lines readable, strip not repeating lines"
  }
 }
