@@ -1,7 +1,7 @@
 {
  "id": "tomb-raider-legacy-of-atlantis-preorders-exceed-targets-20261114",
  "title": "Embracer's Q2 report: Tomb Raider Legacy of Atlantis pre-orders and wishlists exceed targets, Collector's Edition sold out, teaser over 7M organic views, launch 12 Feb 2027",
- "status": "built by builder-0815, awaiting render qc; planned slot 08:15 Dubai Sat 14 Nov (04:15Z), ig, x, threads",
+ "status": "built by builder-0815, render qc pass (v1, job_sha 2b46b4e9), awaiting separate director; planned slot 08:15 Dubai Sat 14 Nov (04:15Z), ig, x, threads",
  "lane": "digital-lounge",
  "game": "Tomb Raider: Legacy of Atlantis",
  "ledger_find": {
@@ -72,5 +72,18 @@
  "grammar_review": "arabic-grammar-review run on the finished texts (glossary, perfect-arabic SKILL, orthography opened; grammar.md read for agreement): no required edits after fixes made while writing: plural non-human subject takes the feminine singular (الحجوزات ... تتجاوز), pronoun subject named (وأضافت إمبراسر, not a bare وأضافت: DeepL back-check read it as 'she'), no sign next to a Latin name, no glued prefix, first word Arabic on every line and paragraph, Western digits, no em dash, no hashtags on X, تصدر for the date. Uncertain: نسخة المقتنين for Collector's Edition (names-ar has no row; DeepL gave «الإصدار الخاص بهواة الجمع», which reads long and odd; Arab retail says نسخة المقتنين); كريستال ديناميكس as in earlier posts; أمازون غيمز (Amazon Games) and إمبراسر (Embracer) are new names, proposed",
  "deepl": "forward pass on the whole X text: DeepL gave «تقول شركة «إمبراسر» إن لعبة «تومب رايدر...» ... تحقق زخمًا جيدًا ... فقد تجاوز مقطعها الترويجي 7 ملايين مشاهدة طبيعية ... نفدت النسخة الخاصة بهواة الجمع»; on the phrases sent separately (collector's edition sold out immediately / as soon as it went on sale): «نفدت نسخة الإصدار الخاص بهواة الجمع على الفور / فور طرحها للبيع»; organic views: المشاهدات العضوية (kept عضوية), mainstream launch campaign: حملة الإطلاق على نطاق واسع (kept الحملة الترويجية الواسعة); picked نسخة المقتنين and فور طرحها. Back-check (Arabic to English) of the X text and caption: meaning held; 'She added' for وأضافت fixed by naming إمبراسر",
  "gate": "gate 12:38Z: Embracer PDF read in full for the Tomb Raider paragraph and the report date; Steam page read (12 Feb 2027, pre-purchase open); no denial found; web search surfaced retailer pages and older pre-order coverage, nothing contradicting the sold-out statement; no Embracer update or correction on the page",
- "reel_check": "filled in the job"
+ "reel_check": "filled in the job",
+ "build": {
+  "reel": "cards/2026-11/tomb-raider-legacy-of-atlantis-preorders-exceed-targets-20261114-reel-v1.mp4",
+  "job": "tomb-raider-legacy-of-atlantis-preorders-exceed-targets-20261114",
+  "job_sha": "2b46b4e930c40a59fd99e23124e6c820b1b7d6c8",
+  "job_commit": "4000a71",
+  "render_commit": "ebd05ee",
+  "qc": "pass, no findings, 15.6 s before the end card, audio split applied with music_only (music 20.4%, leak 1.2%), sound trailer, dispatches 2 (shots prerender counted)",
+  "speech": "final Reel whisper VAD on: none; VAD off: a hallucinated 'thank you for watching' at 13.4 to 17.6 s over the end-card music, no real speech; first 3 s: none; trailer stretch 60.6 to 87.7 s: no words (VAD on and off)",
+  "shots": "43.28, 49.25, 66.96, 70.06, 72.03, 92.91, 96.71 from the server shotpick output; every stretch viewed at 4 fps as 9:16 crops before the render and the dense strip after; dinosaur mouth shot at 70.06 is a creature with teeth, no blood",
+  "credit": "المصدر: أمازون غيمز (Amazon Games) from frame 0 (frames 0 to 3 s checked)",
+  "theme": "emerald, style bold",
+  "track": "trailer music from 61.3 s, music-only stem"
+ }
 }
