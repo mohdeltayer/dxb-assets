@@ -1,7 +1,7 @@
 {
  "id": "god-of-war-sons-of-sparta-ps4-nov-16-20261114",
  "title": "God of War Sons of Sparta comes to PS4 on 16 Nov at midnight local time; Hermes Mode and Erebus Mode patch for PS4 and PS5 (PlayStation Blog update, 13 Nov 2026)",
- "status": "v2 built by builder 08:15 after director framing fail, render qc pass (job_sha 590305bf), awaiting separate director; planned slot 08:15 Dubai Sat 14 Nov (04:15Z), ig, x, threads; re-gate within the hour before",
+ "status": "v2 director PASS (director-28), scheduled in Publer 08:15 Dubai Sat 14 Nov (04:15Z), ig, x, threads, 3/3 job status complete 16:27Z; re-gate within the hour before",
  "lane": "digital-lounge",
  "game": "God of War Sons of Sparta",
  "subject_person": null,
@@ -59,5 +59,25 @@
  "picture": "official reveal and launch trailer (playstation.com, 1080p60, 3.9 Mbps, lowbit flag), 10 shots in 7 stretches (36.27, 27.0, 29.3, 40.87, 48.35, 54.1, 58.89, 62.48, 31.5, 79.45 s) cropped 9:16, enlargement 1.78x, no showcase; first frame is a sword fight under the chip and headline; judged at 4 fps on the dense strip and 135 px crops: stylised 2D, no blood, gore or wounds (a red magic silhouette enemy at 54 to 56 s and a purple serpent at 79.5 s are not gore); no logo, slate or near-black frame (a dark corridor shot at 48 s is dim, not black); credit «المصدر: بلايستيشن (PlayStation)» visible at frames 0, 1, 2 and 3 s; v2 framing fixes: the 41 s cave shot carries focus keyframes [0.57 to 0.94] that follow Kratos right (frames at 8.2, 8.6, 9.0, 9.4 s show him in frame), the 48 s corridor shot is re-focused to 0.68 on the warrior (frames 9.8 to 11.4 s show him with his spear and the enemies); no shot trimmed, reading times kept (text check clean, lines unchanged in length)",
  "job": "v2: job file commit b1aad9f (jobs/live/god-of-war-sons-of-sparta-ps4-november-16-v2.json, removed by the render commit), job_sha 590305bfbd4a2922987546c44666ca1866afea89; reel cards/2026-11/god-of-war-sons-of-sparta-ps4-november-16-v2-reel-v1.mp4 (26.3 s with end card, 24.3 s before it); 2 dispatches (first stopped at check: stylized theme would be third in a row, now spectacle). v1 files stay in cards/ (job_sha af4a6a96)",
  "notes_open": "sprites are small in the 9:16 crop (2D side-scroller; plain crop chosen over showcase because the source is not under the gate's trigger); body 23.8 s is over the 12 to 20 s guide because the five lines need their reading time; PS4 price and Gulf PS4 store listing unknown and not claimed; Mega Cat Studios (ميغا كات ستوديوز) is not in names-ar.md; Gematsu says the modes update is free, the PS Blog text does not, so the posts do not say free; trailer is February 2026 footage (PS5 launch), credited as PlayStation's",
- "approved": "not yet: separate director then schedule 08:15 Dubai Sat 14 Nov (neighbours 06:15, 10:15, 11:15)"
+ "approved": "go: rolling queue; director PASS director-28 16:25Z; scheduled in Publer 04:15Z Sat 14 Nov (ig 14f1f0, x 6d2bfe, th 6d2c0d on the board only); gate 16:20Z: PlayStation Blog update (13 Nov, Grace Orlady) re-read in full 16:15Z: PS4 16 Nov at midnight local time, Mega Cat Studios patch with Hermes and Erebus modes, no price for PS4 stated; Gematsu unreadable from here (403); no denial; sound: our bed (bed reason accepted by director)",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/god-of-war-sons-of-sparta-ps4-november-16-v2-reel-v1.mp4",
+  "blob": "997272c2edf700dbeab297559cfb847fa3e09c97",
+  "at": "2026-11-13T16:25:40Z",
+  "note": "v2 after v1 framing fail; bed reason accepted (trailer narration 13 to 80 s, stems leak, hero loop silent, YouTube refused); say 'our bed' in preview first line; re-gate within the hour before the slot",
+  "checklist": {
+   "job": "jobs/live/god-of-war-sons-of-sparta-ps4-november-16-v2.json",
+   "sha256": "e47e46e606e80f4ebb9eee5650569e1afb0202347be000cceb1bdbb4e1a55d28",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-0815"
+  },
+  "by": "director-28",
+  "qc": "pass",
+  "looked": "Every frame at 4 fps checked: cave shot (8.0 to 9.6 s) keeps Kratos in frame, corridor shot (9.75 to 11.4 s) shows the warrior and enemies, no empty chain frame; first 4 s as 3:4 tile reads (headline, chip, Kratos fighting); credit from frame 0; nothing graphic (red magic silhouette 2.5 to 3.4 s and purple serpent 22.8 to 24 s stylised); last 2 s before end card a picture; raw-sample whisper VAD on none, VAD off only Music hallucinations on bed; bed reason accepted; midnight wording is the source's local time with no Dubai hour claimed"
+ }
 }
