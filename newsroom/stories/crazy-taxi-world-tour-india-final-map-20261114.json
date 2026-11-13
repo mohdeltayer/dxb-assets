@@ -11,7 +11,7 @@
   "open world"
  ],
  "category": "update",
- "status": "built v1 (job v6), qc pass 21:29Z, awaiting director (builder-1815); planned slot 18:15 Dubai Sat 14 Nov (14:15Z); re-gate within the hour before 18:15",
+ "status": "scheduled in Publer 18:15 Dubai Sat 14 Nov (14:15Z) on Instagram, X, Threads, director PASS director-india; re-gate within the hour before 18:15",
  "lane": "Digital Lounge only",
  "sources": [
   {
@@ -81,5 +81,25 @@
   "job_sha": "c85e161510ef483ef5545c12f97cfefa6e0caa7c",
   "qc": "pass, 19.9 s before the end card, dispatches 3, audio split applied music 94.0% leak 0.0%, sound trailer",
   "notes": "v1 had a phone UI shot (small English text) in the last 1.7 s and 20.7 s length: replaced in job v6; dense strip at 4 fps checked: no gore, no title card or logo, no dark frame, first frame the taxi head-on, credit under the chip from frame 0; whisper small on the finished audio: VAD on no speech, VAD off only repeated hallucinated phrases (so that's what I want) over music, unconfirmed as vocals; DeepL back-check: lines and caption fine, the first X wording lost 'final' and was changed to الخامسة والأخيرة"
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/crazy-taxi-world-tour-india-map-20261114-reel-v1.mp4",
+  "blob": "2898115a2b427ffe8ba5e4a1fb1b34639872ce79",
+  "at": "2026-11-13T21:34:25Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/crazy-taxi-world-tour-india-map-20261114.json",
+   "sha256": "959dd7d2a810b467910f0d7744cff0b92412ded4b5e356bda3c912cbe93d363b",
+   "ok": true,
+   "problems": [],
+   "template": "clipcard",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-1815"
+  },
+  "by": "director-india",
+  "qc": "pass",
+  "looked": "dense 4fps strip as 9:16: opens on taxi head-on with credit from frame 0; no gore, no title card, no near-black; five-map card on blurred moving footage; woman in convertible reused at different moments; qc pass; whisper VAD on empty, VAD off only identical hallucination over music, stretch 36-56 s precedes vocals at 60 s; stand-in credited"
  }
 }
