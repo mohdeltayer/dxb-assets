@@ -2,16 +2,16 @@
  "name": "bombanana-out-now-ps5-xbox-november-13",
  "out": "cards/2026-11/bombanana-out-now-ps5-xbox-november-13-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-13T10:09:46Z",
+ "at": "2026-11-13T10:18:37Z",
  "findings": [],
  "notes": [
-  "length 13.3 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 96.2; leak_pct 0.1; cache {'hit': 0, 'miss': 2}; separate_secs 7.7; secs 11.4",
-  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 9.09, \"held_under_text\": 0.0, \"secs\": 13.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 13.1 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 96.1; leak_pct 0.1; cache {'hit': 0, 'miss': 2}; separate_secs 6.5; secs 10.1",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 9.23, \"held_under_text\": 0.0, \"secs\": 13.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "89de3706bd7b0481cf9f63a2603aa7034c6b2967",
- "dispatches": 3,
+ "job_sha": "25593028eb983e6c883e1013820ad94bbd097bc8",
+ "dispatches": 4,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
