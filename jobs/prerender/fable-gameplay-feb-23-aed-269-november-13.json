@@ -1,7 +1,7 @@
 {
  "name": "fable-gameplay-feb-23-aed-269-november-13",
  "story": "fable-gameplay-feb-23-aed-269-20261113",
- "kind_news": "preorder",
+ "kind_news": "reveal",
  "built_by": "builder-2315",
  "render_lane": "server",
  "out": "cards/2026-11/fable-gameplay-feb-23-aed-269-november-13-reel-v1.mp4",
@@ -11,28 +11,211 @@
    "url": "https://assets.ign.com/videos/mediaconvert/2026/11/12/2560/3f14b200-fc72-46b9-a938-edceda196ae0-1794510952.mp4"
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "fable-gameplay-feb-23-aed-269-november-13-trailer.mp4",
+   112.5,
+   3.7,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "fable-gameplay-feb-23-aed-269-november-13-trailer.mp4",
+   116.2,
+   4.1,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "fable-gameplay-feb-23-aed-269-november-13-trailer.mp4",
+   120.3,
+   4.2,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "fable-gameplay-feb-23-aed-269-november-13-trailer.mp4",
+   124.5,
+   4.9,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "fable-gameplay-feb-23-aed-269-november-13-trailer.mp4",
+   129.4,
+   4.3,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   0,
+   0,
+   [
+    [
+     "المقطع يتتبع مهمة\nللعثور على منبع النهر",
+     {}
+    ]
+   ]
+  ],
+  [
+   1,
+   1,
+   [
+    [
+     "قتال ضد وحوش ملعونة\nبالقوس والسيف والسحر",
+     {}
+    ]
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    [
+     "من نسخة قيد التطوير\nعلى PC بأعلى الإعدادات",
+     {}
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "تصدر على PS5 وعلى Xbox Series X|S\nوعلى PC عبر Steam",
+     {}
+    ]
+   ]
+  ],
+  [
+   4,
+   4,
+   [
+    [
+     "اللغات المدعومة على Steam\nلا تضم العربية حتى الآن",
+     {}
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   4,
+   "المصدر: القناة الرسمية للعبة Fable",
+   {
+    "from_start": true,
+    "low": true
+   }
+  ]
+ ],
+ "headline": "فيديو جديد من لعب Fable",
  "label": "نظرة أولى",
- "source": "فيبل (Fable)",
+ "source": "القناة الرسمية للعبة Fable",
  "date": "12 Nov 2026",
  "theme": "stylized",
  "style": null,
  "template": "split",
  "skin": "house",
  "cut": false,
- "track": "bed",
+ "track": [
+  "fable-gameplay-feb-23-aed-269-november-13-trailer.mp4",
+  112.5
+ ],
  "strip": [
   [
-   "TODO",
-   "TODO"
+   "الصدور",
+   "23 فبراير 2027"
   ],
   [
-   "TODO",
-   "TODO"
+   "الحجز المسبق في الإمارات",
+   [
+    "aed",
+    "269"
+   ]
   ]
  ],
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "layout": "showcase",
+ "showcase_reason": "the news is the trailer itself: Fable's official quest gameplay video",
+ "angle": {
+  "hook": "Fable shows four minutes of its own quest gameplay, a work-in-progress PC build, with the Feb 23 date and a UAE price on Steam",
+  "why_now": "the official video came out on 12 Nov as part of Xbox's 25th anniversary, and Steam shows the UAE price and the language list",
+  "what_it_means_here": "the Steam UAE price is 269 AED and the Steam page lists no Arabic",
+  "payoff": "release 23 Feb 2027 on PS5, Xbox Series X|S and PC"
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: the official Fable channel video (YouTube @Fable, id Tnsp2xlU5ts, author confirmed by oembed) watched in full through IGN's mp4 copy, IGN description read, Steam appdetails read 13 Nov (date, UAE price 269 AED, languages)",
+  "SOURCE: not already posted": "yes: ledger find fable recorded, 0 Fable story files; Publer last 7 days not read by builder, director to confirm",
+  "SOURCE: age": "yes: video out 12 Nov about 19:00Z, Arabic outlet IGN ME carried it that night; slot is about 24 h after, the Steam UAE price and language list are our own read and new",
+  "ANGLE before lines": "yes: angle in the story file and job",
+  "STORY TYPE first look": "yes: what the footage shows (quest Something in the Water, find the source of the river, defeat cursed monsters, bow sword magic), actual video credited, date, price, platforms",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names Fable, L1 says المقطع, no line opens on و",
+  "STORY: release verbs": "yes: تصدر with the date, no bare تصل",
+  "STORY: names match names-ar.md": "yes: Playground Games بلاي غراوند, Xbox Game Studios in the caption only (new Arabic form إكس بوكس غيم ستوديوز, proposed)",
+  "POST: Arabic passes": "yes: two skills, grammar stage manual pass, DeepL whole-story forward pass and back-check; picked منبع النهر (DeepL, not مصدر), keep قيد التطوير, الحجز المسبق (house) over DeepL's الطلب المسبق",
+  "SOUND: footage sound or bed with reason": "yes: trailer own sound, one continuous stretch 112.5 s onward",
+  "SOUND: no speech under Arabic lines": "yes: faster-whisper on 109 to 134 s: speech only up to 111.6 s, none in 112.5 to 133.5; whisper on the final Reel to follow",
+  "PICTURE: footage first": "yes: the official video itself in the showcase layout (the video is the news; HUD and burnt-in lines would be cut by a 9:16 crop, picker found 1 clean stretch in 250 s)",
+  "PICTURE: not the same as last 5 reels": "yes: no earlier Fable Reel",
+  "CREDIT: on every clip": "yes: المصدر: القناة الرسمية للعبة Fable over all shots, from frame 0"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "112.5 to 116.2 s",
+   "alternatives": "0 to 63 s (dialogue and subtitles), 144 to 180 s (speech), 180 to 205 s combat after speech",
+   "crop": "showcase layout, full frame, no crop",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "1 L1 quest",
+   "shot": "116.2 to 120.3 s",
+   "alternatives": "none needed",
+   "crop": "showcase",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "2 L2 combat",
+   "shot": "120.3 to 124.5 s",
+   "alternatives": "none",
+   "crop": "showcase",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "3 L3 WIP build",
+   "shot": "124.5 to 128.7 s (shows the WIP line)",
+   "alternatives": "none",
+   "crop": "showcase",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "4 L4 platforms",
+   "shot": "128.7 to 133.5 s",
+   "alternatives": "none",
+   "crop": "showcase",
+   "music": "trailer own sound"
+  }
+ ]
 }
