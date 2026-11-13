@@ -1,7 +1,7 @@
 {
  "id": "2026-11-14-bombanana-out-now-ps5-xbox",
  "title": "BOMBANANA! out now on PS5, Xbox Series X|S and Xbox One (UAE PS Store 39 AED)",
- "status": "built, qc pending, awaiting director (06:15 Dubai Sat 14 Nov slot, 02:15Z)",
+ "status": "built, qc pass, awaiting director (06:15 Dubai Sat 14 Nov slot, 02:15Z)",
  "builder": "builder 06:15 Sat 14 Nov",
  "slot": "2026-11-14T02:15Z (06:15 Dubai Sat 14 Nov)",
  "subject_person": null,
@@ -119,5 +119,17 @@
   "SOUND": "trailer own sound by the audio split; faster-whisper VAD on the whole trailer found no speech or singing",
   "PICTURE": "official Steam trailer (the PS Store and Xbox store trailers are the same edit); cartoon art, nothing graphic",
   "CREDIT": "on every shot from frame 0"
+ },
+ "build": {
+  "reel": "cards/2026-11/bombanana-out-now-ps5-xbox-november-13-reel-v1.mp4",
+  "job": "bombanana-out-now-ps5-xbox-november-13",
+  "job_sha": "25593028eb983e6c883e1013820ad94bbd097bc8",
+  "job_commit": "800362f",
+  "render_commit": "ad7b9bd",
+  "qc": "pass, no findings, 13.1 s before the end card, audio split applied (music 96.1%), sound trailer, dispatches 4 (look rotation theme, title card in the first shot, a smear stretch, in-game timer in the last frame)",
+  "speech": "final Reel whisper (VAD): none; trailer whisper: no speech or singing",
+  "shots": "chosen by eye from the local copy at -ss times (19.0 d3.4, 28.2 d2.6, 30.81 d3.3, 35.0 d1.3, 41.3 d1.7, 46.0 d1.0): the server picker gave only 12.8 s clean and its first stretch (0.0) played the ONE BOMB title card from 1.5 s in the render; shot 1 and 2 extend the picker's 30.81 stretch back over a small prop sticker (MAI)",
+  "theme": "spectacle (playful was third in a row)",
+  "gore": "cartoon monkeys only; a cartoon glove slap at 46.5 s, no blood or gore"
  }
 }
