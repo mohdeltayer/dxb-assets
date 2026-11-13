@@ -126,6 +126,8 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Puck | بك | Approved 24 Oct |
 | Game*Spark | غيم سبارك | In use |
 | Inven | إنفن | In use |
+| Raw Fury | ريف فيوري | Proposed 13 Nov 2026 (Dome Keeper) |
+| Bippinbits | بيبينبتس | Proposed 13 Nov 2026 (Dome Keeper) |
 | Circana | سيركانا (شركة الأبحاث) | In use |
 
 ### People (role word at first mention)

@@ -14,10 +14,124 @@
    "seconds": 240
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "dome-keeper-ps5-switch-december-14-nov-12-trailer.mp4",
+   4.28,
+   2.15,
+   [
+    [
+     0.0,
+     0.53
+    ]
+   ]
+  ],
+  [
+   "dome-keeper-ps5-switch-december-14-nov-12-trailer.mp4",
+   11.11,
+   3.15,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "dome-keeper-ps5-switch-december-14-nov-12-trailer.mp4",
+   16.68,
+   1.8,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "dome-keeper-ps5-switch-december-14-nov-12-trailer.mp4",
+   22.91,
+   3.42,
+   [
+    [
+     0.0,
+     0.53
+    ]
+   ]
+  ],
+  [
+   "dome-keeper-ps5-switch-december-14-nov-12-trailer.mp4",
+   51.81,
+   2.88,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "dome-keeper-ps5-switch-december-14-nov-12-trailer.mp4",
+   57.43,
+   2.82,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "أعلنت ريف فيوري أن اللعبة\nتصدر على المنصتين",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "لعبة تعدين ودفاع\nمن بيبينبتس",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   5,
+   [
+    [
+     "اللعبة متوفرة على الكمبيوتر\nوأجهزة Xbox Series والهواتف",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   5,
+   "المصدر: ريف فيوري (Raw Fury) وبيبينبتس (Bippinbits)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "لعبة Dome Keeper قادمة\nإلى PS5 وجهاز Switch",
  "label": "رسمي",
  "source": "ريف فيوري (Raw Fury)",
  "date": "12 Nov 2026",
@@ -26,16 +140,70 @@
  "template": "split",
  "skin": "house",
  "cut": false,
- "track": "bed",
+ "track": [
+  "dome-keeper-ps5-switch-december-14-nov-12-trailer.mp4",
+  4.28
+ ],
  "strip": [
   [
-   "TODO",
-   "TODO"
+   "الموعد",
+   "14 ديسمبر"
   ],
   [
-   "TODO",
-   "TODO"
+   "السعر",
+   "لم يُعلن بعد"
   ]
  ],
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "angle": {
+  "hook": "Dome Keeper, the mining and base-defence roguelike, reaches PS5 and Switch on 14 December",
+  "why_now": "Raw Fury's showcase gave the console date on 12 Nov, a month out",
+  "what_it_means_here": "It is already on Xbox, PC and phones; console price not stated; Steam page lists Arabic"
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "no primary page reachable: Raw Fury's site does not list it; Raw Fury press release carried by Inven Global read in full, Gematsu and Techtroduce read, Steam appdetails read 13 Nov; Nintendo Everything says 4 Dec (outlier, 14 Dec in the other three)",
+  "SOURCE: not already posted": "yes: ledger grep newsroom/stories and jobs, no Dome Keeper",
+  "SOURCE: age": "yes: first report Gematsu 12 Nov 11:31 AM EST, under 24 h at the 12:15 Dubai slot",
+  "ANGLE before lines": "yes: angle in the story file and job",
+  "STORY TYPE announcement": "yes: date, platforms, price not announced, where it already runs",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names Dome Keeper, L1 Raw Fury, L2 the game type and developer, L3 the platforms it already runs on",
+  "STORY: release verbs": "yes: تصدر for the date, قادمة إلى for the platforms; no bare تصل",
+  "STORY: names match names-ar.md": "yes: ريف فيوري and بيبينبتس added to names-ar.md with the Latin in the credit",
+  "POST: Arabic passes": "yes: arabic-games-film-editor and arabic-writing loaded fresh, grammar review no required edits, DeepL whole-story pass matched (ستصدر, وفقًا للإعلان, الكمبيوتر), alternative على منصتي kept ours",
+  "SOUND: footage sound or bed with reason": "yes: trailer own sound from 4.28 s, audio split decides stem",
+  "SOUND: no speech under Arabic lines": "yes: Launch Trailer is gameplay and score, no narration; server speech check is final, not heard by ear",
+  "PICTURE: footage first": "yes: official Steam Dome Keeper Launch Trailer, six clean stretches",
+  "PICTURE: not the same as last 5 reels": "yes: picture: Dome Keeper, no other Reel uses it",
+  "CREDIT: on every clip": "yes: المصدر: ريف فيوري (Raw Fury) وبيبينبتس (Bippinbits) over all shots"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "4.28 to 6.43 s (the keeper in the dome, purple)",
+   "alternatives": "0 to 2.5 s Bippinbits and Raw Fury logo slate (rejected: slate on the cover)",
+   "crop": "focus 0.53 on the dome",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "1 L1 the announcement",
+   "shot": "11.11 to 14.26 s and 16.68 to 18.48 s (the dome above ground)",
+   "alternatives": "7 to 10 s: burnt text DEFEND DEVELOP",
+   "crop": "dome centred 0.5",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "2 L2 what the game is",
+   "shot": "22.91 to 26.33 s (dome defending at dusk)",
+   "alternatives": "30 to 41 s: burnt text and black",
+   "crop": "0.53",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "3 L3 where it already runs",
+   "shot": "51.81 to 54.69 s and 57.43 to 60.25 s (dome under attack, no blood, silhouettes only)",
+   "alternatives": "after 60.4 s end slate and frozen frames",
+   "crop": "dome centred 0.5, picker 0.133 overridden after the frame was viewed",
+   "music": "trailer own sound"
+  }
+ ],
+ "sensitive": "none"
 }
