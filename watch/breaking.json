@@ -1,10 +1,24 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T19:00:15Z",
- "seq": 450,
+ "generated_at": "2026-11-13T19:15:18Z",
+ "seq": 451,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 14108,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Fable: Deep Dive Into New Gameplay With Playground Games | Official XBOX Podcast",
+   "url": "https://news.xbox.com/en-us/2026/11/13/fable-deep-dive-into-new-gameplay-with-playground-games-official-xbox-podcast/",
+   "published": "2026-11-13T19:13Z",
+   "first_seen": "2026-11-13T19:15:14Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 451
+  }
+ ],
+ "recent": [
   {
    "id": 14100,
    "source": "Xbox (YouTube)",
@@ -25,9 +39,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 450
-  }
- ],
- "recent": [
+  },
   {
    "id": 13992,
    "source": "PlayStation (YouTube)",
@@ -599,9 +611,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T19:00:14Z",
+  "last_poll_at": "2026-11-13T19:15:14Z",
   "sources_enabled": 100,
-  "sources_ok": 93,
+  "sources_ok": 92,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 54x)",
