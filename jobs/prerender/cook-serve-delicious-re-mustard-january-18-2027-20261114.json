@@ -7,42 +7,102 @@
  "out": "cards/2026-11/cook-serve-delicious-re-mustard-january-18-2027-20261114-reel-v1.mp4",
  "footage": [
   {
-   "file": "cook-serve-delicious-re-mustard-january-18-2027-20261114-gp.mp4",
+   "file": "cook-serve-delicious-re-mustard-january-18-2027-20261114-trailer.mp4",
    "steam": 2139040,
-   "trailer": "First Gameplay",
-   "start": 0,
-   "seconds": 240
-  },
-  {
-   "file": "cook-serve-delicious-re-mustard-january-18-2027-20261114-teaser.mp4",
-   "steam": 2139040,
-   "trailer": "Teaser",
+   "trailer": "Release Date",
    "start": 0,
    "seconds": 240
   }
  ],
- "shots": [],
- "lines": [],
+ "shots": [
+  [
+   "cook-serve-delicious-re-mustard-january-18-2027-20261114-trailer.mp4",
+   11.6,
+   11.3,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "cook-serve-delicious-re-mustard-january-18-2027-20261114-trailer.mp4",
+   26.0,
+   10.4,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   0,
+   0,
+   [
+    [
+     "تعيد Re-Mustard تقديم لعبة الطبخ\nوإدارة المطاعم Cook, Serve, Delicious",
+     {
+      "size": 54
+     }
+    ],
+    [
+     "حملة جديدة ترفع مطعمك من نجمة واحدة إلى خمس نجوم",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   1,
+   1,
+   [
+    [
+     "تضم اللعبة أطباقها الثلاثين الأصلية مع وصفات جديدة",
+     {
+      "size": 54
+     }
+    ],
+    [
+     "طور جديد للعب المشترك على شاشة منقسمة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
  "credits": [],
- "headline": "TODO",
+ "headline": "تصدر Re-Mustard في 18 يناير",
  "label": "نظرة أولى",
  "source": "فيرتيغو غيمينغ (Vertigo Gaming)",
  "date": "12 Nov 2026",
  "theme": "playful",
  "style": null,
- "template": "split",
+ "template": "trailer",
  "skin": "house",
  "cut": false,
+ "layout": "showcase",
+ "showcase_reason": "the news is the trailer itself: the Release Date Trailer",
  "track": "bed",
+ "bed_reason": "Release Date Trailer (Steam 2139040): faster-whisper word level finds customer voice lines at 10.0 to 10.5 s and 23.1 to 24.5 s, the only voice-free stretches are 11.6 to 22.9 s and 26.0 to 36.4 s, which are not one continuous stretch (raw chicken from 36.5 s, so the picture skips 23 to 26 s); First Gameplay Look (80 s) is music only but is not the date trailer; Teaser Trailer (40 s) carries sung or spoken vocals (whisper: Ha ha ha go) over the whole clip",
  "strip": [
   [
-   "TODO",
-   "TODO"
+   "المنصة",
+   "Steam"
   ],
   [
-   "TODO",
-   "TODO"
+   "السعر",
+   "لم يُعلن بعد"
   ]
  ],
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "beat": "date",
+ "genre": [
+  "strategy/sim",
+  "indie"
+ ]
 }
