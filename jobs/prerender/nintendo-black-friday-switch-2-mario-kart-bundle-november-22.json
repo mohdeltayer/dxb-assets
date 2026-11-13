@@ -36,7 +36,7 @@
   ],
   [
    "nintendo-black-friday-switch-2-mario-kart-bundle-november-22-trailer.mp4",
-   40.17,
+   35.43,
    4.3,
    [
     [
@@ -47,7 +47,7 @@
   ],
   [
    "nintendo-black-friday-switch-2-mario-kart-bundle-november-22-trailer.mp4",
-   48.72,
+   39.73,
    4.4,
    [
     [
@@ -58,7 +58,7 @@
   ],
   [
    "nintendo-black-friday-switch-2-mario-kart-bundle-november-22-trailer.mp4",
-   71.47,
+   44.13,
    4.2,
    [
     [
@@ -69,7 +69,7 @@
   ],
   [
    "nintendo-black-friday-switch-2-mario-kart-bundle-november-22-trailer.mp4",
-   98.27,
+   48.33,
    4.6,
    [
     [
@@ -85,7 +85,7 @@
    1,
    [
     [
-     "أعلنت نينتيندو (Nintendo)\nعروض الجمعة السوداء لهذا العام",
+     "أعلنت نينتيندو (Nintendo)\nعروض الجمعة السوداء في أمريكا",
      {
       "size": 54
      }
@@ -127,7 +127,7 @@
      }
     ],
     [
-     "يستمر التخفيض من 22 نوفمبر\nحتى 29 نوفمبر",
+     "يستمر هذا التخفيض\nحتى 29 نوفمبر",
      {
       "size": 54
      }
@@ -161,16 +161,16 @@
  ],
  "strip": [
   [
-   "سعر الحزمة",
+   "السعر",
    "499.99 دولارًا"
   ],
   [
-   "الفترة",
-   "22 نوفمبر إلى 5 ديسمبر"
+   "من",
+   "22 نوفمبر"
   ],
   [
-   "المنطقة",
-   "الولايات المتحدة"
+   "حتى",
+   "5 ديسمبر"
   ]
  ],
  "layout": "showcase",
@@ -183,5 +183,57 @@
   ],
   "result": "none above 720p; showcase layout keeps the footage at 0.84x"
  },
- "subject_person": null
+ "subject_person": null,
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Nintendo of America whatsnew page read in full 10:35Z by direct fetch; no update note",
+  "SOURCE: not already posted": "yes: ledger find nintendo switch black friday, 0 hits",
+  "SOURCE: age": "yes: first report 12 Nov, about 30 h at slot, no Arabic coverage checked, offers start 19 Nov",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE price": "yes: price, savings, period, region, what is included, in strip and lines; US only said in line 1",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names the saving and Switch 2, L1 names Nintendo, L2 the bundle, L3 'مع' continues, L4 names نينتيندو again",
+  "STORY: release verbs": "yes: no release verb, offers and savings only",
+  "STORY: names match names-ar.md": "yes: نينتيندو (Nintendo) at first mention, games and Nintendo Switch Online in English",
+  "POST: Arabic passes": "yes: two skills applied, grammar review no required edits, DeepL whole-story forward pass matched (alternatives: حتى نفاذ الكمية vs بكميات محدودة, kept حتى نفاد الكمية), back-check meaning intact",
+  "SOUND: footage sound or bed with reason": "yes: trailer own music, one continuous stretch from 29.43 s, shots contiguous so the track is in sync",
+  "SOUND: no speech under Arabic lines": "yes: faster-whisper small on 26 to 53 s, VAD on and off, empty",
+  "PICTURE: footage first": "yes: official Mario Kart World overview trailer from the Nintendo US store, showcase layout because only 720p copies exist",
+  "PICTURE: not the same as last 5 reels": "yes: no recent Reel uses Mario Kart World footage",
+  "CREDIT: on every clip": "yes: المصدر: نينتيندو (Nintendo) in the bottom band over shots 0 to 5, from frame 0"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook L1",
+   "shot": "29.43 to 35.43 s",
+   "alternatives": "picker windows skipped (fast cuts, not text)",
+   "crop": "showcase, full frame",
+   "music": "trailer own music"
+  },
+  {
+   "beat": "1 L2 bundle",
+   "shot": "35.43 to 39.73 s",
+   "alternatives": "-",
+   "crop": "showcase",
+   "music": "trailer own music"
+  },
+  {
+   "beat": "2 L3 membership",
+   "shot": "39.73 to 44.13 s",
+   "alternatives": "-",
+   "crop": "showcase",
+   "music": "trailer own music"
+  },
+  {
+   "beat": "3 L4 physical games",
+   "shot": "44.13 to 52.93 s",
+   "alternatives": "after 53.1 s an in-world MARIOKART sign",
+   "crop": "showcase",
+   "music": "trailer own music"
+  }
+ ],
+ "angle": {
+  "hook": "Switch 2 with Mario Kart World drops $50 to $499.99 for Black Friday",
+  "why_now": "the offer opens 22 Nov",
+  "what_it_means_here": "US only, the first Nintendo price move on Switch 2",
+  "payoff": "$20 off physical games to 29 Nov"
+ }
 }

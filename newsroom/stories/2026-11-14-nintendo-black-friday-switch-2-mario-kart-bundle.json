@@ -3,8 +3,62 @@
  "title": "Nintendo Black Friday: Switch 2 + Mario Kart World bundle $499.99, 22 Nov to 5 Dec (US)",
  "game": "Nintendo Switch 2",
  "account": "Digital Lounge",
- "status": "claimed by builder 08:15 Sat 14 Nov",
+ "status": "built, awaiting director (builder 08:15 Sat 14 Nov)",
  "claimed_by": "builder 08:15 Sat 14 Nov",
  "slot": "2026-11-14T04:15Z (08:15 Dubai Sat 14 Nov)",
- "subject_person": null
+ "subject_person": null,
+ "ledger_find": {
+  "at": "2026-11-13T10:52:00Z",
+  "words": [
+   "nintendo",
+   "switch",
+   "black",
+   "friday"
+  ],
+  "hits": []
+ },
+ "companies": [
+  "Nintendo"
+ ],
+ "genre": [
+  "industry/hardware",
+  "family"
+ ],
+ "category": "price",
+ "priority": "high",
+ "lane": "Digital Lounge only",
+ "beat": "price",
+ "platform": [
+  "Nintendo Switch 2",
+  "Nintendo Switch"
+ ],
+ "sensitive": "none",
+ "chip": "السعر",
+ "template": "split (showcase layout)",
+ "recipe": "price, product showcase family 1 (WHERE AND HOW MUCH)",
+ "source_type": "primary",
+ "sources": [
+  {
+   "url": "https://www.nintendo.com/us/whatsnew/nintendo-announces-black-friday-offers-to-help-spread-joy-this-holiday-season/",
+   "type": "primary",
+   "read_at": "2026-11-13T10:35Z",
+   "note": "Nintendo of America, 11/12/26: Switch 2 + Mario Kart World bundle $499.99 ($50 savings vs MSRP, includes full game download and 3-month Nintendo Switch Online Individual Membership), 22 Nov to 5 Dec 2026, while supplies last, select retailers, Nintendo Store website, NY and SF Nintendo stores; Switch 2 + Nintendo Switch Sports Resort bundle $529.99 ($27.98 savings, 3-month membership, no dates given); 22 to 29 Nov select physical Switch 2 and Switch games $20 off at Amazon, Best Buy, GameStop, Target, Walmart and Nintendo US stores (Super Mario Party Jamboree Switch 2 Edition, Metroid Prime 4: Beyond Switch 2 Edition, Donkey Kong Bananza, Kirby Air Riders, Super Mario Galaxy + 2); select digital games on sale 19 Nov to 2 Dec 11:59 pm PT, no percentages; US only. Page read in full by direct fetch."
+  },
+  {
+   "url": "https://www.nintendo.com/us/store/products/mario-kart-world-switch-2/",
+   "type": "primary",
+   "read_at": "2026-11-13T10:40Z",
+   "note": "Nintendo US store product page, first nsuid 70010000095431: three official trailers (720p, 2.6 Mbps)"
+  }
+ ],
+ "first_report": "2026-11-12 Nintendo of America whatsnew (no time on page; offers start 19 Nov); about 30 hours at the slot; not in the 13 Nov digests; Arabic outlets not checked",
+ "footage": "Nintendo US store trailer, Mario Kart World overview (assets.nintendo.com video, 259 s, 1280x720 2.7 Mbps), one continuous music-led stretch 34.0 to 57.5 s; showcase layout (only 720p copies exist); trailer's own music, no speech (faster-whisper small, VAD on and off, 26 to 53 s: empty)",
+ "sound": "trailer own sound, one continuous stretch from 34.0 s",
+ "angle": {
+  "hook": "Switch 2 with Mario Kart World drops $50 to $499.99 for Black Friday, with 3 months of Switch Online included",
+  "why_now": "the offer window opens 22 Nov, Nintendo announced it on 12 Nov",
+  "what_it_means_here": "US offers only; Gulf buyers see the first Nintendo price move on Switch 2",
+  "payoff": "also $20 off select physical games 22 to 29 Nov and a digital sale from 19 Nov"
+ },
+ "gate": "gate 10:40Z: Nintendo US page read in full, no update note; digests of 13 Nov carry no denial; ledger find nintendo switch black friday: 0 hits"
 }
