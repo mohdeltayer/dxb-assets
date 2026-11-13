@@ -58710,5 +58710,175 @@
   "dispatches": 2,
   "sound": "bed:neon_e (All six official Steam trailers of Hela (Adventure, Narrative, Brewing and Remedies, Froggy Backpack Explained, BIG Winter Showcase, Shade System Explained) carry continuous English narration under the footage (faster-whisper small, vad on and off, 13 Nov); music-only stretches of the Adventure trailer are 0 to 6.9 s (HELA logo) and 23 to 29.8 s only; the Cocktail Fork music stem of the shot stretch left 8.9% narration residue (over the 5% limit, render-live run 797 failed), so our bed plays instead)",
   "footage": true
+ },
+ {
+  "name": "crazy-taxi-world-tour-india-map-20261114-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-13T21:15Z",
+  "stages": {
+   "checks": 5.5,
+   "montage": 51.9,
+   "text": 58.9,
+   "audio": 1.6,
+   "outro": 26.7
+  },
+  "total": 144.5,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-13T21:13Z",
+  "finished_at": "2026-11-13T21:15Z",
+  "render_min": 2.41,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "crazy-taxi-world-tour-india-map-20261114-trailer.mp4",
+    "start": 38.16,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "crazy-taxi-world-tour-india-map-20261114-trailer.mp4",
+    "start": 51.03,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "crazy-taxi-world-tour-india-map-20261114-trailer.mp4",
+    "start": 52.83,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "crazy-taxi-world-tour-india-map-20261114-trailer.mp4",
+    "start": 54.53,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "crazy-taxi-world-tour-india-map-20261114-trailer.mp4",
+    "start": 7.28,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "crazy-taxi-world-tour-india-map-20261114-trailer.mp4",
+    "start": 68.26,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "crazy-taxi-world-tour-india-map-20261114-trailer.mp4",
+    "start": 58.46,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "crazy-taxi-world-tour-india-map-20261114-trailer.mp4",
+    "start": 61.46,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 11.3,
+   "audio_secs": 41.2,
+   "music_pct": 94.2,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "effects_shots": 0,
+   "mix_secs": 4.9,
+   "secs": 17.4
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 6.8,
+   "held_under_text": 0.0,
+   "secs": 20.6,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 257,
+  "queue_wait_secs": 43,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1130,
+  "peak_mem_mb": 2839,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 38497,
+  "peak_disk_mb": 41556,
+  "min_disk_free_mb": 204551,
+  "setup_min": 0.22,
+  "story": "crazy-taxi-world-tour-india-map-20261114",
+  "job_sha": "d94b766b53e8e36e17bbb789407a14d5042e8c8a",
+  "dispatches": 1,
+  "sound": "trailer",
+  "footage": true
  }
 ]
