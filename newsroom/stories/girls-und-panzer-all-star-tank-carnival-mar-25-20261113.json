@@ -3,7 +3,7 @@
  "title": "Girls und Panzer: All-Star Tank Carnival adds PS5 and Steam, 25 Mar 2027 in Japan",
  "game": "Girls und Panzer: All-Star Tank Carnival",
  "lane": "digital-lounge",
- "status": "built v1, render pending (builder 16:15 Dubai slot, Fri 13 Nov 2026; QC-passed Reel to follow); not scheduled, awaiting director",
+ "status": "built v1, qc pass 05:03Z, awaiting director; not scheduled; planned slot Fri 13 Nov 16:15 Dubai (12:15Z) Digital Lounge ig, x, threads",
  "genre": [
   "anime",
   "action"
@@ -96,7 +96,7 @@
   ],
   "credit": "المصدر: دي ثري ببليشر (D3 Publisher)"
  },
- "job": "jobs/live/girls-und-panzer-all-star-tank-carnival-march-25-2027.json",
+ "job": "jobs/live/girls-und-panzer-all-star-tank-carnival-march-25-2027.json (job commit 67835b5, job_sha d6fbbede0449402e01bab7d24d2f9e5b8a60d745; the render deletes the file from main)",
  "approved": "awaiting director (builder stop point)",
  "ledger_find": {
   "at": "2026-11-13T04:44:36Z",
@@ -106,5 +106,14 @@
   ],
   "hits": []
  },
- "beat": "announcement: platforms, date, price"
+ "beat": "announcement: platforms, date, price",
+ "reel": "cards/2026-11/girls-und-panzer-all-star-tank-carnival-march-25-2027-reel-v1.mp4",
+ "draft_notes": {
+  "gate": "05:05Z: D3P page, Steam page and trailer, Gematsu read; no denial or update found",
+  "deepl": "forward whole-story pass (taken: أوراي, اللعب المشترك) and back-check: meaning matches",
+  "whisper": "final Reel body (0 to 21 s): no speech; the end-card jingle makes Whisper hallucinate",
+  "gore_check": "dense strip at 4 fps judged: no blood, gore, slate or title card; first frame moving",
+  "length": "21.4 s before the end card (qc note, outside 12 to 20 target)",
+  "renders": 4
+ }
 }
