@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T08:52:11Z",
- "seq": 427,
+ "generated_at": "2026-11-13T09:10:16Z",
+ "seq": 428,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 13585,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Bombanana! - Launch Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=ANljgCRnrKA",
+   "published": "2026-11-13T09:00Z",
+   "first_seen": "2026-11-13T09:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/ANljgCRnrKA/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=ANljgCRnrKA"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 428
+  }
+ ],
  "recent": [
   {
    "id": 13573,
@@ -839,32 +861,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 369
-  },
-  {
-   "id": 12378,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Test Drive Unlimited Solar Crown - Initial D Collaboration Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=e2IY4_8WUuQ",
-   "published": "2026-11-12T09:00Z",
-   "first_seen": "2026-11-12T09:10:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/e2IY4_8WUuQ/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=e2IY4_8WUuQ"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 367
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T08:52:06Z",
+  "last_poll_at": "2026-11-13T09:10:14Z",
   "sources_enabled": 100,
   "sources_ok": 85,
   "sources_failing": 14,
