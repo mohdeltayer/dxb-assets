@@ -1,0 +1,26 @@
+{
+ "name": "wolfenstein-3-in-production-machinegames-november-13-v2",
+ "out": "cards/2026-11/wolfenstein-3-in-production-machinegames-november-13-v2-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-13T03:28:37Z",
+ "findings": [],
+ "notes": [
+  "length 12.9 s before the end card (target 12 to 20 s)",
+  "pace: nothing changes for 5.1 s at 0.0 (change every 4 s)",
+  "render_job: audio split: applied; music_pct 53.5; leak_pct 1.6; cache {'hit': 0, 'miss': 2}; separate_secs 5.0; secs 8.7",
+  "render_job: lifeless: {\"score\": 5.6, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 1.56, \"held_under_text\": 0.0, \"secs\": 12.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "147aee238deb6305ade1acd64642b59cbadc7c1f",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 2.35,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "trailer"
+}
