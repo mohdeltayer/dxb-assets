@@ -17,8 +17,8 @@
  "shots": [
   [
    "id-software-next-game-hugo-martin-november-12-trailer.mp4",
-   73.0,
-   3.3,
+   73.45,
+   2.95,
    [
     [
      0.0,
@@ -28,8 +28,8 @@
   ],
   [
    "id-software-next-game-hugo-martin-november-12-trailer.mp4",
-   76.3,
-   4.0,
+   76.4,
+   3.9,
    [
     [
      0.0,
@@ -67,7 +67,9 @@
    [
     [
      "من استوديو\nآي دي سوفتوير (id Software)",
-     {}
+     {
+      "size": 54
+     }
     ]
    ]
   ],
@@ -77,7 +79,9 @@
    [
     [
      "سيعود هوغو مارتن (Hugo Martin)\nمديرًا للعبة",
-     {}
+     {
+      "size": 54
+     }
     ]
    ]
   ],
@@ -116,7 +120,7 @@
  "cut": false,
  "track": [
   "id-software-next-game-hugo-martin-november-12-trailer.mp4",
-  73.0
+  73.45
  ],
  "subject_person": null,
  "genre": [
@@ -124,5 +128,75 @@
   "industry/hardware"
  ],
  "pace_ok": false,
- "note": "id Software next game, Hugo Martin game director; stand-in footage DOOM The Dark Ages Launch Trailer (Steam 3017860); story in newsroom/stories/2026-11-14-id-software-next-game-hugo-martin.json"
+ "note": "id Software next game, Hugo Martin game director; stand-in footage DOOM The Dark Ages Launch Trailer (Steam 3017860); story in newsroom/stories/2026-11-14-id-software-next-game-hugo-martin.json",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: bethesda.net post read 13 Nov 09:45Z (fetch summary): id Software and Xbox CEO statements, Hugo Martin game director; no Update or Correction text seen; Xbox Wire stub page checked",
+  "SOURCE: not already posted": "yes: ledger find, the Wolfenstein 3 story (same posts) mentions id's next project only as background; no id Software next-game story or job exists",
+  "SOURCE: age": "yes: first outlet report IGN 12 Nov 20:00Z, about 32 h at the slot; Arabic coverage not checked, runs under the 24 to 48 h rule and the text does not claim to be first",
+  "ANGLE before lines": "yes: angle in the story file (hook, why now, what it means, payoff)",
+  "STORY TYPE announcement": "yes: what was announced (a game in development), who says it, who leads it, and what is not announced (name, platforms, date) in the last line",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names the makers of DOOM; L1 names id Software; L2 names Hugo Martin with role; L3 اسمها refers to اللعبة named in the headline",
+  "STORY: release verbs": "yes: none needed, no date",
+  "STORY: names match names-ar.md": "yes: Bethesda بيثيسدا; id Software given as آي دي سوفتوير (id Software); Hugo Martin as هوغو مارتن with the role word; not in names-ar.md yet",
+  "POST: Arabic passes": "yes: arabic-games-film-editor, arabic-writing, grammar review and DeepL forward plus back-check, see story file",
+  "SOUND: footage sound or bed with reason": "yes: trailer own sound, one stretch from 73.45 s, audio split on the runner",
+  "SOUND: no speech under Arabic lines": "yes: faster-whisper with VAD on the whole trailer: only 47.4 to 48.3 s has speech, outside the stretch",
+  "PICTURE: footage first": "yes: official Steam Launch Trailer of DOOM The Dark Ages as a stand-in (no footage of the unannounced game), credited on screen, 1080p60",
+  "PICTURE: not the same as last 5 Reels": "yes: the Slaughter Mode Reel used the Revelations trailer; this uses the Launch Trailer 73 to 88 s, no shot shared",
+  "PICTURE: crop per beat": "yes: Slayer, fire field, armoured demon and leaping Slayer centred in the 9:16 window; frames judged at 4 fps as crops",
+  "PICTURE: credit on every clip": "yes: credit from frame 0 on every shot",
+  "PICTURE: headline not over a face": "yes: headline over the Slayer's armour, helmet below the band",
+  "CHECKS: decision log": "yes: decision_log in the job"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "73.45 to 76.4 s: the Doom Slayer in armour, moving, close",
+   "alternatives": "70 to 73 s dark armour pieces (not recognisable); 0 to 5 s id logo slate",
+   "crop": "x 0.5",
+   "music": "trailer from 73.45"
+  },
+  {
+   "beat": "1 L1 who",
+   "shot": "76.4 to 80.3 s: armour then a fire-lit battlefield with a gun flash",
+   "alternatives": "56 to 58 s and 67 to 70 s read as blood, dropped",
+   "crop": "x 0.5",
+   "music": "trailer"
+  },
+  {
+   "beat": "2 L2 Hugo Martin",
+   "shot": "80.3 to 84.6 s: armoured demon and horned demon, no gore",
+   "alternatives": "1:31 shot with blood spray, dropped",
+   "crop": "x 0.5",
+   "music": "trailer"
+  },
+  {
+   "beat": "3 L3 not announced",
+   "shot": "84.6 to 88.0 s: demon and the Slayer leaping, picture only in the last second",
+   "alternatives": "88.5 s LAUNCH title card, dropped",
+   "crop": "x 0.5",
+   "music": "trailer"
+  }
+ ],
+ "block_ok": [],
+ "prerender_ok": [
+  [
+   "id-software-next-game-hugo-martin-november-12-trailer.mp4",
+   75.01,
+   76.01,
+   "frames 75.0 to 76.0 looked at at 4 fps as 9:16 crops: the Slayer in armour, no text; OCR hit on dark armour edges"
+  ],
+  [
+   "id-software-next-game-hugo-martin-november-12-trailer.mp4",
+   81.86,
+   82.36,
+   "frames looked at: armoured demon, no text; OCR noise on armour plates"
+  ],
+  [
+   "id-software-next-game-hugo-martin-november-12-trailer.mp4",
+   84.36,
+   84.86,
+   "frames looked at: horned demon in the dust, no text; OCR noise"
+  ]
+ ]
 }
