@@ -1,0 +1,199 @@
+{
+ "name": "guild-saga-vanished-worlds-ps5-may-2027-20261113",
+ "story": "guild-saga-vanished-worlds-ps5-may-2027-20261113",
+ "kind_news": "reveal",
+ "built_by": "builder-0915",
+ "render_lane": "server",
+ "out": "cards/2026-11/guild-saga-vanished-worlds-ps5-may-2027-20261113-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "guild-saga-vanished-worlds-ps5-may-2027-20261113-trailer.mp4",
+   "steam": 2184350,
+   "trailer": "Gameplay",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [
+  [
+   "guild-saga-vanished-worlds-ps5-may-2027-20261113-trailer.mp4",
+   3.81,
+   1.95,
+   [
+    [
+     0.0,
+     0.128
+    ]
+   ]
+  ],
+  [
+   "guild-saga-vanished-worlds-ps5-may-2027-20261113-trailer.mp4",
+   10.86,
+   1.94,
+   [
+    [
+     0.0,
+     0.547
+    ]
+   ]
+  ],
+  [
+   "guild-saga-vanished-worlds-ps5-may-2027-20261113-trailer.mp4",
+   12.85,
+   2.35,
+   [
+    [
+     0.0,
+     0.45
+    ]
+   ]
+  ],
+  [
+   "guild-saga-vanished-worlds-ps5-may-2027-20261113-trailer.mp4",
+   18.36,
+   1.64,
+   [
+    [
+     0.0,
+     0.4
+    ]
+   ]
+  ],
+  [
+   "guild-saga-vanished-worlds-ps5-may-2027-20261113-trailer.mp4",
+   27.4,
+   1.18,
+   [
+    [
+     0.0,
+     0.955
+    ]
+   ]
+  ],
+  [
+   "guild-saga-vanished-worlds-ps5-may-2027-20261113-trailer.mp4",
+   52.15,
+   3.05,
+   [
+    [
+     0.0,
+     0.6
+    ]
+   ]
+  ],
+  [
+   "guild-saga-vanished-worlds-ps5-may-2027-20261113-trailer.mp4",
+   76.83,
+   2.25,
+   [
+    [
+     0.0,
+     0.446
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   2,
+   4,
+   [
+    [
+     "لعبة تقمص أدوار تكتيكية\nيضم قتالها نحو 200 مهارة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "سيُعلن يوم الإصدار الدقيق\nقبيل موعده",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: أوسيلوت تكنولوجيز (Ocelot Technologies)",
+   {
+    "size": 40,
+    "from_start": true,
+    "low": true
+   }
+  ]
+ ],
+ "headline": "لعبة Guild Saga قادمة\nإلى PS5 في مايو 2027",
+ "label": "رسمي",
+ "source": "مدونة بلايستيشن (PlayStation Blog)",
+ "date": "13 Nov 2026",
+ "theme": "stylized",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": true,
+ "track": [
+  "guild-saga-vanished-worlds-ps5-may-2027-20261113-trailer.mp4",
+  3.81
+ ],
+ "angle": {
+  "hook": "the pixel-art tactical RPG Guild Saga: Vanished Worlds, in Early Access on PC since 2024, is coming to PS5 in May 2027",
+  "why_now": "the developer announced it on the PlayStation Blog on 13 Nov",
+  "what_it_means_here": "PS5 players in the Gulf get a turn-based tactical RPG; the PS5 price is not stated and the Steam version has no Arabic",
+  "payoff": "May 2027, exact date to come, price unannounced"
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: PlayStation Blog 13 Nov read in full, Steam page and Gematsu read",
+  "SOURCE: not already posted": "yes: ledger find guild saga vanished worlds, 0 hits",
+  "SOURCE: age": "yes: first report PS Blog 13 Nov 13:01Z, under 24 hours at the slot, Arabic press has not carried it",
+  "ANGLE before lines": "yes: angle in the story file and job",
+  "STORY TYPE trailer or first look": "yes: Steam Gameplay Trailer (2024) shows the game; the PS Blog trailer is on YouTube only and its 720p clips carry ESRB badges, noted in the story file",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names Guild Saga; L1 genre and combat, L2 date; last shot is a picture with no line; no line opens on و",
+  "STORY: release verbs": "yes: قادمة إلى PS5, سيُعلن, no bare تصل",
+  "STORY: names match names-ar.md": "yes: Ocelot Technologies with Arabic and Latin in the credit at frame 0; PlayStation Blog per glossary",
+  "POST: Arabic passes": "yes: three skills, DeepL forward and back, alternatives in the story file",
+  "SOUND: footage sound or bed with reason": "yes: trailer own music from 0.7 s, audio split on the server",
+  "SOUND: no speech under Arabic lines": "yes: faster-whisper VAD on and off on the whole trailer: no speech",
+  "PICTURE: footage first": "yes: official Steam trailer, seven stretches in source order",
+  "PICTURE: not the same as last 5 reels": "yes: picture is Guild Saga, no other Reel uses it",
+  "CREDIT: on every clip": "yes: المصدر: أوسيلوت تكنولوجيز (Ocelot Technologies) from frame 0 over shots 0 to 6"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "3.81 to 5.76 s then 10.86 to 12.8 s (boss in the roots)",
+   "alternatives": "0 to 3.81 s: the Steam HLS fetch (-ss 0, copy) loses the picture before 3.02 s, so scene 0 is unusable",
+   "crop": "picker focus",
+   "music": "trailer own music from 3.81 s"
+  },
+  {
+   "beat": "1 L1 genre and combat",
+   "shot": "12.85 to 15.2 s and 18.36 to 20.0 s",
+   "alternatives": "battle HUD stretches 36 to 46 s (tiny UI text), dialogue boxes 20 to 27 s",
+   "crop": "focus 0.45 and 0.4, judged by eye on 4 fps crops",
+   "music": "trailer music, split"
+  },
+  {
+   "beat": "2 L2 date",
+   "shot": "27.4 to 28.58 s and 52.15 to 55.2 s",
+   "alternatives": "71 s white flash, 46 s glow",
+   "crop": "picker focus 0.955, 0.6",
+   "music": "trailer music, split"
+  },
+  {
+   "beat": "3 payoff: date line over the party art",
+   "shot": "76.83 to 79.08 s party art, no line",
+   "alternatives": "end slate from 79.7 s",
+   "crop": "picker focus",
+   "music": "trailer music, split"
+  }
+ ]
+}
