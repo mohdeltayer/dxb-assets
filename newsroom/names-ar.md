@@ -78,6 +78,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Raven Software | ريفين سوفتوير | Proposed 11 Nov 2026 (MW4 Ranked caption) |
 | Sledgehammer Games | سليدجهامر غيمز | Proposed 8 Nov 2026 (MW3 turns 15; flagged for Mohammad) |
 | Santa Monica Studio | سانتا مونيكا ستوديو | In use |
+| Mega Cat Studios | ميغا كات ستوديوز | Proposed 13 Nov 2026 (God of War Sons of Sparta PS4 caption; flagged for Mohammad) |
 | Turn 10 | ترن 10 | In use |
 | Playground Games | بلاي غراوند | In use |
 | Gearbox | غيربوكس | In use |
