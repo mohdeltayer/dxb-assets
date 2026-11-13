@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T22:52:07Z",
- "seq": 459,
+ "generated_at": "2026-11-13T23:52:07Z",
+ "seq": 460,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -541,74 +541,35 @@
    ],
    "breaking_source": true,
    "breaking_seq": 416
-  },
-  {
-   "id": 13296,
-   "source": "PlayStation Blog",
-   "source_kind": "official",
-   "title": "Once Human: Season 5 gameplay showcases co-op Colossus boss battle, live November 18",
-   "url": "https://blog.playstation.com/2026/11/12/once-human-season-5-gameplay-showcases-co-op-colossus-boss-battle-live-november-18/",
-   "published": "2026-11-12T23:00Z",
-   "first_seen": "2026-11-12T23:05:04Z",
-   "media": [
-    {
-     "type": "video",
-     "url": "https://blog.playstation.com/uploads/2046/11/e9dea6240c02551ebe80b677c2ce3b3745d9dd7c.mp4"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55636906235_0ccbca6f92_4k.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55635504312_440090a288_4k.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55636488921_cb8fc2f3ef_4k.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 413
-  },
-  {
-   "id": 13295,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "Available for XBOX Insiders: More Ways to Personalize Your Home, Library, and Guide",
-   "url": "https://news.xbox.com/en-us/2026/11/12/xbox-insiders-january-2027-console-features-1/",
-   "published": "2026-11-12T23:00Z",
-   "first_seen": "2026-11-12T23:00:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/1.-Dynamic-backgrounds-Fable-ee33373b7f07f14b7620.png"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/2.-Disc-to-digital-options-61ae8c6f483ed29703b9.png"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/4.-Guide-right-ff1f41ab7bc9ed2e13f4.png"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 412
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T22:50:05Z",
+  "last_poll_at": "2026-11-13T23:50:14Z",
   "sources_enabled": 100,
-  "sources_ok": 93,
-  "sources_failing": 6,
+  "sources_ok": 76,
+  "sources_failing": 21,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 55x)",
+   "Blizzard (YouTube) (HTTP 500, 2x)",
+   "Bungie (YouTube) (HTTP 404, 2x)",
+   "CD PROJEKT RED (YouTube) (HTTP 500, 2x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 56x)",
+   "Capcom USA (YouTube) (HTTP 404, 2x)",
+   "Fortnite (YouTube) (HTTP 404, 2x)",
    "Nintendo of America (X) (HTTP 429, 66x)",
+   "Nintendo of America (YouTube) (HTTP 500, 3x)",
    "PlayStation (X) (HTTP 429, 85x)",
+   "PlayStation MENA (YouTube) (HTTP 404, 2x)",
    "PlayStation Middle East (X) (HTTP 429, 11x)",
+   "PlayStation Middle East (YouTube) (HTTP 404, 2x)",
+   "Pokemon (YouTube) (HTTP 404, 2x)",
+   "Riot Games (YouTube) (HTTP 404, 2x)",
    "Rockstar Games (X) (HTTP 429, 37x)",
+   "Rockstar Games (YouTube) (HTTP 404, 3x)",
+   "SEGA (YouTube) (HTTP 404, 2x)",
+   "Square Enix (YouTube) (HTTP 404, 2x)",
+   "Steam (YouTube) (HTTP 404, 2x)",
+   "Ubisoft (YouTube) (HTTP 404, 2x)",
    "Xbox (X) (HTTP 429, 84x)"
   ]
  }
