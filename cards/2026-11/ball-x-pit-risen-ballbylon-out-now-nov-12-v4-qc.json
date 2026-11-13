@@ -1,0 +1,25 @@
+{
+ "name": "ball-x-pit-risen-ballbylon-out-now-nov-12-v4",
+ "out": "cards/2026-11/ball-x-pit-risen-ballbylon-out-now-nov-12-v4-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-13T04:49:00Z",
+ "findings": [],
+ "notes": [
+  "length 15.8 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 12.1, \"held_under_text\": 0.0, \"secs\": 15.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "c365aaa6f6e3efc932c727f17149e9ee4a122810",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "bed:launch (Trailers checked: Steam 'Risen Ballbylon' (audio split failed, leftover 6.5% over the 5% limit) and Steam 'Risen Ballbylon DLC | Out Now' (split not applied twice, leftover 35.7% and 38.3%); the server shot picker finds one clean stretch of 2.6 s in the Out Now trailer and clean stretches scattered over 100 s of the other, so no continuous run keeps a trailer track in sync; our bed goes under the clean stretches.)"
+}
