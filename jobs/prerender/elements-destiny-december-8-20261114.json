@@ -2,7 +2,7 @@
  "name": "elements-destiny-december-8-20261114",
  "story": "elements-destiny-december-8-20261114",
  "kind_news": "date",
- "built_by": "production-2",
+ "built_by": "builder-1615",
  "render_lane": "server",
  "out": "cards/2026-11/elements-destiny-december-8-20261114-reel-v1.mp4",
  "footage": [
@@ -14,28 +14,151 @@
    "seconds": 240
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "elements-destiny-december-8-20261114-trailer.mp4",
+   9.63,
+   2.7,
+   [
+    [
+     0.0,
+     0.232
+    ]
+   ]
+  ],
+  [
+   "elements-destiny-december-8-20261114-trailer.mp4",
+   15.38,
+   2.3,
+   [
+    [
+     0.0,
+     0.301
+    ]
+   ]
+  ],
+  [
+   "elements-destiny-december-8-20261114-trailer.mp4",
+   34.81,
+   2.12,
+   [
+    [
+     0.0,
+     0.377
+    ]
+   ]
+  ],
+  [
+   "elements-destiny-december-8-20261114-trailer.mp4",
+   37.53,
+   2.02,
+   [
+    [
+     0.0,
+     0.648
+    ]
+   ]
+  ],
+  [
+   "elements-destiny-december-8-20261114-trailer.mp4",
+   70.03,
+   1.7,
+   [
+    [
+     0.0,
+     0.495
+    ]
+   ]
+  ],
+  [
+   "elements-destiny-december-8-20261114-trailer.mp4",
+   74.26,
+   1.8,
+   [
+    [
+     0.0,
+     0.669
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   3.6,
+   7.0,
+   [
+    [
+     "لعبة تقمص أدوار بالبكسل\nبقتال بنظام الأدوار",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   7.2,
+   10.6,
+   [
+    [
+     "أكثر من 40 ممثلًا صوتيًا\nوأكثر من 100 مقطوعة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   10.8,
+   12.4,
+   [
+    [
+     "نسخة Switch بعد أسبوع",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   12.4,
+   "المصدر: ديك 13 سبوتلايت (Deck13 Spotlight)",
+   {
+    "size": 40,
+    "from_start": true,
+    "low": true
+   }
+  ]
+ ],
+ "headline": "لعبة Elements Destiny\nتحدد موعد إصدارها",
  "label": "رسمي",
  "source": "ديك 13 سبوتلايت (Deck13 Spotlight)",
  "date": "12 Nov 2026",
- "theme": "cold",
+ "theme": "stylized",
  "style": null,
  "template": "split",
  "skin": "house",
- "cut": false,
- "track": "bed",
+ "cut": true,
+ "track": [
+  "elements-destiny-december-8-20261114-trailer.mp4",
+  0.3
+ ],
  "strip": [
   [
-   "TODO",
-   "TODO"
+   "الإصدار",
+   "8 ديسمبر 2026"
   ],
   [
-   "TODO",
-   "TODO"
+   "المنصات",
+   "PC · PlayStation · Xbox"
   ]
  ],
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "angle": {
+  "hook": "the pixel-art JRPG Elements Destiny finally has a launch date",
+  "why_now": "Deck13 Spotlight and ShrooMoon announced it on 12 Nov with a release date trailer",
+  "what_it_means_here": "a retro turn-based RPG for PC, PlayStation and Xbox on 8 Dec, Switch a week later; no Arabic, no price yet",
+  "payoff": "8 Dec 2026, Switch 15 Dec"
+ }
 }
