@@ -76,5 +76,25 @@
   }
  ],
  "sound": "bed:neon, reason in job bed_reason (Spider-Man 2 Steam trailers voiced throughout)",
- "qc": "pass, 6 dispatches"
+ "qc": "pass, 6 dispatches",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/ps5-qssr-spider-man-2-control-resonant-november-13-reel-v1.mp4",
+  "blob": "3b8720c7dcdd8dc05f76f28ba549cf9aace40d94",
+  "at": "2026-11-13T18:35:33Z",
+  "note": "v2: stand-in credit on THE FINALS shot, headline names Spider-Man 2, brighter Control Resonant stretch (red energy, no gore); bed sound signed: four games, Spider-Man 2 trailers voiced; no speech, bed -22 dB throughout; gate 18:50Z primary re-read no update, no denial",
+  "checklist": {
+   "job": "jobs/live/ps5-qssr-spider-man-2-control-resonant-november-13.json",
+   "sha256": "ed491d308a27dc3e07b5a0e681d2c2d1673b4a7c5dd5df4a6be4263ea033195f",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-1415"
+  },
+  "by": "director-1415",
+  "qc": "pass",
+  "looked": "4 fps full Reel: Venom/Kraven/Spider-Man 2 shots, bright Control Resonant combat with UI numbers, THE FINALS with lqtat credit, No Man's Sky, end card; no gore, no title cards, credit from frame 0"
+ }
 }
