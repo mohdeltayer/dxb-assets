@@ -2,16 +2,16 @@
  "name": "forza-horizon-6-roadmap-series-8-9-20261114",
  "out": "cards/2026-11/forza-horizon-6-roadmap-series-8-9-20261114-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-13T23:18:32Z",
+ "at": "2026-11-13T23:25:58Z",
  "findings": [],
  "notes": [
   "length 25.8 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: applied; music_pct 36.6; leak_pct 1.0; cache {'hit': 0, 'miss': 3}; separate_secs 7.8; secs 13.6",
-  "render_job: lifeless: {\"score\": 4.8, \"still_share\": 0.023, \"longest_still\": 0.1, \"cuts_per_10s\": 3.11, \"held_under_text\": 0.222, \"secs\": 25.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: audio split: applied; music_pct 36.6; leak_pct 1.0; cache {'hit': 3, 'miss': 0}; separate_secs 2.7; secs 5.1",
+  "render_job: lifeless: {\"score\": 7.4, \"still_share\": 0.062, \"longest_still\": 0.2, \"cuts_per_10s\": 3.11, \"held_under_text\": 0.249, \"secs\": 25.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "a2ada9af77401177cf0c7aecc3120c0707c2a62d",
- "dispatches": 4,
+ "job_sha": "3e891c89b02dfe90e9f8ce1734a680101fcd3763",
+ "dispatches": 5,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
