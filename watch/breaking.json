@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T19:30:17Z",
- "seq": 453,
+ "generated_at": "2026-11-13T19:52:06Z",
+ "seq": 454,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
+  {
+   "id": 14122,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Fable: Deep Dive Into New Gameplay With Playground Games | Official XBOX Podcast",
+   "url": "https://www.youtube.com/watch?v=RoIL8hDHF9A",
+   "published": "2026-11-13T19:10Z",
+   "first_seen": "2026-11-13T19:30:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/RoIL8hDHF9A/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=RoIL8hDHF9A"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 453
+  },
   {
    "id": 14121,
    "source": "Xbox (YouTube)",
@@ -26,29 +48,6 @@
    "breaking_source": true,
    "breaking_seq": 453
   },
-  {
-   "id": 14122,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Fable: Deep Dive Into New Gameplay With Playground Games | Official XBOX Podcast",
-   "url": "https://www.youtube.com/watch?v=RoIL8hDHF9A",
-   "published": "2026-11-13T19:10Z",
-   "first_seen": "2026-11-13T19:30:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/RoIL8hDHF9A/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=RoIL8hDHF9A"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 453
-  }
- ],
- "recent": [
   {
    "id": 14114,
    "source": "Xbox (YouTube)",
@@ -662,7 +661,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T19:30:15Z",
+  "last_poll_at": "2026-11-13T19:50:14Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
