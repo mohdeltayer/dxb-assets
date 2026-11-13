@@ -3,7 +3,7 @@
  "title": "Xbox Free Play Days 12 to 15 Nov: Sunderfolk, STUFFED, Hypnospace Outlaw, Sumerian Six",
  "game": "Xbox Free Play Days",
  "account": "Digital Lounge",
- "status": "built v2, qc pass (06:13Z), awaiting director; not scheduled",
+ "status": "scheduled in Publer 19:15 Dubai (15:15Z), Instagram, X, Threads; director-14 PASS",
  "slot": "2026-11-13T15:15Z (19:15 Dubai)",
  "ledger_find": {
   "at": "2026-11-13T05:55:49Z",
@@ -81,7 +81,7 @@
  "texts": {
   "x_threads": "أربع ألعاب مجانية لمشتركي Game Pass على Xbox حتى الأحد 15 نوفمبر، بينها Sunderfolk وSTUFFED، حسب إكس بوكس واير (Xbox Wire).",
   "threads": "أربع ألعاب مجانية لمشتركي Game Pass على Xbox حتى الأحد 15 نوفمبر، بينها Sunderfolk وSTUFFED، حسب إكس بوكس واير (Xbox Wire).\n\nالمصدر: إكس بوكس واير (Xbox Wire)",
-  "instagram": "أربع ألعاب مجانية لمشتركي Game Pass حتى الأحد 15 نوفمبر.\n\nأعلنت Xbox عبر موقع إكس بوكس واير (Xbox Wire) عن ألعاب عطلة نهاية الأسبوع المجانية (Free Play Days)، وهي Sunderfolk وSTUFFED وHypnospace Outlaw وSumerian Six. يلعبها مشتركو Game Pass Ultimate وPremium وEssential مجانًا من 12 حتى 15 نوفمبر.\n\nلعبة Sunderfolk للأدوار التكتيكية التعاونية، ويتطلب لعبها تطبيقًا مجانيًا على الهاتف. ولعبة STUFFED للتصويب بمنظور الشخص الأول وتدعم اللعب التعاوني عبر الإنترنت لأربعة لاعبين. ولعبة Sumerian Six للتسلل التكتيكي في الوقت الفعلي وتدور أحداثها في الحرب العالمية الثانية. أما Hypnospace Outlaw، وهي محاكاة لإنترنت التسعينيات، فتباع بخصم 75 بالمئة.\n\nومن يشتري لعبة بعد التجربة يحتفظ بتقدمه وإنجازاته، وقد تختلف الخصومات والتوفر حسب اللعبة والمنطقة.\n\n#ألعاب #أخبار_الألعاب #Xbox #GamePass",
+  "instagram": "أربع ألعاب مجانية لمشتركي Game Pass حتى الأحد 15 نوفمبر.\n\nأعلنت إكس بوكس (Xbox) عبر موقع إكس بوكس واير (Xbox Wire) عن ألعاب عطلة نهاية الأسبوع المجانية (Free Play Days)، وهي Sunderfolk وSTUFFED وHypnospace Outlaw وSumerian Six. يلعبها مشتركو Game Pass Ultimate وPremium وEssential مجانًا من 12 حتى 15 نوفمبر.\n\nلعبة Sunderfolk للأدوار التكتيكية التعاونية، ويتطلب لعبها تطبيقًا مجانيًا على الهاتف. ولعبة STUFFED للتصويب بمنظور الشخص الأول وتدعم اللعب التعاوني عبر الإنترنت لأربعة لاعبين. ولعبة Sumerian Six للتسلل التكتيكي في الوقت الفعلي وتدور أحداثها في الحرب العالمية الثانية. أما Hypnospace Outlaw، وهي محاكاة لإنترنت التسعينيات، فتباع بخصم 75 بالمئة.\n\nومن يشتري لعبة بعد التجربة يحتفظ بتقدمه وإنجازاته، وقد تختلف الخصومات والتوفر حسب اللعبة والمنطقة.\n\n#ألعاب #أخبار_الألعاب #Xbox #GamePass",
   "ig_first_comment": "المصدر: إكس بوكس واير (Xbox Wire)، 12 نوفمبر",
   "x_reply": "المصدر: https://news.xbox.com/en-us/2026/11/12/free-play-days-11-12-2026/"
  },
@@ -97,5 +97,25 @@
    "job_commit": "e64ce86"
   }
  ],
- "qc_notes": "qc pass; whisper on final Reel: no speech; credit visible frames 0-3 s; gore check 4 fps: none (STUFFED cartoon gnomes, Sunderfolk board, Hypnospace art doll)"
+ "qc_notes": "qc pass; whisper on final Reel: no speech; credit visible frames 0-3 s; gore check 4 fps: none (STUFFED cartoon gnomes, Sunderfolk board, Hypnospace art doll); director-14: Instagram caption fixed to add إكس بوكس (Xbox) at first mention; bed reason signed off",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/xbox-free-play-days-november-12-reel-v2.mp4",
+  "blob": "b0166243bb81f5d77230a8f11584ea5a40431963",
+  "at": "2026-11-13T06:16:34Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/xbox-free-play-days-november-12.json",
+   "sha256": "96ddd7790d89a0a8721f5907b9a8747b327d22f147447718f164bbbae882d0c3",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-1915"
+  },
+  "by": "director-14",
+  "qc": "pass",
+  "looked": "dense 4 fps strip and strip checked: Sunderfolk hook (moving, grid tile readable, chip+headline), STUFFED cartoon gnomes, Hypnospace doll art/eyes (3.2 s, weak but acceptable, no gore, no Nazi/Sumerian footage); credits Dreamhaven 0-3.5, Amplified 3.5-11.8, No More Robots on Hypnospace; lines start Arabic, no flipping sign, strip not repeating lines; decode clean; whisper no speech. Bed reason SIGNED OFF: three different trailers, no single stretch fits, neon_e bed"
+ }
 }
