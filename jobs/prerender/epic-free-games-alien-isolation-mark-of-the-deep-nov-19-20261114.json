@@ -24,15 +24,40 @@
  "shots": [
   [
    "epic-free-games-alien-isolation-mark-of-the-deep-nov-19-20261114-ai-gc.mp4",
-   0,
-   5,
-   null
+   80.87,
+   4.66,
+   [
+    [
+     0.0,
+     0.44
+    ]
+   ]
+  ],
+  [
+   "epic-free-games-alien-isolation-mark-of-the-deep-nov-19-20261114-ai-gc.mp4",
+   87.1,
+   4.28,
+   [
+    [
+     0.0,
+     0.447
+    ]
+   ]
   ],
   [
    "epic-free-games-alien-isolation-mark-of-the-deep-nov-19-20261114-motd.mp4",
-   0,
-   5,
-   null
+   29.53,
+   4.1,
+   [
+    [
+     0.0,
+     0.519
+    ],
+    [
+     2.38,
+     0.585
+    ]
+   ]
   ]
  ],
  "lines": [
@@ -41,13 +66,13 @@
    0,
    [
     [
-     "تمنح إيبك غيمز (Epic Games) لعبة الرعب والبقاء",
+     "تمنح إيبك غيمز (Epic Games)",
      {
       "size": 54
      }
     ],
     [
-     "مجانًا لأسبوع كامل",
+     "لعبة الرعب هذه مجانًا لأسبوع",
      {
       "size": 54
      }
@@ -59,13 +84,31 @@
    1,
    [
     [
-     "تضم القائمة أيضًا Mark of the Deep،",
+     "يبدأ العرض الخميس الساعة 8 مساءً",
      {
       "size": 54
      }
     ],
     [
-     "لعبة مغامرات بطابع القراصنة",
+     "بتوقيت دبي",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    [
+     "وتأتي معها Mark of the Deep",
+     {
+      "size": 54
+     }
+    ],
+    [
+     "لعبة مغامرات القراصنة",
      {
       "size": 54
      }
@@ -76,7 +119,7 @@
  "credits": [
   [
    0,
-   0,
+   1,
    "المصدر: سيغا (SEGA)",
    {
     "size": 40,
@@ -86,8 +129,8 @@
    }
   ],
   [
-   1,
-   1,
+   2,
+   2,
    "المصدر: لايت أب غيمز (Light Up Games)",
    {
     "size": 40,
@@ -106,6 +149,10 @@
  "template": "split",
  "skin": "house",
  "cut": false,
+ "track": [
+  "epic-free-games-alien-isolation-mark-of-the-deep-nov-19-20261114-ai-gc.mp4",
+  80.87
+ ],
  "strip": [
   [
    "تنتهي في",
@@ -124,5 +171,12 @@
   "horror",
   "indie"
  ],
- "subject_person": null
+ "subject_person": null,
+ "sensitive": "none (survival horror footage chosen as faces and corridors, no gore; pirate game storm scenes, no blood)",
+ "angle": {
+  "hook": "Alien: Isolation, the survival horror, is free for a week on the Epic Games Store from Thursday 19 Nov",
+  "why_now": "the next free-games rotation is already listed on Epic's page: it starts Thursday 19 Nov at 20:00 Dubai and ends 26 Nov at the same hour",
+  "what_it_means_here": "the UAE store shows Alien: Isolation at AED 150 and Mark of the Deep at AED 53, both free for a week",
+  "payoff": "two free games, with the end date and the usual UAE price"
+ }
 }
