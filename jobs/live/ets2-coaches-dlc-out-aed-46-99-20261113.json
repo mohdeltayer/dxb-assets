@@ -198,11 +198,7 @@
  "template": "split",
  "skin": "house",
  "cut": false,
- "track": [
-  "ets2-coaches-dlc-out-aed-46-99-20261113-trailer.mp4",
-  60.91
- ],
- "music_only": true,
+ "track": "bed",
  "strip": [
   [
    "السعر في الإمارات",
@@ -225,7 +221,7 @@
   "what_it_means_here": "Gulf PC players of the long-running trucking sim get passenger jobs and three licensed coaches for AED 46.99; Arabic is not among the Steam languages",
   "payoff": "Quick, Contract and Tourist jobs, three licensed coaches, AED 46.99 on the UAE store"
  },
- "bed_reason": null,
+ "bed_reason": "Trailers checked: the only official Coaches trailer (Steam 'Euro Truck Simulator 2: Coaches Video Trailer', appid 3809270, 251 s; the same video is embedded in SCS's 1 Nov blog post; no other trailer or clip exists on the Steam page or the blog). faster-whisper: narration runs from 2.0 s to 245.4 s with pauses of at most 3.7 s, so no stretch of 12 s or more is free of speech; music_only stem separation (Cocktail Fork) failed on 13 Nov: music stem not clean, leftover 34.8% over the 5% limit. Our bed is used instead.",
  "reel_check": {
   "SOURCE: primary read in full": "yes: SCS Software blog 'Coaches Release' (12 Nov 2026 10:00 CET) and the 1 Nov release-date post read in full; Steam store page data read 13 Nov 06:30Z (release 12 Nov, AED 46.99, USD 14.99, SAR 48.29)",
   "SOURCE: not already posted": "yes: ledger find euro truck coaches recorded, 0 hits",
@@ -236,8 +232,8 @@
   "STORY: release verbs": "yes: متوفر الآن chip and متاحة الآن in the headline; caption uses أصدرت",
   "STORY: names match names-ar.md": "yes: SCS Software added to names-ar.md as Proposed, bracket at first mention",
   "POST: Arabic passes": "yes: two skills, grammar stage, DeepL forward and back",
-  "SOUND: footage sound or bed with reason": "trailer music stem only (music_only), track from 60.91 s; fallback bed named if the stem is not clean",
-  "SOUND: no speech under Arabic lines": "yes: whisper on the full trailer: narration runs 2.0 to 245 s with pauses of at most 3.7 s, so music_only strips it; final Reel transcribed after render",
+  "SOUND: footage sound or bed with reason": "yes: our bed with bed_reason (single narrated trailer, music_only stem 34.8% leftover); director to sign off",
+  "SOUND: no speech under Arabic lines": "yes: our bed, no trailer sound; final Reel transcribed after render",
   "PICTURE: footage first": "yes: official Steam trailer, shots 60 to 206 s picked from the server shot picker, judged at 9:16",
   "PICTURE: not the same as last 5 reels": "yes",
   "CREDIT: on every clip": "yes: from frame 0 over shots 0 to 9"
