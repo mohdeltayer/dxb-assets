@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T09:52:05Z",
- "seq": 430,
+ "generated_at": "2026-11-13T10:52:05Z",
+ "seq": 431,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -860,34 +860,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 373
-  },
-  {
-   "id": 12427,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Rooftops & Alleys: The Parkour Game - Modding Update | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=witRjoQP16I",
-   "published": "2026-11-12T10:00Z",
-   "first_seen": "2026-11-12T10:15:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/witRjoQP16I/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=witRjoQP16I"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 369
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T09:50:05Z",
+  "last_poll_at": "2026-11-13T10:50:04Z",
   "sources_enabled": 100,
-  "sources_ok": 94,
+  "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 50x)",
@@ -895,7 +874,7 @@
    "PlayStation (X) (HTTP 429, 83x)",
    "PlayStation Middle East (X) (HTTP 429, 10x)",
    "Rockstar Games (X) (HTTP 429, 36x)",
-   "Xbox (X) (HTTP 429, 82x)"
+   "Xbox (X) (HTTP 429, 83x)"
   ]
  }
 }
