@@ -83,5 +83,25 @@
   ],
   "credit": "المصدر: بيكو بارك (PICO PARK)",
   "chip": "متوفر الآن"
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/sonic-pico-park-out-now-aed-31-99-20261113-reel-v1.mp4",
+  "blob": "a817e8cd8b2b4da1d3464cebfd0dea6defbb0056",
+  "at": "2026-11-13T08:19:01Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/sonic-pico-park-out-now-aed-31-99-20261113.json",
+   "sha256": "0d20085611bc323521f7471d63b410211bf438d30d8e57749d881bfc04c931ab",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-0015"
+  },
+  "by": "director-18",
+  "qc": "pass",
+  "looked": "Strip and 4 fps dense strip read plus full frames at 2 s and 6 s: headline and chip readable on a sky-blue ground, Pico Park pixel sprites in a 9:16 crop, credit visible from frame 0 (legible, sits over sprites, accepted), price and date strip low and not repeated in lines, two official screenshots held 2.6 s each, last 2 s a picture, end card; no speech under whisper VAD, trailer music only; nothing graphic"
  }
 }
