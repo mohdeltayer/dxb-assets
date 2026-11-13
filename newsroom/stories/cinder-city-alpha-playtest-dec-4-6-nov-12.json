@@ -3,7 +3,7 @@
  "title": "Cinder City (NC, BigFire Games) alpha playtest Dec 4 to 6, sign-ups open until Nov 30, no Arab country eligible",
  "game": "Cinder City",
  "lane": "digital-lounge",
- "status": "built by builder (17:15 Dubai slot Fri 13 Nov); job jobs/live/cinder-city-alpha-playtest-december-4-6.json; awaiting render, qc and director",
+ "status": "rendered, qc pass (render-live run 676, 05:12Z), awaiting director; planned slot Fri 13 Nov 17:15 Dubai",
  "genre": [
   "shooter",
   "live service/MMO"
@@ -78,5 +78,8 @@
   ],
   "hits": []
  },
- "beat": "availability"
+ "beat": "availability",
+ "reel_path": "cards/2026-11/cinder-city-alpha-playtest-december-4-6-reel-v1.mp4",
+ "job": "cinder-city-alpha-playtest-december-4-6 (job_sha 6538bc108f64415379801e747967ac0ffee79556; job file last in commit 72da2d9, removed by the render commit)",
+ "render_checks": "whisper on the final Reel 0-40 s: 0 speech segments; sound trailer (audio split music 60.0%, leak 1.7%); 4 fps dense strip judged: no blood or gore; dark woman shots 13 to 17.5 s are dim but pass qc; length 21.5 s (over the 12 to 20 guide, the story decides)"
 }
