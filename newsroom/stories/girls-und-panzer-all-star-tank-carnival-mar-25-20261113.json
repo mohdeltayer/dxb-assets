@@ -115,5 +115,25 @@
   "gore_check": "dense strip at 4 fps judged: no blood, gore, slate or title card; first frame moving",
   "length": "21.4 s before the end card (qc note, outside 12 to 20 target)",
   "renders": 4
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/girls-und-panzer-all-star-tank-carnival-march-25-2027-reel-v1.mp4",
+  "blob": "1f91a79bda51426907ee83423d4ab4820630fa5f",
+  "at": "2026-11-13T05:06:50Z",
+  "note": "D3P page confirms PS5, Steam, 25 Mar 2027, yen prices, crossplay online only, 10 online; whisper hallucinations on music only; 21.4 s note",
+  "checklist": {
+   "job": "jobs/live/girls-und-panzer-all-star-tank-carnival-march-25-2027.json",
+   "sha256": "596c8fddcd4e45697dab88f5024dc5ce8d45c549833fbf4fd77b3116f4466e79",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": "showcase",
+   "evergreen": false,
+   "built_by": "builder-1615"
+  },
+  "by": "director-12",
+  "qc": "pass",
+  "looked": "strip+dense 4fps: moving girl in town on frame 0 no slate, showcase wide box, headline up all Reel, lines and credit in bottom band, no gore, platform logos shot, group art last 2 s picture, end card"
  }
 }
