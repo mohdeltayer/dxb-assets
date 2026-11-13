@@ -3,9 +3,9 @@
  "title": "Nintendo Black Friday: Switch 2 + Mario Kart World bundle $499.99, 22 Nov to 5 Dec (US)",
  "game": "Nintendo Switch 2",
  "account": "Digital Lounge",
- "status": "v2 built, QC pass, awaiting director (target 12:15 to 14:15 Dubai Sat 14 Nov)",
+ "status": "scheduled in Publer for 12:15 Dubai Sat 14 Nov (08:15Z), IG 12:15 (duplicate IG at 12:16 to be deleted by Mohammad), X 12:15, Threads 12:15; director PASS director-24",
  "claimed_by": "builder 08:15 Sat 14 Nov",
- "slot": "2026-11-14T08:15Z to 10:15Z (12:15 to 14:15 Dubai Sat 14 Nov), moved off the 08:15 peak by the director",
+ "slot": "2026-11-14T08:15Z (12:15 Dubai Sat 14 Nov)",
  "subject_person": null,
  "ledger_find": {
   "at": "2026-11-13T10:52:00Z",
@@ -60,7 +60,7 @@
   "what_it_means_here": "US offers only; Gulf buyers see the first Nintendo price move on Switch 2",
   "payoff": "also $20 off select physical games 22 to 29 Nov and a digital sale from 19 Nov"
  },
- "gate": "gate 10:40Z: Nintendo US page read in full, no update note; digests of 13 Nov carry no denial; ledger find nintendo switch black friday: 0 hits",
+ "gate": "gate 10:40Z: Nintendo US page read in full, no update note; digests of 13 Nov carry no denial; ledger find nintendo switch black friday: 0 hits | gate 11:15Z: Nintendo US page re-read in full by director (all prices, dates, savings, 90-day membership, while supplies last, US-only), no update note; Gulf search (Arabic and English) found no official Nintendo Middle East/UAE Black Friday offer; re-gate due within the hour before 12:15 Dubai",
  "texts": {
   "headline": "خصم 50 دولارًا\nعلى حزمة Switch 2",
   "lines": [
@@ -95,5 +95,26 @@
   }
  ],
  "qc_notes": "v2: qc pass, 0 findings (render 204 s, 1 live dispatch); source stretch 45.2 to 45.9 s (rainbow road macroblock) no longer used, no waiver; second stretch from 45.9 s, audio split applied (music 98.6%, leak 0.0); strip scoped to the bundle (سعر الحزمة, تبدأ, تنتهي); line added: تستمر حزمة Mario Kart حتى نفاد الكمية; theme stylized (playful would be third in a row); whisper on final Reel: first 3 s empty with VAD on, VAD off 'Music'; whole Reel VAD on empty, VAD off 'Music' plus end-card jingle hallucination; credit visible frames 0 to 3 s; dense strip 4 fps and frames at 15.9, 22.6, 24.6, 26.0 s: no macroblocking, no gore; length 26.9 s before end card (guide 12 to 20, not a stop); the Sports Resort bundle (no dates given) is in the caption only",
- "reel": "cards/2026-11/nintendo-black-friday-switch-2-mario-kart-bundle-november-22-v2-reel-v1.mp4"
+ "reel": "cards/2026-11/nintendo-black-friday-switch-2-mario-kart-bundle-november-22-v2-reel-v1.mp4",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/nintendo-black-friday-switch-2-mario-kart-bundle-november-22-v2-reel-v1.mp4",
+  "blob": "b5842bd79131336a785f2e6312c9ef7134ce46e3",
+  "at": "2026-11-13T11:16:43Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/nintendo-black-friday-switch-2-mario-kart-bundle-november-22-v2.json",
+   "sha256": "3d42cf6b82471d13d811c0993bbbc81b6ae13549f402c62314fdf1ed69bf31b4",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": "showcase",
+   "evergreen": false,
+   "built_by": "builder-0815"
+  },
+  "by": "director-24",
+  "qc": "pass",
+  "looked": "US-only relevance: Nintendo of America offers, line 1 says in America, no official Gulf Black Friday offer found, signed for a non-peak slot 12:15 to 14:15 Dubai Sat. Dense 4 fps check of every shot: no macroblocking except a fast road-edge sweep under 0.2 s at 2.0 s (scene content, neighbours clean); old 45.2 to 45.9 s stretch gone, no waiver. Strip scoped to the bundle (سعر الحزمة 499.99 USD, 22 Nov to 5 Dec), line 4 until supplies run out, 20 USD games line to 29 Nov, Sports Resort bundle in caption. Credit from frame 0 to 10 s. Whisper raw samples VAD on empty, off only Music at 0 to 2.4 s and You at 26 s (end-card jingle). Nothing graphic. Last 2 s before end card are gameplay."
+ },
+ "approved": "go: rolling queue; director PASS director-24 13 Nov 11:16Z; US-only offer moved off the 08:15 peak to 12:15"
 }
