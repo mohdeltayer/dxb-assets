@@ -1,7 +1,7 @@
 {
  "id": "2026-11-13-xbox-pc-backward-compat-21-games",
  "title": "21 more original Xbox games on PC via Xbox Backward Compatibility (25 total), achievements for four (Xbox Wire)",
- "state": "building",
+ "state": "qc pass, awaiting director",
  "claimed_by": "production-2 builder 15:15 Dubai slot (second-ranked lead)",
  "claimed_at": "2026-11-13T04:55:00Z",
  "game": "Xbox Backward Compatibility on PC",
@@ -77,5 +77,16 @@
   "caption": "إكس بوكس تضيف 21 لعبة من جهازها الأصلي إلى PC\n\nأعلنت إكس بوكس (Xbox) عبر إكس بوكس واير (Xbox Wire) أن ألعاب Xbox الأصلية على PC صارت 25 لعبة، بعد إضافة 21 لعبة اليوم في الدول المدعومة. من بينها Star Wars Battlefront II وStar Wars Jedi Knight: Jedi Academy وThe Elder Scrolls III: Morrowind وTimeSplitters 2.\n\nكما أضافت إكس بوكس الإنجازات لأول مرة في أربع ألعاب هي Star Wars: Knights of the Old Republic وStar Wars: Knights of the Old Republic II – The Sith Lords وBLiNX: The Time Sweeper وConker: Live and Reloaded، وتنطبق أيضًا عند اللعب على Xbox One وXbox Series. وقالت إكس بوكس إن المزيد من الألعاب سيأتي لاحقًا.\n\nيتطلب التشغيل Windows 11، والتوفر في أسواق محددة فقط، وقد يلزم شراء اللعبة أو اشتراك Xbox Game Pass.\n\nالمصدر: إكس بوكس واير\n\n#ألعاب #أخبار_الألعاب #Xbox #PC"
  },
  "deepl": "forward whole story EN to AR and back AR to EN matched; DeepL wrote «الإنجازات» and «أسواق محددة» like ours; its «حتى نفاذ الكمية» test phrase not used here",
- "grammar_review": "separate pass: numbers 21 لعبة (tamyiz), أربع ألعاب (feminine count), pronoun subject named in each line (الإنجازات), no required edits"
+ "grammar_review": "separate pass: numbers 21 لعبة (tamyiz), أربع ألعاب (feminine count), pronoun subject named in each line (الإنجازات), no required edits",
+ "reel": "cards/2026-11/xbox-pc-backward-compat-21-games-november-13-reel-v1.mp4",
+ "job_commit": "fe0dfbc",
+ "job_sha": "820974c922c998e9c1bf4beb92be1b7a006d6003",
+ "sound": "our bed (neon_d) with bed_reason in the job: four Steam gameplay captures are broadband effects, no music-led stretch",
+ "qc": "pass, 0 findings, 25.5 s before the end card (over the 12 to 20 s guide), 2 dispatches",
+ "uncertain": [
+  "gore: dense strip judged by eye at 4 fps: lightsaber duels, sparks, force lightning, no blood or gore; the 4 fps strip is the only check",
+  "speech not checked by ear (bed only, footage sound replaced)",
+  "footage is the old PC versions of four of the games, labelled on screen; UAE/KSA availability not stated by Xbox",
+  "several shots carry the old games' HUD in the vertical crop"
+ ]
 }
