@@ -1,17 +1,17 @@
 {
  "name": "cities-skylines-2-free-to-play-until-nov-16-20261113",
- "out": "cards/2026-11/cities-skylines-2-free-to-play-until-nov-16-20261113-reel-v1.mp4",
+ "out": "cards/2026-11/cities-skylines-2-free-to-play-until-nov-16-20261113-reel-v2.mp4",
  "verdict": "pass",
- "at": "2026-11-13T05:58:07Z",
+ "at": "2026-11-13T06:06:15Z",
  "findings": [],
  "notes": [
-  "length 12.2 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 42.1; leak_pct 3.7; cache {'hit': 0, 'miss': 3}; separate_secs 7.2; secs 10.8",
-  "render_job: lifeless: {\"score\": 3.4, \"still_share\": 0.033, \"longest_still\": 0.3, \"cuts_per_10s\": 3.31, \"held_under_text\": 0.041, \"secs\": 12.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 12.7 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 56.8; leak_pct 2.7; cache {'hit': 0, 'miss': 4}; separate_secs 7.4; secs 10.7",
+  "render_job: lifeless: {\"score\": 9.8, \"still_share\": 0.04, \"longest_still\": 0.4, \"cuts_per_10s\": 1.59, \"held_under_text\": 0.056, \"secs\": 12.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "429f34bd1ea2e0bf5fb83736148694e77053eef4",
- "dispatches": 2,
+ "job_sha": "0033ed1ec9d03f14cc5c09f9a5380c5a3fc6e9d5",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
