@@ -1,7 +1,7 @@
 {
  "id": "sonic-pico-park-out-now-aed-31-99-20261113",
  "title": "Sonic Pico Park out now on Steam; AED 31.99 on the UAE Steam store (PICO PARK Inc.)",
- "status": "built by builder-0015, qc pending",
+ "status": "built by builder-0015, render qc pass (v1, job_sha 7c6f54c3), awaiting separate director; planned slot 00:15 Dubai Sat 14 Nov (20:15Z Fri), ig, x, threads",
  "lane": "digital-lounge",
  "game": "SONIC PICO PARK",
  "subject_person": null,
@@ -55,5 +55,33 @@
   "instagram_ar": "لعبة Sonic Pico Park متاحة الآن على Steam\n\nأصدرت شركة بيكو بارك (PICO PARK Inc.) لعبة Sonic Pico Park، وهي تعاون بين سلسلة Pico Park التعاونية وسلسلة Sonic احتفالًا بمرور 35 عامًا على الأخيرة.\n\nيمكن لما يصل إلى 8 لاعبين اللعب محليًا أو عبر الإنترنت، وتدعم اللعبة عبر الإنترنت اللعب المشترك بين المنصات. والهدف الوصول إلى نهاية كل مرحلة، ولا يتحقق ذلك إلا بتعاون الفريق كله. وتستطيع كل شخصية استخدام ضربة Spin Dash من Sonic.\n\nسعر اللعبة 31.99 درهمًا في متجر Steam في الإمارات. وهي متوفرة أيضًا على Switch 2 وSwitch، ولا تضم لغاتها على Steam اللغة العربية.\n\nالمصدر: صفحة اللعبة على Steam ومتجر نينتيندو (Nintendo).\n\n#ألعاب #أخبار_الألعاب #SonicPicoPark #Steam"
  },
  "arabic_review": "two skills applied (glossary, names-ar: بيكو بارك added; verbs feminine for the game and كل شخصية); grammar stage on the job lines, X text and caption: no required edits, no uncertain cases; DeepL forward whole-story pass matched our wording except: «سونيك القنفذ» and «Switch Sports»-style English names (house: game and character names stay English), «درهم إماراتي» (house: درهمًا), «حركة» for Spin Dash move (kept ضربة), «اللعب المتبادل» for cross-play (kept اللعب المشترك بين المنصات); alternatives for 'out now' (متوفر الآن / متاح الآن) kept متاحة الآن for the game; back-check: Sonic Pico Park is now available on Steam, PICO PARK Inc. released the collaboration, up to 8 players local or online, cross-platform online, Spin Dash for every character, 31.99 dirhams on the UAE Steam store, also on Switch 2 and Switch, no Arabic",
- "sound": "trailer's own music (xylophone score) from 12.4 s, audio split; speech: none (faster-whisper on the trailer; final Reel check pending)"
+ "sound": "trailer's own music (xylophone score) from 12.4 s under the whole cut, audio split applied (music 99.4%, leak 0%); speech: none (faster-whisper with VAD on the trailer stretch and on the final Reel's audio: no speech, only the usual music hallucination without VAD)",
+ "job": "job file commit 7d61e54 (jobs/live/sonic-pico-park-out-now-aed-31-99-20261113.json, deleted by the render commit afterwards), job_sha 7c6f54c3094d5535e0d9eff4652504cf93ab8485; reel cards/2026-11/sonic-pico-park-out-now-aed-31-99-20261113-reel-v1.mp4 (14.4 s before the end card, 16.4 s in all); 5 dispatches (text type error, line indices, length under 12 s, burnt-in caption in the last 0.7 s, bracket full stop flipped)",
+ "picture": "official Steam launch trailer, text-free parade 12.4 to 22.4 s (9:16 crop focus 0.381, one to three sprites in the window), then two official Steam gameplay screenshots held still (2.6 s each); pixel-art cartoon, nothing graphic; credit «المصدر: بيكو بارك (PICO PARK)» visible at frames 0, 1, 2, 3 s (checked on the finished Reel); the trailer's burnt-in English captions (from 24.4 s and in most of the rest) are not used; source quality note: trailer 4.6 Mbps (lowbit flag only, zoom 1.78x)",
+ "notes_open": "trailer is lowbit (4.6 Mbps against a 5.0 floor, pixel art, no visible blocking in the strip); the credit line sits mid-frame over sprites (low option); Reel has no footage of PS5 or Xbox so the posts name only Steam, Switch 2 and Switch; Arabic press not checked beyond the digest",
+ "approved": "not yet: separate director then schedule; do not schedule before 00:15 Dubai Sat 14 Nov (60 minutes from neighbours)",
+ "read_aloud": "لعبة Sonic Pico Park متاحة الآن على Steam. تجمع سلسلة Pico Park مع Sonic. كل شخصية تستخدم Spin Dash. تتسع اللعبة لثمانية لاعبين.",
+ "reel_text": {
+  "headline": "لعبة Sonic Pico Park\nمتاحة الآن على Steam",
+  "lines": [
+   "تجمع سلسلة Pico Park مع Sonic",
+   "كل شخصية تستخدم Spin Dash",
+   "تتسع اللعبة لثمانية لاعبين"
+  ],
+  "strip": [
+   [
+    "سعر Steam في الإمارات",
+    [
+     "aed",
+     "31.99"
+    ]
+   ],
+   [
+    "تاريخ الإصدار",
+    "12 نوفمبر"
+   ]
+  ],
+  "credit": "المصدر: بيكو بارك (PICO PARK)",
+  "chip": "متوفر الآن"
+ }
 }
