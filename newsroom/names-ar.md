@@ -72,6 +72,10 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Arrowhead | أروهيد | Proposed 3 Nov |
 | Jagex | جاجكس | Approved 4 Oct (on-screen bracket example) |
 | Remedy | ريميدي | In use |
+| Insomniac Games | إنسومنياك | Proposed 14 Nov (QSSR Reel), flagged for Mohammad |
+| Embark Studios | إمبارك | Proposed 14 Nov (QSSR Reel), flagged for Mohammad |
+| Hello Games | هيلو غيمز | Proposed 14 Nov (QSSR Reel), flagged for Mohammad |
+| AMD | إيه إم دي | Proposed 14 Nov (QSSR Reel), flagged for Mohammad |
 | Bungie | بانجي | Proposed 8 Nov 2026 (Halo turns 25 Reel; flagged for Mohammad) |
 | Halo Studios | هالو ستوديوز | Proposed 8 Nov 2026 (Halo turns 25 Reel; flagged for Mohammad) |
 | Infinity Ward | إنفينيتي وارد | In use |
