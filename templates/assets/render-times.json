@@ -55050,5 +55050,141 @@
   "dispatches": 1,
   "sound": "bed:neon_c (checked Nintendo's 40th timeline loop for A Link Between Worlds (silent, no audio stream) and the IGN copy of Nintendo's 2013 launch trailer; 10.6 of 17.3 s is the page shot and the silent loop, so the trailer's sound would sit under shots from other moments)",
   "footage": true
+ },
+ {
+  "name": "albw-nso-badge-nintendo-40th-site-november-13-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-13T15:01Z",
+  "stages": {
+   "checks": 5.0,
+   "montage": 25.0,
+   "text": 34.0,
+   "audio": 0.6,
+   "outro": 13.8
+  },
+  "total": 78.5,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-13T14:59Z",
+  "finished_at": "2026-11-13T15:01Z",
+  "render_min": 1.31,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "albw-nso-badge-nintendo-zelda-history.jpg",
+    "still": true,
+    "zoom": 1.96
+   },
+   {
+    "shot": 1,
+    "file": "albw-40th-loop.mp4",
+    "start": 0.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 3.02,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 2,
+    "file": "albw-40th-loop.mp4",
+    "start": 2.3,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 3.02,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 3,
+    "file": "albw-40th-loop.mp4",
+    "start": 4.9,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 3.02,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 4,
+    "file": "albw-launch-trailer.mp4",
+    "start": 55.6,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.5,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 5,
+    "file": "albw-launch-trailer.mp4",
+    "start": 61.8,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.5,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 6,
+    "file": "albw-launch-trailer.mp4",
+    "start": 132.4,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.5,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   }
+  ],
+  "source_summary": {
+   "min_height": 720,
+   "max_zoom": 2.67,
+   "lowbit_shots": 6
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 23.8,
+   "still_share": 0.206,
+   "longest_still": 3.5,
+   "cuts_per_10s": 2.94,
+   "held_under_text": 0.0,
+   "secs": 17.0,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 125,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 961,
+  "peak_mem_mb": 2147,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 33881,
+  "peak_disk_mb": 34868,
+  "min_disk_free_mb": 211238,
+  "setup_min": 0.13,
+  "story": "albw-nso-badge-nintendo-40th-site-november-13",
+  "job_sha": "8d9994056ceeb759488c9226a6536a1d799ac64a",
+  "dispatches": 2,
+  "sound": "bed:neon (checked Nintendo's 40th timeline loop for A Link Between Worlds (silent, no audio stream) and the IGN copy of Nintendo's 2013 launch trailer; 10.6 of 17.3 s is the page shot and the silent loop, so the trailer's sound would sit under shots from other moments)",
+  "footage": true
  }
 ]

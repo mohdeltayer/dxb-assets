@@ -1,8 +1,8 @@
 {
  "name": "albw-nso-badge-nintendo-40th-site-november-13",
- "out": "cards/2026-11/albw-nso-badge-nintendo-40th-site-november-13-reel-v1.mp4",
+ "out": "cards/2026-11/albw-nso-badge-nintendo-40th-site-november-13-reel-v2.mp4",
  "verdict": "pass",
- "at": "2026-11-13T14:58:10Z",
+ "at": "2026-11-13T15:01:48Z",
  "findings": [],
  "notes": [
   "length 17.1 s before the end card (target 12 to 20 s)",
@@ -12,8 +12,8 @@
   "render_job: lifeless: {\"score\": 23.8, \"still_share\": 0.206, \"longest_still\": 3.5, \"cuts_per_10s\": 2.94, \"held_under_text\": 0.0, \"secs\": 17.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "f93fada1a4d1ac3abbc40ebdb6dec0ba31def525",
- "dispatches": 2,
+ "job_sha": "8d9994056ceeb759488c9226a6536a1d799ac64a",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 720,
   "max_zoom": 2.67,
@@ -23,5 +23,5 @@
  "final_enc": "-preset medium -crf 18",
  "look_frames": [],
  "person_shown": "n/a",
- "sound": "bed:neon_c (checked Nintendo's 40th timeline loop for A Link Between Worlds (silent, no audio stream) and the IGN copy of Nintendo's 2013 launch trailer; 10.6 of 17.3 s is the page shot and the silent loop, so the trailer's sound would sit under shots from other moments)"
+ "sound": "bed:neon (checked Nintendo's 40th timeline loop for A Link Between Worlds (silent, no audio stream) and the IGN copy of Nintendo's 2013 launch trailer; 10.6 of 17.3 s is the page shot and the silent loop, so the trailer's sound would sit under shots from other moments)"
 }
