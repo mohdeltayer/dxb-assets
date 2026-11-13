@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T18:15:18Z",
- "seq": 445,
+ "generated_at": "2026-11-13T18:25:08Z",
+ "seq": 446,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 13990,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Sturmjäger - Co-Op Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=6PfsfL50gvg",
+   "published": "2026-11-13T18:00Z",
+   "first_seen": "2026-11-13T18:25:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/6PfsfL50gvg/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=6PfsfL50gvg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 446
+  }
+ ],
+ "recent": [
   {
    "id": 13989,
    "source": "Xbox (YouTube)",
@@ -25,9 +48,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 445
-  }
- ],
- "recent": [
+  },
   {
    "id": 13988,
    "source": "PlayStation (YouTube)",
@@ -515,7 +536,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T18:15:14Z",
+  "last_poll_at": "2026-11-13T18:25:04Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
