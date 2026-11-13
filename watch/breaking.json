@@ -1,10 +1,48 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T16:52:06Z",
- "seq": 441,
+ "generated_at": "2026-11-13T17:00:32Z",
+ "seq": 442,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 13974,
+   "source": "PlayStation Blog",
+   "source_kind": "official",
+   "title": "Share of the Week: Lights",
+   "url": "https://blog.playstation.com/2026/11/13/share-of-the-week-lights/",
+   "published": "2026-11-13T17:00Z",
+   "first_seen": "2026-11-13T17:00:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55648994061_9574325b48_k.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55648994006_e9a119c81c_k.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55648012342_ccb2a01c46_k.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55649416340_5fd441e876_b.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55648012337_cef75174be_k.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55649416350_6a84e8995b_k.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 442
+  }
+ ],
  "recent": [
   {
    "id": 13860,
@@ -606,25 +644,13 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 393
-  },
-  {
-   "id": 12870,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "Halo: Campaign Evolved Players Can Jump Into Firefight for Free This Winter",
-   "url": "https://news.xbox.com/en-us/2026/11/12/halo-campaign-evolved-firefight-free-update-this-winter/",
-   "published": "2026-11-12T17:00Z",
-   "first_seen": "2026-11-12T17:00:05Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 392
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T16:50:14Z",
+  "last_poll_at": "2026-11-13T17:00:14Z",
   "sources_enabled": 100,
-  "sources_ok": 92,
+  "sources_ok": 94,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 53x)",
