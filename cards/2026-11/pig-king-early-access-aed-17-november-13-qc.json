@@ -1,17 +1,17 @@
 {
  "name": "pig-king-early-access-aed-17-november-13",
- "out": "cards/2026-11/pig-king-early-access-aed-17-november-13-reel-v1.mp4",
+ "out": "cards/2026-11/pig-king-early-access-aed-17-november-13-reel-v2.mp4",
  "verdict": "pass",
- "at": "2026-11-13T08:59:24Z",
+ "at": "2026-11-13T09:05:13Z",
  "findings": [],
  "notes": [
-  "length 15.5 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 95.2; leak_pct 0.2; cache {'hit': 0, 'miss': 3}; separate_secs 6.8; secs 10.7",
-  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 8.44, \"held_under_text\": 0.0, \"secs\": 15.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 15.9 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 97.4; leak_pct 0.1; cache {'hit': 1, 'miss': 2}; separate_secs 5.9; secs 9.9",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 8.86, \"held_under_text\": 0.0, \"secs\": 15.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "59eab284ed929bc405138bdaf037d497e1aa9161",
- "dispatches": 2,
+ "job_sha": "1b51cd2eda0c8faa8f4fd300afae5f1f11bbb9a9",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
