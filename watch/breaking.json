@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T17:52:05Z",
- "seq": 444,
+ "generated_at": "2026-11-13T18:15:18Z",
+ "seq": 445,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 13989,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "STRANGER THAN HEAVEN - Act 2: Kure Story Trailer",
+   "url": "https://www.youtube.com/watch?v=t8oc45AzG3A",
+   "published": "2026-11-13T18:00Z",
+   "first_seen": "2026-11-13T18:15:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/t8oc45AzG3A/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=t8oc45AzG3A"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 445
+  }
+ ],
  "recent": [
   {
    "id": 13988,
@@ -489,32 +511,11 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 401
-  },
-  {
-   "id": 13054,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Microsoft Flight Simulator 2024 - The Airbus A380 | PS5 & PS VR2 Games",
-   "url": "https://www.youtube.com/watch?v=W2DPDjuL7Do",
-   "published": "2026-11-12T18:00Z",
-   "first_seen": "2026-11-12T18:15:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/W2DPDjuL7Do/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=W2DPDjuL7Do"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 399
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T17:50:15Z",
+  "last_poll_at": "2026-11-13T18:15:14Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
