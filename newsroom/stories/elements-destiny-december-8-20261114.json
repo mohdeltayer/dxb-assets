@@ -1,7 +1,7 @@
 {
  "id": "elements-destiny-december-8-20261114",
  "title": "Elements Destiny launches 8 Dec 2026 on PC, PlayStation and Xbox, Switch 15 Dec (Deck13 Spotlight press release)",
- "status": "built by builder-1615: QC pass (render commit 6c21c54, job_sha 718840cb, job-file commit c3be937, 2 dispatches); not scheduled, for director; planned 16:15 Dubai Sat 14 Nov (12:15Z)",
+ "status": "scheduled in Publer 16:15 Dubai Sat 14 Nov (12:15Z) Instagram, X, Threads (ids ig:4e7b84 x:4e7b90 th:6dc134); director PASS director-1730; gate 20:05Z",
  "lane": "digital-lounge",
  "game": "Elements Destiny",
  "subject_person": null,
@@ -79,5 +79,25 @@
  "sound": "trailer's own music from 0.3 s (audio split on the server); speech: none under lines (faster-whisper small, VAD on and off, whole trailer: first speech 17.8 s); final Reel transcribed: VAD on nothing, VAD off only the usual end-of-video hallucination from 7.3 s; first 3 s clean; audio split applied, music 72.1%, leak 0%",
  "picture": "picker stretches viewed on the contact sheet and the committed 4 fps dense strip checked: pixel art and hand-drawn heroine art, nothing graphic, no dialogue box or title card in the shots; credit visible from frame 0 to 5 s; frame 0 is a short fade-in of the first shot (headline and chip already on it)",
  "notes_open": "consoles dates come from the press release as read on Games Press (Steam shows PC only); price not stated; 12 s floor margin thin (shots 12.6 s); frame 0 shows the opening fade; only 12.4 s before the end card (0.4 s over the floor); last line white over pale snow at 3 s while it fades in",
- "job": "job file commit c3be937 (jobs/live/elements-destiny-december-8-20261114.json, removed by render commit 6c21c54), job_sha 718840cb9aca9e0c73594d1d6a28dc90baedda26; reel cards/2026-11/elements-destiny-december-8-20261114-reel-v1.mp4, 12.4 s before the end card, 14.4 s in all"
+ "job": "job file commit c3be937 (jobs/live/elements-destiny-december-8-20261114.json, removed by render commit 6c21c54), job_sha 718840cb9aca9e0c73594d1d6a28dc90baedda26; reel cards/2026-11/elements-destiny-december-8-20261114-reel-v1.mp4, 12.4 s before the end card, 14.4 s in all",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/elements-destiny-december-8-20261114-reel-v1.mp4",
+  "blob": "94256aa29332711ef46a40f769bbdb4be1b477a4",
+  "at": "2026-11-13T20:07:11Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/elements-destiny-december-8-20261114.json",
+   "sha256": "98fcd238be46bd2c47eeefb25f460d0bb8d44d6ee6962f7dfbea837fe44854a9",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-1615"
+  },
+  "by": "director-1730",
+  "qc": "pass",
+  "looked": "viewed 2 fps contact sheet of final Reel as 9:16: hero art, snow scenes, dragon art, golden boss battle, silhouette reveal, wolf boss; pixel/hand-drawn, nothing graphic, no title cards/slates/black frames; credit under headline from frame 0; headline readable; lines mid-fade over pale snow ~4.5s legible with outline; whisper on final audio: VAD nothing"
+ }
 }
