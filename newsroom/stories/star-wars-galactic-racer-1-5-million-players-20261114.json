@@ -1,10 +1,54 @@
 {
  "id": "star-wars-galactic-racer-1-5-million-players-20261114",
- "title": "STAR WARS: Galactic Racer passes 1.5 million players one month after launch (Push Square, citing the game's official X post, 13 Nov)",
- "status": "claimed by builder for 17:15 Dubai Sat 14 Nov; building",
+ "title": "STAR WARS: Galactic Racer passes 1.5 million players a month after launch (Push Square, citing the game's official X post, 13 Nov 2026)",
+ "status": "job v1 written; text check then render pending",
  "lane": "digital-lounge",
  "game": "STAR WARS: Galactic Racer",
  "subject_person": null,
- "kind": "players",
- "label": "تقرير"
+ "kind": "sales",
+ "kind_news": "sales",
+ "label": "تقرير",
+ "template": "clipcard",
+ "beat": "numbers",
+ "genre": [
+  "racing",
+  "industry/hardware"
+ ],
+ "platform": "multi",
+ "sources": [
+  {
+   "name": "Push Square, 13 Nov 2026 19:00Z (cites the official @SWGalacticRacer X post by Fuse Games)",
+   "url": "https://www.pushsquare.com/news/2026/11/star-wars-galactic-racer-reaches-1-5-million-players-teases-future-updates"
+  },
+  {
+   "name": "Steam store page and appdetails 4078430, read 13 Nov (UAE 165.00 AED, KSA 159.00 SR, Arabic in supported languages)",
+   "url": "https://store.steampowered.com/app/4078430/"
+  }
+ ],
+ "ledger_find": {
+  "at": "2026-11-13T20:50:00Z",
+  "words": [
+   "galactic",
+   "racer"
+  ],
+  "hits": [
+   "2026-10-02-galactic-racer-reviews",
+   "2026-10-06-galactic-racer-launch"
+  ],
+  "note": "both are October launch stories; this is a new milestone, not a repeat"
+ },
+ "first_report": "13 Nov 2026 19:00Z, the game's official X post as relayed by Push Square (the X post itself cannot be read: X answers 429 to automated reads); under 24 h",
+ "source_type": "secondary",
+ "footage": "official Steam Launch Trailer (appid 4078430), 1920x1080 5.76 Mbps, music-only stretch 43 to 69 s (faster-whisper small, vad on and off: speech only at 35.5-42.7, 69.2-75, 76.4-87.4, 118-130 s; burnt-in subtitles from 88 s)",
+ "claims": {
+  "1.5 million players": "Push Square, from the game's official X post 13 Nov; it does not say whether that is sales or players who logged in",
+  "one month": "launched 6 Oct 2026 on PS5, Xbox Series X|S and PC (Steam store, earlier stories)",
+  "Steam price": "UAE 165.00 AED, KSA 159.00 SR read from Steam appdetails 13 Nov",
+  "Arabic": "listed in Steam supported languages (no full audio)",
+  "future updates": "team only says it can't wait to share more about the future; no plans announced"
+ },
+ "gate": "gate 20:55Z: no primary readable (X 429); Push Square only credible outlet found in the digest (1 outlet); web search found no denial and no other figure for 1.5M; run as تقرير naming Push Square",
+ "chip": "تقرير",
+ "sensitive": "none",
+ "recipe": "numbers (figure card variant, footage first)"
 }
