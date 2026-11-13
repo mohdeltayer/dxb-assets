@@ -16,7 +16,7 @@
   "role": "composer of Chrono Trigger, head of Procyon Studio",
   "photo_source": "his official website procyon-studio.com (about page), credited on screen"
  },
- "status": "rebuilding after director FAIL (translation, headline, speech); not submitted",
+ "status": "rebuilt after director FAIL, server QC pass (19:01Z), awaiting director, not submitted",
  "why": "The composer of Chrono Trigger (Horii and Toriyama on its Dream Team) gives a hedged personal view on the future of Dragon Quest and closes by praising it.",
  "sources": [
   {
@@ -98,6 +98,11 @@
    "v": 2,
    "at": "2026-11-13T19:10:00Z",
    "change": "director FAIL fixes: 書いた人 is the one who drew it; headline keeps hedge; track start 30.4 s to avoid leaked kids' line"
+  },
+  {
+   "v": 3,
+   "at": "2026-11-13T19:05:00Z",
+   "change": "v8 job rendered, QC pass, whisper clean"
   }
  ],
  "posts": [],
@@ -126,7 +131,7 @@
  "recommended_slot": "Sat 14 Nov 01:15 Dubai (21:15Z Fri): next free slot keeping the 60 min night spacing between Publer's 00:15 and 02:15; 23:45 would sit 30 min before 00:15",
  "draft_notes": {
   "brief": "family 4 people + quote template; hook: composer of Chrono Trigger says DQ should end for now (his words, hedged); 35.3 s before end card (over the 12 to 20 s target: five beats of attributed opinion, each needs reading time; hard cuts)",
-  "sound": "trailer music stem of the DQ VII Reimagined launch trailer from 19.98 s (audio split, music_only; the trailer is voiced throughout so voices removed); server: music_pct 21.5, leak_pct 0.3. faster-whisper on the finished Reel heard one low-confidence fragment 'Oh, the fun.' at 5.8 to 9.7 s (the kids' line at source 27.1 to 30 s leaking through the stem): director to listen; no other speech",
+  "sound": "trailer music stem of the DQ VII Reimagined launch trailer from 30.4 s (a pause; audio split, music_only; voices removed): server music_pct 21.7, leak_pct 1.0. faster-whisper on the FINAL Reel audio (ffmpeg -ac 1 -ar 16000 f32le, 37.27 s), VAD off and VAD on: no segments, no English speech. v1 had a leaked 'Oh, the fun.' at 5.8 to 9.7 s with the track at 19.98 s.",
   "footage": "Steam store trailer 'ESRB EN - Launch', DQ VII Reimagined (1080p60, decode clean, 1.78x max, no lowbit); DQ I and II HD-2D trailer judged, not used (voiced, wide scenes). Shots from the server shot picker (run 43478516980) then checked at 9:16 by eye: cut black fades, a map with caption text, the title card, a funeral procession, a flame close-up",
   "person": "official photo from Mitsuda's own site procyon-studio.com/resources/mitsuda-about-page.jpg, open on frame 0, credit on plate",
   "credit": "Square Enix, stand-in footage named, from frame 0 (not 'low': a low credit caps lines at two)",
@@ -137,6 +142,12 @@
    "Reel omits Dragon Quest RPG's full Japanese subtitle (Makaiju to Michibikareshi Shima) and that remakes are plentiful; caption has the latter",
    "faces not measured (mediapipe missing on server)",
    "grid cover: Mitsuda photo box open on frame 0 with headline, chip top right"
-  ]
+  ],
+  "v2_fixes": [
+   "line 2 and IG: 書いた人 = the one who drew it (لمن رسمها), primary_translation_en fixed",
+   "headline «ميتسودا يشعر أن\\nتتوقف Dragon Quest حاليًا»: hedge and attribution kept, no first person; font check passed at 100 px, two lines; note: «يشعر أن تتوقف» is elliptical (أنْ المصدرية), director's wording kept",
+   "track start 30.4 s"
+  ],
+  "reel_check_after_fix": "dispatches 3 in qc.json (v1 render dispatches were stand-ins for failed text/pace checks)"
  }
 }
