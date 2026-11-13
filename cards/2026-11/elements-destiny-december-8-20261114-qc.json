@@ -1,0 +1,25 @@
+{
+ "name": "elements-destiny-december-8-20261114",
+ "out": "cards/2026-11/elements-destiny-december-8-20261114-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-13T20:04:01Z",
+ "findings": [],
+ "notes": [
+  "length 12.4 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 72.1; leak_pct 0.0; cache {'hit': 0, 'miss': 4}; separate_secs 8.2; secs 11.8",
+  "render_job: lifeless: {\"score\": 2.8, \"still_share\": 0.024, \"longest_still\": 0.2, \"cuts_per_10s\": 10.57, \"held_under_text\": 0.057, \"secs\": 12.3, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "718840cb9aca9e0c73594d1d6a28dc90baedda26",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "trailer"
+}
