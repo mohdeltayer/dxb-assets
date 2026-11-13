@@ -2,16 +2,16 @@
  "name": "ps5-qssr-spider-man-2-control-resonant-november-13",
  "out": "cards/2026-11/ps5-qssr-spider-man-2-control-resonant-november-13-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-13T18:21:00Z",
+ "at": "2026-11-13T18:32:41Z",
  "findings": [],
  "notes": [
   "length 18.3 s before the end card (target 12 to 20 s)",
   "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
-  "render_job: lifeless: {\"score\": 2.7, \"still_share\": 0.022, \"longest_still\": 0.4, \"cuts_per_10s\": 5.49, \"held_under_text\": 0.005, \"secs\": 18.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 7.69, \"held_under_text\": 0.0, \"secs\": 18.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "af59483c0101508cadcad77719068c6291f9be82",
- "dispatches": 5,
+ "job_sha": "08459205ba31a4decd1aa06eb4b97efed010dca9",
+ "dispatches": 6,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
