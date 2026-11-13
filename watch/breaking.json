@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T09:20:15Z",
- "seq": 429,
+ "generated_at": "2026-11-13T09:52:05Z",
+ "seq": 430,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 13600,
    "source": "Xbox (YouTube)",
@@ -25,9 +26,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 429
-  }
- ],
- "recent": [
+  },
   {
    "id": 13585,
    "source": "PlayStation (YouTube)",
@@ -886,21 +885,16 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T09:20:14Z",
+  "last_poll_at": "2026-11-13T09:50:05Z",
   "sources_enabled": 100,
-  "sources_ok": 88,
-  "sources_failing": 11,
+  "sources_ok": 94,
+  "sources_failing": 6,
   "failed": [
-   "CD PROJEKT RED (YouTube) (HTTP 404, 4x)",
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 49x)",
-   "EA SPORTS FC (YouTube) (HTTP 404, 5x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 50x)",
    "Nintendo of America (X) (HTTP 429, 65x)",
    "PlayStation (X) (HTTP 429, 83x)",
    "PlayStation Middle East (X) (HTTP 429, 10x)",
-   "Riot Games (YouTube) (HTTP 404, 5x)",
    "Rockstar Games (X) (HTTP 429, 36x)",
-   "Square Enix (YouTube) (HTTP 404, 5x)",
-   "Steam (YouTube) (HTTP 404, 5x)",
    "Xbox (X) (HTTP 429, 82x)"
   ]
  }
