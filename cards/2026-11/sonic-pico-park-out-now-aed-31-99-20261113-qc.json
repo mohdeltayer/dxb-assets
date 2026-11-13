@@ -1,0 +1,31 @@
+{
+ "name": "sonic-pico-park-out-now-aed-31-99-20261113",
+ "out": "cards/2026-11/sonic-pico-park-out-now-aed-31-99-20261113-reel-v1.mp4",
+ "verdict": "fail",
+ "at": "2026-11-13T08:00:24Z",
+ "findings": [
+  {
+   "check": "length",
+   "detail": "length 11.6 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them; under 12 s fails: add a beat of footage"
+  }
+ ],
+ "notes": [
+  "length 11.6 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "source quality: sonic-pico-park-out-now-aed-31-99-20261113-trailer.mp4: low bitrate 4.6 Mbps (floor 5.0 Mbps for 1920x1080 at 60 fps) (lowbit)",
+  "render_job: audio split: applied; music_pct 100.0; leak_pct 0.0; cache {'hit': 0, 'miss': 2}; separate_secs 5.4; secs 9.1",
+  "render_job: lifeless: {\"score\": 0.1, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 6.96, \"held_under_text\": 0.009, \"secs\": 11.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "b852be2fed2e41dec01b79e789bb1534accef049",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 2
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "trailer"
+}
