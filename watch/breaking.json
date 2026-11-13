@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-12T23:52:05Z",
- "seq": 414,
+ "generated_at": "2026-11-13T00:52:05Z",
+ "seq": 415,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -847,42 +847,23 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 355
-  },
-  {
-   "id": 12100,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Warhammer Survivors Launch Trailer",
-   "url": "https://www.youtube.com/watch?v=5RUWvmy01rk",
-   "published": "2026-11-11T23:58Z",
-   "first_seen": "2026-11-12T00:15:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/5RUWvmy01rk/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=5RUWvmy01rk"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 353
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-12T23:50:04Z",
+  "last_poll_at": "2026-11-13T00:50:14Z",
   "sources_enabled": 100,
-  "sources_ok": 93,
-  "sources_failing": 6,
+  "sources_ok": 90,
+  "sources_failing": 8,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 45x)",
    "Nintendo of America (X) (HTTP 429, 64x)",
    "PlayStation (X) (HTTP 429, 82x)",
+   "PlayStation (YouTube) (HTTP 404, 2x)",
    "PlayStation Middle East (X) (HTTP 429, 9x)",
    "Rockstar Games (X) (HTTP 429, 35x)",
-   "Xbox (X) (HTTP 429, 81x)"
+   "Xbox (X) (HTTP 429, 81x)",
+   "Xbox (YouTube) (HTTP 404, 2x)"
   ]
  }
 }
