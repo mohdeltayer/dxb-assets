@@ -15,7 +15,7 @@
  ],
  "category": "update",
  "priority": "medium",
- "status": "building (builder-1415)",
+ "status": "built, qc pass, awaiting director (builder-1415); planned slot 14:15 Dubai Sat 14 Nov (10:15Z)",
  "lane": "Digital Lounge only",
  "sources": [
   {
@@ -64,6 +64,16 @@
   "x_threads": "أعلنت سوني (Sony) أن تحديث Spider-Man 2 على PS5 بات متاحًا الآن مع تقنية QSSR لتحسين الصورة بالذكاء الاصطناعي، وأن ألعابًا أخرى ستحصل عليها قريبًا، حسب مدونة بلايستيشن (PlayStation Blog).",
   "instagram": "تحديث Spider-Man 2 على PS5 يضيف تقنية QSSR لتحسين الصورة، وهو متاح الآن.\n\nأعلنت سوني (Sony) عبر مدونة بلايستيشن (PlayStation Blog) أن ألعابًا جديدة ستدعم تقنية QSSR، وهي تقنية ترفع جودة الصورة بالذكاء الاصطناعي على جهاز PS5 العادي. أصبح تحديث Marvel's Spider-Man 2 متاحًا الآن ويدعم وضعي الجودة والأداء، حسب ستوديو إنسومنياك (Insomniac Games).\n\nوتقول ريميدي (Remedy) إن Control Resonant ستحصل على التحديث في ديسمبر. وأعلنت إمبارك (Embark Studios) أن ARC Raiders وTHE FINALS ستدعمان التقنية قريبًا، وقالت هيلو غيمز (Hello Games) إن No Man's Sky ستحصل عليها خلال الأسابيع القليلة المقبلة، وتأتي Hell Let Loose: Vietnam بتحديث قادم.\n\nتقول سوني إن QSSR مبنية على الأساس نفسه الذي تقوم عليه تقنية PSSR على PS5 Pro، وإنها خرجت من مشروع Project Amethyst بالتعاون مع إيه إم دي (AMD).\n\n#ألعاب #أخبار_الألعاب #PS5 #SpiderMan2"
  },
- "grammar_review": "pending",
- "versions": []
+ "grammar_review": "required edits applied: none outstanding (house glossary, orthography and perfect-arabic reviewed; headline avoids bare تصل per release-verb rule; متاح chosen over متوفر for line fit, DeepL also gave متاح). DeepL whole-story forward pass matched meaning; alternatives noted: تحسين الدقة for upscaling (ours: رفع جودة الصورة), متاح الآن / ستتوفر (ours: ستحصل). Back-check not run separately.",
+ "versions": [
+  {
+   "v": 1,
+   "file": "cards/2026-11/ps5-qssr-spider-man-2-control-resonant-november-13-reel-v1.mp4",
+   "job": "ps5-qssr-spider-man-2-control-resonant-november-13",
+   "job_sha": "af59483c0101508cadcad77719068c6291f9be82",
+   "job_commit": "ace6153"
+  }
+ ],
+ "sound": "bed:neon, reason in job bed_reason (Spider-Man 2 Steam trailers voiced throughout)",
+ "qc": "pass, 5 dispatches"
 }
