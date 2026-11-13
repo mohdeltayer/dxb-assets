@@ -2,17 +2,17 @@
  "name": "crazy-taxi-world-tour-india-map-20261114",
  "out": "cards/2026-11/crazy-taxi-world-tour-india-map-20261114-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-13T21:17:14Z",
+ "at": "2026-11-13T21:29:34Z",
  "findings": [],
  "notes": [
-  "length 20.7 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: applied; music_pct 94.2; leak_pct 0.0; cache {'hit': 0, 'miss': 3}; separate_secs 11.3; secs 17.4",
+  "length 19.9 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 94.0; leak_pct 0.0; cache {'hit': 2, 'miss': 1}; separate_secs 3.1; secs 8.5",
   "smear check: exempt 6.79 to 11.79 s (our own cards)",
-  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 6.8, \"held_under_text\": 0.0, \"secs\": 20.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 6.57, \"held_under_text\": 0.0, \"secs\": 19.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "d94b766b53e8e36e17bbb789407a14d5042e8c8a",
- "dispatches": 2,
+ "job_sha": "c85e161510ef483ef5545c12f97cfefa6e0caa7c",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
