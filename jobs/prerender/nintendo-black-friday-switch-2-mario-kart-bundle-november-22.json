@@ -11,28 +11,177 @@
    "url": "https://assets.nintendo.com/video/upload/store/software/switch2/70010000095431/Video/edaafe8cf9163f9487f6cbc0b90a284a0a61ac85829fda0cc41f6f356cfed7f8.mp4"
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "nintendo-black-friday-switch-2-mario-kart-bundle-november-22-trailer.mp4",
+   29.43,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "nintendo-black-friday-switch-2-mario-kart-bundle-november-22-trailer.mp4",
+   32.43,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "nintendo-black-friday-switch-2-mario-kart-bundle-november-22-trailer.mp4",
+   40.17,
+   4.3,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "nintendo-black-friday-switch-2-mario-kart-bundle-november-22-trailer.mp4",
+   48.72,
+   4.4,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "nintendo-black-friday-switch-2-mario-kart-bundle-november-22-trailer.mp4",
+   71.47,
+   4.2,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "nintendo-black-friday-switch-2-mario-kart-bundle-november-22-trailer.mp4",
+   98.27,
+   4.6,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   0,
+   1,
+   [
+    [
+     "أعلنت نينتيندو (Nintendo)\nعروض الجمعة السوداء لهذا العام",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    [
+     "تجمع الحزمة جهاز Switch 2\nولعبة Mario Kart World",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "مع اشتراك لمدة 3 أشهر\nفي Nintendo Switch Online",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   5,
+   [
+    [
+     "تخفض نينتيندو 20 دولارًا من\nسعر ألعاب فعلية مختارة",
+     {
+      "size": 54
+     }
+    ],
+    [
+     "يستمر التخفيض من 22 نوفمبر\nحتى 29 نوفمبر",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   5,
+   "المصدر: نينتيندو (Nintendo)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "خصم 50 دولارًا\nعلى حزمة Switch 2",
  "label": "السعر",
  "source": "نينتيندو (Nintendo)",
  "date": "12 Nov 2026",
- "theme": "cold",
+ "theme": "playful",
  "style": null,
  "template": "split",
  "skin": "house",
- "cut": false,
- "track": "bed",
+ "cut": true,
+ "track": [
+  "nintendo-black-friday-switch-2-mario-kart-bundle-november-22-trailer.mp4",
+  29.43
+ ],
  "strip": [
   [
-   "TODO",
-   "TODO"
+   "سعر الحزمة",
+   "499.99 دولارًا"
   ],
   [
-   "TODO",
-   "TODO"
+   "الفترة",
+   "22 نوفمبر إلى 5 ديسمبر"
+  ],
+  [
+   "المنطقة",
+   "الولايات المتحدة"
   ]
  ],
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "layout": "showcase",
+ "showcase_reason": "the only official copies are 720p 2.6 Mbps Nintendo store trailers; enlarging 2.7x would fail the 2x cap",
+ "lowres_ok": {
+  "searched": [
+   "Nintendo US store: three Mario Kart World trailers, all 1280x720 at 2.6 Mbps",
+   "Nintendo US whatsnew and product pages: no 1080p copy",
+   "Nintendo YouTube: sign-in wall, not used"
+  ],
+  "result": "none above 720p; showcase layout keeps the footage at 0.84x"
+ },
+ "subject_person": null
 }
