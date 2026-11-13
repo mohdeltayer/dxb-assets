@@ -3,7 +3,7 @@
  "title": "Deep Rock Galactic: Rogue Core free to play on Steam until Mon 16 Nov 22:00 Dubai, 50% off (AED 39.50)",
  "game": "Deep Rock Galactic: Rogue Core",
  "lane": "digital-lounge",
- "status": "built (qc pending); planned 08:15 Dubai Sat 14 Nov; awaiting separate director (not signed, not scheduled)",
+ "status": "built, qc pass (v1 file, 4th dispatch); planned 08:15 Dubai Sat 14 Nov; awaiting separate director (not signed, not scheduled)",
  "kind": "free",
  "subject_person": null,
  "ledger_find": {
@@ -49,7 +49,7 @@
   "x_threads_ar": "تفتح غوست شيب (Ghost Ship Games) لعبة Deep Rock Galactic: Rogue Core مجانًا للجميع على Steam حتى الاثنين 16 نوفمبر الساعة 10 مساءً بتوقيت دبي، حسب إعلان الاستوديو، مع خصم 50 بالمئة على الشراء حتى 26 نوفمبر.",
   "instagram_ar": "جرّب Rogue Core مجانًا على Steam حتى الاثنين\n\nتفتح غوست شيب (Ghost Ship Games) لعبة Deep Rock Galactic: Rogue Core مجانًا للجميع حتى الاثنين 16 نوفمبر الساعة 10 مساءً بتوقيت دبي، احتفالًا بمرور ستة أشهر على إطلاقها في الوصول المبكر. وهي لعبة تعاونية لما يصل إلى أربعة لاعبين. ويقول الاستوديو إن إطلاقها لم يكن موفقًا، وإنه أصلح الكثير منذ ذلك الحين. وتُباع اللعبة بخصم 50 بالمئة حتى 26 نوفمبر، فيبلغ سعرها في متجر Steam في الإمارات 39.50 درهمًا بدلًا من 79.00 درهمًا.\n\nالمصدر: إعلان الاستوديو وصفحة اللعبة على Steam.\n\n#ألعاب #أخبار_الألعاب #RogueCore #Steam"
  },
- "job": "jobs/live/deep-rock-galactic-rogue-core-free-weekend-nov-16-20261113.json",
+ "job": "job file commit 906b03f (jobs/live/deep-rock-galactic-rogue-core-free-weekend-nov-16-20261113.json), job_sha 536da501791861b91395bc1333cb5446a90c0672",
  "arabic_review": "two skills applied; grammar stage self-run: no required edits; DeepL forward whole-story pass matched (alternatives: تتيح/تفتح, مجانًا للجميع, ينتهي العرض; 'حتى نفاذ الكمية' not relevant here); back-check: free for everyone on Steam to Monday 16 Nov 10 pm Dubai, six months after early access, studio says launch wasn't ideal, 50% off to 26 Nov, AED 39.50 from 79.00",
  "angle": {
   "hook": "Ghost Ship opens Deep Rock Galactic: Rogue Core to everyone free on Steam until Mon 16 Nov 22:00 Dubai, six months after launch",
@@ -73,5 +73,8 @@
   "PICTURE: not the same as last 5 reels": "yes",
   "CREDIT: on every clip": "yes: from frame 0 over shots 0 to 5"
  },
- "built_by": "builder-0815"
+ "built_by": "builder-0815",
+ "reel_path": "cards/2026-11/deep-rock-galactic-rogue-core-free-weekend-nov-16-20261113-reel-v1.mp4",
+ "render_checks": "qc pass no findings (12.5 s before end card); whisper on final Reel, VAD on: no speech; VAD off: only a 'thank you for watching' hallucination at 10.1 to 14.3 s on the end card jingle, none in the first 3 s; credit visible frames 0 to 3 s; frame 0 stray cut frame fixed (start 17.16 s); dark v1 shot dropped; sound: trailer music stem only (music_only, effects-led stretch music 19.8%, leak 2.4%); every shot judged at 4 fps as 9:16: no gore (stylised bug and crystal effects); source 1080p 5.7 Mbps, max zoom 1.78, decode clean, no lowres_ok needed; dispatches 4",
+ "director_check": null
 }
