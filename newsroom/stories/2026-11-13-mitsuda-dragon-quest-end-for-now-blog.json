@@ -16,7 +16,7 @@
   "role": "composer of Chrono Trigger, head of Procyon Studio",
   "photo_source": "his official website procyon-studio.com (about page), credited on screen"
  },
- "status": "rebuilt after director FAIL, server QC pass (19:01Z), awaiting director, not submitted",
+ "status": "v3 headline fix (director grammar), rendering; not submitted",
  "why": "The composer of Chrono Trigger (Horii and Toriyama on its Dream Team) gives a hedged personal view on the future of Dragon Quest and closes by praising it.",
  "sources": [
   {
@@ -64,7 +64,7 @@
    "theme": "stylized",
    "style": "bold",
    "sound": "trailer music (audio split, music only)",
-   "headline": "ميتسودا يشعر أن\nتتوقف Dragon Quest حاليًا",
+   "headline": "ميتسودا يشعر أنه ينبغي\nإنهاء Dragon Quest حاليًا",
    "lines": [
     "كتب ميتسودا على مدونته\nعن رسمة بأسلوب أكيرا\nتوريياما مصمم الشخصيات",
     "يشعر أن هذا الاتجاه ليس\nجيدًا لمن رسمها ولمحبي\nتوريياما ولتوريياما الراحل",
@@ -103,6 +103,11 @@
    "v": 3,
    "at": "2026-11-13T19:05:00Z",
    "change": "v8 job rendered, QC pass, whisper clean"
+  },
+  {
+   "v": 4,
+   "at": "2026-11-13T19:20:00Z",
+   "change": "headline grammar fix"
   }
  ],
  "posts": [],
@@ -148,6 +153,7 @@
    "headline «ميتسودا يشعر أن\\nتتوقف Dragon Quest حاليًا»: hedge and attribution kept, no first person; font check passed at 100 px, two lines; note: «يشعر أن تتوقف» is elliptical (أنْ المصدرية), director's wording kept",
    "track start 30.4 s"
   ],
-  "reel_check_after_fix": "dispatches 3 in qc.json (v1 render dispatches were stand-ins for failed text/pace checks)"
+  "reel_check_after_fix": "dispatches 3 in qc.json (v1 render dispatches were stand-ins for failed text/pace checks)",
+  "v3_fix": "headline «ميتسودا يشعر أنه ينبغي\\nإنهاء Dragon Quest حاليًا» replaces the elliptical «يشعر أن تتوقف» (أنْ + present verb); nothing else changed (shots, track 30.4 s, credits, lines, captions)"
  }
 }
