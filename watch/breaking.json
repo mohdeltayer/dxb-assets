@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T19:15:18Z",
- "seq": 451,
+ "generated_at": "2026-11-13T19:20:17Z",
+ "seq": 452,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 14114,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "DERELIKT XBOX Launch Trailer",
+   "url": "https://www.youtube.com/watch?v=PX1Q6Ld5beY",
+   "published": "2026-11-13T18:59Z",
+   "first_seen": "2026-11-13T19:20:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/PX1Q6Ld5beY/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=PX1Q6Ld5beY"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 452
+  }
+ ],
+ "recent": [
   {
    "id": 14108,
    "source": "Xbox Wire",
@@ -16,9 +39,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 451
-  }
- ],
- "recent": [
+  },
   {
    "id": 14100,
    "source": "Xbox (YouTube)",
@@ -595,25 +616,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 403
-  },
-  {
-   "id": 13115,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "Fable – New Quest Gameplay for XBOX’s 25th Anniversary",
-   "url": "https://news.xbox.com/en-us/2026/11/12/fable-new-quest-gameplay-for-xboxs-25th-anniversary/",
-   "published": "2026-11-12T19:00Z",
-   "first_seen": "2026-11-12T19:20:14Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 401
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T19:15:14Z",
+  "last_poll_at": "2026-11-13T19:20:14Z",
   "sources_enabled": 100,
-  "sources_ok": 92,
+  "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 54x)",
