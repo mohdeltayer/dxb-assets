@@ -1,7 +1,7 @@
 {
  "id": "2026-11-13-once-human-season-5-nov-18",
  "title": "Once Human Season 5 \"Dissonant Resonance\": free, launches 18 Nov; four-player Colossus Raid (PlayStation Blog, Starry Studio designer)",
- "state": "v3 built, awaiting director",
+ "state": "scheduled",
  "claimed_by": "production-2 builder 13:15 Dubai slot",
  "claimed_at": "2026-11-13T00:45:00Z",
  "ledger_find": {
@@ -90,7 +90,7 @@
  },
  "grammar_review": "v3 separate pass: headline, four lines, X, Threads, caption read against orthography and agreement rules: no required edits; boss named «عملاق على شكل أرغن» everywhere (job and story file); PS Blog calls it Sky Living-Machine Colossus, a pipe-organ titan",
  "deepl": "v3 forward (whole story EN to AR) and back (AR to EN) matched; the back-check misread «Deviant» as the season, so the line says «كائنًا قتاليًا» and the caption names Elemental Deviant",
- "approved": "go: scheduled by the dispatcher's director step; builder stops before director and Publer",
+ "approved": "go: director-6 PASS, scheduled in Publer 09:15Z (13:15 Dubai) instagram, x, threads",
  "template": "trailer (showcase layout)",
  "kind": "update",
  "recipe": "trailer drop with showcase (720p official clip)",
@@ -138,5 +138,25 @@
   },
   "date_conflict": "PlayStation Blog 12 Nov: 18 Nov, no zone or hour. Starry press release 5 Nov (GamesPress, WorthPlaying, Pocket Gamer, Massively OP): 19 Nov, no hour. Steam news has no Season 5 notice yet (latest 4 Nov update: maintenance 3 PM PT). Third-party guide: servers reopen 3 PM PST 18 Nov = 19 Nov Dubai 03:00, not official. Stated as the two sources say."
  },
- "date_fact": "Starry's Steam notice (4 Nov, and 12 Nov dev blog): next update scheduled 18 Nov 2026 3:00 PM PT = 23:00 UTC = 03:00 Dubai 19 Nov (update start; server reopening not stated). PlayStation Blog says 18 Nov (PT), Starry's 5 Nov press release says 19 Nov: the same moment in two zones."
+ "date_fact": "Starry's Steam notice (4 Nov, and 12 Nov dev blog): next update scheduled 18 Nov 2026 3:00 PM PT = 23:00 UTC = 03:00 Dubai 19 Nov (update start; server reopening not stated). PlayStation Blog says 18 Nov (PT), Starry's 5 Nov press release says 19 Nov: the same moment in two zones.",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/once-human-season-5-dissonant-resonance-november-18-v3-reel-v1.mp4",
+  "blob": "ce8816d5064d2b2e58c313a1ed3178ba6130f323",
+  "at": "2026-11-13T01:18:46Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/once-human-season-5-dissonant-resonance-november-18-v3.json",
+   "sha256": "0ee84e15e080c1e15da66e960570044655b3c6ce3316ad6721d323138984c41b",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": "showcase",
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-6",
+  "qc": "pass",
+  "looked": "dense strip 4fps all frames: PS Blog organ-colossus clip then earlier Ocean footage (tentacle creature, ship, fire flash), no blood or gore; headline up all Reel, lines and credits in bottom band; credit names Ocean earlier footage; no speech (whisper VAD empty), music stem; end card clean"
+ }
 }
