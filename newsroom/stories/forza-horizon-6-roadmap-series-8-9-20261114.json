@@ -1,7 +1,7 @@
 {
  "id": "forza-horizon-6-roadmap-series-8-9-20261114",
  "title": "Forza Horizon 6 content roadmap: Series 8 and 9 before year end, first expansion January 2027 (Pure Xbox, Playground Games video, 13 Nov 2026)",
- "status": "v3 built, QC pass (render-live dispatch 5, job_sha 924595d1f75d99a5f8f57e2b7bd042e11fab00b1); awaiting director; slot proposed 19:15 Dubai Sat 14 Nov",
+ "status": "v3 director PASS (director-forza-3); scheduled in Publer for 19:15 Dubai Sat 14 Nov on Instagram, X, Threads (ids ig:160219 x:6e4151 th:6e416b); RE-GATE within the hour before 19:15 Dubai: Pure Xbox and Playground re-read, a denial stops it",
  "lane": "digital-lounge",
  "game": "Forza Horizon 6",
  "subject_person": null,
@@ -81,5 +81,34 @@
   "layout": "9 shots: 3 trailer stretches (6.62, 15.73, 62.74 s) and 6 Steam screenshots as stills",
   "track": "trailer music stem from 34.0 s (was 6.62 s: the music stem went silent under 30.5 to 32.4 s of the trailer, about 1.9 s of dead air before the end card); finished audio measured per second: -27 to -13 dBFS RMS, nothing below -30 before the end card; music 65.8%, leak 0.8%"
  },
- "regate": "RE-GATE within the hour before 19:15 Dubai: Pure Xbox and Playground re-read, a denial stops it"
+ "regate": "RE-GATE within the hour before 19:15 Dubai: Pure Xbox and Playground re-read, a denial stops it",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/forza-horizon-6-roadmap-series-8-9-20261114-reel-v1.mp4",
+  "blob": "73cf15adfb8ded26398a3e87922c223c73b5063e",
+  "at": "2026-11-13T23:36:50Z",
+  "note": "v3 gate 23:4xZ: Pure Xbox re-read, no correction, no denial; re-gate within the hour before 19:15 Dubai; audio per-second measured -12.9 to -26.7 dBFS, one 0.25 s dip to -34 at 21.25 s, no speech modulation; picture identical to v2 dense strip, edge text clean",
+  "checklist": {
+   "job": "jobs/live/forza-horizon-6-roadmap-series-8-9-20261114.json",
+   "sha256": "35324969dc7cb382dcd028d83fbbd10d9ba6adab2b32eab92c25038d36a3ec9c",
+   "ok": true,
+   "problems": [],
+   "template": "stills",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-1915"
+  },
+  "by": "director-forza-3",
+  "qc": "pass",
+  "looked": "first frame forest road with chip and two-line headline readable at 3:4; dense strip 4 fps: no gore, no cut logo or edge text, whole small IN-ENGINE FOOTAGE on trailer shots, credit from frame 0; music to the end card"
+ },
+ "scheduled": {
+  "slot": "2026-11-14T19:15+04:00",
+  "platforms": [
+   "instagram",
+   "x",
+   "threads"
+  ],
+  "note": "X follow-up comment carries the Pure Xbox link; Threads text ends with the source line; Instagram location Dubai"
+ }
 }
