@@ -144,7 +144,7 @@
   ],
   [
    3,
-   3,
+   4,
    [
     [
      "أما STUFFED فلعبة تصويب\nبمنظور الشخص الأول",
@@ -155,11 +155,11 @@
    ]
   ],
   [
-   4,
+   5,
    5,
    [
     [
-     "تدعم اللعب التعاوني\nعبر الإنترنت لأربعة لاعبين",
+     "تدعم أربعة لاعبين\nتعاونيًا",
      {
       "size": 54
      }
@@ -230,5 +230,33 @@
    "لعبة Sumerian Six"
   ]
  ],
- "bed_reason": "footage crosses three trailers (Sunderfolk Gameplay, STUFFED Gameplay, Hypnospace New Launch): one continuous stretch of any one would sit under the other games' shots"
+ "bed_reason": "footage crosses three trailers (Sunderfolk Gameplay, STUFFED Gameplay, Hypnospace New Launch): one continuous stretch of any one would sit under the other games' shots",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Xbox Wire Free Play Days page read in full 05:40Z via fetch tool; Steam appdetails for publishers",
+  "SOURCE: not already posted": "yes: ledger find 'xbox free play days': only the 29 Oct edition (different games and dates)",
+  "SOURCE: age": "yes: published 12 Nov, window open to Sunday 15 Nov; not in the 13 Nov digests",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE free": "yes: games, dates, who can play, discount and limits from the page",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names the offer, L1 منها Sunderfolk, L2 أما STUFFED, L3 تدعم continues STUFFED, L4 ثالثًا Hypnospace Outlaw; no line opens on و",
+  "STORY: release verbs": "yes: none needed (free until Sunday)",
+  "STORY: names match names-ar.md": "yes: Dreamhaven, Amplified Games, No More Robots in credits with brackets; Xbox Wire إكس بوكس واير",
+  "POST: Arabic passes": "yes: two skills, grammar stage, DeepL forward whole-story pass (alternatives: أعضاء/مشتركو, تقمص أدوار/أدوار, التخفي/التسلل kept ours)",
+  "SOUND: footage sound or bed with reason": "yes: bed, reason in bed_reason (three trailers)",
+  "SOUND: no speech under Arabic lines": "yes: bed only; finished Reel transcribed",
+  "PICTURE: footage first": "yes: official Steam trailers",
+  "PICTURE: not the same as last 5 reels": "yes: these games not used in the last Reels",
+  "CREDIT: on every clip": "yes: three credits cover shots 0 to 8, from frame 0"
+ },
+ "decision_log": [
+  {
+   "beat": "hook",
+   "shot": "Sunderfolk 0.0 s",
+   "note": "picker clean stretch"
+  },
+  {
+   "beat": "Sumerian Six",
+   "shot": "none",
+   "note": "trailer shows blood and a Nazi villain: not used, strip only"
+  }
+ ]
 }
