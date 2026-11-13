@@ -1,7 +1,7 @@
 {
  "id": "forza-horizon-6-roadmap-series-8-9-20261114",
  "title": "Forza Horizon 6 content roadmap: Series 8 and 9 before year end, first expansion January 2027 (Pure Xbox, Playground Games video, 13 Nov 2026)",
- "status": "v1 job built, awaiting render",
+ "status": "v1 built, QC pass (render-live dispatch 2, job_sha f07f14a2a6532411ae7e19c669f7a9074d26f853); awaiting director; slot proposed 19:15 Dubai Sat 14 Nov (reported story: re-check Pure Xbox and Playground in the run before it publishes)",
  "lane": "digital-lounge",
  "game": "Forza Horizon 6",
  "subject_person": null,
@@ -41,8 +41,8 @@
  ],
  "headline_ar": "خطة Forza Horizon 6:\nأول إضافة في يناير",
  "deepl": {
-  "forward": "whole story run once; DeepL wrote السلسلة 8 and التوسع (house terms: Series stays English, إضافة); فتصدر/ستصدر for dates matches glossary",
-  "back_check": "not run"
+  "forward": "whole story run once: DeepL wrote السلسلة 8 and التوسع; house terms kept (Series stays English, إضافة)",
+  "back_check": "passed: roadmap per Pure Xbox, Series 8 then 9 before end 2026, Series 10 Jan and Feb, first expansion January 2027 no details, 269 dirhams UAE and 269 riyals Saudi, Arabic not supported"
  },
  "ledger_find": {
   "at": "2026-11-13T22:50:03Z",
@@ -60,5 +60,33 @@
  "footage": "official Steam Launch Trailer (appid 2483190, 1080p 5.6 Mbps, decode clean): four picker-clean stretches 6.62-9.86, 15.73-18.8, 58.84-60.64, 62.74-64.54 s (burnt-in IN-ENGINE FOOTAGE line and logo appear on the other frames); plus five official Steam screenshots 1920x1080 as stills. Playground roadmap video not downloadable here.",
  "gate": "gate 03:3xZ: Pure Xbox article read in full; roadmap video not readable; forza.net news index no roadmap post; web search found no denial and no other outlet carrying the Series 8/9 names; January 2027 expansion with PS5 version corroborated by Traxion and Pure Xbox related article (21 Jan date not used). Run as تقرير naming Pure Xbox",
  "chip": "تقرير",
- "recipe": "announcement (roadmap), stills plus footage"
+ "recipe": "announcement (roadmap), stills plus footage",
+ "posts": {
+  "x_threads_ar": "كشف استوديو بلاي غراوند (Playground Games) عن خطة محتوى للعبة Forza Horizon 6، حسب موقع بيور إكس بوكس (Pure Xbox). يأتي Series 8 ثم Series 9 قبل نهاية 2026، ثم Series 10 في يناير وفبراير، وتصدر أول إضافة في يناير 2027 دون تفاصيل بعد.",
+  "instagram_ar": "خطة محتوى Forza Horizon 6: أول إضافة في يناير\n\nكشف استوديو بلاي غراوند (Playground Games) عن خطة محتوى للعبة Forza Horizon 6، حسب موقع بيور إكس بوكس (Pure Xbox). يأتي Series 8 بعنوان Horizon Holidays ثم Series 9 بعنوان Legendary Explorers قبل نهاية 2026، ثم Series 10 بعنوان Exotics and Tuners في يناير وفبراير.\n\nوتصدر أول إضافة للعبة في يناير 2027، ولم يكشف الاستوديو تفاصيلها بعد.\n\nيبلغ سعر اللعبة على متجر Steam 269 درهمًا في الإمارات و269 ريالًا في السعودية، ولا تتوفر اللغة العربية بين اللغات المدعومة.\n\n#ألعاب #أخبار_الألعاب #ForzaHorizon6 #Xbox"
+ },
+ "grammar_review": {
+  "required_edits": [],
+  "optional_style_suggestions": [],
+  "uncertain_cases": [
+   {
+    "text": "يأتي Series 8",
+    "issue": "house rule gives game and series names feminine agreement; here Series is a seasonal update, not the game",
+    "why_uncertain": "masculine reads with an unstated update noun; valid either way",
+    "options": [
+     "تأتي Series 8"
+    ]
+   }
+  ],
+  "note": "run on the Reel lines, headline, X text and caption with glossary rows read; the orthography and perfect-arabic files were not opened in this run; no grammar issue raised"
+ },
+ "sound": "trailer music stem only (music_only, split applied, music 39.8% of the Launch Trailer stretch from 6.62 s, leak 0.9%); whisper small on the finished audio: no speech (VAD on: one 'I'm not sure' at 10.9 s, VAD off one end-of-video line, both music hallucinations); speech: none",
+ "render": {
+  "job_commit": "1c6181a",
+  "job_sha": "f07f14a2a6532411ae7e19c669f7a9074d26f853",
+  "render_commit": "dc37e5e",
+  "out": "cards/2026-11/forza-horizon-6-roadmap-series-8-9-20261114-reel-v1.mp4",
+  "renders": "3 dispatches (v3 audio split floor 39.8%, v4 pass, v5 logo cut at left edge); 24.6 s before the end card (over the 12-20 s target)",
+  "layout": "9 shots: 4 trailer stretches and 5 Steam screenshots as stills, template stills, no showcase"
+ }
 }
