@@ -1,0 +1,74 @@
+{
+ "name": "ps5-qssr-embark-prerender",
+ "story": "ps5-qssr-update-spider-man-2-control-resonant-arc-raiders-20261114",
+ "kind_news": "update",
+ "built_by": "builder-1415",
+ "render_lane": "server",
+ "out": "cards/2026-11/ps5-qssr-spider-man-2-control-resonant-november-13-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "ps5-qssr-spider-man-2-control-resonant-november-13-ar2.mp4",
+   "steam": 1808500,
+   "trailer": "ARC Raiders - Date",
+   "start": 0,
+   "seconds": 240
+  },
+  {
+   "file": "ps5-qssr-spider-man-2-control-resonant-november-13-fn.mp4",
+   "steam": 2073850,
+   "trailer": "THE FINALS",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [
+  [
+   "ps5-qssr-spider-man-2-control-resonant-november-13-ar2.mp4",
+   5,
+   3,
+   null
+  ],
+  [
+   "ps5-qssr-spider-man-2-control-resonant-november-13-fn.mp4",
+   5,
+   3,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   0,
+   1,
+   [
+    [
+     "تقنية QSSR",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   1,
+   "المصدر: إمبارك (Embark Studios)",
+   {
+    "from_start": true,
+    "low": true
+   }
+  ]
+ ],
+ "headline": "تحسين الصورة على PS5\nيصل إلى Spider-Man 2",
+ "label": "رسمي",
+ "source": "مدونة بلايستيشن (PlayStation Blog)",
+ "date": "13 Nov 2026",
+ "theme": "cold",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": true,
+ "track": "bed",
+ "bed_reason": "Spider-Man 2 Steam trailers (Launch, PC Features, Reveal) have dialogue throughout, no 12 s speech-free stretch (whisper); Control Resonant, ARC Raiders and No Man's Sky trailers are single-game and cannot run under cuts across several games without effects from other moments"
+}
