@@ -59180,5 +59180,159 @@
   "dispatches": 2,
   "sound": "trailer",
   "footage": true
+ },
+ {
+  "name": "star-wars-galactic-racer-1-5-million-players-20261114-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-13T21:35Z",
+  "stages": {
+   "checks": 12.1,
+   "montage": 43.2,
+   "text": 35.3,
+   "audio": 0.7,
+   "outro": 17.6
+  },
+  "total": 108.8,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-13T21:34Z",
+  "finished_at": "2026-11-13T21:35Z",
+  "render_min": 1.81,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
+    "start": 18.65,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.77,
+    "rows": 804,
+    "zoom": 2.39,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
+    "start": 53.98,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.77,
+    "rows": 804,
+    "zoom": 2.39,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
+    "start": 55.98,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.77,
+    "rows": 804,
+    "zoom": 2.39,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
+    "start": 58.48,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.77,
+    "rows": 804,
+    "zoom": 2.39,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
+    "start": 63.76,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.77,
+    "rows": 804,
+    "zoom": 2.39,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
+    "start": 65.76,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.77,
+    "rows": 804,
+    "zoom": 2.39,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
+    "start": 25.91,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.77,
+    "rows": 804,
+    "zoom": 2.39,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
+    "start": 50.93,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.77,
+    "rows": 804,
+    "zoom": 2.39,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 2.39,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 6.98,
+   "held_under_text": 0.0,
+   "secs": 17.2,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 187,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1035,
+  "peak_mem_mb": 2413,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 38645,
+  "peak_disk_mb": 39793,
+  "min_disk_free_mb": 206313,
+  "setup_min": 0.15,
+  "story": "star-wars-galactic-racer-1-5-million-players-20261114",
+  "job_sha": "482dd48bc00932f3e1540e44a0e15f862da2bb11",
+  "dispatches": 2,
+  "sound": "bed:neon_b (Trailer sound unusable for all five official Steam trailers of STAR WARS: Galactic Racer (appid 4078430), checked 13 Nov with faster-whisper small (vad on and off) and the server's Cocktail Fork stem check: the Launch Trailer's speech-free stretches carry effects (music stem leftover 5.8% at 44.96 s and 16.0% at 0 s, over the 5% limit; music 38.6% and 42.2%), and it is narrated at 35.5-42.7, 69-87 and 118-130 s with burnt-in subtitles from 88 s; the Official Gameplay Trailer is narrated at 2.5-17, 31-33 and 53-60 s; the Announcement Trailer is narrated at 1-10 s and onward; the Official Story Trailer is narrated at 4.5-54.7 and 65.5-80.6 s; the Release Date Reveal has no speech but only about 11 clean seconds before burnt-in dates and Deluxe Edition captions. No other official copy was reachable.)",
+  "footage": true
  }
 ]
