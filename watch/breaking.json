@@ -1,10 +1,48 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T00:52:05Z",
- "seq": 415,
+ "generated_at": "2026-11-13T01:00:15Z",
+ "seq": 416,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 13351,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Thanks for 25 Years, XBOX Players — From Wolfenstein 3 and Halo Firefight to Classic XBOX Games on PC: Everything Announced Today",
+   "url": "https://news.xbox.com/en-us/2026/11/12/xbox-25th-anniversary-news-recap/",
+   "published": "2026-11-13T01:00Z",
+   "first_seen": "2026-11-13T01:00:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/XBOX-Wire-Playback-Logo-1-431a9b50384ec62fcd33.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/HCE_FF_XBFF-1-2273ec7fc27a458ce012.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Skins-709635d8d5313eb44e44.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/FABLE_Quest_Gameplay_Thumbnail-4c1fa52ad9c7121409ed.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Slaughtermode_Red_Band-6dd39a71103b0e785277.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/111226_XBOX-Wire_PCBackCompat-JPG-6d6dbed266e723ed4c62.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 416
+  }
+ ],
  "recent": [
   {
    "id": 13296,
@@ -851,17 +889,19 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T00:50:14Z",
+  "last_poll_at": "2026-11-13T01:00:15Z",
   "sources_enabled": 100,
   "sources_ok": 90,
-  "sources_failing": 8,
+  "sources_failing": 10,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 45x)",
    "Nintendo of America (X) (HTTP 429, 64x)",
+   "Nintendo of America (YouTube) (HTTP 404, 2x)",
    "PlayStation (X) (HTTP 429, 82x)",
    "PlayStation (YouTube) (HTTP 404, 2x)",
    "PlayStation Middle East (X) (HTTP 429, 9x)",
    "Rockstar Games (X) (HTTP 429, 35x)",
+   "Rockstar Games (YouTube) (HTTP 404, 2x)",
    "Xbox (X) (HTTP 429, 81x)",
    "Xbox (YouTube) (HTTP 404, 2x)"
   ]
