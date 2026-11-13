@@ -1,0 +1,25 @@
+{
+ "name": "ets2-coaches-dlc-out-aed-46-99-20261113",
+ "out": "cards/2026-11/ets2-coaches-dlc-out-aed-46-99-20261113-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-13T07:08:27Z",
+ "findings": [],
+ "notes": [
+  "length 21.5 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 2.8, \"held_under_text\": 0.0, \"secs\": 21.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "c7aea86e7f176a11865f60e4dd9004048976bd25",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "bed:launch (Trailers checked: the only official Coaches trailer (Steam 'Euro Truck Simulator 2: Coaches Video Trailer', appid 3809270, 251 s; the same video is embedded in SCS's 1 Nov blog post; no other trailer or clip exists on the Steam page or the blog). faster-whisper: narration runs from 2.0 s to 245.4 s with pauses of at most 3.7 s, so no stretch of 12 s or more is free of speech; music_only stem separation (Cocktail Fork) failed on 13 Nov: music stem not clean, leftover 34.8% over the 5% limit. Our bed is used instead.)"
+}
