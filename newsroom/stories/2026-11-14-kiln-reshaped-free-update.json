@@ -1,9 +1,9 @@
 {
  "id": "2026-11-14-kiln-reshaped-free-update",
  "title": "Kiln: Reshaped, Double Fine's biggest update, adds two 4v4 modes, local play for up to four, party codes and offline play",
- "status": "building",
+ "status": "built, qc pass, awaiting director (04:15 Dubai Sat 14 Nov slot, 00:15Z)",
  "builder": "builder 04:15 Sat 14 Nov",
- "slot": "04:15 Dubai Sat 14 Nov",
+ "slot": "2026-11-14T00:15Z (04:15 Dubai Sat 14 Nov)",
  "subject_person": null,
  "ledger_find": {
   "at": "2026-11-13T08:54:43Z",
@@ -81,5 +81,17 @@
   "credit": "المصدر: دابل فاين (Double Fine)"
  },
  "grammar_review": "arabic-grammar-review stage: house glossary, perfect-arabic SKILL and orthography opened; no required grammar edits; house checks: first words Arabic, Western digits, no em dash, no hashtags on X, game names feminine agreement (حصلت لعبة Kiln), company with bracket at first mention; uncertain/new term: رموز المجموعة for Party Codes (DeepL: رموز الأحزاب, rejected: reads as political parties; DeepL forward whole-story: رموز مجموعات), كشك التصوير for Photo Booth (DeepL), دابل فاين spelling follows one earlier post; مرسوم not used (back-check read it as illustrations)",
- "deepl": "forward whole-story pass and phrase alternatives read; back-check of Reel lines and X text: first X draft 'بين Xbox وPlayStation وSteam' read back as cross-collection support, so reworded to 'تجمع أصدقاء'; Reel lines read back correctly (group codes, four-player local play)"
+ "deepl": "forward whole-story pass and phrase alternatives read; back-check of Reel lines and X text: first X draft 'بين Xbox وPlayStation وSteam' read back as cross-collection support, so reworded to 'تجمع أصدقاء'; Reel lines read back correctly (group codes, four-player local play)",
+ "gate": "gate 09:20Z: Double Fine Steam announcements (12 Nov 18:34Z, 10 Nov 19:06Z) read in full, Steam store page and Launch Trailer read; no denial or change found; recheck within the hour before the slot (queued over 6 h ahead); first report about 29.7 h old at the slot, no Arabic outlet found carrying it",
+ "build": {
+  "reel": "cards/2026-11/kiln-reshaped-free-update-modes-party-codes-november-12-reel-v1.mp4",
+  "job": "kiln-reshaped-free-update-modes-party-codes-november-12",
+  "job_sha": "284e264bf2d75d01df2b83957de4cd56f6aeeaeb",
+  "job_commit": "2fb9a1b",
+  "render_commit": "69d87b8",
+  "qc": "pass, no findings, 19.9 s before the end card, audio split applied (music 93.8%), sound trailer, dispatches 4 (pace, reading time, vocal start)",
+  "speech": "final Reel whisper: 0 to 2 s a spurious word at the headline only (v5 heard Satisfaction from the sung vocal, so the track start moved to 18.5 s); none under the Arabic lines",
+  "new_terms": "رموز المجموعة (Party Codes), كشك التصوير (Photo Booth), دابل فاين (Double Fine) follows one earlier post; to add to names-ar.md",
+  "dropped_first_pick": "9 Kings 1.0 (Steam, 29.50 AED, 50 percent off to 26 Nov): its only trailer is all in-game UI text, shot picker found 2 clean stretches of 1.7 s"
+ }
 }
