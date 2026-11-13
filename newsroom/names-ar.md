@@ -238,3 +238,5 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | TwoPeaks (Pig King developer) | توبيكس | Proposed 13 Nov 2026 (Pig King Reel; Latin in brackets at first mention) |
 | Isle of Strays (Pig King publisher) | آيل أوف ستريز | Proposed 13 Nov 2026 (Pig King caption; Latin in brackets at first mention) |
 | Ghost Ship Games (Deep Rock Galactic: Rogue Core developer) | غوست شيب | Proposed 13 Nov 2026 (Rogue Core free weekend Reel; Latin in brackets at first mention) |
+| Epic Games Store (and Epic Games, the company, in a Reel line) | متجر إيبك غيمز (Epic Games Store); إيبك غيمز (Epic Games) | Proposed 14 Nov 2026 (free-games Reel; matches the Epic Games row above) |
+| Light Up Games (Mark of the Deep publisher) | لايت أب غيمز (Light Up Games) | Proposed 14 Nov 2026 (free-games Reel credit; Latin in brackets at first mention) |
