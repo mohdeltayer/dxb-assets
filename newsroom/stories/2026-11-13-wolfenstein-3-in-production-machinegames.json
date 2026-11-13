@@ -2,7 +2,7 @@
  "id": "2026-11-13-wolfenstein-3-in-production-machinegames",
  "title": "Wolfenstein 3 is officially in production at MachineGames (Xbox Wire, 12 Nov)",
  "game": "Wolfenstein 3",
- "status": "built, qc pass, awaiting director",
+ "status": "v3 built, qc pass, awaiting director (v1 and v2 failed the director on speech under the lines)",
  "claimed_by": "builder-1415",
  "lane": "digital-lounge",
  "slot": "14:15 Dubai 2026-11-13",
@@ -79,7 +79,7 @@
   "note": "Reel (showcase layout): three lines; actors on screen without Latin brackets for width (brackets in the X text and caption)"
  },
  "grammar_review": "2026-11-13: required edits applied: L1 completed with object ذلك and full role الرئيسة التنفيذية (was رئيسة); L2 role word الممثلان added; suggestions none; uncertain: ماشين غيمز spelling proposed, not yet in the glossary; DeepL forward: قيد التطوير matches; back-check meaning intact",
- "reel": "cards/2026-11/wolfenstein-3-in-production-machinegames-november-13-reel-v1.mp4",
- "job_restore": "git show 8a79a68:jobs/live/wolfenstein-3-in-production-machinegames-november-13.json (job_sha 93c8e7ada7261c26a3beda6a3fdb861e58f921e1)",
- "render_notes": "render e9bab98: 99 s on dxb-render, dispatch 2 in the server's count (4 dispatches in all: shots prerender aside, failures were gate/layout/sync, not content): showcase layout because the E3 trailer is 2.35:1 letterboxed (816 rows, 2.35x); hard cuts so the trailer track stays in sync; sound: trailer own audio, split not applied (music 19.2%), not heard by me; stand-in credit on screen; frames judged at 2 fps for 157 to 175 s: BJ face, Anya, a dark kid shot at the end lit red (cloth, not gore); frames after 174.1 s avoided"
+ "reel": "cards/2026-11/wolfenstein-3-in-production-machinegames-november-13-v3-reel-v1.mp4",
+ "job_restore": "git show 0d8d60e:jobs/live/wolfenstein-3-in-production-machinegames-november-13-v3.json (job_sha be40baab90b202895457293e8a538e4db547b998)",
+ "render_notes": "v3: BJ stretch 161 to 173.9 s of Wolfenstein II E3 Trailer on our bed (neon_c), bed_reason in the job names every trailer checked; speech scan of the E3 trailer in 15 s chunks: no usable speech-free stretch (v2's 275 to 288 s stretch has shouted 'Fire', 'You shoot at us'); Gameplay/Launch windows are blood, gunfire, slates or swastika imagery. Final Reel transcribed on raw 16 kHz samples: no words before 9.8 s; whisper prints 'Thank you for watching!' at 9.84 to 14.78 s over the bed and end-card jingle, which is a hallucination on music (no voice source in the mix), to be confirmed by the director. v1 and v2 artifacts stay in cards/ (v2 still carries shouted speech, never to be posted)."
 }
