@@ -2,7 +2,7 @@
  "id": "fable-gameplay-feb-23-aed-269-20261113",
  "game": "Fable",
  "lane": "digital-lounge",
- "status": "drafting by builder-2315 (slot 23:15 Dubai Fri 13 Nov)",
+ "status": "built, qc pass (v1, 4 dispatches: 3 refused early, 1 render); planned 23:15 Dubai Fri 13 Nov; awaiting separate director (not signed, not scheduled)",
  "subject_person": null,
  "ledger_find": {
   "at": "2026-11-13T07:55:40Z",
@@ -52,5 +52,11 @@
   "why_now": "the official video came out on 12 Nov as part of Xbox's 25th anniversary, and Steam shows the UAE price and the language list",
   "what_it_means_here": "the Steam UAE price is 269 AED and the Steam page lists no Arabic",
   "payoff": "release 23 Feb 2027 on PS5, Xbox Series X|S and PC"
- }
+ },
+ "reel_path": "cards/2026-11/fable-gameplay-feb-23-aed-269-november-13-reel-v1.mp4",
+ "job": "job file commit baa0927 (jobs/live/fable-gameplay-feb-23-aed-269-november-13.json, rendered and removed by the server), job_sha b96711a5383ba938c920ab6c824b6ff2d81afdbe (blob printed by the server; local blob b96711a5383ba938c920ab6c824b6ff2d81afdbe)",
+ "render_checks": "qc pass no findings; length 22.3 s before the end card (guide 12 to 20, six lines needed for the pace and reading rules); layout showcase wide (trailer is the news); whisper on the final Reel: no speech under the story lines (only a 'Thank you for watching' hallucination at 20.9 to 24.3 s with no VAD speech, over the trailer's effects fade and the end card jingle); credit visible frames 0 to 3 s; dense strip 4 fps judged as 9:16 and 3:4: no blood or gore, red and pink cursed-magic particle bursts at 9.7 to 11 s, 17.5 s and 20 to 22 s (magic effects, no wounds); sound: trailer own sound, audio split not applied (music 20.4%, effects-led), speech none",
+ "arabic_review": "two skills applied; grammar stage manual pass, no required edits; DeepL whole-story forward pass: picked منبع النهر over مصدر النهر, kept قيد التطوير (DeepL نسخة تجريبية is wrong), الحجز المسبق (house) over DeepL الطلب المسبق, تصدر (house) over من المقرر إطلاق; back-check matches the English (line 5 first wording «بلا عربية بين اللغات» read back wrongly, reworded to «لغات اللعبة على Steam لا تضم العربية حتى الآن»); X text and caption unchanged by the job lines",
+ "stage_minutes": "source 22, footage 14, Arabic 12, renders 4 dispatches (3 refused within 3 min each, final 287 s) 24, total about 80",
+ "uncertainties": "first report about 24 h old at the slot; Steam UAE price and language list read 13 Nov 07:5xZ, director to re-read before 23:15; Xbox Game Pass and Cloud availability come from IGN's copy of the official description, not the Steam page; company form إكس بوكس غيم ستوديوز is new in names-ar.md (proposed)"
 }
