@@ -1,0 +1,215 @@
+{
+ "name": "ball-x-pit-risen-ballbylon-out-now-nov-12-v4",
+ "story": "2026-11-13-ball-x-pit-risen-ballbylon-out-now",
+ "kind_news": "launch",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/ball-x-pit-risen-ballbylon-out-now-nov-12-v4-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "ball-x-pit-risen-ballbylon-out-now-nov-12-v3-trailer.mp4",
+   "steam": 4008250,
+   "trailer": "Risen Ballbylon",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [
+  [
+   "ball-x-pit-risen-ballbylon-out-now-nov-12-v3-trailer.mp4",
+   60.33,
+   1.75,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ball-x-pit-risen-ballbylon-out-now-nov-12-v3-trailer.mp4",
+   5.28,
+   1.7,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ball-x-pit-risen-ballbylon-out-now-nov-12-v3-trailer.mp4",
+   9.23,
+   1.7,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ball-x-pit-risen-ballbylon-out-now-nov-12-v3-trailer.mp4",
+   16.33,
+   2.95,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ball-x-pit-risen-ballbylon-out-now-nov-12-v3-trailer.mp4",
+   37.9,
+   1.7,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ball-x-pit-risen-ballbylon-out-now-nov-12-v3-trailer.mp4",
+   40.28,
+   2.3,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ball-x-pit-risen-ballbylon-out-now-nov-12-v3-trailer.mp4",
+   64.33,
+   2.3,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ball-x-pit-risen-ballbylon-out-now-nov-12-v3-trailer.mp4",
+   66.73,
+   1.68,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   3,
+   [
+    [
+     "لعبة BALL x PIT تصعد\nإلى سماء المدينة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   7,
+   [
+    [
+     "تضم الإضافة 4 ساحات قتال\nوتتطلب إنهاء اللعبة الأساسية",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   7,
+   "المصدر: ديفولفر ديجيتال (Devolver Digital)",
+   {
+    "size": 40,
+    "band": true,
+    "from_start": true,
+    "low": true
+   }
+  ]
+ ],
+ "headline": "إضافة Risen Ballbylon\nمتوفرة الآن على Steam",
+ "label": "متوفر الآن",
+ "source": "ستيم (Steam)",
+ "date": "12 Nov 2026",
+ "theme": "playful",
+ "style": null,
+ "template": "split",
+ "skin": "house",
+ "cut": true,
+ "track": "bed",
+ "strip": [
+  [
+   "المنصة",
+   "Steam"
+  ],
+  [
+   "السعر",
+   [
+    "aed",
+    "23.75"
+   ]
+  ]
+ ],
+ "angle": {
+  "hook": "BALL x PIT's biggest expansion lifts the run out of the pit into the sky",
+  "why_now": "Risen Ballbylon released on Steam on 12 Nov",
+  "what_it_means_here": "23.75 AED on Steam UAE; the content opens only after the base game is finished"
+ },
+ "sensitive": "none",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam announcement and store page read in full",
+  "SOURCE: not already posted": "yes: grep newsroom/stories and jobs, no Ball x Pit",
+  "SOURCE: age": "yes: first report the Steam announcement 12 Nov 16:52Z, about 15 h before the 12:15 slot",
+  "ANGLE before lines": "yes: angle in the story file and job",
+  "STORY TYPE out now": "yes: platform Steam, AED price in the strip, what it adds, the base-game requirement",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names the expansion, L1 names BALL x PIT, L2 الإضافة, L3 uses محتواها after الإضافة",
+  "STORY: release verbs": "yes: متوفرة الآن for out now; no bare تصل",
+  "STORY: names match names-ar.md": "yes: Devolver Digital added to names-ar.md with the Latin in the credit",
+  "POST: Arabic passes": "yes: arabic-games-film-editor and arabic-writing loaded fresh this session, grammar review no required edits, DeepL whole-story pass compared",
+  "SOUND: footage sound or bed with reason": "yes: our bed with bed_reason naming the two Steam trailers measured and why (split leftover 35.7%, 38.3% and 6.5%); director signs off, the preview says our bed",
+  "SOUND: no speech under Arabic lines": "yes: update trailer is music and effects, no narration; server speech check is final, not heard by ear",
+  "PICTURE: footage first": "yes: official Steam 'Risen Ballbylon DLC | Out Now' trailer, clean stretches only, seek map read every 0.5 s",
+  "PICTURE: not the same as last 5 reels": "yes: picture: BALL x PIT, no other Reel uses it",
+  "CREDIT: on every clip": "yes: المصدر: ديفولفر ديجيتال (Devolver Digital) over shots 0 to 6"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "60.33 to 62.08 s (pink lane gameplay, moving, no text)",
+   "alternatives": "fireworks, dark island, title logo and NEW CORE BALLS card stretches",
+   "crop": "focus 0.5; stretch from the server shot picker (prerender shots)",
+   "music": "our bed"
+  },
+  {
+   "beat": "1 L1 climb to the sky",
+   "shot": "5.28 to 6.98 s, 9.23 to 10.93 s, 16.33 to 19.28 s (picker stretches, viewed at 0.5 s in the 9:16 crop)",
+   "alternatives": "5.28 to 9.23 s run includes a radial blur and a dark island, cut to its first 1.7 s; 31 to 34.3 s and 36 to 37.8 s carry a burnt level label",
+   "crop": "0.5",
+   "music": "our bed"
+  },
+  {
+   "beat": "2 L2 adds and requirement",
+   "shot": "37.9 to 39.6, 40.28 to 42.58, 64.33 to 66.63, 66.73 to 68.41 s (picker stretches)",
+   "alternatives": "71 to 75.5 s red swarm and dark red splatter excluded as blood-like; 87 to 89 s red lasers",
+   "crop": "0.5",
+   "music": "our bed"
+  }
+ ],
+ "bed_reason": "Trailers checked: Steam 'Risen Ballbylon' (audio split failed, leftover 6.5% over the 5% limit) and Steam 'Risen Ballbylon DLC | Out Now' (split not applied twice, leftover 35.7% and 38.3%); the server shot picker finds one clean stretch of 2.6 s in the Out Now trailer and clean stretches scattered over 100 s of the other, so no continuous run keeps a trailer track in sync; our bed goes under the clean stretches."
+}
