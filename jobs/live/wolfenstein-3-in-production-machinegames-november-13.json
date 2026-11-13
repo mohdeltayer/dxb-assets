@@ -14,18 +14,139 @@
    "seconds": 240
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "wolfenstein-3-in-production-machinegames-november-13-trailer.mp4",
+   161.0,
+   2.0,
+   [
+    [
+     0.0,
+     0.46
+    ]
+   ]
+  ],
+  [
+   "wolfenstein-3-in-production-machinegames-november-13-trailer.mp4",
+   163.0,
+   5.6,
+   [
+    [
+     0.0,
+     0.46
+    ]
+   ]
+  ],
+  [
+   "wolfenstein-3-in-production-machinegames-november-13-trailer.mp4",
+   168.6,
+   5.5,
+   [
+    [
+     0.0,
+     0.46
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "أعلنت ذلك آشا شارما (Asha Sharma)،\nالرئيسة التنفيذية لإكس بوكس",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    [
+     "يعود الممثلان براين بلوم (Brian Bloom)\nوديبرا ويلسون (Debra Wilson)",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   2,
+   "المصدر: بيثيسدا (Bethesda)\nلقطات من Wolfenstein II",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "رسميًا: Wolfenstein 3\nقيد التطوير",
  "label": "رسمي",
- "source": "بيثيسدا (Bethesda)",
+ "source": "إكس بوكس واير (Xbox Wire)",
  "date": "12 Nov 2026",
  "theme": "cold",
  "style": null,
- "template": "trailer",
+ "template": "split",
  "skin": "house",
  "cut": false,
- "track": "bed",
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "track": [
+  "wolfenstein-3-in-production-machinegames-november-13-trailer.mp4",
+  161.0
+ ],
+ "subject_person": null,
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Xbox Wire recap read in full 02:30Z, Bethesda.net post read; Xbox Wire Bethesda video post has no body",
+  "SOURCE: not already posted": "yes: ledger find wolfenstein machinegames, 0 hits",
+  "SOURCE: age": "yes: first report Xbox Wire 12 Nov (04:00 to 05:00 Dubai 13 Nov per digest), under 24 h",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE reveal": "yes: what was revealed, who announced, cast, what is not stated (platforms, window); no Wolfenstein 3 footage exists so the trailer is a credited stand-in",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names Wolfenstein 3, L1 names Sharma and Xbox, L2 the actors; what is not stated sits in the strip, not a line",
+  "STORY: release verbs": "yes: no release verb, no date given; قيد التطوير",
+  "STORY: names match names-ar.md": "yes: Xbox Wire إكس بوكس واير, Bethesda بيثيسدا, Sharma as in earlier posts; MachineGames not on screen",
+  "POST: Arabic passes": "yes: two skills applied, grammar review, DeepL whole-story forward pass: قيد التطوير matches, الرئيسة التنفيذية shortened to رئيسة on screen",
+  "SOUND: footage sound or bed with reason": "yes: trailer own sound, one stretch from 161.0 s, no bed",
+  "SOUND: no speech under Arabic lines": "pending the server transcript: not verified by ear, the director reads the transcript",
+  "PICTURE: footage first": "yes: official Steam trailer, stand-in credited; Launch and Gameplay trailers 2.35:1 over 2x enlargement",
+  "PICTURE: not the same as last 5 reels": "yes: picture: Wolfenstein II, no recent Reel uses it",
+  "CREDIT: on every clip": "yes: المصدر بيثيسدا and لقطات من Wolfenstein II over shots 0 to 3"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook: headline over BJ face",
+   "shot": "161.0 to 163.4",
+   "alternatives": "157 to 161 head-down and arm shots, not a recognisable cover",
+   "crop": "focus 0.46 judged on a 2 fps sheet",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "1 L1 who announced",
+   "shot": "163.4 to 167.6",
+   "alternatives": "none cleaner",
+   "crop": "0.46",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "2 L2 cast returning; strip: platforms and date not stated",
+   "shot": "167.6 to 173.2 BJ and Anya close-ups, then a dark kid shot",
+   "alternatives": "diner scene with Grace is not contiguous; frames after 173.2 are red-lit and ambiguous",
+   "crop": "0.46",
+   "music": "trailer own sound"
+  }
+ ],
+ "strip": [
+  [
+   "المنصات",
+   "لم تُعلن بعد"
+  ],
+  [
+   "الموعد",
+   "لم يُعلن بعد"
+  ]
+ ]
 }
