@@ -2,7 +2,7 @@
  "name": "hela-of-mice-and-magic-dec-1-20261114",
  "out": "cards/2026-11/hela-of-mice-and-magic-dec-1-20261114-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-13T20:53:49Z",
+ "at": "2026-11-13T22:42:00Z",
  "findings": [],
  "notes": [
   "length 16.4 s before the end card (target 12 to 20 s)",
@@ -10,8 +10,8 @@
   "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 3.68, \"held_under_text\": 0.0, \"secs\": 16.3, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "5ffeb9b8d9dabb134835e308df8f9ea62c62d500",
- "dispatches": 3,
+ "job_sha": "b51b2ad3e012b1854f0c20e00568ab2cf720aacf",
+ "dispatches": 4,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -21,5 +21,5 @@
  "final_enc": "-preset medium -crf 18",
  "look_frames": [],
  "person_shown": "n/a",
- "sound": "bed:neon_e (All six official Steam trailers of Hela (Adventure, Narrative, Brewing and Remedies, Froggy Backpack Explained, BIG Winter Showcase, Shade System Explained) carry continuous English narration under the footage (faster-whisper small, vad on and off, 13 Nov); music-only stretches of the Adventure trailer are 0 to 6.9 s (HELA logo) and 23 to 29.8 s only; the Cocktail Fork music stem of the shot stretch left 8.9% narration residue (over the 5% limit, render-live run 797 failed), so our bed plays instead)"
+ "sound": "bed:neon_e (All six official Steam trailers of Hela (Adventure, Narrative, Brewing and Remedies, Froggy Backpack Explained, BIG Winter Showcase, Shade System Explained) carry continuous English narration under the footage (faster-whisper small, vad on and off, 13 Nov); music-only stretches of the Adventure trailer are 0 to 6.9 s (HELA logo) and 23 to 29.8 s only; the Cocktail Fork music stem of the shot stretch left 8.9% narration residue (over the 5% limit, render-live run 797 failed), so our bed plays instead; the publisher's brand-new CGI story trailer exists only on YouTube (a route we do not use: sign-in barred, no third-party downloaders), so the bed stays)"
 }
