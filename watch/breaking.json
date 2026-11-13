@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T08:30:19Z",
- "seq": 426,
+ "generated_at": "2026-11-13T08:52:11Z",
+ "seq": 427,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 13573,
    "source": "PlayStation (YouTube)",
@@ -25,9 +26,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 426
-  }
- ],
- "recent": [
+  },
   {
    "id": 13354,
    "source": "Xbox Wire",
@@ -865,9 +864,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T08:30:14Z",
+  "last_poll_at": "2026-11-13T08:52:06Z",
   "sources_enabled": 100,
-  "sources_ok": 86,
+  "sources_ok": 85,
   "sources_failing": 14,
   "failed": [
    "Bungie (YouTube) (HTTP 404, 4x)",
