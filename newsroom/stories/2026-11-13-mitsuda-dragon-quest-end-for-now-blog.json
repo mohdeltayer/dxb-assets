@@ -16,7 +16,7 @@
   "role": "composer of Chrono Trigger, head of Procyon Studio",
   "photo_source": "his official website procyon-studio.com (about page), credited on screen"
  },
- "status": "built, QC pending, not submitted",
+ "status": "built, server QC pass (18:47Z), awaiting director, not submitted",
  "why": "The composer of Chrono Trigger (Horii and Toriyama on its Dream Team) gives a hedged personal view on the future of Dragon Quest and closes by praising it.",
  "sources": [
   {
@@ -116,5 +116,22 @@
    "L6 'كم' kept, valid"
   ],
   "back_check": "DeepL AR to EN 13 Nov: meaning and hedges kept; forward whole-story pass agreed with our wording, 'for now' = في الوقت الحالي"
+ },
+ "out": "cards/2026-11/mitsuda-dragon-quest-end-for-now-blog-reel-v1.mp4",
+ "recommended_slot": "Sat 14 Nov 01:15 Dubai (21:15Z Fri): next free slot keeping the 60 min night spacing between Publer's 00:15 and 02:15; 23:45 would sit 30 min before 00:15",
+ "draft_notes": {
+  "brief": "family 4 people + quote template; hook: composer of Chrono Trigger says DQ should end for now (his words, hedged); 35.3 s before end card (over the 12 to 20 s target: five beats of attributed opinion, each needs reading time; hard cuts)",
+  "sound": "trailer music stem of the DQ VII Reimagined launch trailer from 19.98 s (audio split, music_only; the trailer is voiced throughout so voices removed); server: music_pct 21.5, leak_pct 0.3. faster-whisper on the finished Reel heard one low-confidence fragment 'Oh, the fun.' at 5.8 to 9.7 s (the kids' line at source 27.1 to 30 s leaking through the stem): director to listen; no other speech",
+  "footage": "Steam store trailer 'ESRB EN - Launch', DQ VII Reimagined (1080p60, decode clean, 1.78x max, no lowbit); DQ I and II HD-2D trailer judged, not used (voiced, wide scenes). Shots from the server shot picker (run 43478516980) then checked at 9:16 by eye: cut black fades, a map with caption text, the title card, a funeral procession, a flame close-up",
+  "person": "official photo from Mitsuda's own site procyon-studio.com/resources/mitsuda-about-page.jpg, open on frame 0, credit on plate",
+  "credit": "Square Enix, stand-in footage named, from frame 0 (not 'low': a low credit caps lines at two)",
+  "names": "سكوير (Square Enix) per glossary row (the order said سكوير إنكس; glossary 5 Oct wins); new names flagged for names-ar: ياسونوري ميتسودا, يوجي هوري (Yuji Horii), أكيرا توريياما (Akira Toriyama)",
+  "chrono_trigger": "Reel carries it on the plate (ملحن Chrono Trigger); X and IG state Horii and Toriyama were on its development team (Wikipedia Dream Team; Mitsuda's about page)",
+  "deviations": [
+   "length over target",
+   "Reel omits Dragon Quest RPG's full Japanese subtitle (Makaiju to Michibikareshi Shima) and that remakes are plentiful; caption has the latter",
+   "faces not measured (mediapipe missing on server)",
+   "grid cover: Mitsuda photo box open on frame 0 with headline, chip top right"
+  ]
  }
 }
