@@ -1,7 +1,7 @@
 {
  "id": "tomb-raider-legacy-of-atlantis-preorders-exceed-targets-20261114",
  "title": "Embracer's Q2 report: Tomb Raider Legacy of Atlantis pre-orders and wishlists exceed targets, Collector's Edition sold out, teaser over 7M organic views, launch 12 Feb 2027",
- "status": "built by builder-0815, render qc pass (v1, job_sha 2b46b4e9), awaiting separate director; planned slot 08:15 Dubai Sat 14 Nov (04:15Z), ig, x, threads",
+ "status": "scheduled in Publer 11:15 Dubai Sat 14 Nov (07:15Z), ig, x, threads (ids ig:1443f0 x:4d3859 th:4d38e1), director PASS director-27",
  "lane": "digital-lounge",
  "game": "Tomb Raider: Legacy of Atlantis",
  "ledger_find": {
@@ -85,5 +85,27 @@
   "credit": "المصدر: أمازون غيمز (Amazon Games) from frame 0 (frames 0 to 3 s checked)",
   "theme": "emerald, style bold",
   "track": "trailer music from 61.3 s, music-only stem"
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/tomb-raider-legacy-of-atlantis-preorders-exceed-targets-20261114-reel-v1.mp4",
+  "blob": "8919378f4a35ce70bd89d717175634013949fe2f",
+  "at": "2026-11-13T13:00:11Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/tomb-raider-legacy-of-atlantis-preorders-exceed-targets-20261114.json",
+   "sha256": "a9bd03c665e93794864a5c9114417adf28f6f4819cab3c5d36e051e92a418479",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-0815"
+  },
+  "by": "director-27",
+  "qc": "pass",
+  "looked": "strip and dense 4fps read: 7 shots, credit from frame 0, headline second line starts Arabic, strip date plus Steam, no title cards, last 2s Lara close-up then end card; 70.06 s dino shot = reddish creature mouth with teeth, no blood or wounds, no-gore ok. Sound: music_only stem, -15.7 LUFS, LRA 1.8, true peak -0.7, HF share 4.8%, whisper VAD on: no speech (VAD off only music hallucination), steady not harsh: signed off. Credit: Steam release date trailer is Amazon Game Studios (publisher), developers Crystal Dynamics and Flying Wild Hog: ok. Worth posting: yes with caveat (company-reported, no figures, 46 h old, Arabic press not carried, new vs 25-26 Oct posts: first company statement on pre-orders). Slot 11:15 Dubai Sat 14 Nov (07:15Z)"
+ },
+ "approved": "go: rolling queue; director PASS director-27 13:00Z; gate 13:00Z: Embracer report p.2 re-read, Steam 3558670 re-read, no denial; slot moved from 08:15 to 11:15 (no third split in a row, 08:15 not worth a peak slot)",
+ "director_notes": "sound: music_only stem -15.7 LUFS, LRA 1.8, true peak -0.7, whisper VAD on no speech, signed off; gore: 70.06 s dinosaur shot reddish with teeth, no blood, ok; credit: Amazon Game Studios is the Steam publisher of the Release Date Trailer, studios Crystal Dynamics and Flying Wild Hog, ok (optional: add Crystal Dynamics); headline states the sold-out claim unattributed, attributed in line 1 within a second; names proposed: إمبراسر (Embracer), أمازون غيمز (Amazon Games), نسخة المقتنين for Collector's Edition"
 }
