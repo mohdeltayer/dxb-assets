@@ -16,7 +16,7 @@
   "role": "composer of Chrono Trigger, head of Procyon Studio",
   "photo_source": "his official website procyon-studio.com (about page), credited on screen"
  },
- "status": "v3 headline fix (director grammar), rendering; not submitted",
+ "status": "v3 built, server QC pass (19:12Z), whisper clean, awaiting director, not submitted",
  "why": "The composer of Chrono Trigger (Horii and Toriyama on its Dream Team) gives a hedged personal view on the future of Dragon Quest and closes by praising it.",
  "sources": [
   {
@@ -154,6 +154,7 @@
    "track start 30.4 s"
   ],
   "reel_check_after_fix": "dispatches 3 in qc.json (v1 render dispatches were stand-ins for failed text/pace checks)",
-  "v3_fix": "headline «ميتسودا يشعر أنه ينبغي\\nإنهاء Dragon Quest حاليًا» replaces the elliptical «يشعر أن تتوقف» (أنْ + present verb); nothing else changed (shots, track 30.4 s, credits, lines, captions)"
+  "v3_fix": "headline «ميتسودا يشعر أنه ينبغي\\nإنهاء Dragon Quest حاليًا» replaces the elliptical «يشعر أن تتوقف» (أنْ + present verb); nothing else changed (shots, track 30.4 s, credits, lines, captions)",
+  "v3_check": "font check passed (two lines at 100 px); whisper on final audio VAD off and on: no segments; qc pass, leak_pct 1.0, dispatches 4"
  }
 }
