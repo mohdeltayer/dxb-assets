@@ -112,7 +112,7 @@
    5,
    [
     [
-     "تتوزع المعلومات\nبينهم",
+     "المعلومات\nمقسمة بينهم",
      {
       "size": 54
      }
@@ -164,10 +164,49 @@
   "payoff": "the information is split between the three players, so they must communicate with gestures and voice"
  },
  "reel_check": {
-  "SOURCE: primary read in full": "yes: PS Store UAE concept page read 13 Nov 09:37Z (release 2026-11-13T09:00Z, 39.00 AED, PS Plus 31.20 AED to 27 Nov, description), Xbox Store page (release 2026-11-13T09:00Z, USD 7.99), Steam page (released 2 Sep 2026); TARK press release reprint on Denfaminicogamer read",
-  "SOURCE: age": "first report 13 Nov 09:00Z, about 17 h at the slot",
-  "SOUND": "trailer own sound by the audio split; faster-whisper VAD on the whole trailer found no speech or singing",
-  "PICTURE": "official Steam trailer (the PS Store and Xbox store trailers are the same edit); cartoon art, nothing graphic",
-  "CREDIT": "on every shot from frame 0"
- }
+  "SOURCE: primary read in full": "yes: PS Store UAE, Xbox Store and Steam pages read 13 Nov 09:37Z",
+  "SOURCE: not already posted": "yes: ledger find bombanana, 0 hits",
+  "SOURCE: age": "yes: first report 13 Nov 09:00Z, about 17 h at the slot",
+  "ANGLE before lines": "yes: angle in the story file and job",
+  "STORY TYPE release": "yes: what it is, platforms, price (UAE PS Store and Xbox Store), date; Arabic support not stated",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names the game, lines follow players, roles, information; no line opens on و",
+  "STORY: release verbs": "yes: صدرت for out now",
+  "STORY: names match names-ar.md": "yes: TARK Games as تارك غيمز (TARK Games), game and platform names English, no new name on screen beyond it",
+  "POST: Arabic passes": "yes: both skills read fresh, grammar review, DeepL forward whole-story pass and back-check",
+  "SOUND: footage sound or bed with reason": "yes: Steam trailer own sound by the audio split; whisper VAD on the whole trailer found no speech or singing",
+  "SOUND: no speech under Arabic lines": "yes: none in the trailer; final Reel transcribed again",
+  "PICTURE: footage first": "yes: official Steam trailer, cartoon monkeys, nothing graphic",
+  "PICTURE: not the same as last 5 reels": "yes: no earlier Reel uses BOMBANANA",
+  "CREDIT: on every clip": "yes: المصدر: تارك غيمز (TARK Games) from frame 0 over every shot"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "0.0 s",
+   "alternatives": "title card 2.9 s",
+   "crop": "shotpick focus",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "1 players",
+   "shot": "28.2 s",
+   "alternatives": "none",
+   "crop": "focus .62 (extends the picker's 30.81 stretch back over small prop text MAI, viewed by eye)",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "2 roles",
+   "shot": "30.81 and 36.41 s",
+   "alternatives": "none",
+   "crop": "shotpick focus",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "3 info split",
+   "shot": "41.26 and 47.8 s",
+   "alternatives": "logo reveal from 48.6 s (cut by the 9:16 crop)",
+   "crop": "shotpick focus",
+   "music": "trailer own sound"
+  }
+ ]
 }
