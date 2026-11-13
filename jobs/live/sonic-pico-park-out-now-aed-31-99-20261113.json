@@ -18,7 +18,18 @@
   [
    "sonic-pico-park-out-now-aed-31-99-20261113-trailer.mp4",
    12.4,
-   12.0,
+   6.2,
+   [
+    [
+     0.0,
+     0.381
+    ]
+   ]
+  ],
+  [
+   "sonic-pico-park-out-now-aed-31-99-20261113-trailer.mp4",
+   18.6,
+   5.8,
    [
     [
      0.0,
@@ -29,35 +40,29 @@
  ],
  "lines": [
   [
+   0,
+   0,
+   [
+    [
+     "تجمع سلسلة Pico Park مع Sonic",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
    1,
-   5,
+   1,
    [
     [
-     "تجمع اللعبة سلسلة Pico Park\nالتعاونية مع Sonic",
+     "تتسع اللعبة لثمانية لاعبين",
      {
       "size": 54
      }
-    ]
-   ]
-  ],
-  [
-   5,
-   9,
-   [
+    ],
     [
-     "يلعبها حتى 8 لاعبين محليًا\nأو عبر الإنترنت",
-     {
-      "size": 54
-     }
-    ]
-   ]
-  ],
-  [
-   9,
-   12,
-   [
-    [
-     "تستخدم كل شخصية\nضربة Spin Dash",
+     "كل شخصية تستخدم Spin Dash",
      {
       "size": 54
      }
@@ -68,7 +73,7 @@
  "credits": [
   [
    0,
-   12,
+   1,
    "المصدر: بيكو بارك (PICO PARK Inc.)",
    {
     "size": 40,
@@ -121,7 +126,7 @@
   "SOURCE: age": "yes: release 12 Nov 2026 (announced 9 Sep); about 30 to 36 hours old at the 00:15 slot; new since: the UAE Steam price AED 31.99, Steam user reviews Very Positive (91% of 60) and the Nintendo Japan topic of 13 Nov; Arabic press not checked beyond the digest",
   "ANGLE before lines": "yes: angle in the job",
   "STORY TYPE out now": "yes: platforms, AED price where listed, what it is (co-op puzzle platformer, 2 to 8 players)",
-  "STORY: spoken paragraph, subject before pronoun": "yes: the headline names the game, L1 says what it is, L2 the players, L3 the Spin Dash; no line opens on و",
+  "STORY: spoken paragraph, subject before pronoun": "yes: the headline names the game, L1 says what it is, L2 the player count, L3 the Spin Dash; no line opens on و",
   "STORY: release verbs": "yes: متاحة الآن in the headline, أصدرت in the posts",
   "STORY: names match names-ar.md": "yes: PICO PARK Inc. and TECOPARK added to names-ar.md as Proposed, bracket at first mention",
   "POST: Arabic passes": "yes: two skills, grammar stage, DeepL forward (whole story) and back-check",
@@ -134,7 +139,7 @@
  "sensitive": "none (family co-op pixel-art platformer, nothing graphic)",
  "subject_person": null,
  "decision_log": {
-  "beat1": "12.4 to 24.4 s of the official launch trailer, one continuous character parade (Tails, Knuckles, Sonic, Shadow, Amy, Cream, Silver, Blaze, Big, Vector, E-123 style robot) with no burnt-in text; crop x 0.381 holds one to three sprites in the 9:16 window; alternatives rejected by the server picker: 0 to 2.6 s logo slate, 2.7 to 5.3 s LICENSED BY SEGA card, 5.5 to 12.2 s title card, 24.5 to 56 s burnt-in English captions cut by the window; the 45 to 47 s stretch is an empty sky with half-cut text",
+  "beat1": "12.4 to 24.4 s of the official launch trailer, one continuous character parade (two contiguous shots, 12.4 to 18.6 and 18.6 to 24.4) (Tails, Knuckles, Sonic, Shadow, Amy, Cream, Silver, Blaze, Big, Vector, E-123 style robot) with no burnt-in text; crop x 0.381 holds one to three sprites in the 9:16 window; alternatives rejected by the server picker: 0 to 2.6 s logo slate, 2.7 to 5.3 s LICENSED BY SEGA card, 5.5 to 12.2 s title card, 24.5 to 56 s burnt-in English captions cut by the window; the 45 to 47 s stretch is an empty sky with half-cut text",
   "sound": "trailer's own music stretch from 12.4 s (xylophone score, whisper: no speech), audio split on the runner",
   "strip": "price and date strip, no line repeats it",
   "length": "12.0 s of footage before the end card (all the clean footage the trailer has)"
