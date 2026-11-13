@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T15:00:18Z",
- "seq": 439,
+ "generated_at": "2026-11-13T15:52:08Z",
+ "seq": 440,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 13860,
    "source": "Xbox Wire",
@@ -41,9 +42,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 439
-  }
- ],
- "recent": [
+  },
   {
    "id": 13815,
    "source": "PlayStation Blog",
@@ -685,104 +684,16 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 388
-  },
-  {
-   "id": 12775,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Bus Simulator 27 - BYD Bus Pack Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=O5CPlL-1rYg",
-   "published": "2026-11-12T15:15Z",
-   "first_seen": "2026-11-12T15:25:13Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/O5CPlL-1rYg/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=O5CPlL-1rYg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 386
-  },
-  {
-   "id": 12759,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Hazard Levels - Launch Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=GX-hxto7Q0A",
-   "published": "2026-11-12T15:00Z",
-   "first_seen": "2026-11-12T15:20:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/GX-hxto7Q0A/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=GX-hxto7Q0A"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 385
-  },
-  {
-   "id": 12756,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "25 Years of XBOX",
-   "url": "https://news.xbox.com/en-us/2026/11/12/25-years-of-xbox/",
-   "published": "2026-11-12T15:13Z",
-   "first_seen": "2026-11-12T15:15:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Adventure_MSFT-Founders_16x9-7fa018e1614372382bf9.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/FlightSim_Quake_16x9-90252d6bdc97d20e9d8a.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Xbox_Launch_Ad_16x9-22a03660357dd1de6104.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 384
-  },
-  {
-   "id": 12748,
-   "source": "Nintendo of America (YouTube)",
-   "source_kind": "youtube",
-   "title": "Pikmin 4 – Nintendo Switch 2 Edition + Dandori Academy – Overview Trailer",
-   "url": "https://www.youtube.com/watch?v=FOqxuzEr4R4",
-   "published": "2026-11-12T15:00Z",
-   "first_seen": "2026-11-12T15:10:04Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/FOqxuzEr4R4/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=FOqxuzEr4R4"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 383
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T15:00:14Z",
+  "last_poll_at": "2026-11-13T15:50:15Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 52x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 53x)",
    "Nintendo of America (X) (HTTP 429, 65x)",
    "PlayStation (X) (HTTP 429, 84x)",
    "PlayStation Middle East (X) (HTTP 429, 10x)",
