@@ -2,11 +2,77 @@
  "id": "crazy-taxi-world-tour-india-final-map-20261114",
  "title": "Crazy Taxi: World Tour: India is the fifth and final map",
  "game": "Crazy Taxi: World Tour",
- "companies": ["SEGA"],
+ "companies": [
+  "SEGA"
+ ],
  "subject_person": null,
- "genre": ["racing", "open world"],
+ "genre": [
+  "racing",
+  "open world"
+ ],
  "category": "update",
- "status": "claimed by builder-1815 (second-ranked lead); building; planned slot 18:15 Dubai Sat 14 Nov (14:15Z)",
+ "status": "job v1 committed, render pending (builder-1815); planned slot 18:15 Dubai Sat 14 Nov (14:15Z); awaiting render and QC",
  "lane": "Digital Lounge only",
- "sources": [{"url": "https://www.ign.com/articles/crazy-taxi-world-tour-final-map-revealed", "type": "outlet", "note": "IGN premiere 13 Nov 2026 about 18:00Z; SEGA primary to be read"}]
+ "sources": [
+  {
+   "url": "https://www.ign.com/articles/crazy-taxi-world-tour-final-map-revealed",
+   "type": "outlet",
+   "read_at": "2026-11-13T20:55Z",
+   "note": "IGN (Virginia Glaze) 13 Nov 2026: India is the fifth and final map (US West Coast, Germany, Japan, Brazil, India); three zones City, Countryside, Industrial (marketplaces, nightlife, architecture; ancient temples; trade hubs and one of the world's oldest trains); the trailer teases a Bollywood film set; launches early 2027 on Xbox X|S, Switch 2, PS5, PC"
+  },
+  {
+   "url": "https://store.steampowered.com/app/2924540/",
+   "type": "store",
+   "read_at": "2026-11-13T20:30Z",
+   "note": "Steam: coming 2027, publisher SEGA, no price shown"
+  }
+ ],
+ "kind": "update",
+ "kind_news": "update",
+ "label": "جديد",
+ "chip": "جديد",
+ "template": "clipcard",
+ "beat": "update",
+ "first_report": "IGN premiere 13 Nov 2026 about 18:00Z (18:00 Dubai Fri 22:00); 247videogame writeup 18:07Z; Digest seq 454 lists 6 outlets with Steam News hub; Arabic outlets IGN ME Arabic and True Gaming also carry it, IGN is the first report",
+ "source_type": "outlet",
+ "platform": [
+  "PS5",
+  "Xbox Series X|S",
+  "Nintendo Switch 2",
+  "PC"
+ ],
+ "ledger_find": {
+  "at": "2026-11-13T20:35:00Z",
+  "words": [
+   "crazy",
+   "taxi",
+   "world",
+   "tour"
+  ],
+  "hits": []
+ },
+ "footage": "Steam Announcement Trailer (appid 2924540, 1080p60, music-led, vocals only from 60 s, whisper small vad on/off: no speech before 60 s) used as stand-in; the India map trailer is on IGN/YouTube only and could not be fetched (SEGA site 429, YouTube blocked); credited on screen as the first announcement; picker shots 38.16, 51.03, 7.28, 68.26, 59.46",
+ "sensitive": "none",
+ "recipe": "2 trailer drop (map reveal variant, clipcard)",
+ "claims": {
+  "India fifth and final map": "OK IGN",
+  "three zones": "OK IGN",
+  "Bollywood tease": "OK IGN (the map trailer, not seen by us)",
+  "early 2027 and platforms": "OK IGN; Steam says 2027",
+  "price": "none announced"
+ },
+ "posts": {
+  "x_threads_ar": "خريطة الهند هي الأخيرة في Crazy Taxi: World Tour، حسب آي جي إن (IGN). تضم المدينة والريف والمنطقة الصناعية، ويلمّح الإعلان إلى موقع تصوير فيلم من بوليوود.",
+  "instagram_ar": "خريطة الهند الأخيرة في Crazy Taxi: World Tour\n\nكشف إعلان جديد للعبة Crazy Taxi: World Tour عن الخريطة الخامسة والأخيرة، وهي الهند، حسب ما نشرته آي جي إن (IGN).\n\nتضم خريطة الهند ثلاث مناطق: المدينة بأسواقها وحياتها الليلية وعمارتها، والريف بمعابده القديمة ومناظره الطبيعية، والمنطقة الصناعية بمراكزها التجارية مع لمحة من أحد أقدم القطارات في العالم. ويلمّح الإعلان إلى أن اللاعبين قد يجدون أنفسهم في موقع تصوير فيلم من بوليوود.\n\nوبذلك تكتمل خرائط اللعبة الخمس: الساحل الغربي للولايات المتحدة وألمانيا واليابان والبرازيل والهند. وتصدر اللعبة، حسب آي جي إن، في أوائل 2027 على PS5 وXbox Series X|S وNintendo Switch 2 والكمبيوتر.\n\nاللقطات في الفيديو من الإعلان الأول للعبة وليست من إعلان خريطة الهند.\n\n#ألعاب #أخبار_الألعاب #CrazyTaxi #SEGA"
+ },
+ "grammar_review": {
+  "required_edits": [],
+  "uncertain": [
+   "اللقطات في الفيديو من الإعلان الأول: stand-in note, kept for honesty"
+  ],
+  "opened": [
+   "house-glossary.md rows",
+   "arabic-writing orthography summary"
+  ]
+ }
 }
