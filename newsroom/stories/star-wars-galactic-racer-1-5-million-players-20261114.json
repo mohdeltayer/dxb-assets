@@ -1,7 +1,7 @@
 {
  "id": "star-wars-galactic-racer-1-5-million-players-20261114",
  "title": "STAR WARS: Galactic Racer passes 1.5 million players a month after launch (Push Square, citing the game's official X post, 13 Nov 2026)",
- "status": "v2 after director FAIL: one-line headline for the wide showcase, new first shot, more than a month, Push Square attribution; render pending",
+ "status": "v2 built, QC pass (render-live 21:36Z, job v11, job_sha 482dd48b); awaiting director; slot proposed 17:15 Dubai Sat 14 Nov",
  "lane": "digital-lounge",
  "game": "STAR WARS: Galactic Racer",
  "subject_person": null,
@@ -79,11 +79,11 @@
  },
  "sound": "trailer music-only stretch, Launch Trailer from 44.96 s (whisper vad on and off: no speech 42.7 to 69.2 s); speech: none",
  "render": {
-  "job_commit": "902f27b",
-  "job_sha": "27c736ce0b60d76d8744fd3e9341a87565ff316d",
-  "reel": "cards/2026-11/star-wars-galactic-racer-1-5-million-players-20261114-reel-v1.mp4",
-  "layout": "showcase (letterboxed source)",
-  "sound": "our bed neon_b with bed_reason",
-  "renders": "5 dispatches: credit tuple shape, 2 music_only stem failures (5.8%, 16.0%), then bed"
+  "job_commit": "825c612",
+  "job_sha": "482dd48bc00932f3e1540e44a0e15f862da2bb11",
+  "render_commit": "a3e07e2",
+  "layout": "showcase wide 1080x606 on blurred moving copy",
+  "sound": "our bed with bed_reason",
+  "renders": "3 dispatches for v2: line width (text check), pace, then pass"
  }
 }
