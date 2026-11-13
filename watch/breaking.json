@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T13:05:17Z",
- "seq": 434,
+ "generated_at": "2026-11-13T13:15:09Z",
+ "seq": 435,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 13790,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Guild Saga: Vanished Worlds - Announcement Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=pbKZ3IzvB4Q",
+   "published": "2026-11-13T13:00Z",
+   "first_seen": "2026-11-13T13:15:05Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/pbKZ3IzvB4Q/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=pbKZ3IzvB4Q"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 435
+  }
+ ],
+ "recent": [
   {
    "id": 13779,
    "source": "PlayStation Blog",
@@ -41,9 +64,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 434
-  }
- ],
- "recent": [
+  },
   {
    "id": 13600,
    "source": "Xbox (YouTube)",
@@ -840,69 +861,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 375
-  },
-  {
-   "id": 12600,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Vindictus: Defying Fate - Game Overview Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=R4Ql9j5O858",
-   "published": "2026-11-12T13:00Z",
-   "first_seen": "2026-11-12T13:15:04Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/R4Ql9j5O858/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=R4Ql9j5O858"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 374
-  },
-  {
-   "id": 12591,
-   "source": "PlayStation Blog",
-   "source_kind": "official",
-   "title": "Vindictus: Defying Fate comes to PS5 next year",
-   "url": "https://blog.playstation.com/2026/11/12/vindictus-defying-fate-comes-to-ps5-next-year/",
-   "published": "2026-11-12T13:07Z",
-   "first_seen": "2026-11-12T13:10:14Z",
-   "media": [
-    {
-     "type": "video",
-     "url": "https://blog.playstation.com/uploads/2056/11/dac01edbf1fd5e184a3e5c0b2f30a81ab4a98fa8.mp4"
-    },
-    {
-     "type": "video",
-     "url": "https://blog.playstation.com/uploads/2056/11/83139c29825298693a808e4de2712e78b4848207.mp4"
-    },
-    {
-     "type": "video",
-     "url": "https://blog.playstation.com/uploads/2056/11/c84227bf1e264c6b2f91d64ddd83aa996342c91f.mp4"
-    },
-    {
-     "type": "video",
-     "url": "https://blog.playstation.com/uploads/2056/11/8dd704816d8d78436c0b06ac4b2cfde5027a0662.mp4"
-    },
-    {
-     "type": "image",
-     "url": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55634714389_57f91e9535_k.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 373
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T13:05:14Z",
+  "last_poll_at": "2026-11-13T13:15:05Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 6,
