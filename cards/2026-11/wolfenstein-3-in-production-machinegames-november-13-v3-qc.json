@@ -1,0 +1,26 @@
+{
+ "name": "wolfenstein-3-in-production-machinegames-november-13-v3",
+ "out": "cards/2026-11/wolfenstein-3-in-production-machinegames-november-13-v3-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-13T03:37:20Z",
+ "findings": [],
+ "notes": [
+  "length 12.8 s before the end card (target 12 to 20 s)",
+  "pace: nothing changes for 5.1 s at 0.0 (change every 4 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 2.5, \"still_share\": 0.016, \"longest_still\": 0.2, \"cuts_per_10s\": 2.34, \"held_under_text\": 0.0, \"secs\": 12.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "be40baab90b202895457293e8a538e4db547b998",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 2.35,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "bed:neon_c (every speech-free stretch of the official Wolfenstein II material is unusable: transcribed in 15 s chunks with faster-whisper on raw 16 kHz audio: E3 Trailer (516 s; only gaps over 13 s are 479.9 to 495.6 s, the pre-order slate); the 161 to 174 s BJ stretch has English speech under the lines (director fail: 'You've gotten so fat', 'Seth says we're having twins'); 275 to 288 s has shouted speech ('Fire', 'You shoot at us'); Gameplay Trailer gaps 64 to 82 s and 136 to 164 s are blood, gunfire or slates; Launch Trailer 66 to 82 s is the date and pre-order slate; Strawberry Milkshake and Accolade TV Spot are comedy or ad spots with speech; Gameplay and Launch trailers also carry swastika imagery)"
+}

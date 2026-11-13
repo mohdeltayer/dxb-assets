@@ -48726,5 +48726,99 @@
   "dispatches": 1,
   "sound": "trailer",
   "footage": true
+ },
+ {
+  "name": "wolfenstein-3-in-production-machinegames-november-13-v3-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-13T03:37Z",
+  "stages": {
+   "checks": 6.8,
+   "montage": 19.5,
+   "text": 17.1,
+   "audio": 0.4,
+   "outro": 8.6
+  },
+  "total": 52.4,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-13T03:36Z",
+  "finished_at": "2026-11-13T03:37Z",
+  "render_min": 0.87,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "wolfenstein-3-in-production-machinegames-november-13-v3-trailer.mp4",
+    "start": 161.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.62,
+    "rows": 816,
+    "zoom": 2.35,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "wolfenstein-3-in-production-machinegames-november-13-v3-trailer.mp4",
+    "start": 166.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.62,
+    "rows": 816,
+    "zoom": 2.35,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "wolfenstein-3-in-production-machinegames-november-13-v3-trailer.mp4",
+    "start": 170.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.62,
+    "rows": 816,
+    "zoom": 2.35,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 2.35,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 2.5,
+   "still_share": 0.016,
+   "longest_still": 0.2,
+   "cuts_per_10s": 2.34,
+   "held_under_text": 0.0,
+   "secs": 12.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 97,
+  "queue_wait_secs": 1,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1025,
+  "peak_mem_mb": 1909,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 29608,
+  "peak_disk_mb": 30441,
+  "min_disk_free_mb": 215665,
+  "setup_min": 0.12,
+  "story": "wolfenstein-3-in-production-machinegames-november-13-v3",
+  "job_sha": "be40baab90b202895457293e8a538e4db547b998",
+  "dispatches": 1,
+  "sound": "bed:neon_c (every speech-free stretch of the official Wolfenstein II material is unusable: transcribed in 15 s chunks with faster-whisper on raw 16 kHz audio: E3 Trailer (516 s; only gaps over 13 s are 479.9 to 495.6 s, the pre-order slate); the 161 to 174 s BJ stretch has English speech under the lines (director fail: 'You've gotten so fat', 'Seth says we're having twins'); 275 to 288 s has shouted speech ('Fire', 'You shoot at us'); Gameplay Trailer gaps 64 to 82 s and 136 to 164 s are blood, gunfire or slates; Launch Trailer 66 to 82 s is the date and pre-order slate; Strawberry Milkshake and Accolade TV Spot are comedy or ad spots with speech; Gameplay and Launch trailers also carry swastika imagery)",
+  "footage": true
  }
 ]
