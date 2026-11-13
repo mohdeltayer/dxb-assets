@@ -232,3 +232,5 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | NC (Cinder City publisher) | إن سي | Proposed 13 Nov 2026 (Cinder City alpha Reel; Latin in brackets at first mention) |
 | BigFire Games (Cinder City developer; the Steam page writes BIG FIRE GAMES) | بيغ فاير غيمز | Proposed 13 Nov 2026 (Cinder City alpha Reel) |
 | SCS Software (Euro Truck Simulator 2 developer and publisher) | إس سي إس سوفتوير | Proposed 13 Nov 2026 (ETS2 Coaches Reel; Latin in brackets at first mention) |
+| TwoPeaks (Pig King developer) | توبيكس | Proposed 13 Nov 2026 (Pig King Reel; Latin in brackets at first mention) |
+| Isle of Strays (Pig King publisher) | آيل أوف ستريز | Proposed 13 Nov 2026 (Pig King caption; Latin in brackets at first mention) |

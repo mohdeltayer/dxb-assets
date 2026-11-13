@@ -1,6 +1,6 @@
 {
  "id": "2026-11-14-pig-king-early-access-aed-17",
- "status": "built, qc pass, awaiting director",
+ "status": "scheduled in Publer for 02:15 Dubai Sat 14 Nov, 3/3 (ids ig:13c2e5 x:13c2f2 th:13c2fe), director PASS director-20",
  "claimed_by": "builder 02:15 Sat 14 Nov",
  "lane": "Digital Lounge only",
  "slot": "02:15 Dubai Sat 14 Nov 2026",
@@ -84,5 +84,26 @@
  ],
  "sound_note": "trailer own sound, audio split applied (music 97.6%, leak 0.1%), track from 31.96 s; whisper (VAD) on the final Reel: no speech; the trailer's 36 to 48 s in-game voice lines are split out",
  "picture_note": "shots 42.1, 31.96, 36.96, 38.85, 25.6, 13.05 from the server picker's clean stretches; dense strip at 4 fps looked at: cartoon pigs, no blood or gore; zombie-pig shot (8.98 s) dropped; block_ok 6.7 to 7.15 s waived after looking (game geometry)",
- "slot_planned": "02:15 Dubai Sat 14 Nov 2026 (22:15Z Fri), Instagram, X, Threads"
+ "slot_planned": "02:15 Dubai Sat 14 Nov 2026 (22:15Z Fri), Instagram, X, Threads",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/pig-king-early-access-aed-17-november-13-reel-v3.mp4",
+  "blob": "77a76e9d9d8a2b10c0161cd8440a331761199123",
+  "at": "2026-11-13T09:15:48Z",
+  "note": "gate 13:20Z: store page and appdetails cc=ae re-read: EA 12 Nov, Windows only, AED 17.00 (20.49, 17%), offer ends 26 Nov (not claimed in the text), no Arabic, up to 4 players; announcement 12 Nov 16:13Z read; Steam Deck smoothness claim is TwoPeaks own 10 Nov post, attributed, no Verified claim. block_ok 6.7-7.15 upheld. Sensitive: pig theme neutral and in the game name, headline accepted.",
+  "checklist": {
+   "job": "jobs/live/pig-king-early-access-aed-17-november-13.json",
+   "sha256": "d2956059b8a0b5701e9c7f2c6a0fb4a95e2b2f56e6d158c6f0a3214154fbe30d",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-20",
+  "qc": "pass",
+  "looked": "14.3 s split: cartoon pigs (gold ramp, sky jump, snow arena, white hat pigs, balloon hall, dark corridor), no zombie pig, no gore; credit from frame 0; first frame 3:4 tile readable, chip clear of grid corner; strip 17 dirham and 17 percent not repeated in lines; 10 fps frames 6.5-7.4 s clean crate and grass; whisper VAD no speech, LUFS -10.5, decode clean"
+ },
+ "director_notes": "director-20 13 Nov: appdetails cc=ae re-read (EA 12 Nov, Windows only, AED 17.00 from 20.49, 17%, up to 4 players, no Arabic); the 17% offer ends 26 Nov on the store page, no deadline is claimed in the text; Steam Deck smoothness is TwoPeaks own 10 Nov post (attributed in the caption, no Verified claim); block_ok 6.7 to 7.15 s upheld (10 fps frames clean); sensitive line: pig theme is the game name and subject, neutral wording, headline accepted; whisper VAD no speech"
 }
