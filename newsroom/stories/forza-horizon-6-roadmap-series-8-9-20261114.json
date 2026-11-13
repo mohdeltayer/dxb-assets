@@ -1,7 +1,7 @@
 {
  "id": "forza-horizon-6-roadmap-series-8-9-20261114",
  "title": "Forza Horizon 6 content roadmap: Series 8 and 9 before year end, first expansion January 2027 (Pure Xbox, Playground Games video, 13 Nov 2026)",
- "status": "v2 built, QC pass (render-live dispatch 4, job_sha 3e891c89b02dfe90e9f8ce1734a680101fcd3763); awaiting director; slot proposed 19:15 Dubai Sat 14 Nov",
+ "status": "v3 built, QC pass (render-live dispatch 5, job_sha 924595d1f75d99a5f8f57e2b7bd042e11fab00b1); awaiting director; slot proposed 19:15 Dubai Sat 14 Nov",
  "lane": "digital-lounge",
  "game": "Forza Horizon 6",
  "subject_person": null,
@@ -71,14 +71,15 @@
   "uncertain_cases": [],
   "note_v2": "changed lines re-reviewed: «تأتي Series 8» feminine agreement per house rule applied on screen, X and caption; new headline «ثلاث تحديثات ثم إضافة» (ثلاث with تحديثات, a broken plural of a masculine singular, takes ثلاث) no edits"
  },
- "sound": "trailer music stem only (music_only, split applied, music 39.8% of the Launch Trailer stretch from 6.62 s, leak 0.9%); whisper small on the finished audio: no speech (VAD on: one 'I'm not sure' at 10.9 s, VAD off one end-of-video line, both music hallucinations); speech: none; v2 whisper on the finished audio: VAD on one line at 10.4 s (music hallucination), VAD off an end-of-video line",
+ "sound": "trailer music stem only (music_only, from 34.0 s of the Launch Trailer); whisper small on the finished audio: no speech; the director's measure of the earlier 'I can't take my eyes off of you' at 10.4 s: no vocal modulation, a hallucination",
  "render": {
-  "job_commit": "b58ec9a",
-  "job_sha": "3e891c89b02dfe90e9f8ce1734a680101fcd3763",
-  "render_commit": "ff2ebad",
+  "job_commit": "94ad91e",
+  "job_sha": "924595d1f75d99a5f8f57e2b7bd042e11fab00b1",
+  "render_commit": "3af45cb",
   "out": "cards/2026-11/forza-horizon-6-roadmap-series-8-9-20261114-reel-v1.mp4",
   "renders": "5 dispatches in all: v6 street stretch replaced by a still (director fail), v7 swapped the Tumica livery still (cut livery text) for the yellow RX-7 night street; 25.8 s before the end card (over the 12-20 s target)",
-  "layout": "9 shots: 3 trailer stretches (6.62, 15.73, 62.74 s) and 6 Steam screenshots as stills"
+  "layout": "9 shots: 3 trailer stretches (6.62, 15.73, 62.74 s) and 6 Steam screenshots as stills",
+  "track": "trailer music stem from 34.0 s (was 6.62 s: the music stem went silent under 30.5 to 32.4 s of the trailer, about 1.9 s of dead air before the end card); finished audio measured per second: -27 to -13 dBFS RMS, nothing below -30 before the end card; music 65.8%, leak 0.8%"
  },
  "regate": "RE-GATE within the hour before 19:15 Dubai: Pure Xbox and Playground re-read, a denial stops it"
 }
