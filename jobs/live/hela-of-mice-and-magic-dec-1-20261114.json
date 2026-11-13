@@ -145,7 +145,7 @@
    8,
    [
     [
-     "تتوفر نسخة محدودة في المتاجر\nباسم Harmony Edition",
+     "تتوفر نسخة مادية محدودة\nباسم Harmony Edition",
      {
       "size": 54
      }
@@ -174,12 +174,7 @@
  "template": "trailer",
  "skin": "house",
  "cut": false,
- "track": [
-  "hela-of-mice-and-magic-dec-1-20261114-trailer.mp4",
-  11.16
- ],
- "music_only": true,
- "sfx_ok": "music_only job: only the trailer's music stem plays, no effects are added or put back, so shot moments cannot mismatch effects",
+ "track": "bed",
  "subject_person": null,
  "sensitive": null,
  "angle": {
@@ -196,10 +191,10 @@
   "STORY TYPE launch date": "yes: platforms, date, edition contents, no price stated",
   "STORY: spoken paragraph, subject before pronoun": "yes: L1 names Hela and the mouse, L2 the date and platforms, L3 the physical edition, L4 its contents; no line opens on و",
   "STORY: release verbs": "yes: تصدر for the date, no bare تصل",
-  "STORY: names match names-ar.md": "yes: Knights Peak نايتس بيك with bracket in the credit; row added; glossary physical-edition rule applied (no النسخة المادية)",
+  "STORY: names match names-ar.md": "yes: Knights Peak نايتس بيك with bracket in the credit; row added",
   "POST: Arabic passes": "yes: arabic-games-film-editor and arabic-writing applied, western digits, no first person",
-  "SOUND: footage sound or bed with reason": "yes: Adventure trailer music stem only (music_only); the narration is removed with the other stems",
-  "SOUND: no speech under Arabic lines": "yes: faster-whisper vad on/off on the trailer found narration 6.9 to 22.9 and 29.8 to 43.4 s (English), so the music stem alone plays; the finished Reel is transcribed again",
+  "SOUND: footage sound or bed with reason": "no trailer stretch usable: all six Hela trailers narrated, music stem 8.9% leftover; bed with written bed_reason, director to sign off",
+  "SOUND: no speech under Arabic lines": "yes: our bed only, trailer audio not used",
   "PICTURE: footage first": "yes: official Steam Adventure Trailer 1080p 5.8 Mbps, clean stretches from the server shot picker",
   "PICTURE: not the same as last 5 reels": "yes: no earlier Reel uses Hela",
   "CREDIT: on every clip": "yes: credit from frame 0 over shots 0 to 8"
@@ -210,36 +205,37 @@
    "shot": "11.16 to 13.25 s",
    "alternatives": "0 to 2.7 s carries the HELA logo",
    "crop": "picker focus 0.687, the five mice line up facing camera",
-   "music": "trailer music stem"
+   "music": "our bed (see bed_reason)"
   },
   {
    "beat": "1 L1 the mouse hero",
    "shot": "18.2 to 23.5 s",
    "alternatives": "26.8 s burnt text, 29.28 s black",
    "crop": "picker focus",
-   "music": "trailer music stem"
+   "music": "our bed (see bed_reason)"
   },
   {
    "beat": "2 L2 date and platforms",
    "shot": "21.65 to 25.35 s",
    "alternatives": "none",
    "crop": "picker focus",
-   "music": "trailer music stem"
+   "music": "our bed (see bed_reason)"
   },
   {
    "beat": "3 L3 physical edition",
    "shot": "29.71 to 35.18 s",
    "alternatives": "40.23 s black, 41 s end card",
    "crop": "picker focus",
-   "music": "trailer music stem"
+   "music": "our bed (see bed_reason)"
   },
   {
    "beat": "4 L4 edition contents",
    "shot": "35.18 to 40.08 s",
    "alternatives": "end card",
    "crop": "picker focus",
-   "music": "trailer music stem"
+   "music": "our bed (see bed_reason)"
   }
  ],
- "quality": null
+ "quality": null,
+ "bed_reason": "All six official Steam trailers of Hela (Adventure, Narrative, Brewing and Remedies, Froggy Backpack Explained, BIG Winter Showcase, Shade System Explained) carry continuous English narration under the footage (faster-whisper small, vad on and off, 13 Nov); music-only stretches of the Adventure trailer are 0 to 6.9 s (HELA logo) and 23 to 29.8 s only; the Cocktail Fork music stem of the shot stretch left 8.9% narration residue (over the 5% limit, render-live run 797 failed), so our bed plays instead"
 }
