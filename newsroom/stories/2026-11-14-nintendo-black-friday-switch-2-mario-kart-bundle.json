@@ -3,7 +3,7 @@
  "title": "Nintendo Black Friday: Switch 2 + Mario Kart World bundle $499.99, 22 Nov to 5 Dec (US)",
  "game": "Nintendo Switch 2",
  "account": "Digital Lounge",
- "status": "built, awaiting director (builder 08:15 Sat 14 Nov)",
+ "status": "built, QC pass, awaiting director (builder 08:15 Sat 14 Nov slot)",
  "claimed_by": "builder 08:15 Sat 14 Nov",
  "slot": "2026-11-14T04:15Z (08:15 Dubai Sat 14 Nov)",
  "subject_person": null,
@@ -60,5 +60,31 @@
   "what_it_means_here": "US offers only; Gulf buyers see the first Nintendo price move on Switch 2",
   "payoff": "also $20 off select physical games 22 to 29 Nov and a digital sale from 19 Nov"
  },
- "gate": "gate 10:40Z: Nintendo US page read in full, no update note; digests of 13 Nov carry no denial; ledger find nintendo switch black friday: 0 hits"
+ "gate": "gate 10:40Z: Nintendo US page read in full, no update note; digests of 13 Nov carry no denial; ledger find nintendo switch black friday: 0 hits",
+ "texts": {
+  "headline": "خصم 50 دولارًا\nعلى حزمة Switch 2",
+  "lines": [
+   "أعلنت نينتيندو (Nintendo)\nعروض الجمعة السوداء في أمريكا",
+   "تجمع الحزمة جهاز Switch 2\nولعبة Mario Kart World",
+   "مع اشتراك لمدة 3 أشهر\nفي Nintendo Switch Online",
+   "تخفض نينتيندو 20 دولارًا من\nسعر ألعاب فعلية مختارة",
+   "يستمر هذا التخفيض\nحتى 29 نوفمبر"
+  ],
+  "strip": "السعر 499.99 دولارًا | من 22 نوفمبر | حتى 5 ديسمبر",
+  "credit": "المصدر: نينتيندو (Nintendo)",
+  "x_threads": "أعلنت نينتيندو (Nintendo) عروض الجمعة السوداء في الولايات المتحدة: حزمة Switch 2 مع Mario Kart World بسعر 499.99 دولارًا، أي بخصم 50 دولارًا، من 22 نوفمبر إلى 5 ديسمبر حتى نفاد الكمية.",
+  "threads": "أعلنت نينتيندو (Nintendo) عروض الجمعة السوداء في الولايات المتحدة: حزمة Switch 2 مع Mario Kart World بسعر 499.99 دولارًا، أي بخصم 50 دولارًا، من 22 نوفمبر إلى 5 ديسمبر حتى نفاد الكمية.",
+  "instagram": "حزمة Switch 2 مع Mario Kart World بسعر 499.99 دولارًا في عروض الجمعة السوداء\n\nأعلنت نينتيندو (Nintendo) عروضها لموسم الجمعة السوداء في الولايات المتحدة. تجمع الحزمة جهاز Switch 2 ولعبة Mario Kart World مع اشتراك فردي لمدة 3 أشهر في Nintendo Switch Online، بخصم 50 دولارًا عن السعر المقترح. يمتد العرض من 22 نوفمبر إلى 5 ديسمبر حتى نفاد الكمية.\n\nوتعرض نينتيندو حزمة ثانية تضم Switch 2 ولعبة Nintendo Switch Sports Resort بسعر 529.99 دولارًا، بخصم 27.98 دولارًا، ولم تذكر مدة لها.\n\nومن 22 إلى 29 نوفمبر تخفض نينتيندو 20 دولارًا من سعر ألعاب فعلية مختارة على Switch 2 وعلى Switch. وتبدأ تخفيضات الألعاب الرقمية المختارة من 19 نوفمبر حتى 2 ديسمبر دون ذكر نسب الخصم.\n\n#ألعاب #أخبار_الألعاب #Switch2 #Nintendo"
+ },
+ "arabic_notes": "skills loaded fresh (arabic-games-film-editor, arabic-writing, arabic-grammar-review); grammar review: no required edits, no uncertain cases; DeepL whole-story forward pass matched (alternatives for 'while supplies last': حتى نفاذ الكمية, بكميات محدودة; picked حتى نفاد الكمية per glossary, spelling with د); back-check: meaning intact (Black Friday deals in the US, bundle incl. 3-month membership, $50 off, 22 Nov to 5 Dec, second bundle $529.99, $20 off physical games 22 to 29 Nov, digital 19 Nov to 2 Dec)",
+ "versions": [
+  {
+   "v": 1,
+   "file": "cards/2026-11/nintendo-black-friday-switch-2-mario-kart-bundle-november-22-reel-v1.mp4",
+   "job_sha": "07d726397f84daef3ca5087ca4fc2fe73d372bdc",
+   "job_commit": "5c83eec"
+  }
+ ],
+ "qc_notes": "qc pass, 0 findings (render 191 s, dispatch 2 after earlier text, pace and credit stops); length 23.2 s before end card (above the 12 to 20 guide, no cap); showcase layout (720p 2.6 Mbps only official copies); audio split applied music 98.4% leak 0.0%; whisper on final Reel: first 3 s no speech (VAD on: empty; VAD off: 'You' on music), whole Reel no speech (end-card jingle hallucination only); credit visible frames 0 to 3 s (bottom band, from frame 0); gore check 4 fps dense strip: none (Mario Kart World gameplay, no violence); block_ok at 45.23 to 45.5 s: smear flag was the rainbow road edge; decode clean; 'MARIOKART' in-world sign at 53 s only",
+ "reel": "cards/2026-11/nintendo-black-friday-switch-2-mario-kart-bundle-november-22-reel-v1.mp4"
 }
