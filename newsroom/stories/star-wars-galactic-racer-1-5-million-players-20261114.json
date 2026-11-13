@@ -1,7 +1,7 @@
 {
  "id": "star-wars-galactic-racer-1-5-million-players-20261114",
  "title": "STAR WARS: Galactic Racer passes 1.5 million players a month after launch (Push Square, citing the game's official X post, 13 Nov 2026)",
- "status": "job v1 written; text check then render pending",
+ "status": "render dispatched (render-live), job v4 showcase layout",
  "lane": "digital-lounge",
  "game": "STAR WARS: Galactic Racer",
  "subject_person": null,
@@ -50,5 +50,31 @@
  "gate": "gate 20:55Z: no primary readable (X 429); Push Square only credible outlet found in the digest (1 outlet); web search found no denial and no other figure for 1.5M; run as تقرير naming Push Square",
  "chip": "تقرير",
  "sensitive": "none",
- "recipe": "numbers (figure card variant, footage first)"
+ "recipe": "numbers (figure card variant, footage first)",
+ "posts": {
+  "x_threads_ar": "بلغ عدد لاعبي STAR WARS: Galactic Racer مليونًا ونصفًا بعد شهر على إطلاقها، حسب موقع بوش سكوير (Push Square) نقلًا عن منشور اللعبة الرسمي على X. ولا يوضح المنشور إن كان الرقم مبيعات أم لاعبين.",
+  "instagram_ar": "لعبة Galactic Racer تبلغ 1.5 مليون لاعب بعد شهر من الإطلاق\n\nبلغت STAR WARS: Galactic Racer، من تطوير فيوز غيمز (Fuse Games) ونشر سيكرت مود (Secret Mode)، 1.5 مليون لاعب بعد شهر من إطلاقها على PS5 وXbox Series X|S والكمبيوتر، حسب موقع بوش سكوير (Push Square) نقلًا عن منشور على حساب اللعبة الرسمي في X يوم 13 نوفمبر.\n\nلا يوضح المنشور إن كان الرقم مبيعات أم لاعبين دخلوا اللعبة. وقال الفريق إنه يتطلع إلى مشاركة المزيد عن مستقبل اللعبة، دون الإعلان عن خطط محددة.\n\nيبلغ سعر النسخة العادية على متجر Steam 165 درهمًا في الإمارات و159 ريالًا في السعودية، واللغة العربية بين اللغات المدعومة.\n\n#ألعاب #أخبار_الألعاب #GalacticRacer #Steam"
+ },
+ "grammar_review": {
+  "required_edits": [],
+  "optional_style_suggestions": [
+   {
+    "original": "النسخة العادية",
+    "suggestion": "DeepL wrote «الإصدار القياسي»; kept the house wording",
+    "reason": "store term used in the 6 Oct post"
+   }
+  ],
+  "uncertain_cases": [
+   {
+    "text": "منشور اللعبة الرسمي",
+    "issue": "adjective could read as describing the game",
+    "why_uncertain": "valid either way; meaning clear from context"
+   }
+  ]
+ },
+ "deepl": {
+  "forward": "whole story run once: تجاوزت لعبة ... حاجز 1.5 مليون لاعب ... وتعد اللغة العربية من بين اللغات المدعومة; terms: «حتى نفاد الكمية» for stock phrases (unused here); our wording kept, الإصدار القياسي vs النسخة العادية chosen النسخة العادية",
+  "back_check": "passed: 1.5 million one month after launch, per Push Square citing the game's official X post, sales or players unclear, 165 dirhams UAE, 159 riyals Saudi, Arabic among supported languages"
+ },
+ "sound": "trailer music-only stretch, Launch Trailer from 44.96 s (whisper vad on and off: no speech 42.7 to 69.2 s); speech: none"
 }

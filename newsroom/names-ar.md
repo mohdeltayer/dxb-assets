@@ -251,3 +251,6 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | Windup (Windup Games, Hela developer) | ويندأب (Windup) | Proposed 14 Nov 2026 (Hela caption; Latin in brackets at first mention) |
 | Deck13 Spotlight (Elements Destiny publisher) | ديك 13 سبوتلايت (Deck13 Spotlight) | Proposed 14 Nov 2026 (Elements Destiny Reel credit; Latin in brackets at first mention) |
 | ShrooMoon (Elements Destiny developer) | شرومون (ShrooMoon) | Proposed 14 Nov 2026 (Elements Destiny caption; Latin in brackets at first mention) |
+| Secret Mode (STAR WARS: Galactic Racer publisher) | سيكرت مود (Secret Mode) | Proposed 14 Nov 2026 (Galactic Racer Reel credit; Latin in brackets at first mention) |
+| Fuse Games (STAR WARS: Galactic Racer developer) | فيوز غيمز (Fuse Games) | Proposed 14 Nov 2026 (Galactic Racer caption; Latin in brackets at first mention) |
+| Push Square | بوش سكوير (Push Square) | Proposed 14 Nov 2026 (Galactic Racer Reel source and caption; Latin in brackets at first mention) |
