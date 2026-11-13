@@ -49784,5 +49784,139 @@
   "dispatches": 1,
   "sound": "trailer",
   "footage": true
+ },
+ {
+  "name": "cities-skylines-2-free-to-play-until-nov-16-20261113-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-13T05:57Z",
+  "stages": {
+   "checks": 3.2,
+   "montage": 29.2,
+   "text": 22.3,
+   "audio": 0.9,
+   "outro": 13.9
+  },
+  "total": 69.6,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-13T05:56Z",
+  "finished_at": "2026-11-13T05:57Z",
+  "render_min": 1.16,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "cities-skylines-2-free-to-play-until-nov-16-20261113-trailer.mp4",
+    "start": 36.98,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "cities-skylines-2-free-to-play-until-nov-16-20261113-trailer.mp4",
+    "start": 53.3,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "cities-skylines-2-free-to-play-until-nov-16-20261113-trailer.mp4",
+    "start": 57.46,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "cities-skylines-2-free-to-play-until-nov-16-20261113-trailer.mp4",
+    "start": 60.31,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "cities-skylines-2-free-to-play-until-nov-16-20261113-trailer.mp4",
+    "start": 106.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 7.2,
+   "audio_secs": 32.8,
+   "music_pct": 42.1,
+   "leak_pct": 3.7,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "effects_shots": 5,
+   "mix_secs": 2.5,
+   "secs": 10.8
+  },
+  "lifeless": {
+   "score": 3.4,
+   "still_share": 0.033,
+   "longest_still": 0.3,
+   "cuts_per_10s": 3.31,
+   "held_under_text": 0.041,
+   "secs": 12.1,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 134,
+  "queue_wait_secs": 1,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1115,
+  "peak_mem_mb": 2143,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 29842,
+  "peak_disk_mb": 31759,
+  "min_disk_free_mb": 214347,
+  "setup_min": 0.15,
+  "story": "cities-skylines-2-free-to-play-until-nov-16-20261113",
+  "job_sha": "429f34bd1ea2e0bf5fb83736148694e77053eef4",
+  "dispatches": 1,
+  "sound": "trailer",
+  "footage": true
  }
 ]
