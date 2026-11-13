@@ -1,7 +1,7 @@
 {
  "id": "2026-11-14-bombanana-out-now-ps5-xbox",
  "title": "BOMBANANA! out now on PS5, Xbox Series X|S and Xbox One (UAE PS Store 39 AED)",
- "status": "built, qc pass, awaiting director (06:15 Dubai Sat 14 Nov slot, 02:15Z)",
+ "status": "scheduled in Publer 02:15Z (06:15 Dubai Sat 14 Nov) instagram, x, threads; director PASS director-22",
  "builder": "builder 06:15 Sat 14 Nov",
  "slot": "2026-11-14T02:15Z (06:15 Dubai Sat 14 Nov)",
  "subject_person": null,
@@ -98,7 +98,7 @@
  },
  "texts": {
   "x_threads": "صدرت BOMBANANA على PS5 وXbox: ثلاثة لاعبين في دور قرود، أحدهم لا يرى وآخر لا يسمع وثالث لا يتكلم، يفككون قنبلة قبل نفاد الوقت. السعر 39 درهمًا في متجر PlayStation بالإمارات، حسب المتجر.",
-  "instagram": "قنبلة وثلاثة قرود: صدرت BOMBANANA على PS5 وXbox\n\nصدرت BOMBANANA اليوم على PS5 وXbox Series X|S وXbox One، وهي لعبة تعاونية لثلاثة لاعبين يفككون قنبلة قبل نفاد الوقت.\n\nيؤدي كل لاعب دور قرد: أحدهم لا يرى، وآخر لا يسمع، وثالث لا يتكلم، والمعلومات مقسمة بينهم، فيتواصلون بالإيماءات والصوت. تضم الحملة 30 مستوى، وهناك طور Endless وطور Custom.\n\nالسعر في متجر PlayStation بالإمارات 39 درهمًا، ولمشتركي PlayStation Plus 31.20 درهمًا حتى 27 نوفمبر، وفي متجر Xbox 7.99 دولارات.\n\nالاستوديو التركي ليفتو (Lefto Studio) هو المطور، والناشر تارك غيمز (TARK Games) ومقره إسطنبول. وتقول تارك غيمز إن مبيعات اللعبة على Steam تجاوزت مليوني نسخة.\n\n#ألعاب #أخبار_الألعاب #BOMBANANA #PS5"
+  "instagram": "قنبلة وثلاثة قرود: صدرت BOMBANANA على PS5 وXbox\n\nصدرت BOMBANANA يوم الجمعة على PS5 وXbox Series X|S وXbox One، وهي لعبة تعاونية لثلاثة لاعبين يفككون قنبلة قبل نفاد الوقت.\n\nيؤدي كل لاعب دور قرد: أحدهم لا يرى، وآخر لا يسمع، وثالث لا يتكلم، والمعلومات مقسمة بينهم، فيتواصلون بالإيماءات والصوت. تضم الحملة 30 مستوى، وهناك طور Endless وطور Custom.\n\nالسعر في متجر PlayStation بالإمارات 39 درهمًا، ولمشتركي PlayStation Plus 31.20 درهمًا حتى 27 نوفمبر، وفي متجر Xbox 7.99 دولارًا.\n\nالاستوديو التركي ليفتو (Lefto Studio) هو المطور، والناشر تارك غيمز (TARK Games) ومقره إسطنبول. وتقول تارك غيمز إن مبيعات اللعبة على Steam تجاوزت مليوني نسخة.\n\n#ألعاب #أخبار_الألعاب #BOMBANANA #PS5"
  },
  "reel_text": {
   "headline": "صدرت لعبة BOMBANANA\nعلى PS5 وعلى Xbox",
@@ -131,5 +131,26 @@
   "shots": "chosen by eye from the local copy at -ss times (19.0 d3.4, 28.2 d2.6, 30.81 d3.3, 35.0 d1.3, 41.3 d1.7, 46.0 d1.0): the server picker gave only 12.8 s clean and its first stretch (0.0) played the ONE BOMB title card from 1.5 s in the render; shot 1 and 2 extend the picker's 30.81 stretch back over a small prop sticker (MAI)",
   "theme": "spectacle (playful was third in a row)",
   "gore": "cartoon monkeys only; a cartoon glove slap at 46.5 s, no blood or gore"
+ },
+ "approved": "gate 10:40Z: PS Store UAE (release 2026-11-13T09:00Z, 39.00 AED, PS Plus 31.20 to 27 Nov, Arabic not listed), Xbox Store (USD 7.99, publisher TARK, developers Lefto Studio and NAISU), Denfaminicogamer press reprint (2M Steam sales, TARK Istanbul, Lefto Turkish) read; no denial; Instagram caption fixed from اليوم to يوم الجمعة (posts Saturday) and 7.99 دولارًا; go: rolling queue; re-gate due within the hour before 06:15",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/bombanana-out-now-ps5-xbox-november-13-reel-v1.mp4",
+  "blob": "13ef0da03035412e1b515cc5cbc7b1ab6e9eb444",
+  "at": "2026-11-13T10:37:45Z",
+  "note": "primaries re-read 13 Nov 10:40Z; caption fixed: اليوم -> يوم الجمعة (post is Saturday 06:15), دولارات -> دولارًا; 2M claim attributed to TARK press release; shots by eye accepted",
+  "checklist": {
+   "job": "jobs/live/bombanana-out-now-ps5-xbox-november-13.json",
+   "sha256": "969445268234cb4684ed0cfaf3369739eb0d4824792eb02a063f590b0e60f8e2",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-0615"
+  },
+  "by": "director-22",
+  "qc": "pass",
+  "looked": "dense 4fps strip + frames 0.5/3/4.5/8/12.6 s: headline hook on frame 0 with moving monkey, credit from frame 0, no title card/slate/cropped burnt-in text (prop signs only), cuts every ~3 s, last 2 s a picture, strip once, first words Arabic; whisper raw samples VAD on/off: music only"
  }
 }
