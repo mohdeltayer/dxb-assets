@@ -48,5 +48,25 @@
  "built_by": "builder-2215",
  "render_checks": "qc pass no findings; length 22.2 s before end card (guide 12 to 20); whisper on final Reel: no speech (only 'Music' hallucination on our bed neon_b); credit visible frames 0 to 3 s; dense strip 4 fps judged, no blood or gore, one bright flare shot at 1.75 s (muzzle flash, not graphic); sound our bed with bed_reason (every Dawn of War IV trailer voiced, music_only stem test failed 11.9% leakage)",
  "job": "job file commit (see git log -- jobs/live), job_sha 2eff5b2370ae48a313e0a41462ef35702315ab1f",
- "arabic_review": "two skills applied; grammar stage manual pass: one comma removed before relative clause; DeepL forward whole-story pass matched (جيجابايت house usage, اعتبارًا من vs من 30 نوفمبر, إتاحة الوصول المبكر); back-check: Steam page published official requirements, 16 GB RAM min, 125 GB, Windows 11, release 3 Dec, early access Commander Edition from 30 Nov; GeForce NOW and price only in the caption"
+ "arabic_review": "two skills applied; grammar stage manual pass: one comma removed before relative clause; DeepL forward whole-story pass matched (جيجابايت house usage, اعتبارًا من vs من 30 نوفمبر, إتاحة الوصول المبكر); back-check: Steam page published official requirements, 16 GB RAM min, 125 GB, Windows 11, release 3 Dec, early access Commander Edition from 30 Nov; GeForce NOW and price only in the caption",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/warhammer-40000-dawn-of-war-iv-system-requirements-20261113-reel-v1.mp4",
+  "blob": "0bedec8ac5154c6def79a44d80ea20125b51a7f2",
+  "at": "2026-11-13T07:20:09Z",
+  "note": "bed reason signed off; whisper: only a Music hallucination, no speech; caption suggestions: RAM wording, source line",
+  "checklist": {
+   "job": "jobs/live/warhammer-40000-dawn-of-war-iv-system-requirements-20261113.json",
+   "sha256": "83721b4423424ba4a3ab8c94bb919cb07e3e3629ddf8c16f33289be8bc78c1e0",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-2215"
+  },
+  "by": "director-17",
+  "qc": "pass",
+  "looked": "Dense strip 4 fps plus per-frame luma at the 1.65 s cut: army hero shot opens, headline and credit from frame 0, chip clear of grid corner; 4 lines each on its shot over a two-item strip (launch, Windows 11), no repeat; no blood, gore or melee; muzzle-flash cut at 1.65 s is one bright shot (luma 60 to 139, then 137/115/137 decaying to 78 over 0.5 s, from the footage), not a strobe; last 2 s a picture; every line opens on Arabic. Bed reason verdict accepted: every official trailer is voiced, specs story so speech is not the news; our bed neon_b, whisper on final mp4 hears no voice."
+ }
 }
