@@ -2,16 +2,16 @@
  "name": "kiln-reshaped-free-update-modes-party-codes-november-12",
  "out": "cards/2026-11/kiln-reshaped-free-update-modes-party-codes-november-12-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-13T09:34:31Z",
+ "at": "2026-11-13T09:41:20Z",
  "findings": [],
  "notes": [
   "length 19.9 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 89.8; leak_pct 0.4; cache {'hit': 0, 'miss': 3}; separate_secs 8.1; secs 12.7",
+  "render_job: audio split: applied; music_pct 93.8; leak_pct 0.3; cache {'hit': 2, 'miss': 1}; separate_secs 3.2; secs 7.9",
   "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 8.08, \"held_under_text\": 0.0, \"secs\": 19.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "ada06b8c4f0c8a66d5f850fc885147d163762b2d",
- "dispatches": 3,
+ "job_sha": "284e264bf2d75d01df2b83957de4cd56f6aeeaeb",
+ "dispatches": 4,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
