@@ -51,30 +51,13 @@
   [
    "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
    53.98,
-   2.0,
+   4.0,
    [
     [
      0.0,
-     0.489
+     0.46
     ]
    ]
-  ],
-  [
-   "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
-   55.98,
-   2.0,
-   [
-    [
-     0.0,
-     0.439
-    ]
-   ]
-  ],
-  [
-   "star-wars-galactic-racer-1-5-million-players-20261114-gfx-1.png",
-   null,
-   3.0,
-   null
   ],
   [
    "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
@@ -86,6 +69,23 @@
      0.402
     ]
    ]
+  ],
+  [
+   "star-wars-galactic-racer-1-5-million-players-20261114-gfx-1.png",
+   null,
+   3.0,
+   null
+  ],
+  [
+   "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
+   63.76,
+   4.0,
+   [
+    [
+     0.0,
+     0.488
+    ]
+   ]
   ]
  ],
  "lines": [
@@ -94,7 +94,7 @@
    2,
    [
     [
-     "أعلن فريق Galactic Racer\nعلى X بعد شهر من إطلاقها",
+     "أعلن الفريق على X\nبعد شهر من الإطلاق",
      {
       "size": 54
      }
@@ -106,7 +106,7 @@
    4,
    [
     [
-     "لا يوضح المنشور إن كان\nالرقم مبيعات أم لاعبين",
+     "لا يوضح المنشور إن كان الرقم\nمبيعات أم لاعبين دخلوا اللعبة",
      {
       "size": 54
      }
@@ -140,7 +140,7 @@
  ],
  "ground_footage": [
   "star-wars-galactic-racer-1-5-million-players-20261114-trailer.mp4",
-  55.98
+  57.98
  ],
  "credits": [
   [
@@ -183,5 +183,65 @@
   0.6
  ],
  "subject_person": null,
- "sensitive": "none"
+ "sensitive": "none",
+ "angle": {
+  "hook": "a Star Wars racing game reports 1.5 million players one month after launch, a figure the team announced on X without saying whether it counts sales or players",
+  "why_now": "the team posted the milestone on 13 Nov, exactly one month after the 6 Oct launch, and Push Square carried it the same evening; no Arabic outlet has it yet",
+  "what_it_means_here": "Gulf players can buy it on Steam at 165 AED in the UAE and 159 SR in Saudi Arabia, and Arabic is among its supported languages",
+  "payoff": "the team teases more about the game's future but announces no plans, so the milestone is the only confirmed news"
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "no primary readable: the official X post answers 429 to automated reads; Push Square article read in full 13 Nov, Steam page and appdetails read; labelled تقرير naming Push Square",
+  "SOURCE: not already posted": "yes: ledger find galactic racer hits only the 2 and 6 Oct stories (reviews, launch); a new milestone",
+  "SOURCE: age": "yes: first report 13 Nov 19:00Z, under 24 h",
+  "ANGLE before lines": "yes: angle in the job",
+  "STORY TYPE numbers": "yes: figure 1.5 million, period one month since 6 Oct, source Push Square citing the game's X post, comparison none stated and said so",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names Galactic Racer, L1 the team, L2 the post, L3 Arabic support; no line opens on و",
+  "STORY: release verbs": "yes: no release verb needed, launch is past",
+  "STORY: names match names-ar.md": "yes: Secret Mode, Push Square rows with Latin in brackets in the credit and source",
+  "POST: Arabic passes": "yes: arabic-games-film-editor and arabic-writing applied, western digits, no first person, DeepL whole story forward and back run",
+  "SOUND: footage sound or bed with reason": "yes: Launch Trailer music-only stretch from 44.96 s (speech-free 42.7 to 69.2 s by faster-whisper vad on and off), music_only",
+  "SOUND: no speech under Arabic lines": "yes: whisper found no speech between 42.7 and 69.2 s",
+  "PICTURE: footage first": "yes: official Steam Launch Trailer 1080p 5.76 Mbps, picker shots 44.96 to 67.76 s",
+  "PICTURE: not the same as last 5 reels": "yes: no recent Reel uses Galactic Racer",
+  "CREDIT: on every clip": "yes: credit from frame 0 over every footage shot"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "44.96 to 47.11 s",
+   "alternatives": "3.75 s text Tey, 7.63 s text",
+   "crop": "picker focus 0.629",
+   "music": "trailer music stem, music_only"
+  },
+  {
+   "beat": "1 L1 team announcement",
+   "shot": "47.11 to 52.98 s",
+   "alternatives": "49.5 s cut text BAY",
+   "crop": "picker focus",
+   "music": "trailer music stem"
+  },
+  {
+   "beat": "2 L2 not clarified",
+   "shot": "53.98 to 61.03 s",
+   "alternatives": "none",
+   "crop": "picker focus",
+   "music": "trailer music stem"
+  },
+  {
+   "beat": "3 card price",
+   "shot": "gfx card on trailer ground 57.98 s",
+   "alternatives": "none",
+   "crop": "n/a",
+   "music": "trailer music stem"
+  },
+  {
+   "beat": "4 L3 Arabic",
+   "shot": "63.76 to 67.76 s",
+   "alternatives": "68.21 s text TAN, speech from 69.2 s",
+   "crop": "picker focus",
+   "music": "trailer music stem"
+  }
+ ],
+ "quality": null
 }
