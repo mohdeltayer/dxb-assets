@@ -1,0 +1,163 @@
+{
+ "name": "sonic-pico-park-out-now-aed-31-99-20261113",
+ "story": "sonic-pico-park-out-now-aed-31-99-20261113",
+ "kind_news": "launch",
+ "built_by": "builder-0015",
+ "render_lane": "server",
+ "out": "cards/2026-11/sonic-pico-park-out-now-aed-31-99-20261113-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "sonic-pico-park-out-now-aed-31-99-20261113-trailer.mp4",
+   "steam": 4304060,
+   "trailer": "LaunchTrailer",
+   "start": 0,
+   "seconds": 240
+  },
+  {
+   "file": "sonic-pico-park-out-now-aed-31-99-20261113-steam-ss1.jpg",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4304060/76afafd85f0a81ce275bdfe2390e22a3ca598c4d/ss_76afafd85f0a81ce275bdfe2390e22a3ca598c4d.1920x1080.jpg"
+  },
+  {
+   "file": "sonic-pico-park-out-now-aed-31-99-20261113-steam-ss4.jpg",
+   "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4304060/b20ba45526fa2e002783aa283bd74fa3737d470d/ss_b20ba45526fa2e002783aa283bd74fa3737d470d.1920x1080.jpg"
+  }
+ ],
+ "shots": [
+  [
+   "sonic-pico-park-out-now-aed-31-99-20261113-trailer.mp4",
+   12.4,
+   10.0,
+   [
+    [
+     0.0,
+     0.381
+    ]
+   ]
+  ],
+  [
+   "sonic-pico-park-out-now-aed-31-99-20261113-steam-ss1.jpg",
+   null,
+   2.6,
+   [
+    0.48,
+    0.48
+   ]
+  ],
+  [
+   "sonic-pico-park-out-now-aed-31-99-20261113-steam-ss4.jpg",
+   null,
+   2.6,
+   [
+    0.56,
+    0.56
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   0,
+   0,
+   [
+    [
+     "تجمع سلسلة Pico Park مع Sonic",
+     {
+      "size": 54
+     }
+    ],
+    [
+     "كل شخصية تستخدم Spin Dash",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   1,
+   2,
+   [
+    [
+     "تتسع اللعبة لثمانية لاعبين",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   2,
+   "المصدر: بيكو بارك (PICO PARK Inc.)",
+   {
+    "size": 40,
+    "band": true,
+    "from_start": true,
+    "low": true
+   }
+  ]
+ ],
+ "headline": "لعبة Sonic Pico Park\nمتاحة الآن على Steam",
+ "label": "متوفر الآن",
+ "source": "بيكو بارك (PICO PARK Inc.)",
+ "date": "12 Nov 2026",
+ "theme": "playful",
+ "style": null,
+ "template": "split",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "sonic-pico-park-out-now-aed-31-99-20261113-trailer.mp4",
+  12.4
+ ],
+ "strip": [
+  [
+   "سعر Steam في الإمارات",
+   [
+    "aed",
+    "31.99"
+   ]
+  ],
+  [
+   "تاريخ الإصدار",
+   "12 نوفمبر"
+  ]
+ ],
+ "beat": "launch",
+ "genre": [
+  "family",
+  "indie"
+ ],
+ "angle": {
+  "hook": "Sonic and his friends walk into Pico Park: the 2 to 8 player co-op puzzle platformer Sonic Pico Park is out now",
+  "why_now": "Released 12 Nov 2026 on Steam (Steam page), Nintendo Switch 2 (Nintendo store page, 12 Nov) and Switch (Nintendo Japan topic, 13 Nov); Steam UAE store lists AED 31.99 and shows no Arabic in its languages",
+  "what_it_means_here": "Gulf players can buy it on the UAE Steam store for AED 31.99 and play with up to 8 friends, but the interface has no Arabic",
+  "payoff": "Every playable character can use Sonic's Spin Dash, 2 to 8 players locally or online, AED 31.99"
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam store page (release 12 Nov 2026, 2 to 8 players, cross-play, Spin Dash, 14 languages without Arabic, UAE price AED 31.99 via store API cc=ae read 13 Nov about 07:30Z); Nintendo US store page (Switch 2, 12 Nov, publisher PICO PARK, developer TECOPARK); Nintendo Japan topic of 13 Nov (Switch 2 and Switch, released digitally)",
+  "SOURCE: not already posted": "yes: ledger find sonic pico park recorded, 0 hits",
+  "SOURCE: age": "yes: release 12 Nov 2026 (announced 9 Sep); about 30 to 36 hours old at the 00:15 slot; new since: the UAE Steam price AED 31.99, Steam user reviews Very Positive (91% of 60) and the Nintendo Japan topic of 13 Nov; Arabic press not checked beyond the digest",
+  "ANGLE before lines": "yes: angle in the job",
+  "STORY TYPE out now": "yes: platforms, AED price where listed, what it is (co-op puzzle platformer, 2 to 8 players)",
+  "STORY: spoken paragraph, subject before pronoun": "yes: the headline names the game, L1 says what it is, L2 the player count, L3 the Spin Dash; no line opens on و",
+  "STORY: release verbs": "yes: متاحة الآن in the headline, أصدرت in the posts",
+  "STORY: names match names-ar.md": "yes: PICO PARK Inc. and TECOPARK added to names-ar.md as Proposed, bracket at first mention",
+  "POST: Arabic passes": "yes: two skills, grammar stage, DeepL forward (whole story) and back-check",
+  "SOUND: footage sound or bed with reason": "yes: trailer's own music stretch from 12.4 s (xylophone score, no speech)",
+  "SOUND: no speech under Arabic lines": "yes: faster-whisper on the trailer found only music tags and an outro hallucination after 53 s; final Reel transcribed after render",
+  "PICTURE: footage first": "yes: official Steam launch trailer, one clean stretch 12.4 to 22.4 s (server shot picker found 12.4 to 27.6 clean; burnt-in captions start at 24.4 s), judged at 9:16 (a character parade); two official Steam gameplay screenshots close the Reel because the trailer has no further text-free stretch",
+  "PICTURE: not the same as last 5 reels": "yes: pixel-art parade, none of the last Reels used it",
+  "CREDIT: on every clip": "yes: from frame 0 over the whole shot"
+ },
+ "sensitive": "none (family co-op pixel-art platformer, nothing graphic)",
+ "subject_person": null,
+ "decision_log": {
+  "beat1": "12.4 to 24.4 s of the official launch trailer, one continuous character parade (Tails, Knuckles, Sonic, Shadow, Amy, Cream, Silver, Blaze, Big, Vector, E-123 style robot) with no burnt-in text; crop x 0.381 holds one to three sprites in the 9:16 window; alternatives rejected by the server picker: 0 to 2.6 s logo slate, 2.7 to 5.3 s LICENSED BY SEGA card, 5.5 to 12.2 s title card, 24.5 to 56 s burnt-in English captions cut by the window; the 45 to 47 s stretch is an empty sky with half-cut text",
+  "sound": "trailer's own music stretch from 12.4 s (xylophone score, whisper: no speech), audio split on the runner",
+  "strip": "price and date strip, no line repeats it",
+  "length": "10.0 s of the text-free parade (12.4 to 22.4 s; the trailer's burnt-in captions begin at 24.4 s and the Reel's last 0.7 s crossfade showed one in v1) plus two official Steam screenshots (2.6 s each, held still, no pan) of players stacking and swinging together: the 8-player line sits on them",
+  "stills": "Steam store screenshots 1 and 4 (1920x1080, text-free gameplay) used only because the trailer has no more text-free footage; the track stays the trailer's music stretch from 12.4 s"
+ }
+}
