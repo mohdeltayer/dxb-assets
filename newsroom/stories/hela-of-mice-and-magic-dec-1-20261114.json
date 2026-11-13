@@ -1,7 +1,7 @@
 {
  "id": "hela-of-mice-and-magic-dec-1-20261114",
  "title": "Hela: of Mice & Magic launches 1 Dec 2026 on Switch 2, PS5, Xbox Series X|S and PC (Games Press release, 9 Sep 2026)",
- "status": "built; render pending (QC); not scheduled; planned slot 15:15 Dubai Sat 14 Nov (11:15Z)",
+ "status": "job v2 (grammar review applied); render pending",
  "lane": "digital-lounge",
  "game": "Hela: of Mice & Magic",
  "subject_person": null,
@@ -48,7 +48,33 @@
   "price": "not stated on Steam AE (no price_overview)"
  },
  "posts": {
-  "x_threads_ar": "تصدر لعبة Hela: of Mice & Magic في 1 ديسمبر على Switch 2 وPS5 وXbox Series X|S والكمبيوتر، حسب بيان من نايتس بيك (Knights Peak). تتوفر أيضًا نسخة مادية محدودة باسم Harmony Edition.",
-  "instagram_ar": "تصدر Hela: of Mice & Magic في 1 ديسمبر على 5 منصات\n\nأعلنت نايتس بيك (Knights Peak) وويندأب (Windup) موعد صدور Hela: of Mice & Magic، وهي مغامرة ثلاثية الأبعاد في عالم مفتوح تقود فيها فأرًا صغيرًا، وتستلهم مناظرها من شمال السويد.\n\nتصدر اللعبة في 1 ديسمبر 2026 رقميًا على Nintendo Switch 2 وPS5 وXbox Series X|S والكمبيوتر، وتتوفر نسخة مادية محدودة باسم Harmony Edition على Switch 2 وPS5 وXbox Series X فقط.\n\nتضم النسخة المادية كتاب فن من 48 صفحة وملصق خريطة وملصقات ومحتوى الموسيقى التصويرية رقميًا.\n\nلا تذكر صفحة اللعبة على Steam اللغة العربية بين اللغات المدعومة، ولم يظهر سعر اللعبة هناك بعد.\n\n#ألعاب #أخبار_الألعاب #Hela #Steam"
+  "x_threads_ar": "تصدر لعبة Hela: of Mice & Magic في 1 ديسمبر على Switch 2 وPS5 وXbox Series X|S والكمبيوتر، حسب نايتس بيك (Knights Peak) التي أعلنت الموعد في 9 سبتمبر. تتوفر أيضًا نسخة محدودة في المتاجر باسم Harmony Edition.",
+  "instagram_ar": "تصدر Hela: of Mice & Magic في 1 ديسمبر على كل المنصات الرئيسية\n\nأعلنت نايتس بيك (Knights Peak) وويندأب (Windup) موعد صدور Hela: of Mice & Magic في 9 سبتمبر، ويبقى 17 يومًا على صدورها. هي مغامرة ثلاثية الأبعاد في عالم مفتوح تقود فيها فأرًا صغيرًا، وتستلهم مناظرها من شمال السويد.\n\nتصدر اللعبة رقميًا على Nintendo Switch 2 وPS5 وXbox Series X|S والكمبيوتر، وتتوفر نسخة محدودة في المتاجر باسم Harmony Edition على Switch 2 وPS5 وXbox Series X فقط.\n\nتضم هذه النسخة كتاب فن من 48 صفحة وملصق خريطة وملصقات ومحتوى الموسيقى التصويرية رقميًا.\n\nلا تذكر صفحة اللعبة على Steam اللغة العربية بين اللغات المدعومة، ولم يظهر سعر اللعبة هناك بعد.\n\n#ألعاب #أخبار_الألعاب #Hela #Steam"
+ },
+ "grammar_review": {
+  "required_edits": [
+   {
+    "original": "نسخة مادية محدودة",
+    "proposed": "نسخة محدودة في المتاجر",
+    "class": "house_rule",
+    "category": "glossary: physical edition",
+    "explanation": "house glossary says not النسخة المادية"
+   },
+   {
+    "original": "على 5 منصات",
+    "proposed": "على كل المنصات الرئيسية",
+    "class": "house_rule",
+    "category": "count ambiguity",
+    "explanation": "Series X|S counted once or twice"
+   }
+  ],
+  "uncertain": [
+   "هي مغامرة: pronoun refers to the game named in the previous sentence"
+  ],
+  "opened": [
+   "house-glossary.md rows",
+   "perfect-arabic SKILL.md",
+   "orthography.md section 1 only"
+  ]
  }
 }
