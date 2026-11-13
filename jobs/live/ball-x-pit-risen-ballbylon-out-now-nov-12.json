@@ -7,62 +7,18 @@
  "out": "cards/2026-11/ball-x-pit-risen-ballbylon-out-now-nov-12-reel-v1.mp4",
  "footage": [
   {
-   "file": "ball-x-pit-risen-ballbylon-out-now-nov-12-trailer.mp4",
-   "steam": 4008250,
-   "trailer": "Risen Ballbylon",
+   "file": "ball-x-pit-risen-ballbylon-out-now-nov-12-dlc-trailer.mp4",
+   "steam": 2062430,
+   "trailer": "Risen Ballbylon DLC",
    "start": 0,
-   "seconds": 240
+   "seconds": 60
   }
  ],
  "shots": [
   [
-   "ball-x-pit-risen-ballbylon-out-now-nov-12-trailer.mp4",
-   16.33,
-   2.95,
-   [
-    [
-     0.0,
-     0.47
-    ]
-   ]
-  ],
-  [
-   "ball-x-pit-risen-ballbylon-out-now-nov-12-trailer.mp4",
-   36.13,
-   1.67,
-   [
-    [
-     0.0,
-     0.51
-    ]
-   ]
-  ],
-  [
-   "ball-x-pit-risen-ballbylon-out-now-nov-12-trailer.mp4",
-   37.9,
-   1.7,
-   [
-    [
-     0.0,
-     0.52
-    ]
-   ]
-  ],
-  [
-   "ball-x-pit-risen-ballbylon-out-now-nov-12-trailer.mp4",
-   40.28,
-   2.3,
-   [
-    [
-     0.0,
-     0.54
-    ]
-   ]
-  ],
-  [
-   "ball-x-pit-risen-ballbylon-out-now-nov-12-trailer.mp4",
-   60.33,
-   1.75,
+   "ball-x-pit-risen-ballbylon-out-now-nov-12-dlc-trailer.mp4",
+   5.3,
+   3.2,
    [
     [
      0.0,
@@ -71,20 +27,53 @@
    ]
   ],
   [
-   "ball-x-pit-risen-ballbylon-out-now-nov-12-trailer.mp4",
-   64.33,
-   2.3,
+   "ball-x-pit-risen-ballbylon-out-now-nov-12-dlc-trailer.mp4",
+   8.5,
+   3.0,
    [
     [
      0.0,
-     0.55
+     0.5
     ]
    ]
   ],
   [
-   "ball-x-pit-risen-ballbylon-out-now-nov-12-trailer.mp4",
-   66.73,
-   1.68,
+   "ball-x-pit-risen-ballbylon-out-now-nov-12-dlc-trailer.mp4",
+   11.5,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ball-x-pit-risen-ballbylon-out-now-nov-12-dlc-trailer.mp4",
+   14.5,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ball-x-pit-risen-ballbylon-out-now-nov-12-dlc-trailer.mp4",
+   17.5,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "ball-x-pit-risen-ballbylon-out-now-nov-12-dlc-trailer.mp4",
+   20.5,
+   2.4,
    [
     [
      0.0,
@@ -108,7 +97,7 @@
   ],
   [
    4,
-   6,
+   5,
    [
     [
      "تضم الإضافة 4 ساحات قتال\nوتتطلب إنهاء اللعبة الأساسية",
@@ -122,7 +111,7 @@
  "credits": [
   [
    0,
-   6,
+   5,
    "المصدر: ديفولفر ديجيتال (Devolver Digital)",
    {
     "size": 40,
@@ -138,10 +127,10 @@
  "style": null,
  "template": "split",
  "skin": "house",
- "cut": false,
+ "cut": true,
  "track": [
-  "ball-x-pit-risen-ballbylon-out-now-nov-12-trailer.mp4",
-  16.33
+  "ball-x-pit-risen-ballbylon-out-now-nov-12-dlc-trailer.mp4",
+  5.3
  ],
  "strip": [
   [
@@ -172,39 +161,32 @@
   "STORY: release verbs": "yes: متوفرة الآن for out now; no bare تصل",
   "STORY: names match names-ar.md": "yes: Devolver Digital added to names-ar.md with the Latin in the credit",
   "POST: Arabic passes": "yes: arabic-games-film-editor and arabic-writing loaded fresh this session, grammar review no required edits, DeepL whole-story pass compared",
-  "SOUND: footage sound or bed with reason": "yes: trailer own sound, audio split decides",
+  "SOUND: footage sound or bed with reason": "yes: trailer own sound, one continuous stretch from 5.3 s, shots in sync with the track",
   "SOUND: no speech under Arabic lines": "yes: update trailer is music and effects, no narration; server speech check is final, not heard by ear",
-  "PICTURE: footage first": "yes: official Steam Risen Ballbylon trailer, clean stretches only",
+  "PICTURE: footage first": "yes: official Steam 'Risen Ballbylon DLC | Out Now' trailer, one continuous stretch 5.3 to 22.9 s",
   "PICTURE: not the same as last 5 reels": "yes: picture: BALL x PIT, no other Reel uses it",
   "CREDIT: on every clip": "yes: المصدر: ديفولفر ديجيتال (Devolver Digital) over shots 0 to 6"
  },
  "decision_log": [
   {
    "beat": "0 hook",
-   "shot": "16.33 to 19.28 s (green lane, frames viewed at 2 fps, no blood)",
-   "alternatives": "0 to 3.6 s intro; 4 to 8 s Naturalist Update logo",
-   "crop": "focus 0.47 centre lane",
+   "shot": "5.3 to 8.5 s of the 33 s 'Risen Ballbylon DLC | Out Now' Steam trailer (red lane, frames viewed at 2 fps)",
+   "alternatives": "the earlier 'Risen Ballbylon' trailer: audio split failed (leftover 6.5% over 5%); 3 to 5.3 s title logo skipped",
+   "crop": "focus 0.5 centre lane",
+   "music": "trailer own sound, one continuous stretch from 5.3 s"
+  },
+  {
+   "beat": "1 L1 sky",
+   "shot": "8.5 to 14.5 s continuous",
+   "alternatives": "end slate 22.9 s on",
+   "crop": "0.5",
    "music": "trailer own sound"
   },
   {
-   "beat": "1 L1 the sky",
-   "shot": "36.13 to 37.8 s and 37.9 to 39.6 s (pink Outstretched Spire lane)",
-   "alternatives": "31 to 34 s castle ramparts with burnt label",
-   "crop": "0.51",
-   "music": "trailer own sound"
-  },
-  {
-   "beat": "2 L2 what it adds and the base-game requirement",
-   "shot": "40.28 to 42.58 s and 60.33 to 62.08 s (dungeon lightning, pink lane)",
-   "alternatives": "68.5 to 73 s red swarm and splat, rejected as blood-like",
-   "crop": "0.54 and 0.5",
-   "music": "trailer own sound"
-  },
-  {
-   "beat": "3 closing stretch under L2",
-   "shot": "64.33 to 66.63 s and 66.73 to 68.41 s (green dungeon lane)",
-   "alternatives": "end key-art slate after 105 s",
-   "crop": "0.55 and 0.5",
+   "beat": "2 L2 adds and requirement",
+   "shot": "14.5 to 22.9 s continuous, ends before the key-art slate",
+   "alternatives": "key-art slate with AVAILABLE NOW text",
+   "crop": "0.5",
    "music": "trailer own sound"
   }
  ]
