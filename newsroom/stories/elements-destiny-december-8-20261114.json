@@ -1,7 +1,7 @@
 {
  "id": "elements-destiny-december-8-20261114",
  "title": "Elements Destiny launches 8 Dec 2026 on PC, PlayStation and Xbox, Switch 15 Dec (Deck13 Spotlight press release)",
- "status": "built by builder-1615 for 16:15 Dubai Sat 14 Nov (12:15Z); awaiting render QC and director",
+ "status": "built by builder-1615: QC pass (render commit 6c21c54, job_sha 718840cb, job-file commit c3be937, 2 dispatches); not scheduled, for director; planned 16:15 Dubai Sat 14 Nov (12:15Z)",
  "lane": "digital-lounge",
  "game": "Elements Destiny",
  "subject_person": null,
@@ -76,7 +76,8 @@
  },
  "read_aloud": "لعبة Elements Destiny تحدد موعد إصدارها. لعبة تقمص أدوار بالبكسل على PC وPlayStation وXbox. مع أكثر من 100 مقطوعة موسيقية.",
  "arabic_review": "arabic-games-film-editor, arabic-writing, arabic-grammar-review loaded fresh; glossary and names-ar read; grammar stage on job lines, X text and caption: no required edits (release verb تصدر, digits Western, first word Arabic, no flipping signs). DeepL forward whole story (EN to AR) agreed in meaning; alternatives: الكمبيوتر الشخصي (kept PC), ولم يتم الإعلان (kept لم يُعلن), DeepL wrote Deck13 and ShrooMoon in Latin only and the Switch as «السويتش» (house: Switch in English); back-check (AR to EN) of X text and lines matched meaning. Names Erika, Lia, Maline, Karen kept in Latin (characters).",
- "sound": "trailer's own music from 0.3 s (audio split on the server); speech: none under lines (faster-whisper small, VAD on and off, whole trailer: first speech 17.8 s)",
- "picture": "stretches viewed on the contact sheet; final strip at 4 fps to be checked; nothing graphic",
- "notes_open": "consoles dates come from the press release as read on Games Press (Steam shows PC only); price not stated; 12 s floor margin thin (shots 12.6 s)"
+ "sound": "trailer's own music from 0.3 s (audio split on the server); speech: none under lines (faster-whisper small, VAD on and off, whole trailer: first speech 17.8 s); final Reel transcribed: VAD on nothing, VAD off only the usual end-of-video hallucination from 7.3 s; first 3 s clean; audio split applied, music 72.1%, leak 0%",
+ "picture": "picker stretches viewed on the contact sheet and the committed 4 fps dense strip checked: pixel art and hand-drawn heroine art, nothing graphic, no dialogue box or title card in the shots; credit visible from frame 0 to 5 s; frame 0 is a short fade-in of the first shot (headline and chip already on it)",
+ "notes_open": "consoles dates come from the press release as read on Games Press (Steam shows PC only); price not stated; 12 s floor margin thin (shots 12.6 s); frame 0 shows the opening fade; only 12.4 s before the end card (0.4 s over the floor); last line white over pale snow at 3 s while it fades in",
+ "job": "job file commit c3be937 (jobs/live/elements-destiny-december-8-20261114.json, removed by render commit 6c21c54), job_sha 718840cb9aca9e0c73594d1d6a28dc90baedda26; reel cards/2026-11/elements-destiny-december-8-20261114-reel-v1.mp4, 12.4 s before the end card, 14.4 s in all"
 }
