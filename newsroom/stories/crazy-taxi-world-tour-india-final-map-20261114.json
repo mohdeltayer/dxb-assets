@@ -11,7 +11,7 @@
   "open world"
  ],
  "category": "update",
- "status": "job v2 committed, render pending (builder-1815)",
+ "status": "built v1 (job v6), qc pass 21:29Z, awaiting director (builder-1815); planned slot 18:15 Dubai Sat 14 Nov (14:15Z); re-gate within the hour before 18:15",
  "lane": "Digital Lounge only",
  "sources": [
   {
@@ -62,7 +62,7 @@
   "price": "none announced"
  },
  "posts": {
-  "x_threads_ar": "خريطة الهند هي الأخيرة في Crazy Taxi: World Tour، حسب آي جي إن (IGN). تضم المدينة والريف والمنطقة الصناعية، ويلمّح الإعلان إلى موقع تصوير فيلم من بوليوود.",
+  "x_threads_ar": "الهند هي الخريطة الخامسة والأخيرة في Crazy Taxi: World Tour، حسب آي جي إن (IGN). تضم المدينة والريف والمنطقة الصناعية، ويلمّح الإعلان إلى موقع تصوير فيلم من بوليوود.",
   "instagram_ar": "خريطة الهند الأخيرة في Crazy Taxi: World Tour\n\nكشف إعلان جديد للعبة Crazy Taxi: World Tour عن الخريطة الخامسة والأخيرة، وهي الهند، حسب ما نشرته آي جي إن (IGN).\n\nتضم خريطة الهند ثلاث مناطق: المدينة بأسواقها وحياتها الليلية وعمارتها، والريف بمعابده القديمة ومناظره الطبيعية، والمنطقة الصناعية بمراكزها التجارية مع لمحة من أحد أقدم القطارات في العالم. ويلمّح الإعلان إلى أن اللاعبين قد يجدون أنفسهم في موقع تصوير فيلم من بوليوود.\n\nوبذلك تكتمل خرائط اللعبة الخمس: الساحل الغربي للولايات المتحدة وألمانيا واليابان والبرازيل والهند. وتصدر اللعبة، حسب آي جي إن، في أوائل 2027 على PS5 وXbox Series X|S وNintendo Switch 2 والكمبيوتر.\n\nاللقطات في الفيديو من الإعلان الأول للعبة وليست من إعلان خريطة الهند.\n\n#ألعاب #أخبار_الألعاب #CrazyTaxi #SEGA"
  },
  "grammar_review": {
@@ -74,5 +74,12 @@
    "house-glossary.md rows",
    "arabic-writing orthography summary"
   ]
+ },
+ "render": {
+  "reel": "cards/2026-11/crazy-taxi-world-tour-india-map-20261114-reel-v1.mp4",
+  "job": "jobs/live/crazy-taxi-world-tour-india-map-20261114.json (deleted by the server after render; commit 40ca51b)",
+  "job_sha": "c85e161510ef483ef5545c12f97cfefa6e0caa7c",
+  "qc": "pass, 19.9 s before the end card, dispatches 3, audio split applied music 94.0% leak 0.0%, sound trailer",
+  "notes": "v1 had a phone UI shot (small English text) in the last 1.7 s and 20.7 s length: replaced in job v6; dense strip at 4 fps checked: no gore, no title card or logo, no dark frame, first frame the taxi head-on, credit under the chip from frame 0; whisper small on the finished audio: VAD on no speech, VAD off only repeated hallucinated phrases (so that's what I want) over music, unconfirmed as vocals; DeepL back-check: lines and caption fine, the first X wording lost 'final' and was changed to الخامسة والأخيرة"
  }
 }
