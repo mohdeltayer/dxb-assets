@@ -29,6 +29,8 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Square Enix | سكوير | Approved 5 Oct (not سكوير إنكس) |
 | Bandai Namco | بانداي نامكو | Approved 27 Sep (never باندا نامكو) |
 | SEGA | سيغا | Proposed 3 Nov |
+| PICO PARK Inc. (Sonic Pico Park publisher) | بيكو بارك | Proposed 13 Nov (builder-0015); bracket at first mention |
+| TECOPARK (Pico Park developer) | تيكوبارك | Proposed 13 Nov (builder-0015); bracket at first mention |
 | Arara (newsletter vendor) | آرارا | Proposed 9 Nov |
 | Capcom | كابكوم | In use |
 | Ubisoft | يوبيسوفت | In use |

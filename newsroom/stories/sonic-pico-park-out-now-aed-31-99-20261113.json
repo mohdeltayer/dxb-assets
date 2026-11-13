@@ -1,7 +1,7 @@
 {
  "id": "sonic-pico-park-out-now-aed-31-99-20261113",
- "title": "Sonic Pico Park out now on Steam, Switch 2 and more; AED 31.99 on the UAE Steam store (PICO PARK Inc. / TECOPARK)",
- "status": "claimed by builder-0015, building (slot 00:15 Dubai Sat 14 Nov)",
+ "title": "Sonic Pico Park out now on Steam; AED 31.99 on the UAE Steam store (PICO PARK Inc.)",
+ "status": "built by builder-0015, qc pending",
  "lane": "digital-lounge",
  "game": "SONIC PICO PARK",
  "subject_person": null,
@@ -12,5 +12,48 @@
   "indie"
  ],
  "platform": "multi",
- "beat": "launch"
+ "beat": "launch",
+ "ledger_find": {
+  "at": "2026-11-13T07:54:13Z",
+  "words": [
+   "sonic",
+   "pico",
+   "park"
+  ],
+  "hits": []
+ },
+ "label": "متوفر الآن",
+ "chip": "متوفر الآن",
+ "family": "launch",
+ "sensitive": "none (family co-op pixel-art platformer, nothing graphic)",
+ "first_report": "Release 12 Nov 2026 (Steam page and Nintendo US store page show 12 Nov; Nintendo Japan topic dated 13 Nov says released digitally); announced 9 Sep 2026 by TECOPARK (Gematsu). About 30 to 36 hours old at the 00:15 Dubai slot; new since release: UAE Steam price AED 31.99, Steam user reviews Very Positive (91% of 60 at read time). Arabic outlets not checked beyond the digest; a story the Arabic press has not carried is still news at 24 to 48 h (9 Nov rule).",
+ "source_type": "primary",
+ "sources": [
+  {
+   "name": "Steam store page SONIC PICO PARK (appid 4304060): released 12 Nov 2026, publisher PICO PARK Inc., developer TECOPARK, 2 to 8 players local or online, online cross-play, every playable character can use Sonic's Spin Dash, 14 languages without Arabic; store API cc=ae: 31.99 AED (USD 9.99)",
+   "url": "https://store.steampowered.com/app/4304060/SONIC_PICO_PARK/"
+  },
+  {
+   "name": "Nintendo US store: SONIC PICO PARK for Nintendo Switch 2, release date 12 Nov 2026, publisher PICO PARK, developer TECOPARK, 2 to 8 players, GameShare on Switch 2",
+   "url": "https://www.nintendo.com/us/store/products/sonic-pico-park-switch-2/"
+  },
+  {
+   "name": "Nintendo Japan topics (13 Nov 2026): released digitally on Nintendo Switch 2 and Nintendo Switch; Sonic 35th anniversary collaboration, Tails flies, Knuckles glides",
+   "url": "https://www.nintendo.com/jp/topics/article/5280ccbd-f23c-4820-8cbb-6f1e9bdf5998"
+  },
+  {
+   "name": "Gematsu (9 Sep 2026): TECOPARK announced the 12 Nov launch for PS5, Xbox Series, Switch 2, Switch and PC via Steam (secondary, platforms beyond Steam and Nintendo not re-read on their stores)",
+   "url": "https://www.gematsu.com/2026/09/sonic-pico-park-launches-november-12-for-ps5-xbox-series-switch-2-switch-and-pc"
+  }
+ ],
+ "footage": "official Steam launch trailer 'LaunchTrailer_En' (appid 4304060, 1080p60, 56 s, music only, no speech): one clean stretch 12.4 to 24.4 s from the server shot picker (a character parade); everything else in the trailer carries burnt-in English text the 9:16 window cuts, or logo and title cards",
+ "template": "split",
+ "recipe": "2 trailer drop (split strip: price, date)",
+ "gate": "gate 08:05Z: Steam page and API read, Nintendo US page and Nintendo Japan topic read; web search found no delay or denial; PS Store and Xbox pages not read (platforms beyond Steam/Switch attributed to the announcement)",
+ "posts": {
+  "x_threads_ar": "أصدرت شركة بيكو بارك (PICO PARK Inc.) لعبة Sonic Pico Park على Steam، وسعرها 31.99 درهمًا في متجر Steam في الإمارات حسب صفحة اللعبة. تتسع اللعبة التعاونية لما يصل إلى 8 لاعبين.",
+  "instagram_ar": "لعبة Sonic Pico Park متاحة الآن على Steam\n\nأصدرت شركة بيكو بارك (PICO PARK Inc.) لعبة Sonic Pico Park، وهي تعاون بين سلسلة Pico Park التعاونية وسلسلة Sonic احتفالًا بمرور 35 عامًا على الأخيرة.\n\nيمكن لما يصل إلى 8 لاعبين اللعب محليًا أو عبر الإنترنت، وتدعم اللعبة عبر الإنترنت اللعب المشترك بين المنصات. والهدف الوصول إلى نهاية كل مرحلة، ولا يتحقق ذلك إلا بتعاون الفريق كله. وتستطيع كل شخصية استخدام ضربة Spin Dash من Sonic.\n\nسعر اللعبة 31.99 درهمًا في متجر Steam في الإمارات. وهي متوفرة أيضًا على Switch 2 وSwitch، ولا تضم لغاتها على Steam اللغة العربية.\n\nالمصدر: صفحة اللعبة على Steam ومتجر نينتيندو (Nintendo).\n\n#ألعاب #أخبار_الألعاب #SonicPicoPark #Steam"
+ },
+ "arabic_review": "two skills applied (glossary, names-ar: بيكو بارك added; verbs feminine for the game and كل شخصية); grammar stage on the job lines, X text and caption: no required edits, no uncertain cases; DeepL forward whole-story pass matched our wording except: «سونيك القنفذ» and «Switch Sports»-style English names (house: game and character names stay English), «درهم إماراتي» (house: درهمًا), «حركة» for Spin Dash move (kept ضربة), «اللعب المتبادل» for cross-play (kept اللعب المشترك بين المنصات); alternatives for 'out now' (متوفر الآن / متاح الآن) kept متاحة الآن for the game; back-check: Sonic Pico Park is now available on Steam, PICO PARK Inc. released the collaboration, up to 8 players local or online, cross-platform online, Spin Dash for every character, 31.99 dirhams on the UAE Steam store, also on Switch 2 and Switch, no Arabic",
+ "sound": "trailer's own music (xylophone score) from 12.4 s, audio split; speech: none (faster-whisper on the trailer; final Reel check pending)"
 }
