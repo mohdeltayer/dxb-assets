@@ -2,7 +2,7 @@
  "name": "bombanana-out-now-ps5-xbox-november-13",
  "story": "2026-11-14-bombanana-out-now-ps5-xbox",
  "kind_news": "launch",
- "built_by": "production-2",
+ "built_by": "builder-0615",
  "render_lane": "server",
  "out": "cards/2026-11/bombanana-out-now-ps5-xbox-november-13-reel-v1.mp4",
  "footage": [
@@ -14,18 +14,160 @@
    "seconds": 240
   }
  ],
- "shots": [],
- "lines": [],
- "credits": [],
- "headline": "TODO",
+ "shots": [
+  [
+   "bombanana-out-now-ps5-xbox-november-13-trailer.mp4",
+   0.0,
+   2.8,
+   [
+    [
+     0.0,
+     0.483
+    ]
+   ]
+  ],
+  [
+   "bombanana-out-now-ps5-xbox-november-13-trailer.mp4",
+   28.2,
+   2.6,
+   [
+    [
+     0.0,
+     0.62
+    ]
+   ]
+  ],
+  [
+   "bombanana-out-now-ps5-xbox-november-13-trailer.mp4",
+   30.81,
+   3.29,
+   [
+    [
+     0.0,
+     0.639
+    ]
+   ]
+  ],
+  [
+   "bombanana-out-now-ps5-xbox-november-13-trailer.mp4",
+   36.41,
+   1.77,
+   [
+    [
+     0.0,
+     0.808
+    ]
+   ]
+  ],
+  [
+   "bombanana-out-now-ps5-xbox-november-13-trailer.mp4",
+   41.26,
+   1.73,
+   [
+    [
+     0.0,
+     0.225
+    ]
+   ]
+  ],
+  [
+   "bombanana-out-now-ps5-xbox-november-13-trailer.mp4",
+   47.8,
+   0.75,
+   [
+    [
+     0.0,
+     0.535
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "ثلاثة لاعبين\nيفككون قنبلة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   3,
+   [
+    [
+     "أحدهم لا يرى وآخر لا يسمع\nوثالث لا يتكلم",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   5,
+   [
+    [
+     "تتوزع المعلومات\nبينهم",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   5,
+   "المصدر: تارك غيمز (TARK Games)",
+   {
+    "from_start": true,
+    "low": true
+   }
+  ]
+ ],
+ "headline": "صدرت لعبة BOMBANANA\nعلى PS5 وعلى Xbox",
  "label": "متوفر الآن",
- "source": "TARK Games",
+ "source": "تارك غيمز (TARK Games)",
  "date": "13 Nov 2026",
  "theme": "playful",
  "style": null,
- "template": "trailer",
+ "template": "split",
  "skin": "house",
- "cut": false,
- "track": "bed",
- "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+ "cut": true,
+ "track": [
+  "bombanana-out-now-ps5-xbox-november-13-trailer.mp4",
+  0.0
+ ],
+ "strip": [
+  [
+   "سعر PS5",
+   [
+    "aed",
+    "39"
+   ]
+  ],
+  [
+   "سعر Xbox",
+   "7.99 دولار"
+  ]
+ ],
+ "angle": {
+  "hook": "BOMBANANA, a three-player co-op bomb defusal game where each player is a monkey that cannot see, hear or speak, is out on PS5 and Xbox",
+  "why_now": "the console versions launched 13 Nov 2026 at 09:00 UTC (13:00 Dubai) after the Steam release on 2 Sep",
+  "what_it_means_here": "UAE PS Store lists it at 39 AED (PS Plus members 20% off until 27 Nov); the UAE Xbox store shows 7.99 USD",
+  "payoff": "the information is split between the three players, so they must communicate with gestures and voice"
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: PS Store UAE concept page read 13 Nov 09:37Z (release 2026-11-13T09:00Z, 39.00 AED, PS Plus 31.20 AED to 27 Nov, description), Xbox Store page (release 2026-11-13T09:00Z, USD 7.99), Steam page (released 2 Sep 2026); TARK press release reprint on Denfaminicogamer read",
+  "SOURCE: age": "first report 13 Nov 09:00Z, about 17 h at the slot",
+  "SOUND": "trailer own sound by the audio split; faster-whisper VAD on the whole trailer found no speech or singing",
+  "PICTURE": "official Steam trailer (the PS Store and Xbox store trailers are the same edit); cartoon art, nothing graphic",
+  "CREDIT": "on every shot from frame 0"
+ }
 }
