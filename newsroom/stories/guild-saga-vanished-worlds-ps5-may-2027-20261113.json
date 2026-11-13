@@ -1,7 +1,7 @@
 {
  "id": "guild-saga-vanished-worlds-ps5-may-2027-20261113",
  "title": "Guild Saga: Vanished Worlds announced for PS5, May 2027 (PlayStation Blog, Ocelot Technologies)",
- "status": "built by builder-0915 (job and Reel pending render qc); planned slot 09:15 Dubai Sat 14 Nov (05:15Z), ig, x, threads",
+ "status": "built by builder-0915, render qc pass (v1, job_sha ef8a9c0e), awaiting separate director; planned slot 09:15 Dubai Sat 14 Nov (05:15Z), ig, x, threads",
  "lane": "digital-lounge",
  "game": "Guild Saga: Vanished Worlds",
  "subject_person": null,
@@ -68,5 +68,9 @@
  },
  "read_aloud": "لعبة Guild Saga قادمة إلى PS5 في مايو 2027. لعبة تقمص أدوار تكتيكية يضم قتالها نحو 200 مهارة. سيُعلن يوم الإصدار قبيل موعده.",
  "arabic_review": "arabic-games-film-editor, arabic-writing and arabic-grammar-review loaded fresh; glossary and conventions read; grammar stage on job lines, X text and caption: no required edits, no uncertain cases (feminine agreement for the game, release verbs قادمة إلى and تصدر, digits Western, first word of every line Arabic, no flipping signs). DeepL forward whole-story pass (EN to AR) agreed in meaning; alternatives kept ours: بنظام الأدوار (DeepL القتال بالتناوب), نحو (حوالي), قبيل موعده (مع اقتراب موعد الإطلاق); adopted مهامه (DeepL) over مهماته; DeepL wrote «أوسيلوت تكنولوجيز» in guillemets and Guild Saga in quotes (house form kept). Back-check AR to EN: Ocelot Technologies said on the PlayStation Blog that Guild Saga is coming to PS5 in May 2027, turn-based tactical RPG, exact date closer to launch, about 200 skills across ten specialisations, weather and terrain affect battles, each team member has a story and missions, Early Access on Steam since Oct 2024 without Arabic, no PS5 price mentioned",
- "approved": "not yet: separate director then schedule at 09:15 Dubai Sat 14 Nov"
+ "approved": "not yet: separate director then schedule at 09:15 Dubai Sat 14 Nov",
+ "job": "job file commit 3ab2f19 (jobs/live/guild-saga-vanished-worlds-ps5-may-2027-20261113.json, removed by the render commit f379d61), job_sha ef8a9c0eb8f7a89ddcc00c0d00c7e9d0275c321b; reel cards/2026-11/guild-saga-vanished-worlds-ps5-may-2027-20261113-reel-v1.mp4 (12.4 s before the end card, 14.4 s in all); 3 dispatches (v1 render pass but hook frame dark and a blood stretch; v2 art-first hook, blood stretch removed)",
+ "picture": "official Steam Gameplay Trailer (1080p60, 1.78x): party art hook (76.83 s), boss in the roots, slime and skull lab, beach and the two sprites, portrait, ship deck; every frame of every chosen stretch viewed at 4 fps as 9:16 crops: nothing graphic (v1 had a creature over a body with blood from 54.0 s, removed); credit «المصدر: أوسيلوت تكنولوجيز (Ocelot Technologies)» visible at frames 0 to 3 s; the Steam HLS fetch loses the picture before 3.02 s so scene 0 is not available",
+ "sound": "trailer's own music (audio split applied, music 99.3%, leak 0%); speech: none (faster-whisper small on the whole trailer and on the final Reel: VAD on returns nothing; VAD off only the usual 'Music' and 'Chime' hallucinations)",
+ "notes_open": "shot 3 (beach and the two sprites, 18.36 to 21.3 s) ends as the game's tiny dialogue text starts to fade in (about 0.3 s at timeline 9.0 s, inside the dark dialogue box under our line); trimming would take the Reel under the 12 s floor, so it is left for the director; total 12.4 s before the end card (margin 0.4 s over the floor); PS5 price not stated by the source; Arabic press not checked beyond the digest; the 08:15 neighbour is God of War PS4"
 }
