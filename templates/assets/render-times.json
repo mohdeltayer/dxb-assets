@@ -48018,5 +48018,162 @@
   "dispatches": 1,
   "sound": "trailer",
   "footage": true
+ },
+ {
+  "name": "ball-x-pit-risen-ballbylon-out-now-nov-12-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-13T02:56Z",
+  "stages": {
+   "checks": 4.0,
+   "montage": 37.5,
+   "text": 31.8,
+   "audio": 1.5,
+   "outro": 20.8
+  },
+  "total": 95.6,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-13T02:55Z",
+  "finished_at": "2026-11-13T02:56Z",
+  "render_min": 1.59,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "ball-x-pit-risen-ballbylon-out-now-nov-12-dlc-trailer.mp4",
+    "start": 5.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.42,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "ball-x-pit-risen-ballbylon-out-now-nov-12-dlc-trailer.mp4",
+    "start": 8.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.42,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "ball-x-pit-risen-ballbylon-out-now-nov-12-dlc-trailer.mp4",
+    "start": 11.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.42,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "ball-x-pit-risen-ballbylon-out-now-nov-12-dlc-trailer.mp4",
+    "start": 14.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.42,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "ball-x-pit-risen-ballbylon-out-now-nov-12-dlc-trailer.mp4",
+    "start": 17.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.42,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "ball-x-pit-risen-ballbylon-out-now-nov-12-dlc-trailer.mp4",
+    "start": 20.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.42,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "ball-x-pit-risen-ballbylon-out-now-nov-12-dlc-trailer.mp4",
+    "start": 23.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.42,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 4.6,
+   "audio_secs": 21.0,
+   "music_pct": 21.2,
+   "leak_pct": 38.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "reason": "music stem not clean (leftover 38.3% > 5.0%)",
+   "secs": 7.6
+  },
+  "lifeless": {
+   "score": 2.0,
+   "still_share": 0.027,
+   "longest_still": 0.2,
+   "cuts_per_10s": 13.37,
+   "held_under_text": 0.0,
+   "secs": 18.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 162,
+  "queue_wait_secs": 44,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1132,
+  "peak_mem_mb": 2171,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 29303,
+  "peak_disk_mb": 32703,
+  "min_disk_free_mb": 213403,
+  "setup_min": 0.17,
+  "story": "ball-x-pit-risen-ballbylon-out-now-nov-12",
+  "job_sha": "f1672550ba4e0a41df7adce1a7edacc4e535a03b",
+  "dispatches": 2,
+  "sound": "trailer",
+  "footage": true
  }
 ]
