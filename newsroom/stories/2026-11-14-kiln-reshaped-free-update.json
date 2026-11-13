@@ -1,7 +1,7 @@
 {
  "id": "2026-11-14-kiln-reshaped-free-update",
  "title": "Kiln: Reshaped, Double Fine's biggest update, adds two 4v4 modes, local play for up to four, party codes and offline play",
- "status": "v2 rebuilding after director fail (overclaim of party codes across Steam; sound start)",
+ "status": "v2 built, qc pass, awaiting director again (04:15 Dubai Sat 14 Nov slot, 00:15Z)",
  "builder": "builder 04:15 Sat 14 Nov",
  "slot": "2026-11-14T00:15Z (04:15 Dubai Sat 14 Nov)",
  "subject_person": null,
@@ -84,14 +84,15 @@
  "deepl": "forward whole-story pass and phrase alternatives read; back-check of Reel lines and X text: first X draft 'بين Xbox وPlayStation وSteam' read back as cross-collection support, so reworded to 'تجمع أصدقاء'; Reel lines read back correctly (group codes, four-player local play)",
  "gate": "gate 09:20Z: Double Fine Steam announcements (12 Nov 18:34Z, 10 Nov 19:06Z) read in full, Steam store page and Launch Trailer read; no denial or change found; recheck within the hour before the slot (queued over 6 h ahead); first report about 29.7 h old at the slot, no Arabic outlet found carrying it",
  "build": {
-  "reel": "cards/2026-11/kiln-reshaped-free-update-modes-party-codes-november-12-reel-v1.mp4",
+  "reel": "cards/2026-11/kiln-reshaped-free-update-modes-party-codes-november-12-reel-v2.mp4",
   "job": "kiln-reshaped-free-update-modes-party-codes-november-12",
-  "job_sha": "284e264bf2d75d01df2b83957de4cd56f6aeeaeb",
-  "job_commit": "2fb9a1b",
-  "render_commit": "69d87b8",
-  "qc": "pass, no findings, 19.9 s before the end card, audio split applied (music 93.8%), sound trailer, dispatches 4 (pace, reading time, vocal start)",
-  "speech": "final Reel whisper: 0 to 2 s a spurious word at the headline only (v5 heard Satisfaction from the sung vocal, so the track start moved to 18.5 s); none under the Arabic lines",
+  "job_sha": "a9d373c0d677216a65d61b7066f3034509a3865d",
+  "job_commit": "09338f9",
+  "render_commit": "165ad43",
+  "qc": "pass, no findings, 18.7 s before the end card, audio split applied (music 99.3%), sound trailer",
+  "speech": "final v2, raw 16 kHz samples, first 3 s: VAD on none, VAD off none (only a silence hallucination at 17.2 to 20 s over the end card); band-energy 0.11, 0.07, 0.05 in seconds 0 to 2; track from 25.6 s; shots avoid white frames (28.88, 35.33) and cropped burnt-in text (83.54, 90.17, 101.77)",
   "new_terms": "رموز المجموعة (Party Codes), كشك التصوير (Photo Booth), دابل فاين (Double Fine) follows one earlier post; to add to names-ar.md",
-  "dropped_first_pick": "9 Kings 1.0 (Steam, 29.50 AED, 50 percent off to 26 Nov): its only trailer is all in-game UI text, shot picker found 2 clean stretches of 1.7 s"
+  "dropped_first_pick": "9 Kings 1.0 (Steam, 29.50 AED, 50 percent off to 26 Nov): its only trailer is all in-game UI text, shot picker found 2 clean stretches of 1.7 s",
+  "director_fixes": "party codes claim limited to Xbox and PlayStation in line 3, X/Threads text and IG caption; white-blob shot replaced; track start moved until first 3 s clean"
  }
 }
