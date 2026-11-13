@@ -72,5 +72,25 @@
  "gore_check": "judged at 4 fps as 9:16 crops: Alien shots 76.7 to 79.8 (face close-ups, cheek skin blemish, jacket), 83.35 to 85.55 (face, jacket), 87.6 to 91.68 (corridor, woman, lit face), 92.15 to 95.75 (faces, flare, dim corridor): no blood, no wounds. MotD 29.53 to 33.63: stylised stormy sea, anchor and wreck, no blood (the red specks at about 16 to 17 s of that trailer are outside the used stretch). Rejected for gore: Alien E3 trailer (burning face). Notes: Alien: Isolation is a CGI 2014 trailer, dim by design; one near-dark frame about 8 s into the Reel; the first 4 s are a lit face.",
  "job": "job file commit 00441ac (jobs/live/epic-free-games-alien-isolation-mark-of-the-deep-nov-19-20261114.json, deleted by the render commit afterwards), job_sha 5a59dce8ce2c6f2de0519074979a3faae57ac8f2; Reel cards/2026-11/epic-free-games-alien-isolation-mark-of-the-deep-nov-19-20261114-reel-v1.mp4 (render commit 30e8df1), strip, sheet, dense, qc.json beside it; qc verdict pass, 0 findings, length 15.1 s before the end card",
  "dispatches": "4 server renders: v1 split audio failed (music stem not clean), v2 our bed, v3 face-first, v4 reading time failure, v5 pass; plus 2 cancelled dispatches",
- "note_for_director": "check: first 4 s lit face then dim corridor; the AED 150 strip label is for Alien: Isolation only (Mark of the Deep's AED 53 is in the caption only); end date 26 Nov in strip, start 19 Nov in headline, time in L2"
+ "note_for_director": "check: first 4 s lit face then dim corridor; the AED 150 strip label is for Alien: Isolation only (Mark of the Deep's AED 53 is in the caption only); end date 26 Nov in strip, start 19 Nov in headline, time in L2",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/epic-free-games-alien-isolation-mark-of-the-deep-nov-19-20261114-reel-v1.mp4",
+  "blob": "c84b7ef4c6f2c0660f3aef7ccbdd2008f2dadfd6",
+  "at": "2026-11-13T17:45:39Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/epic-free-games-alien-isolation-mark-of-the-deep-nov-19-20261114.json",
+   "sha256": "8cbc39f6830a705399b0f87b6f901c281d93f01bac5449d53240a8d090fba8fb",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-1315"
+  },
+  "by": "director-1415",
+  "qc": "pass",
+  "looked": "9:16 4fps dense strip and mp4: Alien CGI faces, jacket, corridor; storm sea for Mark of the Deep; no blood or wounds; first frame lit face with headline, 1 to 3.5 s dim corridor under headline, near-dark about 7.6 s with line readable; credits SEGA / Light Up Games visible from frame 0; strip AED 150 and 26 Nov consistent with lines; bed neon_c audible no silence; reading pace ok"
+ }
 }
