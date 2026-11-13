@@ -1,10 +1,36 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T13:52:05Z",
- "seq": 436,
+ "generated_at": "2026-11-13T14:05:18Z",
+ "seq": 437,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 13815,
+   "source": "PlayStation Blog",
+   "source_kind": "official",
+   "title": "QSSR arrives in Marvel’s Spider-Man 2, Control Resonant, The Finals, ARC Raiders, and Hell Let Loose: Vietnam",
+   "url": "https://blog.playstation.com/2026/11/13/qssr-arrives-in-marvels-spider-man-2-control-resonant-the-finals-arc-raiders-and-hell-let-loose-vietnam/",
+   "published": "2026-11-13T14:00Z",
+   "first_seen": "2026-11-13T14:05:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/tachyon/2026/11/105d12450fe9246de305a3a43412100d0e299216-scaled.jpg?fit=1024%2C1024"
+    },
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/tachyon/2026/11/105d12450fe9246de305a3a43412100d0e299216.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 437
+  }
+ ],
  "recent": [
   {
    "id": 13790,
@@ -827,25 +853,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 378
-  },
-  {
-   "id": 12639,
-   "source": "Bungie",
-   "source_kind": "official",
-   "title": "Dev Deep Dive: Expedition - Phase 1",
-   "url": "https://www.bungie.net/7/en/News/Article/dev_deep_dive_expedition_phase_1",
-   "published": "2026-11-12T14:00Z",
-   "first_seen": "2026-11-12T14:05:04Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 377
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T13:50:05Z",
+  "last_poll_at": "2026-11-13T14:05:14Z",
   "sources_enabled": 100,
-  "sources_ok": 94,
+  "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 52x)",
