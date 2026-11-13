@@ -1,7 +1,7 @@
 {
  "id": "star-wars-galactic-racer-1-5-million-players-20261114",
  "title": "STAR WARS: Galactic Racer passes 1.5 million players a month after launch (Push Square, citing the game's official X post, 13 Nov 2026)",
- "status": "render dispatched (render-live), job v4 showcase layout",
+ "status": "built, QC pass (render-live 21:20Z, job v7, job_sha 27c736ce); awaiting director; slot proposed 17:15 Dubai Sat 14 Nov (13:15Z)",
  "lane": "digital-lounge",
  "game": "STAR WARS: Galactic Racer",
  "subject_person": null,
@@ -76,5 +76,13 @@
   "forward": "whole story run once: تجاوزت لعبة ... حاجز 1.5 مليون لاعب ... وتعد اللغة العربية من بين اللغات المدعومة; terms: «حتى نفاد الكمية» for stock phrases (unused here); our wording kept, الإصدار القياسي vs النسخة العادية chosen النسخة العادية",
   "back_check": "passed: 1.5 million one month after launch, per Push Square citing the game's official X post, sales or players unclear, 165 dirhams UAE, 159 riyals Saudi, Arabic among supported languages"
  },
- "sound": "trailer music-only stretch, Launch Trailer from 44.96 s (whisper vad on and off: no speech 42.7 to 69.2 s); speech: none"
+ "sound": "trailer music-only stretch, Launch Trailer from 44.96 s (whisper vad on and off: no speech 42.7 to 69.2 s); speech: none",
+ "render": {
+  "job_commit": "902f27b",
+  "job_sha": "27c736ce0b60d76d8744fd3e9341a87565ff316d",
+  "reel": "cards/2026-11/star-wars-galactic-racer-1-5-million-players-20261114-reel-v1.mp4",
+  "layout": "showcase (letterboxed source)",
+  "sound": "our bed neon_b with bed_reason",
+  "renders": "5 dispatches: credit tuple shape, 2 music_only stem failures (5.8%, 16.0%), then bed"
+ }
 }
