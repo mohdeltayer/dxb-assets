@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-13T18:52:05Z",
- "seq": 449,
+ "generated_at": "2026-11-13T19:00:15Z",
+ "seq": 450,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 14100,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Defeat Monsters, Control the Pitch & Become an Epic Champion | This Week on XBOX",
+   "url": "https://www.youtube.com/watch?v=fUNO1g5D84g",
+   "published": "2026-11-13T18:47Z",
+   "first_seen": "2026-11-13T19:00:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/fUNO1g5D84g/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=fUNO1g5D84g"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 450
+  }
+ ],
  "recent": [
   {
    "id": 13992,
@@ -577,7 +599,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-13T18:50:05Z",
+  "last_poll_at": "2026-11-13T19:00:14Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 6,
