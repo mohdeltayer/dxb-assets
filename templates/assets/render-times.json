@@ -63202,5 +63202,139 @@
   "dispatches": 2,
   "sound": "trailer",
   "footage": true
+ },
+ {
+  "name": "forest-escape-last-train-rainbow-location-november-14-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-14T11:17Z",
+  "stages": {
+   "checks": 3.3,
+   "montage": 30.4,
+   "text": 24.4,
+   "audio": 0.9,
+   "outro": 14.6
+  },
+  "total": 73.6,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-14T11:15Z",
+  "finished_at": "2026-11-14T11:17Z",
+  "render_min": 1.23,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "forest-escape-last-train-rainbow-location-november-14-trailer.mp4",
+    "start": 0.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "forest-escape-last-train-rainbow-location-november-14-trailer.mp4",
+    "start": 6.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "forest-escape-last-train-rainbow-location-november-14-trailer.mp4",
+    "start": 9.8,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "forest-escape-last-train-rainbow-location-november-14-trailer.mp4",
+    "start": 40.95,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "forest-escape-last-train-rainbow-location-november-14-trailer.mp4",
+    "start": 43.2,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 7.3,
+   "audio_secs": 22.9,
+   "music_pct": 64.2,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "effects_shots": 0,
+   "mix_secs": 2.6,
+   "secs": 11.0
+  },
+  "lifeless": {
+   "score": 1.1,
+   "still_share": 0.008,
+   "longest_still": 0.1,
+   "cuts_per_10s": 4.69,
+   "held_under_text": 0.023,
+   "secs": 12.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 130,
+  "queue_wait_secs": 1,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1141,
+  "peak_mem_mb": 2665,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 40826,
+  "peak_disk_mb": 42814,
+  "min_disk_free_mb": 203293,
+  "setup_min": 0.2,
+  "story": "forest-escape-last-train-rainbow-location-november-14",
+  "job_sha": "d2d3c5c87e4b567a1b3d44054b8b5c07714cf494",
+  "dispatches": 3,
+  "sound": "trailer",
+  "footage": true
  }
 ]
