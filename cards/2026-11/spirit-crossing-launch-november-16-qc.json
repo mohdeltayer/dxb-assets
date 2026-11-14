@@ -2,16 +2,16 @@
  "name": "spirit-crossing-launch-november-16",
  "out": "cards/2026-11/spirit-crossing-launch-november-16-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-14T16:55:55Z",
+ "at": "2026-11-14T17:00:09Z",
  "findings": [],
  "notes": [
-  "length 12.6 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 55.0; leak_pct 0.1; cache {'hit': 0, 'miss': 3}; separate_secs 6.2; secs 9.8",
-  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 6.35, \"held_under_text\": 0.0, \"secs\": 12.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 12.4 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 54.8; leak_pct 0.1; cache {'hit': 1, 'miss': 2}; separate_secs 4.0; secs 7.6",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 6.45, \"held_under_text\": 0.0, \"secs\": 12.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "7896309e55cb9a3ebc72ac2977f1d844e100a71e",
- "dispatches": 2,
+ "job_sha": "cc97d5a7618205a5a8b8d123df730e0a0c59bafb",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
