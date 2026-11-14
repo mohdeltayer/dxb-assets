@@ -1,7 +1,7 @@
 {
  "id": "warhammer-survivors-roadmap-free-updates-20261115",
  "title": "Warhammer Survivors roadmap: four free updates from December 2026 to Q1 2027, a bigger piece of content in Q2 2027, per Auroch Digital's Steam post",
- "status": "built by builder-1615 for 16:15 Dubai Sun 15 Nov (QC pass, v3); NOT scheduled, no director run; RE-GATE within the hour before 16:15 Dubai (Sun)",
+ "status": "built by builder-1615 for 16:15 Dubai Sun 15 Nov (QC pass, Reel v4 after the director's FAIL on v3); NOT scheduled, no director run on v4; RE-GATE within the hour before 16:15 Dubai (Sun)",
  "lane": "digital-lounge",
  "game": "Warhammer Survivors",
  "subject_person": null,
@@ -91,38 +91,50 @@
   "back_check_EN_GB": "Free updates are coming to Warhammer Survivors... The first and fourth updates will add new characters and weapons. The second will bring improvements, and the third will introduce cross-device progression. Further major content is planned for the second quarter of 2027, though no further details are available yet. (headline, lines, card, X and caption all read as ours; DeepL wrote 'Orok Digital' for the name, spelling kept as in names-ar)"
  },
  "grammar_review": {
+  "run": "15 Nov 2026 as a separate pass with the arabic-grammar-review skill loaded again; opened: house glossary (text-direction and digit rows), perfect-arabic SKILL.md and 03-derivatives (نعت, مطابقة), arabic-writing orthography.md, known-issues.md",
   "required_edits": [],
   "optional_style_suggestions": [
    {
-    "original": "ثم محتوى أكبر في الربع الثاني من 2027 بلا تفاصيل بعد",
-    "suggestion": "a nominal fragment continuing the previous beats; valid, a verb would read heavier on screen",
-    "reason": "style only"
+    "original": "من ديسمبر إلى الربع الأول 2027 (card note)",
+    "suggestion": "من ديسمبر إلى الربع الأول من 2027",
+    "reason": "the repeated من reads smoother; dropped for the card width"
    }
   ],
   "uncertain_cases": [
    {
-    "text": "أولها ورابعها يضيفان",
-    "issue": "dual agreement with two non-human antecedents",
-    "why_uncertain": "feminine singular is also accepted for non-human plurals; the dual verb is correct for a coordinated pair",
+    "text": "نشرت أوروك ديجيتال خارطتها",
+    "issue": "the pronoun in خارطتها could be read as the game's rather than the company's",
+    "why_uncertain": "the headline above names the game and the credit names the company; both are feminine",
     "options": [
-     "يضيفان",
-     "تضيف"
+     "keep",
+     "خارطة الطريق (does not fit the reading time)"
+    ]
+   },
+   {
+    "text": "أولها ورابعها شخصيات وأسلحة",
+    "issue": "verbless nominal sentence on screen; valid ellipsis for a beat",
+    "why_uncertain": "style only",
+    "options": [
+     "keep"
     ]
    }
   ],
-  "note": "opened: house glossary, perfect-arabic SKILL.md, arabic-writing orthography.md and conventions.md; no required edits"
+  "checked": "headline, 4 lines, card, credit, X/Threads text, Instagram caption: feminine agreement of non-human plurals, أربعة تحديثات polarity, كلاهما + singular verb, Western digits, no em dash, every line starts with an Arabic word, brackets at first mention, source named in the X text, hashtags only on Instagram"
  },
  "approved": "NOT scheduled (builder stop point)",
  "re_gate": "RE-GATE within the hour before 16:15 Dubai (Sun): re-read the Steam news feed for Warhammer Survivors (a changed date, an update post), the roadmap image, and Push Square",
  "render": {
-  "reel": "cards/2026-11/warhammer-survivors-roadmap-free-updates-20261115-reel-v3.mp4",
-  "job_file_commit": "e15f787 is the render commit; job v7 commit 28fa781",
-  "job_sha": "0bf98322ef27c0ad9b4875ec0ad6524e56005fa4",
-  "dispatches": 4,
+  "reel": "cards/2026-11/warhammer-survivors-roadmap-free-updates-20261115-reel-v4.mp4",
+  "sidecars": "strip, sheet, dense and qc.json for v4 are the unsuffixed names; v3's are -strip-v3.jpg, -sheet-v3.jpg, -dense-v3.jpg, -qc-v3.json",
+  "job_file_commit": "399eaf9 (job v8)",
+  "render_commit": "8ec4437",
+  "job_sha": "5509ecb95006a8d294d00efa7ceec3043e63c8fe",
+  "dispatches": 5,
   "length_before_end_card_s": 20.1,
-  "sound": "trailer: Skulls trailer from 14.0 s, audio split applied (music 65.1%, leak 0.8%), music under every second to the end card (RMS 8 to 19 per 1 s)",
-  "speech": "none: faster-whisper small on both trailers (VAD on and off) and on the finished Reel (VAD on: nothing; VAD off: only the tag 'Music' to 20.1 s and a hallucinated 'Thank you for watching' over the end-card jingle)",
-  "history": "v1 (qc pass) had marines firing green beams at 4.75 to 5.6 s and chest UI text: dense strip read, shots re-cut; job v2 card note too wide; v3/v4 block_ok on the trailer's scene cut; v5 platform shot trimmed; v6 block_ok on the icon grid (tile edges); the v3 Reel is the one to use; v1 and v2 mp4 files in cards/2026-11 are superseded and not for posting",
-  "open_notes": "the last shot shows a stylised monster helmet for 0.3 s from 19.5 s under the last line (no weapon, no blood); 'Steam' and 'منشور' are in the X, Threads and caption text only, the on-screen line says «خارطتها» for reading time; pixel hit sparks are red at 15.5 to 16 s (pixel-art effects, not blood)"
+  "sound": "trailer: Skulls trailer from 14.0 s, audio split applied (music 65.1%, leak 0.8%); finished-Reel RMS per second 7 to 19 through to the end card, never silent",
+  "speech": "none: faster-whisper small on the finished v4 audio, VAD on: nothing; VAD off: one hallucinated line over the music ('Dear viewers, if you enjoyed this video... subscribe') and no words in the trailer files (checked earlier, both trailers, VAD on and off)",
+  "credit_check_v4": "one credit entry [0,10] with from_start; the strip frames at 0.2, 3, 5.3, 6.4, 8, 9.6 and 15.8 s all show «المصدر: أوروك ديجيتال (Auroch Digital)» (the card span included)",
+  "line3_note": "line 3 now has shade=True; at about 15.5 to 16.0 s the white damage numerals and smoke behind it still read weakly (the shot's last 0.4 s); not shifted because the line needs 3.4 s on screen",
+  "history": "v1 to v3 as in the earlier record; v3 was the director's FAIL (credit gap at the card span); v1, v2 and v3 mp4 files stay in cards/2026-11 and are superseded"
  }
 }

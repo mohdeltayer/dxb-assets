@@ -1,0 +1,26 @@
+{
+ "name": "warhammer-survivors-roadmap-free-updates-20261115",
+ "out": "cards/2026-11/warhammer-survivors-roadmap-free-updates-20261115-reel-v3.mp4",
+ "verdict": "pass",
+ "at": "2026-11-14T21:32:11Z",
+ "findings": [],
+ "notes": [
+  "length 20.1 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 65.1; leak_pct 0.8; cache {'hit': 2, 'miss': 6}; separate_secs 10.4; secs 15.9",
+  "smear check: exempt 5.29 to 10.59 s (our own cards)",
+  "render_job: lifeless: {\"score\": 0.9, \"still_share\": 0.01, \"longest_still\": 0.1, \"cuts_per_10s\": 8.5, \"held_under_text\": 0.0, \"secs\": 20.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "0bf98322ef27c0ad9b4875ec0ad6524e56005fa4",
+ "dispatches": 4,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "trailer"
+}
