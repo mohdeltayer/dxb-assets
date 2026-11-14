@@ -162,5 +162,21 @@
    "crop": "focus 0.87",
    "music": "our bed"
   }
- ]
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Team Meat's Steam page (appdetails 4269060 and the store page) read 14 Nov ~12:40Z; Gematsu and Denfaminico read for context",
+  "SOURCE: not already posted": "yes: grep of newsroom/stories for 'meat boy' finds only this story",
+  "SOURCE: age": "yes: first report 14 Nov 04:36Z (Gematsu), under 24 h at 09:15 Dubai 15 Nov is about 28 h; no Arabic outlet carries it, so still news (24 to 48 h rule)",
+  "ANGLE before lines": "yes: angle in the job",
+  "STORY TYPE announcement": "yes: what it is, platform (Steam), what is new, 300+ levels, date to be announced, no price listed",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names Super Meat Boy; L1 Team Meat announces Again Plus; L2 art, music, scenes; L3 300+ levels; L4 coming to Steam, date not announced",
+  "STORY: release verbs": "yes: قادمة إلى Steam, الموعد لم يُعلن بعد; no bare تصل",
+  "STORY: names match names-ar.md": "yes: تيم ميت (Team Meat) added",
+  "POST: Arabic passes": "yes: arabic-games-film-editor, arabic-writing, arabic-grammar-review (separate pass: line 1 needed عن after أعلنت, applied), DeepL forward whole story and back-check; Western digits; plus sign spelled out (Again Plus)",
+  "SOUND: footage sound or bed with reason": "bed: stills have no sound; bed_reason names the one trailer opened",
+  "SOUND: no speech under Arabic lines": "yes: our bed only",
+  "PICTURE: footage first": "stills_reason in the job",
+  "PICTURE: not the same as last 5 reels": "yes: no recent Reel on Super Meat Boy",
+  "CREDIT: on every clip": "yes: credit from frame 0 over every shot"
+ }
 }
