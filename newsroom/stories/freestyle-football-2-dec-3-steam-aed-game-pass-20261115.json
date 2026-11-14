@@ -1,11 +1,54 @@
 {
  "id": "freestyle-football-2-dec-3-steam-aed-game-pass-20261115",
  "title": "FreeStyle Football 2: December 3 on PC, PS5 and Xbox, Steam pre-orders open at 109.99 AED, Game Pass day one",
- "status": "claimed: building for the 18:15 Dubai Sun 15 Nov slot (builder-1815)",
+ "status": "building (builder-1815) for 18:15 Dubai Sun 15 Nov",
  "lane": "digital-lounge",
  "game": "FreeStyle Football 2",
- "companies": ["JOYCITY", "WOORE"],
+ "companies": [
+  "JOYCITY",
+  "WOORE"
+ ],
  "subject_person": null,
  "template": "comparison",
- "claimed_at": "2026-11-14T23:00:00Z"
+ "claimed_at": "2026-11-14T23:00:00Z",
+ "kind": "price",
+ "kind_news": "price",
+ "label": "السعر",
+ "chip": "السعر",
+ "genre": [
+  "sports",
+  "multiplayer"
+ ],
+ "platform": "pc (Steam), xbox (Game Pass), ps5 per the publisher's trailer end card",
+ "sources": [
+  {
+   "name": "Steam store page for FreeStyle Football 2 (JOYCITY, WOORE), UAE store, read 14 Nov 2026 about 22:40 Dubai through the Steam store API and the page: release 3 Dec 2026, Standard 109.99 AED, pre-purchase promotion 10 percent, 98.99 AED, offer ends 3 December; Deluxe 146.99, Ultimate 254.49; languages English, Korean, French, German, Spanish, Japanese, Portuguese, Chinese",
+   "url": "https://store.steampowered.com/app/4004820/FreeStyle_Football_2/"
+  },
+  {
+   "name": "Xbox Store page: FreeStyle Football 2, 'Coming to PC Game Pass and Xbox Game Pass Ultimate', JOYCITY Corp. publisher, WOORE developer",
+   "url": "https://www.xbox.com/en-US/games/store/freestyle-football-2/9NL8MF491NRZ/0010"
+  },
+  {
+   "name": "Pure Xbox, 14 Nov 2026, 'Five Games Are Confirmed For Xbox Game Pass In December 2026 So Far' (secondary: FreeStyle Football 2 on Game Pass 3 Dec)",
+   "url": "https://www.purexbox.com/news/2026/11/five-games-are-confirmed-for-xbox-game-pass-in-december-2026-so-far"
+  }
+ ],
+ "first_report": "Steam pre-order announcement 14 Oct 2026 (Pre-order Schedule and Benefits, JOYCITY); Pure Xbox Game Pass December list 14 Nov 2026 about 20:00 Dubai; no Arabic outlet found",
+ "source_type": "primary",
+ "ledger_find": {
+  "at": "2026-11-14T23:00:00Z",
+  "words": [
+   "freestyle",
+   "football",
+   "joycity",
+   "woore"
+  ],
+  "hits": [],
+  "note": "newsroom/ledger.py find failed on a story file with a list folder; searched by hand: grep of newsroom/stories for freestyle, joycity, woore, dumpster finds nothing but this claim stub"
+ },
+ "footage": "official Steam trailer Festival_Main (appid 4004820, movie 257354882), 1920x1080 30 fps 5.5 Mbps, no speech (faster-whisper small, VAD on and off, nothing), enlargement 1.78x; other trailers PAX_trailer (narration with English subtitles, black cards) and Ingame, Wishlist_Steam not used",
+ "beat": "4 price/release comparison: hook number, date, Steam price, Game Pass, language gap",
+ "recipe": "comparison (price kind with split and clipcard at their Sunday caps): hard cuts on the trailer, one label line per state",
+ "sensitive": "none"
 }
