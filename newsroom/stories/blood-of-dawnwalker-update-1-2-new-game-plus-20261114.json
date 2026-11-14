@@ -1,7 +1,7 @@
 {
  "id": "blood-of-dawnwalker-update-1-2-new-game-plus-20261114",
  "title": "The Blood of Dawnwalker Update 1.2 adds New Game Plus (level cap 100), planned next week (Eurogamer quoting Rebel Wolves, 13 Nov 2026)",
- "status": "built, job dispatched (render-live pending); planned 22:15 Dubai Sat 14 Nov (18:15Z) on Instagram, X, Threads; RE-GATE within the hour before 22:15 Dubai: Eurogamer and Rebel Wolves re-read, a denial stops it",
+ "status": "built, qc pass (render-live run 43550824640, v1); awaiting director; planned 22:15 Dubai Sat 14 Nov (18:15Z) on Instagram, X, Threads; RE-GATE within the hour before 22:15 Dubai: Eurogamer and Rebel Wolves re-read, a denial stops it",
  "lane": "digital-lounge",
  "game": "The Blood of Dawnwalker",
  "subject_person": null,
@@ -43,7 +43,7 @@
  "chip": "تقرير",
  "headline_ar": "لعبة Dawnwalker\nتحصل على New Game Plus",
  "draft_ar_lines": [
-  "حسب يوروغيمر (Eurogamer)،\nتحصل The Blood of Dawnwalker\nعلى هذا الوضع",
+  "حسب يوروغيمر (Eurogamer)،\nالوضع قادم إلى The Blood of Dawnwalker",
   "من أنهى خاتمة اللعبة\nيعود بمستواه ومهاراته وأغراضه",
   "الحد الأقصى للمستوى 100\nمع قوة أعداء موحدة",
   "موعد التحديث المقرر:\nالأسبوع المقبل"
@@ -56,7 +56,7 @@
  "beat": "update",
  "recipe": "update shape (change, demonstration, effect on play, availability); stills",
  "footage": "No usable trailer: stills_reason in the job. Seven official Steam screenshots (1920x1080, UI-free, no blood): hero with axe, companion, market square, night duel, vampire portrait; crops 0.3, 0.7, 0.4, 0.3, 0.55, 0.69, 0.43; 3.7 s each",
- "sound": "our bed (stills have no sound of their own); bed_reason in the job names the three trailers checked",
+ "sound": "our bed neon_c (stills have no sound of their own); bed_reason in the job names the three trailers checked: Launch (narrated), Update 1.1 (captions, blood, PEGI card, dialogue), Features (narrated, subtitled); director to sign",
  "ledger_find": {
   "at": "2026-11-14T02:55:01Z",
   "words": [
@@ -79,6 +79,11 @@
     "original": "لعبة Dawnwalker",
     "suggestion": "headline uses the short name because The Blood of Dawnwalker does not fit two lines at 72 px; L1 carries the full name",
     "reason": "layout"
+   },
+   {
+    "original": "الوضع قادم إلى The Blood of Dawnwalker",
+    "suggestion": "none",
+    "reason": "two-line limit; names the game in full as the headline carries the short name"
    }
   ],
   "uncertain_cases": [
@@ -91,5 +96,14 @@
     ]
    }
   ]
- }
+ },
+ "render": {
+  "job_commit": "1e48e7d",
+  "job_sha": "330dfc31dfd3216ad27597ffd7873ea68cc5a6ca",
+  "out": "cards/2026-11/blood-of-dawnwalker-update-1-2-new-game-plus-20261114-reel-v1.mp4",
+  "dispatches": "3 renders on the server (v5 pace error, v6 line-count error, v7 lifeless 47.9 fail then pans: lifeless 0.9, qc pass); 25.7 s before the end card (over the 12 to 20 s target, 7 stills at 3.7 s so the picture changes every 3.7 s)",
+  "layout": "7 official Steam screenshots 1920x1080 with slow pans (crop windows 0.22-0.42, 0.62-0.8, 0.3-0.5, 0.4-0.2, 0.45-0.65, 0.78-0.6, 0.36-0.52), enlargement 1.78x",
+  "track": "our bed neon_c plus the jingle end card; whisper small on the finished audio: no speech (vad on: nothing; vad off: «Music», «You» over the card jingle); per-second RMS -21 to -17 dBFS, no silence before the end card"
+ },
+ "picture_checks": "dense strip 4 fps read: no blood, gore or sexual content; the red tattoos and red armour are costume; no slate, rating card or burnt-in text; credit «المصدر: ريبل ولفز (Rebel Wolves)» visible from frame 0 over all shots; first frame daylight, chip and two-line headline readable; headline overlaps the top of the axe head in shot 1 (face clear); last frames before the end card a picture"
 }
