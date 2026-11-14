@@ -1,25 +1,20 @@
 {
  "name": "blood-of-dawnwalker-update-1-2-new-game-plus-20261114",
  "out": "cards/2026-11/blood-of-dawnwalker-update-1-2-new-game-plus-20261114-reel-v1.mp4",
- "verdict": "fail",
- "at": "2026-11-14T03:15:44Z",
- "findings": [
-  {
-   "check": "lifeless",
-   "detail": "lifeless score 47.9 (still_share 0.746, longest still 3.1 s): too much of the Reel holds still; footage behind the cards, the count-up and row reveal, more cuts"
-  }
- ],
+ "verdict": "pass",
+ "at": "2026-11-14T03:22:22Z",
+ "findings": [],
  "notes": [
   "length 25.7 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
   "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
-  "render_job: lifeless: {\"score\": 47.9, \"still_share\": 0.746, \"longest_still\": 3.1, \"cuts_per_10s\": 2.34, \"held_under_text\": 0.031, \"secs\": 25.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": true}"
+  "render_job: lifeless: {\"score\": 0.9, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 2.34, \"held_under_text\": 0.0, \"secs\": 25.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "81332f1ef409058f825750c6bb778f6a028584a4",
- "dispatches": 2,
+ "job_sha": "330dfc31dfd3216ad27597ffd7873ea68cc5a6ca",
+ "dispatches": 3,
  "source_summary": {
   "min_height": null,
-  "max_zoom": null,
+  "max_zoom": 1.78,
   "lowbit_shots": 0
  },
  "quality": "base",
