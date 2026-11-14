@@ -164,16 +164,8 @@
  "template": "trailer",
  "skin": "house",
  "cut": true,
- "track": [
-  "trees-hate-you-trailer.mp4",
-  2.0
- ],
- "music_only": true,
- "music_fade": [
-  0.3,
-  0.6
- ],
- "sound_note": "trailer music stem (audio split, music_only) from 2.0 s under the whole cut (a 6.0 s start left 5.7% effects in the stem and failed); faster-whisper small, VAD on and off, found no speech in the 60 s trailer",
+ "track": "bed",
+ "sound_note": "our bed (see bed_reason); no speech: faster-whisper small, VAD on and off, found none in the 60 s trailer",
  "genre": [
   "indie",
   "family"
@@ -204,5 +196,6 @@
   "PICTURE: not graphic": "yes: cartoon top-down trailer, no blood, gore, weapons at people or muzzle flashes; frames judged 1 fps contact sheets and the finished dense strip",
   "CREDIT: on every clip": "yes: one credit over all six shots from frame 0",
   "SENSITIVE": "n/a: none"
- }
+ },
+ "bed_reason": "our bed, director to sign off: the only trailer on the Steam page ('Release Date Announcement', 60 s, appid 4171850 movie 257350012) was opened and its audio is effects-led gameplay sound (boulder rumbles, trap hits): the Cocktail Fork split found 35.8% music and left 8.4% effects in the music stem from a 2.0 s start (5.7% from 6.0 s), both over the 5% limit, and a plain stretch cannot follow cuts from six different moments of the trailer; the Steam page lists no other trailer (the demo page was not opened)"
 }
