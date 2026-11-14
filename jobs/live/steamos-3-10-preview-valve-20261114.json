@@ -1,0 +1,142 @@
+{
+ "name": "steamos-3-10-preview-valve-20261114",
+ "story": "steamos-3-10-preview-valve-20261114",
+ "kind_news": "beta",
+ "built_by": "builder-0615-steamos",
+ "render_lane": "server",
+ "out": "cards/2026-11/steamos-3-10-preview-valve-20261114-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "steam-deck-available-now.mp4",
+   "steam": 1675200,
+   "trailer": "Steam Deck Available Now",
+   "trailer_id": 1749094849,
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [
+  [
+   "steam-deck-available-now.mp4",
+   0.0,
+   1.0,
+   null
+  ],
+  [
+   "steam-deck-available-now.mp4",
+   6.8,
+   2.65,
+   null
+  ],
+  [
+   "steam-deck-available-now.mp4",
+   9.45,
+   2.45,
+   null
+  ],
+  [
+   "steam-deck-available-now.mp4",
+   13.28,
+   2.52,
+   null
+  ],
+  [
+   "steam-deck-available-now.mp4",
+   15.85,
+   1.5,
+   null
+  ],
+  [
+   "steam-deck-available-now.mp4",
+   21.5,
+   2.5,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   3,
+   [
+    "طرحت فالف نسخة معاينة\nمن SteamOS 3.10",
+    "تحسّن توقيت الإطارات\nمع محدد الإطارات في VRR"
+   ]
+  ],
+  [
+   4,
+   5,
+   [
+    "تدعم HDMI 2.1 VRR\nلرسوميات إيه إم دي (AMD)"
+   ]
+  ]
+ ],
+ "strip": [
+  [
+   "القناة",
+   "المعاينة"
+  ],
+  [
+   "الجهاز",
+   "Steam Deck"
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   5,
+   "المصدر: فالف (Valve)",
+   {
+    "from_start": true,
+    "low": true,
+    "size": 42,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "معاينة SteamOS 3.10\nتحسّن دعم VRR",
+ "label": "رسمي",
+ "source": "فالف (Valve)",
+ "date": "14 Nov 2026",
+ "theme": "cold",
+ "style": "frame",
+ "template": "split",
+ "skin": "house",
+ "track": [
+  "steam-deck-available-now.mp4",
+  0.0
+ ],
+ "music_only": true,
+ "cut": true,
+ "pace_ok": false,
+ "sound": null,
+ "genre": [
+  "industry/hardware"
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Valve Steam news post 'SteamOS 3.10.0 Preview' read in full through the Steam news API 14 Nov 2026 ~09:50Z (published 02:04Z); phrases: 'This update is for the Steam Deck Preview channel', 'early Preview build of SteamOS 3.10, and may contain unexpected bugs or stability issues', 'Improved frame timing when using the framerate limiter with VRR', 'Added support for HDMI 2.1 VRR, FRL, and ALLM'",
+  "SOURCE: not already posted": "yes: ledger find by grep: only SteamOS 3.9 stable (24 Oct), a different release; no 3.10 story",
+  "SOURCE: age": "yes: first report is Valve's post 14 Nov 02:04Z; 24 h at the slot; no outlet or Arabic outlet carried it in the digests to 08:52Z",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE beta/update": "yes: what changed (VRR frame timing, HDMI 2.1 VRR on AMD), the channel and the warning on the strip and in the caption, the limit (early build) in the strip and text",
+  "STORY: spoken paragraph, subject before pronoun": "yes: L1 names Valve and the build, L2 and L3 continue with the build as subject; no line opens on و",
+  "STORY: release verbs": "yes: طرحت for a build put out; no date or game release stated",
+  "STORY: names match names-ar.md": "yes: فالف (Valve) in the credit then فالف; إيه إم دي (AMD) first mention in line 3; names-ar row for Valve added",
+  "POST: Arabic passes": "yes: arabic-games-film-editor, arabic-writing, arabic-grammar-review (own pass), DeepL forward and back, see story file",
+  "SOUND: footage sound or bed with reason": "yes: the Steam Deck trailer's own music only (music_only: true: Cocktail Fork music stem, no effects, no voices); loudness 1 s windows -10 to -7 dB from 1 s, quiet -19 dB the first second; faster-whisper small VAD on: one hallucinated 'Thanks for watching!' at 0.9 s on music, VAD off: the same phrase at 23.6 s, no speech (quote cards are text only)",
+  "SOUND: no speech under Arabic lines": "yes: no speech in the trailer (measured)",
+  "PICTURE: footage first": "yes: official Valve trailer 'Steam Deck Available Now' 1080p 24 fps 5.1 Mbps, decode clean on the server fetch",
+  "PICTURE: credit on every clip": "yes: credit 0 to 5 from frame 0",
+  "PICTURE: headline not over a face": "yes: first shot is the Deck on its dock; later shots checked by the director on the dense strip",
+  "CHECKS: decision log": "yes: decision_log in the job"
+ },
+ "decision_log": [
+  "shot 0 (0.0-1.0): the Deck on its dock, a hand lifts it: the product and a moving first frame; ends before the white slate at 1.2 s",
+  "shot 1 (6.8-9.45): hammock, picnic: people playing handheld; starts after the white slate (6.5) and the first frame is the hammock at 6.75",
+  "shot 2 (9.45-11.9): hands on the Deck, the Deck on a car dash; ends before the skateboard wide shot (12.0)",
+  "shot 3 (13.28-15.8): the docked Deck at a desk with monitors, then its parts float apart (a docked-to-display shot for the HDMI line, no gore)",
+  "shot 4 (15.85-17.35): floating parts of the Deck; ends before the space-game frame with game text (17.5)",
+  "shot 5 (21.5-24.0): the Deck on a lap then at night by a river; ends before the beach jump (24.0)",
+  "music: the trailer's own music stem for the whole Reel (music_only): the shots are cut from several moments, so effects would not match; stretch from 0.0 s, no speech",
+  "not used: Steam Machine and Steam Frame trailers (a logo bug in the top centre of every frame, inside the 9:16 window), the quote cards, game-footage stretches with burnt-in text and weapons"
+ ]
+}

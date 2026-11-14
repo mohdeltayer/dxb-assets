@@ -87,6 +87,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Embark Studios | إمبارك | Proposed 14 Nov (QSSR Reel), flagged for Mohammad |
 | Hello Games | هيلو غيمز | Proposed 14 Nov (QSSR Reel), flagged for Mohammad |
 | AMD | إيه إم دي | Proposed 14 Nov (QSSR Reel), flagged for Mohammad |
+| Valve | فالف | In use (SteamOS 3.9 Reel, 24 Oct; bracket فالف (Valve) at first mention) |
 | Bungie | بانجي | Proposed 8 Nov 2026 (Halo turns 25 Reel; flagged for Mohammad) |
 | Halo Studios | هالو ستوديوز | Proposed 8 Nov 2026 (Halo turns 25 Reel; flagged for Mohammad) |
 | Infinity Ward | إنفينيتي وارد | In use |
