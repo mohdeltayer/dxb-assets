@@ -20,6 +20,8 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 ### Platform holders and publishers
 | Latin | Arabic | Status |
 |---|---|---|
+| JOYCITY (FreeStyle Football 2 publisher, Korea) | جويسيتي | Proposed 15 Nov 2026 (FreeStyle Football 2 price Reel: Latin in brackets at first mention «جويسيتي (JOYCITY)»; the Reel credit reads «جويسيتي (JOYCITY)»; «الناشرة» as the role word) |
+| WOORE (FreeStyle Football 2 developer, Korea) | ووري | Proposed 15 Nov 2026 (caption only, first mention «ووري (WOORE)», «المطورة» as the role word) |
 | Future Friends Games (Queen's Domain publisher, UK) | فيوتشر فريندز غيمز | In use 14 Nov 2026 (Queen's Domain 200k Reel, director-2: Latin in brackets at first mention; the credit line carries the full form; «الناشرة» as the role word; follows the house غيمز) |
 | Freshly Baked Games (Queen's Domain developer, two people) | فريشلي بيكد غيمز | In use 14 Nov 2026 (Queen's Domain 200k caption, director-2: Latin in brackets at first mention; «الاستوديو» after) |
 | Tykenn (Trees Hate You developer and publisher on Steam; a solo or small developer, so the role word المطور) | تايكين | Proposed 14 Nov 2026 (first on-screen mention carries the Latin in brackets: «المطور تايكين (Tykenn)»; the Reel credit reads «تايكين (Tykenn)») |
