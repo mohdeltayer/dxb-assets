@@ -1,7 +1,7 @@
 {
  "id": "unicorn-academy-island-of-magic-nov-17-20261115",
  "title": "Unicorn Academy: Island of Magic launches Tue 17 Nov 2026 on PS5, PS4, Xbox Series X|S, Switch and Steam (Mindscape)",
- "status": "v2 built, QC pass (job 23b95a54, render 57498f6); RE-GATE within the hour before 15:15 Dubai (Sun); not scheduled, no director run on v2",
+ "status": "scheduled in Publer 15:15 Dubai Sun 15 Nov (11:15Z) 3/3 (ids ig:5148a0 x:5148a3 th:5148ab); director PASS v2; RE-GATE within the hour before 15:15 still due",
  "lane": "digital-lounge",
  "game": "Unicorn Academy: Island of Magic",
  "subject_person": null,
@@ -83,11 +83,32 @@
   "regate": "RE-GATE within the hour before 15:15 Dubai (Sun)"
  },
  "translation_notes": "DeepL whole-story forward (Arabic): تُطلق for launch (house: تصدر), game name translated and Spin Master left Latin (house: names stay Latin / Arabic with bracket), تربية وحيد القرن and علاقة وثيقة where we write يرعى and رابطة; kept ours. Phrase alternatives: while supplies last not used; 'launches on' gave يُطلق في (house تصدر); release date gave تاريخ الإصدار (we write موعد الصدور). Back-check Arabic to English: meaning identical (game, two days, Spin Master series, first-year student, unicorn care and race, bond, Ravenzella's scheme, 17 November, PS5, Xbox, Switch, Steam). Grammar review run 15 Nov as its own pass (house glossary, perfect-arabic SKILL.md and arabic-writing orthography.md opened): required_edits [], optional_style_suggestions [], uncertain_cases [] (mixed Latin names inside Arabic lines checked for the text-direction rule: every line opens Arabic). | v2 (15 Nov, after director FAIL): platform list set to the press release (PS5, PS4, Xbox Series X|S, Switch, Steam; Xbox One dropped); grammar review run again as its own pass (skill loaded fresh; glossary, perfect-arabic SKILL.md, orthography.md opened; grammar.md numbers and conventions.md dates read): required_edits [], optional [], uncertain [] (the date 17 نوفمبر follows conventions.md: transliterated month, Western digits); DeepL back-check of X, caption and card (sourceLang AR): meaning identical, platforms and Mindscape plus Steam page as sources. | card note: the card font check cannot measure a two-line note and 'PS5 · PS4 · Xbox Series X|S · Switch · Steam' is wider than the plate, so the card says «على الكونسول والحاسوب» (PS4, PS5, Xbox Series X|S, Switch; Steam on PC) and the exact list is in the X text and caption.",
- "approved": "not approved: studio build, stops before director and scheduling (builder 15:15 Dubai slot)",
+ "approved": "director PASS v2 (director-1515-unicorn-v2, 14 Nov 21:31Z); v1 FAIL: no credit on card shot, fixed in v2; card note generic accepted",
  "sound": "trailer music stem only (audio split applied with music_only: music_pct 10.7, leak 1.8; the trailer narrates 2.2 to 86.7 s, stripped). whisper small on the finished Reel: VAD on nothing, first 3 s nothing, VAD off only the usual music hallucination; music runs to the end card",
  "shots": "7 shots v2: 13.0 (3.4), 7.2 (4.0), 20.0 (3.6), 22.9 (2.9), card 3.0, 41.9 (3.2), 78.4 (2.4)",
  "qc": "v2 pass, 20.1 s before the end card, lifeless 4.0; credit visible through the card span (checked at 14.2 s); audio: trailer music stem, whisper VAD on and first 3 s nothing",
  "uncertainties": "as v1 (accepted by the director): reading girl about 1 s under the unicorn line, beanbag 17.25 to 17.75 s, blazer-man ghost at t=0; card note is generic («على الكونسول والحاسوب») because the font check cannot fit the exact list; exact list (PS5, PS4, Xbox Series X|S, Switch, Steam) is in the X text and caption",
  "reel": "cards/2026-11/unicorn-academy-island-of-magic-nov-17-20261115-v2-reel-v1.mp4 (v1 files keep their names)",
- "reel_v2": "cards/2026-11/unicorn-academy-island-of-magic-nov-17-20261115-v2-reel-v1.mp4 (job name unicorn-academy-island-of-magic-nov-17-20261115-v2; v1 files keep their names)"
+ "reel_v2": "cards/2026-11/unicorn-academy-island-of-magic-nov-17-20261115-v2-reel-v1.mp4 (job name unicorn-academy-island-of-magic-nov-17-20261115-v2; v1 files keep their names)",
+ "scheduled": "scheduled in Publer 11:15Z: instagram, x, threads, ids ig:5148a0 x:5148a3 th:5148ab; labels kind:news,tpl:clipcard,skin:house,sound:trailer,genre:family",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/unicorn-academy-island-of-magic-nov-17-20261115-v2-reel-v1.mp4",
+  "blob": "3d2a36cab8f8b50fa3c8c69b7fabf4ab84971f55",
+  "at": "2026-11-14T21:31:28Z",
+  "note": "director v2: v1 FAILED on missing card-shot credit; v2 credit covers shots 0-6 incl. card (frames 12.4-15.3 checked); transcribe: no speech; card note generic accepted (exact list in X/caption); facts re-read Steam 15 Nov",
+  "checklist": {
+   "job": "jobs/live/unicorn-academy-island-of-magic-nov-17-20261115-v2.json",
+   "sha256": "2bcb7424ef36fc4e99d5e25c966a9c7083e820cea2f143c64240766b116ad646",
+   "ok": true,
+   "problems": [],
+   "template": "clipcard",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-1515-unicorn"
+  },
+  "by": "director-1515-unicorn-v2",
+  "qc": "pass",
+  "looked": null
+ }
 }
