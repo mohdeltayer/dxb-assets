@@ -34,7 +34,7 @@
    "url": "https://www.purexbox.com/news/2026/11/five-games-are-confirmed-for-xbox-game-pass-in-december-2026-so-far"
   }
  ],
- "first_report": "Steam pre-order announcement 14 Oct 2026 (Pre-order Schedule and Benefits, JOYCITY); Pure Xbox Game Pass December list 14 Nov 2026 about 20:00 Dubai; no Arabic outlet found",
+ "first_report": "Steam pre-order announcement 14 Oct 2026 (JOYCITY). What is NEW and reported: the UAE price and the ten percent pre-purchase offer ending 3 Dec as the Steam page shows them on 14 to 15 Nov, and Game Pass among the confirmed December titles (Pure Xbox 14 Nov). Nothing older is presented as new; the Reel says 'the offer ends', not 'announced'.",
  "source_type": "primary",
  "ledger_find": {
   "at": "2026-11-14T23:00:00Z",
@@ -47,22 +47,23 @@
   "hits": [],
   "note": "newsroom/ledger.py find failed on a story file with a list folder; searched by hand: grep of newsroom/stories for freestyle, joycity, woore, dumpster finds nothing but this claim stub"
  },
- "footage": "official Steam trailer Festival_Main (appid 4004820, movie 257354882), 1920x1080 30 fps 5.5 Mbps, no speech (faster-whisper small, VAD on and off, nothing), enlargement 1.78x; other trailers PAX_trailer (narration with English subtitles, black cards) and Ingame, Wishlist_Steam not used",
+ "footage": "official Steam trailers of appid 4004820: Festival_Main (clean stretches 9.08, 29.85, 42.95, 49.45 s; music track from 19 s) and PAX_trailer (clean stretches 15.13, 17.37, 22.3, 50.8 s; its narration and burnt subtitles avoided). Rejected: Ingame and Wishlist_Steam (UI and title overlays), the six Steam page loop videos (1170x658, 2.9x enlargement), in-world signs (SUNLIGHT, Introducing U-GK 01, NL) of v2. Xbox Store page: no video in the page text; Pure Xbox: no official clip found; no press kit found; Steam news video not searched.",
  "beat": "4 price/release comparison: hook number, date, Steam price, Game Pass, language gap",
  "recipe": "comparison (price kind with split and clipcard at their Sunday caps): hard cuts on the trailer, one label line per state",
  "sensitive": "none",
  "texts": {
-  "x": "تصدر FreeStyle Football 2 في 3 ديسمبر، وسعر الحجز المسبق على متجر Steam في الإمارات 98.99 درهم بعد خصم 10 بالمئة (109.99 درهم قبل الخصم). وهي قادمة إلى Game Pass، لكن قائمة لغات Steam لا تضم العربية. حسب صفحتي اللعبة على Steam ومتجر Xbox.",
-  "threads": "تصدر FreeStyle Football 2 في 3 ديسمبر، وسعر الحجز المسبق على متجر Steam في الإمارات 98.99 درهم بعد خصم 10 بالمئة (109.99 درهم قبل الخصم). وهي قادمة إلى Game Pass، لكن قائمة لغات Steam لا تضم العربية. حسب صفحتي اللعبة على Steam ومتجر Xbox.",
+  "x": "يبلغ سعر FreeStyle Football 2 على متجر Steam في الإمارات 109.99 درهم، ويصبح 98.99 درهم بخصم 10 بالمئة للحجز المسبق حتى صدورها في 3 ديسمبر. وهي قادمة إلى Game Pass، لكن قائمة لغات Steam لا تضم العربية. حسب صفحتي اللعبة على Steam ومتجر Xbox.",
+  "threads": "يبلغ سعر FreeStyle Football 2 على متجر Steam في الإمارات 109.99 درهم، ويصبح 98.99 درهم بخصم 10 بالمئة للحجز المسبق حتى صدورها في 3 ديسمبر. وهي قادمة إلى Game Pass، لكن قائمة لغات Steam لا تضم العربية. حسب صفحتي اللعبة على Steam ومتجر Xbox.",
   "instagram": "سعر FreeStyle Football 2 على Steam في الإمارات: 98.99 درهمًا للحجز المسبق\n\nتصدر لعبة كرة القدم FreeStyle Football 2 من الناشرة جويسيتي (JOYCITY) والمطورة ووري (WOORE) في 3 ديسمبر 2026. وعلى متجر Steam في الإمارات يبلغ سعر النسخة العادية 109.99 درهمًا، ويصبح 98.99 درهمًا مع خصم الحجز المسبق البالغ 10 بالمئة، وينتهي العرض في 3 ديسمبر.\n\nوتقول صفحة اللعبة على متجر Xbox إنها قادمة إلى PC Game Pass وXbox Game Pass Ultimate. أما قائمة لغات Steam فتضم الإنجليزية والكورية والفرنسية والألمانية والإسبانية واليابانية والبرتغالية والصينية، ولا تضم العربية.\n\nالمصدر: صفحة اللعبة على Steam ومتجر Xbox، 15 نوفمبر 2026.\n\n#ألعاب #أخبار_الألعاب #FreeStyleFootball2 #Steam",
   "headline": "في FreeStyle Football 2\nحجز مسبق بخصم 10 بالمئة",
   "lines": [
-   "تصدر في 3 ديسمبر بسعر\nقدره 109.99 درهم في الإمارات",
-   "اللعبة قادمة إلى Game Pass أيضًا"
+   "على Steam في الإمارات\nيبدأ السعر من 98.99 درهم",
+   "ينتهي عرض الحجز يوم تصدر\nاللعبة في 3 ديسمبر",
+   "وهي قادمة إلى Game Pass أيضًا"
   ],
   "credit": "المصدر: جويسيتي (JOYCITY)",
   "source": "صفحة Steam الرسمية",
-  "note": "the Steam language list (no Arabic) and the 98.99 AED figure are in the X text and the caption, not on screen: the footage had only 12.2 s of clean stretches"
+  "note": "the Steam language list (no Arabic) is in the X text and the caption, not on screen"
  },
  "re_gate": "RE-GATE within the hour before 18:15 Dubai (Sun): re-read the Steam store page and API for the UAE store (price 98.99 AED, promotion end 3 Dec, release date, languages), the Xbox Store page (Game Pass line) and Pure Xbox",
  "deepl": {
@@ -73,10 +74,10 @@
    "Coming to Game Pass": "DeepL: قادم إلى Game Pass (masculine; house: feminine for game names, قادمة إلى)",
    "language list does not include Arabic": "DeepL: لا تتضمن قائمة اللغات اللغة العربية; ours قائمة لغات Steam لا تضم العربية (names the store)"
   },
-  "back_check_EN_GB": "FreeStyle Football 2 is due to be released on 3 December, and the pre-order price on the Steam store in the UAE is 98.99 dirhams after a 10 per cent discount (109.99 dirhams before the discount). It is coming to Game Pass, but the Steam language list does not include Arabic, according to the game's page on Steam. Headline: Pre-order FreeStyle Football 2 for 98.99 dirhams (ours: from 98.99). L2: It costs 109.99 dirhams in the UAE, with a 10 per cent discount for advance bookings. L1, L3, L4 read as ours."
+  "back_check_EN_GB": "FreeStyle Football 2 is due to be released on 3 December, and the pre-order price on the Steam store in the UAE is 98.99 dirhams after a 10 per cent discount (109.99 dirhams before the discount). It is coming to Game Pass, but the Steam language list does not include Arabic, according to the game's page on Steam. Headline: Pre-order FreeStyle Football 2 for 98.99 dirhams (ours: from 98.99). L2: It costs 109.99 dirhams in the UAE, with a 10 per cent discount for advance bookings. L1, L3, L4 read as ours. || v3 lines: 'On Steam in the UAE / Prices start from 98.99 dirhams'; 'The pre-order offer ends on the day the game is released, 3 December'; 'It's coming to Game Pass as well'; X text: 'priced at 109.99 dirhams on the Steam store in the UAE, and is available for 98.99 dirhams with a 10 per cent pre-order discount until its release on 3 December. It is coming to Game Pass, but the Steam language list does not include Arabic. According to the game's pages on Steam and the Xbox Store.' All read as ours."
  },
  "grammar_review": {
-  "run": "15 Nov 2026 as a separate pass with arabic-grammar-review loaded; opened: house glossary, perfect-arabic SKILL.md, arabic-writing orthography.md, known-issues.md, conventions.md section 6",
+  "run": "15 Nov 2026, repeated as a separate pass on the v3 texts with arabic-grammar-review: required edits none; checked يوم تصدر اللعبة (ظرف مضاف إلى جملة فعلية), صفحتي اللعبة (مثنى مضاف), حتى صدورها, agreement of the game name (feminine), tanwin alif in أيضًا, first word Arabic on every line, glued prefixes none on Latin names",
   "required_edits": [],
   "optional_style_suggestions": [],
   "uncertain_cases": [
@@ -117,5 +118,6 @@
    "v1 pass is 13.3 s; v2 cut the ball shot to 1.1 s and kept the sign by mistake (the sign sits at the start of that shot)"
   ]
  },
- "approved": "built by builder-1815; NOT director-checked; NOT scheduled; RE-GATE within the hour before 18:15 Dubai (Sun)"
+ "approved": "built by builder-1815; NOT director-checked; NOT scheduled; RE-GATE within the hour before 18:15 Dubai (Sun)",
+ "template_note": "comparison of two ways to get the game (buy on Steam in the UAE, or Game Pass); the lines act as state labels with the one figure in the first label; the list template (three editions with AED prices) was not used because it needs per-edition art and a card format I could not verify in time"
 }
