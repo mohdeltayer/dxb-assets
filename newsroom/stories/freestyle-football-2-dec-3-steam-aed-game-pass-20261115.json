@@ -50,5 +50,55 @@
  "footage": "official Steam trailer Festival_Main (appid 4004820, movie 257354882), 1920x1080 30 fps 5.5 Mbps, no speech (faster-whisper small, VAD on and off, nothing), enlargement 1.78x; other trailers PAX_trailer (narration with English subtitles, black cards) and Ingame, Wishlist_Steam not used",
  "beat": "4 price/release comparison: hook number, date, Steam price, Game Pass, language gap",
  "recipe": "comparison (price kind with split and clipcard at their Sunday caps): hard cuts on the trailer, one label line per state",
- "sensitive": "none"
+ "sensitive": "none",
+ "texts": {
+  "x": "تصدر FreeStyle Football 2 في 3 ديسمبر، وسعر الحجز المسبق على متجر Steam في الإمارات 98.99 درهم بعد خصم 10 بالمئة (109.99 درهم قبل الخصم). وهي قادمة إلى Game Pass، لكن قائمة لغات Steam لا تضم العربية. حسب صفحتي اللعبة على Steam ومتجر Xbox.",
+  "threads": "تصدر FreeStyle Football 2 في 3 ديسمبر، وسعر الحجز المسبق على متجر Steam في الإمارات 98.99 درهم بعد خصم 10 بالمئة (109.99 درهم قبل الخصم). وهي قادمة إلى Game Pass، لكن قائمة لغات Steam لا تضم العربية. حسب صفحتي اللعبة على Steam ومتجر Xbox.",
+  "instagram": "سعر FreeStyle Football 2 على Steam في الإمارات: 98.99 درهمًا للحجز المسبق\n\nتصدر لعبة كرة القدم FreeStyle Football 2 من الناشرة جويسيتي (JOYCITY) والمطورة ووري (WOORE) في 3 ديسمبر 2026. وعلى متجر Steam في الإمارات يبلغ سعر النسخة العادية 109.99 درهمًا، ويصبح 98.99 درهمًا مع خصم الحجز المسبق البالغ 10 بالمئة، وينتهي العرض في 3 ديسمبر.\n\nوتقول صفحة اللعبة على متجر Xbox إنها قادمة إلى PC Game Pass وXbox Game Pass Ultimate. أما قائمة لغات Steam فتضم الإنجليزية والكورية والفرنسية والألمانية والإسبانية واليابانية والبرتغالية والصينية، ولا تضم العربية.\n\nالمصدر: صفحة اللعبة على Steam ومتجر Xbox، 15 نوفمبر 2026.\n\n#ألعاب #أخبار_الألعاب #FreeStyleFootball2 #Steam",
+  "headline": "في FreeStyle Football 2\nحجز مسبق من 98.99 درهم",
+  "lines": [
+   "تصدر اللعبة في 3 ديسمبر",
+   "سعرها في الإمارات 109.99 درهم\nوبخصم 10 بالمئة للحجز المسبق",
+   "اللعبة قادمة إلى Game Pass أيضًا",
+   "قائمة لغات Steam لا تضم العربية"
+  ],
+  "credit": "المصدر: جويسيتي (JOYCITY)",
+  "source": "صفحة Steam الرسمية"
+ },
+ "re_gate": "RE-GATE within the hour before 18:15 Dubai (Sun): re-read the Steam store page and API for the UAE store (price 98.99 AED, promotion end 3 Dec, release date, languages), the Xbox Store page (Game Pass line) and Pure Xbox",
+ "deepl": {
+  "forward_whole_story": "AR: سيتم إطلاق لعبة «FreeStyle Football 2» في 3 ديسمبر ... 109.99 درهم إماراتي، أو 98.99 درهم إماراتي مع خصم 10 في المائة على الشراء المسبق ... وستتوفر اللعبة أيضًا على خدمة PC Game Pass وXbox Game Pass Ultimate. Meaning matches ours; differences: DeepL wrote سيتم إطلاق (passive, house: تصدر), درهم إماراتي (ours درهم), في المائة (ours بالمئة), الشراء المسبق (house: الحجز المسبق), ستتوفر على خدمة (ours قادمة إلى per glossary 28 Oct).",
+  "phrases": {
+   "pre-order discount": "DeepL: خصم الحجز المسبق (same as ours)",
+   "pre-purchase promotion ends on launch day": "DeepL: تنتهي الحملة الترويجية السابقة للشراء في يوم الإطلاق (literal, misses meaning; ours: وينتهي العرض في 3 ديسمبر)",
+   "Coming to Game Pass": "DeepL: قادم إلى Game Pass (masculine; house: feminine for game names, قادمة إلى)",
+   "language list does not include Arabic": "DeepL: لا تتضمن قائمة اللغات اللغة العربية; ours قائمة لغات Steam لا تضم العربية (names the store)"
+  },
+  "back_check_EN_GB": "FreeStyle Football 2 is due to be released on 3 December, and the pre-order price on the Steam store in the UAE is 98.99 dirhams after a 10 per cent discount (109.99 dirhams before the discount). It is coming to Game Pass, but the Steam language list does not include Arabic, according to the game's page on Steam. Headline: Pre-order FreeStyle Football 2 for 98.99 dirhams (ours: from 98.99). L2: It costs 109.99 dirhams in the UAE, with a 10 per cent discount for advance bookings. L1, L3, L4 read as ours."
+ },
+ "grammar_review": {
+  "run": "15 Nov 2026 as a separate pass with arabic-grammar-review loaded; opened: house glossary, perfect-arabic SKILL.md, arabic-writing orthography.md, known-issues.md, conventions.md section 6",
+  "required_edits": [],
+  "optional_style_suggestions": [],
+  "uncertain_cases": [
+   {
+    "text": "ووري (WOORE)",
+    "issue": "transliteration of a Korean developer name, not in names-ar",
+    "why_uncertain": "no published Arabic form; proposed in names-ar",
+    "options": [
+     "keep",
+     "drop the Arabic and keep WOORE"
+    ]
+   },
+   {
+    "text": "سعرها في الإمارات 109.99 درهم / درهمًا in the caption",
+    "issue": "headline and lines write درهم, caption and X text follow the glossary (درهمًا in captions)",
+    "why_uncertain": "X text uses درهم with digits, valid",
+    "options": [
+     "keep"
+    ]
+   }
+  ],
+  "checked": "headline, 4 lines, credit, X/Threads text, Instagram caption: agreement of the game name (feminine), non-human plural agreement, tamyiz after decimals, glued prefixes on Latin names (none on screen), Western digits, no em dash, first word Arabic on every line and paragraph, brackets at first mention, source named, hashtags only on Instagram"
+ }
 }
