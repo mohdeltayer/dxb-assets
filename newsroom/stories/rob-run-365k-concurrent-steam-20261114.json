@@ -1,7 +1,7 @@
 {
  "id": "rob-run-365k-concurrent-steam-20261114",
  "title": "ROB RUN passes 365,000 concurrent players on Steam (Denfaminicogamer, 14 Nov 2026, citing SteamDB)",
- "status": "job v1 written, render pending; RE-GATE within the hour before 00:15 Dubai (Sun)",
+ "status": "rendered v1 (job v4, job_sha d44d4e5a680d38230f5900c07b7e89fd678c0fa9, commit a8454db), qc pass, waiting for director; RE-GATE within the hour before 00:15 Dubai (Sun)",
  "lane": "digital-lounge",
  "game": "ROB RUN",
  "subject_person": null,
@@ -78,5 +78,12 @@
  },
  "regate": "RE-GATE within the hour before 00:15 Dubai (Sun): re-read Denfaminicogamer, Steam page (reviews, languages), search for SteamDB or Kefir statement; the figure is attributed, the peak cannot fall",
  "planned_slot": "00:15 Dubai Sun 15 Nov 2026 (Sat 20:15Z), Digital Lounge X, Instagram, Threads",
- "job": "jobs/live/rob-run-365k-concurrent-steam-20261114.json"
+ "job": "jobs/live/rob-run-365k-concurrent-steam-20261114.json",
+ "render": {
+  "reel": "cards/2026-11/rob-run-365k-concurrent-steam-20261114-reel-v1.mp4",
+  "qc": "pass, 12.5 s before the end card, audio split applied music 88.8% leak 0.2%",
+  "renders": "4 dispatches: pace stop, blocky smear stop, success v3 (wrong stretch: server HLS timeline runs 0.75 s ahead of the local copy), success v4 final",
+  "speech": "faster-whisper small on the final audio: vad on no speech; vad off only the usual music hallucination",
+  "notes": "first frame is a car with the trailer's white scratch graphic; 'TO PROTECT AND TO SERVE' decal on a police car is in-world and mostly behind the strip at 7.6 to 8.3 s"
+ }
 }
