@@ -1,7 +1,7 @@
 {
  "id": "kuloniku-bowl-up-switch-2-nov-25-20261114",
  "title": "KuloNiku: Bowl Up! coming to Switch 2 and Switch on 25 Nov, per Gematsu and Nintendo Everything",
- "status": "built, awaiting director",
+ "status": "built, QC pass, awaiting director; planned slot 11:15 Dubai Sun 15 Nov (07:15Z); RE-GATE within the hour before 11:15 Dubai (Sun)",
  "lane": "digital-lounge",
  "game": "KuloNiku: Bowl Up!",
  "subject_person": null,
@@ -74,11 +74,25 @@
  },
  "grammar_review": "arabic-grammar-review run as a separate pass (glossary, perfect-arabic SKILL.md, orthography.md opened): no required edits; house rules checked (feminine agreement with لعبة, brackets at first mention, Western digits, no hashtags on X, every line starts Arabic, no glued prefix on screen); uncertain: none. DeepL whole-story forward (alternatives ستصدر/سيصدر, متوفرة على منصة Steam kept ours) and back-check matched the English",
  "gate": "gate 15:55Z: Gematsu and Nintendo Everything read; Raw Fury news and Nintendo store searched, no primary; Steam page read; no denial found. RE-GATE within the hour before 11:15 Dubai (Sun)",
- "versions": [],
+ "versions": [
+  {
+   "v": 1,
+   "file": "cards/2026-11/kuloniku-bowl-up-switch-2-nov-25-20261114-reel-v1.mp4",
+   "job_sha": "6535b97adc7b089b28d65818dfc85379ccf155a2",
+   "job_commit": "88292ec",
+   "qc": "pass, 0 findings, 13.5 s before the end card, audio split applied (music 94.8%, leak 0.0%), sound trailer",
+   "note": "round 1 (job 27248d12) carried an in-scene sign cut at the 9:16 edges and a line over a judge's face; replaced in round 2"
+  }
+ ],
  "approved": "RE-GATE within the hour before 11:15 Dubai (Sun); planned slot 11:15 Dubai Sun 15 Nov (07:15Z); director signs",
  "reel_lines": [
   "يرث اللاعب مطعم جدته لكرات اللحم ليحييه",
   "يحضّر الطلبات ويطوّر المطعم ويزيّنه",
   "ثم يواجه طهاة منافسين"
- ]
+ ],
+ "checks_by_builder": {
+  "whisper": "faster-whisper small on the finished Reel 0 to 15.5 s: VAD on nothing; VAD off only the hallucinated 'Subscribe to the channel for more videos!' over music (source trailer audio had no speech either)",
+  "music_per_second_rms": "0.15 at 0 s then 0.19 to 0.31 through 12.5 s, 0.20 and 0.24 over the end card (no silent tail)",
+  "known_flags": "kitchen whip-pan blur pulses (source's own transition, about 0.2 s every 0.65 s) at about 7.3 to 8.9 s; last frame before the end card is the source's motion blur; the strip pins a three-item key facts row over the lower footage"
+ }
 }
