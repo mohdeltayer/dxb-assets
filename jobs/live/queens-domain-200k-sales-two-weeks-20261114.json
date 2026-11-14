@@ -9,7 +9,7 @@
   {
    "file": "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
    "steam": 1799840,
-   "trailer": "Launch",
+   "trailer": "RDA",
    "start": 0,
    "seconds": 240
   }
@@ -17,45 +17,45 @@
  "shots": [
   [
    "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
-   0.0,
+   4.6,
    3.0,
    [
     [
      0.0,
-     0.259
+     0.5
     ]
    ]
   ],
   [
    "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
-   8.26,
-   1.78,
+   7.6,
+   1.4,
    [
     [
      0.0,
-     0.456
+     0.5
     ]
    ]
   ],
   [
    "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
-   18.6,
-   1.75,
+   24.2,
+   2.8,
    [
     [
      0.0,
-     0.835
+     0.5
     ]
    ]
   ],
   [
    "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
-   20.35,
-   2.3,
+   38.01,
+   1.0,
    [
     [
      0.0,
-     0.554
+     0.61
     ]
    ]
   ],
@@ -67,23 +67,23 @@
   ],
   [
    "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
-   24.06,
-   3.42,
+   46.15,
+   1.75,
    [
     [
      0.0,
-     0.257
+     0.542
     ]
    ]
   ],
   [
    "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
-   56.03,
-   2.8,
+   52.78,
+   3.1,
    [
     [
      0.0,
-     0.565
+     0.416
     ]
    ]
   ]
@@ -94,7 +94,7 @@
    3,
    [
     [
-     "أعلنت فيوتشر فريندز غيمز\nالرقم عبر حسابها على X",
+     "أعلنت فيوتشر فريندز غيمز\nالرقم على X",
      {
       "size": 54
      }
@@ -106,7 +106,7 @@
    6,
    [
     [
-     "يطورها شخصان فقط وتتوفر\nعلى PS5 · Xbox Series X|S\nوعلى Switch 2 · Steam",
+     "تتوفر على PS5 · Xbox Series X|S\nوعلى Switch 2 · Steam",
      {
       "size": 54
      }
@@ -147,7 +147,7 @@
  "cut": false,
  "track": [
   "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
-  5.0
+  4.6
  ],
  "gfx": [
   {
@@ -160,7 +160,7 @@
  ],
  "ground_footage": [
   "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
-  24.06
+  46.15
  ],
  "angle": {
   "hook": "a retro dungeon RPG made by two people has passed 200,000 copies in two weeks",
@@ -178,37 +178,37 @@
   "STORY: release verbs": "yes: no release verb on screen; the caption says its release date as «إطلاقها في 30 أكتوبر»",
   "STORY: names match names-ar.md": "yes: Future Friends Games, Freshly Baked Games and Game*Spark as in the added rows",
   "POST: Arabic passes": "yes: both skills applied, grammar review stage run, Western digits, no first person, DeepL forward pass whole story",
-  "SOUND: footage sound or bed with reason": "yes: Launch trailer own sound from 5.0 s, audio split on the server",
-  "SOUND: no speech under Arabic lines": "yes: faster-whisper small, VAD on and off, no speech in 65 s",
-  "PICTURE: footage first": "yes: official Steam Launch trailer, shots from the server picker",
+  "SOUND: footage sound or bed with reason": "yes: RDA trailer own sound from 4.6 s, audio split on the server",
+  "SOUND: no speech under Arabic lines": "yes: faster-whisper small, VAD on and off, no speech in the Launch and RDA trailers (VAD off: one hallucinated word near the end, no speech)",
+  "PICTURE: footage first": "yes: official Steam trailer RDA (movie 257438359), windows judged by eye at 2 fps as 9:16 crops",
   "PICTURE: not the same as last 5 reels": "yes: no earlier Reel uses Queen's Domain footage (the 31 Oct launch Reel is 15 days old)",
   "CREDIT: on every clip": "yes: المصدر: فيوتشر فريندز غيمز (Future Friends Games) over shots 0 to 3 and 5 to 6"
  },
  "decision_log": [
   {
    "beat": "0 hook",
-   "shot": "0.0 to 3.0 s (ship and green ring on dark water)",
-   "alternatives": "RDA trailer 0 to 4 s (creature on dark ground, darker)",
-   "crop": "focus 0.259",
+   "shot": "4.6 to 7.6 s of the RDA trailer (golden tower, forest ruin)",
+   "alternatives": "the Launch trailer: first-person weapons in most clean stretches, its picture starts at 3.0 s on the server copy",
+   "crop": "centred 0.5, one subject per shot",
    "music": "trailer own sound"
   },
   {
    "beat": "1 publisher announcement",
-   "shot": "8.26, 18.6, 20.35 s (tree creature, library statue, green light)",
-   "alternatives": "skeleton hall 11.5 s (bones, skipped)",
-   "crop": "server focus",
+   "shot": "7.6 shrine door and cave, 24.2 egg on a stand, door, 38.01 frog-like creature",
+   "alternatives": "dialogue boxes 11 to 13 s and the red skeleton boss 22 to 24 s not used",
+   "crop": "centred",
    "music": "trailer own sound"
   },
   {
    "beat": "2 card 200 thousand",
-   "shot": "card on the trailer ground from 24.06 s",
+   "shot": "card on the trailer ground from 46.15 s",
    "alternatives": "none",
    "crop": "-",
    "music": "trailer own sound"
   },
   {
    "beat": "3 team and platforms",
-   "shot": "24.06 and 56.03 s (boss in a green room, armoured walker in a hall)",
+   "shot": "46.15 crow and cook, 52.78 hut and walkers (cut before the title flash at 56 s)",
    "alternatives": "none",
    "crop": "server focus",
    "music": "trailer own sound"
