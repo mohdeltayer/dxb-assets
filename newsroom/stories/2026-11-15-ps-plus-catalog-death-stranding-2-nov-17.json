@@ -1,7 +1,7 @@
 {
  "id": "2026-11-15-ps-plus-catalog-death-stranding-2-nov-17",
  "title": "Death Stranding 2: On the Beach joins the PS Plus Game Catalog on 17 Nov (PS5), with Dragon Quest III HD-2D Remake and Atomfall",
- "status": "rendered v2 (qc pass) after director FAIL on v1; awaiting director and Mohammad preview; not scheduled; RE-GATE within the hour before 14:15 Dubai (Sun)",
+ "status": "scheduled in Publer for 14:15 Dubai Sun 15 Nov, 3/3 (ids ig:70649f x:7064ae th:7064b0), director PASS v2 (director-opus-3); RE-GATE within the hour before 14:15 Dubai still due (PlayStation Blog, any Update note, Gematsu list)",
  "claimed_by": "helper 14:15 Sun",
  "slot": "2026-11-15T10:15Z (14:15 Dubai Sun 15 Nov)",
  "lane": "Digital Lounge only",
@@ -115,5 +115,26 @@
   "whisper_final_audio": "small, English: three sung-lyric segments, 'You won't make me stay, I don't know what will.' 0.0 to 6.5 s, 'You will never leave a trace where you won't.' 8.9 to 14.9 s, 'If the only path you take's the one.' 14.9 to 17.8 s (no_speech 0.42): the trailer song's English vocal in the music stem, no spoken dialogue; the director should decide whether sung lyrics under Arabic lines are acceptable (they read as a song, not as speech)",
   "gore_check": "all kept stretches looked at 4 fps as 9:16 crops (Sam and Lou, canyon walk, figure at sunset, shore walker, forest, snow climber, snow porter); no weapons, combat, fire, blood, kisses or title cards; dense strip checked after the render",
   "first_frame": "Sam holding Lou, moving, headline over the top band, chip top right, credit from frame 0"
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/ps-plus-catalog-death-stranding-2-nov-17-reel-v1.mp4",
+  "blob": "12ffdb98ded60058e9a0ba6f51683b40b0047b0d",
+  "at": "2026-11-14T19:39:49Z",
+  "note": "v2 director: strip, dense 4fps, 8 frames viewed; whisper small: sung English lyrics only (no_speech 0.42), music to end card; grammar skill pass no required edits; DeepL back-check ok; facts vs PS Blog 10 Nov confirmed; qc pass",
+  "checklist": {
+   "job": "jobs/live/ps-plus-catalog-death-stranding-2-nov-17.json",
+   "sha256": "0a004420a7a29b8440790f8e7d25ff64581a718e2bdda0155c5a4677c15f7119",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-opus-3",
+  "qc": "pass",
+  "looked": null
+ },
+ "scheduled": "scheduled in Publer 10:15Z (14:15 Dubai Sun 15 Nov) instagram, x, threads; ids ig:70649f x:7064ae th:7064b0; Threads text carries the source line; labels kind:news tpl:trailer skin:house sound:trailer genre:open world"
 }
