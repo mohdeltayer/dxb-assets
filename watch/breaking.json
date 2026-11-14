@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-14T08:52:09Z",
- "seq": 470,
+ "generated_at": "2026-11-14T09:52:06Z",
+ "seq": 471,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -426,61 +426,16 @@
    ],
    "breaking_source": true,
    "breaking_seq": 434
-  },
-  {
-   "id": 13600,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Bombanana XBOX Launch Trailer",
-   "url": "https://www.youtube.com/watch?v=25X9nalEXg0",
-   "published": "2026-11-13T09:00Z",
-   "first_seen": "2026-11-13T09:20:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/25X9nalEXg0/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=25X9nalEXg0"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 429
-  },
-  {
-   "id": 13585,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Bombanana! - Launch Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=ANljgCRnrKA",
-   "published": "2026-11-13T09:00Z",
-   "first_seen": "2026-11-13T09:10:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/ANljgCRnrKA/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=ANljgCRnrKA"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 428
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-14T08:50:14Z",
+  "last_poll_at": "2026-11-14T09:50:04Z",
   "sources_enabled": 100,
-  "sources_ok": 87,
-  "sources_failing": 9,
+  "sources_ok": 93,
+  "sources_failing": 6,
   "failed": [
-   "Bethesda (YouTube) (HTTP 404, 6x)",
-   "Call of Duty (YouTube) (HTTP 500, 6x)",
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 60x)",
-   "EA SPORTS FC (YouTube) (HTTP 404, 6x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 61x)",
    "Nintendo of America (X) (HTTP 429, 67x)",
    "PlayStation (X) (HTTP 429, 86x)",
    "PlayStation Middle East (X) (HTTP 429, 12x)",
