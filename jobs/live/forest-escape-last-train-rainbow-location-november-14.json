@@ -39,17 +39,6 @@
   ],
   [
    "forest-escape-last-train-rainbow-location-november-14-trailer.mp4",
-   14.05,
-   1.0,
-   [
-    [
-     0.0,
-     0.5
-    ]
-   ]
-  ],
-  [
-   "forest-escape-last-train-rainbow-location-november-14-trailer.mp4",
    41.0,
    1.8,
    [
@@ -62,11 +51,11 @@
   [
    "forest-escape-last-train-rainbow-location-november-14-trailer.mp4",
    43.13,
-   1.85,
+   3.0,
    [
     [
      0.0,
-     0.5
+     0.4
     ]
    ]
   ]
@@ -150,7 +139,7 @@
   "PICTURE: not the same as last 5 reels": "yes: no other Reel uses this game",
   "CREDIT: on every clip": "yes: المصدر: فراغ لاب (Frag Lab) عبر Steam over shots 0 to 6 from frame 0"
  },
- "shot_note": "v11 after director fail: last two shots replaced (red-room prisoner 14.05-15.05, toy train 41.0-42.8, walkway 43.13-44.98, no furnace); shots 1 and 2 merged (7.15-12.55 gnome, balloons, tree); two lines. Server timeline runs about 0.9 s behind the local copy; first shot snaps to the first clean frame. Server picker: 0 to 13.16 clean, 40.9 to 42.81 clean, 43.13 to 50.53 clean",
+ "shot_note": "v13 after director fail and a source-quality stop (the 14.05 s stretch is letterboxed, 424 rows): shots 1.9-6.0 (toy world, rails, chicken), 7.15-12.55 (gnome, balloons, tree; pace_ok), 41.0-42.8 (toy train, hut fire), 43.13-46.13 (walkway, then the furnace with the prisoner figure kept whole by the 0.4 focus). Server timeline runs about 0.9 s behind the local copy. Server picker: 0 to 13.16 clean, 40.9 to 42.81 clean, 43.13 to 50.53 clean",
  "bed_reason": "Steam trailer 'Last Train: Forest Escape - New Rainbow Location' (appid 4090360, movie 257505172, 58 s, the only trailer of the Rainbow update) opened and run through the audio split on the server: music stem 59 to 64% of the track but silent from about 11.0 s of the Reel (measured -43 to -75 dBFS in the last 1.5 s before the end card) in both a music_only and a split-with-effects render; the clean picture stretches come from moments 0 to 13 s and 41 to 46 s, so no single continuous stretch of its music covers the 12.6 s cut; so our bed. Other trailers of the game (Halloween update, EA release, demo) were not opened for sound",
  "pace_ok": "the 7.15-12.55 s shot is one continuous stretch of the trailer that itself changes every 1.5 to 2 s (gnome, a dissolve to balloons, a focus pull to the toy tree); merged to avoid crossfades eating the 12 s length"
 }
