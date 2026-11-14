@@ -1,0 +1,26 @@
+{
+ "name": "nintendo-black-friday-switch-2-mario-kart-bundle-november-22-v3",
+ "out": "cards/2026-11/nintendo-black-friday-switch-2-mario-kart-bundle-november-22-v3-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-14T07:01:28Z",
+ "findings": [],
+ "notes": [
+  "length 26.9 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "source quality: nintendo-black-friday-switch-2-mario-kart-bundle-november-22-v3-trailer.mp4: low bitrate 2.7 Mbps (floor 3.0 Mbps for 1280x720 at 30 fps) (lowbit)",
+  "render_job: audio split: applied; music_pct 98.6; leak_pct 0.0; cache {'hit': 0, 'miss': 2}; separate_secs 8.1; secs 15.0",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 5.22, \"held_under_text\": 0.0, \"secs\": 26.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "c3a5c9a66135d9c87d1936ab6e659f6f3fa2fb10",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 720,
+  "max_zoom": 2.67,
+  "lowbit_shots": 11
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "trailer"
+}
