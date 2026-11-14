@@ -132,7 +132,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Game Rant | غيم رانت | In use |
 | GamesIndustry.biz | غيمز إندستري | In use |
 | Eurogamer | يوروغيمر | In use |
-| Rebel Wolves | ريبل ولفز (Rebel Wolves) | Proposed 14 Nov 2026 (The Blood of Dawnwalker Update 1.2 Reel credit, text and caption; Latin in brackets at first mention) |
+| Rebel Wolves | ريبل ولفز (Rebel Wolves) | In use 14 Nov 2026 (The Blood of Dawnwalker Update 1.2 Reel credit, text and caption; Latin in brackets at first mention) |
 | Polygon | بوليغون | In use |
 | PC Gamer | بي سي غيمر | Check: posted as بي سي جيمر; house spelling of "Games" is غيمز |
 | Saudi Gamer | سعودي جيمر | In use (the outlet's own Arabic name) |

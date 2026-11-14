@@ -1,7 +1,7 @@
 {
  "id": "blood-of-dawnwalker-update-1-2-new-game-plus-20261114",
  "title": "The Blood of Dawnwalker Update 1.2 adds New Game Plus (level cap 100), planned next week (Eurogamer quoting Rebel Wolves, 13 Nov 2026)",
- "status": "rebuilt after director fail (render-live pending); planned 22:15 Dubai Sat 14 Nov (18:15Z) on Instagram, X, Threads; RE-GATE within the hour before 22:15 Dubai: Eurogamer and Rebel Wolves re-read, a denial stops it",
+ "status": "scheduled in Publer 18:15Z (22:15 Dubai Sat 14 Nov) on Instagram, X, Threads, ids ig:4f5dd5 x:6eb97b th:4f5dfd; director PASS v2 (job 1f3f5445); RE-GATE within the hour before 22:15 Dubai: Eurogamer and Rebel Wolves re-read, a denial stops it",
  "lane": "digital-lounge",
  "game": "The Blood of Dawnwalker",
  "subject_person": null,
@@ -105,5 +105,26 @@
   "layout": "7 official Steam screenshots 1920x1080 with slow pans (crop windows 0.22-0.42, 0.62-0.8, 0.3-0.5, 0.4-0.2, 0.45-0.65, 0.78-0.6, 0.36-0.52), enlargement 1.78x",
   "track": "our bed neon_c plus the jingle end card; whisper small on the finished audio: no speech (vad on: nothing; vad off: «Music», «You» over the card jingle); per-second RMS -21 to -17 dBFS, no silence before the end card"
  },
- "picture_checks": "dense strip 4 fps read: no blood, gore or sexual content; the red tattoos and red armour are costume; no slate, rating card or burnt-in text; credit «المصدر: ريبل ولفز (Rebel Wolves)» visible from frame 0 over all shots; first frame daylight, chip and two-line headline readable; headline overlaps the top of the axe head in shot 1 (face clear); last frames before the end card a picture"
+ "picture_checks": "dense strip 4 fps read: no blood, gore or sexual content; the red tattoos and red armour are costume; no slate, rating card or burnt-in text; credit «المصدر: ريبل ولفز (Rebel Wolves)» visible from frame 0 over all shots; first frame daylight, chip and two-line headline readable; headline overlaps the top of the axe head in shot 1 (face clear); last frames before the end card a picture",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/blood-of-dawnwalker-update-1-2-new-game-plus-20261114-reel-v1.mp4",
+  "blob": "c6705e752093312eb4bef1cc6d307a76c92ac494",
+  "at": "2026-11-14T03:35:31Z",
+  "note": "re-gate 03:35Z: Steam news feed PlayGround.ru 13 Nov 16:02Z corroborates 1.2 next week, epilogue, cap 100; no denial; Eurogamer unreadable here; AED 229.00 SR 239.00 read live; bed adequate (Cinematic and Pre-Order trailers voiced, whisper); GTA VI ep4 20:00 footage episode breaks the stills run",
+  "checklist": {
+   "job": "jobs/live/blood-of-dawnwalker-update-1-2-new-game-plus-20261114.json",
+   "sha256": "3d628b84282d36cbccc597a0180e17a3c1a6348dce10cbfaf505c5222e86b685",
+   "ok": true,
+   "problems": [],
+   "template": "stills",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-2215"
+  },
+  "by": "director-dl-blood",
+  "qc": "pass",
+  "looked": "first frame market square, headline clear of hero; shot 2 face and glyph tattoo; shot 3 candle-lit group dark but readable; shot 6 face whole; last shot; 4 fps strip no blood or gore"
+ },
+ "director_notes": "v1 failed (headline over axe head, face cut at left edge, bones/stain). v2 PASS: first frame headline clear of hero; no blood or gore on 4 fps strip (shot 2 red marks are glyph tattoos); shot 3 candle-lit group dark but readable; play mark on forehead at 20 to 22 s minor; bed adequate (Cinematic and Pre-Order trailers voiced throughout, whisper); GTA VI ep4 20:00 footage episode breaks the stills run; Steam news PlayGround.ru 13 Nov 16:02Z corroborates, no denial"
 }
