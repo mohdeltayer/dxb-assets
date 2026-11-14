@@ -284,3 +284,10 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | PlayStation Plus Game Catalog (the monthly catalog) | كتالوج الألعاب في PS Plus (كتالوج PS Plus once named); tiers as Extra and Premium in Latin | Proposed 15 Nov 2026: the term the PlayStation Arabic site (ar-ae/ps-plus/games) uses most; its FAQ also says مكتبة الألعاب; DeepL wrote قائمة ألعاب (Death Stranding 2 catalog Reel) |
 | Roadmap (a studio's development roadmap) | خارطة الطريق | Proposed 15 Nov 2026 (Warhammer Survivors roadmap Reel; DeepL wrote خريطة طريق التطوير, house form خارطة الطريق as in earlier posts) |
 | Cross-save (progress shared across devices) | تقدم مشترك عبر الأجهزة (on screen, for the line's reading time: حفظ مشترك عبر أجهزة) | Proposed 15 Nov 2026 (Warhammer Survivors roadmap Reel; the studio's wording 'progression shared across multiple devices'; DeepL gave الحفظ عبر المنصات) |
+
+### Added 15 Nov 2026 (Blade Runner AAA talks Reel)
+| Latin | Arabic | Status |
+|---|---|---|
+| Alcon Entertainment (owner of the Blade Runner franchise) | ألكون إنترتينمنت (short: ألكون) | Proposed 15 Nov 2026 (first mention «شركة ألكون إنترتينمنت (Alcon Entertainment)», on screen «ألكون (Alcon)») |
+| Andrew Kosove (Alcon co-CEO) | أندرو كوسوف | Proposed 15 Nov 2026 (role word «الرئيس التنفيذي المشارك») |
+| Westwood Studios | ويستوود ستوديوز | Proposed 15 Nov 2026 |

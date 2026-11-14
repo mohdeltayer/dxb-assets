@@ -1,8 +1,144 @@
 {
  "id": "blade-runner-aaa-game-talks-alcon-20261115",
- "title": "Alcon co-CEO confirms talks on a AAA Blade Runner game (IGN interview)",
+ "title": "Alcon co-CEO Andrew Kosove confirms talks on a AAA Blade Runner game (IGN interview)",
  "game": "Blade Runner (untitled AAA game)",
- "status": "claimed",
+ "companies": [
+  "Alcon Entertainment"
+ ],
+ "subject_person": {
+  "name": "أندرو كوسوف (Andrew Kosove)",
+  "role": "الرئيس التنفيذي المشارك لشركة ألكون إنترتينمنت (Alcon Entertainment)",
+  "photo_source": "Wikimedia Commons, File:Andrew_Kosove_at_San_Diego_Comic_Con_2026.jpg, Kevin Paul, CC BY 4.0 (own work), credited on screen"
+ },
+ "genre": [
+  "industry/hardware",
+  "open world"
+ ],
+ "category": "interview",
+ "beat": "interview",
+ "lane": "Digital Lounge only (Reel on Instagram, X, Threads); DXB-KNIGHT on hold",
+ "status": "built (render pending)",
  "claimed_for": "17:15 Dubai Sun 15 Nov 2026 (13:15Z)",
- "claimed_at": "2026-11-14T23:10:00Z"
+ "claimed_at": "2026-11-14T23:10:00Z",
+ "source_type": "secondary",
+ "first_report": "IGN, 13 Nov 2026 23:49Z (datePublished of 'Blade Runner 2099 executive producers confirm franchise owners are in talks for AAA video game adaptation', IGN News Editor Virginia Glaze); tbreak followed 14 Nov 12:10Z; no Arabic outlet found carrying it (Arabic web search, 15 Nov ~02:45 Dubai); about 37.5 hours old at the 17:15 Dubai slot, kept under the 9 Nov rule for stories the Arabic press has not carried",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "IGN interview with Alcon co-CEOs Andrew Kosove and Broderick Johnson",
+   "url": "https://www.ign.com/articles/blade-runner-2099-executive-producers-confirm-franchise-owners-are-in-talks-for-aaa-video-game-adaptation",
+   "time": "2026-11-13T23:49:32Z",
+   "read": "in full, 15 Nov ~02:40 Dubai",
+   "key_phrase": "“Yes,” Kosove confirmed, and emphasized the phrase “AAA,” ... impressed upon the importance of allowing players to “interact” with the world of Blade Runner in this hypothetical game."
+  },
+  {
+   "role": "follow",
+   "name": "tbreak (Dima Mohanna)",
+   "url": "https://tbreak.com/blade-runner-aaa-video-game/",
+   "time": "2026-11-14T12:10:17Z"
+  },
+  {
+   "role": "radar",
+   "name": "server digest seq 479 to 485"
+  },
+  {
+   "role": "photo",
+   "name": "Wikimedia Commons, Kevin Paul, CC BY 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Andrew_Kosove_at_San_Diego_Comic_Con_2026.jpg"
+  },
+  {
+   "role": "stills",
+   "name": "Alcon Entertainment, Blade Runner 2049 page (official stills)",
+   "url": "https://www.alconent.com/film/bladerunner2049"
+  },
+  {
+   "role": "stills",
+   "name": "Steam store page, Blade Runner: Enhanced Edition (Nightdive Studios, app 1678420), official screenshots",
+   "url": "https://store.steampowered.com/app/1678420/"
+  }
+ ],
+ "claims": [
+  {
+   "text": "Alcon co-CEOs Kosove and Johnson, EPs of Blade Runner 2099, say they are in discussions to create a AAA Blade Runner game",
+   "status": "reported",
+   "source": "IGN"
+  },
+  {
+   "text": "Asked about a Cyberpunk 2077-sized game and whether talks had happened, Kosove said 'Yes' and emphasised 'AAA'",
+   "status": "reported",
+   "source": "IGN"
+  },
+  {
+   "text": "Kosove stressed letting players 'interact' with the world of Blade Runner",
+   "status": "reported",
+   "source": "IGN"
+  },
+  {
+   "text": "No studio, platform or date; no official announcement",
+   "status": "verified",
+   "source": "IGN ('hypothetical game'), tbreak"
+  },
+  {
+   "text": "Last acclaimed Blade Runner game: Westwood's 1997 adventure, remake 2022",
+   "status": "reported",
+   "source": "IGN"
+  },
+  {
+   "text": "Blade Runner 2099 on Prime Video 25 Nov",
+   "status": "reported",
+   "source": "IGN, tbreak"
+  }
+ ],
+ "why": "The owner of one of the most influential cyberpunk worlds says a big-budget game is being discussed, almost 30 years after the last acclaimed one.",
+ "footage": "stills: a people/interview story with no game to show (the game does not exist); official stills only: Alcon's Blade Runner 2049 stills from its film page, Nightdive's Steam screenshots of the 1997 game's Enhanced Edition, and the speaker's CC BY 4.0 Commons photo in the person window",
+ "ledger_find": "git grep -il -e 'blade runner' -e blade-runner origin/main -- newsroom/stories jobs: no hit (15 Nov ~02:30 Dubai); ledger.py find crashed on an unrelated story file (TypeError in _posts), so searched by hand",
+ "sensitive": "none",
+ "times": {
+  "source": "2026-11-13T23:49:32Z",
+  "claimed": "2026-11-14T23:10:00Z"
+ },
+ "lanes": {
+  "dl": {
+   "lane": "Reel (stills) on Instagram, X, Threads",
+   "chip": "تقرير",
+   "time": "17:15 Dubai Sun 15 Nov 2026 (13:15Z)",
+   "headline": "مالكو Blade Runner\nيناقشون لعبة AAA",
+   "x": "أكد أندرو كوسوف، الرئيس التنفيذي المشارك لشركة ألكون (Alcon) مالكة Blade Runner، لموقع آي جي إن (IGN) وجود محادثات لإنتاج لعبة AAA من السلسلة. لا استوديو ولا موعد بعد.",
+   "threads": "أكد أندرو كوسوف، الرئيس التنفيذي المشارك لشركة ألكون (Alcon) مالكة Blade Runner، لموقع آي جي إن (IGN) وجود محادثات لإنتاج لعبة AAA من السلسلة. لا استوديو ولا موعد بعد.",
+   "x_follow_up": "المصدر: حوار آي جي إن (IGN) مع أندرو كوسوف https://www.ign.com/articles/blade-runner-2099-executive-producers-confirm-franchise-owners-are-in-talks-for-aaa-video-game-adaptation",
+   "ig": "محادثات للعبة Blade Runner بمستوى AAA\n\nأكد أندرو كوسوف (Andrew Kosove)، الرئيس التنفيذي المشارك لشركة ألكون إنترتينمنت (Alcon Entertainment) المالكة لسلسلة Blade Runner، أن الشركة تجري محادثات لإنتاج لعبة AAA من السلسلة، في حوار مع موقع آي جي إن (IGN).\n\nسأله الموقع عن سبب غياب لعبة كبرى للسلسلة بحجم Cyberpunk 2077 وعن بدء أي محادثات، فأجاب بنعم وشدد على وصف AAA، وأكد أهمية أن يتفاعل اللاعبون مع عالم Blade Runner.\n\nلم تعلن ألكون رسميًا عن اللعبة بعد، ولم تكشف عن الاستوديو أو المنصات أو الموعد.\n\nآخر لعبة للسلسلة نالت إشادة واسعة صدرت عام 1997 من تطوير ويستوود ستوديوز (Westwood Studios)، وصدرت نسخة جديدة منها عام 2022. ويأتي الخبر قبل عرض مسلسل Blade Runner 2099 على Prime Video في 25 نوفمبر.\n\n#ألعاب #أخبار_الألعاب #BladeRunner #BladeRunner2099",
+   "ig_first_comment": "المصدر: حوار آي جي إن (IGN) مع أندرو كوسوف، 14 نوفمبر"
+  }
+ },
+ "regate": "RE-GATE within the hour before 17:15 Dubai (Sun)",
+ "arabic_passes": {
+  "editor": "arabic-games-film-editor loaded fresh; arabic-writing loaded (orthography.md, grammar review sources opened); glossary and names-ar read",
+  "grammar_review": {
+   "run": "separate pass with arabic-grammar-review (perfect-arabic SKILL.md, orthography.md, known-issues.md opened) on headline, plate, five lines, credit, X/Threads and caption",
+   "corrected_text": "unchanged",
+   "required_edits": [],
+   "optional_style_suggestions": [
+    {
+     "original": "آخر لعبة للسلسلة نالت إشادة واسعة صدرت عام 1997",
+     "suggestion": "keep; the relative clause reads cleanly without a comma",
+     "reason": "possible ambiguity of where the predicate starts; not an error"
+    }
+   ],
+   "uncertain_cases": [
+    {
+     "text": "مالكو Blade Runner",
+     "issue": "the owner is the company Alcon; the plural 'owners' stands for Alcon's two co-CEOs (IGN's lede: 'the owner of the Blade Runner franchise ... have confirmed')",
+     "why_uncertain": "editorial reading, not grammar",
+     "options": [
+      "مالكو Blade Runner",
+      "ألكون مالكة Blade Runner"
+     ]
+    }
+   ]
+  },
+  "deepl": {
+   "forward": "whole story in one piece EN to AR: DeepL wrote «تجري محادثات لإنتاج لعبة من فئة AAA» and «أبرز أهمية السماح للاعبين بالتفاعل»; we took «لإنتاج» over our «لصنع»; its Arabic-lettered game names («بليد رنر», «سايبربانك 2077») and «من قبل» passive were not taken (house rules: game names in English; active voice). Phrase variants: 'Talks are under way' -> «المحادثات جارية حالياً»; 'Talks have begun' -> «بدأت المحادثات»; 'No studio or date yet' -> «لم يتم تحديد الاستوديو أو الموعد بعد» (we keep «لا استوديو ولا موعد بعد»)",
+   "back_check": "AR to EN on all final texts: 'Blade Runner Owners Discuss a AAA Game'; 'He replied yes, emphasizing that it is a AAA game'; 'stressed the importance of players interacting with the Blade Runner universe'; 'Alcon has not yet announced a studio, platforms, or a release date'; caption back-translates with the same facts: meaning holds"
+  }
+ }
 }
