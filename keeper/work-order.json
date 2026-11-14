@@ -1,0 +1,444 @@
+{
+ "generated_at": "2026-11-14T17:27:23Z",
+ "generated_dubai": "Sat 14 Nov 21:27 Dubai",
+ "source": "keeper.yml workorder (adv-20261109-coordination-in-code)",
+ "posts_from": "commitments and format ledger",
+ "alarms": [
+  {
+   "key": "hop|unacked|p1-20261114-nintendo-6-2-billion-claimed",
+   "kind": "unacked",
+   "line": "handoff p1-20261114-nintendo-6-2-billion-claimed to Production 2 unacknowledged 258 min (from production-1 at 17:08)",
+   "clears": "this run's board line: ack: p1-20261114-nintendo-6-2-billion-claimed (scheduled HH:MM Dubai | building, target HH:MM | declined: reason)"
+  },
+  {
+   "key": "hop|unacked|p1-20261114-nintendo-6-2-billion-posted",
+   "kind": "unacked",
+   "line": "handoff p1-20261114-nintendo-6-2-billion-posted to Production 2 unacknowledged 222 min (from production-1 at 17:45)",
+   "clears": "this run's board line: ack: p1-20261114-nintendo-6-2-billion-posted (scheduled HH:MM Dubai | building, target HH:MM | declined: reason)"
+  },
+  {
+   "key": "hop|unacked|p1-20261114-gtavi-ep4-regate",
+   "kind": "unacked",
+   "line": "handoff p1-20261114-gtavi-ep4-regate to Production 2 unacknowledged 221 min (from production-1 at 17:46)",
+   "clears": "this run's board line: ack: p1-20261114-gtavi-ep4-regate (scheduled HH:MM Dubai | building, target HH:MM | declined: reason)"
+  },
+  {
+   "key": "hop|unacked|p1-20261114-gtavi-ep4-published",
+   "kind": "unacked",
+   "line": "handoff p1-20261114-gtavi-ep4-published to Production 2 unacknowledged 81 min (from production-1 at 20:05)",
+   "clears": "this run's board line: ack: p1-20261114-gtavi-ep4-published (scheduled HH:MM Dubai | building, target HH:MM | declined: reason)"
+  },
+  {
+   "key": "hop|publer|2026111421",
+   "kind": "publer",
+   "line": "keeper coverage stale: no Publer read in 15 min (the server sent no Publer read; server pass Sat 14 Nov 21:27 Dubai)",
+   "clears": "Production 1: check dxb-keeper.timer and /etc/dxb-keeper/publer.key on dxb-render-1 (backoffice-install keeper)"
+  },
+  {
+   "key": "hop|dispatches|blood-of-dawnwalker-update-1-2-new-game-plus-20261114",
+   "kind": "dispatches",
+   "line": "Reel blood-of-dawnwalker-update-1-2-new-game-plus-20261114 took 3 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|epic-free-games-alien-isolation-mark-of-the-deep-nov-19-20261114",
+   "kind": "dispatches",
+   "line": "Reel epic-free-games-alien-isolation-mark-of-the-deep-nov-19-20261114 took 3 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|forest-escape-last-train-rainbow-location-november-14",
+   "kind": "dispatches",
+   "line": "Reel forest-escape-last-train-rainbow-location-november-14 took 6 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|forza-horizon-6-roadmap-series-8-9-20261114",
+   "kind": "dispatches",
+   "line": "Reel forza-horizon-6-roadmap-series-8-9-20261114 took 5 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|hela-of-mice-and-magic-dec-1-20261114",
+   "kind": "dispatches",
+   "line": "Reel hela-of-mice-and-magic-dec-1-20261114 took 3 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114",
+   "kind": "dispatches",
+   "line": "Reel lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114 took 5 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|mitsuda-dragon-quest-end-for-now-blog",
+   "kind": "dispatches",
+   "line": "Reel mitsuda-dragon-quest-end-for-now-blog took 3 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|ps5-qssr-spider-man-2-control-resonant-november-13",
+   "kind": "dispatches",
+   "line": "Reel ps5-qssr-spider-man-2-control-resonant-november-13 took 5 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|queens-domain-200k-sales-two-weeks-20261114",
+   "kind": "dispatches",
+   "line": "Reel queens-domain-200k-sales-two-weeks-20261114 took 4 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|rob-run-365k-concurrent-steam-20261114",
+   "kind": "dispatches",
+   "line": "Reel rob-run-365k-concurrent-steam-20261114 took 6 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|spirit-crossing-launch-november-16",
+   "kind": "dispatches",
+   "line": "Reel spirit-crossing-launch-november-16 took 5 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|super-meat-boy-again-plus-announced-november-14",
+   "kind": "dispatches",
+   "line": "Reel super-meat-boy-again-plus-announced-november-14 took 4 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|where-winds-meet-anniversary-beyond-20261114",
+   "kind": "dispatches",
+   "line": "Reel where-winds-meet-anniversary-beyond-20261114 took 3 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  }
+ ],
+ "orders": [],
+ "handoffs": [
+  {
+   "id": "p1-20261111-gta-batch-slots",
+   "from": "production-1",
+   "at": "2026-11-11T17:31:58Z",
+   "due": "2026-11-11T18:31:58Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "Production 2: leave 16:00Z free on 12 to 19 Nov; ack this line."
+  },
+  {
+   "id": "p1-20261111-gate-frame-credit",
+   "from": "production-1",
+   "at": "2026-11-11T18:06:15Z",
+   "due": "2026-11-11T19:06:15Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "Jobs with a frame: put credits on the shots either side of the frame shot, and cut the frame shot to the frame's length."
+  },
+  {
+   "id": "p1-20261111-bethesda-rerender",
+   "from": "production-1",
+   "at": "2026-11-11T18:13:24Z",
+   "due": "2026-11-11T19:13:24Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "Production 2: expect the Bethesda render commit on main; schedule it as you planned. Nothing to redo on your side."
+  },
+  {
+   "id": "p1-20261111-bethesda-rerender-result",
+   "from": "production-1",
+   "at": "2026-11-11T18:15:56Z",
+   "due": "2026-11-11T19:15:56Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "Production 2 fixes the job file and dispatches it; the runner then has GTA renders queued ahead (about 8 min each)"
+  },
+  {
+   "id": "p1-20261111-gtavi-ep2-scheduled",
+   "from": "production-1",
+   "at": "2026-11-11T18:21:35Z",
+   "due": "2026-11-11T19:21:35Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "news lane leaves 20:00 Dubai free 12 to 19 Nov; episodes 3 to 9 follow as each passes the director"
+  },
+  {
+   "id": "p1-20261111-gtavi-ep8-scheduled",
+   "from": "production-1",
+   "at": "2026-11-11T20:55:51Z",
+   "due": "2026-11-11T21:55:51Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "news lane leaves 18 Nov 20:00 Dubai free; re-gated on its day before 20:00 Dubai"
+  },
+  {
+   "id": "p1-20261111-actions-outage",
+   "from": "production-1",
+   "at": "2026-11-11T21:00:39Z",
+   "due": "2026-11-11T22:00:39Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "Production 2: any news render dispatched now will sit queued or fail at startup; re-dispatch after githubstatus shows Actions operational. The GTA renders go first in the queue only for ep3 (slot 13 Nov 20:00 Dubai); news may go ahead of ep4 to ep9"
+  },
+  {
+   "id": "p1-20261111-gtavi-ep6-scheduled",
+   "from": "production-1",
+   "at": "2026-11-11T21:40:08Z",
+   "due": "2026-11-11T22:40:08Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "News lane leaves 16 Nov 20:00 Dubai free; re-gate on the day before 20:00 (series rule 5)"
+  },
+  {
+   "id": "p1-20261111-gtavi-ep7-scheduled",
+   "from": "production-1",
+   "at": "2026-11-11T22:22:22Z",
+   "due": "2026-11-11T23:22:22Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "News lane leaves 17 Nov 20:00 Dubai free; re-read every price on the day before 20:00 (series rule 5)"
+  },
+  {
+   "id": "p1-20261111-gtavi-ep9-scheduled",
+   "from": "production-1",
+   "at": "2026-11-11T22:35:43Z",
+   "due": "2026-11-11T23:35:43Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "News lane leaves 19 Nov 20:00 Dubai free; on 19 Nov re-read rockstargames.com/VI before 20:00 (the page must say it is out; hold on any change, series rule 5)"
+  },
+  {
+   "id": "p1-20261111-gtavi-ep5-scheduled",
+   "from": "production-1",
+   "at": "2026-11-11T22:42:20Z",
+   "due": "2026-11-11T23:42:20Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "News lane leaves 15 Nov 20:00 Dubai free; re-gate on the day before 20:00 (series rule 5)"
+  },
+  {
+   "id": "p1-20261111-gtavi-ep3-scheduled",
+   "from": "production-1",
+   "at": "2026-11-11T23:19:13Z",
+   "due": "2026-11-12T00:19:13Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "news lane leaves 13 Nov 20:00 Dubai free; re-gate on the day before 20:00 (series rule 5)"
+  },
+  {
+   "id": "p1-20261112-gtavi-ep4-scheduled",
+   "from": "production-1",
+   "at": "2026-11-12T00:09:55Z",
+   "due": "2026-11-12T01:09:55Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "news lane leaves 20:00 Dubai free 12 to 19 Nov; re-gate each on its day before 20:00 (series rule 5)"
+  },
+  {
+   "id": "p1-20261112-release-r1",
+   "from": "production-1",
+   "at": "2026-11-12T13:20:47Z",
+   "due": "2026-11-12T14:20:47Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "Production 2: rebuild any numbers/list job in flight with footage behind the cards (ground_footage) or fewer card seconds; footage Reels under 12 s need another beat; ops/production-setup.md line 11"
+  },
+  {
+   "id": "p1-20261112-release-r2",
+   "from": "production-1",
+   "at": "2026-11-12T13:21:58Z",
+   "due": "2026-11-12T14:21:58Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "Production 2: add subject_person to every story file you build from now (null for most); new kind people (trailer or quote); ops/production-setup.md line 12"
+  },
+  {
+   "id": "p1-20261112-release-r3",
+   "from": "production-1",
+   "at": "2026-11-12T13:23:16Z",
+   "due": "2026-11-12T14:23:16Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "Production 2: jobs in flight without a track get one from their trailer, or a bed_reason; ops/production-setup.md line 13"
+  },
+  {
+   "id": "p1-20261112-release-r4",
+   "from": "production-1",
+   "at": "2026-11-12T13:24:19Z",
+   "due": "2026-11-12T14:24:19Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "Mohammad (root, dxb-render-1): install /etc/dxb-scout/agentmail.key (three lines in ops/build/releases/2026-11-12-r4.md); Production 2: ops/production-setup.md line 14"
+  },
+  {
+   "id": "p1-20261112-gtavi-ep2-regate",
+   "from": "production-1",
+   "at": "2026-11-12T13:25:23Z",
+   "due": "2026-11-12T14:25:23Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "Production 1: slot check 16:03Z; Production 2: keep 20:00 Dubai free"
+  },
+  {
+   "id": "p1-20261112-gtavi-ep2-published",
+   "from": "production-1",
+   "at": "2026-11-12T16:11:42Z",
+   "due": "2026-11-12T17:11:42Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "ep3 re-gate fires before 20:00 Dubai 13 Nov; 20:00 Dubai stays free for the series through 19 Nov"
+  },
+  {
+   "id": "p1-20261113-gtavi-ep3-regate",
+   "from": "production-1",
+   "at": "2026-11-13T13:41:26Z",
+   "due": "2026-11-13T14:41:26Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "slot check at 16:04Z from this session; Production 2: if your Publer works, confirm the three ep3 posts still read scheduled for 20:00 Dubai"
+  },
+  {
+   "id": "p1-20261113-gtavi-ep3-published",
+   "from": "production-1",
+   "at": "2026-11-13T16:15:36Z",
+   "due": "2026-11-13T17:15:36Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "ep4 re-gate fires 13:00Z on 14 Nov; 20:00 Dubai stays free for the series through 19 Nov"
+  },
+  {
+   "id": "p1-20261113-albw-nso-badge-published",
+   "from": "production-1",
+   "at": "2026-11-13T16:15:42Z",
+   "due": "2026-11-13T17:15:42Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "none"
+  },
+  {
+   "id": "p1-20261114-nintendo-6-2-billion-claimed",
+   "from": "production-1",
+   "at": "2026-11-14T13:08:51Z",
+   "due": "2026-11-14T14:08:51Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "Production 2: skip this story and keep it out of your slots; the posted line follows"
+  },
+  {
+   "id": "p1-20261114-nintendo-6-2-billion-posted",
+   "from": "production-1",
+   "at": "2026-11-14T13:45:10Z",
+   "due": "2026-11-14T14:45:10Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "Production 2: none. Story closed; any follow-up only with new figures from Nintendo."
+  },
+  {
+   "id": "p1-20261114-gtavi-ep4-regate",
+   "from": "production-1",
+   "at": "2026-11-14T13:46:20Z",
+   "due": "2026-11-14T14:46:20Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "Production 2: keep 20:00 Dubai free; slot check 16:03Z by Production 1."
+  },
+  {
+   "id": "p1-20261114-gtavi-ep4-published",
+   "from": "production-1",
+   "at": "2026-11-14T16:05:39Z",
+   "due": "2026-11-14T17:05:39Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "Production 2: none. Next episode ep5 tomorrow 20:00 Dubai (re-gate 13:00Z)."
+  }
+ ],
+ "digest_head": {
+  "seq": 478,
+  "generated_at": "2026-11-14T16:52:07Z",
+  "age_min": 35
+ },
+ "scout": {
+  "from_line": null,
+  "leads": null,
+  "rejections": []
+ },
+ "verdicts": {
+  "unavailable": "no server read"
+ },
+ "next_slot": {
+  "last_post": "2026-11-14T17:15:00Z",
+  "covered_until": "2026-11-14T19:15:00Z",
+  "due_by": "2026-11-14T20:15:00Z",
+  "earliest": "2026-11-14T19:45:00Z",
+  "overdue": false,
+  "line": "next slot: due by Sun 15 Nov 00:15 Dubai (covered until 23:15); earliest 23:45 under the spacing"
+ },
+ "caps": {
+  "at": "2026-11-14T19:45:00Z",
+  "evergreen_allowed": true,
+  "evergreen_reopens": "2026-11-14T19:45:00Z",
+  "evergreen_why": [
+   "by day evergreen only fills a gap no news can fill, after a logged news search beyond the digest"
+  ],
+  "numbers_allowed": true,
+  "numbers_why": [],
+  "card_led_window": "0 of the last 5 card-led (at most 2 in 6)",
+  "card_led_allowed": true,
+  "last_templates": [
+   "stills",
+   "stills",
+   "split"
+  ]
+ },
+ "instructions": "Production 2: execute this work order top to bottom. Clear the alarms first, then the orders (T0 first), then the handoffs oldest first, then the scout (fresh digest with the forced refspec; carried leads first), then fill the next slot under the caps. Report each item on the board with evidence: \"wo <generated_at> item <n>: <outcome> (evidence)\"."
+}

@@ -1,0 +1,114 @@
+{
+ "generated_at": "2026-11-14T17:52:21Z",
+ "alarms": [
+  {
+   "key": "hop|unacked|p1-20261114-nintendo-6-2-billion-claimed",
+   "kind": "unacked",
+   "line": "handoff p1-20261114-nintendo-6-2-billion-claimed to Production 2 unacknowledged 283 min (from production-1 at 17:08)",
+   "clears": "this run's board line: ack: p1-20261114-nintendo-6-2-billion-claimed (scheduled HH:MM Dubai | building, target HH:MM | declined: reason)"
+  },
+  {
+   "key": "hop|unacked|p1-20261114-nintendo-6-2-billion-posted",
+   "kind": "unacked",
+   "line": "handoff p1-20261114-nintendo-6-2-billion-posted to Production 2 unacknowledged 247 min (from production-1 at 17:45)",
+   "clears": "this run's board line: ack: p1-20261114-nintendo-6-2-billion-posted (scheduled HH:MM Dubai | building, target HH:MM | declined: reason)"
+  },
+  {
+   "key": "hop|unacked|p1-20261114-gtavi-ep4-regate",
+   "kind": "unacked",
+   "line": "handoff p1-20261114-gtavi-ep4-regate to Production 2 unacknowledged 246 min (from production-1 at 17:46)",
+   "clears": "this run's board line: ack: p1-20261114-gtavi-ep4-regate (scheduled HH:MM Dubai | building, target HH:MM | declined: reason)"
+  },
+  {
+   "key": "hop|unacked|p1-20261114-gtavi-ep4-published",
+   "kind": "unacked",
+   "line": "handoff p1-20261114-gtavi-ep4-published to Production 2 unacknowledged 106 min (from production-1 at 20:05)",
+   "clears": "this run's board line: ack: p1-20261114-gtavi-ep4-published (scheduled HH:MM Dubai | building, target HH:MM | declined: reason)"
+  },
+  {
+   "key": "hop|mirror|2026-11-14T15:49:19Z",
+   "kind": "mirror",
+   "line": "inbox mirror export is 123 min old (desk/mirror.json Sat 14 Nov 19:49 Dubai)",
+   "clears": "Production 1: run the inbox mirror task"
+  },
+  {
+   "key": "hop|publer|2026111421",
+   "kind": "publer",
+   "line": "keeper coverage stale: no Publer read in 15 min (the server sent no Publer read; server pass Sat 14 Nov 21:52 Dubai)",
+   "clears": "Production 1: check dxb-keeper.timer and /etc/dxb-keeper/publer.key on dxb-render-1 (backoffice-install keeper)"
+  },
+  {
+   "key": "hop|dispatches|blood-of-dawnwalker-update-1-2-new-game-plus-20261114",
+   "kind": "dispatches",
+   "line": "Reel blood-of-dawnwalker-update-1-2-new-game-plus-20261114 took 3 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|forest-escape-last-train-rainbow-location-november-14",
+   "kind": "dispatches",
+   "line": "Reel forest-escape-last-train-rainbow-location-november-14 took 6 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|forza-horizon-6-roadmap-series-8-9-20261114",
+   "kind": "dispatches",
+   "line": "Reel forza-horizon-6-roadmap-series-8-9-20261114 took 5 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|hela-of-mice-and-magic-dec-1-20261114",
+   "kind": "dispatches",
+   "line": "Reel hela-of-mice-and-magic-dec-1-20261114 took 3 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114",
+   "kind": "dispatches",
+   "line": "Reel lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114 took 5 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|mitsuda-dragon-quest-end-for-now-blog",
+   "kind": "dispatches",
+   "line": "Reel mitsuda-dragon-quest-end-for-now-blog took 3 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|ps5-qssr-spider-man-2-control-resonant-november-13",
+   "kind": "dispatches",
+   "line": "Reel ps5-qssr-spider-man-2-control-resonant-november-13 took 5 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|queens-domain-200k-sales-two-weeks-20261114",
+   "kind": "dispatches",
+   "line": "Reel queens-domain-200k-sales-two-weeks-20261114 took 4 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|rob-run-365k-concurrent-steam-20261114",
+   "kind": "dispatches",
+   "line": "Reel rob-run-365k-concurrent-steam-20261114 took 6 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|spirit-crossing-launch-november-16",
+   "kind": "dispatches",
+   "line": "Reel spirit-crossing-launch-november-16 took 5 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|super-meat-boy-again-plus-announced-november-14",
+   "kind": "dispatches",
+   "line": "Reel super-meat-boy-again-plus-announced-november-14 took 4 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  },
+  {
+   "key": "hop|dispatches|where-winds-meet-anniversary-beyond-20261114",
+   "kind": "dispatches",
+   "line": "Reel where-winds-meet-anniversary-beyond-20261114 took 3 renders in 24 hours (target 1): run textrules.py and prerender mode text before dispatching, and take shots from prerender mode shots",
+   "clears": "the next render of a story passes in one dispatch"
+  }
+ ],
+ "raised": 1
+}
