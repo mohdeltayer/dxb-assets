@@ -17,7 +17,7 @@
  "category": "interview",
  "beat": "interview",
  "lane": "Digital Lounge only (Reel on Instagram, X, Threads); DXB-KNIGHT on hold",
- "status": "Reel v4 rendered, qc pass; awaiting director (separate session) and scheduling",
+ "status": "v5 job committed (director FAIL fixes on v4: owner in the credit, clean cover crop); render pending",
  "claimed_for": "17:15 Dubai Sun 15 Nov 2026 (13:15Z)",
  "claimed_at": "2026-11-14T23:10:00Z",
  "source_type": "secondary",
@@ -145,6 +145,22 @@
      "لم تعلن ألكون بعد استوديو / أو منصات أو موعدًا"
     ],
     "credit": "لقطات من فيلم Blade Runner 2049 ولعبة Blade Runner"
+   },
+   "on_screen_v5": {
+    "headline": "ألكون تناقش لعبة AAA / من Blade Runner",
+    "plate": [
+     "أندرو كوسوف",
+     "الرئيس التنفيذي المشارك لألكون (Alcon)",
+     "الصورة (مقصوصة): كيفن بول، CC BY 4.0"
+    ],
+    "lines": [
+     "سأل آي جي إن (IGN) كوسوف / عن لعبة ضخمة",
+     "فأجاب بنعم، وشدد / على أنها لعبة AAA",
+     "وأكد أهمية تفاعل اللاعبين / مع عالم السلسلة",
+     "آخر لعبة للسلسلة نالت إشادة / صدرت عام 1997",
+     "لم تعلن ألكون بعد استوديو / أو منصات أو موعدًا"
+    ],
+    "credit": "المصدر: ألكون (Alcon)، فيلم Blade Runner 2049 ولعبة Blade Runner"
    }
   }
  },
@@ -213,7 +229,15 @@
    "optional_style_suggestions": [],
    "uncertain_cases": []
   },
-  "deepl_v4": "back-check AR to EN of the v4 credit and first comment: 'Scenes from the movie Blade Runner 2049 and the Blade Runner video game'; '...images may be subject to image rights and privacy laws': meaning holds"
+  "deepl_v4": "back-check AR to EN of the v4 credit and first comment: 'Scenes from the movie Blade Runner 2049 and the Blade Runner video game'; '...images may be subject to image rights and privacy laws': meaning holds",
+  "grammar_review_v5": {
+   "run": "arabic-grammar-review on the changed credit",
+   "text": "المصدر: ألكون (Alcon)، فيلم Blade Runner 2049 ولعبة Blade Runner",
+   "corrected_text": "unchanged",
+   "required_edits": [],
+   "optional_style_suggestions": [],
+   "uncertain_cases": []
+  }
  },
  "template": "stills",
  "chip": "تقرير",
