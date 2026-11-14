@@ -16,7 +16,7 @@
  "label": "رسمي",
  "chip": "رسمي",
  "template": "split",
- "status": "job v2 committed (shot 3 longer, shot 5 starts at the parts), render pending",
+ "status": "rendered: cards/2026-11/steamos-3-10-preview-valve-20261114-reel-v2.mp4 (qc pass, 14.2 s before the end card, job_sha eae86f1e6430f72877a06b79ab10c24f9f90ad14); not scheduled; awaiting a separate director; RE-GATE within the hour before 06:15 Dubai (Sun)",
  "sources": [
   {
    "role": "primary",
@@ -86,5 +86,6 @@
  "grammar_review": "Run 14 Nov ~10:10Z as its own pass after writing (house glossary, perfect-arabic SKILL.md and arabic-writing orthography.md opened; skills arabic-games-film-editor, arabic-writing, arabic-grammar-review loaded fresh in this run). required_edits: none in grammar or spelling; house_rule: first mention of فالف carries (Valve) in the credit and the X, Threads and caption text; AMD and NVIDIA carry the bracket at first mention; every line, paragraph and the hashtag line open on an Arabic word; Western digits; no em dash; no hashtags on X; no first person; sensitive: none. Style (applied): 'سطح المكتب' became 'وضع سطح المكتب' (Valve's Desktop Mode). optional_style_suggestions: none. uncertain_cases: (1) 'تحسّن' in the headline and line 2 is read as the active present (تُحسِّن) with النسخة/المعاينة as subject; undiacritized, a reader could take it as a past passive, context makes the present clear; (2) 'تدعم' in line 3 for Valve's 'Added support' is shorter than 'تضيف دعم' (kept for reading time: 3.75 s on screen); (3) 'توقيت الإطارات' may be read as tyres out of context (see translation_notes).",
  "reel_note": "RE-GATE within the hour before 06:15 Dubai (Sun)",
  "sound": "the Steam Deck trailer's own music: track ['steam-deck-available-now.mp4', 5.85] with music_only (Cocktail Fork music stem, no effects, no voices); faster-whisper small on the whole trailer, VAD on: one hallucinated 'Thanks for watching!' at 0.9 s, VAD off: the same phrase at 23.6 s, no speech; loudness 1 s windows -12.6 to -7.4 dB from 1 s; the 'Steam Hardware' film is narrated (whisper: 'This is Steam Deck...') so its sound is not used; speech: none",
- "director_notes_v1": "v1 render qc pass (cards/2026-11/steamos-3-10-preview-valve-20261114-reel-v1.mp4): fixed in v2: shot 5 opened on the desk set with a figure and a white monitor flash"
+ "director_notes_v1": "v1 render qc pass (cards/2026-11/steamos-3-10-preview-valve-20261114-reel-v1.mp4): fixed in v2: shot 5 opened on the desk set with a figure and a white monitor flash",
+ "builder_checks": "v2 dense frames read at 4 fps as the finished 9:16 (0-5, 5-10, 10-16 s): no blood, weapons, muzzle flashes or nudity; first frame the Deck in a hammock under the headline (headline touches the top of the Deck's hands and screen edge, no face); credit from frame 0; strip from 3.5 s; the Deck's on-screen clock '10:30 AM' touches the right edge at 5 to 7.5 s (game UI, not our text); shot 5 starts on floating panels over the wall with a white monitor edge at right (10.25 to 11 s); whisper small on the finished mp4: VAD on nothing, VAD off one hallucinated outro phrase on music; music present from 0 to the end card (-7 to -16 dB, one dip -25 dB near 7.5 s); render qc: audio split applied (music 97.4%, leak 0.1%)"
 }
