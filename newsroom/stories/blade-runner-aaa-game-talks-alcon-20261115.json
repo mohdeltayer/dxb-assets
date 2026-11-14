@@ -17,7 +17,7 @@
  "category": "interview",
  "beat": "interview",
  "lane": "Digital Lounge only (Reel on Instagram, X, Threads); DXB-KNIGHT on hold",
- "status": "Reel v5 rendered, qc pass; awaiting director (separate session) and scheduling",
+ "status": "scheduled in Publer 17:15 Dubai Sun 15 Nov (3/3, ids ig:51922c x:18ad7b th:70dee8); director PASS v5 (director-1715-sun); RE-GATE within the hour before 17:15 Dubai (12:15Z to 13:15Z) still due",
  "claimed_for": "17:15 Dubai Sun 15 Nov 2026 (13:15Z)",
  "claimed_at": "2026-11-14T23:10:00Z",
  "source_type": "secondary",
@@ -281,5 +281,27 @@
   "pans": "pans on the 2049 stills (held stills failed lifeless on v1); the two key-art crops hold with the push-in only (no pan room); lifeless 28.8, under 38",
   "cover": "v5 cover: the Enhanced Edition key art's spinner and neon ring only (no coat, gun or title), headline over the neon, the photo box over the spinner's underside"
  },
- "gate": "gate 23:40Z 14 Nov: IGN primary read via curl (the quote 'Yes' and the stress on AAA and 'interact' verified word for word), tbreak (14 Nov) and Denfaminicogamer 261115d agree, news search found no denial or correction from Alcon; label تقرير stays"
+ "gate": "gate 23:52Z 14 Nov: IGN primary re-read by curl, no update or correction beyond the 13 Nov 23:50Z timestamp; label تقرير stays; re-gate due 12:15Z to 13:15Z 15 Nov",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/blade-runner-aaa-game-talks-alcon-20261115-reel-v5.mp4",
+  "blob": "20dcc51519f498286a1ab71092611249c5cf89d6",
+  "at": "2026-11-14T23:52:35Z",
+  "note": "v5 director pass: source re-read by curl 23:52Z; credit names Alcon; cover spinner crop; stills Reel on our bed neon, motion search recorded",
+  "checklist": {
+   "job": "jobs/live/blade-runner-aaa-game-talks-alcon-20261115.json",
+   "sha256": "e7b2ab41232cc2ec576674ee680ff29ea82c3d6f4a84e09b557be4ba14d6e119",
+   "ok": true,
+   "problems": [],
+   "template": "stills",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-1715-sun"
+  },
+  "by": "director-1715-sun",
+  "qc": "pass",
+  "looked": null
+ },
+ "approved": "director PASS v5 (director-1715-sun; v2, v3, v4 failed: credit, upscaled art, credit owner); gate 23:52Z 14 Nov: IGN article re-read by curl (HTTP 200, 'Updated: Nov 13, 2026 11:50pm UTC', no correction or editor's note; quote 'Yes,' Kosove confirmed ... AAA, 'interact', 'hypothetical game' word for word; Westwood 1997 and 2022 remake in the text), tbreak and Denfaminicogamer agree, label تقرير kept; go: Mohammad's studio order (director schedules)",
+ "scheduled": "scheduled in Publer 17:15 Dubai Sun 15 Nov 2026: instagram ...51922c, x ...18ad7b, threads ...70dee8; labels kind:news tpl:stills skin:house sound:our bed genre:industry/hardware (kind:report refused by presubmit); X reply with the IGN and Commons links (follow-up comment); Instagram first comment with source, owners and photo credit; Threads text carries the source line; X and Threads media via the dxb-assets raw URL because the Publer library media id failed with a 'thumbnail' error on those two networks"
 }
