@@ -20,8 +20,8 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 ### Platform holders and publishers
 | Latin | Arabic | Status |
 |---|---|---|
-| Future Friends Games (Queen's Domain publisher, UK) | فيوتشر فريندز غيمز | Proposed 14 Nov 2026 (Latin in brackets at first mention; the credit line carries it; «الناشرة» as the role word; follows the house غيمز) |
-| Freshly Baked Games (Queen's Domain developer, two people) | فريشلي بيكد غيمز | Proposed 14 Nov 2026 (Latin in brackets at first mention; «الاستوديو» after) |
+| Future Friends Games (Queen's Domain publisher, UK) | فيوتشر فريندز غيمز | In use 14 Nov 2026 (Queen's Domain 200k Reel, director-2: Latin in brackets at first mention; the credit line carries the full form; «الناشرة» as the role word; follows the house غيمز) |
+| Freshly Baked Games (Queen's Domain developer, two people) | فريشلي بيكد غيمز | In use 14 Nov 2026 (Queen's Domain 200k caption, director-2: Latin in brackets at first mention; «الاستوديو» after) |
 | Tykenn (Trees Hate You developer and publisher on Steam; a solo or small developer, so the role word المطور) | تايكين | Proposed 14 Nov 2026 (first on-screen mention carries the Latin in brackets: «المطور تايكين (Tykenn)»; the Reel credit reads «تايكين (Tykenn)») |
 | Ocelot Technologies | أوسيلوت تكنولوجيز | Proposed 13 Nov 2026 (developer and publisher of Guild Saga: Vanished Worlds; first mention carries the Latin in brackets) |
 | 6side Studio (Dawn of Defense developer, Germany) | سيكس سايد ستوديو | Proposed 14 Nov 2026 (first on-screen mention carries the Latin in brackets; later mentions «الاستوديو») |

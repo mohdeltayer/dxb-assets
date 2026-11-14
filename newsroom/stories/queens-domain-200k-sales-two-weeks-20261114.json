@@ -1,7 +1,7 @@
 {
  "id": "queens-domain-200k-sales-two-weeks-20261114",
  "title": "Queen's Domain passes 200,000 copies in two weeks, per the publisher via Game*Spark",
- "status": "rebuilt after the director's FAIL, QC pass (job_sha e2fd5653); planned Digital Lounge Sun 15 Nov 10:15 Dubai (06:15Z); director not yet re-run; RE-GATE within the hour before 10:15 Dubai (Sun)",
+ "status": "scheduled in Publer Sun 15 Nov 10:15 Dubai (06:15Z) on Instagram, X, Threads (ids ig:178bb7 x:507f21 th:178bce); director-2 PASS on v2 (job_sha e2fd5653); RE-GATE within the hour before 10:15 Dubai (Sun)",
  "lane": "digital-lounge",
  "game": "Queen's Domain",
  "subject_person": null,
@@ -105,5 +105,33 @@
   "history": "v1 and v2 hung 15 min because the Launch copy's picture starts at 3.02 s (shot 0 from 0.0 had no frame); v3 credit too wide; v4 audio split refused (effects-led); v5 trimmed the title flash at 56 s and the soft floor shot",
   "checks": "dense strip 4 fps read: no blood, gore, weapons at people or muzzle flashes; credit visible from frame 0; first frame the golden tower (bright, moving); no title card or dialogue box in the shots; last two seconds before the end card are the hut picture; shot 2 still carries 0.4 s of a soft yellow floor (24.9 to 25.2 s)",
   "history_v2": "director FAIL fixed in one render: the crow-and-cook shot (blood spatter, gripped weapon, skeletons) replaced by 34.0 blue relief and 30.1 vaulted ceiling, card ground moved to 33.3 s, credit and line 1 carry فيوتشر فريندز غيمز (credit at size 36), bed_reason says the Launch split was not run; 4 fps read of the finished Reel: clean, one mid-fade frame of a purple flame at 11.3 s, a warrior raising a staff in the last hut frames (no blow)"
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/queens-domain-200k-sales-two-weeks-20261114-reel-v1.mp4",
+  "blob": "a57be908b1ef97393f446b41aca963198b421daf",
+  "at": "2026-11-14T15:13:30Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/queens-domain-200k-sales-two-weeks-20261114.json",
+   "sha256": "18f285e755bdcd198c4a8fdb5c84d362236583fdf658f091927fd078e9a395c4",
+   "ok": true,
+   "problems": [],
+   "template": "clipcard",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-2",
+  "qc": "pass",
+  "looked": "v2 read at 4 fps as 9:16: tower hook, rock, shrine door, waterfall, wall, egg, key, pillar statue, frog creature (small red cone props only, no blood), card on blurred green floor and yellow glow, vaulted ceiling and tunnel, purple-smoke figure mid-fade, hut and warrior raising a staff with no blow; no blood, skeleton or weapon at people; bed audible every second to 13.9 s"
+ },
+ "approved": "go: rolling queue; director-2 PASS 14 Nov 15:14Z; gate 15:13Z: Steam news feed (latest items patches 1.01.07 of 14 Nov 09:01Z, 100k post of 4 Nov), Steam appdetails AED 67.99 and release 30 Oct 2026, Game*Spark article title '20万本突破！' read; no Steam or studio post confirming 200k, so تقرير stays; DeepL back-check EN-GB: 'sold over 200,000 copies two weeks after launch on 30 October, according to Game*Spark, citing an announcement by the publisher Future Friends Games on X; 67.99 dirhams on Steam UAE' (meaning matches)",
+ "director": {
+  "by": "director-2",
+  "at": "2026-11-14T15:14Z",
+  "v1": "FAIL: blood burst, skeletons and first-person weapon in the 46.15 shot",
+  "v2": "PASS: 4 fps read as 9:16, no blood, skeleton or weapon at people (small red cone props only), bed audible every second to 13.9 s, 0.14 s gap at the card hand-off, credit and line aligned to names-ar",
+  "publer": "media uploaded from raw commit 3dea9e9; Instagram reel with location Dubai and source comment, X video with source reply, Threads video; thumbnails new"
  }
 }
