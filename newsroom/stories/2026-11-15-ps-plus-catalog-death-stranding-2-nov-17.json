@@ -1,7 +1,7 @@
 {
  "id": "2026-11-15-ps-plus-catalog-death-stranding-2-nov-17",
  "title": "Death Stranding 2: On the Beach joins the PS Plus Game Catalog on 17 Nov (PS5), with Dragon Quest III HD-2D Remake and Atomfall",
- "status": "rendered v1 (qc pass), awaiting director and Mohammad preview; not scheduled; RE-GATE within the hour before 14:15 Dubai (Sun)",
+ "status": "v2 job built after director FAIL on v1 (layout, last line, one verb); rendering; not scheduled; RE-GATE within the hour before 14:15 Dubai (Sun)",
  "claimed_by": "helper 14:15 Sun",
  "slot": "2026-11-15T10:15Z (14:15 Dubai Sun 15 Nov)",
  "lane": "Digital Lounge only",
@@ -33,7 +33,7 @@
  "note": "switched from the Dragon Quest III angle: the 13:15 slot is Dragon Quest Monsters (Square Enix), no two in a row on one publisher",
  "chip": "رسمي",
  "kind": "update",
- "template": "trailer (showcase layout)",
+ "template": "trailer",
  "family": "announcement (catalog addition)",
  "recipe": "trailer drop (announcement family 2, no WHERE AND HOW MUCH frame: no price in the primary)",
  "beat": "catalog addition",
@@ -47,7 +47,7 @@
  ],
  "source_type": "primary",
  "first_report": "2026-11-10 PlayStation Blog (5 days old; the catalog goes live Tuesday 17 Nov, so Sunday 15 Nov is two days before; the Arabic press not searched in depth; the first report dates it, the text says the date of the event)",
- "footage": "Steam 'Launch trailer EN US' (app 3280350, 1080p, 175 s, 5.4 Mbps, decode clean on the runner); six calm shots chosen by eye after the shot picker's 25 clean stretches and a 4 fps look at 9:16 crops of 16 candidates; combat, aimed weapons, fire and the body-under-sheet shot dropped; layout showcase (case b, weak source): the launch trailer is letterboxed to 804 rows of picture (enlarged 2.39x at 9:16), the Accolades trailer is a 30 s PC promo covered in text; no PS5 or PlayStation video on the blog; the trailer runs uncropped between the bands",
+ "footage": "v2: IGN's 2560x1440 copy of Kojima Productions' release-date trailer (ign.com/videos/death-stranding-2-on-the-beach-release-date-trailer, assets.ign.com 3840, 2560, 1920 copies exist; 16:9, unletterboxed, 1920 copy 3.5 Mbps, 2560 copy about 7 Mbps), enlarged 1.33x at 9:16; six calm shots chosen by eye from a 3 s contact sheet and 4 fps 9:16 crops (88.0 Sam and Lou, 94.2 Sam walking the canyon, 168.0 shore walker, 177.5 forest walker, 205.6 snow climber, 207.4 snow porter); no combat, weapons, fire, kisses or title cards in the kept stretches. Sources searched for a better copy: Steam Launch trailer (letterboxed 804 rows, 2.39x), Steam Accolades trailer (16:9 but a PC promo covered in text), PlayStation Blog and playstation.com/en-ae (images, YouTube links only), IGN 2560 (used). YouTube is bot-checked and not used. v1 (showcase layout) failed the director.",
  "ledger_find": {
   "at": "2026-11-14T17:50Z",
   "words": [
@@ -89,7 +89,10 @@
  },
  "decisions": [
   "13:15 builder took Dragon Quest Monsters (Square Enix): the Dragon Quest III angle dropped, no two in a row on one publisher",
-  "Arabic catalog term: كتالوج الألعاب, the term PlayStation's own Arabic page (playstation.com/ar-ae/ps-plus/games) uses most; مكتبة الألعاب appears in its FAQ; DeepL wrote قائمة ألعاب"
+  "Arabic catalog term: كتالوج الألعاب, the term PlayStation's own Arabic page (playstation.com/ar-ae/ps-plus/games) uses most; مكتبة الألعاب appears in its FAQ; DeepL wrote قائمة ألعاب",
+  "v2 fixes (director FAIL): normal full-frame crop on an unletterboxed 16:9 source instead of the showcase; one verb تنضم on screen and in the X text; last line names the subject: «اللعبة من كوجيما بروداكشنز على PS5»; كوجيما بروداكشنز (Kojima Productions) as in the glossary and credit; «لمشتركي Extra و Premium» and «حسب مدونة بلايستيشن» kept",
+  "Grammar review (skill loaded fresh, glossary, perfect-arabic SKILL.md and orthography.md opened): no required edits on the four screen lines, headline, X, Threads or caption. Uncertain, optional: line 3 says «للتواصل» where the blog says human connection («للتواصل الإنساني» would not fit two lines at 70 px); DeepL back-check read it as 'to connect'",
+  "DeepL back-check v2 lines: 'Coming to PS Plus on Tuesday', 'Added to the PS Plus catalog', 'November 17 / For Extra and Premium subscribers', 'The PlayStation blog describes the game as an inspiring mission to connect', 'A game from Kojima Productions on PS5'"
  ],
  "texts": {
   "x": "تنضم لعبة Death Stranding 2: On the Beach إلى كتالوج PS Plus يوم الثلاثاء 17 نوفمبر على PS5، حسب إعلان مدونة بلايستيشن (PlayStation Blog). ومعها في اليوم نفسه Atomfall وDragon Quest III HD-2D Remake.",
