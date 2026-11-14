@@ -1,25 +1,20 @@
 {
  "name": "super-meat-boy-again-plus-announced-november-14",
  "out": "cards/2026-11/super-meat-boy-again-plus-announced-november-14-reel-v1.mp4",
- "verdict": "fail",
- "at": "2026-11-14T12:47:37Z",
- "findings": [
-  {
-   "check": "lifeless",
-   "detail": "lifeless score 58.5 (still_share 0.855, longest still 3.7 s): too much of the Reel holds still; footage behind the cards, the count-up and row reveal, more cuts"
-  }
- ],
+ "verdict": "pass",
+ "at": "2026-11-14T12:50:43Z",
+ "findings": [],
  "notes": [
   "length 17.3 s before the end card (target 12 to 20 s)",
   "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
-  "render_job: lifeless: {\"score\": 58.5, \"still_share\": 0.855, \"longest_still\": 3.7, \"cuts_per_10s\": 1.74, \"held_under_text\": 0.006, \"secs\": 17.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": true}"
+  "render_job: lifeless: {\"score\": 1.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 2.33, \"held_under_text\": 0.0, \"secs\": 17.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "ec9e618408e51d0ff73d0f18b0ee445fd3417455",
- "dispatches": 2,
+ "job_sha": "2e27f09144b0f4dfb9f7eacb741a26892ff50780",
+ "dispatches": 3,
  "source_summary": {
   "min_height": null,
-  "max_zoom": null,
+  "max_zoom": 1.78,
   "lowbit_shots": 0
  },
  "quality": "base",
