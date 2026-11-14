@@ -2,16 +2,16 @@
  "name": "rob-run-365k-concurrent-steam-20261114",
  "out": "cards/2026-11/rob-run-365k-concurrent-steam-20261114-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-14T07:14:20Z",
+ "at": "2026-11-14T07:18:51Z",
  "findings": [],
  "notes": [
-  "length 14.1 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 80.8; leak_pct 0.2; cache {'hit': 0, 'miss': 3}; separate_secs 5.3; secs 9.1",
-  "render_job: lifeless: {\"score\": 0.7, \"still_share\": 0.007, \"longest_still\": 0.1, \"cuts_per_10s\": 10.71, \"held_under_text\": 0.0, \"secs\": 14.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 12.7 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 83.5; leak_pct 0.1; cache {'hit': 0, 'miss': 3}; separate_secs 6.1; secs 9.5",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 9.52, \"held_under_text\": 0.0, \"secs\": 12.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "31df8929b69913b833a9f91ff8cd56d01f3c431a",
- "dispatches": 4,
+ "job_sha": "32bf0e19e8a31be7ca73c4cc49677c796fd0a7d1",
+ "dispatches": 5,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
