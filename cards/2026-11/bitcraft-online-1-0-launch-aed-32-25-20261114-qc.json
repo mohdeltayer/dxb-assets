@@ -1,0 +1,25 @@
+{
+ "name": "bitcraft-online-1-0-launch-aed-32-25-20261114",
+ "out": "cards/2026-11/bitcraft-online-1-0-launch-aed-32-25-20261114-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-14T06:50:20Z",
+ "findings": [],
+ "notes": [
+  "length 21.3 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 67.3; leak_pct 0.0; cache {'hit': 0, 'miss': 2}; separate_secs 10.6; secs 16.1",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 3.3, \"held_under_text\": 0.0, \"secs\": 21.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "e4ffaab4c1b8afefcf2d5e97de59382be730e7e5",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "trailer"
+}
