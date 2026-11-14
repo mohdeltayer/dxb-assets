@@ -1,7 +1,7 @@
 {
  "id": "rob-run-365k-concurrent-steam-20261114",
  "title": "ROB RUN passes 365,000 concurrent players on Steam (Denfaminicogamer, 14 Nov 2026, citing SteamDB)",
- "status": "job v9 after director fail, render pending; RE-GATE within the hour before 00:15 Dubai (Sun)",
+ "status": "v1 re-rendered from job v11 after director fail (job_sha 62ab708217d1df553c9a8c441a28b76cf114b508, commit d3aa929), qc pass, waiting for director; RE-GATE within the hour before 00:15 Dubai (Sun)",
  "lane": "digital-lounge",
  "game": "ROB RUN",
  "subject_person": null,
@@ -80,9 +80,9 @@
  "job": "jobs/live/rob-run-365k-concurrent-steam-20261114.json",
  "render": {
   "reel": "cards/2026-11/rob-run-365k-concurrent-steam-20261114-reel-v1.mp4",
-  "qc": "pass, 12.5 s before the end card, audio split applied music 88.8% leak 0.2%",
-  "renders": "4 dispatches: pace stop, blocky smear stop, success v3 (wrong stretch: server HLS timeline runs 0.75 s ahead of the local copy), success v4 final",
-  "speech": "faster-whisper small on the final audio: vad on no speech; vad off only the usual music hallucination",
-  "notes": "first frame is a car with the trailer's white scratch graphic; 'TO PROTECT AND TO SERVE' decal on a police car is in-world and mostly behind the strip at 7.6 to 8.3 s"
+  "qc": "pass, 12.5 s before the end card, audio split music 83.3% leak 0.2%",
+  "fixes": "no weapons or muzzle flash (checked at 8 fps on the local file and 4 fps on the strip); trailer template, strip content moved into headline and lines; hook is the vault door under the headline; Steam HLS timelines differ per fetch, so the official trailer is committed to live/2026-11-14/rob-run-official-trailer.mp4 and shots are on that file",
+  "speech": "faster-whisper small, vad on: none; music runs to the end card (rms 0.2 to 0.4, tail 0.1 to 0.2)",
+  "notes": "territory-map shots carry the trailer's own dithered transition effects at about 7.5, 9.25, 10.75 and 11.5 to 12.25 s (not violent; readability of line 2 over the last of them is the director's call)"
  }
 }
