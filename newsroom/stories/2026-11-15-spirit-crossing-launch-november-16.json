@@ -1,7 +1,7 @@
 {
  "id": "2026-11-15-spirit-crossing-launch-november-16",
  "title": "Spirit Crossing (Spry Fox cozy MMO) launches Mon 16 Nov on Switch 2, Switch and PC",
- "status": "rebuilt v2 after director FAIL; qc pending",
+ "status": "built v2, qc pass; held for director and scheduling (12:15 Dubai Sun 15 Nov)",
  "game": "Spirit Crossing",
  "claimed_by": "helper 12:15 Sun (retry)",
  "slot": "2026-11-15T08:15Z (12:15 Dubai Sun 15 Nov)",
@@ -112,13 +112,13 @@
  "build": {
   "reel": "cards/2026-11/spirit-crossing-launch-november-16-reel-v1.mp4",
   "job": "spirit-crossing-launch-november-16",
-  "job_sha": "15022b3dbdb5abc3b065d090ef803dec70ae3734",
-  "job_commit": "5a541bb",
-  "render_commit": "3187039",
-  "qc": "pass, no findings, 12.3 s before the end card, audio split applied, sound trailer, dispatches 5",
+  "job_sha": "143d2aa3815e29b3c239e28101f0063395e7f5a1",
+  "job_commit": "b0947a2",
+  "render_commit": "05be138",
+  "qc": "pass, no findings, 13.1 s before the end card, sound our bed (bed_reason in the job), dispatches 6",
   "theme": "playful",
   "template": "split, two lines",
-  "gore": "cartoon only; 4 fps strip read, nothing graphic; one bright building flash at 2.5 to 3.0 s and white puffs under line 1 at 3.75 to 5.25 s (game effects)"
+  "gore": "cartoon only; 4 fps strip read: no flash, no white-out; magenta streaks in a game effect at 12 s (footage)"
  },
  "grammar_review": "arabic-grammar-review loaded fresh 14 Nov; glossary, perfect-arabic SKILL.md, orthography.md and known-issues.md opened: no required edits on the X text, caption and Reel lines (game names feminine, خمس سنوات polarity, Arabic-first paragraphs, Western digits, no hashtags on X). Uncertain: صاحبة (apposition to the genitive company name) left as written",
  "deepl": "forward whole-story pass: تُطلق/تصدر kept تصدر, الودية/هادئة kept هادئة, الانتقال الفوري taken. Back-check of X text, caption and line 2: meaning held except صيد read as 'hunting', so changed to صيد الأسماك / السمك; النسخة التجريبية read as 'beta' (it is the Steam demo, kept)",
