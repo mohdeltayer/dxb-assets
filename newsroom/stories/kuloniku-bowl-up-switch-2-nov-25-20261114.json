@@ -1,7 +1,7 @@
 {
  "id": "kuloniku-bowl-up-switch-2-nov-25-20261114",
  "title": "KuloNiku: Bowl Up! coming to Switch 2 and Switch on 25 Nov, per Gematsu and Nintendo Everything",
- "status": "built, QC pass, awaiting director; planned slot 11:15 Dubai Sun 15 Nov (07:15Z); RE-GATE within the hour before 11:15 Dubai (Sun)",
+ "status": "scheduled in Publer 11:15 Dubai Sun 15 Nov (07:15Z) on Instagram, X, Threads (ids ig:6ff49e x:50a6d0 th:50a6d9); director PASS (director-3); RE-GATE within the hour before 11:15 Dubai still due",
  "lane": "digital-lounge",
  "game": "KuloNiku: Bowl Up!",
  "subject_person": null,
@@ -84,7 +84,7 @@
    "note": "round 1 (job 27248d12) carried an in-scene sign cut at the 9:16 edges and a line over a judge's face; replaced in round 2"
   }
  ],
- "approved": "RE-GATE within the hour before 11:15 Dubai (Sun); planned slot 11:15 Dubai Sun 15 Nov (07:15Z); director signs",
+ "approved": "go: director-3 PASS 14 Nov 16:05Z; gate 16:10Z: Gematsu 25 (duplicate slug 26 judged typo), Nintendo Everything 25, GoNintendo press release tag 25, Noisy Pixel 25, Savepoint 25, Gematsu game page 25; no primary; no earlier KuloNiku Publer post in 7 days; RE-GATE within the hour before 11:15 Dubai",
  "reel_lines": [
   "يرث اللاعب مطعم جدته لكرات اللحم ليحييه",
   "يحضّر الطلبات ويطوّر المطعم ويزيّنه",
@@ -94,5 +94,25 @@
   "whisper": "faster-whisper small on the finished Reel 0 to 15.5 s: VAD on nothing; VAD off only the hallucinated 'Subscribe to the channel for more videos!' over music (source trailer audio had no speech either)",
   "music_per_second_rms": "0.15 at 0 s then 0.19 to 0.31 through 12.5 s, 0.20 and 0.24 over the end card (no silent tail)",
   "known_flags": "kitchen whip-pan blur pulses (source's own transition, about 0.2 s every 0.65 s) at about 7.3 to 8.9 s; last frame before the end card is the source's motion blur; the strip pins a three-item key facts row over the lower footage"
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/kuloniku-bowl-up-switch-2-nov-25-20261114-reel-v1.mp4",
+  "blob": "507aae2f035f3c4eef074474acbeb9fa5746406a",
+  "at": "2026-11-14T16:05:02Z",
+  "note": "gate 16:10Z: Gematsu (25; duplicate slug 26 judged typo), Nintendo Everything, GoNintendo press-release tag, Noisy Pixel, Savepoint, Gematsu game page: 25 Nov majority; text says حسب outlets, no time; no primary; no earlier KuloNiku post in Publer 7 days",
+  "checklist": {
+   "job": "jobs/live/kuloniku-bowl-up-switch-2-nov-25-20261114.json",
+   "sha256": "66b23d4602a58b028a67ab51f401bba1c28f07cf45c177bef00e91b80df7cf6d",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-1115-sun"
+  },
+  "by": "director-3",
+  "qc": "pass",
+  "looked": "4 fps frames as 9:16: mushroom/octopus tile cover readable at 3:4, cartoon chefs, cat, judges, no blood, no knife raised at anyone; small signs only at edges; strip over footage readable; music continuous to end card"
  }
 }
