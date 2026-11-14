@@ -9,7 +9,7 @@
  "genre": [
   "regional/esports"
  ],
- "status": "built, job dispatched (see render), awaiting director; planned 21:15 Dubai Sat 14 Nov (17:15Z) on Instagram, X, Threads; RE-GATE within the hour before 21:15 Dubai",
+ "status": "built, qc pass; awaiting director; planned 21:15 Dubai Sat 14 Nov (17:15Z) on Instagram, X, Threads; RE-GATE within the hour before 21:15 Dubai",
  "lane": "Digital Lounge only",
  "sources": [
   {
@@ -52,7 +52,8 @@
  "footage": "none fetchable: lolesports YouTube Worlds 2026 Final Trailer (44oxy-v7CuY) and Opening Ceremony Trailer (lWSL_yWAfLg) answer the bot check without cookies; no video on the Riot page or PR TIMES. Stills: Riot page images Suwon Convention Center 1920x1280 (1.5x), Seoul Arena render 2048x1108 (1.73x), Feria de Valencia 2048x1365 (1.4x); Nagoya key art and First Stand logo skipped (burnt-in text cut by the 9:16 crop).",
  "posts": {
   "x_threads_ar": "تستضيف اليابان لأول مرة مرحلة Swiss Stage من بطولة العالم Worlds في ناغويا عام 2027، حسب ريوت غيمز (Riot Games). وتنتقل MSI إلى إسبانيا، وتبدأ First Stand: All In في الصين.",
-  "instagram_ar": "بطولة العالم في اليابان لأول مرة: خريطة League of Legends 2027\n\nأعلنت شركة ريوت غيمز (Riot Games) خريطة بطولاتها الدولية للرياضات الإلكترونية في League of Legends لعام 2027. وتستضيف اليابان لأول مرة مرحلة Swiss Stage من بطولة العالم Worlds في مدينة ناغويا.\n\nثم تنتقل المنافسات إلى كوريا الجنوبية: ربع النهائي ونصف النهائي في Suwon Convention Center بمدينة سوون، والنهائي في Seoul Arena بالعاصمة سيول.\n\nوتُقام بطولة MSI لأول مرة في Feria de Valencia بمدينة فالنسيا الإسبانية. وتبدأ الموسم بطولة First Stand: All In في الصين، وهي بطولة لمرة واحدة وأكبر بطولة أنتجتها ريوت حتى الآن، بعد نقلها من جنوب شرق آسيا، على أن تستضيف المنطقة بطولة First Stand في 2028.\n\nولم تعلن الشركة بعد صيغة البطولات وآلية التأهل، ولا مواعيد MSI وتذاكرها، وتعد بالمزيد في يناير. كما تدرس ريوت هل يمكن أن تحل بطولة Demacia Cup محل مرحلة Play-In في Worlds، ولم يُتخذ أي قرار بعد.\n\n#ألعاب #أخبار_الألعاب #LeagueOfLegends #LoLEsports"
+  "instagram_ar": "بطولة العالم في اليابان لأول مرة: خريطة League of Legends 2027\n\nأعلنت شركة ريوت غيمز (Riot Games) خريطة بطولاتها الدولية للرياضات الإلكترونية في League of Legends لعام 2027. وتستضيف اليابان لأول مرة مرحلة Swiss Stage من بطولة العالم Worlds في مدينة ناغويا.\n\nثم تنتقل المنافسات إلى كوريا الجنوبية: ربع النهائي ونصف النهائي في Suwon Convention Center بمدينة سوون، والنهائي في Seoul Arena بالعاصمة سيول.\n\nوتُقام بطولة MSI لأول مرة في Feria de Valencia بمدينة فالنسيا الإسبانية. وتبدأ الموسم بطولة First Stand: All In في الصين، وهي بطولة لمرة واحدة وأكبر بطولة أنتجتها ريوت حتى الآن، بعد نقلها من جنوب شرق آسيا، على أن تستضيف المنطقة بطولة First Stand في 2028.\n\nولم تعلن الشركة بعد صيغة البطولات وآلية التأهل، ولا مواعيد MSI وتذاكرها، وتعد بالمزيد في يناير. كما تدرس ريوت هل يمكن أن تحل بطولة Demacia Cup محل مرحلة Play-In في Worlds، ولم يُتخذ أي قرار بعد.\n\n#ألعاب #أخبار_الألعاب #LeagueOfLegends #LoLEsports",
+  "regate": "RE-GATE within the hour before 21:15 Dubai"
  },
  "regate": "RE-GATE within the hour before 21:15 Dubai",
  "ledger_find": {
@@ -64,5 +65,26 @@
    "worlds"
   ],
   "hits": []
+ },
+ "render": {
+  "reel": "cards/2026-11/lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114-reel-v1.mp4",
+  "job": "jobs/live/lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114.json (deleted by the server after render; commit fd1987f)",
+  "job_sha": "3b293cbf04766cc931e217958e931d01fb277429",
+  "render_commit": "d531c63",
+  "qc": "pass, 19.7 s before the end card, sound bed:neon_d, lifeless 15.4, dispatches 3 by the server count (v1 3b421f04 qc pass but the credit started at 3.6 s; v2 credit from frame 0 and Valencia crop f 0.15)",
+  "notes": "dense strip 4 fps v2 read: no graphic, no title card, no slate, no cut burnt-in text at the 9:16 edges (SEOUL ARENA is a sign inside the arena render; small banner on the Valencia photo); credit «المصدر: ريوت غيمز (Riot Games)» visible from frame 0; the Valencia shot is dark overall (night photo, black sky) but the dome is bright; line 1 over the Seoul Arena picture names Nagoya (no clean Nagoya image: Riot's art has NAGOYA text that the crop would cut); sound is our bed (stills), jingle on the end card; Worlds 2026 final trailers on YouTube blocked (bot check), not fetched",
+  "deepl": "forward whole-story pass read against ours: «جدول فعالياتها» and «المرحلة السويسرية» are DeepL's wordings, ours keep Swiss Stage in English as Riot writes it and خريطة بطولاتها; back-check EN-GB: X text and caption keep Japan first, Swiss Stage Nagoya, QF/SF Suwon, Final Seoul Arena, MSI Valencia first time, First Stand: All In China one-off largest, SEA 2028, nothing announced on format/qualification/MSI dates/tickets, more in January, Demacia Cup no decision",
+  "grammar_review": {
+   "required_edits": [],
+   "uncertain": [
+    "«بطولة العالم Worlds» glossed once in the caption; headline line «للعبة League of Legends» is 23 characters with a Latin name (estimate over 22, server font check passed)"
+   ],
+   "opened": [
+    "house-glossary.md",
+    "perfect-arabic SKILL.md",
+    "arabic-writing orthography.md",
+    "known-issues.md"
+   ]
+  }
  }
 }
