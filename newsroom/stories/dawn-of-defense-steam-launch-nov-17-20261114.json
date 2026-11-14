@@ -40,7 +40,7 @@
   }
  ],
  "sensitive": "none (fantasy tower-defence strategy; footage is idols, windmill, siege weapons, lava and beams, no blood or gore)",
- "source_type": "primary (date, numbers); launch hour attributed to Tbreak",
+ "source_type": "primary",
  "first_report": "Studio release-date announcement 19 Oct 2026; news hook is the launch in 3 days plus the Gulf-sourced launch hour (Tbreak 14 Nov, 07:00Z); no Arabic outlet carries it in the digest; denial or newer date searched 14 Nov 05:10Z: none (Steam page shows 17 Nov)",
  "footage": "official Steam 'Harvest & Mine Trailer' (appid 2781660), 1080p 5.5 Mbps, decode clean; 8 shotpick clean stretches in 9:16; narrated throughout, so our bed with bed_reason",
  "posts": {
@@ -53,5 +53,6 @@
  "recipe": "trailer drop / launch with split strip (platform, price unknown, Arabic absent); recipe written second by second in the job decision_log",
  "reel_path": "cards/2026-11/dawn-of-defense-steam-launch-nov-17-20261114-reel-v1.mp4",
  "built_by": "builder-2315",
- "job": "job file commit (see git log -- jobs/live)"
+ "job": "job file commit (see git log -- jobs/live)",
+ "source_note": "date, numbers and languages on the Steam page and 6side's Steam posts; launch hour only on Tbreak, attributed in the captions"
 }
