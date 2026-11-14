@@ -2,19 +2,19 @@
  "name": "ps-plus-catalog-death-stranding-2-nov-17",
  "out": "cards/2026-11/ps-plus-catalog-death-stranding-2-nov-17-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-14T18:25:21Z",
+ "at": "2026-11-14T19:31:48Z",
  "findings": [],
  "notes": [
-  "length 16.6 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 84.2; leak_pct 0.2; cache {'hit': 0, 'miss': 4}; separate_secs 7.4; secs 11.5",
-  "render_job: lifeless: {\"score\": 15.7, \"still_share\": 0.164, \"longest_still\": 1.9, \"cuts_per_10s\": 2.42, \"held_under_text\": 0.0, \"secs\": 16.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 17.9 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 95.6; leak_pct 0.1; cache {'hit': 2, 'miss': 3}; separate_secs 7.7; secs 12.8",
+  "render_job: lifeless: {\"score\": 9.4, \"still_share\": 0.079, \"longest_still\": 1.4, \"cuts_per_10s\": 4.49, \"held_under_text\": 0.0, \"secs\": 17.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "e1d7e09c5d912faa9c97bb7cfc29d3f71ba2b52d",
- "dispatches": 2,
+ "job_sha": "d6e39483b9e745f76e3cb5356d34ddebd633de1f",
+ "dispatches": 3,
  "source_summary": {
-  "min_height": 1080,
-  "max_zoom": 2.39,
+  "min_height": 1440,
+  "max_zoom": 1.33,
   "lowbit_shots": 0
  },
  "quality": "base",

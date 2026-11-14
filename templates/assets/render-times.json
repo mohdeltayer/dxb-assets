@@ -66365,5 +66365,163 @@
   "dispatches": 3,
   "sound": "trailer",
   "footage": true
+ },
+ {
+  "name": "ps-plus-catalog-death-stranding-2-nov-17-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-14T19:30Z",
+  "stages": {
+   "checks": 4.7,
+   "montage": 30.4,
+   "text": 39.6,
+   "audio": 1.4,
+   "outro": 21.9
+  },
+  "total": 97.9,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-14T19:29Z",
+  "finished_at": "2026-11-14T19:30Z",
+  "render_min": 1.63,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "ps-plus-catalog-death-stranding-2-nov-17-ign.mp4",
+    "start": 88.0,
+    "width": 2560,
+    "height": 1440,
+    "fps": 29.97,
+    "mbps": 7.19,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "ps-plus-catalog-death-stranding-2-nov-17-ign.mp4",
+    "start": 94.2,
+    "width": 2560,
+    "height": 1440,
+    "fps": 29.97,
+    "mbps": 7.19,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "ps-plus-catalog-death-stranding-2-nov-17-ign.mp4",
+    "start": 130.15,
+    "width": 2560,
+    "height": 1440,
+    "fps": 29.97,
+    "mbps": 7.19,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "ps-plus-catalog-death-stranding-2-nov-17-ign.mp4",
+    "start": 168.0,
+    "width": 2560,
+    "height": 1440,
+    "fps": 29.97,
+    "mbps": 7.19,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "ps-plus-catalog-death-stranding-2-nov-17-ign.mp4",
+    "start": 177.5,
+    "width": 2560,
+    "height": 1440,
+    "fps": 29.97,
+    "mbps": 7.19,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "ps-plus-catalog-death-stranding-2-nov-17-ign.mp4",
+    "start": 205.6,
+    "width": 2560,
+    "height": 1440,
+    "fps": 29.97,
+    "mbps": 7.19,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "ps-plus-catalog-death-stranding-2-nov-17-ign.mp4",
+    "start": 207.4,
+    "width": 2560,
+    "height": 1440,
+    "fps": 29.97,
+    "mbps": 7.19,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1440,
+   "max_zoom": 1.33,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 7.7,
+   "audio_secs": 41.2,
+   "music_pct": 95.6,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 2,
+    "miss": 3
+   },
+   "effects_shots": 7,
+   "mix_secs": 4.0,
+   "secs": 12.8
+  },
+  "lifeless": {
+   "score": 9.4,
+   "still_share": 0.079,
+   "longest_still": 1.4,
+   "cuts_per_10s": 4.49,
+   "held_under_text": 0.0,
+   "secs": 17.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 266,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1172,
+  "peak_mem_mb": 2427,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 42728,
+  "peak_disk_mb": 46196,
+  "min_disk_free_mb": 199910,
+  "setup_min": 0.17,
+  "story": "ps-plus-catalog-death-stranding-2-nov-17",
+  "job_sha": "d6e39483b9e745f76e3cb5356d34ddebd633de1f",
+  "dispatches": 2,
+  "sound": "trailer",
+  "footage": true
  }
 ]
