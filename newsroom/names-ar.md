@@ -20,6 +20,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 ### Platform holders and publishers
 | Latin | Arabic | Status |
 |---|---|---|
+| Tykenn (Trees Hate You developer and publisher on Steam; a solo or small developer, so the role word المطور) | تايكين | Proposed 14 Nov 2026 (first on-screen mention carries the Latin in brackets: «المطور تايكين (Tykenn)»; the Reel credit reads «تايكين (Tykenn)») |
 | Ocelot Technologies | أوسيلوت تكنولوجيز | Proposed 13 Nov 2026 (developer and publisher of Guild Saga: Vanished Worlds; first mention carries the Latin in brackets) |
 | 6side Studio (Dawn of Defense developer, Germany) | سيكس سايد ستوديو | Proposed 14 Nov 2026 (first on-screen mention carries the Latin in brackets; later mentions «الاستوديو») |
 | Rekoup (Dawn of Defense publisher, Stockholm) | ريكوب | Proposed 14 Nov 2026 (bracket at first mention) |
