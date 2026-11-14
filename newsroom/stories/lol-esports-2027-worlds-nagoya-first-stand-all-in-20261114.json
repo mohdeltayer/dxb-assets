@@ -9,7 +9,7 @@
  "genre": [
   "regional/esports"
  ],
- "status": "v5 rebuild after director fail (licensed Nagoya photo); awaiting render and director; planned 21:15 Dubai Sat 14 Nov; RE-GATE within the hour before 21:15 Dubai",
+ "status": "v5 built, qc pass; awaiting director; planned 21:15 Dubai Sat 14 Nov; RE-GATE within the hour before 21:15 Dubai",
  "lane": "Digital Lounge only",
  "sources": [
   {
@@ -68,11 +68,11 @@
  },
  "render": {
   "reel": "cards/2026-11/lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114-reel-v1.mp4",
-  "job": "jobs/live/lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114.json (deleted by the server after render; job-file commit d486760)",
-  "job_sha": "580eaf8ad3a386c716f2b9b4466e08669952ee26",
-  "render_commit": "dd175db",
-  "qc": "pass, 16.8 s before the end card, sound bed:neon_d, lifeless 9.0, no findings",
-  "notes": "v4 after director fail: cover and line 1 on a 9:16 crop of Riot's Nagoya Castle art below its burnt-in text (live/2026-11-14/lol/nagoya-castle-crop-9x16.jpg: x 1070-1483, y 345-1080 of the 1920x1080 image, enlarged once so the render sees 1080x1920; no text, no crest); Suwon under the QF/SF line; Seoul Arena only under the final line; Valencia under MSI; First Stand: All In is in the X text and caption only (no official image without cut burnt-in text); headline «اليابان تستضيف مرحلة من Worlds 2027 لأول مرة»; showcase layout tried in v3 and dropped (lifeless 65, tiny box); dense strip 4 fps checked: no graphic, no title card, no cut text, credit from frame 0; music bed measured per second: -14 to -17 dBFS RMS from 12 s to the end card, nothing below -30 before the end card's own fade; DeepL back-check of the changed caption and X text matches (First Stand: All In held in China, one-off, largest, format and qualification not announced); grammar review: no required edits",
+  "job": "jobs/live/lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114.json (deleted by the server after render; job-file commit 0a7847d)",
+  "job_sha": "ae63d72c3c7c9b47f0253452c3db9873ea935614",
+  "render_commit": "75c1284",
+  "qc": "pass, 16.8 s before the end card, sound bed:neon_d, lifeless 23.2, no findings, source_summary max_zoom none",
+  "notes": "v5 after director fail on the soft Nagoya crop: cover and line 1 on the licensed Wikimedia Commons photo (Base64, CC BY-SA 3.0, 3840x2160, rendered by the server at about 0.9x, no pre-enlarged file, the repo crop removed); credit «الصورة: Wikimedia Commons · Base64» from frame 0 on shot 0, «المصدر: ريوت غيمز (Riot Games)» on the Riot shots; the standard source and date line (ريوت غيمز · 13 نوفمبر 2026) still appears under the headline at 2 s as on every Reel, it names the news source; caption carries the photo credit and licence before the hashtags; dense strip 4 fps read: first 3.5 s and every shot clean, no people, no readable signs (a tiny blue banner at the wall's foot), no graphic, no cut text; music bed unchanged from v4 (-14 to -17 dBFS to the end card)",
   "dispatches": "server count 4 (v1, v2 credit fix, v3 showcase failed text and lifeless, v4)"
  },
  "gate_note_photo": "Nagoya Castle photo: https://commons.wikimedia.org/wiki/File:Nagoya_Castle(Larger).jpg, author Base64 (User:Base64), licence Creative Commons Attribution-Share Alike 3.0 Unported, 3840x2160, read 14 Nov 2026 from the file page; credited on screen and in the caption; no people or signs checked on the render's frames"
