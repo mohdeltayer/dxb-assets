@@ -9,7 +9,7 @@
  "genre": [
   "regional/esports"
  ],
- "status": "v3 rebuild after director fail (showcase layout, Nagoya art whole, text fixes); awaiting render and director; planned 21:15 Dubai Sat 14 Nov; RE-GATE within the hour before 21:15 Dubai",
+ "status": "v4 built, qc pass; awaiting director; planned 21:15 Dubai Sat 14 Nov; RE-GATE within the hour before 21:15 Dubai",
  "lane": "Digital Lounge only",
  "sources": [
   {
@@ -68,23 +68,11 @@
  },
  "render": {
   "reel": "cards/2026-11/lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114-reel-v1.mp4",
-  "job": "jobs/live/lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114.json (deleted by the server after render; commit fd1987f)",
-  "job_sha": "3b293cbf04766cc931e217958e931d01fb277429",
-  "render_commit": "d531c63",
-  "qc": "pass, 19.7 s before the end card, sound bed:neon_d, lifeless 15.4, dispatches 3 by the server count (v1 3b421f04 qc pass but the credit started at 3.6 s; v2 credit from frame 0 and Valencia crop f 0.15)",
-  "notes": "dense strip 4 fps v2 read: no graphic, no title card, no slate, no cut burnt-in text at the 9:16 edges (SEOUL ARENA is a sign inside the arena render; small banner on the Valencia photo); credit «المصدر: ريوت غيمز (Riot Games)» visible from frame 0; the Valencia shot is dark overall (night photo, black sky) but the dome is bright; line 1 over the Seoul Arena picture names Nagoya (no clean Nagoya image: Riot's art has NAGOYA text that the crop would cut); sound is our bed (stills), jingle on the end card; Worlds 2026 final trailers on YouTube blocked (bot check), not fetched",
-  "deepl": "forward whole-story pass read against ours: «جدول فعالياتها» and «المرحلة السويسرية» are DeepL's wordings, ours keep Swiss Stage in English as Riot writes it and خريطة بطولاتها; back-check EN-GB: X text and caption keep Japan first, Swiss Stage Nagoya, QF/SF Suwon, Final Seoul Arena, MSI Valencia first time, First Stand: All In China one-off largest, SEA 2028, nothing announced on format/qualification/MSI dates/tickets, more in January, Demacia Cup no decision",
-  "grammar_review": {
-   "required_edits": [],
-   "uncertain": [
-    "«بطولة العالم Worlds» glossed once in the caption; headline line «للعبة League of Legends» is 23 characters with a Latin name (estimate over 22, server font check passed)"
-   ],
-   "opened": [
-    "house-glossary.md",
-    "perfect-arabic SKILL.md",
-    "arabic-writing orthography.md",
-    "known-issues.md"
-   ]
-  }
+  "job": "jobs/live/lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114.json (deleted by the server after render; job-file commit d486760)",
+  "job_sha": "580eaf8ad3a386c716f2b9b4466e08669952ee26",
+  "render_commit": "dd175db",
+  "qc": "pass, 16.8 s before the end card, sound bed:neon_d, lifeless 9.0, no findings",
+  "notes": "v4 after director fail: cover and line 1 on a 9:16 crop of Riot's Nagoya Castle art below its burnt-in text (live/2026-11-14/lol/nagoya-castle-crop-9x16.jpg: x 1070-1483, y 345-1080 of the 1920x1080 image, enlarged once so the render sees 1080x1920; no text, no crest); Suwon under the QF/SF line; Seoul Arena only under the final line; Valencia under MSI; First Stand: All In is in the X text and caption only (no official image without cut burnt-in text); headline «اليابان تستضيف مرحلة من Worlds 2027 لأول مرة»; showcase layout tried in v3 and dropped (lifeless 65, tiny box); dense strip 4 fps checked: no graphic, no title card, no cut text, credit from frame 0; music bed measured per second: -14 to -17 dBFS RMS from 12 s to the end card, nothing below -30 before the end card's own fade; DeepL back-check of the changed caption and X text matches (First Stand: All In held in China, one-off, largest, format and qualification not announced); grammar review: no required edits",
+  "dispatches": "server count 4 (v1, v2 credit fix, v3 showcase failed text and lifeless, v4)"
  }
 }
