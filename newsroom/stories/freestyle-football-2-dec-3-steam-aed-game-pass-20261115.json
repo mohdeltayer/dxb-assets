@@ -1,7 +1,7 @@
 {
  "id": "freestyle-football-2-dec-3-steam-aed-game-pass-20261115",
  "title": "FreeStyle Football 2: December 3 on PC, PS5 and Xbox, Steam pre-orders open at 109.99 AED, Game Pass day one",
- "status": "building (builder-1815) for 18:15 Dubai Sun 15 Nov",
+ "status": "built, QC pass v2; not yet director-checked; not scheduled (stop point: slot 18:15 Dubai Sun 15 Nov, RE-GATE within the hour before)",
  "lane": "digital-lounge",
  "game": "FreeStyle Football 2",
  "companies": [
@@ -55,15 +55,14 @@
   "x": "تصدر FreeStyle Football 2 في 3 ديسمبر، وسعر الحجز المسبق على متجر Steam في الإمارات 98.99 درهم بعد خصم 10 بالمئة (109.99 درهم قبل الخصم). وهي قادمة إلى Game Pass، لكن قائمة لغات Steam لا تضم العربية. حسب صفحتي اللعبة على Steam ومتجر Xbox.",
   "threads": "تصدر FreeStyle Football 2 في 3 ديسمبر، وسعر الحجز المسبق على متجر Steam في الإمارات 98.99 درهم بعد خصم 10 بالمئة (109.99 درهم قبل الخصم). وهي قادمة إلى Game Pass، لكن قائمة لغات Steam لا تضم العربية. حسب صفحتي اللعبة على Steam ومتجر Xbox.",
   "instagram": "سعر FreeStyle Football 2 على Steam في الإمارات: 98.99 درهمًا للحجز المسبق\n\nتصدر لعبة كرة القدم FreeStyle Football 2 من الناشرة جويسيتي (JOYCITY) والمطورة ووري (WOORE) في 3 ديسمبر 2026. وعلى متجر Steam في الإمارات يبلغ سعر النسخة العادية 109.99 درهمًا، ويصبح 98.99 درهمًا مع خصم الحجز المسبق البالغ 10 بالمئة، وينتهي العرض في 3 ديسمبر.\n\nوتقول صفحة اللعبة على متجر Xbox إنها قادمة إلى PC Game Pass وXbox Game Pass Ultimate. أما قائمة لغات Steam فتضم الإنجليزية والكورية والفرنسية والألمانية والإسبانية واليابانية والبرتغالية والصينية، ولا تضم العربية.\n\nالمصدر: صفحة اللعبة على Steam ومتجر Xbox، 15 نوفمبر 2026.\n\n#ألعاب #أخبار_الألعاب #FreeStyleFootball2 #Steam",
-  "headline": "في FreeStyle Football 2\nحجز مسبق من 98.99 درهم",
+  "headline": "في FreeStyle Football 2\nحجز مسبق بخصم 10 بالمئة",
   "lines": [
-   "تصدر اللعبة في 3 ديسمبر",
-   "سعرها في الإمارات 109.99 درهم\nوبخصم 10 بالمئة للحجز المسبق",
-   "اللعبة قادمة إلى Game Pass أيضًا",
-   "قائمة لغات Steam لا تضم العربية"
+   "تصدر في 3 ديسمبر بسعر\nقدره 109.99 درهم في الإمارات",
+   "اللعبة قادمة إلى Game Pass أيضًا"
   ],
   "credit": "المصدر: جويسيتي (JOYCITY)",
-  "source": "صفحة Steam الرسمية"
+  "source": "صفحة Steam الرسمية",
+  "note": "the Steam language list (no Arabic) and the 98.99 AED figure are in the X text and the caption, not on screen: the footage had only 12.2 s of clean stretches"
  },
  "re_gate": "RE-GATE within the hour before 18:15 Dubai (Sun): re-read the Steam store page and API for the UAE store (price 98.99 AED, promotion end 3 Dec, release date, languages), the Xbox Store page (Game Pass line) and Pure Xbox",
  "deepl": {
@@ -100,5 +99,23 @@
    }
   ],
   "checked": "headline, 4 lines, credit, X/Threads text, Instagram caption: agreement of the game name (feminine), non-human plural agreement, tamyiz after decimals, glued prefixes on Latin names (none on screen), Western digits, no em dash, first word Arabic on every line and paragraph, brackets at first mention, source named, hashtags only on Instagram"
- }
+ },
+ "render": {
+  "reel": "cards/2026-11/freestyle-football-2-dec-3-steam-aed-game-pass-20261115-reel-v2.mp4",
+  "sidecars": "strip, sheet, dense and qc.json for v2 are the unsuffixed names (v1's reel-v1.mp4 is superseded and has no kept sidecars)",
+  "job_file_commit": "2bc1ab3 (jobs/live job v4)",
+  "render_commit": "a12bce3",
+  "job_sha": "58bb32b956055eb84b594152e12252a4cd6a0b41",
+  "dispatches": "4 render-live runs (2 stopped on the smear flag at pitch lines and a scene cut, then block_ok after looking at the source frames; v1 passed; v2 passed); the server counts 3 for this job sha",
+  "length_before_end_card_s": 12.2,
+  "sound": "trailer: Festival_Main music, audio split applied (music 86.6%, leak 0.0)",
+  "speech": "none: faster-whisper small on the whole Festival_Main file and on the finished v1 audio, VAD on: nothing; VAD off: only the hallucinated word 'Music'; RMS per second 11 to 22 through to the end card, never silent (v2 audio not re-transcribed; same music stem)",
+  "credit_check": "one credit entry [0,5] from_start: «المصدر: جويسيتي (JOYCITY)» visible in every dense frame from 0.0 s to the end of the picture",
+  "known_weak_points": [
+   "first frame is a close-up of two legs under the headline (no face), the second second shows two billboard portraits behind the headline",
+   "in-world signs read at the edges: 'NL' on the ball shot (about 9.1 s), a billboard 'Introducing U-GK 01' on the last goal shot (about 10.0 to 10.5 s) and 'SUNLIGHT' in the ball shot (about 9.0 s)",
+   "v1 pass is 13.3 s; v2 cut the ball shot to 1.1 s and kept the sign by mistake (the sign sits at the start of that shot)"
+  ]
+ },
+ "approved": "built by builder-1815; NOT director-checked; NOT scheduled; RE-GATE within the hour before 18:15 Dubai (Sun)"
 }
