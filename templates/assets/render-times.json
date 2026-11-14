@@ -60390,5 +60390,62 @@
   "dispatches": 1,
   "sound": "bed:neon_c (Stills Reel on official Steam screenshots, which have no sound of their own, and every official Steam trailer of The Blood of Dawnwalker checked (Launch Trailer: narration under all 92 s; Update 1.1 Trailer: music-led but burnt-in captions on every shot, blood, a PEGI 18 card, dialogue at 35 to 39 s; Features Trailer: narration through all 6 minutes with burnt-in subtitles) has narration, burnt-in text or blood, so our bed plays under the stills and the jingle on the end card.)",
   "footage": false
+ },
+ {
+  "name": "lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-14T03:18Z",
+  "stages": {
+   "checks": 1.0,
+   "montage": 4.8,
+   "text": 39.7,
+   "audio": 0.0,
+   "outro": 13.4
+  },
+  "total": 58.9,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-14T03:17Z",
+  "finished_at": "2026-11-14T03:18Z",
+  "render_min": 0.98,
+  "sources": [],
+  "source_summary": {
+   "min_height": null,
+   "max_zoom": null,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 23.2,
+   "still_share": 0.299,
+   "longest_still": 1.9,
+   "cuts_per_10s": 2.4,
+   "held_under_text": 0.078,
+   "secs": 16.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 176,
+  "queue_wait_secs": 158,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1036,
+  "peak_mem_mb": 2483,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 39705,
+  "peak_disk_mb": 40949,
+  "min_disk_free_mb": 205157,
+  "setup_min": 0.13,
+  "story": "lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114",
+  "job_sha": "ae63d72c3c7c9b47f0253452c3db9873ea935614",
+  "dispatches": 5,
+  "sound": "bed:neon_d",
+  "footage": false
  }
 ]
