@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-14T12:52:16Z",
- "seq": 474,
+ "generated_at": "2026-11-14T13:52:07Z",
+ "seq": 475,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -368,74 +368,16 @@
    ],
    "breaking_source": true,
    "breaking_seq": 437
-  },
-  {
-   "id": 13790,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Guild Saga: Vanished Worlds - Announcement Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=pbKZ3IzvB4Q",
-   "published": "2026-11-13T13:00Z",
-   "first_seen": "2026-11-13T13:15:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/pbKZ3IzvB4Q/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=pbKZ3IzvB4Q"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 435
-  },
-  {
-   "id": 13779,
-   "source": "PlayStation Blog",
-   "source_kind": "official",
-   "title": "Guild Saga: Vanished Worlds brings tactical adventure to PS5 in May 2027",
-   "url": "https://blog.playstation.com/2026/11/13/guild-saga-vanished-worlds-brings-tactical-adventure-to-ps5-in-may-2027/",
-   "published": "2026-11-13T13:01Z",
-   "first_seen": "2026-11-13T13:05:14Z",
-   "media": [
-    {
-     "type": "video",
-     "url": "https://blog.playstation.com/uploads/2048/11/9982da418183f7dcc4e8187e93d1a32c25c63c81.mp4"
-    },
-    {
-     "type": "video",
-     "url": "https://blog.playstation.com/uploads/2048/11/dd2e40d936c7e7e9434de5c6f5316ed16d1505e2.mp4"
-    },
-    {
-     "type": "video",
-     "url": "https://blog.playstation.com/uploads/2048/11/d2b9ec4c7ef762ba86bb8770aba71ab9ffcfa753.mp4"
-    },
-    {
-     "type": "image",
-     "url": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55636957000_634b9a19e2_k.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55636957005_76256f1c27_k.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 434
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-14T12:52:06Z",
+  "last_poll_at": "2026-11-14T13:50:15Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 62x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 63x)",
    "Nintendo of America (X) (HTTP 429, 67x)",
    "PlayStation (X) (HTTP 429, 86x)",
    "PlayStation Middle East (X) (HTTP 429, 12x)",
