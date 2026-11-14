@@ -17,8 +17,8 @@
  "shots": [
   [
    "forest-escape-last-train-rainbow-location-november-14-trailer.mp4",
-   1.0,
-   5.8,
+   0.9,
+   5.9,
    [
     [
      0.0,
@@ -29,7 +29,18 @@
   [
    "forest-escape-last-train-rainbow-location-november-14-trailer.mp4",
    8.0,
-   5.1,
+   1.8,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "forest-escape-last-train-rainbow-location-november-14-trailer.mp4",
+   10.0,
+   3.15,
    [
     [
      0.0,
@@ -63,7 +74,7 @@
  "lines": [
   [
    0,
-   0,
+   1,
    [
     [
      "منطقة Rainbow\nمتاحة الآن",
@@ -74,8 +85,8 @@
    ]
   ],
   [
-   1,
-   1,
+   2,
+   2,
    [
     [
      "تبدأ ملونة ثم\nتبهت تدريجيًا",
@@ -86,8 +97,8 @@
    ]
   ],
   [
-   2,
    3,
+   4,
    [
     [
      "لغز من خمس مراحل\nوزعيم جديد",
@@ -159,5 +170,5 @@
   "PICTURE: not the same as last 5 reels": "yes: no other Reel uses this game",
   "CREDIT: on every clip": "yes: المصدر: فراغ لاب (Frag Lab) عبر Steam over shots 0 to 6 from frame 0"
  },
- "shot_note": "v4: contiguous stretches merged into four shots (1.0-6.8 toy world, rails and chicken; 8.0-13.1 gnome, balloons, toy tree; 41.1-42.7 toy train; 44.0-45.95 walkway) to cut crossfade loss; v3 rendered 10.7 s (qc length fail). Checked against the server picker (prerender shots run 43586749827: 0 to 13.16 clean, 40.9 to 42.81 clean, 43.13 to 50.53 clean)"
+ "shot_note": "v5: shots 0.9-6.8 (toy world, rails, chicken), 8.0-9.8 (gnome), 10.0-13.15 (balloons, toy tree), 41.1-42.7 (toy train), 44.0-45.95 (walkway); v3 rendered 10.7 s (qc length fail), v4 failed the reading check (line 1 on screen 1.8 s because the headline holds the first 4 s). Checked against the server picker (prerender shots run 43586749827: 0 to 13.16 clean, 40.9 to 42.81 clean, 43.13 to 50.53 clean)"
 }
