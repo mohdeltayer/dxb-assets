@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-14T13:52:07Z",
- "seq": 475,
+ "generated_at": "2026-11-14T14:52:06Z",
+ "seq": 476,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -343,46 +343,21 @@
    ],
    "breaking_source": true,
    "breaking_seq": 439
-  },
-  {
-   "id": 13815,
-   "source": "PlayStation Blog",
-   "source_kind": "official",
-   "title": "QSSR arrives in Marvel’s Spider-Man 2, Control Resonant, The Finals, ARC Raiders, and Hell Let Loose: Vietnam",
-   "url": "https://blog.playstation.com/2026/11/13/qssr-arrives-in-marvels-spider-man-2-control-resonant-the-finals-arc-raiders-and-hell-let-loose-vietnam/",
-   "published": "2026-11-13T14:00Z",
-   "first_seen": "2026-11-13T14:05:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://blog.playstation.com/tachyon/2026/11/105d12450fe9246de305a3a43412100d0e299216-scaled.jpg?fit=1024%2C1024"
-    },
-    {
-     "type": "image",
-     "url": "https://blog.playstation.com/tachyon/2026/11/105d12450fe9246de305a3a43412100d0e299216.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 437
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-14T13:50:15Z",
+  "last_poll_at": "2026-11-14T14:50:15Z",
   "sources_enabled": 100,
-  "sources_ok": 94,
+  "sources_ok": 92,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 63x)",
    "Nintendo of America (X) (HTTP 429, 67x)",
-   "PlayStation (X) (HTTP 429, 86x)",
+   "PlayStation (X) (HTTP 429, 87x)",
    "PlayStation Middle East (X) (HTTP 429, 12x)",
-   "Rockstar Games (X) (HTTP 429, 38x)",
-   "Xbox (X) (HTTP 429, 85x)"
+   "Rockstar Games (X) (HTTP 429, 39x)",
+   "Xbox (X) (HTTP 429, 86x)"
   ]
  }
 }
