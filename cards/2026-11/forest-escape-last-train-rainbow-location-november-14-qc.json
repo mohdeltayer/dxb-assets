@@ -2,16 +2,16 @@
  "name": "forest-escape-last-train-rainbow-location-november-14",
  "out": "cards/2026-11/forest-escape-last-train-rainbow-location-november-14-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-14T11:17:46Z",
+ "at": "2026-11-14T11:29:46Z",
  "findings": [],
  "notes": [
-  "length 12.9 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 64.2; leak_pct 0.2; cache {'hit': 0, 'miss': 3}; separate_secs 7.3; secs 11.0",
-  "render_job: lifeless: {\"score\": 1.1, \"still_share\": 0.008, \"longest_still\": 0.1, \"cuts_per_10s\": 4.69, \"held_under_text\": 0.023, \"secs\": 12.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 12.5 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 59.6; leak_pct 1.2; cache {'hit': 0, 'miss': 3}; separate_secs 6.0; secs 9.7",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 4.03, \"held_under_text\": 0.0, \"secs\": 12.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "d2d3c5c87e4b567a1b3d44054b8b5c07714cf494",
- "dispatches": 4,
+ "job_sha": "b8c8f8e4b443770c7842dde376084d46f2e9c2b0",
+ "dispatches": 5,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
