@@ -65879,5 +65879,175 @@
   "dispatches": 1,
   "sound": "trailer",
   "footage": true
+ },
+ {
+  "name": "dragon-quest-monsters-withered-world-dec-3-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-14T18:48Z",
+  "stages": {
+   "checks": 4.7,
+   "montage": 35.5,
+   "text": 29.5,
+   "audio": 1.2,
+   "outro": 17.2
+  },
+  "total": 88.2,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-14T18:47Z",
+  "finished_at": "2026-11-14T18:48Z",
+  "render_min": 1.47,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+    "start": 10.5,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+    "start": 32.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+    "start": 40.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+    "start": 61.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+    "start": 49.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+    "start": 14.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+    "start": 16.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+    "start": 72.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 11.0,
+   "audio_secs": 51.6,
+   "music_pct": 73.0,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "effects_shots": 8,
+   "mix_secs": 3.4,
+   "secs": 15.6
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 10.76,
+   "held_under_text": 0.0,
+   "secs": 15.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 175,
+  "queue_wait_secs": 506,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1133,
+  "peak_mem_mb": 3482,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 41907,
+  "peak_disk_mb": 44549,
+  "min_disk_free_mb": 201557,
+  "setup_min": 0.18,
+  "story": "dragon-quest-monsters-withered-world-dec-3",
+  "job_sha": "0d837a570f59ae41074f6a5686d4e14297eddec8",
+  "dispatches": 1,
+  "sound": "trailer",
+  "footage": true
  }
 ]
