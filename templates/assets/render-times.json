@@ -60074,5 +60074,62 @@
   "dispatches": 5,
   "sound": "trailer",
   "footage": true
+ },
+ {
+  "name": "lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-14T02:48Z",
+  "stages": {
+   "checks": 1.4,
+   "montage": 5.4,
+   "text": 46.1,
+   "audio": 0.0,
+   "outro": 15.7
+  },
+  "total": 68.6,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-14T02:47Z",
+  "finished_at": "2026-11-14T02:48Z",
+  "render_min": 1.14,
+  "sources": [],
+  "source_summary": {
+   "min_height": null,
+   "max_zoom": null,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 17.1,
+   "still_share": 0.235,
+   "longest_still": 0.9,
+   "cuts_per_10s": 2.04,
+   "held_under_text": 0.0,
+   "secs": 19.6,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 175,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1041,
+  "peak_mem_mb": 2451,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 38861,
+  "peak_disk_mb": 40286,
+  "min_disk_free_mb": 205821,
+  "setup_min": 0.13,
+  "story": "lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114",
+  "job_sha": "3b421f04332ae9d5b3d5a58f307b3f57b4e7aa59",
+  "dispatches": 1,
+  "sound": "bed:neon_d",
+  "footage": false
  }
 ]
