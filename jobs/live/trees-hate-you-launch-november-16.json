@@ -17,29 +17,40 @@
  "shots": [
   [
    "trees-hate-you-trailer.mp4",
-   0.0,
-   3.5,
+   2.9,
+   3.2,
    [
     [
      0.0,
-     0.5
+     0.47
     ]
    ]
   ],
   [
    "trees-hate-you-trailer.mp4",
-   12.0,
+   7.0,
    3.3,
    [
     [
      0.0,
-     0.5
+     0.46
     ]
    ]
   ],
   [
    "trees-hate-you-trailer.mp4",
-   18.0,
+   11.5,
+   3.3,
+   [
+    [
+     0.0,
+     0.45
+    ]
+   ]
+  ],
+  [
+   "trees-hate-you-trailer.mp4",
+   21.5,
    3.3,
    [
     [
@@ -51,7 +62,7 @@
   [
    "trees-hate-you-trailer.mp4",
    25.0,
-   3.3,
+   3.5,
    [
     [
      0.0,
@@ -62,22 +73,11 @@
   [
    "trees-hate-you-trailer.mp4",
    38.0,
-   3.3,
-   [
-    [
-     0.0,
-     0.55
-    ]
-   ]
-  ],
-  [
-   "trees-hate-you-trailer.mp4",
-   41.0,
    3.6,
    [
     [
      0.0,
-     0.5
+     0.55
     ]
    ]
   ]
@@ -124,7 +124,7 @@
    4,
    [
     [
-     "في المقطع صخرة ضخمة تطارد الشخصية",
+     "السعر غير معلن ونسخة تجريبية مجانية",
      {
       "size": 54
      }
@@ -136,7 +136,7 @@
    5,
    [
     [
-     "السعر غير معلن ونسخة تجريبية مجانية",
+     "في المقطع صخرة ضخمة تطارد الشخصية",
      {
       "size": 54
      }
@@ -187,5 +187,22 @@
   "what_it_means_here": "Gulf PC players can try the free demo now; the page lists no price and no Arabic",
   "payoff": "the boulder chase and the date, 16 Nov"
  },
- "stand_in_note": "none: all footage is the game's own official Steam trailer"
+ "stand_in_note": "none: all footage is the game's own official Steam trailer",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam store page and the developer's 29 Aug Steam announcement read 14 Nov 2026 ~09:00Z; no update or correction on either",
+  "SOURCE: not already posted": "yes: ledger find trees/hate, 0 hits",
+  "SOURCE: age": "yes: date announced 29 Aug 2026 by the developer; a launch-in-two-days reader service, not a first report; no Arabic outlet found",
+  "ANGLE before lines": "yes: angle in story file and job",
+  "STORY TYPE launch/release": "yes: what it is (rage game of traps and gags), platform (Steam, PC), date (Mon 16 Nov), price (not listed: said), demo, no Arabic (caption)",
+  "STORY: spoken paragraph, subject before pronoun": "yes: the headline names the game, line 1 its date, line 2 the player, line 3 the genre, line 4 price and demo, line 5 the trailer's boulder; no line opens on و",
+  "STORY: release verbs": "yes: تصدر with the date",
+  "STORY: names match names-ar.md": "yes: Tykenn تايكين (new row) in the credit with brackets; Steam in English",
+  "POST: Arabic passes": "yes: arabic-games-film-editor, arabic-writing (conventions, grammar), arabic-grammar-review as its own pass, DeepL whole-story forward and back, Western digits, no first person",
+  "SOUND: footage sound or bed with reason": "yes: the game's own trailer music stem from 6.0 s (audio split, music_only)",
+  "SOUND: no speech under Arabic lines": "yes: faster-whisper small on the 60 s trailer, VAD on and off: no speech; server speech check is final",
+  "PICTURE: footage first": "yes: the game's own official Steam trailer, plain 9:16 crop of 1920x1080 (1.78x)",
+  "PICTURE: not graphic": "yes: cartoon top-down trailer, no blood, gore, weapons at people or muzzle flashes; frames judged 1 fps contact sheets and the finished dense strip",
+  "CREDIT: on every clip": "yes: one credit over all six shots from frame 0",
+  "SENSITIVE": "n/a: none"
+ }
 }
