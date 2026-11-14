@@ -1,7 +1,7 @@
 {
  "id": "freestyle-football-2-dec-3-steam-aed-game-pass-20261115",
  "title": "FreeStyle Football 2: December 3 on PC, PS5 and Xbox, Steam pre-orders open at 109.99 AED, Game Pass day one",
- "status": "built, QC pass v2; not yet director-checked; not scheduled (stop point: slot 18:15 Dubai Sun 15 Nov, RE-GATE within the hour before)",
+ "status": "built, QC pass v3; not yet director-checked; not scheduled (slot 18:15 Dubai Sun 15 Nov, RE-GATE within the hour before)",
  "lane": "digital-lounge",
  "game": "FreeStyle Football 2",
  "companies": [
@@ -102,20 +102,19 @@
   "checked": "headline, 4 lines, credit, X/Threads text, Instagram caption: agreement of the game name (feminine), non-human plural agreement, tamyiz after decimals, glued prefixes on Latin names (none on screen), Western digits, no em dash, first word Arabic on every line and paragraph, brackets at first mention, source named, hashtags only on Instagram"
  },
  "render": {
-  "reel": "cards/2026-11/freestyle-football-2-dec-3-steam-aed-game-pass-20261115-reel-v2.mp4",
-  "sidecars": "strip, sheet, dense and qc.json for v2 are the unsuffixed names (v1's reel-v1.mp4 is superseded and has no kept sidecars)",
-  "job_file_commit": "2bc1ab3 (jobs/live job v4)",
-  "render_commit": "a12bce3",
-  "job_sha": "58bb32b956055eb84b594152e12252a4cd6a0b41",
-  "dispatches": "4 render-live runs (2 stopped on the smear flag at pitch lines and a scene cut, then block_ok after looking at the source frames; v1 passed; v2 passed); the server counts 3 for this job sha",
-  "length_before_end_card_s": 12.2,
-  "sound": "trailer: Festival_Main music, audio split applied (music 86.6%, leak 0.0)",
-  "speech": "none: faster-whisper small on the whole Festival_Main file and on the finished v1 audio, VAD on: nothing; VAD off: only the hallucinated word 'Music'; RMS per second 11 to 22 through to the end card, never silent (v2 audio not re-transcribed; same music stem)",
-  "credit_check": "one credit entry [0,5] from_start: «المصدر: جويسيتي (JOYCITY)» visible in every dense frame from 0.0 s to the end of the picture",
+  "reel": "cards/2026-11/freestyle-football-2-dec-3-steam-aed-game-pass-20261115-v3-reel-v1.mp4",
+  "sidecars": "freestyle-football-2-dec-3-steam-aed-game-pass-20261115-v3-strip.jpg, -v3-sheet.jpg, -v3-dense.jpg, -v3-qc.json (v1 and v2 sidecars are the unsuffixed names, superseded)",
+  "job_file_commit": "9f9bd92 (jobs/live job v5)",
+  "job_sha": "a424376550ae468de4de5f2a02c3957e60a26e26",
+  "dispatches": "5 render-live runs for this story in all (v3 is the fifth; the server counts 4 for this job sha); the coordinator's fix round was one re-render",
+  "length_before_end_card_s": 18.1,
+  "sound": "trailer: Festival_Main music from 19 s, audio split applied (music 91.9%, leak 0.1)",
+  "speech": "none: faster-whisper small on the finished v3 audio, first 3 s and whole, VAD on: nothing; VAD off: only 'Music'; RMS per second 10 to 23 through to the end card, never silent",
+  "credit_check": "one credit entry [0,7] from_start, «المصدر: جويسيتي (JOYCITY)», visible in every dense frame from 0.0 s to the last picture frame (17.75 s)",
   "known_weak_points": [
-   "first frame is a close-up of two legs under the headline (no face), the second second shows two billboard portraits behind the headline",
-   "in-world signs read at the edges: 'NL' on the ball shot (about 9.1 s), a billboard 'Introducing U-GK 01' on the last goal shot (about 10.0 to 10.5 s) and 'SUNLIGHT' in the ball shot (about 9.0 s)",
-   "v1 pass is 13.3 s; v2 cut the ball shot to 1.1 s and kept the sign by mistake (the sign sits at the start of that shot)"
+   "last shot (PAX 22.3 to 24.6, about 17.4 to 17.75 s) ends on a close-up with the jersey word THOR and a small name tag at the bottom left edge",
+   "Festival line-up shot (about 8 to 10 s) has billboard portraits behind the players, no headline over them",
+   "comparison has no label-plate mechanism in the code: the lines act as the state labels"
   ]
  },
  "approved": "built by builder-1815; NOT director-checked; NOT scheduled; RE-GATE within the hour before 18:15 Dubai (Sun)",
