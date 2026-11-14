@@ -25,16 +25,20 @@
   {
    "file": "blade-runner-aaa-game-talks-alcon-20261115-keyart.jpg",
    "repo": "live/2026-11-15/blade-runner/blade-runner-enhanced-edition-keyart-crop.jpg"
+  },
+  {
+   "file": "blade-runner-aaa-game-talks-alcon-20261115-hero.jpg",
+   "repo": "live/2026-11-15/blade-runner/blade-runner-enhanced-edition-hero-right-crop.jpg"
   }
  ],
  "shots": [
   [
-   "blade-runner-aaa-game-talks-alcon-20261115-screen.jpg",
+   "blade-runner-aaa-game-talks-alcon-20261115-keyart.jpg",
    null,
    3.5,
    [
-    1.0,
-    0.92
+    0.5,
+    0.5
    ]
   ],
   [
@@ -65,7 +69,7 @@
    ]
   ],
   [
-   "blade-runner-aaa-game-talks-alcon-20261115-keyart.jpg",
+   "blade-runner-aaa-game-talks-alcon-20261115-hero.jpg",
    null,
    3.9,
    [
@@ -203,7 +207,7 @@
    "Steam app 1678420 Blade Runner: Enhanced Edition Trailer (appdetails movie 256890144, HLS 1080p30, 193.7 s; 360p copy opened at 1 fps): 4:3 picture pillarboxed, the 1997 cutscenes upscaled and soft, mostly near-black, a text card every 10 to 20 s ('The highly-anticipated remastered edition...', 'Enjoy a unique experience...', 'Interact with familiar faces...'); the few readable stretches are 2 to 4 s; Steam's content notes list violence and sexual insinuation; its sound was not checked once the picture was ruled out",
    "Blade Runner 2099 trailers (Prime Video): only on YouTube and Prime Video (Alcon's news page embeds YouTube 0Dr8I_RyRCg); ign.com/videos/blade-runner-2099-official-trailer answers 404; YouTube downloads are not used (sign-in, 28 Sep rule)",
    "Alcon's own clips: alconent.com/interactive/bladerunner and /news embed YouTube only (cb1n8nc-jMI, 0Dr8I_RyRCg), no direct file",
-   "Kept: Alcon's own Blade Runner 2049 stills (2500x1667, crop 938x1667, enlargement 1.15x) and, for the 1997 game's line, the Blade Runner: Enhanced Edition key art from the Xbox store (Poster, 1440x2160; crop x 760 to 1440, y 380 to 1720, 680x1340, committed under live/; enlargement about 1.59x to fill 9:16, no weapon or text in the crop); Alcon's 1997 noodle-bar image (v3) was dropped as upscaled art with visible blocks"
+   "Kept: Alcon's own Blade Runner 2049 stills (2500x1667, crop 938x1667, enlargement 1.15x) and two crops of the Blade Runner: Enhanced Edition key art from the Xbox store (Poster 1440x2160, crop x 760 to 1440, y 380 to 1720 = 680x1340, about 1.59x, for the cover; SuperHeroArt 1920x1080, crop x 1350 to 1920 = 570x1080, about 1.89x, for line 4), both committed under live/, no weapon or title text inside either crop; Alcon's 1997 noodle-bar image (v3) dropped as upscaled art with visible blocks; the Joi still failed the flat-cover check (73%) as a cover"
   ]
  },
  "bed_reason": "Stills Reel: no usable motion source (stills_reason: the Blade Runner 2049 trailer opened and ruled out for letterbox past the 2x cap, weapons and voice-over; the Enhanced Edition Steam trailer opened and ruled out for dark, soft, text-card-heavy 1997 video; the 2099 trailers and Alcon's clips exist only as YouTube embeds). The stills carry no sound, so our bed plays under them and the jingle on the end card.",
@@ -229,18 +233,18 @@
   "SOUND: no speech under Arabic lines": "yes: no speech, our bed only",
   "PICTURE: footage first": "yes: motion search recorded in stills_reason (2049 trailer, Enhanced Edition trailer, 2099 trailers, Alcon clips), each opened or checked and why it is unusable",
   "PICTURE: not the same as last 5 reels": "yes: no Blade Runner picture in any earlier Reel",
-  "PICTURE: no face behind the open photo box": "yes: cover is the 2049 still of Joi from behind at 1.0 to 0.92 (green wall, ponytail, coat; her face out of frame): sharp source 2500x1667 at 1.15x, the box over the coat, headline over the green wall",
+  "PICTURE: no face behind the open photo box": "yes: cover is the Enhanced Edition key art's right half (spinner, neon ring, red doorway; 1440x2160 source at 1.59x, flat check 70%); the box over the red doorway, two bystanders a few pixels tall at its lower edge; headline over the spinner's dark hull",
   "PICTURE: footage holds steady": "yes: text moves only on entry and exit; each still pans slowly (0.08 to 0.18 of its width), kept because held stills failed the server lifeless check on v1 (54.4); v2 with pans read 0.0",
-  "PICTURE: nothing graphic": "yes: 2049 stills of Joi, K and the street crowd, Wallace seated, and the Enhanced Edition key art's right half (spinner, neon ring, two bystanders under an umbrella; McCoy and his raised gun left out of the crop)",
+  "PICTURE: nothing graphic": "yes: Enhanced Edition key art crops (spinner, neon, bystanders, two men in coats seen from behind; McCoy and his raised gun and the title are outside both crops), 2049 stills of K, Joi and the street crowd, Wallace seated",
   "CREDIT: on every clip": "yes: one credit entry [0,5] from frame 0 to the end card naming both works on screen: «لقطات من فيلم Blade Runner 2049 ولعبة Blade Runner»; owners (ألكون (Alcon) for the film, نايتدايف (Nightdive) for the Enhanced Edition art) named in the caption and the first comment, since reel.py's credit is one line and both names with the owners pass the safe width; the plate carries «الصورة (مقصوصة): كيفن بول، CC BY 4.0»",
-  "PICTURE: source resolution": "2049 stills 2500x1667 (1.15x), Enhanced Edition key art crop 680x1340 from a 1440x2160 store poster (about 1.59x); no upscaled 1997 art"
+  "PICTURE: source resolution": "2049 stills 2500x1667 (1.15x); Enhanced Edition key art: poster crop 680x1340 (1.59x) and hero crop 570x1080 (1.89x), both under the 2x cap; no upscaled 1997 art"
  },
  "decision_log": [
   {
    "beat": "0 hook: headline + person window",
-   "shot": "2049 still, Joi from behind (Alcon), pan 1.0 to 0.92: sharp, a clean green ground for the photo box",
-   "alternatives": "v3's 1997 noodle bar (upscaled, blocky on the grid tile), K on the street (face under the box)",
-   "crop": "pan",
+   "shot": "Enhanced Edition key art, right half (Xbox store poster): the game's neon street and spinner, sharp",
+   "alternatives": "Joi from behind (flat-cover check 73%), v3's upscaled noodle bar, K on the street (face under the box)",
+   "crop": "static crop, push-in only",
    "music": "our bed"
   },
   {
@@ -266,9 +270,9 @@
   },
   {
    "beat": "4 the last acclaimed game, 1997",
-   "shot": "Blade Runner: Enhanced Edition key art (Xbox store poster, the 2022 release of the 1997 game), right-hand crop with the spinner and neon",
-   "alternatives": "v3's noodle bar (blocky), Steam screenshots (1997 art upscaled, dark), the key art's left half (McCoy with a raised gun)",
-   "crop": "static crop, push-in only (no pan room)",
+   "shot": "Enhanced Edition hero art, right edge (neon ring sign, two men in coats under an umbrella light), the 2022 release of the 1997 game",
+   "alternatives": "v3's noodle bar (blocky), Steam screenshots (upscaled, dark), the hero art's centre (title and McCoy's gun)",
+   "crop": "static crop, push-in only",
    "music": "our bed"
   },
   {

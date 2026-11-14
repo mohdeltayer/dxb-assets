@@ -55,6 +55,11 @@
    "role": "stills",
    "name": "Xbox store, Blade Runner Enhanced Edition (9MVWW4NJ8TLS), Poster key art 1440x2160 (Nightdive Studios)",
    "url": "https://www.xbox.com/en-US/games/store/blade-runner-enhanced-edition/9MVWW4NJ8TLS"
+  },
+  {
+   "role": "stills",
+   "name": "Xbox store, Blade Runner Enhanced Edition, SuperHeroArt 1920x1080 (right-edge crop)",
+   "url": "https://www.xbox.com/en-US/games/store/blade-runner-enhanced-edition/9MVWW4NJ8TLS"
   }
  ],
  "claims": [
@@ -90,7 +95,7 @@
   }
  ],
  "why": "The owner of one of the most influential cyberpunk worlds says a big-budget game is being discussed, almost 30 years after the last acclaimed one.",
- "footage": "stills: no usable motion source (search recorded in the job's stills_reason: Blade Runner 2049 trailer, Blade Runner: Enhanced Edition Steam trailer, Blade Runner 2099 trailers, Alcon's clips); Alcon's own stills (2049 BTS and the 1997 game's noodle bar) and Kosove's CC BY 4.0 Commons photo in the person window",
+ "footage": "stills: no usable motion source (search recorded in the job's stills_reason); Alcon's own Blade Runner 2049 stills (1.15x), two crops of the Blade Runner: Enhanced Edition key art from the Xbox store (1.59x and 1.89x), and Kosove's CC BY 4.0 Commons photo in the person window",
  "ledger_find": "git grep -il -e 'blade runner' -e blade-runner origin/main -- newsroom/stories jobs: no hit (15 Nov ~02:30 Dubai); ledger.py find crashed on an unrelated story file (TypeError in _posts), so searched by hand",
  "sensitive": "none",
  "times": {
