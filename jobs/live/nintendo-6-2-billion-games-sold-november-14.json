@@ -1,0 +1,126 @@
+{
+ "name": "nintendo-6-2-billion-games-sold-november-14",
+ "story": "2026-11-14-nintendo-6-2-billion-games-sold",
+ "kind_news": "sales",
+ "built_by": "production-1",
+ "render_lane": "server",
+ "out": "cards/2026-11/nintendo-6-2-billion-games-sold-november-14-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "oot-sw2-trailer-nso.mp4",
+   "url": "https://assets.nintendo.com/video/upload/store/software/switch2/70010000130792/Video/f08cd130c1feb8fd6c5f9445079e27c11f60fec66d8fcb4bcc748c66a1b94361.mp4"
+  }
+ ],
+ "shots": [
+  [
+   "oot-sw2-trailer-nso.mp4",
+   62.0,
+   3.1,
+   0.5
+  ],
+  [
+   "oot-sw2-trailer-nso.mp4",
+   65.1,
+   4.8,
+   0.5
+  ],
+  [
+   "oot-sw2-trailer-nso.mp4",
+   69.9,
+   1.7,
+   0.5
+  ],
+  [
+   "oot-sw2-trailer-nso.mp4",
+   71.6,
+   3.0,
+   0.5
+  ],
+  [
+   "oot-sw2-trailer-nso.mp4",
+   74.6,
+   2.0,
+   0.5
+  ]
+ ],
+ "lines": [
+  [
+   0,
+   0,
+   [
+    [
+     "إلى جانب أكثر من 870 مليون جهاز",
+     {}
+    ]
+   ]
+  ],
+  [
+   1,
+   1,
+   [
+    [
+     "وعلى Nintendo Switch وحده\nأكثر من 1.59 مليار لعبة",
+     {}
+    ]
+   ]
+  ],
+  [
+   2,
+   4,
+   [
+    [
+     "أما Ocarina of Time على Switch 2\nفباعت أكثر من 5.2 مليون نسخة في 4 أيام",
+     {}
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   4,
+   "المصدر: نينتيندو (Nintendo)"
+  ]
+ ],
+ "headline": "أكثر من 6.2 مليار لعبة\nباعتها نينتيندو",
+ "label": "رسمي",
+ "source": "نينتيندو (Nintendo)",
+ "date": "14 Nov 2026",
+ "theme": "playful",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "track": [
+  "oot-sw2-trailer-nso.mp4",
+  62.0
+ ],
+ "layout": "showcase",
+ "showcase_reason": "weak source: Nintendo's only copy of the Ocarina of Time Switch 2 trailer is 1280x720, enlarging it to fill 9:16 passes the 2x cap",
+ "lowres_ok": {
+  "searched": [
+   "Nintendo US store page for Ocarina of Time on Switch 2 (1280x720)",
+   "Nintendo IR and news release pages (no video)"
+  ],
+  "result": "no official copy above 720p"
+ },
+ "angle": {
+  "hook": "Nintendo says it has sold more than 6.2 billion games",
+  "why_now": "Nintendo release of 11 Nov 2026; Mohammad's post-now order 14 Nov",
+  "what_it_means_here": "Switch alone passed 1.59 billion; Ocarina of Time on Switch 2 sold over 5.2 million in four days",
+  "payoff": "the Ocarina figure, Nintendo's newest record"
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: nintendo.co.jp release 261111 read 13:05Z ('To date, Nintendo has sold more than 6.2 billion video games and over 870 million hardware units globally'; Ocarina over 5.2M in first four days, 810,000 in Japan); IR hard_soft page as of 30 Sep 2026 (Switch software 1,593.87M)",
+  "SOURCE: not already posted": "yes: ledger find recorded",
+  "SOURCE: age": "release 11 Nov; Mohammad's named post-now order on adv-20261114-nintendo-6-2-billion-post-now",
+  "ANGLE before lines": "yes",
+  "STORY TYPE numbers": "figure, period (to date; Switch as of 30 Sep), source Nintendo, comparison: Switch share and Ocarina's four days",
+  "STORY: spoken paragraph, subject before pronoun": "yes: Nintendo named in the headline",
+  "STORY: release verbs": "n/a",
+  "STORY: names match names-ar.md": "yes: نينتيندو (Nintendo)",
+  "SOUND: footage sound": "trailer's own sound, one stretch from 62.0 s",
+  "PICTURE: footage first": "yes: Nintendo's official trailer, showcase layout (720p)",
+  "CREDIT: on every clip": "yes: shots 0 to 4",
+  "CARD LIMITS": "yes: none of: 6.1 billion, no Ocarina pushed it over, no 100 million in a month, no total of our own; 'since Famicom 1983' left out because the release does not tie the total to it; DS and Wii figures left out (not on the IR page read)"
+ }
+}

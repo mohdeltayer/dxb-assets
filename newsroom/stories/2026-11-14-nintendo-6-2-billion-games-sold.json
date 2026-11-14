@@ -1,0 +1,54 @@
+{
+ "id": "2026-11-14-nintendo-6-2-billion-games-sold",
+ "status": "building",
+ "lane": "Digital Lounge only",
+ "subject_person": null,
+ "game": "",
+ "title": "Nintendo has sold more than 6.2 billion games",
+ "kind": "sales",
+ "template": "trailer",
+ "chip": "رسمي",
+ "sensitive": "none",
+ "companies": [
+  "Nintendo"
+ ],
+ "genre": [
+  "industry/hardware"
+ ],
+ "sources": [
+  {
+   "url": "https://www.nintendo.co.jp/corporate/release/en/2026/261111.html",
+   "type": "primary",
+   "read_at": "2026-11-14T13:05Z",
+   "note": "About Nintendo paragraph: more than 6.2 billion video games and over 870 million hardware units; Ocarina of Time Switch 2 over 5.2M in four days (810,000 Japan)"
+  },
+  {
+   "url": "https://www.nintendo.co.jp/ir/en/finance/hard_soft/index.html",
+   "type": "primary",
+   "read_at": "2026-11-14T13:06Z",
+   "note": "as of 30 Sep 2026: Switch software 1,593.87M"
+  }
+ ],
+ "first_report": "2026-11-11 Nintendo release",
+ "source_type": "primary",
+ "beat": "numbers",
+ "gate": "gate 13:06Z: release and IR page read; figures unchanged",
+ "angle": {
+  "hook": "Nintendo says it has sold more than 6.2 billion games",
+  "why_now": "Nintendo release of 11 Nov 2026; Mohammad's post-now order 14 Nov",
+  "what_it_means_here": "Switch alone passed 1.59 billion; Ocarina of Time on Switch 2 sold over 5.2 million in four days",
+  "payoff": "the Ocarina figure, Nintendo's newest record"
+ },
+ "footage": "Nintendo US store trailer for Ocarina of Time Switch 2 (720p), 62.0 to 76.6 s, its own sound",
+ "approved": "go: Mohammad, inbox card adv-20261114-nintendo-6-2-billion-post-now (14 Nov 16:57 Dubai) and chat order: build and post now",
+ "ledger_find": {
+  "at": "2026-11-14T13:08Z",
+  "words": [
+   "6.2 billion",
+   "6-2-billion",
+   "6.2 مليار"
+  ],
+  "hits": [],
+  "note": "searched by hand with grep over newsroom/stories: ledger.py find crashed on another story's posts field"
+ }
+}
