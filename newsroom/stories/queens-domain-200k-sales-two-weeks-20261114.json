@@ -1,7 +1,7 @@
 {
  "id": "queens-domain-200k-sales-two-weeks-20261114",
  "title": "Queen's Domain passes 200,000 copies in two weeks, per the publisher via Game*Spark",
- "status": "built, QC pass (dispatch 2, job_sha 11521c3e); planned Digital Lounge Sun 15 Nov 10:15 Dubai (06:15Z) on Instagram, X, Threads; director not yet run; RE-GATE within the hour before 10:15 Dubai (Sun)",
+ "status": "rebuilt after the director's FAIL, QC pending; planned Digital Lounge Sun 15 Nov 10:15 Dubai (06:15Z); RE-GATE within the hour before 10:15 Dubai (Sun)",
  "lane": "digital-lounge",
  "game": "Queen's Domain",
  "subject_person": null,
@@ -46,7 +46,7 @@
   ],
   "note": "the hit is the launch story of 31 Oct; the 200,000 figure is new; ledger.py find crashed on another story's folders, searched by hand"
  },
- "footage": "official Steam trailer 'RDA' (appid 1799840, movie 257438359), 1920x1080 60 fps 5.7 Mbps, enlargement 1.78x; faster-whisper small VAD on and off: no speech in 60 s; windows 4.6-7.6, 7.6-9.0, 24.2-27.0, 38.0-39.0, 46.15-47.9, 52.78-55.9 judged by eye at 2 fps as 9:16 crops (tower, forest ruin, shrine door, cave, egg on a stand, ornate door, creature, crow cook, hut), no blood, bones or weapons at people; the Launch trailer also opened and not used (first-person weapons in its clean stretches; its picture starts at 3.0 s on the server copy); dialogue boxes at 11 to 13 s and the title flash at 56 s avoided",
+ "footage": "official Steam trailer 'RDA' (appid 1799840, movie 257438359), 1920x1080 60 fps 5.7 Mbps, enlargement 1.78x; faster-whisper small VAD on and off: no speech; windows 4.6-7.0, 7.0-9.3, 24.1-25.2, 34.0-35.3, 38.01-39.3, 30.4-32.4, 52.48-55.38 judged at 2 fps as 9:16 crops at full size: no blood, spatter, weapons, skeletons (the crow-and-cook shot 46 to 48 s was removed after the director's FAIL: blood spatter, a gripped weapon, skeletons); card ground from 33.3 s (plays about 40 to 43 s, blurred); the Launch trailer was opened and not used; its audio split was not run",
  "lane_note": "sensitive: none (Steam content note 'blood and skeletons': no bones, blood or weapons at people in the chosen shots)",
  "sensitive": "none",
  "beat": "2 announcement (milestone): hook, attributed figure, card, context, platforms",
@@ -70,7 +70,7 @@
  "texts": {
   "headline": "لعبة Queen's Domain\nتتجاوز 200 ألف نسخة",
   "lines": [
-   "أعلنت فيوتشر فريندز الرقم\nعلى X",
+   "أعلنت فيوتشر فريندز غيمز الرقم\nعلى X، حسب غيم سبارك",
    "تتوفر على PS5 · Xbox Series X|S\nوعلى Switch 2 · Steam"
   ],
   "card": {
@@ -78,7 +78,7 @@
    "value": "200 ألف",
    "note": "بعد 100 ألف في خمسة أيام"
   },
-  "credit": "المصدر: فيوتشر فريندز (Future Friends Games)",
+  "credit": "المصدر: فيوتشر فريندز غيمز (Future Friends Games)",
   "source": "غيم سبارك (Game*Spark)",
   "x": "لعبة Queen's Domain تتجاوز 200 ألف نسخة بعد أسبوعين من إطلاقها في 30 أكتوبر، حسب موقع غيم سبارك (Game*Spark) نقلًا عن إعلان الناشرة فيوتشر فريندز غيمز (Future Friends Games) على X. وسعرها في متجر Steam في الإمارات 67.99 درهمًا.",
   "threads": "لعبة Queen's Domain تتجاوز 200 ألف نسخة بعد أسبوعين من إطلاقها في 30 أكتوبر، حسب موقع غيم سبارك (Game*Spark) نقلًا عن إعلان الناشرة فيوتشر فريندز غيمز (Future Friends Games) على X. وسعرها في متجر Steam في الإمارات 67.99 درهمًا.",
