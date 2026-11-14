@@ -1,18 +1,18 @@
 {
  "name": "dragon-quest-monsters-withered-world-dec-3",
- "out": "cards/2026-11/dragon-quest-monsters-withered-world-dec-3-reel-v3.mp4",
+ "out": "cards/2026-11/dragon-quest-monsters-withered-world-dec-3-reel-v4.mp4",
  "verdict": "pass",
- "at": "2026-11-14T19:09:46Z",
+ "at": "2026-11-14T19:46:32Z",
  "findings": [],
  "notes": [
-  "length 12.9 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 72.6; leak_pct 0.0; cache {'hit': 1, 'miss': 4}; separate_secs 7.9; secs 12.0",
-  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 10.16, \"held_under_text\": 0.0, \"secs\": 12.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "length 16.3 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 71.1; leak_pct 0.0; cache {'hit': 1, 'miss': 3}; separate_secs 11.4; secs 16.3",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 9.26, \"held_under_text\": 0.0, \"secs\": 16.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
   "estimate: headline: 24 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
  ],
  "autofixed": [],
- "job_sha": "55b0a21a8e76d912d1f98bab52c7a09a21ec2e43",
- "dispatches": 4,
+ "job_sha": "4cf31021a8fc7d896dfd9d8812c064bd4daab873",
+ "dispatches": 5,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
