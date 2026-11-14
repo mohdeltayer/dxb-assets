@@ -1,0 +1,31 @@
+{
+ "name": "where-winds-meet-anniversary-beyond-20261114",
+ "out": "cards/2026-11/where-winds-meet-anniversary-beyond-20261114-reel-v1.mp4",
+ "verdict": "fail",
+ "at": "2026-11-14T07:50:53Z",
+ "findings": [
+  {
+   "check": "lifeless",
+   "detail": "lifeless score 38.3 (still_share 0.438, longest still 3.6 s): too much of the Reel holds still; footage behind the cards, the count-up and row reveal, more cuts"
+  }
+ ],
+ "notes": [
+  "length 25.9 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "pace: nothing changes for 4.9 s at 4.0, 4.5 s at 17.0, 4.2 s at 21.8 (change every 4 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 38.3, \"still_share\": 0.438, \"longest_still\": 3.6, \"cuts_per_10s\": 2.33, \"held_under_text\": 0.167, \"secs\": 25.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": true}"
+ ],
+ "autofixed": [],
+ "job_sha": "27953069b2f930feb91a81f1990d5756edb456bb",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": null,
+  "max_zoom": null,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "bed:neon_b (stills: no trailer stretch usable; Anniversary trailer opened (near-black opening, bloodied face and hand, burnt-in title cards) and Gameplay trailer opened (burnt-in subtitles, title cards, black frames, dialogue and narration); our bed under the stills)"
+}
