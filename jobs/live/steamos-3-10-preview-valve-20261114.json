@@ -13,59 +13,60 @@
    "trailer_id": 1749094849,
    "start": 0,
    "seconds": 240
+  },
+  {
+   "file": "steam-hardware.mp4",
+   "steam": 4165870,
+   "trailer": "Steam Hardware",
+   "start": 0,
+   "seconds": 60
   }
  ],
  "shots": [
   [
    "steam-deck-available-now.mp4",
-   0.0,
-   1.0,
+   5.85,
+   2.35,
    null
   ],
   [
    "steam-deck-available-now.mp4",
-   6.8,
-   2.65,
+   8.25,
+   2.25,
+   null
+  ],
+  [
+   "steam-hardware.mp4",
+   3.3,
+   2.85,
+   null
+  ],
+  [
+   "steam-hardware.mp4",
+   8.45,
+   2.25,
+   null
+  ],
+  [
+   "steam-hardware.mp4",
+   12.45,
+   1.75,
    null
   ],
   [
    "steam-deck-available-now.mp4",
-   9.45,
-   2.45,
-   null
-  ],
-  [
-   "steam-deck-available-now.mp4",
-   13.28,
-   2.52,
-   null
-  ],
-  [
-   "steam-deck-available-now.mp4",
-   15.85,
-   1.5,
-   null
-  ],
-  [
-   "steam-deck-available-now.mp4",
-   21.5,
-   2.5,
+   14.05,
+   2.35,
    null
   ]
  ],
  "lines": [
   [
    1,
-   3,
-   [
-    "طرحت فالف نسخة معاينة\nمن SteamOS 3.10",
-    "تحسّن توقيت الإطارات\nمع محدد الإطارات في VRR"
-   ]
-  ],
-  [
-   4,
    5,
    [
+    "طرحت فالف نسخة معاينة\nمن SteamOS 3.10",
+    "تحسّن توقيت الإطارات\nمع محدد الإطارات في VRR",
     "تدعم HDMI 2.1 VRR\nلرسوميات إيه إم دي (AMD)"
    ]
   ]
@@ -103,7 +104,7 @@
  "skin": "house",
  "track": [
   "steam-deck-available-now.mp4",
-  0.0
+  5.85
  ],
  "music_only": true,
  "cut": true,
@@ -130,13 +131,21 @@
   "CHECKS: decision log": "yes: decision_log in the job"
  },
  "decision_log": [
-  "shot 0 (0.0-1.0): the Deck on its dock, a hand lifts it: the product and a moving first frame; ends before the white slate at 1.2 s",
-  "shot 1 (6.8-9.45): hammock, picnic: people playing handheld; starts after the white slate (6.5) and the first frame is the hammock at 6.75",
-  "shot 2 (9.45-11.9): hands on the Deck, the Deck on a car dash; ends before the skateboard wide shot (12.0)",
-  "shot 3 (13.28-15.8): the docked Deck at a desk with monitors, then its parts float apart (a docked-to-display shot for the HDMI line, no gore)",
-  "shot 4 (15.85-17.35): floating parts of the Deck; ends before the space-game frame with game text (17.5)",
-  "shot 5 (21.5-24.0): the Deck on a lap then at night by a river; ends before the beach jump (24.0)",
-  "music: the trailer's own music stem for the whole Reel (music_only): the shots are cut from several moments, so effects would not match; stretch from 0.0 s, no speech",
-  "not used: Steam Machine and Steam Frame trailers (a logo bug in the top centre of every frame, inside the 9:16 window), the quote cards, game-footage stretches with burnt-in text and weapons"
- ]
+  "server file: 'Steam Deck Available Now' on the server is 29.26 s (ffmpeg -ss 0 drops the first 0.8 s): the opener (Deck on dock) of a plain download is not in it; all times re-picked on a copy made the server's way",
+  "shot 0 (A 5.85-8.2): hammock, picnic: the Deck in people's hands, first frame the hammock after the pink slate (ends 5.5); credit from frame 0",
+  "shot 1 (A 8.25-10.5): hands on the Deck, then the dash of a car; ends before the GAME OVER text in the Deck's screen (10.5)",
+  "shot 2 (H 3.3-6.15): the Deck's screen with the game library, for the line about frame timing on the Deck",
+  "shot 3 (H 8.45-10.7): close-up of the buttons, a vertical-friendly subject in the centre of the 2442 px frame",
+  "shot 4 (H 12.45-14.2): the back of the Deck, vents and Valve mark, for the HDMI and graphics line; ends before the blueprint slate (14.4)",
+  "shot 5 (A 14.05-16.4): the Deck's parts floating apart (teardown, no gore); starts after the frozen desk stretch (12.54-13.96, server flag); ends before the space-game frame with text (16.5)",
+  "music: one stretch of the trailer's own music from A 5.85 under the whole cut with music_only (stems separated, no effects, no narration); the narrated 'Steam Hardware' film is picture only",
+  "lowres_ok names the copies searched for the 900-row 'Available Now' shots"
+ ],
+ "lowres_ok": {
+  "searched": [
+   "Steam store page of Steam Deck (app 1675200): 'Steam Deck Available Now', the only lifestyle footage, 1920x1080 with bars so 900 rows of picture",
+   "Valve's other Steam trailers: 'Steam Hardware' (app 4165870, 2442x1080, full rows, used for the product shots), 'Steam Machine' and 'Steam Frame' (1080p, a product logo bug in the top centre of every frame inside the 9:16 window, not used)"
+  ],
+  "result": "no unletterboxed copy of the lifestyle shots; the three 'Available Now' shots are enlarged 2.13x from 900 rows, block ratio peak 1.29 at most (checked on the server)"
+ }
 }
