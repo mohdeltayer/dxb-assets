@@ -61469,5 +61469,163 @@
   "dispatches": 1,
   "sound": "trailer",
   "footage": true
+ },
+ {
+  "name": "rob-run-365k-concurrent-steam-20261114-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-14T07:13Z",
+  "stages": {
+   "checks": 3.5,
+   "montage": 23.2,
+   "text": 22.6,
+   "audio": 1.1,
+   "outro": 16.1
+  },
+  "total": 66.6,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-14T07:12Z",
+  "finished_at": "2026-11-14T07:13Z",
+  "render_min": 1.11,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
+    "start": 24.75,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
+    "start": 12.15,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
+    "start": 33.85,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
+    "start": 23.05,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
+    "start": 31.35,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
+    "start": 36.55,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
+    "start": 39.05,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 5.3,
+   "audio_secs": 25.5,
+   "music_pct": 80.8,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "effects_shots": 7,
+   "mix_secs": 2.8,
+   "secs": 9.1
+  },
+  "lifeless": {
+   "score": 0.7,
+   "still_share": 0.007,
+   "longest_still": 0.1,
+   "cuts_per_10s": 10.71,
+   "held_under_text": 0.0,
+   "secs": 14.0,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 127,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1110,
+  "peak_mem_mb": 2020,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 40477,
+  "peak_disk_mb": 42855,
+  "min_disk_free_mb": 203251,
+  "setup_min": 0.18,
+  "story": "rob-run-365k-concurrent-steam-20261114",
+  "job_sha": "31df8929b69913b833a9f91ff8cd56d01f3c431a",
+  "dispatches": 3,
+  "sound": "trailer",
+  "footage": true
  }
 ]
