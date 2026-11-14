@@ -1,7 +1,7 @@
 {
  "id": "freestyle-football-2-dec-3-steam-aed-game-pass-20261115",
  "title": "FreeStyle Football 2: December 3 on PC, PS5 and Xbox, Steam pre-orders open at 109.99 AED, Game Pass day one",
- "status": "built, QC pass v3; not yet director-checked; not scheduled (slot 18:15 Dubai Sun 15 Nov, RE-GATE within the hour before)",
+ "status": "built v5 (QC pass), not yet director-checked; not scheduled; slot 18:15 Dubai Sun 15 Nov, may slip to 19:15 if the director check is not clean in time",
  "lane": "digital-lounge",
  "game": "FreeStyle Football 2",
  "companies": [
@@ -9,7 +9,7 @@
   "WOORE"
  ],
  "subject_person": null,
- "template": "comparison",
+ "template": "trailer",
  "claimed_at": "2026-11-14T23:00:00Z",
  "kind": "price",
  "kind_news": "price",
@@ -47,23 +47,24 @@
   "hits": [],
   "note": "newsroom/ledger.py find failed on a story file with a list folder; searched by hand: grep of newsroom/stories for freestyle, joycity, woore, dumpster finds nothing but this claim stub"
  },
- "footage": "official Steam trailers of appid 4004820: Festival_Main (clean stretches 9.08, 29.85, 42.95, 49.45 s; music track from 19 s) and PAX_trailer (clean stretches 15.13, 17.37, 22.3, 50.8 s; its narration and burnt subtitles avoided). Rejected: Ingame and Wishlist_Steam (UI and title overlays), the six Steam page loop videos (1170x658, 2.9x enlargement), in-world signs (SUNLIGHT, Introducing U-GK 01, NL) of v2. Xbox Store page: no video in the page text; Pure Xbox: no official clip found; no press kit found; Steam news video not searched.",
+ "footage": "official Steam trailers of appid 4004820: PAX_trailer (clean stretches 15.65, 17.37, 22.3, 45.2, 50.8, 53.6 s; narration and burnt subtitles avoided) and Festival_Main (29.85, 43.7, 49.45 s; music track from 19 s). Checked and not usable: Ingame and Wishlist_Steam trailers (UI and title overlays), six Steam page loop videos (1170x658, 2.9x enlargement), Steam news API appid 4004820 (20 items: only YouTube links, no bypass), Xbox Store page (no video), Xbox Wire search (no article about the game), Pure Xbox (no official clip), no press kit found.",
  "beat": "4 price/release comparison: hook number, date, Steam price, Game Pass, language gap",
- "recipe": "comparison (price kind with split and clipcard at their Sunday caps): hard cuts on the trailer, one label line per state",
+ "recipe": "trailer drop adapted: hook (fire kick), Steam price, offer end, Game Pass",
  "sensitive": "none",
  "texts": {
   "x": "يبلغ سعر FreeStyle Football 2 على متجر Steam في الإمارات 109.99 درهم، ويصبح 98.99 درهم بخصم 10 بالمئة للحجز المسبق حتى صدورها في 3 ديسمبر. وهي قادمة إلى Game Pass، لكن قائمة لغات Steam لا تضم العربية. حسب صفحتي اللعبة على Steam ومتجر Xbox.",
   "threads": "يبلغ سعر FreeStyle Football 2 على متجر Steam في الإمارات 109.99 درهم، ويصبح 98.99 درهم بخصم 10 بالمئة للحجز المسبق حتى صدورها في 3 ديسمبر. وهي قادمة إلى Game Pass، لكن قائمة لغات Steam لا تضم العربية. حسب صفحتي اللعبة على Steam ومتجر Xbox.",
-  "instagram": "سعر FreeStyle Football 2 على Steam في الإمارات: 98.99 درهمًا للحجز المسبق\n\nتصدر لعبة كرة القدم FreeStyle Football 2 من الناشرة جويسيتي (JOYCITY) والمطورة ووري (WOORE) في 3 ديسمبر 2026. وعلى متجر Steam في الإمارات يبلغ سعر النسخة العادية 109.99 درهمًا، ويصبح 98.99 درهمًا مع خصم الحجز المسبق البالغ 10 بالمئة، وينتهي العرض في 3 ديسمبر.\n\nوتقول صفحة اللعبة على متجر Xbox إنها قادمة إلى PC Game Pass وXbox Game Pass Ultimate. أما قائمة لغات Steam فتضم الإنجليزية والكورية والفرنسية والألمانية والإسبانية واليابانية والبرتغالية والصينية، ولا تضم العربية.\n\nالمصدر: صفحة اللعبة على Steam ومتجر Xbox، 15 نوفمبر 2026.\n\n#ألعاب #أخبار_الألعاب #FreeStyleFootball2 #Steam",
-  "headline": "في FreeStyle Football 2\nحجز مسبق بخصم 10 بالمئة",
+  "instagram": "سعر FreeStyle Football 2 على Steam في الإمارات: 98.99 درهم للحجز المسبق\n\nتصدر لعبة كرة القدم FreeStyle Football 2 من الناشرة جويسيتي (JOYCITY) والمطورة ووري (WOORE) في 3 ديسمبر 2026. وعلى متجر Steam في الإمارات يبلغ سعر النسخة العادية 109.99 درهم، ويصبح 98.99 درهم مع خصم الحجز المسبق البالغ 10 بالمئة، وينتهي العرض في 3 ديسمبر. أما النسختان الفاخرة والنهائية فسعرهما 146.99 و254.49 درهم قبل الخصم.\n\nوتقول صفحة اللعبة على متجر Xbox إنها قادمة إلى PC Game Pass وXbox Game Pass Ultimate. أما قائمة لغات Steam فتضم الإنجليزية والكورية والفرنسية والألمانية والإسبانية واليابانية والبرتغالية والصينية، ولا تضم العربية.\n\nالمصدر: صفحة اللعبة على Steam ومتجر Xbox، 15 نوفمبر 2026.\n\n#ألعاب #أخبار_الألعاب #FreeStyleFootball2 #Steam",
+  "headline": "في FreeStyle Football 2\nحجز مسبق من 98.99 درهم",
   "lines": [
-   "على Steam في الإمارات\nيبدأ السعر من 98.99 درهم",
-   "ينتهي عرض الحجز يوم تصدر\nاللعبة في 3 ديسمبر",
-   "وهي قادمة إلى Game Pass أيضًا"
+   "على Steam: 109.99 درهم قبل\nخصم الحجز المسبق 10 بالمئة",
+   "ينتهي الخصم في 3 ديسمبر\nيوم تصدر اللعبة",
+   "وهي قادمة إلى Game Pass"
   ],
   "credit": "المصدر: جويسيتي (JOYCITY)",
   "source": "صفحة Steam الرسمية",
-  "note": "the Steam language list (no Arabic) is in the X text and the caption, not on screen"
+  "note": "the Steam language list (no Arabic) is in the X text and the caption, not on screen",
+  "dirham_note": "«N درهم» on screen, in X, Threads and the Instagram caption (arabic-writing conventions.md section 6: the currency name follows the figure, no tamyiz inflection with digits). This differs from the glossary row of 30 Sep («درهمًا» in written captions): raised for Mohammad; the glossary wins if he says so."
  },
  "re_gate": "RE-GATE within the hour before 18:15 Dubai (Sun): re-read the Steam store page and API for the UAE store (price 98.99 AED, promotion end 3 Dec, release date, languages), the Xbox Store page (Game Pass line) and Pure Xbox",
  "deepl": {
@@ -74,10 +75,10 @@
    "Coming to Game Pass": "DeepL: قادم إلى Game Pass (masculine; house: feminine for game names, قادمة إلى)",
    "language list does not include Arabic": "DeepL: لا تتضمن قائمة اللغات اللغة العربية; ours قائمة لغات Steam لا تضم العربية (names the store)"
   },
-  "back_check_EN_GB": "FreeStyle Football 2 is due to be released on 3 December, and the pre-order price on the Steam store in the UAE is 98.99 dirhams after a 10 per cent discount (109.99 dirhams before the discount). It is coming to Game Pass, but the Steam language list does not include Arabic, according to the game's page on Steam. Headline: Pre-order FreeStyle Football 2 for 98.99 dirhams (ours: from 98.99). L2: It costs 109.99 dirhams in the UAE, with a 10 per cent discount for advance bookings. L1, L3, L4 read as ours. || v3 lines: 'On Steam in the UAE / Prices start from 98.99 dirhams'; 'The pre-order offer ends on the day the game is released, 3 December'; 'It's coming to Game Pass as well'; X text: 'priced at 109.99 dirhams on the Steam store in the UAE, and is available for 98.99 dirhams with a 10 per cent pre-order discount until its release on 3 December. It is coming to Game Pass, but the Steam language list does not include Arabic. According to the game's pages on Steam and the Xbox Store.' All read as ours."
+  "back_check_EN_GB": "FreeStyle Football 2 is due to be released on 3 December, and the pre-order price on the Steam store in the UAE is 98.99 dirhams after a 10 per cent discount (109.99 dirhams before the discount). It is coming to Game Pass, but the Steam language list does not include Arabic, according to the game's page on Steam. Headline: Pre-order FreeStyle Football 2 for 98.99 dirhams (ours: from 98.99). L2: It costs 109.99 dirhams in the UAE, with a 10 per cent discount for advance bookings. L1, L3, L4 read as ours. || v3 lines: 'On Steam in the UAE / Prices start from 98.99 dirhams'; 'The pre-order offer ends on the day the game is released, 3 December'; 'It's coming to Game Pass as well'; X text: 'priced at 109.99 dirhams on the Steam store in the UAE, and is available for 98.99 dirhams with a 10 per cent pre-order discount until its release on 3 December. It is coming to Game Pass, but the Steam language list does not include Arabic. According to the game's pages on Steam and the Xbox Store.' All read as ours. || v4 lines: 'On Steam: 109.99 dirhams before the 10 per cent pre-order discount'; 'The discount ends on 3 December, the day the game is released'; 'It's coming to Game Pass'; caption: 'the standard edition is priced at 109.99 dirhams, which drops to 98.99 dirhams with a 10 per cent pre-order discount; the offer ends on 3 December. The Deluxe and Ultimate editions are priced at 146.99 and 254.49 dirhams respectively before the discount.' All read as ours."
  },
  "grammar_review": {
-  "run": "15 Nov 2026, repeated as a separate pass on the v3 texts with arabic-grammar-review: required edits none; checked يوم تصدر اللعبة (ظرف مضاف إلى جملة فعلية), صفحتي اللعبة (مثنى مضاف), حتى صدورها, agreement of the game name (feminine), tanwin alif in أيضًا, first word Arabic on every line, glued prefixes none on Latin names",
+  "run": "15 Nov 2026, third pass on the v4 texts with arabic-grammar-review loaded again: required edits none; checked النسختان الفاخرة والنهائية (مثنى مبتدأ، صفتان للمثنى بالمفرد المؤنث جائزتان: خبر «فسعرهما»), 146.99 و254.49 درهم, قبل خصم الحجز, يوم تصدر اللعبة, no glued prefix on a Latin name, first word Arabic on every line and paragraph",
   "required_edits": [],
   "optional_style_suggestions": [],
   "uncertain_cases": [
@@ -102,21 +103,31 @@
   "checked": "headline, 4 lines, credit, X/Threads text, Instagram caption: agreement of the game name (feminine), non-human plural agreement, tamyiz after decimals, glued prefixes on Latin names (none on screen), Western digits, no em dash, first word Arabic on every line and paragraph, brackets at first mention, source named, hashtags only on Instagram"
  },
  "render": {
-  "reel": "cards/2026-11/freestyle-football-2-dec-3-steam-aed-game-pass-20261115-v3-reel-v1.mp4",
-  "sidecars": "freestyle-football-2-dec-3-steam-aed-game-pass-20261115-v3-strip.jpg, -v3-sheet.jpg, -v3-dense.jpg, -v3-qc.json (v1 and v2 sidecars are the unsuffixed names, superseded)",
-  "job_file_commit": "9f9bd92 (jobs/live job v5)",
-  "job_sha": "a424376550ae468de4de5f2a02c3957e60a26e26",
-  "dispatches": "5 render-live runs for this story in all (v3 is the fifth; the server counts 4 for this job sha); the coordinator's fix round was one re-render",
-  "length_before_end_card_s": 18.1,
-  "sound": "trailer: Festival_Main music from 19 s, audio split applied (music 91.9%, leak 0.1)",
-  "speech": "none: faster-whisper small on the finished v3 audio, first 3 s and whole, VAD on: nothing; VAD off: only 'Music'; RMS per second 10 to 23 through to the end card, never silent",
-  "credit_check": "one credit entry [0,7] from_start, «المصدر: جويسيتي (JOYCITY)», visible in every dense frame from 0.0 s to the last picture frame (17.75 s)",
+  "reel": "cards/2026-11/freestyle-football-2-dec-3-steam-aed-game-pass-20261115-v5-reel-v1.mp4",
+  "sidecars": "freestyle-football-2-dec-3-steam-aed-game-pass-20261115-v5-strip.jpg, -v5-sheet.jpg, -v5-dense.jpg, -v5-qc.json (v1, v2 unsuffixed; v3 and v4 have -v3 and -v4 sidecars)",
+  "job_file_commit": "5ac919d (jobs/live job v8)",
+  "job_sha": "82c56c6e0898d0d62df53a88f059dd1043c0a8a5",
+  "dispatches": "v4 failed once on the smear flag (goal frame), passed after block_ok; v5 is the fix of the 3 small frames left in v4 (THOR close-up, JOYCITY board); the server counts 6 dispatches for this story",
+  "length_before_end_card_s": 14.2,
+  "sound": "trailer: Festival_Main music from 19 s, audio split applied (music 88.5%, leak 0.0)",
+  "speech": "none: faster-whisper small on the finished v5 audio, VAD on: nothing; VAD off: 'Music' to 14.3 s and a hallucinated 'Thank you for watching!' over the end-card jingle (14.3 to 16.3 s); RMS 11 to 23 per second, never silent",
+  "credit_check": "one entry [0,8] from_start «المصدر: جويسيتي (JOYCITY)», visible in every dense frame from 0.0 s to the last picture frame",
+  "fixes_from_director_fail": [
+   "a first frame: now a sharp fire-kick player (PAX 53.6 s)",
+   "b template: trailer (honest), cap exception written",
+   "c headline «في FreeStyle Football 2 / حجز مسبق من 98.99 درهم»",
+   "d empty grass shot and washed line: Festival D starts at 43.7, lines have shade",
+   "e last shot: England-kit player (full face and shoulders), then the red-kit player; THOR close-up cut",
+   "f Festival line-up with billboard portraits replaced by the PAX line-up, cut before the close-up",
+   "g dirham consistent «درهم»",
+   "h sources checked and named"
+  ],
   "known_weak_points": [
-   "last shot (PAX 22.3 to 24.6, about 17.4 to 17.75 s) ends on a close-up with the jersey word THOR and a small name tag at the bottom left edge",
-   "Festival line-up shot (about 8 to 10 s) has billboard portraits behind the players, no headline over them",
-   "comparison has no label-plate mechanism in the code: the lines act as the state labels"
+   "small «OYCITY» board text at the bottom edge for about 0.25 s at 12.75 to 13.0 s (end of the PAX dribble shot)",
+   "one block_ok waiver 10.8 to 11.95 s (goal frame lines)",
+   "the editions Deluxe and Ultimate prices are in the caption only, not on screen"
   ]
  },
- "approved": "built by builder-1815; NOT director-checked; NOT scheduled; RE-GATE within the hour before 18:15 Dubai (Sun)",
- "template_note": "comparison of two ways to get the game (buy on Steam in the UAE, or Game Pass); the lines act as state labels with the one figure in the first label; the list template (three editions with AED prices) was not used because it needs per-edition art and a card format I could not verify in time"
+ "approved": "built by builder-1815; NOT director-checked; NOT scheduled; RE-GATE within the hour before 18:15 Dubai (Sun); the slot may slip to 19:15 if the v4 director check is not clean in time",
+ "template_note": "honest label: a trailer Reel (footage, three lines, no card, no strip). comparison was a false label and is dropped. CAP EXCEPTION for Mohammad: trailer is already at its daily cap of four on the Dubai day of 15 Nov and split and clipcard are full; the gap rule (no empty 18:15 slot) decides. List with the three editions was not built: it needs a card format not verified in this build; split (price strip) is also capped."
 }
