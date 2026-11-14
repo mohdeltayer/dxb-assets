@@ -1,0 +1,26 @@
+{
+ "name": "freestyle-football-2-dec-3-steam-aed-game-pass-20261115",
+ "out": "cards/2026-11/freestyle-football-2-dec-3-steam-aed-game-pass-20261115-v7-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-14T23:57:41Z",
+ "findings": [],
+ "notes": [
+  "length 13.5 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 87.8; leak_pct 0.0; cache {'hit': 3, 'miss': 2}; separate_secs 5.0; secs 8.6",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 9.63, \"held_under_text\": 0.0, \"secs\": 13.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 23 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [],
+ "job_sha": "d18b2f28f8e12f45afd1db31c6524ef18023ab66",
+ "dispatches": 8,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "trailer"
+}
