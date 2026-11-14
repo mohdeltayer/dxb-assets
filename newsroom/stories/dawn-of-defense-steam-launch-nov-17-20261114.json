@@ -2,7 +2,7 @@
  "id": "dawn-of-defense-steam-launch-nov-17-20261114",
  "game": "Dawn of Defense",
  "lane": "digital-lounge",
- "status": "built v1 (render pending); planned 23:15 Dubai Sat 14 Nov (19:15Z); awaiting separate director (not signed, not scheduled)",
+ "status": "built, qc pass (v1, render-live on dxb-render, 175 s, dispatch 1 of the live render); planned 23:15 Dubai Sat 14 Nov (19:15Z); RE-GATE within the hour before 23:15 Dubai; awaiting separate director (not signed, not scheduled)",
  "subject_person": null,
  "ledger_find": {
   "at": "2026-11-14T05:15Z",
@@ -53,6 +53,14 @@
  "recipe": "trailer drop / launch with split strip (platform, price unknown, Arabic absent); recipe written second by second in the job decision_log",
  "reel_path": "cards/2026-11/dawn-of-defense-steam-launch-nov-17-20261114-reel-v1.mp4",
  "built_by": "builder-2315",
- "job": "job file commit (see git log -- jobs/live)",
- "source_note": "date, numbers and languages on the Steam page and 6side's Steam posts; launch hour only on Tbreak, attributed in the captions"
+ "job": "job file commit 0200091 (jobs/live, deleted by the runner after the render), job_sha 3e4e628143b587d95bbc9fbdc6cba2e33681e690",
+ "source_note": "date, numbers and languages on the Steam page and 6side's Steam posts; launch hour only on Tbreak, attributed in the captions",
+ "render_checks": "qc pass no findings; length 17.6 s before the end card; whisper on the final Reel (VAD on and off): no speech, only a 'Music' hallucination; bed neon plays to the end card, jingle -12 dB at 18 s, no silent tail; credit visible frames 0 to 3 s; dense strip 4 fps judged: no blood or gore (lava shot is dust and rocks), no slate, title card, rating card or black frame; first frame is the idol with the beam moving; headline sits over the idol's hood on frame 0 (subject fills the frame height); strip hidden until the headline leaves",
+ "arabic_review": "arabic-games-film-editor, arabic-writing and arabic-grammar-review loaded fresh; grammar pass done by hand, no required edits; DeepL forward whole-story pass and four phrase alternatives: النسخة التجريبية kept (DeepL back-check reads it as 'beta'), قائمة الأمنيات over DeepL قائمة الرغبات, دفاع الأبراج over دفاع البرج; back-check confirms date, 108,000, 100,000, price, languages and Tbreak hour",
+ "uncertainties": [
+  "launch hour 4pm CET (7pm UAE) is on Tbreak only, in the caption and X text attributed to Tbreak, not on screen",
+  "النسخة التجريبية (demo) may read as beta",
+  "story is a small indie launch, news hook is the Tuesday launch and the Gulf outlet's launch hour"
+ ],
+ "sound": "our bed (bed_reason in the job), both Steam trailers narrated"
 }
