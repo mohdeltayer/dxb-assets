@@ -2,7 +2,7 @@
  "id": "dawn-of-defense-steam-launch-nov-17-20261114",
  "game": "Dawn of Defense",
  "lane": "digital-lounge",
- "status": "built, qc pass (v1, render-live on dxb-render, 175 s, dispatch 1 of the live render); planned 23:15 Dubai Sat 14 Nov (19:15Z); RE-GATE within the hour before 23:15 Dubai; awaiting separate director (not signed, not scheduled)",
+ "status": "director PASS (director-dod-1, 14 Nov 05:25Z); scheduled in Publer 23:15 Dubai Sat 14 Nov (19:15Z) on Instagram, X, Threads, 3/3 job status complete; RE-GATE within the hour before 23:15 Dubai",
  "subject_person": null,
  "ledger_find": {
   "at": "2026-11-14T05:15Z",
@@ -45,7 +45,7 @@
  "footage": "official Steam 'Harvest & Mine Trailer' (appid 2781660), 1080p 5.5 Mbps, decode clean; 8 shotpick clean stretches in 9:16; narrated throughout, so our bed with bed_reason",
  "posts": {
   "x_threads_ar": "تصدر Dawn of Defense على Steam في 17 نوفمبر، وهي لعبة تمزج الاستراتيجية الفورية بدفاع الأبراج والتطور بين الجولات. وأفاد موقع تيبريك (Tbreak) بأن الإطلاق في السابعة مساءً بتوقيت الإمارات.",
-  "instagram_ar": "تصدر الثلاثاء: Dawn of Defense تجمع RTS ودفاع الأبراج\n\nتصدر لعبة Dawn of Defense من سيكس سايد ستوديو (6side Studio) على Steam في 17 نوفمبر 2026، وتمزج الاستراتيجية الفورية بدفاع الأبراج والتطور بين الجولات. يقود اللاعب قبيلة تدافع عن موطنها ضد إمبراطورية Imperium Aeternum، وتُولَّد الخرائط عشوائيًا في كل جولة.\n\nوقال الاستوديو إن أكثر من 108 آلاف لاعب جربوا النسخة التجريبية، وإن قائمة أمنيات اللعبة تجاوزت 100 ألف خلال Steam Next Fest. وقد سُحبت النسخة التجريبية من المتجر في 10 نوفمبر.\n\nتصدر اللعبة للكمبيوتر على Steam، ولم يظهر سعرها بعد. وتشمل لغاتها الإنجليزية (بصوت كامل) والفرنسية والألمانية واليابانية، من دون العربية.\n\nوأفاد موقع تيبريك (Tbreak) بأن الاستوديو وناشرها ريكوب (Rekoup) حددا موعد الإطلاق في الرابعة مساءً بتوقيت وسط أوروبا، أي السابعة مساءً بتوقيت الإمارات.\n\nالمصدر: صفحة اللعبة على Steam وإعلانات الاستوديو، وتيبريك لموعد الإطلاق.\n\n#ألعاب #أخبار_الألعاب #DawnOfDefense #Steam",
+  "instagram_ar": "تصدر الثلاثاء: Dawn of Defense تجمع RTS ودفاع الأبراج\n\nتصدر لعبة Dawn of Defense من سيكس سايد ستوديو (6side Studio) على Steam في 17 نوفمبر 2026، وتمزج الاستراتيجية الفورية بدفاع الأبراج والتطور بين الجولات. يقود اللاعب قبيلة تدافع عن موطنها ضد إمبراطورية Imperium Aeternum، وتُولَّد الخرائط عشوائيًا في كل جولة.\n\nوقال الاستوديو إن 108 آلاف لاعب جربوا النسخة التجريبية، وإن قائمة أمنيات اللعبة تجاوزت 100 ألف خلال Steam Next Fest. وقد سُحبت النسخة التجريبية من المتجر في 10 نوفمبر.\n\nتصدر اللعبة للكمبيوتر على Steam، ولم يظهر سعرها بعد. وتشمل لغاتها الإنجليزية (بصوت كامل) والفرنسية والألمانية واليابانية، من دون العربية.\n\nوأفاد موقع تيبريك (Tbreak) بأن الاستوديو وناشرها ريكوب (Rekoup) حددا موعد الإطلاق في الرابعة مساءً بتوقيت وسط أوروبا، أي السابعة مساءً بتوقيت الإمارات.\n\nالمصدر: صفحة اللعبة على Steam وإعلانات الاستوديو، وتيبريك لموعد الإطلاق.\n\n#ألعاب #أخبار_الألعاب #DawnOfDefense #Steam",
   "note": "RE-GATE within the hour before 23:15 Dubai: Steam page date and price, Tbreak launch hour, any date change or delay"
  },
  "beat": "launch",
@@ -62,5 +62,27 @@
   "النسخة التجريبية (demo) may read as beta",
   "story is a small indie launch, news hook is the Tuesday launch and the Gulf outlet's launch hour"
  ],
- "sound": "our bed (bed_reason in the job), both Steam trailers narrated"
+ "sound": "our bed (bed_reason in the job), both Steam trailers narrated",
+ "director_edits": "director 14 Nov 05:25Z: caption «أكثر من 108 آلاف» -> «108 آلاف» (6side says 108,000 players, no \"more than\"); everything else unchanged",
+ "gate": "gate 05:25Z (director): Steam page re-read (Planned Release Date 17 Nov 2026, Windows 11 requirements only, no Arabic among 11 languages, no price); 6side Steam posts re-read via Steam events API (108,000 demo players, 100k wishlists, November 17th, demo retired 10 Nov 11:00 CET); Tbreak re-read (6side and Rekoup say 4pm CET = 7pm UAE; price not announced); search: no delay or new date. Launch hour only in captions/X text attributed to Tbreak, not on screen. Re-gate again within the hour before 23:15 Dubai (queued 14 h ahead).",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/dawn-of-defense-steam-launch-nov-17-20261114-reel-v1.mp4",
+  "blob": "1f0053bd0f891c9d0b9f677b50b3a89c287f5b57",
+  "at": "2026-11-14T05:11:53Z",
+  "note": "bed accepted: both Steam trailers narrated; first-frame headline over the idol's back-hood accepted (subject fills frame height, eyes clear, readable at 3:4)",
+  "checklist": {
+   "job": "jobs/live/dawn-of-defense-steam-launch-nov-17-20261114.json",
+   "sha256": "6d979ea0084f2592e3b365c98c9b06f24c39bd5f651dc37bf7e26f18825b0fd8",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-2315"
+  },
+  "by": "director-dod-1",
+  "qc": "pass",
+  "looked": "n/a card-led; 4fps dense strip, 3:4 first frame, sound measured"
+ }
 }
