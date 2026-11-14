@@ -1,7 +1,7 @@
 {
  "id": "unicorn-academy-island-of-magic-nov-17-20261115",
  "title": "Unicorn Academy: Island of Magic launches Tue 17 Nov 2026 on PS5, PS4, Xbox, Switch and Steam (Mindscape)",
- "status": "built; RE-GATE within the hour before 15:15 Dubai (Sun); not scheduled",
+ "status": "built, QC pass (v1 render of job c0f4c7f4); RE-GATE within the hour before 15:15 Dubai (Sun); not scheduled, no director run (builder stop point)",
  "lane": "digital-lounge",
  "game": "Unicorn Academy: Island of Magic",
  "subject_person": null,
@@ -84,6 +84,9 @@
  },
  "translation_notes": "DeepL whole-story forward (Arabic): تُطلق for launch (house: تصدر), game name translated and Spin Master left Latin (house: names stay Latin / Arabic with bracket), تربية وحيد القرن and علاقة وثيقة where we write يرعى and رابطة; kept ours. Phrase alternatives: while supplies last not used; 'launches on' gave يُطلق في (house تصدر); release date gave تاريخ الإصدار (we write موعد الصدور). Back-check Arabic to English: meaning identical (game, two days, Spin Master series, first-year student, unicorn care and race, bond, Ravenzella's scheme, 17 November, PS5, Xbox, Switch, Steam). Grammar review run 15 Nov as its own pass (house glossary, perfect-arabic SKILL.md and arabic-writing orthography.md opened): required_edits [], optional_style_suggestions [], uncertain_cases [] (mixed Latin names inside Arabic lines checked for the text-direction rule: every line opens Arabic).",
  "approved": "not approved: studio build, stops before director and scheduling (builder 15:15 Dubai slot)",
- "sound": "trailer music stem (music_only)",
- "shots": "7 shots v2: 13.0 (3.4), 7.2 (4.0), 20.0 (3.6), 22.9 (2.9), card 3.0, 41.9 (3.2), 78.4 (2.4)"
+ "sound": "trailer music stem only (audio split applied with music_only: music_pct 10.7, leak 1.8; the trailer narrates 2.2 to 86.7 s, stripped). whisper small on the finished Reel: VAD on nothing, first 3 s nothing, VAD off only the usual music hallucination; music runs to the end card",
+ "shots": "7 shots v2: 13.0 (3.4), 7.2 (4.0), 20.0 (3.6), 22.9 (2.9), card 3.0, 41.9 (3.2), 78.4 (2.4)",
+ "qc": "pass, 20.1 s before the end card (target note only), lifeless 4.1, 2 server renders (dispatches 3 in qc: the first stopped at the font check)",
+ "uncertainties": "reading girl (source 25 s) shows 11.25 to 12.0 s under the unicorn-care line; empty beanbag room 17.25 to 17.75 s under the villain line; first frame (t=0) is a 0.2 s ghost of the blazer man before the hook shot; chip رسمي rests on the publisher's trailer slate and Steam date",
+ "reel": "cards/2026-11/unicorn-academy-island-of-magic-nov-17-20261115-reel-v1.mp4"
 }
