@@ -270,3 +270,4 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | Kefir (ROB RUN developer and publisher) | كيفير (Kefir) | Proposed 14 Nov 2026 (ROB RUN Reel credit; Latin in brackets at first mention) |
 | Denfaminicogamer (Japanese games outlet) | دينفامي نيكو غيمر (Denfaminicogamer) | Proposed 14 Nov 2026 (ROB RUN Reel source and caption; Latin in brackets at first mention) |
 | Clockwork Labs (BitCraft Online developer and publisher) | كلوكوورك لابس (Clockwork Labs) | Proposed 14 Nov 2026 (BitCraft Online Reel credit and caption; Latin in brackets at first mention) |
+| Frag Lab (Forest Escape: Last Train developer; Steam lists Frag Lab, LLC) | فراغ لاب (Frag Lab) | Proposed 14 Nov 2026 (Forest Escape Last Train Rainbow Reel credit and caption; Latin in brackets at first mention) |
