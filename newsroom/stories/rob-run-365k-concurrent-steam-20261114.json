@@ -1,7 +1,7 @@
 {
  "id": "rob-run-365k-concurrent-steam-20261114",
  "title": "ROB RUN peaked at 365,092 concurrent players on Steam on 13 Nov 2026 (SteamDB; Denfaminicogamer reported it 14 Nov)",
- "status": "texts corrected to 13 Nov peak (story file only, job and Reel untouched); RE-GATE within the hour before 00:15 Dubai (Sun)",
+ "status": "scheduled in Publer for 00:15 Dubai Sun 15 Nov (Sat 20:15Z), 3/3 (ids ig:16b845 x:4fa9ae th:16b855), director PASS (director-robrun-2); gate 14 Nov ~07:40Z: SteamDB Steam News post read (peak 365,092 on 13 Nov 2026, 9 days after release), Denfaminicogamer and Steam page re-read, news search no denial; RE-GATE within the hour before 00:15 Dubai (Sun): Steam page reviews and languages, any Kefir statement or correction",
  "lane": "digital-lounge",
  "game": "ROB RUN",
  "subject_person": null,
@@ -89,5 +89,27 @@
   "fixes": "no weapons or muzzle flash (checked at 8 fps on the local file and 4 fps on the strip); trailer template, strip content moved into headline and lines; hook is the vault door under the headline; Steam HLS timelines differ per fetch, so the official trailer is committed to live/2026-11-14/rob-run-official-trailer.mp4 and shots are on that file",
   "speech": "faster-whisper small, vad on: none; music runs to the end card (rms 0.2 to 0.4, tail 0.1 to 0.2)",
   "notes": "territory-map shots carry the trailer's own dithered transition effects at about 7.5, 9.25, 10.75 and 11.5 to 12.25 s (not violent; readability of line 2 over the last of them is the director's call)"
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/rob-run-365k-concurrent-steam-20261114-reel-v1.mp4",
+  "blob": "c7f68ef3f10697fade44dc46a07daef01dbd48b0",
+  "at": "2026-11-14T07:34:28Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/rob-run-365k-concurrent-steam-20261114.json",
+   "sha256": "2a8640a5eb872a2121323d7a69fc96e07a19197fdbb135dc201ad41cc4bbd84c",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-0015-claim2"
+  },
+  "by": "director-robrun-2",
+  "qc": "pass",
+  "looked": "4 fps 9:16 frames 0-12.5s: vault wheel, helicopter, suited crowd by cars, car chase, truck, territory map; no weapons, blood, nudity, nightclub, gambling, decal; texts checked 13 Nov per SteamDB"
+ },
+ "scheduled": "scheduled in Publer 20:15Z (00:15 Dubai Sun 15 Nov): Instagram Reel, X, Threads; template trailer, labels kind:news tpl:trailer skin:house sound:trailer genre:live service/MMO",
+ "director_note": "director-robrun-2 (14 Nov): v1 (split) failed on gun-and-muzzle-flash frames and three splits in a row; v2 (trailer) clean at 4 fps 9:16, no weapons, nudity, nightclub, gambling; first fail on the text date (14 Nov, SteamDB says 13 Nov) fixed in d33eb8a. Line 2 over the trailer's last dither transition (about 11.5 to 12.25 s) is weak but readable."
 }
