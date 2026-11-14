@@ -2,16 +2,16 @@
  "name": "spirit-crossing-launch-november-16",
  "out": "cards/2026-11/spirit-crossing-launch-november-16-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-14T17:08:15Z",
+ "at": "2026-11-14T17:19:21Z",
  "findings": [],
  "notes": [
-  "length 12.3 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 54.2; leak_pct 0.1; cache {'hit': 0, 'miss': 3}; separate_secs 5.9; secs 9.1",
-  "render_job: lifeless: {\"score\": 0.1, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 6.56, \"held_under_text\": 0.008, \"secs\": 12.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 13.1 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 8.46, \"held_under_text\": 0.0, \"secs\": 13.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "15022b3dbdb5abc3b065d090ef803dec70ae3734",
- "dispatches": 5,
+ "job_sha": "143d2aa3815e29b3c239e28101f0063395e7f5a1",
+ "dispatches": 6,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -21,5 +21,5 @@
  "final_enc": "-preset medium -crf 18",
  "look_frames": [],
  "person_shown": "n/a",
- "sound": "trailer"
+ "sound": "bed:neon_e (trailers checked: Public Playtest Trailer (the picture used) sound is effects-led, the audio split measured music at 3.6% of the stretch from 4.96 s and refused it; Steam Announcement Trailer music is usable (54.6% on 14 Nov) but its clean picture is under 10 s (a bright building flash and a white puff burst), so picture and music cannot come from the same trailer; no third official trailer on Steam)"
 }
