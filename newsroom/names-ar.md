@@ -23,6 +23,10 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Ocelot Technologies | أوسيلوت تكنولوجيز | Proposed 13 Nov 2026 (developer and publisher of Guild Saga: Vanished Worlds; first mention carries the Latin in brackets) |
 | Vertigo Gaming | فيرتيغو غيمينغ | Proposed 13 Nov 2026 (developer and publisher of Cook, Serve, Delicious! Re-Mustard; first mention carries the Latin in brackets) |
 | Nestopi | نيستوبي | Proposed 7 Nov 2026 (Japanese studio behind Chill with You; first on-screen mention carries the Latin in brackets) |
+| Riot Games | ريوت غيمز | Proposed 14 Nov 2026 (LoL esports roadmap Reel; Latin in brackets at first mention; follows إيبك غيمز and نت إيز غيمز; one earlier post wrote ريوت جيمز) |
+| League of Legends esports | الرياضات الإلكترونية في League of Legends | Proposed 14 Nov 2026 (game name stays English) |
+| Worlds, MSI, First Stand: All In, Demacia Cup, Swiss Stage, Play-In | stay in English as Riot writes them; Worlds glossed once as «بطولة العالم Worlds» | Proposed 14 Nov 2026 |
+| Nagoya, Suwon, Seoul, Valencia | ناغويا، سوون، سيول، فالنسيا (venue names Suwon Convention Center, Seoul Arena, Feria de Valencia stay Latin) | Proposed 14 Nov 2026 |
 | Nintendo | نينتيندو | Approved 26 Sep (never نينتندو; posts as late as 4 Nov used it) |
 | Nintendo of America | نينتيندو أوف أمريكا | In use |
 | Sony | سوني | In use |

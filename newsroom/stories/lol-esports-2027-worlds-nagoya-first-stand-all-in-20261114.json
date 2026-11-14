@@ -9,14 +9,60 @@
  "genre": [
   "regional/esports"
  ],
- "status": "NOT BUILT: claim stub only. Primary read 14 Nov 02:55Z; official footage (lolesports YouTube Worlds 2026 Final Trailer 44oxy-v7CuY) could not be fetched (YouTube bot check, no cookies); no video on the Riot page or press release. Lead still open for a builder with a footage route.",
+ "status": "built, job dispatched (see render), awaiting director; planned 21:15 Dubai Sat 14 Nov (17:15Z) on Instagram, X, Threads; RE-GATE within the hour before 21:15 Dubai",
  "lane": "Digital Lounge only",
  "sources": [
   {
    "url": "https://lolesports.com/en-US/news/lol-esports-2027-and-beyond",
    "type": "primary",
-   "read_at": "2026-11-14T02:55Z"
+   "read_at": "2026-11-14T02:55Z",
+   "note": "Riot LoL Esports staff post 13 Nov 2026, read in full: 'Nagoya, Japan, will host the Swiss Stage, marking a historic first for the World Championship'; QF and SF Suwon Convention Center, Final Seoul Arena; MSI at Feria de Valencia 'For the first time ever'; First Stand: All In, one-time, China, 'largest tournament we've ever produced', SEA gets First Stand 2028; 'We'll have much more to share in January'; MSI dates and tickets 'in the coming months'; Demacia Cup might replace the Play-In, 'No decisions have been finalized'"
+  },
+  {
+   "url": "https://prtimes.jp/main/html/rd/p/000000766.000024470.html",
+   "type": "press release",
+   "read_at": "2026-11-14T03:05Z",
+   "note": "Riot Games Japan 14 Nov 08:00 JST (title read; images only used for the check)"
   }
  ],
- "verdict": "CONFIRMED / رسمي per digest seq 463; key phrase: 'Nagoya, Japan, will host the Swiss Stage, marking a historic first for the World Championship'"
+ "verdict": "CONFIRMED / رسمي per digest seq 463; key phrase: 'Nagoya, Japan, will host the Swiss Stage, marking a historic first for the World Championship'",
+ "category": "announcement",
+ "kind": "announcement",
+ "kind_news": "esports",
+ "label": "رسمي",
+ "chip": "رسمي",
+ "template": "stills",
+ "beat": "announcement",
+ "first_report": "Riot LoL Esports page 13 Nov 2026 (League of Legends Showcase announcement); Riot Games Japan press release 14 Nov 08:00 JST = 03:00 Dubai; digest seq 463; no Arabic outlet seen",
+ "source_type": "primary",
+ "platform": [
+  "PC"
+ ],
+ "sensitive": "none",
+ "recipe": "2 trailer drop adapted: announcement, stills (no footage fetchable)",
+ "claims": {
+  "first Worlds in Japan, Swiss Stage Nagoya": "OK Riot page",
+  "QF/SF Suwon Convention Center, Final Seoul Arena": "OK Riot page",
+  "MSI Valencia first time": "OK Riot page",
+  "First Stand: All In China, one-time, largest, SEA 2028": "OK Riot page",
+  "more in January": "OK",
+  "not announced": "Nagoya venue, dates, tickets, format, qualification",
+  "Demacia Cup may replace Play-In": "OK, no decision"
+ },
+ "footage": "none fetchable: lolesports YouTube Worlds 2026 Final Trailer (44oxy-v7CuY) and Opening Ceremony Trailer (lWSL_yWAfLg) answer the bot check without cookies; no video on the Riot page or PR TIMES. Stills: Riot page images Suwon Convention Center 1920x1280 (1.5x), Seoul Arena render 2048x1108 (1.73x), Feria de Valencia 2048x1365 (1.4x); Nagoya key art and First Stand logo skipped (burnt-in text cut by the 9:16 crop).",
+ "posts": {
+  "x_threads_ar": "تستضيف اليابان لأول مرة مرحلة Swiss Stage من بطولة العالم Worlds في ناغويا عام 2027، حسب ريوت غيمز (Riot Games). وتنتقل MSI إلى إسبانيا، وتبدأ First Stand: All In في الصين.",
+  "instagram_ar": "بطولة العالم في اليابان لأول مرة: خريطة League of Legends 2027\n\nأعلنت شركة ريوت غيمز (Riot Games) خريطة بطولاتها الدولية للرياضات الإلكترونية في League of Legends لعام 2027. وتستضيف اليابان لأول مرة مرحلة Swiss Stage من بطولة العالم Worlds في مدينة ناغويا.\n\nثم تنتقل المنافسات إلى كوريا الجنوبية: ربع النهائي ونصف النهائي في Suwon Convention Center بمدينة سوون، والنهائي في Seoul Arena بالعاصمة سيول.\n\nوتُقام بطولة MSI لأول مرة في Feria de Valencia بمدينة فالنسيا الإسبانية. وتبدأ الموسم بطولة First Stand: All In في الصين، وهي بطولة لمرة واحدة وأكبر بطولة أنتجتها ريوت حتى الآن، بعد نقلها من جنوب شرق آسيا، على أن تستضيف المنطقة بطولة First Stand في 2028.\n\nولم تعلن الشركة بعد صيغة البطولات وآلية التأهل، ولا مواعيد MSI وتذاكرها، وتعد بالمزيد في يناير. كما تدرس ريوت هل يمكن أن تحل بطولة Demacia Cup محل مرحلة Play-In في Worlds، ولم يُتخذ أي قرار بعد.\n\n#ألعاب #أخبار_الألعاب #LeagueOfLegends #LoLEsports"
+ },
+ "regate": "RE-GATE within the hour before 21:15 Dubai",
+ "ledger_find": {
+  "at": "2026-11-14T02:45:13Z",
+  "words": [
+   "league",
+   "legends",
+   "riot",
+   "worlds"
+  ],
+  "hits": []
+ }
 }
