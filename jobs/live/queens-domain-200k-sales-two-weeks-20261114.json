@@ -145,10 +145,7 @@
  "template": "clipcard",
  "skin": "house",
  "cut": false,
- "track": [
-  "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
-  4.6
- ],
+ "track": "bed",
  "gfx": [
   {
    "file": "queens-domain-200k-sales-two-weeks-20261114-gfx-1.png",
@@ -178,7 +175,7 @@
   "STORY: release verbs": "yes: no release verb on screen; the caption says its release date as «إطلاقها في 30 أكتوبر»",
   "STORY: names match names-ar.md": "yes: Future Friends Games, Freshly Baked Games and Game*Spark as in the added rows",
   "POST: Arabic passes": "yes: both skills applied, grammar review stage run, Western digits, no first person, DeepL forward pass whole story",
-  "SOUND: footage sound or bed with reason": "yes: RDA trailer own sound from 4.6 s, audio split on the server",
+  "SOUND: footage sound or bed with reason": "yes: our bed with the reason in bed_reason (RDA split measured on the server: effects-led, 35.2% music); the director signs it off; the preview says our bed",
   "SOUND: no speech under Arabic lines": "yes: faster-whisper small, VAD on and off, no speech in the Launch and RDA trailers (VAD off: one hallucinated word near the end, no speech)",
   "PICTURE: footage first": "yes: official Steam trailer RDA (movie 257438359), windows judged by eye at 2 fps as 9:16 crops",
   "PICTURE: not the same as last 5 reels": "yes: no earlier Reel uses Queen's Domain footage (the 31 Oct launch Reel is 15 days old)",
@@ -190,28 +187,29 @@
    "shot": "4.6 to 7.6 s of the RDA trailer (golden tower, forest ruin)",
    "alternatives": "the Launch trailer: first-person weapons in most clean stretches, its picture starts at 3.0 s on the server copy",
    "crop": "centred 0.5, one subject per shot",
-   "music": "trailer own sound"
+   "music": "our bed (trailer split not clean)"
   },
   {
    "beat": "1 publisher announcement",
    "shot": "7.6 shrine door and cave, 24.2 egg on a stand, door, 38.01 frog-like creature",
    "alternatives": "dialogue boxes 11 to 13 s and the red skeleton boss 22 to 24 s not used",
    "crop": "centred",
-   "music": "trailer own sound"
+   "music": "our bed (trailer split not clean)"
   },
   {
    "beat": "2 card 200 thousand",
    "shot": "card on the trailer ground from 46.15 s",
    "alternatives": "none",
    "crop": "-",
-   "music": "trailer own sound"
+   "music": "our bed (trailer split not clean)"
   },
   {
    "beat": "3 team and platforms",
    "shot": "46.15 crow and cook, 52.78 hut and walkers (cut before the title flash at 56 s)",
    "alternatives": "none",
    "crop": "server focus",
-   "music": "trailer own sound"
+   "music": "our bed (trailer split not clean)"
   }
- ]
+ ],
+ "bed_reason": "Steam trailers opened: RDA (the footage's trailer) and Launch (opened for picture and audio, not used: first-person weapons in its clean stretches). RDA audio split rendered on the server 14 Nov 14:47Z: music 35.2% of the stretch with 42.8% leftover effects (effects-led, under the 40% floor), and the five shots come from five different moments (4.6 to 55.9 s), so one continuous stretch cannot sit under them and trailer effects from other moments would not match the picture; our bed"
 }
