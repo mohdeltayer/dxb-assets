@@ -18,7 +18,7 @@
  "template": "stills",
  "platform": "pc",
  "sensitive": "none (Steam content notes list blood and cartoon violence; the Reel shows none and the text says nothing graphic)",
- "status": "built, qc pass (job v5 ec99d688, dispatch 4, cards/2026-11/super-meat-boy-again-plus-announced-november-14-reel-v1.mp4); not scheduled; planned 09:15 Dubai Sun 15 Nov (05:15Z); RE-GATE within the hour before 09:15 Dubai (Sun)",
+ "status": "scheduled in Publer for 09:15 Dubai Sun 15 Nov (05:15Z) on Instagram, X, Threads (ids ig:174217 x:6f90cd th:6f90db), job v5 ec99d688, director PASS (director-meatboy-0915: v1 failed on an empty shot 4, v2 passed; gate 13:0xZ 14 Nov: Steam appdetails re-read, date still TBA, no price, Windows only, no Arabic; news search found no date or correction; DeepL back-check passed); RE-GATE within the hour before 09:15 Dubai still due",
  "sources": [
   {
    "role": "primary",
@@ -108,5 +108,25 @@
  },
  "source_type": "primary",
  "beat": "announcement",
- "footage": "No usable trailer: stills_reason in the job. Three official Steam screenshots (1920x1080, 1.78x), four shots: sunset city (Meat Boy, hook), 1-1 Hello World forest with Bandage Girl, burning forest (Meat Boy), the forest level start with Meat Boy at the lower left. No blood, no splatter, no saws. Rejected for blood or red wall smears: lava cave, factory, laser room, purple cave, night level, saw level; the swamp shot of v4 dropped by the director (empty dark frame)."
+ "footage": "No usable trailer: stills_reason in the job. Three official Steam screenshots (1920x1080, 1.78x), four shots: sunset city (Meat Boy, hook), 1-1 Hello World forest with Bandage Girl, burning forest (Meat Boy), the forest level start with Meat Boy at the lower left. No blood, no splatter, no saws. Rejected for blood or red wall smears: lava cave, factory, laser room, purple cave, night level, saw level; the swamp shot of v4 dropped by the director (empty dark frame).",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/super-meat-boy-again-plus-announced-november-14-reel-v1.mp4",
+  "blob": "d17f2f404d9941b9bd01f2d1ee04171169b05742",
+  "at": "2026-11-14T13:04:13Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/super-meat-boy-again-plus-announced-november-14.json",
+   "sha256": "e76da804b16e278c5bf959855d2f0cd70b26081e27101cf1ac81d6200da1c4cf",
+   "ok": true,
+   "problems": [],
+   "template": "stills",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-0915-sun"
+  },
+  "by": "director-meatboy-0915",
+  "qc": "pass",
+  "looked": "first frame at 3:4: Meat Boy mid-jump over the factory with headline, chip and credit readable; 4 fps frames: four stills, no blood or splatter (thin game-drawn red edge lines only), no empty frame, Meat Boy whole in every shot; shot 4 has the game's black banner bar at top, Meat Boy small at lower left; our bed audible every second to the end card, no silent tail"
+ }
 }
