@@ -1,7 +1,7 @@
 {
  "id": "where-winds-meet-anniversary-beyond-20261114",
  "title": "Where Winds Meet first-anniversary letter: major news in December (codename Beyond), DLSS 5 collaboration with NVIDIA, Middle East server nodes",
- "status": "built, awaiting render and director; planned 02:15 Dubai Sun 15 Nov 2026 (Sat 22:15Z); RE-GATE within the hour before 02:15 Dubai (Sun): re-read the letter page and Steam page for changes, search for a NetEase or Everstone statement or correction",
+ "status": "rendered, qc pass (render 3, job v4); awaiting director; planned 02:15 Dubai Sun 15 Nov 2026 (Sat 22:15Z); RE-GATE within the hour before 02:15 Dubai (Sun): re-read the letter page and Steam page for changes, search for a NetEase or Everstone statement or correction",
  "lane": "digital-lounge",
  "game": "Where Winds Meet",
  "subject_person": null,
@@ -89,5 +89,12 @@
    "v": 1,
    "change": "first build"
   }
- ]
+ ],
+ "render": {
+  "reel": "cards/2026-11/where-winds-meet-anniversary-beyond-20261114-reel-v1.mp4",
+  "qc": "pass, 25.9 s before the end card, lifeless 1.0, sound bed:neon_b",
+  "fixes": "render 1 stopped on pace (pace_ok with reason), render 2 failed qc lifeless 38.3 on push-in stills, render 3 pans and qc pass; v4 re-aimed the wall and lake pans so the climber and the lone figure stay in the 9:16 window",
+  "audio": "bed level steady about -22 dB mean from 6 s to 25 s, no speech (no footage sound)",
+  "job_sha": "45620f69e832b597030e5c5e355c8c6ff64e8e61"
+ }
 }
