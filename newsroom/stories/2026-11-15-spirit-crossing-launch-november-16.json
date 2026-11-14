@@ -1,7 +1,7 @@
 {
  "id": "2026-11-15-spirit-crossing-launch-november-16",
  "title": "Spirit Crossing (Spry Fox cozy MMO) launches Mon 16 Nov on Switch 2, Switch and PC",
- "status": "built, QC pending",
+ "status": "built, qc pass; held for director and scheduling (12:15 Dubai Sun 15 Nov)",
  "game": "Spirit Crossing",
  "claimed_by": "helper 12:15 Sun (retry)",
  "slot": "2026-11-15T08:15Z (12:15 Dubai Sun 15 Nov)",
@@ -58,7 +58,7 @@
  "family": "release",
  "first_report": "2026-10-28T15:00Z: Spry Fox press release at the IndieWorld Showcase and Steam announcement (28 Oct); reconfirmed by Steam posts 9 Nov and 12 Nov (roadmap, 'launch on November 16'); about 17 days old but the launch is the next day and the Arabic press has not carried it (not searched in depth)",
  "source_type": "primary",
- "footage": "Steam 'Steam Announcement Trailer' (app 2321960, 1080p 30fps 5.7 Mbps), clean stretches 8.05, 16.8, 21.64, 35.85, 38.6 s picked by shotpick plus eye (title cards at 7 s, 14 to 15 s, 27 s and the logo from 41 s avoided; blur dissolve at 38.4 s avoided); own sound by the audio split; faster-whisper small on 15 to 45 s: no speech, with and without VAD; credited Spry Fox from frame 0",
+ "footage": "Steam 'Steam Announcement Trailer' (app 2321960, 1080p 30fps), server seek times 7.74 d1.62, 16.8 d2.43, 21.64 d4.27, 35.85 d2.0, 38.4 d2.1 (the server's timeline runs about 0.5 s behind a local download: title cards, the source dissolves at about 38.0 and 40.5 s and the logo from about 40.8 s avoided); own sound by the audio split (music 54.2%, leak 0.1%); faster-whisper small on the finished Reel: VAD finds no speech, VAD off hears only 'music' and a 'You' hallucination in the first 3 s over music; credited Spry Fox from frame 0",
  "claims": [
   {
    "claim": "Launches 16 Nov 2026 on Switch 2, Switch and PC (Steam, Epic Games Store)",
@@ -94,11 +94,22 @@
   "headline": "لعبة Spirit Crossing\nتصدر غدًا الاثنين",
   "lines": [
    "لعبة أونلاين هادئة\nتبني فيها بيتك مع أصدقائك",
-   "فيها بطولات صيد وجداريات\nوأماكن مشتركة مع الجيران"
+   "فيها بطولات صيد وجداريات\nوأماكن مشتركة"
   ],
   "strip": "الموعد 16 نوفمبر | المنصات Switch 2 · Switch · PC",
   "credit": "المصدر: سبراي فوكس (Spry Fox)"
  },
  "gate": "gate 16:55Z: Spry Fox press release, Steam page and news, Gematsu read; no denial, delay or update found; web search shows the date unchanged",
- "approved": "RE-GATE within the hour before 12:15 Dubai (Sun)"
+ "approved": "RE-GATE within the hour before 12:15 Dubai (Sun)",
+ "build": {
+  "reel": "cards/2026-11/spirit-crossing-launch-november-16-reel-v1.mp4",
+  "job": "spirit-crossing-launch-november-16",
+  "job_sha": "15022b3dbdb5abc3b065d090ef803dec70ae3734",
+  "job_commit": "5a541bb",
+  "render_commit": "3187039",
+  "qc": "pass, no findings, 12.3 s before the end card, audio split applied, sound trailer, dispatches 5",
+  "theme": "playful",
+  "template": "split, two lines",
+  "gore": "cartoon only; 4 fps strip read, nothing graphic; one bright building flash at 2.5 to 3.0 s and white puffs under line 1 at 3.75 to 5.25 s (game effects)"
+ }
 }
