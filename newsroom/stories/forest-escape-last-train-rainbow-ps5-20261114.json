@@ -1,7 +1,7 @@
 {
  "id": "forest-escape-last-train-rainbow-ps5-20261114",
  "title": "Forest Escape: Last Train adds the Rainbow location (out now, Steam Early Access); PS5 version announced, no date",
- "status": "built (v1), awaiting render and QC; planned 08:15 Dubai Sun 15 Nov; not scheduled; held for separate director",
+ "status": "built and QC-passed (job v10); planned 08:15 Dubai Sun 15 Nov (04:15Z); not scheduled; held for the separate director; RE-GATE within the hour before 08:15 Dubai (Sun)",
  "lane": "digital-lounge",
  "game": "Forest Escape: Last Train",
  "subject_person": null,
@@ -24,7 +24,7 @@
    "url": "https://www.gematsu.com/2026/11/forest-escape-last-train-coming-to-ps5-new-location-revealed"
   }
  ],
- "first_report": "Steam announcement 13 Nov 2026 18:17Z; Gematsu 13 Nov (9:22 AM ET list entry) for the PS5 version; Arabic press not seen carrying it (not searched exhaustively); about 15 hours old at the slot build",
+ "first_report": "Steam announcement 13 Nov 2026 18:17Z; Gematsu 13 Nov 2026 (listed 9:22 AM ET, about 14:22Z) for the PS5 version; Arabic press not seen carrying it (not searched exhaustively); about 15 hours old at the build",
  "source_type": "primary",
  "genre": [
   "indie",
@@ -93,5 +93,8 @@
   "PICTURE: not the same as last 5 reels": "yes: no other Reel uses this game",
   "CREDIT: on every clip": "yes: المصدر: فراغ لاب (Frag Lab) عبر Steam over shots 0 to 6 from frame 0"
  },
- "source_type_note": "primary (Steam announcement by the developer) for the update; the PS5 announcement rests on one outlet (Gematsu)"
+ "source_type_note": "primary (Steam announcement by the developer) for the update; the PS5 announcement rests on one outlet (Gematsu)",
+ "regate": "RE-GATE within the hour before 08:15 Dubai (Sun)",
+ "render_notes": "render-live on dxb-render, job file jobs/live/forest-escape-last-train-rainbow-location-november-14.json (v10), Reel cards/2026-11/forest-escape-last-train-rainbow-location-november-14-reel-v1.mp4. Server timeline runs about 0.9 s behind the local copy and the first shot snaps to the first clean frame; shots 1.9-6.0, 7.15-10.25, 10.9-12.55, 40.95-42.8, 43.2-46.6. Sound: trailer music stem plus the shots' own effects (audio split); whisper on the final: VAD on nothing, VAD off one hallucinated 'Thank you for watching' on music. Not shown: revolver, red-figure, skeleton, bloody or aimed-weapon stretches. Known soft spots: a focus-pull blur at the start of the gnome and tree shots, a prisoner figure at the left edge in the last furnace frames.",
+ "gate": "gate 10:50Z 14 Nov: Steam announcement and appdetails read; Gematsu read; news search for a denial or new date found nothing"
 }
