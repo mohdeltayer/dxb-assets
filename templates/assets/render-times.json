@@ -62252,5 +62252,99 @@
   "dispatches": 2,
   "sound": "bed:neon_b (stills: no trailer stretch usable; Anniversary trailer opened (near-black opening, bloodied face and hand, burnt-in title cards) and Gameplay trailer opened (burnt-in subtitles, title cards, black frames, dialogue and narration); our bed under the stills)",
   "footage": false
+ },
+ {
+  "name": "where-winds-meet-anniversary-beyond-20261114-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-14T08:00Z",
+  "stages": {
+   "checks": 1.1,
+   "montage": 59.6,
+   "text": 50.5,
+   "audio": 0.0,
+   "outro": 22.9
+  },
+  "total": 134.0,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-14T07:57Z",
+  "finished_at": "2026-11-14T08:00Z",
+  "render_min": 2.23,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "where-winds-meet-anniversary-beyond-20261114-3.jpg",
+    "still": true,
+    "zoom": 1.78
+   },
+   {
+    "shot": 1,
+    "file": "where-winds-meet-anniversary-beyond-20261114-2.jpg",
+    "still": true,
+    "zoom": 1.78
+   },
+   {
+    "shot": 2,
+    "file": "where-winds-meet-anniversary-beyond-20261114-5.jpg",
+    "still": true,
+    "zoom": 1.78
+   },
+   {
+    "shot": 3,
+    "file": "where-winds-meet-anniversary-beyond-20261114-0.jpg",
+    "still": true,
+    "zoom": 1.78
+   },
+   {
+    "shot": 4,
+    "file": "where-winds-meet-anniversary-beyond-20261114-6.jpg",
+    "still": true,
+    "zoom": 1.78
+   },
+   {
+    "shot": 5,
+    "file": "where-winds-meet-anniversary-beyond-20261114-7.jpg",
+    "still": true,
+    "zoom": 1.78
+   }
+  ],
+  "source_summary": {
+   "min_height": null,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 1.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 2.33,
+   "held_under_text": 0.0,
+   "secs": 25.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 150,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 937,
+  "peak_mem_mb": 3303,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 40667,
+  "peak_disk_mb": 42877,
+  "min_disk_free_mb": 203229,
+  "setup_min": 0.13,
+  "story": "where-winds-meet-anniversary-beyond-20261114",
+  "job_sha": "45620f69e832b597030e5c5e355c8c6ff64e8e61",
+  "dispatches": 3,
+  "sound": "bed:neon_b (stills: no trailer stretch usable; Anniversary trailer opened (near-black opening, bloodied face and hand, burnt-in title cards) and Gameplay trailer opened (burnt-in subtitles, title cards, black frames, dialogue and narration); our bed under the stills)",
+  "footage": false
  }
 ]
