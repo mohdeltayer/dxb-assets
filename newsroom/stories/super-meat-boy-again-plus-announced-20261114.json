@@ -18,7 +18,7 @@
  "template": "stills",
  "platform": "pc",
  "sensitive": "none (Steam content notes list blood and cartoon violence; the Reel shows none and the text says nothing graphic)",
- "status": "built, qc pass (job v4 cd809446, dispatch 3, cards/2026-11/super-meat-boy-again-plus-announced-november-14-reel-v1.mp4); not scheduled; planned 09:15 Dubai Sun 15 Nov (05:15Z); director next; RE-GATE within the hour before 09:15 Dubai (Sun)",
+ "status": "built, qc pass (job v5 ec99d688, dispatch 4, cards/2026-11/super-meat-boy-again-plus-announced-november-14-reel-v1.mp4); not scheduled; planned 09:15 Dubai Sun 15 Nov (05:15Z); RE-GATE within the hour before 09:15 Dubai (Sun)",
  "sources": [
   {
    "role": "primary",
@@ -55,27 +55,27 @@
  "bed_reason": "Stills Reel on official Steam screenshots, which have no sound; the only official trailer opened (Steam Announcement Trailer, movie 257505532) is black text cards, tiny top-down levels and blood-splattered stretches, so our bed plays under the stills and the jingle on the end card.",
  "decision_log": [
   {
-   "beat": "0 who and what",
-   "shot": "screenshot 1, 1-1 Hello World forest, Meat Boy bottom left, daylight",
-   "crop": "focus 0.16; the banner strip sits right of the window",
+   "beat": "0 hook",
+   "shot": "screenshot 7, sunset city, Meat Boy (the red cube) mid-jump with sparks, light sky, no blood",
+   "crop": "focus pan 0.50 to 0.60 (window x0 = focus x 1313 source px): Meat Boy at source x 1017 stays inside",
    "music": "our bed"
   },
   {
    "beat": "1 new art",
-   "shot": "screenshot 7, sunset city, Meat Boy mid-jump with sparks, no blood",
-   "crop": "focus 0.53",
+   "shot": "screenshot 1, 1-1 Hello World forest, Bandage Girl (the pink character) on the grass island, daylight",
+   "crop": "focus 0.49 to 0.50: the whole '1-1 HELLO WORLD' banner stays inside the window, Bandage Girl at source x 933 inside",
    "music": "our bed"
   },
   {
    "beat": "2 levels",
    "shot": "screenshot 3, burning forest level, Meat Boy on the wall",
-   "crop": "focus 0.62",
+   "crop": "focus pan 0.66 to 0.78: Meat Boy at source x 1325 stays inside",
    "music": "our bed"
   },
   {
    "beat": "3 date",
-   "shot": "screenshot 6, swamp with Bandage Girl on the rock, no blood",
-   "crop": "focus 0.87",
+   "shot": "screenshot 1 again at the level start, Meat Boy at the lower left on the grass, light forest, no blood (replaces the empty dark swamp crop of v4)",
+   "crop": "focus pan 0.00 to 0.05: window source x 0 to 673, Meat Boy at x 211 inside, the banner (starts about 690) just outside",
    "music": "our bed"
   }
  ],
@@ -108,5 +108,5 @@
  },
  "source_type": "primary",
  "beat": "announcement",
- "footage": "No usable trailer: stills_reason in the job. Four official Steam screenshots (1920x1080, 1.78x crop at most): 1-1 Hello World forest (focus 0.16, banner strip right of the window), sunset city (0.53), burning forest (0.62), swamp with Bandage Girl (0.87). Judged at full size: no blood splatter, no saw splatter, no burnt-in cards; rejected for blood: the lava cave, the factory, the laser room, the purple cave, the night level (red wall smears). Capsule and background art are under 1080p tall at 9:16 (over 2x) and are not used."
+ "footage": "No usable trailer: stills_reason in the job. Three official Steam screenshots (1920x1080, 1.78x), four shots: sunset city (Meat Boy, hook), 1-1 Hello World forest with Bandage Girl, burning forest (Meat Boy), the forest level start with Meat Boy at the lower left. No blood, no splatter, no saws. Rejected for blood or red wall smears: lava cave, factory, laser room, purple cave, night level, saw level; the swamp shot of v4 dropped by the director (empty dark frame)."
 }
