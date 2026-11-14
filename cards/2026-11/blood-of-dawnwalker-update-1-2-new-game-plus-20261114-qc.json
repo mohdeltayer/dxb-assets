@@ -2,16 +2,16 @@
  "name": "blood-of-dawnwalker-update-1-2-new-game-plus-20261114",
  "out": "cards/2026-11/blood-of-dawnwalker-update-1-2-new-game-plus-20261114-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-14T03:22:22Z",
+ "at": "2026-11-14T03:33:25Z",
  "findings": [],
  "notes": [
   "length 25.7 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
   "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
-  "render_job: lifeless: {\"score\": 0.9, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 2.34, \"held_under_text\": 0.0, \"secs\": 25.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: lifeless: {\"score\": 3.3, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 1.95, \"held_under_text\": 0.0, \"secs\": 25.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "330dfc31dfd3216ad27597ffd7873ea68cc5a6ca",
- "dispatches": 3,
+ "job_sha": "1f3f5445b52d9b999b7932c84c095d395f10fdc8",
+ "dispatches": 4,
  "source_summary": {
   "min_height": null,
   "max_zoom": 1.78,
@@ -21,5 +21,5 @@
  "final_enc": "-preset medium -crf 18",
  "look_frames": [],
  "person_shown": "n/a",
- "sound": "bed:neon_c (Stills Reel on official Steam screenshots, which have no sound of their own, and every official Steam trailer of The Blood of Dawnwalker checked (Launch Trailer: narration under all 92 s; Update 1.1 Trailer: music-led but burnt-in captions on every shot, blood, a PEGI 18 card, dialogue at 35 to 39 s; Features Trailer: narration through all 6 minutes with burnt-in subtitles) has narration, burnt-in text or blood, so our bed plays under the stills and the jingle on the end card.)"
+ "sound": "bed:neon_c (Stills Reel on official Steam screenshots, which have no sound of their own, so our bed plays under them and the jingle on the end card. Trailers opened: Launch (narrated under all 92 s), Update 1.1 (PEGI 18 card, burnt-in captions on every shot, blood, dialogue at 35 to 39 s, key-art card), Features (narrated through 6 minutes with burnt-in subtitles, dark), and the Cinematic and Pre-Order trailers (voiced story trailers with dialogue throughout, no music-only stretch, checked by the director). The Story trailer download failed and the Summer Game Fest trailer was not opened.)"
 }
