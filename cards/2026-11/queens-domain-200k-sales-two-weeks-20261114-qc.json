@@ -2,17 +2,17 @@
  "name": "queens-domain-200k-sales-two-weeks-20261114",
  "out": "cards/2026-11/queens-domain-200k-sales-two-weeks-20261114-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-14T14:51:13Z",
+ "at": "2026-11-14T14:56:30Z",
  "findings": [],
  "notes": [
-  "length 12.7 s before the end card (target 12 to 20 s)",
+  "length 13.0 s before the end card (target 12 to 20 s)",
   "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
-  "smear check: exempt 4.60 to 9.60 s (our own cards)",
-  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 8.66, \"held_under_text\": 0.0, \"secs\": 12.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "smear check: exempt 4.50 to 9.80 s (our own cards)",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 9.3, \"held_under_text\": 0.0, \"secs\": 12.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "31c98880ab1f50ac6ee9e7076857c3a4b92cdf22",
- "dispatches": 2,
+ "job_sha": "11521c3e6c095c18b11720d7b6173f04532417ed",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,

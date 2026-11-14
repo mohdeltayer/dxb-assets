@@ -64289,5 +64289,135 @@
   "dispatches": 1,
   "sound": "bed:neon_b (Steam trailers opened: RDA (the footage's trailer) and Launch (opened for picture and audio, not used: first-person weapons in its clean stretches). RDA audio split rendered on the server 14 Nov 14:47Z: music 35.2% of the stretch with 42.8% leftover effects (effects-led, under the 40% floor), and the five shots come from five different moments (4.6 to 55.9 s), so one continuous stretch cannot sit under them and trailer effects from other moments would not match the picture; our bed)",
   "footage": true
+ },
+ {
+  "name": "queens-domain-200k-sales-two-weeks-20261114-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-14T14:55Z",
+  "stages": {
+   "checks": 3.6,
+   "montage": 30.4,
+   "text": 23.3,
+   "audio": 0.8,
+   "outro": 15.2
+  },
+  "total": 73.4,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-14T14:54Z",
+  "finished_at": "2026-11-14T14:55Z",
+  "render_min": 1.22,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
+    "start": 4.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
+    "start": 7.3,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
+    "start": 24.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
+    "start": 38.01,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
+    "start": 46.15,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
+    "start": 52.48,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 9.3,
+   "held_under_text": 0.0,
+   "secs": 12.9,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 139,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1021,
+  "peak_mem_mb": 2362,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 41471,
+  "peak_disk_mb": 43352,
+  "min_disk_free_mb": 202754,
+  "setup_min": 0.13,
+  "story": "queens-domain-200k-sales-two-weeks-20261114",
+  "job_sha": "11521c3e6c095c18b11720d7b6173f04532417ed",
+  "dispatches": 2,
+  "sound": "bed:neon_b (Steam trailers opened: RDA (the footage's trailer) and Launch (opened for picture and audio, not used: first-person weapons in its clean stretches). RDA audio split rendered on the server 14 Nov 14:47Z: music 35.2% of the stretch with 42.8% leftover effects (effects-led, under the 40% floor), and the five shots come from five different moments (4.6 to 55.9 s), so one continuous stretch cannot sit under them and trailer effects from other moments would not match the picture; our bed)",
+  "footage": true
  }
 ]
