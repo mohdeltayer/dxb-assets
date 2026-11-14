@@ -112,3 +112,8 @@ Wrong: the showcase box sat small between two bands on a flat indigo ground, hal
 Rule: showcase is the trailer at full width with the same footage blurred and dimmed behind it, and a one-line headline; the indigo ground stays for our cards and the end card.
 Sources: Mohammad, 9 Nov 2026 evening ("use wide and instead of indigo colors ... an obscured expansion of the footage as a background").
 
+
+## 14 Nov 2026 · Nintendo Black Friday offers · price
+Wrong: the Reel line and the captions said «الجمعة السوداء» (Black Friday); black followed by a day reads as a day of catastrophe to Arab readers.
+Rule: Black Friday is always «الجمعة البيضاء (White Friday)» in Arabic text, on screen and in captions; never «الجمعة السوداء». Glossary row [games] added.
+Sources: Mohammad, 14 Nov 2026 about 10:50 Dubai; captions changed in Publer, Reel re-rendered as v3 before its 12:15 slot.

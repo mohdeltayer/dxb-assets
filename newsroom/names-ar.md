@@ -207,7 +207,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Docked / handheld (Switch) | وضع التلفاز / الوضع المحمول | وضع الإرساء | Suggested 27 Sep |
 | Service ends | تنتهي خدمة <game> / تُوقف <company> خدمة <game> | تتوقف <game> | Suggested 29 Sep |
 | Sample of players | شريحة من اللاعبين | عينة (except real research) | Advisor 20 Oct |
-| Black Friday | الجمعة البيضاء | | Proposed 3 Nov |
+| Black Friday | الجمعة البيضاء (White Friday) | الجمعة السوداء | Approved 14 Nov (Mohammad) |
 | Stims (Helldivers 2) | Stim in English in game text, glossed once as حقنة Stim | المنشطات | Proposed 3 Nov |
 | Pokémon | Pokémon in Latin | البوكيمون | Suggested 18 Oct |
 | Sensitive content (relationships, evolution, bans) | the general word; the authority's own wording | the specific type, a judgement | Approved 21 Oct (glossary rows) |
