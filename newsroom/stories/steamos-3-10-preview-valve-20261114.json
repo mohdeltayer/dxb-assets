@@ -16,7 +16,7 @@
  "label": "رسمي",
  "chip": "رسمي",
  "template": "split",
- "status": "rendered: cards/2026-11/steamos-3-10-preview-valve-20261114-reel-v2.mp4 (qc pass, 14.2 s before the end card, job_sha eae86f1e6430f72877a06b79ab10c24f9f90ad14); not scheduled; awaiting a separate director; RE-GATE within the hour before 06:15 Dubai (Sun)",
+ "status": "scheduled in Publer for 06:15 Dubai Sun 15 Nov (02:15Z), instagram, x, threads (ids ig:16ed0a x:4fe02a th:16ed18); director PASS (director-steamos-0615); RE-GATE within the hour before 06:15 Dubai still due",
  "sources": [
   {
    "role": "primary",
@@ -80,12 +80,33 @@
  },
  "gate": "RE-GATE within the hour before 06:15 Dubai (Sun)",
  "re_gate_note": "RE-GATE within the hour before 06:15 Dubai (Sun)",
- "approved": "pending director (separate session); not scheduled",
+ "approved": "go: rolling queue; director PASS director-steamos-0615 14 Nov 10:06Z; gate 10:05Z: Steam news API re-read in full (Valve post 14 Nov 02:04Z, only newest SteamOS item; 3.9.6 Beta 13 Nov is older), web search found no 3.10 coverage or correction; 24 h old at the slot",
  "genre_note": "industry/hardware",
  "translation_notes": "DeepL whole-story forward (EN to AR, 14 Nov ~10:05Z): 'أصدرت شركة Valve إصدارًا تجريبيًّا من نظام SteamOS 3.10 لقناة Steam Deck Preview ... محدد معدل الإطارات مع تقنية VRR' (we write طرحت فالف (Valve) نسخة معاينة, قناة Preview; DeepL leaves Valve in Latin, house rule applies); phrase alternatives sent separately: 'framerate limiter' -> 'محدد معدل الإطارات' (whole story) and 'أداة تقييد معدل الإطارات' (alone): we use محدد معدل الإطارات in the caption and محدد الإطارات on screen; 'Mesh Shaders on Turing and newer' -> 'على معالج Turing والإصدارات الأحدث' (kept our من Turing فما بعد); 'variable refresh rate' -> 'معدل تحديث متغير' (ours: معدل التحديث المتغير). Back-check (AR to EN, whole X text): 'Valve has released a preview of SteamOS 3.10 for the Preview channel on Steam Deck. According to Valve, this version adds HDMI 2.1 VRR support for AMD graphics and improves frame timing with frame rate limiter and VRR. This is an early release and may contain bugs or stability issues.' meaning identical. Caution found: on-screen fragment 'توقيت الإطارات' alone was back-translated as 'tire timing' (الإطارات also means tyres); in the whole line and caption the context (محدد الإطارات، VRR) makes it frames, and the caption says محدد معدل الإطارات; director to confirm the line reads as frames.",
  "grammar_review": "Run 14 Nov ~10:10Z as its own pass after writing (house glossary, perfect-arabic SKILL.md and arabic-writing orthography.md opened; skills arabic-games-film-editor, arabic-writing, arabic-grammar-review loaded fresh in this run). required_edits: none in grammar or spelling; house_rule: first mention of فالف carries (Valve) in the credit and the X, Threads and caption text; AMD and NVIDIA carry the bracket at first mention; every line, paragraph and the hashtag line open on an Arabic word; Western digits; no em dash; no hashtags on X; no first person; sensitive: none. Style (applied): 'سطح المكتب' became 'وضع سطح المكتب' (Valve's Desktop Mode). optional_style_suggestions: none. uncertain_cases: (1) 'تحسّن' in the headline and line 2 is read as the active present (تُحسِّن) with النسخة/المعاينة as subject; undiacritized, a reader could take it as a past passive, context makes the present clear; (2) 'تدعم' in line 3 for Valve's 'Added support' is shorter than 'تضيف دعم' (kept for reading time: 3.75 s on screen); (3) 'توقيت الإطارات' may be read as tyres out of context (see translation_notes).",
  "reel_note": "RE-GATE within the hour before 06:15 Dubai (Sun)",
  "sound": "the Steam Deck trailer's own music: track ['steam-deck-available-now.mp4', 5.85] with music_only (Cocktail Fork music stem, no effects, no voices); faster-whisper small on the whole trailer, VAD on: one hallucinated 'Thanks for watching!' at 0.9 s, VAD off: the same phrase at 23.6 s, no speech; loudness 1 s windows -12.6 to -7.4 dB from 1 s; the 'Steam Hardware' film is narrated (whisper: 'This is Steam Deck...') so its sound is not used; speech: none",
  "director_notes_v1": "v1 render qc pass (cards/2026-11/steamos-3-10-preview-valve-20261114-reel-v1.mp4): fixed in v2: shot 5 opened on the desk set with a figure and a white monitor flash",
- "builder_checks": "v2 dense frames read at 4 fps as the finished 9:16 (0-5, 5-10, 10-16 s): no blood, weapons, muzzle flashes or nudity; first frame the Deck in a hammock under the headline (headline touches the top of the Deck's hands and screen edge, no face); credit from frame 0; strip from 3.5 s; the Deck's on-screen clock '10:30 AM' touches the right edge at 5 to 7.5 s (game UI, not our text); shot 5 starts on floating panels over the wall with a white monitor edge at right (10.25 to 11 s); whisper small on the finished mp4: VAD on nothing, VAD off one hallucinated outro phrase on music; music present from 0 to the end card (-7 to -16 dB, one dip -25 dB near 7.5 s); render qc: audio split applied (music 97.4%, leak 0.1%)"
+ "builder_checks": "v2 dense frames read at 4 fps as the finished 9:16 (0-5, 5-10, 10-16 s): no blood, weapons, muzzle flashes or nudity; first frame the Deck in a hammock under the headline (headline touches the top of the Deck's hands and screen edge, no face); credit from frame 0; strip from 3.5 s; the Deck's on-screen clock '10:30 AM' touches the right edge at 5 to 7.5 s (game UI, not our text); shot 5 starts on floating panels over the wall with a white monitor edge at right (10.25 to 11 s); whisper small on the finished mp4: VAD on nothing, VAD off one hallucinated outro phrase on music; music present from 0 to the end card (-7 to -16 dB, one dip -25 dB near 7.5 s); render qc: audio split applied (music 97.4%, leak 0.1%)",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/steamos-3-10-preview-valve-20261114-reel-v2.mp4",
+  "blob": "1816b53e4ad8707085aaea1d94c25c4932202c41",
+  "at": "2026-11-14T10:06:54Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/steamos-3-10-preview-valve-20261114.json",
+   "sha256": "8f84f915ae23695b4d72e7eeaa8d2f54b299549ebfea5845cc30265381ed36de",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-0615-steamos"
+  },
+  "by": "director-steamos-0615",
+  "qc": "pass",
+  "looked": "dense 4fps strip, strip and frames at 0, 2.6, 6, 12.3 to 13.5 s read as 9:16: hammock Deck cover with headline clear of faces, credit from frame 0, Deck library and buttons close-ups, floating parts end; audio RMS steady -11 to -13 dB music to end card, no vocal; 2.13x shots soft but clean, clock at right edge is game UI only"
+ },
+ "director_notes": "PASS. 2.13x shots soft but clean at phone size (block peak 1.29), lowres_ok names Steam Deck, Steam Hardware, Steam Machine and Steam Frame copies. Clock 10:30 AM clipped at right edge 5 to 7.5 s: game UI, accepted. Shot 5 desk set with floating parts at 12.2 to 13.2 s: accepted. First frame hammock Deck, headline over no face. Audio: music steady -11 to -13 dB to the end card, no vocal. Arabic: توقيت الإطارات reads as frame timing with محدد الإطارات and VRR beside it; تدعم accepted (the build supports); facts re-read against the whole post, nothing overstated (HDMI 2.1 VRR is for AMD graphics, not a Deck claim). X reply carries the source link, Instagram first comment the source line, Threads text the source line."
 }
