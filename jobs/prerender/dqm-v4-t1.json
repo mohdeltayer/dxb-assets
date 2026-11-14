@@ -1,0 +1,262 @@
+{
+ "name": "dqm-v4-t1",
+ "story": "dragon-quest-monsters-withered-world-dec-3-demo-20261115",
+ "kind_news": "launch",
+ "built_by": "production-2-helper-1315",
+ "render_lane": "server",
+ "out": "cards/2026-11/dragon-quest-monsters-withered-world-dec-3-reel-v4.mp4",
+ "footage": [
+  {
+   "file": "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+   "steam": 3681610,
+   "trailer": "ESRB EN_1st",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [
+  [
+   "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+   10.5,
+   1.5,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+   32.0,
+   2.1,
+   [
+    [
+     0.0,
+     0.52
+    ]
+   ]
+  ],
+  [
+   "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+   72.0,
+   1.9,
+   [
+    [
+     0.0,
+     0.32
+    ],
+    [
+     1.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+   40.0,
+   1.9,
+   [
+    [
+     0.0,
+     0.46
+    ]
+   ]
+  ],
+  [
+   "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+   61.1,
+   2.6,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+   49.0,
+   1.8,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+   16.0,
+   0.95,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+   42.0,
+   1.8,
+   [
+    [
+     0.0,
+     0.46
+    ]
+   ]
+  ],
+  [
+   "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+   12.0,
+   0.9,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+   20.0,
+   0.8,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   2,
+   3,
+   [
+    [
+     "تختار بطلتك Bianca أو Nera،\nثم تصادق الوحوش",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   6,
+   [
+    [
+     "تصل إلى PS5 و Xbox Series X|S\nو Nintendo Switch 2 و Switch والحاسب",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   7,
+   9,
+   [
+    [
+     "في الإمارات: 200 درهم\nعلى متجر Steam",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   9,
+   "المصدر: سكوير (Square Enix)",
+   {
+    "size": 40,
+    "band": true,
+    "from_start": true,
+    "low": true
+   }
+  ]
+ ],
+ "headline": "تصدر Dragon Quest Monsters\nفي 3 ديسمبر",
+ "label": "رسمي",
+ "source": "سكوير (Square Enix)",
+ "date": "14 Nov 2026",
+ "theme": "stylized",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": true,
+ "track": [
+  "dragon-quest-monsters-withered-world-dec-3-trailer.mp4",
+  10.5
+ ],
+ "reel_check": {
+  "source: primary read in full": "yes: Steam store API and posts, PlayStation Store, Microsoft Store read 14 Nov; Nintendo announcement via search index",
+  "not already posted": "yes: no story file, card or Publer post for this game (ledger find by hand)",
+  "angle written": "yes: story file angle block",
+  "story type: release, platforms, AED price, what it is": "yes: headline date, line 2 platforms; price AED 200 UAE Steam and the free demo in the X text and caption (not on screen)",
+  "lines: one spoken paragraph, subject named, no و opener": "yes: headline names the game; line 1 opens تختار, line 2 نسخة, line 3 تصل",
+  "release verbs": "yes: تصدر with the date in the headline; the platform line has no release verb («على PS5 ...»)",
+  "names match names-ar": "yes: سكوير (Square Enix) in the credit",
+  "writing the post: Arabic rules and two passes": "yes: both writer skills loaded fresh, grammar review pass, DeepL forward and back",
+  "sound: footage keeps its own sound": "yes: Steam trailer own sound by the audio split from 10.5 s; the narrator (whisper small: 2.4 to 10.4, 20.8 to 29.3, 35.3 to 38.0, 45.3 to 47.7, 53.9 to 87.4) is removed by the stems; our bed only if the split refuses, with the reason",
+  "picture: footage first, shows the game": "yes: only the game's own footage, cartoon monsters, no weapon gripped, no blood",
+  "picture: not the same as last 5 Reels": "yes: no earlier Dragon Quest Monsters Reel",
+  "credit on every clip": "yes: credits 0 to 6 from frame 0"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook B",
+   "shot": "10.5 to 12.0 s plant monster then pink sprout (server seek times)",
+   "alternatives": "collage 8 to 10.4 s burnt text; King Slime (crown under the headline band)",
+   "crop": "x 0.5",
+   "music": "trailer own sound via split"
+  },
+  {
+   "beat": "1 C",
+   "shot": "32.0 to 34.1 s girl riding a monster",
+   "alternatives": "28 to 31 s burnt subtitles",
+   "crop": "x 0.52",
+   "music": "trailer own sound via split"
+  },
+  {
+   "beat": "2 D line 1",
+   "shot": "40.0 to 43.2 s scouting battle with the ring",
+   "alternatives": "45 s banner burnt UI text",
+   "crop": "x 0.56",
+   "music": "trailer own sound via split"
+  },
+  {
+   "beat": "3 A line 1 end",
+   "shot": "61.1 to 62.8 s fused monsters in the green glow (red horned one, blue dragon)",
+   "alternatives": "62.8 s onward battle with a clawed monster (dropped), 57 to 60 s burnt subtitle",
+   "crop": "x 0.5",
+   "music": "trailer own sound via split"
+  },
+  {
+   "beat": "4 F line 2",
+   "shot": "49.0 to 50.8 s arena battle with star hits",
+   "alternatives": "50.9 s onward the monster menu (cut text: the v2 sheet flagged it at 51.1 s, so v3 ends at 50.8 s)",
+   "crop": "x 0.5",
+   "music": "trailer own sound via split"
+  },
+  {
+   "beat": "5 U line 2",
+   "shot": "16.0 to 16.95 s unicorn and dog monsters",
+   "alternatives": "14 to 15.8 s night octopus and stone golem (dark, dropped), 17.0 s onward red demon with raised claws (dropped)",
+   "crop": "x 0.5",
+   "music": "trailer own sound via split"
+  },
+  {
+   "beat": "6 G line 2 end",
+   "shot": "72.0 to 73.9 s the two heroes then the desert arch",
+   "alternatives": "70 to 71.9 s yellow orb burst (flash), 74 s onward burnt 'Adventure is calling' text",
+   "crop": "x 0.32 then 0.5",
+   "music": "trailer own sound via split"
+  }
+ ]
+}
