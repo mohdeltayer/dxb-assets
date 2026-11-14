@@ -1,0 +1,175 @@
+{
+ "name": "rob-run-365k-concurrent-steam-20261114",
+ "story": "rob-run-365k-concurrent-steam-20261114",
+ "kind_news": "players",
+ "built_by": "builder-0015-claim2",
+ "render_lane": "server",
+ "out": "cards/2026-11/rob-run-365k-concurrent-steam-20261114-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
+   "steam": 4262460,
+   "trailer": "RobRun Official Trailer",
+   "start": 0,
+   "seconds": 50
+  }
+ ],
+ "shots": [
+  [
+   "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
+   23.8,
+   3.6,
+   [
+    [
+     0.0,
+     0.45
+    ],
+    [
+     1.75,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
+   27.4,
+   4.2,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
+   31.6,
+   2.4,
+   [
+    [
+     0.0,
+     0.4
+    ],
+    [
+     0.9,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
+   34.0,
+   2.55,
+   [
+    [
+     0.0,
+     0.4
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   0,
+   1,
+   [
+    [
+     "لعبة جريمة مجانية تجمع آلاف\nاللاعبين في مكان واحد",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   3,
+   [
+    [
+     "يسطو لاعبون على البنوك، ويؤدي\nآخرون دور الشرطة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   3,
+   "المصدر: كيفير (Kefir)",
+   {
+    "size": 40,
+    "band": true,
+    "from_start": true,
+    "low": true
+   }
+  ]
+ ],
+ "headline": "لعبة ROB RUN المجانية\nتجذب مئات الآلاف",
+ "label": "تقرير",
+ "source": "دينفامي نيكو غيمر (Denfaminicogamer)",
+ "date": "14 Nov 2026",
+ "theme": "cold",
+ "style": null,
+ "template": "split",
+ "skin": "house",
+ "cut": true,
+ "track": [
+  "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
+  23.8
+ ],
+ "strip": [
+  [
+   "ذروة اللاعبين",
+   "365,092"
+  ],
+  [
+   "التقييمات",
+   "متباينة"
+  ],
+  [
+   "اللغة العربية",
+   "غير مدعومة"
+  ]
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Denfaminicogamer article read in full 06:40Z (published 06:09Z); Steam store page, appdetails and reviews read 06:45Z; SteamDB answered 403, so the peak figure is attributed (تقرير)",
+  "SOURCE: not already posted": "yes: ledger find rob run, 0 hits; not in the skip list",
+  "SOURCE: age": "yes: first report Denfaminicogamer 14 Nov 10:09 Dubai, under 24 hours at build",
+  "ANGLE before lines": "yes: angle in the job and story file",
+  "STORY TYPE numbers": "yes: figure 365,092, period 14 Nov, source Denfaminicogamer citing SteamDB, comparison: Steam reviews Mixed and 31,976 reviews",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names ROB RUN, L1 says لعبة جريمة, L2 لاعبون; no line opens on و",
+  "STORY: release verbs": "yes: none needed",
+  "STORY: names match names-ar.md": "yes: Kefir and Denfaminicogamer rows added",
+  "POST: Arabic passes": "yes: arabic-games-film-editor then arabic-writing then grammar review; DeepL forward whole-story and back-check matched",
+  "SOUND: footage sound": "yes: official trailer own sound, one continuous stretch 23.8 to 36.55 s",
+  "SOUND: no speech under Arabic lines": "yes: faster-whisper small on the whole trailer, vad on and off, no speech",
+  "PICTURE: footage first": "yes: official Steam RobRun Official Trailer 1080p 5.6 Mbps",
+  "PICTURE: not the same as last 5 reels": "yes: picture: ROB RUN, no other Reel uses it",
+  "CREDIT: on every clip": "yes: المصدر: كيفير (Kefir) over shots 0 to 4 from frame 0"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook and L1 premise",
+   "shot": "23.8 to 31.6 s",
+   "alternatives": "0 to 14 s filtered montage, 22 to 23.7 s nightclub with a neon dancer outline (skipped)",
+   "crop": "x 0.45 to 0.5",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "1 L2 robbery and police",
+   "shot": "31.6 to 36.55 s",
+   "alternatives": "map at 37 s (small labels, edge text risk)",
+   "crop": "x 0.4 then 0.5",
+   "music": "trailer own sound"
+  }
+ ],
+ "angle": {
+  "hook": "a free crime game most people had not heard of drew 365,092 concurrent players on Steam, per SteamDB via Denfaminicogamer",
+  "why_now": "Denfaminicogamer reported the peak on 14 Nov, about ten days after the Early Access launch, and the Arabic press has not carried it yet",
+  "what_it_means_here": "Gulf PC players can try it free on Steam, but Steam rates it Mixed and the game has no Arabic, English Russian French German Spanish and Brazilian Portuguese only",
+  "payoff": "the peak figure comes from one outlet citing SteamDB which we could not open, so it is a report, and Steam's own reviews are Mixed"
+ }
+}

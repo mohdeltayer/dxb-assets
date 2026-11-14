@@ -1,8 +1,82 @@
 {
  "id": "rob-run-365k-concurrent-steam-20261114",
- "title": "ROB RUN passes 365,000 concurrent players on Steam (Denfaminicogamer 14 Nov 2026)",
- "status": "claimed for 00:15 Dubai Sun 15 Nov, building",
+ "title": "ROB RUN passes 365,000 concurrent players on Steam (Denfaminicogamer, 14 Nov 2026, citing SteamDB)",
+ "status": "job v1 written, render pending; RE-GATE within the hour before 00:15 Dubai (Sun)",
  "lane": "digital-lounge",
  "game": "ROB RUN",
- "subject_person": null
+ "subject_person": null,
+ "kind": "players",
+ "kind_news": "players",
+ "label": "تقرير",
+ "template": "split",
+ "chip": "تقرير",
+ "sources": [
+  {
+   "name": "Denfaminicogamer, 14 Nov 2026 10:09 Dubai (06:09Z)",
+   "url": "https://news.denfaminicogamer.jp/news/261114h"
+  },
+  {
+   "name": "Steam store page (Kefir, Early Access, free)",
+   "url": "https://store.steampowered.com/app/4262460/"
+  }
+ ],
+ "ledger_find": {
+  "at": "2026-11-14T06:50:00Z",
+  "words": [
+   "rob",
+   "run"
+  ],
+  "hits": []
+ },
+ "first_report": "Denfaminicogamer 14 Nov 2026 10:09 Dubai (06:09Z); Arabic press has not carried it; the peak figure is SteamDB's via Denfaminicogamer (SteamDB answered 403 to our read)",
+ "source_type": "secondary",
+ "beat": "numbers",
+ "genre": [
+  "live service/MMO",
+  "shooter"
+ ],
+ "platform": "pc",
+ "footage": "official Steam RobRun Official Trailer (appid 4262460, movie 257316245), 1080p 5.6 Mbps, faster-whisper small vad on and off found no speech; stretch 23.8 to 36.55 s; the Cinematic trailer (154 s) is a dark narrative piece and was not used",
+ "sensitive": "none for the story; the Steam page lists frequent firearm violence, partial nudity at a nightclub location and in-game roulette: the Reel shows none (nightclub frames 22 to 23.7 s skipped, no wounds, no gambling)",
+ "recipe": "4 numbers (split with footage)",
+ "claims": {
+  "365,092 concurrent peak 14 Nov": "report: Denfaminicogamer citing SteamDB; SteamDB not opened (403)",
+  "free early access crime sandbox, thousands of players": "OK Steam page: free to play, Early Access, 'brutal crime sandbox featuring thousands of players'; Early Access release 4 Nov per Steam, Denfaminicogamer says 5 Nov (JST), so no start date is stated",
+  "bank robbery, players as police, items can be taken": "OK Denfaminicogamer text and Steam trailer",
+  "reviews Mixed": "OK Steam page read 06:45Z: Mixed; Denfaminicogamer 31,976 reviews",
+  "no Arabic": "OK Steam languages: English, Russian, French, German, Spanish Spain, Portuguese Brazil"
+ },
+ "angle": {
+  "hook": "a free crime game drew 365,092 concurrent players on Steam",
+  "why_now": "Denfaminicogamer reported it on 14 Nov about ten days after launch and the Arabic press has not carried it",
+  "what_it_means_here": "Gulf PC players can try it free but Steam rates it Mixed and it has no Arabic",
+  "payoff": "one outlet citing SteamDB, so a report; reviews Mixed"
+ },
+ "posts": {
+  "reel_headline": "لعبة ROB RUN المجانية\nتجذب مئات الآلاف",
+  "reel_lines": [
+   "لعبة جريمة مجانية تجمع آلاف\nاللاعبين في مكان واحد",
+   "يسطو لاعبون على البنوك، ويؤدي\nآخرون دور الشرطة"
+  ],
+  "strip": "ذروة اللاعبين 365,092 | التقييمات متباينة | اللغة العربية غير مدعومة",
+  "credit": "المصدر: كيفير (Kefir)",
+  "x_threads_ar": "تجذب لعبة ROB RUN المجانية حشودًا ضخمة على Steam: بلغت ذروة اللاعبين المتزامنين 365,092 في 14 نوفمبر، حسب موقع دينفامي نيكو غيمر (Denfaminicogamer) الياباني نقلًا عن SteamDB. تقييمات المستخدمين متباينة، واللعبة لا تدعم العربية.",
+  "instagram_ar": "ذروة لاعبي ROB RUN تتجاوز 365 ألفًا على Steam\n\nسجلت لعبة ROB RUN، وهي لعبة جريمة مجانية في الوصول المبكر من تطوير استوديو كيفير (Kefir)، ذروة بلغت 365,092 لاعبًا متزامنًا على Steam في 14 نوفمبر، حسب موقع دينفامي نيكو غيمر (Denfaminicogamer) الياباني نقلًا عن SteamDB.\n\nتجمع اللعبة آلاف اللاعبين في مدينة واحدة: يسطو اللاعبون على البنوك ويتنافسون على المناطق، ويؤدي بعضهم دور الشرطة، وقد يفقد اللاعب ما جمعه لصالح غيره في أي لحظة.\n\nتقييمات المستخدمين على Steam متباينة، أما اللغات المدعومة فهي الإنجليزية والروسية والفرنسية والألمانية والإسبانية والبرتغالية البرازيلية، ولا تشمل العربية.\n\n#ألعاب #أخبار_الألعاب #ROBRUN #Steam"
+ },
+ "grammar_review": {
+  "pass": "separate pass by the builder, 14 Nov",
+  "required_edits": [
+   "X text: 'ذروة 365,092 لاعبًا' reworded to 'بلغت ذروة اللاعبين المتزامنين 365,092'",
+   "caption: 'يسطو بعضهم ... ويتنافسون' made 'يسطو اللاعبون ... ويؤدي بعضهم'"
+  ],
+  "optional": [],
+  "uncertain": []
+ },
+ "deepl": {
+  "forward_whole_story": "matched; DeepL wrote ذروة بلغت 365,092 لاعبًا متزامنًا (same as ours) and تتباين آراء المستخدمين (alternative to متباينة, kept ours)",
+  "back_check": "X text and Reel lines read back correctly (peak, mixed reviews, no Arabic; banks and police)"
+ },
+ "regate": "RE-GATE within the hour before 00:15 Dubai (Sun): re-read Denfaminicogamer, Steam page (reviews, languages), search for SteamDB or Kefir statement; the figure is attributed, the peak cannot fall",
+ "planned_slot": "00:15 Dubai Sun 15 Nov 2026 (Sat 20:15Z), Digital Lounge X, Instagram, Threads",
+ "job": "jobs/live/rob-run-365k-concurrent-steam-20261114.json"
 }
