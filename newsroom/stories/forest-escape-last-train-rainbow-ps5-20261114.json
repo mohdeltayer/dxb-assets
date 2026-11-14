@@ -24,7 +24,7 @@
    "url": "https://www.gematsu.com/2026/11/forest-escape-last-train-coming-to-ps5-new-location-revealed"
   }
  ],
- "first_report": "Steam announcement 13 Nov 18:17Z; Gematsu 13 Nov 14:15Z (09:15 ET window, per its list); Arabic press not seen carrying it (not searched exhaustively); under 24 hours at slot build",
+ "first_report": "Steam announcement 13 Nov 2026 18:17Z; Gematsu 13 Nov (9:22 AM ET list entry) for the PS5 version; Arabic press not seen carrying it (not searched exhaustively); about 15 hours old at the slot build",
  "source_type": "primary (Steam announcement by the developer) for the update; single outlet (Gematsu) for the PS5 announcement",
  "genre": [
   "indie",
@@ -53,10 +53,9 @@
  "texts": {
   "headline": "قوس قزح جديد في\nرعب Last Train",
   "lines": [
-   "منطقة Rainbow متاحة الآن",
-   "تبدأ ملونة ثم تبهت\nكلما تقدم اللاعب",
-   "لغز من خمس مراحل\nوزعيم جديد في النهاية",
-   "اللعبة في الوصول المبكر\nونسخة PS5 بلا موعد"
+   "منطقة Rainbow\nمتاحة الآن",
+   "تبدأ ملونة ثم\nتبهت تدريجيًا",
+   "لغز من خمس مراحل\nوزعيم جديد"
   ],
   "credit": "المصدر: فراغ لاب (Frag Lab) عبر Steam",
   "x": "منطقة Rainbow الجديدة متاحة الآن في Forest Escape: Last Train. تبدأ بألوان زاهية ثم تبهت كلما تعمق اللاعب فيها، حسب إعلان فراغ لاب (Frag Lab) على Steam. وأُعلن عن نسخة PS5 دون موعد، بحسب موقع جيماتسو (Gematsu).",
@@ -65,5 +64,33 @@
   "regate": "RE-GATE within the hour before 08:15 Dubai (Sun)"
  },
  "translation_notes": "DeepL whole-story forward (14 Nov): الوصول المبكر matches; DeepL wrote 'رئيس' for boss (kept house زعيم); 'تتلاشى' for the colours fading (kept تبهت, DeepL's alternative for the same phrase also تتلاشى); DeepL wrote «Frag Lab» and «Gematsu» in Latin only (house rule: Arabic then Latin). Back-check: meaning matches. Arabic names: فراغ لاب (Frag Lab), جيماتسو (Gematsu) per names-ar.",
- "approved": "not approved; built for the 08:15 Dubai Sun slot, separate director to sign"
+ "approved": "not approved; built for the 08:15 Dubai Sun slot, separate director to sign",
+ "beat": "new addition or update",
+ "ledger_find": {
+  "at": "2026-11-14T10:55:00Z",
+  "words": [
+   "forest",
+   "escape",
+   "last",
+   "train",
+   "rainbow"
+  ],
+  "hits": []
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam announcement 'A new Rainbow location' read in full via the Steam news API 14 Nov 10:40Z (posted 13 Nov 18:17Z), no update note; Gematsu read for PS5",
+  "SOURCE: not already posted": "yes: ledger search by hand (ledger.py find crashed on a list folder): story files for forest, rainbow, last train: 0 hits (Rainbow Six Mobile and Black Forest Games are other games)",
+  "SOURCE: age": "yes: first report 13 Nov 18:17Z, about 15 hours old at the slot build; Arabic press not seen",
+  "ANGLE before lines": "yes: angle in story file and job",
+  "STORY TYPE update": "yes: the change (Rainbow location), demonstration (official trailer), effect on play (puzzle and boss), availability (Early Access, PS5 no date) in the caption",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names Last Train, L1 Rainbow, L2 تبدأ (Rainbow), L3 the puzzle; no line opens on و",
+  "STORY: release verbs": "yes: متاحة الآن for out now; no date verb needed",
+  "STORY: names match names-ar.md": "yes: فراغ لاب (Frag Lab) and جيماتسو (Gematsu) rows added",
+  "POST: Arabic passes": "yes: two skills, grammar review, DeepL whole-story forward and back; Western digits, no first person",
+  "SOUND: footage sound or bed with reason": "yes: trailer music stem from 0.9 s (audio split music_only); no speech in the trailer (whisper)",
+  "SOUND: no speech under Arabic lines": "yes: whisper VAD on found nothing; VAD off only 'Music' hallucinations",
+  "PICTURE: footage first": "yes: official Steam trailer New Rainbow Location, seven shots chosen by eye at 2 fps and checked by the server shot picker",
+  "PICTURE: not the same as last 5 reels": "yes: no other Reel uses this game",
+  "CREDIT: on every clip": "yes: المصدر: فراغ لاب (Frag Lab) عبر Steam over shots 0 to 6 from frame 0"
+ }
 }
