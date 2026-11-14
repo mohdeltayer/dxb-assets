@@ -21,6 +21,10 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Latin | Arabic | Status |
 |---|---|---|
 | Ocelot Technologies | أوسيلوت تكنولوجيز | Proposed 13 Nov 2026 (developer and publisher of Guild Saga: Vanished Worlds; first mention carries the Latin in brackets) |
+| 6side Studio (Dawn of Defense developer, Germany) | سيكس سايد ستوديو | Proposed 14 Nov 2026 (first on-screen mention carries the Latin in brackets; later mentions «الاستوديو») |
+| Rekoup (Dawn of Defense publisher, Stockholm) | ريكوب | Proposed 14 Nov 2026 (bracket at first mention) |
+| Tbreak (Gulf outlet) | تيبريك | Proposed 14 Nov 2026 (bracket at first mention) |
+| Imperium Aeternum (Dawn of Defense's empire) | stays Latin, glossed once as «إمبراطورية Imperium Aeternum» | Proposed 14 Nov 2026 |
 | Vertigo Gaming | فيرتيغو غيمينغ | Proposed 13 Nov 2026 (developer and publisher of Cook, Serve, Delicious! Re-Mustard; first mention carries the Latin in brackets) |
 | Nestopi | نيستوبي | Proposed 7 Nov 2026 (Japanese studio behind Chill with You; first on-screen mention carries the Latin in brackets) |
 | Riot Games | ريوت غيمز | Proposed 14 Nov 2026 (LoL esports roadmap Reel; Latin in brackets at first mention; follows إيبك غيمز and نت إيز غيمز; one earlier post wrote ريوت جيمز) |
