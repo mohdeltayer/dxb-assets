@@ -1,17 +1,17 @@
 {
  "name": "trees-hate-you-launch-november-16",
- "out": "cards/2026-11/trees-hate-you-launch-november-16-reel-v1.mp4",
+ "out": "cards/2026-11/trees-hate-you-launch-november-16-reel-v2.mp4",
  "verdict": "pass",
- "at": "2026-11-14T08:57:19Z",
+ "at": "2026-11-14T09:02:20Z",
  "findings": [],
  "notes": [
-  "length 20.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "length 20.5 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
   "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
-  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 4.02, \"held_under_text\": 0.0, \"secs\": 19.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 4.9, \"held_under_text\": 0.0, \"secs\": 20.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "696377c1ed5571dd523eab87e3aae14574cc45ad",
- "dispatches": 2,
+ "job_sha": "7db85dfd66da05e637688724ad9e6a89372c0f72",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -21,5 +21,5 @@
  "final_enc": "-preset medium -crf 18",
  "look_frames": [],
  "person_shown": "n/a",
- "sound": "bed:neon_e (our bed, director to sign off: the only trailer on the Steam page ('Release Date Announcement', 60 s, appid 4171850 movie 257350012) was opened and its audio is effects-led gameplay sound (boulder rumbles, trap hits): the Cocktail Fork split found 35.8% music and left 8.4% effects in the music stem from a 2.0 s start (5.7% from 6.0 s), both over the 5% limit, and a plain stretch cannot follow cuts from six different moments of the trailer; the Steam page lists no other trailer (the demo page was not opened))"
+ "sound": "bed:neon_d (our bed, director to sign off: the only trailer on the Steam page ('Release Date Announcement', 60 s, appid 4171850 movie 257350012) was opened and its audio is effects-led gameplay sound (boulder rumbles, trap hits): the Cocktail Fork split found 35.8% music and left 8.4% effects in the music stem from a 2.0 s start (5.7% from 6.0 s), both over the 5% limit, and a plain stretch cannot follow cuts from six different moments of the trailer; the Steam page lists no other trailer (the demo page was not opened))"
 }
