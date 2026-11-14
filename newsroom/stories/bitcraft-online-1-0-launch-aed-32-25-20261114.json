@@ -54,5 +54,25 @@
  "job": "job file commit 27a468b (jobs/live, deleted by the runner after the render), job_sha e4ffaab4c1b8afefcf2d5e97de59382be730e7e5",
  "render_checks": "qc pass no findings (render-live run 43567881265, 245 s, dispatch 1 of the job, audio split applied: music 67.3%, leak 0.0%, music_only); length 21.3 s before the end card; whisper on the final Reel (VAD on and off): no speech, only 'Music' and 'Bingo!' (the jingle); music -15 to -10 dB every second to the end card, no silent tail; credit visible from frame 0 to 3 s; first frame the red-hatted character at a village gate (side-on, facing right into the frame), headline above his head; dense strip 4 fps judged: no blood, gore, slate, title card or black frame; no edge text; source 1080p 5.7 Mbps, max zoom 1.78, decode clean",
  "arabic_review": "arabic-games-film-editor, arabic-writing, arabic-grammar-review loaded fresh; grammar pass by hand, no required edits; DeepL forward whole story and alternatives, back-check: 'زراعة يدوية' read as small-scale farming and was replaced by نظام زراعة جديد; DeepL's 'لعبة تدفع مقابل اللعب' for buy to play rejected (calque), used بنظام الشراء لمرة واحدة",
- "re_gate": "RE-GATE within the hour before 01:15 Dubai (Sun)"
+ "re_gate": "RE-GATE within the hour before 01:15 Dubai (Sun)",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/bitcraft-online-1-0-launch-aed-32-25-20261114-reel-v1.mp4",
+  "blob": "4936eb4700171b2eed28025e756f257b125ffb6b",
+  "at": "2026-11-14T06:57:34Z",
+  "note": "Steam UAE page re-read 14 Nov ~06:55Z: release 13 Nov, EA 21 Jun 2025, introductory offer ends 20 November, 43.00 to 32.25 AED unchanged; GamesPress read. Note: on-screen line says smaller settlements (press: lower-cost, fixed claim sizes); accepted. DeepL back-check matches.",
+  "checklist": {
+   "job": "jobs/live/bitcraft-online-1-0-launch-aed-32-25-20261114.json",
+   "sha256": "8d65b3c65d2dec1b68c25b46a3a571621718f7c394f519c21bbd69273a92daed",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-0115b"
+  },
+  "by": "director-bitcraft-2",
+  "qc": "pass",
+  "looked": "dense 4 fps strip and strip frames judged as 9:16 crops: red-hatted character side-on facing into the frame at the gate with headline above his head, grid tile readable; shots keep subject in column; no gore, no slate or title card, no edge text; audio measured -17 to -12 dB music to the end card, no speech; strip AED sign left of 32.25, offer end 20 نوفمبر, no time zone; facts re-read against GamesPress and Steam UAE page 14 Nov"
+ }
 }
