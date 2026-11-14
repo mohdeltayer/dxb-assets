@@ -17,7 +17,7 @@
  "category": "interview",
  "beat": "interview",
  "lane": "Digital Lounge only (Reel on Instagram, X, Threads); DXB-KNIGHT on hold",
- "status": "built (render pending)",
+ "status": "rendered, qc pass; awaiting director (separate session) and scheduling",
  "claimed_for": "17:15 Dubai Sun 15 Nov 2026 (13:15Z)",
  "claimed_at": "2026-11-14T23:10:00Z",
  "source_type": "secondary",
@@ -140,5 +140,38 @@
    "forward": "whole story in one piece EN to AR: DeepL wrote «تجري محادثات لإنتاج لعبة من فئة AAA» and «أبرز أهمية السماح للاعبين بالتفاعل»; we took «لإنتاج» over our «لصنع»; its Arabic-lettered game names («بليد رنر», «سايبربانك 2077») and «من قبل» passive were not taken (house rules: game names in English; active voice). Phrase variants: 'Talks are under way' -> «المحادثات جارية حالياً»; 'Talks have begun' -> «بدأت المحادثات»; 'No studio or date yet' -> «لم يتم تحديد الاستوديو أو الموعد بعد» (we keep «لا استوديو ولا موعد بعد»)",
    "back_check": "AR to EN on all final texts: 'Blade Runner Owners Discuss a AAA Game'; 'He replied yes, emphasizing that it is a AAA game'; 'stressed the importance of players interacting with the Blade Runner universe'; 'Alcon has not yet announced a studio, platforms, or a release date'; caption back-translates with the same facts: meaning holds"
   }
+ },
+ "template": "stills",
+ "chip": "تقرير",
+ "slot": "17:15 Dubai Sun 15 Nov 2026 (13:15Z)",
+ "reel": {
+  "path": "cards/2026-11/blade-runner-aaa-game-talks-alcon-20261115-reel-v2.mp4",
+  "strip": "cards/2026-11/blade-runner-aaa-game-talks-alcon-20261115-strip.jpg",
+  "sheet": "cards/2026-11/blade-runner-aaa-game-talks-alcon-20261115-sheet.jpg",
+  "dense": "cards/2026-11/blade-runner-aaa-game-talks-alcon-20261115-dense.jpg",
+  "qc": "cards/2026-11/blade-runner-aaa-game-talks-alcon-20261115-qc.json (pass)",
+  "job": "jobs/live/blade-runner-aaa-game-talks-alcon-20261115.json (removed by the render commit)",
+  "job_commit": "819010e",
+  "job_sha": "4317bfbf3cfe512cf681b3dea0e8d00433d167cf",
+  "render_commit": "2d67b2e",
+  "publer_media": "379d2fe receipt (media only, not scheduled)",
+  "stages_s": {
+   "checks": 1.7,
+   "montage": 48.9,
+   "text": 56.9,
+   "audio": 1.6,
+   "outro": 21.1,
+   "total": 130.3,
+   "job": 144
+  },
+  "renders": "3 dispatches: v1 stopped at the pace check before encode (shots over 4 s); v1 encoded with held stills failed qc lifeless 54.4 (evidence commit c1ed214); v2 with slow pans passed (lifeless 0.0)",
+  "length": "23.1 s before the end card (note, not a cap)",
+  "sound": "our bed neon_c (stills, no trailer)"
+ },
+ "builder_checks": {
+  "gore_4fps": "dense strip read at 4 fps: no weapon, blood, body or sexual content; neon and city stills, two film stills of K and Joi, Wallace seated; the 1997 game's crime-scene, dancer and gun-shop screenshots were left out",
+  "credit": "one entry [0,6] from frame 0 to the end card: «لقطات من فيلم 2049 ولعبة 1997: ألكون ونايتدايف»; the photo credit «الصورة: كيفن بول، ويكيميديا كومنز (CC BY 4.0)» in the plate 0 to 3.5 s",
+  "cover": "rooftop and spinner of the 1997 game, headline over the purple sky, Kosove's photo box and name plate open on frame 0, no face behind the box",
+  "picture_vs_line": "line 1 (question about a Cyberpunk-sized game) on the film's neon street; line 2 (yes, AAA) on K and Joi at the screen (illustration, weakest match); line 3 (players interact with the world) on the 1997 game's spinner hangar; line 4 (last acclaimed game, 1997) on the 1997 game's city; line 5 (nothing announced) on Wallace seated in the dark"
  }
 }
