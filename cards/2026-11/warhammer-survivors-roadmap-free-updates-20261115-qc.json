@@ -1,18 +1,18 @@
 {
  "name": "warhammer-survivors-roadmap-free-updates-20261115",
- "out": "cards/2026-11/warhammer-survivors-roadmap-free-updates-20261115-reel-v1.mp4",
+ "out": "cards/2026-11/warhammer-survivors-roadmap-free-updates-20261115-reel-v2.mp4",
  "verdict": "pass",
- "at": "2026-11-14T20:59:40Z",
+ "at": "2026-11-14T21:21:26Z",
  "findings": [],
  "notes": [
-  "length 23.1 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: applied; music_pct 60.5; leak_pct 1.1; cache {'hit': 0, 'miss': 8}; separate_secs 10.6; secs 15.9",
-  "smear check: exempt 6.34 to 11.64 s (our own cards)",
-  "render_job: lifeless: {\"score\": 0.8, \"still_share\": 0.009, \"longest_still\": 0.1, \"cuts_per_10s\": 7.83, \"held_under_text\": 0.0, \"secs\": 23.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 20.8 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 65.5; leak_pct 0.8; cache {'hit': 8, 'miss': 0}; separate_secs 3.5; secs 5.8",
+  "smear check: exempt 5.59 to 10.89 s (our own cards)",
+  "render_job: lifeless: {\"score\": 0.9, \"still_share\": 0.01, \"longest_still\": 0.1, \"cuts_per_10s\": 8.21, \"held_under_text\": 0.0, \"secs\": 20.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "8b4dce5a17ea6dcc5b085f3593798412178ec8c6",
- "dispatches": 2,
+ "job_sha": "f0ad9831f23192686fb799ff3602a3cd2ff4a76b",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
