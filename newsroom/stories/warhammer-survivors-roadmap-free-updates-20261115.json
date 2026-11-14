@@ -1,7 +1,7 @@
 {
  "id": "warhammer-survivors-roadmap-free-updates-20261115",
  "title": "Warhammer Survivors roadmap: four free updates from December 2026 to Q1 2027, a bigger piece of content in Q2 2027, per Auroch Digital's Steam post",
- "status": "built by builder-1615 for 16:15 Dubai Sun 15 Nov; not scheduled; RE-GATE within the hour before 16:15 Dubai (Sun)",
+ "status": "built by builder-1615 for 16:15 Dubai Sun 15 Nov (QC pass, v3); NOT scheduled, no director run; RE-GATE within the hour before 16:15 Dubai (Sun)",
  "lane": "digital-lounge",
  "game": "Warhammer Survivors",
  "subject_person": null,
@@ -112,6 +112,17 @@
   ],
   "note": "opened: house glossary, perfect-arabic SKILL.md, arabic-writing orthography.md and conventions.md; no required edits"
  },
- "approved": "NOT scheduled (builder stop point); RE-GATE within the hour before 16:15 Dubai (Sun)",
- "re_gate": "RE-GATE within the hour before 16:15 Dubai (Sun): re-read the Steam news feed for Warhammer Survivors (a changed date, an update post), the roadmap image, and Push Square"
+ "approved": "NOT scheduled (builder stop point)",
+ "re_gate": "RE-GATE within the hour before 16:15 Dubai (Sun): re-read the Steam news feed for Warhammer Survivors (a changed date, an update post), the roadmap image, and Push Square",
+ "render": {
+  "reel": "cards/2026-11/warhammer-survivors-roadmap-free-updates-20261115-reel-v3.mp4",
+  "job_file_commit": "e15f787 is the render commit; job v7 commit 28fa781",
+  "job_sha": "0bf98322ef27c0ad9b4875ec0ad6524e56005fa4",
+  "dispatches": 4,
+  "length_before_end_card_s": 20.1,
+  "sound": "trailer: Skulls trailer from 14.0 s, audio split applied (music 65.1%, leak 0.8%), music under every second to the end card (RMS 8 to 19 per 1 s)",
+  "speech": "none: faster-whisper small on both trailers (VAD on and off) and on the finished Reel (VAD on: nothing; VAD off: only the tag 'Music' to 20.1 s and a hallucinated 'Thank you for watching' over the end-card jingle)",
+  "history": "v1 (qc pass) had marines firing green beams at 4.75 to 5.6 s and chest UI text: dense strip read, shots re-cut; job v2 card note too wide; v3/v4 block_ok on the trailer's scene cut; v5 platform shot trimmed; v6 block_ok on the icon grid (tile edges); the v3 Reel is the one to use; v1 and v2 mp4 files in cards/2026-11 are superseded and not for posting",
+  "open_notes": "the last shot shows a stylised monster helmet for 0.3 s from 19.5 s under the last line (no weapon, no blood); 'Steam' and 'منشور' are in the X, Threads and caption text only, the on-screen line says «خارطتها» for reading time; pixel hit sparks are red at 15.5 to 16 s (pixel-art effects, not blood)"
+ }
 }
