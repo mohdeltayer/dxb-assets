@@ -1,1 +1,96 @@
-{"id":"queens-domain-200k-sales-two-weeks-20261114","title":"Queen's Domain passes 200,000 copies in two weeks, per the publisher via Game*Spark","game":"Queen's Domain","subject_person":null,"kind":"sales","kind_news":"sales","companies":["Future Friends Games","Freshly Baked Games"],"genre":["RPG","indie"]}
+{
+ "id": "queens-domain-200k-sales-two-weeks-20261114",
+ "title": "Queen's Domain passes 200,000 copies in two weeks, per the publisher via Game*Spark",
+ "status": "built, QC pending; planned Digital Lounge Sun 15 Nov 10:15 Dubai (06:15Z) on Instagram, X, Threads; RE-GATE within the hour before 10:15 Dubai (Sun)",
+ "lane": "digital-lounge",
+ "game": "Queen's Domain",
+ "subject_person": null,
+ "kind": "sales",
+ "kind_news": "sales",
+ "label": "تقرير",
+ "template": "clipcard",
+ "chip": "تقرير",
+ "companies": [
+  "Future Friends Games",
+  "Freshly Baked Games"
+ ],
+ "genre": [
+  "RPG",
+  "indie"
+ ],
+ "platform": "pc, console",
+ "sources": [
+  {
+   "name": "Game*Spark, 14 Nov 2026 17:27 JST (08:27Z): 'Future Friends Games announced that sales passed 200,000 in two weeks', announced today from the official X account (@QueensDomain_); Steam reviews 95% of 6,028; platforms PS5, Xbox Series X|S, Nintendo Switch 2, Windows (Steam). The X post itself and a Steam post for 200k could not be read (X blocks automated reads; the Steam news feed showed no 200k post at 13:50Z)",
+   "url": "https://www.gamespark.jp/article/2026/11/14/174873.html"
+  },
+  {
+   "name": "Steam community announcement 'Thank you for 100,000 copies!', 4 Nov 2026 16:13Z, read in full: 'all 100,000 of you... after only 5 days', 'just a two person dev team', '95% positive rating'",
+   "url": "https://store.steampowered.com/news/app/1799840"
+  },
+  {
+   "name": "Steam store API (cc=ae) read 14 Nov 2026: price 67.99 AED, release date 30 Oct 2026, windows only on Steam, developer Freshly Baked Games LLC, publisher Future Friends Games, languages English, French, German, Spanish, Japanese, Portuguese-Brazil, Russian, Simplified Chinese (no Arabic)",
+   "url": "https://store.steampowered.com/app/1799840/"
+  }
+ ],
+ "first_report": "Game*Spark 14 Nov 2026 08:27Z, citing the publisher's official X post of 14 Nov (the 100,000 milestone: Steam post 4 Nov 16:13Z); under 24 hours at the report; the Arabic press has not carried it (not searched exhaustively)",
+ "source_type": "secondary",
+ "ledger_find": {
+  "at": "2026-11-14T13:40:00Z",
+  "words": [
+   "queen",
+   "domain"
+  ],
+  "hits": [
+   "2026-10-31-queens-domain-out-now"
+  ],
+  "note": "the hit is the launch story of 31 Oct; the 200,000 figure is new; ledger.py find crashed on another story's folders, searched by hand"
+ },
+ "footage": "official Steam trailer 'Launch' (appid 1799840, movie 257484092), 1920x1080 60 fps 5.7 Mbps, enlargement 1.78x; faster-whisper small VAD on and off: no speech (VAD on: nothing; off: one hallucinated 'You' at 60.7 s, no_speech 0.86); server shot picker clean stretches 0-4.6, 8.26-10.05, 18.6-20.35, 20.35-22.65, 24.06-27.48, 56.03-58.83 (the skeleton hall 11.5-14.9 and every dialogue box not used; the RDA trailer also opened and not used: fewer clean stretches and a title flash at 56 s); judged at 1 fps as 9:16 crops",
+ "lane_note": "sensitive: none (Steam content note 'blood and skeletons': no bones, blood or weapons at people in the chosen shots)",
+ "sensitive": "none",
+ "beat": "2 announcement (milestone): hook, attributed figure, card, context, platforms",
+ "recipe": "numbers family 3 via clipcard (footage first); neighbours 08:15 trailer (Forest Escape), 09:15 stills (Super Meat Boy Again+); the 11:15 neighbour is not known to me",
+ "claims": {
+  "200,000 copies in two weeks": "REPORTED: Game*Spark says the publisher announced it on X on 14 Nov; the X post and a Steam post were not readable by me; chip تقرير, attributed on screen and in the texts",
+  "100,000 copies in five days": "OK Steam announcement of 4 Nov 16:13Z ('all 100,000 of you... after only 5 days')",
+  "two-person team": "OK Steam announcement ('just a two person dev team')",
+  "release 30 Oct 2026": "OK Steam store API (the Steam post 'Queen's Domain is HERE!' 30 Oct 16:57Z; Game*Spark writes 31 Oct, Japan time)",
+  "platforms PS5, Xbox Series X|S, Switch 2, Steam": "OK Game*Spark; Steam page is Windows only",
+  "AED 67.99 on Steam UAE": "OK Steam store API cc=ae, read 14 Nov: may change, RE-GATE",
+  "95% positive of more than 6,000 reviews": "OK Game*Spark 14 Nov (6,028); Steam API reads 6,105 total at 13:40Z",
+  "no Arabic on Steam": "OK Steam languages list"
+ },
+ "angle": {
+  "hook": "a retro dungeon RPG made by two people has passed 200,000 copies in two weeks",
+  "why_now": "the publisher posted the 200,000 figure on X on 14 November, ten days after the studio's own Steam post marked 100,000 copies in five days",
+  "what_it_means_here": "Gulf PC players can buy it on the Steam store for the UAE at AED 67.99 and the game also runs on PS5, Xbox Series X|S and Switch 2, but Steam lists no Arabic language and the figure itself is the publisher's claim relayed by Game*Spark",
+  "payoff": "the 200 thousand card with the 100 thousand in five days beneath it, then the two-person team and the platform list"
+ },
+ "texts": {
+  "headline": "لعبة Queen's Domain\nتتجاوز 200 ألف نسخة",
+  "lines": [
+   "أعلنت فيوتشر فريندز غيمز\nالرقم عبر حسابها على X",
+   "يطورها شخصان فقط وتتوفر\nعلى PS5 · Xbox Series X|S\nوعلى Switch 2 · Steam"
+  ],
+  "card": {
+   "label": "نسخ مباعة منذ إطلاقها في 30 أكتوبر",
+   "value": "200 ألف",
+   "note": "بعد 100 ألف في خمسة أيام"
+  },
+  "credit": "المصدر: فيوتشر فريندز غيمز (Future Friends Games)",
+  "source": "غيم سبارك (Game*Spark)",
+  "x": "لعبة Queen's Domain تتجاوز 200 ألف نسخة بعد أسبوعين من إطلاقها في 30 أكتوبر، حسب موقع غيم سبارك (Game*Spark) نقلًا عن إعلان الناشرة فيوتشر فريندز غيمز (Future Friends Games) على X. وسعرها في متجر Steam في الإمارات 67.99 درهمًا.",
+  "threads": "لعبة Queen's Domain تتجاوز 200 ألف نسخة بعد أسبوعين من إطلاقها في 30 أكتوبر، حسب موقع غيم سبارك (Game*Spark) نقلًا عن إعلان الناشرة فيوتشر فريندز غيمز (Future Friends Games) على X. وسعرها في متجر Steam في الإمارات 67.99 درهمًا.",
+  "instagram_caption": "لعبة Queen's Domain تتخطى 200 ألف نسخة بفريق من شخصين فقط\n\nبعد أسبوعين من إطلاقها في 30 أكتوبر، تجاوزت مبيعات لعبة Queen's Domain حاجز 200 ألف نسخة، حسب موقع غيم سبارك (Game*Spark) الذي نقل إعلان الناشرة فيوتشر فريندز غيمز (Future Friends Games) على حسابها في X.\n\nوكان الاستوديو فريشلي بيكد غيمز (Freshly Baked Games) قد أعلن على Steam بلوغ 100 ألف نسخة في خمسة أيام، وهو فريق من شخصين فقط.\n\nوهي لعبة تقمص أدوار وحركة بطابع كلاسيكي، متوفرة على PS5 وXbox Series X|S وSwitch 2 وSteam. وبلغت نسبة التقييمات الإيجابية على Steam 95 بالمئة من أكثر من 6000 تقييم يوم 14 نوفمبر، حسب غيم سبارك. وسعرها في متجر Steam في الإمارات 67.99 درهمًا، ولا تتوفر اللغة العربية على Steam.\n\n#ألعاب #أخبار_الألعاب #QueensDomain #Steam"
+ },
+ "deepl": {
+  "forward_whole_story": "AR: تجاوزت مبيعات لعبة «Queen's Domain» ... حاجز الـ200,000 نسخة في غضون أسبوعين، وفقًا لموقع Game*Spark ... وقد تم تطويرها بواسطة فريق مكون من شخصين ... 67.99 درهم إماراتي. Meaning matches ours. Differences: DeepL left Game*Spark and Future Friends Games in Latin and used the passive تم تطويرها (house: no passive), so ours stands.",
+  "phrases": {
+   "in two weeks": "في غضون أسبوعين (ours: بعد أسبوعين من إطلاقها / خلال أسبوعين)",
+   "a team of just two people": "فريق مكون من شخصين فقط (ours: فريق من شخصين فقط)",
+   "available on": "متوفر على (ours: تتوفر على / متوفرة على)"
+  }
+ },
+ "pre_audit": "RE-GATE within the hour before 10:15 Dubai (Sun): re-read Steam news for a 200,000 post (then chip رسمي is possible only with a new Reel; otherwise keep تقرير), the AED price and the Game*Spark article"
+}
