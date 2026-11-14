@@ -1,7 +1,7 @@
 {
  "id": "2026-11-15-spirit-crossing-launch-november-16",
  "title": "Spirit Crossing (Spry Fox cozy MMO) launches Mon 16 Nov on Switch 2, Switch and PC",
- "status": "built v2, qc pass; held for director and scheduling (12:15 Dubai Sun 15 Nov)",
+ "status": "scheduled in Publer 12:15 Dubai Sun 15 Nov (08:15Z), 3/3; director PASS v2 (director-opus-2); RE-GATE within the hour before 12:15",
  "game": "Spirit Crossing",
  "claimed_by": "helper 12:15 Sun (retry)",
  "slot": "2026-11-15T08:15Z (12:15 Dubai Sun 15 Nov)",
@@ -108,7 +108,7 @@
   "credit": "المصدر: سبراي فوكس (Spry Fox)"
  },
  "gate": "gate 16:55Z: Spry Fox press release, Steam page and news, Gematsu read; no denial, delay or update found; web search shows the date unchanged",
- "approved": "RE-GATE within the hour before 12:15 Dubai (Sun)",
+ "approved": "go: rolling queue; director PASS v2 by director-opus-2; RE-GATE within the hour before 12:15 Dubai (Sun)",
  "build": {
   "reel": "cards/2026-11/spirit-crossing-launch-november-16-reel-v1.mp4",
   "job": "spirit-crossing-launch-november-16",
@@ -122,5 +122,26 @@
  },
  "grammar_review": "arabic-grammar-review loaded fresh 14 Nov; glossary, perfect-arabic SKILL.md, orthography.md and known-issues.md opened: no required edits on the X text, caption and Reel lines (game names feminine, خمس سنوات polarity, Arabic-first paragraphs, Western digits, no hashtags on X). Uncertain: صاحبة (apposition to the genitive company name) left as written",
  "deepl": "forward whole-story pass: تُطلق/تصدر kept تصدر, الودية/هادئة kept هادئة, الانتقال الفوري taken. Back-check of X text, caption and line 2: meaning held except صيد read as 'hunting', so changed to صيد الأسماك / السمك; النسخة التجريبية read as 'beta' (it is the Steam demo, kept)",
- "sound_note": "our bed (bed_reason in the job)"
+ "sound_note": "our bed (bed_reason in the job)",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/spirit-crossing-launch-november-16-reel-v1.mp4",
+  "blob": "b9083e6df9f2bd2f66085b6718eb7b4fdeb2b555",
+  "at": "2026-11-14T17:23:12Z",
+  "note": "v2 playtest trailer footage; sound our bed signed: Public Playtest Trailer music 3.6% of stretch (audio split refused), Announcement Trailer music usable but clean picture under 10 s with flash and white-out, no third official trailer on Steam; no speech (faster-whisper VAD none); grammar and DeepL back-check passed; hook night town readable at 3:4; line 2 over illustration footage accepted",
+  "checklist": {
+   "job": "jobs/live/spirit-crossing-launch-november-16.json",
+   "sha256": "0b733c713372f9bdaeb29907553e309cb89bf3939669791fcfd8f0315d2fc59c",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2-helper"
+  },
+  "by": "director-opus-2",
+  "qc": "pass",
+  "looked": "dense 4 fps strip: night town hook with avatar and creature, meadow, castle trail, no flash or white-out, no gore; lines 1 and 2 readable on outline; strip and credit from frame 0"
+ },
+ "scheduled": "scheduled in Publer 12:15 Dubai Sun 15 Nov 2026 (08:15Z): instagram 17ec55, x 17ec78, threads 17ecbe (last six; submit done, posts read Scheduled in the list; no job id returned by the connector); sound: our bed (neon_e), signed by director; labels kind:news tpl:split skin:house sound:our bed genre:family"
 }
