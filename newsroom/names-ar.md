@@ -27,6 +27,9 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | 6side Studio (Dawn of Defense developer, Germany) | سيكس سايد ستوديو | Proposed 14 Nov 2026 (first on-screen mention carries the Latin in brackets; later mentions «الاستوديو») |
 | Rekoup (Dawn of Defense publisher, Stockholm) | ريكوب | Proposed 14 Nov 2026 (bracket at first mention) |
 | Tbreak (Gulf outlet) | تيبريك | Proposed 14 Nov 2026 (bracket at first mention) |
+| Mindscape (Unicorn Academy: Island of Magic publisher) | ميندسكيب | Proposed 15 Nov 2026 (bracket at first mention; credit «ميندسكيب (Mindscape)»; «الناشرة» after) |
+| Aesir Interactive (Unicorn Academy: Island of Magic developer, Munich) | إيسير إنتراكتيف | Proposed 15 Nov 2026 (credit short form «إيسير (Aesir)»; bracket at first mention in the caption) |
+| Spin Master (Unicorn Academy rights holder and TV series) | سبين ماستر | Proposed 15 Nov 2026 (bracket at first mention) |
 | Imperium Aeternum (Dawn of Defense's empire) | stays Latin, glossed once as «إمبراطورية Imperium Aeternum» | Proposed 14 Nov 2026 |
 | Vertigo Gaming | فيرتيغو غيمينغ | Proposed 13 Nov 2026 (developer and publisher of Cook, Serve, Delicious! Re-Mustard; first mention carries the Latin in brackets) |
 | Nestopi | نيستوبي | Proposed 7 Nov 2026 (Japanese studio behind Chill with You; first on-screen mention carries the Latin in brackets) |
