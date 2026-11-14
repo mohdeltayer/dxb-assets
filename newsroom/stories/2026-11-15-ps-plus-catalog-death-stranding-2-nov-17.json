@@ -1,7 +1,7 @@
 {
  "id": "2026-11-15-ps-plus-catalog-death-stranding-2-nov-17",
  "title": "Death Stranding 2: On the Beach joins the PS Plus Game Catalog on 17 Nov (PS5), with Dragon Quest III HD-2D Remake and Atomfall",
- "status": "job built, awaiting render and director",
+ "status": "rendered v1 (qc pass), awaiting director and Mohammad preview; not scheduled; RE-GATE within the hour before 14:15 Dubai (Sun)",
  "claimed_by": "helper 14:15 Sun",
  "slot": "2026-11-15T10:15Z (14:15 Dubai Sun 15 Nov)",
  "lane": "Digital Lounge only",
@@ -99,5 +99,18 @@
  "re_gate": "RE-GATE within the hour before 14:15 Dubai (Sun)",
  "arabic_passes": {
   "catalog_term": "كتالوج الألعاب (playstation.com/ar-ae/ps-plus/games uses it most; مكتبة الألعاب in its FAQ; DeepL gave قائمة ألعاب)"
+ },
+ "render": {
+  "reel": "cards/2026-11/ps-plus-catalog-death-stranding-2-nov-17-reel-v1.mp4",
+  "job": "jobs/live/ps-plus-catalog-death-stranding-2-nov-17.json",
+  "job_sha": "e1d7e09c5d912faa9c97bb7cfc29d3f71ba2b52d",
+  "job_commit": "86e156b",
+  "render_secs": 154,
+  "dispatches_total": 4,
+  "qc": "pass; audio split applied (music 84.2%, leak 0.2%); length 16.6 s; lifeless 15.7 report-only",
+  "checks": "whisper small on the final audio: no English speech, one 'Thank you for watching' hallucination at 11.8 to 18.4 s over music (no_speech 0.37); the stretch's own transcript (28 to 68 s) is sung Japanese; loudness steady -18 to -19 dB to the end card",
+  "sound": "trailer (music stem under the whole Reel)",
+  "gore_check": "16 candidate shots looked at 4 fps as 9:16 crops; combat, aimed weapons, fire and the body-under-sheet shot dropped; six calm shots kept",
+  "open_points": "showcase layout leaves the lower part of the frame dark and the picture strip thin (2.4:1 trailer); director to judge; first frame is Sam in a locker (character, moving)"
  }
 }
