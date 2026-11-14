@@ -1,7 +1,7 @@
 {
  "id": "forest-escape-last-train-rainbow-ps5-20261114",
  "title": "Forest Escape: Last Train adds the Rainbow location (out now, Steam Early Access); PS5 version announced, no date",
- "status": "rebuilt after director fail, QC pass (job v13, job_sha 0f7931c68abe3c28e512d091c87f8c59b9e3a059, 13.1 s before the end card); planned 08:15 Dubai Sun 15 Nov; not scheduled; RE-GATE within the hour before 08:15 Dubai (Sun)",
+ "status": "scheduled in Publer for 08:15 Dubai Sun 15 Nov (04:15Z), 3/3 (ids ig:171322 x:171348 th:6f6603), director PASS (director-forest-0815); RE-GATE within the hour before 08:15 Dubai still due",
  "lane": "digital-lounge",
  "game": "Forest Escape: Last Train",
  "subject_person": null,
@@ -63,7 +63,7 @@
   "regate": "RE-GATE within the hour before 08:15 Dubai (Sun)"
  },
  "translation_notes": "DeepL whole-story forward (14 Nov): الوصول المبكر matches; DeepL wrote 'رئيس' for boss (kept house زعيم); 'تتلاشى' for the colours fading (kept تبهت, DeepL's alternative for the same phrase also تتلاشى); DeepL wrote «Frag Lab» and «Gematsu» in Latin only (house rule: Arabic then Latin). Back-check: meaning matches. Arabic names: فراغ لاب (Frag Lab), جيماتسو (Gematsu) per names-ar.",
- "approved": "not approved; built for the 08:15 Dubai Sun slot, separate director to sign",
+ "approved": "go: director-signed, slot 08:15 Dubai Sun 15 Nov; RE-GATE within the hour before 08:15 Dubai",
  "beat": "new addition or update",
  "ledger_find": {
   "at": "2026-11-14T10:55:00Z",
@@ -96,5 +96,26 @@
  "regate": "RE-GATE within the hour before 08:15 Dubai (Sun)",
  "render_notes": "v13: shots 1.9-6.0 (toy world, rails, chicken), 7.15-12.55 (gnome, balloons, tree; pace_ok with reason, one continuous trailer stretch), 41.0-42.8 (toy train, hut fire), 43.13-46.13 (walkway, then the furnace with the prisoner figure whole at focus 0.4). The 14.05 s red-room stretch was dropped (letterboxed, 424 rows, source-quality stop). Sound: our bed neon_c with bed_reason (the Rainbow trailer's music stem was silent from about 11.0 s of the Reel in two renders); measured per second on the final: -19 to -22 dBFS through 12.9 s, none below -30 before the end card. Two story lines. Server QC: pass.",
  "gate": "gate 10:50Z 14 Nov: Steam announcement and appdetails read; Gematsu read; news search for a denial or new date found nothing",
- "sound": "our bed with bed_reason (Rainbow trailer music stem silent from about 11.0 s of the Reel); director signs"
+ "sound": "our bed with bed_reason (Rainbow trailer music stem silent from about 11.0 s of the Reel); director signs",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/forest-escape-last-train-rainbow-location-november-14-reel-v1.mp4",
+  "blob": "5dc4ac74fba95692344dadad6ceaf5762a8119a9",
+  "at": "2026-11-14T11:54:34Z",
+  "note": "v13 bed neon_c with bed_reason; sound measured per second -21 to -23 dBFS to 12.0 s; pace_ok accepted; Frag Lab form flagged",
+  "checklist": {
+   "job": "jobs/live/forest-escape-last-train-rainbow-location-november-14.json",
+   "sha256": "2ae8b1a8d2f239e6687369315173b658fc84d42801f0be94ca739b872cfa8b5e",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-0815-sun"
+  },
+  "by": "director-forest-0815",
+  "qc": "pass",
+  "looked": "first frame toy world with headline readable at 3:4, gnome/balloons/tree/train/fire/walkway/furnace frames at 4 fps no gore, prisoner figure whole in final furnace frame, credit from frame 0"
+ },
+ "director_notes": "Frag Lab form: فراغ لاب is the builder-proposed row (not Mohammad-confirmed); فراغ is also an Arabic word (emptiness); alternative فراج لاب if he prefers. PS Store concept page for the game exists, release date COMING_SOON with no date (read 14 Nov 11:50Z), consistent with Gematsu. X reply carries the Steam link. Bed reason accepted: other trailers cannot sync with this trailer picture."
 }
