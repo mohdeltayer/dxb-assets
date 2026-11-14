@@ -64419,5 +64419,147 @@
   "dispatches": 2,
   "sound": "bed:neon_b (Steam trailers opened: RDA (the footage's trailer) and Launch (opened for picture and audio, not used: first-person weapons in its clean stretches). RDA audio split rendered on the server 14 Nov 14:47Z: music 35.2% of the stretch with 42.8% leftover effects (effects-led, under the 40% floor), and the five shots come from five different moments (4.6 to 55.9 s), so one continuous stretch cannot sit under them and trailer effects from other moments would not match the picture; our bed)",
   "footage": true
+ },
+ {
+  "name": "queens-domain-200k-sales-two-weeks-20261114-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-14T15:05Z",
+  "stages": {
+   "checks": 4.4,
+   "montage": 37.5,
+   "text": 28.0,
+   "audio": 0.9,
+   "outro": 17.8
+  },
+  "total": 88.7,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-14T15:03Z",
+  "finished_at": "2026-11-14T15:05Z",
+  "render_min": 1.48,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
+    "start": 4.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
+    "start": 7.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
+    "start": 24.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
+    "start": 34.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
+    "start": 38.01,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
+    "start": 30.4,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "queens-domain-200k-sales-two-weeks-20261114-trailer.mp4",
+    "start": 52.48,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 3.7,
+   "still_share": 0.036,
+   "longest_still": 0.5,
+   "cuts_per_10s": 10.22,
+   "held_under_text": 0.0,
+   "secs": 13.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 170,
+  "queue_wait_secs": 1,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 993,
+  "peak_mem_mb": 2592,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 41500,
+  "peak_disk_mb": 43493,
+  "min_disk_free_mb": 202613,
+  "setup_min": 0.17,
+  "story": "queens-domain-200k-sales-two-weeks-20261114",
+  "job_sha": "01ae4dcd331a0de3dbf7ef42d3e9da06c61ea489",
+  "dispatches": 3,
+  "sound": "bed:neon_b (Steam trailers opened: RDA (the footage's trailer) and Launch (opened for picture and audio, not used: first-person weapons in its clean stretches; its audio split was not run). RDA audio split rendered on the server 14 Nov 14:47Z: music 35.2% of the stretch with 42.8% leftover effects (effects-led, under the 40% floor), and the shots come from different moments (4.6 to 55.4 s), so one continuous stretch cannot sit under them and trailer effects from other moments would not match the picture; our bed)",
+  "footage": true
  }
 ]
