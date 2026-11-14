@@ -7,5 +7,46 @@
  "builder": "helper 13:15 Sun",
  "slot": "2026-11-15T09:15Z (13:15 Dubai Sun 15 Nov)",
  "lane": "Digital Lounge only",
- "subject_person": null
+ "subject_person": null,
+ "sources": [
+  {
+   "url": "https://store.steampowered.com/app/3681610/DRAGON_QUEST_MONSTERS_The_Withered_World/",
+   "type": "primary",
+   "read_at": "2026-11-14T17:45Z",
+   "note": "Steam store API (cc=ae): release 3 Dec 2026, developers Square Enix and TOSE, publisher Square Enix, price 200.00 AED (UAE store, pre-purchase); 'you befriend monsters from the DRAGON QUEST series, raise them up, synthesize new creatures, and pit them against other monsters in battle'; 'Join fledgling monster wranglers Bianca and Nera'; Steam post 10 Sep 'DEMO available now!' (free demo, demo progress and up to 8 monsters transfer to the full game on the same platform); Steam languages list has no Arabic"
+  },
+  {
+   "url": "https://www.playstation.com/en-us/games/dragon-quest-monsters-the-withered-world/",
+   "type": "primary",
+   "read_at": "2026-11-14T17:50Z",
+   "note": "PlayStation Store page: PS5, 12/3/2026, publisher Square Enix, $59.99 pre-order"
+  },
+  {
+   "url": "https://www.gematsu.com/2026/11/dragon-quest-monsters-the-withered-world-details-early-adventure",
+   "type": "outlet",
+   "read_at": "2026-11-14T17:30Z",
+   "note": "Gematsu 12 Nov: 3 Dec worldwide on PS5, Xbox Series, Switch 2, Switch and PC; Bianca (from Dragon Quest V); synthesis needs both monsters at level 10 or higher; early adventure details"
+  }
+ ],
+ "first_report": "Release date and pre-purchase: Steam post 9 Jun 2026; demo 10 Sep 2026; Gematsu early-adventure details 12 Nov 2026 (2 days old). Not older than 24 h at a new fact: Steam UAE price in dirhams read 14 Nov and not carried by the Arabic press as far as the search showed (not searched in depth)",
+ "companies": [
+  "Square Enix",
+  "TOSE"
+ ],
+ "genre": [
+  "RPG",
+  "family"
+ ],
+ "category": "release",
+ "beat": "release",
+ "sensitive": "none",
+ "chip": "رسمي",
+ "template": "trailer",
+ "platform": [
+  "PS5",
+  "Xbox Series X|S",
+  "Nintendo Switch 2",
+  "Nintendo Switch",
+  "PC (Steam)"
+ ]
 }

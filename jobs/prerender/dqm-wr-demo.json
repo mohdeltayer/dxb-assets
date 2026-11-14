@@ -1,0 +1,31 @@
+{
+ "name": "dqm-wr-demo",
+ "story": "dragon-quest-monsters-withered-world-dec-3-demo-20261115",
+ "kind_news": "launch",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/dqm-wr-demo-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "dqm-wr-demo-trailer.mp4",
+   "steam": 3681610,
+   "trailer": "DemoTrailer",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [],
+ "lines": [],
+ "credits": [],
+ "headline": "TODO",
+ "label": "متوفر الآن",
+ "source": "سكوير (Square Enix)",
+ "date": "14 Nov 2026",
+ "theme": "cold",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": "bed",
+ "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+}
