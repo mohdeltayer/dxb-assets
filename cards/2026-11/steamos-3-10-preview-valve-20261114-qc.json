@@ -1,22 +1,22 @@
 {
  "name": "steamos-3-10-preview-valve-20261114",
- "out": "cards/2026-11/steamos-3-10-preview-valve-20261114-reel-v1.mp4",
+ "out": "cards/2026-11/steamos-3-10-preview-valve-20261114-reel-v2.mp4",
  "verdict": "pass",
- "at": "2026-11-14T09:57:49Z",
+ "at": "2026-11-14T10:03:28Z",
  "findings": [],
  "notes": [
-  "length 13.6 s before the end card (target 12 to 20 s)",
+  "length 14.2 s before the end card (target 12 to 20 s)",
   "source quality: shot 0 steam-deck-available-now.mp4 at 5.85 for 2.35 s, enlarged 2.13x: block ratio median 0.99, peak 1.06 (ok)",
   "source quality: shot 1 steam-deck-available-now.mp4 at 8.25 for 2.25 s, enlarged 2.13x: block ratio median 1.07, peak 1.29 (ok)",
   "source quality: steam-hardware.mp4: low bitrate 4.2 Mbps (floor 5.1 Mbps for 2442x1080 at 24 fps) (lowbit)",
-  "source quality: shot 5 steam-deck-available-now.mp4 at 14.05 for 2.35 s, enlarged 2.13x: block ratio median 1.08, peak 1.28 (ok)",
-  "source quality: under 960 rows: steam-deck-available-now.mp4 at 5.85 (900 rows, enlarged 2.13x), steam-deck-available-now.mp4 at 8.25 (900 rows, enlarged 2.13x), steam-deck-available-now.mp4 at 14.05 (900 rows, enlarged 2.13x); lowres_ok: Steam store page of Steam Deck (app 1675200): 'Steam Deck Available Now', the only lifestyle footage, 1920x1080 with bars so 900 rows of picture, Valve's other Steam trailers: 'Steam Hardware' (app 4165870, 2442x1080, full rows, used for the product shots), 'Steam Machine' and 'Steam Frame' (1080p, a product logo bug in the top centre of every frame inside the 9:16 window, not used): no unletterboxed copy of the lifestyle shots; the three 'Available Now' shots are enlarged 2.13x from 900 rows, block ratio peak 1.29 at most (checked on the server)",
-  "render_job: audio split: applied; music_pct 97.2; leak_pct 0.1; cache {'hit': 0, 'miss': 3}; separate_secs 9.0; secs 13.4",
-  "render_job: lifeless: {\"score\": 6.0, \"still_share\": 0.059, \"longest_still\": 0.8, \"cuts_per_10s\": 8.89, \"held_under_text\": 0.0, \"secs\": 13.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "source quality: shot 5 steam-deck-available-now.mp4 at 14.35 for 2.05 s, enlarged 2.13x: block ratio median 1.08, peak 1.28 (ok)",
+  "source quality: under 960 rows: steam-deck-available-now.mp4 at 5.85 (900 rows, enlarged 2.13x), steam-deck-available-now.mp4 at 8.25 (900 rows, enlarged 2.13x), steam-deck-available-now.mp4 at 14.35 (900 rows, enlarged 2.13x); lowres_ok: Steam store page of Steam Deck (app 1675200): 'Steam Deck Available Now', the only lifestyle footage, 1920x1080 with bars so 900 rows of picture, Valve's other Steam trailers: 'Steam Hardware' (app 4165870, 2442x1080, full rows, used for the product shots), 'Steam Machine' and 'Steam Frame' (1080p, a product logo bug in the top centre of every frame inside the 9:16 window, not used): no unletterboxed copy of the lifestyle shots; the three 'Available Now' shots are enlarged 2.13x from 900 rows, block ratio peak 1.29 at most (checked on the server)",
+  "render_job: audio split: applied; music_pct 97.4; leak_pct 0.1; cache {'hit': 1, 'miss': 2}; separate_secs 5.6; secs 9.8",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 9.22, \"held_under_text\": 0.0, \"secs\": 14.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "7283972403afbd78c47449500dc2d44f1654ad8f",
- "dispatches": 2,
+ "job_sha": "eae86f1e6430f72877a06b79ab10c24f9f90ad14",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 2.13,
