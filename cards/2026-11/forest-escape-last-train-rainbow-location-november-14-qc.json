@@ -1,22 +1,17 @@
 {
  "name": "forest-escape-last-train-rainbow-location-november-14",
  "out": "cards/2026-11/forest-escape-last-train-rainbow-location-november-14-reel-v1.mp4",
- "verdict": "fail",
- "at": "2026-11-14T10:50:17Z",
- "findings": [
-  {
-   "check": "length",
-   "detail": "length 10.7 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them; under 12 s fails: add a beat of footage"
-  }
- ],
+ "verdict": "pass",
+ "at": "2026-11-14T11:02:52Z",
+ "findings": [],
  "notes": [
-  "length 10.7 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: applied; music_pct 59.6; leak_pct 0.7; cache {'hit': 0, 'miss': 3}; separate_secs 5.0; secs 7.6",
-  "render_job: lifeless: {\"score\": 3.7, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 1.89, \"held_under_text\": 0.0, \"secs\": 10.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 12.8 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 58.9; leak_pct 0.8; cache {'hit': 0, 'miss': 3}; separate_secs 5.9; secs 9.1",
+  "render_job: lifeless: {\"score\": 1.1, \"still_share\": 0.008, \"longest_still\": 0.1, \"cuts_per_10s\": 3.94, \"held_under_text\": 0.024, \"secs\": 12.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "6de99652525187b8ba095a23b1227bbace5026ac",
- "dispatches": 2,
+ "job_sha": "b856f248f1d58d84bdf10cdcefd323e4787be435",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
