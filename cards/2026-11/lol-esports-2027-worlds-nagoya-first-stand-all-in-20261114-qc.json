@@ -1,26 +1,21 @@
 {
  "name": "lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114",
  "out": "cards/2026-11/lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114-reel-v1.mp4",
- "verdict": "fail",
- "at": "2026-11-14T03:01:03Z",
- "findings": [
-  {
-   "check": "lifeless",
-   "detail": "lifeless score 65.3 (still_share 0.884, longest still 3.4 s): too much of the Reel holds still; footage behind the cards, the count-up and row reveal, more cuts"
-  }
- ],
+ "verdict": "pass",
+ "at": "2026-11-14T03:06:58Z",
+ "findings": [],
  "notes": [
-  "length 16.5 s before the end card (target 12 to 20 s)",
+  "length 16.8 s before the end card (target 12 to 20 s)",
   "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
-  "render_job: lifeless: {\"score\": 65.3, \"still_share\": 0.884, \"longest_still\": 3.4, \"cuts_per_10s\": 0.61, \"held_under_text\": 0.0, \"secs\": 16.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": true}",
+  "render_job: lifeless: {\"score\": 9.0, \"still_share\": 0.15, \"longest_still\": 0.4, \"cuts_per_10s\": 2.4, \"held_under_text\": 0.0, \"secs\": 16.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
   "estimate: headline: 23 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
  ],
  "autofixed": [],
- "job_sha": "c18c73b6ee064b6001783b2abe57719db9abfb2f",
- "dispatches": 4,
+ "job_sha": "580eaf8ad3a386c716f2b9b4466e08669952ee26",
+ "dispatches": 5,
  "source_summary": {
   "min_height": null,
-  "max_zoom": 1.78,
+  "max_zoom": null,
   "lowbit_shots": 0
  },
  "quality": "base",
