@@ -1,7 +1,7 @@
 {
  "id": "queens-domain-200k-sales-two-weeks-20261114",
  "title": "Queen's Domain passes 200,000 copies in two weeks, per the publisher via Game*Spark",
- "status": "rebuilt after the director's FAIL, QC pending; planned Digital Lounge Sun 15 Nov 10:15 Dubai (06:15Z); RE-GATE within the hour before 10:15 Dubai (Sun)",
+ "status": "rebuilt after the director's FAIL, QC pass (job_sha e2fd5653); planned Digital Lounge Sun 15 Nov 10:15 Dubai (06:15Z); director not yet re-run; RE-GATE within the hour before 10:15 Dubai (Sun)",
  "lane": "digital-lounge",
  "game": "Queen's Domain",
  "subject_person": null,
@@ -96,13 +96,14 @@
  "re_gate": "RE-GATE within the hour before 10:15 Dubai (Sun)",
  "render": {
   "reel": "cards/2026-11/queens-domain-200k-sales-two-weeks-20261114-reel-v1.mp4",
-  "job_file_commit": "e6d1d08",
-  "job_sha": "11521c3e6c095c18b11720d7b6173f04532417ed",
+  "job_file_commit": "d65c4bd",
+  "job_sha": "e2fd5653f5d15d533f6f5db09a410358a9e1ea8f",
   "dispatches": 3,
-  "length_before_end_card_s": 13.0,
+  "length_before_end_card_s": 14.0,
   "sound": "our bed neon_b: RDA trailer audio split measured on the server (music 35.2%, leftover 42.8%: effects-led); the preview must say 'our bed' in its first line",
   "speech": "none (faster-whisper small, VAD on and off, RDA and Launch trailers)",
   "history": "v1 and v2 hung 15 min because the Launch copy's picture starts at 3.02 s (shot 0 from 0.0 had no frame); v3 credit too wide; v4 audio split refused (effects-led); v5 trimmed the title flash at 56 s and the soft floor shot",
-  "checks": "dense strip 4 fps read: no blood, gore, weapons at people or muzzle flashes; credit visible from frame 0; first frame the golden tower (bright, moving); no title card or dialogue box in the shots; last two seconds before the end card are the hut picture; shot 2 still carries 0.4 s of a soft yellow floor (24.9 to 25.2 s)"
+  "checks": "dense strip 4 fps read: no blood, gore, weapons at people or muzzle flashes; credit visible from frame 0; first frame the golden tower (bright, moving); no title card or dialogue box in the shots; last two seconds before the end card are the hut picture; shot 2 still carries 0.4 s of a soft yellow floor (24.9 to 25.2 s)",
+  "history_v2": "director FAIL fixed in one render: the crow-and-cook shot (blood spatter, gripped weapon, skeletons) replaced by 34.0 blue relief and 30.1 vaulted ceiling, card ground moved to 33.3 s, credit and line 1 carry فيوتشر فريندز غيمز (credit at size 36), bed_reason says the Launch split was not run; 4 fps read of the finished Reel: clean, one mid-fade frame of a purple flame at 11.3 s, a warrior raising a staff in the last hut frames (no blow)"
  }
 }
