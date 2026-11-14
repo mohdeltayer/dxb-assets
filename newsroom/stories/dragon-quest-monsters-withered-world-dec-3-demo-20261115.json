@@ -1,7 +1,7 @@
 {
  "id": "dragon-quest-monsters-withered-world-dec-3-demo-20261115",
  "title": "Dragon Quest Monsters: The Withered World launches Dec 3 on PS5, Xbox Series, Switch 2, Switch and PC, demo available now",
- "status": "built by helper 13:15 Sun: job committed, render pending; RE-GATE within the hour before 13:15 Dubai (Sun)",
+ "status": "built by helper 13:15 Sun: v3 Reel QC pass; not scheduled (stop point); RE-GATE within the hour before 13:15 Dubai (Sun)",
  "game": "Dragon Quest Monsters: The Withered World",
  "claimed_by": "helper 13:15 Sun",
  "builder": "helper 13:15 Sun",
@@ -120,10 +120,31 @@
   "instagram": "موعد صدور Dragon Quest Monsters: The Withered World هو 3 ديسمبر، والنسخة التجريبية مجانية الآن\n\nتصدر لعبة Dragon Quest Monsters: The Withered World في 3 ديسمبر 2026 على PS5 وXbox Series X|S وNintendo Switch 2 وNintendo Switch والحاسب، حسب صفحات اللعبة في متاجر Steam وPlayStation وXbox وإعلان نينتيندو (Nintendo).\n\nتلعب بدور Bianca أو Nera، وتصادق وحوشًا من سلسلة Dragon Quest وتربيها، ثم تدمج وحشين لتصنع وحشًا جديدًا، كما يصفها متجر Steam.\n\nسعر اللعبة في متجر Steam في الإمارات 200 درهم. وتتوفر نسخة تجريبية مجانية منذ سبتمبر، ويمكن نقل ما يصل إلى 8 وحوش من بياناتها إلى اللعبة الكاملة على المنصة نفسها.\n\n#ألعاب #أخبار_الألعاب #DragonQuestMonsters #Steam"
  },
  "gate": "gate 18:30Z: Steam store API and news, PlayStation Store, Microsoft Store pages read; Nintendo announcement seen in search results; Gematsu 12 Nov read; no delay or denial found; RE-GATE within the hour before 13:15 Dubai (Sun)",
- "approved": "held for the director and the scheduler; RE-GATE within the hour before 13:15 Dubai (Sun)",
+ "approved": "RE-GATE within the hour before 13:15 Dubai (Sun); director and scheduling pending",
  "priority": "medium",
  "grammar_review": "arabic-grammar-review loaded fresh 14 Nov; glossary, perfect-arabic SKILL.md, orthography.md and known-issues.md opened: no required edits on the X text, caption and Reel lines (game names feminine, Western digits, Arabic-first lines, no hashtags on X, caption ends on the four tags). Uncertain: the generic second-person تختار/تصادق (precedent: Spirit Crossing lines). Optional style: repeated Steam in the X text, removed by the writer before the pass ended. The DeepL back-check caught line 1 reading as 'The heroine chooses either Bianca or Nera' (البطلة Bianca): changed to بطلتك Bianca أو Nera",
  "deepl": "forward whole-story pass (one piece): ستصدر ... وفقًا لشركة Square Enix, الكمبيوتر الشخصي (house term kept: والحاسب), سيتم إطلاقه (house release verb kept: تصدر), تجنيد الوحوش وتربيتها ودمج وحشين لإنشاء وحش جديد (ours: تصادق ... وتدمج وحشين لتصنع وحشًا جديدًا, same meaning); stock phrases sent in two to four phrasings: 'while a free demo is available on Steam' -> نسخة تجريبية مجانية, 'combine two monsters to create a new one' -> دمج وحشين, 'priced at 200 dirhams on the UAE Steam store' -> بسعر 200 درهم في متجر Steam بالإمارات; ours kept متجر Steam في الإمارات per the glossary. Back-check of X text, caption paragraphs, headline and lines 1 to 3: meaning held (according to Square Enix, 200 dirhams, free demo, up to 8 monsters transferable, coming to PS5 ... PC) after the line 1 fix",
  "headline_note": "the full game name (21 Latin characters) cannot share a line with an Arabic opener longer than 2 letters at 72 px (server font check: لعبة and تصدر fail, في passes), so the headline opens on في",
- "render_notes": "v1 (dispatch at 18:38Z, qc pass, 15.9 s, audio split music 73.0% leak 0.0%) looked at on its dense strip and sheet: the monster menu with cut text at the end of the arena shot, a night octopus and stone golem shot, a red demon with raised claws and the source's fading 'Adventure is calling' text at the tail; v2 (job job sha in the build block) drops them, loses the demo line from the Reel (still in the X text and caption) and runs 13.4 s"
+ "render_notes": "v1 (dispatch at 18:38Z, qc pass, 15.9 s, audio split music 73.0% leak 0.0%) looked at on its dense strip and sheet: the monster menu with cut text at the end of the arena shot, a night octopus and stone golem shot, a red demon with raised claws and the source's fading 'Adventure is calling' text at the tail; v2 (job job sha in the build block) drops them, loses the demo line from the Reel (still in the X text and caption) and runs 13.4 s",
+ "build": {
+  "reel": "cards/2026-11/dragon-quest-monsters-withered-world-dec-3-reel-v3.mp4",
+  "job": "dragon-quest-monsters-withered-world-dec-3",
+  "job_sha": "55b0a21a8e76d912d1f98bab52c7a09a21ec2e43",
+  "job_commit": "f9806b3",
+  "render_commit": "ded1e8a",
+  "qc": "pass, no findings, 12.9 s before the end card, audio split applied (music 72.6%, leak 0.0%), sound trailer",
+  "strip": "cards/2026-11/dragon-quest-monsters-withered-world-dec-3-strip.jpg",
+  "dense": "cards/2026-11/dragon-quest-monsters-withered-world-dec-3-dense.jpg",
+  "sheet": "cards/2026-11/dragon-quest-monsters-withered-world-dec-3-sheet.jpg",
+  "theme": "stylized",
+  "template": "trailer, three lines, 7 shots",
+  "chip": "رسمي",
+  "renders": "v1 and v2 also rendered and replaced on the same file names (v3 is current); failed dispatches before v1: pace (4.5 s shot) and a reading time of 0.1 s; one dispatch cancelled",
+  "gore": "4 fps dense strip read: cartoon monsters only, no blood, no weapon gripped; the red demon with raised claws and the yellow orb burst are not in v3",
+  "whisper": "faster-whisper small on the finished mp4: no speech at all (first 3 s and whole 14.9 s); the source narrator is removed by the audio split",
+  "music_to_end_card": "loudness 70 to 72 dB through 12.0 s, a fade to 67 dB in the last 0.9 s of picture, then the jingle at 73.5 dB",
+  "credit": "credit line from frame 0 to the end of the picture (dense strip)",
+  "edge_text": "the sheet shows no cut-text flag; on shot 2 the scouting ring digit '4' touches the right edge at 5.5 to 6.5 s (game UI, x 0.56 crop)",
+  "picture_vs_line": "line 1 over the scouting battle and the fused monsters, line 2 (platforms) over arena, unicorn, dog and the two heroes: illustration, no contradiction"
+ }
 }
