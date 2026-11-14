@@ -2,16 +2,16 @@
  "name": "kuloniku-bowl-up-switch-2-nov-25-20261114",
  "out": "cards/2026-11/kuloniku-bowl-up-switch-2-nov-25-20261114-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-14T15:54:33Z",
+ "at": "2026-11-14T16:00:57Z",
  "findings": [],
  "notes": [
   "length 13.5 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 94.8; leak_pct 0.0; cache {'hit': 0, 'miss': 3}; separate_secs 7.6; secs 11.2",
-  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 14.18, \"held_under_text\": 0.0, \"secs\": 13.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: audio split: applied; music_pct 94.8; leak_pct 0.0; cache {'hit': 2, 'miss': 2}; separate_secs 4.0; secs 6.6",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 16.42, \"held_under_text\": 0.0, \"secs\": 13.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "27248d124c7e0176a7e0b226766fbec2075c6085",
- "dispatches": 2,
+ "job_sha": "6535b97adc7b089b28d65818dfc85379ccf155a2",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
