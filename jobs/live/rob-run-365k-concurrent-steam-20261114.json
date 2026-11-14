@@ -50,21 +50,6 @@
   ],
   [
    "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
-   4.65,
-   1.6,
-   [
-    [
-     0.0,
-     0.3
-    ],
-    [
-     0.8,
-     0.6
-    ]
-   ]
-  ],
-  [
-   "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
    23.05,
    1.7,
    [
@@ -88,7 +73,18 @@
   [
    "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
    36.55,
-   4.2,
+   2.5,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "rob-run-365k-concurrent-steam-20261114-trailer.mp4",
+   39.05,
+   3.5,
    [
     [
      0.0,
@@ -181,15 +177,15 @@
    "music": "trailer own sound"
   },
   {
-   "beat": "2 police and chase",
-   "shot": "police cars 5.4 s (muzzle flash at 4.4 s excluded), chase 23.8 s, aerial street 32.1 s",
-   "alternatives": "police crouching with long guns at 28.5 s skipped",
-   "crop": "x 0.3 to 0.6, 0.45, 0.5",
+   "beat": "2 chase and street",
+   "shot": "chase 23.8 s, aerial street 32.1 s",
+   "alternatives": "police cars at 5.4 to 7 s dropped: the server's source check flagged a blocky smear at 5.25 to 5.88 s (halftone grade); police crouching with long guns at 28.5 s skipped",
+   "crop": "x 0.45, 0.5",
    "music": "trailer own sound"
   },
   {
    "beat": "3 territory map and caveats",
-   "shot": "territory map 37.3 to 41.0 s (map names are in-game, not captions)",
+   "shot": "territory map 37.3 to 43.3 s in two shots (map names are in-game, not captions)",
    "alternatives": "ROB RUN logo card from 45 s skipped",
    "crop": "x 0.5",
    "music": "trailer own sound"
