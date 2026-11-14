@@ -124,10 +124,7 @@
  "template": "split",
  "skin": "house",
  "cut": true,
- "track": [
-  "spirit-crossing-launch-november-16-trailer.mp4",
-  4.96
- ],
+ "track": "bed",
  "strip": [
   [
    "الموعد",
@@ -171,22 +168,23 @@
    "shot": "4.96 to 7.36 s then 15.45 to 16.8 s (night town with the avatar walking in, then the character and the descending creature; server seek times from the picker; the 16.8 to 19.2 s house flash and the 21.6 to 23.6 s puff burst of the announcement trailer dropped after the director FAIL)",
    "alternatives": "announcement trailer: only about 9.5 s clean once the flash and puffs are cut",
    "crop": "picker focus",
-   "music": "trailer own sound via split"
+   "music": "our bed (see bed_reason)"
   },
   {
    "beat": "1 L1 what it is",
    "shot": "21.25 to 22.85 then 37.53 to 41.03 s (street with players and star reactions, then the open landscape)",
    "alternatives": "none cleaner",
    "crop": "picker focus, pan to 0.769 at the scene change",
-   "music": "trailer own sound"
+   "music": "our bed (see bed_reason)"
   },
   {
    "beat": "2 L2 wander, fish, murals",
    "shot": "43.31 to 47.71 s (ruins and open land, the world you wander; no fishing footage is clean in this trailer, so the line is the press release's and the picture is illustration)",
    "alternatives": "announcement trailer fishing stretch 10 to 13 s carries HUD text",
    "crop": "picker focus, pan to 0.659 at 2.34 s",
-   "music": "trailer own sound"
+   "music": "our bed (see bed_reason)"
   }
  ],
- "note": "picture: Spirit Crossing public playtest trailer (v2 after the director FAIL on the announcement trailer cut). Date and platforms are on the strip."
+ "note": "picture: Spirit Crossing public playtest trailer (v2 after the director FAIL on the announcement trailer cut). Date and platforms are on the strip.",
+ "bed_reason": "trailers checked: Public Playtest Trailer (the picture used) sound is effects-led, the audio split measured music at 3.6% of the stretch from 4.96 s and refused it; Steam Announcement Trailer music is usable (54.6% on 14 Nov) but its clean picture is under 10 s (a bright building flash and a white puff burst), so picture and music cannot come from the same trailer; no third official trailer on Steam"
 }
