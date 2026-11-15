@@ -1,7 +1,7 @@
 {
  "id": "littlelands-early-access-nov-16-20261115",
  "title": "Littlelands (Apogee Entertainment; Rafael Martín and Kyle Creamer) launches in Early Access on Steam on Mon 16 Nov 2026",
- "status": "built, not scheduled (stop point: no director, no Publer)",
+ "status": "built: v3 Reel qc pass; not scheduled, no director run (stop point)",
  "lane": "digital-lounge",
  "game": "Littlelands",
  "companies": [
@@ -51,7 +51,7 @@
  "template_note": "formats.pick('launch', footage=True) gives trailer; formats.py check trailer 2026-11-16T03:15 ok; by hand: 03:15 Trafficity trailer, 05:15 POPUCOM split, 07:15 trailer: no third in a row; Monday trailer count 2 with this; publishers Onramp, Hypergryph/Fireshine, Apogee all differ",
  "beat": "release",
  "family": "release (beat sheet 7), recipe 2 (trailer drop) for the opening",
- "recipe": "0-2.45 s headline over the key-art village (villagers waving, cover); 2.45-4.0 the hero wading a pond, no line; 4.0-7.8 a village and the town (line 1); 7.8-11.8 the forest railway then the rocky canyon (line 2); 11.8-16.05 the hero chasing butterflies then the farm plot growing (line 3); end card",
+ "recipe": "0-1.26 s the hero wading a pond facing camera under chip and headline (cover); 1.26-3.2 a village from above, headline still up, no line; 3.2-6.5 the village close and the town (line 1); 6.5-13.8 the forest railway, the rocky canyon and its bridge, a pale rock valley (line 2); 13.8-17.4 the hero chasing blue butterflies, then the farm plot growing from dark soil to crops (line 3); end card (14.1 s before the end card after crossfades)",
  "sensitive": "none: a cozy life-sim adventure. Combat exists in the game (swords, monsters); no shot shows a weapon, a fight or a creature attacked",
  "spoken": "تصدر اليوم Littlelands بنسخة الوصول المبكر. تتجول فيها بين قرى صغيرة، ثم تعبر الغابات والوديان، وتصطاد الحشرات وتعتني بمزرعتك.",
  "claims": [
@@ -129,6 +129,22 @@
   "deepl_backcheck": "all final texts to English (15 Nov ~08:00Z): headline 'Littlelands launches today in Early Access'; lines read as 'you wander through small villages', 'then it crosses the rocky valleys', 'catches insects and takes care of your farm' (the subject is the reader in context); X 'launches today in Early Access on Steam ... according to the game's page on the store'; caption matched except 'currently available at a pre-release price', so the sentence was rewritten to «وسيكون سعر اللعبة في هذه المرحلة تمهيديًا» (future, not available yet)"
  },
  "job": "jobs/live/littlelands-early-access-november-16.json",
- "regate": "RE-GATE within the hour before 07:15 Dubai (Mon): Steam page still says 16 Nov or is live, no delay notice; if live by then the texts still hold (تصدر اليوم); price line still true or updated",
- "footage": "two official Steam trailers of the game (app 2083660), both 1920x1080 30 fps ~5.9 Mbps, decode clean (server shots read 15 Nov 07:53Z): 'Early Access Release Date Announcement' (93.3 s; cover key art, butterflies, farm; its music under the whole Reel) and 'Wholesome Games Showcase Trailer' (61.2 s; pond, village, town, forest, canyon). Not used: 'Demo Release Trailer' (HUD on most shots), 'Announcement Trailer' (2023). Server copies run 0.34 s ahead of local downloads (cuts matched); job times are server times"
+ "regate": "RE-GATE within the hour before 07:15 Dubai (Mon): Steam page still says 16 Nov or is live, no delay notice; texts say تصدر اليوم and no price, still true if it is live by then; if a price shows, it may go in the caption",
+ "footage": "two official Steam trailers of the game (app 2083660), both 1920x1080 30 fps ~5.9 Mbps, decode clean (server shots read 15 Nov 07:53Z): 'Early Access Release Date Announcement' (93.3 s; cover key art, butterflies, farm; its music under the whole Reel) and 'Wholesome Games Showcase Trailer' (61.2 s; pond, village, town, forest, canyon). Not used: 'Demo Release Trailer' (HUD on most shots), 'Announcement Trailer' (2023). Server copies run 0.34 s ahead of local downloads (cuts matched); job times are server times. Final shots (server times): showcase 44.5 (pond), 8.75 and 10.7 (village), 21.28 (town), 23.75 (forest), 27.7 (canyon), 50.4 (rock valley); EA trailer 48.6 (butterflies), 51.35 (farm). The key-art village (EA 75.5) was dropped: a villager raises a sword inside the 9:16 window as the camera pulls back",
+ "sound": "the Early Access Release Date Announcement trailer's own music from 56.0 s (server time) as one stretch; audio split applied (music 99.7%, leak 0.1%); faster-whisper small (numpy input, VAD) on the finished Reel: no speech; without VAD it hallucinated one Korean 'subscribe' phrase at 3.2 s over music; RMS steady -14 to -18 dB to 14 s, then the end-card jingle",
+ "reel": {
+  "path": "cards/2026-11/littlelands-early-access-november-16-reel-v3.mp4",
+  "render_commit": "63255ea",
+  "job_sha": "80af67acfeeabf8a97496a4c87c5670e80cb015d",
+  "job_file_commit": "5de7f57",
+  "renders": "3 render-live dispatches (v1 qc fail: length 11.2 s; v2 qc pass but frame 0 had the hero under the headline band and a villager cut at the village shot's edge; v3 qc pass) plus 2 prerender runs (shots, text)",
+  "qc": "pass, no findings; length 14.1 s before the end card; audio split applied; lifeless 2.2 not over; sound trailer; decode clean",
+  "stage_secs": "render 197 s on dxb-render (8 cores)"
+ },
+ "director_notes_for_review": [
+  "0.0 s: the hero's hair top touches the headline's second line on frame 0 only; his face is clear below it from frame 0 and fully clear from 0.25 s",
+  "3.2-4.4 s: a small villager walks into the bottom of the village shot, whole in frame after the refocus",
+  "9.6-13.0 s: the pale rock valley is soft (depth of field in the source), not damage; decode clean",
+  "line 3 sits over two pictures it names: butterflies (insects), then the farm plot (farm)"
+ ]
 }

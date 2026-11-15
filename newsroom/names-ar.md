@@ -332,3 +332,11 @@ fact inside the text (the release date), then why it matters now. Refused by the
 |---|---|---|
 | Hypergryph (developer of Arknights and POPUCOM, China) | هايبرغريف | Proposed 15 Nov 2026 (Reel line «من استوديو هايبرغريف (Hypergryph)», credit «المصدر: هايبرغريف (Hypergryph)», caption and X; غ for G as in فيوز غيمز) |
 | Fireshine Games (publisher, UK) | فايرشاين غيمز | Proposed 15 Nov 2026 (caption and X «فايرشاين غيمز (Fireshine Games)»; DeepL left it in Latin) |
+
+### Added 15 Nov 2026 (Littlelands Early Access Reel)
+| Latin | Arabic | Status |
+|---|---|---|
+| Apogee Entertainment (Littlelands publisher, US) | أبوجي إنترتينمنت | Proposed 15 Nov 2026 (caption «شركة أبوجي إنترتينمنت (Apogee Entertainment)»; Reel credit «المصدر: أبوجي إنترتينمنت (Apogee)»; DeepL left it in Latin) |
+| Rafael Martín (Littlelands co-developer) | رافائيل مارتين | Proposed 15 Nov 2026 (caption only, role word «المطورَين»; DeepL's spelling) |
+| Kyle Creamer (Littlelands co-developer) | كايل كريمر | Proposed 15 Nov 2026 (caption only; DeepL's spelling) |
+| cozy (game genre) | هادئة (مغامرة هادئة) | Proposed 15 Nov 2026 (DeepL gave دافئة; هادئة kept as the plainer word) |
