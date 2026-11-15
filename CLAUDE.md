@@ -3651,3 +3651,28 @@ Case: 7 of 17 footage news Reels on 10 and 11 Nov had no trailer track, and the 
    تقرير. DENIED is listed, never built.
 4. Production 2 builds a source_confirmed lead without searching; its text still matches the named source.
 5. Items with no verdict lines pass through as today. Measure: source_confirmed per day on the work order.
+
+## One render per Reel: server checks (adv-20261115-one-render-server-checks, Mohammad 15 Nov 2026; release 2026-11-15 r1)
+
+Case: Trafficity, POPUCOM, Duck Side of the Moon, Dreamlight Valley and Ranger's Path each rendered three times on
+15 Nov (05:40Z to 07:30Z), qc pass every time; Production 2 hit its 5-hour limit at 07:46Z. Mohammad: "if the server
+can do it, focus on that so the director does not check multiple times, especially for repeated things."
+A. No story line enters before the headline band clears (the head layer fades out from 3.30 s): the text check
+   (`textrules.head_overlap`) refuses it and names the earliest start and how much longer the shots before it must be.
+B. Shot times are read on the server's own copy (`templates/shotgate.py`, run by render_job before anything is built
+   and in prerender's check): a shot may not start before the picture (the video's start_time), cross a scene cut, or
+   sit on a letterbox; each refusal names the nearest clean start. The prerender `shots` read gives the picture start,
+   cuts and letterboxed scenes, and t0make writes shot times from it (and lets line 1 wait for the headline).
+C. The subject (YOLO, start, middle, end) may not leave the 9:16 window during a shot, nor be cut by its edge from the
+   first frame; the refusal gives the longest safe length. Waivers after looking: cut_ok, letterbox_ok, drift_ok.
+D. A -gfx- card on footage takes the calmest window of its named stretch (ground_footage [file, start] or [file, start,
+   span], default 12 s) and the render prints it; "ground_seek": "fixed" keeps the seek as written.
+E. Director: with qc pass it looks once at the look frames (now for every Reel) and passes, or sends the Reel back once
+   for wrong_subject, graphic, unreadable_text or factual_error (`presubmit.py director ... FIX --reason`), written to the
+   Reel's qc.json under director_sendbacks and to the story file. A second send-back is refused; `qc.py rerender` in
+   render-live refuses a third render (or any render after a PASS) unless the job names "rerender": {"reason", "note"}.
+F. `ops/sendbacks.py` counts send-backs by reason over 7 days (Tuesday audit); a reason seen three times goes on a card
+   as a candidate server check.
+Spoken: every job with lines carries "spoken", the story as one paragraph of 2 to 3 Arabic sentences; the gate refuses a
+job without it and the text check confirms the lines, in order, are that paragraph (a word may be left out, none added).
+

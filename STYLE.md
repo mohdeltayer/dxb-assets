@@ -811,3 +811,13 @@ render-times.json). H (server QC verdict) and I (parallel runners) follow as the
 1. The work order lists the scout's leads checked on the server: source_confirmed (build, no search), source_unreadable
    (open it or build as تقرير), mismatch (fix or تقرير), denied (never).
 2. Label never stronger than the scout's; رسمي only when confirmed on a company page.
+
+## One render per Reel: server checks (adv-20261115-one-render-server-checks, 15 Nov 2026)
+1. "spoken": the story as one paragraph of 2 to 3 Arabic sentences; the lines, in order, are that paragraph.
+2. No story line enters before 3.30 s (the headline fades out from there; showcase and persist exempt).
+3. Shots are timed on the server's copy: none before the picture, none across a scene cut, none letterboxed; the
+   subject stays inside the 9:16 window and is not cut by its edge. Waivers after looking: cut_ok, letterbox_ok, drift_ok.
+4. A card on footage takes the calmest stretch of its ground_footage ("ground_seek": "fixed" to keep the seek).
+5. Director: with qc pass, one look at the look frames; PASS, or one send-back for wrong_subject, graphic,
+   unreadable_text or factual_error. No third render unless the job names "rerender". Weekly count, card at three.
+
