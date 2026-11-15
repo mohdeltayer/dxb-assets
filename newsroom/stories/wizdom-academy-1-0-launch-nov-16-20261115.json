@@ -1,11 +1,152 @@
 {
  "id": "wizdom-academy-1-0-launch-nov-16-20261115",
  "title": "Wizdom Academy leaves Early Access: 1.0 on Steam on 16 Nov 2026 (Kipwak Studio, with Lake On Fire)",
- "status": "claimed: building for the 12:15 Dubai Mon 16 Nov slot (08:15Z); not scheduled",
+ "status": "building for the 12:15 Dubai Mon 16 Nov slot (08:15Z); not scheduled, no director run (stop point)",
  "lane": "digital-lounge",
  "game": "Wizdom Academy",
- "companies": ["Kipwak Studio", "Lake On Fire"],
+ "companies": [
+  "Kipwak Studio",
+  "Lake On Fire"
+ ],
  "subject_person": null,
  "claimed_at": "2026-11-15T11:00:00Z",
- "slot": "12:15 Dubai Mon 16 Nov 2026 (08:15Z)"
+ "slot": "12:15 Dubai Mon 16 Nov 2026 (08:15Z)",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Kipwak Studio & Lake On Fire Team, Steam community announcement 'Wizdom Academy 1.0 launch trailer is here!', 12 Nov 2026 17:27Z: 'After three years of development, including 18 months in Early Access, Wizdom Academy is finally graduating on November 16, 2026!'; 'Build and customize your very own magical academy, recruit students and teachers, manage your resources, and guide generations of aspiring wizards'; 'uncover the secrets hidden beyond your academy walls'; 'unique enchantments to choose from in each playthrough'. No launch hour given. Read in full 15 Nov ~10:50Z (Steam news API)",
+   "url": "https://store.steampowered.com/news/app/2668000"
+  },
+  {
+   "role": "primary",
+   "name": "Steam store page, Wizdom Academy (app 2668000), read 15 Nov ~10:50Z: Early Access since 17 Apr 2025; developers Kipwak Studio and Lake On Fire, publisher Kipwak Studio; Windows only; 59.99 AED in the UAE store (Early Access price, not used on screen: it may change at 1.0); no Arabic among the supported languages; reviews 70% positive of 309 overall, 94% of 69 in the last 30 days (not used); one movie, '1.0 Launch Trailer' (93 s, 1920x1080, end slate 'NOVEMBER 16')",
+   "url": "https://store.steampowered.com/app/2668000/Wizdom_Academy/"
+  },
+  {
+   "role": "secondary",
+   "name": "Steam community announcements of 2 Nov ('Only 2 weeks left until Wizdom Academy 1.0', 25+ updates since April 2025) and 10 Nov ('In just 6 days, Wizdom Academy will officially leave Early Access'); ScreenRant/OpenCritic 11 to 12 Nov ('Officially Launches November 16'); 인디게임닷컴 13 Nov ('Hits 1.0 on November 16 ... after 18 months')"
+  }
+ ],
+ "first_report": "The 16 Nov 1.0 date was announced by the developers on Steam by 2 Nov 2026 ('Only 2 weeks left', 18:30Z) and repeated on 10 and 12 Nov. The news at the slot is the launch itself, on the slot's own Dubai day (Mon 16 Nov), like the Littlelands Early Access Reel of 07:15. No Arabic outlet found carrying it (digests, Arabic feeds and Google News of 15 Nov).",
+ "source_type": "primary",
+ "ledger_find": {
+  "at": "2026-11-15T11:05:00Z",
+  "words": [
+   "wizdom",
+   "kipwak",
+   "lake on fire"
+  ],
+  "hits": [],
+  "note": "git grep -il over newsroom/stories on origin/main: only this story's own claim stub"
+ },
+ "genre": [
+  "strategy/sim",
+  "indie"
+ ],
+ "kind": "launch",
+ "kind_news": "launch",
+ "label": "جديد",
+ "chip": "جديد",
+ "template": "split",
+ "template_note": "formats.pick('launch', footage=True) gives trailer, but Monday Dubai already has four trailers by hand (Trafficity 03:15, Littlelands 07:15, TEKKEN 08:15, Moonlight Peaks 11:15, the last from its prerender job), so the day cap of 4 moves this to split (the kind's second choice). formats.py check split 2026-11-16T08:15: ok. Neighbours by hand: 10:15 UFC 6 split, 11:15 Moonlight Peaks trailer, 12:15 split: no third in a row; Monday splits POPUCOM 05:15, UFC 6 10:15, this = 3. Not card-led. Publishers Bandai Namco, Aspyr, EA, XSEED all differ from Kipwak",
+ "beat": "release",
+ "family": "release (beat sheet 7), recipe 2 (trailer drop) for the opening",
+ "recipe": "0-3.3 s the academy castle on its island, then the autumn map, under chip and headline (cover: the castle); 3.3-6.3 the headmaster at his desk, the classroom with students and the blue magic burst, the garden (line 1: you run a magic academy); 6.3-9.6 walls rising around a garden plot, then the whole academy from above (line 2: floor by floor); 9.6-12.3 the world outside, flying creatures over the forest (line 3: the secrets around it); the strip (release 16 Nov · Steam · Arabic not supported) pinned low once the headline leaves; end card",
+ "focus_by_second": "0.0-3.3 headline over the castle and the autumn map · 3.3-6.4 line 1 on the office and the class · 6.4-9.8 line 2 on the walls and the academy from above · 9.8-12.4 line 3 on the world outside, picture alone in the last 2 s with the line still up",
+ "sensitive": "none beyond fantasy magic (a wizard school, like Hogwarts Legacy coverage); no romance, no violence on screen. The office shot is cut before the suits of armour beside the desk come into view",
+ "footage": "official 1.0 Launch Trailer from the Steam store (app 2668000, 'trailer': '1.0 Launch'), 1920x1080 30 fps, decode clean on the prerender; eight shots from the shots-mode clean stretches (prerender run 43706403939), three of them with focus moved right to keep the trailer's bottom-left captions out of the window",
+ "spoken": "تصدر Wizdom Academy بنسختها الكاملة اليوم. تدير فيها أكاديمية للسحر، وتبنيها طابقًا بعد طابق، وتكشف أسرار العالم من حولها.",
+ "claims": [
+  {
+   "claim": "1.0 (full release, leaves Early Access) on 16 Nov 2026 on Steam",
+   "status": "confirmed (developers' Steam announcement, 12 Nov; store page)"
+  },
+  {
+   "claim": "three years of development, 18 months in Early Access",
+   "status": "confirmed (developers' announcement, their words)"
+  },
+  {
+   "claim": "you are the headmaster of a magic academy, build it floor by floor, decide what is taught in every room, recruit students and teachers",
+   "status": "confirmed (store short description and the trailer's narration)"
+  },
+  {
+   "claim": "uncover the secrets beyond the academy walls; maps, challenges, unique enchantments per playthrough",
+   "status": "confirmed (developers' announcement)"
+  },
+  {
+   "claim": "developers Kipwak Studio and Lake On Fire; publisher Kipwak Studio; Windows",
+   "status": "confirmed (store page)"
+  },
+  {
+   "claim": "no Arabic language support",
+   "status": "confirmed (store page language list)"
+  },
+  {
+   "claim": "launch hour",
+   "status": "not stated; texts say the date only, never 'out now'"
+  },
+  {
+   "claim": "1.0 price",
+   "status": "not stated; the store shows the Early Access price (59.99 AED); not used on screen or in the texts"
+  }
+ ],
+ "angle": {
+  "hook": "a wizard school you run yourself, built floor by floor",
+  "why_now": "the full 1.0 release lands today, Monday 16 November 2026, after 18 months in Early Access",
+  "what_it_means_here": "PC players in the region can buy it on Steam (UAE store prices in AED); no Arabic interface",
+  "payoff": "the world beyond the academy walls, the forest and the flying creatures"
+ },
+ "texts": {
+  "x": "تصدر اليوم النسخة الكاملة من Wizdom Academy على Steam، بعد عام ونصف في الوصول المبكر، حسب إعلان استوديو كيبواك (Kipwak Studio).",
+  "threads": "تصدر اليوم النسخة الكاملة من Wizdom Academy على Steam، بعد عام ونصف في الوصول المبكر، حسب إعلان استوديو كيبواك (Kipwak Studio).\n\nالمصدر: إعلان الاستوديو على Steam",
+  "instagram": "تصدر Wizdom Academy اليوم بعد عام ونصف من الوصول المبكر\n\nأعلن استوديو كيبواك (Kipwak Studio) أن النسخة الكاملة من لعبة الإدارة Wizdom Academy تصدر في 16 نوفمبر على الحاسب عبر Steam، بعد ثلاث سنوات من التطوير منها 18 شهرًا في الوصول المبكر. وطوّر الاستوديو اللعبة مع استوديو لايك أون فاير (Lake On Fire).\n\nتؤدي في اللعبة دور مدير أكاديمية للسحر، فتبنيها طابقًا بعد طابق، وتستقبل الطلاب والمعلمين، وتدير مواردها، وتُعدّ طلابها ليصبحوا سحرة، ثم تكشف الأسرار المخفية خارج أسوارها. وتضم النسخة الكاملة خرائط وتحديات متنوعة، وتعاويذ تختار منها في كل جولة، حسب الاستوديو.\n\nولم يعلن الاستوديو ساعة الإصدار ولا سعر النسخة الكاملة، ولا تدعم اللعبة اللغة العربية حسب صفحتها على المتجر.\n\n#ألعاب #أخبار_الألعاب #WizdomAcademy #Steam",
+  "ig_comment": "المصدر: إعلان استوديو كيبواك (Kipwak Studio) على Steam",
+  "x_reply": "المصدر: https://store.steampowered.com/news/app/2668000"
+ },
+ "on_screen": {
+  "headline": "تصدر Wizdom Academy\nبنسختها الكاملة اليوم",
+  "lines": [
+   "تدير فيها أكاديمية للسحر",
+   "وتبنيها طابقًا بعد طابق",
+   "وتكشف أسرار العالم من حولها"
+  ],
+  "strip": [
+   "الإصدار: 16 نوفمبر",
+   "المتجر: Steam",
+   "العربية: غير مدعومة"
+  ],
+  "credit": "المصدر: استوديو كيبواك (Kipwak Studio)"
+ },
+ "job": "jobs/live/wizdom-academy-1-0-launch-nov-16.json",
+ "regate": "RE-GATE within the hour before 12:15 Dubai (Mon): re-read the Steam store page and announcements for the 1.0 date, a delay or a launch hour; if the store shows the game released before the post, 'تصدر اليوم' stays correct (date only); a delay stops the post",
+ "arabic_review": {
+  "skills": "arabic-games-film-editor, arabic-writing and arabic-grammar-review loaded fresh 15 Nov ~11:10Z; house glossary (release verbs, Early Access row, game names feminine), names-ar, orthography.md and the review stage's known-issues.md opened",
+  "grammar_review": {
+   "required_edits": [],
+   "optional_style_suggestions": [
+    {
+     "original": "لعبة الإدارة",
+     "suggestion": "لعبة المحاكاة والإدارة",
+     "reason": "the store calls it a 'builder management sim'; the shorter form kept"
+    }
+   ],
+   "uncertain_cases": [
+    {
+     "text": "تدير فيها أكاديمية للسحر",
+     "issue": "read alone, تدير can be 'she runs' (DeepL's back-check)",
+     "why_uncertain": "in the paragraph the subject is the reader, as in the Littlelands lines",
+     "options": [
+      "keep",
+      "تدير أنت فيها أكاديمية للسحر"
+     ]
+    }
+   ]
+  },
+  "deepl_forward": "whole story to Arabic in one piece (15 Nov ~11:00Z) plus probes: launch تُطلق (house تصدر kept); 'floor by floor' طابقًا تلو الآخر (ours طابقًا بعد طابق, both natural); 'what is taught in every room' ما يتم تدريسه في كل فصل (not used on screen); 'unique enchantments' تعاويذ فريدة (ours تعاويذ تختار منها في كل جولة); 'graduates from Early Access' came back as a literal الخريجون, not used. DeepL left Kipwak Studio and Lake On Fire in Latin; ours carry the Arabic first",
+  "deepl_backcheck": "all final texts to English (15 Nov ~11:15Z): headline 'Wizdom Academy is launching its full version today'; lines 'runs a school of magic there', 'build it floor by floor', 'reveals the secrets of the world around it' (subject the reader in context; the whole spoken paragraph came back as 'you run a school of magic, build it floor by floor, and uncover the secrets of the world around you'); strip, credit, X and caption matched; 'ساعة الإصدار' came back as 'release date' in the caption, kept (it means the hour; the date is in the same caption)"
+ },
+ "names_ar_rows": [
+  "Kipwak Studio: كيبواك (استوديو كيبواك (Kipwak Studio) at first mention)",
+  "Lake On Fire: لايك أون فاير"
+ ]
 }

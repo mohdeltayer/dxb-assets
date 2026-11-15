@@ -1,0 +1,258 @@
+{
+ "name": "wizdom-academy-1-0-launch-nov-16",
+ "story": "wizdom-academy-1-0-launch-nov-16-20261115",
+ "kind_news": "launch",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/wizdom-academy-1-0-launch-nov-16-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "wizdom-academy-1-0-launch-nov-16-trailer.mp4",
+   "steam": 2668000,
+   "trailer": "1.0 Launch",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [
+  [
+   "wizdom-academy-1-0-launch-nov-16-trailer.mp4",
+   44.45,
+   1.6,
+   0.8
+  ],
+  [
+   "wizdom-academy-1-0-launch-nov-16-trailer.mp4",
+   46.35,
+   2.1,
+   0.616
+  ],
+  [
+   "wizdom-academy-1-0-launch-nov-16-trailer.mp4",
+   23.55,
+   1.15,
+   0.551
+  ],
+  [
+   "wizdom-academy-1-0-launch-nov-16-trailer.mp4",
+   9.8,
+   2.3,
+   0.356
+  ],
+  [
+   "wizdom-academy-1-0-launch-nov-16-trailer.mp4",
+   54.5,
+   2.3,
+   0.75
+  ],
+  [
+   "wizdom-academy-1-0-launch-nov-16-trailer.mp4",
+   25.3,
+   1.75,
+   0.98
+  ],
+  [
+   "wizdom-academy-1-0-launch-nov-16-trailer.mp4",
+   14.4,
+   1.6,
+   0.485
+  ],
+  [
+   "wizdom-academy-1-0-launch-nov-16-trailer.mp4",
+   83.68,
+   2.7,
+   0.912
+  ]
+ ],
+ "lines": [
+  [
+   2,
+   4,
+   [
+    "تدير فيها أكاديمية للسحر"
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    "وتبنيها طابقًا بعد طابق"
+   ]
+  ],
+  [
+   7,
+   7,
+   [
+    "وتكشف أسرار العالم من حولها"
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   7,
+   "المصدر: استوديو كيبواك (Kipwak Studio)",
+   {
+    "size": 40,
+    "band": true,
+    "from_start": true
+   }
+  ]
+ ],
+ "headline": "تصدر Wizdom Academy\nبنسختها الكاملة اليوم",
+ "label": "جديد",
+ "source": "استوديو كيبواك (Kipwak Studio)",
+ "date": "16 Nov 2026",
+ "theme": "stylized",
+ "style": null,
+ "template": "split",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "wizdom-academy-1-0-launch-nov-16-trailer.mp4",
+  60.0
+ ],
+ "music_only": true,
+ "spoken": "تصدر Wizdom Academy بنسختها الكاملة اليوم. تدير فيها أكاديمية للسحر، وتبنيها طابقًا بعد طابق، وتكشف أسرار العالم من حولها.",
+ "subject_person": null,
+ "reel_check": {
+  "Primary read in full; time and first report noted": {
+   "answer": "yes",
+   "evidence": "developers' Steam announcement of 12 Nov 17:27Z read in full via the Steam news API ('finally graduating on November 16, 2026', 'three years of development, including 18 months in Early Access'); store page read 15 Nov ~10:50Z; date first announced by 2 Nov"
+  },
+  "Not already posted (ledger find, Publer last 7 days)": {
+   "answer": "yes",
+   "evidence": "git grep wizdom/kipwak/lake on fire over newsroom/stories on origin/main: no story but this claim"
+  },
+  "Older than 24 h at first report and nothing new: dropped": {
+   "answer": "n/a",
+   "evidence": "a dated launch: the news is the 1.0 release on the slot's own day, 16 Nov"
+  },
+  "Angle before lines (hook, why now, what it means here, payoff)": {
+   "answer": "yes",
+   "evidence": "story file angle: a wizard school you run; 1.0 today after 18 months; PC on Steam, no Arabic; payoff the world beyond the walls"
+  },
+  "Story type items (OUT NOW: platforms, AED price where listed, what it is)": {
+   "answer": "yes",
+   "evidence": "split strip: الإصدار 16 نوفمبر · المتجر Steam · العربية غير مدعومة (store language list); the 1.0 price is not listed (the store shows the Early Access price), said in the caption; what it is: a management game where you run a magic academy"
+  },
+  "One spoken paragraph first, cut into beats": {
+   "answer": "yes",
+   "evidence": "spoken: headline + 3 lines read in order are the paragraph"
+  },
+  "Subject named before any pronoun; no line opens on و unless it continues the line before": {
+   "answer": "yes",
+   "evidence": "Wizdom Academy named in the headline before فيها; lines 2 and 3 open on و and run straight on from the line before (back to back)"
+  },
+  "Release verbs": {
+   "answer": "yes",
+   "evidence": "تصدر اليوم (date only; launch hour not stated, never متوفرة الآن)"
+  },
+  "Names match names-ar; new names added": {
+   "answer": "yes",
+   "evidence": "كيبواك (Kipwak Studio), لايك أون فاير (Lake On Fire): rows added to names-ar"
+  },
+  "Headline: what happened, names the reader knows": {
+   "answer": "yes",
+   "evidence": "تصدر اليوم Wizdom Academy / بنسختها الكاملة"
+  },
+  "Lines open the story, not repeat the headline": {
+   "answer": "yes",
+   "evidence": "lines say what you do: run the academy, build it, explore beyond it"
+  },
+  "Caption first line carries the news, source named, release verbs": {
+   "answer": "yes",
+   "evidence": "تصدر Wizdom Academy اليوم بعد عام ونصف من الوصول المبكر; source: the studio's Steam announcement"
+  },
+  "X and Threads: one or two sentences, source named": {
+   "answer": "yes",
+   "evidence": "حسب إعلان استوديو كيبواك (Kipwak Studio)"
+  },
+  "Pinned comment: the source": {
+   "answer": "yes",
+   "evidence": "المصدر: إعلان استوديو كيبواك (Kipwak Studio) على Steam"
+  },
+  "Urgency: chip honest": {
+   "answer": "yes",
+   "evidence": "جديد; not عاجل, not رسمي (a dated launch)"
+  },
+  "Tone neutral": {
+   "answer": "yes",
+   "evidence": "factual, no praise; review score not used"
+  },
+  "Footage keeps its own sound; music named": {
+   "answer": "yes",
+   "evidence": "the 1.0 Launch Trailer's own music stem from 60.0 s, music_only (narration in the trailer is 19.5-44.1 s only, outside the stretch); faster-whisper over the whole trailer: no words after 44.1 s"
+  },
+  "No speech under Arabic lines": {
+   "answer": "yes",
+   "evidence": "music_only strips any voice; the stretch 60-73 s has no speech"
+  },
+  "Separated stems last resort": {
+   "answer": "yes",
+   "evidence": "music_only chosen so effects from other moments never sit under these shots (shots come from five moments of the trailer); the job fails if the music stem is not clean"
+  },
+  "Our effects only on our graphics": {
+   "answer": "yes",
+   "evidence": "no cards; no effects added"
+  },
+  "Footage first": {
+   "answer": "yes",
+   "evidence": "the official 1.0 Launch Trailer, 1920x1080, decode clean on the prerender"
+  },
+  "Every Reel shows the game": {
+   "answer": "yes",
+   "evidence": "all 8 shots in-game footage"
+  },
+  "Not the same picture as the last 5 Reels": {
+   "answer": "yes",
+   "evidence": "a wizard-school builder; neighbours fighting (TEKKEN), a remaster (Shrek 2), MMA (UFC 6), a vampire life sim (Moonlight Peaks)"
+  },
+  "One visual requirement per beat; shot shows its line": {
+   "answer": "yes",
+   "evidence": "line 1 (you run a magic academy): the headmaster at his desk, a class of students with a blue magic burst, the garden; line 2 (you build it floor by floor): walls around a plot, then the academy from above; line 3 (the secrets around it): the forest world outside with flying creatures"
+  },
+  "Crop judged per beat": {
+   "answer": "yes",
+   "evidence": "focus from the shots mode, moved right on the castle (0.8), the garden (0.75) and the walls (0.98) to keep the trailer's bottom-left captions (REWORKED MAPS, DECORATE & CUSTOMIZE) and the TRIALS GROUND label out of the window; 4 fps crops looked at on a local copy"
+  },
+  "Headline in the band, not over the subject": {
+   "answer": "yes",
+   "evidence": "headline in the top band over sky and rooftops; the castle sits mid-frame"
+  },
+  "Text moves only on entry and exit": {
+   "answer": "yes",
+   "evidence": "trailer footage, no stills"
+  },
+  "Credit on every clip for its whole duration": {
+   "answer": "yes",
+   "evidence": "credit [0,7] المصدر: استوديو كيبواك (Kipwak Studio), from frame 0 to the end card; Kipwak is publisher and co-developer (Lake On Fire named in the caption)"
+  },
+  "Lifeless score below threshold": {
+   "answer": "yes",
+   "evidence": "shots from the server's clean stretches, all moving"
+  },
+  "Checks: what am I seeing, hearing, why this cut": {
+   "answer": "yes",
+   "evidence": "director to read the strip; trailer music under every shot"
+  },
+  "Decision log complete": {
+   "answer": "yes",
+   "evidence": "story file recipe and footage fields; rejected: the opening tower courtyard (text), the floors overhead (HUD and FLOOR label cut at the edge), the rewind-icon stretch, UI menus, the red rune circle, the end slate"
+  }
+ },
+ "strip": [
+  [
+   "الإصدار",
+   "16 نوفمبر"
+  ],
+  [
+   "المتجر",
+   "Steam"
+  ],
+  [
+   "العربية",
+   "غير مدعومة"
+  ]
+ ]
+}

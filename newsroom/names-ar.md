@@ -356,3 +356,10 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | Little Chicken Game Company (Moonlight Peaks developer, Netherlands) | ليتل تشيكن | Proposed 15 Nov 2026 (caption «استوديو ليتل تشيكن (Little Chicken Game Company)»; Reel credit «ليتل تشيكن (Little Chicken)») |
 | vampire | مصاص دماء | Proposed 15 Nov 2026 (term; the game's premise, stated neutrally) |
 | life sim | لعبة محاكاة الحياة | Proposed 15 Nov 2026 (term; DeepL gave the same) |
+
+### Added 15 Nov 2026 (Wizdom Academy 1.0 Reel)
+| Latin | Arabic | Status |
+|---|---|---|
+| Kipwak Studio (Wizdom Academy developer and publisher) | كيبواك | Proposed 15 Nov 2026 (credit and caption «استوديو كيبواك (Kipwak Studio)», «الاستوديو» after; DeepL left it in Latin) |
+| Lake On Fire (Wizdom Academy co-developer) | لايك أون فاير | Proposed 15 Nov 2026 (caption only, «استوديو لايك أون فاير (Lake On Fire)») |
+| management game | لعبة الإدارة | Proposed 15 Nov 2026 (term; the store's 'builder management sim'; «لعبة المحاكاة والإدارة» the longer option) |
