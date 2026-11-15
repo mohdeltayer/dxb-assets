@@ -18,23 +18,23 @@
  ],
  "shots": [
   [
-   "minecraft-first-2027-drop-throwing-disc-offhand-20261115-x.jpg",
-   null,
-   3.9,
-   [
-    0.9,
-    0.97
-   ]
-  ],
-  [
    "minecraft-first-2027-drop-throwing-disc-offhand-20261115-sw2.mp4",
    12.2,
-   4.0,
+   3.8,
    [
     [
      0.0,
      0.78
     ]
+   ]
+  ],
+  [
+   "minecraft-first-2027-drop-throwing-disc-offhand-20261115-x.jpg",
+   null,
+   4.0,
+   [
+    0.9,
+    0.97
    ]
   ],
   [
@@ -160,19 +160,19 @@
  },
  "decision_log": [
   {
-   "beat": "0 hook (headline)",
+   "beat": "0 hook (headline): stand-in Steve in the world, moving",
+   "shot": "stand-in: Switch 2 launch trailer 12.2 s, Steve by a tree with flowers and a pig (the cover; render_job refuses the X image as cover: pixel art reads 76% flat)",
+   "crop": "focus 0.78, 1.33x from 1440p",
+   "music": "our bed",
+   "evidence_role": "illustration (credited as earlier trailer footage)"
+  },
+  {
+   "beat": "1 the disc itself, when and who",
    "shot": "@Minecraft X image 2578x2578: the player holding the diamond throwing disc at sunset, window x 1015 to 2465 of the source (the sword and its hand at x 880 to 990 left out; a zombie stands far right on the dirt ledge, not attacking)",
    "alternatives": "minecraft.net disc01 (720p, 2.67x: rejected); disc02 (mobs knocked down: rejected)",
    "crop": "9:16 at 0.74x (downscaled), slow pan focus 0.90 to 0.97",
    "music": "our bed",
    "evidence_role": "demonstration"
-  },
-  {
-   "beat": "1 when and who",
-   "shot": "stand-in: Switch 2 launch trailer 12.2 s, Steve by a tree with flowers and a pig",
-   "crop": "focus 0.78, 1.33x from 1440p",
-   "music": "our bed",
-   "evidence_role": "illustration (credited as earlier trailer footage)"
   },
   {
    "beat": "2 five materials",
@@ -221,7 +221,8 @@
   "CREDIT: on every clip": "yes: one credit over shots 0 to 5 from frame 0, size 40 in the credit band: «المصدر: موجانغ (Mojang) ولقطات من عرض دعائي سابق»",
   "PICTURE: pace": "yes: six shots of 3.0 to 3.9 s with hard cuts, one line per footage shot, the card alone",
   "PICTURE: not the same image twice": "yes: the X image once (hook), five different stand-in moments, the card; close differs from the hook",
-  "STORY: claims match the primary": "yes: Bedrock line says any item in either hand, as Java since 2016 (article: 'hold items in either hand', 'grab a pickaxe with either hand'); no «أخيرًا»"
+  "STORY: claims match the primary": "yes: Bedrock line says any item in either hand, as Java since 2016 (article: 'hold items in either hand', 'grab a pickaxe with either hand'); no «أخيرًا»",
+  "PICTURE: cover": "first frame is moving trailer footage of Steve (the X image is 76% flat to the cover check); headline above him in the band"
  },
  "gfx": [
   {
