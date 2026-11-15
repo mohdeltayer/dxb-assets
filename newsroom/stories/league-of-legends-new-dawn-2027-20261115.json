@@ -1,7 +1,7 @@
 {
  "id": "league-of-legends-new-dawn-2027-20261115",
  "title": "League of Legends: New Dawn, Riot's all-encompassing overhaul revealed at the Worlds 2026 final, coming in 2027, full reveal January",
- "status": "built, QC pass, NOT scheduled (director and Publer pending): Reel cards/2026-11/league-of-legends-new-dawn-2027-reel-v4.mp4 for 19:15 Dubai Sun 15 Nov (15:15Z), Instagram, X, Threads; job_sha 559f41e5497607a5aebfd660ccad3b56ddf2275b, dispatches 5 (v1 pace stop, v1 to v4 renders); our bed neon (bed_reason in the job). RE-GATE within the hour before 19:15 Dubai (Sun)",
+ "status": "scheduled in Publer 15:15Z Sun 15 Nov (19:15 Dubai), ig/x/threads 3/3 (ids ig:70fc84 x:70fcb1 th:18c99e), director PASS v4 (director-2026-11-15-claude-sonnet; builder production-2); our bed neon; RE-GATE within the hour before 19:15 Dubai still due (14:15Z to 15:15Z)",
  "lane": "digital-lounge",
  "game": "League of Legends",
  "companies": [
@@ -157,5 +157,33 @@
   "speech": "none (our bed)",
   "sensitive": "none",
   "picture_checks": "every shot viewed at 4 fps as the 9:16 crop: no blood, no gripped or aimed weapon (melee minions 105.15 to 106.2 and beam-firing champions 102.35 to 103.75 and 107.9 to 109 left out), no title card, slate, logo or rating card (end slate 109.96 on not used), white flashes 97.4 and 99.6 to 100.0 avoided, black 94.46 avoided; no burnt-in text in the cinematic and gameplay used; Paul's lower third (0 to 4 s) not used"
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/league-of-legends-new-dawn-2027-reel-v4.mp4",
+  "blob": "3179f2e50809ebb3c196787249060629b81ad82c",
+  "at": "2026-11-15T00:56:23Z",
+  "note": "dup check: not a duplicate (esports roadmap 14 Nov is different news). Speech none (our bed accepted: speech 0-41.6 s, narration 58.6-96.4 s, free stretches 14 s). Frames 2 fps plus 4 fps on gameplay shots: nothing graphic, no cut edge text, credit frame 0 to end card. Quotes checked against Riot video (own faster-whisper), end slate read, IGN for role. DeepL back-check ok.",
+  "checklist": {
+   "job": "jobs/live/league-of-legends-new-dawn-2027.json",
+   "sha256": "7470441430db99a371f88a947983673d9f3df923f271c8586d21eff6d7a0ce55",
+   "ok": true,
+   "problems": [],
+   "template": "quote",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-2026-11-15-claude-sonnet",
+  "qc": "pass",
+  "looked": "look frames: Lux cover with Bellezza box and headline; story-line gameplay; January card on dimmed footage"
+ },
+ "gate": "gate 00:56Z: read X post 2121724627667824796 (14 Nov 21:59Z, no edits shown, 2.9M views), IGN (executive producer, January) and Insider Gaming (full reveal January 2027); fetched the official video from the X post and transcribed it (quotes 'next year, we're releasing a modernized client. But a client isn't enough' at 28.1 to 32.6 s, 'visually revamping Summoner's Rift, evolving its gameplay' by Andrei Meddler van Roon at 32.6 to 38.2 s); end slate 'COMING 2027 / FULL REVEAL IN JANUARY' read; leagueoflegends.com/en-us/new-dawn/ says only 'Subscribe for updates on the new dawn' (no date, no role); no denial found; duplicate check: LoL esports roadmap (14 Nov 21:15 Dubai, Nagoya photo Reel) is a different story, nothing New Dawn scheduled or published",
+ "director": {
+  "by": "director-2026-11-15-claude-sonnet",
+  "verdict": "PASS",
+  "at": "2026-11-15T00:58Z",
+  "notes": "role 'المنتج التنفيذي' rests on IGN; spelling بيليزا vs بيليتسا is Mohammad's call; 'مشغّل' for client is a proposed term; Worlds is glossed in the caption, not on screen; New Dawn name is not on the Reel, only in text"
+ },
+ "scheduled": "scheduled in Publer 15:15Z Sun 15 Nov, ig:70fc84 x:70fcb1 th:18c99e, labels kind:news tpl:quote skin:house sound:our bed genre:live service/MMO; commitment league-of-legends-new-dawn-2027-20261115-1515z"
 }
