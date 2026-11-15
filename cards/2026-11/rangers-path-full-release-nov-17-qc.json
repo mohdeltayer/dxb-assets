@@ -1,0 +1,25 @@
+{
+ "name": "rangers-path-full-release-nov-17",
+ "out": "cards/2026-11/rangers-path-full-release-nov-17-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-15T05:12:59Z",
+ "findings": [],
+ "notes": [
+  "length 22.3 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 99.9; leak_pct 0.1; cache {'hit': 0, 'miss': 4}; separate_secs 13.1; secs 18.9",
+  "render_job: lifeless: {\"score\": 2.5, \"still_share\": 0.018, \"longest_still\": 0.4, \"cuts_per_10s\": 9.91, \"held_under_text\": 0.0, \"secs\": 22.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "8299bd2ca91dfe2a9d8827e8fdad15e74330375b",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "trailer"
+}
