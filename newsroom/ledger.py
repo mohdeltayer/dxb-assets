@@ -176,7 +176,7 @@ def find(words, record=None):
         txt = lambda v: v if isinstance(v, str) else json.dumps(v, ensure_ascii=False)   # game or notes may be dicts
         hay = ' '.join([s['id'], txt(s.get('title', '')), txt(s.get('game', '') or ''),
                         ' '.join(map(txt, notes)) if isinstance(notes, list) else txt(notes),
-                        ' '.join(p['folder'] for p in _posts(s))]).lower()
+                        ' '.join(txt(p.get('folder', '')) for p in _posts(s))]).lower()
         if all(w in hay for w in words):
             hits.append(s)
     for s in hits[-20:]:
