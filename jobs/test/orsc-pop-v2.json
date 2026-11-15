@@ -1,0 +1,254 @@
+{
+ "name": "orsc-pop-v2",
+ "story": "popucom-ps5-nov-17-20261115",
+ "kind_news": "date",
+ "built_by": "production-2",
+ "out": "cards/test/orsc-pop-v2-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "popucom-release-pv.mp4",
+   "steam": 2543180,
+   "trailer": "release PV",
+   "start": 0,
+   "seconds": 240
+  },
+  {
+   "file": "popucom-trailer.mp4",
+   "steam": 2543180,
+   "trailer": "Trailer",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [
+  [
+   "popucom-release-pv.mp4",
+   8.6,
+   3.3,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "popucom-trailer.mp4",
+   13.25,
+   1.1,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "popucom-trailer.mp4",
+   18.67,
+   1.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "popucom-trailer.mp4",
+   19.75,
+   1.1,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "popucom-trailer.mp4",
+   25.38,
+   2.05,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "popucom-trailer.mp4",
+   27.55,
+   0.95,
+   [
+    [
+     0.0,
+     0.45
+    ]
+   ]
+  ],
+  [
+   "popucom-trailer.mp4",
+   80.4,
+   1.95,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "popucom-release-pv.mp4",
+   39.1,
+   0.74,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "popucom-release-pv.mp4",
+   39.95,
+   1.97,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "popucom-release-pv.mp4",
+   66.36,
+   1.4,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "popucom-trailer.mp4",
+   84.65,
+   2.2,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "spoken": "لعبة POPUCOM تصل إلى PS5 يوم الثلاثاء 17 نوفمبر، وهي متوفرة على PC وNintendo Switch. من هايبرغريف (Hypergryph) مطوّر لعبة Arknights، مغامرة تلعبها مع أصدقائك، وتحلّ ألغازها بتبديل الألوان.",
+ "lines": [
+  [
+   1,
+   4,
+   [
+    "من هايبرغريف (Hypergryph)\nمطوّر لعبة Arknights"
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    "مغامرة تلعبها\nمع أصدقائك"
+   ]
+  ],
+  [
+   7,
+   8,
+   [
+    "تحلّ ألغازها\nبتبديل الألوان"
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   10,
+   "المصدر: هايبرغريف (Hypergryph)",
+   {
+    "size": 44,
+    "band": true,
+    "from_start": true
+   }
+  ]
+ ],
+ "headline": "لعبة POPUCOM\nتصل إلى PS5",
+ "label": "رسمي",
+ "source": "فايرشاين غيمز (Fireshine Games)",
+ "date": "16 Nov 2026",
+ "theme": "playful",
+ "style": "lines",
+ "template": "split",
+ "strip": [
+  [
+   "الموعد",
+   "الثلاثاء 17 نوفمبر"
+  ],
+  [
+   "متوفرة على",
+   "PC · Nintendo Switch"
+  ]
+ ],
+ "skin": "house",
+ "cut": true,
+ "track": [
+  "popucom-trailer.mp4",
+  23.8
+ ],
+ "music_only": true,
+ "subject_person": null,
+ "angle": {
+  "hook": "the co-op puzzle platformer from Hypergryph, the studio behind Arknights, reaches PS5 on Tuesday 17 Nov",
+  "why_now": "dated PS5 launch on Tue 17 Nov 2026, the day after the slot (announced 3 Nov with Fireshine Games' 'POPUCOM | PS5 Launch Date Trailer'); no Arabic outlet checked has carried it (git grep, digests)",
+  "what_it_means_here": "PS5 players in the region get a colourful co-op game for up to four players that was on PC and Nintendo Switch only; Steam price in the UAE in the caption",
+  "payoff": "the world's vehicles: the yellow submarine, the flying bus the heroes board, the balloon bus over the sea"
+ },
+ "story_type_items": {
+  "OUT NOW (release dated)": "platforms: PS5 on 17 Nov 2026 (Fireshine Games trailer title and Gematsu/Final Weapon reports of the announcement); already out on PC (Steam, Epic Games Store, 1 Jun 2025) and Nintendo Switch (4 Dec 2025, Gematsu); AED price: Steam store in the UAE (caption), PS5 price in the region not read, not stated; what it is: a co-op puzzle platformer for up to four players where colour switching solves puzzles (GRYPHLINE overview via Gematsu, Steam page)"
+ },
+ "sensitive": "none: E10+ cartoon game; shots chosen without characters aiming or firing their gel blasters at anyone (the pink-girl ball shot and the boss fights left out)",
+ "decision_log": [
+  "sources: two official Steam trailers of app 2543180 fetched as the server fetches them (ffmpeg -ss 0 on the HLS master, -c copy): 'release PV' (1920x1080 30 fps 5.4 Mbps, 95.0 s, video starts 3.02 s) and 'Trailer' (the 2023 announcement trailer, 1920x1080 30 fps 5.3 Mbps, 110.8 s). Scene cuts measured on that seek timeline; the PS5 Launch Date Trailer is on YouTube only (no yt-dlp)",
+  "0-3.3 headline over the fluffy blue birds under the orange tree (PV 8.6, after the GRYPHLINE slate, whose frozen stretch the prerender read to 8.41): moving, the game's colours, headline over the tree, birds below it",
+  "line 1 (studio) over the heroes: the orange-haired girl close (TR 13.25), skydiving (TR 18.67, ends before the cut at 19.68), past the yellow creature (TR 19.75), the blue hero landing and posing as the orange friend leaps in (TR 25.38): illustration (v1 prerender: «من استوديو هايبرغريف (Hypergryph)» ran out of the safe zone, so «استوديو» dropped)",
+  "line 2 (with friends) over the blue hero walking on with the orange friend (TR 27.55, ends before he raises his arm blaster) and the flying bus pulling in as the heroes run aboard (TR 80.40): co-op shown; v1's grass shot (players holding gel blasters under the bubble robot) dropped so no blaster is gripped on screen, and the heroes-among-the-gold shot rejected (one of the two is always half cut at a 9:16 edge)",
+  "line 3 (colour puzzles) over the colour-block puzzle machine (PV 39.1, 39.95): demonstration",
+  "after line 3 the picture breathes with the strip pinned (date; PC and Nintendo Switch): the yellow submarine (PV 66.36) and the balloon bus over the sea (TR 84.65); the last 2 s are the balloon bus, a picture",
+  "strip (split): الموعد · الثلاثاء 17 نوفمبر | متوفرة على · PC · Nintendo Switch; the headline carries PS5, the strip the date and the other platforms, the lines never repeat them",
+  "sound: the announcement trailer's own music from 23.80 s (seek timeline), music_only; faster-whisper small on both trailers hears no speech (only 'I'/'You' hallucinations at no_speech 0.3 to 0.74); RMS -14 to -17 dB steady from 8 to 96 s, so the music runs past the end card",
+  "credit: one entry 0 to 10 «المصدر: هايبرغريف (Hypergryph)», the developer whose logo opens the trailers"
+ ],
+ "reel_check": {
+  "1 primary read in full": "yes: Fireshine Games' 'POPUCOM | PS5 Launch Date Trailer' (YouTube oEmbed title and channel), Gematsu 3 Nov (full text), Final Weapon 3 Nov, Steam appdetails (developer, publishers, release 1 Jun 2025, co-op categories, colour-switch puzzle line)",
+  "1 not already posted": "yes: git grep popucom, hypergryph, gryphline over newsroom/stories: no hits",
+  "1 older than 24h": "dated launch: announced 3 Nov; the news is the PS5 launch on Tue 17 Nov, the day after the slot; no Arabic outlet has carried it",
+  "2 angle before lines": "yes: angle",
+  "3 story type items": "yes: story_type_items (platforms, PS5 price not listed so not stated, what it is)",
+  "4 one spoken paragraph": "yes: spoken, cut into the headline and four lines in order",
+  "4 subject named before pronoun, no line opens on و": "yes: the headline names the game; «ألغازها» refers to the adventure of the line before; no line opens on و",
+  "4 release verbs": "yes: تصل إلى + PS5 (coming to a platform), «متوفرة» for the platforms where it is out",
+  "4 names match names-ar": "yes: هايبرغريف (Hypergryph), فايرشاين غيمز (Fireshine Games) added as Proposed",
+  "5 headline": "yes: «لعبة POPUCOM تصل إلى PS5», names the game, opens on an Arabic word; the date on the strip; DeepL back-check below",
+  "5 caption": "yes: first five words «تصل POPUCOM إلى PS5 يوم» carry the game and the news word; ends #ألعاب #أخبار_الألعاب + 2",
+  "5 X and Threads": "yes: one sentence, source «حسب إعلان الناشر فايرشاين غيمز (Fireshine Games)», no hashtags",
+  "5 urgency": "yes: chip رسمي (the publisher's own trailer states the PS5 date)",
+  "6 sound": "yes: the announcement trailer's own music from 23.80 s, music_only",
+  "6 no narration under lines": "yes: faster-whisper hears no speech in either trailer",
+  "6 our effects only on graphics": "yes: none",
+  "7 footage first": "yes: two official Steam trailers, 1920x1080, 9:16 crop enlarged 1.78x",
+  "7 every Reel shows the game": "yes",
+  "7 not the same picture as last 5 Reels": "yes: a cartoon co-op world; none of the last five (Jackbox, Ranger's Path, Dreamlight Valley, Duck Side of the Moon, the 03:15 piece)",
+  "7 shot shows the line": "yes: decision_log",
+  "7 crop": "yes: 9:16 crops at 4 fps of every shot on the server-style copies",
+  "7 headline not over a face": "yes: the cover's headline sits over the orange tree; the birds are below it",
+  "7 credit on every clip": "yes: one credit 0 to 10 with from_start",
+  "8 what am I seeing and hearing": "yes: decision_log"
+ }
+}

@@ -12,7 +12,8 @@ the chip, and never writes a job's structure by hand.
 <kind> is a formats.NEWS_MAP kind (launch, date, reveal, price, report, delay, ...). --shots is the prerender `shots`
 mode's output (shotpick.py): up to SHOTS clean stretches spread through the trailer in source order, each with its
 focus. Without it the job carries no shots and says to run the shots mode first. Every text the session must write is
-TODO, which the text rules refuse (a Latin-first line), so a scaffold can never render unfilled.
+TODO, which the text rules refuse (a Latin-first line), so a scaffold can never render unfilled. "spoken" (the story
+as 2 to 3 Arabic sentences, written first; the lines are cut from it in order) is a TODO too (15 Nov 2026).
 """
 import datetime as dt
 import json
@@ -30,6 +31,7 @@ WITH_CARD = ('clipcard',) + CARD_LED
 LABEL = {'launch': 'متوفر الآن', 'delay': 'تأجيل', 'price': 'السعر', 'report': 'تقرير', 'leak': 'تسريب',
          'rumour': 'شائعة', 'reviews': 'التقييمات', 'results': 'أرقام', 'update': 'تحديث'}
 TODO = 'TODO'
+HOOK_SECS = 3.5          # the first shot holds the headline: line 1 enters after textrules.HEAD_CLEAR (15 Nov 2026)
 
 
 def _footage(trailer, name):
@@ -85,6 +87,8 @@ def make(kind, name, story, source, trailer, shots_json=None, theme='cold', labe
         rows = data[0] if isinstance(data, list) else data
         picked = _spread(rows.get('shots') or [], SHOTS)
         shots = [[f, s['start'], s['secs'], [[0.0, s['focus']]]] for s in picked]
+        if shots and picked[0]['end'] - picked[0]['start'] >= HOOK_SECS:   # line 1 waits for the headline (item A)
+            shots[0][2] = round(max(shots[0][2], HOOK_SECS), 2)
     else:
         note = 'no shots: run prerender.yml with mode shots on this job, then t0make again with --shots'
     gfx = []
@@ -97,8 +101,14 @@ def make(kind, name, story, source, trailer, shots_json=None, theme='cold', labe
     n = len(shots)
     foot_idx = [i for i, s in enumerate(shots) if not str(s[0]).endswith('.png')]
     lines = []
-    for i in foot_idx[1:]:                                 # shot 0 carries the headline; one beat per footage shot after it
-        lines.append([i, i, [TODO]])
+    import textrules
+    t, clear = 0.0, []                                     # shot starts as reel lays them (0.4 s crossfades)
+    for s_ in shots:
+        clear.append(t + 0.25 >= textrules.HEAD_CLEAR)
+        t += float(s_[2]) - 0.4
+    for i in foot_idx[1:]:                                 # shot 0 carries the headline; one beat per footage shot after
+        if clear[i]:                                       # it, from the first shot that starts after the headline band
+            lines.append([i, i, [TODO]])
     credits = []
     if foot_idx:                                           # every footage shot carries the source credit (30 Oct rule)
         runs, start = [], foot_idx[0]
@@ -110,7 +120,7 @@ def make(kind, name, story, source, trailer, shots_json=None, theme='cold', labe
         'name': name, 'story': story, 'kind_news': kind, 'built_by': 'production-2', 'render_lane': 'server',
         'out': f'cards/{dt.date.today():%Y-%m}/{name}-reel-v1.mp4',
         'footage': [foot], 'shots': shots, 'lines': lines, 'credits': credits,
-        'headline': TODO, 'label': label or LABEL.get(kind, 'جديد'), 'source': source,
+        'spoken': TODO, 'headline': TODO, 'label': label or LABEL.get(kind, 'جديد'), 'source': source,
         'date': date or dt.date.today().strftime('%-d %b %Y'), 'theme': theme, 'style': None,
         'template': template, 'skin': 'house', 'cut': False,
         'track': [f, shots[foot_idx[0]][1]] if foot_idx else 'bed',
@@ -153,7 +163,7 @@ def main(argv):
           + (f', card at shot {next(i for i, s in enumerate(job["shots"]) if str(s[0]).endswith(".png"))}' if job.get('gfx') else ''))
     if note:
         print('t0make: ' + note)
-    print('t0make: fill every TODO (headline, lines, ' + ('strip, ' if job.get('strip') else '')
+    print('t0make: fill every TODO (spoken paragraph first, headline, lines cut from it, ' + ('strip, ' if job.get('strip') else '')
           + ('card, ' if job.get('gfx') else '') + 'label if needed), then python3 templates/textrules.py ' + out)
     return 0
 

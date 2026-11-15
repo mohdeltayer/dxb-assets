@@ -1,0 +1,399 @@
+"""Shot checks on the server's own copy, before the first render (adv-20261115-one-render-server-checks, items B, C, D;
+Mohammad 15 Nov 2026: "if the server can do it, focus on that so the director does not check multiple times").
+
+On 15 Nov every Reel rendered three times although server qc passed each time. The send-backs this replaces:
+  B  shot times picked on a different copy than the server renders. Duck Side of the Moon: the server copy's video
+     starts 1.52 s in, so the shots crossed the trailer's scene cuts and one landed on a letterboxed stretch (v1, v2).
+  C  the subject drifts out of the 9:16 window during a shot (POPUCOM v2: the submarine leaves the edge).
+  D  a card's ground on a busy frame (Duck v1, v2: the trailer behind the card was mid-action).
+
+    python3 templates/shotgate.py job <job.json>        every footage file fetched first; prints every problem, exit 1
+    python3 templates/shotgate.py read <uploads file>   the file's facts: picture start, scene cuts, letterbox
+
+B, per footage shot: it may not start before the picture (ffprobe's video start_time on the copy in uploads), may not
+cross one of the trailer's scene cuts (reel.scenes at CUT_THRESH, a cut within CUT_EDGE of either end is the shot's own
+edge), and may not sit on a letterboxed stretch (reel._bars over the shot, as the montage reads it). Each refusal names
+the nearest clean start: the start closest to the job's own, inside one scene, after the picture start and with no
+letterbox, for the same length (or says how short the shot must be where no such start is near).
+C, per footage shot: the subject (the largest person, vehicle or animal YOLOv8n finds in the shot's first frame) is
+looked for again at the middle and the end (a subject already half out of the window at the first frame is "cut",
+as POPUCOM v1's heroes and Ranger's Path v1's ranger were); when less than DRIFT_INSIDE of it is inside the 9:16 window the shot uses
+(its focus, the letterbox crop and the frame height), the frames between are read every SAMPLE_STEP s and the problem
+reads "subject leaves the crop at N s" with the longest safe length. Without the detector the check is skipped, said.
+D, per -gfx- card on footage ("ground_footage", or the card's own [file, start]): ground_pick() picks the calmest window
+of the card's length in the named stretch ([file, start] or [file, start, span]; span GROUND_SPAN s by default): the
+lowest mix of motion and contrast on the 9:16 centre the ground shows, and prints it. "ground_seek": "fixed" in a job
+keeps the seek as written (start plus the card's place on the clock).
+
+Waivers, each after someone has looked: "cut_ok": [[file, start, reason]], "letterbox_ok": [[file, start, reason]]
+(or "lowres_ok" naming the copies searched), "drift_ok": [[file, start, reason]]; start is the shot's own start.
+Stills, our -gfx- cards and jobs/test examples without footage in uploads are not read. The breaking profile and
+Famitsu Reels are outside it (speed first; their own checks run).
+"""
+import json
+import os
+import shutil
+import subprocess
+import sys
+import tempfile
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+
+CUT_THRESH = 0.3          # scene score for a cut that refuses a shot (autofocus places keyframes at 0.2)
+CUT_EDGE = 0.12           # a cut this close to a shot's start or end is the shot's own edge
+LB_TOL = 8                # rows of letterbox under this are noise (reel._bars)
+DRIFT_INSIDE = 0.5        # share of the subject that must stay inside the window
+SAMPLE_STEP = 0.2
+SUBJECT_MIN = 0.01        # subjects smaller than this share of the frame are not followed
+AIMED_ELSEWHERE = 0.15    # under this share inside at the start, the window is framed on something else
+CUT_MIN = 0.03            # a subject at least this share of the frame, half out of the window from the start, is cut
+GROUND_SPAN = 12.0
+GROUND_FPS = 6
+SEARCH = 12.0             # seconds either side of a refused start searched for a clean one
+STILL = ('.jpg', '.jpeg', '.png', '.webp')
+
+_BOXES_PY = r"""
+import json, os, sys
+w, cls, paths = sys.argv[1], json.loads(sys.argv[2]), sys.argv[3:]
+from ultralytics import YOLO
+if not os.path.exists(w):
+    os.makedirs(os.path.dirname(w) or '.', exist_ok=True)
+    from ultralytics.utils.downloads import attempt_download_asset
+    attempt_download_asset(w)
+out = []
+for r in YOLO(w).predict(paths, imgsz=640, conf=0.25, classes=cls, device='cpu', verbose=False):
+    h, wd = r.orig_shape
+    bs = []
+    for (x1, y1, x2, y2), c in zip(r.boxes.xyxy.tolist(), r.boxes.cls.tolist()):
+        bs.append([x1 / wd, x2 / wd, y1 / h, y2 / h, int(c)])
+    out.append(bs)
+print('@@' + json.dumps(out))
+"""
+
+
+def _U():
+    import cards as C
+    return C.U
+
+
+def _probe(path):
+    """(width, height, video start_time, duration) of the file's first video stream."""
+    r = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries',
+                        'stream=width,height,start_time:format=duration', '-of', 'json', path],
+                       capture_output=True, text=True)
+    try:
+        d = json.loads(r.stdout or '{}')
+        st = (d.get('streams') or [{}])[0]
+        return (int(st.get('width') or 0), int(st.get('height') or 0), max(0.0, float(st.get('start_time') or 0)),
+                float((d.get('format') or {}).get('duration') or 0))
+    except (ValueError, TypeError):
+        return 0, 0, 0.0, 0.0
+
+
+def read(f):
+    """The copy's own facts, as the render will read them."""
+    path = _U() + f
+    w, h, v0, dur = _probe(path)
+    return {'file': f, 'width': w, 'height': h, 'picture_start': round(v0, 3), 'duration': round(dur, 3)}
+
+
+def _cuts(f, a, secs):
+    """Source seconds of the scene cuts between a and a + secs."""
+    import reel
+    a = max(0.0, a)
+    return [round(a + c, 3) for c in reel.scenes(f, a, secs, CUT_THRESH)[1:]]
+
+
+def _letterbox_rows(f, a, secs, full):
+    """Picture rows the montage keeps for this stretch (reel._bars), and whether that is a letterbox."""
+    import reel
+    if os.path.basename(f) in reel.NOBARS:
+        return full, False
+    _crop, rows = reel._bars(_U() + f, max(0.0, a), max(0.3, secs))
+    return rows, bool(full and rows < full - LB_TOL)
+
+
+def _waived(job, key, f, start):
+    for w in job.get(key) or []:
+        if isinstance(w, (list, tuple)) and len(w) >= 3 and w[0] == f and abs(float(w[1]) - float(start)) < 0.05 \
+                and len(str(w[2]).strip()) >= 5:
+            return True
+    return False
+
+
+def _clean(f, s, secs, info):
+    """Whether [s, s + secs] is inside one scene, after the picture start and unletterboxed."""
+    if s < info['picture_start'] - 0.02 or (info['duration'] and s + secs > info['duration'] + 0.02):
+        return False
+    if any(s + CUT_EDGE < c < s + secs - CUT_EDGE for c in _cuts(f, s, secs)):
+        return False
+    return not _letterbox_rows(f, s, secs, info['height'])[1]
+
+
+def nearest_clean(f, start, secs, info):
+    """The clean start of the same length closest to `start`, from the scene starts around it and steps of 0.25 s;
+    None when there is none within SEARCH s."""
+    lo = max(info['picture_start'], start - SEARCH)
+    hi = min(start + SEARCH, (info['duration'] or start + SEARCH + secs) - secs)
+    if hi < lo:
+        return None
+    around = _cuts(f, lo, hi - lo + secs)
+    cands = {round(c + 0.04, 2) for c in around} | {round(c - 0.04 - secs, 2) for c in around}
+    k = 0.25
+    while k <= SEARCH:
+        cands |= {round(start + k, 2), round(start - k, 2)}
+        k += 0.25
+    cands.add(round(max(info['picture_start'], lo), 2))
+    for s in sorted((c for c in cands if lo <= c <= hi), key=lambda c: abs(c - start))[:40]:
+        if _clean(f, s, secs, info):
+            return s
+    return None
+
+
+def _shot_rows(job, shots):
+    """[(index, file, start, secs, focus)] for the footage shots (not stills, not our cards)."""
+    out = []
+    for i, sh in enumerate(shots):
+        f, st, secs, fo = sh[0], sh[1], sh[2], (sh[3] if len(sh) > 3 else None)
+        if st is None or isinstance(st, list) or not isinstance(f, str):
+            continue
+        if f.endswith(STILL) or '-gfx-' in f or f.startswith('numgfx'):
+            continue
+        if not os.path.exists(_U() + f):
+            continue
+        out.append((i, f, float(st), float(secs), fo))
+    return out
+
+
+def timing_problems(job, shots):
+    """Item B: picture start, scene cuts and letterbox per shot, read on the server's copy."""
+    out, infos = [], {}
+    for i, f, st, secs, _fo in _shot_rows(job, shots):
+        info = infos.setdefault(f, read(f))
+        why = []
+        if st < info['picture_start'] - 0.02:
+            why.append(f"starts at {st:.2f} s, before the picture on the server's copy ({info['picture_start']:.2f} s)")
+        cut = [c for c in _cuts(f, st, secs) if st + CUT_EDGE < c < st + secs - CUT_EDGE]
+        if cut and not _waived(job, 'cut_ok', f, st):
+            why.append(f"crosses the trailer's scene cut at {cut[0]:.2f} s (shot {st:.2f} to {st + secs:.2f} s; "
+                       f"up to the cut it holds {cut[0] - st - 0.04:.2f} s)")
+        rows, boxed = _letterbox_rows(f, st, secs, info['height'])
+        if boxed and not (_waived(job, 'letterbox_ok', f, st) or job.get('lowres_ok')):
+            why.append(f'is letterboxed on this stretch ({rows} of {info["height"]} rows of picture)')
+        if why:
+            s = nearest_clean(f, st, secs, info)
+            nxt = (f'nearest clean start {s:.2f} s for the same {secs:.2f} s' if s is not None else
+                   f'no clean start of {secs:.2f} s within {SEARCH:.0f} s: pick another stretch or shorten the shot')
+            out.append({'where': f'shot {i}', 'rule': 'shot_timing', 'file': f, 'start': st,
+                        'detail': f'shot {i} ({f} {st:.2f} s): ' + '; '.join(why) + f'; {nxt}', 'clean_start': s})
+    return out, infos
+
+
+def _frame(f, t, bars, path_out):
+    subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-ss', f'{max(0.0, t):.3f}', '-i', _U() + f,
+                    '-frames:v', '1', '-vf', f'{bars}scale=640:-2', path_out], check=True)
+
+
+def detect_boxes(paths):
+    """[[x1, x2, y1, y2, class] in shares of the frame] per image, or None when the detector cannot run."""
+    import reel
+    if not paths:
+        return []
+    env = dict(os.environ)
+    if os.path.isdir(reel.YOLO_LIBS):
+        env['PYTHONPATH'] = reel.YOLO_LIBS + os.pathsep + env.get('PYTHONPATH', '')
+    try:
+        r = subprocess.run([sys.executable, '-c', _BOXES_PY, reel.YOLO_WEIGHTS, str(reel.SUBJECT_CLASSES).replace(' ', '')]
+                           + list(paths), capture_output=True, text=True, env=env, check=True)
+        line = [ln for ln in r.stdout.splitlines() if ln.startswith('@@')][-1]
+        return json.loads(line[2:])
+    except Exception as e:                                     # noqa: BLE001
+        why = (getattr(e, 'stderr', '') or str(e)).strip().splitlines()[-1:] or ['?']
+        print(f'shotgate: subject detector unavailable ({why[0][:160]}); drift not checked', flush=True)
+        return None
+
+
+def _window(fo, off, secs, iw, rows):
+    """(left, right) of the 9:16 window as shares of the picture at `off` s into the shot."""
+    import reel
+    x = reel._fo_at(_focus(fo), off, secs) if fo is not None else 0.5
+    sw = iw * reel.H / max(rows, 1)
+    share = min(1.0, reel.W / sw)
+    left = float(x) * (1 - share)
+    return left, left + share
+
+
+def _focus(fo):
+    if isinstance(fo, list) and fo and isinstance(fo[0], (list, tuple)):
+        return [tuple(k) for k in fo]
+    return fo
+
+
+def _inside(box, win):
+    x1, x2 = box[0], box[1]
+    ov = max(0.0, min(x2, win[1]) - max(x1, win[0]))
+    return ov / max(1e-6, min(x2 - x1, win[1] - win[0]))
+
+
+def _area(b):
+    return (b[1] - b[0]) * (b[3] - b[2])
+
+
+def _follow(prev, boxes):
+    """The box in `boxes` that continues `prev`: same class, nearest centre."""
+    same = [b for b in boxes if b[4] == prev[4]] or boxes
+    if not same:
+        return None
+    cx = (prev[0] + prev[1]) / 2
+    return min(same, key=lambda b: abs((b[0] + b[1]) / 2 - cx))
+
+
+def drift_problems(job, shots):
+    """Item C: the subject at the start, middle and end of each shot against the window the shot uses."""
+    import reel
+    rows_ = [r for r in _shot_rows(job, shots) if not _waived(job, 'drift_ok', r[1], r[2])]
+    if not rows_:
+        return []
+    tmp = tempfile.mkdtemp(prefix='shotgate-')
+    try:
+        plan, paths, geo = [], [], {}
+        for i, f, st, secs, fo in rows_:
+            if f not in geo:
+                _w, h, _v0, _d = _probe(_U() + f)
+                crop, rows = reel._bars(_U() + f, st, secs)
+                iw = int(crop.split('crop=')[1].split(':')[0]) if crop else _w
+                geo[f] = (crop, iw, rows or h)
+            for k, q in enumerate((0.1, secs / 2, max(0.1, secs - 0.1))):
+                p = f'{tmp}/{i}-{k}.png'
+                _frame(f, st + q, geo[f][0], p)
+                plan.append((i, q)); paths.append(p)
+        found = detect_boxes(paths)
+        if found is None:
+            return []
+        by = {}
+        for (i, q), bs in zip(plan, found):
+            by.setdefault(i, []).append((q, bs))
+        out = []
+        for i, f, st, secs, fo in rows_:
+            samples = by.get(i) or []
+            if not samples or not samples[0][1]:
+                continue
+            subj = max(samples[0][1], key=_area)
+            if _area(subj) < SUBJECT_MIN:
+                continue
+            _crop, iw, rows = geo[f]
+            first_in = _inside(subj, _window(fo, samples[0][0], secs, iw, rows))
+            if first_in < AIMED_ELSEWHERE:
+                continue                                       # the window aims at something else: not this subject
+            if first_in < DRIFT_INSIDE and _area(subj) >= CUT_MIN:
+                out.append({'where': f'shot {i}', 'rule': 'subject_cut', 'file': f, 'start': st,
+                            'detail': f'shot {i} ({f} {st:.2f} s): the subject is cut by the 9:16 edge from the first '
+                                      f'frame ({first_in:.0%} of it inside the window); reframe it (focus) or pick a shot '
+                                      'with the subject centred, or waive with drift_ok after looking'})
+                continue
+            prev, last_in, out_at = subj, samples[0][0], None
+            for q, bs in samples[1:]:
+                b = _follow(prev, bs)
+                if b is None:
+                    continue
+                if _inside(b, _window(fo, q, secs, iw, rows)) < DRIFT_INSIDE:
+                    out_at = q
+                    break
+                prev, last_in = b, q
+            if out_at is None:
+                continue
+            fine, ts = [], []                                  # where between last_in and out_at it leaves
+            t = last_in + SAMPLE_STEP
+            while t < out_at:
+                p = f'{tmp}/{i}-f{len(ts)}.png'
+                _frame(f, st + t, geo[f][0], p)
+                fine.append(p); ts.append(t)
+                t += SAMPLE_STEP
+            leave = out_at
+            for t, bs in zip(ts, detect_boxes(fine) or []):
+                b = _follow(prev, bs)
+                if b is not None and _inside(b, _window(fo, t, secs, iw, rows)) < DRIFT_INSIDE:
+                    leave = t
+                    break
+                if b is not None:
+                    prev = b
+            safe = max(0.0, leave - 0.1)
+            out.append({'where': f'shot {i}', 'rule': 'subject_drift', 'file': f, 'start': st, 'safe_secs': round(safe, 2),
+                        'detail': f'shot {i} ({f} {st:.2f} s): the subject leaves the 9:16 crop at {st + leave:.2f} s '
+                                  f'({leave:.2f} s into the shot); longest safe length {safe:.2f} s, or reframe it '
+                                  '(focus keyframes), or waive with drift_ok after looking'})
+        return out
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
+def ground_pick(f, start, span, secs, t0=0.0):
+    """Item D: the calmest window of `secs` in [start, start + span] of `f` (motion plus contrast on the 9:16 centre the
+    footage ground shows, at GROUND_FPS). Returns (seek, its score, the score of the seek as written (start + t0))."""
+    import numpy as np
+    info = read(f)
+    lo = max(start, info['picture_start'])
+    hi = min(start + span, info['duration'] or start + span)
+    if hi - lo < secs + 0.2:
+        return start + t0, None, None
+    w, h = 36, 64
+    r = subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-ss', f'{lo:.3f}', '-t', f'{hi - lo:.3f}', '-i', _U() + f,
+                        '-an', '-vf', f'fps={GROUND_FPS},scale=-2:{h * 4},crop={w * 4}:{h * 4},scale={w}:{h},format=gray',
+                        '-f', 'rawvideo', '-'], capture_output=True)
+    n = len(r.stdout) // (w * h)
+    if n < 3:
+        return start + t0, None, None
+    fr = np.frombuffer(r.stdout[:n * w * h], np.uint8).reshape(n, h, w).astype(float)
+    motion = np.r_[0, np.abs(np.diff(fr, axis=0)).mean(axis=(1, 2))]
+    contrast = fr.std(axis=(1, 2))
+    busy = motion * 2.0 + contrast * 0.5
+    k = max(1, int(round(secs * GROUND_FPS)))
+    if n <= k:
+        return start + t0, None, None
+    win = np.convolve(busy, np.ones(k) / k, mode='valid')
+    best = int(np.argmin(win))
+    named = int(round((start + t0 - lo) * GROUND_FPS))
+    named_score = float(win[named]) if 0 <= named < len(win) else None
+    return round(lo + best / GROUND_FPS, 2), round(float(win[best]), 1), (round(named_score, 1) if named_score is not None else None)
+
+
+def problems(job, shots):
+    """Every B and C problem for the job's footage shots (as reel takes them: [file, start, secs, focus])."""
+    if job.get('kind') in ('famitsu', 'breaking') or job.get('profile') == 'breaking':
+        return []
+    tp, _ = timing_problems(job, shots)
+    return tp + drift_problems(job, shots)
+
+
+def enforce(job, shots):
+    p = problems(job, shots)
+    for x in p:
+        print('shotgate: ' + x['detail'], flush=True)
+    if p:
+        print('SHOTGATE_JSON: ' + json.dumps({'job': job.get('name'), 'ok': False, 'problems': p}, ensure_ascii=False),
+              flush=True)
+        raise SystemExit(f'shotgate: {len(p)} shot problem{"s" if len(p) > 1 else ""} on the server copy (above); '
+                         'fix the shot list before the render (adv-20261115-one-render-server-checks)')
+    print('shotgate: shots clean on the server copy (picture start, scene cuts, letterbox, subject drift)', flush=True)
+
+
+def main(argv):
+    if len(argv) < 2 or argv[0] not in ('job', 'read'):
+        raise SystemExit(__doc__)
+    if argv[0] == 'read':
+        print(json.dumps(read(argv[1])))
+        return 0
+    import render_job as RJ
+    job = json.load(open(argv[1], encoding='utf-8'))
+    for item in job.get('footage', []):
+        RJ.fetch(item)
+    p = problems(job, job.get('shots') or [])
+    for x in p:
+        print('shotgate: ' + x['detail'])
+    print('SHOTGATE_JSON: ' + json.dumps({'job': job.get('name'), 'ok': not p, 'problems': p}, ensure_ascii=False))
+    return 1 if p else 0
+
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv[1:]))
