@@ -138,7 +138,7 @@
    }
   ]
  ],
- "headline": "لعبة Duck Side of the Moon\nتصدر على PS5 الثلاثاء",
+ "headline": "بطة الفضاء تصل إلى PS5\nفي Duck Side of the Moon",
  "label": "جديد",
  "source": "ستاربرو جيمز (Starbrew Games)",
  "date": "16 Nov 2026",
@@ -156,16 +156,16 @@
   {
    "file": "duck-side-of-the-moon-ps5-homegrown-nov-17-gfx-1.png",
    "kind": "fact",
-   "label": "تحديث Homegrown",
-   "value": "مجاني",
-   "note": "لكل المنصات في اليوم نفسه"
+   "label": "موعد الإصدار",
+   "value": "17 نوفمبر",
+   "note": "مع تحديث Homegrown المجاني لكل المنصات"
   }
  ],
  "ground_footage": [
   "duck-side-of-the-moon-ps5-homegrown-trailer.mp4",
   5.8
  ],
- "spoken": "لعبة Duck Side of the Moon تصدر على PS5 الثلاثاء، ومعها تحديث Homegrown المجاني لكل المنصات في اليوم نفسه. تزرع فيه حديقتك بين الكواكب، وتزيّن سفينتك على ذوقك.",
+ "spoken": "بطة الفضاء تصل إلى PS5 في Duck Side of the Moon، وموعد الإصدار 17 نوفمبر، مع تحديث Homegrown المجاني لكل المنصات. تزرع فيه حديقتك بين الكواكب، وتزيّن سفينتك على ذوقك.",
  "subject_person": null,
  "angle": {
   "hook": "a cosy space game about a duck reaches PS5 with a free update in which you grow a garden among the planets",
@@ -182,12 +182,13 @@
  "decision_log": [
   "sound: one stretch of the trailer's own sound from 3.9 s, music_only true (faster-whisper small on the session copy heard no speech; music runs to 26.8 s, silence after), so the music stem alone runs under the Reel; the body is about 14 s, so the stretch ends near 18 s, well before the music stops",
   "0-3.95 headline beat: the duck flapping on the grass (3.9, 0.8, fo 0.36; crossfade at 4.75 avoided), the duck floating by the beanstalk in space (5.0, 0.75, fo 0.36; at 0.42 the duck was cut at the left edge), the duck riding an asteroid (14.45, 1.3), the floating island with the duck (10.3, 1.1, fo 0.66; the planet-circle transition before 10.2 avoided); the telescope island was dropped (the telescope cut at both 9:16 edges, the duck outside the window)",
-  "card after the hook: fact card «تحديث Homegrown» · «مجاني» · «لكل المنصات في اليوم نفسه» over the telescope island footage, dimmed (ground_footage 5.8): the one fact the footage cannot show",
+  "card after the hook: fact card «موعد الإصدار» · «17 نوفمبر» · «مع تحديث Homegrown المجاني لكل المنصات» over the telescope island footage, dimmed (ground_footage 5.8): the date and the free update, which the footage cannot show",
   "breathing shot after the card: the flowering vine slope by the waterfall (16.05, 1.35, fo 0.5)",
   "«تزرع فيه حديقتك بين الكواكب» over the crops sprouting and flowering (0.0, 1.45; the HOMEGROWN UPDATE title card from 1.5 avoided) and the duck harvesting in the garden patch (13.05, 1.35; the dialogue box before 13.0 avoided)",
   "«وتزيّن سفينتك على ذوقك» over the ship room changing its walls and floors (20.35, 2.5; the crafting-station UI before 20.3 and the end slate at 23.0 avoided); the last 2 s are this picture",
   "left out: title cards 1.5-2.9 and 23.0 on, dialogue boxes 7.3-8.4, 11.5-12.9, 18.0-19.0, crafting UI 19.0-20.3",
-  "crops judged on 4 fps sheets of the session copy (HLS master, 1920x1080)"
+  "crops judged on 4 fps sheets of the session copy (HLS master, 1920x1080)",
+  "v1 text fix (server font check 05:48Z: «لعبة Duck Side of the Moon / تصدر على PS5 الثلاثاء» needs more than 2 lines at 72 px): headline «بطة الفضاء تصل إلى PS5 / في Duck Side of the Moon» (the hook first, the game named on the cover, تصل إلى + the platform per the glossary); the date moved to the card"
  ],
  "reel_check": {
   "1 primary read in full": "yes: Starbrew Games press release on GamesPress and the Steam announcement of 3 Nov, read 15 Nov ~05:45Z",
@@ -197,7 +198,7 @@
   "3 story type items": "yes: story_type_items",
   "4 one spoken paragraph": "yes: spoken; headline, card and lines are that paragraph in order",
   "4 subject named before pronoun, و rule": "yes: the headline names the game, the card names the update before «فيه»; the ship line opens on و and continues the garden line at once",
-  "4 release verbs": "yes: تصدر with the day (headline); the update «يُطرح» in the caption (glossary: not يصل)",
+  "4 release verbs": "yes: «تصل إلى PS5» (platform, glossary), the date on the card under «موعد الإصدار»; the update «يُطرح» in the caption (glossary: not يصل)",
   "5 headline": "yes: names the game and the platform, Arabic first",
   "5 caption": "yes: first five words carry the game and تصدر",
   "5 X and Threads": "yes: one sentence, source named, no hashtags",
