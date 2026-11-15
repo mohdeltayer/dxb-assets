@@ -1,21 +1,21 @@
 {
  "name": "jackbox-ceo-comedy-writers-false-positives",
- "out": "cards/2026-11/jackbox-ceo-comedy-writers-false-positives-reel-v2.mp4",
+ "out": "cards/2026-11/jackbox-ceo-comedy-writers-false-positives-reel-v3.mp4",
  "verdict": "pass",
- "at": "2026-11-15T05:28:44Z",
+ "at": "2026-11-15T05:37:41Z",
  "findings": [],
  "notes": [
-  "length 19.1 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 90.1; leak_pct 0.3; cache {'hit': 0, 'miss': 8}; separate_secs 9.6; secs 14.5",
+  "length 18.8 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 90.1; leak_pct 0.2; cache {'hit': 4, 'miss': 3}; separate_secs 6.3; secs 10.6",
   "smear check: exempt 6.54 to 12.54 s (our own cards)",
-  "render_job: lifeless: {\"score\": 1.7, \"still_share\": 0.016, \"longest_still\": 0.2, \"cuts_per_10s\": 9.47, \"held_under_text\": 0.011, \"secs\": 19.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 9.63, \"held_under_text\": 0.0, \"secs\": 18.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "10d7bc0ce1005712a3971ee775563e3f60fc218c",
- "dispatches": 3,
+ "job_sha": "3d9112ba55eb8ef2a96ae9c94b952bc87fd7ed2f",
+ "dispatches": 4,
  "source_summary": {
   "min_height": 1080,
-  "max_zoom": 1.87,
+  "max_zoom": 1.79,
   "lowbit_shots": 0
  },
  "quality": "base",
