@@ -1,17 +1,17 @@
 {
  "name": "moonlight-peaks-ps5-launch-nov-17",
- "out": "cards/2026-11/moonlight-peaks-ps5-launch-nov-17-reel-v2.mp4",
+ "out": "cards/2026-11/moonlight-peaks-ps5-launch-nov-17-reel-v3.mp4",
  "verdict": "pass",
- "at": "2026-11-15T11:41:27Z",
+ "at": "2026-11-15T12:07:43Z",
  "findings": [],
  "notes": [
-  "length 16.6 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 98.4; leak_pct 0.1; cache {'hit': 0, 'miss': 6}; separate_secs 12.2; secs 16.6",
-  "render_job: lifeless: {\"score\": 5.2, \"still_share\": 0.078, \"longest_still\": 0.4, \"cuts_per_10s\": 4.82, \"held_under_text\": 0.0, \"secs\": 16.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 16.8 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 99.2; leak_pct 0.1; cache {'hit': 2, 'miss': 3}; separate_secs 10.3; secs 14.6",
+  "render_job: lifeless: {\"score\": 2.9, \"still_share\": 0.036, \"longest_still\": 0.3, \"cuts_per_10s\": 5.39, \"held_under_text\": 0.0, \"secs\": 16.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "0f2567bbb8d1a649fa135608168be249ae6a08a3",
- "dispatches": 2,
+ "job_sha": "bf361439d8f217979dce49a6bee6f41263df4137",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
