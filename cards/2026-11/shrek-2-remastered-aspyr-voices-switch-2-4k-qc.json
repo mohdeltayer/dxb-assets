@@ -1,0 +1,30 @@
+{
+ "name": "shrek-2-remastered-aspyr-voices-switch-2-4k",
+ "out": "cards/2026-11/shrek-2-remastered-aspyr-voices-switch-2-4k-reel-v2.mp4",
+ "verdict": "pass",
+ "at": "2026-11-15T10:55:20Z",
+ "findings": [],
+ "notes": [
+  "length 16.6 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 73.5; leak_pct 0.3; cache {'hit': 4, 'miss': 0}; separate_secs 3.4; secs 5.7",
+  "smear check: exempt 7.73 to 13.73 s (our own cards)",
+  "render_job: lifeless: {\"score\": 1.4, \"still_share\": 0.012, \"longest_still\": 0.2, \"cuts_per_10s\": 10.91, \"held_under_text\": 0.0, \"secs\": 16.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "fffa845a13a7f222dc4da00fc1203a6d74d87198",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/shrek-2-remastered-aspyr-voices-switch-2-4k-look-1.jpg",
+  "cards/2026-11/shrek-2-remastered-aspyr-voices-switch-2-4k-look-2.jpg",
+  "cards/2026-11/shrek-2-remastered-aspyr-voices-switch-2-4k-look-3.jpg"
+ ],
+ "person_shown": true,
+ "sound": "trailer"
+}
