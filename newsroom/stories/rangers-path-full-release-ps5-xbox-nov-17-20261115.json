@@ -1,7 +1,7 @@
 {
  "id": "rangers-path-full-release-ps5-xbox-nov-17-20261115",
  "title": "Ranger's Path: National Park Simulator leaves Early Access on 17 Nov and launches on PS5 and Xbox Series X|S, with 2-player co-op and a Bigfoot legend",
- "status": "built: Reel v3 QC pass (cards/2026-11/rangers-path-full-release-nov-17-v3-reel-v3.mp4) after director FAIL on v2; director not re-run, not scheduled; slot 23:15 Dubai Sun 15 Nov (19:15Z); template trailer under the gap-rule cap exception (template_note)",
+ "status": "scheduled in Publer 23:15 Dubai Sun 15 Nov (19:15Z), 3/3 (ids ig:5212d8 x:717273 th:192e69); director PASS v3 (director-ranger-claude-sonnet); v1 and v2 not posted; RE-GATE due again within the hour before 23:15 Dubai",
  "lane": "digital-lounge",
  "game": "Ranger's Path: National Park Simulator",
  "companies": [
@@ -156,5 +156,33 @@
    "optional edges: blue-vest hiker leaving the left edge, ranger shoulder on the bison shot, partner cut on the litter shot",
    "credit larger if it fits"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/rangers-path-full-release-nov-17-v3-reel-v3.mp4",
+  "blob": "5bf03f1c1f85a238ef920216e098e954e1c7f916",
+  "at": "2026-11-15T05:47:02Z",
+  "note": "v3: headline names the game, honest trailer label, qc pass 0 findings, own 4fps review of 96 frames, whisper music only, DeepL back-check ok, re-gate 15 Nov 05:50Z (Steam news latest 28 Oct, date and platforms unchanged; search no delay), due again in the hour before 23:15 Dubai; gap-rule cap exception recorded",
+  "checklist": {
+   "job": "jobs/live/rangers-path-full-release-nov-17-v3.json",
+   "sha256": "5b0074de9a450503659de2f5f9ef5c80cb085692c380b7d1bba29e19ac163e30",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-ranger-claude-sonnet",
+  "qc": "pass",
+  "looked": null
+ },
+ "scheduled": "scheduled in Publer 23:15 Dubai Sun 15 Nov 2026, Instagram, X, Threads (ids ig:5212d8 x:717273 th:192e69); labels kind:news, tpl:trailer, skin:house, sound:trailer, genre:strategy/sim; media: Publer library v3 mp4; Threads text carries a source line added at scheduling (Steam announcement 21 Oct); CAP EXCEPTION (gap rule over the trailer cap, dispatcher decision, no explicit go from Mohammad)",
+ "director_v3": {
+  "by": "director-ranger-claude-sonnet",
+  "verdict": "PASS",
+  "job_sha": "102edce2cf4a9b63f723a9c5c516851ef9cb2da1",
+  "checks": "96 frames at 4 fps as 9:16, qc pass, faster-whisper (numpy input) hears no speech, DeepL back-check headline and lines ok, grammar review no required edits (uncertain: second-person تحرس, antecedent of وظهرت, حديقة وطنية), re-gate 15 Nov 05:50Z: Steam news newest 28 Oct, date/platforms unchanged, web search no delay",
+  "minor": "hat brim at the left edge of the litter shot; one hiker frame at the left of the bridge shot"
  }
 }
