@@ -1,12 +1,137 @@
 {
  "id": "project-stampede-steam-page-alpha-trailer-20261115",
- "title": "Project Stampede, an off-road arcade racer in the spirit of the 2000s arcade racers, opens its Steam page with an alpha trailer",
- "status": "claimed by builder for the 22:15 Dubai Sun 15 Nov slot (18:15Z); building",
+ "title": "Project Stampede, an off-road arcade racer that pays respects to the 6th and 7th console generations' arcade racers, opens its Steam page with an alpha trailer",
+ "status": "built: job v1 for the 22:15 Dubai Sun 15 Nov slot (18:15Z); render pending; NOT scheduled (stop point: no director, no Publer)",
  "lane": "digital-lounge",
  "game": "Project Stampede",
- "companies": ["Directrix Productions"],
+ "companies": [
+  "Directrix Productions"
+ ],
  "subject_person": null,
  "claimed_at": "2026-11-15T03:38:00Z",
  "slot": "22:15 Dubai Sun 15 Nov 2026 (18:15Z)",
- "sources": [{"name": "Steam store page, Project Stampede (app 5552610)", "url": "https://store.steampowered.com/app/5552610/"}, {"name": "Game*Spark, 14 Nov 2026 05:18Z", "url": "https://www.gamespark.jp/"}]
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Steam store page, Project Stampede (app 5552610), developer and publisher Directrix Productions LLC, release 'To be announced'; read 15 Nov 03:05Z. Key phrases: 'an intense and combative arcade racer where aggression equals progression', 'Master 10 distinct vehicle classes', 'from the desert to the arctic', 'Vehicles range in size from tiny Dirt Bikes all the way up to towering Monster Trucks', 'Your vehicle isn't just a means to get across the finish line; it's a weapon', 'All tracks feature alternate routes for conflict adverse racers', 'Project Stampede pays respects to the arcade racers of the 6th and 7th console generations'",
+   "url": "https://store.steampowered.com/app/5552610/"
+  },
+  {
+   "role": "primary",
+   "name": "Steam trailer 'Project Stampede Alpha 0.1.6 Trailer' (1920x1080, 60 fps, 52.5 s); file uploaded to Steam's CDN 13 Nov 2026 about 19:35Z (timestamp in its URL)",
+   "url": "https://store.steampowered.com/app/5552610/"
+  },
+  {
+   "role": "secondary",
+   "name": "Game*Spark (JP), 14 Nov 2026 05:18Z: «多彩なマシンで爆走する『モーターストーム』ライクなアーケード・レーシングゲーム『Project Stampede』Steamストアページ公開！» (the MotorStorm comparison is Game*Spark's, not the developer's)",
+   "url": "http://www.gamespark.jp/article/2026/11/14/174866.html"
+  }
+ ],
+ "first_report": "Game*Spark 14 Nov 2026 05:18Z (Steam page opened; trailer on Steam's CDN from 13 Nov about 19:35Z); 37 h before the slot. No Arabic outlet has carried it (digests of 14 and 15 Nov; IGN ME Arabic, True Gaming, Saudi Gamer, VGA4A nothing). Under 48 h with no Arabic coverage: still news (rule of 9 Nov).",
+ "source_type": "primary",
+ "ledger_find": {
+  "at": "2026-11-15T03:02:00Z",
+  "words": [
+   "stampede",
+   "directrix",
+   "motorstorm"
+  ],
+  "hits": [],
+  "note": "newsroom/ledger.py find crashed (TypeError on a story with a list folder, as on LoL and FreeStyle); git grep over newsroom/stories for each word: no hits"
+ },
+ "genre": [
+  "racing",
+  "indie"
+ ],
+ "kind": "reveal",
+ "kind_news": "reveal",
+ "label": "نظرة أولى",
+ "chip": "نظرة أولى",
+ "template": "clipcard",
+ "template_note": "Sunday (Dubai day) trailer at 6 and split at 4: reveal maps to trailer only, so clipcard (the trailer hook, one card with the vehicle-class count, back to footage)",
+ "platform": "PC (Steam)",
+ "beat": "reveal",
+ "recipe": "notes/scenario-recipes.md recipe 2 (trailer drop or fresh reveal) adapted to clipcard: strongest moving shot with chip and headline 0 to 3.7 s; line 1 on racing; line 2 on the vehicles it names; the card (10 classes); line 3 and the closing picture (a takedown tumble) in the last 2 s",
+ "sensitive": "none: vehicle takedowns and crashes only, no people hurt on screen, no weapons",
+ "footage": "official Steam trailer 'Project Stampede Alpha 0.1.6 Trailer', 1920x1080 at 60 fps, 5.8 Mbps, decode clean (server shots mode 15 Nov 03:01Z); 9:16 crop enlarged 1.78x; the only trailer on the page. The server shots mode found 4 clean stretches (the trailer cuts every 0.25 to 1 s, under its 1.6 s minimum); shots were picked by hand from 8 fps 9:16 crops, clear of the white flashes and the text it flagged (25.21 to 25.66, 26.25 to 26.7, 34.6, 39.9 to 41).",
+ "spoken": "أُعلن عن لعبة السباقات Project Stampede على Steam، وتتسابق فيها على دراجات ترابية وشاحنات عملاقة، من عشر فئات من المركبات. وتحيي اللعبة سباقات الأركيد القديمة حسب مطورها.",
+ "claims": [
+  {
+   "claim": "Project Stampede's Steam page and alpha trailer are up; release date not announced",
+   "status": "confirmed (Steam page: 'To be announced')"
+  },
+  {
+   "claim": "10 vehicle classes, from dirt bikes to monster trucks",
+   "status": "confirmed (Steam page)"
+  },
+  {
+   "claim": "tracks from the desert to the arctic; alternate routes for racers who avoid contact",
+   "status": "confirmed (Steam page)"
+  },
+  {
+   "claim": "ramming and taking down rivals is a way to progress",
+   "status": "confirmed (Steam page: 'aggression equals progression', events of type Speed or Aggression)"
+  },
+  {
+   "claim": "pays respects to the arcade racers of the 6th and 7th console generations",
+   "status": "confirmed (Steam page); written as «جيلَي PS2 وPS3» in the caption and «سباقات الأركيد القديمة» on screen"
+  },
+  {
+   "claim": "PC via Steam",
+   "status": "confirmed (Steam page; Game*Spark 'PC向けにSteam配信予定')"
+  },
+  {
+   "claim": "MotorStorm-like",
+   "status": "Game*Spark's comparison only; not used"
+  }
+ ],
+ "angle": {
+  "hook": "a racing game where ramming your rivals is how you progress ('aggression equals progression', Steam page)",
+  "why_now": "Directrix Productions opened the Project Stampede Steam page with its alpha trailer; first report Game*Spark 14 Nov 2026 05:18Z (trailer file uploaded to Steam 13 Nov ~19:37Z); no Arabic outlet has carried it",
+  "what_it_means_here": "players in the region who miss MotorStorm-era off-road arcade racers get a new PC game to wishlist on Steam; no date or price yet",
+  "payoff": "ten vehicle classes from dirt bikes to monster trucks, and the developer's stated aim: the arcade racers of the PS2 and PS3 generations"
+ },
+ "job": "jobs/live/project-stampede-steam-alpha.json",
+ "texts": {
+  "instagram": "أُعلن عن لعبة السباقات Project Stampede بصفحة على Steam\n\nفتح استوديو دايركتريكس برودكشنز (Directrix Productions) صفحة لعبة السباقات Project Stampede على Steam، وعرض مقطعًا من نسخة ألفا التجريبية.\n\nتتسابق في اللعبة على الطرق الوعرة بعشر فئات من المركبات، من الدراجات الترابية الصغيرة إلى الشاحنات العملاقة، على حلبات تمتد من الصحراء إلى المناطق الجليدية.\n\nوتصف صفحة اللعبة المركبة بأنها سلاح أيضًا، فصدم المنافسين وإسقاطهم طريق للتقدم في اللعبة، وفي كل حلبة طرق بديلة لمن يفضّل تجنب الاصطدام.\n\nويقول الاستوديو إن اللعبة تحيي سباقات الأركيد التي اشتهرت في جيلَي PS2 وPS3. وهي قادمة إلى الحاسب الشخصي عبر Steam، ولم يُعلن موعد صدورها بعد.\n\n#ألعاب #أخبار_الألعاب #ProjectStampede #Steam",
+  "x": "أُعلن عن لعبة السباقات Project Stampede بصفحة على Steam: عشر فئات من المركبات، من الدراجات الترابية إلى الشاحنات العملاقة، وتتقدم فيها بصدم منافسيك أيضًا، حسب صفحة اللعبة على Steam.",
+  "threads": "أُعلن عن لعبة السباقات Project Stampede بصفحة على Steam: عشر فئات من المركبات، من الدراجات الترابية إلى الشاحنات العملاقة، وتتقدم فيها بصدم منافسيك أيضًا، حسب صفحة اللعبة على Steam.",
+  "x_follow_up": "المصدر: صفحة اللعبة على Steam https://store.steampowered.com/app/5552610/",
+  "instagram_comment": "المصدر: صفحة Project Stampede على Steam، استوديو دايركتريكس برودكشنز (Directrix Productions)"
+ },
+ "on_screen": {
+  "headline": "لعبة سباقات تكافئك / على صدم منافسيك",
+  "lines": [
+   "أُعلن عن Project Stampede / على Steam",
+   "تتسابق فيها على دراجات ترابية / وشاحنات عملاقة",
+   "تحيي سباقات الأركيد القديمة / حسب مطورها"
+  ],
+  "card": "فئات المركبات · 10",
+  "credit": "المصدر: دايركتريكس برودكشنز (Directrix Productions)",
+  "chip": "نظرة أولى"
+ },
+ "arabic_passes": {
+  "skills": "arabic-games-film-editor and arabic-writing loaded fresh 15 Nov ~03:20Z; house glossary (release verbs: أُعلن عن for an announcement with no date, قادمة إلى + platform) and names-ar read; arabic-writing conventions.md opened; numbers: «عشر فئات» (فئة feminine, number without ة), «جيلَي» (dual in iḍāfa, nun dropped)",
+  "grammar_review": {
+   "required_edits": [],
+   "optional_style_suggestions": [],
+   "uncertain_cases": [
+    {
+     "text": "جيلَي PS2 وPS3",
+     "issue": "the source says '6th and 7th console generations'; PS2 and PS3 stand for those generations",
+     "why_uncertain": "a gloss for a general reader, not the developer's words",
+     "options": [
+      "جيلَي PS2 وPS3",
+      "الجيلين السادس والسابع من الأجهزة"
+     ]
+    }
+   ],
+   "files_opened": "perfect-arabic SKILL.md, arabic-writing references/orthography.md and conventions.md, arabic-grammar-review references/known-issues.md",
+   "note": "separate pass on headline, three lines, card, credit, caption, X and Threads: no required edits"
+  },
+  "deepl_forward": "whole English story in one piece: DeepL wrote «لعبة سباق تكافئك على اصطدام منافسيك» (kept ours: «صدم منافسيك», transitive and shorter), «فئات المركبات» (same), «الشاحنات العملاقة» (same), «الدراجات الترابية» (same), «مقطع دعائي من النسخة التجريبية (ألفا)» (ours: «مقطعًا من نسخة ألفا التجريبية»), «عصر أجهزة PS2 وPS3»; alternatives sent: 'aggression equals progression' (DeepL «العدوان يساوي التقدم», rejected as hostile wording), 'takedowns' («عمليات الإطاحة», not used), 'release date not announced yet' («لم يُعلن عن تاريخ الإصدار بعد»; ours «لم يُعلن موعد صدورها بعد»)",
+  "deepl_back": "v1 line «لعبة Project Stampede فتحت صفحتها على Steam» read back as 'has launched on Steam' (wrong: not released), replaced by «أُعلن عن Project Stampede على Steam» ('was announced on its Steam page'); the X text's «وصدم المنافسين طريق للتقدم» read back as 'ramming opponents to clear a path forward', replaced by «وتتقدم فيها بصدم منافسيك أيضًا» ('you can also advance by ramming your opponents'); headline 'A racing game that rewards you for crashing into your opponents'; card 'Vehicle Categories: 10'; line 3 'Revives classic arcade racing games, according to its developer'; caption read back to the meaning"
+ },
+ "regate": "RE-GATE within the hour before 22:15 Dubai (Sun): re-read the Steam page (release date, trailer, text) and search 'Project Stampede' for any change",
+ "re_gate_line": "RE-GATE within the hour before 22:15 Dubai (Sun)"
 }

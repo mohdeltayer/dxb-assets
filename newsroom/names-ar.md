@@ -38,6 +38,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Spin Master (Unicorn Academy rights holder and TV series) | سبين ماستر | Proposed 15 Nov 2026 (bracket at first mention) |
 | Imperium Aeternum (Dawn of Defense's empire) | stays Latin, glossed once as «إمبراطورية Imperium Aeternum» | Proposed 14 Nov 2026 |
 | Vertigo Gaming | فيرتيغو غيمينغ | Proposed 13 Nov 2026 (developer and publisher of Cook, Serve, Delicious! Re-Mustard; first mention carries the Latin in brackets) |
+| Directrix Productions (Project Stampede developer and publisher on Steam, Directrix Productions LLC) | دايركتريكس برودكشنز | Proposed 15 Nov 2026 (Project Stampede Reel credit «المصدر: دايركتريكس برودكشنز (Directrix Productions)»; caption «استوديو دايركتريكس برودكشنز (Directrix Productions)» at first mention, «الاستوديو» after) |
 | Nestopi | نيستوبي | Proposed 7 Nov 2026 (Japanese studio behind Chill with You; first on-screen mention carries the Latin in brackets) |
 | Riot Games | ريوت غيمز | Proposed 14 Nov 2026 (LoL esports roadmap Reel; Latin in brackets at first mention; follows إيبك غيمز and نت إيز غيمز; one earlier post wrote ريوت جيمز) |
 | League of Legends esports | الرياضات الإلكترونية في League of Legends | Proposed 14 Nov 2026 (game name stays English) |
