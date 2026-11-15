@@ -31,21 +31,27 @@
  "shots": [
   [
    "moonlight-peaks-ps5-launch-nov-17-wholesome.mp4",
-   11.45,
-   2.85,
+   11.3,
+   3.0,
    0.3
   ],
   [
    "moonlight-peaks-ps5-launch-nov-17-release-date.mp4",
-   0.2,
-   2.6,
+   14.5,
+   1.0,
+   0.7
+  ],
+  [
+   "moonlight-peaks-ps5-launch-nov-17-release-date.mp4",
+   2.7,
+   2.8,
    0.47
   ],
   [
    "moonlight-peaks-ps5-launch-nov-17-release-date.mp4",
-   2.8,
-   3.25,
-   0.47
+   7.0,
+   2.9,
+   0.5
   ],
   [
    "moonlight-peaks-ps5-launch-nov-17-release-date.mp4",
@@ -67,36 +73,36 @@
   ],
   [
    "moonlight-peaks-ps5-launch-nov-17-release-date.mp4",
-   14.5,
-   2.0,
+   15.5,
+   2.1,
    0.7
   ]
  ],
  "lines": [
   [
-   1,
-   1,
+   2,
+   2,
    [
     "تؤدي فيها دور مصاص دماء"
    ]
   ],
   [
-   2,
-   2,
+   3,
+   3,
    [
     "يعود إلى مزرعة عائلته ليزرعها"
    ]
   ],
   [
-   3,
    4,
+   5,
    [
     "ويصادق أهل البلدة ويجرب الهوايات"
    ]
   ],
   [
-   5,
    6,
+   7,
    [
     "باعت اللعبة أكثر من 300 ألف نسخة منذ يوليو"
    ]
@@ -105,7 +111,7 @@
  "credits": [
   [
    0,
-   6,
+   7,
    "المصدر: إكسيد (XSEED) وليتل تشيكن (Little Chicken)",
    {
     "size": 40,
@@ -224,11 +230,11 @@
   },
   "One visual requirement per beat; shot shows its line": {
    "answer": "yes",
-   "evidence": "cover: the character creator, a young vampire with a black cat, look changing; line 1 the vampire walking her farm; line 2 the same walk through the crop rows; line 3 two townsfolk at a campfire then a flower arrangement (hobby); line 4 a crowd gathered on the beach then the town shop"
+   "evidence": "cover: the character creator, a young vampire with a black cat, look changing (headline); 1 s of the town shop as the headline fades (no line); line 1 the vampire walking her farm; line 2 the crop rows with bats overhead; line 3 two townsfolk at a campfire then a flower arrangement (hobby); line 4 a crowd gathered on the beach then the town shop with a passer-by"
   },
   "Crop judged per beat": {
    "answer": "yes",
-   "evidence": "9:16 crops looked at 4 fps locally on 480p copies: creator focus 0.30 keeps the character and cat and leaves the button hints (x<0.12) and the hairstyle panel (x>0.48) outside; farm 0.47 centres the walking vampire; flowers 0.5 clear of the left panel; beach crowd 0.4; shop 0.70"
+   "evidence": "9:16 crops looked at 4 fps locally on 480p copies: creator focus 0.30 keeps the character and cat, button hints (x<0.12) and hairstyle panel (x>0.48) outside; farm 0.47 centres the walking vampire; crop rows 0.5; flowers 0.5 clear of the left panel; beach crowd 0.4; shop 0.70. Server shotgate: the Release Date copy's picture starts at 2.68 s, so the farm walk starts at 2.7"
   },
   "Headline in the band, not over the subject": {
    "answer": "yes",
