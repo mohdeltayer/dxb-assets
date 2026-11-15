@@ -42,7 +42,9 @@ sys.path.insert(0, HERE)
 
 CUT_THRESH = 0.3          # scene score for a cut that refuses a shot (autofocus places keyframes at 0.2)
 CUT_EDGE = 0.12           # a cut this close to a shot's start or end is the shot's own edge
-LB_TOL = 8                # rows of letterbox under this are noise (reel._bars)
+LB_TOL = 8                # rows of letterbox under this are noise (reel._bars) ...
+LB_SHARE = 0.015          # ... or under this share of the height (Duck v3, 15 Nov: 12 of 1080 rows, an encoder edge)
+PIC_TOL = 0.25            # a shot may start this much before the picture (it loses that much, no black shows)
 DRIFT_INSIDE = 0.5        # share of the subject that must stay inside the window
 SAMPLE_STEP = 0.2
 SUBJECT_MIN = 0.01        # subjects smaller than this share of the frame are not followed
@@ -78,14 +80,17 @@ def _U():
 
 
 def _probe(path):
-    """(width, height, video start_time, duration) of the file's first video stream."""
+    """(width, height, picture start, duration) of the file's first video stream. The picture start is in the seek
+    coordinates reel.py uses (`ffmpeg -ss T -i file` seeks to T past the file's own start time): the video stream's
+    start time minus the file's (Trafficity, 15 Nov: video 1.588 s, file 0.640 s, so the picture starts at 0.948 s)."""
     r = subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries',
-                        'stream=width,height,start_time:format=duration', '-of', 'json', path],
+                        'stream=width,height,start_time:format=duration,start_time', '-of', 'json', path],
                        capture_output=True, text=True)
     try:
         d = json.loads(r.stdout or '{}')
         st = (d.get('streams') or [{}])[0]
-        return (int(st.get('width') or 0), int(st.get('height') or 0), max(0.0, float(st.get('start_time') or 0)),
+        fs = float((d.get('format') or {}).get('start_time') or 0)
+        return (int(st.get('width') or 0), int(st.get('height') or 0), max(0.0, float(st.get('start_time') or 0) - fs),
                 float((d.get('format') or {}).get('duration') or 0))
     except (ValueError, TypeError):
         return 0, 0, 0.0, 0.0
@@ -111,7 +116,7 @@ def _letterbox_rows(f, a, secs, full):
     if os.path.basename(f) in reel.NOBARS:
         return full, False
     _crop, rows = reel._bars(_U() + f, max(0.0, a), max(0.3, secs))
-    return rows, bool(full and rows < full - LB_TOL)
+    return rows, bool(full and rows < full - max(LB_TOL, LB_SHARE * full))
 
 
 def _waived(job, key, f, start):
@@ -172,7 +177,7 @@ def timing_problems(job, shots):
     for i, f, st, secs, _fo in _shot_rows(job, shots):
         info = infos.setdefault(f, read(f))
         why = []
-        if st < info['picture_start'] - 0.02:
+        if st < info['picture_start'] - PIC_TOL:
             why.append(f"starts at {st:.2f} s, before the picture on the server's copy ({info['picture_start']:.2f} s)")
         cut = [c for c in _cuts(f, st, secs) if st + CUT_EDGE < c < st + secs - CUT_EDGE]
         if cut and not _waived(job, 'cut_ok', f, st):
@@ -279,11 +284,16 @@ def drift_problems(job, shots):
             samples = by.get(i) or []
             if not samples or not samples[0][1]:
                 continue
-            subj = max(samples[0][1], key=_area)
-            if _area(subj) < SUBJECT_MIN:
-                continue
             _crop, iw, rows = geo[f]
-            first_in = _inside(subj, _window(fo, samples[0][0], secs, iw, rows))
+            win0 = _window(fo, samples[0][0], secs, iw, rows)
+            big = [b for b in samples[0][1] if _area(b) >= SUBJECT_MIN]
+            if not big:
+                continue
+            framed = [b for b in big if _inside(b, win0) >= DRIFT_INSIDE]
+            # the subject is the one the window frames (Ranger's Path v3, 15 Nov: the window held the ranger in the
+            # middle while a larger foreground ranger stood at its edge); only when it frames none is the largest one cut
+            subj = max(framed or big, key=_area)
+            first_in = _inside(subj, win0)
             if first_in < AIMED_ELSEWHERE:
                 continue                                       # the window aims at something else: not this subject
             if first_in < DRIFT_INSIDE and _area(subj) >= CUT_MIN:

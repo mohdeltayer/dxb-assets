@@ -152,7 +152,8 @@ class ServerCopy(unittest.TestCase):
             '-f', 'lavfi', '-i', 'testsrc2=size=640x200:rate=30:duration=2',
             '-filter_complex', '[2:v]pad=640:360:0:80:black[lb];[0:v][1:v][lb]concat=n=3:v=1[v]', '-map', '[v]',
             '-c:v', 'libx264', '-pix_fmt', 'yuv420p', C.U + 'syn.mp4')
-        _ff('-i', C.U + 'syn.mp4', '-c', 'copy', '-output_ts_offset', '1.5', C.U + 'late.mp4')
+        _ff('-itsoffset', '1.5', '-i', C.U + 'syn.mp4', '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo', '-t', '11',
+            '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'aac', C.U + 'late.mp4')   # sound from 0, picture at 1.5
 
     @classmethod
     def tearDownClass(cls):
@@ -171,6 +172,9 @@ class ServerCopy(unittest.TestCase):
         self.assertIn('nearest clean start', where['shot 1'])
         self.assertIn('letterboxed', where['shot 2'])
         self.assertIn('before the picture', where['shot 3'])
+        self.assertAlmostEqual(SG.read('late.mp4')['picture_start'], 1.5, delta=0.1)
+        near, _ = SG.timing_problems({'name': 'x'}, [['late.mp4', 1.3, 2.0, 0.5]])   # 0.2 s early: inside PIC_TOL
+        self.assertEqual(near, [])
         waived = SG.timing_problems({'name': 'x', 'cut_ok': [['syn.mp4', 3.0, 'looked: a match cut']]}, shots[1:2])[0]
         self.assertEqual(waived, [])
 
