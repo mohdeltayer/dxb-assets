@@ -1,0 +1,226 @@
+{
+ "about": "The Game Awards 2026 nominees event kit (Mohammad, 15 Nov 2026); templates/tgakit.py. Names on the night from the official stream or thegameawards.com only. Candidate pool from a research pass of 15 Nov (scores, Golden Joystick 2026 results); a nominee outside it is added with `tgakit.py add` and read before the render.",
+ "not_in_pool": {
+  "gta6": "GTA VI (19 Nov, eligible by date): no direct official MP4 found (Rockstar's site has no media files, not on Steam, IGN slug not found); playstation.com pre-order stills only. If nominated: Rockstar Newswire or IGN's trailer page, else official stills with stills_reason",
+  "crimson": "Crimson Desert: Steam has no launch trailer (only the Enhanced announcement and a Japanese thank-you video); IGN or Pearl Abyss's press site if nominated"
+ },
+ "candidates": {
+  "re9": {
+   "title": "Resident Evil Requiem",
+   "line": "لعبة Resident Evil Requiem",
+   "credit": "كابكوم (Capcom)",
+   "tile": "tga26-re9",
+   "footage": {
+    "file": "tga26-re9.mp4",
+    "steam": 3764200,
+    "trailer": "07_RE9_LaunchPV",
+    "start": 0,
+    "seconds": 240
+   },
+   "shots": null
+  },
+  "oot": {
+   "title": "The Legend of Zelda: Ocarina of Time",
+   "line": "لعبة The Legend of Zelda: Ocarina of Time",
+   "credit": "نينتيندو (Nintendo)",
+   "tile": "tga26-oot",
+   "footage": {
+    "file": "tga26-oot.mp4",
+    "url": "https://assets.nintendo.com/video/upload/store/software/switch2/70010000130792/Video/4b2fa8b7887596c8de08f1e18dbbd880e489622cc501b469f6316c3dc383a5a7.mp4"
+   },
+   "shots": null,
+   "note": "Nintendo store 720p (lowbit): lowres_ok must name the copies searched"
+  },
+  "fh6": {
+   "title": "Forza Horizon 6",
+   "line": "لعبة Forza Horizon 6",
+   "credit": "بلاي غراوند (Playground Games)",
+   "tile": "tga26-fh6",
+   "footage": {
+    "file": "tga26-fh6.mp4",
+    "steam": 2483190,
+    "trailer": "Forza Horizon 6 Accolades",
+    "start": 0,
+    "seconds": 240
+   },
+   "shots": null
+  },
+  "bigwalk": {
+   "title": "Big Walk",
+   "line": "لعبة Big Walk",
+   "credit": "بانيك (Panic)",
+   "tile": "tga26-bigwalk",
+   "footage": {
+    "file": "tga26-bigwalk.mp4",
+    "steam": 1478500,
+    "trailer": "Release Date Trailer",
+    "start": 0,
+    "seconds": 240
+   },
+   "shots": null
+  },
+  "007": {
+   "title": "007 First Light",
+   "line": "لعبة 007 First Light",
+   "credit": "آي أو إنترأكتيف (IO Interactive)",
+   "tile": "tga26-007",
+   "footage": {
+    "file": "tga26-007.mp4",
+    "steam": 3768760,
+    "trailer": "007 First Light  - Accolades",
+    "start": 0,
+    "seconds": 240
+   },
+   "shots": null
+  },
+  "pbz": {
+   "title": "Phantom Blade Zero",
+   "line": "لعبة Phantom Blade Zero",
+   "credit": "إس جيم (S-GAME)",
+   "tile": "tga26-pbz",
+   "footage": {
+    "file": "tga26-pbz.mp4",
+    "steam": 4115450,
+    "trailer": "Phantom Blade Zero - Launch",
+    "start": 0,
+    "seconds": 240
+   },
+   "shots": null
+  },
+  "pokopia": {
+   "title": "Pokémon Pokopia",
+   "line": "لعبة Pokémon Pokopia",
+   "credit": "نينتيندو (Nintendo)",
+   "tile": "tga26-pokopia",
+   "footage": {
+    "file": "tga26-pokopia.mp4",
+    "url": "https://assets.nintendo.com/video/upload/store/software/switch2/70010000107421/Video/b84626212780e9178615a066936ed37bdf12b1f4d595b216f6a7865a79c22bcf.mp4"
+   },
+   "shots": null,
+   "note": "Nintendo store 720p (lowbit)"
+  },
+  "fe": {
+   "title": "Fire Emblem: Fortune's Weave",
+   "line": "لعبة Fire Emblem: Fortune's Weave",
+   "credit": "نينتيندو (Nintendo)",
+   "tile": "tga26-fe",
+   "footage": {
+    "file": "tga26-fe.mp4",
+    "url": "https://assets.nintendo.com/video/upload/store/software/switch2/70010000126929/Video/e04eca99e84505b3299969466d4c68deefaca638a9341101b9fb4c59789d9a32.mp4"
+   },
+   "shots": null,
+   "note": "Nintendo store 720p (lowbit)"
+  },
+  "saros": {
+   "title": "Saros",
+   "line": "لعبة Saros",
+   "credit": "سوني (Sony)",
+   "tile": "tga26-saros",
+   "footage": {
+    "file": "tga26-saros.mp4",
+    "url": "https://assets.ign.com/videos/zencoder/2026/04/23/3840/c5fd83c1-cd7e-439c-bc91-5e1d6c01c0dc-1776950979.mp4"
+   },
+   "shots": null,
+   "note": "IGN's 4K copy of Sony's launch trailer"
+  },
+  "dispatch": {
+   "title": "Dispatch",
+   "line": "لعبة Dispatch",
+   "credit": "أدهوك ستوديو (AdHoc Studio)",
+   "tile": "tga26-dispatch",
+   "footage": {
+    "file": "tga26-dispatch.mp4",
+    "steam": 2592160,
+    "trailer": "Release Date Trailer",
+    "start": 0,
+    "seconds": 240
+   },
+   "shots": null,
+   "note": "eligibility for 2026 per AdHoc (Push Square, Dec 2025); not confirmed by TGA"
+  },
+  "mina": {
+   "title": "Mina the Hollower",
+   "line": "لعبة Mina the Hollower",
+   "credit": "ياخت كلوب غيمز (Yacht Club Games)",
+   "tile": "tga26-mina",
+   "footage": {
+    "file": "tga26-mina.mp4",
+    "steam": 1875580,
+    "trailer": "Mina the Hollower - Launch",
+    "start": 0,
+    "seconds": 240
+   },
+   "shots": null
+  },
+  "pragmata": {
+   "title": "PRAGMATA",
+   "line": "لعبة PRAGMATA",
+   "credit": "كابكوم (Capcom)",
+   "tile": "tga26-pragmata",
+   "footage": {
+    "file": "tga26-pragmata.mp4",
+    "steam": 3357650,
+    "trailer": "06_PRAGMATA_PV6",
+    "start": 0,
+    "seconds": 240
+   },
+   "shots": null
+  },
+  "swgr": {
+   "title": "STAR WARS: Galactic Racer",
+   "line": "لعبة STAR WARS: Galactic Racer",
+   "credit": "سيكرت مود (Secret Mode)",
+   "tile": "tga26-swgr",
+   "footage": {
+    "file": "tga26-swgr.mp4",
+    "steam": 4078430,
+    "trailer": "Launch Trailer",
+    "start": 0,
+    "seconds": 240
+   },
+   "shots": null
+  },
+  "gears": {
+   "title": "Gears of War: E-Day",
+   "line": "لعبة Gears of War: E-Day",
+   "credit": "إكس بوكس (Xbox)",
+   "tile": "tga26-gears",
+   "footage": {
+    "file": "tga26-gears.mp4",
+    "steam": 3010850,
+    "trailer": "Accolades Trailer",
+    "start": 0,
+    "seconds": 240
+   },
+   "shots": null
+  },
+  "control": {
+   "title": "Control Resonant",
+   "line": "لعبة Control Resonant",
+   "credit": "ريميدي (Remedy)",
+   "tile": "tga26-control",
+   "footage": {
+    "file": "tga26-control.mp4",
+    "steam": 3669870,
+    "trailer": "ACCOLADES TRAILER",
+    "start": 0,
+    "seconds": 240
+   },
+   "shots": null
+  },
+  "dawnwalker": {
+   "title": "The Blood of Dawnwalker",
+   "line": "لعبة The Blood of Dawnwalker",
+   "credit": "ريبل ولفز (Rebel Wolves)",
+   "tile": "tga26-dawnwalker",
+   "footage": {
+    "file": "tga26-dawnwalker.mp4",
+    "steam": 3751260,
+    "trailer": "The Blood of the Dawnwalker - Launch",
+    "start": 0,
+    "seconds": 240
+   },
+   "shots": null
+  }
+ }
+}

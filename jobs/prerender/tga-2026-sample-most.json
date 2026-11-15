@@ -1,0 +1,183 @@
+{
+ "name": "tga-2026-sample-most",
+ "story": "2026-11-17-tga-2026-most-nominated",
+ "kind_news": "results",
+ "built_by": "production-1",
+ "render_lane": "server",
+ "out": "cards/2026-11/tga-2026-most-nominated-reel-v1.mp4",
+ "label": "رسمي",
+ "source": "ذا غيم أووردز (The Game Awards)",
+ "date": "17 Nov 2026",
+ "theme": "gold",
+ "style": null,
+ "template": "clipcard",
+ "skin": "house",
+ "cut": true,
+ "track": "bed",
+ "bed_reason": "several games in one Reel, each on its own official trailer: no single trailer stretch runs under all of them, and cutting each trailer's own sound at every cut would jump; our bed under the whole cut (event kit, 15 Nov)",
+ "genre": [
+  "industry/hardware"
+ ],
+ "platform": "multi",
+ "beat": "event",
+ "subject_person": null,
+ "sensitive": "none",
+ "footage": [
+  {
+   "file": "tga26-oot.mp4",
+   "url": "https://assets.nintendo.com/video/upload/store/software/switch2/70010000130792/Video/4b2fa8b7887596c8de08f1e18dbbd880e489622cc501b469f6316c3dc383a5a7.mp4"
+  }
+ ],
+ "shots": [
+  [
+   "tga26-oot.mp4",
+   8.0,
+   3.6,
+   0.5
+  ],
+  [
+   "tga26-oot.mp4",
+   20.0,
+   4.31,
+   0.5
+  ],
+  [
+   "tga-2026-most-nominated-gfx-ranking.png",
+   null,
+   5.0,
+   null
+  ],
+  [
+   "tga26-oot.mp4",
+   40.0,
+   3.24,
+   0.5
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "تتصدر لعبة The Legend of Zelda: Ocarina of Time",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "ويُعلن الفائزون في حفل 10 ديسمبر",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   1,
+   "المصدر: نينتيندو (Nintendo)"
+  ],
+  [
+   2,
+   2,
+   "المصدر: ذا غيم أووردز (The Game Awards)"
+  ],
+  [
+   3,
+   3,
+   "المصدر: نينتيندو (Nintendo)"
+  ]
+ ],
+ "headline": "الأكثر ترشيحًا\nفي ذا غيم أووردز 2026",
+ "spoken": "تتصدر لعبة The Legend of Zelda: Ocarina of Time القائمة بأكبر عدد من الترشيحات في ذا غيم أووردز (The Game Awards) 2026. ويُعلن الفائزون في حفل 10 ديسمبر.",
+ "gfx": [
+  {
+   "file": "tga-2026-most-nominated-gfx-ranking.png",
+   "kind": "ranking",
+   "rows": [
+    {
+     "rank": "1",
+     "name": "The Legend of Zelda: Ocarina of Time",
+     "value": "11",
+     "unit": "ترشيحًا",
+     "image": "tga26-oot",
+     "n": 11
+    },
+    {
+     "rank": "2",
+     "name": "007 First Light",
+     "value": "9",
+     "unit": "ترشيحات",
+     "image": "tga26-007",
+     "n": 9
+    },
+    {
+     "rank": "3",
+     "name": "Fire Emblem: Fortune's Weave",
+     "value": "8",
+     "unit": "ترشيحات",
+     "image": "tga26-fe",
+     "n": 8
+    },
+    {
+     "rank": "4",
+     "name": "STAR WARS: Galactic Racer",
+     "value": "7",
+     "unit": "ترشيحات",
+     "image": "tga26-swgr",
+     "n": 7
+    },
+    {
+     "rank": "5",
+     "name": "The Blood of Dawnwalker",
+     "value": "6",
+     "unit": "ترشيحات",
+     "image": "tga26-dawnwalker",
+     "n": 6
+    },
+    {
+     "rank": "6",
+     "name": "Resident Evil Requiem",
+     "value": "5",
+     "unit": "ترشيحات",
+     "image": "tga26-re9",
+     "n": 5
+    }
+   ],
+   "animate": true
+  }
+ ],
+ "ground_footage": [
+  "tga26-oot.mp4",
+  20.0
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: names read from the official stream and https://thegameawards.com/nominees at sample",
+  "SOURCE: not already posted": "yes: ledger find recorded in the story file; the 14 Nov watch-guide lead was released unbuilt",
+  "SOURCE: age": "yes: announced tonight, posted at once (T0)",
+  "ANGLE: hook, why now, what it means, payoff": "yes: in the story file angle",
+  "STORY TYPE: EVENT": "yes: the ceremony date (10 Dec) on the closing line; Dubai time not announced yet, so not stated",
+  "STORY: one spoken paragraph first": "yes: \"spoken\" in the job, lines cut from it in order",
+  "STORY: names match names-ar.md": "yes: games in English as the publishers write them; ذا غيم أووردز (The Game Awards) added to names-ar.md 15 Nov",
+  "SOUND: our bed with reason": "yes: bed_reason in the job",
+  "PICTURE: footage first, official trailers": "yes: every nominee on its own official trailer: The Legend of Zelda: Ocarina of Time, 007 First Light, Fire Emblem: Fortune's Weave, STAR WARS: Galactic Racer, The Blood of Dawnwalker, Resident Evil Requiem",
+  "PICTURE: credit on every clip": "yes: one credit per shot naming the publisher, with the n of N counter",
+  "PICTURE: nothing graphic": "yes: stretches read by the server shots mode; the director looks once at the frames"
+ },
+ "decision_log": {
+  "hook": "The Legend of Zelda: Ocarina of Time (most nominations)",
+  "card": "ranking, counts only on the card",
+  "close": "The Legend of Zelda: Ocarina of Time again",
+  "music": "our bed (bed_reason)"
+ },
+ "note": "TEXT CHECK SAMPLE with placeholder shots and the longest titles; never rendered"
+}
