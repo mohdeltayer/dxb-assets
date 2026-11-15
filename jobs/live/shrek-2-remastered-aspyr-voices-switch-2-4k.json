@@ -89,12 +89,12 @@
   ],
   [
    "shrek2r-launch.mp4",
-   30.1,
-   0.75,
+   30.35,
+   0.5,
    [
     [
      0.0,
-     0.5
+     0.36
     ]
    ]
   ],
@@ -121,7 +121,7 @@
    ]
   ]
  ],
- "spoken": "أصوات 2004 لم تتغير في Shrek 2 Remastered، قالها منتجا اللعبة في أسباير (Aspyr). وقالت أسباير لموقع نينتيندو إفريثينغ إن اللعبة تعمل بدقة 4K مع 60 إطارًا على Switch 2 في وضع التلفاز. ولا جديد بعد عن ألعاب Shrek الأخرى.",
+ "spoken": "أصوات 2004 لم تتغير في Shrek 2 Remastered، قالها منتجا اللعبة في أسباير (Aspyr). وقالت أسباير لموقع نينتيندو إفريثينغ إن اللعبة تعمل بدقة 4K مع 60 إطارًا على Switch 2 في وضع التلفاز. ولم تُعلن ألعاب Shrek أخرى بعد.",
  "lines": [
   [
    3,
@@ -134,7 +134,7 @@
    6,
    8,
    [
-    "لا جديد بعد عن\nألعاب Shrek الأخرى"
+    "لم تُعلن ألعاب Shrek\nأخرى بعد"
    ]
   ]
  ],
@@ -244,13 +244,14 @@
   "0.95 to 3.2 (headline): Shrek and Gingy running through the forest from behind, Fiona mid-right after the box has closed (launch 42.7 for 1.1 s, ending before the rainbow cut at 43.84 on the server copy), Shrek in the kitchen level, mid-frame below the band (launch 45.0 for 1.15 s, before the SHREK title at 46.31); no face under the headline",
   "3.15 to 6.6 L1 «قالها منتجا اللعبة / في أسباير (Aspyr)»: Shrek walking to camera (announce 38.9), Shrek in the potion shop, framed at 0.65 and cut at 28.55 before he leaves the frame (launch 26.55)",
   "6.6 to 10.6 card «أسباير لموقع نينتيندو إفريثينغ / دقة 4K مع 60 إطارًا / على Switch 2 في وضع التلفاز» over the shop, tree and path footage, dimmed (ground start 22.0 plays the trailer from 26.6 at the card's place on the shared clock: t0 = sum of the earlier shots minus 0.4 s each = 4.6 s), no line over it; the trailer is illustration, the figure is Aspyr's (frames a second spelled out in the caption); the first note «في الثانية على Switch 2 في وضع التلفاز» was wider than the plate",
-  "10.6 to 13.7 L2 «لا جديد بعد عن / ألعاب Shrek الأخرى»: Shrek on the forest path (launch 30.1, ends before the REMASTERED GRAPHICS card at 31.01), Fiona dancing then Gingy in one move (announce 36.85 to 37.62, after the FAR FAR AWAY sign leaves the frame), closing on the framed group picture of Shrek and Fiona with Donkey (announce 40.6)",
+  "10.6 to 13.5 L2 «لم تُعلن ألعاب Shrek / أخرى بعد» (Aspyr: 'we don't have anything else to share today'): Shrek on the forest path with Donkey entering (launch 30.35, framed at 0.36, ends before the REMASTERED GRAPHICS card at 31.01), Fiona dancing then Gingy in one move (announce 36.85 to 37.62, after the FAR FAR AWAY sign leaves the frame), closing on the framed group picture of Shrek and Fiona with Donkey (announce 40.6)",
   "rejected: both trailers' gameplay from 19 to 23 s (burnt-in 'Footage captured on PC' disclaimer), the street brawl (launch 24, announce 22.5), the balloon cannon with a crosshair (announce 26 to 28), the knight and giant Gingy (launch 33 to 35), the pumpkin fight, the HUD level (announce 32.5 to 35), the bridge (sign cut at the edge), the chickens (Donkey cut at both edges), the cows (a cow cut at the right edge), the giant cookie in the tree (cut at the edges), title cards, photo-mode UI and end slates; the Nintendo store trailer is 1280x720 at 2.6 Mbps (enlarged past 2x), not used",
   "sound: Launch Trailer music from 19.0 s, music_only, one stretch under the whole cut",
   "v1 render (run 43705447224): the output smear check flagged 15.20 to 16.33 s (peak 40.8), the cut from the forest path to the framed group picture; looked at the source frames, no damage, waived with block_ok",
   "v2 (run 43705711930, qc pass) not used: the card's ground ran the trailer from about 32 s (the shared clock adds t0), so the REMASTERED GRAPHICS title, the night-town knight and the PHOTO MODE page showed blurred behind the card; the headline sat on Gingy's head at 2.0 s and on Donkey at 2.25 s (the Gingy shot crossed a scene cut); edge cuts on the cows, the chickens and the shop. v3 fixes all of these; the lines were shortened to fit the clean footage (one fact each, same meaning)",
   "v3 dispatch stopped at the server text check (head_overlap: line 1 entered at 3.28 s, the headline fades from 3.30 s): the kitchen shot is 0.99 s (was 0.95); card ground start 21.96 to keep the shop at the card's start",
-  "v3 (run 43707698435, qc pass) not used: the forest shot ran 0.1 s into the rainbow level (server copy cut at 43.84), and the Donkey farm shot showed the 'Farm' sign cut at the left edge at 11.5 s. v4: forest 1.1 s, kitchen 1.15 s, Donkey dropped for Fiona and Gingy (announce 36.85), card ground 21.95 (t0 4.65)"
+  "v3 (run 43707698435, qc pass) not used: the forest shot ran 0.1 s into the rainbow level (server copy cut at 43.84), and the Donkey farm shot showed the 'Farm' sign cut at the left edge at 11.5 s. v4: forest 1.1 s, kitchen 1.15 s, Donkey dropped for Fiona and Gingy (announce 36.85), card ground 21.95 (t0 4.65)",
+  "v4 dispatch stopped at the server shotgate (shot 6, the forest path: Shrek leaves the 9:16 crop at 30.40 s at focus 0.5); reframed at 0.36 so Shrek runs mid-frame and Donkey enters from the left"
  ],
  "block_ok": [
   [
