@@ -63,9 +63,9 @@ def merge_shots(kit, reads):
             continue
         st = _stretches(r)
         dur = float(r.get('duration') or 120)
-        ok = [s for s in st if s[1] >= ITEM_SECS]
+        ok = [s for s in st if s[1] >= ITEM_SECS] or sorted(st, key=lambda s: -s[1])[:1]
         if not ok:
-            print(f'tgakit: {k}: no clean stretch of {ITEM_SECS} s; {len(st)} shorter ones: pick by hand')
+            print(f'tgakit: {k}: no clean stretch at all: read another official trailer')
             kit['candidates'][k]['shots'] = None
             continue
         ok.sort(key=lambda s: abs(s[0] + s[1] / 2 - dur / 2))
@@ -73,7 +73,7 @@ def merge_shots(kit, reads):
         rest = [s for s in ok[1:] if abs(s[0] - item[0]) > 4]
         hook = rest[0] if rest else None
         close = rest[1] if len(rest) > 1 else None
-        kit['candidates'][k]['shots'] = {'item': item, 'hook': hook, 'close': close,
+        kit['candidates'][k]['shots'] = {'item': item, 'hook': hook, 'close': close, 'stretches': st,
                                          'picture_start': r.get('picture_start'), 'decode_clean': r.get('decode_clean'),
                                          'read': f"{len(st)} clean stretches, {len(r.get('rejected', []))} rejected"}
         print(f'tgakit: {k}: item {item[0]} s ({item[1]} s), hook {hook and hook[0]}, close {close and close[0]}'
@@ -100,12 +100,16 @@ def _read(text):
 
 def _shot(c, role, secs, line=None):
     s = c['shots'][role]
-    if line:
-        secs = max(secs, round(_read(line), 2))
+    if line and role == 'item' and s[1] < _read(line):          # a longer clean stretch that holds the line, if any
+        fit = [x for x in c['shots'].get('stretches', []) if x[1] >= _read(line)]
+        if fit:
+            s = max(fit, key=lambda x: x[1])
+    if line:                                                     # at least the reading time; up to `secs` when the stretch allows
+        secs = max(round(_read(line), 2), min(secs, s[1]))
         if secs > s[1] + 1e-6:
             raise SystemExit(f"tgakit: {c['title']}: the line needs {secs} s and the clean stretch at {s[0]} s is {s[1]} s; "
                              'pick a longer stretch from the shots read (kit file) or shorten the line')
-    return [c['footage']['file'], s[0], min(secs, s[1]), s[2]]
+    return [c['footage']['file'], s[0], min(secs, s[1]), None]   # focus null: the render's autofocus (YOLO) frames it
 
 
 def _base(name, story, template, kind):
