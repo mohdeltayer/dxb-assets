@@ -1,0 +1,26 @@
+{
+ "name": "project-stampede-steam-alpha-v5",
+ "out": "cards/2026-11/project-stampede-steam-alpha-v5-reel-v5.mp4",
+ "verdict": "pass",
+ "at": "2026-11-15T04:07:37Z",
+ "findings": [],
+ "notes": [
+  "length 16.6 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 82.0; leak_pct 0.1; cache {'hit': 1, 'miss': 1}; separate_secs 3.2; secs 8.9",
+  "smear check: exempt 9.15 to 14.15 s (our own cards)",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 15.06, \"held_under_text\": 0.0, \"secs\": 16.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "fc001dfbb2015f04b1891afddcec8a5d95f21c34",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "trailer"
+}
