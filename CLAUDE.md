@@ -3660,11 +3660,14 @@ can do it, focus on that so the director does not check multiple times, especial
 A. No story line enters before the headline band clears (the head layer fades out from 3.30 s): the text check
    (`textrules.head_overlap`) refuses it and names the earliest start and how much longer the shots before it must be.
 B. Shot times are read on the server's own copy (`templates/shotgate.py`, run by render_job before anything is built
-   and in prerender's check): a shot may not start before the picture (the video's start_time), cross a scene cut, or
-   sit on a letterbox; each refusal names the nearest clean start. The prerender `shots` read gives the picture start,
+   and in prerender's check): a shot may not start more than 0.25 s before the picture (the video's start time minus
+   the file's, the seek coordinates reel.py uses), cross a scene cut, or sit on a letterbox (over 1.5% of the height);
+   each refusal names the nearest clean start. The prerender `shots` read gives the picture start,
    cuts and letterboxed scenes, and t0make writes shot times from it (and lets line 1 wait for the headline).
-C. The subject (YOLO, start, middle, end) may not leave the 9:16 window during a shot, nor be cut by its edge from the
-   first frame; the refusal gives the longest safe length. Waivers after looking: cut_ok, letterbox_ok, drift_ok.
+C. The subject (YOLO, start, middle, end; the one the window frames, else the largest) may not leave the 9:16 window
+   during a shot, nor be cut by its edge from the first frame; the refusal gives the longest safe length. Waivers after
+   looking: cut_ok, letterbox_ok, drift_ok. YOLO sees people, vehicles and animals: on stylised art (POPUCOM's
+   submarine and heroes) it finds nothing, so there the director's one look is still the check.
 D. A -gfx- card on footage takes the calmest window of its named stretch (ground_footage [file, start] or [file, start,
    span], default 12 s) and the render prints it; "ground_seek": "fixed" keeps the seek as written.
 E. Director: with qc pass it looks once at the look frames (now for every Reel) and passes, or sends the Reel back once

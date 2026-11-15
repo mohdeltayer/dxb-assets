@@ -3,21 +3,26 @@ Mohammad 15 Nov 2026: "if the server can do it, focus on that so the director do
 
 On 15 Nov every Reel rendered three times although server qc passed each time. The send-backs this replaces:
   B  shot times picked on a different copy than the server renders. Duck Side of the Moon: the server copy's video
-     starts 1.52 s in, so the shots crossed the trailer's scene cuts and one landed on a letterboxed stretch (v1, v2).
-  C  the subject drifts out of the 9:16 window during a shot (POPUCOM v2: the submarine leaves the edge).
+     starts 1.18 s into the seek timeline (1.52 s by its own clock), so the shots crossed the trailer's scene cuts and
+     one landed on a letterboxed stretch (v1, v2).
+  C  the subject drifts out of the 9:16 window during a shot (Dreamlight Valley v1, Ranger's Path v1; POPUCOM v2's
+     submarine too, which the detector cannot see on stylised art).
   D  a card's ground on a busy frame (Duck v1, v2: the trailer behind the card was mid-action).
 
     python3 templates/shotgate.py job <job.json>        every footage file fetched first; prints every problem, exit 1
     python3 templates/shotgate.py read <uploads file>   the file's facts: picture start, scene cuts, letterbox
 
-B, per footage shot: it may not start before the picture (ffprobe's video start_time on the copy in uploads), may not
+B, per footage shot: it may not start more than PIC_TOL before the picture (the video stream's start time minus the
+file's, in the seek coordinates of `ffmpeg -ss`, on the copy in uploads), may not
 cross one of the trailer's scene cuts (reel.scenes at CUT_THRESH, a cut within CUT_EDGE of either end is the shot's own
-edge), and may not sit on a letterboxed stretch (reel._bars over the shot, as the montage reads it). Each refusal names
+edge), and may not sit on a letterboxed stretch (reel._bars over the shot, as the montage reads it; bars over LB_TOL
+rows and LB_SHARE of the height). Each refusal names
 the nearest clean start: the start closest to the job's own, inside one scene, after the picture start and with no
 letterbox, for the same length (or says how short the shot must be where no such start is near).
-C, per footage shot: the subject (the largest person, vehicle or animal YOLOv8n finds in the shot's first frame) is
-looked for again at the middle and the end (a subject already half out of the window at the first frame is "cut",
-as POPUCOM v1's heroes and Ranger's Path v1's ranger were); when less than DRIFT_INSIDE of it is inside the 9:16 window the shot uses
+C, per footage shot: the subject (the largest person, vehicle or animal YOLOv8n finds in the shot's first frame that
+the window holds at least half of, else the largest one) is
+looked for again at the middle and the end (a subject already half out of the window at the first frame is
+"cut"); when less than DRIFT_INSIDE of it is inside the 9:16 window the shot uses
 (its focus, the letterbox crop and the frame height), the frames between are read every SAMPLE_STEP s and the problem
 reads "subject leaves the crop at N s" with the longest safe length. Without the detector the check is skipped, said.
 D, per -gfx- card on footage ("ground_footage", or the card's own [file, start]): ground_pick() picks the calmest window
