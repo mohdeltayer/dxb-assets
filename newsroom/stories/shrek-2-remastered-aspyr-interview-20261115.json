@@ -1,12 +1,67 @@
 {
  "id": "shrek-2-remastered-aspyr-interview-20261115",
  "title": "Shrek 2 Remastered: Aspyr interview to Nintendo Everything (15 Nov 2026): original 2004 voices kept 1:1, 4K 60 fps docked on Switch 2, nothing to share yet on other Shrek remasters",
- "status": "claimed for 09:15 Dubai Mon 16 Nov 2026 (05:15Z); building",
+ "status": "building for 09:15 Dubai Mon 16 Nov 2026 (05:15Z); not scheduled",
  "lane": "digital-lounge",
  "game": "DreamWorks Shrek 2 Remastered",
- "companies": ["Aspyr Media"],
- "subject_person": null,
+ "companies": [
+  "Aspyr Media"
+ ],
+ "subject_person": {
+  "name": "Jeff Carmen",
+  "role": "senior game producer at Aspyr (interviewed with associate game producer Conner Allen)",
+  "photo_source": "none licensed: aspyr.com/press (404), the Nintendo Everything interview (key art only), Wikimedia Commons (no image); the window shows the game's own Steam screenshot (Shrek and Donkey) with the name plate"
+ },
  "claimed_at": "2026-11-15T10:25:00Z",
  "slot": "09:15 Dubai Mon 16 Nov 2026 (05:15Z)",
- "sources": [{"role": "outlet (interview)", "name": "Nintendo Everything interview with Aspyr's Jeff Carmen and Conner Allen, 15 Nov 2026 06:50Z", "url": "https://nintendoeverything.com/shrek-2-remastered-interview-why-the-game-was-brought-back-for-the-modern-era-possibility-of-other-shrek-remasters-more/"}]
+ "sources": [
+  {
+   "role": "primary (interview, outlet)",
+   "name": "Nintendo Everything interview with Aspyr's senior game producer Jeff Carmen and associate game producer Conner Allen, published 15 Nov 2026 06:50Z (RSS pubDate)",
+   "url": "https://nintendoeverything.com/shrek-2-remastered-interview-why-the-game-was-brought-back-for-the-modern-era-possibility-of-other-shrek-remasters-more/",
+   "quote": "What you'll hear is the original 2004 voice work, 1:1. ... The game will run at 60 FPS in 4K (docked) and 60 FPS in 1080p (handheld) on Nintendo Switch 2 ... Right now our focus is on Shrek 2 Remastered and getting it into players' hands, and we don't have anything else to share today.",
+   "read_at": "2026-11-15T10:20Z"
+  },
+  {
+   "role": "primary (store)",
+   "name": "Steam app 2523740 appdetails cc=ae: DreamWorks Shrek 2 Remastered, released 10 Nov 2026, publisher and developer Aspyr Media, two trailers (Launch, Announce)",
+   "url": "https://store.steampowered.com/app/2523740/"
+  }
+ ],
+ "genre": [
+  "family",
+  "adventure"
+ ],
+ "kind": "quote",
+ "first_report": "Nintendo Everything, 15 Nov 2026 06:50Z (the interview is exclusive to that outlet; no Arabic outlet carries it at 10:30Z)",
+ "source_type": "secondary",
+ "footage": "official Shrek 2 Remastered Launch Trailer and Announce Trailer (Aspyr, Steam app 2523740, 1920x1080 60 fps, 5.5 and 5.8 Mbps); one Steam screenshot (Shrek and Donkey) in the person window",
+ "beat": "interview (tidbits: original 2004 voices kept 1:1; 4K 60 fps docked on Switch 2; nothing to share on other Shrek remasters)",
+ "recipe": "no board recipe for an interview tidbit; written on the person-in-the-news and quote principles: headline with the tidbit over moving footage and the name plate at 0 s, who said it, one card with the figure, the open question, closing group picture",
+ "related": [
+  "2026-10-18-shrek-2-remastered-leak-gta-6-parody",
+  "2026-10-20-shrek-2-remastered-official-november-10",
+  "2026-11-10-shrek-2-remastered-out-now"
+ ],
+ "what_is_new": "our 10 Nov post was the launch; the news now is what Aspyr's producers said on 15 Nov: the 2004 voice work kept 1:1, the Switch 2 and Switch performance targets, GameShare, and no other Shrek remaster to announce",
+ "angle": {
+  "hook": "the voices players remember from 2004 are untouched in Shrek 2 Remastered",
+  "why_now": "Aspyr's producers said it in an interview Nintendo Everything published on 15 Nov 2026, five days after launch",
+  "what_it_means_here": "players in the region who grew up on the 2004 game hear the same voices, and Switch 2 owners get 4K at 60 fps on the TV",
+  "payoff": "no word yet on other Shrek games returning; the whole gang in one closing picture"
+ },
+ "sensitive": "none (family game; brawling shots left out)",
+ "ledger_find": {
+  "at": "2026-11-15T10:22Z",
+  "method": "git grep -il over origin/main newsroom/stories (ledger.py find not run in the tiny clone)",
+  "words": [
+   "shrek"
+  ],
+  "hits": [
+   "2026-10-18-shrek-2-remastered-leak-gta-6-parody",
+   "2026-10-20-shrek-2-remastered-official-november-10",
+   "2026-11-10-shrek-2-remastered-out-now"
+  ],
+  "verdict": "follow-up with new facts (the interview), not a duplicate"
+ }
 }
