@@ -1,7 +1,7 @@
 {
  "id": "project-stampede-steam-page-alpha-trailer-20261115",
  "title": "Project Stampede, an off-road arcade racer that pays respects to the 6th and 7th console generations' arcade racers, opens its Steam page with an alpha trailer",
- "status": "built: job v1 for the 22:15 Dubai Sun 15 Nov slot (18:15Z); render pending; NOT scheduled (stop point: no director, no Publer)",
+ "status": "built: Reel v4 QC pass (cards/2026-11/project-stampede-steam-alpha-reel-v4.mp4, render 55c638c, job sha 6cd75a4b, dispatches 5 by qc.json: one text stop, v1 to v3 superseded); for the 22:15 Dubai Sun 15 Nov slot (18:15Z); NOT scheduled (stop point: no director, no Publer); RE-GATE within the hour before 22:15 Dubai (Sun)",
  "lane": "digital-lounge",
  "game": "Project Stampede",
  "companies": [
@@ -107,7 +107,7 @@
    "تحيي سباقات الأركيد القديمة / حسب مطورها"
   ],
   "card": "فئات المركبات · 10",
-  "credit": "المصدر: دايركتريكس برودكشنز (Directrix Productions)",
+  "credit": "المصدر: دايركتريكس (Directrix) (short form; the full «دايركتريكس برودكشنز (Directrix Productions)» ran out of the safe zone at render 1)",
   "chip": "نظرة أولى"
  },
  "arabic_passes": {
@@ -133,5 +133,25 @@
   "deepl_back": "v1 line «لعبة Project Stampede فتحت صفحتها على Steam» read back as 'has launched on Steam' (wrong: not released), replaced by «أُعلن عن Project Stampede على Steam» ('was announced on its Steam page'); the X text's «وصدم المنافسين طريق للتقدم» read back as 'ramming opponents to clear a path forward', replaced by «وتتقدم فيها بصدم منافسيك أيضًا» ('you can also advance by ramming your opponents'); headline 'A racing game that rewards you for crashing into your opponents'; card 'Vehicle Categories: 10'; line 3 'Revives classic arcade racing games, according to its developer'; caption read back to the meaning"
  },
  "regate": "RE-GATE within the hour before 22:15 Dubai (Sun): re-read the Steam page (release date, trailer, text) and search 'Project Stampede' for any change",
- "re_gate_line": "RE-GATE within the hour before 22:15 Dubai (Sun)"
+ "re_gate_line": "RE-GATE within the hour before 22:15 Dubai (Sun)",
+ "reel": {
+  "path": "cards/2026-11/project-stampede-steam-alpha-reel-v4.mp4",
+  "strip": "cards/2026-11/project-stampede-steam-alpha-strip.jpg",
+  "dense": "cards/2026-11/project-stampede-steam-alpha-dense.jpg",
+  "qc": "cards/2026-11/project-stampede-steam-alpha-qc.json (pass, 0 findings)",
+  "job": "jobs/live/project-stampede-steam-alpha.json",
+  "job_sha": "6cd75a4b92459570d89ada4f95defd555e5d5979",
+  "render_commit": "55c638c",
+  "length": "16.6 s before the end card",
+  "sound": "trailer, audio split applied (music 82.0 percent, leak 0.1 percent); RMS -11 to -18 dB to the end card; faster-whisper on the final mix: music only",
+  "lifeless": 0.0,
+  "history": [
+   "render 1 (603f138 job): stopped, credit out of the safe zone",
+   "v1 (1b0c69d): QC pass but the server's fetch is 0.35 s later than the session copy, so shots landed on white flashes and the festival sign",
+   "v2 (d057999): card ground showed the trailer's burnt-in subtitle",
+   "v3 (87fce57): cover crop at the red car's edge; a sponsor banner ('BEERBOT') readable in the truck shot",
+   "v4 (55c638c): all fixed, checked at 4 fps"
+  ]
+ },
+ "template_ledger_note": "clipcard; Sunday Dubai counts before this Reel: trailer 6, split 4, clipcard 3, stills 3, quote 1; the 21:15 neighbour is the Minecraft Reel (stills job with showcase layout per its story file), the 19:15 one LoL New Dawn (quote)"
 }
