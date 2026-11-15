@@ -1,14 +1,129 @@
 {
  "id": "disney-dreamlight-valley-keepsake-sea-nov-18-20261115",
- "title": "Disney Dreamlight Valley: The Keepsake Sea expansion launches 18 Nov (Gameloft): merfolk, underwater building, Jack Sparrow, Dory, Megara, Milo, Wendy",
- "status": "claimed: building (production subagent, slot 00:15 Dubai Mon 16 Nov)",
+ "title": "Disney Dreamlight Valley: The Keepsake Sea expansion launches Wed 18 Nov (Gameloft): merfolk, an underwater world to decorate, Dory, your own pirate ship",
+ "status": "built: Reel pending render (not scheduled)",
  "lane": "digital-lounge",
  "game": "Disney Dreamlight Valley: The Keepsake Sea",
- "companies": ["Gameloft", "Disney"],
+ "companies": [
+  "Gameloft",
+  "Disney"
+ ],
  "subject_person": null,
  "claimed_at": "2026-11-15T05:00:00Z",
  "slot": "00:15 Dubai Mon 16 Nov 2026 (20:15Z Sun 15 Nov)",
  "sources": [
-  {"name": "Steam store page, Disney Dreamlight Valley: The Keepsake Sea (app 5090170), release date 18 Nov 2026, publisher Gameloft", "url": "https://store.steampowered.com/app/5090170/"}
- ]
+  {
+   "role": "primary",
+   "name": "Official expansion page, disneydreamlightvalley.com: 'LAUNCHES NOVEMBER 18, 2026', 'Disney Dreamlight Valley: The Keepsake Sea' 5,000 Moonstones INCLUDED, '*Requires base game to play'; Deluxe Edition 10,000 Moonstones; read 15 Nov ~05:10Z",
+   "url": "https://disneydreamlightvalley.com/en/expansion/the-keepsake-sea"
+  },
+  {
+   "role": "primary",
+   "name": "Steam store page, app 5090170, publisher and developer Gameloft, release '18 Nov, 2026', coming soon, no price; about text: 'Become a magical mermaid', 'over 50 options of customizable fins, tails, ears, and more', 'Befriend Five New Villagers and a Companion' (Milo Thatch, Captain Jack Sparrow, Megara, Wendy, Dory), 'Uncover Three Island Biomes and New Underwater Worlds', 'underwater areas are customizable', 'Sail on Your Own Enchanted Pirate Ship'; trailer 'Full Trailer' (uploaded 21 Oct 2026 18:03Z); read 15 Nov ~04:45Z",
+   "url": "https://store.steampowered.com/app/5090170/"
+  },
+  {
+   "role": "primary",
+   "name": "Steam news, Disney Dreamlight Valley (app 1401590), 'Catch up on the Disney Dreamlight Valley 2026 Showcase Stream!' 21 Oct 2026 17:42Z (date announcement)",
+   "url": "https://store.steampowered.com/news/app/1401590"
+  }
+ ],
+ "first_report": "Date announced at the Disney Dreamlight Valley 2026 Showcase, 21 Oct 2026 (~17:42Z Steam post; trailer on Steam 18:03Z). The news here is the launch on Wed 18 Nov 2026, two days after the slot (dated launch, as Spirit Crossing, Unicorn Academy and Ranger's Path on 15 Nov). No Arabic outlet checked carried a launch piece.",
+ "source_type": "primary",
+ "ledger_find": {
+  "at": "2026-11-15T05:15:00Z",
+  "words": [
+   "keepsake",
+   "dreamlight",
+   "gameloft"
+  ],
+  "hits": [
+   "2026-10-03-disney-epic-not-now (dreamlight, unrelated)"
+  ],
+  "note": "git grep over newsroom/stories (text only); ledger.py not run (crashes on list folders, as noted by other builds)"
+ },
+ "genre": [
+  "family",
+  "live service/MMO"
+ ],
+ "kind": "expansion",
+ "kind_news": "expansion",
+ "label": "رسمي",
+ "chip": "رسمي",
+ "template": "split",
+ "template_note": "formats.pick('expansion') -> split; Monday 16 Nov Dubai day starts fresh; neighbours: 22:15 Project Stampede clipcard, 23:15 Ranger's Path (other builder, template unknown)",
+ "beat": "release",
+ "recipe": "notes/scenario-recipes.md recipe 2 (trailer drop) on split: strongest moving shot under chip and headline 0-3.5 s; line 1 the name over the transformations; line 2 the underwater world; line 3 Dory; line 4 the ship and the closing picture; the strip (date, base game) pinned after the headline",
+ "footage": "the expansion's official Steam 'Full Trailer' (app 5090170), 1920x1080 60 fps, 5.8 Mbps, decode clean (server shots mode 15 Nov 04:51Z); 9:16 crop enlarged 1.78x; shots inside the server's clean stretches, picked from 9:16 crops at 4 fps",
+ "sensitive": "none: Disney family life sim; mermaid outfits are the game's own; skull-flag, cannon and Captain Hook shots left out",
+ "spoken": "إضافة جديدة تحوّلك إلى حورية بحر، اسمها The Keepsake Sea في Disney Dreamlight Valley. تزيّن فيها عالمك تحت الماء، وتلتقي هناك Dory، وتبحر بسفينتك الخاصة.",
+ "claims": [
+  {
+   "claim": "launches 18 Nov 2026",
+   "status": "confirmed (official page, Steam)"
+  },
+  {
+   "claim": "your character becomes a mermaid (merfolk), swims above and under water, 50+ customisation options",
+   "status": "confirmed (Steam about text)"
+  },
+  {
+   "claim": "customisable underwater areas, three island biomes, own pirate ship, new villagers incl. Jack Sparrow, Megara, Dory",
+   "status": "confirmed (Steam about text)"
+  },
+  {
+   "claim": "requires the base game",
+   "status": "confirmed (official page)"
+  },
+  {
+   "claim": "price",
+   "status": "not listed on Steam or the official page; not stated on screen"
+  }
+ ],
+ "angle": {
+  "hook": "a Disney expansion that turns your character into a mermaid, with Dory and Jack Sparrow",
+  "why_now": "launches Wed 18 Nov 2026 per the official page and Steam",
+  "what_it_means_here": "needs the base game; no price on Steam yet",
+  "payoff": "an underwater world you decorate, Dory, your own pirate ship"
+ },
+ "job": "jobs/live/disney-dreamlight-valley-keepsake-sea-nov-18.json",
+ "texts": {
+  "instagram": "إضافة Disney Dreamlight Valley الجديدة تصدر الأربعاء\n\nتصدر يوم الأربعاء 18 نوفمبر إضافة The Keepsake Sea للعبة Disney Dreamlight Valley من شركة جيملوفت (Gameloft)، وفيها تتحول شخصيتك إلى حورية بحر تسبح فوق الماء وتحته، مع أكثر من 50 خيارًا لتخصيص الذيل والزعانف والأذنين وغيرها.\n\nتضم الإضافة ثلاث جزر جديدة وعالمًا تحت الماء يمكنك تزيينه، وسفينة قراصنة خاصة بك تبحر بها بين الجزر، إلى جانب شخصيات جديدة تلتقيها، منها Jack Sparrow وMegara وDory.\n\nتتطلب الإضافة اللعبة الأساسية، ولم يظهر سعرها على Steam بعد.\n\n#ألعاب #أخبار_الألعاب #DisneyDreamlightValley #TheKeepsakeSea",
+  "x": "تصدر الأربعاء 18 نوفمبر إضافة The Keepsake Sea للعبة Disney Dreamlight Valley، وفيها تتحول شخصيتك إلى حورية بحر، حسب شركة جيملوفت (Gameloft).",
+  "threads": "تصدر الأربعاء 18 نوفمبر إضافة The Keepsake Sea للعبة Disney Dreamlight Valley، وفيها تتحول شخصيتك إلى حورية بحر، حسب شركة جيملوفت (Gameloft)."
+ },
+ "on_screen": {
+  "headline": "إضافة جديدة تحوّلك / إلى حورية بحر",
+  "lines": [
+   "اسمها The Keepsake Sea / في Disney Dreamlight Valley",
+   "تزيّن فيها عالمك تحت الماء",
+   "وتلتقي هناك Dory",
+   "وتبحر بسفينتك الخاصة"
+  ],
+  "strip": "تصدر · 18 نوفمبر | تتطلب · اللعبة الأساسية",
+  "credit": "المصدر: جيملوفت (Gameloft)",
+  "chip": "رسمي"
+ },
+ "arabic_passes": {
+  "skills": "arabic-games-film-editor, arabic-writing and arabic-grammar-review loaded fresh 15 Nov ~05:05Z; house glossary (expansion = إضافة, not توسعة; release verb تصدر) and names-ar read; conventions.md (dates) opened",
+  "deepl_forward": "whole story EN->AR in one piece: «سيتم إطلاق التوسعة الجديدة ... تتحول شخصيتك إلى حورية بحر وتغوص في عالم تحت الماء يمكنك تزيينه كما تشاء ... ستلتقي بشخصيات مثل «دوري» ... سفينة القراصنة الخاصة بك». Kept: تتحول شخصيتك إلى حورية بحر (same), عالم تحت الماء; rejected: التوسعة (glossary إضافة), «سيتم إطلاق» (يتم passive; house تصدر), «دوري» in Arabic letters (characters stay English). Phrasings: 'Become a magical mermaid' -> تحولي إلى حورية بحر ساحرة (feminine imperative, not used); 'Requires the base game' -> يتطلب اللعبة الأساسية (masculine; ours تتطلب agrees with إضافة)",
+  "deepl_backcheck": "headline 'A New Add-On That Turns You Into a Mermaid'; lines 'It's called The Keepsake Sea in Disney Dreamlight Valley. There, you can decorate your underwater world, meet Dory, and set sail on your own ship.'; strip 'Released November 18 · Requires the base game · Source: Gameloft'; caption and X back-translate with every fact kept, nothing added",
+  "grammar_review": {
+   "corrected_text": "unchanged (headline, lines, strip, credit, caption, X, Threads)",
+   "required_edits": [],
+   "optional_style_suggestions": [],
+   "uncertain_cases": [
+    {
+     "text": "حورية بحر",
+     "issue": "the game's merfolk include mermen (the trailer shows both); حورية is feminine",
+     "why_uncertain": "Steam's own short description says 'Become a magical mermaid', so the feminine form follows the source",
+     "options": [
+      "حورية بحر (kept)",
+      "مخلوق بحري بذيل وزعانف"
+     ]
+    }
+   ]
+  }
+ },
+ "re_gate_line": "RE-GATE within the hour before 00:15 Dubai (Mon)",
+ "regate": "RE-GATE within the hour before 00:15 Dubai (Mon): re-read the official expansion page and Steam app 5090170 (date 18 Nov, price, any delay) and search 'Keepsake Sea' for news"
 }

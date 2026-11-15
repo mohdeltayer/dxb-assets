@@ -78,6 +78,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Marvelous | مارفيلوس | In use |
 | Atari | أتاري | In use |
 | Playstack | بلايستاك | Proposed 3 Nov |
+| Gameloft (Disney Dreamlight Valley publisher and developer, France) | جيملوفت | Proposed 15 Nov 2026 (Keepsake Sea Reel: credit «المصدر: جيملوفت (Gameloft)»; caption and X «شركة جيملوفت (Gameloft)» at first mention) |
 | Disney+ | ديزني بلس | In use |
 | The Game Business | ذا غيم بزنس | Proposed 8 Nov 2026 (Production 2; Christopher Dring's outlet; Latin in brackets at first mention) |
 | NielsenIQ | نيلسن آي كيو | Proposed 8 Nov 2026 (Production 2; Dring writes «Nielsen IQ»; Latin in brackets at first mention) |
