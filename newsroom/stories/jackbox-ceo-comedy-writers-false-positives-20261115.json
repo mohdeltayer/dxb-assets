@@ -1,7 +1,7 @@
 {
  "id": "jackbox-ceo-comedy-writers-false-positives-20261115",
  "title": "Jackbox Games CEO Mike Bilder: the studio's funny staff give 'a lot of false positives', so games are tested with outside groups",
- "status": "built: Reel v3 qc pass (render commit c4c2287, job_sha 3d9112ba, 4 dispatches, 192 s on dxb-render); not scheduled, director not run; RE-GATE within the hour before 21:15 Dubai (Sun)",
+ "status": "scheduled in Publer for 21:15 Dubai Sun 15 Nov (17:15Z), 3/3 (ids ig:52122c x:192dd7 th:71714a), director PASS v3 (director-jackbox-claude-sonnet); RE-GATE due again in the hour before 21:15 (re-read PC Gamer: no Update or Editor's note at 15 Nov ~05:40Z, dateModified = datePublished 14 Nov 20:45:44Z)",
  "lane": "digital-lounge",
  "game": "The Jackbox Party Pack 12",
  "companies": [
@@ -102,5 +102,38 @@
   "dispatch 6 (05:29Z): v2 qc pass; night-eyes shot near black and the headline over the party-hat pug's forehead, so rebuilt; not for posting",
   "dispatch 7 (05:38Z): v3 qc pass (music 90.1%, leak 0.2%, 18.8 s before the end card, person_shown true, sound trailer)"
  ],
- "director_model": "not run (stop point)"
+ "director_model": "not run (stop point)",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/jackbox-ceo-comedy-writers-false-positives-reel-v3.mp4",
+  "blob": "81af95b9a7a8b4b3a3a6d11eb007cfedfca5e223",
+  "at": "2026-11-15T05:42:16Z",
+  "note": "dir 15 Nov: pass; strip 4fps clean; whisper no speech; loudness steady to end card; re-gate PC Gamer 15 Nov no update, due again 20:15 to 21:15 Dubai",
+  "checklist": {
+   "job": "jobs/live/jackbox-ceo-comedy-writers-false-positives.json",
+   "sha256": "727a4b0da0cf6532b32a554109b24976e00f6f53f4cba7b73e728fd139ae2ad5",
+   "ok": true,
+   "problems": [],
+   "template": "quote",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-sub-2115"
+  },
+  "by": "director-jackbox-claude-sonnet",
+  "qc": "pass",
+  "looked": "look frames: raccoon name plate over stop-motion pugs at 0 s; card with PC Gamer label over dimmed hazmat footage; closing hazmat desert picture; 4 fps strip read, no title or black frames, no speech (whisper: music only), music to the end card"
+ },
+ "scheduled": "scheduled in Publer 17:15Z (21:15 Dubai Sun 15 Nov): instagram, x, threads; ids ig:52122c x:192dd7 th:71714a; labels kind:news tpl:quote skin:house sound:trailer genre:family; Reel v3",
+ "director": {
+  "by": "director-jackbox-claude-sonnet",
+  "verdict": "PASS",
+  "at": "2026-11-15T05:42Z",
+  "gate": "gate 05:40Z: PC Gamer article re-read, no Update/Correction, quotes match; Steam page release 14 Oct 2026 confirmed; Publer duplicate check clean (no Jackbox post published 5 days or scheduled)",
+  "checks": "4 fps strip all 14 shots, no title/black/graphic frames; whisper on final audio: no speech; loudness steady 0.09 to 0.11 to the end card; DeepL back-check X, caption, lines; grammar review no required edits",
+  "uncertain": [
+   "plate credit «الصورة: جاكبوكس غيمز» under a cartoon raccoon in the person window may read as a photo credit",
+   "headline «أكثر من اللازم» is a playful paraphrase, not a quote",
+   "hazmat testers and mannequin eyes are illustration for outside groups"
+  ]
+ }
 }
