@@ -304,3 +304,10 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | Andrei van Roon ('Meddler', League of Legends) | أندريه فان رون | Proposed 15 Nov 2026 (not on screen in this Reel) |
 | client (a PC game's launcher app, the League client) | مشغّل اللعبة | Proposed 15 Nov 2026 (DeepL read برنامجًا محدّثًا للعبة back as 'an updated version of the game'; مشغّلًا محدّثًا للعبة reads back as 'an updated game client'; عميل is DeepL's literal) |
 | League of Legends: New Dawn | stays in English | Proposed 15 Nov 2026 |
+
+### Added 15 Nov 2026 (Jackbox CEO quote Reel)
+| Latin | Arabic | Status |
+|---|---|---|
+| Jackbox Games (maker of The Jackbox Party Pack) | جاكبوكس غيمز (short: جاكبوكس) | Proposed 15 Nov 2026 (غيمز as the house spells Games; DeepL wrote جيمز; on screen «جاكبوكس (Jackbox)» in the headline) |
+| Mike Bilder (Jackbox Games CEO) | مايك بيلدر | Proposed 15 Nov 2026 (role word «الرئيس التنفيذي لجاكبوكس غيمز»; DeepL's spelling) |
+| false positives (a test that says an idea works when it does not) | نتائج مضللة | Proposed 15 Nov 2026 (DeepL gave النتائج الإيجابية الخاطئة, technical; نتائج مضللة reads back as 'misleading results') |

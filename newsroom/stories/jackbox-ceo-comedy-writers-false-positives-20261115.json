@@ -4,7 +4,10 @@
  "status": "building (production subagent, slot 21:15 Dubai Sun 15 Nov); not scheduled",
  "lane": "digital-lounge",
  "game": "The Jackbox Party Pack 12",
- "companies": ["Jackbox Games", "PC Gamer"],
+ "companies": [
+  "Jackbox Games",
+  "PC Gamer"
+ ],
  "subject_person": {
   "name": "Mike Bilder",
   "role": "CEO of Jackbox Games",
@@ -27,7 +30,10 @@
  "source_type": "primary",
  "ledger_find": {
   "at": "2026-11-15T04:50:00Z",
-  "words": ["jackbox", "bilder"],
+  "words": [
+   "jackbox",
+   "bilder"
+  ],
   "hits": [],
   "note": "newsroom/ledger.py find crashes (TypeError on a story with a list folder); git grep -il jackbox over origin/main newsroom/stories finds no story"
  },
@@ -38,12 +44,52 @@
  "label": "حوار",
  "chip": "حوار",
  "beat": "quote recipe (person in the news, scenario recipe 3): headline and name plate over the series' art on the cover, the quote, the card «نتائج مضللة», what the company does about it, where it was said",
- "genre": ["family", "industry/hardware"],
+ "genre": [
+  "family",
+  "industry/hardware"
+ ],
  "platform": "PC, PS5, Xbox Series X|S, Nintendo Switch 2 (The Jackbox Party Pack 12)",
  "sensitive": "none (the 'marrying rich' and 'patriarchy' card prompts of the gameplay trailer are not used)",
  "claims": [
-  {"claim": "Bilder: the staff are so funny they make games shine, giving a lot of false positives", "status": "confirmed (PC Gamer interview quote)"},
-  {"claim": "Jackbox tests internally, then brings in external groups as games get greenlit", "status": "confirmed (PC Gamer interview quote)"},
-  {"claim": "The Jackbox Party Pack 12 released in October 2026", "status": "confirmed (Steam page: 14 Oct 2026)"}
- ]
+  {
+   "claim": "Bilder: the staff are so funny they make games shine, giving a lot of false positives",
+   "status": "confirmed (PC Gamer interview quote)"
+  },
+  {
+   "claim": "Jackbox tests internally, then brings in external groups as games get greenlit",
+   "status": "confirmed (PC Gamer interview quote)"
+  },
+  {
+   "claim": "The Jackbox Party Pack 12 released in October 2026",
+   "status": "confirmed (Steam page: 14 Oct 2026)"
+  }
+ ],
+ "job": "jobs/live/jackbox-ceo-comedy-writers-false-positives.json",
+ "recipe": "person in the news / quote (scenario recipe 3 in the quote template): headline and name plate over the series art on frame 0, box steps aside at 2.1 s, his words, the card, what the company does, where he said it",
+ "read_aloud": "فريق جاكبوكس (Jackbox) مضحك أكثر من اللازم. يقول بيلدر إن فريقه مضحك جدًا ويجعل الألعاب تتألق. يسمّي بيلدر ذلك: نتائج مضللة، فأي فكرة تبدو ممتعة معهم. لذلك تختبر ألعابها مع مجموعات من الخارج. هل اللعبة مضحكة أم الفريق؟ في حديث لموقع بي سي غيمر (PC Gamer).",
+ "sound": "trailer music: The Jackbox Party Pack 12 Cinematic Trailer from 0.0 s, music_only (the trailer is narrated from 0.0 to 56 s, so the split keeps the music stem only); not our bed",
+ "texts": {
+  "x": "قال مايك بيلدر (Mike Bilder)، الرئيس التنفيذي لجاكبوكس غيمز (Jackbox Games)، لموقع بي سي غيمر (PC Gamer) إن موظفي الاستوديو مضحكون لدرجة تجعل أي لعبة تبدو ممتعة، ولهذا تختبر الشركة ألعابها مع مجموعات من خارجها.",
+  "threads": "قال مايك بيلدر (Mike Bilder)، الرئيس التنفيذي لجاكبوكس غيمز (Jackbox Games)، لموقع بي سي غيمر (PC Gamer) إن موظفي الاستوديو مضحكون لدرجة تجعل أي لعبة تبدو ممتعة، ولهذا تختبر الشركة ألعابها مع مجموعات من خارجها.",
+  "instagram": "جاكبوكس (Jackbox) تختبر ألعابها خارج الاستوديو، والسبب موظفوها\n\nقال مايك بيلدر (Mike Bilder)، الرئيس التنفيذي لشركة جاكبوكس غيمز (Jackbox Games) صانعة سلسلة The Jackbox Party Pack، إن موظفي الاستوديو مضحكون إلى حد يربك تقييم الألعاب.\n\nوأوضح في مقابلة مع موقع بي سي غيمر (PC Gamer): «لدينا أشخاص مضحكون جدًا يعملون في المكتب، ويجعلون الألعاب تتألق»، مضيفًا أن ذلك يعطي الفريق «الكثير من النتائج المضللة».\n\nلهذا تختبر الشركة ألعابها داخليًا أولًا، ثم تستعين بمجموعات من خارج الاستوديو بعد اعتماد فكرة اللعبة، لتعرف هل اللعبة نفسها مضحكة أم أن من يلعبها في المكتب هو المضحك.\n\nوأحدث إصدارات الشركة The Jackbox Party Pack 12، وقد صدرت في أكتوبر.\n\n#ألعاب #أخبار_الألعاب #Jackbox #JackboxPartyPack12",
+  "x_follow_up": "المصدر: مقابلة موقع بي سي غيمر (PC Gamer) مع مايك بيلدر https://www.pcgamer.com/games/is-the-game-funny-or-just-the-players-jackbox-ceo-says-they-get-a-lot-of-false-positives-with-a-staff-of-comedy-writers/",
+  "instagram_comment": "المصدر: مقابلة موقع بي سي غيمر (PC Gamer)، 14 نوفمبر 2026"
+ },
+ "regate": "RE-GATE within the hour before 21:15 Dubai (Sun): re-read the PC Gamer article (Update or Editor's note), search for a Jackbox or Bilder correction",
+ "arabic_passes": {
+  "skills": "arabic-games-film-editor and arabic-writing loaded 15 Nov ~04:45Z; house glossary and names-ar read (PC Gamer row); arabic-grammar-review run as a separate pass (perfect-arabic SKILL.md, orthography.md and known-issues.md opened) on headline, plate, lines, card, credit, X, Threads, caption",
+  "grammar_review": {
+   "required_edits": [],
+   "optional_style_suggestions": [
+    {
+     "original": "هل اللعبة مضحكة أم الفريق؟",
+     "suggestion": "أهي اللعبة المضحكة أم الفريق؟",
+     "reason": "classical usage pairs أم المعادلة with the hamza, not هل; هل ... أم is in wide modern use, so it stands"
+    }
+   ],
+   "uncertain_cases": []
+  },
+  "deepl_forward": "whole English story in one piece: DeepL gave «النتائج الإيجابية الخاطئة» for false positives (alternatives sent: false positives / misleading results / a false impression: نتائج مضللة / انطباع خاطئ; picked نتائج مضللة as the plain term), «تجعل الألعاب تتألق» for make games shine (same as ours), «مجموعات خارجية» for external groups; it read greenlit as a launch green light, so ours says «بعد اعتماد فكرة اللعبة»; DeepL wrote جيمز, house غيمز",
+  "deepl_back": "headline: 'The Jackbox employees are way too funny' (before the headline became فريق ... مضحك, same meaning); card note «مضحكة معهم» read back as 'ridiculous to them', so it became «ممتعة معهم»; L2/L3 'tests its games with groups outside the studio to find out whether the game is actually funny or if it's just the employees'; X 'told PC Gamer that the studio's employees are so funny that they can make any game seem fun'; caption read back faithfully (Jackbox Party Pack 12 'came out in October')"
+ }
 }
