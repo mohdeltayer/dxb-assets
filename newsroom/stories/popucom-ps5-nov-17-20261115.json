@@ -1,7 +1,7 @@
 {
  "id": "popucom-ps5-nov-17-20261115",
  "title": "POPUCOM (Hypergryph; GRYPHLINE and Fireshine Games) launches on PS5 on Tue 17 Nov 2026",
- "status": "built: job committed, Reel rendering for the 05:15 Dubai Mon 16 Nov slot; not scheduled (no director run, no Publer)",
+ "status": "built: job v2 committed, Reel rendering for the 05:15 Dubai Mon 16 Nov slot; not scheduled (no director run, no Publer)",
  "lane": "digital-lounge",
  "game": "POPUCOM",
  "companies": [
@@ -66,7 +66,7 @@
  "recipe": "notes/scenario-recipes.md recipe 2 (trailer drop) on split: the fluffy birds moving under chip and headline 0-3.4 s, the strip pins when the headline leaves (date, PC and Nintendo Switch), one line per beat on the shot that shows it (studio over the heroes, friends over two players, colour puzzles over the puzzle machine), then the vehicles breathe with no line; last 2 s the balloon bus, a picture",
  "sensitive": "none: E10+ cartoon game; no shot with a character aiming or firing a gel blaster at anyone",
  "footage": "official Steam trailers of app 2543180, 'release PV' (2025) and 'Trailer' (2023 announcement), both 1920x1080 30 fps about 5.3 to 5.4 Mbps, fetched the server's way (-ss 0, video from 3.02 s); 9:16 crop enlarged 1.78x; ESRB card, GRYPHLINE and Hypergryph slates, logo cards, the key-art end card and the arcade UI shots left out. The PS5 Launch Date Trailer itself is on YouTube only (no YouTube fetch), so the Reel uses the game's Steam trailers; the news is the date, not the trailer",
- "spoken": "لعبة POPUCOM تصل إلى PS5 يوم الثلاثاء 17 نوفمبر، وهي متوفرة على PC وNintendo Switch. من هايبرغريف (Hypergryph) مطوّر لعبة Arknights، مغامرة ملوّنة تلعبها مع أصدقائك، وتحلّ ألغازها بتبديل الألوان.",
+ "spoken": "لعبة POPUCOM تصل إلى PS5 يوم الثلاثاء 17 نوفمبر، وهي متوفرة على PC وNintendo Switch. من هايبرغريف (Hypergryph) مطوّر لعبة Arknights، مغامرة تلعبها مع أصدقائك، وتحلّ ألغازها بتبديل الألوان.",
  "claims": [
   {
    "claim": "PS5 release Tue 17 Nov 2026",
@@ -115,7 +115,7 @@
   "headline": "لعبة POPUCOM / تصل إلى PS5",
   "lines": [
    "من هايبرغريف (Hypergryph) / مطوّر لعبة Arknights",
-   "مغامرة ملوّنة تلعبها / مع أصدقائك",
+   "مغامرة تلعبها / مع أصدقائك",
    "تحلّ ألغازها / بتبديل الألوان"
   ],
   "strip": "الموعد · الثلاثاء 17 نوفمبر | متوفرة على · PC · Nintendo Switch",
@@ -128,7 +128,7 @@
   "deepl_forward": "whole story EN->AR in one piece (15 Nov ~07:40Z): «أعلنت شركة النشر Fireshine Games أن لعبة POPUCOM... ستصدر على PS5 يوم الثلاثاء 17 نوفمبر»، «يخوض ما يصل إلى أربعة أصدقاء مغامرة ملونة معًا على كوكب مجهول، ويقومون بحل الألغاز» (we keep «يحلّون», no قام بـ), DeepL wrote «نينتندو سويتش» in Arabic letters (house: Nintendo Switch in Latin). Phrasings: 'arrives on PS5' and 'comes to PS5' -> «تصل لعبة POPUCOM إلى PS5» / «تتوفر ... على PS5» (we keep تصل إلى, glossary); 'a colorful adventure you play with your friends' -> «مغامرة ملونة تلعبها مع أصدقائك» (same as ours); 'solve its puzzles by switching colors' -> «حل ألغازها عن طريق تبديل الألوان» (we keep the shorter «بتبديل الألوان»); 'the studio behind Arknights' -> «الشركة المطورة للعبة Arknights», 'the developer of Arknights' -> «مطور لعبة Arknights» (ours)",
   "deepl_back": "AR->EN (15 Nov ~07:42Z): headline: see deepl_back_v2; lines 'From Hypergryph Studio, the developer of Arknights' / 'A colorful adventure to play with your friends' / 'Solve the puzzles by switching colors'; caption and X read back with every fact intact (PS5 Tue 17 Nov per publisher Fireshine Games, Hypergryph behind Arknights, up to four friends, colour puzzles, PC June 2025, Switch December 2025)"
  },
- "deepl_back_v2": "AR->EN (15 Nov ~07:55Z) of the split version: headline 'POPUCOM is Coming to PS5'; strip 'Date: Tuesday, November 17' and 'Available on: PC · Nintendo Switch'",
+ "deepl_back_v2": "v2 line 2 shortened to «مغامرة تلعبها مع أصدقائك» (DeepL forward gave «مغامرة ملونة تلعبها مع أصدقائك» for the longer form; meaning 'an adventure you play with your friends'). AR->EN (15 Nov ~07:55Z) of the split version: headline 'POPUCOM is Coming to PS5'; strip 'Date: Tuesday, November 17' and 'Available on: PC · Nintendo Switch'",
  "names_ar": "Hypergryph -> هايبرغريف; Fireshine Games -> فايرشاين غيمز (Proposed 15 Nov 2026, rows added in newsroom/names-ar.md)",
  "regate": "RE-GATE within the hour before 05:15 Dubai (Mon): re-read Fireshine Games' YouTube trailer title, the PS Store page if reachable and a news search 'POPUCOM PS5' for any change to the 17 Nov date",
  "re_gate_line": "RE-GATE within the hour before 05:15 Dubai (Mon)",
