@@ -1,14 +1,141 @@
 {
  "id": "league-of-legends-new-dawn-2027-20261115",
  "title": "League of Legends: New Dawn, Riot's all-encompassing overhaul revealed at the Worlds 2026 final, coming in 2027, full reveal January",
- "status": "claimed: building for 19:15 Dubai Sun 15 Nov (15:15Z)",
+ "status": "built, render pending: Reel for 19:15 Dubai Sun 15 Nov (15:15Z), Instagram, X, Threads; not scheduled. RE-GATE within the hour before 19:15 Dubai (Sun)",
  "lane": "digital-lounge",
  "game": "League of Legends",
- "companies": ["Riot Games"],
+ "companies": [
+  "Riot Games"
+ ],
  "subject_person": null,
  "claimed_at": "2026-11-15T00:20:00Z",
  "sources": [
-  {"name": "League of Legends official X post, 14 Nov 2026 21:59Z: 'A peek at where we're headed for 2027' with the New Dawn trailer (2560x1440)", "url": "https://x.com/LeagueOfLegends/status/2121724627667824796"},
-  {"name": "Riot, League of Legends: New Dawn page", "url": "https://www.leagueoflegends.com/en-us/new-dawn/"}
- ]
+  {
+   "name": "League of Legends official X post, 14 Nov 2026 21:59Z: 'A peek at where we're headed for 2027', the New Dawn video (2560x1440, 121.3 s); read and transcribed in full. Key phrases: Paul Bellezza 'next year we're releasing a modernized client. But a client isn't enough' (25.4 to 31.7 s); Andrei van Roon 'visually revamping Summoner's Rift, evolving its gameplay and adding new ways to play and experience your favorite champions' (32.6 to 38.7 s); end slate 'COMING 2027 / FULL REVEAL IN JANUARY'",
+   "url": "https://x.com/LeagueOfLegends/status/2121724627667824796"
+  },
+  {
+   "name": "Riot Games, League of Legends: New Dawn page (read 15 Nov 00:10Z): 'Subscribe for updates on the new dawn of League of Legends ... as the game enters a new era', teaser embed",
+   "url": "https://www.leagueoflegends.com/en-us/new-dawn/"
+  },
+  {
+   "name": "IGN, 14 Nov 2026 22:05Z (secondary, for Paul Bellezza's role: 'League's executive producer'; full reveal 'this coming January')",
+   "url": "https://www.ign.com/articles/league-of-legends-new-dawn-unveiled-with-debut-trailer-riot-announces-major-overhaul-coming-in-2027"
+  },
+  {
+   "name": "Insider Gaming, 14 Nov 2026 22:04Z (secondary: 'Riot has promised a full reveal of New Dawn will be released in January 2027')",
+   "url": "https://insider-gaming.com/league-of-legends-new-dawn-update-revealed-worlds/"
+  }
+ ],
+ "template": "quote",
+ "kind": "quote",
+ "kind_news": "quote",
+ "label": "رسمي",
+ "chip": "رسمي",
+ "genre": [
+  "live service/MMO",
+  "industry/hardware"
+ ],
+ "platform": "PC (League of Legends)",
+ "slot": "19:15 Dubai Sun 15 Nov 2026 (15:15Z)",
+ "first_report": "League of Legends official X post (@LeagueOfLegends, status 2121724627667824796), 14 Nov 2026 21:59Z, during the Worlds 2026 final in New York; IGN, Polygon, Insider Gaming, Denfaminicogamer within 6 minutes (22:03 to 22:05Z). Arabic outlets: none in the 23:52Z digest. Nothing older is presented as new: the 2026 'League Next' mention is context only, not on screen.",
+ "source_type": "primary",
+ "claims": [
+  {
+   "claim": "New Dawn is coming in 2027",
+   "status": "confirmed (Riot end slate, X post)"
+  },
+  {
+   "claim": "full reveal in January (2027)",
+   "status": "confirmed (Riot end slate); year 2027 per Insider Gaming and the slate's 'COMING 2027'"
+  },
+  {
+   "claim": "modernized client next year",
+   "status": "confirmed (Paul Bellezza on camera)"
+  },
+  {
+   "claim": "Summoner's Rift visual revamp, gameplay evolving, new ways to play champions, new player experience",
+   "status": "confirmed (Andrei van Roon in the video)"
+  },
+  {
+   "claim": "Paul Bellezza is League's executive producer",
+   "status": "secondary (IGN); on-screen lower third gives name and handle only"
+  },
+  {
+   "claim": "gameplay changes in detail",
+   "status": "not confirmed: Riot has not detailed them (IGN, Insider Gaming)"
+  }
+ ],
+ "ledger_find": {
+  "at": "2026-11-15T00:45:00Z",
+  "words": [
+   "league",
+   "legends",
+   "new dawn",
+   "riot"
+  ],
+  "hits": [
+   "lol-esports-2027-worlds-nagoya-first-stand-all-in-20261114.json (esports roadmap, not New Dawn)",
+   "2026-10-15-league-classic-ends-january-mena-custom.json (context)"
+  ],
+  "note": "newsroom/ledger.py find crashed (TypeError on a story with a list folder); git grep over newsroom/stories for 'new dawn' finds only unrelated files"
+ },
+ "footage": "official Riot video from the League of Legends X post, 2560x1440 at 24 fps, 7.8 Mbps, decode clean (ffmpeg full decode 15 Nov 00:07Z); 9:16 crop 810 px wide, enlarged 1.33x. Shots from the cinematic (Lux, Tristana, Ekko, Ahri, Blitzcrank sunset ground) and the gameplay montage (new Summoner's Rift, Baron Nashor) and Paul Bellezza's on-camera segment. YouTube teaser vs3p3mNhRXo is the same video (YouTube download refused since 28 Sep, not tried).",
+ "person_photo": "frame of the official video at 27.75 s (Paul Bellezza on camera), cropped 920x1080, committed at live/2026-11-15/lol-new-dawn/paul-bellezza-new-dawn-frame.jpg; credit «الصورة: ريوت غيمز (Riot Games)»",
+ "beat": "quote recipe: hook (Lux, headline, Bellezza photo box), his quote over him, the new map, champions, card January, payoff picture Ahri with where it was shown",
+ "recipe": "person in the news / quote (notes/scenario-recipes.md recipe 3 adapted to the quote template): face and headline on frame 0, box steps aside at 2.9 s, quote first, footage of what he spoke of after",
+ "sensitive": "none",
+ "angle": {
+  "hook": "Riot's own video: League of Legends gets its big overhaul, New Dawn, in 2027",
+  "why_now": "shown at the Worlds 2026 final on 14 Nov (21:59Z); no Arabic outlet had it in the 23:52Z digest",
+  "what_it_means_here": "League of Legends players in the region get a new client, a new-looking Summoner's Rift and changed gameplay next year, with the full reveal in January",
+  "payoff": "January full reveal; shown at the Worlds final"
+ },
+ "job": "jobs/live/league-of-legends-new-dawn-2027.json",
+ "texts": {
+  "x": "كشفت ريوت غيمز (Riot Games) في نهائي بطولة العالم عن League of Legends: New Dawn، وهو تحديث كبير يصدر في 2027 ويشمل مشغّلًا محدّثًا للعبة وشكلًا جديدًا لخريطة Summoner's Rift، والكشف الكامل في يناير، حسب المقطع الرسمي للشركة.",
+  "threads": "كشفت ريوت غيمز (Riot Games) في نهائي بطولة العالم عن League of Legends: New Dawn، وهو تحديث كبير يصدر في 2027 ويشمل مشغّلًا محدّثًا للعبة وشكلًا جديدًا لخريطة Summoner's Rift، والكشف الكامل في يناير، حسب المقطع الرسمي للشركة.",
+  "instagram": "تحديث League of Legends الكبير اسمه New Dawn، ويصدر في 2027\n\nكشفت ريوت غيمز (Riot Games) في نهائي بطولة العالم Worlds 2026 عن New Dawn، التحديث الكبير الذي وعدت به للعبة League of Legends.\n\nوقال بول بيليزا (Paul Bellezza)، المنتج التنفيذي للعبة، في المقطع: «سنطلق العام المقبل مشغّلًا محدّثًا للعبة، لكن المشغّل وحده لا يكفي».\n\nوبحسب المقطع، يشمل التحديث شكلًا جديدًا لخريطة Summoner's Rift، وتطويرًا لطريقة اللعب، وطرقًا جديدة للعب بالأبطال وتجربتهم، إلى جانب تجربة اللاعبين الجدد.\n\nيصدر التحديث في 2027، وتكشف ريوت غيمز التفاصيل الكاملة في يناير 2027، ولم تشرح الشركة بعد تغييرات طريقة اللعب بالتفصيل.\n\n#ألعاب #أخبار_الألعاب #LeagueofLegends #NewDawn",
+  "x_follow_up": "المصدر: الحساب الرسمي للعبة League of Legends على X https://x.com/LeagueOfLegends/status/2121724627667824796",
+  "instagram_comment": "المصدر: الحساب الرسمي للعبة League of Legends على X، 14 نوفمبر 2026"
+ },
+ "arabic_passes": {
+  "skills": "arabic-games-film-editor and arabic-writing loaded 15 Nov 00:30Z; house glossary and names-ar read (Riot Games row, Worlds row); arabic-grammar-review run as a separate pass on headline, lines, card, plate, credit, X, Threads, caption (perfect-arabic SKILL.md and orthography.md opened)",
+  "grammar_review": {
+   "required_edits": [
+    {
+     "original": "«...برنامجًا محدّثًا للعبة»",
+     "proposed": "«...مشغّلًا محدّثًا للعبة»",
+     "class": "house_rule",
+     "category": "term (meaning)",
+     "explanation": "DeepL back-check read برنامجًا محدّثًا للعبة as 'an updated version of the game' / 'game engine'; مشغّل reads back as 'game client' (applied before render)"
+    },
+    {
+     "original": "League of Legends: New Dawn، تحديث كبير",
+     "proposed": "League of Legends: New Dawn، وهو تحديث كبير",
+     "class": "grammar_morphology",
+     "category": "البدل/الخبر بعد اسم علم",
+     "explanation": "an indefinite noun after a proper name reads as a loose apposition; وهو makes it a clause (applied)"
+    }
+   ],
+   "optional_style_suggestions": [],
+   "uncertain_cases": [
+    {
+     "text": "بيليزا",
+     "issue": "Arabic spelling of Bellezza",
+     "why_uncertain": "DeepL wrote بيليزا; an Italian reading would be بيليتسا",
+     "options": [
+      "بيليزا",
+      "بيليتزا"
+     ]
+    }
+   ]
+  },
+  "deepl": "forward pass of the whole English story (DeepL: «سنطلق العام المقبل إصدارًا محدثًا من برنامج اللعبة», «عصر جديد»), client alternatives: 'a new game client' -> عميل لعبة جديد, 'the League client app' -> تطبيق عميل; back-check of every final text 15 Nov ~00:55Z: headline 'League of Legends: A New Era Begins in 2027', quote 'we'll launch an updated game client' (after the مشغّل fix), map 'getting a makeover', caption and X read back with the same facts"
+ },
+ "names_ar_added": [
+  "بول بيليزا (Paul Bellezza)",
+  "client (League of Legends) = مشغّل اللعبة"
+ ],
+ "regate": "RE-GATE within the hour before 19:15 Dubai (Sun): re-read the X post and leagueoflegends.com/new-dawn for changes; search 'New Dawn' for a Riot correction or a dated reveal"
 }

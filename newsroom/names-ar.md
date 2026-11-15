@@ -291,3 +291,11 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | Alcon Entertainment (owner of the Blade Runner franchise) | ألكون إنترتينمنت (short: ألكون) | Proposed 15 Nov 2026 (first mention «شركة ألكون إنترتينمنت (Alcon Entertainment)», on screen «ألكون (Alcon)») |
 | Andrew Kosove (Alcon co-CEO) | أندرو كوسوف | Proposed 15 Nov 2026 (role word «الرئيس التنفيذي المشارك») |
 | Westwood Studios | ويستوود ستوديوز | Proposed 15 Nov 2026 |
+
+### Added 15 Nov 2026 (League of Legends: New Dawn quote Reel)
+| Latin | Arabic | Status |
+|---|---|---|
+| Paul Bellezza (League of Legends executive producer, 'Pabro') | بول بيليزا | Proposed 15 Nov 2026 (role word «المنتج التنفيذي للعبة»; DeepL's spelling; an Italian reading would give بيليتسا, Mohammad's call) |
+| Andrei van Roon ('Meddler', League of Legends) | أندريه فان رون | Proposed 15 Nov 2026 (not on screen in this Reel) |
+| client (a PC game's launcher app, the League client) | مشغّل اللعبة | Proposed 15 Nov 2026 (DeepL read برنامجًا محدّثًا للعبة back as 'an updated version of the game'; مشغّلًا محدّثًا للعبة reads back as 'an updated game client'; عميل is DeepL's literal) |
+| League of Legends: New Dawn | stays in English | Proposed 15 Nov 2026 |
