@@ -1,7 +1,7 @@
 {
  "id": "minecraft-first-2027-drop-throwing-disc-offhand-20261115",
  "title": "Minecraft's first game drop of 2027 adds the throwing disc and full off-hand on Bedrock",
- "status": "building v3 after director FAIL on v2: full-frame clipcard job; NOT scheduled",
+ "status": "built: Reel v4 qc pass (render 20429ee, job 0dd0b3c8), after director FAIL on v2; NOT scheduled; director PASS needed from another session; RE-GATE within the hour before 21:15 Dubai (Sun)",
  "lane": "digital-lounge",
  "game": "Minecraft",
  "companies": [
@@ -128,23 +128,12 @@
  },
  "regate": "RE-GATE within the hour before 21:15 Dubai (Sun): re-read the minecraft.net article and @Minecraft for a date or change; search 'Minecraft throwing disc' for any correction",
  "reel": {
-  "path": "cards/2026-11/minecraft-first-2027-drop-throwing-disc-offhand-20261115-reel-v2.mp4",
-  "strip": "cards/2026-11/minecraft-first-2027-drop-throwing-disc-offhand-20261115-strip.jpg",
-  "dense": "cards/2026-11/minecraft-first-2027-drop-throwing-disc-offhand-20261115-dense.jpg",
-  "qc": "cards/2026-11/minecraft-first-2027-drop-throwing-disc-offhand-20261115-qc.json (pass, lifeless 9.6, length 22.5 s)",
-  "job_sha": "707ed461910f843d3de9d474a68f5bf32b2532e5",
-  "job_commit": "53cad12",
-  "render_commit": "bad1d7b",
-  "template": "stills, layout showcase (fitted box 956x536, two-line headline), hard cuts, theme playful, bed neon_e",
-  "history": "render-live dispatches: 1 stopped at pace (4.2 to 4.7 s without change); 2 rendered v1, qc fail lifeless 49.3 (slow push-ins, crossfades); 3 stopped at the font check (one-line headline too wide); 4 rendered v2, qc pass",
-  "stages_s": {
-   "checks": 7.3,
-   "montage": 20.0,
-   "text": 53.3,
-   "audio": 0.6,
-   "outro": 14.2,
-   "render_total": 95.3,
-   "job": 188
-  }
+  "path": "cards/2026-11/minecraft-first-2027-drop-throwing-disc-offhand-20261115-reel-v4.mp4",
+  "qc": "pass, lifeless 12.0, length 18.3 s before the end card",
+  "job_sha": "0dd0b3c8cff49eb7a45773b977d2c811d6495488",
+  "job_commit": "6637575",
+  "render_commit": "20429ee",
+  "template": "clipcard, full-frame 9:16: stand-in Switch 2 launch trailer (IGN 2560x1440, credited) for the hook and three beats, the @Minecraft X image (disc in hand, sword cropped out) for the disc beat, one fact card (5 خامات) over the trailer; theme playful; bed neon_d with bed_reason",
+  "history": "v1 (showcase, qc fail lifeless 49.3); v2 (showcase, qc pass, director FAIL: empty bands, image repeats, tiny credit, Bedrock overclaim, caption contradiction, cut HUD); v3 (full-frame clipcard, qc pass but frame 0 on the trailer's zombie scene and a cave crossbow at 15.25 s, not shipped); v4 (scene-cut times fixed, qc pass). Earlier dispatches stopped at pace, font, cover, credit width; my 720p still clips removed from live/ in efbe939."
  }
 }
