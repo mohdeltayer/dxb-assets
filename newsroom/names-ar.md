@@ -20,6 +20,10 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 ### Platform holders and publishers
 | Latin | Arabic | Status |
 |---|---|---|
+| Roger Jr. (TEKKEN 8 Season 3 fighter, the joey in his mother's pouch) | stays Latin; introduced as «كنغر صغير يقاتل من جيب أمه» | Proposed 15 Nov 2026 (TEKKEN 8 Roger Jr. general-release Reel; the 12 Oct post called him «الكنغر الملاكم») |
+| Nike (in the NIKE x TEKKEN collaboration) | نايكي (NIKE) | Proposed 15 Nov 2026 (caption only; bracket at first mention, the Latin as the collaboration writes it) |
+| pro-wrestling throws (fighting-game move type) | رميات المصارعة الاحترافية | Proposed 15 Nov 2026 (DeepL; «المصارعة الحرة» reads as the Olympic freestyle sport) |
+| G Corporation (TEKKEN's fictional company) | stays Latin, glossed «شركة G Corporation» | Proposed 15 Nov 2026 (caption only) |
 | Mojang Studios (Minecraft developer, Microsoft) | موجانغ | In use 15 Nov 2026 (Minecraft first 2027 drop Reel: «استوديو موجانغ (Mojang)» at first mention, credit «المصدر: موجانغ (Mojang)»; follows the two earlier posts' «شركة موجانغ (Mojang)», one older post had موجانج) |
 | netherite (Minecraft material) | النذرايت (Netherite) | Proposed 15 Nov 2026 (caption only; DeepL gives النيثيريت; the player spelling chosen, Latin in brackets) |
 | off-hand (Minecraft) | اليد الأخرى | Proposed 15 Nov 2026 (DeepL: اليد غير الرئيسية; plainer form chosen) |
