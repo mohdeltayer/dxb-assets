@@ -1,7 +1,7 @@
 {
  "id": "littlelands-early-access-nov-16-20261115",
  "title": "Littlelands (Apogee Entertainment; Rafael Martín and Kyle Creamer) launches in Early Access on Steam on Mon 16 Nov 2026",
- "status": "built: v3 Reel qc pass; not scheduled, no director run (stop point)",
+ "status": "scheduled in Publer for 07:15 Dubai Mon 16 Nov, 3/3 (ids ig:526307 x:198154 th:19815c), director PASS v3; RE-GATE within the hour before 07:15 (02:15Z to 03:15Z Mon) still due",
  "lane": "digital-lounge",
  "game": "Littlelands",
  "companies": [
@@ -87,11 +87,12 @@
   "payoff": "the farm plot coming to life, the cozy side of the game"
  },
  "texts": {
-  "x": "تصدر اليوم Littlelands بنسخة الوصول المبكر على Steam، وهي مغامرة هادئة في عالم صغير، حسب صفحة اللعبة على المتجر.",
-  "threads": "تصدر اليوم Littlelands بنسخة الوصول المبكر على Steam، وهي مغامرة هادئة في عالم صغير، حسب صفحة اللعبة على المتجر.\n\nالمصدر: صفحة اللعبة على Steam",
+  "x": "مغامرة هادئة في عالم صغير تصدر اليوم بنسخة الوصول المبكر على Steam، وهي لعبة Littlelands، حسب صفحة اللعبة في المتجر.",
+  "threads": "مغامرة هادئة في عالم صغير تصدر اليوم بنسخة الوصول المبكر على Steam، وهي لعبة Littlelands، حسب صفحة اللعبة في المتجر.\n\nالمصدر: صفحة اللعبة على Steam",
   "instagram": "لعبة Littlelands تصدر اليوم: مغامرة هادئة في عالم صغير\n\nتصدر اليوم 16 نوفمبر لعبة Littlelands بنسخة الوصول المبكر على Steam، من نشر شركة أبوجي إنترتينمنت (Apogee Entertainment) وتطوير المطورَين رافائيل مارتين (Rafael Martín) وكايل كريمر (Kyle Creamer).\n\nتجمع اللعبة بين محاكاة الحياة الريفية والاستكشاف في مغامرات الحركة، حسب صفحتها على المتجر. تتجول فيها بين القرى والغابات والكهوف، وتتعرف إلى سكانها وتساعدهم، وتصطاد السمك والحشرات، وتعتني بحديقتك وتعيد إحياء مزرعة صغيرة.\n\nويخطط المطوران للخروج من الوصول المبكر أواخر 2027، وسيكون سعر اللعبة في هذه المرحلة تمهيديًا قد يتغير مع اقتراب الإصدار الكامل، ولم يظهر السعر على المتجر بعد.\n\n#ألعاب #أخبار_الألعاب #Littlelands #Steam",
   "ig_comment": "المصدر: صفحة Littlelands على Steam",
-  "x_reply": "المصدر: https://store.steampowered.com/app/2083660/Littlelands/"
+  "x_reply": "المصدر: https://store.steampowered.com/app/2083660/Littlelands/",
+  "x_reworded_by_director": "15 Nov: reworded so it does not repeat the Trafficity 03:15 shape (تصدر اليوم ... حسب صفحتها على المتجر); DeepL back-check: 'A peaceful adventure in a tiny world is launching today in Early Access on Steam: the game Littlelands, according to the game's page on the store.'"
  },
  "on_screen": {
   "headline": "تصدر اليوم Littlelands\nبنسخة الوصول المبكر",
@@ -146,5 +147,38 @@
   "3.2-4.4 s: a small villager walks into the bottom of the village shot, whole in frame after the refocus",
   "9.6-13.0 s: the pale rock valley is soft (depth of field in the source), not damage; decode clean",
   "line 3 sits over two pictures it names: butterflies (insects), then the farm plot (farm)"
- ]
+ ],
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/littlelands-early-access-november-16-reel-v3.mp4",
+  "blob": "4a70950b87c05bf45190672b0798143262ea144e",
+  "at": "2026-11-15T10:08:33Z",
+  "note": "Director 15 Nov ~10:20Z: frames 4 fps, audio, Steam re-gate; one uncertainty: blue critters under line 3 may be slimes not insects",
+  "checklist": {
+   "job": "jobs/live/littlelands-early-access-november-16.json",
+   "sha256": "63dd27eb81db87bc1ee4c72725b3ecd064515e1f4926fc00e331a9259355fb93",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-sonnet-5.5-littlelands",
+  "qc": "pass",
+  "looked": null
+ },
+ "scheduled": "scheduled in Publer 03:15Z Mon 16 Nov (07:15 Dubai), instagram, x, threads; ids ig:526307 x:198154 th:19815c; labels kind:news tpl:trailer skin:house sound:trailer genre:indie; source comment on IG (first comment) and X (follow-up reply)",
+ "director_review": {
+  "by": "director-sonnet-5.5-littlelands",
+  "at": "2026-11-15T10:25Z",
+  "verdict": "PASS",
+  "gate": "gate 10:07Z: Steam appdetails cc=ae release_date 16 Nov, 2026, coming_soon, no price_overview; store page: Release Date 16 Nov, 2026, EA FAQ late 2027 / introductory price, page says unlocks in about 1 day 6 hours (about 16:00Z Mon, 20:00 Dubai, so the game is not yet live at 07:15 Dubai: texts claim the date only); Steam news API: 19 Oct developers post, no delay; no delay notice",
+  "uncertainties": [
+   "blue hovering blobs chased by the hero under line 3 first half have no wings and may be slimes, not insects: Steam only says catch bugs; illustration, not demonstration",
+   "game has combat and dungeons (Steam: danger awaits, sword); caption says action-adventure, Reel shows none",
+   "credit names the publisher only; the two developers are individuals",
+   "frame 0 hair top touches headline line 2 for 1 frame, face clear"
+  ]
+ }
 }
