@@ -144,7 +144,7 @@
    ]
   ]
  ],
- "spoken": "لعبة POPUCOM تصل إلى PS5 يوم الثلاثاء، من استوديو هايبرغريف (Hypergryph) مطوّر لعبة Arknights. مغامرة ملوّنة تلعبها مع أصدقائك، وتحلّ ألغازها بتبديل الألوان. واللعبة متوفرة منذ 2025 على PC وجهاز Nintendo Switch.",
+ "spoken": "لعبة POPUCOM تصل إلى PS5 يوم الثلاثاء 17 نوفمبر، وهي متوفرة على PC وNintendo Switch. من استوديو هايبرغريف (Hypergryph) مطوّر لعبة Arknights، مغامرة ملوّنة تلعبها مع أصدقائك، وتحلّ ألغازها بتبديل الألوان.",
  "lines": [
   [
    1,
@@ -166,13 +166,6 @@
    [
     "تحلّ ألغازها\nبتبديل الألوان"
    ]
-  ],
-  [
-   8,
-   10,
-   [
-    "اللعبة متوفرة منذ 2025\nعلى PC وجهاز Nintendo Switch"
-   ]
   ]
  ],
  "credits": [
@@ -187,13 +180,23 @@
    }
   ]
  ],
- "headline": "لعبة POPUCOM\nتصل إلى PS5 الثلاثاء",
+ "headline": "لعبة POPUCOM\nتصل إلى PS5",
  "label": "رسمي",
  "source": "فايرشاين غيمز (Fireshine Games)",
  "date": "16 Nov 2026",
  "theme": "playful",
  "style": "lines",
- "template": "trailer",
+ "template": "split",
+ "strip": [
+  [
+   "الموعد",
+   "الثلاثاء 17 نوفمبر"
+  ],
+  [
+   "متوفرة على",
+   "PC · Nintendo Switch"
+  ]
+ ],
  "skin": "house",
  "cut": true,
  "track": [
@@ -218,7 +221,8 @@
   "line 1 (studio) over the heroes: the orange-haired girl close (TR 13.40), skydiving past the yellow creature (TR 18.67), the blue hero landing and posing with a friend (TR 25.40), walking on (TR 27.55): illustration",
   "line 2 (with friends) over two players on the grass under the bubble robot (TR 104.0): co-op shown",
   "line 3 (colour puzzles) over the colour-block puzzle machine (PV 39.1, 39.95): demonstration",
-  "line 4 (PC and Switch since 2025) over the yellow submarine (PV 66.36), the heroes boarding the flying bus (TR 80.90) and the balloon bus over the sea (TR 84.65): illustration; the last 2 s are the balloon bus, a picture",
+  "after line 3 the picture breathes with the strip pinned (date; PC and Nintendo Switch): the yellow submarine (PV 66.36), the heroes boarding the flying bus (TR 80.90) and the balloon bus over the sea (TR 84.65), a cut every 1.4 to 2.2 s; the last 2 s are the balloon bus, a picture",
+  "strip (split): الموعد · الثلاثاء 17 نوفمبر | متوفرة على · PC · Nintendo Switch; the headline carries PS5, the strip the date and the other platforms, the lines never repeat them",
   "sound: the announcement trailer's own music from 23.80 s (seek timeline), music_only; faster-whisper small on both trailers hears no speech (only 'I'/'You' hallucinations at no_speech 0.3 to 0.74); RMS -14 to -17 dB steady from 8 to 96 s, so the music runs past the end card",
   "credit: one entry 0 to 10 «المصدر: هايبرغريف (Hypergryph)», the developer whose logo opens the trailers"
  ],
@@ -232,7 +236,7 @@
   "4 subject named before pronoun, no line opens on و": "yes: the headline names the game; «ألغازها» refers to the adventure of the line before; no line opens on و",
   "4 release verbs": "yes: تصل إلى + PS5 (coming to a platform), «متوفرة» for the platforms where it is out",
   "4 names match names-ar": "yes: هايبرغريف (Hypergryph), فايرشاين غيمز (Fireshine Games) added as Proposed",
-  "5 headline": "yes: «لعبة POPUCOM تصل إلى PS5 الثلاثاء», names the game, opens on an Arabic word; DeepL back-check 'The game POPUCOM is coming to PS5 on Tuesday'",
+  "5 headline": "yes: «لعبة POPUCOM تصل إلى PS5», names the game, opens on an Arabic word; the date on the strip; DeepL back-check below",
   "5 caption": "yes: first five words «تصل POPUCOM إلى PS5 يوم» carry the game and the news word; ends #ألعاب #أخبار_الألعاب + 2",
   "5 X and Threads": "yes: one sentence, source «حسب إعلان الناشر فايرشاين غيمز (Fireshine Games)», no hashtags",
   "5 urgency": "yes: chip رسمي (the publisher's own trailer states the PS5 date)",
