@@ -1,7 +1,7 @@
 {
  "id": "trafficity-steam-launch-nov-16-20261115",
  "title": "Trafficity (Onramp Games), a city builder about traffic, launches on Steam on Mon 16 Nov 2026",
- "status": "building for the 03:15 Dubai Mon 16 Nov slot (23:15Z Sun 15 Nov); not scheduled",
+ "status": "built: Reel v3 qc pass (cards/2026-11/trafficity-steam-launch-november-16-reel-v3.mp4, render commit 77fdcf7, job_sha e7bb6d1d); NOT scheduled; director not run; for the 03:15 Dubai Mon 16 Nov slot (23:15Z Sun 15 Nov)",
  "lane": "digital-lounge",
  "game": "Trafficity",
  "companies": [
@@ -50,7 +50,7 @@
  "template_note": "formats.pick('launch') gives trailer; formats.py check trailer 2026-11-15T23:15 ok (neighbours: 00:15 Dreamlight Valley split, 01:15 Duck Side clipcard; Monday Dubai day fresh, no trailer yet that day)",
  "beat": "release",
  "family": "release (beat sheet 7), recipe 2 (trailer drop) for the opening: the traffic jam under chip and headline, then one line per beat on the shot that shows it, the last 2 s a picture",
- "recipe": "notes/scenario-recipes.md recipe 2: 0-2.75 s the jammed junction (cars queued) under the headline; 2.75-6.0 roads drawn at an angle (line 1); 6.0-9.24 a neighbourhood with cars driving its streets (line 2); 9.24-12.84 the camera over the grown city with its interchanges (line 3); 12.84-14.84 the same flyover, no text",
+ "recipe": "notes/scenario-recipes.md recipe 2: 0-3.25 s headline over the jammed junction (cars queued at the lights) then a roundabout with cars, no line; 3.5-6.0 roads drawn at an angle (line 1); 6.25-8.75 a neighbourhood with cars driving its streets (line 2); 9.25-11.75 the camera over the grown city, its interchanges and lake (line 3); 11.75-13.9 the flyover, no text; end card",
  "footage": "the game's official Steam trailer 'Trafficity Trailer' (app 5185750), 1920x1080 30 fps, 5.3 Mbps, 73.5 s, decode clean (session full decode and the server's shots read, 15 Nov); 9:16 crop 1.78x; the 'Gameplay highlight trailer' was opened too and has a silent audio track (-91 dB), so it is not used",
  "sensitive": "none: a city builder about roads and traffic",
  "spoken": "تصدر اليوم Trafficity، وهي لعبة مدن تحديها الزحام. ترسم فيها الطرق بأي زاوية، وتختار كل سيارة أسرع طريق. وكلما كبرت مدينتك، احتاجت طرقًا أكبر.",
@@ -127,5 +127,20 @@
   "deepl_forward": "whole story to Arabic in one piece (15 Nov ~07:25Z) plus term probes: city builder لعبة بناء المدن; traffic jams اختناقات مرورية; traffic congestion ازدحام المرور; roundabouts دوارات; overpasses الجسور العلوية; comes out today يصدر اليوم; our picks match (الزحام for the headline as the plainer word; DeepL's «تُطرح» and «يتم إطلاقه» replaced by the house تصدر)",
   "deepl_backcheck": "all final texts to English (15 Nov ~07:30Z): headline 'Trafficity Launches Today / A City-Building Game Where Traffic Is the Challenge'; X 'a city-building game that's all about solving traffic congestion, launches today on Steam, according to its store page'; caption read back faithfully except «منها وضع هادئ…، إلى جانب مولّد» read as 'ranging from ... to a map generator', so it was rewritten to «بينها وضع هادئ…، كما تضم مولّدًا للخرائط»; credit 'Source: Onramp Games'"
  },
- "regate": "RE-GATE within the hour before 03:15 Dubai (Mon): Steam page still says 16 Nov (or now live), no delay notice, price line still true or updated"
+ "regate": "RE-GATE within the hour before 03:15 Dubai (Mon): Steam page still says 16 Nov (or now live), no delay notice, price line still true or updated",
+ "reel": {
+  "path": "cards/2026-11/trafficity-steam-launch-november-16-reel-v3.mp4",
+  "render_commit": "77fdcf7",
+  "job_sha": "e7bb6d1d25a548e6e9863784b550e4053e9e885e",
+  "job_file_commit": "7e76918",
+  "renders": "4 dispatches (v1 stopped on the smear check over flat vector art, waived after looking; v1 qc pass but the cover carried the game's 'Add lane' tooltip and line 1 overlapped the headline; v2 qc pass, line 1 still entered 0.4 s under the headline; v3 qc pass)",
+  "qc": "pass, no findings; length 13.9 s before the end card; audio split applied, music 96.8% (v2 read), leak 0.0%; lifeless report-only, not over; sound trailer",
+  "stage_secs": "render 118 s on dxb-render (8 cores)"
+ },
+ "sound": "the Trafficity Trailer's own music from 23.4 s as one stretch (audio split, music stem); faster-whisper on the finished Reel: no speech; RMS steady -16 to -20 dB to 13.5 s, then the end-card jingle",
+ "director_notes_for_review": [
+  "4.25-4.5 s: the game's road tool (a cursor and a red-pink roundabout placement ghost) shows mid-frame under line 1: it is the drawing the line describes, game UI, no text",
+  "8.9-9.4 s and 12.0-12.6 s: smear check waived after looking at the source at 10 fps (crossfade between two flat vector scenes, white straight roads)",
+  "cover: flat map art; checked at full size, no tooltip, the queued cars and lights read at grid size"
+ ]
 }
