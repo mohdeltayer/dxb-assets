@@ -1,8 +1,8 @@
 {
  "name": "league-of-legends-new-dawn-2027",
- "out": "cards/2026-11/league-of-legends-new-dawn-2027-reel-v3.mp4",
+ "out": "cards/2026-11/league-of-legends-new-dawn-2027-reel-v4.mp4",
  "verdict": "pass",
- "at": "2026-11-15T00:44:56Z",
+ "at": "2026-11-15T00:51:10Z",
  "findings": [],
  "notes": [
   "length 22.1 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
@@ -11,8 +11,8 @@
   "render_job: lifeless: {\"score\": 1.9, \"still_share\": 0.023, \"longest_still\": 0.2, \"cuts_per_10s\": 6.82, \"held_under_text\": 0.0, \"secs\": 22.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "209d5976d607951f9fa5c20a501e801444098385",
- "dispatches": 4,
+ "job_sha": "559f41e5497607a5aebfd660ccad3b56ddf2275b",
+ "dispatches": 5,
  "source_summary": {
   "min_height": 1440,
   "max_zoom": 1.33,
@@ -26,5 +26,5 @@
   "cards/2026-11/league-of-legends-new-dawn-2027-look-3.jpg"
  ],
  "person_shown": true,
- "sound": "bed:neon_c (our bed: the only official video (Riot's New Dawn video, League of Legends X post 14 Nov, 121.3 s; the YouTube teaser vs3p3mNhRXo is the same cut) has speech over 0 to 41.6 s (Pabro and Meddler on camera) and narration over 58.6 to 96.4 s; its speech-free stretches are 44.0 to 58.3 s (14 s, cinematic build) and 96.8 to 110.5 s (13.7 s, gameplay music, then a logo sting that falls to -63 dB). v1 ran 96.8 s music_only: the music stem fell silent from 14 s to the end card (measured -63 to -70 dB at 17 to 20.9 s; music 14.4 percent of the stretch). A 44.0 s stretch with speech_ok turns the audio split off, so the narration would play under the Arabic lines. No other official New Dawn video exists (Riot New Dawn page and news index checked 15 Nov 00:10Z).)"
+ "sound": "bed:neon (our bed: the only official video (Riot's New Dawn video, League of Legends X post 14 Nov, 121.3 s; the YouTube teaser vs3p3mNhRXo is the same cut) has speech over 0 to 41.6 s (Pabro and Meddler on camera) and narration over 58.6 to 96.4 s; its speech-free stretches are 44.0 to 58.3 s (14 s, cinematic build) and 96.8 to 110.5 s (13.7 s, gameplay music, then a logo sting that falls to -63 dB). v1 ran 96.8 s music_only: the music stem fell silent from 14 s to the end card (measured -63 to -70 dB at 17 to 20.9 s; music 14.4 percent of the stretch). A 44.0 s stretch with speech_ok turns the audio split off, so the narration would play under the Arabic lines. No other official New Dawn video exists (Riot New Dawn page and news index checked 15 Nov 00:10Z).)"
 }
