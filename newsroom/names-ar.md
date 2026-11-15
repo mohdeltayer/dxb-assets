@@ -312,3 +312,11 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | Jackbox Games (maker of The Jackbox Party Pack) | جاكبوكس غيمز (short: جاكبوكس) | Proposed 15 Nov 2026 (غيمز as the house spells Games; DeepL wrote جيمز; on screen «جاكبوكس (Jackbox)» in the headline) |
 | Mike Bilder (Jackbox Games CEO) | مايك بيلدر | Proposed 15 Nov 2026 (role word «الرئيس التنفيذي لجاكبوكس غيمز»; DeepL's spelling) |
 | false positives (a test that says an idea works when it does not) | نتائج مضللة | Proposed 15 Nov 2026 (DeepL gave النتائج الإيجابية الخاطئة, technical; نتائج مضللة reads back as 'misleading results') |
+
+### Added 15 Nov 2026 (Ranger's Path full release Reel)
+| Latin | Arabic | Status |
+|---|---|---|
+| astragon Entertainment (Ranger's Path publisher, Germany; the logo writes astragon in lower case) | أستراغون إنترتينمنت | Proposed 15 Nov 2026 (caption and X «شركة أستراغون إنترتينمنت (astragon Entertainment)»; Reel credit «المصدر: أستراغون إنترتينمنت (astragon)»; DeepL left it in Latin) |
+| To-Go Games (Ranger's Path developer) | تو-غو غيمز | Proposed 15 Nov 2026 (caption only, «استوديو تو-غو غيمز (To-Go Games)»; hyphen kept as the Latin has it) |
+| national park | حديقة وطنية (حديقة Faremont الوطنية) | Proposed 15 Nov 2026 (DeepL and common press usage; متنزه وطني was the first draft) |
+| Early Access | الوصول المبكر; on screen «بنسخة غير مكتملة» for a general reader | In use (earlier posts) |

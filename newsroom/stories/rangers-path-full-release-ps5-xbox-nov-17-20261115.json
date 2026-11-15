@@ -1,14 +1,134 @@
 {
  "id": "rangers-path-full-release-ps5-xbox-nov-17-20261115",
  "title": "Ranger's Path: National Park Simulator leaves Early Access on 17 Nov and launches on PS5 and Xbox Series X|S, with 2-player co-op and a Bigfoot legend",
- "status": "claimed: building (production subagent, slot 23:15 Dubai Sun 15 Nov)",
+ "status": "built: job committed, render pending (production subagent, slot 23:15 Dubai Sun 15 Nov); not scheduled",
  "lane": "digital-lounge",
  "game": "Ranger's Path: National Park Simulator",
- "companies": ["astragon Entertainment", "To-Go Games"],
+ "companies": [
+  "astragon Entertainment",
+  "To-Go Games"
+ ],
  "subject_person": null,
  "claimed_at": "2026-11-15T04:50:00Z",
  "slot": "23:15 Dubai Sun 15 Nov 2026 (19:15Z)",
  "sources": [
-  {"name": "Steam news, Ranger's Path, 17 Sep 2026: 'Ranger's Path launches into Full Release on November 17!'", "url": "https://store.steampowered.com/app/2502780/"}
- ]
+  {
+   "role": "primary",
+   "name": "Steam news for Ranger's Path (app 2502780), read in full through the Steam news API 15 Nov 04:45Z. 17 Sep 14:13Z 'Ranger's Path launches into Full Release on November 17!': 'On November 17, Ranger's Path: National Park Simulator is leaving Early Access and launching into Full Release on Steam. At the same time ... the game also launches on PlayStation 5 and Xbox Series X|S', 'Team up with a fellow Ranger in 2-player co-op, follow the tracks of one of Faremont's most elusive legends'. 21 Oct: 'On November 17, Ranger's Path will leave Early Access with its Full Release on PC and arrive on PlayStation 5 and Xbox Series X|S.' 8 Oct: 2-player co-op with the Multiplayer Trailer. 28 Oct: Bigfoot teaser",
+   "url": "https://store.steampowered.com/news/app/2502780"
+  },
+  {
+   "role": "primary",
+   "name": "Steam store appdetails, cc=ae, read 15 Nov 04:40Z: release 10 Mar 2026 (Early Access), developer To-Go Games, publisher astragon Entertainment, 53.00 AED, Windows",
+   "url": "https://store.steampowered.com/app/2502780/"
+  },
+  {
+   "role": "secondary",
+   "name": "Push Square and Pure Xbox next-week guides (14 Nov): Ranger's Path on PS5 and Xbox 17 Nov",
+   "url": "https://www.purexbox.com/news/2026/11/these-10plus-games-are-coming-to-xbox-next-week-november-16-20"
+  }
+ ],
+ "first_report": "Steam announcement 17 Sep 2026 14:13Z (date and platforms); the launch itself is Tue 17 Nov 2026. No Arabic outlet has carried it.",
+ "source_type": "primary",
+ "ledger_find": {
+  "at": "2026-11-15T05:30:00Z",
+  "words": [
+   "ranger",
+   "astragon",
+   "faremont"
+  ],
+  "hits": [],
+  "note": "newsroom/ledger.py find crashed (TypeError: sequence item 1: expected str instance, list found); git grep over newsroom/stories for each word: no story on this game"
+ },
+ "genre": [
+  "strategy/sim",
+  "family"
+ ],
+ "kind": "date",
+ "kind_news": "date",
+ "label": "رسمي",
+ "chip": "رسمي",
+ "template": "comparison",
+ "template_note": "Sunday (Dubai day): trailer 6, split 4 (formats.py check split refuses), clipcard 4 with Stampede, stills 3; date maps to split and trailer, both at cap. Comparison (footage-led, hard cuts, formats.py check ok at 19:15Z): state 1 the Early Access game with one ranger, state 2 the full release with two. Neighbours: 22:15 Stampede clipcard, 00:15 another builder (unknown)",
+ "platform": "PC (Steam), PS5, Xbox Series X|S",
+ "beat": "release",
+ "recipe": "no recipe fits a dated launch told as a comparison; own focus: 0-3.5 headline over motion · 3.5-7.2 line 1 on the ranger at work · 7.2-10.6 line 2 on the park (state 1) · hard cut · 10.6-14.5 line 3 date · 14.5-17.9 line 4 platforms · 17.9-22.5 line 5 on two rangers, closing on the elk",
+ "sensitive": "none: no weapons on screen (the tranquilizer gun of EA update 2 is not in any chosen shot), no injured animals (the carcass on the road at 30.5 to 31.3 s of the Multiplayer Trailer avoided), the axe and log-sawing shots avoided",
+ "footage": "official Steam trailers 'Multiplayer Trailer' (8 Oct 2026) and 'Park Impressions Trailer' (Nov 2025), both 1920x1080, 9:16 crop enlarged 1.78x; 'Bigfoot Trailer' rejected (burnt-in subtitles on almost every frame, Bigfoot not shown)",
+ "spoken": "في لعبة Ranger's Path تحرس حديقة وطنية، واللعبة متوفرة على PC منذ مارس بنسخة غير مكتملة. النسخة الكاملة تصدر يوم الثلاثاء 17 نوفمبر، وتصل أيضًا إلى PS5 وXbox Series X|S، والإصدار الكامل يضيف لعبًا تعاونيًا لحارسين.",
+ "claims": [
+  {
+   "claim": "the full release on PC and the PS5 and Xbox Series X|S launch are on 17 Nov 2026",
+   "status": "confirmed (Steam announcements 17 Sep and 21 Oct)"
+  },
+  {
+   "claim": "in Early Access on PC since March 2026",
+   "status": "confirmed (Steam release date 10 Mar 2026; 'currently available in Early Access on PC', 21 Oct)"
+  },
+  {
+   "claim": "the full release adds 2-player co-op",
+   "status": "confirmed (17 Sep, 8 Oct)"
+  },
+  {
+   "claim": "a new story mission following a legend in the park, shown in a teaser named Bigfoot Trailer",
+   "status": "confirmed (17 Sep text; trailer title on the Steam page); caption only"
+  },
+  {
+   "claim": "53 dirhams on the Steam store in the UAE today",
+   "status": "confirmed (appdetails cc=ae 04:40Z); console prices in the region not read, not stated"
+  }
+ ],
+ "angle": {
+  "hook": "a game where you work as a park ranger leaves its unfinished Early Access stage and reaches consoles on Tuesday, now with a second ranger in co-op",
+  "why_now": "the dated launch is Tuesday 17 Nov 2026, two days after the slot (announced on Steam 17 Sep, repeated 8 Oct, 21 Oct and 28 Oct with the Bigfoot teaser); no Arabic outlet has carried it (git grep and the digests); same kind as the Unicorn Academy and Spirit Crossing launch Reels built today",
+  "what_it_means_here": "players in the region on PS5 and Xbox Series X|S get a calm nature simulator they could not play before, and PC players get the finished game; 53 dirhams on the Steam store in the UAE today",
+  "payoff": "2-player co-op: two rangers sharing a shift, closing on the two of them watching an elk"
+ },
+ "job": "jobs/live/rangers-path-full-release-nov-17.json",
+ "texts": {
+  "instagram": "تصدر Ranger's Path كاملة يوم الثلاثاء، ومعها اللعب التعاوني لشخصين\n\nتصدر يوم الثلاثاء 17 نوفمبر النسخة الكاملة من لعبة المحاكاة Ranger's Path: National Park Simulator على PC، من تطوير استوديو تو-غو غيمز (To-Go Games) ونشر شركة أستراغون إنترتينمنت (astragon Entertainment)، وتصل اللعبة في اليوم نفسه إلى PS5 وXbox Series X|S.\n\nتؤدي في اللعبة دور حارس في حديقة Faremont الوطنية: تصون الممرات، وتساعد الزوار، وتتتبع الحيوانات البرية وتعتني بها. واللعبة متوفرة على PC منذ مارس 2026 في مرحلة الوصول المبكر، أي بنسخة مدفوعة لم تكتمل بعد.\n\nويضيف الإصدار الكامل اللعب التعاوني لشخصين، ومهمة قصصية جديدة تتبع فيها آثار أسطورة تختبئ في غابات الحديقة، وظهرت في مقطع تشويقي بعنوان Bigfoot Trailer.\n\nوسعر اللعبة على متجر Steam في الإمارات حاليًا 53 درهمًا.\n\n#ألعاب #أخبار_الألعاب #RangersPath #PS5",
+  "x": "تصدر النسخة الكاملة من Ranger's Path يوم الثلاثاء 17 نوفمبر، وتصل في اليوم نفسه إلى PS5 وXbox Series X|S مع لعب تعاوني لشخصين، حسب إعلان أستراغون إنترتينمنت (astragon Entertainment) على Steam.",
+  "threads": "تصدر النسخة الكاملة من Ranger's Path يوم الثلاثاء 17 نوفمبر، وتصل في اليوم نفسه إلى PS5 وXbox Series X|S مع لعب تعاوني لشخصين، حسب إعلان أستراغون إنترتينمنت (astragon Entertainment) على Steam.",
+  "x_follow_up": "المصدر: https://store.steampowered.com/news/app/2502780",
+  "instagram_comment": "المصدر: صفحة اللعبة على Steam وإعلانات أستراغون إنترتينمنت (astragon Entertainment)"
+ },
+ "on_screen": {
+  "headline": "لعبة حارس الغابة / تصدر كاملة الثلاثاء",
+  "lines": [
+   "في Ranger's Path / تحرس حديقة وطنية",
+   "اللعبة على PC منذ مارس / بنسخة غير مكتملة",
+   "النسخة الكاملة تصدر / يوم الثلاثاء 17 نوفمبر",
+   "وتصل أيضًا إلى PS5 / و Xbox Series X|S",
+   "الإصدار الكامل يضيف / لعبًا تعاونيًا لحارسين"
+  ],
+  "credit": "المصدر: أستراغون إنترتينمنت (astragon)",
+  "chip": "رسمي"
+ },
+ "arabic_passes": {
+  "skills": "arabic-games-film-editor, arabic-writing and arabic-grammar-review loaded fresh 15 Nov ~05:20Z; house glossary, names-ar (sections 1 and 2) and arabic-writing conventions.md (dates) read; perfect-arabic SKILL.md and orthography.md opened",
+  "grammar_review": {
+   "required_edits": [],
+   "optional_style_suggestions": [
+    {
+     "original": "لعبة حارس الغابة",
+     "suggestion": "لعبة حارس الحديقة الوطنية",
+     "reason": "closer to 'national park ranger'; DeepL read the headline back as 'Guardian of the Forest'. Kept: the shorter form fits the headline line and the footage is forest"
+    }
+   ],
+   "uncertain_cases": [
+    {
+     "text": "حديقة وطنية / حديقة Faremont الوطنية",
+     "issue": "national park: حديقة وطنية (DeepL, the common press term) against متنزه وطني (first draft)",
+     "why_uncertain": "both are used in Arabic press; حديقة وطنية chosen",
+     "options": [
+      "حديقة وطنية",
+      "متنزه وطني"
+     ]
+    }
+   ]
+  },
+  "deepl": "forward pass of the whole English story in one piece and term variants ('Early Access' الوصول المبكر, 'an unfinished version' نسخة غير مكتملة, '2-player co-op' وضع تعاوني لشخصين, 'national park ranger' حارس حديقة وطنية); back-check of headline, lines, X text and caption: meaning kept (headline read back as 'Guardian of the Forest game to be released in full on Tuesday'). DeepL wrote To-Go Games and astragon in Latin only and 'سيتم إطلاق': house forms kept"
+ },
+ "re_gate_line": "RE-GATE within the hour before 23:15 Dubai (Sun)",
+ "regate": "RE-GATE within the hour before 23:15 Dubai (Sun): re-read the Steam news and store page (date, platforms, price 53 AED) and search 'Ranger's Path November 17' for a delay or change"
 }
