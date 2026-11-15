@@ -174,6 +174,7 @@ jobs:
           trap 'python templates/runner_stats.py stop "$stats" || true' EXIT
           export LOOK_ENTRY="$RUNNER_TEMP/look.json"    # theme and style of the Reel, for the look ledger (no three in a row)
           python templates/jobsha.py check "$(basename "$JOB" .json)" "$JOB_SHA"
+          python templates/qc.py rerender "$JOB"     # no third render (adv-20261115-one-render-server-checks item E)
           set -o pipefail
           python templates/render_job.py run "$JOB" 2>&1 | tee "$RUNNER_TEMP/render.log"
           echo "RENDER_SECS=$(( $(date +%s) - start ))" >> "$GITHUB_ENV"

@@ -47,6 +47,8 @@ A job must carry:
                  «ليست خبرًا جديدًا» family in its headline, lines or captions' first line.
   built_by:      the building session; the director PASS must come from another (presubmit.py director --by).
 
+  spoken:        (adv-20261115-one-render-server-checks) a job with story lines carries "spoken": the story as one
+                 paragraph of 2 to 3 Arabic sentences; the text check confirms the lines, in order, are that paragraph.
   layout:        "layout": "showcase" carries "showcase_reason" naming one of its two cases, the trailer itself is
                  the news or the source fails the quality gate enlarged with no better copy (reel.showcase_reason).
 
@@ -394,6 +396,14 @@ def layout_problems(job):
     return []
 
 
+def spoken_gate(job):
+    """adv-20261115-one-render-server-checks (Mohammad 15 Nov 2026): a job with story lines carries "spoken", the
+    story as one paragraph of 2 to 3 Arabic sentences; the text check (textrules.spoken_problems) confirms the lines,
+    in order, are that paragraph."""
+    import textrules as TR
+    return ['spoken: ' + f['fix'] for f in TR.spoken_problems(job) if f['rule'] == 'spoken_missing']
+
+
 def problems(path, job):
     """The list of refusals for this job file (empty when it may render)."""
     rel = _rel(path)
@@ -450,6 +460,7 @@ def problems(path, job):
     out += evergreen_problems(job)
     out += builder_problems(job)
     out += sound_problems(job)
+    out += spoken_gate(job)
 
     rc = job.get('reel_check')
     if not rc:

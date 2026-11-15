@@ -115,8 +115,9 @@ class Motion(unittest.TestCase):
 class Presubmit(unittest.TestCase):
     def test_pass_refused_on_qc_fail_and_needs_looked(self):
         import presubmit as P
-        keep_story, keep_ck, keep_qc, keep_blob = P.story, P.checklist, P.qc_of, P.blob
+        keep_story, keep_ck, keep_qc, keep_blob, keep_repo = P.story, P.checklist, P.qc_of, P.blob, P.REPO
         d = tempfile.mkdtemp()
+        P.REPO = __import__('pathlib').Path(d)        # a send-back writes beside the Reel's qc.json (15 Nov 2026)
         sf = __import__('pathlib').Path(d) / 's.json'
         sf.write_text('{}')
         try:
@@ -134,7 +135,7 @@ class Presubmit(unittest.TestCase):
             P.qc_of = lambda out: {'verdict': 'fail', 'findings': []}
             P.director('s', 'FIX', 'cards/x-reel-v1.mp4', job='j.json', by='director')
         finally:
-            P.story, P.checklist, P.qc_of, P.blob = keep_story, keep_ck, keep_qc, keep_blob
+            P.story, P.checklist, P.qc_of, P.blob, P.REPO = keep_story, keep_ck, keep_qc, keep_blob, keep_repo
 
 
 if __name__ == '__main__':

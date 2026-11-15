@@ -60,6 +60,18 @@ a stretch. A director PASS is final: the builder schedules it and adds no checks
 builder doubts goes back to the director as a question before the PASS, never as a re-cut after it. (On 10 Nov
 Warhammer Survivors' pixel-art red splats were cut as blood after a PASS, which cost two renders.)
 
+**Director limit (adv-20261115-one-render-server-checks item E, Mohammad 15 Nov 2026).** When the server qc is pass,
+the director looks once: the three look frames beside qc.json (every Reel now), the strip and the dense strip. It
+passes (`presubmit.py director <story> PASS ... --looked "<what they show>"`, notes allowed), or sends the Reel back
+once, only for a hard reason: `presubmit.py director <story> FIX <out> --by <director> --reason wrong_subject | graphic |
+unreadable_text | factual_error --note "<what and where>"`. The send-back is written to the Reel's qc.json under
+`director_sendbacks` and to the story file; commit both. A second send-back is refused; a third render is refused by the
+server unless the job names "rerender": {"reason", "note"}. Things the server now checks (a line under the headline,
+shots across scene cuts or before the picture, letterbox, a subject leaving the crop, a busy card ground, lines that are
+not the spoken paragraph) are never send-back reasons: if one slips through, it goes to the build desk as a bug.
+Weekly (Tuesday audit): `python3 ops/sendbacks.py --card <file>`; a reason seen three times in a week goes on a card as a
+candidate server check (item F).
+
 **Director (advisor, 21 Oct 2026; model by tier from 25 Oct, Phase 1 step 4).** Model: sonnet for routine
 and evergreen Reels; opus for fresh reveals, anything with speech (voiced or subtitled), debates and the
 first Reel of a new format or template. The story file records it as `"director_model"`, so the week's

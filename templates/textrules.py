@@ -13,6 +13,16 @@ or digit, «وPS5»), sign (% or + next to a digit or a Latin word flips in righ
 headline_long (estimate: a headline line over HEAD_CHARS characters with a Latin name, or a headline needing more than
 HEAD_LINES lines), line_count (a beat of more than 3 visual lines, or more than 2 over a split strip), reading (a line on
 screen for less than its reading time), empty (an empty line or headline).
+
+adv-20261115-one-render-server-checks (Mohammad 15 Nov 2026; every 15 Nov Reel rendered three times with qc pass):
+head_overlap (A): a story line that enters before the headline band clears (the head layer fades out from HEAD_CLEAR,
+  3.30 s; reel.py's head_secs 3.5 less its 0.2 s fade). Trafficity v1 (line 1 at 2.60 s) and v2 (2.90 s) were sent back
+  for it; v3 (3.31 s) passed. The fix names the earliest start and how much longer the shots before it must be. The
+  showcase layout (its headline stays in its own band) and the shots a "persist" head covers are not checked.
+spoken (Mohammad, same day: lines that do not connect because they are cut from the fact list): the job carries
+  "spoken", the story as one paragraph of 2 to 3 Arabic sentences, and the on-screen lines, read in order, are that
+  paragraph: every word of every line is found in it, in order (a word may be left out, none may be added, and the
+  lines may not jump back). spoken_missing when the key is absent or not 2 to 3 sentences; spoken_order otherwise.
 """
 import json
 import re
@@ -27,6 +37,11 @@ HEAD_CHARS = 22          # estimate: «لعبة Warhammer Survivors» (24) did n
 HEAD_LINES = 2
 LINES_MAX, LINES_STRIP = 3, 2
 CPS, FLOOR, FIND = 14, 2.2, 0.5   # reel.read_secs: 14 characters a second plus half a second, 2.2 s at least
+HEAD_SECS = 3.5          # reel.reel(head_secs=3.5): the head layer runs 0 to 3.5 s ...
+HEAD_CLEAR = 3.3         # ... and fades out over its last 0.2 s: a line may enter from here
+SPOKEN_MIN, SPOKEN_MAX = 2, 3
+TATWEEL_DIACRITICS = re.compile('[ـً-ْٰ]')
+SENT_END = re.compile(r'[.!؟?]+(?=\s|$)')
 
 
 def read_secs(text):
@@ -106,6 +121,120 @@ def _placed(job):
     return out, end
 
 
+def _persist_head_spans(job, starts, end):
+    """The seconds a "persist" head keeps the headline up on purpose (render_job.persist_overlay)."""
+    out = []
+    for rng in ((job.get('persist') or {}).get('head') or []):
+        try:
+            a, b = int(rng[0]), int(rng[1])
+        except (TypeError, ValueError, IndexError):
+            continue
+        if a < len(starts):
+            out.append((starts[a], starts[b + 1] if b + 1 < len(starts) else end))
+    return out
+
+
+def head_problems(job):
+    """Item A: no story line enters while the headline band is still up (it fades out from HEAD_CLEAR)."""
+    if job.get('layout') == 'showcase' or job.get('kind') in ('famitsu', 'breaking'):
+        return []
+    starts, end = _timeline(job)
+    if not starts:
+        return []
+    persist = _persist_head_spans(job, starts, end)
+    out, n = [], 0
+    for g in job.get('lines') or []:
+        try:
+            a, texts = int(g[0]), g[2]
+        except (TypeError, ValueError, IndexError):
+            continue
+        tx = [t for t, _ in _texts(texts)]
+        if not tx or a >= len(starts):
+            n += len(tx)
+            continue
+        t0 = starts[a] + (0.25 if a else 3.6)
+        n += 1
+        if t0 < HEAD_CLEAR - 0.005 and not any(p <= t0 < q for p, q in persist):
+            need = HEAD_CLEAR - t0 + 0.01
+            if a:
+                fix = (f'it enters at {t0:.2f} s, under the headline (which fades out from {HEAD_CLEAR:.2f} s); the '
+                       f'earliest allowed start is {HEAD_CLEAR:.2f} s: lengthen shot{"s 0 to" if a > 1 else ""} '
+                       f'{a - 1 if a > 1 else 0} by {need:.2f} s in all'
+                       + (f' (shot 0 to at least {float(job["shots"][0][2]) + need:.2f} s)' if a == 1 else '')
+                       + ', or start this group on a later shot')
+            else:
+                fix = f'it enters at {t0:.2f} s; the earliest allowed start is {HEAD_CLEAR:.2f} s'
+            out.append({'where': f'line {n}', 'rule': 'head_overlap', 'text': tx[0].split('\n')[0], 'fix': fix})
+        n += len(tx) - 1
+    return out
+
+
+def _tokens(text, keep=False):
+    """Words for the spoken-paragraph match: no diacritics or tatweel, alef forms and ة/ى folded, punctuation and
+    brackets dropped, a leading و or ف taken off (the line may start a clause the paragraph joins with و). With
+    keep=True each word comes as (folded, as written)."""
+    out = []
+    for raw in re.sub(r'[«»"“”()\[\]،,:;.!؟?…\-–—|]', ' ', str(text)).split():
+        t = TATWEEL_DIACRITICS.sub('', raw)
+        w = re.sub('[إأآٱ]', 'ا', t).replace('ة', 'ه').replace('ى', 'ي').lower()
+        if len(w) > 1 and w[0] in 'وف' and (len(w) > 2 and ARABIC.match(w[1]) or re.match('[a-z0-9]', w[1])):
+            w = w[1:]
+        if not w or w in ('و', 'ف'):
+            continue
+        out.append((w, raw) if keep else w)
+    return out
+
+
+def spoken_sentences(text):
+    """The paragraph's sentences: ended by . ! ? or ؟, each at least two words."""
+    parts = [p.strip() for p in SENT_END.split(str(text)) if p.strip()]
+    return [p for p in parts if len(p.split()) >= 2]
+
+
+def spoken_problems(job):
+    """The spoken paragraph exists (2 to 3 sentences, Arabic first) and the lines, in order, are that paragraph."""
+    if job.get('kind') == 'famitsu':
+        return []
+    lines = [t for g in (job.get('lines') or []) if isinstance(g, (list, tuple)) and len(g) > 2 for t, _ in _texts(g[2])]
+    if not lines:
+        return []
+    sp = job.get('spoken')
+    if not isinstance(sp, str) or not sp.strip():
+        return [{'where': 'spoken', 'rule': 'spoken_missing', 'text': '',
+                 'fix': 'write "spoken": the story as one paragraph of 2 to 3 Arabic sentences told to a friend, then cut '
+                        'the lines from it in order (Mohammad, 15 Nov 2026)'}]
+    out = []
+    sents = spoken_sentences(sp)
+    if not SPOKEN_MIN <= len(sents) <= SPOKEN_MAX:
+        out.append({'where': 'spoken', 'rule': 'spoken_missing', 'text': sp[:80],
+                    'fix': f'{len(sents)} sentence{"" if len(sents) == 1 else "s"}: the paragraph is {SPOKEN_MIN} to '
+                           f'{SPOKEN_MAX} sentences, each ending on a full stop'})
+    if not _first_ok(sp):
+        out.append({'where': 'spoken', 'rule': 'latin_first', 'text': sp[:40],
+                    'fix': 'open the paragraph on an Arabic word'})
+    para = _tokens(sp)
+    k = 0
+    for i, line in enumerate(lines, 1):
+        words = _tokens(line, keep=True)
+        miss, j = [], k
+        for w, raw in words:
+            try:
+                j = para.index(w, j) + 1
+            except ValueError:
+                miss.append((w, raw))
+        if miss:
+            back = [raw for w, raw in miss if w in para[:k]]
+            miss = [raw for _, raw in miss]
+            why = ('these words come earlier in the paragraph than the line before: ' + ' '.join(back)) if back else \
+                  ('these words are not in the paragraph: ' + ' '.join(miss))
+            out.append({'where': f'line {i}', 'rule': 'spoken_order', 'text': line.replace('\n', ' '),
+                        'fix': why + '; the lines, read in order, are the spoken paragraph (a word may be left out, '
+                               'none added): rewrite the line from the paragraph, or the paragraph to carry it'})
+        else:
+            k = j
+    return out
+
+
 def check(job):
     """Every font-free text problem in the job, as a list of findings (empty when clean)."""
     out = []
@@ -171,6 +300,8 @@ def check(job):
                     out.append({'where': f'line {k + 1}', 'rule': 'reading', 'text': text.split('\n')[0],
                                 'fix': f'on screen {z - a:.1f} s of the {need:.1f} s it needs: add {need - (z - a):.1f} s of '
                                        'related footage to its shots, shorten it, or move it'})
+    out += head_problems(job)
+    out += [f for f in spoken_problems(job) if not (job.get('_gate_spoken') and f['rule'] == 'spoken_missing')]
     return out
 
 

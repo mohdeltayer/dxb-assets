@@ -7,6 +7,10 @@ instead of letting a skipped step through. The file a check passed is bound by i
 changes the id and the director check must be run again.
 
     python3 templates/presubmit.py director <story> PASS <out.mp4> --job <job.json> --by <director> [--note "..."] [--looked "<what the three look frames show>"]
+    python3 templates/presubmit.py director <story> FIX <out.mp4> --by <director> --reason <code> --note "..."
+                         # a send-back (adv-20261115-one-render-server-checks item E): with the server qc at pass, one
+                         # per story, for a hard reason only: wrong_subject, graphic, unreadable_text, factual_error;
+                         # written to the Reel's qc.json under director_sendbacks and to the story file
     python3 templates/presubmit.py intent <commitment> <platform> <story> <out.mp4> --labels kind:news,tpl:trailer [--slot ISO]
                                                                      # before submit_publer_posts
     python3 templates/presubmit.py line <commitment> --ids ig:<last6> x:<last6> th:<last6>   # the board's scheduled line
@@ -136,12 +140,51 @@ def qc_of(out):
     return None
 
 
-def director(sid, verdict, out, note='', job=None, by=None, looked=None):
+HARD_REASONS = ('wrong_subject', 'graphic', 'unreadable_text', 'factual_error')
+SENDBACKS_MAX = 1
+
+
+def qc_path(out):
+    import re as _re
+    return REPO / (_re.sub(r'-reel-v\d+$', '', str(out)[:-4] if str(out).endswith('.mp4') else str(out)) + '-qc.json')
+
+
+def record_sendback(out, entry):
+    """adv-20261115-one-render-server-checks item E: one line under director_sendbacks in cards/YYYY-MM/<name>-qc.json
+    (from git when the slim clone has no cards/); the caller commits it."""
+    p = qc_path(out)
+    d = qc_of(out) or {}
+    d.setdefault('director_sendbacks', []).append(entry)
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(json.dumps(d, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+    return p
+
+
+def director(sid, verdict, out, note='', job=None, by=None, looked=None, reason=None):
     if verdict not in ('PASS', 'FIX'):
         raise SystemExit('presubmit: verdict is PASS or FIX')
     f, s = story(sid)
     cl = checklist(job, out) if job else None
     qc = qc_of(out)
+    if verdict == 'FIX':
+        # adv-20261115-one-render-server-checks item E: with the server's qc at pass, the director looks once at the
+        # look frames and may send a Reel back once, for a hard reason only; no third render.
+        qc_pass = bool(qc) and qc.get('verdict') != 'fail'
+        if qc_pass:
+            if reason not in HARD_REASONS:
+                raise SystemExit('presubmit refused: the server qc passed this Reel; a send-back needs --reason, one of '
+                                 + ', '.join(HARD_REASONS) + ' (wrong subject, graphic content, unreadable text, a '
+                                 'factual error on screen). Anything else is a note on a PASS.')
+            used = [x for x in s.get('director_sendbacks') or [] if x.get('qc') == 'pass']
+            if len(used) >= SENDBACKS_MAX:
+                raise SystemExit(f'presubmit refused: the director already sent this story back ({used[-1].get("reason")}, '
+                                 f'{used[-1].get("at")}); no third render. PASS it with a note, or the story moves to a '
+                                 'simpler template as a new job (adv-20261115-one-render-server-checks item E)')
+        entry = {'at': now(), 'reason': reason or 'qc_fail', 'note': note, 'by': by, 'out': out,
+                 'qc': 'pass' if qc_pass else (qc or {}).get('verdict')}
+        s.setdefault('director_sendbacks', []).append(entry)
+        if qc:
+            print(f'send-back recorded in {record_sendback(out, entry)} (commit it with the story file)')
     if verdict == 'PASS':
         # the server's verdict is final on what it measured (adv-20261112-qc-notes-become-failures)
         if qc and qc.get('verdict') == 'fail':
@@ -361,7 +404,8 @@ if __name__ == '__main__':
         jobp = a[a.index('--job') + 1] if '--job' in a else None
         by = a[a.index('--by') + 1] if '--by' in a else None
         looked = a[a.index('--looked') + 1] if '--looked' in a else None
-        director(a[1], a[2], a[3], note, jobp, by, looked)
+        reason = a[a.index('--reason') + 1] if '--reason' in a else None
+        director(a[1], a[2], a[3], note, jobp, by, looked, reason)
     elif cmd == 'intent' and len(a) >= 5:
         labels = a[a.index('--labels') + 1] if '--labels' in a else None
         slot = a[a.index('--slot') + 1] if '--slot' in a else None

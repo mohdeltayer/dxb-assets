@@ -256,6 +256,14 @@ def shots(job, draft=False, build=True):
                 gf = job.get('ground_footage')    # [file, start]: the game's own trailer behind the card (advisor, 20 Oct 2026)
                 if isinstance(start, list):       # per card: ["x-gfx-a.png", [file, start], secs, null] (multi-game numbers)
                     gf = start
+                if gf and job.get('ground_seek') != 'fixed' and not draft:   # D: the calmest window of the named stretch
+                    import shotgate as SG          # (adv-20261115-one-render-server-checks, 15 Nov 2026)
+                    span = float(gf[2]) if len(gf) > 2 else SG.GROUND_SPAN
+                    seek, sc, named = SG.ground_pick(gf[0], float(gf[1]), span, secs, t0=t)
+                    print(f"render_job: ground for card {i} ({f}): {gf[0]} at {seek:.2f} s, the calmest {secs:.1f} s of "
+                          f"{float(gf[1]):.2f} to {float(gf[1]) + span:.2f} s (busy {sc}, the seek as written "
+                          f"{float(gf[1]) + t:.2f} s: {named})", flush=True)
+                    gf = [gf[0], seek - t]
                 gs = job.get('ground_still')      # the game's key art behind the card, blurred and dimmed (9 Nov 2026)
                 src = card_stages(job, f, secs)   # the figure counts up, rows come in (on in numbers and list, 12 Nov 2026)
                 NG.slide(src, secs, job.get('ground_theme', job['theme']), C.U + clip,
@@ -491,6 +499,8 @@ def check(job):
         reel.page_positions([[(f'l{i}', a, min(z, end))] for i, (_, a, z, _) in enumerate(lines)], page_moves(job, st))
         print(f"page motion: {len(page_moves(job, st))} moves on the cut", flush=True)
     speech_check(job, end)
+    if job.get('kind') != 'breaking':
+        shot_gate(job)                          # B and C (adv-20261115-one-render-server-checks)
     first_frame_check(job)
     cover_picture_check(job)
     card_art_check(job)
@@ -511,6 +521,23 @@ def check(job):
         print(f"design pass: moments {p['moments']}, frame {'at %.2f s for %.1f s' % (p['frame']['at'], p['frame']['secs']) if p['frame'] else 'none'}"
               + ''.join(f'; {n}' for n in p['notes']), flush=True)
     return end
+
+
+def shot_gate(job):
+    """adv-20261115-one-render-server-checks items B and C (templates/shotgate.py): every footage shot starts after the
+    picture on the server's copy, stays inside one scene, is not letterboxed, and keeps its subject inside the 9:16
+    window. A shot whose focus is null is autofocused first (as the build would), so the window checked is the one the
+    Reel uses. Every problem is listed at once; the job stops before anything is built."""
+    import shotgate as SG
+    if job.get('kind') in ('famitsu', 'breaking') or profile_of(job) == 'breaking':
+        return
+    rows = clean_nudge(job, job['shots'])
+    for sh in rows:
+        f, st, secs = sh[0], sh[1], sh[2]
+        if (len(sh) > 3 and sh[3] is None and isinstance(st, (int, float)) and isinstance(f, str)
+                and not f.endswith(('.png', '.jpg', '.jpeg', '.webp')) and os.path.exists(C.U + f)):
+            sh[3] = [list(k) for k in reel.autofocus(f, st, secs)]
+    SG.enforce(job, rows)
 
 
 def first_frame_check(job):
@@ -1108,6 +1135,7 @@ def run(job, draft=False):
         fetch(item)
     gfx(job)
     source_check(job)
+    shot_gate(job)                              # B and C on the server's copy, before anything is built (15 Nov 2026)
     fetched = time.time() - t0
     out = os.path.join(ROOT, job['out'])
     os.makedirs(os.path.dirname(out), exist_ok=True)
@@ -1190,6 +1218,8 @@ if __name__ == '__main__':
         gate_path = os.environ.get('PRERENDER_SRC') or path   # prerender copies the job to a temp folder; the gate
         errs = [{'where': 'build gate', 'rule': 'gate', 'text': '', 'fix': '', 'detail': p}   # reads its repo path
                 for p in buildgate.problems(gate_path, job)]
+        if any(str(e.get('detail', '')).startswith('spoken: ') for e in errs):
+            job = dict(job, _gate_spoken=True)   # the gate already lists the missing paragraph; the text check skips it
         try:
             textcheck(job, collect=errs)
         except Exception as e:             # anything unforeseen still reports with the rest

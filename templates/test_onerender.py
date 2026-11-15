@@ -22,7 +22,8 @@ class Rules(unittest.TestCase):
         self.assertTrue(all(f['rule'] != 'headline_long' for f in TR.hard(fs)))   # an estimate never stops
 
     def test_clean(self):
-        ok = dict(JOB, headline='متوفرة الآن', lines=[[1, 2, ['على الحاسب و PS5']]], gfx=[])
+        ok = dict(JOB, headline='متوفرة الآن', lines=[[1, 2, ['على الحاسب و PS5']]], gfx=[],
+                  spoken='اللعبة متوفرة الآن على الحاسب و PS5. وسعرها عشرون دولارًا.')   # 15 Nov: the spoken paragraph
         self.assertEqual(TR.hard(TR.check(ok)), [])
 
     def test_strip_line_cap(self):

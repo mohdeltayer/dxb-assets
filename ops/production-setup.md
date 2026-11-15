@@ -333,3 +333,17 @@ a run that has not been updated still reads them.
    search and build with the label given (never stronger). "source_unreadable": open it yourself, or build as تقرير
    naming the outlet. "mismatch": the listed facts were not on the page; fix them from the page or label تقرير. "DENIED":
    do not build. The text still says only what the named source says.
+15. Server checks before the first render (release 2026-11-15 r1, adv-20261115-one-render-server-checks, Mohammad
+   15 Nov: every Reel that day rendered three times with qc pass). a. Write "spoken" first: the story as one paragraph
+   of 2 to 3 Arabic sentences told to a friend; cut the lines from it in order (a word may be left out, none added); the
+   gate refuses a job without it and the text check refuses lines that are not that paragraph. b. No line enters before
+   3.30 s (the headline fades out from there); the text check names the earliest start and how much longer the shots
+   before it must be. c. Shot times come from the prerender `shots` read, which is on the server's own copy; the render
+   refuses a shot that starts before the picture, crosses a scene cut or sits on a letterbox (it names the nearest clean
+   start), and one whose subject leaves the 9:16 window or is cut by its edge from the first frame (it names the longest
+   safe length). Waivers after looking: cut_ok, letterbox_ok, drift_ok [[file, start, reason]]. d. A card on footage
+   takes the calmest stretch of its ground_footage itself (give [file, start] or [file, start, span]); "ground_seek":
+   "fixed" keeps your seek. e. Director: when qc is pass the director looks once at the three look frames (every Reel
+   now) and either passes (notes allowed) or sends it back once with `--reason wrong_subject|graphic|unreadable_text|
+   factual_error`; a second send-back is refused and a third render is refused by the server (`qc.py rerender`) unless
+   the job names "rerender": {"reason", "note"}. Commit the qc.json the send-back writes with the story file.

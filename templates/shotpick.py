@@ -11,8 +11,11 @@ A stretch is clean when, inside its scene (the trailer's own cuts), it has: no b
 no smear, no end card, no text inside the 9:16 window at the scene's focus and no cut text at its edges (tesseract every
 0.5 s), on a file that decodes clean. Stretches under MIN_SECS are dropped; each comes with `secs` (at most MAX_SECS,
 from the stretch's start) and its `focus` (reel.autofocus: the largest person, vehicle or animal, or saliency).
-Output, per file: {"file", "duration", "decode_clean", "shots": [{"start", "end", "secs", "focus", "scene"}],
-"rejected": [{"start", "end", "why"}]}. The job takes a shot as [file, start, secs, focus]. The prerender workflow runs
+Output, per file: {"file", "duration", "picture_start", "decode_clean", "shots": [{"start", "end", "secs", "focus",
+"scene"}], "rejected": [{"start", "end", "why"}], "cuts": [...]}. Since 15 Nov (adv-20261115-one-render-server-checks,
+item B) every time is on the server's own copy: nothing before the picture start (the video's start_time), stretches
+inside one scene only, and a letterboxed scene rejected ("letterboxed, N of M rows"); t0make takes its shot times
+from here, and templates/shotgate.py refuses a job whose shots break these rules before the render. The job takes a shot as [file, start, secs, focus]. The prerender workflow runs
 it with mode `shots` and prints SHOTS_JSON lines; nothing is committed.
 """
 import concurrent.futures as cf
@@ -73,6 +76,9 @@ def pick(f, ocr=True, workers=None):
         print(f'shotpick: autofocus failed on {f} ({e}); centre focus', flush=True)
         fo = [(0.0, 0.5)]
     offs = [(float(o), _focus_value(v)) for o, v in fo] or [(0.0, 0.5)]
+    import shotgate as SG
+    info = SG.read(f)
+    v0 = info['picture_start']
     look_min = getattr(reel, 'LOOK_MIN', 0.3)
     side_on = {round(float(o), 3): room for o, _side, room in getattr(fo, 'profile', []) if room < look_min}
     scenes = [(o, offs[i + 1][0] if i + 1 < len(offs) else dur, v) for i, (o, v) in enumerate(offs)]
@@ -83,6 +89,11 @@ def pick(f, ocr=True, workers=None):
         hard, soft = PR.ocr_shot(path, f, a, b - a, v, dur, first=False, ocr=ocr)
         bad += hard + [s for s in soft if s[2].startswith(('text', 'cut-text'))]
         bad += PR.smear_shot(path, a, b - a)
+        if a < v0:                               # before the picture on this copy (Duck, 15 Nov: video from 1.52 s)
+            bad.append((a, min(b, v0), f'before the picture ({v0:.2f} s on this copy)'))
+        rows, boxed = SG._letterbox_rows(f, max(a, v0), min(3.0, b - max(a, v0)), info['height'])
+        if boxed:
+            bad.append((a, b, f'letterboxed, {rows} of {info["height"]} rows'))
         if round(a, 3) in side_on:              # a profile face the 9:16 window cannot give look room (21 Oct rule)
             bad.append((a, b, f'profile face, {side_on[round(a, 3)]:.0%} look room'))
         return k, bad
@@ -98,7 +109,8 @@ def pick(f, ocr=True, workers=None):
             if q - p >= MIN_SECS:
                 out_shots.append({'start': round(p, 2), 'end': round(q, 2), 'secs': round(min(MAX_SECS, q - p), 2),
                                   'focus': v, 'scene': k})
-    return {'file': f, 'duration': round(dur, 2), 'decode_clean': not errs,
+    return {'file': f, 'duration': round(dur, 2), 'picture_start': v0, 'cuts': [round(a, 2) for a, _b, _v in scenes[1:]],
+            'decode_clean': not errs,
             'decode_errors': len(errs), 'shots': out_shots, 'rejected': rejected}
 
 
