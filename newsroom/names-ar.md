@@ -322,3 +322,9 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | To-Go Games (Ranger's Path developer) | تو-غو غيمز | Proposed 15 Nov 2026 (caption only, «استوديو تو-غو غيمز (To-Go Games)»; hyphen kept as the Latin has it) |
 | national park | حديقة وطنية (حديقة Faremont الوطنية) | Proposed 15 Nov 2026 (DeepL and common press usage; متنزه وطني was the first draft) |
 | Early Access | الوصول المبكر; on screen «بنسخة غير مكتملة» for a general reader | In use (earlier posts) |
+
+### Added 15 Nov 2026 (POPUCOM PS5 Reel)
+| Latin | Arabic | Status |
+|---|---|---|
+| Hypergryph (developer of Arknights and POPUCOM, China) | هايبرغريف | Proposed 15 Nov 2026 (Reel line «من استوديو هايبرغريف (Hypergryph)», credit «المصدر: هايبرغريف (Hypergryph)», caption and X; غ for G as in فيوز غيمز) |
+| Fireshine Games (publisher, UK) | فايرشاين غيمز | Proposed 15 Nov 2026 (caption and X «فايرشاين غيمز (Fireshine Games)»; DeepL left it in Latin) |
