@@ -1,7 +1,7 @@
 {
  "id": "rangers-path-full-release-ps5-xbox-nov-17-20261115",
  "title": "Ranger's Path: National Park Simulator leaves Early Access on 17 Nov and launches on PS5 and Xbox Series X|S, with 2-player co-op and a Bigfoot legend",
- "status": "building v3 (director FAIL on v2); job jobs/live/rangers-path-full-release-nov-17-v3.json; not scheduled",
+ "status": "built: Reel v3 QC pass (cards/2026-11/rangers-path-full-release-nov-17-v3-reel-v3.mp4) after director FAIL on v2; director not re-run, not scheduled; slot 23:15 Dubai Sun 15 Nov (19:15Z); template trailer under the gap-rule cap exception (template_note)",
  "lane": "digital-lounge",
  "game": "Ranger's Path: National Park Simulator",
  "companies": [
@@ -84,7 +84,7 @@
   "what_it_means_here": "players in the region on PS5 and Xbox Series X|S get a calm nature simulator they could not play before, and PC players get the finished game; 53 dirhams on the Steam store in the UAE today",
   "payoff": "2-player co-op: two rangers sharing a shift, closing on the two of them watching an elk"
  },
- "job": "jobs/live/rangers-path-full-release-nov-17-v2.json (removed from main by the render; source at 1baa480)",
+ "job": "jobs/live/rangers-path-full-release-nov-17-v3.json (removed from main by the render; source at 4f2fea9)",
  "texts": {
   "instagram": "تصدر Ranger's Path كاملة يوم الثلاثاء، ومعها اللعب التعاوني لشخصين\n\nتصدر يوم الثلاثاء 17 نوفمبر النسخة الكاملة من لعبة المحاكاة Ranger's Path: National Park Simulator على PC، من تطوير استوديو تو-غو غيمز (To-Go Games) ونشر شركة أستراغون إنترتينمنت (astragon Entertainment)، وتصل اللعبة في اليوم نفسه إلى PS5 وXbox Series X|S.\n\nتؤدي في اللعبة دور حارس في حديقة Faremont الوطنية: تصون الممرات، وتساعد الزوار، وتتتبع الحيوانات البرية وتعتني بها. واللعبة متوفرة على PC منذ مارس 2026 في مرحلة الوصول المبكر، أي بنسخة مدفوعة لم تكتمل بعد.\n\nويضيف الإصدار الكامل اللعب التعاوني لشخصين، ومهمة قصصية جديدة تتبع فيها آثار أسطورة تختبئ في غابات الحديقة، وظهرت في مقطع تشويقي بعنوان Bigfoot Trailer.\n\nوسعر اللعبة على متجر Steam في الإمارات حاليًا 53 درهمًا.\n\n#ألعاب #أخبار_الألعاب #RangersPath #PS5",
   "x": "تصدر النسخة الكاملة من Ranger's Path يوم الثلاثاء 17 نوفمبر، وتصل في اليوم نفسه إلى PS5 وXbox Series X|S مع لعب تعاوني لشخصين، حسب إعلان أستراغون إنترتينمنت (astragon Entertainment) على Steam.",
@@ -133,18 +133,19 @@
  "re_gate_line": "RE-GATE within the hour before 23:15 Dubai (Sun)",
  "regate": "RE-GATE within the hour before 23:15 Dubai (Sun): re-read the Steam news and store page (date, platforms, price 53 AED) and search 'Ranger's Path November 17' for a delay or change",
  "reel": {
-  "path": "cards/2026-11/rangers-path-full-release-nov-17-v2-reel-v2.mp4",
-  "strip": "cards/2026-11/rangers-path-full-release-nov-17-v2-strip.jpg",
-  "dense": "cards/2026-11/rangers-path-full-release-nov-17-v2-dense.jpg",
-  "qc": "cards/2026-11/rangers-path-full-release-nov-17-v2-qc.json (pass, 0 findings; note: 21.8 s before the end card, over the 12 to 20 s guide)",
-  "job_sha": "ce135b1b0d90850b35e9c83fa7233e49bf555300",
-  "job_commit": "1baa480",
-  "render_commit": "6817b36",
-  "renders": 2,
+  "path": "cards/2026-11/rangers-path-full-release-nov-17-v3-reel-v3.mp4",
+  "strip": "cards/2026-11/rangers-path-full-release-nov-17-v3-strip.jpg",
+  "dense": "cards/2026-11/rangers-path-full-release-nov-17-v3-dense.jpg",
+  "qc": "cards/2026-11/rangers-path-full-release-nov-17-v3-qc.json (pass, 0 findings; 21.8 s before the end card, over the 12 to 20 s guide)",
+  "job_sha": "102edce2cf4a9b63f723a9c5c516851ef9cb2da1",
+  "job_commit": "4f2fea9",
+  "render_commit": "8d355f6",
+  "renders": 3,
   "v1": "cards/2026-11/rangers-path-full-release-nov-17-reel-v1.mp4 (qc pass, render 9c3b5cb, job 8299bd2c): not for posting; v2 fixes edges seen at 4 fps (half-cut ranger in the statue shot, two trail signboards at the right edge, a hiker leaving the left edge)",
   "length": "21.8 s before the end card, 24.3 s in all",
-  "sound": "trailer (Multiplayer Trailer from 6.3 s), audio split applied, music 99.9 percent, leak 0.2 percent; faster-whisper on the final mp4 hears only 'Music' to 21.8 s (and a hallucinated 'Thank you for watching' over the end-card jingle); RMS -17 to -24 dB to the end card",
-  "checks_by_builder": "session 4 fps contact sheets of the final mp4 (9:16 as shipped): no weapons, injuries or graphic frames; no burnt-in text, slate or logo; credit on screen 0 to the end card; every line on the shots planned; first frame a ranger silhouette at sunset under the headline"
+  "sound": "trailer (Multiplayer Trailer from 6.3 s), audio split applied, music 99.9 percent, leak 0.2 percent",
+  "checks_by_builder": "session 4 fps sheets of the v3 mp4: headline «لعبة Ranger's Path / تصدر كاملة الثلاثاء» on the sunset cover; no weapons, injuries, slates or burnt-in text; credit 44 px 0 to the end card; lines on their planned shots. Remaining minor edges: a hat brim at the left edge of the litter shot, a hiker's sliver on the first frame of the bridge shot",
+  "v2": "cards/2026-11/rangers-path-full-release-nov-17-v2-reel-v2.mp4 (qc pass, render 6817b36, job ce135b1b): director FAIL, not for posting"
  },
  "template_ledger_note": "comparison; Sunday Dubai counts before this Reel: trailer 6, split 4, clipcard 4, stills 3, quote 1 (21:15 Jackbox); neighbours 22:15 Stampede (clipcard), 00:15 Disney Dreamlight Valley (split, another builder, per its job)",
  "director_v2": {
