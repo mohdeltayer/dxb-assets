@@ -1,7 +1,7 @@
 {
  "id": "rangers-path-full-release-ps5-xbox-nov-17-20261115",
  "title": "Ranger's Path: National Park Simulator leaves Early Access on 17 Nov and launches on PS5 and Xbox Series X|S, with 2-player co-op and a Bigfoot legend",
- "status": "built: Reel v2 QC pass (cards/2026-11/rangers-path-full-release-nov-17-v2-reel-v2.mp4); director not run, not scheduled; slot 23:15 Dubai Sun 15 Nov (19:15Z)",
+ "status": "building v3 (director FAIL on v2); job jobs/live/rangers-path-full-release-nov-17-v3.json; not scheduled",
  "lane": "digital-lounge",
  "game": "Ranger's Path: National Park Simulator",
  "companies": [
@@ -48,11 +48,11 @@
  "kind_news": "date",
  "label": "رسمي",
  "chip": "رسمي",
- "template": "comparison",
- "template_note": "Sunday (Dubai day): trailer 6, split 4 (formats.py check split refuses), clipcard 4 with Stampede, stills 3; date maps to split and trailer, both at cap. Comparison (footage-led, hard cuts, formats.py check ok at 19:15Z): state 1 the Early Access game with one ranger, state 2 the full release with two. Neighbours: 22:15 Stampede clipcard, 00:15 another builder (unknown)",
+ "template": "trailer",
+ "template_note": "CAP EXCEPTION for Mohammad (gap rule): trailer is the honest label. Sunday Dubai day already has trailer 6 (formats.py check reads 5 from the ledger), split 4, clipcard 4; a dated launch maps to split or trailer. reel.py has no state-label plate for a comparison (cut=True only hard-cuts and labels states by lines), so v2's 'comparison' label was not honest (director FAIL). Without this Reel the 23:15 slot is empty and 22:15 to 00:15 Dubai breaks the 60-minute gap rule; the gap rule over the per-template cap, as on 17, 23 and 24 Oct. No third trailer in a row: 22:15 Stampede is clipcard, 00:15 Disney Dreamlight Valley is split.",
  "platform": "PC (Steam), PS5, Xbox Series X|S",
  "beat": "release",
- "recipe": "no recipe fits a dated launch told as a comparison; own focus: 0-3.5 headline over motion · 3.5-7.2 line 1 on the ranger at work · 7.2-10.6 line 2 on the park (state 1) · hard cut · 10.6-14.5 line 3 date · 14.5-17.9 line 4 platforms · 17.9-22.5 line 5 on two rangers, closing on the elk",
+ "recipe": "no recipe fits a dated launch on trailer footage; own focus: 0-3.5 headline over motion · 3.5-7.2 line 1 on the ranger at work · 7.2-10.6 line 2 on the park (state 1) · hard cut · 10.6-14.5 line 3 date · 14.5-17.9 line 4 platforms · 17.9-22.5 line 5 on two rangers, closing on the elk",
  "sensitive": "none: no weapons on screen (the tranquilizer gun of EA update 2 is not in any chosen shot), no injured animals (the carcass on the road at 30.5 to 31.3 s of the Multiplayer Trailer avoided), the axe and log-sawing shots avoided",
  "footage": "official Steam trailers 'Multiplayer Trailer' (8 Oct 2026) and 'Park Impressions Trailer' (Nov 2025), both 1920x1080, 9:16 crop enlarged 1.78x; 'Bigfoot Trailer' rejected (burnt-in subtitles on almost every frame, Bigfoot not shown)",
  "spoken": "في لعبة Ranger's Path تحرس حديقة وطنية، واللعبة متوفرة على PC منذ مارس بنسخة غير مكتملة. النسخة الكاملة تصدر يوم الثلاثاء 17 نوفمبر، وتصل أيضًا إلى PS5 وXbox Series X|S، والإصدار الكامل يضيف لعبًا تعاونيًا لحارسين.",
@@ -93,7 +93,7 @@
   "instagram_comment": "المصدر: صفحة اللعبة على Steam وإعلانات أستراغون إنترتينمنت (astragon Entertainment)"
  },
  "on_screen": {
-  "headline": "لعبة حارس الغابة / تصدر كاملة الثلاثاء",
+  "headline": "لعبة Ranger's Path / تصدر كاملة الثلاثاء",
   "lines": [
    "في Ranger's Path / تحرس حديقة وطنية",
    "اللعبة على PC منذ مارس / بنسخة غير مكتملة",
@@ -101,20 +101,14 @@
    "وتصل أيضًا إلى PS5 / و Xbox Series X|S",
    "الإصدار الكامل يضيف / لعبًا تعاونيًا لحارسين"
   ],
-  "credit": "المصدر: أستراغون إنترتينمنت (astragon), one entry over every shot, from frame 0 to the end card",
+  "credit": "المصدر: أستراغون إنترتينمنت (astragon), 44 px, one entry over every shot, frame 0 to the end card",
   "chip": "رسمي"
  },
  "arabic_passes": {
   "skills": "arabic-games-film-editor, arabic-writing and arabic-grammar-review loaded fresh 15 Nov ~05:20Z; house glossary, names-ar (sections 1 and 2) and arabic-writing conventions.md (dates) read; perfect-arabic SKILL.md and orthography.md opened",
   "grammar_review": {
    "required_edits": [],
-   "optional_style_suggestions": [
-    {
-     "original": "لعبة حارس الغابة",
-     "suggestion": "لعبة حارس الحديقة الوطنية",
-     "reason": "closer to 'national park ranger'; DeepL read the headline back as 'Guardian of the Forest'. Kept: the shorter form fits the headline line and the footage is forest"
-    }
-   ],
+   "optional_style_suggestions": [],
    "uncertain_cases": [
     {
      "text": "حديقة وطنية / حديقة Faremont الوطنية",
@@ -127,7 +121,14 @@
     }
    ]
   },
-  "deepl": "forward pass of the whole English story in one piece and term variants ('Early Access' الوصول المبكر, 'an unfinished version' نسخة غير مكتملة, '2-player co-op' وضع تعاوني لشخصين, 'national park ranger' حارس حديقة وطنية); back-check of headline, lines, X text and caption: meaning kept (headline read back as 'Guardian of the Forest game to be released in full on Tuesday'). DeepL wrote To-Go Games and astragon in Latin only and 'سيتم إطلاق': house forms kept"
+  "deepl": "forward pass of the whole English story in one piece and term variants ('Early Access' الوصول المبكر, 'an unfinished version' نسخة غير مكتملة, '2-player co-op' وضع تعاوني لشخصين, 'national park ranger' حارس حديقة وطنية); back-check of headline, lines, X text and caption: meaning kept (headline read back as 'Guardian of the Forest game to be released in full on Tuesday'). DeepL wrote To-Go Games and astragon in Latin only and 'سيتم إطلاق': house forms kept",
+  "grammar_review_v3": {
+   "text": "لعبة Ranger's Path / تصدر كاملة الثلاثاء",
+   "required_edits": [],
+   "optional_style_suggestions": [],
+   "uncertain_cases": [],
+   "note": "arabic-grammar-review run fresh 15 Nov ~05:35Z on the changed headline: feminine تصدر agrees with لعبة, كاملة is a حال; DeepL back-check 'Ranger's Path Will Be Released in Full on Tuesday'. Lines, caption and X text unchanged"
+  }
  },
  "re_gate_line": "RE-GATE within the hour before 23:15 Dubai (Sun)",
  "regate": "RE-GATE within the hour before 23:15 Dubai (Sun): re-read the Steam news and store page (date, platforms, price 53 AED) and search 'Ranger's Path November 17' for a delay or change",
@@ -145,5 +146,14 @@
   "sound": "trailer (Multiplayer Trailer from 6.3 s), audio split applied, music 99.9 percent, leak 0.2 percent; faster-whisper on the final mp4 hears only 'Music' to 21.8 s (and a hallucinated 'Thank you for watching' over the end-card jingle); RMS -17 to -24 dB to the end card",
   "checks_by_builder": "session 4 fps contact sheets of the final mp4 (9:16 as shipped): no weapons, injuries or graphic frames; no burnt-in text, slate or logo; credit on screen 0 to the end card; every line on the shots planned; first frame a ranger silhouette at sunset under the headline"
  },
- "template_ledger_note": "comparison; Sunday Dubai counts before this Reel: trailer 6, split 4, clipcard 4, stills 3, quote 1 (21:15 Jackbox); neighbours 22:15 Stampede (clipcard), 00:15 Disney Dreamlight Valley (split, another builder, per its job)"
+ "template_ledger_note": "comparison; Sunday Dubai counts before this Reel: trailer 6, split 4, clipcard 4, stills 3, quote 1 (21:15 Jackbox); neighbours 22:15 Stampede (clipcard), 00:15 Disney Dreamlight Valley (split, another builder, per its job)",
+ "director_v2": {
+  "verdict": "FAIL (coordinator relay)",
+  "fixes": [
+   "headline «لعبة حارس الغابة» an invented title; name the game",
+   "comparison label not honest (no state plates)",
+   "optional edges: blue-vest hiker leaving the left edge, ranger shoulder on the bison shot, partner cut on the litter shot",
+   "credit larger if it fits"
+  ]
+ }
 }
