@@ -1,7 +1,7 @@
 {
  "id": "disney-dreamlight-valley-keepsake-sea-nov-18-20261115",
  "title": "Disney Dreamlight Valley: The Keepsake Sea expansion launches Wed 18 Nov (Gameloft): merfolk, an underwater world to decorate, Dory, your own pirate ship",
- "status": "built: Reel v3 qc pass (cards/2026-11/disney-dreamlight-valley-keepsake-sea-nov-18-v3-reel-v3.mp4); NOT scheduled, director to re-check v3; slot 00:15 Dubai Mon 16 Nov (20:15Z Sun). RE-GATE within the hour before 00:15 Dubai (Mon)",
+ "status": "scheduled in Publer 20:15Z (00:15 Dubai Mon 16 Nov) Instagram, X, Threads 3/3, v3 director PASS; RE-GATE due again in the hour before 00:15 Dubai (23:15 to 00:15 Dubai, 19:15Z to 20:15Z)",
  "lane": "digital-lounge",
  "game": "Disney Dreamlight Valley: The Keepsake Sea",
  "companies": [
@@ -185,5 +185,28 @@
   "render_commit": "b7717f1 (203 s, 8 cores, dxb-render server)",
   "renders": "2 (v1 ec26249 210 s, qc pass, superseded; v2 b7717f1 203 s)"
  },
- "builder_check_v3": "cover frame cropped to 3:4: «إضافة Dreamlight Valley / تحوّلك إلى حورية بحر» on two lines with the chip and credit, the mermaid in the swirl below it; her head touches the headline's second line for about 0.3 s (0.25 to 0.5 s); rest identical to v2; ffmpeg full decode clean"
+ "builder_check_v3": "cover frame cropped to 3:4: «إضافة Dreamlight Valley / تحوّلك إلى حورية بحر» on two lines with the chip and credit, the mermaid in the swirl below it; her head touches the headline's second line for about 0.3 s (0.25 to 0.5 s); rest identical to v2; ffmpeg full decode clean",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/disney-dreamlight-valley-keepsake-sea-nov-18-v3-reel-v3.mp4",
+  "blob": "aaed0cca3558a7f7e534f0d014259d0acd4af92c",
+  "at": "2026-11-15T05:51:13Z",
+  "note": "v3 director pass 15 Nov ~06:00Z: cover names the game, no speech (faster-whisper array input), music to end card, decode clean, credit from frame 0, DeepL back-check clean; re-gate 05:50Z",
+  "checklist": {
+   "job": "jobs/live/disney-dreamlight-valley-keepsake-sea-nov-18-v3.json",
+   "sha256": "01bd3017572fbb0ea058198be302fe4236407acf6c1e7c5bd4ae89bacacbf183",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-dreamlight-claude-sonnet",
+  "qc": "pass",
+  "looked": null
+ },
+ "scheduled": "scheduled: dreamlight-keepsake-sea-0015z at 00:15 Dubai Mon 16 Nov, 3/3, job status complete (read 05:51Z), ids ig:17335b x:192f3b th:192f41",
+ "regate_done": "15 Nov 05:50Z: official page LAUNCHES NOVEMBER 18, 2026, *Requires base game to play; Steam 5090170 Release Date Nov 18, 2026, Gameloft, no delay or price seen",
+ "director_v3": "by director-dreamlight-claude-sonnet 15 Nov ~06:00Z: PASS. v1/v2 not posted (v2 director FAIL: cover did not name the game)"
 }
