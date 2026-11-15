@@ -1,7 +1,7 @@
 {
  "id": "disney-dreamlight-valley-keepsake-sea-nov-18-20261115",
  "title": "Disney Dreamlight Valley: The Keepsake Sea expansion launches Wed 18 Nov (Gameloft): merfolk, an underwater world to decorate, Dory, your own pirate ship",
- "status": "built: Reel pending render (not scheduled)",
+ "status": "built: Reel v2 qc pass (cards/2026-11/disney-dreamlight-valley-keepsake-sea-nov-18-v2-reel-v2.mp4); NOT scheduled, director not run; slot 00:15 Dubai Mon 16 Nov (20:15Z Sun). RE-GATE within the hour before 00:15 Dubai (Mon)",
  "lane": "digital-lounge",
  "game": "Disney Dreamlight Valley: The Keepsake Sea",
  "companies": [
@@ -132,5 +132,23 @@
   "job_sha": "3fac1a88733745ecc9418e8586411529d19fd3a2",
   "render": "ec26249, 210 s",
   "superseded": "by v2: cover, sub, teal merman and Dory shot edges (see job decision_log)"
+ },
+ "reel": {
+  "path": "cards/2026-11/disney-dreamlight-valley-keepsake-sea-nov-18-v2-reel-v2.mp4",
+  "strip": "cards/2026-11/disney-dreamlight-valley-keepsake-sea-nov-18-v2-strip.jpg",
+  "dense": "cards/2026-11/disney-dreamlight-valley-keepsake-sea-nov-18-v2-dense.jpg",
+  "sheet": "cards/2026-11/disney-dreamlight-valley-keepsake-sea-nov-18-v2-sheet.jpg",
+  "qc": "cards/2026-11/disney-dreamlight-valley-keepsake-sea-nov-18-v2-qc.json (pass, 0 findings, 15.6 s before the end card, audio split applied music_only leak 0.2%, sound trailer, lifeless 0, dispatches 2)",
+  "job": "jobs/live/disney-dreamlight-valley-keepsake-sea-nov-18-v2.json",
+  "job_sha": "f0886f45518ecec6d55407a17e8bf8efd3cce9be",
+  "job_commit": "550ac39",
+  "render_commit": "b7717f1 (203 s, 8 cores, dxb-render server)",
+  "renders": "2 (v1 ec26249 210 s, qc pass, superseded; v2 b7717f1 203 s)"
+ },
+ "builder_check_v2": {
+  "by": "builder (production subagent), not a director",
+  "frames": "4 fps strip of the v2 Reel looked at: cover = pink mermaid in the swirl, below the headline; her head comes near the headline's second line for about 0.3 s (0.25 to 0.5 s); Milo's sub touches the left edge at 3.0 to 3.4 s; Dory crosses the right edge at 11.5 to 11.75 s and sits behind the line text at 12.0 to 12.75 s; no blood, weapons, skulls, title cards or burnt-in text seen; last 2 s the sunset ship",
+  "audio": "faster-whisper small (no VAD) on the v1 Reel heard no speech (only a '[Ode to Joy]' music tag); per-second loudness -17 to -24 dB, music to the end card; v2 uses the same track and split (leak 0.2%)",
+  "decode": "ffmpeg full decode of the v2 mp4: clean"
  }
 }
