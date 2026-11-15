@@ -1,7 +1,7 @@
 {
  "id": "minecraft-first-2027-drop-throwing-disc-offhand-20261115",
  "title": "Minecraft's first game drop of 2027 adds the throwing disc and full off-hand on Bedrock",
- "status": "built: Reel v4 qc pass (render 20429ee, job 0dd0b3c8), after director FAIL on v2; NOT scheduled; director PASS needed from another session; RE-GATE within the hour before 21:15 Dubai (Sun)",
+ "status": "v4 qc pass but director FAIL (stand-in credit does not name the trailer; hook opens on unrelated stand-in, the disc only at 2.0 s; Steve half cut at 12.5 to 13.5 s). Blocked for a clean v5: the only full-size image of the disc (@Minecraft X image) is refused as the cover by render_job's cover check (76% flat, limit 72%), and Mojang's other images are 720p (2.67x). Opening on the disc needs a short clip made from the X image committed to live/ (forbidden this round) or a cover waiver. NOT scheduled; slot free for another lead.",
  "lane": "digital-lounge",
  "game": "Minecraft",
  "companies": [
@@ -133,7 +133,7 @@
   "job_sha": "0dd0b3c8cff49eb7a45773b977d2c811d6495488",
   "job_commit": "6637575",
   "render_commit": "20429ee",
-  "template": "clipcard, full-frame 9:16: stand-in Switch 2 launch trailer (IGN 2560x1440, credited) for the hook and three beats, the @Minecraft X image (disc in hand, sword cropped out) for the disc beat, one fact card (5 خامات) over the trailer; theme playful; bed neon_d with bed_reason",
+  "template": "clipcard, full-frame 9:16: stand-in Switch 2 launch trailer (IGN 2560x1440, credited) for the hook and three beats, the @Minecraft X image (disc in hand, sword cropped out) for the disc beat, one fact card (5 خامات) over the trailer; theme playful; bed neon_c (v4 qc.json; v3 had neon_d) with bed_reason",
   "history": "v1 (showcase, qc fail lifeless 49.3); v2 (showcase, qc pass, director FAIL: empty bands, image repeats, tiny credit, Bedrock overclaim, caption contradiction, cut HUD); v3 (full-frame clipcard, qc pass but frame 0 on the trailer's zombie scene and a cave crossbow at 15.25 s, not shipped); v4 (scene-cut times fixed, qc pass). Earlier dispatches stopped at pace, font, cover, credit width; my 720p still clips removed from live/ in efbe939."
  }
 }
