@@ -212,6 +212,14 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Geekay | جيكي | Proposed 3 Nov (retail rule: never name the shop behind a price) |
 | Google | جوجل | Proposed 3 Nov |
 
+### Proposed 15 Nov 2026 (EA SPORTS UFC 6 PRIDE FC Expansion)
+| Latin | Arabic | Status |
+|---|---|---|
+| Kazushi Sakuraba (Japanese MMA fighter) | كازوشي ساكورابا | Proposed 15 Nov 2026 (caption, «المقاتل الياباني كازوشي ساكورابا (Kazushi Sakuraba)») |
+| Royce Gracie (Brazilian MMA fighter) | رويس غرايسي | Proposed 15 Nov 2026 (caption, «المقاتل البرازيلي رويس غرايسي (Royce Gracie)»; DeepL wrote غراسي) |
+| PRIDE (PRIDE Fighting Championships, Japan) | PRIDE in Latin as the expansion's name (PRIDE FC EXPANSION), «بطولة PRIDE اليابانية» | Proposed 15 Nov 2026 (DeepL wrote «برايد» (PRIDE); flagged as uncertain in the grammar stage) |
+| Ultimate add-on bundle (EA SPORTS UFC 6) | حزمة Ultimate add-on bundle (caption), «حزمة إضافاتها» on screen | Proposed 15 Nov 2026 |
+
 ## 2. Terms
 
 | English | Arabic | Not | Status |
