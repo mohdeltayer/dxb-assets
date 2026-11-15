@@ -1,11 +1,90 @@
 {
  "id": "duck-side-of-the-moon-ps5-homegrown-nov-17-20261115",
  "title": "Duck Side of the Moon (Starbrew Games) reaches PS5 on Tue 17 Nov with the free Homegrown update (new area, story, gardening, ship chromas)",
- "status": "claimed, building; not scheduled",
+ "status": "building v1; not scheduled. RE-GATE within the hour before 01:15 Dubai (Mon)",
  "lane": "digital-lounge",
  "game": "Duck Side of the Moon",
- "companies": ["Starbrew Games"],
+ "companies": [
+  "Starbrew Games"
+ ],
  "subject_person": null,
  "claimed_at": "2026-11-15T05:50:00Z",
- "slot": "01:15 Dubai Mon 16 Nov 2026 (21:15Z Sun 15 Nov)"
+ "slot": "01:15 Dubai Mon 16 Nov 2026 (21:15Z Sun 15 Nov)",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Starbrew Games press release on GamesPress, 02/11/2026, 'Grow, Decorate, Quack! Duck Side of the Moon Hits PS5 + Major FREE Update on Nov 17': 'is coming to PlayStation 5 on November 17th!', 'On the same day, players on every platform will get Homegrown, a FREE content update', 'featuring no combat or death', 'The Homegrown content unlocks around halfway through the game', 'Completely FREE for all players'; read 15 Nov ~05:45Z",
+   "url": "https://www.gamespress.com/Grow-Decorate-Quack-Duck-Side-of-the-Moon-Hits-PS5-Major-FREE-Update-o"
+  },
+  {
+   "role": "primary",
+   "name": "Steam community announcement, Duck Side of the Moon (app 2959770), 3 Nov 2026 12:01Z, 'MAJOR FREE UPDATE Coming Nov 17': 'Explore a whole new area, meet new characters and take on a brand-new storyline. Plant, grow and harvest your own crops among the stars', 'Homegrown arrives in exactly two weeks on November 17th'; read 15 Nov ~05:40Z",
+   "url": "https://store.steampowered.com/news/app/2959770"
+  },
+  {
+   "role": "primary",
+   "name": "Steam store page, app 2959770: publisher and developer Starbrew Games, released 7 May 2026, 53.00 AED (UAE store); trailer 'Update Trailer' (the Homegrown Update and PS5 announcement trailer)",
+   "url": "https://store.steampowered.com/app/2959770/"
+  }
+ ],
+ "first_report": "Announced by Starbrew Games on 2 Nov 2026 (GamesPress release; Steam post 3 Nov 12:01Z). The news at the slot is the PS5 launch and the free update on Tue 17 Nov 2026, the day after the slot (dated launch, as Ranger's Path and Unicorn Academy on 15 Nov). No Arabic outlet checked carried it (git grep, digests).",
+ "source_type": "primary",
+ "ledger_find": {
+  "at": "2026-11-15T05:50:00Z",
+  "words": [
+   "duck side",
+   "starbrew",
+   "homegrown"
+  ],
+  "hits": [],
+  "note": "git grep -il over newsroom/stories on origin/main (text only): no story on this game (a stray 'duck side' substring hit in Stranger Than Heaven files only)"
+ },
+ "genre": [
+  "family",
+  "indie"
+ ],
+ "kind": "update",
+ "kind_news": "update",
+ "label": "جديد",
+ "chip": "جديد",
+ "template": "clipcard",
+ "template_note": "formats.pick('update') gives trailer first; trailer is the 23:15 Ranger's Path template and split the 00:15 Disney template, so clipcard (update's second choice: one card at the key beat, the free update for all platforms); formats.py check clipcard 2026-11-15T21:15 ok; Monday Dubai day fresh; 22:15 Project Stampede was clipcard, two posts back (no three in a row)",
+ "beat": "release",
+ "recipe": "notes/scenario-recipes.md recipe 2 (trailer drop) on clipcard: the duck moving under chip and headline 0-4.2 s, one card (Homegrown, free for every platform), a breathing shot of the new world, then the garden line on the garden shots and the ship line on the ship room changing style; last picture the restyled room",
+ "footage": "the game's official Steam 'Update Trailer' (Homegrown Update and PS5 announcement trailer, app 2959770), 1920x1080, 5.8 Mbps, 28.9 s, decode clean (session full decode 15 Nov); 9:16 crop enlarged 1.78x; title cards (1.5-2.9 s, 23.0 s on), dialogue boxes (7.3-8.4, 11.5-12.9, 18.0-19.0) and crafting UI (19.0-20.3) left out",
+ "sensitive": "none: a cosy game with no combat or death (press release)",
+ "spoken": "لعبة Duck Side of the Moon تصدر على PS5 الثلاثاء، ومعها تحديث Homegrown المجاني لكل المنصات في اليوم نفسه. تزرع فيه حديقتك بين الكواكب، وتزيّن سفينتك على ذوقك.",
+ "claims": [
+  {
+   "claim": "PS5 release 17 Nov 2026",
+   "status": "confirmed (Starbrew press release)"
+  },
+  {
+   "claim": "Homegrown free update the same day on every platform",
+   "status": "confirmed (press release, Steam post)"
+  },
+  {
+   "claim": "gardening (plant, grow, harvest), ship furniture and wall customisation with chromas, new area, characters, storyline",
+   "status": "confirmed (press release, Steam post)"
+  },
+  {
+   "claim": "no combat or death",
+   "status": "confirmed (press release)"
+  },
+  {
+   "claim": "out since May on PC (Steam, Epic Games Store) and Nintendo Switch",
+   "status": "confirmed (press release; Steam release 7 May 2026)"
+  },
+  {
+   "claim": "PS5 price",
+   "status": "not stated by the studio; not on screen"
+  }
+ ],
+ "angle": {
+  "hook": "a cosy space game about a duck reaches PS5 with a free update in which you grow a garden among the planets",
+  "why_now": "the PS5 version and the free Homegrown update both arrive on Tuesday 17 Nov 2026 (Starbrew Games, press release of 2 Nov)",
+  "what_it_means_here": "PS5 players in the region can play it from Tuesday; PC and Switch owners get the update free the same day",
+  "payoff": "planting your own crops in space and restyling your ship room by room"
+ },
+ "job": "jobs/live/duck-side-of-the-moon-ps5-homegrown-nov-17.json"
 }
