@@ -1,7 +1,7 @@
 {
  "id": "minecraft-first-2027-drop-throwing-disc-offhand-20261115",
  "title": "Minecraft's first game drop of 2027 adds the throwing disc and full off-hand on Bedrock",
- "status": "built: job v1 for the 21:15 Dubai Sun 15 Nov slot (17:15Z); render pending; NOT scheduled (stop point: no director, no Publer)",
+ "status": "built: Reel v2 qc pass (render bad1d7b, job 707ed461), NOT scheduled; for 21:15 Dubai Sun 15 Nov (17:15Z); director PASS still needed from another session; RE-GATE within the hour before 21:15 Dubai (Sun)",
  "lane": "digital-lounge",
  "game": "Minecraft",
  "companies": [
@@ -123,5 +123,25 @@
   "deepl_forward": "whole English story in one piece: DeepL wrote «القرص القاذف» in the story but «قرص الرمي» for the term alone (picked قرص الرمي); «النيثيريت» for netherite (kept «النذرايت (Netherite)», the player spelling, Latin in brackets); «اليد غير الرئيسية» for off-hand (kept «اليد الأخرى»); «مواد» vs our «خامات» (kept خامات); alternatives sent: throwing disc / a disc you can throw / a returning throwing weapon; hold items in either hand / the off-hand; game drop / a content update (DeepL: إصدار اللعبة, wrong sense; kept تحديث)",
   "deepl_back": "headline, all four lines, caption and X text read back to the meaning (A Throwing Disc Returns to You in Minecraft; Mojang has unveiled a throwing disc that returns after being thrown; made of five materials including gold and diamonds; Bedrock players will also be able to carry items in their other hand; the two features in the game's first update in 2027, date not announced)"
  },
- "regate": "RE-GATE within the hour before 21:15 Dubai (Sun): re-read the minecraft.net article and @Minecraft for a date or change; search 'Minecraft throwing disc' for any correction"
+ "regate": "RE-GATE within the hour before 21:15 Dubai (Sun): re-read the minecraft.net article and @Minecraft for a date or change; search 'Minecraft throwing disc' for any correction",
+ "reel": {
+  "path": "cards/2026-11/minecraft-first-2027-drop-throwing-disc-offhand-20261115-reel-v2.mp4",
+  "strip": "cards/2026-11/minecraft-first-2027-drop-throwing-disc-offhand-20261115-strip.jpg",
+  "dense": "cards/2026-11/minecraft-first-2027-drop-throwing-disc-offhand-20261115-dense.jpg",
+  "qc": "cards/2026-11/minecraft-first-2027-drop-throwing-disc-offhand-20261115-qc.json (pass, lifeless 9.6, length 22.5 s)",
+  "job_sha": "707ed461910f843d3de9d474a68f5bf32b2532e5",
+  "job_commit": "53cad12",
+  "render_commit": "bad1d7b",
+  "template": "stills, layout showcase (fitted box 956x536, two-line headline), hard cuts, theme playful, bed neon_e",
+  "history": "render-live dispatches: 1 stopped at pace (4.2 to 4.7 s without change); 2 rendered v1, qc fail lifeless 49.3 (slow push-ins, crossfades); 3 stopped at the font check (one-line headline too wide); 4 rendered v2, qc pass",
+  "stages_s": {
+   "checks": 7.3,
+   "montage": 20.0,
+   "text": 53.3,
+   "audio": 0.6,
+   "outro": 14.2,
+   "render_total": 95.3,
+   "job": 188
+  }
+ }
 }
