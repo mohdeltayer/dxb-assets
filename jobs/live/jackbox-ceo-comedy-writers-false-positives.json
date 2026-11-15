@@ -262,7 +262,7 @@
  "skin": "house",
  "cut": true,
  "track": [
-  "jackbox-pp12-cinematic.mp4",
+  "jackbox-pp12-announce.mp4",
   0.0
  ],
  "music_only": true,
@@ -332,8 +332,8 @@
   "5 caption": "yes: first five words carry جاكبوكس (Jackbox) and تختبر; source named; ends #ألعاب #أخبار_الألعاب + 2 tags",
   "5 X and Threads": "yes: one sentence, source «لموقع بي سي غيمر», no hashtags",
   "5 urgency": "yes: chip حوار (interview, card chip list); not عاجل, not رسمي",
-  "6 sound": "yes: the Cinematic Trailer's own music from 0.0 s as one stretch, music_only (narration removed by the split; job fails if the stem is not clean)",
-  "6 no narration under lines": "yes: music_only drops the narrator's voice",
+  "6 sound": "yes: the Official Announcement trailer's own music from 0.0 s as one stretch (no speech until 124.9 s, faster-whisper), music_only; the Cinematic Trailer stretch was tried first and refused by the server (music stem leftover 8.3% > 5%, its narrator runs 0 to 56 s)",
+  "6 no narration under lines": "yes: the announcement stretch has no speech (transcribed in full: only 'Crush the party, every time' at 124.9 s)",
   "6 our effects only on graphics": "yes: none over footage",
   "7 footage first": "yes: Jackbox's own Steam trailers, 1920x1080, 9:16 crop 1.78x",
   "7 every Reel shows the game": "yes: The Jackbox Party Pack 12 trailers throughout; window art is the game's screenshot",
@@ -354,6 +354,6 @@
   "11 to 13 L3 (is the game funny or the team): the head peeking 20.75 (21.8 CRUSH? button avoided), eyes close-up 70.2, branch in the desert 0.0",
   "14 to 16 L4 (in a talk with PC Gamer): testers setting the head-in-box on the stool 11.45, eyes at night 90.6 (90.1 to 90.4 day press with numbered boxes avoided), the pugs' car from behind 0.45 to 2.05 as the closing picture (2.25 onward is the title)",
   "rejected: gameplay trailer (card prompts and text in every shot, 'marrying rich' and 'patriarchy' cards), diner table 10.8 (shotpick read text on the menu board), constellation 54.5 (black and fade), Sitty Hall sign (text at the crop edge), the press years captions (12000 BCE to 2026), the bottle in the press 66.7 to 70",
-  "sound: Cinematic Trailer music from 0.0 s (narration all through, so music_only); voices dropped, no effects added"
+  "sound: Official Announcement trailer music from 0.0 s, music_only (no speech in 0 to 124 s); the Cinematic Trailer stretch from 0.0 failed the split check on dispatch 2 (leftover 8.3%), so it is not used"
  ]
 }
