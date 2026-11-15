@@ -72323,5 +72323,117 @@
   "dispatches": 3,
   "sound": "bed:neon_d (The news has no video or sound of its own (Mojang's one full-size image on X and four 1280x720 stills on minecraft.net); the moving picture is stand-in footage from the Minecraft Nintendo Switch 2 launch trailer (IGN 2560 copy), whose own sound is that release's launch music and, from about 55 s, Super Mario sound effects that belong to another release; the Ice Caves trailer (IGN 1080p, 2.5 Mbps, a 7.5-minute showcase with narration) was opened and not used. So our bed plays under the stills, card and stand-in shots.)",
   "footage": true
+ },
+ {
+  "name": "minecraft-first-2027-drop-throwing-disc-offhand-20261115-reel-v4.mp4",
+  "profile": "standard",
+  "at": "2026-11-15T04:01Z",
+  "stages": {
+   "checks": 7.3,
+   "montage": 43.1,
+   "text": 37.6,
+   "audio": 1.1,
+   "outro": 18.3
+  },
+  "total": 107.4,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-15T04:00Z",
+  "finished_at": "2026-11-15T04:01Z",
+  "render_min": 1.79,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "minecraft-first-2027-drop-throwing-disc-offhand-20261115-sw2.mp4",
+    "start": 27.2,
+    "width": 2560,
+    "height": 1440,
+    "fps": 60.0,
+    "mbps": 8.21,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "minecraft-first-2027-drop-throwing-disc-offhand-20261115-x.jpg",
+    "still": true,
+    "zoom": 0.74
+   },
+   {
+    "shot": 3,
+    "file": "minecraft-first-2027-drop-throwing-disc-offhand-20261115-sw2.mp4",
+    "start": 30.85,
+    "width": 2560,
+    "height": 1440,
+    "fps": 60.0,
+    "mbps": 8.21,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "minecraft-first-2027-drop-throwing-disc-offhand-20261115-sw2.mp4",
+    "start": 9.4,
+    "width": 2560,
+    "height": 1440,
+    "fps": 60.0,
+    "mbps": 8.21,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "minecraft-first-2027-drop-throwing-disc-offhand-20261115-sw2.mp4",
+    "start": 46.0,
+    "width": 2560,
+    "height": 1440,
+    "fps": 60.0,
+    "mbps": 8.21,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1440,
+   "max_zoom": 1.33,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 12.0,
+   "still_share": 0.11,
+   "longest_still": 1.7,
+   "cuts_per_10s": 7.14,
+   "held_under_text": 0.0,
+   "secs": 18.2,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 209,
+  "queue_wait_secs": 4,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1006,
+  "peak_mem_mb": 2283,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 45727,
+  "peak_disk_mb": 48140,
+  "min_disk_free_mb": 197966,
+  "setup_min": 0.13,
+  "story": "minecraft-first-2027-drop-throwing-disc-offhand-20261115",
+  "job_sha": "0dd0b3c8cff49eb7a45773b977d2c811d6495488",
+  "dispatches": 4,
+  "sound": "bed:neon_c (The news has no video or sound of its own (Mojang's one full-size image on X and four 1280x720 stills on minecraft.net); the moving picture is stand-in footage from the Minecraft Nintendo Switch 2 launch trailer (IGN 2560 copy), whose own sound is that release's launch music and, from about 55 s, Super Mario sound effects that belong to another release; the Ice Caves trailer (IGN 1080p, 2.5 Mbps, a 7.5-minute showcase with narration) was opened and not used. So our bed plays under the stills, card and stand-in shots.)",
+  "footage": true
  }
 ]
