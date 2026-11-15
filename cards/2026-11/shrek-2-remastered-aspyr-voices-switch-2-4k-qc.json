@@ -1,18 +1,18 @@
 {
  "name": "shrek-2-remastered-aspyr-voices-switch-2-4k",
- "out": "cards/2026-11/shrek-2-remastered-aspyr-voices-switch-2-4k-reel-v2.mp4",
+ "out": "cards/2026-11/shrek-2-remastered-aspyr-voices-switch-2-4k-reel-v3.mp4",
  "verdict": "pass",
- "at": "2026-11-15T10:55:20Z",
+ "at": "2026-11-15T11:16:27Z",
  "findings": [],
  "notes": [
-  "length 16.6 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 73.5; leak_pct 0.3; cache {'hit': 4, 'miss': 0}; separate_secs 3.4; secs 5.7",
-  "smear check: exempt 7.73 to 13.73 s (our own cards)",
-  "render_job: lifeless: {\"score\": 1.4, \"still_share\": 0.012, \"longest_still\": 0.2, \"cuts_per_10s\": 10.91, \"held_under_text\": 0.0, \"secs\": 16.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 13.6 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 69.0; leak_pct 0.3; cache {'hit': 0, 'miss': 4}; separate_secs 8.2; secs 12.3",
+  "smear check: exempt 5.44 to 11.44 s (our own cards)",
+  "render_job: lifeless: {\"score\": 2.4, \"still_share\": 0.022, \"longest_still\": 0.3, \"cuts_per_10s\": 7.41, \"held_under_text\": 0.007, \"secs\": 13.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "fffa845a13a7f222dc4da00fc1203a6d74d87198",
- "dispatches": 2,
+ "job_sha": "55f5fd63a34db487580a3cbc2b8f678e70a4d860",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
