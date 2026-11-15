@@ -1,18 +1,46 @@
 {
  "schema": 1,
  "file": "digest",
- "generated_at": "2026-11-15T06:52:09Z",
- "seq": 495,
+ "generated_at": "2026-11-15T07:52:05Z",
+ "seq": 496,
  "kind": "hourly",
- "since": "2026-11-15T05:52:10Z",
- "official": [],
+ "since": "2026-11-15T06:52:09Z",
+ "official": [
+  {
+   "id": 14732,
+   "source": "Famitsu",
+   "source_kind": "page",
+   "title": "『ウィザードリィ』シリーズ45周年を記念したスペシャルセールが開催中。『6～8』バンドルは222円（85％オフ）に。『五つの試練』もセール対象",
+   "url": "https://www.famitsu.com/article/202611/94069",
+   "published": null,
+   "first_seen": "2026-11-15T07:20:05Z",
+   "media": [],
+   "breaking_source": false,
+   "breaking_seq": null,
+   "digest_seq": 496
+  },
+  {
+   "id": 14747,
+   "source": "Famitsu",
+   "source_kind": "page",
+   "title": "Amazonマンガ毎週末セールは本日（11/15）まで。『To LOVEる ダークネス』『ゆらぎ荘の幽奈さん』がKindleで50％ポイント還元【漫画セール情報】",
+   "url": "https://www.famitsu.com/article/202611/94059",
+   "published": null,
+   "first_seen": "2026-11-15T07:35:14Z",
+   "media": [],
+   "breaking_source": false,
+   "breaking_seq": null,
+   "digest_seq": 496
+  }
+ ],
  "outlets": [
   {
-   "count": 2,
+   "count": 3,
    "published": "2026-11-14T23:00Z",
    "title": "Minecraft getting Nintendo Switch 2 Joy-Con 2 mouse controls, here’s a first look",
    "url": "https://nintendoeverything.com/minecraft-nintendo-switch-2-mouse-controls-joy-con-2/",
    "sources": [
+    "GoNintendo",
     "Nintendo Everything",
     "Nintendo Life"
    ],
@@ -39,14 +67,55 @@
      "title": "Minecraft Is Getting Joy-Con Mouse Controls On Switch 2 In A Future Update",
      "url": "https://www.nintendolife.com/news/2026/11/minecraft-is-getting-joy-con-mouse-controls-on-switch-2-in-a-future-update",
      "published": "2026-11-15T06:30Z"
+    },
+    {
+     "source": "GoNintendo",
+     "title": "Minecraft on Switch 2 getting an update to implement Joy-Con 2 mouse mode support",
+     "url": "https://gonintendo.com/contents/67268-minecraft-on-switch-2-getting-an-update-to-implement-joy-con-2-mouse-mode-support",
+     "published": "2026-11-15T06:51Z"
     }
    ]
   },
   {
    "count": 2,
-   "published": "2026-11-14T07:50Z",
+   "published": "2026-11-14T21:30Z",
+   "title": "Sakurai on the struggle of originality, recalls criticism of Smash Bros. for not being like Street Fighter 2 and Virtua Fighter",
+   "url": "https://nintendoeverything.com/sakurai-on-originality-smash-bros-street-fighter-2-virtua-fighter/",
+   "sources": [
+    "GoNintendo",
+    "Nintendo Everything"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://nintendoeverything.com/wp-content/uploads/Smash-Bros.-64-criticisms-Street-Fighter-Virtua-Fighter-150x75.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://nintendoeverything.com/wp-content/uploads/Smash-Bros.-64-criticisms-Street-Fighter-Virtua-Fighter.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Nintendo Everything",
+     "title": "Sakurai on the struggle of originality, recalls criticism of Smash Bros. for not being like Street Fighter 2 and Virtua Fighter",
+     "url": "https://nintendoeverything.com/sakurai-on-originality-smash-bros-street-fighter-2-virtua-fighter/",
+     "published": "2026-11-14T21:30Z"
+    },
+    {
+     "source": "GoNintendo",
+     "title": "Masahiro Sakurai recalls early criticisms of Super Smash Bros. for it being different from Street Fighter 2 and Virtua Fighter",
+     "url": "https://gonintendo.com/contents/67270-masahiro-sakurai-recalls-early-criticisms-of-super-smash-bros-for-it-being-different",
+     "published": "2026-11-15T07:09Z"
+    }
+   ]
+  },
+  {
+   "count": 2,
+   "published": "2026-11-14T08:47Z",
    "title": "All correct Dice locations in Dice Hoarder (Complete Inventory map)",
-   "url": "https://www.destructoid.com/all-correct-dice-locations-in-dice-hoarder-complete-inventory-map/",
+   "url": "https://store.steampowered.com/news/group/38204750/view/677389277779198686",
    "sources": [
     "Destructoid",
     "Steam News (hub)"
@@ -64,12 +133,6 @@
    ],
    "items": [
     {
-     "source": "Destructoid",
-     "title": "All correct Dice locations in Dice Hoarder (Complete Inventory map)",
-     "url": "https://www.destructoid.com/all-correct-dice-locations-in-dice-hoarder-complete-inventory-map/",
-     "published": "2026-11-14T07:50Z"
-    },
-    {
      "source": "Steam News (hub)",
      "title": "All correct Dice locations in Dice Hoarder (Complete Inventory map)",
      "url": "https://store.steampowered.com/news/group/38204750/view/677389277779198686",
@@ -80,38 +143,57 @@
      "title": "All edible dice locations in Dice Hoarder",
      "url": "https://www.destructoid.com/all-edible-dice-locations-in-dice-hoarder/",
      "published": "2026-11-15T05:52Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "All edible dice locations in Dice Hoarder",
+     "url": "https://store.steampowered.com/news/group/38204750/view/677389277779198802",
+     "published": "2026-11-15T06:58Z"
     }
    ]
   },
   {
-   "count": 1,
-   "published": "2026-11-15T06:27Z",
-   "title": "『スレイヤーズ』『フルメタル・パニック！』など小説合本版が最大50％オフとなるKindleセールが開催中。『狼と香辛料』や『ニンジャスレイヤー』など人気作が多数お得に",
-   "url": "https://news.denfaminicogamer.jp/news/261115m",
+   "count": 2,
+   "published": "2026-11-14T17:02Z",
+   "title": "Switch eShop charts for Nov. 14th, 2026",
+   "url": "https://gonintendo.com/contents/67257-switch-eshop-charts-for-nov-14th-2026",
    "sources": [
-    "Denfaminicogamer (JP)"
+    "GoNintendo",
+    "Nintendo Everything"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://news.denfaminicogamer.jp/wp-content/uploads/2026/11/A-2026-11-15T152222.207-722x1024.jpg"
+     "url": "https://gonintendo.com/attachments/image/89045/file/medium-cc219307514e705c5b4cc83c3664e05d.png"
     }
    ],
    "items": [
     {
-     "source": "Denfaminicogamer (JP)",
-     "title": "『スレイヤーズ』『フルメタル・パニック！』など小説合本版が最大50％オフとなるKindleセールが開催中。『狼と香辛料』や『ニンジャスレイヤー』など人気作が多数お得に",
-     "url": "https://news.denfaminicogamer.jp/news/261115m",
-     "published": "2026-11-15T06:27Z"
+     "source": "GoNintendo",
+     "title": "Switch eShop charts for Nov. 14th, 2026",
+     "url": "https://gonintendo.com/contents/67257-switch-eshop-charts-for-nov-14th-2026",
+     "published": "2026-11-14T17:02Z"
+    },
+    {
+     "source": "GoNintendo",
+     "title": "Famitsu most-wanted games for Nov. 14th, 2026",
+     "url": "https://gonintendo.com/contents/67258-famitsu-most-wanted-games-for-nov-14th-2026",
+     "published": "2026-11-14T17:06Z"
+    },
+    {
+     "source": "Nintendo Everything",
+     "title": "Nintendo Switch 2 eShop charts – November 15, 2026 – Zelda holds on to the top spot",
+     "url": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-november-15-2026/",
+     "published": "2026-11-15T05:50Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-15T06:02Z",
-   "title": "悪意が渦巻くネットの向こうに、善性を見つけられるか。SNSのリアルな人間模様を描く推理ADV『ミカクテイ事件の観測者-Demons’Timeline-』をもう遊んだか",
-   "url": "https://automaton-media.com/articles/special-column/20261115-479344/",
+   "published": "2026-11-15T07:38Z",
+   "title": "『エルシャダイ』リマスター版が75％オフで1000円切り。『ダンガンロンパ』が90％オフでわずか213円。“雪山人狼” 『Project Winter』は80％オフで202円とかなりお手頃。今週の高割引率PCゲーム",
+   "url": "https://automaton-media.com/articles/newsjp/20261115-479352/",
    "sources": [
     "Automaton (JP)"
    ],
@@ -119,15 +201,252 @@
    "media": [
     {
      "type": "image",
-     "url": "https://automaton-media.com/wp-content/uploads/2026/11/20261115-479344-image2.jpg"
+     "url": "https://automaton-media.com/wp-content/uploads/2026/11/20261115-479352-header.jpg"
     }
    ],
    "items": [
     {
      "source": "Automaton (JP)",
-     "title": "悪意が渦巻くネットの向こうに、善性を見つけられるか。SNSのリアルな人間模様を描く推理ADV『ミカクテイ事件の観測者-Demons’Timeline-』をもう遊んだか",
-     "url": "https://automaton-media.com/articles/special-column/20261115-479344/",
-     "published": "2026-11-15T06:02Z"
+     "title": "『エルシャダイ』リマスター版が75％オフで1000円切り。『ダンガンロンパ』が90％オフでわずか213円。“雪山人狼” 『Project Winter』は80％オフで202円とかなりお手頃。今週の高割引率PCゲーム",
+     "url": "https://automaton-media.com/articles/newsjp/20261115-479352/",
+     "published": "2026-11-15T07:38Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-15T07:21Z",
+   "title": "The most annoying questgivers in PC games",
+   "url": "https://www.pcgamer.com/games/the-most-annoying-questgivers-in-pc-games/",
+   "sources": [
+    "PC Gamer"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://cdn.mos.cms.futurecdn.net/AYyTypwYVPussabQGzn9TJ-1920-80.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "PC Gamer",
+     "title": "The most annoying questgivers in PC games",
+     "url": "https://www.pcgamer.com/games/the-most-annoying-questgivers-in-pc-games/",
+     "published": "2026-11-15T07:21Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-15T07:18Z",
+   "title": "BTS, Stranger Things, and Spider-Man lead Kids’ Choice Awards",
+   "url": "https://tbreak.com/kids-choice-awards-2026-winners/",
+   "sources": [
+    "Tbreak (Gulf)"
+   ],
+   "ar_relay": false,
+   "media": [],
+   "items": [
+    {
+     "source": "Tbreak (Gulf)",
+     "title": "BTS, Stranger Things, and Spider-Man lead Kids’ Choice Awards",
+     "url": "https://tbreak.com/kids-choice-awards-2026-winners/",
+     "published": "2026-11-15T07:18Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-15T07:08Z",
+   "title": "Tetracast 468: Round Robin Round-up",
+   "url": "https://store.steampowered.com/news/group/6070552/view/688648135317128170",
+   "sources": [
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://images.rpgsite.net/articles/thumbnail/a3ecf1c/21769/original/dmini.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Steam News (hub)",
+     "title": "Tetracast 468: Round Robin Round-up",
+     "url": "https://store.steampowered.com/news/group/6070552/view/688648135317128170",
+     "published": "2026-11-15T07:08Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-15T07:00Z",
+   "title": "アリスやジュリエットなどの名作文学の美少女とダンジョンを探索するRPG『LitGirls 文学迷宮と少女』脱衣表現を強化した成人版やパッチもあり【26年10月後半にHOTな「美少女ゲー」はこれだ！】",
+   "url": "http://www.gamespark.jp/article/2026/11/15/174894.html",
+   "sources": [
+    "Game*Spark (JP)"
+   ],
+   "ar_relay": false,
+   "media": [],
+   "items": [
+    {
+     "source": "Game*Spark (JP)",
+     "title": "アリスやジュリエットなどの名作文学の美少女とダンジョンを探索するRPG『LitGirls 文学迷宮と少女』脱衣表現を強化した成人版やパッチもあり【26年10月後半にHOTな「美少女ゲー」はこれだ！】",
+     "url": "http://www.gamespark.jp/article/2026/11/15/174894.html",
+     "published": "2026-11-15T07:00Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-15T07:00Z",
+   "title": "The NES Power Glove becomes a weapon during AEW's Texas Death Match",
+   "url": "https://gonintendo.com/contents/67269-the-nes-power-glove-becomes-a-weapon-during-aew-s-texas-death-match",
+   "sources": [
+    "GoNintendo"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://gonintendo.com/attachments/image/89056/file/medium-5075ff105619175154207de2a4fc5989.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "GoNintendo",
+     "title": "The NES Power Glove becomes a weapon during AEW's Texas Death Match",
+     "url": "https://gonintendo.com/contents/67269-the-nes-power-glove-becomes-a-weapon-during-aew-s-texas-death-match",
+     "published": "2026-11-15T07:00Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-15T06:59Z",
+   "title": "Suda51 Wants To Make Gundam And Deadpool Games, Thinks One Has A ‘50% Chance’ Of Happening",
+   "url": "https://store.steampowered.com/news/group/32177162/view/707788525180813989",
+   "sources": [
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://gameobserver.com/wp-content/uploads/2026/11/suda51-gundamdeadpool-01.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Steam News (hub)",
+     "title": "Suda51 Wants To Make Gundam And Deadpool Games, Thinks One Has A ‘50% Chance’ Of Happening",
+     "url": "https://store.steampowered.com/news/group/32177162/view/707788525180813989",
+     "published": "2026-11-15T06:59Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-15T06:56Z",
+   "title": "【今日まで】『ギャグマンガ日和GB』Kindle版の50%ポイント還元セールが開催中。既刊9巻購入で4834円→2417ポイントが還元",
+   "url": "https://news.denfaminicogamer.jp/news/261115n",
+   "sources": [
+    "Denfaminicogamer (JP)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://news.denfaminicogamer.jp/wp-content/uploads/2026/11/71LE39bYtSL._SL1200_-754x1024.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Denfaminicogamer (JP)",
+     "title": "【今日まで】『ギャグマンガ日和GB』Kindle版の50%ポイント還元セールが開催中。既刊9巻購入で4834円→2417ポイントが還元",
+     "url": "https://news.denfaminicogamer.jp/news/261115n",
+     "published": "2026-11-15T06:56Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-15T06:52Z",
+   "title": "Marvel gives Thor’s sister Angela her own ongoing comic",
+   "url": "https://tbreak.com/angela-comic-series-marvel-ongoing/",
+   "sources": [
+    "Tbreak (Gulf)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i0.wp.com/tbreak.com/wp-content/uploads/2026/11/angela-comic-series-marvel-ongoing-2.webp?resize=1656%2C2547&ssl=1"
+    },
+    {
+     "type": "image",
+     "url": "https://i0.wp.com/tbreak.com/wp-content/uploads/2026/11/angela-comic-series-marvel-ongoing-3.webp?resize=1656%2C2547&ssl=1"
+    },
+    {
+     "type": "image",
+     "url": "https://i0.wp.com/tbreak.com/wp-content/uploads/2026/11/angela-comic-series-marvel-ongoing-8.webp?resize=712%2C400&ssl=1"
+    },
+    {
+     "type": "image",
+     "url": "https://i0.wp.com/tbreak.com/wp-content/uploads/2026/11/angela-comic-series-marvel-ongoing-10.webp?resize=780%2C438&ssl=1"
+    }
+   ],
+   "items": [
+    {
+     "source": "Tbreak (Gulf)",
+     "title": "Marvel gives Thor’s sister Angela her own ongoing comic",
+     "url": "https://tbreak.com/angela-comic-series-marvel-ongoing/",
+     "published": "2026-11-15T06:52Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-15T06:33Z",
+   "title": "Self-described Nvidia staff back Huang as petition tops 100,000",
+   "url": "https://tbreak.com/nvidia-petition-jensen-huang-reinstate/",
+   "sources": [
+    "Tbreak (Gulf)"
+   ],
+   "ar_relay": false,
+   "media": [],
+   "items": [
+    {
+     "source": "Tbreak (Gulf)",
+     "title": "Self-described Nvidia staff back Huang as petition tops 100,000",
+     "url": "https://tbreak.com/nvidia-petition-jensen-huang-reinstate/",
+     "published": "2026-11-15T06:33Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-15T06:19Z",
+   "title": "HBO’s Hogwarts feast clip adds a Dumbledore chant",
+   "url": "https://tbreak.com/harry-potter-hbo-hogwarts-feast-clip/",
+   "sources": [
+    "Tbreak (Gulf)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i0.wp.com/i.ytimg.com/vi/lUNaXbZ1zqQ/maxresdefault.jpg?resize=1280%2C720&ssl=1"
+    }
+   ],
+   "items": [
+    {
+     "source": "Tbreak (Gulf)",
+     "title": "HBO’s Hogwarts feast clip adds a Dumbledore chant",
+     "url": "https://tbreak.com/harry-potter-hbo-hogwarts-feast-clip/",
+     "published": "2026-11-15T06:19Z"
     }
    ]
   }
@@ -144,22 +463,22 @@
   "Fortnite (YouTube) (HTTP 404, 5x)",
   "Manga Productions (ValueError: no items found, page changed?, 3x)",
   "Nintendo of America (X) (HTTP 429, 69x)",
-  "Nintendo of America (YouTube) (HTTP 404, 13x)",
+  "Nintendo of America (YouTube) (HTTP 404, 14x)",
   "PlayStation (X) (HTTP 429, 89x)",
-  "PlayStation (YouTube) (HTTP 404, 14x)",
+  "PlayStation (YouTube) (HTTP 404, 15x)",
   "PlayStation MENA (YouTube) (HTTP 404, 6x)",
   "PlayStation Middle East (X) (HTTP 429, 13x)",
   "PlayStation Middle East (YouTube) (HTTP 404, 6x)",
   "Pokemon (YouTube) (HTTP 404, 6x)",
   "Riot Games (YouTube) (HTTP 404, 6x)",
   "Rockstar Games (X) (HTTP 429, 40x)",
-  "Rockstar Games (YouTube) (HTTP 404, 14x)",
+  "Rockstar Games (YouTube) (HTTP 404, 15x)",
   "SEGA (YouTube) (HTTP 404, 6x)",
   "Square Enix (YouTube) (HTTP 404, 6x)",
   "Steam (YouTube) (HTTP 404, 6x)",
   "Ubisoft (YouTube) (HTTP 404, 6x)",
   "Xbox (X) (HTTP 429, 87x)",
-  "Xbox (YouTube) (HTTP 404, 7x)"
+  "Xbox (YouTube) (HTTP 404, 8x)"
  ],
  "not_covered": [
   {
@@ -189,7 +508,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-15T06:52:08Z",
+  "last_poll_at": "2026-11-15T07:50:14Z",
   "sources_enabled": 100,
   "sources_ok": 73,
   "sources_failing": 27,
@@ -205,22 +524,22 @@
    "Fortnite (YouTube) (HTTP 404, 5x)",
    "Manga Productions (ValueError: no items found, page changed?, 3x)",
    "Nintendo of America (X) (HTTP 429, 69x)",
-   "Nintendo of America (YouTube) (HTTP 404, 13x)",
+   "Nintendo of America (YouTube) (HTTP 404, 14x)",
    "PlayStation (X) (HTTP 429, 89x)",
-   "PlayStation (YouTube) (HTTP 404, 14x)",
+   "PlayStation (YouTube) (HTTP 404, 15x)",
    "PlayStation MENA (YouTube) (HTTP 404, 6x)",
    "PlayStation Middle East (X) (HTTP 429, 13x)",
    "PlayStation Middle East (YouTube) (HTTP 404, 6x)",
    "Pokemon (YouTube) (HTTP 404, 6x)",
    "Riot Games (YouTube) (HTTP 404, 6x)",
    "Rockstar Games (X) (HTTP 429, 40x)",
-   "Rockstar Games (YouTube) (HTTP 404, 14x)",
+   "Rockstar Games (YouTube) (HTTP 404, 15x)",
    "SEGA (YouTube) (HTTP 404, 6x)",
    "Square Enix (YouTube) (HTTP 404, 6x)",
    "Steam (YouTube) (HTTP 404, 6x)",
    "Ubisoft (YouTube) (HTTP 404, 6x)",
    "Xbox (X) (HTTP 429, 87x)",
-   "Xbox (YouTube) (HTTP 404, 7x)"
+   "Xbox (YouTube) (HTTP 404, 8x)"
   ]
  }
 }
