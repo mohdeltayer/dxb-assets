@@ -1,7 +1,7 @@
 {
  "id": "popucom-ps5-nov-17-20261115",
  "title": "POPUCOM (Hypergryph; GRYPHLINE and Fireshine Games) launches on PS5 on Tue 17 Nov 2026",
- "status": "built: Reel v3 qc pass (cards/2026-11/popucom-ps5-nov-17-reel-v3.mp4); not scheduled, no director run yet; RE-GATE within the hour before 05:15 Dubai (Mon)",
+ "status": "scheduled in Publer for 05:15 Dubai Mon 16 Nov, 3/3 (ids ig:719113 x:194daf th:194db2), director PASS v3; RE-GATE within the hour before 05:15 still due",
  "lane": "digital-lounge",
  "game": "POPUCOM",
  "companies": [
@@ -147,5 +147,41 @@
   "theme": "playful",
   "style": "lines",
   "checked": "session 4 fps sheets of v2 and v3 (v3 changes only the submarine's length): cover the fluffy birds with «لعبة POPUCOM / تصل إلى PS5» over the tree, chip رسمي, credit «المصدر: هايبرغريف (Hypergryph)» from frame 0 to the end card; no slate, rating card or burnt-in trailer text; no character aiming or firing; strip «الموعد · الثلاثاء 17 نوفمبر | متوفرة على · PC · Nintendo Switch» from 3.5 s; lines on their planned shots; last 2 s the balloon bus. Audio (v2, same stretch): faster-whisper small hears music only (one 'Ding-Ding!' on the jingle), RMS -13 to -19 dB to 17 s, fade into the end card"
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/popucom-ps5-nov-17-reel-v3.mp4",
+  "blob": "4df81d6bff8ce65e4bb1c8a1d6f68057786e0be2",
+  "at": "2026-11-15T07:27:55Z",
+  "note": "Director QA 15 Nov 07:30Z: 4 fps 9:16 frame review, audio transcribed (no speech, music to end card), re-gate Gematsu/Push Square/Steam clean, grammar review and DeepL back-check done",
+  "checklist": {
+   "job": "jobs/live/popucom-ps5-nov-17.json",
+   "sha256": "b29b386f20a5978fddedbe4caa24705c7b0ca0e0b53b8d6029554b1fc657d798",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-popucom-claude-sonnet",
+  "qc": "pass",
+  "looked": null
+ },
+ "scheduled": "scheduled in Publer 01:15Z Mon 16 Nov (05:15 Dubai), Instagram, X, Threads: ids ig:719113 x:194daf th:194db2, job status complete read 07:28Z; labels kind:news tpl:split skin:house sound:trailer genre:family; Threads text carries the line «المصدر: فيديو موعد الإصدار على PS5 من فايرشاين غيمز»; Instagram location Dubai; X follow-up source link, Instagram first comment source line",
+ "director_notes": {
+  "by": "director-popucom-claude-sonnet",
+  "at": "2026-11-15T07:30Z",
+  "verdict": "PASS",
+  "duplicate": "none: git grep over newsroom/stories only this story; Publer published (5 days) and scheduled (2 days) queries POPUCOM and بوبوكوم empty before submit",
+  "gate": "gate 07:27Z: Gematsu 3 Nov article, Push Square game page (PS5 17th Nov 2026), Final Weapon, Steam appdetails (developers, publishers, 1 Jun 2025, unknown planet, colour switching), YouTube oEmbed title unchanged; no delay or date change",
+  "uncertain": [
+   "credit names Hypergryph only (publishers GRYPHLINE and Fireshine are not on the credit)",
+   "line 1 repeats the Latin bracket after the credit already carried it",
+   "names-ar rows for Hypergryph and Fireshine Games are still Proposed",
+   "chip رسمي rests on the date being in the video (not watched) and Gematsu quoting the announcement"
+  ],
+  "blasters": "a blaster lies on the ground lower right for about 2.5 s (6.5 to 9 s), never gripped or aimed",
+  "audio": "faster-whisper: no speech, music steady -14 to -18 dB to the end card"
  }
 }
