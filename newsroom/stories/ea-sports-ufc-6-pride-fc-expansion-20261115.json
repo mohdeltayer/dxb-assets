@@ -1,11 +1,94 @@
 {
  "id": "ea-sports-ufc-6-pride-fc-expansion-20261115",
  "title": "EA SPORTS UFC 6: PRIDE FC Expansion announced (EA SPORTS UFC on X, 15 Nov), cover revealed, YouTube premiere Mon 16 Nov 11:00 ET, out 11 Dec with the Ultimate Edition or Ultimate add-on bundle",
- "status": "claimed: building for the 10:15 Dubai Mon 16 Nov slot (06:15Z); not scheduled",
+ "status": "building: job v1 for the 10:15 Dubai Mon 16 Nov slot (06:15Z); not scheduled",
  "lane": "digital-lounge",
  "game": "EA SPORTS UFC 6",
- "companies": ["Electronic Arts"],
+ "companies": [
+  "Electronic Arts"
+ ],
  "subject_person": null,
  "claimed_at": "2026-11-15T10:25:00Z",
- "slot": "10:15 Dubai Mon 16 Nov 2026 (06:15Z)"
+ "slot": "10:15 Dubai Mon 16 Nov 2026 (06:15Z)",
+ "genre": [
+  "sports",
+  "fighting"
+ ],
+ "sources": [
+  {
+   "role": "primary",
+   "name": "EA SPORTS UFC on X, 15 Nov 2026 02:02:17Z",
+   "url": "https://x.com/EASPORTSUFC/status/2121785831115395200",
+   "quote": "Introducing the official cover for the #UFC6 PRIDE FC EXPANSION. ... Set your YouTube Premiere notification now for Monday, Nov. 16 at 11:00 AM ET / 8:00 AM PT ... Available digitally only with the Ultimate Edition or Ultimate add-on bundle on Dec. 11."
+  },
+  {
+   "role": "outlet",
+   "name": "Famitsu, 15 Nov 2026 08:40Z",
+   "url": "https://www.famitsu.com/article/202611/94085",
+   "quote": "PRIDEグランプリ2000での桜庭和志とホイス・グレイシーの一戦をフィーチャー; 通常版購入者は“アルティメット アドオンバンドル”でアップグレード可能; 追加収録選手はまだ不明"
+  }
+ ],
+ "first_report": "EA SPORTS UFC on X, 15 Nov 2026 02:02Z (official account; the watch digest carried Famitsu's rewrite at 09:52Z)",
+ "source_type": "primary",
+ "footage": "EA SPORTS UFC 6 official reveal trailer (EA, 5 May 2026) as illustration, IGN MP4 2560x1440; no PRIDE expansion footage before the 16 Nov 20:00 Dubai YouTube premiere; the square cover art cannot take a 9:16 crop without cutting its wordmarks",
+ "beat": "expansion announced, reveal tonight",
+ "kind": "expansion",
+ "recipe": "announcement (family 2) with a WHERE AND WHEN strip: hook on the game, what was revealed, the date and the reveal time",
+ "what_is_new": "the PRIDE FC expansion, its cover, the 11 Dec date and the 16 Nov premiere time were all first posted on 15 Nov 02:02Z",
+ "sensitive": "none (combat sport: footage limited to non-violent beats)",
+ "ledger_find": {
+  "at": "2026-11-15T10:20:00Z",
+  "words": [
+   "ufc",
+   "pride"
+  ],
+  "hits": [],
+  "note": "git grep -il over origin/main newsroom/stories (the clone has no stories folder for ledger.py): 'ufc' hits only 2026-09-24-stranger-than-heaven-cast (unrelated), 'pride fc' none"
+ },
+ "angle": {
+  "hook": "PRIDE, the Japanese MMA promotion, enters EA SPORTS UFC 6 as an expansion (EA SPORTS UFC on X, 15 Nov 02:02Z)",
+  "why_now": "announced with the official cover on 15 Nov 02:02Z; the full reveal premieres on YouTube Mon 16 Nov 11:00 ET = 20:00 Dubai, the evening of our slot",
+  "what_it_means_here": "UFC has a large Gulf following (Abu Dhabi events); UFC 6 owners on PS5 and Xbox Series X|S get it digitally on 11 Dec with the Ultimate Edition or the Ultimate add-on bundle; Gulf viewers can watch the reveal at 20:00 Dubai",
+  "payoff": "Max Holloway-style fighter posing centred in the cage under the closing line (illustration)"
+ },
+ "texts": {
+  "x": "بطولة PRIDE اليابانية تدخل EA SPORTS UFC 6 في إضافة جديدة تصدر في 11 ديسمبر، حسب حساب اللعبة الرسمي على X، وعرضها الكامل الليلة الساعة 8 مساءً بتوقيت الإمارات.",
+  "threads": "بطولة PRIDE اليابانية تدخل EA SPORTS UFC 6 في إضافة جديدة تصدر في 11 ديسمبر، حسب حساب اللعبة الرسمي على X، وعرضها الكامل الليلة الساعة 8 مساءً بتوقيت الإمارات.\n\nالمصدر: حساب EA SPORTS UFC الرسمي على X",
+  "instagram": "إضافة PRIDE في EA SPORTS UFC 6 تصدر في 11 ديسمبر، وعرضها الكامل الليلة.\n\nأعلنت شركة إلكترونيك آرتس (Electronic Arts) عبر حساب اللعبة الرسمي على X إضافة جديدة للعبة EA SPORTS UFC 6 مستوحاة من بطولة PRIDE اليابانية، إحدى أشهر بطولات الفنون القتالية المختلطة، وكشفت غلافها الرسمي.\n\nويستعيد الغلاف نزال المقاتل الياباني كازوشي ساكورابا (Kazushi Sakuraba) والمقاتل البرازيلي رويس غرايسي (Royce Gracie) في بطولة PRIDE الكبرى عام 2000، حسب موقع فاميتسو (Famitsu).\n\nالإضافة رقمية فقط، وتأتي مع نسخة Ultimate Edition، أو عبر حزمة Ultimate add-on bundle لمن يملك النسخة العادية.\n\nوتعرض الشركة الإضافة كاملة في عرض أول على YouTube الليلة الساعة 8 مساءً بتوقيت الإمارات، ولم تكشف بعد عن المقاتلين الذين تضيفهم.\n\n#ألعاب #أخبار_الألعاب #UFC6 #EASPORTS",
+  "instagram_comment": "المصدر: حساب EA SPORTS UFC الرسمي على X، 15 نوفمبر 2026"
+ },
+ "arabic_review": {
+  "skills": "arabic-games-film-editor (write), arabic-writing (check), arabic-grammar-review (separate pass) loaded 15 Nov 10:2xZ; glossary read: Expansion = إضافة (not توسعة), release verbs, digits; names-ar: إلكترونيك آرتس, فاميتسو",
+  "grammar_review": {
+   "required_edits": [],
+   "optional_style_suggestions": [],
+   "uncertain_cases": [
+    {
+     "text": "حزمة إضافاتها",
+     "issue": "the pronoun ها refers to نسخة Ultimate (the Ultimate add-on bundle)",
+     "why_uncertain": "a reader could take it as the expansion's own bundle",
+     "options": [
+      "حزمة إضافاتها",
+      "حزمة Ultimate الإضافية"
+     ]
+    },
+    {
+     "text": "PRIDE in Latin",
+     "issue": "PRIDE is an organisation (company names take Arabic then Latin)",
+     "why_uncertain": "used here as the expansion's product name (PRIDE FC EXPANSION), which stays Latin; DeepL wrote «برايد» (PRIDE)",
+     "options": [
+      "PRIDE",
+      "برايد (PRIDE)"
+     ]
+    }
+   ]
+  },
+  "deepl": "forward pass of the whole story in English (15 Nov ~10:40Z): DeepL wrote توسعة (glossary says إضافة, kept إضافة), غراسي for Gracie (kept غرايسي, the common Arabic spelling of Gracie), «الإصدار القياسي» for standard edition (kept النسخة العادية), «متوفرة رقميًا فقط» (ours: رقمية فقط); alternatives sent: 'PRIDE expansion' -> توسيع (rejected), 'available digitally only' -> متاح رقميًّا فقط, 'only available as a digital download' -> متوفر فقط للتنزيل الرقمي. Back-check (AR->EN) of headline, lines, X and caption: meaning kept ('Japan's PRIDE Championship Joins EA SPORTS UFC 6'; 'digital-only add-on ... with the Ultimate edition or its expansion pack'); the X text's بإضافة read as 'feature', so it now reads في إضافة جديدة"
+ },
+ "regate": "RE-GATE within the hour before 10:15 Dubai (Mon) (05:15Z to 06:15Z Mon 16 Nov): re-read the EA SPORTS UFC X post and the premiere time (11:00 ET = 20:00 Dubai); 'الليلة' holds only for a 16 Nov post; check no earlier reveal or date change",
+ "names_ar_rows": [
+  "Kazushi Sakuraba | كازوشي ساكورابا | Proposed 15 Nov 2026 (UFC 6 PRIDE caption, «المقاتل الياباني»)",
+  "Royce Gracie | رويس غرايسي | Proposed 15 Nov 2026 (UFC 6 PRIDE caption, «المقاتل البرازيلي»; DeepL غراسي)",
+  "PRIDE (PRIDE Fighting Championships, Japan) | PRIDE in Latin as the expansion's name, «بطولة PRIDE اليابانية» | Proposed 15 Nov 2026"
+ ]
 }
