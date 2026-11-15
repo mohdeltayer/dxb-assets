@@ -24,8 +24,8 @@
  "shots": [
   [
    "popucom-release-pv.mp4",
-   8.46,
-   3.4,
+   8.6,
+   3.3,
    [
     [
      0.0,
@@ -35,8 +35,8 @@
   ],
   [
    "popucom-trailer.mp4",
-   13.4,
-   0.95,
+   13.25,
+   1.1,
    [
     [
      0.0,
@@ -47,7 +47,7 @@
   [
    "popucom-trailer.mp4",
    18.67,
-   0.95,
+   1.1,
    [
     [
      0.0,
@@ -57,8 +57,8 @@
   ],
   [
    "popucom-trailer.mp4",
-   25.4,
-   2.0,
+   25.38,
+   2.05,
    [
     [
      0.0,
@@ -79,8 +79,8 @@
   ],
   [
    "popucom-trailer.mp4",
-   104.0,
-   3.15,
+   104.35,
+   2.55,
    [
     [
      0.0,
@@ -144,17 +144,17 @@
    ]
   ]
  ],
- "spoken": "لعبة POPUCOM تصل إلى PS5 يوم الثلاثاء 17 نوفمبر، وهي متوفرة على PC وNintendo Switch. من استوديو هايبرغريف (Hypergryph) مطوّر لعبة Arknights، مغامرة ملوّنة تلعبها مع أصدقائك، وتحلّ ألغازها بتبديل الألوان.",
+ "spoken": "لعبة POPUCOM تصل إلى PS5 يوم الثلاثاء 17 نوفمبر، وهي متوفرة على PC وNintendo Switch. من هايبرغريف (Hypergryph) مطوّر لعبة Arknights، مغامرة ملوّنة تلعبها مع أصدقائك، وتحلّ ألغازها بتبديل الألوان.",
  "lines": [
   [
    1,
-   4,
+   3,
    [
-    "من استوديو هايبرغريف (Hypergryph)\nمطوّر لعبة Arknights"
+    "من هايبرغريف (Hypergryph)\nمطوّر لعبة Arknights"
    ]
   ],
   [
-   5,
+   4,
    5,
    [
     "مغامرة ملوّنة تلعبها\nمع أصدقائك"
@@ -217,9 +217,9 @@
  "sensitive": "none: E10+ cartoon game; shots chosen without characters aiming or firing their gel blasters at anyone (the pink-girl ball shot and the boss fights left out)",
  "decision_log": [
   "sources: two official Steam trailers of app 2543180 fetched as the server fetches them (ffmpeg -ss 0 on the HLS master, -c copy): 'release PV' (1920x1080 30 fps 5.4 Mbps, 95.0 s, video starts 3.02 s) and 'Trailer' (the 2023 announcement trailer, 1920x1080 30 fps 5.3 Mbps, 110.8 s). Scene cuts measured on that seek timeline; the PS5 Launch Date Trailer is on YouTube only (no yt-dlp)",
-  "0-3.4 headline over the fluffy blue birds under the orange tree (PV 8.46, after the GRYPHLINE slate): moving, the game's colours, headline over the tree, birds below it",
-  "line 1 (studio) over the heroes: the orange-haired girl close (TR 13.40), skydiving past the yellow creature (TR 18.67), the blue hero landing and posing with a friend (TR 25.40), walking on (TR 27.55): illustration",
-  "line 2 (with friends) over two players on the grass under the bubble robot (TR 104.0): co-op shown",
+  "0-3.3 headline over the fluffy blue birds under the orange tree (PV 8.6, after the GRYPHLINE slate, whose frozen stretch the prerender read to 8.41): moving, the game's colours, headline over the tree, birds below it",
+  "line 1 (studio) over the heroes: the orange-haired girl close (TR 13.25), skydiving past the yellow creature (TR 18.67), the blue hero landing and posing with a friend (TR 25.38): illustration (v1 prerender: «من استوديو هايبرغريف (Hypergryph)» ran out of the safe zone, so «استوديو» dropped)",
+  "line 2 (with friends) over the blue hero walking on with the orange friend (TR 27.55) and two players on the grass under the bubble robot (TR 104.35, after the first frames where a player is half cut at the left edge; the prerender's OCR warns there read the robot's details, no text): co-op shown",
   "line 3 (colour puzzles) over the colour-block puzzle machine (PV 39.1, 39.95): demonstration",
   "after line 3 the picture breathes with the strip pinned (date; PC and Nintendo Switch): the yellow submarine (PV 66.36), the heroes boarding the flying bus (TR 80.90) and the balloon bus over the sea (TR 84.65), a cut every 1.4 to 2.2 s; the last 2 s are the balloon bus, a picture",
   "strip (split): الموعد · الثلاثاء 17 نوفمبر | متوفرة على · PC · Nintendo Switch; the headline carries PS5, the strip the date and the other platforms, the lines never repeat them",
