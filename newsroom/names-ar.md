@@ -20,6 +20,10 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 ### Platform holders and publishers
 | Latin | Arabic | Status |
 |---|---|---|
+| Mojang Studios (Minecraft developer, Microsoft) | موجانغ | In use 15 Nov 2026 (Minecraft first 2027 drop Reel: «استوديو موجانغ (Mojang)» at first mention, credit «المصدر: موجانغ (Mojang)»; follows the two earlier posts' «شركة موجانغ (Mojang)», one older post had موجانج) |
+| netherite (Minecraft material) | النذرايت (Netherite) | Proposed 15 Nov 2026 (caption only; DeepL gives النيثيريت; the player spelling chosen, Latin in brackets) |
+| off-hand (Minecraft) | اليد الأخرى | Proposed 15 Nov 2026 (DeepL: اليد غير الرئيسية; plainer form chosen) |
+| throwing disc (Minecraft weapon) | قرص الرمي / قرص رمي | Proposed 15 Nov 2026 (DeepL term alone: قرص الرمي; in a sentence it wrote القرص القاذف) |
 | JOYCITY (FreeStyle Football 2 publisher, Korea) | جويسيتي | Proposed 15 Nov 2026 (FreeStyle Football 2 price Reel: Latin in brackets at first mention «جويسيتي (JOYCITY)»; the Reel credit reads «جويسيتي (JOYCITY)»; «الناشرة» as the role word) |
 | WOORE (FreeStyle Football 2 developer, Korea) | ووري | Proposed 15 Nov 2026 (caption only, first mention «ووري (WOORE)», «المطورة» as the role word) |
 | Future Friends Games (Queen's Domain publisher, UK) | فيوتشر فريندز غيمز | In use 14 Nov 2026 (Queen's Domain 200k Reel, director-2: Latin in brackets at first mention; the credit line carries the full form; «الناشرة» as the role word; follows the house غيمز) |
