@@ -1,17 +1,17 @@
 {
  "name": "littlelands-early-access-november-16",
- "out": "cards/2026-11/littlelands-early-access-november-16-reel-v2.mp4",
+ "out": "cards/2026-11/littlelands-early-access-november-16-reel-v3.mp4",
  "verdict": "pass",
- "at": "2026-11-15T09:53:34Z",
+ "at": "2026-11-15T10:02:12Z",
  "findings": [],
  "notes": [
   "length 14.1 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 99.7; leak_pct 0.1; cache {'hit': 1, 'miss': 4}; separate_secs 9.1; secs 12.7",
+  "render_job: audio split: applied; music_pct 99.7; leak_pct 0.1; cache {'hit': 0, 'miss': 5}; separate_secs 10.6; secs 14.8",
   "render_job: lifeless: {\"score\": 2.2, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 2.13, \"held_under_text\": 0.0, \"secs\": 14.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "1782d9b871c32c0790fbac361d454fccb4de35ef",
- "dispatches": 3,
+ "job_sha": "80af67acfeeabf8a97496a4c87c5670e80cb015d",
+ "dispatches": 4,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
