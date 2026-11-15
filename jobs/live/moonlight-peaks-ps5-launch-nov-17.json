@@ -1,0 +1,264 @@
+{
+ "name": "moonlight-peaks-ps5-launch-nov-17",
+ "story": "moonlight-peaks-ps5-launch-nov-17-20261115",
+ "kind_news": "launch",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/moonlight-peaks-ps5-launch-nov-17-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "moonlight-peaks-ps5-launch-nov-17-release-date.mp4",
+   "steam": 2209900,
+   "trailer": "Release Date Trailer",
+   "start": 0,
+   "seconds": 240
+  },
+  {
+   "file": "moonlight-peaks-ps5-launch-nov-17-wholesome.mp4",
+   "steam": 2209900,
+   "trailer": "Wholesome Trailer",
+   "start": 0,
+   "seconds": 240
+  },
+  {
+   "file": "moonlight-peaks-ps5-launch-nov-17-launch.mp4",
+   "steam": 2209900,
+   "trailer": "Launch Trailer",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [
+  [
+   "moonlight-peaks-ps5-launch-nov-17-wholesome.mp4",
+   11.3,
+   3.0,
+   0.3
+  ],
+  [
+   "moonlight-peaks-ps5-launch-nov-17-release-date.mp4",
+   14.5,
+   1.0,
+   0.7
+  ],
+  [
+   "moonlight-peaks-ps5-launch-nov-17-release-date.mp4",
+   2.7,
+   2.8,
+   0.47
+  ],
+  [
+   "moonlight-peaks-ps5-launch-nov-17-release-date.mp4",
+   7.0,
+   2.9,
+   0.5
+  ],
+  [
+   "moonlight-peaks-ps5-launch-nov-17-release-date.mp4",
+   23.95,
+   1.2,
+   0.45
+  ],
+  [
+   "moonlight-peaks-ps5-launch-nov-17-wholesome.mp4",
+   32.6,
+   1.9,
+   0.5
+  ],
+  [
+   "moonlight-peaks-ps5-launch-nov-17-launch.mp4",
+   27.6,
+   2.0,
+   0.4
+  ],
+  [
+   "moonlight-peaks-ps5-launch-nov-17-release-date.mp4",
+   15.5,
+   2.1,
+   0.7
+  ]
+ ],
+ "lines": [
+  [
+   2,
+   2,
+   [
+    "تؤدي فيها دور مصاص دماء"
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    "يعود إلى مزرعة عائلته ليزرعها"
+   ]
+  ],
+  [
+   4,
+   5,
+   [
+    "ويصادق أهل البلدة ويجرب الهوايات"
+   ]
+  ],
+  [
+   6,
+   7,
+   [
+    "باعت اللعبة أكثر من 300 ألف نسخة منذ يوليو"
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   7,
+   "المصدر: إكسيد (XSEED) وليتل تشيكن (Little Chicken)",
+   {
+    "size": 40,
+    "band": true,
+    "from_start": true
+   }
+  ]
+ ],
+ "headline": "تصدر Moonlight Peaks\nعلى PS5 الليلة",
+ "label": "جديد",
+ "source": "إكسيد غيمز (XSEED Games)",
+ "date": "16 Nov 2026",
+ "theme": "stylized",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": true,
+ "track": [
+  "moonlight-peaks-ps5-launch-nov-17-release-date.mp4",
+  31.0
+ ],
+ "spoken": "تصدر Moonlight Peaks على PS5 الليلة. تؤدي فيها دور مصاص دماء يعود إلى مزرعة عائلته ليزرعها، ويصادق أهل البلدة ويجرب الهوايات. وقد باعت اللعبة أكثر من 300 ألف نسخة منذ يوليو.",
+ "subject_person": null,
+ "reel_check": {
+  "Primary read in full; time and first report noted": {
+   "answer": "yes",
+   "evidence": "XSEED/Marvelous USA press release 27 Oct 2026 read in full on Games Press 15 Nov ~11:05Z ('coming to PlayStation 5 on Nov. 17, 2026', 300,000 units, $34.99, PS Plus 20% 17 to 23 Nov, Premium two-hour trial); PS Store UAE page read 15 Nov ~11:00Z: 'Releases on: 16/11/2026 08:00 PM UTC' = 00:00 Dubai Tue 17 Nov"
+  },
+  "Not already posted (ledger find, Publer last 7 days)": {
+   "answer": "yes",
+   "evidence": "git grep moonlight/xseed over newsroom/stories: only the 28 Oct date announcement (stills Reel); this is the launch itself, real news under the variety rule"
+  },
+  "Older than 24 h at first report and nothing new: dropped": {
+   "answer": "n/a",
+   "evidence": "a dated launch: the UAE store unlocks it at 00:00 Dubai the night of the slot's day; the store hour is new since 28 Oct"
+  },
+  "Angle before lines (hook, why now, what it means here, payoff)": {
+   "answer": "yes",
+   "evidence": "story file angle: cozy vampire life sim lands on PS5 at midnight UAE time; the UAE store unlocks it tonight; Gulf PS5 players can download it from midnight, PS Plus 20% off launch week; payoff 300,000 copies sold since July"
+  },
+  "Story type items (OUT NOW: platforms, AED price where listed, what it is)": {
+   "answer": "yes",
+   "evidence": "PS5 digital in headline and caption; no AED price on the UAE store before release, USD from the publisher in the caption only; what it is: a life sim as a vampire on a farm (lines and caption)"
+  },
+  "One spoken paragraph first, cut into beats": {
+   "answer": "yes",
+   "evidence": "spoken = headline + 4 lines read in order"
+  },
+  "Subject named before any pronoun; no line opens on و": {
+   "answer": "yes",
+   "evidence": "Moonlight Peaks named in the headline before فيها; line 3 opens on و continuing line 2 back to back (under 3 s)"
+  },
+  "Release verbs": {
+   "answer": "yes",
+   "evidence": "تصدر ... الليلة (the store's date and hour); no bare تصل"
+  },
+  "Names match names-ar; new names added": {
+   "answer": "yes",
+   "evidence": "إكسيد غيمز (XSEED Games) as in the 28 Oct story, ليتل تشيكن (Little Chicken Game Company): rows added to names-ar; مصاص دماء and لعبة محاكاة الحياة added as terms"
+  },
+  "Headline: what happened, names the reader knows": {
+   "answer": "yes",
+   "evidence": "تصدر Moonlight Peaks / على PS5 الليلة"
+  },
+  "Lines open the story, not repeat the headline": {
+   "answer": "yes",
+   "evidence": "lines: who you play, the farm, the town and hobbies, the sales figure"
+  },
+  "Caption first line carries the news, source named, release verbs": {
+   "answer": "yes",
+   "evidence": "لعبة Moonlight Peaks تصدر على PS5 الليلة عند منتصف الليل بتوقيت الإمارات; source XSEED and the PS Store page"
+  },
+  "X and Threads: one or two sentences, source named": {
+   "answer": "yes",
+   "evidence": "حسب صفحتها على متجر PlayStation؛ وفق ناشرها إكسيد غيمز"
+  },
+  "Pinned comment: the source": {
+   "answer": "yes",
+   "evidence": "المصدر: إعلان إكسيد غيمز (XSEED Games) في 27 أكتوبر وصفحة اللعبة على متجر PlayStation في الإمارات"
+  },
+  "Urgency: chip honest": {
+   "answer": "yes",
+   "evidence": "جديد; not عاجل, not رسمي (store page plus a 27 Oct release)"
+  },
+  "Tone neutral; sensitive details general": {
+   "answer": "yes",
+   "evidence": "vampire premise stated neutrally; witchcraft and romance left out of every text and shot (21 Oct rule)"
+  },
+  "Footage keeps its own sound; music named": {
+   "answer": "yes",
+   "evidence": "Release Date Trailer's own music from 31.0 s (one stretch, server time), audio split with each shot's own effects"
+  },
+  "No speech under Arabic lines": {
+   "answer": "yes",
+   "evidence": "faster-whisper small (numpy input) on the Release Date Trailer: speech only 28.58-29.98 s and a stray word at 90.7 s; the stretch from 31.0 s to about 49 s has none. Launch and Wholesome trailers are narrated throughout but only their effects stems come back (dialogue not put back)"
+  },
+  "Separated stems last resort": {
+   "answer": "yes",
+   "evidence": "the server's audio split: continuous music stem, each shot's own effects"
+  },
+  "Our effects only on our graphics": {
+   "answer": "yes",
+   "evidence": "no cards, no added effects"
+  },
+  "Footage first": {
+   "answer": "yes",
+   "evidence": "three official Steam trailers (1920x1080), decode clean on the server prerender 15 Nov 10:56Z"
+  },
+  "Every Reel shows the game": {
+   "answer": "yes",
+   "evidence": "7 shots, all in-game footage"
+  },
+  "Not the same picture as the last 5 Reels": {
+   "answer": "yes",
+   "evidence": "a dark gothic farm and a character creator; neighbours a fighting expansion (UFC 6), Shrek 2 and TEKKEN"
+  },
+  "One visual requirement per beat; shot shows its line": {
+   "answer": "yes",
+   "evidence": "cover: the character creator, a young vampire with a black cat, look changing (headline); 1 s of the town shop as the headline fades (no line); line 1 the vampire walking her farm; line 2 the crop rows with bats overhead; line 3 two townsfolk at a campfire then a flower arrangement (hobby); line 4 a crowd gathered on the beach then the town shop with a passer-by"
+  },
+  "Crop judged per beat": {
+   "answer": "yes",
+   "evidence": "9:16 crops looked at 4 fps locally on 480p copies: creator focus 0.30 keeps the character and cat, button hints (x<0.12) and hairstyle panel (x>0.48) outside; farm 0.47 centres the walking vampire; crop rows 0.5; flowers 0.5 clear of the left panel; beach crowd 0.4; shop 0.70. Server shotgate: the Release Date copy's picture starts at 2.68 s, so the farm walk starts at 2.7"
+  },
+  "Headline in the band, not over the subject": {
+   "answer": "yes",
+   "evidence": "creator: candles and wall in the top band, the character's head starts about 30% down"
+  },
+  "Text moves only on entry and exit": {
+   "answer": "yes",
+   "evidence": "trailer footage, no stills"
+  },
+  "Credit on every clip for its whole duration": {
+   "answer": "yes",
+   "evidence": "credit [0,6] المصدر: إكسيد (XSEED) وليتل تشيكن (Little Chicken), frame 0 to the end card; publisher and studio named"
+  },
+  "Lifeless score below threshold": {
+   "answer": "yes",
+   "evidence": "shots inside the server's clean stretches, all moving"
+  },
+  "Checks: what am I seeing, hearing, why this cut": {
+   "answer": "yes",
+   "evidence": "hard cuts (cut true) so each line keeps its reading time; trailer music under every shot"
+  },
+  "Decision log complete": {
+   "answer": "yes",
+   "evidence": "rejected: the doors shot (OCR flags 56.2-57.7 s), the tavern (text flags 38-40.5 s, lightning), the dark-magic cloud courtyard, the skull-faced shopkeeper, the heart icon at the campfire after 25.3 s, the pottery wheel (UI icon row at the top), the logo slates and key-art cards (logo and publisher strip)"
+  }
+ }
+}
