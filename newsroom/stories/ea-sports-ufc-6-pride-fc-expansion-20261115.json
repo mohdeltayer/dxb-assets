@@ -1,7 +1,7 @@
 {
  "id": "ea-sports-ufc-6-pride-fc-expansion-20261115",
  "title": "EA SPORTS UFC 6: PRIDE FC Expansion announced (EA SPORTS UFC on X, 15 Nov), cover revealed, YouTube premiere Mon 16 Nov 11:00 ET, out 11 Dec with the Ultimate Edition or Ultimate add-on bundle",
- "status": "building: job v1 for the 10:15 Dubai Mon 16 Nov slot (06:15Z); not scheduled",
+ "status": "built: v4 Reel qc pass (split, our bed neon_d); not scheduled, no director run (stop point); RE-GATE within the hour before 10:15 Dubai (Mon)",
  "lane": "digital-lounge",
  "game": "EA SPORTS UFC 6",
  "companies": [
@@ -90,5 +90,40 @@
   "Kazushi Sakuraba | كازوشي ساكورابا | Proposed 15 Nov 2026 (UFC 6 PRIDE caption, «المقاتل الياباني»)",
   "Royce Gracie | رويس غرايسي | Proposed 15 Nov 2026 (UFC 6 PRIDE caption, «المقاتل البرازيلي»; DeepL غراسي)",
   "PRIDE (PRIDE Fighting Championships, Japan) | PRIDE in Latin as the expansion's name, «بطولة PRIDE اليابانية» | Proposed 15 Nov 2026"
- ]
+ ],
+ "media": {
+  "reel": "cards/2026-11/ea-sports-ufc-6-pride-fc-expansion-reel-v4.mp4",
+  "strip": "cards/2026-11/ea-sports-ufc-6-pride-fc-expansion-strip.jpg",
+  "sheet": "cards/2026-11/ea-sports-ufc-6-pride-fc-expansion-sheet.jpg",
+  "dense": "cards/2026-11/ea-sports-ufc-6-pride-fc-expansion-dense.jpg",
+  "qc": "cards/2026-11/ea-sports-ufc-6-pride-fc-expansion-qc.json",
+  "render_commit": "d06f7c0",
+  "job_file_commit": "2ee28d8",
+  "job_sha": "a2a5e84ddf69ed780fa71e472272ed9488c242d8",
+  "dispatches": 5,
+  "stages_s": {
+   "checks": 10.3,
+   "montage": 52.6,
+   "text": 22.6,
+   "audio": 0.9,
+   "outro": 13.8
+  },
+  "job_secs": 284,
+  "length": "12.3 s before the end card",
+  "template": "split",
+  "chip": "رسمي",
+  "theme": "emerald",
+  "sound": "bed:neon_d (bed_reason in the job: all three official trailers narrated; music_only refused at 40.52 s, 8.4%, and 101.6 s, 14.4%)",
+  "render_history": [
+   "v1 (40.52 music_only) refused: music stem leftover 8.4%",
+   "101.6 music_only refused: leftover 14.4%",
+   "reel-v1 qc pass on our bed, but the server autofocus cropped onto the crowd and cut logos at the edges: not used",
+   "reel-v2 qc pass: VENUM pad and UFC6 cage pad cut at the edges: not used",
+   "casino-stare job refused by the server shot gate (subject leaves the crop)",
+   "reel-v3 qc pass: TOYO TIRES post cut behind Holloway: not used",
+   "reel-v4 qc pass: the Reel to review"
+  ]
+ },
+ "own_check_v4": "4 fps frames of reel-v4 looked at as 9:16 (11:35Z): no strike, blood or knockdown on screen; walkouts, close-ups, a hand-wrap check, a commentator, a referee and a pose; lines ride clear of faces; strip pinned low; credit from frame 0 to the end card; remaining edge items: the top of the cage rigging with a part of a UFC logo at the top right for about 0.3 s at 3.5 s, and the ROUND banner letters (whole) behind the referee",
+ "caption_note": "the Reel's footage is the base game's reveal trailer (5 May 2026); no PRIDE footage exists before the 16 Nov 20:00 Dubai premiere"
 }
