@@ -1,0 +1,27 @@
+{
+ "name": "duck-side-of-the-moon-ps5-homegrown-nov-17",
+ "out": "cards/2026-11/duck-side-of-the-moon-ps5-homegrown-nov-17-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-15T05:55:24Z",
+ "findings": [],
+ "notes": [
+  "length 13.3 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 94.6; leak_pct 0.1; cache {'hit': 0, 'miss': 2}; separate_secs 6.0; secs 9.5",
+  "smear check: exempt 2.79 to 7.79 s (our own cards)",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 12.12, \"held_under_text\": 0.0, \"secs\": 13.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 24 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [],
+ "job_sha": "ef365de95cbe187370781befcee571d9271a4e53",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.89,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "trailer"
+}
