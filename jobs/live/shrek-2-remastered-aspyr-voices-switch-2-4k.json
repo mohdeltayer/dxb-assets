@@ -51,7 +51,7 @@
   [
    "shrek2r-launch.mp4",
    45.0,
-   0.95,
+   0.99,
    [
     [
      0.0,
@@ -213,7 +213,7 @@
  ],
  "ground_footage": [
   "shrek2r-launch.mp4",
-  22.0
+  21.96
  ],
  "angle": {
   "hook": "the voices players remember from 2004 are untouched in Shrek 2 Remastered",
@@ -259,7 +259,8 @@
   "rejected: both trailers' gameplay from 19 to 23 s (burnt-in 'Footage captured on PC' disclaimer), the street brawl (launch 24, announce 22.5), the balloon cannon with a crosshair (announce 26 to 28), the knight and giant Gingy (launch 33 to 35), the pumpkin fight, the HUD level (announce 32.5 to 35), the bridge (sign cut at the edge), the chickens (Donkey cut at both edges), the cows (a cow cut at the right edge), the giant cookie in the tree (cut at the edges), title cards, photo-mode UI and end slates; the Nintendo store trailer is 1280x720 at 2.6 Mbps (enlarged past 2x), not used",
   "sound: Launch Trailer music from 19.0 s, music_only, one stretch under the whole cut",
   "v1 render (run 43705447224): the output smear check flagged 15.20 to 16.33 s (peak 40.8), the cut from the forest path to the framed group picture; looked at the source frames, no damage, waived with block_ok",
-  "v2 (run 43705711930, qc pass) not used: the card's ground ran the trailer from about 32 s (the shared clock adds t0), so the REMASTERED GRAPHICS title, the night-town knight and the PHOTO MODE page showed blurred behind the card; the headline sat on Gingy's head at 2.0 s and on Donkey at 2.25 s (the Gingy shot crossed a scene cut); edge cuts on the cows, the chickens and the shop. v3 fixes all of these; the lines were shortened to fit the clean footage (one fact each, same meaning)"
+  "v2 (run 43705711930, qc pass) not used: the card's ground ran the trailer from about 32 s (the shared clock adds t0), so the REMASTERED GRAPHICS title, the night-town knight and the PHOTO MODE page showed blurred behind the card; the headline sat on Gingy's head at 2.0 s and on Donkey at 2.25 s (the Gingy shot crossed a scene cut); edge cuts on the cows, the chickens and the shop. v3 fixes all of these; the lines were shortened to fit the clean footage (one fact each, same meaning)",
+  "v3 dispatch stopped at the server text check (head_overlap: line 1 entered at 3.28 s, the headline fades from 3.30 s): the kitchen shot is 0.99 s (was 0.95); card ground start 21.96 to keep the shop at the card's start"
  ],
  "block_ok": [
   [
