@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-15T00:52:08Z",
- "seq": 489,
+ "generated_at": "2026-11-15T01:52:07Z",
+ "seq": 490,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -64,62 +64,41 @@
    ],
    "breaking_source": true,
    "breaking_seq": 480
-  },
-  {
-   "id": 14281,
-   "source": "Nintendo of America (YouTube)",
-   "source_kind": "youtube",
-   "title": "RACCOIN: Chaos Max Edition – Launch Trailer – Nintendo Switch 2",
-   "url": "https://www.youtube.com/watch?v=3ShCCyHTu1A",
-   "published": "2026-11-13T23:00Z",
-   "first_seen": "2026-11-14T01:30:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/3ShCCyHTu1A/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=3ShCCyHTu1A"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 462
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-15T00:52:05Z",
+  "last_poll_at": "2026-11-15T01:50:14Z",
   "sources_enabled": 100,
-  "sources_ok": 73,
+  "sources_ok": 74,
   "sources_failing": 26,
   "failed": [
-   "Bethesda (YouTube) (HTTP 404, 3x)",
-   "Blizzard (YouTube) (HTTP 500, 3x)",
-   "Bungie (YouTube) (HTTP 404, 3x)",
-   "CD PROJEKT RED (YouTube) (HTTP 500, 2x)",
+   "Bethesda (YouTube) (HTTP 500, 4x)",
+   "Blizzard (YouTube) (HTTP 500, 4x)",
+   "Bungie (YouTube) (HTTP 404, 4x)",
+   "CD PROJEKT RED (YouTube) (HTTP 404, 3x)",
    "Call of Duty (YouTube) (HTTP 404, 3x)",
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 68x)",
-   "Capcom USA (YouTube) (HTTP 404, 3x)",
-   "EA SPORTS FC (YouTube) (HTTP 404, 3x)",
-   "Fortnite (YouTube) (HTTP 404, 2x)",
+   "Capcom USA (YouTube) (HTTP 404, 4x)",
+   "EA SPORTS FC (YouTube) (HTTP 404, 4x)",
+   "Fortnite (YouTube) (HTTP 404, 3x)",
    "Nintendo of America (X) (HTTP 429, 68x)",
-   "Nintendo of America (YouTube) (HTTP 404, 4x)",
+   "Nintendo of America (YouTube) (HTTP 404, 5x)",
    "PlayStation (X) (HTTP 429, 88x)",
-   "PlayStation (YouTube) (HTTP 404, 5x)",
-   "PlayStation MENA (YouTube) (HTTP 404, 3x)",
+   "PlayStation (YouTube) (HTTP 500, 6x)",
+   "PlayStation MENA (YouTube) (HTTP 404, 4x)",
    "PlayStation Middle East (X) (HTTP 429, 13x)",
-   "PlayStation Middle East (YouTube) (HTTP 404, 3x)",
-   "Pokemon (YouTube) (HTTP 404, 3x)",
-   "Riot Games (YouTube) (HTTP 404, 3x)",
+   "PlayStation Middle East (YouTube) (HTTP 404, 4x)",
+   "Pokemon (YouTube) (HTTP 404, 4x)",
+   "Riot Games (YouTube) (HTTP 404, 4x)",
    "Rockstar Games (X) (HTTP 429, 39x)",
-   "Rockstar Games (YouTube) (HTTP 404, 5x)",
-   "SEGA (YouTube) (HTTP 404, 3x)",
-   "Square Enix (YouTube) (HTTP 404, 3x)",
-   "Steam (YouTube) (HTTP 404, 3x)",
-   "Ubisoft (YouTube) (HTTP 404, 3x)",
+   "Rockstar Games (YouTube) (HTTP 404, 6x)",
+   "SEGA (YouTube) (HTTP 404, 4x)",
+   "Square Enix (YouTube) (HTTP 404, 4x)",
+   "Steam (YouTube) (HTTP 500, 4x)",
+   "Ubisoft (YouTube) (HTTP 404, 4x)",
    "Xbox (X) (HTTP 429, 87x)",
-   "Xbox (YouTube) (HTTP 404, 5x)"
+   "Xbox (YouTube) (HTTP 404, 6x)"
   ]
  }
 }
