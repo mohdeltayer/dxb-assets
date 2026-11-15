@@ -153,5 +153,18 @@
    "v4 (55c638c): all fixed, checked at 4 fps"
   ]
  },
- "template_ledger_note": "clipcard; Sunday Dubai counts before this Reel: trailer 6, split 4, clipcard 3, stills 3, quote 1; the 21:15 neighbour is the Minecraft Reel (stills job with showcase layout per its story file), the 19:15 one LoL New Dawn (quote)"
+ "template_ledger_note": "clipcard; Sunday Dubai counts before this Reel: trailer 6, split 4, clipcard 3, stills 3, quote 1; the 21:15 neighbour is the Minecraft Reel (stills job with showcase layout per its story file), the 19:15 one LoL New Dawn (quote)",
+ "director": {
+  "at": "2026-11-15T03:52Z",
+  "by": "director-agent (not the builder)",
+  "verdict": "FAIL (v4 not to be scheduled)",
+  "fixes": [
+   "white flash 4.40 to 4.50 s (frames 132 to 134, two full white frames) in the rally-car shot (source 34.66 start): shorten or move that shot clear of source 34.96 to 35.06 (server copy), re-check the dense strip",
+   "«أُعلن عن» is wrong: the game has been public since Feb 2026 as a downloadable alpha on directrix-games.itch.io/project-stampede (alpha 0.0.8 on 8 Feb to 0.1.5, devlog 'Wishlist Project Stampede on Steam + The Road Ahead' 15 Nov 02:52Z); the news is the Steam page, so line 1, X, Threads and caption say the Steam page opened (e.g. «فُتحت صفحة لعبة Project Stampede على Steam»), not an announcement",
+   "chip نظرة أولى is not a first look for a game playable since February: use جديد",
+   "caption: replace «جيلَي PS2 وPS3» with «الجيلين السادس والسابع من أجهزة الألعاب» (source: 6th and 7th console generations); on screen «القديمة» is acceptable but «التي اشتهرت في الجيلين السادس والسابع» is faithful if it fits",
+   "optional: line 3 «تحيي سباقات…» name the game («تحيي اللعبة»), since line 2's subject is 'you'"
+  ],
+  "gate_regate": "Steam page re-read 15 Nov: release 'To be announced', text unchanged; itch.io devlog and page found (earlier public alpha)"
+ }
 }
