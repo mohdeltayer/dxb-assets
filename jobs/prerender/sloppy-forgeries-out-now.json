@@ -1,0 +1,38 @@
+{
+ "name": "sloppy-forgeries-out-now",
+ "story": "sloppy-forgeries-out-now-steam-20261115",
+ "kind_news": "price",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/sloppy-forgeries-out-now-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "sloppy-forgeries-out-now-trailer.mp4",
+   "steam": 3030560,
+   "trailer": "Official Trailer",
+   "start": 0,
+   "seconds": 240
+  },
+  {
+   "file": "sloppy-forgeries-out-now-single.mp4",
+   "steam": 3030560,
+   "trailer": "Single Player Gameplay",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [],
+ "lines": [],
+ "credits": [],
+ "headline": "TODO",
+ "label": "متوفر الآن",
+ "source": "بلايفل سيستمز (Playful Systems)",
+ "date": "15 Nov 2026",
+ "theme": "cold",
+ "style": null,
+ "template": "clipcard",
+ "skin": "house",
+ "cut": false,
+ "track": "bed",
+ "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+}
