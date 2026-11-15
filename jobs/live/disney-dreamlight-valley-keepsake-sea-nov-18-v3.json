@@ -177,7 +177,7 @@
  "label": "رسمي",
  "source": "جيملوفت (Gameloft)",
  "date": "16 Nov 2026",
- "theme": "playful",
+ "theme": "stylized",
  "style": null,
  "template": "split",
  "skin": "house",
@@ -221,7 +221,8 @@
   "crops judged on 9:16 crops at 4 fps of the session copy fetched as the server fetches; every start inside the server's shots-mode clean stretches (run 43678293074: 32.4-40.1, 40.9-50.6, 51.4-54.1, 54.9-58.6, 61.36-66.06, 66.86-79.06)",
   "v1 text fix (server font check 04:59Z: «في Disney Dreamlight Valley» ran out of the safe zone at 70 px): line 1 is now «اسمها The Keepsake Sea»; the game's name moved to the strip («اللعبة · Disney Dreamlight Valley»), pinned for the whole Reel after the headline; the base-game requirement stays in the caption",
   "v1 (cards/2026-11/disney-dreamlight-valley-keepsake-sea-nov-18-reel-v1.mp4, qc pass, job 3fac1a88) looked at 4 fps: server shot times match the session copy (no seek offset); fixes for v2: cover frame earlier so the mermaid is below the headline, sub shot cut before it leaves the window, teal merman cut before its blur, Dory cut before she leaves at the top; v1 audio: faster-whisper heard no speech, music runs at -17 to -20 dB to the end card",
-  "v3 (director FAIL on v2: the cover never named the game): headline «إضافة Dreamlight Valley / تحوّلك إلى حورية بحر», set by hand on two lines, the game named on frame 0; lines, strip, credit, shots and music_only track unchanged; cover kept on the swirl dive (the Dory shot stays under its own line, «وتلتقي هناك Dory», so the line order holds)"
+  "v3 (director FAIL on v2: the cover never named the game): headline «إضافة Dreamlight Valley / تحوّلك إلى حورية بحر», set by hand on two lines, the game named on frame 0; lines, strip, credit, shots and music_only track unchanged; cover kept on the swirl dive (the Dory shot stays under its own line, «وتلتقي هناك Dory», so the line order holds)",
+  "v3 render 1 stopped at the look check: theme playful would be the third in a row (Jackbox, Keepsake v2); theme stylized (story-led fantasy) chosen, the nearest free palette for a Disney fairy-tale sea"
  ],
  "reel_check": {
   "1 primary read in full": "yes: official expansion page disneydreamlightvalley.com/en/expansion/the-keepsake-sea ('LAUNCHES NOVEMBER 18, 2026', '*Requires base game to play', 5,000 Moonstones included) and Steam app 5090170 (release 18 Nov 2026, publisher Gameloft, about text), read 15 Nov ~05:10Z",
