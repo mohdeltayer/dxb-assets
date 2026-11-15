@@ -15,7 +15,7 @@ the order The Game Awards reads them, from the official stream or thegameawards.
 
 `goty` writes the list Reel: the headline over the first nominee's footage, then each nominee on its own trailer with its
 name as the line and «المرشح n من N · المصدر: ...» as the credit, then the ceremony date on a closing picture; our bed.
-`most` writes the clipcard: a hook on the leader's footage, its name, the ranking card (3 to 6 rows, counts only there),
+`most` writes the clipcard: a hook on the leader's footage, its name, the ranking card (3 to 5 rows, counts only there),
 the ceremony date on the leader's footage again. Both print the X, Threads and Instagram texts beside the job, and both
 refuse a key that has no shots yet. Nothing here posts or renders.
 """
@@ -171,8 +171,8 @@ def goty(kit, keys, when='TODO time read (Z)'):
 
 def most(kit, pairs, when='TODO time read (Z)'):
     keys = [k for k, _ in pairs]
-    if not 3 <= len(pairs) <= 6:
-        raise SystemExit('tgakit: the ranking card holds 3 to 6 games')
+    if not 3 <= len(pairs) <= 5:
+        raise SystemExit('tgakit: the ranking card holds 3 to 5 games (6 rows run into the story lines; server text check 15 Nov)')
     _need(kit, keys[:1], lambda k: ('hook', 'item', 'close'))
     _need(kit, keys, lambda k: ())
     c = kit['candidates']
