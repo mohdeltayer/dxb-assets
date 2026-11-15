@@ -1,0 +1,30 @@
+{
+ "name": "league-of-legends-new-dawn-2027",
+ "out": "cards/2026-11/league-of-legends-new-dawn-2027-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-15T00:31:59Z",
+ "findings": [],
+ "notes": [
+  "length 20.9 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 14.4; leak_pct 1.3; cache {'hit': 0, 'miss': 4}; separate_secs 9.5; secs 14.5",
+  "smear check: exempt 12.88 to 17.48 s (our own cards)",
+  "render_job: lifeless: {\"score\": 0.6, \"still_share\": 0.005, \"longest_still\": 0.1, \"cuts_per_10s\": 6.73, \"held_under_text\": 0.0, \"secs\": 20.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "5fb7934616d6e84595e19b384ea051bf51182d1e",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1440,
+  "max_zoom": 1.33,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/league-of-legends-new-dawn-2027-look-1.jpg",
+  "cards/2026-11/league-of-legends-new-dawn-2027-look-2.jpg",
+  "cards/2026-11/league-of-legends-new-dawn-2027-look-3.jpg"
+ ],
+ "person_shown": true,
+ "sound": "trailer"
+}
