@@ -1,7 +1,7 @@
 {
  "id": "duck-side-of-the-moon-ps5-homegrown-nov-17-20261115",
  "title": "Duck Side of the Moon (Starbrew Games) reaches PS5 on Tue 17 Nov with the free Homegrown update (new area, story, gardening, ship chromas)",
- "status": "v3 Reel rendered, qc pass; director not run; not scheduled. RE-GATE within the hour before 01:15 Dubai (Mon)",
+ "status": "scheduled in Publer 01:15 Dubai Mon 16 Nov (ids ig:717cb4 x:717cbb th:717cbe), director PASS v3 (director-duck-claude-sonnet); RE-GATE due again in the hour before 01:15",
  "lane": "digital-lounge",
  "game": "Duck Side of the Moon",
  "companies": [
@@ -122,5 +122,26 @@
   "chip": "جديد",
   "theme": "cold",
   "checked": "v3 strip at 4 fps: no burnt-in trailer text, no dialogue box, no slate, no violence; card ground the duck at the crop mounds and the asteroid; last 2 s the ship room; v3 audio: faster-whisper hears no speech (one hallucinated phrase at no_speech 0.44 on music), level -16 to -21 dB to the end card"
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/duck-side-of-the-moon-ps5-homegrown-nov-17-reel-v3.mp4",
+  "blob": "2a4e32538051614d3a51198d47e5266347b14ab2",
+  "at": "2026-11-15T06:11:57Z",
+  "note": "director 15 Nov: duplicate none; verbs, one-fact card, credit 0-end, music to end card, whisper hallucination only; re-gate due again in the hour before 01:15",
+  "checklist": {
+   "job": "jobs/live/duck-side-of-the-moon-ps5-homegrown-nov-17.json",
+   "sha256": "0bfff98adf6e20d847bf76b99b46f4243afd14f7a2c1b885357946097d791f86",
+   "ok": true,
+   "problems": [],
+   "template": "clipcard",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-duck-claude-sonnet",
+  "qc": "pass",
+  "looked": null
+ },
+ "scheduled": "scheduled in Publer 01:15 Dubai Mon 16 Nov 2026 (21:15Z), Instagram, X, Threads, job status complete read 06:12Z, ids ig:717cb4 x:717cbb th:717cbe; labels tpl:clipcard skin:house sound:trailer genre:family kind:news; director note: the source-and-date credit line also shows 2.0 to 3.5 s under the headline (standard CREDIT_AT element); whisper 'Thank you for watching' from 9.5 s is a hallucination over music (no speech, RMS steady)"
 }
