@@ -1,7 +1,7 @@
 {
  "id": "league-of-legends-new-dawn-2027-20261115",
  "title": "League of Legends: New Dawn, Riot's all-encompassing overhaul revealed at the Worlds 2026 final, coming in 2027, full reveal January",
- "status": "built, render pending: Reel for 19:15 Dubai Sun 15 Nov (15:15Z), Instagram, X, Threads; not scheduled. RE-GATE within the hour before 19:15 Dubai (Sun)",
+ "status": "built, QC pass, NOT scheduled (director and Publer pending): Reel cards/2026-11/league-of-legends-new-dawn-2027-reel-v4.mp4 for 19:15 Dubai Sun 15 Nov (15:15Z), Instagram, X, Threads; job_sha 559f41e5497607a5aebfd660ccad3b56ddf2275b, dispatches 5 (v1 pace stop, v1 to v4 renders); our bed neon (bed_reason in the job). RE-GATE within the hour before 19:15 Dubai (Sun)",
  "lane": "digital-lounge",
  "game": "League of Legends",
  "companies": [
@@ -137,5 +137,25 @@
   "بول بيليزا (Paul Bellezza)",
   "client (League of Legends) = مشغّل اللعبة"
  ],
- "regate": "RE-GATE within the hour before 19:15 Dubai (Sun): re-read the X post and leagueoflegends.com/new-dawn for changes; search 'New Dawn' for a Riot correction or a dated reveal"
+ "regate": "RE-GATE within the hour before 19:15 Dubai (Sun): re-read the X post and leagueoflegends.com/new-dawn for changes; search 'New Dawn' for a Riot correction or a dated reveal",
+ "reel": {
+  "path": "cards/2026-11/league-of-legends-new-dawn-2027-reel-v4.mp4",
+  "job": "jobs/live/league-of-legends-new-dawn-2027.json (removed by the render commit bc8b3c7; last job commit 6b11abe)",
+  "job_sha": "559f41e5497607a5aebfd660ccad3b56ddf2275b",
+  "qc": "pass, no findings; notes: length 22.1 s (over the 12 to 20 guide), lifeless report-only under threshold",
+  "sound": "bed:neon (v1 trailer music_only went silent from 14 s; v2 to v4 our bed, continuous to the end card)",
+  "versions": {
+   "v1": "music_only stretch silent before the end card; minion swords at 1.25 s",
+   "v2": "headline and closing person box over Paul's face at 2.3 to 3.5 s",
+   "v3": "source credit only from 2 s",
+   "v4": "credit from frame 0; candidate"
+  }
+ },
+ "footage_shots": "Lux 64.7, swirl 106.3, sunset 45.5, Paul Bellezza 25.65, gameplay 100.12/103.82/109.1/107.45, Tristana 72.75, Ekko 76.35, card on 52.0, Leona 66.3, Ahri 91.3 (source seconds of the official 2560x1440 video)",
+ "draft_notes": {
+  "source": "publisher's own video from its official X post (2560x1440, 1.33x enlargement, decode clean)",
+  "speech": "none (our bed)",
+  "sensitive": "none",
+  "picture_checks": "every shot viewed at 4 fps as the 9:16 crop: no blood, no gripped or aimed weapon (melee minions 105.15 to 106.2 and beam-firing champions 102.35 to 103.75 and 107.9 to 109 left out), no title card, slate, logo or rating card (end slate 109.96 on not used), white flashes 97.4 and 99.6 to 100.0 avoided, black 94.46 avoided; no burnt-in text in the cinematic and gameplay used; Paul's lower third (0 to 4 s) not used"
+ }
 }
