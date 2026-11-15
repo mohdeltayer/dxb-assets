@@ -1,17 +1,17 @@
 {
  "name": "trafficity-steam-launch-november-16",
- "out": "cards/2026-11/trafficity-steam-launch-november-16-reel-v2.mp4",
+ "out": "cards/2026-11/trafficity-steam-launch-november-16-reel-v3.mp4",
  "verdict": "pass",
- "at": "2026-11-15T07:11:14Z",
+ "at": "2026-11-15T07:19:14Z",
  "findings": [],
  "notes": [
-  "length 13.5 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 96.8; leak_pct 0.0; cache {'hit': 4, 'miss': 0}; separate_secs 2.9; secs 5.1",
-  "render_job: lifeless: {\"score\": 7.3, \"still_share\": 0.06, \"longest_still\": 0.2, \"cuts_per_10s\": 2.24, \"held_under_text\": 0.149, \"secs\": 13.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 13.9 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 96.5; leak_pct 0.0; cache {'hit': 2, 'miss': 2}; separate_secs 6.1; secs 9.7",
+  "render_job: lifeless: {\"score\": 6.5, \"still_share\": 0.08, \"longest_still\": 0.2, \"cuts_per_10s\": 2.9, \"held_under_text\": 0.138, \"secs\": 13.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "19a184e7b831d79b195b3cfcef67547ed58b9758",
- "dispatches": 3,
+ "job_sha": "e7bb6d1d25a548e6e9863784b550e4053e9e885e",
+ "dispatches": 4,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
