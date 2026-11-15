@@ -1,7 +1,7 @@
 {
  "id": "jackbox-ceo-comedy-writers-false-positives-20261115",
  "title": "Jackbox Games CEO Mike Bilder: the studio's funny staff give 'a lot of false positives', so games are tested with outside groups",
- "status": "building (production subagent, slot 21:15 Dubai Sun 15 Nov); not scheduled",
+ "status": "built: Reel v3 qc pass (render commit c4c2287, job_sha 3d9112ba, 4 dispatches, 192 s on dxb-render); not scheduled, director not run; RE-GATE within the hour before 21:15 Dubai (Sun)",
  "lane": "digital-lounge",
  "game": "The Jackbox Party Pack 12",
  "companies": [
@@ -91,5 +91,16 @@
   },
   "deepl_forward": "whole English story in one piece: DeepL gave «النتائج الإيجابية الخاطئة» for false positives (alternatives sent: false positives / misleading results / a false impression: نتائج مضللة / انطباع خاطئ; picked نتائج مضللة as the plain term), «تجعل الألعاب تتألق» for make games shine (same as ours), «مجموعات خارجية» for external groups; it read greenlit as a launch green light, so ours says «بعد اعتماد فكرة اللعبة»; DeepL wrote جيمز, house غيمز",
   "deepl_back": "headline: 'The Jackbox employees are way too funny' (before the headline became فريق ... مضحك, same meaning); card note «مضحكة معهم» read back as 'ridiculous to them', so it became «ممتعة معهم»; L2/L3 'tests its games with groups outside the studio to find out whether the game is actually funny or if it's just the employees'; X 'told PC Gamer that the studio's employees are so funny that they can make any game seem fun'; caption read back faithfully (Jackbox Party Pack 12 'came out in October')"
- }
+ },
+ "reel": "cards/2026-11/jackbox-ceo-comedy-writers-false-positives-reel-v3.mp4",
+ "renders": [
+  "dispatch 1 (04:47Z): failed, announcement fetch 75 s shorter than a shot at 90.6 s",
+  "dispatch 2 (04:54Z): failed, Cinematic Trailer music_only stem not clean (leftover 8.3%)",
+  "dispatch 3 (04:59Z): failed, output smear flags at 19.07 and 21.23 s (looked: clean sources; block_ok added)",
+  "dispatch 4 (05:07Z): qc pass but v1 not usable: shot times were in my local timebase, 0.79 s early against the server's copies (title cards, logos, CRUSH? button on screen); not for posting",
+  "dispatch 5 (05:19Z): failed, source smear check at three scene cuts; shots moved past them",
+  "dispatch 6 (05:29Z): v2 qc pass; night-eyes shot near black and the headline over the party-hat pug's forehead, so rebuilt; not for posting",
+  "dispatch 7 (05:38Z): v3 qc pass (music 90.1%, leak 0.2%, 18.8 s before the end card, person_shown true, sound trailer)"
+ ],
+ "director_model": "not run (stop point)"
 }
