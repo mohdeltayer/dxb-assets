@@ -1,11 +1,135 @@
 {
  "id": "moonlight-peaks-ps5-launch-nov-17-20261115",
- "title": "Moonlight Peaks launches on PS5 tonight: PS Store UAE lists 16 Nov 20:00 UTC (00:00 Dubai Tue 17 Nov); XSEED Games / Marvelous USA, Little Chicken",
- "status": "claimed: building for the 11:15 Dubai Mon 16 Nov slot (07:15Z); not scheduled",
+ "title": "Moonlight Peaks launches on PS5 tonight: PS Store UAE lists 16 Nov 20:00 UTC (00:00 Dubai Tue 17 Nov); XSEED Games / Marvelous USA, Little Chicken Game Company",
+ "status": "built, not scheduled; RE-GATE within the hour before 11:15 Dubai (Mon) (06:15Z to 07:15Z Mon 16 Nov)",
  "lane": "digital-lounge",
  "game": "Moonlight Peaks",
- "companies": ["XSEED Games", "Marvelous USA", "Little Chicken Game Company"],
+ "companies": [
+  "XSEED Games (Marvelous USA)",
+  "Little Chicken Game Company"
+ ],
  "subject_person": null,
  "claimed_at": "2026-11-15T10:55:00Z",
- "slot": "11:15 Dubai Mon 16 Nov 2026 (07:15Z)"
+ "slot": "11:15 Dubai Mon 16 Nov 2026 (07:15Z)",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "XSEED Games / Marvelous USA press release, 27 Oct 2026, read in full on Games Press 15 Nov ~11:05Z: 'will be coming to PlayStation®5 on Nov. 17, 2026'; 'sold over 300,000 units worldwide since it first rose from its coffin on July 7, 2026'; 'available digitally for PlayStation®5'; 'special launch-week discount of 20% off its regular price of $34.99 for PlayStation Plus subscribers from Nov. 17 through Nov. 23'; 'PlayStation Plus Premium subscribers can also enjoy a limited, two-hour trial ... progress carrying over'; features: farm, magical livestock, fishing, foraging, potion-crafting, befriending the town, two dozen romanceable characters, witchcraft spells",
+   "url": "https://www.gamespress.com/Moonlight-Peaks-Conjures-Up-PlayStation-5-Version-Launches-Digitally-o"
+  },
+  {
+   "role": "primary",
+   "name": "PlayStation Store UAE concept page 10020700, read 15 Nov ~11:00Z: 'Releases on: 16/11/2026 08:00 PM UTC' (releaseDate 2026-11-16T20:00:00Z = 00:00 Dubai Tue 17 Nov); no price shown before release; same date on the Saudi page (en-sa)",
+   "url": "https://store.playstation.com/en-ae/concept/10020700"
+  },
+  {
+   "role": "secondary",
+   "name": "Push Square 'These 13+ PS5 and PS Plus Games Are Coming Out Next Week (16th-22nd November)', 14 Nov: Moonlight Peaks 17th November PS5",
+   "url": "https://www.pushsquare.com/guides/these-13plus-ps5-and-ps-plus-games-are-coming-out-next-week-16th-22nd-november"
+  },
+  {
+   "role": "store",
+   "name": "Steam app 2209900: released 6 Jul 2026 (store date; publisher says 7 Jul), 104.99 AED on PC; trailers used for footage",
+   "url": "https://store.steampowered.com/app/2209900/Moonlight_Peaks/"
+  }
+ ],
+ "first_report": "PS5 date announced 27 Oct 2026 (XSEED press release; our Oct 28 post 2026-10-28-moonlight-peaks-ps5-nov-17 covered the date). The news at the slot is the launch itself: the UAE PS Store unlocks it at 00:00 Dubai Tue 17 Nov, the night of the slot's Dubai day. Nothing new since 27 Oct besides the store's release hour.",
+ "source_type": "primary",
+ "ledger_find": {
+  "at": "2026-11-15T10:50:00Z",
+  "words": [
+   "moonlight peaks",
+   "xseed",
+   "little chicken"
+  ],
+  "hits": [
+   "2026-10-28-moonlight-peaks-ps5-nov-17 (date announcement, posted 28 Oct)",
+   "2026-10-20-revamp-playtest-discord-ai-clones (unrelated mention)"
+  ],
+  "note": "git grep -il over newsroom/stories on origin/main; the launch is real news under the variety rule"
+ },
+ "genre": [
+  "indie",
+  "family"
+ ],
+ "kind": "launch",
+ "kind_news": "launch",
+ "label": "جديد",
+ "chip": "جديد",
+ "template": "trailer",
+ "template_note": "formats.pick('launch') -> trailer; formats.py check trailer 2026-11-16T07:15Z: ok (ledger then had Littlelands 03:15Z and TEKKEN 04:15Z); by hand: 09:15 Shrek 2 quote (Aspyr), 10:15 UFC 6 split (EA), 11:15 trailer: no third in a row; 4th trailer of Mon 16 Nov Dubai (Trafficity 03:15, Littlelands 07:15, TEKKEN 08:15, this) = the cap of 4, so 12:15 cannot be a trailer; card-led window unchanged (footage-led); publishers XSEED differs from EA (10:15) and Aspyr (09:15); theme stylized after UFC emerald and Shrek playful",
+ "beat": "release",
+ "family": "release (beat sheet 7)",
+ "recipe": "0-2.85 s the character creator: a young vampire with a black cat, the look changing, under chip and headline (cover: game named, PS5 tonight); 2.85-5.45 the vampire walking her farm (line 1); 5.45-8.7 the walk through the crop rows (line 2); 8.7-11.8 two townsfolk at a campfire, then a flower arrangement (line 3); 11.8-15.8 a crowd on the beach, then the town shop (line 4, the sales figure as the payoff); end card. Hard cuts. About 15.8 s before the end card",
+ "sensitive": "vampire life sim: the vampire premise is the game's own and is stated neutrally. Witchcraft and spells (press release) are left out of every text; romance (two dozen romanceable characters) is left out per the 21 Oct rule; no shot of the dark magic cloud, lightning, a romance moment (the campfire stops before the heart icon at 25.75 s) or the skull-faced shopkeeper",
+ "spoken": "تصدر Moonlight Peaks على PS5 الليلة. تؤدي فيها دور مصاص دماء يعود إلى مزرعة عائلته ليزرعها، ويصادق أهل البلدة ويجرب الهوايات. وقد باعت اللعبة أكثر من 300 ألف نسخة منذ يوليو.",
+ "claims": [
+  {
+   "claim": "PS5 release 17 Nov 2026, digital",
+   "status": "confirmed (publisher press release)"
+  },
+  {
+   "claim": "UAE PS Store release 16 Nov 20:00 UTC = 00:00 Dubai 17 Nov ('الليلة' on a Monday-morning post)",
+   "status": "confirmed (PS Store UAE page); re-read at the re-gate"
+  },
+  {
+   "claim": "$34.99; PS Plus 20% off 17 to 23 Nov; PS Plus Premium two-hour trial with progress kept",
+   "status": "confirmed (press release); AED price not shown on the UAE store before release, so USD in the caption only, nothing on screen"
+  },
+  {
+   "claim": "over 300,000 units sold worldwide since 7 Jul on PC, Switch, Switch 2, Google Play Games",
+   "status": "confirmed (press release, company figure, attributed «حسب الناشر» in the caption)"
+  },
+  {
+   "claim": "you play a young vampire, family's old farm, crops and livestock, befriend the town, fishing and foraging",
+   "status": "confirmed (press release; Wholesome and Launch trailers say 'my little vampire', 'the old farm')"
+  }
+ ],
+ "angle": {
+  "hook": "a cozy vampire life sim lands on PS5 at midnight UAE time",
+  "why_now": "the UAE PlayStation Store unlocks it at 00:00 Dubai tonight (Tue 17 Nov)",
+  "what_it_means_here": "PS5 players in the Gulf can download it from midnight; PS Plus members get 20% off for launch week",
+  "payoff": "over 300,000 copies sold on the other platforms since July"
+ },
+ "story_items": {
+  "out_now": "platform PS5 (digital only); price $34.99 per the publisher (no AED price on the UAE store before release, said in the caption as USD); what it is: a life sim where you play a young vampire on a farm"
+ },
+ "texts": {
+  "x": "تصدر Moonlight Peaks على PS5 الليلة عند منتصف الليل بتوقيت الإمارات، حسب صفحتها على متجر PlayStation. باعت لعبة محاكاة الحياة أكثر من 300 ألف نسخة على المنصات الأخرى، وفق ناشرها إكسيد غيمز (XSEED Games).",
+  "threads": "تصدر Moonlight Peaks على PS5 الليلة عند منتصف الليل بتوقيت الإمارات، حسب صفحتها على متجر PlayStation. باعت لعبة محاكاة الحياة أكثر من 300 ألف نسخة على المنصات الأخرى، وفق ناشرها إكسيد غيمز (XSEED Games).\n\nالمصدر: إعلان إكسيد غيمز وصفحة اللعبة على متجر PlayStation",
+  "instagram": "لعبة Moonlight Peaks تصدر على PS5 الليلة عند منتصف الليل بتوقيت الإمارات.\n\nأعلنت شركة إكسيد غيمز (XSEED Games) أن لعبة محاكاة الحياة Moonlight Peaks، من تطوير استوديو ليتل تشيكن (Little Chicken Game Company)، تصدر على PS5 في 17 نوفمبر بنسخة رقمية فقط، وتحدد صفحتها على متجر PlayStation في الإمارات موعد إصدارها عند منتصف الليل بتوقيت الإمارات.\n\nتؤدي في اللعبة دور مصاص دماء صغير يعود إلى مزرعة عائلته القديمة، فيزرعها ويربي الحيوانات، ويصادق أهل البلدة ويجرب هوايات مثل صيد السمك والبحث عن الثمار.\n\nسعر اللعبة 34.99 دولارًا، ويحصل مشتركو PlayStation Plus على خصم 20% من 17 إلى 23 نوفمبر، ويمكن لمشتركي PlayStation Plus Premium تجربتها لساعتين مع الاحتفاظ بالتقدم في النسخة الكاملة.\n\nصدرت اللعبة في 7 يوليو على الحاسب الشخصي وSwitch وSwitch 2 وGoogle Play Games، وباعت أكثر من 300 ألف نسخة حول العالم، حسب الناشر.\n\n#ألعاب #أخبار_الألعاب #MoonlightPeaks #PS5",
+  "pinned_comment": "المصدر: إعلان إكسيد غيمز (XSEED Games) في 27 أكتوبر وصفحة اللعبة على متجر PlayStation في الإمارات"
+ },
+ "on_screen": {
+  "headline": "تصدر Moonlight Peaks\nعلى PS5 الليلة",
+  "lines": [
+   "تؤدي فيها دور مصاص دماء",
+   "يعود إلى مزرعة عائلته ليزرعها",
+   "ويصادق أهل البلدة ويجرب الهوايات",
+   "باعت اللعبة أكثر من 300 ألف نسخة منذ يوليو"
+  ],
+  "credit": "المصدر: إكسيد (XSEED) وليتل تشيكن (Little Chicken)",
+  "chip": "جديد"
+ },
+ "arabic_review": {
+  "skills_loaded": "arabic-games-film-editor, arabic-writing (SKILL.md, conventions.md §5 and §6), arabic-grammar-review (SKILL.md) loaded fresh 15 Nov ~11:10Z; house glossary rows read: release verbs, النسخة المادية",
+  "grammar_review": {
+   "required_edits": [],
+   "optional_style_suggestions": [
+    {
+     "original": "يعود إلى مزرعة عائلته القديمة",
+     "suggestion": "keep",
+     "reason": "القديمة can read as the family's or the farm's; both are feminine and both are true (the old family farm), so no change"
+    }
+   ],
+   "uncertain_cases": []
+  },
+  "house_rules": "every line and paragraph opens on an Arabic word; game feminine (تصدر Moonlight Peaks); companies Arabic then Latin at first mention; Western digits; no em dash; X and Threads carry no hashtags and name the source (حسب صفحتها على متجر PlayStation، وفق ناشرها); caption ends #ألعاب #أخبار_الألعاب + 2 tags; release verb تصدر for the date; دولارًا in the caption, no price on screen; no النسخة المادية (بنسخة رقمية فقط)",
+  "deepl_forward": "whole story EN->AR in one piece, 15 Nov ~11:15Z: DeepL wrote تُطلق for the launch (kept تصدر per glossary), «كإصدار رقمي حصري» (ambiguous 'exclusive'; kept بنسخة رقمية فقط), «مع احتفاظهم بالتقدم المحرز» (adopted as «مع الاحتفاظ بالتقدم في النسخة الكاملة», replacing «نقل التقدم»). Phrase alternatives: 'launch-week discount' -> خصم أسبوع الإطلاق; 'digital-only release' -> إصدار رقمي حصريًا; 'progress carries over to the full game' -> يتم ترحيل التقدم (smell test: يتم; not used); 'while supplies last' -> DeepL wrote حتى نفاذ الكمية (misspelt نفاد, not used, not needed)",
+  "deepl_backcheck": "AR->EN, 15 Nov ~11:20Z: spoken -> 'Moonlight Peaks launches on PS5 tonight. In the game, you play as a young vampire who returns to his family's old farm to work the land, befriend the townspeople, and try out various hobbies. The game has sold more than 300,000 copies since July.' X -> 'Moonlight Peaks launches on PS5 tonight at midnight UAE time, according to its page on the PlayStation Store. The life simulation game has sold more than 300,000 copies on other platforms, according to its publisher, XSEED Games.' Caption: meaning intact (digital-only, store time, $34.99, 20% for PS Plus 17 to 23 Nov, Premium two-hour trial keeping progress, released 7 July on PC, Switch, Switch 2, Google Play Games, 300,000 worldwide according to the publisher)"
+ },
+ "regate": "RE-GATE within the hour before 11:15 Dubai (Mon): re-read the PS Store UAE page (release time still 16 Nov 20:00 UTC), XSEED's news and X for a delay or change, and a news search; a change in the hour stops 'الليلة'",
+ "footage": "official Steam trailers of app 2209900 (1920x1080, decode clean on the server): Release Date Trailer (farm, campfire, shop; track), Wholesome Trailer (character creator, flowers), Launch Trailer (beach crowd). Shots chosen inside the server's clean stretches (prerender shots mode, run 43706234871)",
+ "sound": "trailer: Release Date Trailer music from 31.0 s, one stretch under the cut; audio split with each shot's own effects; no speech in the stretch (whisper)",
+ "job": "jobs/live/moonlight-peaks-ps5-launch-nov-17.json"
 }

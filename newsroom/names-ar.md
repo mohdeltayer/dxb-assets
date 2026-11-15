@@ -348,3 +348,11 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | Rafael Martín (Littlelands co-developer) | رافائيل مارتين | Proposed 15 Nov 2026 (caption only, role word «المطورَين»; DeepL's spelling) |
 | Kyle Creamer (Littlelands co-developer) | كايل كريمر | Proposed 15 Nov 2026 (caption only; DeepL's spelling) |
 | cozy (game genre) | هادئة (مغامرة هادئة) | Proposed 15 Nov 2026 (DeepL gave دافئة; هادئة kept as the plainer word) |
+
+### Added 15 Nov 2026 (Moonlight Peaks PS5 launch Reel)
+| Latin | Arabic | Status |
+|---|---|---|
+| XSEED Games (Marvelous USA's publishing brand) | إكسيد غيمز | Proposed 15 Nov 2026 (as in the 28 Oct Moonlight Peaks story; caption «شركة إكسيد غيمز (XSEED Games)»; Reel credit short form «إكسيد (XSEED)», the full form ran out of the safe zone) |
+| Little Chicken Game Company (Moonlight Peaks developer, Netherlands) | ليتل تشيكن | Proposed 15 Nov 2026 (caption «استوديو ليتل تشيكن (Little Chicken Game Company)»; Reel credit «ليتل تشيكن (Little Chicken)») |
+| vampire | مصاص دماء | Proposed 15 Nov 2026 (term; the game's premise, stated neutrally) |
+| life sim | لعبة محاكاة الحياة | Proposed 15 Nov 2026 (term; DeepL gave the same) |
