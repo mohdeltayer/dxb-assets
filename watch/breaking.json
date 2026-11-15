@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-15T02:52:07Z",
- "seq": 491,
+ "generated_at": "2026-11-15T03:52:05Z",
+ "seq": 492,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -68,7 +68,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-15T02:50:14Z",
+  "last_poll_at": "2026-11-15T03:50:15Z",
   "sources_enabled": 100,
   "sources_ok": 74,
   "sources_failing": 26,
@@ -83,22 +83,22 @@
    "EA SPORTS FC (YouTube) (HTTP 404, 4x)",
    "Fortnite (YouTube) (HTTP 404, 3x)",
    "Nintendo of America (X) (HTTP 429, 68x)",
-   "Nintendo of America (YouTube) (HTTP 404, 7x)",
+   "Nintendo of America (YouTube) (HTTP 404, 8x)",
    "PlayStation (X) (HTTP 429, 88x)",
-   "PlayStation (YouTube) (HTTP 404, 8x)",
+   "PlayStation (YouTube) (HTTP 404, 9x)",
    "PlayStation MENA (YouTube) (HTTP 404, 4x)",
    "PlayStation Middle East (X) (HTTP 429, 13x)",
    "PlayStation Middle East (YouTube) (HTTP 404, 4x)",
    "Pokemon (YouTube) (HTTP 404, 4x)",
    "Riot Games (YouTube) (HTTP 404, 4x)",
    "Rockstar Games (X) (HTTP 429, 40x)",
-   "Rockstar Games (YouTube) (HTTP 404, 8x)",
+   "Rockstar Games (YouTube) (HTTP 500, 9x)",
    "SEGA (YouTube) (HTTP 404, 4x)",
    "Square Enix (YouTube) (HTTP 404, 4x)",
    "Steam (YouTube) (HTTP 500, 4x)",
    "Ubisoft (YouTube) (HTTP 404, 4x)",
    "Xbox (X) (HTTP 429, 87x)",
-   "Xbox (YouTube) (HTTP 404, 8x)"
+   "Xbox (YouTube) (HTTP 404, 2x)"
   ]
  }
 }
