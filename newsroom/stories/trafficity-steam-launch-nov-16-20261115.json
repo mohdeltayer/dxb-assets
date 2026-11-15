@@ -1,11 +1,131 @@
 {
  "id": "trafficity-steam-launch-nov-16-20261115",
  "title": "Trafficity (Onramp Games), a city builder about traffic, launches on Steam on Mon 16 Nov 2026",
- "status": "claimed: building for the 03:15 Dubai Mon 16 Nov slot (23:15Z Sun 15 Nov)",
+ "status": "building for the 03:15 Dubai Mon 16 Nov slot (23:15Z Sun 15 Nov); not scheduled",
  "lane": "digital-lounge",
  "game": "Trafficity",
- "companies": ["Onramp Games"],
+ "companies": [
+  "Onramp Games"
+ ],
  "subject_person": null,
  "claimed_at": "2026-11-15T07:05:00Z",
- "slot": "03:15 Dubai Mon 16 Nov 2026 (23:15Z Sun 15 Nov)"
+ "slot": "03:15 Dubai Mon 16 Nov 2026 (23:15Z Sun 15 Nov)",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Steam store page and app data, Trafficity (app 5185750): developer and publisher Onramp Games; release date '16 Nov, 2026' (coming_soon true); Windows and macOS; no price listed yet (UAE store); description: 'A city builder focused on the fun part: building roads and solving traffic problems!', 'Place down road grids at any angle in three clicks', 'build overpasses, roundabouts, and traffic lights with ease', 'Cars prefer the fastest route, factoring in traffic', 'Each time your city levels up you get a batch of buildings to place. The road network must grow!', 'Four biomes ... three difficulty levels, including a sandboxy Chill Mode, and a procedural map generator'; read 15 Nov ~06:30Z",
+   "url": "https://store.steampowered.com/app/5185750/Trafficity/"
+  },
+  {
+   "role": "primary",
+   "name": "Onramp Games website: 'a small indie studio making simulation games inspired by real-life infrastructure'; read 15 Nov ~06:35Z",
+   "url": "https://onramp.games"
+  },
+  {
+   "role": "secondary",
+   "name": "GamePressure game page: release date 16 Nov 2026, developer and publisher Onramp Games (search result)",
+   "url": "https://www.gamepressure.com/games/trafficity/z27560"
+  }
+ ],
+ "first_report": "The 16 Nov 2026 date is on the Steam store page (read 15 Nov ~06:30Z; the page does not say when the date was first posted; GamePressure lists it too). The news at the slot is the launch itself, on the slot's own Dubai day (Mon 16 Nov). Steam's own list of popular upcoming games put Trafficity first on 15 Nov ~06:50Z (store search, filter popularcomingsoon). No Arabic outlet carried it (digests, Arabic feeds read 15 Nov).",
+ "source_type": "primary",
+ "ledger_find": {
+  "at": "2026-11-15T06:40:00Z",
+  "words": [
+   "trafficity",
+   "onramp"
+  ],
+  "hits": [],
+  "note": "git grep -il over newsroom/stories on origin/main (text only): no story on this game or studio"
+ },
+ "genre": [
+  "strategy/sim",
+  "indie"
+ ],
+ "kind": "launch",
+ "kind_news": "launch",
+ "label": "جديد",
+ "chip": "جديد",
+ "template": "trailer",
+ "template_note": "formats.pick('launch') gives trailer; formats.py check trailer 2026-11-15T23:15 ok (neighbours: 00:15 Dreamlight Valley split, 01:15 Duck Side clipcard; Monday Dubai day fresh, no trailer yet that day)",
+ "beat": "release",
+ "family": "release (beat sheet 7), recipe 2 (trailer drop) for the opening: the traffic jam under chip and headline, then one line per beat on the shot that shows it, the last 2 s a picture",
+ "recipe": "notes/scenario-recipes.md recipe 2: 0-2.75 s the jammed junction (cars queued) under the headline; 2.75-6.0 roads drawn at an angle (line 1); 6.0-9.24 a neighbourhood with cars driving its streets (line 2); 9.24-12.84 the camera over the grown city with its interchanges (line 3); 12.84-14.84 the same flyover, no text",
+ "footage": "the game's official Steam trailer 'Trafficity Trailer' (app 5185750), 1920x1080 30 fps, 5.3 Mbps, 73.5 s, decode clean (session full decode and the server's shots read, 15 Nov); 9:16 crop 1.78x; the 'Gameplay highlight trailer' was opened too and has a silent audio track (-91 dB), so it is not used",
+ "sensitive": "none: a city builder about roads and traffic",
+ "spoken": "تصدر اليوم Trafficity، وهي لعبة مدن تحديها الزحام. ترسم فيها الطرق بأي زاوية، وتختار كل سيارة أسرع طريق. وكلما كبرت مدينتك، احتاجت طرقًا أكبر.",
+ "claims": [
+  {
+   "claim": "Steam release on 16 Nov 2026 (Windows and macOS)",
+   "status": "confirmed (Steam store page)"
+  },
+  {
+   "claim": "a city builder focused on building roads and solving traffic problems",
+   "status": "confirmed (Steam store page)"
+  },
+  {
+   "claim": "roads at any angle; lanes, overpasses, roundabouts, traffic lights",
+   "status": "confirmed (Steam store page)"
+  },
+  {
+   "claim": "cars take the fastest route, factoring in traffic",
+   "status": "confirmed (Steam store page)"
+  },
+  {
+   "claim": "city levels up, new buildings to place, the road network must grow",
+   "status": "confirmed (Steam store page)"
+  },
+  {
+   "claim": "four biomes, three difficulty levels incl. Chill Mode, procedural map generator",
+   "status": "confirmed (Steam store page)"
+  },
+  {
+   "claim": "price",
+   "status": "not listed on the store before launch; not on screen"
+  },
+  {
+   "claim": "launch hour",
+   "status": "not stated; text says the date only"
+  }
+ ],
+ "angle": {
+  "hook": "a city builder in which the whole game is fixing traffic jams",
+  "why_now": "it launches on Steam today, Monday 16 November 2026 (Steam store page)",
+  "what_it_means_here": "PC and Mac players in the region can buy it on Steam from today; the price shows on the store at launch",
+  "payoff": "the camera over a grown city of interchanges: the road network has to grow with the city"
+ },
+ "job": "jobs/live/trafficity-steam-launch-november-16.json",
+ "texts": {
+  "x": "تصدر اليوم لعبة Trafficity على Steam، وهي لعبة بناء مدن تدور كلها حول حل الزحام، حسب صفحتها على المتجر.",
+  "threads": "تصدر اليوم لعبة Trafficity على Steam، وهي لعبة بناء مدن تدور كلها حول حل الزحام، حسب صفحتها على المتجر.\n\nالمصدر: صفحة اللعبة على Steam",
+  "instagram": "لعبة Trafficity تصدر اليوم، وهي لعبة مدن تدور حول الزحام\n\nتصدر اليوم 16 نوفمبر على Steam لعبة Trafficity من استوديو أونرامب غيمز (Onramp Games) المستقل، وهي لعبة بناء مدن يقول الاستوديو إنها تركز على «الجزء الممتع»: بناء الطرق وحل مشكلات المرور.\n\nترسم في اللعبة الطرق بأي زاوية، وتضيف الحارات والجسور العلوية والدوّارات وإشارات المرور، وتضبط مراحل الإشارات والانعطافات لتخفيف الاختناقات. وتختبر محاكاة مرورية مفصلة شبكة طرقك، إذ تختار كل سيارة أسرع طريق مع حساب الزحام.\n\nوكلما ارتقت مدينتك إلى مستوى أعلى حصلت على مبانٍ جديدة تضعها، فتحتاج شبكة طرق أكبر. وتضم اللعبة أربع بيئات وثلاثة مستويات صعوبة، بينها وضع هادئ للبناء بلا ضغط، كما تضم مولّدًا للخرائط.\n\nتصدر اللعبة على Windows وMac، ولم يظهر سعرها على المتجر بعد.\n\n#ألعاب #أخبار_الألعاب #Trafficity #Steam",
+  "ig_comment": "المصدر: صفحة Trafficity على Steam",
+  "x_reply": "المصدر: https://store.steampowered.com/app/5185750/Trafficity/"
+ },
+ "on_screen": {
+  "headline": "تصدر اليوم Trafficity\nلعبة مدن تحديها الزحام",
+  "lines": [
+   "ترسم فيها الطرق بأي زاوية",
+   "تختار كل سيارة أسرع طريق",
+   "كلما كبرت مدينتك احتاجت طرقًا أكبر"
+  ],
+  "credit": "المصدر: أونرامب غيمز (Onramp Games)"
+ },
+ "arabic_review": {
+  "skills": "arabic-games-film-editor and arabic-writing loaded fresh 15 Nov ~07:20Z; glossary, names-ar, perfect-arabic SKILL.md, known-issues.md and orthography.md opened",
+  "grammar_review": {
+   "required_edits": [],
+   "optional_style_suggestions": [
+    {
+     "original": "تحديها",
+     "suggestion": "تحدّيها",
+     "reason": "the shadda removes a reading doubt; dropped on screen only to keep the headline line inside the 22-character estimate"
+    }
+   ],
+   "uncertain_cases": []
+  },
+  "deepl_forward": "whole story to Arabic in one piece (15 Nov ~07:25Z) plus term probes: city builder لعبة بناء المدن; traffic jams اختناقات مرورية; traffic congestion ازدحام المرور; roundabouts دوارات; overpasses الجسور العلوية; comes out today يصدر اليوم; our picks match (الزحام for the headline as the plainer word; DeepL's «تُطرح» and «يتم إطلاقه» replaced by the house تصدر)",
+  "deepl_backcheck": "all final texts to English (15 Nov ~07:30Z): headline 'Trafficity Launches Today / A City-Building Game Where Traffic Is the Challenge'; X 'a city-building game that's all about solving traffic congestion, launches today on Steam, according to its store page'; caption read back faithfully except «منها وضع هادئ…، إلى جانب مولّد» read as 'ranging from ... to a map generator', so it was rewritten to «بينها وضع هادئ…، كما تضم مولّدًا للخرائط»; credit 'Source: Onramp Games'"
+ },
+ "regate": "RE-GATE within the hour before 03:15 Dubai (Mon): Steam page still says 16 Nov (or now live), no delay notice, price line still true or updated"
 }
