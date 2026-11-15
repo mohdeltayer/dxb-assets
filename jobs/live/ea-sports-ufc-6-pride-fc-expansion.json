@@ -122,7 +122,7 @@
  "cut": true,
  "track": [
   "ea-sports-ufc-6-pride-fc-expansion-trailer.mp4",
-  40.52
+  101.6
  ],
  "music_only": true,
  "spoken": "بطولة PRIDE اليابانية تدخل EA SPORTS UFC 6. كانت PRIDE من أشهر بطولات الفنون القتالية المختلطة. الإضافة رقمية فقط مع نسخة Ultimate أو حزمتها.",
@@ -143,7 +143,7 @@
   "line 1 4.5-9.3 s 'كانت PRIDE من أشهر بطولات / الفنون القتالية المختلطة': 59.6 arena from above (1.0), 62.4 a glove-and-wrap check (0.45), 67.3 a fighter leaping on the walkout stage (0.95), 73.45 a fighter celebrating arms up then a close profile (2.4, ends 75.85 before the cut 'Paramount' text at 75.9); illustration of an MMA event",
   "line 2 9.3-13.7 s 'الإضافة رقمية فقط مع / نسخة Ultimate أو حزمتها' (v1 line ran out of the safe zone in the server font check): 92.69 fighter face (0.85), 109.1 close face (0.9), 116.93 referee (0.95), 119.35 fighter posing centred (1.7, closing picture; prerender flagged smears at 119.13-119.33 and 121.07-121.45, both cut out)",
   "strip: الإصدار 11 ديسمبر; العرض الكامل الليلة 8 مساءً (premiere 20:00 Dubai Mon); facts live in the strip only, the lines do not repeat them",
-  "sound: the reveal trailer from 40.52 s, music_only (narration 'Make that walk', 'Different is dangerous', 'Rhythm', 'Combos' heard by faster-whisper at 40.5-58.5 s is removed with the other stems; music continuous, -7 to -17 dB, 40.5-58 s)",
+  "sound v2: the reveal trailer's music from 101.6 s, music_only: the only narration-free stretch long enough (faster-whisper over the whole trailer: narration 30.9-101.46 and 117.52-122.4; 101.6 to about 115.6 under the Reel is clear). v1 used 40.52 s and the server refused it: 'music stem not clean (leftover 8.4% > 5.0%)', the narration-heavy stretch",
   "theme emerald (look ledger: tekken spectacle, littlelands playful before); style left to the server rotation",
   "credit v2: «العرض الأول من إلكترونيك آرتس (Electronic Arts)» names the reveal trailer the footage comes from (v1 «المصدر: ...، لقطات العرض الأول» ran out of the safe zone)"
  ],
@@ -158,7 +158,7 @@
   "Release verbs": "yes: تصدر في 11 ديسمبر in X and caption; no bare تصل",
   "Names match names-ar; new names added": "yes: إلكترونيك آرتس (Electronic Arts), فاميتسو; new rows Kazushi Sakuraba, Royce Gracie, PRIDE",
   "Headline: what happened, names the reader knows": "yes: بطولة PRIDE اليابانية / تدخل EA SPORTS UFC 6",
-  "Footage keeps its own sound; music named": "yes: reveal trailer music from 40.52 s, music_only",
+  "Footage keeps its own sound; music named": "yes: reveal trailer music from 101.6 s (narration-free stretch), music_only",
   "No speech under Arabic lines": "yes: narration removed by music_only (job fails if the stem is not clean)",
   "Credit on every clip for its whole duration": "yes: one credit shots 0-9 from frame 0, «العرض الأول من إلكترونيك آرتس (Electronic Arts)» (names the reveal trailer)",
   "Nothing graphic": "yes: no strikes, knockdowns or blood chosen; checked at 4 fps on 9:16 centre crops; strip to be re-read",
