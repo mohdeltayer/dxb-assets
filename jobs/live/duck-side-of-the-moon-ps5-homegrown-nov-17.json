@@ -17,8 +17,8 @@
  "shots": [
   [
    "duck-side-of-the-moon-ps5-homegrown-trailer.mp4",
-   3.9,
-   0.55,
+   3.6,
+   0.9,
    [
     [
      0.0,
@@ -28,12 +28,12 @@
   ],
   [
    "duck-side-of-the-moon-ps5-homegrown-trailer.mp4",
-   5.0,
+   3.0,
    0.5,
    [
     [
      0.0,
-     0.33
+     0.3
     ]
    ]
   ],
@@ -138,7 +138,7 @@
  "cut": true,
  "track": [
   "duck-side-of-the-moon-ps5-homegrown-trailer.mp4",
-  3.9
+  3.6
  ],
  "music_only": true,
  "gfx": [
@@ -175,10 +175,11 @@
   "v1 text fix (server font check 05:48Z: «لعبة Duck Side of the Moon / تصدر على PS5 الثلاثاء» needs more than 2 lines at 72 px): headline «بطة الفضاء تصل إلى PS5 / في Duck Side of the Moon» (the hook first, the game named on the cover, تصل إلى + the platform per the glossary); the date moved to the card",
   "card note shortened to «مع تحديث Homegrown المجاني» (server font check 05:51Z: wider than the plate); «لكل المنصات» stays in the caption and the X text",
   "v2 (v1 cards/2026-11/duck-side-of-the-moon-ps5-homegrown-nov-17-reel-v1.mp4, qc pass, job ef365de9, looked at 4 fps): the server's copy (trailer.fetch, ffmpeg -ss 0 -c copy) starts its video at 1.52 s, so the crop-sprouting garden (0-1.45 in a full download) is not in it and v1 showed the HOMEGROWN UPDATE title card under the garden line; the card's ground (5.8) ran into the Kepler dialogue box and the planet transition. Shot times re-read from a seek map of a copy fetched exactly as the server fetches (srv copy, 0.5 s grid, and 4 fps 9:16 crops)",
-  "0-3.5 headline beat: the duck flapping on the grass (3.9, 0.55, fo 0.36), the duck floating by the beanstalk in space (5.0, 0.5, fo 0.33), the duck riding an asteroid (14.25, 1.5), the floating island with the duck (9.95, 1.45, fo 0.66; dialogue box from 11.5 avoided)",
+  "0-3.5 headline beat: the duck flapping on the grass (3.6, 0.9, fo 0.36; the scene runs 3.55 to the crossfade at 4.5), the duck by the giant snail on the path (3.0, 0.5, fo 0.3; the title card ends at 2.9, the cut to the flapping scene at 3.55), the duck riding an asteroid (14.25, 1.5), the floating island with the duck (9.95, 1.45, fo 0.66; dialogue box from 11.5 avoided)",
   "card: «موعد الإصدار» · «17 نوفمبر» · «مع تحديث Homegrown المجاني» over the duck on the grass and in space, dimmed (ground_footage 3.0; 3.0 to 6.0 is clean in the server copy)",
   "«تزرع فيه حديقتك في الفضاء» (was «بين الكواكب», 0.1 s short of its reading time on the v2 shots) over the duck tending the crop mounds (12.95, 1.2; the asteroid from 14.2 avoided) and the flowering slope by the waterfall (15.95, 1.45)",
-  "«وتزيّن سفينتك على ذوقك» over the ship room changing its walls and floors (20.0, 2.85; the crafting UI before 19.9 and the slate at 23.0 avoided); the last 2 s are this picture; the ship-room duck shot (17.45) left out, its Summer Station box opens at 17.7"
+  "«وتزيّن سفينتك على ذوقك» over the ship room changing its walls and floors (20.0, 2.85; the crafting UI before 19.9 and the slate at 23.0 avoided); the last 2 s are this picture; the ship-room duck shot (17.45) left out, its Summer Station box opens at 17.7",
+  "v2 render 1 stopped at the source quality gate: the space shot at 5.0 read as letterboxed (black sky, 700 rows, 2.74x); replaced by the snail-path shot at 3.0 (0.5 s), the cover shot lengthened to 3.6-4.5"
  ],
  "reel_check": {
   "1 primary read in full": "yes: Starbrew Games press release on GamesPress and the Steam announcement of 3 Nov, read 15 Nov ~05:45Z",
