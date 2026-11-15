@@ -1,7 +1,7 @@
 {
  "id": "freestyle-football-2-dec-3-steam-aed-game-pass-20261115",
  "title": "FreeStyle Football 2: December 3 on PC, PS5 and Xbox, Steam pre-orders open at 109.99 AED, Game Pass day one",
- "status": "built v7 (QC pass), not yet director-checked; not scheduled; slot 18:15 Dubai Sun 15 Nov, may slip to 19:15 if the director check is not clean in time",
+ "status": "scheduled in Publer 18:15 Dubai Sun 15 Nov (14:15Z), Instagram, X, Threads (ids ig:70e270 x:51948c th:18b015); director PASS v7 (director-1815-freestyle-v7); gate 15 Nov 00:00Z: Steam UAE API and page (3 Dec 2026, 109.99 / 98.99 AED, offer ends 3 December, no Arabic), Pure Xbox 14 Nov (Series X|S, PC, Cloud, December 3); re-gate within the hour before 18:15 due; cap exception recorded in commitments",
  "lane": "digital-lounge",
  "game": "FreeStyle Football 2",
  "companies": [
@@ -124,7 +124,27 @@
    "lines show the written «درهم» (see dirham_symbol_answer)"
   ]
  },
- "approved": "built by builder-1815; NOT director-checked; NOT scheduled; RE-GATE within the hour before 18:15 Dubai (Sun); the slot may slip to 19:15 if the v4 director check is not clean in time",
+ "approved": "go: rolling queue, director PASS v7 director-1815-freestyle-v7",
  "template_note": "honest label: a trailer Reel (footage, three lines, no card, no strip). comparison was a false label and is dropped. CAP EXCEPTION for Mohammad: trailer is already at its daily cap of four on the Dubai day of 15 Nov and split and clipcard are full; the gap rule (no empty 18:15 slot) decides. List with the three editions was not built: it needs a card format not verified in this build; split (price strip) is also capped.",
- "dirham_symbol_answer": "Glossary row «UAE price» (30 Sep 2026): the Central Bank symbol, left of the numeral, from templates/assets/dirham-symbol-mask.png, never with «درهم» beside it, on cards and strips; written-out caption text keeps «درهمًا» (the director set the caption so). The Reel's story lines are drawn by reel.line_layer with the Dubai font, which has no mask path; whether Dubai carries a glyph for the symbol was not tested, so the three lines and the headline keep the written «درهم», as the coordinator allowed. A split Reel with a price strip would show the symbol from the mask. For Mohammad: say if on-screen lines should avoid prices and leave them to a strip."
+ "dirham_symbol_answer": "Glossary row «UAE price» (30 Sep 2026): the Central Bank symbol, left of the numeral, from templates/assets/dirham-symbol-mask.png, never with «درهم» beside it, on cards and strips; written-out caption text keeps «درهمًا» (the director set the caption so). The Reel's story lines are drawn by reel.line_layer with the Dubai font, which has no mask path; whether Dubai carries a glyph for the symbol was not tested, so the three lines and the headline keep the written «درهم», as the coordinator allowed. A split Reel with a price strip would show the symbol from the mask. For Mohammad: say if on-screen lines should avoid prices and leave them to a strip.",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/freestyle-football-2-dec-3-steam-aed-game-pass-20261115-v7-reel-v1.mp4",
+  "blob": "5b840fefb6ef51e0411999570e96511b3de97b67",
+  "at": "2026-11-15T00:00:21Z",
+  "note": "v7 director: no speech (whisper), credit frame 0 to last picture frame, music to end card, JOYCITY board shot dropped, caption درهمًا, Steam re-gate 15 Nov 00:00Z ok",
+  "checklist": {
+   "job": "jobs/live/freestyle-football-2-dec-3-steam-aed-game-pass-20261115.json",
+   "sha256": "115d612ce9fa9d5c080e7117830c74dffd3fbb994c36643ad5146dad6a9411a0",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "builder-1815"
+  },
+  "by": "director-1815-freestyle-v7",
+  "qc": "pass",
+  "looked": null
+ }
 }
