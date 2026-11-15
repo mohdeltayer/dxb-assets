@@ -1,7 +1,7 @@
 {
  "id": "disney-dreamlight-valley-keepsake-sea-nov-18-20261115",
  "title": "Disney Dreamlight Valley: The Keepsake Sea expansion launches Wed 18 Nov (Gameloft): merfolk, an underwater world to decorate, Dory, your own pirate ship",
- "status": "built: Reel v2 qc pass (cards/2026-11/disney-dreamlight-valley-keepsake-sea-nov-18-v2-reel-v2.mp4); NOT scheduled, director not run; slot 00:15 Dubai Mon 16 Nov (20:15Z Sun). RE-GATE within the hour before 00:15 Dubai (Mon)",
+ "status": "building v3 (director FAIL on v2: game name on the cover); not scheduled. RE-GATE within the hour before 00:15 Dubai (Mon)",
  "lane": "digital-lounge",
  "game": "Disney Dreamlight Valley: The Keepsake Sea",
  "companies": [
@@ -56,7 +56,7 @@
  "recipe": "notes/scenario-recipes.md recipe 2 (trailer drop) on split: strongest moving shot under chip and headline 0-3.5 s; line 1 the name over the transformations; line 2 the underwater world; line 3 Dory; line 4 the ship and the closing picture; the strip (date, base game) pinned after the headline",
  "footage": "the expansion's official Steam 'Full Trailer' (app 5090170), 1920x1080 60 fps, 5.8 Mbps, decode clean (server shots mode 15 Nov 04:51Z); 9:16 crop enlarged 1.78x; shots inside the server's clean stretches, picked from 9:16 crops at 4 fps",
  "sensitive": "none: Disney family life sim; mermaid outfits are the game's own; skull-flag, cannon and Captain Hook shots left out",
- "spoken": "إضافة جديدة تحوّلك إلى حورية بحر، اسمها The Keepsake Sea. تزيّن فيها عالمك تحت الماء، وتلتقي هناك Dory، وتبحر بسفينتك الخاصة.",
+ "spoken": "إضافة Dreamlight Valley تحوّلك إلى حورية بحر، اسمها The Keepsake Sea. تزيّن فيها عالمك تحت الماء، وتلتقي هناك Dory، وتبحر بسفينتك الخاصة.",
  "claims": [
   {
    "claim": "launches 18 Nov 2026",
@@ -85,14 +85,14 @@
   "what_it_means_here": "needs the base game; no price on Steam yet",
   "payoff": "an underwater world you decorate, Dory, your own pirate ship"
  },
- "job": "jobs/live/disney-dreamlight-valley-keepsake-sea-nov-18-v2.json",
+ "job": "jobs/live/disney-dreamlight-valley-keepsake-sea-nov-18-v3.json",
  "texts": {
   "instagram": "إضافة Disney Dreamlight Valley الجديدة تصدر الأربعاء\n\nتصدر يوم الأربعاء 18 نوفمبر إضافة The Keepsake Sea للعبة Disney Dreamlight Valley من شركة جيملوفت (Gameloft)، وفيها تتحول شخصيتك إلى حورية بحر تسبح فوق الماء وتحته، مع أكثر من 50 خيارًا لتخصيص الذيل والزعانف والأذنين وغيرها.\n\nتضم الإضافة ثلاث جزر جديدة وعالمًا تحت الماء يمكنك تزيينه، وسفينة قراصنة خاصة بك تبحر بها بين الجزر، إلى جانب شخصيات جديدة تلتقيها، منها Jack Sparrow وMegara وDory.\n\nتتطلب الإضافة اللعبة الأساسية، ولم يظهر سعرها على Steam بعد.\n\n#ألعاب #أخبار_الألعاب #DisneyDreamlightValley #TheKeepsakeSea",
   "x": "تصدر الأربعاء 18 نوفمبر إضافة The Keepsake Sea للعبة Disney Dreamlight Valley، وفيها تتحول شخصيتك إلى حورية بحر، حسب شركة جيملوفت (Gameloft).",
   "threads": "تصدر الأربعاء 18 نوفمبر إضافة The Keepsake Sea للعبة Disney Dreamlight Valley، وفيها تتحول شخصيتك إلى حورية بحر، حسب شركة جيملوفت (Gameloft)."
  },
  "on_screen": {
-  "headline": "إضافة جديدة تحوّلك / إلى حورية بحر",
+  "headline": "إضافة Dreamlight Valley / تحوّلك إلى حورية بحر",
   "lines": [
    "اسمها The Keepsake Sea",
    "تزيّن فيها عالمك تحت الماء",
@@ -122,6 +122,24 @@
      ]
     }
    ]
+  },
+  "v3_headline": {
+   "grammar_review": {
+    "corrected_text": "إضافة Dreamlight Valley تحوّلك إلى حورية بحر (unchanged)",
+    "required_edits": [],
+    "optional_style_suggestions": [],
+    "uncertain_cases": [
+     {
+      "text": "Dreamlight Valley",
+      "issue": "the game's full title is Disney Dreamlight Valley; the headline uses the short form for width",
+      "why_uncertain": "the strip and the caption carry the full title",
+      "options": [
+       "keep the short form on the headline"
+      ]
+     }
+    ]
+   },
+   "deepl_backcheck": "'The Dreamlight Valley expansion turns you into a mermaid'; spoken paragraph: 'The Dreamlight Valley expansion transforms you into a mermaid in a world called The Keepsake Sea. There, you can decorate your underwater world, meet Dory, and sail on your own ship.' (DeepL read اسمها as the world's name; on screen it follows the expansion; meaning kept)"
   }
  },
  "re_gate_line": "RE-GATE within the hour before 00:15 Dubai (Mon)",
@@ -150,5 +168,9 @@
   "frames": "4 fps strip of the v2 Reel looked at: cover = pink mermaid in the swirl, below the headline; her head comes near the headline's second line for about 0.3 s (0.25 to 0.5 s); Milo's sub touches the left edge at 3.0 to 3.4 s; Dory crosses the right edge at 11.5 to 11.75 s and sits behind the line text at 12.0 to 12.75 s; no blood, weapons, skulls, title cards or burnt-in text seen; last 2 s the sunset ship",
   "audio": "faster-whisper small (no VAD) on the v1 Reel heard no speech (only a '[Ode to Joy]' music tag); per-second loudness -17 to -24 dB, music to the end card; v2 uses the same track and split (leak 0.2%)",
   "decode": "ffmpeg full decode of the v2 mp4: clean"
+ },
+ "director_v2": {
+  "verdict": "FAIL (via coordinator, 15 Nov)",
+  "fix": "the cover never named the game; headline now carries Dreamlight Valley (v3)"
  }
 }
