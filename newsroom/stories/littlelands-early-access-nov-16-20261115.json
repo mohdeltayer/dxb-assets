@@ -1,8 +1,134 @@
 {
  "id": "littlelands-early-access-nov-16-20261115",
+ "title": "Littlelands (Apogee Entertainment; Rafael Martín and Kyle Creamer) launches in Early Access on Steam on Mon 16 Nov 2026",
+ "status": "built, not scheduled (stop point: no director, no Publer)",
+ "lane": "digital-lounge",
  "game": "Littlelands",
- "companies": ["Apogee Entertainment"],
- "status": "claimed: building for 07:15 Dubai Mon 16 Nov (03:15Z); not scheduled",
+ "companies": [
+  "Apogee Entertainment"
+ ],
+ "subject_person": null,
  "claimed_at": "2026-11-15T07:55:00Z",
- "subject_person": null
+ "slot": "07:15 Dubai Mon 16 Nov 2026 (03:15Z Mon 16 Nov)",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Steam store page, Littlelands (app 2083660): 'Release Date: 16 Nov, 2026', Early Access tag; publisher Apogee Entertainment, developers Rafael Martín and Kyle Creamer; Windows; no price listed (UAE store); Early Access FAQ: 'Littlelands plans to leave Early Access in Late 2027', 'We plan to offer Littlelands at an introductory Early Access price'; description: 'Spend a peaceful afternoon fishing, tend to your garden, catch insects ... Restore a farm'; read 15 Nov ~07:45Z",
+   "url": "https://store.steampowered.com/app/2083660/Littlelands/"
+  },
+  {
+   "role": "primary",
+   "name": "Steam community announcement by the developers, 19 Oct 2026: 'Littlelands officially launches into Early Access on November 16 on Steam!'",
+   "url": "https://store.steampowered.com/news/app/2083660"
+  },
+  {
+   "role": "secondary",
+   "name": "PlayGround.ru via Steam news hub, 21 Oct 2026: Early Access on 16 Nov, publisher Apogee Entertainment"
+  }
+ ],
+ "first_report": "The 16 Nov date was announced by the developers on Steam on 19 Oct 2026 (12:55Z). The news at the slot is the launch itself, on the slot's own Dubai day (Mon 16 Nov). No Arabic outlet carried it (digests and Arabic feeds of 15 Nov).",
+ "source_type": "primary",
+ "ledger_find": {
+  "at": "2026-11-15T07:50:00Z",
+  "words": [
+   "littlelands",
+   "apogee"
+  ],
+  "hits": [
+   "2026-10-20-steam-next-fest-october-ai-disclosures"
+  ],
+  "note": "git grep -il over newsroom/stories on origin/main; the hit used the date trailer as stand-in footage only"
+ },
+ "genre": [
+  "indie",
+  "family"
+ ],
+ "kind": "launch",
+ "kind_news": "launch",
+ "label": "جديد",
+ "chip": "جديد",
+ "template": "trailer",
+ "template_note": "formats.pick('launch', footage=True) gives trailer; formats.py check trailer 2026-11-16T03:15 ok; by hand: 03:15 Trafficity trailer, 05:15 POPUCOM split, 07:15 trailer: no third in a row; Monday trailer count 2 with this; publishers Onramp, Hypergryph/Fireshine, Apogee all differ",
+ "beat": "release",
+ "family": "release (beat sheet 7), recipe 2 (trailer drop) for the opening",
+ "recipe": "0-2.45 s headline over the key-art village (villagers waving, cover); 2.45-4.0 the hero wading a pond, no line; 4.0-7.8 a village and the town (line 1); 7.8-11.8 the forest railway then the rocky canyon (line 2); 11.8-16.05 the hero chasing butterflies then the farm plot growing (line 3); end card",
+ "sensitive": "none: a cozy life-sim adventure. Combat exists in the game (swords, monsters); no shot shows a weapon, a fight or a creature attacked",
+ "spoken": "تصدر اليوم Littlelands بنسخة الوصول المبكر. تتجول فيها بين قرى صغيرة، ثم تعبر الغابات والوديان، وتصطاد الحشرات وتعتني بمزرعتك.",
+ "claims": [
+  {
+   "claim": "Early Access launch on Steam on 16 Nov 2026",
+   "status": "confirmed (Steam store page and developers' announcement)"
+  },
+  {
+   "claim": "publisher Apogee Entertainment; developers Rafael Martín and Kyle Creamer",
+   "status": "confirmed (Steam store page)"
+  },
+  {
+   "claim": "villages, forests, caves; locals to help; fishing, insects, garden, restore a farm",
+   "status": "confirmed (Steam store page description and Early Access notes)"
+  },
+  {
+   "claim": "leaves Early Access in late 2027",
+   "status": "confirmed (Steam Early Access FAQ: 'plans to', kept as a plan)"
+  },
+  {
+   "claim": "introductory Early Access price that may change",
+   "status": "confirmed (Steam Early Access FAQ); price itself not listed, not on screen"
+  },
+  {
+   "claim": "launch hour",
+   "status": "not stated; texts say the date only, no 'out now'"
+  }
+ ],
+ "angle": {
+  "hook": "a little diorama world of villages, valleys and a farm",
+  "why_now": "it launches in Early Access on Steam today, Monday 16 November 2026",
+  "what_it_means_here": "PC players in the region can buy it on Steam from today; the introductory price shows at launch",
+  "payoff": "the farm plot coming to life, the cozy side of the game"
+ },
+ "texts": {
+  "x": "تصدر اليوم Littlelands بنسخة الوصول المبكر على Steam، وهي مغامرة هادئة في عالم صغير، حسب صفحة اللعبة على المتجر.",
+  "threads": "تصدر اليوم Littlelands بنسخة الوصول المبكر على Steam، وهي مغامرة هادئة في عالم صغير، حسب صفحة اللعبة على المتجر.\n\nالمصدر: صفحة اللعبة على Steam",
+  "instagram": "لعبة Littlelands تصدر اليوم: مغامرة هادئة في عالم صغير\n\nتصدر اليوم 16 نوفمبر لعبة Littlelands بنسخة الوصول المبكر على Steam، من نشر شركة أبوجي إنترتينمنت (Apogee Entertainment) وتطوير المطورَين رافائيل مارتين (Rafael Martín) وكايل كريمر (Kyle Creamer).\n\nتجمع اللعبة بين محاكاة الحياة الريفية والاستكشاف في مغامرات الحركة، حسب صفحتها على المتجر. تتجول فيها بين القرى والغابات والكهوف، وتتعرف إلى سكانها وتساعدهم، وتصطاد السمك والحشرات، وتعتني بحديقتك وتعيد إحياء مزرعة صغيرة.\n\nويخطط المطوران للخروج من الوصول المبكر أواخر 2027، وسيكون سعر اللعبة في هذه المرحلة تمهيديًا قد يتغير مع اقتراب الإصدار الكامل، ولم يظهر السعر على المتجر بعد.\n\n#ألعاب #أخبار_الألعاب #Littlelands #Steam",
+  "ig_comment": "المصدر: صفحة Littlelands على Steam",
+  "x_reply": "المصدر: https://store.steampowered.com/app/2083660/Littlelands/"
+ },
+ "on_screen": {
+  "headline": "تصدر اليوم Littlelands\nبنسخة الوصول المبكر",
+  "lines": [
+   "تتجول فيها بين قرى صغيرة",
+   "ثم تعبر الغابات والوديان",
+   "وتصطاد الحشرات وتعتني بمزرعتك"
+  ],
+  "credit": "المصدر: أبوجي إنترتينمنت (Apogee)"
+ },
+ "arabic_review": {
+  "skills": "arabic-games-film-editor, arabic-writing and arabic-grammar-review loaded fresh 15 Nov ~07:50Z; glossary (release verbs), names-ar (Early Access row), perfect-arabic SKILL.md, orthography.md and known-issues.md opened",
+  "grammar_review": {
+   "required_edits": [],
+   "optional_style_suggestions": [
+    {
+     "original": "مغامرة هادئة",
+     "suggestion": "مغامرة دافئة",
+     "reason": "DeepL's rendering of 'cozy'; هادئة kept as the plainer word for a general reader"
+    }
+   ],
+   "uncertain_cases": [
+    {
+     "text": "ثم تعبر الوديان الصخرية",
+     "issue": "تعبر read alone can be 'she/it crosses' (DeepL back-check read 'it crosses')",
+     "why_uncertain": "in the paragraph the subject is the reader (أنت), set by line 1's تتجول فيها",
+     "options": [
+      "keep",
+      "ثم تعبر أنت الوديان"
+     ]
+    }
+   ]
+  },
+  "deepl_forward": "whole story to Arabic in one piece (15 Nov ~07:55Z) plus probes: launches today in Early Access تُطلق ... في مرحلة الوصول المبكر (house تصدر kept); cozy adventure مغامرة دافئة; small villages القرى الصغيرة; rocky valleys الوديان الصخرية; catch insects and tend your farm اصطاد الحشرات واعتنِ بمزرعتك (imperative; ours in the second person present); introductory price سعر تمهيدي, matched. DeepL wrote Apogee in Latin and «من قبل»; not used",
+  "deepl_backcheck": "all final texts to English (15 Nov ~08:00Z): headline 'Littlelands launches today in Early Access'; lines read as 'you wander through small villages', 'then it crosses the rocky valleys', 'catches insects and takes care of your farm' (the subject is the reader in context); X 'launches today in Early Access on Steam ... according to the game's page on the store'; caption matched except 'currently available at a pre-release price', so the sentence was rewritten to «وسيكون سعر اللعبة في هذه المرحلة تمهيديًا» (future, not available yet)"
+ },
+ "job": "jobs/live/littlelands-early-access-november-16.json",
+ "regate": "RE-GATE within the hour before 07:15 Dubai (Mon): Steam page still says 16 Nov or is live, no delay notice; if live by then the texts still hold (تصدر اليوم); price line still true or updated",
+ "footage": "two official Steam trailers of the game (app 2083660), both 1920x1080 30 fps ~5.9 Mbps, decode clean (server shots read 15 Nov 07:53Z): 'Early Access Release Date Announcement' (93.3 s; cover key art, butterflies, farm; its music under the whole Reel) and 'Wholesome Games Showcase Trailer' (61.2 s; pond, village, town, forest, canyon). Not used: 'Demo Release Trailer' (HUD on most shots), 'Announcement Trailer' (2023). Server copies run 0.34 s ahead of local downloads (cuts matched); job times are server times"
 }
