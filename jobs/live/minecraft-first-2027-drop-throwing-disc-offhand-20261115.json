@@ -19,19 +19,14 @@
  "shots": [
   [
    "minecraft-first-2027-drop-throwing-disc-offhand-20261115-sw2.mp4",
-   12.2,
-   3.8,
-   [
-    [
-     0.0,
-     0.78
-    ]
-   ]
+   27.0,
+   2.4,
+   null
   ],
   [
    "minecraft-first-2027-drop-throwing-disc-offhand-20261115-x.jpg",
    null,
-   4.0,
+   4.6,
    [
     0.9,
     0.97
@@ -45,36 +40,21 @@
   ],
   [
    "minecraft-first-2027-drop-throwing-disc-offhand-20261115-sw2.mp4",
-   35.0,
-   3.6,
-   [
-    [
-     0.0,
-     0.5
-    ]
-   ]
+   30.6,
+   3.5,
+   null
   ],
   [
    "minecraft-first-2027-drop-throwing-disc-offhand-20261115-sw2.mp4",
-   27.0,
+   37.0,
    3.2,
-   [
-    [
-     0.0,
-     0.45
-    ]
-   ]
+   null
   ],
   [
    "minecraft-first-2027-drop-throwing-disc-offhand-20261115-sw2.mp4",
    46.0,
    3.8,
-   [
-    [
-     0.0,
-     0.5
-    ]
-   ]
+   null
   ]
  ],
  "lines": [
@@ -161,8 +141,8 @@
  "decision_log": [
   {
    "beat": "0 hook (headline): stand-in Steve in the world, moving",
-   "shot": "stand-in: Switch 2 launch trailer 12.2 s, Steve by a tree with flowers and a pig (the cover; render_job refuses the X image as cover: pixel art reads 76% flat)",
-   "crop": "focus 0.78, 1.33x from 1440p",
+   "shot": "stand-in: Switch 2 launch trailer 27.0 to 29.4 s, Steve among chickens and pigs at a village farm, then the animals close (the cover: moving footage with a character; the X image reads 76% flat to the cover check)",
+   "crop": "autofocus on the runner (YOLO), 1.33x from 1440p",
    "music": "our bed",
    "evidence_role": "illustration (credited as earlier trailer footage)"
   },
@@ -176,29 +156,29 @@
   },
   {
    "beat": "2 five materials",
-   "shot": "our fact card (5 خامات, the five named) over the same trailer at 44 s (jungle sunset), dimmed",
+   "shot": "our fact card (5 خامات, منها الذهب والألماس) over the same trailer at 43.5 s (jungle sunset), dimmed",
    "crop": "card",
    "music": "our bed",
    "evidence_role": "explanation"
   },
   {
    "beat": "3 Bedrock: any item in either hand",
-   "shot": "stand-in: trailer 35 s, first-person farming with an item in hand",
-   "crop": "focus 0.5",
+   "shot": "stand-in: trailer 30.6 to 34.1 s, snowy taiga, a snowy mountain, a village farm (drowned zombie at 29.5 to 30.5 s left out)",
+   "crop": "autofocus",
    "music": "our bed",
    "evidence_role": "illustration"
   },
   {
    "beat": "4 as Java since 2016",
-   "shot": "stand-in: trailer 27 s, Steve among his animals at a village farm",
-   "crop": "focus 0.45",
+   "shot": "stand-in: trailer 37.0 to 40.2 s, a rider in the savanna, a jungle river, a cave (the horse moment with a bow-like stick at 35.5 to 36.5 s left out; the Vibrant Visuals title card from 40.5 s left out)",
+   "crop": "autofocus",
    "music": "our bed",
    "evidence_role": "illustration"
   },
   {
    "beat": "5 payoff, no date",
-   "shot": "stand-in: trailer 46 s, desert village at sunset (a picture, not a card, for the last two seconds)",
-   "crop": "focus 0.5",
+   "shot": "stand-in: trailer 46.0 to 49.8 s, desert village then a cherry grove at sunset (picture for the last two seconds; nether from 49.9 s left out)",
+   "crop": "autofocus",
    "music": "our bed",
    "evidence_role": "illustration"
   }
@@ -216,7 +196,7 @@
   "SOUND: footage sound or bed with reason": "bed: stills, bed_reason",
   "SOUND: no speech under Arabic lines": "yes: our bed only",
   "PICTURE: footage first": "motion search recorded in stills_reason; the disc itself only exists as Mojang's X image; credited stand-in footage from the Switch 2 launch trailer for the other beats",
-  "PICTURE: nothing graphic": "yes: no mobs hit, no sword (cropped out), no weapon aimed; trailer moments 26 s (zombies), 23 to 25 s (sword) and 55 s on (Mario) avoided",
+  "PICTURE: nothing graphic": "yes: no mobs hit, no sword (cropped out of the X image), no weapon aimed; trailer stretches with zombies (26.5 s), the drowned (29.5 to 30.5 s), swords (23 to 25 s), a bow-like stick (35.5 to 36.5 s), title cards and Mario (from 40.5 s and 55 s) left out",
   "PICTURE: not the same as last 5 reels": "yes: no Minecraft Reel since 27 Oct",
   "CREDIT: on every clip": "yes: one credit over shots 0 to 5 from frame 0, size 40 in the credit band: «المصدر: موجانغ (Mojang) ولقطات من عرض دعائي سابق»",
   "PICTURE: pace": "yes: six shots of 3.0 to 3.9 s with hard cuts, one line per footage shot, the card alone",
@@ -235,6 +215,6 @@
  ],
  "ground_footage": [
   "minecraft-first-2027-drop-throwing-disc-offhand-20261115-sw2.mp4",
-  44.0
+  43.5
  ]
 }
