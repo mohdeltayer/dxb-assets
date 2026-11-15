@@ -1,0 +1,30 @@
+{
+ "name": "jackbox-ceo-comedy-writers-false-positives",
+ "out": "cards/2026-11/jackbox-ceo-comedy-writers-false-positives-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-15T05:06:49Z",
+ "findings": [],
+ "notes": [
+  "length 21.9 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 91.2; leak_pct 0.2; cache {'hit': 8, 'miss': 0}; separate_secs 3.5; secs 5.6",
+  "smear check: exempt 6.59 to 12.59 s (our own cards)",
+  "render_job: lifeless: {\"score\": 1.7, \"still_share\": 0.009, \"longest_still\": 0.2, \"cuts_per_10s\": 11.47, \"held_under_text\": 0.032, \"secs\": 21.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "b2204cc0cd52b58ee516902126f1dd02f088a13d",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/jackbox-ceo-comedy-writers-false-positives-look-1.jpg",
+  "cards/2026-11/jackbox-ceo-comedy-writers-false-positives-look-2.jpg",
+  "cards/2026-11/jackbox-ceo-comedy-writers-false-positives-look-3.jpg"
+ ],
+ "person_shown": true,
+ "sound": "trailer"
+}
