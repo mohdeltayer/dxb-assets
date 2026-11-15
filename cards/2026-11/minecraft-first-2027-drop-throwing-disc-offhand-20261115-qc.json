@@ -1,25 +1,26 @@
 {
  "name": "minecraft-first-2027-drop-throwing-disc-offhand-20261115",
- "out": "cards/2026-11/minecraft-first-2027-drop-throwing-disc-offhand-20261115-reel-v2.mp4",
+ "out": "cards/2026-11/minecraft-first-2027-drop-throwing-disc-offhand-20261115-reel-v3.mp4",
  "verdict": "pass",
- "at": "2026-11-15T03:18:32Z",
+ "at": "2026-11-15T03:55:06Z",
  "findings": [],
  "notes": [
-  "length 22.5 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "length 19.2 s before the end card (target 12 to 20 s)",
   "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
-  "render_job: lifeless: {\"score\": 9.6, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 0.89, \"held_under_text\": 0.0, \"secs\": 22.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "smear check: exempt 5.32 to 10.32 s (our own cards)",
+  "render_job: lifeless: {\"score\": 13.0, \"still_share\": 0.131, \"longest_still\": 1.7, \"cuts_per_10s\": 8.9, \"held_under_text\": 0.0, \"secs\": 19.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "707ed461910f843d3de9d474a68f5bf32b2532e5",
- "dispatches": 3,
+ "job_sha": "446b774bd66e732bcf2fa7ca02535ac8f464729f",
+ "dispatches": 4,
  "source_summary": {
-  "min_height": 720,
-  "max_zoom": 2.67,
+  "min_height": 1440,
+  "max_zoom": 1.33,
   "lowbit_shots": 0
  },
  "quality": "base",
  "final_enc": "-preset medium -crf 18",
  "look_frames": [],
  "person_shown": "n/a",
- "sound": "bed:neon_e (Stills Reel: the pictures are slow push-in clips made from Mojang's official 1280x720 stills, which have no sound; no official video of the throwing disc was reachable (minecraft.net article has no video, the @Minecraft X post is one image, IGN has no drop video), so our bed plays and the jingle on the end card.)"
+ "sound": "bed:neon_d (The news has no video or sound of its own (Mojang's one full-size image on X and four 1280x720 stills on minecraft.net); the moving picture is stand-in footage from the Minecraft Nintendo Switch 2 launch trailer (IGN 2560 copy), whose own sound is that release's launch music and, from about 55 s, Super Mario sound effects that belong to another release; the Ice Caves trailer (IGN 1080p, 2.5 Mbps, a 7.5-minute showcase with narration) was opened and not used. So our bed plays under the stills, card and stand-in shots.)"
 }
