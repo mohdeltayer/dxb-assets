@@ -45,7 +45,7 @@
   [
    "ea-sports-ufc-6-pride-fc-expansion-trailer.mp4",
    73.45,
-   2.44,
+   2.4,
    null
   ],
   [
@@ -68,8 +68,8 @@
   ],
   [
    "ea-sports-ufc-6-pride-fc-expansion-trailer.mp4",
-   119.15,
-   2.3,
+   119.35,
+   1.7,
    null
   ]
  ],
@@ -85,7 +85,7 @@
    6,
    9,
    [
-    "الإضافة رقمية فقط، وتأتي مع\nنسخة Ultimate أو حزمة إضافاتها"
+    "الإضافة رقمية فقط مع\nنسخة Ultimate أو حزمتها"
    ]
   ]
  ],
@@ -93,7 +93,7 @@
   [
    0,
    9,
-   "المصدر: إلكترونيك آرتس (Electronic Arts)، لقطات العرض الأول",
+   "العرض الأول من إلكترونيك آرتس (Electronic Arts)",
    {
     "size": 40,
     "band": true,
@@ -125,7 +125,7 @@
   40.52
  ],
  "music_only": true,
- "spoken": "بطولة PRIDE اليابانية تدخل EA SPORTS UFC 6. كانت PRIDE من أشهر بطولات الفنون القتالية المختلطة. الإضافة رقمية فقط، وتأتي مع نسخة Ultimate أو حزمة إضافاتها.",
+ "spoken": "بطولة PRIDE اليابانية تدخل EA SPORTS UFC 6. كانت PRIDE من أشهر بطولات الفنون القتالية المختلطة. الإضافة رقمية فقط مع نسخة Ultimate أو حزمتها.",
  "subject_person": null,
  "angle": {
   "hook": "PRIDE, the Japanese MMA promotion, enters EA SPORTS UFC 6 as an expansion (EA SPORTS UFC on X, 15 Nov 02:02Z)",
@@ -140,11 +140,12 @@
  "decision_log": [
   "source: EA SPORTS UFC 6 official reveal trailer (EA, 5 May 2026), IGN MP4 2560x1440 (job URL); inspected on IGN's 1280 copy, same timeline. No PRIDE expansion footage exists before the 16 Nov 20:00 Dubai premiere (YouTube only); the cover art (X, 2160x2160 square) cannot be cropped to 9:16 without cutting the EA SPORTS, UFC 6 and PRIDE wordmarks at the edges, so the Reel uses the base game's trailer as illustration, credited «لقطات العرض الأول». Strikes, knockdowns and blood avoided: only walkouts, close-ups, celebrations, a hand-wrap check, a referee and a pose",
   "beat hook 0-4.5 s (headline): 40.52 s walkout from behind into the cage (2.26 s), 43.98 s close-ups of two fighters then an arm raised to the crowd (2.25 s)",
-  "line 1 4.5-9.3 s 'كانت PRIDE من أشهر بطولات / الفنون القتالية المختلطة': 59.6 arena from above (1.0), 62.4 a glove-and-wrap check (0.45), 67.3 a fighter leaping on the walkout stage (0.95), 73.45 a fighter celebrating arms up then a close profile (2.44); illustration of an MMA event",
-  "line 2 9.3-14.0 s 'الإضافة رقمية فقط، وتأتي مع / نسخة Ultimate أو حزمة إضافاتها': 92.69 fighter face (0.85), 109.1 close face (0.9), 116.93 referee (0.95), 119.15 fighter posing centred (2.3, closing picture); illustration",
+  "line 1 4.5-9.3 s 'كانت PRIDE من أشهر بطولات / الفنون القتالية المختلطة': 59.6 arena from above (1.0), 62.4 a glove-and-wrap check (0.45), 67.3 a fighter leaping on the walkout stage (0.95), 73.45 a fighter celebrating arms up then a close profile (2.4, ends 75.85 before the cut 'Paramount' text at 75.9); illustration of an MMA event",
+  "line 2 9.3-13.7 s 'الإضافة رقمية فقط مع / نسخة Ultimate أو حزمتها' (v1 line ran out of the safe zone in the server font check): 92.69 fighter face (0.85), 109.1 close face (0.9), 116.93 referee (0.95), 119.35 fighter posing centred (1.7, closing picture; prerender flagged smears at 119.13-119.33 and 121.07-121.45, both cut out)",
   "strip: الإصدار 11 ديسمبر; العرض الكامل الليلة 8 مساءً (premiere 20:00 Dubai Mon); facts live in the strip only, the lines do not repeat them",
   "sound: the reveal trailer from 40.52 s, music_only (narration 'Make that walk', 'Different is dangerous', 'Rhythm', 'Combos' heard by faster-whisper at 40.5-58.5 s is removed with the other stems; music continuous, -7 to -17 dB, 40.5-58 s)",
-  "theme emerald (look ledger: tekken spectacle, littlelands playful before); style left to the server rotation"
+  "theme emerald (look ledger: tekken spectacle, littlelands playful before); style left to the server rotation",
+  "credit v2: «العرض الأول من إلكترونيك آرتس (Electronic Arts)» names the reveal trailer the footage comes from (v1 «المصدر: ...، لقطات العرض الأول» ran out of the safe zone)"
  ],
  "reel_check": {
   "Primary read in full; time and first report noted": "yes: EA SPORTS UFC on X, 15 Nov 2026 02:02:17Z, read through api.fxtwitter.com 15 Nov 10:18Z: 'Introducing the official cover for the #UFC6 PRIDE FC EXPANSION ... YouTube Premiere ... Monday, Nov. 16 at 11:00 AM ET ... Available digitally only with the Ultimate Edition or Ultimate add-on bundle on Dec. 11.' Famitsu 15 Nov 08:40Z corroborates (cover is Sakuraba vs Royce Gracie, PRIDE GP 2000)",
@@ -159,7 +160,7 @@
   "Headline: what happened, names the reader knows": "yes: بطولة PRIDE اليابانية / تدخل EA SPORTS UFC 6",
   "Footage keeps its own sound; music named": "yes: reveal trailer music from 40.52 s, music_only",
   "No speech under Arabic lines": "yes: narration removed by music_only (job fails if the stem is not clean)",
-  "Credit on every clip for its whole duration": "yes: one credit shots 0-9 from frame 0, «المصدر: إلكترونيك آرتس (Electronic Arts)، لقطات العرض الأول»",
+  "Credit on every clip for its whole duration": "yes: one credit shots 0-9 from frame 0, «العرض الأول من إلكترونيك آرتس (Electronic Arts)» (names the reveal trailer)",
   "Nothing graphic": "yes: no strikes, knockdowns or blood chosen; checked at 4 fps on 9:16 centre crops; strip to be re-read",
   "Every Reel shows the game": "yes: EA SPORTS UFC 6 gameplay and presentation throughout",
   "One visual requirement per beat; shot shows its line": "yes with a limit: no PRIDE footage exists before tonight; the base game's trailer illustrates, credited as the reveal trailer"
