@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-15T13:52:07Z",
- "seq": 502,
+ "generated_at": "2026-11-15T14:35:19Z",
+ "seq": 503,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 14858,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Fortnite - Treasure Hunters: Week 3 Gameplay Trailer | PS5 & PS4 Games",
+   "url": "https://www.youtube.com/watch?v=Hz9lmh9NBp0",
+   "published": "2026-11-15T14:15Z",
+   "first_seen": "2026-11-15T14:35:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/Hz9lmh9NBp0/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=Hz9lmh9NBp0"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 503
+  }
+ ],
  "recent": [
   {
    "id": 14652,
@@ -68,12 +90,12 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-15T13:50:14Z",
+  "last_poll_at": "2026-11-15T14:35:14Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 74x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 75x)",
    "Nintendo of America (X) (HTTP 429, 69x)",
    "PlayStation (X) (HTTP 429, 89x)",
    "PlayStation Middle East (X) (HTTP 429, 14x)",
