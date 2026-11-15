@@ -4,7 +4,7 @@
  "kind_news": "quote",
  "built_by": "production-sub-0915",
  "render_lane": "server",
- "out": "cards/2026-11/shrek-2-remastered-aspyr-voices-switch-2-4k-reel-v1.mp4",
+ "out": "cards/2026-11/shrek-2-remastered-aspyr-voices-switch-2-4k-reel-v2.mp4",
  "footage": [
   {
    "file": "shrek2r-launch.mp4",
@@ -301,6 +301,14 @@
   "8.9 to 12.9 card «أسباير لموقع نينتيندو إفريثينغ / دقة 4K مع 60 إطارًا / على Switch 2 في وضع التلفاز» on the shop footage (ground 26.5), no line over it; the trailer is illustration, the figure is Aspyr's (frames a second spelled out in the caption); the first note «في الثانية على Switch 2 في وضع التلفاز» was wider than the plate",
   "12.9 to 16.95 L2 (other Shrek games): Shrek in the kitchen level (launch 45.0), Fiona dancing (announce 37.0), Donkey (announce 37.75), Shrek on the forest path (launch 30.2, ends 0.15 s before the REMASTERED GRAPHICS card), closing on the framed group picture of Donkey, Shrek, Fiona and Gingy (announce 40.6)",
   "rejected: both trailers' gameplay from 19 to 23 s (burnt-in 'Footage captured on PC' disclaimer), the street brawl (launch 24, announce 22.5), the balloon cannon with a crosshair (announce 26 to 28), the knight and giant Gingy (launch 33 to 35), the pumpkin fight, title cards, photo-mode UI and end slates",
-  "sound: Launch Trailer music from 19.0 s, music_only, one stretch under the whole cut"
+  "sound: Launch Trailer music from 19.0 s, music_only, one stretch under the whole cut",
+  "v1 render (run 43705447224): the output smear check flagged 15.20 to 16.33 s (peak 40.8), the cut from the forest path to the framed group picture; looked at the source frames, no damage, waived with block_ok; out reel-v2"
+ ],
+ "block_ok": [
+  [
+   15.0,
+   16.6,
+   "looked at the source frames at 4 fps (announce 40.4 to 42.2 and launch 30.2 to 30.85, 9:16 crops): the flag is the closing shot, a framed group picture whose straight drawn border tilts and grows into frame, and the forest path's wooden rails; both sources decode clean on the server, no block damage in the frames"
+  ]
  ]
 }
