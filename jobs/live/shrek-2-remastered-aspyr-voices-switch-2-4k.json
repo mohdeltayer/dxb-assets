@@ -28,23 +28,23 @@
  "shots": [
   [
    "shrek2r-launch.mp4",
-   43.0,
+   44.0,
    0.95,
    [
     [
      0.0,
-     0.45
+     0.5
     ]
    ]
   ],
   [
-   "shrek2r-announce.mp4",
-   25.0,
-   0.6,
+   "shrek2r-launch.mp4",
+   42.75,
+   1.2,
    [
     [
      0.0,
-     0.6
+     0.45
     ]
    ]
   ],
@@ -105,17 +105,6 @@
   ],
   [
    "shrek2r-launch.mp4",
-   44.0,
-   0.95,
-   [
-    [
-     0.0,
-     0.5
-    ]
-   ]
-  ],
-  [
-   "shrek2r-launch.mp4",
    26.6,
    2.35,
    [
@@ -166,8 +155,8 @@
   ],
   [
    "shrek2r-launch.mp4",
-   30.25,
-   0.7,
+   30.2,
+   0.65,
    [
     [
      0.0,
@@ -187,18 +176,18 @@
    ]
   ]
  ],
- "spoken": "أصوات 2004 لم تتغير في Shrek 2 Remastered. هذا ما قاله منتجا اللعبة في أسباير (Aspyr). وقالت أسباير لموقع نينتيندو إفريثينغ إن اللعبة تعمل بدقة 4K مع 60 إطارًا في الثانية على Switch 2 في وضع التلفاز. أما ألعاب Shrek الأخرى، فلا جديد عنها بعد.",
+ "spoken": "أصوات 2004 لم تتغير في Shrek 2 Remastered. هذا ما قاله منتجا اللعبة في أسباير (Aspyr). وقالت أسباير لموقع نينتيندو إفريثينغ إن اللعبة تعمل بدقة 4K مع 60 إطارًا على Switch 2 في وضع التلفاز. أما ألعاب Shrek الأخرى، فلا جديد عنها بعد.",
  "lines": [
   [
    5,
-   8,
+   7,
    [
     "هذا ما قاله منتجا اللعبة\nفي أسباير (Aspyr)"
    ]
   ],
   [
-   10,
-   14,
+   9,
+   13,
    [
     "أما ألعاب Shrek الأخرى\nفلا جديد عنها بعد"
    ]
@@ -207,7 +196,7 @@
  "credits": [
   [
    0,
-   14,
+   13,
    "المصدر: أسباير (Aspyr)",
    {
     "size": 40,
@@ -247,7 +236,7 @@
    "جيف كارمن (Jeff Carmen)",
    "كبير منتجي اللعبة في أسباير",
    0.0,
-   1.5,
+   0.95,
    {
     "credit": "الصورة: أسباير (Aspyr)",
     "focus": [
@@ -263,7 +252,7 @@
    "kind": "fact",
    "label": "أسباير لموقع نينتيندو إفريثينغ",
    "value": "دقة 4K مع 60 إطارًا",
-   "note": "في الثانية على Switch 2 في وضع التلفاز"
+   "note": "على Switch 2 في وضع التلفاز"
   }
  ],
  "ground_footage": [
@@ -301,16 +290,16 @@
   "7 every Reel shows the game": "yes: Shrek 2 Remastered gameplay throughout; card on the Launch Trailer's footage",
   "7 shot shows the line": "yes: decision_log",
   "7 crop": "yes: every shot cropped locally at 4 fps on copies fetched exactly as the server fetches them (ffmpeg -ss 0 -i HLS -c copy, video from 3.02 s)",
-  "7 headline not over a face; no face behind open photo box": "yes: 0 to 1.5 s the box sits over grass and bridge; Shrek is low left in both shots",
-  "7 credit on every clip": "yes: one credit 0 to 14 (card span included), from_start",
+  "7 headline not over a face; no face behind open photo box": "yes: 0 to 0.95 s the box sits over the rainbow sky level with no character behind it; the forest shot with Fiona mid-right comes after the box closes",
+  "7 credit on every clip": "yes: one credit 0 to 13 (card span included), from_start",
   "8 what am I seeing and hearing": "yes: decision_log"
  },
  "decision_log": [
-  "0 to 1.55 (headline, plate 0 to 1.5): Shrek running through the forest from behind, low left (launch 43.0), then Shrek crossing the bridge on the left (announce 25.0); the plate window shows the Shrek and Donkey screenshot",
-  "1.55 to 3.75 (headline): Gingy close-up (announce 37.45), the farm with Shrek mid-frame (launch 40.5), Shrek and Donkey among chickens (announce 28.5): the 2004 cast the headline is about",
-  "3.75 to 9.75 L1 (who said it): Shrek walking to camera (announce 38.95), Gingy in the tree (launch 29.0), the rainbow level (launch 44.0), Shrek in the potion shop (launch 26.6)",
-  "9.75 to 13.75 card «أسباير لموقع نينتيندو إفريثينغ / دقة 4K مع 60 إطارًا / في الثانية على Switch 2 في وضع التلفاز» on the shop footage (ground 26.5), no line over it; the trailer is illustration, the figure is Aspyr's",
-  "13.75 to 17.5 L2 (other Shrek games): Shrek in the kitchen level (launch 45.0), Fiona dancing (announce 37.0), Donkey (announce 37.75), Shrek on the forest path (launch 30.25), closing on the framed group picture of Donkey, Shrek, Fiona and Gingy (announce 40.6)",
+  "0 to 0.95 (headline, plate 0 to 0.95): the rainbow sky level with no character under the box (launch 44.0); the plate window shows the Shrek and Donkey screenshot, so the cover holds the game's two leads and the headline. Then Shrek running through the forest, low left, with Fiona mid-right now clear of the closed box (launch 42.75). The bridge shot (announce 25.0) was dropped: prerender read the 'Don't Feed the Fish' sign cut at the edge",
+  "2.0 to 4.2 (headline): Gingy close-up (announce 37.45), the farm with Shrek mid-frame (launch 40.5), Shrek and Donkey among chickens (announce 28.5): the 2004 cast the headline is about",
+  "4.2 to 8.9 L1 (who said it): Shrek walking to camera (announce 38.95), Gingy in the tree (launch 29.0), Shrek in the potion shop (launch 26.6)",
+  "8.9 to 12.9 card «أسباير لموقع نينتيندو إفريثينغ / دقة 4K مع 60 إطارًا / على Switch 2 في وضع التلفاز» on the shop footage (ground 26.5), no line over it; the trailer is illustration, the figure is Aspyr's (frames a second spelled out in the caption); the first note «في الثانية على Switch 2 في وضع التلفاز» was wider than the plate",
+  "12.9 to 16.95 L2 (other Shrek games): Shrek in the kitchen level (launch 45.0), Fiona dancing (announce 37.0), Donkey (announce 37.75), Shrek on the forest path (launch 30.2, ends 0.15 s before the REMASTERED GRAPHICS card), closing on the framed group picture of Donkey, Shrek, Fiona and Gingy (announce 40.6)",
   "rejected: both trailers' gameplay from 19 to 23 s (burnt-in 'Footage captured on PC' disclaimer), the street brawl (launch 24, announce 22.5), the balloon cannon with a crosshair (announce 26 to 28), the knight and giant Gingy (launch 33 to 35), the pumpkin fight, title cards, photo-mode UI and end slates",
   "sound: Launch Trailer music from 19.0 s, music_only, one stretch under the whole cut"
  ]
