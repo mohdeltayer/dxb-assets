@@ -1,7 +1,7 @@
 {
  "id": "project-stampede-steam-page-alpha-trailer-20261115",
  "title": "Project Stampede, an off-road arcade racer playable as an itch.io alpha since early 2026, opens its Steam page with an alpha trailer",
- "status": "built: Reel v5 QC pass (cards/2026-11/project-stampede-steam-alpha-v5-reel-v5.mp4, render 52e7bdb, job jobs/live/project-stampede-steam-alpha-v5.json sha fc001dfb), after director FAIL on v4 (7f6429b); for the 22:15 Dubai Sun 15 Nov slot (18:15Z); NOT scheduled (stop point: no director, no Publer); RE-GATE within the hour before 22:15 Dubai (Sun)",
+ "status": "scheduled in Publer 22:15 Dubai Sun 15 Nov (18:15Z), Instagram, X, Threads (ids ig:7159ef x:1918ec th:52016e), director PASS v5 (cards/2026-11/project-stampede-steam-alpha-v5-reel-v5.mp4); RE-GATE within the hour before 22:15 Dubai still due",
  "lane": "digital-lounge",
  "game": "Project Stampede",
  "companies": [
@@ -193,5 +193,33 @@
    "optional: line 3 «تحيي سباقات…» name the game («تحيي اللعبة»), since line 2's subject is 'you'"
   ],
   "gate_regate": "Steam page re-read 15 Nov: release 'To be announced', text unchanged; itch.io devlog and page found (earlier public alpha)"
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/project-stampede-steam-alpha-v5-reel-v5.mp4",
+  "blob": "1cc8ff3402062a84ffadbce927ff48ebe31b6687",
+  "at": "2026-11-15T04:11:57Z",
+  "note": "v5 director PASS: no white flash (per-frame luma scan), itch.io claim verified, two 2-frame trailer-transition blemishes accepted",
+  "checklist": {
+   "job": "jobs/live/project-stampede-steam-alpha-v5.json",
+   "sha256": "20c0df5ed2f35a046254f6bdc2bb4c4c4f847ca57b98615eda8a9c7c3945f8c4",
+   "ok": true,
+   "problems": [],
+   "template": "clipcard",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-agent-stampede-v4-v5",
+  "qc": "pass",
+  "looked": null
+ },
+ "scheduled": "scheduled in Publer 22:15 Dubai Sun 15 Nov: ig:7159ef x:1918ec th:52016e; labels kind:news tpl:clipcard skin:house sound:trailer genre:racing; X follow-up comment with the Steam link, Instagram source comment; Threads text carries a source line",
+ "director_v5": {
+  "verdict": "PASS",
+  "by": "director-stampede-v4-v5",
+  "checks": "per-frame luma scan: no white flash (max luma frames are the sky shot at 13.2 s); dense strip 4 fps and 9:16 crops viewed; faster-whisper heard only music, RMS -12 to -18 dB to the end card; DeepL back-check of lines, X and caption: meaning kept; itch.io claims verified (alpha 0.0.8 on 8 Feb 2026 to 0.1.5, devlog of 15 Nov 02:52Z: Steam release is the developer's number 1 priority); Steam page re-read 15 Nov ~04:12Z: release 'To be announced', text unchanged",
+  "accepted_blemishes": "two frames of the trailer's own scan-line transition at 6.0 s and two frames of a tumbling buggy at 6.4 s: not white, not graphic, 0.07 s each, not re-rendered",
+  "open": "superseded jobs/live/project-stampede-steam-alpha.json (v4) still on main; do not dispatch"
  }
 }
