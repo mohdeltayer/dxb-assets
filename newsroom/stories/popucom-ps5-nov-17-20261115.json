@@ -1,7 +1,7 @@
 {
  "id": "popucom-ps5-nov-17-20261115",
  "title": "POPUCOM (Hypergryph; GRYPHLINE and Fireshine Games) launches on PS5 on Tue 17 Nov 2026",
- "status": "built: job v2 committed, Reel rendering for the 05:15 Dubai Mon 16 Nov slot; not scheduled (no director run, no Publer)",
+ "status": "built: Reel v3 qc pass (cards/2026-11/popucom-ps5-nov-17-reel-v3.mp4); not scheduled, no director run yet; RE-GATE within the hour before 05:15 Dubai (Mon)",
  "lane": "digital-lounge",
  "game": "POPUCOM",
  "companies": [
@@ -103,7 +103,7 @@
   "what_it_means_here": "PS5 players in the region get a colourful co-op game for up to four players that was on PC and Nintendo Switch only; Steam price in the UAE in the caption",
   "payoff": "the world's vehicles: the yellow submarine, the flying bus the heroes board, the balloon bus over the sea"
  },
- "job": "jobs/live/popucom-ps5-nov-17.json",
+ "job": "jobs/live/popucom-ps5-nov-17.json (removed from main by the render; last version at 49c0c06)",
  "texts": {
   "instagram": "تصل POPUCOM إلى PS5 يوم الثلاثاء، وهي من صانعي Arknights\n\nتصل لعبة المنصات التعاونية POPUCOM إلى PS5 يوم الثلاثاء 17 نوفمبر، حسب إعلان شركة النشر فايرشاين غيمز (Fireshine Games). واللعبة من تطوير استوديو هايبرغريف (Hypergryph)، مطوّر لعبة Arknights.\n\nيخوض فيها حتى أربعة أصدقاء معًا مغامرة ملوّنة على كوكب مجهول، ويحلّون ألغازها بتبديل الألوان لتشغيل الآليات.\n\nوصدرت اللعبة على PC عبر متجرَي Steam وEpic Games Store في يونيو 2025، ثم على Nintendo Switch في ديسمبر 2025.\n\n#ألعاب #أخبار_الألعاب #POPUCOM #PS5",
   "x": "تصل لعبة POPUCOM التعاونية من استوديو هايبرغريف (Hypergryph)، مطوّر Arknights، إلى PS5 يوم الثلاثاء 17 نوفمبر، حسب إعلان الناشر فايرشاين غيمز (Fireshine Games).",
@@ -132,5 +132,20 @@
  "names_ar": "Hypergryph -> هايبرغريف; Fireshine Games -> فايرشاين غيمز (Proposed 15 Nov 2026, rows added in newsroom/names-ar.md)",
  "regate": "RE-GATE within the hour before 05:15 Dubai (Mon): re-read Fireshine Games' YouTube trailer title, the PS Store page if reachable and a news search 'POPUCOM PS5' for any change to the 17 Nov date",
  "re_gate_line": "RE-GATE within the hour before 05:15 Dubai (Mon)",
- "gate": "gate 07:45Z: primary (Fireshine Games 'POPUCOM | PS5 Launch Date Trailer', oEmbed) and Gematsu, Final Weapon, Push Square read; news search 'POPUCOM PS5 delay' found no delay or change"
+ "gate": "gate 07:45Z: primary (Fireshine Games 'POPUCOM | PS5 Launch Date Trailer', oEmbed) and Gematsu, Final Weapon, Push Square read; news search 'POPUCOM PS5 delay' found no delay or change",
+ "reel": {
+  "path": "cards/2026-11/popucom-ps5-nov-17-reel-v3.mp4",
+  "strip": "cards/2026-11/popucom-ps5-nov-17-strip.jpg",
+  "dense": "cards/2026-11/popucom-ps5-nov-17-dense.jpg",
+  "qc": "cards/2026-11/popucom-ps5-nov-17-qc.json: pass, no findings; 16.9 s before the end card, 18.9 s in all; audio split applied (music_only, music 82.0 percent, leak 0.0); sound trailer; lifeless 3.8",
+  "job_sha": "0ad45404b80c2bbf523a45332cfb5f0cc88ad744",
+  "job_commit": "49c0c06",
+  "render_commit": "7472d1c",
+  "renders": "3 (v1 be75d1b qc pass: a player gripping a gel blaster on the grass shot, not for posting; v2 fc19203 qc pass: the submarine drifted out of the right edge, not for posting; v3 7472d1c)",
+  "template": "split",
+  "chip": "رسمي",
+  "theme": "playful",
+  "style": "lines",
+  "checked": "session 4 fps sheets of v2 and v3 (v3 changes only the submarine's length): cover the fluffy birds with «لعبة POPUCOM / تصل إلى PS5» over the tree, chip رسمي, credit «المصدر: هايبرغريف (Hypergryph)» from frame 0 to the end card; no slate, rating card or burnt-in trailer text; no character aiming or firing; strip «الموعد · الثلاثاء 17 نوفمبر | متوفرة على · PC · Nintendo Switch» from 3.5 s; lines on their planned shots; last 2 s the balloon bus. Audio (v2, same stretch): faster-whisper small hears music only (one 'Ding-Ding!' on the jingle), RMS -13 to -19 dB to 17 s, fade into the end card"
+ }
 }
