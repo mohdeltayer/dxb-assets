@@ -1,0 +1,55 @@
+{
+ "name": "shrek-2-remastered-aspyr-voices-switch-2-4k",
+ "story": "shrek-2-remastered-aspyr-interview-20261115",
+ "kind_news": "quote",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/shrek-2-remastered-aspyr-voices-switch-2-4k-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "shrek2r-launch.mp4",
+   "steam": 2523740,
+   "trailer": "Shrek 2 Remastered Launch Trailer",
+   "start": 0,
+   "seconds": 61
+  },
+  {
+   "file": "shrek2r-announce.mp4",
+   "steam": 2523740,
+   "trailer": "Shrek 2 Announce Trailer",
+   "start": 0,
+   "seconds": 49
+  }
+ ],
+ "shots": [],
+ "lines": [],
+ "credits": [],
+ "headline": "TODO",
+ "label": "حوار",
+ "source": "أسباير (Aspyr)",
+ "date": "16 Nov 2026",
+ "theme": "playful",
+ "style": null,
+ "template": "quote",
+ "skin": "house",
+ "cut": false,
+ "track": "bed",
+ "subject_person": {
+  "name": "Jeff Carmen",
+  "role": "senior game producer at Aspyr (interviewed with associate game producer Conner Allen)",
+  "photo_source": "none licensed: aspyr.com press page (404), Nintendo Everything interview (key art only, no staff photo), Wikimedia Commons (no image); the window shows the game's own Steam screenshot with the name plate"
+ },
+ "person": [
+  [
+   "TODO (photo file in footage, or their best-known work with person_photo none)",
+   "Jeff Carmen",
+   "senior game producer at Aspyr (interviewed with associate game producer Conner Allen)",
+   0.0,
+   3.5,
+   {
+    "credit": "TODO"
+   }
+  ]
+ ],
+ "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+}
