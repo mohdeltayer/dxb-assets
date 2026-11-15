@@ -1,0 +1,25 @@
+{
+ "name": "popucom-ps5-nov-17",
+ "out": "cards/2026-11/popucom-ps5-nov-17-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-15T07:05:40Z",
+ "findings": [],
+ "notes": [
+  "length 18.3 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 81.6; leak_pct 0.1; cache {'hit': 0, 'miss': 7}; separate_secs 11.0; secs 16.0",
+  "render_job: lifeless: {\"score\": 4.2, \"still_share\": 0.033, \"longest_still\": 0.5, \"cuts_per_10s\": 9.34, \"held_under_text\": 0.044, \"secs\": 18.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "dc01188fa9805a96773764a97620f3ddff8fa0af",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [],
+ "person_shown": "n/a",
+ "sound": "trailer"
+}
