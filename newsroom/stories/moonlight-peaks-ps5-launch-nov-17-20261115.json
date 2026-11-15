@@ -60,7 +60,7 @@
  "template_note": "formats.pick('launch') -> trailer; formats.py check trailer 2026-11-16T07:15Z: ok (ledger then had Littlelands 03:15Z and TEKKEN 04:15Z); by hand: 09:15 Shrek 2 quote (Aspyr), 10:15 UFC 6 split (EA), 11:15 trailer: no third in a row; 4th trailer of Mon 16 Nov Dubai (Trafficity 03:15, Littlelands 07:15, TEKKEN 08:15, this) = the cap of 4, so 12:15 cannot be a trailer; card-led window unchanged (footage-led); publishers XSEED differs from EA (10:15) and Aspyr (09:15); theme stylized after UFC emerald and Shrek playful",
  "beat": "release",
  "family": "release (beat sheet 7)",
- "recipe": "0-3.0 s the character creator: a young vampire with a black cat, the look changing every half second, under chip and headline (cover: game named, PS5 tonight); 3.0-4.0 the town shop as the headline fades, no line; 4.0-6.8 the vampire walking her farm (line 1); 6.8-9.7 the crop rows with bats overhead (line 2); 9.7-12.8 two townsfolk at a campfire, then a flower arrangement (line 3); 12.8-16.9 a crowd on the beach, then the town shop (line 4, the sales figure as the payoff); end card. Hard cuts. About 16.9 s before the end card",
+ "recipe": "0-3.25 s the young vampire walking her farm under chip and headline (cover: game named, PS5 tonight); 3.25-4.25 the town shop as the headline fades, no line; 4.25-7.25 the character creator, a young vampire with a black cat (line 1); 7.25-10.15 the crop rows with bats overhead (line 2); 10.15-13.25 two townsfolk at a campfire, then a flower arrangement (line 3); 13.25-17.05 a crowd on the beach, then the town shop (line 4: «باعت اللعبة / أكثر من 300 ألف نسخة منذ يوليو», the payoff); end card. Hard cuts. About 17 s before the end card",
  "sensitive": "vampire life sim: the vampire premise is the game's own and is stated neutrally. Witchcraft and spells (press release) are left out of every text; romance (two dozen romanceable characters) is left out per the 21 Oct rule; no shot of the dark magic cloud, lightning, a romance moment (the campfire stops before the heart icon at 25.75 s) or the skull-faced shopkeeper",
  "spoken": "تصدر Moonlight Peaks على PS5 الليلة. تؤدي فيها دور مصاص دماء يعود إلى مزرعة عائلته ليزرعها، ويصادق أهل البلدة ويجرب الهوايات. وقد باعت اللعبة أكثر من 300 ألف نسخة منذ يوليو.",
  "claims": [
@@ -106,7 +106,7 @@
    "تؤدي فيها دور مصاص دماء",
    "يعود إلى مزرعة عائلته ليزرعها",
    "ويصادق أهل البلدة ويجرب الهوايات",
-   "باعت اللعبة أكثر من 300 ألف نسخة منذ يوليو"
+   "باعت اللعبة\nأكثر من 300 ألف نسخة منذ يوليو"
   ],
   "credit": "المصدر: إكسيد (XSEED) وليتل تشيكن (Little Chicken)",
   "chip": "جديد"
@@ -131,5 +131,9 @@
  "regate": "RE-GATE within the hour before 11:15 Dubai (Mon): re-read the PS Store UAE page (release time still 16 Nov 20:00 UTC), XSEED's news and X for a delay or change, and a news search; a change in the hour stops 'الليلة'",
  "footage": "official Steam trailers of app 2209900 (1920x1080, decode clean on the server): Release Date Trailer (farm, campfire, shop; track), Wholesome Trailer (character creator, flowers), Launch Trailer (beach crowd). Shots chosen inside the server's clean stretches (prerender shots mode, run 43706234871)",
  "sound": "trailer: Release Date Trailer music from 31.0 s, one stretch under the cut; audio split with each shot's own effects; no speech in the stretch (whisper)",
- "job": "jobs/live/moonlight-peaks-ps5-launch-nov-17.json"
+ "job": "jobs/live/moonlight-peaks-ps5-launch-nov-17.json",
+ "render_history": [
+  "v1 job (dispatch 1, run 43708416089): render stopped, credit ran out of the safe zone at size 40",
+  "v2 (dispatch 2, run 43709803166, commit 0edb899, job 0f2567bb): qc pass, 16.6 s; not used: own 4 fps look found the creator crop cutting the character at the left edge with the hairstyle panel edge and L button in frame, hair under the headline, line 4 breaking 300 from ألف, a heart icon over the beach crowd"
+ ]
 }
