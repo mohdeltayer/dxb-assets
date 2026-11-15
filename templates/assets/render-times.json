@@ -70791,5 +70791,111 @@
   "dispatches": 4,
   "sound": "bed:neon (our bed: the only official video (Riot's New Dawn video, League of Legends X post 14 Nov, 121.3 s; the YouTube teaser vs3p3mNhRXo is the same cut) has speech over 0 to 41.6 s (Pabro and Meddler on camera) and narration over 58.6 to 96.4 s; its speech-free stretches are 44.0 to 58.3 s (14 s, cinematic build) and 96.8 to 110.5 s (13.7 s, gameplay music, then a logo sting that falls to -63 dB). v1 ran 96.8 s music_only: the music stem fell silent from 14 s to the end card (measured -63 to -70 dB at 17 to 20.9 s; music 14.4 percent of the stretch). A 44.0 s stretch with speech_ok turns the audio split off, so the narration would play under the Arabic lines. No other official New Dawn video exists (Riot New Dawn page and news index checked 15 Nov 00:10Z).)",
   "footage": true
+ },
+ {
+  "name": "minecraft-first-2027-drop-throwing-disc-offhand-20261115-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-15T03:07Z",
+  "stages": {
+   "checks": 5.8,
+   "montage": 19.3,
+   "text": 49.9,
+   "audio": 0.5,
+   "outro": 19.7
+  },
+  "total": 95.3,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-15T03:06Z",
+  "finished_at": "2026-11-15T03:07Z",
+  "render_min": 1.59,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "minecraft-first-2027-drop-throwing-disc-offhand-20261115-a.mp4",
+    "start": 0.0,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "mbps": 4.52,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "minecraft-first-2027-drop-throwing-disc-offhand-20261115-b.mp4",
+    "start": 0.0,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "mbps": 4.27,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "minecraft-first-2027-drop-throwing-disc-offhand-20261115-c.mp4",
+    "start": 0.0,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "mbps": 4.4,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "minecraft-first-2027-drop-throwing-disc-offhand-20261115-d.mp4",
+    "start": 0.0,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "mbps": 4.74,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 720,
+   "max_zoom": 2.67,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 49.3,
+   "still_share": 0.512,
+   "longest_still": 2.7,
+   "cuts_per_10s": 0.0,
+   "held_under_text": 0.0,
+   "secs": 20.9,
+   "storybook": false,
+   "mode": "report-only",
+   "over": true
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 148,
+  "queue_wait_secs": 1,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1011,
+  "peak_mem_mb": 2529,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 44239,
+  "peak_disk_mb": 45331,
+  "min_disk_free_mb": 200775,
+  "setup_min": 0.13,
+  "story": "minecraft-first-2027-drop-throwing-disc-offhand-20261115",
+  "job_sha": "ed9f723d3c6bcb0387afc8dc058958a3979031b5",
+  "dispatches": 1,
+  "sound": "bed:neon_b (Stills Reel: the pictures are slow push-in clips made from Mojang's official 1280x720 stills, which have no sound; no official video of the throwing disc was reachable (minecraft.net article has no video, the @Minecraft X post is one image, IGN has no drop video), so our bed plays and the jingle on the end card.)",
+  "footage": true
  }
 ]
