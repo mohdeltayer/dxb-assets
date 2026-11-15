@@ -1,8 +1,8 @@
 {
  "name": "ea-sports-ufc-6-pride-fc-expansion",
- "out": "cards/2026-11/ea-sports-ufc-6-pride-fc-expansion-reel-v3.mp4",
+ "out": "cards/2026-11/ea-sports-ufc-6-pride-fc-expansion-reel-v4.mp4",
  "verdict": "pass",
- "at": "2026-11-15T11:24:06Z",
+ "at": "2026-11-15T11:33:35Z",
  "findings": [],
  "notes": [
   "length 12.3 s before the end card (target 12 to 20 s)",
@@ -10,8 +10,8 @@
   "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 9.02, \"held_under_text\": 0.0, \"secs\": 12.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "fdf18b8662f416ab8382f5c1e675df6882abf5ec",
- "dispatches": 4,
+ "job_sha": "a2a5e84ddf69ed780fa71e472272ed9488c242d8",
+ "dispatches": 5,
  "source_summary": {
   "min_height": 1440,
   "max_zoom": 1.33,
@@ -25,5 +25,5 @@
   "cards/2026-11/ea-sports-ufc-6-pride-fc-expansion-look-3.jpg"
  ],
  "person_shown": "n/a",
- "sound": "bed:neon_e (trailers opened and why each is unusable: EA SPORTS UFC 6 Official Reveal Trailer (IGN, 5 May 2026, 140 s): narration 30.9-101.5 s and 117.5-122.4 s (faster-whisper); the server's music_only split refused 40.52 s (music stem leftover 8.4% > 5%) and the narration-free 101.6 s stretch (leftover 14.4%, effects-led fight audio); Official Game Modes Overview (IGN, 28 May 2026, 319 s) and Official Gameplay Deep Dive (IGN, 15 May 2026, 313 s): narrated throughout, no narration-free gap of 12 s or more (faster-whisper, VAD))"
+ "sound": "bed:neon_d (trailers opened and why each is unusable: EA SPORTS UFC 6 Official Reveal Trailer (IGN, 5 May 2026, 140 s): narration 30.9-101.5 s and 117.5-122.4 s (faster-whisper); the server's music_only split refused 40.52 s (music stem leftover 8.4% > 5%) and the narration-free 101.6 s stretch (leftover 14.4%, effects-led fight audio); Official Game Modes Overview (IGN, 28 May 2026, 319 s) and Official Gameplay Deep Dive (IGN, 15 May 2026, 313 s): narrated throughout, no narration-free gap of 12 s or more (faster-whisper, VAD))"
 }
