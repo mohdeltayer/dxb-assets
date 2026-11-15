@@ -1,18 +1,18 @@
 {
  "name": "project-stampede-steam-alpha",
- "out": "cards/2026-11/project-stampede-steam-alpha-reel-v3.mp4",
+ "out": "cards/2026-11/project-stampede-steam-alpha-reel-v4.mp4",
  "verdict": "pass",
- "at": "2026-11-15T03:39:57Z",
+ "at": "2026-11-15T03:47:44Z",
  "findings": [],
  "notes": [
-  "length 16.5 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 82.3; leak_pct 0.1; cache {'hit': 2, 'miss': 0}; separate_secs 2.6; secs 4.5",
+  "length 16.6 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 82.0; leak_pct 0.1; cache {'hit': 0, 'miss': 2}; separate_secs 7.6; secs 11.9",
   "smear check: exempt 9.09 to 14.09 s (our own cards)",
   "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 15.15, \"held_under_text\": 0.0, \"secs\": 16.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "7ca73a2c57c5c39c216ae18987e073c4223fa035",
- "dispatches": 4,
+ "job_sha": "6cd75a4b92459570d89ada4f95defd555e5d5979",
+ "dispatches": 5,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
