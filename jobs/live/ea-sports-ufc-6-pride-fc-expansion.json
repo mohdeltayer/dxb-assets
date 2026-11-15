@@ -120,11 +120,7 @@
  ],
  "skin": "house",
  "cut": true,
- "track": [
-  "ea-sports-ufc-6-pride-fc-expansion-trailer.mp4",
-  101.6
- ],
- "music_only": true,
+ "track": "bed",
  "spoken": "بطولة PRIDE اليابانية تدخل EA SPORTS UFC 6. كانت PRIDE من أشهر بطولات الفنون القتالية المختلطة. الإضافة رقمية فقط مع نسخة Ultimate أو حزمتها.",
  "subject_person": null,
  "angle": {
@@ -143,7 +139,7 @@
   "line 1 4.5-9.3 s 'كانت PRIDE من أشهر بطولات / الفنون القتالية المختلطة': 59.6 arena from above (1.0), 62.4 a glove-and-wrap check (0.45), 67.3 a fighter leaping on the walkout stage (0.95), 73.45 a fighter celebrating arms up then a close profile (2.4, ends 75.85 before the cut 'Paramount' text at 75.9); illustration of an MMA event",
   "line 2 9.3-13.7 s 'الإضافة رقمية فقط مع / نسخة Ultimate أو حزمتها' (v1 line ran out of the safe zone in the server font check): 92.69 fighter face (0.85), 109.1 close face (0.9), 116.93 referee (0.95), 119.35 fighter posing centred (1.7, closing picture; prerender flagged smears at 119.13-119.33 and 121.07-121.45, both cut out)",
   "strip: الإصدار 11 ديسمبر; العرض الكامل الليلة 8 مساءً (premiere 20:00 Dubai Mon); facts live in the strip only, the lines do not repeat them",
-  "sound v2: the reveal trailer's music from 101.6 s, music_only: the only narration-free stretch long enough (faster-whisper over the whole trailer: narration 30.9-101.46 and 117.52-122.4; 101.6 to about 115.6 under the Reel is clear). v1 used 40.52 s and the server refused it: 'music stem not clean (leftover 8.4% > 5.0%)', the narration-heavy stretch",
+  "sound v3: our bed (server rotation): trailers opened and why each is unusable: EA SPORTS UFC 6 Official Reveal Trailer (IGN, 5 May 2026, 140 s): narration 30.9-101.5 s and 117.5-122.4 s (faster-whisper); the server's music_only split refused 40.52 s (music stem leftover 8.4% > 5%) and the narration-free 101.6 s stretch (leftover 14.4%, effects-led fight audio); Official Game Modes Overview (IGN, 28 May 2026, 319 s) and Official Gameplay Deep Dive (IGN, 15 May 2026, 313 s): narrated throughout, no narration-free gap of 12 s or more (faster-whisper, VAD)",
   "theme emerald (look ledger: tekken spectacle, littlelands playful before); style left to the server rotation",
   "credit v2: «العرض الأول من إلكترونيك آرتس (Electronic Arts)» names the reveal trailer the footage comes from (v1 «المصدر: ...، لقطات العرض الأول» ran out of the safe zone)"
  ],
@@ -158,11 +154,12 @@
   "Release verbs": "yes: تصدر في 11 ديسمبر in X and caption; no bare تصل",
   "Names match names-ar; new names added": "yes: إلكترونيك آرتس (Electronic Arts), فاميتسو; new rows Kazushi Sakuraba, Royce Gracie, PRIDE",
   "Headline: what happened, names the reader knows": "yes: بطولة PRIDE اليابانية / تدخل EA SPORTS UFC 6",
-  "Footage keeps its own sound; music named": "yes: reveal trailer music from 101.6 s (narration-free stretch), music_only",
-  "No speech under Arabic lines": "yes: narration removed by music_only (job fails if the stem is not clean)",
+  "Footage keeps its own sound; music named": "n/a with reason: our bed, bed_reason names the three trailers opened (narration throughout; two music_only stretches refused by the server)",
+  "No speech under Arabic lines": "yes: our bed, no speech",
   "Credit on every clip for its whole duration": "yes: one credit shots 0-9 from frame 0, «العرض الأول من إلكترونيك آرتس (Electronic Arts)» (names the reveal trailer)",
   "Nothing graphic": "yes: no strikes, knockdowns or blood chosen; checked at 4 fps on 9:16 centre crops; strip to be re-read",
   "Every Reel shows the game": "yes: EA SPORTS UFC 6 gameplay and presentation throughout",
   "One visual requirement per beat; shot shows its line": "yes with a limit: no PRIDE footage exists before tonight; the base game's trailer illustrates, credited as the reveal trailer"
- }
+ },
+ "bed_reason": "trailers opened and why each is unusable: EA SPORTS UFC 6 Official Reveal Trailer (IGN, 5 May 2026, 140 s): narration 30.9-101.5 s and 117.5-122.4 s (faster-whisper); the server's music_only split refused 40.52 s (music stem leftover 8.4% > 5%) and the narration-free 101.6 s stretch (leftover 14.4%, effects-led fight audio); Official Game Modes Overview (IGN, 28 May 2026, 319 s) and Official Gameplay Deep Dive (IGN, 15 May 2026, 313 s): narrated throughout, no narration-free gap of 12 s or more (faster-whisper, VAD)"
 }
