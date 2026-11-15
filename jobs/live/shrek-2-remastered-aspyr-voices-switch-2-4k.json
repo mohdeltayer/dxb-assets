@@ -90,7 +90,7 @@
   [
    "shrek2r-launch.mp4",
    30.35,
-   0.5,
+   0.42,
    [
     [
      0.0,
@@ -121,7 +121,7 @@
    ]
   ]
  ],
- "spoken": "أصوات 2004 لم تتغير في Shrek 2 Remastered، قالها منتجا اللعبة في أسباير (Aspyr). وقالت أسباير لموقع نينتيندو إفريثينغ إن اللعبة تعمل بدقة 4K مع 60 إطارًا على Switch 2 في وضع التلفاز. ولم تُعلن ألعاب Shrek أخرى بعد.",
+ "spoken": "أصوات 2004 لم تتغير في Shrek 2 Remastered، قالها منتجا اللعبة في أسباير (Aspyr). وقالت أسباير لموقع نينتيندو إفريثينغ إن اللعبة تعمل بدقة 4K مع 60 إطارًا على Switch 2 في وضع التلفاز. ولم تُعلن ألعاب Shrek أخرى.",
  "lines": [
   [
    3,
@@ -134,7 +134,7 @@
    6,
    8,
    [
-    "لم تُعلن ألعاب Shrek\nأخرى بعد"
+    "لم تُعلن ألعاب Shrek\nأخرى"
    ]
   ]
  ],
@@ -251,7 +251,8 @@
   "v2 (run 43705711930, qc pass) not used: the card's ground ran the trailer from about 32 s (the shared clock adds t0), so the REMASTERED GRAPHICS title, the night-town knight and the PHOTO MODE page showed blurred behind the card; the headline sat on Gingy's head at 2.0 s and on Donkey at 2.25 s (the Gingy shot crossed a scene cut); edge cuts on the cows, the chickens and the shop. v3 fixes all of these; the lines were shortened to fit the clean footage (one fact each, same meaning)",
   "v3 dispatch stopped at the server text check (head_overlap: line 1 entered at 3.28 s, the headline fades from 3.30 s): the kitchen shot is 0.99 s (was 0.95); card ground start 21.96 to keep the shop at the card's start",
   "v3 (run 43707698435, qc pass) not used: the forest shot ran 0.1 s into the rainbow level (server copy cut at 43.84), and the Donkey farm shot showed the 'Farm' sign cut at the left edge at 11.5 s. v4: forest 1.1 s, kitchen 1.15 s, Donkey dropped for Fiona and Gingy (announce 36.85), card ground 21.95 (t0 4.65)",
-  "v4 dispatch stopped at the server shotgate (shot 6, the forest path: Shrek leaves the 9:16 crop at 30.40 s at focus 0.5); reframed at 0.36 so Shrek runs mid-frame and Donkey enters from the left"
+  "v4 dispatch stopped at the server shotgate (shot 6, the forest path: Shrek leaves the 9:16 crop at 30.40 s at focus 0.5); reframed at 0.36 so Shrek runs mid-frame and Donkey enters from the left",
+  "prerender (GitHub fallback copy) read the REMASTERED GRAPHICS card from 30.80 s on its copy: forest path trimmed to 30.35 to 30.77"
  ],
  "block_ok": [
   [
