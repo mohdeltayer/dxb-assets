@@ -1,0 +1,29 @@
+{
+ "name": "ea-sports-ufc-6-pride-fc-expansion-v5",
+ "out": "cards/2026-11/ea-sports-ufc-6-pride-fc-expansion-v5-reel-v5.mp4",
+ "verdict": "pass",
+ "at": "2026-11-15T12:14:58Z",
+ "findings": [],
+ "notes": [
+  "length 18.2 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 23.3, \"still_share\": 0.193, \"longest_still\": 3.5, \"cuts_per_10s\": 9.39, \"held_under_text\": 0.0, \"secs\": 18.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "9b0777428cbc6a0a8e7700ca8ca1d6633d5dcd7d",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1440,
+  "max_zoom": 1.33,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/ea-sports-ufc-6-pride-fc-expansion-v5-look-1.jpg",
+  "cards/2026-11/ea-sports-ufc-6-pride-fc-expansion-v5-look-2.jpg",
+  "cards/2026-11/ea-sports-ufc-6-pride-fc-expansion-v5-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_c (trailers opened and why each is unusable: EA SPORTS UFC 6 Official Reveal Trailer (IGN, 5 May 2026, 140 s): narration 30.9-101.5 s and 117.5-122.4 s (faster-whisper); the server's music_only split refused 40.52 s (music stem leftover 8.4% > 5%) and the narration-free 101.6 s stretch (leftover 14.4%, effects-led fight audio); Official Game Modes Overview (IGN, 28 May 2026, 319 s) and Official Gameplay Deep Dive (IGN, 15 May 2026, 313 s): narrated throughout, no narration-free gap of 12 s or more (faster-whisper, VAD))"
+}
