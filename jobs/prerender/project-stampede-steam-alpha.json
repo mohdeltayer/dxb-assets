@@ -1,0 +1,31 @@
+{
+ "name": "project-stampede-steam-alpha",
+ "story": "project-stampede-steam-page-alpha-trailer-20261115",
+ "kind_news": "reveal",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/project-stampede-steam-alpha-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "project-stampede-steam-alpha-trailer.mp4",
+   "steam": 5552610,
+   "trailer": "Project Stampede Alpha",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [],
+ "lines": [],
+ "credits": [],
+ "headline": "TODO",
+ "label": "نظرة أولى",
+ "source": "دايركتريكس برودكشنز (Directrix Productions)",
+ "date": "15 Nov 2026",
+ "theme": "cold",
+ "style": null,
+ "template": "clipcard",
+ "skin": "house",
+ "cut": false,
+ "track": "bed",
+ "_todo": "no shots: run prerender.yml with mode shots on this job, then t0make again with --shots"
+}
