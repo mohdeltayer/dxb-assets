@@ -74031,5 +74031,211 @@
   "dispatches": 2,
   "sound": "trailer",
   "footage": true
+ },
+ {
+  "name": "disney-dreamlight-valley-keepsake-sea-nov-18-v2-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-15T05:31Z",
+  "stages": {
+   "checks": 6.7,
+   "montage": 42.1,
+   "text": 34.4,
+   "audio": 1.2,
+   "outro": 17.5
+  },
+  "total": 101.9,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-15T05:30Z",
+  "finished_at": "2026-11-15T05:31Z",
+  "render_min": 1.7,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "disney-dreamlight-valley-keepsake-sea-nov-18-trailer.mp4",
+    "start": 36.95,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.64,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "disney-dreamlight-valley-keepsake-sea-nov-18-trailer.mp4",
+    "start": 46.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.64,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "disney-dreamlight-valley-keepsake-sea-nov-18-trailer.mp4",
+    "start": 52.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.64,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "disney-dreamlight-valley-keepsake-sea-nov-18-trailer.mp4",
+    "start": 38.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.64,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "disney-dreamlight-valley-keepsake-sea-nov-18-trailer.mp4",
+    "start": 41.2,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.64,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "disney-dreamlight-valley-keepsake-sea-nov-18-trailer.mp4",
+    "start": 42.55,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.64,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "disney-dreamlight-valley-keepsake-sea-nov-18-trailer.mp4",
+    "start": 44.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.64,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "disney-dreamlight-valley-keepsake-sea-nov-18-trailer.mp4",
+    "start": 55.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.64,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "disney-dreamlight-valley-keepsake-sea-nov-18-trailer.mp4",
+    "start": 57.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.64,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 9,
+    "file": "disney-dreamlight-valley-keepsake-sea-nov-18-trailer.mp4",
+    "start": 61.95,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.64,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 10,
+    "file": "disney-dreamlight-valley-keepsake-sea-nov-18-trailer.mp4",
+    "start": 71.5,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.64,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 7.3,
+   "audio_secs": 33.7,
+   "music_pct": 38.0,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "effects_shots": 0,
+   "mix_secs": 3.1,
+   "secs": 11.5
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 9.03,
+   "held_under_text": 0.0,
+   "secs": 15.5,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 203,
+  "queue_wait_secs": 531,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1124,
+  "peak_mem_mb": 2397,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 45977,
+  "peak_disk_mb": 48608,
+  "min_disk_free_mb": 197498,
+  "setup_min": 0.18,
+  "story": "disney-dreamlight-valley-keepsake-sea-nov-18-v2",
+  "job_sha": "f0886f45518ecec6d55407a17e8bf8efd3cce9be",
+  "dispatches": 1,
+  "sound": "trailer",
+  "footage": true
  }
 ]
