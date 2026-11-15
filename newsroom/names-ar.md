@@ -363,3 +363,9 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | Kipwak Studio (Wizdom Academy developer and publisher) | كيبواك | Proposed 15 Nov 2026 (credit and caption «استوديو كيبواك (Kipwak Studio)», «الاستوديو» after; DeepL left it in Latin) |
 | Lake On Fire (Wizdom Academy co-developer) | لايك أون فاير | Proposed 15 Nov 2026 (caption only, «استوديو لايك أون فاير (Lake On Fire)») |
 | management game | لعبة الإدارة | Proposed 15 Nov 2026 (term; the store's 'builder management sim'; «لعبة المحاكاة والإدارة» the longer option) |
+| The Game Awards | ذا غيم أووردز (The Game Awards) | Proposed 15 Nov 2026 (TGA 2026 nominees kit; «حفل ذا غيم أووردز» in text, the Latin in brackets at first mention) |
+| Game of the Year (award) | جائزة لعبة العام | Proposed 15 Nov 2026 (term; TGA kit) |
+| Panic (Big Walk publisher) | بانيك (Panic) | Proposed 15 Nov 2026 (TGA kit credit) |
+| IO Interactive (007 First Light) | آي أو إنترأكتيف (IO Interactive) | Proposed 15 Nov 2026 (TGA kit credit) |
+| AdHoc Studio (Dispatch) | أدهوك ستوديو (AdHoc Studio) | Proposed 15 Nov 2026 (TGA kit credit) |
+| Yacht Club Games (Mina the Hollower) | ياخت كلوب غيمز (Yacht Club Games) | Proposed 15 Nov 2026 (TGA kit credit) |
