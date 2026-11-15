@@ -173,7 +173,7 @@ def director(sid, verdict, out, note='', job=None, by=None, looked=None, reason=
         if qc_pass:
             if reason not in HARD_REASONS:
                 raise SystemExit('presubmit refused: the server qc passed this Reel; a send-back needs --reason, one of '
-                                 + ', '.join(HARD_REASONS) + ' (wrong subject, graphic content, unreadable text, a '
+                                 + ', '.join(HARD_REASONS) + ' (wrong subject, on stylised art also a subject out of the crop; graphic content; unreadable text; a '
                                  'factual error on screen). Anything else is a note on a PASS.')
             used = [x for x in s.get('director_sendbacks') or [] if x.get('qc') == 'pass']
             if len(used) >= SENDBACKS_MAX:

@@ -819,6 +819,6 @@ render-times.json). H (server QC verdict) and I (parallel runners) follow as the
    (over 1.5% of the height); the framed subject stays inside the 9:16 window and is not cut by its edge (people,
    vehicles, animals; stylised art is the director's look). Waivers after looking: cut_ok, letterbox_ok, drift_ok.
 4. A card on footage takes the calmest stretch of its ground_footage ("ground_seek": "fixed" to keep the seek).
-5. Director: with qc pass, one look at the look frames; PASS, or one send-back for wrong_subject, graphic,
-   unreadable_text or factual_error. No third render unless the job names "rerender". Weekly count, card at three.
+5. Director: with qc pass, one look at the look frames; PASS, or one send-back for wrong_subject (on stylised art also
+   a subject cut out of or drifting out of the crop), graphic, unreadable_text or factual_error. No third render unless the job names "rerender". Weekly count, card at three.
 

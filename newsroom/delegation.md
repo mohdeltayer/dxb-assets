@@ -69,6 +69,9 @@ unreadable_text | factual_error --note "<what and where>"`. The send-back is wri
 server unless the job names "rerender": {"reason", "note"}. Things the server now checks (a line under the headline,
 shots across scene cuts or before the picture, letterbox, a subject leaving the crop, a busy card ground, lines that are
 not the spoken paragraph) are never send-back reasons: if one slips through, it goes to the build desk as a bug.
+One exception (Mohammad, 15 Nov 2026, on the card): on stylised or cartoon art, where the subject detector sees nothing
+(POPUCOM's submarine and heroes), a subject cut out of the 9:16 crop or drifting out of it is a send-back as
+`wrong_subject`, with the shot and second in the note.
 Weekly (Tuesday audit): `python3 ops/sendbacks.py --card <file>`; a reason seen three times in a week goes on a card as a
 candidate server check (item F).
 

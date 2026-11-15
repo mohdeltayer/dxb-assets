@@ -3674,6 +3674,8 @@ E. Director: with qc pass it looks once at the look frames (now for every Reel) 
    for wrong_subject, graphic, unreadable_text or factual_error (`presubmit.py director ... FIX --reason`), written to the
    Reel's qc.json under director_sendbacks and to the story file. A second send-back is refused; `qc.py rerender` in
    render-live refuses a third render (or any render after a PASS) unless the job names "rerender": {"reason", "note"}.
+   On stylised or cartoon art, where C sees nothing, a subject cut out of the crop or drifting out of it counts as
+   wrong_subject (Mohammad, 15 Nov 2026, on the card).
 F. `ops/sendbacks.py` counts send-backs by reason over 7 days (Tuesday audit); a reason seen three times goes on a card
    as a candidate server check.
 Spoken: every job with lines carries "spoken", the story as one paragraph of 2 to 3 Arabic sentences; the gate refuses a
