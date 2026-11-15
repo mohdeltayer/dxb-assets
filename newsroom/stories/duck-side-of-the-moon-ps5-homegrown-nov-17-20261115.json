@@ -1,7 +1,7 @@
 {
  "id": "duck-side-of-the-moon-ps5-homegrown-nov-17-20261115",
  "title": "Duck Side of the Moon (Starbrew Games) reaches PS5 on Tue 17 Nov with the free Homegrown update (new area, story, gardening, ship chromas)",
- "status": "building v1; not scheduled. RE-GATE within the hour before 01:15 Dubai (Mon)",
+ "status": "rendering v1 on the server (render-live dispatched ~06:00Z); not scheduled. RE-GATE within the hour before 01:15 Dubai (Mon)",
  "lane": "digital-lounge",
  "game": "Duck Side of the Moon",
  "companies": [
@@ -53,7 +53,7 @@
  "recipe": "notes/scenario-recipes.md recipe 2 (trailer drop) on clipcard: the duck moving under chip and headline 0-4.2 s, one card (Homegrown, free for every platform), a breathing shot of the new world, then the garden line on the garden shots and the ship line on the ship room changing style; last picture the restyled room",
  "footage": "the game's official Steam 'Update Trailer' (Homegrown Update and PS5 announcement trailer, app 2959770), 1920x1080, 5.8 Mbps, 28.9 s, decode clean (session full decode 15 Nov); 9:16 crop enlarged 1.78x; title cards (1.5-2.9 s, 23.0 s on), dialogue boxes (7.3-8.4, 11.5-12.9, 18.0-19.0) and crafting UI (19.0-20.3) left out",
  "sensitive": "none: a cosy game with no combat or death (press release)",
- "spoken": "لعبة Duck Side of the Moon تصدر على PS5 الثلاثاء، ومعها تحديث Homegrown المجاني لكل المنصات في اليوم نفسه. تزرع فيه حديقتك بين الكواكب، وتزيّن سفينتك على ذوقك.",
+ "spoken": "بطة الفضاء تصل إلى PS5 في Duck Side of the Moon، وموعد الإصدار 17 نوفمبر، مع تحديث Homegrown المجاني. تزرع فيه حديقتك بين الكواكب، وتزيّن سفينتك على ذوقك.",
  "claims": [
   {
    "claim": "PS5 release 17 Nov 2026",
@@ -100,5 +100,14 @@
   "deepl_forward": "whole story EN->AR in one piece (15 Nov ~05:56Z): DeepL wrote «ستصدر … على منصة PS5», «سيطلق الاستوديو تحديثًا مجانيًا كبيرًا بعنوان Homegrown», «يتم فتح المحتوى» (we keep «يُفتح», no يتم), «مغامرة مريحة» (we keep هادئة for cozy, a calm game), «خالية من القتال أو الموت» (we keep «بلا قتال ولا موت»); phrasings: «free update» -> تحديث مجاني; «a free content update» -> تحديث مجاني للمحتوى; «completely free for all players» -> مجاني تمامًا لجميع اللاعبين; «customize your spaceship» -> تخصيص سفينتك الفضائية; «decorate your spaceship the way you like» -> زين سفينتك الفضائية بالطريقة التي تريدها (we keep «تزيّن سفينتك على ذوقك», shorter, same meaning); DeepL left Starbrew Games in Latin (house form ستاربرو جيمز (Starbrew Games))",
   "deepl_back": "AR->EN of headline, card, lines, caption, X (15 Nov ~05:58Z): 'Duck Side of the Moon is coming to PS5 on Tuesday'; 'The Homegrown update is free on all platforms on the same day'; 'You can plant your garden among the planets and decorate your ship to your liking'; caption and X read back with every fact intact (PS5 Tue 17 Nov, free update all platforms, per Starbrew Games, no combat or death)"
  },
- "names_ar": "Starbrew Games -> ستاربرو جيمز (Proposed 15 Nov 2026, row added in newsroom/names-ar.md)"
+ "names_ar": "Starbrew Games -> ستاربرو جيمز (Proposed 15 Nov 2026, row added in newsroom/names-ar.md)",
+ "on_screen": {
+  "headline": "بطة الفضاء تصل إلى PS5 / في Duck Side of the Moon",
+  "card": "موعد الإصدار · 17 نوفمبر · مع تحديث Homegrown المجاني",
+  "lines": [
+   "تزرع فيه حديقتك بين الكواكب",
+   "وتزيّن سفينتك على ذوقك"
+  ],
+  "credit": "المصدر: ستاربرو جيمز (Starbrew Games)"
+ }
 }
