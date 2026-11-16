@@ -1,0 +1,29 @@
+{
+ "name": "ffxiv-road-to-evercold-free-login-nov-16",
+ "out": "cards/2026-11/ffxiv-road-to-evercold-free-login-nov-16-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-16T12:38:11Z",
+ "findings": [],
+ "notes": [
+  "length 17.7 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 7.39, \"held_under_text\": 0.0, \"secs\": 17.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "49cbdecef7c2f01f84fcdc50a3b3dcaa6f3cfa45",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1920,
+  "max_zoom": 1.0,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/ffxiv-road-to-evercold-free-login-nov-16-look-1.jpg",
+  "cards/2026-11/ffxiv-road-to-evercold-free-login-nov-16-look-2.jpg",
+  "cards/2026-11/ffxiv-road-to-evercold-free-login-nov-16-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon (Square Enix's vertical Evercold promo (lds-img.finalfantasyxiv.com, 1080x1920, 35 s) has no audio stream; the full trailers on the Evercold page are YouTube embeds only (yt-dlp asks for a sign-in), and Steam's FINAL FANTASY XIV trailers are A Realm Reborn era, unrelated to the campaign)"
+}

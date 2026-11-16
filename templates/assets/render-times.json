@@ -80443,5 +80443,147 @@
   "dispatches": 1,
   "sound": "bed:neon (stills template on Ubisoft's Vital Signal press art; the season's own trailer is on YouTube only (yt-dlp asks for a sign-in) and Steam (359550) carries only the Y11S3 Launch and CGI trailers, used here as credited earlier footage for two short shots)",
   "footage": true
+ },
+ {
+  "name": "ffxiv-road-to-evercold-free-login-nov-16-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-16T12:37Z",
+  "stages": {
+   "checks": 3.6,
+   "montage": 26.3,
+   "text": 42.4,
+   "audio": 1.4,
+   "outro": 26.1
+  },
+  "total": 99.9,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-16T12:35Z",
+  "finished_at": "2026-11-16T12:37Z",
+  "render_min": 1.66,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "ffxiv-evercold-vertical.mp4",
+    "start": 0.65,
+    "width": 1080,
+    "height": 1920,
+    "fps": 29.97,
+    "mbps": 2.81,
+    "rows": 1920,
+    "zoom": 1.0,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "ffxiv-evercold-vertical.mp4",
+    "start": 6.82,
+    "width": 1080,
+    "height": 1920,
+    "fps": 29.97,
+    "mbps": 2.81,
+    "rows": 1920,
+    "zoom": 1.0,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "ffxiv-evercold-vertical.mp4",
+    "start": 11.85,
+    "width": 1080,
+    "height": 1920,
+    "fps": 29.97,
+    "mbps": 2.81,
+    "rows": 1920,
+    "zoom": 1.0,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "ffxiv-evercold-vertical.mp4",
+    "start": 15.85,
+    "width": 1080,
+    "height": 1920,
+    "fps": 29.97,
+    "mbps": 2.81,
+    "rows": 1920,
+    "zoom": 1.0,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "ffxiv-evercold-vertical.mp4",
+    "start": 19.79,
+    "width": 1080,
+    "height": 1920,
+    "fps": 29.97,
+    "mbps": 2.81,
+    "rows": 1920,
+    "zoom": 1.0,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "ffxiv-evercold-vertical.mp4",
+    "start": 23.49,
+    "width": 1080,
+    "height": 1920,
+    "fps": 29.97,
+    "mbps": 2.81,
+    "rows": 1920,
+    "zoom": 1.0,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "ffxiv-evercold-vertical.mp4",
+    "start": 28.53,
+    "width": 1080,
+    "height": 1920,
+    "fps": 29.97,
+    "mbps": 2.81,
+    "rows": 1920,
+    "zoom": 1.0,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1920,
+   "max_zoom": 1.0,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 7.39,
+   "held_under_text": 0.0,
+   "secs": 17.6,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 239,
+  "queue_wait_secs": 286,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1029,
+  "peak_mem_mb": 2253,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 48356,
+  "peak_disk_mb": 51186,
+  "min_disk_free_mb": 194920,
+  "setup_min": 0.17,
+  "story": "ffxiv-road-to-evercold-free-login-nov-16",
+  "job_sha": "49cbdecef7c2f01f84fcdc50a3b3dcaa6f3cfa45",
+  "dispatches": 1,
+  "sound": "bed:neon (Square Enix's vertical Evercold promo (lds-img.finalfantasyxiv.com, 1080x1920, 35 s) has no audio stream; the full trailers on the Evercold page are YouTube embeds only (yt-dlp asks for a sign-in), and Steam's FINAL FANTASY XIV trailers are A Realm Reborn era, unrelated to the campaign)",
+  "footage": true
  }
 ]
