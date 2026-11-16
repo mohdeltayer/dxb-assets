@@ -1,0 +1,29 @@
+{
+ "name": "galactic-racer-split-screen-free-play-november-16",
+ "out": "cards/2026-11/galactic-racer-split-screen-free-play-november-16-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-16T22:28:44Z",
+ "findings": [],
+ "notes": [
+  "length 17.2 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 24.0, \"still_share\": 0.193, \"longest_still\": 3.1, \"cuts_per_10s\": 5.26, \"held_under_text\": 0.158, \"secs\": 17.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "e5122dc8401d4cbec8a8d4076b4f94196ff08c68",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/galactic-racer-split-screen-free-play-november-16-look-1.jpg",
+  "cards/2026-11/galactic-racer-split-screen-free-play-november-16-look-2.jpg",
+  "cards/2026-11/galactic-racer-split-screen-free-play-november-16-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon (Official Story, Announcement and Release Date Reveal trailers are narrated or carry speech and burnt-in titles under every clean stretch; stills and short clean stretches only, so our bed)"
+}
