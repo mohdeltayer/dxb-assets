@@ -1,145 +1,44 @@
 {
  "schema": 1,
  "file": "digest",
- "generated_at": "2026-11-16T00:52:06Z",
- "seq": 517,
+ "generated_at": "2026-11-16T01:52:05Z",
+ "seq": 518,
  "kind": "hourly",
- "since": "2026-11-15T23:52:05Z",
- "official": [],
+ "since": "2026-11-16T00:52:06Z",
+ "official": [
+  {
+   "id": 15034,
+   "source": "Famitsu",
+   "source_kind": "page",
+   "title": "『ソニック』のキュートなソフビグッズが発売決定。テイルスやナックルズなど全10キャラクターが登場。本日（11/16）よりセガストアオンラインで受注開始",
+   "url": "https://www.famitsu.com/article/202611/94092",
+   "published": null,
+   "first_seen": "2026-11-16T01:15:14Z",
+   "media": [],
+   "breaking_source": false,
+   "breaking_seq": null,
+   "digest_seq": 518
+  },
+  {
+   "id": 15035,
+   "source": "Famitsu",
+   "source_kind": "page",
+   "title": "『遊戯王』遊戯vs海馬のアクリルジオラマや、高精細複製原画が登場。高橋和希原画展オリジナルグッズの全ラインアップが公開",
+   "url": "https://www.famitsu.com/article/202611/94062",
+   "published": null,
+   "first_seen": "2026-11-16T01:15:14Z",
+   "media": [],
+   "breaking_source": false,
+   "breaking_seq": null,
+   "digest_seq": 518
+  }
+ ],
  "outlets": [
   {
-   "count": 6,
-   "published": "2026-11-15T10:31Z",
-   "title": "Riot reveals League of Legends: New Dawn, a 2027 overhaul",
-   "url": "https://tbreak.com/league-of-legends-new-dawn-revealed/",
-   "sources": [
-    "GamesRadar",
-    "IGN Middle East (AR)",
-    "PC Gamer",
-    "Steam News (hub)",
-    "Tbreak (Gulf)",
-    "True Gaming (AR)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://sm.ign.com/ign_mear/gallery/l/league-of-/league-of-legends-new-dawn-cinematic-images_urgy.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://sm.ign.com/t/ign_mear/gallery/l/league-of-/league-of-legends-new-dawn-cinematic-images_urgy.640.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Tbreak (Gulf)",
-     "title": "Riot reveals League of Legends: New Dawn, a 2027 overhaul",
-     "url": "https://tbreak.com/league-of-legends-new-dawn-revealed/",
-     "published": "2026-11-15T10:31Z"
-    },
-    {
-     "source": "IGN Middle East (AR)",
-     "title": "League of Legends: New Dawn Cinematic Images",
-     "url": "https://me.ign.com/ar/league-of-legends/197450/league-of-legends-new-dawn-cinematic-images",
-     "published": "2026-11-15T10:45Z"
-    },
-    {
-     "source": "IGN Middle East (AR)",
-     "title": "League of Legends: New Dawn Gameplay Images",
-     "url": "https://me.ign.com/ar/league-of-legends/197449/league-of-legends-new-dawn-gameplay-images",
-     "published": "2026-11-15T10:45Z"
-    },
-    {
-     "source": "IGN Middle East (AR)",
-     "title": "شركة Riot Games تكشف عن تحديث League of Legends: New Dawn الضخم",
-     "url": "https://me.ign.com/ar/league-of-legends/197448/shrk-riot-games-tkshf-n-thdyth-league-of-legends-new-dawn-ldkhm",
-     "published": "2026-11-15T10:45Z"
-    },
-    {
-     "source": "GamesRadar",
-     "title": "League of Legends: New Dawn is the Riot MOBA's next era: \"We want League to stand the test of time\"",
-     "url": "https://www.gamesradar.com/games/league-of-legends/after-17-years-league-of-legends-new-dawn-is-the-riot-mobas-next-era-we-want-league-to-stand-the-test-of-time/",
-     "published": "2026-11-15T13:14Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "League of Legends: New Dawn is the Riot MOBA's next era: \"We want League to stand the test of time\"",
-     "url": "https://store.steampowered.com/news/group/38509069/view/692025835039753275",
-     "published": "2026-11-15T13:19Z"
-    },
-    {
-     "source": "PC Gamer",
-     "title": "League of Legends will get an overhaul called New Dawn with new visuals, build options, and an updated client",
-     "url": "https://www.pcgamer.com/games/moba/league-of-legends-will-get-an-overhaul-called-new-dawn-with-new-visuals-build-options-and-an-updated-client/",
-     "published": "2026-11-15T17:45Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "League of Legends will get an overhaul called New Dawn with new visuals, build options, and an updated client",
-     "url": "https://store.steampowered.com/news/group/1850/view/714543833176605732",
-     "published": "2026-11-15T17:52Z"
-    },
-    {
-     "source": "True Gaming (AR)",
-     "title": "Riot تعلن عن الفصل التالي للعبة League of Legends مع تحديث New Dawn",
-     "url": "https://www.true-gaming.net/home/643824/riot-%d8%aa%d8%b9%d9%84%d9%86-%d8%b9%d9%86-%d8%a7%d9%84%d9%81%d8%b5%d9%84-%d8%a7%d9%84%d8%aa%d8%a7%d9%84%d9%8a-%d9%84%d9%84%d8%b9%d8%a8%d8%a9-league-of-legends-%d9%85%d8%b9-%d8%aa%d8%ad%d8%af%d9%8a/",
-     "published": "2026-11-15T18:01Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "League of Legends Officially Confirms Major Changes for 2027",
-     "url": "https://store.steampowered.com/news/group/1450625/view/714543833176605777",
-     "published": "2026-11-16T00:10Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-15T10:33Z",
-   "title": "Grand Theft Auto 6: The Album",
-   "url": "https://me.ign.com/ar/grand-theft-auto-vi/197447/grand-theft-auto-6-the-album",
-   "sources": [
-    "Game File",
-    "IGN Middle East (AR)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://sm.ign.com/ign_mear/gallery/g/grand-thef/grand-theft-auto-6-the-album_wfk5.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://sm.ign.com/t/ign_mear/gallery/g/grand-thef/grand-theft-auto-6-the-album_wfk5.640.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "IGN Middle East (AR)",
-     "title": "Grand Theft Auto 6: The Album",
-     "url": "https://me.ign.com/ar/grand-theft-auto-vi/197447/grand-theft-auto-6-the-album",
-     "published": "2026-11-15T10:33Z"
-    },
-    {
-     "source": "IGN Middle East (AR)",
-     "title": "تسريب يكشف قائمة أغاني ألبوم Grand Theft Auto 6 قبل أيام من الإطلاق",
-     "url": "https://me.ign.com/ar/grand-theft-auto-vi/197446/tsryb-ykshf-qym-gny-lbwm-grand-theft-auto-6-qbl-ym-mn-ltlq",
-     "published": "2026-11-15T10:33Z"
-    },
-    {
-     "source": "Game File",
-     "title": "13 more hours with GTA V helped me discover that Grand Theft Auto Online is terrific now",
-     "url": "https://www.gamefile.news/p/gta-v-gta-online-review",
-     "published": "2026-11-16T00:39Z"
-    }
-   ]
-  },
-  {
    "count": 1,
-   "published": "2026-11-16T00:35Z",
-   "title": "イタリアの湖底から「3000年以上前の剣」が発見される。“刃は鋭いまま残っている”とロマンあふれる調査報告",
-   "url": "https://news.denfaminicogamer.jp/news/261116e",
+   "published": "2026-11-16T01:38Z",
+   "title": "トラック運転ゲー『Euro Truck Simulator 2』が“バスDLC”配信でプレイヤー爆増。同接「10万人」を超え2012年の発売から最高記録を更新",
+   "url": "https://news.denfaminicogamer.jp/news/261116i",
    "sources": [
     "Denfaminicogamer (JP)"
    ],
@@ -147,23 +46,42 @@
    "media": [
     {
      "type": "image",
-     "url": "https://news.denfaminicogamer.jp/wp-content/uploads/2026/11/videoframe_200765-1024x576.png"
+     "url": "https://news.denfaminicogamer.jp/wp-content/uploads/2026/11/bd7d4e6049a54b5f8bfa947d74428675.png"
     }
    ],
    "items": [
     {
      "source": "Denfaminicogamer (JP)",
-     "title": "イタリアの湖底から「3000年以上前の剣」が発見される。“刃は鋭いまま残っている”とロマンあふれる調査報告",
-     "url": "https://news.denfaminicogamer.jp/news/261116e",
-     "published": "2026-11-16T00:35Z"
+     "title": "トラック運転ゲー『Euro Truck Simulator 2』が“バスDLC”配信でプレイヤー爆増。同接「10万人」を超え2012年の発売から最高記録を更新",
+     "url": "https://news.denfaminicogamer.jp/news/261116i",
+     "published": "2026-11-16T01:38Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-16T00:09Z",
-   "title": "Star Trek Officially Replaces Everyone's Deep Space Nine Crush In Federation Fleet",
-   "url": "https://store.steampowered.com/news/group/38666666/view/677389277779198917",
+   "published": "2026-11-16T01:30Z",
+   "title": "元アリスソフトDが約5年かけ個人開発―フリーシナリオRPG『Terminus Historia｜境界戦役』Steam早期アクセス開始！『ロマサガ』や『FF2』から影響",
+   "url": "http://www.gamespark.jp/article/2026/11/16/174907.html",
+   "sources": [
+    "Game*Spark (JP)"
+   ],
+   "ar_relay": false,
+   "media": [],
+   "items": [
+    {
+     "source": "Game*Spark (JP)",
+     "title": "元アリスソフトDが約5年かけ個人開発―フリーシナリオRPG『Terminus Historia｜境界戦役』Steam早期アクセス開始！『ロマサガ』や『FF2』から影響",
+     "url": "http://www.gamespark.jp/article/2026/11/16/174907.html",
+     "published": "2026-11-16T01:30Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-16T01:17Z",
+   "title": "Path of Exile: Covens of Umbra - What We’re Working On",
+   "url": "https://store.steampowered.com/news/app/238960/view/690899935132910573",
    "sources": [
     "Steam News (hub)"
    ],
@@ -171,59 +89,218 @@
    "media": [
     {
      "type": "image",
-     "url": "https://static0.srcdn.com/wordpress/wp-content/uploads/2026/04/star-trek-deep-space-nine-cast-1.jpg"
+     "url": "https://clan.akamai.steamstatic.com/images/5193306/ba7b7c493c6e0549cbbc7011edf74bca6a724e1d.jpg"
     }
    ],
    "items": [
     {
      "source": "Steam News (hub)",
-     "title": "Star Trek Officially Replaces Everyone's Deep Space Nine Crush In Federation Fleet",
-     "url": "https://store.steampowered.com/news/group/38666666/view/677389277779198917",
-     "published": "2026-11-16T00:09Z"
+     "title": "Path of Exile: Covens of Umbra - What We’re Working On",
+     "url": "https://store.steampowered.com/news/app/238960/view/690899935132910573",
+     "published": "2026-11-16T01:17Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-15T07:18Z",
-   "title": "أفضل معادلة بين التبريد والضوضاء؟ مراجعة كيس Cooler Master HAF II 500",
-   "url": "https://arabhardware.net/post-55164",
+   "published": "2026-11-15T05:08Z",
+   "title": "Elden Ring's Official Replacement Releasing In 2027",
+   "url": "https://store.steampowered.com/news/group/38666666/view/677389277779198788",
    "sources": [
-    "Arab Hardware (AR)"
+    "Steam News (hub)"
    ],
-   "ar_relay": true,
+   "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://arabhardware.net/storage/uploads/2026-11/6afa3f6951697.dsc0499jpg.jpgmain6afa3f69635e4.webp"
+     "url": "https://static0.srcdn.com/wordpress/wp-content/uploads/2026/06/3419-1684426832-1901100608.webp"
     }
    ],
    "items": [
     {
-     "source": "Arab Hardware (AR)",
-     "title": "أفضل معادلة بين التبريد والضوضاء؟ مراجعة كيس Cooler Master HAF II 500",
-     "url": "https://arabhardware.net/post-55164",
-     "published": "2026-11-15T07:18Z"
+     "source": "Steam News (hub)",
+     "title": "Elden Ring's Official Replacement Releasing In 2027",
+     "url": "https://store.steampowered.com/news/group/38666666/view/677389277779198788",
+     "published": "2026-11-15T05:08Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "Bad News For Elden Ring 2 After Official FromSoft Announcement",
+     "url": "https://store.steampowered.com/news/group/38666666/view/677389277779198922",
+     "published": "2026-11-16T01:09Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-16T01:00Z",
+   "title": "『GTA6』無料配布はTwitchだけじゃない！動画配信プラットフォーム「Kick」でも「アルティメット・エディション」1万本が当たるキャンペーン実施へ",
+   "url": "http://www.gamespark.jp/article/2026/11/16/174906.html",
+   "sources": [
+    "Game*Spark (JP)"
+   ],
+   "ar_relay": false,
+   "media": [],
+   "items": [
+    {
+     "source": "Game*Spark (JP)",
+     "title": "『GTA6』無料配布はTwitchだけじゃない！動画配信プラットフォーム「Kick」でも「アルティメット・エディション」1万本が当たるキャンペーン実施へ",
+     "url": "http://www.gamespark.jp/article/2026/11/16/174906.html",
+     "published": "2026-11-16T01:00Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-16T00:59Z",
+   "title": "Extremely Rare Pokémon Game Found 20 Years Later",
+   "url": "https://www.polygon.com/pokemon-pokepark-fishing-rally-ds-found/",
+   "sources": [
+    "Polygon"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://static0.polygonimages.com/wordpress/wp-content/uploads/2026/05/pokemon-winds-and-waves-screen-wailord.png"
+    }
+   ],
+   "items": [
+    {
+     "source": "Polygon",
+     "title": "Extremely Rare Pokémon Game Found 20 Years Later",
+     "url": "https://www.polygon.com/pokemon-pokepark-fishing-rally-ds-found/",
+     "published": "2026-11-16T00:59Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-16T00:58Z",
+   "title": "【2420円→499円】感染症の解説書『絵でわかる感染症 with もやしもん』Kindle版が79％オフの日替わりセール中。感染症の内科医と菌マンガのコラボ本",
+   "url": "https://news.denfaminicogamer.jp/news/261116h",
+   "sources": [
+    "Denfaminicogamer (JP)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://news.denfaminicogamer.jp/wp-content/uploads/2026/11/810cwrWKEML._SL1447_-722x1024.png"
+    }
+   ],
+   "items": [
+    {
+     "source": "Denfaminicogamer (JP)",
+     "title": "【2420円→499円】感染症の解説書『絵でわかる感染症 with もやしもん』Kindle版が79％オフの日替わりセール中。感染症の内科医と菌マンガのコラボ本",
+     "url": "https://news.denfaminicogamer.jp/news/261116h",
+     "published": "2026-11-16T00:58Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-16T00:48Z",
+   "title": "【47%オフ】小説『新装版 殺戮にいたる病』のKindle版が「935円→499円」に。『かまいたちの夜』のシナリオを担当した我孫子武丸氏が描く、猟奇的な連続殺人犯の視点で進むサイコホラー",
+   "url": "https://news.denfaminicogamer.jp/news/261116g",
+   "sources": [
+    "Denfaminicogamer (JP)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://news.denfaminicogamer.jp/wp-content/uploads/2026/11/81dHL1lY42L._SL1500_-726x1024.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Denfaminicogamer (JP)",
+     "title": "【47%オフ】小説『新装版 殺戮にいたる病』のKindle版が「935円→499円」に。『かまいたちの夜』のシナリオを担当した我孫子武丸氏が描く、猟奇的な連続殺人犯の視点で進むサイコホラー",
+     "url": "https://news.denfaminicogamer.jp/news/261116g",
+     "published": "2026-11-16T00:48Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-15T23:53Z",
+   "title": "Jensen Huang Reportedly Weighing Return as Nvidia CEO With Allies",
+   "url": "https://www.ign.com/articles/jensen-huang-reportedly-weighing-return-as-nvidia-ceo-with-allies",
+   "sources": [
+    "IGN"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://assets-prd.ignimgs.com/2026/11/15/jensen-huang-1794786327545.png"
+    }
+   ],
+   "items": [
+    {
+     "source": "IGN",
+     "title": "Jensen Huang Reportedly Weighing Return as Nvidia CEO With Allies",
+     "url": "https://www.ign.com/articles/jensen-huang-reportedly-weighing-return-as-nvidia-ceo-with-allies",
+     "published": "2026-11-15T23:53Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-15T23:30Z",
+   "title": "Ova Magica launch trailer – farm-life sim and creature-collecting RPG lands on Nintendo Switch 2, Switch",
+   "url": "https://nintendoeverything.com/ova-magica-launch-trailer/",
+   "sources": [
+    "Nintendo Everything"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://nintendoeverything.com/wp-content/uploads/Ova-Magica-launch-trailer-150x84.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://nintendoeverything.com/wp-content/uploads/Ova-Magica-launch-trailer.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Nintendo Everything",
+     "title": "Ova Magica launch trailer – farm-life sim and creature-collecting RPG lands on Nintendo Switch 2, Switch",
+     "url": "https://nintendoeverything.com/ova-magica-launch-trailer/",
+     "published": "2026-11-15T23:30Z"
     }
    ]
   }
  ],
  "failed": [
-  "Bungie (YouTube) (HTTP 404, 2x)",
-  "CD PROJEKT RED (YouTube) (HTTP 404, 2x)",
-  "Call of Duty (YouTube) (HTTP 404, 2x)",
+  "Bethesda (YouTube) (HTTP 404, 2x)",
+  "Blizzard (YouTube) (HTTP 404, 2x)",
+  "Bungie (YouTube) (HTTP 404, 3x)",
+  "CD PROJEKT RED (YouTube) (HTTP 404, 3x)",
+  "Call of Duty (YouTube) (HTTP 404, 3x)",
   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 80x)",
-  "Capcom USA (YouTube) (HTTP 500, 2x)",
-  "Nintendo of America (X) (HTTP 429, 70x)",
-  "Nintendo of America (YouTube) (HTTP 404, 2x)",
+  "Capcom USA (YouTube) (HTTP 404, 3x)",
+  "EA SPORTS FC (YouTube) (HTTP 500, 2x)",
+  "Fortnite (YouTube) (HTTP 404, 2x)",
+  "Nintendo of America (X) (HTTP 429, 71x)",
+  "Nintendo of America (YouTube) (HTTP 404, 4x)",
   "PlayStation (X) (HTTP 429, 91x)",
-  "PlayStation (YouTube) (HTTP 500, 3x)",
+  "PlayStation (YouTube) (HTTP 500, 4x)",
   "PlayStation Middle East (X) (HTTP 429, 15x)",
-  "PlayStation Middle East (YouTube) (HTTP 404, 2x)",
-  "Riot Games (YouTube) (HTTP 404, 2x)",
+  "PlayStation Middle East (YouTube) (HTTP 404, 3x)",
+  "Pokemon (YouTube) (HTTP 500, 2x)",
+  "Riot Games (YouTube) (HTTP 404, 3x)",
   "Rockstar Games (X) (HTTP 429, 41x)",
-  "Steam (YouTube) (HTTP 404, 2x)",
-  "Xbox (X) (HTTP 429, 89x)"
+  "Rockstar Games (YouTube) (HTTP 404, 2x)",
+  "SEGA (YouTube) (HTTP 404, 2x)",
+  "Square Enix (YouTube) (HTTP 404, 2x)",
+  "Steam (YouTube) (HTTP 404, 3x)",
+  "Ubisoft (YouTube) (HTTP 500, 2x)",
+  "Xbox (X) (HTTP 429, 89x)",
+  "Xbox (YouTube) (HTTP 500, 3x)"
  ],
  "not_covered": [
   {
@@ -253,26 +330,36 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-16T00:50:14Z",
+  "last_poll_at": "2026-11-16T01:50:14Z",
   "sources_enabled": 100,
-  "sources_ok": 77,
-  "sources_failing": 15,
+  "sources_ok": 74,
+  "sources_failing": 25,
   "failed": [
-   "Bungie (YouTube) (HTTP 404, 2x)",
-   "CD PROJEKT RED (YouTube) (HTTP 404, 2x)",
-   "Call of Duty (YouTube) (HTTP 404, 2x)",
+   "Bethesda (YouTube) (HTTP 404, 2x)",
+   "Blizzard (YouTube) (HTTP 404, 2x)",
+   "Bungie (YouTube) (HTTP 404, 3x)",
+   "CD PROJEKT RED (YouTube) (HTTP 404, 3x)",
+   "Call of Duty (YouTube) (HTTP 404, 3x)",
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 80x)",
-   "Capcom USA (YouTube) (HTTP 500, 2x)",
-   "Nintendo of America (X) (HTTP 429, 70x)",
-   "Nintendo of America (YouTube) (HTTP 404, 2x)",
+   "Capcom USA (YouTube) (HTTP 404, 3x)",
+   "EA SPORTS FC (YouTube) (HTTP 500, 2x)",
+   "Fortnite (YouTube) (HTTP 404, 2x)",
+   "Nintendo of America (X) (HTTP 429, 71x)",
+   "Nintendo of America (YouTube) (HTTP 404, 4x)",
    "PlayStation (X) (HTTP 429, 91x)",
-   "PlayStation (YouTube) (HTTP 500, 3x)",
+   "PlayStation (YouTube) (HTTP 500, 4x)",
    "PlayStation Middle East (X) (HTTP 429, 15x)",
-   "PlayStation Middle East (YouTube) (HTTP 404, 2x)",
-   "Riot Games (YouTube) (HTTP 404, 2x)",
+   "PlayStation Middle East (YouTube) (HTTP 404, 3x)",
+   "Pokemon (YouTube) (HTTP 500, 2x)",
+   "Riot Games (YouTube) (HTTP 404, 3x)",
    "Rockstar Games (X) (HTTP 429, 41x)",
-   "Steam (YouTube) (HTTP 404, 2x)",
-   "Xbox (X) (HTTP 429, 89x)"
+   "Rockstar Games (YouTube) (HTTP 404, 2x)",
+   "SEGA (YouTube) (HTTP 404, 2x)",
+   "Square Enix (YouTube) (HTTP 404, 2x)",
+   "Steam (YouTube) (HTTP 404, 3x)",
+   "Ubisoft (YouTube) (HTTP 500, 2x)",
+   "Xbox (X) (HTTP 429, 89x)",
+   "Xbox (YouTube) (HTTP 500, 3x)"
   ]
  }
 }
