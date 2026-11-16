@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-16T16:52:08Z",
- "seq": 542,
+ "generated_at": "2026-11-16T17:52:05Z",
+ "seq": 543,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -251,23 +251,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 509
-  },
-  {
-   "id": 14909,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "XBOX 25th Anniversary Magazine: Explore 25 Years of Games, Stories, and Memories",
-   "url": "https://news.xbox.com/en-us/2026/11/15/xbox-25th-anniversary-the-magazine/",
-   "published": "2026-11-15T17:01Z",
-   "first_seen": "2026-11-15T17:05:15Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 507
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-16T16:50:05Z",
+  "last_poll_at": "2026-11-16T17:50:15Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 6,
