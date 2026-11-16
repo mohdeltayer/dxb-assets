@@ -371,3 +371,4 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | Yacht Club Games (Mina the Hollower) | ياخت كلوب غيمز (Yacht Club Games) | Proposed 15 Nov 2026 (TGA kit credit) |
 | Pugstorm (Core Keeper developer) | بوغستورم | Proposed 16 Nov 2026 (Core Keeper x Dave the Diver Reel credit; Latin in brackets at first mention) |
 | Mintrocket (Dave the Diver developer) | مينتروكت | Proposed 16 Nov 2026 (same Reel; flagged for Mohammad) |
+| Karrot Games (Clicky Islands developer; Steam lists Karrot Games, two-person Polish studio) | كاروت غيمز (Karrot Games) | Proposed 16 Nov 2026 (Clicky Islands Reel credit) |
