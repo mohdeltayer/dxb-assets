@@ -44,3 +44,4 @@ without checking them against the story's own primary.
 - 2026-11-05 · no chip · Nintendo Switch 2 lineup through 2027 v6: earliest to latest, upbeat launch bed (`2026-11-05-nintendo-switch-2-lineup-through-2027-v6`)
 - 2026-11-09 · متوفر الآن · split · A Little to the Left: Nintendo Switch 2 Edition out now (shadow drop), free upgrade (`2026-11-09-a-little-to-the-left-switch-2-edition-out-now`)
 - 2026-11-10 · no chip · Switch 2 highest weekly US dollar sales of 2026 so far, Zelda 40th Anniversary Edition (Circana, w/e Oct 31) (`2026-11-10-switch-2-zelda-40th-highest-weekly-us-sales`)
+- 2026-11-16 · جديد · Pikmin 4 Nintendo Switch 2 Edition + Dandori Academy: Metacritic user score 2 out of 10 (257 users) against a Metascore of 83 (25 critics) (`2026-11-16-pikmin-4-switch-2-user-score`)

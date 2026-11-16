@@ -23,3 +23,4 @@ without checking them against the story's own primary.
 - 2026-09-22 · no chip · The trilogy finale has a button for people who never finished Rebirth. (`2026-09-22-ff7-revelation-levelup`)
 
 ## Log (one line per published post, added by presubmit.py published)
+- 2026-11-16 · رسمي · FINAL FANTASY XIV: longest Free Login Campaign ever, up to 30 days free, 16 Nov 2026 to 14 Jan 2027, ahead of Evercold (early access 19 Feb 2027) (`2026-11-16-ffxiv-road-to-evercold-free-login`)

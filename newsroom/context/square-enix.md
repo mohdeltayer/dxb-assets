@@ -28,3 +28,4 @@ without checking them against the story's own primary.
 
 ## Log (one line per published post, added by presubmit.py published)
 - 2026-11-09 · رسمي · split · Dragon Quest III HD-2D Remake and Dynasty Warriors: Origins join the PS Plus Game Catalog (Japan) (`2026-11-09-dragon-quest-iii-hd-2d-ps-plus-catalog-nov-17`)
+- 2026-11-16 · رسمي · FINAL FANTASY XIV: longest Free Login Campaign ever, up to 30 days free, 16 Nov 2026 to 14 Jan 2027, ahead of Evercold (early access 19 Feb 2027) (`2026-11-16-ffxiv-road-to-evercold-free-login`)
