@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-16T07:52:07Z",
- "seq": 527,
+ "generated_at": "2026-11-16T08:52:06Z",
+ "seq": 528,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -188,37 +188,25 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-16T07:50:15Z",
+  "last_poll_at": "2026-11-16T08:50:05Z",
   "sources_enabled": 100,
-  "sources_ok": 73,
-  "sources_failing": 26,
+  "sources_ok": 84,
+  "sources_failing": 14,
   "failed": [
-   "Bethesda (YouTube) (HTTP 404, 5x)",
-   "Blizzard (YouTube) (HTTP 404, 5x)",
    "Bungie (YouTube) (HTTP 404, 6x)",
    "CD PROJEKT RED (YouTube) (HTTP 404, 6x)",
    "Call of Duty (YouTube) (HTTP 404, 6x)",
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 83x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 84x)",
    "Capcom USA (YouTube) (HTTP 404, 6x)",
-   "EA SPORTS FC (YouTube) (HTTP 404, 5x)",
-   "Fortnite (YouTube) (HTTP 404, 5x)",
    "Nintendo of America (X) (HTTP 429, 71x)",
-   "Nintendo of America (YouTube) (HTTP 404, 10x)",
-   "PlayStation (YouTube) (HTTP 404, 13x)",
    "PlayStation MENA (YouTube) (HTTP 404, 5x)",
    "PlayStation Middle East (X) (HTTP 429, 15x)",
    "PlayStation Middle East (YouTube) (HTTP 404, 6x)",
-   "Pokemon (YouTube) (HTTP 404, 5x)",
    "Riot Games (YouTube) (HTTP 404, 6x)",
    "Rockstar Games (X) (HTTP 429, 42x)",
-   "Rockstar Games (YouTube) (HTTP 404, 11x)",
-   "SEGA (YouTube) (HTTP 404, 4x)",
-   "Square Enix (YouTube) (HTTP 404, 5x)",
    "Steam (YouTube) (HTTP 404, 6x)",
-   "The Game Awards (ValueError: 0 article links (expected 1+), layout changed or drawn by script, 2x)",
-   "Ubisoft (YouTube) (HTTP 404, 5x)",
-   "Xbox (X) (HTTP 429, 90x)",
-   "Xbox (YouTube) (HTTP 404, 12x)"
+   "The Game Awards (ValueError: 0 article links (expected 1+), layout changed or drawn by script, 3x)",
+   "Xbox (X) (HTTP 429, 90x)"
   ]
  }
 }
