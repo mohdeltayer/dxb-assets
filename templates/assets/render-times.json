@@ -79971,5 +79971,163 @@
   "dispatches": 1,
   "sound": "bed:neon_c (trailers opened and why each is unusable: EA SPORTS UFC 6 Official Reveal Trailer (IGN, 5 May 2026, 140 s): narration 30.9-101.5 s and 117.5-122.4 s (faster-whisper); the server's music_only split refused 40.52 s (music stem leftover 8.4% > 5%) and the narration-free 101.6 s stretch (leftover 14.4%, effects-led fight audio); Official Game Modes Overview (IGN, 28 May 2026, 319 s) and Official Gameplay Deep Dive (IGN, 15 May 2026, 313 s): narrated throughout, no narration-free gap of 12 s or more (faster-whisper, VAD))",
   "footage": true
+ },
+ {
+  "name": "zombies-arent-real-early-access-november-16-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-16T06:11Z",
+  "stages": {
+   "checks": 4.7,
+   "montage": 36.1,
+   "text": 27.5,
+   "audio": 1.1,
+   "outro": 13.9
+  },
+  "total": 83.2,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-16T06:10Z",
+  "finished_at": "2026-11-16T06:11Z",
+  "render_min": 1.39,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "zombies-arent-real-early-access-november-16-trailer.mp4",
+    "start": 10.5,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.63,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "zombies-arent-real-early-access-november-16-trailer.mp4",
+    "start": 17.46,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.63,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "zombies-arent-real-early-access-november-16-trailer.mp4",
+    "start": 24.7,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.63,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "zombies-arent-real-early-access-november-16-trailer.mp4",
+    "start": 31.68,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.63,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "zombies-arent-real-early-access-november-16-trailer.mp4",
+    "start": 38.8,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.63,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "zombies-arent-real-early-access-november-16-trailer.mp4",
+    "start": 43.95,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.63,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "zombies-arent-real-early-access-november-16-trailer.mp4",
+    "start": 49.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.63,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 9.0,
+   "audio_secs": 42.5,
+   "music_pct": 86.7,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 7,
+   "mix_secs": 3.3,
+   "secs": 13.4
+  },
+  "lifeless": {
+   "score": 10.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 0.83,
+   "held_under_text": 0.0,
+   "secs": 12.0,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 184,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1230,
+  "peak_mem_mb": 3616,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 47748,
+  "peak_disk_mb": 49968,
+  "min_disk_free_mb": 196138,
+  "setup_min": 0.22,
+  "story": "zombies-arent-real-early-access-november-16",
+  "job_sha": "0a6b9631d7c805e29b933c801d7b2d435a63e6ff",
+  "dispatches": 1,
+  "sound": "trailer",
+  "footage": true
  }
 ]
