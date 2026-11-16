@@ -81177,5 +81177,183 @@
   "dispatches": 2,
   "sound": "bed:neon_d (leak rule (26 Oct) and the card adv-20261116-switch-2-dlss-datamine: datamine stories take our bed, not trailer sound; footage is Nintendo's Switch 2 product clips (nintendo.com features page))",
   "footage": true
+ },
+ {
+  "name": "core-keeper-dave-the-diver-crossover-november-30-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-16T17:53Z",
+  "stages": {
+   "checks": 9.4,
+   "montage": 69.0,
+   "text": 77.4,
+   "audio": 1.9,
+   "outro": 32.8
+  },
+  "total": 190.5,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-16T17:50Z",
+  "finished_at": "2026-11-16T17:53Z",
+  "render_min": 3.17,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "ck.mp4",
+    "start": 9.2,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.76,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "dd.mp4",
+    "start": 71.2,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.58,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "ck.mp4",
+    "start": 31.2,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.76,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "dd.mp4",
+    "start": 29.7,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.58,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "ck.mp4",
+    "start": 36.75,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.76,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "ck.mp4",
+    "start": 14.9,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.76,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "ck.mp4",
+    "start": 54.4,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.76,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "ck.mp4",
+    "start": 43.35,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.76,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "ck.mp4",
+    "start": 17.9,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.76,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 9,
+    "file": "dd.mp4",
+    "start": 40.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.58,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 7.8,
+   "still_share": 0.049,
+   "longest_still": 1.3,
+   "cuts_per_10s": 5.64,
+   "held_under_text": 0.011,
+   "secs": 26.6,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 348,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 976,
+  "peak_mem_mb": 2564,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 49538,
+  "peak_disk_mb": 53824,
+  "min_disk_free_mb": 192282,
+  "setup_min": 0.17,
+  "story": "core-keeper-dave-the-diver-crossover-november-30",
+  "job_sha": "046085654246cf4d1bf44e4bb19dbf708bef5361",
+  "dispatches": 1,
+  "sound": "bed:neon_c (Core Keeper 'Riders of the Underground' trailer carries the music of an earlier update and Dave the Diver 'Dive In Now' the sound of a different game; one trailer track cannot sit under shots from both, so our bed)",
+  "footage": true
  }
 ]
