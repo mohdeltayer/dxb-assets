@@ -80999,5 +80999,183 @@
   "dispatches": 1,
   "sound": "bed:neon_e (leak rule (26 Oct) and the card adv-20261116-switch-2-dlss-datamine: datamine stories take our bed, not trailer sound; footage is Nintendo's Switch 2 product clips (nintendo.com features page))",
   "footage": true
+ },
+ {
+  "name": "switch-2-dlss-datamine-nov-16-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-16T14:59Z",
+  "stages": {
+   "checks": 8.2,
+   "montage": 43.2,
+   "text": 60.1,
+   "audio": 1.8,
+   "outro": 31.3
+  },
+  "total": 144.6,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-16T14:57Z",
+  "finished_at": "2026-11-16T14:59Z",
+  "render_min": 2.41,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "ns2-joycon-attach.mp4",
+    "start": 0.2,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 3.21,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 1,
+    "file": "ns2-tv-mode-montage.mp4",
+    "start": 2.56,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 19.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "ns2-tv-mode-montage.mp4",
+    "start": 5.17,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 19.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "ns2-tv-mode-montage.mp4",
+    "start": 7.22,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 19.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "ns2-tv-mode-montage.mp4",
+    "start": 9.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 19.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "ns2-tv-mode-montage.mp4",
+    "start": 10.78,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 19.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "ns2-tv-mode-montage.mp4",
+    "start": 13.08,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 19.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "ns2-tv-mode-montage.mp4",
+    "start": 15.75,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 19.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "ns2-tv-mode-montage.mp4",
+    "start": 17.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 19.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 9,
+    "file": "ns2-joycon-attach.mp4",
+    "start": 3.82,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 3.21,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 2
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 0.1,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 4.39,
+   "held_under_text": 0.009,
+   "secs": 22.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 339,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1083,
+  "peak_mem_mb": 2347,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 48218,
+  "peak_disk_mb": 52127,
+  "min_disk_free_mb": 193979,
+  "setup_min": 0.15,
+  "story": "switch-2-dlss-datamine-nov-16",
+  "job_sha": "02a4fdfbe18ec15ce535496a1f40aa2bef67c827",
+  "dispatches": 2,
+  "sound": "bed:neon_d (leak rule (26 Oct) and the card adv-20261116-switch-2-dlss-datamine: datamine stories take our bed, not trailer sound; footage is Nintendo's Switch 2 product clips (nintendo.com features page))",
+  "footage": true
  }
 ]
