@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-16T18:05:19Z",
- "seq": 544,
+ "generated_at": "2026-11-16T18:52:06Z",
+ "seq": 545,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
+  {
+   "id": 15699,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Crazy Taxi: World Tour | Welcome to India",
+   "url": "https://www.youtube.com/watch?v=2M9lXIT55lM",
+   "published": "2026-11-16T18:00Z",
+   "first_seen": "2026-11-16T18:05:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/2M9lXIT55lM/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=2M9lXIT55lM"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 544
+  },
   {
    "id": 15698,
    "source": "PlayStation (YouTube)",
@@ -26,29 +48,6 @@
    "breaking_source": true,
    "breaking_seq": 544
   },
-  {
-   "id": 15699,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Crazy Taxi: World Tour | Welcome to India",
-   "url": "https://www.youtube.com/watch?v=2M9lXIT55lM",
-   "published": "2026-11-16T18:00Z",
-   "first_seen": "2026-11-16T18:05:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/2M9lXIT55lM/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=2M9lXIT55lM"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 544
-  }
- ],
- "recent": [
   {
    "id": 15524,
    "source": "PlayStation (YouTube)",
@@ -252,58 +251,16 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 522
-  },
-  {
-   "id": 14950,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Once Human Season 5: Dissonant Resonance - Gameplay Trailer",
-   "url": "https://www.youtube.com/watch?v=jTbZmTO4auk",
-   "published": "2026-11-15T18:00Z",
-   "first_seen": "2026-11-15T18:20:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/jTbZmTO4auk/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=jTbZmTO4auk"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 510
-  },
-  {
-   "id": 14943,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Once Human - Season 5: Dissonant Resonance Gameplay Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=Q747LpUuLTA",
-   "published": "2026-11-15T18:00Z",
-   "first_seen": "2026-11-15T18:15:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/Q747LpUuLTA/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=Q747LpUuLTA"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 509
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-16T18:05:15Z",
+  "last_poll_at": "2026-11-16T18:50:15Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 88x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 89x)",
    "Nintendo of America (X) (HTTP 429, 72x)",
    "PlayStation (X) (HTTP 429, 3x)",
    "PlayStation Middle East (X) (HTTP 429, 16x)",
