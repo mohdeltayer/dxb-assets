@@ -69,5 +69,25 @@
   "what_it_means_here": "a new Free Play mode (vehicle, character, planet, track) with up to four local players; platforms and price not stated",
   "payoff": "early 2027"
  },
- "sensitive": "none"
+ "sensitive": "none",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/galactic-racer-split-screen-free-play-november-16-reel-v1.mp4",
+  "blob": "237321d3cb1c004500124730ddbd4615d465bc0a",
+  "at": "2026-11-16T22:29:51Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/galactic-racer-split-screen-free-play-november-16.json",
+   "sha256": "68e301e6c3d2bad26304272c54b552ef1e8e82df0949c3ae78a48ffe1ebc12f2",
+   "ok": true,
+   "problems": [],
+   "template": "stills",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Look frames: Star Wars racer pods over desert with headline 'شاشة مقسومة في Galactic Racer' and تقرير chip, Pure Xbox credit on every shot; Free Play line and strip 'حتى 4 محليًا / مطلع 2027'; closing line 'يتسع لأربعة لاعبين حسب بيور إكس بوكس'. Text matches Pure Xbox claims; no price/platform claimed; no graphic content."
+ }
 }
