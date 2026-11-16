@@ -1,0 +1,188 @@
+{
+ "name": "galactic-racer-split-screen-free-play-november-16",
+ "story": "2026-11-16-galactic-racer-split-screen-free-play",
+ "kind_news": "update",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/galactic-racer-split-screen-free-play-november-16-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "galactic-racer-split-screen-story.mp4",
+   "steam": 4078430,
+   "trailer": "Official Story Trailer",
+   "start": 0,
+   "seconds": 150
+  }
+ ],
+ "shots": [
+  [
+   "galactic-racer-split-screen-story.mp4",
+   8.0,
+   3.5,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "galactic-racer-split-screen-story.mp4",
+   20.0,
+   2.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "galactic-racer-split-screen-story.mp4",
+   30.0,
+   2.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "galactic-racer-split-screen-story.mp4",
+   40.0,
+   2.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "galactic-racer-split-screen-story.mp4",
+   50.0,
+   2.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "galactic-racer-split-screen-story.mp4",
+   60.0,
+   2.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "لعب محلي بشاشة مقسومة\nيصل في مطلع 2027",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "مع وضع Free Play تختار فيه\nالمركبة والكوكب والمضمار",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "ويتسع لأربعة لاعبين\nحسب بيور إكس بوكس (Pure Xbox)",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: حساب اللعبة على X · بيور إكس بوكس (Pure Xbox)",
+   {
+    "size": 40,
+    "band": true,
+    "from_start": true
+   }
+  ]
+ ],
+ "headline": "شاشة مقسومة\nفي Galactic Racer",
+ "label": "تقرير",
+ "source": "حساب اللعبة على X",
+ "date": "16 Nov 2026",
+ "theme": "stylized",
+ "style": null,
+ "template": "split",
+ "skin": "house",
+ "cut": false,
+ "track": "bed",
+ "sound": null,
+ "spoken": "أُعلن عن لعب محلي بشاشة مقسومة يصل في مطلع 2027 إلى STAR WARS: Galactic Racer، حسب حساب اللعبة الرسمي على X. مع وضع Free Play تختار فيه المركبة والكوكب والمضمار. ويتسع لأربعة لاعبين حسب بيور إكس بوكس (Pure Xbox).",
+ "strip": [
+  [
+   "الإصدار",
+   "مطلع 2027"
+  ],
+  [
+   "اللاعبون",
+   "حتى 4 محليًا"
+  ]
+ ],
+ "angle": {
+  "hook": "the Star Wars racer adds the most-requested feature: local split-screen for up to four",
+  "why_now": "announced on the game's official X account on 16 Nov, relayed by Pure Xbox, Eurogamer and True Gaming",
+  "what_it_means_here": "a new Free Play mode (vehicle, character, planet, track) with up to four local players; platforms and price not stated",
+  "payoff": "early 2027"
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "no: the official @SWGalacticRacer X post cannot be read by automation (X 429); read Pure Xbox in full (quote 'We've heard you! Local split-screen multiplayer racing is coming in early 2027.'), True Gaming, Eurogamer headline; run as report naming outlet",
+  "SOURCE: not already posted": "yes: ledger find galactic racer: 1.5M players (14 Nov) is a different story; split-screen is new today",
+  "SOURCE: age": "yes: first report 16 Nov 17:25Z, under 24 h",
+  "ANGLE before lines": "yes",
+  "STORY TYPE update": "yes: what is new, when, who",
+  "STORY: spoken paragraph, subject before pronoun": "yes",
+  "STORY: release verbs": "yes: يصل for the window, no date claimed",
+  "STORY: names match names-ar.md": "Pure Xbox بيور إكس بوكس in use; Free Play stays Latin",
+  "POST: Arabic passes": "author against glossary",
+  "SOUND: footage sound or bed with reason": "our bed: Official Story Trailer is narrated",
+  "SOUND: no speech under Arabic lines": "bed",
+  "PICTURE: footage first": "yes: official Steam Official Story Trailer (Gameplay and Launch trailers are letterboxed); footage is not the split-screen mode, credit says so",
+  "PICTURE: not the same as last 5 reels": "yes",
+  "CREDIT: on every clip": "yes"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "server shots list",
+   "alternatives": "letterboxed gameplay trailer",
+   "crop": "shotpick focus",
+   "music": "bed"
+  }
+ ]
+}
