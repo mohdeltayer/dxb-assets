@@ -1,7 +1,7 @@
 {
  "id": "2026-11-16-core-keeper-dave-the-diver-crossover",
  "title": "Core Keeper x Dave the Diver crossover update on 30 Nov 2026 (Pugstorm, Mintrocket)",
- "status": "building",
+ "status": "scheduled",
  "lane": "digital-lounge",
  "game": "Core Keeper",
  "companies": [
@@ -43,5 +43,26 @@
    "dave"
   ],
   "hits": []
- }
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/core-keeper-dave-the-diver-crossover-november-30-reel-v1.mp4",
+  "blob": "a3d1e93615a75fe8ff9656c0a7e246e07394bba8",
+  "at": "2026-11-16T18:17:21Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/core-keeper-dave-the-diver-crossover-november-30.json",
+   "sha256": "da7b02fc65c1b3a624c1334a5d53398d371f16fd9ce81dd391b0ed76132aca6e",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1: dark green Core Keeper forest hook with Arabic headline 'Core Keeper تتعاون مع Dave the Diver' and official tag; look-2: Core Keeper cave scene with Arabic line about the Blue Hole scene and Ellefin creatures, source and info card readable; look-3: Dave the Diver pixel-art diver on blue ocean with 'إلى لعبة Dave the Diver' line, readable. Strip and dense strip: consistent subtitles and info card, Core Keeper and Dave the Diver footage, end card, no gore, no wrong subject"
+ },
+ "scheduled": "scheduled in Publer 19:05Z (23:05 Dubai) on Instagram, X, Threads, job status complete 18:18Z"
 }
