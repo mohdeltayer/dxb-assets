@@ -1,0 +1,31 @@
+{
+ "name": "switch-2-dlss-datamine-nov-16",
+ "out": "cards/2026-11/switch-2-dlss-datamine-nov-16-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-16T14:52:02Z",
+ "findings": [],
+ "notes": [
+  "length 23.5 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "source quality: ns2-joycon-attach.mp4: low bitrate 3.2 Mbps (floor 5.0 Mbps for 1920x1080 at 30 fps) (lowbit)",
+  "source quality: ns2-logo-4k.mp4: low bitrate 1.6 Mbps (floor 5.0 Mbps for 3840x2160 at 30 fps) (lowbit)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 17.2, \"still_share\": 0.12, \"longest_still\": 2.8, \"cuts_per_10s\": 4.27, \"held_under_text\": 0.009, \"secs\": 23.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "502ecf0a1ad31ea502044be6f45e8c29b95b133f",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 3
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/switch-2-dlss-datamine-nov-16-look-1.jpg",
+  "cards/2026-11/switch-2-dlss-datamine-nov-16-look-2.jpg",
+  "cards/2026-11/switch-2-dlss-datamine-nov-16-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_e (leak rule (26 Oct) and the card adv-20261116-switch-2-dlss-datamine: datamine stories take our bed, not trailer sound; footage is Nintendo's Switch 2 product clips (nintendo.com features page))"
+}
