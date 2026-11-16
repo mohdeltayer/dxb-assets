@@ -58,5 +58,25 @@
   ],
   "hits": []
  },
- "gate": "gate 11:5xZ: Mojang Steam post read in full; no denial"
+ "gate": "gate 11:5xZ: Mojang Steam post read in full; no denial",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/minecraft-dungeons-2-humblers-awaken-dlc-december-1-reel-v1.mp4",
+  "blob": "c84686aaeaea0966e11ddc6453571e3f961019ef",
+  "at": "2026-11-16T12:21:28Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/minecraft-dungeons-2-humblers-awaken-dlc-december-1.json",
+   "sha256": "128b53cfd5c639a159139cccd45b99be17743b1292a7ef809db198dd504c08c3",
+   "ok": true,
+   "problems": [],
+   "template": "stills",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "key art with headline and official chip, Sift ghosts, party and fireworks; Arabic lines readable, none under a face; no graphic content; facts match story"
+ }
 }
