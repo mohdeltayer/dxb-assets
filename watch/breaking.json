@@ -1,10 +1,23 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-16T05:52:05Z",
- "seq": 523,
+ "generated_at": "2026-11-16T06:05:08Z",
+ "seq": 524,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 15130,
+   "source": "Nintendo Japan",
+   "source_kind": "official",
+   "title": "「スプラトゥーン レイダース イカすアートブック」発売決定＆予約開始。Nintendo Storeの数量限定特典もご紹介。",
+   "url": "https://www.nintendo.com/jp/topics/article/c73c1b54-c93c-4895-aaaa-8ced4b6508cb",
+   "published": "2026-11-16T06:01Z",
+   "first_seen": "2026-11-16T06:05:04Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 524
+  }
+ ],
  "recent": [
   {
    "id": 15103,
@@ -96,24 +109,24 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-16T05:50:05Z",
+  "last_poll_at": "2026-11-16T06:05:04Z",
   "sources_enabled": 100,
   "sources_ok": 74,
   "sources_failing": 26,
   "failed": [
-   "Bethesda (YouTube) (HTTP 404, 4x)",
-   "Blizzard (YouTube) (HTTP 404, 4x)",
+   "Bethesda (YouTube) (HTTP 404, 5x)",
+   "Blizzard (YouTube) (HTTP 404, 5x)",
    "Bungie (YouTube) (HTTP 404, 5x)",
    "CD PROJEKT RED (YouTube) (HTTP 404, 5x)",
    "Call of Duty (YouTube) (HTTP 404, 5x)",
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 82x)",
    "Capcom USA (YouTube) (HTTP 404, 5x)",
-   "EA SPORTS FC (YouTube) (HTTP 404, 4x)",
+   "EA SPORTS FC (YouTube) (HTTP 404, 5x)",
    "Fortnite (YouTube) (HTTP 404, 4x)",
    "Nintendo of America (X) (HTTP 429, 71x)",
    "Nintendo of America (YouTube) (HTTP 404, 7x)",
    "PlayStation (X) (HTTP 429, 91x)",
-   "PlayStation (YouTube) (HTTP 404, 10x)",
+   "PlayStation (YouTube) (HTTP 404, 11x)",
    "PlayStation MENA (YouTube) (HTTP 404, 4x)",
    "PlayStation Middle East (X) (HTTP 429, 15x)",
    "PlayStation Middle East (YouTube) (HTTP 404, 5x)",
@@ -124,7 +137,7 @@
    "SEGA (YouTube) (HTTP 404, 3x)",
    "Square Enix (YouTube) (HTTP 404, 4x)",
    "Steam (YouTube) (HTTP 404, 5x)",
-   "Ubisoft (YouTube) (HTTP 404, 4x)",
+   "Ubisoft (YouTube) (HTTP 404, 5x)",
    "Xbox (X) (HTTP 429, 90x)",
    "Xbox (YouTube) (HTTP 404, 9x)"
   ]
