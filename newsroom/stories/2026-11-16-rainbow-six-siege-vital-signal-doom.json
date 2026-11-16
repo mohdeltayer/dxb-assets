@@ -59,14 +59,23 @@
   }
  ],
  "director_check": {
-  "verdict": "FIX",
-  "out": "cards/2026-11/rainbow-six-siege-vital-signal-doom-nov-16-reel-v1.mp4",
-  "blob": "2906ceb5cc1ccb179567e53cfdb2f082d4893d89",
-  "at": "2026-11-16T12:34:45Z",
-  "note": "DOOM Slayer is named in the headline and the payoff line but never shown: both sit on Doc's Vital Signal key art, so a viewer reads Doc as the DOOM Slayer skin. Open (shot 0) and close (shot 5, line 3) on official DOOM Slayer art from id Software/Bethesda's press kit, credited on screen as a stand-in; keep the rest as built.",
-  "checklist": null,
-  "by": "director-agent-16nov",
+  "verdict": "PASS",
+  "out": "cards/2026-11/rainbow-six-siege-vital-signal-doom-nov-16-reel-v2.mp4",
+  "blob": "d17126f7b1c887cd9eeb1c6169dfd5e8c5955348",
+  "at": "2026-11-16T13:25:11Z",
+  "note": "Send-back fixed: the DOOM Slayer is now on screen at the hook (0-3.8 s) and at the payoff (16.2-19.3 s), credited as DOOM: The Dark Ages art, and Doc's remote-heal line sits on the Vital Signal key art. All lines, credits and headline open on Arabic, no flipped signs, inside the safe zone; nothing graphic; last 2 s a picture. Weak: shot 1 shows the back of an operator's shoulder, not a face; the two ranked emblems look alike; the Slayer still is DOOM's own art, not the Siege skin itself.",
+  "checklist": {
+   "job": "jobs/live/rainbow-six-siege-vital-signal-doom-nov-16.json",
+   "sha256": "6712e9423e140ec731d78f9f799d855393561e68e03f8a28a29aca72f93de6cd",
+   "ok": true,
+   "problems": [],
+   "template": "stills",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-1"
+  },
+  "by": "director-agent-16nov-d",
   "qc": "pass",
-  "looked": null
+  "looked": "1: DOOM Slayer close-up under chip رسمي and the two-line headline, readable at grid size; 2: Solo/Duo ranked emblem with credit and the ranked-split line; 3: DOOM Slayer close-up with its credit and the 22 Dec line, dimmed into the end-card fade"
  }
 }
