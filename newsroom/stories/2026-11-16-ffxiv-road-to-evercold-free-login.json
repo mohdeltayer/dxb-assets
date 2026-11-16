@@ -58,5 +58,25 @@
    "2026-10-31-ffxiv-35-million-accounts",
    "2026-10-31-ffxiv-evercold-february-23-2027"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/ffxiv-road-to-evercold-free-login-nov-16-reel-v1.mp4",
+  "blob": "15546c8977acb9acb5ac148d4eb930ed44199ae1",
+  "at": "2026-11-16T12:39:49Z",
+  "note": "PASS: Square Enix vertical promo, no crop, bed justified (silent source); headline, lines, strip and credit Arabic-first; strip dates and lines do not repeat; facts match the campaign page; last 2 s the hero's face; nothing graphic, no slate, no damage",
+  "checklist": {
+   "job": "jobs/live/ffxiv-road-to-evercold-free-login-nov-16.json",
+   "sha256": "5e357f91c54518f0a6104c067644277fb796e28ae30057725410391fafece67a",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-1"
+  },
+  "by": "director-agent-16nov-b",
+  "qc": "pass",
+  "looked": "1: chip رسمي and two-line headline over the moving crystal burst, readable; 2: lines 1 over pale fog/flower with the start/end strip, credit top; 3: Evercold early-access line over the hooded hero's close-up face with the strip"
  }
 }
