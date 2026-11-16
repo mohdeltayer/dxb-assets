@@ -1,11 +1,226 @@
 {
  "name": "zombies-arent-real-early-access-november-16",
  "story": "2026-11-16-zombies-arent-real-early-access",
+ "kind_news": "launch",
+ "built_by": "production-2",
  "render_lane": "server",
+ "out": "cards/2026-11/zombies-arent-real-early-access-november-16-reel-v1.mp4",
  "footage": [
-  {"file": "zombies-arent-real-early-access-november-16-trailer.mp4", "steam": 5185890, "trailer": "Trailer", "start": 0, "seconds": 120}
+  {
+   "file": "zombies-arent-real-early-access-november-16-trailer.mp4",
+   "steam": 5185890,
+   "trailer": "Trailer",
+   "start": 0,
+   "seconds": 120
+  }
  ],
  "shots": [
-  ["zombies-arent-real-early-access-november-16-trailer.mp4", 2.0, 2.0, [[0.0, 0.5]]]
+  [
+   "zombies-arent-real-early-access-november-16-trailer.mp4",
+   10.5,
+   3.4,
+   [
+    [
+     0.0,
+     0.453
+    ]
+   ]
+  ],
+  [
+   "zombies-arent-real-early-access-november-16-trailer.mp4",
+   17.46,
+   1.8,
+   [
+    [
+     0.0,
+     0.828
+    ]
+   ]
+  ],
+  [
+   "zombies-arent-real-early-access-november-16-trailer.mp4",
+   24.7,
+   1.7,
+   [
+    [
+     0.0,
+     0.178
+    ]
+   ]
+  ],
+  [
+   "zombies-arent-real-early-access-november-16-trailer.mp4",
+   31.68,
+   1.8,
+   [
+    [
+     0.0,
+     0.721
+    ]
+   ]
+  ],
+  [
+   "zombies-arent-real-early-access-november-16-trailer.mp4",
+   38.8,
+   1.8,
+   [
+    [
+     0.0,
+     0.548
+    ]
+   ]
+  ],
+  [
+   "zombies-arent-real-early-access-november-16-trailer.mp4",
+   43.95,
+   1.9,
+   [
+    [
+     0.0,
+     0.594
+    ]
+   ]
+  ],
+  [
+   "zombies-arent-real-early-access-november-16-trailer.mp4",
+   49.0,
+   2.0,
+   [
+    [
+     0.0,
+     0.358
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "تنشر فيها قواتك",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "لوقف عدوى زومبي سريعة الانتشار",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "وتنقذ أكبر عدد من المدنيين",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: جوغاميديف (Jogamedev)",
+   {
+    "size": 40,
+    "band": true,
+    "from_start": true
+   }
+  ]
+ ],
+ "headline": "صدرت Zombies Aren't Real\nبنسخة الوصول المبكر",
+ "label": "متوفرة الآن",
+ "source": "جوغاميديف (Jogamedev)",
+ "date": "16 Nov 2026",
+ "theme": "stylized",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "zombies-arent-real-early-access-november-16-trailer.mp4",
+  10.5
+ ],
+ "spoken": "صدرت Zombies Aren't Real بنسخة الوصول المبكر على Steam. تنشر فيها قواتك لوقف عدوى زومبي سريعة الانتشار، وتنقذ أكبر عدد من المدنيين. ويقيّم 96% من أصحاب المراجعات على Steam اللعبة إيجابيًا.",
+ "strip": [
+  [
+   "المنصة",
+   "Steam"
+  ],
+  [
+   "السعر",
+   "8.99 دولارًا"
+  ],
+  [
+   "التقييم",
+   "96% إيجابي"
+  ]
+ ],
+ "angle": {
+  "hook": "a horde-defense strategy game where you deploy troops against a fast-spreading zombie outbreak, now in Early Access on Steam",
+  "why_now": "it released on 13 Nov and Steam shows 96% positive of 872 reviews (Overwhelmingly Positive) three days in",
+  "what_it_means_here": "PC players in the region can buy it on Steam for USD 8.99; English only, no Arabic option",
+  "payoff": "the 1.0 version is planned for Q1 2027"
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam store page and appdetails read 16 Nov 05:2xZ (release date, price, Early Access FAQ, review summary 96% of 872)",
+  "SOURCE: not already posted": "yes: ledger find zombies aren real, no match",
+  "SOURCE: age": "AGE: released 13 Nov, 3 days; built under revised step 6 (minor items eligible) because the Publer gap is 3+ hours",
+  "ANGLE before lines": "yes",
+  "STORY TYPE launch": "yes: date, price, platform, Early Access plan from the Steam page",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names the game, lines start with a verb of the player",
+  "STORY: release verbs": "yes: صدرت for the date",
+  "STORY: names match names-ar.md": "Jogamedev as جوغاميديف (Jogamedev), new row flagged for Mohammad",
+  "POST: Arabic passes": "checked by the author against the glossary; DeepL not run (connector)",
+  "SOUND: footage sound or bed with reason": "trailer own sound, audio split on the server decides",
+  "SOUND: no speech under Arabic lines": "server speech check is final",
+  "PICTURE: footage first": "yes: official Steam trailer, 7 server-picked clean stretches in source order",
+  "PICTURE: not the same as last 5 reels": "yes",
+  "CREDIT: on every clip": "yes"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "10.5 s",
+   "alternatives": "server shots list",
+   "crop": "shotpick focus",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "1 L1 deploy troops",
+   "shot": "17.46 and 24.7 s",
+   "alternatives": "server shots list",
+   "crop": "shotpick focus",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "2 L2 outbreak",
+   "shot": "31.68 and 38.8 s",
+   "alternatives": "server shots list",
+   "crop": "shotpick focus",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "3 L3 civilians",
+   "shot": "43.95 and 49.0 s",
+   "alternatives": "server shots list",
+   "crop": "shotpick focus",
+   "music": "trailer own sound"
+  }
  ]
 }
