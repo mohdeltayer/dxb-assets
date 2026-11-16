@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-16T10:45:38Z",
- "seq": 530,
+ "generated_at": "2026-11-16T10:52:05Z",
+ "seq": 531,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 15301,
    "source": "Xbox Wire",
@@ -16,9 +17,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 530
-  }
- ],
- "recent": [
+  },
   {
    "id": 15156,
    "source": "PlayStation (X)",
@@ -201,7 +200,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-16T10:45:15Z",
+  "last_poll_at": "2026-11-16T10:50:15Z",
   "sources_enabled": 100,
   "sources_ok": 92,
   "sources_failing": 7,
