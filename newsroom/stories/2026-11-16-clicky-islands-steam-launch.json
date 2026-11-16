@@ -1,7 +1,7 @@
 {
  "id": "2026-11-16-clicky-islands-steam-launch",
  "title": "Clicky Islands (Karrot Games, Pocketpair Publishing) launches on Steam 16 Nov 2026 at 9.99 USD with 20% launch discount",
- "status": "building",
+ "status": "scheduled Tue 17 Nov 04:05 Dubai on Instagram, X, Threads",
  "lane": "digital-lounge",
  "game": "Clicky Islands",
  "companies": [
@@ -51,5 +51,25 @@
   "threads": "صدرت Clicky Islands على Steam بنشر بوكيت بير (Pocketpair): لعبة نقر وبناء مدن تحول فيها جزيرة إلى مملكة. السعر 9.99 دولار مع خصم 20% عند الإطلاق، حسب صفحة اللعبة.",
   "credit": "المصدر: صفحة اللعبة على Steam",
   "instagram_caption": "صدرت Clicky Islands على Steam\n\nلعبة نقر وبناء مدن من تطوير كاروت غيمز (Karrot Games) وبنشر بوكيت بير (Pocketpair Publishing)، الجهة الناشرة التابعة لاستوديو بوكيت بير (Pocketpair). تلعب حاكمًا يعينه الملك لتحويل جزيرة صغيرة إلى مملكة: تبدأ بالنقر ثم يتولى العمال وسلاسل الإنتاج العمل.\n\nالسعر 9.99 دولار مع خصم 20% عند الإطلاق، واللغات المدعومة لا تشمل العربية، حسب صفحة اللعبة على Steam.\n\nالمصدر: صفحة اللعبة على Steam.\n\n#ألعاب #أخبار_الألعاب #ClickyIslands #Steam"
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/clicky-islands-steam-launch-november-16-reel-v1.mp4",
+  "blob": "58e5cd7ea403adfcd692674e78310f4e22e865d3",
+  "at": "2026-11-16T23:27:58Z",
+  "note": "Facts match story: Steam 16 Nov 2026, Pocketpair Publishing, Karrot Games, 9.99 USD",
+  "checklist": {
+   "job": "jobs/live/clicky-islands-steam-launch-november-16.json",
+   "sha256": "dab15727fa12214b5270ba9cab16a8b8638a9d54ed60d75e1df5370c984c3634",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1 headline 'صدرت Clicky Islands على Steam' with رسمي chip over pixel totem ship; look-2 city-builder gameplay, 'حاكم يعينه الملك لبناء مملكة', strip Steam/Pocketpair, credit Karrot Games; look-3 Clicky Islands logo, 'السعر 9.99 دولار'; strip/dense show same game throughout, text readable, pixel red splats only (stylised, not gore); two soft HUD shots (src 5.0-7.0, 58.3-60.3) not text and acceptable"
  }
 }
