@@ -148,16 +148,7 @@
   ],
   "result": "720p only"
  },
- "track": [
-  "pikmin4-sw2-trailer.mp4",
-  22.82
- ],
- "music_only": true,
- "music_fade": [
-  0.3,
-  0.6
- ],
- "sound_note": "Nintendo product video music stem under the whole cut (music_only)",
+ "track": "bed",
  "genre": [
   "family",
   "strategy/sim"
@@ -179,7 +170,7 @@
   "ANGLE before lines": "yes",
   "STORY TYPE numbers": "yes: figure 2 of 10 and 83 of 100, source Metacritic, comparison users vs critics",
   "STORY: spoken paragraph": "yes",
-  "SOUND": "yes: trailer music stem",
+  "SOUND": "yes: our bed (bed_reason)",
   "PICTURE: footage first": "yes: Nintendo's product video, showcase layout (720p)",
   "PICTURE: credit on every clip": "yes",
   "PICTURE: nothing graphic": "yes"
@@ -190,6 +181,7 @@
   "L2": "carrying the sweet potato",
   "L3": "potato carry",
   "L4": "Oatchi in flowers, then treasure line close",
-  "music": "trailer music stem"
- }
+  "music": "our bed (trailer music not separable cleanly)"
+ },
+ "bed_reason": "Nintendo's Switch 2 Edition product video was tried on 16 Nov with music_only: the audio split could not separate its music cleanly (leftover 14.8% effects, over the 5% limit), and it is the only official video of the edition (Nintendo store, IGN checked)"
 }
