@@ -1,43 +1,27 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-16T06:40:16Z",
- "seq": 525,
+ "generated_at": "2026-11-16T06:52:08Z",
+ "seq": 526,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
-   "id": 15153,
+   "id": 15156,
    "source": "PlayStation (X)",
    "source_kind": "x",
-   "title": "Holding out for a hero? Shrek 2 Remastered is larger than life and out now on PS5:",
-   "url": "https://x.com/PlayStation/status/2122021184137007421",
-   "published": "2026-11-15T17:37Z",
+   "title": "30 years ago, Lara Croft encountered unexpected dangers in the original Tomb Raider 🎒",
+   "url": "https://x.com/PlayStation/status/2121624822585200685",
+   "published": "2026-11-14T15:22Z",
    "first_seen": "2026-11-16T06:40:14Z",
    "media": [
     {
      "type": "image",
-     "url": "https://pbs.twimg.com/media/HXCZp5CbcAAJqRk.jpg"
+     "url": "https://pbs.twimg.com/media/HXCXS5XXsAAESyX.jpg"
     },
     {
      "type": "video",
-     "url": "https://video.twimg.com/amplify_video/2121363849332789248/vid/avc1/1920x1080/mBQeAwZs0B4Jr4ot.mp4"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 525
-  },
-  {
-   "id": 15154,
-   "source": "PlayStation (X)",
-   "source_kind": "x",
-   "title": "PlayStation’s Black Friday Deals start Nov 16. Discover what’s on offer:",
-   "url": "https://x.com/PlayStation/status/2121923744369160304",
-   "published": "2026-11-15T11:10Z",
-   "first_seen": "2026-11-16T06:40:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://pbs.twimg.com/media/HXKRxCmXEAAsVNJ.jpg"
+     "url": "https://video.twimg.com/amplify_video/2121361463637876736/vid/avc1/1080x1080/C6qxZk1QOWtwrMbr.mp4"
     }
    ],
    "breaking_source": true,
@@ -65,28 +49,43 @@
    "breaking_seq": 525
   },
   {
-   "id": 15156,
+   "id": 15154,
    "source": "PlayStation (X)",
    "source_kind": "x",
-   "title": "30 years ago, Lara Croft encountered unexpected dangers in the original Tomb Raider 🎒",
-   "url": "https://x.com/PlayStation/status/2121624822585200685",
-   "published": "2026-11-14T15:22Z",
+   "title": "PlayStation’s Black Friday Deals start Nov 16. Discover what’s on offer:",
+   "url": "https://x.com/PlayStation/status/2121923744369160304",
+   "published": "2026-11-15T11:10Z",
    "first_seen": "2026-11-16T06:40:14Z",
    "media": [
     {
      "type": "image",
-     "url": "https://pbs.twimg.com/media/HXCXS5XXsAAESyX.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://video.twimg.com/amplify_video/2121361463637876736/vid/avc1/1080x1080/C6qxZk1QOWtwrMbr.mp4"
+     "url": "https://pbs.twimg.com/media/HXKRxCmXEAAsVNJ.jpg"
     }
    ],
    "breaking_source": true,
    "breaking_seq": 525
-  }
- ],
- "recent": [
+  },
+  {
+   "id": 15153,
+   "source": "PlayStation (X)",
+   "source_kind": "x",
+   "title": "Holding out for a hero? Shrek 2 Remastered is larger than life and out now on PS5:",
+   "url": "https://x.com/PlayStation/status/2122021184137007421",
+   "published": "2026-11-15T17:37Z",
+   "first_seen": "2026-11-16T06:40:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://pbs.twimg.com/media/HXCZp5CbcAAJqRk.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://video.twimg.com/amplify_video/2121363849332789248/vid/avc1/1920x1080/mBQeAwZs0B4Jr4ot.mp4"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 525
+  },
   {
    "id": 15130,
    "source": "Nintendo Japan",
@@ -189,7 +188,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-16T06:40:14Z",
+  "last_poll_at": "2026-11-16T06:50:15Z",
   "sources_enabled": 100,
   "sources_ok": 73,
   "sources_failing": 25,
@@ -205,20 +204,20 @@
    "Fortnite (YouTube) (HTTP 404, 5x)",
    "Nintendo of America (X) (HTTP 429, 71x)",
    "Nintendo of America (YouTube) (HTTP 404, 8x)",
-   "PlayStation (YouTube) (HTTP 404, 11x)",
+   "PlayStation (YouTube) (HTTP 404, 12x)",
    "PlayStation MENA (YouTube) (HTTP 404, 4x)",
    "PlayStation Middle East (X) (HTTP 429, 15x)",
    "PlayStation Middle East (YouTube) (HTTP 404, 5x)",
    "Pokemon (YouTube) (HTTP 404, 5x)",
    "Riot Games (YouTube) (HTTP 404, 5x)",
    "Rockstar Games (X) (HTTP 429, 42x)",
-   "Rockstar Games (YouTube) (HTTP 404, 9x)",
+   "Rockstar Games (YouTube) (HTTP 404, 10x)",
    "SEGA (YouTube) (HTTP 404, 4x)",
    "Square Enix (YouTube) (HTTP 404, 5x)",
    "Steam (YouTube) (HTTP 404, 5x)",
    "Ubisoft (YouTube) (HTTP 404, 5x)",
    "Xbox (X) (HTTP 429, 90x)",
-   "Xbox (YouTube) (HTTP 404, 10x)"
+   "Xbox (YouTube) (HTTP 404, 11x)"
   ]
  }
 }
