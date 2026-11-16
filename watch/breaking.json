@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-16T14:10:11Z",
- "seq": 537,
+ "generated_at": "2026-11-16T14:52:05Z",
+ "seq": 538,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 15469,
    "source": "Xbox (YouTube)",
@@ -21,9 +22,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 537
-  }
- ],
- "recent": [
+  },
   {
    "id": 15461,
    "source": "Xbox Wire",
@@ -222,41 +221,19 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 507
-  },
-  {
-   "id": 14858,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Fortnite - Treasure Hunters: Week 3 Gameplay Trailer | PS5 & PS4 Games",
-   "url": "https://www.youtube.com/watch?v=Hz9lmh9NBp0",
-   "published": "2026-11-15T14:15Z",
-   "first_seen": "2026-11-15T14:35:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/Hz9lmh9NBp0/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=Hz9lmh9NBp0"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 503
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-16T14:10:05Z",
+  "last_poll_at": "2026-11-16T14:50:05Z",
   "sources_enabled": 100,
   "sources_ok": 93,
-  "sources_failing": 7,
+  "sources_failing": 6,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 86x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 87x)",
    "Nintendo of America (X) (HTTP 429, 72x)",
-   "PlayStation (X) (HTTP 429, 2x)",
+   "PlayStation (X) (HTTP 429, 3x)",
    "PlayStation Middle East (X) (HTTP 429, 16x)",
-   "Rockstar Games (X) (HTTP 429, 42x)",
    "The Game Awards (ValueError: 0 article links (expected 1+), layout changed or drawn by script, 6x)",
    "Xbox (X) (HTTP 429, 91x)"
   ]
