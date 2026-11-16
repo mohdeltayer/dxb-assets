@@ -1,22 +1,17 @@
 {
  "name": "clicky-islands-steam-launch-november-16",
  "out": "cards/2026-11/clicky-islands-steam-launch-november-16-reel-v1.mp4",
- "verdict": "fail",
- "at": "2026-11-16T23:18:59Z",
- "findings": [
-  {
-   "check": "length",
-   "detail": "length 9.4 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them; under 12 s fails: add a beat of footage"
-  }
- ],
+ "verdict": "pass",
+ "at": "2026-11-16T23:25:37Z",
+ "findings": [],
  "notes": [
-  "length 9.4 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: applied; music_pct 70.1; leak_pct 0.1; cache {'hit': 0, 'miss': 4}; separate_secs 6.6; secs 10.0",
-  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 9.68, \"held_under_text\": 0.0, \"secs\": 9.3, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 13.3 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 70.4; leak_pct 0.0; cache {'hit': 1, 'miss': 4}; separate_secs 7.9; secs 12.0",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 8.33, \"held_under_text\": 0.0, \"secs\": 13.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "a890b98845c360ebaf346ab665f2468ecb16a700",
- "dispatches": 2,
+ "job_sha": "5e44ea251ea1210e74373bccefef89e199482477",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
