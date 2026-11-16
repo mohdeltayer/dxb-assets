@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-16T14:52:05Z",
- "seq": 538,
+ "generated_at": "2026-11-16T15:10:29Z",
+ "seq": 539,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 15523,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Way of the Hunter 2 | Pulsar Pack Trailer",
+   "url": "https://www.youtube.com/watch?v=4RhGJIUKb-w",
+   "published": "2026-11-16T14:45Z",
+   "first_seen": "2026-11-16T15:10:25Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/4RhGJIUKb-w/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=4RhGJIUKb-w"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 539
+  }
+ ],
  "recent": [
   {
    "id": 15469,
@@ -225,7 +247,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-16T14:50:05Z",
+  "last_poll_at": "2026-11-16T15:10:25Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 6,
