@@ -63,14 +63,23 @@
   }
  ],
  "director_check": {
-  "verdict": "FIX",
-  "out": "cards/2026-11/switch-2-dlss-datamine-nov-16-reel-v1.mp4",
-  "blob": "07e681770a1f682419c16858bf1016ac6ee1b794",
-  "at": "2026-11-16T14:53:23Z",
-  "note": "Line 4 (فيختار المطور لكل لعبة / بين صورة أدق وأداء أسرع) sits on the white SWITCH wordmark of the red logo shot (16.5 to 20 s) and its second half is unreadable; end line 4 on the forest shot and make the logo shot picture-only, or replace the logo shot with another Switch 2 product shot",
-  "checklist": null,
+  "verdict": "PASS",
+  "out": "cards/2026-11/switch-2-dlss-datamine-nov-16-reel-v2.mp4",
+  "blob": "36966feba00d2ff72b53f459c20f98682152cae9",
+  "at": "2026-11-16T15:02:28Z",
+  "note": "v2 fixes the send-back: line 4 now sits on Metroid Prime 4 gameplay (cannon, creatures centred) and reads clearly; shots 0 to 7 and the close unchanged from v1; credit on every clip, our bed, no data table",
+  "checklist": {
+   "job": "jobs/live/switch-2-dlss-datamine-nov-16.json",
+   "sha256": "d002cbf5cbe27274641a3fcef8389b48e2709420f04232a68de592596f89f488",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-1"
+  },
   "by": "director-agent",
   "qc": "pass",
-  "looked": null
+  "looked": "look-1 first frame: تسريب chip and headline تقنية DLSS 4 داخل Switch 2 over the Switch 2 screen corner; look-2 line 3 over the Samus armour close-up with the Nintendo credit; look-3 line 5 ولم تؤكد نينتيندو وإنفيديا over Mario Kart on the Switch 2 in hand with the credit"
  }
 }
