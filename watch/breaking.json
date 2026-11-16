@@ -1,10 +1,23 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-16T04:52:05Z",
- "seq": 521,
+ "generated_at": "2026-11-16T05:10:18Z",
+ "seq": 522,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 15103,
+   "source": "The Game Awards",
+   "source_kind": "page",
+   "title": "Nominees Announced Tuesday, November 17",
+   "url": "https://thegameawards.com/news/nominees-announced-tuesday-november-17",
+   "published": null,
+   "first_seen": "2026-11-16T05:10:14Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 522
+  }
+ ],
  "recent": [
   {
    "id": 14950,
@@ -84,7 +97,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-16T04:50:14Z",
+  "last_poll_at": "2026-11-16T05:10:14Z",
   "sources_enabled": 100,
   "sources_ok": 74,
   "sources_failing": 26,
@@ -99,7 +112,7 @@
    "EA SPORTS FC (YouTube) (HTTP 404, 4x)",
    "Fortnite (YouTube) (HTTP 404, 4x)",
    "Nintendo of America (X) (HTTP 429, 71x)",
-   "Nintendo of America (YouTube) (HTTP 404, 5x)",
+   "Nintendo of America (YouTube) (HTTP 404, 6x)",
    "PlayStation (X) (HTTP 429, 91x)",
    "PlayStation (YouTube) (HTTP 404, 9x)",
    "PlayStation MENA (YouTube) (HTTP 404, 3x)",
