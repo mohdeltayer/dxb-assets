@@ -79,5 +79,25 @@
   "ig_comment": "المصدر: صفحة Zombies Aren't Real على Steam",
   "x_reply": "المصدر: https://store.steampowered.com/app/5185890/"
  },
- "reel": null
+ "reel": null,
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/zombies-arent-real-early-access-november-16-reel-v1.mp4",
+  "blob": "e9ca6cddabb1756542a33dcde5bd12e1b6be8d55",
+  "at": "2026-11-16T07:41:39Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/prerender/zombies-arent-real-early-access-november-16.json",
+   "sha256": "777dc9e466d09f781f7f0c41043841da058c0cd229c43cec99cfd17f0c4aed89",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director",
+  "qc": "pass",
+  "looked": "look 1: headline on one line with chip and credit, no face; looks 2-3: credit top, fact strip low (Steam, 8.99 USD, 96 percent), line over stylised city-map sim, red smoke cloud is stylised not gore; all readable, nothing graphic"
+ }
 }
