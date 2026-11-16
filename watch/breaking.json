@@ -1,10 +1,28 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-16T13:52:06Z",
- "seq": 535,
+ "generated_at": "2026-11-16T14:00:17Z",
+ "seq": 536,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 15461,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "A Message From Dr. XBOX: It’s Time to Take the Day Off and Play XBOX",
+   "url": "https://news.xbox.com/en-us/2026/11/16/dr-xbox-its-time-to-take-the-day-off-and-play-xbox/",
+   "published": "2026-11-16T14:00Z",
+   "first_seen": "2026-11-16T14:00:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/DRXBOX-1Horizontal-35ec6bdb36f8975bb272.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 536
+  }
+ ],
  "recent": [
   {
    "id": 15426,
@@ -212,9 +230,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-16T13:50:15Z",
+  "last_poll_at": "2026-11-16T14:00:15Z",
   "sources_enabled": 100,
-  "sources_ok": 92,
+  "sources_ok": 93,
   "sources_failing": 7,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 86x)",
@@ -222,7 +240,7 @@
    "PlayStation (X) (HTTP 429, 2x)",
    "PlayStation Middle East (X) (HTTP 429, 16x)",
    "Rockstar Games (X) (HTTP 429, 42x)",
-   "The Game Awards (ValueError: 0 article links (expected 1+), layout changed or drawn by script, 5x)",
+   "The Game Awards (ValueError: 0 article links (expected 1+), layout changed or drawn by script, 6x)",
    "Xbox (X) (HTTP 429, 91x)"
   ]
  }
