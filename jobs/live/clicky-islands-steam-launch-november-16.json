@@ -1,0 +1,221 @@
+{
+ "name": "clicky-islands-steam-launch-november-16",
+ "story": "2026-11-16-clicky-islands-steam-launch",
+ "kind_news": "launch",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/clicky-islands-steam-launch-november-16-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "clicky-islands-steam-launch-november-16-trailer.mp4",
+   "steam": 4178790,
+   "trailer": "English Trailer",
+   "start": 0,
+   "seconds": 120
+  }
+ ],
+ "shots": [
+  [
+   "clicky-islands-steam-launch-november-16-trailer.mp4",
+   73.71,
+   3.1,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "clicky-islands-steam-launch-november-16-trailer.mp4",
+   5.0,
+   2.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "clicky-islands-steam-launch-november-16-trailer.mp4",
+   18.55,
+   1.8,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "clicky-islands-steam-launch-november-16-trailer.mp4",
+   52.15,
+   1.7,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "clicky-islands-steam-launch-november-16-trailer.mp4",
+   58.3,
+   2.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "clicky-islands-steam-launch-november-16-trailer.mp4",
+   55.65,
+   1.85,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "clicky-islands-steam-launch-november-16-trailer.mp4",
+   76.81,
+   1.1,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "حاكم يعينه الملك\nلبناء مملكة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "تبدأ بالنقر ثم\nيتولى العمال",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "السعر 9.99 دولار",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   7,
+   "المصدر: كاروت غيمز (Karrot Games)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "صدرت Clicky Islands\nعلى Steam",
+ "label": "رسمي",
+ "source": "Steam",
+ "date": "16 Nov 2026",
+ "theme": "emerald",
+ "style": null,
+ "template": "split",
+ "skin": "house",
+ "cut": true,
+ "track": [
+  "clicky-islands-steam-launch-november-16-trailer.mp4",
+  73.71
+ ],
+ "strip": [
+  [
+   "المنصة",
+   "Steam للحاسوب"
+  ],
+  [
+   "الناشر",
+   "بوكيت بير (Pocketpair)"
+  ]
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam store page and appdetails read 16 Nov 23:10Z (release Nov 16 2026, $9.99, 20% launch discount, Karrot Games dev, Karrot Games and Pocketpair Publishing publishers); Game*Spark JP second outlet",
+  "SOURCE: not already posted": "yes: ledger find clicky islands, 0 hits",
+  "SOURCE: age": "yes: first report 16 Nov (Steam launch, Game*Spark 22:30Z), under 24 hours",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE out now": "yes: platform and USD price on the strip, one-line description; no AED price listed on Steam",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names the game, L1 names the publisher, L2 says أنت, L3 verbs",
+  "STORY: release verbs": "yes: صدرت",
+  "STORY: names match names-ar.md": "yes: Pocketpair بوكيت بير with Latin; Karrot Games كاروت غيمز proposed in names-ar.md",
+  "POST: Arabic passes": "yes: western digits, no first person",
+  "SOUND: footage sound or bed with reason": "yes: trailer own sound; server speech check is final",
+  "SOUND: no speech under Arabic lines": "yes: to be confirmed by server speech check",
+  "PICTURE: footage first": "yes: official Steam trailer by app id",
+  "PICTURE: not the same as last 5 reels": "yes: picture: Clicky Islands, no other Reel uses it",
+  "CREDIT: on every clip": "yes: credit over shots 0 to 6"
+ },
+ "decision_log": [
+  {
+   "beat": "0 hook",
+   "shot": "73.71 to 76.81 s",
+   "alternatives": "other stretches rejected (frozen, smear, cut text)",
+   "crop": "x 0.5",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "1 L1 premise",
+   "shot": "5.0 to 7.0 and 18.55 to 20.35",
+   "alternatives": "5.0 stretch has only a small HUD counter word 'Opersec' (soft text, no cut text); the picker's clean stretches are too short alone (9.4 s, qc length fail on render 1)",
+   "crop": "centre",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "2 L2 loop",
+   "shot": "52.15 to 53.85 and 58.3 to 60.3",
+   "alternatives": "58.3 stretch soft text only",
+   "crop": "centre",
+   "music": "trailer own sound"
+  },
+  {
+   "beat": "3 L3 price",
+   "shot": "55.65 to 57.5 and 76.81 to 77.91",
+   "alternatives": "none",
+   "crop": "picker focus",
+   "music": "trailer own sound"
+  }
+ ],
+ "angle": {
+  "hook": "Pocketpair's publishing label releases a click-and-build island kingdom game on Steam",
+  "why_now": "launched 16 Nov with a 20% launch discount",
+  "what_it_means_here": "PC players can try it at 9.99 USD, no Arabic interface",
+  "payoff": "price on the strip"
+ },
+ "spoken": "صدرت لعبة Clicky Islands على Steam بنشر بوكيت بير (Pocketpair). أنت حاكم يعينه الملك لبناء مملكة، تبدأ بالنقر ثم يتولى العمال العمل. السعر 9.99 دولار."
+}
