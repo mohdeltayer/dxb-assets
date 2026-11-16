@@ -369,3 +369,5 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | IO Interactive (007 First Light) | آي أو إنترأكتيف (IO Interactive) | Proposed 15 Nov 2026 (TGA kit credit) |
 | AdHoc Studio (Dispatch) | أدهوك ستوديو (AdHoc Studio) | Proposed 15 Nov 2026 (TGA kit credit) |
 | Yacht Club Games (Mina the Hollower) | ياخت كلوب غيمز (Yacht Club Games) | Proposed 15 Nov 2026 (TGA kit credit) |
+| Pugstorm (Core Keeper developer) | بوغستورم | Proposed 16 Nov 2026 (Core Keeper x Dave the Diver Reel credit; Latin in brackets at first mention) |
+| Mintrocket (Dave the Diver developer) | مينتروكت | Proposed 16 Nov 2026 (same Reel; flagged for Mohammad) |
