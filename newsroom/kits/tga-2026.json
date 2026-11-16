@@ -151,7 +151,8 @@
     "decode_clean": true,
     "read": "10 clean stretches, 98 rejected"
    },
-   "note": "Nintendo store 720p (lowbit): lowres_ok must name the copies searched"
+   "note": "Nintendo store 720p (lowbit): lowres_ok must name the copies searched",
+   "lowres_ok": "Nintendo US store page, the publisher's copy, 1280x720; IGN: no video page found by web search, 16 Nov; not on Steam (Switch 2 only): no larger official copy found"
   },
   "fh6": {
    "title": "Forza Horizon 6",
@@ -243,13 +244,52 @@
    "credit": "آي أو إنترأكتيف (IO Interactive)",
    "tile": "tga26-007",
    "footage": {
-    "file": "tga26-007.mp4",
+    "file": "tga26-007-c.mp4",
     "steam": 3768760,
-    "trailer": "007 First Light - Gameplay Trailer",
+    "trailer": "007 First Light - Path Tracing",
     "start": 0,
     "seconds": 240
    },
-   "shots": null
+   "shots": {
+    "item": [
+     23.85,
+     5.13,
+     0.685
+    ],
+    "hook": null,
+    "close": null,
+    "stretches": [
+     [
+      23.85,
+      5.13,
+      0.685
+     ],
+     [
+      35.55,
+      2.4,
+      0.619
+     ],
+     [
+      37.95,
+      1.76,
+      0.786
+     ],
+     [
+      41.35,
+      1.96,
+      0.754
+     ],
+     [
+      49.96,
+      2.3,
+      0.584
+     ]
+    ],
+    "picture_start": 0.53,
+    "decode_clean": true,
+    "read": "5 clean stretches, 107 rejected"
+   },
+   "note": "Steam Path Tracing trailer (16 Nov read: 5 clean stretches). Gameplay Trailer letterboxed 816 of 1080 rows (0 clean), Update #1 text-led (0 clean)"
   },
   "pbz": {
    "title": "Phantom Blade Zero",
@@ -572,7 +612,8 @@
     "decode_clean": true,
     "read": "11 clean stretches, 271 rejected"
    },
-   "note": "Nintendo store 720p (lowbit)"
+   "note": "Nintendo store 720p (lowbit)",
+   "lowres_ok": "Nintendo US store page, the publisher's copy, 1280x720; IGN: no video page found by web search, 16 Nov; not on Steam (Switch 2 only): no larger official copy found"
   },
   "fe": {
    "title": "Fire Emblem: Fortune's Weave",
@@ -583,8 +624,85 @@
     "file": "tga26-fe.mp4",
     "url": "https://assets.nintendo.com/video/upload/store/software/switch2/70010000126929/Video/8b820b9ced01edeb4b1af4870a315dbea459fe9c75f871389ce0e346236bf64b.mp4"
    },
-   "shots": null,
-   "note": "Nintendo store 720p (lowbit)"
+   "shots": {
+    "item": [
+     79.15,
+     3.83,
+     0.516
+    ],
+    "hook": [
+     35.74,
+     3.08,
+     0.565
+    ],
+    "close": [
+     21.14,
+     3.57,
+     0.506
+    ],
+    "stretches": [
+     [
+      4.52,
+      3.95,
+      0.491
+     ],
+     [
+      12.21,
+      1.8,
+      0.554
+     ],
+     [
+      21.14,
+      3.57,
+      0.506
+     ],
+     [
+      28.3,
+      2.41,
+      0.538
+     ],
+     [
+      35.74,
+      3.08,
+      0.565
+     ],
+     [
+      44.86,
+      2.22,
+      0.3
+     ],
+     [
+      48.58,
+      2.1,
+      0.492
+     ],
+     [
+      79.15,
+      3.83,
+      0.516
+     ],
+     [
+      100.5,
+      2.04,
+      0.587
+     ],
+     [
+      103.89,
+      4.02,
+      0.213
+     ],
+     [
+      107.91,
+      4.03,
+      0.604
+     ]
+    ],
+    "picture_start": 0.0,
+    "decode_clean": true,
+    "read": "11 clean stretches, 137 rejected"
+   },
+   "note": "Nintendo store 720p (lowbit)",
+   "lowres_ok": "Nintendo US store page, the publisher's copy, 1280x720; IGN: no video page found by web search, 16 Nov; not on Steam (Switch 2 only): no larger official copy found"
   },
   "saros": {
    "title": "Saros",
@@ -970,13 +1088,37 @@
    "credit": "سيكرت مود (Secret Mode)",
    "tile": "tga26-swgr",
    "footage": {
-    "file": "tga26-swgr.mp4",
+    "file": "tga26-swgr-c.mp4",
     "steam": 4078430,
-    "trailer": "Official Gameplay Trailer",
+    "trailer": "Official Story Trailer",
     "start": 0,
     "seconds": 240
    },
-   "shots": null
+   "shots": {
+    "item": [
+     80.5,
+     4.8,
+     0.491
+    ],
+    "hook": null,
+    "close": null,
+    "stretches": [
+     [
+      78.61,
+      1.89,
+      0.145
+     ],
+     [
+      80.5,
+      4.8,
+      0.491
+     ]
+    ],
+    "picture_start": 2.68,
+    "decode_clean": true,
+    "read": "2 clean stretches, 99 rejected"
+   },
+   "note": "Steam Official Story Trailer (16 Nov read: 2 clean stretches, near the end, no hook or close shot). Gameplay Trailer and Launch Trailer letterboxed 804 of 1080 rows (1 and 0 clean)"
   },
   "gears": {
    "title": "Gears of War: E-Day",

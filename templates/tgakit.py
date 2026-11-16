@@ -123,6 +123,13 @@ def _base(name, story, template, kind):
             'sensitive': 'none'}
 
 
+def _lowres(c, keys):
+    """lowres_ok for the job: each chosen nominee whose only official copy is under 960 rows names the copies checked
+    (kit field `lowres_ok`, reel.lowres_reason); None when every source is large enough."""
+    why = [f"{c[k]['title']}: {c[k]['lowres_ok']}" for k in keys if c[k].get('lowres_ok')]
+    return '; '.join(why) or None
+
+
 def _reel_check(names, when):
     return {
         'SOURCE: primary read in full': f'yes: names read from the official stream and {SOURCE_URL} at {when}',
@@ -162,9 +169,12 @@ def goty(kit, keys, when='TODO time read (Z)'):
                 'headline': 'المرشحون لجائزة\nلعبة العام 2026', 'spoken': spoken,
                 'ground_footage': [first['footage']['file'], first['shots']['hook'][0]],
                 'reel_check': _reel_check(names, when),
+                'lowres_ok': _lowres(c, keys),
                 'decision_log': {'hook': f"{first['title']} (first nominee read) under the headline",
                                  'items': 'one clean stretch per nominee from the server shots read, nearest the trailer middle',
                                  'close': f"{first['title']} again for the closing picture", 'music': 'our bed (bed_reason)'}})
+    if not job['lowres_ok']:
+        job.pop('lowres_ok')
     x = (f'هذه الألعاب المرشحة لجائزة لعبة العام في {SOURCE} 2026، ويُعلن الفائز في حفل 10 ديسمبر.')
     ig = (f'المرشحون لجائزة لعبة العام في {SOURCE} 2026.\n\n'
           'أعلن الحفل قائمة المرشحين لجائزة لعبة العام: '
@@ -198,8 +208,11 @@ def most(kit, pairs, when='TODO time read (Z)'):
                 'gfx': [{'file': gfx, 'kind': 'ranking', 'rows': rows, 'animate': True}],
                 'ground_footage': [lead['footage']['file'], lead['shots']['item'][0]],
                 'reel_check': _reel_check([c[k]['title'] for k in keys], when),
+                'lowres_ok': _lowres(c, keys[:1]),
                 'decision_log': {'hook': f"{lead['title']} (most nominations)", 'card': 'ranking, counts only on the card',
                                  'close': f"{lead['title']} again", 'music': 'our bed (bed_reason)'}})
+    if not job['lowres_ok']:
+        job.pop('lowres_ok')
     x = f"تتصدر {lead['line']} ترشيحات {SOURCE} 2026 بـ{rows[0]['value']} {rows[0]['unit']}، حسب القائمة الرسمية."
     return job, {'x': x, 'threads': x + f'\n\nالمصدر: {SOURCE}',
                  'instagram': (f"{lead['line']} هي الأكثر ترشيحًا في {SOURCE} 2026.\n\n"
