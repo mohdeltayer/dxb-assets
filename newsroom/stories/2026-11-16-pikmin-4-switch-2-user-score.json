@@ -53,5 +53,25 @@
    "2026-11-01-pikmin-4-switch-2-demo-nov-2",
    "2026-11-12-pikmin-4-switch-2-edition-launch"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/pikmin-4-switch-2-user-score-nov-16-reel-v1.mp4",
+  "blob": "b82c31451a5e67c559c5785be3aca740969ff5e9",
+  "at": "2026-11-16T13:19:35Z",
+  "note": "PASS: grid tile readable, every line opens on an Arabic word, no flipped sign, credit throughout, no empty band, no decode damage or graphic content, last 2 s are footage; facts match Metacritic (2/10 from 257, 205 negative; Metascore 83) and TheGamer; headline and strip both carry 2 من 10 (minor), length 29.5 s over guide; line 3 sits on the potato carry, a loose fit",
+  "checklist": {
+   "job": "jobs/live/pikmin-4-switch-2-user-score-nov-16.json",
+   "sha256": "f0c08676ccf2b09f5ecdfb2277adeb619161df51b1c90d8d9ce301d284eed966",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": "showcase",
+   "evergreen": false,
+   "built_by": "production-1"
+  },
+  "by": "director-agent-16nov-c",
+  "qc": "pass",
+  "looked": "showcase: chip and two-line headline in the top band, Nintendo's Switch 2 Edition footage (captain and Oatchi, Oatchi in the garden, the Dandori Academy area) at width in the middle, Arabic line, users/critics facts row and Nintendo credit below, over the blurred moving footage"
  }
 }
