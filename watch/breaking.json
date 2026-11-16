@@ -1,10 +1,23 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-16T12:52:06Z",
- "seq": 533,
+ "generated_at": "2026-11-16T13:10:05Z",
+ "seq": 534,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 15426,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/16/26 Join the Apples to Applin event in Pokémon Pokopia About the event Applin, the Apple Core Pokémon, is coming to town!​ You can befriend Applin by playi",
+   "url": "https://www.nintendo.com/us/whatsnew/join-the-apples-to-applin-event-in-pokemon-pokopia/",
+   "published": null,
+   "first_seen": "2026-11-16T13:10:05Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 534
+  }
+ ],
  "recent": [
   {
    "id": 15301,
@@ -200,7 +213,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-16T12:50:15Z",
+  "last_poll_at": "2026-11-16T13:10:05Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 7,
