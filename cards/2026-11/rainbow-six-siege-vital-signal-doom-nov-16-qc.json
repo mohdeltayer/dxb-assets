@@ -1,0 +1,29 @@
+{
+ "name": "rainbow-six-siege-vital-signal-doom-nov-16",
+ "out": "cards/2026-11/rainbow-six-siege-vital-signal-doom-nov-16-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-16T12:32:52Z",
+ "findings": [],
+ "notes": [
+  "length 17.8 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 35.2, \"still_share\": 0.514, \"longest_still\": 2.9, \"cuts_per_10s\": 3.95, \"held_under_text\": 0.0, \"secs\": 17.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "9279918f0787d87452de93545aea903fcfcab688",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/rainbow-six-siege-vital-signal-doom-nov-16-look-1.jpg",
+  "cards/2026-11/rainbow-six-siege-vital-signal-doom-nov-16-look-2.jpg",
+  "cards/2026-11/rainbow-six-siege-vital-signal-doom-nov-16-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon (stills template on Ubisoft's Vital Signal press art; the season's own trailer is on YouTube only (yt-dlp asks for a sign-in) and Steam (359550) carries only the Y11S3 Launch and CGI trailers, used here as credited earlier footage for two short shots)"
+}
