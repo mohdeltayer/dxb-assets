@@ -822,3 +822,12 @@ render-times.json). H (server QC verdict) and I (parallel runners) follow as the
 5. Director: with qc pass, one look at the look frames; PASS, or one send-back for wrong_subject (on stylised art also
    a subject cut out of or drifting out of the crop), graphic, unreadable_text or factual_error. No third render unless the job names "rerender". Weekly count, card at three.
 
+
+## The gates fix, not refuse (adv-20261117-gates-fix-not-refuse, 17 Nov 2026)
+1. The server fixes before it refuses (on by default; "autofix": false turns it off): shots trimmed at a scene cut or
+   to their safe length, refocused or moved within 5 s when the subject is cut; a line under the headline moved to the
+   earliest allowed start; a wide credit one size down, then two lines (never under 30 px). Every fix is listed
+   (qc.json autofixed) and the fixed job is written back to main: pull before editing.
+2. One pass lists every refusal with the value that passes (prerender text and full, the render's text step).
+3. "shots": "auto", or [file, "auto", secs, focus]: the server picks shot times from the clean stretches.
+4. presubmit.py intent needs --slot <ISO time of the post> on every post (the keeper counts coverage from it).

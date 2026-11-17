@@ -3681,3 +3681,25 @@ F. `ops/sendbacks.py` counts send-backs by reason over 7 days (Tuesday audit); a
 Spoken: every job with lines carries "spoken", the story as one paragraph of 2 to 3 Arabic sentences; the gate refuses a
 job without it and the text check confirms the lines, in order, are that paragraph (a word may be left out, none added).
 
+
+## The gates fix, not refuse (adv-20261117-gates-fix-not-refuse, Mohammad 17 Nov 2026; release 2026-11-17 r1)
+
+Case: Production 2 built 3 Reels in 10 hours on 16 and 17 Nov, each gate refusing one fault per pass (Xbox White Friday
+sale nine job versions; Galactic Racer a wide credit, then a smear flag on our own cut); the keeper showed "GAP 1047 min"
+while eight posts went out.
+A. One pass reports everything: prerender text and full and the render's text step list every refusal at once, each with
+   the value that passes.
+B. Auto-fix, on by default (`"autofix": false` per job; Famitsu and breaking outside it; templates/autofix.py): a shot
+   crossing a scene cut or past its safe length is trimmed and the time given to a neighbour that stays clean; a subject
+   cut by the 9:16 edge takes a focus that keeps it in, else the nearest clean stretch within 5 s; a line under the
+   headline moves to the earliest allowed start; a credit too wide goes one size down, then two lines, never under 30 px;
+   card grounds keep the calmest window. The gate refuses only what has no fix. Fixes are in qc.json `autofixed`, and the
+   fixed job is written back to main (render-live, only if main still holds the job rendered).
+C. `"shots": "auto"` or `[file, "auto", secs, focus]`: the server picks shot times from shotpick's clean stretches, in
+   source order, centred subjects preferred, never the same moment twice (templates/autoshots.py).
+D. The smear check measures each frame against its own shot, the end card its own segment, fades and flat frames out of
+   the baseline (Galactic Racer 12.80 s and the Xbox fade before the end card read clean; Battlefield 1's damage still
+   reads).
+E. buildgate and every text check run on the server through prerender mode text; no local Pillow needed.
+F. Every `presubmit.py intent` carries `--slot`; the keeper and the work order read newsroom/submissions.jsonl and
+   published.jsonl as well as the commitments. The server's own Publer read (a key on dxb-render-1) stays the fuller fix.
