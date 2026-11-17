@@ -372,8 +372,12 @@ def build(slip, lane='live', resolve=True, root=ROOT, now=None):
     res['flags'] = name_flags(slip)
     name = _name(slip)
     if resolve:
-        import footage as FT
-        r = FT.resolve(slip['footage'], name=name)
+        try:
+            import footage as FT
+            r = FT.resolve(slip['footage'], name=name)
+        except Exception as e:                      # the slip is failed with the reason, never left without a result
+            res['problems'].append(f'footage: the resolver stopped on {slip["footage"]}: {type(e).__name__}: {e}')
+            return res
         cands = r.get('candidates') or []
         try:
             c = pick_footage(cands, slip.get('footage_pick'))
