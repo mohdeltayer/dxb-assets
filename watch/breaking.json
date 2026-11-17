@@ -1,10 +1,54 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T15:05:18Z",
- "seq": 575,
+ "generated_at": "2026-11-17T15:15:08Z",
+ "seq": 576,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 16471,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Ranger's Path: National Park Simulator | Full Release Trailer",
+   "url": "https://www.youtube.com/watch?v=6pjhFD-r2SI",
+   "published": "2026-11-17T15:00Z",
+   "first_seen": "2026-11-17T15:15:05Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/6pjhFD-r2SI/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=6pjhFD-r2SI"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 576
+  }
+ ],
+ "recent": [
+  {
+   "id": 16462,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Hounded - Dev Diary: Meet Duke | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=DrmTMGp7O6U",
+   "published": "2026-11-17T15:00Z",
+   "first_seen": "2026-11-17T15:05:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/DrmTMGp7O6U/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=DrmTMGp7O6U"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 575
+  },
   {
    "id": 16455,
    "source": "PlayStation Blog",
@@ -34,29 +78,6 @@
    "breaking_source": true,
    "breaking_seq": 575
   },
-  {
-   "id": 16462,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Hounded - Dev Diary: Meet Duke | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=DrmTMGp7O6U",
-   "published": "2026-11-17T15:00Z",
-   "first_seen": "2026-11-17T15:05:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/DrmTMGp7O6U/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=DrmTMGp7O6U"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 575
-  }
- ],
- "recent": [
   {
    "id": 16452,
    "source": "Nintendo US",
@@ -272,55 +293,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 544
-  },
-  {
-   "id": 15524,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Machine Party - Reveal Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=U3vfDjKSOKQ",
-   "published": "2026-11-16T15:00Z",
-   "first_seen": "2026-11-16T15:15:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/U3vfDjKSOKQ/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=U3vfDjKSOKQ"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 540
-  },
-  {
-   "id": 15523,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Way of the Hunter 2 | Pulsar Pack Trailer",
-   "url": "https://www.youtube.com/watch?v=4RhGJIUKb-w",
-   "published": "2026-11-16T14:45Z",
-   "first_seen": "2026-11-16T15:10:25Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/4RhGJIUKb-w/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=4RhGJIUKb-w"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 539
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T15:05:15Z",
+  "last_poll_at": "2026-11-17T15:15:05Z",
   "sources_enabled": 100,
-  "sources_ok": 92,
+  "sources_ok": 93,
   "sources_failing": 7,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 99x)",
