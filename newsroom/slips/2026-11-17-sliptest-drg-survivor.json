@@ -2,11 +2,11 @@
  "id": "2026-11-17-sliptest-drg-survivor",
  "state": "failed",
  "problems": [
-  "footage: the resolver stopped on steam:2321470: ModuleNotFoundError: No module named 'pedalboard'"
+  "footage: the resolver stopped on steam:2321470: ModuleNotFoundError: No module named 'numpy'"
  ],
  "flags": [],
- "at": "2026-11-17T19:18:19Z",
- "run": "44157058712",
+ "at": "2026-11-17T19:21:56Z",
+ "run": "44157715793",
  "lane": "test",
- "build_secs": 22
+ "build_secs": 20
 }
