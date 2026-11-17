@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T21:30:08Z",
- "seq": 593,
+ "generated_at": "2026-11-17T21:52:08Z",
+ "seq": 594,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 16870,
    "source": "Xbox Wire",
@@ -16,9 +17,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 593
-  }
- ],
- "recent": [
+  },
   {
    "id": 16867,
    "source": "Nintendo US",
@@ -499,23 +498,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 553
-  },
-  {
-   "id": 15870,
-   "source": "Nintendo US",
-   "source_kind": "page",
-   "title": "11/16/26 Lady Brittany of House Broski heard Link’s call! Lady Brittany of House Broski heard Link’s call and has traveled to the mystical kingdom of Hyrule to",
-   "url": "https://www.nintendo.com/us/whatsnew/lady-brittany-of-house-broski-heard-links-call/",
-   "published": null,
-   "first_seen": "2026-11-16T21:40:05Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 549
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T21:30:05Z",
+  "last_poll_at": "2026-11-17T21:50:15Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 7,
