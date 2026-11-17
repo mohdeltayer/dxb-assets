@@ -491,8 +491,7 @@ def nominees(path, rows, title=None, theme='cold', show=None):
             name_lines = [t.rstrip(':') for t in best[1]] if best else [r['name']]
             if any(probe.textlength(t, font=name_f, **G.AR) > room for t in name_lines):
                 raise ValueError(f"nominees row does not fit: {r['name']}")
-            if note:
-                raise ValueError(f"nominees row too long for a two-line name and a note: {r['name']}; shorten the note")
+            note = None                                # a two-line title takes the row; the studio note gives way
             ys, ny = [cy - 8, cy + 36], None
         for t, ty in zip(name_lines, ys):
             d.text((tr, ty), t, font=name_f, fill=A.INK, anchor='rs', **G.AR)
