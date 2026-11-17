@@ -2,85 +2,112 @@
  "name": "dbd-2027-overhaul-workshop-weather",
  "out": "cards/2026-11/dbd-2027-overhaul-workshop-weather-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-17T22:15:19Z",
+ "at": "2026-11-17T22:23:41Z",
  "findings": [],
  "notes": [
-  "length 18.5 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 99.2; leak_pct 0.5; cache {'hit': 0, 'miss': 5}; separate_secs 28.3; secs 39.1",
-  "render_job: lifeless: {\"score\": 25.1, \"still_share\": 0.25, \"longest_still\": 3.3, \"cuts_per_10s\": 9.24, \"held_under_text\": 0.005, \"secs\": 18.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 17.3 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 99.3; leak_pct 0.5; cache {'hit': 0, 'miss': 5}; separate_secs 9.0; secs 13.1",
+  "render_job: lifeless: {\"score\": 25.9, \"still_share\": 0.267, \"longest_still\": 3.3, \"cuts_per_10s\": 9.88, \"held_under_text\": 0.006, \"secs\": 17.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [
   {
-   "where": "shot 0",
-   "rule": "auto_shots",
-   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 100.13 s for 3.8 s, focus 0.907"
-  },
-  {
-   "where": "shot 1",
-   "rule": "auto_shots",
-   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 103.93 s for 2.2 s, focus 0.907"
-  },
-  {
    "where": "shot 2",
-   "rule": "auto_shots",
-   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 26.01 s for 2.2 s, focus 0.425"
-  },
-  {
-   "where": "shot 3",
-   "rule": "auto_shots",
-   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 48.38 s for 2.4 s, focus 0.344"
-  },
-  {
-   "where": "shot 4",
-   "rule": "auto_shots",
-   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 19.56 s for 2.4 s, focus 0.454"
-  },
-  {
-   "where": "shot 5",
-   "rule": "auto_shots",
-   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 70.55 s for 2.2 s, focus 0.462"
-  },
-  {
-   "where": "shot 6",
-   "rule": "auto_shots",
-   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 43.95 s for 2.2 s, focus 0.293"
-  },
-  {
-   "where": "shot 7",
-   "rule": "auto_shots",
-   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 17.25 s for 2.2 s, focus 0.476"
-  },
-  {
-   "where": "shot 8",
-   "rule": "auto_shots",
-   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 93.95 s for 2.2 s, focus 0.532 (shortened from 2.2 s: no free clean stretch that long)"
-  },
-  {
-   "where": "shot 4",
-   "rule": "subject_drift",
-   "what": "focus [[0.0, 0.454]] to 0.17: the subject stays inside the window",
+   "rule": "shot_timing",
+   "what": "moved from 72.80 to 71.30 s, the nearest clean start of the same 2.20 s",
    "before": [
     "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
-    19.56,
-    2.35,
+    72.8,
+    2.2,
     [
      [
       0.0,
+      0.414
+     ],
+     [
+      0.648,
+      0.496
+     ],
+     [
+      1.248,
+      0.215
+     ],
+     [
+      1.981,
       0.454
      ]
     ]
    ],
    "after": [
     "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
-    19.56,
+    71.3,
+    2.2,
+    [
+     [
+      0.0,
+      0.414
+     ],
+     [
+      0.648,
+      0.496
+     ],
+     [
+      1.248,
+      0.215
+     ],
+     [
+      1.981,
+      0.454
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 4",
+   "rule": "shot_timing",
+   "what": "moved from 46.20 to 44.45 s, the nearest clean start of the same 2.35 s",
+   "before": [
+    "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+    46.2,
     2.35,
-    0.17
+    [
+     [
+      0.0,
+      0.497
+     ],
+     [
+      0.614,
+      0.373
+     ],
+     [
+      2.181,
+      0.538
+     ]
+    ]
+   ],
+   "after": [
+    "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+    44.45,
+    2.35,
+    [
+     [
+      0.0,
+      0.497
+     ],
+     [
+      0.614,
+      0.373
+     ],
+     [
+      2.181,
+      0.538
+     ]
+    ]
    ]
   },
   {
    "where": "shot 7",
    "rule": "subject_drift",
-   "what": "moved from 17.25 to 17.75 s, the nearest stretch of the same source with the subject inside",
+   "what": "trimmed to 1.00 s, its longest safe length before the subject leaves the 9:16 window",
    "before": [
     "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
     17.25,
@@ -88,25 +115,38 @@
     [
      [
       0.0,
-      0.476
+      0.208
+     ],
+     [
+      2.198,
+      0.487
      ]
     ]
    ],
    "after": [
     "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
-    17.75,
-    2.2,
+    17.25,
+    1.0,
     [
      [
       0.0,
-      0.476
+      0.208
+     ],
+     [
+      2.198,
+      0.487
      ]
     ]
    ]
+  },
+  {
+   "where": "shot 7",
+   "rule": "fill",
+   "what": "1.20 s shorter in all: no neighbouring shot stays clean with the time"
   }
  ],
- "job_sha": "a4d476216a2634da78eb82640c03e9c0a225cfff",
- "dispatches": 2,
+ "job_sha": "a9ccaa47b3aa5ccf78d512f217c24e8b1bfafb00",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -121,34 +161,17 @@
  ],
  "person_shown": "n/a",
  "sound": "trailer",
- "shot_read": {
-  "secs": 38.2,
-  "files": {
-   "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4": {
-    "secs": 38.2,
-    "cached": false,
-    "stages": {
-     "decode": 17.2,
-     "autofocus": 34.7,
-     "ocr": 34.7,
-     "smear": 37.9,
-     "scenes": 38.2
-    },
-    "incomplete": null
-   }
-  }
- },
+ "shot_read": null,
  "job_path": "jobs/done/dbd-2027-overhaul-workshop-weather.json",
  "stage_minutes": {
-  "queue": 0.02,
-  "setup": 0.22,
-  "fetch": 0.21,
-  "shots": 0.64,
-  "checks": 1.28,
-  "render": 2.21,
-  "after": 0.82,
-  "upload": 0.08,
-  "job": 5.17
+  "queue": 0.03,
+  "setup": 0.2,
+  "fetch": 0.17,
+  "shots": 0.0,
+  "checks": 3.41,
+  "render": 1.68,
+  "after": 0.81,
+  "job": 6.07
  },
  "job_after_autofix": {
   "name": "dbd-2027-overhaul-workshop-weather",
@@ -176,7 +199,7 @@
     [
      [
       0.0,
-      0.907
+      0.831
      ]
     ]
    ],
@@ -187,37 +210,62 @@
     [
      [
       0.0,
-      0.907
+      0.819
      ]
     ]
    ],
    [
     "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
-    26.01,
+    71.3,
     2.2,
     [
      [
       0.0,
-      0.425
+      0.414
+     ],
+     [
+      0.648,
+      0.496
+     ],
+     [
+      1.248,
+      0.215
+     ],
+     [
+      1.981,
+      0.454
      ]
     ]
    ],
    [
     "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
-    48.38,
+    48.5,
     2.35,
     [
      [
       0.0,
-      0.344
+      0.807
      ]
     ]
    ],
    [
     "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
-    19.56,
+    44.45,
     2.35,
-    0.17
+    [
+     [
+      0.0,
+      0.497
+     ],
+     [
+      0.614,
+      0.373
+     ],
+     [
+      2.181,
+      0.538
+     ]
+    ]
    ],
    [
     "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
@@ -226,7 +274,11 @@
     [
      [
       0.0,
-      0.462
+      0.51
+     ],
+     [
+      2.198,
+      0.428
      ]
     ]
    ],
@@ -237,29 +289,37 @@
     [
      [
       0.0,
-      0.293
+      0.507
      ]
     ]
    ],
    [
     "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
-    17.75,
-    2.2,
+    17.25,
+    1.0,
     [
      [
       0.0,
-      0.476
+      0.208
+     ],
+     [
+      2.198,
+      0.487
      ]
     ]
    ],
    [
     "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
     93.95,
-    2.16,
+    2.2,
     [
      [
       0.0,
-      0.532
+      0.383
+     ],
+     [
+      2.164,
+      0.531
      ]
     ]
    ]
