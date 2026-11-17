@@ -17,8 +17,30 @@
  "shots": [
   [
    "xcom2-launch.mp4",
-   15.7,
-   1.85,
+   15.75,
+   1.8,
+   [
+    [
+     0.0,
+     0.4
+    ]
+   ]
+  ],
+  [
+   "xcom2-launch.mp4",
+   18.9,
+   1.6,
+   [
+    [
+     0.0,
+     0.4
+    ]
+   ]
+  ],
+  [
+   "xcom2-launch.mp4",
+   21.7,
+   1.6,
    [
     [
      0.0,
@@ -39,8 +61,8 @@
   ],
   [
    "xcom2-launch.mp4",
-   28.95,
-   2.45,
+   33.4,
+   1.7,
    [
     [
      0.0,
@@ -50,8 +72,8 @@
   ],
   [
    "xcom2-launch.mp4",
-   37.55,
-   3.85,
+   37.6,
+   3.8,
    [
     [
      0.0,
@@ -61,8 +83,8 @@
   ],
   [
    "xcom2-launch.mp4",
-   52.4,
-   2.65,
+   46.5,
+   1.6,
    [
     [
      0.0,
@@ -72,30 +94,8 @@
   ],
   [
    "xcom2-launch.mp4",
-   63.55,
-   3.2,
-   [
-    [
-     0.0,
-     0.4
-    ]
-   ]
-  ],
-  [
-   "xcom2-launch.mp4",
-   33.35,
-   1.75,
-   [
-    [
-     0.0,
-     0.4
-    ]
-   ]
-  ],
-  [
-   "xcom2-launch.mp4",
-   46.95,
-   1.65,
+   71.75,
+   1.7,
    [
     [
      0.0,
@@ -189,7 +189,7 @@
  "decision_log": [
   {
    "beat": "all",
-   "shot": "hand-placed in the clean stretches of the server shots read (run 505): xcom2-launch 15.7, 25.4, 28.95, 37.55, 48.9, 63.55, 33.35, 46.45",
+   "shot": "hand-placed on the highest-focus clean stretches of the server shots read (run 505), autofix of 48.9 and 63.5 (focus 0.3) replaced: xcom2-launch 15.75, 18.9, 21.7, 25.4, 33.4, 37.6, 46.5, 71.75",
    "alternatives": "Civilization VII Alexander First Look (0 clean stretches, UI text throughout)",
    "crop": "centre, judged on the shot sheet",
    "music": "bed"
