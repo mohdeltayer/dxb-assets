@@ -237,11 +237,11 @@ CATEGORIES = {          # The Game Awards' category names in Arabic (titles of t
     'direction': 'أفضل إخراج للعبة', 'narrative': 'أفضل سرد قصصي', 'art': 'أفضل إخراج فني',
     'score': 'أفضل موسيقى', 'audio': 'أفضل تصميم صوتي', 'performance': 'أفضل أداء تمثيلي',
     'accessibility': 'الابتكار في إمكانية الوصول', 'impact': 'ألعاب ذات أثر', 'ongoing': 'أفضل لعبة مستمرة',
-    'community': 'أفضل دعم للمجتمع', 'indie': 'أفضل لعبة مستقلة', 'debut': 'أفضل لعبة مستقلة أولى',
+    'community': 'أفضل دعم للمجتمع', 'indie': 'أفضل لعبة مستقلة', 'debut': 'أفضل أول لعبة مستقلة',
     'mobile': 'أفضل لعبة للهواتف', 'vr': 'أفضل لعبة واقع افتراضي أو معزز', 'action': 'أفضل لعبة أكشن',
     'actionadventure': 'أفضل لعبة أكشن ومغامرات', 'rpg': 'أفضل لعبة تقمص أدوار', 'fighting': 'أفضل لعبة قتال',
     'family': 'أفضل لعبة عائلية', 'simstrategy': 'أفضل لعبة محاكاة أو استراتيجية',
-    'sportsracing': 'أفضل لعبة رياضة أو سباقات', 'multiplayer': 'أفضل لعبة جماعية', 'adaptation': 'أفضل اقتباس',
+    'sportsracing': 'أفضل لعبة رياضة أو سباقات', 'multiplayer': 'أفضل لعبة متعددة اللاعبين', 'adaptation': 'أفضل اقتباس',
     'anticipated': 'اللعبة الأكثر ترقبًا',
 }
 ROW_STEP = 0.55          # cardgfx.ROW_STEP: one nominee row every this many seconds, in the order read

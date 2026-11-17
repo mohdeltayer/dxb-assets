@@ -437,8 +437,9 @@ def nominees(path, rows, title=None, theme='cold', show=None):
     probe = ImageDraw.Draw(Image.new('L', (NG.W, NG.H)))
     n_rows = len(rows)
     shown = n_rows if show is None else show
-    row_h, tile, title_h = 140, 104, (84 if title else 0)
-    h = title_h + row_h * n_rows + 48
+    row_h, tile, title_h = (112, 88, 76) if n_rows == 6 else (126, 100, 80)   # six rows still end above the story lines
+    title_h = title_h if title else 0
+    h = title_h + row_h * n_rows + 40
     y0 = TOP
     y1 = y0 + h
     if y1 > 1300:
@@ -476,7 +477,7 @@ def nominees(path, rows, title=None, theme='cold', show=None):
             raise ValueError(f"nominees row note does not fit: {note}")
         if probe.textlength(r['name'], font=name_f, **G.AR) <= room:
             name_lines = [r['name']]
-            ys = [cy - 20] if note else [cy + 14]
+            ys = [cy - 14] if note else [cy + 14]
             ny = cy + 30
         else:
             name_f = A.F('Bold', NG.MIN_TEXT)
