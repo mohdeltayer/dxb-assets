@@ -1,0 +1,15 @@
+[
+ {
+  "where": "credit 2",
+  "rule": "credit_width",
+  "what": "set on two lines at 36 px (was 36 px, too wide for the safe zone)",
+  "before": {
+   "text": "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: روكستار غيمز (Rockstar Games)",
+   "size": 36
+  },
+  "after": {
+   "text": "القائمة: ذا غيم أووردز (The Game Awards)\nاللقطات: روكستار غيمز (Rockstar Games)",
+   "size": 36
+  }
+ }
+]
