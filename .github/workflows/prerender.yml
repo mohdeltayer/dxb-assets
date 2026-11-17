@@ -35,8 +35,12 @@ on:
         description: 'Branch or commit that holds the job file (default: main). Only the file is read from it.'
         required: false
         default: ''
+      source:
+        description: 'mode footage only: steam:<appid>, or an official page (nintendo.com/us/store/products/..., ign.com/videos/..., playstation.com/.../games/...); `job` names the files'
+        required: false
+        default: ''
       mode:
-        description: 'text: the build gate and the text check, the server fixes applied and listed (every error in one pass, 10 to 20 s, no footage, no local Python needed); shots: text check and the clean stretches of every footage file (shots.json); full: text and footage checks'
+        description: 'footage: the official footage of `source` (job entries, size, bitrate, letterbox, decode check; adv-20261117-server-speed-for-p2 B); text: the build gate and the text check, the server fixes applied and listed (every error in one pass, 10 to 20 s, no footage, no local Python needed); shots: text check and the clean stretches of every footage file (shots.json); full: text and footage checks'
         required: false
         default: 'full'
       wait:
@@ -61,6 +65,7 @@ jobs:
       JOB: ${{ inputs.job }}
       REF: ${{ inputs.ref }}
       MODE: ${{ inputs.mode }}
+      SOURCE: ${{ inputs.source }}
     steps:
       - name: Guard (this repository, main, a dispatch, a job file path, a plain ref)
         run: |
@@ -91,6 +96,7 @@ jobs:
       JOB: ${{ inputs.job }}
       REF: ${{ inputs.ref }}
       MODE: ${{ inputs.mode }}
+      SOURCE: ${{ inputs.source }}
     steps:
       - name: Guard (a job file path, a plain ref)
         run: |
@@ -138,6 +144,7 @@ jobs:
       - name: The job file (data only, from the ref)
         if: steps.yield.outputs.skip != '1'
         run: |
+          if [ "$MODE" = "footage" ]; then echo "mode footage: no job file read"; exit 0; fi
           git fetch -q --depth=1 --filter=blob:none origin "${REF:-main}"
           # a bare name is looked up in the job folders of the ref (adv-20261110-one-render-per-reel B)
           case "$JOB" in
@@ -174,6 +181,14 @@ jobs:
         timeout-minutes: 15
         run: |
           rc=0
+          if [ "$MODE" = "footage" ]; then   # the official footage of SOURCE, checked (adv-20261117-server-speed-for-p2 B)
+            python templates/footage.py "$SOURCE" --name "${JOB%.json}" --out "$RUNNER_TEMP/footage.json" || rc=1
+            if [ -f "$RUNNER_TEMP/footage.json" ]; then
+              cp "$RUNNER_TEMP/footage.json" footage.json
+              { echo "### Official footage (footage.json)"; echo '```json'; cat "$RUNNER_TEMP/footage.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+            fi
+            exit $rc
+          fi
           # every text error in one pass, as JSON in the summary and the log (adv-20261110-one-render-per-reel A);
           # without the Dubai font it runs the font-free rules and says the drawn checks were not run
           # the server's own fixes first (adv-20261117-gates-fix-not-refuse B), on this run's copy of the job; the render
@@ -205,6 +220,14 @@ jobs:
           fi
           exit $rc
 
+      - name: footage.json (mode footage)
+        if: always() && inputs.mode == 'footage' && hashFiles('footage.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: footage
+          path: footage.json
+          retention-days: 7
+
       - name: Clean up (fonts, footage, job copy)
         if: always()
         run: rm -rf "$DUBAI_FONTS" "$RUNNER_TEMP/dxb-fonts" "$DXB_UPLOADS" "$RUNNER_TEMP/job" "$RUNNER_TEMP/uploads" 2>/dev/null || true
@@ -219,6 +242,7 @@ jobs:
       JOB: ${{ inputs.job }}
       REF: ${{ inputs.ref }}
       MODE: ${{ inputs.mode }}
+      SOURCE: ${{ inputs.source }}
     steps:
       - uses: actions/checkout@v5
         with:
@@ -234,6 +258,7 @@ jobs:
         run: |
           mkdir -p "$RUNNER_TEMP/job" "$RUNNER_TEMP/uploads"
           echo "DXB_UPLOADS=$RUNNER_TEMP/uploads" >> "$GITHUB_ENV"
+          if [ "$MODE" = "footage" ]; then echo "mode footage: no job file read"; exit 0; fi
           git fetch -q --depth=1 --filter=blob:none origin "${REF:-main}"
           # a bare name is looked up in the job folders of the ref (adv-20261110-one-render-per-reel B)
           case "$JOB" in
@@ -284,6 +309,14 @@ jobs:
         timeout-minutes: 15
         run: |
           rc=0
+          if [ "$MODE" = "footage" ]; then   # the official footage of SOURCE, checked (adv-20261117-server-speed-for-p2 B)
+            python templates/footage.py "$SOURCE" --name "${JOB%.json}" --out "$RUNNER_TEMP/footage.json" || rc=1
+            if [ -f "$RUNNER_TEMP/footage.json" ]; then
+              cp "$RUNNER_TEMP/footage.json" footage.json
+              { echo "### Official footage (footage.json)"; echo '```json'; cat "$RUNNER_TEMP/footage.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+            fi
+            exit $rc
+          fi
           # every text error in one pass, as JSON in the summary and the log (adv-20261110-one-render-per-reel A);
           # without the Dubai font it runs the font-free rules and says the drawn checks were not run
           # the server's own fixes first (adv-20261117-gates-fix-not-refuse B), on this run's copy of the job; the render
@@ -314,6 +347,14 @@ jobs:
             echo "AUTOFIX_JSON: $(tr -d '\n' < "$AUTOFIX_JSON")"
           fi
           exit $rc
+
+      - name: footage.json (mode footage)
+        if: always() && inputs.mode == 'footage' && hashFiles('footage.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: footage
+          path: footage.json
+          retention-days: 7
 
       - name: Clean up
         if: always()
