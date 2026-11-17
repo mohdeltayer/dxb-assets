@@ -264,5 +264,12 @@
   "reason": "factual_error",
   "note": "ep7 re-gate 17 Nov 11:10Z: the Saudi Xbox store lists GTA VI in riyals (Standard 299, Ultimate 389 SAR), not 79.99 USD; Xbox row now reads UAE only. PS prices unchanged."
  },
- "spoken": "نسختان للعبة هما القياسية و Ultimate، وأسعارهما تختلف من متجر إلى آخر في الخليج. والتحميل المسبق متاح منذ 10 نوفمبر."
+ "spoken": "نسختان للعبة هما القياسية و Ultimate، وأسعارهما تختلف من متجر إلى آخر في الخليج. والتحميل المسبق متاح منذ 10 نوفمبر.",
+ "letterbox_ok": [
+  [
+   "gta6-preload.mp4",
+   11.25,
+   "Rockstar's pre-load clip has thin bars (1920 of 2160 rows); reel.py crops them before the 9:16 crop; the same shot passed the director in v4 (11 Nov) and the strip shows no bar. Price-only fix, same shots."
+  ]
+ ]
 }
