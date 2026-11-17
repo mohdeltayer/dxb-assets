@@ -1,11 +1,12 @@
 {
  "id": "2026-11-17-sliptest-slay-the-spire-2",
- "state": "failed",
- "problems": [
-  "text: line 8: 'وD' flips on screen: put a space after the prefix or a word between («و PS5», «ولجهاز PS5», «لجهاز Switch 2»)"
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "text fixed mechanically: line 8: space after a glued prefix",
+  "ledger: earlier stories on this game: 2026-10-30-slay-the-spire-2-next-beta-patch-november-12, 2026-11-13-slay-the-spire-2-fool-blitz-dread-beta, 2026-11-17-slay-the-spire-2-major-update-3 (an update or a duplicate? the editor decides)"
  ],
- "flags": [],
- "at": "2026-11-17T19:25:23Z",
+ "at": "2026-11-17T19:31:36Z",
  "footage": {
   "name": "Slay the Spire 2 - Gameplay Trailer",
   "width": 1920,
@@ -20,7 +21,7 @@
  "story": "newsroom/stories/2026-11-17-sliptest-slay-the-spire-2.json",
  "lines": 9,
  "shots": 10,
- "run": "44158327088",
+ "run": "44159423958",
  "lane": "test",
- "build_secs": 63
+ "build_secs": 46
 }
