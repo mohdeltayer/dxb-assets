@@ -2,13 +2,13 @@
  "id": "2026-11-17-sliptest-phasmophobia",
  "state": "failed",
  "problems": [
-  "footage: the resolver stopped on steam:739630: ModuleNotFoundError: No module named 'numpy'"
+  "footage: the resolver stopped on steam:739630: ModuleNotFoundError: No module named 'pedalboard'"
  ],
  "flags": [
   "name not in names-ar: «كاينتيك غيمز (Kinetic Games)» (spoken); add it there as Proposed"
  ],
- "at": "2026-11-17T19:21:56Z",
- "run": "44157721928",
+ "at": "2026-11-17T19:23:19Z",
+ "run": "44157930939",
  "lane": "test",
- "build_secs": 18
+ "build_secs": 30
 }
