@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T14:15:19Z",
- "seq": 572,
+ "generated_at": "2026-11-17T14:52:08Z",
+ "seq": 573,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 16425,
    "source": "PlayStation (YouTube)",
@@ -25,9 +26,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 572
-  }
- ],
- "recent": [
+  },
   {
    "id": 16416,
    "source": "PlayStation Blog",
@@ -256,14 +255,14 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T14:15:15Z",
+  "last_poll_at": "2026-11-17T14:50:15Z",
   "sources_enabled": 100,
-  "sources_ok": 93,
+  "sources_ok": 92,
   "sources_failing": 7,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 98x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 99x)",
    "Nintendo of America (X) (HTTP 429, 74x)",
-   "PlayStation (X) (HTTP 429, 5x)",
+   "PlayStation (X) (HTTP 429, 6x)",
    "PlayStation Middle East (X) (HTTP 429, 18x)",
    "Rockstar Games (X) (HTTP 429, 4x)",
    "The Game Awards (HTTP 403, 18x)",
