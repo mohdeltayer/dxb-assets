@@ -1,0 +1,29 @@
+{
+ "name": "xbox-white-friday-sale-november-19",
+ "out": "cards/2026-11/xbox-white-friday-sale-november-19-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-17T02:38:30Z",
+ "findings": [],
+ "notes": [
+  "length 18.0 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 56.5; leak_pct 0.5; cache {'hit': 4, 'miss': 3}; separate_secs 7.7; secs 12.6",
+  "render_job: lifeless: {\"score\": 10.5, \"still_share\": 0.094, \"longest_still\": 1.5, \"cuts_per_10s\": 6.67, \"held_under_text\": 0.0, \"secs\": 18.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "b8e5d3ad4f822efc8d502bb46a4b2d12e4880932",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/xbox-white-friday-sale-november-19-look-1.jpg",
+  "cards/2026-11/xbox-white-friday-sale-november-19-look-2.jpg",
+  "cards/2026-11/xbox-white-friday-sale-november-19-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer"
+}
