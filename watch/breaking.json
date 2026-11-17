@@ -1,10 +1,54 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T17:00:18Z",
- "seq": 580,
+ "generated_at": "2026-11-17T17:10:18Z",
+ "seq": 581,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 16595,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Calame - Gameplay Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=qE_Mo_g1ckw",
+   "published": "2026-11-17T17:00Z",
+   "first_seen": "2026-11-17T17:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/qE_Mo_g1ckw/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=qE_Mo_g1ckw"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 581
+  },
+  {
+   "id": 16596,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Neverwinter | New Update: Sleeping Gods Lie",
+   "url": "https://www.youtube.com/watch?v=jrCS6S-2TTw",
+   "published": "2026-11-17T17:00Z",
+   "first_seen": "2026-11-17T17:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/jrCS6S-2TTw/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=jrCS6S-2TTw"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 581
+  }
+ ],
+ "recent": [
   {
    "id": 16579,
    "source": "Xbox Wire",
@@ -33,9 +77,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 580
-  }
- ],
- "recent": [
+  },
   {
    "id": 16491,
    "source": "PlayStation (YouTube)",
@@ -347,7 +389,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T17:00:15Z",
+  "last_poll_at": "2026-11-17T17:10:14Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 7,
