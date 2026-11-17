@@ -21,7 +21,70 @@
    "seconds": 90
   }
  ],
- "shots": "auto",
+ "shots": [
+  [
+   "sts2-gameplay.mp4",
+   25.38,
+   3.5,
+   [
+    [
+     0.0,
+     0.158
+    ]
+   ]
+  ],
+  [
+   "sts2-early.mp4",
+   0.0,
+   3.0,
+   null
+  ],
+  [
+   "sts2-gameplay.mp4",
+   35.75,
+   2.81,
+   [
+    [
+     0.0,
+     0.27
+    ]
+   ]
+  ],
+  [
+   "sts2-early.mp4",
+   0.0,
+   3.0,
+   null
+  ],
+  [
+   "sts2-gameplay.mp4",
+   39.66,
+   2.2,
+   [
+    [
+     0.0,
+     0.437
+    ]
+   ]
+  ],
+  [
+   "sts2-early.mp4",
+   0.0,
+   3.0,
+   null
+  ],
+  [
+   "sts2-gameplay.mp4",
+   7.31,
+   2.12,
+   [
+    [
+     0.0,
+     0.674
+    ]
+   ]
+  ]
+ ],
  "auto_shots": {
   "count": 7,
   "secs": 3.0
@@ -111,5 +174,10 @@
   "PICTURE: not graphic": "to be judged on the frames by the Director",
   "CREDIT: on every clip": "yes: one credit over all shots",
   "SENSITIVE": "n/a"
- }
+ },
+ "shots_auto": [
+  1,
+  3,
+  5
+ ]
 }
