@@ -2,11 +2,11 @@
  "id": "2026-11-17-sliptest-black-mesa",
  "state": "failed",
  "problems": [
-  "footage: the resolver stopped on steam:362890: ModuleNotFoundError: No module named 'numpy'"
+  "footage: the resolver stopped on steam:362890: ModuleNotFoundError: No module named 'pedalboard'"
  ],
  "flags": [],
- "at": "2026-11-17T19:21:53Z",
- "run": "44157692130",
+ "at": "2026-11-17T19:23:02Z",
+ "run": "44157904795",
  "lane": "test",
- "build_secs": 24
+ "build_secs": 23
 }
