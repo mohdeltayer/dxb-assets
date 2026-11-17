@@ -1,10 +1,40 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T16:52:05Z",
- "seq": 579,
+ "generated_at": "2026-11-17T17:00:18Z",
+ "seq": 580,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 16579,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Coming to XBOX Game Pass: Hela: of Mice & Magic, The Outlast Trials, Sniper Ghost Warrior Contracts 2, and More",
+   "url": "https://news.xbox.com/en-us/2026/11/17/xbox-game-pass-november-2026-wave-2/",
+   "published": "2026-11-17T17:00Z",
+   "first_seen": "2026-11-17T17:00:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/SGWC2_KeyArt_1920x1080-edd088d6384cebd9f1b2.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Arkheron_GamePreview_TitledKeyArt_1920x1080-f83381719e0f07477df6.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/TheOutlastTrials_HorizontalKeyArt_1920x1080-7ba6a0f6978f34a63dc8.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Hela_OMM_TitledHeroArt_1920x1080-7f12182717db44751a00.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 580
+  }
+ ],
  "recent": [
   {
    "id": 16491,
@@ -317,7 +347,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T16:50:05Z",
+  "last_poll_at": "2026-11-17T17:00:15Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 7,
