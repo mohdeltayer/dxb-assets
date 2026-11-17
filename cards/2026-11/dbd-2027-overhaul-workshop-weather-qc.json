@@ -1,0 +1,362 @@
+{
+ "name": "dbd-2027-overhaul-workshop-weather",
+ "out": "cards/2026-11/dbd-2027-overhaul-workshop-weather-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-17T22:15:19Z",
+ "findings": [],
+ "notes": [
+  "length 18.5 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 99.2; leak_pct 0.5; cache {'hit': 0, 'miss': 5}; separate_secs 28.3; secs 39.1",
+  "render_job: lifeless: {\"score\": 25.1, \"still_share\": 0.25, \"longest_still\": 3.3, \"cuts_per_10s\": 9.24, \"held_under_text\": 0.005, \"secs\": 18.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 100.13 s for 3.8 s, focus 0.907"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 103.93 s for 2.2 s, focus 0.907"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 26.01 s for 2.2 s, focus 0.425"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 48.38 s for 2.4 s, focus 0.344"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 19.56 s for 2.4 s, focus 0.454"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 70.55 s for 2.2 s, focus 0.462"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 43.95 s for 2.2 s, focus 0.293"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 17.25 s for 2.2 s, focus 0.476"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 at 93.95 s for 2.2 s, focus 0.532 (shortened from 2.2 s: no free clean stretch that long)"
+  },
+  {
+   "where": "shot 4",
+   "rule": "subject_drift",
+   "what": "focus [[0.0, 0.454]] to 0.17: the subject stays inside the window",
+   "before": [
+    "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+    19.56,
+    2.35,
+    [
+     [
+      0.0,
+      0.454
+     ]
+    ]
+   ],
+   "after": [
+    "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+    19.56,
+    2.35,
+    0.17
+   ]
+  },
+  {
+   "where": "shot 7",
+   "rule": "subject_drift",
+   "what": "moved from 17.25 to 17.75 s, the nearest stretch of the same source with the subject inside",
+   "before": [
+    "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+    17.25,
+    2.2,
+    [
+     [
+      0.0,
+      0.476
+     ]
+    ]
+   ],
+   "after": [
+    "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+    17.75,
+    2.2,
+    [
+     [
+      0.0,
+      0.476
+     ]
+    ]
+   ]
+  }
+ ],
+ "job_sha": "a4d476216a2634da78eb82640c03e9c0a225cfff",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/dbd-2027-overhaul-workshop-weather-look-1.jpg",
+  "cards/2026-11/dbd-2027-overhaul-workshop-weather-look-2.jpg",
+  "cards/2026-11/dbd-2027-overhaul-workshop-weather-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 38.2,
+  "files": {
+   "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4": {
+    "secs": 38.2,
+    "cached": false,
+    "stages": {
+     "decode": 17.2,
+     "autofocus": 34.7,
+     "ocr": 34.7,
+     "smear": 37.9,
+     "scenes": 38.2
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/dbd-2027-overhaul-workshop-weather.json",
+ "stage_minutes": {
+  "queue": 0.02,
+  "setup": 0.22,
+  "fetch": 0.21,
+  "shots": 0.64,
+  "checks": 1.28,
+  "render": 2.21,
+  "after": 0.82,
+  "job": 5.17
+ },
+ "job_after_autofix": {
+  "name": "dbd-2027-overhaul-workshop-weather",
+  "story": "2026-11-18-dbd-2027-overhaul-workshop-weather",
+  "kind_news": "reveal",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/dbd-2027-overhaul-workshop-weather-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+    "steam": 381210,
+    "trailer": "Dead by Daylight: 10th Anniversary Edition",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "381210"
+   }
+  ],
+  "shots": [
+   [
+    "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+    100.13,
+    3.8,
+    [
+     [
+      0.0,
+      0.907
+     ]
+    ]
+   ],
+   [
+    "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+    103.93,
+    2.2,
+    [
+     [
+      0.0,
+      0.907
+     ]
+    ]
+   ],
+   [
+    "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+    26.01,
+    2.2,
+    [
+     [
+      0.0,
+      0.425
+     ]
+    ]
+   ],
+   [
+    "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+    48.38,
+    2.35,
+    [
+     [
+      0.0,
+      0.344
+     ]
+    ]
+   ],
+   [
+    "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+    19.56,
+    2.35,
+    0.17
+   ],
+   [
+    "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+    70.55,
+    2.2,
+    [
+     [
+      0.0,
+      0.462
+     ]
+    ]
+   ],
+   [
+    "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+    43.95,
+    2.2,
+    [
+     [
+      0.0,
+      0.293
+     ]
+    ]
+   ],
+   [
+    "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+    17.75,
+    2.2,
+    [
+     [
+      0.0,
+      0.476
+     ]
+    ]
+   ],
+   [
+    "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+    93.95,
+    2.16,
+    [
+     [
+      0.0,
+      0.532
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "يجلب التحديث مظهرًا\nجديدًا للخرائط",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "والشخصيات ونظام طقس\nبالمطر والعواصف والثلج",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وتفتح الشركة ورشة تتيح للاعبين",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    8,
+    [
+     [
+      "صنع خرائط وأنماط لعب خاصة بهم",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    8,
+    "المصدر: موقع Dead by Daylight الرسمي",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "كشفت بيهيفيور إنتراكتيف (Behaviour Interactive) تفاصيل التحديث الكبير القادم إلى Dead by Daylight في 2027. يجلب التحديث مظهرًا جديدًا للخرائط والشخصيات ونظام طقس بالمطر والعواصف والثلج. وتفتح الشركة ورشة تتيح للاعبين صنع خرائط وأنماط لعب خاصة بهم.",
+  "headline": "تحديث 2027 الكبير\nفي Dead by Daylight",
+  "label": "رسمي",
+  "source": "موقع Dead by Daylight الرسمي",
+  "date": "17 Nov 2026",
+  "theme": "emerald",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+   100.13
+  ],
+  "track_from_first_shot": true,
+  "angle": null,
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 from the resolver (steam:381210)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Behaviour Interactive, The Future of Dead by Daylight: Deep Dive Recap, deadbydaylight.com, read in full 17 Nov 2026 (https://deadbydaylight.com/news/future-dbd-deep-dive-recap/); first report: Behaviour Interactive Deep Dive recap on deadbydaylight.com, 17 Nov 2026 about 18:00Z (GoNintendo 18:13Z)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 381210 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
