@@ -45,5 +45,25 @@
   "hits": [
    "2026-10-11-phasmophobia-30-million"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/phasmophobia-resonance-update-november-24-november-17-reel-v1.mp4",
+  "blob": "b2fec486dc0c075ebf8fb4c83f5f7ca7889a8bb0",
+  "at": "2026-11-17T17:22:25Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/phasmophobia-resonance-update-november-24-november-17.json",
+   "sha256": "6ce66fb2d3c6bc66c1c2c6ac7e21ec43b9e6f1218f34bcfd689f7306f5408bb3",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Look frames, strip and dense strip: Kinetic Games logo opener with chip and Phasmophobia/Resonance headline; dark game footage with 24 Nov, all platforms, Kinetic Games card; Dowsing Rods, voice commands and Unity 6 line; stand-in footage disclosure at top; end card. No gore, text readable and inside frame."
  }
 }
