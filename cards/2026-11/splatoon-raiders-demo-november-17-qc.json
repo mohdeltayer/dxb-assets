@@ -1,32 +1,34 @@
 {
  "name": "splatoon-raiders-demo-november-17",
- "out": "cards/2026-11/splatoon-raiders-demo-november-17-reel-v1.mp4",
- "verdict": "fail",
- "at": "2026-11-17T04:26:31Z",
- "findings": [
-  {
-   "check": "length",
-   "detail": "length 11.3 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them; under 12 s fails: add a beat of footage"
-  }
- ],
+ "out": "cards/2026-11/splatoon-raiders-demo-november-17-reel-v2.mp4",
+ "verdict": "pass",
+ "at": "2026-11-17T04:32:58Z",
+ "findings": [],
  "notes": [
-  "length 11.3 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "length 12.8 s before the end card (target 12 to 20 s)",
   "source quality: splatoon-raiders-demo-november-17-trailer.mp4: low bitrate 2.5 Mbps (floor 3.0 Mbps for 1280x720 at 30 fps) (lowbit)",
   "source quality: shot 0 splatoon-raiders-demo-november-17-trailer.mp4 at 90.75 for 3.5 s, enlarged 2.67x: block ratio median 0.96, peak 0.97 (ok)",
   "source quality: shot 1 splatoon-raiders-demo-november-17-trailer.mp4 at 41.73 for 3.0 s, enlarged 2.67x: block ratio median 0.83, peak 0.86 (ok)",
   "source quality: shot 2 splatoon-raiders-demo-november-17-trailer.mp4 at 50.88 for 2.54 s, enlarged 2.67x: block ratio median 0.91, peak 1.02 (ok)",
   "source quality: shot 3 splatoon-raiders-demo-november-17-trailer.mp4 at 13.98 for 2.37 s, enlarged 2.67x: block ratio median 1.01, peak 1.07 (ok)",
-  "source quality: under 960 rows: splatoon-raiders-demo-november-17-trailer.mp4 at 90.75 (720 rows, enlarged 2.67x), splatoon-raiders-demo-november-17-trailer.mp4 at 41.73 (720 rows, enlarged 2.67x), splatoon-raiders-demo-november-17-trailer.mp4 at 50.88 (720 rows, enlarged 2.67x), splatoon-raiders-demo-november-17-trailer.mp4 at 13.98 (720 rows, enlarged 2.67x); lowres_ok: Nintendo US store product page (the official trailer, 1280x720), Nintendo Japan product site (trailers in a player, no file), IGN video search (no MP4 for this trailer), Steam (Nintendo exclusive, no page), YouTube (refused without sign-in): 1280x720 only; at the 2x cap it cannot fill 9:16",
-  "render_job: audio split: applied; music_pct 99.4; leak_pct 0.1; cache {'hit': 0, 'miss': 5}; separate_secs 6.6; secs 10.2",
-  "render_job: lifeless: {\"score\": 8.9, \"still_share\": 0.17, \"longest_still\": 0.3, \"cuts_per_10s\": 6.25, \"held_under_text\": 0.0, \"secs\": 11.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "source quality: shot 4 splatoon-raiders-demo-november-17-trailer.mp4 at 36.4 for 1.5 s, enlarged 2.67x: block ratio median 0.88, peak 0.89 (ok)",
+  "source quality: under 960 rows: splatoon-raiders-demo-november-17-trailer.mp4 at 90.75 (720 rows, enlarged 2.67x), splatoon-raiders-demo-november-17-trailer.mp4 at 41.73 (720 rows, enlarged 2.67x), splatoon-raiders-demo-november-17-trailer.mp4 at 50.88 (720 rows, enlarged 2.67x), splatoon-raiders-demo-november-17-trailer.mp4 at 13.98 (720 rows, enlarged 2.67x), splatoon-raiders-demo-november-17-trailer.mp4 at 36.4 (720 rows, enlarged 2.67x); lowres_ok: Nintendo US store product page (the official trailer, 1280x720), Nintendo Japan product site (trailers in a player, no file), IGN video search (no MP4 for this trailer), Steam (Nintendo exclusive, no page), YouTube (refused without sign-in): 1280x720 only; at the 2x cap it cannot fill 9:16",
+  "render_job: audio split: applied; music_pct 99.4; leak_pct 0.1; cache {'hit': 2, 'miss': 3}; separate_secs 16.4; secs 25.6",
+  "render_job: lifeless: {\"score\": 8.0, \"still_share\": 0.15, \"longest_still\": 0.3, \"cuts_per_10s\": 7.09, \"held_under_text\": 0.0, \"secs\": 12.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
- "autofixed": [],
- "job_sha": "d5486398d20db38015a4e3614ade797e7d9703fd",
- "dispatches": 2,
+ "autofixed": [
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "splatoon-raiders-demo-november-17-trailer.mp4 at 36.40 s for 1.5 s, focus 0.459"
+  }
+ ],
+ "job_sha": "4a9760d913b8bd542974493d64a938313552c5c3",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 720,
   "max_zoom": 2.67,
-  "lowbit_shots": 4
+  "lowbit_shots": 5
  },
  "quality": "base",
  "final_enc": "-preset medium -crf 18",
@@ -36,5 +38,178 @@
   "cards/2026-11/splatoon-raiders-demo-november-17-look-3.jpg"
  ],
  "person_shown": "n/a",
- "sound": "trailer"
+ "sound": "trailer",
+ "job_after_autofix": {
+  "name": "splatoon-raiders-demo-november-17",
+  "story": "2026-11-17-splatoon-raiders-demo",
+  "kind_news": "out_now",
+  "built_by": "production-2",
+  "render_lane": "server",
+  "out": "cards/2026-11/splatoon-raiders-demo-november-17-reel-v2.mp4",
+  "footage": [
+   {
+    "file": "splatoon-raiders-demo-november-17-trailer.mp4",
+    "url": "https://assets.nintendo.com/video/upload/store/software/switch2/70010000127971/Video/affdde9075166515e8e54a952811a1c8fc15455278d5eb132872b9dafa13271a.mp4"
+   }
+  ],
+  "shots": [
+   [
+    "splatoon-raiders-demo-november-17-trailer.mp4",
+    90.75,
+    3.5,
+    [
+     [
+      0.0,
+      0.713
+     ]
+    ]
+   ],
+   [
+    "splatoon-raiders-demo-november-17-trailer.mp4",
+    41.73,
+    3.0,
+    [
+     [
+      0.0,
+      0.512
+     ]
+    ]
+   ],
+   [
+    "splatoon-raiders-demo-november-17-trailer.mp4",
+    50.88,
+    2.54,
+    [
+     [
+      0.0,
+      0.173
+     ]
+    ]
+   ],
+   [
+    "splatoon-raiders-demo-november-17-trailer.mp4",
+    13.98,
+    2.37,
+    [
+     [
+      0.0,
+      0.536
+     ]
+    ]
+   ],
+   [
+    "splatoon-raiders-demo-november-17-trailer.mp4",
+    36.4,
+    1.5,
+    [
+     [
+      0.0,
+      0.5
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    1,
+    [
+     [
+      "أتاحتها نينتيندو\nعلى Switch 2",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    2,
+    4,
+    [
+     [
+      "ثلاث زنازين وست أدوات\nلكن التقدم لا ينتقل للعبة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    4,
+    "المصدر: نينتيندو (Nintendo)",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "headline": "نسخة Splatoon Raiders\nالتجريبية على Switch 2",
+  "label": "رسمي",
+  "source": "نينتيندو (Nintendo)",
+  "date": "17 Nov 2026",
+  "theme": "playful",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": true,
+  "strip": [
+   [
+    "المنصة",
+    "Nintendo Switch 2"
+   ],
+   [
+    "النسخة التجريبية",
+    "متوفرة الآن"
+   ]
+  ],
+  "reel_check": {
+   "SOURCE: primary read in full": "yes: Nintendo Japan topics page read in full 04:2xZ; first report 17 Nov 03:01Z",
+   "SOURCE: not already posted": "yes: Nintendo Japan topics page read in full 04:2xZ; first report 17 Nov 03:01Z",
+   "SOURCE: age": "yes: Nintendo Japan topics page read in full 04:2xZ; first report 17 Nov 03:01Z",
+   "ANGLE before lines": "yes: see story file",
+   "STORY TYPE report": "yes: see story file",
+   "STORY: spoken paragraph, subject before pronoun": "yes: see story file",
+   "STORY: release verbs": "yes: see story file",
+   "STORY: names match names-ar.md": "yes: see story file",
+   "POST: Arabic passes": "yes: see story file",
+   "SOUND: footage sound or bed with reason": "yes: see story file",
+   "SOUND: no speech under Arabic lines": "yes: see story file",
+   "PICTURE: footage first": "yes: see story file",
+   "PICTURE: not the same as last 5 reels": "yes: see story file",
+   "CREDIT: on every clip": "yes: see story file"
+  },
+  "decision_log": [
+   {
+    "beat": "all",
+    "shot": "auto picked clean stretches of the official US store trailer",
+    "alternatives": "none",
+    "crop": "picker focus",
+    "music": "trailer own sound"
+   }
+  ],
+  "angle": {
+   "hook": "Splatoon Raiders now has a demo on Switch 2 (Nintendo Japan)",
+   "why_now": "posted 17 Nov 03:01Z",
+   "what_it_means_here": "players can try before buying; demo save data does not carry over",
+   "payoff": "six gadgets, three dungeons, Treasure Hunt mode"
+  },
+  "spoken": "أتاحتها نينتيندو على Switch 2 كنسخة تجريبية من Splatoon Raiders. تضم التجربة ثلاث زنازين وست أدوات، لكن التقدم لا ينتقل للعبة الكاملة.",
+  "track": [
+   "splatoon-raiders-demo-november-17-trailer.mp4",
+   90.75
+  ],
+  "lowres_ok": {
+   "searched": [
+    "Nintendo US store product page (the official trailer, 1280x720)",
+    "Nintendo Japan product site (trailers in a player, no file)",
+    "IGN video search (no MP4 for this trailer)",
+    "Steam (Nintendo exclusive, no page)",
+    "YouTube (refused without sign-in)"
+   ],
+   "result": "1280x720 only; at the 2x cap it cannot fill 9:16"
+  }
+ }
 }
