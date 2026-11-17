@@ -1,0 +1,80 @@
+[
+ {
+  "where": "credit 2",
+  "rule": "credit_width",
+  "what": "set on two lines at 36 px (was 36 px, too wide for the safe zone)",
+  "before": {
+   "text": "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: إس جيم (S-GAME)",
+   "size": 36
+  },
+  "after": {
+   "text": "القائمة: ذا غيم أووردز (The Game Awards)\nاللقطات: إس جيم (S-GAME)",
+   "size": 36
+  }
+ },
+ {
+  "where": "credit 3",
+  "rule": "credit_width",
+  "what": "set on two lines at 36 px (was 36 px, too wide for the safe zone)",
+  "before": {
+   "text": "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: ريبل ولفز (Rebel Wolves)",
+   "size": 36
+  },
+  "after": {
+   "text": "القائمة: ذا غيم أووردز (The Game Awards)\nاللقطات: ريبل ولفز (Rebel Wolves)",
+   "size": 36
+  }
+ },
+ {
+  "where": "credit 4",
+  "rule": "credit_width",
+  "what": "set on two lines at 36 px (was 36 px, too wide for the safe zone)",
+  "before": {
+   "text": "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: إس جيم (S-GAME)",
+   "size": 36
+  },
+  "after": {
+   "text": "القائمة: ذا غيم أووردز (The Game Awards)\nاللقطات: إس جيم (S-GAME)",
+   "size": 36
+  }
+ },
+ {
+  "where": "credit 5",
+  "rule": "credit_width",
+  "what": "set on two lines at 36 px (was 36 px, too wide for the safe zone)",
+  "before": {
+   "text": "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: روكستار غيمز (Rockstar Games)",
+   "size": 36
+  },
+  "after": {
+   "text": "القائمة: ذا غيم أووردز (The Game Awards)\nاللقطات: روكستار غيمز (Rockstar Games)",
+   "size": 36
+  }
+ },
+ {
+  "where": "credit 6",
+  "rule": "credit_width",
+  "what": "set one line at 30 px (was 36 px, too wide for the safe zone)",
+  "before": {
+   "text": "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: كابكوم (Capcom)",
+   "size": 36
+  },
+  "after": {
+   "text": "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: كابكوم (Capcom)",
+   "size": 30
+  }
+ },
+ {
+  "where": "credit 7",
+  "rule": "credit_width",
+  "what": "set one line at 32 px (was 36 px, too wide for the safe zone)",
+  "before": {
+   "text": "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: سوني (Sony)",
+   "size": 36
+  },
+  "after": {
+   "text": "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: سوني (Sony)",
+   "size": 32
+  }
+ }
+]
