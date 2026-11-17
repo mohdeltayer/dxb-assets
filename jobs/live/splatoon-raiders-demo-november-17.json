@@ -146,7 +146,7 @@
    "shot": "auto picked clean stretches of the official Nintendo US store video of Splatoon Raiders",
    "alternatives": "none",
    "crop": "picker focus",
-   "music": "trailer own sound"
+   "music": "our bed: the trailer's music stem is not clean (audio split refused it)"
   }
  ],
  "angle": {
@@ -156,10 +156,7 @@
   "payoff": "six gadgets, three dungeons, Treasure Hunt mode"
  },
  "spoken": "أتاحتها نينتيندو على Switch 2 كنسخة تجريبية من Splatoon Raiders. تضم التجربة ثلاث زنازين وست أدوات، لكن التقدم لا ينتقل للعبة الكاملة.",
- "track": [
-  "splatoon-raiders-demo-november-17-trailer.mp4",
-  5.14
- ],
+ "track": "bed",
  "lowres_ok": {
   "searched": [
    "Nintendo US store page, the game's own video (nsuid 70010000122824, 1280x720, the four videos on the page)",
@@ -169,5 +166,6 @@
    "YouTube (not allowed)"
   ],
   "result": "1280x720 only; at the 2x cap it cannot fill 9:16"
- }
+ },
+ "bed_reason": "Nintendo's own Splatoon Raiders store video (the only official file, 1280x720) was checked: the audio split found the music stem not clean (85.6% leftover), and the shots come from different moments, so its effects would not match the picture; narration lines run under every shot on our bed."
 }
