@@ -39,15 +39,13 @@ PAD = 0.15            # seconds kept clear either side of a bad interval
 # READ_W wide and two frames a second, reads each frame with tesseract once (in parallel), hands the same frames to
 # autofocus and runs the smear check in chunks of CHUNK seconds with the scene cuts. BUDGET caps one file's read;
 # a frame not read by then rejects its stretch ("not read in time"), so the read never passes the cap and never
-# offers an unread stretch. Results are cached per file, size and READ_VER. A label tesseract reads on some frames of a
-# scene and misses on others (Forza, 17 Nov: "IN-ENGINE FOOTAGE" read on 4 of 8 frames) rejects the whole scene once it
-# is read on PERSIST_N frames and PERSIST_SHARE of them: the label is there throughout.
+# offers an unread stretch. Results are cached per file, size and READ_VER. A label burnt into the whole trailer, which
+# tesseract reads on some frames and misses on others (Forza, 17 Nov: "IN-ENGINE FOOTAGE"), is found across the file
+# (LABEL_SHARE of its frames, in one place) and rejects every scene whose 9:16 window covers it.
 READ_W = 1280        # the full read's OCR width: the small "IN-ENGINE FOOTAGE" label reads no worse
 BUDGET = 55.0         # seconds per file: three trailers stay inside the card's 3 minutes
 CHUNK = 15.0
 READ_VER = 'r1'
-PERSIST_N = 2
-PERSIST_SHARE = 0.25
 LABEL_SHARE = 0.2     # a word read on this share of a file's frames, in one place, is a label on the whole trailer
 LABEL_POS = 0.06      # "one place": its centre within this share of the frame across readings
 LAST = {}             # file -> seconds the last read took (render_job puts it in qc.json)
@@ -257,8 +255,6 @@ def _pick_fast(f, ocr, workers, budget):
             hard, soft = PR.ocr_shot(path, f, a, b - a, v, dur, first=False, ocr=ocr, read=read, bars=bars_of(a, b))
             txt = [s_ for s_ in soft if s_[2].startswith(('text', 'cut-text'))]
             bad += hard + txt
-            n_fr = max(1, len([t for t in need if a <= t < b]))
-            hit = len({round(x, 2) for x, _y, _r in txt if a - 0.3 <= x < b})
             if labels:
                 bl = bars_of(a, b)[0]
                 srcw_, srch_ = srcw, info['height'] or srch0
@@ -269,8 +265,6 @@ def _pick_fast(f, ocr, workers, budget):
                         if lx1 > wx0 and lx0 < wx1:
                             bad.append((a, b, f'trailer label "{word}" in the window'))
                             break
-            if hit >= PERSIST_N and hit / n_fr >= PERSIST_SHARE:
-                bad.append((a, b, f'persistent text ({hit} of {n_fr} frames)'))
             if a < v0:
                 bad.append((a, min(b, v0), f'before the picture ({v0:.2f} s on this copy)'))
             rows, boxed = SG._letterbox_rows(f, max(a, v0), min(3.0, b - max(a, v0)), info['height'], bars=bars_of(a, b))

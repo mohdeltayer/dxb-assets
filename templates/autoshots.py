@@ -65,7 +65,7 @@ def expand(job):
 
 MIN_SECS = 2.0            # a shot shortened to fit a free clean stretch keeps at least this long
 READ_CAP = 180.0          # seconds for the whole read of up to three trailers (adv-20261117-server-speed-for-p2 A)
-DECODE_EST = 18.0         # the part of a file's read the budget cannot stop (its one decode), kept aside
+DECODE_EST = 18.0         # a file's one decode, which the budget cannot stop: never give a file less than this plus 10 s
 READ = {}                 # file -> the shotpick result of this fill (render_job reports the seconds)
 
 
@@ -118,7 +118,7 @@ def fill(job, reader=None):
 
         def reader(f):                                       # the fast read, cached per file (shotpick.pick); the
             left_ = max(1, len([x for x in files if x not in READ]))   # whole read stays inside READ_CAP
-            budget = max(10.0, (t_end - time.time()) / left_ - DECODE_EST)
+            budget = max(DECODE_EST + 10.0, (t_end - time.time()) / left_)   # the file's whole read, decode included
             READ[f] = SP.pick(f, budget=budget)
             return READ[f]
     import autofix as AF
