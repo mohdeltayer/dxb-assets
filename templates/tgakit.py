@@ -13,7 +13,7 @@ the order The Game Awards reads them, from the official stream or thegameawards.
     python3 templates/tgakit.py goty <key,key,...> [--hook KEY] [--out jobs/live/tga-2026-goty-nominees.json]
     python3 templates/tgakit.py most <key:count,key:count,...> [--out jobs/live/tga-2026-most-nominated.json]
     python3 templates/tgakit.py cat <slug> <key|Name::note::tile,...> [--ground KEY] [--title AR]   X and Threads, one category
-    python3 templates/tgakit.py main <slug,slug,...>                  Instagram, the main categories in one Reel
+    python3 templates/tgakit.py main <slug,slug,...> [--hook KEY]     Instagram, the main categories in one Reel
 
 `goty` writes the list Reel: the headline over the first nominee's footage, then each nominee on its own trailer with its
 name as the line and «المرشح n من N · المصدر: ...» as the credit, then the ceremony date on a closing picture; our bed.
@@ -337,7 +337,7 @@ def category(kit, slug, spec, ground=None, title=None, when='TODO time read (Z)'
     return job, {'x': x, 'threads': x + f'\n\nالمصدر: {SOURCE}'}
 
 
-def combined(kit, slugs, when='TODO time read (Z)'):
+def combined(kit, slugs, when='TODO time read (Z)', hook=None):
     """The Instagram Reel of the main categories: a hook over the first category's footage, then one nominees card per
     category, each on one of its own nominees' moving footage, then the ceremony date. Built from the categories already
     written with `cat` (the same rows, so the two never disagree)."""
@@ -350,7 +350,11 @@ def combined(kit, slugs, when='TODO time read (Z)'):
     c = kit['candidates']
     for s_ in slugs:
         _fill_roles(kit, cats[s_]['ground'])
-    first = c[cats[slugs[0]]['ground']]
+    if hook:                                          # the cover: a nominee whose opening shot stops the scroll
+        _need(kit, [hook], lambda k: ())
+        _fill_roles(kit, hook)
+        _need(kit, [hook], lambda k: ('hook', 'close'))
+    first = c[hook or cats[slugs[0]]['ground']]
     name = 'tga-2026-main-categories'
     shots = [_shot(first, 'hook', HOOK_SECS)]
     credits = [[0, 0, f"المصدر: {first['credit']}"]]
@@ -466,7 +470,7 @@ def main(argv):
         _write(job, texts, out or os.path.join(ROOT, 'jobs', 'live', job['name'] + '.json'))
     elif cmd == 'main':
         slugs = [k.strip() for k in rest[0].split(',') if k.strip()]
-        job, texts = combined(kit, slugs, when)
+        job, texts = combined(kit, slugs, when, rest[rest.index('--hook') + 1] if '--hook' in rest else None)
         _story(job, 'main categories')
         _write(job, texts, out or os.path.join(ROOT, 'jobs', 'live', job['name'] + '.json'))
     else:

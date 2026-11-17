@@ -475,7 +475,8 @@ def nominees(path, rows, title=None, theme='cold', show=None):
         note_f = A.F('Medium', NG.MIN_TEXT)
         if note and probe.textlength(note, font=note_f, **G.AR) > room:
             raise ValueError(f"nominees row note does not fit: {note}")
-        if probe.textlength(r['name'], font=name_f, **G.AR) <= room:
+        nkw = G.AR if re.search('[\u0600-\u06FF]', r['name']) else {'direction': 'ltr'}
+        if probe.textlength(r['name'], font=name_f, **nkw) <= room:
             name_lines = [r['name']]
             ys = [cy - 14] if note else [cy + 14]
             ny = cy + 30
@@ -485,16 +486,17 @@ def nominees(path, rows, title=None, theme='cold', show=None):
             best = None
             for k in range(1, len(words)):
                 a, b = ' '.join(words[:k]), ' '.join(words[k:])
-                w = max(probe.textlength(a, font=name_f, **G.AR), probe.textlength(b, font=name_f, **G.AR))
+                w = max(probe.textlength(a, font=name_f, **nkw), probe.textlength(b, font=name_f, **nkw))
                 if best is None or w < best[0]:
                     best = (w, [a, b])
             name_lines = [t.rstrip(':') for t in best[1]] if best else [r['name']]
-            if any(probe.textlength(t, font=name_f, **G.AR) > room for t in name_lines):
+            if any(probe.textlength(t, font=name_f, **nkw) > room for t in name_lines):
                 raise ValueError(f"nominees row does not fit: {r['name']}")
             note = None                                # a two-line title takes the row; the studio note gives way
             ys, ny = [cy - 8, cy + 36], None
-        for t, ty in zip(name_lines, ys):
-            d.text((tr, ty), t, font=name_f, fill=A.INK, anchor='rs', **G.AR)
+        for t, ty in zip(name_lines, ys):            # a Latin title keeps its own order ("007 First Light", not flipped)
+            kw = G.AR if re.search('[\u0600-\u06FF]', t) else {'direction': 'ltr'}
+            d.text((tr, ty), t, font=name_f, fill=A.INK, anchor='rs', **kw)
         if note:
             d.text((tr, ny), note, font=note_f, fill=A.BODY, anchor='rs', **G.AR)
         y += row_h
