@@ -1,0 +1,116 @@
+{
+ "name": "sliptest-phasmophobia",
+ "story": "2026-11-17-sliptest-phasmophobia",
+ "kind_news": "reveal",
+ "built_by": "server-slip",
+ "render_lane": "hosted",
+ "out": "cards/test/sliptest-phasmophobia-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "sliptest-phasmophobia-willow-rework-launch-trailer.mp4",
+   "steam": 739630,
+   "trailer": "Willow Rework Launch Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "739630"
+  }
+ ],
+ "shots": [
+  [
+   "sliptest-phasmophobia-willow-rework-launch-trailer.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "sliptest-phasmophobia-willow-rework-launch-trailer.mp4",
+   "auto",
+   4.34,
+   null
+  ],
+  [
+   "sliptest-phasmophobia-willow-rework-launch-trailer.mp4",
+   "auto",
+   5.06,
+   null
+  ],
+  [
+   "sliptest-phasmophobia-willow-rework-launch-trailer.mp4",
+   "auto",
+   3.0,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "يحمل التحديث عصي التنقيب\nلتحديد مكان العظمة،",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    [
+     "وأوامر صوتية جديدة للأشباح،\nوانتقال اللعبة إلى Unity 6",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   3,
+   "المصدر: إعلان Phasmophobia على Steam",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "يصل تحديث Resonance إلى Phasmophobia في 24 نوفمبر على كل المنصات، حسب كاينتيك غيمز (Kinetic Games). يحمل التحديث عصي التنقيب لتحديد مكان العظمة، وأوامر صوتية جديدة للأشباح، وانتقال اللعبة إلى Unity 6.",
+ "headline": "تحديث Resonance\nيصل إلى Phasmophobia",
+ "label": "رسمي",
+ "source": "إعلان Phasmophobia على Steam",
+ "date": "17 Nov 2026",
+ "theme": "emerald",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "sliptest-phasmophobia-willow-rework-launch-trailer.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": null,
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "footage": "sliptest-phasmophobia-willow-rework-launch-trailer.mp4 from the resolver (steam:739630)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (audio split per shot)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Steam announcement 'Announcing - Phasmophobia's Resonance Update Releases November 24th, 2026', 17 Nov 2026 15:00Z, read in full; Kinetic Games Development Preview 22 (https://store.steampowered.com/news/app/739630/view/677389277779199642); first report: Steam announcement 17 Nov 2026 15:00Z",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 739630 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ },
+ "lane_reason": "Phase 1 test (no Publer upload, no ledgers)"
+}
