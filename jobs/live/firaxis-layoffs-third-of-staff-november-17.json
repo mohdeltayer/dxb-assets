@@ -7,18 +7,193 @@
  "out": "cards/2026-11/firaxis-layoffs-third-of-staff-november-17-reel-v1.mp4",
  "footage": [
   {
-   "file": "civ7-alexander.mp4",
-   "steam": 1295660,
-   "trailer": "Alexander First Look - ESRB - English",
-   "start": 0,
-   "seconds": 90
-  },
-  {
    "file": "xcom2-launch.mp4",
    "steam": 268500,
    "trailer": "XCOM 2 - Launch Trailer - ESRB",
    "start": 0,
    "seconds": 90
   }
- ]
+ ],
+ "shots": [
+  [
+   "xcom2-launch.mp4",
+   15.7,
+   1.85,
+   [
+    [
+     0.0,
+     0.4
+    ]
+   ]
+  ],
+  [
+   "xcom2-launch.mp4",
+   25.4,
+   2.15,
+   [
+    [
+     0.0,
+     0.4
+    ]
+   ]
+  ],
+  [
+   "xcom2-launch.mp4",
+   28.95,
+   2.45,
+   [
+    [
+     0.0,
+     0.4
+    ]
+   ]
+  ],
+  [
+   "xcom2-launch.mp4",
+   37.55,
+   3.85,
+   [
+    [
+     0.0,
+     0.4
+    ]
+   ]
+  ],
+  [
+   "xcom2-launch.mp4",
+   48.9,
+   2.65,
+   [
+    [
+     0.0,
+     0.4
+    ]
+   ]
+  ],
+  [
+   "xcom2-launch.mp4",
+   63.55,
+   3.2,
+   [
+    [
+     0.0,
+     0.4
+    ]
+   ]
+  ],
+  [
+   "xcom2-launch.mp4",
+   33.35,
+   1.75,
+   [
+    [
+     0.0,
+     0.4
+    ]
+   ]
+  ],
+  [
+   "xcom2-launch.mp4",
+   46.45,
+   1.65,
+   [
+    [
+     0.0,
+     0.4
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   0,
+   3,
+   [
+    [
+     "تسرّح فيراكسيس نحو 60 موظفًا\nأي ثلث العاملين فيها",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   7,
+   [
+    [
+     "وأكد متحدث 2K مغادرة هيذر هازن\nمن رئاسة الاستوديو",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "strip": [
+  [
+   "المصدر",
+   "بلومبرغ (Bloomberg)"
+  ],
+  [
+   "الاستوديو",
+   "Firaxis Games"
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   7,
+   "لقطات من عرض XCOM 2 السابق، 2K",
+   {
+    "size": 30,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "تسريح ثلث العاملين\nفي مطورة Civilization",
+ "label": "تقرير",
+ "source": "بلومبرغ (Bloomberg) عبر Gematsu",
+ "date": "17 Nov 2026",
+ "theme": "cold",
+ "style": "glow",
+ "template": "split",
+ "skin": "house",
+ "track": "bed",
+ "cut": true,
+ "genre": [
+  "strategy"
+ ],
+ "platform": "pc",
+ "beat": "business",
+ "bed_reason": "trailer sound is not verified as a music-only stretch; our bed under every line",
+ "subject_person": null,
+ "spoken": "تسرّح فيراكسيس (Firaxis)، مطورة Civilization وXCOM، نحو 60 موظفًا، أي ثلث العاملين فيها، حسب بلومبرغ (Bloomberg). وأكد متحدث باسم 2K مغادرة هيذر هازن (Heather Hazen) من رئاسة الاستوديو. وذكرت بلومبرغ أن لعبة XCOM الجديدة تعثرت وفاتها موعد مهم، لكن تطويرها مستمر.",
+ "reel_check": {
+  "SOURCE: primary read in full": "no primary: Bloomberg paywalled; Gematsu read in full with the 2K spokesperson statement; six outlets agree; label تقرير naming Bloomberg",
+  "SOURCE: not already posted": "yes: ledger find firaxis none; Publer last 7 days none",
+  "SOURCE: age": "yes: first report 17 Nov about 16:45Z",
+  "ANGLE before lines": "yes: story file",
+  "STORY TYPE": "n/a: business report, footage is earlier XCOM 2 trailer, said on screen",
+  "STORY: spoken paragraph, subject before pronoun": "yes",
+  "STORY: release verbs": "n/a",
+  "STORY: names match names-ar.md": "Firaxis written فيراكسيس in the paragraph, Latin on strip; flagged on the board",
+  "POST: Arabic passes": "yes: Western digits",
+  "SOUND: footage sound or bed with reason": "yes: our bed, bed_reason",
+  "SOUND: no speech under Arabic lines": "yes",
+  "PICTURE: footage first": "yes: Steam XCOM 2 launch trailer app 268500",
+  "PICTURE: not graphic": "yes: sci-fi strategy, strip checked by Director",
+  "CREDIT: on every clip": "yes",
+  "SENSITIVE": "layoffs: neutral wording, no individuals blamed"
+ },
+ "decision_log": [
+  {
+   "beat": "all",
+   "shot": "hand-placed in the clean stretches of the server shots read (run 505): xcom2-launch 15.7, 25.4, 28.95, 37.55, 48.9, 63.55, 33.35, 46.45",
+   "alternatives": "Civilization VII Alexander First Look (0 clean stretches, UI text throughout)",
+   "crop": "centre, judged on the shot sheet",
+   "music": "bed"
+  }
+ ],
+ "note": "Firaxis layoffs report; footage is XCOM 2's launch trailer (Steam app 268500), earlier footage not the new game."
 }
