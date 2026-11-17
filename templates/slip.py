@@ -210,7 +210,7 @@ def problems(slip, now=None):
 
 
 # ---------------------------------------------------------------------------------------------------------- lines
-def _split_at(words, limit):
+def _split_at(words, limit, right_max=None):
     """Index to cut a word list so the first part stays under `limit` characters, at a clause comma where possible, and
     so the second part opens on an Arabic word (a visual line never opens on a Latin name or a digit)."""
     best, best_score = None, None
@@ -222,9 +222,12 @@ def _split_at(words, limit):
             break
         if not ARABIC.match(words[i]) or words[i - 1].rstrip('،') in NO_BREAK_AFTER:
             continue
-        if not comma and (re.match(r'^[\d.]+$', words[i - 1]) or (i >= 2 and re.match(r'^[\d.]+$', words[i - 2]))):
-            continue                                   # a number stays with the words it counts
         score = abs(len(left) - total / 2) - (25 if comma else 0)
+        if right_max and total - len(left) - 1 > right_max:
+            score += 100                               # the second visual line would run out of the safe zone
+        if not comma and re.match(r'^[\d.,%]+$', words[i - 1]):
+            score += 15                                # a number stays with the word it counts where it can (DRG, 17
+                                                       # Nov: a ban left only «ويصل» alone, a 35-character second line)
         if best_score is None or score < best_score:
             best, best_score = i, score
     return best
@@ -235,7 +238,7 @@ def _wrap(text):
     if len(text) <= LINE_CHARS:
         return text
     words = text.split()
-    i = _split_at(words, max(LINE_CHARS, len(text) - LINE_CHARS))
+    i = _split_at(words, max(LINE_CHARS, len(text) - LINE_CHARS), right_max=LINE_CHARS + 3)
     if i is None:
         return text
     return ' '.join(words[:i]) + '\n' + ' '.join(words[i:])
@@ -256,6 +259,11 @@ def story_sentences(spoken, headline=None):
     return sents
 
 
+def fits(beat):
+    """Both visual lines of a beat inside LINE_CHARS (a few over is left to the server's font check)."""
+    return all(len(v) <= LINE_CHARS + 3 for v in _wrap(beat).split('\n'))
+
+
 def beats(spoken, headline=None):
     """The spoken paragraph cut into beats, in order, every word kept: sentences, then halves at a clause comma or the
     middle until each beat fits two visual lines."""
@@ -264,7 +272,7 @@ def beats(spoken, headline=None):
         stack = [s.strip()]
         while stack:
             b = stack.pop(0)
-            if len(b) <= BEAT_CHARS:
+            if len(b) <= BEAT_CHARS and fits(b):
                 out.append(b)
                 continue
             words = b.split()

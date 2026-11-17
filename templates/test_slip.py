@@ -76,6 +76,11 @@ class Beats(unittest.TestCase):
             for vis in S._wrap(b).split('\n'):
                 self.assertRegex(vis, '^[؀-ۿ]')   # a visual line opens on an Arabic word
 
+    def test_wrap_balances_around_numbers(self):
+        w = S._wrap('ويصل التحديث 1.2 بمستوى الخطورة Hazard 6')      # DRG, 17 Nov: was «ويصل» alone over 35 characters
+        self.assertTrue(all(len(v) <= S.LINE_CHARS + 3 for v in w.split('\n')), w)
+        self.assertTrue(S.fits('وتباع الإضافة على Steam بسعر 9.99 دولارات'))
+
     def test_headline_restatement_dropped(self):
         sp = 'تصدر Test Game في 28 يناير. وتضيف اللعبة طورًا جديدًا للعب الجماعي.'
         self.assertEqual(S.story_sentences(sp, 'تصدر Test Game\nفي 28 يناير'), ['وتضيف اللعبة طورًا جديدًا للعب الجماعي'])
