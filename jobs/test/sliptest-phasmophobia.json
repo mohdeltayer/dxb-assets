@@ -5,11 +5,28 @@
  "built_by": "server-slip",
  "render_lane": "hosted",
  "out": "cards/test/sliptest-phasmophobia-reel-v1.mp4",
+ "split_fallback": "bed",
  "footage": [
   {
    "file": "sliptest-phasmophobia-willow-rework-launch-trailer.mp4",
    "steam": 739630,
    "trailer": "Willow Rework Launch Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "739630"
+  },
+  {
+   "file": "sliptest-phasmophobia-tanglewood-rework-launch-trailer.mp4",
+   "steam": 739630,
+   "trailer": "Tanglewood Rework Launch Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "739630"
+  },
+  {
+   "file": "sliptest-phasmophobia-chronicle-trailer.mp4",
+   "steam": 739630,
+   "trailer": "Chronicle Trailer",
    "start": 0,
    "seconds": 120,
    "trailer_id": "739630"
