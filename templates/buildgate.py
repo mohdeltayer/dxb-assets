@@ -493,6 +493,8 @@ if __name__ == '__main__':
         raise SystemExit(__doc__)
     path = sys.argv[1]
     job = json.load(open(path))
+    import autoshots
+    autoshots.expand(job)                # "shots": "auto" (gates-fix C): lengths only, no footage
     p = problems(path, job)
     for line in p:
         print('refused:', line)

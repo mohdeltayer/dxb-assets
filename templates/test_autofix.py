@@ -94,5 +94,48 @@ class Segment(unittest.TestCase):
         self.assertEqual(DC._segment(6.0, [0, 2.9, 4.9]), (4.9, None))
 
 
+class AutoShots(unittest.TestCase):
+    def setUp(self):
+        AF.LOG[:] = []
+
+    def reader(self, f):
+        return {'duration': 60.0, 'picture_start': 1.5,
+                'shots': [{'start': 2.0, 'end': 9.0, 'focus': 0.9}, {'start': 12.0, 'end': 20.0, 'focus': 0.5},
+                          {'start': 25.0, 'end': 26.5, 'focus': 0.5}, {'start': 30.0, 'end': 45.0, 'focus': 0.45},
+                          {'start': 50.0, 'end': 58.0, 'focus': 0.55}]}
+
+    def test_auto_expands_and_fills_in_source_order(self):
+        import autoshots as AS
+        j = {'footage': [{'file': 't.mp4'}], 'shots': 'auto', 'lines': [[1, 1, ['a']], [2, 2, ['b']], [3, 3, ['c']]]}
+        AS.expand(j)
+        self.assertEqual(len(j['shots']), 4)
+        self.assertEqual(j['shots'][0][2], AS.HOOK_SECS)
+        self.assertEqual(AS.fill(j, self.reader), [])
+        starts = [s[1] for s in j['shots']]
+        self.assertEqual(starts, sorted(starts))
+        for s in j['shots']:                                   # inside a clean stretch, whole length
+            self.assertTrue(any(r['start'] <= s[1] and s[1] + s[2] <= r['end'] for r in self.reader('t')['shots']))
+        self.assertNotIn('shots_auto', j)
+        self.assertTrue(all(x['rule'] == 'auto_shots' for x in AF.LOG))
+
+    def test_one_slot_in_a_written_list(self):
+        import autoshots as AS
+        j = {'footage': [{'file': 't.mp4'}], 'shots': [['t.mp4', 12.5, 3.0, 0.5], ['t-gfx-1.png', None, 3.0, None],
+                                                      ['t.mp4', 'auto', 4.0, None]]}
+        AS.expand(j)
+        self.assertEqual(j['shots_auto'], [2])
+        self.assertEqual(AS.fill(j, self.reader), [])
+        self.assertEqual(j['shots'][0][1], 12.5)                # hand-timed shots stay
+        self.assertIsInstance(j['shots'][2][1], float)
+
+    def test_refused_when_nothing_is_long_enough(self):
+        import autoshots as AS
+        j = {'footage': [{'file': 't.mp4'}], 'shots': [['t.mp4', 'auto', 20.0, None]]}
+        AS.expand(j)
+        left = AS.fill(j, self.reader)
+        self.assertEqual(len(left), 1)
+        self.assertEqual(left[0]['rule'], 'auto_shots')
+
+
 if __name__ == '__main__':
     unittest.main()

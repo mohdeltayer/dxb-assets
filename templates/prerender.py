@@ -237,6 +237,13 @@ def analyse(job, ocr=True, check=True, workers=None, verify=True):
         except Exception as e:                               # noqa: BLE001
             problems.append(f"fetch {item['file']}: {e}")
     T['fetch'] = round(time.time() - t0, 1)
+    import autoshots as AS                                   # shot times the job left to the server (gates-fix C)
+    AS.expand(job)
+    if job.get('shots_auto'):
+        try:
+            RJ.auto_shots(job)
+        except SystemExit as e:
+            problems.append(str(e))
     shots = RJ.shots(job, build=False)
     foot = [(i, f, s, d, fo) for i, (f, s, d, fo) in enumerate(shots) if s is not None and reel._footage(f)]
     files = sorted({f for _, f, *_ in foot})

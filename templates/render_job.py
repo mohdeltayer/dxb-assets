@@ -566,6 +566,26 @@ def _check_all(job, errs):
     return end
 
 
+def auto_shots(job):
+    """Fill every automatic shot slot (templates/autoshots.py) from the clean stretches of the fetched footage."""
+    import autoshots as AS
+    AS.expand(job)
+    if not job.get('shots_auto'):
+        return
+    import autofix as AF
+    n0 = len(AF.LOG)
+    left = AS.fill(job)
+    if len(AF.LOG) > n0:
+        AF.save_log(os.environ.get('AUTOFIX_JSON'))
+        if os.environ.get('AUTOFIX_JOB'):
+            json.dump(job, open(os.environ['AUTOFIX_JOB'], 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    for p in left:
+        print('autoshots: ' + p['detail'] + ' (' + p['autofix'] + ')', flush=True)
+    if left:
+        raise SystemExit(f'autoshots: {len(left)} shot slot{"s" if len(left) > 1 else ""} with no clean stretch (above)')
+    print(f'autoshots: {len(AF.LOG) - n0} shot time(s) picked on the server', flush=True)
+
+
 def shot_gate(job):
     """adv-20261115-one-render-server-checks items B and C (templates/shotgate.py): every footage shot starts after the
     picture on the server's copy, stays inside one scene, is not letterboxed, and keeps its subject inside the 9:16
@@ -1198,6 +1218,7 @@ def run(job, draft=False):
         fetch(item)
     gfx(job)
     source_check(job)
+    auto_shots(job)                             # the server picks shot times the job left to it (gates-fix C)
     shot_gate(job)                              # B and C on the server's copy, before anything is built (15 Nov 2026)
     fetched = time.time() - t0
     out = os.path.join(ROOT, job['out'])
@@ -1274,6 +1295,8 @@ def run(job, draft=False):
 if __name__ == '__main__':
     step, path = sys.argv[1], sys.argv[2]
     job = json.load(open(path))
+    import autoshots as AS                      # "shots": "auto" and [file, "auto", secs, focus] (gates-fix C)
+    AS.expand(job)
     if step in ('check', 'run'):
         import buildgate                        # ledger, story file, lane, reel-check before anything (adv-20261105-p2-audit-fixes)
         buildgate.enforce(path, job)
