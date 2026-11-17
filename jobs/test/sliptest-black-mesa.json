@@ -5,11 +5,28 @@
  "built_by": "server-slip",
  "render_lane": "hosted",
  "out": "cards/test/sliptest-black-mesa-reel-v1.mp4",
+ "split_fallback": "bed",
  "footage": [
   {
    "file": "sliptest-black-mesa-1-0-launch-trailer.mp4",
    "steam": 362890,
    "trailer": "1.0 Launch Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "362890"
+  },
+  {
+   "file": "sliptest-black-mesa-2018-xen-trailer.mp4",
+   "steam": 362890,
+   "trailer": "2018 Xen Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "362890"
+  },
+  {
+   "file": "sliptest-black-mesa-steam-release-trailer-2015.mp4",
+   "steam": 362890,
+   "trailer": "Steam Release Trailer 2015",
    "start": 0,
    "seconds": 120,
    "trailer_id": "362890"
