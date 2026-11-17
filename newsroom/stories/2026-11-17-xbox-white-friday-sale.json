@@ -56,5 +56,25 @@
  },
  "gate": "gate 01:14Z: Xbox Wire page read in full, no update note; ledger find xbox black friday sale: 0 hits; Nintendo Black Friday story of 14 Nov is a different company",
  "texts": {},
- "arabic_notes": "Black Friday written as الجمعة البيضاء (White Friday) per glossary; Xbox as إكس بوكس"
+ "arabic_notes": "Black Friday written as الجمعة البيضاء (White Friday) per glossary; Xbox as إكس بوكس",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/xbox-white-friday-sale-november-19-reel-v1.mp4",
+  "blob": "e1add8618ae18d2bf962fc43da1d38504baefc70",
+  "at": "2026-11-17T03:19:08Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/xbox-white-friday-sale-november-19.json",
+   "sha256": "ba5616eeb1f6ecceeefc61fc5e336d252f5decc35b54eb805924b605e8198b22",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Look 1: Arabic headline 'خصم يصل إلى 80 بالمئة في عروض إكس بوكس' with السعر chip over close-up game creature art, readable. Look 2: floating-rocks trailer shot, credit 'المصدر: إكس بوكس واير (Xbox Wire)', line 'أعلنت إكس بوكس (Xbox) عروض الجمعة البيضاء في أمريكا', strip 80 بالمئة / 19 نوفمبر إلى 2 ديسمبر / أمريكا فقط. Look 3: dark Gears shot, credit, line 30 بالمئة Gears of War: E-Day and 25 بالمئة Forza Horizon 6, same strip. All text legible, matches story file, no gore."
+ }
 }
