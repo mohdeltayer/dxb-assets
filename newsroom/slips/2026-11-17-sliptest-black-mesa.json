@@ -1,12 +1,26 @@
 {
  "id": "2026-11-17-sliptest-black-mesa",
- "state": "failed",
- "problems": [
-  "footage: the resolver stopped on steam:362890: ModuleNotFoundError: No module named 'pedalboard'"
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "ledger: earlier stories on this game: 2026-11-17-black-mesa-anomalous-improvements (an update or a duplicate? the editor decides)"
  ],
- "flags": [],
- "at": "2026-11-17T19:23:02Z",
- "run": "44157904795",
+ "at": "2026-11-17T19:25:54Z",
+ "footage": {
+  "name": "1.0 Launch Trailer",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30.0,
+  "mbps": 5.82,
+  "rows": 1080,
+  "duration": 120.08,
+  "decode_clean": true
+ },
+ "job": "jobs/test/sliptest-black-mesa.json",
+ "story": "newsroom/stories/2026-11-17-sliptest-black-mesa.json",
+ "lines": 6,
+ "shots": 7,
+ "run": "44158316874",
  "lane": "test",
- "build_secs": 23
+ "build_secs": 158
 }
