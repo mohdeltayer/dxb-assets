@@ -14,13 +14,6 @@
    "seconds": 120
   },
   {
-   "file": "xbox-white-friday-sale-november-19-crimson.mp4",
-   "steam": 3321460,
-   "trailer": "Crimson Desert Enhanced - Official Announcement Trailer",
-   "start": 0,
-   "seconds": 120
-  },
-  {
    "file": "xbox-white-friday-sale-november-19-forza.mp4",
    "steam": 2483190,
    "trailer": "Forza Horizon 6 Launch Trailer",
@@ -49,29 +42,7 @@
   ],
   [
    "xbox-white-friday-sale-november-19-grounded2.mp4",
-   22.5,
-   2.5,
-   [
-    [
-     0.0,
-     0.5
-    ]
-   ]
-  ],
-  [
-   "xbox-white-friday-sale-november-19-crimson.mp4",
-   20,
-   2.5,
-   [
-    [
-     0.0,
-     0.5
-    ]
-   ]
-  ],
-  [
-   "xbox-white-friday-sale-november-19-crimson.mp4",
-   22.5,
+   24.24,
    2.5,
    [
     [
@@ -104,7 +75,7 @@
   ],
   [
    "xbox-white-friday-sale-november-19-gears.mp4",
-   30,
+   28.74,
    2.5,
    [
     [
@@ -115,7 +86,7 @@
   ],
   [
    "xbox-white-friday-sale-november-19-forza.mp4",
-   40,
+   35.15,
    2.5,
    [
     [
@@ -137,7 +108,7 @@
   ],
   [
    "xbox-white-friday-sale-november-19-gears.mp4",
-   42.5,
+   44.6,
    2.5,
    [
     [
@@ -194,13 +165,7 @@
      {
       "size": 50
      }
-    ]
-   ]
-  ],
-  [
-   8,
-   9,
-   [
+    ],
     [
      "العروض في أمريكا فقط\nوتختلف حسب السوق والمتجر",
      {
@@ -213,7 +178,7 @@
  "credits": [
   [
    0,
-   9,
+   7,
    "المصدر: إكس بوكس واير (Xbox Wire)",
    {
     "size": 40,
@@ -262,13 +227,13 @@
   "SOUND: no speech under Arabic lines": "n/a: checked by the server audio split",
   "PICTURE: footage first": "yes: four official Steam trailers of games in the sale",
   "PICTURE: not the same as last 5 reels": "yes: no recent Reel uses these trailers",
-  "CREDIT: on every clip": "yes: credit band over shots 0 to 9"
+  "CREDIT: on every clip": "yes: credit band over shots 0 to 7"
  },
  "decision_log": [
   {
-   "beat": "0 to 9",
+   "beat": "0 to 7",
    "shot": "2.5 s stretches from four Steam trailers of games named in the sale",
-   "alternatives": "Final Fantasy VII Remake Intergrade Steam page has only an ESRB clip, so its 80% sits in the strip; clean starts to be set by the shot gate",
+   "alternatives": "Crimson Desert trailers are letterboxed (816 rows), dropped; Final Fantasy VII Remake Intergrade Steam page has only an ESRB clip, so its 80% sits in the strip; starts moved to the shot gate's clean starts",
    "crop": "split, enlargement under 2x",
    "music": "each trailer's own sound"
   }
