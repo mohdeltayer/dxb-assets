@@ -56,5 +56,25 @@
    "xcom"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/firaxis-layoffs-third-of-staff-november-17-reel-v1.mp4",
+  "blob": "c1d38a6598d8394b3da5bf53724eabae5a5748d0",
+  "at": "2026-11-17T18:56:41Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/firaxis-layoffs-third-of-staff-november-17.json",
+   "sha256": "1bbc474a33898dbc42ef547c4c7504e32c79b29e077e986781e7cfed8b6add34",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "three look frames, strip and dense: XCOM 2 trailer footage credited as earlier footage, Arabic lines legible and matching the story, no graphic content (stylised CGI)"
  }
 }
