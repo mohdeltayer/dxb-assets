@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T03:05:08Z",
- "seq": 557,
+ "generated_at": "2026-11-17T03:52:07Z",
+ "seq": 558,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 16011,
    "source": "Nintendo Japan",
@@ -16,9 +17,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 557
-  }
- ],
- "recent": [
+  },
   {
    "id": 15936,
    "source": "Xbox Wire",
@@ -330,9 +329,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T03:05:05Z",
+  "last_poll_at": "2026-11-17T03:50:15Z",
   "sources_enabled": 100,
-  "sources_ok": 91,
+  "sources_ok": 90,
   "sources_failing": 9,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 93x)",
