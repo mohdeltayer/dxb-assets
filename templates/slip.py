@@ -58,7 +58,20 @@ MIN_SECS = 3.0
 BEAT_CHARS = 58          # one beat: two visual lines at most
 LINE_CHARS = 30          # one visual line at 54 px, conservatively (Dubai Bold; the server's font check decides)
 LINE_SIZE = 54
-MAX_SHOTS = 11
+MAX_BEATS = 7
+PIECE_MAX = 2.8          # a beat's shot: trailers' clean stretches run about 2.6 to 3.3 s between cuts (Black Mesa, 17 Nov),
+PIECE_MIN = 2.2          # so a beat longer than that spans two or three shots and its line runs across them
+XFADE = 0.4              # each shot change takes this much off the line's time on screen
+
+
+def pieces(total):
+    """Shot lengths for one beat that needs `total` seconds on screen: as few as keep every shot within PIECE_MAX,
+    each change paying its crossfade."""
+    k = 1
+    while (total + XFADE * (k - 1)) / k > PIECE_MAX:
+        k += 1
+    each = max(PIECE_MIN, (total + XFADE * (k - 1)) / k)
+    return [round(each, 2)] * k
 IG_MAX, TH_MAX = 2200, 500
 UTC = dt.timezone.utc
 
@@ -307,13 +320,14 @@ def job_from(slip, foot, lane='live', theme=None):
     import textrules as TR
     name = _name(slip)
     f = foot['file']
-    bs = beats(slip['spoken'], slip['headline'])[:MAX_SHOTS - 1]
+    bs = beats(slip['spoken'], slip['headline'])[:MAX_BEATS]
     shots = [[f, 'auto', HOOK_SECS, None]]
     lines = []
-    for i, b in enumerate(bs, start=1):
-        secs = round(max(MIN_SECS, TR.read_secs(b) + 0.7), 2)
-        shots.append([f, 'auto', secs, None])
-        lines.append([i, i, [[_wrap(b), {'size': LINE_SIZE}]]])
+    for b in bs:
+        a = len(shots)
+        for secs in pieces(TR.read_secs(b) + 0.8):
+            shots.append([f, 'auto', secs, None])
+        lines.append([a, len(shots) - 1, [[_wrap(b), {'size': LINE_SIZE}]]])
     if len(shots) < 4:                              # a short story still breathes: footage after the last line
         shots += [[f, 'auto', MIN_SECS, None] for _ in range(4 - len(shots))]
     credit = slip['credit'] if str(slip['credit']).startswith(('المصدر', 'لقطات')) else f'المصدر: {slip["credit"]}'

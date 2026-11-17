@@ -98,6 +98,21 @@ class Job(unittest.TestCase):
         t = S.job_from(slip(), {'file': 'tg-trailer.mp4', 'steam': 1}, 'test', theme='cold')
         self.assertTrue(t['out'].startswith('cards/test/'))
 
+    def test_beats_span_short_shots(self):
+        self.assertEqual(S.pieces(2.5), [2.5])
+        self.assertEqual(len(S.pieces(4.9)), 2)
+        for t in (2.0, 4.1, 4.9, 6.3, 9.0):
+            p = S.pieces(t)
+            self.assertTrue(all(S.PIECE_MIN <= x <= S.PIECE_MAX for x in p), (t, p))
+            self.assertGreaterEqual(sum(p) - S.XFADE * (len(p) - 1), t - 0.05)
+        j = S.job_from(slip(), {'file': 'tg-trailer.mp4', 'steam': 1}, 'live', theme='cold')
+        self.assertTrue(all(sh[2] <= S.PIECE_MAX for sh in j['shots'][1:]))
+        prev = 0
+        for a, z, _ in j['lines']:                  # lines tile the shots after the hook, in order
+            self.assertEqual(a, prev + 1)
+            prev = z
+        self.assertEqual(prev, len(j['shots']) - 1)
+
     def test_bed(self):
         j = S.job_from(slip(sound='bed', bed_reason='the only official trailer is voiced throughout over its score'),
                        {'file': 'tg-trailer.mp4', 'steam': 1}, 'live', theme='cold')
