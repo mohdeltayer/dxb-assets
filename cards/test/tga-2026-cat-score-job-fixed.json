@@ -3,7 +3,7 @@
  "story": "2026-11-17-tga-2026-cat-score",
  "kind_news": "awards",
  "built_by": "production-1",
- "out": "cards/test/tga-2026-cat-score-reel-v1.mp4",
+ "out": "cards/test/tga-2026-cat-score-reel-v2.mp4",
  "label": "رسمي",
  "source": "ذا غيم أووردز (The Game Awards)",
  "date": "17 Nov 2026",
@@ -23,29 +23,32 @@
  "sensitive": "none",
  "footage": [
   {
-   "file": "tga26-oot.mp4",
-   "url": "https://assets.nintendo.com/video/upload/store/software/switch2/70010000130792/Video/4b2fa8b7887596c8de08f1e18dbbd880e489622cc501b469f6316c3dc383a5a7.mp4"
+   "file": "gta6-xl-drive.mp4",
+   "url": "https://media-rockstargames-com.akamaized.net/VI/downloads/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+   "stream": true,
+   "start": 757.5,
+   "seconds": 29.0
   }
  ],
  "shots": [
   [
-   "tga26-oot.mp4",
-   28.56,
-   3.24,
+   "gta6-xl-drive.mp4",
+   0.5,
+   3.0,
    null
   ],
   [
    "tga-2026-cat-score-gfx-nominees.png",
    [
-    "tga26-oot.mp4",
-    34.63
+    "gta6-xl-drive.mp4",
+    7.5
    ],
    5.4,
    null
   ],
   [
-   "tga26-oot.mp4",
-   8.38,
+   "gta6-xl-drive.mp4",
+   24.8,
    3.02,
    null
   ]
@@ -54,12 +57,12 @@
   [
    0,
    0,
-   "المصدر: نينتيندو (Nintendo)"
+   "المصدر: روكستار غيمز (Rockstar Games)"
   ],
   [
    1,
    1,
-   "القائمة: ذا غيم أووردز (The Game Awards)\nاللقطات: نينتيندو (Nintendo)",
+   "القائمة: ذا غيم أووردز (The Game Awards)\nاللقطات: روكستار غيمز (Rockstar Games)",
    {
     "size": 36
    }
@@ -67,7 +70,7 @@
   [
    2,
    2,
-   "المصدر: نينتيندو (Nintendo)"
+   "المصدر: روكستار غيمز (Rockstar Games)"
   ]
  ],
  "lines": [
@@ -96,30 +99,24 @@
      "name": "Ace Combat 8: Wings of Theve"
     },
     {
-     "name": "Grand Theft Auto VI",
-     "note": "روكستار غيمز (Rockstar Games)",
-     "image": null
+     "name": "Grand Theft Auto VI"
     },
     {
      "name": "Mixtape"
     },
     {
-     "name": "Phantom Blade Zero",
-     "note": "إس جيم (S-GAME)",
-     "image": "tga26-pbz"
+     "name": "Phantom Blade Zero"
     },
     {
-     "name": "The Legend of Zelda: Ocarina of Time",
-     "note": "نينتيندو (Nintendo)",
-     "image": "tga26-oot"
+     "name": "The Legend of Zelda: Ocarina of Time"
     }
    ],
    "animate": true
   }
  ],
  "ground_footage": [
-  "tga26-oot.mp4",
-  34.63
+  "gta6-xl-drive.mp4",
+  7.5
  ],
  "ground_seek": "fixed",
  "pace_ok": "the 5.4 s nominees card is animated: its rows enter one by one, 0.55 s apart, in the order read, then the full list holds 3 s to be read",
@@ -137,10 +134,9 @@
   "PICTURE: nothing graphic": "yes: stretches read by the server shots mode; the director looks once at the frames"
  },
  "decision_log": {
-  "hook": "The Legend of Zelda: Ocarina of Time (a nominee in this category) under the headline",
+  "hook": "Grand Theft Auto VI (a nominee in this category) under the headline",
   "card": "the nominees in the order read, names as the show writes them, no ranking",
-  "close": "The Legend of Zelda: Ocarina of Time again",
+  "close": "Grand Theft Auto VI again",
   "music": "our bed (bed_reason)"
- },
- "lowres_ok": "The Legend of Zelda: Ocarina of Time: Nintendo US store page, the publisher's copy, 1280x720; IGN: no video page found by web search, 16 Nov; not on Steam (Switch 2 only): no larger official copy found"
+ }
 }
