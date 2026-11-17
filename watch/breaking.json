@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T10:10:11Z",
- "seq": 565,
+ "generated_at": "2026-11-17T10:52:07Z",
+ "seq": 566,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 16222,
    "source": "PlayStation (YouTube)",
@@ -25,9 +26,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 565
-  }
- ],
- "recent": [
+  },
   {
    "id": 16011,
    "source": "Nintendo Japan",
@@ -231,28 +230,16 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 534
-  },
-  {
-   "id": 15301,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "Minecraft Dungeons II: The Humblers Awaken Arrives on December 1",
-   "url": "https://news.xbox.com/en-us/2026/11/16/minecraft-dungeons-ii-the-humblers-awaken-arrives-on-december-1/",
-   "published": "2026-11-16T10:43Z",
-   "first_seen": "2026-11-16T10:45:15Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 530
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T10:10:05Z",
+  "last_poll_at": "2026-11-17T10:50:15Z",
   "sources_enabled": 100,
-  "sources_ok": 92,
+  "sources_ok": 93,
   "sources_failing": 7,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 96x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 97x)",
    "Nintendo of America (X) (HTTP 429, 74x)",
    "PlayStation (X) (HTTP 429, 5x)",
    "PlayStation Middle East (X) (HTTP 429, 17x)",
