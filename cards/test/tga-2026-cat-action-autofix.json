@@ -1,0 +1,49 @@
+[
+ {
+  "where": "credit 2",
+  "rule": "credit_width",
+  "what": "set one line at 32 px (was 36 px, too wide for the safe zone)",
+  "before": {
+   "text": "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: سوني (Sony)",
+   "size": 36
+  },
+  "after": {
+   "text": "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: سوني (Sony)",
+   "size": 32
+  }
+ },
+ {
+  "where": "shot 0",
+  "rule": "subject_drift",
+  "what": "trimmed to 3.27 s, its longest safe length before the subject leaves the 9:16 window",
+  "before": [
+   "tga26-saros.mp4",
+   70.8,
+   3.47,
+   [
+    [
+     0.0,
+     0.404
+    ]
+   ]
+  ],
+  "after": [
+   "tga26-saros.mp4",
+   70.8,
+   3.27,
+   [
+    [
+     0.0,
+     0.404
+    ]
+   ]
+  ]
+ },
+ {
+  "where": "shot 1",
+  "rule": "fill",
+  "what": "lengthened 5.40 to 5.60 s to keep the time shot 0 gave up",
+  "before": 5.4,
+  "after": 5.6
+ }
+]
