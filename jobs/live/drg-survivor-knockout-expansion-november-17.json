@@ -1,0 +1,142 @@
+{
+ "name": "drg-survivor-knockout-expansion-november-17",
+ "story": "2026-11-17-drg-survivor-knockout-expansion",
+ "kind_news": "update",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/drg-survivor-knockout-expansion-november-17-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "drg-knockout-expansion.mp4",
+   "steam": 5269530,
+   "trailer": "Knockout Expansion Trailer",
+   "start": 0,
+   "seconds": 90
+  },
+  {
+   "file": "drg-knockout-class.mp4",
+   "steam": 5269530,
+   "trailer": "Knockout Class Trailer",
+   "start": 0,
+   "seconds": 90
+  }
+ ],
+ "shots": "auto",
+ "lines": [
+  [
+   0,
+   1,
+   [
+    [
+     "وصلت إضافة Knockout إلى\nDeep Rock Galactic: Survivor",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   3,
+   [
+    [
+     "تضيف فئة Brawler التي تقاتل\nبقبضتيها ومعها 11 سلاحًا جديدًا",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   4,
+   [
+    [
+     "ويصل التحديث 1.2 بمستوى\nالخطورة Hazard 6",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   5,
+   [
+    [
+     "وسعر الإضافة على Steam\n9.99 دولارات",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "strip": [
+  [
+   "المنصة",
+   "الحاسب عبر Steam"
+  ],
+  [
+   "السعر",
+   "9.99 دولارات"
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   5,
+   "لقطات من عرضي الإضافة، غوست شيب (Ghost Ship Games)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "فئة Brawler تلكم الحشرات\nفي Deep Rock Galactic: Survivor",
+ "label": "رسمي",
+ "source": "إعلان Deep Rock Galactic: Survivor على Steam",
+ "date": "17 Nov 2026",
+ "theme": "spectacle",
+ "style": null,
+ "template": "split",
+ "skin": "house",
+ "track": "bed",
+ "sound": null,
+ "cut": true,
+ "genre": [
+  "roguelike",
+  "action"
+ ],
+ "platform": "pc",
+ "beat": "new addition or update",
+ "bed_reason": "trailer music is not verified as a music-only stretch; our bed under every line",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam announcement read in full 14:10Z via the news API, published 12:00Z 17 Nov",
+  "SOURCE: not already posted": "yes: ledger find deep rock galactic/knockout, only the Oct console release; Publer last 7 days no DRG",
+  "SOURCE: age": "yes: first report 12:00Z 17 Nov, 2 h at build",
+  "ANGLE before lines": "yes: story file and job",
+  "STORY TYPE update": "yes: the change, demonstration (expansion trailer), effect on play, availability and price",
+  "STORY: spoken paragraph, subject before pronoun": "yes: paragraph first, subject named in each line, no line opens on و",
+  "STORY: release verbs": "yes: وصلت, يصل",
+  "STORY: names match names-ar.md": "yes: غوست شيب (Ghost Ship Games) with Latin in brackets at first mention",
+  "POST: Arabic passes": "yes: Western digits, no first person",
+  "SOUND: footage sound or bed with reason": "yes: our bed, bed_reason in job",
+  "SOUND: no speech under Arabic lines": "yes: bed only",
+  "PICTURE: footage first": "yes: the expansion's own Steam trailers",
+  "PICTURE: not graphic": "yes: cartoon bugs and dwarves, to be checked on the strip",
+  "CREDIT: on every clip": "yes: whole-cut credit",
+  "SENSITIVE": "n/a"
+ },
+ "decision_log": [
+  {
+   "beat": "all",
+   "shot": "auto from the two Knockout trailers' clean stretches",
+   "alternatives": "Launch Trailer of the base game (not the expansion)",
+   "crop": "centre, autofix keeps subjects in",
+   "music": "bed"
+  }
+ ],
+ "note": "Knockout expansion and Update 1.2 live 17 Nov, Steam trailers app 5269530, shots picked by the server.",
+ "spoken": "وصلت إضافة Knockout إلى Deep Rock Galactic: Survivor، حسب غوست شيب (Ghost Ship Games). تضيف فئة Brawler التي تقاتل بقبضتيها ومعها 11 سلاحًا جديدًا، ويصل التحديث 1.2 بمستوى الخطورة Hazard 6. وسعر الإضافة على Steam 9.99 دولارات."
+}
