@@ -1,0 +1,41 @@
+{
+ "name": "firaxis-layoffs-third-of-staff-november-17",
+ "out": "cards/2026-11/firaxis-layoffs-third-of-staff-november-17-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-17T18:55:14Z",
+ "findings": [],
+ "notes": [
+  "length 14.4 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 5.1, \"still_share\": 0.077, \"longest_still\": 0.4, \"cuts_per_10s\": 6.29, \"held_under_text\": 0.0, \"secs\": 14.3, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "a4ff82a2741a2b5c1c365291385339916ea93176",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/firaxis-layoffs-third-of-staff-november-17-look-1.jpg",
+  "cards/2026-11/firaxis-layoffs-third-of-staff-november-17-look-2.jpg",
+  "cards/2026-11/firaxis-layoffs-third-of-staff-november-17-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_d (trailer sound is not verified as a music-only stretch; our bed under every line)",
+ "shot_read": null,
+ "job_path": "jobs/done/firaxis-layoffs-third-of-staff-november-17.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.17,
+  "fetch": 0.19,
+  "shots": 0.0,
+  "checks": 0.56,
+  "render": 1.39,
+  "after": 0.91,
+  "job": 3.07
+ }
+}
