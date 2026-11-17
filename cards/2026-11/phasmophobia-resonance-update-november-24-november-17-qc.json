@@ -1,0 +1,297 @@
+{
+ "name": "phasmophobia-resonance-update-november-24-november-17",
+ "out": "cards/2026-11/phasmophobia-resonance-update-november-24-november-17-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-17T17:20:15Z",
+ "findings": [],
+ "notes": [
+  "length 17.5 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 3.1, \"still_share\": 0.04, \"longest_still\": 0.3, \"cuts_per_10s\": 6.32, \"held_under_text\": 0.0, \"secs\": 17.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 1",
+   "rule": "shot_timing",
+   "what": "moved from 11.00 to 7.00 s, the nearest clean start of the same 1.90 s",
+   "before": [
+    "phasmo-apocalypse.mp4",
+    11.0,
+    1.9,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   "after": [
+    "phasmo-apocalypse.mp4",
+    7.0,
+    1.9,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 4",
+   "rule": "subject_drift",
+   "what": "trimmed to 1.35 s, its longest safe length before the subject leaves the 9:16 window",
+   "before": [
+    "phasmo-chronicle.mp4",
+    42.4,
+    2.5,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   "after": [
+    "phasmo-chronicle.mp4",
+    42.4,
+    1.35,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 5",
+   "rule": "fill",
+   "what": "lengthened 2.30 to 3.45 s to keep the time shot 4 gave up",
+   "before": 2.3,
+   "after": 3.45
+  }
+ ],
+ "job_sha": "052f4ce098477b0b8388b8010d878b9ce5671d79",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/phasmophobia-resonance-update-november-24-november-17-look-1.jpg",
+  "cards/2026-11/phasmophobia-resonance-update-november-24-november-17-look-2.jpg",
+  "cards/2026-11/phasmophobia-resonance-update-november-24-november-17-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon (trailer music is not verified as a music-only stretch; our bed under every line)",
+ "shot_read": null,
+ "job_after_autofix": {
+  "name": "phasmophobia-resonance-update-november-24-november-17",
+  "story": "2026-11-17-phasmophobia-resonance-november-24",
+  "kind_news": "update",
+  "built_by": "production-2",
+  "render_lane": "server",
+  "out": "cards/2026-11/phasmophobia-resonance-update-november-24-november-17-reel-v1.mp4",
+  "footage": [
+   {
+    "file": "phasmo-chronicle.mp4",
+    "steam": 739630,
+    "trailer": "Chronicle Trailer",
+    "start": 0,
+    "seconds": 90
+   },
+   {
+    "file": "phasmo-apocalypse.mp4",
+    "steam": 739630,
+    "trailer": "Apocalypse Trailer",
+    "start": 0,
+    "seconds": 90
+   }
+  ],
+  "shots": [
+   [
+    "phasmo-chronicle.mp4",
+    6.0,
+    3.9,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "phasmo-apocalypse.mp4",
+    7.0,
+    1.9,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "phasmo-chronicle.mp4",
+    38.8,
+    1.9,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "phasmo-chronicle.mp4",
+    4.0,
+    1.9,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "phasmo-chronicle.mp4",
+    42.4,
+    1.35,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "phasmo-apocalypse.mp4",
+    47.8,
+    3.45,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "phasmo-chronicle.mp4",
+    10.0,
+    1.8,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "phasmo-chronicle.mp4",
+    56.8,
+    1.6,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    0,
+    3,
+    [
+     [
+      "يصل تحديث Resonance\nفي 24 نوفمبر",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    4,
+    7,
+    [
+     [
+      "عصي التنقيب وأوامر صوتية\nوانتقال اللعبة إلى Unity 6",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "strip": [
+   [
+    "المطور",
+    "Kinetic Games"
+   ],
+   [
+    "المنصات",
+    "كل المنصات"
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    7,
+    "لقطات من عروض سابقة للعبة، كاينتيك غيمز (Kinetic Games)",
+    {
+     "size": 30,
+     "band": true
+    }
+   ]
+  ],
+  "headline": "تحديث Resonance\nيصل إلى Phasmophobia",
+  "label": "رسمي",
+  "source": "إعلان Phasmophobia على Steam",
+  "date": "17 Nov 2026",
+  "theme": "cold",
+  "style": "glow",
+  "template": "split",
+  "skin": "house",
+  "track": "bed",
+  "cut": true,
+  "genre": [
+   "horror"
+  ],
+  "platform": "pc",
+  "beat": "update",
+  "bed_reason": "trailer music is not verified as a music-only stretch; our bed under every line",
+  "reel_check": {
+   "SOURCE: primary read in full": "yes: Steam announcement 17 Nov 15:00Z read in full, plus Kinetic Games Development Preview 22",
+   "SOURCE: not already posted": "yes: ledger find phasmophobia: only the 30 million story of 11 Oct; Publer last 7 days none",
+   "SOURCE: age": "yes: first report 15:00Z 17 Nov",
+   "ANGLE before lines": "yes: story file and job",
+   "STORY TYPE trailer or first look": "n/a: update date story; footage is earlier trailers, said on screen",
+   "STORY: spoken paragraph, subject before pronoun": "yes: paragraph first, no line opens on و",
+   "STORY: release verbs": "yes: يصل تحديث Resonance",
+   "STORY: names match names-ar.md": "yes: Kinetic Games kept Latin, flagged on the board",
+   "POST: Arabic passes": "yes: Western digits, no first person",
+   "SOUND: footage sound or bed with reason": "yes: our bed, bed_reason in job",
+   "SOUND: no speech under Arabic lines": "yes: bed only",
+   "PICTURE: footage first": "yes: the game's own Steam trailers",
+   "PICTURE: not graphic": "yes: horror game; check strip for gore",
+   "CREDIT: on every clip": "yes: whole-cut credit",
+   "SENSITIVE": "n/a"
+  },
+  "decision_log": [
+   {
+    "beat": "all",
+    "shot": "hand-placed inside the clean stretches of the server shots read (run 503): chronicle 6.0, 38.8, 4.0, 42.4, 10.0, 56.8; apocalypse 11.0, 47.8",
+    "alternatives": "other Steam trailers of app 739630",
+    "crop": "centre, judged on the shot sheet",
+    "music": "bed"
+   }
+  ],
+  "note": "Phasmophobia Resonance update date, Steam trailers app 739630 (earlier trailers, not the update).",
+  "spoken": "يصل تحديث Resonance إلى Phasmophobia في 24 نوفمبر على كل المنصات، حسب كاينتيك غيمز (Kinetic Games). يحمل التحديث عصي التنقيب لتحديد مكان العظمة، وأوامر صوتية جديدة للأشباح، وانتقال اللعبة إلى Unity 6."
+ }
+}
