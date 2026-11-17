@@ -2,11 +2,11 @@
  "id": "2026-11-17-sliptest-slay-the-spire-2",
  "state": "failed",
  "problems": [
-  "footage: the resolver stopped on steam:2868840: ModuleNotFoundError: No module named 'numpy'"
+  "footage: the resolver stopped on steam:2868840: ModuleNotFoundError: No module named 'pedalboard'"
  ],
  "flags": [],
- "at": "2026-11-17T19:21:52Z",
- "run": "44157706962",
+ "at": "2026-11-17T19:23:31Z",
+ "run": "44157917512",
  "lane": "test",
- "build_secs": 18
+ "build_secs": 45
 }
