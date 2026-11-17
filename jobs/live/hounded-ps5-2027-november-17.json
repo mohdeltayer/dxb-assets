@@ -1,0 +1,172 @@
+{
+ "name": "hounded-ps5-2027-november-17",
+ "story": "2026-11-17-hounded-ps5-2027",
+ "kind_news": "announcement",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/hounded-ps5-2027-november-17-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "hounded-gameplay.mp4",
+   "steam": 3695350,
+   "trailer": "Hounded: Gameplay Reveal",
+   "start": 0,
+   "seconds": 90
+  },
+  {
+   "file": "hounded-teaser.mp4",
+   "steam": 3695350,
+   "trailer": "Hounded: Teaser Trailer",
+   "start": 0,
+   "seconds": 60
+  }
+ ],
+ "shots": [
+  [
+   "hounded-gameplay.mp4",
+   10.0,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "hounded-gameplay.mp4",
+   20.0,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "hounded-gameplay.mp4",
+   30.0,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "hounded-teaser.mp4",
+   8.0,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  [
+   "hounded-teaser.mp4",
+   20.0,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   0,
+   2,
+   [
+    [
+     "تصل لعبة Hounded إلى PS5\nفي عام 2027",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "كلب بوردر كولي يبحث\nعن سيده المفقود",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "strip": [
+  [
+   "المنصة",
+   "PS5"
+  ],
+  [
+   "الموعد",
+   "2027"
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   4,
+   "لقطات من إعلانين رسميين، سيلفر لاينينغ (Silver Lining Interactive)",
+   {
+    "size": 34,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "الكلب Duke بطل\nلعبة Hounded على PS5",
+ "label": "رسمي",
+ "source": "مدونة بلايستيشن (PlayStation Blog)",
+ "date": "17 Nov 2026",
+ "theme": "stylized",
+ "style": "frame",
+ "template": "split",
+ "skin": "house",
+ "track": "bed",
+ "cut": true,
+ "genre": [
+  "adventure"
+ ],
+ "platform": "ps5",
+ "beat": "announcement",
+ "bed_reason": "trailer music is not verified as a music-only stretch; our bed under every line",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: PlayStation Blog read in full 16:20Z, published 15:00Z 17 Nov",
+  "SOURCE: not already posted": "yes: ledger find hounded, 0 hits; Publer last 7 days no Hounded",
+  "SOURCE: age": "yes: first report 15:00Z 17 Nov, about 1 h at build",
+  "ANGLE before lines": "yes: story file and job",
+  "STORY TYPE trailer or first look": "yes: platform, year, what it is, what the footage shows",
+  "STORY: spoken paragraph, subject before pronoun": "yes: paragraph first, no line opens on و",
+  "STORY: release verbs": "yes: تصل لعبة ... إلى PS5",
+  "STORY: names match names-ar.md": "yes: مدونة بلايستيشن (PlayStation Blog); studio kept Latin Imprnt, flagged on the board",
+  "POST: Arabic passes": "yes: Western digits, no first person",
+  "SOUND: footage sound or bed with reason": "yes: our bed, bed_reason in job",
+  "SOUND: no speech under Arabic lines": "yes: bed only",
+  "PICTURE: footage first": "yes: the game's own Steam reveal and teaser trailers",
+  "PICTURE: not graphic": "yes: a dog adventure; to be checked on the strip",
+  "CREDIT: on every clip": "yes: whole-cut credit",
+  "SENSITIVE": "n/a"
+ },
+ "decision_log": [
+  {
+   "beat": "all",
+   "shot": "hand-placed from the shots read of the Gameplay Reveal and Teaser trailers",
+   "alternatives": "PlayStation Blog mp4 (not checked for gameplay)",
+   "crop": "centre, judged on the shot sheet",
+   "music": "bed"
+  }
+ ],
+ "note": "Hounded PS5 2027 announcement, Steam trailers app 3695350.",
+ "spoken": "تصل لعبة Hounded إلى PS5 في عام 2027، حسب مدونة بلايستيشن (PlayStation Blog). يلعب اللاعب دور Duke، كلب بوردر كولي يبحث عن سيده المفقود. ويقول استوديو Imprnt إنه صنع حركة الكلب يدويًا بنظام Motion Matching."
+}
