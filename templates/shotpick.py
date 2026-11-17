@@ -21,6 +21,7 @@ it with mode `shots` and prints SHOTS_JSON lines; nothing is committed.
 import concurrent.futures as cf
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -36,7 +37,7 @@ PAD = 0.15            # seconds kept clear either side of a bad interval
 # The fast read (adv-20261117-server-speed-for-p2 A, 17 Nov 2026): RPG Maker's shots:auto read took about 13 minutes in
 # the render step. The slow read seeked every OCR frame and every autofocus frame with its own ffmpeg (about 170 seeks
 # and 400 frame reads, many read twice where scenes overlap) on a 95 s trailer. The fast read decodes the file once at
-# READ_W wide and two frames a second, reads each frame with tesseract once (in parallel), hands the same frames to
+# READ_W wide and two frames a second (STEP), reads each frame with tesseract once (in parallel), hands the same frames to
 # autofocus and runs the smear check in chunks of CHUNK seconds with the scene cuts. BUDGET caps one file's read;
 # a frame not read by then rejects its stretch ("not read in time"), so the read never passes the cap and never
 # offers an unread stretch. Results are cached per file, size and READ_VER. A label burnt into the whole trailer, which
@@ -45,7 +46,8 @@ PAD = 0.15            # seconds kept clear either side of a bad interval
 READ_W = 1280        # the full read's OCR width: the small "IN-ENGINE FOOTAGE" label reads no worse
 BUDGET = 55.0         # seconds per file: three trailers stay inside the card's 3 minutes
 CHUNK = 15.0
-READ_VER = 'r1'
+READ_VER = 'r2'
+STEP = 0.5            # seconds between decoded frames in the fast read (1.0 lost RPG Maker's clean stretches, 17 Nov)
 LABEL_SHARE = 0.2     # a word read on this share of a file's frames, in one place, is a label on the whole trailer
 LABEL_POS = 0.06      # "one place": its centre within this share of the frame across readings
 LAST = {}             # file -> seconds the last read took (render_job puts it in qc.json)
@@ -115,18 +117,27 @@ def pick(f, ocr=True, workers=None, fast=True, budget=None, cache=True):
 
 def _one_decode(path, tmp, step, thresh=0.2):
     """One ffmpeg decode of the file for three reads: the luma and freeze pass (prerender.luma_scan's filter), the scene
-    cuts (reel.scenes' filter) and every `step` seconds as a READ_W-wide jpeg. Returns (black, frozen, dur, cuts,
-    {time: jpeg})."""
+    cuts (reel.scenes' filter), every `step` seconds as a READ_W-wide jpeg and each frame's cropdetect box (reel._bars'
+    filter). Returns (black, frozen, dur, cuts, {time: jpeg}, [(t, x1, x2, y1, y2)])."""
     import prerender as PR
-    fc = (f'[0:v]split=3[a][b][c];[a]{PR.LUMA_VF}[ao];[b]select=\'gt(scene,{thresh})\',showinfo[bo];'
-          f'[c]fps=1/{step}:round=down,scale={READ_W}:-2[co]')
+    fc = (f'[0:v]split=4[a][b][c][d];[a]{PR.LUMA_VF}[ao];[b]select=\'gt(scene,{thresh})\',showinfo[bo];'
+          f'[c]fps=1/{step}:round=down,scale={READ_W}:-2[co];[d]cropdetect=limit=24:round=2:reset=1[do]')
     r = subprocess.run(['ffmpeg', '-nostdin', '-v', 'info', '-y', '-i', path, '-filter_complex', fc,
                         '-map', '[ao]', '-f', 'null', '-', '-map', '[bo]', '-f', 'null', '-',
+                        '-map', '[do]', '-f', 'null', '-',
                         '-map', '[co]', '-q:v', '3', f'{tmp}/f%05d.jpg'], capture_output=True, text=True)
     if r.returncode:
         raise RuntimeError('shotpick: one-pass decode failed: ' + r.stderr.strip()[-300:])
     show = [l for l in r.stderr.splitlines() if 'Parsed_showinfo' in l and 'pts_time:' in l]
-    black, frozen, dur = PR.luma_parse(path, r.stdout, '\n'.join(l for l in r.stderr.splitlines() if 'Parsed_showinfo' not in l))
+    boxes = []
+    for l in r.stderr.splitlines():
+        if 'Parsed_cropdetect' in l:
+            m = re.search(r'x1:(\d+) x2:(\d+) y1:(\d+) y2:(\d+).* t:([\d.]+)', l)
+            if m:
+                x1, x2, y1, y2, t = m.groups()
+                boxes.append((float(t), int(x1), int(x2), int(y1), int(y2)))
+    other = [l for l in r.stderr.splitlines() if 'Parsed_showinfo' not in l and 'Parsed_cropdetect' not in l]
+    black, frozen, dur = PR.luma_parse(path, r.stdout, '\n'.join(other))
     cuts = [0.0]
     for c in sorted(float(l.split('pts_time:')[1].split()[0]) for l in show):
         if c - cuts[-1] >= 0.5:
@@ -135,7 +146,25 @@ def _one_decode(path, tmp, step, thresh=0.2):
     for n in sorted(os.listdir(tmp)):
         if n.startswith('f') and n.endswith('.jpg'):
             frames[round((int(n[1:6]) - 1) * step, 2)] = os.path.join(tmp, n)
-    return black, frozen, dur, cuts, frames
+    return black, frozen, dur, cuts, frames, boxes
+
+
+def _bars_from(cboxes, a, b, full, f):
+    """reel._bars for [a, b] from the one decode's per-frame cropdetect boxes (their union, as cropdetect with reset=0
+    over the same 3 s gives): (crop or '', rows). None when no frame falls in the stretch."""
+    import reel
+    if os.path.basename(f) in reel.NOBARS:
+        return '', full
+    bx = [x for x in cboxes if a <= x[0] < b]
+    if not bx or not full:
+        return None
+    x1, x2 = min(x[1] for x in bx), max(x[2] for x in bx)
+    y1, y2 = min(x[3] for x in bx), max(x[4] for x in bx)
+    w, h = (x2 - x1 + 1) // 2 * 2, (y2 - y1 + 1) // 2 * 2
+    if w <= 0 or h <= 0:
+        return None
+    x, y = x1 + (x2 - x1 + 1 - w) // 2, y1 + (y2 - y1 + 1 - h) // 2
+    return (f'crop={w}:{h}:{x}:{y},', h) if h < full - 8 else ('', full)
 
 
 def _pick_fast(f, ocr, workers, budget):
@@ -149,13 +178,13 @@ def _pick_fast(f, ocr, workers, budget):
     t0 = time.time()
     deadline = t0 + budget
     nw = workers or max(2, (os.cpu_count() or 4))
-    step = PR.OCR_STEP
+    step = STEP
     tmp = tempfile.mkdtemp(prefix='shotpick-')
     try:
         with cf.ThreadPoolExecutor(max_workers=2) as ex:      # the decode check and the one read decode, at once
             j_err = ex.submit(DC.decode_errors, path)
             j_one = ex.submit(_one_decode, path, tmp, step)
-            errs, (black, frozen, dur, cuts, frames) = j_err.result(), j_one.result()
+            errs, (black, frozen, dur, cuts, frames, cboxes) = j_err.result(), j_one.result()
         stage = {'decode': round(time.time() - t0, 1)}
         info = SG.read(f)
         v0 = info['picture_start']
@@ -244,7 +273,8 @@ def _pick_fast(f, ocr, workers, budget):
             k = (a, b)
             if k not in bars_memo:
                 a2 = max(a, v0)
-                bars_memo[k] = reel._bars(path, max(0.0, a2), max(0.3, min(3.0, b - a2)))
+                bars_memo[k] = (_bars_from(cboxes, a2, a2 + max(0.3, min(3.0, b - a2)), info['height'] or srch0, f)
+                                or reel._bars(path, max(0.0, a2), max(0.3, min(3.0, b - a2))))
             return bars_memo[k]
 
         def one(k):
