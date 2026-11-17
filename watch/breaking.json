@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T19:52:08Z",
- "seq": 587,
+ "generated_at": "2026-11-17T20:35:35Z",
+ "seq": 588,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 16822,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "The Blood of Dawnwalker — Update 1.2 (with New Game+!)",
+   "url": "https://www.youtube.com/watch?v=3MSsMna0utU",
+   "published": "2026-11-17T20:23Z",
+   "first_seen": "2026-11-17T20:35:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/3MSsMna0utU/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=3MSsMna0utU"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 588
+  }
+ ],
  "recent": [
   {
    "id": 16768,
@@ -391,42 +413,21 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 549
-  },
-  {
-   "id": 15820,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "NBA 2K27 - Meets Vice City Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=71ep0-aJJMQ",
-   "published": "2026-11-16T19:30Z",
-   "first_seen": "2026-11-16T19:55:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/71ep0-aJJMQ/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=71ep0-aJJMQ"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 547
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T19:50:05Z",
+  "last_poll_at": "2026-11-17T20:35:15Z",
   "sources_enabled": 100,
   "sources_ok": 92,
   "sources_failing": 7,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 101x)",
-   "Nintendo of America (X) (HTTP 429, 74x)",
+   "Nintendo of America (X) (HTTP 429, 75x)",
    "PlayStation (X) (HTTP 429, 6x)",
    "PlayStation Middle East (X) (HTTP 429, 18x)",
    "Rockstar Games (X) (HTTP 429, 4x)",
-   "The Game Awards (HTTP 403, 20x)",
+   "The Game Awards (HTTP 403, 21x)",
    "Xbox (X) (HTTP 429, 94x)"
   ]
  }
