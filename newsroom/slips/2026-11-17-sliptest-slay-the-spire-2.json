@@ -2,11 +2,25 @@
  "id": "2026-11-17-sliptest-slay-the-spire-2",
  "state": "failed",
  "problems": [
-  "footage: the resolver stopped on steam:2868840: ModuleNotFoundError: No module named 'pedalboard'"
+  "text: line 8: 'وD' flips on screen: put a space after the prefix or a word between («و PS5», «ولجهاز PS5», «لجهاز Switch 2»)"
  ],
  "flags": [],
- "at": "2026-11-17T19:23:31Z",
- "run": "44157917512",
+ "at": "2026-11-17T19:25:23Z",
+ "footage": {
+  "name": "Slay the Spire 2 - Gameplay Trailer",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60.0,
+  "mbps": 5.4,
+  "rows": 1080,
+  "duration": 71.9,
+  "decode_clean": true
+ },
+ "job": "jobs/test/sliptest-slay-the-spire-2.json",
+ "story": "newsroom/stories/2026-11-17-sliptest-slay-the-spire-2.json",
+ "lines": 9,
+ "shots": 10,
+ "run": "44158327088",
  "lane": "test",
- "build_secs": 45
+ "build_secs": 63
 }
