@@ -84308,5 +84308,166 @@
   "sound": "bed:neon_c (trailer sound is not verified as a music-only stretch; our bed under every line)",
   "footage": true,
   "upload_secs": 6.0
+ },
+ {
+  "name": "sea-of-stars-sunset-edition-physical-november-17-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-17T20:18Z",
+  "stages": {
+   "checks": 5.2,
+   "montage": 42.3,
+   "text": 34.4,
+   "audio": 1.2,
+   "outro": 18.5
+  },
+  "total": 101.7,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-17T20:17Z",
+  "finished_at": "2026-11-17T20:18Z",
+  "render_min": 1.69,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "sos-dawn.mp4",
+    "start": 12.18,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "sos-dawn.mp4",
+    "start": 27.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "sos-dawn.mp4",
+    "start": 31.18,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "sos-dawn.mp4",
+    "start": 36.53,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "sos-dawn.mp4",
+    "start": 41.43,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "sos-dawn.mp4",
+    "start": 52.16,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "sos-dawn.mp4",
+    "start": 68.68,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "sos-dawn.mp4",
+    "start": 46.03,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 1.0,
+   "still_share": 0.012,
+   "longest_still": 0.1,
+   "cuts_per_10s": 6.55,
+   "held_under_text": 0.0,
+   "secs": 16.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 15.1,
+   "shots": 0.0,
+   "checks": 33.7,
+   "render": 102.1,
+   "after": 57.8
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 210,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1044,
+  "peak_mem_mb": 2189,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 50830,
+  "peak_disk_mb": 53657,
+  "min_disk_free_mb": 192449,
+  "setup_min": 0.13,
+  "story": "sea-of-stars-sunset-edition-physical-november-17",
+  "job_sha": "4650526b8cf9b907552efe2cad5014ecd89be660",
+  "dispatches": 1,
+  "sound": "bed:neon (trailer sound is not verified as a music-only stretch; our bed under every line)",
+  "footage": true
  }
 ]

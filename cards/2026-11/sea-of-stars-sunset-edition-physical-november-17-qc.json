@@ -1,0 +1,254 @@
+{
+ "name": "sea-of-stars-sunset-edition-physical-november-17",
+ "out": "cards/2026-11/sea-of-stars-sunset-edition-physical-november-17-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-17T20:19:52Z",
+ "findings": [],
+ "notes": [
+  "length 16.9 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 1.0, \"still_share\": 0.012, \"longest_still\": 0.1, \"cuts_per_10s\": 6.55, \"held_under_text\": 0.0, \"secs\": 16.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "line 2",
+   "rule": "text",
+   "what": "space after a glued prefix",
+   "before": "الحجز المسبق للنسخ الخاصة\nعلى Switch 2 وPS5",
+   "after": "الحجز المسبق للنسخ الخاصة\nعلى Switch 2 و PS5"
+  }
+ ],
+ "job_sha": "4650526b8cf9b907552efe2cad5014ecd89be660",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/sea-of-stars-sunset-edition-physical-november-17-look-1.jpg",
+  "cards/2026-11/sea-of-stars-sunset-edition-physical-november-17-look-2.jpg",
+  "cards/2026-11/sea-of-stars-sunset-edition-physical-november-17-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon (trailer sound is not verified as a music-only stretch; our bed under every line)",
+ "shot_read": null,
+ "job_path": "jobs/done/sea-of-stars-sunset-edition-physical-november-17.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.13,
+  "fetch": 0.25,
+  "shots": 0.0,
+  "checks": 0.65,
+  "render": 1.61,
+  "after": 0.96,
+  "job": 3.5
+ },
+ "job_after_autofix": {
+  "name": "sea-of-stars-sunset-edition-physical-november-17",
+  "story": "2026-11-17-sea-of-stars-sunset-edition-physical",
+  "kind_news": "news",
+  "built_by": "production-2",
+  "render_lane": "server",
+  "out": "cards/2026-11/sea-of-stars-sunset-edition-physical-november-17-reel-v1.mp4",
+  "footage": [
+   {
+    "file": "sos-dawn.mp4",
+    "steam": 1244090,
+    "trailer": "Sea of Stars - Dawn of Equinox",
+    "start": 0,
+    "seconds": 90
+   }
+  ],
+  "shots": [
+   [
+    "sos-dawn.mp4",
+    12.18,
+    2.5,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "sos-dawn.mp4",
+    27.0,
+    2.5,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "sos-dawn.mp4",
+    31.18,
+    2.0,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "sos-dawn.mp4",
+    36.53,
+    2.4,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "sos-dawn.mp4",
+    41.43,
+    1.8,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "sos-dawn.mp4",
+    52.16,
+    1.8,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "sos-dawn.mp4",
+    68.68,
+    2.5,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "sos-dawn.mp4",
+    46.03,
+    1.65,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    0,
+    4,
+    [
+     [
+      "تصدر Sea of Stars ورقيًا\nعلى Switch 2 يوم 2 أبريل",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    8,
+    [
+     [
+      "الحجز المسبق للنسخ الخاصة\nعلى Switch 2 و PS5",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "strip": [
+   [
+    "المصدر",
+    "iam8bit"
+   ],
+   [
+    "الموعد",
+    "2 أبريل 2027"
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    8,
+    "لقطات من عرض Sea of Stars السابق، Sabotage Studio",
+    {
+     "size": 30,
+     "band": true
+    }
+   ]
+  ],
+  "headline": "نسخة Sea of Stars\nالورقية الأخيرة",
+  "label": "رسمي",
+  "source": "iam8bit",
+  "date": "17 Nov 2026",
+  "theme": "playful",
+  "style": "bold",
+  "template": "split",
+  "skin": "house",
+  "track": "bed",
+  "cut": true,
+  "genre": [
+   "rpg"
+  ],
+  "platform": "switch2",
+  "beat": "release",
+  "bed_reason": "trailer sound is not verified as a music-only stretch; our bed under every line",
+  "subject_person": null,
+  "spoken": "تصدر Sea of Stars ورقيًا على Switch 2 بنسخة Sunset Edition يوم 2 أبريل 2027. ويفتح الحجز المسبق للنسخ الخاصة على Switch 2 وPS5.",
+  "reel_check": {
+   "SOURCE: primary read in full": "yes: iam8bit pre-order page, plus Nintendo Everything and GoNintendo",
+   "SOURCE: not already posted": "ledger find sea of stars: none; Publer last 7 days none",
+   "SOURCE: age": "yes: 17 Nov 2026",
+   "ANGLE before lines": "yes: story file",
+   "STORY TYPE": "n/a: physical edition announcement, footage is the earlier Steam trailer, said on screen",
+   "STORY: spoken paragraph, subject before pronoun": "yes",
+   "STORY: release verbs": "yes: تصدر with date",
+   "STORY: names match names-ar.md": "Sea of Stars, iam8bit, Switch 2 and PS5 in Latin per list",
+   "POST: Arabic passes": "yes: Western digits",
+   "SOUND: footage sound or bed with reason": "yes: our bed, bed_reason",
+   "SOUND: no speech under Arabic lines": "yes",
+   "PICTURE: footage first": "yes: Steam trailer app 1244090",
+   "PICTURE: not graphic": "yes: pixel-art RPG",
+   "CREDIT: on every clip": "yes",
+   "SENSITIVE": "yes: nothing sensitive"
+  },
+  "decision_log": [
+   {
+    "beat": "all",
+    "shot": "sos-dawn 12.18, 27.0, 31.18, 36.53, 41.43, 52.16, 68.68, 46.03 (clean stretches from shots read run 512)",
+    "alternatives": "Accolades trailer, stills",
+    "crop": "centre",
+    "music": "bed"
+   }
+  ],
+  "note": "Sea of Stars Sunset Edition physical release; footage is the Steam trailer (earlier footage).",
+  "angle": {
+   "hook": "Sea of Stars gets its final physical release: Sunset Edition on Switch 2 and PS5 on 2 April 2027, with pre-orders open now.",
+   "why_now": "iam8bit and Sabotage opened pre-orders on 17 Nov 2026; Nintendo Everything 17:00Z, GoNintendo 19:14Z.",
+   "what_it_means_here": "Switch 2 players can pre-order a boxed copy with stickers and a soundtrack code; collector editions ship from iam8bit.",
+   "limit": "Retail street date and prices come from outlets, not the page; footage is the earlier Steam trailer."
+  }
+ }
+}
