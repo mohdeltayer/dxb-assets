@@ -75,7 +75,6 @@ jobs:
           sudo systemctl stop apt-daily.timer apt-daily-upgrade.timer 2>/dev/null || true
           command -v ffprobe >/dev/null || timeout 300 sudo apt-get -o DPkg::Lock::Timeout=120 install -y -qq ffmpeg >/dev/null
           ffprobe -version | head -1
-          python3 -m pip install -q pillow numpy   # the resolver's Steam route imports trailer.py, which imports cards.py
 
       - name: Build (no model)
         id: build

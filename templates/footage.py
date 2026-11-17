@@ -83,10 +83,18 @@ def classify(source):
 
 # ---------------------------------------------------------------------------------------------------------- sources
 
+def steam_trailers(appid):
+    """The app's Steam trailers, as trailer.steam_trailers gives them, read here with the standard library only so the
+    resolver runs anywhere (the slip build on a plain GitHub runner, 17 Nov 2026), without the render stack."""
+    d = json.loads(_get(f'https://store.steampowered.com/api/appdetails?appids={appid}&cc=us&l=en'))
+    data = next(iter(d.values())).get('data', {}) or {}
+    return [{'name': m['name'].strip(), 'hls': m.get('hls_h264'), 'thumb': m.get('thumbnail')}
+            for m in data.get('movies', [])]
+
+
 def steam(appid, name):
-    import trailer
     out = []
-    for t in trailer.steam_trailers(appid)[:MAX]:
+    for t in steam_trailers(appid)[:MAX]:
         if not t.get('hls'):
             continue
         tid = re.search(r'/(\d+)/', t['hls'])
