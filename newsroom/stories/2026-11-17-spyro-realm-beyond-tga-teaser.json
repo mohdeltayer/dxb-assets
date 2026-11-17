@@ -55,5 +55,25 @@
    "toys"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/spyro-realm-beyond-game-awards-teaser-november-17-reel-v1.mp4",
+  "blob": "e6cc23cda8aee88175a5f3b30ea17c8191d4d009",
+  "at": "2026-11-17T19:21:03Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/spyro-realm-beyond-game-awards-teaser-november-17.json",
+   "sha256": "2428e9d89ad8a5c57f9bd82ed6aa290f49c9e86713f204f348160d3c3d8c809b",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "three look frames, strip and dense: Spyro announce trailer footage credited as earlier trailer, Arabic lines legible and matching the story, no graphic content (cartoon platformer)"
  }
 }
