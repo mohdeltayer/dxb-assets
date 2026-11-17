@@ -573,8 +573,16 @@ def auto_shots(job):
     if not job.get('shots_auto'):
         return
     import autofix as AF
+    import time as _t
     n0 = len(AF.LOG)
-    left = AS.fill(job)
+    t0 = _t.time()
+    try:
+        left = AS.fill(job)
+    finally:                                   # adv-20261117-server-speed-for-p2 A: the read's seconds go to qc.json
+        rd = {'secs': round(_t.time() - t0, 1),
+              'files': {f: {'secs': r.get('read_secs'), 'cached': bool(r.get('cached')), 'stages': r.get('stages'),
+                            'incomplete': r.get('incomplete')} for f, r in AS.READ.items()}}
+        print('render_job: shot read: ' + json.dumps(rd), flush=True)
     if len(AF.LOG) > n0:
         AF.save_log(os.environ.get('AUTOFIX_JSON'))
         if os.environ.get('AUTOFIX_JOB'):

@@ -1376,7 +1376,7 @@ class Focus(list):
         self.profile = []
 
 
-def autofocus(f, start, dur, thresh=0.2, keyframes=False):
+def autofocus(f, start, dur, thresh=0.2, keyframes=False, grab=None, cuts=None, min_scene=None):
     """Per-scene focus for one continuous stretch: at each of the trailer's cuts,
     aim the 9:16 window at that scene's subject (Mohammad, 6 Oct 2026: "choose a
     better focus area"; advisor, 14 Oct 2026: aim at a detected subject, not at
@@ -1404,26 +1404,51 @@ def autofocus(f, start, dur, thresh=0.2, keyframes=False):
                             '-of', 'csv=p=0', C.U + f], capture_output=True, text=True).stdout.strip()
     iw = int(bars.split('crop=')[1].split(':')[0]) if bars else int(probe)
     sw_ = iw * H / rows                       # width after scaling the picture to the frame height
-    cuts = scenes(f, start, dur, thresh) + [dur]
+    cuts = (list(cuts) if cuts is not None else scenes(f, start, dur, thresh)) + [dur]
     tmp = tempfile.mkdtemp(prefix='autofocus-')
     try:
-        paths = []
+        paths, same = [], {}
+        short = set()                         # min_scene: scenes too short to hold a shot are not read (centre focus)
         for k, (a, b) in enumerate(zip(cuts, cuts[1:])):
+            if min_scene and b - a < min_scene:
+                short.add(k)
+                continue
             for j, q in enumerate(SAMPLES):
                 p = f'{tmp}/{k}-{j}.png'
-                subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-ss', f'{start + a + (b - a) * q:.2f}', '-i', C.U + f,
-                                '-frames:v', '1', '-vf', f'{bars}scale=640:-2', p], check=True)
+                if grab is not None:          # the fast shot read (adv-20261117-server-speed-for-p2 A): frames already decoded
+                    key = grab(start + a + (b - a) * q, bars, p)
+                    if key is not None and key in same:   # a short scene's samples land on one decoded frame: read it once
+                        paths.append(same[key])
+                        continue
+                    same[key] = p
+                else:
+                    subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-ss', f'{start + a + (b - a) * q:.2f}', '-i', C.U + f,
+                                    '-frames:v', '1', '-vf', f'{bars}scale=640:-2', p], check=True)
                 paths.append(p)
-        found = detect_subjects(paths)
-        faces = detect_faces(paths)
+        uniq = list(dict.fromkeys(paths))
+        if grab is not None and uniq:         # the two detectors at once (each is its own process)
+            import concurrent.futures as _cf
+            with _cf.ThreadPoolExecutor(max_workers=2) as _ex:
+                _a, _b = _ex.submit(detect_subjects, uniq), _ex.submit(detect_faces, uniq)
+                f1, fc1 = _a.result(), _b.result()
+        else:
+            f1, fc1 = (detect_subjects(uniq), detect_faces(uniq)) if uniq else ([], [])
+        found = [f1[uniq.index(p)] for p in paths]
+        faces = [fc1[uniq.index(p)] for p in paths]
         wf = W / sw_                          # the window's width as a share of the picture
         keys = Focus()
+        n = 0
         for k, a in enumerate(cuts[:-1]):
-            row = found[k * len(SAMPLES):(k + 1) * len(SAMPLES)]
-            frow = faces[k * len(SAMPLES):(k + 1) * len(SAMPLES)]
+            if k in short:
+                keys.append((round(a, 3), pan(0.5, 0.5, *KEYS) if keyframes else 0.5))
+                continue
+            row = found[n * len(SAMPLES):(n + 1) * len(SAMPLES)]
+            frow = faces[n * len(SAMPLES):(n + 1) * len(SAMPLES)]
+            sp = paths[n * len(SAMPLES):(n + 1) * len(SAMPLES)]
+            n += 1
             kf = _keyframes([(q, look_x(fc, wf) if fc else d[0] if d else None) for q, d, fc in zip(SAMPLES, row, frow)])
             if kf is None:                    # nothing detected: saliency, held still
-                xs = [_salient_x(Image.open(p)) for p in paths[k * len(SAMPLES):(k + 1) * len(SAMPLES)]]
+                xs = [_salient_x(Image.open(p)) for p in sp]
                 kf = [sorted(xs)[1]] * 2
             fk = [round(min(1, max(0, (c * sw_ - W / 2) / max(sw_ - W, 1))), 3) for c in kf]
             keys.append((round(a, 3), pan(fk[0], fk[1], *KEYS) if keyframes else round(sum(fk) / 2, 3)))

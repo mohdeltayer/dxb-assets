@@ -73,10 +73,22 @@ def luma_scan(path):
     """(black intervals, frozen intervals, duration): one pass over the file at 320 px. Black is a frame at video-range
     black; a fade ramp into or out of it is added (a steady rise or fall, never a cut: a jump of 25 or more levels in
     one frame ends it)."""
-    import numpy as np
-    r = subprocess.run(['ffmpeg', '-nostdin', '-v', 'info', '-i', path, '-an', '-vf',
-                        'scale=320:-2,freezedetect=n=0.003:d=0.4,signalstats,metadata=print:key=lavfi.signalstats.YAVG:file=-',
+    r = subprocess.run(['ffmpeg', '-nostdin', '-v', 'info', '-i', path, '-an', '-vf', LUMA_VF,
                         '-f', 'null', '-'], capture_output=True, text=True)
+    return luma_parse(path, r.stdout, r.stderr)
+
+
+LUMA_VF = 'scale=320:-2,freezedetect=n=0.003:d=0.4,signalstats,metadata=print:key=lavfi.signalstats.YAVG:file=-'
+
+
+def luma_parse(path, stdout, stderr):
+    """luma_scan's reading of its ffmpeg output; the fast shot read runs the same filter inside its one decode."""
+    import numpy as np
+
+    class _R:
+        pass
+    r = _R()
+    r.stdout, r.stderr = stdout, stderr
     ts, ys, pts = [], [], None
     for ln in r.stdout.splitlines():
         m = re.search(r'pts_time:([\d.]+)', ln)
@@ -139,15 +151,17 @@ def _times(s, d, dur):
     return ts
 
 
-def ocr_shot(path, f, s, d, fo, dur, first=False, ocr=True):
+def ocr_shot(path, f, s, d, fo, dur, first=False, ocr=True, read=None, bars=None):
     """(hard, soft) intervals [(a, b, reason)] from tesseract on the frames of one stretch, read at the 9:16 window
-    the shot will use. `first` is the first shot of the Reel (its first frame is the grid tile)."""
+    the shot will use. `first` is the first shot of the Reel (its first frame is the grid tile). `read(t)`, when given,
+    returns (boxes, frame width, mean luma) for the frame nearest t from a read already made (the fast shot read,
+    adv-20261117-server-speed-for-p2 A), or None when that frame was not read in time."""
     import reel
     from PIL import ImageStat
     if not ocr:
         return [], []
     try:
-        bars = reel._bars(path, s, d)[0]
+        bars = (bars or reel._bars(path, s, d))[0]
         srcw, srch = reel._src_size(path)
     except Exception as e:                                   # noqa: BLE001
         return [(s, s + d, f'unreadable: {e}')], []
@@ -155,15 +169,23 @@ def ocr_shot(path, f, s, d, fo, dur, first=False, ocr=True):
     tail = dur - min(10.0, 0.15 * dur)
     half = OCR_STEP / 2
     for t in _times(s, d, dur):
-        try:
-            full = reel._frame(path, t, 1280)
-        except SystemExit:
-            hard.append((t, t + half, 'no picture'))
-            continue
-        boxes = reel._word_boxes(full, 60)
+        if read is not None:
+            got = read(t)
+            if got is None:
+                hard.append((round(t - half, 2), round(t + half, 2), 'not read in time'))
+                continue
+            boxes, fw, mean_l = got
+        else:
+            try:
+                full = reel._frame(path, t, 1280)
+            except SystemExit:
+                hard.append((t, t + half, 'no picture'))
+                continue
+            boxes, fw = reel._word_boxes(full, 60), full.width
+            mean_l = ImageStat.Stat(full.convert('L')).mean[0] if boxes else 255
         if boxes is None:
             return hard, soft                                # no tesseract: the caller says so
-        k = full.width / srcw
+        k = fw / srcw
         x0, _y0, x1, _y1 = reel._window(bars, srcw, srch, reel._fo_at(fo, min(max(t - s, 0.0), d), d))
         x0, x1 = x0 * k, x1 * k
         inside = [w for w, l, tp, r, bt in boxes if x0 <= l and r <= x1]
@@ -172,7 +194,7 @@ def ocr_shot(path, f, s, d, fo, dur, first=False, ocr=True):
         a, b = round(t - half, 2), round(t + half, 2)
         if ends:
             hard.append((a, b, 'endcard "' + ' '.join(ends[:3]) + '"'))
-        elif t >= tail and boxes and ImageStat.Stat(full.convert('L')).mean[0] < 40:
+        elif t >= tail and boxes and mean_l < 40:
             hard.append((a, b, 'endcard: dark frame with writing near the end'))
         if len(set(cut)) >= 2:
             hard.append((a, b, 'cut-text "' + ' '.join(dict.fromkeys(cut))[:40] + '"'))

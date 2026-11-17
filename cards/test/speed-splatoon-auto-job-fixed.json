@@ -1,0 +1,162 @@
+{
+ "name": "speed-splatoon-auto",
+ "story": "2026-11-17-splatoon-raiders-demo",
+ "kind_news": "out_now",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/test/speed-splatoon-auto-reel-v1.mp4",
+ "rerender": {
+  "reason": "wrong_subject",
+  "note": "v2 footage came from a related product (nsuid 70010000127971, Mina the Hollower); v3 uses Splatoon Raiders' own store video, nsuid 70010000122824"
+ },
+ "footage": [
+  {
+   "file": "splatoon-raiders-demo-november-17-trailer.mp4",
+   "url": "https://assets.nintendo.com/video/upload/store/software/switch2/70010000122824/Video/1babdde3f7013ed6438c4a95af6784baf663c8489d0663cdd51411733ebcf9ad.mp4",
+   "seconds": 120,
+   "start": 0
+  }
+ ],
+ "shots": [
+  [
+   "splatoon-raiders-demo-november-17-trailer.mp4",
+   5.14,
+   3.5,
+   [
+    [
+     0.0,
+     0.549
+    ]
+   ]
+  ],
+  [
+   "splatoon-raiders-demo-november-17-trailer.mp4",
+   49.88,
+   3.0,
+   [
+    [
+     0.0,
+     0.863
+    ]
+   ]
+  ],
+  [
+   "splatoon-raiders-demo-november-17-trailer.mp4",
+   71.58,
+   3.0,
+   [
+    [
+     0.0,
+     0.411
+    ]
+   ]
+  ],
+  [
+   "splatoon-raiders-demo-november-17-trailer.mp4",
+   104.04,
+   3.0,
+   [
+    [
+     0.0,
+     0.0
+    ]
+   ]
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "أتاحتها نينتيندو\nعلى Switch 2",
+     {}
+    ]
+   ]
+  ],
+  [
+   2,
+   4,
+   [
+    [
+     "ثلاث زنازين وست أدوات\nلكن التقدم لا ينتقل للعبة",
+     {}
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   4,
+   "المصدر: نينتيندو (Nintendo)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "نسخة Splatoon Raiders\nالتجريبية على Switch 2",
+ "label": "رسمي",
+ "source": "نينتيندو (Nintendo)",
+ "date": "17 Nov 2026",
+ "theme": "playful",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": true,
+ "strip": [
+  [
+   "المنصة",
+   "Nintendo Switch 2"
+  ],
+  [
+   "النسخة التجريبية",
+   "متوفرة الآن"
+  ]
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: see story file",
+  "SOURCE: not already posted": "yes: see story file",
+  "SOURCE: age": "yes: see story file",
+  "ANGLE before lines": "yes: see story file",
+  "STORY TYPE report": "yes: see story file",
+  "STORY: spoken paragraph, subject before pronoun": "yes: see story file",
+  "STORY: release verbs": "yes: see story file",
+  "STORY: names match names-ar.md": "yes: see story file",
+  "POST: Arabic passes": "yes: see story file",
+  "SOUND: footage sound or bed with reason": "yes: see story file",
+  "SOUND: no speech under Arabic lines": "yes: see story file",
+  "PICTURE: footage first": "yes: see story file",
+  "PICTURE: not the same as last 5 reels": "yes: see story file",
+  "CREDIT: on every clip": "yes: see story file"
+ },
+ "decision_log": [
+  {
+   "beat": "all",
+   "shot": "auto picked clean stretches of the official Nintendo US store video of Splatoon Raiders",
+   "alternatives": "none",
+   "crop": "picker focus",
+   "music": "our bed: the trailer's music stem is not clean (audio split refused it)"
+  }
+ ],
+ "angle": {
+  "hook": "Splatoon Raiders now has a demo on Switch 2 (Nintendo Japan)",
+  "why_now": "posted 17 Nov 03:01Z",
+  "what_it_means_here": "players can try before buying; demo save data does not carry over",
+  "payoff": "six gadgets, three dungeons, Treasure Hunt mode"
+ },
+ "spoken": "أتاحتها نينتيندو على Switch 2 كنسخة تجريبية من Splatoon Raiders. تضم التجربة ثلاث زنازين وست أدوات، لكن التقدم لا ينتقل للعبة الكاملة.",
+ "track": "bed",
+ "lowres_ok": {
+  "searched": [
+   "Nintendo US store page, the game's own video (nsuid 70010000122824, 1280x720, the four videos on the page)",
+   "Nintendo Japan product site (trailers in a player, no file)",
+   "IGN video search (no MP4 for this video)",
+   "Steam (Nintendo exclusive, no page)",
+   "YouTube (not allowed)"
+  ],
+  "result": "1280x720 only; at the 2x cap it cannot fill 9:16"
+ },
+ "bed_reason": "Nintendo's own Splatoon Raiders store video (the only official file, 1280x720) was checked: the audio split found the music stem not clean (85.6% leftover), and the shots come from different moments, so its effects would not match the picture; narration lines run under every shot on our bed."
+}

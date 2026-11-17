@@ -9,8 +9,8 @@ A job may leave the shot times to the server in two ways:
 
 expand(job) runs first and needs no footage: it writes the shot list with start 0.0 in each automatic slot and lists
 those slots in "shots_auto", so the text checks see the timeline (only the lengths matter there). fill(job) runs on the
-server once the footage is fetched (each file is read in full, about 4 minutes per 2 minutes of footage on the
-4-core runner, so keep "footage" seconds short for an automatic job; the read is cached per file): templates/shotpick.py reads each file's clean stretches (after the picture start,
+server once the footage is fetched (shotpick's fast read since 17 Nov, adv-20261117-server-speed-for-p2 A: about 45 s
+per 95 s trailer on 4 cores, the whole read capped at READ_CAP; cached per file, so a second dispatch reads nothing): templates/shotpick.py reads each file's clean stretches (after the picture start,
 inside one scene, no black, frozen, smear, letterbox, burnt-in or cut text, no unframeable profile face), and each slot
 takes, in source order, the stretch nearest its even share of the trailer that holds its length, preferring a centred
 subject. Every choice is logged like the other fixes (autofix.LOG, rule auto_shots), so qc.json `autofixed` and the job
@@ -64,6 +64,9 @@ def expand(job):
 
 
 MIN_SECS = 2.0            # a shot shortened to fit a free clean stretch keeps at least this long
+READ_CAP = 180.0          # seconds for the whole read of up to three trailers (adv-20261117-server-speed-for-p2 A)
+DECODE_EST = 18.0         # a file's one decode, which the budget cannot stop: never give a file less than this plus 10 s
+READ = {}                 # file -> the shotpick result of this fill (render_job reports the seconds)
 
 
 def _gaps(a, b, used):
@@ -107,26 +110,17 @@ def fill(job, reader=None):
     if not slots:
         return []
     if reader is None:
+        import time
         import shotpick as SP
-        cache = {}
+        files = list(dict.fromkeys(job['shots'][i][0] for i in slots))
+        files += [x for x in _videos(job) if x not in files]
+        t_end = time.time() + READ_CAP
 
-        def reader(f):                                       # cached per file and size: a second dispatch reads nothing
-            if f not in cache:
-                import json
-                try:
-                    import cards as C
-                    path = C.U + f
-                    key = os.path.join(C.U, 'cache', f'shotpick-{os.path.basename(f)}-{os.path.getsize(path)}.json')
-                except (ImportError, OSError, AttributeError):
-                    key = None
-                if key and os.path.exists(key):
-                    cache[f] = json.load(open(key))
-                else:
-                    cache[f] = SP.pick(f)
-                    if key:
-                        os.makedirs(os.path.dirname(key), exist_ok=True)
-                        json.dump(cache[f], open(key, 'w'))
-            return cache[f]
+        def reader(f):                                       # the fast read, cached per file (shotpick.pick); the
+            left_ = max(1, len([x for x in files if x not in READ]))   # whole read stays inside READ_CAP
+            budget = max(DECODE_EST + 10.0, (t_end - time.time()) / left_)   # the file's whole read, decode included
+            READ[f] = SP.pick(f, budget=budget)
+            return READ[f]
     import autofix as AF
     by_file = {}
     for i in slots:

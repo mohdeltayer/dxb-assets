@@ -115,12 +115,12 @@ def _cuts(f, a, secs):
     return [round(a + c, 3) for c in reel.scenes(f, a, secs, CUT_THRESH)[1:]]
 
 
-def _letterbox_rows(f, a, secs, full):
-    """Picture rows the montage keeps for this stretch (reel._bars), and whether that is a letterbox."""
+def _letterbox_rows(f, a, secs, full, bars=None):
+    """Picture rows the montage keeps for this stretch (reel._bars, or `bars` already read), and whether that is a letterbox."""
     import reel
     if os.path.basename(f) in reel.NOBARS:
         return full, False
-    _crop, rows = reel._bars(_U() + f, max(0.0, a), max(0.3, secs))
+    _crop, rows = bars or reel._bars(_U() + f, max(0.0, a), max(0.3, secs))
     return rows, bool(full and rows < full - max(LB_TOL, LB_SHARE * full))
 
 

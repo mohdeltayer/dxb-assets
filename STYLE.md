@@ -831,3 +831,11 @@ render-times.json). H (server QC verdict) and I (parallel runners) follow as the
 2. One pass lists every refusal with the value that passes (prerender text and full, the render's text step).
 3. "shots": "auto", or [file, "auto", secs, focus]: the server picks shot times from the clean stretches.
 4. presubmit.py intent needs --slot <ISO time of the post> on every post (the keeper counts coverage from it).
+
+
+## Server speed (adv-20261117-server-speed-for-p2, 17 Nov 2026)
+1. "shots": "auto" reads its footage in under a minute a trailer, three trailers in 3 minutes at most; seconds in qc.json
+   shot_read. A trailer with too few clean stretches fails by name in seconds: add footage or write the times.
+2. Footage addresses come from prerender mode footage (source = steam:<appid> or the official page), never from reading
+   pages by hand; Nintendo gives only the product's own nsuid.
+
