@@ -184,7 +184,9 @@ def write(job, out, qc_path, autofix=None, log=None):
          'dispatches': int(os.environ['DISPATCHES']) if os.environ.get('DISPATCHES', '').isdigit() else None,
          'source_summary': t.get('source_summary'), 'quality': t.get('quality'), 'final_enc': t.get('final_enc'),
          'look_frames': look_frames(job, out), 'person_shown': person_shown(job), 'sound': sound_of(job, log),
-         'shot_read': shot_read(log)}
+         'shot_read': shot_read(log),
+         # where the job is after the render (adv-20261117-server-speed-for-p2 C): the director and later runs read it here
+         'job_path': os.environ.get('JOB_DONE') or None}
     prev = previous(qc_path)
     if prev.get('director_sendbacks'):               # item E: the send-backs stay with the Reel across renders
         d['director_sendbacks'] = prev['director_sendbacks']

@@ -105,8 +105,13 @@ jobs:
               "https://api.github.com/repos/mohdeltayer/dxb-queue/contents/desk/mirror.json?ref=desk" \
               -o "$RUNNER_TEMP/mirror.json" && echo "MIRROR_ARG=--mirror $RUNNER_TEMP/mirror.json" >> "$GITHUB_ENV" \
               || echo "mirror not read"
+            # what the last Production 2 run left unfinished (adv-20261117-server-speed-for-p2 E; may be absent)
+            curl -fsS -m 20 -H "Authorization: Bearer $QTOKEN" -H "Accept: application/vnd.github.raw+json" \
+              "https://api.github.com/repos/mohdeltayer/dxb-queue/contents/desk/incomplete.json?ref=desk" \
+              -o "$RUNNER_TEMP/incomplete.json" 2>/dev/null && echo "INCOMPLETE_ARG=--incomplete $RUNNER_TEMP/incomplete.json" >> "$GITHUB_ENV" \
+              || echo "no desk/incomplete.json"
             # the contents API answers with its JSON wrapper (base64) when the raw type is not honoured: unwrap it
-            for f in "$RUNNER_TEMP/board.json" "$RUNNER_TEMP/mirror.json"; do
+            for f in "$RUNNER_TEMP/board.json" "$RUNNER_TEMP/mirror.json" "$RUNNER_TEMP/incomplete.json"; do
               [ -s "$f" ] && python3 - "$f" <<'PYEOF'
           import base64, json, sys
           p = sys.argv[1]
@@ -168,7 +173,7 @@ jobs:
             ${BOARD_ARG:-} ${DIGEST_ARG:-} $SERVER_ARG | tee -a "$GITHUB_STEP_SUMMARY"
           # The work order (hourly, from :25 Dubai) and the hop alarms (every pass); never stops the push below.
           if [ -n "${BOARD_ARG:-}" ]; then
-            python3 ops/backoffice/keeper/workorder.py ${BOARD_ARG} ${MIRROR_ARG:-} ${DIGEST_ARG:-} \
+            python3 ops/backoffice/keeper/workorder.py ${BOARD_ARG} ${MIRROR_ARG:-} ${DIGEST_ARG:-} ${INCOMPLETE_ARG:-} \
               --orders "$RUNNER_TEMP/orders" --digests "$RUNNER_TEMP/digests" \
               --server "$RUNNER_TEMP/pub/keeper/server-in.json" --commitments newsroom/commitments.json \
               --ledger templates/assets/format-ledger.json --times templates/assets/render-times.json \

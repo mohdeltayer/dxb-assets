@@ -839,3 +839,7 @@ render-times.json). H (server QC verdict) and I (parallel runners) follow as the
 2. Footage addresses come from prerender mode footage (source = steam:<appid> or the official page), never from reading
    pages by hand; Nintendo gives only the product's own nsuid.
 
+3. After a render the job is in jobs/done/<name>.json (as rendered, named in the commit and in qc.json job_path); the
+   director needs no path. Minutes per stage are in the commit, qc.json stage_minutes and work order section 7.
+4. A run that ends INCOMPLETE also writes desk/incomplete.json (incomplete.py open: story, next step, job, run); the next
+   run picks it up first (work order section 1b) and closes it; open 2 hours is an alarm.

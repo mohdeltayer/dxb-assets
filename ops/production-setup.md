@@ -347,3 +347,14 @@ a run that has not been updated still reads them.
    now) and either passes (notes allowed) or sends it back once with `--reason wrong_subject|graphic|unreadable_text|
    factual_error`; a second send-back is refused and a third render is refused by the server (`qc.py rerender`) unless
    the job names "rerender": {"reason", "note"}. Commit the qc.json the send-back writes with the story file.
+16. After a render, and unfinished work (release 2026-11-17 r4, adv-20261117-server-speed-for-p2 C, D, E). a. A render
+   moves its job to jobs/done/<name>.json as rendered (with the server's fixes); the render commit names it ("job:") and
+   qc.json carries job_path. The director needs no path: `presubmit.py director <story> PASS <out> --by director-p2`
+   finds the job from the Reel's qc.json (a bare name works too). A re-render is a new job version in jobs/live. b. Each
+   render commit, its qc.json (`stage_minutes`) and section 7 of the work order give minutes per stage (queue, setup,
+   fetch, shots, checks, render, after, upload); name the slowest one on the board when a Reel took over 15 minutes.
+   c. A run that ends INCOMPLETE also writes one row in dxb-queue desk/incomplete.json, in the same desk commit as its
+   board line: `python3 ops/backoffice/dispatch/incomplete.py open --file desk/incomplete.json --story <id> --next
+   "<the one step next>" --job jobs/live/<name>.json --run <render run id> --by p2`. The next run takes section 1b of the
+   work order (unfinished, pick up first) right after the alarms, and closes the row when the step is done: `incomplete.py
+   close --file desk/incomplete.json --story <id> --outcome "<what was done>"`. A row open 2 hours is an alarm.

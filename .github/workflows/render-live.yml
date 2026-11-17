@@ -193,8 +193,16 @@ jobs:
           files="$out $base-strip.jpg $base-sheet.jpg"
           # one verdict per Reel (item H): pass, the soft notes and anything the server fixed
           export DISPATCHES=$(python templates/jobsha.py count "$(basename "$JOB" .json)")
+          # the job stays on main after the render, as rendered (adv-20261117-server-speed-for-p2 C): jobs/done/<name>.json
+          export JOB_DONE="jobs/done/$(basename "$JOB")"; echo "JOB_DONE=$JOB_DONE" >> "$GITHUB_ENV"
+          cp "$JOB" "$RUNNER_TEMP/job-rendered.json"
+          # stage minutes (item D): this run's entry with its whole-job and setup times, before qc.json reads it
+          python -c "import json; p = '$RUNNER_TEMP/render-time.json'; e = json.load(open(p)); e['job_secs'] = $RENDER_SECS; e['setup_min'] = round($SETUP_SECS / 60, 2); e['story'] = '$(basename "$JOB" .json)'; json.dump(e, open(p, 'w'))" || true
           python templates/qc.py write "$JOB" "$out" "$base-qc.json" --autofix "$RUNNER_TEMP/autofix.json" --log "$RUNNER_TEMP/render.log" \
             && files="$files $base-qc.json" || echo "qc file not written"
+          [ -f "$base-qc.json" ] && python templates/stagetimes.py qc "$base-qc.json" "$RUNNER_TEMP/render-time.json" || true
+          STAGES=$(python templates/stagetimes.py line "$RUNNER_TEMP/render-time.json" 2>/dev/null || echo "stages (min): not measured")
+          echo "STAGES=$STAGES" >> "$GITHUB_ENV"
           # the job as the server fixed and rendered it, kept with the verdict (the job file itself leaves jobs/live/)
           [ -s "$RUNNER_TEMP/autofix.json" ] && python templates/autofix.py keep "$JOB" "$base-qc.json" || true
           # card-led templates: three 360 px frames beside qc.json, read by the builder before scheduling (item 6)
@@ -220,8 +228,10 @@ jobs:
             if [ -f "$RUNNER_TEMP/bed.json" ]; then python templates/sonic.py ledger-add "$RUNNER_TEMP/bed.json" && looks="$looks templates/assets/bed-ledger.json"; fi
             python templates/qc.py sound-entry "$JOB" "$RUNNER_TEMP/render.log" templates/assets/render-times.json || true
             git add --sparse -f $files templates/assets/render-times.json $looks
+            mkdir -p jobs/done; cp "$RUNNER_TEMP/job-rendered.json" "$JOB_DONE"; git add --sparse -f "$JOB_DONE"
             if [ -f "$JOB" ]; then git rm -q "$JOB"; fi
-            git commit -q -m "Render $(basename "$JOB" .json) on the dxb-render server ($RENDER_SECS s, $(nproc) cores, job ${JOB_SHA:0:8}, dispatch $DISPATCHES, qc $QC_VERDICT)"
+            git commit -q -m "Render $(basename "$JOB" .json) on the dxb-render server ($RENDER_SECS s, $(nproc) cores, job ${JOB_SHA:0:8}, dispatch $DISPATCHES, qc $QC_VERDICT)" \
+              -m "job: $JOB_DONE" -m "$STAGES"
             if git push -q origin "HEAD:$GITHUB_REF_NAME"; then
               if [ "$QC_VERDICT" = "fail" ]; then
                 { echo "### QC: fail (Reel committed as evidence, not uploaded to Publer)"; echo '```json'
@@ -246,13 +256,19 @@ jobs:
           REPO_PRIVATE: ${{ github.event.repository.private }}
         run: |
           base="${OUT%.mp4}"; receipt="$base-publer.json"
+          up0=$(date +%s)
           python templates/publer_upload.py "$RUNNER_TEMP/out/$OUT" "$RUNNER_TEMP/publer.json" || true
+          UP_SECS=$(( $(date +%s) - up0 ))
+          qcb="${base%-reel-v*}-qc.json"
           for i in 1 2 3 4 5; do
             git fetch -q --depth=1 --filter=blob:none origin "$GITHUB_REF_NAME"
             git reset -q --hard "origin/$GITHUB_REF_NAME"
             mkdir -p "$(dirname "$receipt")"; cp "$RUNNER_TEMP/publer.json" "$receipt"
-            git add --sparse -f "$receipt"
-            git commit -q -m "Publer receipt $(basename "$base")"
+            # the upload's minutes on the render's entry and its qc.json (item D)
+            extra=""; [ -f "$RUNNER_TEMP/out/$qcb" ] && cp "$RUNNER_TEMP/out/$qcb" "$qcb" && extra="$qcb"
+            python templates/stagetimes.py upload "$(basename "$JOB" .json)" "$UP_SECS" ${extra:+"$extra"} >/dev/null && extra="$extra templates/assets/render-times.json" || true
+            git add --sparse -f "$receipt" $extra
+            git commit -q -m "Publer receipt $(basename "$base")" -m "upload ${UP_SECS} s"
             if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
             sleep $(( i * 5 ))
           done
