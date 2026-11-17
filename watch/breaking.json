@@ -1,10 +1,23 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T14:52:08Z",
- "seq": 573,
+ "generated_at": "2026-11-17T14:55:20Z",
+ "seq": 574,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 16452,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/17/26 Play Nintendo Switch 2 and discover gift ideas at the Nintendo Switch 2 Holiday Experience, Starting Nov. 25 Nintendo is inviting fans, families and fr",
+   "url": "https://www.nintendo.com/us/whatsnew/play-nintendo-switch-2-and-discover-gift-ideas-at-the-nintendo-switch-2-holiday-experience-starting-nov-25/",
+   "published": null,
+   "first_seen": "2026-11-17T14:55:15Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 574
+  }
+ ],
  "recent": [
   {
    "id": 16425,
@@ -255,7 +268,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T14:50:15Z",
+  "last_poll_at": "2026-11-17T14:55:15Z",
   "sources_enabled": 100,
   "sources_ok": 92,
   "sources_failing": 7,
