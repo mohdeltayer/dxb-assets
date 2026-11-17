@@ -2,13 +2,13 @@
  "id": "2026-11-17-sliptest-phasmophobia",
  "state": "failed",
  "problems": [
-  "footage: the resolver stopped on steam:739630: ModuleNotFoundError: No module named 'pedalboard'"
+  "footage: the resolver stopped on steam:739630: TimeoutExpired: Command '['ffprobe', '-v', 'error', '-user_agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36', '-show_entries', 'format=duration,bit_rate:stream=codec_type,width,height,r_frame_rate,bit_rate', '-of', 'json', 'https://video.akamai.steamstatic.com/store_trailers/739630/2083657862/575d9030b435c49ad063715dc31098f8c9502486/1751023288/hls_264_master.m3u8?t=1751054305']' timed out after 90 seconds"
  ],
  "flags": [
   "name not in names-ar: «كاينتيك غيمز (Kinetic Games)» (spoken); add it there as Proposed"
  ],
- "at": "2026-11-17T19:23:19Z",
- "run": "44157930939",
+ "at": "2026-11-17T19:25:35Z",
+ "run": "44158337903",
  "lane": "test",
- "build_secs": 30
+ "build_secs": 312
 }
