@@ -1,8 +1,8 @@
 {
  "name": "tga-2026-goty-nominees",
- "out": "cards/2026-11/tga-2026-goty-nominees-reel-v1.mp4",
+ "out": "cards/2026-11/tga-2026-goty-nominees-reel-v2.mp4",
  "verdict": "pass",
- "at": "2026-11-17T17:51:43Z",
+ "at": "2026-11-17T18:05:31Z",
  "findings": [],
  "notes": [
   "length 23.5 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
@@ -14,13 +14,6 @@
   "render_job: lifeless: {\"score\": 1.3, \"still_share\": 0.009, \"longest_still\": 0.2, \"cuts_per_10s\": 6.81, \"held_under_text\": 0.004, \"secs\": 23.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [
-  {
-   "where": "shot 0",
-   "rule": "head_overlap",
-   "what": "lengthened 3.00 to 3.14 s so the line on shot 1 enters at 3.35 s, after the headline clears",
-   "before": 3.0,
-   "after": 3.14
-  },
   {
    "where": "shot 5",
    "rule": "subject_cut",
@@ -49,8 +42,8 @@
    ]
   }
  ],
- "job_sha": "bea4d904b3c93f7de514e8313537e3a416f8fe58",
- "dispatches": 2,
+ "job_sha": "609f6d24e23f2ab7c0d307af2216a154283f8301",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 720,
   "max_zoom": 2.67,
@@ -64,7 +57,7 @@
   "cards/2026-11/tga-2026-goty-nominees-look-3.jpg"
  ],
  "person_shown": "n/a",
- "sound": "bed:neon_b (several games in one Reel, each on its own official trailer: no single trailer stretch runs under all of them, and cutting each trailer's own sound at every cut would jump; our bed under the whole cut (event kit, 15 Nov))",
+ "sound": "bed:neon_e (several games in one Reel, each on its own official trailer: no single trailer stretch runs under all of them, and cutting each trailer's own sound at every cut would jump; our bed under the whole cut (event kit, 15 Nov))",
  "shot_read": null,
  "job_after_autofix": {
   "name": "tga-2026-goty-nominees",
@@ -72,7 +65,7 @@
   "kind_news": "awards",
   "built_by": "production-1",
   "render_lane": "server",
-  "out": "cards/2026-11/tga-2026-goty-nominees-reel-v1.mp4",
+  "out": "cards/2026-11/tga-2026-goty-nominees-reel-v2.mp4",
   "label": "رسمي",
   "source": "ذا غيم أووردز (The Game Awards)",
   "date": "17 Nov 2026",
@@ -231,7 +224,7 @@
     1,
     [
      [
-      "لعبة 007 First Light",
+      "لعبة ‎007 First Light",
       {
        "size": 54
       }
@@ -354,7 +347,7 @@
    ]
   ],
   "headline": "المرشحون لجائزة\nلعبة العام 2026",
-  "spoken": "أعلن حفل ذا غيم أووردز (The Game Awards) المرشحين لجائزة لعبة العام 2026، وهم لعبة 007 First Light ولعبة Control Resonant ولعبة Grand Theft Auto VI ولعبة Phantom Blade Zero ولعبة Resident Evil Requiem ولعبة Zelda: Ocarina of Time. ويُعلن الفائز في حفل 10 ديسمبر.",
+  "spoken": "أعلن حفل ذا غيم أووردز (The Game Awards) المرشحين لجائزة لعبة العام 2026، وهم لعبة ‎007 First Light ولعبة Control Resonant ولعبة Grand Theft Auto VI ولعبة Phantom Blade Zero ولعبة Resident Evil Requiem ولعبة Zelda: Ocarina of Time. ويُعلن الفائز في حفل 10 ديسمبر.",
   "ground_footage": [
    "gta6-xl-drive.mp4",
    0.5
@@ -378,6 +371,10 @@
    "items": "one clean stretch per nominee from the server shots read, nearest the trailer middle",
    "close": "Grand Theft Auto VI again for the closing picture",
    "music": "our bed (bed_reason)"
+  },
+  "rerender": {
+   "reason": "unreadable_text",
+   "note": "v1 drew «لعبة First Light 007» (digits flipped to the far end in RTL); the kit line now carries a left-to-right mark before 007. Found on the director look at 17:58Z, before posting."
   }
  }
 }
