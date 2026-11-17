@@ -8,7 +8,8 @@ import unittest
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import buildgate as BG  # noqa: E402
-import presubmit as PS  # noqa: E402
+import presubmit as PS
+SLOT = '2026-11-17T16:30:00Z'  # noqa: E402
 
 STORY = {'id': 's1', 'subject_person': None, 'sources': [{'url': 'https://example.com/a'}], 'first_report': 'post, 5 Nov 09:00Z',
          'source_type': 'primary', 'footage': 'official trailer', 'lane': 'digital-lounge', 'beat': 'trailer',
@@ -54,15 +55,15 @@ class Pre(unittest.TestCase):
 
     def test_intent_after_pass_then_no_repeat(self):
         PS.director('s1', 'PASS', OUT, job=self.write(self.good), by='director-agent')
-        PS.intent('c1', 'instagram', 's1', OUT, labels=L)
+        PS.intent('c1', 'instagram', 's1', OUT, labels=L, slot=SLOT)
         with self.assertRaises(SystemExit):
-            PS.intent('c1', 'instagram', 's1', OUT, labels=L)
+            PS.intent('c1', 'instagram', 's1', OUT, labels=L, slot=SLOT)
         PS.result('c1', 'instagram', 'failed')
-        PS.intent('c1', 'instagram', 's1', OUT, labels=L)
+        PS.intent('c1', 'instagram', 's1', OUT, labels=L, slot=SLOT)
 
     def test_scheduled_needs_the_job_status(self):
         PS.director('s1', 'PASS', OUT, job=self.write(self.good), by='director-agent')
-        PS.intent('c3', 'x', 's1', OUT, labels=L)
+        PS.intent('c3', 'x', 's1', OUT, labels=L, slot=SLOT)
         with self.assertRaises(SystemExit):
             PS.result('c3', 'x', 'scheduled')                    # the list alone is not proof
         with self.assertRaises(SystemExit):
@@ -78,7 +79,7 @@ class Pre(unittest.TestCase):
         s = dict(STORY, director_check={'verdict': 'PASS', 'out': OUT, 'blob': 'b' * 40})
         (PS.STORIES / 's1.json').write_text(json.dumps(s))
         with self.assertRaises(SystemExit):
-            PS.intent('c2', 'x', 's1', OUT, labels=L)
+            PS.intent('c2', 'x', 's1', OUT, labels=L, slot=SLOT)
 
     # release 2026-11-10
     def test_director_must_not_be_the_builder(self):
@@ -92,19 +93,19 @@ class Pre(unittest.TestCase):
         PS.director('s1', 'PASS', OUT, job=self.write(dict(self.good, template='trailer')), by='director-agent')
         for bad in (None, 'kind:news', 'tpl:trailer', 'kind:story,tpl:trailer', 'kind:news,tpl:split'):
             with self.assertRaises(SystemExit):
-                PS.intent('c4', 'x', 's1', OUT, labels=bad)
-        PS.intent('c4', 'x', 's1', OUT, labels='kind:news,tpl:trailer')
+                PS.intent('c4', 'x', 's1', OUT, labels=bad, slot=SLOT)
+        PS.intent('c4', 'x', 's1', OUT, labels='kind:news,tpl:trailer', slot=SLOT)
 
     def test_showcase_label(self):
         PS.director('s1', 'PASS', OUT, job=self.write(dict(self.good, template='trailer', layout='showcase', showcase_reason='the trailer itself is the news here')), by='d')
         with self.assertRaises(SystemExit):
-            PS.intent('c5', 'x', 's1', OUT, labels='kind:news,tpl:trailer')
-        PS.intent('c5', 'x', 's1', OUT, labels='kind:news,tpl:showcase')
+            PS.intent('c5', 'x', 's1', OUT, labels='kind:news,tpl:trailer', slot=SLOT)
+        PS.intent('c5', 'x', 's1', OUT, labels='kind:news,tpl:showcase', slot=SLOT)
 
     def test_evergreen_slot(self):
         PS.director('s1', 'PASS', OUT, job=self.write(dict(self.good, template='split', post_kind='evergreen', label='دليل')), by='d')
         with self.assertRaises(SystemExit):
-            PS.intent('c6', 'x', 's1', OUT, labels='kind:news,tpl:split')          # the job is evergreen
+            PS.intent('c6', 'x', 's1', OUT, labels='kind:news,tpl:split', slot=SLOT)          # the job is evergreen
         keep = PS.evergreen_slot_problems
         PS.evergreen_slot_problems = lambda slot: ['two evergreen posts in a row']
         with self.assertRaises(SystemExit):
@@ -116,7 +117,7 @@ class Pre(unittest.TestCase):
     def test_line_needs_job_status_and_ids(self):
         PS.director('s1', 'PASS', OUT, job=self.write(self.good), by='d')
         for p in PS.PLATFORMS:
-            PS.intent('c7', p, 's1', OUT, labels=L)
+            PS.intent('c7', p, 's1', OUT, labels=L, slot=SLOT)
         with self.assertRaises(SystemExit):
             PS.line('c7', ['ig:abc123', 'x:def456', 'th:789abc'])                    # no job status yet
         for p in PS.PLATFORMS:

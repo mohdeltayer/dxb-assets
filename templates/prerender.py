@@ -237,6 +237,13 @@ def analyse(job, ocr=True, check=True, workers=None, verify=True):
         except Exception as e:                               # noqa: BLE001
             problems.append(f"fetch {item['file']}: {e}")
     T['fetch'] = round(time.time() - t0, 1)
+    import autoshots as AS                                   # shot times the job left to the server (gates-fix C)
+    AS.expand(job)
+    if job.get('shots_auto'):
+        try:
+            RJ.auto_shots(job)
+        except SystemExit as e:
+            problems.append(str(e))
     shots = RJ.shots(job, build=False)
     foot = [(i, f, s, d, fo) for i, (f, s, d, fo) in enumerate(shots) if s is not None and reel._footage(f)]
     files = sorted({f for _, f, *_ in foot})
@@ -342,10 +349,12 @@ def analyse(job, ocr=True, check=True, workers=None, verify=True):
 
     if check:
         t0 = time.time()
-        try:
-            RJ.check(job)
-        except Exception as e:                               # noqa: BLE001
-            problems.append(f'render_job check: {e}')
+        import autofix as AF                                 # every check runs, every refusal listed (item A); the
+        n0 = len(AF.LOG)                                     # server's own fixes applied first and reported (item B)
+        errs = []
+        RJ.check(job, collect=errs)
+        problems += [f'render_job check: {e}' for e in errs]
+        fixes = AF.LOG[n0:]
         T['check'] = round(time.time() - t0, 1)
 
     cmap = {'v': 1, 'made': datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%MZ'), 'sources': {}, 'suggest': suggest}
@@ -362,7 +371,8 @@ def analyse(job, ocr=True, check=True, workers=None, verify=True):
                 mg.append([a, b])
         cmap['sources'][f] = {'dur': meta[f]['dur'], 'scanned': mg, 'bad': keep}
     ok = not problems and not any(r['hard'] for r in report_shots)
-    return {'job': job.get('name'), 'ok': ok, 'secs': T, 'problems': problems, 'warnings': warnings, 'shots': report_shots, 'sources': meta,
+    fixes = locals().get('fixes') or []
+    return {'job': job.get('name'), 'ok': ok, 'autofixed': fixes, 'job_fixed': job if fixes else None, 'secs': T, 'problems': problems, 'warnings': warnings, 'shots': report_shots, 'sources': meta,
             'waived': {f: [list(x) for x in v] for f, v in waived.items() if v}, 'map': cmap}
 
 
@@ -388,6 +398,10 @@ def summary(rep):
             out.append(f"      warn ... and {len(r['soft']) - 4} more soft findings")
     for w in rep.get('warnings', []):
         out.append('  WARN ' + w)
+    for x in rep.get('autofixed') or []:
+        out.append(f"  FIXED {x['where']}: {x['rule']}: {x['what']}")
+    if rep.get('autofixed'):
+        out.append('  (the render applies these same fixes itself; nothing to edit for them)')
     for p in rep['problems']:
         out.append('  PROBLEM ' + p.replace('\n', '\n          '))
     for f, v in rep.get('waived', {}).items():

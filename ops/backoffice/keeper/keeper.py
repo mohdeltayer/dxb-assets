@@ -723,6 +723,17 @@ def last_published(status_rows, rows, publer_last=None, now=None):
     return best
 
 
+def logs_last(submissions, published, now):
+    """The latest post time in production's own logs (newsroom/published.jsonl by its X link, submissions.jsonl by an
+    intent's slot once its result is scheduled on a platform and the slot has passed). None when neither is given."""
+    if not (submissions or published):
+        return None
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import workorder as W
+    ts = [p['at'] for p in W.posts_from_logs(submissions, published) if p['at'] <= now]
+    return max(ts) if ts else None
+
+
 def digest_note(path, now):
     """The watch's branch head for the coverage alarm (adv-20261108-stories-tab addendum_0545): a gap is never blamed
     on the server's digest without the seq the branch actually held. path: watch/digest.json fetched from the
@@ -872,7 +883,11 @@ def cmd_tick(args):
         dline, dseq = digest_note(getattr(args, 'digest', None), now)
         if dline:
             status['watch_digest'] = {'line': dline, 'seq': dseq}
-        cline, cgap, cover_over = coverage(last_published(status['rows'], rows, plast, now), now, dline)
+        last = last_published(status['rows'], rows, plast, now)
+        llast = logs_last(getattr(args, 'submissions', None), getattr(args, 'published', None), now)
+        if llast and (last is None or llast > last):     # production's own logs (adv-20261117-gates-fix-not-refuse F)
+            last = llast
+        cline, cgap, cover_over = coverage(last, now, dline)
         status['coverage'] = cline
         status['coverage_gap_min'] = cgap
         status['six'].insert(0, cline)
@@ -1024,6 +1039,8 @@ def main(argv=None):
     t.add_argument('--releases', help='ops/build/releases (optional)')
     t.add_argument('--runs', help='newsroom/helper-runs.jsonl (optional)')
     t.add_argument('--server', help="server-summary.json from dxb-render-1's repository_dispatch (optional): its Publer read")
+    t.add_argument('--submissions', help='newsroom/submissions.jsonl (optional): slots of posts made through presubmit')
+    t.add_argument('--published', help='newsroom/published.jsonl (optional): published posts with their X links')
     t.add_argument('--digest', help='watch/digest.json from the watch-digest branch (optional): the coverage alarm names its seq')
     l = sub.add_parser('line')
     l.add_argument('--status')

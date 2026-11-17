@@ -384,6 +384,8 @@ if __name__ == '__main__':
         raise SystemExit(__doc__)
     if a[0] == 'fix':                         # textrules.py fix <job> <changes.json>: rewrites the job in place
         job = json.load(open(a[1], encoding='utf-8'))
+        import autoshots
+        autoshots.expand(job)                # "shots": "auto" (gates-fix C): lengths only, no footage
         new, ch = fix(job)
         if ch:
             json.dump(new, open(a[1], 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

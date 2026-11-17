@@ -1,0 +1,15 @@
+[
+ {
+  "where": "credit 1",
+  "rule": "credit_width",
+  "what": "set one line at 36 px (was 40 px, too wide for the safe zone)",
+  "before": {
+   "text": "المصدر: حساب اللعبة على X · بيور إكس بوكس (Pure Xbox)",
+   "size": 40
+  },
+  "after": {
+   "text": "المصدر: حساب اللعبة على X · بيور إكس بوكس (Pure Xbox)",
+   "size": 36
+  }
+ }
+]

@@ -36,7 +36,7 @@ on:
         required: false
         default: ''
       mode:
-        description: 'text: the text check alone (every error in one pass, 10 to 20 s, no footage); shots: text check and the clean stretches of every footage file (shots.json); full: text and footage checks'
+        description: 'text: the build gate and the text check, the server fixes applied and listed (every error in one pass, 10 to 20 s, no footage, no local Python needed); shots: text check and the clean stretches of every footage file (shots.json); full: text and footage checks'
         required: false
         default: 'full'
       wait:
@@ -176,11 +176,20 @@ jobs:
           rc=0
           # every text error in one pass, as JSON in the summary and the log (adv-20261110-one-render-per-reel A);
           # without the Dubai font it runs the font-free rules and says the drawn checks were not run
-          python templates/render_job.py text "$PRERENDER_JOB" --json "$RUNNER_TEMP/text.json" || { echo "TEXT CHECK FAILED (above)"; rc=1; }
+          # the server's own fixes first (adv-20261117-gates-fix-not-refuse B), on this run's copy of the job; the render
+          # applies the same ones, so they are listed as FIXED, never as refusals
+          export AUTOFIX_JSON="$RUNNER_TEMP/autofix.json" AUTOFIX_JOB="$PRERENDER_JOB"
+          python templates/render_job.py text "$PRERENDER_JOB" --fix --json "$RUNNER_TEMP/text.json" || { echo "TEXT CHECK FAILED (above)"; rc=1; }
           if [ -f "$RUNNER_TEMP/text.json" ]; then
             { echo "### Text check"; echo '```json'; cat "$RUNNER_TEMP/text.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           fi
-          if [ "$MODE" = "text" ]; then echo "mode text: footage not read"; exit $rc; fi
+          if [ "$MODE" = "text" ]; then
+            if [ -s "$AUTOFIX_JSON" ]; then
+              { echo "### Fixed by the server (the render makes the same fixes)"; echo '```json'; cat "$AUTOFIX_JSON"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+              echo "AUTOFIX_JSON: $(tr -d '\n' < "$AUTOFIX_JSON")"
+            fi
+            echo "mode text: build gate and text checked, footage not read (no local Python needed: adv-20261117 E)"; exit $rc
+          fi
           if [ "$MODE" = "shots" ]; then   # clean stretches of every footage file (adv-20261110-one-render-per-reel C)
             python templates/shotpick.py job "$PRERENDER_JOB" --out "$RUNNER_TEMP/shots.json" || rc=1
             if [ -f "$RUNNER_TEMP/shots.json" ]; then
@@ -189,6 +198,11 @@ jobs:
             exit $rc
           fi
           python templates/prerender.py "$PRERENDER_JOB" --ci || rc=1
+          if [ -s "$AUTOFIX_JSON" ]; then
+            { echo "### Fixed by the server (the render makes the same fixes)"; echo '```json'; cat "$AUTOFIX_JSON"; echo; echo '```'
+              echo "<details><summary>the job after the fixes</summary>"; echo; echo '```json'; cat "$PRERENDER_JOB"; echo; echo '```'; echo "</details>"; } >> "$GITHUB_STEP_SUMMARY"
+            echo "AUTOFIX_JSON: $(tr -d '\n' < "$AUTOFIX_JSON")"
+          fi
           exit $rc
 
       - name: Clean up (fonts, footage, job copy)
@@ -272,11 +286,20 @@ jobs:
           rc=0
           # every text error in one pass, as JSON in the summary and the log (adv-20261110-one-render-per-reel A);
           # without the Dubai font it runs the font-free rules and says the drawn checks were not run
-          python templates/render_job.py text "$PRERENDER_JOB" --json "$RUNNER_TEMP/text.json" || { echo "TEXT CHECK FAILED (above)"; rc=1; }
+          # the server's own fixes first (adv-20261117-gates-fix-not-refuse B), on this run's copy of the job; the render
+          # applies the same ones, so they are listed as FIXED, never as refusals
+          export AUTOFIX_JSON="$RUNNER_TEMP/autofix.json" AUTOFIX_JOB="$PRERENDER_JOB"
+          python templates/render_job.py text "$PRERENDER_JOB" --fix --json "$RUNNER_TEMP/text.json" || { echo "TEXT CHECK FAILED (above)"; rc=1; }
           if [ -f "$RUNNER_TEMP/text.json" ]; then
             { echo "### Text check"; echo '```json'; cat "$RUNNER_TEMP/text.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           fi
-          if [ "$MODE" = "text" ]; then echo "mode text: footage not read"; exit $rc; fi
+          if [ "$MODE" = "text" ]; then
+            if [ -s "$AUTOFIX_JSON" ]; then
+              { echo "### Fixed by the server (the render makes the same fixes)"; echo '```json'; cat "$AUTOFIX_JSON"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+              echo "AUTOFIX_JSON: $(tr -d '\n' < "$AUTOFIX_JSON")"
+            fi
+            echo "mode text: build gate and text checked, footage not read (no local Python needed: adv-20261117 E)"; exit $rc
+          fi
           if [ "$MODE" = "shots" ]; then   # clean stretches of every footage file (adv-20261110-one-render-per-reel C)
             python templates/shotpick.py job "$PRERENDER_JOB" --out "$RUNNER_TEMP/shots.json" || rc=1
             if [ -f "$RUNNER_TEMP/shots.json" ]; then
@@ -285,6 +308,11 @@ jobs:
             exit $rc
           fi
           python templates/prerender.py "$PRERENDER_JOB" --ci || rc=1
+          if [ -s "$AUTOFIX_JSON" ]; then
+            { echo "### Fixed by the server (the render makes the same fixes)"; echo '```json'; cat "$AUTOFIX_JSON"; echo; echo '```'
+              echo "<details><summary>the job after the fixes</summary>"; echo; echo '```json'; cat "$PRERENDER_JOB"; echo; echo '```'; echo "</details>"; } >> "$GITHUB_STEP_SUMMARY"
+            echo "AUTOFIX_JSON: $(tr -d '\n' < "$AUTOFIX_JSON")"
+          fi
           exit $rc
 
       - name: Clean up

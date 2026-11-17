@@ -114,15 +114,13 @@ jobs:
           rm -rf "$repo"
           for w in Light Regular Medium Bold; do test -f "$DUBAI_FONTS/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing from dubai.zip"; exit 1; }; done
 
-      - name: Text check (every error in one pass; mechanical faults fixed once by the server, item H)
+      - name: Text check (every error in one pass; the server fixes what is mechanical first, items H and B)
         run: |
           set +e
-          python templates/render_job.py text "$JOB" > "$RUNNER_TEMP/text.log" 2>&1; rc=$?; cat "$RUNNER_TEMP/text.log"
-          if [ $rc -ne 0 ] && python templates/textrules.py fix "$JOB" "$RUNNER_TEMP/autofix.json"; then
-            echo "the server fixed mechanical text faults (above); checking again"
-            python templates/render_job.py text "$JOB" > "$RUNNER_TEMP/text2.log" 2>&1; rc=$?; cat "$RUNNER_TEMP/text2.log"
-            cat "$RUNNER_TEMP/text2.log" >> "$RUNNER_TEMP/text.log"
-          fi
+          # glued prefixes, signs, a line under the headline, a credit too wide: fixed in the job file, listed in
+          # autofix.json (qc.json `autofixed`); what is left is refused in one list (adv-20261117-gates-fix-not-refuse)
+          AUTOFIX_JSON="$RUNNER_TEMP/autofix.json" python templates/render_job.py text "$JOB" --fix > "$RUNNER_TEMP/text.log" 2>&1; rc=$?
+          cat "$RUNNER_TEMP/text.log"
           exit $rc
 
       - name: HyperFrames (only for a job with an insert, a frame or kit moments)
@@ -176,7 +174,11 @@ jobs:
           python templates/jobsha.py check "$(basename "$JOB" .json)" "$JOB_SHA"
           python templates/qc.py rerender "$JOB"     # no third render (adv-20261115-one-render-server-checks item E)
           set -o pipefail
+          # shot fixes (scene cut, safe length, subject cut, picture start, letterbox) are made on the server's copy and
+          # logged; the fixed job replaces the file, so a refusal or a pass both carry it (item B)
+          export AUTOFIX_JSON="$RUNNER_TEMP/autofix.json" AUTOFIX_JOB="$RUNNER_TEMP/job-fixed.json"
           python templates/render_job.py run "$JOB" 2>&1 | tee "$RUNNER_TEMP/render.log"
+          [ -f "$AUTOFIX_JOB" ] && cp "$AUTOFIX_JOB" "$JOB"
           echo "RENDER_SECS=$(( $(date +%s) - start ))" >> "$GITHUB_ENV"
           # keep this run's render-times entry; the commit step rebuilds on the latest main
           python -c "import json, os; e = json.load(open('templates/assets/render-times.json'))[-1]; e['runner'] = 'selfhosted'; e['cores'] = $(nproc); e['job_secs'] = None; q = os.path.join('$RUNNER_TEMP', 'queue-wait'); e['queue_wait_secs'] = int(open(q).read()) if os.path.exists(q) else None; json.dump(e, open('$RUNNER_TEMP/render-time.json', 'w'))"
@@ -193,6 +195,8 @@ jobs:
           export DISPATCHES=$(python templates/jobsha.py count "$(basename "$JOB" .json)")
           python templates/qc.py write "$JOB" "$out" "$base-qc.json" --autofix "$RUNNER_TEMP/autofix.json" --log "$RUNNER_TEMP/render.log" \
             && files="$files $base-qc.json" || echo "qc file not written"
+          # the job as the server fixed and rendered it, kept with the verdict (the job file itself leaves jobs/live/)
+          [ -s "$RUNNER_TEMP/autofix.json" ] && python templates/autofix.py keep "$JOB" "$base-qc.json" || true
           # card-led templates: three 360 px frames beside qc.json, read by the builder before scheduling (item 6)
           for f in "$base"-look-[123].jpg; do [ -f "$f" ] && files="$files $f"; done
           # a measured problem fails the Reel (adv-20261112-qc-notes-become-failures): committed as evidence, never uploaded
@@ -270,6 +274,23 @@ jobs:
           cat "$RUNNER_TEMP/text.log" "$RUNNER_TEMP/render.log" > "$RUNNER_TEMP/all.log" 2>/dev/null || true
           python templates/qc.py fail "$JOB" "$RUNNER_TEMP/qc.json" --log "$RUNNER_TEMP/all.log" || true
           [ -f "$RUNNER_TEMP/qc.json" ] && { echo "### QC: fail"; echo '```json'; cat "$RUNNER_TEMP/qc.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY" || true
+          # the fixes the server made before it refused go back to main, so the next dispatch starts from them (item B)
+          if [ -s "$RUNNER_TEMP/autofix.json" ]; then
+            { echo "### Fixed by the server (written back to $JOB)"; echo '```json'; cat "$RUNNER_TEMP/autofix.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+            [ -f "$RUNNER_TEMP/job-fixed.json" ] && cp "$RUNNER_TEMP/job-fixed.json" "$JOB"
+            cp "$JOB" "$RUNNER_TEMP/job-writeback.json"
+            git config user.name "dxb-render"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            for i in 1 2 3; do
+              git fetch -q --depth=1 --filter=blob:none origin "$GITHUB_REF_NAME" && git reset -q --hard "origin/$GITHUB_REF_NAME"
+              if [ "$(git hash-object "$JOB" 2>/dev/null)" != "$JOB_SHA" ]; then echo "the job changed on main since this run started: fixes not written back"; break; fi
+              cp "$RUNNER_TEMP/job-writeback.json" "$JOB"
+              git add --sparse -f "$JOB"
+              git commit -q -m "Server fixes for $(basename "$JOB" .json) (autofix, render refused for what is left)" || break
+              git push -q origin "HEAD:$GITHUB_REF_NAME" && { echo "fixed job written back to $JOB"; break; }
+              sleep $(( i * 5 ))
+            done
+          fi
 
       - name: Clean up
         if: always()

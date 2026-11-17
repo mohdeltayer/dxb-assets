@@ -1,0 +1,83 @@
+[
+ {
+  "where": "shot 2",
+  "rule": "subject_cut",
+  "what": "focus [[0.0, 0.5]] to 0.76: the subject stays inside the window",
+  "before": [
+   "xbox-white-friday-sale-november-19-forza.mp4",
+   30,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  "after": [
+   "xbox-white-friday-sale-november-19-forza.mp4",
+   30.0,
+   3.0,
+   0.76
+  ]
+ },
+ {
+  "where": "shot 3",
+  "rule": "subject_drift",
+  "what": "trimmed to 2.80 s, its longest safe length before the subject leaves the 9:16 window",
+  "before": [
+   "xbox-white-friday-sale-november-19-forza.mp4",
+   33,
+   3.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  "after": [
+   "xbox-white-friday-sale-november-19-forza.mp4",
+   33.0,
+   2.8,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ },
+ {
+  "where": "shot 3",
+  "rule": "fill",
+  "what": "0.20 s shorter in all: no neighbouring shot stays clean with the time"
+ },
+ {
+  "where": "shot 5",
+  "rule": "subject_drift",
+  "what": "moved from 39.80 to 41.80 s, the nearest stretch of the same source with the subject inside",
+  "before": [
+   "xbox-white-friday-sale-november-19-gears.mp4",
+   39.8,
+   2.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ],
+  "after": [
+   "xbox-white-friday-sale-november-19-gears.mp4",
+   41.8,
+   2.0,
+   [
+    [
+     0.0,
+     0.5
+    ]
+   ]
+  ]
+ }
+]

@@ -11,7 +11,7 @@ changes the id and the director check must be run again.
                          # a send-back (adv-20261115-one-render-server-checks item E): with the server qc at pass, one
                          # per story, for a hard reason only: wrong_subject, graphic, unreadable_text, factual_error;
                          # written to the Reel's qc.json under director_sendbacks and to the story file
-    python3 templates/presubmit.py intent <commitment> <platform> <story> <out.mp4> --labels kind:news,tpl:trailer [--slot ISO]
+    python3 templates/presubmit.py intent <commitment> <platform> <story> <out.mp4> --labels kind:news,tpl:trailer --slot ISO
                                                                      # before submit_publer_posts
     python3 templates/presubmit.py line <commitment> --ids ig:<last6> x:<last6> th:<last6>   # the board's scheduled line
     python3 templates/presubmit.py result <commitment> <platform> scheduled|failed --job-status complete|failed
@@ -270,6 +270,11 @@ def intent(commitment, platform, sid, out, labels=None, slot=None):
         if ep:
             raise SystemExit('presubmit refused: evergreen at this slot: ' + '; '.join(ep) +
                              '. The slot stays empty unless news fills it (CLAUDE.md, Evergreen spacing, 9 Nov 2026).')
+    sys.path.insert(0, str(REPO / 'ops' / 'backoffice' / 'keeper'))
+    import workorder as W
+    if not (slot and W.t(slot)):                 # the keeper's coverage reads it (adv-20261117-gates-fix-not-refuse F)
+        raise SystemExit('presubmit: --slot <ISO time of the post, e.g. 2026-11-17T16:30:00Z> is needed on every '
+                         'intent; the keeper counts coverage from it when the server has no Publer read')
     b = blob(out)
     if d.get('verdict') != 'PASS' or d.get('blob') != b:
         raise SystemExit(f'presubmit refused: no director PASS for this file ({out}, {b[:10]}); '
@@ -281,8 +286,11 @@ def intent(commitment, platform, sid, out, labels=None, slot=None):
     if prev and prev.get('state') != 'failed':
         raise SystemExit(f'presubmit refused: {commitment} on {platform} already has a submit ({prev.get("state")} '
                          f'at {prev.get("at")}). Look the post up in Publer first; never submit it twice.')
-    append(LOG, {'commitment': commitment, 'platform': platform, 'story': sid, 'file_blob': b,
-                 'state': 'intent', 'at': now(), 'labels': labels})
+    row = {'commitment': commitment, 'platform': platform, 'story': sid, 'file_blob': b,
+           'state': 'intent', 'at': now(), 'labels': labels}
+    if slot:                                     # the keeper reads the slot when the server has no Publer read
+        row['slot'] = slot                       # (adv-20261117-gates-fix-not-refuse F)
+    append(LOG, row)
     print(f'intent recorded: {commitment} {platform}; submit now, then presubmit.py result')
 
 
