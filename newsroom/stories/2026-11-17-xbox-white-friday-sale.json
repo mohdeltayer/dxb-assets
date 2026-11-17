@@ -1,0 +1,60 @@
+{
+ "id": "2026-11-17-xbox-white-friday-sale",
+ "title": "Xbox White Friday sale: up to 80% off, 19 Nov to 2 Dec (US)",
+ "game": "Xbox",
+ "account": "Digital Lounge",
+ "status": "building (p2 01:10Z)",
+ "claimed_by": "production-2 01:10Z",
+ "slot": "first free slot after 04:05 Dubai Tue 17 Nov",
+ "subject_person": null,
+ "ledger_find": {
+  "at": "2026-11-17T01:09:46Z",
+  "words": [
+   "xbox",
+   "black",
+   "friday",
+   "sale"
+  ],
+  "hits": []
+ },
+ "companies": [
+  "Microsoft",
+  "Xbox"
+ ],
+ "genre": [
+  "industry/hardware"
+ ],
+ "category": "price",
+ "priority": "high",
+ "lane": "Digital Lounge only",
+ "beat": "price",
+ "platform": [
+  "Xbox",
+  "PC"
+ ],
+ "sensitive": "none",
+ "chip": "السعر",
+ "template": "split",
+ "recipe": "price, sale",
+ "source_type": "primary",
+ "sources": [
+  {
+   "url": "https://news.xbox.com/en-us/2026/11/16/xbox-black-friday-sale-2026/",
+   "type": "primary",
+   "read_at": "2026-11-17T01:12Z",
+   "note": "Xbox Wire, Joe Skrebels, 16 Nov 2026, read in full by WebFetch: deals 19 Nov (9 PM PST) to 2 Dec; more offers from 23 Nov; up to 80% off select Xbox and PC games, more than 2,000 games on sale; Gears of War: E-Day Premium Edition 30%, Forza Horizon 6 Premium Edition 25%, NBA 2K27 55%, Madden NFL 27 50%, Crimson Desert Enhanced 20%, Halo: Campaign Evolved Premium 20%, Final Fantasy VII Remake Intergrade 80%, Grounded 2 Founder's Edition 20%, The Blood of Dawnwalker 20%; Design Lab up to 15% off controllers; discounts US only, offers vary by market and retailer; no hardware prices."
+  }
+ ],
+ "first_report": "2026-11-16 23:57Z Xbox Wire (watch digest breaking seq 553); about 5 h old at build; not in earlier digests; Arabic outlets not checked",
+ "footage": "Official Steam trailers by app id: Forza Horizon 6 Launch Trailer (2483190), Gears of War: E-Day Launch Trailer (3010850), Crimson Desert Enhanced announcement trailer (3321460), Grounded 2 Beat the Heat (2661300); Steam page of Final Fantasy VII Remake Intergrade has only an ESRB rating clip, so no footage of it; the trailers' own music",
+ "sound": "trailer own sound, per shot (our bed if the audio split refuses)",
+ "angle": {
+  "hook": "Xbox's biggest sale of the year opens 19 Nov with up to 80% off, Final Fantasy VII Remake Intergrade at 80%",
+  "why_now": "Xbox Wire announced it 16 Nov; deals start 19 Nov and run to 2 Dec",
+  "what_it_means_here": "Xbox says the discounts are US only and offers vary by market and retailer, so Gulf prices are not announced",
+  "payoff": "Gears of War: E-Day 30% and Forza Horizon 6 25% on Premium Editions"
+ },
+ "gate": "gate 01:14Z: Xbox Wire page read in full, no update note; ledger find xbox black friday sale: 0 hits; Nintendo Black Friday story of 14 Nov is a different company",
+ "texts": {},
+ "arabic_notes": "Black Friday written as الجمعة البيضاء (White Friday) per glossary; Xbox as إكس بوكس"
+}
