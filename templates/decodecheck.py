@@ -72,6 +72,7 @@ def _straight(fr):
     return out
 
 
+FLAT = 2.0    # a frame whose straight-edge density stays under this everywhere is a fade or a flat ground
 LOCAL = 1.5   # seconds either side: the baseline is the footage around the frame, not the whole clip
 
 
@@ -112,6 +113,9 @@ def smear_times(path, start=None, dur=None, cuts=None):
             if shi - slo > 6:
                 lo, hi = slo, shi
         ring = np.concatenate([M[lo:max(lo, i - 2)], M[min(hi, i + 3):hi]]) if hi - lo > 6 else M[lo:hi]
+        busy = ring[ring.reshape(len(ring), -1).max(axis=1) >= FLAT] if len(ring) else ring
+        if len(busy) >= 4:                             # fades to the ground and flat frames are not footage: they
+            ring = busy                                # pulled the baseline down before the end card (Xbox, 17 Nov)
         base = np.median(ring, axis=0)
         hits[i] = bool(np.any(M[i] > np.maximum(FLOOR, RATIO * base)))
     found, i, t0 = [], 0, float(start or 0)
