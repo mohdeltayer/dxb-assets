@@ -50,6 +50,8 @@ jobs:
           sparse-checkout: |
             ops/backoffice/keeper
             newsroom/commitments.json
+            newsroom/submissions.jsonl
+            newsroom/published.jsonl
             newsroom/helper-runs.jsonl
             newsroom/evergreen.md
             ops/build/releases
@@ -162,6 +164,7 @@ jobs:
           [ -s "$RUNNER_TEMP/pub/keeper/server-in.json" ] && SERVER_ARG="--server $RUNNER_TEMP/pub/keeper/server-in.json"
           python3 ops/backoffice/keeper/keeper.py tick --commitments newsroom/commitments.json \
             --out "$RUNNER_TEMP/pub/keeper" --releases ops/build/releases --runs newsroom/helper-runs.jsonl \
+            --submissions newsroom/submissions.jsonl --published newsroom/published.jsonl \
             ${BOARD_ARG:-} ${DIGEST_ARG:-} $SERVER_ARG | tee -a "$GITHUB_STEP_SUMMARY"
           # The work order (hourly, from :25 Dubai) and the hop alarms (every pass); never stops the push below.
           if [ -n "${BOARD_ARG:-}" ]; then
@@ -169,6 +172,7 @@ jobs:
               --orders "$RUNNER_TEMP/orders" --digests "$RUNNER_TEMP/digests" \
               --server "$RUNNER_TEMP/pub/keeper/server-in.json" --commitments newsroom/commitments.json \
               --ledger templates/assets/format-ledger.json --times templates/assets/render-times.json \
+              --submissions newsroom/submissions.jsonl --published newsroom/published.jsonl \
               --out "$RUNNER_TEMP/pub/keeper" \
               --state "$RUNNER_TEMP/pub/keeper/state.json" | tee -a "$GITHUB_STEP_SUMMARY"
           else

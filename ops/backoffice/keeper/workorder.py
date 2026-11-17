@@ -196,6 +196,73 @@ def posts_from_commitments(rows, ledger):
     return sorted(out, key=lambda p: p['at'])
 
 
+X_EPOCH_MS = 1288834974657
+
+
+def x_time(link):
+    """The post time carried by an X status link (the id is a snowflake: milliseconds since X's epoch << 22)."""
+    m = re.search(r'/status/(\d{15,})', str(link or ''))
+    if not m:
+        return None
+    return dt.datetime.fromtimestamp(((int(m.group(1)) >> 22) + X_EPOCH_MS) / 1000, UTC)
+
+
+def _jsonl(path):
+    out = []
+    try:
+        with open(path, encoding='utf-8') as f:
+            for ln in f:
+                ln = ln.strip()
+                if ln:
+                    try:
+                        out.append(json.loads(ln))
+                    except ValueError:
+                        pass
+    except OSError:
+        pass
+    return out
+
+
+def posts_from_logs(submissions=None, published=None):
+    """Posts from production's own logs when the server has no Publer read (adv-20261117-gates-fix-not-refuse F):
+    newsroom/published.jsonl (time from the X link's id) and newsroom/submissions.jsonl (an intent's slot with a
+    scheduled or published result). One entry per Reel, as posts_from_commitments gives."""
+    out, seen = [], set()
+    for r in _jsonl(published) if published else []:
+        at = next((x_time(l) for l in r.get('links') or [] if x_time(l)), None)
+        if at:
+            seen.add(r.get('commitment'))
+            out.append({'at': at, 'state': 'published', 'labels': {'kind:news'} | ({'tpl:' + r['template']} if r.get('template') else set()),
+                        'networks': {'instagram': 'published', 'x': 'published', 'threads': 'published'}, 'commitment': r.get('commitment')})
+    by = {}
+    for r in _jsonl(submissions) if submissions else []:
+        by.setdefault(r.get('commitment'), []).append(r)
+    for c, rs in by.items():
+        if c in seen:
+            continue
+        slot = next((t(r.get('slot')) for r in rs if r.get('slot') and t(r.get('slot'))), None)
+        states = {r.get('platform'): r.get('state') for r in rs}
+        if not slot or not any(v in ('scheduled', 'published') for v in states.values()):
+            continue
+        labels = set(l.strip() for r in rs for l in str(r.get('labels') or '').split(',') if l.strip())
+        out.append({'at': slot, 'state': 'published' if 'published' in states.values() else 'scheduled',
+                    'labels': labels or {'kind:news'}, 'networks': states, 'commitment': c})
+    return sorted(out, key=lambda p: p['at'])
+
+
+def merge_posts(*lists):
+    """One entry per Reel across sources: posts within 3 minutes of each other are the same Reel."""
+    out = []
+    for p in sorted((p for ls in lists for p in ls or []), key=lambda p: p['at']):
+        if out and abs((p['at'] - out[-1]['at']).total_seconds()) <= 180:
+            if p.get('state') == 'published':
+                out[-1]['state'] = 'published'
+            out[-1]['labels'] = set(out[-1].get('labels') or set()) | set(p.get('labels') or set())
+            continue
+        out.append(dict(p))
+    return out
+
+
 def _slot_text(s):
     """'Mon 09 Nov 20:30 Dubai (16:30Z)' with no year: the UTC part, this year."""
     s = str(s or '')
@@ -576,7 +643,8 @@ def build(board, now, posts, orders=None, mirror=None, digest=None, server=None,
     return {
         'generated_at': iso(now), 'generated_dubai': dub(now),
         'source': 'keeper.yml workorder (adv-20261109-coordination-in-code)',
-        'posts_from': 'publer via the server' if (server or {}).get('posts') is not None and posts and server else 'commitments and format ledger',
+        'posts_from': 'publer via the server' if (server or {}).get('posts') is not None and posts and server else
+                      'commitments, format ledger, submissions and published logs (no server Publer read)',
         'alarms': alarms,
         'orders': orders_open(orders, board, now),
         'handoffs': hand,
@@ -730,7 +798,8 @@ def run(args):
     ledger = load(args.ledger, [])
     sp = posts_from_server(server) if server and server.get('posts') is not None and t(server.get('publer_read_at')) \
         and now - t(server['publer_read_at']) <= dt.timedelta(hours=2) else []
-    posts = sp or posts_from_commitments(rows, ledger)
+    logs = posts_from_logs(getattr(args, 'submissions', None), getattr(args, 'published', None))
+    posts = sp or merge_posts(posts_from_commitments(rows, ledger), logs)
     history = None
     if args.digests and os.path.isdir(args.digests):
         import desk_audit as DA
@@ -764,7 +833,8 @@ def run(args):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split('\n')[0])
-    for a in ('board', 'orders', 'mirror', 'digest', 'digests', 'server', 'commitments', 'ledger', 'now', 'state', 'times'):
+    for a in ('board', 'orders', 'mirror', 'digest', 'digests', 'server', 'commitments', 'ledger', 'now', 'state', 'times',
+              'submissions', 'published'):
         ap.add_argument('--' + a)
     ap.add_argument('--out', default='.')
     ap.add_argument('--force', action='store_true')

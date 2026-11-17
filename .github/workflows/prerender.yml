@@ -36,7 +36,7 @@ on:
         required: false
         default: ''
       mode:
-        description: 'text: the text check alone (every error in one pass, 10 to 20 s, no footage); shots: text check and the clean stretches of every footage file (shots.json); full: text and footage checks'
+        description: 'text: the build gate and the text check, the server fixes applied and listed (every error in one pass, 10 to 20 s, no footage, no local Python needed); shots: text check and the clean stretches of every footage file (shots.json); full: text and footage checks'
         required: false
         default: 'full'
       wait:
@@ -183,7 +183,13 @@ jobs:
           if [ -f "$RUNNER_TEMP/text.json" ]; then
             { echo "### Text check"; echo '```json'; cat "$RUNNER_TEMP/text.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           fi
-          if [ "$MODE" = "text" ]; then echo "mode text: footage not read"; exit $rc; fi
+          if [ "$MODE" = "text" ]; then
+            if [ -s "$AUTOFIX_JSON" ]; then
+              { echo "### Fixed by the server (the render makes the same fixes)"; echo '```json'; cat "$AUTOFIX_JSON"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+              echo "AUTOFIX_JSON: $(tr -d '\n' < "$AUTOFIX_JSON")"
+            fi
+            echo "mode text: build gate and text checked, footage not read (no local Python needed: adv-20261117 E)"; exit $rc
+          fi
           if [ "$MODE" = "shots" ]; then   # clean stretches of every footage file (adv-20261110-one-render-per-reel C)
             python templates/shotpick.py job "$PRERENDER_JOB" --out "$RUNNER_TEMP/shots.json" || rc=1
             if [ -f "$RUNNER_TEMP/shots.json" ]; then
@@ -287,7 +293,13 @@ jobs:
           if [ -f "$RUNNER_TEMP/text.json" ]; then
             { echo "### Text check"; echo '```json'; cat "$RUNNER_TEMP/text.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           fi
-          if [ "$MODE" = "text" ]; then echo "mode text: footage not read"; exit $rc; fi
+          if [ "$MODE" = "text" ]; then
+            if [ -s "$AUTOFIX_JSON" ]; then
+              { echo "### Fixed by the server (the render makes the same fixes)"; echo '```json'; cat "$AUTOFIX_JSON"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+              echo "AUTOFIX_JSON: $(tr -d '\n' < "$AUTOFIX_JSON")"
+            fi
+            echo "mode text: build gate and text checked, footage not read (no local Python needed: adv-20261117 E)"; exit $rc
+          fi
           if [ "$MODE" = "shots" ]; then   # clean stretches of every footage file (adv-20261110-one-render-per-reel C)
             python templates/shotpick.py job "$PRERENDER_JOB" --out "$RUNNER_TEMP/shots.json" || rc=1
             if [ -f "$RUNNER_TEMP/shots.json" ]; then
