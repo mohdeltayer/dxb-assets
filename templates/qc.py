@@ -157,6 +157,18 @@ def person_shown(job):
     return 'n/a'
 
 
+def shot_read(log):
+    """adv-20261117-server-speed-for-p2 A: the automatic shot read's seconds (whole and per file, with its stages),
+    from the render log's "render_job: shot read:" line; None when the job had no automatic shots."""
+    for ln in reversed(_log_lines(log) if log else []):
+        if ln.strip().startswith('render_job: shot read: '):
+            try:
+                return json.loads(ln.strip()[len('render_job: shot read: '):])
+            except ValueError:
+                return None
+    return None
+
+
 def write(job, out, qc_path, autofix=None, log=None):
     import textrules as TR
     notes = [ln.strip() for ln in _log_lines(log) if NOTE.match(ln.strip())] if log else []
@@ -171,7 +183,8 @@ def write(job, out, qc_path, autofix=None, log=None):
          'autofixed': autofix or [], 'job_sha': os.environ.get('JOB_SHA'),
          'dispatches': int(os.environ['DISPATCHES']) if os.environ.get('DISPATCHES', '').isdigit() else None,
          'source_summary': t.get('source_summary'), 'quality': t.get('quality'), 'final_enc': t.get('final_enc'),
-         'look_frames': look_frames(job, out), 'person_shown': person_shown(job), 'sound': sound_of(job, log)}
+         'look_frames': look_frames(job, out), 'person_shown': person_shown(job), 'sound': sound_of(job, log),
+         'shot_read': shot_read(log)}
     prev = previous(qc_path)
     if prev.get('director_sendbacks'):               # item E: the send-backs stay with the Reel across renders
         d['director_sendbacks'] = prev['director_sendbacks']
@@ -263,7 +276,7 @@ def fail(job, qc_path, log=None):
         elif ERR.search(s) and len(found) < 80 and not s.startswith('TEXTCHECK_JSON'):
             found.append({'check': 'render', 'detail': s[:400]})
     d = {'name': job.get('name'), 'verdict': 'fail', 'at': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
-         'findings': found, 'job_sha': os.environ.get('JOB_SHA')}
+         'findings': found, 'job_sha': os.environ.get('JOB_SHA'), 'shot_read': shot_read(log)}
     json.dump(d, open(qc_path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     return d
 

@@ -1,0 +1,135 @@
+{
+ "name": "speed-rpg-maker-auto",
+ "story": "2026-11-17-rpg-maker-u2u-release-date",
+ "kind_news": "release-date",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/test/speed-rpg-maker-auto-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "rpg-maker-u2u-trailer.mp4",
+   "steam": 4856440,
+   "trailer": "RPG MAKER U2U Trailer",
+   "start": 0,
+   "seconds": 90
+  }
+ ],
+ "shots": "auto",
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "أداة RPG Maker U2U تضيف عمقًا\nوارتفاعات إلى الخرائط ثنائية الأبعاد",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "بنظام P2D تُصنع منحدرات\nومبانٍ متعددة الطوابق وجسور",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   5,
+   [
+    [
+     "والنسخة التجريبية لمحرر الخرائط\nمتاحة حتى يوم الإصدار",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   6,
+   6,
+   [
+    [
+     "وخرائطها تُستخدم\nفي النسخة الكاملة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "strip": [
+  [
+   "المنصة",
+   "الحاسب عبر Steam"
+  ],
+  [
+   "الإصدار",
+   "28 يناير 2027"
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: غوتشا غوتشا غيمز (Gotcha Gotcha Games)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "تصدر RPG Maker U2U\nفي 28 يناير",
+ "label": "رسمي",
+ "source": "غوتشا غوتشا غيمز (Gotcha Gotcha Games)",
+ "date": "17 Nov 2026",
+ "theme": "playful",
+ "style": "glow",
+ "template": "split",
+ "skin": "house",
+ "track": "bed",
+ "sound": null,
+ "cut": true,
+ "genre": [
+  "tools",
+  "rpg"
+ ],
+ "bed_reason": "trailer music is not verified as a music-only stretch; our bed under every line",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam announcement read in full 17 Nov 06:30Z",
+  "SOURCE: not already posted": "yes: ledger find rpg maker, no hits",
+  "SOURCE: age": "yes: announced 16 Nov late, first Gematsu 03:16Z 17 Nov",
+  "ANGLE before lines": "yes: story file",
+  "STORY TYPE out now": "yes: date, platform in the strip, no price listed on Steam yet",
+  "STORY: spoken paragraph, subject before pronoun": "yes",
+  "STORY: release verbs": "yes: تصدر with a date",
+  "STORY: names match names-ar.md": "yes: new name غوتشا غوتشا غيمز flagged",
+  "POST: Arabic passes": "yes",
+  "SOUND: footage sound or bed with reason": "yes: our bed, bed_reason",
+  "SOUND: no speech under Arabic lines": "yes",
+  "PICTURE: footage first": "yes: official Steam trailer app 4856440",
+  "PICTURE: not the same as last 5 Reels": "yes: picture: RPG Maker U2U trailer, new",
+  "PICTURE: crop per beat": "yes: auto shots, centre focus, judged on the render",
+  "PICTURE: credit on every clip": "yes",
+  "PICTURE: headline not over a face": "yes",
+  "CHECKS: decision log": "yes"
+ },
+ "decision_log": [
+  {
+   "beat": "all",
+   "shot": "auto from the Steam trailer's clean stretches",
+   "alternatives": "IGN video none found",
+   "crop": "centre, autofix keeps subjects in",
+   "music": "bed"
+  }
+ ],
+ "note": "RPG Maker U2U date announcement 17 Nov, Steam trailer app 4856440 (1920x1080), shots picked by the server.",
+ "spoken": "تصدر أداة صنع الألعاب RPG Maker U2U على Steam في 28 يناير 2027. أداة تضيف عمقًا وارتفاعات إلى الخرائط ثنائية الأبعاد، بنظام P2D تُصنع منحدرات ومبانٍ متعددة الطوابق وجسور. والنسخة التجريبية لمحرر الخرائط متاحة حتى يوم الإصدار، وخرائطها تُستخدم في النسخة الكاملة."
+}

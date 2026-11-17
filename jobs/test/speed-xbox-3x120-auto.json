@@ -1,0 +1,171 @@
+{
+ "name": "speed-xbox-3x120-auto",
+ "story": "2026-11-17-xbox-white-friday-sale",
+ "kind_news": "price",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/test/speed-xbox-3x120-auto-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "xbox-white-friday-sale-november-19-grounded2.mp4",
+   "steam": 2661300,
+   "trailer": "Grounded 2: Beat the Heat Trailer",
+   "start": 0,
+   "seconds": 120
+  },
+  {
+   "file": "xbox-white-friday-sale-november-19-forza.mp4",
+   "steam": 2483190,
+   "trailer": "Forza Horizon 6 Launch Trailer",
+   "start": 0,
+   "seconds": 120
+  },
+  {
+   "file": "xbox-white-friday-sale-november-19-gears.mp4",
+   "steam": 3010850,
+   "trailer": "Launch Trailer",
+   "start": 0,
+   "seconds": 120
+  }
+ ],
+ "shots": [
+  [
+   "xbox-white-friday-sale-november-19-grounded2.mp4",
+   "auto",
+   2.8,
+   null
+  ],
+  [
+   "xbox-white-friday-sale-november-19-grounded2.mp4",
+   "auto",
+   2.8,
+   null
+  ],
+  [
+   "xbox-white-friday-sale-november-19-forza.mp4",
+   "auto",
+   3.0,
+   null
+  ],
+  [
+   "xbox-white-friday-sale-november-19-forza.mp4",
+   "auto",
+   3.0,
+   null
+  ],
+  [
+   "xbox-white-friday-sale-november-19-gears.mp4",
+   "auto",
+   2.6,
+   null
+  ],
+  [
+   "xbox-white-friday-sale-november-19-gears.mp4",
+   "auto",
+   2.0,
+   null
+  ],
+  [
+   "xbox-white-friday-sale-november-19-gears.mp4",
+   "auto",
+   2.2,
+   null
+  ]
+ ],
+ "spoken": "أعلنت إكس بوكس (Xbox) عن عروض الجمعة البيضاء في أمريكا. يبلغ الخصم 30 بالمئة على Gears of War: E-Day وبنسبة 25 بالمئة على Forza Horizon 6.",
+ "lines": [
+  [
+   2,
+   3,
+   [
+    [
+     "أعلنت إكس بوكس (Xbox)\nعروض الجمعة البيضاء في أمريكا",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   6,
+   [
+    [
+     "يبلغ الخصم 30 بالمئة على Gears of War: E-Day\nوبنسبة 25 بالمئة على Forza Horizon 6",
+     {
+      "size": 38
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: إكس بوكس واير (Xbox Wire)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "headline": "خصم يصل إلى 80 بالمئة\nفي عروض إكس بوكس",
+ "label": "السعر",
+ "source": "إكس بوكس واير (Xbox Wire)",
+ "date": "16 Nov 2026",
+ "theme": "emerald",
+ "style": null,
+ "template": "split",
+ "skin": "house",
+ "cut": true,
+ "track": [
+  "xbox-white-friday-sale-november-19-grounded2.mp4",
+  20.82
+ ],
+ "strip": [
+  [
+   "أعلى خصم",
+   "80 بالمئة"
+  ],
+  [
+   "الفترة",
+   "19 نوفمبر إلى 2 ديسمبر"
+  ],
+  [
+   "المنطقة",
+   "أمريكا فقط"
+  ]
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Xbox Wire page read in full 01:12Z by fetch; no update note",
+  "SOURCE: not already posted": "yes: ledger find xbox black friday sale, 0 hits",
+  "SOURCE: age": "yes: first report 16 Nov 23:57Z, about 5 h at build",
+  "ANGLE before lines": "yes: angle in the story file",
+  "STORY TYPE price": "yes: discounts, period (strip) and region (line 1 and strip: US only)",
+  "STORY: spoken paragraph, subject before pronoun": "yes: line 1 names إكس بوكس, later lines continue the same subject",
+  "STORY: release verbs": "yes: no release verb, offers only",
+  "STORY: names match names-ar.md": "yes: إكس بوكس (Xbox) at first mention, game titles in English, White Friday per glossary",
+  "POST: Arabic passes": "yes: glossary White Friday rule applied; short lines checked by the server text check",
+  "SOUND: footage sound or bed with reason": "yes: each trailer's own sound under its shots, no speech expected under launch music",
+  "SOUND: no speech under Arabic lines": "n/a: checked by the server audio split",
+  "PICTURE: footage first": "yes: four official Steam trailers of games in the sale",
+  "PICTURE: not the same as last 5 reels": "yes: no recent Reel uses these trailers",
+  "CREDIT: on every clip": "yes: credit band over shots 0 to 6"
+ },
+ "decision_log": [
+  {
+   "beat": "0 to 7",
+   "shot": "2.5 s stretches from four Steam trailers of games named in the sale",
+   "alternatives": "Crimson Desert trailers are letterboxed (816 rows), dropped; Final Fantasy VII Remake Intergrade Steam page has only an ESRB clip, so its 80% sits in the strip; starts moved to the shot gate's clean starts",
+   "crop": "split, enlargement under 2x",
+   "music": "each trailer's own sound"
+  }
+ ],
+ "angle": {
+  "hook": "Xbox's biggest sale of the year opens 19 Nov with up to 80% off, Final Fantasy VII Remake Intergrade at 80%",
+  "why_now": "Xbox Wire announced it 16 Nov; deals start 19 Nov and run to 2 Dec",
+  "what_it_means_here": "Xbox says the discounts are US only and offers vary by market and retailer, so Gulf prices are not announced",
+  "payoff": "Gears of War: E-Day 30% and Forza Horizon 6 25% on Premium Editions"
+ }
+}
