@@ -3703,3 +3703,18 @@ D. The smear check measures each frame against its own shot, the end card its ow
 E. buildgate and every text check run on the server through prerender mode text; no local Pillow needed.
 F. Every `presubmit.py intent` carries `--slot`; the keeper and the work order read newsroom/submissions.jsonl and
    published.jsonl as well as the commitments. The server's own Publer read (a key on dxb-render-1) stays the fuller fix.
+
+## Server speed for Production 2: shot read and footage resolver (adv-20261117-server-speed-for-p2 A and B, Mohammad 17 Nov 2026; release 2026-11-17 r2)
+
+Case: RPG Maker left INCOMPLETE on 17 Nov because the automatic shot read took about 13 minutes in the render step; Splatoon
+Raiders lost a run to a footage address from a related product on Nintendo's US page.
+A. The automatic shot read is one decode per file (luma, scene cuts, letterbox and two frames a second), tesseract once per
+   frame, autofocus on the same frames and only on scenes long enough to hold a shot; a word read in one place on a fifth of
+   a trailer's frames is a label on the whole trailer and rejects every scene whose window covers it. About 35 to 45 s per
+   90 to 120 s trailer on the runner; capped at 3 minutes for up to three trailers (unread frames reject their stretch);
+   cached per file. qc.json `shot_read` gives the seconds per file and stage.
+B. prerender.yml mode `footage` with `source` (steam:<appid>, a Nintendo US store product page, an IGN video page or a
+   playstation.com game page) returns each official video as a ready job entry with size, fps, bitrate (and the low-bitrate
+   flag), letterbox rows and a full decode check, best first (FOOTAGE_JSON in the log, footage.json in the summary and as the
+   run's `footage` artifact). Nintendo pages give only the product's own gallery, under its own nsuid. Other hosts are refused.
+
