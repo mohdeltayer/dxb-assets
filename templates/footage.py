@@ -192,7 +192,11 @@ def check(c, tmp, deadline):
     read the letterbox at three points and its bitrate."""
     import decodecheck as DC
     import reel
-    p = probe(c['probe'], c['job'].get('referer'))
+    try:
+        p = probe(c['probe'], c['job'].get('referer'))
+    except Exception as e:                         # one slow or broken stream drops that candidate, not the resolve
+        c['decode_clean'], c['note'] = False, f'probe failed: {type(e).__name__}'
+        return c
     c.update(p)
     if time.time() > deadline:
         c['decode_clean'], c['note'] = None, 'not downloaded: the check budget ran out'

@@ -101,7 +101,7 @@ jobs:
       - name: Ledger search
         if: steps.build.outputs.state == 'built'
         run: |
-          words=$(python3 -c "import json,re; s=json.load(open('$RUNNER_TEMP/slip.json')); g=(s.get('game') or re.sub(r'^\d{4}-\d\d-\d\d-','',s['id']).replace('-',' ')); print(' '.join(re.findall(r'[A-Za-z0-9]+', g.lower())[:2]))")
+          words=$(python3 -c "import json,re; s=json.load(open('$RUNNER_TEMP/slip.json')); g=(s.get('game') or re.sub(r'^\d{4}-\d\d-\d\d-','',s['id']).replace('-',' ')); stop={'the','of','a','an','and','to','in','on','for','game','edition'}; print(' '.join([w for w in re.findall(r'[A-Za-z0-9]+', g.lower()) if w not in stop][:2]))")
           python3 newsroom/ledger.py find $words --record "$SLIP" | tail -3
           python3 - <<'PY'
           import json, os

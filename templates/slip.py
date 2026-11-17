@@ -374,7 +374,7 @@ def build(slip, lane='live', resolve=True, root=ROOT, now=None):
     if resolve:
         try:
             import footage as FT
-            r = FT.resolve(slip['footage'], name=name)
+            r = FT.resolve(slip['footage'], name=name, max_n=3)   # three candidates: the first clean one is used
         except Exception as e:                      # the slip is failed with the reason, never left without a result
             res['problems'].append(f'footage: the resolver stopped on {slip["footage"]}: {type(e).__name__}: {e}')
             return res
@@ -391,6 +391,10 @@ def build(slip, lane='live', resolve=True, root=ROOT, now=None):
     else:
         foot = {'file': f'{name}-trailer.mp4', 'url': 'https://example.invalid/test.mp4'}
     job = job_from(slip, foot, lane)
+    import textrules as TR
+    job, fixed = TR.fix(job)                        # the same mechanical fixes the render applies (glued prefix, signs)
+    if fixed:
+        res['flags'].append('text fixed mechanically: ' + '; '.join(f"{c['where']}: {c['what']}" for c in fixed))
     story = story_file(slip, f'Official video from the resolver ({slip["footage"]}): {foot.get("url") or foot.get("steam")}')
     sdir = os.path.join(root, 'newsroom', 'stories')
     jdir = os.path.join(root, 'jobs', 'test' if lane == 'test' else 'live')
@@ -404,7 +408,6 @@ def build(slip, lane='live', resolve=True, root=ROOT, now=None):
     json.dump(story, open(spath, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     jpath = os.path.join(jdir, name + '.json')
     json.dump(job, open(jpath, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    import textrules as TR
     hard = TR.hard(TR.check(job))
     if hard:
         res['problems'] += [f"text: {f['where']}: {f.get('fix') or f['rule']}" for f in hard]
