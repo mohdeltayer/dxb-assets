@@ -50,5 +50,25 @@
   "threads": "تصدر أداة صنع الألعاب RPG Maker U2U على Steam في 28 يناير 2027، وتضيف عمقًا وارتفاعات إلى الخرائط ثنائية الأبعاد. النسخة التجريبية لمحرر الخرائط متاحة حتى الإصدار، حسب غوتشا غوتشا غيمز (Gotcha Gotcha Games).",
   "credit": "المصدر: إعلان غوتشا غوتشا غيمز على Steam",
   "instagram_caption": "تصدر RPG Maker U2U في 28 يناير 2027\n\nحددت غوتشا غوتشا غيمز (Gotcha Gotcha Games) موعد صدور أحدث أجزاء سلسلة RPG Maker على Steam، وهي أداة لصنع ألعاب الأدوار. نظام P2D الجديد يضيف عمقًا وارتفاعات وإضاءة وظلالًا إلى الخرائط ثنائية الأبعاد. والنسخة التجريبية لمحرر الخرائط متاحة حتى يوم الإصدار، ويمكن استخدام خرائطها في النسخة الكاملة.\n\nالمصدر: إعلان غوتشا غوتشا غيمز على Steam.\n\n#ألعاب #أخبار_الألعاب #RPGMaker #RPGMakerU2U #Steam"
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/rpg-maker-u2u-release-date-january-28-reel-v1.mp4",
+  "blob": "cb38c1b16f1fed61da15cb5ec07fc5bfeef89e6b",
+  "at": "2026-11-17T08:14:36Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/rpg-maker-u2u-release-date-january-28.json",
+   "sha256": "e628a059db8d6e72a0791c4bc7d07420f6082e5e4794d1377ee27bf2555ee4b0",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1: headline 'تصدر RPG Maker U2U في 28 يناير' with رسمي chip over RPG Maker pixel-art town (three sprite characters), readable; look-2: trailer shot of staircase with 2D / Up With More trailer text, Arabic line 'أداة RPG Maker U2U تضيف عمقًا وارتفاعات إلى الخرائط ثنائية الأبعاد', strip Steam / 28 يناير 2027, credit Gotcha Gotcha Games; look-3: wooden tower with ladder and river, line 'بنظام P2D تُصنع منحدرات ومبانٍ متعددة الطوابق وجسور', same strip and credit. Right subject, date matches story, nothing graphic, text readable."
  }
 }
