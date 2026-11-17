@@ -82297,5 +82297,123 @@
   "dispatches": 3,
   "sound": "bed:neon_b (Nintendo's own Splatoon Raiders store video (the only official file, 1280x720) was checked: the audio split found the music stem not clean (85.6% leftover), and the shots come from different moments, so its effects would not match the picture; narration lines run under every shot on our bed.)",
   "footage": true
+ },
+ {
+  "name": "rpg-maker-u2u-release-date-january-28-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-17T07:38Z",
+  "stages": {
+   "checks": 2.9,
+   "montage": 22.1,
+   "text": 31.3,
+   "audio": 1.3,
+   "outro": 17.1
+  },
+  "total": 74.8,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-17T07:37Z",
+  "finished_at": "2026-11-17T07:38Z",
+  "render_min": 1.25,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "rpg-maker-u2u-trailer.mp4",
+    "start": 8.62,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.44,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "rpg-maker-u2u-trailer.mp4",
+    "start": 30.47,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.44,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "rpg-maker-u2u-trailer.mp4",
+    "start": 34.7,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.44,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "rpg-maker-u2u-trailer.mp4",
+    "start": 38.09,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.44,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "rpg-maker-u2u-trailer.mp4",
+    "start": 41.4,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.44,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 5.9,
+   "still_share": 0.058,
+   "longest_still": 0.8,
+   "cuts_per_10s": 7.97,
+   "held_under_text": 0.0,
+   "secs": 13.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 140,
+  "queue_wait_secs": 1,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1060,
+  "peak_mem_mb": 2215,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 50976,
+  "peak_disk_mb": 53347,
+  "min_disk_free_mb": 192759,
+  "setup_min": 0.15,
+  "story": "rpg-maker-u2u-release-date-january-28",
+  "job_sha": "2531929f0974633b376538b79d86b597ee850ca3",
+  "dispatches": 1,
+  "sound": "bed:neon_e (trailer music is not verified as a music-only stretch; our bed under every line)",
+  "footage": true
  }
 ]

@@ -1,0 +1,29 @@
+{
+ "name": "rpg-maker-u2u-release-date-january-28",
+ "out": "cards/2026-11/rpg-maker-u2u-release-date-january-28-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-17T07:39:16Z",
+ "findings": [],
+ "notes": [
+  "length 13.8 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 5.9, \"still_share\": 0.058, \"longest_still\": 0.8, \"cuts_per_10s\": 7.97, \"held_under_text\": 0.0, \"secs\": 13.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "2531929f0974633b376538b79d86b597ee850ca3",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/rpg-maker-u2u-release-date-january-28-look-1.jpg",
+  "cards/2026-11/rpg-maker-u2u-release-date-january-28-look-2.jpg",
+  "cards/2026-11/rpg-maker-u2u-release-date-january-28-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_e (trailer music is not verified as a music-only stretch; our bed under every line)"
+}
