@@ -2,11 +2,11 @@
  "name": "grindworm-release-jan-18-2027",
  "out": "cards/2026-11/grindworm-release-jan-18-2027-reel-v1.mp4",
  "verdict": "pass",
- "at": "2026-11-17T22:38:08Z",
+ "at": "2026-11-17T22:45:24Z",
  "findings": [],
  "notes": [
   "length 24.5 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 30.7% > 5.0%); music_pct 6.0; leak_pct 30.7; cache {'hit': 0, 'miss': 4}; separate_secs 28.6; secs 42.0",
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 30.7% > 5.0%); music_pct 6.0; leak_pct 30.7; cache {'hit': 4, 'miss': 0}; separate_secs 4.0; secs 5.2",
   "render_job: audio split fallback: our bed (ValueError: the trailer mix would not match the picture); bed:neon_b",
   "render_job: lifeless: {\"score\": 0.6, \"still_share\": 0.004, \"longest_still\": 0.1, \"cuts_per_10s\": 11.89, \"held_under_text\": 0.0, \"secs\": 24.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
@@ -89,29 +89,29 @@
  "person_shown": "n/a",
  "sound": "bed:neon_b (trailer sound refused: music stem not clean (leftover 30.7% > 5.0%))",
  "shot_read": {
-  "secs": 56.1,
+  "secs": 60.2,
   "files": {
    "grindworm-release-jan-18-2027-extended-demo-trailer.mp4": {
-    "secs": 32.8,
+    "secs": 35.7,
     "cached": false,
     "stages": {
-     "decode": 15.4,
-     "autofocus": 28.2,
-     "ocr": 28.2,
-     "smear": 32.0,
-     "scenes": 32.8
+     "decode": 14.7,
+     "autofocus": 30.5,
+     "ocr": 30.5,
+     "smear": 34.7,
+     "scenes": 35.7
     },
     "incomplete": null
    },
    "grindworm-release-jan-18-2027-release-date-announcement-trailer.mp4": {
-    "secs": 23.3,
+    "secs": 24.5,
     "cached": false,
     "stages": {
-     "decode": 10.1,
-     "autofocus": 22.0,
-     "ocr": 22.0,
-     "smear": 22.5,
-     "scenes": 23.3
+     "decode": 10.7,
+     "autofocus": 23.3,
+     "ocr": 23.3,
+     "smear": 23.7,
+     "scenes": 24.5
     },
     "incomplete": null
    }
@@ -119,15 +119,14 @@
  },
  "job_path": "jobs/done/grindworm-release-jan-18-2027.json",
  "stage_minutes": {
-  "queue": 0.02,
-  "setup": 0.23,
-  "fetch": 1.28,
-  "shots": 0.94,
-  "checks": 0.8,
-  "render": 3.27,
-  "after": 1.29,
-  "upload": 0.1,
-  "job": 7.58
+  "queue": 7.7,
+  "setup": 0.22,
+  "fetch": 0.34,
+  "shots": 1.0,
+  "checks": 0.84,
+  "render": 2.68,
+  "after": 1.27,
+  "job": 6.15
  },
  "job_after_autofix": {
   "name": "grindworm-release-jan-18-2027",
