@@ -12,7 +12,59 @@
    "seconds": 120
   }
  ],
- "shots": "auto",
+ "shots": [
+  [
+   "madden27-its-your-league.mp4",
+   48.06,
+   3.17,
+   [
+    [
+     0.0,
+     0.712
+    ]
+   ]
+  ],
+  [
+   "madden27-its-your-league.mp4",
+   21.89,
+   2.85,
+   [
+    [
+     0.0,
+     0.438
+    ]
+   ]
+  ],
+  [
+   "madden27-its-your-league.mp4",
+   14.0,
+   2.63,
+   [
+    [
+     0.0,
+     0.643
+    ]
+   ]
+  ],
+  [
+   "madden27-its-your-league.mp4",
+   0.0,
+   4.2,
+   null
+  ],
+  [
+   "madden27-its-your-league.mp4",
+   0.0,
+   4.2,
+   null
+  ],
+  [
+   "madden27-its-your-league.mp4",
+   0.0,
+   4.2,
+   null
+  ]
+ ],
  "lines": [
   [
    1,
@@ -180,5 +232,10 @@
  "auto_shots": {
   "count": 6,
   "secs": 4.2
- }
+ },
+ "shots_auto": [
+  3,
+  4,
+  5
+ ]
 }
