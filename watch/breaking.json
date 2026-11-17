@@ -1,10 +1,24 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T21:15:08Z",
- "seq": 591,
+ "generated_at": "2026-11-17T21:25:10Z",
+ "seq": 592,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 16867,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/17/26 Congrats to The Game Awards 2026 nominees Each year, The Game Awards recognizes creative and technical excellence in the global video game industry. We",
+   "url": "https://www.nintendo.com/us/whatsnew/congrats-to-the-game-awards-2026-nominees/",
+   "published": null,
+   "first_seen": "2026-11-17T21:25:05Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 592
+  }
+ ],
+ "recent": [
   {
    "id": 16861,
    "source": "Xbox Wire",
@@ -41,9 +55,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 591
-  }
- ],
- "recent": [
+  },
   {
    "id": 16852,
    "source": "Xbox Wire",
@@ -491,7 +503,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T21:15:05Z",
+  "last_poll_at": "2026-11-17T21:25:05Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 7,
