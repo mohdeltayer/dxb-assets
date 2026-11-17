@@ -9,7 +9,8 @@ A job may leave the shot times to the server in two ways:
 
 expand(job) runs first and needs no footage: it writes the shot list with start 0.0 in each automatic slot and lists
 those slots in "shots_auto", so the text checks see the timeline (only the lengths matter there). fill(job) runs on the
-server once the footage is fetched: templates/shotpick.py reads each file's clean stretches (after the picture start,
+server once the footage is fetched (each file is read in full, about 4 minutes per 2 minutes of footage on the
+4-core runner, so keep "footage" seconds short for an automatic job; the read is cached per file): templates/shotpick.py reads each file's clean stretches (after the picture start,
 inside one scene, no black, frozen, smear, letterbox, burnt-in or cut text, no unframeable profile face), and each slot
 takes, in source order, the stretch nearest its even share of the trailer that holds its length, preferring a centred
 subject. Every choice is logged like the other fixes (autofix.LOG, rule auto_shots), so qc.json `autofixed` and the job
@@ -109,9 +110,22 @@ def fill(job, reader=None):
         import shotpick as SP
         cache = {}
 
-        def reader(f):
+        def reader(f):                                       # cached per file and size: a second dispatch reads nothing
             if f not in cache:
-                cache[f] = SP.pick(f)
+                import json
+                try:
+                    import cards as C
+                    path = C.U + f
+                    key = os.path.join(C.U, 'cache', f'shotpick-{os.path.basename(f)}-{os.path.getsize(path)}.json')
+                except (ImportError, OSError, AttributeError):
+                    key = None
+                if key and os.path.exists(key):
+                    cache[f] = json.load(open(key))
+                else:
+                    cache[f] = SP.pick(f)
+                    if key:
+                        os.makedirs(os.path.dirname(key), exist_ok=True)
+                        json.dump(cache[f], open(key, 'w'))
             return cache[f]
     import autofix as AF
     by_file = {}
