@@ -114,7 +114,8 @@ jobs:
       - name: Text check (fails in seconds on a bad wrap)
         run: |
           python -m pip install -q pillow numpy soundfile pedalboard
-          python templates/render_job.py text "$JOB"
+          # the server's mechanical fixes first, in the job file and listed (adv-20261117-gates-fix-not-refuse B)
+          AUTOFIX_JSON="$RUNNER_TEMP/autofix.json" python templates/render_job.py text "$JOB" --fix
 
       - name: Tools
         timeout-minutes: 10                        # a hung apt or pip mirror held two runs for 15 minutes on 23 Oct
@@ -223,7 +224,9 @@ jobs:
           python templates/runner_stats.py start "$stats" || true
           trap 'python templates/runner_stats.py stop "$stats" || true' EXIT
           export LOOK_ENTRY="$RUNNER_TEMP/look.json"    # theme and style of the Reel, for the look ledger (no three in a row)
+          export AUTOFIX_JSON="$RUNNER_TEMP/autofix.json" AUTOFIX_JOB="$RUNNER_TEMP/job-fixed.json"
           python templates/render_job.py run "$JOB"
+          [ -f "$AUTOFIX_JOB" ] && cp "$AUTOFIX_JOB" "$JOB"
           echo "RENDER_SECS=$(( $(date +%s) - start ))" >> "$GITHUB_ENV"
           # keep this run's render-times entry; the commit step rebuilds on the latest main
           python -c "import json; e = json.load(open('templates/assets/render-times.json'))[-1]; e['runner'] = 'actions'; e['cores'] = $(nproc); e['job_secs'] = None; json.dump(e, open('$RUNNER_TEMP/render-time.json', 'w'))"
@@ -253,6 +256,12 @@ jobs:
           files="$out $base-strip.jpg $base-sheet.jpg"
           # 4 frames a second through the Reel (decodecheck.dense_strip), so the first second of every shot is seen
           if [ -f "$base-dense.jpg" ]; then files="$files $base-dense.jpg"; fi
+          # what the server fixed, and the job it rendered (item B): beside the Reel on test runs, in the summary always
+          if [ -s "$RUNNER_TEMP/autofix.json" ]; then
+            { echo "### Fixed by the server"; echo '```json'; cat "$RUNNER_TEMP/autofix.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+            if [ $TEST = 1 ]; then cp "$RUNNER_TEMP/autofix.json" "$base-autofix.json"; cp "$JOB" "$base-job-fixed.json"
+              files="$files $base-autofix.json $base-job-fixed.json"; fi
+          fi
           mkdir -p "$RUNNER_TEMP/out"
           for f in $files; do cp --parents "$f" "$RUNNER_TEMP/out/"; done
           git config user.name "dxb-render"

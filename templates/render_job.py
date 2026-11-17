@@ -470,9 +470,13 @@ def look(job):
     return style
 
 
-def check(job):
+def check(job, collect=None):
+    """Every pre-render check. Raises at the first failure; with `collect` (a list) each failing stage is appended there
+    as a string and the rest still run, so one pass reports everything (adv-20261117-gates-fix-not-refuse A)."""
     if job.get('kind') == 'breaking':
         return BK.check(job)
+    if collect is not None:
+        return _check_all(job, collect)
     look(job)
     if job.get('intro') is not None:
         _intro_mod(job['intro']).check(job['intro'])
@@ -523,6 +527,45 @@ def check(job):
     return end
 
 
+def _check_all(job, errs):
+    """check() stage by stage, every failure kept (item A)."""
+    def stage(name, fn, *a):
+        try:
+            return fn(*a)
+        except (Exception, SystemExit) as e:   # noqa: BLE001
+            errs.append(f'{name}: {e}')
+            return None
+    stage('look', look, job)
+    if job.get('intro') is not None:
+        stage('intro', lambda: _intro_mod(job['intro']).check(job['intro']))
+    if job.get('template') == 'reviewscores':
+        import reviewscores as RS
+        for e in RS.check_job(job) or []:
+            errs.append('review scores: ' + e)
+    reel.CLEAN_MAP = job.get('clean_map')
+    keep = reel.X
+    if job.get('cut'):
+        reel.X = 0.04
+    try:
+        show = showcase_of(job)
+        stage('source quality', reel.quality_gate, shots(job, build=False), job.get('lowres_ok'), job.get('blocky_ok'), bool(show))
+        st, end = reel.timeline(shots(job, build=False))
+        stage('reading', reel.check_reading, place(job)(st, end), end)
+    finally:
+        reel.X = keep
+    stage('speech', speech_check, job, end)
+    stage('shot gate', shot_gate, job)        # applies its fixes first; refuses only what it could not fix
+    st, end = _starts(job)                     # the fixes may have changed the timeline
+    stage('first frame', first_frame_check, job)
+    stage('cover', cover_picture_check, job)
+    stage('card art', card_art_check, job)
+    import fillcheck as FC
+    stage('fill', FC.check, job, C.U, st)
+    import sfxplan as SF
+    stage('sound effects', SF.check, job, st, place(job)(st, end), profile_of(job))
+    return end
+
+
 def shot_gate(job):
     """adv-20261115-one-render-server-checks items B and C (templates/shotgate.py): every footage shot starts after the
     picture on the server's copy, stays inside one scene, is not letterboxed, and keeps its subject inside the 9:16
@@ -530,6 +573,23 @@ def shot_gate(job):
     Reel uses. Every problem is listed at once; the job stops before anything is built."""
     import shotgate as SG
     if job.get('kind') in ('famitsu', 'breaking') or profile_of(job) == 'breaking':
+        return
+    import autofix as AF                       # the server fixes what it can before it refuses (adv-20261117-gates-fix-not-refuse B)
+    if AF.enabled(job):
+        n0 = len(AF.LOG)
+        left = AF.shots(job)
+        if len(AF.LOG) > n0:
+            AF.save_log(os.environ.get('AUTOFIX_JSON'))
+            if os.environ.get('AUTOFIX_JOB'):  # the fixed job, written back to main by the workflow
+                json.dump(job, open(os.environ['AUTOFIX_JOB'], 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+        for p in left:
+            print('shotgate: ' + p['detail'] + ' (' + p.get('autofix', 'no fix') + ')', flush=True)
+        if left:
+            print('SHOTGATE_JSON: ' + json.dumps({'job': job.get('name'), 'ok': False, 'problems': left}, ensure_ascii=False),
+                  flush=True)
+            raise SystemExit(f'shotgate: {len(left)} shot problem{"s" if len(left) > 1 else ""} the server could not fix '
+                             '(above), each with what it tried')
+        print('shotgate: shots clean on the server copy (picture start, scene cuts, letterbox, subject drift)', flush=True)
         return
     rows = clean_nudge(job, job['shots'])
     for sh in rows:
@@ -736,8 +796,11 @@ def textcheck(job, collect=None):
             _do('strip', reel.strip_check, strip_items(job), [(x if isinstance(x, str) else x[0], 0, 0, {} if isinstance(x, str) else (x[1] if len(x) > 1 else {}))
                                                 for _, _, texts in job['lines'] for x in texts])
             _do('strip', reel.strip_layer, strip_items(job), f'{tmp}/s.png', job['theme'], skin=skin)
-        for i, c in enumerate(job.get('credits') or [], 1):
-            _do(f'credit {i}', reel.credit_layer, c[2], f'{tmp}/c.png')
+        if not show:                           # drawn at the size the render uses (credit_specs: opt size, band)
+            for i, c in enumerate(job.get('credits') or [], 1):
+                o = c[3] if len(c) > 3 and isinstance(c[3], dict) else {}
+                _do(f'credit {i}', reel.credit_layer, c[2], f'{tmp}/c.png', size=o.get('size', 36), band=o.get('band', False),
+                    low=o.get('low', False))
         if job.get('intro') is not None:       # the series intro's title and days line (Dubai font)
             OI = _intro_mod(job['intro'])
             if job['intro'].get('series') == 'gtavi':
@@ -1214,6 +1277,15 @@ if __name__ == '__main__':
     if step == 'check':
         print(job['name'], 'ok, clip %.1f s' % check(job))
     elif step == 'text':
+        if '--fix' in sys.argv[3:]:            # the mechanical fixes first, written back to the job file (item B)
+            import autofix as AF
+            before = json.dumps(job, sort_keys=True)
+            AF.text(job)
+            if AF.LOG:
+                AF.save_log(os.environ.get('AUTOFIX_JSON'))
+                if '--dry' not in sys.argv[3:] and json.dumps(job, sort_keys=True) != before:
+                    json.dump(job, open(path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+                    print(f'autofix: {len(AF.LOG)} text fix(es) written to {path}', flush=True)
         import buildgate                        # the gate's findings join the text findings: one pass lists every error
         gate_path = os.environ.get('PRERENDER_SRC') or path   # prerender copies the job to a temp folder; the gate
         errs = [{'where': 'build gate', 'rule': 'gate', 'text': '', 'fix': '', 'detail': p}   # reads its repo path

@@ -530,13 +530,17 @@ def credit_layer(text, path, low=False, size=36, y=None, band=False):
     «لقطات من Fortnite» over a delayed game that has never been shown (Mohammad,
     13 Oct 2026, review priority 3). Right-aligned under the safe top, or just
     above the safe bottom when the story lines sit at the top."""
-    rtl_starts([text], 'credit')
+    rows = [t for t in text.split('\n') if t.strip()] or [text]   # two lines when the server set it so (autofix,
+    rtl_starts(rows, 'credit')                                      # adv-20261117-gates-fix-not-refuse B)
     f = A.F('Medium', size)
     y = y if y is not None else G.SAFE_BOTTOM - 10 if low else G.SAFE_TOP + 40
     mask = Image.new('L', (W, H), 0)
-    ImageDraw.Draw(mask).text((W - R, y), text, font=f, fill=255, anchor='rs', **G.AR)
-    if ImageDraw.Draw(mask).textlength(text, font=f, **G.AR) > W - R - L:
-        raise ValueError(f'credit runs out of the safe zone: {text}')
+    lh = int(size * 1.3)
+    for k, row in enumerate(rows):                                  # one line: exactly as before
+        yy = y + k * lh if not low else y - (len(rows) - 1 - k) * lh   # a low credit grows upward, clear of the strip
+        ImageDraw.Draw(mask).text((W - R, yy), row, font=f, fill=255, anchor='rs', **G.AR)
+        if ImageDraw.Draw(mask).textlength(row, font=f, **G.AR) > W - R - L:
+            raise ValueError(f'credit runs out of the safe zone: {text}')
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     if band:                                   # a soft dark band behind it, for pale or busy ground (23 Oct 2026,
         box = mask.getbbox()                   # the Miyamoto Reel: a credit over a light grey portrait and a logo rim)

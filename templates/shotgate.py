@@ -195,8 +195,10 @@ def timing_problems(job, shots):
             s = nearest_clean(f, st, secs, info)
             nxt = (f'nearest clean start {s:.2f} s for the same {secs:.2f} s' if s is not None else
                    f'no clean start of {secs:.2f} s within {SEARCH:.0f} s: pick another stretch or shorten the shot')
-            out.append({'where': f'shot {i}', 'rule': 'shot_timing', 'file': f, 'start': st,
-                        'detail': f'shot {i} ({f} {st:.2f} s): ' + '; '.join(why) + f'; {nxt}', 'clean_start': s})
+            out.append({'where': f'shot {i}', 'rule': 'shot_timing', 'file': f, 'start': st, 'secs': secs,
+                        'detail': f'shot {i} ({f} {st:.2f} s): ' + '; '.join(why) + f'; {nxt}', 'clean_start': s,
+                        'cut_at': round(cut[0], 3) if cut and not _waived(job, 'cut_ok', f, st) else None,
+                        'picture_start': info['picture_start'], 'duration': info['duration']})
     return out, infos
 
 
@@ -301,8 +303,14 @@ def drift_problems(job, shots):
             first_in = _inside(subj, win0)
             if first_in < AIMED_ELSEWHERE:
                 continue                                       # the window aims at something else: not this subject
+            track, tp = [[round(samples[0][0], 2), round(subj[0], 4), round(subj[1], 4)]], subj
+            for q, bs in samples[1:]:                          # where the subject is at each sample, for the autofix
+                b = _follow(tp, bs)                            # (adv-20261117-gates-fix-not-refuse B)
+                if b is not None:
+                    track.append([round(q, 2), round(b[0], 4), round(b[1], 4)]); tp = b
+            geo_fix = {'share': round(win0[1] - win0[0], 4), 'track': track, 'secs': secs, 'focus': fo}
             if first_in < DRIFT_INSIDE and _area(subj) >= CUT_MIN:
-                out.append({'where': f'shot {i}', 'rule': 'subject_cut', 'file': f, 'start': st,
+                out.append({**geo_fix, 'where': f'shot {i}', 'rule': 'subject_cut', 'file': f, 'start': st,
                             'detail': f'shot {i} ({f} {st:.2f} s): the subject is cut by the 9:16 edge from the first '
                                       f'frame ({first_in:.0%} of it inside the window); reframe it (focus) or pick a shot '
                                       'with the subject centred, or waive with drift_ok after looking'})
@@ -334,7 +342,7 @@ def drift_problems(job, shots):
                 if b is not None:
                     prev = b
             safe = max(0.0, leave - 0.1)
-            out.append({'where': f'shot {i}', 'rule': 'subject_drift', 'file': f, 'start': st, 'safe_secs': round(safe, 2),
+            out.append({**geo_fix, 'where': f'shot {i}', 'rule': 'subject_drift', 'file': f, 'start': st, 'safe_secs': round(safe, 2),
                         'detail': f'shot {i} ({f} {st:.2f} s): the subject leaves the 9:16 crop at {st + leave:.2f} s '
                                   f'({leave:.2f} s into the shot); longest safe length {safe:.2f} s, or reframe it '
                                   '(focus keyframes), or waive with drift_ok after looking'})

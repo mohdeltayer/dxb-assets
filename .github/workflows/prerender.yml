@@ -176,7 +176,10 @@ jobs:
           rc=0
           # every text error in one pass, as JSON in the summary and the log (adv-20261110-one-render-per-reel A);
           # without the Dubai font it runs the font-free rules and says the drawn checks were not run
-          python templates/render_job.py text "$PRERENDER_JOB" --json "$RUNNER_TEMP/text.json" || { echo "TEXT CHECK FAILED (above)"; rc=1; }
+          # the server's own fixes first (adv-20261117-gates-fix-not-refuse B), on this run's copy of the job; the render
+          # applies the same ones, so they are listed as FIXED, never as refusals
+          export AUTOFIX_JSON="$RUNNER_TEMP/autofix.json" AUTOFIX_JOB="$PRERENDER_JOB"
+          python templates/render_job.py text "$PRERENDER_JOB" --fix --json "$RUNNER_TEMP/text.json" || { echo "TEXT CHECK FAILED (above)"; rc=1; }
           if [ -f "$RUNNER_TEMP/text.json" ]; then
             { echo "### Text check"; echo '```json'; cat "$RUNNER_TEMP/text.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           fi
@@ -189,6 +192,11 @@ jobs:
             exit $rc
           fi
           python templates/prerender.py "$PRERENDER_JOB" --ci || rc=1
+          if [ -s "$AUTOFIX_JSON" ]; then
+            { echo "### Fixed by the server (the render makes the same fixes)"; echo '```json'; cat "$AUTOFIX_JSON"; echo; echo '```'
+              echo "<details><summary>the job after the fixes</summary>"; echo; echo '```json'; cat "$PRERENDER_JOB"; echo; echo '```'; echo "</details>"; } >> "$GITHUB_STEP_SUMMARY"
+            echo "AUTOFIX_JSON: $(tr -d '\n' < "$AUTOFIX_JSON")"
+          fi
           exit $rc
 
       - name: Clean up (fonts, footage, job copy)
@@ -272,7 +280,10 @@ jobs:
           rc=0
           # every text error in one pass, as JSON in the summary and the log (adv-20261110-one-render-per-reel A);
           # without the Dubai font it runs the font-free rules and says the drawn checks were not run
-          python templates/render_job.py text "$PRERENDER_JOB" --json "$RUNNER_TEMP/text.json" || { echo "TEXT CHECK FAILED (above)"; rc=1; }
+          # the server's own fixes first (adv-20261117-gates-fix-not-refuse B), on this run's copy of the job; the render
+          # applies the same ones, so they are listed as FIXED, never as refusals
+          export AUTOFIX_JSON="$RUNNER_TEMP/autofix.json" AUTOFIX_JOB="$PRERENDER_JOB"
+          python templates/render_job.py text "$PRERENDER_JOB" --fix --json "$RUNNER_TEMP/text.json" || { echo "TEXT CHECK FAILED (above)"; rc=1; }
           if [ -f "$RUNNER_TEMP/text.json" ]; then
             { echo "### Text check"; echo '```json'; cat "$RUNNER_TEMP/text.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           fi
@@ -285,6 +296,11 @@ jobs:
             exit $rc
           fi
           python templates/prerender.py "$PRERENDER_JOB" --ci || rc=1
+          if [ -s "$AUTOFIX_JSON" ]; then
+            { echo "### Fixed by the server (the render makes the same fixes)"; echo '```json'; cat "$AUTOFIX_JSON"; echo; echo '```'
+              echo "<details><summary>the job after the fixes</summary>"; echo; echo '```json'; cat "$PRERENDER_JOB"; echo; echo '```'; echo "</details>"; } >> "$GITHUB_STEP_SUMMARY"
+            echo "AUTOFIX_JSON: $(tr -d '\n' < "$AUTOFIX_JSON")"
+          fi
           exit $rc
 
       - name: Clean up
