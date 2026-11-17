@@ -1270,7 +1270,8 @@ def run(job, draft=False):
             spans = [(a + lead, b + lead, r) for a, b, r in spans] + [(0.0, lead, 'series intro (fixed, checked once)')]
         if spans:
             print('smear check: exempt ' + ', '.join(f'{a:.2f} to {b:.2f} s' for a, b, _ in spans) + ' (our own cards)', flush=True)
-        cuts = list(_starts(job)[0])           # each frame measured against its own shot (item D, 17 Nov 2026)
+        st_, body_ = _starts(job)
+        cuts = list(st_) + [body_]             # each frame measured against its own shot, the end card its own (item D)
         if job.get('intro') is not None:
             cuts = [0.0] + [c + lead for c in cuts]
         DC.check(video, [w for w in job.get('block_ok', []) if len(w) == 3] + spans, cuts=cuts)   # stops before anything is committed
