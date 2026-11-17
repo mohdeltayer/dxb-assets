@@ -1,0 +1,157 @@
+{
+ "name": "ets2-over-100k-concurrent-players",
+ "story": "2026-11-18-ets2-over-100k-concurrent-players",
+ "kind_news": "reveal",
+ "built_by": "server-slip",
+ "render_lane": "server",
+ "out": "cards/2026-11/ets2-over-100k-concurrent-players-reel-v1.mp4",
+ "split_fallback": "bed",
+ "footage": [
+  {
+   "file": "ets2-over-100k-concurrent-players-euro-truck-simulator-2-2022-trailer.mp4",
+   "steam": 227300,
+   "trailer": "Euro Truck Simulator 2 2022 Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "227300"
+  },
+  {
+   "file": "ets2-over-100k-concurrent-players-euro-truck-simulator-2-1-53-update.mp4",
+   "steam": 227300,
+   "trailer": "Euro Truck Simulator 2 - 1.53 Update",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "227300"
+  }
+ ],
+ "shots": [
+  [
+   "ets2-over-100k-concurrent-players-euro-truck-simulator-2-2022-trailer.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "ets2-over-100k-concurrent-players-euro-truck-simulator-2-2022-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "ets2-over-100k-concurrent-players-euro-truck-simulator-2-2022-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "ets2-over-100k-concurrent-players-euro-truck-simulator-2-2022-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "ets2-over-100k-concurrent-players-euro-truck-simulator-2-2022-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "ets2-over-100k-concurrent-players-euro-truck-simulator-2-2022-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "ets2-over-100k-concurrent-players-euro-truck-simulator-2-2022-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "جاء ذلك بعد إضافة جديدة للعبة،",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "وبعد 14 سنة\nعلى وجودها في Steam",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "وقال المطورون إنهم\nغير مصدقين لما حدث",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: غيمز رادار (GamesRadar)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "تجاوز عدد لاعبي Euro Truck Simulator 2 المتصلين معًا 100 ألف على Steam، حسب غيمز رادار (GamesRadar). جاء ذلك بعد إضافة جديدة للعبة، وبعد 14 سنة على وجودها في Steam. وقال المطورون إنهم غير مصدقين لما حدث.",
+ "headline": "أكثر من 100 ألف لاعب\nفي Euro Truck Simulator 2",
+ "label": "تقرير",
+ "source": "غيمز رادار (GamesRadar)",
+ "date": "17 Nov 2026",
+ "theme": "stylized",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "ets2-over-100k-concurrent-players-euro-truck-simulator-2-2022-trailer.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": {
+  "why_now": "GamesRadar reported the 100,000 concurrent mark on 17 Nov 22:00Z, after the Iceland DLC released last week (SCS blog).",
+  "what_it_means_here": "A 14-year-old truck sim out-peaking new releases is the surprise; Gulf players know ETS2 as the long-haul sim."
+ },
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "footage": "ets2-over-100k-concurrent-players-euro-truck-simulator-2-2022-trailer.mp4 from the resolver (steam:227300)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (audio split per shot)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: GamesRadar, Euro Truck Simulator 2 devs are in disbelief as DLC pushes the game over 100,000 concurrent players, 17 Nov 2026 22:00Z (Steam News hub relay 22:11Z) (https://www.gamesradar.com/games/simulation/after-14-years-on-steam-euro-truck-simulator-2-devs-are-in-disbelief-as-new-dlc-pushes-the-game-over-100-000-concurrent-players/); first report: GamesRadar, 17 Nov 2026 22:00Z (first in the watch digest; no earlier report found)",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: angle in the slip",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 227300 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ }
+}
