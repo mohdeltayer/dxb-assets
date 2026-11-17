@@ -5,11 +5,28 @@
  "built_by": "server-slip",
  "render_lane": "hosted",
  "out": "cards/test/sliptest-drg-survivor-reel-v1.mp4",
+ "split_fallback": "bed",
  "footage": [
   {
    "file": "sliptest-drg-survivor-update-4-narrated-trailer.mp4",
    "steam": 2321470,
    "trailer": "Update 4 Narrated Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "2321470"
+  },
+  {
+   "file": "sliptest-drg-survivor-launch-trailer.mp4",
+   "steam": 2321470,
+   "trailer": "Launch Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "2321470"
+  },
+  {
+   "file": "sliptest-drg-survivor-release-date-trailer.mp4",
+   "steam": 2321470,
+   "trailer": "Release Date Trailer",
    "start": 0,
    "seconds": 120,
    "trailer_id": "2321470"
