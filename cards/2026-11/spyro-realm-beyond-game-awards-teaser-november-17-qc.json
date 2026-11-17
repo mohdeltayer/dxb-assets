@@ -1,0 +1,265 @@
+{
+ "name": "spyro-realm-beyond-game-awards-teaser-november-17",
+ "out": "cards/2026-11/spyro-realm-beyond-game-awards-teaser-november-17-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-17T19:18:59Z",
+ "findings": [],
+ "notes": [
+  "length 17.7 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 12.5, \"held_under_text\": 0.0, \"secs\": 17.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 2",
+   "rule": "subject_drift",
+   "what": "focus [[0.0, 0.4]] to 0.32: the subject stays inside the window",
+   "before": [
+    "spyro-announce.mp4",
+    17.6,
+    1.9,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   "after": [
+    "spyro-announce.mp4",
+    17.6,
+    1.9,
+    0.32
+   ]
+  }
+ ],
+ "job_sha": "8dfaa35ce8ce7adc86be065c312736229d0d7f7e",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/spyro-realm-beyond-game-awards-teaser-november-17-look-1.jpg",
+  "cards/2026-11/spyro-realm-beyond-game-awards-teaser-november-17-look-2.jpg",
+  "cards/2026-11/spyro-realm-beyond-game-awards-teaser-november-17-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_c (trailer sound is not verified as a music-only stretch; our bed under every line)",
+ "shot_read": null,
+ "job_path": "jobs/done/spyro-realm-beyond-game-awards-teaser-november-17.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.15,
+  "fetch": 0.19,
+  "shots": 0.0,
+  "checks": 1.41,
+  "render": 1.92,
+  "after": 1.09,
+  "upload": 0.1,
+  "job": 4.62
+ },
+ "job_after_autofix": {
+  "name": "spyro-realm-beyond-game-awards-teaser-november-17",
+  "story": "2026-11-17-spyro-realm-beyond-tga-teaser",
+  "kind_news": "news",
+  "built_by": "production-2",
+  "render_lane": "server",
+  "out": "cards/2026-11/spyro-realm-beyond-game-awards-teaser-november-17-reel-v1.mp4",
+  "footage": [
+   {
+    "file": "spyro-announce.mp4",
+    "steam": 4245560,
+    "trailer": "Announce",
+    "start": 0,
+    "seconds": 90
+   }
+  ],
+  "shots": [
+   [
+    "spyro-announce.mp4",
+    5.4,
+    2.5,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "spyro-announce.mp4",
+    13.4,
+    2.5,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "spyro-announce.mp4",
+    17.6,
+    1.9,
+    0.32
+   ],
+   [
+    "spyro-announce.mp4",
+    20.9,
+    2.0,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "spyro-announce.mp4",
+    35.9,
+    2.0,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "spyro-announce.mp4",
+    42.15,
+    2.5,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "spyro-announce.mp4",
+    47.4,
+    1.6,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ],
+   [
+    "spyro-announce.mp4",
+    60.3,
+    3.0,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    0,
+    4,
+    [
+     [
+      "أكتيفيجن تكشف المزيد عن Spyro\nفي ذا غيم أووردز",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    8,
+    [
+     [
+      "صور جديدة من منطقة Painted Plains\nوتصدر ربيع 2027",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "strip": [
+   [
+    "المصدر",
+    "أكتيفيجن عبر Gematsu"
+   ],
+   [
+    "الموعد",
+    "10 ديسمبر"
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    8,
+    "لقطات من عرض Spyro: A Realm Beyond السابق، أكتيفيجن",
+    {
+     "size": 30,
+     "band": true
+    }
+   ]
+  ],
+  "headline": "جديد Spyro\nفي ذا غيم أووردز",
+  "label": "تقرير",
+  "source": "أكتيفيجن (Activision) عبر Gematsu",
+  "date": "17 Nov 2026",
+  "theme": "playful",
+  "style": "bold",
+  "template": "split",
+  "skin": "house",
+  "track": "bed",
+  "cut": true,
+  "genre": [
+   "platformer"
+  ],
+  "platform": "pc",
+  "beat": "announcement",
+  "bed_reason": "trailer sound is not verified as a music-only stretch; our bed under every line",
+  "subject_person": null,
+  "spoken": "أكتيفيجن (Activision) تكشف المزيد عن Spyro: A Realm Beyond في ذا غيم أووردز (The Game Awards) يوم 10 ديسمبر. ومعها صور جديدة من منطقة Painted Plains، وتصدر اللعبة ربيع 2027.",
+  "reel_check": {
+   "SOURCE: primary read in full": "report: Activision email via Gematsu and GoNintendo; Steam page confirms the game; label تقرير",
+   "SOURCE: not already posted": "ledger find spyro: none; Publer last 7 days none",
+   "SOURCE: age": "yes: 17 Nov 2026",
+   "ANGLE before lines": "yes: story file",
+   "STORY TYPE": "n/a: announcement tease, footage is the earlier announce trailer, said on screen",
+   "STORY: spoken paragraph, subject before pronoun": "yes",
+   "STORY: release verbs": "n/a",
+   "STORY: names match names-ar.md": "Activision أكتيفيجن, The Game Awards per list",
+   "POST: Arabic passes": "yes: Western digits",
+   "SOUND: footage sound or bed with reason": "yes: our bed, bed_reason",
+   "SOUND: no speech under Arabic lines": "yes",
+   "PICTURE: footage first": "yes: Steam announce trailer app 4245560",
+   "PICTURE: not graphic": "yes: family platformer",
+   "CREDIT: on every clip": "yes",
+   "SENSITIVE": "yes: nothing sensitive, family platformer tease"
+  },
+  "decision_log": [
+   {
+    "beat": "all",
+    "shot": "spyro-announce 5.4, 13.4, 17.6, 20.9, 35.9, 42.15, 47.4, 60.3 (clean stretches from shots read run 509)",
+    "alternatives": "stills (Painted Plains screenshots not downloadable via an allowed route)",
+    "crop": "centre, judged on the shot sheet",
+    "music": "bed"
+   }
+  ],
+  "note": "Spyro TGA tease report; footage is the announce trailer on Steam (earlier footage).",
+  "angle": {
+   "hook": "Spyro's first all-new adventure in nearly 20 years will be shown at The Game Awards on 10 December, and Activision released new screenshots today.",
+   "why_now": "Activision's email on 17 November teased the TGA appearance and shared Painted Plains screenshots; Gematsu 18:38Z, GoNintendo 18:27Z.",
+   "what_it_means_here": "Spyro fans get a date for the next look: 10 December at The Game Awards; the game is due spring 2027 on PS5, Xbox Series, Switch 2 and PC.",
+   "limit": "Only a tease: no new trailer or release date yet. Footage on screen is the earlier announce trailer from the Steam page, not the new screenshots."
+  }
+ }
+}
