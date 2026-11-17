@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T07:52:07Z",
- "seq": 562,
+ "generated_at": "2026-11-17T08:52:06Z",
+ "seq": 563,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -225,19 +225,18 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T07:50:24Z",
+  "last_poll_at": "2026-11-17T08:50:05Z",
   "sources_enabled": 100,
-  "sources_ok": 92,
-  "sources_failing": 8,
+  "sources_ok": 93,
+  "sources_failing": 7,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 95x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 96x)",
    "Nintendo of America (X) (HTTP 429, 73x)",
    "PlayStation (X) (HTTP 429, 5x)",
    "PlayStation Middle East (X) (HTTP 429, 17x)",
    "Rockstar Games (X) (HTTP 429, 3x)",
-   "Square Enix (Google News) (HTTP 429, 4x)",
-   "The Game Awards (ValueError: 0 article links (expected 1+), layout changed or drawn by script, 14x)",
-   "Xbox (X) (HTTP 429, 92x)"
+   "The Game Awards (ValueError: 0 article links (expected 1+), layout changed or drawn by script, 15x)",
+   "Xbox (X) (HTTP 429, 93x)"
   ]
  }
 }
