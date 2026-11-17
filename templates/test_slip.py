@@ -113,6 +113,13 @@ class Job(unittest.TestCase):
             prev = z
         self.assertEqual(prev, len(j['shots']) - 1)
 
+    def test_spare_footage_and_sound_fallback(self):
+        j = S.job_from(slip(), {'file': 'a.mp4'}, 'test', theme='cold', spare=[{'file': 'b.mp4'}, {'file': 'a.mp4'}])
+        self.assertEqual([x['file'] for x in j['footage']], ['a.mp4', 'b.mp4'])
+        self.assertEqual(j['split_fallback'], 'bed')
+        import render_job as RJ
+        self.assertTrue(callable(RJ.bed_under))
+
     def test_bed(self):
         j = S.job_from(slip(sound='bed', bed_reason='the only official trailer is voiced throughout over its score'),
                        {'file': 'tg-trailer.mp4', 'steam': 1}, 'live', theme='cold')

@@ -315,7 +315,7 @@ def story_file(slip, footage_note):
     }
 
 
-def job_from(slip, foot, lane='live', theme=None):
+def job_from(slip, foot, lane='live', theme=None, spare=()):
     """The job, ready for the render: plain news layout, server-picked shots, lines cut from the spoken paragraph."""
     import textrules as TR
     name = _name(slip)
@@ -337,7 +337,8 @@ def job_from(slip, foot, lane='live', theme=None):
         'name': name, 'story': slip['id'], 'kind_news': slip.get('kind') or KIND_OF_LABEL.get(slip['label'], 'reveal'),
         'built_by': 'server-slip', 'render_lane': 'server',
         'out': f'{out_dir}/{name}-reel-v1.mp4',
-        'footage': [foot], 'shots': shots, 'lines': lines,
+        'split_fallback': 'bed',                  # a refused trailer mix ships on our bed with the reason, never a hold
+        'footage': [foot] + [x for x in spare if x.get('file') and x['file'] != f], 'shots': shots, 'lines': lines,
         'credits': [[0, len(shots) - 1, credit, {'size': 40, 'band': True}]],
         'spoken': slip['spoken'], 'headline': slip['headline'], 'label': slip['label'],
         'source': re.sub(r'^المصدر:\s*', '', credit), 'date': slip.get('date') or dt.date.today().strftime('%-d %b %Y'),
@@ -399,12 +400,16 @@ def build(slip, lane='live', resolve=True, root=ROOT, now=None):
             res['problems'].append(f'footage: {e} ({slip["footage"]}; {r.get("error") or str(len(cands)) + " found"})')
             return res
         foot = dict(c['job'])
+        # the resolver's other clean videos ride along: autoshots takes from them once the first runs out of clean
+        # stretches (Black Mesa, 17 Nov: 15 shots asked of a trailer with 15 clean stretches)
+        spare = [dict(x['job']) for x in cands if x is not c and x.get('job') and x.get('decode_clean') is not False]
         res['footage'] = {k: c.get(k) for k in ('name', 'width', 'height', 'fps', 'mbps', 'rows', 'duration', 'decode_clean')}
         if c.get('mbps') and c.get('height') and c['height'] < 1080:
             res['flags'].append(f'footage {c["width"]}x{c["height"]}: under 1080p, the quality gate may ask for the showcase layout')
     else:
         foot = {'file': f'{name}-trailer.mp4', 'url': 'https://example.invalid/test.mp4'}
-    job = job_from(slip, foot, lane)
+        spare = []
+    job = job_from(slip, foot, lane, spare=spare)
     import textrules as TR
     job, fixed = TR.fix(job)                        # the same mechanical fixes the render applies (glued prefix, signs)
     if fixed:

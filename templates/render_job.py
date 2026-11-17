@@ -1016,9 +1016,13 @@ def audio_split(job, video):
     import sfxplan as SF                       # a fallback on a track under other moments' shots fails the job
     try:
         SF.guard(job, rec, starts)
-    except ValueError:
-        _times_note(job, 'audio_split', rec)
-        raise
+    except ValueError as e:
+        if job.get('split_fallback') != 'bed':
+            _times_note(job, 'audio_split', rec)
+            raise
+        rec['fallback'] = bed_under(job, video, f"trailer sound refused: {rec.get('reason')}")   # slips: never a hold
+        print(f'render_job: audio split fallback: our bed ({e.__class__.__name__}: the trailer mix would not match the '
+              f"picture); {rec['fallback']}", flush=True)
     try:
         led = json.load(open(reel.TIMES))
         for e in reversed(led):
@@ -1029,6 +1033,48 @@ def audio_split(job, video):
     except (OSError, ValueError) as e:
         print(f'render_job: render-times not updated with the audio split: {e}', flush=True)
     return rec
+
+
+def bed_under(job, video, why):
+    """The body sound replaced by our rotated everyday bed, at the old body's level; the end card and its jingle stay
+    as rendered (tracksplit.CARD). For jobs that ask for it with "split_fallback": "bed" (story slips, Phase 1 of
+    adv-20261117-server-news-line-editor-model): an automatic line never holds a story on a sound refusal, it ships on
+    our bed with the measured reason, which qc.json carries as the sound."""
+    import numpy as np, soundfile as sf
+    import tracksplit as TS
+    import sonic as _S
+    import outro as _O
+    pick = _S.rotate(os.path.basename(job['out']))
+    if os.environ.get('RUNNER_TEMP'):
+        json.dump([os.path.basename(job['out']), pick], open(os.path.join(os.environ['RUNNER_TEMP'], 'bed.json'), 'w'))
+    total = TS._dur(video)
+    body = max(0.5, total - TS.CARD)
+    old = TS._audio(video, 0, total)
+    nb = int(round(body * TS.SR))
+    bed, sr = sf.read(_O.evolving_bed(pick, body + 0.5), dtype='float32', always_2d=True)
+    bed = bed.T
+    if sr != TS.SR:                              # resample by interpolation; the bed is tonal and slow
+        x = np.linspace(0, bed.shape[1] - 1, int(bed.shape[1] * TS.SR / sr))
+        bed = np.stack([np.interp(x, np.arange(bed.shape[1]), ch) for ch in bed])
+    if bed.shape[0] == 1:
+        bed = np.vstack([bed, bed])
+    bed = bed[:2, :nb]
+    bed = np.pad(bed, ((0, 0), (0, max(0, nb - bed.shape[1]))))
+    bed = TS._fade(bed, 0.3, 0.6)
+    bed *= 10 ** ((TS._db(old[:, :nb]) - TS._db(bed)) / 20)
+    full = np.concatenate([bed, old[:, nb:]], axis=1)
+    full /= max(1.0, float(np.abs(full).max()) / 0.98)
+    wav = os.path.splitext(video)[0] + '-bed.wav'
+    tmp = os.path.splitext(video)[0] + '-bed.mp4'
+    sf.write(wav, full.T, TS.SR, subtype='PCM_16')
+    subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-i', video, '-i', wav, '-map', '0:v', '-map', '1:a',
+                    '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-ac', '2', '-shortest',
+                    '-movflags', '+faststart', tmp], check=True)
+    os.replace(tmp, video)
+    os.remove(wav)
+    job['track'], job['sound'], job['bed_reason'] = 'bed', pick, why
+    print(f'render_job: sound: bed:{pick} ({why})', flush=True)
+    return f'bed:{pick}'
 
 
 def _times_note(job, key, value):
