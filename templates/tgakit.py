@@ -319,6 +319,7 @@ def category(kit, slug, spec, ground=None, title=None, when='TODO time read (Z)'
                 'spoken': f'أعلن حفل {SOURCE} المرشحين لجائزة {title} لعام 2026. و{CEREMONY}.',
                 'gfx': [{'file': gfx, 'kind': 'nominees', 'title': title, 'rows': rows, 'animate': True}],
                 'ground_footage': [g['footage']['file'], g['shots']['item'][0]],
+                'ground_seek': 'fixed',          # the card sits on the clean stretch the shots read passed (no burnt-in text)
                 'pace_ok': (f'the {secs} s nominees card is animated: its rows enter one by one, {ROW_STEP} s apart, in the '
                             'order read, then the full list holds 3 s to be read'),
                 'reel_check': _reel_check([r['name'] for r in rows], when),
@@ -375,6 +376,7 @@ def combined(kit, slugs, when='TODO time read (Z)', hook=None):
     job = _base(name, f'2026-11-17-{name}', 'list', 'awards')
     job.update({'footage': footage, 'shots': shots, 'credits': credits, 'gfx': gfx,
                 'ground_footage': shots[1][1],
+                'ground_seek': 'fixed',          # each card on its game's clean item stretch (no burnt-in text)
                 'lines': [[n + 1, n + 1, [['ويُعلن الفائزون في حفل 10 ديسمبر', {'size': 54}]]]],
                 'headline': 'أبرز ترشيحات\nذا غيم أووردز 2026',
                 'spoken': (f'أعلن حفل {SOURCE} المرشحين لجوائز 2026، وهذه أبرز الفئات. ويُعلن الفائزون في حفل 10 ديسمبر.'),
