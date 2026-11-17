@@ -424,6 +424,84 @@ def ranking(path, rows, title=None, theme='cold', show=None):
     return path
 
 
+# ---------------------------------------------------------------- an awards category's nominees (17 Nov 2026)
+def nominees(path, rows, title=None, theme='cold', show=None):
+    """An awards category (Mohammad, 17 Nov 2026: The Game Awards nominees in event style). `rows` are the nominees in the
+    order the show read them, 3 to 6, each {"name": "Saros", "note": "هاوسمارك (Housemarque)", "image": "tga26-saros"}:
+    the name (as the publisher writes it), an optional note under it (the studio, or the game for a performance) and an
+    optional box tile. No rank badge and no bar: a nominee list is not a ranking. `title` is the category in Arabic.
+    `show` reveals that many rows from the top, the order read (a row not yet revealed is not drawn at all)."""
+    if not 3 <= len(rows) <= 6:
+        raise ValueError(f'the nominees card holds 3 to 6 rows, not {len(rows)}')
+    RL.rtl_starts([title] if title else [], 'nominees card')
+    probe = ImageDraw.Draw(Image.new('L', (NG.W, NG.H)))
+    n_rows = len(rows)
+    shown = n_rows if show is None else show
+    row_h, tile, title_h = 140, 104, (84 if title else 0)
+    h = title_h + row_h * n_rows + 48
+    y0 = TOP
+    y1 = y0 + h
+    if y1 > 1300:
+        raise ValueError(f'nominees card ({y0}-{y1}) runs into the story lines; fewer rows')
+    im = NG.canvas()
+    d, left, right = _plate(im, y0, y1, theme)
+    y = y0 + 24
+    if title:
+        tf = A.F('Bold', 50)
+        if probe.textlength(title, font=tf, **G.AR) > (X1 - X0 - 88):
+            tf = A.F('Bold', 42)
+        if probe.textlength(title, font=tf, **G.AR) > (X1 - X0 - 88):
+            raise ValueError(f'nominees card title does not fit: {title}')
+        d.text((X1 - 44, y + 56), title, font=tf, fill=right + (255,), anchor='rs', **G.AR)
+        y += title_h
+    for i, r in enumerate(rows):
+        cy = y + row_h // 2
+        d = ImageDraw.Draw(im)
+        if i >= shown:
+            y += row_h
+            continue
+        if i:
+            d.line([X0 + 40, y, X1 - 40, y], fill=right + (60,), width=2)
+        tr = X1 - 44
+        img = r.get('image')
+        if img and (os.path.exists(os.path.join(GAMES, img + '.png')) or os.path.exists(os.path.join(CONSOLES, img + '.png'))):
+            im.alpha_composite(_tile(img, tile, tile, radius=20), (tr - tile, cy - tile // 2))
+            d = ImageDraw.Draw(im)
+            tr = tr - tile - 20
+        room = tr - (X0 + 48)
+        name_f = A.F('Bold', 44)
+        note = r.get('note')
+        note_f = A.F('Medium', NG.MIN_TEXT)
+        if note and probe.textlength(note, font=note_f, **G.AR) > room:
+            raise ValueError(f"nominees row note does not fit: {note}")
+        if probe.textlength(r['name'], font=name_f, **G.AR) <= room:
+            name_lines = [r['name']]
+            ys = [cy - 20] if note else [cy + 14]
+            ny = cy + 30
+        else:
+            name_f = A.F('Bold', NG.MIN_TEXT)
+            words = r['name'].split(' ')
+            best = None
+            for k in range(1, len(words)):
+                a, b = ' '.join(words[:k]), ' '.join(words[k:])
+                w = max(probe.textlength(a, font=name_f, **G.AR), probe.textlength(b, font=name_f, **G.AR))
+                if best is None or w < best[0]:
+                    best = (w, [a, b])
+            name_lines = [t.rstrip(':') for t in best[1]] if best else [r['name']]
+            if any(probe.textlength(t, font=name_f, **G.AR) > room for t in name_lines):
+                raise ValueError(f"nominees row does not fit: {r['name']}")
+            if note:
+                raise ValueError(f"nominees row too long for a two-line name and a note: {r['name']}; shorten the note")
+            ys, ny = [cy - 8, cy + 36], None
+        for t, ty in zip(name_lines, ys):
+            d.text((tr, ty), t, font=name_f, fill=A.INK, anchor='rs', **G.AR)
+        if note:
+            d.text((tr, ny), note, font=note_f, fill=A.BODY, anchor='rs', **G.AR)
+        y += row_h
+    im.save(path)
+    return path
+
+
 # ---------------------------------------------------------------- two scores side by side (8 Nov 2026)
 def duo(path, title, right, left, footer=None, theme='cold', stage=2):
     """Two scores beside each other on one plate (users beside critics): `right` and `left` are
@@ -518,7 +596,7 @@ def logofact(path, value, label, note, note2=None, top=None, logo=None, theme='c
 
 
 KINDS = {'logofact': logofact, 'fact': fact, 'scores': scores, 'verdict': verdict, 'totals': totals,
-         'product': product, 'ranking': ranking, 'duo': duo}
+         'product': product, 'ranking': ranking, 'duo': duo, 'nominees': nominees}
 
 
 def build(item, path, theme):
@@ -541,7 +619,7 @@ def animated(item, job):
     """True when this card moves: "animate" on the card wins, else the job's template is in ANIMATED."""
     if 'animate' in item:
         return bool(item['animate'])
-    return job.get('template') in ANIMATED and item.get('kind', 'fact') in ('ranking', 'fact', 'logofact')
+    return job.get('template') in ANIMATED and item.get('kind', 'fact') in ('ranking', 'nominees', 'fact', 'logofact')
 
 
 MONTHS = ('يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر')
@@ -569,7 +647,7 @@ def stages(item, path, theme, secs, start=0):
     two cards carries on from there instead of starting again)."""
     kind = item.get('kind', 'fact')
     base = os.path.splitext(path)[0]
-    if kind == 'ranking':
+    if kind in ('ranking', 'nominees'):
         n = len(item['rows'])
         final = min(n, int(item.get('show') or n))
         ks = list(range(start, final)) if start > 0 else list(range(1, final))
