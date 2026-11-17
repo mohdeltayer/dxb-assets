@@ -1,0 +1,60 @@
+[
+ {
+  "where": "credit 1",
+  "rule": "credit_width",
+  "what": "set one line at 36 px (was 40 px, too wide for the safe zone)",
+  "before": {
+   "text": "المصدر: إعلان Deep Rock Galactic: Survivor على Steam",
+   "size": 40
+  },
+  "after": {
+   "text": "المصدر: إعلان Deep Rock Galactic: Survivor على Steam",
+   "size": 36
+  }
+ },
+ {
+  "where": "shot 0",
+  "rule": "auto_shots",
+  "what": "sliptest-drg-survivor-launch-trailer.mp4 at 41.60 s for 3.8 s, focus 0.353 (nothing free in sliptest-drg-survivor-update-4-narrated-trailer.mp4)"
+ },
+ {
+  "where": "shot 1",
+  "rule": "auto_shots",
+  "what": "sliptest-drg-survivor-launch-trailer.mp4 at 51.06 s for 2.2 s, focus 0.345 (nothing free in sliptest-drg-survivor-update-4-narrated-trailer.mp4)"
+ },
+ {
+  "where": "shot 2",
+  "rule": "auto_shots",
+  "what": "sliptest-drg-survivor-launch-trailer.mp4 at 32.16 s for 2.2 s, focus 0.811 (nothing free in sliptest-drg-survivor-update-4-narrated-trailer.mp4)"
+ },
+ {
+  "where": "shot 3",
+  "rule": "auto_shots",
+  "what": "sliptest-drg-survivor-launch-trailer.mp4 at 54.98 s for 2.2 s, focus 0.349 (nothing free in sliptest-drg-survivor-update-4-narrated-trailer.mp4)"
+ },
+ {
+  "where": "shot 4",
+  "rule": "auto_shots",
+  "what": "sliptest-drg-survivor-launch-trailer.mp4 at 57.18 s for 2.2 s, focus 0.349 (nothing free in sliptest-drg-survivor-update-4-narrated-trailer.mp4)"
+ },
+ {
+  "where": "shot 5",
+  "rule": "auto_shots",
+  "what": "sliptest-drg-survivor-launch-trailer.mp4 at 19.98 s for 2.3 s, focus 0.617 (nothing free in sliptest-drg-survivor-update-4-narrated-trailer.mp4)"
+ },
+ {
+  "where": "shot 6",
+  "rule": "auto_shots",
+  "what": "sliptest-drg-survivor-launch-trailer.mp4 at 17.08 s for 2.3 s, focus 0.617 (nothing free in sliptest-drg-survivor-update-4-narrated-trailer.mp4)"
+ },
+ {
+  "where": "shot 7",
+  "rule": "auto_shots",
+  "what": "sliptest-drg-survivor-release-date-trailer.mp4 at 25.84 s for 2.3 s, focus 0.529 (nothing free in sliptest-drg-survivor-update-4-narrated-trailer.mp4)"
+ },
+ {
+  "where": "shot 8",
+  "rule": "auto_shots",
+  "what": "sliptest-drg-survivor-release-date-trailer.mp4 at 36.58 s for 2.3 s, focus 0.762 (nothing free in sliptest-drg-survivor-update-4-narrated-trailer.mp4)"
+ }
+]
