@@ -3,7 +3,7 @@
  "story": "2026-11-17-tga-2026-cat-audio",
  "kind_news": "awards",
  "built_by": "production-1",
- "out": "cards/test/tga-2026-cat-audio-reel-v2.mp4",
+ "out": "cards/test/tga-2026-cat-audio-reel-v3.mp4",
  "label": "رسمي",
  "source": "ذا غيم أووردز (The Game Awards)",
  "date": "17 Nov 2026",
@@ -23,59 +23,54 @@
  "sensitive": "none",
  "footage": [
   {
-   "file": "tga26-re9.mp4",
-   "steam": 3764200,
-   "trailer": "RE9_PV3",
-   "start": 0,
-   "seconds": 240
+   "file": "gta6-xl-drive.mp4",
+   "url": "https://media-rockstargames-com.akamaized.net/VI/downloads/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+   "stream": true,
+   "start": 757.5,
+   "seconds": 29.0
   }
  ],
  "shots": [
   [
-   "tga26-re9.mp4",
-   114.59,
-   3.6,
-   0.23
+   "gta6-xl-drive.mp4",
+   0.5,
+   3.0,
+   null
   ],
   [
    "tga-2026-cat-audio-gfx-nominees.png",
    [
-    "tga26-re9.mp4",
-    100.96
+    "gta6-xl-drive.mp4",
+    7.5
    ],
    5.4,
    null
   ],
   [
-   "tga26-re9.mp4",
-   79.51,
+   "gta6-xl-drive.mp4",
+   24.8,
    3.02,
-   [
-    [
-     0.0,
-     0.78
-    ]
-   ]
+   null
   ]
  ],
  "credits": [
   [
    0,
    0,
-   "المصدر: كابكوم (Capcom)"
+   "المصدر: روكستار غيمز (Rockstar Games)"
   ],
   [
    1,
    1,
-   "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: كابكوم (Capcom)",
+   "القائمة: ذا غيم أووردز (The Game Awards)\nاللقطات: روكستار غيمز (Rockstar Games)",
    {
-    "size": 30
+    "size": 36
    }
   ],
   [
    2,
    2,
-   "المصدر: كابكوم (Capcom)"
+   "المصدر: روكستار غيمز (Rockstar Games)"
   ]
  ],
  "lines": [
@@ -120,8 +115,8 @@
   }
  ],
  "ground_footage": [
-  "tga26-re9.mp4",
-  100.96
+  "gta6-xl-drive.mp4",
+  7.5
  ],
  "ground_seek": "fixed",
  "pace_ok": "the 5.4 s nominees card is animated: its rows enter one by one, 0.55 s apart, in the order read, then the full list holds 3 s to be read",
@@ -139,9 +134,9 @@
   "PICTURE: nothing graphic": "yes: stretches read by the server shots mode; the director looks once at the frames"
  },
  "decision_log": {
-  "hook": "Resident Evil Requiem (a nominee in this category) under the headline",
+  "hook": "Grand Theft Auto VI (a nominee in this category) under the headline",
   "card": "the nominees in the order read, names as the show writes them, no ranking",
-  "close": "Resident Evil Requiem again",
+  "close": "Grand Theft Auto VI again",
   "music": "our bed (bed_reason)"
  }
 }
