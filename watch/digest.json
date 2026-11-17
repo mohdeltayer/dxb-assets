@@ -1,70 +1,82 @@
 {
  "schema": 1,
  "file": "digest",
- "generated_at": "2026-11-17T18:52:05Z",
- "seq": 584,
+ "generated_at": "2026-11-17T19:52:08Z",
+ "seq": 587,
  "kind": "hourly",
- "since": "2026-11-17T17:52:06Z",
+ "since": "2026-11-17T18:52:05Z",
  "official": [
   {
-   "id": 16639,
-   "source": "Blizzard (Google News)",
-   "source_kind": "gnews",
-   "title": "Midnight: Echoes of the Worldcore Arrives on December 1 — World of Warcraft - Blizzard News",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQQnZlb3FuZVp2bzJmWEtpMDYwbmtacUt1Rm1DalBuSS02MlQyOVlaTDBWVko5NDQtODVERG1GTmxaVGN3eDQ3Q0hUbkc3OW9LdlpVdGEtTWMtWnB3RjNGdDFvMXBzNnJKQXJ2Ynl0TkM3Nk9TMkc4V0M5elFUNUpOTHdldnFyMDAzdzQwOEJzZHdOUng0U3VjRUVHcW9jSGFkY1pvcE1n?oc=5",
-   "published": "2026-11-17T18:00Z",
-   "first_seen": "2026-11-17T18:10:14Z",
-   "media": [],
-   "breaking_source": false,
-   "breaking_seq": null,
-   "digest_seq": 584
-  },
-  {
-   "id": 16640,
-   "source": "Blizzard (Google News)",
-   "source_kind": "gnews",
-   "title": "Talebound’s Twisted Tales and Deadly Fates Arrive December 1 — World of Warcraft - Blizzard News",
-   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQSG5handUR1FMSndhZW12c0dlQVlZT194TUlicksxQ2lSR0lRODJOd0d4OWVmSTUyMENVVTFXaWVraklFdEltSTlOSmdfb3BSdHo3RUZISWtGNHF3MXB4aE5oaHZCNmI5WVdQQXBuT182U0dvVW5IeXE5dmNGZzktNEp1cTdvUGotUXRieGJweE5QcncxcWdmdGYwNWpZV3Bzc0NxVl9fQVl2TG1Q?oc=5",
-   "published": "2026-11-17T17:59Z",
-   "first_seen": "2026-11-17T18:10:14Z",
-   "media": [],
-   "breaking_source": false,
-   "breaking_seq": null,
-   "digest_seq": 584
-  },
-  {
-   "id": 16641,
-   "source": "Bandai Namco Entertainment",
+   "id": 16768,
+   "source": "Xbox Wire",
    "source_kind": "official",
-   "title": "Vale Sangora Is Calling You Once Again – The Blood of Dawnwalker Receives New Game+ Mode",
-   "url": "https://www.bandainamcoent.com/news/the-blood-of-dawnwalker-receives-new-game-plus-mode",
-   "published": "2026-11-17T00:00Z",
-   "first_seen": "2026-11-17T18:10:14Z",
-   "media": [],
-   "breaking_source": false,
-   "breaking_seq": null,
-   "digest_seq": 584
+   "title": "The Game Awards 2026 Nominees – Play Gears of War: E-Day, Grand Theft Auto VI, Resident Evil Requiem, and More on XBOX",
+   "url": "https://news.xbox.com/en-us/2026/11/17/the-game-awards-2026-nominees-on-xbox/",
+   "published": "2026-11-17T19:30Z",
+   "first_seen": "2026-11-17T19:40:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.29314.14287567326939893.a8ef79c4-3c43-4b7c-acd5-29f4d5e555d8.57a352c9-aeea-4d6b-92fc-459acd41ffe4?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://assets.onestore.ms/cdnfiles/sfw-service-web-onestore-onerf-2017-11-8-12/store/common/images/xpalogo_black.png"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.14529.14340913040248760.33d520ad-e4fe-42de-b3b0-b6f126c379d9.b8e910db-fdda-446b-af14-702435d54f7d?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.52601.14422848452564174.73566ad4-aa1c-4ff1-b55a-21efcdc91e00.06808afa-f6a6-4da0-acc1-5eadb51ccdc6?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.24249.13550041517005289.94982f01-a340-49e3-9d4f-37cb23ee22c9.22ffebb1-9164-4b10-9d7d-9d5caa1091a3?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.29053.13885697713732469.57172206-9624-44ae-9aab-e4d08a8b3212.9e1b1273-7b5d-406a-8f28-50d2f02c571c?w=400&h=600"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 586,
+   "digest_seq": 587
   },
   {
-   "id": 16672,
-   "source": "Bandai Namco",
-   "source_kind": "page",
-   "title": "The Blood of Dawnwalker Vale Sangora Is Calling You Once Again – The Blood of Dawnwalker Receives New Game+ Mode Update 1.2 is now live on all platforms, bringi",
-   "url": "https://www.bandainamcoent.com/news/the-blood-of-dawnwalker-receives-new-game-plus-mode",
-   "published": null,
-   "first_seen": "2026-11-17T18:10:14Z",
+   "id": 16732,
+   "source": "Blizzard (Google News)",
+   "source_kind": "gnews",
+   "title": "Midnight: Echoes of the Worldcore Arrives on 1 December — World of Warcraft - Blizzard News",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQSzhqQmhvbHBnQjhMbUhtc1BlT2JacXpjQVE5WUhMV2poNXkteGNZUlVPT0l3RVhaWXkySFE1d0FJNlE5M2ZFN0FZN2w3WHgtQ243TlFBVUtiZ3RMRDNJSFBaWTRDblRSaC04TDZHMmhOek1HVUhwaWtuN3dqTmExTURaNllrMHJuX2lXMWhpSlVtRzFHclNGTWpDbWVkSHFQTi10dV9B?oc=5",
+   "published": "2026-11-17T18:00Z",
+   "first_seen": "2026-11-17T19:10:05Z",
    "media": [],
    "breaking_source": false,
    "breaking_seq": null,
-   "digest_seq": 584
+   "digest_seq": 587
+  },
+  {
+   "id": 16750,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/17/26 Nintendo NEW YORK and Nintendo SAN FRANCISCO are bringing the joy this holiday season! The Nintendo NEW YORK and Nintendo SAN FRANCISCO stores have tra",
+   "url": "https://www.nintendo.com/us/whatsnew/nintendo-new-york-and-nintendo-san-francisco-are-bringing-the-joy-this-holiday-season/",
+   "published": null,
+   "first_seen": "2026-11-17T19:10:05Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 585,
+   "digest_seq": 587
   }
  ],
  "outlets": [
   {
-   "count": 23,
-   "published": "2026-11-16T19:11Z",
-   "title": "كيفية الحصول على سترة Goron Tunic في Zelda Ocarina of Time",
-   "url": "https://www.saudigamer.com/zelda-ocarina-of-time-goron-tunic-how-to-get/",
+   "count": 24,
+   "published": "2026-11-16T23:49Z",
+   "title": "Zelda: Ocarina of Time is 2026's best-selling physical video game in the US after just one week",
+   "url": "https://gonintendo.com/contents/67311-zelda-ocarina-of-time-is-2026-s-best-selling-physical-video-game-in-the-us-after",
    "sources": [
     "Eurogamer",
     "Game Informer",
@@ -72,6 +84,7 @@
     "GamesRadar",
     "Gematsu",
     "GoNintendo",
+    "IGN",
     "IGN Middle East (AR)",
     "IGN Middle East (EN)",
     "Insider Gaming",
@@ -82,10 +95,10 @@
     "Polygon",
     "Pure Xbox",
     "Push Square",
-    "Saudi Gamer (AR)",
     "Siliconera",
     "Steam News (hub)",
     "Tbreak (Gulf)",
+    "True Gaming (AR)",
     "TweakTown",
     "VGA4A (AR)",
     "VGC"
@@ -94,25 +107,69 @@
    "media": [
     {
      "type": "image",
-     "url": "https://www.saudigamer.com/wp-content/uploads/2026/11/image-160-1400x787.png"
-    },
-    {
-     "type": "image",
-     "url": "https://www.saudigamer.com/wp-content/uploads/2026/11/zeldaootremake_guide_gorontunic_map-1400x677.jpg"
+     "url": "https://gonintendo.com/attachments/image/89104/file/medium-c1c12280e35013ce14d78c8ee458f7af.jpeg"
     }
    ],
    "items": [
     {
-     "source": "Saudi Gamer (AR)",
-     "title": "كيفية الحصول على سترة Goron Tunic في Zelda Ocarina of Time",
-     "url": "https://www.saudigamer.com/zelda-ocarina-of-time-goron-tunic-how-to-get/",
-     "published": "2026-11-16T19:11Z"
+     "source": "GoNintendo",
+     "title": "Zelda: Ocarina of Time is 2026's best-selling physical video game in the US after just one week",
+     "url": "https://gonintendo.com/contents/67311-zelda-ocarina-of-time-is-2026-s-best-selling-physical-video-game-in-the-us-after",
+     "published": "2026-11-16T23:49Z"
     },
     {
-     "source": "Saudi Gamer (AR)",
-     "title": "كيفية الحصول على Mini Miku Sprite في Fortnite",
-     "url": "https://www.saudigamer.com/fortnite-mini-miku-sprite-location-how-to-get-effect/",
-     "published": "2026-11-16T20:55Z"
+     "source": "Nintendo Everything",
+     "title": "Zelda: Ocarina of Time becomes 2026’s best-selling physical game in the U.S. in just one week",
+     "url": "https://nintendoeverything.com/zelda-ocarina-of-time-becomes-2026s-best-selling-physical-game-in-the-u-s-in-just-one-week/",
+     "published": "2026-11-17T00:05Z"
+    },
+    {
+     "source": "GamesRadar",
+     "title": "Zelda: Ocarina of Time remake is 2026's best-selling physical game in the US after just 1 week",
+     "url": "https://www.gamesradar.com/games/the-legend-of-zelda/zelda-ocarina-of-time-remake-is-2026s-best-selling-physical-game-in-the-us-after-just-1-week/",
+     "published": "2026-11-17T00:44Z"
+    },
+    {
+     "source": "Nintendo Life",
+     "title": "Zelda: Ocarina Of Time Remake Crowned 2026's \"Best-Selling Physical Video Game In The US\"",
+     "url": "https://www.nintendolife.com/news/2026/11/zelda-ocarina-of-time-remake-crowned-2026s-best-selling-physical-video-game-in-the-us",
+     "published": "2026-11-17T01:15Z"
+    },
+    {
+     "source": "Tbreak (Gulf)",
+     "title": "Zelda: Ocarina of Time tops 2026’s US physical sales chart",
+     "url": "https://tbreak.com/zelda-ocarina-of-time-best-selling-physical-game-us-2026/",
+     "published": "2026-11-17T04:21Z"
+    },
+    {
+     "source": "VGC",
+     "title": "Zelda Ocarina of Time remake is the best-selling physical game in the US in 2026 so far, passing 1 million in its first week",
+     "url": "https://www.videogameschronicle.com/news/zelda-ocarina-of-time-remake-is-the-best-selling-physical-game-in-the-us-in-2026-so-far-passing-1-million-in-its-first-week/",
+     "published": "2026-11-17T09:24Z"
+    },
+    {
+     "source": "True Gaming (AR)",
+     "title": "The Legend of Zelda: Ocarina of Time تحقق أعلى رقم مبيعات للعبة بنسخة المتاجر بالعام 2026 بالسوق الأمريكي “مليون نسخة بيومين فقط!”",
+     "url": "https://www.true-gaming.net/home/643925/the-legend-of-zelda-ocarina-of-time-%d8%aa%d8%ad%d9%82%d9%82-%d8%a3%d8%b9%d9%84%d9%89-%d8%b1%d9%82%d9%85-%d9%85%d8%a8%d9%8a%d8%b9%d8%a7%d8%aa-%d9%84%d9%84%d8%b9%d8%a8%d8%a9-%d8%a8%d9%86%d8%b3%d8%ae/",
+     "published": "2026-11-17T10:42Z"
+    },
+    {
+     "source": "IGN",
+     "title": "The Legend of Zelda: Ocarina of Time Remake Is Already Running Rampant on PC — but Can Nintendo Do Anything About It?",
+     "url": "https://www.ign.com/articles/the-legend-of-zelda-ocarina-of-time-remake-is-already-running-rampant-on-pc-but-can-nintendo-do-anything-about-it",
+     "published": "2026-11-17T11:23Z"
+    },
+    {
+     "source": "IGN Middle East (EN)",
+     "title": "The Legend of Zelda: Ocarina of Time Remake Is Already Running Rampant on PC — but Can Nintendo Do Anything About It?",
+     "url": "https://me.ign.com/en/the-legend-of-zelda-ocarina-of-time-2026/249826/the-legend-of-zelda-ocarina-of-time-remake-is-already-running-rampant-on-pc-but-can-nintendo-do-anyt",
+     "published": "2026-11-17T11:23Z"
+    },
+    {
+     "source": "Kotaku",
+     "title": "Zelda: Ocarina Of Time Remake Sold 1 Million Physical Copies In Its First Week, The Most Since Tears Of The Kingdom",
+     "url": "https://kotaku.com/zelda-ocarina-of-time-remake-sold-1-million-physical-copies-in-its-first-week-the-most-since-tears-of-the-kingdom-2000757645",
+     "published": "2026-11-17T11:30Z"
     },
     {
      "source": "Polygon",
@@ -205,6 +262,12 @@
      "published": "2026-11-17T17:36Z"
     },
     {
+     "source": "IGN",
+     "title": "The Game Awards 2026 Nominations Revealed, GTA 6 Dominates",
+     "url": "https://www.ign.com/articles/the-game-awards-2026-nominations-revealed-gta-6-dominates",
+     "published": "2026-11-17T17:36Z"
+    },
+    {
      "source": "Gematsu",
      "title": "The Game Awards 2026 nominees announced",
      "url": "https://www.gematsu.com/2026/11/the-game-awards-2026-nominees-announced",
@@ -265,15 +328,33 @@
      "published": "2026-11-17T18:05Z"
     },
     {
+     "source": "GameSpot",
+     "title": "GTA 6 Leads TGA Nominations, And Reviews Aren’t Even Live Yet",
+     "url": "https://www.gamespot.com/articles/gta-6-leads-tga-nominations-and-reviews-arent-even-live-yet/",
+     "published": "2026-11-17T18:22Z"
+    },
+    {
      "source": "PC Gamer",
      "title": "We got 8 Game Awards nominations for GTA 6 before GTA 6",
      "url": "https://www.pcgamer.com/gaming-industry/events-conferences/we-got-8-game-awards-nominations-for-gta-6-before-gta-6/",
      "published": "2026-11-17T18:35Z"
+    },
+    {
+     "source": "Eurogamer",
+     "title": "The Game Awards 2026 nominees announced, and GTA 6 leads with eight nods before it's even out",
+     "url": "https://www.eurogamer.net/game-awards-2026-nominees-full-list-gta-6",
+     "published": "2026-11-17T19:01Z"
+    },
+    {
+     "source": "GoNintendo",
+     "title": "Lawyers weigh in on what Nintendo can do about Zelda: Ocarina of Time PC recomps and emulation",
+     "url": "https://gonintendo.com/contents/67338-lawyers-weigh-in-on-what-nintendo-can-do-about-zelda-ocarina-of-time-pc-recomps-and",
+     "published": "2026-11-17T19:30Z"
     }
    ]
   },
   {
-   "count": 10,
+   "count": 11,
    "published": "2026-11-16T21:13Z",
    "title": "Trump supports Jensen Huang's return as Nvidia CEO, but it doesn't sound like the board is interested",
    "url": "https://www.pcgamer.com/software/ai/trump-supports-jensen-huangs-return-as-nvidia-ceo-but-it-doesnt-sound-like-the-board-is-interested/",
@@ -283,6 +364,7 @@
     "GamesRadar",
     "IGN",
     "IGN Middle East (EN)",
+    "Kotaku",
     "PC Gamer",
     "Steam News (hub)",
     "Tbreak (Gulf)",
@@ -332,6 +414,18 @@
      "published": "2026-11-17T11:02Z"
     },
     {
+     "source": "IGN Middle East (EN)",
+     "title": "In the Wake of Jensen Huang Scandal, Nvidia Establishes National Security and Export Control Committee",
+     "url": "https://me.ign.com/en/nvidia-rtx-5090/249822/in-the-wake-of-jensen-huang-scandal-nvidia-establishes-national-security-and-export-control-committe",
+     "published": "2026-11-17T15:02Z"
+    },
+    {
+     "source": "IGN",
+     "title": "In the Wake of Jensen Huang Scandal, Nvidia Establishes National Security and Export Control Committee",
+     "url": "https://www.ign.com/articles/in-the-wake-of-jensen-huang-scandal-nvidia-establishes-national-security-and-export-control-committee",
+     "published": "2026-11-17T15:02Z"
+    },
+    {
      "source": "GameSpot",
      "title": "Ousted Nvidia CEO Jensen Huang Breaks His Silence, Says He Would Come Back",
      "url": "https://www.gamespot.com/articles/ousted-nvidia-ceo-jensen-huang-breaks-his-silence-says-he-would-come-back/",
@@ -342,6 +436,18 @@
      "title": "Asian chip stocks fall for a second day as NVIDIA earnings loom and Jensen Huang fallout begins",
      "url": "https://www.tweaktown.com/rss/click/news/114748/?c=news-mf",
      "published": "2026-11-17T16:46Z"
+    },
+    {
+     "source": "IGN Middle East (EN)",
+     "title": "Jensen Huang Says He Would Return to Nvidia if Its Board of Directors Ask Him To",
+     "url": "https://me.ign.com/en/nvidia-rtx-5090/249820/jensen-huang-says-he-would-return-to-nvidia-if-its-board-of-directors-ask-him-to",
+     "published": "2026-11-17T16:56Z"
+    },
+    {
+     "source": "IGN",
+     "title": "Jensen Huang Says He Would Return to Nvidia if Its Board of Directors Ask Him To",
+     "url": "https://www.ign.com/articles/jensen-huang-says-he-would-return-to-nvidia-if-its-board-of-directors-ask-him-to",
+     "published": "2026-11-17T16:56Z"
     },
     {
      "source": "PC Gamer",
@@ -372,11 +478,17 @@
      "title": "Jensen Huang: أنا مستعد للعودة إلى منصب رئيس NVIDIA التنفيذي إذا طلب مني مجلس الإدارة ذلك",
      "url": "https://www.true-gaming.net/home/643960/jensen-huang-%d8%a3%d9%86%d8%a7-%d9%85%d8%b3%d8%aa%d8%b9%d8%af-%d9%84%d9%84%d8%b9%d9%88%d8%af%d8%a9-%d8%a5%d9%84%d9%89-%d9%85%d9%86%d8%b5%d8%a8-%d8%b1%d8%a6%d9%8a%d8%b3-nvidia-%d8%a7%d9%84%d8%aa/",
      "published": "2026-11-17T17:51Z"
+    },
+    {
+     "source": "Kotaku",
+     "title": "Ex-CEO Jensen Huang Says He’d Be ‘Honored’ To Return To Nvidia But The AI Tech Giant Is Saying No Thanks",
+     "url": "https://kotaku.com/ex-ceo-jensen-huang-says-hed-be-honored-to-return-to-nvidia-but-the-ai-tech-giant-is-saying-no-thanks-2000757760",
+     "published": "2026-11-17T19:15Z"
     }
    ]
   },
   {
-   "count": 9,
+   "count": 10,
    "published": "2026-11-17T16:47Z",
    "title": "Civilization Developer Firaxis Games Hit By Mass Layoffs As New XCOM Reportedly Misses Milestone",
    "url": "https://kotaku.com/civilization-developer-firaxis-games-hit-by-mass-layoffs-as-new-xcom-reportedly-misses-milestone-2000757725",
@@ -384,6 +496,7 @@
     "Eurogamer",
     "GamesIndustry.biz",
     "GamesRadar",
+    "IGN",
     "Insider Gaming",
     "Kotaku",
     "Nintendo Life",
@@ -458,89 +571,120 @@
      "title": "Firaxis reportedly cuts a third of its staff as studio head departs and new XCOM struggles",
      "url": "https://www.eurogamer.net/firaxis-layoffs-civilization-xcom-heather-hazen",
      "published": "2026-11-17T18:13Z"
+    },
+    {
+     "source": "IGN",
+     "title": "'These Decisions Are Never Easy' — Civilization Developer Firaxis Lays Off One Third of Its Workforce",
+     "url": "https://www.ign.com/articles/firaxis-lays-off-one-third-of-its-workforce",
+     "published": "2026-11-17T18:45Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "'These Decisions Are Never Easy' — Civilization Developer Firaxis Lays Off One Third of Its Workforce",
+     "url": "https://store.steampowered.com/news/group/9869/view/693151734943451154",
+     "published": "2026-11-17T19:42Z"
     }
    ]
   },
   {
-   "count": 7,
-   "published": "2026-11-17T17:04Z",
-   "title": "GTA 6 Receives Several Nominations at The Game Awards",
-   "url": "https://insider-gaming.com/gta-6-the-game-awards-nominations/",
+   "count": 10,
+   "published": "2026-11-16T20:00Z",
+   "title": "The Great Star Wars: Galactic Racer Will Soon Be Even Better, Major New Features Announced",
+   "url": "https://www.pushsquare.com/news/2026/11/the-great-star-wars-galactic-racer-will-soon-be-even-better-major-new-features-announced",
    "sources": [
     "Destructoid",
-    "Eurogamer",
-    "GameSpot",
-    "GamesRadar",
+    "Game Informer",
+    "Gamekult (FR)",
     "Insider Gaming",
+    "Kotaku",
     "Polygon",
+    "Push Square",
+    "Rock Paper Shotgun",
+    "Steam News (hub)",
     "VGC"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://www.videogameschronicle.com/files/2025/05/Lucia_Caminos_06.jpg"
+     "url": "https://images.pushsquare.com/66ac3706ae936/small.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://images.pushsquare.com/66ac3706ae936/large.jpg"
     }
    ],
    "items": [
     {
-     "source": "Insider Gaming",
-     "title": "GTA 6 Receives Several Nominations at The Game Awards",
-     "url": "https://insider-gaming.com/gta-6-the-game-awards-nominations/",
-     "published": "2026-11-17T17:04Z"
-    },
-    {
-     "source": "Insider Gaming",
-     "title": "GTA 6 Lucia Actress Officially Revealed During 2026 Game Awards Nominations",
-     "url": "https://insider-gaming.com/gta-6-lucia-actress-officially-revealed-during-2026-game-awards-nominations/",
-     "published": "2026-11-17T17:07Z"
-    },
-    {
-     "source": "VGC",
-     "title": "Lucia actor confirmed as GTA 6 sweeps The Game Awards nominations",
-     "url": "https://www.videogameschronicle.com/news/lucia-actor-confirmed-as-gta-6-sweeps-the-game-awards-nominations/",
-     "published": "2026-11-17T17:08Z"
-    },
-    {
-     "source": "GamesRadar",
-     "title": "GTA 6 Lucia actor revealed thanks to The Game Awards Best Performance nomination, and it's exactly who everyone expected",
-     "url": "https://www.gamesradar.com/games/grand-theft-auto/gta-6-lucia-actor-revealed-thanks-to-the-game-awards-best-performance-nomination-and-yes-its-exactly-who-everyone-expected/",
-     "published": "2026-11-17T17:12Z"
+     "source": "Push Square",
+     "title": "The Great Star Wars: Galactic Racer Will Soon Be Even Better, Major New Features Announced",
+     "url": "https://www.pushsquare.com/news/2026/11/the-great-star-wars-galactic-racer-will-soon-be-even-better-major-new-features-announced",
+     "published": "2026-11-16T20:00Z"
     },
     {
      "source": "Destructoid",
-     "title": "All The Game Awards 2026 nominations",
-     "url": "https://www.destructoid.com/all-the-game-awards-2026-nominations/",
-     "published": "2026-11-17T17:21Z"
-    },
-    {
-     "source": "Destructoid",
-     "title": "GTA 6 sweeps The Game Awards nominations 2 days before its release, unsurprisingly",
-     "url": "https://www.destructoid.com/gta-6-the-game-awards-tga-nominations-2026/",
-     "published": "2026-11-17T17:25Z"
-    },
-    {
-     "source": "Eurogamer",
-     "title": "The Game Awards just confirmed who plays GTA 6's Lucia",
-     "url": "https://www.eurogamer.net/gta-6-lucia-actress-manni-l-perez-confirmed",
-     "published": "2026-11-17T17:42Z"
+     "title": "I’m glad Star Wars: Galactic Racer is bringing back split-screen, one of the best things from our childhoods",
+     "url": "https://www.destructoid.com/im-glad-star-wars-galactic-racer-is-bringing-back-split-screen-one-of-the-best-things-from-our-childhoods/",
+     "published": "2026-11-16T20:21Z"
     },
     {
      "source": "Polygon",
-     "title": "GTA 6's Rumored Lucia Actor Confirmed for Cast by Game Awards Nomination",
-     "url": "https://www.polygon.com/gta-6-lucia-actor-confirmed-game-awards-2026/",
-     "published": "2026-11-17T17:56Z"
+     "title": "Star Wars: Galactic Racer Officially Getting the Feature Every Racing Game Needs",
+     "url": "https://www.polygon.com/star-wars-galactic-racer-local-split-screen-multiplayer-update/",
+     "published": "2026-11-16T20:23Z"
     },
     {
-     "source": "GameSpot",
-     "title": "GTA 6’s Lucia Actor Revealed, And It’s The Person Everyone Already Guessed",
-     "url": "https://www.gamespot.com/articles/gta-6s-lucia-actor-revealed-and-its-the-person-everyone-already-guessed/",
-     "published": "2026-11-17T18:00Z"
+     "source": "Insider Gaming",
+     "title": "Star Wars: Galactic Racer Adding In Local Split-Screen",
+     "url": "https://insider-gaming.com/star-wars-galactic-racer-splitscreen/",
+     "published": "2026-11-16T21:45Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "Star Wars: Galactic Racer is Adding a Highly-Requested Feature",
+     "url": "https://store.steampowered.com/news/group/1450625/view/714543833176606049",
+     "published": "2026-11-17T02:22Z"
+    },
+    {
+     "source": "Gamekult (FR)",
+     "title": "L'écran splitté sur Star Wars Galactic Racer, ça arrive bientôt",
+     "url": "https://www.gamekult.com/actualite/l-ecran-splitte-sur-star-wars-galactic-racer-ca-arrive-bientot-3050873031.html",
+     "published": "2026-11-17T09:32Z"
+    },
+    {
+     "source": "Rock Paper Shotgun",
+     "title": "Star Wars Galactic Racer will get local split-screen multiplayer in early 2027 with new 'Free Play' mode, finally letting racers yell at one another in a tangible space",
+     "url": "https://www.rockpapershotgun.com/star-wars-galactic-racer-will-get-local-split-screen-multiplayer-in-early-2027-with-new-free-play-mode-finally-letting-racers-yell-at-one-another-in-a-tangible-space",
+     "published": "2026-11-17T11:00Z"
+    },
+    {
+     "source": "VGC",
+     "title": "Star Wars Galactic Racer is getting split-screen multiplayer and a new Free Play mode",
+     "url": "https://www.videogameschronicle.com/news/star-wars-galactic-racer-is-getting-split-screen-multiplayer-and-a-new-free-play-mode/",
+     "published": "2026-11-17T11:16Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "Star Wars Galactic Racer is getting split-screen multiplayer and a new Free Play mode",
+     "url": "https://store.steampowered.com/news/group/42342144/view/688648135317128927",
+     "published": "2026-11-17T11:17Z"
+    },
+    {
+     "source": "Game Informer",
+     "title": "Star Wars: Galactic Racer Gets Local Splitscreen Multiplayer Next Year",
+     "url": "https://gameinformer.com/2026/11/17/star-wars-galactic-racer-gets-local-splitscreen-multiplayer-next-year",
+     "published": "2026-11-17T15:08Z"
+    },
+    {
+     "source": "Kotaku",
+     "title": "The Best Star Wars Racing Game In Years Is Going To Add Split-Screen Multiplayer",
+     "url": "https://kotaku.com/the-best-star-wars-racing-game-in-years-is-going-to-add-split-screen-multiplayer-2000757526",
+     "published": "2026-11-17T18:45Z"
     }
    ]
   },
   {
-   "count": 7,
+   "count": 9,
    "published": "2026-11-17T14:19Z",
    "title": "Sony Wins PlayStation Digital Games Lawsuit",
    "url": "https://insider-gaming.com/sony-wins-playstation-digital-games-lawsuit/",
@@ -548,6 +692,8 @@
     "Eurogamer",
     "GamesIndustry.biz",
     "GamesRadar",
+    "IGN",
+    "IGN Middle East (EN)",
     "Insider Gaming",
     "Kotaku",
     "Rock Paper Shotgun",
@@ -592,6 +738,18 @@
      "published": "2026-11-17T16:25Z"
     },
     {
+     "source": "IGN Middle East (EN)",
+     "title": "Sony Squashes $2.6 Billion Lawsuit That Claimed It Ran a 'Near Monopoly' and PlayStation Game Prices Were Too High",
+     "url": "https://me.ign.com/en/playstation-5-2/249821/sony-squashes-26-billion-lawsuit-that-claimed-it-ran-a-near-monopoly-and-playstation-game-prices-wer",
+     "published": "2026-11-17T16:25Z"
+    },
+    {
+     "source": "IGN",
+     "title": "Sony Squashes $2.6 Billion Lawsuit That Claimed It Ran a 'Near Monopoly' and PlayStation Game Prices Were Too High",
+     "url": "https://www.ign.com/articles/sony-squashes-26-billion-lawsuit-that-claimed-it-ran-a-near-monopoly-and-playstation-game-prices-were-too-high",
+     "published": "2026-11-17T16:25Z"
+    },
+    {
      "source": "Rock Paper Shotgun",
      "title": "Sony defeat $2.6 billion UK class action lawsuit which argued PlayStation's dominant market position fuels \"excessive and unfair\" game prices",
      "url": "https://www.rockpapershotgun.com/sony-defeat-26-billion-uk-class-action-lawsuit-which-argued-playstations-dominant-market-position-fuels-excessive-and-unfair-game-prices",
@@ -606,48 +764,164 @@
    ]
   },
   {
-   "count": 6,
-   "published": "2026-11-16T19:40Z",
-   "title": "Grand Theft Auto 6 hacker pleads guilty to all charges",
-   "url": "https://www.pcgamer.com/games/grand-theft-auto/grand-theft-auto-6-hacker-pleads-guilty-to-all-charges/",
+   "count": 8,
+   "published": "2026-11-17T15:30Z",
+   "title": "Sci-fi RPG Exodus continues evoking Mass Effect by revealing female lead and nicknaming her FemJun",
+   "url": "https://www.eurogamer.net/exodus-femjun-femshep-mass-effect-bioware-sci-fi-rpg",
    "sources": [
-    "Destructoid",
-    "Insider Gaming",
+    "Eurogamer",
+    "IGN",
+    "IGN Middle East (EN)",
     "Kotaku",
     "PC Gamer",
-    "The Verge",
-    "TweakTown"
+    "Polygon",
+    "Push Square",
+    "Steam News (hub)"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/Zb9knsapKKuVr4cW9QJkc8-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/kkNtsnEsZiTdgmuFTn4pJ6-1920-80.jpg"
+     "url": "https://assetsio.gnwcdn.com/exodus-femjun-2.jpg?width=690&quality=85&format=jpg&auto=webp"
     }
    ],
    "items": [
     {
+     "source": "Eurogamer",
+     "title": "Sci-fi RPG Exodus continues evoking Mass Effect by revealing female lead and nicknaming her FemJun",
+     "url": "https://www.eurogamer.net/exodus-femjun-femshep-mass-effect-bioware-sci-fi-rpg",
+     "published": "2026-11-17T15:30Z"
+    },
+    {
+     "source": "IGN Middle East (EN)",
+     "title": "Exodus Reveals Female Protagonist and Voice Actor, Shown in New Trailer for Upcoming Mass Effect-Like RPG",
+     "url": "https://me.ign.com/en/exodus-2024/249818/exodus-reveals-female-protagonist-and-voice-actor-shown-in-new-trailer-for-upcoming-mass-effect-like",
+     "published": "2026-11-17T15:45Z"
+    },
+    {
+     "source": "IGN",
+     "title": "Exodus Reveals Female Protagonist and Voice Actor, Shown in New Trailer for Upcoming Mass Effect-Like RPG",
+     "url": "https://www.ign.com/articles/exodus-reveals-female-protagonist-and-voice-actor-shown-in-new-trailer-for-upcoming-mass-effect-like-rpg",
+     "published": "2026-11-17T15:45Z"
+    },
+    {
+     "source": "Push Square",
+     "title": "Exodus Reveals Female Protagonist After All the Drama Around Its Male Lead",
+     "url": "https://www.pushsquare.com/news/2026/11/exodus-reveals-female-protagonist-after-all-the-drama-around-its-male-lead",
+     "published": "2026-11-17T16:30Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "Exodus Reveals Female Protagonist and Voice Actor, Shown in New Trailer for Upcoming Mass Effect-Like RPG",
+     "url": "https://store.steampowered.com/news/group/9869/view/693151734943451123",
+     "published": "2026-11-17T16:42Z"
+    },
+    {
+     "source": "Polygon",
+     "title": "Mass Effect Spiritual Successor Exodus Finally Reveals Female Protagonist",
+     "url": "https://www.polygon.com/exodus-rpg-mass-effect-successor-female-protagonist-revealed/",
+     "published": "2026-11-17T16:46Z"
+    },
+    {
      "source": "PC Gamer",
-     "title": "Grand Theft Auto 6 hacker pleads guilty to all charges",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/grand-theft-auto-6-hacker-pleads-guilty-to-all-charges/",
-     "published": "2026-11-16T19:40Z"
+     "title": "Sci-fi RPG Exodus gets even more Mass Effect-like with its female lead, who they are calling Femjun",
+     "url": "https://www.pcgamer.com/games/rpg/sci-fi-rpg-exodus-gets-even-more-mass-effect-like-with-its-female-lead-who-they-are-calling-femjun/",
+     "published": "2026-11-17T18:55Z"
     },
     {
-     "source": "The Verge",
-     "title": "Hacker behind 2022 GTA VI leaks pleads guilty",
-     "url": "https://www.theverge.com/games/1035087/gta-vi-leaks-2022-hacker-pleads-guilty-arion-kurtaj",
-     "published": "2026-11-16T23:35Z"
+     "source": "Kotaku",
+     "title": "Mass Effect Spiritual Successor Exodus Has Revealed Its Version Of FemShep And I Have A Couple Of Questions",
+     "url": "https://kotaku.com/mass-effect-spiritual-successor-exodus-has-revealed-its-version-of-femshep-and-i-have-a-couple-of-questions-2000757696",
+     "published": "2026-11-17T19:13Z"
+    }
+   ]
+  },
+  {
+   "count": 7,
+   "published": "2026-11-17T01:25Z",
+   "title": "Splatoon Raiders demo now available",
+   "url": "https://gonintendo.com/contents/67316-splatoon-raiders-demo-now-available",
+   "sources": [
+    "Gematsu",
+    "GoNintendo",
+    "Nintendo Everything",
+    "Nintendo Life",
+    "Polygon",
+    "Siliconera",
+    "VGC"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://gonintendo.com/attachments/image/89111/file/medium-07c626825544148c5f76e0fd4af65b09.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "GoNintendo",
+     "title": "Splatoon Raiders demo now available",
+     "url": "https://gonintendo.com/contents/67316-splatoon-raiders-demo-now-available",
+     "published": "2026-11-17T01:25Z"
     },
     {
-     "source": "TweakTown",
-     "title": "GTA 6 hacker pleads guilty to all charges, sentencing set days after launch",
-     "url": "https://www.tweaktown.com/rss/click/news/114727/?c=news-mf",
-     "published": "2026-11-17T10:14Z"
+     "source": "Nintendo Everything",
+     "title": "Nintendo has now released a Splatoon Raiders demo",
+     "url": "https://nintendoeverything.com/nintendo-has-now-released-a-splatoon-raiders-demo/",
+     "published": "2026-11-17T01:30Z"
     },
+    {
+     "source": "Gematsu",
+     "title": "Splatoon Raiders demo now available",
+     "url": "https://www.gematsu.com/2026/11/splatoon-raiders-demo-now-available",
+     "published": "2026-11-17T01:35Z"
+    },
+    {
+     "source": "Nintendo Life",
+     "title": "PSA: Splatoon Raiders Demo Splashes Onto The Switch 2 eShop Today",
+     "url": "https://www.nintendolife.com/news/2026/11/psa-splatoon-raiders-demo-splashes-onto-the-switch-2-eshop-today",
+     "published": "2026-11-17T02:35Z"
+    },
+    {
+     "source": "VGC",
+     "title": "A free demo for Splatoon Raiders is now available on Switch 2",
+     "url": "https://www.videogameschronicle.com/news/a-free-demo-for-splatoon-raiders-is-now-available-on-switch-2/",
+     "published": "2026-11-17T10:35Z"
+    },
+    {
+     "source": "Polygon",
+     "title": "One of the Switch 2’s Best Exclusives Just Got a Free Demo",
+     "url": "https://www.polygon.com/splatoon-raiders-free-demo-switch-2-exclusive/",
+     "published": "2026-11-17T15:57Z"
+    },
+    {
+     "source": "Siliconera",
+     "title": "Splatoon Raiders Demo Arrives With 3 Stages",
+     "url": "https://www.siliconera.com/splatoon-raiders-demo-arrives-with-3-stages/",
+     "published": "2026-11-17T19:00Z"
+    }
+   ]
+  },
+  {
+   "count": 5,
+   "published": "2026-11-17T11:44Z",
+   "title": "Get your hands on Grand Theft Auto 6 for free over on GTA 6 Bible",
+   "url": "https://www.destructoid.com/get-your-hands-on-grand-theft-auto-6-for-free-over-on-gta-6-bible/",
+   "sources": [
+    "Destructoid",
+    "IGN",
+    "IGN Middle East (EN)",
+    "Insider Gaming",
+    "Kotaku"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://www.destructoid.com/wp-content/uploads/2026/11/gta-6-bible-giveaway-closeup.png?resize=1024%2C576"
+    }
+   ],
+   "items": [
     {
      "source": "Destructoid",
      "title": "Get your hands on Grand Theft Auto 6 for free over on GTA 6 Bible",
@@ -661,6 +935,18 @@
      "published": "2026-11-17T15:28Z"
     },
     {
+     "source": "IGN Middle East (EN)",
+     "title": "Grand Theft Auto 6 Lucia Actress Finally Revealed — And Yes, It's Who You Probably Suspected",
+     "url": "https://me.ign.com/en/grand-theft-auto-vi/249814/grand-theft-auto-6-lucia-actress-finally-revealed-and-yes-its-who-you-probably-suspected",
+     "published": "2026-11-17T17:07Z"
+    },
+    {
+     "source": "IGN",
+     "title": "Grand Theft Auto 6 Lucia Actress Finally Revealed — And Yes, It's Who You Probably Suspected",
+     "url": "https://www.ign.com/articles/grand-theft-auto-6-lucia-actress-finally-revealed-and-yes-its-who-you-probably-suspected",
+     "published": "2026-11-17T17:07Z"
+    },
+    {
      "source": "Kotaku",
      "title": "Fox News Weighs In On Grand Theft Auto 6, Asks If Lucia Is A Hooker",
      "url": "https://kotaku.com/grand-theft-auto-6-gta6-fox-news-lucia-hooker-rachel-campos-duffy-2000757710",
@@ -671,366 +957,73 @@
      "title": "Opinion: Come back, Grand Theft Auto moral crusaders! I miss your wild paranoia and bizarre claims",
      "url": "https://www.destructoid.com/opinion-come-back-grand-theft-auto-moral-crusaders-i-miss-your-wild-paranoia-and-bizarre-claims/",
      "published": "2026-11-17T18:42Z"
+    },
+    {
+     "source": "Kotaku",
+     "title": "How Grand Theft Auto 6 Can Be Nominated At The Game Awards Despite Not Being Out Yet",
+     "url": "https://kotaku.com/game-awards-2026-nominations-gta-grand-theft-auto-6-lucia-2000757763",
+     "published": "2026-11-17T19:30Z"
     }
    ]
   },
   {
    "count": 4,
-   "published": "2026-11-17T09:51Z",
-   "title": "World of Warcraft: Forever's in-game economy has been ravaged by an exploit that allowed players to farm thousands of gold",
-   "url": "https://www.eurogamer.net/world-of-warcraft-forever-gold-farm-exploit",
-   "sources": [
-    "Eurogamer",
-    "GamesRadar",
-    "Kotaku",
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://assetsio.gnwcdn.com/Wow-gold-2.jpg?width=690&quality=85&format=jpg&auto=webp"
-    }
-   ],
-   "items": [
-    {
-     "source": "Eurogamer",
-     "title": "World of Warcraft: Forever's in-game economy has been ravaged by an exploit that allowed players to farm thousands of gold",
-     "url": "https://www.eurogamer.net/world-of-warcraft-forever-gold-farm-exploit",
-     "published": "2026-11-17T09:51Z"
-    },
-    {
-     "source": "GamesRadar",
-     "title": "WoW Forever economy takes hit as players grind \"100+ gold per hour\" exploit before Blizzard steps in",
-     "url": "https://www.gamesradar.com/games/world-of-warcraft/wow-forever-economy-takes-a-hit-as-players-go-big-on-100-gold-per-hour-exploit-before-blizzard-can-step-in/",
-     "published": "2026-11-17T15:37Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "WoW Forever economy takes hit as players grind \"100+ gold per hour\" exploit before Blizzard steps in",
-     "url": "https://store.steampowered.com/news/group/38509069/view/692025835039754328",
-     "published": "2026-11-17T15:51Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "The Macro Is World of Warcraft: Forever’s Accessibility Secret Weapon",
-     "url": "https://store.steampowered.com/news/group/9869/view/693151734943451119",
-     "published": "2026-11-17T16:42Z"
-    },
-    {
-     "source": "Kotaku",
-     "title": "World Of Warcraft Forever’s Economy Problems Continue Because Some People Just Can’t Be Normal About Fictional Money",
-     "url": "https://kotaku.com/world-of-warcraft-forevers-economy-problems-continue-because-some-people-just-cant-be-normal-about-fictional-money-2000757691",
-     "published": "2026-11-17T18:00Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "World of Warcraft: Forever is Banning Players for Gold Exploit",
-     "url": "https://store.steampowered.com/news/group/1450625/view/714543833176606750",
-     "published": "2026-11-17T18:33Z"
-    }
-   ]
-  },
-  {
-   "count": 4,
-   "published": "2026-11-16T19:00Z",
-   "title": "Square Enix Is Making Final Fantasy 14 Free For 30 Days For A Ton More People",
-   "url": "https://kotaku.com/square-enix-is-making-final-fantasy-14-free-for-30-days-for-a-ton-more-people-2000757498",
-   "sources": [
-    "Eurogamer",
-    "GamesRadar",
-    "Kotaku",
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://kotaku.com/app/uploads/2026/04/ff14-Evercold.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Kotaku",
-     "title": "Square Enix Is Making Final Fantasy 14 Free For 30 Days For A Ton More People",
-     "url": "https://kotaku.com/square-enix-is-making-final-fantasy-14-free-for-30-days-for-a-ton-more-people-2000757498",
-     "published": "2026-11-16T19:00Z"
-    },
-    {
-     "source": "Eurogamer",
-     "title": "\"Encouraging players to return is no mean feat\" - Square Enix tempts Final Fantasy 14 players back with free game-time to fill quiet time before new expansion",
-     "url": "https://www.eurogamer.net/final-fantasy-14-free--game-time-expansion-evercold",
-     "published": "2026-11-17T11:48Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "Final Fantasy 14 Free Download Officially Announced To Celebrate New Expansion",
-     "url": "https://store.steampowered.com/news/group/38666666/view/677389277779199723",
-     "published": "2026-11-17T14:51Z"
-    },
-    {
-     "source": "GamesRadar",
-     "title": "Final Fantasy 14 fans celebrate new \"mass-production Limsa e-girl outfit\" from Square Enix",
-     "url": "https://www.gamesradar.com/games/final-fantasy/final-fantasy-14-fans-celebrate-new-mass-production-limsa-e-girl-outfit-as-square-enix-finally-turns-a-datamine-into-an-usd18-reality/",
-     "published": "2026-11-17T18:11Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "Final Fantasy 14 fans celebrate new \"mass-production Limsa e-girl outfit\" from Square Enix",
-     "url": "https://store.steampowered.com/news/group/38509069/view/692025835039754406",
-     "published": "2026-11-17T18:21Z"
-    }
-   ]
-  },
-  {
-   "count": 3,
-   "published": "2026-11-16T22:55Z",
-   "title": "UK’s National Health Service Is Urging Gamers to Protect Their Hands Ahead of GTA 6 Launch",
-   "url": "https://www.ign.com/articles/uks-national-health-service-is-urging-gamers-to-protect-their-hands-ahead-of-gta-6-launch",
+   "published": "2026-11-17T10:45Z",
+   "title": "\"Essentially Worthless\" - Disgruntled Fans Are Review Bombing Pikmin 4 On Switch 2",
+   "url": "https://www.nintendolife.com/news/2026/11/essentially-worthless-disgruntled-fans-are-review-bombing-pikmin-4-on-switch-2",
    "sources": [
     "IGN",
+    "IGN Middle East (AR)",
     "IGN Middle East (EN)",
-    "Push Square"
+    "Nintendo Life"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://assets-prd.ignimgs.com/2026/10/28/jason-and-lucia-01-1793212840753.jpg"
+     "url": "https://images.nintendolife.com/8f20ff0218a85/small.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://images.nintendolife.com/8f20ff0218a85/large.jpg"
     }
    ],
    "items": [
     {
-     "source": "IGN",
-     "title": "UK’s National Health Service Is Urging Gamers to Protect Their Hands Ahead of GTA 6 Launch",
-     "url": "https://www.ign.com/articles/uks-national-health-service-is-urging-gamers-to-protect-their-hands-ahead-of-gta-6-launch",
-     "published": "2026-11-16T22:55Z"
+     "source": "Nintendo Life",
+     "title": "\"Essentially Worthless\" - Disgruntled Fans Are Review Bombing Pikmin 4 On Switch 2",
+     "url": "https://www.nintendolife.com/news/2026/11/essentially-worthless-disgruntled-fans-are-review-bombing-pikmin-4-on-switch-2",
+     "published": "2026-11-17T10:45Z"
     },
     {
      "source": "IGN Middle East (EN)",
-     "title": "UK’s National Health Service Is Urging Gamers to Protect Their Hands Ahead of GTA 6 Launch",
-     "url": "https://me.ign.com/en/grand-theft-auto-vi/249812/uks-national-health-service-is-urging-gamers-to-protect-their-hands-ahead-of-gta-6-launch",
-     "published": "2026-11-16T22:55Z"
+     "title": "Nintendo Suffers Rare Review Bombing For Pikmin 4: Nintendo Switch 2 Edition + Dandori Academy",
+     "url": "https://me.ign.com/en/pikmin-4/249823/nintendo-suffers-rare-review-bombing-for-pikmin-4-nintendo-switch-2-edition-dandori-academy",
+     "published": "2026-11-17T12:29Z"
     },
     {
-     "source": "Push Square",
-     "title": "UK's Health Service Issues Warning Over GTA 6, Urges Players to Take Care of Their Hands",
-     "url": "https://www.pushsquare.com/news/2026/11/uks-health-service-issues-warning-over-gta-6-urges-players-to-take-care-of-their-hands",
-     "published": "2026-11-17T18:30Z"
-    }
-   ]
-  },
-  {
-   "count": 3,
-   "published": "2026-11-16T20:00Z",
-   "title": "Reminder: Join the Apples to Applin event in Pokémon Pokopia today",
-   "url": "https://gonintendo.com/contents/67305-reminder-join-the-apples-to-applin-event-in-pokemon-pokopia-today",
-   "sources": [
-    "GoNintendo",
-    "Insider Gaming",
-    "Polygon"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://gonintendo.com/attachments/image/89098/file/medium-d77f53d41dc44ce4869f5afd15525c4c.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "GoNintendo",
-     "title": "Reminder: Join the Apples to Applin event in Pokémon Pokopia today",
-     "url": "https://gonintendo.com/contents/67305-reminder-join-the-apples-to-applin-event-in-pokemon-pokopia-today",
-     "published": "2026-11-16T20:00Z"
-    },
-    {
-     "source": "Insider Gaming",
-     "title": "Duolingo and Pokémon GO Crossover Event",
-     "url": "https://insider-gaming.com/duolingo-and-pokemon-go-crossover-event/",
-     "published": "2026-11-17T17:25Z"
-    },
-    {
-     "source": "Polygon",
-     "title": "Pokémon Go’s Most Cursed Crossover Officially Revealed",
-     "url": "https://www.polygon.com/pokemon-go-duolingo-crossover-event-rewards/",
-     "published": "2026-11-17T18:22Z"
-    }
-   ]
-  },
-  {
-   "count": 3,
-   "published": "2026-11-17T09:30Z",
-   "title": "Eight Games Are Leaving Xbox Game Pass In Late November 2026",
-   "url": "https://www.purexbox.com/news/2026/11/eight-games-are-leaving-xbox-game-pass-in-late-november-2026",
-   "sources": [
-    "GameSpot",
-    "Gematsu",
-    "Pure Xbox"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://images.purexbox.com/82a8637d885d0/small.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://images.purexbox.com/82a8637d885d0/large.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Pure Xbox",
-     "title": "Eight Games Are Leaving Xbox Game Pass In Late November 2026",
-     "url": "https://www.purexbox.com/news/2026/11/eight-games-are-leaving-xbox-game-pass-in-late-november-2026",
-     "published": "2026-11-17T09:30Z"
-    },
-    {
-     "source": "GameSpot",
-     "title": "Xbox Game Pass Is Losing 8 More Games In November",
-     "url": "https://www.gamespot.com/articles/xbox-game-pass-is-losing-8-more-games-in-november/",
-     "published": "2026-11-17T11:40Z"
-    },
-    {
-     "source": "Pure Xbox",
-     "title": "Microsoft Announces Nine Games Coming To Xbox Game Pass (November 18 - December 1)",
-     "url": "https://www.purexbox.com/news/2026/11/microsoft-announces-nine-games-coming-to-xbox-game-pass-november-18-december-1",
-     "published": "2026-11-17T17:08Z"
-    },
-    {
-     "source": "Gematsu",
-     "title": "Game Pass adds Hela: of Mice & Magic, The Outlast Trials, Sniper Ghost Warrior Contracts 2, and more in late November",
-     "url": "https://www.gematsu.com/2026/11/game-pass-adds-hela-of-mice-magic-the-outlast-trials-sniper-ghost-warrior-contracts-2-and-more-in-late-november",
-     "published": "2026-11-17T17:57Z"
-    }
-   ]
-  },
-  {
-   "count": 3,
-   "published": "2026-11-17T08:30Z",
-   "title": "Half-Life remake Black Mesa gets a huge update, and now Steam Deck Verified",
-   "url": "https://www.gamingonlinux.com/2026/11/half-life-remake-black-mesa-gets-a-huge-update-and-now-steam-deck-verified/",
-   "sources": [
-    "GamingOnLinux",
-    "PC Gamer",
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://www.gamingonlinux.com/uploads/articles/tagline_images/739550330id30210gol.webp"
-    }
-   ],
-   "items": [
-    {
-     "source": "GamingOnLinux",
-     "title": "Half-Life remake Black Mesa gets a huge update, and now Steam Deck Verified",
-     "url": "https://www.gamingonlinux.com/2026/11/half-life-remake-black-mesa-gets-a-huge-update-and-now-steam-deck-verified/",
-     "published": "2026-11-17T08:30Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "Half-Life remake Black Mesa gets a huge update, and now Steam Deck Verified",
-     "url": "https://store.steampowered.com/news/group/4218320/view/708914425087657497",
-     "published": "2026-11-17T08:33Z"
-    },
-    {
-     "source": "PC Gamer",
-     "title": "Valve-sanctioned Half-Life remake Black Mesa gets a mondo update and a Steam Deck verified badge",
-     "url": "https://www.pcgamer.com/games/fps/valve-sanctioned-half-life-remake-black-mesa-gets-a-mondo-update-and-a-steam-deck-verified-badge/",
-     "published": "2026-11-17T17:46Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "Valve-sanctioned Half-Life remake Black Mesa gets a mondo update and a Steam Deck verified badge",
-     "url": "https://store.steampowered.com/news/group/1850/view/714543833176606736",
-     "published": "2026-11-17T17:48Z"
-    }
-   ]
-  },
-  {
-   "count": 3,
-   "published": "2026-11-17T17:25Z",
-   "title": "الإعلان عن الألعاب المرشحة لحفل جوائز The Game Awards 2026 وفتح باب التصويت",
-   "url": "https://www.vga4a.com/archives/341733",
-   "sources": [
-    "IGN Middle East (AR)",
-    "True Gaming (AR)",
-    "VGA4A (AR)"
-   ],
-   "ar_relay": true,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i0.wp.com/www.vga4a.com/wp-content/uploads/The-Game-Awards-2025.webp?fit=1600%2C900&ssl=1"
-    }
-   ],
-   "items": [
-    {
-     "source": "VGA4A (AR)",
-     "title": "الإعلان عن الألعاب المرشحة لحفل جوائز The Game Awards 2026 وفتح باب التصويت",
-     "url": "https://www.vga4a.com/archives/341733",
-     "published": "2026-11-17T17:25Z"
+     "source": "IGN",
+     "title": "Nintendo Suffers Rare Review Bombing For Pikmin 4: Nintendo Switch 2 Edition + Dandori Academy",
+     "url": "https://www.ign.com/articles/nintendo-suffers-rare-review-bombing-for-pikmin-4-nintendo-switch-2-edition-dandori-academy",
+     "published": "2026-11-17T12:29Z"
     },
     {
      "source": "IGN Middle East (AR)",
-     "title": "الكشف عن الألعاب المرشحة لجوائز The Game Awards 2026",
-     "url": "https://me.ign.com/ar/project-007/197521/lkshf-n-llb-lmrshh-ljwyz-the-game-awards-2026",
-     "published": "2026-11-17T17:41Z"
-    },
-    {
-     "source": "True Gaming (AR)",
-     "title": "الكشف عن جميع ترشيحات The Game Awards 2026.. وGTA 6 تنافس على جائزة لعبة العام!",
-     "url": "https://www.true-gaming.net/home/643954/%d8%a7%d9%84%d9%83%d8%b4%d9%81-%d8%b9%d9%86-%d8%ac%d9%85%d9%8a%d8%b9-%d8%aa%d8%b1%d8%b4%d9%8a%d8%ad%d8%a7%d8%aa-the-game-awards-2026-%d9%88gta-6-%d8%aa%d9%86%d8%a7%d9%81%d8%b3-%d8%b9%d9%84%d9%89/",
-     "published": "2026-11-17T17:48Z"
+     "title": "حملة تقييمات سلبية نادرة تستهدف Pikmin 4: Nintendo Switch 2 Edition + Dandori Academy",
+     "url": "https://me.ign.com/ar/pikmin-4/197506/hml-tqyymt-slby-ndr-tsthdf-pikmin-4-nintendo-switch-2-edition-dandori-academy",
+     "published": "2026-11-17T13:29Z"
     }
    ]
   },
   {
-   "count": 2,
-   "published": "2026-11-16T20:30Z",
-   "title": "Xbox Is Releasing Two First-Party Expansions In December 2026",
-   "url": "https://www.purexbox.com/news/2026/11/xbox-is-releasing-two-first-party-expansions-in-december-2026",
-   "sources": [
-    "Pure Xbox",
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://images.purexbox.com/211d20035b67b/small.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://images.purexbox.com/211d20035b67b/large.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Pure Xbox",
-     "title": "Xbox Is Releasing Two First-Party Expansions In December 2026",
-     "url": "https://www.purexbox.com/news/2026/11/xbox-is-releasing-two-first-party-expansions-in-december-2026",
-     "published": "2026-11-16T20:30Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "Xbox Game Pass Reveals First Free Games Of December 2026",
-     "url": "https://store.steampowered.com/news/group/38666666/view/677389277779199948",
-     "published": "2026-11-17T18:41Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
+   "count": 3,
    "published": "2026-11-17T18:27Z",
    "title": "New assets shared for Spyro: A Realm Beyond, The Game Awards appearance teased",
    "url": "https://gonintendo.com/contents/67329-new-assets-shared-for-spyro-a-realm-beyond-the-game-awards-appearance-teased",
    "sources": [
     "Gematsu",
-    "GoNintendo"
+    "GoNintendo",
+    "True Gaming (AR)"
    ],
    "ar_relay": false,
    "media": [
@@ -1051,274 +1044,427 @@
      "title": "Spyro: A Realm Beyond teased for The Game Awards 2026",
      "url": "https://www.gematsu.com/2026/11/spyro-a-realm-beyond-teased-for-the-game-awards-2026",
      "published": "2026-11-17T18:38Z"
+    },
+    {
+     "source": "True Gaming (AR)",
+     "title": "Activision تشوّق لحصول Spyro: A Realm Beyond على المزيد من التفاصيل خلال حفل The Game Awards 2026",
+     "url": "https://www.true-gaming.net/home/643970/activision-%d8%aa%d8%b4%d9%88%d9%91%d9%82-%d9%84%d8%ad%d8%b5%d9%88%d9%84-spyro-a-realm-beyond-%d8%b9%d9%84%d9%89-%d8%a7%d9%84%d9%85%d8%b2%d9%8a%d8%af-%d9%85%d9%86-%d8%a7%d9%84%d8%aa%d9%81%d8%a7%d8%b5/",
+     "published": "2026-11-17T19:12Z"
+    }
+   ]
+  },
+  {
+   "count": 3,
+   "published": "2026-11-17T15:09Z",
+   "title": "'I'm Certain No One Noticed This' — Former Rockstar Developer Explains Tiny GTA 5 Detail You Might Have Missed",
+   "url": "https://me.ign.com/en/grand-theft-auto-v/249816/im-certain-no-one-noticed-this-former-rockstar-developer-explains-tiny-gta-5-detail-you-might-have-m",
+   "sources": [
+    "IGN",
+    "IGN Middle East (EN)",
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://sm.ign.com/ign_me/news/i/im-certain/im-certain-no-one-noticed-this-former-rockstar-developer-exp_wanw.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://sm.ign.com/t/ign_me/news/i/im-certain/im-certain-no-one-noticed-this-former-rockstar-developer-exp_wanw.640.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "IGN Middle East (EN)",
+     "title": "'I'm Certain No One Noticed This' — Former Rockstar Developer Explains Tiny GTA 5 Detail You Might Have Missed",
+     "url": "https://me.ign.com/en/grand-theft-auto-v/249816/im-certain-no-one-noticed-this-former-rockstar-developer-explains-tiny-gta-5-detail-you-might-have-m",
+     "published": "2026-11-17T15:09Z"
+    },
+    {
+     "source": "IGN",
+     "title": "'I'm Certain No One Noticed This' — Former Rockstar Developer Explains Tiny GTA 5 Detail You Might Have Missed",
+     "url": "https://www.ign.com/articles/rockstar-developer-explains-tiny-gta-5-detail-you-missed",
+     "published": "2026-11-17T15:09Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "'I'm Certain No One Noticed This' — Former Rockstar Developer Explains Tiny GTA 5 Detail You Might Have Missed",
+     "url": "https://store.steampowered.com/news/group/9869/view/693151734943451042",
+     "published": "2026-11-17T15:42Z"
+    }
+   ]
+  },
+  {
+   "count": 3,
+   "published": "2026-11-17T11:50Z",
+   "title": "First Clip From HBO's Harry Potter Series Soundtrack Isn't Going Down Well With Fans",
+   "url": "https://me.ign.com/en/harry-potter-the-series/249825/first-clip-from-hbos-harry-potter-series-soundtrack-isnt-going-down-well-with-fans",
+   "sources": [
+    "IGN",
+    "IGN Middle East (EN)",
+    "Tbreak (Gulf)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://sm.ign.com/ign_me/news/f/first-clip/first-clip-from-hbos-harry-potter-series-soundtrack-isnt-goi_3bzb.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://sm.ign.com/t/ign_me/news/f/first-clip/first-clip-from-hbos-harry-potter-series-soundtrack-isnt-goi_3bzb.640.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "IGN Middle East (EN)",
+     "title": "First Clip From HBO's Harry Potter Series Soundtrack Isn't Going Down Well With Fans",
+     "url": "https://me.ign.com/en/harry-potter-the-series/249825/first-clip-from-hbos-harry-potter-series-soundtrack-isnt-going-down-well-with-fans",
+     "published": "2026-11-17T11:50Z"
+    },
+    {
+     "source": "IGN",
+     "title": "First Clip From HBO's Harry Potter Series Soundtrack Isn't Going Down Well With Fans",
+     "url": "https://www.ign.com/articles/first-clip-from-hbos-harry-potter-series-soundtrack-isnt-going-down-well-with-fans",
+     "published": "2026-11-17T11:50Z"
+    },
+    {
+     "source": "Tbreak (Gulf)",
+     "title": "The First Taste of HBO’s Harry Potter Soundtrack Isn’t Winning Over Fans",
+     "url": "https://tbreak.com/hans-zimmer-harry-potter-score-fan-reaction/",
+     "published": "2026-11-17T15:33Z"
     }
    ]
   },
   {
    "count": 2,
-   "published": "2026-11-17T18:24Z",
-   "title": "Tomb Raider studio lays off employees for the sixth time since its last game",
-   "url": "https://www.gamesradar.com/games/tomb-raider/tomb-raider-studio-lays-off-employees-for-the-sixth-time-since-its-last-game/",
+   "published": "2026-11-17T12:02Z",
+   "title": "Walton Goggins doesn’t know Fallout's future, but is confident season 3 remains true to the games",
+   "url": "https://www.gamesradar.com/entertainment/sci-fi-shows/walton-goggins-doesnt-know-if-fallout-will-come-back-for-season-4-but-is-confident-season-3-remains-true-to-the-sacred-nature-of-this-game/",
    "sources": [
     "GamesRadar",
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/XSvMK5feigKzRprsB3fnFB-1920-80.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "GamesRadar",
-     "title": "Tomb Raider studio lays off employees for the sixth time since its last game",
-     "url": "https://www.gamesradar.com/games/tomb-raider/tomb-raider-studio-lays-off-employees-for-the-sixth-time-since-its-last-game/",
-     "published": "2026-11-17T18:24Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "Tomb Raider studio lays off employees for the sixth time since its last game",
-     "url": "https://store.steampowered.com/news/group/38509069/view/692025835039754408",
-     "published": "2026-11-17T18:31Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-16T20:39Z",
-   "title": "\"The end of physical media was declared many years ago, but we continued to see strong demand for them\" – Marvelous USA CEO Ken Berry on physical games, Switch 2 cartridges, Muramasa, PS5 ports, Game Key Cards, Xbox releases, and much more",
-   "url": "https://store.steampowered.com/news/group/6070552/view/688648135317128426",
-   "sources": [
-    "Steam News (hub)",
-    "TweakTown"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://images.rpgsite.net/articles/thumbnail/a3ecf1c/21767/original/ken-berry-xseed-games-marvelous-interview-new-muramasa-revenant-blades-physical-release-ps5-discs-switch-2-game-key-card-xbox-thumb.png"
-    }
-   ],
-   "items": [
-    {
-     "source": "Steam News (hub)",
-     "title": "\"The end of physical media was declared many years ago, but we continued to see strong demand for them\" – Marvelous USA CEO Ken Berry on physical games, Switch 2 cartridges, Muramasa, PS5 ports, Game Key Cards, Xbox releases, and much more",
-     "url": "https://store.steampowered.com/news/group/6070552/view/688648135317128426",
-     "published": "2026-11-16T20:39Z"
-    },
-    {
-     "source": "TweakTown",
-     "title": "Maple Story dev says consumer demand for physical media remains strong, but retailer demand craters",
-     "url": "https://www.tweaktown.com/rss/click/news/114736/?c=news-mf",
-     "published": "2026-11-17T18:29Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-16T19:43Z",
-   "title": "New Prizes Are Coming to Play! Pokémon Stores in December 2026",
-   "url": "https://gonintendo.com/contents/67301-new-prizes-are-coming-to-play-pokemon-stores-in-december-2026",
-   "sources": [
-    "GoNintendo",
-    "Polygon"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://gonintendo.com/attachments/image/89094/file/medium-21408271496ab4a39ac4bdecfd6c224e.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "GoNintendo",
-     "title": "New Prizes Are Coming to Play! Pokémon Stores in December 2026",
-     "url": "https://gonintendo.com/contents/67301-new-prizes-are-coming-to-play-pokemon-stores-in-december-2026",
-     "published": "2026-11-16T19:43Z"
-    },
-    {
-     "source": "Polygon",
-     "title": "New 'Pokémon' TCG Lucario Set Leaks In Stores Months Before Official Release",
-     "url": "https://www.polygon.com/pokemon-tcg-flowing-fists-mega-lucario-z-ex-card-early-release-dollar-general/",
-     "published": "2026-11-17T18:25Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-17T18:11Z",
-   "title": "Tactical space auto battler \"Intercept Course\" coming to Switch in 2027",
-   "url": "https://gonintendo.com/contents/67324-tactical-space-auto-battler-intercept-course-coming-to-switch-in-2027",
-   "sources": [
-    "GoNintendo",
-    "Nintendo Everything"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://gonintendo.com/attachments/image/89120/file/medium-c2e1f8ebbf26bf8bc3c8d319001c9f07.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "GoNintendo",
-     "title": "Tactical space auto battler \"Intercept Course\" coming to Switch in 2027",
-     "url": "https://gonintendo.com/contents/67324-tactical-space-auto-battler-intercept-course-coming-to-switch-in-2027",
-     "published": "2026-11-17T18:11Z"
-    },
-    {
-     "source": "Nintendo Everything",
-     "title": "Tactical space auto battler Intercept Course announced for Nintendo Switch",
-     "url": "https://nintendoeverything.com/tactical-space-auto-battler-intercept-course-announced-for-nintendo-switch/",
-     "published": "2026-11-17T18:19Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-17T16:46Z",
-   "title": "Agefield High: Rock the School gets Nintendo Switch release date, new trailer",
-   "url": "https://nintendoeverything.com/agefield-high-rock-the-school-gets-nintendo-switch-release-date-new-trailer/",
-   "sources": [
-    "GoNintendo",
-    "Nintendo Everything"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://nintendoeverything.com/wp-content/uploads/Agefield-High-Rock-the-School-release-date-150x86.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://nintendoeverything.com/wp-content/uploads/Agefield-High-Rock-the-School-release-date.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Nintendo Everything",
-     "title": "Agefield High: Rock the School gets Nintendo Switch release date, new trailer",
-     "url": "https://nintendoeverything.com/agefield-high-rock-the-school-gets-nintendo-switch-release-date-new-trailer/",
-     "published": "2026-11-17T16:46Z"
-    },
-    {
-     "source": "GoNintendo",
-     "title": "Agefield High: Rock the School launches on Switch 2 Dec. 7th, 2026",
-     "url": "https://gonintendo.com/contents/67326-agefield-high-rock-the-school-launches-on-switch-2-dec-7th-2026",
-     "published": "2026-11-17T18:17Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-17T18:00Z",
-   "title": "GTA 5 art director: \"Let what's best for the game dictate the way forward\"",
-   "url": "https://www.gamesradar.com/games/grand-theft-auto/quote-of-the-day-by-gta-5-art-director-let-whats-best-for-the-game-dictate-the-way-forward-and-be-prepared-to-kill-your-darlings/",
-   "sources": [
-    "GamesRadar",
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/6wkBw7S8q9nKY7VCzXrD3L-1920-80.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "GamesRadar",
-     "title": "GTA 5 art director: \"Let what's best for the game dictate the way forward\"",
-     "url": "https://www.gamesradar.com/games/grand-theft-auto/quote-of-the-day-by-gta-5-art-director-let-whats-best-for-the-game-dictate-the-way-forward-and-be-prepared-to-kill-your-darlings/",
-     "published": "2026-11-17T18:00Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "GTA 5 art director: \"Let what's best for the game dictate the way forward\"",
-     "url": "https://store.steampowered.com/news/group/38509069/view/692025835039754401",
-     "published": "2026-11-17T18:11Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-17T18:00Z",
-   "title": "I have replaced (most) cars in GTA 5 with bicycles and also my own clones",
-   "url": "https://www.pcgamer.com/games/grand-theft-auto/i-have-replaced-most-cars-in-gta-5-with-bicycles-and-also-my-own-clones/",
-   "sources": [
-    "PC Gamer",
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/tkkQw24NqURjNXHCjmgWr8-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/5vHJykYm84eXckPRW6xV49-1920-80.gif"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/ZF5ZJsyvbhJRVSDmd9H3jA-1920-80.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "PC Gamer",
-     "title": "I have replaced (most) cars in GTA 5 with bicycles and also my own clones",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/i-have-replaced-most-cars-in-gta-5-with-bicycles-and-also-my-own-clones/",
-     "published": "2026-11-17T18:00Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "I have replaced (most) cars in GTA 5 with bicycles and also my own clones",
-     "url": "https://store.steampowered.com/news/group/1850/view/714543833176606741",
-     "published": "2026-11-17T18:08Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-17T16:50Z",
-   "title": "Firaxis Games lays off a third of staff",
-   "url": "https://www.gematsu.com/2026/11/firaxis-games-lays-off-a-third-of-staff",
-   "sources": [
-    "Gematsu",
     "VGC"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://www.gematsu.com/wp-content/uploads/2026/11/Firaxis-Layoffs_11-16-26.jpg"
+     "url": "https://cdn.mos.cms.futurecdn.net/xZaMPm6K7aM6DTh5fDuihc-1920-80.jpg"
     }
    ],
    "items": [
     {
-     "source": "Gematsu",
-     "title": "Firaxis Games lays off a third of staff",
-     "url": "https://www.gematsu.com/2026/11/firaxis-games-lays-off-a-third-of-staff",
-     "published": "2026-11-17T16:50Z"
+     "source": "GamesRadar",
+     "title": "Walton Goggins doesn’t know Fallout's future, but is confident season 3 remains true to the games",
+     "url": "https://www.gamesradar.com/entertainment/sci-fi-shows/walton-goggins-doesnt-know-if-fallout-will-come-back-for-season-4-but-is-confident-season-3-remains-true-to-the-sacred-nature-of-this-game/",
+     "published": "2026-11-17T12:02Z"
     },
     {
      "source": "VGC",
-     "title": "Take-Two has laid off a third of staff at Civilization and XCOM studio Firaxis",
-     "url": "https://www.videogameschronicle.com/news/take-two-lays-off-third-of-firaxis-staff/",
+     "title": "Walton Goggins suggests Fallout season 4 isn’t guaranteed",
+     "url": "https://www.videogameschronicle.com/news/walton-goggins-suggests-fallout-season-4-isnt-guaranteed/",
+     "published": "2026-11-17T19:27Z"
+    }
+   ]
+  },
+  {
+   "count": 2,
+   "published": "2026-11-16T20:00Z",
+   "title": "Booby-Trapped Video Game Console Explodes At Rival Gaming Store",
+   "url": "https://kotaku.com/booby-trapped-video-game-console-explodes-at-rival-gaming-store-2000757507",
+   "sources": [
+    "Kotaku",
+    "TweakTown"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://kotaku.com/app/uploads/2026/11/exploding.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Kotaku",
+     "title": "Booby-Trapped Video Game Console Explodes At Rival Gaming Store",
+     "url": "https://kotaku.com/booby-trapped-video-game-console-explodes-at-rival-gaming-store-2000757507",
+     "published": "2026-11-16T20:00Z"
+    },
+    {
+     "source": "TweakTown",
+     "title": "Brazilian businessman arrested after booby-trapped Xbox 360 explosion at rival game store",
+     "url": "https://www.tweaktown.com/rss/click/news/114740/?c=news-mf",
+     "published": "2026-11-17T19:22Z"
+    }
+   ]
+  },
+  {
+   "count": 2,
+   "published": "2026-11-17T12:37Z",
+   "title": "Disney Dreamlight Valley “The Keepsake Sea” update out this week, patch notes",
+   "url": "https://nintendoeverything.com/disney-dreamlight-valley-the-keepsake-sea-update-out-this-week-patch-notes/",
+   "sources": [
+    "GoNintendo",
+    "Nintendo Everything"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://nintendoeverything.com/wp-content/uploads/Disney-Dreamlight-Valley-The-Keepsake-Sea-update-150x84.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://nintendoeverything.com/wp-content/uploads/Disney-Dreamlight-Valley-The-Keepsake-Sea-update.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Nintendo Everything",
+     "title": "Disney Dreamlight Valley “The Keepsake Sea” update out this week, patch notes",
+     "url": "https://nintendoeverything.com/disney-dreamlight-valley-the-keepsake-sea-update-out-this-week-patch-notes/",
+     "published": "2026-11-17T12:37Z"
+    },
+    {
+     "source": "GoNintendo",
+     "title": "Disney Dreamlight Valley \"The Keepsake Sea\" update patch notes shared",
+     "url": "https://gonintendo.com/contents/67336-disney-dreamlight-valley-the-keepsake-sea-update-patch-notes-shared",
+     "published": "2026-11-17T19:17Z"
+    }
+   ]
+  },
+  {
+   "count": 2,
+   "published": "2026-11-17T19:00Z",
+   "title": "PlayStation Has No GOTY Nominee at The Game Awards for First Time in 12 Years",
+   "url": "https://www.pushsquare.com/news/2026/11/playstation-has-no-goty-nominee-at-the-game-awards-for-first-time-in-12-years",
+   "sources": [
+    "Push Square",
+    "VGC"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://images.pushsquare.com/e00b52e70a4c7/small.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://images.pushsquare.com/e00b52e70a4c7/large.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Push Square",
+     "title": "PlayStation Has No GOTY Nominee at The Game Awards for First Time in 12 Years",
+     "url": "https://www.pushsquare.com/news/2026/11/playstation-has-no-goty-nominee-at-the-game-awards-for-first-time-in-12-years",
+     "published": "2026-11-17T19:00Z"
+    },
+    {
+     "source": "VGC",
+     "title": "For the first time in 11 years, Sony doesn’t have a GOTY nomination at The Game Awards",
+     "url": "https://www.videogameschronicle.com/news/for-the-first-time-in-11-years-sony-doesnt-have-a-goty-nomination-at-the-game-awards/",
+     "published": "2026-11-17T19:17Z"
+    }
+   ]
+  },
+  {
+   "count": 2,
+   "published": "2026-11-17T17:00Z",
+   "title": "Sea of Stars Nintendo Switch 2 physical release on the way plus more",
+   "url": "https://nintendoeverything.com/sea-of-stars-nintendo-switch-2-physical-release-on-the-way-plus-more/",
+   "sources": [
+    "Nintendo Everything",
+    "Nintendo Life"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://nintendoeverything.com/wp-content/uploads/Sea-of-Stars-Sw-2-physical-150x84.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://nintendoeverything.com/wp-content/uploads/Sea-of-Stars-Sw-2-physical.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Nintendo Everything",
+     "title": "Sea of Stars Nintendo Switch 2 physical release on the way plus more",
+     "url": "https://nintendoeverything.com/sea-of-stars-nintendo-switch-2-physical-release-on-the-way-plus-more/",
      "published": "2026-11-17T17:00Z"
+    },
+    {
+     "source": "Nintendo Life",
+     "title": "Sea Of Stars Is Getting A 'Sunset Edition' Switch 2 Physical And A Gorgeous Final Merch Drop",
+     "url": "https://www.nintendolife.com/news/2026/11/sea-of-stars-is-getting-a-sunset-edition-switch-2-physical-and-a-gorgeous-final-merch-drop",
+     "published": "2026-11-17T19:00Z"
+    }
+   ]
+  },
+  {
+   "count": 2,
+   "published": "2026-11-17T16:20Z",
+   "title": "GTA 5 Fans Make One Last Emotional Ride Through Los Santos Before Heading to Vice City",
+   "url": "https://www.ign.com/articles/gta-5-fans-make-one-last-emotional-ride-through-los-santos-before-heading-to-vice-city",
+   "sources": [
+    "IGN",
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://assets-prd.ignimgs.com/2026/11/17/gta-5-1794932324419.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "IGN",
+     "title": "GTA 5 Fans Make One Last Emotional Ride Through Los Santos Before Heading to Vice City",
+     "url": "https://www.ign.com/articles/gta-5-fans-make-one-last-emotional-ride-through-los-santos-before-heading-to-vice-city",
+     "published": "2026-11-17T16:20Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "GTA 5 Fans Make One Last Emotional Ride Through Los Santos Before Heading to Vice City",
+     "url": "https://store.steampowered.com/news/group/9869/view/693151734943451121",
+     "published": "2026-11-17T16:42Z"
+    }
+   ]
+  },
+  {
+   "count": 2,
+   "published": "2026-11-17T15:42Z",
+   "title": "Exodus - Official Female Jun Reveal & Scrappy Salvager Featurette",
+   "url": "https://me.ign.com/ar/exodus-archetype-entertainment/197514/exodus-official-female-jun-reveal-scrappy-salvager-featurette",
+   "sources": [
+    "IGN Middle East (AR)",
+    "IGN Middle East (EN)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://sm.ign.com/ign_mear/video/e/exodus-off/exodus-official-female-jun-reveal-scrappy-salvager-featurett_g14p.png"
+    },
+    {
+     "type": "image",
+     "url": "https://sm.ign.com/t/ign_mear/video/e/exodus-off/exodus-official-female-jun-reveal-scrappy-salvager-featurett_g14p.640.png"
+    }
+   ],
+   "items": [
+    {
+     "source": "IGN Middle East (AR)",
+     "title": "Exodus - Official Female Jun Reveal & Scrappy Salvager Featurette",
+     "url": "https://me.ign.com/ar/exodus-archetype-entertainment/197514/exodus-official-female-jun-reveal-scrappy-salvager-featurette",
+     "published": "2026-11-17T15:42Z"
+    },
+    {
+     "source": "IGN Middle East (EN)",
+     "title": "Exodus - Official Female Jun Reveal & Scrappy Salvager Featurette",
+     "url": "https://me.ign.com/en/exodus-2024/249819/exodus-official-female-jun-reveal-scrappy-salvager-featurette",
+     "published": "2026-11-17T15:42Z"
+    }
+   ]
+  },
+  {
+   "count": 2,
+   "published": "2026-11-17T13:32Z",
+   "title": "Warnings, Encouragement, and Gift Cards: How Schools Are Preparing for Mass Absences on GTA 6 Launch Day",
+   "url": "https://me.ign.com/en/grand-theft-auto-vi/249815/warnings-encouragement-and-gift-cards-how-schools-are-preparing-for-mass-absences-on-gta-6-launch-da",
+   "sources": [
+    "IGN",
+    "IGN Middle East (EN)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://sm.ign.com/ign_me/news/w/warnings-e/warnings-encouragement-and-gift-cards-how-schools-are-prepar_tt7e.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://sm.ign.com/t/ign_me/news/w/warnings-e/warnings-encouragement-and-gift-cards-how-schools-are-prepar_tt7e.640.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "IGN Middle East (EN)",
+     "title": "Warnings, Encouragement, and Gift Cards: How Schools Are Preparing for Mass Absences on GTA 6 Launch Day",
+     "url": "https://me.ign.com/en/grand-theft-auto-vi/249815/warnings-encouragement-and-gift-cards-how-schools-are-preparing-for-mass-absences-on-gta-6-launch-da",
+     "published": "2026-11-17T13:32Z"
+    },
+    {
+     "source": "IGN",
+     "title": "Warnings, Encouragement, and Gift Cards: How Schools Are Preparing for Mass Absences on GTA 6 Launch Day",
+     "url": "https://www.ign.com/articles/warnings-encouragement-and-gift-cards-how-schools-are-preparing-for-mass-absences-on-gta-6-launch-day",
+     "published": "2026-11-17T13:32Z"
+    }
+   ]
+  },
+  {
+   "count": 2,
+   "published": "2026-11-17T12:14Z",
+   "title": "The Impossible Mission of Getting GTA 5's Seamless Character Switching Working on PS3 and Xbox 360",
+   "url": "https://www.ign.com/articles/gta-5s-seamless-character-switching-working-ps3-xbox-360",
+   "sources": [
+    "IGN",
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://assets-prd.ignimgs.com/2024/12/03/gta-5-world-blog-1733224118837.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "IGN",
+     "title": "The Impossible Mission of Getting GTA 5's Seamless Character Switching Working on PS3 and Xbox 360",
+     "url": "https://www.ign.com/articles/gta-5s-seamless-character-switching-working-ps3-xbox-360",
+     "published": "2026-11-17T12:14Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "The Impossible Mission of Getting GTA 5's Seamless Character Switching Working on PS3 and Xbox 360",
+     "url": "https://store.steampowered.com/news/group/9869/view/693151734943450845",
+     "published": "2026-11-17T12:41Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-17T18:45Z",
-   "title": "Open-source tool promises to turn GTA VI's 30 FPS console gameplay into 120 FPS using AI frame generation",
-   "url": "https://www.tweaktown.com/rss/click/news/114743/?c=news-mf",
+   "published": "2026-11-17T19:47Z",
+   "title": "These Are Some Of The Biggest Snubs At The Game Awards 2026",
+   "url": "https://www.gamespot.com/articles/these-are-some-of-the-biggest-snubs-at-the-game-awards-2026/",
+   "sources": [
+    "GameSpot"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://www.gamespot.com/wp-content/uploads/2026/11/tbod-image.jpg?w=300"
+    }
+   ],
+   "items": [
+    {
+     "source": "GameSpot",
+     "title": "These Are Some Of The Biggest Snubs At The Game Awards 2026",
+     "url": "https://www.gamespot.com/articles/these-are-some-of-the-biggest-snubs-at-the-game-awards-2026/",
+     "published": "2026-11-17T19:47Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-17T19:45Z",
+   "title": "NVIDIA's next supercomputing GPU packs over 50,000 CUDA cores, but won't arrive until 2028",
+   "url": "https://www.tweaktown.com/rss/click/news/114746/?c=news-mf",
    "sources": [
     "TweakTown"
    ],
@@ -1326,145 +1472,183 @@
    "media": [
     {
      "type": "image",
-     "url": "https://static.tweaktown.com/news/1/1/114743_7_open-source-tool-promises-to-turn-gta-vis-30-fps-console-gameplay-into-120-using-ai-frame-generation_full.jpg"
+     "url": "https://static.tweaktown.com/news/1/1/114746_1_nvidias-next-supercomputing-gpu-packs-over-50-000-cuda-cores-but-wont-arrive-until-2028_full.jpg"
     }
    ],
    "items": [
     {
      "source": "TweakTown",
-     "title": "Open-source tool promises to turn GTA VI's 30 FPS console gameplay into 120 FPS using AI frame generation",
-     "url": "https://www.tweaktown.com/rss/click/news/114743/?c=news-mf",
-     "published": "2026-11-17T18:45Z"
+     "title": "NVIDIA's next supercomputing GPU packs over 50,000 CUDA cores, but won't arrive until 2028",
+     "url": "https://www.tweaktown.com/rss/click/news/114746/?c=news-mf",
+     "published": "2026-11-17T19:45Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-17T18:40Z",
-   "title": "Platformer \"Chrome Assassin\" now available on Switch",
-   "url": "https://gonintendo.com/contents/67331-platformer-chrome-assassin-now-available-on-switch",
+   "published": "2026-11-17T19:43Z",
+   "title": "This GTA 6-Inspired Keycap Set Will Make The Wait For A PC Version Slightly Easier",
+   "url": "https://www.gamespot.com/articles/this-gta-6-inspired-keycap-set-will-make-the-wait-for-a-pc-version-slightly-easier/",
    "sources": [
-    "GoNintendo"
+    "GameSpot"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://gonintendo.com/attachments/image/89128/file/medium-298418319a2c27d658649fcee21da901.jpeg"
+     "url": "https://www.gamespot.com/wp-content/uploads/2026/11/W1AT_CloseUp_NeonVice-withoutNovelties_Edited_81fbc700-72cd-4e5f-99e7-3106364ba0fe.jpg?w=300"
     }
    ],
    "items": [
     {
-     "source": "GoNintendo",
-     "title": "Platformer \"Chrome Assassin\" now available on Switch",
-     "url": "https://gonintendo.com/contents/67331-platformer-chrome-assassin-now-available-on-switch",
-     "published": "2026-11-17T18:40Z"
+     "source": "GameSpot",
+     "title": "This GTA 6-Inspired Keycap Set Will Make The Wait For A PC Version Slightly Easier",
+     "url": "https://www.gamespot.com/articles/this-gta-6-inspired-keycap-set-will-make-the-wait-for-a-pc-version-slightly-easier/",
+     "published": "2026-11-17T19:43Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-16T19:59Z",
-   "title": "Resident Evil creator Shinji Mikami says his new game is coming out in 2027",
-   "url": "https://www.gamesradar.com/games/resident-evil-creator-shinji-mikami-says-his-new-game-is-coming-out-in-2027/",
+   "published": "2026-11-17T19:43Z",
+   "title": "What All Floppy Disks Do In Dice Hoarder",
+   "url": "https://www.thegamer.com/dice-hoarder-floppy-disk-ability-guide/",
    "sources": [
-    "GamesRadar"
+    "TheGamer"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/qxUL8dabSuhEAeyk8rZmUc-1920-80.jpg"
+     "url": "https://static0.thegamerimages.com/wordpress/wp-content/uploads/wm/2026/11/dice-summons-floppy-disk.jpg"
     }
    ],
    "items": [
     {
-     "source": "GamesRadar",
-     "title": "Resident Evil creator Shinji Mikami says his new game is coming out in 2027",
-     "url": "https://www.gamesradar.com/games/resident-evil-creator-shinji-mikami-says-his-new-game-is-coming-out-in-2027/",
-     "published": "2026-11-16T19:59Z"
-    },
-    {
-     "source": "GamesRadar",
-     "title": "Resident Evil creator worried the game was too \"grotesque\" for sale, but Sony saved the day",
-     "url": "https://www.gamesradar.com/games/resident-evil/resident-evil-creator-shinji-mikami-worried-the-game-would-get-banned-from-sale-for-being-too-grotesque-but-sony-saved-the-day/",
-     "published": "2026-11-17T18:38Z"
+     "source": "TheGamer",
+     "title": "What All Floppy Disks Do In Dice Hoarder",
+     "url": "https://www.thegamer.com/dice-hoarder-floppy-disk-ability-guide/",
+     "published": "2026-11-17T19:43Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-17T18:32Z",
-   "title": "Persona 5 Royal \"Joker Mask Executive Travel Bag\" Available to Pre-Order",
-   "url": "https://gonintendo.com/contents/67330-persona-5-royal-joker-mask-executive-travel-bag-available-to-pre-order",
+   "published": "2026-11-17T19:42Z",
+   "title": "'It Was Pretty Traumatic, It Was Hilarious' – Exodus Lead Actors Talk Romance Scenes and Embodying Player Choice",
+   "url": "https://store.steampowered.com/news/group/9869/view/693151734943451152",
    "sources": [
-    "GoNintendo"
+    "Steam News (hub)"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://gonintendo.com/attachments/image/89127/file/medium-c2f5c81f59ace1e41989abdbd32a368d.png"
+     "url": "https://assets-prd.ignimgs.com/2026/11/17/vassal-standoff-1794939784844.jpg"
     }
    ],
    "items": [
     {
-     "source": "GoNintendo",
-     "title": "Persona 5 Royal \"Joker Mask Executive Travel Bag\" Available to Pre-Order",
-     "url": "https://gonintendo.com/contents/67330-persona-5-royal-joker-mask-executive-travel-bag-available-to-pre-order",
-     "published": "2026-11-17T18:32Z"
+     "source": "Steam News (hub)",
+     "title": "'It Was Pretty Traumatic, It Was Hilarious' – Exodus Lead Actors Talk Romance Scenes and Embodying Player Choice",
+     "url": "https://store.steampowered.com/news/group/9869/view/693151734943451152",
+     "published": "2026-11-17T19:42Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-17T18:30Z",
-   "title": "Archetype go all in on the Mass Effect vibes with a FemJun reveal, but I'm just left hoping they'll call the alternative option MascJun to balance it out",
-   "url": "https://www.rockpapershotgun.com/archetype-go-all-in-on-the-mass-effect-vibes-with-a-femjun-reveal-but-im-just-left-hoping-theyll-call-the-alternative-option-mascjun-to-balance-it-out",
+   "published": "2026-11-17T19:41Z",
+   "title": "شينجي ميكامي: سوني أنقذت Resident Evil من منع البيع بسبب العنف",
+   "url": "https://www.vga4a.com/archives/341750",
    "sources": [
-    "Rock Paper Shotgun"
+    "VGA4A (AR)"
    ],
-   "ar_relay": false,
+   "ar_relay": true,
    "media": [
     {
      "type": "image",
-     "url": "https://assetsio.gnwcdn.com/exodus-femjun.jpg?width=690&quality=85&format=jpg&auto=webp"
+     "url": "https://i0.wp.com/www.vga4a.com/wp-content/uploads/resident-evil-hub-zombies-image-block-03-en-06apr21.webp?fit=800%2C535&ssl=1"
     }
    ],
    "items": [
     {
-     "source": "Rock Paper Shotgun",
-     "title": "Archetype go all in on the Mass Effect vibes with a FemJun reveal, but I'm just left hoping they'll call the alternative option MascJun to balance it out",
-     "url": "https://www.rockpapershotgun.com/archetype-go-all-in-on-the-mass-effect-vibes-with-a-femjun-reveal-but-im-just-left-hoping-theyll-call-the-alternative-option-mascjun-to-balance-it-out",
-     "published": "2026-11-17T18:30Z"
+     "source": "VGA4A (AR)",
+     "title": "شينجي ميكامي: سوني أنقذت Resident Evil من منع البيع بسبب العنف",
+     "url": "https://www.vga4a.com/archives/341750",
+     "published": "2026-11-17T19:41Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-17T18:30Z",
-   "title": "Video: Long Journey Coming Up? Here Are Our Favourite Switch 2 Travel Accessories",
-   "url": "https://www.nintendolife.com/news/2026/11/video-long-journey-coming-up-here-are-our-favourite-switch-2-travel-accessories",
+   "published": "2026-11-17T19:39Z",
+   "title": "المحكمة في بريطانيا تُسقط الدعوى القضائية ضدّ متجر البلايستيشن وسياسات التسعير",
+   "url": "https://www.true-gaming.net/home/643987/%d8%a7%d9%84%d9%85%d8%ad%d9%83%d9%85%d8%a9-%d9%81%d9%8a-%d8%a8%d8%b1%d9%8a%d8%b7%d8%a7%d9%86%d9%8a%d8%a7-%d8%aa%d9%8f%d8%b3%d9%82%d8%b7-%d8%a7%d9%84%d8%af%d8%b9%d9%88%d9%89-%d8%a7%d9%84%d9%82%d8%b6/",
    "sources": [
-    "Nintendo Life"
+    "True Gaming (AR)"
+   ],
+   "ar_relay": true,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://www.true-gaming.net/home/wp-content/uploads/2026/04/new-ps-store-ps5-2-1.webp"
+    }
+   ],
+   "items": [
+    {
+     "source": "True Gaming (AR)",
+     "title": "المحكمة في بريطانيا تُسقط الدعوى القضائية ضدّ متجر البلايستيشن وسياسات التسعير",
+     "url": "https://www.true-gaming.net/home/643987/%d8%a7%d9%84%d9%85%d8%ad%d9%83%d9%85%d8%a9-%d9%81%d9%8a-%d8%a8%d8%b1%d9%8a%d8%b7%d8%a7%d9%86%d9%8a%d8%a7-%d8%aa%d9%8f%d8%b3%d9%82%d8%b7-%d8%a7%d9%84%d8%af%d8%b9%d9%88%d9%89-%d8%a7%d9%84%d9%82%d8%b6/",
+     "published": "2026-11-17T19:39Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-17T19:31Z",
+   "title": "النسخة التجريبية من Splatoon Raiders متوفرة الآن على السويتش 2",
+   "url": "https://www.true-gaming.net/home/643986/%d8%a7%d9%84%d9%86%d8%b3%d8%ae%d8%a9-%d8%a7%d9%84%d8%aa%d8%ac%d8%b1%d9%8a%d8%a8%d9%8a%d8%a9-%d9%85%d9%86-splatoon-raiders-%d9%85%d8%aa%d9%88%d9%81%d8%b1%d8%a9-%d8%a7%d9%84%d8%a2%d9%86-%d8%b9%d9%84/",
+   "sources": [
+    "True Gaming (AR)"
+   ],
+   "ar_relay": true,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://www.true-gaming.net/home/wp-content/uploads/2026/11/Splatoon-Raiders_2025_06-10-25_010-1280x720-1.webp"
+    }
+   ],
+   "items": [
+    {
+     "source": "True Gaming (AR)",
+     "title": "النسخة التجريبية من Splatoon Raiders متوفرة الآن على السويتش 2",
+     "url": "https://www.true-gaming.net/home/643986/%d8%a7%d9%84%d9%86%d8%b3%d8%ae%d8%a9-%d8%a7%d9%84%d8%aa%d8%ac%d8%b1%d9%8a%d8%a8%d9%8a%d8%a9-%d9%85%d9%86-splatoon-raiders-%d9%85%d8%aa%d9%88%d9%81%d8%b1%d8%a9-%d8%a7%d9%84%d8%a2%d9%86-%d8%b9%d9%84/",
+     "published": "2026-11-17T19:31Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-17T19:22Z",
+   "title": "Dune Magic: The Gathering Crossover Officially Confirmed After Major Leak",
+   "url": "https://www.polygon.com/dune-magic-the-gathering-secret-lair-superdrop-november-2026/",
+   "sources": [
+    "Polygon"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://images.nintendolife.com/ac259145e3bf1/small.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://images.nintendolife.com/ac259145e3bf1/large.jpg"
+     "url": "https://static0.polygonimages.com/wordpress/wp-content/uploads/2025/01/Timothee-Chalamet-Paul-Atreides-Zendaya-Chani-Dune-Part-2.jpg"
     }
    ],
    "items": [
     {
-     "source": "Nintendo Life",
-     "title": "Video: Long Journey Coming Up? Here Are Our Favourite Switch 2 Travel Accessories",
-     "url": "https://www.nintendolife.com/news/2026/11/video-long-journey-coming-up-here-are-our-favourite-switch-2-travel-accessories",
-     "published": "2026-11-17T18:30Z"
+     "source": "Polygon",
+     "title": "Dune Magic: The Gathering Crossover Officially Confirmed After Major Leak",
+     "url": "https://www.polygon.com/dune-magic-the-gathering-secret-lair-superdrop-november-2026/",
+     "published": "2026-11-17T19:22Z"
     }
    ]
   },
@@ -1501,326 +1685,20 @@
      "title": "Under Par Golf Architect \"Northern Isles\" DLC comes to Switch 2 Nov. 26th, 2026",
      "url": "https://gonintendo.com/contents/67328-under-par-golf-architect-northern-isles-dlc-comes-to-switch-2-nov-26th-2026",
      "published": "2026-11-17T18:24Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-17T18:20Z",
-   "title": "FULL METAL SCHOOLGIRL getting physical Switch 2 release",
-   "url": "https://gonintendo.com/contents/67327-full-metal-schoolgirl-getting-physical-switch-2-release",
-   "sources": [
-    "GoNintendo"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://gonintendo.com/attachments/image/89123/file/medium-4f85c1a34a39b5c778d25d8ac2ee2b0b.png"
-    }
-   ],
-   "items": [
+    },
     {
      "source": "GoNintendo",
-     "title": "FULL METAL SCHOOLGIRL getting physical Switch 2 release",
-     "url": "https://gonintendo.com/contents/67327-full-metal-schoolgirl-getting-physical-switch-2-release",
-     "published": "2026-11-17T18:20Z"
+     "title": "TANK Z coming to Switch on Nov. 26th, 2026",
+     "url": "https://gonintendo.com/contents/67337-tank-z-coming-to-switch-on-nov-26th-2026",
+     "published": "2026-11-17T19:21Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-17T18:19Z",
-   "title": "UK Lord questions why Pokémon cards aren't covered by gambling laws",
-   "url": "https://store.steampowered.com/news/group/718735/view/715669733080303686",
-   "sources": [
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://www.wargamer.com/wp-content/sites/wargamer/2026/11/pokemon-trading-card-game-gambling-laws-lord-uk-900x506.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Steam News (hub)",
-     "title": "UK Lord questions why Pokémon cards aren't covered by gambling laws",
-     "url": "https://store.steampowered.com/news/group/718735/view/715669733080303686",
-     "published": "2026-11-17T18:19Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-17T18:13Z",
-   "title": "Behaviour Gives a New Look at the Future of Dead by Daylight",
-   "url": "https://gonintendo.com/contents/67325-behaviour-gives-a-new-look-at-the-future-of-dead-by-daylight",
-   "sources": [
-    "GoNintendo"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://gonintendo.com/attachments/image/89121/file/medium-411146fb8876cb6998c408a43a682e3a.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "GoNintendo",
-     "title": "Behaviour Gives a New Look at the Future of Dead by Daylight",
-     "url": "https://gonintendo.com/contents/67325-behaviour-gives-a-new-look-at-the-future-of-dead-by-daylight",
-     "published": "2026-11-17T18:13Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-17T18:06Z",
-   "title": "Horror game \"Exorcism of the Legion\" announced for Switch 2",
-   "url": "https://gonintendo.com/contents/67323-horror-game-exorcism-of-the-legion-announced-for-switch-2",
-   "sources": [
-    "GoNintendo"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://gonintendo.com/attachments/image/89119/file/medium-b7f2b339283a0b95615b671c1237c2fd.png"
-    }
-   ],
-   "items": [
-    {
-     "source": "GoNintendo",
-     "title": "Horror game \"Exorcism of the Legion\" announced for Switch 2",
-     "url": "https://gonintendo.com/contents/67323-horror-game-exorcism-of-the-legion-announced-for-switch-2",
-     "published": "2026-11-17T18:06Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-17T18:05Z",
-   "title": "Xbox Fans Urge Caution Over New Zealand Trick For GTA 6, While Others Say It's A Non-Issue",
-   "url": "https://www.purexbox.com/news/2026/11/xbox-fans-urge-caution-over-new-zealand-trick-for-gta-6-while-others-say-its-a-non-issue",
-   "sources": [
-    "Pure Xbox"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://images.purexbox.com/2e0fb6a068864/small.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://images.purexbox.com/2e0fb6a068864/large.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Pure Xbox",
-     "title": "Xbox Fans Urge Caution Over New Zealand Trick For GTA 6, While Others Say It's A Non-Issue",
-     "url": "https://www.purexbox.com/news/2026/11/xbox-fans-urge-caution-over-new-zealand-trick-for-gta-6-while-others-say-its-a-non-issue",
-     "published": "2026-11-17T18:05Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-17T18:04Z",
-   "title": "gamigo group Publisher Sale 2026!",
-   "url": "https://store.steampowered.com/news/group/41529014/view/678512495722233857",
-   "sources": [
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://clan.fastly.steamstatic.com/images/41529014/6ca5137dcad3ba4b747bd2226370b665dbf9a3fb.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://clan.fastly.steamstatic.com/images/41529014/5e8f2661a660c8fd17434efd801acd28646d70c3.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Steam News (hub)",
-     "title": "gamigo group Publisher Sale 2026!",
-     "url": "https://store.steampowered.com/news/group/41529014/view/678512495722233857",
-     "published": "2026-11-17T18:04Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-17T18:01Z",
-   "title": "UPDATE 1.1.0 - Active pause, new talents, balance tweaks, and more!",
-   "url": "https://store.steampowered.com/news/app/5066010/view/677389277779199729",
-   "sources": [
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://clan.fastly.steamstatic.com/images/46280948/8891e3a06a5572783a212e7f5258bdfaf68ba123.png"
-    },
-    {
-     "type": "image",
-     "url": "https://clan.fastly.steamstatic.com/images/46280948/56b825ee6a20e371f7eb0d852b034630c41df855.png"
-    }
-   ],
-   "items": [
-    {
-     "source": "Steam News (hub)",
-     "title": "UPDATE 1.1.0 - Active pause, new talents, balance tweaks, and more!",
-     "url": "https://store.steampowered.com/news/app/5066010/view/677389277779199729",
-     "published": "2026-11-17T18:01Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-17T18:01Z",
-   "title": "Duck Side of the Moon gets Major FREE Update Today",
-   "url": "https://gonintendo.com/contents/67322-duck-side-of-the-moon-gets-major-free-update-today",
-   "sources": [
-    "GoNintendo"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://gonintendo.com/attachments/image/89118/file/medium-98e68e0b60b22c518aac7f437a45ce84.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "GoNintendo",
-     "title": "Duck Side of the Moon gets Major FREE Update Today",
-     "url": "https://gonintendo.com/contents/67322-duck-side-of-the-moon-gets-major-free-update-today",
-     "published": "2026-11-17T18:01Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-17T18:00Z",
-   "title": "Hardware Review: Nacon Revolution 5 Unlimited - Solid Xbox-Style PS5 Controller Undercuts Its Competition",
-   "url": "https://www.pushsquare.com/features/hardware-review-nacon-revolution-5-unlimited-solid-xbox-style-ps5-controller-undercuts-its-competition",
-   "sources": [
-    "Push Square"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://images.pushsquare.com/86c964c76b90a/small.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://images.pushsquare.com/86c964c76b90a/large.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Push Square",
-     "title": "Hardware Review: Nacon Revolution 5 Unlimited - Solid Xbox-Style PS5 Controller Undercuts Its Competition",
-     "url": "https://www.pushsquare.com/features/hardware-review-nacon-revolution-5-unlimited-solid-xbox-style-ps5-controller-undercuts-its-competition",
-     "published": "2026-11-17T18:00Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-17T18:00Z",
-   "title": "Talking Point: As A Parent, What Worries You Most About Gaming?",
-   "url": "https://www.nintendolife.com/features/talking-point-as-a-parent-what-worries-you-most-about-gaming",
-   "sources": [
-    "Nintendo Life"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://images.nintendolife.com/ae84043e79382/small.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://images.nintendolife.com/ae84043e79382/large.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Nintendo Life",
-     "title": "Talking Point: As A Parent, What Worries You Most About Gaming?",
-     "url": "https://www.nintendolife.com/features/talking-point-as-a-parent-what-worries-you-most-about-gaming",
-     "published": "2026-11-17T18:00Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-17T18:00Z",
-   "title": "Dossier - Juste avant notre verdict sur GTA 6, retour sur GTA 3, le jeu qui a tout changé",
-   "url": "https://www.gamekult.com/actualite/juste-avant-notre-verdict-sur-gta-6-retour-sur-gta-3-le-jeu-qui-a-tout-change-101-3050843845.html",
-   "sources": [
-    "Gamekult (FR)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://cdn.gamekult.com/optim/images/news/30/3050843845/gta-iii-generation-ps2-62b78ae9__930_300__0-17-1440-480.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.gamekult.com/optim/images/news/30/3050843845/gta-iii-generation-ps2-62b78ae9__800_800__318-0-1073-750.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Gamekult (FR)",
-     "title": "Dossier - Juste avant notre verdict sur GTA 6, retour sur GTA 3, le jeu qui a tout changé",
-     "url": "https://www.gamekult.com/actualite/juste-avant-notre-verdict-sur-gta-6-retour-sur-gta-3-le-jeu-qui-a-tout-change-101-3050843845.html",
-     "published": "2026-11-17T18:00Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-17T17:59Z",
-   "title": "Unicorn Academy: Island of Magic now available on Switch",
-   "url": "https://gonintendo.com/contents/67321-unicorn-academy-island-of-magic-now-available-on-switch",
-   "sources": [
-    "GoNintendo"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://gonintendo.com/attachments/image/89117/file/medium-a3d18936f64ba6f5a3ad1e2d38335e77.png"
-    }
-   ],
-   "items": [
-    {
-     "source": "GoNintendo",
-     "title": "Unicorn Academy: Island of Magic now available on Switch",
-     "url": "https://gonintendo.com/contents/67321-unicorn-academy-island-of-magic-now-available-on-switch",
-     "published": "2026-11-17T17:59Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-17T17:55Z",
-   "title": "محللو Digital Foundry يوضحون سبب اكتفاء GTA 6 بمعدل 30 إطارا ويستبعدون إمكانية الوصول إلى 40 إطارا",
-   "url": "https://www.true-gaming.net/home/643966/%d9%85%d8%ad%d9%84%d9%84%d9%88-digital-foundry-%d9%8a%d9%88%d8%b6%d8%ad%d9%88%d9%86-%d8%b3%d8%a8%d8%a8-%d8%a7%d9%83%d8%aa%d9%81%d8%a7%d8%a1-gta-6-%d8%a8%d9%85%d8%b9%d8%af%d9%84-30-%d8%a5%d8%b7%d8%a7/",
+   "published": "2026-11-17T19:21Z",
+   "title": "الإعلان عن MLB The Show 27 والاختبارات التقنية قادمة قريباً",
+   "url": "https://www.true-gaming.net/home/643972/%d8%a7%d9%84%d8%a5%d8%b9%d9%84%d8%a7%d9%86-%d8%b9%d9%86-mlb-the-show-27-%d9%88%d8%a7%d9%84%d8%a7%d8%ae%d8%aa%d8%a8%d8%a7%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d9%82%d9%86%d9%8a%d8%a9-%d9%82%d8%a7%d8%af/",
    "sources": [
     "True Gaming (AR)"
    ],
@@ -1828,23 +1706,47 @@
    "media": [
     {
      "type": "image",
-     "url": "https://www.true-gaming.net/home/wp-content/uploads/2025/05/GTA-6-JASON.jpeg-960x517.webp"
+     "url": "https://www.true-gaming.net/home/wp-content/uploads/2026/11/MLB-27-Ann_11-17-26-1024x576-1.webp"
     }
    ],
    "items": [
     {
      "source": "True Gaming (AR)",
-     "title": "محللو Digital Foundry يوضحون سبب اكتفاء GTA 6 بمعدل 30 إطارا ويستبعدون إمكانية الوصول إلى 40 إطارا",
-     "url": "https://www.true-gaming.net/home/643966/%d9%85%d8%ad%d9%84%d9%84%d9%88-digital-foundry-%d9%8a%d9%88%d8%b6%d8%ad%d9%88%d9%86-%d8%b3%d8%a8%d8%a8-%d8%a7%d9%83%d8%aa%d9%81%d8%a7%d8%a1-gta-6-%d8%a8%d9%85%d8%b9%d8%af%d9%84-30-%d8%a5%d8%b7%d8%a7/",
-     "published": "2026-11-17T17:55Z"
+     "title": "الإعلان عن MLB The Show 27 والاختبارات التقنية قادمة قريباً",
+     "url": "https://www.true-gaming.net/home/643972/%d8%a7%d9%84%d8%a5%d8%b9%d9%84%d8%a7%d9%86-%d8%b9%d9%86-mlb-the-show-27-%d9%88%d8%a7%d9%84%d8%a7%d8%ae%d8%aa%d8%a8%d8%a7%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d9%82%d9%86%d9%8a%d8%a9-%d9%82%d8%a7%d8%af/",
+     "published": "2026-11-17T19:21Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-17T17:53Z",
-   "title": "تسريحات جديدة تضرب مطوري Civilization وXCOM مع رحيل رئيسة استوديو Firaxis",
-   "url": "https://www.true-gaming.net/home/643963/%d8%aa%d8%b3%d8%b1%d9%8a%d8%ad%d8%a7%d8%aa-%d8%ac%d8%af%d9%8a%d8%af%d8%a9-%d8%aa%d8%b6%d8%b1%d8%a8-%d9%85%d8%b7%d9%88%d8%b1%d9%8a-civilization-%d9%88xcom-%d9%85%d8%b9-%d8%b1%d8%ad%d9%8a%d9%84-%d8%b1/",
+   "published": "2026-11-17T19:20Z",
+   "title": "What Does It Take For World Of Warcraft To Be Nominated At The Game Awards?",
+   "url": "https://www.gamespot.com/articles/what-does-it-take-for-world-of-warcraft-to-be-nominated-at-the-game-awards/",
+   "sources": [
+    "GameSpot"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://www.gamespot.com/wp-content/uploads/2026/11/WoW-Forever-Game-Awards-Snub.jpg?w=300"
+    }
+   ],
+   "items": [
+    {
+     "source": "GameSpot",
+     "title": "What Does It Take For World Of Warcraft To Be Nominated At The Game Awards?",
+     "url": "https://www.gamespot.com/articles/what-does-it-take-for-world-of-warcraft-to-be-nominated-at-the-game-awards/",
+     "published": "2026-11-17T19:20Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-17T19:17Z",
+   "title": "الكشف عن الدفعة الثانية من ألعاب الجيم باس لهذا الشهر",
+   "url": "https://www.true-gaming.net/home/643971/%d8%a7%d9%84%d9%83%d8%b4%d9%81-%d8%b9%d9%86-%d8%a7%d9%84%d8%af%d9%81%d8%b9%d8%a9-%d8%a7%d9%84%d8%ab%d8%a7%d9%86%d9%8a%d8%a9-%d9%85%d9%86-%d8%a3%d9%84%d8%b9%d8%a7%d8%a8-%d8%a7%d9%84%d8%ac%d9%8a%d9%85/",
    "sources": [
     "True Gaming (AR)"
    ],
@@ -1852,51 +1754,47 @@
    "media": [
     {
      "type": "image",
-     "url": "https://www.true-gaming.net/home/wp-content/uploads/2026/11/firaxis-office-960x540.webp"
+     "url": "https://www.true-gaming.net/home/wp-content/uploads/2026/11/Game-Pass_11-17-26-1024x576-1.webp"
     }
    ],
    "items": [
     {
      "source": "True Gaming (AR)",
-     "title": "تسريحات جديدة تضرب مطوري Civilization وXCOM مع رحيل رئيسة استوديو Firaxis",
-     "url": "https://www.true-gaming.net/home/643963/%d8%aa%d8%b3%d8%b1%d9%8a%d8%ad%d8%a7%d8%aa-%d8%ac%d8%af%d9%8a%d8%af%d8%a9-%d8%aa%d8%b6%d8%b1%d8%a8-%d9%85%d8%b7%d9%88%d8%b1%d9%8a-civilization-%d9%88xcom-%d9%85%d8%b9-%d8%b1%d8%ad%d9%8a%d9%84-%d8%b1/",
-     "published": "2026-11-17T17:53Z"
+     "title": "الكشف عن الدفعة الثانية من ألعاب الجيم باس لهذا الشهر",
+     "url": "https://www.true-gaming.net/home/643971/%d8%a7%d9%84%d9%83%d8%b4%d9%81-%d8%b9%d9%86-%d8%a7%d9%84%d8%af%d9%81%d8%b9%d8%a9-%d8%a7%d9%84%d8%ab%d8%a7%d9%86%d9%8a%d8%a9-%d9%85%d9%86-%d8%a3%d9%84%d8%b9%d8%a7%d8%a8-%d8%a7%d9%84%d8%ac%d9%8a%d9%85/",
+     "published": "2026-11-17T19:17Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-17T17:50Z",
-   "title": "Planet Zoo 2 | Best Sim/Strategy at The Game Awards 🎉",
-   "url": "https://store.steampowered.com/news/app/3219030/view/649241729050871398",
+   "published": "2026-11-17T19:14Z",
+   "title": "iam8bit Reunites with Sabotage Studio for Final Sea of Stars Collection; Available Now for Pre-Order",
+   "url": "https://gonintendo.com/contents/67335-iam8bit-reunites-with-sabotage-studio-for-final-sea-of-stars-collection-available",
    "sources": [
-    "Steam News (hub)"
+    "GoNintendo"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://clan.akamai.steamstatic.com/images/46141241/bcecf796ca736d637d9e55fd35133ce3dc1e1244.png"
-    },
-    {
-     "type": "image",
-     "url": "https://clan.akamai.steamstatic.com/images/46141241/a562de58d99d06125f674736d31a57fa33a56fba.png"
+     "url": "https://gonintendo.com/attachments/image/89132/file/medium-b1c1128b51a22d1ab45cad1e0b6c65d6.jpg"
     }
    ],
    "items": [
     {
-     "source": "Steam News (hub)",
-     "title": "Planet Zoo 2 | Best Sim/Strategy at The Game Awards 🎉",
-     "url": "https://store.steampowered.com/news/app/3219030/view/649241729050871398",
-     "published": "2026-11-17T17:50Z"
+     "source": "GoNintendo",
+     "title": "iam8bit Reunites with Sabotage Studio for Final Sea of Stars Collection; Available Now for Pre-Order",
+     "url": "https://gonintendo.com/contents/67335-iam8bit-reunites-with-sabotage-studio-for-final-sea-of-stars-collection-available",
+     "published": "2026-11-17T19:14Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-17T17:46Z",
-   "title": "YouTube view counts now include estimated co-viewers, so one TV play can count as several views",
-   "url": "https://www.tweaktown.com/rss/click/news/114751/?c=news-mf",
+   "published": "2026-11-17T19:10Z",
+   "title": "GPD reveals WIN Mini Ultra gaming handheld specs with Intel Panther Lake, Arc B390 and 8-inch 120Hz display",
+   "url": "https://www.tweaktown.com/rss/click/news/114745/?c=news-mf",
    "sources": [
     "TweakTown"
    ],
@@ -1904,47 +1802,157 @@
    "media": [
     {
      "type": "image",
-     "url": "https://static.tweaktown.com/news/1/1/114751_1_youtube-view-counts-now-include-estimated-co-viewers-so-one-tv-play-can-count-as-several-views_full.png"
+     "url": "https://static.tweaktown.com/news/1/1/114745_6_gpd-reveals-full-win-mini-ultra-specs-with-intel-panther-lake-arc-b390-graphics-and-an-8-inch-120hz-display_full.jpg"
     }
    ],
    "items": [
     {
      "source": "TweakTown",
-     "title": "YouTube view counts now include estimated co-viewers, so one TV play can count as several views",
-     "url": "https://www.tweaktown.com/rss/click/news/114751/?c=news-mf",
-     "published": "2026-11-17T17:46Z"
+     "title": "GPD reveals WIN Mini Ultra gaming handheld specs with Intel Panther Lake, Arc B390 and 8-inch 120Hz display",
+     "url": "https://www.tweaktown.com/rss/click/news/114745/?c=news-mf",
+     "published": "2026-11-17T19:10Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-17T17:41Z",
-   "title": "Calame launches in February 2027",
-   "url": "https://www.gematsu.com/2026/11/calame-launches-in-february-2027",
+   "published": "2026-11-17T19:07Z",
+   "title": "تجميعة Metal Gear Solid: Master Collection Vol.2 تحصل على عرض القصة",
+   "url": "https://www.true-gaming.net/home/643969/%d8%aa%d8%ac%d9%85%d9%8a%d8%b9%d8%a9-metal-gear-solid-master-collection-vol-2-%d8%aa%d8%ad%d8%b5%d9%84-%d8%b9%d9%84%d9%89-%d8%b9%d8%b1%d8%b6-%d8%a7%d9%84%d9%82%d8%b5%d8%a9/",
    "sources": [
-    "Gematsu"
+    "True Gaming (AR)"
+   ],
+   "ar_relay": true,
+   "media": [],
+   "items": [
+    {
+     "source": "True Gaming (AR)",
+     "title": "تجميعة Metal Gear Solid: Master Collection Vol.2 تحصل على عرض القصة",
+     "url": "https://www.true-gaming.net/home/643969/%d8%aa%d8%ac%d9%85%d9%8a%d8%b9%d8%a9-metal-gear-solid-master-collection-vol-2-%d8%aa%d8%ad%d8%b5%d9%84-%d8%b9%d9%84%d9%89-%d8%b9%d8%b1%d8%b6-%d8%a7%d9%84%d9%82%d8%b5%d8%a9/",
+     "published": "2026-11-17T19:07Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-17T19:05Z",
+   "title": "Wizard101’s Gothic Horror World \"Darkmoor\" Arrives on Switch",
+   "url": "https://gonintendo.com/contents/67334-wizard101-s-gothic-horror-world-darkmoor-arrives-on-switch",
+   "sources": [
+    "GoNintendo"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://www.gematsu.com/wp-content/uploads/2026/11/Calame-Release-Window_11-17-26.jpg"
+     "url": "https://gonintendo.com/attachments/image/89131/file/medium-33459175c40e6a23366f844860bde415.png"
     }
    ],
    "items": [
     {
-     "source": "Gematsu",
-     "title": "Calame launches in February 2027",
-     "url": "https://www.gematsu.com/2026/11/calame-launches-in-february-2027",
-     "published": "2026-11-17T17:41Z"
+     "source": "GoNintendo",
+     "title": "Wizard101’s Gothic Horror World \"Darkmoor\" Arrives on Switch",
+     "url": "https://gonintendo.com/contents/67334-wizard101-s-gothic-horror-world-darkmoor-arrives-on-switch",
+     "published": "2026-11-17T19:05Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-17T17:34Z",
-   "title": "I Wish Had Spoken To Reid Duke Before I Started Playing Magic: The Gathering",
-   "url": "https://www.thegamer.com/magic-the-gathering-reid-duke-interview-on-new-players/",
+   "published": "2026-11-17T19:03Z",
+   "title": "The Blood of Dawnwalker تستعرض محتويات التحديث 1.2 في عرض قصير",
+   "url": "https://www.true-gaming.net/home/643968/the-blood-of-dawnwalker-%d8%aa%d8%b3%d8%aa%d8%b9%d8%b1%d8%b6-%d9%85%d8%ad%d8%aa%d9%88%d9%8a%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d8%ad%d8%af%d9%8a%d8%ab-1-2-%d9%81%d9%8a-%d8%b9%d8%b1%d8%b6-%d9%82%d8%b5/",
+   "sources": [
+    "True Gaming (AR)"
+   ],
+   "ar_relay": true,
+   "media": [],
+   "items": [
+    {
+     "source": "True Gaming (AR)",
+     "title": "The Blood of Dawnwalker تستعرض محتويات التحديث 1.2 في عرض قصير",
+     "url": "https://www.true-gaming.net/home/643968/the-blood-of-dawnwalker-%d8%aa%d8%b3%d8%aa%d8%b9%d8%b1%d8%b6-%d9%85%d8%ad%d8%aa%d9%88%d9%8a%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d8%ad%d8%af%d9%8a%d8%ab-1-2-%d9%81%d9%8a-%d8%b9%d8%b1%d8%b6-%d9%82%d8%b5/",
+     "published": "2026-11-17T19:03Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-17T19:03Z",
+   "title": "New Blood of Dawnwalker Update is a Game-Changer",
+   "url": "https://store.steampowered.com/news/group/1450625/view/714543833176606755",
+   "sources": [
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2026/11/blood-of-dawnwalker-key-art-1920x1080.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Steam News (hub)",
+     "title": "New Blood of Dawnwalker Update is a Game-Changer",
+     "url": "https://store.steampowered.com/news/group/1450625/view/714543833176606755",
+     "published": "2026-11-17T19:03Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-17T19:03Z",
+   "title": "Cultic is a modern boomer-shooter updated in the right way",
+   "url": "https://store.steampowered.com/news/group/25563497/view/681892966116099247",
+   "sources": [
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://s3-b3bucket.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/10/13141955/cultic1-1024x576.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Steam News (hub)",
+     "title": "Cultic is a modern boomer-shooter updated in the right way",
+     "url": "https://store.steampowered.com/news/group/25563497/view/681892966116099247",
+     "published": "2026-11-17T19:03Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-17T18:56Z",
+   "title": "XSEED says the \"RAMpocalypse\" makes it harder to do traditional Game Card releases on Switch 2, with Game-Key Cards becoming \"more accepted\"",
+   "url": "https://gonintendo.com/contents/67333-xseed-says-the-rampocalypse-makes-it-harder-to-do-traditional-game-card-releases-on",
+   "sources": [
+    "GoNintendo"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://gonintendo.com/attachments/image/89130/file/medium-cafa353f6286823286db2dfeec4fd5d2.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "GoNintendo",
+     "title": "XSEED says the \"RAMpocalypse\" makes it harder to do traditional Game Card releases on Switch 2, with Game-Key Cards becoming \"more accepted\"",
+     "url": "https://gonintendo.com/contents/67333-xseed-says-the-rampocalypse-makes-it-harder-to-do-traditional-game-card-releases-on",
+     "published": "2026-11-17T18:56Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-17T18:50Z",
+   "title": "MTG Dune Secret Lair Superdrop Confirmed For Later This Month",
+   "url": "https://www.thegamer.com/magic-the-gathering-officially-confirms-dune-secret-lair-superdrop/",
    "sources": [
     "TheGamer"
    ],
@@ -1952,15 +1960,87 @@
    "media": [
     {
      "type": "image",
-     "url": "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2026/11/an-image-of-reid-duke-sat-at-a-table-wearing-a-tcgplayer-jersey.jpg"
+     "url": "https://static0.thegamerimages.com/wordpress/wp-content/uploads/wm/2026/11/1920x1080-2026-11-17t184937-145.png"
     }
    ],
    "items": [
     {
      "source": "TheGamer",
-     "title": "I Wish Had Spoken To Reid Duke Before I Started Playing Magic: The Gathering",
-     "url": "https://www.thegamer.com/magic-the-gathering-reid-duke-interview-on-new-players/",
-     "published": "2026-11-17T17:34Z"
+     "title": "MTG Dune Secret Lair Superdrop Confirmed For Later This Month",
+     "url": "https://www.thegamer.com/magic-the-gathering-officially-confirms-dune-secret-lair-superdrop/",
+     "published": "2026-11-17T18:50Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-17T18:50Z",
+   "title": "Day 2 Patch Notes",
+   "url": "https://store.steampowered.com/news/app/5185750/view/705536726029829963",
+   "sources": [
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://clan.akamai.steamstatic.com/images/46299829/ffdee604db374de81929bb5855a9cc1c02d07913.png"
+    }
+   ],
+   "items": [
+    {
+     "source": "Steam News (hub)",
+     "title": "Day 2 Patch Notes",
+     "url": "https://store.steampowered.com/news/app/5185750/view/705536726029829963",
+     "published": "2026-11-17T18:50Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-17T18:47Z",
+   "title": "عطل يربك شبكة الاتصالات السرية داخل وكالة الأمن القومي الأمريكية",
+   "url": "https://arabhardware.net/post-55175",
+   "sources": [
+    "Arab Hardware (AR)"
+   ],
+   "ar_relay": true,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://arabhardware.net/storage/uploads/2026-11/6afc9feb99aa4.39d635f1-bd10-43c4-a46f-35e47f1cf831.pngmain6afc9feba9440.webp"
+    }
+   ],
+   "items": [
+    {
+     "source": "Arab Hardware (AR)",
+     "title": "عطل يربك شبكة الاتصالات السرية داخل وكالة الأمن القومي الأمريكية",
+     "url": "https://arabhardware.net/post-55175",
+     "published": "2026-11-17T18:47Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-17T18:46Z",
+   "title": "Visual novel \"Ikemen Big Bang: A Dating Game About Potentially Hot Guys\" in the works for Switch",
+   "url": "https://gonintendo.com/contents/67332-visual-novel-ikemen-big-bang-a-dating-game-about-potentially-hot-guys-in-the-works",
+   "sources": [
+    "GoNintendo"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://gonintendo.com/attachments/image/89129/file/medium-80a82bc91377b9d75a9c33a1e872d2ce.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "GoNintendo",
+     "title": "Visual novel \"Ikemen Big Bang: A Dating Game About Potentially Hot Guys\" in the works for Switch",
+     "url": "https://gonintendo.com/contents/67332-visual-novel-ikemen-big-bang-a-dating-game-about-potentially-hot-guys-in-the-works",
+     "published": "2026-11-17T18:46Z"
     }
    ]
   }
@@ -2002,7 +2082,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T18:50:15Z",
+  "last_poll_at": "2026-11-17T19:50:05Z",
   "sources_enabled": 100,
   "sources_ok": 92,
   "sources_failing": 7,
