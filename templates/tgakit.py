@@ -206,6 +206,9 @@ def most(kit, pairs, when='TODO time read (Z)'):
                 'headline': 'الأكثر ترشيحًا\nفي ذا غيم أووردز 2026',
                 'spoken': f'{line1} القائمة بأكبر عدد من الترشيحات في {SOURCE} 2026. ويُعلن الفائزون في حفل 10 ديسمبر.',
                 'gfx': [{'file': gfx, 'kind': 'ranking', 'rows': rows, 'animate': True}],
+                'pace_ok': ('the 5 s ranking card is animated: its rows enter one by one, about 0.55 s each from the last rank '
+                            'up, so the longest still stretch on it is under 3 s; the pace check reads the card as one still '
+                            '(dry run 17 Nov, render run 1217)'),
                 'ground_footage': [lead['footage']['file'], lead['shots']['item'][0]],
                 'reel_check': _reel_check([c[k]['title'] for k in keys], when),
                 'lowres_ok': _lowres(c, keys[:1]),
