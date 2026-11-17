@@ -1,0 +1,136 @@
+{
+ "name": "black-mesa-anomalous-improvements-november-16",
+ "story": "2026-11-17-black-mesa-anomalous-improvements",
+ "kind_news": "update",
+ "built_by": "production-2",
+ "render_lane": "server",
+ "out": "cards/2026-11/black-mesa-anomalous-improvements-november-16-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "black-mesa-launch-trailer.mp4",
+   "steam": 362890,
+   "trailer": "1.0 Launch Trailer",
+   "start": 0,
+   "seconds": 120
+  }
+ ],
+ "shots": "auto",
+ "lines": [
+  [
+   0,
+   0,
+   [
+    [
+     "تحديث Anomalous Improvements\nيحسّن إضاءة Black Mesa وانعكاساتها",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   1,
+   2,
+   [
+    [
+     "ويرفع الأداء في كل الفصول\nويعيد تصميم القوائم",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "مع دعم أذرع Xbox وPlayStation وSteam\nوصارت اللعبة Steam Deck Verified",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   4,
+   [
+    [
+     "لكن الحفظات القديمة\nلا تعمل بعد التحديث",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "strip": [
+  [
+   "المنصة",
+   "PC على Steam"
+  ],
+  [
+   "الحالة",
+   "Steam Deck Verified"
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   4,
+   "لقطات إطلاق اللعبة السابقة، كراوبار كوليكتيف (Crowbar Collective)"
+  ]
+ ],
+ "headline": "تحديث كبير لـ Black Mesa\nوالآن Steam Deck Verified",
+ "label": "رسمي",
+ "source": "إعلان Black Mesa على Steam",
+ "date": "16 Nov 2026",
+ "theme": "spectacle",
+ "style": null,
+ "template": "split",
+ "skin": "house",
+ "bed_reason": "The update has no trailer of its own (the announcement carries only GIFs). Checked the four Steam trailers of app 362890 (1.0 Launch Trailer, 2018 Xen, 2015 release, 2009): all are earlier footage with their own dated music, so the trailer sound would not belong to this update; our bed is used under narration-free lines.",
+ "sound_note": "our bed: no trailer of the update exists, earlier trailer music is not the update's",
+ "genre": [
+  "shooter"
+ ],
+ "platform": "pc",
+ "beat": "new addition or update",
+ "subject_person": null,
+ "angle": {
+  "hook": "the fan-made Half-Life remake gets a big visual and interface overhaul",
+  "why_now": "released 16 Nov on Steam with Steam Deck Verified",
+  "what_it_means_here": "PC and Steam Deck players get better lighting, performance and controller support, but old saves stop working",
+  "payoff": "the save warning"
+ },
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam announcement 16 Nov 18:03Z read in full via the Steam news API 17 Nov 09:20Z",
+  "SOURCE: not already posted": "yes: ledger find black mesa, 0 hits; Publer last 7 days has no Black Mesa post",
+  "SOURCE: age": "yes: first report 16 Nov 18:03Z, about 15 hours",
+  "ANGLE before lines": "yes: angle in story file and job",
+  "STORY TYPE update": "yes: the change (Anomalous Improvements), what it does (lighting, performance, UI, controllers), availability (Steam, Steam Deck Verified), the catch (saves)",
+  "STORY: spoken paragraph, subject before pronoun": "yes: spoken in the story file; lines name Black Mesa and the update first, no line opens on و as a new start",
+  "STORY: release verbs": "yes: no date verb needed, the update is out",
+  "STORY: names match names-ar.md": "yes: Crowbar Collective added to names-ar.md and flagged",
+  "POST: Arabic passes": "yes: Western digits, no first person",
+  "SOUND: footage sound or bed with reason": "yes: our bed, bed_reason written",
+  "SOUND: no speech under Arabic lines": "yes: bed only",
+  "PICTURE: footage first": "yes: official Steam launch trailer of the game, credited as earlier footage",
+  "PICTURE: not graphic": "to be judged on the strip and sheet after the shot read",
+  "CREDIT: on every clip": "yes: credit over shots 0 to 4",
+  "SENSITIVE": "n/a",
+  "DATE: primary check": "yes: Steam announcement 16 Nov 2026"
+ },
+ "decision_log": [
+  {
+   "beat": "all",
+   "shot": "server auto read of the 1.0 Launch Trailer",
+   "alternatives": "2018 Xen trailer, 2015 and 2009 trailers (older look)",
+   "crop": "split layout, subject focus by autofocus",
+   "music": "our bed, bed_reason in the job"
+  }
+ ],
+ "stand_in_note": "all shots are earlier official footage of the game, credited on screen as earlier footage",
+ "spoken": "حصلت Black Mesa، النسخة المعاد صنعها من Half-Life، على تحديث كبير اسمه Anomalous Improvements. يحسّن التحديث الإضاءة والانعكاسات والأداء في كل الفصول، ويعيد تصميم القوائم مع دعم أذرع Xbox وPlayStation وSteam. وصارت اللعبة الآن Steam Deck Verified، لكن الحفظات القديمة لا تعمل بعد التحديث."
+}

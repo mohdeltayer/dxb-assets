@@ -374,3 +374,4 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | Karrot Games (Clicky Islands developer; Steam lists Karrot Games, two-person Polish studio) | كاروت غيمز (Karrot Games) | Proposed 16 Nov 2026 (Clicky Islands Reel credit) |
 
 - غوتشا غوتشا غيمز (Gotcha Gotcha Games): publisher and developer of RPG Maker U2U. New name, used 17 Nov 2026 by Production 2; flagged for Mohammad.
+| Crowbar Collective | كراوبار كوليكتيف | New 17 Nov 2026 (Black Mesa update Reel; bracket كراوبار كوليكتيف (Crowbar Collective) at first mention); flagged for Mohammad |
