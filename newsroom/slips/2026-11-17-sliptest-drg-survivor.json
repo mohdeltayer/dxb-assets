@@ -1,12 +1,26 @@
 {
  "id": "2026-11-17-sliptest-drg-survivor",
- "state": "failed",
- "problems": [
-  "footage: the resolver stopped on steam:2321470: TimeoutExpired: Command '['ffprobe', '-v', 'error', '-user_agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36', '-show_entries', 'format=duration,bit_rate:stream=codec_type,width,height,r_frame_rate,bit_rate', '-of', 'json', 'https://video.akamai.steamstatic.com/store_trailers/2321470/657286/c203b60b6750d59487795fb887a18bc755c88e73/1750811708/hls_264_master.m3u8?t=1706795883']' timed out after 90 seconds"
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "ledger: earlier stories on this game: 2026-10-24-november-big-releases, 2026-10-26-guardians-of-the-galaxy-turns-5, 2026-10-29-gta-6-edge-map-three-games, 2026-11-17-drg-survivor-knockout-expansion, deep-rock-galactic-rogue-core-free-weekend-nov-16-20261113 (an update or a duplicate? the editor decides)"
  ],
- "flags": [],
- "at": "2026-11-17T19:25:26Z",
- "run": "44158332310",
+ "at": "2026-11-17T19:31:33Z",
+ "footage": {
+  "name": "Update 4 Narrated Trailer",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60.0,
+  "mbps": 5.8,
+  "rows": 1048,
+  "duration": 120.04,
+  "decode_clean": true
+ },
+ "job": "jobs/test/sliptest-drg-survivor.json",
+ "story": "newsroom/stories/2026-11-17-sliptest-drg-survivor.json",
+ "lines": 4,
+ "shots": 5,
+ "run": "44159431372",
  "lane": "test",
- "build_secs": 248
+ "build_secs": 186
 }

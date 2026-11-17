@@ -1,0 +1,146 @@
+{
+ "name": "sliptest-drg-survivor",
+ "story": "2026-11-17-sliptest-drg-survivor",
+ "kind_news": "reveal",
+ "built_by": "server-slip",
+ "render_lane": "hosted",
+ "out": "cards/test/sliptest-drg-survivor-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "sliptest-drg-survivor-update-4-narrated-trailer.mp4",
+   "steam": 2321470,
+   "trailer": "Update 4 Narrated Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "2321470"
+  }
+ ],
+ "shots": [
+  [
+   "sliptest-drg-survivor-update-4-narrated-trailer.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "sliptest-drg-survivor-update-4-narrated-trailer.mp4",
+   "auto",
+   3.13,
+   null
+  ],
+  [
+   "sliptest-drg-survivor-update-4-narrated-trailer.mp4",
+   "auto",
+   3.49,
+   null
+  ],
+  [
+   "sliptest-drg-survivor-update-4-narrated-trailer.mp4",
+   "auto",
+   4.06,
+   null
+  ],
+  [
+   "sliptest-drg-survivor-update-4-narrated-trailer.mp4",
+   "auto",
+   4.13,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "تضيف فئة Brawler التي تقاتل",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    [
+     "بقبضتيها\nومعها 11 سلاحًا جديدًا،",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "ويصل\nالتحديث 1.2 بمستوى الخطورة Hazard 6",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   4,
+   [
+    [
+     "وتباع الإضافة على Steam\nبسعر 9.99 دولارات",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   4,
+   "المصدر: إعلان Deep Rock Galactic: Survivor على Steam",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "وصلت إضافة Knockout إلى لعبة Deep Rock Galactic: Survivor، حسب غوست شيب (Ghost Ship Games). تضيف فئة Brawler التي تقاتل بقبضتيها ومعها 11 سلاحًا جديدًا، ويصل التحديث 1.2 بمستوى الخطورة Hazard 6. وتباع الإضافة على Steam بسعر 9.99 دولارات.",
+ "headline": "إضافة Knockout تصل\nإلى Deep Rock Survivor",
+ "label": "رسمي",
+ "source": "إعلان Deep Rock Galactic: Survivor على Steam",
+ "date": "17 Nov 2026",
+ "theme": "emerald",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "sliptest-drg-survivor-update-4-narrated-trailer.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": null,
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "footage": "sliptest-drg-survivor-update-4-narrated-trailer.mp4 from the resolver (steam:2321470)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (audio split per shot)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Steam announcement 'Out Now! Knockout Expansion DLC & Update 1.2' (Deep Rock Galactic: Survivor), 17 Nov 2026 12:00Z, read in full via the Steam news API; store page of the DLC (app 5269530) for the $9.99 price (https://store.steampowered.com/news/app/2321470/view/693151734943450159); first report: Steam announcement 17 Nov 2026 12:00Z (the 10 Nov Brawler preview was pre-release; this is the launch)",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 2321470 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ },
+ "lane_reason": "Phase 1 test (no Publer upload, no ledgers)"
+}
