@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T04:52:06Z",
- "seq": 559,
+ "generated_at": "2026-11-17T05:52:05Z",
+ "seq": 560,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -313,23 +313,11 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 524
-  },
-  {
-   "id": 15103,
-   "source": "The Game Awards",
-   "source_kind": "page",
-   "title": "Nominees Announced Tuesday, November 17",
-   "url": "https://thegameawards.com/news/nominees-announced-tuesday-november-17",
-   "published": null,
-   "first_seen": "2026-11-16T05:10:14Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 522
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T04:50:14Z",
+  "last_poll_at": "2026-11-17T05:50:05Z",
   "sources_enabled": 100,
   "sources_ok": 90,
   "sources_failing": 9,
