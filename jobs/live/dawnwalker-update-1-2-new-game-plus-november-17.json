@@ -23,7 +23,7 @@
  ],
  "shots": "auto",
  "auto_shots": {
-  "count": 5,
+  "count": 6,
   "secs": 3.0
  },
  "lines": [
@@ -32,7 +32,7 @@
    1,
    [
     [
-     "يصل وضع «اللعبة الجديدة+»\nإلى Dawnwalker",
+     "صدر التحديث 1.2 ومعه\nوضع «اللعبة الجديدة+»",
      {}
     ]
    ]
@@ -42,14 +42,14 @@
    3,
    [
     [
-     "يحتفظ اللاعب بمستواه\nومهاراته وعتاده",
+     "يعيد اللاعب القصة من البداية\nمحتفظًا بمستواه ومهاراته وعتاده",
      {}
     ]
    ]
   ],
   [
    4,
-   4,
+   5,
    [
     [
      "ويرتفع سقف المستوى\nإلى 100",
@@ -71,11 +71,11 @@
  "credits": [
   [
    0,
-   4,
+   5,
    "لقطات من عروض اللعبة السابقة، ريبل ولفز (Rebel Wolves)"
   ]
  ],
- "headline": "«اللعبة الجديدة+» في\nThe Blood of Dawnwalker",
+ "headline": "صدرت «اللعبة الجديدة+»\nفي Dawnwalker",
  "label": "رسمي",
  "source": "إعلان The Blood of Dawnwalker على Steam",
  "date": "17 Nov 2026",
@@ -94,5 +94,22 @@
  "sound_note": "our bed under the cut: the update has no footage of its own and trailer sound would be from another moment",
  "bed_reason": "earlier trailer footage with narration/other moment audio; our bed under every line",
  "angle": "hook: the vampire RPG finally gets New Game+ and it is live now; why now: Update 1.2 released 17 Nov after the 14 Nov announcement; what it means: replay with level, skills and inventory kept, cap 100, no zone scaling, harder enemies; payoff: new framed NG+ gear.",
- "note": "picture: Steam Launch and Features trailers of The Blood of Dawnwalker (earlier footage, credited); not the same as the 14 Nov stills Reel."
+ "note": "picture: Steam Launch and Features trailers of The Blood of Dawnwalker (earlier footage, credited); not the same as the 14 Nov stills Reel.",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: Steam announcement 'Update 1.2 (with New Game+) is now live' 17 Nov 10:03Z read in full via the Steam news API 11:20Z",
+  "SOURCE: not already posted": "yes: ledger find dawnwalker, 1 other hit = the 14 Nov 'next week' announcement; this is the release with its full feature list, new",
+  "SOURCE: age": "yes: first report of the release 17 Nov 10:00Z, about 1 hour at build",
+  "ANGLE before lines": "yes: angle in story file and job",
+  "STORY TYPE update/trailer": "yes: the change (New Game+), demonstration (earlier trailer footage, credited), effect on play (level cap 100, items kept, stronger enemies), availability (live now on Steam, 1.2)",
+  "STORY: spoken paragraph, subject before pronoun": "yes: headline names the mode and the game, L1 the update, L2 the player, L3 the cap; no line opens on و except ويرتفع which continues the sentence before",
+  "STORY: release verbs": "yes: صدر for the release",
+  "STORY: names match names-ar.md": "yes: Rebel Wolves ريبل ولفز (Rebel Wolves) in the credit",
+  "POST: Arabic passes": "yes: Western digits, no first person, outlet voice",
+  "SOUND: footage sound or bed with reason": "yes: our bed, bed_reason in the job (earlier trailer footage from other moments)",
+  "SOUND: no speech under Arabic lines": "yes: our bed only",
+  "PICTURE: footage first": "yes: official Steam Launch and Features trailers of the game, credited as earlier footage; the update has no trailer on Steam",
+  "PICTURE: not graphic": "to be judged on the frames by the Director",
+  "CREDIT: on every clip": "yes: one credit over shots 0 to 5",
+  "SENSITIVE": "n/a"
+ }
 }
