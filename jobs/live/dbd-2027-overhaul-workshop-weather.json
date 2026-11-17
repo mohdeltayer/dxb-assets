@@ -1,0 +1,170 @@
+{
+ "name": "dbd-2027-overhaul-workshop-weather",
+ "story": "2026-11-18-dbd-2027-overhaul-workshop-weather",
+ "kind_news": "reveal",
+ "built_by": "server-slip",
+ "render_lane": "server",
+ "out": "cards/2026-11/dbd-2027-overhaul-workshop-weather-reel-v1.mp4",
+ "split_fallback": "bed",
+ "footage": [
+  {
+   "file": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+   "steam": 381210,
+   "trailer": "Dead by Daylight: 10th Anniversary Edition",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "381210"
+  }
+ ],
+ "shots": [
+  [
+   "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+   100.13,
+   3.8,
+   null
+  ],
+  [
+   "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+   103.93,
+   2.2,
+   null
+  ],
+  [
+   "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+   72.8,
+   2.2,
+   null
+  ],
+  [
+   "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+   48.5,
+   2.35,
+   null
+  ],
+  [
+   "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+   46.2,
+   2.35,
+   null
+  ],
+  [
+   "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+   70.55,
+   2.2,
+   null
+  ],
+  [
+   "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+   43.95,
+   2.2,
+   null
+  ],
+  [
+   "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+   17.25,
+   2.2,
+   null
+  ],
+  [
+   "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+   93.95,
+   2.2,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "يجلب التحديث مظهرًا\nجديدًا للخرائط",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "والشخصيات ونظام طقس\nبالمطر والعواصف والثلج",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "وتفتح الشركة ورشة تتيح للاعبين",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   7,
+   8,
+   [
+    [
+     "صنع خرائط وأنماط لعب خاصة بهم",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   8,
+   "المصدر: موقع Dead by Daylight الرسمي",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "كشفت بيهيفيور إنتراكتيف (Behaviour Interactive) تفاصيل التحديث الكبير القادم إلى Dead by Daylight في 2027. يجلب التحديث مظهرًا جديدًا للخرائط والشخصيات ونظام طقس بالمطر والعواصف والثلج. وتفتح الشركة ورشة تتيح للاعبين صنع خرائط وأنماط لعب خاصة بهم.",
+ "headline": "تحديث 2027 الكبير\nفي Dead by Daylight",
+ "label": "رسمي",
+ "source": "موقع Dead by Daylight الرسمي",
+ "date": "17 Nov 2026",
+ "theme": "emerald",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": null,
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "footage": "dbd-2027-overhaul-workshop-weather-dead-by-daylight-10th-anniversary-edition.mp4 from the resolver (steam:381210)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (audio split per shot)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Behaviour Interactive, The Future of Dead by Daylight: Deep Dive Recap, deadbydaylight.com, read in full 17 Nov 2026 (https://deadbydaylight.com/news/future-dbd-deep-dive-recap/); first report: Behaviour Interactive Deep Dive recap on deadbydaylight.com, 17 Nov 2026 about 18:00Z (GoNintendo 18:13Z)",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 381210 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ }
+}
