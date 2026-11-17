@@ -100,7 +100,7 @@
  "date": "17 Nov 2026",
  "theme": "playful",
  "style": null,
- "template": "split",
+ "template": "trailer",
  "skin": "house",
  "cut": true,
  "strip": [
@@ -148,5 +148,15 @@
  "track": [
   "splatoon-raiders-demo-november-17-trailer.mp4",
   "auto"
- ]
+ ],
+ "lowres_ok": {
+  "searched": [
+   "Nintendo US store product page (the official trailer, 1280x720)",
+   "Nintendo Japan product site (trailers in a player, no file)",
+   "IGN video search (no MP4 for this trailer)",
+   "Steam (Nintendo exclusive, no page)",
+   "YouTube (refused without sign-in)"
+  ],
+  "result": "1280x720 only; at the 2x cap it cannot fill 9:16"
+ }
 }
