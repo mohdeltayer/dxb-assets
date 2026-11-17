@@ -1,0 +1,146 @@
+{
+ "name": "sliptest-dawnwalker",
+ "story": "2026-11-17-sliptest-dawnwalker",
+ "kind_news": "reveal",
+ "built_by": "server-slip",
+ "render_lane": "hosted",
+ "out": "cards/test/sliptest-dawnwalker-reel-v1.mp4",
+ "footage": [
+  {
+   "file": "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4",
+   "steam": 3751260,
+   "trailer": "The Blood of the Dawnwalker - Pre-Order Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "3751260"
+  }
+ ],
+ "shots": [
+  [
+   "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4",
+   "auto",
+   5.06,
+   null
+  ],
+  [
+   "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4",
+   "auto",
+   4.84,
+   null
+  ],
+  [
+   "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4",
+   "auto",
+   3.0,
+   null
+  ],
+  [
+   "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4",
+   "auto",
+   4.27,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "بعد إنهاء الخاتمة يعيد اللاعب\nالقصة من البداية محتفظًا",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   2,
+   2,
+   [
+    [
+     "بمستواه ومهاراته وعتاده،\nويرتفع سقف المستوى إلى 100",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "وتصبح الأعداء أقوى،",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   4,
+   [
+    [
+     "وتحمل الدروع والسيوف\nنسخًا جديدة بإطار مميز",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   4,
+   "المصدر: إعلان The Blood of Dawnwalker على Steam",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "صدر التحديث 1.2 للعبة The Blood of Dawnwalker ومعه وضع «اللعبة الجديدة+». بعد إنهاء الخاتمة يعيد اللاعب القصة من البداية محتفظًا بمستواه ومهاراته وعتاده، ويرتفع سقف المستوى إلى 100. وتصبح الأعداء أقوى، وتحمل الدروع والسيوف نسخًا جديدة بإطار مميز.",
+ "headline": "صدرت «اللعبة الجديدة+»\nفي Dawnwalker",
+ "label": "رسمي",
+ "source": "إعلان The Blood of Dawnwalker على Steam",
+ "date": "17 Nov 2026",
+ "theme": "emerald",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": null,
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "footage": "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4 from the resolver (steam:3751260)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (audio split per shot)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Steam announcement 'Update 1.2 (with New Game+) is now live on Steam!' (The Blood of Dawnwalker, community announcements), 17 Nov 2026 10:03Z, read in full via the Steam news API 11:20Z (https://store.steampowered.com/news/app/3751260); first report: Steam announcement 17 Nov 2026 10:03Z (the update was announced as 'next week' on 13 Nov by Eurogamer quoting Rebel Wolves and posted by us on 14 Nov; this is the release, new)",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 3751260 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ },
+ "lane_reason": "Phase 1 test (no Publer upload, no ledgers)"
+}
