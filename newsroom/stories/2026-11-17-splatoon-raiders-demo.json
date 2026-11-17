@@ -47,5 +47,25 @@
   "payoff": "six gadgets, three dungeons, Treasure Hunt mode"
  },
  "spoken": "أتاحت نينتيندو نسخة تجريبية من Splatoon Raiders على Switch 2. تضم التجربة ثلاث زنازين وست أدوات. لكن التقدم المحفوظ فيها لا ينتقل إلى اللعبة الكاملة.",
- "subject_person": null
+ "subject_person": null,
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/splatoon-raiders-demo-november-17-reel-v3.mp4",
+  "blob": "276121718c83cc34fccc7cef1eea72aeb93ac3aa",
+  "at": "2026-11-17T05:35:28Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/splatoon-raiders-demo-november-17.json",
+   "sha256": "6ce50e448b178a5ac3abad0f40c9ddb63c1a8351337ee0d53e853d9e0093f29c",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Splatoon Raiders own gameplay (Inkling HUD, Level 4, green ink splats on a creature, treasure-search UI); Arabic headline, lines, strip and source credit readable and uncropped; stylised ink effects, nothing graphic"
+ }
 }
