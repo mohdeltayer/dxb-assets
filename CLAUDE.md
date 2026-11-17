@@ -3718,3 +3718,13 @@ B. prerender.yml mode `footage` with `source` (steam:<appid>, a Nintendo US stor
    flag), letterbox rows and a full decode check, best first (FOOTAGE_JSON in the log, footage.json in the summary and as the
    run's `footage` artifact). Nintendo pages give only the product's own gallery, under its own nsuid. Other hosts are refused.
 
+## Server speed for Production 2: job kept, stage minutes, unfinished handoff (adv-20261117-server-speed-for-p2 C, D and E, Mohammad 17 Nov 2026; release 2026-11-17 r4)
+
+C. A render moves its job, as rendered with the server's fixes, to jobs/done/<name>.json and names it in the commit and in
+   qc.json (`job_path`); the director finds it from the Reel's qc.json or a bare name.
+D. Every render commit, qc.json (`stage_minutes`) and the work order's section 7 (last five renders) carry minutes per
+   stage: queue, setup, fetch, shots, checks, render, after, upload (`templates/stagetimes.py`).
+E. A Production 2 run that ends INCOMPLETE writes a row in dxb-queue desk/incomplete.json (`ops/backoffice/dispatch/
+   incomplete.py`: story, next step, job, render run id); the work order lists it in section 1b right after the alarms as
+   "pick up first", and raises an alarm after 2 hours; the run that finishes it closes the row.
+
