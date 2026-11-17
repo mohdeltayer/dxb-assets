@@ -3,7 +3,7 @@
  "story": "2026-11-17-tga-2026-cat-indie",
  "kind_news": "awards",
  "built_by": "production-1",
- "out": "cards/test/tga-2026-cat-indie-reel-v2.mp4",
+ "out": "cards/test/tga-2026-cat-indie-reel-v1.mp4",
  "label": "رسمي",
  "source": "ذا غيم أووردز (The Game Awards)",
  "date": "17 Nov 2026",
@@ -62,7 +62,10 @@
   [
    1,
    1,
-   "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: بانيك (Panic)"
+   "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: بانيك (Panic)",
+   {
+    "size": 32
+   }
   ],
   [
    2,
@@ -93,7 +96,9 @@
    "title": "أفضل لعبة مستقلة",
    "rows": [
     {
-     "name": "Big Walk"
+     "name": "Big Walk",
+     "note": "بانيك (Panic)",
+     "image": "tga26-bigwalk"
     },
     {
      "name": "Cairn"
@@ -105,7 +110,9 @@
      "name": "Mewgenics"
     },
     {
-     "name": "Mina the Hollower"
+     "name": "Mina the Hollower",
+     "note": "ياخت كلوب غيمز (Yacht Club Games)",
+     "image": "tga26-mina"
     }
    ],
    "animate": true
