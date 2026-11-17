@@ -54,5 +54,25 @@
    "dont delete"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/madden-27-dont-delete-gta-6-november-17-reel-v1.mp4",
+  "blob": "87e8a82c750fdd398d159b8849d920e3ade6acad",
+  "at": "2026-11-17T10:29:21Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/madden-27-dont-delete-gta-6-november-17.json",
+   "sha256": "73bc0f0cf1dd80fd17b5ed21fa7e3695f6c6a7d14368d6cc14be5e9a6d28f4e2",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Look 1: report chip تقرير with headline 'رجاءً لا تحذفوا لعبة Madden 27' over Madden trailer footage; look 2: 'من إلكترونيك آرتس (EA): لا تحذفوا اللعبة!' with Eurogamer source line and strip (update 17 نوفمبر 2026, PS5/Xbox/PC) over a Bears-jersey player; look 3: 'لتفريغ مساحة لـ GTA VI، حسب يوروغيمر (Eurogamer)' over a trailer talking head; all Arabic readable, nothing graphic, facts match the story file"
  }
 }
