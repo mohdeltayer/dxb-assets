@@ -3,7 +3,7 @@
  "story": "2026-11-17-tga-2026-cat-direction",
  "kind_news": "awards",
  "built_by": "production-1",
- "out": "cards/test/tga-2026-cat-direction-reel-v1.mp4",
+ "out": "cards/test/tga-2026-cat-direction-reel-v2.mp4",
  "label": "رسمي",
  "source": "ذا غيم أووردز (The Game Awards)",
  "date": "17 Nov 2026",
@@ -23,32 +23,32 @@
  "sensitive": "none",
  "footage": [
   {
-   "file": "tga26-pragmata.mp4",
-   "steam": 3357650,
-   "trailer": "06_PRAGMATA_PV6",
+   "file": "tga26-pbz.mp4",
+   "steam": 4115450,
+   "trailer": "Phantom Blade Zero - Launch",
    "start": 0,
    "seconds": 240
   }
  ],
  "shots": [
   [
-   "tga26-pragmata.mp4",
-   100.85,
-   3.6,
+   "tga26-pbz.mp4",
+   83.76,
+   3.12,
    null
   ],
   [
    "tga-2026-cat-direction-gfx-nominees.png",
    [
-    "tga26-pragmata.mp4",
-    71.02
+    "tga26-pbz.mp4",
+    97.21
    ],
    5.4,
    null
   ],
   [
-   "tga26-pragmata.mp4",
-   111.09,
+   "tga26-pbz.mp4",
+   78.15,
    3.02,
    null
   ]
@@ -57,17 +57,17 @@
   [
    0,
    0,
-   "المصدر: كابكوم (Capcom)"
+   "المصدر: إس جيم (S-GAME)"
   ],
   [
    1,
    1,
-   "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: كابكوم (Capcom)"
+   "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: إس جيم (S-GAME)"
   ],
   [
    2,
    2,
-   "المصدر: كابكوم (Capcom)"
+   "المصدر: إس جيم (S-GAME)"
   ]
  ],
  "lines": [
@@ -93,37 +93,27 @@
    "title": "أفضل إخراج للعبة",
    "rows": [
     {
-     "name": "Control Resonant",
-     "note": "ريميدي (Remedy)",
-     "image": "tga26-control"
+     "name": "Control Resonant"
     },
     {
-     "name": "Grand Theft Auto VI",
-     "note": "روكستار غيمز (Rockstar Games)",
-     "image": null
+     "name": "Grand Theft Auto VI"
     },
     {
-     "name": "Phantom Blade Zero",
-     "note": "إس جيم (S-GAME)",
-     "image": "tga26-pbz"
+     "name": "Phantom Blade Zero"
     },
     {
-     "name": "PRAGMATA",
-     "note": "كابكوم (Capcom)",
-     "image": "tga26-pragmata"
+     "name": "PRAGMATA"
     },
     {
-     "name": "Resident Evil Requiem",
-     "note": "كابكوم (Capcom)",
-     "image": "tga26-re9"
+     "name": "Resident Evil Requiem"
     }
    ],
    "animate": true
   }
  ],
  "ground_footage": [
-  "tga26-pragmata.mp4",
-  71.02
+  "tga26-pbz.mp4",
+  97.21
  ],
  "ground_seek": "fixed",
  "pace_ok": "the 5.4 s nominees card is animated: its rows enter one by one, 0.55 s apart, in the order read, then the full list holds 3 s to be read",
@@ -141,9 +131,9 @@
   "PICTURE: nothing graphic": "yes: stretches read by the server shots mode; the director looks once at the frames"
  },
  "decision_log": {
-  "hook": "PRAGMATA (a nominee in this category) under the headline",
+  "hook": "Phantom Blade Zero (a nominee in this category) under the headline",
   "card": "the nominees in the order read, names as the show writes them, no ranking",
-  "close": "PRAGMATA again",
+  "close": "Phantom Blade Zero again",
   "music": "our bed (bed_reason)"
  }
 }

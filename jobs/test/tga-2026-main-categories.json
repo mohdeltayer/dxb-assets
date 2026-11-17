@@ -3,7 +3,7 @@
  "story": "2026-11-17-tga-2026-main-categories",
  "kind_news": "awards",
  "built_by": "production-1",
- "out": "cards/test/tga-2026-main-categories-reel-v1.mp4",
+ "out": "cards/test/tga-2026-main-categories-reel-v2.mp4",
  "label": "رسمي",
  "source": "ذا غيم أووردز (The Game Awards)",
  "date": "17 Nov 2026",
@@ -30,9 +30,9 @@
    "seconds": 29.0
   },
   {
-   "file": "tga26-pragmata.mp4",
-   "steam": 3357650,
-   "trailer": "06_PRAGMATA_PV6",
+   "file": "tga26-pbz.mp4",
+   "steam": 4115450,
+   "trailer": "Phantom Blade Zero - Launch",
    "start": 0,
    "seconds": 240
   },
@@ -42,17 +42,6 @@
    "trailer": "The Blood of the Dawnwalker - Launch",
    "start": 0,
    "seconds": 240
-  },
-  {
-   "file": "tga26-pbz.mp4",
-   "steam": 4115450,
-   "trailer": "Phantom Blade Zero - Launch",
-   "start": 0,
-   "seconds": 240
-  },
-  {
-   "file": "tga26-oot.mp4",
-   "url": "https://assets.nintendo.com/video/upload/store/software/switch2/70010000130792/Video/4b2fa8b7887596c8de08f1e18dbbd880e489622cc501b469f6316c3dc383a5a7.mp4"
   },
   {
    "file": "tga26-re9.mp4",
@@ -76,8 +65,8 @@
   [
    "tga-2026-main-categories-gfx-direction.png",
    [
-    "tga26-pragmata.mp4",
-    71.02
+    "tga26-pbz.mp4",
+    97.21
    ],
    5.4,
    null
@@ -103,8 +92,8 @@
   [
    "tga-2026-main-categories-gfx-score.png",
    [
-    "tga26-oot.mp4",
-    34.63
+    "gta6-xl-drive.mp4",
+    7.5
    ],
    5.4,
    null
@@ -143,7 +132,7 @@
   [
    1,
    1,
-   "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: كابكوم (Capcom)"
+   "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: إس جيم (S-GAME)"
   ],
   [
    2,
@@ -158,7 +147,7 @@
   [
    4,
    4,
-   "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: نينتيندو (Nintendo)"
+   "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: روكستار غيمز (Rockstar Games)"
   ],
   [
    5,
@@ -183,29 +172,19 @@
    "title": "أفضل إخراج للعبة",
    "rows": [
     {
-     "name": "Control Resonant",
-     "note": "ريميدي (Remedy)",
-     "image": "tga26-control"
+     "name": "Control Resonant"
     },
     {
-     "name": "Grand Theft Auto VI",
-     "note": "روكستار غيمز (Rockstar Games)",
-     "image": null
+     "name": "Grand Theft Auto VI"
     },
     {
-     "name": "Phantom Blade Zero",
-     "note": "إس جيم (S-GAME)",
-     "image": "tga26-pbz"
+     "name": "Phantom Blade Zero"
     },
     {
-     "name": "PRAGMATA",
-     "note": "كابكوم (Capcom)",
-     "image": "tga26-pragmata"
+     "name": "PRAGMATA"
     },
     {
-     "name": "Resident Evil Requiem",
-     "note": "كابكوم (Capcom)",
-     "image": "tga26-re9"
+     "name": "Resident Evil Requiem"
     }
    ],
    "animate": true
@@ -216,29 +195,19 @@
    "title": "أفضل سرد قصصي",
    "rows": [
     {
-     "name": "007 First Light",
-     "note": "آي أو إنترأكتيف (IO Interactive)",
-     "image": "tga26-007"
+     "name": "007 First Light"
     },
     {
-     "name": "Control Resonant",
-     "note": "ريميدي (Remedy)",
-     "image": "tga26-control"
+     "name": "Control Resonant"
     },
     {
-     "name": "Grand Theft Auto VI",
-     "note": "روكستار غيمز (Rockstar Games)",
-     "image": null
+     "name": "Grand Theft Auto VI"
     },
     {
-     "name": "Resident Evil Requiem",
-     "note": "كابكوم (Capcom)",
-     "image": "tga26-re9"
+     "name": "Resident Evil Requiem"
     },
     {
-     "name": "The Blood of Dawnwalker",
-     "note": "ريبل ولفز (Rebel Wolves)",
-     "image": "tga26-dawnwalker"
+     "name": "The Blood of Dawnwalker"
     }
    ],
    "animate": true
@@ -249,27 +218,19 @@
    "title": "أفضل إخراج فني",
    "rows": [
     {
-     "name": "Control Resonant",
-     "note": "ريميدي (Remedy)",
-     "image": "tga26-control"
+     "name": "Control Resonant"
     },
     {
-     "name": "Grand Theft Auto VI",
-     "note": "روكستار غيمز (Rockstar Games)",
-     "image": null
+     "name": "Grand Theft Auto VI"
     },
     {
      "name": "Mouse: P.I. For Hire"
     },
     {
-     "name": "Phantom Blade Zero",
-     "note": "إس جيم (S-GAME)",
-     "image": "tga26-pbz"
+     "name": "Phantom Blade Zero"
     },
     {
-     "name": "The Legend of Zelda: Ocarina of Time",
-     "note": "نينتيندو (Nintendo)",
-     "image": "tga26-oot"
+     "name": "The Legend of Zelda: Ocarina of Time"
     }
    ],
    "animate": true
@@ -283,22 +244,16 @@
      "name": "Ace Combat 8: Wings of Theve"
     },
     {
-     "name": "Grand Theft Auto VI",
-     "note": "روكستار غيمز (Rockstar Games)",
-     "image": null
+     "name": "Grand Theft Auto VI"
     },
     {
      "name": "Mixtape"
     },
     {
-     "name": "Phantom Blade Zero",
-     "note": "إس جيم (S-GAME)",
-     "image": "tga26-pbz"
+     "name": "Phantom Blade Zero"
     },
     {
-     "name": "The Legend of Zelda: Ocarina of Time",
-     "note": "نينتيندو (Nintendo)",
-     "image": "tga26-oot"
+     "name": "The Legend of Zelda: Ocarina of Time"
     }
    ],
    "animate": true
@@ -312,24 +267,16 @@
      "name": "Ace Combat 8: Wings of Theve"
     },
     {
-     "name": "Control Resonant",
-     "note": "ريميدي (Remedy)",
-     "image": "tga26-control"
+     "name": "Control Resonant"
     },
     {
-     "name": "Grand Theft Auto VI",
-     "note": "روكستار غيمز (Rockstar Games)",
-     "image": null
+     "name": "Grand Theft Auto VI"
     },
     {
-     "name": "Resident Evil Requiem",
-     "note": "كابكوم (Capcom)",
-     "image": "tga26-re9"
+     "name": "Resident Evil Requiem"
     },
     {
-     "name": "STAR WARS: Galactic Racer",
-     "note": "سيكرت مود (Secret Mode)",
-     "image": "tga26-swgr"
+     "name": "STAR WARS: Galactic Racer"
     }
    ],
    "animate": true
@@ -343,30 +290,24 @@
      "name": "Ace Combat 8: Wings of Theve"
     },
     {
-     "name": "Gears of War: E-Day",
-     "note": "إكس بوكس (Xbox)",
-     "image": "tga26-gears"
+     "name": "Gears of War: E-Day"
     },
     {
      "name": "Onimusha: Way of the Sword"
     },
     {
-     "name": "Phantom Blade Zero",
-     "note": "إس جيم (S-GAME)",
-     "image": "tga26-pbz"
+     "name": "Phantom Blade Zero"
     },
     {
-     "name": "Saros",
-     "note": "سوني (Sony)",
-     "image": "tga26-saros"
+     "name": "Saros"
     }
    ],
    "animate": true
   }
  ],
  "ground_footage": [
-  "tga26-pragmata.mp4",
-  71.02
+  "tga26-pbz.mp4",
+  97.21
  ],
  "ground_seek": "fixed",
  "lines": [
@@ -403,6 +344,5 @@
   "hook": "Grand Theft Auto VI under the headline",
   "cards": "one card per category, rows as read, each on one of its own nominees' footage",
   "music": "our bed (bed_reason)"
- },
- "lowres_ok": "The Legend of Zelda: Ocarina of Time: Nintendo US store page, the publisher's copy, 1280x720; IGN: no video page found by web search, 16 Nov; not on Steam (Switch 2 only): no larger official copy found"
+ }
 }

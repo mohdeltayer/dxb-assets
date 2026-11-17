@@ -267,6 +267,9 @@ def _rows(kit, spec):
             rows.append(r)
     if not 3 <= len(rows) <= 6:
         raise SystemExit(f'tgakit: a category card holds 3 to 6 nominees, not {len(rows)}')
+    for k in ('image', 'note'):                      # every row looks the same: a tile or note shows only when all rows have one
+        if any(not r.get(k) for r in rows):
+            rows = [{x: y for x, y in r.items() if x != k} for r in rows]
     return rows, keys
 
 
