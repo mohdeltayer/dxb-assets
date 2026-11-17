@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T05:52:05Z",
- "seq": 560,
+ "generated_at": "2026-11-17T06:52:07Z",
+ "seq": 561,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -221,115 +221,22 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 530
-  },
-  {
-   "id": 15156,
-   "source": "PlayStation (X)",
-   "source_kind": "x",
-   "title": "30 years ago, Lara Croft encountered unexpected dangers in the original Tomb Raider 🎒",
-   "url": "https://x.com/PlayStation/status/2121624822585200685",
-   "published": "2026-11-14T15:22Z",
-   "first_seen": "2026-11-16T06:40:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://pbs.twimg.com/media/HXCXS5XXsAAESyX.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://video.twimg.com/amplify_video/2121361463637876736/vid/avc1/1080x1080/C6qxZk1QOWtwrMbr.mp4"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 525
-  },
-  {
-   "id": 15155,
-   "source": "PlayStation (X)",
-   "source_kind": "x",
-   "title": "The UCL challenge is live in EA Sports FC 27 on PlayStation Tournaments:",
-   "url": "https://x.com/PlayStation/status/2121664584738078837",
-   "published": "2026-11-14T18:00Z",
-   "first_seen": "2026-11-16T06:40:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://pbs.twimg.com/media/HXCYocLW8AA5l9p.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://video.twimg.com/amplify_video/2121362836311945216/vid/avc1/1920x1080/Xxz-Z5m2wU12J73t.mp4"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 525
-  },
-  {
-   "id": 15154,
-   "source": "PlayStation (X)",
-   "source_kind": "x",
-   "title": "PlayStation’s Black Friday Deals start Nov 16. Discover what’s on offer:",
-   "url": "https://x.com/PlayStation/status/2121923744369160304",
-   "published": "2026-11-15T11:10Z",
-   "first_seen": "2026-11-16T06:40:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://pbs.twimg.com/media/HXKRxCmXEAAsVNJ.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 525
-  },
-  {
-   "id": 15153,
-   "source": "PlayStation (X)",
-   "source_kind": "x",
-   "title": "Holding out for a hero? Shrek 2 Remastered is larger than life and out now on PS5:",
-   "url": "https://x.com/PlayStation/status/2122021184137007421",
-   "published": "2026-11-15T17:37Z",
-   "first_seen": "2026-11-16T06:40:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://pbs.twimg.com/media/HXCZp5CbcAAJqRk.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://video.twimg.com/amplify_video/2121363849332789248/vid/avc1/1920x1080/mBQeAwZs0B4Jr4ot.mp4"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 525
-  },
-  {
-   "id": 15130,
-   "source": "Nintendo Japan",
-   "source_kind": "official",
-   "title": "「スプラトゥーン レイダース イカすアートブック」発売決定＆予約開始。Nintendo Storeの数量限定特典もご紹介。",
-   "url": "https://www.nintendo.com/jp/topics/article/c73c1b54-c93c-4895-aaaa-8ced4b6508cb",
-   "published": "2026-11-16T06:01Z",
-   "first_seen": "2026-11-16T06:05:04Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 524
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T05:50:05Z",
+  "last_poll_at": "2026-11-17T06:50:05Z",
   "sources_enabled": 100,
-  "sources_ok": 90,
-  "sources_failing": 9,
+  "sources_ok": 88,
+  "sources_failing": 8,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 94x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 95x)",
    "Nintendo of America (X) (HTTP 429, 73x)",
-   "PlayStation (X) (HTTP 429, 4x)",
+   "PlayStation (X) (HTTP 429, 5x)",
    "PlayStation Middle East (X) (HTTP 429, 17x)",
    "Rockstar Games (X) (HTTP 429, 3x)",
-   "Sega (Google News) (HTTP 429, 2x)",
    "Square Enix (Google News) (HTTP 429, 4x)",
-   "The Game Awards (ValueError: 0 article links (expected 1+), layout changed or drawn by script, 13x)",
+   "The Game Awards (ValueError: 0 article links (expected 1+), layout changed or drawn by script, 14x)",
    "Xbox (X) (HTTP 429, 92x)"
   ]
  }
