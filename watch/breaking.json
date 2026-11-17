@@ -1,10 +1,23 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T18:52:05Z",
- "seq": 584,
+ "generated_at": "2026-11-17T19:10:08Z",
+ "seq": 585,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 16750,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/17/26 Nintendo NEW YORK and Nintendo SAN FRANCISCO are bringing the joy this holiday season! The Nintendo NEW YORK and Nintendo SAN FRANCISCO stores have tra",
+   "url": "https://www.nintendo.com/us/whatsnew/nintendo-new-york-and-nintendo-san-francisco-are-bringing-the-joy-this-holiday-season/",
+   "published": null,
+   "first_seen": "2026-11-17T19:10:05Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 585
+  }
+ ],
  "recent": [
   {
    "id": 16623,
@@ -367,9 +380,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T18:50:15Z",
+  "last_poll_at": "2026-11-17T19:10:05Z",
   "sources_enabled": 100,
-  "sources_ok": 92,
+  "sources_ok": 93,
   "sources_failing": 7,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 101x)",
