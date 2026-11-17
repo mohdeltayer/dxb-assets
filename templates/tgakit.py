@@ -10,7 +10,7 @@ the order The Game Awards reads them, from the official stream or thegameawards.
     python3 templates/tgakit.py shots <shots.json> [...]              merge a shots read (prerender mode shots) into the kit
     python3 templates/tgakit.py add <key> --title T --credit C (--steam APP:PREFIX | --url URL) --tile NAME
                                                                       a nominee outside the pool (then run its shots read)
-    python3 templates/tgakit.py goty <key,key,...> [--out jobs/live/tga-2026-goty-nominees.json]
+    python3 templates/tgakit.py goty <key,key,...> [--hook KEY] [--out jobs/live/tga-2026-goty-nominees.json]
     python3 templates/tgakit.py most <key:count,key:count,...> [--out jobs/live/tga-2026-most-nominated.json]
 
 `goty` writes the list Reel: the headline over the first nominee's footage, then each nominee on its own trailer with its
@@ -146,11 +146,17 @@ def _reel_check(names, when):
     }
 
 
-def goty(kit, keys, when='TODO time read (Z)'):
-    _need(kit, keys, lambda k: ('item', 'hook', 'close') if k == keys[0] else ('item',))
+def goty(kit, keys, when='TODO time read (Z)', hook=None):
+    """`hook` (a key among the nominees): whose hook and close shots open and close the Reel; default the first read.
+    The dry run of 17 Nov showed Resident Evil Requiem's hook near black under the headline: on the night the cover takes
+    the nominee whose hook stops the scroll, while the nominees keep the order read."""
+    hook = hook or keys[0]
+    if hook not in keys:
+        raise SystemExit(f'tgakit: --hook {hook} is not one of the nominees given')
+    _need(kit, keys, lambda k: ('item', 'hook', 'close') if k == hook else ('item',))
     c = kit['candidates']
     n = len(keys)
-    first = c[keys[0]]
+    first = c[hook]
     shots = [_shot(first, 'hook', HOOK_SECS)]
     lines, credits = [], [[0, 0, f"المصدر: {first['credit']}"]]
     for i, k in enumerate(keys, 1):
@@ -170,7 +176,7 @@ def goty(kit, keys, when='TODO time read (Z)'):
                 'ground_footage': [first['footage']['file'], first['shots']['hook'][0]],
                 'reel_check': _reel_check(names, when),
                 'lowres_ok': _lowres(c, keys),
-                'decision_log': {'hook': f"{first['title']} (first nominee read) under the headline",
+                'decision_log': {'hook': f"{first['title']} under the headline" + (' (first nominee read)' if hook == keys[0] else ' (--hook: the strongest opening shot; nominees in the order read)'),
                                  'items': 'one clean stretch per nominee from the server shots read, nearest the trailer middle',
                                  'close': f"{first['title']} again for the closing picture", 'music': 'our bed (bed_reason)'}})
     if not job['lowres_ok']:
@@ -267,7 +273,7 @@ def main(argv):
         print(f'tgakit: added {k}; run its shots read next')
     elif cmd == 'goty':
         keys = [k.strip() for k in rest[0].split(',') if k.strip()]
-        job, texts = goty(kit, keys, when)
+        job, texts = goty(kit, keys, when, rest[rest.index('--hook') + 1] if '--hook' in rest else None)
         _write(job, texts, out or os.path.join(ROOT, 'jobs', 'live', 'tga-2026-goty-nominees.json'))
     elif cmd == 'most':
         pairs = [(p.split(':')[0].strip(), int(p.split(':')[1])) for p in rest[0].split(',')]
