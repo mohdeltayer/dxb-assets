@@ -44,5 +44,25 @@
    "hounded"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/hounded-ps5-2027-november-17-reel-v1.mp4",
+  "blob": "e2acae7b7fbdffcdb2c649e2ccd35a9cea0c728c",
+  "at": "2026-11-17T16:24:56Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/hounded-ps5-2027-november-17.json",
+   "sha256": "0d2c19652c41cb98a39a103eaf010c1bd245038ee49b33ee943955ddccf42ec6",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1 headline card over a dark forest with Border Collie from behind; look-2 line 'Hounded 2027' with PS5 / Imprnt Studios strip and credit; look-3 line 'Border Collie searching for lost master' same strip; strip and dense: dark but readable, dog adventure, no gore, end card at 17.3 s"
  }
 }
