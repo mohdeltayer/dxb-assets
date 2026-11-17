@@ -631,8 +631,51 @@ def scout_verdicts(server):
     return sc
 
 
-def build(board, now, posts, orders=None, mirror=None, digest=None, server=None, history=None, server_at=None, times=None):
-    alarms = hop_alarms(board, now, posts, mirror, server, history, server_at) + dispatch_alarms(times, now) + bed_alarms(times, now)
+INCOMPLETE_STALE_MIN = 120   # an unfinished row older than this (adv-20261117-server-speed-for-p2 E)
+RUN_ID = re.compile(r'^\d{5,20}$')
+
+
+def unfinished(incomplete, now):
+    """Open rows of dxb-queue desk/incomplete.json (ops/backoffice/dispatch/incomplete.py), oldest first."""
+    rows = (incomplete or {}).get('rows') if isinstance(incomplete, dict) else None
+    out = []
+    for r in rows or []:
+        if not isinstance(r, dict) or r.get('state') != 'open':
+            continue
+        a = t(r.get('first_at') or r.get('at'))
+        out.append({'story': scrub(r.get('story')), 'next': scrub(r.get('next')), 'job': scrub(r.get('job')) or None,
+                    'run': str(r['run']) if RUN_ID.match(str(r.get('run') or '')) else None,
+                    'slot': iso(t(r.get('slot'))) if t(r.get('slot')) else None, 'by': scrub(r.get('by')) or None,
+                    'at': iso(a) if a else None, 'age_min': int((now - a).total_seconds() // 60) if a else None})
+    return sorted(out, key=lambda r: r['at'] or '')
+
+
+def incomplete_alarms(rows):
+    return [{'key': 'hop|incomplete|' + r['story'], 'kind': 'incomplete',
+             'line': 'unfinished %s has waited %d min (next: %s)' % (r['story'], r['age_min'], r['next']),
+             'clears': 'a run takes the next step and closes the row with incomplete.py close'}
+            for r in rows if isinstance(r.get('age_min'), int) and r['age_min'] >= INCOMPLETE_STALE_MIN]
+
+
+def recent_renders(times, n=5):
+    """The last n renders with their minutes per stage (adv-20261117-server-speed-for-p2 D, templates/stagetimes.py)."""
+    try:
+        import stagetimes as ST
+    except ImportError:
+        return []
+    out = []
+    for e in ST.last(n, times or []):
+        m = ST.minutes(e)
+        out.append({'story': scrub(e.get('story')), 'at': e.get('finished_at') or e.get('at'),
+                    'lane': e.get('runner') or e.get('lane'), 'minutes': m, 'slowest': ST.slowest(m)})
+    return out
+
+
+def build(board, now, posts, orders=None, mirror=None, digest=None, server=None, history=None, server_at=None, times=None,
+          incomplete=None):
+    unfin = unfinished(incomplete, now)
+    alarms = (hop_alarms(board, now, posts, mirror, server, history, server_at) + dispatch_alarms(times, now)
+              + bed_alarms(times, now) + incomplete_alarms(unfin))
     hand = open_handoffs(board, now)
     nxt = next_slot(posts, now)
     cp = caps(posts, now, max(now, t(nxt['earliest']) or now))
@@ -646,6 +689,7 @@ def build(board, now, posts, orders=None, mirror=None, digest=None, server=None,
         'posts_from': 'publer via the server' if (server or {}).get('posts') is not None and posts and server else
                       'commitments, format ledger, submissions and published logs (no server Publer read)',
         'alarms': alarms,
+        'unfinished': unfin,
         'orders': orders_open(orders, board, now),
         'handoffs': hand,
         'digest_head': head,
@@ -653,7 +697,9 @@ def build(board, now, posts, orders=None, mirror=None, digest=None, server=None,
         'verdicts': scout_verdicts(server),
         'next_slot': nxt,
         'caps': cp,
-        'instructions': 'Production 2: execute this work order top to bottom. Clear the alarms first, then the orders '
+        'renders': recent_renders(times),
+        'instructions': 'Production 2: execute this work order top to bottom. Clear the alarms first, then pick up what '
+                        'the last run left unfinished, then the orders '
                         '(T0 first), then the handoffs oldest first, then the scout (fresh digest with the forced '
                         'refspec; carried leads first), then fill the next slot under the caps. Report each item on '
                         'the board with evidence: "wo <generated_at> item <n>: <outcome> (evidence)".',
@@ -676,6 +722,15 @@ def markdown(wo):
     if wo['alarms']:
         for a in wo['alarms']:
             L.append('%d. ALARM %s: %s. Clears with: %s.' % (num(), a['kind'], a['line'], a['clears']))
+    else:
+        L.append('none')
+    L += ['', '## 1b. Unfinished from the last run (pick up first)']
+    if wo.get('unfinished'):
+        for r in wo['unfinished']:
+            L.append('%d. %s: next %s%s%s%s. Waiting %s min%s; close it with incomplete.py close when done.' % (
+                num(), r['story'], r['next'], '; job ' + r['job'] if r.get('job') else '',
+                '; render run ' + r['run'] if r.get('run') else '', '; slot ' + dub(t(r['slot'])) if r.get('slot') else '',
+                r['age_min'], ' (by %s)' % r['by'] if r.get('by') else ''))
     else:
         L.append('none')
     L += ['', "## 2. Mohammad's orders (T0 first)"]
@@ -736,6 +791,16 @@ def markdown(wo):
         ('; ' + '; '.join(c['evergreen_why'])) if c['evergreen_why'] else ''))
     L.append('%d. Numbers: %s.' % (num(), 'allowed' if c['numbers_allowed'] else 'NOT allowed (%s)' % '; '.join(c['numbers_why'])))
     L.append('%d. Card-led window: %s; last templates %s.' % (num(), c['card_led_window'], ', '.join(c['last_templates']) or 'none read'))
+    L += ['', '## 7. Last five renders, minutes per stage (for information)']
+    if wo.get('renders'):
+        order = ('queue', 'setup', 'fetch', 'shots', 'checks', 'render', 'after', 'upload', 'job')
+        for r in wo['renders']:
+            m = r['minutes']
+            L.append('- %s %s (%s): %s%s' % (dub(t(r['at'])) if t(r['at']) else r['at'] or '?', r['story'], r['lane'] or '?',
+                     ', '.join('%s %.1f' % (k, m[k]) for k in order if k in m) or 'not measured',
+                     '; slowest %s' % r['slowest'] if r['slowest'] else ''))
+    else:
+        L.append('none read')
     L.append('')
     return '\n'.join(L)
 
@@ -805,7 +870,8 @@ def run(args):
         import desk_audit as DA
         history = DA.digest_history(folder=args.digests)
     times = load(getattr(args, 'times', None), []) if getattr(args, 'times', None) else []
-    wo = build(board, now, posts, orders, mirror, digest, server if sp else None, history, server_at, times)
+    incomplete = load(getattr(args, 'incomplete', None), None) if getattr(args, 'incomplete', None) else None
+    wo = build(board, now, posts, orders, mirror, digest, server if sp else None, history, server_at, times, incomplete)
     out = args.out
     os.makedirs(out, exist_ok=True)
     hop = {'generated_at': iso(now), 'alarms': wo['alarms']}
@@ -834,7 +900,7 @@ def run(args):
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split('\n')[0])
     for a in ('board', 'orders', 'mirror', 'digest', 'digests', 'server', 'commitments', 'ledger', 'now', 'state', 'times',
-              'submissions', 'published'):
+              'submissions', 'published', 'incomplete'):
         ap.add_argument('--' + a)
     ap.add_argument('--out', default='.')
     ap.add_argument('--force', action='store_true')

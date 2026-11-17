@@ -1225,10 +1225,14 @@ def run(job, draft=False):
     for item in job.get('footage', []):
         fetch(item)
     gfx(job)
+    t_fetch = time.time()                       # stage times (adv-20261117-server-speed-for-p2 D, templates/stagetimes.py)
     source_check(job)
+    t_src = time.time()
     auto_shots(job)                             # the server picks shot times the job left to it (gates-fix C)
+    t_shots = time.time()
     shot_gate(job)                              # B and C on the server's copy, before anything is built (15 Nov 2026)
-    fetched = time.time() - t0
+    t_gate = time.time()
+    fetched = t_fetch - t0
     out = os.path.join(ROOT, job['out'])
     os.makedirs(os.path.dirname(out), exist_ok=True)
     dp_plan, DP_folder = design_plan(job) if not draft else (None, None)
@@ -1270,6 +1274,7 @@ def run(job, draft=False):
         intro(job, video)                       # after the sound is final, before the checks read the file
     stem = os.path.splitext(out)[0]
     base = re.sub(r'-reel-v\d+$', '', stem)   # matches the workflow's ${stem%-reel-v*}, so v2 and later commit too
+    t_render = time.time()
     if not draft:
         spans = gfx_spans(job)                 # our own cards are exempt from the smear flag (item E)
         if job.get('intro') is not None:       # the fixed series intro was looked at once; a passing truck's straight
@@ -1297,6 +1302,12 @@ def run(job, draft=False):
         else:                                   # a numbers Reel of our own cards only (8 Nov 2026): the sheet is the cards
             gfx_sheet(job, base + '-sheet.jpg')
         lifeless_note(job, video)
+    pipe = {'fetch': round(fetched, 1), 'shots': round(t_shots - t_src, 1),
+            'checks': round((t_src - t_fetch) + (t_gate - t_shots), 1), 'render': round(t_render - t_gate, 1),
+            'after': round(time.time() - t_render, 1)}
+    if not draft:
+        _times_note(job, 'pipeline', pipe)
+    print('render_job: pipeline: ' + json.dumps(pipe), flush=True)
     print(f"render_job: {job['name']} done in {time.time() - t0:.0f} s (fetch {fetched:.0f} s): {video}", flush=True)
     return video
 

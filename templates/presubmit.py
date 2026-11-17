@@ -54,6 +54,7 @@ import datetime
 import hashlib
 import json
 import pathlib
+import os
 import subprocess
 import sys
 
@@ -160,12 +161,36 @@ def record_sendback(out, entry):
     return p
 
 
+def find_job(job, qc=None):
+    """The job that rendered a Reel (adv-20261117-server-speed-for-p2 C): a path as given; a bare name, or none at all,
+    looked up in jobs/done (where a render moves its job) and then live, render and test; with no name, the qc.json's
+    job_path or its job name."""
+    import jobpath
+    if job and os.path.exists(job):
+        return job
+    cand = [job] if job else []
+    if not job and qc:
+        if qc.get('job_path'):
+            if (REPO / qc['job_path']).exists():
+                return str(REPO / qc['job_path'])
+            cand.append(os.path.basename(qc['job_path']))
+        if qc.get('name'):
+            cand.append(str(qc['name']))
+    for c in cand:
+        try:
+            return str(REPO / jobpath.resolve('done', os.path.basename(c), root=str(REPO)))
+        except ValueError:
+            continue
+    return job                                    # as given: the checklist says what is wrong with it
+
+
 def director(sid, verdict, out, note='', job=None, by=None, looked=None, reason=None):
     if verdict not in ('PASS', 'FIX'):
         raise SystemExit('presubmit: verdict is PASS or FIX')
     f, s = story(sid)
-    cl = checklist(job, out) if job else None
     qc = qc_of(out)
+    job = find_job(job, qc)
+    cl = checklist(job, out) if job else None
     if verdict == 'FIX':
         # adv-20261115-one-render-server-checks item E: with the server's qc at pass, the director looks once at the
         # look frames and may send a Reel back once, for a hard reason only; no third render.

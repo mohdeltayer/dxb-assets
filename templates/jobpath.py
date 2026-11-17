@@ -7,7 +7,11 @@ must match exactly one file.
 
     python3 templates/jobpath.py <workflow> <input>      prints the path; exit 1 with the reason
     workflows: live (jobs/live), render (jobs/render), breaking (jobs/breaking, jobs/test),
-               prerender (jobs/prerender, jobs/live, jobs/render, jobs/breaking, jobs/test)
+               prerender (jobs/prerender, jobs/live, jobs/render, jobs/breaking, jobs/test),
+               done (jobs/done first, then live, render, test: a job after its render, for the director and later runs)
+
+A render moves its job to jobs/done/<name>.json as rendered, with the server's fixes (adv-20261117-server-speed-for-
+p2 C, 17 Nov 2026: the Director could not find the job on main after the render and read it from an old commit).
 """
 import os
 import re
@@ -17,9 +21,10 @@ DIRS = {
     'live': ['jobs/live'],
     'render': ['jobs/render'],
     'breaking': ['jobs/breaking', 'jobs/test'],
-    'prerender': ['jobs/prerender', 'jobs/live', 'jobs/render', 'jobs/breaking', 'jobs/test'],
+    'prerender': ['jobs/prerender', 'jobs/live', 'jobs/render', 'jobs/breaking', 'jobs/test', 'jobs/done'],
+    'done': ['jobs/done', 'jobs/live', 'jobs/render', 'jobs/test'],
 }
-PATH = re.compile(r'^jobs/(?:render|live|prerender|test|breaking)/[A-Za-z0-9._-]+\.json$')
+PATH = re.compile(r'^jobs/(?:render|live|prerender|test|breaking|done)/[A-Za-z0-9._-]+\.json$')
 NAME = re.compile(r'^[A-Za-z0-9][A-Za-z0-9._-]{0,150}$')
 
 
@@ -41,6 +46,8 @@ def resolve(workflow, value, root='.'):
     hits = [f'{d}/{name}.json' for d in allowed if os.path.exists(os.path.join(root, d, name + '.json'))]
     if not hits:
         raise ValueError(f'no job named {name!r} in {", ".join(allowed)} on main; commit it first')
+    if len(hits) > 1 and workflow == 'done':      # the rendered copy first; a re-render's new version sits in live
+        return hits[0]
     if len(hits) > 1:
         raise ValueError(f'{name!r} is in more than one folder ({", ".join(hits)}); give the path')
     return hits[0]

@@ -262,6 +262,11 @@ jobs:
             if [ $TEST = 1 ]; then cp "$RUNNER_TEMP/autofix.json" "$base-autofix.json"; cp "$JOB" "$base-job-fixed.json"
               files="$files $base-autofix.json $base-job-fixed.json"; fi
           fi
+          # the job stays on main after the render, as rendered (adv-20261117-server-speed-for-p2 C): jobs/done/<name>.json
+          JOB_DONE="jobs/done/$(basename "$JOB")"; echo "JOB_DONE=$JOB_DONE" >> "$GITHUB_ENV"
+          cp "$JOB" "$RUNNER_TEMP/job-rendered.json"
+          python -c "import json; p = '$RUNNER_TEMP/render-time.json'; e = json.load(open(p)); e['job_secs'] = $RENDER_SECS; e['setup_min'] = round($SETUP_SECS / 60, 2); e['story'] = '$(basename "$JOB" .json)'; json.dump(e, open(p, 'w'))" 2>/dev/null || true
+          STAGES=$(python templates/stagetimes.py line "$RUNNER_TEMP/render-time.json" 2>/dev/null || echo "stages (min): not measured")
           mkdir -p "$RUNNER_TEMP/out"
           for f in $files; do cp --parents "$f" "$RUNNER_TEMP/out/"; done
           git config user.name "dxb-render"
@@ -274,8 +279,9 @@ jobs:
             looks=""; if [ $TEST = 0 ] && [ -f "$RUNNER_TEMP/look.json" ]; then python templates/looks.py add "$RUNNER_TEMP/look.json" && looks=templates/assets/look-ledger.json; fi
             if [ $TEST = 0 ] && [ -f "$RUNNER_TEMP/bed.json" ]; then python templates/sonic.py ledger-add "$RUNNER_TEMP/bed.json" && looks="$looks templates/assets/bed-ledger.json"; fi
             if [ $TEST = 1 ]; then git add --sparse -f $files; else git add --sparse -f $files templates/assets/render-times.json $looks; fi
+            mkdir -p jobs/done; cp "$RUNNER_TEMP/job-rendered.json" "$JOB_DONE"; git add --sparse -f "$JOB_DONE"
             if [ -f "$JOB" ]; then git rm -q "$JOB"; fi
-            git commit -q -m "Render $(basename "$JOB" .json) on the runner ($RENDER_SECS s, $(nproc) cores)"
+            git commit -q -m "Render $(basename "$JOB" .json) on the runner ($RENDER_SECS s, $(nproc) cores)" -m "job: $JOB_DONE" -m "$STAGES"
             if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
             sleep $(( i * 5 ))
           done
@@ -295,13 +301,16 @@ jobs:
           REPO_PRIVATE: ${{ github.event.repository.private }}
         run: |
           base="${OUT%.mp4}"; receipt="$base-publer.json"
+          up0=$(date +%s)
           python templates/publer_upload.py "$RUNNER_TEMP/out/$OUT" "$RUNNER_TEMP/publer.json" || true
+          UP_SECS=$(( $(date +%s) - up0 ))
           for i in 1 2 3 4 5; do
             git fetch -q --depth=1 --filter=blob:none origin "$GITHUB_REF_NAME"
             git reset -q --hard "origin/$GITHUB_REF_NAME"
             mkdir -p "$(dirname "$receipt")"; cp "$RUNNER_TEMP/publer.json" "$receipt"
-            git add --sparse -f "$receipt"
-            git commit -q -m "Publer receipt $(basename "$base")"
+            extra=""; python templates/stagetimes.py upload "$(basename "$JOB" .json)" "$UP_SECS" >/dev/null && extra="templates/assets/render-times.json" || true
+            git add --sparse -f "$receipt" $extra
+            git commit -q -m "Publer receipt $(basename "$base")" -m "upload ${UP_SECS} s"
             if git push -q origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
             sleep $(( i * 5 ))
           done
