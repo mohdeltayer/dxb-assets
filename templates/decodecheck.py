@@ -75,18 +75,42 @@ def _straight(fr):
 LOCAL = 1.5   # seconds either side: the baseline is the footage around the frame, not the whole clip
 
 
-def smear_times(path, start=None, dur=None):
+def _segment(t, cuts):
+    """(a, b) of the shot that holds time t, from the shot starts in `cuts`."""
+    a, b = None, None
+    for c in cuts:
+        if c <= t:
+            a = c
+        elif b is None:
+            b = c
+    return a, b
+
+
+def smear_times(path, start=None, dur=None, cuts=None):
     """Runs of more than 3 frames whose straight-edge density jumps above both FLOOR and RATIO times the median of
     the footage within LOCAL seconds either side. Damage arrives with a cut and heals; busy art (pixel art, UI,
-    rings) is busy for the whole shot, so its own neighbourhood lifts the bar."""
+    rings) is busy for the whole shot, so its own neighbourhood lifts the bar.
+
+    `cuts` (the Reel's shot starts, seconds in this file): the neighbourhood is read inside the frame's own shot only.
+    A busy clip between two flat stills was measured against the stills and read as a smear 0.4 s after our own cut
+    (Galactic Racer, 16 Nov 2026, 12.80 to 13.13 s; adv-20261117-gates-fix-not-refuse D). Damage from the source arrives
+    inside a shot and is still measured against that shot's clean frames."""
     F, fps = _frames(path, start, dur)
     if len(F) < MIN_FRAMES:
         return []
     M = np.array([_straight(f) for f in F])
     k = int(LOCAL * fps)
     hits = np.zeros(len(F), bool)
+    t0_ = float(start or 0)
+    cuts = sorted(c for c in (cuts or []) if c is not None)
     for i in range(len(F)):
         lo, hi = max(0, i - k), min(len(F), i + k + 1)
+        if cuts:                                       # the frame's own shot only (item D)
+            a, b = _segment(t0_ + i / fps, cuts)
+            slo = max(lo, int(round(((a if a is not None else t0_) - t0_) * fps)))
+            shi = min(hi, int(round(((b - t0_) * fps))) if b is not None else hi)
+            if shi - slo > 6:
+                lo, hi = slo, shi
         ring = np.concatenate([M[lo:max(lo, i - 2)], M[min(hi, i + 3):hi]]) if hi - lo > 6 else M[lo:hi]
         base = np.median(ring, axis=0)
         hits[i] = bool(np.any(M[i] > np.maximum(FLOOR, RATIO * base)))
@@ -207,12 +231,13 @@ def block_ratio(path, start, dur, crop=None):
     return res
 
 
-def check(path, waived=()):
-    """Raise on decode errors or a smear outside the waived [(t0, t1, reason)] ranges; return the smears found."""
+def check(path, waived=(), cuts=None):
+    """Raise on decode errors or a smear outside the waived [(t0, t1, reason)] ranges; return the smears found.
+    `cuts`: the Reel's shot starts, so each frame is measured against its own shot (item D)."""
     errs = decode_errors(path)
     if errs:
         raise ValueError(f'{path}: decode errors ({len(errs)}), first: {errs[0]}')
-    bad = [s for s in smear_times(path) if not any(a <= s[0] <= b for a, b, *_ in waived)]
+    bad = [s for s in smear_times(path, cuts=cuts) if not any(a <= s[0] <= b for a, b, *_ in waived)]
     if bad:
         raise ValueError(f'{path}: blocky smear at ' + ', '.join(f'{a:.2f} to {b:.2f} s (peak {p})' for a, b, p in bad)
                          + '; look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]')

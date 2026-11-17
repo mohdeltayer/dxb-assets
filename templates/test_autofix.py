@@ -87,5 +87,12 @@ class Log(unittest.TestCase):
         self.assertEqual([x['what'] for x in json.load(open(p))], ['one', 'two'])
 
 
+class Segment(unittest.TestCase):
+    def test_segment_bounds(self):
+        import decodecheck as DC
+        self.assertEqual(DC._segment(3.7, [0, 2.9, 4.9]), (2.9, 4.9))
+        self.assertEqual(DC._segment(6.0, [0, 2.9, 4.9]), (4.9, None))
+
+
 if __name__ == '__main__':
     unittest.main()

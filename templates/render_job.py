@@ -1249,7 +1249,10 @@ def run(job, draft=False):
             spans = [(a + lead, b + lead, r) for a, b, r in spans] + [(0.0, lead, 'series intro (fixed, checked once)')]
         if spans:
             print('smear check: exempt ' + ', '.join(f'{a:.2f} to {b:.2f} s' for a, b, _ in spans) + ' (our own cards)', flush=True)
-        DC.check(video, [w for w in job.get('block_ok', []) if len(w) == 3] + spans)   # stops before anything is committed
+        cuts = list(_starts(job)[0])           # each frame measured against its own shot (item D, 17 Nov 2026)
+        if job.get('intro') is not None:
+            cuts = [0.0] + [c + lead for c in cuts]
+        DC.check(video, [w for w in job.get('block_ok', []) if len(w) == 3] + spans, cuts=cuts)   # stops before anything is committed
         import fillcheck as FC                 # no empty band at any second, read on the Reel that ships (9 Nov 2026)
         st_, end_ = _starts(job)
         FC.empty_bands(video, job, st_, end_, C.U)
