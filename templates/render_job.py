@@ -594,6 +594,19 @@ def auto_shots(job):
     print(f'autoshots: {len(AF.LOG) - n0} shot time(s) picked on the server', flush=True)
 
 
+def track_from_first_shot(job):
+    """A slip job (templates/slip.py) leaves its trailer track's start to the server: once the shots are picked, the
+    track runs from the first footage shot's source second, on that shot's file (adv-20261117-server-news-line-editor-
+    model, Phase 1). Nothing changes for a job without "track_from_first_shot"."""
+    if not job.get('track_from_first_shot') or not isinstance(job.get('track'), list):
+        return
+    for s in job.get('shots') or []:
+        if isinstance(s, list) and len(s) > 1 and isinstance(s[1], (int, float)) and not str(s[0]).endswith('.png'):
+            job['track'] = [s[0], float(s[1])] + list(job['track'][2:])
+            print(f'render_job: track from the first shot: {s[0]} at {float(s[1]):.2f} s', flush=True)
+            return
+
+
 def shot_gate(job):
     """adv-20261115-one-render-server-checks items B and C (templates/shotgate.py): every footage shot starts after the
     picture on the server's copy, stays inside one scene, is not letterboxed, and keeps its subject inside the 9:16
@@ -1229,6 +1242,7 @@ def run(job, draft=False):
     source_check(job)
     t_src = time.time()
     auto_shots(job)                             # the server picks shot times the job left to it (gates-fix C)
+    track_from_first_shot(job)                  # a slip's trailer sound starts where its first picked shot does
     t_shots = time.time()
     shot_gate(job)                              # B and C on the server's copy, before anything is built (15 Nov 2026)
     t_gate = time.time()

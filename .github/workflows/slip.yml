@@ -1,0 +1,161 @@
+name: slip
+# Story slip to Reel with no model in the step (adv-20261117-server-news-line-editor-model, Phase 1; Mohammad 17 Nov 2026).
+# The editor writes dxb-queue desk/slips/<id>.json; this reads it, resolves the official footage, writes the story file
+# and the job (templates/slip.py), records the ledger search, commits them with the result in newsroom/slips/<id>.json,
+# and starts the render: render-live.yml for lane live (jobs/live, the server, Publer media upload as today), render.yml
+# for lane test (jobs/test, the GitHub runner, cards/test, nothing uploaded). A slip that cannot be built is committed as
+# failed with its reasons and nothing renders. Nothing here posts.
+#
+# Dispatch: gh workflow run slip.yml --ref main -f slip=<story id> [-f lane=test]
+
+on:
+  workflow_dispatch:
+    inputs:
+      slip:
+        description: 'Slip id: dxb-queue desk/slips/<id>.json (YYYY-MM-DD-<slug>)'
+        required: true
+      lane:
+        description: 'live (jobs/live, render-live on the server) or test (jobs/test, render.yml, nothing uploaded)'
+        required: false
+        default: 'live'
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: slip-${{ inputs.slip }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SLIP: ${{ inputs.slip }}
+      LANE: ${{ inputs.lane }}
+    steps:
+      - name: Guard
+        run: |
+          printf '%s' "$SLIP" | grep -Eq '^20[0-9]{2}-[0-9]{2}-[0-9]{2}-[a-z0-9][a-z0-9-]{2,100}$' || { echo "slip must be YYYY-MM-DD-<slug>"; exit 1; }
+          case "$LANE" in live|test) ;; *) echo "lane is live or test"; exit 1;; esac
+          echo "T0=$(date +%s)" >> "$GITHUB_ENV"
+
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+          sparse-checkout: |
+            templates
+            newsroom
+            jobs
+            arabic
+
+      - name: Read the slip (dxb-queue desk)
+        env:
+          QTOKEN: ${{ secrets.QUEUE_READ_TOKEN }}
+        run: |
+          test -n "$QTOKEN" || { echo "no QUEUE_READ_TOKEN"; exit 1; }
+          curl -fsS -m 30 -H "Authorization: Bearer $QTOKEN" -H "Accept: application/vnd.github.raw+json" \
+            "https://api.github.com/repos/mohdeltayer/dxb-queue/contents/desk/slips/$SLIP.json?ref=desk" -o "$RUNNER_TEMP/slip.json" \
+            || { echo "no slip desk/slips/$SLIP.json on dxb-queue desk"; exit 1; }
+          python3 - "$RUNNER_TEMP/slip.json" <<'PY'
+          import base64, json, sys
+          p = sys.argv[1]
+          d = json.load(open(p))
+          if isinstance(d, dict) and d.get('encoding') == 'base64' and 'content' in d:
+              open(p, 'wb').write(base64.b64decode(d['content']))
+          s = json.load(open(p))
+          assert s.get('id') == __import__('os').environ['SLIP'], 'the slip id does not match its file name'
+          print('slip read:', s['id'], s.get('label'), s.get('footage'))
+          PY
+
+      - name: Tools
+        run: |
+          sudo systemctl stop apt-daily.timer apt-daily-upgrade.timer 2>/dev/null || true
+          command -v ffprobe >/dev/null || timeout 300 sudo apt-get -o DPkg::Lock::Timeout=120 install -y -qq ffmpeg >/dev/null
+          ffprobe -version | head -1
+
+      - name: Build (no model)
+        id: build
+        run: |
+          set +e
+          python3 templates/slip.py build "$RUNNER_TEMP/slip.json" --lane "$LANE" --result "$RUNNER_TEMP/result.json"
+          rc=$?
+          set -e
+          python3 - <<'PY'
+          import json, os
+          r = json.load(open(os.path.join(os.environ['RUNNER_TEMP'], 'result.json')))
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write(f"state={r['state']}\njob={r.get('job') or ''}\n")
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
+              f.write(f"### Slip {r['id']}: {r['state']}\n")
+              for x in r.get('problems') or []:
+                  f.write(f"- REFUSED: {x}\n")
+              for x in r.get('flags') or []:
+                  f.write(f"- flag: {x}\n")
+          PY
+          echo "build exit $rc"
+
+      - name: Ledger search
+        if: steps.build.outputs.state == 'built'
+        run: |
+          words=$(python3 -c "import json,re; s=json.load(open('$RUNNER_TEMP/slip.json')); g=(s.get('game') or re.sub(r'^\d{4}-\d\d-\d\d-','',s['id']).replace('-',' ')); print(' '.join(re.findall(r'[A-Za-z0-9]+', g.lower())[:2]))")
+          python3 newsroom/ledger.py find $words --record "$SLIP" | tail -3
+          python3 - <<'PY'
+          import json, os
+          sid = os.environ['SLIP']
+          st = json.load(open(f'newsroom/stories/{sid}.json'))
+          hits = (st.get('ledger_find') or {}).get('hits') or []
+          if hits:
+              p = os.path.join(os.environ['RUNNER_TEMP'], 'result.json')
+              r = json.load(open(p))
+              r.setdefault('flags', []).append('ledger: earlier stories on this game: ' + ', '.join(hits[-5:]) + ' (an update or a duplicate? the editor decides)')
+              json.dump(r, open(p, 'w'), ensure_ascii=False, indent=1)
+          PY
+
+      - name: Commit (story, job, result)
+        id: commit
+        run: |
+          python3 - <<'PY'
+          import json, os
+          p = os.path.join(os.environ['RUNNER_TEMP'], 'result.json')
+          r = json.load(open(p))
+          r['run'] = os.environ['GITHUB_RUN_ID']
+          r['lane'] = os.environ['LANE']
+          r['build_secs'] = int(__import__('time').time()) - int(os.environ['T0'])
+          os.makedirs('newsroom/slips', exist_ok=True)
+          json.dump(r, open(f"newsroom/slips/{r['id']}.json", 'w'), ensure_ascii=False, indent=1)
+          PY
+          git config user.name "dxb-slip"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p "$RUNNER_TEMP/keep"
+          files="newsroom/slips/$SLIP.json"
+          if [ "${{ steps.build.outputs.state }}" = "built" ]; then files="$files newsroom/stories/$SLIP.json ${{ steps.build.outputs.job }}"; fi
+          for f in $files; do cp --parents "$f" "$RUNNER_TEMP/keep/"; done
+          for i in 1 2 3 4 5; do
+            git fetch -q --depth=1 origin main
+            git reset -q --hard origin/main
+            cp -r "$RUNNER_TEMP/keep/." .
+            git add --sparse -f $files
+            git commit -q -m "Slip $SLIP: ${{ steps.build.outputs.state }} (lane $LANE, no model step)" || { echo "nothing to commit"; break; }
+            if git push -q origin HEAD:main; then echo "committed"; break; fi
+            sleep $(( i * 4 ))
+          done
+
+      - name: Start the render
+        if: steps.build.outputs.state == 'built'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          job="${{ steps.build.outputs.job }}"
+          if [ "$LANE" = "test" ]; then
+            gh workflow run render.yml --repo "$GITHUB_REPOSITORY" --ref main -f job="$job"
+          else
+            gh workflow run render-live.yml --repo "$GITHUB_REPOSITORY" --ref main -f job="$(basename "$job" .json)"
+          fi
+          echo "render dispatched for $job ($LANE), $(( $(date +%s) - T0 )) s after the slip was read" | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Failed slip
+        if: steps.build.outputs.state != 'built'
+        run: echo "slip $SLIP not built; the reasons are in newsroom/slips/$SLIP.json and the summary"; exit 1
