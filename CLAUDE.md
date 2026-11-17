@@ -3728,3 +3728,18 @@ E. A Production 2 run that ends INCOMPLETE writes a row in dxb-queue desk/incomp
    incomplete.py`: story, next step, job, render run id); the work order lists it in section 1b right after the alarms as
    "pick up first", and raises an alarm after 2 hours; the run that finishes it closes the row.
 
+
+## Story slip to Reel, no model step (adv-20261117-server-news-line-editor-model Phase 1, Mohammad 17 Nov 2026; release 2026-11-17 r5)
+
+The editor writes one slip per story in dxb-queue `desk/slips/<YYYY-MM-DD-slug>.json` (label, sources with the primary,
+first report, credit, footage handle, headline, spoken paragraph, Instagram, X and Threads text, tier, expiry; format and
+refusals in `templates/slip.py`). `slip.yml` (slip, lane live|test) resolves the official footage (the first clean video
+leads, the others are spare footage), writes the story file and the trailer job (a 3.8 s hook, each beat across shots of
+2.2 to 2.8 s, one credit, the trailer sound from the first picked shot, `"split_fallback": "bed"`), runs the text fixes and
+check and the ledger search, commits story, job and `newsroom/slips/<id>.json`, and starts render-live (live) or render.yml
+(test). A slip that cannot be built is committed as failed with its reasons. Unknown names in brackets are flagged, never
+guessed; people stories are refused (photo window). `split_fallback` "bed": a refused trailer mix ships on the rotated
+bed with the reason as qc's sound (render_job.bed_under), never a hold. Nothing here posts; Production 2 posts as today.
+Test (17 Nov): 4 of 5 rendered, 4.5 to 11.4 minutes of render job plus about a minute of slip build; Slay the Spire 2 failed
+by name (card-game UI text, 7 clean stretches for 15 shots). Open before live use (release note): shots in step with the
+trailer track so its own sound plays (3 of 4 fell back to the bed), bed rotation across parallel jobs, a flag over five beats.

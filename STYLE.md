@@ -843,3 +843,10 @@ render-times.json). H (server QC verdict) and I (parallel runners) follow as the
    director needs no path. Minutes per stage are in the commit, qc.json stage_minutes and work order section 7.
 4. A run that ends INCOMPLETE also writes desk/incomplete.json (incomplete.py open: story, next step, job, run); the next
    run picks it up first (work order section 1b) and closes it; open 2 hours is an alarm.
+
+## Story slips (adv-20261117-server-news-line-editor-model Phase 1, 17 Nov 2026)
+1. One slip per story in dxb-queue desk/slips; slip.yml builds the trailer Reel with no model step (footage resolver,
+   server shots, lines cut from the spoken paragraph, one credit). A slip it cannot build is committed as failed with why.
+2. No + or % sign in headline or spoken text; unknown bracketed names are flagged; people stories go to Production 1.
+3. A refused trailer mix on a slip ships on our bed with the reason in qc's sound (split_fallback bed); not yet for live
+   news until shots follow the trailer track (release note r5, open item 1).

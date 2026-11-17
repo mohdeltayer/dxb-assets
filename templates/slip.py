@@ -183,6 +183,9 @@ def problems(slip, now=None):
             out.append(f'{field}: an em dash (house rule: none)')
         if ARABIC_INDIC.search(text):
             out.append(f'{field}: Arabic-Indic digits (house rule: Western digits)')
+        if field in ('headline', 'spoken') and re.search(r'[+%](?=[»"\s.،]|$)', text):
+            out.append(f'{field}: a + or % sign flips to the far side in right-to-left text; spell it out '
+                       '(New Game Plus, «بالمئة») (Dawnwalker test, 17 Nov)')
         for i, p in enumerate(_paragraphs(text) if field != 'headline' else str(text).split('\n')):
             if field == 'instagram' and p.startswith('#'):
                 continue
