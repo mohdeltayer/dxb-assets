@@ -1,0 +1,111 @@
+[
+ {
+  "where": "shot 0",
+  "rule": "auto_shots",
+  "what": "sliptest-black-mesa-1-0-launch-trailer.mp4 at 4.30 s for 3.8 s, focus 0.409"
+ },
+ {
+  "where": "shot 1",
+  "rule": "auto_shots",
+  "what": "sliptest-black-mesa-1-0-launch-trailer.mp4 at 32.83 s for 2.6 s, focus 0.909"
+ },
+ {
+  "where": "shot 2",
+  "rule": "auto_shots",
+  "what": "sliptest-black-mesa-1-0-launch-trailer.mp4 at 66.93 s for 2.6 s, focus 0.495"
+ },
+ {
+  "where": "shot 3",
+  "rule": "auto_shots",
+  "what": "sliptest-black-mesa-1-0-launch-trailer.mp4 at 72.43 s for 2.4 s, focus 0.548"
+ },
+ {
+  "where": "shot 4",
+  "rule": "auto_shots",
+  "what": "sliptest-black-mesa-1-0-launch-trailer.mp4 at 76.43 s for 2.4 s, focus 0.189"
+ },
+ {
+  "where": "shot 5",
+  "rule": "auto_shots",
+  "what": "sliptest-black-mesa-1-0-launch-trailer.mp4 at 82.70 s for 2.2 s, focus 0.65"
+ },
+ {
+  "where": "shot 6",
+  "rule": "auto_shots",
+  "what": "sliptest-black-mesa-1-0-launch-trailer.mp4 at 98.37 s for 2.2 s, focus 0.597"
+ },
+ {
+  "where": "shot 7",
+  "rule": "auto_shots",
+  "what": "sliptest-black-mesa-1-0-launch-trailer.mp4 at 115.50 s for 2.2 s, focus 0.717"
+ },
+ {
+  "where": "shot 8",
+  "rule": "auto_shots",
+  "what": "sliptest-black-mesa-1-0-launch-trailer.mp4 at 41.90 s for 2.2 s, focus 0.779"
+ },
+ {
+  "where": "shot 9",
+  "rule": "auto_shots",
+  "what": "sliptest-black-mesa-1-0-launch-trailer.mp4 at 103.17 s for 2.2 s, focus 1.0"
+ },
+ {
+  "where": "shot 10",
+  "rule": "auto_shots",
+  "what": "sliptest-black-mesa-2018-xen-trailer.mp4 at 57.97 s for 2.2 s, focus 0.581 (nothing free in sliptest-black-mesa-1-0-launch-trailer.mp4)"
+ },
+ {
+  "where": "shot 11",
+  "rule": "auto_shots",
+  "what": "sliptest-black-mesa-2018-xen-trailer.mp4 at 48.76 s for 2.2 s, focus 0.835 (nothing free in sliptest-black-mesa-1-0-launch-trailer.mp4)"
+ },
+ {
+  "where": "shot 12",
+  "rule": "auto_shots",
+  "what": "sliptest-black-mesa-2018-xen-trailer.mp4 at 34.61 s for 2.2 s, focus 0.283 (nothing free in sliptest-black-mesa-1-0-launch-trailer.mp4)"
+ },
+ {
+  "where": "shot 13",
+  "rule": "auto_shots",
+  "what": "sliptest-black-mesa-2018-xen-trailer.mp4 at 62.93 s for 2.2 s, focus 0.854 (nothing free in sliptest-black-mesa-1-0-launch-trailer.mp4)"
+ },
+ {
+  "where": "shot 14",
+  "rule": "auto_shots",
+  "what": "sliptest-black-mesa-2018-xen-trailer.mp4 at 74.67 s for 2.2 s, focus 0.647 (nothing free in sliptest-black-mesa-1-0-launch-trailer.mp4)"
+ },
+ {
+  "where": "shot 14",
+  "rule": "subject_drift",
+  "what": "trimmed to 1.00 s, its longest safe length before the subject leaves the 9:16 window",
+  "before": [
+   "sliptest-black-mesa-2018-xen-trailer.mp4",
+   74.67,
+   2.24,
+   [
+    [
+     0.0,
+     0.647
+    ]
+   ]
+  ],
+  "after": [
+   "sliptest-black-mesa-2018-xen-trailer.mp4",
+   74.67,
+   1.0,
+   [
+    [
+     0.0,
+     0.647
+    ]
+   ]
+  ]
+ },
+ {
+  "where": "shot 13",
+  "rule": "fill",
+  "what": "lengthened 2.24 to 3.48 s to keep the time shot 14 gave up",
+  "before": 2.24,
+  "after": 3.48
+ }
+]
