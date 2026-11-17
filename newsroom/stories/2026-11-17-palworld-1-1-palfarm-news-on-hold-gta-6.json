@@ -44,5 +44,25 @@
    "palfarm"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/palworld-1-1-palfarm-news-on-hold-november-17-reel-v1.mp4",
+  "blob": "ebbf343c862ba070ac0a2f7a207a693f8863bb97",
+  "at": "2026-11-17T13:45:35Z",
+  "note": "Release card 19 Nov is unlabelled (GTA VI launch per story angle); not a send-back reason",
+  "checklist": {
+   "job": "jobs/live/palworld-1-1-palfarm-news-on-hold-november-17.json",
+   "sha256": "bef66e8238cdab43ea39c8f512fe53e036aab662c862c89867a711dd3bfd65ab",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1: headline 'Palworld news waits for GTA VI' with تقرير chip over Palworld gameplay; look-2: line naming Buckley of Pocketpair on launch-week news, card Release 19 Nov / New date not stated, over Pal art; look-3: quote 'not the best idea', no new date, same card, over grass and Lamball. Strip and dense: Palworld footage throughout, no gore, text readable, end card"
  }
 }
