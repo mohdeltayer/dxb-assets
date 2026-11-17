@@ -1,10 +1,49 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T19:10:08Z",
- "seq": 585,
+ "generated_at": "2026-11-17T19:40:18Z",
+ "seq": 586,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 16768,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "The Game Awards 2026 Nominees – Play Gears of War: E-Day, Grand Theft Auto VI, Resident Evil Requiem, and More on XBOX",
+   "url": "https://news.xbox.com/en-us/2026/11/17/the-game-awards-2026-nominees-on-xbox/",
+   "published": "2026-11-17T19:30Z",
+   "first_seen": "2026-11-17T19:40:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.29314.14287567326939893.a8ef79c4-3c43-4b7c-acd5-29f4d5e555d8.57a352c9-aeea-4d6b-92fc-459acd41ffe4?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://assets.onestore.ms/cdnfiles/sfw-service-web-onestore-onerf-2017-11-8-12/store/common/images/xpalogo_black.png"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.14529.14340913040248760.33d520ad-e4fe-42de-b3b0-b6f126c379d9.b8e910db-fdda-446b-af14-702435d54f7d?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.52601.14422848452564174.73566ad4-aa1c-4ff1-b55a-21efcdc91e00.06808afa-f6a6-4da0-acc1-5eadb51ccdc6?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.24249.13550041517005289.94982f01-a340-49e3-9d4f-37cb23ee22c9.22ffebb1-9164-4b10-9d7d-9d5caa1091a3?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.29053.13885697713732469.57172206-9624-44ae-9aab-e4d08a8b3212.9e1b1273-7b5d-406a-8f28-50d2f02c571c?w=400&h=600"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 586
+  }
+ ],
+ "recent": [
   {
    "id": 16750,
    "source": "Nintendo US",
@@ -16,9 +55,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 585
-  }
- ],
- "recent": [
+  },
   {
    "id": 16623,
    "source": "Nintendo of America (YouTube)",
@@ -380,9 +417,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T19:10:05Z",
+  "last_poll_at": "2026-11-17T19:40:15Z",
   "sources_enabled": 100,
-  "sources_ok": 93,
+  "sources_ok": 92,
   "sources_failing": 7,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 101x)",
