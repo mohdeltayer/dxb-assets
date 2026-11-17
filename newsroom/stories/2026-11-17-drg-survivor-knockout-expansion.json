@@ -47,5 +47,25 @@
   "hits": [
    "2026-09-30-drg-survivor-oct7 (console release 7 Oct; this is a new expansion, new)"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/drg-survivor-knockout-expansion-november-17-reel-v1.mp4",
+  "blob": "d33735326cd01ad5c40b847aaffd644e6876dabc",
+  "at": "2026-11-17T14:39:07Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/drg-survivor-knockout-expansion-november-17.json",
+   "sha256": "b704b822dbbae35de326b8233a2d45c6e7aff153fa8a3922ad934f8ed61a8645",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Look 1: title card, official chip, headline Knockout expansion arrives in Deep Rock Survivor; look 2: official trailer footage with credit Ghost Ship Games, caption and Steam/9.99 strip; look 3: Brawler class with 11 new weapons caption on framed footage; all text readable and inside frame; no gore"
  }
 }
