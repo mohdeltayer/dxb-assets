@@ -1,0 +1,30 @@
+{
+ "name": "madden-27-dont-delete-gta-6-november-17",
+ "out": "cards/2026-11/madden-27-dont-delete-gta-6-november-17-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-17T10:25:41Z",
+ "findings": [],
+ "notes": [
+  "length 19.9 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 4.55, \"held_under_text\": 0.0, \"secs\": 19.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "236be54e9a520daf19494a2ac3b5909d1d292d11",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/madden-27-dont-delete-gta-6-november-17-look-1.jpg",
+  "cards/2026-11/madden-27-dont-delete-gta-6-november-17-look-2.jpg",
+  "cards/2026-11/madden-27-dont-delete-gta-6-november-17-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_c (Steam trailer 'It's Your League' carries commentary and crowd under the picture; no continuous music-only stretch checked, so our bed)",
+ "shot_read": null
+}
