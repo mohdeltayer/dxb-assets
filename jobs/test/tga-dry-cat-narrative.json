@@ -1,0 +1,147 @@
+{
+ "name": "tga-dry-cat-narrative",
+ "story": "2026-11-17-tga-2026-goty-nominees",
+ "kind_news": "awards",
+ "built_by": "production-1",
+ "out": "cards/test/tga-dry-cat-narrative-reel-v1.mp4",
+ "label": "رسمي",
+ "source": "ذا غيم أووردز (The Game Awards)",
+ "date": "17 Nov 2026",
+ "theme": "gold",
+ "style": null,
+ "template": "list",
+ "skin": "house",
+ "cut": true,
+ "track": "bed",
+ "bed_reason": "an awards category: the list card over one nominee's footage, our bed under the whole cut as on every Reel of the event kit (15 Nov)",
+ "genre": [
+  "industry/hardware"
+ ],
+ "platform": "multi",
+ "beat": "event",
+ "subject_person": null,
+ "sensitive": "none",
+ "footage": [
+  {
+   "file": "tga26-re9.mp4",
+   "steam": 3764200,
+   "trailer": "RE9_PV3",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [
+  [
+   "tga26-re9.mp4",
+   114.59,
+   3.6,
+   null
+  ],
+  [
+   "tga-dry-cat-narrative-gfx-nominees.png",
+   [
+    "tga26-re9.mp4",
+    100.96
+   ],
+   5.4,
+   null
+  ],
+  [
+   "tga26-re9.mp4",
+   79.51,
+   3.02,
+   null
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   0,
+   "المصدر: كابكوم (Capcom)"
+  ],
+  [
+   1,
+   1,
+   "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: كابكوم (Capcom)"
+  ],
+  [
+   2,
+   2,
+   "المصدر: كابكوم (Capcom)"
+  ]
+ ],
+ "lines": [
+  [
+   2,
+   2,
+   [
+    [
+     "يُعلن الفائز في حفل 10 ديسمبر",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "headline": "المرشحون لجائزة\nأفضل سرد قصصي",
+ "spoken": "أعلن حفل ذا غيم أووردز (The Game Awards) المرشحين لجائزة أفضل سرد قصصي لعام 2026. ويُعلن الفائز في حفل 10 ديسمبر.",
+ "gfx": [
+  {
+   "file": "tga-dry-cat-narrative-gfx-nominees.png",
+   "kind": "nominees",
+   "title": "أفضل سرد قصصي",
+   "rows": [
+    {
+     "name": "Resident Evil Requiem",
+     "note": "كابكوم (Capcom)",
+     "image": "tga26-re9"
+    },
+    {
+     "name": "The Legend of Zelda: Ocarina of Time",
+     "note": "نينتيندو (Nintendo)",
+     "image": "tga26-oot"
+    },
+    {
+     "name": "Dispatch",
+     "note": "أدهوك ستوديو (AdHoc Studio)",
+     "image": "tga26-dispatch"
+    },
+    {
+     "name": "Saros",
+     "note": "سوني (Sony)",
+     "image": "tga26-saros"
+    },
+    {
+     "name": "Clair Obscur: Expedition 33",
+     "note": "ساندفول إنترأكتيف (Sandfall Interactive)"
+    }
+   ],
+   "animate": true
+  }
+ ],
+ "ground_footage": [
+  "tga26-re9.mp4",
+  100.96
+ ],
+ "pace_ok": "the 5.4 s nominees card is animated: its rows enter one by one, 0.55 s apart, in the order read, then the full list holds 3 s to be read",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: names read from the official stream and https://thegameawards.com/nominees at TODO time read (Z)",
+  "SOURCE: not already posted": "yes: ledger find recorded in the story file; the 14 Nov watch-guide lead was released unbuilt",
+  "SOURCE: age": "yes: announced tonight, posted at once (T0)",
+  "ANGLE: hook, why now, what it means, payoff": "yes: in the story file angle",
+  "STORY TYPE: EVENT": "yes: the ceremony date (10 Dec) on the closing line; Dubai time not announced yet, so not stated",
+  "STORY: one spoken paragraph first": "yes: \"spoken\" in the job, lines cut from it in order",
+  "STORY: names match names-ar.md": "yes: games in English as the publishers write them; ذا غيم أووردز (The Game Awards) added to names-ar.md 15 Nov",
+  "SOUND: our bed with reason": "yes: bed_reason in the job",
+  "PICTURE: footage first, official trailers": "yes: every nominee on its own official trailer: Resident Evil Requiem, The Legend of Zelda: Ocarina of Time, Dispatch, Saros, Clair Obscur: Expedition 33",
+  "PICTURE: credit on every clip": "yes: one credit per shot naming the publisher, with the n of N counter",
+  "PICTURE: nothing graphic": "yes: stretches read by the server shots mode; the director looks once at the frames"
+ },
+ "decision_log": {
+  "hook": "Resident Evil Requiem (a nominee in this category) under the headline",
+  "card": "the nominees in the order read, names as the show writes them, no ranking",
+  "close": "Resident Evil Requiem again",
+  "music": "our bed (bed_reason)"
+ }
+}

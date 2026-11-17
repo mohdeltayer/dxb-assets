@@ -1,0 +1,156 @@
+{
+ "name": "tga-dry-cat-art",
+ "story": "2026-11-17-tga-2026-goty-nominees",
+ "kind_news": "awards",
+ "built_by": "production-1",
+ "out": "cards/test/tga-dry-cat-art-reel-v1.mp4",
+ "label": "رسمي",
+ "source": "ذا غيم أووردز (The Game Awards)",
+ "date": "17 Nov 2026",
+ "theme": "gold",
+ "style": null,
+ "template": "list",
+ "skin": "house",
+ "cut": true,
+ "track": "bed",
+ "bed_reason": "an awards category: the list card over one nominee's footage, our bed under the whole cut as on every Reel of the event kit (15 Nov)",
+ "genre": [
+  "industry/hardware"
+ ],
+ "platform": "multi",
+ "beat": "event",
+ "subject_person": null,
+ "sensitive": "none",
+ "footage": [
+  {
+   "file": "tga26-pbz.mp4",
+   "steam": 4115450,
+   "trailer": "Phantom Blade Zero - Launch",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [
+  [
+   "tga26-pbz.mp4",
+   83.76,
+   3.12,
+   null
+  ],
+  [
+   "tga-dry-cat-art-gfx-nominees.png",
+   [
+    "tga26-pbz.mp4",
+    97.21
+   ],
+   5.95,
+   null
+  ],
+  [
+   "tga26-pbz.mp4",
+   78.15,
+   3.02,
+   null
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   0,
+   "المصدر: إس جيم (S-GAME)"
+  ],
+  [
+   1,
+   1,
+   "القائمة: ذا غيم أووردز (The Game Awards)\nاللقطات: إس جيم (S-GAME)",
+   {
+    "size": 36
+   }
+  ],
+  [
+   2,
+   2,
+   "المصدر: إس جيم (S-GAME)"
+  ]
+ ],
+ "lines": [
+  [
+   2,
+   2,
+   [
+    [
+     "يُعلن الفائز في حفل 10 ديسمبر",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "headline": "المرشحون لجائزة\nأفضل إخراج فني",
+ "spoken": "أعلن حفل ذا غيم أووردز (The Game Awards) المرشحين لجائزة أفضل إخراج فني لعام 2026. ويُعلن الفائز في حفل 10 ديسمبر.",
+ "gfx": [
+  {
+   "file": "tga-dry-cat-art-gfx-nominees.png",
+   "kind": "nominees",
+   "title": "أفضل إخراج فني",
+   "rows": [
+    {
+     "name": "Phantom Blade Zero",
+     "note": "إس جيم (S-GAME)",
+     "image": "tga26-pbz"
+    },
+    {
+     "name": "Mina the Hollower",
+     "note": "ياخت كلوب غيمز (Yacht Club Games)",
+     "image": "tga26-mina"
+    },
+    {
+     "name": "Control Resonant",
+     "note": "ريميدي (Remedy)",
+     "image": "tga26-control"
+    },
+    {
+     "name": "Fire Emblem: Fortune's Weave",
+     "note": "نينتيندو (Nintendo)",
+     "image": "tga26-fe"
+    },
+    {
+     "name": "Pokémon Pokopia",
+     "note": "نينتيندو (Nintendo)",
+     "image": "tga26-pokopia"
+    },
+    {
+     "name": "The Blood of Dawnwalker",
+     "note": "ريبل ولفز (Rebel Wolves)",
+     "image": "tga26-dawnwalker"
+    }
+   ],
+   "animate": true
+  }
+ ],
+ "ground_footage": [
+  "tga26-pbz.mp4",
+  97.21
+ ],
+ "pace_ok": "the 5.95 s nominees card is animated: its rows enter one by one, 0.55 s apart, in the order read, then the full list holds 3 s to be read",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: names read from the official stream and https://thegameawards.com/nominees at TODO time read (Z)",
+  "SOURCE: not already posted": "yes: ledger find recorded in the story file; the 14 Nov watch-guide lead was released unbuilt",
+  "SOURCE: age": "yes: announced tonight, posted at once (T0)",
+  "ANGLE: hook, why now, what it means, payoff": "yes: in the story file angle",
+  "STORY TYPE: EVENT": "yes: the ceremony date (10 Dec) on the closing line; Dubai time not announced yet, so not stated",
+  "STORY: one spoken paragraph first": "yes: \"spoken\" in the job, lines cut from it in order",
+  "STORY: names match names-ar.md": "yes: games in English as the publishers write them; ذا غيم أووردز (The Game Awards) added to names-ar.md 15 Nov",
+  "SOUND: our bed with reason": "yes: bed_reason in the job",
+  "PICTURE: footage first, official trailers": "yes: every nominee on its own official trailer: Phantom Blade Zero, Mina the Hollower, Control Resonant, Fire Emblem: Fortune's Weave, Pokémon Pokopia, The Blood of Dawnwalker",
+  "PICTURE: credit on every clip": "yes: one credit per shot naming the publisher, with the n of N counter",
+  "PICTURE: nothing graphic": "yes: stretches read by the server shots mode; the director looks once at the frames"
+ },
+ "decision_log": {
+  "hook": "Phantom Blade Zero (a nominee in this category) under the headline",
+  "card": "the nominees in the order read, names as the show writes them, no ranking",
+  "close": "Phantom Blade Zero again",
+  "music": "our bed (bed_reason)"
+ }
+}

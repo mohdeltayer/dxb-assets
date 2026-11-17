@@ -1,0 +1,273 @@
+{
+ "name": "tga-dry-main-categories",
+ "story": "2026-11-17-tga-2026-goty-nominees",
+ "kind_news": "awards",
+ "built_by": "production-1",
+ "out": "cards/test/tga-dry-main-categories-reel-v1.mp4",
+ "label": "رسمي",
+ "source": "ذا غيم أووردز (The Game Awards)",
+ "date": "17 Nov 2026",
+ "theme": "gold",
+ "style": null,
+ "template": "list",
+ "skin": "house",
+ "cut": true,
+ "track": "bed",
+ "bed_reason": "several games in one Reel, each on its own official trailer: no single trailer stretch runs under all of them, and cutting each trailer's own sound at every cut would jump; our bed under the whole cut (event kit, 15 Nov)",
+ "genre": [
+  "industry/hardware"
+ ],
+ "platform": "multi",
+ "beat": "event",
+ "subject_person": null,
+ "sensitive": "none",
+ "footage": [
+  {
+   "file": "tga26-re9.mp4",
+   "steam": 3764200,
+   "trailer": "RE9_PV3",
+   "start": 0,
+   "seconds": 240
+  },
+  {
+   "file": "tga26-pbz.mp4",
+   "steam": 4115450,
+   "trailer": "Phantom Blade Zero - Launch",
+   "start": 0,
+   "seconds": 240
+  },
+  {
+   "file": "tga26-pragmata.mp4",
+   "steam": 3357650,
+   "trailer": "06_PRAGMATA_PV6",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [
+  [
+   "tga26-re9.mp4",
+   114.59,
+   3.6,
+   0.23
+  ],
+  [
+   "tga-dry-main-categories-gfx-narrative.png",
+   [
+    "tga26-re9.mp4",
+    100.96
+   ],
+   5.4,
+   null
+  ],
+  [
+   "tga-dry-main-categories-gfx-art.png",
+   [
+    "tga26-pbz.mp4",
+    97.21
+   ],
+   5.95,
+   null
+  ],
+  [
+   "tga-dry-main-categories-gfx-actionadventure.png",
+   [
+    "tga26-pragmata.mp4",
+    71.02
+   ],
+   5.4,
+   null
+  ],
+  [
+   "tga26-re9.mp4",
+   79.51,
+   3.24,
+   [
+    [
+     0.0,
+     0.601
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   0,
+   "المصدر: كابكوم (Capcom)"
+  ],
+  [
+   1,
+   1,
+   "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: كابكوم (Capcom)",
+   {
+    "size": 30
+   }
+  ],
+  [
+   2,
+   2,
+   "القائمة: ذا غيم أووردز (The Game Awards)\nاللقطات: إس جيم (S-GAME)",
+   {
+    "size": 36
+   }
+  ],
+  [
+   3,
+   3,
+   "القائمة: ذا غيم أووردز (The Game Awards) · اللقطات: كابكوم (Capcom)",
+   {
+    "size": 30
+   }
+  ],
+  [
+   4,
+   4,
+   "المصدر: كابكوم (Capcom)"
+  ]
+ ],
+ "gfx": [
+  {
+   "file": "tga-dry-main-categories-gfx-narrative.png",
+   "kind": "nominees",
+   "title": "أفضل سرد قصصي",
+   "rows": [
+    {
+     "name": "Resident Evil Requiem",
+     "note": "كابكوم (Capcom)",
+     "image": "tga26-re9"
+    },
+    {
+     "name": "The Legend of Zelda: Ocarina of Time",
+     "note": "نينتيندو (Nintendo)",
+     "image": "tga26-oot"
+    },
+    {
+     "name": "Dispatch",
+     "note": "أدهوك ستوديو (AdHoc Studio)",
+     "image": "tga26-dispatch"
+    },
+    {
+     "name": "Saros",
+     "note": "سوني (Sony)",
+     "image": "tga26-saros"
+    },
+    {
+     "name": "Clair Obscur: Expedition 33",
+     "note": "ساندفول إنترأكتيف (Sandfall Interactive)"
+    }
+   ],
+   "animate": true
+  },
+  {
+   "file": "tga-dry-main-categories-gfx-art.png",
+   "kind": "nominees",
+   "title": "أفضل إخراج فني",
+   "rows": [
+    {
+     "name": "Phantom Blade Zero",
+     "note": "إس جيم (S-GAME)",
+     "image": "tga26-pbz"
+    },
+    {
+     "name": "Mina the Hollower",
+     "note": "ياخت كلوب غيمز (Yacht Club Games)",
+     "image": "tga26-mina"
+    },
+    {
+     "name": "Control Resonant",
+     "note": "ريميدي (Remedy)",
+     "image": "tga26-control"
+    },
+    {
+     "name": "Fire Emblem: Fortune's Weave",
+     "note": "نينتيندو (Nintendo)",
+     "image": "tga26-fe"
+    },
+    {
+     "name": "Pokémon Pokopia",
+     "note": "نينتيندو (Nintendo)",
+     "image": "tga26-pokopia"
+    },
+    {
+     "name": "The Blood of Dawnwalker",
+     "note": "ريبل ولفز (Rebel Wolves)",
+     "image": "tga26-dawnwalker"
+    }
+   ],
+   "animate": true
+  },
+  {
+   "file": "tga-dry-main-categories-gfx-actionadventure.png",
+   "kind": "nominees",
+   "title": "أفضل لعبة أكشن ومغامرات",
+   "rows": [
+    {
+     "name": "007 First Light",
+     "note": "آي أو إنترأكتيف (IO Interactive)",
+     "image": "tga26-007"
+    },
+    {
+     "name": "PRAGMATA",
+     "note": "كابكوم (Capcom)",
+     "image": "tga26-pragmata"
+    },
+    {
+     "name": "Gears of War: E-Day",
+     "note": "إكس بوكس (Xbox)",
+     "image": "tga26-gears"
+    },
+    {
+     "name": "STAR WARS: Galactic Racer",
+     "note": "سيكرت مود (Secret Mode)",
+     "image": "tga26-swgr"
+    },
+    {
+     "name": "Forza Horizon 6",
+     "note": "بلاي غراوند (Playground Games)",
+     "image": "tga26-fh6"
+    }
+   ],
+   "animate": true
+  }
+ ],
+ "ground_footage": [
+  "tga26-re9.mp4",
+  100.96
+ ],
+ "lines": [
+  [
+   4,
+   4,
+   [
+    [
+     "ويُعلن الفائزون في حفل 10 ديسمبر",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "headline": "أبرز ترشيحات\nذا غيم أووردز 2026",
+ "spoken": "أعلن حفل ذا غيم أووردز (The Game Awards) المرشحين لجوائز 2026، وهذه أبرز الفئات. ويُعلن الفائزون في حفل 10 ديسمبر.",
+ "pace_ok": "each nominees card is animated: its rows enter one by one, 0.55 s apart, then the full list holds 3 s; every card sits on a different game's footage",
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: names read from the official stream and https://thegameawards.com/nominees at TODO time read (Z)",
+  "SOURCE: not already posted": "yes: ledger find recorded in the story file; the 14 Nov watch-guide lead was released unbuilt",
+  "SOURCE: age": "yes: announced tonight, posted at once (T0)",
+  "ANGLE: hook, why now, what it means, payoff": "yes: in the story file angle",
+  "STORY TYPE: EVENT": "yes: the ceremony date (10 Dec) on the closing line; Dubai time not announced yet, so not stated",
+  "STORY: one spoken paragraph first": "yes: \"spoken\" in the job, lines cut from it in order",
+  "STORY: names match names-ar.md": "yes: games in English as the publishers write them; ذا غيم أووردز (The Game Awards) added to names-ar.md 15 Nov",
+  "SOUND: our bed with reason": "yes: bed_reason in the job",
+  "PICTURE: footage first, official trailers": "yes: every nominee on its own official trailer: أفضل سرد قصصي, أفضل إخراج فني, أفضل لعبة أكشن ومغامرات",
+  "PICTURE: credit on every clip": "yes: one credit per shot naming the publisher, with the n of N counter",
+  "PICTURE: nothing graphic": "yes: stretches read by the server shots mode; the director looks once at the frames"
+ },
+ "decision_log": {
+  "hook": "Resident Evil Requiem under the headline",
+  "cards": "one card per category, rows as read, each on one of its own nominees' footage",
+  "music": "our bed (bed_reason)"
+ }
+}
