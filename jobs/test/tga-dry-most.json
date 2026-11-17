@@ -1,0 +1,169 @@
+{
+ "name": "tga-dry-most",
+ "story": "2026-11-17-tga-2026-most-nominated",
+ "kind_news": "results",
+ "built_by": "production-1",
+ "render_lane": "server",
+ "out": "cards/test/tga-dry-most-reel-v1.mp4",
+ "label": "رسمي",
+ "source": "ذا غيم أووردز (The Game Awards)",
+ "date": "17 Nov 2026",
+ "theme": "gold",
+ "style": null,
+ "template": "clipcard",
+ "skin": "house",
+ "cut": true,
+ "track": "bed",
+ "bed_reason": "several games in one Reel, each on its own official trailer: no single trailer stretch runs under all of them, and cutting each trailer's own sound at every cut would jump; our bed under the whole cut (event kit, 15 Nov)",
+ "genre": [
+  "industry/hardware"
+ ],
+ "platform": "multi",
+ "beat": "event",
+ "subject_person": null,
+ "sensitive": "none",
+ "footage": [
+  {
+   "file": "tga26-re9.mp4",
+   "steam": 3764200,
+   "trailer": "RE9_PV3",
+   "start": 0,
+   "seconds": 240
+  }
+ ],
+ "shots": [
+  [
+   "tga26-re9.mp4",
+   114.59,
+   3.6,
+   null
+  ],
+  [
+   "tga26-re9.mp4",
+   100.96,
+   3.24,
+   null
+  ],
+  [
+   "tga-2026-most-nominated-gfx-ranking.png",
+   null,
+   5.0,
+   null
+  ],
+  [
+   "tga26-re9.mp4",
+   79.51,
+   3.24,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   1,
+   [
+    [
+     "تتصدر لعبة Resident Evil Requiem",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   3,
+   [
+    [
+     "ويُعلن الفائزون في حفل 10 ديسمبر",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   1,
+   "المصدر: كابكوم (Capcom)"
+  ],
+  [
+   2,
+   2,
+   "المصدر: ذا غيم أووردز (The Game Awards)"
+  ],
+  [
+   3,
+   3,
+   "المصدر: كابكوم (Capcom)"
+  ]
+ ],
+ "headline": "الأكثر ترشيحًا\nفي ذا غيم أووردز 2026",
+ "spoken": "تتصدر لعبة Resident Evil Requiem القائمة بأكبر عدد من الترشيحات في ذا غيم أووردز (The Game Awards) 2026. ويُعلن الفائزون في حفل 10 ديسمبر.",
+ "gfx": [
+  {
+   "file": "tga-2026-most-nominated-gfx-ranking.png",
+   "kind": "ranking",
+   "rows": [
+    {
+     "rank": "1",
+     "name": "Resident Evil Requiem",
+     "value": "9",
+     "unit": "ترشيحات",
+     "image": "tga26-re9",
+     "n": 9
+    },
+    {
+     "rank": "2",
+     "name": "Phantom Blade Zero",
+     "value": "7",
+     "unit": "ترشيحات",
+     "image": "tga26-pbz",
+     "n": 7
+    },
+    {
+     "rank": "3",
+     "name": "The Legend of Zelda: Ocarina of Time",
+     "value": "6",
+     "unit": "ترشيحات",
+     "image": "tga26-oot",
+     "n": 6
+    },
+    {
+     "rank": "4",
+     "name": "Saros",
+     "value": "5",
+     "unit": "ترشيحات",
+     "image": "tga26-saros",
+     "n": 5
+    }
+   ],
+   "animate": true
+  }
+ ],
+ "ground_footage": [
+  "tga26-re9.mp4",
+  100.96
+ ],
+ "reel_check": {
+  "SOURCE: primary read in full": "yes: names read from the official stream and https://thegameawards.com/nominees at TODO time read (Z)",
+  "SOURCE: not already posted": "yes: ledger find recorded in the story file; the 14 Nov watch-guide lead was released unbuilt",
+  "SOURCE: age": "yes: announced tonight, posted at once (T0)",
+  "ANGLE: hook, why now, what it means, payoff": "yes: in the story file angle",
+  "STORY TYPE: EVENT": "yes: the ceremony date (10 Dec) on the closing line; Dubai time not announced yet, so not stated",
+  "STORY: one spoken paragraph first": "yes: \"spoken\" in the job, lines cut from it in order",
+  "STORY: names match names-ar.md": "yes: games in English as the publishers write them; ذا غيم أووردز (The Game Awards) added to names-ar.md 15 Nov",
+  "SOUND: our bed with reason": "yes: bed_reason in the job",
+  "PICTURE: footage first, official trailers": "yes: every nominee on its own official trailer: Resident Evil Requiem, Phantom Blade Zero, The Legend of Zelda: Ocarina of Time, Saros",
+  "PICTURE: credit on every clip": "yes: one credit per shot naming the publisher, with the n of N counter",
+  "PICTURE: nothing graphic": "yes: stretches read by the server shots mode; the director looks once at the frames"
+ },
+ "decision_log": {
+  "hook": "Resident Evil Requiem (most nominations)",
+  "card": "ranking, counts only on the card",
+  "close": "Resident Evil Requiem again",
+  "music": "our bed (bed_reason)"
+ }
+}
