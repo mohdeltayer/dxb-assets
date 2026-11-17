@@ -1,0 +1,87 @@
+[
+ {
+  "where": "credit 1",
+  "rule": "credit_width",
+  "what": "set one line at 38 px (was 40 px, too wide for the safe zone)",
+  "before": {
+   "text": "المصدر: إعلان The Blood of Dawnwalker على Steam",
+   "size": 40
+  },
+  "after": {
+   "text": "المصدر: إعلان The Blood of Dawnwalker على Steam",
+   "size": 38
+  }
+ },
+ {
+  "where": "shot 0",
+  "rule": "auto_shots",
+  "what": "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4 at 6.91 s for 3.8 s, focus 0.426"
+ },
+ {
+  "where": "shot 1",
+  "rule": "auto_shots",
+  "what": "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4 at 21.28 s for 2.8 s, focus 0.297"
+ },
+ {
+  "where": "shot 2",
+  "rule": "auto_shots",
+  "what": "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4 at 42.40 s for 2.8 s, focus 0.536"
+ },
+ {
+  "where": "shot 3",
+  "rule": "auto_shots",
+  "what": "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4 at 45.65 s for 2.7 s, focus 0.536"
+ },
+ {
+  "where": "shot 4",
+  "rule": "auto_shots",
+  "what": "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4 at 66.63 s for 2.7 s, focus 0.52"
+ },
+ {
+  "where": "shot 5",
+  "rule": "auto_shots",
+  "what": "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4 at 70.05 s for 2.2 s, focus 0.52"
+ },
+ {
+  "where": "shot 6",
+  "rule": "auto_shots",
+  "what": "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4 at 85.50 s for 2.2 s, focus 0.5"
+ },
+ {
+  "where": "shot 7",
+  "rule": "auto_shots",
+  "what": "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4 at 97.54 s for 2.4 s, focus 0.551"
+ },
+ {
+  "where": "shot 8",
+  "rule": "auto_shots",
+  "what": "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4 at 115.58 s for 2.4 s, focus 0.494"
+ },
+ {
+  "where": "shot 2",
+  "rule": "subject_drift",
+  "what": "moved from 42.40 to 42.90 s, the nearest stretch of the same source with the subject inside",
+  "before": [
+   "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4",
+   42.4,
+   2.78,
+   [
+    [
+     0.0,
+     0.536
+    ]
+   ]
+  ],
+  "after": [
+   "sliptest-dawnwalker-the-blood-of-the-dawnwalker-pre-order-trailer.mp4",
+   42.9,
+   2.78,
+   [
+    [
+     0.0,
+     0.536
+    ]
+   ]
+  ]
+ }
+]
