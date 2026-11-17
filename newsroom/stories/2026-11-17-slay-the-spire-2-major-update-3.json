@@ -51,5 +51,25 @@
   "hits": [
    "2026-11-13-slay-the-spire-2-fool-blitz-dread-beta (beta, 13 Nov; this is the main-branch update, new)"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/slay-the-spire-2-major-update-3-november-17-reel-v1.mp4",
+  "blob": "2e1324898729dc6759fa3b65f4cde7bdb4537d97",
+  "at": "2026-11-17T12:39:19Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/slay-the-spire-2-major-update-3-november-17.json",
+   "sha256": "0fa5d92cb9f819bb6a805297fb9cea91e548abf7bce8ada9db4e9c05fd88eeab",
+   "ok": true,
+   "problems": [],
+   "template": "split",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-2"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1 (about 1.5 s): headline 'تحديث كبير جديد لـ Slay the Spire 2' and the رسمي chip inside the frame over Slay the Spire 2 combat art (skeleton reaper and a bone hand, cartoon, nothing graphic); look-2: line 'وصل التحديث الثالث الكبير إلى Slay the Spire 2', strip with التحديث 0.111.1 and الصدور 17 نوفمبر, credit line 'لقطات من عروض اللعبة السابقة، ميغا كريت (Mega Crit)' on an owl enemy; look-3: line 'ومعه لغتان جديدتان وحركات الزعيم Aeonglass', same strip, same credit, card hand and reaper, stylised only; extra frames at 0.8, 2.5, 3.4, 5.5 s also checked, source line 'إعلان Slay the Spire 2 على Steam · 17 نوفمبر 2026' present under the headline"
  }
 }
