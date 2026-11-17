@@ -2,11 +2,11 @@
  "id": "2026-11-17-sliptest-dawnwalker",
  "state": "failed",
  "problems": [
-  "footage: the resolver stopped on steam:3751260: ModuleNotFoundError: No module named 'pedalboard'"
+  "footage: the resolver stopped on steam:3751260: ModuleNotFoundError: No module named 'numpy'"
  ],
  "flags": [],
- "at": "2026-11-17T19:18:24Z",
- "run": "44157047158",
+ "at": "2026-11-17T19:21:51Z",
+ "run": "44157700788",
  "lane": "test",
- "build_secs": 30
+ "build_secs": 18
 }
