@@ -31,7 +31,7 @@
  "shots": [
   [
    "xbox-white-friday-sale-november-19-grounded2.mp4",
-   20,
+   21.0,
    2.8,
    [
     [
@@ -75,7 +75,7 @@
   ],
   [
    "xbox-white-friday-sale-november-19-gears.mp4",
-   28.74,
+   28.24,
    2.6,
    [
     [
@@ -87,7 +87,7 @@
   [
    "xbox-white-friday-sale-november-19-gears.mp4",
    39.8,
-   3.5,
+   2.0,
    [
     [
      0.0,
@@ -97,19 +97,8 @@
   ],
   [
    "xbox-white-friday-sale-november-19-gears.mp4",
-   44.6,
-   3.3,
-   [
-    [
-     0.0,
-     0.5
-    ]
-   ]
-  ],
-  [
-   "xbox-white-friday-sale-november-19-forza.mp4",
-   35.95,
-   2.5,
+   46.0,
+   1.9,
    [
     [
      0.0,
@@ -118,26 +107,14 @@
    ]
   ]
  ],
- "spoken": "أعلنت إكس بوكس (Xbox) عن عروض الجمعة البيضاء. تبدأ العروض في 19 نوفمبر وتنتهي في 2 ديسمبر. يبلغ الخصم 30% على Gears of War: E-Day و25% على Forza Horizon 6، والعروض في أمريكا فقط وتختلف حسب السوق.",
+ "spoken": "أعلنت إكس بوكس (Xbox) عن عروض الجمعة البيضاء في أمريكا. يبلغ الخصم 30 بالمئة على Gears of War: E-Day وبنسبة 25 بالمئة على Forza Horizon 6.",
  "lines": [
   [
-   1,
    2,
-   [
-    [
-     "أعلنت إكس بوكس (Xbox)\nعروض الجمعة البيضاء",
-     {
-      "size": 54
-     }
-    ]
-   ]
-  ],
-  [
    3,
-   4,
    [
     [
-     "تبدأ العروض في 19 نوفمبر\nوتنتهي في 2 ديسمبر",
+     "أعلنت إكس بوكس (Xbox)\nعروض الجمعة البيضاء في أمريكا",
      {
       "size": 54
      }
@@ -145,19 +122,13 @@
    ]
   ],
   [
-   5,
-   7,
+   4,
+   6,
    [
     [
-     "خصم 30% على Gears of War: E-Day\nو25% على Forza Horizon 6",
+     "يبلغ الخصم 30 بالمئة على Gears of War: E-Day\nوبنسبة 25 بالمئة على Forza Horizon 6",
      {
-      "size": 50
-     }
-    ],
-    [
-     "العروض في أمريكا فقط\nوتختلف حسب السوق",
-     {
-      "size": 54
+      "size": 46
      }
     ]
    ]
@@ -166,7 +137,7 @@
  "credits": [
   [
    0,
-   7,
+   6,
    "المصدر: إكس بوكس واير (Xbox Wire)",
    {
     "size": 40,
@@ -174,7 +145,7 @@
    }
   ]
  ],
- "headline": "خصم يصل إلى 80%\nفي عروض إكس بوكس",
+ "headline": "خصم يصل إلى 80 بالمئة\nفي عروض إكس بوكس",
  "label": "السعر",
  "source": "إكس بوكس واير (Xbox Wire)",
  "date": "16 Nov 2026",
@@ -185,20 +156,20 @@
  "cut": true,
  "track": [
   "xbox-white-friday-sale-november-19-grounded2.mp4",
-  20
+  21.0
  ],
  "strip": [
   [
    "أعلى خصم",
-   "80% FF VII Remake"
+   "80 بالمئة"
   ],
   [
-   "تبدأ",
-   "19 نوفمبر"
+   "الفترة",
+   "19 نوفمبر إلى 2 ديسمبر"
   ],
   [
-   "تنتهي",
-   "2 ديسمبر"
+   "المنطقة",
+   "أمريكا فقط"
   ]
  ],
  "reel_check": {
@@ -206,7 +177,7 @@
   "SOURCE: not already posted": "yes: ledger find xbox black friday sale, 0 hits",
   "SOURCE: age": "yes: first report 16 Nov 23:57Z, about 5 h at build",
   "ANGLE before lines": "yes: angle in the story file",
-  "STORY TYPE price": "yes: discounts, period and region (US only) in lines and strip",
+  "STORY TYPE price": "yes: discounts, period (strip) and region (line 1 and strip: US only)",
   "STORY: spoken paragraph, subject before pronoun": "yes: line 1 names إكس بوكس, later lines continue the same subject",
   "STORY: release verbs": "yes: no release verb, offers only",
   "STORY: names match names-ar.md": "yes: إكس بوكس (Xbox) at first mention, game titles in English, White Friday per glossary",
@@ -215,7 +186,7 @@
   "SOUND: no speech under Arabic lines": "n/a: checked by the server audio split",
   "PICTURE: footage first": "yes: four official Steam trailers of games in the sale",
   "PICTURE: not the same as last 5 reels": "yes: no recent Reel uses these trailers",
-  "CREDIT: on every clip": "yes: credit band over shots 0 to 7"
+  "CREDIT: on every clip": "yes: credit band over shots 0 to 6"
  },
  "decision_log": [
   {
