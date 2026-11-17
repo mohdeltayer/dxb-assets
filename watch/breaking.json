@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T09:52:08Z",
- "seq": 564,
+ "generated_at": "2026-11-17T10:10:11Z",
+ "seq": 565,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 16222,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "The Blood of Dawnwalker — Update 1.2 with New Game+ | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=uzAGtzL0-5Y",
+   "published": "2026-11-17T10:00Z",
+   "first_seen": "2026-11-17T10:10:05Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/uzAGtzL0-5Y/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=uzAGtzL0-5Y"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 565
+  }
+ ],
  "recent": [
   {
    "id": 16011,
@@ -225,7 +247,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T09:50:05Z",
+  "last_poll_at": "2026-11-17T10:10:05Z",
   "sources_enabled": 100,
   "sources_ok": 92,
   "sources_failing": 7,
@@ -235,7 +257,7 @@
    "PlayStation (X) (HTTP 429, 5x)",
    "PlayStation Middle East (X) (HTTP 429, 17x)",
    "Rockstar Games (X) (HTTP 429, 3x)",
-   "The Game Awards (ValueError: 0 article links (expected 1+), layout changed or drawn by script, 15x)",
+   "The Game Awards (ValueError: 0 article links (expected 1+), layout changed or drawn by script, 16x)",
    "Xbox (X) (HTTP 429, 93x)"
   ]
  }
