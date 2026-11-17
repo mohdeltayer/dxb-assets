@@ -147,13 +147,34 @@ class AutoShots(unittest.TestCase):
         self.assertEqual(AS.fill(j, rd), [])
         self.assertEqual(sorted(s[0] for s in j['shots']), ['t.mp4', 'u.mp4'])
 
-    def test_refused_when_nothing_is_long_enough(self):
+    def test_too_long_is_shortened_to_a_free_stretch(self):
         import autoshots as AS
         j = {'footage': [{'file': 't.mp4'}], 'shots': [['t.mp4', 'auto', 20.0, None]]}
         AS.expand(j)
-        left = AS.fill(j, self.reader)
+        self.assertEqual(AS.fill(j, self.reader), [])
+        self.assertEqual(j['shots'][0][2], 15.0)                # the longest clean stretch, 30 to 45 s
+
+    def test_refused_when_nothing_is_free(self):
+        import autoshots as AS
+        tiny = lambda f: {'duration': 10.0, 'picture_start': 0.0, 'shots': [{'start': 1.0, 'end': 2.5, 'focus': 0.5}]}
+        j = {'footage': [{'file': 't.mp4'}], 'shots': [['t.mp4', 'auto', 3.0, None]]}
+        AS.expand(j)
+        left = AS.fill(j, tiny)
         self.assertEqual(len(left), 1)
         self.assertEqual(left[0]['rule'], 'auto_shots')
+
+    def test_own_file_first_then_borrow(self):
+        import autoshots as AS
+        rd = lambda f: ({'duration': 40.0, 'picture_start': 0.0, 'shots': [{'start': 20.0, 'end': 23.0, 'focus': 0.5}]}
+                        if f == 't.mp4' else {'duration': 40.0, 'picture_start': 0.0, 'shots': [{'start': 5.0, 'end': 8.0, 'focus': 0.5},
+                                                                                       {'start': 30.0, 'end': 33.0, 'focus': 0.9}]})
+        j = {'footage': [{'file': 't.mp4'}, {'file': 'u.mp4'}],
+             'shots': [['t.mp4', 'auto', 2.8, None], ['t.mp4', 'auto', 2.8, None], ['u.mp4', 'auto', 2.8, None]]}
+        AS.expand(j)
+        self.assertEqual(AS.fill(j, rd), [])
+        self.assertEqual(j['shots'][2][0], 'u.mp4')              # u's own slot keeps u's only stretch
+        self.assertTrue(5.0 <= j['shots'][2][1] <= 5.2)          # its own stretch, placed before any borrowing
+        self.assertEqual(j['shots'][1][0], 'u.mp4')
 
 
 if __name__ == '__main__':
