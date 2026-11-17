@@ -62,16 +62,24 @@ def expand(job):
     return slots
 
 
-def _choose(stretches, secs, target, after, dur):
+def _free(st, secs, used):
+    return all(st + secs <= a + 1e-6 or st >= b - 1e-6 for a, b in used)
+
+
+def _choose(stretches, secs, target, after, dur, used=()):
+    """The start nearest `target` (not before `after`) inside a clean stretch, overlapping no shot already placed."""
     best, score = None, None
     for s in stretches:
-        if s['end'] - max(s['start'], after) < secs:
+        lo, hi = max(s['start'], after), s['end'] - secs
+        if hi < lo:
             continue
-        st = max(s['start'], after)
-        st = min(max(st, target), s['end'] - secs)         # as near the target as the stretch allows
-        sc = abs(st - target) / max(dur, 1.0) + CENTRE_WEIGHT * abs(float(s.get('focus') or 0.5) - 0.5)
-        if score is None or sc < score:
-            best, score = (round(st, 2), s.get('focus')), sc
+        cands = {round(min(max(target, lo), hi), 2), round(lo, 2)} | {round(b, 2) for _a, b in used if lo <= b <= hi}
+        for st in sorted(cands):
+            if not _free(st, secs, used):
+                continue
+            sc = abs(st - target) / max(dur, 1.0) + CENTRE_WEIGHT * abs(float(s.get('focus') or 0.5) - 0.5)
+            if score is None or sc < score:
+                best, score = (st, s.get('focus')), sc
     return best
 
 
@@ -92,31 +100,53 @@ def fill(job, reader=None):
     by_file = {}
     for i in slots:
         by_file.setdefault(job['shots'][i][0], []).append(i)
+    used = {}                                                # file -> [(start, end)] already on screen
+    for k, sh in enumerate(job['shots']):
+        if k not in slots and isinstance(sh[1], (int, float)) and isinstance(sh[0], str):
+            used.setdefault(sh[0], []).append((float(sh[1]), float(sh[1]) + float(sh[2])))
+    reads = {}
+
+    def read(f):
+        if f not in reads:
+            r = reader(f)
+            st = sorted(r.get('shots') or [], key=lambda s: s['start'])
+            dur = float(r.get('duration') or 0) or max([s['end'] for s in st] or [1.0])
+            reads[f] = (st, dur, float(r.get('picture_start') or 0.0))
+        return reads[f]
     left = []
     for f, idx in by_file.items():
-        r = reader(f)
-        stretches = sorted(r.get('shots') or [], key=lambda s: s['start'])
-        dur = float(r.get('duration') or 0) or max([s['end'] for s in stretches] or [1.0])
-        v0 = float(r.get('picture_start') or 0.0)
+        stretches, dur, v0 = read(f)
         after = v0
         for k, i in enumerate(idx):
             sh = job['shots'][i]
             secs = float(sh[2])
             target = v0 + (dur - v0) * (k + 0.5) / len(idx)
-            got = _choose(stretches, secs, max(target, after), after, dur)
-            if got is None:                                  # nothing after the last pick: any unused clean stretch
-                got = _choose(stretches, secs, target, v0, dur)
+            u = used.setdefault(f, [])
+            got, src = _choose(stretches, secs, max(target, after), after, dur, u), f
+            if got is None:                                  # nothing after the last pick: any free clean stretch
+                got = _choose(stretches, secs, target, v0, dur, u)
+            if got is None:                                  # nothing free on this file: the job's other footage
+                for g in [x for x in _videos(job) if x != f]:
+                    st2, dur2, v02 = read(g)
+                    got = _choose(st2, secs, v02 + (dur2 - v02) / 2, v02, dur2, used.setdefault(g, []))
+                    if got is not None:
+                        src = g
+                        break
             if got is None:
-                left.append({'shot': i, 'rule': 'auto_shots', 'detail': f'shot {i}: no clean stretch of {secs:.1f} s in {f}',
+                left.append({'shot': i, 'rule': 'auto_shots', 'detail': f'shot {i}: no free clean stretch of {secs:.1f} s in {f}',
                              'autofix': f'{len(stretches)} clean stretches read, the longest '
-                                        f'{max([s["end"] - s["start"] for s in stretches] or [0]):.1f} s; shorten the shot or add footage'})
+                                        f'{max([s["end"] - s["start"] for s in stretches] or [0]):.1f} s, none free; '
+                                        'shorten the shot or add footage'})
                 continue
             st, fo = got
-            sh[1] = st
+            sh[0], sh[1] = src, st
             if sh[3] is None and fo is not None:
                 sh[3] = [[0.0, fo]]
-            after = st + secs
-            AF._note(f'shot {i}', 'auto_shots', f'{f} at {st:.2f} s for {secs:.1f} s, focus {fo}')
+            used.setdefault(src, []).append((st, st + secs))
+            if src == f:
+                after = st + secs
+            AF._note(f'shot {i}', 'auto_shots', f'{src} at {st:.2f} s for {secs:.1f} s, focus {fo}'
+                     + ('' if src == f else f' (nothing free in {f})'))
     job['shots_auto'] = [s['shot'] for s in left]
     if not job['shots_auto']:
         job.pop('shots_auto')

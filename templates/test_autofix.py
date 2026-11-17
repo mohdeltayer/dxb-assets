@@ -128,6 +128,25 @@ class AutoShots(unittest.TestCase):
         self.assertEqual(j['shots'][0][1], 12.5)                # hand-timed shots stay
         self.assertIsInstance(j['shots'][2][1], float)
 
+    def test_never_the_same_moment_twice(self):
+        import autoshots as AS
+        one = lambda f: {'duration': 40.0, 'picture_start': 0.0, 'shots': [{'start': 20.0, 'end': 26.0, 'focus': 0.5}]}
+        j = {'footage': [{'file': 't.mp4'}], 'shots': [['t.mp4', 'auto', 2.8, None], ['t.mp4', 'auto', 2.8, None]]}
+        AS.expand(j)
+        self.assertEqual(AS.fill(j, one), [])
+        (a, b) = sorted(s[1] for s in j['shots'])
+        self.assertGreaterEqual(b, a + 2.8 - 1e-6)
+
+    def test_borrows_from_other_footage_when_full(self):
+        import autoshots as AS
+        rd = lambda f: ({'duration': 40.0, 'picture_start': 0.0, 'shots': [{'start': 20.0, 'end': 23.0, 'focus': 0.5}]}
+                        if f == 't.mp4' else {'duration': 40.0, 'picture_start': 0.0, 'shots': [{'start': 5.0, 'end': 15.0, 'focus': 0.5}]})
+        j = {'footage': [{'file': 't.mp4'}, {'file': 'u.mp4'}],
+             'shots': [['t.mp4', 'auto', 2.8, None], ['t.mp4', 'auto', 2.8, None]]}
+        AS.expand(j)
+        self.assertEqual(AS.fill(j, rd), [])
+        self.assertEqual(sorted(s[0] for s in j['shots']), ['t.mp4', 'u.mp4'])
+
     def test_refused_when_nothing_is_long_enough(self):
         import autoshots as AS
         j = {'footage': [{'file': 't.mp4'}], 'shots': [['t.mp4', 'auto', 20.0, None]]}
