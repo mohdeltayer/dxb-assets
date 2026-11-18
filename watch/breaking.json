@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-18T22:52:05Z",
- "seq": 629,
+ "generated_at": "2026-11-18T23:52:08Z",
+ "seq": 630,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -183,71 +183,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 599
-  },
-  {
-   "id": 16925,
-   "source": "Nintendo of America (YouTube)",
-   "source_kind": "youtube",
-   "title": "Fortnite Treasure Hunters – Gameplay Trailer – Nintendo Switch 2",
-   "url": "https://www.youtube.com/watch?v=s-P09UGp4eE",
-   "published": "2026-11-17T23:00Z",
-   "first_seen": "2026-11-17T23:15:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/s-P09UGp4eE/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=s-P09UGp4eE"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 597
-  },
-  {
-   "id": 16919,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "Millions of Butt Slaps: Last Pirates Sails into XBOX Game Preview",
-   "url": "https://news.xbox.com/en-us/2026/11/17/millions-of-butt-slaps-last-pirates/",
-   "published": "2026-11-17T23:00Z",
-   "first_seen": "2026-11-17T23:00:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/LPDT_gameplay_loot-ab43ee7e169520b83f03.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/LPDT_screenshot_butts-96cc48f4a85dc96bb422.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/LPDT_gameplay_hide-7c3d00d9f913f1ed3373.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/LPDT_screenshot_Misha_XBOX-9899e43ab6d9ee64edae.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/LPDT_XBOX_crossplay_1920x1080-5e6c90c39277eb72e67c.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://store-images.s-microsoft.com/image/apps.5650.14296988317728367.9bd47ebc-03ba-4b57-a2b2-c939229cbb65.1626c975-dc3d-4295-8b31-c2f58f2ab0f6?w=400&h=600"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 596
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-18T22:50:04Z",
+  "last_poll_at": "2026-11-18T23:50:14Z",
   "sources_enabled": 100,
-  "sources_ok": 90,
+  "sources_ok": 92,
   "sources_failing": 7,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 115x)",
