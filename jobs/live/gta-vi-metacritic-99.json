@@ -9,7 +9,7 @@
  "footage": [
   {
    "file": "gta-vi-metacritic-99-rs-1.mp4",
-   "url": "https://media-rockstargames-com.akamaized.net/VI/downloads/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4"
+   "url": "https://media-rockstargames-com.akamaized.net/VI/downloads/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4"
   }
  ],
  "shots": [
@@ -200,7 +200,7 @@
  "angle": null,
  "decision_log": {
   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1), footage swapped by hand",
-  "footage": "gta-vi-metacritic-99-rs-1.mp4 from Rockstar press kit, Extended Look master (publisher press kit; the PlayStation page resolver gave only a PS5 Pro hardware clip)",
+  "footage": "gta-vi-metacritic-99-rs-1.mp4 from Rockstar press kit, Launch Trailer master (780 MB; the 14 GB Extended Look timed out the server read in run 1170) (publisher press kit; the PlayStation page resolver gave only a PS5 Pro hardware clip)",
   "shots": "server-picked clean stretches in source order (autoshots)",
   "music": "the trailer's own sound from the first shot (audio split per shot)"
  },
@@ -211,7 +211,7 @@
   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order",
   "names match names-ar": "yes: ميتاكريتيك, روكستار per names-ar",
   "release verbs and house rules": "yes: slip.problems() passed",
-  "footage first, official": "yes: Rockstar press kit, Extended Look master, https://media-rockstargames-com.akamaized.net/VI/downloads/videos/GTAVI_An_Extended_Look/GTAVI_An_Extended_Look.mp4",
+  "footage first, official": "yes: Rockstar press kit, Launch Trailer master (780 MB; the 14 GB Extended Look timed out the server read in run 1170), https://media-rockstargames-com.akamaized.net/VI/downloads/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
   "credit on every clip": "yes: one credit over every shot",
   "sound": "yes: trailer sound from the first shot, split per shot on the server, bed fallback",
   "picture matches the lines": "n/a: shots are picked by the server; look frames reviewed at the Director step"
