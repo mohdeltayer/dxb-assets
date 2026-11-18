@@ -155,13 +155,13 @@
    "why": "witch-the-showdown-early-access-steam-early-access-trailer.mp4 at 69.0 s for 2.74 s: no clean stretch read, evenly spaced crop"
   }
  ],
- "job_to_pass_min": 10.3,
- "at": "2026-11-18T16:22:48Z",
+ "job_to_pass_min": 19.0,
+ "at": "2026-11-18T16:32:53Z",
  "findings": [],
  "notes": [
   "first frame: shot 0 witch-the-showdown-early-access-steam-early-access-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
   "length 27.7 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: applied; music_pct 88.1; leak_pct 0.1; cache {'hit': 0, 'miss': 3}; separate_secs 55.8; secs 73.2",
+  "render_job: audio split: applied; music_pct 88.1; leak_pct 0.1; cache {'hit': 3, 'miss': 0}; separate_secs 4.9; secs 7.6",
   "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 11.59, \"held_under_text\": 0.0, \"secs\": 27.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [
@@ -193,29 +193,29 @@
  "person_shown": "n/a",
  "sound": "trailer",
  "shot_read": {
-  "secs": 74.1,
+  "secs": 72.7,
   "files": {
    "witch-the-showdown-early-access-steam-early-access-trailer.mp4": {
-    "secs": 38.9,
+    "secs": 37.7,
     "cached": false,
     "stages": {
-     "decode": 16.1,
-     "autofocus": 33.0,
-     "ocr": 33.0,
-     "smear": 38.7,
-     "scenes": 38.9
+     "decode": 15.5,
+     "autofocus": 32.3,
+     "ocr": 32.3,
+     "smear": 37.5,
+     "scenes": 37.6
     },
     "incomplete": null
    },
    "witch-the-showdown-early-access-steam-demotraileren.mp4": {
-    "secs": 35.2,
+    "secs": 35.0,
     "cached": false,
     "stages": {
-     "decode": 14.8,
-     "autofocus": 33.1,
-     "ocr": 33.1,
-     "smear": 35.0,
-     "scenes": 35.2
+     "decode": 14.6,
+     "autofocus": 32.2,
+     "ocr": 32.2,
+     "smear": 34.8,
+     "scenes": 35.0
     },
     "incomplete": null
    }
@@ -223,15 +223,14 @@
  },
  "job_path": "jobs/done/witch-the-showdown-early-access-steam.json",
  "stage_minutes": {
-  "queue": 0.03,
+  "queue": 9.87,
   "setup": 0.22,
-  "fetch": 0.46,
-  "shots": 1.25,
-  "checks": 2.35,
-  "render": 4.24,
-  "after": 1.58,
-  "upload": 0.45,
-  "job": 9.88
+  "fetch": 0.42,
+  "shots": 1.23,
+  "checks": 2.2,
+  "render": 3.12,
+  "after": 1.74,
+  "job": 8.73
  },
  "job_after_autofix": {
   "name": "witch-the-showdown-early-access-steam",
