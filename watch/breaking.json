@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-17T23:52:05Z",
- "seq": 598,
+ "generated_at": "2026-11-18T00:00:19Z",
+ "seq": 599,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 16937,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "How to Get Ready for November 19",
+   "url": "https://news.xbox.com/en-us/2026/11/17/how-to-get-ready-for-november-19/",
+   "published": "2026-11-18T00:00Z",
+   "first_seen": "2026-11-18T00:00:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/DrXBOX_Hero-ff346cf4ed4093811e3f.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/NOV19_GROUP-a8c8e47efdd986f85a57.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 599
+  }
+ ],
  "recent": [
   {
    "id": 16925,
@@ -527,40 +549,11 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 557
-  },
-  {
-   "id": 15936,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "XBOX Black Friday Sale Starts November 19 with Our Biggest Sale of the Year on Games, Accessories and More!",
-   "url": "https://news.xbox.com/en-us/2026/11/16/xbox-black-friday-sale-2026/",
-   "published": "2026-11-16T23:57Z",
-   "first_seen": "2026-11-17T00:00:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Black-Friday-Sale_MSOX_Spotlight_A_1136x639_01-1-bf7d714987d24723f754.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/XBOX_Holiday_FY27_Controller_Bnnr_1920x860-1b732f9f8752edf6c1a6.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/image-3-764b955f5df70217e488.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Xbox-Holiday-Promo_KV_3840x2160_Final_Microsoft_111326_V2-1e6cd55b89e3ed0f5be6.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 553
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-17T23:50:05Z",
+  "last_poll_at": "2026-11-18T00:00:15Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 7,
@@ -570,7 +563,7 @@
    "PlayStation (X) (HTTP 429, 7x)",
    "PlayStation Middle East (X) (HTTP 429, 18x)",
    "Rockstar Games (X) (HTTP 429, 4x)",
-   "The Game Awards (HTTP 403, 22x)",
+   "The Game Awards (HTTP 403, 23x)",
    "Xbox (X) (HTTP 429, 94x)"
   ]
  }
