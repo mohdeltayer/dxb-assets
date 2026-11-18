@@ -54,5 +54,25 @@
    "hime"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/homura-hime-ps5-2027-reel-v1.mp4",
+  "blob": "5f521584f9cc29b3ae4d3fecb5aec2128600df76",
+  "at": "2026-11-18T21:30:27Z",
+  "note": "readable, makes sense; facts match story",
+  "checklist": {
+   "job": "jobs/live/homura-hime-ps5-2027.json",
+   "sha256": "d24984e67e6965eedc6afa8ac807844cb93ea66dd48cffe3649c57232ba2f927",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1 title with تقرير chip, look-2 PS5 2027 caption over gameplay with credit, look-3 Switch 2 line; all readable"
  }
 }

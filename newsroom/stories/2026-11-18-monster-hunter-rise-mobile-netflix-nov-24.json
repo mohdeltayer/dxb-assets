@@ -65,5 +65,25 @@
    "2026-11-08-capcom-platinum-titles-top-five",
    "2026-11-12-mh-stories-3-one-million"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/monster-hunter-rise-mobile-netflix-nov-24-reel-v1.mp4",
+  "blob": "28a17d1b05a67bc4f44a501323837ef42b314f33",
+  "at": "2026-11-18T21:44:34Z",
+  "note": "Title, chip and captions readable with correct RTL order; Monster Hunter Rise footage fits story, facts match story file",
+  "checklist": {
+   "job": "jobs/live/monster-hunter-rise-mobile-netflix-nov-24.json",
+   "sha256": "0ec0f6e85aa2d10299792f2a2f9f35bf67643cb013eaf6db35ee06f0f5f46fa3",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1: title 'مونستر هنتر رايز على الجوال 24 نوفمبر' with تقرير chip over monster close-up; look-2: caption about iPhone/Android redesigned touch controls plus Capcom-on-Steam credit over monster footage; look-3: caption about auto-select heal button over monster scales"
  }
 }
