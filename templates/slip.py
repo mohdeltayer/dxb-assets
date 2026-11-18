@@ -349,7 +349,7 @@ def job_from(slip, foot, lane='live', theme=None, spare=()):
     out_dir = 'cards/test' if lane == 'test' else f'cards/{dt.date.today():%Y-%m}'
     track = 'bed' if slip.get('sound') == 'bed' else [f, 0.0]
     job = {
-        'name': name, 'story': slip['id'], 'kind_news': slip.get('kind') or KIND_OF_LABEL.get(slip['label'], 'reveal'),
+        'name': name, 'story': slip['id'], 'footage_source': slip.get('footage'), 'kind_news': slip.get('kind') or KIND_OF_LABEL.get(slip['label'], 'reveal'),
         'built_by': 'server-slip', 'render_lane': 'server',
         'out': f'{out_dir}/{name}-reel-v1.mp4',
         'split_fallback': 'bed',                  # a refused trailer mix ships on our bed with the reason, never a hold

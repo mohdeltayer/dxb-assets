@@ -272,6 +272,13 @@ def resolve(source, name=None, do_check=True, max_n=None):
         c.pop('probe', None)
     cands.sort(key=lambda c: (bool(c.get('letterboxed')), c.get('decode_clean') is False, -(c.get('height') or 0),
                               -(c.get('duration') or 0)))
+    try:                                          # the footage library first (adv-20261118-templates-never-refuse B):
+        import footlib                            # files a Reel already rendered from, proven decode clean
+        lib = footlib.candidates(source)
+    except Exception:                             # noqa: BLE001  the library never stops a resolve
+        lib = []
+    seen = {(c['job'].get('url') or c['job'].get('trailer') or c['job'].get('file')) for c in lib}
+    cands = lib + [c for c in cands if (c['job'].get('url') or c['job'].get('trailer') or c['job'].get('file')) not in seen]
     return {'source': source, 'kind': kind, 'candidates': cands,
             **({'nsuid': cands[0].get('nsuid')} if kind == 'nintendo' and cands else {})}
 

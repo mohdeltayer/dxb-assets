@@ -228,6 +228,8 @@ jobs:
             # the bed the server picked (adv-20261112-sound-by-code): its ledger entry and the sound on the render-times entry
             if [ -f "$RUNNER_TEMP/bed.json" ]; then python templates/sonic.py ledger-add "$RUNNER_TEMP/bed.json" && looks="$looks templates/assets/bed-ledger.json"; fi
             python templates/qc.py sound-entry "$JOB" "$RUNNER_TEMP/render.log" templates/assets/render-times.json || true
+            # footage library (adv-20261118-templates-never-refuse B): this Reel's files and stretches, read first next time
+            python templates/footlib.py record "$RUNNER_TEMP/job-rendered.json" "$base-qc.json" && looks="$looks templates/assets/footage-library.json" || true
             git add --sparse -f $files templates/assets/render-times.json $looks
             mkdir -p jobs/done; cp "$RUNNER_TEMP/job-rendered.json" "$JOB_DONE"; git add --sparse -f "$JOB_DONE"
             if [ -f "$JOB" ]; then git rm -q "$JOB"; fi

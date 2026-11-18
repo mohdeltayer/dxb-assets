@@ -651,9 +651,23 @@ def auto_fallback(job, slots):
         r = AS.READ.get(f) or {}
         v0 = float(r.get('picture_start') or 0.0)
         dur = float(r.get('duration') or 0) or _video_dur(f) or (v0 + 10.0 * len(idx))
+        try:                                   # proven stretches of this file from the footage library first (card B)
+            import footlib
+            proven = [x for x in footlib.stretches_for_file(f, job=job) if x[0] >= v0]
+        except Exception:                      # noqa: BLE001
+            proven = []
+        taken = [(float(s[1]), float(s[1]) + float(s[2])) for s in job['shots'] if s[0] == f and isinstance(s[1], (int, float))]
         for k, i in enumerate(idx):
             sh = job['shots'][i]
             secs = float(sh[2])
+            pick = next((p for p in proven if p[1] >= secs - 0.3 and not any(a < p[0] + secs and p[0] < b for a, b in taken)), None)
+            if pick:
+                sh[1] = pick[0]
+                if len(sh) > 3 and sh[3] is None and pick[2] is not None:
+                    sh[3] = pick[2]
+                taken.append((pick[0], pick[0] + secs))
+                SG_.ladder('picture', i, 'a', f'{f} at {pick[0]} s: a proven stretch from the footage library')
+                continue
             st = v0 + 0.3 + (max(0.0, dur - v0 - 0.6 - secs)) * (k + 0.5) / len(idx)
             sh[1] = round(st, 2)
             for key in ('cut_ok', 'drift_ok'):

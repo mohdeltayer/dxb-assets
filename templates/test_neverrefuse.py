@@ -100,5 +100,20 @@ class Soft(unittest.TestCase):
             looks.last = keep
 
 
+class Library(unittest.TestCase):
+    def test_record_and_lookup(self):
+        import footlib as FL
+        lib = {'files': {}}
+        job = {'name': 'a', 'story': 's', 'footage': [{'file': 'a-t.mp4', 'steam': 730, 'trailer': 'Launch'}],
+               'shots': [['a-t.mp4', 6.5, 2.2, 0.5], ['a-t.mp4', 12.0, 3.0, None]]}
+        FL.record(job, lib=lib)
+        self.assertEqual(len(FL.for_handle('steam:730', lib)), 1)
+        self.assertEqual(len(FL.for_handle('730', lib)), 1)
+        other = {'footage': [{'file': 'b-t.mp4', 'steam': 730, 'trailer': 'Launch'}]}
+        self.assertEqual([x[0] for x in FL.stretches_for_file('b-t.mp4', lib, other)], [6.5, 12.0])
+        self.assertTrue(FL.candidates('steam:730', lib)[0]['library'])
+        self.assertEqual(FL.record(job, {'findings': [{'check': 'decode'}]}, lib=lib), [])
+
+
 if __name__ == '__main__':
     unittest.main()
