@@ -57,5 +57,25 @@
    "2026-09-27-rayman-legends-retold",
    "2026-10-28-rayman-legends-retold-astro-bot-costume"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/rayman-legends-retold-bts-dynamite-level-reel-v1.mp4",
+  "blob": "f8145591feef4d37ba8dedb26921c160cc72db0c",
+  "at": "2026-11-18T18:30:23Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/rayman-legends-retold-bts-dynamite-level.json",
+   "sha256": "ef82008488548ecca88b55897c6b8eebf1a0d9bb1a6ca3c0f0279b7593831f95",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Title card and captions readable, Rayman footage matches the story"
  }
 }
