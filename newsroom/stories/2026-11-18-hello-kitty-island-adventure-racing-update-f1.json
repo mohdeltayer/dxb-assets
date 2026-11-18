@@ -48,11 +48,34 @@
   "built_at": "2026-11-18T20:09:39Z"
  },
  "ledger_find": {
-  "at": "2026-11-18T20:09:39Z",
+  "at": "2026-11-18T20:27:02Z",
   "words": [
    "hello",
-   "kitty"
+   "kitty",
+   "island",
+   "adventure",
+   "racing"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/hello-kitty-island-adventure-racing-update-f1-reel-v1.mp4",
+  "blob": "03d8f4a2038218c235a9d6736780ce1839bdd30d",
+  "at": "2026-11-18T20:27:06Z",
+  "note": "Arabic readable, lines match spoken text, family-friendly Hello Kitty footage; racing is not shown but the lines are sourced.",
+  "checklist": {
+   "job": "jobs/live/hello-kitty-island-adventure-racing-update-f1.json",
+   "sha256": "7ca845e443525456e26fd9f58fbdf101dd11edb89982747331274be22fc2e925",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Three look frames show the headline card over the cozy island boardwalk, then the fishing pier and the beach, all with legible Arabic lines, the Steam credit and no cut text."
  }
 }
