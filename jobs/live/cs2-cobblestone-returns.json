@@ -1,0 +1,234 @@
+{
+ "name": "cs2-cobblestone-returns",
+ "story": "2026-11-18-cs2-cobblestone-returns",
+ "kind_news": "reveal",
+ "built_by": "server-slip",
+ "render_lane": "server",
+ "out": "cards/2026-11/cs2-cobblestone-returns-reel-v1.mp4",
+ "split_fallback": "bed",
+ "footage": [
+  {
+   "file": "cs2-cobblestone-returns-leveling-up.mp4",
+   "steam": 730,
+   "trailer": "Leveling Up",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "730"
+  },
+  {
+   "file": "cs2-cobblestone-returns-moving-beyond-tick-rate.mp4",
+   "steam": 730,
+   "trailer": "Moving Beyond Tick Rate",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "730"
+  },
+  {
+   "file": "cs2-cobblestone-returns-launch-trailer.mp4",
+   "steam": 730,
+   "trailer": "Launch Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "730"
+  }
+ ],
+ "shots": [
+  [
+   "cs2-cobblestone-returns-leveling-up.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "cs2-cobblestone-returns-leveling-up.mp4",
+   "auto",
+   2.74,
+   null
+  ],
+  [
+   "cs2-cobblestone-returns-leveling-up.mp4",
+   "auto",
+   2.74,
+   null
+  ],
+  [
+   "cs2-cobblestone-returns-leveling-up.mp4",
+   "auto",
+   2.71,
+   null
+  ],
+  [
+   "cs2-cobblestone-returns-leveling-up.mp4",
+   "auto",
+   2.71,
+   null
+  ],
+  [
+   "cs2-cobblestone-returns-leveling-up.mp4",
+   "auto",
+   2.56,
+   null
+  ],
+  [
+   "cs2-cobblestone-returns-leveling-up.mp4",
+   "auto",
+   2.56,
+   null
+  ],
+  [
+   "cs2-cobblestone-returns-leveling-up.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "cs2-cobblestone-returns-leveling-up.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "cs2-cobblestone-returns-leveling-up.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "cs2-cobblestone-returns-leveling-up.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "cs2-cobblestone-returns-leveling-up.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "cs2-cobblestone-returns-leveling-up.mp4",
+   "auto",
+   2.2,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "عادت خريطة Cobblestone\nالأسطورية إلى Counter-Strike 2",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "بتحديث من فالف (Valve)،\nحسب إعلانها الرسمي على Steam",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "الخريطة الآن مكسوة بالثلج\nمع ممرات ومواقع جديدة،",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   7,
+   8,
+   [
+    [
+     "وهي متاحة في اللعب\nالتنافسي و Wingman",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   9,
+   10,
+   [
+    [
+     "ودخل التحديث أيضًا\nملصقات بطولة PGL",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   11,
+   12,
+   [
+    [
+     "سنغافورة الكبرى\nوثماني حزم موسيقى",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   12,
+   "المصدر: فالف (Valve) على Steam",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "عادت خريطة Cobblestone الأسطورية إلى Counter-Strike 2 بتحديث من فالف (Valve)، حسب إعلانها الرسمي على Steam. الخريطة الآن مكسوة بالثلج مع ممرات ومواقع جديدة، وهي متاحة في اللعب التنافسي وWingman. ودخل التحديث أيضًا ملصقات بطولة PGL سنغافورة الكبرى وثماني حزم موسيقى.",
+ "headline": "خريطة Cobblestone\nتعود مكسوة بالثلج",
+ "label": "رسمي",
+ "source": "فالف (Valve) على Steam",
+ "date": "18 Nov 2026",
+ "theme": "gold",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "cs2-cobblestone-returns-leveling-up.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": null,
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "footage": "cs2-cobblestone-returns-leveling-up.mp4 from the resolver (steam:730)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (audio split per shot)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Steam Community Announcements, The Cobbled Road to Singapore and Counter-Strike 2 Update, Valve, 17 Nov 2026 23:38Z (https://store.steampowered.com/news/app/730); first report: Valve official Steam announcement and update notes, 17 Nov 2026 23:38Z; Insider Gaming followed 18 Nov 10:30Z",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 730 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ }
+}
