@@ -2270,7 +2270,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
     fixed = len(layers)                     # these never get trimmed by the next line
     if show:                                # the credit row: each clip's credit over its shots, else source and date
         creds, row, k = [], [], 0
-        for a_s, b_s, text in (credits or []):
+        for cr in (credits or []):           # (first, last, text) or (first, last, text, opts): slip jobs carry opts (18 Nov 2026)
+            a_s, b_s, text = cr[0], cr[1], cr[2]
             a0, z0 = starts[a_s], (starts[b_s + 1] if b_s + 1 < len(starts) else end)
             row.append((a0, z0, credit_layer(text, f'{tmp}/sc{k}.png', size=SHOW_CREDIT, y=SHOW_CREDIT_Y))); k += 1
         meta = credit_layer(f'{source}\u200f  ·  \u200f{A.arabic_date(date)}', f'{tmp}/smeta.png', size=SHOW_CREDIT,
