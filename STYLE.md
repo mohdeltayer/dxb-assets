@@ -854,3 +854,12 @@ render-times.json). H (server QC verdict) and I (parallel runners) follow as the
 ## Physical copy (18 Nov 2026)
 A physical copy of a game is «نسخة مطبوعة», never «ورقية» or «ورقيًا»; the text check refuses both (waiver "paper_ok").
 
+
+## Templates never refuse; templates closed (18 Nov 2026, release 2026-11-18 r1)
+1. Only four things stop a Reel: a wrong fact flagged in the brief, graphic content, unreadable text (safe zone, bidi),
+   a video that does not decode. Everything else is a warning in qc.json and the Reel ships, falling down its ladder:
+   picture crop > showcase > stills > card; sound trailer > music stem > our bed; text: the Reel grows.
+2. The review after render is two questions: is it readable, and does it make sense. Nothing else.
+3. Footage library first (footlib.py, footage-library.json). Board: open handoffs and the last 24 hours only, the rest
+   in desk/archive. Keeper: one alarm, no post in 90 minutes by day.
+4. Templates are frozen: no template or check changes without a card Mohammad approved; no new checks until 2 Dec.

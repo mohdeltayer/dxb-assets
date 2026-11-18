@@ -1,6 +1,6 @@
 # Working on DXB-KNIGHT
 
-**Rules in force at a glance: `STYLE.md`** (one page, 13 Oct 2026). This file
+**Rules in force at a glance: `STYLE.md`** (one page, 13 Oct 2026; updated 18 Nov 2026). This file
 is the full dated history; when a rule changes, update both in the same commit.
 
 ## What the account is for
@@ -3752,3 +3752,39 @@ A physical, boxed or retail copy of a game is «نسخة مطبوعة» («ال�
 lines, strip, credits, card texts, spoken paragraph and post texts of a job, and in a slip's texts; a story really about
 paper waives it with "paper_ok": "<reason>". Editorial memory entry 17 Nov.
 
+
+## Templates never refuse; templates closed (adv-20261118-templates-never-refuse, Mohammad 18 Nov 2026, 18:06 Dubai; release 2026-11-18 r1)
+
+Case: the GTA VI Metacritic 99 T0 took over 2.5 hours because shot checks added on 15 and 17 Nov refused footage that
+passed on 11 Nov, and a timed-out shot read reported 0 clean stretches; 8 of the last 14 Production 2 runs built nothing.
+Mohammad (17:54 Dubai): the template is the contract for whoever builds; take the template, add the clip, the music and
+the text in their places. The only quality check afterwards is two questions: is it readable, and does it make sense.
+A. Four hard stops, nothing else stops a Reel on the slip lane or render-live: a wrong fact flagged by the brief
+   (`"fact_flag"` in the job or story file), graphic content (the director), unreadable text (outside the safe zone, or
+   bidi-broken: a Latin, digit or bracket first on a visual line, a glued prefix, a flipping sign), a video that does not
+   decode (a source twice, or the finished Reel). Every other check (shot gate, shot read, look rotation, source quality
+   and blocky, still zoom, rows, smear, reading time, pace, line count, fill, card art, cover, sound effects, music stem,
+   the build gate, the qc findings length, close, lifeless and person) is a warning in the log and qc.json `warnings`,
+   with an automatic fallback, and the Reel ships. Ladders, each step logged per slot in qc.json `ladder`:
+   picture a crop inside the 2x cap > b showcase layout (letterboxed footage, set by the server) > c stills > d our card;
+   sound a the trailer's own sound > b its music stem > c our bed; text: a short line takes time from the Reel (the
+   shot under it grows). A check that times out or errors is a warning; an unfinished shot read falls back to proven
+   stretches from the footage library, then evenly spaced shots, never "0 clean stretches". `templates/softgate.py`;
+   `"strict": true` keeps the old refusals (tests only). qc.json `job_to_pass_min`: minutes from the job to the pass.
+   The director asks only the two questions (newsroom/delegation.md); the builder never drops a story for a template
+   reason. T0 takes the simplest template that fits; target 15 minutes from order to post; the detailed version follows
+   as a second post.
+B. Footage library: `templates/assets/footage-library.json` (`templates/footlib.py`), every server render's source files
+   and the stretches it used, keyed by source (Steam app and trailer, or URL) and handle; the footage resolver puts proven
+   files first, the picture ladder takes proven stretches first; `footlib.py game <words>` lists them for a session.
+C. Board: desk/board.md holds roles, standing orders, open handoffs and those of the last 48 hours, questions, and the run
+   lines of the last 24 hours (under 30 KB); older lines in desk/archive/. `ops/backoffice/dispatch/boardtrim.py`, run
+   daily by the morning digest task (the server has no key that can push to dxb-queue).
+D. Keeper: promises whose slot is over 3 days old are cleared; the work order raises one alarm, no post in the last
+   90 minutes by day (08:00 to 24:00 Dubai); the bed streak and render-count alarms are gone; the other checks are notes.
+   The keeper's Publer read waits for Mohammad's key visit.
+Regression rule: a new or tightened check runs on the last 20 published Reels first; if it would have refused any, it
+ships as a warning only. Freeze: no new checks until 2 Dec 2026. Templates are finished and frozen: no template or check
+changes without a card Mohammad approved; build effort moves to content (story context, hooks, angles, editorial memory),
+and other channels open only when that runs steadily. Parked until Mohammad reopens: server publishing, quick bites,
+tiers, Stories, DeepL on the server, other channels.

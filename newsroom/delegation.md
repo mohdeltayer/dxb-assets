@@ -60,6 +60,19 @@ a stretch. A director PASS is final: the builder schedules it and adds no checks
 builder doubts goes back to the director as a question before the PASS, never as a re-cut after it. (On 10 Nov
 Warhammer Survivors' pixel-art red splats were cut as blood after a PASS, which cost two renders.)
 
+**Director: two questions (adv-20261118-templates-never-refuse, Mohammad 18 Nov 2026, 17:54 Dubai; supersedes the
+director checklists below wherever they ask more).** The template is the contract: clip, music and text go in their
+places, and the server falls down its picture, sound and text ladders on its own. After the render the director asks
+only two questions, on the look frames, the strip and the dense strip: is it readable, and does it make sense. PASS
+when both are yes. A no is a send-back with one of the hard reasons (unreadable_text; wrong_subject or factual_error
+for "does not make sense"; graphic). Warnings in qc.json (`warnings`, `ladder`) are information, never a send-back.
+The builder never drops a story for a template reason.
+
+**Board trim, daily (adv-20261118-templates-never-refuse C).** The morning digest task runs, after its card, on a fresh
+clone of the desk branch: `python3 <dxb-assets>/ops/backoffice/dispatch/boardtrim.py desk`, then commits desk/board.md,
+desk/board.json and desk/archive/ ('desk: daily board trim') and pushes (on a conflict: reset to origin/desk, run it
+again, push once more). New run lines go at the end of board.md, under section 5.
+
 **Director limit (adv-20261115-one-render-server-checks item E, Mohammad 15 Nov 2026).** When the server qc is pass,
 the director looks once: the three look frames beside qc.json (every Reel now), the strip and the dense strip. It
 passes (`presubmit.py director <story> PASS ... --looked "<what they show>"`, notes allowed), or sends the Reel back
