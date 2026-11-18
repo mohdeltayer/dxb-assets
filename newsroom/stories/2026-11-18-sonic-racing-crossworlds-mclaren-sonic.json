@@ -55,5 +55,25 @@
    "2026-10-13-sonic-crossworlds-arcade-dx",
    "2026-11-03-sonic-racing-crossworlds-year-two-starts-nov-3"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/sonic-racing-crossworlds-mclaren-sonic-reel-v1.mp4",
+  "blob": "e5720a2da91aef4def9dc231bafcf17208142243",
+  "at": "2026-11-18T03:21:33Z",
+  "note": "separate agent; notes: no McLaren car visible, small credit",
+  "checklist": {
+   "job": "jobs/live/sonic-racing-crossworlds-mclaren-sonic.json",
+   "sha256": "531c655a9e353c63c334e2b206c82b592b055caa4d1684b33017bf3f2ce96408",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Sonic close-up with headline and available-now tag; ring shot crossfade; red spiral with Sonic silhouette"
  }
 }
