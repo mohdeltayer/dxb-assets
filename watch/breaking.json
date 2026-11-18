@@ -1,10 +1,44 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-18T16:52:08Z",
- "seq": 618,
+ "generated_at": "2026-11-18T17:10:17Z",
+ "seq": 619,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 17699,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/18/26 The Keepsake Sea sets sail in Disney Dreamlight Valley The new expansion Disney Dreamlight Valley: The Keepsake Sea sets sail today! In this expansion,",
+   "url": "https://www.nintendo.com/us/whatsnew/the-keepsake-sea-sets-sail-in-disney-dreamlight-valley/",
+   "published": null,
+   "first_seen": "2026-11-18T17:10:14Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 619
+  },
+  {
+   "id": 17700,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Poppy Playtime: Toybox 1 Bundle - Out Now | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=9aCVhYoLZ7s",
+   "published": "2026-11-18T17:00Z",
+   "first_seen": "2026-11-18T17:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/9aCVhYoLZ7s/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=9aCVhYoLZ7s"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 619
+  }
+ ],
  "recent": [
   {
    "id": 17632,
@@ -322,84 +356,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 582
-  },
-  {
-   "id": 16596,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Neverwinter | New Update: Sleeping Gods Lie",
-   "url": "https://www.youtube.com/watch?v=jrCS6S-2TTw",
-   "published": "2026-11-17T17:00Z",
-   "first_seen": "2026-11-17T17:10:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/jrCS6S-2TTw/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=jrCS6S-2TTw"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 581
-  },
-  {
-   "id": 16595,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Calame - Gameplay Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=qE_Mo_g1ckw",
-   "published": "2026-11-17T17:00Z",
-   "first_seen": "2026-11-17T17:10:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/qE_Mo_g1ckw/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=qE_Mo_g1ckw"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 581
-  },
-  {
-   "id": 16579,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "Coming to XBOX Game Pass: Hela: of Mice & Magic, The Outlast Trials, Sniper Ghost Warrior Contracts 2, and More",
-   "url": "https://news.xbox.com/en-us/2026/11/17/xbox-game-pass-november-2026-wave-2/",
-   "published": "2026-11-17T17:00Z",
-   "first_seen": "2026-11-17T17:00:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/SGWC2_KeyArt_1920x1080-edd088d6384cebd9f1b2.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Arkheron_GamePreview_TitledKeyArt_1920x1080-f83381719e0f07477df6.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/TheOutlastTrials_HorizontalKeyArt_1920x1080-7ba6a0f6978f34a63dc8.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Hela_OMM_TitledHeroArt_1920x1080-7f12182717db44751a00.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 580
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-18T16:50:14Z",
+  "last_poll_at": "2026-11-18T17:10:14Z",
   "sources_enabled": 100,
-  "sources_ok": 92,
+  "sources_ok": 93,
   "sources_failing": 7,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 112x)",
