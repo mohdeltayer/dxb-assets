@@ -71,5 +71,37 @@
    "forza-horizon-6-roadmap-series-8-9-20261114",
    "the-game-awards-2026-nominees-live-nov-17-20261114"
   ]
+ },
+ "director_sendbacks": [
+  {
+   "at": "2026-11-18T15:15:44Z",
+   "reason": "unreadable_text",
+   "note": "headline shows Days to Die 7 (bidi, digit at end of Latin run), shot 0 about 3 to 7 s",
+   "by": "director-p2",
+   "out": "cards/2026-11/7-days-to-die-bandits-early-2027-reel-v1.mp4",
+   "qc": "pass"
+  }
+ ],
+ "director_check": {
+  "verdict": "FIX",
+  "out": "cards/2026-11/7-days-to-die-bandits-early-2027-reel-v1.mp4",
+  "blob": "8c7a2dbd34bd1375d09f371bbe371b8bb59d503e",
+  "at": "2026-11-18T15:15:45Z",
+  "note": "headline shows Days to Die 7 (bidi, digit at end of Latin run), shot 0 about 3 to 7 s",
+  "checklist": {
+   "job": "jobs/done/7-days-to-die-bandits-early-2027.json",
+   "sha256": "dbd4610a541df1abac41ca6c0b97599279f302757bab771b517a6cad6d3c5c39",
+   "ok": false,
+   "problems": [
+    "render_lane server: the job belongs in jobs/live/ (dispatch render-live.yml), not jobs/done/7-days-to-die-bandits-early-2027.json"
+   ],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": null
  }
 }

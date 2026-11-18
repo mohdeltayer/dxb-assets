@@ -47,7 +47,16 @@
   "checks": 0.46,
   "render": 1.32,
   "after": 0.71,
-  "upload": 0.1,
   "job": 3.02
- }
+ },
+ "director_sendbacks": [
+  {
+   "at": "2026-11-18T15:15:44Z",
+   "reason": "unreadable_text",
+   "note": "headline shows Days to Die 7 (bidi, digit at end of Latin run), shot 0 about 3 to 7 s",
+   "by": "director-p2",
+   "out": "cards/2026-11/7-days-to-die-bandits-early-2027-reel-v1.mp4",
+   "qc": "pass"
+  }
+ ]
 }
