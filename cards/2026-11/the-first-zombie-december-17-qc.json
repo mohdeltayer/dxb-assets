@@ -1,0 +1,585 @@
+{
+ "name": "the-first-zombie-december-17",
+ "out": "cards/2026-11/the-first-zombie-december-17-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "the-first-zombie-december-17-playmovie-en.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "the-first-zombie-december-17-playmovie-en.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "the-first-zombie-december-17-playmovie-en.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "the-first-zombie-december-17-playmovie-en.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "the-first-zombie-december-17-playmovie-en.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "the-first-zombie-december-17-playmovie-en.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "the-first-zombie-december-17-playmovie-en.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "the-first-zombie-december-17-playmovie-en.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "the-first-zombie-december-17-playmovie-en.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "the-first-zombie-december-17-playmovie-en.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "the-first-zombie-december-17-playmovie-en.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "the-first-zombie-december-17-playmovie-en.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "the-first-zombie-december-17-playmovie-en.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 14,
+   "step": "a",
+   "why": "the-first-zombie-december-17-playmovie-en.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 15,
+   "step": "a",
+   "why": "the-first-zombie-december-17-playmovie-en.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  }
+ ],
+ "job_to_pass_min": 9.1,
+ "at": "2026-11-18T23:19:55Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 the-first-zombie-december-17-playmovie-en.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 30.8 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 78.2; leak_pct 0.4; cache {'hit': 0, 'miss': 6}; separate_secs 39.0; secs 56.5",
+  "render_job: lifeless: {\"score\": 5.4, \"still_share\": 0.036, \"longest_still\": 0.9, \"cuts_per_10s\": 6.49, \"held_under_text\": 0.0, \"secs\": 30.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "the-first-zombie-december-17-playmovie-en.mp4 at 14.11 s for 3.8 s, focus 0.301"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "the-first-zombie-december-17-playmovie-en.mp4 at 17.91 s for 2.2 s, focus 0.301"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "the-first-zombie-december-17-playmovie-en.mp4 at 20.67 s for 2.2 s, focus 0.301"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "the-first-zombie-december-17-playmovie-en.mp4 at 33.28 s for 2.2 s, focus 0.0"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "the-first-zombie-december-17-playmovie-en.mp4 at 43.28 s for 2.2 s, focus 0.0"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "the-first-zombie-december-17-playmovie-en.mp4 at 71.78 s for 2.2 s, focus 0.0"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "the-first-zombie-december-17-playmovie-en.mp4 at 73.98 s for 2.2 s, focus 0.0"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "the-first-zombie-december-17-playmovie-en.mp4 at 79.98 s for 2.2 s, focus 0.527"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "the-first-zombie-december-17-playmovie-en.mp4 at 83.61 s for 2.2 s, focus 0.395"
+  },
+  {
+   "where": "shot 9",
+   "rule": "auto_shots",
+   "what": "the-first-zombie-december-17-playmovie-en.mp4 at 98.88 s for 2.2 s, focus 0.566"
+  },
+  {
+   "where": "shot 10",
+   "rule": "auto_shots",
+   "what": "the-first-zombie-december-17-playmovie-en.mp4 at 102.38 s for 2.2 s, focus 0.566"
+  },
+  {
+   "where": "shot 11",
+   "rule": "auto_shots",
+   "what": "the-first-zombie-december-17-playmovie-en.mp4 at 105.25 s for 2.2 s, focus 0.553"
+  },
+  {
+   "where": "shot 12",
+   "rule": "auto_shots",
+   "what": "the-first-zombie-december-17-playmovie-en.mp4 at 114.75 s for 2.2 s, focus 0.373"
+  },
+  {
+   "where": "shot 13",
+   "rule": "auto_shots",
+   "what": "the-first-zombie-december-17-playmovie-en.mp4 at 24.11 s for 2.2 s, focus 0.301"
+  },
+  {
+   "where": "shot 14",
+   "rule": "auto_shots",
+   "what": "the-first-zombie-december-17-20261014-en.mp4 at 29.32 s for 2.2 s, focus 0.493 (nothing free in the-first-zombie-december-17-playmovie-en.mp4)"
+  },
+  {
+   "where": "shot 15",
+   "rule": "auto_shots",
+   "what": "the-first-zombie-december-17-20261014-en.mp4 at 35.02 s for 2.2 s, focus 0.547 (nothing free in the-first-zombie-december-17-playmovie-en.mp4)"
+  }
+ ],
+ "job_sha": "4196e04fdb1edffeb93417c9d46596ddba3ccef6",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/the-first-zombie-december-17-look-1.jpg",
+  "cards/2026-11/the-first-zombie-december-17-look-2.jpg",
+  "cards/2026-11/the-first-zombie-december-17-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 56.2,
+  "files": {
+   "the-first-zombie-december-17-playmovie-en.mp4": {
+    "secs": 36.7,
+    "cached": false,
+    "stages": {
+     "decode": 14.6,
+     "autofocus": 29.2,
+     "ocr": 31.9,
+     "smear": 36.4,
+     "scenes": 36.7
+    },
+    "incomplete": null
+   },
+   "the-first-zombie-december-17-20261014-en.mp4": {
+    "secs": 19.5,
+    "cached": false,
+    "stages": {
+     "decode": 6.8,
+     "autofocus": 19.3,
+     "ocr": 19.3,
+     "smear": 19.3,
+     "scenes": 19.5
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/the-first-zombie-december-17.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.2,
+  "fetch": 1.64,
+  "shots": 0.96,
+  "checks": 0.82,
+  "render": 3.75,
+  "after": 1.48,
+  "job": 8.67
+ },
+ "job_after_autofix": {
+  "name": "the-first-zombie-december-17",
+  "story": "2026-11-18-the-first-zombie-december-17",
+  "footage_source": "steam:5099420",
+  "kind_news": "reveal",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/the-first-zombie-december-17-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "the-first-zombie-december-17-playmovie-en.mp4",
+    "steam": 5099420,
+    "trailer": "Playmovie_en",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "5099420"
+   },
+   {
+    "file": "the-first-zombie-december-17-20261014-en.mp4",
+    "steam": 5099420,
+    "trailer": "20261014_en",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "5099420"
+   }
+  ],
+  "shots": [
+   [
+    "the-first-zombie-december-17-playmovie-en.mp4",
+    14.11,
+    3.8,
+    [
+     [
+      0.0,
+      0.301
+     ]
+    ]
+   ],
+   [
+    "the-first-zombie-december-17-playmovie-en.mp4",
+    17.91,
+    2.21,
+    [
+     [
+      0.0,
+      0.301
+     ]
+    ]
+   ],
+   [
+    "the-first-zombie-december-17-playmovie-en.mp4",
+    20.67,
+    2.21,
+    [
+     [
+      0.0,
+      0.301
+     ]
+    ]
+   ],
+   [
+    "the-first-zombie-december-17-playmovie-en.mp4",
+    33.28,
+    2.2,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "the-first-zombie-december-17-playmovie-en.mp4",
+    43.28,
+    2.2,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "the-first-zombie-december-17-playmovie-en.mp4",
+    71.78,
+    2.2,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "the-first-zombie-december-17-playmovie-en.mp4",
+    73.98,
+    2.2,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "the-first-zombie-december-17-playmovie-en.mp4",
+    79.98,
+    2.2,
+    [
+     [
+      0.0,
+      0.527
+     ]
+    ]
+   ],
+   [
+    "the-first-zombie-december-17-playmovie-en.mp4",
+    83.61,
+    2.2,
+    [
+     [
+      0.0,
+      0.395
+     ]
+    ]
+   ],
+   [
+    "the-first-zombie-december-17-playmovie-en.mp4",
+    98.88,
+    2.2,
+    [
+     [
+      0.0,
+      0.566
+     ]
+    ]
+   ],
+   [
+    "the-first-zombie-december-17-playmovie-en.mp4",
+    102.38,
+    2.2,
+    [
+     [
+      0.0,
+      0.566
+     ]
+    ]
+   ],
+   [
+    "the-first-zombie-december-17-playmovie-en.mp4",
+    105.25,
+    2.2,
+    [
+     [
+      0.0,
+      0.553
+     ]
+    ]
+   ],
+   [
+    "the-first-zombie-december-17-playmovie-en.mp4",
+    114.75,
+    2.2,
+    [
+     [
+      0.0,
+      0.373
+     ]
+    ]
+   ],
+   [
+    "the-first-zombie-december-17-playmovie-en.mp4",
+    24.11,
+    2.2,
+    [
+     [
+      0.0,
+      0.301
+     ]
+    ]
+   ],
+   [
+    "the-first-zombie-december-17-20261014-en.mp4",
+    29.32,
+    2.2,
+    [
+     [
+      0.0,
+      0.493
+     ]
+    ]
+   ],
+   [
+    "the-first-zombie-december-17-20261014-en.mp4",
+    35.02,
+    2.2,
+    [
+     [
+      0.0,
+      0.547
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "لعبة ذا فيرست\nزومبي (The First Zombie)",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "تضعك في دور أول",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    7,
+    [
+     [
+      "زومبي في العالم، وهدفك ألا\nتقتل البشر بل تحوّلهم إلى زومبي",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    8,
+    9,
+    [
+     [
+      "تصنع «أصدقاء»\nمن البشر لتكبر جماعتك",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    10,
+    11,
+    [
+     [
+      "وتحوّل طوكيو إلى مدينة زومبي",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    12,
+    13,
+    [
+     [
+      "وتصدر في 17 ديسمبر\nعلى Switch و PC،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    14,
+    15,
+    [
+     [
+      "حسب موقع غيماتسو (Gematsu)",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    15,
+    "المصدر: سْتِيم (Steam)",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "لعبة ذا فيرست زومبي (The First Zombie) تضعك في دور أول زومبي في العالم، وهدفك ألا تقتل البشر بل تحوّلهم إلى زومبي. تصنع «أصدقاء» من البشر لتكبر جماعتك وتحوّل طوكيو إلى مدينة زومبي. وتصدر في 17 ديسمبر على Switch وPC، حسب موقع غيماتسو (Gematsu).",
+  "headline": "لعبة تلعب فيها\nدور أول زومبي",
+  "label": "تقرير",
+  "source": "سْتِيم (Steam)",
+  "date": "18 Nov 2026",
+  "theme": "spectacle",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "the-first-zombie-december-17-playmovie-en.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Gematsu reported on 18 Nov that The First Zombie has a 17 December launch on Switch and PC, announced by Phoenixx.",
+   "what_it_means_here": "Players get a zombie game where the goal is to convert humans into friends and turn Tokyo into a zombie city, from the producer of Wednesday's Downtown."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "the-first-zombie-december-17-playmovie-en.mp4 from the resolver (steam:5099420)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam store page, THE FIRST ZOMBIE (https://store.steampowered.com/app/5099420/The_First_Zombie/); first report: Gematsu, 18 Nov 2026 22:32Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 5099420 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
