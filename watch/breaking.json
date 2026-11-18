@@ -1,22 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-18T17:10:17Z",
- "seq": 619,
+ "generated_at": "2026-11-18T17:15:09Z",
+ "seq": 620,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
   {
-   "id": 17699,
-   "source": "Nintendo US",
-   "source_kind": "page",
-   "title": "11/18/26 The Keepsake Sea sets sail in Disney Dreamlight Valley The new expansion Disney Dreamlight Valley: The Keepsake Sea sets sail today! In this expansion,",
-   "url": "https://www.nintendo.com/us/whatsnew/the-keepsake-sea-sets-sail-in-disney-dreamlight-valley/",
-   "published": null,
-   "first_seen": "2026-11-18T17:10:14Z",
-   "media": [],
+   "id": 17708,
+   "source": "Nintendo of America (YouTube)",
+   "source_kind": "youtube",
+   "title": "Rayman Legends Retold – \"Dynamite\" Musical Map Trailer – Nintendo Switch 2",
+   "url": "https://www.youtube.com/watch?v=5hzd1TDisTw",
+   "published": "2026-11-18T17:00Z",
+   "first_seen": "2026-11-18T17:15:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/5hzd1TDisTw/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=5hzd1TDisTw"
+    }
+   ],
    "breaking_source": true,
-   "breaking_seq": 619
-  },
+   "breaking_seq": 620
+  }
+ ],
+ "recent": [
   {
    "id": 17700,
    "source": "PlayStation (YouTube)",
@@ -37,9 +48,19 @@
    ],
    "breaking_source": true,
    "breaking_seq": 619
-  }
- ],
- "recent": [
+  },
+  {
+   "id": 17699,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/18/26 The Keepsake Sea sets sail in Disney Dreamlight Valley The new expansion Disney Dreamlight Valley: The Keepsake Sea sets sail today! In this expansion,",
+   "url": "https://www.nintendo.com/us/whatsnew/the-keepsake-sea-sets-sail-in-disney-dreamlight-valley/",
+   "published": null,
+   "first_seen": "2026-11-18T17:10:14Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 619
+  },
   {
    "id": 17632,
    "source": "PlayStation Blog",
@@ -360,7 +381,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-18T17:10:14Z",
+  "last_poll_at": "2026-11-18T17:15:04Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 7,
