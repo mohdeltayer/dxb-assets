@@ -53,5 +53,25 @@
    "waves"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/wuthering-waves-ver-4-0-dec-22-reel-v1.mp4",
+  "blob": "e5f02f0782ca30d556d4321796d241eac0048441",
+  "at": "2026-11-18T04:32:31Z",
+  "note": "Footage is the 3.8 trailer; the caption says so, the on-screen lines do not. Taste only, not a send-back.",
+  "checklist": {
+   "job": "jobs/live/wuthering-waves-ver-4-0-dec-22.json",
+   "sha256": "246ab6419aa50d24d0098a14b80ca0e80c6785a5a038e3514ef1bf007b3bec88",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Look frames: headline card with chip تقرير and date line readable; two shots with credit and story lines readable, stylised anime/game footage from the 3.8 trailer, no blood or gore; strip and dense strip clean, end card present"
  }
 }
