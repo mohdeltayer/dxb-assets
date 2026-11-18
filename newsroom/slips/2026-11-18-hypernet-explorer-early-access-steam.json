@@ -1,0 +1,30 @@
+{
+ "id": "2026-11-18-hypernet-explorer-early-access-steam",
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "name not in names-ar: «إيزوتيريك هيفي إندستريز (Esoteric Heavy Industries)» (credit); add it there as Proposed",
+  "name not in names-ar: «صدرت لعبة هايبرنت إكسبلورر (Hypernet Explorer)» (spoken); add it there as Proposed",
+  "warning: angle.why_now: at least 8 words for a تقرير (what the claim usually means, the precedent, what is not confirmed)",
+  "warning: angle.what_it_means_here: at least 8 words for a تقرير (what the claim usually means, the precedent, what is not confirmed)",
+  "warning: text: spoken: 4 sentences: the paragraph is 2 to 3 sentences, each ending on a full stop"
+ ],
+ "at": "2026-11-18T22:09:43Z",
+ "footage": {
+  "name": "Early Access trailer",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30.0,
+  "mbps": 5.67,
+  "rows": 1080,
+  "duration": 120.09,
+  "decode_clean": true
+ },
+ "job": "jobs/live/hypernet-explorer-early-access-steam.json",
+ "story": "newsroom/stories/2026-11-18-hypernet-explorer-early-access-steam.json",
+ "lines": 7,
+ "shots": 15,
+ "run": "44408743749",
+ "lane": "live",
+ "build_secs": 62
+}
