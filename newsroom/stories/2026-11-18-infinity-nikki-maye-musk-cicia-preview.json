@@ -53,5 +53,25 @@
    "nikki"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/infinity-nikki-maye-musk-cicia-preview-reel-v1.mp4",
+  "blob": "9db3d27237d8caef1ed98273cd137fe31b575a84",
+  "at": "2026-11-18T01:28:28Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/infinity-nikki-maye-musk-cicia-preview.json",
+   "sha256": "e36955dcde1c75145773a19cbae56620b623966198d49f2911ac04a3a0be4aa7",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "three look frames: Infinity Nikki 2.11 footage, headline over hair not face, credit on every shot, subtitles readable"
  }
 }
