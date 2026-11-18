@@ -198,6 +198,7 @@ jobs:
           cp "$JOB" "$RUNNER_TEMP/job-rendered.json"
           # stage minutes (item D): this run's entry with its whole-job and setup times, before qc.json reads it
           python -c "import json; p = '$RUNNER_TEMP/render-time.json'; e = json.load(open(p)); e['job_secs'] = $RENDER_SECS; e['setup_min'] = round($SETUP_SECS / 60, 2); e['story'] = '$(basename "$JOB" .json)'; json.dump(e, open(p, 'w'))" || true
+          export JOB_PATH="$JOB"   # minutes from the job to the pass (adv-20261118-templates-never-refuse E)
           python templates/qc.py write "$JOB" "$out" "$base-qc.json" --autofix "$RUNNER_TEMP/autofix.json" --log "$RUNNER_TEMP/render.log" \
             && files="$files $base-qc.json" || echo "qc file not written"
           [ -f "$base-qc.json" ] && python templates/stagetimes.py qc "$base-qc.json" "$RUNNER_TEMP/render-time.json" || true

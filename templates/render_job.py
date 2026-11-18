@@ -449,7 +449,12 @@ def showcase_of(job):
     try:
         return reel.showcase_reason(job.get('showcase_reason') or True)
     except ValueError as e:
-        raise SystemExit(f'render_job: {e}')
+        import softgate as SG_
+        if not SG_.soft(job):
+            raise SystemExit(f'render_job: {e}')
+        why = 'the source fails the quality gate in a full-frame crop (picture ladder step b, set by the server)'
+        SG_.warn('showcase', f'{e}; the server named the reason itself: {why}')
+        return reel.showcase_reason(why)
 
 
 def series(job):
@@ -466,7 +471,13 @@ def look(job):
         return job.get('style')
     style, problems = looks.resolve(job)
     if problems:
-        raise SystemExit('render_job: ' + '; '.join(problems))
+        import softgate as SG_
+        if not SG_.soft(job):
+            raise SystemExit('render_job: ' + '; '.join(problems))
+        prev = looks.last(2, exclude=job.get('name'))
+        new = looks.rested('theme', prev, {job.get('theme')}) or 'emerald'
+        SG_.warn('look', '; '.join(problems) + f'; rendering with theme {new}, the one rested longest')
+        job['theme'] = new
     return style
 
 
@@ -475,6 +486,15 @@ def check(job, collect=None):
     as a string and the rest still run, so one pass reports everything (adv-20261117-gates-fix-not-refuse A)."""
     if job.get('kind') == 'breaking':
         return BK.check(job)
+    import softgate as SG_
+    if SG_.soft(job):                          # never refuse (card A): every stage runs, refusals become warnings
+        reel.SOFT = True
+        if SG_.fact_flag(job):
+            msg = f'fact flag in the brief: {SG_.fact_flag(job)}'
+            if collect is None:
+                raise SystemExit('render_job: ' + msg)
+            collect.append(msg)
+        return _check_all(job, collect if collect is not None else [])
     if collect is not None:
         return _check_all(job, collect)
     look(job)
@@ -529,11 +549,16 @@ def check(job, collect=None):
 
 def _check_all(job, errs):
     """check() stage by stage, every failure kept (item A)."""
+    import softgate as SG_
+
     def stage(name, fn, *a):
         try:
             return fn(*a)
         except (Exception, SystemExit) as e:   # noqa: BLE001
-            errs.append(f'{name}: {e}')
+            if SG_.soft(job):                  # never refuse (card A): a warning, the Reel ships
+                SG_.warn(name, f'{type(e).__name__}: {e}')
+            else:
+                errs.append(f'{name}: {e}')
             return None
     stage('look', look, job)
     if job.get('intro') is not None:
@@ -541,7 +566,7 @@ def _check_all(job, errs):
     if job.get('template') == 'reviewscores':
         import reviewscores as RS
         for e in RS.check_job(job) or []:
-            errs.append('review scores: ' + e)
+            (SG_.warn('review scores', e) if SG_.soft(job) else errs.append('review scores: ' + e))
     reel.CLEAN_MAP = job.get('clean_map')
     keep = reel.X
     if job.get('cut'):
@@ -577,7 +602,15 @@ def auto_shots(job):
     n0 = len(AF.LOG)
     t0 = _t.time()
     try:
-        left = AS.fill(job)
+        try:
+            left = AS.fill(job)
+        except (Exception, SystemExit) as e:   # noqa: BLE001  (17 Nov: an IndexError in the read stopped a render)
+            import softgate as SG_
+            if not SG_.soft(job):
+                raise
+            SG_.warn('shot read', f'{type(e).__name__}: {e}; every automatic slot falls back to evenly spaced shots')
+            left = [{'shot': i, 'detail': f'shot {i}: shot read failed', 'autofix': 'evenly spaced fallback'}
+                    for i in job.get('shots_auto') or []]
     finally:                                   # adv-20261117-server-speed-for-p2 A: the read's seconds go to qc.json
         rd = {'secs': round(_t.time() - t0, 1),
               'files': {f: {'secs': r.get('read_secs'), 'cached': bool(r.get('cached')), 'stages': r.get('stages'),
@@ -590,8 +623,43 @@ def auto_shots(job):
     for p in left:
         print('autoshots: ' + p['detail'] + ' (' + p['autofix'] + ')', flush=True)
     if left:
-        raise SystemExit(f'autoshots: {len(left)} shot slot{"s" if len(left) > 1 else ""} with no clean stretch (above)')
+        import softgate as SG_
+        if not SG_.soft(job):
+            raise SystemExit(f'autoshots: {len(left)} shot slot{"s" if len(left) > 1 else ""} with no clean stretch (above)')
+        auto_fallback(job, [p['shot'] for p in left])
     print(f'autoshots: {len(AF.LOG) - n0} shot time(s) picked on the server', flush=True)
+
+
+def _video_dur(f):
+    try:
+        return float(subprocess.check_output(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of',
+                                              'csv=p=0', C.U + f], text=True).strip())
+    except (subprocess.CalledProcessError, ValueError, OSError):
+        return 0.0
+
+
+def auto_fallback(job, slots):
+    """Never refuse (card A): an automatic slot the read could not fill takes an evenly spaced stretch of its file,
+    after the picture start, clear of the stretches already used, with the clean-stretch checks waived (picture ladder
+    step a, a crop; the shot gate then moves a letterboxed or drifting shot down the ladder)."""
+    import softgate as SG_
+    import autoshots as AS
+    by_file = {}
+    for i in slots:
+        by_file.setdefault(job['shots'][i][0], []).append(i)
+    for f, idx in by_file.items():
+        r = AS.READ.get(f) or {}
+        v0 = float(r.get('picture_start') or 0.0)
+        dur = float(r.get('duration') or 0) or _video_dur(f) or (v0 + 10.0 * len(idx))
+        for k, i in enumerate(idx):
+            sh = job['shots'][i]
+            secs = float(sh[2])
+            st = v0 + 0.3 + (max(0.0, dur - v0 - 0.6 - secs)) * (k + 0.5) / len(idx)
+            sh[1] = round(st, 2)
+            for key in ('cut_ok', 'drift_ok'):
+                job.setdefault(key, []).append([f, sh[1], 'never refuse: no clean stretch read, evenly spaced fallback'])
+            SG_.ladder('picture', i, 'a', f'{f} at {sh[1]} s for {secs} s: no clean stretch read, evenly spaced crop')
+    job.pop('shots_auto', None)
 
 
 def track_from_first_shot(job):
@@ -628,6 +696,10 @@ def shot_gate(job):
         if left:
             print('SHOTGATE_JSON: ' + json.dumps({'job': job.get('name'), 'ok': False, 'problems': left}, ensure_ascii=False),
                   flush=True)
+            import softgate as SG_
+            if SG_.soft(job):
+                gate_ladder(job, left)
+                return
             raise SystemExit(f'shotgate: {len(left)} shot problem{"s" if len(left) > 1 else ""} the server could not fix '
                              '(above), each with what it tried')
         print('shotgate: shots clean on the server copy (picture start, scene cuts, letterbox, subject drift)', flush=True)
@@ -638,7 +710,53 @@ def shot_gate(job):
         if (len(sh) > 3 and sh[3] is None and isinstance(st, (int, float)) and isinstance(f, str)
                 and not f.endswith(('.png', '.jpg', '.jpeg', '.webp')) and os.path.exists(C.U + f)):
             sh[3] = [list(k) for k in reel.autofocus(f, st, secs)]
+    import softgate as SG_
+    if SG_.soft(job):
+        left = SG_.guarded('shot gate', SG.problems, job, rows) or []
+        if left:
+            gate_ladder(job, left)
+        return
     SG.enforce(job, rows)
+
+
+SHOWCASE_BLOCKERS = ('gfx', 'person', 'products', 'page_motion', 'frame', 'kit', 'tribute', 'insert')
+
+
+def gate_ladder(job, left):
+    """Never refuse (card A): a shot the gate could not fix moves down the picture ladder. Letterboxed or low-row
+    footage takes the showcase layout (step b) when nothing in the job rules it out; every other problem (a scene cut,
+    drift, a subject cut by the edge) keeps a crop with the check waived (step a). Each slot is logged."""
+    import softgate as SG_
+    letterbox = False
+    for p in left:
+        i = p.get('shot')
+        if i is None and str(p.get('where', '')).startswith('shot '):
+            try:
+                i = int(str(p['where']).split()[1])
+            except (IndexError, ValueError):
+                i = None
+        d = str(p.get('detail', '')) + ' ' + str(p.get('rule', ''))
+        sh = job['shots'][i] if isinstance(i, int) and i < len(job.get('shots') or []) else None
+        if sh is None:
+            SG_.warn('shot gate', d)
+            continue
+        f, st = sh[0], sh[1]
+        if 'before the picture' in d and isinstance(p.get('picture_start'), (int, float)):
+            sh[1] = st = round(float(p['picture_start']) + 0.05, 2)   # a shot that opens before the picture starts on it
+        kinds = [k for k, hit in (('letterbox', 'letterbox' in d), ('cut', 'scene cut' in d),
+                                  ('drift', 'subject_' in d)) if hit] or ['drift']
+        for kind in kinds:
+            key = {'letterbox': 'letterbox_ok', 'cut': 'cut_ok', 'drift': 'drift_ok'}[kind]
+            job.setdefault(key, []).append([f, st, 'never refuse: ' + d[:120]])
+        letterbox = letterbox or 'letterbox' in kinds
+        SG_.warn('shot gate', d, shot=i)
+        SG_.ladder('picture', i, 'a', ', '.join(kinds) + ': kept as a crop, check waived')
+    if letterbox and not job.get('layout') and not any(job.get(k) for k in SHOWCASE_BLOCKERS) \
+            and job.get('template') not in ('storybeat', 'numbers', 'list', 'explainer', 'quote', 'edition', 'reviewscores'):
+        job['layout'] = 'showcase'
+        job['showcase_reason'] = ('the source is letterboxed and fails the quality gate in a full-frame crop '
+                                  '(picture ladder step b, set by the server)')
+        SG_.ladder('picture', 'reel', 'b', 'letterboxed footage: showcase layout, the trailer at its own width')
 
 
 def first_frame_check(job):
@@ -657,6 +775,11 @@ def first_frame_check(job):
         except (subprocess.CalledProcessError, ValueError):
             continue
         if st + du <= v0 + 0.05:
+            import softgate as SG_
+            if SG_.soft(job):
+                sh[1] = round(v0 + 0.05, 2)
+                SG_.ladder('picture', i, 'a', f'{f}: shot ended before the first video frame ({v0:.2f} s); moved to {sh[1]} s')
+                continue
             raise ValueError(f'shot {i} {f} from {st} s for {du} s ends before the first video frame ({v0:.2f} s): '
                              f'no picture, the montage would hang; start it at {v0:.2f} s or later')
         if st < v0 - 0.05:
@@ -933,6 +1056,10 @@ def source_check(job):
             if not any(w[0] == f and w[1] <= a <= w[2] for w in waive):
                 bad.append(f'{f} {a:.2f} to {b:.2f} s (peak {peak})')
     if bad:
+        import softgate as SG_
+        if SG_.soft(job):
+            SG_.warn('source smear', 'blocky smear in the source: ' + '; '.join(bad))
+            return
         raise ValueError('blocky smear in the source: ' + '; '.join(bad) + '; re-fetch it, use another copy, '
                          'or after looking pass block_ok=[[file, t0, t1, reason]]')
 
@@ -1010,6 +1137,12 @@ def audio_split(job, video):
     rec = TS.apply(job, video, starts, xf, C.U)
     print('render_job: audio split: ' + ('applied' if rec.get('applied') else 'not applied, audio as rendered') +
           ''.join(f'; {k} {rec[k]}' for k in ('reason', 'music_pct', 'leak_pct', 'cache', 'separate_secs', 'secs') if k in rec), flush=True)
+    import softgate as SG_
+    if job.get('music_only') and not rec.get('applied') and SG_.soft(job):   # sound ladder: music stem failed, our bed (c)
+        rec['fallback'] = bed_under(job, video, f"music stem not clean: {rec.get('reason')}")
+        SG_.ladder('sound', 'reel', 'c', f"music_only: the music stem could not be separated cleanly ({rec.get('reason')}); our bed")
+        _times_note(job, 'audio_split', rec)
+        return rec
     if job.get('music_only') and not rec.get('applied'):   # asked for no effects: never ship the trailer's own mix instead
         raise ValueError('music_only: the music stem could not be separated cleanly (' + str(rec.get('reason')) + '); '
                          'use another stretch or track "bed"')
@@ -1017,9 +1150,10 @@ def audio_split(job, video):
     try:
         SF.guard(job, rec, starts)
     except ValueError as e:
-        if job.get('split_fallback') != 'bed':
+        if job.get('split_fallback') != 'bed' and not SG_.soft(job):
             _times_note(job, 'audio_split', rec)
             raise
+        SG_.ladder('sound', 'reel', 'c', f'{e}; our bed')
         rec['fallback'] = bed_under(job, video, f"trailer sound refused: {rec.get('reason')}")   # slips: never a hold
         print(f'render_job: audio split fallback: our bed ({e.__class__.__name__}: the trailer mix would not match the '
               f"picture); {rec['fallback']}", flush=True)
@@ -1279,6 +1413,10 @@ def run(job, draft=False):
     if job.get('kind') == 'breaking':
         return breaking(job, draft)
     t0 = time.time()
+    import softgate as SG_
+    reel.SOFT = SG_.soft(job)                   # templates never refuse (adv-20261118-templates-never-refuse A)
+    if SG_.fact_flag(job):                      # hard stop 1 of 4: a wrong fact flagged by the brief
+        raise SystemExit(f'render_job: fact flag in the brief: {SG_.fact_flag(job)}')
     reel.CLEAN_MAP = job.get('clean_map')       # pre-render map (templates/prerender.py); None changes nothing
     quality(job)
     for item in job.get('footage', []):
@@ -1287,10 +1425,17 @@ def run(job, draft=False):
     t_fetch = time.time()                       # stage times (adv-20261117-server-speed-for-p2 D, templates/stagetimes.py)
     source_check(job)
     t_src = time.time()
+    if SG_.soft(job):
+        first_frame_check(job)                  # a shot ending before the picture moves onto it (never a hang)
     auto_shots(job)                             # the server picks shot times the job left to it (gates-fix C)
     track_from_first_shot(job)                  # a slip's trailer sound starts where its first picked shot does
     t_shots = time.time()
     shot_gate(job)                              # B and C on the server's copy, before anything is built (15 Nov 2026)
+    if SG_.soft(job) and job.get('kind') != 'breaking':
+        SG_.guarded('reading fix', SG_.fix_reading, job, _starts, place, reel.read_secs)   # text ladder: extend the Reel
+        if job.get('lines') and job.get('shots'):
+            st_r, end_r = _starts(job)
+            SG_.guarded('reading', reel.check_reading, place(job)(st_r, end_r), end_r)
     t_gate = time.time()
     fetched = t_fetch - t0
     out = os.path.join(ROOT, job['out'])
@@ -1347,10 +1492,19 @@ def run(job, draft=False):
         cuts = list(st_) + [body_]             # each frame measured against its own shot, the end card its own (item D)
         if job.get('intro') is not None:
             cuts = [0.0] + [c + lead for c in cuts]
-        DC.check(video, [w for w in job.get('block_ok', []) if len(w) == 3] + spans, cuts=cuts)   # stops before anything is committed
+        if SG_.soft(job):                      # hard stop 4 of 4: the finished Reel must decode; a smear is a warning
+            errs_ = DC.decode_errors(video)
+            if errs_:
+                raise ValueError(f'{video}: decode errors ({len(errs_)}), first: {errs_[0]}')
+            SG_.guarded('smear', DC.check, video, [w for w in job.get('block_ok', []) if len(w) == 3] + spans, cuts=cuts)
+        else:
+            DC.check(video, [w for w in job.get('block_ok', []) if len(w) == 3] + spans, cuts=cuts)   # stops before anything is committed
         import fillcheck as FC                 # no empty band at any second, read on the Reel that ships (9 Nov 2026)
         st_, end_ = _starts(job)
-        FC.empty_bands(video, job, st_, end_, C.U)
+        if SG_.soft(job):
+            SG_.guarded('fill', FC.empty_bands, video, job, st_, end_, C.U)
+        else:
+            FC.empty_bands(video, job, st_, end_, C.U)
         import looks
         if job.get('kind') not in ('breaking', 'famitsu') and not series(job):
             looks.record(job, style or reel.pick_style(out))
@@ -1368,6 +1522,8 @@ def run(job, draft=False):
     if not draft:
         _times_note(job, 'pipeline', pipe)
     print('render_job: pipeline: ' + json.dumps(pipe), flush=True)
+    if not draft:
+        _times_note(job, 'softgate', {'warnings': len(SG_.WARNINGS), 'ladder': SG_.LADDER})
     print(f"render_job: {job['name']} done in {time.time() - t0:.0f} s (fetch {fetched:.0f} s): {video}", flush=True)
     return video
 
@@ -1379,7 +1535,12 @@ if __name__ == '__main__':
     AS.expand(job)
     if step in ('check', 'run'):
         import buildgate                        # ledger, story file, lane, reel-check before anything (adv-20261105-p2-audit-fixes)
-        buildgate.enforce(path, job)
+        import softgate as SG_
+        if SG_.soft(job):                       # never refuse (card A): the gate's findings are warnings
+            for p_ in buildgate.problems(path, job):
+                SG_.warn('build gate', p_)
+        else:
+            buildgate.enforce(path, job)
     if step == 'check':
         print(job['name'], 'ok, clip %.1f s' % check(job))
     elif step == 'text':
@@ -1402,6 +1563,11 @@ if __name__ == '__main__':
             textcheck(job, collect=errs)
         except Exception as e:             # anything unforeseen still reports with the rest
             errs.append({'where': 'text check', 'rule': 'error', 'text': '', 'fix': '', 'detail': f'{type(e).__name__}: {e}'})
+        import softgate as SG_
+        if SG_.soft(job):                       # never refuse (card A): only unreadable text stops (safe zone, bidi)
+            for e in [e for e in errs if not SG_.text_hard(e)]:
+                SG_.warn('text', f"{e.get('where')}: {e.get('rule')}: {e.get('text') or ''} {e.get('detail') or e.get('fix') or ''}".strip())
+            errs = [e for e in errs if SG_.text_hard(e)]
         if '--json' in sys.argv[3:]:
             out = sys.argv[sys.argv.index('--json') + 1]
             json.dump({'job': job.get('name'), 'ok': not errs, 'problems': errs}, open(out, 'w', encoding='utf-8'),

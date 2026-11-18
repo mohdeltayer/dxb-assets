@@ -141,8 +141,12 @@ class Job(unittest.TestCase):
             self.assertEqual(st['source_type'], 'primary')
             self.assertEqual(st['template'], 'trailer')
             self.assertTrue(os.path.exists(os.path.join(d, r['job'])))
-            bad = S.build(slip(label='عاجل'), 'test', resolve=False, root=d, now=NOW)
-            self.assertEqual(bad['state'], 'failed')
+            # never refuse (adv-20261118-templates-never-refuse A): a wrong label is a warning, the slip builds
+            warned = S.build(slip(label='عاجل'), 'test', resolve=False, root=d, now=NOW)
+            self.assertEqual(warned['state'], 'built', warned)
+            self.assertTrue(any(f.startswith('warning: label') for f in warned['flags']))
+            bad = S.build(slip(headline='GTA VI تصدر اليوم'), 'test', resolve=False, root=d, now=NOW)
+            self.assertEqual(bad['state'], 'failed')          # bidi-broken text still stops
             self.assertTrue(bad['problems'])
 
     def test_pick_footage(self):

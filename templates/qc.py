@@ -180,7 +180,13 @@ def write(job, out, qc_path, autofix=None, log=None):
     found = findings_from_notes(job, notes)
     if person_shown(job) is False:                 # the people rule: the gate refuses it; a Reel that slips through fails
         found.append({'check': 'person', 'detail': 'a person is the subject and no photo box opens on frame 0'})
+    import softgate as SG_                         # templates never refuse (adv-20261118-templates-never-refuse A): only
+    warns, steps = SG_.from_log(_log_lines(log)) if log else ([], [])   # unreadable text fails; the rest are warnings
+    if SG_.soft(job):
+        warns += [{'stage': f['check'], 'detail': f['detail']} for f in found if f['check'] not in QC_HARD]
+        found = [f for f in found if f['check'] in QC_HARD]
     d = {'name': job.get('name'), 'out': out, 'verdict': 'fail' if found else 'pass',
+         'warnings': warns, 'ladder': steps, 'job_to_pass_min': job_to_pass_min(job, t),
          'at': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
          'findings': found, 'notes': notes[:60] + [f"estimate: {f['where']}: {f['fix']}" for f in soft],
          'autofixed': autofix or [], 'job_sha': os.environ.get('JOB_SHA'),
@@ -195,6 +201,29 @@ def write(job, out, qc_path, autofix=None, log=None):
         d['director_sendbacks'] = prev['director_sendbacks']
     json.dump(d, open(qc_path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     return d
+
+
+QC_HARD = ('collision',)            # a story line over a card's text: unreadable text, one of the four hard stops
+
+
+def job_to_pass_min(job, t=None):
+    """Minutes from the job's first commit on main to this render's pass (card A, E): git when the history is there,
+    else queue wait + setup + render seconds from the render-times entry."""
+    import subprocess
+    jp = os.environ.get('JOB_PATH') or ''
+    now = dt.datetime.now(dt.timezone.utc)
+    if jp:
+        r = subprocess.run(['git', '-C', os.path.dirname(HERE), 'log', '--format=%cI', '--diff-filter=A', '--', jp],
+                           capture_output=True, text=True)
+        stamps = [x for x in r.stdout.split() if x]
+        if r.returncode == 0 and stamps:
+            try:
+                return round((now - dt.datetime.fromisoformat(stamps[-1])).total_seconds() / 60, 1)
+            except ValueError:
+                pass
+    t = t or {}
+    secs = sum(float(t.get(k) or 0) for k in ('queue_wait_secs', 'job_secs')) + 60 * float(t.get('setup_min') or 0)
+    return round(secs / 60, 1) if secs else None
 
 
 def previous(qc_path):

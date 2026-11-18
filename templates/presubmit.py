@@ -223,8 +223,8 @@ def director(sid, verdict, out, note='', job=None, by=None, looked=None, reason=
             print(f'presubmit: no qc.json beside {out} (fetch main, or a render.yml Reel): the server verdict was not read')
         if not cl:
             raise SystemExit('presubmit: director PASS needs --job <the job file that rendered it> (its reel_check)')
-        if not cl['ok']:
-            raise SystemExit('presubmit refused: the job does not pass the build gate:\n  - ' + '\n  - '.join(cl['problems']))
+        if not cl['ok']:                         # never refuse (adv-20261118-templates-never-refuse A): the gate's
+            print('presubmit: build gate warnings (the Reel ships):\n  - ' + '\n  - '.join(cl['problems']))   # findings are warnings
         if not _who(by):
             raise SystemExit('presubmit refused: director PASS needs --by <the director> (a separate agent or session)')
         if _who(by) == _who(cl.get('built_by')) or _who(cl.get('built_by')) in _who(by).split():

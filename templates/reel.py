@@ -496,7 +496,7 @@ def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96,
             raise ValueError(f'line runs out of the safe zone: {x}')
     cap = 2 if lift else 3                 # over a split strip a sentence is two visual lines at most (14 Oct 2026)
     if len(lines) > cap:
-        raise ValueError(f'{len(lines)} lines; keep a sentence to {cap}' + (' over the strip' if lift else '') + f': {text}')
+        _soft('line count', f'{len(lines)} lines; keep a sentence to {cap}' + (' over the strip' if lift else '') + f': {text}')
     rtl_starts(lines, 'story')
     base0 = G.SAFE_TOP + 110 if top else G.SAFE_BOTTOM - 40 - lift - step * (len(lines) - 1)
     if geometry is not None:
@@ -787,7 +787,7 @@ def strip_check(items, lines=()):
         for label, v in items:
             val = _strip_text(v).strip()
             if val and val.casefold() in hay:
-                raise ValueError(f'the strip already shows {val!r} ({label}); a line must not say it again: {text}')
+                _soft('strip repeat', f'the strip already shows {val!r} ({label}); a line must not say it again: {text}')
 
 
 def strip_layer(items, path, theme='cold', skin=None):
@@ -931,6 +931,17 @@ LOWRES_EXAMPLE = 'IGN, Nintendo store, publisher press site, Steam: none above 7
 CLEAN_MAP = None
 
 
+SOFT = False               # templates never refuse (adv-20261118-templates-never-refuse A): render_job sets it on the live path
+
+
+def _soft(stage, msg):
+    """Raise as before, or, with SOFT, log a softgate warning and go on (the Reel ships)."""
+    if not SOFT:
+        raise ValueError(msg)
+    import softgate
+    softgate.warn(stage, msg)
+
+
 def lowres_reason(v):
     """The waiver for a soft source as text, or None when there is none. lowres_ok must name the copies that were
     searched (24 Oct 2026): a string, a list of sources, or {"searched": [...], "result": "..."}; a bare True (or
@@ -949,6 +960,10 @@ def lowres_reason(v):
     else:
         txt = ''
     if len(txt) < 12 or txt.lower() in ('true', 'yes', 'none exists', 'no other copy'):
+        if SOFT:
+            import softgate
+            softgate.warn('lowres_ok', f'lowres_ok {v!r} names no copies checked; accepted (never refuse)')
+            return txt or 'not named'
         raise ValueError(f'lowres_ok must name the copies checked (Mohammad, 24 Oct 2026), not {v!r}: write the '
                          f'sources searched and what they had, e.g. "lowres_ok": "{LOWRES_EXAMPLE}", or '
                          '{"searched": ["IGN", "Nintendo store"], "result": "none above 720p"}')
@@ -1071,7 +1086,7 @@ def quality_gate(shots, lowres_ok=None, blocky_ok=None, boxed=False):
         problems.append(f'under {MIN_SRC_H} rows of picture: ' + ', '.join(small) + '; find a 4K or unletterboxed '
                         f'copy, or name the copies checked in lowres_ok ("{LOWRES_EXAMPLE}")')
     if problems:
-        raise ValueError('source quality:\n  ' + '\n  '.join(problems))
+        _soft('source quality', 'source quality:\n  ' + '\n  '.join(problems))
     return q
 
 
@@ -1486,7 +1501,7 @@ def montage(shots, out, lowres_ok=False, fast=False):
                 a, b = fo[0][1], fo[1][1]
             z = zoom((f, s, d, fo))
             if z > MAX_ZOOM and not lowres_ok and not SHOWCASE:
-                raise ValueError(f'{f}: a still enlarged {z:.1f}x to fill 9:16; find a larger image or name the copies checked in lowres_ok')
+                _soft('still zoom', f'{f}: a still enlarged {z:.1f}x to fill 9:16; find a larger image or name the copies checked in lowres_ok')
             args += ['-loop', '1', '-framerate', '30', '-t', str(d), '-i', C.U + f]
             if SHOWCASE:                           # the showcase: the still uncropped in the box, on the flat ground
                 fc.append(f"[{i}:v]{_show_pad('', '', _still_finish(f))},fps=30,settb=AVTB,setsar=1,format=yuv420p[v{i}]")
@@ -1506,7 +1521,7 @@ def montage(shots, out, lowres_ok=False, fast=False):
             # cleans and sharpens around it (lighter on 4K, which is not enlarged).
             bars, rows = _bars(C.U + f, s, d)
             if rows < MIN_SRC_H and not lowres_ok and not SHOWCASE:
-                raise ValueError(f'{f}: only {rows} rows of picture (bars cut), enlarged {H / rows:.1f}x; '
+                _soft('rows', f'{f}: only {rows} rows of picture (bars cut), enlarged {H / rows:.1f}x; '
                                  f'find a 4K or unletterboxed copy, or name the copies checked in lowres_ok ("{LOWRES_EXAMPLE}")')
             if FINISH and not _ours(f):     # the standard finish (12 Oct 2026): denoise, enlarge, adaptive sharpen, grade
                 pre, post = f'{DENOISE},', f",cas={0.7 if rows < H else 0.4},{GRADE}"
@@ -1618,7 +1633,7 @@ def cached_shot(f, s, d, fo, lowres_ok=False):
         return rel
     bars, rows = _bars(C.U + f, s, d)
     if rows < MIN_SRC_H and not lowres_ok and not SHOWCASE:
-        raise ValueError(f'{f}: only {rows} rows of picture (bars cut), enlarged {H / rows:.1f}x; '
+        _soft('rows', f'{f}: only {rows} rows of picture (bars cut), enlarged {H / rows:.1f}x; '
                          f'find a 4K or unletterboxed copy, or name the copies checked in lowres_ok ("{LOWRES_EXAMPLE}")')
     if FINISH and not _ours(f):
         pre, post = f'{DENOISE},', f",cas={0.7 if rows < H else 0.4},{GRADE}"
@@ -2054,7 +2069,7 @@ def check_reading(lines, end):
         if z - a < need - 0.05:
             short.append(f'  "{text.splitlines()[0]}…" {z - a:.1f}s of {need:.1f}s')
     if short:
-        raise ValueError('lines too fast to read; add related footage or move the line:\n' + '\n'.join(short))
+        _soft('reading', 'lines too fast to read; add related footage or move the line:\n' + '\n'.join(short))
 
 
 def reel(shots, headline, label, lines, source, date, out, theme='stylized', sound=None,
@@ -2208,7 +2223,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             check_reading(lines, end)
         pn = pace_note(starts, end, lines, head_secs if strip else None)
         if pn and not pace_ok:                 # review of the Nano Reel (advisor, 14 Oct 2026): ten seconds on one still went out
-            raise ValueError(pn + '; cut to a second angle, add a line or a strip, or pass pace_ok=True with the reason in the brief')
+            _soft('pace', pn + '; cut to a second angle, add a line or a strip, or pass pace_ok=True with the reason in the brief')
         for note in (pn, close_note(shots)):
             if note: print(note)               # attention rules (advisor, 14 Oct 2026)
         if reveal is not None and not 0 <= reveal < len(lines):

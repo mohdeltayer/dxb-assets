@@ -393,13 +393,33 @@ def reel_check(slip, foot):
     }
 
 
+SLIP_HARD = ('missing: ', 'id ', 'name: ', 'expired at', 'expires: ')   # cannot be built: no input, no path, out of date
+
+
+def split_problems(probs):
+    """Templates never refuse (adv-20261118-templates-never-refuse A): a slip stops only when it cannot be built
+    (fields missing, a bad id or name, expired) or its text is bidi-broken (a paragraph or headline opening on a
+    non-Arabic word, a flipping sign). Everything else is a flag on the result and the slip builds."""
+    hard, soft = [], []
+    for x in probs:
+        if x.startswith(SLIP_HARD) or 'every paragraph starts with an Arabic word' in x or 'flips to the far side' in x:
+            hard.append(x)
+        else:
+            soft.append(x)
+    return hard, soft
+
+
 def build(slip, lane='live', resolve=True, root=ROOT, now=None):
     """Writes the story file and the job; returns the result {state, problems, flags, job, story, footage}."""
     res = {'id': slip.get('id'), 'state': 'failed', 'problems': [], 'flags': [], 'at': dt.datetime.now(UTC).strftime('%Y-%m-%dT%H:%M:%SZ')}
-    res['problems'] = problems(slip, now)
+    for field in ('credit', 'headline', 'spoken', 'instagram', 'x', 'threads'):   # an em dash is a mechanical fix
+        if '—' in str(slip.get(field) or ''):
+            slip[field] = re.sub(r'\s*—\s*', '، ', slip[field])
+    hard, soft = split_problems(problems(slip, now))
+    res['problems'] = hard
     if res['problems']:
         return res
-    res['flags'] = name_flags(slip)
+    res['flags'] = name_flags(slip) + [f'warning: {x}' for x in soft]
     name = _name(slip)
     if resolve:
         try:
@@ -442,7 +462,10 @@ def build(slip, lane='live', resolve=True, root=ROOT, now=None):
     json.dump(story, open(spath, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     jpath = os.path.join(jdir, name + '.json')
     json.dump(job, open(jpath, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    hard = TR.hard(TR.check(job))
+    import softgate as SG_
+    hard = [f for f in TR.hard(TR.check(job)) if SG_.text_hard(f)]
+    res['flags'] += [f"warning: text: {f['where']}: {f.get('fix') or f['rule']}" for f in TR.hard(TR.check(job))
+                     if not SG_.text_hard(f)]
     if hard:
         res['problems'] += [f"text: {f['where']}: {f.get('fix') or f['rule']}" for f in hard]
     res.update(job=os.path.relpath(jpath, root), story=os.path.relpath(spath, root),
