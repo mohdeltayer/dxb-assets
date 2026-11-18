@@ -50,5 +50,25 @@
    "pirates"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/last-pirates-die-together-xbox-game-preview-reel-v1.mp4",
+  "blob": "4147afe0b997318d0982ce6d40017d0c821e7cf6",
+  "at": "2026-11-18T00:20:22Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/last-pirates-die-together-xbox-game-preview.json",
+   "sha256": "0816383d1fe290def7a8c0744d90068d6a3554823dc7aaacfa8f8e9cf748a535",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "cartoon pirate with lantern and chip, sunny beach crew with credit and subtitle, dark underwater scene with subtitle"
  }
 }
