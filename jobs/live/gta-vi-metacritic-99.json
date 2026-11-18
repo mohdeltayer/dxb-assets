@@ -1,0 +1,214 @@
+{
+ "name": "gta-vi-metacritic-99",
+ "story": "2026-11-18-gta-vi-metacritic-99",
+ "kind_news": "reviewscores",
+ "built_by": "server-slip",
+ "render_lane": "server",
+ "out": "cards/2026-11/gta-vi-metacritic-99-reel-v1.mp4",
+ "split_fallback": "bed",
+ "footage": [
+  {
+   "file": "gta-vi-metacritic-99-ps-1.mp4",
+   "url": "https://gmedia.playstation.com/is/content/SIEPDC/global_pdc/en/hardware/ps5-pro/channel-specific-content/2024/videos/ps5-pro-pssr-video-01-en-16aug24.mp4"
+  }
+ ],
+ "shots": [
+  [
+   "gta-vi-metacritic-99-ps-1.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "gta-vi-metacritic-99-ps-1.mp4",
+   "auto",
+   2.28,
+   null
+  ],
+  [
+   "gta-vi-metacritic-99-ps-1.mp4",
+   "auto",
+   2.28,
+   null
+  ],
+  [
+   "gta-vi-metacritic-99-ps-1.mp4",
+   "auto",
+   2.71,
+   null
+  ],
+  [
+   "gta-vi-metacritic-99-ps-1.mp4",
+   "auto",
+   2.71,
+   null
+  ],
+  [
+   "gta-vi-metacritic-99-ps-1.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "gta-vi-metacritic-99-ps-1.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "gta-vi-metacritic-99-ps-1.mp4",
+   "auto",
+   2.46,
+   null
+  ],
+  [
+   "gta-vi-metacritic-99-ps-1.mp4",
+   "auto",
+   2.46,
+   null
+  ],
+  [
+   "gta-vi-metacritic-99-ps-1.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "gta-vi-metacritic-99-ps-1.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "gta-vi-metacritic-99-ps-1.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "gta-vi-metacritic-99-ps-1.mp4",
+   "auto",
+   2.2,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "حصلت GTA VI\nعلى 99 من 100 في ميتاكريتيك،",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "بعد 125 مراجعة من النقاد،\nحسب صفحة اللعبة على الموقع",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "هذه النتيجة على نسخة PS5،",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   7,
+   8,
+   [
+    [
+     "وتصنفها ميتاكريتيك إجماعًا\nشبه كامل من النقاد",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   9,
+   10,
+   [
+    [
+     "وتصدر اللعبة غدًا\nالخميس 19 نوفمبر",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   11,
+   12,
+   [
+    [
+     "على PS5 و Xbox Series X|S",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   12,
+   "المصدر: ميتاكريتيك (Metacritic)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "حصلت GTA VI على 99 من 100 في ميتاكريتيك، بعد 125 مراجعة من النقاد، حسب صفحة اللعبة على الموقع. هذه النتيجة على نسخة PS5، وتصنفها ميتاكريتيك إجماعًا شبه كامل من النقاد. وتصدر اللعبة غدًا الخميس 19 نوفمبر على PS5 وXbox Series X|S.",
+ "headline": "تحصل GTA VI على\nدرجة 99 في ميتاكريتيك",
+ "label": "جديد",
+ "source": "ميتاكريتيك (Metacritic)",
+ "date": "18 Nov 2026",
+ "theme": "cold",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "gta-vi-metacritic-99-ps-1.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": null,
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "footage": "gta-vi-metacritic-99-ps-1.mp4 from the resolver (https://www.playstation.com/en-ae/games/grand-theft-auto-vi/)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (audio split per shot)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Metacritic, Grand Theft Auto VI (PS5), Metascore 99 from 125 critic reviews, read 18 Nov 2026 11:2xZ (https://www.metacritic.com/game/grand-theft-auto-vi/); first report: Metacritic page, Metascore 99 on 125 critic reviews, read 18 Nov 2026 11:2xZ; review embargo lifted before the 19 Nov release",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: https://gmedia.playstation.com/is/content/SIEPDC/global_pdc/en/hardware/ps5-pro/channel-specific-content/2024/videos/ps5-pro-pssr-video-01-en-16aug24.mp4 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ }
+}
