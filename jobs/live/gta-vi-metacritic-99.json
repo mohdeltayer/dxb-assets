@@ -101,10 +101,6 @@
   {
    "file": "gta6-t2.mp4",
    "url": "https://assets.ign.com/videos/zencoder/2025/05/06/3840/7278459c-d7f6-491f-b1fc-1b7bc487e4b5-1746538785.mp4"
-  },
-  {
-   "file": "gta6-t1.mp4",
-   "url": "https://assets.ign.com/videos/zencoder/2023/12/04/3840/f46855f3-fcba-4dc2-bc90-bd7544e2ed50-1701731584.mp4"
   }
  ],
  "gfx": [
@@ -246,14 +242,25 @@
   }
  ],
  "ground_footage": [
-  "gta6-t2.mp4",
-  6.18
+  "gta6-launch-master.mp4",
+  27.0
  ],
  "shots": [
   [
    "gta6-launch-master.mp4",
-   12.0,
-   2.95,
+   26.45,
+   1.35,
+   [
+    [
+     0.0,
+     0.32
+    ]
+   ]
+  ],
+  [
+   "gta6-launch-master.mp4",
+   55.25,
+   1.8,
    [
     [
      0.0,
@@ -262,21 +269,10 @@
    ]
   ],
   [
-   "gta6-t2.mp4",
-   35.7,
-   1.9,
-   [
-    [
-     0.0,
-     0.5
-    ]
-   ]
-  ],
-  [
    "gta-mc99-gfx-spread-a.png",
    [
-    "gta6-t2.mp4",
-    6.18
+    "gta6-launch-master.mp4",
+    27.0
    ],
    3.0,
    null
@@ -284,8 +280,8 @@
   [
    "gta-mc99-gfx-spread-b.png",
    [
-    "gta6-t2.mp4",
-    8.55
+    "gta6-launch-master.mp4",
+    41.0
    ],
    3.8,
    null
@@ -293,8 +289,8 @@
   [
    "gta-mc99-gfx-high-a.png",
    [
-    "gta6-t2.mp4",
-    83.07
+    "gta6-launch-master.mp4",
+    56.0
    ],
    2.6,
    null
@@ -302,8 +298,8 @@
   [
    "gta-mc99-gfx-high-b.png",
    [
-    "gta6-t2.mp4",
-    84.0
+    "gta6-launch-master.mp4",
+    68.0
    ],
    3.8,
    null
@@ -312,7 +308,7 @@
    "gta-mc99-gfx-low-a.png",
    [
     "gta6-launch-master.mp4",
-    33.3
+    36.5
    ],
    2.6,
    null
@@ -321,7 +317,7 @@
    "gta-mc99-gfx-low-b.png",
    [
     "gta6-launch-master.mp4",
-    7.0
+    64.1
    ],
    3.8,
    null
@@ -329,8 +325,8 @@
   [
    "gta-mc99-gfx-totals-a.png",
    [
-    "gta6-t1.mp4",
-    45.4
+    "gta6-launch-master.mp4",
+    26.4
    ],
    2.6,
    null
@@ -338,16 +334,16 @@
   [
    "gta-mc99-gfx-totals-b.png",
    [
-    "gta6-t1.mp4",
-    70.4
+    "gta6-launch-master.mp4",
+    40.4
    ],
    3.4,
    null
   ],
   [
-   "gta6-t1.mp4",
-   61.65,
-   1.9,
+   "gta6-launch-master.mp4",
+   36.55,
+   1.4,
    [
     [
      0.0,
@@ -356,13 +352,24 @@
    ]
   ],
   [
-   "gta6-t1.mp4",
-   2.85,
-   3.6,
+   "gta6-launch-master.mp4",
+   40.5,
+   1.8,
    [
     [
      0.0,
-     0.5
+     0.45
+    ]
+   ]
+  ],
+  [
+   "gta6-launch-master.mp4",
+   67.15,
+   1.35,
+   [
+    [
+     0.0,
+     0.6
     ]
    ]
   ]
@@ -370,12 +377,12 @@
  "lines": [
   [
    10,
-   11,
+   12,
    [
     [
-     "تصدر اللعبة غدًا 19 نوفمبر\nعلى PS5 و Xbox Series X|S",
+     "تصدر اللعبة غدًا 19 نوفمبر",
      {
-      "size": 50
+      "size": 56
      }
     ]
    ]
@@ -384,7 +391,7 @@
  "credits": [
   [
    0,
-   11,
+   12,
    "المصدر: روكستار غيمز (Rockstar Games)"
   ]
  ],
@@ -410,7 +417,7 @@
  "sensitive": "none",
  "subject_person": null,
  "decision_log": {
-  "footage": "series sources proven in «الطريق إلى GTA VI» ep4 (Rockstar Launch Trailer master, IGN 3840 copies of Trailers 1 and 2); shots from ep4's clean stretches",
+  "footage": "Rockstar Launch Trailer master for every footage shot (IGN copies refuse direct reads; Trailer 2 kept for the music only); shots inside the server cut list scenes 26.37-27.83, 55.17-57.07, 36.47-38.0, 40.43-42.33, 67.07-68.53; frames looked at 13:50Z",
   "sound": "Trailer 2 music stem from 117.3 s (music_only), as ep4",
   "totals": "Metacritic and OpenCritic read 2026-11-18T13:01:20+00:00 (17:01 Dubai)",
   "chip": "عاجل on Mohammad's order (T0)"
@@ -426,5 +433,59 @@
   "credit on every clip": "yes: one credit over every shot",
   "sound": "yes: trailer sound from the first shot, split per shot on the server, bed fallback",
   "picture matches the lines": "n/a: shots are picked by the server; look frames reviewed at the Director step"
- }
+ },
+ "letterbox_ok": [
+  [
+   "gta6-launch-master.mp4",
+   26.45,
+   "Rockstar Launch Trailer master: letterboxed to 1920 of 2160 rows; the bars are cropped and 1920 rows fill 9:16 under 2x; frames looked at 18 Nov 13:50Z"
+  ],
+  [
+   "gta6-launch-master.mp4",
+   55.25,
+   "Rockstar Launch Trailer master: letterboxed to 1920 of 2160 rows; the bars are cropped and 1920 rows fill 9:16 under 2x; frames looked at 18 Nov 13:50Z"
+  ],
+  [
+   "gta6-launch-master.mp4",
+   36.55,
+   "Rockstar Launch Trailer master: letterboxed to 1920 of 2160 rows; the bars are cropped and 1920 rows fill 9:16 under 2x; frames looked at 18 Nov 13:50Z"
+  ],
+  [
+   "gta6-launch-master.mp4",
+   40.5,
+   "Rockstar Launch Trailer master: letterboxed to 1920 of 2160 rows; the bars are cropped and 1920 rows fill 9:16 under 2x; frames looked at 18 Nov 13:50Z"
+  ],
+  [
+   "gta6-launch-master.mp4",
+   67.15,
+   "Rockstar Launch Trailer master: letterboxed to 1920 of 2160 rows; the bars are cropped and 1920 rows fill 9:16 under 2x; frames looked at 18 Nov 13:50Z"
+  ]
+ ],
+ "drift_ok": [
+  [
+   "gta6-launch-master.mp4",
+   26.45,
+   "looked at 18 Nov 13:50Z: the subject (the pair, the biplane, the silhouettes) stays inside the 9:16 window at this focus for the short shot"
+  ],
+  [
+   "gta6-launch-master.mp4",
+   55.25,
+   "looked at 18 Nov 13:50Z: the subject (the pair, the biplane, the silhouettes) stays inside the 9:16 window at this focus for the short shot"
+  ],
+  [
+   "gta6-launch-master.mp4",
+   36.55,
+   "looked at 18 Nov 13:50Z: the subject (the pair, the biplane, the silhouettes) stays inside the 9:16 window at this focus for the short shot"
+  ],
+  [
+   "gta6-launch-master.mp4",
+   40.5,
+   "looked at 18 Nov 13:50Z: the subject (the pair, the biplane, the silhouettes) stays inside the 9:16 window at this focus for the short shot"
+  ],
+  [
+   "gta6-launch-master.mp4",
+   67.15,
+   "looked at 18 Nov 13:50Z: the subject (the pair, the biplane, the silhouettes) stays inside the 9:16 window at this focus for the short shot"
+  ]
+ ]
 }
