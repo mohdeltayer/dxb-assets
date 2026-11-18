@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-18T13:52:05Z",
- "seq": 614,
+ "generated_at": "2026-11-18T14:52:06Z",
+ "seq": 615,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -460,68 +460,22 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 574
-  },
-  {
-   "id": 16425,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Popucom - Launch Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=E2ocAP67VU0",
-   "published": "2026-11-17T14:00Z",
-   "first_seen": "2026-11-17T14:15:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/E2ocAP67VU0/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=E2ocAP67VU0"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 572
-  },
-  {
-   "id": 16416,
-   "source": "PlayStation Blog",
-   "source_kind": "official",
-   "title": "First details on MLB The Show 27",
-   "url": "https://blog.playstation.com/2026/11/17/first-details-on-mlb-the-show-27/",
-   "published": "2026-11-17T14:00Z",
-   "first_seen": "2026-11-17T14:05:14Z",
-   "media": [
-    {
-     "type": "video",
-     "url": "https://blog.playstation.com/uploads/2048/11/63136167e48828c4a8ad3b34e1c0b5b9e91d2463.mp4"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55654769387_8d80d032f8_4k.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55656175415_a0fd1826d2_h.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 571
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-18T13:50:05Z",
+  "last_poll_at": "2026-11-18T14:50:05Z",
   "sources_enabled": 100,
   "sources_ok": 92,
   "sources_failing": 8,
   "failed": [
    "Arab Hardware (AR) (URLError: <urlopen error _ssl.c:983: The handshake operation timed out>, 3x)",
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 110x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 111x)",
    "Nintendo of America (X) (HTTP 429, 76x)",
-   "PlayStation (X) (HTTP 429, 8x)",
+   "PlayStation (X) (HTTP 429, 9x)",
    "PlayStation Middle East (X) (HTTP 429, 19x)",
    "Rockstar Games (X) (HTTP 429, 6x)",
-   "The Game Awards (HTTP 403, 29x)",
+   "The Game Awards (HTTP 403, 30x)",
    "Xbox (X) (HTTP 429, 96x)"
   ]
  }
