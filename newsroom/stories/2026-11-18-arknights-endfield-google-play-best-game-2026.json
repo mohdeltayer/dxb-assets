@@ -57,5 +57,25 @@
   "hits": [
    "2026-10-06-arknights-endfield-steam"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/arknights-endfield-google-play-best-game-2026-reel-v1.mp4",
+  "blob": "e7fc3f3c7e19e951c8b92c3a43e86ec202b71ba1",
+  "at": "2026-11-18T19:23:55Z",
+  "note": "readable, makes sense",
+  "checklist": {
+   "job": "jobs/live/arknights-endfield-google-play-best-game-2026.json",
+   "sha256": "bd6e9420e9589f5c73017fc1c82d6dfe88f9d31d039826ab59c7fb3b3c7d9340",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "headline and four lines whole, Latin names correct, stylised anime footage, no overlap"
  }
 }
