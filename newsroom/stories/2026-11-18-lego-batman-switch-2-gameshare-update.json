@@ -53,11 +53,32 @@
   "built_at": "2026-11-18T20:11:42Z"
  },
  "ledger_find": {
-  "at": "2026-11-18T20:11:42Z",
+  "at": "2026-11-18T20:39:45Z",
   "words": [
    "lego",
-   "batman"
+   "batman",
+   "gameshare"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/lego-batman-switch-2-gameshare-update-reel-v1.mp4",
+  "blob": "81afe822edd178a17c7d9b7a1187bf84e8cb6640",
+  "at": "2026-11-18T20:40:05Z",
+  "note": "Captions chunked and match spoken script; official Steam trailer LEGO footage; two brief black dips, no graphic content; end card present.",
+  "checklist": {
+   "job": "jobs/live/lego-batman-switch-2-gameshare-update.json",
+   "sha256": "1f39ae8f9aa49438f61831b03ae4826b8429870a7e6a024083c15519eda4e638",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Look frames show the Arabic headline card over LEGO Batman suit close-up with a تقرير chip, then Arabic captions about GameShare on Switch 2 and online play via GameChat over LEGO Batman gameplay footage with Steam source tag, all legible and unflipped."
  }
 }
