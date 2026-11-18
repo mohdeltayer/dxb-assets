@@ -85632,5 +85632,194 @@
   "sound": "bed:neon_e (trailer sound refused: music only 17.6% of the track (< 40.0%))",
   "footage": true,
   "upload_secs": 5.0
+ },
+ {
+  "name": "infinity-nikki-maye-musk-cicia-preview-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-18T01:24Z",
+  "stages": {
+   "checks": 4.7,
+   "montage": 35.0,
+   "text": 36.9,
+   "audio": 1.3,
+   "outro": 21.2
+  },
+  "total": 99.1,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-18T01:23Z",
+  "finished_at": "2026-11-18T01:24Z",
+  "render_min": 1.65,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "infinity-nikki-maye-musk-cicia-preview-infinity-nikki-version-2-11-outfit-preview-snowbloom-wishson.mp4",
+    "start": 11.88,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.77,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "infinity-nikki-maye-musk-cicia-preview-infinity-nikki-version-2-11-outfit-preview-snowbloom-wishson.mp4",
+    "start": 39.75,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.77,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "infinity-nikki-maye-musk-cicia-preview-infinity-nikki-version-2-11-outfit-preview-snowbloom-wishson.mp4",
+    "start": 41.95,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.77,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "infinity-nikki-maye-musk-cicia-preview-infinity-nikki-version-2-11-outfit-preview-snowbloom-wishson.mp4",
+    "start": 65.45,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.77,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "infinity-nikki-maye-musk-cicia-preview-infinity-nikki-version-2-11-outfit-preview-snowbloom-wishson.mp4",
+    "start": 84.71,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.77,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "infinity-nikki-maye-musk-cicia-preview-infinity-nikki-version-2-11-outfit-preview-snowbloom-wishson.mp4",
+    "start": 87.24,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.77,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "infinity-nikki-maye-musk-cicia-preview-infinity-nikki-version-2-11-outfit-preview-snowbloom-wishson.mp4",
+    "start": 89.44,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.77,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "infinity-nikki-maye-musk-cicia-preview-infinity-nikki-version-2-11-outfit-preview-snowbloom-wishson.mp4",
+    "start": 99.94,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.77,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "infinity-nikki-maye-musk-cicia-preview-infinity-nikki-version-2-11-outfit-preview-snowbloom-wishson.mp4",
+    "start": 113.48,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.77,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 11.1,
+   "audio_secs": 49.1,
+   "music_pct": 40.3,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 7
+   },
+   "effects_shots": 9,
+   "mix_secs": 3.7,
+   "secs": 15.9
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 4.79,
+   "held_under_text": 0.0,
+   "secs": 18.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 30.7,
+   "shots": 0.0,
+   "checks": 27.0,
+   "render": 115.3,
+   "after": 54.2
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 228,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1172,
+  "peak_mem_mb": 2792,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 51010,
+  "peak_disk_mb": 54627,
+  "min_disk_free_mb": 191479,
+  "setup_min": 0.2,
+  "story": "infinity-nikki-maye-musk-cicia-preview",
+  "job_sha": "b726c3fb6b1fdd347be845d24770e06178669d82",
+  "dispatches": 1,
+  "sound": "trailer",
+  "footage": true
  }
 ]
