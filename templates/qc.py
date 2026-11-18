@@ -43,7 +43,10 @@ sys.path.insert(0, HERE)
 
 NOTE = re.compile(r'^(?:source quality|first frame|cover picture|speech check|design pass|render_job: (?:audio split|lifeless|design pass)'
                   r'|smear check|weak-source path|text check \(estimate\)|pace|length|close|collision|autofocus: profile)[: ].*', re.I)
-ERR = re.compile(r'(?:Error|ValueError|SystemExit|refused|FAILED|text check: \d+ problem|  - )', re.I)
+ERR = re.compile(r'(?:Error|ValueError|SystemExit|refused|FAILED|text check: \d+ problem|  - |^autoshots: |no free clean stretch)', re.I)
+# Optional-model warnings are not why a render stops (18 Nov 2026: the face model's "ModuleNotFoundError: mediapipe" line
+# was reported as the only finding of five failed renders, while autoshots had refused for 0 clean stretches).
+WARN = re.compile(r'(?:face model unavailable|faces not measured)', re.I)
 
 
 def _log_lines(path):
@@ -275,7 +278,7 @@ def fail(job, qc_path, log=None):
                 found += [dict(p, check='text') for p in json.loads(s[len('TEXTCHECK_JSON: '):]).get('problems', [])]
             except ValueError:
                 pass
-        elif ERR.search(s) and len(found) < 80 and not s.startswith('TEXTCHECK_JSON'):
+        elif ERR.search(s) and not WARN.search(s) and len(found) < 80 and not s.startswith('TEXTCHECK_JSON'):
             found.append({'check': 'render', 'detail': s[:400]})
     d = {'name': job.get('name'), 'verdict': 'fail', 'at': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
          'findings': found, 'job_sha': os.environ.get('JOB_SHA'), 'shot_read': shot_read(log)}
