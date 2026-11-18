@@ -3743,3 +3743,12 @@ bed with the reason as qc's sound (render_job.bed_under), never a hold. Nothing 
 Test (17 Nov): 4 of 5 rendered, 4.5 to 11.4 minutes of render job plus about a minute of slip build; Slay the Spire 2 failed
 by name (card-game UI text, 7 clean stretches for 15 shots). Open before live use (release note): shots in step with the
 trailer track so its own sound plays (3 of 4 fell back to the bed), bed rotation across parallel jobs, a flag over five beats.
+
+## Physical copy is «نسخة مطبوعة» (Mohammad, 18 Nov 2026)
+
+A physical, boxed or retail copy of a game is «نسخة مطبوعة» («النسخة المطبوعة»، «تصدر في نسخة مطبوعة»), never «ورقية» or
+«ورقيًا», which read as a paper edition (the Sea of Stars Reel of 17 Nov). Glossary row [games] and names-ar section 2
+(replacing the 30 Sep row). `textrules.house_words` refuses both forms, with or without ال and prefixes, in the headline,
+lines, strip, credits, card texts, spoken paragraph and post texts of a job, and in a slip's texts; a story really about
+paper waives it with "paper_ok": "<reason>". Editorial memory entry 17 Nov.
+

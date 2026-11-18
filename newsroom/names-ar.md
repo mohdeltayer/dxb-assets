@@ -233,7 +233,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Countdown | باقي 23 يومًا، باقي يومان، باقي يوم واحد | يتبقى | Approved 11 Oct |
 | Hands on (chip) | نظرة أولى (fallback انطباعات) | تجربة | Approved 26 Sep |
 | Silent hardware revision | تعديل خفي | تعديل صامت | Approved 3 Oct |
-| Physical edition | leave it out, or name what the reader holds | النسخة المادية | Approved 30 Sep |
+| Physical edition / physical copy / boxed copy | نسخة مطبوعة (النسخة المطبوعة، تصدر في نسخة مطبوعة) | ورقية، ورقيًا، النسخة المادية | Approved 18 Nov (Mohammad; replaces the 30 Sep row; refused by the text check) |
 | UAE price | the dirham symbol left of the digits; درهمًا in written text | AED beside the symbol | Approved 30 Sep |
 | Steam in a country | متجر Steam في الإمارات | متجر Steam الإمارات | Suggested 29 Sep |
 | Docked / handheld (Switch) | وضع التلفاز / الوضع المحمول | وضع الإرساء | Suggested 27 Sep |

@@ -850,3 +850,7 @@ render-times.json). H (server QC verdict) and I (parallel runners) follow as the
 2. No + or % sign in headline or spoken text; unknown bracketed names are flagged; people stories go to Production 1.
 3. A refused trailer mix on a slip ships on our bed with the reason in qc's sound (split_fallback bed); not yet for live
    news until shots follow the trailer track (release note r5, open item 1).
+
+## Physical copy (18 Nov 2026)
+A physical copy of a game is «نسخة مطبوعة», never «ورقية» or «ورقيًا»; the text check refuses both (waiver "paper_ok").
+

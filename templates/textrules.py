@@ -31,6 +31,22 @@ import sys
 ARABIC = re.compile('[؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿]')
 GLUED = re.compile('[ء-يـ][A-Za-z0-9]')
 # a % or + touching a digit or a Latin letter, on either side
+# House words (arabic/house-glossary.md, newsroom/names-ar.md section 2). A physical, boxed or retail copy of a game is
+# «نسخة مطبوعة», never «ورقية» or «ورقيًا», which read as a paper edition (Mohammad, 18 Nov 2026, after the Sea of Stars
+# Reel of 17 Nov). Matches the word with or without ال and a one-letter prefix (و ب ل ف), and the tanwin forms.
+PAPER = re.compile('(?<![\u0621-\u064A])[وبلفك]{0,2}(?:ال)?ورقي(?:ة|ه|ًا|اً|ا|ات)?(?![\u0621-\u064A])')
+PAPER_FIX = ('a physical copy of a game is «نسخة مطبوعة» («النسخة المطبوعة»، «تصدر في نسخة مطبوعة»), never «ورقية» or '
+             '«ورقيًا», which read as a paper edition; a story really about paper waives it with "paper_ok": "<reason>"')
+
+
+def house_words(where, text, out, job=None):
+    """The glossary's refused words in one text (hard findings)."""
+    if job and len(str(job.get('paper_ok') or '').strip()) >= 10:
+        return
+    for m in PAPER.finditer(str(text or '')):
+        out.append({'where': where, 'rule': 'house_word', 'text': m.group(0), 'fix': PAPER_FIX})
+
+
 SIGN = re.compile(r'(?:(?<=[0-9A-Za-z])[%+٪])|(?:[%+٪](?=[0-9A-Za-z]))')
 LEAD = '«"“‏( '
 HEAD_CHARS = 22          # estimate: «لعبة Warhammer Survivors» (24) did not fit one line at 100 px on 10 Nov
@@ -300,9 +316,40 @@ def check(job):
                     out.append({'where': f'line {k + 1}', 'rule': 'reading', 'text': text.split('\n')[0],
                                 'fix': f'on screen {z - a:.1f} s of the {need:.1f} s it needs: add {need - (z - a):.1f} s of '
                                        'related footage to its shots, shorten it, or move it'})
+    for where, text in _all_texts(job):
+        house_words(where, text, out, job)
     out += head_problems(job)
     out += [f for f in spoken_problems(job) if not (job.get('_gate_spoken') and f['rule'] == 'spoken_missing')]
     return out
+
+
+def _all_texts(job):
+    """Every text a job puts on screen or in a post: headline, lines, strip, credits, card texts, spoken, post texts."""
+    yield 'headline', job.get('headline') or ''
+    n = 0
+    for grp in job.get('lines') or []:
+        if isinstance(grp, (list, tuple)) and len(grp) >= 3:
+            for text, _ in _texts(grp[2]):
+                n += 1
+                yield f'line {n}', text
+    for i, it in enumerate(job.get('strip') or [], 1):
+        if isinstance(it, (list, tuple)):
+            for x in it[:2]:
+                if isinstance(x, str):
+                    yield f'strip {i}', x
+    for i, c in enumerate(job.get('credits') or [], 1):
+        if isinstance(c, (list, tuple)) and len(c) > 2:
+            yield f'credit {i}', c[2]
+    for i, g in enumerate(job.get('gfx') or [], 1):
+        if isinstance(g, dict):
+            for k, v in g.items():
+                if isinstance(v, str):
+                    yield f'gfx {i} {k}', v
+    if job.get('spoken'):
+        yield 'spoken', job['spoken']
+    for k, v in (job.get('texts') or {}).items():
+        if isinstance(v, str):
+            yield f'texts {k}', v
 
 
 def hard(findings):

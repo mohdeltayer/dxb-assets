@@ -55,6 +55,7 @@ class Problems(unittest.TestCase):
             'last line': slip(instagram='تحديث كبير للعبة Test Game.'),
             'person': slip(subject_person={'name': 'X'}),
             'tier': slip(tier=7),
+            'paper': slip(x='تصدر Test Game في نسخة ورقية.'),
             'sign': slip(headline='صدرت «اللعبة الجديدة+»\nفي Test Game'),
         }
         for what, s in cases.items():

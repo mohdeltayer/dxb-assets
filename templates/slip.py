@@ -140,6 +140,7 @@ def _paragraphs(text):
 def problems(slip, now=None):
     """Refusals: a slip with any of these is marked failed, with the reasons."""
     now = now or dt.datetime.now(UTC)
+    import textrules as TR
     out = []
     missing = [k for k in REQUIRED if slip.get(k) in (None, '', [])]
     if missing:
@@ -183,6 +184,9 @@ def problems(slip, now=None):
             out.append(f'{field}: an em dash (house rule: none)')
         if ARABIC_INDIC.search(text):
             out.append(f'{field}: Arabic-Indic digits (house rule: Western digits)')
+        hw = []
+        TR.house_words(field, text, hw, slip)
+        out += [f"{field}: «{f['text']}»: {f['fix']}" for f in hw]
         if field in ('headline', 'spoken') and re.search(r'[+%](?=[»"\s.،]|$)', text):
             out.append(f'{field}: a + or % sign flips to the far side in right-to-left text; spell it out '
                        '(New Game Plus, «بالمئة») (Dawnwalker test, 17 Nov)')
