@@ -1,15 +1,26 @@
 {
  "id": "2026-11-18-coral-island-switch-2-december-7",
- "state": "failed",
- "problems": [
-  "headline: paragraph 2 starts with 'Switch 2 في 7 ديسمبر'; every paragraph starts with an Arabic word",
-  "instagram: paragraph 1 starts with 'Coral Island قادمة إ'; every paragraph starts with an Arabic word",
-  "x: paragraph 1 starts with 'Coral Island قادمة إ'; every paragraph starts with an Arabic word",
-  "threads: paragraph 1 starts with 'Coral Island قادمة إ'; every paragraph starts with an Arabic word"
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "ledger: earlier stories on this game: 2026-10-17-coral-island-switch-2-winter (an update or a duplicate? the editor decides)"
  ],
- "flags": [],
- "at": "2026-11-18T19:10:29Z",
- "run": "44377586601",
+ "at": "2026-11-18T19:20:03Z",
+ "footage": {
+  "name": "Coral Island 1.3 “Ocean & Kisses” Update Trailer",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60.0,
+  "mbps": 5.7,
+  "rows": 1080,
+  "duration": 120.04,
+  "decode_clean": true
+ },
+ "job": "jobs/live/coral-island-switch-2-december-7.json",
+ "story": "newsroom/stories/2026-11-18-coral-island-switch-2-december-7.json",
+ "lines": 7,
+ "shots": 16,
+ "run": "44379320266",
  "lane": "live",
- "build_secs": 20
+ "build_secs": 63
 }
