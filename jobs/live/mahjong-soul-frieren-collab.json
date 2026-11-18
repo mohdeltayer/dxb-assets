@@ -1,0 +1,146 @@
+{
+ "name": "mahjong-soul-frieren-collab",
+ "story": "2026-11-18-mahjong-soul-frieren-collab",
+ "kind_news": "reveal",
+ "built_by": "server-slip",
+ "render_lane": "server",
+ "out": "cards/2026-11/mahjong-soul-frieren-collab-reel-v1.mp4",
+ "split_fallback": "bed",
+ "footage": [
+  {
+   "file": "mahjong-soul-frieren-collab-trailer-en.mp4",
+   "steam": 2739990,
+   "trailer": "Trailer EN",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "2739990"
+  }
+ ],
+ "shots": [
+  [
+   "mahjong-soul-frieren-collab-trailer-en.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "mahjong-soul-frieren-collab-trailer-en.mp4",
+   "auto",
+   2.46,
+   null
+  ],
+  [
+   "mahjong-soul-frieren-collab-trailer-en.mp4",
+   "auto",
+   2.46,
+   null
+  ],
+  [
+   "mahjong-soul-frieren-collab-trailer-en.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "mahjong-soul-frieren-collab-trailer-en.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "mahjong-soul-frieren-collab-trailer-en.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "mahjong-soul-frieren-collab-trailer-en.mp4",
+   "auto",
+   2.2,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "تدخل اللعبة شخصيات فريرين\nوفيرن وشتارك وأوبل،",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "مع أزياء متحركة وتأثيرات سحرية",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "ويستمر التعاون حتى 8 ديسمبر",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: مجونغ سول (Mahjong Soul) على Steam",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "بدأ تعاون لعبة Mahjong Soul مع أنمي فريرين (Frieren)، حسب الإعلان الرسمي على Steam. تدخل اللعبة شخصيات فريرين وفيرن وشتارك وأوبل، مع أزياء متحركة وتأثيرات سحرية. ويستمر التعاون حتى 8 ديسمبر.",
+ "headline": "فريرين تدخل\nلعبة Mahjong Soul",
+ "label": "رسمي",
+ "source": "مجونغ سول (Mahjong Soul) على Steam",
+ "date": "18 Nov 2026",
+ "theme": "stylized",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "mahjong-soul-frieren-collab-trailer-en.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": null,
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "footage": "mahjong-soul-frieren-collab-trailer-en.mp4 from the resolver (steam:2739990)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (audio split per shot)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Steam Community Announcements, Mahjong Soul X Frieren: Beyond Journey's End Collab, 18 Nov 2026 03:00Z (https://store.steampowered.com/news/app/2739990); first report: Mahjong Soul official Steam announcement, 18 Nov 2026 03:00Z; Denfaminico Gamer followed 18 Nov 05:26Z",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 2739990 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ }
+}
