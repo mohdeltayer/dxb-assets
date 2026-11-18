@@ -1,14 +1,28 @@
 {
  "id": "2026-11-18-rayman-legends-retold-bts-dynamite-level",
- "state": "failed",
- "problems": [
-  "footage: no decode-clean official video from the footage source (https://www.nintendo.com/us/store/products/rayman-legends-retold-switch-2/; 0 found)"
- ],
+ "state": "built",
+ "problems": [],
  "flags": [
-  "name not in names-ar: «لفرقة بي تي إس (BTS)» (instagram); add it there as Proposed"
+  "name not in names-ar: «لفرقة بي تي إس (BTS)» (instagram); add it there as Proposed",
+  "text fixed mechanically: line 4: space after a glued prefix",
+  "ledger: earlier stories on this game: 2026-09-27-rayman-legends-retold, 2026-10-28-rayman-legends-retold-astro-bot-costume (an update or a duplicate? the editor decides)"
  ],
- "at": "2026-11-18T18:09:21Z",
- "run": "44366477250",
+ "at": "2026-11-18T18:20:05Z",
+ "footage": {
+  "name": "Reveal Trailer",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60.0,
+  "mbps": 5.77,
+  "rows": 1080,
+  "duration": 120.04,
+  "decode_clean": true
+ },
+ "job": "jobs/live/rayman-legends-retold-bts-dynamite-level.json",
+ "story": "newsroom/stories/2026-11-18-rayman-legends-retold-bts-dynamite-level.json",
+ "lines": 5,
+ "shots": 12,
+ "run": "44368463227",
  "lane": "live",
- "build_secs": 26
+ "build_secs": 54
 }
