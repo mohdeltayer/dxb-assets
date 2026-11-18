@@ -2,20 +2,7 @@
  "name": "hypernet-explorer-early-access-steam",
  "out": "cards/2026-11/hypernet-explorer-early-access-steam-reel-v1.mp4",
  "verdict": "pass",
- "warnings": [
-  {
-   "stage": "build gate",
-   "detail": "report brief: angle \"why_now\" has 0 words (at least 8): say what the sighting usually means, the precedent and what is not confirmed, or it is not a Reel"
-  },
-  {
-   "stage": "build gate",
-   "detail": "report brief: angle \"what_it_means_here\" has 0 words (at least 8): say what the sighting usually means, the precedent and what is not confirmed, or it is not a Reel"
-  },
-  {
-   "stage": "build gate",
-   "detail": "spoken: 4 sentences: the paragraph is 2 to 3 sentences, each ending on a full stop"
-  }
- ],
+ "warnings": [],
  "ladder": [
   {
    "kind": "picture",
@@ -105,18 +92,18 @@
    "kind": "sound",
    "slot": "reel",
    "step": "c",
-   "why": "audio split not applied (music stem not clean (leftover 23.4% > 5.0%)) on a trailer track under 14 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or"
+   "why": "audio split not applied (music stem not clean (leftover 23.3% > 5.0%)) on a trailer track under 14 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or"
   }
  ],
- "job_to_pass_min": 9.9,
- "at": "2026-11-18T22:20:10Z",
+ "job_to_pass_min": 18.5,
+ "at": "2026-11-18T23:29:48Z",
  "findings": [],
  "notes": [
   "first frame: shot 0 hypernet-explorer-early-access-steam-early-access-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
-  "length 31.4 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 23.4% > 5.0%); music_pct 12.9; leak_pct 23.4; cache {'hit': 0, 'miss': 5}; separate_secs 41.3; secs 58.0",
+  "length 30.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 23.3% > 5.0%); music_pct 12.9; leak_pct 23.3; cache {'hit': 1, 'miss': 5}; separate_secs 32.7; secs 47.6",
   "render_job: audio split fallback: our bed (ValueError: the trailer mix would not match the picture); bed:neon_c",
-  "render_job: lifeless: {\"score\": 2.5, \"still_share\": 0.013, \"longest_still\": 0.4, \"cuts_per_10s\": 7.03, \"held_under_text\": 0.016, \"secs\": 31.3, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: lifeless: {\"score\": 2.6, \"still_share\": 0.013, \"longest_still\": 0.4, \"cuts_per_10s\": 6.69, \"held_under_text\": 0.02, \"secs\": 29.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [
   {
@@ -135,7 +122,7 @@
   {
    "where": "shot 1",
    "rule": "auto_shots",
-   "what": "hypernet-explorer-early-access-steam-early-access-trailer.mp4 at 75.35 s for 2.5 s, focus 0.528"
+   "what": "hypernet-explorer-early-access-steam-early-access-trailer.mp4 at 75.35 s for 2.2 s, focus 0.528"
   },
   {
    "where": "shot 0",
@@ -145,52 +132,52 @@
   {
    "where": "shot 2",
    "rule": "auto_shots",
-   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 37.92 s for 2.5 s, focus 0.569 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
+   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 47.05 s for 2.2 s, focus 0.478 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
   },
   {
    "where": "shot 3",
    "rule": "auto_shots",
-   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 47.05 s for 2.2 s, focus 0.478 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
+   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 38.20 s for 2.2 s, focus 0.569 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
   },
   {
    "where": "shot 4",
    "rule": "auto_shots",
-   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 30.15 s for 2.2 s, focus 0.52 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
+   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 35.93 s for 2.2 s, focus 0.569 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
   },
   {
    "where": "shot 5",
    "rule": "auto_shots",
-   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 27.18 s for 2.7 s, focus 0.496 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
+   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 30.15 s for 2.2 s, focus 0.52 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
   },
   {
    "where": "shot 6",
    "rule": "auto_shots",
-   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 85.80 s for 2.7 s, focus 0.378 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
+   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 27.65 s for 2.2 s, focus 0.496 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
   },
   {
    "where": "shot 7",
    "rule": "auto_shots",
-   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 79.70 s for 2.2 s, focus 0.812 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
+   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 85.80 s for 2.7 s, focus 0.378 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
   },
   {
    "where": "shot 8",
    "rule": "auto_shots",
-   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 97.95 s for 2.2 s, focus 0.505 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
+   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 23.19 s for 2.7 s, focus 0.422 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
   },
   {
    "where": "shot 9",
    "rule": "auto_shots",
-   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 23.66 s for 2.2 s, focus 0.422 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
+   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 79.70 s for 2.2 s, focus 0.812 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
   },
   {
    "where": "shot 10",
    "rule": "auto_shots",
-   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 33.73 s for 2.2 s, focus 0.781 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
+   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 97.95 s for 2.2 s, focus 0.505 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
   },
   {
    "where": "shot 11",
    "rule": "auto_shots",
-   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 21.36 s for 2.2 s, focus 0.422 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
+   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 33.73 s for 2.2 s, focus 0.781 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
   },
   {
    "where": "shot 12",
@@ -200,15 +187,15 @@
   {
    "where": "shot 13",
    "rule": "auto_shots",
-   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 13.54 s for 2.6 s, focus 0.476 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
+   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 13.98 s for 2.2 s, focus 0.476 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
   },
   {
    "where": "shot 14",
    "rule": "auto_shots",
-   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 102.50 s for 2.6 s, focus 0.429 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
+   "what": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4 at 102.50 s for 2.2 s, focus 0.429 (nothing free in hypernet-explorer-early-access-steam-early-access-trailer.mp4)"
   },
   {
-   "where": "shot 3",
+   "where": "shot 2",
    "rule": "shot_timing",
    "what": "moved from 47.05 to 47.80 s, the nearest clean start of the same 2.20 s",
    "before": [
@@ -235,7 +222,7 @@
    ]
   },
   {
-   "where": "shot 8",
+   "where": "shot 10",
    "rule": "shot_timing",
    "what": "moved from 97.95 to 98.20 s, the nearest clean start of the same 2.20 s",
    "before": [
@@ -262,7 +249,7 @@
    ]
   },
   {
-   "where": "shot 10",
+   "where": "shot 11",
    "rule": "shot_timing",
    "what": "moved from 33.73 to 32.98 s, the nearest clean start of the same 2.20 s",
    "before": [
@@ -287,10 +274,44 @@
      ]
     ]
    ]
+  },
+  {
+   "where": "shot 3",
+   "rule": "subject_drift",
+   "what": "trimmed to 1.00 s, its longest safe length before the subject leaves the 9:16 window",
+   "before": [
+    "hypernet-explorer-early-access-steam-launch-date-trailer.mp4",
+    38.2,
+    2.21,
+    [
+     [
+      0.0,
+      0.569
+     ]
+    ]
+   ],
+   "after": [
+    "hypernet-explorer-early-access-steam-launch-date-trailer.mp4",
+    38.2,
+    1.0,
+    [
+     [
+      0.0,
+      0.569
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 4",
+   "rule": "fill",
+   "what": "lengthened 2.21 to 3.42 s to keep the time shot 3 gave up",
+   "before": 2.21,
+   "after": 3.42
   }
  ],
- "job_sha": "2d33e6b790f5ba5aae42f19784ed9677f4d5fec5",
- "dispatches": 2,
+ "job_sha": "009575ca30859c5e3f46abff08b8c65383a6c7b0",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.79,
@@ -304,31 +325,31 @@
   "cards/2026-11/hypernet-explorer-early-access-steam-look-3.jpg"
  ],
  "person_shown": "n/a",
- "sound": "bed:neon_c (trailer sound refused: music stem not clean (leftover 23.4% > 5.0%))",
+ "sound": "bed:neon_c (trailer sound refused: music stem not clean (leftover 23.3% > 5.0%))",
  "shot_read": {
-  "secs": 87.5,
+  "secs": 85.9,
   "files": {
    "hypernet-explorer-early-access-steam-early-access-trailer.mp4": {
-    "secs": 34.1,
+    "secs": 32.8,
     "cached": false,
     "stages": {
-     "decode": 13.6,
-     "autofocus": 29.1,
-     "ocr": 29.1,
-     "smear": 33.8,
-     "scenes": 34.0
+     "decode": 13.2,
+     "autofocus": 27.7,
+     "ocr": 27.7,
+     "smear": 32.6,
+     "scenes": 32.8
     },
     "incomplete": null
    },
    "hypernet-explorer-early-access-steam-launch-date-trailer.mp4": {
-    "secs": 53.5,
+    "secs": 53.1,
     "cached": false,
     "stages": {
-     "decode": 26.7,
-     "autofocus": 43.8,
-     "ocr": 43.8,
-     "smear": 53.1,
-     "scenes": 53.4
+     "decode": 25.3,
+     "autofocus": 42.7,
+     "ocr": 42.7,
+     "smear": 52.8,
+     "scenes": 53.1
     },
     "incomplete": null
    }
@@ -336,15 +357,14 @@
  },
  "job_path": "jobs/done/hypernet-explorer-early-access-steam.json",
  "stage_minutes": {
-  "queue": 0.03,
+  "queue": 9.23,
   "setup": 0.18,
-  "fetch": 0.55,
-  "shots": 1.48,
-  "checks": 1.91,
-  "render": 4.27,
-  "after": 1.27,
-  "upload": 0.08,
-  "job": 9.48
+  "fetch": 0.36,
+  "shots": 1.45,
+  "checks": 2.11,
+  "render": 3.82,
+  "after": 1.17,
+  "job": 8.92
  },
  "job_after_autofix": {
   "name": "hypernet-explorer-early-access-steam",
@@ -360,16 +380,12 @@
     "file": "hypernet-explorer-early-access-steam-early-access-trailer.mp4",
     "steam": 4193010,
     "trailer": "Early Access trailer",
-    "start": 0,
-    "seconds": 120,
     "trailer_id": "4193010"
    },
    {
     "file": "hypernet-explorer-early-access-steam-launch-date-trailer.mp4",
     "steam": 4193010,
     "trailer": "Launch date trailer",
-    "start": 0,
-    "seconds": 120,
     "trailer_id": "4193010"
    }
   ],
@@ -388,22 +404,11 @@
    [
     "hypernet-explorer-early-access-steam-early-access-trailer.mp4",
     75.35,
-    2.49,
+    2.2,
     [
      [
       0.0,
       0.528
-     ]
-    ]
-   ],
-   [
-    "hypernet-explorer-early-access-steam-launch-date-trailer.mp4",
-    37.92,
-    2.49,
-    [
-     [
-      0.0,
-      0.569
      ]
     ]
    ],
@@ -420,6 +425,28 @@
    ],
    [
     "hypernet-explorer-early-access-steam-launch-date-trailer.mp4",
+    38.2,
+    1.0,
+    [
+     [
+      0.0,
+      0.569
+     ]
+    ]
+   ],
+   [
+    "hypernet-explorer-early-access-steam-launch-date-trailer.mp4",
+    35.93,
+    3.42,
+    [
+     [
+      0.0,
+      0.569
+     ]
+    ]
+   ],
+   [
+    "hypernet-explorer-early-access-steam-launch-date-trailer.mp4",
     30.15,
     2.2,
     [
@@ -431,8 +458,8 @@
    ],
    [
     "hypernet-explorer-early-access-steam-launch-date-trailer.mp4",
-    27.18,
-    2.67,
+    27.65,
+    2.2,
     [
      [
       0.0,
@@ -448,6 +475,17 @@
      [
       0.0,
       0.378
+     ]
+    ]
+   ],
+   [
+    "hypernet-explorer-early-access-steam-launch-date-trailer.mp4",
+    23.19,
+    2.67,
+    [
+     [
+      0.0,
+      0.422
      ]
     ]
    ],
@@ -475,34 +513,12 @@
    ],
    [
     "hypernet-explorer-early-access-steam-launch-date-trailer.mp4",
-    23.66,
-    2.2,
-    [
-     [
-      0.0,
-      0.422
-     ]
-    ]
-   ],
-   [
-    "hypernet-explorer-early-access-steam-launch-date-trailer.mp4",
     32.98,
     2.2,
     [
      [
       0.0,
       0.781
-     ]
-    ]
-   ],
-   [
-    "hypernet-explorer-early-access-steam-launch-date-trailer.mp4",
-    21.36,
-    2.2,
-    [
-     [
-      0.0,
-      0.422
      ]
     ]
    ],
@@ -519,8 +535,8 @@
    ],
    [
     "hypernet-explorer-early-access-steam-launch-date-trailer.mp4",
-    13.54,
-    2.64,
+    13.98,
+    2.2,
     [
      [
       0.0,
@@ -531,7 +547,7 @@
    [
     "hypernet-explorer-early-access-steam-launch-date-trailer.mp4",
     102.5,
-    2.64,
+    2.2,
     [
      [
       0.0,
@@ -546,7 +562,7 @@
     2,
     [
      [
-      "صدرت لعبة هايبرنت\nإكسبلورر (Hypernet Explorer)",
+      "صدرت لعبة هايبرنت",
       {
        "size": 54
       }
@@ -558,7 +574,7 @@
     4,
     [
      [
-      "في الوصول المبكر على ستيم",
+      "إكسبلورر (Hypernet Explorer)\nفي الوصول",
       {
        "size": 54
       }
@@ -570,7 +586,7 @@
     6,
     [
      [
-      "تدور في أوروبا بعد انهيار\nالعالم بسبب خلل عام 2000،",
+      "المبكر على ستيم،",
       {
        "size": 54
       }
@@ -582,7 +598,7 @@
     8,
     [
      [
-      "وفيها برج من 92 طابقًا",
+      "وتدور في أوروبا بعد انهيار\nالعالم بسبب خلل عام 2000",
       {
        "size": 54
       }
@@ -594,7 +610,7 @@
     10,
     [
      [
-      "يمكنك التسلق\nنحو القمة أو إدارة",
+      "فيها برج من 92 طابقًا،",
       {
        "size": 54
       }
@@ -606,7 +622,7 @@
     12,
     [
      [
-      "محل بيتزا أو تأسيس حزب سياسي",
+      "ويمكنك التسلق\nنحو القمة أو إدارة",
       {
        "size": 54
       }
@@ -618,7 +634,7 @@
     14,
     [
      [
-      "والمطور يخطط لأربع سنوات\nأو أكثر من الوصول المبكر،",
+      "محل بيتزا أو تأسيس حزب سياسي",
       {
        "size": 54
       }
@@ -637,12 +653,12 @@
     }
    ]
   ],
-  "spoken": "صدرت لعبة هايبرنت إكسبلورر (Hypernet Explorer) في الوصول المبكر على ستيم. تدور في أوروبا بعد انهيار العالم بسبب خلل عام 2000، وفيها برج من 92 طابقًا. يمكنك التسلق نحو القمة أو إدارة محل بيتزا أو تأسيس حزب سياسي. والمطور يخطط لأربع سنوات أو أكثر من الوصول المبكر، حسب موقع غيم سبارك (Game*Spark).",
+  "spoken": "صدرت لعبة هايبرنت إكسبلورر (Hypernet Explorer) في الوصول المبكر على ستيم، وتدور في أوروبا بعد انهيار العالم بسبب خلل عام 2000. فيها برج من 92 طابقًا، ويمكنك التسلق نحو القمة أو إدارة محل بيتزا أو تأسيس حزب سياسي. والمطور يخطط لأربع سنوات أو أكثر من الوصول المبكر، حسب موقع غيم سبارك (Game*Spark).",
   "headline": "لعبة عن عالم دمّره\nخلل عام 2000",
   "label": "تقرير",
   "source": "إيزوتيريك هيفي إندستريز (Esoteric Heavy Industries) على Steam",
   "date": "18 Nov 2026",
-  "theme": "playful",
+  "theme": "spectacle",
   "style": null,
   "template": "trailer",
   "skin": "house",
@@ -652,7 +668,10 @@
    81.91
   ],
   "track_from_first_shot": true,
-  "angle": null,
+  "angle": {
+   "why_now": "Game*Spark reported on 18 Nov that Hypernet Explorer reached Steam early access, with the store page dating the release 17 Nov.",
+   "what_it_means_here": "Players get a Y2K-collapse Europe sim with a 92-floor tower, a pizza shop or a political party to run, and a developer plan of four years or more of early access."
+  },
   "decision_log": {
    "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
    "footage": "hypernet-explorer-early-access-steam-early-access-trailer.mp4 from the resolver (steam:4193010)",
@@ -662,7 +681,7 @@
   "reel_check": {
    "source read and first report noted": "yes: Steam store page, Hypernet Explorer (https://store.steampowered.com/app/4193010/Hypernet_Explorer/); first report: Game*Spark 18 Nov 2026 21:30Z; Steam page release date Nov 17 2026",
    "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
-   "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+   "angle before lines": "yes: angle in the slip",
    "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
    "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
    "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
