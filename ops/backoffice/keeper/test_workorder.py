@@ -140,5 +140,17 @@ class Run(unittest.TestCase):
         self.assertTrue(os.path.exists(os.path.join(d, 'hop.json')))
 
 
+
+class NeverRefuseD(unittest.TestCase):
+    """adv-20261118-templates-never-refuse D: one alarm, no post in 90 minutes by day."""
+    def test_gap_alarm(self):
+        import datetime as _dt
+        U = _dt.timezone.utc
+        now = _dt.datetime(2026, 11, 18, 12, 0, tzinfo=U)          # 16:00 Dubai
+        self.assertEqual(W.gap_alarm([{'at': now - _dt.timedelta(minutes=60)}], now), [])
+        self.assertEqual(W.gap_alarm([{'at': now - _dt.timedelta(minutes=100)}], now)[0]['kind'], 'gap')
+        night = _dt.datetime(2026, 11, 18, 23, 0, tzinfo=U)         # 03:00 Dubai
+        self.assertEqual(W.gap_alarm([], night), [])
+
 if __name__ == '__main__':
     unittest.main()

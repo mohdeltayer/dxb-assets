@@ -277,8 +277,17 @@ def assess(row, now, mode, pub=None):
     return a
 
 
+PROMISE_MAX_DAYS = 3        # adv-20261118-templates-never-refuse D: a promise whose slot is over 3 days old is cleared
+
+
+def expired(row, now):
+    slot = parse_time(row.get('slot'))
+    return bool(slot) and now - slot > timedelta(days=PROMISE_MAX_DAYS)
+
+
 def summarise(rows, now, mode, pubs=None):
     pubs = pubs or {}
+    rows = [r for r in rows if not expired(r, now)]
     assessed = [assess(r, now, mode, pubs.get(r.get('id'))) for r in rows]
     open_rows = [a for a in assessed if a['stage'] not in ('closed', 'published')]
     overdue = [a for a in open_rows if a['stage'] == 'slot passed, not scheduled']

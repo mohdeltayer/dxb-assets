@@ -671,11 +671,31 @@ def recent_renders(times, n=5):
     return out
 
 
+GAP_ALARM_MIN = 90          # adv-20261118-templates-never-refuse D: the one alarm, no post in 90 minutes by day
+DAY_HOURS = (8, 24)         # Dubai
+
+
+def gap_alarm(posts, now):
+    """The one alarm that matters: by day in Dubai, no post published or due in the last GAP_ALARM_MIN minutes."""
+    d = now.astimezone(DUBAI)
+    if not DAY_HOURS[0] <= d.hour < DAY_HOURS[1]:
+        return []
+    past = [p['at'] for p in posts if p.get('at') and p['at'] <= now]
+    last = max(past) if past else None
+    if last and now - last <= dt.timedelta(minutes=GAP_ALARM_MIN):
+        return []
+    return [{'key': 'gap|' + d.strftime('%Y%m%d%H'), 'kind': 'gap',
+             'line': 'no post in the last %d minutes by day (last %s)' % (GAP_ALARM_MIN, dub(last) if last else 'none on record'),
+             'clears': 'a post: the next verified story, built on the template with its fallbacks'}]
+
+
 def build(board, now, posts, orders=None, mirror=None, digest=None, server=None, history=None, server_at=None, times=None,
           incomplete=None):
     unfin = unfinished(incomplete, now)
-    alarms = (hop_alarms(board, now, posts, mirror, server, history, server_at) + dispatch_alarms(times, now)
-              + bed_alarms(times, now) + incomplete_alarms(unfin))
+    # adv-20261118-templates-never-refuse D: one alarm (gap); the hop checks, unfinished rows and render counts are notes,
+    # the bed streak and the render-count alarm are dropped (the templates never refuse, sound falls back on its own)
+    alarms = gap_alarm(posts, now)
+    notes = hop_alarms(board, now, posts, mirror, server, history, server_at) + incomplete_alarms(unfin)
     hand = open_handoffs(board, now)
     nxt = next_slot(posts, now)
     cp = caps(posts, now, max(now, t(nxt['earliest']) or now))
@@ -689,6 +709,7 @@ def build(board, now, posts, orders=None, mirror=None, digest=None, server=None,
         'posts_from': 'publer via the server' if (server or {}).get('posts') is not None and posts and server else
                       'commitments, format ledger, submissions and published logs (no server Publer read)',
         'alarms': alarms,
+        'notes': notes,
         'unfinished': unfin,
         'orders': orders_open(orders, board, now),
         'handoffs': hand,
@@ -724,6 +745,10 @@ def markdown(wo):
             L.append('%d. ALARM %s: %s. Clears with: %s.' % (num(), a['kind'], a['line'], a['clears']))
     else:
         L.append('none')
+    if wo.get('notes'):
+        L += ['', '## 1a. Notes (not alarms; act when the story allows)']
+        for a in wo['notes']:
+            L.append('- %s: %s. Clears with: %s.' % (a['kind'], a['line'], a['clears']))
     L += ['', '## 1b. Unfinished from the last run (pick up first)']
     if wo.get('unfinished'):
         for r in wo['unfinished']:
