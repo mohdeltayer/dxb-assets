@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-18T20:15:08Z",
- "seq": 625,
+ "generated_at": "2026-11-18T20:25:18Z",
+ "seq": 626,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 17885,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Bluey's Happy Snaps – Accolades Trailer",
+   "url": "https://www.youtube.com/watch?v=lH5wnQ2S5jA",
+   "published": "2026-11-18T20:22Z",
+   "first_seen": "2026-11-18T20:25:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/lH5wnQ2S5jA/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=lH5wnQ2S5jA"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 626
+  }
+ ],
+ "recent": [
   {
    "id": 17876,
    "source": "Nintendo of America (YouTube)",
@@ -25,9 +48,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 625
-  }
- ],
- "recent": [
+  },
   {
    "id": 17790,
    "source": "Nintendo US",
@@ -344,7 +365,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-18T20:15:05Z",
+  "last_poll_at": "2026-11-18T20:25:15Z",
   "sources_enabled": 100,
   "sources_ok": 92,
   "sources_failing": 7,
