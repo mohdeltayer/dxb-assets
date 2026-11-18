@@ -87039,5 +87039,142 @@
   "sound": "bed:neon (trailer sound refused: music only 26.0% of the track (< 40.0%))",
   "footage": true,
   "upload_secs": 8.0
+ },
+ {
+  "name": "gta-vi-metacritic-99-breaking-reel-v1.mp4",
+  "profile": "breaking",
+  "at": "2026-11-18T13:51Z",
+  "stages": {
+   "checks": 12.0,
+   "montage": 31.9,
+   "text": 9.7,
+   "audio": 0.4,
+   "outro": 13.0
+  },
+  "total": 67.0,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-18T13:50Z",
+  "finished_at": "2026-11-18T13:51Z",
+  "render_min": 1.12,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "gta6-launch-master.mp4",
+    "start": 26.45,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 69.92,
+    "rows": 1920,
+    "zoom": 1.0,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "gta6-launch-master.mp4",
+    "start": 55.25,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 69.92,
+    "rows": 1920,
+    "zoom": 1.0,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "gta6-launch-master.mp4",
+    "start": 57.15,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 69.92,
+    "rows": 1920,
+    "zoom": 1.0,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "gta6-launch-master.mp4",
+    "start": 36.55,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 69.92,
+    "rows": 1920,
+    "zoom": 1.0,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "gta6-launch-master.mp4",
+    "start": 40.5,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 69.92,
+    "rows": 1920,
+    "zoom": 1.0,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "gta6-launch-master.mp4",
+    "start": 67.15,
+    "width": 3840,
+    "height": 2160,
+    "fps": 30.0,
+    "mbps": 69.92,
+    "rows": 1920,
+    "zoom": 1.0,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 2160,
+   "max_zoom": 1.0,
+   "lowbit_shots": 0
+  },
+  "final_enc": "breaking",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "reason": "no trailer track (our bed or each shot's own sound)"
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 5.8,
+   "held_under_text": 0.0,
+   "secs": 6.9,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 45.1,
+   "shots": 0.0,
+   "checks": 17.7,
+   "render": 67.2,
+   "after": 106.3
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 236,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1054,
+  "peak_mem_mb": 2119,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 51501,
+  "peak_disk_mb": 52814,
+  "min_disk_free_mb": 193292,
+  "setup_min": 0.13,
+  "story": "gta-vi-metacritic-99-breaking",
+  "job_sha": "c38231b131cc9bed919cf58df4ab0a3b90fdac05",
+  "dispatches": 1,
+  "sound": "bed:breaking (breaking profile: six shots from five moments of Rockstar's Launch Trailer; the audio split does not run on the breaking profile, so one trailer stretch would put its effects under other moments' shots)",
+  "footage": true
  }
 ]

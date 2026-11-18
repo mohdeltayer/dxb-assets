@@ -1,0 +1,41 @@
+{
+ "name": "gta-vi-metacritic-99-breaking",
+ "out": "cards/2026-11/gta-vi-metacritic-99-breaking-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-18T13:53:26Z",
+ "findings": [],
+ "notes": [
+  "length 7.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 5.8, \"held_under_text\": 0.0, \"secs\": 6.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "c38231b131cc9bed919cf58df4ab0a3b90fdac05",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 2160,
+  "max_zoom": 1.0,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "breaking",
+ "look_frames": [
+  "cards/2026-11/gta-vi-metacritic-99-breaking-look-1.jpg",
+  "cards/2026-11/gta-vi-metacritic-99-breaking-look-2.jpg",
+  "cards/2026-11/gta-vi-metacritic-99-breaking-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:breaking (breaking profile: six shots from five moments of Rockstar's Launch Trailer; the audio split does not run on the breaking profile, so one trailer stretch would put its effects under other moments' shots)",
+ "shot_read": null,
+ "job_path": "jobs/done/gta-vi-metacritic-99-breaking.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.13,
+  "fetch": 0.75,
+  "shots": 0.0,
+  "checks": 0.49,
+  "render": 0.92,
+  "after": 1.77,
+  "job": 3.93
+ }
+}
