@@ -2,11 +2,29 @@
  "id": "2026-11-18-7-days-to-die-bandits-early-2027",
  "state": "failed",
  "problems": [
-  "instagram: the hashtag line has 3 tags (exactly 4)"
+  "text: line 1: these words are not in the paragraph: بـ 11; the lines, read in order, are the spoken paragraph (a word may be left out, none added): rewrite the line from the paragraph, or the paragraph to carry it"
  ],
- "flags": [],
- "at": "2026-11-18T03:28:59Z",
- "run": "44230678261",
+ "flags": [
+  "name not in names-ar: «ذا فان بيمبس (The Fun Pimps)» (credit); add it there as Proposed",
+  "name not in names-ar: «اللصوص (Bandits)» (instagram); add it there as Proposed",
+  "text fixed mechanically: line 1: space after a glued prefix"
+ ],
+ "at": "2026-11-18T03:32:39Z",
+ "footage": {
+  "name": "Gameplay Trailer 1.0",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30.0,
+  "mbps": 5.61,
+  "rows": 1080,
+  "duration": 110.04,
+  "decode_clean": true
+ },
+ "job": "jobs/live/7-days-to-die-bandits-early-2027.json",
+ "story": "newsroom/stories/2026-11-18-7-days-to-die-bandits-early-2027.json",
+ "lines": 3,
+ "shots": 7,
+ "run": "44231102775",
  "lane": "live",
- "build_secs": 18
+ "build_secs": 54
 }
