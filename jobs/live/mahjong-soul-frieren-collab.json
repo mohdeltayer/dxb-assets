@@ -19,43 +19,43 @@
  "shots": [
   [
    "mahjong-soul-frieren-collab-trailer-en.mp4",
-   "auto",
+   5.6,
    3.8,
    null
   ],
   [
    "mahjong-soul-frieren-collab-trailer-en.mp4",
-   "auto",
+   10.4,
    2.46,
    null
   ],
   [
    "mahjong-soul-frieren-collab-trailer-en.mp4",
-   "auto",
+   27.9,
    2.46,
    null
   ],
   [
    "mahjong-soul-frieren-collab-trailer-en.mp4",
-   "auto",
+   31.0,
    2.2,
    null
   ],
   [
    "mahjong-soul-frieren-collab-trailer-en.mp4",
-   "auto",
+   34.9,
    2.2,
    null
   ],
   [
    "mahjong-soul-frieren-collab-trailer-en.mp4",
-   "auto",
+   38.7,
    2.2,
    null
   ],
   [
    "mahjong-soul-frieren-collab-trailer-en.mp4",
-   "auto",
+   62.0,
    2.2,
    null
   ]
@@ -119,17 +119,14 @@
  "template": "trailer",
  "skin": "house",
  "cut": false,
- "track": [
-  "mahjong-soul-frieren-collab-trailer-en.mp4",
-  0.0
- ],
- "track_from_first_shot": true,
+ "track": "bed",
  "angle": null,
  "decision_log": {
   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
   "footage": "mahjong-soul-frieren-collab-trailer-en.mp4 from the resolver (steam:2739990)",
   "shots": "server-picked clean stretches in source order (autoshots)",
-  "music": "the trailer's own sound from the first shot (audio split per shot)"
+  "music": "the trailer's own sound from the first shot (audio split per shot)",
+  "shots_fix": "18 Nov 09:40Z, Production 1: auto shot read found 0 clean stretches (letterbox 63.6 s, burnt-in subtitles 41 s of 74 s); shots set by hand inside scenes, in source order, showcase layout"
  },
  "reel_check": {
   "source read and first report noted": "yes: Steam Community Announcements, Mahjong Soul X Frieren: Beyond Journey's End Collab, 18 Nov 2026 03:00Z (https://store.steampowered.com/news/app/2739990); first report: Mahjong Soul official Steam announcement, 18 Nov 2026 03:00Z; Denfaminico Gamer followed 18 Nov 05:26Z",
@@ -142,5 +139,52 @@
   "credit on every clip": "yes: one credit over every shot",
   "sound": "yes: trailer sound from the first shot, split per shot on the server",
   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
- }
+ },
+ "layout": "showcase",
+ "showcase_reason": "the only official copy, Steam Trailer EN, is letterboxed to 948 rows and carries burnt-in English subtitles in nearly every scene, so it is shown uncropped at its own width (case b)",
+ "lowres_ok": {
+  "searched": [
+   "Steam app 2739990 (one trailer, Trailer EN)",
+   "Steam store search: no other Mahjong Soul app"
+  ],
+  "result": "Trailer EN only, 1920x1080 letterboxed to 948 rows"
+ },
+ "letterbox_ok": [
+  [
+   "mahjong-soul-frieren-collab-trailer-en.mp4",
+   5.6,
+   "letterboxed 948 of 1080 rows; shown uncropped in the showcase layout, bars cropped"
+  ],
+  [
+   "mahjong-soul-frieren-collab-trailer-en.mp4",
+   10.4,
+   "letterboxed 948 of 1080 rows; shown uncropped in the showcase layout, bars cropped"
+  ],
+  [
+   "mahjong-soul-frieren-collab-trailer-en.mp4",
+   27.9,
+   "letterboxed 948 of 1080 rows; shown uncropped in the showcase layout, bars cropped"
+  ],
+  [
+   "mahjong-soul-frieren-collab-trailer-en.mp4",
+   31.0,
+   "letterboxed 948 of 1080 rows; shown uncropped in the showcase layout, bars cropped"
+  ],
+  [
+   "mahjong-soul-frieren-collab-trailer-en.mp4",
+   34.9,
+   "letterboxed 948 of 1080 rows; shown uncropped in the showcase layout, bars cropped"
+  ],
+  [
+   "mahjong-soul-frieren-collab-trailer-en.mp4",
+   38.7,
+   "letterboxed 948 of 1080 rows; shown uncropped in the showcase layout, bars cropped"
+  ],
+  [
+   "mahjong-soul-frieren-collab-trailer-en.mp4",
+   62.0,
+   "letterboxed 948 of 1080 rows; shown uncropped in the showcase layout, bars cropped"
+  ]
+ ],
+ "bed_reason": "Steam Trailer EN, the only official trailer (app 2739990): Japanese dialogue runs under every line from 5.6 s on (speech check 18 Nov); no other trailer exists"
 }
