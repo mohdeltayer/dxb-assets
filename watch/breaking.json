@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-18T20:52:05Z",
- "seq": 627,
+ "generated_at": "2026-11-18T21:52:06Z",
+ "seq": 628,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -241,109 +241,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 596
-  },
-  {
-   "id": 16870,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "Carenado Releases a Microsoft Flight Simulator Marketplace Exclusive: The DO228-200",
-   "url": "https://news.xbox.com/en-us/2026/11/17/carenado-releases-a-microsoft-flight-simulator-marketplace-exclusive-the-do228-200/",
-   "published": "2026-11-17T21:30Z",
-   "first_seen": "2026-11-17T21:30:05Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 593
-  },
-  {
-   "id": 16867,
-   "source": "Nintendo US",
-   "source_kind": "page",
-   "title": "11/17/26 Congrats to The Game Awards 2026 nominees Each year, The Game Awards recognizes creative and technical excellence in the global video game industry. We",
-   "url": "https://www.nintendo.com/us/whatsnew/congrats-to-the-game-awards-2026-nominees/",
-   "published": null,
-   "first_seen": "2026-11-17T21:25:05Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 592
-  },
-  {
-   "id": 16861,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "World of Fallout Exhibit at the Las Vegas Atomic Museum Expands – and It’s Full of Easter Eggs for Fans",
-   "url": "https://news.xbox.com/en-us/2026/11/17/world-of-fallout-expansion/",
-   "published": "2026-11-17T21:10Z",
-   "first_seen": "2026-11-17T21:15:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/world-of-fallout-prepare-for-the-future_55651863570_o-f0f24a465a651acbfc85.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/world-of-fallout-prepare-for-the-future_55651573033_o-28451c3f51a141b9de30.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/world-of-fallout-prepare-for-the-future_55651572688_o-ad3b06b59a9e232e6f14.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/world-of-fallout-prepare-for-the-future_55651863830_o-29707a21a4b302422d88.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/world-of-fallout-prepare-for-the-future_55651439021_o-804b065abd67c5c7f625.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/world-of-fallout-prepare-for-the-future_55651572753_o-0210e33bc5be0a746582.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 591
-  },
-  {
-   "id": 16852,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "Ice Cream Simulator: Why We Gave Our Customers Infinite Patience",
-   "url": "https://news.xbox.com/en-us/2026/11/17/ice-cream-simulator/",
-   "published": "2026-11-17T21:00Z",
-   "first_seen": "2026-11-17T21:00:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Cashier-79a3b3d6ca51b462327b.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Customization-d171f6d59f5ee0d157f2.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Display-freezer-1-d088c91afe0775f23095.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/ice-cream-cover-601a11b2600597018de0.jpeg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Seasons-e7ab292dba275edbf7b5.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://store-images.s-microsoft.com/image/apps.4618.13947066138278174.f92a0b6c-30ed-4733-ae00-634af916aac3.3570f950-0ae0-4cea-a0dd-9a8d7867b6c1?w=400&h=600"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 590
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-18T20:50:14Z",
+  "last_poll_at": "2026-11-18T21:50:14Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 7,
@@ -354,7 +256,7 @@
    "PlayStation Middle East (X) (HTTP 429, 20x)",
    "Rockstar Games (X) (HTTP 429, 6x)",
    "The Game Awards (HTTP 403, 33x)",
-   "Xbox (X) (HTTP 429, 96x)"
+   "Xbox (X) (HTTP 429, 97x)"
   ]
  }
 }
