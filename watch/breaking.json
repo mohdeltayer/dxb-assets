@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-18T18:40:11Z",
- "seq": 622,
+ "generated_at": "2026-11-18T18:52:07Z",
+ "seq": 623,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 17790,
    "source": "Nintendo US",
@@ -16,9 +17,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 622
-  }
- ],
- "recent": [
+  },
   {
    "id": 17708,
    "source": "Nintendo of America (YouTube)",
@@ -372,12 +371,12 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-18T18:40:04Z",
+  "last_poll_at": "2026-11-18T18:50:14Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 7,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 112x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 113x)",
    "Nintendo of America (X) (HTTP 429, 77x)",
    "PlayStation (X) (HTTP 429, 9x)",
    "PlayStation Middle East (X) (HTTP 429, 20x)",
