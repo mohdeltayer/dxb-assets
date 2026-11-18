@@ -57,5 +57,25 @@
   "hits": [
    "2026-10-17-coral-island-switch-2-winter"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/coral-island-switch-2-december-7-reel-v1.mp4",
+  "blob": "7cbbcc2df1a2c690453737ce8f200596fb8597e1",
+  "at": "2026-11-18T19:39:13Z",
+  "note": "readable, makes sense; four-player claim is in the source",
+  "checklist": {
+   "job": "jobs/live/coral-island-switch-2-december-7.json",
+   "sha256": "a4c7eaeb166225dc6383948347700d78655787ed766ed5c54a2f7fbcf248a96b",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "headline and lines whole, names in order, farming-sim footage, no graphic content"
  }
 }
