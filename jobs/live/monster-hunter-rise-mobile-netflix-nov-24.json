@@ -1,0 +1,126 @@
+{
+ "name": "monster-hunter-rise-mobile-netflix-nov-24",
+ "story": "2026-11-18-monster-hunter-rise-mobile-netflix-nov-24",
+ "footage_source": "steam:1446780",
+ "kind_news": "reveal",
+ "built_by": "server-slip",
+ "render_lane": "server",
+ "out": "cards/2026-11/monster-hunter-rise-mobile-netflix-nov-24-reel-v1.mp4",
+ "split_fallback": "bed",
+ "footage": [
+  {
+   "file": "monster-hunter-rise-mobile-netflix-nov-24-01-02-2k.mp4",
+   "steam": 1446780,
+   "trailer": "01_モンスター１本化_02_スレートなし_2K",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "1446780"
+  }
+ ],
+ "shots": [
+  [
+   "monster-hunter-rise-mobile-netflix-nov-24-01-02-2k.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "monster-hunter-rise-mobile-netflix-nov-24-01-02-2k.mp4",
+   "auto",
+   2.53,
+   null
+  ],
+  [
+   "monster-hunter-rise-mobile-netflix-nov-24-01-02-2k.mp4",
+   "auto",
+   2.53,
+   null
+  ],
+  [
+   "monster-hunter-rise-mobile-netflix-nov-24-01-02-2k.mp4",
+   "auto",
+   2.21,
+   null
+  ],
+  [
+   "monster-hunter-rise-mobile-netflix-nov-24-01-02-2k.mp4",
+   "auto",
+   2.21,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "تعمل على آيفون وأندرويد\nبأزرار لمس معاد تصميمها",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "ويضيف زر علاج يختار\nأنسب عنصر تلقائيًا",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   4,
+   "المصدر: كابكوم (Capcom) على Steam",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "أعلنت نتفليكس غيمز (Netflix Games) أن نسخة الجوال من لعبة مونستر هنتر رايز (Monster Hunter Rise) تصدر يوم 24 نوفمبر لمشتركي نتفليكس، حسب موقع غيم سبارك (Game*Spark). تعمل على آيفون وأندرويد بأزرار لمس معاد تصميمها. ويضيف زر علاج يختار أنسب عنصر تلقائيًا.",
+ "headline": "مونستر هنتر رايز\nعلى الجوال 24 نوفمبر",
+ "label": "تقرير",
+ "source": "كابكوم (Capcom) على Steam",
+ "date": "18 Nov 2026",
+ "theme": "emerald",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "monster-hunter-rise-mobile-netflix-nov-24-01-02-2k.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": {
+  "why_now": "Game*Spark reported the official 24 Nov date on 18 Nov 2026, after a store page appeared in October.",
+  "what_it_means_here": "Monster Hunter fans with a Netflix subscription can hunt on phones and tablets from 24 Nov."
+ },
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "footage": "monster-hunter-rise-mobile-netflix-nov-24-01-02-2k.mp4 from the resolver (steam:1446780)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (audio split per shot)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Steam store page, Monster Hunter Rise (footage only) (https://store.steampowered.com/app/1446780/); first report: Game*Spark, 18 Nov 2026 23:30 JST (Netflix Games announcement on its official X account)",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: angle in the slip",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 1446780 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ }
+}
