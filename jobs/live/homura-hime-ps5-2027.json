@@ -1,0 +1,190 @@
+{
+ "name": "homura-hime-ps5-2027",
+ "story": "2026-11-18-homura-hime-ps5-2027",
+ "footage_source": "steam:1820000",
+ "kind_news": "reveal",
+ "built_by": "server-slip",
+ "render_lane": "server",
+ "out": "cards/2026-11/homura-hime-ps5-2027-reel-v1.mp4",
+ "split_fallback": "bed",
+ "footage": [
+  {
+   "file": "homura-hime-ps5-2027-homura-hime-release-date-trailer.mp4",
+   "steam": 1820000,
+   "trailer": "Homura Hime - Release Date Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "1820000"
+  },
+  {
+   "file": "homura-hime-ps5-2027-homura-hime-release-trailer.mp4",
+   "steam": 1820000,
+   "trailer": "Homura Hime - Release Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "1820000"
+  },
+  {
+   "file": "homura-hime-ps5-2027-homura-hime-gameplay-trailer.mp4",
+   "steam": 1820000,
+   "trailer": "Homura Hime Gameplay Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "1820000"
+  }
+ ],
+ "shots": [
+  [
+   "homura-hime-ps5-2027-homura-hime-release-date-trailer.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "homura-hime-ps5-2027-homura-hime-release-date-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "homura-hime-ps5-2027-homura-hime-release-date-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "homura-hime-ps5-2027-homura-hime-release-date-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "homura-hime-ps5-2027-homura-hime-release-date-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "homura-hime-ps5-2027-homura-hime-release-date-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "homura-hime-ps5-2027-homura-hime-release-date-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "homura-hime-ps5-2027-homura-hime-release-date-trailer.mp4",
+   "auto",
+   2.49,
+   null
+  ],
+  [
+   "homura-hime-ps5-2027-homura-hime-release-date-trailer.mp4",
+   "auto",
+   2.49,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "تصل لعبة هومورا\nهيمي (Homura Hime)",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "إلى بلايستيشن 5 في 2027،",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "حسب موقع جيماتسو (Gematsu)",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   7,
+   8,
+   [
+    [
+     "وستصدر مع نسخة\nسويتش 2 التي كانت مقررة في 2026",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   8,
+   "المصدر: بلايزم (PLAYISM) على Steam",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "تصل لعبة هومورا هيمي (Homura Hime) إلى بلايستيشن 5 في 2027، حسب موقع جيماتسو (Gematsu). وستصدر مع نسخة سويتش 2 التي كانت مقررة في 2026.",
+ "headline": "لعبة أنمي الأكشن\nهومورا هيمي إلى PS5",
+ "label": "تقرير",
+ "source": "بلايزم (PLAYISM) على Steam",
+ "date": "18 Nov 2026",
+ "theme": "cold",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "homura-hime-ps5-2027-homura-hime-release-date-trailer.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": {
+  "why_now": "Gematsu reported the PS5 version on 18 Nov 2026 at 20:05Z.",
+  "what_it_means_here": "PS5 players get the anime-style bullet hell action game in 2027, alongside the delayed Switch 2 version."
+ },
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "footage": "homura-hime-ps5-2027-homura-hime-release-date-trailer.mp4 from the resolver (steam:1820000)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (audio split per shot)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Steam store page, Homura Hime (footage only) (https://store.steampowered.com/app/1820000/); first report: Gematsu, 18 Nov 2026 20:05Z (publisher PLAYISM and developer Crimson Dusk announced)",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: angle in the slip",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 1820000 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ }
+}
