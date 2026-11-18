@@ -1,0 +1,41 @@
+{
+ "name": "mahjong-soul-frieren-collab",
+ "out": "cards/2026-11/mahjong-soul-frieren-collab-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-18T09:39:14Z",
+ "findings": [],
+ "notes": [
+  "length 15.1 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason no trailer track (our bed or each shot's own sound)",
+  "render_job: lifeless: {\"score\": 9.2, \"still_share\": 0.02, \"longest_still\": 0.3, \"cuts_per_10s\": 1.33, \"held_under_text\": 0.0, \"secs\": 15.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "9521da0d3ceb4454733023f69a3e0aaa672b08e2",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 2.63,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/mahjong-soul-frieren-collab-look-1.jpg",
+  "cards/2026-11/mahjong-soul-frieren-collab-look-2.jpg",
+  "cards/2026-11/mahjong-soul-frieren-collab-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_c (Steam Trailer EN, the only official trailer (app 2739990): Japanese dialogue runs under every line from 5.6 s on (speech check 18 Nov); no other trailer exists)",
+ "shot_read": null,
+ "job_path": "jobs/done/mahjong-soul-frieren-collab.json",
+ "stage_minutes": {
+  "queue": 0.02,
+  "setup": 0.13,
+  "fetch": 0.14,
+  "shots": 0.0,
+  "checks": 1.35,
+  "render": 1.03,
+  "after": 0.74,
+  "job": 3.27
+ }
+}
