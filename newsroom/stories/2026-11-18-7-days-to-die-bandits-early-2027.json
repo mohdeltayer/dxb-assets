@@ -83,18 +83,16 @@
   }
  ],
  "director_check": {
-  "verdict": "FIX",
+  "verdict": "PASS",
   "out": "cards/2026-11/7-days-to-die-bandits-early-2027-reel-v1.mp4",
-  "blob": "8c7a2dbd34bd1375d09f371bbe371b8bb59d503e",
-  "at": "2026-11-18T15:15:45Z",
-  "note": "headline shows Days to Die 7 (bidi, digit at end of Latin run), shot 0 about 3 to 7 s",
+  "blob": "186d27e29545c68ffa55575add26d654cb8b0d48",
+  "at": "2026-11-18T15:38:24Z",
+  "note": "",
   "checklist": {
-   "job": "jobs/done/7-days-to-die-bandits-early-2027.json",
-   "sha256": "dbd4610a541df1abac41ca6c0b97599279f302757bab771b517a6cad6d3c5c39",
-   "ok": false,
-   "problems": [
-    "render_lane server: the job belongs in jobs/live/ (dispatch render-live.yml), not jobs/done/7-days-to-die-bandits-early-2027.json"
-   ],
+   "job": "jobs/live/7-days-to-die-bandits-early-2027.json",
+   "sha256": "e17633d4707728d401d3598a8f4df1c48609d68d8e34b49049c4685fcff01fa6",
+   "ok": true,
+   "problems": [],
    "template": "trailer",
    "layout": null,
    "evergreen": false,
@@ -102,6 +100,6 @@
   },
   "by": "director-p2",
   "qc": "pass",
-  "looked": null
+  "looked": "look frames, strip, dense: headline reads 7 Days to Die, captions legible, matches story"
  }
 }
