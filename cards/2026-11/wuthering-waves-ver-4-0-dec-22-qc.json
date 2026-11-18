@@ -1,0 +1,286 @@
+{
+ "name": "wuthering-waves-ver-4-0-dec-22",
+ "out": "cards/2026-11/wuthering-waves-ver-4-0-dec-22-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-18T04:31:06Z",
+ "findings": [],
+ "notes": [
+  "length 14.6 s before the end card (target 12 to 20 s)",
+  "source quality: wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4: low bitrate 5.7 Mbps (floor 6.1 Mbps for 2340x1080 at 30 fps) (lowbit)",
+  "render_job: audio split: applied; music_pct 50.9; leak_pct 1.8; cache {'hit': 0, 'miss': 5}; separate_secs 26.9; secs 37.9",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 6.16, \"held_under_text\": 0.0, \"secs\": 14.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4 at 26.88 s for 3.8 s, focus 0.929"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4 at 37.72 s for 2.2 s, focus 0.523"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4 at 45.55 s for 2.2 s, focus 0.643"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4 at 60.60 s for 2.2 s, focus 0.643"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4 at 79.58 s for 2.2 s, focus 0.448"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4 at 86.85 s for 2.2 s, focus 0.0"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4 at 99.68 s for 2.2 s, focus 0.705"
+  }
+ ],
+ "job_sha": "b0febf79fca8e8a37eae346a3f60769bf21f5a90",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 7
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/wuthering-waves-ver-4-0-dec-22-look-1.jpg",
+  "cards/2026-11/wuthering-waves-ver-4-0-dec-22-look-2.jpg",
+  "cards/2026-11/wuthering-waves-ver-4-0-dec-22-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 42.9,
+  "files": {
+   "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4": {
+    "secs": 42.9,
+    "cached": false,
+    "stages": {
+     "decode": 18.4,
+     "autofocus": 39.1,
+     "ocr": 39.1,
+     "smear": 42.6,
+     "scenes": 42.9
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/wuthering-waves-ver-4-0-dec-22.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.2,
+  "fetch": 0.4,
+  "shots": 0.71,
+  "checks": 0.46,
+  "render": 1.95,
+  "after": 0.85,
+  "job": 4.38
+ },
+ "job_after_autofix": {
+  "name": "wuthering-waves-ver-4-0-dec-22",
+  "story": "2026-11-18-wuthering-waves-ver-4-0-dec-22",
+  "kind_news": "reveal",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/wuthering-waves-ver-4-0-dec-22-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4",
+    "steam": 3513350,
+    "trailer": "Version 3.8 Official Trailer | Lilies in a Dying Dream",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3513350"
+   },
+   {
+    "file": "wuthering-waves-ver-4-0-dec-22-wuthering-waves-back-to-school-day.mp4",
+    "steam": 3513350,
+    "trailer": "Wuthering Waves | Back-to-School Day",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3513350"
+   }
+  ],
+  "shots": [
+   [
+    "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4",
+    26.88,
+    3.8,
+    [
+     [
+      0.0,
+      0.929
+     ]
+    ]
+   ],
+   [
+    "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4",
+    37.72,
+    2.21,
+    [
+     [
+      0.0,
+      0.523
+     ]
+    ]
+   ],
+   [
+    "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4",
+    45.55,
+    2.21,
+    [
+     [
+      0.0,
+      0.643
+     ]
+    ]
+   ],
+   [
+    "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4",
+    60.6,
+    2.2,
+    [
+     [
+      0.0,
+      0.643
+     ]
+    ]
+   ],
+   [
+    "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4",
+    79.58,
+    2.2,
+    [
+     [
+      0.0,
+      0.448
+     ]
+    ]
+   ],
+   [
+    "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4",
+    86.85,
+    2.2,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4",
+    99.68,
+    2.2,
+    [
+     [
+      0.0,
+      0.705
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "المعاينة الجديدة تقدم\nسبع شخصيات جديدة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "وتدور أحداثها\nفي مدينة نيو يونيون،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وفيها مشهد مبارزة مسلحين",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    6,
+    "المصدر: كورو غيمز (Kuro Games) على Steam",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "أعلنت كورو غيمز (Kuro Games) أن تحديث 4.0 للعبة Wuthering Waves يصل يوم 22 ديسمبر، حسب موقع أوتوماتون (Automaton). المعاينة الجديدة تقدم سبع شخصيات جديدة. وتدور أحداثها في مدينة نيو يونيون، وفيها مشهد مبارزة مسلحين.",
+  "headline": "تحديث Wuthering Waves\nيوم 22 ديسمبر",
+  "label": "تقرير",
+  "source": "كورو غيمز (Kuro Games) على Steam",
+  "date": "18 Nov 2026",
+  "theme": "spectacle",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Automaton reported the new trailer and the 22 Dec date on 18 Nov 03:35Z, minutes after the official post.",
+   "what_it_means_here": "Seven new characters and the long-promised city of Neo Union make Ver4.0 the biggest story turn since launch."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "wuthering-waves-ver-4-0-dec-22-version-3-8-official-trailer-lilies-in-a-dying-dream.mp4 from the resolver (steam:3513350)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Automaton (JP), Wuthering Waves Ver4.0 on 22 Dec, seven new characters, Neo Union trailer read, 18 Nov 2026 03:35Z (https://automaton-media.com/articles/reportjp/20261118-479812/); first report: Automaton (JP), 18 Nov 2026 03:35Z, quoting the official Wuthering Waves account post and trailer",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 3513350 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
