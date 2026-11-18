@@ -1,0 +1,295 @@
+{
+ "name": "last-pirates-die-together-xbox-game-preview",
+ "out": "cards/2026-11/last-pirates-die-together-xbox-game-preview-reel-v1.mp4",
+ "verdict": "pass",
+ "at": "2026-11-18T00:18:00Z",
+ "findings": [],
+ "notes": [
+  "length 17.0 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason music only 17.6% of the track (< 40.0%); music_pct 17.6; leak_pct 3.8; cache {'hit': 0, 'miss': 6}; separate_secs 23.7; secs 32.7",
+  "render_job: audio split fallback: our bed (ValueError: the trailer mix would not match the picture); bed:neon_e",
+  "render_job: lifeless: {\"score\": 1.7, \"still_share\": 0.006, \"longest_still\": 0.1, \"cuts_per_10s\": 7.65, \"held_under_text\": 0.065, \"secs\": 17.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-demo-release-trailer.mp4 at 10.11 s for 3.8 s, focus 0.972"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-demo-release-trailer.mp4 at 53.51 s for 2.7 s, focus 1.0"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-demo-release-trailer.mp4 at 56.18 s for 2.7 s, focus 1.0"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-early-access-trailer.mp4 at 3.22 s for 2.6 s, focus 0.5 (nothing free in last-pirates-die-together-xbox-game-preview-last-pirates-die-together-demo-release-trailer.mp4)"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-early-access-trailer.mp4 at 71.95 s for 2.6 s, focus 1.0 (nothing free in last-pirates-die-together-xbox-game-preview-last-pirates-die-together-demo-release-trailer.mp4)"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-early-access-trailer.mp4 at 74.51 s for 2.7 s, focus 1.0 (nothing free in last-pirates-die-together-xbox-game-preview-last-pirates-die-together-demo-release-trailer.mp4)"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-early-access-trailer.mp4 at 28.26 s for 2.5 s, focus 0.467 (shortened from 2.7 s: no free clean stretch that long)"
+  }
+ ],
+ "job_sha": "d451a2458a67c2cac53a96e5ecfb65b5dc1daa2a",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/last-pirates-die-together-xbox-game-preview-look-1.jpg",
+  "cards/2026-11/last-pirates-die-together-xbox-game-preview-look-2.jpg",
+  "cards/2026-11/last-pirates-die-together-xbox-game-preview-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_e (trailer sound refused: music only 17.6% of the track (< 40.0%))",
+ "shot_read": {
+  "secs": 81.6,
+  "files": {
+   "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-demo-release-trailer.mp4": {
+    "secs": 42.9,
+    "cached": false,
+    "stages": {
+     "decode": 19.6,
+     "autofocus": 36.6,
+     "ocr": 36.6,
+     "smear": 42.7,
+     "scenes": 42.9
+    },
+    "incomplete": null
+   },
+   "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-early-access-trailer.mp4": {
+    "secs": 38.7,
+    "cached": false,
+    "stages": {
+     "decode": 19.0,
+     "autofocus": 33.6,
+     "ocr": 33.6,
+     "smear": 38.5,
+     "scenes": 38.7
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/last-pirates-die-together-xbox-game-preview.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.18,
+  "fetch": 0.64,
+  "shots": 1.36,
+  "checks": 0.53,
+  "render": 2.23,
+  "after": 0.71,
+  "job": 5.47
+ },
+ "job_after_autofix": {
+  "name": "last-pirates-die-together-xbox-game-preview",
+  "story": "2026-11-18-last-pirates-die-together-xbox-game-preview",
+  "kind_news": "launch",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/last-pirates-die-together-xbox-game-preview-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-demo-release-trailer.mp4",
+    "steam": 4317790,
+    "trailer": "Last Pirates: Die Together - Demo Release Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "4317790"
+   },
+   {
+    "file": "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-early-access-trailer.mp4",
+    "steam": 4317790,
+    "trailer": "Last PIrates: Die Together - Early Access Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "4317790"
+   }
+  ],
+  "shots": [
+   [
+    "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-demo-release-trailer.mp4",
+    10.11,
+    3.8,
+    [
+     [
+      0.0,
+      0.972
+     ]
+    ]
+   ],
+   [
+    "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-demo-release-trailer.mp4",
+    53.51,
+    2.67,
+    [
+     [
+      0.0,
+      1.0
+     ]
+    ]
+   ],
+   [
+    "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-demo-release-trailer.mp4",
+    56.18,
+    2.67,
+    [
+     [
+      0.0,
+      1.0
+     ]
+    ]
+   ],
+   [
+    "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-early-access-trailer.mp4",
+    3.22,
+    2.56,
+    [
+     [
+      0.0,
+      0.5
+     ]
+    ]
+   ],
+   [
+    "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-early-access-trailer.mp4",
+    71.95,
+    2.56,
+    [
+     [
+      0.0,
+      1.0
+     ]
+    ]
+   ],
+   [
+    "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-early-access-trailer.mp4",
+    74.51,
+    2.67,
+    [
+     [
+      0.0,
+      1.0
+     ]
+    ]
+   ],
+   [
+    "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-early-access-trailer.mp4",
+    28.26,
+    2.5,
+    [
+     [
+      0.0,
+      0.467
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "وفي مهرجان Steam Next Fest\nطلب المطورون من اللاعبين",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "صفع مؤخرة عملاقة على الشاطئ\nمليون مرة لفتح تحديث",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وفريق من أربعة لاعبين أنهى\nالمهمة وحده في سبع ساعات",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    6,
+    "المصدر: إكس بوكس واير (Xbox Wire)",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "صدرت لعبة Last Pirates: Die Together على Xbox Series X|S ضمن برنامج Game Preview، مع لعب مشترك بين Xbox وSteam لما يصل إلى أربعة لاعبين. وفي مهرجان Steam Next Fest طلب المطورون من اللاعبين صفع مؤخرة عملاقة على الشاطئ مليون مرة لفتح تحديث. وفريق من أربعة لاعبين أنهى المهمة وحده في سبع ساعات.",
+  "headline": "صدور Last Pirates\nعلى Xbox",
+  "label": "متوفر الآن",
+  "source": "إكس بوكس واير (Xbox Wire)",
+  "date": "17 Nov 2026",
+  "theme": "gold",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-demo-release-trailer.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": null,
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "last-pirates-die-together-xbox-game-preview-last-pirates-die-together-demo-release-trailer.mp4 from the resolver (steam:4317790)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Xbox Wire, Millions of Butt Slaps: Last Pirates Sails into XBOX Game Preview, 17 Nov 2026 23:00Z (https://news.xbox.com/en-us/2026/11/17/millions-of-butt-slaps-last-pirates/); first report: Xbox Wire, 17 Nov 2026 23:00Z (official post by the developer; the Steam release came earlier, this is the Xbox Game Preview launch)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 4317790 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
