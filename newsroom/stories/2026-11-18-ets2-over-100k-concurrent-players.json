@@ -55,5 +55,25 @@
   "hits": [
    "ets2-coaches-dlc-out-aed-46-99-20261113"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/ets2-over-100k-concurrent-players-reel-v1.mp4",
+  "blob": "b0cd3c2f043aa117a5f8db15f28b6a80c9297dcd",
+  "at": "2026-11-18T00:09:06Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/ets2-over-100k-concurrent-players.json",
+   "sha256": "12cdbe72709cb5e7f22671a28b4b5de4d0d3ff9e57003d05e9d8c23ea2731882",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "MAN truck with livery and chip, Volvo at plaza with credit and subtitle, dusk street with credit and subtitle"
  }
 }
