@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-18T03:00:18Z",
- "seq": 603,
+ "generated_at": "2026-11-18T03:52:08Z",
+ "seq": 604,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 17001,
    "source": "Nintendo Japan",
@@ -16,9 +17,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 603
-  }
- ],
- "recent": [
+  },
   {
    "id": 16937,
    "source": "Xbox Wire",
@@ -549,23 +548,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 565
-  },
-  {
-   "id": 16011,
-   "source": "Nintendo Japan",
-   "source_kind": "official",
-   "title": "Nintendo Switch 2『スプラトゥーン レイダース』の体験版を配信中。",
-   "url": "https://www.nintendo.com/jp/topics/article/cc5713ab-c529-4d4f-b1c3-06b1cf46f690",
-   "published": "2026-11-17T03:01Z",
-   "first_seen": "2026-11-17T03:05:05Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 557
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-18T03:00:14Z",
+  "last_poll_at": "2026-11-18T03:50:15Z",
   "sources_enabled": 100,
   "sources_ok": 92,
   "sources_failing": 7,
@@ -573,7 +560,7 @@
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 105x)",
    "Nintendo of America (X) (HTTP 429, 75x)",
    "PlayStation (X) (HTTP 429, 7x)",
-   "PlayStation Middle East (X) (HTTP 429, 18x)",
+   "PlayStation Middle East (X) (HTTP 429, 19x)",
    "Rockstar Games (X) (HTTP 429, 5x)",
    "The Game Awards (HTTP 403, 24x)",
    "Xbox (X) (HTTP 429, 95x)"
