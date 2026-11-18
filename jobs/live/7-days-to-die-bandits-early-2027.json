@@ -1,0 +1,154 @@
+{
+ "name": "7-days-to-die-bandits-early-2027",
+ "story": "2026-11-18-7-days-to-die-bandits-early-2027",
+ "kind_news": "reveal",
+ "built_by": "server-slip",
+ "render_lane": "server",
+ "out": "cards/2026-11/7-days-to-die-bandits-early-2027-reel-v1.mp4",
+ "split_fallback": "bed",
+ "footage": [
+  {
+   "file": "7-days-to-die-bandits-early-2027-gameplay-trailer-1-0.mp4",
+   "steam": 251570,
+   "trailer": "Gameplay Trailer 1.0",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "251570"
+  },
+  {
+   "file": "7-days-to-die-bandits-early-2027-live-action-trailer-1-0.mp4",
+   "steam": 251570,
+   "trailer": "Live Action Trailer 1.0",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "251570"
+  }
+ ],
+ "shots": [
+  [
+   "7-days-to-die-bandits-early-2027-gameplay-trailer-1-0.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "7-days-to-die-bandits-early-2027-gameplay-trailer-1-0.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "7-days-to-die-bandits-early-2027-gameplay-trailer-1-0.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "7-days-to-die-bandits-early-2027-gameplay-trailer-1-0.mp4",
+   "auto",
+   2.46,
+   null
+  ],
+  [
+   "7-days-to-die-bandits-early-2027-gameplay-trailer-1-0.mp4",
+   "auto",
+   2.46,
+   null
+  ],
+  [
+   "7-days-to-die-bandits-early-2027-gameplay-trailer-1-0.mp4",
+   "auto",
+   2.53,
+   null
+  ],
+  [
+   "7-days-to-die-bandits-early-2027-gameplay-trailer-1-0.mp4",
+   "auto",
+   2.53,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "يأتون في 11 نوعًا،",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "يلتفّون حولك ويعالجون\nأنفسهم ويحتمون بالحواجز",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "والأمر ما زال تحت الاختبار\nقبل النسخة التجريبية",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: ذا فان بيمبس (The Fun Pimps) على Steam",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "أعلنت ذا فان بيمبس (The Fun Pimps) أن الأعداء البشر، اللصوص، قادمون إلى لعبة 7 Days to Die في بداية 2027. يأتون في 11 نوعًا، يلتفّون حولك ويعالجون أنفسهم ويحتمون بالحواجز. والأمر ما زال تحت الاختبار قبل النسخة التجريبية.",
+ "headline": "اللصوص قادمون\nإلى 7 Days to Die",
+ "label": "رسمي",
+ "source": "ذا فان بيمبس (The Fun Pimps) على Steam",
+ "date": "18 Nov 2026",
+ "theme": "emerald",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "7-days-to-die-bandits-early-2027-gameplay-trailer-1-0.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": null,
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "footage": "7-days-to-die-bandits-early-2027-gameplay-trailer-1-0.mp4 from the resolver (steam:251570)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (audio split per shot)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: The Fun Pimps, Developer Update: Bandits Are Coming in Early 2027, 17 Nov 2026 (7daystodie.com) (https://7daystodie.com/developer-update-bandits/); first report: The Fun Pimps developer update on 7daystodie.com, 17 Nov 2026; Game*Spark followed 18 Nov 2026",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 251570 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ }
+}
