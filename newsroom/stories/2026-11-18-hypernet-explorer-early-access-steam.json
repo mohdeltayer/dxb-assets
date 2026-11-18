@@ -54,5 +54,25 @@
    "explorer"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/hypernet-explorer-early-access-steam-reel-v1.mp4",
+  "blob": "efe46807e3be38b729025a86af2a2aaafa9ade10",
+  "at": "2026-11-18T23:30:52Z",
+  "note": "Readable Arabic title and captions, coherent Y2K-collapse Hypernet Explorer story matching official Steam footage, no graphic content",
+  "checklist": {
+   "job": "jobs/live/hypernet-explorer-early-access-steam.json",
+   "sha256": "c5d15bb1e0e9580104ddc4bdf1ac94e653dd0429c0bd1862cb1e7f806f54c069",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1: title 'لعبة عن عالم دمّره خلل عام 2000' with chip over Earth/moon crash; look-2: caption on bright yellow burst plus source line, legible; look-3: caption 'محل بيتزا أو تأسيس حزب سياسي' over tower and Earth, source line visible, nothing cut off or overlapping"
  }
 }
