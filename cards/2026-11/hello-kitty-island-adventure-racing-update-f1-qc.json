@@ -1,0 +1,532 @@
+{
+ "name": "hello-kitty-island-adventure-racing-update-f1",
+ "out": "cards/2026-11/hello-kitty-island-adventure-racing-update-f1-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "c",
+   "why": "audio split not applied (music only 26.6% of the track (< 40.0%)) on a trailer track under 13 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our "
+  }
+ ],
+ "job_to_pass_min": 8.1,
+ "at": "2026-11-18T20:17:47Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 28.4 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason music only 26.6% of the track (< 40.0%); music_pct 26.6; leak_pct 1.4; cache {'hit': 0, 'miss': 4}; separate_secs 34.7; secs 50.8",
+  "render_job: audio split fallback: our bed (ValueError: the trailer mix would not match the picture); bed:neon",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 5.3, \"held_under_text\": 0.0, \"secs\": 28.3, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4 at 6.02 s for 3.8 s, focus 0.167"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4 at 16.58 s for 2.2 s, focus 0.36"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4 at 19.41 s for 2.2 s, focus 0.609"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4 at 29.35 s for 2.2 s, focus 0.357"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4 at 32.70 s for 2.2 s, focus 0.357"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4 at 36.23 s for 2.8 s, focus 0.604"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4 at 47.28 s for 2.8 s, focus 0.554"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4 at 50.15 s for 2.2 s, focus 0.554"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4 at 59.88 s for 2.2 s, focus 0.515"
+  },
+  {
+   "where": "shot 9",
+   "rule": "auto_shots",
+   "what": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4 at 80.33 s for 2.2 s, focus 0.433"
+  },
+  {
+   "where": "shot 10",
+   "rule": "auto_shots",
+   "what": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4 at 82.53 s for 2.2 s, focus 0.433"
+  },
+  {
+   "where": "shot 11",
+   "rule": "auto_shots",
+   "what": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4 at 57.68 s for 2.2 s, focus 0.31"
+  },
+  {
+   "where": "shot 12",
+   "rule": "auto_shots",
+   "what": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4 at 52.35 s for 2.2 s, focus 0.31"
+  },
+  {
+   "where": "shot 13",
+   "rule": "auto_shots",
+   "what": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4 at 54.56 s for 2.2 s, focus 0.31"
+  }
+ ],
+ "job_sha": "24f9d73bc2528a73a1933274d1fc29c579cd5383",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/hello-kitty-island-adventure-racing-update-f1-look-1.jpg",
+  "cards/2026-11/hello-kitty-island-adventure-racing-update-f1-look-2.jpg",
+  "cards/2026-11/hello-kitty-island-adventure-racing-update-f1-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon (trailer sound refused: music only 26.6% of the track (< 40.0%))",
+ "shot_read": {
+  "secs": 45.8,
+  "files": {
+   "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4": {
+    "secs": 45.8,
+    "cached": false,
+    "stages": {
+     "decode": 20.9,
+     "autofocus": 35.2,
+     "ocr": 35.2,
+     "smear": 45.6,
+     "scenes": 45.8
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/hello-kitty-island-adventure-racing-update-f1.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.22,
+  "fetch": 0.85,
+  "shots": 0.78,
+  "checks": 0.81,
+  "render": 3.77,
+  "after": 1.45,
+  "job": 7.68
+ },
+ "job_after_autofix": {
+  "name": "hello-kitty-island-adventure-racing-update-f1",
+  "story": "2026-11-18-hello-kitty-island-adventure-racing-update-f1",
+  "footage_source": "steam:2495100",
+  "kind_news": "reveal",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/hello-kitty-island-adventure-racing-update-f1-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4",
+    "steam": 2495100,
+    "trailer": "Hello Kitty Island Adventure -- Announcement Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2495100"
+   },
+   {
+    "file": "hello-kitty-island-adventure-racing-update-f1-launch-trailer-hello-kitty-island-adventure.mp4",
+    "steam": 2495100,
+    "trailer": "Launch Trailer - Hello Kitty Island Adventure",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2495100"
+   },
+   {
+    "file": "hello-kitty-island-adventure-racing-update-f1-gameplay-reel-hello-kitty-island-adventure.mp4",
+    "steam": 2495100,
+    "trailer": "Gameplay Reel - Hello Kitty Island Adventure",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2495100"
+   }
+  ],
+  "shots": [
+   [
+    "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4",
+    6.02,
+    3.8,
+    [
+     [
+      0.0,
+      0.167
+     ]
+    ]
+   ],
+   [
+    "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4",
+    16.58,
+    2.21,
+    [
+     [
+      0.0,
+      0.36
+     ]
+    ]
+   ],
+   [
+    "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4",
+    19.41,
+    2.21,
+    [
+     [
+      0.0,
+      0.609
+     ]
+    ]
+   ],
+   [
+    "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4",
+    29.35,
+    2.2,
+    [
+     [
+      0.0,
+      0.357
+     ]
+    ]
+   ],
+   [
+    "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4",
+    32.7,
+    2.2,
+    [
+     [
+      0.0,
+      0.357
+     ]
+    ]
+   ],
+   [
+    "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4",
+    36.23,
+    2.78,
+    [
+     [
+      0.0,
+      0.604
+     ]
+    ]
+   ],
+   [
+    "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4",
+    47.28,
+    2.78,
+    [
+     [
+      0.0,
+      0.554
+     ]
+    ]
+   ],
+   [
+    "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4",
+    50.15,
+    2.2,
+    [
+     [
+      0.0,
+      0.554
+     ]
+    ]
+   ],
+   [
+    "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4",
+    59.88,
+    2.2,
+    [
+     [
+      0.0,
+      0.515
+     ]
+    ]
+   ],
+   [
+    "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4",
+    80.33,
+    2.2,
+    [
+     [
+      0.0,
+      0.433
+     ]
+    ]
+   ],
+   [
+    "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4",
+    82.53,
+    2.2,
+    [
+     [
+      0.0,
+      0.433
+     ]
+    ]
+   ],
+   [
+    "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4",
+    57.68,
+    2.2,
+    [
+     [
+      0.0,
+      0.31
+     ]
+    ]
+   ],
+   [
+    "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4",
+    52.35,
+    2.21,
+    [
+     [
+      0.0,
+      0.31
+     ]
+    ]
+   ],
+   [
+    "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4",
+    54.56,
+    2.21,
+    [
+     [
+      0.0,
+      0.31
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "تحصل\nلعبة Hello Kitty Island Adventure",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "على لعبة سباقات",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "صغيرة في التحديث 3.1،\nحسب موقع غو نينتندو (GoNintendo)",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    9,
+    [
+     [
+      "وتأتي مع مكافآت بشكل ملابس\nسباق وديكورات من حلبات السباق",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    10,
+    11,
+    [
+     [
+      "والتحديث يرافق تعاون هالو كيتي",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    12,
+    13,
+    [
+     [
+      "مع فورمولا 1 أكاديمي\nفي سباق لاس فيغاس",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    13,
+    "المصدر: سْتِيم (Steam)",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "تحصل لعبة Hello Kitty Island Adventure على لعبة سباقات صغيرة في التحديث 3.1، حسب موقع غو نينتندو (GoNintendo). وتأتي مع مكافآت بشكل ملابس سباق وديكورات من حلبات السباق. والتحديث يرافق تعاون هالو كيتي مع فورمولا 1 أكاديمي في سباق لاس فيغاس.",
+  "headline": "سباقات تصل إلى\nجزيرة هالو كيتي",
+  "label": "تقرير",
+  "source": "سْتِيم (Steam)",
+  "date": "18 Nov 2026",
+  "theme": "gold",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "GoNintendo posted the Update 3.1 press release at 18:06Z on 18 Nov, a day before the Las Vegas fan zone event.",
+   "what_it_means_here": "A cozy Sanrio game gets an arcade racing minigame and an F1 Academy tie-in at the Las Vegas Grand Prix fan zone."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "hello-kitty-island-adventure-racing-update-f1-hello-kitty-island-adventure-announcement-trailer.mp4 from the resolver (steam:2495100)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: GoNintendo, Racing comes to Hello Kitty Island Adventure in Update 3.1 alongside Formula 1 collab (press release post, read in full), 18 Nov 2026 18:06Z (https://gonintendo.com/contents/67359-racing-comes-to-hello-kitty-island-adventure-in-update-3-1-alongside-formula-1); first report: GoNintendo, 18 Nov 2026 18:06Z, from a press release",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 2495100 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
