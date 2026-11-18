@@ -75,5 +75,25 @@
    "ocarina-of-time-5-2-million-20261111",
    "ocarina-of-time-switch-2-review-scores-nov-6"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/ocarina-1m-physical-us-launch-week-reel-v1.mp4",
+  "blob": "0a8ec3aa0e7c6b40e40ca227a17141ba0776937f",
+  "at": "2026-11-18T14:34:27Z",
+  "note": "headline lam glyph detached from the Latin name; only credit on screen is Nintendo, Eurogamer in line 4 and caption; store-gallery footage disclosed in caption",
+  "checklist": {
+   "job": "jobs/live/ocarina-1m-physical-us-launch-week.json",
+   "sha256": "39274c98ba14ca0d7342f452cf881d3b17f6db09f44103008ba97b6d78c95b27",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": "showcase",
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1 Triforce beam, look-2 Link and Navi in a forest, look-3 dim cave scene fading out; no gore, no wrong subject, text readable"
  }
 }
