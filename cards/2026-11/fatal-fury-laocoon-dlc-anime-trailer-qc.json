@@ -17,177 +17,31 @@
    "why": "4.4 s of 4.5 s: shot 9 lengthened by 0.25 s"
   }
  ],
- "job_to_pass_min": 7.6,
- "at": "2026-11-19T12:29:55Z",
+ "job_to_pass_min": 5.0,
+ "at": "2026-11-19T13:14:58Z",
  "findings": [],
  "notes": [
-  "first frame: shot 0 fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
-  "first frame: shot 1 fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
-  "first frame: shot 2 fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
-  "first frame: shot 3 fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
-  "first frame: shot 4 fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
-  "first frame: shot 5 fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
-  "first frame: shot 6 fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
-  "first frame: shot 7 fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
-  "first frame: shot 8 fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
-  "first frame: shot 9 fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
   "length 19.2 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 81.7; leak_pct 0.3; cache {'hit': 1, 'miss': 3}; separate_secs 21.2; secs 32.7",
+  "render_job: audio split: applied; music_pct 81.7; leak_pct 0.3; cache {'hit': 4, 'miss': 0}; separate_secs 3.0; secs 5.2",
   "render_job: lifeless: {\"score\": 0.2, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 7.29, \"held_under_text\": 0.01, \"secs\": 19.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [
   {
    "where": "credit 1",
    "rule": "credit_width",
-   "what": "set one line at 36 px (was 40 px, too wide for the safe zone)",
+   "what": "set one line at 30 px (was 34 px, too wide for the safe zone)",
    "before": {
-    "text": "المصدر: صفحة Fatal Fury: City of the Wolves على Steam",
-    "size": 40
+    "text": "المصدر: صفحة Fatal Fury: City of the Wolves على Steam، 19 نوفمبر",
+    "size": 34
    },
    "after": {
-    "text": "المصدر: صفحة Fatal Fury: City of the Wolves على Steam",
-    "size": 36
+    "text": "المصدر: صفحة Fatal Fury: City of the Wolves على Steam، 19 نوفمبر",
+    "size": 30
    }
-  },
-  {
-   "where": "shot 0",
-   "rule": "auto_shots",
-   "what": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 at 30.45 s for 3.8 s, focus 0.314"
-  },
-  {
-   "where": "shot 1",
-   "rule": "auto_shots",
-   "what": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 at 40.08 s for 2.2 s, focus 0.411"
-  },
-  {
-   "where": "shot 2",
-   "rule": "auto_shots",
-   "what": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 at 43.98 s for 2.2 s, focus 0.586"
-  },
-  {
-   "where": "shot 3",
-   "rule": "auto_shots",
-   "what": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 at 46.66 s for 2.3 s, focus 0.588"
-  },
-  {
-   "where": "shot 4",
-   "rule": "auto_shots",
-   "what": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 at 49.69 s for 2.3 s, focus 0.8"
-  },
-  {
-   "where": "shot 5",
-   "rule": "auto_shots",
-   "what": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 at 74.71 s for 2.2 s, focus 0.456"
-  },
-  {
-   "where": "shot 6",
-   "rule": "auto_shots",
-   "what": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 at 85.93 s for 2.2 s, focus 0.527"
-  },
-  {
-   "where": "shot 7",
-   "rule": "auto_shots",
-   "what": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 at 83.05 s for 2.2 s, focus 0.296"
-  },
-  {
-   "where": "shot 8",
-   "rule": "auto_shots",
-   "what": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 at 36.21 s for 2.2 s, focus 0.732"
-  },
-  {
-   "where": "shot 9",
-   "rule": "auto_shots",
-   "what": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 at 24.93 s for 2.2 s, focus 0.84"
-  },
-  {
-   "where": "shot 1",
-   "rule": "subject_drift",
-   "what": "focus [[0.0, 0.411]] to 0.31: the subject stays inside the window",
-   "before": [
-    "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
-    40.08,
-    2.2,
-    [
-     [
-      0.0,
-      0.411
-     ]
-    ]
-   ],
-   "after": [
-    "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
-    40.08,
-    2.2,
-    0.31
-   ]
-  },
-  {
-   "where": "shot 3",
-   "rule": "subject_drift",
-   "what": "trimmed to 1.60 s, its longest safe length before the subject leaves the 9:16 window",
-   "before": [
-    "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
-    46.66,
-    2.31,
-    [
-     [
-      0.0,
-      0.588
-     ]
-    ]
-   ],
-   "after": [
-    "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
-    46.66,
-    1.6,
-    [
-     [
-      0.0,
-      0.588
-     ]
-    ]
-   ]
-  },
-  {
-   "where": "shot 3",
-   "rule": "fill",
-   "what": "0.71 s shorter in all: no neighbouring shot stays clean with the time"
-  },
-  {
-   "where": "shot 9",
-   "rule": "subject_drift",
-   "what": "trimmed to 1.00 s, its longest safe length before the subject leaves the 9:16 window",
-   "before": [
-    "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
-    24.93,
-    2.2,
-    [
-     [
-      0.0,
-      0.84
-     ]
-    ]
-   ],
-   "after": [
-    "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
-    24.93,
-    1.0,
-    [
-     [
-      0.0,
-      0.84
-     ]
-    ]
-   ]
-  },
-  {
-   "where": "shot 9",
-   "rule": "fill",
-   "what": "1.20 s shorter in all: no neighbouring shot stays clean with the time"
   }
  ],
- "job_sha": "4503ef0bb3c3c4c6e03259fd4e11e5dab26d017a",
- "dispatches": 4,
+ "job_sha": "73ade0d162576235f9b9697e9d9ed033a86ed878",
+ "dispatches": 5,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -202,34 +56,17 @@
  ],
  "person_shown": "n/a",
  "sound": "trailer",
- "shot_read": {
-  "secs": 56.0,
-  "files": {
-   "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4": {
-    "secs": 55.9,
-    "cached": false,
-    "stages": {
-     "decode": 25.0,
-     "autofocus": 47.0,
-     "ocr": 47.0,
-     "smear": 55.4,
-     "scenes": 55.9
-    },
-    "incomplete": null
-   }
-  }
- },
+ "shot_read": null,
  "job_path": "jobs/done/fatal-fury-laocoon-dlc-anime-trailer.json",
  "stage_minutes": {
-  "queue": 0.02,
-  "setup": 0.18,
-  "fetch": 0.55,
-  "shots": 0.95,
-  "checks": 2.24,
-  "render": 2.43,
-  "after": 1.08,
-  "upload": 0.63,
-  "job": 7.25
+  "queue": 0.03,
+  "setup": 0.2,
+  "fetch": 0.56,
+  "shots": 0.02,
+  "checks": 0.71,
+  "render": 1.98,
+  "after": 1.13,
+  "job": 4.4
  },
  "job_after_autofix": {
   "name": "fatal-fury-laocoon-dlc-anime-trailer",
@@ -421,9 +258,9 @@
    [
     0,
     9,
-    "المصدر: صفحة Fatal Fury: City of the Wolves على Steam",
+    "المصدر: صفحة Fatal Fury: City of the Wolves على Steam، 19 نوفمبر",
     {
-     "size": 36,
+     "size": 30,
      "band": true
     }
    ]
@@ -471,6 +308,10 @@
    "credit on every clip": "yes: one credit over every shot",
    "sound": "yes: trailer sound from the first shot, split per shot on the server",
    "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "rerender": {
+   "reason": "unreadable_text",
+   "note": "Director FIX: the date 19 نوفمبر was not on screen; added to the credit band on every shot, text otherwise unchanged"
   }
  }
 }
