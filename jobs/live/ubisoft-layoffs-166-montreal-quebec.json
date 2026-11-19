@@ -27,70 +27,144 @@
  ],
  "shots": [
   [
-   "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
-   "auto",
+   "ubisoft-layoffs-166-montreal-quebec-y11s3-cgi-trailer.mp4",
+   27.25,
    3.8,
-   null
+   [
+    [
+     0.0,
+     0.42
+    ]
+   ]
   ],
   [
-   "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
-   "auto",
+   "ubisoft-layoffs-166-montreal-quebec-y11s3-cgi-trailer.mp4",
+   22.31,
    2.2,
-   null
+   0.24
   ],
   [
-   "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
-   "auto",
+   "ubisoft-layoffs-166-montreal-quebec-y11s3-cgi-trailer.mp4",
+   16.65,
    2.2,
-   null
+   [
+    [
+     0.0,
+     0.219
+    ]
+   ]
   ],
   [
-   "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
-   "auto",
+   "ubisoft-layoffs-166-montreal-quebec-y11s3-cgi-trailer.mp4",
+   10.48,
    2.2,
-   null
+   [
+    [
+     0.0,
+     0.616
+    ]
+   ]
   ],
   [
-   "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
-   "auto",
+   "ubisoft-layoffs-166-montreal-quebec-y11s3-cgi-trailer.mp4",
+   8.25,
    2.2,
-   null
+   [
+    [
+     0.0,
+     0.616
+    ]
+   ]
   ],
   [
-   "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
-   "auto",
+   "ubisoft-layoffs-166-montreal-quebec-y11s3-cgi-trailer.mp4",
+   6.05,
    2.2,
-   null
+   [
+    [
+     0.0,
+     0.417
+    ]
+   ]
   ],
   [
-   "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
-   "auto",
+   "ubisoft-layoffs-166-montreal-quebec-y11s3-cgi-trailer.mp4",
+   2.71,
    2.2,
-   null
+   [
+    [
+     0.0,
+     0.417
+    ]
+   ]
   ],
   [
    "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
-   "auto",
-   2.2,
-   null
+   5.6,
+   1.95,
+   [
+    [
+     0.0,
+     0.709
+    ]
+   ]
   ],
   [
    "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
-   "auto",
-   2.2,
-   null
+   12.16,
+   2.4,
+   [
+    [
+     0.0,
+     0.413
+    ],
+    [
+     1.137,
+     0.709
+    ],
+    [
+     1.837,
+     0.311
+    ]
+   ]
   ],
   [
    "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
-   "auto",
+   32.12,
    2.39,
-   null
+   [
+    [
+     0.0,
+     0.997
+    ],
+    [
+     0.743,
+     0.679
+    ],
+    [
+     2.143,
+     0.295
+    ]
+   ]
   ],
   [
    "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
-   "auto",
+   52.12,
    2.39,
-   null
+   [
+    [
+     0.0,
+     0.71
+    ],
+    [
+     1.227,
+     0.295
+    ],
+    [
+     2.31,
+     0.476
+    ]
+   ]
   ]
  ],
  "lines": [
@@ -184,8 +258,8 @@
  "skin": "house",
  "cut": false,
  "track": [
-  "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
-  0.0
+  "ubisoft-layoffs-166-montreal-quebec-y11s3-cgi-trailer.mp4",
+  27.25
  ],
  "track_from_first_shot": true,
  "angle": {
@@ -209,5 +283,39 @@
   "credit on every clip": "yes: one credit over every shot",
   "sound": "yes: trailer sound from the first shot, split per shot on the server",
   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
- }
+ },
+ "cut_ok": [
+  [
+   "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
+   12.16,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
+   32.12,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
+   52.12,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ]
+ ],
+ "drift_ok": [
+  [
+   "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
+   12.16,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
+   32.12,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
+   52.12,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ]
+ ]
 }
