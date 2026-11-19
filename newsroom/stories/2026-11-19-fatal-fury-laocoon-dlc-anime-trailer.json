@@ -58,5 +58,25 @@
    "2026-10-18-fatal-fury-cotw-terry-mai-classic-costumes",
    "2026-11-12-fatal-fury-laocorn-gaudeamus-dlc"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/fatal-fury-laocoon-dlc-anime-trailer-reel-v1.mp4",
+  "blob": "fc15961711935fae1d1da2f6a79dc685127ffe11",
+  "at": "2026-11-19T14:24:40Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/fatal-fury-laocoon-dlc-anime-trailer.json",
+   "sha256": "c1253ab47ed9d63e71ed8d7084aa0f2c4389b38bfa04b89b15b8b4cdc38c8b18",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1 headline with date 19 نوفمبر in order; look-2 and look-3 captions readable, credit legible"
  }
 }
