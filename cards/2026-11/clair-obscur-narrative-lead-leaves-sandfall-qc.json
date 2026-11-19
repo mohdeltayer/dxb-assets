@@ -1,0 +1,587 @@
+{
+ "name": "clair-obscur-narrative-lead-leaves-sandfall",
+ "out": "cards/2026-11/clair-obscur-narrative-lead-leaves-sandfall-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [],
+ "ladder": [],
+ "job_to_pass_min": 11.9,
+ "at": "2026-11-19T08:30:10Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 starts at 0.0 s, the video at 0.95 s; its first 0.95 s are lost",
+  "first frame: shot 1 clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 starts at 0.0 s, the video at 0.95 s; its first 0.95 s are lost",
+  "first frame: shot 2 clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 starts at 0.0 s, the video at 0.95 s; its first 0.95 s are lost",
+  "first frame: shot 3 clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 starts at 0.0 s, the video at 0.95 s; its first 0.95 s are lost",
+  "first frame: shot 4 clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 starts at 0.0 s, the video at 0.95 s; its first 0.95 s are lost",
+  "first frame: shot 5 clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 starts at 0.0 s, the video at 0.95 s; its first 0.95 s are lost",
+  "first frame: shot 6 clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 starts at 0.0 s, the video at 0.95 s; its first 0.95 s are lost",
+  "first frame: shot 7 clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 starts at 0.0 s, the video at 0.95 s; its first 0.95 s are lost",
+  "first frame: shot 8 clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 starts at 0.0 s, the video at 0.95 s; its first 0.95 s are lost",
+  "first frame: shot 9 clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 starts at 0.0 s, the video at 0.95 s; its first 0.95 s are lost",
+  "first frame: shot 10 clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 starts at 0.0 s, the video at 0.95 s; its first 0.95 s are lost",
+  "first frame: shot 11 clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 starts at 0.0 s, the video at 0.95 s; its first 0.95 s are lost",
+  "first frame: shot 12 clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 starts at 0.0 s, the video at 0.95 s; its first 0.95 s are lost",
+  "first frame: shot 13 clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 starts at 0.0 s, the video at 0.95 s; its first 0.95 s are lost",
+  "first frame: shot 14 clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 starts at 0.0 s, the video at 0.95 s; its first 0.95 s are lost",
+  "length 31.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 64.1; leak_pct 0.3; cache {'hit': 0, 'miss': 6}; separate_secs 47.2; secs 64.8",
+  "render_job: lifeless: {\"score\": 2.4, \"still_share\": 0.016, \"longest_still\": 0.4, \"cuts_per_10s\": 3.88, \"held_under_text\": 0.003, \"secs\": 30.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 at 78.31 s for 3.8 s, focus 0.516"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 at 89.31 s for 2.2 s, focus 0.554"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 at 91.51 s for 2.2 s, focus 0.554"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 at 96.45 s for 2.2 s, focus 0.442"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 at 114.55 s for 2.2 s, focus 0.252"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 at 67.26 s for 2.2 s, focus 0.221"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 at 70.86 s for 2.2 s, focus 0.221"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "clair-obscur-narrative-lead-leaves-sandfall-pre-order-trailer.mp4 at 58.36 s for 2.2 s, focus 0.444 (nothing free in clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "clair-obscur-narrative-lead-leaves-sandfall-pre-order-trailer.mp4 at 51.40 s for 2.2 s, focus 0.675 (nothing free in clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 9",
+   "rule": "auto_shots",
+   "what": "clair-obscur-narrative-lead-leaves-sandfall-pre-order-trailer.mp4 at 33.32 s for 2.7 s, focus 0.482 (nothing free in clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 10",
+   "rule": "auto_shots",
+   "what": "clair-obscur-narrative-lead-leaves-sandfall-cast-reveal.mp4 at 52.50 s for 2.7 s, focus 0.48 (nothing free in clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 11",
+   "rule": "auto_shots",
+   "what": "clair-obscur-narrative-lead-leaves-sandfall-cast-reveal.mp4 at 42.14 s for 2.5 s, focus 0.247 (nothing free in clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 12",
+   "rule": "auto_shots",
+   "what": "clair-obscur-narrative-lead-leaves-sandfall-cast-reveal.mp4 at 39.38 s for 2.5 s, focus 0.247 (nothing free in clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 13",
+   "rule": "auto_shots",
+   "what": "clair-obscur-narrative-lead-leaves-sandfall-cast-reveal.mp4 at 50.08 s for 2.4 s, focus 0.48 (shortened from 2.5 s: no free clean stretch that long)"
+  },
+  {
+   "where": "shot 14",
+   "rule": "auto_shots",
+   "what": "clair-obscur-narrative-lead-leaves-sandfall-pre-order-trailer.mp4 at 86.26 s for 2.3 s, focus 0.4 (shortened from 2.5 s: no free clean stretch that long)"
+  },
+  {
+   "where": "shot 1",
+   "rule": "subject_drift",
+   "what": "focus [[0.0, 0.554]] to 0.14: the subject stays inside the window",
+   "before": [
+    "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
+    89.31,
+    2.2,
+    [
+     [
+      0.0,
+      0.554
+     ]
+    ]
+   ],
+   "after": [
+    "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
+    89.31,
+    2.2,
+    0.14
+   ]
+  },
+  {
+   "where": "shot 5",
+   "rule": "subject_drift",
+   "what": "trimmed to 2.00 s, its longest safe length before the subject leaves the 9:16 window",
+   "before": [
+    "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
+    67.26,
+    2.2,
+    [
+     [
+      0.0,
+      0.221
+     ]
+    ]
+   ],
+   "after": [
+    "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
+    67.26,
+    2.0,
+    [
+     [
+      0.0,
+      0.221
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 6",
+   "rule": "fill",
+   "what": "lengthened 2.20 to 2.40 s to keep the time shot 5 gave up",
+   "before": 2.2,
+   "after": 2.4
+  },
+  {
+   "where": "shot 7",
+   "rule": "subject_cut",
+   "what": "focus [[0.0, 0.444]] to 0.09: the subject stays inside the window",
+   "before": [
+    "clair-obscur-narrative-lead-leaves-sandfall-pre-order-trailer.mp4",
+    58.36,
+    2.2,
+    [
+     [
+      0.0,
+      0.444
+     ]
+    ]
+   ],
+   "after": [
+    "clair-obscur-narrative-lead-leaves-sandfall-pre-order-trailer.mp4",
+    58.36,
+    2.2,
+    0.09
+   ]
+  }
+ ],
+ "job_sha": "3f51cbdcf33740d5483c9f2ea05aa23786e9a043",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.8,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/clair-obscur-narrative-lead-leaves-sandfall-look-1.jpg",
+  "cards/2026-11/clair-obscur-narrative-lead-leaves-sandfall-look-2.jpg",
+  "cards/2026-11/clair-obscur-narrative-lead-leaves-sandfall-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 166.0,
+  "files": {
+   "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4": {
+    "secs": 56.1,
+    "cached": false,
+    "stages": {
+     "decode": 26.9,
+     "autofocus": 45.8,
+     "ocr": 45.8,
+     "smear": 55.8,
+     "scenes": 56.0
+    },
+    "incomplete": null
+   },
+   "clair-obscur-narrative-lead-leaves-sandfall-pre-order-trailer.mp4": {
+    "secs": 56.1,
+    "cached": false,
+    "stages": {
+     "decode": 26.4,
+     "autofocus": 45.2,
+     "ocr": 45.2,
+     "smear": 55.8,
+     "scenes": 56.1
+    },
+    "incomplete": null
+   },
+   "clair-obscur-narrative-lead-leaves-sandfall-cast-reveal.mp4": {
+    "secs": 53.8,
+    "cached": false,
+    "stages": {
+     "decode": 25.3,
+     "autofocus": 41.5,
+     "ocr": 41.5,
+     "smear": 53.0,
+     "scenes": 53.8
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/clair-obscur-narrative-lead-leaves-sandfall.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.2,
+  "fetch": 0.85,
+  "shots": 2.78,
+  "checks": 2.22,
+  "render": 4.24,
+  "after": 1.39,
+  "job": 11.48
+ },
+ "job_after_autofix": {
+  "name": "clair-obscur-narrative-lead-leaves-sandfall",
+  "story": "2026-11-19-clair-obscur-narrative-lead-leaves-sandfall",
+  "footage_source": "steam:1903340",
+  "kind_news": "reveal",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/clair-obscur-narrative-lead-leaves-sandfall-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
+    "steam": 1903340,
+    "trailer": "Launch Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "1903340"
+   },
+   {
+    "file": "clair-obscur-narrative-lead-leaves-sandfall-pre-order-trailer.mp4",
+    "steam": 1903340,
+    "trailer": "Pre-order Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "1903340"
+   },
+   {
+    "file": "clair-obscur-narrative-lead-leaves-sandfall-cast-reveal.mp4",
+    "steam": 1903340,
+    "trailer": "Cast Reveal",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "1903340"
+   }
+  ],
+  "shots": [
+   [
+    "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
+    78.31,
+    3.8,
+    [
+     [
+      0.0,
+      0.516
+     ]
+    ]
+   ],
+   [
+    "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
+    89.31,
+    2.2,
+    0.14
+   ],
+   [
+    "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
+    91.51,
+    2.2,
+    [
+     [
+      0.0,
+      0.554
+     ]
+    ]
+   ],
+   [
+    "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
+    96.45,
+    2.2,
+    [
+     [
+      0.0,
+      0.442
+     ]
+    ]
+   ],
+   [
+    "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
+    114.55,
+    2.2,
+    [
+     [
+      0.0,
+      0.252
+     ]
+    ]
+   ],
+   [
+    "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
+    67.26,
+    2.0,
+    [
+     [
+      0.0,
+      0.221
+     ]
+    ]
+   ],
+   [
+    "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
+    70.86,
+    2.4,
+    [
+     [
+      0.0,
+      0.221
+     ]
+    ]
+   ],
+   [
+    "clair-obscur-narrative-lead-leaves-sandfall-pre-order-trailer.mp4",
+    58.36,
+    2.2,
+    0.09
+   ],
+   [
+    "clair-obscur-narrative-lead-leaves-sandfall-pre-order-trailer.mp4",
+    51.4,
+    2.2,
+    [
+     [
+      0.0,
+      0.675
+     ]
+    ]
+   ],
+   [
+    "clair-obscur-narrative-lead-leaves-sandfall-pre-order-trailer.mp4",
+    33.32,
+    2.71,
+    [
+     [
+      0.0,
+      0.482
+     ]
+    ]
+   ],
+   [
+    "clair-obscur-narrative-lead-leaves-sandfall-cast-reveal.mp4",
+    52.5,
+    2.71,
+    [
+     [
+      0.0,
+      0.48
+     ]
+    ]
+   ],
+   [
+    "clair-obscur-narrative-lead-leaves-sandfall-cast-reveal.mp4",
+    42.14,
+    2.49,
+    [
+     [
+      0.0,
+      0.247
+     ]
+    ]
+   ],
+   [
+    "clair-obscur-narrative-lead-leaves-sandfall-cast-reveal.mp4",
+    39.38,
+    2.49,
+    [
+     [
+      0.0,
+      0.247
+     ]
+    ]
+   ],
+   [
+    "clair-obscur-narrative-lead-leaves-sandfall-cast-reveal.mp4",
+    50.08,
+    2.42,
+    [
+     [
+      0.0,
+      0.48
+     ]
+    ]
+   ],
+   [
+    "clair-obscur-narrative-lead-leaves-sandfall-pre-order-trailer.mp4",
+    86.26,
+    2.34,
+    [
+     [
+      0.0,
+      0.4
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "غادرت جينيفر سفيدبيرغ-ين،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "رئيسة السرد",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "في لعبة Clair Obscur: Expedition 33،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    8,
+    [
+     [
+      "استوديو Sandfall Interactive\nفي يوليو",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    9,
+    10,
+    [
+     [
+      "تقول يوروغيمر (Eurogamer)\nإنها أكدت بعد فوزها بجائزة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    11,
+    12,
+    [
+     [
+      "بافتا أنها أنهت عملها\nعلى اللعبة وأنهما افترقا",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    13,
+    14,
+    [
+     [
+      "وتريد الآن إطلاق صندوق\nلدعم كتّاب الألعاب الجدد",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    14,
+    "المصدر: صفحة اللعبة على Steam",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "غادرت جينيفر سفيدبيرغ-ين، رئيسة السرد في لعبة Clair Obscur: Expedition 33، استوديو Sandfall Interactive في يوليو. تقول يوروغيمر (Eurogamer) إنها أكدت بعد فوزها بجائزة بافتا أنها أنهت عملها على اللعبة وأنهما افترقا. وتريد الآن إطلاق صندوق لدعم كتّاب الألعاب الجدد.",
+  "headline": "كاتبة قصة Clair Obscur\nتغادر استوديو اللعبة",
+  "label": "تقرير",
+  "game": "Clair Obscur: Expedition 33",
+  "game_short": "Clair Obscur",
+  "texts": {
+   "instagram": "كاتبة قصة Clair Obscur غادرت استوديو Sandfall Interactive\n\nحسب موقع يوروغيمر (Eurogamer)، قالت جينيفر سفيدبيرغ-ين، رئيسة السرد في Clair Obscur: Expedition 33، إنها غادرت الاستوديو في يوليو بعد إنهاء عملها على اللعبة. جاء ذلك بعد فوزها بجائزة بافتا للمواهب الصاعدة، وتقول إنها تريد إطلاق صندوق لدعم كتّاب الألعاب الجدد.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع يوروغيمر (Eurogamer).\n\n#ألعاب #أخبار_الألعاب #ClairObscur #Expedition33",
+   "x": "غادرت جينيفر سفيدبيرغ-ين، رئيسة السرد في Clair Obscur: Expedition 33، استوديو Sandfall Interactive في يوليو، حسب موقع يوروغيمر (Eurogamer). وتريد الآن إطلاق صندوق لدعم كتّاب الألعاب الجدد.",
+   "threads": "غادرت جينيفر سفيدبيرغ-ين، رئيسة السرد في Clair Obscur: Expedition 33، استوديو Sandfall Interactive في يوليو بعد إنهاء عملها على اللعبة. وتريد الآن إطلاق صندوق لدعم كتّاب الألعاب الجدد.\n\nالمصدر: موقع يوروغيمر (Eurogamer)"
+  },
+  "source": "صفحة اللعبة على Steam",
+  "date": "19 Nov 2026",
+  "theme": "stylized",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
+   78.31
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Eurogamer reported on 18 Nov that she confirmed her exit after winning a BAFTA Breakthrough US award.",
+   "what_it_means_here": "The writer behind a game that swept the awards has left its studio, which has not yet shown its next project."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4 from the resolver (steam:1903340)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam store page, Clair Obscur: Expedition 33 (footage only) (https://store.steampowered.com/app/1903340/); first report: Eurogamer, 18 Nov 2026 12:18Z (IGN 16:35Z, VGC 16:54Z)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 1903340 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
