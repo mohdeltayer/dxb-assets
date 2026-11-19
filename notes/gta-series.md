@@ -89,3 +89,9 @@ Ledger rows (shots and sound; times are seek seconds in the named source):
 | 7 | PL 11.25 to 12.6; XL 776 to 777.5; XL 758 to 761; XL 770 to 772.6; XL 765 to 769.6; XL 782.3 to 785.9 | COV music stem from 7.5 (music_only) |
 | 8 | XL 1208 to 1211.3; XL 1211.3 to 1213.95; XL 1214.05 to 1215.65; XL 1545 to 1548.4; XL 1231.4 to 1232.7; still rs-vice-city-08.jpg; still rs-vice-city-27.jpg | Lm music stem from 3 (music_only) |
 | 9 | Lm 2.6 to 4.9; XL 1104.3 to 1107.7; T2m 142 to 143.4; XL 1551 to 1552.45; Lm 21 to 22.45; still rs-vice-city-10.jpg | Lm music stem from 44.5 (music_only) |
+
+## Series closed (19 Nov 2026)
+
+Episode 9 (launch day) published 20:01 to 20:02 Dubai on Instagram, X and Threads after its re-gate (rockstargames.com/VI
+still 19 November 2026 on PS5 and Xbox Series X|S). All nine episodes went out. The series is closed; the gtavi theme
+returns to its own use only. Board line 16:05Z.
