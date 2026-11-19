@@ -1,0 +1,297 @@
+{
+ "name": "arknights-endfield-anniversary-festival-january",
+ "out": "cards/2026-11/arknights-endfield-anniversary-festival-january-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot gate",
+   "detail": "shot 0 (arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 7.38 s): is letterboxed on this stretch (934 of 1080 rows of picture); no clean start of 3.80 s within 12 s: pick another stretch or shorten the shot shot_timing",
+   "shot": 0
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 2 (arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 16.90 s): is letterboxed on this stretch (934 of 1080 rows of picture); no clean start of 2.74 s within 12 s: pick another stretch or shorten the shot shot_timing",
+   "shot": 2
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 3 (arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 16.00 s): is letterboxed on this stretch (934 of 1080 rows of picture); no clean start of 2.20 s within 12 s: pick another stretch or shorten the shot shot_timing",
+   "shot": 3
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 4 (arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 28.00 s): is letterboxed on this stretch (934 of 1080 rows of picture); no clean start of 2.20 s within 12 s: pick another stretch or shorten the shot shot_timing",
+   "shot": 4
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 5 (arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 40.00 s): crosses the trailer's scene cut at 41.01 s (shot 40.00 to 42.31 s; up to the cut it holds 0.97 s); is letterboxed on this stretch (934 of 1080 rows of picture); no clean start of 2.31 s within 12 s: pick another stretch or shorten the shot shot_timing",
+   "shot": 5
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 6 (arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 52.00 s): is letterboxed on this stretch (934 of 1080 rows of picture); no clean start of 2.31 s within 12 s: pick another stretch or shorten the shot shot_timing",
+   "shot": 6
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 7 (arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 64.00 s): crosses the trailer's scene cut at 65.28 s (shot 64.00 to 66.20 s; up to the cut it holds 1.24 s); is letterboxed on this stretch (934 of 1080 rows of picture); no clean start of 2.20 s within 12 s: pick another stretch or shorten the shot shot_timing",
+   "shot": 7
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 8 (arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 76.00 s): crosses the trailer's scene cut at 77.55 s (shot 76.00 to 78.20 s; up to the cut it holds 1.51 s); is letterboxed on this stretch (934 of 1080 rows of picture); no clean start of 2.20 s within 12 s: pick another stretch or shorten the shot shot_timing",
+   "shot": 8
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 10 (arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 100.00 s): is letterboxed on this stretch (934 of 1080 rows of picture); nearest clean start 99.25 s for the same 2.24 s shot_timing",
+   "shot": 10
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 11 (arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 102.67 s): is letterboxed on this stretch (934 of 1080 rows of picture); nearest clean start 99.17 s for the same 2.20 s shot_timing",
+   "shot": 11
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 12 (arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 112.19 s): is letterboxed on this stretch (934 of 1080 rows of picture); no clean start of 2.20 s within 12 s: pick another stretch or shorten the shot shot_timing",
+   "shot": 12
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 5 (arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 40.00 s): the subject leaves the 9:16 crop at 40.30 s (0.30 s into the shot); longest safe length 0.20 s, or reframe it (focus keyframes), or waive with drift_ok after looking subject_drift",
+   "shot": 5
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 10 (arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 100.00 s): the subject leaves the 9:16 crop at 101.30 s (1.30 s into the shot); longest safe length 1.20 s, or reframe it (focus keyframes), or waive with drift_ok after looking subject_drift",
+   "shot": 10
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 at 7.38 s for 3.8 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 at 16.9 s for 2.74 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 at 16.0 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 at 28.0 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 at 40.0 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 at 52.0 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 at 64.0 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 at 76.0 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 at 88.0 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 at 100.0 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 at 102.67 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 at 112.19 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "letterbox: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "letterbox: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "letterbox: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "letterbox: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "letterbox, cut: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "letterbox: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "letterbox, cut: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "letterbox, cut: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "letterbox: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "letterbox: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "letterbox: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "drift: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "drift: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "letterboxed footage: showcase layout, the trailer at its own width"
+  }
+ ],
+ "job_to_pass_min": 16.1,
+ "at": "2026-11-19T10:47:38Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 26.8 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 54.3; leak_pct 0.1; cache {'hit': 8, 'miss': 0}; separate_secs 3.4; secs 6.0",
+  "render_job: lifeless: {\"score\": 19.9, \"still_share\": 0.127, \"longest_still\": 3.4, \"cuts_per_10s\": 6.74, \"held_under_text\": 0.0, \"secs\": 26.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 24 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [],
+ "job_sha": "8c9b763f5bfee33f959f17c7ff7e6c9e91e468d0",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 2.06,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/arknights-endfield-anniversary-festival-january-look-1.jpg",
+  "cards/2026-11/arknights-endfield-anniversary-festival-january-look-2.jpg",
+  "cards/2026-11/arknights-endfield-anniversary-festival-january-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 82.9,
+  "files": {
+   "arknights-endfield-google-play-best-game-2026-sanctuary-of-ink-version-trailer.mp4": {
+    "secs": 34.0,
+    "cached": false,
+    "stages": {
+     "decode": 13.8,
+     "autofocus": 30.7,
+     "ocr": 30.7,
+     "smear": 33.7,
+     "scenes": 34.0
+    },
+    "incomplete": null
+   },
+   "arknights-endfield-anniversary-festival-january-trailer-back-to-endfield.mp4": {
+    "secs": 48.8,
+    "cached": false,
+    "stages": {
+     "decode": 22.5,
+     "autofocus": 37.2,
+     "ocr": 37.2,
+     "smear": 48.6,
+     "scenes": 48.8
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/arknights-endfield-anniversary-festival-january.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.2,
+  "fetch": 0.41,
+  "shots": 1.4,
+  "checks": 9.49,
+  "render": 2.13,
+  "after": 1.24,
+  "job": 14.68
+ }
+}
