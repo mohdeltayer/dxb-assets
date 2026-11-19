@@ -55,16 +55,18 @@
   "hits": []
  },
  "director_check": {
-  "verdict": "PASS",
+  "verdict": "FIX",
   "out": "cards/2026-11/burning-sword-death-sun-early-access-reel-v1.mp4",
-  "blob": "18768c7f51ccf7105e9edc04fdd0ee39a7db3e61",
-  "at": "2026-11-19T00:28:27Z",
-  "note": "",
+  "blob": "12fd230372c01c7b20f25efe9a77d3481ac4bcee",
+  "at": "2026-11-19T03:01:13Z",
+  "note": "Price caption (line 3, about 11.5 to 13.5 s) sits on bright orange fire and sparks and is hard to read for about 2 s; move that stretch to calmer footage.",
   "checklist": {
-   "job": "jobs/live/burning-sword-death-sun-early-access.json",
-   "sha256": "db061a8ad2e93831b0fae31cb0d044bee038137a8cb7abf7cde4da92b4b42f5d",
-   "ok": true,
-   "problems": [],
+   "job": "jobs/done/burning-sword-death-sun-early-access.json",
+   "sha256": "404cc33998f4b1a579b23debc94c87c0f5ba688cd56ed7e3915a2de246471595",
+   "ok": false,
+   "problems": [
+    "render_lane server: the job belongs in jobs/live/ (dispatch render-live.yml), not jobs/done/burning-sword-death-sun-early-access.json"
+   ],
    "template": "trailer",
    "layout": null,
    "evergreen": false,
@@ -72,6 +74,16 @@
   },
   "by": "director-p2",
   "qc": "pass",
-  "looked": "Director agent saw look frames: chip, headline, source tag and price caption readable over wuxia scenes, no graphic content, facts match Gematsu"
- }
+  "looked": null
+ },
+ "director_sendbacks": [
+  {
+   "at": "2026-11-19T03:01:13Z",
+   "reason": "unreadable_text",
+   "note": "Price caption (line 3, about 11.5 to 13.5 s) sits on bright orange fire and sparks and is hard to read for about 2 s; move that stretch to calmer footage.",
+   "by": "director-p2",
+   "out": "cards/2026-11/burning-sword-death-sun-early-access-reel-v1.mp4",
+   "qc": "pass"
+  }
+ ]
 }
