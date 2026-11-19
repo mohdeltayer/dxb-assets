@@ -1,0 +1,339 @@
+{
+ "name": "fatal-fury-laocoon-dlc-anime-trailer",
+ "out": "cards/2026-11/fatal-fury-laocoon-dlc-anime-trailer-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [],
+ "ladder": [],
+ "job_to_pass_min": 5.7,
+ "at": "2026-11-19T11:48:50Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 1 fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 2 fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 3 fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 4 fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 5 fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "length 12.8 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 76.2; leak_pct 0.4; cache {'hit': 0, 'miss': 4}; separate_secs 19.0; secs 27.3",
+  "render_job: lifeless: {\"score\": 0.2, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 8.66, \"held_under_text\": 0.016, \"secs\": 12.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "credit 1",
+   "rule": "credit_width",
+   "what": "set one line at 36 px (was 40 px, too wide for the safe zone)",
+   "before": {
+    "text": "المصدر: صفحة Fatal Fury: City of the Wolves على Steam",
+    "size": 40
+   },
+   "after": {
+    "text": "المصدر: صفحة Fatal Fury: City of the Wolves على Steam",
+    "size": 36
+   }
+  },
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 at 30.45 s for 3.8 s, focus 0.314"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 at 40.08 s for 2.2 s, focus 0.411"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 at 47.08 s for 2.2 s, focus 0.588"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 at 74.71 s for 2.2 s, focus 0.456"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 at 86.95 s for 2.2 s, focus 0.527"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 at 83.05 s for 2.2 s, focus 0.296"
+  },
+  {
+   "where": "shot 1",
+   "rule": "subject_drift",
+   "what": "focus [[0.0, 0.411]] to 0.31: the subject stays inside the window",
+   "before": [
+    "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
+    40.08,
+    2.2,
+    [
+     [
+      0.0,
+      0.411
+     ]
+    ]
+   ],
+   "after": [
+    "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
+    40.08,
+    2.2,
+    0.31
+   ]
+  },
+  {
+   "where": "shot 2",
+   "rule": "subject_drift",
+   "what": "moved from 47.08 to 47.58 s, the nearest stretch of the same source with the subject inside",
+   "before": [
+    "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
+    47.08,
+    2.2,
+    [
+     [
+      0.0,
+      0.588
+     ]
+    ]
+   ],
+   "after": [
+    "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
+    47.58,
+    2.2,
+    [
+     [
+      0.0,
+      0.588
+     ]
+    ]
+   ]
+  }
+ ],
+ "job_sha": "6673676330bc535067c78522a828c681592c10a1",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/fatal-fury-laocoon-dlc-anime-trailer-look-1.jpg",
+  "cards/2026-11/fatal-fury-laocoon-dlc-anime-trailer-look-2.jpg",
+  "cards/2026-11/fatal-fury-laocoon-dlc-anime-trailer-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 58.0,
+  "files": {
+   "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4": {
+    "secs": 58.0,
+    "cached": false,
+    "stages": {
+     "decode": 24.4,
+     "autofocus": 48.3,
+     "ocr": 48.3,
+     "smear": 57.5,
+     "scenes": 58.0
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/fatal-fury-laocoon-dlc-anime-trailer.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.17,
+  "fetch": 0.75,
+  "shots": 0.98,
+  "checks": 1.34,
+  "render": 1.6,
+  "after": 0.63,
+  "job": 5.32
+ },
+ "job_after_autofix": {
+  "name": "fatal-fury-laocoon-dlc-anime-trailer",
+  "story": "2026-11-19-fatal-fury-laocoon-dlc-anime-trailer",
+  "footage_source": "steam:2492040",
+  "kind_news": "reveal",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/fatal-fury-laocoon-dlc-anime-trailer-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
+    "steam": 2492040,
+    "trailer": "HK_trailer_en",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2492040"
+   },
+   {
+    "file": "fatal-fury-laocoon-dlc-anime-trailer-rick-trailer-en.mp4",
+    "steam": 2492040,
+    "trailer": "Rick_trailer_en",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2492040"
+   },
+   {
+    "file": "fatal-fury-laocoon-dlc-anime-trailer-mrkarate-trailer-en.mp4",
+    "steam": 2492040,
+    "trailer": "MrKarate_trailer_en",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2492040"
+   }
+  ],
+  "shots": [
+   [
+    "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
+    30.45,
+    3.8,
+    [
+     [
+      0.0,
+      0.314
+     ]
+    ]
+   ],
+   [
+    "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
+    40.08,
+    2.2,
+    0.31
+   ],
+   [
+    "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
+    47.58,
+    2.2,
+    [
+     [
+      0.0,
+      0.588
+     ]
+    ]
+   ],
+   [
+    "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
+    74.71,
+    2.2,
+    [
+     [
+      0.0,
+      0.456
+     ]
+    ]
+   ],
+   [
+    "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
+    86.95,
+    2.2,
+    [
+     [
+      0.0,
+      0.527
+     ]
+    ]
+   ],
+   [
+    "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
+    83.05,
+    2.2,
+    [
+     [
+      0.0,
+      0.296
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "وحسب موقع فورغيمر (4Gamer)،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    5,
+    [
+     [
+      "رافقه عرض أنمي جديد أخرجه مخرج\nفيلم Fatal Fury السينمائي",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    5,
+    "المصدر: صفحة Fatal Fury: City of the Wolves على Steam",
+    {
+     "size": 36,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "وصل مقاتل جديد إلى لعبة Fatal Fury اليوم 19 نوفمبر، وهو Laocoön Gordamas، سادس شخصية إضافية للعبة من SNK. وحسب موقع فورغيمر (4Gamer)، رافقه عرض أنمي جديد أخرجه مخرج فيلم Fatal Fury السينمائي.",
+  "headline": "مقاتل جديد يصل\nإلى لعبة Fatal Fury",
+  "label": "تقرير",
+  "game": "Fatal Fury: City of the Wolves",
+  "game_short": "Fatal Fury",
+  "texts": {
+   "instagram": "وصل مقاتل جديد إلى لعبة Fatal Fury: City of the Wolves\n\nحسب موقع فورغيمر (4Gamer)، صدرت اليوم 19 نوفمبر شخصية Laocoön Gordamas، السادسة بين الشخصيات الإضافية للعبة من SNK. ورافقها عرض أنمي جديد من إخراج ماسامي أوباري، مخرج فيلم Fatal Fury السينمائي، إضافة إلى عرض يشرح أسلوب قتاله.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع فورغيمر (4Gamer).\n\n#ألعاب #أخبار_الألعاب #FatalFury #CityOfTheWolves",
+   "x": "وصلت شخصية Laocoön Gordamas إلى لعبة Fatal Fury: City of the Wolves اليوم 19 نوفمبر، السادسة بين الشخصيات الإضافية، مع عرض أنمي جديد، حسب موقع فورغيمر (4Gamer).",
+   "threads": "وصلت شخصية Laocoön Gordamas إلى لعبة Fatal Fury: City of the Wolves اليوم 19 نوفمبر، السادسة بين الشخصيات الإضافية. ورافقها عرض أنمي جديد من إخراج مخرج فيلم Fatal Fury السينمائي.\n\nالمصدر: موقع فورغيمر (4Gamer)"
+  },
+  "source": "صفحة Fatal Fury: City of the Wolves على Steam",
+  "date": "19 Nov 2026",
+  "theme": "cold",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4",
+   30.45
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "4Gamer reported on 19 Nov that Laocoön Gordamas, the sixth DLC character, was released with an anime trailer.",
+   "what_it_means_here": "Fans of the fighting series get a new character tied to the Fatal Fury film."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "fatal-fury-laocoon-dlc-anime-trailer-hk-trailer-en.mp4 from the resolver (steam:2492040)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam store page, Fatal Fury: City of the Wolves (footage only) (https://store.steampowered.com/app/2492040/); first report: 4Gamer, 19 Nov 2026 10:33Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 2492040 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
