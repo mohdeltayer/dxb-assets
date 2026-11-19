@@ -40,6 +40,31 @@ def lanes():
     return c
 
 
+SEEN_FROM = {'watch-digest.yml': 24, 'render-live.yml': 12, 'server-check.yml': 4}    # workflows that run on the server
+
+
+def runners_seen(repo, held_names=()):
+    """Distinct runner instances (label dxb-render) seen on recent server jobs and on the jobs holding the server now.
+    At least 1; on any error 1, which keeps today's single-lane routing."""
+    names = set(n for n in held_names if n)
+    try:
+        for wf, n in SEEN_FROM.items():
+            for r in gh(f'repos/{repo}/actions/workflows/{wf}/runs?per_page={n}').get('workflow_runs', []):
+                for j in jobs_of(repo, r['id']):
+                    if LABEL in (j.get('labels') or []) and j.get('runner_name'):
+                        names.add(j['runner_name'])
+    except Exception as e:
+        print(f'render_route: could not count runner instances ({e}); assuming 1')
+        return 1, sorted(names)
+    return max(1, len(names)), sorted(names)
+
+
+def effective(c, count):
+    """render_slots and t0_reserve cut to the instances that exist: slots <= runners, slots + reserve <= runners."""
+    slots = max(1, min(c['render_slots'], count))
+    return dict(c, runners=count, render_slots=slots, t0_reserve=max(0, min(c['t0_reserve'], count - slots)))
+
+
 def priority(job):
     """T0 and breaking jobs: a slip of tier 0, a job marked tier 0 / T0 or priority, the breaking profile or kind."""
     tier = job.get('tier', (job.get('slip') or {}).get('tier'))
@@ -90,7 +115,25 @@ def holders(repo, me):
             for j in jobs_of(repo, r['id']):
                 if j.get('status') in ('queued', 'in_progress') and LABEL in (j.get('labels') or []):
                     held.append((r.get('name'), j.get('name'), j.get('status')))
+                    if j.get('runner_name'):
+                        RUNNING.add(j['runner_name'])
     return held
+
+
+RUNNING = set()
+
+
+def config(repo):
+    c = lanes()
+    if c['runners'] == 'auto':
+        count, names = runners_seen(repo, RUNNING)
+        print(f"render_route: runner instances seen: {count} ({', '.join(names) or 'none named'})")
+    else:
+        count = int(c['runners'])
+    c = effective(c, count)
+    print(f"render_route: lanes in force: {c['runners']} instance(s), {c['render_slots']} render slot(s), "
+          f"{c['t0_reserve']} T0 reserve")
+    return c
 
 
 def busy(repo, me):
@@ -120,7 +163,7 @@ def main(what):
             out('lane', 'hosted')
             return
         print('render_route: server holders: ' + ('; '.join(f'{w}/{j} ({s})' for w, j, s in held) or 'none'))
-        lane, why = decide(held, True)                  # a breaking job is T0: it may take the reserved slot
+        lane, why = decide(held, True, config(repo))    # a breaking job is T0: it may take the reserved slot
         print('render_route: ' + why)
         out('lane', 'server' if lane == 'server' else 'hosted')
     elif what == 'live':
@@ -132,7 +175,7 @@ def main(what):
             out('lane', 'server')
             return
         print('render_route: server holders: ' + ('; '.join(f'{w}/{j} ({s})' for w, j, s in held) or 'none'))
-        lane, why = decide(held, priority(job))
+        lane, why = decide(held, priority(job), config(repo))
         print('render_route: ' + why + f' -> {lane}')
         out('lane', lane)
     elif what == 'standby':

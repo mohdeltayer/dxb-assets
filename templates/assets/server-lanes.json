@@ -1,7 +1,17 @@
 {
- "note": "Server render lanes (Mohammad, 19 Nov 2026: two renders at once on dxb-render-1, the third overflowing to GitHub). runners: runner instances registered on dxb-render-1 (label dxb-render); render_slots: renders a normal job may share the server with; t0_reserve: extra render slots only T0 and breaking jobs may take. Raise render_slots and t0_reserve only after the runner instances exist: a job routed to the server when every instance is busy waits there instead of overflowing. templates/render_route.py reads this file.",
- "runners": 1,
- "render_slots": 1,
- "t0_reserve": 0,
- "render_jobs": {"render-live": ["live"], "render-breaking": ["server"], "server-capacity-test": ["capacity"]}
+ "note": "Server render lanes (Mohammad, 19 Nov 2026: two renders at once on dxb-render-1, the third overflowing to GitHub). render_slots: renders a normal job may share the server with; t0_reserve: extra render slots only T0 and breaking jobs may take; runners: 'auto' counts the runner instances (label dxb-render) from the runner names on the server's recent jobs, so the slots open by themselves once scripts/runner-add.sh has registered the extra instances; a number fixes it. Effective slots never exceed the instances seen, so nothing is routed to a server that would queue it. Test of 19 Nov: two renders together took 1.21x and 1.32x their solo time, server memory peak 4.8 of 16 GB. templates/render_route.py reads this.",
+ "runners": "auto",
+ "render_slots": 2,
+ "t0_reserve": 1,
+ "render_jobs": {
+  "render-live": [
+   "live"
+  ],
+  "render-breaking": [
+   "server"
+  ],
+  "server-capacity-test": [
+   "capacity"
+  ]
+ }
 }
