@@ -17,14 +17,14 @@
    "why": "audio split not applied (music only 27.7% of the track (< 40.0%)) on a trailer track under 13 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our "
   }
  ],
- "job_to_pass_min": 6.9,
- "at": "2026-11-19T07:16:14Z",
+ "job_to_pass_min": 6.8,
+ "at": "2026-11-19T07:24:31Z",
  "findings": [],
  "notes": [
   "length 31.4 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: not applied, audio as rendered; reason music only 27.7% of the track (< 40.0%); music_pct 27.7; leak_pct 2.0; cache {'hit': 0, 'miss': 2}; separate_secs 10.8; secs 16.0",
+  "render_job: audio split: not applied, audio as rendered; reason music only 27.7% of the track (< 40.0%); music_pct 27.7; leak_pct 2.0; cache {'hit': 2, 'miss': 0}; separate_secs 2.9; secs 4.0",
   "render_job: audio split fallback: our bed (ValueError: the trailer mix would not match the picture); bed:neon_e",
-  "render_job: lifeless: {\"score\": 5.7, \"still_share\": 0.061, \"longest_still\": 0.6, \"cuts_per_10s\": 5.1, \"held_under_text\": 0.035, \"secs\": 31.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: lifeless: {\"score\": 5.3, \"still_share\": 0.064, \"longest_still\": 0.4, \"cuts_per_10s\": 3.82, \"held_under_text\": 0.051, \"secs\": 31.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [
   {
@@ -89,12 +89,66 @@
    ]
   },
   {
-   "where": "shot 14",
+   "where": "shot 9",
    "rule": "shot_timing",
-   "what": "trimmed to 1.28 s, the clean part before the scene cut at 48.62 s",
+   "what": "moved from 36.80 to 37.05 s, the nearest clean start of the same 2.24 s",
    "before": [
     "binding-of-isaac-switch-2-same-day-as-gta-vi-the-binding-of-isaac-rebirth-teaser.mp4",
-    47.3,
+    36.8,
+    2.24,
+    [
+     [
+      0.0,
+      0.505
+     ]
+    ]
+   ],
+   "after": [
+    "binding-of-isaac-switch-2-same-day-as-gta-vi-the-binding-of-isaac-rebirth-teaser.mp4",
+    37.05,
+    2.24,
+    [
+     [
+      0.0,
+      0.505
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 13",
+   "rule": "shot_timing",
+   "what": "moved from 52.50 to 53.50 s, the nearest clean start of the same 2.20 s",
+   "before": [
+    "binding-of-isaac-switch-2-same-day-as-gta-vi-the-binding-of-isaac-rebirth-teaser.mp4",
+    52.5,
+    2.2,
+    [
+     [
+      0.0,
+      0.5
+     ]
+    ]
+   ],
+   "after": [
+    "binding-of-isaac-switch-2-same-day-as-gta-vi-the-binding-of-isaac-rebirth-teaser.mp4",
+    53.5,
+    2.2,
+    [
+     [
+      0.0,
+      0.5
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 14",
+   "rule": "shot_timing",
+   "what": "moved from 53.00 to 53.50 s, the nearest clean start of the same 2.20 s",
+   "before": [
+    "binding-of-isaac-switch-2-same-day-as-gta-vi-the-binding-of-isaac-rebirth-teaser.mp4",
+    53.0,
     2.2,
     [
      [
@@ -105,8 +159,8 @@
    ],
    "after": [
     "binding-of-isaac-switch-2-same-day-as-gta-vi-the-binding-of-isaac-rebirth-teaser.mp4",
-    47.3,
-    1.28,
+    53.5,
+    2.2,
     [
      [
       0.0,
@@ -114,39 +168,10 @@
      ]
     ]
    ]
-  },
-  {
-   "where": "shot 13",
-   "rule": "fill",
-   "what": "lengthened 2.20 to 3.12 s to keep the time shot 14 gave up",
-   "before": 2.2,
-   "after": 3.12
-  },
-  {
-   "where": "shot 13",
-   "rule": "subject_drift",
-   "what": "focus [[0.0, 0.5]] to 0.92: the subject stays inside the window",
-   "before": [
-    "binding-of-isaac-switch-2-same-day-as-gta-vi-the-binding-of-isaac-rebirth-teaser.mp4",
-    57.1,
-    3.12,
-    [
-     [
-      0.0,
-      0.5
-     ]
-    ]
-   ],
-   "after": [
-    "binding-of-isaac-switch-2-same-day-as-gta-vi-the-binding-of-isaac-rebirth-teaser.mp4",
-    57.1,
-    3.12,
-    0.92
-   ]
   }
  ],
- "job_sha": "e7b3cf6c8d198d9e80cde01009ab46583313e277",
- "dispatches": 3,
+ "job_sha": "f6e42625f3c77b7a89fa42f0058bdc7ddd663192",
+ "dispatches": 4,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -165,14 +190,13 @@
  "job_path": "jobs/done/binding-of-isaac-switch-2-same-day-as-gta-vi.json",
  "stage_minutes": {
   "queue": 0.03,
-  "setup": 0.2,
-  "fetch": 0.1,
+  "setup": 0.22,
+  "fetch": 0.11,
   "shots": 0.02,
-  "checks": 2.1,
-  "render": 2.99,
-  "after": 1.18,
-  "upload": 0.12,
-  "job": 6.4
+  "checks": 2.09,
+  "render": 2.9,
+  "after": 1.14,
+  "job": 6.25
  },
  "job_after_autofix": {
   "name": "binding-of-isaac-switch-2-same-day-as-gta-vi",
@@ -295,7 +319,7 @@
    ],
    [
     "binding-of-isaac-switch-2-same-day-as-gta-vi-the-binding-of-isaac-rebirth-teaser.mp4",
-    38.4,
+    37.05,
     2.24,
     [
      [
@@ -332,7 +356,7 @@
    ],
    [
     "binding-of-isaac-switch-2-same-day-as-gta-vi-the-binding-of-isaac-rebirth-teaser.mp4",
-    26.8,
+    26.0,
     2.2,
     [
      [
@@ -343,14 +367,19 @@
    ],
    [
     "binding-of-isaac-switch-2-same-day-as-gta-vi-the-binding-of-isaac-rebirth-teaser.mp4",
-    57.1,
-    3.12,
-    0.92
+    53.5,
+    2.2,
+    [
+     [
+      0.0,
+      0.5
+     ]
+    ]
    ],
    [
     "binding-of-isaac-switch-2-same-day-as-gta-vi-the-binding-of-isaac-rebirth-teaser.mp4",
-    47.3,
-    1.28,
+    53.5,
+    2.2,
     [
      [
       0.0,
@@ -614,6 +643,6 @@
     "never refuse: no clean stretch read, evenly spaced fallback"
    ]
   ],
-  "rerender": "Director FIX 19 Nov (unreadable_text): shots on black or letterboxed frames and the 2014 end card replaced by full-frame creature shots of the same teaser; credit stays on its band."
+  "rerender": "Director FIX 19 Nov (second, unreadable_text): near-black frames from the teaser fade-to-black moments (source 28.9, 40.5, 59.4); shots 9, 12, 13, 14 moved to lit full-frame creature stretches (36.8, 26.0, 52.5, 53.0)."
  }
 }
