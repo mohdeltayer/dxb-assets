@@ -63,5 +63,25 @@
    "h1"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/ubisoft-h1-loss-254m-bookings-down-reel-v1.mp4",
+  "blob": "a3ba3724c574e41ea33d4abb5a00847c4dae5940",
+  "at": "2026-11-19T21:33:35Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/ubisoft-h1-loss-254m-bookings-down.json",
+   "sha256": "c6fecf7b5cd58193653f644037c62c0d177452969fba65fafae001b06b50e6ab",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "headline above head not on face; bookings, net loss and Q3 lines readable in order; credit band readable; figures match story"
  }
 }
