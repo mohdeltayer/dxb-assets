@@ -56,5 +56,25 @@
    "2026-10-06-arknights-endfield-steam",
    "2026-11-18-arknights-endfield-google-play-best-game-2026"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/arknights-endfield-anniversary-festival-january-reel-v1.mp4",
+  "blob": "3394838ec2270cd02d18de85015c1ab63f6ab4b4",
+  "at": "2026-11-19T11:09:42Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/arknights-endfield-anniversary-festival-january.json",
+   "sha256": "7c90e99fd3a72103fd72eb4e62c171fd162614949a242cf756ac3c0b559985d8",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look frames: Arabic headline and caption on clean panels, 16:9 trailer band with a butterfly, a character with a blade and a hall; readable, credit small but visible, story in order"
  }
 }
