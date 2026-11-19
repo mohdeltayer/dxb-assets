@@ -1,5 +1,36 @@
 # Production 1: scheduled tasks as they stand (adv-20261105-p2-audit-fixes)
 
+## Restarted session: recover with a thin clone, never wait for the full one (Mohammad, 19 Nov 2026)
+
+On 19 Nov the session failed to restart: the container's automatic clone of dxb-assets timed out (the repository
+holds about 20 GB of history and 4 GB of cards). After a restart, before any other work:
+
+1. Check the copy. `cd /home/user/dxb-assets && git rev-parse --is-shallow-repository && git config
+   remote.origin.partialclonefilter && git config core.sparseCheckout` should print `true`, `blob:none`, `true`.
+   A folder that is missing, empty, says "No commits yet", or answers otherwise is not usable: do not run
+   `git pull` or `git fetch` in it, which would start the full download again.
+2. Re-clone thin by hand (about 30 seconds, 40 to 70 MB; stop any background pull first):
+   ```
+   cd /home/user && rm -rf dxb-assets
+   git clone -q --depth 1 --filter=blob:none --sparse https://github.com/mohdeltayer/dxb-assets.git
+   cd dxb-assets && git sparse-checkout set templates jobs newsroom notes arabic analytics art .claude .github ops
+   ```
+   `cards/` and `live/` stay off disk; `git show origin/main:cards/<path>` fetches one file. Nothing is lost by
+   deleting the old folder as long as the last session pushed (it always pushes before ending a step).
+3. The desk board: `git clone -q --depth 1 --branch desk --single-branch https://github.com/mohdeltayer/dxb-queue.git`
+   into the scratchpad, as every task already does.
+4. Keep it thin: read history with `git log --format` (no `--stat`, no `-p`, no blame); for an old file use the
+   GitHub API or `git show <rev>:<path>`; to find a commit older than the shallow tip, `git fetch --deepen=N
+   --filter=blob:none` (trees only) or the GitHub commit search. Push with `git push origin HEAD:main`, and on a
+   rejection `git fetch --filter=blob:none origin main && git rebase FETCH_HEAD`.
+5. What a fresh container lacks: the Dubai font (renders run on the server or the runner; never wait for it here);
+   render Python packages such as pedalboard (`render_job.py check` cannot import; use prerender.yml mode `text`
+   on the server for text checks); and repository skills under `.claude/skills/` cloned after the session started
+   are not registered (`Skill` answers "Unknown skill"): read their `SKILL.md` and references and apply them by hand,
+   saying so in the story notes.
+6. Then read `desk/board.md`, the Inbox, and the scheduled tasks list, and carry on. Never hold work waiting for a
+   full clone to finish.
+
 Written 5 Nov 2026 from the routines list (Production 1 account). Prompts are verbatim; task, session and trigger
 ids are replaced by <id> (this repository is public). Fresh = a new session each fire; bound = fires into the
 production session. Production 2's tasks are on its own account and are listed on the desk board.
