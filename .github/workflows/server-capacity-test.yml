@@ -18,6 +18,10 @@ on:
       b:
         description: 'Second job (a name under jobs/done)'
         required: true
+      solo:
+        description: 'Solo seconds from an earlier run as JSON {"job": secs}; with both given, only the pair runs'
+        required: false
+        default: ''
 
 jobs:
   capacity:
@@ -61,6 +65,8 @@ jobs:
           mkdir -p "$DUBAI_FONTS"; unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$DUBAI_FONTS"; rm -rf "$repo"
 
       - name: Solo, solo, then both at once
+        env:
+          SOLO_SECS: ${{ inputs.solo }}
         run: python templates/capacity_test.py "$A" "$B" "$RUNNER_TEMP/cap"
 
       - name: Clean up

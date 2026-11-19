@@ -71,9 +71,14 @@ def phase(base, label, names):
             time.sleep(2)
     th = threading.Thread(target=sample, daemon=True)
     th.start()
-    for r in runs:
-        r['rc'] = r['p'].wait()
+    def wait(r):                                # each render's own end time (waiting in turn would give the
+        r['rc'] = r['p'].wait()                 # second one the first one's end)
         r['secs'] = round(time.time() - r['t0'], 1)
+    waits = [threading.Thread(target=wait, args=(r,)) for r in runs]
+    for w in waits:
+        w.start()
+    for w in waits:
+        w.join()
     done.set()
     th.join()
     subprocess.run([sys.executable, os.path.join(HERE, 'runner_stats.py'), 'stop', stats], cwd=base)
@@ -95,7 +100,15 @@ def phase(base, label, names):
 
 def main(a, b, base):
     os.makedirs(base, exist_ok=True)
-    res = [phase(base, 'solo-a', [a]), phase(base, 'solo-b', [b]), phase(base, 'pair', [a, b])]
+    known = json.loads(os.environ.get('SOLO_SECS') or '{}')   # solo seconds from an earlier run: only the pair runs
+    if known.get(a) and known.get(b):
+        res = [{'phase': 'solo-a (earlier run)', 'renders': [{'job': a, 'secs': known[a], 'peak_tree_mb': None, 'rc': 0}]},
+               {'phase': 'solo-b (earlier run)', 'renders': [{'job': b, 'secs': known[b], 'peak_tree_mb': None, 'rc': 0}]},
+               phase(base, 'pair', [a, b])]
+        for p in res[:2]:
+            p.update(server_peak_mem_mb=None, mem_total_mb=None, server_peak_disk_mb=None)
+    else:
+        res = [phase(base, 'solo-a', [a]), phase(base, 'solo-b', [b]), phase(base, 'pair', [a, b])]
     solo = {r['renders'][0]['job']: r['renders'][0]['secs'] for r in res[:2]}
     ratio = {x['job']: round(x['secs'] / solo[x['job']], 2) for x in res[2]['renders'] if solo.get(x['job'])}
     summary = {'cores': os.cpu_count(), 'phases': res, 'pair_over_solo': ratio,
