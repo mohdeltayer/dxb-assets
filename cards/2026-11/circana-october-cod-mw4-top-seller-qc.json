@@ -118,5 +118,15 @@
   "after": 1.58,
   "upload": 0.18,
   "job": 12.67
- }
+ },
+ "director_sendbacks": [
+  {
+   "at": "2026-11-19T16:09:10Z",
+   "reason": "unreadable_text",
+   "note": "Lines stop at 'بنسبة 20 بالمئة وعلى' at ~14s while spoken text continues; Xbox Series 42 بالمئة and 'مع ارتفاع الأسعار' never appear, so the reel ends mid-sentence. Add lines 15-16 (e.g. 'أجهزة Xbox Series بنسبة 42 بالمئة،' / 'مع ارتفاع الأسعار') and extend shots/credits to cover them (video is 33s but lines end ~14s). Also raise caption size/contrast (add band/shadow) since captions are small over bright footage.",
+   "by": "director-p2",
+   "out": "cards/2026-11/circana-october-cod-mw4-top-seller-reel-v1.mp4",
+   "qc": "pass"
+  }
+ ]
 }
