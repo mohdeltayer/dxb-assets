@@ -35,52 +35,57 @@
  ],
  "shots": [
   [
-   "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
-   78.31,
+   "clair-obscur-narrative-lead-leaves-sandfall-pre-order-trailer.mp4",
+   49.76,
    3.8,
    [
     [
      0.0,
-     0.516
+     0.45
     ]
    ]
   ],
   [
    "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
-   89.31,
-   2.2,
-   0.14
-  ],
-  [
-   "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
-   91.51,
+   64.8,
    2.2,
    [
     [
      0.0,
-     0.554
+     0.45
+    ]
+   ]
+  ],
+  [
+   "clair-obscur-narrative-lead-leaves-sandfall-pre-order-trailer.mp4",
+   36.1,
+   1.0,
+   [
+    [
+     0.0,
+     0.45
+    ]
+   ]
+  ],
+  [
+   "clair-obscur-narrative-lead-leaves-sandfall-cast-reveal.mp4",
+   48.75,
+   1.45,
+   [
+    [
+     0.0,
+     0.45
     ]
    ]
   ],
   [
    "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
-   96.45,
+   74.65,
    2.2,
    [
     [
      0.0,
-     0.442
-    ]
-   ]
-  ],
-  [
-   "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
-   114.55,
-   2.2,
-   [
-    [
-     0.0,
-     0.252
+     0.45
     ]
    ]
   ],
@@ -305,8 +310,8 @@
  "skin": "house",
  "cut": false,
  "track": [
-  "clair-obscur-narrative-lead-leaves-sandfall-launch-trailer.mp4",
-  78.31
+  "clair-obscur-narrative-lead-leaves-sandfall-pre-order-trailer.mp4",
+  54.0
  ],
  "track_from_first_shot": true,
  "angle": {
@@ -330,5 +335,6 @@
   "credit on every clip": "yes: one credit over every shot",
   "sound": "yes: trailer sound from the first shot, split per shot on the server",
   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
- }
+ },
+ "rerender": "Director FIX 19 Nov (unreadable_text): shots 1-4 on near-black launch-trailer stretches (78.3-98.5 s, 114.5 s); shots 0-4 moved to lit stretches next to shots already read clean (pre-order 54.0 and 36.1, launch 64.8 and 73.4, cast reveal 48.0)."
 }
