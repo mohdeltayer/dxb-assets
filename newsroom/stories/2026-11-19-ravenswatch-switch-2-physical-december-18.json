@@ -52,5 +52,25 @@
    "ravenswatch"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/ravenswatch-switch-2-physical-december-18-reel-v1.mp4",
+  "blob": "bc19b38e0d8e041c120a54ac5629c8e558eee91d",
+  "at": "2026-11-19T05:41:05Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/ravenswatch-switch-2-physical-december-18.json",
+   "sha256": "5b16be0457d4ee70f563741088142f472f53362092d7ce7f80b844701c2f4f62",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1 headline card Ravenswatch Switch 2 over gameplay; look-2 gameplay with source credit; look-3 caption on original Switch, all legible (re-recorded after a local reset lost the first record; same Director PASS)"
  }
 }
