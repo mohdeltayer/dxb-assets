@@ -1,0 +1,100 @@
+# Weekly Famitsu sales Reel (Mohammad, 19 Nov 2026): every Thursday, gather the art for the likely top 10 before
+# 16:45 Dubai, watch Famitsu from then, and build the full sales_full Reel as soon as the chart article is up.
+#   prep   12:15Z (16:15 Dubai): templates/famitsu_weekly.py prep (every screenshot and box art opens; dead links
+#          looked up again on Nintendo's US store); the art library is committed.
+#   watch  from prep's end to 19:30Z: Famitsu's new-article list every 90 s for 【ソフト＆ハード週間販売数】.
+#   build  the job (jobs/render/famitsu-<week>-sales.json), committed to main, then render.yml is dispatched for it
+#          (a push from this workflow's token does not start render.yml by itself).
+# A title with no English name or no art writes newsroom/famitsu-pending.json and stops; a session finishes it.
+# Runs on GitHub's hosted runners, not dxb-render-1: the watch can last hours and the server has one runner slot,
+# which news renders need. Scheduling in Publer stays with a session (server publishing is parked, 18 Nov card).
+name: famitsu-weekly
+
+on:
+  schedule:
+    - cron: '15 12 * * 4'       # Thursday 12:15Z, 16:15 Dubai (scheduled runs can start late; the watch covers it)
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'A Famitsu chart article URL to build now (skips prep and watch)'
+        required: false
+        default: ''
+      until:
+        description: 'Watch until this UTC time today (HH:MM)'
+        required: false
+        default: '19:30'
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: famitsu-weekly
+  cancel-in-progress: false
+
+jobs:
+  weekly:
+    if: github.repository == 'mohdeltayer/dxb-assets'
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            templates
+            jobs
+            newsroom
+          clean: true
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Tools
+        run: python -m pip install -q pillow numpy
+
+      - name: Prep (art for the likely top 10)
+        if: inputs.url == ''
+        env:
+          FAMITSU_CACHE: ${{ runner.temp }}/famitsu-art
+        run: python templates/famitsu_weekly.py prep
+
+      - name: Commit the art library
+        if: inputs.url == ''
+        run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add templates/assets/famitsu-art.json
+          git diff --cached --quiet && exit 0
+          git commit -q -m "famitsu-weekly: art library refreshed before the chart"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done; exit 1
+
+      - name: Watch Famitsu
+        id: watch
+        if: inputs.url == ''
+        run: |
+          mins=$(python templates/famitsu_weekly.py until "${{ inputs.until || '19:30' }}")
+          echo "watching for $mins minutes"
+          python templates/famitsu_weekly.py watch "$mins" || echo "no new chart article in the window (holiday week? run it by hand with the url)"
+
+      - name: Build the job
+        id: build
+        if: inputs.url != '' || steps.watch.outputs.url != ''
+        env:
+          URL: ${{ inputs.url || steps.watch.outputs.url }}
+        run: |
+          printf '%s' "$URL" | grep -Eq '^https://www\.famitsu\.com/article/[0-9]{6}/[0-9]+$' || { echo "not a Famitsu article URL"; exit 1; }
+          set +e; python templates/famitsu_weekly.py build "$URL"; rc=$?; set -e
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A jobs/render templates/assets/famitsu-art.json templates/assets/famitsu-last.json newsroom/famitsu-pending.json 2>/dev/null || true
+          git add -u newsroom templates/assets || true
+          git diff --cached --quiet || git commit -q -m "famitsu-weekly: $( [ $rc = 0 ] && echo 'job built' || echo 'stopped, see newsroom/famitsu-pending.json') from $URL"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 5; done
+          exit $rc
+
+      - name: Dispatch the render
+        if: steps.build.outputs.job != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run render.yml --ref main -f job="${{ steps.build.outputs.job }}"

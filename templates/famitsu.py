@@ -26,6 +26,9 @@ import flex  # noqa: E402
 
 # Japanese title as Famitsu prints it -> English title as the publisher uses it.
 TITLES = {
+    'メタファー：リファンタジオ': 'Metaphor: ReFantazio',
+    'ピクミン4 Nintendo Switch 2 Edition ＋ だれでもチャレンジ！ ダンドリ検定':
+        'Pikmin 4 Nintendo Switch 2 Edition + Dandori Academy',
     'ドラゴンズドグマ 2：ダークアリズン': "Dragon's Dogma 2: Dark Arisen",
     '地球防衛軍5 for Nintendo Switch 2': 'EARTH DEFENSE FORCE 5',
     'キングダム ハーツ コレクション［I～III］': 'KINGDOM HEARTS Collection [I~III]',
