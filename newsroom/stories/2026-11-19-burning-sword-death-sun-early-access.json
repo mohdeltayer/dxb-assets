@@ -53,5 +53,25 @@
    "sword"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/burning-sword-death-sun-early-access-reel-v1.mp4",
+  "blob": "18768c7f51ccf7105e9edc04fdd0ee39a7db3e61",
+  "at": "2026-11-19T00:28:27Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/burning-sword-death-sun-early-access.json",
+   "sha256": "db061a8ad2e93831b0fae31cb0d044bee038137a8cb7abf7cde4da92b4b42f5d",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Director agent saw look frames: chip, headline, source tag and price caption readable over wuxia scenes, no graphic content, facts match Gematsu"
  }
 }
