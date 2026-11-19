@@ -1,0 +1,121 @@
+{
+ "name": "circana-october-cod-mw4-top-seller",
+ "out": "cards/2026-11/circana-october-cod-mw4-top-seller-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot gate",
+   "detail": "shot 3 (circana-october-cod-mw4-top-seller-s1.mp4 35.78 s): the subject leaves the 9:16 crop at 36.68 s (0.90 s into the shot); longest safe length 0.80 s, or reframe it (focus keyframes), or waive with drift_ok after looking subject_drift",
+   "shot": 3
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 4 (circana-october-cod-mw4-top-seller-s1.mp4 52.75 s): the subject leaves the 9:16 crop at 53.85 s (1.10 s into the shot); longest safe length 1.00 s, or reframe it (focus keyframes), or waive with drift_ok after looking subject_drift",
+   "shot": 4
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 7 (circana-october-cod-mw4-top-seller-s1.mp4 61.69 s): the subject leaves the 9:16 crop at 62.79 s (1.10 s into the shot); longest safe length 1.00 s, or reframe it (focus keyframes), or waive with drift_ok after looking subject_drift",
+   "shot": 7
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 11 (circana-october-cod-mw4-top-seller-s1.mp4 28.64 s): the subject leaves the 9:16 crop at 28.94 s (0.30 s into the shot); longest safe length 0.20 s, or reframe it (focus keyframes), or waive with drift_ok after looking subject_drift",
+   "shot": 11
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 13 (circana-october-cod-mw4-top-seller-s1.mp4 99.85 s): the subject leaves the 9:16 crop at 100.95 s (1.10 s into the shot); longest safe length 1.00 s, or reframe it (focus keyframes), or waive with drift_ok after looking subject_drift",
+   "shot": 13
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "drift: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "drift: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "drift: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "drift: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "drift: kept as a crop, check waived"
+  },
+  {
+   "kind": "text",
+   "slot": "line 1",
+   "step": "a",
+   "why": "2.9 s of 3.9 s: shot 2 lengthened by 1.1 s"
+  },
+  {
+   "kind": "text",
+   "slot": "line 6",
+   "step": "a",
+   "why": "3.0 s of 4.4 s: shot 12 lengthened by 1.47 s"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "c",
+   "why": "audio split not applied (music only 31.6% of the track (< 40.0%)) on a trailer track under 13 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our "
+  }
+ ],
+ "job_to_pass_min": 22.3,
+ "at": "2026-11-19T15:49:32Z",
+ "findings": [],
+ "notes": [
+  "length 31.2 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason music only 31.6% of the track (< 40.0%); music_pct 31.6; leak_pct 2.6; cache {'hit': 5, 'miss': 0}; separate_secs 3.5; secs 4.6",
+  "render_job: audio split fallback: our bed (ValueError: the trailer mix would not match the picture); bed:neon_b",
+  "render_job: lifeless: {\"score\": 2.2, \"still_share\": 0.013, \"longest_still\": 0.4, \"cuts_per_10s\": 7.4, \"held_under_text\": 0.0, \"secs\": 31.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 31 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [],
+ "job_sha": "3383c52c0d505106df28ebb7396a5204e92c690a",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/circana-october-cod-mw4-top-seller-look-1.jpg",
+  "cards/2026-11/circana-october-cod-mw4-top-seller-look-2.jpg",
+  "cards/2026-11/circana-october-cod-mw4-top-seller-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_b (trailer sound refused: music only 31.6% of the track (< 40.0%))",
+ "shot_read": null,
+ "job_path": "jobs/done/circana-october-cod-mw4-top-seller.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.2,
+  "fetch": 0.57,
+  "shots": 0.02,
+  "checks": 6.77,
+  "render": 3.71,
+  "after": 1.58,
+  "job": 12.67
+ }
+}
