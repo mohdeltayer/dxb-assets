@@ -1,10 +1,28 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-19T19:52:05Z",
- "seq": 659,
+ "generated_at": "2026-11-19T20:10:08Z",
+ "seq": 660,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 18863,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "*21 OG games have entered the chat* What are you playing first?",
+   "url": "https://www.youtube.com/shorts/kmtBl-AboRI",
+   "published": "2026-11-19T20:00Z",
+   "first_seen": "2026-11-19T20:10:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/kmtBl-AboRI/hqdefault.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 660
+  }
+ ],
  "recent": [
   {
    "id": 18809,
@@ -254,7 +272,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-19T19:50:04Z",
+  "last_poll_at": "2026-11-19T20:10:04Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 7,
@@ -264,7 +282,7 @@
    "PlayStation (X) (HTTP 429, 12x)",
    "PlayStation Middle East (X) (HTTP 429, 22x)",
    "Rockstar Games (X) (HTTP 429, 8x)",
-   "The Game Awards (HTTP 403, 44x)",
+   "The Game Awards (HTTP 403, 45x)",
    "Xbox (X) (HTTP 429, 99x)"
   ]
  }
