@@ -4,17 +4,17 @@
  "verdict": "pass",
  "warnings": [],
  "ladder": [],
- "job_to_pass_min": 5.6,
- "at": "2026-11-19T18:20:53Z",
+ "job_to_pass_min": 5.1,
+ "at": "2026-11-19T18:33:11Z",
  "findings": [],
  "notes": [
   "length 22.1 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: applied; music_pct 42.9; leak_pct 0.1; cache {'hit': 0, 'miss': 5}; separate_secs 12.8; secs 17.8",
+  "render_job: audio split: applied; music_pct 42.9; leak_pct 0.1; cache {'hit': 5, 'miss': 0}; separate_secs 4.1; secs 6.1",
   "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 7.27, \"held_under_text\": 0.0, \"secs\": 22.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "e08713620c41a949bdd6baa3866349348936368e",
- "dispatches": 2,
+ "job_sha": "e696781d02fe237c2235672478ae27236fabd94a",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -33,13 +33,12 @@
  "job_path": "jobs/done/ubisoft-layoffs-166-montreal-quebec.json",
  "stage_minutes": {
   "queue": 0.03,
-  "setup": 0.23,
-  "fetch": 0.27,
+  "setup": 0.2,
+  "fetch": 0.24,
   "shots": 0.02,
-  "checks": 0.7,
-  "render": 2.46,
-  "after": 1.1,
-  "upload": 0.12,
-  "job": 4.57
+  "checks": 0.64,
+  "render": 2.25,
+  "after": 1.03,
+  "job": 4.18
  }
 }
