@@ -1,10 +1,28 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-19T18:52:06Z",
- "seq": 657,
+ "generated_at": "2026-11-19T18:55:19Z",
+ "seq": 658,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 18809,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "The Grand Theft Auto VI Limited-Edition DualSense Wireless Controllers are available today.",
+   "url": "https://www.youtube.com/shorts/MW6a2zj3Y1c",
+   "published": "2026-11-19T18:30Z",
+   "first_seen": "2026-11-19T18:55:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/MW6a2zj3Y1c/hqdefault.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 658
+  }
+ ],
  "recent": [
   {
    "id": 18762,
@@ -237,7 +255,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-19T18:50:05Z",
+  "last_poll_at": "2026-11-19T18:55:15Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 7,
