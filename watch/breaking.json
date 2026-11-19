@@ -1,10 +1,29 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-19T14:00:09Z",
- "seq": 647,
+ "generated_at": "2026-11-19T14:10:18Z",
+ "seq": 648,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 18487,
+   "source": "Rockstar Games (YouTube)",
+   "source_kind": "youtube",
+   "title": "Grand Theft Auto VI Now Available",
+   "url": "https://www.youtube.com/shorts/T95WGWkx7P0",
+   "published": "2026-11-19T13:59Z",
+   "first_seen": "2026-11-19T14:10:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/T95WGWkx7P0/hqdefault.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 648
+  }
+ ],
+ "recent": [
   {
    "id": 18478,
    "source": "Xbox Wire",
@@ -16,9 +35,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 647
-  }
- ],
- "recent": [
+  },
   {
    "id": 18016,
    "source": "Nintendo Japan",
@@ -191,7 +208,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-19T14:00:05Z",
+  "last_poll_at": "2026-11-19T14:10:15Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 7,
