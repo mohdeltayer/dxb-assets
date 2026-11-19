@@ -188,15 +188,15 @@
   [
    0,
    9,
-   "المصدر: صفحة Fatal Fury: City of the Wolves على Steam، 19 نوفمبر",
+   "المصدر: صفحة اللعبة على Steam",
    {
-    "size": 30,
+    "size": 44,
     "band": true
    }
   ]
  ],
  "spoken": "وصل مقاتل جديد إلى لعبة Fatal Fury اليوم 19 نوفمبر. اسمه Laocorn Gaudeamus، وهي الشخصية الإضافية السادسة للعبة من SNK. وحسب موقع فورغيمر (4Gamer)، رافقه عرض أنمي جديد أخرجه مخرج فيلم Fatal Fury السينمائي.",
- "headline": "مقاتل جديد يصل اليوم\nإلى لعبة Fatal Fury",
+ "headline": "مقاتل جديد يصل 19 نوفمبر\nإلى لعبة Fatal Fury",
  "label": "تقرير",
  "game": "Fatal Fury: City of the Wolves",
  "game_short": "Fatal Fury",
@@ -241,6 +241,6 @@
  },
  "rerender": {
   "reason": "unreadable_text",
-  "note": "Director FIX: the date 19 نوفمبر was not on screen; added to the credit band on every shot, text otherwise unchanged"
+  "note": "Director FIX x3: date bidi-scrambled in credit band; date moved into headline line 1 as its own Arabic run, credit band shortened and enlarged to 44 px"
  }
 }
