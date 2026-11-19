@@ -55,18 +55,16 @@
   "hits": []
  },
  "director_check": {
-  "verdict": "FIX",
+  "verdict": "PASS",
   "out": "cards/2026-11/burning-sword-death-sun-early-access-reel-v1.mp4",
-  "blob": "12fd230372c01c7b20f25efe9a77d3481ac4bcee",
-  "at": "2026-11-19T03:01:13Z",
-  "note": "Price caption (line 3, about 11.5 to 13.5 s) sits on bright orange fire and sparks and is hard to read for about 2 s; move that stretch to calmer footage.",
+  "blob": "6363acb11b0be24b70fac68249abed3eaf118de1",
+  "at": "2026-11-19T03:16:31Z",
+  "note": "",
   "checklist": {
-   "job": "jobs/done/burning-sword-death-sun-early-access.json",
-   "sha256": "404cc33998f4b1a579b23debc94c87c0f5ba688cd56ed7e3915a2de246471595",
-   "ok": false,
-   "problems": [
-    "render_lane server: the job belongs in jobs/live/ (dispatch render-live.yml), not jobs/done/burning-sword-death-sun-early-access.json"
-   ],
+   "job": "jobs/live/burning-sword-death-sun-early-access.json",
+   "sha256": "8596f63ae99164f60becd385d6909dc9f00df2d41ff9a0916e66378fc234d65b",
+   "ok": true,
+   "problems": [],
    "template": "trailer",
    "layout": null,
    "evergreen": false,
@@ -74,7 +72,7 @@
   },
   "by": "director-p2",
   "qc": "pass",
-  "looked": null
+  "looked": "headline names the game, captions legible incl. price on a dark stretch, footage fits"
  },
  "director_sendbacks": [
   {
