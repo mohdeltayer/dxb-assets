@@ -53,5 +53,25 @@
    "home"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/the-journey-home-steam-december-3-reel-v1.mp4",
+  "blob": "ef79c47cdc03082e9ad1a089e9133575ed6eb9c5",
+  "at": "2026-11-19T01:30:53Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/the-journey-home-steam-december-3.json",
+   "sha256": "3c79eba5b540fd8d3049b64e75eb847de06c4278ff2eeeaec267a07ba57584e3",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "headline and report chip clear, captions legible, surreal footage fits story"
  }
 }
