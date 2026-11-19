@@ -56,5 +56,25 @@
    "2026-11-01-mega-man-dual-override-cook-man",
    "2026-11-10-mega-man-zero-zx-legacy-million"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/mega-man-dual-override-boat-man-reel-v1.mp4",
+  "blob": "98a7116c68aa8116ebfe820439917fbbd874df07",
+  "at": "2026-11-19T01:21:41Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/mega-man-dual-override-boat-man.json",
+   "sha256": "5512f46d359f15e00a9a2d06916b728ddd702bc16610e4ee5f522a96b8cfbd3d",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "headline and report chip clear in upper third, lower captions legible, footage fits Boat Man story"
  }
 }
