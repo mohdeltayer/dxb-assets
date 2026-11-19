@@ -1,0 +1,321 @@
+{
+ "name": "just-volleyball-100000-copies",
+ "out": "cards/2026-11/just-volleyball-100000-copies-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "smear",
+   "detail": "ValueError: /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/just-volleyball-100000-copies-reel-v1.mp4: blocky smear at 16.37 to 17.00 s (peak 43.8); look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 at 3.11 s for 2.24 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 at 8.01 s for 2.24 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 at 12.72 s for 2.71 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 at 17.54 s for 2.71 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 at 22.75 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 at 27.66 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  }
+ ],
+ "job_to_pass_min": 4.7,
+ "at": "2026-11-19T02:22:38Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 starts at 0.0 s, the video at 0.70 s; its first 0.70 s are lost",
+  "first frame: shot 1 just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 starts at 0.0 s, the video at 0.70 s; its first 0.70 s are lost",
+  "first frame: shot 2 just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 starts at 0.0 s, the video at 0.70 s; its first 0.70 s are lost",
+  "first frame: shot 3 just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 starts at 0.0 s, the video at 0.70 s; its first 0.70 s are lost",
+  "first frame: shot 4 just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 starts at 0.0 s, the video at 0.70 s; its first 0.70 s are lost",
+  "first frame: shot 5 just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 starts at 0.0 s, the video at 0.70 s; its first 0.70 s are lost",
+  "first frame: shot 6 just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 starts at 0.0 s, the video at 0.70 s; its first 0.70 s are lost",
+  "first frame: shot 7 just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 starts at 0.0 s, the video at 0.70 s; its first 0.70 s are lost",
+  "first frame: shot 8 just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 starts at 0.0 s, the video at 0.70 s; its first 0.70 s are lost",
+  "length 19.3 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 96.2; leak_pct 0.0; cache {'hit': 0, 'miss': 2}; separate_secs 16.7; secs 27.4",
+  "render_job: lifeless: {\"score\": 1.3, \"still_share\": 0.01, \"longest_still\": 0.2, \"cuts_per_10s\": 7.81, \"held_under_text\": 0.0, \"secs\": 19.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 at 11.96 s for 3.8 s, focus 0.822"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 at 16.80 s for 2.2 s, focus 0.617"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 at 27.11 s for 2.2 s, focus 0.459"
+  }
+ ],
+ "job_sha": "9f60202b1061d0910054f3b926f40d6bb76006a3",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/just-volleyball-100000-copies-look-1.jpg",
+  "cards/2026-11/just-volleyball-100000-copies-look-2.jpg",
+  "cards/2026-11/just-volleyball-100000-copies-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 16.7,
+  "files": {
+   "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4": {
+    "secs": 16.6,
+    "cached": false,
+    "stages": {
+     "decode": 7.0,
+     "autofocus": 16.1,
+     "ocr": 16.1,
+     "smear": 16.1,
+     "scenes": 16.6
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/just-volleyball-100000-copies.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.18,
+  "fetch": 0.09,
+  "shots": 0.29,
+  "checks": 1.04,
+  "render": 2.12,
+  "after": 0.75,
+  "job": 4.3
+ },
+ "job_after_autofix": {
+  "name": "just-volleyball-100000-copies",
+  "story": "2026-11-19-just-volleyball-100000-copies",
+  "footage_source": "steam:5037200",
+  "kind_news": "reveal",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/just-volleyball-100000-copies-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+    "steam": 5037200,
+    "trailer": "Final Gameplay Showcase Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "5037200"
+   }
+  ],
+  "shots": [
+   [
+    "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+    11.96,
+    3.8,
+    [
+     [
+      0.0,
+      0.822
+     ]
+    ]
+   ],
+   [
+    "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+    16.8,
+    2.2,
+    [
+     [
+      0.0,
+      0.617
+     ]
+    ]
+   ],
+   [
+    "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+    27.11,
+    2.2,
+    [
+     [
+      0.0,
+      0.459
+     ]
+    ]
+   ],
+   [
+    "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+    0.0,
+    2.24,
+    null
+   ],
+   [
+    "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+    0.0,
+    2.24,
+    null
+   ],
+   [
+    "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+    0.0,
+    2.71,
+    null
+   ],
+   [
+    "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+    0.0,
+    2.71,
+    null
+   ],
+   [
+    "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "وكان مطورها قد أعلن\nقبل ذلك وصولها",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "إلى 50 ألف نسخة\nخلال 24 ساعة من الإطلاق",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وهي لعبة أكشن رياضية تدعم\nاللعب عبر الإنترنت وبدونه،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    8,
+    [
+     [
+      "وسعرها 4.95 دولارات",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    8,
+    "المصدر: سْتِيم (Steam)",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "تجاوزت لعبة الكرة الطائرة المستقلة جاست فوليبول (just volleyball) حاجز 100 ألف نسخة في يومين ونصف فقط على ستيم. وكان مطورها قد أعلن قبل ذلك وصولها إلى 50 ألف نسخة خلال 24 ساعة من الإطلاق. وهي لعبة أكشن رياضية تدعم اللعب عبر الإنترنت وبدونه، وسعرها 4.95 دولارات.",
+  "headline": "لعبة الكرة الطائرة المستقلة\nتتجاوز 100 ألف نسخة",
+  "label": "رسمي",
+  "source": "سْتِيم (Steam)",
+  "date": "19 Nov 2026",
+  "theme": "gold",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": null,
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 from the resolver (steam:5037200)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam announcement '100,000+ copies within 2.5 days!' (just volleyball), 19 Nov 2026 01:12Z, read in full via the Steam news API (https://store.steampowered.com/news/app/5037200/view/702159569166532908); first report: Steam announcement by the developer, 19 Nov 2026 01:12Z (50,000 copies post 17 Nov)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 5037200 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "shots_auto": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ]
+ }
+}
