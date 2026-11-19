@@ -1,0 +1,165 @@
+{
+ "name": "expelled-from-paradise-stellar-angel-40-minutes",
+ "story": "2026-11-19-expelled-from-paradise-stellar-angel-40-minutes",
+ "footage_source": "steam:4607420",
+ "kind_news": "reveal",
+ "built_by": "server-slip",
+ "render_lane": "server",
+ "out": "cards/2026-11/expelled-from-paradise-stellar-angel-40-minutes-reel-v1.mp4",
+ "split_fallback": "bed",
+ "footage": [
+  {
+   "file": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+   "steam": 4607420,
+   "trailer": "Story PV",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "4607420"
+  },
+  {
+   "file": "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4",
+   "steam": 4607420,
+   "trailer": "Teaser PV",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "4607420"
+  }
+ ],
+ "shots": [
+  [
+   "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+   "auto",
+   2.24,
+   null
+  ],
+  [
+   "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+   "auto",
+   2.24,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "تقول جيماتسو (Gematsu)\nإن المقطع",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "يعرض افتتاح هذه\nالرواية البصرية",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "تصدر اللعبة في 26 نوفمبر\nعلى Switch و PC",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: صفحة اللعبة على Steam",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "ظهرت أول 40 دقيقة من لعبة Expelled from Paradise: The Stellar Angel في مقطع لعب جديد. تقول جيماتسو (Gematsu) إن المقطع يعرض افتتاح هذه الرواية البصرية. تصدر اللعبة في 26 نوفمبر على Switch وPC.",
+ "headline": "لعبة Expelled from Paradise\nتعرض أول 40 دقيقة",
+ "label": "تقرير",
+ "game": "Expelled from Paradise: The Stellar Angel",
+ "game_short": "Expelled from Paradise",
+ "texts": {
+  "instagram": "أول 40 دقيقة من لعبة Expelled from Paradise: The Stellar Angel\n\nحسب موقع جيماتسو (Gematsu)، ظهر مقطع لعب مدته 40 دقيقة يعرض افتتاح لعبة Expelled from Paradise: The Stellar Angel، وهي رواية بصرية تصدر في 26 نوفمبر على Switch وPC عبر Steam.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع جيماتسو (Gematsu).\n\n#ألعاب #أخبار_الألعاب #ExpelledFromParadise #VisualNovel",
+  "x": "ظهر مقطع لعب مدته 40 دقيقة يعرض افتتاح لعبة Expelled from Paradise: The Stellar Angel، وهي رواية بصرية تصدر في 26 نوفمبر على Switch وPC، حسب موقع جيماتسو (Gematsu).",
+  "threads": "ظهر مقطع لعب مدته 40 دقيقة يعرض افتتاح لعبة Expelled from Paradise: The Stellar Angel. اللعبة رواية بصرية تصدر في 26 نوفمبر على Switch وPC.\n\nالمصدر: موقع جيماتسو (Gematsu)"
+ },
+ "source": "صفحة اللعبة على Steam",
+ "date": "19 Nov 2026",
+ "theme": "emerald",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": {
+  "why_now": "Gematsu posted the first 40 minutes of gameplay on 18 Nov, eight days before the 26 Nov launch.",
+  "what_it_means_here": "Visual novel fans can judge the opening before buying; it releases on Switch and PC."
+ },
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "footage": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 from the resolver (steam:4607420)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (audio split per shot)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Steam store page, Expelled from Paradise: The Stellar Angel (footage only) (https://store.steampowered.com/app/4607420/_The_Stellar_Angel/); first report: Gematsu, 18 Nov 2026 22:06 EST (19 Nov 03:06Z)",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: angle in the slip",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 4607420 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ }
+}
