@@ -1,12 +1,24 @@
 {
  "id": "2026-11-19-ubisoft-h1-loss-254m-bookings-down",
- "state": "failed",
- "problems": [
-  "headline: paragraph 2 starts with '254.5 مليون يورو'; every paragraph starts with an Arabic word"
- ],
+ "state": "built",
+ "problems": [],
  "flags": [],
- "at": "2026-11-19T20:32:46Z",
- "run": "44609693359",
+ "at": "2026-11-19T20:42:56Z",
+ "footage": {
+  "name": "Y11S3 CGI Trailer",
+  "width": null,
+  "height": null,
+  "fps": null,
+  "mbps": null,
+  "rows": null,
+  "duration": null,
+  "decode_clean": true
+ },
+ "job": "jobs/live/ubisoft-h1-loss-254m-bookings-down.json",
+ "story": "newsroom/stories/2026-11-19-ubisoft-h1-loss-254m-bookings-down.json",
+ "lines": 3,
+ "shots": 8,
+ "run": "44611409062",
  "lane": "live",
- "build_secs": 19
+ "build_secs": 37
 }
