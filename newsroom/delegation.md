@@ -67,6 +67,10 @@ only two questions, on the look frames, the strip and the dense strip: is it rea
 when both are yes. A no is a send-back with one of the hard reasons (unreadable_text; wrong_subject or factual_error
 for "does not make sense"; graphic). Warnings in qc.json (`warnings`, `ladder`) are information, never a send-back.
 The builder never drops a story for a template reason.
+Judge as an Arab reader who knows no English genre words (Mohammad, 19 Nov 2026, Burning Sword case): any term a casual
+Arabic reader would not know («ووشيا»، «روغلايك»، «سولز لايك»، «ميترويدفانيا» and the like, in Arabic or Latin letters)
+fails "does it make sense". Send the Reel back with `--reason unreadable_text --note "term: <the word>, <where>"`; the
+builder replaces it with plain words («قتال بالسيوف في عالم صيني قديم») or cuts it.
 
 **Board trim, daily (adv-20261118-templates-never-refuse C).** The morning digest task runs, after its card, on a fresh
 clone of the desk branch: `python3 <dxb-assets>/ops/backoffice/dispatch/boardtrim.py desk`, then commits desk/board.md,

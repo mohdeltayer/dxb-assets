@@ -34,6 +34,9 @@ BASE = {
 def slip(**kw):
     s = copy.deepcopy(BASE)
     s.update(kw)
+    if 'grammar_review' not in kw:              # reviewed texts by default (Burning Sword case, 19 Nov 2026)
+        s['grammar_review'] = {'by': 'arabic-grammar-review', 'at': '2026-11-17T12:00:00Z', 'required_edits': 0,
+                               'texts_sha': S.grammar_sha(s)}
     return s
 
 
@@ -60,6 +63,14 @@ class Problems(unittest.TestCase):
         }
         for what, s in cases.items():
             self.assertTrue(S.problems(s, NOW), what)
+
+    def test_grammar_review_is_a_hard_stop(self):
+        s = slip()
+        s['x'] = s['x'] + ' تعديل'                   # a text changed after the review
+        self.assertTrue(any(p.startswith('grammar_review') for p in S.problems(s, NOW)))
+        hard, _ = S.split_problems(S.problems(s, NOW))
+        self.assertTrue(hard)
+        self.assertTrue(any(p.startswith('grammar_review missing') for p in S.problems(slip(grammar_review=None), NOW)))
 
     def test_report_with_angle_passes(self):
         s = slip(label='تقرير', sources=[{'role': 'outlet', 'name': 'VGC', 'url': 'https://x.com'}],

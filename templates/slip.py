@@ -25,6 +25,7 @@ Slip (JSON):
             "bed_reason" when the trailer has no usable sound)
 
     python3 templates/slip.py check <slip.json>                             problems and flags, no network
+    python3 templates/slip.py grammar-sha <slip.json>                       the texts_sha for grammar_review (19 Nov)
     python3 templates/slip.py build <slip.json> [--lane live|test] [--result r.json] [--no-resolve]
 """
 import datetime as dt
@@ -43,6 +44,30 @@ REPORT_LABELS = ('تقرير', 'تسريب')
 KIND_OF_LABEL = {'متوفر الآن': 'launch', 'تأجيل': 'delay', 'السعر': 'price', 'تحديث': 'update', 'نظرة أولى': 'reveal'}
 REQUIRED = ('id', 'label', 'sources', 'first_report', 'credit', 'footage', 'headline', 'spoken', 'instagram', 'x',
             'threads', 'tier', 'expires')
+GRAMMAR_FIELDS = ('headline', 'spoken', 'credit', 'instagram', 'x', 'threads')   # the texts the grammar stage reviews
+
+
+def grammar_sha(slip):
+    """The hash of the texts the arabic-grammar-review stage passed (Burning Sword case, Mohammad 19 Nov 2026): the
+    slip records it as grammar_review.texts_sha after the required edits are applied; any later change to a text
+    needs the stage again."""
+    import hashlib
+    blob = json.dumps({k: str(slip.get(k) or '') for k in GRAMMAR_FIELDS}, ensure_ascii=False, sort_keys=True)
+    return hashlib.sha256(blob.encode('utf-8')).hexdigest()[:16]
+
+
+def grammar_problem(slip):
+    """None when the slip carries a grammar review of exactly its current texts, else the refusal."""
+    g = slip.get('grammar_review')
+    how = ('run the arabic-grammar-review stage on headline, spoken (the lines are cut from it), credit, instagram, x '
+           'and threads, apply every required edit to the slip, then record "grammar_review": {"by": "arabic-grammar-'
+           'review", "at": "<ISO time>", "required_edits": <n applied>, "texts_sha": "<python3 templates/slip.py '
+           'grammar-sha <slip>>"}')
+    if not isinstance(g, dict) or not g.get('texts_sha'):
+        return 'grammar_review missing: ' + how
+    if g.get('texts_sha') != grammar_sha(slip):
+        return 'grammar_review is for other texts (a text changed after the review): ' + how
+    return None
 ID = re.compile(r'^20\d\d-\d\d-\d\d-[a-z0-9][a-z0-9-]{2,100}$')
 NAME = re.compile(r'^[a-z0-9][a-z0-9-]{2,120}$')
 ARABIC = re.compile('[؀-ۿ]')
@@ -145,6 +170,12 @@ def problems(slip, now=None):
     missing = [k for k in REQUIRED if slip.get(k) in (None, '', [])]
     if missing:
         out.append('missing: ' + ', '.join(missing))
+    gp = grammar_problem(slip)                      # Burning Sword case, 19 Nov 2026: a hard stop
+    if gp:
+        out.append(gp)
+    for fl in name_flags(slip):                     # rule 3: an unknown name on screen is a stop, not a flag
+        if fl.startswith('name not in names-ar') and ('(headline)' in fl or '(spoken)' in fl):
+            out.append('name_unknown: ' + fl)
     sid = str(slip.get('id') or '')
     if sid and not ID.match(sid):
         out.append(f'id {sid!r}: YYYY-MM-DD-<slug>, lower case')
@@ -356,6 +387,8 @@ def job_from(slip, foot, lane='live', theme=None, spare=()):
         'footage': [foot] + [x for x in spare if x.get('file') and x['file'] != f], 'shots': shots, 'lines': lines,
         'credits': [[0, len(shots) - 1, credit, {'size': 40, 'band': True}]],
         'spoken': slip['spoken'], 'headline': slip['headline'], 'label': slip['label'],
+        'game': slip.get('game'), 'game_short': slip.get('game_short'),
+        'texts': {k: slip.get(k) for k in ('instagram', 'x', 'threads') if slip.get(k)},
         'source': re.sub(r'^المصدر:\s*', '', credit), 'date': slip.get('date') or dt.date.today().strftime('%-d %b %Y'),
         'theme': theme or theme_for(slip), 'style': None, 'template': 'trailer', 'skin': 'house', 'cut': False,
         'track': track, 'track_from_first_shot': track != 'bed',
@@ -393,7 +426,7 @@ def reel_check(slip, foot):
     }
 
 
-SLIP_HARD = ('missing: ', 'id ', 'name: ', 'expired at', 'expires: ')   # cannot be built: no input, no path, out of date
+SLIP_HARD = ('missing: ', 'id ', 'name: ', 'expired at', 'expires: ', 'grammar_review', 'name_unknown')   # cannot be built: no input, no path, out of date
 
 
 def split_problems(probs):
@@ -474,9 +507,12 @@ def build(slip, lane='live', resolve=True, root=ROOT, now=None):
 
 
 def main(argv):
-    if len(argv) < 2 or argv[0] not in ('check', 'build'):
+    if len(argv) < 2 or argv[0] not in ('check', 'build', 'grammar-sha'):
         raise SystemExit(__doc__)
     slip = json.load(open(argv[1], encoding='utf-8'))
+    if argv[0] == 'grammar-sha':
+        print(grammar_sha(slip))
+        return 0
     if argv[0] == 'check':
         p, fl = problems(slip), name_flags(slip)
         for x in p:

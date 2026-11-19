@@ -28,7 +28,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 WARNINGS = []
 LADDER = []
 HARD = ('fact', 'graphic', 'text', 'decode')
-TEXT_HARD = ('latin_first', 'glued', 'sign')        # bidi-broken
+TEXT_HARD = ('latin_first', 'glued', 'sign',       # bidi-broken
+             'game_headline', 'arabic_game_name', 'name_unknown')   # Burning Sword case, 19 Nov 2026
 TEXT_HARD_WORDS = ('safe zone', 'not an Arabic word', 'glues an Arabic prefix', 'grid tile corner')
 FREEZE_UNTIL = '2026-12-02'
 

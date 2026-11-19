@@ -3788,3 +3788,28 @@ ships as a warning only. Freeze: no new checks until 2 Dec 2026. Templates are f
 changes without a card Mohammad approved; build effort moves to content (story context, hooks, angles, editorial memory),
 and other channels open only when that runs steadily. Parked until Mohammad reopens: server publishing, quick bites,
 tiers, Stories, DeepL on the server, other channels.
+
+## Burning Sword case: names and plain words are hard stops (Mohammad, 19 Nov 2026; release 2026-11-19 r1)
+
+Case: the Burning Sword: Death Sun Reel (19 Nov) went out with the headline «لعبة سيوف ووشيا / وصلت للوصول المبكر»: no game
+name, a genre word («ووشيا») a casual Arab reader does not know, and the game written in Arabic letters in line 1 («بيرنينغ
+سورد (Burning Sword)», a pair names-ar did not know). Added to the server text step as hard stops under "unreadable text"
+(an exception to the 18 Nov freeze, on Mohammad's order):
+1. `game_headline`: a story about one game (the story's "game" field, or the job's) names it in the headline exactly as
+   written there; a short form the story declares in "game_short" (for example "GTA VI") also counts. List Reels and
+   Famitsu are outside it.
+2. `arabic_game_name`: the game's name in Arabic letters, on screen or in the post texts, is refused: a «Arabic (Latin)»
+   pair whose Latin is the game's name or part of it, or Arabic words whose consonants spell the name's words in order
+   (two consecutive words for a name of two words or more, one of four consonants or more for a one-word name).
+3. `name_unknown`: a «Arabic (Latin)» pair in the headline or a line that names-ar and the glossary do not list stops the
+   render (it was a flag). On the slip lane the same pair in the headline or spoken paragraph stops the slip.
+Code: `templates/textrules.py` (game_name_problems, unknown_name_problems), hard in `templates/softgate.py`; the server
+checkouts now carry `arabic/` beside newsroom (names-ar.md comes with newsroom/stories). Replay on the last 20 rendered
+Reels before release: 19 of 20 would have stopped (game_headline 18, arabic_game_name 10, name_unknown 9); 7 Days to Die
+alone passed. Mohammad ordered hard stops, so they ship hard, not as warnings.
+4. Grammar review on the slip lane: a slip stops unless it carries `"grammar_review": {"by": "arabic-grammar-review",
+   "at", "required_edits", "texts_sha"}` for exactly its current headline, spoken, credit, instagram, x and threads
+   (`python3 templates/slip.py grammar-sha <slip>`). The slip workflow has no model, so the editor runs the stage and
+   applies the required edits before writing the slip; any later text change needs the stage again.
+5. Director (newsroom/delegation.md): judge as an Arab reader who knows no English genre words; any term a casual reader
+   would not know fails "does it make sense" (send back as unreadable_text with the term in the note).

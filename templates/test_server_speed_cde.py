@@ -154,7 +154,7 @@ class E_Unfinished(unittest.TestCase):
                         {'story': 'old', 'state': 'closed', 'next': 'x', 'at': '2026-11-17T01:00:00Z'}]}
         wo = WO.build({}, now, [], times=[dict(ENTRY)], incomplete=inc)
         self.assertEqual([r['story'] for r in wo['unfinished']], ['rpg-maker-u2u', 'splatoon-raiders'])
-        kinds = [a['kind'] for a in wo['alarms']]
+        kinds = [a['kind'] for a in wo['notes']]                          # a note since 18 Nov (templates-never-refuse D)
         self.assertEqual(kinds.count('incomplete'), 1)                     # 169 min old; the 30-min one is not late
         md = WO.markdown(wo)
         self.assertIn('## 1b. Unfinished from the last run (pick up first)', md)

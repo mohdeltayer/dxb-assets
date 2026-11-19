@@ -863,3 +863,9 @@ A physical copy of a game is «نسخة مطبوعة», never «ورقية» or 
 3. Footage library first (footlib.py, footage-library.json). Board: open handoffs and the last 24 hours only, the rest
    in desk/archive. Keeper: one alarm, no post in 90 minutes by day.
 4. Templates are frozen: no template or check changes without a card Mohammad approved; no new checks until 2 Dec.
+
+## Names and plain words (Burning Sword case, 19 Nov 2026, release 2026-11-19 r1)
+1. A story about one game: the headline names it exactly as the story's "game" field (or its declared "game_short").
+2. Game names never in Arabic letters, on screen or in texts. A «Arabic (Latin)» pair not in names-ar stops the render.
+3. Slips carry a grammar_review of exactly their current texts, or they stop.
+4. Director: any genre word a casual Arab reader would not know fails "does it make sense".

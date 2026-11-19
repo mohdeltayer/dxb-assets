@@ -319,7 +319,174 @@ def check(job):
     for where, text in _all_texts(job):
         house_words(where, text, out, job)
     out += head_problems(job)
+    out += game_name_problems(job)                      # Burning Sword case, 19 Nov 2026 (hard)
+    out += unknown_name_problems(job)
     out += [f for f in spoken_problems(job) if not (job.get('_gate_spoken') and f['rule'] == 'spoken_missing')]
+    return out
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# Burning Sword case (Mohammad, 19 Nov 2026): hard stops under "unreadable text". The 19 Nov Reel's headline read
+# «لعبة سيوف ووشيا\nوصلت للوصول المبكر» with no game name, and its line wrote the game in Arabic letters, «بيرنينغ سورد
+# (Burning Sword)», a pair names-ar did not know. Three rules, each hard:
+#   game_headline     a story about one game (the story's "game" field, or the job's, is one name): the headline carries
+#                     that name exactly as written there (line breaks read as spaces)
+#   arabic_game_name  the game's name written in Arabic letters, on screen or in the post texts: a «Arabic (Latin)» pair
+#                     whose Latin is the game's name or part of it, or Arabic words whose consonants spell the name's
+#                     words in order (two consecutive words for a name of two words or more; one word of four
+#                     consonants or more for a one-word name)
+#   name_unknown      a «Arabic (Latin)» pair in the headline or a line whose Latin is not in newsroom/names-ar.md or the
+#                     glossary (the slip's "name not in names-ar" flag, now a stop on screen)
+STOP_WORDS = {'the', 'of', 'a', 'an', 'and', 'in', 'on', 'to', 'for', 'edition', 'remastered', 'remake', 'deluxe', 'ii',
+              'iii', 'iv', 'vi', 'vii', 'viii', 'ix', 'xi', 'xii', 'hd', 'dx', 'ex'}
+LAT_CLASS = {'b': 'b', 'p': 'b', 't': 't', 'd': 'd', 's': 's', 'z': 's', 'x': 'ks', 'c': 'k', 'k': 'k', 'q': 'k',
+             'g': 'k', 'j': 'k', 'f': 'f', 'v': 'f', 'l': 'l', 'm': 'm', 'n': 'n', 'r': 'r'}
+AR_CLASS = {'ب': 'b', 'پ': 'b', 'ت': 't', 'ط': 't', 'ث': 's', 'د': 'd', 'ض': 'd', 'ذ': 'd', 'س': 's', 'ص': 's', 'ز': 's',
+            'ش': 's', 'ظ': 'd', 'ك': 'k', 'ق': 'k', 'غ': 'k', 'ج': 'k', 'گ': 'k', 'خ': 'k', 'ف': 'f', 'ڤ': 'f',
+            'ل': 'l', 'م': 'm', 'ن': 'n', 'ر': 'r'}
+AR_WORD = re.compile('[\u0621-\u064A\u0640\u064B-\u0652\u06A4\u06AF\u067E]+')
+AR_PREFIX = ('وال', 'بال', 'لل', 'فال', 'ال', 'و', 'ب', 'ل', 'ف')
+ROOT = __import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__)))
+
+
+def _squash(seq):
+    out = []
+    for ch in seq:
+        if not out or out[-1] != ch:
+            out.append(ch)
+    return ''.join(out)
+
+
+def lat_skel(word):
+    w = re.sub('[^a-z]', '', word.lower())
+    w = w.replace('ph', 'f').replace('ck', 'k').replace('sh', 's').replace('ch', 's').replace('th', 's')
+    return _squash(''.join(LAT_CLASS.get(ch, '') for ch in w))
+
+
+def ar_skel(word):
+    w = TATWEEL_DIACRITICS.sub('', word)
+    return _squash(''.join(AR_CLASS.get(ch, '') for ch in w))
+
+
+def _ar_variants(word):
+    """The word's skeleton, and the skeleton with a common prefix taken off."""
+    out = {ar_skel(word)}
+    for p in AR_PREFIX:
+        if word.startswith(p) and len(word) - len(p) >= 3:
+            out.add(ar_skel(word[len(p):]))
+    return out
+
+
+def game_short_of(job):
+    """Short forms the story declares for its game ("game_short": "GTA VI" or a list), from the job or the story file."""
+    g = job.get('game_short')
+    if g is None and job.get('story'):
+        try:
+            s = json.load(open(__import__('os').path.join(ROOT, 'newsroom', 'stories', str(job['story']) + '.json'),
+                               encoding='utf-8'))
+            g = s.get('game_short')
+        except (OSError, ValueError):
+            g = None
+    g = [g] if isinstance(g, str) else (g or [])
+    return [x.strip() for x in g if isinstance(x, str) and len(x.strip()) >= 3]
+
+
+def game_of(job):
+    """The one game a story is about: the job's "game", else its story file's; None for a list or several games."""
+    g = job.get('game')
+    if g is None and job.get('story'):
+        try:
+            s = json.load(open(__import__('os').path.join(ROOT, 'newsroom', 'stories', str(job['story']) + '.json'),
+                               encoding='utf-8'))
+            g = s.get('game')
+        except (OSError, ValueError):
+            g = None
+    if isinstance(g, list):
+        g = g[0] if len(g) == 1 else None
+    return g.strip() if isinstance(g, str) and g.strip() else None
+
+
+def _norm_space(t):
+    return ' '.join(str(t or '').split())
+
+
+def game_name_problems(job, game=None):
+    """game_headline and arabic_game_name findings for one job (hard)."""
+    game = game or game_of(job)
+    out = []
+    if not game or job.get('kind') == 'famitsu' or job.get('template') == 'list':
+        return out
+    head = job.get('headline')
+    if head is not None and not any(n in _norm_space(head) for n in [game] + game_short_of(job)):
+        out.append({'where': 'headline', 'rule': 'game_headline', 'text': _norm_space(head), 'hard': True,
+                    'fix': f'a story about one game names it in the headline exactly as in the story\'s "game" field: '
+                           f'«{game}» (an Arabic word first, then the name; break the line before the name if it is long), '
+                           'or a short form the story declares in "game_short" (for example "GTA VI")'})
+    words = [w for w in re.findall('[A-Za-z0-9]+', game) if w.lower() not in STOP_WORDS]
+    skels = [lat_skel(w) for w in words]
+    keys = [(w, k) for w, k in zip(words, skels) if len(k) >= 3]
+    texts = list(_all_texts(job))
+    for k_, v in (job.get('post_texts') or {}).items():
+        if isinstance(v, str):
+            texts.append((f'texts {k_}', v))
+    gl = game.lower()
+    try:
+        import slip as _S
+        pairs = _S.BRACKET
+    except Exception:                                   # noqa: BLE001
+        pairs = None
+    for where, text in texts:
+        text = str(text or '')
+        hit = None
+        if pairs is not None:
+            for ar, la in pairs.findall(text):
+                lal = la.strip().lower()
+                if lal and (lal in gl or gl in lal or any(w.lower() in lal.split() for w, _ in keys)):
+                    hit = f'{ar.strip()} ({la.strip()})'
+                    break
+        if hit is None and keys:
+            toks = AR_WORD.findall(text)
+            vs = [_ar_variants(t) for t in toks]
+            need = 2 if len(keys) >= 2 else 1
+            for i in range(len(toks)):
+                if need == 1:
+                    if len(keys[0][1]) >= 4 and keys[0][1] in vs[i]:
+                        hit = toks[i]
+                        break
+                else:
+                    for j in range(len(keys) - 1):
+                        if i + 1 < len(toks) and keys[j][1] in vs[i] and keys[j + 1][1] in vs[i + 1]:
+                            hit = toks[i] + ' ' + toks[i + 1]
+                            break
+                    if hit:
+                        break
+        if hit:
+            out.append({'where': where, 'rule': 'arabic_game_name', 'text': hit, 'hard': True,
+                        'fix': f'game names stay in Latin letters, as the publisher writes them: «{game}», never in '
+                               'Arabic letters (names-ar rule; Burning Sword case, 19 Nov 2026)'})
+    return out
+
+
+def unknown_name_problems(job, table=None):
+    """name_unknown: a «Arabic (Latin)» pair in the headline or a line that names-ar and the glossary do not list."""
+    try:
+        import slip as _S
+    except Exception:                                   # noqa: BLE001
+        return []
+    table = _S._names_table() if table is None else table
+    if not table:                                       # names-ar not on this checkout: never flag every name
+        print('text check: names-ar.md not found; name_unknown not checked', flush=True)
+        return []
+    out = []
+    for where, text in _all_texts(job):
+        if not (where == 'headline' or where.startswith('line ')):
+            continue
+        for ar, la in _S.BRACKET.findall(str(text or '')):
+            key = la.strip().lower()
+            if key and key not in table:
+                out.append({'where': where, 'rule': 'name_unknown', 'text': f'{ar.strip()} ({la.strip()})', 'hard': True,
+                            'fix': f'«{la.strip()}» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before '
+                                   'the render, or, for a game, write it in Latin letters only'})
     return out
 
 

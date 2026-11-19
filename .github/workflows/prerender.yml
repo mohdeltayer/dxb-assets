@@ -111,6 +111,7 @@ jobs:
             templates
             jobs
             newsroom/stories
+            arabic
           persist-credentials: false
 
       - name: Stand down if the GitHub-hosted fallback already ran
@@ -252,6 +253,7 @@ jobs:
             templates
             jobs
             newsroom/stories
+            arabic
           persist-credentials: false
 
       - name: Job file (data only, from the ref)
