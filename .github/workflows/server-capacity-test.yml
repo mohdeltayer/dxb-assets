@@ -1,0 +1,68 @@
+# Server capacity test (Mohammad, 19 Nov 2026: "the server was bought to render several Reels at once"). Renders two
+# finished jobs from jobs/done on dxb-render-1, first each alone, then both at the same time, and reports each one's
+# minutes and the server's peak memory and disk in each phase. Test only: every render works in its own copy of the
+# checkout with its own fresh uploads folder (so no phase reuses another's footage or picture cache), nothing is
+# committed, nothing is uploaded to Publer, and the Reels are deleted at the end. Dispatch only, main only.
+#   gh workflow run server-capacity-test.yml --ref main -f a=<job name> -f b=<job name>
+name: server-capacity-test
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      a:
+        description: 'First job (a name under jobs/done)'
+        required: true
+      b:
+        description: 'Second job (a name under jobs/done)'
+        required: true
+
+jobs:
+  capacity:
+    if: github.repository == 'mohdeltayer/dxb-assets' && github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, dxb-render]
+    timeout-minutes: 60
+    env:
+      A: ${{ inputs.a }}
+      B: ${{ inputs.b }}
+    steps:
+      - name: Guard
+        run: |
+          for n in "$A" "$B"; do printf '%s' "$n" | grep -Eq '^[A-Za-z0-9][A-Za-z0-9._-]*$' || { echo "bad job name"; exit 1; }; done
+
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            templates
+            jobs
+            newsroom/stories
+            arabic
+          clean: true
+
+      - name: Server
+        run: |
+          cache="${DXB_CACHE:-/var/cache/dxb-render}"; venv="${DXB_VENV:-/home/runner/venv}"
+          { echo "DXB_CACHE=$cache"; echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts"; echo "YOLO_WEIGHTS=$cache/models/yolov8n.pt"
+            echo "RENDER_LANE=capacity-test"; } >> "$GITHUB_ENV"
+          echo "$venv/bin" >> "$GITHUB_PATH"
+          echo "cores $(nproc), $(free -g | awk '/Mem:/{print $2}') GB, runner $RUNNER_NAME"
+          for n in "$A" "$B"; do test -f "jobs/done/$n.json" || { echo "jobs/done/$n.json not on main"; exit 1; }; done
+
+      - name: Fonts (temp folder, outside the workspace)
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          repo="$RUNNER_TEMP/dxb-fonts"
+          git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+          mkdir -p "$DUBAI_FONTS"; unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$DUBAI_FONTS"; rm -rf "$repo"
+
+      - name: Solo, solo, then both at once
+        run: python templates/capacity_test.py "$A" "$B" "$RUNNER_TEMP/cap"
+
+      - name: Clean up
+        if: always()
+        run: rm -rf "$DUBAI_FONTS" "$RUNNER_TEMP/cap" "$RUNNER_TEMP/dxb-fonts" 2>/dev/null || true
