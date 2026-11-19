@@ -2519,8 +2519,8 @@ dead links looked up again on Nintendo's US store), then `watch` reads Famitsu's
 19:30Z for 【ソフト＆ハード週間販売数】, and `build` writes the sales_full job and dispatches render.yml. A Japanese
 title not in famitsu.TITLES or a title with no art stops into `newsroom/famitsu-pending.json`; nothing is guessed.
 Publer scheduling stays with a session: the Thursday 18:10 Dubai check-in looks at the strip, writes the texts
-(both Arabic passes, DeepL back-check) and schedules Instagram, X and Threads; Production 2's short single-game
-Famitsu Reel is not duplicated. Holiday weeks: run the workflow by hand with the article url. First run 26 Nov.
+(both Arabic passes, DeepL back-check) and schedules Instagram, X and Threads at least one hour after Production 2's
+short single-game Famitsu Reel (Mohammad, 19 Nov 2026), which is never duplicated. Holiday weeks: run the workflow by hand with the article url. First run 26 Nov.
 
 ## The lookout is its own format
 
