@@ -1,310 +1,431 @@
 {
  "schema": 1,
  "file": "digest",
- "generated_at": "2026-11-19T00:52:07Z",
- "seq": 631,
+ "generated_at": "2026-11-19T01:52:05Z",
+ "seq": 634,
  "kind": "hourly",
- "since": "2026-11-18T23:52:08Z",
- "official": [],
+ "since": "2026-11-19T00:52:07Z",
+ "official": [
+  {
+   "id": 18006,
+   "source": "Nintendo Japan",
+   "source_kind": "official",
+   "title": "Nintendo Storeでホリデーキャンペーンを開催中。ダウンロードソフトを手渡しでプレゼントできる「ダウンロード版ギフトセット」も。",
+   "url": "https://www.nintendo.com/jp/topics/article/4a65892c-ff07-4760-aae5-36c23f24b7dd",
+   "published": "2026-11-19T01:01Z",
+   "first_seen": "2026-11-19T01:00:04Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 632,
+   "digest_seq": 634
+  },
+  {
+   "id": 18016,
+   "source": "Nintendo Japan",
+   "source_kind": "official",
+   "title": "『カラオケJOYSOUND for Nintendo Switch』のNintendo Switch 2 向け無料アップデートを本日より配信。本体の内蔵マイクで、別売のマイクがなくてもカラオケが楽しめる。",
+   "url": "https://www.nintendo.com/jp/topics/article/9e9fce02-b4d6-4f31-a6ad-efced93a24d7",
+   "published": "2026-11-19T01:01Z",
+   "first_seen": "2026-11-19T01:15:04Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 633,
+   "digest_seq": 634
+  },
+  {
+   "id": 18023,
+   "source": "Famitsu",
+   "source_kind": "page",
+   "title": "『ロックマン: デュアル オーバーライド』新ボス“ボートマン”が公開。水中バトルをくり広げる近海漁業ロボット",
+   "url": "https://www.famitsu.com/article/202611/94455",
+   "published": null,
+   "first_seen": "2026-11-19T01:35:14Z",
+   "media": [],
+   "breaking_source": false,
+   "breaking_seq": null,
+   "digest_seq": 634
+  }
+ ],
  "outlets": [
   {
-   "count": 13,
-   "published": "2026-11-18T02:00Z",
-   "title": "GTA 6 Requires New PS5 Firmware Update to Play",
-   "url": "https://www.pushsquare.com/news/2026/11/gta-6-requires-new-ps5-firmware-update-to-play",
+   "count": 18,
+   "published": "2026-11-18T10:06Z",
+   "title": "PS5 gets its third system software update in a month, right before Grand Theft Auto 6 is released",
+   "url": "https://www.videogameschronicle.com/news/ps5-gets-its-third-system-software-update-in-a-month-right-before-grand-theft-auto-6-is-released/",
    "sources": [
+    "Arab Hardware (AR)",
+    "Destructoid",
     "Eurogamer",
-    "GameSpot",
+    "GamesIndustry.biz",
     "GamesRadar",
     "IGN",
+    "IGN Middle East (AR)",
     "IGN Middle East (EN)",
     "Insider Gaming",
     "Kotaku",
     "PC Gamer",
     "Polygon",
     "Push Square",
-    "TweakTown",
-    "VGA4A (AR)",
+    "Steam News (hub)",
+    "Tbreak (Gulf)",
+    "The Verge",
+    "True Gaming (AR)",
     "VGC"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://images.pushsquare.com/475ec3fc1e4e1/small.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://images.pushsquare.com/475ec3fc1e4e1/large.jpg"
+     "url": "https://www.videogameschronicle.com/files/2024/11/ps5-pro.jpg"
     }
    ],
    "items": [
     {
-     "source": "Push Square",
-     "title": "GTA 6 Requires New PS5 Firmware Update to Play",
-     "url": "https://www.pushsquare.com/news/2026/11/gta-6-requires-new-ps5-firmware-update-to-play",
-     "published": "2026-11-18T02:00Z"
+     "source": "VGC",
+     "title": "PS5 gets its third system software update in a month, right before Grand Theft Auto 6 is released",
+     "url": "https://www.videogameschronicle.com/news/ps5-gets-its-third-system-software-update-in-a-month-right-before-grand-theft-auto-6-is-released/",
+     "published": "2026-11-18T10:06Z"
     },
     {
      "source": "Kotaku",
-     "title": "PS5 Gets Last-Minute Software Update That’s Required To Play GTA 6",
-     "url": "https://kotaku.com/ps5-gets-last-minute-software-update-thats-required-to-play-gta-6-2000757868",
-     "published": "2026-11-18T03:02Z"
+     "title": "Grand Theft Auto 6: The Kotaku Review",
+     "url": "https://kotaku.com/grand-theft-auto-6-the-kotaku-review-2000757842",
+     "published": "2026-11-18T11:00Z"
     },
     {
-     "source": "IGN",
-     "title": "Sony Issues Official PS5 Firmware Update Warning, Confirms GTA 6 Requirement",
-     "url": "https://www.ign.com/articles/sony-issues-official-ps5-firmware-update-warning-confirms-gta-6-requirement",
-     "published": "2026-11-18T07:33Z"
+     "source": "The Verge",
+     "title": "Grand Theft Auto VI does something impossible — it lives up to the hype",
+     "url": "https://www.theverge.com/games/1035801/grand-theft-auto-6-review",
+     "published": "2026-11-18T11:00Z"
+    },
+    {
+     "source": "Destructoid",
+     "title": "Grand Theft Auto 6 review – Great expectations, greater achievement",
+     "url": "https://www.destructoid.com/reviews/grand-theft-auto-6-review/",
+     "published": "2026-11-18T11:00Z"
+    },
+    {
+     "source": "True Gaming (AR)",
+     "title": "GRAND THEFT AUTO VI",
+     "url": "https://www.true-gaming.net/home/643938/grand-theft-auto-vi/",
+     "published": "2026-11-18T11:00Z"
     },
     {
      "source": "IGN Middle East (EN)",
-     "title": "Sony Issues Official PS5 Firmware Update Warning, Confirms GTA 6 Requirement",
-     "url": "https://me.ign.com/en/grand-theft-auto-vi/249851/sony-issues-official-ps5-firmware-update-warning-confirms-gta-6-requirement",
-     "published": "2026-11-18T07:33Z"
-    },
-    {
-     "source": "GamesRadar",
-     "title": "Sony issues mandatory PS5 update to play GTA 6, potentially slowing hackers' attempts to dump it",
-     "url": "https://www.gamesradar.com/games/grand-theft-auto/sony-issues-mandatory-ps5-update-to-play-gta-6-potentially-slowing-down-hackers-attempts-to-dump-rockstars-game/",
-     "published": "2026-11-18T11:31Z"
-    },
-    {
-     "source": "GameSpot",
-     "title": "Want A Custom GTA 6 PS5 Pro? Just Play In The NBA",
-     "url": "https://www.gamespot.com/articles/want-a-custom-gta-6-ps5-pro-just-play-in-the-nba/",
-     "published": "2026-11-18T13:59Z"
+     "title": "Grand Theft Auto 6 Review",
+     "url": "https://me.ign.com/en/grand-theft-auto-vi/249838/grand-theft-auto-6-review",
+     "published": "2026-11-18T11:00Z"
     },
     {
      "source": "Insider Gaming",
-     "title": "PlayStation Confirms Latest PS5 System Software Update is Needed to Play GTA 6",
-     "url": "https://insider-gaming.com/playstation-confirms-latest-ps5-system-software-update-is-needed-to-play-gta-6/",
-     "published": "2026-11-18T14:16Z"
+     "title": "Grand Theft Auto 6 is Officially Out Now",
+     "url": "https://insider-gaming.com/gta-6-is-officially-out-now/",
+     "published": "2026-11-18T11:01Z"
     },
     {
-     "source": "VGA4A (AR)",
-     "title": "فريق Digital Foundry يكشف عن أداء GTA 6 على PS5 وPS5 Pro.. فرق واضح في الإطارات وجودة الصورة",
-     "url": "https://www.vga4a.com/archives/341778",
-     "published": "2026-11-18T14:36Z"
+     "source": "Insider Gaming",
+     "title": "Is Grand Theft Auto 6 Down? GTA 6 Issues, Explained",
+     "url": "https://insider-gaming.com/is-grand-theft-auto-6-down-gta-6-issues-explained/",
+     "published": "2026-11-18T11:02Z"
     },
     {
-     "source": "Push Square",
-     "title": "GTA 6 PS5 Trophies Revealed, 100% Completion Needed for the Platinum",
-     "url": "https://www.pushsquare.com/news/2026/11/gta-6-ps5-trophies-revealed-100percent-completion-needed-for-the-platinum",
-     "published": "2026-11-18T15:00Z"
+     "source": "Steam News (hub)",
+     "title": "Grand Theft Auto VI: The Ars Technica review",
+     "url": "https://store.steampowered.com/news/group/38364543/view/667256672057557099",
+     "published": "2026-11-18T11:03Z"
     },
     {
-     "source": "VGA4A (AR)",
-     "title": "روكستار تكشف سبب غياب خيار 40 إطارًا في GTA 6 حتى على PS5 Pro",
-     "url": "https://www.vga4a.com/archives/341790",
-     "published": "2026-11-18T15:14Z"
+     "source": "The Verge",
+     "title": "Grand Theft Auto VI has arrived",
+     "url": "https://www.theverge.com/entertainment/1035847/grand-theft-auto-6-launch-review-news",
+     "published": "2026-11-18T11:06Z"
     },
     {
-     "source": "PC Gamer",
-     "title": "GTA 6 looks gorgeous, and seeing it run at a stable 30 fps on ageing PS5 Pro hardware makes me hopeful for PC performance",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-looks-gorgeous-and-seeing-it-run-at-a-stable-30-fps-on-ageing-ps5-pro-hardware-makes-me-hopeful-for-pc-performance/",
-     "published": "2026-11-18T15:22Z"
+     "source": "Arab Hardware (AR)",
+     "title": "مراجعة لعبة Grand Theft Auto 6",
+     "url": "https://arabhardware.net/post-55141",
+     "published": "2026-11-18T11:09Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "Grand Theft Auto VI (PS5) Review",
+     "url": "https://store.steampowered.com/news/group/7433348/view/714544468141801605",
+     "published": "2026-11-18T11:15Z"
     },
     {
      "source": "VGC",
-     "title": "Rockstar says PS5 Pro can’t handle GTA 6 at 60 FPS",
-     "url": "https://www.videogameschronicle.com/news/rockstar-says-ps5-pro-cant-handle-gta-6-at-60-fps/",
-     "published": "2026-11-18T15:54Z"
+     "title": "Grand Theft Auto 6 is currently the highest scoring video game of all time, according to Metacritic",
+     "url": "https://www.videogameschronicle.com/news/grand-theft-auto-6-is-currently-the-highest-scoring-video-game-of-all-time-according-to-metacritic/",
+     "published": "2026-11-18T11:22Z"
     },
     {
-     "source": "Push Square",
-     "title": "GTA 6 Base PS5 Performance Suffers 'Minor' and 'Sustained' Frame Rate Drops, But It's 'Unwavering' on PS5 Pro",
-     "url": "https://www.pushsquare.com/news/2026/11/gta-6-base-ps5-performance-suffers-minor-and-sustained-frame-rate-drops-but-its-unwavering-on-ps5-pro",
-     "published": "2026-11-18T16:00Z"
+     "source": "Kotaku",
+     "title": "Grand Theft Auto 6 Includes A Joke About GTA 7",
+     "url": "https://kotaku.com/grand-theft-auto-6-includes-a-joke-about-gta-7-2000755921",
+     "published": "2026-11-18T12:00Z"
     },
     {
-     "source": "Push Square",
-     "title": "NBA Players Receive This Special GTA 6 PS5 Pro Console, and We're Not Jealous at All",
-     "url": "https://www.pushsquare.com/news/2026/11/nba-players-receive-this-special-gta-6-ps5-pro-console-and-were-not-jealous-at-all",
-     "published": "2026-11-18T17:00Z"
+     "source": "IGN Middle East (AR)",
+     "title": "مراجعة IGN الأم للعبة Grand Theft Auto 6",
+     "url": "https://me.ign.com/ar/grand-theft-auto-vi/197543/mrj-ign-lm-llb-grand-theft-auto-6",
+     "published": "2026-11-18T12:11Z"
+    },
+    {
+     "source": "PC Gamer",
+     "title": "Grand Theft Auto 6 review roundup: Rockstar's 'magnum opus', a great love story, and a new bar for open worlds",
+     "url": "https://www.pcgamer.com/games/grand-theft-auto/grand-theft-auto-6-review-roundup-rockstars-magnum-opus-a-great-love-story-and-a-new-bar-for-open-worlds/",
+     "published": "2026-11-18T12:16Z"
+    },
+    {
+     "source": "GamesIndustry.biz",
+     "title": "Grand Theft Auto 6 | Critical Consensus",
+     "url": "https://www.gamesindustry.biz/grand-theft-auto-6-critical-consensus",
+     "published": "2026-11-18T14:38Z"
     },
     {
      "source": "Polygon",
-     "title": "GTA 6 Won’t Be Getting a Future Performance Mode, Even on PS5 Pro",
-     "url": "https://www.polygon.com/gta-6-30-fps-locked-ps5-pro-performance/",
-     "published": "2026-11-18T17:47Z"
+     "title": "GTA 6 Sets New Record As Highest-Rated Video Game of All Time",
+     "url": "https://www.polygon.com/gta-6-highest-rated-game-all-time-metacritic-review-score/",
+     "published": "2026-11-18T15:00Z"
     },
     {
      "source": "Eurogamer",
-     "title": "Even the PS5 Pro is \"not powerful enough\" to run GTA 6 at 60FPS or 40FPS, Rockstar says",
-     "url": "https://www.eurogamer.net/ps5-pro-not-powerful-enough-gta-6-60fps",
-     "published": "2026-11-18T18:17Z"
+     "title": "GTA 6 breaks the all-time livestream viewer record hours before it's available to play for most of the world",
+     "url": "https://www.eurogamer.net/grand-theft-auto-6-streaming-record-broken",
+     "published": "2026-11-18T15:42Z"
     },
     {
-     "source": "Insider Gaming",
-     "title": "PS5 Pro’s CPU Upgrade Is Not Enough for GTA 6 at 60 FPS",
-     "url": "https://insider-gaming.com/ps5-pros-cpu-upgrade-is-not-enough-for-gta-6-at-60-fps/",
-     "published": "2026-11-18T21:24Z"
+     "source": "Tbreak (Gulf)",
+     "title": "GTA 6 broke a streaming record before most could play",
+     "url": "https://tbreak.com/gta-6-streaming-record-before-launch/",
+     "published": "2026-11-18T16:48Z"
     },
     {
-     "source": "GamesRadar",
-     "title": "GTA 6 at 60fps on PS5 Pro isn't possible because the console \"is not powerful enough,\" Rockstar says",
-     "url": "https://www.gamesradar.com/games/grand-theft-auto/gta-6-at-60fps-on-ps5-pro-isnt-possible-because-the-console-is-not-powerful-enough-rockstar-says/",
-     "published": "2026-11-18T21:27Z"
+     "source": "Kotaku",
+     "title": "32 Spoiler-Free Tips As You Hop Into Grand Theft Auto 6",
+     "url": "https://kotaku.com/32-spoiler-free-tips-as-you-hop-into-grand-theft-auto-6-2000758016",
+     "published": "2026-11-18T17:00Z"
     },
     {
-     "source": "PC Gamer",
-     "title": "Rockstar says a PS5 Pro is simply 'not powerful enough' for 60 fps GTA 6, as I crack a smile at my 5090",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/rockstar-says-a-ps5-pro-is-simply-not-powerful-enough-for-60-fps-gta-6-as-i-crack-a-smile-at-my-5090/",
-     "published": "2026-11-18T21:51Z"
-    },
-    {
-     "source": "TweakTown",
-     "title": "Gamers can't play GTA 6 on PS5 without updating system firmware, Sony and Rockstar confirm",
-     "url": "https://www.tweaktown.com/rss/click/news/114767/?c=news-mf",
-     "published": "2026-11-18T22:34Z"
+     "source": "Kotaku",
+     "title": "Grand Theft Auto 6 Performance Is Mostly Stable, Except On Xbox Series S Where It Can Hit Sub-20FPS",
+     "url": "https://kotaku.com/grand-theft-auto-6-gta6-performance-framerate-ps5-xbox-series-x-s-2000758096",
+     "published": "2026-11-18T18:00Z"
     },
     {
      "source": "Push Square",
-     "title": "Feature: GTA 6 Launch Hub - Share Your First Impressions of Rockstar's PS5 Masterpiece",
-     "url": "https://www.pushsquare.com/features/gta-6-launch-hub-share-your-first-impressions-of-rockstars-ps5-masterpiece",
-     "published": "2026-11-19T00:00Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-18T18:23Z",
-   "title": "'I just hope GTA 6 is the last of its kind': Warren Spector congratulates Rockstar on its landmark accomplishment but says the industry can't keep this up",
-   "url": "https://www.pcgamer.com/games/grand-theft-auto/i-just-hope-gta-6-is-the-last-of-its-kind-warren-spector-congratulates-rockstar-on-its-landmark-accomplishment-but-says-the-industry-cant-keep-this-up/",
-   "sources": [
-    "GamesRadar",
-    "PC Gamer"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/m5LURxRUpGJUWXAXqXrBKF-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/ZF5ZJsyvbhJRVSDmd9H3jA-1920-80.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "PC Gamer",
-     "title": "'I just hope GTA 6 is the last of its kind': Warren Spector congratulates Rockstar on its landmark accomplishment but says the industry can't keep this up",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/i-just-hope-gta-6-is-the-last-of-its-kind-warren-spector-congratulates-rockstar-on-its-landmark-accomplishment-but-says-the-industry-cant-keep-this-up/",
-     "published": "2026-11-18T18:23Z"
+     "title": "Round Up: GTA 6 Is Not Just the Most Acclaimed Game of 2026, It's the Highest-Rated Game of All Time",
+     "url": "https://www.pushsquare.com/features/round-up-gta-6-is-not-just-the-most-acclaimed-game-of-2026-its-the-highest-rated-game-of-all-time",
+     "published": "2026-11-18T18:00Z"
     },
     {
      "source": "GamesRadar",
-     "title": "Deus Ex's Warren Spector hopes GTA 6 is \"the last of its kind\" because of its $1 billion budget",
-     "url": "https://www.gamesradar.com/games/grand-theft-auto/i-just-hope-gta-6-is-the-last-of-its-kind-deus-ex-creator-sees-rockstars-usd1-billion-development-cost-and-says-id-rather-have-hundreds-of-games-and-full-employment/",
-     "published": "2026-11-19T00:14Z"
+     "title": "Grand Theft Auto 6 is \"the smoothest GTA game in history\" despite 30fps, analysis finds",
+     "url": "https://www.gamesradar.com/games/grand-theft-auto/grand-theft-auto-6-is-the-smoothest-gta-game-in-history-despite-30fps-analysis-finds-but-ps5-pro-is-the-best-way-to-play-this-game-by-far/",
+     "published": "2026-11-18T18:05Z"
+    },
+    {
+     "source": "Push Square",
+     "title": "GTA 6 Obliterates All-Time Streaming Record Before It's Even Fully Released",
+     "url": "https://www.pushsquare.com/news/2026/11/gta-6-obliterates-all-time-streaming-record-before-its-even-fully-released",
+     "published": "2026-11-18T19:00Z"
+    },
+    {
+     "source": "Insider Gaming",
+     "title": "GTA 6 Sets Streaming Launch Record Within Minutes",
+     "url": "https://insider-gaming.com/gta-6-streaming-launch-record/",
+     "published": "2026-11-18T20:22Z"
+    },
+    {
+     "source": "GamesRadar",
+     "title": "GTA 6 Bigfoot sightings already ramping up as Rockstar honors a 22-year-old Grand Theft Auto legend",
+     "url": "https://www.gamesradar.com/games/grand-theft-auto/gta-6-bigfoot-sightings-are-already-ramping-up-as-rockstar-honors-a-22-year-old-grand-theft-auto-legend/",
+     "published": "2026-11-18T20:49Z"
+    },
+    {
+     "source": "Kotaku",
+     "title": "43 Soldiers Re-Enlisted In The Army In Exchange For Time Off To Play Grand Theft Auto 6: ‘I’m All About The Heist’",
+     "url": "https://kotaku.com/43-soldiers-re-enlisted-in-the-army-in-exchange-for-time-off-to-play-grand-theft-auto-6-im-all-about-the-heist-2000758133",
+     "published": "2026-11-18T21:30Z"
+    },
+    {
+     "source": "IGN",
+     "title": "43 Army Members Reenlisted in Exchange for Paid Time Off to Play GTA 6",
+     "url": "https://www.ign.com/articles/43-army-members-reenlisted-in-exchange-for-paid-time-off-to-play-gta-6",
+     "published": "2026-11-18T23:00Z"
     }
    ]
   },
   {
-   "count": 1,
-   "published": "2026-11-19T00:24Z",
-   "title": "Town-Building Strategy Game Outlanders Comes To Quest & PC VR In December",
-   "url": "https://store.steampowered.com/news/group/25080149/view/711166768421273944",
+   "count": 10,
+   "published": "2026-11-18T03:56Z",
+   "title": "Miami Heat Players Flaunt Neat-Looking GTA 6-Themed PS5 Pros",
+   "url": "https://kotaku.com/miami-heat-players-flaunt-neat-looking-gta-6-themed-ps5-pros-2000757883",
    "sources": [
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://storage.ghost.io/c/2a/2f/2a2f38f0-4b71-407a-9c7e-18a9e2541980/content/images/2026/11/outlanders-vr.png"
-    }
-   ],
-   "items": [
-    {
-     "source": "Steam News (hub)",
-     "title": "Town-Building Strategy Game Outlanders Comes To Quest & PC VR In December",
-     "url": "https://store.steampowered.com/news/group/25080149/view/711166768421273944",
-     "published": "2026-11-19T00:24Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T00:21Z",
-   "title": "GTA 6 Officially Cuts A Controversial Franchise Feature After 25 Years",
-   "url": "https://www.polygon.com/gta-6-prostitutes-hookers-strippers-where-are-npcs-rockstar/",
-   "sources": [
-    "Polygon"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://static0.polygonimages.com/wordpress/wp-content/uploads/2026/11/vice_city_06.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Polygon",
-     "title": "GTA 6 Officially Cuts A Controversial Franchise Feature After 25 Years",
-     "url": "https://www.polygon.com/gta-6-prostitutes-hookers-strippers-where-are-npcs-rockstar/",
-     "published": "2026-11-19T00:21Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T00:21Z",
-   "title": "『グランド・セフト・オートVI（GTA6）』にもおなじみ「チートコード」は完備。ただしクリアするまでは“お預け”",
-   "url": "https://automaton-media.com/articles/newsjp/202611190-479938/",
-   "sources": [
-    "Automaton (JP)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://automaton-media.com/wp-content/uploads/2026/11/202611190-479938-header.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Automaton (JP)",
-     "title": "『グランド・セフト・オートVI（GTA6）』にもおなじみ「チートコード」は完備。ただしクリアするまでは“お預け”",
-     "url": "https://automaton-media.com/articles/newsjp/202611190-479938/",
-     "published": "2026-11-19T00:21Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T00:20Z",
-   "title": "New 'GSYNC Tweaks' app fixes LFC kicking in at 60Hz on 240Hz G-SYNC monitors, app built by NVIDIA Profile Inspector developer",
-   "url": "https://www.tweaktown.com/rss/click/news/114773/?c=news-mf",
-   "sources": [
+    "Dexerto",
+    "Eurogamer",
+    "IGN",
+    "IGN Middle East (AR)",
+    "IGN Middle East (EN)",
+    "Insider Gaming",
+    "Kotaku",
+    "Push Square",
+    "TheGamer",
     "TweakTown"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://static.tweaktown.com/news/1/1/114773_1_new-gsync-tweaks-app-fixes-lfc-kicking-in-at-60hz-on-sync-monitors-built-by-nvidia-profile-inspector-developer_full.jpg?v=1795046145"
+     "url": "https://kotaku.com/app/uploads/2026/11/davionmitchell.jpg"
     }
    ],
    "items": [
     {
+     "source": "Kotaku",
+     "title": "Miami Heat Players Flaunt Neat-Looking GTA 6-Themed PS5 Pros",
+     "url": "https://kotaku.com/miami-heat-players-flaunt-neat-looking-gta-6-themed-ps5-pros-2000757883",
+     "published": "2026-11-18T03:56Z"
+    },
+    {
+     "source": "TheGamer",
+     "title": "GTA 6 Custom PS5 Pro Gifted To Miami Heat Players",
+     "url": "https://www.thegamer.com/rockstar-just-custom-gta-6-ps5-pro/",
+     "published": "2026-11-18T09:09Z"
+    },
+    {
+     "source": "IGN Middle East (AR)",
+     "title": "15 Minutes of GTA 6 PS5 Pro Gameplay (First Mission)",
+     "url": "https://me.ign.com/ar/grand-theft-auto-vi/197555/15-minutes-of-gta-6-ps5-pro-gameplay-first-mission",
+     "published": "2026-11-18T11:30Z"
+    },
+    {
+     "source": "IGN Middle East (EN)",
+     "title": "15 Minutes of GTA 6 PS5 Pro Gameplay (First Mission)",
+     "url": "https://me.ign.com/en/grand-theft-auto-vi/249841/15-minutes-of-gta-6-ps5-pro-gameplay-first-mission",
+     "published": "2026-11-18T11:30Z"
+    },
+    {
+     "source": "Push Square",
+     "title": "'PS5 Pro Is Not Powerful Enough to Run GTA 6 at 60fps': Rockstar Explains Frame Rate Decision",
+     "url": "https://www.pushsquare.com/news/2026/11/ps5-pro-is-not-powerful-enough-to-run-gta-6-at-60fps-rockstar-explains-frame-rate-decision",
+     "published": "2026-11-18T13:00Z"
+    },
+    {
+     "source": "Insider Gaming",
+     "title": "Rockstar Explains Why GTA 6 Doesn’t Have a 40 FPS Mode",
+     "url": "https://insider-gaming.com/rockstar-explains-why-gta-6-doesnt-have-a-40-fps-mode/",
+     "published": "2026-11-18T13:22Z"
+    },
+    {
+     "source": "Dexerto",
+     "title": "GTA 6’s PS5 Pro upgrade is bigger than you might expect",
+     "url": "https://www.dexerto.com/gta/gta-6s-ps5-pro-upgrade-is-bigger-than-you-might-expect-3429387/",
+     "published": "2026-11-18T13:28Z"
+    },
+    {
      "source": "TweakTown",
-     "title": "New 'GSYNC Tweaks' app fixes LFC kicking in at 60Hz on 240Hz G-SYNC monitors, app built by NVIDIA Profile Inspector developer",
-     "url": "https://www.tweaktown.com/rss/click/news/114773/?c=news-mf",
-     "published": "2026-11-19T00:20Z"
+     "title": "GTA 6 hits nearly 10x PS5 Pro's on screen FPS with an RTX 5090, DLSS 5, and 6x frame gen",
+     "url": "https://www.tweaktown.com/rss/click/news/114765/?c=news-mf",
+     "published": "2026-11-18T13:59Z"
+    },
+    {
+     "source": "Eurogamer",
+     "title": "You cannot replay missions in GTA 6, but you can use multiple save files, as Rockstar explains how it made missions \"harder to fail\"",
+     "url": "https://www.eurogamer.net/gta-6-multiple-save-files-replay-missions",
+     "published": "2026-11-18T14:24Z"
+    },
+    {
+     "source": "Kotaku",
+     "title": "Rockstar Explains Why GTA 6 Has No Prostitutes In It, A Hallmark Of The Series Since 2001",
+     "url": "https://kotaku.com/rockstar-explains-why-gta-6-has-no-prostitutes-in-it-a-hallmark-of-the-series-since-2001-2000758174",
+     "published": "2026-11-18T22:30Z"
+    },
+    {
+     "source": "IGN",
+     "title": "GTA 6 Doesn't Let Players Pick Up Prostitutes, But Rockstar Has a Logical Reason for It",
+     "url": "https://www.ign.com/articles/gta-6-doesnt-let-players-pick-up-prostitutes-but-rockstar-has-a-logical-reason-for-it",
+     "published": "2026-11-18T23:07Z"
     }
    ]
   },
   {
-   "count": 1,
+   "count": 3,
+   "published": "2026-11-18T14:04Z",
+   "title": "\"It’s hard not to worry\": Even as GTA 6 launches on console amid glowing reviews, Rockstar devs are already concerned about getting laid off",
+   "url": "https://www.rockpapershotgun.com/its-hard-not-to-worry-even-as-gta-6-launches-on-console-amid-glowing-reviews-rockstar-devs-are-already-concerned-about-getting-laid-off",
+   "sources": [
+    "GamesRadar",
+    "Rock Paper Shotgun",
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://assetsio.gnwcdn.com/gta-6-headline-launch-gallery-35.jpg?width=690&quality=85&format=jpg&auto=webp"
+    }
+   ],
+   "items": [
+    {
+     "source": "Rock Paper Shotgun",
+     "title": "\"It’s hard not to worry\": Even as GTA 6 launches on console amid glowing reviews, Rockstar devs are already concerned about getting laid off",
+     "url": "https://www.rockpapershotgun.com/its-hard-not-to-worry-even-as-gta-6-launches-on-console-amid-glowing-reviews-rockstar-devs-are-already-concerned-about-getting-laid-off",
+     "published": "2026-11-18T14:04Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "GTA VI’s Reviews Are In, And Rockstar May Have Pulled Off The Impossible",
+     "url": "https://store.steampowered.com/news/group/7433348/view/714544468141801736",
+     "published": "2026-11-18T15:06Z"
+    },
+    {
+     "source": "GamesRadar",
+     "title": "GTA 6 devs are \"worried about getting laid off\" even after \"working on the biggest game of all time\"",
+     "url": "https://www.gamesradar.com/games/grand-theft-auto/gta-6-devs-are-worried-about-getting-laid-off-even-after-working-on-the-biggest-game-of-all-time/",
+     "published": "2026-11-19T00:55Z"
+    }
+   ]
+  },
+  {
+   "count": 2,
+   "published": "2026-11-18T23:19Z",
+   "title": "Build-A-Bear Workshop Teases Upcoming Donkey Kong Plush",
+   "url": "https://gonintendo.com/contents/67380-build-a-bear-workshop-teases-upcoming-donkey-kong-plush",
+   "sources": [
+    "GoNintendo",
+    "Nintendo Life"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://gonintendo.com/attachments/image/89179/file/medium-61b5419d2962289216aea919ade516ea.png"
+    }
+   ],
+   "items": [
+    {
+     "source": "GoNintendo",
+     "title": "Build-A-Bear Workshop Teases Upcoming Donkey Kong Plush",
+     "url": "https://gonintendo.com/contents/67380-build-a-bear-workshop-teases-upcoming-donkey-kong-plush",
+     "published": "2026-11-18T23:19Z"
+    },
+    {
+     "source": "Nintendo Life",
+     "title": "\"We're Going Bananas For Our Newest Furry Friend\" - Donkey Kong Is Coming Soon To Build-A-Bear Workshop",
+     "url": "https://www.nintendolife.com/news/2026/11/were-going-bananas-for-our-newest-furry-friend-donkey-kong-is-coming-soon-to-build-a-bear-workshop",
+     "published": "2026-11-19T00:55Z"
+    }
+   ]
+  },
+  {
+   "count": 2,
    "published": "2026-11-19T00:17Z",
    "title": "Boat Man revealed for Mega Man: Dual Override",
    "url": "https://gonintendo.com/contents/67382-boat-man-revealed-for-mega-man-dual-override",
    "sources": [
-    "GoNintendo"
+    "GoNintendo",
+    "Nintendo Everything"
    ],
    "ar_relay": false,
    "media": [
@@ -319,14 +440,263 @@
      "title": "Boat Man revealed for Mega Man: Dual Override",
      "url": "https://gonintendo.com/contents/67382-boat-man-revealed-for-mega-man-dual-override",
      "published": "2026-11-19T00:17Z"
+    },
+    {
+     "source": "Nintendo Everything",
+     "title": "Mega Man: Dual Override reveals Boat Man",
+     "url": "https://nintendoeverything.com/mega-man-dual-override-reveals-boat-man/",
+     "published": "2026-11-19T00:51Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-19T00:00Z",
-   "title": "スマホゲームのセルラン分析（2026年11月5日〜11月11日）。今週も1位は「勝利の女神：NIKKE」。7月〜9月に登場した新作の国内ランキングも",
-   "url": "https://www.4gamer.net/games/456/G045622/20261116002/",
+   "published": "2026-11-19T01:43Z",
+   "title": "قبل انهاء الفصل الأول في GTA 6.. لا تفوت هذا التروفي السهل مع لوسيا",
+   "url": "https://www.vga4a.com/archives/341828",
+   "sources": [
+    "VGA4A (AR)"
+   ],
+   "ar_relay": true,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i0.wp.com/www.vga4a.com/wp-content/uploads/2026/11/%D8%A8%D8%A8.webp?fit=1024%2C576&ssl=1"
+    }
+   ],
+   "items": [
+    {
+     "source": "VGA4A (AR)",
+     "title": "قبل انهاء الفصل الأول في GTA 6.. لا تفوت هذا التروفي السهل مع لوسيا",
+     "url": "https://www.vga4a.com/archives/341828",
+     "published": "2026-11-19T01:43Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T01:39Z",
+   "title": "GTA 6‘s Big Miami Heat Game Led To Black Friday-Like Crowds Trying To Buy All The Merch",
+   "url": "https://kotaku.com/gta-6s-big-miami-heat-game-led-to-black-friday-like-crowds-trying-to-buy-all-the-merch-2000758204",
+   "sources": [
+    "Kotaku"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://kotaku.com/app/uploads/2026/11/GTa-nba-heat-shirt-1280x720.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Kotaku",
+     "title": "GTA 6‘s Big Miami Heat Game Led To Black Friday-Like Crowds Trying To Buy All The Merch",
+     "url": "https://kotaku.com/gta-6s-big-miami-heat-game-led-to-black-friday-like-crowds-trying-to-buy-all-the-merch-2000758204",
+     "published": "2026-11-19T01:39Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T01:38Z",
+   "title": "『GTA6』では「犬や猫をナデナデ」できる！撫でることで「フォーカス強化」も得られるので“撫で得”。ボタンの押し間違えで「叱る」や攻撃をしてしまわないように注意",
+   "url": "https://news.denfaminicogamer.jp/news/261119j",
+   "sources": [
+    "Denfaminicogamer (JP)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://news.denfaminicogamer.jp/wp-content/uploads/2026/11/1-4-1024x576.png"
+    }
+   ],
+   "items": [
+    {
+     "source": "Denfaminicogamer (JP)",
+     "title": "『GTA6』では「犬や猫をナデナデ」できる！撫でることで「フォーカス強化」も得られるので“撫で得”。ボタンの押し間違えで「叱る」や攻撃をしてしまわないように注意",
+     "url": "https://news.denfaminicogamer.jp/news/261119j",
+     "published": "2026-11-19T01:38Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T01:20Z",
+   "title": "『グランド・セフト・オートVI（GTA6）』では「ながらスマホ運転」がちゃんと危ない。“スマホに夢中”が生々しい",
+   "url": "https://automaton-media.com/articles/newsjp/20261119-479943/",
+   "sources": [
+    "Automaton (JP)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://automaton-media.com/wp-content/uploads/2026/11/20261119-479943-header.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Automaton (JP)",
+     "title": "『グランド・セフト・オートVI（GTA6）』では「ながらスマホ運転」がちゃんと危ない。“スマホに夢中”が生々しい",
+     "url": "https://automaton-media.com/articles/newsjp/20261119-479943/",
+     "published": "2026-11-19T01:20Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T01:15Z",
+   "title": "【20%オフ】『トルネコの大冒険』リマスター、Steam版が発売以来初のセール実施。発売当初の不備は修正され現在はテンポよく遊べるローグライク",
+   "url": "http://www.gamespark.jp/article/2026/11/19/175061.html",
+   "sources": [
+    "Game*Spark (JP)"
+   ],
+   "ar_relay": false,
+   "media": [],
+   "items": [
+    {
+     "source": "Game*Spark (JP)",
+     "title": "【20%オフ】『トルネコの大冒険』リマスター、Steam版が発売以来初のセール実施。発売当初の不備は修正され現在はテンポよく遊べるローグライク",
+     "url": "http://www.gamespark.jp/article/2026/11/19/175061.html",
+     "published": "2026-11-19T01:15Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T01:13Z",
+   "title": "لا تتقدم في GTA 6 قبل اكتشاف هذين السرّين.. أموال مخفية ومهمات قابلة للتفويت",
+   "url": "https://www.vga4a.com/archives/341825",
+   "sources": [
+    "VGA4A (AR)"
+   ],
+   "ar_relay": true,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i0.wp.com/www.vga4a.com/wp-content/uploads/2026/11/IMG_2337.webp?fit=1920%2C1080&ssl=1"
+    }
+   ],
+   "items": [
+    {
+     "source": "VGA4A (AR)",
+     "title": "لا تتقدم في GTA 6 قبل اكتشاف هذين السرّين.. أموال مخفية ومهمات قابلة للتفويت",
+     "url": "https://www.vga4a.com/archives/341825",
+     "published": "2026-11-19T01:13Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T01:12Z",
+   "title": "100,000+ copies within 2.5 days!",
+   "url": "https://store.steampowered.com/news/app/5037200/view/702159569166532908",
+   "sources": [
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://clan.fastly.steamstatic.com/images/46262100/049ec93e95139acf804e692b34f24821757de899.png"
+    },
+    {
+     "type": "image",
+     "url": "https://clan.fastly.steamstatic.com/images/46262100/bfb6d03a01144141853a71639d2d61f57b490134.png"
+    }
+   ],
+   "items": [
+    {
+     "source": "Steam News (hub)",
+     "title": "100,000+ copies within 2.5 days!",
+     "url": "https://store.steampowered.com/news/app/5037200/view/702159569166532908",
+     "published": "2026-11-19T01:12Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T01:01Z",
+   "title": "マンガ『名探偵マーニー』単行本12巻が2027年1月20日に発売決定。「チャンピオンRED」掲載の新作読み切り8本を収録し、“約13年ぶり”の新刊に",
+   "url": "https://news.denfaminicogamer.jp/news/261119i",
+   "sources": [
+    "Denfaminicogamer (JP)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://news.denfaminicogamer.jp/wp-content/uploads/2026/11/PhotoshopExtension_Image-2026-11-19T094101.876-720x1024.png"
+    }
+   ],
+   "items": [
+    {
+     "source": "Denfaminicogamer (JP)",
+     "title": "マンガ『名探偵マーニー』単行本12巻が2027年1月20日に発売決定。「チャンピオンRED」掲載の新作読み切り8本を収録し、“約13年ぶり”の新刊に",
+     "url": "https://news.denfaminicogamer.jp/news/261119i",
+     "published": "2026-11-19T01:01Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T01:01Z",
+   "title": "「Suicaのペンギン」抱き枕がもちもちで“癒し”すぎる。パスケースやミニ財布などのグッズを販売するポップアップショップ第2弾が11月24日より開催",
+   "url": "https://news.denfaminicogamer.jp/news/261119k",
+   "sources": [
+    "Denfaminicogamer (JP)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://news.denfaminicogamer.jp/wp-content/uploads/2026/11/sub7-29.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Denfaminicogamer (JP)",
+     "title": "「Suicaのペンギン」抱き枕がもちもちで“癒し”すぎる。パスケースやミニ財布などのグッズを販売するポップアップショップ第2弾が11月24日より開催",
+     "url": "https://news.denfaminicogamer.jp/news/261119k",
+     "published": "2026-11-19T01:01Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T01:00Z",
+   "title": "New GTA 6 Players, Be Careful When Claiming Your GTA+ Pre-Order Bonus",
+   "url": "https://www.pushsquare.com/news/2026/11/new-gta-6-players-be-careful-when-claiming-your-gtaplus-pre-order-bonus",
+   "sources": [
+    "Push Square"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://images.pushsquare.com/aa41bf83ff550/small.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://images.pushsquare.com/aa41bf83ff550/large.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Push Square",
+     "title": "New GTA 6 Players, Be Careful When Claiming Your GTA+ Pre-Order Bonus",
+     "url": "https://www.pushsquare.com/news/2026/11/new-gta-6-players-be-careful-when-claiming-your-gtaplus-pre-order-bonus",
+     "published": "2026-11-19T01:00Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T01:00Z",
+   "title": "ストラテジーディフェンスゲーム「Gate of Gates」，スマートフォン＆PC向けクローズドβテストを12月中に開催。参加者を募集中",
+   "url": "https://www.4gamer.net/games/956/G095600/20261117040/",
    "sources": [
     "4Gamer (JP)"
    ],
@@ -335,101 +705,104 @@
    "items": [
     {
      "source": "4Gamer (JP)",
-     "title": "スマホゲームのセルラン分析（2026年11月5日〜11月11日）。今週も1位は「勝利の女神：NIKKE」。7月〜9月に登場した新作の国内ランキングも",
-     "url": "https://www.4gamer.net/games/456/G045622/20261116002/",
-     "published": "2026-11-19T00:00Z"
+     "title": "ストラテジーディフェンスゲーム「Gate of Gates」，スマートフォン＆PC向けクローズドβテストを12月中に開催。参加者を募集中",
+     "url": "https://www.4gamer.net/games/956/G095600/20261117040/",
+     "published": "2026-11-19T01:00Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-18T23:57Z",
-   "title": "Apex Legends: Latest Update 11/16/2026",
-   "url": "https://store.steampowered.com/news/app/1172470/view/680767470935474654",
+   "published": "2026-11-19T01:00Z",
+   "title": "「ドルフロ2」車を召喚して戦場を爆走！ バフの積み重ねで高火力を叩き出す新キャラクター“コレダ”の性能をレポート［プレイレポ］",
+   "url": "https://www.4gamer.net/games/631/G063178/20261113045/",
    "sources": [
-    "Steam News (hub)"
+    "4Gamer (JP)"
    ],
    "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://clan.fastly.steamstatic.com/images/38098458/c52c1d115036fc56ac832bf9f3764e3d52e89aa3.jpg"
-    }
-   ],
+   "media": [],
    "items": [
     {
-     "source": "Steam News (hub)",
-     "title": "Apex Legends: Latest Update 11/16/2026",
-     "url": "https://store.steampowered.com/news/app/1172470/view/680767470935474654",
-     "published": "2026-11-18T23:57Z"
+     "source": "4Gamer (JP)",
+     "title": "「ドルフロ2」車を召喚して戦場を爆走！ バフの積み重ねで高火力を叩き出す新キャラクター“コレダ”の性能をレポート［プレイレポ］",
+     "url": "https://www.4gamer.net/games/631/G063178/20261113045/",
+     "published": "2026-11-19T01:00Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-18T23:54Z",
-   "title": "Steam Frame Is 5th Most Used PC VR Headset After First Full Month On The Market",
-   "url": "https://store.steampowered.com/news/group/25080149/view/711166768421273930",
+   "published": "2026-11-19T00:54Z",
+   "title": "【快挙】1977年打ち上げの「NASA探査機・ボイジャー1号」ついに“1光日（約259億km）”に到達。人工物として史上初、人類未踏の距離に踏み込む",
+   "url": "https://news.denfaminicogamer.jp/news/261119p",
    "sources": [
-    "Steam News (hub)"
+    "Denfaminicogamer (JP)"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://storage.ghost.io/c/2a/2f/2a2f38f0-4b71-407a-9c7e-18a9e2541980/content/images/2026/11/Steam-Frame-1--1-.png"
+     "url": "https://news.denfaminicogamer.jp/wp-content/uploads/2026/11/PhotoshopExtension_Image-2026-11-12T103919.541-1-1024x576.webp"
     }
    ],
    "items": [
     {
-     "source": "Steam News (hub)",
-     "title": "Steam Frame Is 5th Most Used PC VR Headset After First Full Month On The Market",
-     "url": "https://store.steampowered.com/news/group/25080149/view/711166768421273930",
-     "published": "2026-11-18T23:54Z"
+     "source": "Denfaminicogamer (JP)",
+     "title": "【快挙】1977年打ち上げの「NASA探査機・ボイジャー1号」ついに“1光日（約259億km）”に到達。人工物として史上初、人類未踏の距離に踏み込む",
+     "url": "https://news.denfaminicogamer.jp/news/261119p",
+     "published": "2026-11-19T00:54Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-18T22:31Z",
-   "title": "The Journey Home launches on Steam on 3 December",
-   "url": "https://tbreak.com/journey-home-steam-release-date-3-december/",
+   "published": "2026-11-18T23:31Z",
+   "title": "GTA 6 Launch Causes Massive Spike in Traffic for Internet Provider Xfinity",
+   "url": "https://www.ign.com/articles/gta-6-launch-causes-massive-spike-in-traffic-for-internet-provider-xfinity",
    "sources": [
-    "Tbreak (Gulf)"
+    "IGN"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://i0.wp.com/tbreak.com/wp-content/uploads/2026/11/journey-home-steam-release-date-3-december-2.jpg?resize=1920%2C960&ssl=1"
-    },
-    {
-     "type": "image",
-     "url": "https://i0.wp.com/tbreak.com/wp-content/uploads/2026/11/journey-home-steam-release-date-3-december-3.jpg?resize=1024%2C1024&ssl=1"
-    },
-    {
-     "type": "image",
-     "url": "https://i0.wp.com/tbreak.com/wp-content/uploads/2026/11/journey-home-steam-release-date-3-december-4.jpg?resize=1120%2C630&ssl=1"
-    },
-    {
-     "type": "image",
-     "url": "https://i0.wp.com/tbreak.com/wp-content/uploads/2026/11/journey-home-steam-release-date-3-december-5.jpg?resize=889%2C500&ssl=1"
-    },
-    {
-     "type": "image",
-     "url": "https://i0.wp.com/tbreak.com/wp-content/uploads/2026/11/journey-home-steam-release-date-3-december-6.jpg?resize=889%2C500&ssl=1"
-    },
-    {
-     "type": "image",
-     "url": "https://i0.wp.com/tbreak.com/wp-content/uploads/2026/11/journey-home-steam-release-date-3-december-7.jpg?resize=889%2C500&ssl=1"
+     "url": "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-ice-cream-1795043102913.jpg"
     }
    ],
    "items": [
     {
-     "source": "Tbreak (Gulf)",
-     "title": "The Journey Home launches on Steam on 3 December",
-     "url": "https://tbreak.com/journey-home-steam-release-date-3-december/",
-     "published": "2026-11-18T22:31Z"
+     "source": "IGN",
+     "title": "GTA 6 Launch Causes Massive Spike in Traffic for Internet Provider Xfinity",
+     "url": "https://www.ign.com/articles/gta-6-launch-causes-massive-spike-in-traffic-for-internet-provider-xfinity",
+     "published": "2026-11-18T23:31Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-18T23:30Z",
+   "title": "The First Zombie announced for Nintendo Switch [update: release date]",
+   "url": "https://nintendoeverything.com/the-first-zombie-announced-for-nintendo-switch/",
+   "sources": [
+    "Nintendo Everything"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://nintendoeverything.com/wp-content/uploads/The-First-Zombie-150x86.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://nintendoeverything.com/wp-content/uploads/The-First-Zombie.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Nintendo Everything",
+     "title": "The First Zombie announced for Nintendo Switch [update: release date]",
+     "url": "https://nintendoeverything.com/the-first-zombie-announced-for-nintendo-switch/",
+     "published": "2026-11-18T23:30Z"
     }
    ]
   }
@@ -439,7 +812,7 @@
   "Nintendo of America (X) (HTTP 429, 77x)",
   "PlayStation (X) (HTTP 429, 10x)",
   "PlayStation Middle East (X) (HTTP 429, 20x)",
-  "Rockstar Games (X) (HTTP 429, 6x)",
+  "Rockstar Games (X) (HTTP 429, 7x)",
   "The Game Awards (HTTP 403, 35x)",
   "Xbox (X) (HTTP 429, 97x)"
  ],
@@ -471,7 +844,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-19T00:50:14Z",
+  "last_poll_at": "2026-11-19T01:50:04Z",
   "sources_enabled": 100,
   "sources_ok": 92,
   "sources_failing": 7,
@@ -480,7 +853,7 @@
    "Nintendo of America (X) (HTTP 429, 77x)",
    "PlayStation (X) (HTTP 429, 10x)",
    "PlayStation Middle East (X) (HTTP 429, 20x)",
-   "Rockstar Games (X) (HTTP 429, 6x)",
+   "Rockstar Games (X) (HTTP 429, 7x)",
    "The Game Awards (HTTP 403, 35x)",
    "Xbox (X) (HTTP 429, 97x)"
   ]
