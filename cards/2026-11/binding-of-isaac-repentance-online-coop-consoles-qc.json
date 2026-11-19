@@ -89,14 +89,14 @@
    "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
   }
  ],
- "job_to_pass_min": 7.2,
- "at": "2026-11-19T09:32:26Z",
+ "job_to_pass_min": 6.7,
+ "at": "2026-11-19T09:42:44Z",
  "findings": [],
  "notes": [
   "first frame: shot 0 binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
-  "length 30.8 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: applied; music_pct 87.9; leak_pct 0.2; cache {'hit': 0, 'miss': 5}; separate_secs 38.8; secs 56.5",
-  "render_job: lifeless: {\"score\": 2.7, \"still_share\": 0.023, \"longest_still\": 0.4, \"cuts_per_10s\": 5.52, \"held_under_text\": 0.003, \"secs\": 30.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 30.2 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 88.0; leak_pct 0.1; cache {'hit': 2, 'miss': 3}; separate_secs 13.6; secs 30.7",
+  "render_job: lifeless: {\"score\": 3.1, \"still_share\": 0.023, \"longest_still\": 0.4, \"cuts_per_10s\": 5.32, \"held_under_text\": 0.023, \"secs\": 30.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [
   {
@@ -147,36 +147,36 @@
   {
    "where": "shot 9",
    "rule": "auto_shots",
-   "what": "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4 at 32.75 s for 2.5 s, focus 0.73 (nothing free in binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4)"
+   "what": "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4 at 32.75 s for 2.2 s, focus 0.73 (nothing free in binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4)"
   },
   {
    "where": "shot 10",
    "rule": "auto_shots",
-   "what": "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4 at 35.21 s for 2.5 s, focus 0.73 (nothing free in binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4)"
+   "what": "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4 at 34.96 s for 2.2 s, focus 0.73 (nothing free in binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4)"
   },
   {
    "where": "shot 11",
    "rule": "auto_shots",
-   "what": "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4 at 37.67 s for 2.3 s, focus 0.73 (nothing free in binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4)"
+   "what": "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4 at 37.17 s for 2.2 s, focus 0.73 (nothing free in binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4)"
   },
   {
    "where": "shot 12",
    "rule": "auto_shots",
-   "what": "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4 at 39.98 s for 2.3 s, focus 0.73 (nothing free in binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4)"
+   "what": "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4 at 39.37 s for 2.2 s, focus 0.73 (nothing free in binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4)"
   },
   {
    "where": "shot 13",
    "rule": "auto_shots",
-   "what": "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4 at 42.29 s for 2.4 s, focus 0.73 (nothing free in binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4)"
+   "what": "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4 at 41.57 s for 2.5 s, focus 0.73 (nothing free in binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4)"
   },
   {
    "where": "shot 14",
    "rule": "auto_shots",
-   "what": "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4 at 2.80 s for 2.4 s, focus 0.73 (nothing free in binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4)"
+   "what": "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4 at 2.80 s for 2.5 s, focus 0.73 (nothing free in binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4)"
   }
  ],
- "job_sha": "84bce3cd56dc39b9e60480e5a9ca1c78c032a095",
- "dispatches": 2,
+ "job_sha": "b5e2e07de6c4e1f23a28a922b1d23d5184c3a553",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -192,29 +192,29 @@
  "person_shown": "n/a",
  "sound": "trailer",
  "shot_read": {
-  "secs": 40.9,
+  "secs": 39.5,
   "files": {
    "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4": {
-    "secs": 25.0,
+    "secs": 24.7,
     "cached": false,
     "stages": {
-     "decode": 9.0,
-     "autofocus": 24.8,
-     "ocr": 24.8,
-     "smear": 24.8,
-     "scenes": 25.0
+     "decode": 9.3,
+     "autofocus": 24.5,
+     "ocr": 24.5,
+     "smear": 24.5,
+     "scenes": 24.7
     },
     "incomplete": null
    },
    "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4": {
-    "secs": 15.9,
+    "secs": 14.8,
     "cached": false,
     "stages": {
-     "decode": 6.7,
-     "autofocus": 15.7,
-     "ocr": 15.7,
-     "smear": 15.8,
-     "scenes": 15.9
+     "decode": 6.4,
+     "autofocus": 14.5,
+     "ocr": 14.5,
+     "smear": 14.7,
+     "scenes": 14.8
     },
     "incomplete": null
    }
@@ -222,15 +222,14 @@
  },
  "job_path": "jobs/done/binding-of-isaac-repentance-online-coop-consoles.json",
  "stage_minutes": {
-  "queue": 0.03,
+  "queue": 0.5,
   "setup": 0.22,
-  "fetch": 0.51,
-  "shots": 0.7,
-  "checks": 0.73,
-  "render": 3.59,
-  "after": 1.26,
-  "upload": 0.12,
-  "job": 6.8
+  "fetch": 0.2,
+  "shots": 0.68,
+  "checks": 0.66,
+  "render": 3.04,
+  "after": 1.23,
+  "job": 5.83
  },
  "job_after_autofix": {
   "name": "binding-of-isaac-repentance-online-coop-consoles",
@@ -246,16 +245,12 @@
     "file": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4",
     "steam": 1426300,
     "trailer": "Repentance Launch Trailer",
-    "start": 0,
-    "seconds": 120,
     "trailer_id": "1426300"
    },
    {
     "file": "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4",
     "steam": 1426300,
     "trailer": "The Binding of Isaac: Repentance Release Date Trailer",
-    "start": 0,
-    "seconds": 120,
     "trailer_id": "1426300"
    }
   ],
@@ -362,51 +357,51 @@
    [
     "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4",
     32.75,
+    2.21,
+    [
+     [
+      0.0,
+      0.73
+     ]
+    ]
+   ],
+   [
+    "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4",
+    34.96,
+    2.21,
+    [
+     [
+      0.0,
+      0.73
+     ]
+    ]
+   ],
+   [
+    "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4",
+    37.17,
+    2.2,
+    [
+     [
+      0.0,
+      0.73
+     ]
+    ]
+   ],
+   [
+    "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4",
+    39.37,
+    2.2,
+    [
+     [
+      0.0,
+      0.73
+     ]
+    ]
+   ],
+   [
+    "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4",
+    41.57,
     2.46,
-    [
-     [
-      0.0,
-      0.73
-     ]
-    ]
-   ],
-   [
-    "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4",
-    35.21,
-    2.46,
-    [
-     [
-      0.0,
-      0.73
-     ]
-    ]
-   ],
-   [
-    "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4",
-    37.67,
-    2.31,
-    [
-     [
-      0.0,
-      0.73
-     ]
-    ]
-   ],
-   [
-    "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4",
-    39.98,
-    2.31,
-    [
-     [
-      0.0,
-      0.73
-     ]
-    ]
-   ],
-   [
-    "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4",
-    42.29,
-    2.42,
     [
      [
       0.0,
@@ -417,7 +412,7 @@
    [
     "binding-of-isaac-repentance-online-coop-consoles-the-binding-of-isaac-repentance-release-date-trailer.mp4",
     2.8,
-    2.42,
+    2.46,
     [
      [
       0.0,
@@ -480,7 +475,7 @@
     10,
     [
      [
-      "تقول شركة نيكاليس (Nicalis)\nإن الإصدار الجديد",
+      "ويرقّي لاعبو PS5\nو Xbox لعبة Repentance",
       {
        "size": 54
       }
@@ -492,7 +487,7 @@
     12,
     [
      [
-      "يضم أكثر من 700 عنصر\nو 34 شخصية قابلة للعب",
+      "القديمة بإضافة مدفوعة،",
       {
        "size": 54
       }
@@ -504,7 +499,7 @@
     14,
     [
      [
-      "ويرقّي لاعبو PS5 و Xbox\nلعبتهم بإضافة مدفوعة،",
+      "بينما تتوفر على Switch 2 نسخة\nرقمية أو مطبوعة",
       {
        "size": 54
       }
@@ -523,7 +518,7 @@
     }
    ]
   ],
-  "spoken": "صدر اليوم إصدار Repentance الجديد من لعبة Isaac على Switch 2 وPS5 وXbox، ومعه اللعب عبر الإنترنت لأربعة لاعبين لأول مرة على المنصات المنزلية. تقول شركة نيكاليس (Nicalis) إن الإصدار الجديد يضم أكثر من 700 عنصر و34 شخصية قابلة للعب. ويرقّي لاعبو PS5 وXbox لعبتهم بإضافة مدفوعة، بينما تتوفر على Switch 2 نسخة رقمية أو مطبوعة.",
+  "spoken": "صدر اليوم إصدار Repentance الجديد من لعبة Isaac على Switch 2 وPS5 وXbox، ومعه اللعب عبر الإنترنت لأربعة لاعبين لأول مرة على المنصات المنزلية. ويرقّي لاعبو PS5 وXbox لعبة Repentance القديمة بإضافة مدفوعة، بينما تتوفر على Switch 2 نسخة رقمية أو مطبوعة.",
   "headline": "لعبة Isaac متوفرة الآن\nباللعب عبر الإنترنت",
   "label": "متوفر الآن",
   "game": "The Binding of Isaac: Repentance",
@@ -535,7 +530,7 @@
   },
   "source": "صفحة اللعبة على Steam",
   "date": "19 Nov 2026",
-  "theme": "gold",
+  "theme": "playful",
   "style": null,
   "template": "trailer",
   "skin": "house",
