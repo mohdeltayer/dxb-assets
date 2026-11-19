@@ -375,3 +375,6 @@ fact inside the text (the release date), then why it matters now. Refused by the
 
 - غوتشا غوتشا غيمز (Gotcha Gotcha Games): publisher and developer of RPG Maker U2U. New name, used 17 Nov 2026 by Production 2; flagged for Mohammad.
 | Crowbar Collective | كراوبار كوليكتيف | New 17 Nov 2026 (Black Mesa update Reel; bracket كراوبار كوليكتيف (Crowbar Collective) at first mention); flagged for Mohammad |
+| GoNintendo (outlet) | جو نينتندو (GoNintendo) | Proposed 19 Nov 2026 (Mega Man Boat Man and Volvy's DX Reels; «موقع جو نينتندو»); flagged for Mohammad |
+| Automaton (Japanese games outlet) | أوتوماتون (Automaton) | Proposed 19 Nov 2026 (The Ascent Legacy Patch Reel; «موقع أوتوماتون»); flagged for Mohammad |
+| Neon Giant (The Ascent developer, Sweden) | نيون جاينت (Neon Giant) | Proposed 19 Nov 2026 (The Ascent Legacy Patch Reel); flagged for Mohammad |
