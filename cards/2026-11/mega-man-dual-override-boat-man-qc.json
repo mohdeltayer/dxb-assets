@@ -1,0 +1,415 @@
+{
+ "name": "mega-man-dual-override-boat-man",
+ "out": "cards/2026-11/mega-man-dual-override-boat-man-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "c",
+   "why": "audio split not applied (music only 23.3% of the track (< 40.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our b"
+  }
+ ],
+ "job_to_pass_min": 8.1,
+ "at": "2026-11-19T01:18:52Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 18.7 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason music only 23.3% of the track (< 40.0%); music_pct 23.3; leak_pct 0.8; cache {'hit': 0, 'miss': 5}; separate_secs 25.7; secs 36.0",
+  "render_job: audio split fallback: our bed (ValueError: the trailer mix would not match the picture); bed:neon_b",
+  "render_job: lifeless: {\"score\": 0.7, \"still_share\": 0.005, \"longest_still\": 0.1, \"cuts_per_10s\": 3.23, \"held_under_text\": 0.005, \"secs\": 18.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4 at 7.30 s for 3.8 s, focus 0.629"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4 at 17.68 s for 2.4 s, focus 0.629"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4 at 25.71 s for 2.4 s, focus 0.629"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4 at 37.69 s for 2.2 s, focus 0.629"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4 at 51.67 s for 2.2 s, focus 0.541"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4 at 55.46 s for 2.2 s, focus 0.541"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4 at 67.69 s for 2.2 s, focus 0.385"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4 at 74.72 s for 2.2 s, focus 0.385"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4 at 71.33 s for 2.2 s, focus 0.385"
+  },
+  {
+   "where": "shot 7",
+   "rule": "subject_cut",
+   "what": "focus [[0.0, 0.385]] to 0.53: the subject stays inside the window",
+   "before": [
+    "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4",
+    74.72,
+    2.2,
+    [
+     [
+      0.0,
+      0.385
+     ]
+    ]
+   ],
+   "after": [
+    "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4",
+    74.72,
+    2.2,
+    0.53
+   ]
+  }
+ ],
+ "job_sha": "a29fdf5b80f4db3b7517052675dcdf953717c1d3",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/mega-man-dual-override-boat-man-look-1.jpg",
+  "cards/2026-11/mega-man-dual-override-boat-man-look-2.jpg",
+  "cards/2026-11/mega-man-dual-override-boat-man-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_b (trailer sound refused: music only 23.3% of the track (< 40.0%))",
+ "shot_read": {
+  "secs": 46.4,
+  "files": {
+   "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4": {
+    "secs": 46.4,
+    "cached": false,
+    "stages": {
+     "decode": 20.9,
+     "autofocus": 34.9,
+     "ocr": 35.9,
+     "smear": 46.3,
+     "scenes": 46.4
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/mega-man-dual-override-boat-man.json",
+ "stage_minutes": {
+  "queue": 0.02,
+  "setup": 0.18,
+  "fetch": 2.36,
+  "shots": 0.79,
+  "checks": 1.16,
+  "render": 2.36,
+  "after": 0.98,
+  "job": 7.67
+ },
+ "job_after_autofix": {
+  "name": "mega-man-dual-override-boat-man",
+  "story": "2026-11-19-mega-man-dual-override-boat-man",
+  "footage_source": "steam:4223290",
+  "kind_news": "reveal",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/mega-man-dual-override-boat-man-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4",
+    "steam": 4223290,
+    "trailer": "07_MMDO_PV0_Multi_EN-US_ESRB_1080p.mp4",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "4223290"
+   },
+   {
+    "file": "mega-man-dual-override-boat-man-07-mmdo-pv02-multi-en-us-esrb-1080p.mp4",
+    "steam": 4223290,
+    "trailer": "07_MMDO_PV02_Multi_EN-US_ESRB_1080p",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "4223290"
+   },
+   {
+    "file": "mega-man-dual-override-boat-man-07-mmdo-pv01-multi-en-us-esrb-1080p.mp4",
+    "steam": 4223290,
+    "trailer": "07_MMDO_PV01_Multi_EN-US_ESRB_1080p",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "4223290"
+   }
+  ],
+  "shots": [
+   [
+    "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4",
+    7.3,
+    3.8,
+    [
+     [
+      0.0,
+      0.629
+     ]
+    ]
+   ],
+   [
+    "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4",
+    17.68,
+    2.39,
+    [
+     [
+      0.0,
+      0.629
+     ]
+    ]
+   ],
+   [
+    "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4",
+    25.71,
+    2.39,
+    [
+     [
+      0.0,
+      0.629
+     ]
+    ]
+   ],
+   [
+    "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4",
+    37.69,
+    2.21,
+    [
+     [
+      0.0,
+      0.629
+     ]
+    ]
+   ],
+   [
+    "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4",
+    51.67,
+    2.21,
+    [
+     [
+      0.0,
+      0.541
+     ]
+    ]
+   ],
+   [
+    "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4",
+    55.46,
+    2.24,
+    [
+     [
+      0.0,
+      0.541
+     ]
+    ]
+   ],
+   [
+    "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4",
+    67.69,
+    2.24,
+    [
+     [
+      0.0,
+      0.385
+     ]
+    ]
+   ],
+   [
+    "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4",
+    74.72,
+    2.2,
+    0.53
+   ],
+   [
+    "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4",
+    71.33,
+    2.2,
+    [
+     [
+      0.0,
+      0.385
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "العرض ظهر ضمن معرض جي\nستار (G-Star) الكوري،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "ويبدو أنه من أكبر\nالروبوتات في السلسلة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "ولسا ما في وصف رسمي\nمن كابكوم (Capcom)،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    8,
+    [
+     [
+      "حسب موقع جو\nنينتندو (GoNintendo)",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    8,
+    "المصدر: سْتِيم (Steam)",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "كشفوا عن روبوت جديد في لعبة ميغا مان: ديوال أوفرايد (Mega Man: Dual Override) اسمه بوت مان (Boat Man). العرض ظهر ضمن معرض جي ستار (G-Star) الكوري، ويبدو أنه من أكبر الروبوتات في السلسلة. ولسا ما في وصف رسمي من كابكوم (Capcom)، حسب موقع جو نينتندو (GoNintendo).",
+  "headline": "ظهور روبوت جديد\nفي ميغا مان",
+  "label": "تقرير",
+  "source": "سْتِيم (Steam)",
+  "date": "19 Nov 2026",
+  "theme": "stylized",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4",
+   7.3
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "GoNintendo reported on 19 Nov that Boat Man was revealed as a new robot master for Mega Man: Dual Override in a G-Star 2026 trailer.",
+   "what_it_means_here": "Fans of the Blue Bomber get another new boss, a very large boat robot, though Capcom has not yet given an official description of it."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "mega-man-dual-override-boat-man-07-mmdo-pv0-multi-en-us-esrb-1080p-mp4.mp4 from the resolver (steam:4223290)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam store page, Mega Man: Dual Override (https://store.steampowered.com/app/4223290/); first report: GoNintendo, 19 Nov 2026 00:17Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 4223290 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
