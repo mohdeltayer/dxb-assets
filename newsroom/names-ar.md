@@ -378,3 +378,4 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | GoNintendo (outlet) | جو نينتندو (GoNintendo) | Proposed 19 Nov 2026 (Mega Man Boat Man and Volvy's DX Reels; «موقع جو نينتندو»); flagged for Mohammad |
 | Automaton (Japanese games outlet) | أوتوماتون (Automaton) | Proposed 19 Nov 2026 (The Ascent Legacy Patch Reel; «موقع أوتوماتون»); flagged for Mohammad |
 | Neon Giant (The Ascent developer, Sweden) | نيون جاينت (Neon Giant) | Proposed 19 Nov 2026 (The Ascent Legacy Patch Reel); flagged for Mohammad |
+| Nicalis (The Binding of Isaac: Repentance+ console publisher) | نيكاليس (Nicalis) | Proposed 19 Nov 2026 (Isaac Repentance console Reel; «شركة نيكاليس (Nicalis)»); flagged for Mohammad |
