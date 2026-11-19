@@ -1,0 +1,476 @@
+{
+ "name": "volvys-adventure-dx-gbc-demo",
+ "out": "cards/2026-11/volvys-adventure-dx-gbc-demo-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "smear",
+   "detail": "ValueError: /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/volvys-adventure-dx-gbc-demo-reel-v1.mp4: blocky smear at 6.63 to 7.10 s (peak 79.9); look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 at 2.5 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 at 5.74 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 at 8.97 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 at 12.21 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 at 15.44 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 at 18.68 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 at 21.92 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 at 25.15 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 at 28.39 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 at 31.62 s for 2.21 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 at 34.85 s for 2.21 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 14,
+   "step": "a",
+   "why": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 at 38.1 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 15,
+   "step": "a",
+   "why": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 at 41.33 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  }
+ ],
+ "job_to_pass_min": 7.2,
+ "at": "2026-11-19T05:17:44Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 starts at 0.0 s, the video at 1.22 s; its first 1.22 s are lost",
+  "first frame: shot 1 volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 starts at 0.0 s, the video at 1.22 s; its first 1.22 s are lost",
+  "first frame: shot 2 volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 starts at 0.0 s, the video at 1.22 s; its first 1.22 s are lost",
+  "first frame: shot 3 volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 starts at 0.0 s, the video at 1.22 s; its first 1.22 s are lost",
+  "first frame: shot 4 volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 starts at 0.0 s, the video at 1.22 s; its first 1.22 s are lost",
+  "first frame: shot 5 volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 starts at 0.0 s, the video at 1.22 s; its first 1.22 s are lost",
+  "first frame: shot 6 volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 starts at 0.0 s, the video at 1.22 s; its first 1.22 s are lost",
+  "first frame: shot 7 volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 starts at 0.0 s, the video at 1.22 s; its first 1.22 s are lost",
+  "first frame: shot 8 volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 starts at 0.0 s, the video at 1.22 s; its first 1.22 s are lost",
+  "first frame: shot 9 volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 starts at 0.0 s, the video at 1.22 s; its first 1.22 s are lost",
+  "first frame: shot 10 volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 starts at 0.0 s, the video at 1.22 s; its first 1.22 s are lost",
+  "first frame: shot 11 volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 starts at 0.0 s, the video at 1.22 s; its first 1.22 s are lost",
+  "first frame: shot 12 volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 starts at 0.0 s, the video at 1.22 s; its first 1.22 s are lost",
+  "first frame: shot 13 volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 starts at 0.0 s, the video at 1.22 s; its first 1.22 s are lost",
+  "first frame: shot 14 volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 starts at 0.0 s, the video at 1.22 s; its first 1.22 s are lost",
+  "first frame: shot 15 volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 starts at 0.0 s, the video at 1.22 s; its first 1.22 s are lost",
+  "length 29.2 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 96.8; leak_pct 0.0; cache {'hit': 0, 'miss': 2}; separate_secs 24.0; secs 40.6",
+  "render_job: lifeless: {\"score\": 3.2, \"still_share\": 0.017, \"longest_still\": 0.4, \"cuts_per_10s\": 9.97, \"held_under_text\": 0.048, \"secs\": 29.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "credit 1",
+   "rule": "credit_width",
+   "what": "set one line at 36 px (was 40 px, too wide for the safe zone)",
+   "before": {
+    "text": "المصدر: صفحة Volvy's Adventure: Reslimed على Steam",
+    "size": 40
+   },
+   "after": {
+    "text": "المصدر: صفحة Volvy's Adventure: Reslimed على Steam",
+    "size": 36
+   }
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 at 4.79 s for 2.2 s, focus 0.069"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 at 19.05 s for 2.2 s, focus 0.597"
+  },
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 at 15.48 s for 2.2 s, focus 0.363 (shortened from 3.8 s: no free clean stretch that long)"
+  }
+ ],
+ "job_sha": "a1dce7738285e9f4a20b9ce59c10229b421f0ab7",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/volvys-adventure-dx-gbc-demo-look-1.jpg",
+  "cards/2026-11/volvys-adventure-dx-gbc-demo-look-2.jpg",
+  "cards/2026-11/volvys-adventure-dx-gbc-demo-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 14.8,
+  "files": {
+   "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4": {
+    "secs": 14.8,
+    "cached": false,
+    "stages": {
+     "decode": 5.5,
+     "autofocus": 14.6,
+     "ocr": 14.6,
+     "smear": 14.6,
+     "scenes": 14.8
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/volvys-adventure-dx-gbc-demo.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.2,
+  "fetch": 0.09,
+  "shots": 0.27,
+  "checks": 1.92,
+  "render": 3.3,
+  "after": 1.2,
+  "job": 6.78
+ },
+ "job_after_autofix": {
+  "name": "volvys-adventure-dx-gbc-demo",
+  "story": "2026-11-19-volvys-adventure-dx-game-boy-color-demo",
+  "footage_source": "steam:4523120",
+  "kind_news": "reveal",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/volvys-adventure-dx-gbc-demo-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    "steam": 4523120,
+    "trailer": "Volvy's Adventure: Reslimed | Wishlist Now",
+    "trailer_id": "4523120"
+   }
+  ],
+  "shots": [
+   [
+    "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    15.48,
+    2.17,
+    [
+     [
+      0.0,
+      0.363
+     ]
+    ]
+   ],
+   [
+    "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    4.79,
+    2.2,
+    [
+     [
+      0.0,
+      0.069
+     ]
+    ]
+   ],
+   [
+    "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    19.05,
+    2.2,
+    [
+     [
+      0.0,
+      0.597
+     ]
+    ]
+   ],
+   [
+    "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    0.0,
+    2.21,
+    null
+   ],
+   [
+    "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    0.0,
+    2.21,
+    null
+   ],
+   [
+    "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+    0.0,
+    2.2,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "ظهرت\nلعبة Volvy's Adventure: DX",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "مجانًا لجهاز Game Boy Color،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وهي نسخة تجريبية\nبمرحلة واحدة وزعيم",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    8,
+    [
+     [
+      "حسب موقع جو\nنينتيندو (GoNintendo)،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    9,
+    11,
+    [
+     [
+      "تبدو الحيلة تسويقًا من ديفولفر\nديجيتال (Devolver Digital)",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    12,
+    13,
+    [
+     [
+      "قبل إطلاق لعبة Reslimed\nعلى الكمبيوتر،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    14,
+    15,
+    [
+     [
+      "رغم أن الشركة\nلم تؤكد ذلك رسميًا",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    15,
+    "المصدر: صفحة Volvy's Adventure: Reslimed على Steam",
+    {
+     "size": 36,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ظهرت لعبة Volvy's Adventure: DX مجانًا لجهاز Game Boy Color، وهي نسخة تجريبية بمرحلة واحدة وزعيم. حسب موقع جو نينتيندو (GoNintendo)، تبدو الحيلة تسويقًا من ديفولفر ديجيتال (Devolver Digital) قبل إطلاق لعبة Reslimed على الكمبيوتر، رغم أن الشركة لم تؤكد ذلك رسميًا. تعمل اللعبة على جهاز Game Boy Color الحقيقي أو على المحاكي.",
+  "headline": "لعبة Volvy's DX\nمجانية على Game Boy",
+  "label": "تقرير",
+  "game": "Volvy's Adventure: DX",
+  "game_short": "Volvy's DX",
+  "texts": {
+   "instagram": "لعبة Game Boy Color مجانية تظهر قبل إطلاق Volvy's Adventure: Reslimed\n\nحسب موقع جو نينتيندو (GoNintendo)، ظهرت Volvy's Adventure: DX مجانًا لجهاز Game Boy Color، وهي نسخة تجريبية بمرحلة واحدة وزعيم. تبدو الحيلة تسويقًا من ديفولفر ديجيتال (Devolver Digital) قبل إطلاق Volvy's Adventure: Reslimed على الكمبيوتر، لكن الشركة لم تؤكد ذلك رسميًا. وتعمل اللعبة على جهاز Game Boy Color الحقيقي أو على المحاكي.\n\nاللقطات من العرض الرسمي للعبة Reslimed على Steam.\n\nالمصدر: موقع جو نينتيندو (GoNintendo).\n\n#ألعاب #أخبار_الألعاب #VolvysAdventure #Devolver",
+   "x": "ظهرت لعبة Volvy's Adventure: DX مجانًا لجهاز Game Boy Color بمرحلة واحدة وزعيم، وتبدو تسويقًا من ديفولفر ديجيتال (Devolver Digital) قبل إطلاق Reslimed، لكن الشركة لم تؤكد ذلك رسميًا، حسب موقع جو نينتيندو (GoNintendo).",
+   "threads": "ظهرت لعبة Volvy's Adventure: DX مجانًا لجهاز Game Boy Color، بمرحلة واحدة وزعيم. تبدو الحيلة تسويقًا من ديفولفر ديجيتال (Devolver Digital) قبل إطلاق Reslimed، لكن الشركة لم تؤكد ذلك رسميًا.\n\nالمصدر: موقع جو نينتيندو (GoNintendo)"
+  },
+  "source": "صفحة Volvy's Adventure: Reslimed على Steam",
+  "date": "19 Nov 2026",
+  "theme": "cold",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "GoNintendo reported on 19 Nov that a free Game Boy Color game called Volvy's Adventure: DX appeared, the day Reslimed launches on PC.",
+   "what_it_means_here": "It is a playable one-level taster for Reslimed that runs on real Game Boy Color hardware or an emulator, and Devolver has not confirmed it."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "volvys-adventure-reslimed-steam-nov-19-volvy-s-adventure-reslimed-wishlist-now.mp4 from the resolver (steam:4523120)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam store page, Volvy's Adventure: Reslimed (footage only) (https://store.steampowered.com/app/4523120/); first report: GoNintendo, 19 Nov 2026 (Wario64 post the same day)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 4523120 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "shots_auto": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15
+  ]
+ }
+}
