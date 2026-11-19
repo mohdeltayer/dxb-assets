@@ -2,100 +2,142 @@
  "name": "ravenswatch-switch-2-physical-december-18",
  "out": "cards/2026-11/ravenswatch-switch-2-physical-december-18-reel-v1.mp4",
  "verdict": "pass",
- "warnings": [],
+ "warnings": [
+  {
+   "stage": "smear",
+   "detail": "ValueError: /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/ravenswatch-switch-2-physical-december-18-reel-v1.mp4: blocky smear at 5.50 to 5.97 s (peak 20.4); look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]"
+  }
+ ],
  "ladder": [
   {
    "kind": "picture",
    "slot": 1,
    "step": "a",
-   "why": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4: shot ended before the first video frame (2.52 s); moved to 2.57 s"
+   "why": "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4: shot ended before the first video frame (2.69 s); moved to 2.74 s"
   },
   {
    "kind": "picture",
    "slot": 2,
    "step": "a",
-   "why": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4: shot ended before the first video frame (2.52 s); moved to 2.57 s"
+   "why": "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4: shot ended before the first video frame (2.69 s); moved to 2.74 s"
   },
   {
    "kind": "picture",
    "slot": 3,
    "step": "a",
-   "why": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4: shot ended before the first video frame (2.52 s); moved to 2.57 s"
+   "why": "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4: shot ended before the first video frame (2.69 s); moved to 2.74 s"
   },
   {
    "kind": "picture",
    "slot": 4,
    "step": "a",
-   "why": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4: shot ended before the first video frame (2.52 s); moved to 2.57 s"
+   "why": "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4: shot ended before the first video frame (2.69 s); moved to 2.74 s"
   },
   {
    "kind": "picture",
    "slot": 5,
    "step": "a",
-   "why": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4: shot ended before the first video frame (2.52 s); moved to 2.57 s"
+   "why": "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4: shot ended before the first video frame (2.69 s); moved to 2.74 s"
   },
   {
    "kind": "picture",
    "slot": 6,
    "step": "a",
-   "why": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4: shot ended before the first video frame (2.52 s); moved to 2.57 s"
+   "why": "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4: shot ended before the first video frame (2.69 s); moved to 2.74 s"
   },
   {
-   "kind": "sound",
-   "slot": "reel",
-   "step": "c",
-   "why": "audio split not applied (music stem not clean (leftover 5.3% > 5.0%)) on a trailer track under 6 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or o"
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4: shot ended before the first video frame (2.69 s); moved to 2.74 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4: shot ended before the first video frame (2.69 s); moved to 2.74 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4: shot ended before the first video frame (2.69 s); moved to 2.74 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4: shot ended before the first video frame (2.69 s); moved to 2.74 s"
   }
  ],
- "job_to_pass_min": 5.9,
- "at": "2026-11-19T03:18:28Z",
+ "job_to_pass_min": 12.7,
+ "at": "2026-11-19T05:23:42Z",
  "findings": [],
  "notes": [
-  "first frame: shot 0 ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 starts at 0.0 s, the video at 2.52 s; its first 2.52 s are lost",
-  "length 15.5 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 5.3% > 5.0%); music_pct 30.3; leak_pct 5.3; cache {'hit': 0, 'miss': 7}; separate_secs 23.7; secs 32.0",
-  "render_job: audio split fallback: our bed (ValueError: the trailer mix would not match the picture); bed:neon_d",
-  "render_job: lifeless: {\"score\": 2.1, \"still_share\": 0.019, \"longest_still\": 0.3, \"cuts_per_10s\": 5.19, \"held_under_text\": 0.0, \"secs\": 15.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "first frame: shot 0 ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4 starts at 0.0 s, the video at 2.69 s; its first 2.69 s are lost",
+  "length 22.5 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 77.2; leak_pct 0.8; cache {'hit': 0, 'miss': 4}; separate_secs 28.2; secs 40.5",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 6.7, \"held_under_text\": 0.0, \"secs\": 22.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [
   {
-   "where": "shot 0",
-   "rule": "auto_shots",
-   "what": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 at 6.58 s for 3.8 s, focus 0.547"
-  },
-  {
    "where": "shot 1",
    "rule": "auto_shots",
-   "what": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 at 23.95 s for 2.5 s, focus 0.288"
+   "what": "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4 at 11.11 s for 2.2 s, focus 0.629"
   },
   {
    "where": "shot 2",
    "rule": "auto_shots",
-   "what": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 at 51.80 s for 2.5 s, focus 0.787"
+   "what": "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4 at 16.18 s for 2.2 s, focus 0.695"
+  },
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 at 53.28 s for 3.8 s, focus 0.787 (nothing free in ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4)"
   },
   {
    "where": "shot 3",
    "rule": "auto_shots",
-   "what": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 at 64.45 s for 2.3 s, focus 0.572"
+   "what": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 at 64.45 s for 2.2 s, focus 0.572 (nothing free in ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4)"
   },
   {
    "where": "shot 4",
    "rule": "auto_shots",
-   "what": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 at 74.21 s for 2.3 s, focus 0.383"
+   "what": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 at 74.21 s for 2.2 s, focus 0.383 (nothing free in ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4)"
   },
   {
    "where": "shot 5",
    "rule": "auto_shots",
-   "what": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 at 84.05 s for 2.3 s, focus 0.428"
+   "what": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 at 76.45 s for 2.2 s, focus 0.383 (nothing free in ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4)"
   },
   {
    "where": "shot 6",
    "rule": "auto_shots",
-   "what": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 at 93.30 s for 2.3 s, focus 0.601"
+   "what": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 at 78.66 s for 2.2 s, focus 0.383 (nothing free in ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4)"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 at 84.05 s for 2.4 s, focus 0.428 (nothing free in ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4)"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 at 23.99 s for 2.4 s, focus 0.288 (nothing free in ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4)"
+  },
+  {
+   "where": "shot 9",
+   "rule": "auto_shots",
+   "what": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 at 87.31 s for 2.3 s, focus 0.601 (nothing free in ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4)"
+  },
+  {
+   "where": "shot 10",
+   "rule": "auto_shots",
+   "what": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 at 90.41 s for 2.3 s, focus 0.601 (nothing free in ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4)"
   }
  ],
- "job_sha": "feec59e91e288da7d536f318cc57ee785e520dba",
- "dispatches": 2,
+ "job_sha": "139b2d4fff0c3b481b067076390a8d306a0531dc",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -109,19 +151,31 @@
   "cards/2026-11/ravenswatch-switch-2-physical-december-18-look-3.jpg"
  ],
  "person_shown": "n/a",
- "sound": "bed:neon_d (trailer sound refused: music stem not clean (leftover 5.3% > 5.0%))",
+ "sound": "trailer",
  "shot_read": {
-  "secs": 35.3,
+  "secs": 41.9,
   "files": {
-   "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4": {
-    "secs": 35.3,
+   "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4": {
+    "secs": 10.8,
     "cached": false,
     "stages": {
-     "decode": 14.2,
-     "autofocus": 34.9,
-     "ocr": 34.9,
-     "smear": 34.9,
-     "scenes": 35.3
+     "decode": 3.2,
+     "autofocus": 10.7,
+     "ocr": 10.7,
+     "smear": 10.7,
+     "scenes": 10.8
+    },
+    "incomplete": null
+   },
+   "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4": {
+    "secs": 31.1,
+    "cached": false,
+    "stages": {
+     "decode": 12.3,
+     "autofocus": 30.8,
+     "ocr": 30.8,
+     "smear": 30.8,
+     "scenes": 31.1
     },
     "incomplete": null
    }
@@ -129,15 +183,14 @@
  },
  "job_path": "jobs/done/ravenswatch-switch-2-physical-december-18.json",
  "stage_minutes": {
-  "queue": 1.9,
+  "queue": 7.3,
   "setup": 0.17,
-  "fetch": 0.32,
-  "shots": 0.6,
-  "checks": 0.37,
-  "render": 1.72,
-  "after": 0.61,
-  "upload": 0.08,
-  "job": 3.63
+  "fetch": 0.29,
+  "shots": 0.71,
+  "checks": 0.52,
+  "render": 2.54,
+  "after": 0.91,
+  "job": 5.0
  },
  "job_after_autofix": {
   "name": "ravenswatch-switch-2-physical-december-18",
@@ -150,57 +203,29 @@
   "split_fallback": "bed",
   "footage": [
    {
+    "file": "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4",
+    "steam": 2071280,
+    "trailer": "Accolade trailer",
+    "trailer_id": "2071280"
+   },
+   {
     "file": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4",
     "steam": 2071280,
     "trailer": "Launch Trailer PC",
-    "start": 0,
-    "seconds": 120,
     "trailer_id": "2071280"
    },
    {
     "file": "ravenswatch-switch-2-physical-december-18-ravenswatch-in-60s.mp4",
     "steam": 2071280,
     "trailer": "Ravenswatch in 60s",
-    "start": 0,
-    "seconds": 120,
-    "trailer_id": "2071280"
-   },
-   {
-    "file": "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4",
-    "steam": 2071280,
-    "trailer": "Accolade trailer",
-    "start": 0,
-    "seconds": 120,
     "trailer_id": "2071280"
    }
   ],
   "shots": [
    [
     "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4",
-    6.58,
+    53.28,
     3.8,
-    [
-     [
-      0.0,
-      0.547
-     ]
-    ]
-   ],
-   [
-    "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4",
-    23.95,
-    2.46,
-    [
-     [
-      0.0,
-      0.288
-     ]
-    ]
-   ],
-   [
-    "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4",
-    51.8,
-    2.46,
     [
      [
       0.0,
@@ -209,9 +234,31 @@
     ]
    ],
    [
+    "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4",
+    11.11,
+    2.2,
+    [
+     [
+      0.0,
+      0.629
+     ]
+    ]
+   ],
+   [
+    "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4",
+    16.18,
+    2.2,
+    [
+     [
+      0.0,
+      0.695
+     ]
+    ]
+   ],
+   [
     "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4",
     64.45,
-    2.28,
+    2.24,
     [
      [
       0.0,
@@ -222,7 +269,29 @@
    [
     "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4",
     74.21,
-    2.28,
+    2.24,
+    [
+     [
+      0.0,
+      0.383
+     ]
+    ]
+   ],
+   [
+    "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4",
+    76.45,
+    2.21,
+    [
+     [
+      0.0,
+      0.383
+     ]
+    ]
+   ],
+   [
+    "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4",
+    78.66,
+    2.21,
     [
      [
       0.0,
@@ -233,7 +302,7 @@
    [
     "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4",
     84.05,
-    2.31,
+    2.42,
     [
      [
       0.0,
@@ -243,8 +312,30 @@
    ],
    [
     "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4",
-    93.3,
-    2.31,
+    23.99,
+    2.42,
+    [
+     [
+      0.0,
+      0.288
+     ]
+    ]
+   ],
+   [
+    "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4",
+    87.31,
+    2.28,
+    [
+     [
+      0.0,
+      0.601
+     ]
+    ]
+   ],
+   [
+    "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4",
+    90.41,
+    2.28,
     [
      [
       0.0,
@@ -259,7 +350,7 @@
     2,
     [
      [
-      "وتقول نينتيندو\nإفريثينغ (Nintendo Everything)",
+      "تقول نينتيندو",
       {
        "size": 54
       }
@@ -271,7 +362,7 @@
     4,
     [
      [
-      "إنها خرطوشة كاملة\nوليست بطاقة مفتاح رقمي",
+      "إفريثينغ (Nintendo Everything)\nإن الشحن",
       {
        "size": 54
       }
@@ -283,7 +374,31 @@
     6,
     [
      [
-      "وتعمل النسخة أيضًا\nعلى جهاز Switch الأصلي",
+      "في 18 ديسمبر والحجز\nالمسبق مفتوح الآن،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    8,
+    [
+     [
+      "كما أنها خرطوشة كاملة\nوليست بطاقة مفتاح رقمي",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    9,
+    10,
+    [
+     [
+      "تعمل النسخة أيضًا\nعلى جهاز Switch الأصلي",
       {
        "size": 54
       }
@@ -294,7 +409,7 @@
   "credits": [
    [
     0,
-    6,
+    10,
     "المصدر: صفحة Ravenswatch على Steam",
     {
      "size": 40,
@@ -302,8 +417,8 @@
     }
    ]
   ],
-  "spoken": "ستصدر لعبة Ravenswatch لجهاز Nintendo Switch 2 بنسخة مطبوعة في 18 ديسمبر، والحجز المسبق مفتوح الآن. وتقول نينتيندو إفريثينغ (Nintendo Everything) إنها خرطوشة كاملة وليست بطاقة مفتاح رقمي. وتعمل النسخة أيضًا على جهاز Switch الأصلي.",
-  "headline": "لعبة Ravenswatch\nبنسخة مطبوعة",
+  "spoken": "ستصدر لعبة Ravenswatch على جهاز Switch 2 بنسخة مطبوعة. تقول نينتيندو إفريثينغ (Nintendo Everything) إن الشحن في 18 ديسمبر والحجز المسبق مفتوح الآن، كما أنها خرطوشة كاملة وليست بطاقة مفتاح رقمي. تعمل النسخة أيضًا على جهاز Switch الأصلي.",
+  "headline": "لعبة Ravenswatch\nمطبوعة على Switch 2",
   "label": "تقرير",
   "game": "Ravenswatch",
   "game_short": null,
@@ -314,13 +429,13 @@
   },
   "source": "صفحة Ravenswatch على Steam",
   "date": "18 Nov 2026",
-  "theme": "playful",
+  "theme": "cold",
   "style": null,
   "template": "trailer",
   "skin": "house",
   "cut": false,
   "track": [
-   "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4",
+   "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4",
    0.0
   ],
   "track_from_first_shot": true,
@@ -330,7 +445,7 @@
   },
   "decision_log": {
    "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
-   "footage": "ravenswatch-switch-2-physical-december-18-launch-trailer-pc.mp4 from the resolver (steam:2071280)",
+   "footage": "ravenswatch-switch-2-physical-december-18-accolade-trailer.mp4 from the resolver (steam:2071280)",
    "shots": "server-picked clean stretches in source order (autoshots)",
    "music": "the trailer's own sound from the first shot (audio split per shot)"
   },
