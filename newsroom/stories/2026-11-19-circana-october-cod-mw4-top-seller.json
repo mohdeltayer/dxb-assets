@@ -88,14 +88,14 @@
   }
  ],
  "director_check": {
-  "verdict": "FIX",
+  "verdict": "PASS",
   "out": "cards/2026-11/circana-october-cod-mw4-top-seller-reel-v1.mp4",
-  "blob": "caa9fa0d849586ddeda487f6cd67b3ac6c606e0d",
-  "at": "2026-11-19T16:09:12Z",
-  "note": "Lines stop at 'بنسبة 20 بالمئة وعلى' at ~14s while spoken text continues; Xbox Series 42 بالمئة and 'مع ارتفاع الأسعار' never appear, so the reel ends mid-sentence. Add lines 15-16 (e.g. 'أجهزة Xbox Series بنسبة 42 بالمئة،' / 'مع ارتفاع الأسعار') and extend shots/credits to cover them (video is 33s but lines end ~14s). Also raise caption size/contrast (add band/shadow) since captions are small over bright footage.",
+  "blob": "340b52db70e5676ef94d8b897e871d00dea11037",
+  "at": "2026-11-19T16:30:15Z",
+  "note": "Re-render fixed: full final sentence on screen, numbers match story (12%, 4.2bn, PS5 20%, Xbox Series 42%)",
   "checklist": {
    "job": "jobs/live/circana-october-cod-mw4-top-seller.json",
-   "sha256": "7e9b436857b3c374135acbe1a01b0ae664bf6cb7b9ad057a788c009523dbd456",
+   "sha256": "56a6ce6e1dc9690596716ced87687684b178340c47014a0e307dbe5e667a6a2e",
    "ok": true,
    "problems": [],
    "template": "trailer",
@@ -105,6 +105,6 @@
   },
   "by": "director-p2",
   "qc": "pass",
-  "looked": "look-1: bold Arabic headline (Call of Duty الأكثر مبيعًا في أمريكا خلال أكتوبر) with رسمي chip over desert rock, legible; look-2: credit band plus small faint caption 'لكن إنفاق اللاعبين الإجمالي' over busy car footage, low contrast; look-3: dark frame, caption 'بنسبة 20 بالمئة وعلى' ends mid-sentence, credit band faint"
+  "looked": "Look-1 shows headline card with chip رسمي, Arabic title legible over footage. Extracted frames show lines in order, last line 'بنسبة 42 بالمئة / مع ارتفاع الأسعار' fully visible at 31-34s, Xbox Series 20/42 percent lines legible, then outro card; no cutoff, Arabic not scrambled."
  }
 }
