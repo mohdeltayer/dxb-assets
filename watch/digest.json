@@ -1,67 +1,121 @@
 {
  "schema": 1,
  "file": "digest",
- "generated_at": "2026-11-19T17:52:06Z",
- "seq": 655,
+ "generated_at": "2026-11-19T18:52:06Z",
+ "seq": 657,
  "kind": "hourly",
- "since": "2026-11-19T16:52:26Z",
+ "since": "2026-11-19T17:52:06Z",
  "official": [
   {
-   "id": 18708,
+   "id": 18762,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Blacksmith Master - 1.0 Launch Trailer",
+   "url": "https://www.youtube.com/watch?v=fOLAqofP-uM",
+   "published": "2026-11-19T18:00Z",
+   "first_seen": "2026-11-19T18:15:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/fOLAqofP-uM/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=fOLAqofP-uM"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 656,
+   "digest_seq": 657
+  },
+  {
+   "id": 18763,
+   "source": "Ubisoft (YouTube)",
+   "source_kind": "youtube",
+   "title": "For Honor: Content of the Week - November 19",
+   "url": "https://www.youtube.com/shorts/oExAulKDQ6k",
+   "published": "2026-11-19T18:00Z",
+   "first_seen": "2026-11-19T18:15:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/oExAulKDQ6k/hqdefault.jpg"
+    }
+   ],
+   "breaking_source": false,
+   "breaking_seq": null,
+   "digest_seq": 657
+  },
+  {
+   "id": 18764,
+   "source": "Ubisoft (YouTube)",
+   "source_kind": "youtube",
+   "title": "For Honor: Content Of The Week - November 19",
+   "url": "https://www.youtube.com/watch?v=Bw8Kl8TUS0o",
+   "published": "2026-11-19T18:00Z",
+   "first_seen": "2026-11-19T18:15:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/Bw8Kl8TUS0o/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=Bw8Kl8TUS0o"
+    }
+   ],
+   "breaking_source": false,
+   "breaking_seq": null,
+   "digest_seq": 657
+  },
+  {
+   "id": 18775,
    "source": "Blizzard (Google News)",
    "source_kind": "gnews",
-   "title": "Watch the WoW: Forever Podcast – Catching up on Classes — World of Warcraft - Blizzard News",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNTUxCYjVlSmhIRGtyTkdid1o2N3VRZWoyTzhjNDhJaWJzYzVzSjA4cUZnREdveXB3TGZqMTZENjFiUWZMOFVTbGdJUWtFUDFyVkJnOUk1UnAyNnIxZ05FTWw4N2JXcVItSG9mVDJWbUxlU1FmY1RUX0UyUFpVY01kY2l3eS1tcl95M2ZCYzYwS2FjTnEyWDRwSUdPR3FyMjBPRm9j?oc=5",
-   "published": "2026-11-19T17:15Z",
-   "first_seen": "2026-11-19T17:30:15Z",
+   "title": "Macabre Rewards Await in Talebound — World of Warcraft - Blizzard News",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPNERuTjJEUzVZbkxhd2UybjEwNDNDRUtidXk5eXRJUHlwdFRoQ0tHZWVGZFVjMGpZT0NaaEY1RkREMzJLS19KcGtGV3YxMUd5bUhwenliZjlEdll2bHZRMzN2TUVBd3BCVEc2Y19IQlhPUmw5YzZGLUoyNVJEMjhtZGJwY0NiNWZTS0pj?oc=5",
+   "published": "2026-11-19T18:00Z",
+   "first_seen": "2026-11-19T18:35:24Z",
    "media": [],
    "breaking_source": false,
    "breaking_seq": null,
-   "digest_seq": 655
+   "digest_seq": 657
   },
   {
-   "id": 18693,
-   "source": "Nintendo US",
-   "source_kind": "page",
-   "title": "11/19/26 Adventure Awaits: Save on a daring selection of digital games Discover your next big adventure with Nintendo Switch™ 2 and Nintendo Switch games packed",
-   "url": "https://www.nintendo.com/us/whatsnew/adventure-awaits-save-on-a-daring-selection-of-digital-games/",
-   "published": null,
-   "first_seen": "2026-11-19T17:10:15Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 654,
-   "digest_seq": 655
-  },
-  {
-   "id": 18695,
-   "source": "Famitsu",
-   "source_kind": "page",
-   "title": "『Resequence: The Orchard』が発売。生徒たちへのカウンセリングを通して怪異や失踪事件の真相へ迫るオカルトホラー。考察要素も満載",
-   "url": "https://www.famitsu.com/article/202611/94175",
-   "published": null,
-   "first_seen": "2026-11-19T17:15:14Z",
+   "id": 18776,
+   "source": "Blizzard (Google News)",
+   "source_kind": "gnews",
+   "title": "Join our Next Developer Update Livestream — Diablo IV - Blizzard News",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxORFlPNXhKZlNJd3ppTUV0Ml9vYXh4amoyd0dOUzd6ZVhhbUdMRWdTdHNQVlZPc1JVaVREdXlpTE1Jc3Izc2FqcVRwampqUHVqbWh3WkZsQWNqOFhFYlNHRTlmWjAtd0NzTjZUaUN3MEd1OVllZEEycnZnWUs5cGdVd3JCQjRjNWpCZlU2Nmpqc2ktVVM1?oc=5",
+   "published": "2026-11-19T18:00Z",
+   "first_seen": "2026-11-19T18:35:24Z",
    "media": [],
    "breaking_source": false,
    "breaking_seq": null,
-   "digest_seq": 655
+   "digest_seq": 657
   },
   {
-   "id": 18729,
-   "source": "Ubisoft",
-   "source_kind": "page",
-   "title": "November 19 , 2026 4 Min Read Ubisoft's Black Friday Sale: Save 25% of Assassin's Creed Black Flag Resynced, Pre-Order Rayman Legends Retold, and More Plus, che",
-   "url": "https://news.ubisoft.com/en-us/article/DMoSyesS7zNPfGu6suvmP/ubisofts-black-friday-sale-save-25-of-assassins-creed-black-flag-resynced-preorder-rayman-legends-retold-and-more",
-   "published": null,
-   "first_seen": "2026-11-19T17:45:04Z",
-   "media": [],
+   "id": 18777,
+   "source": "Spike Chunsoft",
+   "source_kind": "official",
+   "title": "Save up to 90% on Spike Chunsoft Games During the Cyber Deals Sale on Nintendo eShop November 19 to December 2, 2026",
+   "url": "https://www.spike-chunsoft.com/sale/noa_sale-cyberdeals2026/",
+   "published": "2026-11-19T18:00Z",
+   "first_seen": "2026-11-19T18:35:24Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://s.w.org/images/core/emoji/17.0.2/72x72/2122.png"
+    }
+   ],
    "breaking_source": false,
    "breaking_seq": null,
-   "digest_seq": 655
+   "digest_seq": 657
   }
  ],
  "outlets": [
   {
-   "count": 10,
+   "count": 13,
    "published": "2026-11-19T15:15Z",
    "title": "Ubisoft lays off 166 staff in Montreal and Quebec studios",
    "url": "https://www.gamesindustry.biz/ubisoft-lays-off-166-staff-in-montreal-and-quebec-studios",
@@ -73,8 +127,11 @@
     "Gematsu",
     "Insider Gaming",
     "Kotaku",
+    "Nintendo Life",
+    "PC Gamer",
     "Rock Paper Shotgun",
     "Steam News (hub)",
+    "True Gaming (AR)",
     "VGC"
    ],
    "ar_relay": false,
@@ -144,166 +201,47 @@
      "title": "Ubisoft cuts jobs at major Assassin's Creed and Far Cry studios as its year of layoffs continues",
      "url": "https://www.eurogamer.net/ubisoft-layoffs-166-assassins-creed-far-cry-montreal-quebec",
      "published": "2026-11-19T17:43Z"
+    },
+    {
+     "source": "PC Gamer",
+     "title": "Ubisoft says Assassin's Creed Black Flag Resynced 'outperformed expectations,' lays off 166 more people anyway",
+     "url": "https://www.pcgamer.com/gaming-industry/ubisoft-says-assassins-creed-black-flag-resynced-outperformed-expectations-lays-off-166-more-people-anyway/",
+     "published": "2026-11-19T17:53Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "Ubisoft says Assassin's Creed Black Flag Resynced 'outperformed expectations,' lays off 166 more people anyway",
+     "url": "https://store.steampowered.com/news/group/1850/view/693152369910743603",
+     "published": "2026-11-19T17:58Z"
+    },
+    {
+     "source": "Nintendo Life",
+     "title": "Ubisoft Is Laying Off Staff From Two Of Its Biggest Studios",
+     "url": "https://www.nintendolife.com/news/2026/11/ubisoft-is-laying-off-staff-from-two-of-its-biggest-studios",
+     "published": "2026-11-19T18:00Z"
+    },
+    {
+     "source": "True Gaming (AR)",
+     "title": "Ubisoft تسجل خسائر بقيمة 254.5 مليون يورو رغم نجاح Assassin’s Creed Black Flag Resynced",
+     "url": "https://www.true-gaming.net/home/644082/ubisoft-%d8%aa%d8%b3%d8%ac%d9%84-%d8%ae%d8%b3%d8%a7%d8%a6%d8%b1-%d8%a8%d9%82%d9%8a%d9%85%d8%a9-254-5-%d9%85%d9%84%d9%8a%d9%88%d9%86-%d9%8a%d9%88%d8%b1%d9%88-%d8%b1%d8%ba%d9%85-%d9%86%d8%ac%d8%a7%d8%ad/",
+     "published": "2026-11-19T18:11Z"
     }
    ]
   },
   {
    "count": 8,
-   "published": "2026-11-18T23:08Z",
-   "title": "Confirmed GTA 6 Voice Actors—Cast List",
-   "url": "https://insider-gaming.com/gta-6-voice-actors/",
-   "sources": [
-    "Destructoid",
-    "Eurogamer",
-    "GameSpot",
-    "GamesRadar",
-    "IGN",
-    "IGN Middle East (EN)",
-    "Insider Gaming",
-    "PC Gamer"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://assetsio.gnwcdn.com/GTA_6_Steal_Vehicle_Header.jpg?width=690&quality=85&format=jpg&auto=webp"
-    }
-   ],
-   "items": [
-    {
-     "source": "Insider Gaming",
-     "title": "Confirmed GTA 6 Voice Actors—Cast List",
-     "url": "https://insider-gaming.com/gta-6-voice-actors/",
-     "published": "2026-11-18T23:08Z"
-    },
-    {
-     "source": "Eurogamer",
-     "title": "Rockstar reveals full GTA 6 cast list, finally ending speculation about who plays Jason Duval in the game",
-     "url": "https://www.eurogamer.net/gta-6-full-cast-list-jason-duval-actor",
-     "published": "2026-11-19T15:07Z"
-    },
-    {
-     "source": "GamesRadar",
-     "title": "GTA 6 Jason actor finally speaks out as Rockstar posts the full cast and credits",
-     "url": "https://www.gamesradar.com/games/grand-theft-auto/gta-6-jason-actor-finally-speaks-out-as-rockstar-posts-the-full-cast-the-hardest-working-and-most-skilled-artisans-gaming-has-to-offer/",
-     "published": "2026-11-19T15:39Z"
-    },
-    {
-     "source": "IGN",
-     "title": "Rockstar Publishes Full GTA 6 Credits — But Beware, They Contain Major Spoilers",
-     "url": "https://www.ign.com/articles/rockstar-publishes-full-gta-6-credits-but-beware-they-contain-major-spoilers",
-     "published": "2026-11-19T15:43Z"
-    },
-    {
-     "source": "IGN Middle East (EN)",
-     "title": "Rockstar Publishes Full GTA 6 Credits — But Beware, They Contain Major Spoilers",
-     "url": "https://me.ign.com/en/grand-theft-auto-vi/249889/rockstar-publishes-full-gta-6-credits-but-beware-they-contain-major-spoilers",
-     "published": "2026-11-19T15:43Z"
-    },
-    {
-     "source": "PC Gamer",
-     "title": "Rockstar has finally posted GTA 6's full map online—thank goodness, because clearing the entire thing in game takes ages",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/rockstar-has-finally-posted-gta-6s-full-map-online-thank-goodness-because-clearing-the-entire-thing-in-game-takes-ages/",
-     "published": "2026-11-19T16:19Z"
-    },
-    {
-     "source": "GameSpot",
-     "title": "GTA 6 Cast List Includes Potentially Huge Spoiler, So Be Warned",
-     "url": "https://www.gamespot.com/articles/gta-6-cast-list-includes-potentially-huge-spoiler-so-be-warned/",
-     "published": "2026-11-19T16:20Z"
-    },
-    {
-     "source": "Destructoid",
-     "title": "GTA 6 – Full cast list and all voice actors",
-     "url": "https://www.destructoid.com/gta-6-full-cast-list-and-all-voice-actors/",
-     "published": "2026-11-19T16:47Z"
-    }
-   ]
-  },
-  {
-   "count": 7,
-   "published": "2026-11-18T18:34Z",
-   "title": "Goodbye, Lucia: GTA 6 Fans' Official New Obsession Is Mandy",
-   "url": "https://www.polygon.com/gta-6-mandy-who-is-pipework-mission-lucia-jason-chapter-reddit/",
-   "sources": [
-    "Destructoid",
-    "GamesRadar",
-    "IGN",
-    "IGN Middle East (EN)",
-    "PC Gamer",
-    "Polygon",
-    "Push Square"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://static0.polygonimages.com/wordpress/wp-content/uploads/2026/11/mandy1.JPG"
-    }
-   ],
-   "items": [
-    {
-     "source": "Polygon",
-     "title": "Goodbye, Lucia: GTA 6 Fans' Official New Obsession Is Mandy",
-     "url": "https://www.polygon.com/gta-6-mandy-who-is-pipework-mission-lucia-jason-chapter-reddit/",
-     "published": "2026-11-18T18:34Z"
-    },
-    {
-     "source": "GamesRadar",
-     "title": "GTA 6 fans are down bad for Mandy, who might actually be trying to kill them",
-     "url": "https://www.gamesradar.com/games/grand-theft-auto/gta-6-fans-are-down-bad-for-mandy-who-might-actually-be-trying-to-kill-them/",
-     "published": "2026-11-19T12:49Z"
-    },
-    {
-     "source": "PC Gamer",
-     "title": "You can't cheat on Lucia in GTA 6 with Mandy or strippers because Rockstar doesn't believe that's 'complementary to the feeling and motivations' of Jason and Lucia's story",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/you-cant-cheat-on-lucia-in-gta-6-with-mandy-or-strippers-because-rockstar-doesnt-believe-thats-complementary-to-the-feeling-and-motivations-of-jason-and-lucias-story/",
-     "published": "2026-11-19T13:44Z"
-    },
-    {
-     "source": "IGN",
-     "title": "GTA 6's Jason and Lucia Actors Spotted Together in First Photo",
-     "url": "https://www.ign.com/articles/gta-6s-jason-and-lucia-actors-spotted-together-in-first-photo",
-     "published": "2026-11-19T14:38Z"
-    },
-    {
-     "source": "IGN Middle East (EN)",
-     "title": "GTA 6's Jason and Lucia Actors Spotted Together in First Photo",
-     "url": "https://me.ign.com/en/grand-theft-auto-vi/249884/gta-6s-jason-and-lucia-actors-spotted-together-in-first-photo",
-     "published": "2026-11-19T14:38Z"
-    },
-    {
-     "source": "Destructoid",
-     "title": "Jason and Lucia actors, finally free from their NDA’s, confirm career-defining roles in GTA 6",
-     "url": "https://www.destructoid.com/jason-lucia-actors-free-nda-confirm-roles-gta-6/",
-     "published": "2026-11-19T15:18Z"
-    },
-    {
-     "source": "Push Square",
-     "title": "GTA 6 Doesn't Have Any Sex Workers, and Rockstar Has Explained Why",
-     "url": "https://www.pushsquare.com/news/2026/11/gta-6-doesnt-have-any-sex-workers-and-rockstar-has-explained-why",
-     "published": "2026-11-19T17:00Z"
-    },
-    {
-     "source": "GamesRadar",
-     "title": "GTA 6 players confirm \"True Fat Jason\" and \"max weight Lucia\" aren't very fat at all",
-     "url": "https://www.gamesradar.com/games/grand-theft-auto/gta-6-players-confirm-true-fat-jason-and-max-weight-lucia-arent-very-fat-at-all-setting-the-stage-for-the-first-pc-mod-to-super-size-them/",
-     "published": "2026-11-19T17:12Z"
-    }
-   ]
-  },
-  {
-   "count": 6,
    "published": "2026-11-18T20:56Z",
    "title": "A GTA 6 Location Was Teased by Rockstar All the Way Back in 2021 — And What's Inside Was Worth the Wait",
    "url": "https://www.ign.com/articles/a-gta-6-location-was-teased-by-rockstar-all-the-way-back-in-2021-and-whats-inside-was-worth-the-wait",
    "sources": [
+    "Destructoid",
     "GamesRadar",
     "IGN",
     "IGN Middle East (EN)",
     "Kotaku",
     "Polygon",
-    "Steam News (hub)"
+    "Steam News (hub)",
+    "TheGamer"
    ],
    "ar_relay": false,
    "media": [
@@ -348,309 +286,37 @@
      "title": "It looks like Rockstar co-founder Sam Houser is hiding in GTA 6 as fans find \"Little Sam\" Easter egg",
      "url": "https://store.steampowered.com/news/group/38509069/view/668382571964400241",
      "published": "2026-11-19T17:35Z"
-    }
-   ]
-  },
-  {
-   "count": 6,
-   "published": "2026-11-19T11:30Z",
-   "title": "GameStop CEO Criticizes Digital-Only Games As GTA 6 Releases Without A Disc",
-   "url": "https://kotaku.com/gamestop-ceo-criticizes-digital-only-games-gta-6-releases-without-a-disc-2000758233",
-   "sources": [
-    "GameSpot",
-    "GamesRadar",
-    "IGN",
-    "IGN Middle East (EN)",
-    "Kotaku",
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
+    },
     {
-     "type": "image",
-     "url": "https://kotaku.com/app/uploads/2026/11/Lucia-Caminos-GTA6-1280x720.jpg"
-    }
-   ],
-   "items": [
+     "source": "Destructoid",
+     "title": "Dexter Morgan is stalking Leonida’s streets in GTA 6 in amazing easter egg",
+     "url": "https://www.destructoid.com/dexter-morgan-is-stalking-leonidas-streets-in-gta-6-in-amazing-easter-egg/",
+     "published": "2026-11-19T17:51Z"
+    },
     {
      "source": "Kotaku",
-     "title": "GameStop CEO Criticizes Digital-Only Games As GTA 6 Releases Without A Disc",
-     "url": "https://kotaku.com/gamestop-ceo-criticizes-digital-only-games-gta-6-releases-without-a-disc-2000758233",
-     "published": "2026-11-19T11:30Z"
+     "title": "Rockstar Wouldn’t Confirm Or Deny If That’s Studio President Sam Houser In GTA 6",
+     "url": "https://kotaku.com/rockstar-wouldnt-confirm-or-deny-if-thats-studio-president-sam-houser-in-gta-6-2000758489",
+     "published": "2026-11-19T18:05Z"
     },
     {
-     "source": "GamesRadar",
-     "title": "As digital-only GTA 6 smashes records, GameStop CEO says move from physical copies \"hurt consumers\"",
-     "url": "https://www.gamesradar.com/games/grand-theft-auto/as-digital-only-gta-6-smashes-records-gamestop-ceo-says-move-from-physical-copies-has-hurt-consumers-as-they-should-be-able-to-sell-or-trade-purchases/",
-     "published": "2026-11-19T12:31Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "As digital-only GTA 6 smashes records, GameStop CEO says move from physical copies \"hurt consumers\"",
-     "url": "https://store.steampowered.com/news/group/38509069/view/668382571964400121",
-     "published": "2026-11-19T12:44Z"
-    },
-    {
-     "source": "IGN",
-     "title": "As GTA 6 Skips Discs, GameStop CEO Says Digital-Only 'Has Hurt Consumers' and Retailers",
-     "url": "https://www.ign.com/articles/gamestop-ceo-blasts-digital-only-gta-6-no-disc",
-     "published": "2026-11-19T12:46Z"
-    },
-    {
-     "source": "IGN Middle East (EN)",
-     "title": "As GTA 6 Skips Discs, GameStop CEO Says Digital-Only 'Has Hurt Consumers' and Retailers",
-     "url": "https://me.ign.com/en/grand-theft-auto-vi/249881/as-gta-6-skips-discs-gamestop-ceo-says-digital-only-has-hurt-consumers-and-retailers",
-     "published": "2026-11-19T12:46Z"
-    },
-    {
-     "source": "GameSpot",
-     "title": "GTA 6’s Digital Release Has GameStop CEO Defending Physical Games, For Obvious Reasons",
-     "url": "https://www.gamespot.com/articles/gta-6-digital-release-has-gamestop-ceo-defending-physical-games-for-obvious-reasons/",
-     "published": "2026-11-19T14:15Z"
-    }
-   ]
-  },
-  {
-   "count": 5,
-   "published": "2026-11-19T14:00Z",
-   "title": "Call of Duty: Modern Warfare 4 debuts as top-selling game in US for October 2026",
-   "url": "https://www.gamesindustry.biz/call-of-duty-modern-warfare-4-debuts-as-top-selling-game-in-us-for-october-2026",
-   "sources": [
-    "Eurogamer",
-    "Gamekult (FR)",
-    "GamesIndustry.biz",
-    "Push Square",
-    "True Gaming (AR)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://assetsio.gnwcdn.com/cod-mw4.jpg?width=690&quality=85&format=jpg&auto=webp"
-    }
-   ],
-   "items": [
-    {
-     "source": "GamesIndustry.biz",
-     "title": "Call of Duty: Modern Warfare 4 debuts as top-selling game in US for October 2026",
-     "url": "https://www.gamesindustry.biz/call-of-duty-modern-warfare-4-debuts-as-top-selling-game-in-us-for-october-2026",
-     "published": "2026-11-19T14:00Z"
-    },
-    {
-     "source": "Eurogamer",
-     "title": "Call of Duty: Modern Warfare 4 was October's biggest game in the US, but it wasn't enough to crack 2026's best-selling top 10",
-     "url": "https://www.eurogamer.net/call-of-duty-modern-warfare-4-october-top-seller",
-     "published": "2026-11-19T14:01Z"
-    },
-    {
-     "source": "True Gaming (AR)",
-     "title": "مايكروسوفت الرابح الأكبر بشهر أكتوبر في أمريكا بصدارة العاب Call of Duty 4: Modern Warfare و Gears of War: E-Day لقائمة مبيعات الالعاب",
-     "url": "https://www.true-gaming.net/home/644062/%d9%85%d8%a7%d9%8a%d9%83%d8%b1%d9%88%d8%b3%d9%88%d9%81%d8%aa-%d8%a7%d9%84%d8%b1%d8%a7%d8%a8%d8%ad-%d8%a7%d9%84%d8%a3%d9%83%d8%a8%d8%b1-%d8%a8%d8%b4%d9%87%d8%b1-%d8%a3%d9%83%d8%aa%d9%88%d8%a8%d8%b1/",
-     "published": "2026-11-19T15:04Z"
-    },
-    {
-     "source": "Push Square",
-     "title": "Call of Duty's Influence Is Fading Fast as Modern Warfare 4 Fails to Make US Top 10",
-     "url": "https://www.pushsquare.com/news/2026/11/call-of-dutys-influence-is-fading-fast-as-modern-warfare-4-fails-to-make-us-top-10",
-     "published": "2026-11-19T15:30Z"
-    },
-    {
-     "source": "Gamekult (FR)",
-     "title": "Charts USA : Call of Duty a-t-il une nouvelle fois sous-performé avec Modern Warfare 4 ?",
-     "url": "https://www.gamekult.com/actualite/charts-usa-call-of-duty-a-t-il-une-nouvelle-fois-sous-performe-avec-modern-warfare-4-3050873081.html",
-     "published": "2026-11-19T17:05Z"
+     "source": "TheGamer",
+     "title": "GTA 6 Players Discover Easter Egg For Showtime’s Dexter TV Series",
+     "url": "https://www.thegamer.com/gta-6-grand-theft-auto-dexter-show-reference-discovery/",
+     "published": "2026-11-19T18:29Z"
     }
    ]
   },
   {
    "count": 4,
-   "published": "2026-11-19T09:48Z",
-   "title": "Burger King Parodies GTA's Heart Stopper Burger With Real-Life, 7-Patty 'HeartWhopper'",
-   "url": "https://www.ign.com/articles/burger-king-parodies-gtas-heart-stopper-burger-with-real-life-7-patty-heartwhopper",
-   "sources": [
-    "IGN",
-    "IGN Middle East (AR)",
-    "IGN Middle East (EN)",
-    "Insider Gaming"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://assets-prd.ignimgs.com/2026/11/18/burgerkingheartwhopper-1795043229403.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "IGN",
-     "title": "Burger King Parodies GTA's Heart Stopper Burger With Real-Life, 7-Patty 'HeartWhopper'",
-     "url": "https://www.ign.com/articles/burger-king-parodies-gtas-heart-stopper-burger-with-real-life-7-patty-heartwhopper",
-     "published": "2026-11-19T09:48Z"
-    },
-    {
-     "source": "IGN Middle East (EN)",
-     "title": "Burger King Parodies GTA's Heart Stopper Burger With Real-Life, 7-Patty 'HeartWhopper'",
-     "url": "https://me.ign.com/en/grand-theft-auto-vi/249875/burger-king-parodies-gtas-heart-stopper-burger-with-real-life-7-patty-heartwhopper",
-     "published": "2026-11-19T09:48Z"
-    },
-    {
-     "source": "IGN Middle East (AR)",
-     "title": "مطاعم Burger King تسخر من برغر Heart Stopper في GTA بإطلاق شطيرة من 7 قطع لحم",
-     "url": "https://me.ign.com/ar/grand-theft-auto-vi/197576/mtm-burger-king-tskhr-mn-brgr-heart-stopper-fy-gta-btlq-shtyr-mn-7-qt-lhm",
-     "published": "2026-11-19T10:28Z"
-    },
-    {
-     "source": "Insider Gaming",
-     "title": "Who Plays Mandy in GTA 6—GTA 6 Mandy Actress in Real Life",
-     "url": "https://insider-gaming.com/who-plays-mandy-in-gta-6/",
-     "published": "2026-11-19T16:59Z"
-    }
-   ]
-  },
-  {
-   "count": 4,
-   "published": "2026-11-18T21:30Z",
-   "title": "43 Soldiers Re-Enlisted In The Army In Exchange For Time Off To Play Grand Theft Auto 6: ‘I’m All About The Heist’",
-   "url": "https://kotaku.com/43-soldiers-re-enlisted-in-the-army-in-exchange-for-time-off-to-play-grand-theft-auto-6-im-all-about-the-heist-2000758133",
-   "sources": [
-    "IGN",
-    "IGN Middle East (EN)",
-    "Kotaku",
-    "PC Gamer"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://kotaku.com/app/uploads/2026/11/jason-gta-6-1280x800.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Kotaku",
-     "title": "43 Soldiers Re-Enlisted In The Army In Exchange For Time Off To Play Grand Theft Auto 6: ‘I’m All About The Heist’",
-     "url": "https://kotaku.com/43-soldiers-re-enlisted-in-the-army-in-exchange-for-time-off-to-play-grand-theft-auto-6-im-all-about-the-heist-2000758133",
-     "published": "2026-11-18T21:30Z"
-    },
-    {
-     "source": "IGN",
-     "title": "43 Army Members Reenlisted in Exchange for Paid Time Off to Play GTA 6",
-     "url": "https://www.ign.com/articles/43-army-members-reenlisted-in-exchange-for-paid-time-off-to-play-gta-6",
-     "published": "2026-11-18T23:00Z"
-    },
-    {
-     "source": "IGN Middle East (EN)",
-     "title": "43 Army Members Reenlisted in Exchange for Paid Time Off to Play GTA 6",
-     "url": "https://me.ign.com/en/grand-theft-auto-vi/249873/43-army-members-reenlisted-in-exchange-for-paid-time-off-to-play-gta-6",
-     "published": "2026-11-18T23:00Z"
-    },
-    {
-     "source": "PC Gamer",
-     "title": "'I'm all about the heist': 43 soldiers re-enlisted in the US army to get a 4-day weekend to play GTA 6",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/im-all-about-the-heist-43-soldiers-re-enlisted-in-the-us-army-to-get-a-4-day-weekend-to-play-gta-6/",
-     "published": "2026-11-19T16:42Z"
-    }
-   ]
-  },
-  {
-   "count": 4,
-   "published": "2026-11-19T15:15Z",
-   "title": "Assassin's Creed Maker Ubisoft Confirms Further Layoffs, With 166 Jobs Lost From 2 Major Studios",
-   "url": "https://www.ign.com/articles/ubisoft-cuts-166-jobs-assassins-creed",
-   "sources": [
-    "IGN",
-    "IGN Middle East (EN)",
-    "Push Square",
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://assets-prd.ignimgs.com/2021/05/25/assassins-creed-valhalla-1621913022247.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "IGN",
-     "title": "Assassin's Creed Maker Ubisoft Confirms Further Layoffs, With 166 Jobs Lost From 2 Major Studios",
-     "url": "https://www.ign.com/articles/ubisoft-cuts-166-jobs-assassins-creed",
-     "published": "2026-11-19T15:15Z"
-    },
-    {
-     "source": "IGN Middle East (EN)",
-     "title": "Assassin's Creed Maker Ubisoft Confirms Further Layoffs, With 166 Jobs Lost From 2 Major Studios",
-     "url": "https://me.ign.com/en/assassins-creed-codename-red/249886/assassins-creed-maker-ubisoft-confirms-further-layoffs-with-166-jobs-lost-from-2-major-studios",
-     "published": "2026-11-19T15:15Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "Assassin's Creed Maker Ubisoft Confirms Further Layoffs, With 166 Jobs Lost From 2 Major Studios",
-     "url": "https://store.steampowered.com/news/group/9869/view/705537268888109653",
-     "published": "2026-11-19T15:45Z"
-    },
-    {
-     "source": "Push Square",
-     "title": "Ubisoft Confirms 166 Layoffs at Key Assassin's Creed Studios",
-     "url": "https://www.pushsquare.com/news/2026/11/ubisoft-confirms-166-layoffs-at-key-assassins-creed-studios",
-     "published": "2026-11-19T16:30Z"
-    }
-   ]
-  },
-  {
-   "count": 4,
-   "published": "2026-11-18T19:14Z",
-   "title": "New Avengers: Doomsday Posters Reveal Key Characters and Tease Thor’s Odinforce",
-   "url": "https://www.ign.com/articles/new-avengers-doomsday-posters-reveal-key-characters-and-tease-thors-odinforce",
-   "sources": [
-    "GamesRadar",
-    "IGN",
-    "IGN Middle East (EN)",
-    "Tbreak (Gulf)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://assets-prd.ignimgs.com/2026/11/18/avengers-doomsday-posters-blogroll-1795027693334.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "IGN",
-     "title": "New Avengers: Doomsday Posters Reveal Key Characters and Tease Thor’s Odinforce",
-     "url": "https://www.ign.com/articles/new-avengers-doomsday-posters-reveal-key-characters-and-tease-thors-odinforce",
-     "published": "2026-11-18T19:14Z"
-    },
-    {
-     "source": "IGN Middle East (EN)",
-     "title": "New Avengers: Doomsday Posters Reveal Key Characters and Tease Thor’s Odinforce",
-     "url": "https://me.ign.com/en/avengers-the-kang-dynasty/249866/new-avengers-doomsday-posters-reveal-key-characters-and-tease-thors-odinforce",
-     "published": "2026-11-18T19:14Z"
-    },
-    {
-     "source": "GamesRadar",
-     "title": "New Avengers: Doomsday posters give Nightcrawler first look, tease Namor and Sue Storm relationship",
-     "url": "https://www.gamesradar.com/entertainment/marvel-movies/new-avengers-doomsday-posters-give-us-our-first-real-look-at-nightcrawler-and-appear-to-tease-namor-and-sue-storms-controversial-comic-book-relationship/",
-     "published": "2026-11-18T22:56Z"
-    },
-    {
-     "source": "Tbreak (Gulf)",
-     "title": "New Avengers: Doomsday Posters Spotlight Key Characters and Hint at Thor’s Odinforce",
-     "url": "https://tbreak.com/avengers-doomsday-posters-thor-odinforce/",
-     "published": "2026-11-19T15:26Z"
-    }
-   ]
-  },
-  {
-   "count": 3,
    "published": "2026-11-18T19:34Z",
    "title": "World of Warcraft: Forever’s Favorite Race and Class Combo is Now Official",
    "url": "https://store.steampowered.com/news/group/1450625/view/693152369910743340",
    "sources": [
     "Eurogamer",
     "Kotaku",
-    "Steam News (hub)"
+    "Steam News (hub)",
+    "True Gaming (AR)"
    ],
    "ar_relay": false,
    "media": [
@@ -683,71 +349,87 @@
      "title": "World of Warcraft: Forever Players Can Officially Get Two Huge Gear Upgrades For Free",
      "url": "https://store.steampowered.com/news/group/1450625/view/693152369910743599",
      "published": "2026-11-19T17:35Z"
+    },
+    {
+     "source": "True Gaming (AR)",
+     "title": "لاعبو World of Warcraft: Forever يحصلون على مكافئات مجانا عبر مهمة مخفية",
+     "url": "https://www.true-gaming.net/home/644075/%d9%84%d8%a7%d8%b9%d8%a8%d9%88-world-of-warcraft-forever-%d9%8a%d8%ad%d8%b5%d9%84%d9%88%d9%86-%d8%b9%d9%84%d9%89-%d9%85%d9%83%d8%a7%d9%81%d8%a6%d8%a7%d8%aa-%d9%85%d8%ac%d8%a7%d9%86%d8%a7-%d8%b9%d8%a8/",
+     "published": "2026-11-19T17:54Z"
     }
    ]
   },
   {
    "count": 3,
-   "published": "2026-11-18T18:00Z",
-   "title": "GTA 6 studio head: \"Multiple characters was a leap of faith\" and Rockstar knew it \"might backfire\"",
-   "url": "https://www.gamesradar.com/games/grand-theft-auto/quote-of-the-day-by-gta-6-studio-head-multiple-characters-was-a-leap-of-faith-and-rockstar-knew-it-might-backfire/",
+   "published": "2026-11-18T19:17Z",
+   "title": "The Binding of Isaac Repentance + Online releasing the same day as GTA VI is a \"funny stupid idea,\" says creator, but still worries it could backfire",
+   "url": "https://gonintendo.com/contents/67372-the-binding-of-isaac-repentance-online-releasing-the-same-day-as-gta-vi-is-a-funny",
    "sources": [
-    "Destructoid",
-    "GamesRadar",
+    "GoNintendo",
+    "Nintendo Everything",
     "Steam News (hub)"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/WCUSnDP6CwC78uviCLYwfU-1920-80.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "GamesRadar",
-     "title": "GTA 6 studio head: \"Multiple characters was a leap of faith\" and Rockstar knew it \"might backfire\"",
-     "url": "https://www.gamesradar.com/games/grand-theft-auto/quote-of-the-day-by-gta-6-studio-head-multiple-characters-was-a-leap-of-faith-and-rockstar-knew-it-might-backfire/",
-     "published": "2026-11-18T18:00Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "GTA 6 studio head: \"Multiple characters was a leap of faith\" and Rockstar knew it \"might backfire\"",
-     "url": "https://store.steampowered.com/news/group/38509069/view/668382571964399912",
-     "published": "2026-11-18T18:14Z"
-    },
-    {
-     "source": "Destructoid",
-     "title": "GTA 6 lets you play as a pacifist, and that might be its quantum leap",
-     "url": "https://www.destructoid.com/gta-6-honor-system-criminal-profile/",
-     "published": "2026-11-19T17:26Z"
-    }
-   ]
-  },
-  {
-   "count": 3,
-   "published": "2026-11-18T18:11Z",
-   "title": "Limited Run Games Announce Physical Edition For Kernel Hearts On Switch 2",
-   "url": "https://gonintendo.com/contents/67361-limited-run-games-announce-physical-edition-for-kernel-hearts-on-switch-2",
-   "sources": [
-    "4Gamer (JP)",
-    "GoNintendo",
-    "Nintendo Everything"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://gonintendo.com/attachments/image/89159/file/medium-e60b42e531db61785a09f05ff9e19b31.png"
+     "url": "https://gonintendo.com/attachments/image/89170/file/medium-d016c18703fc7c84aa36b5eaf93e400f.jpg"
     }
    ],
    "items": [
     {
      "source": "GoNintendo",
-     "title": "Limited Run Games Announce Physical Edition For Kernel Hearts On Switch 2",
-     "url": "https://gonintendo.com/contents/67361-limited-run-games-announce-physical-edition-for-kernel-hearts-on-switch-2",
-     "published": "2026-11-18T18:11Z"
+     "title": "The Binding of Isaac Repentance + Online releasing the same day as GTA VI is a \"funny stupid idea,\" says creator, but still worries it could backfire",
+     "url": "https://gonintendo.com/contents/67372-the-binding-of-isaac-repentance-online-releasing-the-same-day-as-gta-vi-is-a-funny",
+     "published": "2026-11-18T19:17Z"
     },
+    {
+     "source": "GoNintendo",
+     "title": "The Binding of Isaac Repentance + Online prays on Switch 2 owners today",
+     "url": "https://gonintendo.com/contents/67402-the-binding-of-isaac-repentance-online-prays-on-switch-2-owners-today",
+     "published": "2026-11-19T05:34Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "Binding of Isaac Repentance+ adds multiplayer and nice features",
+     "url": "https://store.steampowered.com/news/group/25563497/view/711166768421273986",
+     "published": "2026-11-19T09:57Z"
+    },
+    {
+     "source": "Nintendo Everything",
+     "title": "Nintendo Download – November 19, 2026 (North America) – The Binding of Isaac: Repentance, Warhammer 40,000: Boltgun 2, more",
+     "url": "https://nintendoeverything.com/nintendo-download-november-19-2026-north-america-the-binding-of-isaac-repentance-warhammer-40000-boltgun-2-more/",
+     "published": "2026-11-19T14:13Z"
+    },
+    {
+     "source": "GoNintendo",
+     "title": "Warhammer 40,000: Boltgun 2 now available on Switch 2",
+     "url": "https://gonintendo.com/contents/67411-warhammer-40-000-boltgun-2-now-available-on-switch-2",
+     "published": "2026-11-19T18:29Z"
+    }
+   ]
+  },
+  {
+   "count": 3,
+   "published": "2026-11-18T19:00Z",
+   "title": "Kernel Hearts Nintendo Switch 2 physical release in the works",
+   "url": "https://nintendoeverything.com/kernel-hearts-nintendo-switch-2-physical-release-in-the-works/",
+   "sources": [
+    "4Gamer (JP)",
+    "Nintendo Everything",
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://nintendoeverything.com/wp-content/uploads/Kernel-Hearts-physical-150x84.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://nintendoeverything.com/wp-content/uploads/Kernel-Hearts-physical.jpg"
+    }
+   ],
+   "items": [
     {
      "source": "Nintendo Everything",
      "title": "Kernel Hearts Nintendo Switch 2 physical release in the works",
@@ -777,954 +459,126 @@
      "title": "Top 20 best-selling Wii games of all time in the U.S. revealed",
      "url": "https://nintendoeverything.com/top-20-best-selling-wii-games-of-all-time-in-the-u-s-revealed/",
      "published": "2026-11-19T17:11Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "Call of Duty: MW4 Has Yet to Crack Top 10 Best-Selling Games of 2026 So Far",
+     "url": "https://store.steampowered.com/news/group/1450625/view/693152369910743611",
+     "published": "2026-11-19T18:25Z"
     }
    ]
   },
   {
    "count": 3,
-   "published": "2026-11-18T22:00Z",
-   "title": "Yes, That’s Weird Al Hosting A Radio Station In GTA 6",
-   "url": "https://kotaku.com/yes-thats-weird-al-hosting-a-radio-station-in-gta-6-2000758140",
+   "published": "2026-11-18T22:30Z",
+   "title": "Rockstar Explains Why GTA 6 Has No Prostitutes In It, A Hallmark Of The Series Since 2001",
+   "url": "https://kotaku.com/rockstar-explains-why-gta-6-has-no-prostitutes-in-it-a-hallmark-of-the-series-since-2001-2000758174",
    "sources": [
-    "GamesRadar",
+    "IGN",
     "Kotaku",
-    "PC Gamer"
+    "Tbreak (Gulf)"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://kotaku.com/app/uploads/2026/11/GTA-6-weird-al-1280x720.jpg"
+     "url": "https://kotaku.com/app/uploads/2026/08/gta6-driving-1280x720.jpg"
     }
    ],
    "items": [
     {
      "source": "Kotaku",
-     "title": "Yes, That’s Weird Al Hosting A Radio Station In GTA 6",
-     "url": "https://kotaku.com/yes-thats-weird-al-hosting-a-radio-station-in-gta-6-2000758140",
-     "published": "2026-11-18T22:00Z"
+     "title": "Rockstar Explains Why GTA 6 Has No Prostitutes In It, A Hallmark Of The Series Since 2001",
+     "url": "https://kotaku.com/rockstar-explains-why-gta-6-has-no-prostitutes-in-it-a-hallmark-of-the-series-since-2001-2000758174",
+     "published": "2026-11-18T22:30Z"
     },
     {
-     "source": "PC Gamer",
-     "title": "Yes, you're hearing 'Weird Al' Yankovic hosting a radio station in GTA 6",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/yes-youre-hearing-weird-al-yankovic-hosting-a-radio-station-in-gta-6/",
-     "published": "2026-11-19T17:07Z"
+     "source": "Tbreak (Gulf)",
+     "title": "Rockstar explains why GTA 6 has no darts: ‘We don’t have unlimited time’",
+     "url": "https://tbreak.com/gta-6-darts-rockstar-explains/",
+     "published": "2026-11-19T13:41Z"
     },
     {
-     "source": "GamesRadar",
-     "title": "GTA 6's '80s radio station is hosted by \"Weird Al\" Yankovic, the parody music legend confirms",
-     "url": "https://www.gamesradar.com/games/grand-theft-auto/gta-6s-80s-radio-station-is-hosted-by-weird-al-yankovic-the-parody-music-legend-confirms-as-a-long-time-fan-of-the-grand-theft-auto-franchise-i-couldnt-be-more-excited/",
-     "published": "2026-11-19T17:11Z"
+     "source": "IGN",
+     "title": "Where Is GTA 6's Disney World Parody? Rockstar North Co-Studio Head Explains No-Show",
+     "url": "https://www.ign.com/articles/where-is-gta-6s-disney-world-parody-rockstar-north-co-studio-head-explains-no-show",
+     "published": "2026-11-19T16:42Z"
     }
    ]
   },
   {
-   "count": 3,
-   "published": "2026-11-18T19:22Z",
-   "title": "GTA 6 changes the way you steal cars: here's everything you need to know about slim jims, key cloners, and tracking devices",
-   "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-how-to-steal-cars/",
+   "count": 2,
+   "published": "2026-11-19T13:13Z",
+   "title": "Kitsune Zero gets surprise Nintendo Switch release",
+   "url": "https://nintendoeverything.com/kitsune-zero-gets-surprise-nintendo-switch-release/",
    "sources": [
-    "Destructoid",
-    "IGN Middle East (EN)",
-    "PC Gamer"
+    "GoNintendo",
+    "Nintendo Everything"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/MtZiBk2T3duW6pFEqnzNuW-1920-80.jpg"
+     "url": "https://nintendoeverything.com/wp-content/uploads/Kitsune-Zero-150x84.jpg"
     },
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/EJZcYu2qkvfPsHo6io4maK-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/ha3RKwkppKYpb3bzDVmvjK-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/UdvPTt9yoAQQC52GZNGfXK-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/ShAiWoRgbscJdznUZ4PuhK-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/VUdJjYF72T2b2zkpjxYhgK-1920-80.jpg"
+     "url": "https://nintendoeverything.com/wp-content/uploads/Kitsune-Zero.jpg"
     }
    ],
    "items": [
     {
-     "source": "PC Gamer",
-     "title": "GTA 6 changes the way you steal cars: here's everything you need to know about slim jims, key cloners, and tracking devices",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-how-to-steal-cars/",
-     "published": "2026-11-18T19:22Z"
+     "source": "Nintendo Everything",
+     "title": "Kitsune Zero gets surprise Nintendo Switch release",
+     "url": "https://nintendoeverything.com/kitsune-zero-gets-surprise-nintendo-switch-release/",
+     "published": "2026-11-19T13:13Z"
     },
     {
-     "source": "Destructoid",
-     "title": "GTA 6: Everything you need to do for 100% completion",
-     "url": "https://www.destructoid.com/gta-6-everything-100-percent-completion/",
-     "published": "2026-11-19T14:00Z"
-    },
-    {
-     "source": "IGN Middle East (EN)",
-     "title": "GTA 6’s First Two Hours Teach You Everything You Need to Know About The Next 100",
-     "url": "https://me.ign.com/en/grand-theft-auto-vi/249882/gta-6s-first-two-hours-teach-you-everything-you-need-to-know-about-the-next-100",
-     "published": "2026-11-19T14:00Z"
+     "source": "GoNintendo",
+     "title": "Kitsune Zero now available on Switch",
+     "url": "https://gonintendo.com/contents/67413-kitsune-zero-now-available-on-switch",
+     "published": "2026-11-19T18:36Z"
     }
    ]
   },
   {
    "count": 2,
-   "published": "2026-11-18T21:52Z",
-   "title": "GTA 6 airport location: Here's where to earn your wings less than legally",
-   "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-airport-location/",
-   "sources": [
-    "Insider Gaming",
-    "PC Gamer"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/dZxov54joa7TQG73D7XHxM-1920-80.png"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/YiD5d8HbD5STEEnNnziA6W-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/bh6xD92qaNaFw6ba7uqXmd-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/kuTe9XzXcr8pqCat37iGCj-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/pmzLGtQBx9jTLL589Kw2i8-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/ZF5ZJsyvbhJRVSDmd9H3jA-1920-80.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "PC Gamer",
-     "title": "GTA 6 airport location: Here's where to earn your wings less than legally",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-airport-location/",
-     "published": "2026-11-18T21:52Z"
-    },
-    {
-     "source": "Insider Gaming",
-     "title": "Where is the Casino in GTA 6? Location, Explained",
-     "url": "https://insider-gaming.com/gta-6-casino/",
-     "published": "2026-11-19T17:24Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-19T05:15Z",
-   "title": "Girls’ Frontline: The Lunasia Covenant launches in 2027",
-   "url": "https://www.gematsu.com/2026/11/girls-frontline-the-lunasia-covenant-launches-in-2027",
-   "sources": [
-    "Gematsu",
-    "Siliconera"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://www.gematsu.com/wp-content/uploads/2026/11/Lunasia-Cov_11-19-26.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Gematsu",
-     "title": "Girls’ Frontline: The Lunasia Covenant launches in 2027",
-     "url": "https://www.gematsu.com/2026/11/girls-frontline-the-lunasia-covenant-launches-in-2027",
-     "published": "2026-11-19T05:15Z"
-    },
-    {
-     "source": "Siliconera",
-     "title": "New Girls’ Frontline Game Trailer Shows Off The Lunasia Covenant",
-     "url": "https://www.siliconera.com/new-girls-frontline-game-trailer-shows-off-the-lunasia-covenant/",
-     "published": "2026-11-19T17:00Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-19T17:00Z",
-   "title": "『まのさば』Re,AERシナリオの群像劇ホラーADV『Resequence: The Orchard』本日11月20日リリース。日常を浸食していく怪異…生徒をカウンセリングして迫る",
-   "url": "http://www.gamespark.jp/article/2026/11/20/175100.html",
-   "sources": [
-    "4Gamer (JP)",
-    "Game*Spark (JP)"
-   ],
-   "ar_relay": false,
-   "media": [],
-   "items": [
-    {
-     "source": "Game*Spark (JP)",
-     "title": "『まのさば』Re,AERシナリオの群像劇ホラーADV『Resequence: The Orchard』本日11月20日リリース。日常を浸食していく怪異…生徒をカウンセリングして迫る",
-     "url": "http://www.gamespark.jp/article/2026/11/20/175100.html",
-     "published": "2026-11-19T17:00Z"
-    },
-    {
-     "source": "4Gamer (JP)",
-     "title": "オカルトホラーADV「Resequence: The Orchard」，Steamで配信開始。スクールカウンセラーとして怪異に悩む生徒たちと向き合う。20％オフセールも実施",
-     "url": "https://www.4gamer.net/games/964/G096496/20261118041/",
-     "published": "2026-11-19T17:00Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-19T16:48Z",
-   "title": "Football Manager 27 review: Back on form, but not without its wayward touches",
-   "url": "https://www.pcgamer.com/games/sports/football-manager-27-review/",
+   "published": "2026-11-19T05:03Z",
+   "title": "GTA 6 cheats are locked until you finish the story",
+   "url": "https://tbreak.com/gta-6-cheats-locked-until-main-story/",
    "sources": [
     "PC Gamer",
-    "Steam News (hub)"
+    "Tbreak (Gulf)"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/J744aZeGhGfJBJkrr5vtuh-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/83M7ibqz4hs4XmtkKeRdPK-1920-80.png"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/48SAvSZS3MABAydj4kXRPK-1920-80.png"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/CpL2QjBHbR8tHNMRS3SShJ-1920-80.png"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/74JdTBdvLmhRPrqnWyQ9QK-1920-80.png"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/m6Fvji2VLaoQU7pe79coNJ-1920-80.png"
+     "url": "https://cdn.mos.cms.futurecdn.net/88bmYYeTdzTBy8hNsLoXrc-1920-80.jpg"
     }
    ],
    "items": [
+    {
+     "source": "Tbreak (Gulf)",
+     "title": "GTA 6 cheats are locked until you finish the story",
+     "url": "https://tbreak.com/gta-6-cheats-locked-until-main-story/",
+     "published": "2026-11-19T05:03Z"
+    },
     {
      "source": "PC Gamer",
-     "title": "Football Manager 27 review: Back on form, but not without its wayward touches",
-     "url": "https://www.pcgamer.com/games/sports/football-manager-27-review/",
-     "published": "2026-11-19T16:48Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "Football Manager 27 review: Back on form, but not without its wayward touches",
-     "url": "https://store.steampowered.com/news/group/1850/view/693152369910743593",
-     "published": "2026-11-19T16:57Z"
+     "title": "Cheats in GTA 6 are weirdly restrictive, and I'm counting the minutes until the PC version fixes them",
+     "url": "https://www.pcgamer.com/games/grand-theft-auto/im-counting-the-minutes-until-the-pc-version-fixes-the-weirdly-restrictive-cheats-in-gta-6/",
+     "published": "2026-11-19T18:35Z"
     }
    ]
   },
   {
    "count": 2,
-   "published": "2026-11-19T12:00Z",
-   "title": "You Have to Become a Complete Psychopath to Get A 6 Star Wanted Level in GTA 6",
-   "url": "https://me.ign.com/en/grand-theft-auto-vi/249888/you-have-to-become-a-complete-psychopath-to-get-a-6-star-wanted-level-in-gta-6",
-   "sources": [
-    "IGN Middle East (EN)",
-    "Insider Gaming"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://sm.ign.com/ign_me/video/y/you-have-t/you-have-to-become-a-complete-psychopath-to-get-a-6-star-wan_5zeb.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://sm.ign.com/t/ign_me/video/y/you-have-t/you-have-to-become-a-complete-psychopath-to-get-a-6-star-wan_5zeb.640.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "IGN Middle East (EN)",
-     "title": "You Have to Become a Complete Psychopath to Get A 6 Star Wanted Level in GTA 6",
-     "url": "https://me.ign.com/en/grand-theft-auto-vi/249888/you-have-to-become-a-complete-psychopath-to-get-a-6-star-wanted-level-in-gta-6",
-     "published": "2026-11-19T12:00Z"
-    },
-    {
-     "source": "Insider Gaming",
-     "title": "Fastest Way To Get 6-Star Wanted Level In GTA 6—Can You Escape & Lose It?",
-     "url": "https://insider-gaming.com/fastest-6-star-wanted-level-gta-6-escape/",
-     "published": "2026-11-19T14:54Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-19T12:02Z",
-   "title": "Could This Be the Start of GTA 6's Version of the Mount Chiliad Mystery?",
-   "url": "https://www.ign.com/articles/gta-6-mount-chiliad-mystery",
-   "sources": [
-    "IGN",
-    "IGN Middle East (EN)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://assets-prd.ignimgs.com/2026/11/19/gtavi-41-1795089755226.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "IGN",
-     "title": "Could This Be the Start of GTA 6's Version of the Mount Chiliad Mystery?",
-     "url": "https://www.ign.com/articles/gta-6-mount-chiliad-mystery",
-     "published": "2026-11-19T12:02Z"
-    },
-    {
-     "source": "IGN Middle East (EN)",
-     "title": "Could This Be the Start of GTA 6's Version of the Mount Chiliad Mystery?",
-     "url": "https://me.ign.com/en/grand-theft-auto-vi/249883/could-this-be-the-start-of-gta-6s-version-of-the-mount-chiliad-mystery",
-     "published": "2026-11-19T12:02Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-19T11:39Z",
-   "title": "GTA 6 Estimated to Have Reached 20 Million Preorders Ahead of Launch",
-   "url": "https://www.ign.com/articles/gta-6-estimated-to-have-reached-20-million-preorders-ahead-of-launch",
-   "sources": [
-    "IGN",
-    "IGN Middle East (EN)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://assets-prd.ignimgs.com/2026/11/19/vintage-vice-city-weapon-pattern-01-1795088290717.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "IGN",
-     "title": "GTA 6 Estimated to Have Reached 20 Million Preorders Ahead of Launch",
-     "url": "https://www.ign.com/articles/gta-6-estimated-to-have-reached-20-million-preorders-ahead-of-launch",
-     "published": "2026-11-19T11:39Z"
-    },
-    {
-     "source": "IGN Middle East (EN)",
-     "title": "GTA 6 Estimated to Have Reached 20 Million Preorders Ahead of Launch",
-     "url": "https://me.ign.com/en/grand-theft-auto-vi/249879/gta-6-estimated-to-have-reached-20-million-preorders-ahead-of-launch",
-     "published": "2026-11-19T11:39Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-19T11:18Z",
-   "title": "Streamer Loses 11 Hours of GTA 6 Progress After Accidentally Turning Off Their PS5, Gets Swatted Immediately Afterwards",
-   "url": "https://www.ign.com/articles/streamer-loses-11-hours-of-gta-6-progress-gets-swatted-immediately-afterwards",
-   "sources": [
-    "IGN",
-    "IGN Middle East (EN)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://assets-prd.ignimgs.com/2026/11/19/screenshot-2026-11-19-111623-1795086992822.png"
-    }
-   ],
-   "items": [
-    {
-     "source": "IGN",
-     "title": "Streamer Loses 11 Hours of GTA 6 Progress After Accidentally Turning Off Their PS5, Gets Swatted Immediately Afterwards",
-     "url": "https://www.ign.com/articles/streamer-loses-11-hours-of-gta-6-progress-gets-swatted-immediately-afterwards",
-     "published": "2026-11-19T11:18Z"
-    },
-    {
-     "source": "IGN Middle East (EN)",
-     "title": "Streamer Loses 11 Hours of GTA 6 Progress After Accidentally Turning Off Their PS5, Gets Swatted Immediately Afterwards",
-     "url": "https://me.ign.com/en/grand-theft-auto-vi/249878/streamer-loses-11-hours-of-gta-6-progress-after-accidentally-turning-off-their-ps5-gets-swatted-imme",
-     "published": "2026-11-19T11:18Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-19T11:00Z",
-   "title": "Microsoft Polls Users After Plastering GTA 6 Artwork Over Xbox Custom Dashboard Backgrounds",
-   "url": "https://www.ign.com/articles/microsoft-polls-users-after-plastering-gta-6-artwork-over-xbox-custom-dashboard-backgrounds",
-   "sources": [
-    "IGN",
-    "IGN Middle East (EN)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://assets-prd.ignimgs.com/2026/11/19/untitled-1-1795085988612.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "IGN",
-     "title": "Microsoft Polls Users After Plastering GTA 6 Artwork Over Xbox Custom Dashboard Backgrounds",
-     "url": "https://www.ign.com/articles/microsoft-polls-users-after-plastering-gta-6-artwork-over-xbox-custom-dashboard-backgrounds",
-     "published": "2026-11-19T11:00Z"
-    },
-    {
-     "source": "IGN Middle East (EN)",
-     "title": "Microsoft Polls Users After Plastering GTA 6 Artwork Over Xbox Custom Dashboard Backgrounds",
-     "url": "https://me.ign.com/en/grand-theft-auto-vi/249876/microsoft-polls-users-after-plastering-gta-6-artwork-over-xbox-custom-dashboard-backgrounds",
-     "published": "2026-11-19T11:00Z"
-    }
-   ]
-  },
-  {
-   "count": 2,
-   "published": "2026-11-18T23:31Z",
-   "title": "GTA 6 Launch Causes Massive Spike in Traffic for Internet Provider Xfinity",
-   "url": "https://www.ign.com/articles/gta-6-launch-causes-massive-spike-in-traffic-for-internet-provider-xfinity",
-   "sources": [
-    "IGN",
-    "IGN Middle East (EN)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-ice-cream-1795043102913.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "IGN",
-     "title": "GTA 6 Launch Causes Massive Spike in Traffic for Internet Provider Xfinity",
-     "url": "https://www.ign.com/articles/gta-6-launch-causes-massive-spike-in-traffic-for-internet-provider-xfinity",
-     "published": "2026-11-18T23:31Z"
-    },
-    {
-     "source": "IGN Middle East (EN)",
-     "title": "GTA 6 Launch Causes Massive Spike in Traffic for Internet Provider Xfinity",
-     "url": "https://me.ign.com/en/grand-theft-auto-vi/249872/gta-6-launch-causes-massive-spike-in-traffic-for-internet-provider-xfinity",
-     "published": "2026-11-18T23:31Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:42Z",
-   "title": "Huge New Nvidia Bug Is Ruining Gaming Hardware, Users Say",
-   "url": "https://www.polygon.com/nvidia-graphics-driver-bug-gaming-hardware/",
-   "sources": [
-    "Polygon"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://static0.polygonimages.com/wordpress/wp-content/uploads/2026/11/jensen-huang-16-9-reupload.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Polygon",
-     "title": "Huge New Nvidia Bug Is Ruining Gaming Hardware, Users Say",
-     "url": "https://www.polygon.com/nvidia-graphics-driver-bug-gaming-hardware/",
-     "published": "2026-11-19T17:42Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:42Z",
-   "title": "تخفيضات Black Friday تصل إلى Nintendo eShop مع عروض على ألعاب Switch وSwitch 2",
-   "url": "https://www.true-gaming.net/home/644070/%d8%aa%d8%ae%d9%81%d9%8a%d8%b6%d8%a7%d8%aa-black-friday-%d8%aa%d8%b5%d9%84-%d8%a5%d9%84%d9%89-nintendo-eshop-%d9%85%d8%b9-%d8%b9%d8%b1%d9%88%d8%b6-%d8%b9%d9%84%d9%89-%d8%a3%d9%84%d8%b9%d8%a7%d8%a8-swi/",
-   "sources": [
-    "True Gaming (AR)"
-   ],
-   "ar_relay": true,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://www.true-gaming.net/home/wp-content/uploads/2026/11/1920x1080_Black_Friday_EN-960x540.webp"
-    }
-   ],
-   "items": [
-    {
-     "source": "True Gaming (AR)",
-     "title": "تخفيضات Black Friday تصل إلى Nintendo eShop مع عروض على ألعاب Switch وSwitch 2",
-     "url": "https://www.true-gaming.net/home/644070/%d8%aa%d8%ae%d9%81%d9%8a%d8%b6%d8%a7%d8%aa-black-friday-%d8%aa%d8%b5%d9%84-%d8%a5%d9%84%d9%89-nintendo-eshop-%d9%85%d8%b9-%d8%b9%d8%b1%d9%88%d8%b6-%d8%b9%d9%84%d9%89-%d8%a3%d9%84%d8%b9%d8%a7%d8%a8-swi/",
-     "published": "2026-11-19T17:42Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:30Z",
-   "title": "Why Rockstar Games Includes Bigfoot And UFOs To Find In Its Big Open-World Games: ‘We Love That Stuff’",
-   "url": "https://kotaku.com/why-rockstar-games-includes-bigfoot-and-ufos-to-find-in-its-big-open-world-games-we-love-that-stuff-2000758423",
-   "sources": [
-    "Kotaku"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://kotaku.com/app/uploads/2026/11/88bee52e0e79c06890456531a19cd3e8.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Kotaku",
-     "title": "Why Rockstar Games Includes Bigfoot And UFOs To Find In Its Big Open-World Games: ‘We Love That Stuff’",
-     "url": "https://kotaku.com/why-rockstar-games-includes-bigfoot-and-ufos-to-find-in-its-big-open-world-games-we-love-that-stuff-2000758423",
-     "published": "2026-11-19T17:30Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:26Z",
-   "title": "Ubisoft has founded a studio dedicated to generative AI in games",
-   "url": "https://store.steampowered.com/news/group/42342144/view/679641571029680751",
-   "sources": [
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://www.videogameschronicle.com/files/2024/09/ubisoft-1024x576.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Steam News (hub)",
-     "title": "Ubisoft has founded a studio dedicated to generative AI in games",
-     "url": "https://store.steampowered.com/news/group/42342144/view/679641571029680751",
-     "published": "2026-11-19T17:26Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:25Z",
-   "title": "Former Xbox and EA exec hopes GTA 6 gives \"a much-needed shot in the arm\" to devs and publishers",
-   "url": "https://www.gamesradar.com/games/grand-theft-auto/former-xbox-and-ea-exec-hopes-gta-6-gives-a-much-needed-shot-in-the-arm-to-devs-and-publishers-the-video-game-industry-could-really-use-a-moment-like-this/",
-   "sources": [
-    "GamesRadar"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/24JyKBmokGVJm4K2VQmq3h-1920-80.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "GamesRadar",
-     "title": "Former Xbox and EA exec hopes GTA 6 gives \"a much-needed shot in the arm\" to devs and publishers",
-     "url": "https://www.gamesradar.com/games/grand-theft-auto/former-xbox-and-ea-exec-hopes-gta-6-gives-a-much-needed-shot-in-the-arm-to-devs-and-publishers-the-video-game-industry-could-really-use-a-moment-like-this/",
-     "published": "2026-11-19T17:25Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:22Z",
-   "title": "Even our bunch of diehard PC gamers aren't that bothered by 30 fps in GTA 6",
-   "url": "https://www.pcgamer.com/games/grand-theft-auto/even-our-bunch-of-diehard-pc-gamers-arent-that-bothered-by-30-fps-in-gta-6/",
-   "sources": [
-    "PC Gamer"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/TfNpPnryW9WRa9aLJbxRiE-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/nXJvUmhon9WghwJuvDVoHR-1920-80.png"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/GgdsawGpbSzorU9FDRha5E-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/o5oYVAFnHjesaVgoJsQD9E-1920-80.png"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/4sHLcbB96zPH9vjoBAiMYC-1920-80.png"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/jDAfoTeqcUVNPYNfDSs8WH-1920-80.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "PC Gamer",
-     "title": "Even our bunch of diehard PC gamers aren't that bothered by 30 fps in GTA 6",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/even-our-bunch-of-diehard-pc-gamers-arent-that-bothered-by-30-fps-in-gta-6/",
-     "published": "2026-11-19T17:22Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:22Z",
-   "title": "الموسم الخامس من مسلسل Invincible ينطلق في 17 فبراير 2027",
-   "url": "https://me.ign.com/ar/invincible-3/197597/lmwsm-lkhms-mn-mslsl-invincible-yntlq-fy-17-fbryr-2027",
-   "sources": [
-    "IGN Middle East (AR)"
-   ],
-   "ar_relay": true,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://sm.ign.com/ign_mear/news/i/invincible/invincible-season-5-premieres-on-february-17-2027_kfx5.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://sm.ign.com/t/ign_mear/news/i/invincible/invincible-season-5-premieres-on-february-17-2027_kfx5.640.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "IGN Middle East (AR)",
-     "title": "الموسم الخامس من مسلسل Invincible ينطلق في 17 فبراير 2027",
-     "url": "https://me.ign.com/ar/invincible-3/197597/lmwsm-lkhms-mn-mslsl-invincible-yntlq-fy-17-fbryr-2027",
-     "published": "2026-11-19T17:22Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:19Z",
-   "title": "Christopher Nolan Explains Why Fans Will Never See an Odyssey Director’s Cut",
-   "url": "https://www.polygon.com/christopher-nolan-the-odyssey-home-release-no-directors-cut/",
-   "sources": [
-    "Polygon"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://static0.polygonimages.com/wordpress/wp-content/uploads/2026/07/the-odyssey-matt-damon.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Polygon",
-     "title": "Christopher Nolan Explains Why Fans Will Never See an Odyssey Director’s Cut",
-     "url": "https://www.polygon.com/christopher-nolan-the-odyssey-home-release-no-directors-cut/",
-     "published": "2026-11-19T17:19Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:15Z",
-   "title": "GTA 6 On Switch 2? Digital Foundry Weighs In On The Possibility",
-   "url": "https://www.nintendolife.com/news/2026/11/gta-6-on-switch-2-digital-foundry-weighs-in-on-the-possibility",
-   "sources": [
-    "Nintendo Life"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://images.nintendolife.com/ace1d57959124/small.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://images.nintendolife.com/ace1d57959124/large.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Nintendo Life",
-     "title": "GTA 6 On Switch 2? Digital Foundry Weighs In On The Possibility",
-     "url": "https://www.nintendolife.com/news/2026/11/gta-6-on-switch-2-digital-foundry-weighs-in-on-the-possibility",
-     "published": "2026-11-19T17:15Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:15Z",
-   "title": "Turtle Beach VelocityOne H.O.T.A.S. Review",
-   "url": "https://store.steampowered.com/news/group/7433348/view/714544468141802084",
-   "sources": [
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://www.cgmagonline.com/wp-content/uploads/2026/11/turtle-beach-velocityone-h-o-t-a-s-review-4477.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://www.cgmagonline.com/wp-content/uploads/2026/11/turtle-beach-velocityone-h-o-t-a-s-review-8203.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Steam News (hub)",
-     "title": "Turtle Beach VelocityOne H.O.T.A.S. Review",
-     "url": "https://store.steampowered.com/news/group/7433348/view/714544468141802084",
-     "published": "2026-11-19T17:15Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:12Z",
-   "title": "Ubisoft Reports €254.5 Million Loss as Net Bookings Fall 16.5%",
-   "url": "https://insider-gaming.com/ubisoft-reports-254-million-loss-net-bookings-fall/",
-   "sources": [
-    "Insider Gaming"
-   ],
-   "ar_relay": false,
-   "media": [],
-   "items": [
-    {
-     "source": "Insider Gaming",
-     "title": "Ubisoft Reports €254.5 Million Loss as Net Bookings Fall 16.5%",
-     "url": "https://insider-gaming.com/ubisoft-reports-254-million-loss-net-bookings-fall/",
-     "published": "2026-11-19T17:12Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:12Z",
-   "title": "Complete GTA 6 Map & Every Location and POI",
-   "url": "https://insider-gaming.com/gta-6-map-location-poi/",
-   "sources": [
-    "Insider Gaming"
-   ],
-   "ar_relay": false,
-   "media": [],
-   "items": [
-    {
-     "source": "Insider Gaming",
-     "title": "Complete GTA 6 Map & Every Location and POI",
-     "url": "https://insider-gaming.com/gta-6-map-location-poi/",
-     "published": "2026-11-19T17:12Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:05Z",
-   "title": "Ignore that other game about crime that's out and burgle some ugly farmhouses in Keepsake County, a \"midwestern stealth game\" with a 2000s Cartoon Network vibe",
-   "url": "https://www.rockpapershotgun.com/ignore-that-other-game-about-crime-thats-out-and-burgle-some-ugly-farmhouses-in-keepsake-county-a-midwestern-stealth-game-with-a-2000s-cartoon-network-vibe",
-   "sources": [
-    "Rock Paper Shotgun"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://assetsio.gnwcdn.com/keepsake-county.jpg?width=690&quality=85&format=jpg&auto=webp"
-    }
-   ],
-   "items": [
-    {
-     "source": "Rock Paper Shotgun",
-     "title": "Ignore that other game about crime that's out and burgle some ugly farmhouses in Keepsake County, a \"midwestern stealth game\" with a 2000s Cartoon Network vibe",
-     "url": "https://www.rockpapershotgun.com/ignore-that-other-game-about-crime-thats-out-and-burgle-some-ugly-farmhouses-in-keepsake-county-a-midwestern-stealth-game-with-a-2000s-cartoon-network-vibe",
-     "published": "2026-11-19T17:05Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:05Z",
-   "title": "I just found a verrrry familiar-looking hat in GTA 6, and it was in the last place I would have expected",
-   "url": "https://www.pcgamer.com/games/grand-theft-auto/arthur-morgan-hat-location-rdr2/",
-   "sources": [
-    "PC Gamer"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/76JsR5SGGtEqN7VSYMj32U-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/Ta3RE2kYKSQX2P9QMvvA4U-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/xuWkVkcdw5ELWWUeEeVeLU-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/TRyze8VuFtoHQkpJMny84U-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/wzDLzqMW3xiHR7y9iiBjLU-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/oxT58sEjcP4M233n5BWwhj-1920-80.png"
-    }
-   ],
-   "items": [
-    {
-     "source": "PC Gamer",
-     "title": "I just found a verrrry familiar-looking hat in GTA 6, and it was in the last place I would have expected",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/arthur-morgan-hat-location-rdr2/",
-     "published": "2026-11-19T17:05Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:02Z",
-   "title": "Corsair Sabre V3 Pro PureVector Ergo review",
-   "url": "https://www.pcgamer.com/hardware/gaming-mice/corsair-sabre-v3-pro-purevector-ergo-review/",
-   "sources": [
-    "PC Gamer"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/7i3rJM7iKEk9zkPn55HNeB-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/Y3NZAqrYXRK9Zktj3VyzeB-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/uyAqepgt8Zb6NP6fn6L4Zm-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/CzacNdXqfQqa9wPswJcxcm-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/VgQWXfEZxH7mpgU4oUwMfB-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/zah8p3ThfSorEwDMi34feB-1920-80.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "PC Gamer",
-     "title": "Corsair Sabre V3 Pro PureVector Ergo review",
-     "url": "https://www.pcgamer.com/hardware/gaming-mice/corsair-sabre-v3-pro-purevector-ergo-review/",
-     "published": "2026-11-19T17:02Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:01Z",
-   "title": "Invincible Officially Addresses Its Worst Season 4 Episode With Season 5 Reveal",
-   "url": "https://www.polygon.com/invincible-season-5-announcement-teaser/",
-   "sources": [
-    "Polygon"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://static0.polygonimages.com/wordpress/wp-content/uploads/2026/03/invi_s1_fg_104_00411109-still234.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Polygon",
-     "title": "Invincible Officially Addresses Its Worst Season 4 Episode With Season 5 Reveal",
-     "url": "https://www.polygon.com/invincible-season-5-announcement-teaser/",
-     "published": "2026-11-19T17:01Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:00Z",
-   "title": "Here’s Why You Can Get A Haircut At 3 AM In GTA 6",
-   "url": "https://kotaku.com/heres-why-you-can-get-a-haircut-at-3-am-in-gta-6-2000757815",
-   "sources": [
-    "Kotaku"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://kotaku.com/app/uploads/2026/11/jason-oh-boy-3am-1-1280x720.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Kotaku",
-     "title": "Here’s Why You Can Get A Haircut At 3 AM In GTA 6",
-     "url": "https://kotaku.com/heres-why-you-can-get-a-haircut-at-3-am-in-gta-6-2000757815",
-     "published": "2026-11-19T17:00Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-19T17:00Z",
-   "title": "Modern Warfare 4 Now Has Its Own AR Glasses - The RayNeo GT Max Limited Edition Goes 307 Inches",
-   "url": "https://www.thegamer.com/how-use-rayneo-gt-max-call-of-duty-modern-warfare-4-limited-edition-ar-glasses/",
-   "sources": [
-    "TheGamer"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2026/11/mixcollage-19-nov-2026-11-47-am-7217.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "TheGamer",
-     "title": "Modern Warfare 4 Now Has Its Own AR Glasses - The RayNeo GT Max Limited Edition Goes 307 Inches",
-     "url": "https://www.thegamer.com/how-use-rayneo-gt-max-call-of-duty-modern-warfare-4-limited-edition-ar-glasses/",
-     "published": "2026-11-19T17:00Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
    "published": "2026-11-19T17:00Z",
    "title": "Nubby’s Number Factory coming to Nintendo Switch",
    "url": "https://nintendoeverything.com/nubbys-number-factory-coming-to-nintendo-switch/",
    "sources": [
+    "GoNintendo",
     "Nintendo Everything"
    ],
    "ar_relay": false,
@@ -1744,42 +598,277 @@
      "title": "Nubby’s Number Factory coming to Nintendo Switch",
      "url": "https://nintendoeverything.com/nubbys-number-factory-coming-to-nintendo-switch/",
      "published": "2026-11-19T17:00Z"
+    },
+    {
+     "source": "GoNintendo",
+     "title": "Plinko-style roguelike \"Nubby's Number Factory\" coming to Switch Jan. 14th, 2027",
+     "url": "https://gonintendo.com/contents/67412-plinko-style-roguelike-nubby-s-number-factory-coming-to-switch-jan-14th-2027",
+     "published": "2026-11-19T18:33Z"
     }
    ]
   },
   {
-   "count": 1,
-   "published": "2026-11-19T16:57Z",
-   "title": "As a PC gamer, of course the first thing I did in GTA 6 was try a mouse and keyboard",
-   "url": "https://www.pcgamer.com/hardware/as-a-pc-gamer-of-course-the-first-thing-i-did-in-gta-6-was-try-a-mouse-and-keyboard/",
+   "count": 2,
+   "published": "2026-11-19T18:00Z",
+   "title": "It's time for GTA 5's last challenge: 20 more mods aimed at finally breaking it completely",
+   "url": "https://www.pcgamer.com/games/grand-theft-auto/its-time-for-gta-5s-last-challenge-20-more-mods-aimed-at-finally-breaking-it-completely/",
    "sources": [
-    "PC Gamer"
+    "PC Gamer",
+    "Steam News (hub)"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/Vjk993ErTkvqWZoMQdQDi8-1920-80.jpg"
+     "url": "https://cdn.mos.cms.futurecdn.net/J2ySdSSLa3TbTGHxSbLHKi-1920-80.jpg"
     },
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/LjMswP9FgPXnkPxNC7Jfr3-1920-80.jpg"
+     "url": "https://cdn.mos.cms.futurecdn.net/eFiZRyejMSjp8TLbQ3c7fb-1920-80.gif"
+    },
+    {
+     "type": "image",
+     "url": "https://cdn.mos.cms.futurecdn.net/ZF5ZJsyvbhJRVSDmd9H3jA-1920-80.jpg"
     }
    ],
    "items": [
     {
      "source": "PC Gamer",
-     "title": "As a PC gamer, of course the first thing I did in GTA 6 was try a mouse and keyboard",
-     "url": "https://www.pcgamer.com/hardware/as-a-pc-gamer-of-course-the-first-thing-i-did-in-gta-6-was-try-a-mouse-and-keyboard/",
-     "published": "2026-11-19T16:57Z"
+     "title": "It's time for GTA 5's last challenge: 20 more mods aimed at finally breaking it completely",
+     "url": "https://www.pcgamer.com/games/grand-theft-auto/its-time-for-gta-5s-last-challenge-20-more-mods-aimed-at-finally-breaking-it-completely/",
+     "published": "2026-11-19T18:00Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "It's time for GTA 5's last challenge: 20 more mods aimed at finally breaking it completely",
+     "url": "https://store.steampowered.com/news/group/1850/view/693152369910743609",
+     "published": "2026-11-19T18:08Z"
+    }
+   ]
+  },
+  {
+   "count": 2,
+   "published": "2026-11-19T18:00Z",
+   "title": "GTA 6 VP: \"25 years on, the DNA remains\" from Rockstar's original Vice City to modern Leonida",
+   "url": "https://www.gamesradar.com/games/grand-theft-auto/quote-of-the-day-from-gta-6-vp-25-years-on-the-dna-remains-from-rockstars-original-outing-to-vice-city-all-the-way-to-modern-leonida/",
+   "sources": [
+    "GamesRadar",
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://cdn.mos.cms.futurecdn.net/Nm2TBfqZUURGmGrnRzgHVF-1920-80.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "GamesRadar",
+     "title": "GTA 6 VP: \"25 years on, the DNA remains\" from Rockstar's original Vice City to modern Leonida",
+     "url": "https://www.gamesradar.com/games/grand-theft-auto/quote-of-the-day-from-gta-6-vp-25-years-on-the-dna-remains-from-rockstars-original-outing-to-vice-city-all-the-way-to-modern-leonida/",
+     "published": "2026-11-19T18:00Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "GTA 6 VP: \"25 years on, the DNA remains\" from Rockstar's original Vice City to modern Leonida",
+     "url": "https://store.steampowered.com/news/group/38509069/view/668382571964400248",
+     "published": "2026-11-19T18:05Z"
+    }
+   ]
+  },
+  {
+   "count": 2,
+   "published": "2026-11-19T00:00Z",
+   "title": "Feature: GTA 6 Launch Hub - Share Your First Impressions of Rockstar's PS5 Masterpiece",
+   "url": "https://www.pushsquare.com/features/gta-6-launch-hub-share-your-first-impressions-of-rockstars-ps5-masterpiece",
+   "sources": [
+    "Pure Xbox",
+    "Push Square"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://images.pushsquare.com/1ca8a1fd53b66/small.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://images.pushsquare.com/1ca8a1fd53b66/large.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Push Square",
+     "title": "Feature: GTA 6 Launch Hub - Share Your First Impressions of Rockstar's PS5 Masterpiece",
+     "url": "https://www.pushsquare.com/features/gta-6-launch-hub-share-your-first-impressions-of-rockstars-ps5-masterpiece",
+     "published": "2026-11-19T00:00Z"
+    },
+    {
+     "source": "Pure Xbox",
+     "title": "Xbox One Players Share Their First Impressions Of GTA 6 Via The Cloud",
+     "url": "https://www.purexbox.com/news/2026/11/xbox-one-players-share-their-first-impressions-of-gta-6-via-the-cloud",
+     "published": "2026-11-19T18:00Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-19T16:54Z",
-   "title": "Deep Rock Galactic Season 7 puts a gravitational twist on the chaotic co-op game, and you can try it right now",
-   "url": "https://store.steampowered.com/news/group/3693985/view/710040868515480111",
+   "published": "2026-11-19T18:31Z",
+   "title": "يُقدّر أن مليوني لاعب متحمس على Xbox استخدموا \"حيلة نيوزيلندا\" للعب GTA 6 مبكرًا",
+   "url": "https://me.ign.com/ar/grand-theft-auto-vi/197600/yuqdwr-n-mlywny-lb-mthms-l-xbox-stkhdmw-hyl-nywzylnd-llb-gta-6-mbkran",
+   "sources": [
+    "IGN Middle East (AR)"
+   ],
+   "ar_relay": true,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://sm.ign.com/ign_mear/news/a/an-estimat/an-estimated-2-million-eager-xbox-gamers-made-use-of-the-new_67qz.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://sm.ign.com/t/ign_mear/news/a/an-estimat/an-estimated-2-million-eager-xbox-gamers-made-use-of-the-new_67qz.640.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "IGN Middle East (AR)",
+     "title": "يُقدّر أن مليوني لاعب متحمس على Xbox استخدموا \"حيلة نيوزيلندا\" للعب GTA 6 مبكرًا",
+     "url": "https://me.ign.com/ar/grand-theft-auto-vi/197600/yuqdwr-n-mlywny-lb-mthms-l-xbox-stkhdmw-hyl-nywzylnd-llb-gta-6-mbkran",
+     "published": "2026-11-19T18:31Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T18:30Z",
+   "title": "Infinity Nikki Players Are Planning To ‘Girl-cott’ The Game Over Maye Musk Ad",
+   "url": "https://kotaku.com/infinity-nikki-players-are-planning-to-girl-cott-the-game-over-maye-musk-ad-2000758410",
+   "sources": [
+    "Kotaku"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://kotaku.com/app/uploads/2025/01/18e617678eeeb1489dcfd1ab02244da7-1280x721.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Kotaku",
+     "title": "Infinity Nikki Players Are Planning To ‘Girl-cott’ The Game Over Maye Musk Ad",
+     "url": "https://kotaku.com/infinity-nikki-players-are-planning-to-girl-cott-the-game-over-maye-musk-ad-2000758410",
+     "published": "2026-11-19T18:30Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T18:30Z",
+   "title": "GTA 6 Censorship in Japan Sees Characters Shower in Underwear, as Sex and Violence Are Toned Down",
+   "url": "https://www.pushsquare.com/news/2026/11/gta-6-censorship-in-japan-sees-characters-shower-in-underwear-as-sex-and-violence-are-toned-down",
+   "sources": [
+    "Push Square"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://images.pushsquare.com/790c6e71477f5/small.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://images.pushsquare.com/790c6e71477f5/large.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Push Square",
+     "title": "GTA 6 Censorship in Japan Sees Characters Shower in Underwear, as Sex and Violence Are Toned Down",
+     "url": "https://www.pushsquare.com/news/2026/11/gta-6-censorship-in-japan-sees-characters-shower-in-underwear-as-sex-and-violence-are-toned-down",
+     "published": "2026-11-19T18:30Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T18:26Z",
+   "title": "Pokémon TCG: Mega Evolution—Flowing Fists Expansion Launches Feb. 6th, 2027",
+   "url": "https://gonintendo.com/contents/67410-pokemon-tcg-mega-evolution-flowing-fists-expansion-launches-feb-6th-2027",
+   "sources": [
+    "GoNintendo"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://gonintendo.com/attachments/image/89215/file/medium-18d8d73fd17b4df11ebcd066b6756b15.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "GoNintendo",
+     "title": "Pokémon TCG: Mega Evolution—Flowing Fists Expansion Launches Feb. 6th, 2027",
+     "url": "https://gonintendo.com/contents/67410-pokemon-tcg-mega-evolution-flowing-fists-expansion-launches-feb-6th-2027",
+     "published": "2026-11-19T18:26Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T18:25Z",
+   "title": "Action RPG/FPS \"Vasalius: Human Error\" releasing on N64 thanks to Kickstarter success (UPDATE)",
+   "url": "https://gonintendo.com/contents/67012-action-rpg-fps-vasalius-human-error-releasing-on-n64-thanks-to-kickstarter-success",
+   "sources": [
+    "GoNintendo"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://gonintendo.com/attachments/image/88784/file/medium-d4b1c493619bf5c1c14c3d65803db813.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "GoNintendo",
+     "title": "Action RPG/FPS \"Vasalius: Human Error\" releasing on N64 thanks to Kickstarter success (UPDATE)",
+     "url": "https://gonintendo.com/contents/67012-action-rpg-fps-vasalius-human-error-releasing-on-n64-thanks-to-kickstarter-success",
+     "published": "2026-11-19T18:25Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T18:25Z",
+   "title": "How WoW: Forever Is Overhauling Classic WoW’s Infamous PvP Honor Grind",
+   "url": "https://www.gamespot.com/articles/how-wow-forever-is-overhauling-classic-wows-infamous-pvp-honor-grind/",
+   "sources": [
+    "GameSpot"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://www.gamespot.com/wp-content/uploads/2026/11/WoW-Forever-PvP-System-Explained.jpg?w=300"
+    }
+   ],
+   "items": [
+    {
+     "source": "GameSpot",
+     "title": "How WoW: Forever Is Overhauling Classic WoW’s Infamous PvP Honor Grind",
+     "url": "https://www.gamespot.com/articles/how-wow-forever-is-overhauling-classic-wows-infamous-pvp-honor-grind/",
+     "published": "2026-11-19T18:25Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T18:24Z",
+   "title": "Warhammer 40k lore - the Blood Ravens",
+   "url": "https://store.steampowered.com/news/group/718735/view/689774670193361508",
    "sources": [
     "Steam News (hub)"
    ],
@@ -1787,23 +876,171 @@
    "media": [
     {
      "type": "image",
-     "url": "https://www.pcgamesn.com/wp-content/sites/pcgamesn/2026/11/deep-rock-galactic-season-7-release-date-contingency-protocol.jpg"
+     "url": "https://www.wargamer.com/wp-content/sites/wargamer/2026/11/warhammer-40k-blood-ravens-900x506.jpg"
     }
    ],
    "items": [
     {
      "source": "Steam News (hub)",
-     "title": "Deep Rock Galactic Season 7 puts a gravitational twist on the chaotic co-op game, and you can try it right now",
-     "url": "https://store.steampowered.com/news/group/3693985/view/710040868515480111",
-     "published": "2026-11-19T16:54Z"
+     "title": "Warhammer 40k lore - the Blood Ravens",
+     "url": "https://store.steampowered.com/news/group/718735/view/689774670193361508",
+     "published": "2026-11-19T18:24Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-19T16:50Z",
-   "title": "لا يفوتك: موقع غنائم في GTA 6 يمنحك أكثر من 13 ألف دولار مع مقتنيات نادرة وأسلحة!",
-   "url": "https://www.vga4a.com/archives/341890",
+   "published": "2026-11-19T18:19Z",
+   "title": "Karaoke Joysound sees free update that adds in a multitude of Switch 2 features",
+   "url": "https://gonintendo.com/contents/67409-karaoke-joysound-sees-free-update-that-adds-in-a-multitude-of-switch-2-features",
+   "sources": [
+    "GoNintendo"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://gonintendo.com/attachments/image/89214/file/medium-18b2255a1cb4643c7f5568d67a3d8ffb.png"
+    }
+   ],
+   "items": [
+    {
+     "source": "GoNintendo",
+     "title": "Karaoke Joysound sees free update that adds in a multitude of Switch 2 features",
+     "url": "https://gonintendo.com/contents/67409-karaoke-joysound-sees-free-update-that-adds-in-a-multitude-of-switch-2-features",
+     "published": "2026-11-19T18:19Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T18:18Z",
+   "title": "Disney Plus Reveals Official Cast for Zombie Apocalypse Reboot of Classic Comic",
+   "url": "https://www.polygon.com/disney-afterlife-with-archie-cast-revealed/",
+   "sources": [
+    "Polygon"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://static0.polygonimages.com/wordpress/wp-content/uploads/chorus/uploads/chorus_asset/file/9992187/riverdale.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Polygon",
+     "title": "Disney Plus Reveals Official Cast for Zombie Apocalypse Reboot of Classic Comic",
+     "url": "https://www.polygon.com/disney-afterlife-with-archie-cast-revealed/",
+     "published": "2026-11-19T18:18Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T18:16Z",
+   "title": "New Baldur’s Gate 3 console mods include spells, and another difficulty mode",
+   "url": "https://store.steampowered.com/news/group/42342144/view/679641571029680756",
+   "sources": [
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://www.videogameschronicle.com/files/2023/08/baldurs-gate-3-b-1024x576.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Steam News (hub)",
+     "title": "New Baldur’s Gate 3 console mods include spells, and another difficulty mode",
+     "url": "https://store.steampowered.com/news/group/42342144/view/679641571029680756",
+     "published": "2026-11-19T18:16Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T18:15Z",
+   "title": "Golf Hero 3D now available on Switch",
+   "url": "https://gonintendo.com/contents/67408-golf-hero-3d-now-available-on-switch",
+   "sources": [
+    "GoNintendo"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://gonintendo.com/attachments/image/89213/file/medium-3907dcecf66aebe02c5057f5325ffe3a.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "GoNintendo",
+     "title": "Golf Hero 3D now available on Switch",
+     "url": "https://gonintendo.com/contents/67408-golf-hero-3d-now-available-on-switch",
+     "published": "2026-11-19T18:15Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T18:13Z",
+   "title": "مقر الحكومة البريطانية يشيد بلعبة GTA 6 باعتبارها \"قصة نجاح بريطانية\" لكن رئيس الوزراء آندي بيرنهام لا يملك وقتًا للعبها",
+   "url": "https://me.ign.com/ar/grand-theft-auto-vi/197601/mqr-lhkwm-lbrytny-yshyd-blb-gta-6-btbrh-qs-njh-brytny-lkn-ryys-lwzr-andy-byrnhm-l-ymlk-wqtan-llbh",
+   "sources": [
+    "IGN Middle East (AR)"
+   ],
+   "ar_relay": true,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://sm.ign.com/ign_mear/news/d/downing-st/downing-street-hails-gta-6-as-british-success-story-but-uk-p_nwxg.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://sm.ign.com/t/ign_mear/news/d/downing-st/downing-street-hails-gta-6-as-british-success-story-but-uk-p_nwxg.640.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "IGN Middle East (AR)",
+     "title": "مقر الحكومة البريطانية يشيد بلعبة GTA 6 باعتبارها \"قصة نجاح بريطانية\" لكن رئيس الوزراء آندي بيرنهام لا يملك وقتًا للعبها",
+     "url": "https://me.ign.com/ar/grand-theft-auto-vi/197601/mqr-lhkwm-lbrytny-yshyd-blb-gta-6-btbrh-qs-njh-brytny-lkn-ryys-lwzr-andy-byrnhm-l-ymlk-wqtan-llbh",
+     "published": "2026-11-19T18:13Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T18:08Z",
+   "title": "Grand Theft Timeline is Out Now!",
+   "url": "https://store.steampowered.com/news/app/4928450/view/687522870377579080",
+   "sources": [
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://clan.akamai.steamstatic.com/images/46202226/281b5c27fd98dd60d679ab7ce75f59dcdb330a8b.png"
+    }
+   ],
+   "items": [
+    {
+     "source": "Steam News (hub)",
+     "title": "Grand Theft Timeline is Out Now!",
+     "url": "https://store.steampowered.com/news/app/4928450/view/687522870377579080",
+     "published": "2026-11-19T18:08Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T18:05Z",
+   "title": "لعبة GTA 6 تستبعد بائعات الهوى لأول مرة في تاريخ السلسلة.. وروكستار توضح السبب",
+   "url": "https://www.vga4a.com/archives/341896",
    "sources": [
     "VGA4A (AR)"
    ],
@@ -1811,82 +1048,340 @@
    "media": [
     {
      "type": "image",
-     "url": "https://i0.wp.com/www.vga4a.com/wp-content/uploads/2026/11/gta-6-money.webp?fit=1920%2C1080&ssl=1"
+     "url": "https://www.vga4a.com/wp-content/uploads/GTA-6-1-1.avif"
     }
    ],
    "items": [
     {
      "source": "VGA4A (AR)",
-     "title": "لا يفوتك: موقع غنائم في GTA 6 يمنحك أكثر من 13 ألف دولار مع مقتنيات نادرة وأسلحة!",
-     "url": "https://www.vga4a.com/archives/341890",
-     "published": "2026-11-19T16:50Z"
+     "title": "لعبة GTA 6 تستبعد بائعات الهوى لأول مرة في تاريخ السلسلة.. وروكستار توضح السبب",
+     "url": "https://www.vga4a.com/archives/341896",
+     "published": "2026-11-19T18:05Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-19T16:45Z",
-   "title": "أجهزة NVIDIA RTX Spark المكتبية تصل من ASUS و Dell و MSI",
-   "url": "https://arabhardware.net/post-55187",
+   "published": "2026-11-19T17:50Z",
+   "title": "U.S. software/hardware charts for Oct. 2026",
+   "url": "https://gonintendo.com/contents/67405-u-s-software-hardware-charts-for-oct-2026",
    "sources": [
-    "Arab Hardware (AR)"
+    "GoNintendo"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://gonintendo.com/attachments/image/89208/file/medium-a29839dc662d5d753f3ae10101909813.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "GoNintendo",
+     "title": "U.S. software/hardware charts for Oct. 2026",
+     "url": "https://gonintendo.com/contents/67405-u-s-software-hardware-charts-for-oct-2026",
+     "published": "2026-11-19T17:50Z"
+    },
+    {
+     "source": "GoNintendo",
+     "title": "Japanese software/hardware sales for Nov. 9th to 15th, 2026",
+     "url": "https://gonintendo.com/contents/67407-japanese-software-hardware-sales-for-nov-9th-to-15th-2026",
+     "published": "2026-11-19T18:02Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T18:02Z",
+   "title": "Ubisoft تفصل 166 موظفا من استوديوهاتها في كندا",
+   "url": "https://www.true-gaming.net/home/644079/ubisoft-%d8%aa%d9%81%d8%b5%d9%84-166-%d9%85%d9%88%d8%b8%d9%81%d8%a7-%d9%85%d9%86-%d8%a7%d8%b3%d8%aa%d9%88%d8%af%d9%8a%d9%88%d9%87%d8%a7%d8%aa%d9%87%d8%a7-%d9%81%d9%8a-%d9%83%d9%86%d8%af%d8%a7/",
+   "sources": [
+    "True Gaming (AR)"
    ],
    "ar_relay": true,
    "media": [
     {
      "type": "image",
-     "url": "https://arabhardware.net/storage/uploads/2026-11/6aff26490b06b.c53e592d-4b12-44f9-be27-1e9cc6b34d04.jpgmain6aff2649181fa.webp"
+     "url": "https://www.true-gaming.net/home/wp-content/uploads/2026/11/1531119-trois-cadres-dubisoft-montreal-viennent-810x540.webp"
     }
    ],
    "items": [
     {
-     "source": "Arab Hardware (AR)",
-     "title": "أجهزة NVIDIA RTX Spark المكتبية تصل من ASUS و Dell و MSI",
-     "url": "https://arabhardware.net/post-55187",
-     "published": "2026-11-19T16:45Z"
+     "source": "True Gaming (AR)",
+     "title": "Ubisoft تفصل 166 موظفا من استوديوهاتها في كندا",
+     "url": "https://www.true-gaming.net/home/644079/ubisoft-%d8%aa%d9%81%d8%b5%d9%84-166-%d9%85%d9%88%d8%b8%d9%81%d8%a7-%d9%85%d9%86-%d8%a7%d8%b3%d8%aa%d9%88%d8%af%d9%8a%d9%88%d9%87%d8%a7%d8%aa%d9%87%d8%a7-%d9%81%d9%8a-%d9%83%d9%86%d8%af%d8%a7/",
+     "published": "2026-11-19T18:02Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-19T16:32Z",
-   "title": "Lenovo leak shows a screen that floats above a box",
-   "url": "https://tbreak.com/lenovo-project-hoverview-leak/",
+   "published": "2026-11-19T16:00Z",
+   "title": "Firesquid Publisher Sale 2026",
+   "url": "https://store.steampowered.com/news/group/40112945/view/702150052386177239",
    "sources": [
-    "Tbreak (Gulf)"
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://clan.akamai.steamstatic.com/images/40112945/9768a7aa8b86edb915f7c39c546b3afffbd747d2.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Steam News (hub)",
+     "title": "Firesquid Publisher Sale 2026",
+     "url": "https://store.steampowered.com/news/group/40112945/view/702150052386177239",
+     "published": "2026-11-19T16:00Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "NIS America Publisher Sale 2026",
+     "url": "https://store.steampowered.com/news/group/32623015/view/693147926453553685",
+     "published": "2026-11-19T18:00Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "PlayStation Publisher Sale 2026",
+     "url": "https://store.steampowered.com/news/group/40425349/view/701020348316913125",
+     "published": "2026-11-19T18:00Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T18:00Z",
+   "title": "Doja Cat Is Crashing Out About Her Music Not Being In GTA 6: ‘I’m So F*ckin Bitter’",
+   "url": "https://kotaku.com/gta6-grand-theft-auto-6-doja-cat-soundtrack-radio-2000758471",
+   "sources": [
+    "Kotaku"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://kotaku.com/app/uploads/2026/11/GettyImages-2283788084-1.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Kotaku",
+     "title": "Doja Cat Is Crashing Out About Her Music Not Being In GTA 6: ‘I’m So F*ckin Bitter’",
+     "url": "https://kotaku.com/gta6-grand-theft-auto-6-doja-cat-soundtrack-radio-2000758471",
+     "published": "2026-11-19T18:00Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T18:00Z",
+   "title": "WIXOSS Trading Card Game Ending in Japan",
+   "url": "https://www.siliconera.com/wixoss-trading-card-game-ending-in-japan/",
+   "sources": [
+    "Siliconera"
    ],
    "ar_relay": false,
    "media": [],
    "items": [
     {
-     "source": "Tbreak (Gulf)",
-     "title": "Lenovo leak shows a screen that floats above a box",
-     "url": "https://tbreak.com/lenovo-project-hoverview-leak/",
-     "published": "2026-11-19T16:32Z"
+     "source": "Siliconera",
+     "title": "WIXOSS Trading Card Game Ending in Japan",
+     "url": "https://www.siliconera.com/wixoss-trading-card-game-ending-in-japan/",
+     "published": "2026-11-19T18:00Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-19T16:25Z",
-   "title": "قم بالتحديث الآن | ثغرة Java خطيرة تسمح بتنفيذ شيفرات عن بُعد",
-   "url": "https://arabhardware.net/post-55186",
+   "published": "2026-11-19T18:00Z",
+   "title": "تسريب لعبة Fallout فرعية و جديدة من Bethesda",
+   "url": "https://www.true-gaming.net/home/644077/%d8%aa%d8%b3%d8%b1%d9%8a%d8%a8-%d9%84%d8%b9%d8%a8%d8%a9-fallout-%d9%81%d8%b1%d8%b9%d9%8a%d8%a9-%d9%88-%d8%ac%d8%af%d9%8a%d8%af%d8%a9-%d9%85%d9%86-bethesda/",
    "sources": [
-    "Arab Hardware (AR)"
+    "True Gaming (AR)"
    ],
    "ar_relay": true,
    "media": [
     {
      "type": "image",
-     "url": "https://arabhardware.net/storage/uploads/2026-11/6aff21abe4902.62cedbc8-662b-4583-89ad-3156005a05f5.pngmain6aff21ac04598.webp"
+     "url": "https://www.true-gaming.net/home/wp-content/uploads/2025/11/according-to-a-designer-who-worked-on-the-original-game-fallout-3-remastered-should-change-the-shooting-cover680a054ed7f33-864x540.webp"
     }
    ],
    "items": [
     {
-     "source": "Arab Hardware (AR)",
-     "title": "قم بالتحديث الآن | ثغرة Java خطيرة تسمح بتنفيذ شيفرات عن بُعد",
-     "url": "https://arabhardware.net/post-55186",
-     "published": "2026-11-19T16:25Z"
+     "source": "True Gaming (AR)",
+     "title": "تسريب لعبة Fallout فرعية و جديدة من Bethesda",
+     "url": "https://www.true-gaming.net/home/644077/%d8%aa%d8%b3%d8%b1%d9%8a%d8%a8-%d9%84%d8%b9%d8%a8%d8%a9-fallout-%d9%81%d8%b1%d8%b9%d9%8a%d8%a9-%d9%88-%d8%ac%d8%af%d9%8a%d8%af%d8%a9-%d9%85%d9%86-bethesda/",
+     "published": "2026-11-19T18:00Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T17:59Z",
+   "title": "The Agency Opens The Isolated Raid \"Culling of Dogorsk\"",
+   "url": "https://store.steampowered.com/news/app/2887580/view/712292668328116852",
+   "sources": [
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://clan.fastly.steamstatic.com/images/45276524/9f0bc4fa95d136b6170eebe16a3563988fb381a7.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://clan.fastly.steamstatic.com/images/45276524/3256e8045f68ff40246afd40b1bf4b37d9187fef.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://clan.fastly.steamstatic.com/images/45276524/5f2e07d55931d6b8d6f6d34c0e0e547df5021855.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://clan.fastly.steamstatic.com/images/45276524/96529569f1dae91b042802f1316ee19032290fad.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Steam News (hub)",
+     "title": "The Agency Opens The Isolated Raid \"Culling of Dogorsk\"",
+     "url": "https://store.steampowered.com/news/app/2887580/view/712292668328116852",
+     "published": "2026-11-19T17:59Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-18T20:13Z",
+   "title": "Disney Speedstorm Season 23 \"Recipe for a Dream\" Launches Nov. 19th, 2026, Patch Notes Shared",
+   "url": "https://gonintendo.com/contents/67376-disney-speedstorm-season-23-recipe-for-a-dream-launches-nov-19th-2026-patch-notes",
+   "sources": [
+    "GoNintendo"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://gonintendo.com/attachments/image/89175/file/medium-60a2741e73ad21bb2b69473eddf2cc12.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "GoNintendo",
+     "title": "Disney Speedstorm Season 23 \"Recipe for a Dream\" Launches Nov. 19th, 2026, Patch Notes Shared",
+     "url": "https://gonintendo.com/contents/67376-disney-speedstorm-season-23-recipe-for-a-dream-launches-nov-19th-2026-patch-notes",
+     "published": "2026-11-18T20:13Z"
+    },
+    {
+     "source": "GoNintendo",
+     "title": "Carpet Cleaning Simulator coming to Switch Nov. 19th, 2026",
+     "url": "https://gonintendo.com/contents/67378-carpet-cleaning-simulator-coming-to-switch-nov-19th-2026",
+     "published": "2026-11-18T20:21Z"
+    },
+    {
+     "source": "GoNintendo",
+     "title": "EGGCONSOLE THEXDER MSX comes to Switch Nov. 19th, 2026",
+     "url": "https://gonintendo.com/contents/67379-eggconsole-thexder-msx-comes-to-switch-nov-19th-2026",
+     "published": "2026-11-18T20:26Z"
+    },
+    {
+     "source": "GoNintendo",
+     "title": "Niconico-san coming to Switch Nov. 26th, 2026",
+     "url": "https://gonintendo.com/contents/67388-niconico-san-coming-to-switch-nov-26th-2026",
+     "published": "2026-11-19T04:21Z"
+    },
+    {
+     "source": "GoNintendo",
+     "title": "Disney Speedstorm Season 23 \"Recipe for a Dream\" Launches Today",
+     "url": "https://gonintendo.com/contents/67390-disney-speedstorm-season-23-recipe-for-a-dream-launches-today",
+     "published": "2026-11-19T05:07Z"
+    },
+    {
+     "source": "GoNintendo",
+     "title": "European eShop releases for the week of Nov. 19th, 2026",
+     "url": "https://gonintendo.com/contents/67403-european-eshop-releases-for-the-week-of-nov-19th-2026",
+     "published": "2026-11-19T09:31Z"
+    },
+    {
+     "source": "GoNintendo",
+     "title": "North American eShop releases for the week of Nov. 19th, 2026",
+     "url": "https://gonintendo.com/contents/67406-north-american-eshop-releases-for-the-week-of-nov-19th-2026",
+     "published": "2026-11-19T17:58Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T17:48Z",
+   "title": "GTA 6 players are being abducted by aliens and knocked out by Bigfoot",
+   "url": "https://www.eurogamer.net/gta-6-ufo-bigfoot-easter-eggs",
+   "sources": [
+    "Eurogamer"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://assetsio.gnwcdn.com/Screenshot-2026-11-19-at-17.37.59.png?width=690&quality=85&format=jpg&auto=webp"
+    }
+   ],
+   "items": [
+    {
+     "source": "Eurogamer",
+     "title": "GTA 6 players are being abducted by aliens and knocked out by Bigfoot",
+     "url": "https://www.eurogamer.net/gta-6-ufo-bigfoot-easter-eggs",
+     "published": "2026-11-19T17:48Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T17:47Z",
+   "title": "لاعبون يكتشفون إشارة مثيرة إلى مؤسس Rockstar في GTA 6",
+   "url": "https://www.true-gaming.net/home/644072/%d9%84%d8%a7%d8%b9%d8%a8%d9%88%d9%86-%d9%8a%d9%83%d8%aa%d8%b4%d9%81%d9%88%d9%86-%d8%a5%d8%b4%d8%a7%d8%b1%d8%a9-%d9%85%d8%ab%d9%8a%d8%b1%d8%a9-%d8%a5%d9%84%d9%89-%d9%85%d8%a4%d8%b3%d8%b3-rockstar/",
+   "sources": [
+    "True Gaming (AR)"
+   ],
+   "ar_relay": true,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://www.true-gaming.net/home/wp-content/uploads/2026/11/qftUB3KeiYNLRLCEWMq4EY-650-80.jpg.webp"
+    }
+   ],
+   "items": [
+    {
+     "source": "True Gaming (AR)",
+     "title": "لاعبون يكتشفون إشارة مثيرة إلى مؤسس Rockstar في GTA 6",
+     "url": "https://www.true-gaming.net/home/644072/%d9%84%d8%a7%d8%b9%d8%a8%d9%88%d9%86-%d9%8a%d9%83%d8%aa%d8%b4%d9%81%d9%88%d9%86-%d8%a5%d8%b4%d8%a7%d8%b1%d8%a9-%d9%85%d8%ab%d9%8a%d8%b1%d8%a9-%d8%a5%d9%84%d9%89-%d9%85%d8%a4%d8%b3%d8%b3-rockstar/",
+     "published": "2026-11-19T17:47Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-19T17:45Z",
+   "title": "Be Careful With Auto-Saving In GTA 6, It Doesn’t Happen As Often As You Think",
+   "url": "https://kotaku.com/be-careful-with-auto-saving-in-gta-6-it-doesnt-happen-as-often-as-you-think-2000758487",
+   "sources": [
+    "Kotaku"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://kotaku.com/app/uploads/2026/11/image-13-1280x720.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Kotaku",
+     "title": "Be Careful With Auto-Saving In GTA 6, It Doesn’t Happen As Often As You Think",
+     "url": "https://kotaku.com/be-careful-with-auto-saving-in-gta-6-it-doesnt-happen-as-often-as-you-think-2000758487",
+     "published": "2026-11-19T17:45Z"
     }
    ]
   }
@@ -1897,7 +1392,7 @@
   "PlayStation (X) (HTTP 429, 12x)",
   "PlayStation Middle East (X) (HTTP 429, 21x)",
   "Rockstar Games (X) (HTTP 429, 8x)",
-  "The Game Awards (HTTP 403, 43x)",
+  "The Game Awards (HTTP 403, 44x)",
   "Xbox (X) (HTTP 429, 99x)"
  ],
  "not_covered": [
@@ -1928,7 +1423,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-19T17:50:15Z",
+  "last_poll_at": "2026-11-19T18:50:05Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 7,
@@ -1938,7 +1433,7 @@
    "PlayStation (X) (HTTP 429, 12x)",
    "PlayStation Middle East (X) (HTTP 429, 21x)",
    "Rockstar Games (X) (HTTP 429, 8x)",
-   "The Game Awards (HTTP 403, 43x)",
+   "The Game Awards (HTTP 403, 44x)",
    "Xbox (X) (HTTP 429, 99x)"
   ]
  }
