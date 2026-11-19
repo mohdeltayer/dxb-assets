@@ -13,10 +13,52 @@ Every function prints what it saw and writes `go=true|false` (or `lane=`) to $GI
 Needs GH_TOKEN, GITHUB_REPOSITORY, GITHUB_RUN_ID; the workflow grants `actions: read`.
 
     python3 render_route.py busy | standby | claim
+    python3 render_route.py live <job.json>      render-live's route job: lane server or overflow
+
+Server lanes (Mohammad, 19 Nov 2026): templates/assets/server-lanes.json sets `runners` (runner instances on dxb-render-1),
+`render_slots` (renders at once for a normal job) and `t0_reserve` (extra render slots only T0 and breaking jobs take).
+A job goes to the server when fewer renders than its limit are on the server (normal: render_slots; T0 and breaking:
+render_slots + t0_reserve, and a runner instance must be free so it never waits); otherwise a normal job overflows to render.yml at once and a
+T0 job renders on a GitHub runner, so nothing waits in a queue behind a render. Reads and checks (prerender, watch,
+server checks) are not renders: they take any free instance and are never counted against the render slots.
 """
 import json, os, subprocess, sys, time
 
 LABEL = 'dxb-render'
+LANES = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'server-lanes.json')
+
+
+def lanes():
+    try:
+        c = json.load(open(LANES))
+    except (OSError, ValueError):
+        c = {}
+    c.setdefault('runners', 1)
+    c.setdefault('render_slots', 1)
+    c.setdefault('t0_reserve', 0)
+    c.setdefault('render_jobs', {'render-live': ['live'], 'render-breaking': ['server'], 'server-capacity-test': ['capacity']})
+    return c
+
+
+def priority(job):
+    """T0 and breaking jobs: a slip of tier 0, a job marked tier 0 / T0 or priority, the breaking profile or kind."""
+    tier = job.get('tier', (job.get('slip') or {}).get('tier'))
+    return (str(tier).upper() in ('0', 'T0') or job.get('priority') is True or job.get('profile') == 'breaking'
+            or job.get('kind') == 'breaking')
+
+
+def decide(holders, is_priority, c=None):
+    """holders: [(workflow, job name, status)] on the server. Returns (lane, reason)."""
+    c = c or lanes()
+    rj = c['render_jobs']
+    renders = [h for h in holders if h[1] in rj.get(h[0], [])]
+    limit = c['render_slots'] + (c['t0_reserve'] if is_priority else 0)
+    free = c['runners'] - len(holders)
+    why = f"{len(renders)} render(s) and {len(holders) - len(renders)} other job(s) on the server; " \
+          f"{c['runners']} runner(s), render limit {limit}{' (T0)' if is_priority else ''}"
+    if len(renders) < limit and (free >= 1 or not is_priority):
+        return 'server', why                    # a normal job may wait a moment behind a read; a T0 job never waits
+    return 'overflow', why
 CLAIM = 'Hosted render claimed'
 GRACE = int(os.environ.get('T0_GRACE', '25'))
 
@@ -36,6 +78,19 @@ def out(k, v):
 
 def jobs_of(repo, run):
     return gh(f'repos/{repo}/actions/runs/{run}/jobs?per_page=100&filter=latest').get('jobs', [])
+
+
+def holders(repo, me):
+    """(workflow, job, status) of every job holding or waiting for the server, from every other live run."""
+    held = []
+    for status in ('in_progress', 'queued'):
+        for r in gh(f'repos/{repo}/actions/runs?status={status}&per_page=50').get('workflow_runs', []):
+            if str(r['id']) == str(me):
+                continue
+            for j in jobs_of(repo, r['id']):
+                if j.get('status') in ('queued', 'in_progress') and LABEL in (j.get('labels') or []):
+                    held.append((r.get('name'), j.get('name'), j.get('status')))
+    return held
 
 
 def busy(repo, me):
@@ -59,13 +114,27 @@ def main(what):
             out('lane', forced)
             return
         try:
-            held = busy(repo, run)
+            held = holders(repo, run)
         except Exception as e:                          # cannot tell: GitHub is the safe lane, it never waits on the server
             print(f'render_route: could not read the runs ({e}); hosted')
             out('lane', 'hosted')
             return
-        print('render_route: server holders: ' + ('; '.join(held) or 'none'))
-        out('lane', 'hosted' if held else 'server')
+        print('render_route: server holders: ' + ('; '.join(f'{w}/{j} ({s})' for w, j, s in held) or 'none'))
+        lane, why = decide(held, True)                  # a breaking job is T0: it may take the reserved slot
+        print('render_route: ' + why)
+        out('lane', 'server' if lane == 'server' else 'hosted')
+    elif what == 'live':
+        job = json.load(open(sys.argv[2]))
+        try:
+            held = holders(repo, run)
+        except Exception as e:                          # cannot tell: the server is still the default for the live lane
+            print(f'render_route: could not read the runs ({e}); server')
+            out('lane', 'server')
+            return
+        print('render_route: server holders: ' + ('; '.join(f'{w}/{j} ({s})' for w, j, s in held) or 'none'))
+        lane, why = decide(held, priority(job))
+        print('render_route: ' + why + f' -> {lane}')
+        out('lane', lane)
     elif what == 'standby':
         t0 = time.time()
         while time.time() - t0 < GRACE:

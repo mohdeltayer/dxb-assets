@@ -27,10 +27,92 @@ on:
       job:
         description: 'Job name, or jobs/live/<name>.json, on main'
         required: true
+      dry:
+        description: 'true: only print the lane the route picks (server or overflow); nothing renders or moves'
+        required: false
+        default: 'false'
 
 jobs:
-  live:
+  # Server lanes (Mohammad, 19 Nov 2026): the server takes render_slots renders at once (templates/assets/server-lanes.json);
+  # a further normal job overflows to render.yml at once instead of waiting; T0 jobs (tier 0, priority, breaking) may take
+  # the reserved slot. Serialised so two dispatches in the same second cannot both take the last slot.
+  route:
     if: github.repository == 'mohdeltayer/dxb-assets' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: read
+    concurrency:
+      group: server-route
+      cancel-in-progress: false
+    outputs:
+      lane: ${{ steps.lane.outputs.lane }}
+      job: ${{ steps.job.outputs.job }}
+    env:
+      JOB_INPUT: ${{ inputs.job }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            templates/render_route.py
+            templates/jobpath.py
+            templates/assets/server-lanes.json
+            jobs/live
+          sparse-checkout-cone-mode: false
+      - name: Job
+        id: job
+        run: |
+          printf '%s' "$JOB_INPUT" | grep -Eq '^(jobs/live/)?[A-Za-z0-9][A-Za-z0-9._-]*$' || { echo "job must be a name or jobs/live/<name>.json"; exit 1; }
+          j=$(python3 templates/jobpath.py live "$JOB_INPUT") || exit 1
+          echo "job=$j" >> "$GITHUB_OUTPUT"; echo "job: $j"
+      - name: Server slot or overflow
+        id: lane
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 templates/render_route.py live "${{ steps.job.outputs.job }}"
+
+  # Overflow: the job moves to jobs/render/ and render.yml renders it on a GitHub runner (same render, commit, strip,
+  # sheet and Publer upload). The two render-live guards run here first, as on the server.
+  overflow:
+    needs: route
+    if: needs.route.outputs.lane == 'overflow' && inputs.dry != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      actions: write
+    env:
+      JOB: ${{ needs.route.outputs.job }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            templates
+            jobs
+            newsroom/stories
+      - name: Guards (as on the server)
+        run: |
+          python3 templates/jobsha.py check "$(basename "$JOB" .json)" "$(git hash-object "$JOB")"
+          python3 templates/qc.py rerender "$JOB"
+      - name: Move to jobs/render and start render.yml
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          dst="jobs/render/$(basename "$JOB")"
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p jobs/render; git mv "$JOB" "$dst"
+          git commit -q -m "Overflow $(basename "$JOB" .json) to the GitHub runner (server render slots full)"
+          for i in 1 2 3 4; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 5; done
+          gh workflow run render.yml --repo "$GITHUB_REPOSITORY" --ref main -f job="$dst"
+          echo "### Overflow: $(basename "$JOB" .json) renders on GitHub (render.yml)" >> "$GITHUB_STEP_SUMMARY"
+
+  live:
+    needs: route
+    if: needs.route.outputs.lane == 'server' && inputs.dry != 'true'
     runs-on: [self-hosted, dxb-render]
     timeout-minutes: 25
     # One run per job file at a time, as in render.yml.

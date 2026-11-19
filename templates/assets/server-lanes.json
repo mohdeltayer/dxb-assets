@@ -1,0 +1,7 @@
+{
+ "note": "Server render lanes (Mohammad, 19 Nov 2026: two renders at once on dxb-render-1, the third overflowing to GitHub). runners: runner instances registered on dxb-render-1 (label dxb-render); render_slots: renders a normal job may share the server with; t0_reserve: extra render slots only T0 and breaking jobs may take. Raise render_slots and t0_reserve only after the runner instances exist: a job routed to the server when every instance is busy waits there instead of overflowing. templates/render_route.py reads this file.",
+ "runners": 1,
+ "render_slots": 1,
+ "t0_reserve": 0,
+ "render_jobs": {"render-live": ["live"], "render-breaking": ["server"], "server-capacity-test": ["capacity"]}
+}
