@@ -1,10 +1,23 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-19T16:52:26Z",
- "seq": 653,
+ "generated_at": "2026-11-19T17:10:18Z",
+ "seq": 654,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 18693,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/19/26 Adventure Awaits: Save on a daring selection of digital games Discover your next big adventure with Nintendo Switch™ 2 and Nintendo Switch games packed",
+   "url": "https://www.nintendo.com/us/whatsnew/adventure-awaits-save-on-a-daring-selection-of-digital-games/",
+   "published": null,
+   "first_seen": "2026-11-19T17:10:15Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 654
+  }
+ ],
  "recent": [
   {
    "id": 18605,
@@ -233,49 +246,16 @@
    ],
    "breaking_source": true,
    "breaking_seq": 620
-  },
-  {
-   "id": 17700,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Poppy Playtime: Toybox 1 Bundle - Out Now | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=9aCVhYoLZ7s",
-   "published": "2026-11-18T17:00Z",
-   "first_seen": "2026-11-18T17:10:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/9aCVhYoLZ7s/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=9aCVhYoLZ7s"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 619
-  },
-  {
-   "id": 17699,
-   "source": "Nintendo US",
-   "source_kind": "page",
-   "title": "11/18/26 The Keepsake Sea sets sail in Disney Dreamlight Valley The new expansion Disney Dreamlight Valley: The Keepsake Sea sets sail today! In this expansion,",
-   "url": "https://www.nintendo.com/us/whatsnew/the-keepsake-sea-sets-sail-in-disney-dreamlight-valley/",
-   "published": null,
-   "first_seen": "2026-11-18T17:10:14Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 619
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-19T16:52:26Z",
+  "last_poll_at": "2026-11-19T17:10:15Z",
   "sources_enabled": 100,
   "sources_ok": 92,
   "sources_failing": 7,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 123x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 124x)",
    "Nintendo of America (X) (HTTP 429, 79x)",
    "PlayStation (X) (HTTP 429, 12x)",
    "PlayStation Middle East (X) (HTTP 429, 21x)",
