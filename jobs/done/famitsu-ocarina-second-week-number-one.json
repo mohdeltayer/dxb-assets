@@ -281,7 +281,7 @@
   ]
  ],
  "spoken": "للأسبوع الثاني على التوالي، تتصدر لعبة Ocarina of Time على Switch 2 مبيعات اليابان بـ86,097 نسخة، حسب قائمة فاميتسو (Famitsu) الأسبوعية. ارتفع مجموعها إلى 623,138 نسخة، بعد 537,041 نسخة في أسبوعها الأول. وجاءت Metaphor: ReFantazio على Switch 2 في المركز الثاني بدخول جديد.",
- "headline": "الصدارة في اليابان مجددًا\nلـ Ocarina of Time",
+ "headline": "الصدارة في اليابان مجددًا\nلعبة Ocarina of Time",
  "label": "تقرير",
  "game": "The Legend of Zelda: Ocarina of Time",
  "game_short": "Ocarina of Time",
@@ -323,5 +323,9 @@
   "credit on every clip": "yes: one credit over every shot",
   "sound": "yes: trailer sound from the first shot, split per shot on the server",
   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ },
+ "rerender": {
+  "reason": "unreadable_text",
+  "note": "Director FIX: the prefix لـ before the Latin game name rendered as a stray J in the headline; line 2 now reads لعبة Ocarina of Time, nothing else changed"
  }
 }
