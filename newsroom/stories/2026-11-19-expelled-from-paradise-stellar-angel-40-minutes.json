@@ -51,5 +51,25 @@
    "from"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/expelled-from-paradise-stellar-angel-40-minutes-reel-v1.mp4",
+  "blob": "80af25e95d7c0c0efa8f106ebfb9ea382e469670",
+  "at": "2026-11-19T06:18:50Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/expelled-from-paradise-stellar-angel-40-minutes.json",
+   "sha256": "d124d9d44ce0d44d0bfc7d839fb9acea49a76e1700ad33a4998b176dc142e317",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "strip and three look frames: headline clear, captions 62 px readable on pale art, credit on its band"
  }
 }
