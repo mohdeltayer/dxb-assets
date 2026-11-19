@@ -70,5 +70,25 @@
    "ocarina-of-time-5-2-million-20261111",
    "ocarina-of-time-switch-2-review-scores-nov-6"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/famitsu-ocarina-second-week-number-one-reel-v1.mp4",
+  "blob": "38a08581076a1f979c3aa80bb7c1d3ebdd0dd684",
+  "at": "2026-11-19T13:35:05Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/famitsu-ocarina-second-week-number-one.json",
+   "sha256": "7bc1127e840e44481c976d62aeb77ab89194a1ad221f50d5cfe7302479157242",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "cards/2026-11/famitsu-ocarina-second-week-number-one-look-1.jpg"
  }
 }
