@@ -1,0 +1,354 @@
+{
+ "name": "expelled-from-paradise-stellar-angel-40-minutes",
+ "out": "cards/2026-11/expelled-from-paradise-stellar-angel-40-minutes-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "source smear",
+   "detail": "blocky smear in the source: expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 1.60 to 2.00 s (peak 50.4); expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 1.60 to 2.00 s (peak 50.4); expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 1.60 to 2.00 s (peak 50.4); expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 1.60 to 2.00 s (peak 50.4); expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 1.60 to 2.00 s (peak 50.4); expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 1.60 to 2.00 s (peak 50.4); expelled-from-paradise-stellar-angel-4"
+  }
+ ],
+ "ladder": [],
+ "job_to_pass_min": 4.4,
+ "at": "2026-11-19T05:46:59Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 1 expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 2 expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 3 expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 4 expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 5 expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 6 expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "length 14.7 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 70.4; leak_pct 0.3; cache {'hit': 0, 'miss': 3}; separate_secs 21.1; secs 30.3",
+  "render_job: lifeless: {\"score\": 2.4, \"still_share\": 0.021, \"longest_still\": 0.3, \"cuts_per_10s\": 4.79, \"held_under_text\": 0.014, \"secs\": 14.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 at 22.91 s for 3.8 s, focus 0.545"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 at 31.11 s for 2.2 s, focus 0.528"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 at 37.25 s for 2.2 s, focus 0.594"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 at 39.45 s for 2.2 s, focus 0.594"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 at 44.68 s for 2.2 s, focus 0.61"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 at 51.41 s for 2.2 s, focus 0.391"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4 at 31.08 s for 2.2 s, focus 0.782 (nothing free in expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4)"
+  },
+  {
+   "where": "shot 1",
+   "rule": "subject_drift",
+   "what": "trimmed to 2.00 s, its longest safe length before the subject leaves the 9:16 window",
+   "before": [
+    "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+    31.11,
+    2.2,
+    [
+     [
+      0.0,
+      0.528
+     ]
+    ]
+   ],
+   "after": [
+    "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+    31.11,
+    2.0,
+    [
+     [
+      0.0,
+      0.528
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 2",
+   "rule": "fill",
+   "what": "lengthened 2.20 to 2.40 s to keep the time shot 1 gave up",
+   "before": 2.2,
+   "after": 2.4
+  }
+ ],
+ "job_sha": "3a1d72cf31ad41af767eea560a470ee4f817b841",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/expelled-from-paradise-stellar-angel-40-minutes-look-1.jpg",
+  "cards/2026-11/expelled-from-paradise-stellar-angel-40-minutes-look-2.jpg",
+  "cards/2026-11/expelled-from-paradise-stellar-angel-40-minutes-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 37.5,
+  "files": {
+   "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4": {
+    "secs": 20.7,
+    "cached": false,
+    "stages": {
+     "decode": 8.1,
+     "autofocus": 20.6,
+     "ocr": 20.6,
+     "smear": 20.6,
+     "scenes": 20.7
+    },
+    "incomplete": null
+   },
+   "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4": {
+    "secs": 16.8,
+    "cached": false,
+    "stages": {
+     "decode": 7.3,
+     "autofocus": 16.7,
+     "ocr": 16.7,
+     "smear": 16.7,
+     "scenes": 16.8
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/expelled-from-paradise-stellar-angel-40-minutes.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.18,
+  "fetch": 0.21,
+  "shots": 0.63,
+  "checks": 0.93,
+  "render": 1.65,
+  "after": 0.6,
+  "job": 4.03
+ },
+ "job_after_autofix": {
+  "name": "expelled-from-paradise-stellar-angel-40-minutes",
+  "story": "2026-11-19-expelled-from-paradise-stellar-angel-40-minutes",
+  "footage_source": "steam:4607420",
+  "kind_news": "reveal",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/expelled-from-paradise-stellar-angel-40-minutes-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+    "steam": 4607420,
+    "trailer": "Story PV",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "4607420"
+   },
+   {
+    "file": "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4",
+    "steam": 4607420,
+    "trailer": "Teaser PV",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "4607420"
+   }
+  ],
+  "shots": [
+   [
+    "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+    22.91,
+    3.8,
+    [
+     [
+      0.0,
+      0.545
+     ]
+    ]
+   ],
+   [
+    "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+    31.11,
+    2.0,
+    [
+     [
+      0.0,
+      0.528
+     ]
+    ]
+   ],
+   [
+    "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+    37.25,
+    2.4,
+    [
+     [
+      0.0,
+      0.594
+     ]
+    ]
+   ],
+   [
+    "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+    39.45,
+    2.2,
+    [
+     [
+      0.0,
+      0.594
+     ]
+    ]
+   ],
+   [
+    "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+    44.68,
+    2.2,
+    [
+     [
+      0.0,
+      0.61
+     ]
+    ]
+   ],
+   [
+    "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+    51.41,
+    2.24,
+    [
+     [
+      0.0,
+      0.391
+     ]
+    ]
+   ],
+   [
+    "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4",
+    31.08,
+    2.24,
+    [
+     [
+      0.0,
+      0.782
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "تقول جيماتسو (Gematsu)\nإن المقطع",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "يعرض افتتاح هذه\nالرواية البصرية",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "تصدر اللعبة في 26 نوفمبر\nعلى Switch و PC",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    6,
+    "المصدر: صفحة اللعبة على Steam",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ظهرت أول 40 دقيقة من لعبة Expelled from Paradise: The Stellar Angel في مقطع لعب جديد. تقول جيماتسو (Gematsu) إن المقطع يعرض افتتاح هذه الرواية البصرية. تصدر اللعبة في 26 نوفمبر على Switch وPC.",
+  "headline": "لعبة Expelled\nتعرض أول 40 دقيقة",
+  "label": "تقرير",
+  "game": "Expelled from Paradise: The Stellar Angel",
+  "game_short": "Expelled",
+  "texts": {
+   "instagram": "أول 40 دقيقة من لعبة Expelled from Paradise: The Stellar Angel\n\nحسب موقع جيماتسو (Gematsu)، ظهر مقطع لعب مدته 40 دقيقة يعرض افتتاح لعبة Expelled from Paradise: The Stellar Angel، وهي رواية بصرية تصدر في 26 نوفمبر على Switch وPC عبر Steam.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع جيماتسو (Gematsu).\n\n#ألعاب #أخبار_الألعاب #ExpelledFromParadise #VisualNovel",
+   "x": "ظهر مقطع لعب مدته 40 دقيقة يعرض افتتاح لعبة Expelled from Paradise: The Stellar Angel، وهي رواية بصرية تصدر في 26 نوفمبر على Switch وPC، حسب موقع جيماتسو (Gematsu).",
+   "threads": "ظهر مقطع لعب مدته 40 دقيقة يعرض افتتاح لعبة Expelled from Paradise: The Stellar Angel. اللعبة رواية بصرية تصدر في 26 نوفمبر على Switch وPC.\n\nالمصدر: موقع جيماتسو (Gematsu)"
+  },
+  "source": "صفحة اللعبة على Steam",
+  "date": "19 Nov 2026",
+  "theme": "emerald",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+   22.91
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Gematsu posted the first 40 minutes of gameplay on 18 Nov, eight days before the 26 Nov launch.",
+   "what_it_means_here": "Visual novel fans can judge the opening before buying; it releases on Switch and PC."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 from the resolver (steam:4607420)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam store page, Expelled from Paradise: The Stellar Angel (footage only) (https://store.steampowered.com/app/4607420/_The_Stellar_Angel/); first report: Gematsu, 18 Nov 2026 22:06 EST (19 Nov 03:06Z)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 4607420 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
