@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-19T20:10:08Z",
- "seq": 660,
+ "generated_at": "2026-11-19T20:52:07Z",
+ "seq": 661,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 18863,
    "source": "Xbox (YouTube)",
@@ -21,9 +22,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 660
-  }
- ],
- "recent": [
+  },
   {
    "id": 18809,
    "source": "PlayStation (YouTube)",
@@ -226,53 +225,11 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 632
-  },
-  {
-   "id": 17885,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Bluey's Happy Snaps – Accolades Trailer",
-   "url": "https://www.youtube.com/watch?v=lH5wnQ2S5jA",
-   "published": "2026-11-18T20:22Z",
-   "first_seen": "2026-11-18T20:25:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/lH5wnQ2S5jA/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=lH5wnQ2S5jA"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 626
-  },
-  {
-   "id": 17876,
-   "source": "Nintendo of America (YouTube)",
-   "source_kind": "youtube",
-   "title": "Disney Dreamlight Valley: The Keepsake Sea – Launch Trailer – Nintendo Switch 2",
-   "url": "https://www.youtube.com/watch?v=4PfZ_aAMrSY",
-   "published": "2026-11-18T20:00Z",
-   "first_seen": "2026-11-18T20:15:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/4PfZ_aAMrSY/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=4PfZ_aAMrSY"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 625
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-19T20:10:04Z",
+  "last_poll_at": "2026-11-19T20:50:14Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 7,
