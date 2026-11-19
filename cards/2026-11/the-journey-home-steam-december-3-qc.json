@@ -1,0 +1,561 @@
+{
+ "name": "the-journey-home-steam-december-3",
+ "out": "cards/2026-11/the-journey-home-steam-december-3-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [],
+ "ladder": [],
+ "job_to_pass_min": 18.9,
+ "at": "2026-11-19T01:29:45Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 the-journey-home-steam-december-3-demo-out-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 1 the-journey-home-steam-december-3-demo-out-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 2 the-journey-home-steam-december-3-demo-out-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 3 the-journey-home-steam-december-3-demo-out-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 4 the-journey-home-steam-december-3-demo-out-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 5 the-journey-home-steam-december-3-demo-out-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 6 the-journey-home-steam-december-3-demo-out-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 7 the-journey-home-steam-december-3-demo-out-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 8 the-journey-home-steam-december-3-demo-out-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 9 the-journey-home-steam-december-3-demo-out-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 10 the-journey-home-steam-december-3-demo-out-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 11 the-journey-home-steam-december-3-demo-out-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 12 the-journey-home-steam-december-3-demo-out-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 13 the-journey-home-steam-december-3-demo-out-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "length 28.2 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 58.0; leak_pct 2.5; cache {'hit': 0, 'miss': 5}; separate_secs 34.0; secs 49.9",
+  "render_job: lifeless: {\"score\": 0.6, \"still_share\": 0.004, \"longest_still\": 0.1, \"cuts_per_10s\": 5.67, \"held_under_text\": 0.004, \"secs\": 28.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "the-journey-home-steam-december-3-demo-out-trailer.mp4 at 35.53 s for 3.8 s, focus 0.0"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "the-journey-home-steam-december-3-demo-out-trailer.mp4 at 39.33 s for 2.5 s, focus 0.0"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "the-journey-home-steam-december-3-demo-out-trailer.mp4 at 41.86 s for 2.5 s, focus 0.0"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "the-journey-home-steam-december-3-demo-out-trailer.mp4 at 55.58 s for 2.4 s, focus 0.0"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "the-journey-home-steam-december-3-demo-out-trailer.mp4 at 59.48 s for 2.4 s, focus 0.401"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "the-journey-home-steam-december-3-demo-out-trailer.mp4 at 62.83 s for 2.2 s, focus 0.401"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "the-journey-home-steam-december-3-demo-out-trailer.mp4 at 69.18 s for 2.2 s, focus 0.401"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "the-journey-home-steam-december-3-demo-out-trailer.mp4 at 84.11 s for 2.2 s, focus 0.505"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "the-journey-home-steam-december-3-demo-out-trailer.mp4 at 88.08 s for 2.2 s, focus 0.506"
+  },
+  {
+   "where": "shot 9",
+   "rule": "auto_shots",
+   "what": "the-journey-home-steam-december-3-demo-out-trailer.mp4 at 91.73 s for 2.2 s, focus 0.423"
+  },
+  {
+   "where": "shot 10",
+   "rule": "auto_shots",
+   "what": "the-journey-home-steam-december-3-demo-out-trailer.mp4 at 81.91 s for 2.2 s, focus 0.401"
+  },
+  {
+   "where": "shot 11",
+   "rule": "auto_shots",
+   "what": "the-journey-home-steam-december-3-demo-out-trailer.mp4 at 27.60 s for 2.2 s, focus 0.0"
+  },
+  {
+   "where": "shot 12",
+   "rule": "auto_shots",
+   "what": "the-journey-home-steam-december-3-demo-out-trailer.mp4 at 24.56 s for 2.2 s, focus 0.0"
+  },
+  {
+   "where": "shot 13",
+   "rule": "auto_shots",
+   "what": "the-journey-home-steam-december-3-the-journey-home-teaser.mp4 at 40.55 s for 2.2 s, focus 0.482 (nothing free in the-journey-home-steam-december-3-demo-out-trailer.mp4)"
+  },
+  {
+   "where": "shot 0",
+   "rule": "shot_timing",
+   "what": "moved from 35.53 to 36.03 s, the nearest clean start of the same 3.80 s",
+   "before": [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    35.53,
+    3.8,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "after": [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    36.03,
+    3.8,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 11",
+   "rule": "shot_timing",
+   "what": "moved from 27.60 to 26.60 s, the nearest clean start of the same 2.20 s",
+   "before": [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    27.6,
+    2.2,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "after": [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    26.6,
+    2.2,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 12",
+   "rule": "shot_timing",
+   "what": "moved from 24.56 to 25.31 s, the nearest clean start of the same 2.20 s",
+   "before": [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    24.56,
+    2.2,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "after": [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    25.31,
+    2.2,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 10",
+   "rule": "subject_cut",
+   "what": "focus [[0.0, 0.401]] to 0.72: the subject stays inside the window",
+   "before": [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    81.91,
+    2.2,
+    [
+     [
+      0.0,
+      0.401
+     ]
+    ]
+   ],
+   "after": [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    81.91,
+    2.2,
+    0.72
+   ]
+  }
+ ],
+ "job_sha": "e9775014b2fe502ce0be751a95fdacf67f1c2471",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/the-journey-home-steam-december-3-look-1.jpg",
+  "cards/2026-11/the-journey-home-steam-december-3-look-2.jpg",
+  "cards/2026-11/the-journey-home-steam-december-3-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 85.3,
+  "files": {
+   "the-journey-home-steam-december-3-demo-out-trailer.mp4": {
+    "secs": 51.2,
+    "cached": false,
+    "stages": {
+     "decode": 24.1,
+     "autofocus": 34.9,
+     "ocr": 35.1,
+     "smear": 51.1,
+     "scenes": 51.2
+    },
+    "incomplete": null
+   },
+   "the-journey-home-steam-december-3-the-journey-home-teaser.mp4": {
+    "secs": 34.1,
+    "cached": false,
+    "stages": {
+     "decode": 16.5,
+     "autofocus": 25.7,
+     "ocr": 25.7,
+     "smear": 34.0,
+     "scenes": 34.1
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/the-journey-home-steam-december-3.json",
+ "stage_minutes": {
+  "queue": 8.6,
+  "setup": 0.2,
+  "fetch": 1.41,
+  "shots": 1.44,
+  "checks": 2.31,
+  "render": 3.62,
+  "after": 1.18,
+  "job": 9.95
+ },
+ "job_after_autofix": {
+  "name": "the-journey-home-steam-december-3",
+  "story": "2026-11-19-the-journey-home-steam-december-3",
+  "footage_source": "steam:2600820",
+  "kind_news": "reveal",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/the-journey-home-steam-december-3-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    "steam": 2600820,
+    "trailer": "Demo Out - Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2600820"
+   },
+   {
+    "file": "the-journey-home-steam-december-3-the-journey-home-teaser.mp4",
+    "steam": 2600820,
+    "trailer": "The Journey Home - Teaser",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2600820"
+   }
+  ],
+  "shots": [
+   [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    36.03,
+    3.8,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    39.33,
+    2.53,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    41.86,
+    2.53,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    55.58,
+    2.39,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    59.48,
+    2.39,
+    [
+     [
+      0.0,
+      0.401
+     ]
+    ]
+   ],
+   [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    62.83,
+    2.2,
+    [
+     [
+      0.0,
+      0.401
+     ]
+    ]
+   ],
+   [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    69.18,
+    2.2,
+    [
+     [
+      0.0,
+      0.401
+     ]
+    ]
+   ],
+   [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    84.11,
+    2.2,
+    [
+     [
+      0.0,
+      0.505
+     ]
+    ]
+   ],
+   [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    88.08,
+    2.2,
+    [
+     [
+      0.0,
+      0.506
+     ]
+    ]
+   ],
+   [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    91.73,
+    2.2,
+    [
+     [
+      0.0,
+      0.423
+     ]
+    ]
+   ],
+   [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    81.91,
+    2.2,
+    0.72
+   ],
+   [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    26.6,
+    2.2,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+    25.31,
+    2.2,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "the-journey-home-steam-december-3-the-journey-home-teaser.mp4",
+    40.55,
+    2.2,
+    [
+     [
+      0.0,
+      0.482
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "حددت استوديو زوجين من بلجيكا\nموعد لعبة ذا جورني",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "هوم (The Journey Home)\nعلى ستيم في 3 ديسمبر",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "هي لعبة جانبية سريالية عن رجل",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    8,
+    [
+     [
+      "فقد ذاكرته ويمر\nبمراحل من حياته،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    9,
+    10,
+    [
+     [
+      "وتستغرق حوالي ثلاث ساعات",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    11,
+    13,
+    [
+     [
+      "ويوجد عرض تجريبي مجاني على ستيم،\nحسب موقع تيبريك (Tbreak)",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    13,
+    "المصدر: سْتِيم (Steam)",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "حددت استوديو زوجين من بلجيكا موعد لعبة ذا جورني هوم (The Journey Home) على ستيم في 3 ديسمبر. هي لعبة جانبية سريالية عن رجل فقد ذاكرته ويمر بمراحل من حياته، وتستغرق حوالي ثلاث ساعات. ويوجد عرض تجريبي مجاني على ستيم، حسب موقع تيبريك (Tbreak).",
+  "headline": "لعبة جانبية سريالية\nتصل ستيم 3 ديسمبر",
+  "label": "تقرير",
+  "source": "سْتِيم (Steam)",
+  "date": "19 Nov 2026",
+  "theme": "stylized",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "the-journey-home-steam-december-3-demo-out-trailer.mp4",
+   35.53
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Tbreak reported on 18 Nov that Joey's Entertainment set a Steam release date of 3 December 2026 for The Journey Home.",
+   "what_it_means_here": "Players can try the free Steam demo now and expect a roughly three hour surreal side-scroller, with no price announced yet."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "the-journey-home-steam-december-3-demo-out-trailer.mp4 from the resolver (steam:2600820)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam store page, The Journey Home (https://store.steampowered.com/app/2600820/); first report: Tbreak, 18 Nov 2026 22:31Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 2600820 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
