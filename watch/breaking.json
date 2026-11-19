@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-19T22:40:08Z",
- "seq": 664,
+ "generated_at": "2026-11-19T22:52:07Z",
+ "seq": 665,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 18940,
    "source": "Nintendo US",
@@ -16,9 +17,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 664
-  }
- ],
- "recent": [
+  },
   {
    "id": 18905,
    "source": "PlayStation (YouTube)",
@@ -263,7 +262,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-19T22:40:04Z",
+  "last_poll_at": "2026-11-19T22:50:14Z",
   "sources_enabled": 100,
   "sources_ok": 92,
   "sources_failing": 7,
