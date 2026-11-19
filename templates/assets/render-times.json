@@ -100778,5 +100778,193 @@
   "sound": "trailer",
   "footage": true,
   "upload_secs": 8.0
+ },
+ {
+  "name": "ubisoft-h1-loss-254m-bookings-down-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-19T20:47Z",
+  "stages": {
+   "checks": 4.5,
+   "montage": 33.7,
+   "text": 31.3,
+   "audio": 1.2,
+   "outro": 19.4
+  },
+  "total": 90.1,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-19T20:46Z",
+  "finished_at": "2026-11-19T20:47Z",
+  "render_min": 1.5,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "ubisoft-layoffs-166-montreal-quebec-y11s3-cgi-trailer.mp4",
+    "start": 3.33,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "ubisoft-layoffs-166-montreal-quebec-y11s3-cgi-trailer.mp4",
+    "start": 8.25,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "ubisoft-layoffs-166-montreal-quebec-y11s3-cgi-trailer.mp4",
+    "start": 10.48,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "ubisoft-layoffs-166-montreal-quebec-y11s3-cgi-trailer.mp4",
+    "start": 16.65,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "ubisoft-layoffs-166-montreal-quebec-y11s3-cgi-trailer.mp4",
+    "start": 22.31,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "ubisoft-layoffs-166-montreal-quebec-y11s3-cgi-trailer.mp4",
+    "start": 27.25,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "ubisoft-layoffs-166-montreal-quebec-y11s3-cgi-trailer.mp4",
+    "start": 30.03,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.7,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "ubisoft-layoffs-166-montreal-quebec-y11s3-launch-trailer.mp4",
+    "start": 5.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 22.1,
+   "audio_secs": 35.2,
+   "music_pct": 24.1,
+   "leak_pct": 6.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "reason": "music stem not clean (leftover 6.1% > 5.0%)",
+   "secs": 31.7,
+   "fallback": "bed:neon"
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 9.15,
+   "held_under_text": 0.0,
+   "secs": 16.4,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 13.8,
+   "shots": 48.6,
+   "checks": 78.2,
+   "render": 123.1,
+   "after": 48.0
+  },
+  "softgate": {
+   "warnings": 0,
+   "ladder": [
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "c",
+     "why": "audio split not applied (music stem not clean (leftover 6.1% > 5.0%)) on a trailer track under 7 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or o"
+    }
+   ]
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 312,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1182,
+  "peak_mem_mb": 2892,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 55254,
+  "peak_disk_mb": 57955,
+  "min_disk_free_mb": 188152,
+  "setup_min": 0.18,
+  "story": "ubisoft-h1-loss-254m-bookings-down",
+  "job_sha": "1fd75faca38fd3136a4b7de138b1eb8b26adb08e",
+  "dispatches": 1,
+  "sound": "bed:neon (trailer sound refused: music stem not clean (leftover 6.1% > 5.0%))",
+  "footage": true
  }
 ]
