@@ -3823,3 +3823,21 @@ alone passed. Mohammad ordered hard stops, so they ship hard, not as warnings.
    applies the required edits before writing the slip; any later text change needs the stage again.
 5. Director (newsroom/delegation.md): judge as an Arab reader who knows no English genre words; any term a casual reader
    would not know fails "does it make sense" (send back as unreadable_text with the term in the note).
+
+## Server lanes: two renders at once, the rest overflow (Mohammad, 19 Nov 2026)
+
+The server was bought to render several Reels at once. Capacity only: no template or check changed.
+1. Test (19 Nov, dxb-render-1, 8 cores, 16 GB; `server-capacity-test.yml`, `templates/capacity_test.py`, each render in
+   its own copy with fresh uploads): Clair Obscur 384.6 s alone, 464.8 s paired (1.21x); Binding of Isaac 293.4 s alone,
+   387.6 s paired (1.32x); server memory peak 3.9 GB alone, 4.8 GB paired; disk peak 61.0 of 257 GB. Both Reels in 7.7
+   minutes against 11.3 back to back. Within the 1.5x rule, so two is the setting.
+2. `templates/assets/server-lanes.json`: render_slots 2, t0_reserve 1, runners auto. render-live now starts with a
+   `route` job (GitHub-hosted, about 25 s, serialised): a normal job goes to the server while fewer than render_slots
+   renders are there, otherwise `overflow` moves it to jobs/render/ (after the jobsha and no-third-render guards) and
+   starts render.yml at once. T0 jobs (tier 0, `"priority": true`, the breaking profile or kind) may take the reserved
+   slot and need a free instance, else they render on a GitHub runner; render-breaking uses the same count. Reads and
+   checks are never counted as renders and take any free instance. `dry=true` on a render-live dispatch prints the lane.
+3. Instances: the effective slots never exceed the runner instances seen on recent server jobs, so until more are
+   registered the server keeps one render and a second overflows at once. Mohammad registers dxb-render-1b (second render
+   slot) and dxb-render-1c (spare: T0, reads and checks) with `scripts/runner-add.sh` as root; the slots open by
+   themselves once each instance has taken a job.

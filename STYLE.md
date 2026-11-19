@@ -872,3 +872,8 @@ A physical copy of a game is «نسخة مطبوعة», never «ورقية» or 
 2. Game names never in Arabic letters, on screen or in texts. A «Arabic (Latin)» pair not in names-ar stops the render.
 3. Slips carry a grammar_review of exactly their current texts, or they stop.
 4. Director: any genre word a casual Arab reader would not know fails "does it make sense".
+
+## Server lanes (19 Nov 2026)
+- Two renders at once on dxb-render-1 (test: 1.21x and 1.32x solo time, 4.8 of 16 GB); a third normal job overflows
+  to render.yml at once; T0 and breaking take a reserved slot or GitHub, never a queue. Slots open as runner instances
+  register (scripts/runner-add.sh); `templates/assets/server-lanes.json`.
