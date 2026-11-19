@@ -1,10 +1,48 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-19T15:52:13Z",
- "seq": 651,
+ "generated_at": "2026-11-19T16:00:07Z",
+ "seq": 652,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 18605,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Free Play Days – Deadlink, Slayers X: Terminal Aftermath: Vengance of the Slayer, Polterguys: Possession Party, and More",
+   "url": "https://news.xbox.com/en-us/2026/11/19/free-play-days-11-19-2026/",
+   "published": "2026-11-19T16:00Z",
+   "first_seen": "2026-11-19T16:00:05Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.7852.13895100178402269.a4969464-a224-4b78-8b54-cde3d6ba2195.dd22d097-fcce-48f8-9680-4a4f2e3aca79?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.65188.14553231729498821.e9cc3b13-c182-473c-8a24-a1a8ef58f202.82a5b302-014a-4503-a72d-d35ab7ee1f66?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://assets.onestore.ms/cdnfiles/sfw-service-web-onestore-onerf-2017-11-8-12/store/common/images/xpalogo_black.png"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.65357.13784155691468416.b22eb8e7-abf6-4a09-8a50-37696080b39d.37a2d9f7-bfe9-4890-b693-2958eb95d1ce?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.46369.14482579305718941.9f76f43c-92c3-4536-ab39-2818799077cc.bbb031f3-01c6-45e5-9939-a9ca5fb4625b?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://s.w.org/images/core/emoji/17.0.2/72x72/2122.png"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 652
+  }
+ ],
  "recent": [
   {
    "id": 18503,
@@ -270,9 +308,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-19T15:52:08Z",
+  "last_poll_at": "2026-11-19T16:00:05Z",
   "sources_enabled": 100,
-  "sources_ok": 92,
+  "sources_ok": 93,
   "sources_failing": 7,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 123x)",
@@ -280,8 +318,8 @@
    "PlayStation (X) (HTTP 429, 12x)",
    "PlayStation Middle East (X) (HTTP 429, 21x)",
    "Rockstar Games (X) (HTTP 429, 8x)",
-   "The Game Awards (HTTP 403, 42x)",
-   "Xbox (X) (HTTP 429, 98x)"
+   "The Game Awards (HTTP 403, 43x)",
+   "Xbox (X) (HTTP 429, 99x)"
   ]
  }
 }
