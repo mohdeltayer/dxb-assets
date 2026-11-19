@@ -1,0 +1,171 @@
+{
+ "name": "just-volleyball-100000-copies",
+ "story": "2026-11-19-just-volleyball-100000-copies",
+ "footage_source": "steam:5037200",
+ "kind_news": "reveal",
+ "built_by": "server-slip",
+ "render_lane": "server",
+ "out": "cards/2026-11/just-volleyball-100000-copies-reel-v1.mp4",
+ "split_fallback": "bed",
+ "footage": [
+  {
+   "file": "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+   "steam": 5037200,
+   "trailer": "Final Gameplay Showcase Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "5037200"
+  }
+ ],
+ "shots": [
+  [
+   "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+   "auto",
+   2.24,
+   null
+  ],
+  [
+   "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+   "auto",
+   2.24,
+   null
+  ],
+  [
+   "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+   "auto",
+   2.71,
+   null
+  ],
+  [
+   "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+   "auto",
+   2.71,
+   null
+  ],
+  [
+   "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "وكان مطورها قد أعلن\nقبل ذلك وصولها",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "إلى 50 ألف نسخة\nخلال 24 ساعة من الإطلاق",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "وهي لعبة أكشن رياضية تدعم\nاللعب عبر الإنترنت وبدونه،",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   7,
+   8,
+   [
+    [
+     "وسعرها 4.95 دولارات",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   8,
+   "المصدر: سْتِيم (Steam)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "تجاوزت لعبة الكرة الطائرة المستقلة جاست فوليبول (just volleyball) حاجز 100 ألف نسخة في يومين ونصف فقط على ستيم. وكان مطورها قد أعلن قبل ذلك وصولها إلى 50 ألف نسخة خلال 24 ساعة من الإطلاق. وهي لعبة أكشن رياضية تدعم اللعب عبر الإنترنت وبدونه، وسعرها 4.95 دولارات.",
+ "headline": "لعبة الكرة الطائرة المستقلة\nتتجاوز 100 ألف نسخة",
+ "label": "رسمي",
+ "source": "سْتِيم (Steam)",
+ "date": "19 Nov 2026",
+ "theme": "gold",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": null,
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "footage": "just-volleyball-100000-copies-final-gameplay-showcase-trailer.mp4 from the resolver (steam:5037200)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (audio split per shot)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Steam announcement '100,000+ copies within 2.5 days!' (just volleyball), 19 Nov 2026 01:12Z, read in full via the Steam news API (https://store.steampowered.com/news/app/5037200/view/702159569166532908); first report: Steam announcement by the developer, 19 Nov 2026 01:12Z (50,000 copies post 17 Nov)",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 5037200 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ }
+}
