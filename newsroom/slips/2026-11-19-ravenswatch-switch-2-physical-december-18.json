@@ -1,13 +1,24 @@
 {
  "id": "2026-11-19-ravenswatch-switch-2-physical-december-18",
- "state": "failed",
- "problems": [
-  "grammar_review missing: run the arabic-grammar-review stage on headline, spoken (the lines are cut from it), credit, instagram, x and threads, apply every required edit to the slip, then record \"grammar_review\": {\"by\": \"arabic-grammar-review\", \"at\": \"<ISO time>\", \"required_edits\": <n applied>, \"texts_sha\": \"<python3 templates/slip.py grammar-sha <slip>>\"}",
-  "name_unknown: name not in names-ar: «ستصدر لعبة رافنزواتش (Ravenswatch)» (spoken); add it there as Proposed"
- ],
+ "state": "built",
+ "problems": [],
  "flags": [],
- "at": "2026-11-19T02:45:28Z",
- "run": "44446566467",
+ "at": "2026-11-19T03:12:07Z",
+ "footage": {
+  "name": "Launch Trailer PC",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30.0,
+  "mbps": 5.73,
+  "rows": 1080,
+  "duration": 107.03,
+  "decode_clean": true
+ },
+ "job": "jobs/live/ravenswatch-switch-2-physical-december-18.json",
+ "story": "newsroom/stories/2026-11-19-ravenswatch-switch-2-physical-december-18.json",
+ "lines": 3,
+ "shots": 7,
+ "run": "44449707083",
  "lane": "live",
- "build_secs": 19
+ "build_secs": 48
 }
