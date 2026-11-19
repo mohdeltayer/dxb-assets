@@ -61,5 +61,25 @@
    "2026-10-08-game-pass-october-wave1",
    "2026-10-23-goty-winners-sales-alinea"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/clair-obscur-narrative-lead-leaves-sandfall-reel-v1.mp4",
+  "blob": "972d6dd75bbeedba90659a2d07a5eda27e581d07",
+  "at": "2026-11-19T08:43:30Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/clair-obscur-narrative-lead-leaves-sandfall.json",
+   "sha256": "9c7f45d8a8bcd6c80d010f713b3d692cf543ef652e6cc4a3056ea7e2556a5793",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "full-frame, headline and captions legible, shots 1-4 now lit; credit small but readable"
  }
 }
