@@ -527,6 +527,9 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
     hours, 08:00 to 21:00 Dubai.
   - Review slots at 06:30, 10:00, 14:00 and 17:30. Famitsu goes out the
     moment it is published.
+  - Famitsu weekly on the server (19 Nov): famitsu-weekly.yml preps art from
+    16:15 Dubai Thursday, watches Famitsu and renders the full chart Reel; a
+    session check-in at 18:10 schedules it.
 - **Approval:**
   - Nothing is queued without his go.
   - Rolling queue (13 Oct): his pick is priority, not permission. Every

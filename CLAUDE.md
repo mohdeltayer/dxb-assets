@@ -2511,6 +2511,16 @@ Famitsu releases the numbers, not held for a slot. Watch the chart page
 from about 16:45 Dubai on Thursdays (or the date the last article names),
 have the screenshots and box art for the likely top 10 gathered before
 then, and render and bring the Reel to him the moment the article is up.
+On the server (Mohammad, 19 Nov 2026: "set this as a weekly Thursday job on the server"): `.github/workflows/
+famitsu-weekly.yml` runs every Thursday from 12:15Z (16:15 Dubai) on a hosted runner (the watch lasts hours and
+dxb-render-1 has one runner slot for news). `templates/famitsu_weekly.py prep` opens every screenshot and box art the
+likely top 10 needs (last week's chart from `assets/famitsu-last.json`, the art library `assets/famitsu-art.json`;
+dead links looked up again on Nintendo's US store), then `watch` reads Famitsu's new-article list every 90 s until
+19:30Z for 【ソフト＆ハード週間販売数】, and `build` writes the sales_full job and dispatches render.yml. A Japanese
+title not in famitsu.TITLES or a title with no art stops into `newsroom/famitsu-pending.json`; nothing is guessed.
+Publer scheduling stays with a session: the Thursday 18:10 Dubai check-in looks at the strip, writes the texts
+(both Arabic passes, DeepL back-check) and schedules Instagram, X and Threads; Production 2's short single-game
+Famitsu Reel is not duplicated. Holiday weeks: run the workflow by hand with the article url. First run 26 Nov.
 
 ## The lookout is its own format
 
