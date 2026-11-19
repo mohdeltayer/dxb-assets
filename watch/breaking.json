@@ -1,10 +1,75 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-19T14:10:18Z",
- "seq": 648,
+ "generated_at": "2026-11-19T14:15:22Z",
+ "seq": 649,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 18501,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Grand Theft Auto VI - Out Now! | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=PYplTYmMEoI",
+   "published": "2026-11-19T14:06Z",
+   "first_seen": "2026-11-19T14:15:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/PYplTYmMEoI/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=PYplTYmMEoI"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 649
+  },
+  {
+   "id": 18502,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Goat Simulator 3 - Ticket to Dizzyworld Launch Trailer | PS5 & PS4 Games",
+   "url": "https://www.youtube.com/watch?v=mvfEHW66GyM",
+   "published": "2026-11-19T14:00Z",
+   "first_seen": "2026-11-19T14:15:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/mvfEHW66GyM/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=mvfEHW66GyM"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 649
+  },
+  {
+   "id": 18503,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Grand Theft Auto VI: Launch Trailer",
+   "url": "https://www.youtube.com/watch?v=tNf8kZJeqQo",
+   "published": "2026-11-19T14:00Z",
+   "first_seen": "2026-11-19T14:15:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/tNf8kZJeqQo/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=tNf8kZJeqQo"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 649
+  }
+ ],
+ "recent": [
   {
    "id": 18487,
    "source": "Rockstar Games (YouTube)",
@@ -21,9 +86,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 648
-  }
- ],
- "recent": [
+  },
   {
    "id": 18478,
    "source": "Xbox Wire",
@@ -208,9 +271,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-19T14:10:15Z",
+  "last_poll_at": "2026-11-19T14:15:14Z",
   "sources_enabled": 100,
-  "sources_ok": 93,
+  "sources_ok": 92,
   "sources_failing": 7,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 122x)",
