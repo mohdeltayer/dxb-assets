@@ -55,5 +55,25 @@
   "hits": [
    "2026-10-19-crusader-kings-3-silk-and-silver-date"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/crusader-kings-iii-free-to-play-steam-nov-23-reel-v1.mp4",
+  "blob": "97571c9b5873809c2ac9cee4e92a4615d43fa2fb",
+  "at": "2026-11-19T22:29:18Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/crusader-kings-iii-free-to-play-steam-nov-23.json",
+   "sha256": "c671e90a728cf97509da4eba95b6a6b331e33f7df82aba7b419e38cea69a4500",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "gameplay map shots of the trailer with the headline top-left, Arabic captions low, credit line on every shot, price captions readable, no graphic content"
  }
 }
