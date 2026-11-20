@@ -12,108 +12,97 @@
    "file": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
    "steam": 2288340,
    "trailer": "ACE COMBAT 8: WINGS OF THEVE - Pre-Order Trailer",
-   "start": 0,
-   "seconds": 120,
    "trailer_id": "2288340"
   },
   {
    "file": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve.mp4",
    "steam": 2288340,
    "trailer": "ACE COMBAT 8: WINGS OF THEVE",
-   "start": 0,
-   "seconds": 120,
    "trailer_id": "2288340"
   },
   {
    "file": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-launch-trailer.mp4",
    "steam": 2288340,
    "trailer": "ACE COMBAT 8: WINGS OF THEVE - Launch Trailer",
-   "start": 0,
-   "seconds": 120,
    "trailer_id": "2288340"
   }
  ],
  "shots": [
   [
    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
-   20.43,
-   3.59,
-   [
-    [
-     0.0,
-     0.479
-    ]
-   ]
+   "auto",
+   3.8,
+   null
   ],
   [
    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
-   3.07,
+   "auto",
    2.31,
    null
   ],
   [
    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
-   3.07,
+   "auto",
    2.31,
    null
   ],
   [
    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
-   3.07,
+   "auto",
    2.53,
    null
   ],
   [
    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
-   3.07,
+   "auto",
    2.53,
    null
   ],
   [
    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
-   3.07,
+   "auto",
    2.74,
    null
   ],
   [
    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
-   3.07,
+   "auto",
    2.74,
    null
   ],
   [
    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
-   3.07,
+   "auto",
    2.2,
    null
   ],
   [
    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
-   3.07,
+   "auto",
    2.2,
    null
   ],
   [
    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
-   3.07,
+   "auto",
    2.2,
    null
   ],
   [
    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
-   3.07,
+   "auto",
    2.2,
    null
   ],
   [
    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
-   3.07,
+   "auto",
    2.6,
    null
   ],
   [
    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
-   3.07,
+   "auto",
    2.6,
    null
   ]
@@ -196,7 +185,7 @@
   [
    0,
    12,
-   "المصدر: اللقطات: صفحة اللعبة على Steam",
+   "المصدر: بانداي نامكو (Bandai Namco)",
    {
     "size": 40,
     "band": true
@@ -213,9 +202,9 @@
   "x": "نقل موقع فاميتسو (Famitsu) أن المخرج كاتابوتشي، كاتب قصة ACE COMBAT 8، قال إنه سيشارك في تطوير ACE9، وأن الجزء التالي لم يأخذ شكله بعد.",
   "threads": "نقل موقع فاميتسو (Famitsu) عن مقابلة مع مدير علامة ACE COMBAT في بانداي نامكو (Bandai Namco) أن المخرج كاتابوتشي، كاتب قصة ACE COMBAT 8، قال إنه سيشارك في تطوير ACE9. ويقول الموقع إن الجزء التالي لم يأخذ شكله بعد.\n\nالمصدر: فاميتسو (Famitsu)"
  },
- "source": "اللقطات: صفحة اللعبة على Steam",
+ "source": "بانداي نامكو (Bandai Namco)",
  "date": "20 Nov 2026",
- "theme": "emerald",
+ "theme": "spectacle",
  "style": null,
  "template": "trailer",
  "skin": "house",
@@ -246,5 +235,9 @@
   "credit on every clip": "yes: one credit over every shot",
   "sound": "yes: trailer sound from the first shot, split per shot on the server",
   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ },
+ "rerender": {
+  "reason": "wrong_subject",
+  "note": "Director send-back: one repeated shot (12 at 3.07 s) and a credit naming the Steam page; rebuilt with shots respread and the credit from Bandai Namco footage"
  }
 }
