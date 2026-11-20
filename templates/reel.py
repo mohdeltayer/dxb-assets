@@ -2329,7 +2329,8 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             a_s, b_s, text = cr[0], cr[1], cr[2]
             a0, z0 = starts[a_s], (starts[b_s + 1] if b_s + 1 < len(starts) else end)
             row.append((a0, z0, credit_layer(' '.join(str(text).split()), f'{tmp}/sc{k}.png', size=SHOW_CREDIT, y=SHOW_CREDIT_Y))); k += 1   # one row, the lowest
-        meta = credit_layer(f'{re.split(r"[،\n]", str(source))[0].strip()}\u200f  ·  \u200f{A.arabic_date(date)}', f'{tmp}/smeta.png', size=SHOW_CREDIT,
+        outlet = re.split('[،\n]', str(source))[0].strip()          # the outlet only (20 Nov 2026)
+        meta = credit_layer(f'{outlet}\u200f  ·  \u200f{A.arabic_date(date)}', f'{tmp}/smeta.png', size=SHOW_CREDIT,
                             y=SHOW_CREDIT_Y)
         t0 = 0.0
         for a0, z0, _ in sorted(row):
