@@ -1,0 +1,492 @@
+{
+ "name": "umamusume-denver-broncos-nfl-collab-december-6",
+ "out": "cards/2026-11/umamusume-denver-broncos-nfl-collab-december-6-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 at 6.1 s for 2.21 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 at 16.05 s for 2.21 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 at 26.02 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 at 35.98 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 at 45.74 s for 2.46 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 at 55.66 s for 2.46 s: no clean stretch read, evenly spaced crop"
+  }
+ ],
+ "job_to_pass_min": 5.7,
+ "at": "2026-11-20T04:17:16Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 starts at 0.0 s, the video at 1.46 s; its first 1.46 s are lost",
+  "first frame: shot 1 umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 starts at 0.0 s, the video at 1.46 s; its first 1.46 s are lost",
+  "first frame: shot 2 umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 starts at 0.0 s, the video at 1.46 s; its first 1.46 s are lost",
+  "first frame: shot 3 umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 starts at 0.0 s, the video at 1.46 s; its first 1.46 s are lost",
+  "first frame: shot 4 umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 starts at 0.0 s, the video at 1.46 s; its first 1.46 s are lost",
+  "first frame: shot 5 umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 starts at 0.0 s, the video at 1.46 s; its first 1.46 s are lost",
+  "first frame: shot 6 umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 starts at 0.0 s, the video at 1.46 s; its first 1.46 s are lost",
+  "first frame: shot 7 umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 starts at 0.0 s, the video at 1.46 s; its first 1.46 s are lost",
+  "first frame: shot 8 umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 starts at 0.0 s, the video at 1.46 s; its first 1.46 s are lost",
+  "length 18.7 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 44.4; leak_pct 1.5; cache {'hit': 0, 'miss': 4}; separate_secs 26.1; secs 37.3",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 6.95, \"held_under_text\": 0.0, \"secs\": 18.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "credit 1",
+   "rule": "credit_width",
+   "what": "set one line at 38 px (was 40 px, too wide for the safe zone)",
+   "before": {
+    "text": "المصدر: فاميتسو، ولقطات من صفحة اللعبة على Steam",
+    "size": 40
+   },
+   "after": {
+    "text": "المصدر: فاميتسو، ولقطات من صفحة اللعبة على Steam",
+    "size": 38
+   }
+  },
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 at 6.69 s for 3.8 s, focus 0.391"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 at 52.84 s for 2.2 s, focus 1.0"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 at 1.95 s for 2.2 s, focus 0.553"
+  },
+  {
+   "where": "shot 1",
+   "rule": "subject_cut",
+   "what": "moved from 52.84 to 53.34 s, the nearest stretch of the same source with the subject inside",
+   "before": [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    52.84,
+    2.2,
+    [
+     [
+      0.0,
+      1.0
+     ]
+    ]
+   ],
+   "after": [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    53.34,
+    2.2,
+    [
+     [
+      0.0,
+      1.0
+     ]
+    ]
+   ]
+  }
+ ],
+ "job_sha": "8a6589fa7e00d282a0d0ccb01c950d3d46be82f1",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/umamusume-denver-broncos-nfl-collab-december-6-look-1.jpg",
+  "cards/2026-11/umamusume-denver-broncos-nfl-collab-december-6-look-2.jpg",
+  "cards/2026-11/umamusume-denver-broncos-nfl-collab-december-6-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 19.1,
+  "files": {
+   "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4": {
+    "secs": 19.1,
+    "cached": false,
+    "stages": {
+     "decode": 8.3,
+     "autofocus": 18.2,
+     "ocr": 18.2,
+     "smear": 19.0,
+     "scenes": 19.0
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/umamusume-denver-broncos-nfl-collab-december-6.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.18,
+  "fetch": 0.12,
+  "shots": 0.33,
+  "checks": 1.43,
+  "render": 2.17,
+  "after": 0.78,
+  "job": 4.83
+ },
+ "job_after_autofix": {
+  "name": "umamusume-denver-broncos-nfl-collab-december-6",
+  "story": "2026-11-20-umamusume-denver-broncos-nfl-collab-december-6",
+  "footage_source": "steam:3224770",
+  "kind_news": "news",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/umamusume-denver-broncos-nfl-collab-december-6-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    "steam": 3224770,
+    "trailer": "Launch Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3224770"
+   }
+  ],
+  "shots": [
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    6.69,
+    3.8,
+    [
+     [
+      0.0,
+      0.391
+     ]
+    ]
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    53.34,
+    2.2,
+    [
+     [
+      0.0,
+      1.0
+     ]
+    ]
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    1.95,
+    2.2,
+    [
+     [
+      0.0,
+      0.553
+     ]
+    ]
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    6.1,
+    2.21,
+    [
+     [
+      0.0,
+      0.575
+     ],
+     [
+      0.589,
+      0.336
+     ]
+    ]
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    16.05,
+    2.21,
+    [
+     [
+      0.0,
+      0.749
+     ],
+     [
+      0.515,
+      0.831
+     ],
+     [
+      1.116,
+      0.613
+     ],
+     [
+      1.75,
+      0.187
+     ]
+    ]
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    26.02,
+    2.2,
+    [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      1.656,
+      0.433
+     ]
+    ]
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    35.98,
+    2.2,
+    [
+     [
+      0.0,
+      0.73
+     ],
+     [
+      0.638,
+      0.595
+     ],
+     [
+      1.906,
+      1.0
+     ]
+    ]
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    45.74,
+    2.46,
+    [
+     [
+      0.0,
+      0.176
+     ],
+     [
+      1.022,
+      0.269
+     ],
+     [
+      1.723,
+      0.402
+     ],
+     [
+      2.423,
+      0.589
+     ]
+    ]
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    55.66,
+    2.46,
+    [
+     [
+      0.0,
+      0.595
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "ويقام الحدث في مباراة\nالفريق على أرضه",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "يوم السادس من ديسمبر\nفي ولاية كولورادو",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وتظهر شخصيات اللعبة\nعلى شاشات الملعب،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    8,
+    [
+     [
+      "وتوزع على الجمهور بطاقات\nوأعلام مرسومة خصيصًا",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    8,
+    "المصدر: فاميتسو، ولقطات من صفحة اللعبة على Steam",
+    {
+     "size": 38,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "أفاد موقع فاميتسو (Famitsu) بأن لعبة Umamusume Pretty Derby تتعاون مع فريق كرة القدم الأمريكية Denver Broncos. ويقام الحدث في مباراة الفريق على أرضه يوم السادس من ديسمبر في ولاية كولورادو. وتظهر شخصيات اللعبة على شاشات الملعب، وتوزع على الجمهور بطاقات وأعلام مرسومة خصيصًا.",
+  "headline": "تعاون لعبة Umamusume\nمع Denver Broncos",
+  "label": "تقرير",
+  "game": "Umamusume Pretty Derby",
+  "game_short": "Umamusume",
+  "texts": {
+   "instagram": "أفاد موقع فاميتسو (Famitsu) بأن لعبة Umamusume Pretty Derby تتعاون مع فريق كرة القدم الأمريكية Denver Broncos.\n\nويقام الحدث في مباراة الفريق على أرضه يوم السادس من ديسمبر في ولاية كولورادو.\n\nوتظهر شخصيات اللعبة على شاشات الملعب، وتوزع على الجمهور بطاقات وأعلام مرسومة خصيصًا.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: فاميتسو.\n\n#ألعاب #أخبار_الألعاب #Umamusume #NFL",
+   "x": "أفاد موقع فاميتسو (Famitsu) بأن لعبة Umamusume Pretty Derby تتعاون مع فريق Denver Broncos لكرة القدم الأمريكية في مباراته على أرضه يوم السادس من ديسمبر.",
+   "threads": "أفاد موقع فاميتسو (Famitsu) بأن لعبة Umamusume Pretty Derby تتعاون مع فريق Denver Broncos لكرة القدم الأمريكية في مباراته على أرضه يوم السادس من ديسمبر، مع بطاقات وأعلام مرسومة خصيصًا توزع على الجمهور.\n\nالمصدر: فاميتسو"
+  },
+  "source": "فاميتسو، ولقطات من صفحة اللعبة على Steam",
+  "date": "20 Nov 2026",
+  "theme": "stylized",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+   6.69
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Famitsu published Cygames' press release on 20 Nov 2026: Umamusume Pretty Derby partners with the NFL's Denver Broncos for the 6 Dec home game.",
+   "what_it_means_here": "A Japanese anime horse-girl game on the screens of a US NFL stadium; fans get cards and flags."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4 from the resolver (steam:3224770)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Famitsu, Umamusume x Denver Broncos collaboration December 6 (carries the Cygames press release) (https://www.famitsu.com/article/202611/94569); first report: Famitsu 20 Nov 2026 03:45Z (Cygames press release)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 3224770 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "cut_ok": [
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    6.1,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    16.05,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    26.02,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    35.98,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    45.74,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    55.66,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ]
+  ],
+  "drift_ok": [
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    6.1,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    16.05,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    26.02,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    35.98,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    45.74,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
+    55.66,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ]
+  ]
+ }
+}
