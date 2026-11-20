@@ -15,8 +15,14 @@ on:
         description: 'Branch or commit holding the code under test'
         required: true
       jobs:
-        description: 'JSON list of job names in jobs/done (on that ref)'
+        description: 'JSON list of job names in jobs/<dir> (on that ref)'
         required: true
+      dir:
+        description: 'Folder under jobs/ holding them: done (the replay rule), live or render (a failed live job, proven before merge)'
+        required: false
+        default: 'done'
+        type: choice
+        options: [done, live, render]
 
 jobs:
   replay:
@@ -29,7 +35,7 @@ jobs:
       matrix:
         job: ${{ fromJSON(inputs.jobs) }}
     env:
-      JOB: jobs/done/${{ matrix.job }}.json
+      JOB: jobs/${{ inputs.dir || 'done' }}/${{ matrix.job }}.json
     steps:
       - uses: actions/checkout@v5
         with:
