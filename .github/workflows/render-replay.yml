@@ -1,0 +1,121 @@
+# Replay rule (Mohammad, 20 Nov 2026): no change to reel.py, render_job.py or softgate.py goes live before it is run on
+# the last 10 jobs in jobs/done, and none of them may fail that passed before. This renders those jobs from a branch,
+# one GitHub runner each, in parallel. It commits nothing, uploads nothing to Publer and keeps no Reel: only the step
+# summary (pass or fail, minutes, the last error line). Dispatch only.
+#   gh workflow run render-replay.yml --ref main -f ref=<branch> -f jobs='["name-a","name-b"]'
+name: render-replay
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Branch or commit holding the code under test'
+        required: true
+      jobs:
+        description: 'JSON list of job names in jobs/done (on that ref)'
+        required: true
+
+jobs:
+  replay:
+    if: github.repository == 'mohdeltayer/dxb-assets'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 10
+      matrix:
+        job: ${{ fromJSON(inputs.jobs) }}
+    env:
+      JOB: jobs/done/${{ matrix.job }}.json
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.ref }}
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            templates
+            jobs
+            newsroom/stories
+            arabic
+
+      - name: Runner
+        run: |
+          printf '%s' "${{ matrix.job }}" | grep -Eq '^[A-Za-z0-9][A-Za-z0-9._-]*$' || { echo "bad job name"; exit 1; }
+          test -f "$JOB" || { echo "::error::$JOB is not on ${{ inputs.ref }}"; exit 1; }
+          {
+            echo "RENDER_LANE=replay"
+            echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts"
+            echo "DXB_UPLOADS=$RUNNER_TEMP/uploads"
+            echo "YOLO_WEIGHTS=$RUNNER_TEMP/models/yolov8n.pt"
+          } >> "$GITHUB_ENV"
+
+      - name: Fonts (temp folder, outside the workspace)
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          repo="$RUNNER_TEMP/dxb-fonts"
+          git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+          mkdir -p "$DUBAI_FONTS"
+          unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$DUBAI_FONTS"
+          rm -rf "$repo"
+          for w in Light Regular Medium Bold; do test -f "$DUBAI_FONTS/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing from dubai.zip"; exit 1; }; done
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Text check (fails in seconds on a bad wrap)
+        run: |
+          python -m pip install -q pillow numpy soundfile pedalboard
+          # the server's mechanical fixes first, in the job file and listed (adv-20261117-gates-fix-not-refuse B)
+          AUTOFIX_JSON="$RUNNER_TEMP/autofix.json" python templates/render_job.py text "$JOB" --fix
+
+      - name: Tools
+        timeout-minutes: 10                        # a hung apt or pip mirror held two runs for 15 minutes on 23 Oct
+        run: |
+          echo "$(date -u +%T) apt"
+          # four runs on 23 Oct sat silent at apt install for 10 minutes: a fresh VM's unattended-upgrades holds the dpkg lock
+          sudo systemctl stop unattended-upgrades apt-daily.service apt-daily-upgrade.service apt-daily.timer apt-daily-upgrade.timer 2>/dev/null || true
+          APT="sudo DEBIAN_FRONTEND=noninteractive apt-get -o DPkg::Lock::Timeout=120 -o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold"
+          sudo rm -f /var/lib/man-db/auto-update
+          need=""; command -v ffmpeg >/dev/null || need="ffmpeg"; command -v tesseract >/dev/null || need="$need tesseract-ocr tesseract-ocr-eng"
+          if [ -n "$need" ]; then $APT update -qq 2>&1 | tail -3; echo "$(date -u +%T) apt install $need"; timeout 150 $APT install -y -q --no-install-recommends $need 2>&1 | tail -5 || true; fi
+          if ! command -v ffmpeg >/dev/null; then                # the Azure apt mirror stalled mid-download on 23 Oct: a static build from GitHub instead
+            echo "$(date -u +%T) static ffmpeg"
+            curl -sSL --retry 3 --max-time 180 -o "$RUNNER_TEMP/ff.tar.xz" https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz
+            tar -xJf "$RUNNER_TEMP/ff.tar.xz" -C "$RUNNER_TEMP" && sudo cp "$RUNNER_TEMP"/ffmpeg-master-latest-linux64-gpl/bin/ff* /usr/local/bin/
+          fi
+          command -v ffmpeg; command -v tesseract || echo "tesseract missing: sheet text checks will warn"
+          echo "$(date -u +%T) pip"
+          python -m pip install -q --upgrade pip
+          python -m pip install -q --timeout 60 --retries 3 torch torchvision --index-url https://download.pytorch.org/whl/cpu   # a matching pair, or YOLO's nms op is missing
+          echo "$(date -u +%T) pip rest"
+          python -m pip install -q --timeout 60 --retries 3 pillow numpy soundfile pedalboard ultralytics opencv-python-headless
+          echo "$(date -u +%T) tools done"
+          mkdir -p "$DXB_UPLOADS" "$(dirname "$YOLO_WEIGHTS")"
+
+      # HyperFrames inserts (advisor, 24 Oct 2026) and the design pass (frame and kit moments, 24 Oct 2026,
+      # templates/designpass.py): installed only when the job asks for one, pinned to the tested version. A failed
+      # install leaves HF_CLI unset, so the insert keeps its current card and the design pass renders as before.
+      - name: Render (15 minutes, as live)
+        id: render
+        timeout-minutes: 15
+        continue-on-error: true
+        run: |
+          start=$(date +%s)
+          set -o pipefail
+          python templates/render_job.py run "$JOB" 2>&1 | tee "$RUNNER_TEMP/render.log"
+          echo "secs=$(( $(date +%s) - start ))" >> "$GITHUB_OUTPUT"
+
+      - name: Summary
+        if: always()
+        run: |
+          last=$(grep -E "Error|error:|refused|SystemExit|scanproxy" "$RUNNER_TEMP/render.log" 2>/dev/null | tail -2 | tr '|' '/' | cut -c1-220)
+          echo "| ${{ matrix.job }} | ${{ steps.render.outcome }} | ${{ steps.render.outputs.secs }} s | $last |" >> "$GITHUB_STEP_SUMMARY"
+          echo "REPLAY: ${{ matrix.job }} ${{ steps.render.outcome }} ${{ steps.render.outputs.secs }}"
+          rm -rf "$DUBAI_FONTS" 2>/dev/null || true
+          [ "${{ steps.render.outcome }}" = "success" ]
