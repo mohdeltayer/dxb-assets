@@ -1,0 +1,589 @@
+{
+ "name": "witch-on-the-holy-night-mobile-japan",
+ "out": "cards/2026-11/witch-on-the-holy-night-mobile-japan-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot gate",
+   "detail": "shot 0 (witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 35.88 s): crosses the trailer's scene cut at 38.70 s (shot 35.88 to 39.38 s; up to the cut it holds 2.78 s); nearest clean start 35.16 s for the same 3.50 s shot_timing",
+   "shot": 0
+  },
+  {
+   "stage": "pace",
+   "detail": "pace: nothing changes for 4.2 s at 3.4 (change every 4 s); cut to a second angle, add a line or a strip, or pass pace_ok=True with the reason in the brief"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 at 8.68 s for 2.67 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 at 22.07 s for 2.67 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 at 35.47 s for 2.64 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 at 48.86 s for 2.64 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 at 62.54 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 at 75.99 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 at 89.45 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "cut: kept as a crop, check waived"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "c",
+   "why": "audio split not applied (music only 19.5% of the track (< 40.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our b"
+  }
+ ],
+ "job_to_pass_min": 8.2,
+ "at": "2026-11-20T06:45:30Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 1 witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 2 witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 3 witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 4 witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 6 witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 7 witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 8 witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "length 21.9 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "pace: nothing changes for 4.2 s at 3.4 (change every 4 s)",
+  "render_job: audio split: not applied, audio as rendered; reason music only 19.5% of the track (< 40.0%); music_pct 19.5; leak_pct 0.1; cache {'hit': 0, 'miss': 5}; separate_secs 34.4; secs 46.6",
+  "render_job: audio split fallback: our bed (ValueError: the trailer mix would not match the picture); bed:neon_c",
+  "render_job: lifeless: {\"score\": 5.6, \"still_share\": 0.083, \"longest_still\": 0.4, \"cuts_per_10s\": 8.26, \"held_under_text\": 0.014, \"secs\": 21.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "head_overlap",
+   "what": "lengthened 2.20 to 3.50 s so the line on shot 1 enters at 3.35 s, after the headline clears",
+   "before": 2.2,
+   "after": 3.5
+  },
+  {
+   "where": "shot 0",
+   "rule": "shot_timing",
+   "what": "trimmed to 2.78 s, the clean part before the scene cut at 38.70 s",
+   "before": [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    35.88,
+    3.5,
+    [
+     [
+      0.0,
+      0.265
+     ]
+    ]
+   ],
+   "after": [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    35.88,
+    2.78,
+    [
+     [
+      0.0,
+      0.265
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 1",
+   "rule": "fill",
+   "what": "lengthened 2.67 to 3.39 s to keep the time shot 0 gave up",
+   "before": 2.67,
+   "after": 3.39
+  },
+  {
+   "where": "shot 0",
+   "rule": "head_overlap",
+   "what": "lengthened 2.78 to 3.50 s so the line on shot 1 enters at 3.35 s, after the headline clears",
+   "before": 2.78,
+   "after": 3.5
+  },
+  {
+   "where": "shot 0",
+   "rule": "shot_timing",
+   "what": "trimmed to 2.78 s, the clean part before the scene cut at 38.70 s",
+   "before": [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    35.88,
+    3.5,
+    [
+     [
+      0.0,
+      0.265
+     ]
+    ]
+   ],
+   "after": [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    35.88,
+    2.78,
+    [
+     [
+      0.0,
+      0.265
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 1",
+   "rule": "fill",
+   "what": "lengthened 3.39 to 4.11 s to keep the time shot 0 gave up",
+   "before": 3.39,
+   "after": 4.11
+  },
+  {
+   "where": "shot 0",
+   "rule": "head_overlap",
+   "what": "lengthened 2.78 to 3.50 s so the line on shot 1 enters at 3.35 s, after the headline clears",
+   "before": 2.78,
+   "after": 3.5
+  },
+  {
+   "where": "shot 0",
+   "rule": "shot_timing",
+   "what": "trimmed to 2.78 s, the clean part before the scene cut at 38.70 s",
+   "before": [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    35.88,
+    3.5,
+    [
+     [
+      0.0,
+      0.265
+     ]
+    ]
+   ],
+   "after": [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    35.88,
+    2.78,
+    [
+     [
+      0.0,
+      0.265
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 1",
+   "rule": "fill",
+   "what": "lengthened 4.11 to 4.83 s to keep the time shot 0 gave up",
+   "before": 4.11,
+   "after": 4.83
+  },
+  {
+   "where": "shot 0",
+   "rule": "head_overlap",
+   "what": "lengthened 2.78 to 3.50 s so the line on shot 1 enters at 3.35 s, after the headline clears",
+   "before": 2.78,
+   "after": 3.5
+  }
+ ],
+ "job_sha": "82744484f38f21fe7b35856a6a4a0404c361cacc",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/witch-on-the-holy-night-mobile-japan-look-1.jpg",
+  "cards/2026-11/witch-on-the-holy-night-mobile-japan-look-2.jpg",
+  "cards/2026-11/witch-on-the-holy-night-mobile-japan-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_c (trailer sound refused: music only 19.5% of the track (< 40.0%))",
+ "shot_read": {
+  "secs": 42.2,
+  "files": {
+   "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4": {
+    "secs": 42.2,
+    "cached": false,
+    "stages": {
+     "decode": 19.1,
+     "autofocus": 32.0,
+     "ocr": 32.0,
+     "smear": 42.0,
+     "scenes": 42.2
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/witch-on-the-holy-night-mobile-japan.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.17,
+  "fetch": 0.17,
+  "shots": 0.71,
+  "checks": 2.66,
+  "render": 2.73,
+  "after": 0.96,
+  "job": 7.25
+ },
+ "job_after_autofix": {
+  "name": "witch-on-the-holy-night-mobile-japan",
+  "story": "2026-11-20-witch-on-the-holy-night-mobile-japan",
+  "footage_source": "steam:2052410",
+  "kind_news": "news",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/witch-on-the-holy-night-mobile-japan-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    "steam": 2052410,
+    "trailer": "PV with English subtitles",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2052410"
+   }
+  ],
+  "shots": [
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    35.88,
+    3.5,
+    [
+     [
+      0.0,
+      0.265
+     ]
+    ]
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    8.68,
+    4.83,
+    [
+     [
+      0.0,
+      0.461
+     ],
+     [
+      0.95,
+      0.306
+     ],
+     [
+      1.767,
+      0.785
+     ],
+     [
+      2.667,
+      0.582
+     ]
+    ]
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    22.07,
+    2.67,
+    [
+     [
+      0.0,
+      1.0
+     ]
+    ]
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    35.47,
+    2.64,
+    [
+     [
+      0.0,
+      0.509
+     ]
+    ]
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    48.86,
+    2.64,
+    [
+     [
+      0.0,
+      0.514
+     ],
+     [
+      0.57,
+      0.601
+     ],
+     [
+      1.737,
+      0.865
+     ]
+    ]
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    83.25,
+    2.2,
+    [
+     [
+      0.0,
+      0.497
+     ]
+    ]
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    62.54,
+    2.2,
+    [
+     [
+      0.0,
+      0.486
+     ]
+    ]
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    75.99,
+    2.2,
+    [
+     [
+      0.0,
+      0.379
+     ],
+     [
+      1.04,
+      0.49
+     ]
+    ]
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    89.45,
+    2.2,
+    [
+     [
+      0.0,
+      0.528
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "وتأتي النسخة بأصوات كاملة\nللشخصيات وصور بدقة عالية،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "وقد تجاوزت مبيعات اللعبة\nنصف مليون نسخة حول العالم",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وتزامن الإصدار\nمع عرض فيلم الأنمي",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    8,
+    [
+     [
+      "المقتبس منها في دور\nالسينما اليابانية",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    8,
+    "المصدر: جيماتسو (Gematsu)، ولقطات من صفحة اللعبة على Steam",
+    {
+     "size": 32,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "أفاد موقع جيماتسو (Gematsu) بأن لعبة Witch on the Holy Night صدرت على آيفون وأندرويد في اليابان بسعر 2900 ين. وتأتي النسخة بأصوات كاملة للشخصيات وصور بدقة عالية، وقد تجاوزت مبيعات اللعبة نصف مليون نسخة حول العالم. وتزامن الإصدار مع عرض فيلم الأنمي المقتبس منها في دور السينما اليابانية.",
+  "headline": "لعبة Holy Night\nعلى جوالات اليابان",
+  "label": "تقرير",
+  "game": "Witch on the Holy Night",
+  "game_short": "Holy Night",
+  "texts": {
+   "instagram": "أفاد موقع جيماتسو (Gematsu) بأن لعبة Witch on the Holy Night صدرت على آيفون وأندرويد في اليابان بسعر 2900 ين.\n\nوتأتي النسخة بأصوات كاملة للشخصيات وصور بدقة عالية، وقد تجاوزت مبيعات اللعبة نصف مليون نسخة حول العالم.\n\nوتزامن الإصدار مع عرض فيلم الأنمي المقتبس منها في دور السينما اليابانية.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: جيماتسو.\n\n#ألعاب #أخبار_الألعاب #WitchOnTheHolyNight #أنمي",
+   "x": "أفاد موقع جيماتسو (Gematsu) بأن لعبة Witch on the Holy Night صدرت على آيفون وأندرويد في اليابان بسعر 2900 ين، بأصوات كاملة وصور بدقة عالية، تزامنًا مع عرض فيلم الأنمي المقتبس منها.",
+   "threads": "أفاد موقع جيماتسو (Gematsu) بأن لعبة Witch on the Holy Night صدرت على آيفون وأندرويد في اليابان بسعر 2900 ين، بأصوات كاملة وصور بدقة عالية. وتزامن الإصدار مع عرض فيلم الأنمي المقتبس منها في دور السينما اليابانية.\n\nالمصدر: جيماتسو"
+  },
+  "source": "جيماتسو (Gematsu)، ولقطات من صفحة اللعبة على Steam",
+  "date": "20 Nov 2026",
+  "theme": "playful",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+   35.88
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Gematsu reported on 20 Nov 2026 04:18Z that the visual novel is now out on iOS and Android in Japan, the day the anime film opened in Japanese cinemas.",
+   "what_it_means_here": "A Type-Moon visual novel with over 500,000 sales gets a voiced, full HD mobile release timed with its anime film."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 from the resolver (steam:2052410)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Gematsu, Witch on the Holy Night now available for iOS, Android in Japan (https://www.gematsu.com/2026/11/witch-on-the-holy-night-now-available-for-ios-android-in-japan); first report: Gematsu 20 Nov 2026 04:18Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 2052410 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "cut_ok": [
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    8.68,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    22.07,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    35.47,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    48.86,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    62.54,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    75.99,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    89.45,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ]
+  ],
+  "drift_ok": [
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    8.68,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    22.07,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    35.47,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    48.86,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    62.54,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    75.99,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    89.45,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ]
+  ]
+ }
+}
