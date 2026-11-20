@@ -25,6 +25,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 LIB = os.path.join(HERE, 'assets', 'footage-library.json')
 KEEP_STRETCHES = 40
+NOT_GAME = ('/hardware/', '/channel-specific-content/')   # platform and hardware clips are never a game's footage
 VIDEO = ('.mp4', '.mov', '.mkv', '.webm', '.m4v')
 
 
@@ -89,7 +90,7 @@ def record(job, qc=None, lib=None, now=None):
         for sh in job.get('shots') or []:
             if isinstance(sh, list) and len(sh) > 2 and sh[0] == f and isinstance(sh[1], (int, float)):
                 s = [round(float(sh[1]), 2), round(float(sh[2]), 2), sh[3] if len(sh) > 3 else None]
-                if s[:2] not in [x[:2] for x in e['stretches']]:
+                if s[0] not in [x[0] for x in e['stretches']]:   # one moment once (20 Nov: six "proven" 3.07 s)
                     e['stretches'].append(s)
         e['stretches'] = sorted(e['stretches'], key=lambda x: x[0])[-KEEP_STRETCHES:]
         if job.get('name') and job['name'] not in e['reels']:
@@ -135,10 +136,28 @@ def stretches_for_file(f, lib=None, job=None):
     return sorted(out, key=lambda x: x[0])
 
 
-def candidates(handle, lib=None):
-    """footage.resolve candidates from the library: proven, decode clean (a decode failure is never recorded)."""
-    out = []
-    for e in sorted(for_handle(handle, lib), key=lambda e: -len(e.get('reels', []))):
+def for_game_name(game, lib=None):
+    """Proven files for a game by its name as the story writes it ("Grand Theft Auto VI"): an entry whose games list
+    holds that name exactly (case aside). The 1080p Rockstar launch trailer is recorded under "Grand Theft Auto VI"."""
+    lib = lib or load()
+    g = str(game or '').strip().lower()
+    if not g:
+        return []
+    return [dict(e, key=k) for k, e in lib.get('files', {}).items() if g in {x.lower() for x in e.get('games', [])}]
+
+
+def candidates(handle, lib=None, game=None):
+    """footage.resolve candidates from the library: proven, decode clean (a decode failure is never recorded). The
+    game's own entries come first (Mohammad, 20 Nov 2026: the library before any page lookup), then the handle's;
+    the most stretches first, so the copy a Reel rendered most from leads."""
+    lib = lib or load()
+    out, seen = [], set()
+    entries = sorted(for_game_name(game, lib), key=lambda e: (-len(e.get('stretches', [])), -len(e.get('reels', [])))) + \
+        sorted(for_handle(handle, lib), key=lambda e: -len(e.get('reels', [])))
+    for e in entries:
+        if e['key'] in seen or any(m in e['key'] for m in NOT_GAME):
+            continue
+        seen.add(e['key'])
         out.append({'job': dict(e['item']), 'name': e['item'].get('trailer') or e['item'].get('file'),
                     'decode_clean': True, 'library': True, 'proven_reels': len(e.get('reels', [])),
                     'stretches': len(e.get('stretches', []))})

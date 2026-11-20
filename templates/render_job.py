@@ -638,6 +638,75 @@ def _video_dur(f):
         return 0.0
 
 
+RESPREAD_OVERLAP = 0.5      # seconds two shots of one file may share before the later one is moved
+
+
+def respread(job):
+    """Never the same moment twice (Mohammad, 20 Nov 2026): Ace Combat 8 rendered twelve shots at 3.07 s and GTA VI CDPR
+    fourteen at 0.0 s, after a capped scan left every automatic slot on its file's picture start. A footage shot that
+    repeats or overlaps (more than RESPREAD_OVERLAP) a shot already placed on the same file moves to the evenly spaced
+    position on that file furthest from every shot already placed; when the file has no free room, it moves to the job's
+    other footage videos the same way. Logged on the picture ladder; shots the builder spread out are never touched."""
+    import softgate as SG_
+    shots = job.get('shots') or []
+    vids = [it['file'] for it in job.get('footage') or [] if str(it.get('file', '')).lower().endswith(('.mp4', '.mov', '.mkv', '.webm', '.m4v'))]
+    if not vids:
+        return []
+    durs = {}
+
+    def dur(f):
+        if f not in durs:
+            durs[f] = _video_dur(f) or 0.0
+        return durs[f]
+
+    placed = {}
+    moved = []
+    for i, sh in enumerate(shots):
+        if not (isinstance(sh, list) and len(sh) > 2 and sh[0] in vids and isinstance(sh[1], (int, float))):
+            continue
+        a, b = float(sh[1]), float(sh[1]) + float(sh[2])
+        if any(min(b, y) - max(a, x) > RESPREAD_OVERLAP or abs(a - x) < 0.05 for x, y in placed.get(sh[0], [])):
+            moved.append(i)
+        else:
+            placed.setdefault(sh[0], []).append((a, b))
+    if not moved:
+        return []
+    import autoshots as AS
+    out = []
+    for i in moved:
+        sh = shots[i]
+        secs = float(sh[2])
+        best = None
+        for f in [sh[0]] + [v for v in vids if v != sh[0]]:
+            d = dur(f)
+            r = AS.READ.get(f) or {}
+            v0 = float(r.get('picture_start') or min([x for x, _ in placed.get(f, [])] or [0.0]))
+            hi = d - 0.4 - secs
+            if d <= 0 or hi <= v0 + 0.3:
+                continue
+            taken = placed.get(f, [])
+            cands = [v0 + 0.3 + (hi - v0 - 0.3) * k / 23 for k in range(24)]
+            free = [c for c in cands if all(min(c + secs, y) - max(c, x) <= 0 for x, y in taken)]
+            if free:
+                c = max(free, key=lambda c: min([abs(c - x) for x, _ in taken] or [d]))
+                best = (f, round(c, 2))
+                break
+        if not best:
+            continue
+        f, st = best
+        sh[0], sh[1] = f, st
+        if len(sh) > 3:
+            sh[3] = None                        # the old focus was for another moment; autofocus picks the new one
+        placed.setdefault(f, []).append((st, st + secs))
+        for key in ('cut_ok', 'drift_ok'):
+            job.setdefault(key, []).append([f, st, 'never the same moment twice: respread after the scan'])
+        SG_.ladder('picture', i, 'a', f'{f} at {st} s: moved off a repeated moment (respread)')
+        out.append(i)
+    if out:
+        print(f'render_job: respread: {len(out)} repeated shot(s) moved to free moments: {out}', flush=True)
+    return out
+
+
 def auto_fallback(job, slots):
     """Never refuse (card A): an automatic slot the read could not fill takes an evenly spaced stretch of its file,
     after the picture start, clear of the stretches already used, with the clean-stretch checks waived (picture ladder
@@ -1478,6 +1547,8 @@ def run(job, draft=False):
     if SG_.soft(job):
         first_frame_check(job)                  # a shot ending before the picture moves onto it (never a hang)
     t_shots = scan(job)                         # auto shots, track, shot gate: capped, on 720p proxies (20 Nov 2026)
+    if SG_.soft(job):
+        respread(job)                           # never the same moment twice (20 Nov 2026, Ace Combat 8: 12 shots at 3.07 s)
     if SG_.soft(job) and job.get('kind') != 'breaking':
         SG_.guarded('reading fix', SG_.fix_reading, job, _starts, place, reel.read_secs)   # text ladder: extend the Reel
         if job.get('lines') and job.get('shots'):

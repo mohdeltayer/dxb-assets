@@ -164,7 +164,10 @@ def playstation(url, name):
     html = _get(url)
     urls = list(dict.fromkeys(re.findall(r'https://gmedia\.playstation\.com/[^"\'\\\s]+?\.mp4', html)))
     slug = _slug(url)
-    urls = [u for u in urls if f'/{slug}/' in u] or urls        # the page's own game first; hardware clips drop
+    own = [u for u in urls if f'/{slug}/' in u]
+    # the page's own game first; a hardware or platform clip is never the game's footage (20 Nov 2026: the GTA VI page
+    # gave the PS5 Pro PSSR clip, and the Reel ran it as GTA VI)
+    urls = own or [u for u in urls if '/hardware/' not in u and '/channel-specific-content/' not in u]
     urls = [u for u in urls if '-mobile-' not in u] or urls     # the desktop cut is the full frame
     return [{'name': os.path.basename(u), 'kind': 'playstation', 'probe': u,
              'job': {'file': f'{name}-ps-{i + 1}.mp4', 'url': u}} for i, u in enumerate(urls[:MAX])]
@@ -249,13 +252,16 @@ def check(c, tmp, deadline):
     return c
 
 
-def resolve(source, name=None, do_check=True, max_n=None):
+def resolve(source, name=None, do_check=True, max_n=None, game=None):
     global MAX
     if max_n:
         MAX = int(max_n)
     kind, arg = classify(source)
     name = _stem(name or (f'steam-{arg}' if kind == 'steam' else _slug(arg)))
-    cands = {'steam': steam, 'nintendo': nintendo, 'ign': ign, 'playstation': playstation}[kind](arg, name)
+    try:
+        cands = {'steam': steam, 'nintendo': nintendo, 'ign': ign, 'playstation': playstation}[kind](arg, name)
+    except Exception:                             # noqa: BLE001  a page that fails still leaves the library
+        cands = []
     deadline = time.time() + CHECK_SECS
     if do_check and cands:
         tmp = tempfile.mkdtemp(prefix='footage-')
@@ -274,7 +280,7 @@ def resolve(source, name=None, do_check=True, max_n=None):
                               -(c.get('duration') or 0)))
     try:                                          # the footage library first (adv-20261118-templates-never-refuse B):
         import footlib                            # files a Reel already rendered from, proven decode clean
-        lib = footlib.candidates(source)
+        lib = footlib.candidates(source, game=game)
     except Exception:                             # noqa: BLE001  the library never stops a resolve
         lib = []
     seen = {(c['job'].get('url') or c['job'].get('trailer') or c['job'].get('file')) for c in lib}
