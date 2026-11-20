@@ -1,10 +1,40 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-20T17:52:06Z",
- "seq": 689,
+ "generated_at": "2026-11-20T18:35:08Z",
+ "seq": 690,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 19694,
+   "source": "PlayStation Blog",
+   "source_kind": "official",
+   "title": "Official PlayStation Podcast Episode 553: Peak Gaming",
+   "url": "https://blog.playstation.com/2026/11/20/official-playstation-podcast-episode-553-peak-gaming/",
+   "published": "2026-11-20T18:28Z",
+   "first_seen": "2026-11-20T18:35:05Z",
+   "media": [
+    {
+     "type": "audio",
+     "url": "https://traffic.libsyn.com/playstation/Ep_553_.mp3"
+    },
+    {
+     "type": "audio",
+     "url": "https://traffic.libsyn.com/playstation/Episode_543.mp3"
+    },
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/tachyon/2026/06/bba1c6d7e2e3b992a441dc935066993486f05a2a.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/tachyon/2025/02/0ed157540c2d425c6c06faa3f745e4fa718971d9.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 690
+  }
+ ],
  "recent": [
   {
    "id": 19624,
@@ -200,32 +230,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 658
-  },
-  {
-   "id": 18762,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Blacksmith Master - 1.0 Launch Trailer",
-   "url": "https://www.youtube.com/watch?v=fOLAqofP-uM",
-   "published": "2026-11-19T18:00Z",
-   "first_seen": "2026-11-19T18:15:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/fOLAqofP-uM/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=fOLAqofP-uM"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 656
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-20T17:50:14Z",
+  "last_poll_at": "2026-11-20T18:35:05Z",
   "sources_enabled": 100,
   "sources_ok": 93,
   "sources_failing": 7,
@@ -235,7 +244,7 @@
    "PlayStation (X) (HTTP 429, 15x)",
    "PlayStation Middle East (X) (HTTP 429, 23x)",
    "Rockstar Games (X) (HTTP 429, 10x)",
-   "The Game Awards (HTTP 403, 55x)",
+   "The Game Awards (HTTP 403, 56x)",
    "Xbox (X) (HTTP 429, 101x)"
   ]
  }
