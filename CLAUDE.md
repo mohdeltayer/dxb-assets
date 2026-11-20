@@ -3841,3 +3841,18 @@ The server was bought to render several Reels at once. Capacity only: no templat
    registered the server keeps one render and a second overflows at once. Mohammad registers dxb-render-1b (second render
    slot) and dxb-render-1c (spare: T0, reads and checks) with `scripts/runner-add.sh` as root; the slots open by
    themselves once each instance has taken a job.
+
+## The 16:9 fallback (Mohammad, 20 Nov 2026)
+
+When what is in the footage clashes with our text in a 9:16 crop, the Reel goes to the showcase layout (the trailer at its own
+width, our headline, lines and facts in the empty bands above and below) instead of another render or send-back. This
+adds a third case to the showcase rule of 8 Nov, after "the trailer is the news" and "a weak source". The server does it
+on its own (picture ladder step b, logged in qc.json `ladder`):
+1. Letterboxed footage, as before, and now also a subject the 9:16 window loses or cuts (shot gate leftovers).
+2. Burnt-in text: two cropped frames of every footage shot are read; two readable words in the first shot (the grid
+   tile), or in two frames anywhere, move the job (`render_job.content_ladder`; one logo frame alone does not).
+3. A director send-back for wrong_subject or unreadable_text writes the showcase into the job (`presubmit.py director ...
+   FIX`); the next render is the last.
+Not for card-led templates, person windows, products, the storybook page, series episodes with an intro, breaking, or a
+job with `"showcase_fallback": false`. Ordered by Mohammad during the 18 Nov freeze, so it ships live; the first
+renders' `content:` log lines are read to see how often it fires.

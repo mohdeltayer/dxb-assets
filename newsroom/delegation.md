@@ -86,6 +86,10 @@ unreadable_text | factual_error --note "<what and where>"`. The send-back is wri
 server unless the job names "rerender": {"reason", "note"}. Things the server now checks (a line under the headline,
 shots across scene cuts or before the picture, letterbox, a subject leaving the crop, a busy card ground, lines that are
 not the spoken paragraph) are never send-back reasons: if one slips through, it goes to the build desk as a bug.
+16:9 fallback (Mohammad, 20 Nov 2026): when the send-back is wrong_subject or unreadable_text because of what is in the
+footage (the trailer's own subtitles or credits under our lines, a face under the headline, a subject the crop loses),
+`presubmit.py director ... FIX --reason` also moves the job to the showcase layout (the trailer at its own width, our
+headline, lines and facts in the bands); commit the job and render once more. Never a re-crop round for the same clash.
 One exception (Mohammad, 15 Nov 2026, on the card): on stylised or cartoon art, where the subject detector sees nothing
 (POPUCOM's submarine and heroes), a subject cut out of the 9:16 crop or drifting out of it is a send-back as
 `wrong_subject`, with the shot and second in the note.
