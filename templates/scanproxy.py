@@ -22,7 +22,7 @@ import tempfile
 import time
 
 CAP_PER_SOURCE = 180       # seconds of scan per footage source (release 2026-11-18 r1: the shot read's 3 minutes)
-CAP_MIN, CAP_MAX = 180, 540
+CAP_MIN, CAP_MAX = 180, 300       # whole job at most 5 minutes (20 Nov: Ace Combat 8 spent its 540 s cap and left 6 minutes for the render)
 PROXY_SECS = 150           # building one proxy; past this the scan reads the original
 PROXY_H = 720
 BIG_H, BIG_MBPS = 1080, 25.0

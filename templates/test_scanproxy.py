@@ -33,7 +33,7 @@ class Scan(unittest.TestCase):
     def test_cap_for(self):
         self.assertEqual(SP.cap_for({'shots': [['a.mp4', 0, 2]]}), 180)
         self.assertEqual(SP.cap_for({'shots': [['a.mp4', 0, 2], ['b.mp4', 0, 2]]}), 360)
-        self.assertEqual(SP.cap_for({'shots': [[f'{i}.mp4', 0, 2] for i in range(5)]}), 540)
+        self.assertEqual(SP.cap_for({'shots': [[f'{i}.mp4', 0, 2] for i in range(5)]}), 300)
 
     def test_stale_slots_keep_typed_starts(self):
         job = {'shots': [['a.mp4', 26.45, 3.8, None], ['a.mp4', 0.0, 2.2, None], ['a.mp4', 'auto', 2.2, None]],
