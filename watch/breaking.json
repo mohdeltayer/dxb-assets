@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-20T17:10:15Z",
- "seq": 688,
+ "generated_at": "2026-11-20T17:52:06Z",
+ "seq": 689,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 19624,
    "source": "Xbox (YouTube)",
@@ -25,9 +26,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 688
-  }
- ],
- "recent": [
+  },
   {
    "id": 19623,
    "source": "PlayStation Blog",
@@ -222,25 +221,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 656
-  },
-  {
-   "id": 18693,
-   "source": "Nintendo US",
-   "source_kind": "page",
-   "title": "11/19/26 Adventure Awaits: Save on a daring selection of digital games Discover your next big adventure with Nintendo Switch™ 2 and Nintendo Switch games packed",
-   "url": "https://www.nintendo.com/us/whatsnew/adventure-awaits-save-on-a-daring-selection-of-digital-games/",
-   "published": null,
-   "first_seen": "2026-11-19T17:10:15Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 654
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-20T17:10:14Z",
+  "last_poll_at": "2026-11-20T17:50:14Z",
   "sources_enabled": 100,
-  "sources_ok": 92,
+  "sources_ok": 93,
   "sources_failing": 7,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 136x)",
