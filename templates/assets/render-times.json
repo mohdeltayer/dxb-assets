@@ -103971,5 +103971,218 @@
   "sound": "trailer",
   "footage": true,
   "upload_secs": 55.0
+ },
+ {
+  "name": "persona-6-not-the-end-wada-famitsu-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-20T13:23Z",
+  "stages": {
+   "checks": 5.6,
+   "montage": 34.9,
+   "text": 44.8,
+   "audio": 0.2,
+   "outro": 31.3
+  },
+  "total": 116.8,
+  "lane": "runner",
+  "queued_at": "2026-11-20T13:21Z",
+  "finished_at": "2026-11-20T13:23Z",
+  "render_min": 1.95,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    "start": 4.36,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.48,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    "start": 8.27,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.48,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    "start": 21.91,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.48,
+    "rows": 706,
+    "zoom": 2.72,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    "start": 30.54,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.48,
+    "rows": 686,
+    "zoom": 2.8,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    "start": 49.4,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.48,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    "start": 51.64,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.48,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    "start": 54.25,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.48,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    "start": 67.35,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.48,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    "start": 75.22,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.48,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 2.8,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 30.1,
+   "audio_secs": 47.5,
+   "music_pct": 6.7,
+   "leak_pct": 7.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 5
+   },
+   "reason": "music stem not clean (leftover 7.4% > 5.0%)",
+   "secs": 42.1,
+   "fallback": "bed:neon_b"
+  },
+  "lifeless": {
+   "score": 34.5,
+   "still_share": 0.275,
+   "longest_still": 1.7,
+   "cuts_per_10s": 0.0,
+   "held_under_text": 0.0,
+   "secs": 18.9,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 27.3,
+   "shots": 25.8,
+   "checks": 155.4,
+   "render": 160.4,
+   "after": 43.3
+  },
+  "softgate": {
+   "warnings": 4,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "letterbox: kept as a crop, check waived"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "letterbox: kept as a crop, check waived"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "b",
+     "why": "letterboxed footage: showcase layout, the trailer at its own width"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "c",
+     "why": "audio split not applied (music stem not clean (leftover 7.4% > 5.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or o"
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 413,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1350,
+  "peak_mem_mb": 2712,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 62523,
+  "peak_disk_mb": 63555,
+  "min_disk_free_mb": 84242,
+  "setup_min": 3.48,
+  "story": "persona-6-not-the-end-wada-famitsu"
  }
 ]
