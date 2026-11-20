@@ -29,6 +29,7 @@ Slip (JSON):
     python3 templates/slip.py build <slip.json> [--lane live|test] [--result r.json] [--no-resolve]
 """
 import datetime as dt
+import functools
 import json
 import os
 import re
@@ -361,6 +362,71 @@ def story_file(slip, footage_note):
     }
 
 
+HOSTS = {'rockstargames': 'Rockstar Games', 'playstation.com': 'PlayStation', 'nintendo.com': 'Nintendo',
+         'xbox.com': 'Xbox', 'ea.com': 'Electronic Arts', 'ubisoft': 'Ubisoft', 'square-enix': 'Square Enix',
+         'bandainamco': 'Bandai Namco', 'capcom': 'Capcom'}
+FOOT_CLAUSE = re.compile(r'[،,]?\s*\n?\s*(?:و?(?:ال)?لقطات)\b.*$', re.S)
+
+
+@functools.lru_cache(maxsize=64)
+def steam_publisher(appid):
+    """The publisher Steam lists for an app (store API, read only); None when it cannot be read."""
+    try:
+        import urllib.request
+        u = f'https://store.steampowered.com/api/appdetails?appids={int(appid)}&filters=basic'
+        d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={'User-Agent': 'Mozilla/5.0'}), timeout=20))
+        pubs = (d.get(str(int(appid)), {}).get('data') or {}).get('publishers') or []
+        return pubs[0] if pubs else None
+    except Exception:                               # noqa: BLE001
+        return None
+
+
+def footage_owner(slip, foot):
+    """Who the footage actually used belongs to, in Latin: the Steam app's publisher, the official host of a URL, the
+    library note, else the slip's first company."""
+    if foot.get('steam'):
+        p = steam_publisher(foot['steam'])
+        if p:
+            return p
+    url = str(foot.get('url') or '') + ' ' + str(foot.get('note') or '') + ' ' + str(foot.get('repo') or '')
+    for host, owner in HOSTS.items():
+        if host in url.lower():
+            if owner == 'PlayStation' and slip.get('companies'):   # a game trailer on playstation.com is the publisher's
+                return slip['companies'][0]
+            return owner
+    if 'rockstar' in url.lower():
+        return 'Rockstar Games'
+    return (slip.get('companies') or [None])[0]
+
+
+def arabic_name(latin, table=None):
+    """names-ar's Arabic for a company, trying shorter forms ("Bandai Namco Entertainment" -> "Bandai Namco")."""
+    table = _names_table() if table is None else table
+    words = str(latin or '').split()
+    for n in range(len(words), 0, -1):
+        ar = table.get(' '.join(words[:n]).lower())
+        if ar:
+            return ar, ' '.join(words[:n])
+    return None, latin
+
+
+def footage_credit(slip, foot, table=None):
+    """The on-screen credit names the footage actually used (Mohammad, 20 Nov 2026: the Ace Combat 8 credit said
+    «صفحة اللعبة على Steam» over Bandai Namco's trailer). The slip's credit keeps its news source; any footage clause
+    in it is replaced by the footage's owner: «المصدر: <outlet>،\nولقطات من <owner>», or «المصدر: <owner>» alone."""
+    raw = str(slip.get('credit') or '').strip()
+    news = FOOT_CLAUSE.sub('', raw).strip().rstrip('،,: ')
+    news = re.sub(r'^المصدر\s*:?\s*', '', news).strip()
+    owner = footage_owner(slip, foot)
+    if not owner:                                   # nothing known about the footage: the slip's own words stand
+        return raw if raw.startswith(('المصدر', 'لقطات')) else f'المصدر: {raw}'
+    ar, lat = arabic_name(owner, table)
+    who = f'{ar} ({lat})' if ar else owner
+    if news and ar and ar in news:                  # the outlet is the footage's owner: one name is enough
+        return f'المصدر: {news}'
+    return f'المصدر: {news}،\nولقطات من {who}' if news else f'المصدر: {who}'
+
+
 def job_from(slip, foot, lane='live', theme=None, spare=()):
     """The job, ready for the render: plain news layout, server-picked shots, lines cut from the spoken paragraph."""
     import textrules as TR
@@ -376,7 +442,7 @@ def job_from(slip, foot, lane='live', theme=None, spare=()):
         lines.append([a, len(shots) - 1, [[_wrap(b), {'size': LINE_SIZE}]]])
     if len(shots) < 4:                              # a short story still breathes: footage after the last line
         shots += [[f, 'auto', MIN_SECS, None] for _ in range(4 - len(shots))]
-    credit = slip['credit'] if str(slip['credit']).startswith(('المصدر', 'لقطات')) else f'المصدر: {slip["credit"]}'
+    credit = footage_credit(slip, foot)
     out_dir = 'cards/test' if lane == 'test' else f'cards/{dt.date.today():%Y-%m}'
     track = 'bed' if slip.get('sound') == 'bed' else [f, 0.0]
     job = {
@@ -389,7 +455,7 @@ def job_from(slip, foot, lane='live', theme=None, spare=()):
         'spoken': slip['spoken'], 'headline': slip['headline'], 'label': slip['label'],
         'game': slip.get('game'), 'game_short': slip.get('game_short'),
         'texts': {k: slip.get(k) for k in ('instagram', 'x', 'threads') if slip.get(k)},
-        'source': re.sub(r'^المصدر:\s*', '', credit), 'date': slip.get('date') or dt.date.today().strftime('%-d %b %Y'),
+        'source': re.sub(r'^المصدر:\s*', '', credit).replace('\n', ' '), 'date': slip.get('date') or dt.date.today().strftime('%-d %b %Y'),
         'theme': theme or theme_for(slip), 'style': None, 'template': 'trailer', 'skin': 'house', 'cut': False,
         'track': track, 'track_from_first_shot': track != 'bed',
         'angle': slip.get('angle') or None,
@@ -402,6 +468,8 @@ def job_from(slip, foot, lane='live', theme=None, spare=()):
     }
     if track == 'bed':
         job['bed_reason'] = slip.get('bed_reason')
+    if slip.get('rerender'):                        # a rebuilt slip after a director send-back names why (qc.py rerender)
+        job['rerender'] = slip['rerender']
     if lane == 'test':
         job['render_lane'] = 'hosted'
         job['lane_reason'] = 'Phase 1 test (no Publer upload, no ledgers)'
@@ -457,13 +525,17 @@ def build(slip, lane='live', resolve=True, root=ROOT, now=None):
     if resolve:
         try:
             import footage as FT
-            r = FT.resolve(slip['footage'], name=name, max_n=3)   # three candidates: the first clean one is used
+            r = FT.resolve(slip['footage'], name=name, max_n=3, game=slip.get('game'))   # the game's library first
         except Exception as e:                      # the slip is failed with the reason, never left without a result
             res['problems'].append(f'footage: the resolver stopped on {slip["footage"]}: {type(e).__name__}: {e}')
             return res
         cands = r.get('candidates') or []
+        pick = slip.get('footage_pick')
+        if cands and cands[0].get('library') and pick is not None:   # the library wins over a page pick (20 Nov 2026)
+            res['flags'].append(f'footage_pick {pick} ignored: the footage library has {cands[0].get("name")} for this game')
+            pick = None
         try:
-            c = pick_footage(cands, slip.get('footage_pick'))
+            c = pick_footage(cands, pick)
         except ValueError as e:
             res['problems'].append(f'footage: {e} ({slip["footage"]}; {r.get("error") or str(len(cands)) + " found"})')
             return res

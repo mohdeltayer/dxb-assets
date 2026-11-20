@@ -627,6 +627,8 @@ def auto_shots(job):
         if not SG_.soft(job):
             raise SystemExit(f'autoshots: {len(left)} shot slot{"s" if len(left) > 1 else ""} with no clean stretch (above)')
         auto_fallback(job, [p['shot'] for p in left])
+        # no clean stretch for a slot: the whole frame instead of a guessed crop (Mohammad, 20 Nov 2026, 22:20)
+        SG_.showcase_fallback(job, f'the shot scan found no clean stretch for {len(left)} slot(s)')
     print(f'autoshots: {len(AF.LOG) - n0} shot time(s) picked on the server', flush=True)
 
 
@@ -636,6 +638,75 @@ def _video_dur(f):
                                               'csv=p=0', C.U + f], text=True).strip())
     except (subprocess.CalledProcessError, ValueError, OSError):
         return 0.0
+
+
+RESPREAD_OVERLAP = 0.5      # seconds two shots of one file may share before the later one is moved
+
+
+def respread(job):
+    """Never the same moment twice (Mohammad, 20 Nov 2026): Ace Combat 8 rendered twelve shots at 3.07 s and GTA VI CDPR
+    fourteen at 0.0 s, after a capped scan left every automatic slot on its file's picture start. A footage shot that
+    repeats or overlaps (more than RESPREAD_OVERLAP) a shot already placed on the same file moves to the evenly spaced
+    position on that file furthest from every shot already placed; when the file has no free room, it moves to the job's
+    other footage videos the same way. Logged on the picture ladder; shots the builder spread out are never touched."""
+    import softgate as SG_
+    shots = job.get('shots') or []
+    vids = [it['file'] for it in job.get('footage') or [] if str(it.get('file', '')).lower().endswith(('.mp4', '.mov', '.mkv', '.webm', '.m4v'))]
+    if not vids:
+        return []
+    durs = {}
+
+    def dur(f):
+        if f not in durs:
+            durs[f] = _video_dur(f) or 0.0
+        return durs[f]
+
+    placed = {}
+    moved = []
+    for i, sh in enumerate(shots):
+        if not (isinstance(sh, list) and len(sh) > 2 and sh[0] in vids and isinstance(sh[1], (int, float))):
+            continue
+        a, b = float(sh[1]), float(sh[1]) + float(sh[2])
+        if any(min(b, y) - max(a, x) > RESPREAD_OVERLAP or abs(a - x) < 0.05 for x, y in placed.get(sh[0], [])):
+            moved.append(i)
+        else:
+            placed.setdefault(sh[0], []).append((a, b))
+    if not moved:
+        return []
+    import autoshots as AS
+    out = []
+    for i in moved:
+        sh = shots[i]
+        secs = float(sh[2])
+        best = None
+        for f in [sh[0]] + [v for v in vids if v != sh[0]]:
+            d = dur(f)
+            r = AS.READ.get(f) or {}
+            v0 = float(r.get('picture_start') or min([x for x, _ in placed.get(f, [])] or [0.0]))
+            hi = d - 0.4 - secs
+            if d <= 0 or hi <= v0 + 0.3:
+                continue
+            taken = placed.get(f, [])
+            cands = [v0 + 0.3 + (hi - v0 - 0.3) * k / 23 for k in range(24)]
+            free = [c for c in cands if all(min(c + secs, y) - max(c, x) <= 0 for x, y in taken)]
+            if free:
+                c = max(free, key=lambda c: min([abs(c - x) for x, _ in taken] or [d]))
+                best = (f, round(c, 2))
+                break
+        if not best:
+            continue
+        f, st = best
+        sh[0], sh[1] = f, st
+        if len(sh) > 3:
+            sh[3] = None                        # the old focus was for another moment; autofocus picks the new one
+        placed.setdefault(f, []).append((st, st + secs))
+        for key in ('cut_ok', 'drift_ok'):
+            job.setdefault(key, []).append([f, st, 'never the same moment twice: respread after the scan'])
+        SG_.ladder('picture', i, 'a', f'{f} at {st} s: moved off a repeated moment (respread)')
+        out.append(i)
+    if out:
+        print(f'render_job: respread: {len(out)} repeated shot(s) moved to free moments: {out}', flush=True)
+    return out
 
 
 def auto_fallback(job, slots):
@@ -707,6 +778,7 @@ def scan(job):
     slots = [i for i in job.get('shots_auto') or [] if i < len(job.get('shots') or [])]
     if slots:
         auto_fallback(job, slots)
+        SG_.showcase_fallback(job, 'the shot scan found no clean stretch before its cap')
         SG_.ladder('picture', 'reel', 'a', f'scan cap: {len(slots)} automatic slot(s) from the library or evenly spaced')
     track_from_first_shot(job)
     return time.time()
@@ -769,7 +841,7 @@ def shot_gate(job):
     SG.enforce(job, rows)
 
 
-SHOWCASE_BLOCKERS = ('gfx', 'person', 'products', 'page_motion', 'frame', 'kit', 'tribute', 'insert')
+from softgate import SHOWCASE_BLOCKERS   # noqa: E402  (the 16:9 fallback lives in softgate, 20 Nov 2026)
 
 
 def gate_ladder(job, left):
@@ -777,7 +849,7 @@ def gate_ladder(job, left):
     footage takes the showcase layout (step b) when nothing in the job rules it out; every other problem (a scene cut,
     drift, a subject cut by the edge) keeps a crop with the check waived (step a). Each slot is logged."""
     import softgate as SG_
-    letterbox = False
+    letterbox = drift = False
     for p in left:
         i = p.get('shot')
         if i is None and str(p.get('where', '')).startswith('shot '):
@@ -801,12 +873,82 @@ def gate_ladder(job, left):
         letterbox = letterbox or 'letterbox' in kinds
         SG_.warn('shot gate', d, shot=i)
         SG_.ladder('picture', i, 'a', ', '.join(kinds) + ': kept as a crop, check waived')
-    if letterbox and not job.get('layout') and not any(job.get(k) for k in SHOWCASE_BLOCKERS) \
-            and job.get('template') not in ('storybeat', 'numbers', 'list', 'explainer', 'quote', 'edition', 'reviewscores'):
+        drift = drift or 'drift' in kinds
+    if letterbox and SG_.showcase_ok(job):
         job['layout'] = 'showcase'
         job['showcase_reason'] = ('the source is letterboxed and fails the quality gate in a full-frame crop '
                                   '(picture ladder step b, set by the server)')
         SG_.ladder('picture', 'reel', 'b', 'letterboxed footage: showcase layout, the trailer at its own width')
+    elif drift:                                 # a subject the 9:16 crop loses: show the whole frame (20 Nov 2026)
+        SG_.showcase_fallback(job, 'the subject leaves or is cut by the 9:16 window')
+
+
+FALLBACK_AFTER = 3         # renders of one story in 24 hours before the next one takes the 16:9 fallback (Mohammad, 20 Nov 2026)
+
+
+def tries_ladder(job, story=None):
+    """Mohammad, 20 Nov 2026 ("Eight is a lot... If it does it 3 times and doesn't work, it activates the fallback"):
+    after FALLBACK_AFTER renders of the same story in the last 24 hours (render-times.json, as jobsha counts dispatches),
+    the next render takes the showcase layout instead of another crop. Returns the reason when it moved the job."""
+    import softgate as SG_
+    import jobsha
+    if not SG_.soft(job) or not SG_.showcase_ok(job):
+        return None
+    name = story or job.get('story') or job.get('name')
+    if not name:
+        return None
+    done = jobsha.count(str(name), jobsha._entries()) - 1
+    if done < FALLBACK_AFTER:
+        return None
+    why = f'{done} renders of this story in 24 hours did not get it through (trailer crop tried {done} times)'
+    print('tries: ' + why, flush=True)
+    return why if SG_.showcase_fallback(job, why) else None
+
+
+CONTENT_WORDS = 2          # readable words in one cropped frame that count as burnt-in text (a subtitle, a credit card)
+CONTENT_SECS = 60          # the whole read; a slow read is a warning, never a hold
+
+
+def content_ladder(job):
+    """The 16:9 fallback (Mohammad, 20 Nov 2026: "if the render fails because of what's happening in the reel in the
+    background, it can go to 16:9 and just use the empty spaces for the news or text"). Two cropped vertical frames of
+    every footage shot (a third and two thirds in) are read with tesseract; a frame with CONTENT_WORDS readable words or
+    more inside the 9:16 window (the trailer's subtitles, a staff credit, a title card), in the first shot (the grid tile)
+    or in two frames anywhere (one logo frame alone does not count), moves the job to the showcase layout, where the trailer runs at its own width and our headline and lines sit in the bands. Only for jobs that may
+    take it (softgate.showcase_ok); without tesseract, or past CONTENT_SECS, it is a warning and the crop stays."""
+    import softgate as SG_
+    if not SG_.soft(job) or not SG_.showcase_ok(job):
+        return None
+    t0, hits = time.time(), []
+    for i, sh in enumerate(job.get('shots') or []):
+        if not (isinstance(sh, (list, tuple)) and len(sh) >= 3 and isinstance(sh[0], str)
+                and isinstance(sh[1], (int, float)) and isinstance(sh[2], (int, float))):
+            continue
+        f, st, du = sh[0], float(sh[1]), float(sh[2])
+        if '-gfx-' in f or os.path.splitext(f)[1].lower() in ('.png', '.jpg', '.jpeg', '.webp') or not os.path.exists(C.U + f):
+            continue
+        fo = sh[3] if len(sh) > 3 else None
+        for t in (st + du / 3, st + 2 * du / 3):
+            if time.time() - t0 > CONTENT_SECS:
+                SG_.warn('content', f'burnt-in text read stopped after {CONTENT_SECS} s at shot {i}; the crop stays')
+                return None
+            try:
+                words = reel._words(reel._vert(f, st, du, fo, t))
+            except Exception as e:             # a frame that cannot be read is a warning, never a hold
+                SG_.warn('content', f'shot {i} at {t:.2f} s: {e}')
+                continue
+            if words is None:
+                SG_.warn('content', 'tesseract missing: burnt-in text not read; the crop stays')
+                return None
+            words = [w for w in words if sum(ch.isalnum() for ch in w) >= 2]
+            if len(words) >= CONTENT_WORDS:
+                hits.append(f'shot {i} at {t:.1f} s ({" ".join(words[:6])})')
+                print('content: burnt-in text in ' + hits[-1], flush=True)
+                if i == 0 or len(hits) >= 2:     # the grid tile, or text in two frames: not a one-off logo
+                    why = 'burnt-in text in ' + '; '.join(hits)
+                    return why if SG_.showcase_fallback(job, why, slot=i) else None
+    print(f'content: no burnt-in text in the 9:16 window ({time.time() - t0:.0f} s)', flush=True)
+    return None
 
 
 def first_frame_check(job):
@@ -1478,6 +1620,11 @@ def run(job, draft=False):
     if SG_.soft(job):
         first_frame_check(job)                  # a shot ending before the picture moves onto it (never a hang)
     t_shots = scan(job)                         # auto shots, track, shot gate: capped, on 720p proxies (20 Nov 2026)
+    if SG_.soft(job):
+        respread(job)                           # never the same moment twice (20 Nov 2026, Ace Combat 8: 12 shots at 3.07 s)
+    if job.get('kind') != 'breaking' and profile_of(job) != 'breaking':
+        SG_.guarded('tries', tries_ladder, job)         # three renders that did not get through: 16:9 (20 Nov 2026)
+        SG_.guarded('content', content_ladder, job)     # the 16:9 fallback for burnt-in text (20 Nov 2026)
     if SG_.soft(job) and job.get('kind') != 'breaking':
         SG_.guarded('reading fix', SG_.fix_reading, job, _starts, place, reel.read_secs)   # text ladder: extend the Reel
         if job.get('lines') and job.get('shots'):

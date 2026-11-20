@@ -111,11 +111,16 @@ def capped(fn, job, uploads=None, secs=None):
     root = proxies(job, uploads) if os.path.isdir(uploads) else None
     fd, res = tempfile.mkstemp(suffix='.json', prefix='scan-')
     os.close(fd)
+    # the child's server fixes go to its own files and reach the workflow's only when the scan finished (20 Nov 2026:
+    # a killed scan left every shot on its picture start in AUTOFIX_JOB, and the workflow wrote that back to main)
+    real = {k: os.environ.get(k) for k in ('AUTOFIX_JOB', 'AUTOFIX_JSON') if os.environ.get(k)}
+    mine = {k: res + '.' + k.lower() for k in real}
     pid = os.fork()
     if pid == 0:                                   # child: its own process group, so a timeout takes ffmpeg with it
         code = 1
         try:
             os.setpgid(0, 0)
+            os.environ.update(mine)
             if root:
                 C.U = root.rstrip('/') + '/'
             fn(job)
@@ -155,6 +160,11 @@ def capped(fn, job, uploads=None, secs=None):
         back = json.load(open(res, encoding='utf-8'))['job']
         job.clear()
         job.update(back)
+    for k, path in mine.items():
+        if ok and os.path.exists(path):
+            shutil.copyfile(path, real[k])
+        if os.path.exists(path):
+            os.remove(path)
     os.remove(res)
     if root:
         shutil.rmtree(root, ignore_errors=True)

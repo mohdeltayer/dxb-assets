@@ -96,9 +96,11 @@ class Director(unittest.TestCase):
             PS.director('s1', 'FIX', out, 'line 1 under the headline', by='dir')
         with self.assertRaises(SystemExit):                 # not a hard reason
             PS.director('s1', 'FIX', out, 'taste', by='dir', reason='taste')
-        PS.director('s1', 'FIX', out, 'the bus, not the submarine', by='dir', reason='wrong_subject')
+        with self.assertRaises(SystemExit):                 # a picture fault is never a send-back (20 Nov 2026, 22:20)
+            PS.director('s1', 'FIX', out, 'the bus, not the submarine', by='dir', reason='wrong_subject')
+        PS.director('s1', 'FIX', out, 'the date on screen is wrong', by='dir', reason='factual_error')
         qc = json.loads((pathlib.Path(self.t.name) / 'cards/2026-11/x-qc.json').read_text())
-        self.assertEqual(qc['director_sendbacks'][0]['reason'], 'wrong_subject')
+        self.assertEqual(qc['director_sendbacks'][0]['reason'], 'factual_error')
         s = json.loads((pathlib.Path(self.t.name) / 's1.json').read_text())
         self.assertEqual(len(s['director_sendbacks']), 1)
         with self.assertRaises(SystemExit) as e:            # no third render

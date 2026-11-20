@@ -929,3 +929,29 @@ text step had already seen it and logged it as a warning only. Mohammad: fix the
    8 of 8 that reach the render pass (Volvy's Adventure Reslimed and Witch the Showdown stop at the text check on the 19 Nov
    game-name rule, on main too, unchanged by this); both slip jobs pass as the slip lane wrote them (GTA VI CDPR at 72 px on
    three lines, 632 s; Ace Combat 8 at 60 px on two lines, 776 s).
+
+## No rejection when the template is followed (Mohammad, 20 Nov 2026, 22:20 Dubai)
+
+Case: nothing posted after 19:05 Dubai. The Director refused Ace Combat 8 and GTA VI CDPR for real faults: GTA VI ran the
+PS5 Pro PSSR clip the playstation.com resolver gave, Ace Combat 8 ran one shot twelve times (a capped scan's half-done
+server fixes, every slot on the picture start, were written back to main) and its credit named the Steam page.
+1. The 16:9 fallback (80b5083c, f7f1ad36, reverted at 15:41; not the cause of the outage) is back: the clip at its own
+   width, headline, lines and credit in the bands, nothing over the picture. The server takes it on its own when the shot
+   scan finds no clean stretch (or stops at its cap with automatic slots), when burnt-in text sits under our text in the
+   9:16 crop (content_ladder), after three renders of a story in 24 hours, and on a Director picture fault.
+2. The Director checks two things: the text is true (`--reason factual_error`) and it makes sense to an Arab reader
+   (`--reason unclear_text`); graphic content stays a stop. A picture fault (wrong_subject, framing, overlap,
+   unreadable_text) is never a send-back: presubmit writes the showcase layout into the job, the server renders it once,
+   and that version is posted; on a showcase Reel a picture reason is refused (newsroom/delegation.md, Director card).
+3. Footage: footage.resolve(..., game=) puts the footage library's entries for the story's game ahead of any page lookup
+   (GTA VI: the Rockstar launch trailer, 1080p copy); a slip's footage_pick is ignored when the library has the game;
+   playstation.com hardware and platform clips are never a game's footage; the library keeps one stretch per moment.
+4. Shots never repeat: render_job.respread moves a footage shot that repeats or overlaps another on the same file to the
+   free evenly spaced moment furthest from the others (then to the job's other videos); a killed scan's AUTOFIX_JOB and
+   AUTOFIX_JSON stay in its own files and reach the workflow only when the scan finished.
+5. The on-screen credit is written from the footage used (slip.footage_credit): the Steam app's publisher, the official
+   host, or the slip's company, «المصدر: <outlet>،\nولقطات من <owner>» or «المصدر: <owner>». The showcase source row
+   carries the outlet only; on the live path an over-long credit shrinks to 24 px, then drops trailing words, never stops.
+6. Replay before merge (render-replay run 44795255069, ref the branch): the last 10 jobs/done, 8 of 8 that reach the render
+   pass (Volvy's Adventure Reslimed and Witch the Showdown stop at the 19 Nov game-name text rule, on main too); the
+   fallback fired on GTA VI CDPR, Death Stranding and Witch on the Holy Night.

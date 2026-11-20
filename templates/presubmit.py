@@ -141,8 +141,31 @@ def qc_of(out):
     return None
 
 
-HARD_REASONS = ('wrong_subject', 'graphic', 'unreadable_text', 'factual_error')
+HARD_REASONS = ('wrong_subject', 'graphic', 'unreadable_text', 'factual_error', 'unclear_text', 'framing', 'overlap')
 SENDBACKS_MAX = 1
+# The director checks two things (Mohammad, 20 Nov 2026, 22:20: "if the templates are followed there should be no
+# rejection"): the text is true (factual_error) and it makes sense to an Arab reader (unclear_text). Graphic content stays
+# a stop (12 Oct rule). A picture fault (wrong subject, framing, text over subtitles, a logo or a face) is never a
+# send-back: the job takes the 16:9 showcase layout once, and that version is posted.
+TEXT_REASONS = ('factual_error', 'unclear_text', 'graphic')
+PICTURE_REASONS = ('wrong_subject', 'framing', 'overlap', 'unreadable_text')
+# The 16:9 fallback (Mohammad, 20 Nov 2026): a Reel sent back because the footage clashes with our text in the 9:16 crop
+# (the wrong subject in frame, the trailer's own subtitles or credits under our lines, a face under the headline) is not
+# re-cropped: its job takes the showcase layout, the trailer at its own width and our text in the bands.
+SHOWCASE_REASONS = ('wrong_subject', 'unreadable_text')
+
+
+def to_showcase(job_path, reason, note=''):
+    """Write "layout": "showcase" into the job file when softgate.showcase_ok; returns the reason written, or None."""
+    import softgate as SG_
+    j = json.load(open(job_path, encoding='utf-8'))
+    why = f'director send-back {reason}' + (f': {note}' if note else '')
+    if not SG_.showcase_fallback(j, why[:200]):
+        print(f'presubmit: {os.path.basename(job_path)} cannot take the showcase layout (a card, person window, '
+              'series intro or a layout already set); fix the shots instead')
+        return None
+    open(job_path, 'w', encoding='utf-8').write(json.dumps(j, ensure_ascii=False, indent=1) + '\n')
+    return j['showcase_reason']
 
 
 def qc_path(out):
@@ -195,11 +218,32 @@ def director(sid, verdict, out, note='', job=None, by=None, looked=None, reason=
         # adv-20261115-one-render-server-checks item E: with the server's qc at pass, the director looks once at the
         # look frames and may send a Reel back once, for a hard reason only; no third render.
         qc_pass = bool(qc) and qc.get('verdict') != 'fail'
+        if qc_pass and reason in PICTURE_REASONS:
+            jd = json.load(open(job, encoding='utf-8')) if job and os.path.exists(job) else {}
+            if jd.get('layout') == 'showcase':
+                raise SystemExit('presubmit refused: this Reel is already the 16:9 showcase version; a picture fault is '
+                                 'no longer a reason (Mohammad, 20 Nov 2026). PASS it, or FIX for factual_error or '
+                                 'unclear_text only.')
+            moved = to_showcase(job, reason, note) if job and os.path.exists(job) else None
+            if not moved:
+                raise SystemExit('presubmit refused: a picture fault moves the job to the 16:9 layout, and this job cannot '
+                                 'take it (a card, person window, series intro or a layout already set). PASS it with a '
+                                 'note; the picture is not a send-back reason.')
+            entry = {'at': now(), 'reason': reason, 'note': note, 'by': by, 'out': out, 'qc': 'pass', 'showcase': moved,
+                     'counts': False}
+            s.setdefault('director_showcase', []).append(entry)
+            if qc:
+                print(f'showcase recorded in {record_sendback(out, entry)} (commit it with the story file)')
+            print(f'presubmit: {job} moved to the 16:9 showcase layout ({reason}); render once more and post that version')
+            s['director_check'] = {'verdict': 'SHOWCASE', 'out': out, 'at': now(), 'note': note, 'by': by, 'qc': 'pass'}
+            f.write_text(json.dumps(s, ensure_ascii=False, indent=1) + '\n')
+            return
         if qc_pass:
-            if reason not in HARD_REASONS:
-                raise SystemExit('presubmit refused: the server qc passed this Reel; a send-back needs --reason, one of '
-                                 + ', '.join(HARD_REASONS) + ' (wrong subject, on stylised art also a subject out of the crop; graphic content; unreadable text; a '
-                                 'factual error on screen). Anything else is a note on a PASS.')
+            if reason not in TEXT_REASONS:
+                raise SystemExit('presubmit refused: the server qc passed this Reel; the director sends back for '
+                                 + ', '.join(TEXT_REASONS) + ' only (the text is true; it makes sense to an Arab reader; '
+                                 'graphic content). A picture fault is ' + ', '.join(PICTURE_REASONS) + ' and moves the '
+                                 'job to the 16:9 layout. Anything else is a note on a PASS.')
             used = [x for x in s.get('director_sendbacks') or [] if x.get('qc') == 'pass']
             if len(used) >= SENDBACKS_MAX:
                 raise SystemExit(f'presubmit refused: the director already sent this story back ({used[-1].get("reason")}, '
