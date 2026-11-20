@@ -1,10 +1,54 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-20T20:00:08Z",
- "seq": 697,
+ "generated_at": "2026-11-20T20:25:18Z",
+ "seq": 698,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 19799,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Ugly Within - Announcement Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=E03YjOGFKiQ",
+   "published": "2026-11-20T20:00Z",
+   "first_seen": "2026-11-20T20:25:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/E03YjOGFKiQ/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=E03YjOGFKiQ"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 698
+  }
+ ],
+ "recent": [
+  {
+   "id": 19769,
+   "source": "Xbox (X)",
+   "source_kind": "x",
+   "title": "Design a controller for yourself (or someone special) this holiday season! Save on controllers and get free engraving with XBOX Design Lab from November 19 to December 2:",
+   "url": "https://x.com/XBOX/status/2123838822802657639",
+   "published": "2026-11-20T18:00Z",
+   "first_seen": "2026-11-20T20:00:05Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://pbs.twimg.com/amplify_video_thumb/2123838790963785730/img/-bk3OUDILNvYdvu_.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://video.twimg.com/amplify_video/2123838790963785730/vid/avc1/1920x1080/GGrGzfUBtRz1jxqK.mp4?tag=16"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 697
+  },
   {
    "id": 19768,
    "source": "Xbox (X)",
@@ -26,29 +70,6 @@
    "breaking_source": true,
    "breaking_seq": 697
   },
-  {
-   "id": 19769,
-   "source": "Xbox (X)",
-   "source_kind": "x",
-   "title": "Design a controller for yourself (or someone special) this holiday season! Save on controllers and get free engraving with XBOX Design Lab from November 19 to December 2:",
-   "url": "https://x.com/XBOX/status/2123838822802657639",
-   "published": "2026-11-20T18:00Z",
-   "first_seen": "2026-11-20T20:00:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://pbs.twimg.com/amplify_video_thumb/2123838790963785730/img/-bk3OUDILNvYdvu_.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://video.twimg.com/amplify_video/2123838790963785730/vid/avc1/1920x1080/GGrGzfUBtRz1jxqK.mp4?tag=16"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 697
-  }
- ],
- "recent": [
   {
    "id": 19759,
    "source": "PlayStation (YouTube)",
@@ -322,28 +343,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 662
-  },
-  {
-   "id": 18863,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "*21 OG games have entered the chat* What are you playing first?",
-   "url": "https://www.youtube.com/shorts/kmtBl-AboRI",
-   "published": "2026-11-19T20:00Z",
-   "first_seen": "2026-11-19T20:10:04Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/kmtBl-AboRI/hqdefault.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 660
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-20T20:00:05Z",
+  "last_poll_at": "2026-11-20T20:25:14Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
