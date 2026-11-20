@@ -775,6 +775,28 @@ def gate_ladder(job, left):
         SG_.showcase_fallback(job, 'the subject leaves or is cut by the 9:16 window')
 
 
+FALLBACK_AFTER = 3         # renders of one story in 24 hours before the next one takes the 16:9 fallback (Mohammad, 20 Nov 2026)
+
+
+def tries_ladder(job, story=None):
+    """Mohammad, 20 Nov 2026 ("Eight is a lot... If it does it 3 times and doesn't work, it activates the fallback"):
+    after FALLBACK_AFTER renders of the same story in the last 24 hours (render-times.json, as jobsha counts dispatches),
+    the next render takes the showcase layout instead of another crop. Returns the reason when it moved the job."""
+    import softgate as SG_
+    import jobsha
+    if not SG_.soft(job) or not SG_.showcase_ok(job):
+        return None
+    name = story or job.get('story') or job.get('name')
+    if not name:
+        return None
+    done = jobsha.count(str(name), jobsha._entries()) - 1
+    if done < FALLBACK_AFTER:
+        return None
+    why = f'{done} renders of this story in 24 hours did not get it through (trailer crop tried {done} times)'
+    print('tries: ' + why, flush=True)
+    return why if SG_.showcase_fallback(job, why) else None
+
+
 CONTENT_WORDS = 2          # readable words in one cropped frame that count as burnt-in text (a subtitle, a credit card)
 CONTENT_SECS = 90          # the whole read; a slow read is a warning, never a hold
 
@@ -1494,6 +1516,7 @@ def run(job, draft=False):
     t_shots = time.time()
     shot_gate(job)                              # B and C on the server's copy, before anything is built (15 Nov 2026)
     if job.get('kind') != 'breaking' and profile_of(job) != 'breaking':
+        SG_.guarded('tries', tries_ladder, job)         # three renders that did not get through: 16:9 (20 Nov 2026)
         SG_.guarded('content', content_ladder, job)     # the 16:9 fallback for burnt-in text (20 Nov 2026)
     if SG_.soft(job) and job.get('kind') != 'breaking':
         SG_.guarded('reading fix', SG_.fix_reading, job, _starts, place, reel.read_secs)   # text ladder: extend the Reel

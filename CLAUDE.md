@@ -3853,6 +3853,10 @@ on its own (picture ladder step b, logged in qc.json `ladder`):
    tile), or in two frames anywhere, move the job (`render_job.content_ladder`; one logo frame alone does not).
 3. A director send-back for wrong_subject or unreadable_text writes the showcase into the job (`presubmit.py director ...
    FIX`); the next render is the last.
+4. Three tries (Mohammad, 20 Nov 2026: "Eight is a lot... If it does it 3 times and doesn't work, it activates the
+   fallback"): after three renders of the same story in 24 hours (render-times.json, as `jobsha.py count` counts them),
+   the next render takes the showcase layout on its own (`render_job.tries_ladder`, `FALLBACK_AFTER` 3). A builder never
+   needs an eighth dispatch: at the fourth the Reel is 16:9.
 Not for card-led templates, person windows, products, the storybook page, series episodes with an intro, breaking, or a
 job with `"showcase_fallback": false`. Ordered by Mohammad during the 18 Nov freeze, so it ships live; the first
 renders' `content:` log lines are read to see how often it fires.

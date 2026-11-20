@@ -71,6 +71,16 @@ class Fallback(unittest.TestCase):
                 self.assertIsNone(RJ.content_ladder(j))
             self.assertNotIn('layout', j)
 
+    def test_three_tries_then_fallback(self):
+        import jobsha, datetime as dt
+        now = dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+        for n, moved in ((2, False), (3, True)):
+            j = JOB(name='witch-on-the-holy-night')
+            rows = [{'story': 'witch-on-the-holy-night', 'finished_at': now}] * n
+            with mock.patch.object(jobsha, '_entries', lambda rows=rows: rows):
+                RJ.tries_ladder(j)
+            self.assertEqual(j.get('layout') == 'showcase', moved, n)
+
     def test_director_sendback_moves_job(self):
         f = tempfile.mktemp(suffix='.json')
         json.dump(JOB(), open(f, 'w'))
