@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-20T03:52:05Z",
- "seq": 671,
+ "generated_at": "2026-11-20T04:52:07Z",
+ "seq": 672,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -250,7 +250,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-20T03:50:04Z",
+  "last_poll_at": "2026-11-20T04:50:14Z",
   "sources_enabled": 100,
   "sources_ok": 92,
   "sources_failing": 7,
@@ -260,7 +260,7 @@
    "PlayStation (X) (HTTP 429, 13x)",
    "PlayStation Middle East (X) (HTTP 429, 22x)",
    "Rockstar Games (X) (HTTP 429, 9x)",
-   "The Game Awards (HTTP 403, 48x)",
+   "The Game Awards (HTTP 403, 49x)",
    "Xbox (X) (HTTP 429, 100x)"
   ]
  }
