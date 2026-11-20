@@ -48,7 +48,10 @@ def expand(job):
         return job['shots_auto']
     if not isinstance(sh, list):
         return []
-    slots = list(job.get('shots_auto') or [])
+    # a slot named in an older shots_auto whose shot now has a typed start is the builder's choice, never re-picked
+    # (20 Nov 2026: the GTA VI job's explicit starts were overwritten by a stale list from its first render)
+    slots = [i for i in (job.get('shots_auto') or []) if isinstance(i, int) and i < len(sh) and isinstance(sh[i], list)
+             and len(sh[i]) > 1 and sh[i][1] in (0, 0.0, None, 'auto')]
     for i, s in enumerate(sh):
         if isinstance(s, list) and len(s) > 1 and s[1] == 'auto':
             s[1] = 0.0
@@ -60,6 +63,8 @@ def expand(job):
                 slots.append(i)
     if slots:
         job['shots_auto'] = sorted(slots)
+    else:
+        job.pop('shots_auto', None)
     return slots
 
 

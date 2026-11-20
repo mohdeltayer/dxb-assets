@@ -676,6 +676,42 @@ def auto_fallback(job, slots):
     job.pop('shots_auto', None)
 
 
+def scan(job):
+    """The footage scan (auto_shots, track_from_first_shot, shot_gate) can never hang the render (Mohammad, 20 Nov
+    2026): in soft mode it runs capped, at 3 minutes per footage source, on 720p proxies of large files
+    (templates/scanproxy.py). When the cap is hit the job keeps its shots as written, and automatic slots are filled
+    from the footage library or evenly spaced (auto_fallback). Strict jobs (tests) run the scan as before. Returns the
+    time the shots were settled (stage minutes)."""
+    import softgate as SG_
+
+    def _all(j):
+        auto_shots(j)
+        track_from_first_shot(j)
+        globals()['_T_SHOTS'] = time.time()
+        shot_gate(j)
+
+    if not SG_.soft(job):
+        auto_shots(job)
+        track_from_first_shot(job)
+        t = time.time()
+        shot_gate(job)
+        return t
+    import scanproxy
+    import autoshots as AS
+    t0 = time.time()
+    if scanproxy.capped(_all, job):
+        return t0 + (time.time() - t0) / 2      # the child's own split is in the log; the stage keeps its total
+    SG_.warn('shot scan', f'footage scan stopped at its cap ({scanproxy.cap_for(job)} s); shots as written, '
+             'automatic slots from the footage library or evenly spaced')
+    AS.expand(job)
+    slots = [i for i in job.get('shots_auto') or [] if i < len(job.get('shots') or [])]
+    if slots:
+        auto_fallback(job, slots)
+        SG_.ladder('picture', 'reel', 'a', f'scan cap: {len(slots)} automatic slot(s) from the library or evenly spaced')
+    track_from_first_shot(job)
+    return time.time()
+
+
 def track_from_first_shot(job):
     """A slip job (templates/slip.py) leaves its trailer track's start to the server: once the shots are picked, the
     track runs from the first footage shot's source second, on that shot's file (adv-20261117-server-news-line-editor-
@@ -1441,10 +1477,7 @@ def run(job, draft=False):
     t_src = time.time()
     if SG_.soft(job):
         first_frame_check(job)                  # a shot ending before the picture moves onto it (never a hang)
-    auto_shots(job)                             # the server picks shot times the job left to it (gates-fix C)
-    track_from_first_shot(job)                  # a slip's trailer sound starts where its first picked shot does
-    t_shots = time.time()
-    shot_gate(job)                              # B and C on the server's copy, before anything is built (15 Nov 2026)
+    t_shots = scan(job)                         # auto shots, track, shot gate: capped, on 720p proxies (20 Nov 2026)
     if SG_.soft(job) and job.get('kind') != 'breaking':
         SG_.guarded('reading fix', SG_.fix_reading, job, _starts, place, reel.read_secs)   # text ladder: extend the Reel
         if job.get('lines') and job.get('shots'):

@@ -3865,3 +3865,17 @@ the shot read returned 0 clean stretches, explicit shot starts were overwritten 
 timeout. The code in reel.py, render_job.py, softgate.py and presubmit.py is back to this morning's state; the rule above
 waits for the rebuild. Replay rule from now on: no change to reel.py, render_job.py or softgate.py goes live before it is
 run on the last 10 jobs in jobs/done, and none of them may fail that passed before.
+
+## The shot scan cannot hang the job (Mohammad, 20 Nov 2026, 17:00 Dubai)
+
+Case: every live render on 20 Nov ran about 15.5 minutes and failed, before and after the revert, on the Render step
+timeout. The run that started 12:12Z spent 12:14 to 12:28 in the shot gate and autofix scan after "track from the first
+shot"; the 13:05Z run showed the scan alone takes 11.5 minutes even on a 1080p copy. The revert was not the cause.
+1. The auto shots, the shot gate and the autofix rounds run as one capped step (`templates/scanproxy.py`, called by
+   `render_job.scan`): 3 minutes per source, 9 at most for the whole job, in a separate process group that is killed at
+   the cap. It reads a 720p proxy of any source taller than 1080 or over 25 Mbps, never the 4K master; the render still
+   uses the master.
+2. A scan that does not finish is a warning, never a failure: the job takes the footage library stretch or evenly spaced
+   shots (release 2026-11-18 r1), logged in qc.json `ladder`. `"strict": true` jobs scan uncapped as before.
+3. Stale `shots_auto` lists no longer overwrite explicit shot starts (`autoshots.expand`).
+Replay before merge (render-replay.yml, run 44742121123): the last 10 jobs in jobs/done on the branch, 10 of 10 passed.
