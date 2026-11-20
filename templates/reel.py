@@ -562,6 +562,15 @@ def credit_layer(text, path, low=False, size=36, y=None, band=False):
         probe = ImageDraw.Draw(Image.new('L', (W, 10)))   # a wide credit steps down to 24 px before it would stop
         while size > 24 and max(probe.textlength(r, font=A.F('Medium', size), **G.AR) for r in rows) > W - R - L:
             size -= 2
+        fz = A.F('Medium', size)
+        for k, r in enumerate(rows):            # still too wide at 24 px: trailing words go, with a warning
+            cut = r
+            while probe.textlength(cut, font=fz, **G.AR) > W - R - L and len(cut.split()) > 2:
+                cut = ' '.join(cut.split()[:-1])
+            if cut != r:
+                import softgate
+                softgate.warn('credit', f'credit shortened to fit the safe zone: «{r}» -> «{cut}»')
+                rows[k] = cut
     f = A.F('Medium', size)
     y = y if y is not None else G.SAFE_BOTTOM - 10 if low else G.SAFE_TOP + 40
     mask = Image.new('L', (W, H), 0)
@@ -2320,7 +2329,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
             a_s, b_s, text = cr[0], cr[1], cr[2]
             a0, z0 = starts[a_s], (starts[b_s + 1] if b_s + 1 < len(starts) else end)
             row.append((a0, z0, credit_layer(' '.join(str(text).split()), f'{tmp}/sc{k}.png', size=SHOW_CREDIT, y=SHOW_CREDIT_Y))); k += 1   # one row, the lowest
-        meta = credit_layer(f'{source}\u200f  ·  \u200f{A.arabic_date(date)}', f'{tmp}/smeta.png', size=SHOW_CREDIT,
+        meta = credit_layer(f'{re.split(r"[،\n]", str(source))[0].strip()}\u200f  ·  \u200f{A.arabic_date(date)}', f'{tmp}/smeta.png', size=SHOW_CREDIT,
                             y=SHOW_CREDIT_Y)
         t0 = 0.0
         for a0, z0, _ in sorted(row):
