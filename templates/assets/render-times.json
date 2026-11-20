@@ -101909,5 +101909,241 @@
   "sound": "bed:neon_e (trailer sound refused: music stem not clean (leftover 8.9% > 5.0%))",
   "footage": true,
   "upload_secs": 5.0
+ },
+ {
+  "name": "deltarune-chapter-6-complete-draft-chapter-7-started-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-20T03:23Z",
+  "stages": {
+   "checks": 5.2,
+   "montage": 55.1,
+   "text": 50.3,
+   "audio": 1.3,
+   "outro": 17.4
+  },
+  "total": 129.3,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-20T03:21Z",
+  "finished_at": "2026-11-20T03:23Z",
+  "render_min": 2.15,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "deltarune-chapter-6-complete-draft-chapter-7-started-trailer-1-4-jp.mp4",
+    "start": 19.11,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 3.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 1,
+    "file": "deltarune-chapter-6-complete-draft-chapter-7-started-trailer-1-4-jp.mp4",
+    "start": 34.58,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 3.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 2,
+    "file": "deltarune-chapter-6-complete-draft-chapter-7-started-trailer-1-4-jp.mp4",
+    "start": 9.68,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 3.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 3,
+    "file": "deltarune-chapter-6-complete-draft-chapter-7-started-trailer-1-4-jp.mp4",
+    "start": 9.86,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 3.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 4,
+    "file": "deltarune-chapter-6-complete-draft-chapter-7-started-trailer-1-4-jp.mp4",
+    "start": 12.78,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 3.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 5,
+    "file": "deltarune-chapter-6-complete-draft-chapter-7-started-trailer-1-4-jp.mp4",
+    "start": 16.7,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 3.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 6,
+    "file": "deltarune-chapter-6-complete-draft-chapter-7-started-trailer-1-4-jp.mp4",
+    "start": 20.42,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 3.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 7,
+    "file": "deltarune-chapter-6-complete-draft-chapter-7-started-trailer-1-4-jp.mp4",
+    "start": 24.3,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 3.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 8,
+    "file": "deltarune-chapter-6-complete-draft-chapter-7-started-trailer-1-4-jp.mp4",
+    "start": 28.46,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 3.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 9,
+    "file": "deltarune-chapter-6-complete-draft-chapter-7-started-trailer-1-4-jp.mp4",
+    "start": 32.38,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 3.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 10,
+    "file": "deltarune-chapter-6-complete-draft-chapter-7-started-trailer-1-4-jp.mp4",
+    "start": 36.3,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 3.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 11,
+    "file": "deltarune-chapter-6-complete-draft-chapter-7-started-trailer-1-4-jp.mp4",
+    "start": 36.47,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 3.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 12
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 6.3,
+   "audio_secs": 36.3,
+   "music_pct": 88.4,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 12,
+   "mix_secs": 4.2,
+   "secs": 11.4
+  },
+  "lifeless": {
+   "score": 8.0,
+   "still_share": 0.105,
+   "longest_still": 0.7,
+   "cuts_per_10s": 6.88,
+   "held_under_text": 0.02,
+   "secs": 24.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 9.9,
+   "shots": 0.8,
+   "checks": 24.2,
+   "render": 141.1,
+   "after": 44.7
+  },
+  "softgate": {
+   "warnings": 1,
+   "ladder": [
+    {
+     "kind": "text",
+     "slot": "line 1",
+     "step": "a",
+     "why": "3.5 s of 3.6 s: shot 2 lengthened by 0.21 s"
+    }
+   ]
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 221,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1182,
+  "peak_mem_mb": 3345,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 57960,
+  "peak_disk_mb": 61539,
+  "min_disk_free_mb": 184567,
+  "setup_min": 0.2,
+  "story": "deltarune-chapter-6-complete-draft-chapter-7-started",
+  "job_sha": "86a0d1d14be5c01352dae7f8d2bfdb6c51e0f5ef",
+  "dispatches": 1,
+  "sound": "trailer",
+  "footage": true
  }
 ]
