@@ -4,23 +4,23 @@
  "verdict": "pass",
  "warnings": [],
  "ladder": [],
- "job_to_pass_min": 4.8,
- "at": "2026-11-20T04:25:19Z",
+ "job_to_pass_min": 4.2,
+ "at": "2026-11-20T05:12:46Z",
  "findings": [],
  "notes": [
   "length 18.7 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 44.6; leak_pct 1.4; cache {'hit': 1, 'miss': 3}; separate_secs 7.1; secs 11.0",
-  "render_job: lifeless: {\"score\": 0.1, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 6.95, \"held_under_text\": 0.005, \"secs\": 18.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: audio split: applied; music_pct 44.6; leak_pct 1.4; cache {'hit': 4, 'miss': 0}; separate_secs 2.7; secs 4.7",
+  "render_job: lifeless: {\"score\": 0.1, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 6.42, \"held_under_text\": 0.005, \"secs\": 18.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [
   {
    "where": "shot 1",
    "rule": "shot_timing",
-   "what": "starts after the scene cut at 11.76 s and keeps 1.40 s",
+   "what": "moved from 21.00 to 21.25 s, the nearest clean start of the same 1.40 s",
    "before": [
     "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
-    11.0,
-    2.2,
+    21.0,
+    1.4,
     [
      [
       0.0,
@@ -30,7 +30,7 @@
    ],
    "after": [
     "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
-    11.8,
+    21.25,
     1.4,
     [
      [
@@ -39,44 +39,10 @@
      ]
     ]
    ]
-  },
-  {
-   "where": "shot 2",
-   "rule": "fill",
-   "what": "lengthened 2.20 to 3.00 s to keep the time shot 1 gave up",
-   "before": 2.2,
-   "after": 3.0
-  },
-  {
-   "where": "shot 8",
-   "rule": "shot_timing",
-   "what": "moved from 31.00 to 27.25 s, the nearest clean start of the same 2.46 s",
-   "before": [
-    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
-    31.0,
-    2.46,
-    [
-     [
-      0.0,
-      0.595
-     ]
-    ]
-   ],
-   "after": [
-    "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
-    27.25,
-    2.46,
-    [
-     [
-      0.0,
-      0.595
-     ]
-    ]
-   ]
   }
  ],
- "job_sha": "9012deb277da03fd784b6633a67ebb12bd3999d3",
- "dispatches": 3,
+ "job_sha": "80ea95d82cd498b2a511b950c21100b81495aba2",
+ "dispatches": 4,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -95,14 +61,13 @@
  "job_path": "jobs/done/umamusume-denver-broncos-nfl-collab-december-6.json",
  "stage_minutes": {
   "queue": 0.03,
-  "setup": 0.18,
-  "fetch": 0.09,
+  "setup": 0.17,
+  "fetch": 0.1,
   "shots": 0.01,
-  "checks": 1.35,
-  "render": 1.7,
-  "after": 0.74,
-  "upload": 0.08,
-  "job": 3.9
+  "checks": 0.74,
+  "render": 1.56,
+  "after": 0.73,
+  "job": 3.15
  },
  "job_after_autofix": {
   "name": "umamusume-denver-broncos-nfl-collab-december-6",
@@ -137,7 +102,7 @@
    ],
    [
     "umamusume-denver-broncos-nfl-collab-december-6-launch-trailer.mp4",
-    11.8,
+    21.25,
     1.4,
     [
      [
