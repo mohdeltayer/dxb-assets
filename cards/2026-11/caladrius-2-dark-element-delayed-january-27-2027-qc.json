@@ -1,0 +1,338 @@
+{
+ "name": "caladrius-2-dark-element-delayed-january-27-2027",
+ "out": "cards/2026-11/caladrius-2-dark-element-delayed-january-27-2027-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4 at 33.97 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  }
+ ],
+ "job_to_pass_min": 4.4,
+ "at": "2026-11-20T03:37:34Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 12.9 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 75.8; leak_pct 0.1; cache {'hit': 0, 'miss': 2}; separate_secs 19.5; secs 27.3",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 5.47, \"held_under_text\": 0.0, \"secs\": 12.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "credit 1",
+   "rule": "credit_width",
+   "what": "set one line at 38 px (was 40 px, too wide for the safe zone)",
+   "before": {
+    "text": "المصدر: Gematsu، ولقطات من صفحة اللعبة على Steam",
+    "size": 40
+   },
+   "after": {
+    "text": "المصدر: Gematsu، ولقطات من صفحة اللعبة على Steam",
+    "size": 38
+   }
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4 at 32.11 s for 2.2 s, focus 0.515"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4 at 37.98 s for 2.2 s, focus 0.538"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4 at 43.21 s for 2.2 s, focus 0.607"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4 at 48.31 s for 2.2 s, focus 0.607"
+  },
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4 at 52.81 s for 2.2 s, focus 0.607 (shortened from 3.8 s: no free clean stretch that long)"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4 at 41.15 s for 2.1 s, focus 0.707 (shortened from 2.2 s: no free clean stretch that long)"
+  }
+ ],
+ "job_sha": "6ab3c7e2240900c773a85f817108b6089d690e91",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/caladrius-2-dark-element-delayed-january-27-2027-look-1.jpg",
+  "cards/2026-11/caladrius-2-dark-element-delayed-january-27-2027-look-2.jpg",
+  "cards/2026-11/caladrius-2-dark-element-delayed-january-27-2027-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 20.6,
+  "files": {
+   "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4": {
+    "secs": 20.6,
+    "cached": false,
+    "stages": {
+     "decode": 7.7,
+     "autofocus": 20.4,
+     "ocr": 20.4,
+     "smear": 20.5,
+     "scenes": 20.6
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/caladrius-2-dark-element-delayed-january-27-2027.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.15,
+  "fetch": 0.78,
+  "shots": 0.35,
+  "checks": 0.4,
+  "render": 1.45,
+  "after": 0.59,
+  "job": 3.58
+ },
+ "job_after_autofix": {
+  "name": "caladrius-2-dark-element-delayed-january-27-2027",
+  "story": "2026-11-20-caladrius-2-dark-element-delayed-january-27-2027",
+  "footage_source": "steam:5571930",
+  "kind_news": "news",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/caladrius-2-dark-element-delayed-january-27-2027-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+    "steam": 5571930,
+    "trailer": "Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "5571930"
+   }
+  ],
+  "shots": [
+   [
+    "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+    52.81,
+    2.2,
+    [
+     [
+      0.0,
+      0.607
+     ]
+    ]
+   ],
+   [
+    "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+    32.11,
+    2.21,
+    [
+     [
+      0.0,
+      0.515
+     ]
+    ]
+   ],
+   [
+    "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+    37.98,
+    2.21,
+    [
+     [
+      0.0,
+      0.538
+     ]
+    ]
+   ],
+   [
+    "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+    43.21,
+    2.2,
+    [
+     [
+      0.0,
+      0.607
+     ]
+    ]
+   ],
+   [
+    "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+    48.31,
+    2.2,
+    [
+     [
+      0.0,
+      0.607
+     ]
+    ]
+   ],
+   [
+    "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+    41.15,
+    2.06,
+    [
+     [
+      0.0,
+      0.707
+     ]
+    ]
+   ],
+   [
+    "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+    3.07,
+    2.2,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "وتصدر اللعبة\nعلى PlayStation 5 و Switch",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "والكمبيوتر عبر Steam،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وتتولى نشرها\nشركة H2 Interactive",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    6,
+    "المصدر: Gematsu، ولقطات من صفحة اللعبة على Steam",
+    {
+     "size": 38,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "أفاد موقع Gematsu بأن لعبة Caladrius 2 Dark Element تأجلت من العاشر من ديسمبر إلى السابع والعشرين من يناير 2027. وتصدر اللعبة على PlayStation 5 وSwitch والكمبيوتر عبر Steam، وتتولى نشرها شركة H2 Interactive.",
+  "headline": "تأجيل لعبة Caladrius 2\nإلى يناير 2027",
+  "label": "تقرير",
+  "game": "Caladrius 2",
+  "game_short": "Caladrius 2",
+  "texts": {
+   "instagram": "أفاد موقع Gematsu بأن لعبة Caladrius 2 Dark Element تأجلت من العاشر من ديسمبر إلى السابع والعشرين من يناير 2027.\n\nوتصدر اللعبة على PlayStation 5 وSwitch والكمبيوتر عبر Steam.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: Gematsu.\n\n#ألعاب #أخبار_الألعاب #Caladrius2",
+   "x": "أفاد موقع Gematsu بأن لعبة Caladrius 2 Dark Element تأجلت من العاشر من ديسمبر إلى السابع والعشرين من يناير 2027.",
+   "threads": "أفاد موقع Gematsu بأن لعبة Caladrius 2 Dark Element تأجلت من العاشر من ديسمبر إلى السابع والعشرين من يناير 2027، وتصدر على PlayStation 5 وSwitch والكمبيوتر.\n\nالمصدر: Gematsu"
+  },
+  "source": "Gematsu، ولقطات من صفحة اللعبة على Steam",
+  "date": "20 Nov 2026",
+  "theme": "spectacle",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Gematsu, GoNintendo and Nintendo Everything reported on 20 Nov 2026 that Caladrius 2 Dark Element moved from 10 Dec 2026 to 27 Jan 2027.",
+   "what_it_means_here": "A seven-week delay; platforms stay PS5, Switch and PC."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4 from the resolver (steam:5571930)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Gematsu, Caladrius 2/Dark Element delayed to January 27, 2027 (https://www.gematsu.com/2026/11/caladrius-2-dark-element-delayed-to-january-27-2027); first report: Gematsu, 20 Nov 2026 01:36Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 5571930 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "shots_auto": [
+   6
+  ]
+ }
+}
