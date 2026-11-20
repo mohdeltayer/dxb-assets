@@ -156,6 +156,7 @@ GRID_TOP = (H - W * 4 // 3) // 2
 #: that cannot be cut shrinks it that far; anything else is cut to fewer words), on a stronger band (HEAD_BAND) with a wider
 #: glow behind the type, so it holds on pale skies and white scenes.
 HEAD_SIZE, HEAD_MIN, HEAD_LINES, HEAD_BAND = 100, 72, 2, 225
+HEAD_FLOOR = 60                          # the soft fallback's smallest headline (20 Nov 2026); HEAD_MIN stays the normal floor
 #: Design pass (advisor memo of 24 Oct 2026, approved by Mohammad 09:15Z; rolled out to live Reels after the three
 #: samples, "Roll out", 24 Oct 19:21Z): chips about 1.3 times their size in the same place (type 38 to 50, chip 57 to
 #: 75 px high; the chip's right edge and top stay, the headline moves down by the difference). The grid-corner rule
@@ -188,14 +189,39 @@ def head_layer(headline, label, path, source, date, country=None, hs=HEAD_SIZE, 
     if hs < HEAD_MIN:
         raise ValueError(f'head_size {hs} is under HEAD_MIN {HEAD_MIN} (grid tile memo, 24 Oct 2026); cut the headline instead')
     hst = hst or hs + 20
-    while True:                            # a long Latin name shrinks the headline a little, never below HEAD_MIN
-        f = A.F('Bold', hs)
+    hs0, hst0 = hs, hst
+
+    def fits(size, max_lines):
+        f = A.F('Bold', size)
         lines = G._wrap(probe, headline, f, room)
-        if (len(lines) <= HEAD_LINES and all(probe.textlength(x, font=f, **G.AR) <= room for x in lines)
-                and all(_arabic(x.lstrip('«"“\u200f')[0]) for x in lines if x)):   # a Latin-led wrap shrinks too
+        ok = (len(lines) <= max_lines and all(probe.textlength(x, font=f, **G.AR) <= room for x in lines)
+              and all(_arabic(x.lstrip('«"“‏')[0]) for x in lines if x))   # a Latin-led wrap shrinks too
+        return ok, f, lines
+
+    while True:                            # a long Latin name shrinks the headline a little, never below HEAD_MIN
+        ok, f, lines = fits(hs, HEAD_LINES)
+        if ok:
             break
         if hs - 4 < HEAD_MIN:
-            raise ValueError(f'headline needs more than {HEAD_LINES} lines at {HEAD_MIN} px; cut it to a few words: {headline}')
+            if not SOFT:
+                raise ValueError(f'headline needs more than {HEAD_LINES} lines at {HEAD_MIN} px; cut it to a few words: {headline}')
+            # Templates never refuse (18 Nov 2026): a headline written too long for two lines at HEAD_MIN ships smaller
+            # (two lines down to HEAD_FLOOR), then on three lines (HEAD_MIN down to HEAD_FLOOR), every visual line still
+            # opening on an Arabic word. 20 Nov 2026: Ace Combat 8 and GTA VI CDPR, both written by the slip lane, died
+            # here after 4 to 12 minutes of render. Only a headline that fits none of these stops.
+            for size, n in ([(s, HEAD_LINES) for s in range(HEAD_MIN - 4, HEAD_FLOOR - 1, -4)]
+                            + [(s, HEAD_LINES + 1) for s in range(HEAD_MIN, HEAD_FLOOR - 1, -4)]):
+                ok, f, lines = fits(size, n)
+                if ok:
+                    hs, hst = size, hst0 - (hs0 - size) * 5 // 4
+                    import softgate
+                    softgate.warn('headline', f'headline too long for {HEAD_LINES} lines at {HEAD_MIN} px; set at '
+                                  f'{size} px on {len(lines)} lines (cut it to a few words next time): {headline}')
+                    break
+            else:
+                raise ValueError(f'headline fits neither {HEAD_LINES} nor {HEAD_LINES + 1} lines at {HEAD_FLOOR} px; '
+                                 f'cut it to a few words: {headline}')
+            break
         hs, hst = hs - 4, hst - 5
     hl = L
     if len(lines) == 2 and '\n' not in headline:   # balance two lines so no word hangs alone (a hand-set break is kept)
