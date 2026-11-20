@@ -101405,5 +101405,235 @@
   "sound": "bed:neon_d (trailer sound refused: music only 22.7% of the track (< 40.0%))",
   "footage": true,
   "upload_secs": 8.0
+ },
+ {
+  "name": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-20T02:34Z",
+  "stages": {
+   "checks": 7.5,
+   "montage": 29.5,
+   "text": 34.2,
+   "audio": 1.2,
+   "outro": 19.2
+  },
+  "total": 91.6,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-20T02:33Z",
+  "finished_at": "2026-11-20T02:34Z",
+  "render_min": 1.53,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-1.mp4",
+    "start": 29.62,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.48,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 1,
+    "file": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4",
+    "start": 17.82,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.46,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 2,
+    "file": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4",
+    "start": 35.59,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.46,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 3,
+    "file": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4",
+    "start": 9.5,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.46,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 4,
+    "file": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4",
+    "start": 9.0,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.46,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 5,
+    "file": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4",
+    "start": 26.43,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.46,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 6,
+    "file": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4",
+    "start": 43.84,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.46,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 7,
+    "file": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4",
+    "start": 61.26,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.46,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 8,
+    "file": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4",
+    "start": 78.68,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.46,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   }
+  ],
+  "source_summary": {
+   "min_height": 720,
+   "max_zoom": 2.67,
+   "lowbit_shots": 9
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 24.7,
+   "audio_secs": 50.5,
+   "music_pct": 39.1,
+   "leak_pct": 0.9,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 9
+   },
+   "reason": "music only 39.1% of the track (< 40.0%)",
+   "secs": 34.9,
+   "fallback": "bed:neon_e"
+  },
+  "lifeless": {
+   "score": 6.1,
+   "still_share": 0.071,
+   "longest_still": 0.7,
+   "cuts_per_10s": 11.96,
+   "held_under_text": 0.0,
+   "secs": 18.4,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 6.0,
+   "shots": 42.0,
+   "checks": 46.6,
+   "render": 127.9,
+   "after": 46.3
+  },
+  "softgate": {
+   "warnings": 12,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4 at 9.0 s for 2.31 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4 at 26.43 s for 2.2 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4 at 43.84 s for 2.2 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4 at 61.26 s for 2.2 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 8,
+     "step": "a",
+     "why": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4 at 78.68 s for 2.2 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "c",
+     "why": "audio split not applied (music only 39.1% of the track (< 40.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our b"
+    }
+   ]
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 270,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1208,
+  "peak_mem_mb": 2738,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 57048,
+  "peak_disk_mb": 60172,
+  "min_disk_free_mb": 185934,
+  "setup_min": 0.17,
+  "story": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0",
+  "job_sha": "a06b3ed5c759b5b872209b3b91641014b1123cda",
+  "dispatches": 1,
+  "sound": "bed:neon_e (trailer sound refused: music only 39.1% of the track (< 40.0%))",
+  "footage": true
  }
 ]
