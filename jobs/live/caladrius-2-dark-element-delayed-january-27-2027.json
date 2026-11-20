@@ -1,0 +1,157 @@
+{
+ "name": "caladrius-2-dark-element-delayed-january-27-2027",
+ "story": "2026-11-20-caladrius-2-dark-element-delayed-january-27-2027",
+ "footage_source": "steam:5571930",
+ "kind_news": "news",
+ "built_by": "server-slip",
+ "render_lane": "server",
+ "out": "cards/2026-11/caladrius-2-dark-element-delayed-january-27-2027-reel-v1.mp4",
+ "split_fallback": "bed",
+ "footage": [
+  {
+   "file": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+   "steam": 5571930,
+   "trailer": "Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "5571930"
+  }
+ ],
+ "shots": [
+  [
+   "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+   "auto",
+   2.21,
+   null
+  ],
+  [
+   "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+   "auto",
+   2.21,
+   null
+  ],
+  [
+   "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "وتصدر اللعبة\nعلى PlayStation 5 و Switch",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "والكمبيوتر عبر Steam،",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "وتتولى نشرها\nشركة H2 Interactive",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: Gematsu، ولقطات من صفحة اللعبة على Steam",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "أفاد موقع Gematsu بأن لعبة Caladrius 2 Dark Element تأجلت من العاشر من ديسمبر إلى السابع والعشرين من يناير 2027. وتصدر اللعبة على PlayStation 5 وSwitch والكمبيوتر عبر Steam، وتتولى نشرها شركة H2 Interactive.",
+ "headline": "تأجيل لعبة Caladrius 2\nإلى يناير 2027",
+ "label": "تقرير",
+ "game": "Caladrius 2",
+ "game_short": "Caladrius 2",
+ "texts": {
+  "instagram": "أفاد موقع Gematsu بأن لعبة Caladrius 2 Dark Element تأجلت من العاشر من ديسمبر إلى السابع والعشرين من يناير 2027.\n\nوتصدر اللعبة على PlayStation 5 وSwitch والكمبيوتر عبر Steam.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: Gematsu.\n\n#ألعاب #أخبار_الألعاب #Caladrius2",
+  "x": "أفاد موقع Gematsu بأن لعبة Caladrius 2 Dark Element تأجلت من العاشر من ديسمبر إلى السابع والعشرين من يناير 2027.",
+  "threads": "أفاد موقع Gematsu بأن لعبة Caladrius 2 Dark Element تأجلت من العاشر من ديسمبر إلى السابع والعشرين من يناير 2027، وتصدر على PlayStation 5 وSwitch والكمبيوتر.\n\nالمصدر: Gematsu"
+ },
+ "source": "Gematsu، ولقطات من صفحة اللعبة على Steam",
+ "date": "20 Nov 2026",
+ "theme": "spectacle",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": {
+  "why_now": "Gematsu, GoNintendo and Nintendo Everything reported on 20 Nov 2026 that Caladrius 2 Dark Element moved from 10 Dec 2026 to 27 Jan 2027.",
+  "what_it_means_here": "A seven-week delay; platforms stay PS5, Switch and PC."
+ },
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "footage": "caladrius-2-dark-element-delayed-january-27-2027-trailer.mp4 from the resolver (steam:5571930)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (audio split per shot)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Gematsu, Caladrius 2/Dark Element delayed to January 27, 2027 (https://www.gematsu.com/2026/11/caladrius-2-dark-element-delayed-to-january-27-2027); first report: Gematsu, 20 Nov 2026 01:36Z",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: angle in the slip",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 5571930 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ }
+}
