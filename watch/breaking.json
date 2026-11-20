@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-20T12:52:06Z",
- "seq": 680,
+ "generated_at": "2026-11-20T13:10:16Z",
+ "seq": 681,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 19434,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Scary Hot Dogs - Launch Trailer | PS VR2 Games",
+   "url": "https://www.youtube.com/watch?v=ykjNhM5tR4I",
+   "published": "2026-11-20T13:00Z",
+   "first_seen": "2026-11-20T13:10:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/ykjNhM5tR4I/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=ykjNhM5tR4I"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 681
+  }
+ ],
  "recent": [
   {
    "id": 18987,
@@ -250,16 +272,16 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-20T12:50:14Z",
+  "last_poll_at": "2026-11-20T13:10:15Z",
   "sources_enabled": 100,
-  "sources_ok": 92,
+  "sources_ok": 91,
   "sources_failing": 7,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 133x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 134x)",
    "Nintendo of America (X) (HTTP 429, 81x)",
    "PlayStation (X) (HTTP 429, 14x)",
    "PlayStation Middle East (X) (HTTP 429, 23x)",
-   "Rockstar Games (X) (HTTP 429, 9x)",
+   "Rockstar Games (X) (HTTP 429, 10x)",
    "The Game Awards (HTTP 403, 53x)",
    "Xbox (X) (HTTP 429, 101x)"
   ]
