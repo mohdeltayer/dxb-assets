@@ -3879,3 +3879,17 @@ shot"; the 13:05Z run showed the scan alone takes 11.5 minutes even on a 1080p c
    shots (release 2026-11-18 r1), logged in qc.json `ladder`. `"strict": true` jobs scan uncapped as before.
 3. Stale `shots_auto` lists no longer overwrite explicit shot starts (`autoshots.expand`).
 Replay before merge (render-replay.yml, run 44742121123): the last 10 jobs in jobs/done on the branch, 10 of 10 passed.
+
+## A long headline never kills a render (Mohammad, 20 Nov 2026, evening)
+
+Case: from 07:00Z every slip-built trailer Reel failed. Ace Combat 8 (render-live run 1307) and GTA VI CDPR co-CEO (render run
+1282) both died in reel.head_layer with "headline needs more than 2 lines at 72 px", after 12 and 4 minutes of render: the
+text step had already seen it and logged it as a warning only. Mohammad: fix the cause, do not hand-edit the jobs.
+1. On the live path (reel.SOFT) a headline that does not fit two lines at HEAD_MIN 72 steps down: two lines down to
+   HEAD_FLOOR 60 px, then three lines from 72 down to 60, every visual line still opening on an Arabic word, logged as a
+   softgate `headline` warning. Only a headline that fits none of these stops. `"strict": true` jobs raise as before.
+2. The whole-job shot scan cap is 300 s (was 540): Ace Combat's scan used all 540 s and left too little of the 15 minutes.
+3. Replay before merge (render-replay runs 44776580907, 44776587415, 44776593761, ref the branch): the last 10 jobs/done,
+   8 of 8 that reach the render pass (Volvy's Adventure Reslimed and Witch the Showdown stop at the text check on the 19 Nov
+   game-name rule, on main too, unchanged by this); both slip jobs pass as the slip lane wrote them (GTA VI CDPR at 72 px on
+   three lines, 632 s; Ace Combat 8 at 60 px on two lines, 776 s).
