@@ -379,3 +379,10 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | Automaton (Japanese games outlet) | أوتوماتون (Automaton) | Proposed 19 Nov 2026 (The Ascent Legacy Patch Reel; «موقع أوتوماتون»); flagged for Mohammad |
 | Neon Giant (The Ascent developer, Sweden) | نيون جاينت (Neon Giant) | Proposed 19 Nov 2026 (The Ascent Legacy Patch Reel); flagged for Mohammad |
 | Nicalis (The Binding of Isaac: Repentance+ console publisher) | نيكاليس (Nicalis) | Proposed 19 Nov 2026 (Isaac Repentance console Reel; «شركة نيكاليس (Nicalis)»); flagged for Mohammad |
+
+### Added 20 Nov 2026 (asked for by Production 2: Ace Combat 8 Famitsu Reel, GTA VI CDPR co-CEO Reel)
+| Latin | Arabic | Role or note | Status |
+|---|---|---|---|
+| Katabuchi | كاتابوتشي | المخرج، كاتب قصة ACE COMBAT 8 (role word at first mention, as the Famitsu interview gives it) | Added 20 Nov 2026 on Production 2's request; flagged for Mohammad |
+| Kono | كونو | مدير علامة ACE COMBAT في بانداي نامكو (role word at first mention) | Added 20 Nov 2026 on Production 2's request; flagged for Mohammad |
+| CD Projekt Red | سي دي بروجيكت ريد | studio (The Witcher, Cyberpunk 2077); «استوديو سي دي بروجيكت ريد (CD Projekt Red)» at first mention | Added 20 Nov 2026 (the spelling the slip lane already used); flagged for Mohammad |
