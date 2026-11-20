@@ -1,0 +1,546 @@
+{
+ "name": "1666-amsterdam-december-update-gematsu",
+ "out": "cards/2026-11/1666-amsterdam-december-update-gematsu-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "lifeless",
+   "detail": "lifeless score 39.8 (still_share 0.384, longest still 1.8 s): too much of the Reel holds still; footage behind the cards, the count-up and row reveal, more cuts"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: burnt-in text in shot 1 at 94.7 s (form the Unio); shot 4 at 54.6 s (bad learn how take)"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "c",
+   "why": "audio split not applied (music only 14.8% of the track (< 40.0%)) on a trailer track under 13 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our "
+  }
+ ],
+ "job_to_pass_min": 9.5,
+ "at": "2026-11-20T22:20:16Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
+  "first frame: shot 1 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
+  "first frame: shot 2 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
+  "first frame: shot 3 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
+  "first frame: shot 4 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
+  "first frame: shot 5 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
+  "first frame: shot 6 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
+  "first frame: shot 7 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
+  "first frame: shot 8 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
+  "first frame: shot 9 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
+  "first frame: shot 10 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
+  "first frame: shot 11 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
+  "first frame: shot 12 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
+  "first frame: shot 13 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
+  "length 29.3 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason music only 14.8% of the track (< 40.0%); music_pct 14.8; leak_pct 0.5; cache {'hit': 0, 'miss': 6}; separate_secs 10.3; secs 15.0",
+  "render_job: audio split fallback: our bed (ValueError: the trailer mix would not match the picture); bed:neon_d",
+  "render_job: lifeless: {\"score\": 39.8, \"still_share\": 0.384, \"longest_still\": 1.8, \"cuts_per_10s\": 0.0, \"held_under_text\": 0.0, \"secs\": 29.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": true}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 at 93.75 s for 2.7 s, focus 0.848"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 at 98.25 s for 2.2 s, focus 0.848"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 at 53.91 s for 2.2 s, focus 0.47"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 at 90.25 s for 2.2 s, focus 0.848"
+  },
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4 at 57.91 s for 3.8 s, focus 0.512 (nothing free in 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4)"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4 at 61.71 s for 2.7 s, focus 0.512 (nothing free in 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4)"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4 at 64.42 s for 2.7 s, focus 0.512 (nothing free in 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4)"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4 at 72.45 s for 2.7 s, focus 0.586 (nothing free in 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4)"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4 at 29.11 s for 2.2 s, focus 0.636 (nothing free in 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4)"
+  },
+  {
+   "where": "shot 9",
+   "rule": "auto_shots",
+   "what": "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4 at 76.08 s for 2.2 s, focus 0.077 (nothing free in 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4)"
+  },
+  {
+   "where": "shot 10",
+   "rule": "auto_shots",
+   "what": "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4 at 78.28 s for 2.2 s, focus 0.077 (nothing free in 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4)"
+  },
+  {
+   "where": "shot 11",
+   "rule": "auto_shots",
+   "what": "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4 at 17.60 s for 2.2 s, focus 0.264 (nothing free in 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4)"
+  },
+  {
+   "where": "shot 12",
+   "rule": "auto_shots",
+   "what": "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4 at 80.48 s for 2.2 s, focus 0.077 (nothing free in 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4)"
+  },
+  {
+   "where": "shot 13",
+   "rule": "auto_shots",
+   "what": "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4 at 14.51 s for 2.2 s, focus 0.774 (nothing free in 1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4)"
+  },
+  {
+   "where": "shot 0",
+   "rule": "subject_cut",
+   "what": "moved from 57.91 to 58.41 s, the nearest stretch of the same source with the subject inside",
+   "before": [
+    "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4",
+    57.91,
+    3.8,
+    [
+     [
+      0.0,
+      0.512
+     ]
+    ]
+   ],
+   "after": [
+    "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4",
+    58.41,
+    3.8,
+    [
+     [
+      0.0,
+      0.512
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 1",
+   "rule": "subject_cut",
+   "what": "focus [[0.0, 0.848]] to 0.4: the subject stays inside the window",
+   "before": [
+    "1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4",
+    93.75,
+    2.71,
+    [
+     [
+      0.0,
+      0.848
+     ]
+    ]
+   ],
+   "after": [
+    "1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4",
+    93.75,
+    2.71,
+    0.4
+   ]
+  },
+  {
+   "where": "shot 12",
+   "rule": "subject_drift",
+   "what": "focus [[0.0, 0.077]] to 0.27: the subject stays inside the window",
+   "before": [
+    "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4",
+    80.48,
+    2.2,
+    [
+     [
+      0.0,
+      0.077
+     ]
+    ]
+   ],
+   "after": [
+    "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4",
+    80.48,
+    2.2,
+    0.27
+   ]
+  }
+ ],
+ "job_sha": "f19d6b52eb2c855524ff7295e9e4d3b4180fa95f",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/1666-amsterdam-december-update-gematsu-look-1.jpg",
+  "cards/2026-11/1666-amsterdam-december-update-gematsu-look-2.jpg",
+  "cards/2026-11/1666-amsterdam-december-update-gematsu-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_d (trailer sound refused: music only 14.8% of the track (< 40.0%))",
+ "shot_read": {
+  "secs": 92.9,
+  "files": {
+   "1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4": {
+    "secs": 45.6,
+    "cached": false,
+    "stages": {
+     "decode": 22.5,
+     "autofocus": 35.1,
+     "ocr": 35.1,
+     "smear": 45.4,
+     "scenes": 45.5
+    },
+    "incomplete": null
+   },
+   "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4": {
+    "secs": 47.3,
+    "cached": false,
+    "stages": {
+     "decode": 22.9,
+     "autofocus": 38.5,
+     "ocr": 38.5,
+     "smear": 47.0,
+     "scenes": 47.3
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/1666-amsterdam-december-update-gematsu.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.17,
+  "fetch": 1.16,
+  "shots": 1.55,
+  "checks": 1.99,
+  "render": 2.62,
+  "after": 1.31,
+  "job": 8.65
+ },
+ "job_after_autofix": {
+  "name": "1666-amsterdam-december-update-gematsu",
+  "story": "2026-11-21-1666-amsterdam-december-update-gematsu",
+  "footage_source": "steam:3949550",
+  "kind_news": "update",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/1666-amsterdam-december-update-gematsu-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4",
+    "steam": 3949550,
+    "trailer": "Gameplay Trailer 1",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3949550"
+   },
+   {
+    "file": "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4",
+    "steam": 3949550,
+    "trailer": "Announcement Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3949550"
+   },
+   {
+    "file": "1666-amsterdam-december-update-gematsu-launch-trailer.mp4",
+    "steam": 3949550,
+    "trailer": "Launch Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3949550"
+   }
+  ],
+  "shots": [
+   [
+    "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4",
+    58.41,
+    3.8,
+    [
+     [
+      0.0,
+      0.512
+     ]
+    ]
+   ],
+   [
+    "1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4",
+    93.75,
+    2.71,
+    0.4
+   ],
+   [
+    "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4",
+    61.71,
+    2.71,
+    [
+     [
+      0.0,
+      0.512
+     ]
+    ]
+   ],
+   [
+    "1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4",
+    98.25,
+    2.2,
+    [
+     [
+      0.0,
+      0.848
+     ]
+    ]
+   ],
+   [
+    "1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4",
+    53.91,
+    2.2,
+    [
+     [
+      0.0,
+      0.47
+     ]
+    ]
+   ],
+   [
+    "1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4",
+    90.25,
+    2.2,
+    [
+     [
+      0.0,
+      0.848
+     ]
+    ]
+   ],
+   [
+    "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4",
+    64.42,
+    2.74,
+    [
+     [
+      0.0,
+      0.512
+     ]
+    ]
+   ],
+   [
+    "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4",
+    72.45,
+    2.74,
+    [
+     [
+      0.0,
+      0.586
+     ]
+    ]
+   ],
+   [
+    "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4",
+    29.11,
+    2.2,
+    [
+     [
+      0.0,
+      0.636
+     ]
+    ]
+   ],
+   [
+    "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4",
+    76.08,
+    2.2,
+    [
+     [
+      0.0,
+      0.077
+     ]
+    ]
+   ],
+   [
+    "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4",
+    78.28,
+    2.2,
+    [
+     [
+      0.0,
+      0.077
+     ]
+    ]
+   ],
+   [
+    "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4",
+    17.6,
+    2.2,
+    [
+     [
+      0.0,
+      0.264
+     ]
+    ]
+   ],
+   [
+    "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4",
+    80.48,
+    2.2,
+    0.27
+   ],
+   [
+    "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4",
+    14.51,
+    2.2,
+    [
+     [
+      0.0,
+      0.774
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "أفاد موقع جيماتسو (Gematsu)\nبأن لعبة 1666: Amsterdam",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    5,
+    [
+     [
+      "ستحصل في ديسمبر على أول تحديث\nكبير في مرحلة الوصول المبكر",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    6,
+    7,
+    [
+     [
+      "يضيف التحديث منطقة جديدة\nاسمها أودركيرك تضاعف تقريبًا",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    8,
+    10,
+    [
+     [
+      "العالم المتاح، مع عدو جديد\nوتعاويذ وجواهر وجرعات إضافية",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    11,
+    13,
+    [
+     [
+      "وأكد المطور أن سعر الوصول\nالمبكر سيبقى كما هو دون زيادة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    13,
+    "المصدر: جيماتسو (Gematsu)،\nولقطات من Panache Digital Games",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "أفاد موقع جيماتسو (Gematsu) بأن لعبة 1666: Amsterdam ستحصل في ديسمبر على أول تحديث كبير في مرحلة الوصول المبكر. يضيف التحديث منطقة جديدة اسمها أودركيرك تضاعف تقريبًا العالم المتاح، مع عدو جديد وتعاويذ وجواهر وجرعات إضافية. وأكد المطور أن سعر الوصول المبكر سيبقى كما هو دون زيادة.",
+  "headline": "تحديث ديسمبر الكبير\nللعبة 1666: Amsterdam",
+  "label": "تقرير",
+  "game": "1666: Amsterdam",
+  "game_short": "1666: Amsterdam",
+  "texts": {
+   "instagram": "أفاد موقع جيماتسو (Gematsu) بأن لعبة 1666: Amsterdam ستحصل في ديسمبر على أول تحديث كبير في مرحلة الوصول المبكر.\n\nيضيف التحديث منطقة جديدة اسمها أودركيرك تضاعف تقريبًا العالم المتاح، مع عدو جديد وتعاويذ وجواهر وجرعات إضافية.\n\nوأكد المطور أن سعر الوصول المبكر سيبقى كما هو دون زيادة.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: جيماتسو.\n\n#ألعاب #أخبار_الألعاب #1666Amsterdam #ستيم",
+   "x": "أفاد موقع جيماتسو (Gematsu) بأن لعبة 1666: Amsterdam ستحصل في ديسمبر على أول تحديث كبير: منطقة جديدة تضاعف تقريبًا العالم المتاح، وعدو وتعاويذ جديدة، مع بقاء سعر الوصول المبكر كما هو.",
+   "threads": "أفاد موقع جيماتسو (Gematsu) بأن لعبة 1666: Amsterdam ستحصل في ديسمبر على أول تحديث كبير في الوصول المبكر، بمنطقة جديدة تضاعف تقريبًا العالم المتاح، وعدو وتعاويذ وجواهر وجرعات جديدة. وأكد المطور أن السعر لن يرتفع.\n\nالمصدر: جيماتسو"
+  },
+  "source": "جيماتسو (Gematsu)، ولقطات من Panache Digital Games",
+  "date": "20 Nov 2026",
+  "theme": "stylized",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "1666-amsterdam-december-update-gematsu-announcement-trailer.mp4",
+   57.91
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Gematsu reported on 20 Nov 2026 21:13Z that the developer announced the first major Early Access update for December.",
+   "what_it_means_here": "A new region slightly larger than the current area roughly doubles the explorable world, and the Early Access price stays unchanged."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "1666-amsterdam-december-update-gematsu-gameplay-trailer-1.mp4 from the resolver (steam:3949550)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Gematsu, 1666: Amsterdam Early Access first major update launches in December (https://www.gematsu.com/2026/11/1666-amsterdam-early-access-first-major-update-launches-in-december); first report: Gematsu 20 Nov 2026 21:13Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 3949550 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
