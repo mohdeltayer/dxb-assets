@@ -69,5 +69,27 @@
    "2026-11-18-gta-vi-metacritic-99",
    "2026-11-20-gta-vi-day-one-sales-estimate-sensor-tower"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/gta-vi-cdpr-co-ceo-masterpiece-push-square-reel-v1.mp4",
+  "blob": "d953d872963fc6f93b7fc75bee1353d869d03221",
+  "at": "2026-11-20T19:17:38Z",
+  "note": "Push Square read: co-CEO Michal Nowakowski on X, 'masterpiece', explore in coming weeks and months, unbelievably hard to achieve, congratulations to the whole team; all on-screen lines and IG/X/Threads texts match; footage is Rockstar's launch trailer",
+  "checklist": {
+   "job": "jobs/done/gta-vi-cdpr-co-ceo-masterpiece-push-square.json",
+   "sha256": "1571cf8cfcba747469f9ef1502adbacb3ee38495f62034179b9518f6675de31c",
+   "ok": false,
+   "problems": [
+    "render_lane server: the job belongs in jobs/live/ (dispatch render-live.yml), not jobs/done/gta-vi-cdpr-co-ceo-masterpiece-push-square.json"
+   ],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-agent",
+  "qc": "pass",
+  "looked": "Rockstar GTA VI launch trailer shots under a fixed two-line headline with the takrir chip, lines in order, closing on the Out Now frame; nothing graphic"
  }
 }

@@ -63,5 +63,37 @@
    "2026-11-15-halo-combat-evolved-xbox-turn-25",
    "airframe-ultra-out-now-steam-nov-6"
   ]
+ },
+ "director_sendbacks": [
+  {
+   "at": "2026-11-20T19:17:38Z",
+   "reason": "factual_error",
+   "note": "Famitsu 94671 says Bandai Namco Entertainment published the interview with brand director Kazutoki Kono (Famitsu only reports it and links it); line 1 and the Instagram caption say Famitsu published it (nashara mawqi Famitsu muqabala). Fix: Bandai Namco published an interview with Kono, Famitsu reported it. Also the 'not yet taking shape' line is the interview's own statement (to no koto), so attribute it to the interview/Kono, not 'Famitsu says'. Rest checks out: Katabuchi writes the script, thank-you email after 1M copies, reply 'I will join ACE9 development'.",
+   "by": "director-agent",
+   "out": "cards/2026-11/ace-combat-8-katabuchi-ace9-famitsu-reel-v1.mp4",
+   "qc": "pass"
+  }
+ ],
+ "director_check": {
+  "verdict": "FIX",
+  "out": "cards/2026-11/ace-combat-8-katabuchi-ace9-famitsu-reel-v1.mp4",
+  "blob": "642674ee8e19d168cc8b95b51150529acf0c2935",
+  "at": "2026-11-20T19:17:39Z",
+  "note": "Famitsu 94671 says Bandai Namco Entertainment published the interview with brand director Kazutoki Kono (Famitsu only reports it and links it); line 1 and the Instagram caption say Famitsu published it (nashara mawqi Famitsu muqabala). Fix: Bandai Namco published an interview with Kono, Famitsu reported it. Also the 'not yet taking shape' line is the interview's own statement (to no koto), so attribute it to the interview/Kono, not 'Famitsu says'. Rest checks out: Katabuchi writes the script, thank-you email after 1M copies, reply 'I will join ACE9 development'.",
+  "checklist": {
+   "job": "jobs/done/ace-combat-8-katabuchi-ace9-famitsu.json",
+   "sha256": "1047aad8caa97144d61b333d7e3781c23de0e6010ff2bce26fd16996a04c3a35",
+   "ok": false,
+   "problems": [
+    "render_lane server: the job belongs in jobs/live/ (dispatch render-live.yml), not jobs/done/ace-combat-8-katabuchi-ace9-famitsu.json"
+   ],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-agent",
+  "qc": "pass",
+  "looked": null
  }
 }
