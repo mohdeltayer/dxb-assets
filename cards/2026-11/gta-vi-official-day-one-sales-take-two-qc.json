@@ -1,0 +1,199 @@
+{
+ "name": "gta-vi-official-day-one-sales-take-two",
+ "out": "cards/2026-11/gta-vi-official-day-one-sales-take-two-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot scan",
+   "detail": "footage scan stopped at its cap (180 s); shots as written, automatic slots from the footage library or evenly spaced"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 60 px on 2 lines (cut it to a few words next time): لعبة GTA VI تحقق 3.79 مليار دولار\nفي يومها الأول"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 60 px on 2 lines (cut it to a few words next time): لعبة GTA VI تحقق 3.79 مليار دولار\nفي يومها الأول"
+  },
+  {
+   "stage": "credit",
+   "detail": "credit shortened to fit the safe zone: «المصدر: تيك-تو إنتراكتيف (Take-Two Interactive)، ولقطات من روكستار (Rockstar Games)» -> «المصدر: تيك-تو إنتراكتيف (Take-Two Interactive)، ولقطات من روكستار (Rockstar»"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 57.15 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 28.7 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 36.55 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 38.8 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 42.8 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 59.68 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 70.0 s for 2.78 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 80.73 s for 2.78 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch for 8 slot(s)"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 57.15 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 28.7 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 36.55 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 38.8 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 42.8 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 59.68 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 70.01 s for 2.78 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 80.73 s for 2.78 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "scan cap: 8 automatic slot(s) from the library or evenly spaced"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 49.03 s: moved off a repeated moment (respread)"
+  }
+ ],
+ "job_to_pass_min": 6.4,
+ "at": "2026-11-20T23:16:16Z",
+ "findings": [],
+ "notes": [
+  "length 17.6 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 89.6; leak_pct 0.1; cache {'hit': 0, 'miss': 2}; separate_secs 9.3; secs 12.9",
+  "render_job: lifeless: {\"score\": 12.8, \"still_share\": 0.137, \"longest_still\": 1.6, \"cuts_per_10s\": 2.86, \"held_under_text\": 0.0, \"secs\": 17.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 33 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [],
+ "job_sha": "a5b5239dc52301dc83c894660b014a8c11f54f21",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 2.0,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/gta-vi-official-day-one-sales-take-two-look-1.jpg",
+  "cards/2026-11/gta-vi-official-day-one-sales-take-two-look-2.jpg",
+  "cards/2026-11/gta-vi-official-day-one-sales-take-two-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 24.9,
+  "files": {
+   "gta6-launch-master.mp4": {
+    "secs": 24.9,
+    "cached": false,
+    "stages": {
+     "decode": 11.1,
+     "autofocus": 23.5,
+     "ocr": 23.5,
+     "smear": 24.7,
+     "scenes": 24.9
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/gta-vi-official-day-one-sales-take-two.json",
+ "stage_minutes": {
+  "queue": 0.02,
+  "setup": 0.17,
+  "fetch": 0.08,
+  "shots": 3.04,
+  "checks": 0.13,
+  "render": 1.52,
+  "after": 0.67,
+  "job": 5.45
+ }
+}
