@@ -571,8 +571,7 @@ SHOW_FACT_Y = SHOW_CREDIT_Y - 58         # key facts baseline, above the credit
 SHOW_GAP = 26                            # between a band's text and the picture
 SHOW_MIN_W = 760                         # a narrower picture box: cut the headline to one line
 SHOW_FIRST = 0.0                         # the first line is up from frame 0 (the headline is up all the way)
-SHOW_CASES = re.compile(r'trailer|teaser|تريلر|العرض الدعائي|الإعلان|lowbit|blocky|720p|under 1080|2x|cap|weak|quality|'
-                        r'clash|burnt-in|subtitle|send-back', re.I)   # (c) the 16:9 fallback, 20 Nov 2026
+SHOW_CASES = re.compile(r'trailer|teaser|تريلر|العرض الدعائي|الإعلان|lowbit|blocky|720p|under 1080|2x|cap|weak|quality', re.I)
 
 
 def showcase_reason(v):

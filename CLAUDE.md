@@ -3860,3 +3860,8 @@ on its own (picture ladder step b, logged in qc.json `ladder`):
 Not for card-led templates, person windows, products, the storybook page, series episodes with an intro, breaking, or a
 job with `"showcase_fallback": false`. Ordered by Mohammad during the 18 Nov freeze, so it ships live; the first
 renders' `content:` log lines are read to see how often it fires.
+Reverted (Mohammad, 20 Nov 2026, afternoon): every live render failed after these two commits (80b5083c, f7f1ad36):
+the shot read returned 0 clean stretches, explicit shot starts were overwritten by autoshots, renders hit the 15-minute
+timeout. The code in reel.py, render_job.py, softgate.py and presubmit.py is back to this morning's state; the rule above
+waits for the rebuild. Replay rule from now on: no change to reel.py, render_job.py or softgate.py goes live before it is
+run on the last 10 jobs in jobs/done, and none of them may fail that passed before.

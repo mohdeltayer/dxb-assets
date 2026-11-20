@@ -143,23 +143,6 @@ def qc_of(out):
 
 HARD_REASONS = ('wrong_subject', 'graphic', 'unreadable_text', 'factual_error')
 SENDBACKS_MAX = 1
-# The 16:9 fallback (Mohammad, 20 Nov 2026): a Reel sent back because the footage clashes with our text in the 9:16 crop
-# (the wrong subject in frame, the trailer's own subtitles or credits under our lines, a face under the headline) is not
-# re-cropped: its job takes the showcase layout, the trailer at its own width and our text in the bands.
-SHOWCASE_REASONS = ('wrong_subject', 'unreadable_text')
-
-
-def to_showcase(job_path, reason, note=''):
-    """Write "layout": "showcase" into the job file when softgate.showcase_ok; returns the reason written, or None."""
-    import softgate as SG_
-    j = json.load(open(job_path, encoding='utf-8'))
-    why = f'director send-back {reason}' + (f': {note}' if note else '')
-    if not SG_.showcase_fallback(j, why[:200]):
-        print(f'presubmit: {os.path.basename(job_path)} cannot take the showcase layout (a card, person window, '
-              'series intro or a layout already set); fix the shots instead')
-        return None
-    open(job_path, 'w', encoding='utf-8').write(json.dumps(j, ensure_ascii=False, indent=1) + '\n')
-    return j['showcase_reason']
 
 
 def qc_path(out):
@@ -227,11 +210,6 @@ def director(sid, verdict, out, note='', job=None, by=None, looked=None, reason=
         s.setdefault('director_sendbacks', []).append(entry)
         if qc:
             print(f'send-back recorded in {record_sendback(out, entry)} (commit it with the story file)')
-        if reason in SHOWCASE_REASONS and job and os.path.exists(job):
-            moved = to_showcase(job, reason, note)
-            if moved:
-                entry['showcase'] = moved
-                print(f'presubmit: {job} moved to the 16:9 showcase layout ({reason}); commit it and render once more')
     if verdict == 'PASS':
         # the server's verdict is final on what it measured (adv-20261112-qc-notes-become-failures)
         if qc and qc.get('verdict') == 'fail':

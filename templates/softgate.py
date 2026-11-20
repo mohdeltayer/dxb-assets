@@ -140,36 +140,3 @@ if __name__ == '__main__':
         print(json.dumps({'warnings': w, 'ladder': l}, ensure_ascii=False, indent=1))
     else:
         print(__doc__)
-
-
-# The 16:9 fallback (Mohammad, 20 Nov 2026, after Witch on the Holy Night took eight dispatches over the trailer's own
-# subtitles, a staff credit card, a letterboxed start and a face under the headline): when what is in the footage clashes
-# with our text in a 9:16 crop, the Reel goes to the showcase layout, the trailer at its own width with the headline, the
-# lines and the facts in the empty bands above and below it, instead of being re-rendered or sent back.
-SHOWCASE_BLOCKERS = ('gfx', 'person', 'products', 'page_motion', 'frame', 'kit', 'tribute', 'insert')
-SHOWCASE_OUT = ('storybeat', 'numbers', 'list', 'explainer', 'quote', 'edition', 'reviewscores')
-
-
-def showcase_ok(job):
-    """True when a job may take the showcase layout as a fallback: footage-led, no layout yet, nothing the showcase
-    cannot draw (cards, person windows, products, the storybook page, the design pass, tribute, inserts), not breaking,
-    and not opted out with "showcase_fallback": false."""
-    if not isinstance(job, dict) or job.get('layout') or job.get('showcase_fallback') is False:
-        return False
-    if job.get('kind') == 'breaking' or job.get('profile') == 'breaking' or job.get('series') or job.get('intro'):
-        return False
-    if job.get('template') in SHOWCASE_OUT or any(job.get(k) for k in SHOWCASE_BLOCKERS):
-        return False
-    return bool(job.get('shots'))
-
-
-def showcase_fallback(job, why, slot='reel'):
-    """Move a job to the showcase layout (picture ladder step b) when showcase_ok; the reason names the clash, so
-    reel.showcase_reason accepts it. Returns True when the job was moved."""
-    if not showcase_ok(job):
-        return False
-    job['layout'] = 'showcase'
-    job['showcase_reason'] = ('the trailer clashes with our text in a 9:16 crop: ' + str(why)
-                              + ' (16:9 fallback, Mohammad 20 Nov 2026)')
-    ladder('picture', slot, 'b', 'showcase layout, 16:9 fallback: ' + str(why))
-    return True
