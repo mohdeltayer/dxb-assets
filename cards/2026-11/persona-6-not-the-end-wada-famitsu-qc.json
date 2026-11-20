@@ -1,0 +1,401 @@
+{
+ "name": "persona-6-not-the-end-wada-famitsu",
+ "out": "cards/2026-11/persona-6-not-the-end-wada-famitsu-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot gate",
+   "detail": "shot 0 (persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4 11.00 s): is letterboxed on this stretch (550 of 1080 rows of picture); nearest clean start 9.50 s for the same 3.80 s shot_timing",
+   "shot": 0
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 2 (persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4 21.91 s): is letterboxed on this stretch (706 of 1080 rows of picture); no clean start of 2.46 s within 12 s: pick another stretch or shorten the shot shot_timing",
+   "shot": 2
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 3 (persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4 30.54 s): is letterboxed on this stretch (680 of 1080 rows of picture); no clean start of 2.24 s within 12 s: pick another stretch or shorten the shot shot_timing",
+   "shot": 3
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 8 (persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4 36.00 s): is letterboxed on this stretch (408 of 1080 rows of picture); no clean start of 2.28 s within 12 s: pick another stretch or shorten the shot shot_timing",
+   "shot": 8
+  },
+  {
+   "stage": "fill",
+   "detail": "ValueError: an empty band in the finished Reel (no empty band at any second, Mohammad 8 Nov 2026): 10.28 s: 284 px of empty band from y 1012; 12.10 s: 244 px of empty band from y 1052; 18.44 s: 216 px of empty band from y 1080. Keep the headline in the top band and a line in the bottom band at every second (showcase layout), or fill the frame cropped to the subject."
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "letterbox: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "letterbox: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "letterbox: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "letterbox: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "letterboxed footage: showcase layout, the trailer at its own width"
+  },
+  {
+   "kind": "text",
+   "slot": "line 3",
+   "step": "a",
+   "why": "2.7 s of 3.2 s: shot 6 lengthened by 0.6 s"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "c",
+   "why": "audio split not applied (music stem not clean (leftover 24.3% > 5.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or "
+  }
+ ],
+ "job_to_pass_min": 10.4,
+ "at": "2026-11-20T13:36:53Z",
+ "findings": [],
+ "notes": [
+  "length 19.6 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 24.3% > 5.0%); music_pct 9.3; leak_pct 24.3; cache {'hit': 0, 'miss': 4}; separate_secs 8.6; secs 11.7",
+  "render_job: audio split fallback: our bed (ValueError: the trailer mix would not match the picture); bed:neon_b",
+  "render_job: lifeless: {\"score\": 28.9, \"still_share\": 0.308, \"longest_still\": 1.5, \"cuts_per_10s\": 1.03, \"held_under_text\": 0.0, \"secs\": 19.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 5",
+   "rule": "shot_timing",
+   "what": "moved from 51.64 to 51.14 s, the nearest clean start of the same 2.21 s",
+   "before": [
+    "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    51.64,
+    2.21,
+    [
+     [
+      0.0,
+      0.533
+     ]
+    ]
+   ],
+   "after": [
+    "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    51.14,
+    2.21,
+    [
+     [
+      0.0,
+      0.533
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 6",
+   "rule": "shot_timing",
+   "what": "trimmed to 1.55 s, the clean part before the scene cut at 55.84 s",
+   "before": [
+    "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    54.25,
+    2.21,
+    [
+     [
+      0.0,
+      0.533
+     ]
+    ]
+   ],
+   "after": [
+    "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    54.25,
+    1.55,
+    [
+     [
+      0.0,
+      0.533
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 7",
+   "rule": "fill",
+   "what": "lengthened 2.28 to 2.94 s to keep the time shot 6 gave up",
+   "before": 2.28,
+   "after": 2.94
+  }
+ ],
+ "job_sha": "7630b7c0f8975c6c0c2260625d40aa1980ef0f35",
+ "dispatches": 3,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 4.71,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/persona-6-not-the-end-wada-famitsu-look-1.jpg",
+  "cards/2026-11/persona-6-not-the-end-wada-famitsu-look-2.jpg",
+  "cards/2026-11/persona-6-not-the-end-wada-famitsu-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_b (trailer sound refused: music stem not clean (leftover 24.3% > 5.0%))",
+ "shot_read": null,
+ "job_path": "jobs/done/persona-6-not-the-end-wada-famitsu.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.18,
+  "fetch": 0.53,
+  "shots": 0.01,
+  "checks": 6.65,
+  "render": 1.41,
+  "after": 0.82,
+  "job": 9.43
+ },
+ "job_after_autofix": {
+  "name": "persona-6-not-the-end-wada-famitsu",
+  "story": "2026-11-20-persona-6-not-the-end-wada-famitsu",
+  "footage_source": "steam:2649560",
+  "kind_news": "reveal",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/persona-6-not-the-end-wada-famitsu-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    "steam": 2649560,
+    "trailer": "Persona 6 - Teaser Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2649560"
+   }
+  ],
+  "shots": [
+   [
+    "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    11.0,
+    3.8,
+    [
+     [
+      0.0,
+      0.533
+     ]
+    ]
+   ],
+   [
+    "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    8.27,
+    2.46,
+    [
+     [
+      0.0,
+      0.533
+     ]
+    ]
+   ],
+   [
+    "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    21.91,
+    2.46,
+    [
+     [
+      0.0,
+      0.533
+     ]
+    ]
+   ],
+   [
+    "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    30.54,
+    2.24,
+    [
+     [
+      0.0,
+      0.533
+     ]
+    ]
+   ],
+   [
+    "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    49.4,
+    2.24,
+    [
+     [
+      0.0,
+      0.533
+     ]
+    ]
+   ],
+   [
+    "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    51.14,
+    2.21,
+    [
+     [
+      0.0,
+      0.533
+     ]
+    ]
+   ],
+   [
+    "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    54.25,
+    1.55,
+    [
+     [
+      0.0,
+      0.533
+     ]
+    ]
+   ],
+   [
+    "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    67.35,
+    2.94,
+    [
+     [
+      0.0,
+      0.53
+     ]
+    ]
+   ],
+   [
+    "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+    36.0,
+    2.28,
+    [
+     [
+      0.0,
+      0.517
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "وقال إن الفريق يجرّب\nطرقًا متعددة حتى لا يطول",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "انتظار اللعبة التالية\nكما حدث في السابق",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "ولم يُعلن موعد\nصدور Persona 6 بعد، وهي",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    8,
+    [
+     [
+      "قادمة إلى Switch 2 و PS5\nو Xbox والكمبيوتر",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    8,
+    "المصدر: صفحة اللعبة على Steam",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "نقل موقع فاميتسو (Famitsu) عن المنتج العام في استوديو P-Studio أن لعبة Persona 6 ليست نهاية السلسلة. وقال إن الفريق يجرّب طرقًا متعددة حتى لا يطول انتظار اللعبة التالية كما حدث في السابق. ولم يُعلن موعد صدور Persona 6 بعد، وهي قادمة إلى Switch 2 وPS5 وXbox والكمبيوتر.",
+  "headline": "ليست نهاية السلسلة\nبعد Persona 6",
+  "label": "تقرير",
+  "game": "Persona 6",
+  "game_short": "Persona 6",
+  "texts": {
+   "instagram": "نقل موقع فاميتسو (Famitsu) عن المنتج العام في استوديو P-Studio أن لعبة Persona 6 ليست نهاية السلسلة.\n\nوقال إن الفريق يجرّب طرقًا متعددة حتى لا يطول انتظار اللعبة التالية كما حدث في السابق.\n\nولم يُعلن موعد صدور Persona 6 بعد، وهي قادمة إلى Switch 2 وPS5 وXbox والكمبيوتر.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: فاميتسو (Famitsu).\n\n#ألعاب #أخبار_الألعاب #Persona6 #Atlus",
+   "x": "نقل موقع فاميتسو (Famitsu) عن المنتج العام في استوديو P-Studio أن Persona 6 ليست نهاية السلسلة، وأن الفريق يجرّب طرقًا حتى لا يطول انتظار اللعبة التالية.",
+   "threads": "نقل موقع فاميتسو (Famitsu) عن المنتج العام في استوديو P-Studio أن Persona 6 ليست نهاية السلسلة، وأن الفريق يجرّب طرقًا متعددة حتى لا يطول انتظار اللعبة التالية. ولم يُعلن موعد صدور Persona 6 بعد.\n\nالمصدر: فاميتسو (Famitsu)"
+  },
+  "source": "صفحة اللعبة على Steam",
+  "date": "20 Nov 2026",
+  "theme": "gold",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4",
+   11.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Famitsu published part two of its interview with the P-Studio general producer today, and GamesRadar picked it up within hours.",
+   "what_it_means_here": "It is a stated intention only: Persona 6 has no release date, and the producer gave no schedule for the next game."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "persona-6-not-the-end-wada-famitsu-persona-6-teaser-trailer.mp4 from the resolver (steam:2649560)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Famitsu, interview with P-Studio general producer Kazuhisa Wada (part 2) (https://www.famitsu.com/article/202611/94660); first report: Famitsu 20 Nov 2026 12:04Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 2649560 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
