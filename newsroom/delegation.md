@@ -60,6 +60,17 @@ a stretch. A director PASS is final: the builder schedules it and adds no checks
 builder doubts goes back to the director as a question before the PASS, never as a re-cut after it. (On 10 Nov
 Warhammer Survivors' pixel-art red splats were cut as blood after a PASS, which cost two renders.)
 
+**Director: true and clear; picture faults go 16:9 (Mohammad, 20 Nov 2026, 22:20 Dubai: "if the templates are followed
+there should be no rejection"; supersedes every director checklist below where it asks more).** The director checks
+two things only: the text is true (`--reason factual_error`), and it makes sense to an Arab reader who knows no English
+genre words (`--reason unclear_text`). Graphic content stays a stop (`--reason graphic`, the 12 Oct rule). A picture
+fault (wrong subject, framing, our text over the trailer's subtitles, a logo or a face) is never a send-back:
+`presubmit.py director <story> FIX <out> --job <job> --by <director> --reason wrong_subject | framing | overlap |
+unreadable_text` writes the 16:9 showcase layout into the job (the clip at its own width, headline, lines and credit in
+the bands, nothing over the picture), the server renders it once and that version is posted; on a showcase Reel a
+picture reason is refused. The server also takes the 16:9 layout on its own when the shot scan finds no clean stretch
+or burnt-in text sits under our text in the 9:16 crop.
+
 **Director: two questions (adv-20261118-templates-never-refuse, Mohammad 18 Nov 2026, 17:54 Dubai; supersedes the
 director checklists below wherever they ask more).** The template is the contract: clip, music and text go in their
 places, and the server falls down its picture, sound and text ladders on its own. After the render the director asks

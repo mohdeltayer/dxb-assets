@@ -244,7 +244,8 @@ def previous(qc_path):
     return {}
 
 
-RERENDER_REASONS = ('wrong_subject', 'graphic', 'unreadable_text', 'factual_error', 'source_changed')
+RERENDER_REASONS = ('wrong_subject', 'graphic', 'unreadable_text', 'factual_error', 'source_changed', 'unclear_text',
+                    'framing', 'overlap')
 
 
 def rerender_problem(job, stories_dir=None):
