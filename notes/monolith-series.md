@@ -27,7 +27,7 @@ audio only, all audio approved; 4 render once (Reels and film; first chapter pre
 | Shown at E3 2009 as "Monado: Beginning of the World"; Iwata named it Xenoblade to honour Takahashi, 29 Jan 2010 | Nintendo IR briefing 29 Jan 2010, nintendo.co.jp/ir/en/events/100129/06.html |
 | Xenoblade JP 10 Jun 2010; Europe 19 Aug 2011; North America 6 Apr 2012 | monolithsoft.co.jp/games/ ; Nintendo UK news 8 Jul 2011 ; NoA release 22 Feb 2012 |
 | X (Wii U) JP 29 Apr 2015; 2 on 1 Dec 2017; Torna 2018; DE 29 May 2020; 3 on 29 Jul 2022; Future Redeemed Apr 2023; X DE 20 Mar 2025 | monolithsoft.co.jp/games/ ; Nintendo US store |
-| Xenoblade 2: 1.06M as of 31 Jan 2018; DE 1.32M in its first quarter; Xenoblade 3: 1.72M by 30 Sep 2022 | Nintendo IR 180131_3e.pdf, 200806e.pdf, 221108e.pdf |
+| Xenoblade 2: 1.06M as of 31 Jan 2018; DE 1.32M by 30 Jun 2020 (first fiscal quarter after its May release); Xenoblade 3: 1.72M by 30 Sep 2022 | Nintendo IR 180131_3e.pdf, 200806e.pdf, 221108e.pdf |
 | Switch 2 Editions: X DE Feb 2026, DE Jun 2026, 2 Jul 2026 (download dates) | monolithsoft.co.jp/games/ |
 | Support work (部分受託): Smash Bros. Brawl, Dirge of Cerberus (Square Enix), Skyward Sword, Animal Crossing New Leaf, Happy Home Designer, New Horizons, Pikmin 3, A Link Between Worlds, Splatoon 1 to 3, Breath of the Wild, Tears of the Kingdom, Mario Kart World, Splatoon Raiders, Ocarina of Time (Switch 2) | monolithsoft.co.jp/games/ |
 | Skyward Sword first, from about summer 2010, designers and planners; Iwamoto: first time Zelda outsourced design and planning; TotK: planners, designers, programmers from the start | Monolith x Nintendo interview, 16 Dec 2025, monolithsoft.co.jp/interview/dev01/collab-talk.html |
@@ -63,12 +63,12 @@ mention in each chapter, so every Reel set names them in full on its own.
 
 [R1]
 قبل أن تولد مونوليث سوفت (Monolith Soft)، الاستوديو الياباني الذي صنع سلسلة Xenoblade، كان مؤسسوها يعملون في شركة سكوير (Square)، صاحبة Final Fantasy.
-هناك عمل تيتسويا تاكاهاشي (Tetsuya Takahashi) على رسوم Final Fantasy من الجزء الرابع إلى السادس، حتى قال عنه هيرونوبو ساكاغوتشي (Hironobu Sakaguchi)، مبتكر السلسلة، إنه كان رأس فريق الرسوم فيها.
+هناك عمل المصمم تيتسويا تاكاهاشي (Tetsuya Takahashi) على رسوم Final Fantasy من الجزء الرابع إلى السادس، حتى قال عنه هيرونوبو ساكاغوتشي (Hironobu Sakaguchi)، مبتكر السلسلة، إنه كان رأس فريق الرسوم فيها.
 ثم تولى إدارة الرسوم في Chrono Trigger.
 ومع بدء العمل على Final Fantasy VII، ترك فريق السلسلة ليقود فريقًا آخر، فكانت ثمرة ذلك لعبة Xenogears في فبراير 1998.
 [/R1]
 وفي حوار مع ساتورو إيواتا (Satoru Iwata)، رئيس نينتيندو (Nintendo) الراحل، تذكّر تاكاهاشي أن في سكوير ما يشبه ثقافة خاصة بها، كان يريد تغييرها، وكان يشعر في الوقت نفسه بأن تغييرها غير مرحّب به.
-وموسيقى Xenogears كتبها ياسونوري ميتسودا (Yasunori Mitsuda)، وهو اسم سيعود في هذه القصة.
+وموسيقى Xenogears كتبها الملحن ياسونوري ميتسودا (Yasunori Mitsuda)، وهو اسم سيعود في هذه القصة.
 [R1]
 وفي سكوير نفسها كان هيروهيدي سوغيورا (Hirohide Sugiura) منتجًا، وكان ياسويوكي هونيه (Yasuyuki Honne) من فريق Chrono Trigger.
 وفي 1999 سيجتمع الثلاثة في شركة جديدة.
@@ -92,7 +92,7 @@ mention in each chapter, so every Reel set names them in full on its own.
 ### الفصل الثالث: الانتقال إلى نينتيندو
 
 [R3]
-في أبريل 2007 تغيّر مصير مونوليث سوفت (Monolith Soft)، الاستوديو الذي صنع لاحقًا سلسلة Xenoblade.
+في أبريل 2007 تغيّر مصير مونوليث سوفت (Monolith Soft)، الاستوديو الذي سيصنع لاحقًا سلسلة Xenoblade.
 باعت بانداي نامكو (Bandai Namco) ثمانين بالمئة من أسهم الاستوديو لشركة نينتيندو (Nintendo)، واحتفظت بستة عشر بالمئة، وكان يعمل فيه يومها نحو 110 أشخاص.
 وفي اليوم نفسه شرح ساتورو إيواتا (Satoru Iwata)، رئيس نينتيندو، السبب: علاقة طويلة تجمع الشركة برئيس الاستوديو هيروهيدي سوغيورا (Hirohide Sugiura)، ورغبة نينتيندو في دعمه.
 [/R3]
@@ -114,7 +114,7 @@ mention in each chapter, so every Reel set names them in full on its own.
 [R4]
 ومن هناك كبرت السلسلة: Xenoblade Chronicles X على Wii U في 2015، ثم Xenoblade Chronicles 2 على Switch في ديسمبر 2017، وتجاوزت مبيعاتها مليون نسخة خلال شهرين، حسب نينتيندو.
 [/R4]
-وفي 2018 جاءت قصة Torna، وفي 2020 عادت اللعبة الأولى بنسخة Definitive Edition على Switch، وباعت 1.32 مليون نسخة في ربعها الأول.
+وفي 2018 جاءت قصة Torna، وفي 2020 عادت اللعبة الأولى بنسخة Definitive Edition على Switch، وباعت 1.32 مليون نسخة حتى نهاية يونيو من العام نفسه.
 ثم صدرت Xenoblade Chronicles 3 في يوليو 2022، وباعت 1.72 مليون نسخة حتى نهاية سبتمبر من العام نفسه.
 وأكملتها في 2023 قصة Future Redeemed، ثم عادت Xenoblade Chronicles X في 2025 بنسخة Definitive Edition.
 
@@ -123,15 +123,15 @@ mention in each chapter, so every Reel set names them in full on its own.
 [R5]
 قد لا يعرف كثيرون أن مونوليث سوفت (Monolith Soft)، صانعة Xenoblade، شاركت في صنع بعض أشهر ألعاب نينتيندو (Nintendo).
 البداية كانت مع The Legend of Zelda: Skyward Sword، إذ انضم إليها مصممون ومخططون من الاستوديو منذ صيف 2010 تقريبًا.
-وقال دايكي إيواموتو (Daiki Iwamoto) من نينتيندو إنها كانت المرة الأولى التي تُسند فيها سلسلة Zelda التصميم والتخطيط إلى جهة من خارج الشركة.
+وقال دايكي إيواموتو (Daiki Iwamoto)، أحد مطوري نينتيندو، إنها كانت المرة الأولى التي تُسند فيها سلسلة Zelda التصميم والتخطيط إلى جهة من خارج الشركة.
 [/R5]
 وفي يوليو 2011 افتتحت مونوليث سوفت استوديو جديدًا في كيوتو، لتقوية شراكتها مع نينتيندو، كما أعلنت يومها.
-وفي قائمة أعمالها أيضًا Super Smash Bros. Brawl، بل وحتى Dirge of Cerberus من سكوير (Square Enix)، الشركة التي خرج منها مؤسسوها.
+وفي قائمة أعمالها أيضًا Super Smash Bros. Brawl، بل حتى Dirge of Cerberus من سكوير (Square Enix)، الشركة التي خرج منها مؤسسوها.
 [R5]
 ثم توالت الأعمال: Pikmin 3، ثم ثلاث من ألعاب Animal Crossing، ثم أجزاء Splatoon الثلاثة، ثم Breath of the Wild وبعدها Tears of the Kingdom، التي شارك فيها مخططو الاستوديو ومصمموه ومبرمجوه منذ بداية التطوير.
 [/R5]
 وفي نوفمبر 2026 صدرت Ocarina of Time على Switch 2، وهي أيضًا من الألعاب التي شاركت فيها مونوليث سوفت.
-وفي القائمة أيضًا A Link Between Worlds وMario Kart World وSplatoon Raiders، كلها بمساهمة من الاستوديو، كما يذكر في صفحة أعماله.
+وفي القائمة أيضًا A Link Between Worlds وMario Kart World وSplatoon Raiders، كلها بمساهمة من الاستوديو، كما تذكر صفحة أعماله.
 
 ### الفصل السادس: Xenoblade Chronicles 3 على Switch 2
 
@@ -145,7 +145,7 @@ mention in each chapter, so every Reel set names them in full on its own.
 [R6]
 وأسهل طريق للبدء هو ترتيب الصدور: الجزء الأول بنسخة Definitive Edition، ثم الثاني، ثم الثالث.
 [/R6]
-ومونوليث سوفت، التي خرج مؤسسوها من سكوير (Square) قبل 27 عامًا، يعمل فيها اليوم 344 شخصًا، وتبحث عن مطورين للعبة أدوار جديدة يشرف عليها تيتسويا تاكاهاشي (Tetsuya Takahashi).
+ومونوليث سوفت، التي خرج مؤسسوها من سكوير (Square) قبل 27 عامًا، يعمل فيها اليوم 344 شخصًا، وتبحث عن مطورين للعبة أدوار جديدة يشرف عليها أحد مؤسسيها، تيتسويا تاكاهاشي (Tetsuya Takahashi).
 
 ## Ledger: shots and sound per episode
 Rule (as the Ocarina and GTA VI series): no shot and no audio stretch in two episodes. Filled at stage 4.
