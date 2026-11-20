@@ -1,12 +1,26 @@
 {
  "id": "2026-11-20-umamusume-denver-broncos-nfl-collab-december-6",
- "state": "failed",
- "problems": [
-  "headline: paragraph 1 starts with 'Umamusume تتعاون'; every paragraph starts with an Arabic word"
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "ledger: earlier stories on this game: 2026-10-19-umamusume-la-concert-visas, 2026-10-20-umamusume-la-concert-cancelled, 2026-10-21-cygames-php-emergency-maintenance (an update or a duplicate? the editor decides)"
  ],
- "flags": [],
- "at": "2026-11-20T04:09:09Z",
- "run": "44672432277",
+ "at": "2026-11-20T04:11:17Z",
+ "footage": {
+  "name": "Launch Trailer",
+  "width": 1920,
+  "height": 1080,
+  "fps": 29.97,
+  "mbps": 5.72,
+  "rows": 1080,
+  "duration": 64.02,
+  "decode_clean": true
+ },
+ "job": "jobs/live/umamusume-denver-broncos-nfl-collab-december-6.json",
+ "story": "newsroom/stories/2026-11-20-umamusume-denver-broncos-nfl-collab-december-6.json",
+ "lines": 4,
+ "shots": 9,
+ "run": "44672661966",
  "lane": "live",
- "build_secs": 19
+ "build_secs": 42
 }
