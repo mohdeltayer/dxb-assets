@@ -69,5 +69,25 @@
    "2026-11-20-gta-vi-cdpr-co-ceo-masterpiece-push-square",
    "2026-11-20-gta-vi-day-one-sales-estimate-sensor-tower"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/gta-vi-official-day-one-sales-take-two-reel-v1.mp4",
+  "blob": "a2f3cd22306722356df0649b62966073c4f98f38",
+  "at": "2026-11-20T23:37:48Z",
+  "note": "viewer pass by separate agent: readable, makes sense, facts match Take-Two release",
+  "checklist": {
+   "job": "jobs/live/gta-vi-official-day-one-sales-take-two.json",
+   "sha256": "d26c0636d9049c088be7f6c2d655a7c550e88d1cfd8883a4b56116703f5af470",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look frames: green official chip, 2-line headline, three caption lines, credit under, official launch trailer footage"
  }
 }
