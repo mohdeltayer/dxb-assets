@@ -5,7 +5,7 @@
  "warnings": [
   {
    "stage": "length",
-   "detail": "length 11.7 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them; under 12 s fails: add a beat of footage"
+   "detail": "length 11.9 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them; under 12 s fails: add a beat of footage"
   }
  ],
  "ladder": [
@@ -13,32 +13,39 @@
    "kind": "text",
    "slot": "line 1",
    "step": "a",
-   "why": "3.1 s of 4.1 s: shot 2 lengthened by 1.19 s"
+   "why": "3.4 s of 4.1 s: shot 2 lengthened by 0.85 s"
   },
   {
    "kind": "text",
    "slot": "line 2",
    "step": "a",
-   "why": "2.9 s of 3.8 s: shot 6 lengthened by 0.94 s"
+   "why": "3.5 s of 3.8 s: shot 5 lengthened by 0.34 s"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "c",
+   "why": "audio split not applied (music only 27.3% of the track (< 40.0%)) on a trailer track under 5 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our b"
   }
  ],
- "job_to_pass_min": 4.5,
- "at": "2026-11-20T07:22:08Z",
+ "job_to_pass_min": 3.6,
+ "at": "2026-11-20T07:26:31Z",
  "findings": [],
  "notes": [
-  "length 11.7 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: applied; music_pct 53.1; leak_pct 0.0; cache {'hit': 1, 'miss': 3}; separate_secs 8.0; secs 10.9",
-  "render_job: lifeless: {\"score\": 11.4, \"still_share\": 0.171, \"longest_still\": 0.9, \"cuts_per_10s\": 10.26, \"held_under_text\": 0.0, \"secs\": 11.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "length 11.9 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason music only 27.3% of the track (< 40.0%); music_pct 27.3; leak_pct 0.0; cache {'hit': 0, 'miss': 3}; separate_secs 6.8; secs 9.2",
+  "render_job: audio split fallback: our bed (ValueError: the trailer mix would not match the picture); bed:neon_c",
+  "render_job: lifeless: {\"score\": 9.4, \"still_share\": 0.144, \"longest_still\": 0.7, \"cuts_per_10s\": 6.78, \"held_under_text\": 0.0, \"secs\": 11.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [
   {
    "where": "shot 0",
    "rule": "shot_timing",
-   "what": "moved from 76.00 to 72.25 s, the nearest clean start of the same 3.50 s",
+   "what": "trimmed to 3.66 s, the clean part before the scene cut at 38.70 s",
    "before": [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
-    76.0,
-    3.5,
+    35.0,
+    3.9,
     [
      [
       0.0,
@@ -48,8 +55,42 @@
    ],
    "after": [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
-    72.25,
-    3.5,
+    35.0,
+    3.66,
+    [
+     [
+      0.0,
+      0.5
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 1",
+   "rule": "fill",
+   "what": "lengthened 2.30 to 2.54 s to keep the time shot 0 gave up",
+   "before": 2.3,
+   "after": 2.54
+  },
+  {
+   "where": "shot 4",
+   "rule": "shot_timing",
+   "what": "moved from 2.00 to 3.40 s, the nearest clean start of the same 1.60 s",
+   "before": [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    2.0,
+    1.6,
+    [
+     [
+      0.0,
+      0.5
+     ]
+    ]
+   ],
+   "after": [
+    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
+    3.4,
+    1.6,
     [
      [
       0.0,
@@ -59,8 +100,8 @@
    ]
   }
  ],
- "job_sha": "04a4c5daf8c54bdedc7ed054f4699d4c8e8d6253",
- "dispatches": 4,
+ "job_sha": "17097856642bd006ee3002c81bce917aa0fd7040",
+ "dispatches": 5,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -74,19 +115,18 @@
   "cards/2026-11/witch-on-the-holy-night-mobile-japan-look-3.jpg"
  ],
  "person_shown": "n/a",
- "sound": "trailer",
+ "sound": "bed:neon_c (trailer sound refused: music only 27.3% of the track (< 40.0%))",
  "shot_read": null,
  "job_path": "jobs/done/witch-on-the-holy-night-mobile-japan.json",
  "stage_minutes": {
-  "queue": 0.03,
-  "setup": 0.18,
+  "queue": 0.02,
+  "setup": 0.17,
   "fetch": 0.17,
   "shots": 0.01,
-  "checks": 1.32,
-  "render": 1.23,
-  "after": 0.89,
-  "upload": 0.08,
-  "job": 3.62
+  "checks": 0.91,
+  "render": 1.18,
+  "after": 0.55,
+  "job": 2.82
  },
  "job_after_autofix": {
   "name": "witch-on-the-holy-night-mobile-japan",
@@ -110,8 +150,8 @@
   "shots": [
    [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
-    72.25,
-    3.5,
+    35.0,
+    3.66,
     [
      [
       0.0,
@@ -122,7 +162,7 @@
    [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
     6.0,
-    2.2,
+    2.54,
     [
      [
       0.0,
@@ -143,8 +183,8 @@
    ],
    [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
-    14.0,
-    1.0,
+    10.0,
+    2.0,
     [
      [
       0.0,
@@ -154,8 +194,8 @@
    ],
    [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
-    23.0,
-    1.4,
+    3.4,
+    1.6,
     [
      [
       0.0,
@@ -165,18 +205,7 @@
    ],
    [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
-    38.0,
-    1.0,
-    [
-     [
-      0.0,
-      0.5
-     ]
-    ]
-   ],
-   [
-    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
-    82.0,
+    12.0,
     1.0,
     [
      [
@@ -242,7 +271,7 @@
   "cut": false,
   "track": [
    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
-   76.0
+   35.0
   ],
   "track_from_first_shot": true,
   "angle": {
@@ -252,7 +281,7 @@
   "decision_log": {
    "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
    "footage": "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4 from the resolver (steam:2052410)",
-   "shots": "hand-picked clean stretches of the only Steam trailer (steam:2052410), avoiding burned English subtitles and name cards; sheet checked frame by frame",
+   "shots": "hand-picked clean stretches of the only Steam trailer (steam:2052410), checked on a 1 fps sheet with real timestamps",
    "music": "the trailer's own sound from the first shot (audio split per shot)"
   },
   "reel_check": {
@@ -271,64 +300,54 @@
    [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
     6.0,
-    "clean stretches picked from the frame sheet: no burned subtitle or credit card in these windows"
+    "clean stretches verified on a 1 fps labelled sheet of the trailer: no burned subtitle or credit card inside these windows"
    ],
    [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
     16.0,
-    "clean stretches picked from the frame sheet: no burned subtitle or credit card in these windows"
+    "clean stretches verified on a 1 fps labelled sheet of the trailer: no burned subtitle or credit card inside these windows"
    ],
    [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
-    14.0,
-    "clean stretches picked from the frame sheet: no burned subtitle or credit card in these windows"
+    10.0,
+    "clean stretches verified on a 1 fps labelled sheet of the trailer: no burned subtitle or credit card inside these windows"
    ],
    [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
-    23.0,
-    "clean stretches picked from the frame sheet: no burned subtitle or credit card in these windows"
+    2.0,
+    "clean stretches verified on a 1 fps labelled sheet of the trailer: no burned subtitle or credit card inside these windows"
    ],
    [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
-    38.0,
-    "clean stretches picked from the frame sheet: no burned subtitle or credit card in these windows"
-   ],
-   [
-    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
-    82.0,
-    "clean stretches picked from the frame sheet: no burned subtitle or credit card in these windows"
+    12.0,
+    "clean stretches verified on a 1 fps labelled sheet of the trailer: no burned subtitle or credit card inside these windows"
    ]
   ],
   "drift_ok": [
    [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
     6.0,
-    "clean stretches picked from the frame sheet: no burned subtitle or credit card in these windows"
+    "clean stretches verified on a 1 fps labelled sheet of the trailer: no burned subtitle or credit card inside these windows"
    ],
    [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
     16.0,
-    "clean stretches picked from the frame sheet: no burned subtitle or credit card in these windows"
+    "clean stretches verified on a 1 fps labelled sheet of the trailer: no burned subtitle or credit card inside these windows"
    ],
    [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
-    14.0,
-    "clean stretches picked from the frame sheet: no burned subtitle or credit card in these windows"
+    10.0,
+    "clean stretches verified on a 1 fps labelled sheet of the trailer: no burned subtitle or credit card inside these windows"
    ],
    [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
-    23.0,
-    "clean stretches picked from the frame sheet: no burned subtitle or credit card in these windows"
+    2.0,
+    "clean stretches verified on a 1 fps labelled sheet of the trailer: no burned subtitle or credit card inside these windows"
    ],
    [
     "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
-    38.0,
-    "clean stretches picked from the frame sheet: no burned subtitle or credit card in these windows"
-   ],
-   [
-    "witch-on-the-holy-night-mobile-japan-pv-with-english-subtitles.mp4",
-    82.0,
-    "clean stretches picked from the frame sheet: no burned subtitle or credit card in these windows"
+    12.0,
+    "clean stretches verified on a 1 fps labelled sheet of the trailer: no burned subtitle or credit card inside these windows"
    ]
   ]
  }
