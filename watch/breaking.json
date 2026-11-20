@@ -1,10 +1,74 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-20T20:52:08Z",
- "seq": 699,
+ "generated_at": "2026-11-20T21:05:11Z",
+ "seq": 700,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 19833,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Perceptum - Gameplay Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=GByr1iCu1_Y",
+   "published": "2026-11-20T21:00Z",
+   "first_seen": "2026-11-20T21:05:05Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/GByr1iCu1_Y/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=GByr1iCu1_Y"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 700
+  },
+  {
+   "id": 19834,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Mr Magpie's Harmless Card Game - Launch Date Reveal Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=J2gT7_jI4s4",
+   "published": "2026-11-20T21:00Z",
+   "first_seen": "2026-11-20T21:05:05Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/J2gT7_jI4s4/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=J2gT7_jI4s4"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 700
+  },
+  {
+   "id": 19835,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "BrokenLore: Don't Play - Horror Game Awards Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=sOdmxvqhBq0",
+   "published": "2026-11-20T21:00Z",
+   "first_seen": "2026-11-20T21:05:05Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/sOdmxvqhBq0/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=sOdmxvqhBq0"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 700
+  }
+ ],
  "recent": [
   {
    "id": 19799,
@@ -346,7 +410,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-20T20:50:14Z",
+  "last_poll_at": "2026-11-20T21:05:05Z",
   "sources_enabled": 100,
   "sources_ok": 94,
   "sources_failing": 6,
