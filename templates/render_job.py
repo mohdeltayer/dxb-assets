@@ -691,6 +691,7 @@ def respread(job):
         sh = shots[i]
         secs = float(sh[2])
         best = None
+        spare = None                            # the first free moment anywhere, used only when no file has a clean one
         for f in [sh[0]] + [v for v in vids if v != sh[0]]:
             d = dur(f)
             r = AS.READ.get(f) or {}
@@ -703,9 +704,12 @@ def respread(job):
             free = [c for c in cands if all(min(c + secs, y) - max(c, x) <= 0 for x, y in taken)]
             if free:
                 free.sort(key=lambda c: -min([abs(c - x) for x, _ in taken] or [d]))
-                c = next((c for c in free[:8] if frame_clean(f, c, secs, d)[0]), free[0])   # 21 Nov: never onto black or a slate
-                best = (f, round(c, 2))
-                break
+                spare = spare or (f, round(free[0], 2))
+                c = next((c for c in free[:16] if frame_clean(f, c, secs, d)[0]), None)   # 21 Nov: never onto black or a slate
+                if c is not None:
+                    best = (f, round(c, 2))
+                    break                       # else the job's other footage before a blind moment (Persona 6 teaser)
+        best = best or spare
         if not best:
             continue
         f, st = best
@@ -854,7 +858,8 @@ def auto_fallback(job, slots):
         for k, i in enumerate(idx):
             sh = job['shots'][i]
             secs = float(sh[2])
-            pick = next((p for p in proven if p[1] >= secs - 0.3 and not any(a < p[0] + secs and p[0] < b for a, b in taken)), None)
+            pick = next((p for p in proven if p[1] >= secs - 0.3 and not any(a < p[0] + secs and p[0] < b for a, b in taken)
+                         and frame_clean(f, p[0], secs, dur)[0]), None)   # a proven stretch is checked too (Clair, 21 Nov)
             if pick:
                 sh[1] = pick[0]
                 if len(sh) > 3 and sh[3] is None and pick[2] is not None:
