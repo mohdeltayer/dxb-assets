@@ -88,5 +88,27 @@
   "hits": [
    "2026-11-21-gta-vi-metacritic-user-score-denfaminicogamer"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/gta-vi-user-score-debate-reel-v2.mp4",
+  "blob": "717f2ece965bc284ce07c140166c1c55dfa9e503",
+  "at": "2026-11-21T02:59:15Z",
+  "note": "Facts match Metacritic 02:46Z read (99/158, 5.4/29,077), Notebookcheck, Insider Gaming and TweakTown/AltChar; objections kept general, no political or cultural reason named; no gore; no genre jargon",
+  "checklist": {
+   "job": "jobs/done/gta-vi-user-score-debate.json",
+   "sha256": "9e206396b7a43305c9cd376188a20b0636cefd828ab089bd316f425b5b96682e",
+   "ok": false,
+   "problems": [
+    "render_lane server: the job belongs in jobs/live/ (dispatch render-live.yml), not jobs/done/gta-vi-user-score-debate.json"
+   ],
+   "template": "clipcard",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "production-1"
+  },
+  "by": "director-p1b",
+  "qc": "pass",
+  "looked": "1: Lucia close-up with chip تقرير and headline 99 critics / about 5 players; 2: Jason-style character with gun on green car, credit top, line on performance complaints; 3: couple at dusk under the closing question line"
  }
 }
