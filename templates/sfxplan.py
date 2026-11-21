@@ -23,7 +23,7 @@ seconds of the trailer time playing under it (track start + the shot's place on 
 import os
 
 SYNC_TOL = 0.5          # seconds between a shot's picture time and the trailer sound under it
-STING_KITS = ('scifi', 'fantasy')     # skins.py kits that mix a sting at the cut into the first line
+STING_KITS = ()     # the skins' sting is off (reel.SKIN_STING, 21 Nov 2026; sfx rule 30 Oct), so no kit mixes one
 
 
 def _track(job):

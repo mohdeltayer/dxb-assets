@@ -971,3 +971,19 @@ server fixes, every slot on the picture start, were written back to main) and it
 6. Replay before merge (render-replay run 44795255069, ref the branch): the last 10 jobs/done, 8 of 8 that reach the render
    pass (Volvy's Adventure Reslimed and Witch the Showdown stop at the 19 Nov game-name text rule, on main too); the
    fallback fired on GTA VI CDPR, Death Stranding and Witch on the Holy Night.
+
+## Template by kind, sound by game, skin by genre (audit of 21 Nov 2026)
+
+- The slip's kind picks the template; with no kind, the text decides; never a failed job. numbers (sales, scores,
+  charts, players, results): a figure card on the game's moving footage. person (interview, quote, hire, departure): the
+  people template, photo window and name plate on frame 0. debate: hook and fact, one view per beat, the question last.
+  reveal, date, delay, update, deal, free release, launch: trailer. Trailer is the default only for a plain announcement.
+- Sound ladder: (a) the trailer's own audio, split, speech dropped; (b) its music stem alone; (c) the franchise theme
+  from the library (publisher's own official trailers only, rights register in templates/assets/franchise-sound.json);
+  (d) our bed. Our bed first only when there is no game (Famitsu chart). Label sound:franchise when (c) is used.
+- Skin by genre on single-game stories: sci-fi kit for sci-fi, cyberpunk, space, mecha; fantasy kit for RPG, fantasy,
+  soulslike, MMORPG, metroidvania; house for everything else. No sting at the first line.
+- Publer is the single schedule for both productions: before a special piece, read Publer; a routine Reel of Production
+  2 on the same story goes to draft (never deleted) and the board says so; if it already published, the special piece
+  is a follow-up with a different angle and cover at least 2 hours later.
+

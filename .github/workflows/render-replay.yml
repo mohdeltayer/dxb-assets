@@ -107,6 +107,31 @@ jobs:
       # HyperFrames inserts (advisor, 24 Oct 2026) and the design pass (frame and kit moments, 24 Oct 2026,
       # templates/designpass.py): installed only when the job asks for one, pinned to the tested version. A failed
       # install leaves HF_CLI unset, so the insert keeps its current card and the design pass renders as before.
+      # Sound ladder (audit 21 Nov 2026, item 2): the same Cocktail Fork install as render.yml, so a replay runs the
+      # split, the music-only step and the franchise step as live does. A failed install leaves COCKTAIL_DIR unset.
+      - name: Audio split (only for a trailer-track job)
+        id: split
+        run: if python templates/tracksplit.py need "$JOB"; then echo "need=1" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/cache@v4
+        if: steps.split.outputs.need == '1'
+        with:
+          path: ~/.cache/cocktail-fork
+          key: cocktail-fork-19b3de827ebc4bfb014570cf92dd32b4ee3b6921
+      - name: Cocktail Fork install
+        if: steps.split.outputs.need == '1'
+        continue-on-error: true
+        timeout-minutes: 4
+        env:
+          SHA: 19b3de827ebc4bfb014570cf92dd32b4ee3b6921
+        run: |
+          d="$HOME/.cache/cocktail-fork/$SHA"; mkdir -p "$d/checkpoints"
+          [ -s "$d/mrx.py" ] || curl -sSfL --retry 3 -o "$d/mrx.py" "https://raw.githubusercontent.com/merlresearch/cocktail-fork-separation/$SHA/mrx.py"
+          w="$d/checkpoints/default_mrx_pre_trained_weights.pth"
+          [ -s "$w" ] || curl -sSfL --retry 3 -o "$w" "https://media.githubusercontent.com/media/merlresearch/cocktail-fork-separation/$SHA/checkpoints/default_mrx_pre_trained_weights.pth"
+          python -m pip install -q --timeout 60 --retries 3 pyloudnorm==0.1.1
+          python -c "import sys, torch; sys.path.insert(0, '$d'); import mrx; m = mrx.MRX(); m.load_state_dict(torch.load('$w', map_location='cpu', weights_only=True)); print('cocktail fork ready')"
+          echo "COCKTAIL_DIR=$d" >> "$GITHUB_ENV"
+
       - name: Render (15 minutes, as live)
         id: render
         timeout-minutes: 15
@@ -116,6 +141,19 @@ jobs:
           set -o pipefail
           python templates/render_job.py run "$JOB" 2>&1 | tee "$RUNNER_TEMP/render.log"
           echo "secs=$(( $(date +%s) - start ))" >> "$GITHUB_OUTPUT"
+
+      - name: Keep the Reel (3 days, for a look at the replay)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: replay-${{ matrix.job }}
+          path: |
+            cards/**/*.mp4
+            cards/**/*-strip.jpg
+            cards/**/*-qc.json
+            ${{ runner.temp }}/render.log
+          retention-days: 3
+          if-no-files-found: ignore
 
       - name: Summary
         if: always()

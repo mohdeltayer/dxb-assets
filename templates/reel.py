@@ -38,6 +38,8 @@ import decodecheck as DC
 W, H = 1080, 1920
 L, R = G.SAFE_LEFT, G.SAFE_RIGHT
 X = 0.4                                   # crossfade between shots
+SKIN_STING = False                       # the kits' sting at the first line is off (sfx rule, 30 Oct 2026: no added
+                                         # effects over footage); with it off a kit no longer blocks the audio split (21 Nov)
 TRANSITION = 'fade'                       # the xfade between shots; a game skin swaps it for its own (advisor, 20 Oct 2026)
 SYM = Image.open(os.path.join(os.path.dirname(__file__), 'assets', 'dirham-symbol-mask.png')).convert('L')
 STILL = ('.jpg', '.jpeg', '.png', '.webp')
@@ -771,9 +773,10 @@ def person_layer(photo, name, role, path, theme='cold', box=PERSON_BOX, focus=(0
     cx = min(max(fx * sw - cw / 2, 0), sw - cw); cy = min(max(fy * sh - ch / 2, 0), sh - ch)
     pic = src.crop((round(cx), round(cy), round(cx + cw), round(cy + ch))).resize((bw, bh), Image.LANCZOS)
     pad, rad = 26, 22
-    texts = [(name, 'Bold', (46, 42, 38, 34), A.INK), (role, 'Medium', (32, 30, 28, 26), A.BODY)]
+    texts = [(name, 'Bold', (46, 42, 38, 34, 32, 30), A.INK), (role, 'Medium', (32, 30, 28, 26), A.BODY)]   # 30 px floor, as credits (21 Nov)
     if credit:
         texts.append((credit, 'Medium', (22, 20), A.BODY))
+    texts = [t for t in texts if str(t[0] or '').strip()]   # a plate with the name alone when no role is known (21 Nov)
     probe = ImageDraw.Draw(Image.new('L', (W, H)))
     rows = []
     for text, weight, sizes, col in texts:
@@ -1176,6 +1179,8 @@ def _bars(p, s, d):
         return '', _height(p)
     w, h, x, y = map(int, found[-1].split(':'))
     full = _height(p)
+    if w <= 0 or h <= 0 or x < 0 or y < 0:   # an all-black stretch gives cropdetect a negative box (Persona 6, 21 Nov):
+        return '', full                      # no picture to find, so no crop; the frame check keeps shots off it
     return (f'crop={w}:{h}:{x}:{y},', h) if h < full - 8 else ('', full)
 
 
@@ -2403,8 +2408,14 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
                                focus=tuple(opt.get('focus', (0.5, 0.33))), credit=opt.get('credit'))
             kept.append(dict(what='person', png=png, segs=[[0.0, z, 0.2]], box=list(PERSON_BOX)))
             continue
-        layers.append((person_layer(photo, name, role, f'{tmp}/p{j}.png', theme=theme, focus=tuple(opt.get('focus', (0.5, 0.33))),
-                                    credit=opt.get('credit')), a, z))
+        try:
+            layers.append((person_layer(photo, name, role, f'{tmp}/p{j}.png', theme=theme, focus=tuple(opt.get('focus', (0.5, 0.33))),
+                                        credit=opt.get('credit')), a, z))
+        except (ValueError, OSError) as e:
+            if not SOFT:
+                raise
+            import softgate as _SG               # templates never refuse: the Reel ships without the window (21 Nov)
+            _SG.warn('person', f'{e}; the window is left out')
     for c in creds:                         # after the trim: credits overlap the lines
         layers.append((c['png'], c['a'], c['z']))
     if skin and SK.leak_layer(f'{tmp}/leak.png', skin):   # fantasy: a warm light leak over each cut
@@ -2447,7 +2458,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         body = _track(body, track, end, f'{tmp}/track.{ext}')
     if voice:
         body = _voice_over(body, voice, end, duck_db, f'{tmp}/voiced.{ext}')
-    if skin and lines and _has_audio(body):   # the kit's sting at the cut into the first line
+    if skin and lines and _has_audio(body) and SKIN_STING:   # the kit's sting at the cut into the first line
         body = _sting(body, sonic.sting(skin, f'{tmp}/sting.wav'), lines[0][1], f'{tmp}/sting.{ext}', draft)
     lap('audio')
     if draft:                              # no end card, no bed: the draft is for checking the cut

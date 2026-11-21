@@ -84,10 +84,39 @@ def _subtract(a, b, bad):
     return pieces
 
 
+SHOT_CACHE = os.environ.get('DXB_SHOT_CACHE') or os.path.expanduser('~/.cache/dxb-shotread')
+SHOT_CACHE_KEEP = 600      # files; the oldest go first
+
+
+def _fingerprint(path):
+    """The file's content, not its name: size and a hash of its first and last 2 MB. Every job names its copy of a
+    trailer differently ("<story>-nintendo-2.mp4"), so a name-keyed cache in the job's own uploads never hit."""
+    import hashlib
+    n = os.path.getsize(path)
+    h = hashlib.blake2b(digest_size=12)
+    with open(path, 'rb') as fh:
+        h.update(fh.read(2 << 20))
+        if n > 4 << 20:
+            fh.seek(-(2 << 20), 2)
+            h.update(fh.read())
+    return f'{n}-{h.hexdigest()}'
+
+
 def _cache_key(f):
+    """A trailer is scanned once (audit 21 Nov 2026, item 7): the read is kept outside the job's temporary uploads, in
+    SHOT_CACHE (on dxb-render-1 the runner user's ~/.cache, which outlives jobs), keyed by READ_VER and the content."""
     import cards as C
-    path = C.U + f
-    return os.path.join(C.U, 'cache', f'shotpick-{READ_VER}-{os.path.basename(f)}-{os.path.getsize(path)}.json')
+    path = C.U + f if not os.path.isabs(f) else f
+    return os.path.join(SHOT_CACHE, f'shotpick-{READ_VER}-{_fingerprint(path)}.json')
+
+
+def _prune():
+    try:
+        files = sorted((os.path.getmtime(os.path.join(SHOT_CACHE, x)), x) for x in os.listdir(SHOT_CACHE))
+        for _t, x in files[:max(0, len(files) - SHOT_CACHE_KEEP)]:
+            os.remove(os.path.join(SHOT_CACHE, x))
+    except OSError:
+        pass
 
 
 def pick(f, ocr=True, workers=None, fast=True, budget=None, cache=True):
@@ -101,6 +130,8 @@ def pick(f, ocr=True, workers=None, fast=True, budget=None, cache=True):
             key = None
         if key and os.path.exists(key):
             r = json.load(open(key, encoding='utf-8'))
+            os.utime(key)                        # a hit keeps the entry young for the prune
+            print(f'shotpick: {f}: scan cache hit ({os.path.basename(key)})', flush=True)
             LAST[f] = 0.0
             r['read_secs'] = 0.0
             r['cached'] = True
@@ -110,8 +141,14 @@ def pick(f, ocr=True, workers=None, fast=True, budget=None, cache=True):
     r['read'] = 'fast' if fast else 'full'
     LAST[f] = r['read_secs']
     if key and not r.get('incomplete'):
-        os.makedirs(os.path.dirname(key), exist_ok=True)
-        json.dump(r, open(key, 'w', encoding='utf-8'), ensure_ascii=False)
+        try:
+            os.makedirs(os.path.dirname(key), exist_ok=True)
+            tmp = f'{key}.{os.getpid()}.tmp'
+            json.dump(r, open(tmp, 'w', encoding='utf-8'), ensure_ascii=False)
+            os.replace(tmp, key)                 # two jobs at once never read a half-written entry
+            _prune()
+        except OSError:
+            pass
     return r
 
 

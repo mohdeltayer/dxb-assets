@@ -64,8 +64,7 @@ def applies(job, installed=None):
         return False, 'speech is the news (speech_ok / speech_keep): voiced track kept'
     if job.get('profile') == 'breaking' or job.get('label') == 'عاجل':
         return False, 'breaking: speed first'
-    if job.get('skin') not in (None, 'house'):
-        return False, f"skin {job.get('skin')}: its sting is mixed into the body, kept as rendered"
+    # a skin kit no longer blocks the split: its sting is off (reel.SKIN_STING, audit of 21 Nov 2026, item 3)
     if installed is not False and not os.environ.get('COCKTAIL_DIR'):
         return False, 'Cocktail Fork not installed here (COCKTAIL_DIR unset)'
     return True, ''

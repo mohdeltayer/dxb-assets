@@ -389,3 +389,15 @@ a run that has not been updated still reads them.
    "<the one step next>" --job jobs/live/<name>.json --run <render run id> --by p2`. The next run takes section 1b of the
    work order (unfinished, pick up first) right after the alarms, and closes the row when the step is done: `incomplete.py
    close --file desk/incomplete.json --story <id> --outcome "<what was done>"`. A row open 2 hours is an alarm.
+
+7. Publer is the single schedule for both productions (audit of 21 Nov 2026, item 8). Before scheduling a special piece
+   (a debate, a first-of-its-kind format, a series episode, anything Production 1 builds on Mohammad's order), read
+   Publer's scheduled and published posts for the same story. If Production 2 has a routine Reel of it scheduled,
+   schedule the special piece and move the routine one to draft (change its state; never delete it), and write a board
+   line: "publer: moved <story> routine Reel to draft for the special piece at <slot>". If the routine one is already
+   published, the special piece goes as a follow-up with a different angle and a different cover, at least 2 hours after
+   it. Production 2 reads Publer before every submit too: a story already scheduled or published by Production 1 is not
+   built again as a routine Reel unless something new has landed.
+8. Keeper ahead alarm (item 9): between 08:00 and 24:00 Dubai, fewer than 2 Reels scheduled ahead in Publer raises one
+   push to Mohammad and a line at the top of the work order; the next run builds and schedules the next verified story
+   first (the bank only under the evergreen rules).

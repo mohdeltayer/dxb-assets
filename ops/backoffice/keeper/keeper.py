@@ -707,6 +707,32 @@ def read_publer(rows, state, now, reader=None):
         (max(pub) if pub else None)
 
 
+AHEAD_MIN = 2               # Reels scheduled ahead in Publer below which Mohammad gets one push (audit 21 Nov, item 9)
+
+
+def scheduled_ahead(read, state, now):
+    """(alarm or None, status line). Between 08:00 and 24:00 Dubai, fewer than AHEAD_MIN Reels scheduled ahead in Publer
+    (posts counted by slot minute, so one Reel on three platforms is one) raises one push for the episode; it clears
+    when the queue is back at AHEAD_MIN or more, and the next low episode pushes again. Only from a successful read."""
+    posts = read.get('posts') if isinstance(read, dict) else None
+    if posts is None:
+        return None, None
+    slots = {p['at'].strftime('%Y-%m-%dT%H:%M') for p in posts if p.get('state') == 'scheduled' and p['at'] > now}
+    n = len(slots)
+    line = 'publer ahead: %d Reel%s scheduled ahead' % (n, '' if n == 1 else 's')
+    hour = now.astimezone(DUBAI).hour
+    if n >= AHEAD_MIN or not (8 <= hour < 24):
+        if n >= AHEAD_MIN:
+            state.pop('ahead_low_since', None)
+        return None, line
+    since = state.get('ahead_low_since') or now.strftime('%Y-%m-%dT%H:%MZ')
+    state['ahead_low_since'] = since
+    return ({'key': 'ahead|' + since, 'title': 'Publer: %d Reel%s scheduled ahead' % (n, '' if n == 1 else 's'),
+             'lines': [line + ' (under %d, 08:00 to 24:00 Dubai)' % AHEAD_MIN,
+                       'Production 2: build and schedule the next verified story now; the bank fills a gap only under the '
+                       'evergreen rules.']}, line)
+
+
 # ---------------------------------------------------------------------------------------------
 # Coverage (item 5) and the bank floor (item 6)
 # ---------------------------------------------------------------------------------------------
@@ -909,6 +935,12 @@ def cmd_tick(args):
             extra.append({'key': 'bank|%s|%d' % (now.astimezone(DUBAI).strftime('%Y%m%d'), status['bank_ready']),
                           'title': 'Bank under the floor: %d ready' % status['bank_ready'],
                           'lines': [bl, 'Any run that builds no news builds a bank piece (idle card, mandatory).']})
+        ahead_alarm, aline = scheduled_ahead(LAST_READ, state, now)
+        if aline:
+            status['six'].append(aline)
+            status['scheduled_ahead'] = aline
+        if ahead_alarm:
+            extra.append(ahead_alarm)
         if os.environ.get('KEEPER_COVER_ALARMS', 'on').lower() != 'off':   # the server sets off: GitHub's keeper pushes
             xr, xl = raise_desk(extra, state, now)
             raised, alog = list(raised) + xr, list(alog) + xl
