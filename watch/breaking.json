@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-21T14:52:30Z",
- "seq": 722,
+ "generated_at": "2026-11-21T15:52:05Z",
+ "seq": 723,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -403,53 +403,16 @@
    ],
    "breaking_source": true,
    "breaking_seq": 687
-  },
-  {
-   "id": 19514,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "Next Week on XBOX: New Games for November 23 to 27",
-   "url": "https://news.xbox.com/en-us/2026/11/20/next-week-on-xbox-new-games-for-november-23-to-27/",
-   "published": "2026-11-20T15:00Z",
-   "first_seen": "2026-11-20T15:00:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://store-images.s-microsoft.com/image/apps.58110.14459635843956058.988466ac-b926-46d5-b655-b4d8a3290cd5.7182e8e4-d2fe-4022-b5f5-5da35a78d236?w=400&h=600"
-    },
-    {
-     "type": "image",
-     "url": "https://assets.onestore.ms/cdnfiles/sfw-service-web-onestore-onerf-2017-11-8-12/store/common/images/xpalogo_black.png"
-    },
-    {
-     "type": "image",
-     "url": "https://store-images.s-microsoft.com/image/apps.52432.13934461907025991.51975536-255f-4c9b-bbfb-3c7a47c5d8bc.1600d40a-9313-4fbe-802b-30a431d52841?w=400&h=600"
-    },
-    {
-     "type": "image",
-     "url": "https://store-images.s-microsoft.com/image/apps.29496.14381071360479829.5faac351-473d-4efa-9747-25bccb04fb7b.40e83d8f-d36a-4b1c-9753-d251b6b98869?w=400&h=600"
-    },
-    {
-     "type": "image",
-     "url": "https://store-images.s-microsoft.com/image/apps.52622.13637736224047095.07a6a560-f479-4c81-bdf8-5a334c1f3ff9.a12dc1ae-d6cc-4da2-b019-80518b3b10c3?w=400&h=600"
-    },
-    {
-     "type": "image",
-     "url": "https://store-images.s-microsoft.com/image/apps.11730.14178098733659323.05537b6a-d656-4a62-aad0-e1a930640387.d4772ed4-689b-4864-8d86-cb7025969b01?w=400&h=600"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 684
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-21T14:52:08Z",
+  "last_poll_at": "2026-11-21T15:50:14Z",
   "sources_enabled": 100,
-  "sources_ok": 91,
+  "sources_ok": 93,
   "sources_failing": 6,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 146x)",
+   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 147x)",
    "Nintendo of America (X) (HTTP 429, 83x)",
    "PlayStation (X) (HTTP 429, 18x)",
    "PlayStation Middle East (X) (HTTP 429, 25x)",
