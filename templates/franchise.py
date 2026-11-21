@@ -90,8 +90,9 @@ def _source(key):
     if src.startswith('repo:'):
         return {'file': f'franchise-{key}.mp4', 'repo': src[5:]}, src[5:], pub
     import footage as FT
-    cands = FT.resolve(src, name=f'franchise-{key}', do_check=False, max_n=8)
-    jobs = [c for c in cands if c.get('job')]
+    r = FT.resolve(src, name=f'franchise-{key}', do_check=False, max_n=8)
+    cands = r.get('candidates', []) if isinstance(r, dict) else r
+    jobs = [c for c in cands if isinstance(c, dict) and c.get('job')]
     if prefix:
         jobs = [c for c in jobs if str(c['job'].get('trailer') or c.get('name') or '').startswith(prefix)] or jobs
     if not jobs:
