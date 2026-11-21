@@ -98,7 +98,7 @@ extra:
 # Master switches (a switched-off kind is not read at all)
 kinds:
   youtube: true
-  x_embed: true
+  x_embed: false   # 21 Nov 2026: Xbox, the last X timeline, also answered 429 on the server (digest 725); X is read by the Grok Fast Watch
 
 # How the digests reach the news desk. Environment variables of the same names in capitals
 # (WATCH_REMOTE, WATCH_BRANCH, WATCH_EMPTY_PUSH_H, WATCH_PUSH=off) override these.
@@ -124,7 +124,7 @@ handoff:
 # Official sources that cannot be read mechanically. Printed in every digest under
 # "not covered" so the news desk (or the Gaming Watch digest) picks them up.
 not_covered:
-  - {name: "Official X accounts other than Xbox", reason: "the public timeline answers 429 to repeated reads (removed 21 Nov 2026); read by the Grok Fast Watch, the scout digest and the Verifier"}
+  - {name: "Official X accounts", reason: "the public timeline answers 429 to repeated reads (removed 21 Nov 2026); read by the Grok Fast Watch, the scout digest and the Verifier"}
   - {name: "Konami JP topics", reason: "the list is drawn by script (the page carries one topic); Konami is read through Google News (konami.com) since 21 Nov 2026"}
   - {name: "Konami, EA and Activision YouTube channels", reason: "their channel feeds are empty; EA is read through its news page, Activision and Konami through the outlets"}
   - {name: "PS Store UAE/Saudi, Xbox and Steam regional prices", reason: "price watching is its own job (scout audit section 6), not part of this service"}
