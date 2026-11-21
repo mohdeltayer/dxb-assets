@@ -165,6 +165,14 @@ OFFICIAL = [
     ('Fortnite (Google News)', gnews('fortnite.com/news')),
     ('Sega (Google News)', gnews('sega.com')),
     ('Square Enix (Google News)', gnews('square-enix-games.com')),
+    # Source check of 21 Nov 2026 (advisor): sites that refuse a script are read through Google News, and Games Press
+    # (publishers' own press releases) through its RSS.
+    ('The Game Awards (Google News)', gnews('thegameawards.com')),
+    ('Capcom IR (Google News)', gnews('capcom.co.jp')),
+    ('Konami (Google News)', gnews('konami.com')),
+    ('Epic Games (Google News)', gnews('store.epicgames.com/news')),
+    ('Epic Games site (Google News)', gnews('epicgames.com/site')),
+    ('Games Press', 'https://www.gamespress.com/en-US/News/RSS'),
     # Wider monitoring: anime, mobile, football (advisor memo, 21 Oct 2026). Official
     # pages and feeds; the Verifier finds the primary and dates the story from the
     # first report as for every source. All English editions.

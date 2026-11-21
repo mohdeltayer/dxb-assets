@@ -28,14 +28,18 @@ UA = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
 # name, page, article-link pattern (matched against the absolute URL), minimum links expected
 PAGES = [
     ('Nintendo US', 'https://www.nintendo.com/us/whatsnew/', r'nintendo\.com/us/whatsnew/[^/?#]+/?$', 5),
-    ('Capcom IR', 'https://www.capcom.co.jp/ir/english/news/', r'capcom\.co\.jp/ir/english/news/html/e\d+\.html$', 5),
+    # Capcom IR (capcom.co.jp) answers every script with an empty 202 bot challenge since about 15 Nov 2026 (147 failed reads by
+    # 21 Nov): replaced by Capcom's own US newsroom here and a Google News backstop for capcom.co.jp in watch_feeds.OFFICIAL.
+    ('Capcom (news)', 'https://news.capcomusa.com/', r'news\.capcomusa\.com/\d{4}/\d{2}/\d{2}/[a-z0-9-]+/?$', 5),
+    ('Koei Tecmo', 'https://www.koeitecmoamerica.com/news/', r'koeitecmoamerica\.com/news/[^/?#]+/?$', 5),   # added 21 Nov 2026
     ('Square Enix HD', 'https://www.hd.square-enix.com/eng/news/', r'hd\.square-enix\.com/eng/news/pdf/[^/]+\.pdf$', 3),
     ('Bandai Namco', 'https://www.bandainamcoent.com/news', r'bandainamcoent\.com/news/[a-z0-9-]+$', 3),
     ('Konami JP', 'https://www.konami.com/games/jp/ja/topics/', r'konami\.com/games/jp/ja/topics/\d+/?$', 3),
     ('EA', 'https://www.ea.com/news', r'ea\.com/news/[a-z0-9-]+$', 5),
     ('Ubisoft', 'https://news.ubisoft.com/en-us/', r'news\.ubisoft\.com/en-us/article/[A-Za-z0-9]+/[a-z0-9-]+$', 3),
     ('Riot', 'https://www.riotgames.com/en/news', r'riotgames\.com/en/news/[a-z0-9-]+$', 5),
-    ('The Game Awards', 'https://thegameawards.com/news', r'thegameawards\.com/news/[a-z0-9-]+$', 1),   # 1 (was 3): the page lists two articles between shows (7 Nov 2026)
+    # The Game Awards page answers 403 to a script (67 failed reads by 21 Nov 2026): read through Google News in
+    # watch_feeds.OFFICIAL instead ('The Game Awards (Google News)').
     ('Famitsu', 'https://www.famitsu.com/', r'famitsu\.com/article/\d{6}/\d+$', 10),
 ]
 
