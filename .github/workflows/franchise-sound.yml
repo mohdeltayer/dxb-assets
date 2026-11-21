@@ -1,0 +1,88 @@
+# Franchise sound library (Mohammad, 21 Nov 2026; audit of 21 Nov, item 2, sound ladder step c). For each franchise
+# key: the publisher's own official trailer (templates/franchise.py FRANCHISES), its music split out with Cocktail Fork
+# (MERL, MIT, pinned as in render.yml), the two stretches with the most music kept under live/sound/franchise/ with a
+# rights-register entry in templates/assets/franchise-sound.json, committed back to main. Never soundtrack rips, fan
+# uploads, YouTube or another company's arrangement. Run by hand; a series is added the second time it is in the news.
+name: franchise-sound
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      keys:
+        description: 'Franchise keys, space separated (empty: every key in franchise.FRANCHISES)'
+        required: false
+        default: ''
+
+concurrency:
+  group: franchise-sound
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.repository == 'mohdeltayer/dxb-assets'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      DXB_UPLOADS: ${{ github.workspace }}/../uploads
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            templates
+            live/sound
+            live/2026-11-20
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Tools
+        timeout-minutes: 12
+        run: |
+          sudo systemctl stop unattended-upgrades apt-daily.service apt-daily-upgrade.service apt-daily.timer apt-daily-upgrade.timer 2>/dev/null || true
+          command -v ffmpeg >/dev/null || { sudo apt-get -o DPkg::Lock::Timeout=120 update -qq; sudo apt-get -o DPkg::Lock::Timeout=120 install -y -q --no-install-recommends ffmpeg; }
+          python -m pip install -q --upgrade pip
+          python -m pip install -q --timeout 60 --retries 3 torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -q --timeout 60 --retries 3 numpy soundfile pillow pyloudnorm==0.1.1
+          mkdir -p "$DXB_UPLOADS"
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/cocktail-fork
+          key: cocktail-fork-19b3de827ebc4bfb014570cf92dd32b4ee3b6921
+
+      - name: Cocktail Fork install
+        timeout-minutes: 4
+        env:
+          SHA: 19b3de827ebc4bfb014570cf92dd32b4ee3b6921
+        run: |
+          d="$HOME/.cache/cocktail-fork/$SHA"; mkdir -p "$d/checkpoints"
+          [ -s "$d/mrx.py" ] || curl -sSfL --retry 3 -o "$d/mrx.py" "https://raw.githubusercontent.com/merlresearch/cocktail-fork-separation/$SHA/mrx.py"
+          w="$d/checkpoints/default_mrx_pre_trained_weights.pth"
+          [ -s "$w" ] || curl -sSfL --retry 3 -o "$w" "https://media.githubusercontent.com/media/merlresearch/cocktail-fork-separation/$SHA/checkpoints/default_mrx_pre_trained_weights.pth"
+          python -c "import sys, torch; sys.path.insert(0, '$d'); import mrx; m = mrx.MRX(); m.load_state_dict(torch.load('$w', map_location='cpu', weights_only=True)); print('cocktail fork ready')"
+          echo "COCKTAIL_DIR=$d" >> "$GITHUB_ENV"
+
+      - name: Build
+        env:
+          KEYS: ${{ inputs.keys }}
+        run: |
+          printf '%s' "$KEYS" | grep -Eq '^[a-z0-9 -]*$' || { echo "bad keys"; exit 1; }
+          python templates/franchise.py build $KEYS 2>&1 | tee "$RUNNER_TEMP/franchise.log"
+          python templates/franchise.py list | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit
+        run: |
+          git config user.name "dxb-franchise-sound"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f live/sound/franchise templates/assets/franchise-sound.json
+          git diff --cached --quiet && { echo "nothing new"; exit 0; }
+          git commit -q -m "Franchise sound library: ${KEYS:-all keys} (official trailers, music split, rights register)"
+          for i in 1 2 3 4; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep $((i * 5)); done
+        env:
+          KEYS: ${{ inputs.keys }}
