@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-21T16:52:05Z",
- "seq": 724,
+ "generated_at": "2026-11-21T17:52:08Z",
+ "seq": 725,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -345,79 +345,16 @@
    ],
    "breaking_source": true,
    "breaking_seq": 690
-  },
-  {
-   "id": 19624,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Dr. XBOX's Prescription: Play More, Work Less | This Week on XBOX",
-   "url": "https://www.youtube.com/watch?v=tH9mlghcokA",
-   "published": "2026-11-20T17:00Z",
-   "first_seen": "2026-11-20T17:10:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/tH9mlghcokA/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=tH9mlghcokA"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 688
-  },
-  {
-   "id": 19623,
-   "source": "PlayStation Blog",
-   "source_kind": "official",
-   "title": "Share of the Week: Texture",
-   "url": "https://blog.playstation.com/2026/11/20/share-of-the-week-texture/",
-   "published": "2026-11-20T17:00Z",
-   "first_seen": "2026-11-20T17:05:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55662348335_0c512efcf2_k.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55662054463_be19cf98c7_k.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55661927226_7dcf4fcc71_k.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55662054443_de7b2c8445_k.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55661927111_7ff021ffa4_k.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://live.staticflickr.com/65535/55661927136_64a49e7a72_b.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 687
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-21T16:50:14Z",
-  "sources_enabled": 100,
-  "sources_ok": 93,
-  "sources_failing": 6,
+  "last_poll_at": "2026-11-21T17:52:08Z",
+  "sources_enabled": 102,
+  "sources_ok": 101,
+  "sources_failing": 1,
   "failed": [
-   "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 147x)",
-   "Nintendo of America (X) (HTTP 429, 83x)",
-   "PlayStation (X) (HTTP 429, 18x)",
-   "PlayStation Middle East (X) (HTTP 429, 25x)",
-   "Rockstar Games (X) (HTTP 429, 12x)",
-   "The Game Awards (HTTP 403, 67x)"
+   "Xbox (X) (HTTP 429, 2x)"
   ]
  }
 }
