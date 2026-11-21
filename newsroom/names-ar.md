@@ -156,6 +156,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Nintendo Life | نينتيندو لايف | Approved 26 Sep |
 | Nintendo Everything | نينتيندو إفريثينغ | Suggested 29 Sep |
 | Insider Gaming | إنسايدر غيمنغ | In use |
+| Notebookcheck | نوتبوك تشيك | Proposed 21 Nov 2026 (GTA VI user score debate Reel; flagged for Mohammad) |
 | Game Rant | غيم رانت | In use |
 | GamesIndustry.biz | غيمز إندستري | In use |
 | Eurogamer | يوروغيمر | In use |
