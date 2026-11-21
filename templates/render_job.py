@@ -1495,7 +1495,10 @@ def sound_ladder(job, video, starts, xf, rec, why, tried_b=False):
     the render log's sound line (qc.sound_of), so the Publer label reads sound:trailer, sound:franchise or sound:bed."""
     import softgate as SG_
     import tracksplit as TS
-    if not tried_b and isinstance(job.get('track'), (list, tuple)):
+    # (b) differs from (a) only by the 40% music floor; when (a) measured the stem itself as unclean, (b) would measure the
+    # same stem again (37 s on Ace Combat 8's replay) and fail the same way, so it runs only after a floor refusal
+    floor = 'of the track (<' in str(rec.get('reason') or '')
+    if not tried_b and floor and isinstance(job.get('track'), (list, tuple)):
         rb = TS.apply(dict(job, music_only=True), video, starts, xf, C.U)
         print('render_job: sound ladder b (music only): ' + ('applied' if rb.get('applied') else 'not applied') +
               ''.join(f'; {k} {rb[k]}' for k in ('reason', 'music_pct', 'leak_pct', 'secs') if k in rb), flush=True)
