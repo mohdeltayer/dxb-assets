@@ -53,5 +53,25 @@
    "miki"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/brokenlore-miki-chan-switch-2-gematsu-reel-v1.mp4",
+  "blob": "fa7a9d9bb5a556275965ce65333f274710f7fa2a",
+  "at": "2026-11-21T17:28:35Z",
+  "note": "text true, clear to Arab reader; polish note only",
+  "checklist": {
+   "job": "jobs/live/brokenlore-miki-chan-switch-2-gematsu.json",
+   "sha256": "2741d62710e688b798b2e6afc89f8e37efc92185a0d53239e90f59223ff6c68f",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": "showcase",
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": null,
+  "looked": "strip: hook band with headline, 6 caption cards, credit; footage studio trailer"
  }
 }
