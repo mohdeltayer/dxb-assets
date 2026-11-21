@@ -1,301 +1,210 @@
 {
  "schema": 1,
  "file": "digest",
- "generated_at": "2026-11-21T21:52:08Z",
- "seq": 729,
+ "generated_at": "2026-11-21T22:52:07Z",
+ "seq": 730,
  "kind": "hourly",
- "since": "2026-11-21T20:52:08Z",
+ "since": "2026-11-21T21:52:08Z",
  "official": [
   {
-   "id": 20371,
-   "source": "Famitsu",
-   "source_kind": "page",
-   "title": "Kindleで『バトゥーキ』が全巻100円均一で買える！ 『藤子・F・不二雄大全集』『ポケスペ』などが50%ポイント還元で実質半額に【漫画セール情報】",
-   "url": "https://www.famitsu.com/article/202611/94651",
-   "published": null,
-   "first_seen": "2026-11-21T21:25:24Z",
+   "id": 20384,
+   "source": "Epic Games site (Google News)",
+   "source_kind": "gnews",
+   "title": "Tools Programmer Intern (Graphics) (R27490) - Epic Games",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBUSUJsaExpWmtIekIzRHVfQ2oxMDZOdGlVSU1EbmQzbHBVdUZrc0FoRGFWNFh5aXl3LWNhMjFITXRlZnRMSVN6bWUyT19QRjJ6c3ZrazNodXI3Vm5sQndQYjFWVkhYU3hRbURPeFRlcw?oc=5",
+   "published": "2026-11-21T18:29Z",
+   "first_seen": "2026-11-21T22:30:04Z",
    "media": [],
    "breaking_source": false,
    "breaking_seq": null,
-   "digest_seq": 729
+   "digest_seq": 730
+  },
+  {
+   "id": 20379,
+   "source": "Famitsu",
+   "source_kind": "page",
+   "title": "セガサターンが発売された日。2D描画に秀でたセガ国内最大のヒットゲーム機。『バーチャファイター』『サクラ大戦』など魅力ある作品が数多く発売された【今日は何の日？】",
+   "url": "https://www.famitsu.com/article/202611/94238",
+   "published": null,
+   "first_seen": "2026-11-21T22:10:14Z",
+   "media": [],
+   "breaking_source": false,
+   "breaking_seq": null,
+   "digest_seq": 730
   }
  ],
  "outlets": [
   {
    "count": 3,
-   "published": "2026-11-20T22:06Z",
-   "title": "Jensen Huang Allegedly Threatened Nvidia Workers and Told Employee He Would Rip Off the Top of Their Head and 'Pee on Your Brain'",
-   "url": "https://www.ign.com/articles/jensen-huang-verbal-abuse-allegations",
+   "published": "2026-11-21T03:18Z",
+   "title": "ストレージに大量のデータを書き込み続ける不具合を修正した「GeForce Hotfix Driver 621.35」をリリース",
+   "url": "https://www.4gamer.net/games/022/G002210/20261121009/",
+   "sources": [
+    "4Gamer (JP)",
+    "Steam News (hub)",
+    "TweakTown"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://www.pcgamesn.com/wp-content/sites/pcgamesn/2026/11/nvidia-geforce-driver-hotfix-released-after-concerns-of-ssd-burnout.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "4Gamer (JP)",
+     "title": "ストレージに大量のデータを書き込み続ける不具合を修正した「GeForce Hotfix Driver 621.35」をリリース",
+     "url": "https://www.4gamer.net/games/022/G002210/20261121009/",
+     "published": "2026-11-21T03:18Z"
+    },
+    {
+     "source": "Steam News (hub)",
+     "title": "Nvidia pushes new GeForce driver hotfix amid fears of SSD burnout",
+     "url": "https://store.steampowered.com/news/group/3693985/view/710040868515480319",
+     "published": "2026-11-21T12:56Z"
+    },
+    {
+     "source": "TweakTown",
+     "title": "NVIDIA GeForce hotfix driver 621.35 fixes bug that can noticeably reduce SSD lifespans",
+     "url": "https://www.tweaktown.com/rss/click/news/114808/?c=news-mf",
+     "published": "2026-11-21T22:05Z"
+    }
+   ]
+  },
+  {
+   "count": 3,
+   "published": "2026-11-20T23:30Z",
+   "title": "GTA 6 Triggers Busiest Traffic Day in Comcast History",
+   "url": "https://www.ign.com/articles/gta-6-triggers-busiest-traffic-day-in-comcast-history",
    "sources": [
     "IGN",
     "IGN Middle East (EN)",
-    "Kotaku"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://assets-prd.ignimgs.com/2026/11/20/jensen-1795211332386.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "IGN",
-     "title": "Jensen Huang Allegedly Threatened Nvidia Workers and Told Employee He Would Rip Off the Top of Their Head and 'Pee on Your Brain'",
-     "url": "https://www.ign.com/articles/jensen-huang-verbal-abuse-allegations",
-     "published": "2026-11-20T22:06Z"
-    },
-    {
-     "source": "IGN Middle East (EN)",
-     "title": "Jensen Huang Allegedly Threatened Nvidia Workers and Told Employee He Would Rip Off the Top of Their Head and 'Pee on Your Brain'",
-     "url": "https://me.ign.com/en/nvidia-rtx-5090/249944/jensen-huang-allegedly-threatened-nvidia-workers-and-told-employee-he-would-rip-off-the-top-of-their",
-     "published": "2026-11-20T22:06Z"
-    },
-    {
-     "source": "Kotaku",
-     "title": "New Report Claims Jensen Huang Regularly Threatened Nvidia Staff With Over-The-Top Violence",
-     "url": "https://kotaku.com/new-report-claims-jensen-huang-regularly-threatened-nvidia-staff-with-over-the-top-violence-2000759179",
-     "published": "2026-11-21T21:30Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-21T21:27Z",
-   "title": "Public-access television is born anew in NIGHT EYE TV, a digital goggle box filled with art game curios",
-   "url": "https://www.rockpapershotgun.com/public-access-television-is-born-anew-in-night-eye-tv-a-digital-goggle-box-filled-with-art-game-curios",
-   "sources": [
-    "Rock Paper Shotgun"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://assetsio.gnwcdn.com/nighteye-tv.jpg?width=690&quality=85&format=jpg&auto=webp"
-    }
-   ],
-   "items": [
-    {
-     "source": "Rock Paper Shotgun",
-     "title": "Public-access television is born anew in NIGHT EYE TV, a digital goggle box filled with art game curios",
-     "url": "https://www.rockpapershotgun.com/public-access-television-is-born-anew-in-night-eye-tv-a-digital-goggle-box-filled-with-art-game-curios",
-     "published": "2026-11-21T21:27Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-21T21:16Z",
-   "title": "The team behind Ubisoft's 'first playable AI-based R&D project' has been established as its own subsidiary called Motherbrain",
-   "url": "https://www.pcgamer.com/gaming-industry/the-team-behind-ubisofts-first-playable-ai-based-r-and-d-project-has-been-established-as-its-own-subsidiary-called-motherbrain/",
-   "sources": [
     "PC Gamer"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/V6aMPiSGDvVuMNgnYf3iAa-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/6offQUY4CXebir2TC27dMd-1920-80.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "PC Gamer",
-     "title": "The team behind Ubisoft's 'first playable AI-based R&D project' has been established as its own subsidiary called Motherbrain",
-     "url": "https://www.pcgamer.com/gaming-industry/the-team-behind-ubisofts-first-playable-ai-based-r-and-d-project-has-been-established-as-its-own-subsidiary-called-motherbrain/",
-     "published": "2026-11-21T21:16Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-21T21:07Z",
-   "title": "Hot Toys Avengers: Doomsday - Lord Doom Figure Image Gallery",
-   "url": "https://me.ign.com/ar/gallery/197660/hot-toys-avengers-doomsday-lord-doom-figure-image-gallery",
-   "sources": [
-    "IGN Middle East (AR)"
-   ],
-   "ar_relay": true,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://sm.ign.com/ign_mear/gallery/h/hot-toys-a/hot-toys-avengers-doomsday-lord-doom-figure-image-gallery_my89.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://sm.ign.com/t/ign_mear/gallery/h/hot-toys-a/hot-toys-avengers-doomsday-lord-doom-figure-image-gallery_my89.640.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "IGN Middle East (AR)",
-     "title": "Hot Toys Avengers: Doomsday - Lord Doom Figure Image Gallery",
-     "url": "https://me.ign.com/ar/gallery/197660/hot-toys-avengers-doomsday-lord-doom-figure-image-gallery",
-     "published": "2026-11-21T21:07Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-21T21:07Z",
-   "title": "تلميح من نجمة Avengers: Doomsday هايلي أتويل يكشف موعد العرض الجديد يوم الاثنين",
-   "url": "https://me.ign.com/ar/avengers-the-kang-dynasty/197659/tlmyh-mn-njm-avengers-doomsday-hyly-twyl-ykshf-mwd-lrd-ljdyd-ywm-lthnyn",
-   "sources": [
-    "IGN Middle East (AR)"
-   ],
-   "ar_relay": true,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://sm.ign.com/ign_mear/news/a/avengers-d/avengers-doomsday-star-hayley-atwell-teases-new-trailer-for_m7sw.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://sm.ign.com/t/ign_mear/news/a/avengers-d/avengers-doomsday-star-hayley-atwell-teases-new-trailer-for_m7sw.640.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "IGN Middle East (AR)",
-     "title": "تلميح من نجمة Avengers: Doomsday هايلي أتويل يكشف موعد العرض الجديد يوم الاثنين",
-     "url": "https://me.ign.com/ar/avengers-the-kang-dynasty/197659/tlmyh-mn-njm-avengers-doomsday-hyly-twyl-ykshf-mwd-lrd-ljdyd-ywm-lthnyn",
-     "published": "2026-11-21T21:07Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-21T21:02Z",
-   "title": "Best Secret Gear Spot in GTA 6 Early Game—Insane Rifle, Grenade Launcher, and More",
-   "url": "https://insider-gaming.com/best-secret-loot-location-early-game-gta-6/",
-   "sources": [
-    "Insider Gaming"
-   ],
-   "ar_relay": false,
-   "media": [],
-   "items": [
-    {
-     "source": "Insider Gaming",
-     "title": "Best Secret Gear Spot in GTA 6 Early Game—Insane Rifle, Grenade Launcher, and More",
-     "url": "https://insider-gaming.com/best-secret-loot-location-early-game-gta-6/",
-     "published": "2026-11-21T21:02Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-21T20:59Z",
-   "title": "Fastest ways to farm Gold in WoW Forever",
-   "url": "https://www.destructoid.com/fastest-ways-to-farm-gold-in-wow-forever/",
-   "sources": [
-    "Destructoid"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://www.destructoid.com/wp-content/uploads/2026/11/An-Undead-character-fighting-a-monster-in-World-of-Warcraft-Forever.png?resize=1024%2C640"
-    },
-    {
-     "type": "image",
-     "url": "https://www.destructoid.com/wp-content/uploads/2026/11/Looting-a-corpse-in-WoW-Forever.png?resize=1024%2C640"
-    },
-    {
-     "type": "image",
-     "url": "https://www.destructoid.com/wp-content/uploads/2026/11/Blacksmithing-in-World-of-Warcraft-Forever.png?resize=1024%2C640"
-    },
-    {
-     "type": "image",
-     "url": "https://www.destructoid.com/wp-content/uploads/2026/11/Auction-House-at-Orgrimmar-in-WoW-Forever.png?resize=1024%2C640"
-    }
-   ],
-   "items": [
-    {
-     "source": "Destructoid",
-     "title": "Fastest ways to farm Gold in WoW Forever",
-     "url": "https://www.destructoid.com/fastest-ways-to-farm-gold-in-wow-forever/",
-     "published": "2026-11-21T20:59Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-21T20:29Z",
-   "title": "Avengers: Doomsday Star Hayley Atwell Teases New Trailer for Monday",
-   "url": "https://www.ign.com/articles/avengers-doomsday-star-hayley-atwell-teases-new-trailer-for-monday",
-   "sources": [
-    "IGN"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://assets-prd.ignimgs.com/2026/08/14/marvel-doomsday-poster-revealed-countdown-stream-change-1786726801531.jpg"
+     "url": "https://assets-prd.ignimgs.com/2026/11/19/early-weapons1-1795092418085.jpg"
     }
    ],
    "items": [
     {
      "source": "IGN",
-     "title": "Avengers: Doomsday Star Hayley Atwell Teases New Trailer for Monday",
-     "url": "https://www.ign.com/articles/avengers-doomsday-star-hayley-atwell-teases-new-trailer-for-monday",
-     "published": "2026-11-21T20:29Z"
+     "title": "GTA 6 Triggers Busiest Traffic Day in Comcast History",
+     "url": "https://www.ign.com/articles/gta-6-triggers-busiest-traffic-day-in-comcast-history",
+     "published": "2026-11-20T23:30Z"
+    },
+    {
+     "source": "IGN Middle East (EN)",
+     "title": "GTA 6 Triggers Busiest Traffic Day in Comcast History",
+     "url": "https://me.ign.com/en/grand-theft-auto-vi/249943/gta-6-triggers-busiest-traffic-day-in-comcast-history",
+     "published": "2026-11-20T23:30Z"
+    },
+    {
+     "source": "PC Gamer",
+     "title": "Comcast: 'At peak, GTA 6 accounted for nearly a quarter of all internet traffic'",
+     "url": "https://www.pcgamer.com/games/grand-theft-auto/comcast-at-peak-gta6-accounted-for-nearly-a-quarter-of-all-internet-traffic/",
+     "published": "2026-11-21T21:42Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-21T20:07Z",
-   "title": "GTA 6 developer pays touching tribute to late mother by immortalizing her in game",
-   "url": "https://www.dexerto.com/gta/gta-6-developer-pays-touching-tribute-to-late-mother-by-immortalizing-her-in-game-3430350/",
+   "published": "2026-11-21T22:18Z",
+   "title": "Star Wars' New Jedi Order Era is Officially Moving Forward",
+   "url": "https://www.polygon.com/star-wars-new-jedi-order-era-update/",
    "sources": [
-    "Dexerto"
+    "Polygon"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://www.dexerto.com/cdn-image/wp-content/uploads/2026/09/29/jason-hunt-gta-6.jpg?width=1080&quality=75&format=auto"
+     "url": "https://static0.polygonimages.com/wordpress/wp-content/uploads/chorus/uploads/chorus_asset/file/19812990/rey_finn_poe_in_star_wars_9_rise_of_skywalker_desert_wayfinder_scene.jpg"
     }
    ],
    "items": [
     {
-     "source": "Dexerto",
-     "title": "GTA 6 developer pays touching tribute to late mother by immortalizing her in game",
-     "url": "https://www.dexerto.com/gta/gta-6-developer-pays-touching-tribute-to-late-mother-by-immortalizing-her-in-game-3430350/",
-     "published": "2026-11-21T20:07Z"
+     "source": "Polygon",
+     "title": "Star Wars' New Jedi Order Era is Officially Moving Forward",
+     "url": "https://www.polygon.com/star-wars-new-jedi-order-era-update/",
+     "published": "2026-11-21T22:18Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-21T17:11Z",
-   "title": "GTA 6 player hit with 30-day PSN ban after sharing nude in-game photos with friend",
-   "url": "https://www.dexerto.com/gta/gta-6-player-hit-with-30-day-psn-ban-after-sharing-nude-in-game-photos-with-friend-3430333/",
+   "published": "2026-11-21T22:00Z",
+   "title": "Radio Tower Expert Can’t Believe How Realistic GTA 6′s Towers Are: ‘Oh My God Boys… Earthed Tower Legs With Saddles”",
+   "url": "https://kotaku.com/radio-tower-expert-cant-believe-how-realistic-gta-6s-towers-are-oh-my-god-boys-earthed-tower-legs-with-saddles-2000759186",
    "sources": [
-    "Dexerto"
+    "Kotaku"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://www.dexerto.com/cdn-image/wp-content/uploads/2026/11/21/gta-6-nudist-beach.jpg?width=1080&quality=75&format=auto"
+     "url": "https://kotaku.com/app/uploads/2026/11/Gta-6-tower-1280x720.jpg"
     }
    ],
    "items": [
     {
-     "source": "Dexerto",
-     "title": "GTA 6 player hit with 30-day PSN ban after sharing nude in-game photos with friend",
-     "url": "https://www.dexerto.com/gta/gta-6-player-hit-with-30-day-psn-ban-after-sharing-nude-in-game-photos-with-friend-3430333/",
-     "published": "2026-11-21T17:11Z"
+     "source": "Kotaku",
+     "title": "Radio Tower Expert Can’t Believe How Realistic GTA 6′s Towers Are: ‘Oh My God Boys… Earthed Tower Legs With Saddles”",
+     "url": "https://kotaku.com/radio-tower-expert-cant-believe-how-realistic-gta-6s-towers-are-oh-my-god-boys-earthed-tower-legs-with-saddles-2000759186",
+     "published": "2026-11-21T22:00Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-21T22:00Z",
+   "title": "Account Restrictions (Nov 21)",
+   "url": "https://store.steampowered.com/news/app/3393110/view/675137971401261621",
+   "sources": [
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://clan.akamai.steamstatic.com/images/46074831/bdbc6a516755d3ba1d4f644f5254f69cee2f972f.png"
+    }
+   ],
+   "items": [
+    {
+     "source": "Steam News (hub)",
+     "title": "Account Restrictions (Nov 21)",
+     "url": "https://store.steampowered.com/news/app/3393110/view/675137971401261621",
+     "published": "2026-11-21T22:00Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-21T22:00Z",
+   "title": "クレーンゲームの歴史を感じる貴重な実機から、子ども向けなのに妙に攻めたドライブゲームまで！TAITOブースをレポート【アミューズメント エキスポ2026】",
+   "url": "http://www.gamespark.jp/article/2026/11/22/175171.html",
+   "sources": [
+    "Game*Spark (JP)"
+   ],
+   "ar_relay": false,
+   "media": [],
+   "items": [
+    {
+     "source": "Game*Spark (JP)",
+     "title": "クレーンゲームの歴史を感じる貴重な実機から、子ども向けなのに妙に攻めたドライブゲームまで！TAITOブースをレポート【アミューズメント エキスポ2026】",
+     "url": "http://www.gamespark.jp/article/2026/11/22/175171.html",
+     "published": "2026-11-21T22:00Z"
     }
    ]
   }
  ],
- "failed": [],
+ "failed": [
+  "True Gaming (AR) (HTTP 526, 3x)"
+ ],
  "not_covered": [
   {
    "name": "Official X accounts",
@@ -324,10 +233,12 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-21T21:50:14Z",
+  "last_poll_at": "2026-11-21T22:50:14Z",
   "sources_enabled": 101,
   "sources_ok": 99,
-  "sources_failing": 0,
-  "failed": []
+  "sources_failing": 1,
+  "failed": [
+   "True Gaming (AR) (HTTP 526, 3x)"
+  ]
  }
 }
