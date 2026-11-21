@@ -78,6 +78,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Shiny Shoe | شايني شو | Proposed 8 Nov 2026 (Production 2; Monster Train 2 developer) |
 | Auroch Digital | أوروك ديجيتال | Proposed 8 Nov 2026 (Production 2; Warhammer Survivors developer) |
 | Atlus | أتلس | Proposed 8 Nov 2026 (Production 2) |
+| Kazuhisa Wada | كازوهيسا وادا (Kazuhisa Wada) | Proposed 21 Nov 2026 (Production 2, Atlus general producer, Persona 6 interview Reel) |
 | Bulkhead | بلكهيد | Proposed 8 Nov 2026 (Production 2; WARDOGS developer) |
 | ZeniMax Media | زينيماكس ميديا | Proposed 8 Nov 2026 (Skyrim turns 15 Reel; Bethesda's parent company) |
 | Bethesda Game Studios | بيثيسدا غيم ستوديوز | Proposed 8 Nov 2026 (Skyrim turns 15 Reel; on screen the Reel says بيثيسدا (Bethesda)) |
