@@ -72,7 +72,7 @@ jobs:
         env:
           KEYS: ${{ inputs.keys }}
         run: |
-          printf '%s' "$KEYS" | grep -Eq '^[a-z0-9 -]*$' || { echo "bad keys"; exit 1; }
+          case "$KEYS" in *[!a-z0-9\ -]*) echo "bad keys"; exit 1;; esac
           python templates/franchise.py build $KEYS 2>&1 | tee "$RUNNER_TEMP/franchise.log"
           python templates/franchise.py list | tee -a "$GITHUB_STEP_SUMMARY"
 
