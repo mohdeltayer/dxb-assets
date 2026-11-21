@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-21T18:52:05Z",
- "seq": 726,
+ "generated_at": "2026-11-21T19:52:08Z",
+ "seq": 727,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -232,100 +232,14 @@
    ],
    "breaking_source": true,
    "breaking_seq": 697
-  },
-  {
-   "id": 19759,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "BrokenLore: Miki-Chan - Gameplay Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=E6dUJDCl-ko",
-   "published": "2026-11-20T19:45Z",
-   "first_seen": "2026-11-20T19:50:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/E6dUJDCl-ko/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=E6dUJDCl-ko"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 695
-  },
-  {
-   "id": 19752,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Signal Veil - Cast Reveal | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=MOsermqqc5c",
-   "published": "2026-11-20T19:30Z",
-   "first_seen": "2026-11-20T19:40:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/MOsermqqc5c/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=MOsermqqc5c"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 694
-  },
-  {
-   "id": 19740,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Zenless Zone Zero - Version 3.4 Teaser - \"The Finality of the Day\" | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=OHCrenHN9oo",
-   "published": "2026-11-20T19:15Z",
-   "first_seen": "2026-11-20T19:30:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/OHCrenHN9oo/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=OHCrenHN9oo"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 693
-  },
-  {
-   "id": 19733,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Eilean Mor: The Lost Keepers - Announcement Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=y8Z3oEYOD-o",
-   "published": "2026-11-20T19:00Z",
-   "first_seen": "2026-11-20T19:15:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/y8Z3oEYOD-o/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=y8Z3oEYOD-o"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 692
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-21T18:50:14Z",
-  "sources_enabled": 102,
-  "sources_ok": 101,
-  "sources_failing": 1,
-  "failed": [
-   "Xbox (X) (HTTP 429, 2x)"
-  ]
+  "last_poll_at": "2026-11-21T19:50:14Z",
+  "sources_enabled": 101,
+  "sources_ok": 100,
+  "sources_failing": 0,
+  "failed": []
  }
 }
