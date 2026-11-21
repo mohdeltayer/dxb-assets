@@ -330,6 +330,13 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   Productions)»). Trailers, gameplay captures, press assets and event feeds
   alike; the pinned comment keeps the source link. Text check before render:
   `credits` cover every footage shot. (CLAUDE.md "Credit on every clip")
+- **Credit ladder (21 Nov):** a credit is never dropped, never off the frame, never over other text.
+  Not fitting one line in the safe zone, the server shortens it, stopping at the first step that fits: 1. full
+  form (Arabic then Latin in brackets); 2. Latin names only, «المصدر: Metacritic, Notebookcheck · اللقطات:
+  Rockstar Games»; 3. short official names (names-ar section 4); 4. primary source and footage owner only (other
+  outlets in their own line); 5. smaller type, down to 30 px; 6. two lines. Opening word Arabic (المصدر،
+  اللقطات). Off the safe zone or on the headline is unreadable text. Credits only: lines, headlines and
+  captions keep Arabic then brackets. (CLAUDE.md "Credit ladder")
 - **People stories show the person (23 Oct):** when a person is the news
   (honours, appointments, departures, interviews, quotes, retirements,
   tributes, a creator's new project), their official photo appears in a

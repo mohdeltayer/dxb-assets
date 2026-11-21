@@ -3919,3 +3919,24 @@ server fixes, every slot on the picture start, were written back to main) and it
 6. Replay before merge (render-replay run 44795255069, ref the branch): the last 10 jobs/done, 8 of 8 that reach the render
    pass (Volvy's Adventure Reslimed and Witch the Showdown stop at the 19 Nov game-name text rule, on main too); the
    fallback fired on GTA VI CDPR, Death Stranding and Witch on the Holy Night.
+
+## Credit ladder (Mohammad, 21 Nov 2026)
+
+The on-screen source and footage credit on every Reel is never dropped, never runs off the frame and never sits on
+other text. When it does not fit on one line in the safe zone, the server shortens it in this order and stops at the
+first step that fits (`templates/creditfit.py`, used by `reel.credit_layer` on every render and by the server's
+autofix before it, so the job records the credit that ships):
+1. Full form: Arabic name then the Latin in brackets, on one line.
+2. Latin names only, no Arabic spelling and no brackets: «المصدر: Metacritic, Notebookcheck · اللقطات: Rockstar».
+3. Shorter official names: Rockstar for Rockstar Games, Take-Two for Take-Two Interactive and the like, from the
+   short-name list in `newsroom/names-ar.md` section 4.
+4. The primary source (the first named) and the footage owner only; other outlets are named in the line where their
+   view appears.
+5. The type steps down to the minimum readable size, 30 px (`creditfit.MIN_SIZE`).
+6. Only if it still does not fit: two lines, source above footage.
+The opening word stays Arabic (المصدر, اللقطات) so every row reads right to left. A credit outside the safe zone or
+touching the headline counts as unreadable text: nothing on the ladder fitting stops the render; a top credit that
+would reach the chip row while the headline is up enters once the headline clears. This overrides the
+Arabic-then-brackets naming rule for credits only; lines, headlines and captions keep it. It replaces the 20 Nov
+"shrinks to 24 px, then drops trailing words" fallback and autofix's "one size down, then two lines".
+
