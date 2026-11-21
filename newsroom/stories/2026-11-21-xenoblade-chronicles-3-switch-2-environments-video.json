@@ -54,5 +54,25 @@
   ],
   "hits": []
  },
- "beat": "reveal"
+ "beat": "reveal",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/xenoblade-chronicles-3-switch-2-environments-video-reel-v2.mp4",
+  "blob": "429366aeb35a8e5de91d08d92a8cdb14ccec52c1",
+  "at": "2026-11-21T14:51:18Z",
+  "note": "Text matches Nintendo: 4K TV mode, 1080p handheld, 60 fps, 3 Dec; Arabic plain, no hard stops",
+  "checklist": {
+   "job": "jobs/live/xenoblade-chronicles-3-switch-2-environments-video.json",
+   "sha256": "1a42b48f3781be46bc949c1133f346e337cc1ee4796fa945253a63ce31c88c12",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": "showcase",
+   "evergreen": false,
+   "built_by": "production-1"
+  },
+  "by": "director-p1",
+  "qc": "pass",
+  "looked": "Showcase layout: headline and chip رسمي in top band, trailer box with landscape shots (waterfall cliff, beach, grassland), lines and credit in bottom band; text readable, first frame not black"
+ }
 }
