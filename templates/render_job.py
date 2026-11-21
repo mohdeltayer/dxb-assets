@@ -727,6 +727,8 @@ def respread(job):
 
 
 TAIL_SKIP = 9.0             # a trailer's last seconds are its end slate and ratings card (audit 21 Nov, item 5)
+FRAME_BUDGET = 30.0         # seconds of frame checks per job; past it the fallbacks pick as before (Ace Combat 8 replay time)
+_FRAME_SPENT = [0.0]
 
 
 def frame_clean(f, st, secs, dur=None):
@@ -734,6 +736,16 @@ def frame_clean(f, st, secs, dur=None):
     end slate, and without two or more printed words in the 9:16 window (tesseract, when installed). The cheap check the
     blind fallbacks (auto_fallback, respread) never had: 17 extra renders on 18 to 21 Nov were shots on black fades,
     slates, logos, end cards and text cards (audit 21 Nov 2026, item 5, cause 1)."""
+    if _FRAME_SPENT[0] >= FRAME_BUDGET:
+        return True, 'not checked: frame check budget spent'
+    t_start = time.time()
+    try:
+        return _frame_clean(f, st, secs, dur)
+    finally:
+        _FRAME_SPENT[0] += time.time() - t_start
+
+
+def _frame_clean(f, st, secs, dur=None):
     try:
         from PIL import Image, ImageStat
         import io
@@ -741,7 +753,7 @@ def frame_clean(f, st, secs, dur=None):
         dur = dur or _video_dur(f) or 0.0
         if dur and st + secs > dur - TAIL_SKIP:
             return False, 'end slate'
-        for t in (st + 0.25, st + max(0.3, secs - 0.3)):
+        for n, t in enumerate((st + 0.25, st + max(0.3, secs - 0.3))):
             out = subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-ss', f'{t:.2f}', '-i', path, '-frames:v', '1',
                                   '-vf', 'scale=480:-2', '-f', 'image2pipe', '-vcodec', 'png', '-'],
                                  capture_output=True, timeout=20).stdout
@@ -754,7 +766,7 @@ def frame_clean(f, st, secs, dur=None):
                 return False, f'white at {t:.1f} s'
             if sd < 0.05:
                 return False, f'flat card at {t:.1f} s'
-            if shutil.which('tesseract'):
+            if n == 1 and shutil.which('tesseract'):   # printed text on the second frame only: one OCR per moment
                 w, h = im.size
                 cw = int(h * 9 / 16)
                 crop = im.crop(((w - cw) // 2, 0, (w + cw) // 2, h)).resize((cw * 2, h * 2))
