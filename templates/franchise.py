@@ -30,7 +30,8 @@ LIB = 'live/sound/franchise'
 STRETCH = 24.0            # seconds per stretch: a Reel body is 15 to 35 s; longer bodies take both stretches in turn
 STEP = 3.0
 SKIP_HEAD, SKIP_TAIL = 3.0, 10.0      # a trailer's first seconds and its end slate are not the theme
-MUSIC_MIN = 60.0          # % of the stretch's energy that is music
+MUSIC_MIN = 40.0          # % of the stretch's energy that is music (the split's own floor; only the clean stem is laid)
+TRAILERS = 4              # official trailers tried per series before it is left without a stretch
 LEAK_MAX = 5.0
 READ_MAX = 180.0          # seconds of a trailer read
 
@@ -85,23 +86,25 @@ def pick(job):
 
 
 # ---------------------------------------------------------------------------------------------------------- build
-def _source(key):
+def _sources(key):
+    """[(item, where, publisher)] for the series: the publisher's official trailers from its own source, up to TRAILERS."""
     pat, pub, src, prefix = FRANCHISES[key]
     if src.startswith('repo:'):
-        return {'file': f'franchise-{key}.mp4', 'repo': src[5:]}, src[5:], pub
+        return [({'file': f'franchise-{key}.mp4', 'repo': src[5:]}, src[5:], pub)]
     import footage as FT
     r = FT.resolve(src, name=f'franchise-{key}', do_check=False, max_n=8)
     cands = r.get('candidates', []) if isinstance(r, dict) else r
     jobs = [c for c in cands if isinstance(c, dict) and c.get('job')]
-    if prefix:
-        jobs = [c for c in jobs if str(c['job'].get('trailer') or c.get('name') or '').startswith(prefix)] or jobs
+    if prefix:                                   # the named trailer first, the others after it
+        jobs.sort(key=lambda c: not str(c['job'].get('trailer') or c.get('name') or '').startswith(prefix))
     if not jobs:
         raise ValueError(f'{key}: no official video on {src}')
-    c = jobs[0]
-    item = dict(c['job'])
-    item['file'] = f'franchise-{key}.mp4'
-    where = item.get('url') or f"steam:{item.get('steam')}:{item.get('trailer')}"
-    return item, where, pub
+    out = []
+    for n, c in enumerate(jobs[:TRAILERS]):
+        item = dict(c['job'])
+        item['file'] = f'franchise-{key}-{n}.mp4'
+        out.append((item, item.get('url') or f"steam:{item.get('steam')}:{item.get('trailer')}", pub))
+    return out
 
 
 UPLOADS = os.environ.get('DXB_UPLOADS', '/tmp/franchise-uploads')
@@ -146,7 +149,21 @@ def build(key):
     import numpy as np
     import soundfile as sf
     import tracksplit as TS
-    item, where, pub = _source(key)
+    for item, where, pub in _sources(key):
+        try:
+            got = _build_one(key, item, where, pub)
+        except Exception as e:                   # noqa: BLE001  one trailer failing moves on to the next
+            print(f'franchise: {key}: {where}: {e}', flush=True)
+            got = []
+        if got:
+            return got
+    return []
+
+
+def _build_one(key, item, where, pub):
+    import numpy as np
+    import soundfile as sf
+    import tracksplit as TS
     path = _fetch(item)
     dur = min(TS._dur(path), READ_MAX)
     t0, t1 = SKIP_HEAD, max(SKIP_HEAD + STRETCH, dur - SKIP_TAIL)
