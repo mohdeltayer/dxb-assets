@@ -1,0 +1,65 @@
+{
+ "name": "gta-vi-user-score-debate",
+ "out": "cards/2026-11/gta-vi-user-score-debate-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot scan",
+   "detail": "footage scan stopped at its cap (180 s); shots as written, automatic slots from the footage library or evenly spaced"
+  },
+  {
+   "stage": "source quality",
+   "detail": "source quality:\n  under 960 rows of picture: gta6-launch-master.mp4 at 33.65 (950 rows, enlarged 2.02x), gta6-launch-master.mp4 at 31.0 (832 rows, enlarged 2.31x); find a 4K or unletterboxed copy, or name the copies checked in lowres_ok (\"IGN, Nintendo store, publisher press site, Steam: none above 720p\")"
+  },
+  {
+   "stage": "rows",
+   "detail": "gta6-launch-master.mp4: only 950 rows of picture (bars cut), enlarged 2.0x; find a 4K or unletterboxed copy, or name the copies checked in lowres_ok (\"IGN, Nintendo store, publisher press site, Steam: none above 720p\")"
+  },
+  {
+   "stage": "rows",
+   "detail": "gta6-launch-master.mp4: only 832 rows of picture (bars cut), enlarged 2.3x; find a 4K or unletterboxed copy, or name the copies checked in lowres_ok (\"IGN, Nintendo store, publisher press site, Steam: none above 720p\")"
+  }
+ ],
+ "ladder": [],
+ "job_to_pass_min": 13.2,
+ "at": "2026-11-21T02:42:23Z",
+ "findings": [],
+ "notes": [
+  "length 38.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "source quality: shot 9 gta6-launch-master.mp4 at 33.65 for 1.4 s, enlarged 2.02x: block ratio median 1.11, peak 1.16 (ok)",
+  "source quality: shot 21 gta6-launch-master.mp4 at 31.0 for 1.75 s, enlarged 2.31x: block ratio median 0.0, peak 0.0 (ok)",
+  "render_job: audio split: applied; music_pct 96.7; leak_pct 0.0; cache {'hit': 0, 'miss': 2}; separate_secs 10.8; secs 17.5",
+  "smear check: exempt 1.45 to 7.65 s (our own cards)",
+  "render_job: lifeless: {\"score\": 0.6, \"still_share\": 0.003, \"longest_still\": 0.1, \"cuts_per_10s\": 6.84, \"held_under_text\": 0.005, \"secs\": 38.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 26 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [],
+ "job_sha": "acad6f16cd2807639b9527c614407857215e2079",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 2.31,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/gta-vi-user-score-debate-look-1.jpg",
+  "cards/2026-11/gta-vi-user-score-debate-look-2.jpg",
+  "cards/2026-11/gta-vi-user-score-debate-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": null,
+ "job_path": "jobs/done/gta-vi-user-score-debate.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.2,
+  "fetch": 0.08,
+  "shots": 3.06,
+  "checks": 0.41,
+  "render": 6.03,
+  "after": 1.82,
+  "job": 11.4
+ }
+}
