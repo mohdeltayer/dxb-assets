@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-21T19:52:08Z",
- "seq": 727,
+ "generated_at": "2026-11-21T20:52:08Z",
+ "seq": 728,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -169,74 +169,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 700
-  },
-  {
-   "id": 19799,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Ugly Within - Announcement Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=E03YjOGFKiQ",
-   "published": "2026-11-20T20:00Z",
-   "first_seen": "2026-11-20T20:25:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/E03YjOGFKiQ/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=E03YjOGFKiQ"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 698
-  },
-  {
-   "id": 19769,
-   "source": "Xbox (X)",
-   "source_kind": "x",
-   "title": "Design a controller for yourself (or someone special) this holiday season! Save on controllers and get free engraving with XBOX Design Lab from November 19 to December 2:",
-   "url": "https://x.com/XBOX/status/2123838822802657639",
-   "published": "2026-11-20T18:00Z",
-   "first_seen": "2026-11-20T20:00:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://pbs.twimg.com/amplify_video_thumb/2123838790963785730/img/-bk3OUDILNvYdvu_.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://video.twimg.com/amplify_video/2123838790963785730/vid/avc1/1920x1080/GGrGzfUBtRz1jxqK.mp4?tag=16"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 697
-  },
-  {
-   "id": 19768,
-   "source": "Xbox (X)",
-   "source_kind": "x",
-   "title": "Seems like something is going around this week 👀 Doctor's orders? Listen to This Week on XBOX:",
-   "url": "https://x.com/XBOX/status/2123853982594371767",
-   "published": "2026-11-20T19:00Z",
-   "first_seen": "2026-11-20T20:00:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://pbs.twimg.com/media/HXlx8PHXcAA-kNr.png"
-    },
-    {
-     "type": "video",
-     "url": "https://video.twimg.com/amplify_video/2123853894069489664/vid/avc1/1080x1080/2tTT3S4iKreqXhCS.mp4?tag=16"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 697
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-21T19:50:14Z",
+  "last_poll_at": "2026-11-21T20:50:14Z",
   "sources_enabled": 101,
   "sources_ok": 100,
   "sources_failing": 0,
