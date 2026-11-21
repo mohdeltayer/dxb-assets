@@ -50,5 +50,25 @@
   "hits": [
    "2026-09-28-bg3-console-cheats"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/shadowheart-bg3-prequel-novel-ign-reel-v1.mp4",
+  "blob": "aae4166d535057d6f6006d5c95112c82276c8952",
+  "at": "2026-11-21T08:37:30Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/shadowheart-bg3-prequel-novel-ign.json",
+   "sha256": "1a5a133950d8275206b0d17b23fc14fee3309a3cd8d0c15cb311ffe822e7a1b8",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look frames: Shadowheart trailer shots, headline and captions readable, navy end card, no black beat"
  }
 }
