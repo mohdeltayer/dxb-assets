@@ -33,12 +33,15 @@ as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
   the Reel or frames uploaded to the inbox and embedded, exact text in memo,
   options with their effect; a link only as an extra. Advisor memos he
   approves there are applied and recorded (CLAUDE.md "Mohammad's inbox").
-  Preview cards are information, not a gate (21 Nov): every preview card
-  carries a proposed time and the default "posts at the proposed time"; no
-  answer 30 minutes before it, it goes out. It holds only on his "hold" for
-  that piece or a hard stop (wrong fact, graphic, unreadable text, broken
-  video), and then production fixes it and posts. "Send a preview before
-  scheduling" means send the card and still post on time.
+  Publer is the review screen (21 Nov; replaces the approval cards for
+  previews): every piece, special ones included, is scheduled in Publer as
+  soon as it passes, special pieces at least 60 minutes ahead where timing
+  allows; nothing waits for a tap. Feedback comes through the advisor, who
+  edits text or time or moves a post to draft in Publer and asks for a
+  re-render when the video must change. The inbox is information only:
+  failures, corrections, and a one-line note that a special piece is
+  scheduled and when. Hard stops still apply: fix and post, never post a
+  known wrong fact, graphic content, unreadable text or a broken video.
   Status board (25 Oct): on starting a card set `picked_up_at` and a one-line
   `progress`, update it per step, and finish with status done, `outcome` and
   `updated_at` (or done with the reason when it is not done); a card over 30

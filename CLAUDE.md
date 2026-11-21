@@ -3055,13 +3055,16 @@ https://claude.ai/artifact/AwcHX88eyTrUAL9pc4j4AW
    to do it, status "done" with an outcome saying why. A card answered or sent more than 30 minutes ago
    without `picked_up_at` shows in red as "not acknowledged". The hourly watch's inbox step sets these.
 
-7. A preview card is information, not a gate (Mohammad, 21 Nov 2026, restating the standing rule after the GTA VI
-   user score debate Reel missed its 11:00 slot waiting on an answer). Every preview card carries a proposed time and
-   the default action "posts at the proposed time". No answer 30 minutes before that time: it goes out. A card holds
-   only when Mohammad wrote "hold" for that piece, or when one of the four hard stops applies (wrong fact, graphic
-   content, unreadable text, broken video); then production fixes it and posts, it does not wait. An advisor brief or
-   an order that says "send a preview before scheduling" means send the card and still post on time. This replaces
-   any "nothing posts without your yes" default on preview cards.
+7. Publer is the review screen (Mohammad, 21 Nov 2026; replaces the complete-cards approval flow of point 5 for
+   previews, and the same day's "preview card is information, not a gate"). Every piece, special ones (debate pieces,
+   first-of-their-kind formats, series episodes) included, is scheduled in Publer as soon as it passes; there are no
+   approval cards and nothing waits for a tap. Where timing allows, a special piece is scheduled at least 60 minutes
+   ahead so he can see it in Publer. He gives feedback in the advisor chat; the advisor edits the text or the time,
+   or moves the post to draft in Publer, and asks production for a re-render when the video must change. The inbox
+   is for information only: failures, corrections, and a one-line note that a special piece is scheduled and when.
+   The four hard stops still apply: production fixes and posts, and never posts a known wrong fact, graphic content,
+   unreadable text or a broken video. An order or brief that says "send a preview before scheduling" now means
+   schedule it and post the one-line note.
 
 ## Delegation (Mohammad, 5 Oct 2026)
 
