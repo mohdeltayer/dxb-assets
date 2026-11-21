@@ -3055,6 +3055,14 @@ https://claude.ai/artifact/AwcHX88eyTrUAL9pc4j4AW
    to do it, status "done" with an outcome saying why. A card answered or sent more than 30 minutes ago
    without `picked_up_at` shows in red as "not acknowledged". The hourly watch's inbox step sets these.
 
+7. A preview card is information, not a gate (Mohammad, 21 Nov 2026, restating the standing rule after the GTA VI
+   user score debate Reel missed its 11:00 slot waiting on an answer). Every preview card carries a proposed time and
+   the default action "posts at the proposed time". No answer 30 minutes before that time: it goes out. A card holds
+   only when Mohammad wrote "hold" for that piece, or when one of the four hard stops applies (wrong fact, graphic
+   content, unreadable text, broken video); then production fixes it and posts, it does not wait. An advisor brief or
+   an order that says "send a preview before scheduling" means send the card and still post on time. This replaces
+   any "nothing posts without your yes" default on preview cards.
+
 ## Delegation (Mohammad, 5 Oct 2026)
 
 To save tokens the main session acts as the editor and hands repeated
