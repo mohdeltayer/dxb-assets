@@ -773,7 +773,7 @@ def person_layer(photo, name, role, path, theme='cold', box=PERSON_BOX, focus=(0
     cx = min(max(fx * sw - cw / 2, 0), sw - cw); cy = min(max(fy * sh - ch / 2, 0), sh - ch)
     pic = src.crop((round(cx), round(cy), round(cx + cw), round(cy + ch))).resize((bw, bh), Image.LANCZOS)
     pad, rad = 26, 22
-    texts = [(name, 'Bold', (46, 42, 38, 34), A.INK), (role, 'Medium', (32, 30, 28, 26), A.BODY)]
+    texts = [(name, 'Bold', (46, 42, 38, 34, 32, 30), A.INK), (role, 'Medium', (32, 30, 28, 26), A.BODY)]   # 30 px floor, as credits (21 Nov)
     if credit:
         texts.append((credit, 'Medium', (22, 20), A.BODY))
     texts = [t for t in texts if str(t[0] or '').strip()]   # a plate with the name alone when no role is known (21 Nov)
