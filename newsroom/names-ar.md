@@ -157,6 +157,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Nintendo Everything | نينتيندو إفريثينغ | Suggested 29 Sep |
 | Insider Gaming | إنسايدر غيمنغ | In use |
 | Notebookcheck | نوتبوك تشيك | Proposed 21 Nov 2026 (GTA VI user score debate Reel; flagged for Mohammad) |
+| Take-Two | تيك-تو | Short on-screen pair «تيك-تو (Take-Two)» where تيك-تو إنتراكتيف (Take-Two Interactive) does not fit a Reel line; caption keeps the full form. Proposed 21 Nov 2026 (flagged for Mohammad) |
 | Game Rant | غيم رانت | In use |
 | GamesIndustry.biz | غيمز إندستري | In use |
 | Eurogamer | يوروغيمر | In use |
