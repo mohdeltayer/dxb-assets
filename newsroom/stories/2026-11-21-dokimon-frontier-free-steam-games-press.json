@@ -50,5 +50,25 @@
    "frontier"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/dokimon-frontier-free-steam-games-press-reel-v1.mp4",
+  "blob": "60db5a74edf21427ab140a0b5b00f922ab964faa",
+  "at": "2026-11-21T22:08:54Z",
+  "note": "text true, clear",
+  "checklist": {
+   "job": "jobs/live/dokimon-frontier-free-steam-games-press.json",
+   "sha256": "22155d67df8898167308c02f68a831dc02da43bf8786784fe0f07e1eeb42b261",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1: pixel-art title card reading Roguelike with line 1 caption; look-2: Happy 2-year Dokiversary card with line 4 caption; look-3: pixel battle screen with 2.5 million 48 hours caption; no graphic content, all text readable"
  }
 }
