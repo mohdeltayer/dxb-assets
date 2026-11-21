@@ -50,5 +50,25 @@
    "2026-11-02-team-liquid-algs-split-2-playoffs-winners",
    "apex-legends-godzilla-event-november-10-nov-7"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/apex-legends-wrongful-bans-reversed-steam-reel-v1.mp4",
+  "blob": "a098a9c9be74f4c3694680057850666fb85a1fce",
+  "at": "2026-11-21T12:23:17Z",
+  "note": "text true to the Steam post; clear for an Arab reader",
+  "checklist": {
+   "job": "jobs/live/apex-legends-wrongful-bans-reversed-steam.json",
+   "sha256": "ae6ed93329a6918fda8ed3dedf3607beeca88055e12e11d3e3117534b89d1344",
+   "ok": true,
+   "problems": [],
+   "template": "numbers",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": null,
+  "looked": "headline card, captions 7-22 s legible, counter card"
  }
 }
