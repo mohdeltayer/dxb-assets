@@ -397,7 +397,17 @@ def credit_specs(credits, lines, starts, end, head_secs, strip, tmp):
         if z - a > 0.5:                                        # a low credit sits just above the strip, not on it
             png = credit_layer(text, f'{tmp}/c{j}.png', low=low, size=opt.get('size', 36),
                                y=STRIP_TOP - 12 if low and strip else None, band=opt.get('band', False))
-            out.append(dict(png=png, a=a, z=z, low=low, box=Image.open(png).getbbox()))
+            box = Image.open(png).getbbox()
+            if not low and a < head_secs and box and box[3] > HEAD_TOP - 4:
+                # Credit rule (Mohammad, 21 Nov 2026): a credit never touches the headline. Shown with it, a top credit
+                # that reaches the chip row waits until the headline clears (it is never dropped); strict jobs stop.
+                if not SOFT:
+                    raise ValueError(f'credit touches the headline (unreadable text): {text}')
+                import softgate
+                softgate.warn('credit', f'credit would touch the headline before {head_secs:.1f} s: it enters after it')
+                a = head_secs + 0.1
+            if z - a > 0.5:
+                out.append(dict(png=png, a=a, z=z, low=low, box=box))
     return out
 
 
@@ -558,19 +568,26 @@ def credit_layer(text, path, low=False, size=36, y=None, band=False):
     above the safe bottom when the story lines sit at the top."""
     rows = [t for t in text.split('\n') if t.strip()] or [text]   # two lines when the server set it so (autofix,
     rtl_starts(rows, 'credit')                                      # adv-20261117-gates-fix-not-refuse B)
-    if SOFT:                                   # never refuse (20 Nov 2026: the GTA VI credit stopped the showcase row):
-        probe = ImageDraw.Draw(Image.new('L', (W, 10)))   # a wide credit steps down to 24 px before it would stop
-        while size > 24 and max(probe.textlength(r, font=A.F('Medium', size), **G.AR) for r in rows) > W - R - L:
-            size -= 2
-        fz = A.F('Medium', size)
-        for k, r in enumerate(rows):            # still too wide at 24 px: trailing words go, with a warning
-            cut = r
-            while probe.textlength(cut, font=fz, **G.AR) > W - R - L and len(cut.split()) > 2:
-                cut = ' '.join(cut.split()[:-1])
-            if cut != r:
-                import softgate
-                softgate.warn('credit', f'credit shortened to fit the safe zone: «{r}» -> «{cut}»')
-                rows[k] = cut
+    probe = ImageDraw.Draw(Image.new('L', (W, 10)))
+    measure = lambda r, s: probe.textlength(r, font=A.F('Medium', s), **G.AR)
+    if not (len(rows) == 1 and measure(rows[0], size) <= W - R - L):
+        # The credit ladder (Mohammad, 21 Nov 2026; templates/creditfit.py): never dropped, never off the frame. One
+        # line in the full form, then Latin names only, short names, the primary source and footage owner, smaller
+        # type to creditfit.MIN_SIZE, and only then two lines. A credit already set on rows that fit keeps them when
+        # no one-line form fits; nothing fitting stops the render as unreadable text.
+        import creditfit
+        got = creditfit.fit(text, size, measure, W - R - L)
+        if got is None:
+            if all(measure(r, size) <= W - R - L for r in rows):
+                got = {'rows': rows, 'size': size, 'step': 1}
+            else:
+                raise ValueError(f'credit runs out of the safe zone at every step of the credit ladder: {text}')
+        if got['step'] > 1 or got['rows'] != rows:
+            import softgate
+            softgate.warn('credit', f"credit ladder step {got['step']} ({creditfit.STEP_NAMES.get(got['step'])}): "
+                                    f"«{' / '.join(rows)}» -> «{' / '.join(got['rows'])}» at {got['size']} px")
+        rows, size = got['rows'], got['size']
+        rtl_starts(rows, 'credit')
     f = A.F('Medium', size)
     y = y if y is not None else G.SAFE_BOTTOM - 10 if low else G.SAFE_TOP + 40
     mask = Image.new('L', (W, H), 0)

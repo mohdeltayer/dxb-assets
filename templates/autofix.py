@@ -162,20 +162,23 @@ def credits(job):
             continue
         opt = c[3] if len(c) > 3 and isinstance(c[3], dict) else {}
         size = int(opt.get('size', 36))
-        if _credit_fits(c[2], size, opt):
+        if '\n' not in c[2] and _credit_fits(c[2], size, opt):
             continue
-        fixed = None
-        for s in range(size - CREDIT_STEP, CREDIT_MIN - 1, -CREDIT_STEP):
-            if _credit_fits(c[2], s, opt):
-                fixed = (c[2], s); break
-        if fixed is None:
-            two = _two_lines(c[2])
-            if two:
-                for s in range(size, CREDIT_MIN - 1, -CREDIT_STEP):
-                    if _credit_fits(two, s, opt):
-                        fixed = (two, s); break
-        if fixed is None:
-            continue                       # no fix: the text check refuses it with the reason
+        # The credit ladder (Mohammad, 21 Nov 2026, templates/creditfit.py): full form on one line, Latin names only,
+        # short names, primary source and footage owner, smaller type, and only then two lines.
+        import creditfit
+        import reel
+        from PIL import Image, ImageDraw
+        import fast_ar as FA2
+        import ig_ar as G2
+        probe = ImageDraw.Draw(Image.new('L', (reel.W, 10)))
+        got = creditfit.fit(c[2], size, lambda r, s: probe.textlength(r, font=FA2.F('Medium', s), **G2.AR),
+                            reel.W - reel.R - reel.L, min_size=CREDIT_MIN)
+        if got is None or ('\n'.join(got['rows']) == c[2] and got['size'] == size):
+            continue                       # no fix (the text check refuses it with the reason), or nothing to change
+        fixed = ('\n'.join(got['rows']), got['size'])
+        if not _credit_fits(fixed[0], fixed[1], opt):
+            continue
         before = {'text': c[2], 'size': size}
         if len(c) > 3 and isinstance(c[3], dict):
             c[3]['size'] = fixed[1]

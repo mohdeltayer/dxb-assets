@@ -388,3 +388,28 @@ fact inside the text (the release date), then why it matters now. Refused by the
 | Katabuchi | كاتابوتشي | المخرج، كاتب قصة ACE COMBAT 8 (role word at first mention, as the Famitsu interview gives it) | Added 20 Nov 2026 on Production 2's request; flagged for Mohammad |
 | Kono | كونو | مدير علامة ACE COMBAT في بانداي نامكو (role word at first mention) | Added 20 Nov 2026 on Production 2's request; flagged for Mohammad |
 | CD Projekt Red | سي دي بروجيكت ريد | studio (The Witcher, Cyberpunk 2077); «استوديو سي دي بروجيكت ريد (CD Projekt Red)» at first mention | Added 20 Nov 2026 (the spelling the slip lane already used); flagged for Mohammad |
+
+## 4. Short names for credits (Mohammad, 21 Nov 2026)
+
+Step 3 of the credit ladder (templates/creditfit.py): when a Reel's on-screen credit does not fit one line in the safe
+zone with the Latin names, these shorter official names are used. Credits only; lines, headlines and captions keep
+the full Arabic then Latin form. Add a row when a long name first needs one.
+
+| Full | Short |
+|---|---|
+| Rockstar Games | Rockstar |
+| Take-Two Interactive | Take-Two |
+| Bandai Namco Entertainment | Bandai Namco |
+| Square Enix Holdings | Square Enix |
+| Sony Interactive Entertainment | PlayStation |
+| Microsoft Gaming | Xbox |
+| Xbox Game Studios | Xbox |
+| Nintendo of America | Nintendo |
+| Konami Digital Entertainment | Konami |
+| Warner Bros. Games | WB Games |
+| Electronic Arts | EA |
+| Ubisoft Entertainment | Ubisoft |
+| Video Games Chronicle | VGC |
+| CD Projekt Red | CD Projekt |
+| Bethesda Softworks | Bethesda |
+| Capcom Co., Ltd. | Capcom |
