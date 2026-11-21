@@ -54,5 +54,25 @@
    "dungeon"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/darkest-dungeon-2-butchers-asylum-trailer-nintendo-everything-reel-v1.mp4",
+  "blob": "af8729912f20a3e91456b3c900eb183e4abb3f33",
+  "at": "2026-11-21T16:56:43Z",
+  "note": "Director PASS: text true and clear",
+  "checklist": {
+   "job": "jobs/live/darkest-dungeon-2-butchers-asylum-trailer-nintendo-everything.json",
+   "sha256": "e692b91020021ac35a4b8ddf0541ddaca265e78b804d3594ac1546b4645920b5",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "strip, dense and sheet read by a separate Director: headline, four lines and credit match the facts; footage is base-game trailer from the Steam page"
  }
 }
