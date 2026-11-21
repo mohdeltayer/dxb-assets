@@ -3939,4 +3939,4 @@ touching the headline counts as unreadable text: nothing on the ladder fitting s
 would reach the chip row while the headline is up enters once the headline clears. This overrides the
 Arabic-then-brackets naming rule for credits only; lines, headlines and captions keep it. It replaces the 20 Nov
 "shrinks to 24 px, then drops trailing words" fallback and autofix's "one size down, then two lines".
-
+Replay before merge (render-replay runs 44864999983 on 5dc734b and 44866148620 on c526cbf): the last 10 jobs/done, 10 of 10 pass.
