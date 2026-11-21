@@ -52,5 +52,25 @@
    "2026-11-18-arknights-endfield-google-play-best-game-2026",
    "2026-11-19-arknights-endfield-anniversary-festival-january"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/arknights-endfield-world-oshrooms-update-gematsu-reel-v1.mp4",
+  "blob": "cee74ad365f5052b690a48cd7fc5eb11dec9d1ef",
+  "at": "2026-11-21T13:26:26Z",
+  "note": "separate agent: text true against Gematsu and Gryphline, clear to an Arab reader; footage is an older official trailer (minor)",
+  "checklist": {
+   "job": "jobs/live/arknights-endfield-world-oshrooms-update-gematsu.json",
+   "sha256": "7e55ed191d38b37c517ee5a7f7b7d32d76c76d36f8d72493628ea421d054f948",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "headline plate with تقرير chip over a 16:9 band of official game footage (characters in a fox-fur coat, group shot), Arabic lines under it with the Gematsu and Gryphline credit, all readable"
  }
 }
