@@ -1,0 +1,289 @@
+{
+ "name": "gta-vi-metacritic-user-score-denfaminicogamer",
+ "out": "cards/2026-11/gta-vi-metacritic-user-score-denfaminicogamer-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "build gate",
+   "detail": "kind_news report: a label (the chip تقرير), not a kind of story (adv-20261111-person-stories-gate): a report about one game takes the kind of what happened (date, delay, reveal, sales, update, people, quote and so on) with \"label\": \"تقرير\""
+  },
+  {
+   "stage": "shot scan",
+   "detail": "footage scan stopped at its cap (180 s); shots as written, automatic slots from the footage library or evenly spaced"
+  },
+  {
+   "stage": "credit",
+   "detail": "credit shortened to fit the safe zone: «المصدر: دينفامي نيكو غيمر (Denfaminicogamer)، ولقطات من روكستار (Rockstar Games)» -> «المصدر: دينفامي نيكو غيمر (Denfaminicogamer)، ولقطات من روكستار (Rockstar»"
+  },
+  {
+   "stage": "fill",
+   "detail": "ValueError: an empty band in the finished Reel (no empty band at any second, Mohammad 8 Nov 2026): 13.30 s: 332 px of empty band from y 1024. Keep the headline in the top band and a line in the bottom band at every second (showcase layout), or fill the frame cropped to the subject."
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 57.15 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 28.7 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 36.55 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 38.8 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 42.8 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 31.97 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 37.73 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 43.49 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 49.24 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 55.0 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 60.76 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 66.52 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 72.27 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 78.03 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 14,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 83.79 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch for 15 slot(s)"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 57.15 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 28.7 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 36.55 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 38.8 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 42.8 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 31.97 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 37.73 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 43.49 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 49.24 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 55.0 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 60.76 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 66.52 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 72.28 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 78.04 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 14,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 83.79 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "scan cap: 15 automatic slot(s) from the library or evenly spaced"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 86.57 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 46.52 s: moved off a repeated moment (respread)"
+  }
+ ],
+ "job_to_pass_min": 8.6,
+ "at": "2026-11-21T01:18:14Z",
+ "findings": [],
+ "notes": [
+  "length 29.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 88.5; leak_pct 0.1; cache {'hit': 0, 'miss': 2}; separate_secs 9.9; secs 15.8",
+  "render_job: lifeless: {\"score\": 13.1, \"still_share\": 0.152, \"longest_still\": 1.5, \"cuts_per_10s\": 6.57, \"held_under_text\": 0.0, \"secs\": 28.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 26 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [],
+ "job_sha": "b48aa235938fcfca8c22f4795b69b46a5b089596",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 2.0,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/gta-vi-metacritic-user-score-denfaminicogamer-look-1.jpg",
+  "cards/2026-11/gta-vi-metacritic-user-score-denfaminicogamer-look-2.jpg",
+  "cards/2026-11/gta-vi-metacritic-user-score-denfaminicogamer-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 25.3,
+  "files": {
+   "gta6-launch-master.mp4": {
+    "secs": 25.3,
+    "cached": false,
+    "stages": {
+     "decode": 10.9,
+     "autofocus": 24.4,
+     "ocr": 24.4,
+     "smear": 25.1,
+     "scenes": 25.3
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/gta-vi-metacritic-user-score-denfaminicogamer.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.18,
+  "fetch": 0.07,
+  "shots": 3.05,
+  "checks": 0.22,
+  "render": 3.19,
+  "after": 1.15,
+  "job": 7.68
+ }
+}
