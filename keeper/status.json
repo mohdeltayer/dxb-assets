@@ -1,0 +1,164 @@
+{
+ "generated_at": "2026-11-21T19:02:23Z",
+ "mode": "alarm-only",
+ "line": "overdue commitments: 2, at risk: 2",
+ "overdue": 2,
+ "at_risk": 2,
+ "six": [
+  "coverage: last post Sat 21 Nov 22:30 Dubai, 32 min ago (limit 60)",
+  "closest promise to failure: Hello Kitty Island Adventure update 3.1 racing minigame + F1 Academy (GoNintendo), تقرير, trailer Reel v1, Thu 19 Nov 02:00 Dubai (-4143 min), publication unconfirmed",
+  "oldest owner request not started: not read by the keeper (the inbox is read by the sessions)",
+  "submissions with uncertain outcome: none",
+  "destinations that failed independently: none",
+  "confirmed future coverage: none scheduled",
+  "published posts not yet in the shared log: none",
+  "bank: at risk, 2 undated ready Reels (minimum 6), 4 ready but tied to one day not counted",
+  "publer: not read (no key file; evidence from production only)",
+  "build started line 20261121: present",
+  "release note 2026-11-21: missing",
+  "hourly watch: log stale, last run Mon 09 Nov 21:05 Dubai, 17397 min ago (is Production 2 logging to newsroom/helper-runs.jsonl?)"
+ ],
+ "rows": [
+  {
+   "id": "gtavi-ep9-20261119",
+   "title": "الطريق إلى GTA VI 9: صدرت اليوم",
+   "kind": "series episode",
+   "slot": "2026-11-19T20:00+04:00",
+   "slot_dubai": "Thu 19 Nov 20:00 Dubai",
+   "fallback": "publish-last-passed",
+   "held": false,
+   "production": "queued",
+   "delivery": {
+    "instagram": "published",
+    "x": "published",
+    "threads": "published"
+   },
+   "stage": "closed",
+   "commitment": "fulfilled",
+   "alarm": null,
+   "note": null,
+   "minutes_to_slot": -3063,
+   "would_apply": null
+  },
+  {
+   "id": "tga-2026-nominees-1700",
+   "title": "The Game Awards 2026 nominees reveal: list Reel (GOTY nominees) and most-nominated numbers Reel, T0, names from the official stream or thegameawards.com only",
+   "kind": "breaking",
+   "slot": "Tue 17 Nov 21:00 to 22:00 Dubai (17:00Z to 18:00Z), reserved",
+   "slot_dubai": null,
+   "fallback": "card-only",
+   "held": false,
+   "production": "queued",
+   "delivery": {
+    "instagram": "not_submitted",
+    "x": "not_submitted",
+    "threads": "not_submitted"
+   },
+   "stage": "no slot",
+   "commitment": "open",
+   "alarm": "bad-row",
+   "note": "row has no readable slot",
+   "minutes_to_slot": null,
+   "would_apply": null
+  },
+  {
+   "id": "hello-kitty-island-adventure-racing-update-f1",
+   "title": "Hello Kitty Island Adventure update 3.1 racing minigame + F1 Academy (GoNintendo), تقرير, trailer Reel v1",
+   "kind": "news",
+   "slot": "2026-11-19T02:00:00+04:00",
+   "slot_dubai": "Thu 19 Nov 02:00 Dubai",
+   "fallback": null,
+   "held": false,
+   "production": "queued",
+   "delivery": {
+    "instagram": "scheduled",
+    "x": "scheduled",
+    "threads": "scheduled"
+   },
+   "stage": "publication unconfirmed",
+   "commitment": "at_risk",
+   "alarm": "unconfirmed",
+   "note": "not confirmed published on instagram, x, threads by T+5; reconcile, never move silently",
+   "minutes_to_slot": -4143,
+   "would_apply": null
+  },
+  {
+   "id": "lego-batman-switch-2-gameshare-update",
+   "title": "LEGO Batman Legacy of the Dark Knight Switch 2 GameShare update (Nintendo Everything), تقرير, trailer Reel v1",
+   "kind": "news",
+   "slot": "2026-11-19T03:00:00+04:00",
+   "slot_dubai": "Thu 19 Nov 03:00 Dubai",
+   "fallback": null,
+   "held": false,
+   "production": "queued",
+   "delivery": {
+    "instagram": "scheduled",
+    "x": "scheduled",
+    "threads": "scheduled"
+   },
+   "stage": "publication unconfirmed",
+   "commitment": "at_risk",
+   "alarm": "unconfirmed",
+   "note": "not confirmed published on instagram, x, threads by T+5; reconcile, never move silently",
+   "minutes_to_slot": -4083,
+   "would_apply": null
+  },
+  {
+   "id": "brokenlore-miki-chan-switch-2-gematsu",
+   "title": "BrokenLore: MIKI-CHAN Switch 2 version (Gematsu), تقرير, trailer Reel v1",
+   "kind": "news",
+   "slot": "2026-11-21T22:00:00+04:00",
+   "slot_dubai": "Sat 21 Nov 22:00 Dubai",
+   "fallback": null,
+   "held": false,
+   "production": "queued",
+   "delivery": {
+    "instagram": "not_submitted",
+    "x": "not_submitted",
+    "threads": "not_submitted"
+   },
+   "stage": "slot passed, not scheduled",
+   "commitment": "missed",
+   "alarm": "missed",
+   "note": "fallback card-only recorded for ops (alarm-only mode)",
+   "minutes_to_slot": -63,
+   "would_apply": "card-only"
+  },
+  {
+   "id": "rob-run-549k-peak-thegamer",
+   "title": "ROB RUN 549,661 player peak (TheGamer), تقرير, numbers Reel v2",
+   "kind": "news",
+   "slot": "2026-11-21T22:30:00+04:00",
+   "slot_dubai": "Sat 21 Nov 22:30 Dubai",
+   "fallback": null,
+   "held": false,
+   "production": "queued",
+   "delivery": {
+    "instagram": "not_submitted",
+    "x": "not_submitted",
+    "threads": "not_submitted"
+   },
+   "stage": "slot passed, not scheduled",
+   "commitment": "at_risk",
+   "alarm": "missed",
+   "note": "fallback card-only recorded for ops (alarm-only mode)",
+   "minutes_to_slot": -33,
+   "would_apply": "card-only"
+  }
+ ],
+ "bank_ready": 2,
+ "watch_digest": {
+  "line": "watch-digest branch: seq 726 at Sat 21 Nov 22:52 Dubai, 10 min old",
+  "seq": 726
+ },
+ "coverage": "coverage: last post Sat 21 Nov 22:30 Dubai, 32 min ago (limit 60)",
+ "coverage_gap_min": 32,
+ "desk": [
+  "build started line 20261121: present",
+  "release note 2026-11-21: missing",
+  "hourly watch: log stale, last run Mon 09 Nov 21:05 Dubai, 17397 min ago (is Production 2 logging to newsroom/helper-runs.jsonl?)"
+ ],
+ "commitments_sha": "a30d55e7f899",
+ "alarms_now": [],
+ "hop": []
+}
