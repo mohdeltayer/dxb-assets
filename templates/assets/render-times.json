@@ -117576,5 +117576,274 @@
   "setup_min": 1.13,
   "story": "jennifer-hale-mass-effect-rights-fans-kotaku",
   "upload_secs": 8.0
+ },
+ {
+  "name": "jennifer-hale-mass-effect-rights-fans-kotaku-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-21T19:41Z",
+  "stages": {
+   "checks": 5.1,
+   "montage": 42.2,
+   "text": 96.7,
+   "audio": 1.1,
+   "outro": 43.3
+  },
+  "total": 188.4,
+  "lane": "runner",
+  "queued_at": "2026-11-21T19:38Z",
+  "finished_at": "2026-11-21T19:41Z",
+  "render_min": 3.14,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "jennifer-hale-mass-effect-rights-fans-kotaku-comparison.mp4",
+    "start": 74.22,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "jennifer-hale-mass-effect-rights-fans-kotaku-comparison.mp4",
+    "start": 3.07,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "jennifer-hale-mass-effect-rights-fans-kotaku-comparison.mp4",
+    "start": 37.96,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "jennifer-hale-mass-effect-rights-fans-kotaku-comparison.mp4",
+    "start": 106.49,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "jennifer-hale-mass-effect-rights-fans-kotaku-comparison.mp4",
+    "start": 18.16,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "jennifer-hale-mass-effect-rights-fans-kotaku-comparison.mp4",
+    "start": 91.91,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "jennifer-hale-mass-effect-rights-fans-kotaku-comparison.mp4",
+    "start": 27.96,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "jennifer-hale-mass-effect-rights-fans-kotaku-comparison.mp4",
+    "start": 52.83,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "jennifer-hale-mass-effect-rights-fans-kotaku-comparison.mp4",
+    "start": 82.5,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.4,
+   "audio_secs": 48.1,
+   "music_pct": 39.9,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 8,
+    "miss": 0
+   },
+   "effects_shots": 0,
+   "mix_secs": 0.7,
+   "secs": 3.9,
+   "ladder": "b",
+   "step_a": {
+    "applied": false,
+    "tool": "cocktail-fork",
+    "clean": false,
+    "separate_secs": 2.5,
+    "audio_secs": 48.1,
+    "music_pct": 39.9,
+    "leak_pct": 0.1,
+    "thresholds": {
+     "leak_max_pct": 5.0,
+     "music_min_pct": 40.0
+    },
+    "cache": {
+     "hit": 8,
+     "miss": 0
+    },
+    "reason": "music only 39.9% of the track (< 40.0%)",
+    "secs": 3.2
+   }
+  },
+  "lifeless": {
+   "score": 2.6,
+   "still_share": 0.021,
+   "longest_still": 0.4,
+   "cuts_per_10s": 7.22,
+   "held_under_text": 0.0,
+   "secs": 19.4,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 20.8,
+   "shots": 10.6,
+   "checks": 25.3,
+   "render": 232.2,
+   "after": 55.6
+  },
+  "softgate": {
+   "warnings": 3,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "jennifer-hale-mass-effect-rights-fans-kotaku-comparison.mp4 at 37.96 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "jennifer-hale-mass-effect-rights-fans-kotaku-comparison.mp4 at 106.49 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "jennifer-hale-mass-effect-rights-fans-kotaku-comparison.mp4 at 18.16 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "jennifer-hale-mass-effect-rights-fans-kotaku-comparison.mp4 at 91.91 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "jennifer-hale-mass-effect-rights-fans-kotaku-comparison.mp4 at 27.96 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "jennifer-hale-mass-effect-rights-fans-kotaku-comparison.mp4 at 52.83 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 8,
+     "step": "a",
+     "why": "jennifer-hale-mass-effect-rights-fans-kotaku-comparison.mp4 at 82.5 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "text",
+     "slot": "line 1",
+     "step": "a",
+     "why": "3.0 s of 3.3 s: shot 2 lengthened by 0.4 s"
+    },
+    {
+     "kind": "text",
+     "slot": "line 4",
+     "step": "a",
+     "why": "3.2 s of 3.6 s: shot 8 lengthened by 0.57 s"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "b",
+     "why": "audio split not applied (music only 39.9% of the track (< 40.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our b"
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 344,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1344,
+  "peak_mem_mb": 5316,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61619,
+  "peak_disk_mb": 64899,
+  "min_disk_free_mb": 82898,
+  "setup_min": 1.35,
+  "story": "jennifer-hale-mass-effect-rights-fans-kotaku"
  }
 ]
