@@ -69,5 +69,25 @@
    "2026-11-21-gta-vi-official-day-one-sales-take-two",
    "2026-11-21-gta-vi-user-score-debate"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/gta-vi-leicester-shop-five-boxed-copies-automaton-reel-v1.mp4",
+  "blob": "3a66dbb074bb40b09374c1e00cd2115a6d4ce18a",
+  "at": "2026-11-21T06:19:11Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/gta-vi-leicester-shop-five-boxed-copies-automaton.json",
+   "sha256": "b4760e5e38a9fea54ea30dbc517485f89e8314012db7ade46017a0393ec8f3be",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "GTA VI launch-trailer stills (gym character, dark police-car night scene, couple by a car) under the تقرير chip and headline, caption and Automaton/Rockstar credit band legible on all three"
  }
 }
