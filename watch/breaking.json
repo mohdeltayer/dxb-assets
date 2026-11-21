@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-21T13:52:06Z",
- "seq": 721,
+ "generated_at": "2026-11-21T14:52:30Z",
+ "seq": 722,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -444,17 +444,17 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-21T13:50:04Z",
+  "last_poll_at": "2026-11-21T14:52:08Z",
   "sources_enabled": 100,
-  "sources_ok": 94,
+  "sources_ok": 91,
   "sources_failing": 6,
   "failed": [
    "Capcom IR (ValueError: 0 article links (expected 5+), layout changed or drawn by script, 146x)",
    "Nintendo of America (X) (HTTP 429, 83x)",
-   "PlayStation (X) (HTTP 429, 17x)",
+   "PlayStation (X) (HTTP 429, 18x)",
    "PlayStation Middle East (X) (HTTP 429, 25x)",
    "Rockstar Games (X) (HTTP 429, 12x)",
-   "The Game Awards (HTTP 403, 65x)"
+   "The Game Awards (HTTP 403, 66x)"
   ]
  }
 }
