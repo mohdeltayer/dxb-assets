@@ -149,6 +149,8 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Gematsu | جيماتسو | In use |
 | D3 Publisher | دي ثري ببليشر (D3 Publisher) | Proposed 13 Nov (builder 16:15) |
 | GamesRadar | غيمز رادار | Proposed 3 Nov |
+| Kotaku | كوتاكو | Proposed 21 Nov (builder, Production 2) |
+| Jennifer Hale | جينيفر هيل | Proposed 21 Nov (builder, Production 2) |
 | Pure Xbox | بيور إكس بوكس | In use |
 | Xbox Wire | إكس بوكس واير | In use |
 | Skymap Games | سكاي ماب جيمز | Proposed 12 Nov (Zero Hour console publisher) |
