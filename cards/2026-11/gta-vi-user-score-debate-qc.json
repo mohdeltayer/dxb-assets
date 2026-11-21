@@ -1,6 +1,6 @@
 {
  "name": "gta-vi-user-score-debate",
- "out": "cards/2026-11/gta-vi-user-score-debate-reel-v2.mp4",
+ "out": "cards/2026-11/gta-vi-user-score-debate-reel-v4.mp4",
  "verdict": "pass",
  "warnings": [
   {
@@ -28,19 +28,19 @@
    "why": "4.1 s of 4.2 s: shot 14 lengthened by 0.19 s"
   }
  ],
- "job_to_pass_min": 11.8,
- "at": "2026-11-21T02:57:46Z",
+ "job_to_pass_min": 12.5,
+ "at": "2026-11-21T08:59:29Z",
  "findings": [],
  "notes": [
   "length 37.1 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: applied; music_pct 97.3; leak_pct 0.0; cache {'hit': 0, 'miss': 2}; separate_secs 10.9; secs 17.4",
+  "render_job: audio split: applied; music_pct 97.3; leak_pct 0.0; cache {'hit': 2, 'miss': 0}; separate_secs 2.8; secs 5.4",
   "smear check: exempt 1.45 to 7.65 s (our own cards)",
   "render_job: lifeless: {\"score\": 0.5, \"still_share\": 0.003, \"longest_still\": 0.1, \"cuts_per_10s\": 6.2, \"held_under_text\": 0.0, \"secs\": 37.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
   "estimate: headline: 26 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
  ],
  "autofixed": [],
- "job_sha": "a258d669fafd73f78a64cd69d2d6989aceb81b5d",
- "dispatches": 3,
+ "job_sha": "577acbfd91cd9bd812e37505d9fe7fcbac8e7087",
+ "dispatches": 5,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 2.0,
@@ -59,13 +59,12 @@
  "job_path": "jobs/done/gta-vi-user-score-debate.json",
  "stage_minutes": {
   "queue": 0.03,
-  "setup": 0.18,
+  "setup": 0.2,
   "fetch": 0.08,
-  "shots": 3.06,
-  "checks": 0.4,
-  "render": 5.72,
-  "after": 1.69,
-  "upload": 0.08,
-  "job": 10.97
+  "shots": 3.07,
+  "checks": 0.48,
+  "render": 6.13,
+  "after": 1.84,
+  "job": 11.6
  }
 }
