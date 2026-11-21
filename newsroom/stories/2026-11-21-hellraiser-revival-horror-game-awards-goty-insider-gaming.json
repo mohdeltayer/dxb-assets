@@ -51,5 +51,38 @@
    "revival"
   ],
   "hits": []
+ },
+ "director_sendbacks": [
+  {
+   "at": "2026-11-21T20:56:10Z",
+   "reason": "graphic",
+   "note": "Hellraiser trailer footage shows gore; story dropped, not scheduled",
+   "by": "director-p2",
+   "out": "cards/2026-11/hellraiser-revival-horror-game-awards-goty-insider-gaming-reel-v1.mp4",
+   "qc": "pass"
+  }
+ ],
+ "director_check": {
+  "verdict": "FIX",
+  "out": "cards/2026-11/hellraiser-revival-horror-game-awards-goty-insider-gaming-reel-v1.mp4",
+  "blob": "51eeb33c835f8783722afaf80b159d4e274c613a",
+  "at": "2026-11-21T20:56:11Z",
+  "note": "Hellraiser trailer footage shows gore; story dropped, not scheduled",
+  "checklist": {
+   "job": "jobs/done/hellraiser-revival-horror-game-awards-goty-insider-gaming.json",
+   "sha256": "5ecbe386557c198d4b275468d580dfdc74df1e9e99a10064f082e2af95bb2427",
+   "ok": false,
+   "problems": [
+    "render_lane server: the job belongs in jobs/live/ (dispatch render-live.yml), not jobs/done/hellraiser-revival-horror-game-awards-goty-insider-gaming.json",
+    "kind_news report: a label (the chip تقرير), not a kind of story (adv-20261111-person-stories-gate): a report about one game takes the kind of what happened (date, delay, reveal, sales, update, people, quote and so on) with \"label\": \"تقرير\""
+   ],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": null
  }
 }

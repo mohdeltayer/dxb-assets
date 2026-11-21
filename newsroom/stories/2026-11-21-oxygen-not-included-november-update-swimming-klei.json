@@ -52,5 +52,25 @@
   "hits": [
    "2026-10-23-arkane-lyon-closure-report"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/oxygen-not-included-november-update-swimming-klei-reel-v1.mp4",
+  "blob": "ed86ac5eee65070b07bfb8ca950473f89f3cec32",
+  "at": "2026-11-21T20:56:09Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/oxygen-not-included-november-update-swimming-klei.json",
+   "sha256": "c40910b9541a89e16ae28b0cba40af8b40d5b3e7e89a46d974757b1969fcb90f",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "strip, dense and sheet read by a separate Director: text true and clear; footage dissolve near 7 s left as built"
  }
 }
