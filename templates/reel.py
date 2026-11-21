@@ -2408,8 +2408,14 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
                                focus=tuple(opt.get('focus', (0.5, 0.33))), credit=opt.get('credit'))
             kept.append(dict(what='person', png=png, segs=[[0.0, z, 0.2]], box=list(PERSON_BOX)))
             continue
-        layers.append((person_layer(photo, name, role, f'{tmp}/p{j}.png', theme=theme, focus=tuple(opt.get('focus', (0.5, 0.33))),
-                                    credit=opt.get('credit')), a, z))
+        try:
+            layers.append((person_layer(photo, name, role, f'{tmp}/p{j}.png', theme=theme, focus=tuple(opt.get('focus', (0.5, 0.33))),
+                                        credit=opt.get('credit')), a, z))
+        except (ValueError, OSError) as e:
+            if not SOFT:
+                raise
+            import softgate as _SG               # templates never refuse: the Reel ships without the window (21 Nov)
+            _SG.warn('person', f'{e}; the window is left out')
     for c in creds:                         # after the trim: credits overlap the lines
         layers.append((c['png'], c['a'], c['z']))
     if skin and SK.leak_layer(f'{tmp}/leak.png', skin):   # fantasy: a warm light leak over each cut
