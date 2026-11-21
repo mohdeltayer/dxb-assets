@@ -1179,6 +1179,8 @@ def _bars(p, s, d):
         return '', _height(p)
     w, h, x, y = map(int, found[-1].split(':'))
     full = _height(p)
+    if w <= 0 or h <= 0 or x < 0 or y < 0:   # an all-black stretch gives cropdetect a negative box (Persona 6, 21 Nov):
+        return '', full                      # no picture to find, so no crop; the frame check keeps shots off it
     return (f'crop={w}:{h}:{x}:{y},', h) if h < full - 8 else ('', full)
 
 
