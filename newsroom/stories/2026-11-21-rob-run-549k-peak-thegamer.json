@@ -61,5 +61,25 @@
    "2026-11-15-halo-combat-evolved-xbox-turn-25",
    "rob-run-365k-concurrent-steam-20261114"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/rob-run-549k-peak-thegamer-reel-v2.mp4",
+  "blob": "7ab8b04684e65097b3715e9a2b14a9603a9d5010",
+  "at": "2026-11-21T17:33:40Z",
+  "note": "v2 after credit send-back: text true, clear",
+  "checklist": {
+   "job": "jobs/live/rob-run-549k-peak-thegamer.json",
+   "sha256": "9c9577f165b144dd86ddb7e7542aabd161eb4e6d4a4a6f208703c7fdcb0de26e",
+   "ok": true,
+   "problems": [],
+   "template": "numbers",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "strip: hook, figure card 549,661, caption cards, credit once"
  }
 }
