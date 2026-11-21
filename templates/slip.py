@@ -174,9 +174,8 @@ def problems(slip, now=None):
     gp = grammar_problem(slip)                      # Burning Sword case, 19 Nov 2026: a hard stop
     if gp:
         out.append(gp)
-    for fl in name_flags(slip):                     # rule 3: an unknown name on screen is a stop, not a flag
-        if fl.startswith('name not in names-ar') and ('(headline)' in fl or '(spoken)' in fl):
-            out.append('name_unknown: ' + fl)
+    # an unknown name is never a refusal (names rule correction, 21 Nov 2026): textrules.fix writes it in Latin letters
+    # and lists it in the job's names_to_review; name_flags still reports it on the result
     sid = str(slip.get('id') or '')
     if sid and not ID.match(sid):
         out.append(f'id {sid!r}: YYYY-MM-DD-<slug>, lower case')
@@ -557,7 +556,7 @@ def reel_check(slip, foot):
     }
 
 
-SLIP_HARD = ('missing: ', 'id ', 'name: ', 'expired at', 'expires: ', 'grammar_review', 'name_unknown')   # cannot be built: no input, no path, out of date
+SLIP_HARD = ('missing: ', 'id ', 'name: ', 'expired at', 'expires: ', 'grammar_review')   # cannot be built: no input, no path, out of date
 
 
 def split_problems(probs):
@@ -617,6 +616,8 @@ def build(slip, lane='live', resolve=True, root=ROOT, now=None):
     job, fixed = TR.fix(job)                        # the same mechanical fixes the render applies (glued prefix, signs)
     if fixed:
         res['flags'].append('text fixed mechanically: ' + '; '.join(f"{c['where']}: {c['what']}" for c in fixed))
+    if job.get('names_to_review'):                  # for a proper Arabic form later (names rule correction, 21 Nov 2026)
+        res['names_to_review'] = job['names_to_review']
     story = story_file(slip, f'Official video from the resolver ({slip["footage"]}): {foot.get("url") or foot.get("steam")}')
     sdir = os.path.join(root, 'newsroom', 'stories')
     jdir = os.path.join(root, 'jobs', 'test' if lane == 'test' else 'live')

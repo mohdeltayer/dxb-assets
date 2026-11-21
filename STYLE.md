@@ -986,4 +986,6 @@ server fixes, every slot on the picture start, were written back to main) and it
 - Publer is the single schedule for both productions: before a special piece, read Publer; a routine Reel of Production
   2 on the same story goes to draft (never deleted) and the board says so; if it already published, the special piece
   is a follow-up with a different angle and cover at least 2 hours later.
-
+- Names rule correction (21 Nov): a name missing from names-ar never refuses. On screen it is written in Latin letters as
+  given and goes to the "names to review" list (work order section 8); a headline that does not name its one game gets
+  «لعبة <short form>» as its first line and steps the type down. The game in Arabic letters is still a stop.

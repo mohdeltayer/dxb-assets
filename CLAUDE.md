@@ -4005,3 +4005,19 @@ Also merged: the frame check on blind fallback shots (black, white, flat cards, 
 per job), the soft shade under lines over bright footage, every spoken beat on screen (MAX_BEATS 12), game_short from
 the game's name, the cover and opener ledger (templates/variety.py, cover-ledger.json), the scan cache keyed by content
 in ~/.cache/dxb-shotread, and the keeper's ahead alarm. Jobs written before the release keep their template and skin.
+
+## Names rule correction: never a refusal (Mohammad and advisor, 21 Nov 2026)
+
+Case: the slip lane refused the Downing Street GTA VI story (headline without the game; The Independent not in names-ar)
+and the Persona 6 Wada story stopped on Kazuhisa Wada. A name missing from names-ar never refuses a slip or a render:
+1. A person, outlet or company in a «Arabic (Latin)» pair that names-ar and the glossary do not list is written in Latin
+   letters as given, on screen (headline, lines, spoken paragraph): «ذكرت صحيفة The Independent». Role and lead words stay
+   («قال المنتج Kazuhisa Wada»); a wrap inside the name is read across; a pair that opens a visual line keeps its Arabic
+   so the line still opens on an Arabic word. The job continues; the name goes to the job's and the slip result's
+   `names_to_review`, listed in section 8 of the work order (the board's copy) for a proper Arabic form in names-ar later.
+2. The headline rule: a one-game story whose headline does not name the game gets «لعبة <short form or name>» as its first
+   line (`game_short` first, else the name before its subtitle), and the type steps down (two or three lines, 60 px
+   floor). It never refuses.
+3. Code: `textrules.latin_unknown_names` and `textrules.headline_with_game` in `textrules.fix`, which the slip build and
+   the server run before every text check; `name_unknown` and `game_headline` only warn (softgate). The game written in
+   Arabic letters (`arabic_game_name`) stays a hard stop. Post texts keep their pairs as written.

@@ -29,7 +29,8 @@ WARNINGS = []
 LADDER = []
 HARD = ('fact', 'graphic', 'text', 'decode')
 TEXT_HARD = ('latin_first', 'glued', 'sign',       # bidi-broken
-             'game_headline', 'arabic_game_name', 'name_unknown')   # Burning Sword case, 19 Nov 2026
+             'arabic_game_name')   # Burning Sword case, 19 Nov 2026; game_headline and name_unknown are fixed by
+                                   # textrules.fix and only warn (names rule correction, 21 Nov 2026)
 TEXT_HARD_WORDS = ('safe zone', 'not an Arabic word', 'glues an Arabic prefix', 'grid tile corner',
                    'touches the headline')   # a credit off the frame or on the headline (Mohammad, 21 Nov 2026)
 FREEZE_UNTIL = '2026-12-02'

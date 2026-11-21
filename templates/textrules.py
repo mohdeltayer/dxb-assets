@@ -544,6 +544,59 @@ def _fix_text(t):
     return out, ch
 
 
+def latin_unknown_names(text, table):
+    """Names rule correction (Mohammad and advisor, 21 Nov 2026): a «Arabic (Latin)» pair whose Latin names-ar and the
+    glossary do not list is written in Latin letters as given, never refused, so no unvetted Arabic spelling goes on
+    screen. The Arabic form is the last words before the bracket, as many as the Latin has (lead words such as «صحيفة»
+    or «موقع» stay). A pair that opens a visual line keeps its Arabic, so the line still opens on an Arabic word.
+    Returns (new text, [latin names rewritten], [latin names left])."""
+    import slip as _S
+    out, done, left = [], [], []
+    pos = 0
+    flat = text.replace('\n', ' ')                      # a wrap inside the name («ذي\nإندبندنت (The Independent)»)
+    for m in _S.BRACKET.finditer(flat):
+        ar, la = m.group(1), m.group(2).strip()
+        if la.lower() in table:
+            continue
+        words = ar.split()
+        k = max(1, min(len(words), len(la.split()), 3))
+        while k > 1 and (words[-k] in _S.NAME_LEAD or words[-k].startswith('ال')):   # a role or lead word stays
+            k -= 1
+        span = flat[m.start(1):m.end(1)]
+        cut = 0
+        for _ in range(len(words) - k):                  # skip the words before the name, as the original spaces them
+            cut = span.index(' ', cut) + 1
+            while span[cut:cut + 1] == ' ':
+                cut += 1
+        start = m.start(1) + cut
+        line_start = text.rfind('\n', 0, start) + 1
+        if not text[line_start:start].strip():          # the pair opens the line: keep its Arabic, flag it
+            left.append(la)
+            continue
+        out.append(text[pos:start] + la)
+        pos = m.end()
+        done.append(la)
+    out.append(text[pos:])
+    return ''.join(out), done, left
+
+
+def headline_with_game(job):
+    """The headline with the game's name put in (Names rule correction, 21 Nov 2026): a one-game story whose headline does
+    not name it gets «لعبة <short form or name>» as its first line; the type steps down (reel.head_layer's soft path,
+    three lines down to 60 px). None when the headline already names it or the story is not about one game."""
+    if job.get('kind') == 'famitsu' or job.get('template') == 'list':
+        return None
+    game = game_of(job)
+    head = job.get('headline')
+    if not game or not isinstance(head, str):
+        return None
+    names = [game] + game_short_of(job)
+    if any(n in _norm_space(head) for n in names):
+        return None
+    short = (game_short_of(job) or [game])[0]
+    return f'لعبة {short}\n{head.strip()}'
+
+
 def fix(job):
     """The job with its mechanical text faults fixed, and [(where, before, after, what)]. Latin-first lines, length and
     reading time are never changed here: they need a writer."""
@@ -557,6 +610,39 @@ def fix(job):
         return new
     if isinstance(j.get('headline'), str):
         j['headline'] = one('headline', j['headline'])
+    h = headline_with_game(j)                            # the game's name put in, never a refusal (21 Nov 2026)
+    if h:
+        changes.append({'where': 'headline', 'before': j['headline'], 'after': h, 'what': 'game name put in the headline'})
+        j['headline'] = h
+    try:                                                 # unknown names written in Latin letters (21 Nov 2026)
+        import slip as _S
+        table = _S._names_table()
+    except Exception:                                    # noqa: BLE001
+        table = {}
+    review = list(j.get('names_to_review') or [])
+    if table:
+        def lat(where, t):
+            new, done, left = latin_unknown_names(t, table)
+            for la in done + left:
+                if la not in review:
+                    review.append(la)
+            if new != t:
+                changes.append({'where': where, 'before': t, 'after': new,
+                                'what': 'names not in names-ar written in Latin: ' + ', '.join(done)})
+            return new
+        if isinstance(j.get('headline'), str):
+            j['headline'] = lat('headline', j['headline'])
+        if isinstance(j.get('spoken'), str):
+            j['spoken'] = lat('spoken', j['spoken'])
+        for grp in j.get('lines') or []:
+            if isinstance(grp, list) and len(grp) >= 3:
+                for k, x in enumerate(grp[2]):
+                    if isinstance(x, str):
+                        grp[2][k] = lat('line', x)
+                    elif isinstance(x, list) and x and isinstance(x[0], str):
+                        x[0] = lat('line', x[0])
+    if review:
+        j['names_to_review'] = review
     n = 0
     for grp in j.get('lines') or []:
         if not isinstance(grp, list) or len(grp) < 3:

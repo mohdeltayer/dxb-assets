@@ -36,8 +36,10 @@ class Burning(unittest.TestCase):
         self.assertEqual(rules(job('عنوان', 'نص', game=None)), set())
 
     def test_hard(self):
-        for r in ('game_headline', 'arabic_game_name', 'name_unknown'):
-            self.assertTrue(SG.text_hard({'rule': r}))
+        # names rule correction (21 Nov 2026): game_headline and name_unknown are fixed by textrules.fix, so they only warn
+        self.assertTrue(SG.text_hard({'rule': 'arabic_game_name'}))
+        for r in ('game_headline', 'name_unknown'):
+            self.assertFalse(SG.text_hard({'rule': r}))
 
 
 if __name__ == '__main__':

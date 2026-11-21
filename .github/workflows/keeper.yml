@@ -50,6 +50,7 @@ jobs:
           sparse-checkout: |
             ops/backoffice/keeper
             newsroom/commitments.json
+            newsroom/slips/
             newsroom/submissions.jsonl
             newsroom/published.jsonl
             newsroom/helper-runs.jsonl
