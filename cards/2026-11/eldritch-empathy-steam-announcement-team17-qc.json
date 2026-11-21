@@ -1,0 +1,579 @@
+{
+ "name": "eldritch-empathy-steam-announcement-team17",
+ "out": "cards/2026-11/eldritch-empathy-steam-announcement-team17-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot scan",
+   "detail": "footage scan stopped at its cap (300 s); shots as written, automatic slots from the footage library or evenly spaced"
+  },
+  {
+   "stage": "credit",
+   "detail": "credit ladder step 5 (smaller type): «المصدر: إعلان Eldritch Empathy على Steam · اللقطات: Team17» -> «المصدر: إعلان Eldritch Empathy على Steam · · اللقطات: Team17» at 32 px"
+  },
+  {
+   "stage": "smear",
+   "detail": "ValueError: /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/eldritch-empathy-steam-announcement-team17-reel-v1.mp4: blocky smear at 27.57 to 28.13 s (peak 18.4); look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]"
+  },
+  {
+   "stage": "fill",
+   "detail": "ValueError: an empty band in the finished Reel (no empty band at any second, Mohammad 8 Nov 2026): 27.22 s: 632 px of empty band from y 664. Keep the headline in the top band and a line in the bottom band at every second (showcase layout), or fill the frame cropped to the subject."
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 14,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 15,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 at 42.67 s for 3.8 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "scan cap: 1 automatic slot(s) from the library or evenly spaced"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 at 21.36 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 at 57.6 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 at 28.68 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 at 50.37 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 at 35.81 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 at 46.62 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 at 53.99 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 at 17.83 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 at 86.53 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 at 72.07 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 at 64.84 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 at 79.3 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 14,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 at 10.6 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 15,
+   "step": "a",
+   "why": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 at 61.22 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "text",
+   "slot": "reel",
+   "step": "a",
+   "why": "soft shade under line group(s) [6]: bright footage behind them"
+  }
+ ],
+ "job_to_pass_min": 13.7,
+ "at": "2026-11-21T12:26:28Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 32.1 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 58.3; leak_pct 2.2; cache {'hit': 0, 'miss': 2}; separate_secs 14.3; secs 21.7",
+  "render_job: lifeless: {\"score\": 34.2, \"still_share\": 0.469, \"longest_still\": 1.8, \"cuts_per_10s\": 1.56, \"held_under_text\": 0.0, \"secs\": 32.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "credit 1",
+   "rule": "credit_width",
+   "what": "set one line at 32 px (was 40 px, too wide for the safe zone)",
+   "before": {
+    "text": "المصدر: إعلان Eldritch Empathy على Steam،\nولقطات من Team17",
+    "size": 40
+   },
+   "after": {
+    "text": "المصدر: إعلان Eldritch Empathy على Steam · اللقطات: Team17",
+    "size": 32
+   }
+  }
+ ],
+ "job_sha": "e770cf76544ea540e1e4aca8fdb332bfd70d36a6",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 2.32,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/eldritch-empathy-steam-announcement-team17-look-1.jpg",
+  "cards/2026-11/eldritch-empathy-steam-announcement-team17-look-2.jpg",
+  "cards/2026-11/eldritch-empathy-steam-announcement-team17-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 44.8,
+  "files": {
+   "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4": {
+    "secs": 44.4,
+    "cached": false,
+    "stages": {
+     "decode": 18.9,
+     "autofocus": 36.8,
+     "ocr": 36.8,
+     "smear": 44.0,
+     "scenes": 44.4
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/eldritch-empathy-steam-announcement-team17.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.22,
+  "fetch": 0.84,
+  "shots": 5.08,
+  "checks": 0.87,
+  "render": 4.7,
+  "after": 1.32,
+  "job": 12.8
+ },
+ "job_after_autofix": {
+  "name": "eldritch-empathy-steam-announcement-team17",
+  "story": "2026-11-21-eldritch-empathy-steam-announcement-team17",
+  "footage_source": "steam:2073150",
+  "kind_news": "reveal",
+  "story_class": "trailer",
+  "story_class_why": "kind reveal",
+  "skin_why": "genre puzzle: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/eldritch-empathy-steam-announcement-team17-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    "steam": 2073150,
+    "trailer": "Eldritch Empathy - Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2073150"
+   },
+   {
+    "file": "eldritch-empathy-steam-announcement-team17-announce-trailer.mp4",
+    "steam": 2073150,
+    "trailer": "Announce Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2073150"
+   }
+  ],
+  "shots": [
+   [
+    "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    0.0,
+    3.8,
+    null
+   ],
+   [
+    "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    0.0,
+    2.6,
+    null
+   ],
+   [
+    "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    0.0,
+    2.6,
+    null
+   ],
+   [
+    "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    0.0,
+    2.46,
+    null
+   ],
+   [
+    "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    0.0,
+    2.46,
+    null
+   ],
+   [
+    "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "أعلن الناشر Team17\nأن لعبة Eldritch Empathy ستصدر",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    5,
+    [
+     [
+      "على Steam في 2027، وهي لعبة\nألغاز سردية على طريقة لافكرافت",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    6,
+    7,
+    [
+     [
+      "تلعب بدور فتاة سويسرية\nتحقق في مخلوقات مشوهة،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    8,
+    9,
+    [
+     [
+      "وتحدد العاطفة الفاسدة\nداخل كل مخلوق",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    10,
+    11,
+    [
+     [
+      "ثم تختار هل تساعده أم تؤذيه",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    12,
+    13,
+    [
+     [
+      "لم يُعلن موعد الإصدار\nبعد، والقرارات",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    14,
+    15,
+    [
+     [
+      "التي تتخذها تؤثر في قريتك",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    15,
+    "المصدر: إعلان Eldritch Empathy على Steam · اللقطات: Team17",
+    {
+     "size": 32,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "أعلن الناشر Team17 أن لعبة Eldritch Empathy ستصدر على Steam في 2027، وهي لعبة ألغاز سردية على طريقة لافكرافت. تلعب بدور فتاة سويسرية تحقق في مخلوقات مشوهة، وتحدد العاطفة الفاسدة داخل كل مخلوق ثم تختار هل تساعده أم تؤذيه. لم يُعلن موعد الإصدار بعد، والقرارات التي تتخذها تؤثر في قريتك.",
+  "headline": "لعبة Eldritch Empathy\nتصل إلى Steam في 2027",
+  "label": "رسمي",
+  "game": "Eldritch Empathy",
+  "game_short": null,
+  "genre": "puzzle",
+  "texts": {
+   "instagram": "لعبة Eldritch Empathy تصل إلى Steam في 2027\n\nأعلن الناشر Team17 أن لعبة الألغاز السردية Eldritch Empathy، المستوحاة من أجواء لافكرافت، ستصدر على Steam في 2027. تلعب بدور إيكه، فتاة تحقق في مخلوقات مشوهة قرب قريتها السويسرية، فتحدد العاطفة الفاسدة داخل كل مخلوق وتختار هل تساعده أم تؤذيه، وكلما تأخرت استنزفت قواك العقلية.\n\nلم يُعلن موعد الإصدار بعد، والقرارات التي تتخذها تؤثر في القرية وأهلها.\n\nاللقطات من العرض الرسمي للعبة على Steam.\n\nالمصدر: إعلان Eldritch Empathy على Steam.\n\n#ألعاب #أخبار_الألعاب #EldritchEmpathy #ستيم",
+   "x": "أعلن الناشر Team17 أن لعبة الألغاز السردية Eldritch Empathy ستصدر على Steam في 2027. تحقق في مخلوقات مشوهة وتحدد عاطفتها الفاسدة ثم تختار أن تساعدها أو تؤذيها. لم يُعلن موعد الإصدار بعد.",
+   "threads": "أعلن الناشر Team17 أن لعبة الألغاز السردية Eldritch Empathy ستصدر على Steam في 2027. تحقق في مخلوقات مشوهة وتحدد عاطفتها الفاسدة ثم تختار أن تساعدها أو تؤذيها. لم يُعلن موعد الإصدار بعد.\n\nالمصدر: إعلان Eldritch Empathy على Steam"
+  },
+  "source": "إعلان Eldritch Empathy على Steam، ولقطات من Team17",
+  "date": "21 Nov 2026",
+  "theme": "gold",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": null,
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind reveal",
+   "skin": "house: genre puzzle: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "eldritch-empathy-steam-announcement-team17-eldritch-empathy-trailer.mp4 from the resolver (steam:2073150)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam announcement 'Eldritch Empathy coming to Steam in 2027' by Team17, 20 Nov 2026 21:22Z, read in full via the Steam news API; store page lists release date To be announced (https://store.steampowered.com/app/2073150/Eldritch_Empathy/); first report: Steam announcement by Team17, 20 Nov 2026 21:22Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 2073150 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "shots_auto": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15
+  ]
+ }
+}
