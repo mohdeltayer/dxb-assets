@@ -403,3 +403,34 @@ class Formats(unittest.TestCase):
         rows = [row('s', '2026-11-01T15:30+04:00', status='submitted to Publer 3/3; in the scheduled list')]
         st = K.summarise(rows, NOW, 'alarm-only')
         self.assertEqual(K.last_published(st['rows'], rows, None, NOW), K.parse_time('2026-11-01T11:30:00Z'))
+
+
+class ScheduledAhead(unittest.TestCase):
+    """Audit of 21 Nov 2026, item 9: one push when Publer holds fewer than 2 Reels ahead, 08:00 to 24:00 Dubai."""
+
+    def _posts(self, now, mins_list, state='scheduled'):
+        from datetime import timedelta
+        out = []
+        for m in mins_list:
+            for net in ('instagram', 'x', 'threads'):       # one Reel on three platforms counts once
+                out.append({'network': net, 'state': state, 'at': now + timedelta(minutes=m)})
+        return out
+
+    def test_low_by_day_pushes_once_and_clears(self):
+        from datetime import datetime, timezone
+        now = datetime(2026, 11, 21, 10, 0, tzinfo=timezone.utc)      # 14:00 Dubai
+        st = {}
+        a, line = K.scheduled_ahead({'posts': self._posts(now, [30])}, st, now)
+        self.assertIsNotNone(a)
+        self.assertIn('1 Reel scheduled ahead', line)
+        a2, _ = K.scheduled_ahead({'posts': self._posts(now, [30])}, st, now)
+        self.assertEqual(a['key'], a2['key'])                           # same episode, same key: raise_desk sends once
+        ok, _ = K.scheduled_ahead({'posts': self._posts(now, [30, 60])}, st, now)
+        self.assertIsNone(ok)
+        self.assertNotIn('ahead_low_since', st)
+
+    def test_quiet_at_night_and_without_a_read(self):
+        from datetime import datetime, timezone
+        night = datetime(2026, 11, 21, 23, 0, tzinfo=timezone.utc)    # 03:00 Dubai
+        self.assertIsNone(K.scheduled_ahead({'posts': []}, {}, night)[0])
+        self.assertEqual(K.scheduled_ahead({'error': 'x'}, {}, night), (None, None))

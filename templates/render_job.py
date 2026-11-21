@@ -213,6 +213,18 @@ def _download(item, dst):
             subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-ss', str(item.get('start', 0)), '-i', dst]
                            + (['-t', str(item['seconds'])] if 'seconds' in item else []) + ['-c', 'copy', cut], check=True)
             os.replace(cut, dst)
+    elif 'frame_of' in item:                      # a still of the game's footage for the people window when the slip had
+        src = C.U + item['frame_of'][0]           # no official photo (audit 21 Nov 2026, item 1): a bright, non-black frame
+        dur = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', src],
+                                   capture_output=True, text=True, check=True).stdout or 0)
+        at = item['frame_of'][1] if len(item['frame_of']) > 1 and item['frame_of'][1] is not None else None
+        from PIL import Image, ImageStat
+        for t in ([at] if at is not None else []) + [dur * k for k in (0.35, 0.5, 0.62, 0.25, 0.75)]:
+            subprocess.run(['ffmpeg', '-nostdin', '-y', '-v', 'error', '-ss', f'{t:.2f}', '-i', src, '-frames:v', '1',
+                            '-q:v', '2', dst], check=True)
+            lum = ImageStat.Stat(Image.open(dst).convert('L')).mean[0] / 255
+            if 0.12 <= lum <= 0.85:
+                break
     elif 'repo' in item:                          # a graphic or still committed to this repo (live/YYYY-MM-DD/...)
         src = os.path.join(ROOT, item['repo'])
         if os.path.exists(src):
@@ -1330,9 +1342,8 @@ def audio_split(job, video):
     print('render_job: audio split: ' + ('applied' if rec.get('applied') else 'not applied, audio as rendered') +
           ''.join(f'; {k} {rec[k]}' for k in ('reason', 'music_pct', 'leak_pct', 'cache', 'separate_secs', 'secs') if k in rec), flush=True)
     import softgate as SG_
-    if job.get('music_only') and not rec.get('applied') and SG_.soft(job):   # sound ladder: music stem failed, our bed (c)
-        rec['fallback'] = bed_under(job, video, f"music stem not clean: {rec.get('reason')}")
-        SG_.ladder('sound', 'reel', 'c', f"music_only: the music stem could not be separated cleanly ({rec.get('reason')}); our bed")
+    if job.get('music_only') and not rec.get('applied') and SG_.soft(job):   # music stem failed: franchise, then our bed
+        rec = sound_ladder(job, video, starts, xf, rec, f"music stem not clean: {rec.get('reason')}", tried_b=True)
         _times_note(job, 'audio_split', rec)
         return rec
     if job.get('music_only') and not rec.get('applied'):   # asked for no effects: never ship the trailer's own mix instead
@@ -1342,13 +1353,10 @@ def audio_split(job, video):
     try:
         SF.guard(job, rec, starts)
     except ValueError as e:
-        if job.get('split_fallback') != 'bed' and not SG_.soft(job):
+        if job.get('split_fallback') not in ('bed', 'ladder') and not SG_.soft(job):
             _times_note(job, 'audio_split', rec)
             raise
-        SG_.ladder('sound', 'reel', 'c', f'{e}; our bed')
-        rec['fallback'] = bed_under(job, video, f"trailer sound refused: {rec.get('reason')}")   # slips: never a hold
-        print(f'render_job: audio split fallback: our bed ({e.__class__.__name__}: the trailer mix would not match the '
-              f"picture); {rec['fallback']}", flush=True)
+        rec = sound_ladder(job, video, starts, xf, rec, f'{e}')
     try:
         led = json.load(open(reel.TIMES))
         for e in reversed(led):
@@ -1358,6 +1366,40 @@ def audio_split(job, video):
         json.dump(led, open(reel.TIMES, 'w'), indent=1)
     except (OSError, ValueError) as e:
         print(f'render_job: render-times not updated with the audio split: {e}', flush=True)
+    return rec
+
+
+def sound_ladder(job, video, starts, xf, rec, why, tried_b=False):
+    """The sound ladder (audit of 21 Nov 2026, item 2; Mohammad): sound follows the game, not the template. (a) the
+    trailer's own audio, split, speech dropped, already tried by audio_split; (b) that trailer's music stem alone under
+    the whole body (music_only: no 40% music floor, the stem must still be clean); (c) the franchise theme from the
+    library (templates/franchise.py), for a game in a known series; (d) our bed. Each step is in qc.json's ladder and
+    the render log's sound line (qc.sound_of), so the Publer label reads sound:trailer, sound:franchise or sound:bed."""
+    import softgate as SG_
+    import tracksplit as TS
+    if not tried_b and isinstance(job.get('track'), (list, tuple)):
+        rb = TS.apply(dict(job, music_only=True), video, starts, xf, C.U)
+        print('render_job: sound ladder b (music only): ' + ('applied' if rb.get('applied') else 'not applied') +
+              ''.join(f'; {k} {rb[k]}' for k in ('reason', 'music_pct', 'leak_pct', 'secs') if k in rb), flush=True)
+        if rb.get('applied'):
+            SG_.ladder('sound', 'reel', 'b', f"{why}; the trailer's music stem alone (leftover {rb.get('leak_pct')}%)")
+            print(f"render_job: sound: trailer-music (ladder b: {why})", flush=True)
+            return dict(rb, ladder='b', step_a=rec)
+        rec = dict(rec, step_b=rb)
+    try:
+        import franchise as FR
+        rc = FR.lay(job, video, why)
+    except Exception as e:                       # noqa: BLE001  a library that fails never holds the Reel
+        rc = None
+        print(f'render_job: sound ladder c (franchise) failed: {e}', flush=True)
+    if rc:
+        SG_.ladder('sound', 'reel', 'c', f"{why}; franchise theme {rc['franchise']}")
+        print(f"render_job: sound: franchise:{rc['franchise']} ({why})", flush=True)
+        return dict(rec, fallback='franchise:' + rc['franchise'], franchise=rc, ladder='c')
+    SG_.ladder('sound', 'reel', 'd', f'{why}; our bed')
+    rec = dict(rec, ladder='d')
+    rec['fallback'] = bed_under(job, video, f"trailer sound refused: {rec.get('reason')}")
+    print(f'render_job: audio split fallback: our bed ({why}); {rec["fallback"]}', flush=True)
     return rec
 
 

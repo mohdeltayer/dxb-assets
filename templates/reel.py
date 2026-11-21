@@ -38,6 +38,8 @@ import decodecheck as DC
 W, H = 1080, 1920
 L, R = G.SAFE_LEFT, G.SAFE_RIGHT
 X = 0.4                                   # crossfade between shots
+SKIN_STING = False                       # the kits' sting at the first line is off (sfx rule, 30 Oct 2026: no added
+                                         # effects over footage); with it off a kit no longer blocks the audio split (21 Nov)
 TRANSITION = 'fade'                       # the xfade between shots; a game skin swaps it for its own (advisor, 20 Oct 2026)
 SYM = Image.open(os.path.join(os.path.dirname(__file__), 'assets', 'dirham-symbol-mask.png')).convert('L')
 STILL = ('.jpg', '.jpeg', '.png', '.webp')
@@ -774,6 +776,7 @@ def person_layer(photo, name, role, path, theme='cold', box=PERSON_BOX, focus=(0
     texts = [(name, 'Bold', (46, 42, 38, 34), A.INK), (role, 'Medium', (32, 30, 28, 26), A.BODY)]
     if credit:
         texts.append((credit, 'Medium', (22, 20), A.BODY))
+    texts = [t for t in texts if str(t[0] or '').strip()]   # a plate with the name alone when no role is known (21 Nov)
     probe = ImageDraw.Draw(Image.new('L', (W, H)))
     rows = []
     for text, weight, sizes, col in texts:
@@ -2447,7 +2450,7 @@ def reel(shots, headline, label, lines, source, date, out, theme='stylized', sou
         body = _track(body, track, end, f'{tmp}/track.{ext}')
     if voice:
         body = _voice_over(body, voice, end, duck_db, f'{tmp}/voiced.{ext}')
-    if skin and lines and _has_audio(body):   # the kit's sting at the cut into the first line
+    if skin and lines and _has_audio(body) and SKIN_STING:   # the kit's sting at the cut into the first line
         body = _sting(body, sonic.sting(skin, f'{tmp}/sting.wav'), lines[0][1], f'{tmp}/sting.{ext}', draft)
     lap('audio')
     if draft:                              # no end card, no bed: the draft is for checking the cut

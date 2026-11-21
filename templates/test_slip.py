@@ -134,7 +134,7 @@ class Job(unittest.TestCase):
     def test_spare_footage_and_sound_fallback(self):
         j = S.job_from(slip(), {'file': 'a.mp4'}, 'test', theme='cold', spare=[{'file': 'b.mp4'}, {'file': 'a.mp4'}])
         self.assertEqual([x['file'] for x in j['footage']], ['a.mp4', 'b.mp4'])
-        self.assertEqual(j['split_fallback'], 'bed')
+        self.assertEqual(j['split_fallback'], 'ladder')
         import render_job as RJ
         self.assertTrue(callable(RJ.bed_under))
 
@@ -190,3 +190,43 @@ class Track(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class Kind(unittest.TestCase):
+    """Template by story kind, skin by genre (audit of 21 Nov 2026, items 1 and 3)."""
+
+    def test_numbers_card_on_footage(self):
+        s = slip()
+        s.update(headline='لعبة GTA VI تحقق 3.79 مليار دولار\nفي يومها الأول', game='Grand Theft Auto VI', kind='news',
+                 spoken='أعلنت روكستار (Rockstar Games) أن مبيعات لعبة GTA VI بلغت 3.79 مليار دولار في يومها الأول.')
+        j = S.job_from(s, {'file': 'a.mp4'}, 'test', theme='cold')
+        self.assertEqual(j['template'], 'numbers')
+        self.assertEqual(j['gfx'][0]['value'], '3.79 مليار')
+        self.assertEqual(j['shots'][1][0], j['gfx'][0]['file'])
+        self.assertEqual(j['ground_footage'][0], 'a.mp4')
+
+    def test_people_window_on_frame_zero(self):
+        s = slip()
+        s.update(headline='كاتبة قصة Clair Obscur\nتغادر استوديو اللعبة', game='Clair Obscur: Expedition 33', kind=None,
+                 spoken='غادرت جينيفر سفيدبيرغ-ين، رئيسة السرد في لعبة Clair Obscur: Expedition 33، استوديو Sandfall '
+                        'Interactive في يوليو. وقالت إنها أنهت عملها على اللعبة.')
+        j = S.job_from(s, {'file': 'a.mp4'}, 'test', theme='cold')
+        self.assertEqual(j['template'], 'people')
+        self.assertEqual(j['person'][0][1], 'جينيفر سفيدبيرغ-ين')
+        self.assertEqual(j['person'][0][3], 0.0)
+        self.assertTrue(any(x.get('frame_of') for x in j['footage']))
+
+    def test_plain_announcement_stays_trailer_and_never_fails(self):
+        s = slip()
+        s.update(kind='reveal')
+        j = S.job_from(s, {'file': 'a.mp4'}, 'test', theme='cold')
+        self.assertEqual(j['template'], 'trailer')
+        import storykind as SK
+        self.assertEqual(SK.classify({'spoken': None, 'headline': None})[0], 'trailer')
+
+    def test_skin_by_genre(self):
+        import storykind as SK
+        self.assertEqual(SK.skin_for(['rpg'], 'Persona 6')[0], 'fantasy')
+        self.assertEqual(SK.skin_for(['sci-fi'], 'The Ascent')[0], 'scifi')
+        self.assertEqual(SK.skin_for(['open world'], 'Grand Theft Auto VI')[0], 'house')
+        self.assertEqual(SK.skin_for(['rpg'], None)[0], 'house')

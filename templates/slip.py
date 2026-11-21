@@ -351,8 +351,9 @@ def story_file(slip, footage_note):
     return {
         'id': slip['id'], 'title': slip.get('title') or slip['headline'].replace('\n', ' '), 'status': 'building',
         'lane': 'digital-lounge', 'game': slip.get('game'), 'companies': slip.get('companies') or [],
-        'subject_person': None, 'genre': slip.get('genre') or [], 'kind_news': slip.get('kind') or KIND_OF_LABEL.get(slip['label'], 'reveal'),
-        'label': slip['label'], 'chip': slip['label'], 'template': 'trailer', 'sources': slip['sources'],
+        'subject_person': ({k: v for k, v in (shape(slip).get('person') or {}).items() if k in ('name', 'role')} or None)
+                          if shape(slip)['class'] == 'person' else None, 'genre': slip.get('genre') or [], 'kind_news': slip.get('kind') or KIND_OF_LABEL.get(slip['label'], 'reveal'),
+        'label': slip['label'], 'chip': slip['label'], 'template': shape(slip)['template'], 'sources': slip['sources'],
         'first_report': slip['first_report'],
         'source_type': 'primary' if any(s.get('role') == 'primary' for s in slip['sources']) else 'secondary',
         'footage': footage_note, 'beat': slip.get('beat') or 'news',
@@ -427,13 +428,46 @@ def footage_credit(slip, foot, table=None):
     return f'المصدر: {news}،\nولقطات من {who}' if news else f'المصدر: {who}'
 
 
+CARD_SECS = 4.2           # the figure card on the numbers template: the count-up (0.9 s) and the read
+PERSON_SECS = 3.5         # the people template's photo window is open on frame 0 beside the headline, then steps aside
+
+
+def shape(slip):
+    """The story kind, template and skin the server picks for this slip (audit 21 Nov 2026, items 1 and 3)."""
+    import storykind as SK
+    cls, why = SK.classify(slip)
+    skin, skin_why = SK.skin_for(slip.get('genre'), slip.get('game'), slip.get('kind'), slip.get('label'))
+    out = {'class': cls, 'template': SK.TEMPLATE_OF[cls], 'why': why, 'skin': skin, 'skin_why': skin_why}
+    if cls == 'numbers':
+        out['figure'] = SK.figure(slip)
+        if not out['figure'] or not out['figure'].get('value'):
+            out.update({'class': 'trailer', 'template': 'trailer', 'why': why + '; no figure read, so trailer'})
+    if cls == 'person':
+        out['person'] = SK.person(slip)
+        if not out['person']:
+            out.update({'class': 'trailer', 'template': 'trailer', 'why': why + '; no person read, so trailer'})
+    return out
+
+
 def job_from(slip, foot, lane='live', theme=None, spare=()):
-    """The job, ready for the render: plain news layout, server-picked shots, lines cut from the spoken paragraph."""
+    """The job, ready for the render: the template the story kind picks (numbers, people, debate or trailer), the
+    skin its genre picks, server-picked shots, lines cut from the spoken paragraph."""
     import textrules as TR
     name = _name(slip)
     f = foot['file']
+    kind = shape(slip)
     bs = beats(slip['spoken'], slip['headline'])[:MAX_BEATS]
     shots = [[f, 'auto', HOOK_SECS, None]]
+    gfx = []
+    if kind['class'] == 'numbers':              # the figure on its own card over the game's moving footage, after the hook
+        fig = kind['figure']
+        card = {'file': f'{name}-gfx-figure.png', 'kind': 'fact', 'value': fig['value']}
+        if fig.get('label'):
+            card['label'] = fig['label']
+        if fig.get('note'):
+            card['note'] = fig['note']
+        gfx.append(card)
+        shots.append([card['file'], 0.0, CARD_SECS, None])
     lines = []
     for b in bs:
         a = len(shots)
@@ -447,25 +481,47 @@ def job_from(slip, foot, lane='live', theme=None, spare=()):
     track = 'bed' if slip.get('sound') == 'bed' else [f, 0.0]
     job = {
         'name': name, 'story': slip['id'], 'footage_source': slip.get('footage'), 'kind_news': slip.get('kind') or KIND_OF_LABEL.get(slip['label'], 'reveal'),
+        'story_class': kind['class'], 'story_class_why': kind['why'], 'skin_why': kind['skin_why'],
         'built_by': 'server-slip', 'render_lane': 'server',
         'out': f'{out_dir}/{name}-reel-v1.mp4',
-        'split_fallback': 'bed',                  # a refused trailer mix ships on our bed with the reason, never a hold
+        'split_fallback': 'ladder',               # sound ladder (21 Nov): split, music only, franchise theme, our bed
         'footage': [foot] + [x for x in spare if x.get('file') and x['file'] != f], 'shots': shots, 'lines': lines,
         'credits': [[0, len(shots) - 1, credit, {'size': 40, 'band': True}]],
         'spoken': slip['spoken'], 'headline': slip['headline'], 'label': slip['label'],
-        'game': slip.get('game'), 'game_short': slip.get('game_short'),
+        'game': slip.get('game'), 'game_short': slip.get('game_short'), 'genre': slip.get('genre') or [],
         'texts': {k: slip.get(k) for k in ('instagram', 'x', 'threads') if slip.get(k)},
         'source': re.sub(r'^المصدر:\s*', '', credit).replace('\n', ' '), 'date': slip.get('date') or dt.date.today().strftime('%-d %b %Y'),
-        'theme': theme or theme_for(slip), 'style': None, 'template': 'trailer', 'skin': 'house', 'cut': False,
+        'theme': theme or theme_for(slip), 'style': None, 'template': kind['template'], 'skin': kind['skin'], 'cut': False,
         'track': track, 'track_from_first_shot': track != 'bed',
         'angle': slip.get('angle') or None,
         'decision_log': {'source': 'server slip build (adv-20261117-server-news-line-editor-model Phase 1)',
+                         'template': f"{kind['template']}: {kind['why']}", 'skin': f"{kind['skin']}: {kind['skin_why']}",
                          'footage': f'{foot.get("name") or f} from the resolver ({slip["footage"]})',
                          'shots': 'server-picked clean stretches in source order (autoshots)',
-                         'music': 'the trailer\'s own sound from the first shot (audio split per shot)' if track != 'bed'
+                         'music': 'the trailer\'s own sound from the first shot (sound ladder: split, music only, '
+                                  'franchise theme, our bed)' if track != 'bed'
                                   else 'our bed: ' + str(slip.get('bed_reason'))},
         'reel_check': reel_check(slip, foot),
     }
+    if gfx:
+        job['gfx'] = gfx
+        job['ground_footage'] = [f, 4.0, 60.0]   # the calmest stretch of the trailer behind the card, moving
+    if kind['class'] == 'person':
+        p = kind['person']
+        photo = f'{name}-person.jpg'
+        if p.get('photo'):                        # the slip's official photo (press kit, the company's page)
+            job['footage'].append({'file': photo, 'url': p['photo']})
+            ps = {'name': p['name'], 'role': p.get('role') or '', 'photo_source': p['photo']}
+        else:                                     # no licensed photo: the window shows their work, with the plate
+            job['footage'].append({'file': photo, 'frame_of': [f, None]})
+            ps = {'name': p['name'], 'role': p.get('role') or '', 'photo_source': None}
+            job['person_photo'] = 'none'
+            job['searched'] = ['the slip carried no official photo; the window shows the game\'s footage (12 Nov rule)']
+        opts = {'focus': list(p.get('focus') or (0.5, 0.4))}
+        if p.get('credit'):
+            opts['credit'] = p['credit']
+        job['person'] = [[photo, p['name'], p.get('role') or '', 0.0, PERSON_SECS, opts]]
+        job['subject_person'] = ps
     if track == 'bed':
         job['bed_reason'] = slip.get('bed_reason')
     if slip.get('rerender'):                        # a rebuilt slip after a director send-back names why (qc.py rerender)

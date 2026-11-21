@@ -26,6 +26,8 @@ FORMATS = {
     'stills':    'three or four official images filling 9:16, cut not panned (subject cut-outs on a parallax ground where the art allows, else a 2 to 4% push-in), hard cuts on the bed, 3 s each, 12 to 14 s, four lines, neighbouring images differ in kind; the last resort after every motion source (reel.stills_clips, advisor 14 Oct 2026)',
     'storybeat': 'a series episode told in short beats: key art cover with a two-word title, one official picture card per phrase over the blurred key art, one large word alone for the emotional beat, a word-by-word reveal for the twist, 4 to 6 s of full-screen footage with no text at the climax, ending on the opening line so it loops; our bed (storybeat.py builds the picture track; advisor card adv-20261027-road-to-ocarina, 27 Oct 2026)',
     'reviewscores': "review scores for one game (adv-20261104-review-scores-template, 4 Nov 2026): hook on the critics' number over the game's footage, the spread card (4 to 6 outlets, each on its own scale with its date), one high and one low verdict card (score, one liked and one disliked line, attributed, 15 words at most), the Metacritic and OpenCritic totals with the time they were read (templates/reviewscores.py fetches them; never typed by hand), a footage payoff; cards over the game's own moving footage (ground_footage), chip التقييمات",
+    'people':    "a person is the news (audit 21 Nov 2026, item 1): their official photo window with the name plate open on frame 0 beside the headline, steps aside at 3.5 s, then the story on the footage of their work, the trailer's own sound",
+    'debate':    "readers argue (family 8, audit 21 Nov 2026): hook and fact first on the game's strongest shot, one view per beat on a new image, a figure card when the debate turns on numbers, the question to the reader last",
     'list':      'N items at 2 to 2.5 s each on their own art, rank or date on a small plate, progress cue n/N, one line per item at most, mosaic cover, closing frame of all tiles: Game Pass waves, leaving-soon, line-ups, awards, top fives, show recaps, weekly releases (advisor 14 Oct 2026)',
 }
 #: `tribute` is a variant of stills (reel(..., tribute=True)): cold, wave lines off, no chip, name and dates as the headline, lines
@@ -61,6 +63,8 @@ OPENERS = {
     'stills':     'the strongest image, already pushing in, the headline over it; the first cut lands with the first line',
     'list':       'the mosaic of every item, the count in the headline; item 1 on the first cut',
     'reviewscores': "the game's strongest moving shot with the critics' number in the headline (the highest or lowest score, or the average); never a question first (hook rule, 24 Oct)",
+    'people':     "the person's photo window and name plate on frame 0 beside the headline, over their work",
+    'debate':     "the game's most recognisable shot with the striking fact in the headline; never a question first",
     'storybeat':  'the key art full screen with the two-word title and the series badge',
 }
 
@@ -71,7 +75,7 @@ def opener(fmt):
 # Two families (advisor, 14 Oct 2026): footage-led Reels run the picture the whole way; card-led Reels put our graphics,
 # figures or a portrait on screen. Besides "no third in a row", card-led Reels are at most one in three over the last six.
 FAMILIES = {
-    'footage': ('trailer', 'split', 'clipcard', 'handson', 'stills'),
+    'footage': ('trailer', 'split', 'clipcard', 'handson', 'stills', 'people', 'debate'),
     'card':    ('numbers', 'explainer', 'quote', 'retro', 'edition', 'list', 'reviewscores'),
 }
 FAMILY = {fmt: fam for fam, fmts in FAMILIES.items() for fmt in fmts}
