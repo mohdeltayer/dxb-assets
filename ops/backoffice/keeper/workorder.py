@@ -689,6 +689,24 @@ def gap_alarm(posts, now):
              'clears': 'a post: the next verified story, built on the template with its fallbacks'}]
 
 
+def names_to_review(folder='newsroom/slips', now=None, days=3):
+    """Names the server wrote in Latin because names-ar had no Arabic form (names rule correction, 21 Nov 2026), from the
+    slip results of the last `days` days: [{'name', 'story'}], each name once, for a proper Arabic form later."""
+    import glob
+    now = now or dt.datetime.now(dt.timezone.utc)
+    out, seen = [], set()
+    for f in sorted(glob.glob(os.path.join(folder, '*.json'))):
+        r = load(f, {}) or {}
+        at = t(r.get('at'))
+        if at and now - at > dt.timedelta(days=days):
+            continue
+        for n in r.get('names_to_review') or []:
+            if n.lower() not in seen:
+                seen.add(n.lower())
+                out.append({'name': n, 'story': r.get('id') or os.path.basename(f)[:-5]})
+    return out
+
+
 def build(board, now, posts, orders=None, mirror=None, digest=None, server=None, history=None, server_at=None, times=None,
           incomplete=None):
     unfin = unfinished(incomplete, now)
@@ -719,6 +737,7 @@ def build(board, now, posts, orders=None, mirror=None, digest=None, server=None,
         'next_slot': nxt,
         'caps': cp,
         'renders': recent_renders(times),
+        'names_to_review': names_to_review(now=now),
         'instructions': 'Production 2: execute this work order top to bottom. Clear the alarms first, then pick up what '
                         'the last run left unfinished, then the orders '
                         '(T0 first), then the handoffs oldest first, then the scout (fresh digest with the forced '
@@ -826,6 +845,12 @@ def markdown(wo):
                      '; slowest %s' % r['slowest'] if r['slowest'] else ''))
     else:
         L.append('none read')
+    L += ['', '## 8. Names to review (written in Latin on screen; add an Arabic form to newsroom/names-ar.md)']
+    if wo.get('names_to_review'):
+        for x in wo['names_to_review']:
+            L.append('- %s (%s)' % (x['name'], x['story']))
+    else:
+        L.append('none')
     L.append('')
     return '\n'.join(L)
 

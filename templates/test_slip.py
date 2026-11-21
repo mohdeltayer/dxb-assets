@@ -230,3 +230,22 @@ class Kind(unittest.TestCase):
         self.assertEqual(SK.skin_for(['sci-fi'], 'The Ascent')[0], 'scifi')
         self.assertEqual(SK.skin_for(['open world'], 'Grand Theft Auto VI')[0], 'house')
         self.assertEqual(SK.skin_for(['rpg'], None)[0], 'house')
+
+
+class Names(unittest.TestCase):
+    """Names rule correction (21 Nov 2026): unknown names go Latin, the game goes into the headline, never a refusal."""
+
+    def test_unknown_name_written_latin(self):
+        import textrules as T
+        self.assertEqual(T.latin_unknown_names('ذكرت صحيفة ذي\nإندبندنت (The Independent) أن', {})[0],
+                         'ذكرت صحيفة The Independent أن')
+        self.assertEqual(T.latin_unknown_names('قال المنتج كازو هيسا (Kazu Hisa Foo) إن', {})[0],
+                         'قال المنتج Kazu Hisa Foo إن')
+        self.assertEqual(T.latin_unknown_names('أكدت أتلس (Atlus) أن', {'atlus': 'أتلس'})[0], 'أكدت أتلس (Atlus) أن')
+
+    def test_game_put_in_headline(self):
+        import textrules as T
+        j = {'headline': 'داونينغ ستريت: روكستار\nقصة نجاح بريطانية', 'game': 'Grand Theft Auto VI', 'game_short': 'GTA VI'}
+        self.assertEqual(T.headline_with_game(j), 'لعبة GTA VI\nداونينغ ستريت: روكستار\nقصة نجاح بريطانية')
+        j['headline'] = 'لعبة GTA VI تحقق رقمًا'
+        self.assertIsNone(T.headline_with_game(j))
