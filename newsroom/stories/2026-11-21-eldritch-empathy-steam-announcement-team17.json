@@ -49,5 +49,25 @@
    "empathy"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/eldritch-empathy-steam-announcement-team17-reel-v1.mp4",
+  "blob": "5497caff3e67d6e1410a4e156ca0a6a7b00f84d0",
+  "at": "2026-11-21T12:48:09Z",
+  "note": "text true and clear after one send-back; remaining note: doubled credit separator, cosmetic ladder warning, readable",
+  "checklist": {
+   "job": "jobs/live/eldritch-empathy-steam-announcement-team17.json",
+   "sha256": "f2041663197fce63d98df447acac5d3af3a4b48cedf36c4c5626d838b5c58090",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "headline, captions, credit line at 10 s"
  }
 }
