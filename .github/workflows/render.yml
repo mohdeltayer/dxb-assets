@@ -171,6 +171,15 @@ jobs:
       # Trailer audio split (Mohammad, 24 Oct 2026, inbox 16:26Z: "Adopt Cocktail Fork"): only for a job on a trailer
       # track (templates/tracksplit.py). MERL Cocktail Fork, MIT code and weights, pinned; the weights live in the Actions
       # cache, never in git. A failed install leaves COCKTAIL_DIR unset, so the Reel keeps today's audio.
+      # Scan cache (audit 21 Nov 2026, item 7): a trailer's shot read, keyed by its content, reused by every later job
+      # (shotpick.SHOT_CACHE; on dxb-render-1 the runner's own ~/.cache keeps it without this step).
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/dxb-shotread
+          key: dxb-shotread-${{ matrix.job }}-${{ github.run_id }}
+          restore-keys: |
+            dxb-shotread-
+
       - name: Audio split (only for a trailer-track job)
         id: split
         run: |
@@ -279,6 +288,7 @@ jobs:
             [ $TEST = 1 ] || python -c "import json; p = 'templates/assets/render-times.json'; d = json.load(open(p)); e = json.load(open('$RUNNER_TEMP/render-time.json')); e['job_secs'] = $RENDER_SECS; e['setup_min'] = round($SETUP_SECS / 60, 2); e['story'] = '$(basename "$JOB" .json)'; d.append(e); json.dump(d, open(p, 'w'), indent=1, ensure_ascii=False)"
             looks=""; if [ $TEST = 0 ] && [ -f "$RUNNER_TEMP/look.json" ]; then python templates/looks.py add "$RUNNER_TEMP/look.json" && looks=templates/assets/look-ledger.json; fi
             if [ $TEST = 0 ] && [ -f "$RUNNER_TEMP/bed.json" ]; then python templates/sonic.py ledger-add "$RUNNER_TEMP/bed.json" && looks="$looks templates/assets/bed-ledger.json"; fi
+            if [ $TEST = 0 ] && [ -f "$RUNNER_TEMP/cover.json" ]; then python templates/variety.py add "$RUNNER_TEMP/cover.json" && looks="$looks templates/assets/cover-ledger.json"; fi
             if [ $TEST = 1 ]; then git add --sparse -f $files; else git add --sparse -f $files templates/assets/render-times.json $looks; fi
             mkdir -p jobs/done; cp "$RUNNER_TEMP/job-rendered.json" "$JOB_DONE"; git add --sparse -f "$JOB_DONE"
             if [ -f "$JOB" ]; then git rm -q "$JOB"; fi

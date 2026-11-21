@@ -109,6 +109,34 @@ def _choose(stretches, secs, target, after, dur, used=()):
     return best
 
 
+def _varied_hook(job, f, stretches, secs, dur, v0, used, got):
+    """The hook slot's start, moved to another clean stretch when it would reopen a recent opener of the same game or
+    repeat one of the last covers on the grid (templates/variety.py); the first pick when nothing else passes."""
+    try:
+        import variety
+        import cards as C
+        led = variety.load()
+        ok, why = variety.hook_ok(job, f, C.U + f, got[0], got[1], led)
+        if ok:
+            return got
+        tried = 0
+        for s in sorted(stretches, key=lambda s: abs(s['start'] - got[0]), reverse=True):
+            alt = _choose([s], secs, s['start'] + 0.3, v0, dur, used)
+            if not alt or abs(alt[0] - got[0]) < variety.OPENER_GAP:
+                continue
+            tried += 1
+            ok2, _ = variety.hook_ok(job, f, C.U + f, alt[0], alt[1], led)
+            if ok2:
+                import autofix as AF
+                AF._note('shot 0', 'variety', f'hook moved {got[0]:.2f} -> {alt[0]:.2f} s: {why}')
+                return alt
+            if tried >= 8:
+                break
+    except Exception:                            # noqa: BLE001  variety never holds a Reel
+        pass
+    return got
+
+
 def fill(job, reader=None):
     """Pick a start and focus for every slot in job['shots_auto']. reader(file) -> shotpick.pick(file) result."""
     slots = [i for i in job.get('shots_auto') or [] if i < len(job.get('shots') or [])]
@@ -165,6 +193,8 @@ def fill(job, reader=None):
             if got is None:
                 waiting.append((i, f))
                 continue
+            if i == 0:                                       # the hook is the cover: new opener, new cover (21 Nov, item 6)
+                got = _varied_hook(job, f, stretches, secs, dur, v0, u, got)
             place(i, f, got[0], got[1], secs)
             after = got[0] + secs
     left = []

@@ -702,7 +702,8 @@ def respread(job):
             cands = [v0 + 0.3 + (hi - v0 - 0.3) * k / 23 for k in range(24)]
             free = [c for c in cands if all(min(c + secs, y) - max(c, x) <= 0 for x, y in taken)]
             if free:
-                c = max(free, key=lambda c: min([abs(c - x) for x, _ in taken] or [d]))
+                free.sort(key=lambda c: -min([abs(c - x) for x, _ in taken] or [d]))
+                c = next((c for c in free[:8] if frame_clean(f, c, secs, d)[0]), free[0])   # 21 Nov: never onto black or a slate
                 best = (f, round(c, 2))
                 break
         if not best:
@@ -719,6 +720,116 @@ def respread(job):
     if out:
         print(f'render_job: respread: {len(out)} repeated shot(s) moved to free moments: {out}', flush=True)
     return out
+
+
+TAIL_SKIP = 9.0             # a trailer's last seconds are its end slate and ratings card (audit 21 Nov, item 5)
+
+
+def frame_clean(f, st, secs, dur=None):
+    """(True, '') when two frames of the stretch are a picture: not near-black, not blown out, not a flat card, not the
+    end slate, and without two or more printed words in the 9:16 window (tesseract, when installed). The cheap check the
+    blind fallbacks (auto_fallback, respread) never had: 17 extra renders on 18 to 21 Nov were shots on black fades,
+    slates, logos, end cards and text cards (audit 21 Nov 2026, item 5, cause 1)."""
+    try:
+        from PIL import Image, ImageStat
+        import io
+        path = C.U + f
+        dur = dur or _video_dur(f) or 0.0
+        if dur and st + secs > dur - TAIL_SKIP:
+            return False, 'end slate'
+        for t in (st + 0.25, st + max(0.3, secs - 0.3)):
+            out = subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-ss', f'{t:.2f}', '-i', path, '-frames:v', '1',
+                                  '-vf', 'scale=480:-2', '-f', 'image2pipe', '-vcodec', 'png', '-'],
+                                 capture_output=True, timeout=20).stdout
+            im = Image.open(io.BytesIO(out)).convert('L')
+            st_ = ImageStat.Stat(im)
+            mean, sd = st_.mean[0] / 255, st_.stddev[0] / 255
+            if mean < 0.08:
+                return False, f'near-black at {t:.1f} s'
+            if mean > 0.9:
+                return False, f'white at {t:.1f} s'
+            if sd < 0.05:
+                return False, f'flat card at {t:.1f} s'
+            if shutil.which('tesseract'):
+                w, h = im.size
+                cw = int(h * 9 / 16)
+                crop = im.crop(((w - cw) // 2, 0, (w + cw) // 2, h)).resize((cw * 2, h * 2))
+                buf = io.BytesIO()
+                crop.save(buf, 'PNG')
+                txt = subprocess.run(['tesseract', 'stdin', 'stdout', '--psm', '11'], input=buf.getvalue(),
+                                     capture_output=True, timeout=20).stdout.decode('utf-8', 'ignore')
+                words = [x for x in re.findall(r'[A-Za-z]{3,}', txt)]
+                if len(words) >= 2:
+                    return False, f'printed text at {t:.1f} s ({" ".join(words[:3])})'
+        return True, ''
+    except Exception as e:                      # noqa: BLE001  a check that cannot run never blocks the shot
+        return True, f'not checked: {e}'
+
+
+def clean_near(f, st, secs, v0, dur, taken=()):
+    """st, or the nearest start within 12 s (2 s steps, either side) whose stretch passes frame_clean and overlaps no
+    shot already placed; st itself when none does (the shot gate and the ladder still run after)."""
+    def free(c):
+        return all(c + secs <= a or c >= b for a, b in taken)
+    for off in [0] + [s * k for k in range(2, 13, 2) for s in (1, -1)]:
+        c = st + off
+        if c < v0 + 0.3 or (dur and c + secs > dur - 0.4) or not free(c):
+            continue
+        ok, why = frame_clean(f, c, secs, dur)
+        if ok:
+            if off:
+                print(f'render_job: fallback shot {f} moved {st:.2f} -> {c:.2f} s (frame check)', flush=True)
+            return c
+    return st
+
+
+SHADE_LUMA = 0.60          # mean brightness of the lines' band in the source above which a line takes the soft shade
+
+
+def auto_shade(job):
+    """A story line over bright or flat footage gets reel.line_layer's soft indigo shade, in the job, before the render
+    (audit 21 Nov 2026, item 5, cause 3: the Burning Sword price line on bright fire and Expelled from Paradise's pale
+    art each took a second render). The band read is the lines' place in the 9:16 window (57 to 77% of the height),
+    two frames per line, on the line's first shot. Lines the builder set (top, shade, showcase) are left alone."""
+    from PIL import Image, ImageStat
+    import io
+    shots_ = job.get('shots') or []
+    done = []
+    for g, (a, b, texts) in enumerate(job.get('lines') or []):
+        if not (isinstance(a, int) and a < len(shots_)):
+            continue
+        sh = shots_[a]
+        if not (isinstance(sh, list) and len(sh) > 2 and isinstance(sh[1], (int, float)) and not str(sh[0]).endswith('.png')):
+            continue
+        lum = []
+        for t in (float(sh[1]) + 0.3, float(sh[1]) + max(0.4, float(sh[2]) - 0.3)):
+            out = subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-ss', f'{t:.2f}', '-i', C.U + sh[0], '-frames:v', '1',
+                                  '-vf', 'scale=480:-2', '-f', 'image2pipe', '-vcodec', 'png', '-'],
+                                 capture_output=True, timeout=20).stdout
+            if not out:
+                continue
+            im = Image.open(io.BytesIO(out)).convert('L')
+            w, h = im.size
+            cw = int(h * 9 / 16)
+            band = im.crop(((w - cw) // 2, int(h * 0.57), (w + cw) // 2, int(h * 0.77)))
+            lum.append(ImageStat.Stat(band).mean[0] / 255)
+        if not lum or max(lum) < SHADE_LUMA:
+            continue
+        for k, x in enumerate(texts):
+            if isinstance(x, str):
+                texts[k] = x = [x, {}]
+            kw = x[1] if len(x) > 1 else {}
+            if len(x) < 2:
+                x.append(kw)
+            if any(kw.get(q) for q in ('top', 'shade')):
+                continue
+            kw['shade'] = True
+            done.append(g)
+    if done:
+        import softgate as SG_
+        SG_.ladder('text', 'reel', 'a', f'soft shade under line group(s) {sorted(set(done))}: bright footage behind them')
+        print(f'render_job: line shade: groups {sorted(set(done))} over bright footage take the soft shade', flush=True)
+    return done
 
 
 def auto_fallback(job, slots):
@@ -752,6 +863,8 @@ def auto_fallback(job, slots):
                 SG_.ladder('picture', i, 'a', f'{f} at {pick[0]} s: a proven stretch from the footage library')
                 continue
             st = v0 + 0.3 + (max(0.0, dur - v0 - 0.6 - secs)) * (k + 0.5) / len(idx)
+            st = clean_near(f, st, secs, v0, dur, taken)          # off black, flat cards and the end slate (21 Nov)
+            taken.append((st, st + secs))
             sh[1] = round(st, 2)
             for key in ('cut_ok', 'drift_ok'):
                 job.setdefault(key, []).append([f, sh[1], 'never refuse: no clean stretch read, evenly spaced fallback'])
@@ -1664,6 +1777,16 @@ def run(job, draft=False):
     t_shots = scan(job)                         # auto shots, track, shot gate: capped, on 720p proxies (20 Nov 2026)
     if SG_.soft(job):
         respread(job)                           # never the same moment twice (20 Nov 2026, Ace Combat 8: 12 shots at 3.07 s)
+    if SG_.soft(job) and job.get('kind') not in ('breaking', 'famitsu'):
+        SG_.guarded('line shade', auto_shade, job)   # a line over bright footage gets the soft shade (21 Nov, item 5)
+    if os.environ.get('RUNNER_TEMP') and job.get('kind') not in ('breaking', 'famitsu'):
+        try:                                    # the cover and opener ledger (audit 21 Nov 2026, item 6)
+            import variety
+            ve = variety.entry(job, C.U)
+            if ve:
+                json.dump(ve, open(os.path.join(os.environ['RUNNER_TEMP'], 'cover.json'), 'w'), ensure_ascii=False)
+        except Exception as e:                  # noqa: BLE001  a ledger never holds a Reel
+            print(f'render_job: cover ledger entry not written: {e}', flush=True)
     if job.get('kind') != 'breaking' and profile_of(job) != 'breaking':
         SG_.guarded('tries', tries_ladder, job)         # three renders that did not get through: 16:9 (20 Nov 2026)
         SG_.guarded('content', content_ladder, job)     # the 16:9 fallback for burnt-in text (20 Nov 2026)

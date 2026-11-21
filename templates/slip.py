@@ -84,7 +84,7 @@ MIN_SECS = 3.0
 BEAT_CHARS = 58          # one beat: two visual lines at most
 LINE_CHARS = 30          # one visual line at 54 px, conservatively (Dubai Bold; the server's font check decides)
 LINE_SIZE = 54
-MAX_BEATS = 7
+MAX_BEATS = 12           # every beat of the spoken paragraph is on screen (21 Nov: Circana's lines stopped at 7)
 PIECE_MAX = 2.8          # a beat's shot: trailers' clean stretches run about 2.6 to 3.3 s between cuts (Black Mesa, 17 Nov),
 PIECE_MIN = 2.2          # so a beat longer than that spans two or three shots and its line runs across them
 XFADE = 0.4              # each shot change takes this much off the line's time on screen
@@ -428,6 +428,13 @@ def footage_credit(slip, foot, table=None):
     return f'المصدر: {news}،\nولقطات من {who}' if news else f'المصدر: {who}'
 
 
+def _short(game):
+    """The game's name before its subtitle ("Clair Obscur: Expedition 33" -> "Clair Obscur"), for the headline rule
+    (19 Nov) when the slip gives no game_short (audit 21 Nov 2026, item 5, cause 2); None when there is no subtitle."""
+    g = str(game or '').strip()
+    return g.split(':')[0].strip() if ':' in g and len(g.split(':')[0].strip()) >= 3 else None
+
+
 CARD_SECS = 4.2           # the figure card on the numbers template: the count-up (0.9 s) and the read
 PERSON_SECS = 3.5         # the people template's photo window is open on frame 0 beside the headline, then steps aside
 
@@ -488,7 +495,7 @@ def job_from(slip, foot, lane='live', theme=None, spare=()):
         'footage': [foot] + [x for x in spare if x.get('file') and x['file'] != f], 'shots': shots, 'lines': lines,
         'credits': [[0, len(shots) - 1, credit, {'size': 40, 'band': True}]],
         'spoken': slip['spoken'], 'headline': slip['headline'], 'label': slip['label'],
-        'game': slip.get('game'), 'game_short': slip.get('game_short'), 'genre': slip.get('genre') or [],
+        'game': slip.get('game'), 'game_short': slip.get('game_short') or _short(slip.get('game')), 'genre': slip.get('genre') or [],
         'texts': {k: slip.get(k) for k in ('instagram', 'x', 'threads') if slip.get(k)},
         'source': re.sub(r'^المصدر:\s*', '', credit).replace('\n', ' '), 'date': slip.get('date') or dt.date.today().strftime('%-d %b %Y'),
         'theme': theme or theme_for(slip), 'style': None, 'template': kind['template'], 'skin': kind['skin'], 'cut': False,

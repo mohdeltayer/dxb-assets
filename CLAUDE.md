@@ -3951,3 +3951,48 @@ would reach the chip row while the headline is up enters once the headline clear
 Arabic-then-brackets naming rule for credits only; lines, headlines and captions keep it. It replaces the 20 Nov
 "shrinks to 24 px, then drops trailing words" fallback and autofix's "one size down, then two lines".
 Replay before merge (render-replay runs 44864999983 on 5dc734b and 44866148620 on c526cbf): the last 10 jobs/done, 10 of 10 pass.
+
+## Audit of 21 Nov: template by kind, sound by game, skin by genre (advisor, agreed with Mohammad, 21 Nov 2026)
+
+Findings: the server makes a Reel in about 6 minutes but Production 2 scheduled about one an hour and 22 of its last 36
+runs built nothing; of 42 Reels published since 19 Nov, 37 were trailer, 3 showcase, 1 numbers, 1 clip card, and all 42
+wore the house skin. Cause: the slip lane wrote "template": "trailer" and "skin": "house" into every job, and its sound
+fell from the split straight to our bed.
+1. Template by story kind. The slip states its kind and the server picks (`templates/storykind.py`, `slip.shape`):
+   numbers (sales, scores, charts, player counts, financial results) takes the numbers template, a figure card read from
+   the slip's text on the game's own moving footage after the hook, counting up; person (interview, quote, hire,
+   departure) takes the people template, the official photo (the slip's `person.photo`) or, with none, a frame of the
+   game's footage, in the window with the name plate on frame 0 beside the headline, stepping aside at 3.5 s; debate
+   takes the debate template (hook and fact, one view per beat, the question last); reveal, date, delay, update, deal,
+   free release and launch take trailer. Trailer is the default only for a plain announcement. A slip with no kind, or a
+   generic one (news, report, business, even a wrong "reveal"), is classified from its text, and the classifier never
+   fails a job: an unclear story is a trailer Reel. The plate never names a game the person did not make (row two is the
+   role as the story words it, or nothing). Replay check (21 Nov, slips of 19 to 21 Nov): GTA VI 3.79 billion, Ubisoft
+   H1 results and Circana October (Call of Duty) come out numbers; Sakurai, the Persona producer and the Clair Obscur
+   writer come out people. Formats `people` and `debate` are in formats.py (footage family).
+2. Sound follows the game, not the template, on a four-step ladder (`render_job.sound_ladder`): (a) this trailer's own
+   audio, split, speech dropped; (b) this trailer's music stem alone (no 40% floor; the stem must still be clean);
+   (c) the franchise theme from the franchise sound library; (d) our bed. Our bed comes first only for stories with no
+   game at all (the Famitsu chart). The qc sound line reads trailer, trailer-music, franchise:<key> or bed:<flavour>; the
+   Publer label follows (sound:trailer, sound:franchise, sound:bed).
+   Franchise sound library (Mohammad, 21 Nov): for each recurring series one or two short music stretches fans
+   recognise, taken only from that publisher's own official trailers for the series (Capcom's Mega Man trailers), never
+   soundtrack rips, fan uploads, YouTube or another company's arrangement (Super Smash Bros.). The music is split out
+   with Cocktail Fork, stored permanently in `live/sound/franchise/<key>-<n>.m4a`, and each stretch has a rights-register
+   entry in `templates/assets/franchise-sound.json` (publisher, source trailer, seconds, music share, leftover).
+   `templates/franchise.py`, built by `franchise-sound.yml`. First set: Mega Man, Zelda, Mario, Pokémon, Final Fantasy,
+   Persona, Monster Hunter, Resident Evil, Sonic, Metal Gear, GTA, Xenoblade; a series joins the second time it is in
+   the news. The stretches are picked by measured music share; whether fans recognise them is a listening call, marked
+   "unverified" in the register until someone listens.
+   Why The Ascent, Mega Man: Dual Override and Burning Sword went to our bed on 19 Nov: their trailer stretches were
+   effects-led (music 36.9%, 23.3% and 32 to 35% of the stretch, under the split's 40% floor), so the split refused;
+   with no split the shots from other moments failed the sound-sync guard, and the slip's "split_fallback": "bed" laid
+   our bed. Step (b) now runs first; the leftover was 0.8 to 2.4%, under the 5% limit.
+3. Skin by genre. There was no automatic pick: the skins pilot (20 Oct) waited for a verdict that was never recorded, the
+   slip lane hardcoded house, and a kit's sting blocked the audio split. Now `storykind.skin_for` picks per single-game
+   story: sci-fi, cyberpunk, space and mecha take `scifi`; RPG, fantasy, soulslike, MMORPG and metroidvania take
+   `fantasy`; every other genre, multi-game, business, hardware and عاجل stay house (military, horror, anime, retro, sports
+   and cosy kits are not built). The kits' first-line sting is off (`reel.SKIN_STING`, the 30 Oct rule: no added effects
+   over footage), so a kit no longer blocks the split.
+Code on branch audit-21nov, merged after the 10-job replay (render-replay, ref the branch); jobs written before the
+release keep their template and skin.
