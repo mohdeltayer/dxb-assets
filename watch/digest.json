@@ -1,168 +1,119 @@
 {
  "schema": 1,
  "file": "digest",
- "generated_at": "2026-11-21T22:52:07Z",
- "seq": 730,
+ "generated_at": "2026-11-21T23:52:05Z",
+ "seq": 731,
  "kind": "hourly",
- "since": "2026-11-21T21:52:08Z",
+ "since": "2026-11-21T22:52:07Z",
  "official": [
   {
-   "id": 20384,
-   "source": "Epic Games site (Google News)",
-   "source_kind": "gnews",
-   "title": "Tools Programmer Intern (Graphics) (R27490) - Epic Games",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBUSUJsaExpWmtIekIzRHVfQ2oxMDZOdGlVSU1EbmQzbHBVdUZrc0FoRGFWNFh5aXl3LWNhMjFITXRlZnRMSVN6bWUyT19QRjJ6c3ZrazNodXI3Vm5sQndQYjFWVkhYU3hRbURPeFRlcw?oc=5",
-   "published": "2026-11-21T18:29Z",
-   "first_seen": "2026-11-21T22:30:04Z",
-   "media": [],
+   "id": 20394,
+   "source": "Pokemon (YouTube)",
+   "source_kind": "youtube",
+   "title": "Liko, Roy, and Dot Catching Their Pokémon Teams | Seasons 1-2 | Pokémon Horizons: The Series",
+   "url": "https://www.youtube.com/watch?v=rOxsaInSriY",
+   "published": "2026-11-21T23:00Z",
+   "first_seen": "2026-11-21T23:25:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/rOxsaInSriY/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=rOxsaInSriY"
+    }
+   ],
    "breaking_source": false,
    "breaking_seq": null,
-   "digest_seq": 730
+   "digest_seq": 731
   },
   {
-   "id": 20379,
+   "id": 20393,
    "source": "Famitsu",
    "source_kind": "page",
-   "title": "セガサターンが発売された日。2D描画に秀でたセガ国内最大のヒットゲーム機。『バーチャファイター』『サクラ大戦』など魅力ある作品が数多く発売された【今日は何の日？】",
-   "url": "https://www.famitsu.com/article/202611/94238",
+   "title": "Kindleで『エデンズゼロ』『アクマゲーム』が50％ポイント還元。『Fate』シリーズ作品もお得に読める【漫画セール情報】",
+   "url": "https://www.famitsu.com/article/202611/94665",
    "published": null,
-   "first_seen": "2026-11-21T22:10:14Z",
+   "first_seen": "2026-11-21T23:10:14Z",
    "media": [],
    "breaking_source": false,
    "breaking_seq": null,
-   "digest_seq": 730
+   "digest_seq": 731
   }
  ],
  "outlets": [
   {
    "count": 3,
-   "published": "2026-11-21T03:18Z",
-   "title": "ストレージに大量のデータを書き込み続ける不具合を修正した「GeForce Hotfix Driver 621.35」をリリース",
-   "url": "https://www.4gamer.net/games/022/G002210/20261121009/",
+   "published": "2026-11-21T15:03Z",
+   "title": "GTA 6 is crashing on some PS5s with error CE-108255-1 - here's what you can try",
+   "url": "https://www.eurogamer.net/gta-6-ps5-crashing-ce-108255-1-error-fix",
    "sources": [
-    "4Gamer (JP)",
-    "Steam News (hub)",
-    "TweakTown"
+    "Eurogamer",
+    "IGN",
+    "Tbreak (Gulf)"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://www.pcgamesn.com/wp-content/sites/pcgamesn/2026/11/nvidia-geforce-driver-hotfix-released-after-concerns-of-ssd-burnout.jpg"
+     "url": "https://assetsio.gnwcdn.com/Screenshot-2026-11-21-at-14.55.00.png?width=690&quality=85&format=jpg&auto=webp"
     }
    ],
    "items": [
     {
-     "source": "4Gamer (JP)",
-     "title": "ストレージに大量のデータを書き込み続ける不具合を修正した「GeForce Hotfix Driver 621.35」をリリース",
-     "url": "https://www.4gamer.net/games/022/G002210/20261121009/",
-     "published": "2026-11-21T03:18Z"
+     "source": "Eurogamer",
+     "title": "GTA 6 is crashing on some PS5s with error CE-108255-1 - here's what you can try",
+     "url": "https://www.eurogamer.net/gta-6-ps5-crashing-ce-108255-1-error-fix",
+     "published": "2026-11-21T15:03Z"
     },
     {
-     "source": "Steam News (hub)",
-     "title": "Nvidia pushes new GeForce driver hotfix amid fears of SSD burnout",
-     "url": "https://store.steampowered.com/news/group/3693985/view/710040868515480319",
-     "published": "2026-11-21T12:56Z"
+     "source": "Tbreak (Gulf)",
+     "title": "GTA VI is reportedly crashing on some PS5 consoles",
+     "url": "https://tbreak.com/gta-6-crashes-ps5-liquid-metal-cause-unclear/",
+     "published": "2026-11-21T17:18Z"
     },
     {
-     "source": "TweakTown",
-     "title": "NVIDIA GeForce hotfix driver 621.35 fixes bug that can noticeably reduce SSD lifespans",
-     "url": "https://www.tweaktown.com/rss/click/news/114808/?c=news-mf",
-     "published": "2026-11-21T22:05Z"
+     "source": "IGN",
+     "title": "GTA 6 Players Report Crashes on PS5 With Error CE-108255-1",
+     "url": "https://www.ign.com/articles/gta-6-players-report-crashes-on-ps5-with-error-ce-108255-1",
+     "published": "2026-11-21T21:36Z"
     }
    ]
   },
   {
-   "count": 3,
-   "published": "2026-11-20T23:30Z",
-   "title": "GTA 6 Triggers Busiest Traffic Day in Comcast History",
-   "url": "https://www.ign.com/articles/gta-6-triggers-busiest-traffic-day-in-comcast-history",
+   "count": 1,
+   "published": "2026-11-21T23:40Z",
+   "title": "Wizards of the Coast to pass full AI copyright payout to D&D writers",
+   "url": "https://www.pcgamer.com/games/rpg/wizards-of-the-coast-to-pass-full-ai-copyright-payout-to-d-and-d-writers/",
    "sources": [
-    "IGN",
-    "IGN Middle East (EN)",
     "PC Gamer"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://assets-prd.ignimgs.com/2026/11/19/early-weapons1-1795092418085.jpg"
+     "url": "https://cdn.mos.cms.futurecdn.net/iVnpcXYQRt6vWcgUKCQZg7-1920-80.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://cdn.mos.cms.futurecdn.net/E4JL5DbKeweC5p7opWdx2K-1920-80.jpg"
     }
    ],
    "items": [
-    {
-     "source": "IGN",
-     "title": "GTA 6 Triggers Busiest Traffic Day in Comcast History",
-     "url": "https://www.ign.com/articles/gta-6-triggers-busiest-traffic-day-in-comcast-history",
-     "published": "2026-11-20T23:30Z"
-    },
-    {
-     "source": "IGN Middle East (EN)",
-     "title": "GTA 6 Triggers Busiest Traffic Day in Comcast History",
-     "url": "https://me.ign.com/en/grand-theft-auto-vi/249943/gta-6-triggers-busiest-traffic-day-in-comcast-history",
-     "published": "2026-11-20T23:30Z"
-    },
     {
      "source": "PC Gamer",
-     "title": "Comcast: 'At peak, GTA 6 accounted for nearly a quarter of all internet traffic'",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/comcast-at-peak-gta6-accounted-for-nearly-a-quarter-of-all-internet-traffic/",
-     "published": "2026-11-21T21:42Z"
+     "title": "Wizards of the Coast to pass full AI copyright payout to D&D writers",
+     "url": "https://www.pcgamer.com/games/rpg/wizards-of-the-coast-to-pass-full-ai-copyright-payout-to-d-and-d-writers/",
+     "published": "2026-11-21T23:40Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-21T22:18Z",
-   "title": "Star Wars' New Jedi Order Era is Officially Moving Forward",
-   "url": "https://www.polygon.com/star-wars-new-jedi-order-era-update/",
-   "sources": [
-    "Polygon"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://static0.polygonimages.com/wordpress/wp-content/uploads/chorus/uploads/chorus_asset/file/19812990/rey_finn_poe_in_star_wars_9_rise_of_skywalker_desert_wayfinder_scene.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Polygon",
-     "title": "Star Wars' New Jedi Order Era is Officially Moving Forward",
-     "url": "https://www.polygon.com/star-wars-new-jedi-order-era-update/",
-     "published": "2026-11-21T22:18Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-21T22:00Z",
-   "title": "Radio Tower Expert Can’t Believe How Realistic GTA 6′s Towers Are: ‘Oh My God Boys… Earthed Tower Legs With Saddles”",
-   "url": "https://kotaku.com/radio-tower-expert-cant-believe-how-realistic-gta-6s-towers-are-oh-my-god-boys-earthed-tower-legs-with-saddles-2000759186",
-   "sources": [
-    "Kotaku"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://kotaku.com/app/uploads/2026/11/Gta-6-tower-1280x720.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Kotaku",
-     "title": "Radio Tower Expert Can’t Believe How Realistic GTA 6′s Towers Are: ‘Oh My God Boys… Earthed Tower Legs With Saddles”",
-     "url": "https://kotaku.com/radio-tower-expert-cant-believe-how-realistic-gta-6s-towers-are-oh-my-god-boys-earthed-tower-legs-with-saddles-2000759186",
-     "published": "2026-11-21T22:00Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-21T22:00Z",
-   "title": "Account Restrictions (Nov 21)",
-   "url": "https://store.steampowered.com/news/app/3393110/view/675137971401261621",
+   "published": "2026-11-21T23:36Z",
+   "title": "Resident Evil Meets Dave The Diver In Grimy New Horror Game",
+   "url": "https://store.steampowered.com/news/group/38666666/view/719048067771270111",
    "sources": [
     "Steam News (hub)"
    ],
@@ -170,23 +121,47 @@
    "media": [
     {
      "type": "image",
-     "url": "https://clan.akamai.steamstatic.com/images/46074831/bdbc6a516755d3ba1d4f644f5254f69cee2f972f.png"
+     "url": "https://static0.srcdn.com/wordpress/wp-content/uploads/2026/11/dreadmoor-ship-getting-attacked-by-a-tentacle-from-under-the-water.jpg"
     }
    ],
    "items": [
     {
      "source": "Steam News (hub)",
-     "title": "Account Restrictions (Nov 21)",
-     "url": "https://store.steampowered.com/news/app/3393110/view/675137971401261621",
-     "published": "2026-11-21T22:00Z"
+     "title": "Resident Evil Meets Dave The Diver In Grimy New Horror Game",
+     "url": "https://store.steampowered.com/news/group/38666666/view/719048067771270111",
+     "published": "2026-11-21T23:36Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-21T22:00Z",
-   "title": "クレーンゲームの歴史を感じる貴重な実機から、子ども向けなのに妙に攻めたドライブゲームまで！TAITOブースをレポート【アミューズメント エキスポ2026】",
-   "url": "http://www.gamespark.jp/article/2026/11/22/175171.html",
+   "published": "2026-11-21T23:34Z",
+   "title": "New Dungeons & Dragons Live-Action Series Officially Replaces Netflix's Forgotten Realms",
+   "url": "https://www.polygon.com/dungeons-and-dragons-ravenloft-tv-show-netflix/",
+   "sources": [
+    "Polygon"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://static0.polygonimages.com/wordpress/wp-content/uploads/2026/03/ravenloft-coverart_annapodedworna-3.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Polygon",
+     "title": "New Dungeons & Dragons Live-Action Series Officially Replaces Netflix's Forgotten Realms",
+     "url": "https://www.polygon.com/dungeons-and-dragons-ravenloft-tv-show-netflix/",
+     "published": "2026-11-21T23:34Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-21T23:00Z",
+   "title": "敵が2人いるガンダム対戦ゲー、忙しすぎる！『機動戦士ガンダム アーセナルコマンダー』試遊で味わった三つ巴の駆け引き【アミューズメント エキスポ2026】",
+   "url": "http://www.gamespark.jp/article/2026/11/22/175172.html",
    "sources": [
     "Game*Spark (JP)"
    ],
@@ -195,9 +170,85 @@
    "items": [
     {
      "source": "Game*Spark (JP)",
-     "title": "クレーンゲームの歴史を感じる貴重な実機から、子ども向けなのに妙に攻めたドライブゲームまで！TAITOブースをレポート【アミューズメント エキスポ2026】",
-     "url": "http://www.gamespark.jp/article/2026/11/22/175171.html",
-     "published": "2026-11-21T22:00Z"
+     "title": "敵が2人いるガンダム対戦ゲー、忙しすぎる！『機動戦士ガンダム アーセナルコマンダー』試遊で味わった三つ巴の駆け引き【アミューズメント エキスポ2026】",
+     "url": "http://www.gamespark.jp/article/2026/11/22/175172.html",
+     "published": "2026-11-21T23:00Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-21T22:54Z",
+   "title": "Shanghai Police Bust Up Bootleg Tifa Lockhart Toy Operation",
+   "url": "https://kotaku.com/shanghai-police-bust-up-bootleg-tifa-lockhart-toy-operation-2000759206",
+   "sources": [
+    "Kotaku"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://kotaku.com/app/uploads/2026/11/tifaff7rebirth.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Kotaku",
+     "title": "Shanghai Police Bust Up Bootleg Tifa Lockhart Toy Operation",
+     "url": "https://kotaku.com/shanghai-police-bust-up-bootleg-tifa-lockhart-toy-operation-2000759206",
+     "published": "2026-11-21T22:54Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-21T22:50Z",
+   "title": "Alt Video is a digital, faux Blockbuster video store that you can fill with movies from your Letterboxd watchlist and Plex server",
+   "url": "https://www.rockpapershotgun.com/alt-video-is-a-digital-faux-blockbuster-video-store-that-you-can-fill-with-movies-from-your-letterboxd-watchlist-and-plex-server",
+   "sources": [
+    "Rock Paper Shotgun"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://assetsio.gnwcdn.com/alt-video.jpg?width=690&quality=85&format=jpg&auto=webp"
+    }
+   ],
+   "items": [
+    {
+     "source": "Rock Paper Shotgun",
+     "title": "Alt Video is a digital, faux Blockbuster video store that you can fill with movies from your Letterboxd watchlist and Plex server",
+     "url": "https://www.rockpapershotgun.com/alt-video-is-a-digital-faux-blockbuster-video-store-that-you-can-fill-with-movies-from-your-letterboxd-watchlist-and-plex-server",
+     "published": "2026-11-21T22:50Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-21T21:30Z",
+   "title": "Pokken Tournament producer reveals the one Pokemon he wanted to include, but wasn’t able to",
+   "url": "https://nintendoeverything.com/pokken-tournament-dev-reveals-the-one-pokemon-that-the-team-wasnt-able-to-include/",
+   "sources": [
+    "Nintendo Everything"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://nintendoeverything.com/wp-content/uploads/Pokken-Tournament-Pangoro-concept-150x85.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://nintendoeverything.com/wp-content/uploads/Pokken-Tournament-Pangoro-concept.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Nintendo Everything",
+     "title": "Pokken Tournament producer reveals the one Pokemon he wanted to include, but wasn’t able to",
+     "url": "https://nintendoeverything.com/pokken-tournament-dev-reveals-the-one-pokemon-that-the-team-wasnt-able-to-include/",
+     "published": "2026-11-21T21:30Z"
     }
    ]
   }
@@ -233,9 +284,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-21T22:50:14Z",
+  "last_poll_at": "2026-11-21T23:50:04Z",
   "sources_enabled": 101,
-  "sources_ok": 99,
+  "sources_ok": 100,
   "sources_failing": 1,
   "failed": [
    "True Gaming (AR) (HTTP 526, 3x)"
