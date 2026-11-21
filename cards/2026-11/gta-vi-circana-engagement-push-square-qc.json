@@ -1,0 +1,428 @@
+{
+ "name": "gta-vi-circana-engagement-push-square",
+ "out": "cards/2026-11/gta-vi-circana-engagement-push-square-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "build gate",
+   "detail": "kind_news report: a label (the chip تقرير), not a kind of story (adv-20261111-person-stories-gate): a report about one game takes the kind of what happened (date, delay, reveal, sales, update, people, quote and so on) with \"label\": \"تقرير\""
+  },
+  {
+   "stage": "shot scan",
+   "detail": "footage scan stopped at its cap (180 s); shots as written, automatic slots from the footage library or evenly spaced"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 72 px on 3 lines (cut it to a few words next time): لعب 61 بالمئة من لاعبي PS5 النشطين في أمريكا\nلعبة GTA VI يوم الإطلاق"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 72 px on 3 lines (cut it to a few words next time): لعب 61 بالمئة من لاعبي PS5 النشطين في أمريكا\nلعبة GTA VI يوم الإطلاق"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 57.15 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 11.92 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 18.5 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 28.7 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 36.55 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 38.8 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 42.8 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 61.22 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 68.54 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 82.35 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch for 10 slot(s)"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 57.15 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 11.92 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 18.5 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 28.7 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 36.55 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 38.8 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 42.8 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 61.22 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 68.54 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 82.35 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "scan cap: 10 automatic slot(s) from the library or evenly spaced"
+  }
+ ],
+ "job_to_pass_min": 6.9,
+ "at": "2026-11-21T05:16:15Z",
+ "findings": [],
+ "notes": [
+  "length 20.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 88.8; leak_pct 0.1; cache {'hit': 0, 'miss': 4}; separate_secs 11.1; secs 15.9",
+  "render_job: lifeless: {\"score\": 18.5, \"still_share\": 0.141, \"longest_still\": 1.5, \"cuts_per_10s\": 1.51, \"held_under_text\": 0.0, \"secs\": 19.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 44 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)",
+  "estimate: headline: 23 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "credit 1",
+   "rule": "credit_width",
+   "what": "set one line at 40 px (was 40 px, too wide for the safe zone)",
+   "before": {
+    "text": "المصدر: بوش سكوير (Push Square)،\nولقطات من روكستار (Rockstar Games)",
+    "size": 40
+   },
+   "after": {
+    "text": "المصدر: Push Square · اللقطات: Rockstar Games",
+    "size": 40
+   }
+  }
+ ],
+ "job_sha": "63a9170061018f146c1f40fc828441dd62e793fc",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 2.0,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/gta-vi-circana-engagement-push-square-look-1.jpg",
+  "cards/2026-11/gta-vi-circana-engagement-push-square-look-2.jpg",
+  "cards/2026-11/gta-vi-circana-engagement-push-square-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 24.9,
+  "files": {
+   "gta6-launch-master.mp4": {
+    "secs": 24.9,
+    "cached": false,
+    "stages": {
+     "decode": 10.9,
+     "autofocus": 23.8,
+     "ocr": 23.8,
+     "smear": 24.7,
+     "scenes": 24.9
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/gta-vi-circana-engagement-push-square.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.18,
+  "fetch": 0.07,
+  "shots": 3.05,
+  "checks": 0.16,
+  "render": 1.98,
+  "after": 0.86,
+  "job": 6.13
+ },
+ "job_after_autofix": {
+  "name": "gta-vi-circana-engagement-push-square",
+  "story": "2026-11-21-gta-vi-circana-engagement-push-square",
+  "footage_source": "https://www.playstation.com/en-ae/games/grand-theft-auto-vi/",
+  "kind_news": "report",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/gta-vi-circana-engagement-push-square-reel-v1.mp4",
+  "split_fallback": "bed",
+  "footage": [
+   {
+    "file": "gta6-launch-master.mp4",
+    "note": "Rockstar GTAVI_Launch_Trailer.mp4 (3840x2160, 70 Mbps) scaled to 1920x1080 crf 17; same timeline, so the shot times hold",
+    "repo": "live/2026-11-20/gta6-launch-1080.mp4"
+   }
+  ],
+  "shots": [
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    3.8,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.2,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "وبلغت النسبة 56 بالمئة\nبين لاعبي",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "إكس بوكس النشطين حول العالم",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    7,
+    [
+     [
+      "وأمضى لاعبو PS5 في اللعبة 513\nدقيقة في المتوسط ذلك اليوم،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    8,
+    9,
+    [
+     [
+      "مقابل 494 دقيقة\nللاعبي إكس بوكس",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    9,
+    "المصدر: Push Square · اللقطات: Rockstar Games",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع بوش سكوير (Push Square) نقلًا عن مات بيسكاتيلا، المحلل في سيركانا (Circana)، أن 61 بالمئة من لاعبي PS5 النشطين في أمريكا لعبوا GTA VI يوم 19 نوفمبر. وبلغت النسبة 56 بالمئة بين لاعبي إكس بوكس النشطين حول العالم. وأمضى لاعبو PS5 في اللعبة 513 دقيقة في المتوسط ذلك اليوم، مقابل 494 دقيقة للاعبي إكس بوكس.",
+  "headline": "لعب 61 بالمئة من لاعبي PS5 النشطين في أمريكا\nلعبة GTA VI يوم الإطلاق",
+  "label": "تقرير",
+  "game": "Grand Theft Auto VI",
+  "game_short": "GTA VI",
+  "texts": {
+   "instagram": "ذكر موقع بوش سكوير (Push Square) نقلًا عن مات بيسكاتيلا، المحلل في سيركانا (Circana)، أن 61 بالمئة من لاعبي PS5 النشطين في أمريكا يوم 19 نوفمبر لعبوا GTA VI، وأن النسبة بلغت 56 بالمئة بين لاعبي إكس بوكس النشطين حول العالم.\n\nوأمضى لاعبو PS5 في اللعبة 513 دقيقة في المتوسط ذلك اليوم، مقابل 494 دقيقة للاعبي إكس بوكس.\n\nالأرقام من أداة قياس تفاعل اللاعبين لدى سيركانا، كما نقلها الموقع.\n\nاللقطات من صفحة اللعبة على PlayStation.\n\nالمصدر: بوش سكوير (Push Square).\n\n#ألعاب #أخبار_الألعاب #GTAVI #روكستار",
+   "x": "تقرير: 61 بالمئة من لاعبي PS5 النشطين في أمريكا لعبوا GTA VI يوم 19 نوفمبر، و56 بالمئة من لاعبي إكس بوكس النشطين حول العالم، بمتوسط 513 دقيقة على PS5 و494 على إكس بوكس، بحسب محلل سيركانا (Circana). المصدر: بوش سكوير (Push Square).",
+   "threads": "تقرير: 61 بالمئة من لاعبي PS5 النشطين في أمريكا لعبوا GTA VI يوم 19 نوفمبر، و56 بالمئة من لاعبي إكس بوكس النشطين حول العالم. ومتوسط اللعب 513 دقيقة على PS5 و494 دقيقة على إكس بوكس، بحسب محلل سيركانا (Circana).\n\nالمصدر: بوش سكوير (Push Square)"
+  },
+  "source": "بوش سكوير (Push Square)، ولقطات من روكستار (Rockstar Games)",
+  "date": "21 Nov 2026",
+  "theme": "cold",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "gta6-launch-master.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "First engagement data after the GTA VI launch: Circana's tracker shows most active PS5 players in the US played it on day one, for about 8.5 hours on average.",
+   "what_it_means_here": "Shows how far GTA VI pulled players on launch day, on top of the sales figures already reported."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "footage": "gta6-launch-master.mp4 from the resolver (https://www.playstation.com/en-ae/games/grand-theft-auto-vi/)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (audio split per shot)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Push Square, Circana analyst post, 61% of US PS5 players played GTA VI on Nov 19 (https://www.pushsquare.com/news/2026/11/61percent-of-all-us-ps5-owners-played-gta-6-on-launch-day-averaging-8-hours); first report: Push Square, from a Circana analyst post, 20 Nov 2026 17:40Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam None from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "shots_auto": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ }
+}
