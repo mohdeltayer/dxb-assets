@@ -93,15 +93,13 @@
   "verdict": "PASS",
   "out": "cards/2026-11/gta-vi-user-score-debate-reel-v4.mp4",
   "blob": "04d60490b1bc318df2bc9012eaab3df2148c9e27",
-  "at": "2026-11-21T09:01:12Z",
+  "at": "2026-11-21T09:02:00Z",
   "note": "True and clear: Metacritic live 09:0xZ user 5.5 (42,139 ratings, drift from 41,560 at the stated 12:46 read), critics 99; Notebookcheck/Insider Gaming/TweakTown claims attributed; objections kept general; no genre jargon; credit one line",
   "checklist": {
-   "job": "jobs/done/gta-vi-user-score-debate.json",
+   "job": "jobs/live/gta-vi-user-score-debate.json",
    "sha256": "679d4d6d94bbb21d58e06091f6195705c9017f82f25068e4440afbb038cb9205",
-   "ok": false,
-   "problems": [
-    "render_lane server: the job belongs in jobs/live/ (dispatch render-live.yml), not jobs/done/gta-vi-user-score-debate.json"
-   ],
+   "ok": true,
+   "problems": [],
    "template": "clipcard",
    "layout": null,
    "evergreen": false,
