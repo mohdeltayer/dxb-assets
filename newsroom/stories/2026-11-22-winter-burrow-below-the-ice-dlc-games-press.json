@@ -48,5 +48,25 @@
    "burrow"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/winter-burrow-below-the-ice-dlc-games-press-reel-v1.mp4",
+  "blob": "5bc46afd2a97ccc06c31514b6d0a91a1b55048bc",
+  "at": "2026-11-22T20:30:00Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/winter-burrow-below-the-ice-dlc-games-press.json",
+   "sha256": "a7b0491e2058b8b7cb7ac8511244772054110e774268c3fa366cbd2242aa0084",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "three vertical frames of top-down snowy-forest gameplay under the chip and headline, each with its own Arabic line and the Games Press credit"
  }
 }
