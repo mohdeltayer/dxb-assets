@@ -8,8 +8,9 @@
   "Rockstar Games"
  ],
  "subject_person": {
-  "name": "رئيسة الهيئة لارا الخطيب (Lara Al-Khatib)",
-  "role": ""
+  "name": "Lara Al-Khatib",
+  "role": "chairperson of Jordan's Telecommunications Regulatory Commission",
+  "photo_source": "none: name card in the window, no photo used"
  },
  "genre": [
   "action"
@@ -72,5 +73,25 @@
    "2026-11-21-gta-vi-user-score-debate",
    "2026-11-22-gta-vi-album-spotify-record-push-square"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/gta-vi-jordan-trc-block-roya-news-reel-v1.mp4",
+  "blob": "8da942fae880eb19d22782267621d60c077d5d5f",
+  "at": "2026-11-22T16:31:45Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/gta-vi-jordan-trc-block-roya-news.json",
+   "sha256": "804add95da23657562941a47a653696975a9f9da1893a76ced045c762f6125f8",
+   "ok": true,
+   "problems": [],
+   "template": "people",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": null,
+  "looked": "runner render, no look frames: strip/sheet/dense show official GTA VI trailer footage with a mature-rating card, name card for the TRC chair, readable captions, intact video"
  }
 }
