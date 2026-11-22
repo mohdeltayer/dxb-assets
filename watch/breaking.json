@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-22T11:52:05Z",
- "seq": 743,
+ "generated_at": "2026-11-22T12:52:08Z",
+ "seq": 744,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -22,34 +22,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 720
-  },
-  {
-   "id": 20089,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Arknights: Endfield - Meeting You in the World o'Shrooms Version Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=qv2ve1vmULY",
-   "published": "2026-11-21T12:00Z",
-   "first_seen": "2026-11-21T12:10:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/qv2ve1vmULY/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=qv2ve1vmULY"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 718
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-22T11:50:04Z",
+  "last_poll_at": "2026-11-22T12:50:14Z",
   "sources_enabled": 101,
-  "sources_ok": 101,
+  "sources_ok": 100,
   "sources_failing": 0,
   "failed": []
  }
