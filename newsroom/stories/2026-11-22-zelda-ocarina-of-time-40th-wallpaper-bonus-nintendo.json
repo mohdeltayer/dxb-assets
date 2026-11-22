@@ -66,5 +66,25 @@
    "ocarina-of-time-5-2-million-20261111",
    "ocarina-of-time-switch-2-review-scores-nov-6"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/zelda-ocarina-of-time-40th-wallpaper-bonus-nintendo-reel-v1.mp4",
+  "blob": "8d5adaccf7216e5c3d7324f5f1c6eb5f570c5b00",
+  "at": "2026-11-22T18:23:18Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/zelda-ocarina-of-time-40th-wallpaper-bonus-nintendo.json",
+   "sha256": "482d282b8ccbaff20d1dfc27710f83d71cd11664122300ac6e04334cc2876928",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": null,
+  "looked": "The look-1/2/3 files do not exist on disk, so I viewed the strip and sheet frames instead: the title card shows the headline with the رسمي chip, then clean Arabic captions in order (buy digital copy, before 23 Nov 11:59 PM Pacific, digital wallpaper, 40 years, Switch 2 exclusive 59.99 dollars, 24.9 GB) with the source band, all readable."
  }
 }
