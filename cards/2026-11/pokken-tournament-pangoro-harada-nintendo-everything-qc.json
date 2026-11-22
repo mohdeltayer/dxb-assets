@@ -1,6 +1,6 @@
 {
  "name": "pokken-tournament-pangoro-harada-nintendo-everything",
- "out": "cards/2026-11/pokken-tournament-pangoro-harada-nintendo-everything-reel-v1.mp4",
+ "out": "cards/2026-11/pokken-tournament-pangoro-harada-nintendo-everything-reel-v2.mp4",
  "verdict": "pass",
  "warnings": [
   {
@@ -70,6 +70,10 @@
   {
    "stage": "rows",
    "detail": "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4: only 720 rows of picture (bars cut), enlarged 2.7x; find a 4K or unletterboxed copy, or name the copies checked in lowres_ok (\"IGN, Nintendo store, publisher press site, Steam: none above 720p\")"
+  },
+  {
+   "stage": "smear",
+   "detail": "ValueError: /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/pokken-tournament-pangoro-harada-nintendo-everything-reel-v2.mp4: blocky smear at 23.97 to 24.40 s (peak 17.8); look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]"
   }
  ],
  "ladder": [
@@ -77,50 +81,62 @@
    "kind": "picture",
    "slot": 10,
    "step": "a",
-   "why": "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 17.5 s for 2.28 s: no clean stretch read, evenly spaced crop"
+   "why": "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 88.36 s: a proven stretch from the footage library"
   },
   {
    "kind": "picture",
    "slot": 11,
    "step": "a",
-   "why": "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 51.93 s for 2.2 s: no clean stretch read, evenly spaced crop"
+   "why": "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 51.93 s: a proven stretch from the footage library"
   },
   {
    "kind": "picture",
    "slot": 12,
    "step": "a",
-   "why": "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 88.36 s for 2.2 s: no clean stretch read, evenly spaced crop"
+   "why": "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 108.78 s: a proven stretch from the footage library"
   },
   {
    "kind": "picture",
    "slot": 13,
    "step": "a",
-   "why": "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 108.78 s for 2.2 s: no clean stretch read, evenly spaced crop"
+   "why": "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 149.2 s: a proven stretch from the footage library"
   },
   {
    "kind": "picture",
    "slot": 14,
    "step": "a",
-   "why": "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 149.2 s for 2.2 s: no clean stretch read, evenly spaced crop"
+   "why": "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 155.2 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 66.66 s: moved off a repeated moment (respread)"
   },
   {
    "kind": "text",
    "slot": "reel",
    "step": "a",
-   "why": "soft shade under line group(s) [0, 2, 4, 6]: bright footage behind them"
+   "why": "soft shade under line group(s) [0, 2, 4]: bright footage behind them"
+  },
+  {
+   "kind": "text",
+   "slot": "line 6",
+   "step": "a",
+   "why": "2.4 s of 2.9 s: shot 12 lengthened by 0.66 s"
   },
   {
    "kind": "sound",
    "slot": "reel",
    "step": "b",
-   "why": "audio split not applied (music only 14.6% of the track (< 40.0%)) on a trailer track under 14 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our "
+   "why": "audio split not applied (music only 14.7% of the track (< 40.0%)) on a trailer track under 14 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our "
   }
  ],
- "job_to_pass_min": 8.1,
- "at": "2026-11-22T00:20:03Z",
+ "job_to_pass_min": 7.2,
+ "at": "2026-11-22T04:41:50Z",
  "findings": [],
  "notes": [
-  "length 29.2 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "length 28.9 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
   "source quality: pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4: low bitrate 2.3 Mbps (floor 3.0 Mbps for 1280x720 at 30 fps) (lowbit)",
   "source quality: shot 0 pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 10.01 for 3.8 s, enlarged 2.67x: block ratio median 1.15, peak 1.23 (ok)",
   "source quality: shot 1 pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 37.74 for 2.2 s, enlarged 2.67x: block ratio median 1.12, peak 1.16 (ok)",
@@ -132,14 +148,13 @@
   "source quality: shot 7 pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 30.29 for 2.2 s, enlarged 2.67x: block ratio median 1.11, peak 1.13 (ok)",
   "source quality: shot 8 pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 26.69 for 2.2 s, enlarged 2.67x: block ratio median 1.08, peak 1.15 (ok)",
   "source quality: shot 9 pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 23.61 for 2.28 s, enlarged 2.67x: block ratio median 1.03, peak 1.06 (ok)",
-  "source quality: shot 10 pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 17.5 for 2.28 s, enlarged 2.67x: block ratio median 1.09, peak 1.11 (ok)",
-  "source quality: shot 11 pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 51.93 for 2.2 s, enlarged 2.67x: block ratio median 1.04, peak 1.28 (ok)",
-  "source quality: shot 12 pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 88.36 for 2.2 s, enlarged 2.67x: block ratio median 1.15, peak 1.2 (ok)",
-  "source quality: shot 13 pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 108.78 for 2.2 s, enlarged 2.67x: block ratio median 1.34, peak 1.48 (ok)",
-  "source quality: shot 14 pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 149.2 for 2.2 s, enlarged 2.67x: block ratio median 1.09, peak 1.12 (ok)",
-  "render_job: audio split: not applied, audio as rendered; reason music only 14.6% of the track (< 40.0%); music_pct 14.6; leak_pct 0.9; cache {'hit': 0, 'miss': 9}; separate_secs 10.1; secs 14.2",
-  "render_job: lifeless: {\"score\": 4.9, \"still_share\": 0.055, \"longest_still\": 0.5, \"cuts_per_10s\": 8.25, \"held_under_text\": 0.021, \"secs\": 29.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
-  "estimate: headline: 25 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+  "source quality: shot 10 pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 88.36 for 2.28 s, enlarged 2.67x: block ratio median 1.15, peak 1.21 (ok)",
+  "source quality: shot 11 pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 51.93 for 1.22 s, enlarged 2.67x: block ratio median 1.03, peak 1.04 (ok)",
+  "source quality: shot 12 pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 66.66 for 2.86 s, enlarged 2.67x: block ratio median 1.03, peak 1.08 (ok)",
+  "source quality: shot 13 pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 149.2 for 2.2 s, enlarged 2.67x: block ratio median 1.09, peak 1.12 (ok)",
+  "source quality: shot 14 pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 155.2 for 2.2 s, enlarged 2.67x: block ratio median 0.85, peak 0.86 (ok)",
+  "render_job: audio split: not applied, audio as rendered; reason music only 14.7% of the track (< 40.0%); music_pct 14.7; leak_pct 0.9; cache {'hit': 3, 'miss': 6}; separate_secs 5.8; secs 9.7",
+  "render_job: lifeless: {\"score\": 9.6, \"still_share\": 0.118, \"longest_still\": 1.0, \"cuts_per_10s\": 6.25, \"held_under_text\": 0.007, \"secs\": 28.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [
   {
@@ -193,6 +208,97 @@
    "what": "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4 at 23.61 s for 2.3 s, focus 0.188"
   },
   {
+   "where": "shot 11",
+   "rule": "shot_timing",
+   "what": "trimmed to 1.22 s, the clean part before the scene cut at 53.19 s",
+   "before": [
+    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
+    51.93,
+    2.2,
+    [
+     [
+      0.0,
+      0.244
+     ],
+     [
+      1.256,
+      0.415
+     ]
+    ]
+   ],
+   "after": [
+    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
+    51.93,
+    1.22,
+    [
+     [
+      0.0,
+      0.244
+     ],
+     [
+      1.256,
+      0.415
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 11",
+   "rule": "fill",
+   "what": "0.98 s shorter in all: no neighbouring shot stays clean with the time"
+  },
+  {
+   "where": "shot 12",
+   "rule": "shot_timing",
+   "what": "moved from 108.78 to 111.78 s, the nearest clean start of the same 2.20 s",
+   "before": [
+    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
+    108.78,
+    2.2,
+    [
+     [
+      0.0,
+      0.023
+     ],
+     [
+      0.529,
+      0.488
+     ],
+     [
+      1.03,
+      0.594
+     ],
+     [
+      1.931,
+      0.412
+     ]
+    ]
+   ],
+   "after": [
+    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
+    111.78,
+    2.2,
+    [
+     [
+      0.0,
+      0.023
+     ],
+     [
+      0.529,
+      0.488
+     ],
+     [
+      1.03,
+      0.594
+     ],
+     [
+      1.931,
+      0.412
+     ]
+    ]
+   ]
+  },
+  {
    "where": "shot 4",
    "rule": "subject_cut",
    "what": "focus [[0.0, 0.539]] to 0.81: the subject stays inside the window",
@@ -237,8 +343,8 @@
    ]
   }
  ],
- "job_sha": "3b4b32dc2c5f95cad523ad6237a3d02955b490de",
- "dispatches": 2,
+ "job_sha": "b3d928ac62867bae101d5c1d44dc10780a714fd9",
+ "dispatches": 4,
  "source_summary": {
   "min_height": 720,
   "max_zoom": 2.67,
@@ -252,13 +358,13 @@
   "cards/2026-11/pokken-tournament-pangoro-harada-nintendo-everything-look-3.jpg"
  ],
  "person_shown": true,
- "sound": "trailer-music (ladder b: audio split not applied (music only 14.6% of the track (< 40.0%)) on a trailer track under 14 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
+ "sound": "trailer-music (ladder b: audio split not applied (music only 14.7% of the track (< 40.0%)) on a trailer track under 14 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
  "shot_read": {
-  "secs": 73.1,
+  "secs": 0.2,
   "files": {
    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4": {
-    "secs": 40.5,
-    "cached": false,
+    "secs": 0.0,
+    "cached": true,
     "stages": {
      "decode": 13.5,
      "autofocus": 40.1,
@@ -269,8 +375,8 @@
     "incomplete": null
    },
    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-1.mp4": {
-    "secs": 20.2,
-    "cached": false,
+    "secs": 0.0,
+    "cached": true,
     "stages": {
      "decode": 4.5,
      "autofocus": 19.7,
@@ -281,8 +387,8 @@
     "incomplete": null
    },
    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-2.mp4": {
-    "secs": 12.1,
-    "cached": false,
+    "secs": 0.0,
+    "cached": true,
     "stages": {
      "decode": 2.6,
      "autofocus": 11.7,
@@ -298,13 +404,12 @@
  "stage_minutes": {
   "queue": 0.03,
   "setup": 0.18,
-  "fetch": 0.14,
-  "shots": 1.44,
-  "checks": 1.78,
+  "fetch": 0.13,
+  "shots": 0.98,
+  "checks": 1.31,
   "render": 2.87,
-  "after": 1.09,
-  "upload": 0.08,
-  "job": 7.33
+  "after": 1.08,
+  "job": 6.38
  },
  "job_after_autofix": {
   "name": "pokken-tournament-pangoro-harada-nintendo-everything",
@@ -316,7 +421,7 @@
   "skin_why": "genre fighting: its kit is not built yet (skins.KITS scifi, fantasy)",
   "built_by": "server-slip",
   "render_lane": "server",
-  "out": "cards/2026-11/pokken-tournament-pangoro-harada-nintendo-everything-reel-v1.mp4",
+  "out": "cards/2026-11/pokken-tournament-pangoro-harada-nintendo-everything-reel-v2.mp4",
   "split_fallback": "ladder",
   "footage": [
    {
@@ -333,10 +438,7 @@
    },
    {
     "file": "pokken-tournament-pangoro-harada-nintendo-everything-person.jpg",
-    "frame_of": [
-     "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
-     null
-    ]
+    "repo": "live/people/harada.jpg"
    }
   ],
   "shots": [
@@ -442,34 +544,8 @@
    ],
    [
     "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
-    17.5,
-    2.28,
-    [
-     [
-      0.0,
-      0.617
-     ]
-    ]
-   ],
-   [
-    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
-    51.93,
-    2.2,
-    [
-     [
-      0.0,
-      0.244
-     ],
-     [
-      1.256,
-      0.415
-     ]
-    ]
-   ],
-   [
-    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
     88.36,
-    2.2,
+    2.28,
     [
      [
       0.0,
@@ -483,7 +559,22 @@
    ],
    [
     "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
-    108.78,
+    51.93,
+    1.22,
+    [
+     [
+      0.0,
+      0.244
+     ],
+     [
+      1.256,
+      0.415
+     ]
+    ]
+   ],
+   [
+    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
+    111.78,
     2.2,
     [
      [
@@ -516,6 +607,17 @@
      [
       0.516,
       0.506
+     ]
+    ]
+   ],
+   [
+    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
+    155.2,
+    2.2,
+    [
+     [
+      0.0,
+      0.259
      ]
     ]
    ]
@@ -618,7 +720,7 @@
    ]
   ],
   "spoken": "ذكر موقع نينتيندو إفريثينغ (Nintendo Everything) أن منتج لعبة Pokken Tournament، Katsuhiro Harada، قال إن Pangoro هو الوحش الوحيد الذي أراد إضافته إلى اللعبة ولم يتمكن من ذلك. وقال إنه أحب تصميمه وشبهه بزي مدرسي.",
-  "headline": "تقرير: Pangoro كان الغائب\nعن Pokken Tournament",
+  "headline": "الوحش Pangoro غاب\nعن Pokken Tournament",
   "label": "تقرير",
   "game": "Pokken Tournament",
   "game_short": "Pokken Tournament",
@@ -632,7 +734,7 @@
   },
   "source": "نينتيندو إفريثينغ (Nintendo Everything)",
   "date": "22 Nov 2026",
-  "theme": "cold",
+  "theme": "spectacle",
   "style": null,
   "template": "people",
   "skin": "house",
@@ -666,29 +768,31 @@
    "sound": "yes: trailer sound from the first shot, split per shot on the server",
    "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
   },
-  "person_photo": "none",
-  "searched": [
-   "the slip carried no official photo; the window shows the game's footage (12 Nov rule)"
-  ],
+  "person_library": "harada",
   "person": [
    [
     "pokken-tournament-pangoro-harada-nintendo-everything-person.jpg",
+    "Katsuhiro Harada",
     "منتج لعبة Pokken Tournament",
-    "",
     0.0,
     3.5,
     {
      "focus": [
-      0.5,
-      0.4
-     ]
+      0.49,
+      0.32
+     ],
+     "credit": "الصورة: Kevin Paul، ويكيميديا كومنز، CC BY 4.0"
     }
    ]
   ],
   "subject_person": {
-   "name": "منتج لعبة Pokken Tournament",
-   "role": "",
-   "photo_source": null
+   "name": "Katsuhiro Harada",
+   "role": "منتج لعبة Pokken Tournament",
+   "photo_source": "https://commons.wikimedia.org/wiki/File:Katsuhiro_Harada_at_SDCC_2023.jpg"
+  },
+  "rerender": {
+   "reason": "wrong_subject",
+   "note": "Mohammad 22 Nov 2026: v1's person box showed a game frame and the plate had no name; v2 takes Harada's library photo (Wikimedia Commons, CC BY 4.0), his name on the plate and a headline without the chip word"
   },
   "names_to_review": [
    "Katsuhiro Harada"
@@ -696,54 +800,14 @@
   "cut_ok": [
    [
     "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
-    17.5,
-    "never refuse: no clean stretch read, evenly spaced fallback"
-   ],
-   [
-    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
-    51.93,
-    "never refuse: no clean stretch read, evenly spaced fallback"
-   ],
-   [
-    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
-    88.36,
-    "never refuse: no clean stretch read, evenly spaced fallback"
-   ],
-   [
-    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
-    108.78,
-    "never refuse: no clean stretch read, evenly spaced fallback"
-   ],
-   [
-    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
-    149.2,
+    155.2,
     "never refuse: no clean stretch read, evenly spaced fallback"
    ]
   ],
   "drift_ok": [
    [
     "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
-    17.5,
-    "never refuse: no clean stretch read, evenly spaced fallback"
-   ],
-   [
-    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
-    51.93,
-    "never refuse: no clean stretch read, evenly spaced fallback"
-   ],
-   [
-    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
-    88.36,
-    "never refuse: no clean stretch read, evenly spaced fallback"
-   ],
-   [
-    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
-    108.78,
-    "never refuse: no clean stretch read, evenly spaced fallback"
-   ],
-   [
-    "pokken-tournament-pangoro-harada-nintendo-everything-nintendo-3.mp4",
-    149.2,
+    155.2,
     "never refuse: no clean stretch read, evenly spaced fallback"
    ]
   ]
