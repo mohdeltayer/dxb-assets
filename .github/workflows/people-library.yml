@@ -1,0 +1,54 @@
+# People photo library (Mohammad, 22 Nov 2026): downloads every person in templates/assets/people.json that has a
+# Wikimedia Commons file and no committed photo yet, records its licence, author and on-screen credit, and commits the
+# photos under live/people/ with the register. Run by hand; a person is added the second time they are in the news.
+name: people-library
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      keys:
+        description: 'Register keys, space separated (empty: every person without a photo)'
+        required: false
+        default: ''
+
+concurrency:
+  group: people-library
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    if: github.repository == 'mohdeltayer/dxb-assets'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            templates
+            live/people
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Fetch
+        env:
+          KEYS: ${{ inputs.keys }}
+        run: |
+          case "$KEYS" in *[!a-z0-9\ -]*) echo "bad keys"; exit 1;; esac
+          python -m pip install -q pillow
+          python templates/people.py fetch $KEYS
+          python templates/people.py list | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Commit
+        env:
+          KEYS: ${{ inputs.keys }}
+        run: |
+          git config user.name "dxb-people-library"
+          git config user.email "actions@users.noreply.github.com"
+          git add --sparse -f live/people templates/assets/people.json
+          git diff --cached --quiet && { echo "nothing new"; exit 0; }
+          git commit -q -m "People photo library: ${KEYS:-all without a photo} (Commons, licence and credit in the register)"
+          for i in 1 2 3 4; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep $((i * 5)); done
