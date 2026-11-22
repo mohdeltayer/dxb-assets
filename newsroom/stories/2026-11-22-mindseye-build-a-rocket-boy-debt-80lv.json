@@ -59,5 +59,25 @@
   "hits": [
    "2026-09-26-build-a-rocket-boy-admin"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/mindseye-build-a-rocket-boy-debt-80lv-reel-v1.mp4",
+  "blob": "4901a5d65757270cf93af15d6683242790f7ba2b",
+  "at": "2026-11-22T07:44:00Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/mindseye-build-a-rocket-boy-debt-80lv.json",
+   "sha256": "3914c8115b12c4490545e662a9e98365bb481ae7cea82ef32c1d4a0417ff5061",
+   "ok": true,
+   "problems": [],
+   "template": "numbers",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "strip: headline card with label تقرير, count-up number card 61.8 مليون جنيه إسترليني, gameplay shots with Arabic subtitles matching the spoken text and source credit at top; dense: count-up 43.5 to 61.8 held, subtitles in order (80.lv, 61.8 مليون, نحو 81 مليون دولار, حملة منسقة, التقييمات السلبية, دعاوى قضائية), Steam end frame then Digital Lounge outro; sheet: crop windows over racing and trailer footage, no graphic content"
  }
 }
