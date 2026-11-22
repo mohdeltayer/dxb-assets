@@ -1,0 +1,27 @@
+{
+ "id": "2026-11-22-shroomwood-spore-trials-speedrun-sale-games-press",
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "name not in names-ar: «بيان رسمي (Games Press)» (credit); add it there as Proposed",
+  "footage 1280x720: under 1080p, the quality gate may ask for the showcase layout"
+ ],
+ "at": "2026-11-22T19:10:20Z",
+ "footage": {
+  "name": "Shroomwood Launch Trailer",
+  "width": 1280,
+  "height": 720,
+  "fps": 29.97,
+  "mbps": 2.52,
+  "rows": 720,
+  "duration": 55.08,
+  "decode_clean": true
+ },
+ "job": "jobs/live/shroomwood-spore-trials-speedrun-sale-games-press.json",
+ "story": "newsroom/stories/2026-11-22-shroomwood-spore-trials-speedrun-sale-games-press.json",
+ "lines": 5,
+ "shots": 12,
+ "run": "45059156293",
+ "lane": "live",
+ "build_secs": 60
+}
