@@ -91,7 +91,7 @@ def _get(url, tries=6):
             time.sleep(30 * (i + 1))
 
 
-def fetch(keys=None, path=None, gap=6):
+def fetch(keys=None, path=None, gap=20):
     """Downloads every register photo that has a Commons file and no committed photo yet: a standard 1280 px thumbnail
     (Commons serves only listed sizes), its licence and author read from the file page, saved as live/people/<key>.jpg
     with the credit «الصورة: <author>، ويكيميديا كومنز، <licence>». A licence outside LICENCES_OK is refused."""
@@ -112,7 +112,11 @@ def fetch(keys=None, path=None, gap=6):
             continue
         q = urllib.parse.urlencode({'action': 'query', 'format': 'json', 'titles': e['commons_title'], 'prop': 'imageinfo',
                                     'iiprop': 'url|size|extmetadata', 'iiurlwidth': 1280})
-        ii = list(json.loads(_get(COMMONS + q))['query']['pages'].values())[0]['imageinfo'][0]
+        try:
+            ii = list(json.loads(_get(COMMONS + q))['query']['pages'].values())[0]['imageinfo'][0]
+        except Exception as ex:                         # noqa: BLE001  refused or rate-limited: the next run takes it
+            print(f'people: {k}: file page not read ({ex}); left for the next run', flush=True)
+            continue
         m = ii.get('extmetadata', {})
         clean = lambda s: _re.sub(r'\s+', ' ', _re.sub(r'<[^>]+>', '', s or '')).strip()
         lic = clean(m.get('LicenseShortName', {}).get('value'))
@@ -120,7 +124,11 @@ def fetch(keys=None, path=None, gap=6):
             print(f'people: {k}: licence {lic!r} not on the list; skipped', flush=True)
             continue
         time.sleep(gap)
-        raw = _get(ii['thumburl'] if ii.get('width', 0) > 1280 and ii.get('thumburl') else ii['url'])
+        try:
+            raw = _get(ii['thumburl'] if ii.get('width', 0) > 1280 and ii.get('thumburl') else ii['url'])
+        except Exception as ex:                         # noqa: BLE001
+            print(f'people: {k}: image not fetched ({ex}); left for the next run', flush=True)
+            continue
         im = Image.open(io.BytesIO(raw)).convert('RGB')
         im.thumbnail((LONG_SIDE, LONG_SIDE))
         os.makedirs(os.path.dirname(out), exist_ok=True)

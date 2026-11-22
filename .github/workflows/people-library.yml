@@ -43,6 +43,7 @@ jobs:
           python templates/people.py fetch $KEYS
           python templates/people.py list | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Commit
+        if: always()
         env:
           KEYS: ${{ inputs.keys }}
         run: |
