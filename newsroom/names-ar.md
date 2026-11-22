@@ -416,3 +416,4 @@ the full Arabic then Latin form. Add a row when a long name first needs one.
 | CD Projekt Red | CD Projekt |
 | Bethesda Softworks | Bethesda |
 | Capcom Co., Ltd. | Capcom |
+| Funcore Games (Worst Class Ever developer on Steam) | فانكور غيمز (Funcore Games) | Proposed 22 Nov 2026 (Worst Class Ever 1 million Reel; Latin in brackets at first mention) |
