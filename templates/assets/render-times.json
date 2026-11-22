@@ -122256,5 +122256,302 @@
   "job_sha": "3bb801402166e86c434b69c052e2b7162b026fb0",
   "dispatches": 1,
   "upload_secs": 5.0
+ },
+ {
+  "name": "binding-of-isaac-nicalis-removes-ai-music-ign-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-22T02:33Z",
+  "stages": {
+   "checks": 4.1,
+   "montage": 25.4,
+   "text": 28.9,
+   "audio": 0.4,
+   "outro": 28.2
+  },
+  "total": 86.9,
+  "lane": "runner",
+  "queued_at": "2026-11-22T02:32Z",
+  "finished_at": "2026-11-22T02:33Z",
+  "render_min": 1.45,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4",
+    "start": 39.99,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "mbps": 5.69,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4",
+    "start": 3.07,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "mbps": 5.69,
+    "rows": 616,
+    "zoom": 3.12,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4",
+    "start": 67.52,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "mbps": 5.69,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4",
+    "start": 53.85,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "mbps": 5.69,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4",
+    "start": 10.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "mbps": 5.69,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4",
+    "start": 23.67,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "mbps": 5.69,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4",
+    "start": 30.43,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "mbps": 5.69,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4",
+    "start": 43.96,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "mbps": 5.69,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4",
+    "start": 13.52,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "mbps": 5.69,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 3.12,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 10.1,
+   "audio_secs": 51.3,
+   "music_pct": 89.9,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 5
+   },
+   "effects_shots": 9,
+   "mix_secs": 3.6,
+   "secs": 14.1
+  },
+  "lifeless": {
+   "score": 5.7,
+   "still_share": 0.062,
+   "longest_still": 0.7,
+   "cuts_per_10s": 2.6,
+   "held_under_text": 0.0,
+   "secs": 19.2,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 13.2,
+   "shots": 183.6,
+   "checks": 13.7,
+   "render": 133.1,
+   "after": 44.7
+  },
+  "softgate": {
+   "warnings": 5,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 1,
+     "step": "a",
+     "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 8,
+     "step": "a",
+     "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 0,
+     "step": "a",
+     "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4 at 39.99 s for 3.8 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "b",
+     "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "a",
+     "why": "scan cap: 1 automatic slot(s) from the library or evenly spaced"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4 at 67.52 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4 at 53.85 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4 at 10.1 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4 at 23.67 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4 at 30.43 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4 at 43.96 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 8,
+     "step": "a",
+     "why": "binding-of-isaac-repentance-online-coop-consoles-repentance-launch-trailer.mp4 at 13.52 s: moved off a repeated moment (respread)"
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 389,
+  "mem_total_mb": 15700,
+  "mem_start_mb": 1295,
+  "peak_mem_mb": 3080,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 57961,
+  "peak_disk_mb": 59059,
+  "min_disk_free_mb": 88737,
+  "setup_min": 1.4,
+  "story": "binding-of-isaac-nicalis-removes-ai-music-ign"
  }
 ]
