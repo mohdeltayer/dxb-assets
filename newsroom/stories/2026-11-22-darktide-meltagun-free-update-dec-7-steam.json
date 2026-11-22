@@ -7,10 +7,7 @@
  "companies": [
   "Fatshark"
  ],
- "subject_person": {
-  "name": "المطور فات شارك (Fatshark)",
-  "role": ""
- },
+ "subject_person": null,
  "genre": [
   "action"
  ],
@@ -56,5 +53,25 @@
    "2026-11-09-warhammer-40k-dark-heresy-january-28-2027",
    "warhammer-40000-dawn-of-war-iv-system-requirements-20261113"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/darktide-meltagun-free-update-dec-7-steam-reel-v1.mp4",
+  "blob": "b97cc172bc7e5687e2fe1b74b04e3b4e83ca5fb2",
+  "at": "2026-11-22T18:37:31Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/darktide-meltagun-free-update-dec-7-steam.json",
+   "sha256": "5da0c183224ad5516d365ac3c2125184250f2d9c341025a2b699fbd2e08a0d6b",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Frames at 1s/7s/13s and strip/sheet: headline 'سلاح Meltagun الشهير مجانا في Darktide' with رسمي chip, clean Arabic subtitles in order (جميع اللاعبين استخدامه... / وهو سلاح ثقيل قصير المدى وذخيرته / محدودة ويشعل الأعداء القريبين), credit band 'المصدر: منشورات المطور على Steam · اللقطات: صفحة اللعبة' on every shot; Darktide in-game trailer footage, no graphic gore, video decodes, 21.25s"
  }
 }
