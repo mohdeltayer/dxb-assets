@@ -50,5 +50,25 @@
    "arkheron"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/arkheron-game-pass-early-access-nov-27-pure-xbox-reel-v1.mp4",
+  "blob": "8426742a372523a831c486553e6d70b02598f008",
+  "at": "2026-11-22T13:35:06Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/arkheron-game-pass-early-access-nov-27-pure-xbox.json",
+   "sha256": "c38ab91fa7ea8ef005b78f2bdf249850f985964fdf611a43b8ead653f0d8e13c",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": null,
+  "looked": "strip, sheet and dense strip: Arabic lines open on Arabic words, label تقرير, headline, credit Pure Xbox/Bonfire; claims match Steam short_description and Pure Xbox article"
  }
 }

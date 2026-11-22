@@ -51,5 +51,25 @@
    "forge"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/human-forge-steam-announcement-famitsu-reel-v1.mp4",
+  "blob": "8265efa8630e8f8b46356953576fe5093ebdcac0",
+  "at": "2026-11-22T13:43:03Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/human-forge-steam-announcement-famitsu.json",
+   "sha256": "b8a136ae61d77ba0d64ee5dfba079ae6d5afb507161d7a23441fe3fe0af4d4f8",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "v2 strip and dense strip: headline, 8 lines, credit, spoken text and texts checked against the Famitsu press release facts and Steam 5125240; no روغلايت; lines open on Arabic words; مغامرات used"
  }
 }
