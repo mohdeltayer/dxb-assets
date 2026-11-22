@@ -47,5 +47,25 @@
    "shroomwood"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/shroomwood-spore-trials-speedrun-sale-games-press-reel-v1.mp4",
+  "blob": "71351abf4862b3e4a9c0bd09f030e0b10278162b",
+  "at": "2026-11-22T19:19:43Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/shroomwood-spore-trials-speedrun-sale-games-press.json",
+   "sha256": "70926aaddebd915cc48100a0de75fd432e820a7dd03e38311760bd1258a16c51",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Three frames: official label, headline, pixel-art Shroomwood gameplay, Games Press credit; captions match: hook with 27 Nov, 'to finish the game fastest', '7 dollars instead of 10'; logo shot blurred backdrop"
  }
 }
