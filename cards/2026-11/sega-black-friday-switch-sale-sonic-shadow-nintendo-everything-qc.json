@@ -1,0 +1,45 @@
+{
+ "name": "sega-black-friday-switch-sale-sonic-shadow-nintendo-everything",
+ "out": "cards/2026-11/sega-black-friday-switch-sale-sonic-shadow-nintendo-everything-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [],
+ "ladder": [],
+ "job_to_pass_min": 4.7,
+ "at": "2026-11-22T16:15:49Z",
+ "findings": [],
+ "notes": [
+  "length 18.6 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 79.7; leak_pct 0.3; cache {'hit': 0, 'miss': 2}; separate_secs 8.4; secs 14.0",
+  "smear check: exempt 2.40 to 8.60 s (our own cards)",
+  "render_job: lifeless: {\"score\": 1.9, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 4.86, \"held_under_text\": 0.124, \"secs\": 18.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "2ed81b9c3dba6ecaffd378c4ead953e3415e4ee8",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/sega-black-friday-switch-sale-sonic-shadow-nintendo-everything-look-1.jpg",
+  "cards/2026-11/sega-black-friday-switch-sale-sonic-shadow-nintendo-everything-look-2.jpg",
+  "cards/2026-11/sega-black-friday-switch-sale-sonic-shadow-nintendo-everything-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": null,
+ "job_path": "jobs/done/sega-black-friday-switch-sale-sonic-shadow-nintendo-everything.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.22,
+  "fetch": 0.49,
+  "shots": 0.14,
+  "checks": 0.32,
+  "render": 1.93,
+  "after": 0.71,
+  "job": 3.6
+ }
+}
