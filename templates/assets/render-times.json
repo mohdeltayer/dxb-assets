@@ -132477,5 +132477,259 @@
   "sound": "bed:neon_c (trailer sound refused: music stem not clean (leftover 15.6% > 5.0%))",
   "footage": true,
   "upload_secs": 6.0
+ },
+ {
+  "name": "shroomwood-spore-trials-speedrun-sale-games-press-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-22T19:17Z",
+  "stages": {
+   "checks": 8.3,
+   "montage": 39.3,
+   "text": 41.1,
+   "audio": 0.7,
+   "outro": 17.3
+  },
+  "total": 106.8,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-22T19:15Z",
+  "finished_at": "2026-11-22T19:17Z",
+  "render_min": 1.78,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "shroomwood-spore-trials-speedrun-sale-games-press-shroomwood-launch-trailer.mp4",
+    "start": 6.39,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.52,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 1,
+    "file": "shroomwood-spore-trials-speedrun-sale-games-press-shroomwood-launch-trailer.mp4",
+    "start": 11.99,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.52,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 2,
+    "file": "shroomwood-spore-trials-speedrun-sale-games-press-shroomwood-launch-trailer.mp4",
+    "start": 15.9,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.52,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 3,
+    "file": "shroomwood-spore-trials-speedrun-sale-games-press-shroomwood-launch-trailer.mp4",
+    "start": 47.9,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.52,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 4,
+    "file": "shroomwood-spore-trials-speedrun-sale-games-press-shroomwood-launch-trailer.mp4",
+    "start": 4.19,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.52,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 5,
+    "file": "shroomwood-spore-trials-speedrun-sale-games-press-shroomwood-gameplay-trailer.mp4",
+    "start": 62.63,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.63,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "shroomwood-spore-trials-speedrun-sale-games-press-shroomwood-reveal-trailer.mp4",
+    "start": 0.3,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.36,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "shroomwood-spore-trials-speedrun-sale-games-press-shroomwood-reveal-trailer.mp4",
+    "start": 18.96,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.36,
+    "rows": 1032,
+    "zoom": 1.86,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "shroomwood-spore-trials-speedrun-sale-games-press-shroomwood-launch-trailer.mp4",
+    "start": 20.37,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.52,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 9,
+    "file": "shroomwood-spore-trials-speedrun-sale-games-press-shroomwood-launch-trailer.mp4",
+    "start": 34.81,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.52,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 10,
+    "file": "shroomwood-spore-trials-speedrun-sale-games-press-shroomwood-launch-trailer.mp4",
+    "start": 31.28,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.52,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 11,
+    "file": "shroomwood-spore-trials-speedrun-sale-games-press-shroomwood-reveal-trailer.mp4",
+    "start": 12.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.36,
+    "rows": 1032,
+    "zoom": 1.86,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 720,
+   "max_zoom": 2.67,
+   "lowbit_shots": 8
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 9.9,
+   "audio_secs": 59.7,
+   "music_pct": 99.4,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 6
+   },
+   "effects_shots": 12,
+   "mix_secs": 4.1,
+   "secs": 14.9
+  },
+  "lifeless": {
+   "score": 14.3,
+   "still_share": 0.125,
+   "longest_still": 0.8,
+   "cuts_per_10s": 1.61,
+   "held_under_text": 0.0,
+   "secs": 24.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 74.1,
+   "shots": 59.6,
+   "checks": 79.5,
+   "render": 140.9,
+   "after": 57.7
+  },
+  "softgate": {
+   "warnings": 2,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "shroomwood-spore-trials-speedrun-sale-games-press-shroomwood-reveal-trailer.mp4 at 0.3 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "shroomwood-spore-trials-speedrun-sale-games-press-shroomwood-reveal-trailer.mp4 at 18.96 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 11,
+     "step": "a",
+     "why": "shroomwood-spore-trials-speedrun-sale-games-press-shroomwood-reveal-trailer.mp4 at 12.1 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "text",
+     "slot": "reel",
+     "step": "a",
+     "why": "soft shade under line group(s) [1]: bright footage behind them"
+    }
+   ]
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 412,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1154,
+  "peak_mem_mb": 3551,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 69643,
+  "peak_disk_mb": 71428,
+  "min_disk_free_mb": 174678,
+  "setup_min": 0.17,
+  "story": "shroomwood-spore-trials-speedrun-sale-games-press",
+  "job_sha": "62b20db0767ea08b38fed49ba990cbf9d6a2890b",
+  "dispatches": 1,
+  "sound": "trailer",
+  "footage": true
  }
 ]
