@@ -58,5 +58,25 @@
    "2026-11-01-sonic-generations-turns-15",
    "2026-11-04-call-of-duty-infinite-warfare-turns-10"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/sega-black-friday-switch-sale-sonic-shadow-nintendo-everything-reel-v1.mp4",
+  "blob": "7085249900928ef42860551f226f10987c068f68",
+  "at": "2026-11-22T16:21:05Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/sega-black-friday-switch-sale-sonic-shadow-nintendo-everything.json",
+   "sha256": "39fcc13a6d594d8e8dc18022a7b22809dc671c52d20bdcd6caa48f5c565dcb6c",
+   "ok": true,
+   "problems": [],
+   "template": "numbers",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1: Sonic gameplay corridor under report chip and headline; strip: price card 49.99 to 12.49 on Switch 2, gameplay with until 3 December, Persona 3 Reload 29.99 caption"
  }
 }
