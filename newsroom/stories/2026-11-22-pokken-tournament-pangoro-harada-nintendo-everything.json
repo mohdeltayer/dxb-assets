@@ -48,5 +48,25 @@
    "tournament"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/pokken-tournament-pangoro-harada-nintendo-everything-reel-v1.mp4",
+  "blob": "445d79180612909e44b71ad0f6cfbe85277d1bbb",
+  "at": "2026-11-22T01:42:32Z",
+  "note": "second look after one send-back: text true vs Nintendo Everything, clear for Arab reader",
+  "checklist": {
+   "job": "jobs/live/pokken-tournament-pangoro-harada-nintendo-everything.json",
+   "sha256": "aa436776b84b1d68f703c50c898f08b981d6502d1677df86eac205c59c204cac",
+   "ok": true,
+   "problems": [],
+   "template": "people",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "headline, seven lines, credit band, store-trailer footage"
  }
 }
