@@ -989,3 +989,6 @@ server fixes, every slot on the picture start, were written back to main) and it
 - Names rule correction (21 Nov): a name missing from names-ar never refuses. On screen it is written in Latin letters as
   given and goes to the "names to review" list (work order section 8); a headline that does not name its one game gets
   «لعبة <short form>» as its first line and steps the type down. The game in Arabic letters is still a stop.
+- People Reels (22 Nov): the person's photo comes from the people library (`templates/assets/people.json`, credit on the
+  plate); with no photo the box is a name card, never game footage. The plate always names the person (Latin as given
+  when names-ar lacks them). A headline never opens on the chip's word («تقرير:» under تقرير).

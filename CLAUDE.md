@@ -4021,3 +4021,27 @@ and the Persona 6 Wada story stopped on Kazuhisa Wada. A name missing from names
 3. Code: `textrules.latin_unknown_names` and `textrules.headline_with_game` in `textrules.fix`, which the slip build and
    the server run before every text check; `name_unknown` and `game_headline` only warn (softgate). The game written in
    Arabic letters (`arabic_game_name`) stays a hard stop. Post texts keep their pairs as written.
+
+## People Reels show the person (Mohammad, 22 Nov 2026)
+
+Case: the Pokken Tournament Pangoro Reel (pokken-tournament-pangoro-harada-nintendo-everything) took the people template
+correctly, but the person box showed a game frame, the name plate carried the role only («منتج لعبة Pokken Tournament»),
+and the headline opened on «تقرير:» under the تقرير chip.
+1. People photo library: `templates/assets/people.json` (the rights register: source page, licence, author, on-screen
+   credit «الصورة: <author>، ويكيميديا كومنز، <licence>», focus) and the photos under `live/people/<key>.jpg`. Sources in
+   order: press kit or company page, event organiser, Wikimedia Commons with its licence; never social-media crops, fan
+   edits or AI likenesses. Started with Harada, Sakurai, Miyamoto, Aonuma, Kojima, Kamiya, Naoki Yoshida, Tetsuya
+   Takahashi, Katsura Hashino, Shuhei Yoshida, Phil Spencer, Hermen Hulst, Doug Bowser, Sam Lake and Hidetaka Miyazaki
+   (Takahashi and Hashino: no Commons file, name card until a press photo is found). A person joins the second time they
+   are in the news: add the entry with its Commons file and run `people-library.yml` (it fetches, records the licence and
+   credit, and commits; a file Commons refuses is left for the next run). `python3 templates/people.py list` shows who has
+   a photo.
+2. The slip lane looks the person up in the library (`people.lookup`); its photo and credit fill the window. With no
+   photo the window is a name card (`reel.name_card`: the plate at 84% over the running footage, the name large, the role
+   under it), never a frame of the game's footage (the 12 Nov `frame_of` fallback is gone).
+3. The plate always carries the name: the parser reads «role، Arabic (Latin)» after the role word; the Arabic form only
+   when names-ar lists the person, else the Latin as given (a Latin name alone is a valid plate row).
+4. The headline never repeats the chip word: `textrules.fix` drops a leading «تقرير:», «رسمي:», «حصري:» (or another chip
+   word) when the chip says it and the rest opens on an Arabic word; when it would open on a Latin word the text check
+   flags `chip_word` for the writer, never a hard stop.
+Replay before merge (render-replay run 44982069330 on 7123b013): the last 10 jobs/done, 10 of 10 pass. Merged 607c949e.
