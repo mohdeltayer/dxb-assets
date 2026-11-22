@@ -180,6 +180,20 @@ NAME = r'([A-Z][\w.\'-]+(?:\s+[A-Z][\w.\'-]+){0,3})'
 STOP = r'(?=\s+(?:قال|قالت|أن|إن|احتفل|احتفلت|غادر|غادرت|يغادر|تغادر|ينضم|تنضم|في\s+يو|عن)\b|[،,.:؛«]|$)'
 
 
+def _plate_name(ar, latin):
+    """People Reels without the person (Mohammad, 22 Nov 2026, item 3): the plate always names the person; the Arabic
+    form only when names-ar lists them, else the Latin as given."""
+    try:
+        import slip as _S
+        table = _S._names_table()
+    except Exception:                                   # noqa: BLE001
+        table = {}
+    known = table.get((latin or '').strip().lower())
+    if known:
+        return known
+    return (latin or ar or '').strip()
+
+
 def person(slip):
     """{'name', 'role'}: the plate's two rows. Row one is the person: their Arabic name, or the role word with a Latin
     name («مصمم الألعاب Masahiro Sakurai»), or the role alone when no name is given; row two is the role as the story
@@ -195,10 +209,15 @@ def person(slip):
             tail = text[m.end():m.end() + 120]
             mq = re.match(r'((?:\s+(?!في\b|لعبة\b|استوديو\b|شركة\b)[^\sA-Za-z،,.]+)?)\s+' + NAME, tail)
             if mq:                                                   # «مصمم الألعاب Masahiro Sakurai»
-                return {'name': (r + mq.group(1) + ' ' + mq.group(2)).strip(), 'role': ''}
+                return {'name': _plate_name(None, mq.group(2)), 'role': (r + mq.group(1)).strip(), 'latin': mq.group(2)}
             ph = re.match(r'(.{0,70}?)' + STOP, tail)
             role = (r + (ph.group(1) if ph else '')).strip()
             role = re.sub(r'\s+', ' ', role)
+            after = tail[ph.end():] if ph else ''
+            ma = re.match(r'\s*[،,]\s*(?:([ء-ي][^\s(،,]*(?:\s+[ء-ي][^\s(،,]*){0,3})\s*\(\s*)?' + NAME,
+                          after)
+            if ma:                                                   # «منتج لعبة X، كاتسوهيرو هارادا (Katsuhiro Harada)،»
+                return {'name': _plate_name(ma.group(1), ma.group(2)), 'role': role, 'latin': ma.group(2)}
             head = text[max(0, m.start() - 50):m.start()]
             mb = re.search(r'([^\s،,.]+(?:\s+[^\s،,.]+)?)\s*[،,]\s*$', head)  # «جينيفر سفيدبيرغ-ين، رئيسة السرد»
             if mb:

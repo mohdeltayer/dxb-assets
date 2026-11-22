@@ -763,6 +763,8 @@ def person_layer(photo, name, role, path, theme='cold', box=PERSON_BOX, focus=(0
     Every text line opens on an Arabic word. Stops when the photo would be enlarged past
     PERSON_MAX_ZOOM or a text line will not fit the plate."""
     x, y, bw, bh = box
+    if not photo:                                       # no photo in the library: the name card (22 Nov 2026, item 2)
+        return name_card(name, role, path, theme=theme, box=box)
     src = Image.open(photo if os.path.isabs(photo) else C.U + photo).convert('RGB')
     sw, sh = src.size
     scale = max(bw / sw, bh / sh)
@@ -774,13 +776,16 @@ def person_layer(photo, name, role, path, theme='cold', box=PERSON_BOX, focus=(0
     pic = src.crop((round(cx), round(cy), round(cx + cw), round(cy + ch))).resize((bw, bh), Image.LANCZOS)
     pad, rad = 26, 22
     texts = [(name, 'Bold', (46, 42, 38, 34, 32, 30), A.INK), (role, 'Medium', (32, 30, 28, 26), A.BODY)]   # 30 px floor, as credits (21 Nov)
-    if credit:
-        texts.append((credit, 'Medium', (22, 20), A.BODY))
-    texts = [t for t in texts if str(t[0] or '').strip()]   # a plate with the name alone when no role is known (21 Nov)
     probe = ImageDraw.Draw(Image.new('L', (W, H)))
+    if credit:                                          # the library credit, shortened to fit before it is dropped
+        for c in _credit_forms(credit):
+            if probe.textlength(c, font=A.F('Medium', 20), **G.AR) <= bw - 2 * pad:
+                texts.append((c, 'Medium', (22, 20), A.BODY))
+                break
+    texts = [t for t in texts if str(t[0] or '').strip()]   # a plate with the name alone when no role is known (21 Nov)
     rows = []
     for text, weight, sizes, col in texts:
-        rtl_starts([text], 'person plate')
+        plate_rtl(text)
         for s in sizes:
             f = A.F(weight, s)
             if probe.textlength(text, font=f, **G.AR) <= bw - 2 * pad:
@@ -813,6 +818,75 @@ def person_layer(photo, name, role, path, theme='cold', box=PERSON_BOX, focus=(0
     im.paste(win, (x, y), mask)
     acc = G.ACCENTS.get(theme, A.AZURE)
     ImageDraw.Draw(im).rounded_rectangle((x, y, x + bw - 1, y + bh - 1), rad, outline=acc + (255,), width=4)
+    im.save(path); return path
+
+
+def plate_rtl(text):
+    """A plate row opens on an Arabic word, except a row that is a Latin name alone (22 Nov 2026, item 3: a name missing
+    from names-ar is written in Latin as given), which has no right-to-left text to flip."""
+    if re.search('[\u0600-\u06FF]', str(text)):
+        rtl_starts([text], 'person plate')
+
+
+def _credit_forms(credit):
+    """The photo credit as given, then shorter: the author dropped («الصورة: ويكيميديا كومنز، CC BY 4.0»)."""
+    out = [credit]
+    m = re.match(r'(الصورة:\s*)[^،]+،\s*(.+)$', credit)
+    if m:
+        out.append(m.group(1) + m.group(2))
+    return out
+
+
+def name_card(name, role, path, theme='cold', box=PERSON_BOX):
+    """The people window when no photo is in the library (Mohammad, 22 Nov 2026): the template's plate, the ground at
+    84% so the footage still shows through, the theme accent as its edge and a short rule, the name large (Bold, up
+    to 64 px, a second line before it shrinks under 40) and the role under it (Medium, body colour). Never a game frame."""
+    x, y, bw, bh = box
+    pad, rad = 30, 22
+    probe = ImageDraw.Draw(Image.new('L', (W, H)))
+    acc = G.ACCENTS.get(theme, A.AZURE)
+
+    def fit(text, weight, sizes, lines_max):
+        words = str(text or '').split()
+        for s in sizes:
+            f = A.F(weight, s)
+            if probe.textlength(text, font=f, **G.AR) <= bw - 2 * pad:
+                return [text], f, s
+        if lines_max > 1 and len(words) > 1:
+            for s in sizes:
+                f = A.F(weight, s)
+                for k in range(1, len(words)):
+                    a, b = ' '.join(words[:k]), ' '.join(words[k:])
+                    if all(probe.textlength(z, font=f, **G.AR) <= bw - 2 * pad for z in (a, b)) and \
+                            (not re.search('[\u0600-\u06FF]', b) or _arabic(b.lstrip('«')[0])):
+                        return [a, b], f, s
+        raise ValueError(f'name card line will not fit the window: {text}')
+    rows = []
+    if str(name or '').strip():
+        plate_rtl(name)
+        nl, nf, ns = fit(name, 'Bold', (64, 58, 52, 46, 40, 36, 32), 2)
+        rows += [(z, nf, ns, A.INK) for z in nl]
+    if str(role or '').strip():
+        plate_rtl(role)
+        rl, rf, rs = fit(role, 'Medium', (36, 32, 30, 28, 26), 2)
+        rows += [(z, rf, rs, A.BODY) for z in rl]
+    if not rows:
+        raise ValueError('name card with no name and no role')
+    gaps = [int(s * 1.3) for _, _, s, _ in rows]
+    block = sum(gaps) + 18
+    im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    sh_m = Image.new('L', (W, H), 0)
+    ImageDraw.Draw(sh_m).rounded_rectangle((x + 6, y + 12, x + bw + 6, y + bh + 12), rad, fill=120)
+    sh_l = Image.new('RGBA', (W, H), (0, 0, 0, 255)); sh_l.putalpha(sh_m.filter(ImageFilter.GaussianBlur(18)))
+    im.alpha_composite(sh_l)
+    d = ImageDraw.Draw(im)
+    d.rounded_rectangle((x, y, x + bw - 1, y + bh - 1), rad, fill=A.GROUND + (214,), outline=acc + (255,), width=4)
+    yb = y + (bh - block) // 2
+    d.rounded_rectangle((x + bw - pad - 90, yb, x + bw - pad, yb + 6), 3, fill=acc + (255,))
+    yb += 18
+    for (text, f, s, col), g in zip(rows, gaps):
+        yb += g
+        d.text((x + bw - pad, yb - int(s * 0.3)), text, font=f, fill=col + (255,), anchor='rs', **G.AR)
     im.save(path); return path
 
 

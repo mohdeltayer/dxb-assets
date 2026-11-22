@@ -513,16 +513,34 @@ def job_from(slip, foot, lane='live', theme=None, spare=()):
         job['gfx'] = gfx
         job['ground_footage'] = [f, 4.0, 60.0]   # the calmest stretch of the trailer behind the card, moving
     if kind['class'] == 'person':
-        p = kind['person']
+        p = dict(kind['person'])
         photo = f'{name}-person.jpg'
+        import people as PL                       # the people photo library (Mohammad, 22 Nov 2026, items 1 to 3)
+        hit = PL.lookup(' '.join(str(x) for x in (p.get('latin'), p.get('name'), slip.get('spoken'),
+                                                  slip.get('headline')) if x))
+        if hit and (not p.get('latin') or p['name'] == p.get('role') or not p.get('name')):
+            p['name'] = PL.plate_name(hit[1])     # the plate always carries the name, never the role alone
+            if p.get('role') == p['name']:
+                p['role'] = ''
+        if not p.get('role') and p.get('name') and kind['person'].get('name') not in (None, '', p['name']):
+            p['role'] = kind['person']['name']    # what the parser took for the name was the role phrase
+        lib = PL.photo_of(hit[1]) if hit and not p.get('photo') else None
         if p.get('photo'):                        # the slip's official photo (press kit, the company's page)
             job['footage'].append({'file': photo, 'url': p['photo']})
             ps = {'name': p['name'], 'role': p.get('role') or '', 'photo_source': p['photo']}
-        else:                                     # no licensed photo: the window shows their work, with the plate
-            job['footage'].append({'file': photo, 'frame_of': [f, None]})
+        elif lib:                                 # the library's photo, with its credit from the rights register
+            job['footage'].append({'file': photo, 'repo': lib[0]})
+            p.setdefault('credit', lib[1])
+            p.setdefault('focus', lib[2])
+            ps = {'name': p['name'], 'role': p.get('role') or '', 'photo_source': hit[1].get('source_url')}
+            job['person_library'] = hit[0]
+        else:                                     # no photo: a name card on the plate, the footage running behind it;
+            photo = None                          # the box is never filled with game footage (22 Nov 2026, item 2)
             ps = {'name': p['name'], 'role': p.get('role') or '', 'photo_source': None}
             job['person_photo'] = 'none'
-            job['searched'] = ['the slip carried no official photo; the window shows the game\'s footage (12 Nov rule)']
+            job['searched'] = ['people library (templates/assets/people.json): ' +
+                               (f'{hit[0]} has no photo yet' if hit else 'not listed') + '; the slip carried no photo; '
+                               'name card on the plate (22 Nov 2026)']
         opts = {'focus': list(p.get('focus') or (0.5, 0.4))}
         if p.get('credit'):
             opts['credit'] = p['credit']

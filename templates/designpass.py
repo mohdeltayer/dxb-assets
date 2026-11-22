@@ -90,7 +90,7 @@ def plan(job, starts, end, lines, head_secs=3.5):
             continue
         elif m == 'chip' and not (job.get('label') or job.get('country')):
             notes.append('chip press: the job has no chip; dropped')
-        elif m == 'photobox' and not (job.get('person') and float(job['person'][0][3]) == 0):
+        elif m == 'photobox' and not (job.get('person') and job['person'][0][0] and float(job['person'][0][3]) == 0):
             notes.append('photobox: the first person window does not open at 0 (the cover); dropped')
         else:
             moments.append(m)

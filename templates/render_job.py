@@ -1307,7 +1307,7 @@ def textcheck(job, collect=None):
                 _do('intro', OI.layers, job['intro']['days'], tmp)
         for x in job.get('person') or []:          # needs the photo in uploads: fetched like footage before this runs
             o = x[5] if len(x) > 5 else {}
-            if os.path.exists(C.U + x[0]):
+            if not x[0] or os.path.exists(C.U + x[0]):   # no photo: the name card (22 Nov 2026)
                 _do('person', reel.person_layer, x[0], x[1], x[2], f'{tmp}/p.png', job['theme'],
                     focus=tuple(o.get('focus', (0.5, 0.33))), credit=o.get('credit'))
         _do('gfx', gfx, job, tmp)

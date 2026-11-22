@@ -259,6 +259,12 @@ def check(job):
     head = job.get('headline')
     if head is not None:
         _text_rules('headline', head, out)
+        mc = re.match(r'^\s*(' + '|'.join(CHIP_WORDS) + r')\s*[:：]', str(head))
+        chip = str(job.get('label') or job.get('chip') or '').strip()
+        if mc and (mc.group(1) == chip or mc.group(1) == 'حصري'):   # the server drops it when the rest opens on Arabic
+            out.append({'where': 'headline', 'rule': 'chip_word', 'text': head,
+                        'fix': f'the chip already says «{mc.group(1)}»: drop «{mc.group(1)}:» and open the headline on an '
+                               'Arabic word (22 Nov 2026)'})
         parts = str(head).split('\n')
         latin = bool(re.search('[A-Za-z]', str(head)))
         if len(parts) > HEAD_LINES:
@@ -580,6 +586,27 @@ def latin_unknown_names(text, table):
     return ''.join(out), done, left
 
 
+CHIP_WORDS = ('تقرير', 'رسمي', 'حصري', 'عاجل', 'شائعة', 'تسريب', 'جديد', 'تحديث', 'تأجيل')
+
+
+def headline_without_chip(job):
+    """People Reels without the person (Mohammad, 22 Nov 2026, item 4): the headline never repeats the chip word. A
+    leading «تقرير:», «رسمي:», «حصري:» (and the other chip words) is dropped when the job's chip says it; «حصري» goes
+    whenever it leads, since it is never a chip of its own. None when nothing changes."""
+    head = job.get('headline')
+    if not isinstance(head, str):
+        return None
+    chip = str(job.get('label') or job.get('chip') or '').strip()
+    m = re.match(r'^\s*(' + '|'.join(CHIP_WORDS) + r')\s*[:：]\s*', head)
+    if not m or (m.group(1) != chip and m.group(1) != 'حصري'):
+        return None
+    rest = head[m.end():]
+    first = rest.strip().lstrip('«"“')[:1]
+    if not first or not re.match('[\u0621-\u064A]', first):   # it would open on a Latin word or a digit (a hard stop):
+        return None                                            # left for the writer (chip_word in the text check)
+    return rest
+
+
 def headline_with_game(job):
     """The headline with the game's name put in (Names rule correction, 21 Nov 2026): a one-game story whose headline does
     not name it gets «لعبة <short form or name>» as its first line; the type steps down (reel.head_layer's soft path,
@@ -610,6 +637,10 @@ def fix(job):
         return new
     if isinstance(j.get('headline'), str):
         j['headline'] = one('headline', j['headline'])
+    h = headline_without_chip(j)                         # the chip word is not repeated (22 Nov 2026)
+    if h:
+        changes.append({'where': 'headline', 'before': j['headline'], 'after': h, 'what': 'chip word dropped from the headline'})
+        j['headline'] = h
     h = headline_with_game(j)                            # the game's name put in, never a refusal (21 Nov 2026)
     if h:
         changes.append({'where': 'headline', 'before': j['headline'], 'after': h, 'what': 'game name put in the headline'})

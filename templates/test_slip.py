@@ -214,7 +214,42 @@ class Kind(unittest.TestCase):
         self.assertEqual(j['template'], 'people')
         self.assertEqual(j['person'][0][1], 'جينيفر سفيدبيرغ-ين')
         self.assertEqual(j['person'][0][3], 0.0)
-        self.assertTrue(any(x.get('frame_of') for x in j['footage']))
+        self.assertFalse(any(x.get('frame_of') for x in j['footage']))   # never a game frame (22 Nov 2026)
+        self.assertIsNone(j['person'][0][0])                                # the name card
+        self.assertEqual(j['person_photo'], 'none')
+
+    def test_people_name_after_role_and_library(self):
+        import people as PL
+        s = slip()
+        s.update(headline='تقرير: Pangoro كان الغائب\nعن Pokken Tournament', label='تقرير', game='Pokken Tournament',
+                 kind='reveal',
+                 spoken='ذكر موقع نينتيندو إفريثينغ (Nintendo Everything) أن منتج لعبة Pokken Tournament، كاتسوهيرو '
+                        'هارادا (Katsuhiro Harada)، قال إن Pangoro هو الوحش الوحيد الذي أراد إضافته إلى اللعبة.')
+        orig = PL.load
+        PL.load = lambda path=None: {'harada': {'name_latin': 'Katsuhiro Harada', 'photo': 'live/people/harada.jpg',
+                                                'credit_ar': 'الصورة: Kevin Paul، ويكيميديا كومنز، CC BY 4.0',
+                                                'focus': [0.49, 0.32]}}
+        try:
+            j = S.job_from(s, {'file': 'a.mp4'}, 'test', theme='cold')
+        finally:
+            PL.load = orig
+        self.assertEqual(j['template'], 'people')
+        self.assertIn(j['person'][0][1], ('Katsuhiro Harada', 'كاتسوهيرو هارادا'))
+        self.assertTrue(j['person'][0][2].startswith('منتج'))
+        self.assertTrue(any(x.get('repo') == 'live/people/harada.jpg' for x in j['footage']))
+        self.assertEqual(j['person'][0][5]['credit'], 'الصورة: Kevin Paul، ويكيميديا كومنز، CC BY 4.0')
+
+    def test_headline_drops_chip_word(self):
+        import textrules as TR
+        j, _ = TR.fix({'headline': 'تقرير: Pangoro كان الغائب\nعن Pokken Tournament', 'label': 'تقرير',
+                       'game': 'Pokken Tournament'})
+        self.assertTrue(j['headline'].startswith('تقرير:'))           # dropping it would open on «Pangoro»: the writer rewords
+        j, _ = TR.fix({'headline': 'تقرير: الوحش Pangoro غاب\nعن Pokken Tournament', 'label': 'تقرير'})
+        self.assertEqual(j['headline'], 'الوحش Pangoro غاب\nعن Pokken Tournament')
+        j, _ = TR.fix({'headline': 'رسمي: موعد اللعبة', 'label': 'تقرير'})
+        self.assertEqual(j['headline'], 'رسمي: موعد اللعبة')            # a different chip: left to the writer
+        j, _ = TR.fix({'headline': 'حصري: موعد اللعبة', 'label': 'جديد'})
+        self.assertEqual(j['headline'], 'موعد اللعبة')
 
     def test_plain_announcement_stays_trailer_and_never_fails(self):
         s = slip()
