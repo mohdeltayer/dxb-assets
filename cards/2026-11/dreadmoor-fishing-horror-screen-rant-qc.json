@@ -1,0 +1,717 @@
+{
+ "name": "dreadmoor-fishing-horror-screen-rant",
+ "out": "cards/2026-11/dreadmoor-fishing-horror-screen-rant-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "content",
+   "detail": "shot 12 at 45.68 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 12 at 46.45 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 64 px on 2 lines (cut it to a few words next time): تقرير: DREADMOOR تجمع\nرعب وصيد الأسماك في عالم غارق"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 44.91 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "text",
+   "slot": "line 5",
+   "step": "a",
+   "why": "2.8 s of 4.1 s: shot 10 lengthened by 1.42 s"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "b",
+   "why": "audio split not applied (music only 22.0% of the track (< 40.0%)) on a trailer track under 18 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our "
+  }
+ ],
+ "job_to_pass_min": 11.6,
+ "at": "2026-11-22T01:20:48Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 1 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 2 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 3 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 4 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 5 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 6 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 7 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 8 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 9 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 10 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 11 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 12 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 13 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 14 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 15 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 16 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 17 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "first frame: shot 18 dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 starts at 0.0 s, the video at 0.82 s; its first 0.82 s are lost",
+  "length 39.6 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason music only 22.0% of the track (< 40.0%); music_pct 22.0; leak_pct 2.1; cache {'hit': 0, 'miss': 3}; separate_secs 13.4; secs 18.1",
+  "render_job: lifeless: {\"score\": 8.0, \"still_share\": 0.038, \"longest_still\": 1.5, \"cuts_per_10s\": 7.09, \"held_under_text\": 0.0, \"secs\": 39.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 29 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 13.08 s for 3.8 s, focus 0.131"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 22.78 s for 2.2 s, focus 0.443"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 39.65 s for 2.2 s, focus 0.444"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 56.18 s for 2.2 s, focus 0.672"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 61.00 s for 2.2 s, focus 0.401"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 63.20 s for 2.5 s, focus 0.401"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 72.18 s for 2.5 s, focus 0.532"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 74.64 s for 2.2 s, focus 0.532"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 78.78 s for 2.2 s, focus 0.532"
+  },
+  {
+   "where": "shot 9",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 90.11 s for 2.7 s, focus 0.557"
+  },
+  {
+   "where": "shot 10",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 92.78 s for 2.7 s, focus 0.557"
+  },
+  {
+   "where": "shot 11",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 95.50 s for 2.3 s, focus 0.303"
+  },
+  {
+   "where": "shot 12",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 97.81 s for 2.3 s, focus 0.303"
+  },
+  {
+   "where": "shot 13",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 103.10 s for 2.2 s, focus 0.303"
+  },
+  {
+   "where": "shot 14",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 105.30 s for 2.2 s, focus 0.303"
+  },
+  {
+   "where": "shot 15",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 107.50 s for 2.4 s, focus 0.303"
+  },
+  {
+   "where": "shot 16",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 69.83 s for 2.4 s, focus 0.768"
+  },
+  {
+   "where": "shot 17",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 66.60 s for 2.2 s, focus 0.401"
+  },
+  {
+   "where": "shot 18",
+   "rule": "auto_shots",
+   "what": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 at 32.00 s for 2.2 s, focus 0.275"
+  },
+  {
+   "where": "shot 10",
+   "rule": "subject_drift",
+   "what": "trimmed to 1.20 s, its longest safe length before the subject leaves the 9:16 window",
+   "before": [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    92.78,
+    2.67,
+    [
+     [
+      0.0,
+      0.557
+     ]
+    ]
+   ],
+   "after": [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    92.78,
+    1.2,
+    [
+     [
+      0.0,
+      0.557
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 11",
+   "rule": "fill",
+   "what": "lengthened 2.31 to 3.78 s to keep the time shot 10 gave up",
+   "before": 2.31,
+   "after": 3.78
+  },
+  {
+   "where": "shot 13",
+   "rule": "subject_cut",
+   "what": "focus [[0.0, 0.303]] to 0.46: the subject stays inside the window",
+   "before": [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    103.1,
+    2.2,
+    [
+     [
+      0.0,
+      0.303
+     ]
+    ]
+   ],
+   "after": [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    103.1,
+    2.2,
+    0.46
+   ]
+  },
+  {
+   "where": "shot 16",
+   "rule": "subject_drift",
+   "what": "trimmed to 2.15 s, its longest safe length before the subject leaves the 9:16 window",
+   "before": [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    69.83,
+    2.35,
+    [
+     [
+      0.0,
+      0.768
+     ]
+    ]
+   ],
+   "after": [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    69.83,
+    2.15,
+    [
+     [
+      0.0,
+      0.768
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 17",
+   "rule": "fill",
+   "what": "lengthened 2.20 to 2.40 s to keep the time shot 16 gave up",
+   "before": 2.2,
+   "after": 2.4
+  },
+  {
+   "where": "shot 18",
+   "rule": "subject_cut",
+   "what": "focus [[0.0, 0.275]] to 0.02: the subject stays inside the window",
+   "before": [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    32.0,
+    2.2,
+    [
+     [
+      0.0,
+      0.275
+     ]
+    ]
+   ],
+   "after": [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    32.0,
+    2.2,
+    0.02
+   ]
+  }
+ ],
+ "job_sha": "f6cd4a7a99f9e5b3542e738f92b3aaacddbc35b4",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/dreadmoor-fishing-horror-screen-rant-look-1.jpg",
+  "cards/2026-11/dreadmoor-fishing-horror-screen-rant-look-2.jpg",
+  "cards/2026-11/dreadmoor-fishing-horror-screen-rant-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer-music (ladder b: audio split not applied (music only 22.0% of the track (< 40.0%)) on a trailer track under 18 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
+ "shot_read": {
+  "secs": 57.5,
+  "files": {
+   "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4": {
+    "secs": 57.1,
+    "cached": false,
+    "stages": {
+     "decode": 25.6,
+     "autofocus": 46.3,
+     "ocr": 46.3,
+     "smear": 56.8,
+     "scenes": 57.0
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/dreadmoor-fishing-horror-screen-rant.json",
+ "stage_minutes": {
+  "queue": 0.02,
+  "setup": 0.2,
+  "fetch": 0.23,
+  "shots": 1.51,
+  "checks": 2.6,
+  "render": 4.53,
+  "after": 1.75,
+  "job": 10.63
+ },
+ "job_after_autofix": {
+  "name": "dreadmoor-fishing-horror-screen-rant",
+  "story": "2026-11-22-dreadmoor-fishing-horror-screen-rant",
+  "footage_source": "steam:3629430",
+  "kind_news": "reveal",
+  "story_class": "trailer",
+  "story_class_why": "kind reveal",
+  "skin_why": "genre horror: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/dreadmoor-fishing-horror-screen-rant-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    "steam": 3629430,
+    "trailer": "Early Access Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3629430"
+   }
+  ],
+  "shots": [
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    13.08,
+    3.8,
+    [
+     [
+      0.0,
+      0.131
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    22.78,
+    2.2,
+    [
+     [
+      0.0,
+      0.443
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    39.65,
+    2.2,
+    [
+     [
+      0.0,
+      0.444
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    56.18,
+    2.2,
+    [
+     [
+      0.0,
+      0.672
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    61.0,
+    2.2,
+    [
+     [
+      0.0,
+      0.401
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    63.2,
+    2.46,
+    [
+     [
+      0.0,
+      0.401
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    72.18,
+    2.46,
+    [
+     [
+      0.0,
+      0.532
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    74.64,
+    2.2,
+    [
+     [
+      0.0,
+      0.532
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    78.78,
+    2.2,
+    [
+     [
+      0.0,
+      0.532
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    90.11,
+    2.67,
+    [
+     [
+      0.0,
+      0.557
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    92.78,
+    1.2,
+    [
+     [
+      0.0,
+      0.557
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    95.5,
+    3.78,
+    [
+     [
+      0.0,
+      0.303
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    97.81,
+    2.31,
+    [
+     [
+      0.0,
+      0.303
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    103.1,
+    2.2,
+    0.46
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    105.3,
+    2.2,
+    [
+     [
+      0.0,
+      0.303
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    107.5,
+    2.35,
+    [
+     [
+      0.0,
+      0.303
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    69.83,
+    2.15,
+    [
+     [
+      0.0,
+      0.768
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    66.6,
+    2.4,
+    [
+     [
+      0.0,
+      0.401
+     ]
+    ]
+   ],
+   [
+    "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+    32.0,
+    2.2,
+    0.02
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "ذكر موقع Screen Rant",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "أن لعبة DREADMOOR",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "المستقلة على Steam تجمع\nبين رعب Resident Evil",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    8,
+    [
+     [
+      "واستكشاف Dave the Diver",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    9,
+    10,
+    [
+     [
+      "وهي لعبة صيد أسماك بمنظور\nالشخص الأول في عالم غارق،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    11,
+    12,
+    [
+     [
+      "يطور فيها اللاعب قاربه\nويصنع معدات النجاة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    13,
+    14,
+    [
+     [
+      "ويقاتل وحوشًا\nفي الماء وعلى اليابسة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    15,
+    16,
+    [
+     [
+      "وصدرت اللعبة في 9 نوفمبر\nبسعر 19.99 دولار،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    17,
+    18,
+    [
+     [
+      "وعليها خصم 10 بالمئة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    18,
+    "المصدر: Screen Rant · اللقطات: Digital Vortex Entertainment",
+    {
+     "size": 32,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع Screen Rant أن لعبة DREADMOOR المستقلة على Steam تجمع بين رعب Resident Evil واستكشاف Dave the Diver. وهي لعبة صيد أسماك بمنظور الشخص الأول في عالم غارق، يطور فيها اللاعب قاربه ويصنع معدات النجاة ويقاتل وحوشًا في الماء وعلى اليابسة. وصدرت اللعبة في 9 نوفمبر بسعر 19.99 دولار، وعليها خصم 10 بالمئة.",
+  "headline": "تقرير: DREADMOOR تجمع\nرعب وصيد الأسماك في عالم غارق",
+  "label": "تقرير",
+  "game": "DREADMOOR",
+  "game_short": "DREADMOOR",
+  "genre": [
+   "horror"
+  ],
+  "texts": {
+   "instagram": "ذكر موقع سكرين رانت (Screen Rant) أن لعبة DREADMOOR المستقلة على Steam تجمع بين رعب Resident Evil واستكشاف Dave the Diver.\n\nوهي لعبة صيد أسماك بمنظور الشخص الأول في عالم غارق، يطور فيها اللاعب قاربه ويصنع معدات النجاة ويقاتل وحوشًا في الماء وعلى اليابسة.\n\nوصدرت اللعبة في 9 نوفمبر بسعر 19.99 دولار، وعليها خصم 10 بالمئة.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: سكرين رانت (Screen Rant).\n\n#ألعاب #أخبار_الألعاب #DREADMOOR #ستيم",
+   "x": "تقرير: ذكر موقع سكرين رانت (Screen Rant) أن لعبة DREADMOOR على Steam تجمع بين رعب Resident Evil واستكشاف Dave the Diver، في لعبة صيد أسماك بمنظور الشخص الأول في عالم غارق. صدرت في 9 نوفمبر بسعر 19.99 دولار. المصدر: سكرين رانت (Screen Rant).",
+   "threads": "تقرير: ذكر موقع سكرين رانت (Screen Rant) أن لعبة DREADMOOR المستقلة على Steam تجمع بين رعب Resident Evil واستكشاف Dave the Diver.\n\nوهي لعبة صيد أسماك بمنظور الشخص الأول في عالم غارق، صدرت في 9 نوفمبر بسعر 19.99 دولار وعليها خصم 10 بالمئة.\n\nالمصدر: سكرين رانت (Screen Rant)"
+  },
+  "source": "سكرين رانت (Screen Rant)، ولقطات من Digital Vortex Entertainment",
+  "date": "22 Nov 2026",
+  "theme": "cold",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4",
+   13.08
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Screen Rant published its piece on 21 Nov comparing the Steam game DREADMOOR to Resident Evil and Dave the Diver; the discount on the Steam page is still running.",
+   "what_it_means_here": "An indie horror fishing game that mixes two famous games, with a launch discount still on."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind reveal",
+   "skin": "house: genre horror: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "dreadmoor-fishing-horror-screen-rant-early-access-trailer.mp4 from the resolver (steam:3629430)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: DREADMOOR, Steam page (released 9 Nov 2026) (https://store.steampowered.com/app/3629430/DREADMOOR/); first report: Screen Rant 21 Nov 2026 23:36Z (the game launched on Steam on 9 Nov 2026)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 3629430 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "names_to_review": [
+   "Screen Rant"
+  ]
+ }
+}
