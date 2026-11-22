@@ -128668,5 +128668,273 @@
   "sound": "trailer",
   "footage": true,
   "upload_secs": 9.0
+ },
+ {
+  "name": "arkheron-game-pass-early-access-nov-27-pure-xbox-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-22T13:27Z",
+  "stages": {
+   "checks": 7.0,
+   "montage": 67.3,
+   "text": 52.5,
+   "audio": 0.6,
+   "outro": 42.4
+  },
+  "total": 169.7,
+  "lane": "runner",
+  "queued_at": "2026-11-22T13:24Z",
+  "finished_at": "2026-11-22T13:27Z",
+  "render_min": 2.83,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4",
+    "start": 10.54,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4",
+    "start": 27.22,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4",
+    "start": 41.84,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4",
+    "start": 2.55,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4",
+    "start": 52.52,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4",
+    "start": 60.46,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4",
+    "start": 75.07,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4",
+    "start": 97.8,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4",
+    "start": 106.44,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 24.3,
+   "audio_secs": 67.0,
+   "music_pct": 24.2,
+   "leak_pct": 22.8,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 6
+   },
+   "reason": "music stem not clean (leftover 22.8% > 5.0%)",
+   "secs": 31.4,
+   "ladder": "d",
+   "fallback": "bed:neon"
+  },
+  "lifeless": {
+   "score": 10.4,
+   "still_share": 0.066,
+   "longest_still": 0.9,
+   "cuts_per_10s": 1.88,
+   "held_under_text": 0.0,
+   "secs": 21.3,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 162.1,
+   "shots": 313.9,
+   "checks": 9.4,
+   "render": 258.0,
+   "after": 69.8
+  },
+  "softgate": {
+   "warnings": 2,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4: shot ended before the first video frame (2.50 s); moved to 2.55 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4: shot ended before the first video frame (2.50 s); moved to 2.55 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 0,
+     "step": "a",
+     "why": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4 at 10.54 s for 3.8 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 1,
+     "step": "a",
+     "why": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4 at 27.22 s for 2.78 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4 at 41.84 s for 2.78 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4 at 60.46 s for 2.78 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4 at 75.07 s for 2.78 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4 at 97.8 s for 2.64 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 8,
+     "step": "a",
+     "why": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4 at 106.44 s for 2.64 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "b",
+     "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "a",
+     "why": "scan cap: 7 automatic slot(s) from the library or evenly spaced"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "arkheron-game-pass-early-access-nov-27-pure-xbox-arkheron-the-shattered-system.mp4 at 52.52 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "d",
+     "why": "audio split not applied (music stem not clean (leftover 22.8% > 5.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or "
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 814,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1337,
+  "peak_mem_mb": 3437,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61552,
+  "peak_disk_mb": 63003,
+  "min_disk_free_mb": 84793,
+  "setup_min": 1.08,
+  "story": "arkheron-game-pass-early-access-nov-27-pure-xbox"
  }
 ]
