@@ -47,5 +47,25 @@
    "heartopia"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/heartopia-my-little-pony-phase-2-games-press-reel-v1.mp4",
+  "blob": "d43db585f5eebeb114154a60ced0e18da3a92236",
+  "at": "2026-11-22T20:37:07Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/heartopia-my-little-pony-phase-2-games-press.json",
+   "sha256": "948c36cd27b91be0de73bdb83b07dc07520b753ecf3b2998eaab71d73fc7a097",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "three vertical frames: a villa on a lawn at dusk, cartoon avatars and pets at a garden party, four avatars on a rooftop over a night town; each with an Arabic line and the Games Press credit"
  }
 }
