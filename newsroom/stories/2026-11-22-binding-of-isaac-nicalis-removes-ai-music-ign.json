@@ -58,5 +58,25 @@
    "2026-11-21-binding-of-isaac-repentance-plus-10-percent-dexerto",
    "2026-11-22-binding-of-isaac-mcmillen-remove-ai-songs-gonintendo"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/binding-of-isaac-nicalis-removes-ai-music-ign-reel-v3.mp4",
+  "blob": "f41ceb82b17fe538725e3f4633dc1203c0bf8c34",
+  "at": "2026-11-22T02:46:21Z",
+  "note": "separate Director agent: one send-back (credit named Nicalis as footage owner), fixed to the Steam page and re-rendered; text true and clear",
+  "checklist": {
+   "job": "jobs/live/binding-of-isaac-nicalis-removes-ai-music-ign.json",
+   "sha256": "cdf67edf4d3a21db5057e377cdc402a0c3f4979e4bc179548370e2c0f9c21e7a",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look frames: headline hook, four caption lines over trailer footage, credit band reads IGN and the Steam page; last shot has burnt-in trailer text under the last line (template fallback not triggered)"
  }
 }
