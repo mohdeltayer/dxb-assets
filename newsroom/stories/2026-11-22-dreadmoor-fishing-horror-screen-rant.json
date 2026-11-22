@@ -54,5 +54,25 @@
   "hits": [
    "2026-11-09-dreadmoor-early-access-steam"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/dreadmoor-fishing-horror-screen-rant-reel-v1.mp4",
+  "blob": "c30dfa4ba2d6a9117f2102d327978d87e6af3004",
+  "at": "2026-11-22T01:40:57Z",
+  "note": "text true vs Steam page, clear for Arab reader, no gore",
+  "checklist": {
+   "job": "jobs/live/dreadmoor-fishing-horror-screen-rant.json",
+   "sha256": "d584dc8868011a59feb5cf5e8f4a7fce35b606217e982be1e12cdad13ea5d117",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "opening headline and fishing boat shots, mid monster art shots, end card"
  }
 }
