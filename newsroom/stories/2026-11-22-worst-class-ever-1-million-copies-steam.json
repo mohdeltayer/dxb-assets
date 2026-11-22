@@ -56,5 +56,25 @@
   "hits": [
    "2026-11-09-worst-class-ever"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/worst-class-ever-1-million-copies-steam-reel-v2.mp4",
+  "blob": "eca97048e3f527449914656c0a9485c91203f6db",
+  "at": "2026-11-22T02:21:41Z",
+  "note": "separate Director agent: text true to Steam announcement and clear in Arabic",
+  "checklist": {
+   "job": "jobs/live/worst-class-ever-1-million-copies-steam.json",
+   "sha256": "f8f5f96ad5e1adf867de781c7076ec136186eceeb418821313774656abf3d4b6",
+   "ok": true,
+   "problems": [],
+   "template": "numbers",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look frames: classroom hook with headline, count-up figure card to 1,000,000, gameplay shots with lines and credit once"
  }
 }
