@@ -1,0 +1,389 @@
+{
+ "name": "ff7-remake-trilogy-themes-kitase-inven",
+ "out": "cards/2026-11/ff7-remake-trilogy-themes-kitase-inven-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "build gate",
+   "detail": "story file: \"subject_person\" is null or {\"name\", \"role\", \"photo_source\"} with all three filled"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 60 px on 2 lines (cut it to a few words next time): تقرير: «الحياة» هي موضوع\nثلاثية Final Fantasy VII Remake"
+  },
+  {
+   "stage": "person",
+   "detail": "person plate line will not fit the window: المنتج يوشينوري كيتاسي (Yoshinori Kitase); the window is left out"
+  },
+  {
+   "stage": "length",
+   "detail": "length 11.1 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them; under 12 s fails: add a beat of footage"
+  }
+ ],
+ "ladder": [],
+ "job_to_pass_min": 7.7,
+ "at": "2026-11-22T03:17:50Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 1 ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 2 ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 3 ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 4 ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "length 11.1 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 45.1; leak_pct 0.0; cache {'hit': 0, 'miss': 5}; separate_secs 8.9; secs 11.7",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 8.11, \"held_under_text\": 0.0, \"secs\": 11.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 24 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)",
+  "estimate: headline: 31 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4 at 38.64 s for 2.2 s, focus 0.6"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4 at 52.75 s for 2.2 s, focus 0.587"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4 at 50.23 s for 2.4 s, focus 0.815"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4 at 25.55 s for 2.4 s, focus 0.268"
+  },
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "ff7-remake-trilogy-themes-kitase-inven-en-esrb-comparison.mp4 at 39.16 s for 3.8 s, focus 0.538 (nothing free in ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4)"
+  },
+  {
+   "where": "shot 0",
+   "rule": "subject_drift",
+   "what": "trimmed to 1.00 s, its longest safe length before the subject leaves the 9:16 window",
+   "before": [
+    "ff7-remake-trilogy-themes-kitase-inven-en-esrb-comparison.mp4",
+    39.16,
+    3.8,
+    [
+     [
+      0.0,
+      0.538
+     ]
+    ]
+   ],
+   "after": [
+    "ff7-remake-trilogy-themes-kitase-inven-en-esrb-comparison.mp4",
+    39.16,
+    1.0,
+    [
+     [
+      0.0,
+      0.538
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 0",
+   "rule": "fill",
+   "what": "2.80 s shorter in all: no neighbouring shot stays clean with the time"
+  },
+  {
+   "where": "shot 0",
+   "rule": "head_overlap",
+   "what": "lengthened 1.00 to 3.50 s so the line on shot 1 enters at 3.35 s, after the headline clears",
+   "before": 1.0,
+   "after": 3.5
+  }
+ ],
+ "job_sha": "1283928e1dd1ea1a4dc9448f52700b289e6d7d1d",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/ff7-remake-trilogy-themes-kitase-inven-look-1.jpg",
+  "cards/2026-11/ff7-remake-trilogy-themes-kitase-inven-look-2.jpg",
+  "cards/2026-11/ff7-remake-trilogy-themes-kitase-inven-look-3.jpg"
+ ],
+ "person_shown": true,
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 141.2,
+  "files": {
+   "ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4": {
+    "secs": 59.4,
+    "cached": false,
+    "stages": {
+     "decode": 25.4,
+     "autofocus": 52.2,
+     "ocr": 52.2,
+     "smear": 58.8,
+     "scenes": 59.4
+    },
+    "incomplete": null
+   },
+   "ff7-remake-trilogy-themes-kitase-inven-en-esrb-launch.mp4": {
+    "secs": 40.5,
+    "cached": false,
+    "stages": {
+     "decode": 19.4,
+     "autofocus": 33.2,
+     "ocr": 33.2,
+     "smear": 40.3,
+     "scenes": 40.5
+    },
+    "incomplete": null
+   },
+   "ff7-remake-trilogy-themes-kitase-inven-en-esrb-comparison.mp4": {
+    "secs": 41.2,
+    "cached": false,
+    "stages": {
+     "decode": 18.0,
+     "autofocus": 37.4,
+     "ocr": 37.4,
+     "smear": 41.1,
+     "scenes": 41.2
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/ff7-remake-trilogy-themes-kitase-inven.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.17,
+  "fetch": 1.17,
+  "shots": 1.85,
+  "checks": 1.99,
+  "render": 1.32,
+  "after": 0.54,
+  "job": 6.87
+ },
+ "job_after_autofix": {
+  "name": "ff7-remake-trilogy-themes-kitase-inven",
+  "story": "2026-11-22-ff7-remake-trilogy-themes-kitase-inven",
+  "footage_source": "steam:2909400",
+  "kind_news": "reveal",
+  "story_class": "person",
+  "story_class_why": "a person is the subject: «المنتج» in the headline or first sentence, with what they said or did (kind reveal read from the text)",
+  "skin_why": "genre rpg",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/ff7-remake-trilogy-themes-kitase-inven-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4",
+    "steam": 2909400,
+    "trailer": "ESRB EN - deep dive",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2909400"
+   },
+   {
+    "file": "ff7-remake-trilogy-themes-kitase-inven-en-esrb-launch.mp4",
+    "steam": 2909400,
+    "trailer": "EN ESRB - launch",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2909400"
+   },
+   {
+    "file": "ff7-remake-trilogy-themes-kitase-inven-en-esrb-comparison.mp4",
+    "steam": 2909400,
+    "trailer": "EN ESRB - comparison",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2909400"
+   },
+   {
+    "file": "ff7-remake-trilogy-themes-kitase-inven-person.jpg",
+    "frame_of": [
+     "ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4",
+     null
+    ]
+   }
+  ],
+  "shots": [
+   [
+    "ff7-remake-trilogy-themes-kitase-inven-en-esrb-comparison.mp4",
+    39.16,
+    3.5,
+    [
+     [
+      0.0,
+      0.538
+     ]
+    ]
+   ],
+   [
+    "ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4",
+    38.64,
+    2.2,
+    [
+     [
+      0.0,
+      0.6
+     ]
+    ]
+   ],
+   [
+    "ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4",
+    52.75,
+    2.2,
+    [
+     [
+      0.0,
+      0.587
+     ]
+    ]
+   ],
+   [
+    "ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4",
+    50.23,
+    2.42,
+    [
+     [
+      0.0,
+      0.815
+     ]
+    ]
+   ],
+   [
+    "ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4",
+    25.55,
+    2.42,
+    [
+     [
+      0.0,
+      0.268
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "وأضاف أن لكل جزء\nموضوعا خاصا به،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "وهي على التوالي: لمّ\nالشمل والروابط والعزيمة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    4,
+    "المصدر: Inven · اللقطات: Square Enix",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع إنفن (Inven) أن المنتج Yoshinori Kitase قال في مؤتمر G-CON في بوسان إن موضوع ثلاثية Final Fantasy VII Remake هو الحياة. وأضاف أن لكل جزء موضوعا خاصا به، وهي على التوالي: لمّ الشمل والروابط والعزيمة.",
+  "headline": "تقرير: «الحياة» هي موضوع\nثلاثية Final Fantasy VII Remake",
+  "label": "تقرير",
+  "game": "Final Fantasy VII Remake",
+  "game_short": "Final Fantasy VII Remake",
+  "genre": [
+   "rpg"
+  ],
+  "texts": {
+   "instagram": "ذكر موقع إنفن (Inven) أن المنتج يوشينوري كيتاسي (Yoshinori Kitase) قال في مؤتمر G-CON في بوسان إن موضوع ثلاثية Final Fantasy VII Remake هو الحياة.\n\nوأضاف أن لكل جزء موضوعا خاصا به، وهي على التوالي: لمّ الشمل والروابط والعزيمة.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: إنفن (Inven).\n\n#ألعاب #أخبار_الألعاب #FinalFantasyVII #سكوير",
+   "x": "تقرير: ذكر موقع إنفن (Inven) أن المنتج يوشينوري كيتاسي (Yoshinori Kitase) قال في مؤتمر G-CON إن موضوع ثلاثية Final Fantasy VII Remake هو الحياة، ولكل جزء موضوعه، وهي على التوالي: لمّ الشمل والروابط والعزيمة. المصدر: إنفن (Inven).",
+   "threads": "تقرير: ذكر موقع إنفن (Inven) أن المنتج يوشينوري كيتاسي (Yoshinori Kitase) قال في مؤتمر G-CON في بوسان إن موضوع ثلاثية Final Fantasy VII Remake هو الحياة.\n\nوأضاف أن لكل جزء موضوعا خاصا به، وهي على التوالي: لمّ الشمل والروابط والعزيمة.\n\nالمصدر: إنفن (Inven)"
+  },
+  "source": "إنفن (Inven)، ولقطات من سكوير (Square Enix)",
+  "date": "22 Nov 2026",
+  "theme": "stylized",
+  "style": null,
+  "template": "people",
+  "skin": "fantasy",
+  "cut": false,
+  "track": [
+   "ff7-remake-trilogy-themes-kitase-inven-en-esrb-comparison.mp4",
+   39.16
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Inven Global reported on 19-20 Nov that Yoshinori Kitase named Life as the overarching theme of the FF7 Remake trilogy at G-CON 2026.",
+   "what_it_means_here": "A famous series, with its producer explaining what each of the three games is about, ahead of Revelation on 8 Apr 2027."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "people: a person is the subject: «المنتج» in the headline or first sentence, with what they said or did (kind reveal read from the text)",
+   "skin": "fantasy: genre rpg",
+   "footage": "ff7-remake-trilogy-themes-kitase-inven-esrb-en-deep-dive.mp4 from the resolver (steam:2909400)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Inven Global, Once a game is out in the world, half of it belongs to the fans: Yoshinori Kitase on FF7, 19 Nov 2026 (https://www.invenglobal.com/articles/28891/once-a-game-is-out-in-the-world-half-of-it-belongs-to-the-fans-yoshinori-kitase-on-ff7); first report: Inven Global 19-20 Nov 2026, from Yoshinori Kitase's G-CON 2026 session in Busan on 20 Nov",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 2909400 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "person_photo": "none",
+  "searched": [
+   "the slip carried no official photo; the window shows the game's footage (12 Nov rule)"
+  ],
+  "person": [
+   [
+    "ff7-remake-trilogy-themes-kitase-inven-person.jpg",
+    "المنتج يوشينوري كيتاسي (Yoshinori Kitase)",
+    "",
+    0.0,
+    3.5,
+    {
+     "focus": [
+      0.5,
+      0.4
+     ]
+    }
+   ]
+  ],
+  "subject_person": {
+   "name": "المنتج يوشينوري كيتاسي (Yoshinori Kitase)",
+   "role": "",
+   "photo_source": null
+  },
+  "names_to_review": [
+   "Yoshinori Kitase"
+  ]
+ }
+}
