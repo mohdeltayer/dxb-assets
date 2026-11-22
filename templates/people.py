@@ -130,6 +130,10 @@ def fetch(keys=None, path=None, gap=20):
             print(f'people: {k}: image not fetched ({ex}); left for the next run', flush=True)
             continue
         im = Image.open(io.BytesIO(raw)).convert('RGB')
+        if e.get('crop'):                               # head and shoulders from a full-length photo (fractions x0 y0 x1 y1)
+            x0, y0, x1, y1 = e['crop']
+            im = im.crop((round(x0 * im.width), round(y0 * im.height), round(x1 * im.width), round(y1 * im.height)))
+            e['derivative'] = 'cropped to head and shoulders'
         im.thumbnail((LONG_SIDE, LONG_SIDE))
         os.makedirs(os.path.dirname(out), exist_ok=True)
         im.save(out, quality=90)
