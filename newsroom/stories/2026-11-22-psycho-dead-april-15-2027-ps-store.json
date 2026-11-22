@@ -53,5 +53,25 @@
    "dead"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/psycho-dead-april-15-2027-ps-store-reel-v1.mp4",
+  "blob": "799ae3615eec637c7825add4c9869fb086fdb3cc",
+  "at": "2026-11-22T14:29:29Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/psycho-dead-april-15-2027-ps-store.json",
+   "sha256": "a6c78bd8d25eff08dbe3366eba398701ac665d1ec1a833b5cdcda63a5eafeb4c",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "story.json spoken text and texts vs sources; strip.jpg and sheet.jpg: title card (رسمي chip, headline), subtitle cards matching spoken line, source credit line"
  }
 }
