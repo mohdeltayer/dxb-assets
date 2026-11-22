@@ -1,28 +1,51 @@
 {
  "schema": 1,
  "file": "digest",
- "generated_at": "2026-11-22T16:52:06Z",
- "seq": 748,
+ "generated_at": "2026-11-22T17:52:05Z",
+ "seq": 749,
  "kind": "hourly",
- "since": "2026-11-22T15:52:08Z",
+ "since": "2026-11-22T16:52:06Z",
  "official": [
   {
-   "id": 20629,
-   "source": "Epic Games (Google News)",
-   "source_kind": "gnews",
-   "title": "Epic Games Store - Epic Games",
-   "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPdW1QSlV2eXFBYmdibjFRS2RPTEJrbmZSWDlhM3Ewb1B6a0FIMVhrazdvX3NyRHpJYlFocGxzTDVuaTdkZDZCTEc5RnhJbjNPaWRRYzRESUVTU0syMnBoUzc1MXMzRlQycmVEdHdtNm9GXzZva0NwcVNXaWJ6Q3h2TnNiN3VOWEVtblZILU50b0QzRDZUaW1hRHFaaDRGUWZKc0FYNEdQM2Jkcl9BbjZEMTJBV1d6eVEydWU4ZGNnc3MtSDFBWEEyOGxLdUhoalNPaDJNdlNXR0p5MkIzZHRzWElCZks1cmNZdnZwbFhWOU4zSUpsLVY2eQ?oc=5",
-   "published": "2026-11-22T12:49Z",
-   "first_seen": "2026-11-22T16:25:14Z",
-   "media": [],
+   "id": 20653,
+   "source": "Fortnite (YouTube)",
+   "source_kind": "youtube",
+   "title": "🚨 Treasure Hunters: Mastery Monday starts tomorrow, which means even more loot!",
+   "url": "https://www.youtube.com/shorts/lfUiWq265eo",
+   "published": "2026-11-22T17:00Z",
+   "first_seen": "2026-11-22T17:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/lfUiWq265eo/hqdefault.jpg"
+    }
+   ],
    "breaking_source": false,
    "breaking_seq": null,
-   "digest_seq": 748
+   "digest_seq": 749
+  },
+  {
+   "id": 20654,
+   "source": "Pokemon (YouTube)",
+   "source_kind": "youtube",
+   "title": "Skarmory doesn't mess around when it comes to shiny things",
+   "url": "https://www.youtube.com/shorts/nSVJXCnkuQo",
+   "published": "2026-11-22T17:00Z",
+   "first_seen": "2026-11-22T17:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/nSVJXCnkuQo/hqdefault.jpg"
+    }
+   ],
+   "breaking_source": false,
+   "breaking_seq": null,
+   "digest_seq": 749
   }
  ],
  "outlets": [
   {
-   "count": 7,
+   "count": 8,
    "published": "2026-11-21T18:24Z",
    "title": "The Binding of Isaac: Repentance+ Online mode appears to contain AI generated music, creator working on getting it removed",
    "url": "https://gonintendo.com/contents/67471-the-binding-of-isaac-repentance-online-mode-appears-to-contain-ai-generated-music",
@@ -33,7 +56,8 @@
     "IGN",
     "IGN Middle East (AR)",
     "Kotaku",
-    "Steam News (hub)"
+    "Steam News (hub)",
+    "The Verge"
    ],
    "ar_relay": false,
    "media": [
@@ -96,44 +120,12 @@
      "title": "مطور The Binding of Isaac يزيل موسيقى مولّدة بالذكاء الاصطناعي من Repentance+ بعد موجة التقييمات السلبية، ومبتكر اللعبة يرد",
      "url": "https://me.ign.com/ar/the-binding-of-isaac-repentance/197665/mtwr-the-binding-of-isaac-yzyl-mwsyq-mwlwd-bldhk-lstny-mn-repentance-bd-mwj-ltqyymt-lslby-wmbtkr-llb",
      "published": "2026-11-22T16:09Z"
-    }
-   ]
-  },
-  {
-   "count": 3,
-   "published": "2026-11-22T08:58Z",
-   "title": "Activision Patent Allows AI Enemies to Learn Trash Talking From Players",
-   "url": "https://insider-gaming.com/activision-ai-trash-talking-patent/",
-   "sources": [
-    "Dexerto",
-    "Insider Gaming",
-    "TheGamer"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://www.dexerto.com/cdn-image/wp-content/uploads/2026/10/15/Call-of-Duty-2027-will-be-new-sub-franchise-and-not-Black-Ops-or-Modern-Warfare-game.jpg?width=1080&quality=75&format=auto"
-    }
-   ],
-   "items": [
-    {
-     "source": "Insider Gaming",
-     "title": "Activision Patent Allows AI Enemies to Learn Trash Talking From Players",
-     "url": "https://insider-gaming.com/activision-ai-trash-talking-patent/",
-     "published": "2026-11-22T08:58Z"
     },
     {
-     "source": "Dexerto",
-     "title": "Activision patent would let NPCs learn to trash talk from players’ voice chat",
-     "url": "https://www.dexerto.com/gaming/activision-patent-would-let-npcs-learn-to-trash-talk-from-players-voice-chat-3430416/",
-     "published": "2026-11-22T14:22Z"
-    },
-    {
-     "source": "TheGamer",
-     "title": "Call Of Duty Maker Activision Files Patent To Make AI NPCs Trash Talk",
-     "url": "https://www.thegamer.com/activision-patent-ai-npcs-trained-on-call-of-duty-voice-chat/",
-     "published": "2026-11-22T16:17Z"
+     "source": "The Verge",
+     "title": "Binding of Isaac developer removes AI music from Repentance Plus",
+     "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
+     "published": "2026-11-22T17:25Z"
     }
    ]
   },
@@ -176,175 +168,117 @@
      "title": "140+ Games Are Reduced By 90-95% In The Xbox Black Friday Sale 2026",
      "url": "https://www.purexbox.com/news/2026/11/140plus-games-are-reduced-by-90-95percent-in-the-xbox-black-friday-sale-2026",
      "published": "2026-11-22T16:00Z"
+    },
+    {
+     "source": "The Verge",
+     "title": "Some of our favorite Switch 2 games are cheaper through Black Friday",
+     "url": "https://www.theverge.com/gadgets/1037313/nintendo-switch-2-game-black-friday-cyber-monday-deal-sale",
+     "published": "2026-11-22T17:00Z"
     }
    ]
   },
   {
    "count": 2,
-   "published": "2026-11-22T10:49Z",
-   "title": "Contexto Hints & Answer For November 22, 2026",
-   "url": "https://insider-gaming.com/contexto-hints-answer-for-november-22-2026/",
+   "published": "2026-11-21T20:06Z",
+   "title": "مشارك في تجارب Neuralink يستعرض تجربة لعب GTA 6 باستخدام عقله فقط",
+   "url": "https://me.ign.com/ar/grand-theft-auto-vi/197657/mshrk-fy-tjrb-neuralink-ystrd-tjrb-lb-gta-6-bstkhdm-qlh-fqt",
    "sources": [
-    "Insider Gaming",
-    "TheGamer"
+    "IGN Middle East (AR)",
+    "VGA4A (AR)"
    ],
-   "ar_relay": false,
+   "ar_relay": true,
    "media": [
     {
      "type": "image",
-     "url": "https://static0.thegamerimages.com/wordpress/wp-content/uploads/wm/2026/10/hints-written-in-the-minute-cryptic-font-with-party-poppers.jpg"
+     "url": "https://sm.ign.com/ign_mear/news/n/neuralink-/neuralink-participant-showcases-what-its-like-to-play-gta-6_kjcq.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://sm.ign.com/t/ign_mear/news/n/neuralink-/neuralink-participant-showcases-what-its-like-to-play-gta-6_kjcq.640.jpg"
     }
    ],
    "items": [
     {
-     "source": "Insider Gaming",
-     "title": "Contexto Hints & Answer For November 22, 2026",
-     "url": "https://insider-gaming.com/contexto-hints-answer-for-november-22-2026/",
-     "published": "2026-11-22T10:49Z"
+     "source": "IGN Middle East (AR)",
+     "title": "مشارك في تجارب Neuralink يستعرض تجربة لعب GTA 6 باستخدام عقله فقط",
+     "url": "https://me.ign.com/ar/grand-theft-auto-vi/197657/mshrk-fy-tjrb-neuralink-ystrd-tjrb-lb-gta-6-bstkhdm-qlh-fqt",
+     "published": "2026-11-21T20:06Z"
     },
     {
-     "source": "TheGamer",
-     "title": "Today's Minute Cryptic Answer, Explained - November 23, 2026",
-     "url": "https://www.thegamer.com/minute-cryptic-answers-hints-november-23-2026/",
-     "published": "2026-11-22T16:39Z"
+     "source": "VGA4A (AR)",
+     "title": "مشارك في تجارب Neuralink يستعرض لعب GTA 6 باستخدام عقله فقط دون يد تحكم!",
+     "url": "https://www.vga4a.com/archives/342076",
+     "published": "2026-11-22T17:16Z"
     }
    ]
   },
   {
    "count": 2,
-   "published": "2026-11-21T20:59Z",
-   "title": "Fastest ways to farm Gold in WoW Forever",
-   "url": "https://www.destructoid.com/fastest-ways-to-farm-gold-in-wow-forever/",
+   "published": "2026-11-21T21:30Z",
+   "title": "New Report Claims Jensen Huang Regularly Threatened Nvidia Staff With Over-The-Top Violence",
+   "url": "https://kotaku.com/new-report-claims-jensen-huang-regularly-threatened-nvidia-staff-with-over-the-top-violence-2000759179",
    "sources": [
-    "Destructoid",
-    "Steam News (hub)"
+    "Kotaku",
+    "TweakTown"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://www.destructoid.com/wp-content/uploads/2026/11/An-Undead-character-fighting-a-monster-in-World-of-Warcraft-Forever.png?resize=1024%2C640"
-    },
-    {
-     "type": "image",
-     "url": "https://www.destructoid.com/wp-content/uploads/2026/11/Looting-a-corpse-in-WoW-Forever.png?resize=1024%2C640"
-    },
-    {
-     "type": "image",
-     "url": "https://www.destructoid.com/wp-content/uploads/2026/11/Blacksmithing-in-World-of-Warcraft-Forever.png?resize=1024%2C640"
-    },
-    {
-     "type": "image",
-     "url": "https://www.destructoid.com/wp-content/uploads/2026/11/Auction-House-at-Orgrimmar-in-WoW-Forever.png?resize=1024%2C640"
+     "url": "https://kotaku.com/app/uploads/2025/03/2f6d6fdeb135889521448163d9357355.jpg"
     }
    ],
    "items": [
     {
-     "source": "Destructoid",
-     "title": "Fastest ways to farm Gold in WoW Forever",
-     "url": "https://www.destructoid.com/fastest-ways-to-farm-gold-in-wow-forever/",
-     "published": "2026-11-21T20:59Z"
+     "source": "Kotaku",
+     "title": "New Report Claims Jensen Huang Regularly Threatened Nvidia Staff With Over-The-Top Violence",
+     "url": "https://kotaku.com/new-report-claims-jensen-huang-regularly-threatened-nvidia-staff-with-over-the-top-violence-2000759179",
+     "published": "2026-11-21T21:30Z"
     },
     {
-     "source": "Steam News (hub)",
-     "title": "World of Warcraft: Forever Players Find Way to Farm Over 100 Gold Per Hour",
-     "url": "https://store.steampowered.com/news/group/1450625/view/693152369910743976",
-     "published": "2026-11-22T16:18Z"
+     "source": "TweakTown",
+     "title": "Jensen Huang allegedly threatened to rip employees' arms off and tear their hearts out, report claims",
+     "url": "https://www.tweaktown.com/rss/click/news/114813/?c=news-mf",
+     "published": "2026-11-22T16:55Z"
     }
    ]
   },
   {
    "count": 2,
-   "published": "2026-11-22T10:54Z",
-   "title": "Jason's stoic character in Grand Theft Auto 6 was inspired by Steve McQueen and research into Army veterans: 'These guys typically aren't running their mouths'",
-   "url": "https://www.pcgamer.com/games/grand-theft-auto/jasons-stoic-character-in-grand-theft-auto-6-was-inspired-by-steve-mcqueen-and-research-into-army-veterans-these-guys-typically-arent-running-their-mouths/",
+   "published": "2026-11-22T10:02Z",
+   "title": "The new American Psycho has lost its director",
+   "url": "https://tbreak.com/american-psycho-adaptation-luca-guadagnino-exit/",
    "sources": [
-    "Eurogamer",
-    "PC Gamer"
+    "IGN",
+    "Tbreak (Gulf)"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/e3fPzBmapimeiWj59SBAiQ-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/sg9TWszsU48jQVeLU4kJvG-1920-80.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/6offQUY4CXebir2TC27dMd-1920-80.jpg"
+     "url": "https://assets-prd.ignimgs.com/2026/03/04/christian-bale-with-an-axe-in-american-psycho-jpg-1772648100652.jpg"
     }
    ],
    "items": [
     {
-     "source": "PC Gamer",
-     "title": "Jason's stoic character in Grand Theft Auto 6 was inspired by Steve McQueen and research into Army veterans: 'These guys typically aren't running their mouths'",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/jasons-stoic-character-in-grand-theft-auto-6-was-inspired-by-steve-mcqueen-and-research-into-army-veterans-these-guys-typically-arent-running-their-mouths/",
-     "published": "2026-11-22T10:54Z"
+     "source": "Tbreak (Gulf)",
+     "title": "The new American Psycho has lost its director",
+     "url": "https://tbreak.com/american-psycho-adaptation-luca-guadagnino-exit/",
+     "published": "2026-11-22T10:02Z"
     },
     {
-     "source": "Eurogamer",
-     "title": "GTA 6's strong and silent Jason was inspired by Steve McQueen and former Army Rangers, says Rockstar",
-     "url": "https://www.eurogamer.net/gta-6-jason-steve-mcqueen-army-rangers",
-     "published": "2026-11-22T16:11Z"
+     "source": "IGN",
+     "title": "American Psycho Remake From Director Luca Guadagnino No Longer Happening",
+     "url": "https://www.ign.com/articles/american-psycho-remake-from-director-luca-guadagnino-no-longer-happening",
+     "published": "2026-11-22T16:41Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-22T16:38Z",
-   "title": "You Can Now Play Gwent in Skyrim With New Mod",
-   "url": "https://store.steampowered.com/news/group/1450625/view/693152369910743980",
-   "sources": [
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2026/11/skyrim-the-witcher-gwent-mod.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Steam News (hub)",
-     "title": "You Can Now Play Gwent in Skyrim With New Mod",
-     "url": "https://store.steampowered.com/news/group/1450625/view/693152369910743980",
-     "published": "2026-11-22T16:38Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-22T16:37Z",
-   "title": "GTA 6: Should You Give Halifax The Statue In \"Dubious Provenance\"",
-   "url": "https://store.steampowered.com/news/group/38666666/view/719048067771270182",
-   "sources": [
-    "Steam News (hub)"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://static0.srcdn.com/wordpress/wp-content/uploads/2026/11/grand-theft-auto-vi_20261122112333.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "Steam News (hub)",
-     "title": "GTA 6: Should You Give Halifax The Statue In \"Dubious Provenance\"",
-     "url": "https://store.steampowered.com/news/group/38666666/view/719048067771270182",
-     "published": "2026-11-22T16:37Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-22T16:30Z",
-   "title": "Ubisoft confirms Assassin's Creed Jade is still being developed as it merges Creative Houses",
-   "url": "https://www.tweaktown.com/rss/click/news/114800/?c=news-mf",
+   "published": "2026-11-22T17:40Z",
+   "title": "Epic's AI MegaJam contest is being dominated by a game made entirely without AI",
+   "url": "https://www.tweaktown.com/rss/click/news/114783/?c=news-mf",
    "sources": [
     "TweakTown"
    ],
@@ -352,127 +286,51 @@
    "media": [
     {
      "type": "image",
-     "url": "https://static.tweaktown.com/news/1/1/114800_2_ubisoft-confirms-assassins-creed-jade-is-still-being-developed-as-it-merges-creative-houses_full.jpg?v=1795363881"
+     "url": "https://static.tweaktown.com/news/1/1/114783_4_epics-ai-megajam-contest-is-being-dominated-by-game-made-entirely-without_full.jpg?v=1795367153"
     }
    ],
    "items": [
     {
      "source": "TweakTown",
-     "title": "Ubisoft confirms Assassin's Creed Jade is still being developed as it merges Creative Houses",
-     "url": "https://www.tweaktown.com/rss/click/news/114800/?c=news-mf",
-     "published": "2026-11-22T16:30Z"
+     "title": "Epic's AI MegaJam contest is being dominated by a game made entirely without AI",
+     "url": "https://www.tweaktown.com/rss/click/news/114783/?c=news-mf",
+     "published": "2026-11-22T17:40Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-22T16:26Z",
-   "title": "الممثلة التي تؤدي دور ماندي في GTA 6 تتحدث بحماس بعد الانتشار الواسع لشخصيتها",
-   "url": "https://me.ign.com/ar/grand-theft-auto-vi/197652/lmmthl-lty-twdy-dwr-mndy-fy-gta-6-tthdth-bhms-bd-lntshr-lws-lshkhsyth",
+   "published": "2026-11-22T17:25Z",
+   "title": "Deux jeux, portant le même nom et sortis en même temps, font équipe pour sortir sur Switch",
+   "url": "https://www.gamekult.com/actualite/deux-jeux-portant-le-meme-nom-et-sortis-en-meme-temps-font-equipe-pour-sortir-sur-switch-3050872912.html",
    "sources": [
-    "IGN Middle East (AR)"
-   ],
-   "ar_relay": true,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://sm.ign.com/ign_mear/news/a/actor-who-/actor-who-plays-mandy-in-gta-6-excitedly-speaks-out-after-ch_3hsn.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://sm.ign.com/t/ign_mear/news/a/actor-who-/actor-who-plays-mandy-in-gta-6-excitedly-speaks-out-after-ch_3hsn.640.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "IGN Middle East (AR)",
-     "title": "الممثلة التي تؤدي دور ماندي في GTA 6 تتحدث بحماس بعد الانتشار الواسع لشخصيتها",
-     "url": "https://me.ign.com/ar/grand-theft-auto-vi/197652/lmmthl-lty-twdy-dwr-mndy-fy-gta-6-tthdth-bhms-bd-lntshr-lws-lshkhsyth",
-     "published": "2026-11-22T16:26Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-22T16:26Z",
-   "title": "الأردن يتحرك لحجب GTA 6.. ومخاوف على الأطفال تسبق القرار الرسمي",
-   "url": "https://www.vga4a.com/archives/342070",
-   "sources": [
-    "VGA4A (AR)"
-   ],
-   "ar_relay": true,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i0.wp.com/www.vga4a.com/wp-content/uploads/2026/11/Screenshot-2026-11-22-171619.webp?fit=1665%2C1067&ssl=1"
-    }
-   ],
-   "items": [
-    {
-     "source": "VGA4A (AR)",
-     "title": "الأردن يتحرك لحجب GTA 6.. ومخاوف على الأطفال تسبق القرار الرسمي",
-     "url": "https://www.vga4a.com/archives/342070",
-     "published": "2026-11-22T16:26Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-22T16:20Z",
-   "title": "عرض ترويجي جديد للعبة The Legend of Zelda: Ocarina of Time “الحكمة، القوة، الشجاعة”",
-   "url": "https://www.true-gaming.net/home/644229/%d8%b9%d8%b1%d8%b6-%d8%aa%d8%b1%d9%88%d9%8a%d8%ac%d9%8a-%d8%ac%d8%af%d9%8a%d8%af-%d9%84%d9%84%d8%b9%d8%a8%d8%a9-the-legend-of-zelda-ocarina-of-time-%d8%a7%d9%84%d8%ad%d9%83%d9%85%d8%a9%d8%8c-%d8%a7/",
-   "sources": [
-    "True Gaming (AR)"
-   ],
-   "ar_relay": true,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://www.true-gaming.net/home/wp-content/uploads/2026/10/zelda-ocarina-of-time-remake-dark-link-featured.webp"
-    }
-   ],
-   "items": [
-    {
-     "source": "True Gaming (AR)",
-     "title": "عرض ترويجي جديد للعبة The Legend of Zelda: Ocarina of Time “الحكمة، القوة، الشجاعة”",
-     "url": "https://www.true-gaming.net/home/644229/%d8%b9%d8%b1%d8%b6-%d8%aa%d8%b1%d9%88%d9%8a%d8%ac%d9%8a-%d8%ac%d8%af%d9%8a%d8%af-%d9%84%d9%84%d8%b9%d8%a8%d8%a9-the-legend-of-zelda-ocarina-of-time-%d8%a7%d9%84%d8%ad%d9%83%d9%85%d8%a9%d8%8c-%d8%a7/",
-     "published": "2026-11-22T16:20Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-22T16:12Z",
-   "title": "Ranked, Additonal Music, Bug fixes - Future Update Yapping",
-   "url": "https://store.steampowered.com/news/app/5037200/view/702159569166533415",
-   "sources": [
-    "Steam News (hub)"
+    "Gamekult (FR)"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://clan.akamai.steamstatic.com/images/46262100/116fb56b20ee8eb8f0eb6bd2e903486eb4ba64e6.png"
+     "url": "https://cdn.gamekult.com/optim/images/news/30/3050872912/nintendo-a-deteste-ca-deux-jeux-portant-le-meme-nom-et-sortis-en-meme-temps-font-equipe-pour-sortir-sur-switch-7b947c74__930_300__0-212-1920-832.jpg"
     },
     {
      "type": "image",
-     "url": "https://clan.akamai.steamstatic.com/images/46262100/a2a5dc9399593bad59fd131e581de4393f875e2b.png"
+     "url": "https://cdn.gamekult.com/optim/images/news/30/3050872912/nintendo-a-deteste-ca-deux-jeux-portant-le-meme-nom-et-sortis-en-meme-temps-font-equipe-pour-sortir-sur-switch-7b947c74__800_800__0-0-1081-1080.jpg"
     }
    ],
    "items": [
     {
-     "source": "Steam News (hub)",
-     "title": "Ranked, Additonal Music, Bug fixes - Future Update Yapping",
-     "url": "https://store.steampowered.com/news/app/5037200/view/702159569166533415",
-     "published": "2026-11-22T16:12Z"
+     "source": "Gamekult (FR)",
+     "title": "Deux jeux, portant le même nom et sortis en même temps, font équipe pour sortir sur Switch",
+     "url": "https://www.gamekult.com/actualite/deux-jeux-portant-le-meme-nom-et-sortis-en-meme-temps-font-equipe-pour-sortir-sur-switch-3050872912.html",
+     "published": "2026-11-22T17:25Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-22T16:10Z",
-   "title": "Cyberleek claims modders could get GTA 6 running on PC within a week after reported Xbox build leak",
-   "url": "https://www.tweaktown.com/rss/click/news/114815/?c=news-mf",
+   "published": "2026-11-22T17:20Z",
+   "title": "GTA 6 already has an infinite money glitch, but many players are skipping it",
+   "url": "https://www.tweaktown.com/rss/click/news/114814/?c=news-mf",
    "sources": [
     "TweakTown"
    ],
@@ -480,47 +338,71 @@
    "media": [
     {
      "type": "image",
-     "url": "https://static.tweaktown.com/news/1/1/114815_2_cyberleek-claims-modders-could-get-gta-6-running-on-pc-within-week-after-reported-xbox-build-leak_full.jpg?v=1795362524"
+     "url": "https://static.tweaktown.com/news/1/1/114814_2_theres-an-infinite-money-glitch-in-gta-6_full.jpg?v=1795365921"
     }
    ],
    "items": [
     {
      "source": "TweakTown",
-     "title": "Cyberleek claims modders could get GTA 6 running on PC within a week after reported Xbox build leak",
-     "url": "https://www.tweaktown.com/rss/click/news/114815/?c=news-mf",
-     "published": "2026-11-22T16:10Z"
+     "title": "GTA 6 already has an infinite money glitch, but many players are skipping it",
+     "url": "https://www.tweaktown.com/rss/click/news/114814/?c=news-mf",
+     "published": "2026-11-22T17:20Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-22T16:07Z",
-   "title": "رئيس وزراء اليونان يثير الجدل بسبب الترويج لـ GTA 6 كهدية للأطفال",
-   "url": "https://www.vga4a.com/archives/342066",
+   "published": "2026-11-22T17:12Z",
+   "title": "Creator Of Infamous E.T. Atari Game Warns That AI Could Trigger Another ’83-Style Crash",
+   "url": "https://kotaku.com/creator-of-infamous-e-t-atari-game-warns-that-ai-could-trigger-another-83-style-crash-2000759257",
    "sources": [
-    "VGA4A (AR)"
+    "Kotaku"
    ],
-   "ar_relay": true,
+   "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://i0.wp.com/www.vga4a.com/wp-content/uploads/2026/11/Screenshot_2026-11-22-17-04-37-262_com.twitter.android-edit.webp?fit=1080%2C756&ssl=1"
+     "url": "https://kotaku.com/app/uploads/2026/11/ETatari.jpg"
     }
    ],
    "items": [
     {
-     "source": "VGA4A (AR)",
-     "title": "رئيس وزراء اليونان يثير الجدل بسبب الترويج لـ GTA 6 كهدية للأطفال",
-     "url": "https://www.vga4a.com/archives/342066",
-     "published": "2026-11-22T16:07Z"
+     "source": "Kotaku",
+     "title": "Creator Of Infamous E.T. Atari Game Warns That AI Could Trigger Another ’83-Style Crash",
+     "url": "https://kotaku.com/creator-of-infamous-e-t-atari-game-warns-that-ai-could-trigger-another-83-style-crash-2000759257",
+     "published": "2026-11-22T17:12Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-22T16:01Z",
-   "title": "Every Voice Actor Behind GTA 6's Main Cast",
-   "url": "https://www.thegamer.com/grand-theft-auto-6-all-voice-actors-main-cast-guide/",
+   "published": "2026-11-22T17:07Z",
+   "title": "Steam Drops Free Multiplayer Game With 100% Positive Reviews",
+   "url": "https://store.steampowered.com/news/group/38666666/view/719048067771270193",
+   "sources": [
+    "Steam News (hub)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://static0.srcdn.com/wordpress/wp-content/uploads/2026/06/steam-logo-purple.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Steam News (hub)",
+     "title": "Steam Drops Free Multiplayer Game With 100% Positive Reviews",
+     "url": "https://store.steampowered.com/news/group/38666666/view/719048067771270193",
+     "published": "2026-11-22T17:07Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-22T17:04Z",
+   "title": "Donnie's Sunken Boat Location In GTA 6",
+   "url": "https://www.thegamer.com/grand-theft-auto-6-donnies-sunken-boat-guide/",
    "sources": [
     "TheGamer"
    ],
@@ -528,23 +410,47 @@
    "media": [
     {
      "type": "image",
-     "url": "https://static0.thegamerimages.com/wordpress/wp-content/uploads/wm/2026/11/lucia-and-jason-drinking-beers-in-grand-theft-auto-6.jpg"
+     "url": "https://static0.thegamerimages.com/wordpress/wp-content/uploads/wm/2026/11/gta-6-donnie-s-sunken-boat.jpg"
     }
    ],
    "items": [
     {
      "source": "TheGamer",
-     "title": "Every Voice Actor Behind GTA 6's Main Cast",
-     "url": "https://www.thegamer.com/grand-theft-auto-6-all-voice-actors-main-cast-guide/",
-     "published": "2026-11-22T16:01Z"
+     "title": "Donnie's Sunken Boat Location In GTA 6",
+     "url": "https://www.thegamer.com/grand-theft-auto-6-donnies-sunken-boat-guide/",
+     "published": "2026-11-22T17:04Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-22T16:00Z",
-   "title": "This '90s-inspired horror game has one of the coolest post-apocalyptic worlds I've ever seen",
-   "url": "https://www.pcgamer.com/games/horror/this-90s-inspired-horror-game-has-one-of-the-coolest-post-apocalyptic-worlds-ive-ever-seen/",
+   "published": "2026-11-22T17:03Z",
+   "title": "All Controls And What They Do In GTA 6",
+   "url": "https://www.thegamer.com/grand-theft-auto-6-gta6-controls-combat-driving-guide/",
+   "sources": [
+    "TheGamer"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://static0.thegamerimages.com/wordpress/wp-content/uploads/wm/2026/11/1a20432814e81-screenshoturl.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "TheGamer",
+     "title": "All Controls And What They Do In GTA 6",
+     "url": "https://www.thegamer.com/grand-theft-auto-6-gta6-controls-combat-driving-guide/",
+     "published": "2026-11-22T17:03Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-22T17:00Z",
+   "title": "Scott Lynch, author of The Lies of Locke Lamora, has 1,493 hours in Star Wars: Rebellion and 1,564 in BattleTech: 'If J.R.R. Tolkien had had a Steam account, his numbers would be pretty embarrassing too'",
+   "url": "https://www.pcgamer.com/gaming-industry/scott-lynch-author-of-the-lies-of-locke-lamora-has-1-493-hours-in-star-wars-rebellion-and-1-564-in-battletech-if-j-r-r-tolkien-had-had-a-steam-account-his-numbers-would-be-pretty-embarrassing-too/",
    "sources": [
     "PC Gamer"
    ],
@@ -552,119 +458,159 @@
    "media": [
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/9NRHokYQAAJfSkWEZafGdc-1920-80.png"
+     "url": "https://cdn.mos.cms.futurecdn.net/fkpXpggwPwTWqi7omc8ABe-1920-80.png"
     },
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/3qj4tCVwdCkQLD7cj9zESc-1920-80.jpg"
+     "url": "https://cdn.mos.cms.futurecdn.net/DEwkbfkEmfdtjT5P9ybme-1920-80.png"
     },
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/GtyQoXssDh4pZCnrRUDSWc-1920-80.jpg"
+     "url": "https://cdn.mos.cms.futurecdn.net/JmF4o6RuMPxHWWr64cRf5N-1920-80.jpg"
     },
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/nfKucX4PAWSV2juT3ten9c-1920-80.jpg"
+     "url": "https://cdn.mos.cms.futurecdn.net/4HGkPb3PmYS897a6BtnUbm-1920-80.jpg"
     },
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/xK2EisGpLEFVJrkjuNEn5c-1920-80.jpg"
+     "url": "https://cdn.mos.cms.futurecdn.net/zmZcheyxxT64dL5Jqsh4tV-1920-80.jpg"
     },
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/Ri4rebp7CzRGzpJKwLbgwb-1920-80.jpg"
+     "url": "https://cdn.mos.cms.futurecdn.net/kJoUUt9XGp5syJGRME4oyH-1920-80.jpg"
     }
    ],
    "items": [
     {
      "source": "PC Gamer",
-     "title": "This '90s-inspired horror game has one of the coolest post-apocalyptic worlds I've ever seen",
-     "url": "https://www.pcgamer.com/games/horror/this-90s-inspired-horror-game-has-one-of-the-coolest-post-apocalyptic-worlds-ive-ever-seen/",
-     "published": "2026-11-22T16:00Z"
+     "title": "Scott Lynch, author of The Lies of Locke Lamora, has 1,493 hours in Star Wars: Rebellion and 1,564 in BattleTech: 'If J.R.R. Tolkien had had a Steam account, his numbers would be pretty embarrassing too'",
+     "url": "https://www.pcgamer.com/gaming-industry/scott-lynch-author-of-the-lies-of-locke-lamora-has-1-493-hours-in-star-wars-rebellion-and-1-564-in-battletech-if-j-r-r-tolkien-had-had-a-steam-account-his-numbers-would-be-pretty-embarrassing-too/",
+     "published": "2026-11-22T17:00Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-22T16:00Z",
-   "title": "Feature: A Lost Box Restored My Faith In Zelda's Staying Power",
-   "url": "https://www.nintendolife.com/features/a-lost-box-restored-my-faith-in-zeldas-staying-power",
+   "published": "2026-11-22T16:57Z",
+   "title": "متجر ألعاب يبيع 5 نسخ فقط من GTA 6.. والسبب؟",
+   "url": "https://www.vga4a.com/archives/342080",
    "sources": [
-    "Nintendo Life"
+    "VGA4A (AR)"
+   ],
+   "ar_relay": true,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i0.wp.com/www.vga4a.com/wp-content/uploads/2026/11/f2bf16b0-e41d-11f1-9e08-55a8a3b48445.jpg.webp?fit=1536%2C863&ssl=1"
+    }
+   ],
+   "items": [
+    {
+     "source": "VGA4A (AR)",
+     "title": "متجر ألعاب يبيع 5 نسخ فقط من GTA 6.. والسبب؟",
+     "url": "https://www.vga4a.com/archives/342080",
+     "published": "2026-11-22T16:57Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-22T16:57Z",
+   "title": "Warhammer 40k's most iconic weapon is coming to co-op shooter Darktide, and it's free for everyone",
+   "url": "https://store.steampowered.com/news/group/3693985/view/710040868515480452",
+   "sources": [
+    "Steam News (hub)"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://images.nintendolife.com/c24d67b6ff55e/small.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://images.nintendolife.com/c24d67b6ff55e/large.jpg"
+     "url": "https://www.pcgamesn.com/wp-content/sites/pcgamesn/2026/11/warhammer-40k-darktide-update-meltagun-sisters-novitiate-dlc-release-date.jpg"
     }
    ],
    "items": [
     {
-     "source": "Nintendo Life",
-     "title": "Feature: A Lost Box Restored My Faith In Zelda's Staying Power",
-     "url": "https://www.nintendolife.com/features/a-lost-box-restored-my-faith-in-zeldas-staying-power",
-     "published": "2026-11-22T16:00Z"
+     "source": "Steam News (hub)",
+     "title": "Warhammer 40k's most iconic weapon is coming to co-op shooter Darktide, and it's free for everyone",
+     "url": "https://store.steampowered.com/news/group/3693985/view/710040868515480452",
+     "published": "2026-11-22T16:57Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-22T15:52Z",
-   "title": "Percy Jackson Season 1: Episodes 1-8 Gallery",
-   "url": "https://me.ign.com/ar/percy-jackson-and-the-olympians/197668/percy-jackson-season-1-episodes-1-8-gallery",
+   "published": "2026-11-22T16:55Z",
+   "title": "Former Rockstar environment artist breaks silence: GTA 6 is 'generally stunning,' but Red Dead 2 might have had better rivers",
+   "url": "https://www.pcgamer.com/games/grand-theft-auto/former-rockstar-environment-artist-breaks-silence-gta-6-is-generally-stunning-but-red-dead-2-might-have-had-better-rivers/",
    "sources": [
-    "IGN Middle East (AR)"
+    "PC Gamer"
    ],
-   "ar_relay": true,
+   "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://sm.ign.com/ign_mear/gallery/p/percy-jack/percy-jackson-season-1-episodes-1-8-gallery_9d3k.jpg"
+     "url": "https://cdn.mos.cms.futurecdn.net/dTy3LYCVBVa7JXWmxWrNx9-1920-80.jpg"
     },
     {
      "type": "image",
-     "url": "https://sm.ign.com/t/ign_mear/gallery/p/percy-jack/percy-jackson-season-1-episodes-1-8-gallery_9d3k.640.jpg"
+     "url": "https://cdn.mos.cms.futurecdn.net/BHPqKqLPfA5ZBPetGie6Zb-1920-80.jpg"
     }
    ],
    "items": [
     {
-     "source": "IGN Middle East (AR)",
-     "title": "Percy Jackson Season 1: Episodes 1-8 Gallery",
-     "url": "https://me.ign.com/ar/percy-jackson-and-the-olympians/197668/percy-jackson-season-1-episodes-1-8-gallery",
-     "published": "2026-11-22T15:52Z"
+     "source": "PC Gamer",
+     "title": "Former Rockstar environment artist breaks silence: GTA 6 is 'generally stunning,' but Red Dead 2 might have had better rivers",
+     "url": "https://www.pcgamer.com/games/grand-theft-auto/former-rockstar-environment-artist-breaks-silence-gta-6-is-generally-stunning-but-red-dead-2-might-have-had-better-rivers/",
+     "published": "2026-11-22T16:55Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-22T15:52Z",
-   "title": "كشف ممثلا Percy Jackson أنهما شاهدا مقاطع معدّلة من Attack on Titan لمساعدتهما على البكاء أثناء تصوير المشاهد العاطفية",
-   "url": "https://me.ign.com/ar/attack-on-titan-1/197667/kshf-mmthl-percy-jackson-nhm-shhd-mqt-mdwl-mn-attack-on-titan-lmsdthm-l-lbk-thn-tswyr-lmshhd-ltfy",
+   "published": "2026-11-22T16:49Z",
+   "title": "Sunrise on the Reaping Makes Hunger Games A Box Office Blockbuster Franchise Again",
+   "url": "https://www.polygon.com/the-hunger-games-sunrise-on-the-reaping-box-office/",
    "sources": [
-    "IGN Middle East (AR)"
+    "Polygon"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://static0.polygonimages.com/wordpress/wp-content/uploads/2026/11/hunger_games_sunrise_reaping.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Polygon",
+     "title": "Sunrise on the Reaping Makes Hunger Games A Box Office Blockbuster Franchise Again",
+     "url": "https://www.polygon.com/the-hunger-games-sunrise-on-the-reaping-box-office/",
+     "published": "2026-11-22T16:49Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-22T16:31Z",
+   "title": "مراجعة كيس الحاسوب Cooler Master Q300L V3 Black",
+   "url": "https://arabhardware.net/post-55209",
+   "sources": [
+    "Arab Hardware (AR)"
    ],
    "ar_relay": true,
    "media": [
     {
      "type": "image",
-     "url": "https://sm.ign.com/ign_mear/news/p/percy-jack/percy-jackson-actors-reveal-they-watched-attack-on-titan-fan_n61z.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://sm.ign.com/t/ign_mear/news/p/percy-jack/percy-jackson-actors-reveal-they-watched-attack-on-titan-fan_n61z.640.jpg"
+     "url": "https://arabhardware.net/storage/uploads/2026-11/6b03159d5ab1c.dsc0647jpg.jpgmain6b03159d6c322.webp"
     }
    ],
    "items": [
     {
-     "source": "IGN Middle East (AR)",
-     "title": "كشف ممثلا Percy Jackson أنهما شاهدا مقاطع معدّلة من Attack on Titan لمساعدتهما على البكاء أثناء تصوير المشاهد العاطفية",
-     "url": "https://me.ign.com/ar/attack-on-titan-1/197667/kshf-mmthl-percy-jackson-nhm-shhd-mqt-mdwl-mn-attack-on-titan-lmsdthm-l-lbk-thn-tswyr-lmshhd-ltfy",
-     "published": "2026-11-22T15:52Z"
+     "source": "Arab Hardware (AR)",
+     "title": "مراجعة كيس الحاسوب Cooler Master Q300L V3 Black",
+     "url": "https://arabhardware.net/post-55209",
+     "published": "2026-11-22T16:31Z"
     }
    ]
   }
@@ -698,7 +644,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-22T16:50:14Z",
+  "last_poll_at": "2026-11-22T17:50:14Z",
   "sources_enabled": 101,
   "sources_ok": 101,
   "sources_failing": 0,
