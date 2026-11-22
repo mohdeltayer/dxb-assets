@@ -9,7 +9,8 @@
  ],
  "subject_person": {
   "name": "الممثل ستيف ماكوين",
-  "role": ""
+  "role": "actor named by Rockstar as an inspiration for Jason",
+  "photo_source": "none: name card in the window, no photo used"
  },
  "genre": [
   "action"
@@ -77,5 +78,25 @@
    "2026-11-22-gta-vi-jordan-trc-block-roya-news",
    "2026-11-22-neuralink-participant-plays-gta-vi-ign-me"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/gta-vi-jason-steve-mcqueen-eurogamer-reel-v1.mp4",
+  "blob": "278930913edf4d980725347bc968332a10be3304",
+  "at": "2026-11-22T21:25:27Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/gta-vi-jason-steve-mcqueen-eurogamer.json",
+   "sha256": "959e270b0b832e5737ac6506f3792342056873538f3ca4b9a319396fec1760ef",
+   "ok": true,
+   "problems": [],
+   "template": "people",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1: headline plate with the تقرير chip over a muscular tattooed figure in official GTA VI footage, with the name card الممثل ستيف ماكوين; look-2: purple-lit shot of a figure in a fur-trimmed jacket and jeans with subtitle ومن فيلم سرقات يعود إلى السبعينيات and the Eurogamer/Rockstar credit band; look-3: dark near-black fade frame with subtitle ومنهم رينجرز الجيش الأمريكي and the credit band"
  }
 }

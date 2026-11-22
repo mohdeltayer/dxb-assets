@@ -55,5 +55,25 @@
   "hits": [
    "2026-10-19-metroid-ravenous-eat-or-be-eaten"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/metroid-ravenous-samus-metroid-suit-nintenderos-reel-v1.mp4",
+  "blob": "5cb8ba2a65c03482a6b369f2410fa0f450796491",
+  "at": "2026-11-22T21:37:58Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/metroid-ravenous-samus-metroid-suit-nintenderos.json",
+   "sha256": "fbfbc0ead1c66a20526b10dcba55d696eb9fdb4438283fe0d741869c5cc472e6",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": "showcase",
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1: headline card with tag تقرير and Nintenderos attribution line over footage of red and blue suit helmets with a purple glow; look-2: glowing pink hand with 'ببدلة ميترويد في لعبة Metroid Ravenous'; look-3: dark frame with 'وتصدر اللعبة على نينتندو سويتش 2 في 28 يناير 2027'; source credit band Nintenderos/Nintendo on all"
  }
 }
