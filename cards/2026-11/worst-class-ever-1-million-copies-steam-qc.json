@@ -1,0 +1,354 @@
+{
+ "name": "worst-class-ever-1-million-copies-steam",
+ "out": "cards/2026-11/worst-class-ever-1-million-copies-steam-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "credit",
+   "detail": "credit ladder step 6 (two lines): «المصدر: إعلان المطور على Steam / اللقطات: فانكور غيمز (Funcore Games) (Funcore Games)» -> «المصدر: إعلان المطور على Steam / اللقطات: فانكور غيمز (Funcore Games) (Funcore Games)» at 36 px"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "text",
+   "slot": "reel",
+   "step": "a",
+   "why": "soft shade under line group(s) [0, 1]: bright footage behind them"
+  }
+ ],
+ "job_to_pass_min": 5.0,
+ "at": "2026-11-22T02:15:10Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 worst-class-ever-1-million-copies-steam-pv-en.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 2 worst-class-ever-1-million-copies-steam-pv-en.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 3 worst-class-ever-1-million-copies-steam-pv-en.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 4 worst-class-ever-1-million-copies-steam-pv-en.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 5 worst-class-ever-1-million-copies-steam-pv-en.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 6 worst-class-ever-1-million-copies-steam-pv-en.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 7 worst-class-ever-1-million-copies-steam-pv-en.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 8 worst-class-ever-1-million-copies-steam-pv-en.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "length 20.2 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 99.5; leak_pct 0.0; cache {'hit': 0, 'miss': 3}; separate_secs 7.8; secs 12.4",
+  "smear check: exempt 2.40 to 8.60 s (our own cards)",
+  "render_job: lifeless: {\"score\": 23.6, \"still_share\": 0.274, \"longest_still\": 2.7, \"cuts_per_10s\": 8.96, \"held_under_text\": 0.005, \"secs\": 20.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "worst-class-ever-1-million-copies-steam-pv-en.mp4 at 21.95 s for 3.8 s, focus 0.326"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "worst-class-ever-1-million-copies-steam-pv-en.mp4 at 29.45 s for 2.2 s, focus 0.541"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "worst-class-ever-1-million-copies-steam-pv-en.mp4 at 35.35 s for 2.2 s, focus 0.362"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "worst-class-ever-1-million-copies-steam-pv-en.mp4 at 49.45 s for 2.2 s, focus 0.502"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "worst-class-ever-1-million-copies-steam-pv-en.mp4 at 17.21 s for 2.2 s, focus 0.546"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "worst-class-ever-1-million-copies-steam-pv-en.mp4 at 38.98 s for 2.2 s, focus 1.0"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "worst-class-ever-1-million-copies-steam-pv-en.mp4 at 14.41 s for 2.2 s, focus 0.536"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "worst-class-ever-1-million-copies-steam-pv-en.mp4 at 9.51 s for 2.2 s, focus 0.852"
+  }
+ ],
+ "job_sha": "92ebad657f64b32be21551025469d67dea136e51",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/worst-class-ever-1-million-copies-steam-look-1.jpg",
+  "cards/2026-11/worst-class-ever-1-million-copies-steam-look-2.jpg",
+  "cards/2026-11/worst-class-ever-1-million-copies-steam-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 28.2,
+  "files": {
+   "worst-class-ever-1-million-copies-steam-pv-en.mp4": {
+    "secs": 27.8,
+    "cached": false,
+    "stages": {
+     "decode": 12.2,
+     "autofocus": 25.8,
+     "ocr": 25.8,
+     "smear": 27.6,
+     "scenes": 27.8
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/worst-class-ever-1-million-copies-steam.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.17,
+  "fetch": 0.12,
+  "shots": 0.4,
+  "checks": 0.58,
+  "render": 2.15,
+  "after": 0.7,
+  "job": 3.97
+ },
+ "job_after_autofix": {
+  "name": "worst-class-ever-1-million-copies-steam",
+  "story": "2026-11-22-worst-class-ever-1-million-copies-steam",
+  "footage_source": "steam:5175310",
+  "kind_news": "players",
+  "story_class": "numbers",
+  "story_class_why": "kind players",
+  "skin_why": "genre party: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/worst-class-ever-1-million-copies-steam-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "worst-class-ever-1-million-copies-steam-pv-en.mp4",
+    "steam": 5175310,
+    "trailer": "pv_en",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "5175310"
+   }
+  ],
+  "shots": [
+   [
+    "worst-class-ever-1-million-copies-steam-pv-en.mp4",
+    21.95,
+    3.8,
+    [
+     [
+      0.0,
+      0.326
+     ]
+    ]
+   ],
+   [
+    "worst-class-ever-1-million-copies-steam-gfx-figure.png",
+    0.0,
+    4.2,
+    null
+   ],
+   [
+    "worst-class-ever-1-million-copies-steam-pv-en.mp4",
+    29.45,
+    2.2,
+    [
+     [
+      0.0,
+      0.541
+     ]
+    ]
+   ],
+   [
+    "worst-class-ever-1-million-copies-steam-pv-en.mp4",
+    35.35,
+    2.2,
+    [
+     [
+      0.0,
+      0.362
+     ]
+    ]
+   ],
+   [
+    "worst-class-ever-1-million-copies-steam-pv-en.mp4",
+    49.45,
+    2.2,
+    [
+     [
+      0.0,
+      0.502
+     ]
+    ]
+   ],
+   [
+    "worst-class-ever-1-million-copies-steam-pv-en.mp4",
+    17.21,
+    2.2,
+    [
+     [
+      0.0,
+      0.546
+     ]
+    ]
+   ],
+   [
+    "worst-class-ever-1-million-copies-steam-pv-en.mp4",
+    38.98,
+    2.2,
+    [
+     [
+      0.0,
+      1.0
+     ]
+    ]
+   ],
+   [
+    "worst-class-ever-1-million-copies-steam-pv-en.mp4",
+    14.41,
+    2.2,
+    [
+     [
+      0.0,
+      0.536
+     ]
+    ]
+   ],
+   [
+    "worst-class-ever-1-million-copies-steam-pv-en.mp4",
+    9.51,
+    2.2,
+    [
+     [
+      0.0,
+      0.852
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    2,
+    3,
+    [
+     [
+      "وهي لعبة جماعية مرحة\nمتعددة اللاعبين،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    4,
+    6,
+    [
+     [
+      "يواجه فيها لاعب واحد بدور\nالمعلم سبعة لاعبين بدور الطلاب",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    8,
+    [
+     [
+      "ونشر الاستوديو أيضا\nخطة تحديثات للعبة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    8,
+    "المصدر: إعلان المطور على Steam\nاللقطات: فانكور غيمز (Funcore Games) (Funcore Games)",
+    {
+     "size": 36,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "أعلن المطور فانكور غيمز (Funcore Games) أن لعبة Worst Class Ever باعت أكثر من مليون نسخة بعد 12 يوما فقط من إطلاقها. وهي لعبة جماعية مرحة متعددة اللاعبين، يواجه فيها لاعب واحد بدور المعلم سبعة لاعبين بدور الطلاب. ونشر الاستوديو أيضا خطة تحديثات للعبة.",
+  "headline": "مليون نسخة في 12 يوما\nمن Worst Class Ever",
+  "label": "رسمي",
+  "game": "Worst Class Ever",
+  "game_short": "Worst Class Ever",
+  "genre": [
+   "party",
+   "casual"
+  ],
+  "texts": {
+   "instagram": "أعلن المطور فانكور غيمز (Funcore Games) أن لعبة Worst Class Ever باعت أكثر من مليون نسخة بعد 12 يوما فقط من إطلاقها في 9 نوفمبر.\n\nوهي لعبة جماعية مرحة متعددة اللاعبين، يواجه فيها لاعب واحد بدور المعلم سبعة لاعبين بدور الطلاب.\n\nونشر الاستوديو أيضا خطة تحديثات للعبة.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: إعلان المطور على Steam.\n\n#ألعاب #أخبار_الألعاب #WorstClassEver #ستيم",
+   "x": "أعلن المطور فانكور غيمز (Funcore Games) أن لعبة Worst Class Ever باعت أكثر من مليون نسخة بعد 12 يوما فقط من إطلاقها في 9 نوفمبر، ونشر خطة تحديثات للعبة. المصدر: إعلان المطور على Steam.",
+   "threads": "أعلن المطور فانكور غيمز (Funcore Games) أن لعبة Worst Class Ever باعت أكثر من مليون نسخة بعد 12 يوما فقط من إطلاقها في 9 نوفمبر.\n\nوهي لعبة جماعية مرحة متعددة اللاعبين، يواجه فيها لاعب واحد بدور المعلم سبعة لاعبين بدور الطلاب.\n\nونشر الاستوديو أيضا خطة تحديثات للعبة.\n\nالمصدر: إعلان المطور على Steam"
+  },
+  "source": "إعلان المطور على Steam، ولقطات من فانكور غيمز (Funcore Games) (Funcore Games)",
+  "date": "22 Nov 2026",
+  "theme": "gold",
+  "style": null,
+  "template": "numbers",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "worst-class-ever-1-million-copies-steam-pv-en.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Funcore Games announced on Steam on 21 Nov that Worst Class Ever passed one million copies 12 days after its 9 Nov launch, and published an update roadmap.",
+   "what_it_means_here": "A small asymmetric classroom party game, one teacher against seven hiding students, reaches a million sales in under two weeks."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "numbers: kind players",
+   "skin": "house: genre party: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "worst-class-ever-1-million-copies-steam-pv-en.mp4 from the resolver (steam:5175310)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam announcement, Worst Class Ever, 1 Million Copies in 12 Days (https://store.steampowered.com/news/app/5175310/view/684145170657052419); first report: Steam announcement by the developer Funcore Games, 21 Nov 2026 23:58Z (launch 9 Nov)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 5175310 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "gfx": [
+   {
+    "file": "worst-class-ever-1-million-copies-steam-gfx-figure.png",
+    "kind": "fact",
+    "value": "1,000,000",
+    "label": "نسخة مباعة",
+    "note": "في 12 يوما"
+   }
+  ],
+  "ground_footage": [
+   "worst-class-ever-1-million-copies-steam-pv-en.mp4",
+   4.0,
+   60.0
+  ]
+ }
+}
