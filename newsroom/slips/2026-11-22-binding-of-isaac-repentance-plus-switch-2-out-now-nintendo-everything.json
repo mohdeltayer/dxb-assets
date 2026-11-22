@@ -1,12 +1,27 @@
 {
  "id": "2026-11-22-binding-of-isaac-repentance-plus-switch-2-out-now-nintendo-everything",
- "state": "failed",
- "problems": [
-  "spoken: a + or % sign flips to the far side in right-to-left text; spell it out (New Game Plus, «بالمئة») (Dawnwalker test, 17 Nov)"
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "text fixed mechanically: line 1: space after a glued prefix",
+  "ledger: earlier stories on this game: 2026-11-19-binding-of-isaac-repentance-online-coop-consoles, 2026-11-19-binding-of-isaac-switch-2-same-day-as-gta-vi, 2026-11-21-binding-of-isaac-repentance-plus-10-percent-dexerto, 2026-11-22-binding-of-isaac-mcmillen-remove-ai-songs-gonintendo, 2026-11-22-binding-of-isaac-nicalis-removes-ai-music-ign (an update or a duplicate? the editor decides)"
  ],
- "flags": [],
- "at": "2026-11-22T16:23:17Z",
- "run": "45043505663",
+ "at": "2026-11-22T16:28:08Z",
+ "footage": {
+  "name": "The Binding of Isaac: Rebirth teaser",
+  "width": null,
+  "height": null,
+  "fps": null,
+  "mbps": null,
+  "rows": null,
+  "duration": null,
+  "decode_clean": true
+ },
+ "job": "jobs/live/binding-of-isaac-repentance-plus-switch-2-out-now-nintendo-everything.json",
+ "story": "newsroom/stories/2026-11-22-binding-of-isaac-repentance-plus-switch-2-out-now-nintendo-everything.json",
+ "lines": 3,
+ "shots": 7,
+ "run": "45043953924",
  "lane": "live",
- "build_secs": 26
+ "build_secs": 42
 }
