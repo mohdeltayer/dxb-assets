@@ -54,5 +54,25 @@
    "forgotten"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/kirby-forgotten-land-switch-2-lowest-price-black-friday-nintendo-everything-reel-v1.mp4",
+  "blob": "a161b72a9b2453c76af636c7895293f0948f29f5",
+  "at": "2026-11-22T12:38:56Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/kirby-forgotten-land-switch-2-lowest-price-black-friday-nintendo-everything.json",
+   "sha256": "a74c1a231f53dfe55e4a655678bf4d6dbe5f6048f8d1ed62d8ec2283a5c2e4f9",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": null,
+  "looked": "Checked headline, spoken text and captions against the Nintendo Everything article: 55.99 (was 79.99), Split Fiction 29.99 (was 49.99), sale live, and the article says Kirby's Switch 2 Edition is at its lowest price yet; on-screen numbers match the spoken ones and the Arabic reads clearly."
  }
 }
