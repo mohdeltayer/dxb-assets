@@ -53,5 +53,25 @@
    "1"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/gothic-1-remake-ps5-japan-delay-famitsu-reel-v1.mp4",
+  "blob": "b619b1b20768fa6bb164fd5a429b37972ab5a400",
+  "at": "2026-11-22T07:25:36Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/gothic-1-remake-ps5-japan-delay-famitsu.json",
+   "sha256": "69e49e7c6ce1049a14f23d44ae62fadd4f684b0ae34f5e15a1b08c483d73c623",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "strip: opening title card with label تقرير and headline تأجيل Gothic 1 Remake على PS5 في اليابان, then 12 gameplay shots with Arabic captions in order and a source credit line (THQ Nordic · Famitsu); dense: every 0.25s, captions readable and matching the spoken text, ends on the channel outro card, no graphic gore; sheet: 15 shot windows of Gothic footage, dark fantasy scenes, a brief 8,5/10 CD Action review badge from the trailer itself"
  }
 }

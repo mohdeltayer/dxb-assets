@@ -59,5 +59,25 @@
    "3"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/nioh-3-complete-edition-korea-rating-insider-gaming-reel-v1.mp4",
+  "blob": "90114f3b8aca47b24e6fa5f5c993577939724bcc",
+  "at": "2026-11-22T07:24:47Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/nioh-3-complete-edition-korea-rating-insider-gaming.json",
+   "sha256": "b6aeff2b8f235cc47063caaa47b6bb011bc1e1a71c7497ae74cc56d2681658f4",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": "showcase",
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": null,
+  "looked": "strip: Arabic title and captions legible, no graphic content; dense: plays through to end card; sheet: footage frames clean"
  }
 }
