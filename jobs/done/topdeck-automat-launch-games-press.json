@@ -23,45 +23,50 @@
  "shots": [
   [
    "topdeck-automat-launch-games-press-announcement-trailer.mp4",
-   "auto",
+   27.73,
    3.8,
-   null
+   [
+    [
+     0.0,
+     0.317
+    ]
+   ]
   ],
   [
    "topdeck-automat-launch-games-press-announcement-trailer.mp4",
-   "auto",
+   3.07,
    2.2,
-   null
+   0.7
   ],
   [
    "topdeck-automat-launch-games-press-announcement-trailer.mp4",
-   "auto",
+   3.07,
    2.2,
-   null
+   0.7
   ],
   [
    "topdeck-automat-launch-games-press-announcement-trailer.mp4",
-   "auto",
+   3.07,
    2.6,
-   null
+   0.7
   ],
   [
    "topdeck-automat-launch-games-press-announcement-trailer.mp4",
-   "auto",
+   3.07,
    2.6,
-   null
+   0.7
   ],
   [
    "topdeck-automat-launch-games-press-announcement-trailer.mp4",
-   "auto",
+   3.07,
    2.46,
-   null
+   0.7
   ],
   [
    "topdeck-automat-launch-games-press-announcement-trailer.mp4",
-   "auto",
+   3.07,
    2.46,
-   null
+   0.7
   ]
  ],
  "lines": [
@@ -136,7 +141,7 @@
  "cut": false,
  "track": [
   "topdeck-automat-launch-games-press-announcement-trailer.mp4",
-  0.0
+  27.73
  ],
  "track_from_first_shot": true,
  "angle": null,
@@ -159,5 +164,21 @@
   "credit on every clip": "yes: one credit over every shot",
   "sound": "yes: trailer sound from the first shot, split per shot on the server",
   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
- }
+ },
+ "cut_ok": [
+  [
+   "topdeck-automat-launch-games-press-announcement-trailer.mp4",
+   27.73,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ]
+ ],
+ "drift_ok": [
+  [
+   "topdeck-automat-launch-games-press-announcement-trailer.mp4",
+   27.73,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ]
+ ],
+ "layout": "showcase",
+ "showcase_reason": "the trailer clashes with our text in a 9:16 crop: the shot scan found no clean stretch for 1 slot(s) (16:9 fallback, Mohammad 20 Nov 2026)"
 }
