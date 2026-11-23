@@ -49,6 +49,8 @@ jobs:
           filter: blob:none
           sparse-checkout: |
             ops/backoffice/keeper
+            ops/cadence.json
+            ops/cadence.py
             newsroom/commitments.json
             newsroom/slips/
             newsroom/submissions.jsonl

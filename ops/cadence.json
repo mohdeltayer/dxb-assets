@@ -1,0 +1,13 @@
+{
+ "about": "The posting cadence (Mohammad, 23 Nov 2026: Publer is the main storyboard). Production 1, Production 2, the server step (templates/serverpost.py), the keeper and work order (ops/backoffice/keeper) and formats.py gaps all read this file; nothing hard-codes spacing. Times in Dubai.",
+ "timezone_offset_h": 4,
+ "day_spacing_min": 30,
+ "night_spacing_min": 60,
+ "night_start": "00:00",
+ "night_end": "08:00",
+ "day_max_gap_min": 60,
+ "night_max_gap_min": 120,
+ "buffer_target": 6,
+ "ahead_alert_min": 2,
+ "lead_min": 15
+}

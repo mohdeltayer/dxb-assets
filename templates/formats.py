@@ -273,12 +273,20 @@ def check(fmt, at=None):
 #: Constant coverage (advisor, 16 Oct 2026; Mohammad: "I want constant coverage"). No daily cap; spacing and gaps
 #: in Dubai time, by the hour of the later post: at least SPACING minutes between posts and never more than
 #: MAX_GAP minutes without one; day is 08:00 to 24:00, night 00:00 to 08:00. Breaking news may break the spacing.
-SPACING = {'day': 30, 'night': 60}
-MAX_GAP = {'day': 60, 'night': 120}
+import os as _o, sys as _s
+_s.path.insert(0, _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../ops'))
+try:
+    import cadence as CAD                               # ops/cadence.json (Mohammad, 23 Nov 2026)
+except ImportError:                                      # a checkout without ops/: the same numbers, said once
+    import types as _t
+    CAD = _t.SimpleNamespace(SPACING={'day': 30, 'night': 60}, MAX_GAP={'day': 60, 'night': 120}, BUFFER=6, AHEAD_MIN=2,
+                             LEAD_MIN=15, band=lambda x: 'night' if (x if x.tzinfo else x.replace(tzinfo=__import__('datetime').timezone.utc)).astimezone(__import__('datetime').timezone(__import__('datetime').timedelta(hours=4))).hour < 8 else 'day')
+SPACING = CAD.SPACING
+MAX_GAP = CAD.MAX_GAP
 
 
 def _band(t):
-    return 'night' if _dubai(t).hour < 8 else 'day'
+    return CAD.band(t)
 
 
 def gaps(hours=2, start=None):

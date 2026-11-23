@@ -707,7 +707,15 @@ def read_publer(rows, state, now, reader=None):
         (max(pub) if pub else None)
 
 
-AHEAD_MIN = 2               # Reels scheduled ahead in Publer below which Mohammad gets one push (audit 21 Nov, item 9)
+import os as _o, sys as _s
+_s.path.insert(0, _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../..'))
+try:
+    import cadence as CAD                               # ops/cadence.json (Mohammad, 23 Nov 2026)
+except ImportError:                                      # a checkout without ops/: the same numbers, said once
+    import types as _t
+    CAD = _t.SimpleNamespace(SPACING={'day': 30, 'night': 60}, MAX_GAP={'day': 60, 'night': 120}, BUFFER=6, AHEAD_MIN=2,
+                             LEAD_MIN=15, band=lambda x: 'night' if (x if x.tzinfo else x.replace(tzinfo=__import__('datetime').timezone.utc)).astimezone(__import__('datetime').timezone(__import__('datetime').timedelta(hours=4))).hour < 8 else 'day')
+AHEAD_MIN = CAD.AHEAD_MIN               # Reels scheduled ahead in Publer below which Mohammad gets one push (audit 21 Nov, item 9)
 
 
 def scheduled_ahead(read, state, now):
@@ -813,7 +821,7 @@ def write(path, text):
     os.replace(tmp, path)
 
 
-BANK_MIN = 6                # ready Reels (adv-20261107-keeper-blind-and-lost-submit item 6; was 3)
+BANK_MIN = CAD.BUFFER                # ready Reels (adv-20261107-keeper-blind-and-lost-submit item 6; was 3)
 
 
 def _verified_source(cell):

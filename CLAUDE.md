@@ -4161,3 +4161,28 @@ type down to 40 px (`reel.LINE_FLOOR`) on the live path before it stops. Rayman,
 «إفريثينغ (Nintendo Everything) أن حجم»، ... «في القائمة»، «التي نشرها الموقع»); after: four lines («ذكر موقع نينتيندو
 إفريثينغ (Nintendo Everything)»، «أن حجم لعبة Rayman Legends Retold على Switch 2»، «يبلغ 23.4 غيغابايت، بحسب قوائم المتجر
 الإلكتروني»، «وهو أكبر حجم بين ألعاب Switch 2 في القائمة التي نشرها الموقع»).
+
+## Publer is the main storyboard (Mohammad, 23 Nov 2026)
+
+This replaces every earlier rule about who checks what (presubmit's records, the commitments, the keeper's own counts as
+the schedule), for Production 1, Production 2 and the server alike:
+1. Publer is the only record of what is scheduled and what is posted. The board, the repository's logs
+   (submissions.jsonl, serverpost.jsonl, commitments.json, published.jsonl) and story-file statuses are notes, never the
+   schedule. The server step chooses slots from Publer's own posts whenever it can read Publer (PUBLER_POST_KEY); the
+   logs stand in only until that key is in, and are said to be notes.
+2. Before preparing any story: Publer's scheduled posts and the last 48 hours of published posts, for the same game and
+   news (`templates/publercheck.py`). There: skip it and note it on the board. Not there: prepare it.
+3. Just before every submit, the server's publish step reads Publer again for the same story (label story:<job>) or the
+   same game and news. A match stops the submit and is written on the board.
+4. A v2 replaces v1 in Publer only while v1 has not posted; if v1 posted, v2 is not posted.
+5. Production 1 never schedules a Production 2 story; it hands it over on the board.
+6. Cadence lives in `ops/cadence.json` (day_spacing_min 30, night_spacing_min 60, night 00:00 to 08:00 Dubai,
+   buffer_target 6, ahead_alert_min 2, plus the existing gap limits 60 and 120 and the 15-minute lead), read through
+   `ops/cadence.py` by the keeper and work order, `formats.py gaps`, and the server step; a checkout without `ops/` falls
+   back to the same numbers. Nothing hard-codes spacing. The keeper pushes Mohammad when fewer than ahead_alert_min (2)
+   Reels are scheduled ahead in Publer (between 08:00 and 24:00 Dubai, from its Publer read); its bank floor is
+   buffer_target.
+7. Glossary: «النسخة المطبوعة» is the only form for a physical edition (refused alternatives: «النسخة المادية»، «ورقية»).
+State on 23 Nov, 15:10 Dubai (Publer read): 0 Reels scheduled ahead; 36 drafts (about 12 Reels), all pulled or superseded
+news from 22 Oct to 19 Nov, none of them a bank or evergreen piece: 0 bank drafts in Publer. There is no "quiet-day bank"
+by that name; the evergreen bank is `newsroom/evergreen.md`, whose undated ready pieces the keeper counted as 2 (target 6).

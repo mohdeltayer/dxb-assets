@@ -54,8 +54,16 @@ PUBLER_MAX_MIN = 15          # the server's last Publer read older than this
 WRITE_FROM_MIN = 25          # the hourly work order is written by the first pass from :25 Dubai
 RULE_FROM = '2026-11-09T16:25:00Z'   # build start (build-20261110-started): no-ids and caps alarms look at lines and posts from here on
 EVERGREEN_GAP_H = 3          # CLAUDE.md "Evergreen spacing and the news search" (9 Nov 2026)
-SPACING = {'day': 30, 'night': 60}
-MAX_GAP = {'day': 60, 'night': 120}
+import os as _o, sys as _s
+_s.path.insert(0, _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '../..'))
+try:
+    import cadence as CAD                               # ops/cadence.json (Mohammad, 23 Nov 2026)
+except ImportError:                                      # a checkout without ops/: the same numbers, said once
+    import types as _t
+    CAD = _t.SimpleNamespace(SPACING={'day': 30, 'night': 60}, MAX_GAP={'day': 60, 'night': 120}, BUFFER=6, AHEAD_MIN=2,
+                             LEAD_MIN=15, band=lambda x: 'night' if (x if x.tzinfo else x.replace(tzinfo=__import__('datetime').timezone.utc)).astimezone(__import__('datetime').timezone(__import__('datetime').timedelta(hours=4))).hour < 8 else 'day')
+SPACING = CAD.SPACING
+MAX_GAP = CAD.MAX_GAP
 ID_TOKEN = re.compile(r'\b[0-9a-f]{24}\b|\b\d{9,}\b|\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b', re.I)
 ID6 = re.compile(r'\b(?:ig|x|th|instagram|threads):[0-9A-Za-z]{6}\b')   # presubmit.py line: last six of each id
 SCHEDULED_LINE = re.compile(r'(?:^|[\s.;(])scheduled:\s', re.I)
@@ -108,7 +116,7 @@ def load(path, default):
 
 
 def band(x):
-    return 'night' if x.astimezone(DUBAI).hour < 8 else 'day'
+    return CAD.band(x)
 
 
 def text_of(h, keys=('id', 'done', 'next', 'evidence', 'ack')):

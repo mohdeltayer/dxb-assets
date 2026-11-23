@@ -291,6 +291,8 @@ a run that has not been updated still reads them.
    branch head, no server Publer read in 15 minutes) each reach Mohammad's phone and stay at the top of the next work
    order until a line clears them. A work order older than 70 minutes is said in `done` and the run goes on from the
    board as before.
+5d. Publer is the main storyboard (Mohammad, 23 Nov 2026): the only record of what is scheduled and posted; the board and
+   the repo are notes. Cadence from ops/cadence.json (30 by day, 60 at night 00:00 to 08:00 Dubai, buffer 6, alert under 2).
 5c. Publer is the source of truth (Mohammad, 23 Nov 2026): before preparing any story and again before every submit,
    read Publer (scheduled, and published for 48 hours) and run templates/publercheck.py on the lists; already there:
    skip it and note it on the board. v2 replaces v1 only while v1 has not posted. Every post carries the label

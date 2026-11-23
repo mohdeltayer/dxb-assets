@@ -52,7 +52,14 @@ STORIES = os.path.join(REPO, 'newsroom', 'stories')
 SINCE = '2026-11-23T08:30:00Z'     # Reels rendered before the release are Production 2's (no backlog sweep)
 WINDOW_H = 6
 WAIT_MIN = 20
-LEAD_MIN = 15                      # a slot is at least 15 minutes out (rolling queue)
+sys.path.insert(0, os.path.join(REPO, 'ops'))
+try:
+    import cadence as CAD                               # ops/cadence.json (Mohammad, 23 Nov 2026)
+except ImportError:                                      # a checkout without ops/: the same numbers, said once
+    import types as _t
+    CAD = _t.SimpleNamespace(SPACING={'day': 30, 'night': 60}, MAX_GAP={'day': 60, 'night': 120}, BUFFER=6, AHEAD_MIN=2,
+                             LEAD_MIN=15, band=lambda x: 'night' if (x if x.tzinfo else x.replace(tzinfo=__import__('datetime').timezone.utc)).astimezone(__import__('datetime').timezone(__import__('datetime').timedelta(hours=4))).hour < 8 else 'day')
+LEAD_MIN = CAD.LEAD_MIN                      # a slot is at least 15 minutes out (rolling queue)
 PICTURE = ('wrong_subject', 'framing', 'overlap', 'unreadable_text')
 CONTENT = ('factual_error', 'unclear_text', 'graphic')
 HARD = ('factual_error', 'graphic')
@@ -224,14 +231,26 @@ def recent_game(story, subs, now, hours=48):
 
 
 # ---------------------------------------------------------------------------------------------- slot
-def next_slot(now, extra=()):
+def next_slot(now, extra=(), publer=None):
+    """The earliest quarter hour LEAD_MIN out that keeps ops/cadence.json's spacing. Publer is the only record of what is
+    scheduled and posted (Mohammad, 23 Nov 2026): with a Publer read, its posts decide; the repository's logs stand in
+    only while the server has no posting key."""
     import workorder as W
+    if publer is not None:
+        import publercheck as PC
+        times = [t(PC.norm_post(p)['at']) for p in publer]
+        posts = [{'at': x} for x in times if x] + [{'at': x} for x in extra]
+        return _first_free(now, posts, W)
     rows = load(os.path.join(REPO, 'newsroom', 'commitments.json'), {}) or {}
     rows = rows.get('rows', []) if isinstance(rows, dict) else rows
     led = load(os.path.join(REPO, 'templates', 'assets', 'format-ledger.json'), []) or []
     held = [t(r.get('slot')) for r in jsonl(LEDGER) if r.get('state') in ('ready', 'scheduled') and t(r.get('slot'))]
     posts = W.merge_posts(W.posts_from_commitments(rows, led), W.posts_from_logs(SUBMISSIONS, PUBLISHED),
                           [{'at': x, 'state': 'scheduled', 'labels': set(), 'networks': {}} for x in list(extra) + held])
+    return _first_free(now, posts, W)
+
+
+def _first_free(now, posts, W):
     start = now + dt.timedelta(minutes=LEAD_MIN)
     x = start.replace(second=0, microsecond=0)
     x += dt.timedelta(minutes=(15 - x.minute % 15) % 15)
@@ -518,7 +537,7 @@ def sweep(now=None, dry=False, key=None):
         if replace_at and replace_at > now + dt.timedelta(minutes=2):
             slot = replace_at                                   # v2 takes v1's minute (rule 3)
         else:
-            slot = next_slot(now, taken)
+            slot = next_slot(now, taken, posts)
         taken.append(slot)
         labels = labels_for(job, dict(story, id=sid), qc)
         row.update(slot=iso(slot), labels=labels)
