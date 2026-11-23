@@ -57,5 +57,25 @@
    "2026-11-23-test-gta-vi-jason-steve-mcqueen-eurogamer",
    "queens-domain-200k-sales-two-weeks-20261114"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/queens-domain-300k-sales-nintendo-life-reel-v1.mp4",
+  "blob": "3acc34e3ca4d862801c7d8eaeabd15b455aa569b",
+  "at": "2026-11-23T19:40:34Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/queens-domain-300k-sales-nintendo-life.json",
+   "sha256": "abf2ee9a4d6c6e707864aa96bcc06c589d4759ac964a77fa0ec8de227b3bf964",
+   "ok": true,
+   "problems": [],
+   "template": "numbers",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "first frame gameplay with headline, number card counts up to 300,000 sold on all platforms, credit Nintendo Life present, last frame end card; nothing graphic"
  }
 }
