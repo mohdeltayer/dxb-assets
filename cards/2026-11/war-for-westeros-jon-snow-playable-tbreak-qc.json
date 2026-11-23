@@ -1,0 +1,712 @@
+{
+ "name": "war-for-westeros-jon-snow-playable-tbreak",
+ "out": "cards/2026-11/war-for-westeros-jon-snow-playable-tbreak-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "content",
+   "detail": "shot 2 at 107.48 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 2 at 108.34 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 3 at 28.77 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 3 at 29.51 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 4 at 83.04 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 4 at 83.78 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 5 at 48.50 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 5 at 49.24 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 6 at 13.97 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 6 at 14.71 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 7 at 92.91 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 7 at 93.65 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 8 at 38.64 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 8 at 39.38 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 9 at 53.44 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 9 at 54.18 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 10 at 9.03 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 10 at 9.77 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 11 at 87.97 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 11 at 88.71 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 12 at 73.13 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 12 at 73.92 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 13 at 68.20 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 13 at 68.99 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 14 at 78.11 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 14 at 78.85 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 15 at 18.90 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 15 at 19.64 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 16 at 102.78 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 16 at 103.52 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 17 at 58.37 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 17 at 59.11 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 72 px on 3 lines (cut it to a few words next time): لعبة War for Westeros\nجون سنو يعود\nبطلا في لعبة استراتيجية"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 14,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 15,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 16,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 17,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 106.61 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 28.04 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 82.31 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 47.77 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 13.24 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 92.18 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 37.91 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 52.71 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 8.3 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 87.24 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 72.33 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 67.4 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 14,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 77.38 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 15,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 18.17 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 16,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 102.05 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 17,
+   "step": "a",
+   "why": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 57.64 s: moved off a repeated moment (respread)"
+  }
+ ],
+ "job_to_pass_min": 13.2,
+ "at": "2026-11-23T10:12:12Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 35.6 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 40.2; leak_pct 2.2; cache {'hit': 0, 'miss': 5}; separate_secs 15.2; secs 21.3",
+  "render_job: lifeless: {\"score\": 11.7, \"still_share\": 0.056, \"longest_still\": 0.9, \"cuts_per_10s\": 1.69, \"held_under_text\": 0.037, \"secs\": 35.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 at 60.92 s for 3.8 s, focus 0.799"
+  }
+ ],
+ "job_sha": "f1c93ff86e2c5db1c00f9012c101b677c167fb81",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.84,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/war-for-westeros-jon-snow-playable-tbreak-look-1.jpg",
+  "cards/2026-11/war-for-westeros-jon-snow-playable-tbreak-look-2.jpg",
+  "cards/2026-11/war-for-westeros-jon-snow-playable-tbreak-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 35.8,
+  "files": {
+   "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4": {
+    "secs": 35.3,
+    "cached": false,
+    "stages": {
+     "decode": 15.0,
+     "autofocus": 25.1,
+     "ocr": 27.0,
+     "smear": 35.1,
+     "scenes": 35.2
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/war-for-westeros-jon-snow-playable-tbreak.json",
+ "stage_minutes": {
+  "queue": 0.02,
+  "setup": 0.18,
+  "fetch": 1.6,
+  "shots": 1.43,
+  "checks": 2.52,
+  "render": 5.11,
+  "after": 1.53,
+  "job": 12.2
+ },
+ "job_after_autofix": {
+  "name": "war-for-westeros-jon-snow-playable-tbreak",
+  "story": "2026-11-23-war-for-westeros-jon-snow-playable-tbreak",
+  "footage_source": "steam:2838950",
+  "kind_news": "reveal",
+  "story_class": "trailer",
+  "story_class_why": "kind reveal",
+  "skin_why": "genre strategy: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/war-for-westeros-jon-snow-playable-tbreak-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    "steam": 2838950,
+    "trailer": "GOT: Cinematic Trailers (June 7, 2025)",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2838950"
+   },
+   {
+    "file": "war-for-westeros-jon-snow-playable-tbreak-got-dev-diary-war-begins-june-7-2025.mp4",
+    "steam": 2838950,
+    "trailer": "GOT: Dev Diary - War Begins (June 7, 2025)",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2838950"
+   },
+   {
+    "file": "war-for-westeros-jon-snow-playable-tbreak-got-gameplay-reveal-trailer-aug-2026.mp4",
+    "steam": 2838950,
+    "trailer": "GOT: Gameplay Reveal Trailer (Aug, 2026)",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2838950"
+   }
+  ],
+  "shots": [
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    60.92,
+    3.8,
+    [
+     [
+      0.0,
+      0.799
+     ]
+    ]
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.6,
+    null
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.6,
+    null
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.39,
+    null
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.39,
+    null
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+    3.07,
+    2.2,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "ذكر موقع تيبريك (Tbreak)\nأن جون سنو بطل قابل للعب",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "في لعبة War for Westeros،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وهي لعبة استراتيجية في الوقت",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    8,
+    [
+     [
+      "الحقيقي\nفي عالم Game of Thrones",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    9,
+    11,
+    [
+     [
+      "ويعزز جون سنو الحلفاء القريبين\nمنه أثناء قيادته للهجوم،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    12,
+    13,
+    [
+     [
+      "ويظهر في المقطع الدعائي\nوهو يواجه ملك الليل",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    14,
+    15,
+    [
+     [
+      "وتصدر اللعبة على الحاسب\nفي عام 2027،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    16,
+    17,
+    [
+     [
+      "ولم يُحدد موعد الإصدار بعد",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    17,
+    "المصدر: Tbreak · اللقطات: صفحة اللعبة على Steam",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع تيبريك (Tbreak) أن جون سنو بطل قابل للعب في لعبة War for Westeros، وهي لعبة استراتيجية في الوقت الحقيقي في عالم Game of Thrones. ويعزز جون سنو الحلفاء القريبين منه أثناء قيادته للهجوم، ويظهر في المقطع الدعائي وهو يواجه ملك الليل. وتصدر اللعبة على الحاسب في عام 2027، ولم يُحدد موعد الإصدار بعد.",
+  "headline": "لعبة War for Westeros\nجون سنو يعود\nبطلا في لعبة استراتيجية",
+  "label": "تقرير",
+  "game": "Game of Thrones: War for Westeros",
+  "game_short": "War for Westeros",
+  "game_key": "game of thrones war for westeros",
+  "genre": [
+   "strategy"
+  ],
+  "texts": {
+   "instagram": "جون سنو يعود بطلا في لعبة استراتيجية\n\nذكر موقع تيبريك (Tbreak) أن جون سنو بطل قابل للعب في لعبة War for Westeros، وهي لعبة استراتيجية في الوقت الحقيقي في عالم Game of Thrones. ويعزز جون سنو الحلفاء القريبين منه أثناء قيادته للهجوم، ويظهر في المقطع الدعائي وهو يواجه ملك الليل.\n\nتصدر اللعبة على الحاسب في عام 2027، ولم يُحدد موعد الإصدار بعد.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: تيبريك (Tbreak).\n\n#ألعاب #أخبار_الألعاب #GameOfThrones #WarForWesteros",
+   "x": "تقرير: ذكر موقع تيبريك (Tbreak) أن جون سنو بطل قابل للعب في لعبة War for Westeros الاستراتيجية في عالم Game of Thrones، وتصدر اللعبة على الحاسب في عام 2027 دون موعد محدد.",
+   "threads": "تقرير: ذكر موقع تيبريك (Tbreak) أن جون سنو بطل قابل للعب في لعبة War for Westeros، وهي لعبة استراتيجية في الوقت الحقيقي في عالم Game of Thrones.\n\nوتصدر اللعبة على الحاسب في عام 2027، ولم يُحدد موعد الإصدار بعد.\n\nالمصدر: تيبريك (Tbreak)"
+  },
+  "source": "تيبريك (Tbreak)، واللقطات من صفحة اللعبة على Steam",
+  "date": "23 Nov 2026",
+  "theme": "stylized",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Tbreak reported it today; official Steam trailers show Jon Snow fighting the Night King",
+   "what_it_means_here": "Game of Thrones is a big name in the Gulf; a Gulf outlet broke it, and the date is still only 2027"
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind reveal",
+   "skin": "house: genre strategy: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "war-for-westeros-jon-snow-playable-tbreak-got-cinematic-trailers-june-7-2025.mp4 from the resolver (steam:2838950)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam store page, Game of Thrones: War for Westeros (PlaySide), coming 2027, trailers on the page (https://store.steampowered.com/app/2838950/); first report: Tbreak 23 Nov 2026 08:29Z (slow-hours rule: Gulf outlet, known series, official Steam trailers)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 2838950 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
