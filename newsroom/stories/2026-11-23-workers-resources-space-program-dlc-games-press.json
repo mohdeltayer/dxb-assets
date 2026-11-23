@@ -49,5 +49,25 @@
    "resources"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/workers-resources-space-program-dlc-games-press-reel-v1.mp4",
+  "blob": "ea9382d61272f61da49a2ef58f81d29e8b9ebef0",
+  "at": "2026-11-23T20:17:44Z",
+  "note": "text true, clear to Arab reader; date card LAUNCHING NOVEMBER 23 2026 matches",
+  "checklist": {
+   "job": "jobs/live/workers-resources-space-program-dlc-games-press.json",
+   "sha256": "e35f38539835f008a235d377fd5cb6bd610203b5c2aab727fd1203a2b5191173",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "strip dense sheet reviewed by separate agent"
  }
 }
