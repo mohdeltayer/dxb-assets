@@ -1,0 +1,529 @@
+{
+ "name": "queens-domain-300k-sales-nintendo-life",
+ "out": "cards/2026-11/queens-domain-300k-sales-nintendo-life-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot scan",
+   "detail": "footage scan stopped at its cap (300 s); shots as written, automatic slots from the footage library or evenly spaced"
+  },
+  {
+   "stage": "smear",
+   "detail": "ValueError: /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/queens-domain-300k-sales-nintendo-life-reel-v1.mp4: blocky smear at 0.10 to 0.80 s (peak 29.8); look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4 at 30.43 s for 3.8 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "scan cap: 1 automatic slot(s) from the library or evenly spaced"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4 at 51.86 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4 at 16.13 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4 at 41.65 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4 at 11.02 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4 at 21.22 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4 at 46.51 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4 at 5.91 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4 at 49.3 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4 at 39.1 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4 at 18.61 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "queens-domain-300k-sales-nintendo-life-launch.mp4 at 23.69 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "text",
+   "slot": "line 2",
+   "step": "a",
+   "why": "3.4 s of 3.6 s: shot 7 lengthened by 0.31 s"
+  }
+ ],
+ "job_to_pass_min": 15.0,
+ "at": "2026-11-23T19:32:30Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 queens-domain-300k-sales-nintendo-life-launch.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 30.8 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 81.5; leak_pct 0.3; cache {'hit': 0, 'miss': 2}; separate_secs 11.0; secs 18.2",
+  "smear check: exempt 2.40 to 8.60 s (our own cards)",
+  "render_job: lifeless: {\"score\": 7.7, \"still_share\": 0.062, \"longest_still\": 1.1, \"cuts_per_10s\": 10.42, \"held_under_text\": 0.02, \"secs\": 30.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "lines 1-6",
+   "rule": "lines",
+   "what": "lines 5 and 6 cut a name, a number or a phrase: cut again as 4 full sentences or clauses across the same shots (23 Nov 2026)",
+   "before": [
+    "جاء الخبر في منشور على Bluesky",
+    "للمطور فريشلي بيكد (Freshly Baked)",
+    "والناشر فيوتشر فريندز (Future Friends)،",
+    "وقال المطور إنه لا يصدق الوصول إلى إنجازات كهذه",
+    "اللعبة مستوحاة من ألعاب فروم",
+    "سوفتوير (FromSoftware) ومن أجواء King's Field"
+   ],
+   "after": [
+    "جاء الخبر في منشور على Bluesky\nللمطور فريشلي بيكد (Freshly Baked)",
+    "والناشر\nفيوتشر فريندز (Future Friends)، وقال",
+    "المطور إنه لا يصدق الوصول إلى إنجازات\nكهذه اللعبة مستوحاة من ألعاب فروم",
+    "سوفتوير (FromSoftware)\nومن أجواء King's Field"
+   ]
+  },
+  {
+   "where": "line",
+   "rule": "text",
+   "what": "names not in names-ar written in Latin: Freshly Baked",
+   "before": "جاء الخبر في منشور على Bluesky\nللمطور فريشلي بيكد (Freshly Baked)",
+   "after": "جاء الخبر في منشور على Bluesky\nللمطور Freshly Baked"
+  },
+  {
+   "where": "credit 1",
+   "rule": "credit_width",
+   "what": "set one line at 36 px (was 40 px, too wide for the safe zone)",
+   "before": {
+    "text": "المصدر: موقع نينتيندو لايف (Nintendo Life)،\nواللقطات من صفحة اللعبة على Steam",
+    "size": 40
+   },
+   "after": {
+    "text": "المصدر: Nintendo Life · اللقطات: صفحة اللعبة على Steam",
+    "size": 36
+   }
+  }
+ ],
+ "job_sha": "d0b7baa29d8bb72e468b72d8b03c11f330fd6057",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/queens-domain-300k-sales-nintendo-life-look-1.jpg",
+  "cards/2026-11/queens-domain-300k-sales-nintendo-life-look-2.jpg",
+  "cards/2026-11/queens-domain-300k-sales-nintendo-life-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 34.7,
+  "files": {
+   "queens-domain-300k-sales-nintendo-life-launch.mp4": {
+    "secs": 34.3,
+    "cached": false,
+    "stages": {
+     "decode": 15.9,
+     "autofocus": 29.7,
+     "ocr": 29.7,
+     "smear": 34.1,
+     "scenes": 34.2
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/queens-domain-300k-sales-nintendo-life.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.27,
+  "fetch": 0.43,
+  "shots": 5.07,
+  "checks": 0.61,
+  "render": 6.34,
+  "after": 1.56,
+  "job": 14.02
+ },
+ "job_after_autofix": {
+  "name": "queens-domain-300k-sales-nintendo-life",
+  "story": "2026-11-23-queens-domain-300k-sales-nintendo-life",
+  "footage_source": "steam:1799840",
+  "kind_news": "sales",
+  "story_class": "numbers",
+  "story_class_why": "kind sales",
+  "skin_why": "genre rpg",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/queens-domain-300k-sales-nintendo-life-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "queens-domain-300k-sales-nintendo-life-launch.mp4",
+    "steam": 1799840,
+    "trailer": "Launch",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "1799840"
+   },
+   {
+    "file": "queens-domain-300k-sales-nintendo-life-rda.mp4",
+    "steam": 1799840,
+    "trailer": "RDA",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "1799840"
+   }
+  ],
+  "shots": [
+   [
+    "queens-domain-300k-sales-nintendo-life-launch.mp4",
+    0.0,
+    3.8,
+    null
+   ],
+   [
+    "queens-domain-300k-sales-nintendo-life-gfx-figure.png",
+    0.0,
+    4.2,
+    null
+   ],
+   [
+    "queens-domain-300k-sales-nintendo-life-launch.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "queens-domain-300k-sales-nintendo-life-launch.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "queens-domain-300k-sales-nintendo-life-launch.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "queens-domain-300k-sales-nintendo-life-launch.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "queens-domain-300k-sales-nintendo-life-launch.mp4",
+    0.0,
+    2.24,
+    null
+   ],
+   [
+    "queens-domain-300k-sales-nintendo-life-launch.mp4",
+    0.0,
+    2.24,
+    null
+   ],
+   [
+    "queens-domain-300k-sales-nintendo-life-launch.mp4",
+    0.0,
+    2.53,
+    null
+   ],
+   [
+    "queens-domain-300k-sales-nintendo-life-launch.mp4",
+    0.0,
+    2.53,
+    null
+   ],
+   [
+    "queens-domain-300k-sales-nintendo-life-launch.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "queens-domain-300k-sales-nintendo-life-launch.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "queens-domain-300k-sales-nintendo-life-launch.mp4",
+    0.0,
+    2.46,
+    null
+   ],
+   [
+    "queens-domain-300k-sales-nintendo-life-launch.mp4",
+    0.0,
+    2.46,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    2,
+    5,
+    [
+     [
+      "جاء الخبر في منشور على Bluesky\nللمطور Freshly Baked",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    6,
+    7,
+    [
+     [
+      "والناشر\nفيوتشر فريندز (Future Friends)، وقال",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    8,
+    11,
+    [
+     [
+      "المطور إنه لا يصدق الوصول إلى إنجازات\nكهذه اللعبة مستوحاة من ألعاب فروم",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    12,
+    13,
+    [
+     [
+      "سوفتوير (FromSoftware)\nومن أجواء King's Field",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    13,
+    "المصدر: Nintendo Life · اللقطات: صفحة اللعبة على Steam",
+    {
+     "size": 36,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع نينتيندو لايف (Nintendo Life) أن لعبة Queen's Domain تجاوزت 300 ألف نسخة مباعة على كل المنصات. جاء الخبر في منشور على Bluesky للمطور Freshly Baked والناشر Future Friends، وقال المطور إنه لا يصدق الوصول إلى إنجازات كهذه. اللعبة مستوحاة من ألعاب فروم سوفتوير (FromSoftware) ومن أجواء King's Field.",
+  "headline": "مبيعات Queen's Domain\nتتجاوز 300 ألف نسخة",
+  "label": "تقرير",
+  "game": "Queen's Domain",
+  "game_short": "Queen's Domain",
+  "game_key": "queen s domain",
+  "genre": [
+   "rpg"
+  ],
+  "texts": {
+   "instagram": "لعبة Queen's Domain تتجاوز 300 ألف نسخة مباعة\n\nذكر موقع نينتيندو لايف (Nintendo Life) أن لعبة Queen's Domain تجاوزت 300 ألف نسخة مباعة على كل المنصات، حسب منشور على Bluesky للمطور فريشلي بيكد (Freshly Baked) والناشر فيوتشر فريندز (Future Friends). وقال المطور: «لا نصدق أننا نصل إلى إنجازات كهذه».\n\nاللعبة مستوحاة من ألعاب فروم سوفتوير (FromSoftware) ومن أجواء King's Field، وصدرت في فترة مزدحمة بالإصدارات.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع نينتيندو لايف (Nintendo Life).\n\n#ألعاب #أخبار_الألعاب #QueensDomain #ألعاب_مستقلة",
+   "x": "تقرير: ذكر موقع نينتيندو لايف (Nintendo Life) أن لعبة Queen's Domain تجاوزت 300 ألف نسخة مباعة على كل المنصات، حسب منشور المطور فريشلي بيكد (Freshly Baked) على Bluesky. المصدر: نينتيندو لايف.",
+   "threads": "تقرير: ذكر موقع نينتيندو لايف (Nintendo Life) أن لعبة Queen's Domain تجاوزت 300 ألف نسخة مباعة على كل المنصات.\n\nوجاء الخبر في منشور للمطور فريشلي بيكد (Freshly Baked) والناشر فيوتشر فريندز (Future Friends) على Bluesky.\n\nالمصدر: موقع نينتيندو لايف (Nintendo Life)"
+  },
+  "source": "موقع نينتيندو لايف (Nintendo Life)، واللقطات من صفحة اللعبة على Steam",
+  "date": "23 Nov 2026",
+  "theme": "gold",
+  "style": null,
+  "template": "numbers",
+  "skin": "fantasy",
+  "cut": false,
+  "track": [
+   "queens-domain-300k-sales-nintendo-life-launch.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "The developer posted the milestone today and Nintendo Life reported it within hours.",
+   "what_it_means_here": "A small indie RPG inspired by King's Field passes 300,000 sales in its first month, in a crowded release period."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "numbers: kind sales",
+   "skin": "fantasy: genre rpg",
+   "footage": "queens-domain-300k-sales-nintendo-life-launch.mp4 from the resolver (steam:1799840)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Nintendo Life, 23 Nov 2026: Queen's Domain Dev Celebrates Opening Sales (https://www.nintendolife.com/news/2026/11/we-cannot-believe-we-are-reaching-milestones-like-this-queens-domain-dev-celebrates-opening-sales); first report: Nintendo Life 23 Nov 2026 18:45Z, citing the developer's own post on Bluesky at 14:51Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 1799840 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "gfx": [
+   {
+    "file": "queens-domain-300k-sales-nintendo-life-gfx-figure.png",
+    "kind": "fact",
+    "value": "300,000",
+    "label": "نسخة مباعة",
+    "note": "على كل المنصات"
+   }
+  ],
+  "ground_footage": [
+   "queens-domain-300k-sales-nintendo-life-launch.mp4",
+   4.0,
+   60.0
+  ],
+  "names_to_review": [
+   "Freshly Baked",
+   "Future Friends"
+  ],
+  "shots_auto": [
+   0,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ]
+ }
+}
