@@ -4139,3 +4139,25 @@ commitment names only, so it let the same story through. Rules for both producti
    the text check (`textrules.MATERIAL`) beside «ورقية».
 Production 1's own special pieces (series episodes, studio pieces) take the same Publer check before they are prepared and
 before they are scheduled.
+
+## Story lines are sentences, not drip-fed pieces (Mohammad, 23 Nov 2026)
+
+Case: a viewer asked «ليش تكتب كلمة بكلمة وتتأخر» under the Rayman Legends Retold Reel. The slip lane had cut two spoken
+sentences into nine on-screen pieces of 2 to 5 words, one per pair of shots, and split «نينتيندو إفريثينغ» across two
+screens (its beats were capped at 58 characters, then halved, and only a Latin word stopped a cut). For every template:
+1. A line is a full sentence or a full clause, up to two visual lines. Cuts only at the end of a sentence or at a comma;
+   never inside a name with its brackets, a Latin run (Switch 2), a number with its unit (23.4 غيغابايت) or a phrase (a
+   particle or a noun like موقع, لعبة stays with the word after it). `templates/linecut.py`.
+2. Lines are not tied to shots: one line stays up across as many shots as its reading time needs.
+3. A Reel has 3 to 6 lines (fewer for a short paragraph); more pieces are packed into sentences, stepping the type 54,
+   48, 44 px; a paragraph that still makes more than 6 is flagged to the editor (shorten it), never cut into fragments.
+4. A line under 5 words that is not the last merges with a neighbour, its own sentence first.
+5. Word-by-word reveal stays off, except the one key line a job asks for ("reveal").
+Where it runs: the slip lane builds its lines with `linecut.cut`; the render's text fix (`autofix.text`, on render-live,
+render.yml, the replay and now the breaking lane) cuts any drip-fed run of lines again from the job's spoken paragraph
+(keeping its full stops) and spreads the new lines over the same shots by reading time; a run never crosses one of our
+cards; "lines_ok" waives it. A long name alone on its visual line may run past the estimate: `reel.line_layer` steps its
+type down to 40 px (`reel.LINE_FLOOR`) on the live path before it stops. Rayman, before: nine pieces («ذكر موقع نينتيندو»،
+«إفريثينغ (Nintendo Everything) أن حجم»، ... «في القائمة»، «التي نشرها الموقع»); after: four lines («ذكر موقع نينتيندو
+إفريثينغ (Nintendo Everything)»، «أن حجم لعبة Rayman Legends Retold على Switch 2»، «يبلغ 23.4 غيغابايت، بحسب قوائم المتجر
+الإلكتروني»، «وهو أكبر حجم بين ألعاب Switch 2 في القائمة التي نشرها الموقع»).
