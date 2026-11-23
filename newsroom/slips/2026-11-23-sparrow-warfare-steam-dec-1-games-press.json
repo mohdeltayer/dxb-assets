@@ -5,17 +5,18 @@
  "flags": [
   "name not in names-ar: «بيان رسمي (Games Press)» (credit); add it there as Proposed",
   "name not in names-ar: «أعلن استوديو نيون أوريليوس (NEON AURELIUS)» (spoken); add it there as Proposed",
+  "footage_pick 1 ignored: the footage library has Gameplay Trailer for this game",
   "text fixed mechanically: spoken: names not in names-ar written in Latin: NEON AURELIUS"
  ],
- "at": "2026-11-23T18:11:10Z",
+ "at": "2026-11-23T18:39:52Z",
  "footage": {
   "name": "Gameplay Trailer",
-  "width": 1920,
-  "height": 1080,
-  "fps": 30.0,
-  "mbps": 5.36,
-  "rows": 1080,
-  "duration": 68.09,
+  "width": null,
+  "height": null,
+  "fps": null,
+  "mbps": null,
+  "rows": null,
+  "duration": null,
   "decode_clean": true
  },
  "names_to_review": [
@@ -25,7 +26,7 @@
  "story": "newsroom/stories/2026-11-23-sparrow-warfare-steam-dec-1-games-press.json",
  "lines": 2,
  "shots": 5,
- "run": "45235577723",
+ "run": "45240699631",
  "lane": "live",
- "build_secs": 50
+ "build_secs": 47
 }
