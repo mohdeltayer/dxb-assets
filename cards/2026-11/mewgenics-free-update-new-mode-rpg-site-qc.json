@@ -1,0 +1,473 @@
+{
+ "name": "mewgenics-free-update-new-mode-rpg-site",
+ "out": "cards/2026-11/mewgenics-free-update-new-mode-rpg-site-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [],
+ "ladder": [
+  {
+   "kind": "text",
+   "slot": "reel",
+   "step": "a",
+   "why": "soft shade under line group(s) [3, 4, 5]: bright footage behind them"
+  }
+ ],
+ "job_to_pass_min": 17.3,
+ "at": "2026-11-23T00:28:40Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 starts at 0.0 s, the video at 0.47 s; its first 0.47 s are lost",
+  "first frame: shot 1 mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 starts at 0.0 s, the video at 0.47 s; its first 0.47 s are lost",
+  "first frame: shot 2 mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 starts at 0.0 s, the video at 0.47 s; its first 0.47 s are lost",
+  "first frame: shot 3 mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 starts at 0.0 s, the video at 0.47 s; its first 0.47 s are lost",
+  "first frame: shot 4 mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 starts at 0.0 s, the video at 0.47 s; its first 0.47 s are lost",
+  "first frame: shot 5 mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 starts at 0.0 s, the video at 0.47 s; its first 0.47 s are lost",
+  "first frame: shot 6 mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 starts at 0.0 s, the video at 0.47 s; its first 0.47 s are lost",
+  "first frame: shot 7 mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 starts at 0.0 s, the video at 0.47 s; its first 0.47 s are lost",
+  "first frame: shot 8 mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 starts at 0.0 s, the video at 0.47 s; its first 0.47 s are lost",
+  "first frame: shot 9 mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 starts at 0.0 s, the video at 0.47 s; its first 0.47 s are lost",
+  "first frame: shot 10 mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 starts at 0.0 s, the video at 0.47 s; its first 0.47 s are lost",
+  "first frame: shot 11 mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 starts at 0.0 s, the video at 0.47 s; its first 0.47 s are lost",
+  "first frame: shot 12 mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 starts at 0.0 s, the video at 0.47 s; its first 0.47 s are lost",
+  "first frame: shot 13 mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 starts at 0.0 s, the video at 0.47 s; its first 0.47 s are lost",
+  "length 28.1 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 93.9; leak_pct 0.1; cache {'hit': 0, 'miss': 3}; separate_secs 16.2; secs 22.2",
+  "render_job: lifeless: {\"score\": 1.1, \"still_share\": 0.004, \"longest_still\": 0.1, \"cuts_per_10s\": 9.96, \"held_under_text\": 0.032, \"secs\": 28.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 at 3.90 s for 3.8 s, focus 0.502"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 at 7.71 s for 2.7 s, focus 0.502"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 at 15.85 s for 2.7 s, focus 0.477"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 at 25.63 s for 2.2 s, focus 0.526"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 at 32.90 s for 2.2 s, focus 0.415"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 at 40.60 s for 2.2 s, focus 0.525"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 at 47.46 s for 2.2 s, focus 0.525"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 at 57.41 s for 2.2 s, focus 0.436"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 at 62.51 s for 2.2 s, focus 0.436"
+  },
+  {
+   "where": "shot 9",
+   "rule": "auto_shots",
+   "what": "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 at 70.51 s for 2.2 s, focus 0.62"
+  },
+  {
+   "where": "shot 10",
+   "rule": "auto_shots",
+   "what": "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 at 78.63 s for 2.2 s, focus 0.474"
+  },
+  {
+   "where": "shot 11",
+   "rule": "auto_shots",
+   "what": "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 at 82.98 s for 2.2 s, focus 0.474"
+  },
+  {
+   "where": "shot 12",
+   "rule": "auto_shots",
+   "what": "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 at 88.28 s for 2.2 s, focus 0.532"
+  },
+  {
+   "where": "shot 13",
+   "rule": "auto_shots",
+   "what": "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 at 75.31 s for 2.2 s, focus 0.29"
+  }
+ ],
+ "job_sha": "b3420bab9124a537fc676b6267921a986cae3ff6",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/mewgenics-free-update-new-mode-rpg-site-look-1.jpg",
+  "cards/2026-11/mewgenics-free-update-new-mode-rpg-site-look-2.jpg",
+  "cards/2026-11/mewgenics-free-update-new-mode-rpg-site-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 46.0,
+  "files": {
+   "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4": {
+    "secs": 45.5,
+    "cached": false,
+    "stages": {
+     "decode": 21.3,
+     "autofocus": 36.2,
+     "ocr": 36.2,
+     "smear": 45.3,
+     "scenes": 45.5
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/mewgenics-free-update-new-mode-rpg-site.json",
+ "stage_minutes": {
+  "queue": 9.78,
+  "setup": 0.17,
+  "fetch": 0.34,
+  "shots": 0.65,
+  "checks": 1.43,
+  "render": 2.93,
+  "after": 1.31,
+  "job": 6.67
+ },
+ "job_after_autofix": {
+  "name": "mewgenics-free-update-new-mode-rpg-site",
+  "story": "2026-11-23-mewgenics-free-update-new-mode-rpg-site",
+  "footage_source": "steam:686060",
+  "kind_news": "update",
+  "story_class": "trailer",
+  "story_class_why": "kind update",
+  "skin_why": "genre roguelike: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/mewgenics-free-update-new-mode-rpg-site-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4",
+    "steam": 686060,
+    "trailer": "Mewgenics launch trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "686060"
+   },
+   {
+    "file": "mewgenics-free-update-new-mode-rpg-site-mewgenics-release-date-trailer.mp4",
+    "steam": 686060,
+    "trailer": "Mewgenics Release Date Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "686060"
+   }
+  ],
+  "shots": [
+   [
+    "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4",
+    3.9,
+    3.8,
+    [
+     [
+      0.0,
+      0.502
+     ]
+    ]
+   ],
+   [
+    "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4",
+    7.71,
+    2.67,
+    [
+     [
+      0.0,
+      0.502
+     ]
+    ]
+   ],
+   [
+    "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4",
+    15.85,
+    2.67,
+    [
+     [
+      0.0,
+      0.477
+     ]
+    ]
+   ],
+   [
+    "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4",
+    25.63,
+    2.2,
+    [
+     [
+      0.0,
+      0.526
+     ]
+    ]
+   ],
+   [
+    "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4",
+    32.9,
+    2.2,
+    [
+     [
+      0.0,
+      0.415
+     ]
+    ]
+   ],
+   [
+    "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4",
+    40.6,
+    2.2,
+    [
+     [
+      0.0,
+      0.525
+     ]
+    ]
+   ],
+   [
+    "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4",
+    47.46,
+    2.2,
+    [
+     [
+      0.0,
+      0.525
+     ]
+    ]
+   ],
+   [
+    "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4",
+    57.41,
+    2.2,
+    [
+     [
+      0.0,
+      0.436
+     ]
+    ]
+   ],
+   [
+    "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4",
+    62.51,
+    2.2,
+    [
+     [
+      0.0,
+      0.436
+     ]
+    ]
+   ],
+   [
+    "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4",
+    70.51,
+    2.2,
+    [
+     [
+      0.0,
+      0.62
+     ]
+    ]
+   ],
+   [
+    "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4",
+    78.63,
+    2.2,
+    [
+     [
+      0.0,
+      0.474
+     ]
+    ]
+   ],
+   [
+    "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4",
+    82.98,
+    2.2,
+    [
+     [
+      0.0,
+      0.474
+     ]
+    ]
+   ],
+   [
+    "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4",
+    88.28,
+    2.2,
+    [
+     [
+      0.0,
+      0.532
+     ]
+    ]
+   ],
+   [
+    "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4",
+    75.31,
+    2.2,
+    [
+     [
+      0.0,
+      0.29
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "ذكر موقع آر بي جي\nسايت (RPG Site) أن لعبة Mewgenics",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "ستحصل قريبا على تحديث\nمجاني للحاسب",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وبحسب الموقع،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    9,
+    [
+     [
+      "يضيف التحديث وضع لعب جديدا\nوأكثر من 40 عنصرًا قابلًا للفتح",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    10,
+    11,
+    [
+     [
+      "وعرض المطوران\nالتحديث في بث مباشر،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    12,
+    13,
+    [
+     [
+      "ولم يُعلن موعد إصداره بعد",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    13,
+    "المصدر: RPG Site · اللقطات: صفحة اللعبة على Steam",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع آر بي جي سايت (RPG Site) أن لعبة Mewgenics ستحصل قريبا على تحديث مجاني للحاسب. وبحسب الموقع، يضيف التحديث وضع لعب جديدا وأكثر من 40 عنصرًا قابلًا للفتح. وعرض المطوران التحديث في بث مباشر، ولم يُعلن موعد إصداره بعد.",
+  "headline": "تحديث مجاني قادم\nللعبة Mewgenics",
+  "label": "تقرير",
+  "game": "Mewgenics",
+  "game_short": "Mewgenics",
+  "genre": [
+   "roguelike"
+  ],
+  "texts": {
+   "instagram": "تحديث مجاني قادم للعبة Mewgenics\n\nذكر موقع آر بي جي سايت (RPG Site) أن لعبة Mewgenics ستحصل قريبا على تحديث مجاني للحاسب.\n\nوبحسب الموقع، يضيف التحديث وضع لعب جديدا وأكثر من 40 عنصرًا قابلًا للفتح.\n\nوعرض المطوران التحديث في بث مباشر، ولم يُعلن موعد إصداره بعد.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع آر بي جي سايت (RPG Site).\n\n#ألعاب #أخبار_الألعاب #Mewgenics #ألعاب_مستقلة",
+   "x": "تقرير: ذكر موقع آر بي جي سايت (RPG Site) أن لعبة Mewgenics ستحصل قريبا على تحديث مجاني للحاسب، يضيف وضع لعب جديدا وأكثر من 40 عنصرًا قابلًا للفتح. لم يُعلن الموعد بعد. المصدر: آر بي جي سايت.",
+   "threads": "تقرير: ذكر موقع آر بي جي سايت (RPG Site) أن لعبة Mewgenics ستحصل قريبا على تحديث مجاني للحاسب.\n\nيضيف التحديث وضع لعب جديدا وأكثر من 40 عنصرًا قابلًا للفتح، ولم يُعلن موعد إصداره بعد.\n\nالمصدر: موقع آر بي جي سايت (RPG Site)"
+  },
+  "source": "آر بي جي سايت (RPG Site)، ولقطات من صفحة اللعبة على Steam",
+  "date": "22 Nov 2026",
+  "theme": "stylized",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "RPG Site reported on 22 Nov that the developers showed a free PC update for Mewgenics on a stream.",
+   "what_it_means_here": "A free update with a new mode and over 40 unlocks is coming soon to a popular cat roguelike; no date yet."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind update",
+   "skin": "house: genre roguelike: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "mewgenics-free-update-new-mode-rpg-site-mewgenics-launch-trailer.mp4 from the resolver (steam:686060)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: RPG Site, 22 Nov 2026: Mewgenics free update with a new game mode and over 40 unlockable items (https://www.rpgsite.net/news/21798-mewgenics-new-game-mode-update-free-unlockable-items); first report: RPG Site 22 Nov 2026 (developers showed it on a stream; about 24 hours before the read, release still upcoming)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 686060 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
