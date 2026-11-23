@@ -639,6 +639,26 @@ def build(slip, lane='live', resolve=True, root=ROOT, now=None):
         return res
     res['flags'] = name_flags(slip) + [f'warning: {x}' for x in soft]
     name = _name(slip)
+    # Publer is the source of truth (Mohammad, 23 Nov 2026): before preparing, the same story or the same game and news
+    # already scheduled or published in the last 48 hours stops the slip (the repository's own record of Publer here; the
+    # session checks Publer itself through the connector before writing the slip). "repeat_ok" waives it with a reason.
+    if not slip.get('repeat_ok') and lane == 'live':
+        try:
+            import publercheck as PC
+            posts = [p for p in PC.from_logs(now) if p.get('story') != slip.get('id')]
+            same = [p for p in PC.from_logs(now) if p.get('story') == slip.get('id')]
+            act, line = PC.verdict(slip.get('id'), name, slip.get('game'), slip.get('instagram') or slip.get('x') or '', posts)
+            if same:
+                res['problems'].append(f'already in Publer: this story was submitted ({same[0]["state"]}, {same[0]["at"]}); '
+                                       'skip it and note it on the board (a newer version replaces it only while the first '
+                                       'has not posted: Production 2 swaps it in Publer)')
+                return res
+            if act == 'stop':
+                res['problems'].append(line.replace('publer check', 'already in Publer') + ' (note it on the board; '
+                                       '"repeat_ok": "<reason>" when it is real new news on the same game)')
+                return res
+        except Exception as e:                      # noqa: BLE001  the check never breaks the lane
+            res['flags'].append(f'publer check not run: {type(e).__name__}: {e}')
     if resolve:
         try:
             import footage as FT

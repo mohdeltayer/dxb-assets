@@ -149,7 +149,7 @@ def git_show(path):
 
 
 def qc_of(out):
-    raw = git_show(re.sub(r'\.mp4$', '-qc.json', out))
+    raw = git_show(re.sub(r'-reel-v\d+\.mp4$', '-qc.json', out)) or git_show(re.sub(r'\.mp4$', '-qc.json', out))
     try:
         return json.loads(raw) if raw else None
     except ValueError:
@@ -172,12 +172,29 @@ def candidates(now, times=None):
     return latest
 
 
-def submitted(story, ledger, subs):
-    """True when the story already has a submit (Production 2's presubmit or the connector) or a scheduled row here."""
+def prior(story, ledger, subs, now):
+    """What the logs know of this story in Publer: None; ('posted', at); ('scheduled', earliest slot) when every submit
+    of it is still in the future (rule 3: a newer version replaces it); ('unknown', None) for an intent with no slot."""
+    slots, pub, bare = [], False, False
     for r in subs:
-        if r.get('story') == story and r.get('state') in ('intent', 'scheduled', 'published'):
-            return True
-    return any(r.get('story') == story and r.get('state') in ('scheduled', 'ready') for r in ledger)
+        if r.get('story') != story or r.get('state') not in ('intent', 'scheduled', 'published'):
+            continue
+        pub = pub or r.get('state') == 'published'
+        sl = t(r.get('slot'))
+        if sl:
+            slots.append(sl)
+        else:
+            bare = True
+    for r in ledger:
+        if r.get('story') == story and r.get('state') in ('scheduled', 'ready') and t(r.get('slot')):
+            slots.append(t(r['slot']))
+    if not slots and not pub and not bare:
+        return None
+    if pub or any(x <= now for x in slots):
+        return 'posted', min(slots) if slots else None
+    if bare and not slots:
+        return 'unknown', None
+    return 'scheduled', min(slots)
 
 
 def recent_game(story, subs, now, hours=48):
@@ -212,8 +229,9 @@ def next_slot(now, extra=()):
     rows = load(os.path.join(REPO, 'newsroom', 'commitments.json'), {}) or {}
     rows = rows.get('rows', []) if isinstance(rows, dict) else rows
     led = load(os.path.join(REPO, 'templates', 'assets', 'format-ledger.json'), []) or []
+    held = [t(r.get('slot')) for r in jsonl(LEDGER) if r.get('state') in ('ready', 'scheduled') and t(r.get('slot'))]
     posts = W.merge_posts(W.posts_from_commitments(rows, led), W.posts_from_logs(SUBMISSIONS, PUBLISHED),
-                          [{'at': x, 'state': 'scheduled', 'labels': set(), 'networks': {}} for x in extra])
+                          [{'at': x, 'state': 'scheduled', 'labels': set(), 'networks': {}} for x in list(extra) + held])
     start = now + dt.timedelta(minutes=LEAD_MIN)
     x = start.replace(second=0, microsecond=0)
     x += dt.timedelta(minutes=(15 - x.minute % 15) % 15)
@@ -226,7 +244,7 @@ def next_slot(now, extra=()):
 
 
 # ---------------------------------------------------------------------------------------------- Publer (posting key)
-def _curl(args, key, ws=None, data=None, timeout=60):
+def _curl(args, key, ws=None, data=None, timeout=60, method=None):
     with tempfile.NamedTemporaryFile('w', suffix='.cfg', delete=False) as cfg:
         cfg.write(f'header = "Authorization: Bearer-API {key}"\n')
         if ws:
@@ -240,6 +258,8 @@ def _curl(args, key, ws=None, data=None, timeout=60):
             json.dump(data, body, ensure_ascii=False)
             body.close()
             cmd += ['-X', 'POST', '--data-binary', '@' + body.name]
+        if method:
+            cmd += ['-X', method]
         r = subprocess.run(cmd + args, capture_output=True, text=True)
     finally:
         os.unlink(cfg.name)
@@ -253,24 +273,59 @@ def _curl(args, key, ws=None, data=None, timeout=60):
     return (int(code) if code.strip().isdigit() else 0), js
 
 
-def publer_schedule(key, out, texts, labels, slot):
-    """Schedules the Reel on the three networks; (ok, note). Never prints an id or a body."""
+def publer_ctx(key):
+    """(workspace id, {platform: account id}) or (None, reason)."""
     code, ws = _curl([f'{API}/workspaces'], key, timeout=30)
     if code != 200 or not isinstance(ws, list) or not ws:
-        return False, f'workspace lookup HTTP {code}'
+        return None, f'workspace lookup HTTP {code}'
     wid = next((w.get('id') for w in ws if (w.get('name') or '').strip().lower() == WORKSPACE.lower()), None) or \
         (ws[0].get('id') if len(ws) == 1 else None)
     if not wid:
-        return False, 'workspace not found'
+        return None, 'workspace not found'
     code, accs = _curl([f'{API}/accounts'], key, wid, timeout=30)
     if code != 200 or not isinstance(accs, list):
-        return False, f'accounts HTTP {code}'
+        return None, f'accounts HTTP {code}'
     acc = {}
     for a in accs:
         prov = str(a.get('provider') or a.get('type') or '').lower()
         for p, n in NETWORK.items():
             if prov.startswith(n) and p not in acc:
                 acc[p] = a.get('id')
+    return (wid, acc), None
+
+
+def publer_posts(key, wid, now):
+    """Scheduled posts (today to 4 days out) and the last 48 hours of published ones, as the API returns them."""
+    out = []
+    spans = [('scheduled', now.date(), (now + dt.timedelta(days=4)).date()),
+             ('published', (now - dt.timedelta(hours=48)).date(), now.date())]
+    for state, a, b in spans:
+        for page in range(6):
+            code, js = _curl([f'{API}/posts?state={state}&from={a.isoformat()}&to={b.isoformat()}&page={page}'], key, wid,
+                             timeout=30)
+            items = js.get('posts') if isinstance(js, dict) else js
+            if code != 200 or not isinstance(items, list):
+                if page == 0:
+                    raise RuntimeError(f'posts {state} HTTP {code}')
+                break
+            for p in items:
+                p.setdefault('state', state)
+            out += items
+            if len(items) < 20:
+                break
+    return out
+
+
+def publer_delete(key, wid, ids):
+    """Deletes unpublished scheduled posts by id (rule 3: v2 replaces v1 while v1 has not posted)."""
+    q = '&'.join('post_ids[]=' + re.sub(r'[^A-Za-z0-9]', '', str(i)) for i in ids if i)
+    code, _ = _curl([f'{API}/posts?{q}'], key, wid, timeout=30, method='DELETE')
+    return code in (200, 202, 204), f'delete HTTP {code}'
+
+
+def publer_schedule(key, ctx, out, texts, labels, slot):
+    """Schedules the Reel on the three networks; (ok, note). Never prints an id or a body."""
+    wid, acc = ctx
     fname = os.path.basename(out)
     code, med = _curl([f'{API}/media?types[]=video&search=' + re.sub(r'[^A-Za-z0-9._-]', '', fname)], key, wid, timeout=30)
     items = (med or {}).get('media') if isinstance(med, dict) else med
@@ -316,6 +371,10 @@ def labels_for(job, story, qc):
     out = [f'kind:{kind}', f'tpl:{tpl}', f'skin:{job.get("skin") or "house"}', f'sound:{snd}']
     if g:
         out.append(f'genre:{g}')
+    base = re.sub(r'-reel-v\d+\.mp4$', '', os.path.basename(str(job.get('out') or ''))) or \
+        re.sub(r'^\d{4}-\d{2}-\d{2}-', '', str(story.get('id') or ''))
+    if base:
+        out.append(f'story:{base}')             # Publer is the source of truth (23 Nov): the story id rides on every post
     return out
 
 
@@ -369,8 +428,16 @@ def sweep(now=None, dry=False, key=None):
                 re.search(r'dropped|held|pulled|parked', str(story.get('status', '')), re.I):
             continue
         mine = [r for r in ledger if r.get('base') == base]
-        if submitted(sid, ledger, subs) or any(r.get('out') == out and r.get('state') == 'held' for r in mine):
-            continue
+        if any(r.get('out') == out and r.get('state') in ('held', 'duplicate', 'ready', 'scheduled') for r in mine):
+            continue                                            # this Reel was decided already
+        pr = prior(sid, ledger, subs, now)
+        if pr and pr[0] in ('posted', 'unknown'):
+            if pr[0] == 'posted' and any(r.get('state') in ('scheduled', 'ready') for r in mine) and \
+                    not any(r.get('out') == out for r in mine):
+                actions.append({'at': iso(now), 'story': sid, 'base': base, 'out': out, 'state': 'duplicate',
+                                'note': 'an earlier version already posted; this version is not posted (rule 3, 23 Nov)'})
+            continue                                            # Production 2 or the connector has it
+        replace_at = pr[1] if pr and pr[0] == 'scheduled' else None
         qc = qc_of(out)
         if (qc or {}).get('verdict') == 'fail':
             continue
@@ -417,7 +484,7 @@ def sweep(now=None, dry=False, key=None):
                 actions.append(dict(row, state='fix_render', next_out=new_out, job=os.path.relpath(path, REPO),
                                     note=f'{d.get("reason")}: {d.get("fix")}' + (f'; showcase ({moved})' if moved else '')))
                 continue
-        if verdict == 'none':
+        if verdict == 'none' and not replace_at:
             dup = recent_game(dict(story, id=sid), subs, now)
             if dup:
                 actions.append(dict(row, state='held', note=f'no director verdict and the same game went out in the '
@@ -428,10 +495,35 @@ def sweep(now=None, dry=False, key=None):
             actions.append(dict(row, state='held', note='story texts missing for ' +
                                 ', '.join(p for p, v in texts.items() if not v) + '; write them in the story file'))
             continue
-        slot = next_slot(now, taken)
+        # Publer is the source of truth (Mohammad, 23 Nov 2026): read it again just before the submit
+        import publercheck as PC
+        ctx, posts, why_ctx = None, None, None
+        if key and not dry:
+            ctx, why_ctx = publer_ctx(key)
+            if ctx:
+                try:
+                    posts = publer_posts(key, ctx[0], now)
+                except Exception as ex:                 # noqa: BLE001
+                    why_ctx = str(ex)
+        own = [p for p in PC.from_logs(now) if p.get('story') != sid]
+        act, line = PC.verdict(sid, base, story.get('game'), texts['instagram'],
+                               (posts if posts is not None else []) + own)
+        if act == 'stop':
+            actions.append(dict(row, state='duplicate', note=line))
+            continue
+        old = [PC.norm_post(p) for k, p in PC.matches(sid, base, story.get('game'), texts['instagram'], posts or [])
+               if k == 'story'] if act == 'replace' else []
+        if old:
+            replace_at = min((t(p['at']) for p in old if t(p['at'])), default=replace_at)
+        if replace_at and replace_at > now + dt.timedelta(minutes=2):
+            slot = replace_at                                   # v2 takes v1's minute (rule 3)
+        else:
+            slot = next_slot(now, taken)
         taken.append(slot)
-        labels = labels_for(job, story, qc)
+        labels = labels_for(job, dict(story, id=sid), qc)
         row.update(slot=iso(slot), labels=labels)
+        if replace_at:
+            row['replaces'] = 'the scheduled earlier version at ' + iso(replace_at)
         if verdict == 'none':
             row['note'] = note or 'no director verdict'
         elif note:
@@ -439,15 +531,25 @@ def sweep(now=None, dry=False, key=None):
         if dry:
             actions.append(dict(row, state='(dry) schedule'))
             continue
-        if key:
-            ok, why = publer_schedule(key, out, texts, labels, slot)
+        if key and not ctx:
+            row['note'] = (row.get('note', '') + f'; Publer API: {why_ctx}').strip('; ')
+        if key and ctx and old:
+            ok_d, why_d = publer_delete(key, ctx[0], [p['id'] for p in old if p['state'] != 'published'])
+            if not ok_d:
+                row['note'] = (row.get('note', '') + f'; the earlier version was not deleted ({why_d})').strip('; ')
+                ctx = None                                      # never two versions in Publer: hand it to the connector
+        if key and ctx:
+            ok, why = publer_schedule(key, ctx, out, texts, labels, slot)
             if ok:
                 record_schedule(sid, slot, labels, 'scheduled', row.get('note', ''), 'server')
                 actions.append(dict(row, state='scheduled', publer=why))
                 continue
             row['note'] = (row.get('note', '') + f'; Publer API: {why}').strip('; ')
-        actions.append(dict(row, state='ready', note=(row.get('note', '') + '; schedule through the Publer connector '
-                                                       'at the slot, then serverpost.py scheduled').strip('; ')))
+        actions.append(dict(row, state='ready', note=(row.get('note', '') + '; check Publer first (scheduled and the last 48 '
+                                                       'hours published, publercheck.py), ' +
+                                                       ('delete the scheduled earlier version, ' if replace_at else '') +
+                                                       'schedule through the Publer connector at the slot with the labels, '
+                                                       'then serverpost.py scheduled').strip('; ')))
     if not dry:
         for a in actions:
             append(LEDGER, a)

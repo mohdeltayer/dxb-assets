@@ -35,6 +35,11 @@ GLUED = re.compile('[ء-يـ][A-Za-z0-9]')
 # «نسخة مطبوعة», never «ورقية» or «ورقيًا», which read as a paper edition (Mohammad, 18 Nov 2026, after the Sea of Stars
 # Reel of 17 Nov). Matches the word with or without ال and a one-letter prefix (و ب ل ف), and the tanwin forms.
 PAPER = re.compile('(?<![\u0621-\u064A])[وبلفك]{0,2}(?:ال)?ورقي(?:ة|ه|ًا|اً|ا|ات)?(?![\u0621-\u064A])')
+# «النسخة المادية» is not the house form either (Mohammad, 23 Nov 2026: inKONBINI v2 used it): «النسخة المطبوعة» is the only
+# form for a physical edition. Caught only beside a copy word, so «مادية» in its other senses stays free.
+MATERIAL = re.compile('(?<![\u0621-\u064A])[وبلفك]{0,2}(?:ال)?نسخ(?:ة|ه|تها|ته|تين|تان)?\\s+(?:ال)?مادي(?:ة|ه)(?![\u0621-\u064A])')
+MATERIAL_FIX = ('a physical edition is «النسخة المطبوعة» («نسخة مطبوعة»، «بنسخة مطبوعة ورقمية»), the only form; never «النسخة '
+                'المادية» (Mohammad, 23 Nov 2026)')
 PAPER_FIX = ('a physical copy of a game is «نسخة مطبوعة» («النسخة المطبوعة»، «تصدر في نسخة مطبوعة»), never «ورقية» or '
              '«ورقيًا», which read as a paper edition; a story really about paper waives it with "paper_ok": "<reason>"')
 
@@ -45,6 +50,8 @@ def house_words(where, text, out, job=None):
         return
     for m in PAPER.finditer(str(text or '')):
         out.append({'where': where, 'rule': 'house_word', 'text': m.group(0), 'fix': PAPER_FIX})
+    for m in MATERIAL.finditer(str(text or '')):
+        out.append({'where': where, 'rule': 'house_word', 'text': m.group(0), 'fix': MATERIAL_FIX})
 
 
 SIGN = re.compile(r'(?:(?<=[0-9A-Za-z])[%+٪])|(?:[%+٪](?=[0-9A-Za-z]))')

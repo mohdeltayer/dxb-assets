@@ -4114,3 +4114,28 @@ pass) was never scheduled. Nothing that records an approval runs as a command an
 4. Production 2 schedules through the server step, not presubmit (newsroom/delegation.md, ops/production-setup.md 5b).
 5. inKONBINI was scheduled through the connector for 12:30 Dubai on 23 Nov (gate 08:15Z, the Games Press release re-read;
    caption: «النسخة المطبوعة» for «المادية», and «عالم مستوحى من اليابان» because the release says "inspired by").
+
+## Publer is the source of truth (Mohammad, 23 Nov 2026)
+
+Case: inKONBINI posted twice on 23 Nov. Production 1 scheduled it at 08:30Z through the connector (on the order above);
+Production 2 scheduled it again at 09:30Z as a new commitment, and v2 carried «النسخة المادية». presubmit compared
+commitment names only, so it let the same story through. Rules for both productions and the server:
+1. Before preparing any story, read Publer: the scheduled posts and the last 48 hours of published posts, for the same game
+   and the same news. Already there: skip it and note it on the board. Not there: prepare it. Sessions read it with the
+   connector (list_publer_posts, state scheduled, and published for 2 days) and judge it with
+   `python3 templates/publercheck.py posts <saved lists.json> --story <id>` (exit 0 prepare, 3 replace, 1 stop). The slip
+   lane, which has no Publer access, checks the repository's own record of it (submissions, published log, story files)
+   and fails a slip that repeats a story or its news ("repeat_ok": "<reason>" for real new news on the same game).
+2. The server's publish step (serverpost.py) reads Publer again just before every submit (with PUBLER_POST_KEY), for the
+   same story id or the same game and news. A match stops the submit and is written as a `duplicate` row (the work order
+   and the board show it). Every post now carries the label `story:<job name>`, so the story id is in Publer itself.
+   Same news is measured (`publercheck.SAME_NEWS` 0.45: the share of words, names and numbers two captions have in
+   common, the same game required): inKONBINI v1 against v2 0.83; the day's five different GTA VI stories 0.15 at most.
+3. A v2 replaces v1 in Publer only while v1 has not posted: the server deletes v1's scheduled posts and schedules v2 at
+   v1's minute (Publer's API cannot swap a post's video, so delete and schedule it is). If v1 already posted, v2 is not
+   posted. presubmit refuses a submit when the same story already has one under any commitment, with that instruction.
+4. Production 1 never schedules a Production 2 story directly; it hands it over on the board.
+5. Glossary: «النسخة المطبوعة» is the only form for a physical edition; «النسخة المادية» and «بنسخة مادية» are refused by
+   the text check (`textrules.MATERIAL`) beside «ورقية».
+Production 1's own special pieces (series episodes, studio pieces) take the same Publer check before they are prepared and
+before they are scheduled.

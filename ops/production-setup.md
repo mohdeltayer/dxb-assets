@@ -291,6 +291,10 @@ a run that has not been updated still reads them.
    branch head, no server Publer read in 15 minutes) each reach Mohammad's phone and stay at the top of the next work
    order until a line clears them. A work order older than 70 minutes is said in `done` and the run goes on from the
    board as before.
+5c. Publer is the source of truth (Mohammad, 23 Nov 2026): before preparing any story and again before every submit,
+   read Publer (scheduled, and published for 48 hours) and run templates/publercheck.py on the lists; already there:
+   skip it and note it on the board. v2 replaces v1 only while v1 has not posted. Every post carries the label
+   story:<job name>. Detail: newsroom/delegation.md, "Publer is the source of truth".
 5b. Director verdict is a file and the server schedules (Mohammad, 23 Nov 2026; supersedes the presubmit director,
    intent, result and line steps in 6 and below): the Director writes jobs/director/<job name>.json and pushes it; the
    server step (server-post.yml) schedules on pass, renders once more on a fix, and schedules anyway 20 minutes after the

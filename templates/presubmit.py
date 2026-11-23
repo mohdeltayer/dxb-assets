@@ -351,6 +351,16 @@ def intent(commitment, platform, sid, out, labels=None, slot=None):
     if not (d.get('checklist') or {}).get('ok'):
         raise SystemExit(f'presubmit refused: the director PASS for {out} carries no passed checklist; '
                          f'record it again with --job <job file> (reel_check, story, lane)')
+    # Publer is the source of truth (Mohammad, 23 Nov 2026): inKONBINI was scheduled at 08:30Z by Production 1 and again
+    # at 09:30Z by Production 2 under another commitment name. The same story under any commitment stops the submit.
+    others = [r for r in entries() if r.get('story') == sid and r.get('commitment') != commitment
+              and r.get('platform') == platform and r.get('state') in ('intent', 'scheduled', 'published')]
+    if others:
+        r = others[-1]
+        raise SystemExit(f'presubmit refused: {sid} is already submitted on {platform} as {r.get("commitment")} '
+                         f'({r.get("state")}, slot {r.get("slot") or "?"}). Check Publer (scheduled, and published in the '
+                         'last 48 hours): if that post has not gone out, a newer version replaces it (delete it in Publer '
+                         'first, then mark that row failed); if it has, this version is not posted.')
     prev = last_state(commitment, platform)
     if prev and prev.get('state') != 'failed':
         raise SystemExit(f'presubmit refused: {commitment} on {platform} already has a submit ({prev.get("state")} '
