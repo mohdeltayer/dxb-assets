@@ -283,7 +283,7 @@ def inside(img, x0=None, x1=None):
     x1 = W - R if x1 is None else x1
     a = img.split()[-1] if img.mode in ('RGBA', 'LA') else img
     box = a.point(lambda v: 255 if v > 24 else 0).getbbox()
-    return box is None or (box[0] >= x0 and box[2] <= x1)
+    return box is None or (box[0] >= x0 - 2 and box[2] <= x1 + 2)   # 2 px: the antialias fringe at an anchored edge
 
 
 SOURCE_SIZES = (32, 30, 28)
