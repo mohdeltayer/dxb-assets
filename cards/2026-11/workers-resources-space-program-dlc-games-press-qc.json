@@ -1,0 +1,452 @@
+{
+ "name": "workers-resources-space-program-dlc-games-press",
+ "out": "cards/2026-11/workers-resources-space-program-dlc-games-press-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "workers-resources-space-program-dlc-games-press-launch-trailer.mp4 at 11.32 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "workers-resources-space-program-dlc-games-press-launch-trailer.mp4 at 18.71 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "workers-resources-space-program-dlc-games-press-launch-trailer.mp4 at 24.1 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "workers-resources-space-program-dlc-games-press-launch-trailer.mp4 at 33.49 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "workers-resources-space-program-dlc-games-press-launch-trailer.mp4 at 42.88 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "workers-resources-space-program-dlc-games-press-launch-trailer.mp4 at 50.04 s for 2.49 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "workers-resources-space-program-dlc-games-press-launch-trailer.mp4 at 55.39 s for 2.49 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch for 7 slot(s)"
+  }
+ ],
+ "job_to_pass_min": 7.2,
+ "at": "2026-11-23T20:16:48Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 workers-resources-space-program-dlc-games-press-launch-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 1 workers-resources-space-program-dlc-games-press-launch-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 2 workers-resources-space-program-dlc-games-press-launch-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 3 workers-resources-space-program-dlc-games-press-launch-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 4 workers-resources-space-program-dlc-games-press-launch-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 5 workers-resources-space-program-dlc-games-press-launch-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 6 workers-resources-space-program-dlc-games-press-launch-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 7 workers-resources-space-program-dlc-games-press-launch-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 8 workers-resources-space-program-dlc-games-press-launch-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 9 workers-resources-space-program-dlc-games-press-launch-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 10 workers-resources-space-program-dlc-games-press-launch-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 11 workers-resources-space-program-dlc-games-press-launch-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 12 workers-resources-space-program-dlc-games-press-launch-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "first frame: shot 13 workers-resources-space-program-dlc-games-press-launch-trailer.mp4 starts at 0.0 s, the video at 0.67 s; its first 0.67 s are lost",
+  "length 28.4 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 75.8; leak_pct 0.0; cache {'hit': 0, 'miss': 4}; separate_secs 11.4; secs 18.2",
+  "render_job: lifeless: {\"score\": 12.7, \"still_share\": 0.208, \"longest_still\": 0.8, \"cuts_per_10s\": 4.24, \"held_under_text\": 0.0, \"secs\": 28.3, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "workers-resources-space-program-dlc-games-press-launch-trailer.mp4 at 2.30 s for 3.8 s, focus 0.488"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "workers-resources-space-program-dlc-games-press-launch-trailer.mp4 at 8.38 s for 2.2 s, focus 0.752"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "workers-resources-space-program-dlc-games-press-launch-trailer.mp4 at 52.70 s for 2.2 s, focus 0.671"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "workers-resources-space-program-dlc-games-press-announcement-trailer.mp4 at 15.78 s for 2.2 s, focus 0.631 (nothing free in workers-resources-space-program-dlc-games-press-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "workers-resources-space-program-dlc-games-press-announcement-trailer.mp4 at 10.61 s for 2.5 s, focus 0.631 (nothing free in workers-resources-space-program-dlc-games-press-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "workers-resources-space-program-dlc-games-press-announcement-trailer.mp4 at 13.10 s for 2.5 s, focus 0.631 (nothing free in workers-resources-space-program-dlc-games-press-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "workers-resources-space-program-dlc-games-press-announcement-trailer.mp4 at 6.15 s for 2.2 s, focus 0.427 (nothing free in workers-resources-space-program-dlc-games-press-launch-trailer.mp4)"
+  }
+ ],
+ "job_sha": "6732fc2acb0609e1579ed0f8dd48905c526fd7e1",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/workers-resources-space-program-dlc-games-press-look-1.jpg",
+  "cards/2026-11/workers-resources-space-program-dlc-games-press-look-2.jpg",
+  "cards/2026-11/workers-resources-space-program-dlc-games-press-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 0.5,
+  "files": {
+   "workers-resources-space-program-dlc-games-press-launch-trailer.mp4": {
+    "secs": 0.0,
+    "cached": true,
+    "stages": {
+     "decode": 16.5,
+     "autofocus": 31.7,
+     "ocr": 31.7,
+     "smear": 36.7,
+     "scenes": 36.9
+    },
+    "incomplete": null
+   },
+   "workers-resources-space-program-dlc-games-press-announcement-trailer.mp4": {
+    "secs": 0.0,
+    "cached": true,
+    "stages": {
+     "decode": 12.7,
+     "autofocus": 29.2,
+     "ocr": 29.2,
+     "smear": 31.0,
+     "scenes": 31.2
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/workers-resources-space-program-dlc-games-press.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.22,
+  "fetch": 0.29,
+  "shots": 0.7,
+  "checks": 1.05,
+  "render": 2.67,
+  "after": 1.4,
+  "job": 6.13
+ },
+ "job_after_autofix": {
+  "name": "workers-resources-space-program-dlc-games-press",
+  "story": "2026-11-23-workers-resources-space-program-dlc-games-press",
+  "footage_source": "steam:5303130",
+  "kind_news": "launch",
+  "story_class": "trailer",
+  "story_class_why": "kind launch",
+  "skin_why": "genre strategy: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/workers-resources-space-program-dlc-games-press-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "workers-resources-space-program-dlc-games-press-launch-trailer.mp4",
+    "steam": 5303130,
+    "trailer": "Launch Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "5303130"
+   },
+   {
+    "file": "workers-resources-space-program-dlc-games-press-announcement-trailer.mp4",
+    "steam": 5303130,
+    "trailer": "Announcement Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "5303130"
+   }
+  ],
+  "shots": [
+   [
+    "workers-resources-space-program-dlc-games-press-launch-trailer.mp4",
+    2.3,
+    3.8,
+    [
+     [
+      0.0,
+      0.488
+     ]
+    ]
+   ],
+   [
+    "workers-resources-space-program-dlc-games-press-launch-trailer.mp4",
+    8.38,
+    2.2,
+    [
+     [
+      0.0,
+      0.752
+     ]
+    ]
+   ],
+   [
+    "workers-resources-space-program-dlc-games-press-launch-trailer.mp4",
+    52.7,
+    2.2,
+    [
+     [
+      0.0,
+      0.671
+     ]
+    ]
+   ],
+   [
+    "workers-resources-space-program-dlc-games-press-announcement-trailer.mp4",
+    15.78,
+    2.2,
+    [
+     [
+      0.0,
+      0.631
+     ]
+    ]
+   ],
+   [
+    "workers-resources-space-program-dlc-games-press-announcement-trailer.mp4",
+    10.61,
+    2.49,
+    [
+     [
+      0.0,
+      0.631
+     ]
+    ]
+   ],
+   [
+    "workers-resources-space-program-dlc-games-press-announcement-trailer.mp4",
+    13.1,
+    2.49,
+    [
+     [
+      0.0,
+      0.631
+     ]
+    ]
+   ],
+   [
+    "workers-resources-space-program-dlc-games-press-announcement-trailer.mp4",
+    6.15,
+    2.2,
+    [
+     [
+      0.0,
+      0.427
+     ]
+    ]
+   ],
+   [
+    "workers-resources-space-program-dlc-games-press-launch-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "workers-resources-space-program-dlc-games-press-launch-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "workers-resources-space-program-dlc-games-press-launch-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "workers-resources-space-program-dlc-games-press-launch-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "workers-resources-space-program-dlc-games-press-launch-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "workers-resources-space-program-dlc-games-press-launch-trailer.mp4",
+    0.0,
+    2.49,
+    null
+   ],
+   [
+    "workers-resources-space-program-dlc-games-press-launch-trailer.mp4",
+    0.0,
+    2.49,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    3,
+    [
+     [
+      "صدرت للعبة Workers & Resources\nإضافة جديدة اسمها Space Program",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    4,
+    5,
+    [
+     [
+      "على الحاسب عبر Steam\nوعبر GOG ومتجر Epic Games",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    6,
+    8,
+    [
+     [
+      "تنقل الإضافة اللاعب إلى الفضاء:\nمن القمر الصناعي Sputnik 1",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    9,
+    11,
+    [
+     [
+      "إلى برنامج Vostok، مع تصنيع\nالصواريخ وبناء محطات في المدار،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    12,
+    13,
+    [
+     [
+      "وفيها حملة جديدة تدور\nفي ستينيات القرن العشرين",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    13,
+    "المصدر: Games Press · اللقطات: صفحة اللعبة على Steam",
+    {
+     "size": 36,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "صدرت للعبة Workers & Resources إضافة جديدة اسمها Space Program على الحاسب عبر Steam وعبر GOG ومتجر Epic Games. تنقل الإضافة اللاعب إلى الفضاء: من القمر الصناعي Sputnik 1 إلى برنامج Vostok، مع تصنيع الصواريخ وبناء محطات في المدار، وفيها حملة جديدة تدور في ستينيات القرن العشرين.",
+  "headline": "إضافة الفضاء متاحة\nفي Workers & Resources",
+  "label": "متوفر الآن",
+  "game": "Workers & Resources",
+  "game_short": "Workers & Resources",
+  "game_key": "workers resources",
+  "genre": [
+   "strategy"
+  ],
+  "texts": {
+   "instagram": "إضافة Space Program متاحة الآن للعبة Workers & Resources\n\nأعلنت شركتا هوديد هورس (Hooded Horse) وثري ديفيجن (3DIVISION) أن إضافة Space Program للعبة بناء المدن السوفياتية صدرت على الحاسب عبر Steam وعبر GOG ومتجر Epic Games. تأخذ الإضافة اللاعب إلى الفضاء، من Sputnik 1 إلى برنامج Vostok، مع تصنيع الصواريخ وبناء محطات في المدار، وفيها حملة جديدة تدور في ستينيات القرن العشرين.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: بيان رسمي (Games Press).\n\n#ألعاب #أخبار_الألعاب #استراتيجية #Steam",
+   "x": "صدرت إضافة Space Program للعبة Workers & Resources على الحاسب عبر Steam وعبر GOG ومتجر Epic Games، مع صواريخ ومحطات مدارية وحملة في ستينيات القرن العشرين. المصدر: بيان رسمي (Games Press).",
+   "threads": "صدرت إضافة Space Program للعبة Workers & Resources على الحاسب عبر Steam وعبر GOG ومتجر Epic Games.\n\nتنقل الإضافة اللاعب إلى الفضاء، من Sputnik 1 إلى برنامج Vostok، مع حملة جديدة في ستينيات القرن العشرين.\n\nالمصدر: بيان رسمي (Games Press)"
+  },
+  "source": "بيان رسمي (Games Press)، واللقطات من صفحة اللعبة على Steam",
+  "date": "23 Nov 2026",
+  "theme": "stylized",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "workers-resources-space-program-dlc-games-press-launch-trailer.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": null,
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind launch",
+   "skin": "house: genre strategy: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "workers-resources-space-program-dlc-games-press-launch-trailer.mp4 from the resolver (steam:5303130)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Games Press, 23 Nov 2026: Workers & Resources: Soviet Republic - Space Program DLC out now (https://www.gamespress.com/en-US/workers-and-resources-soviet-republic-space-program-dlc-out-now); first report: Games Press 23 Nov 2026 18:00Z (official release announcement, Hooded Horse and 3DIVISION)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 5303130 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "shots_auto": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ]
+ }
+}
