@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-23T17:52:08Z",
- "seq": 777,
+ "generated_at": "2026-11-23T18:50:20Z",
+ "seq": 778,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 21406,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Jaden Industries - Official Release XBOX Trailer",
+   "url": "https://www.youtube.com/watch?v=OPASlFGPdW0",
+   "published": "2026-11-23T18:38Z",
+   "first_seen": "2026-11-23T18:50:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/OPASlFGPdW0/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=OPASlFGPdW0"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 778
+  }
+ ],
  "recent": [
   {
    "id": 21292,
@@ -68,25 +90,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 768
-  },
-  {
-   "id": 20686,
-   "source": "Nintendo US",
-   "source_kind": "page",
-   "title": "11/22/26 Gather the crew for a little multiplayer mayhem! With the holidays just around the corner, you’re probably getting ready to have friends and family ove",
-   "url": "https://www.nintendo.com/us/whatsnew/gather-the-crew-for-a-little-multiplayer-mayhem/",
-   "published": null,
-   "first_seen": "2026-11-22T18:40:14Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 750
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-23T17:50:14Z",
+  "last_poll_at": "2026-11-23T18:50:14Z",
   "sources_enabled": 101,
-  "sources_ok": 100,
+  "sources_ok": 101,
   "sources_failing": 0,
   "failed": []
  }
