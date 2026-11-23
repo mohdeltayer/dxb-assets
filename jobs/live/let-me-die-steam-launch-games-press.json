@@ -1,0 +1,163 @@
+{
+ "name": "let-me-die-steam-launch-games-press",
+ "story": "2026-11-23-let-me-die-steam-launch-games-press",
+ "footage_source": "steam:5258160",
+ "kind_news": "launch",
+ "story_class": "trailer",
+ "story_class_why": "kind none: no figure or person leads the story, so a plain announcement",
+ "skin_why": "genre roguelike: its kit is not built yet (skins.KITS scifi, fantasy)",
+ "built_by": "server-slip",
+ "render_lane": "server",
+ "out": "cards/2026-11/let-me-die-steam-launch-games-press-reel-v1.mp4",
+ "split_fallback": "ladder",
+ "footage": [
+  {
+   "file": "let-me-die-steam-launch-games-press-gameplay.mp4",
+   "steam": 5258160,
+   "trailer": "Gameplay",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "5258160"
+  }
+ ],
+ "shots": [
+  [
+   "let-me-die-steam-launch-games-press-gameplay.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "let-me-die-steam-launch-games-press-gameplay.mp4",
+   "auto",
+   2.39,
+   null
+  ],
+  [
+   "let-me-die-steam-launch-games-press-gameplay.mp4",
+   "auto",
+   2.39,
+   null
+  ],
+  [
+   "let-me-die-steam-launch-games-press-gameplay.mp4",
+   "auto",
+   2.46,
+   null
+  ],
+  [
+   "let-me-die-steam-launch-games-press-gameplay.mp4",
+   "auto",
+   2.46,
+   null
+  ],
+  [
+   "let-me-die-steam-launch-games-press-gameplay.mp4",
+   "auto",
+   2.42,
+   null
+  ],
+  [
+   "let-me-die-steam-launch-games-press-gameplay.mp4",
+   "auto",
+   2.42,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "وبحسب بيان رسمي،\nتقوم اللعبة على ضرب الوحوش",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "وجمع الغنائم وتطوير\nالشخصية لتوجيه ضربات أقوى",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "وتضم ثلاثة فصول وثلاثة\nزعماء و 16 رونة مختلفة",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: بيان رسمي (Games Press)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "صدرت لعبة Let Me Die على Steam، وهي لعبة روغ لايت تراكمية بفن بكسل ثنائي الأبعاد. وبحسب بيان رسمي، تقوم اللعبة على ضرب الوحوش وجمع الغنائم وتطوير الشخصية لتوجيه ضربات أقوى. وتضم ثلاثة فصول وثلاثة زعماء و16 رونة مختلفة.",
+ "headline": "لعبة Let Me Die\nصدرت على Steam",
+ "label": "متوفر الآن",
+ "game": "Let Me Die",
+ "game_short": null,
+ "game_key": "let me die",
+ "genre": [
+  "roguelike"
+ ],
+ "texts": {
+  "instagram": "لعبة Let Me Die صدرت على Steam\n\nصدرت لعبة Let Me Die على Steam، وهي لعبة روغ لايت تراكمية بفن بكسل ثنائي الأبعاد.\n\nوبحسب بيان رسمي، تقوم اللعبة على ضرب الوحوش وجمع الغنائم وتطوير الشخصية، وتضم ثلاثة فصول وثلاثة زعماء و16 رونة مختلفة و22 إنجازا على Steam.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: بيان رسمي (Games Press).\n\n#ألعاب #أخبار_الألعاب #LetMeDie #ألعاب_مستقلة",
+  "x": "صدرت لعبة Let Me Die على Steam، وهي لعبة روغ لايت تراكمية بفن بكسل ثنائي الأبعاد، وتضم ثلاثة فصول وثلاثة زعماء. المصدر: بيان رسمي (Games Press).",
+  "threads": "صدرت لعبة Let Me Die على Steam، وهي لعبة روغ لايت تراكمية بفن بكسل ثنائي الأبعاد.\n\nوبحسب بيان رسمي، تضم ثلاثة فصول وثلاثة زعماء و16 رونة مختلفة.\n\nالمصدر: بيان رسمي (Games Press)"
+ },
+ "source": "بيان رسمي (Games Press)",
+ "date": "23 Nov 2026",
+ "theme": "emerald",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "let-me-die-steam-launch-games-press-gameplay.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": null,
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "template": "trailer: kind none: no figure or person leads the story, so a plain announcement",
+  "skin": "house: genre roguelike: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "footage": "let-me-die-steam-launch-games-press-gameplay.mp4 from the resolver (steam:5258160)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Games Press, Let Me Die press release of 23 Nov 2026 (https://www.gamespress.com/en-US/Incremental-Roguelite-Let-Me-Die-is-out-on-Steam); first report: Games Press press release, 23 Nov 2026 11:37Z; the game is out now on Steam (slow-hours rule: small indie with an official Steam page)",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 5258160 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ }
+}
