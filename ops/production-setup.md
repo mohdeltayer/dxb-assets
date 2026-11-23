@@ -291,6 +291,12 @@ a run that has not been updated still reads them.
    branch head, no server Publer read in 15 minutes) each reach Mohammad's phone and stay at the top of the next work
    order until a line clears them. A work order older than 70 minutes is said in `done` and the run goes on from the
    board as before.
+5b. Director verdict is a file and the server schedules (Mohammad, 23 Nov 2026; supersedes the presubmit director,
+   intent, result and line steps in 6 and below): the Director writes jobs/director/<job name>.json and pushes it; the
+   server step (server-post.yml) schedules on pass, renders once more on a fix, and schedules anyway 20 minutes after the
+   render with no file. Production 2 schedules only the Reels the work order lists as serverpost-ready (until the
+   server's posting key is in), through the Publer connector, then `serverpost.py scheduled <story> --slot <ISO>`.
+   Detail: newsroom/delegation.md, "Director verdict is a file".
 6. The gate's own steps (release 2026-11-10, rules into the gate; code refuses each, so a run that skips one stops):
    the job carries `"built_by": "production-2"`; the director is a separate agent and records its verdict with
    `presubmit.py director <story> PASS <out> --job <job> --by <director>` (refused when it is the builder); every

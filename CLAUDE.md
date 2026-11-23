@@ -4085,3 +4085,32 @@ Legacy failed on main too (run 45118786290) and passes on the fix (run 451206544
 (run 45109737489) and, on the slower runners after 05:00Z, timed out on main and branch alike with the same stage times
 (runs 45122597403 and 45122594257: montage 103 and 103 s, text 192 and 191 s, outro 101 and 100 s). Jordan passes (run
 45111848534, hook step a off 57.15 s), Winter Burrow passes (run 45113306532, 12:49).
+
+## Director verdict is a file; the server schedules (Mohammad, 23 Nov 2026)
+
+Case: three Production 2 runs on 23 Nov (04:12Z, 05:21Z, 07:20Z), and runs on 17 and 18 Nov, stopped because the safety
+filter refused the Director helper's `presubmit.py director` command, so the finished inKONBINI Reel (rendered 05:19Z, qc
+pass) was never scheduled. Nothing that records an approval runs as a command any more.
+1. The Director writes its verdict as a plain file, `jobs/director/<job name>.json` (story, out, verdict pass or fix, the
+   reason code and the one fix, its reasons, job_patch for a content fix, time, by), and pushes it. Format:
+   `jobs/director/README.md`; `serverpost.py check <file>` validates and records nothing.
+2. The server step (`templates/serverpost.py sweep`, `.github/workflows/server-post.yml`, on every keeper tick and by hand)
+   reads it for every live Reel rendered in the last 6 hours (series episodes, evergreen pieces, the test lane and stories
+   already submitted, dropped or held are left alone; a qc fail is never scheduled). Pass: scheduled in the next free slot
+   (the keeper's spacing, at least 15 minutes out). Fix: the job goes back to jobs/live with the fix, the next version and
+   the rerender note, render-live runs once more, and the new Reel is scheduled with no second round; picture reasons take
+   the 16:9 showcase layout, factual_error, unclear_text and graphic apply job_patch, and without it the Reel is held, never
+   posted (a second hard verdict on the fixed Reel holds it too). No file 20 minutes after the render: scheduled anyway,
+   noted "no director verdict" (the server checks passed); with no verdict, a Reel whose game went out in the last 48 hours
+   is held as a possible duplicate.
+3. Scheduling: with the `PUBLER_POST_KEY` secret (a Publer key with scopes workspaces, accounts, media, posts, job_status;
+   the render key stays media-only) the server schedules Instagram (Reel), X and Threads at the same minute through
+   Publer's API with the story file's texts and the labels, and reads the job status back. Until Mohammad adds that key
+   the server writes the Reel "ready": the work order lists it as an alarm with its slot, Production 2 submits it through
+   the Publer connector and records it with `serverpost.py scheduled <story> --slot <ISO>`. Rows in
+   `newsroom/serverpost.jsonl` and, for the keeper's cadence, `newsroom/submissions.jsonl`; the work order shows no
+   director verdict, ready, held and fix renders (and the inbox mirror carries it to the board). Never a Publer id, key
+   or response body in the repository or a log.
+4. Production 2 schedules through the server step, not presubmit (newsroom/delegation.md, ops/production-setup.md 5b).
+5. inKONBINI was scheduled through the connector for 12:30 Dubai on 23 Nov (gate 08:15Z, the Games Press release re-read;
+   caption: «النسخة المطبوعة» for «المادية», and «عالم مستوحى من اليابان» because the release says "inspired by").

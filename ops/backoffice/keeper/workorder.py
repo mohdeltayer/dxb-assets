@@ -707,6 +707,39 @@ def names_to_review(folder='newsroom/slips', now=None, days=3):
     return out
 
 
+def serverpost_items(now, path=None):
+    """The server's publish step (templates/serverpost.py, Mohammad 23 Nov 2026): a Reel written 'ready' (no posting key
+    on the server yet) or 'held' is an alarm; 'no director verdict' and a fix render are notes. (alarms, notes)"""
+    try:
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..', 'templates'))
+        import serverpost as SP
+        rows = SP.recent_notes(now, path)
+    except Exception:                                   # noqa: BLE001
+        return [], []
+    alarms, notes = [], []
+    for r in rows:
+        st, base = r.get('state'), r.get('base') or r.get('story')
+        slot = ' at %s' % dub(t(r['slot'])) if r.get('slot') else ''
+        if st == 'ready':
+            alarms.append({'key': 'serverpost|ready|' + base, 'kind': 'serverpost-ready',
+                           'line': 'schedule %s%s on Instagram, X and Threads through the Publer connector (texts and labels '
+                                   'in the story file; %s)' % (base, slot, r.get('note') or ''),
+                           'clears': 'serverpost.py scheduled <story> --slot <ISO> after the submit reads complete'})
+        elif st == 'held':
+            alarms.append({'key': 'serverpost|held|' + base, 'kind': 'serverpost-held',
+                           'line': '%s held by the server: %s' % (base, r.get('note') or ''),
+                           'clears': 'a director file with job_patch or pass, or Mohammad decides'})
+        elif st == 'scheduled' and r.get('director') == 'none':
+            notes.append({'key': 'serverpost|nodir|' + base, 'kind': 'no director verdict',
+                          'line': '%s scheduled%s with no director verdict (%s)' % (base, slot, r.get('note') or ''),
+                          'clears': 'nothing; the server checks passed (Mohammad, 23 Nov 2026)'})
+        elif st == 'fix_render':
+            notes.append({'key': 'serverpost|fix|' + base, 'kind': 'director fix render',
+                          'line': '%s rendering once more (%s), then scheduled' % (base, r.get('note') or ''),
+                          'clears': 'the new Reel lands and the server schedules it'})
+    return alarms, notes
+
+
 def build(board, now, posts, orders=None, mirror=None, digest=None, server=None, history=None, server_at=None, times=None,
           incomplete=None):
     unfin = unfinished(incomplete, now)
@@ -714,6 +747,9 @@ def build(board, now, posts, orders=None, mirror=None, digest=None, server=None,
     # the bed streak and the render-count alarm are dropped (the templates never refuse, sound falls back on its own)
     alarms = gap_alarm(posts, now)
     notes = hop_alarms(board, now, posts, mirror, server, history, server_at) + incomplete_alarms(unfin)
+    sp_alarms, sp_notes = serverpost_items(now)
+    alarms = alarms + sp_alarms
+    notes = notes + sp_notes
     hand = open_handoffs(board, now)
     nxt = next_slot(posts, now)
     cp = caps(posts, now, max(now, t(nxt['earliest']) or now))
