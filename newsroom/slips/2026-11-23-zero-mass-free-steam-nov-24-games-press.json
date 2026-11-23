@@ -1,26 +1,14 @@
 {
  "id": "2026-11-23-zero-mass-free-steam-nov-24-games-press",
- "state": "built",
- "problems": [],
+ "state": "failed",
+ "problems": [
+  "footage: footage_pick 1: the resolver gave 1 videos (steam:5504190; 1 found)"
+ ],
  "flags": [
   "name not in names-ar: «بيان رسمي (Games Press)» (credit); add it there as Proposed"
  ],
- "at": "2026-11-23T18:11:51Z",
- "footage": {
-  "name": "ReleaseTrailer",
-  "width": 1920,
-  "height": 1080,
-  "fps": 30.0,
-  "mbps": 5.62,
-  "rows": 964,
-  "duration": 86.92,
-  "decode_clean": true
- },
- "job": "jobs/live/zero-mass-free-steam-nov-24-games-press.json",
- "story": "newsroom/stories/2026-11-23-zero-mass-free-steam-nov-24-games-press.json",
- "lines": 6,
- "shots": 14,
- "run": "45235701388",
+ "at": "2026-11-23T18:33:25Z",
+ "run": "45239545289",
  "lane": "live",
- "build_secs": 57
+ "build_secs": 43
 }
