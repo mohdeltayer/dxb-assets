@@ -1,0 +1,28 @@
+{
+ "id": "2026-11-23-base-boomers-announced-steam-games-press",
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "name not in names-ar: «بيان رسمي (Games Press)» (credit); add it there as Proposed",
+  "text fixed mechanically: headline: game name put in the headline",
+  "warning: text: headline: 3 lines: at most 2; cut to fewer words"
+ ],
+ "at": "2026-11-23T17:15:49Z",
+ "footage": {
+  "name": "Announcement Trailer",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60.0,
+  "mbps": 5.74,
+  "rows": 1080,
+  "duration": 74.35,
+  "decode_clean": true
+ },
+ "job": "jobs/live/base-boomers-announced-steam-games-press.json",
+ "story": "newsroom/stories/2026-11-23-base-boomers-announced-steam-games-press.json",
+ "lines": 5,
+ "shots": 15,
+ "run": "45224923283",
+ "lane": "live",
+ "build_secs": 271
+}
