@@ -1,14 +1,14 @@
 {
  "name": "gta-vi-jordan-trc-block-roya-news",
- "story": "2026-11-22-gta-vi-jordan-trc-block-roya-news",
+ "story": "2026-11-23-test-gta-vi-jordan-trc-block-roya-news",
  "footage_source": "https://www.playstation.com/en-ae/games/grand-theft-auto-vi/",
  "kind_news": "update",
  "story_class": "person",
  "story_class_why": "a person is the subject: «رئيسة» in the headline or first sentence, with what they said or did (kind update read from the text)",
  "skin_why": "genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
  "built_by": "server-slip",
- "render_lane": "server",
- "out": "cards/2026-11/gta-vi-jordan-trc-block-roya-news-reel-v1.mp4",
+ "render_lane": "hosted",
+ "out": "cards/test/gta-vi-jordan-trc-block-roya-news-reel-v1.mp4",
  "split_fallback": "ladder",
  "footage": [
   {
@@ -235,6 +235,7 @@
  "label": "تقرير",
  "game": "Grand Theft Auto VI",
  "game_short": "GTA VI",
+ "game_key": "gta vi",
  "genre": [
   "action"
  ],
@@ -286,8 +287,8 @@
  "person": [
   [
    null,
-   "رئيسة الهيئة لارا الخطيب (Lara Al-Khatib)",
-   "",
+   "Lara Al-Khatib",
+   "رئيسة الهيئة",
    0.0,
    3.5,
    {
@@ -299,10 +300,11 @@
   ]
  ],
  "subject_person": {
-  "name": "رئيسة الهيئة لارا الخطيب (Lara Al-Khatib)",
-  "role": "",
+  "name": "Lara Al-Khatib",
+  "role": "رئيسة الهيئة",
   "photo_source": null
  },
+ "lane_reason": "Phase 1 test (no Publer upload, no ledgers)",
  "names_to_review": [
   "Roya News",
   "Lara Al-Khatib"
