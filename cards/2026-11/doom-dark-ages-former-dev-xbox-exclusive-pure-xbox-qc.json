@@ -1,0 +1,458 @@
+{
+ "name": "doom-dark-ages-former-dev-xbox-exclusive-pure-xbox",
+ "out": "cards/2026-11/doom-dark-ages-former-dev-xbox-exclusive-pure-xbox-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "content",
+   "detail": "shot 2 at 53.64 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 2 at 54.08 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "pace",
+   "detail": "pace: nothing changes for 4.5 s at 0.0 (change every 4 s); cut to a second angle, add a line or a strip, or pass pace_ok=True with the reason in the brief"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 64 px on 2 lines (cut it to a few words next time): مطور سابق يقول إن لعبة DOOM\nكانت مخططة حصرية لإكس بوكس"
+  },
+  {
+   "stage": "length",
+   "detail": "length 10.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them; under 12 s fails: add a beat of footage"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4 at 53.19 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "text",
+   "slot": "line 1",
+   "step": "a",
+   "why": "1.6 s of 3.6 s: shot 2 lengthened by 2.11 s"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "d",
+   "why": "audio split not applied (music stem not clean (leftover 72.0% > 5.0%)) on a trailer track under 3 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or "
+  }
+ ],
+ "job_to_pass_min": 5.2,
+ "at": "2026-11-23T15:50:24Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 10.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "pace: nothing changes for 4.5 s at 0.0 (change every 4 s)",
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 72.0% > 5.0%); music_pct 0.9; leak_pct 72.0; cache {'hit': 0, 'miss': 4}; separate_secs 5.5; secs 7.9",
+  "render_job: audio split fallback: our bed (audio split not applied (music stem not clean (leftover 72.0% > 5.0%)) on a trailer track under 3 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.); bed:neon_e",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 10.0, \"held_under_text\": 0.0, \"secs\": 10.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 27 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)",
+  "estimate: headline: 26 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "variety",
+   "what": "hook moved 64.91 -> 102.75 s: opener 64.9 s was used by doom-dark-ages-xbox-exclusive-pure-xbox at 65.9 s within 14 days"
+  },
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4 at 102.75 s for 3.8 s, focus 0.557"
+  },
+  {
+   "where": "shot 1",
+   "rule": "shot_timing",
+   "what": "trimmed to 1.34 s, the clean part before the scene cut at 4.45 s",
+   "before": [
+    "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    3.07,
+    2.42,
+    [
+     [
+      0.0,
+      0.633
+     ],
+     [
+      1.381,
+      0.716
+     ],
+     [
+      2.432,
+      0.172
+     ]
+    ]
+   ],
+   "after": [
+    "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    3.07,
+    1.34,
+    [
+     [
+      0.0,
+      0.633
+     ],
+     [
+      1.381,
+      0.716
+     ],
+     [
+      2.432,
+      0.172
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 0",
+   "rule": "fill",
+   "what": "lengthened 3.80 to 4.88 s to keep the time shot 1 gave up",
+   "before": 3.8,
+   "after": 4.88
+  },
+  {
+   "where": "shot 2",
+   "rule": "shot_timing",
+   "what": "trimmed to 1.34 s, the clean part before the scene cut at 4.45 s",
+   "before": [
+    "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    3.07,
+    2.42,
+    [
+     [
+      0.0,
+      0.633
+     ],
+     [
+      1.381,
+      0.716
+     ],
+     [
+      2.432,
+      0.172
+     ]
+    ]
+   ],
+   "after": [
+    "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    3.07,
+    1.34,
+    [
+     [
+      0.0,
+      0.633
+     ],
+     [
+      1.381,
+      0.716
+     ],
+     [
+      2.432,
+      0.172
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 2",
+   "rule": "fill",
+   "what": "1.08 s shorter in all: no neighbouring shot stays clean with the time"
+  },
+  {
+   "where": "shot 3",
+   "rule": "shot_timing",
+   "what": "starts after the scene cut at 4.45 s and keeps 1.58 s",
+   "before": [
+    "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    3.07,
+    3.0,
+    [
+     [
+      0.0,
+      0.633
+     ],
+     [
+      1.381,
+      0.716
+     ],
+     [
+      2.432,
+      0.856
+     ]
+    ]
+   ],
+   "after": [
+    "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    4.49,
+    1.58,
+    [
+     [
+      0.0,
+      0.633
+     ],
+     [
+      1.381,
+      0.716
+     ],
+     [
+      2.432,
+      0.856
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 3",
+   "rule": "fill",
+   "what": "1.42 s shorter in all: no neighbouring shot stays clean with the time"
+  }
+ ],
+ "job_sha": "a2f8ab6ac803ba1201f1d4649979ce0465676814",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/doom-dark-ages-former-dev-xbox-exclusive-pure-xbox-look-1.jpg",
+  "cards/2026-11/doom-dark-ages-former-dev-xbox-exclusive-pure-xbox-look-2.jpg",
+  "cards/2026-11/doom-dark-ages-former-dev-xbox-exclusive-pure-xbox-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_e (trailer sound refused: music stem not clean (leftover 72.0% > 5.0%))",
+ "shot_read": {
+  "secs": 0.5,
+  "files": {
+   "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4": {
+    "secs": 0.0,
+    "cached": true,
+    "stages": {
+     "decode": 27.4,
+     "autofocus": 51.6,
+     "ocr": 51.6,
+     "smear": 60.0,
+     "scenes": 60.3
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/doom-dark-ages-former-dev-xbox-exclusive-pure-xbox.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.18,
+  "fetch": 0.59,
+  "shots": 0.91,
+  "checks": 1.16,
+  "render": 1.12,
+  "after": 0.47,
+  "job": 4.27
+ },
+ "job_after_autofix": {
+  "name": "doom-dark-ages-former-dev-xbox-exclusive-pure-xbox",
+  "story": "2026-11-23-doom-dark-ages-former-dev-xbox-exclusive-pure-xbox",
+  "footage_source": "steam:3017860",
+  "kind_news": "reveal",
+  "story_class": "trailer",
+  "story_class_why": "kind reveal",
+  "skin_why": "genre shooter: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/doom-dark-ages-former-dev-xbox-exclusive-pure-xbox-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    "steam": 3017860,
+    "trailer": "Update 2 Trailer",
+    "trailer_id": "3017860"
+   },
+   {
+    "file": "doom-dark-ages-xbox-exclusive-pure-xbox-accolades-trailer.mp4",
+    "steam": 3017860,
+    "trailer": "Accolades Trailer",
+    "trailer_id": "3017860"
+   },
+   {
+    "file": "doom-dark-ages-xbox-exclusive-pure-xbox-revelations-trailer.mp4",
+    "steam": 3017860,
+    "trailer": "Revelations Trailer",
+    "trailer_id": "3017860"
+   }
+  ],
+  "shots": [
+   [
+    "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    102.75,
+    4.88,
+    [
+     [
+      0.0,
+      0.557
+     ]
+    ]
+   ],
+   [
+    "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    3.07,
+    1.34,
+    [
+     [
+      0.0,
+      0.633
+     ],
+     [
+      1.381,
+      0.716
+     ],
+     [
+      2.432,
+      0.172
+     ]
+    ]
+   ],
+   [
+    "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    3.07,
+    1.34,
+    [
+     [
+      0.0,
+      0.633
+     ],
+     [
+      1.381,
+      0.716
+     ],
+     [
+      2.432,
+      0.172
+     ]
+    ]
+   ],
+   [
+    "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    4.49,
+    1.58,
+    [
+     [
+      0.0,
+      0.633
+     ],
+     [
+      1.381,
+      0.716
+     ],
+     [
+      2.432,
+      0.856
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "ولم يصدر تعليق من مايكروسوفت\nأو من الاستوديو",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    3,
+    "المصدر: Pure Xbox · اللقطات: صفحة اللعبة على Steam",
+    {
+     "size": 38,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع بيور إكس بوكس (Pure Xbox) أن مطورا سابقا عمل على اللعبة قال في بودكاست إن لعبة DOOM: The Dark Ages كانت مخططة في البداية حصرية لإكس بوكس. ولم يصدر تعليق من مايكروسوفت أو من الاستوديو.",
+  "headline": "مطور سابق يقول إن لعبة DOOM\nكانت مخططة حصرية لإكس بوكس",
+  "label": "تقرير",
+  "game": "DOOM: The Dark Ages",
+  "game_short": "DOOM",
+  "game_key": "doom the dark ages",
+  "genre": [
+   "shooter"
+  ],
+  "texts": {
+   "instagram": "مطور سابق يقول إن لعبة DOOM كانت مخططة حصرية لإكس بوكس\n\nذكر موقع بيور إكس بوكس (Pure Xbox) أن مطورا سابقا عمل على اللعبة قال في بودكاست إن لعبة DOOM: The Dark Ages كانت مخططة في البداية حصرية لإكس بوكس.\n\nولم يصدر تعليق من مايكروسوفت أو من الاستوديو.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع بيور إكس بوكس (Pure Xbox).\n\n#ألعاب #أخبار_الألعاب #DOOM #إكس_بوكس",
+   "x": "تقرير: ذكر موقع بيور إكس بوكس (Pure Xbox) أن مطورا سابقا عمل على DOOM: The Dark Ages قال في بودكاست إنها كانت مخططة في البداية حصرية لإكس بوكس. ولم يصدر تعليق من مايكروسوفت أو من الاستوديو. المصدر: بيور إكس بوكس.",
+   "threads": "تقرير: ذكر موقع بيور إكس بوكس (Pure Xbox) أن مطورا سابقا عمل على اللعبة قال في بودكاست إن لعبة DOOM: The Dark Ages كانت مخططة في البداية حصرية لإكس بوكس.\n\nولم يصدر تعليق من مايكروسوفت أو من الاستوديو.\n\nالمصدر: موقع بيور إكس بوكس (Pure Xbox)"
+  },
+  "source": "بيور إكس بوكس (Pure Xbox)، واللقطات من صفحة اللعبة على Steam",
+  "date": "23 Nov 2026",
+  "theme": "stylized",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+   102.75
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "A former developer said it on a podcast today and Pure Xbox reported it",
+   "what_it_means_here": "Xbox multiplatform debate; the claim is one ex-developer's and neither Microsoft nor the studio has commented"
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind reveal",
+   "skin": "house: genre shooter: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4 from the resolver (steam:3017860)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam store page, DOOM The Dark Ages, trailers on the page (https://store.steampowered.com/app/3017860/); first report: Pure Xbox 23 Nov 2026 13:00Z, quoting the Kiwi Talkz podcast (slow-hours rule: single credible outlet, known series, official Steam trailers)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 3017860 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
