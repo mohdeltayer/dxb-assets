@@ -140192,5 +140192,196 @@
   "setup_min": 1.68,
   "story": "abide-stop-motion-horror-trailer-gamingonlinux",
   "upload_secs": 10.0
+ },
+ {
+  "name": "acts-of-blood-delayed-spring-2027-savepoint-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-23T14:30Z",
+  "stages": {
+   "checks": 3.9,
+   "montage": 44.8,
+   "text": 34.7,
+   "audio": 0.8,
+   "outro": 35.1
+  },
+  "total": 119.3,
+  "lane": "runner",
+  "queued_at": "2026-11-23T14:28Z",
+  "finished_at": "2026-11-23T14:30Z",
+  "render_min": 1.99,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "acts-of-blood-delayed-spring-2027-savepoint-acts-of-blood-official-gameplay-trailer-summer-game-fest-202.mp4",
+    "start": 34.57,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.55,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "acts-of-blood-delayed-spring-2027-savepoint-acts-of-blood-release-date-announcement-trailer.mp4",
+    "start": 27.69,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "acts-of-blood-delayed-spring-2027-savepoint-acts-of-blood-release-date-announcement-trailer.mp4",
+    "start": 77.81,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "acts-of-blood-delayed-spring-2027-savepoint-acts-of-blood-release-date-announcement-trailer.mp4",
+    "start": 95.19,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "acts-of-blood-delayed-spring-2027-savepoint-acts-of-blood-release-date-announcement-trailer.mp4",
+    "start": 72.3,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "acts-of-blood-delayed-spring-2027-savepoint-acts-of-blood-release-date-announcement-trailer.mp4",
+    "start": 10.72,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "acts-of-blood-delayed-spring-2027-savepoint-acts-of-blood-official-gameplay-trailer-summer-game-fest-202.mp4",
+    "start": 41.12,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.55,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.1,
+   "audio_secs": 41.2,
+   "music_pct": 30.0,
+   "leak_pct": 1.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 6,
+    "miss": 0
+   },
+   "effects_shots": 0,
+   "mix_secs": 0.7,
+   "secs": 3.3,
+   "ladder": "b",
+   "step_a": {
+    "applied": false,
+    "tool": "cocktail-fork",
+    "clean": false,
+    "separate_secs": 12.0,
+    "audio_secs": 41.2,
+    "music_pct": 30.0,
+    "leak_pct": 1.1,
+    "thresholds": {
+     "leak_max_pct": 5.0,
+     "music_min_pct": 40.0
+    },
+    "cache": {
+     "hit": 0,
+     "miss": 6
+    },
+    "reason": "music only 30.0% of the track (< 40.0%)",
+    "secs": 16.3
+   }
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 6.67,
+   "held_under_text": 0.0,
+   "secs": 15.0,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 60.7,
+   "shots": 83.6,
+   "checks": 102.2,
+   "render": 139.1,
+   "after": 38.9
+  },
+  "softgate": {
+   "warnings": 1,
+   "ladder": [
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "b",
+     "why": "audio split not applied (music only 30.0% of the track (< 40.0%)) on a trailer track under 6 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our b"
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 425,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1263,
+  "peak_mem_mb": 2971,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61553,
+  "peak_disk_mb": 64081,
+  "min_disk_free_mb": 83716,
+  "setup_min": 1.42,
+  "story": "acts-of-blood-delayed-spring-2027-savepoint"
  }
 ]
