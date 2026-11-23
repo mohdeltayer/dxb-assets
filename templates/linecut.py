@@ -26,7 +26,9 @@ NO_BREAK_AFTER = {'في', 'على', 'من', 'إلى', 'عن', 'مع', 'بعد', 
                   'منصة', 'متجر', 'بحسب', 'حسب', 'وفق', 'ذكر', 'قال', 'قالت', 'أعلن', 'أعلنت', 'يبلغ', 'تبلغ', 'بلغ',
                   'بلغت', 'وهو', 'وهي', 'أكبر', 'أول', 'آخر'}
 BASE_SIZE = 54
-SIZES = (54, 48, 44)
+SIZES = (54, 48, 44, 40)
+ROOM = 1080 - 170 - 96    # the line's width in px: ig_ar.SAFE_LEFT to the like column (reel.line_layer)
+_FONTS = {}
 BASE_CHARS = 30          # one visual line at 54 px (slip.LINE_CHARS); scales with the size
 MIN_WORDS = 5
 MIN_LINES, MAX_LINES = 3, 6
@@ -103,7 +105,29 @@ def visual(text, size):
     return lines
 
 
+def _px(text, size):
+    """The drawn width with the Dubai font, as reel.line_layer measures it, or None where the font is not installed (the
+    slip lane, the container): then the character estimate decides and the render's text step re-checks with the font."""
+    if size not in _FONTS:
+        try:
+            import fast_ar as A
+            from PIL import Image, ImageDraw
+            _FONTS[size] = (A.F('Bold', size), ImageDraw.Draw(Image.new('L', (8, 8))), A.AR)
+        except Exception:                               # noqa: BLE001
+            _FONTS[size] = None
+    f = _FONTS[size]
+    if not f:
+        return None
+    try:
+        return f[1].textlength(text, font=f[0], **f[2])
+    except Exception:                                   # noqa: BLE001  no raqm layout: plain measure
+        return f[1].textlength(text, font=f[0])
+
+
 def _ok_line(x, size, hard):
+    w = _px(x, size)
+    if w is not None:
+        return w <= ROOM
     return len(x) <= chars_at(size) + 3 or (x in hard and len(x) <= chars_at(size) * 1.4)
 
 
@@ -125,7 +149,8 @@ def fits(text, size):
 
 def wrap(text, size):
     """Two visual lines balanced at a unit boundary, the second opening on an Arabic word."""
-    if len(text) <= chars_at(size):
+    w = _px(text, size)
+    if (w is not None and w <= ROOM * 0.85) or (w is None and len(text) <= chars_at(size)):
         return text
     us = units(text, soft=False)
     best, score = None, None
@@ -267,16 +292,19 @@ def cut(sentences, size_from=None):
     if isinstance(sentences, str):
         import textrules as TR
         sentences = [s for s in TR.spoken_sentences(sentences) if s.strip()]
-    best, tries = None, []
+    tries = []
     for size in [s for s in SIZES if not size_from or s <= size_from] or [SIZES[-1]]:
         lines = _merge_short(_pack(sentences, size), size)
-        tries.append((lines, size))
-        if len(lines) <= MAX_LINES and all(fits(x, size) for x in lines):
-            best = (lines, size)
-            break
-    if best is None:                                  # no size holds 6: the fewest lines, at the largest size giving them
-        fewest = min(len(l) for l, _ in tries)
-        best = next((l, z) for l, z in tries if len(l) == fewest)
+        tries.append((lines, size, all(fits(x, size) for x in lines)))
+    readable = [x for x in tries if x[1] >= 44]
+    best = next(((l, z) for l, z, ok in readable if ok and len(l) <= MAX_LINES), None)
+    if best is None:                       # 6 lines will not hold it: the fewest lines that fit, at the largest size
+        ok = [(l, z) for l, z, f in readable if f]
+        if ok:
+            fewest = min(len(l) for l, _ in ok)
+            best = next((l, z) for l, z in ok if len(l) == fewest)
+    if best is None:                       # 40 px only for a name that fits nowhere larger (reel.LINE_FLOOR)
+        best = next(((l, z) for l, z, f in tries if f), (tries[-1][0], tries[-1][1]))
     lines, size = best
     probs = []
     if len(lines) > MAX_LINES:
@@ -333,8 +361,12 @@ def _secs(sh):
         return 2.5
 
 
-def _bad(texts):
+def _bad(texts, sizes=None):
     """Why a run of lines breaks the rules, or None."""
+    for k, x in enumerate(texts):
+        size = (sizes or [BASE_SIZE] * len(texts))[k]
+        if _px(x, size) is not None and not fits(x, size):
+            return f'line {k + 1} does not fit two visual lines at {size} px'
     for k in range(len(texts) - 1):
         if nwords(texts[k]) < MIN_WORDS:
             return f'line {k + 1} is under {MIN_WORDS} words'
@@ -423,7 +455,8 @@ def merge_job(job):
             j += 1
         run = lines[i:j + 1]
         texts = [_group_text(x)[0].replace('\n', ' ') for x in run]
-        why = _bad(texts) if len(run) > 1 else None
+        sizes = [int(_group_text(x)[1].get('size') or BASE_SIZE) for x in run]
+        why = _bad(texts, sizes) if len(run) > 1 or _px('ا', BASE_SIZE) is not None else None
         if why:
             joined = _from_spoken(job.get('spoken'), texts) or ' '.join(texts)
             sents = [x for x in TR.spoken_sentences(joined) if x.strip()] or [joined]
@@ -431,7 +464,7 @@ def merge_job(job):
             new, probs = cut(sents, size_from=size0)
             over = [x for x in probs if 'two visual lines' in x]
             spans = _spread([t for t, _ in new], shots, run[0][0], run[-1][1]) if not over else None
-            if spans and len(new) < len(run):
+            if spans and (len(new) < len(run) or 'does not fit' in why):
                 if probs:
                     why += '; ' + '; '.join(probs)
                 groups = []
