@@ -1,14 +1,13 @@
 {
  "id": "2026-11-23-dawn-of-war-iv-commander-edition-steam",
- "state": "failed",
- "problems": [
-  "text: line 5: open the line on an Arabic word («تصدر Warhammer...», not «Warhammer تصدر...»), or rebreak"
- ],
+ "state": "built",
+ "problems": [],
  "flags": [
   "text fixed mechanically: headline: game name put in the headline",
-  "warning: text: headline: 3 lines: at most 2; cut to fewer words"
+  "warning: text: headline: 3 lines: at most 2; cut to fewer words",
+  "ledger: earlier stories on this game: 2026-11-09-warhammer-40k-dark-heresy-january-28-2027, 2026-11-22-darktide-meltagun-free-update-dec-7-steam, warhammer-40000-dawn-of-war-iv-system-requirements-20261113 (an update or a duplicate? the editor decides)"
  ],
- "at": "2026-11-23T17:17:18Z",
+ "at": "2026-11-23T17:35:02Z",
  "footage": {
   "name": "Dawn of War IV Space Marine 101 Trailer",
   "width": 1920,
@@ -21,9 +20,9 @@
  },
  "job": "jobs/live/dawn-of-war-iv-commander-edition-steam.json",
  "story": "newsroom/stories/2026-11-23-dawn-of-war-iv-commander-edition-steam.json",
- "lines": 5,
- "shots": 13,
- "run": "45225922914",
+ "lines": 4,
+ "shots": 12,
+ "run": "45229133566",
  "lane": "live",
- "build_secs": 67
+ "build_secs": 73
 }
