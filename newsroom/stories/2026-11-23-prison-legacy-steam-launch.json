@@ -48,5 +48,25 @@
    "legacy"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/prison-legacy-steam-launch-reel-v1.mp4",
+  "blob": "cf2b7dfed78f4f7de3f99cfed84658200b4f662a",
+  "at": "2026-11-23T02:20:04Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/prison-legacy-steam-launch.json",
+   "sha256": "c130fd9ae1fa00d2821cc77eb526a48d9c3af463483d39da2cdf26664ef751a8",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Look frames show the Prison Legacy trailer (crowd of players in a prison yard, inventory/laundry room screen, title card with police cars and 'November 20 on Steam') under the headline, matching Arabic captions and Steam credit"
  }
 }
