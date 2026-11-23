@@ -1,14 +1,12 @@
 {
  "id": "2026-11-23-workers-resources-space-program-dlc-games-press",
- "state": "failed",
- "problems": [
-  "text: line 2: open the line on an Arabic word («تصدر Warhammer...», not «Warhammer تصدر...»), or rebreak"
- ],
+ "state": "built",
+ "problems": [],
  "flags": [
   "name not in names-ar: «بيان رسمي (Games Press)» (credit); add it there as Proposed",
   "name not in names-ar: «أعلنت شركتا هوديد هورس (Hooded Horse)» (instagram); add it there as Proposed"
  ],
- "at": "2026-11-23T19:35:52Z",
+ "at": "2026-11-23T20:09:13Z",
  "footage": {
   "name": "Launch Trailer",
   "width": 1920,
@@ -22,8 +20,8 @@
  "job": "jobs/live/workers-resources-space-program-dlc-games-press.json",
  "story": "newsroom/stories/2026-11-23-workers-resources-space-program-dlc-games-press.json",
  "lines": 5,
- "shots": 15,
- "run": "45250480311",
+ "shots": 14,
+ "run": "45256269384",
  "lane": "live",
- "build_secs": 53
+ "build_secs": 48
 }
