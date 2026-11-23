@@ -1,0 +1,381 @@
+{
+ "name": "sovereign-tower-switch-jan-14-nintendo-life",
+ "out": "cards/2026-11/sovereign-tower-switch-jan-14-nintendo-life-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 60 px on 2 lines (cut it to a few words next time): إدارة الفرسان في Sovereign Tower\nقادمة إلى سويتش في 14 يناير"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 60 px on 2 lines (cut it to a few words next time): إدارة الفرسان في Sovereign Tower\nقادمة إلى سويتش في 14 يناير"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4 at 16.6 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4 at 47.19 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch for 2 slot(s)"
+  },
+  {
+   "kind": "text",
+   "slot": "reel",
+   "step": "a",
+   "why": "soft shade under line group(s) [0]: bright footage behind them"
+  }
+ ],
+ "job_to_pass_min": 6.1,
+ "at": "2026-11-23T23:28:57Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4 starts at 0.0 s, the video at 1.35 s; its first 1.35 s are lost",
+  "first frame: shot 1 sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4 starts at 0.0 s, the video at 1.35 s; its first 1.35 s are lost",
+  "first frame: shot 2 sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4 starts at 0.0 s, the video at 1.35 s; its first 1.35 s are lost",
+  "first frame: shot 3 sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4 starts at 0.0 s, the video at 1.35 s; its first 1.35 s are lost",
+  "first frame: shot 4 sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4 starts at 0.0 s, the video at 1.35 s; its first 1.35 s are lost",
+  "first frame: shot 5 sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4 starts at 0.0 s, the video at 1.35 s; its first 1.35 s are lost",
+  "first frame: shot 6 sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4 starts at 0.0 s, the video at 1.35 s; its first 1.35 s are lost",
+  "first frame: shot 7 sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4 starts at 0.0 s, the video at 1.35 s; its first 1.35 s are lost",
+  "length 16.4 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 93.1; leak_pct 0.4; cache {'hit': 0, 'miss': 6}; separate_secs 9.7; secs 13.9",
+  "render_job: lifeless: {\"score\": 33.3, \"still_share\": 0.448, \"longest_still\": 3.1, \"cuts_per_10s\": 2.45, \"held_under_text\": 0.0, \"secs\": 16.3, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 32 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)",
+  "estimate: headline: 27 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4 at 4.35 s for 2.2 s, focus 0.0"
+  },
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-demo-trailer-en.mp4 at 37.58 s for 3.8 s, focus 0.527 (nothing free in sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4)"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-demo-trailer-en.mp4 at 27.08 s for 2.2 s, focus 0.527 (nothing free in sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4)"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-demo-trailer-en.mp4 at 41.38 s for 2.2 s, focus 0.527 (nothing free in sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4)"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "sovereign-tower-switch-jan-14-nintendo-life-date-announcement-en.mp4 at 42.20 s for 2.2 s, focus 0.154 (nothing free in sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4)"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-demo-trailer-en.mp4 at 30.08 s for 2.2 s, focus 0.527 (shortened from 2.2 s: no free clean stretch that long)"
+  }
+ ],
+ "job_sha": "78376ea6e8b2f5d5db66b570f22673fe5af8c0b4",
+ "dispatches": 3,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/sovereign-tower-switch-jan-14-nintendo-life-look-1.jpg",
+  "cards/2026-11/sovereign-tower-switch-jan-14-nintendo-life-look-2.jpg",
+  "cards/2026-11/sovereign-tower-switch-jan-14-nintendo-life-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 77.4,
+  "files": {
+   "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4": {
+    "secs": 29.7,
+    "cached": false,
+    "stages": {
+     "decode": 12.7,
+     "autofocus": 27.0,
+     "ocr": 27.0,
+     "smear": 29.5,
+     "scenes": 29.6
+    },
+    "incomplete": null
+   },
+   "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-demo-trailer-en.mp4": {
+    "secs": 27.1,
+    "cached": false,
+    "stages": {
+     "decode": 11.8,
+     "autofocus": 20.7,
+     "ocr": 20.7,
+     "smear": 26.9,
+     "scenes": 27.1
+    },
+    "incomplete": null
+   },
+   "sovereign-tower-switch-jan-14-nintendo-life-date-announcement-en.mp4": {
+    "secs": 20.6,
+    "cached": false,
+    "stages": {
+     "decode": 8.7,
+     "autofocus": 18.3,
+     "ocr": 18.3,
+     "smear": 20.4,
+     "scenes": 20.6
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/sovereign-tower-switch-jan-14-nintendo-life.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.18,
+  "fetch": 0.52,
+  "shots": 0.94,
+  "checks": 1.15,
+  "render": 1.77,
+  "after": 0.78,
+  "job": 5.17
+ },
+ "job_after_autofix": {
+  "name": "sovereign-tower-switch-jan-14-nintendo-life",
+  "story": "2026-11-24-sovereign-tower-switch-jan-14-nintendo-life",
+  "footage_source": "steam:4113940",
+  "kind_news": "date",
+  "story_class": "trailer",
+  "story_class_why": "kind date",
+  "skin_why": "genre rpg",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/sovereign-tower-switch-jan-14-nintendo-life-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4",
+    "steam": 4113940,
+    "trailer": "Sovereign Tower - Launch Trailer (EN)",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "4113940"
+   },
+   {
+    "file": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-demo-trailer-en.mp4",
+    "steam": 4113940,
+    "trailer": "Sovereign Tower - Demo Trailer (EN)",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "4113940"
+   },
+   {
+    "file": "sovereign-tower-switch-jan-14-nintendo-life-date-announcement-en.mp4",
+    "steam": 4113940,
+    "trailer": "Date Announcement (EN)",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "4113940"
+   }
+  ],
+  "shots": [
+   [
+    "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-demo-trailer-en.mp4",
+    37.58,
+    3.8,
+    [
+     [
+      0.0,
+      0.527
+     ]
+    ]
+   ],
+   [
+    "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4",
+    4.35,
+    2.2,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-demo-trailer-en.mp4",
+    27.08,
+    2.2,
+    [
+     [
+      0.0,
+      0.527
+     ]
+    ]
+   ],
+   [
+    "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-demo-trailer-en.mp4",
+    41.38,
+    2.2,
+    [
+     [
+      0.0,
+      0.527
+     ]
+    ]
+   ],
+   [
+    "sovereign-tower-switch-jan-14-nintendo-life-date-announcement-en.mp4",
+    42.2,
+    2.2,
+    [
+     [
+      0.0,
+      0.154
+     ]
+    ]
+   ],
+   [
+    "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-demo-trailer-en.mp4",
+    30.08,
+    2.17,
+    [
+     [
+      0.0,
+      0.527
+     ]
+    ]
+   ],
+   [
+    "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4",
+    0.0,
+    2.2,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "وفي اللعبة تحكم\nبرجا بعد موت سلفك،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "وتجند فرسانا وترسلهم في مهام",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    7,
+    [
+     [
+      "وكانت اللعبة قد صدرت على Steam\nفي وقت سابق من هذا العام",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    7,
+    "المصدر: Nintendo Life · اللقطات: صفحة اللعبة على Steam",
+    {
+     "size": 36,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع نينتيندو لايف (Nintendo Life) أن لعبة تقمص الأدوار الخيالية Sovereign Tower قادمة إلى نينتندو سويتش في 14 يناير 2027. وفي اللعبة تحكم برجا بعد موت سلفك، وتجند فرسانا وترسلهم في مهام. وكانت اللعبة قد صدرت على Steam في وقت سابق من هذا العام.",
+  "headline": "إدارة الفرسان في Sovereign Tower\nقادمة إلى سويتش في 14 يناير",
+  "label": "تقرير",
+  "game": "Sovereign Tower",
+  "game_short": "Sovereign Tower",
+  "game_key": "sovereign tower",
+  "genre": [
+   "rpg"
+  ],
+  "texts": {
+   "instagram": "ذكر موقع نينتيندو لايف (Nintendo Life) أن لعبة تقمص الأدوار الخيالية Sovereign Tower قادمة إلى نينتندو سويتش في 14 يناير 2027.\n\nوفي اللعبة تحكم برجا بعد موت سلفك، وتجند فرسانا وترسلهم في مهام. وكانت اللعبة قد صدرت على Steam في وقت سابق من هذا العام.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع نينتيندو لايف (Nintendo Life).\n\n#ألعاب #أخبار_الألعاب #SovereignTower #NintendoSwitch",
+   "x": "تقرير: ذكر موقع نينتيندو لايف (Nintendo Life) أن لعبة Sovereign Tower قادمة إلى نينتندو سويتش في 14 يناير 2027، بعد صدورها على Steam. المصدر: نينتيندو لايف.",
+   "threads": "تقرير: ذكر موقع نينتيندو لايف (Nintendo Life) أن لعبة تقمص الأدوار الخيالية Sovereign Tower قادمة إلى نينتندو سويتش في 14 يناير 2027.\n\nوفي اللعبة تحكم برجا بعد موت سلفك، وتجند فرسانا وترسلهم في مهام.\n\nالمصدر: موقع نينتيندو لايف (Nintendo Life)"
+  },
+  "source": "موقع نينتيندو لايف (Nintendo Life)، واللقطات من صفحة اللعبة على Steam",
+  "date": "24 Nov 2026",
+  "theme": "emerald",
+  "style": null,
+  "template": "trailer",
+  "skin": "fantasy",
+  "cut": false,
+  "track": [
+   "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Switch release date of 14 Jan 2027 reported 23 Nov",
+   "what_it_means_here": "A knight-management fantasy RPG already out on Steam heads to Switch"
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind date",
+   "skin": "fantasy: genre rpg",
+   "footage": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4 from the resolver (steam:4113940)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Nintendo Life, 23 Nov 2026: Fantasy RPG 'Sovereign Tower' Brings Some Round Table Management To Switch Next Year (https://www.nintendolife.com/news/2026/11/fantasy-rpg-sovereign-tower-brings-some-round-table-management-to-switch-next-year); first report: Nintendo Life 23 Nov 2026 14:00Z (slow-hours rule: single credible outlet read in full)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 4113940 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "shots_auto": [
+   6,
+   7
+  ]
+ }
+}

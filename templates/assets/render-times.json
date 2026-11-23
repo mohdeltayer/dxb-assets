@@ -144647,5 +144647,193 @@
   "setup_min": 1.13,
   "story": "sovereign-tower-switch-jan-14-nintendo-life",
   "upload_secs": 6.0
+ },
+ {
+  "name": "sovereign-tower-switch-jan-14-nintendo-life-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-23T23:27Z",
+  "stages": {
+   "checks": 4.9,
+   "montage": 36.8,
+   "text": 45.1,
+   "audio": 0.7,
+   "outro": 9.8
+  },
+  "total": 97.3,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-23T23:26Z",
+  "finished_at": "2026-11-23T23:27Z",
+  "render_min": 1.62,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-demo-trailer-en.mp4",
+    "start": 37.58,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4",
+    "start": 4.35,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-demo-trailer-en.mp4",
+    "start": 27.08,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-demo-trailer-en.mp4",
+    "start": 41.38,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "sovereign-tower-switch-jan-14-nintendo-life-date-announcement-en.mp4",
+    "start": 42.2,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.64,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-demo-trailer-en.mp4",
+    "start": 30.08,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4",
+    "start": 16.6,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "sovereign-tower-switch-jan-14-nintendo-life-sovereign-tower-launch-trailer-en.mp4",
+    "start": 47.19,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.72,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 9.7,
+   "audio_secs": 45.7,
+   "music_pct": 93.1,
+   "leak_pct": 0.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 6
+   },
+   "effects_shots": 8,
+   "mix_secs": 3.2,
+   "secs": 13.9
+  },
+  "lifeless": {
+   "score": 33.3,
+   "still_share": 0.448,
+   "longest_still": 3.1,
+   "cuts_per_10s": 2.45,
+   "held_under_text": 0.0,
+   "secs": 16.3,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 31.0,
+   "shots": 56.5,
+   "checks": 63.8,
+   "render": 111.4,
+   "after": 46.8
+  },
+  "softgate": {
+   "warnings": 2,
+   "ladder": [
+    {
+     "kind": "text",
+     "slot": "reel",
+     "step": "a",
+     "why": "soft shade under line group(s) [0]: bright footage behind them"
+    }
+   ]
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 310,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1184,
+  "peak_mem_mb": 3134,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 70318,
+  "peak_disk_mb": 71449,
+  "min_disk_free_mb": 174657,
+  "setup_min": 0.18,
+  "story": "sovereign-tower-switch-jan-14-nintendo-life",
+  "job_sha": "78376ea6e8b2f5d5db66b570f22673fe5af8c0b4",
+  "dispatches": 2,
+  "sound": "trailer",
+  "footage": true
  }
 ]
