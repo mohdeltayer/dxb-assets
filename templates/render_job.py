@@ -1002,9 +1002,10 @@ def hook_pick(job):
         return s['start'] + need <= float((s.get('scene') or [0, s['start'] + s['secs']])[1]) - 0.15
 
     if people_story or text:                   # story: what the story is about, before any generic stretch
-        ranked = sorted(((variety.story_score(s, text, subjects, people_story), i, s) for i, s in enumerate(spread(cur))),
-                        key=lambda x: (-x[0], x[1]))
-        for sc, _i, s in ranked:
+        have = {it.get('url') for it in job.get('footage') or [] if it.get('url')}
+        ranked = sorted(((variety.story_score(s, text, subjects, people_story), s['url'] not in have, i, s)
+                         for i, s in enumerate(spread(cur))), key=lambda x: (-x[0], x[1], x[2]))
+        for sc, _far, _i, s in ranked:          # equal matches: a file the job already has first (no 4K fetch)
             if sc <= 0:
                 break
             if not curated_fits(s):
