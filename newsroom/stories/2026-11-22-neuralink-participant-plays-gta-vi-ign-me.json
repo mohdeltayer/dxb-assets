@@ -79,15 +79,13 @@
   "verdict": "PASS",
   "out": "cards/2026-11/neuralink-participant-plays-gta-vi-ign-me-reel-v1.mp4",
   "blob": "60aeb1e4064012a85683752e3f0e3406a78b82da",
-  "at": "2026-11-22T18:20:18Z",
+  "at": "2026-11-23T02:09:02Z",
   "note": "",
   "checklist": {
    "job": "jobs/live/neuralink-participant-plays-gta-vi-ign-me.json",
-   "sha256": "2454d3c74a927898c961c56b7b6bf22d8d5b41e31e4c05d23c122d18c683ba36",
-   "ok": false,
-   "problems": [
-    "kind_news report: a label (the chip تقرير), not a kind of story (adv-20261111-person-stories-gate): a report about one game takes the kind of what happened (date, delay, reveal, sales, update, people, quote and so on) with \"label\": \"تقرير\""
-   ],
+   "sha256": "6fe3f6793f9c32f4cd9ec906e4758a93f9a208a759d042d9bc6b5d92ee79ff6a",
+   "ok": true,
+   "problems": [],
    "template": "trailer",
    "layout": null,
    "evergreen": false,
@@ -95,6 +93,6 @@
   },
   "by": "director-p2",
   "qc": "pass",
-  "looked": "The three frames show the fixed تقرير chip and two-line headline over official GTA VI trailer footage (a gym scene, a shower close-up with no explicit content, the OUT NOW end card), with readable Arabic caption lines and the IGN/Rockstar credit band."
+  "looked": "Three frames show the fixed تقرير chip and two-line headline over official GTA VI trailer footage (gym scene, shower close-up, OUT NOW end card) with Arabic caption lines and the IGN/Rockstar credit."
  }
 }

@@ -1,0 +1,72 @@
+{
+ "id": "2026-11-23-prison-legacy-steam-launch",
+ "title": "صدور لعبة Prison Legacy على Steam",
+ "status": "building",
+ "lane": "digital-lounge",
+ "game": "Prison Legacy",
+ "companies": [],
+ "subject_person": null,
+ "genre": [
+  "rpg"
+ ],
+ "kind_news": "launch",
+ "label": "متوفر الآن",
+ "chip": "متوفر الآن",
+ "template": "trailer",
+ "sources": [
+  {
+   "role": "primary",
+   "name": "Steam store page, Prison Legacy (release 20 Nov 2026, official launch trailer, 14.99 USD with 25% launch discount)",
+   "url": "https://store.steampowered.com/app/4860910/"
+  },
+  {
+   "role": "outlet",
+   "name": "Denfaminicogamer, 23 Nov 2026: Prison Legacy released on Steam",
+   "url": "https://news.denfaminicogamer.jp/news/261123c"
+  }
+ ],
+ "first_report": "Steam release 20 Nov 2026; Denfaminicogamer report 23 Nov 2026 01:33Z",
+ "source_type": "primary",
+ "footage": "Official video from the resolver (steam:4860910): 4860910",
+ "beat": "news",
+ "angle": null,
+ "spoken": "صدرت لعبة Prison Legacy على Steam في 20 نوفمبر، وهي لعبة تقمص أدوار جماعية اجتماعية تدور داخل سجن شديد الحراسة. تضم قتالا بالأدوار وصناعة وتجارة وبناء عشائر. وتباع بسعر 14.99 دولارا بخصم 25 بالمئة حاليا.",
+ "texts": {
+  "instagram": "لعبة Prison Legacy متاحة الآن على Steam\n\nصدرت لعبة Prison Legacy على Steam في 20 نوفمبر، وهي لعبة تقمص أدوار جماعية اجتماعية تدور داخل سجن شديد الحراسة. تضم قتالا بالأدوار وصناعة وتجارة وبناء عشائر. وتباع بسعر 14.99 دولارا بخصم 25 بالمئة حاليا.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: صفحة اللعبة على Steam.\n\n#ألعاب #أخبار_الألعاب #PrisonLegacy #Steam",
+  "x": "صدرت لعبة Prison Legacy على Steam في 20 نوفمبر، وهي لعبة تقمص أدوار جماعية اجتماعية داخل سجن شديد الحراسة، بسعر 14.99 دولارا بخصم 25 بالمئة حاليا. المصدر: صفحة اللعبة على Steam.",
+  "threads": "صدرت لعبة Prison Legacy على Steam في 20 نوفمبر، وهي لعبة تقمص أدوار جماعية اجتماعية تدور داخل سجن شديد الحراسة.\n\nتضم قتالا بالأدوار وصناعة وتجارة وبناء عشائر، وتباع بسعر 14.99 دولارا بخصم 25 بالمئة حاليا.\n\nالمصدر: صفحة اللعبة على Steam"
+ },
+ "slip": {
+  "tier": 3,
+  "expires": "2026-11-26T12:00:00Z",
+  "built_at": "2026-11-23T02:11:49Z"
+ },
+ "ledger_find": {
+  "at": "2026-11-23T02:11:49Z",
+  "words": [
+   "prison",
+   "legacy"
+  ],
+  "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/prison-legacy-steam-launch-reel-v1.mp4",
+  "blob": "cf2b7dfed78f4f7de3f99cfed84658200b4f662a",
+  "at": "2026-11-23T02:20:04Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/prison-legacy-steam-launch.json",
+   "sha256": "c130fd9ae1fa00d2821cc77eb526a48d9c3af463483d39da2cdf26664ef751a8",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Look frames show the Prison Legacy trailer (crowd of players in a prison yard, inventory/laundry room screen, title card with police cars and 'November 20 on Steam') under the headline, matching Arabic captions and Steam credit"
+ }
+}

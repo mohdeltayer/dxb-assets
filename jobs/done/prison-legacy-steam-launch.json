@@ -1,0 +1,138 @@
+{
+ "name": "prison-legacy-steam-launch",
+ "story": "2026-11-23-prison-legacy-steam-launch",
+ "footage_source": "steam:4860910",
+ "kind_news": "launch",
+ "story_class": "trailer",
+ "story_class_why": "kind launch",
+ "skin_why": "genre rpg",
+ "built_by": "server-slip",
+ "render_lane": "server",
+ "out": "cards/2026-11/prison-legacy-steam-launch-reel-v1.mp4",
+ "split_fallback": "ladder",
+ "footage": [
+  {
+   "file": "prison-legacy-steam-launch-official-launch-trailer.mp4",
+   "steam": 4860910,
+   "trailer": "Official Launch Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "4860910"
+  }
+ ],
+ "shots": [
+  [
+   "prison-legacy-steam-launch-official-launch-trailer.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "prison-legacy-steam-launch-official-launch-trailer.mp4",
+   "auto",
+   2.42,
+   null
+  ],
+  [
+   "prison-legacy-steam-launch-official-launch-trailer.mp4",
+   "auto",
+   2.42,
+   null
+  ],
+  [
+   "prison-legacy-steam-launch-official-launch-trailer.mp4",
+   "auto",
+   2.42,
+   null
+  ],
+  [
+   "prison-legacy-steam-launch-official-launch-trailer.mp4",
+   "auto",
+   2.42,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "تضم قتالا بالأدوار وصناعة\nوتجارة وبناء عشائر",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "وتباع بسعر 14.99 دولارا\nبخصم 25 بالمئة حاليا",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   4,
+   "المصدر: صفحة اللعبة على Steam",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "صدرت لعبة Prison Legacy على Steam في 20 نوفمبر، وهي لعبة تقمص أدوار جماعية اجتماعية تدور داخل سجن شديد الحراسة. تضم قتالا بالأدوار وصناعة وتجارة وبناء عشائر. وتباع بسعر 14.99 دولارا بخصم 25 بالمئة حاليا.",
+ "headline": "صدور لعبة Prison Legacy\nعلى Steam",
+ "label": "متوفر الآن",
+ "game": "Prison Legacy",
+ "game_short": "Prison Legacy",
+ "genre": [
+  "rpg"
+ ],
+ "texts": {
+  "instagram": "لعبة Prison Legacy متاحة الآن على Steam\n\nصدرت لعبة Prison Legacy على Steam في 20 نوفمبر، وهي لعبة تقمص أدوار جماعية اجتماعية تدور داخل سجن شديد الحراسة. تضم قتالا بالأدوار وصناعة وتجارة وبناء عشائر. وتباع بسعر 14.99 دولارا بخصم 25 بالمئة حاليا.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: صفحة اللعبة على Steam.\n\n#ألعاب #أخبار_الألعاب #PrisonLegacy #Steam",
+  "x": "صدرت لعبة Prison Legacy على Steam في 20 نوفمبر، وهي لعبة تقمص أدوار جماعية اجتماعية داخل سجن شديد الحراسة، بسعر 14.99 دولارا بخصم 25 بالمئة حاليا. المصدر: صفحة اللعبة على Steam.",
+  "threads": "صدرت لعبة Prison Legacy على Steam في 20 نوفمبر، وهي لعبة تقمص أدوار جماعية اجتماعية تدور داخل سجن شديد الحراسة.\n\nتضم قتالا بالأدوار وصناعة وتجارة وبناء عشائر، وتباع بسعر 14.99 دولارا بخصم 25 بالمئة حاليا.\n\nالمصدر: صفحة اللعبة على Steam"
+ },
+ "source": "صفحة اللعبة على Steam",
+ "date": "23 Nov 2026",
+ "theme": "cold",
+ "style": null,
+ "template": "trailer",
+ "skin": "fantasy",
+ "cut": false,
+ "track": [
+  "prison-legacy-steam-launch-official-launch-trailer.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": null,
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "template": "trailer: kind launch",
+  "skin": "fantasy: genre rpg",
+  "footage": "prison-legacy-steam-launch-official-launch-trailer.mp4 from the resolver (steam:4860910)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Steam store page, Prison Legacy (release 20 Nov 2026, official launch trailer, 14.99 USD with 25% launch discount) (https://store.steampowered.com/app/4860910/); first report: Steam release 20 Nov 2026; Denfaminicogamer report 23 Nov 2026 01:33Z",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 4860910 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ }
+}
