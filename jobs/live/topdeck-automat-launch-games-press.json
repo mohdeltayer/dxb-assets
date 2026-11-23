@@ -1,0 +1,163 @@
+{
+ "name": "topdeck-automat-launch-games-press",
+ "story": "2026-11-23-topdeck-automat-launch-games-press",
+ "footage_source": "steam:4321920",
+ "kind_news": "launch",
+ "story_class": "trailer",
+ "story_class_why": "kind none: no figure or person leads the story, so a plain announcement",
+ "skin_why": "genre roguelike: its kit is not built yet (skins.KITS scifi, fantasy)",
+ "built_by": "server-slip",
+ "render_lane": "server",
+ "out": "cards/2026-11/topdeck-automat-launch-games-press-reel-v1.mp4",
+ "split_fallback": "ladder",
+ "footage": [
+  {
+   "file": "topdeck-automat-launch-games-press-announcement-trailer.mp4",
+   "steam": 4321920,
+   "trailer": "Announcement Trailer",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "4321920"
+  }
+ ],
+ "shots": [
+  [
+   "topdeck-automat-launch-games-press-announcement-trailer.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "topdeck-automat-launch-games-press-announcement-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "topdeck-automat-launch-games-press-announcement-trailer.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "topdeck-automat-launch-games-press-announcement-trailer.mp4",
+   "auto",
+   2.6,
+   null
+  ],
+  [
+   "topdeck-automat-launch-games-press-announcement-trailer.mp4",
+   "auto",
+   2.6,
+   null
+  ],
+  [
+   "topdeck-automat-launch-games-press-announcement-trailer.mp4",
+   "auto",
+   2.46,
+   null
+  ],
+  [
+   "topdeck-automat-launch-games-press-announcement-trailer.mp4",
+   "auto",
+   2.46,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "وبحسب بيان رسمي،",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "تضم اللعبة أكثر من 200 ورقة\nو 30 شخصية قابلة للفتح",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
+   6,
+   [
+    [
+     "وتدور الأحداث في عالم\nخيال علمي بنبرة كوميدية",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   6,
+   "المصدر: بيان رسمي (Games Press)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "صدرت لعبة Topdeck Automat على Steam، وهي لعبة روغ لايك تجمع بين القتال التلقائي وبناء الأوراق. وبحسب بيان رسمي، تضم اللعبة أكثر من 200 ورقة و30 شخصية قابلة للفتح. وتدور الأحداث في عالم خيال علمي بنبرة كوميدية.",
+ "headline": "لعبة Topdeck Automat\nصدرت على Steam",
+ "label": "متوفر الآن",
+ "game": "Topdeck Automat",
+ "game_short": null,
+ "game_key": "topdeck automat",
+ "genre": [
+  "roguelike"
+ ],
+ "texts": {
+  "instagram": "لعبة Topdeck Automat صدرت على Steam\n\nصدرت لعبة Topdeck Automat على Steam، وهي لعبة روغ لايك تجمع بين القتال التلقائي وبناء الأوراق.\n\nوبحسب بيان رسمي، تضم اللعبة أكثر من 200 ورقة و30 شخصية قابلة للفتح وأكثر من 50 نوعا من الأعداء، وتدور في عالم خيال علمي بنبرة كوميدية.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: بيان رسمي (Games Press).\n\n#ألعاب #أخبار_الألعاب #TopdeckAutomat #ألعاب_مستقلة",
+  "x": "صدرت لعبة Topdeck Automat على Steam، وهي لعبة روغ لايك تجمع بين القتال التلقائي وبناء الأوراق، وتضم أكثر من 200 ورقة و30 شخصية قابلة للفتح. المصدر: بيان رسمي (Games Press).",
+  "threads": "صدرت لعبة Topdeck Automat على Steam، وهي لعبة روغ لايك تجمع بين القتال التلقائي وبناء الأوراق.\n\nوبحسب بيان رسمي، تضم أكثر من 200 ورقة و30 شخصية قابلة للفتح وأكثر من 50 نوعا من الأعداء.\n\nالمصدر: بيان رسمي (Games Press)"
+ },
+ "source": "بيان رسمي (Games Press)",
+ "date": "23 Nov 2026",
+ "theme": "cold",
+ "style": null,
+ "template": "trailer",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "topdeck-automat-launch-games-press-announcement-trailer.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": null,
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "template": "trailer: kind none: no figure or person leads the story, so a plain announcement",
+  "skin": "house: genre roguelike: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "footage": "topdeck-automat-launch-games-press-announcement-trailer.mp4 from the resolver (steam:4321920)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Games Press, Topdeck Automat press release of 23 Nov 2026 (https://www.gamespress.com/en-US/Topdeck-Automat---the-roguelike-auto-battler-is-out-now); first report: Games Press press release, 23 Nov 2026 11:34Z; the game is out now on Steam (slow-hours rule: small indie with an official Steam trailer)",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 4321920 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ }
+}
