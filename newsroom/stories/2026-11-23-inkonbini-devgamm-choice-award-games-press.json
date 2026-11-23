@@ -61,5 +61,25 @@
   "director": "Director agent PASS in the 07:20Z run, not recorded (classifier); scheduled under the 23 Nov server-post rule",
   "gate": "08:15Z Games Press re-read"
  },
- "game_key": "inkonbini one store many stories"
+ "game_key": "inkonbini one store many stories",
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/inkonbini-devgamm-choice-award-games-press-reel-v1.mp4",
+  "blob": "296fa0459c3226bb01dd9950571a61217c6b5130",
+  "at": "2026-11-23T08:51:45Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/inkonbini-devgamm-choice-award-games-press.json",
+   "sha256": "b926fe96bc01a7ad4c56402e02226fa988c68dfb69a0ab20b23e49f99d07a4c4",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1 look-2 look-3 and sheet: headline, chip, Arabic lines and the credit legible"
+ }
 }
