@@ -256,6 +256,15 @@ class Kind(unittest.TestCase):
         self.assertTrue(foot)
         self.assertEqual(src[:foot.start()].rstrip(' ،,'), 'يوروغيمر (Eurogamer)')
 
+    def test_game_key_and_story_hook(self):
+        import gamekey
+        import variety
+        self.assertEqual({gamekey.key(n) for n in ('GTA VI', 'Grand Theft Auto VI', 'GTA 6', 'GTA VI™')}, {'gta vi'})
+        cur, subj = variety.curated('Grand Theft Auto VI')
+        self.assertGreaterEqual(len(cur), 20)
+        best = max(cur, key=lambda s: variety.story_score(s, 'من ألهم شخصية جيسون في GTA VI؟', subj, True))
+        self.assertIn('jason', best['tags'])
+
     def test_headline_drops_chip_word(self):
         import textrules as TR
         j, _ = TR.fix({'headline': 'تقرير: Pangoro كان الغائب\nعن Pokken Tournament', 'label': 'تقرير',

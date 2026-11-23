@@ -349,7 +349,8 @@ def theme_for(slip):
 def story_file(slip, footage_note):
     return {
         'id': slip['id'], 'title': slip.get('title') or slip['headline'].replace('\n', ' '), 'status': 'building',
-        'lane': 'digital-lounge', 'game': slip.get('game'), 'companies': slip.get('companies') or [],
+        'lane': 'digital-lounge', 'game': slip.get('game'), 'game_key': __import__('gamekey').key(slip.get('game')),
+        'companies': slip.get('companies') or [],
         'subject_person': ({k: v for k, v in (shape(slip).get('person') or {}).items() if k in ('name', 'role')} or None)
                           if shape(slip)['class'] == 'person' else None, 'genre': slip.get('genre') or [], 'kind_news': slip.get('kind') or KIND_OF_LABEL.get(slip['label'], 'reveal'),
         'label': slip['label'], 'chip': slip['label'], 'template': shape(slip)['template'], 'sources': slip['sources'],
@@ -516,7 +517,8 @@ def job_from(slip, foot, lane='live', theme=None, spare=()):
         'footage': [foot] + [x for x in spare if x.get('file') and x['file'] != f], 'shots': shots, 'lines': lines,
         'credits': [[0, len(shots) - 1, credit, {'size': 40, 'band': True}]],
         'spoken': slip['spoken'], 'headline': slip['headline'], 'label': slip['label'],
-        'game': slip.get('game'), 'game_short': slip.get('game_short') or _short(slip.get('game')), 'genre': slip.get('genre') or [],
+        'game': slip.get('game'), 'game_short': slip.get('game_short') or _short(slip.get('game')),
+        'game_key': __import__('gamekey').key(slip.get('game')), 'genre': slip.get('genre') or [],
         'texts': {k: slip.get(k) for k in ('instagram', 'x', 'threads') if slip.get(k)},
         'source': re.sub(r'^المصدر:\s*', '', credit).replace('\n', ' '), 'date': slip.get('date') or dt.date.today().strftime('%-d %b %Y'),
         'theme': theme or theme_for(slip), 'style': None, 'template': kind['template'], 'skin': kind['skin'], 'cut': False,

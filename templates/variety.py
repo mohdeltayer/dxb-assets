@@ -60,11 +60,53 @@ def source_key(job, f):
 
 
 def game_of(job):
-    return str(job.get('game') or job.get('game_short') or '').strip().lower() or None
+    """One key per game (23 Nov 2026, item 3): GTA VI, Grand Theft Auto VI and GTA 6 meet (templates/gamekey.py)."""
+    import gamekey
+    return gamekey.key(job.get('game') or job.get('game_short'))
 
 
-def frame_hash(path, t, focus=None):
-    """dHash of the frame at t, cropped to the 9:16 window around focus (0 to 1 across the frame); None on failure."""
+def _gk(name):
+    import gamekey
+    return gamekey.key(name)
+
+
+CURATED = os.path.join(HERE, 'assets', 'game-stretches.json')
+
+
+def curated(game):
+    """The game's curated, labelled stretches (templates/assets/game-stretches.json), each with its file's url; [] when
+    the game has none."""
+    try:
+        g = json.load(open(CURATED, encoding='utf-8')).get('games', {}).get(_gk(game) or '')
+    except (OSError, ValueError):
+        g = None
+    if not g:
+        return [], {}
+    out = []
+    for s in g.get('stretches') or []:
+        url = (g.get('files') or {}).get(s['file'], {}).get('url')
+        if url:
+            out.append(dict(s, url=url))
+    return out, g.get('subjects') or {}
+
+
+def story_score(stretch, text, subjects, people_story):
+    """How well a stretch matches the story (23 Nov 2026, item 5): a named subject the story names (Jason, Lucia, Vice
+    City) counts 3; for a story about a person or an event, a person, a crowd or the city counts 1."""
+    t = str(text or '').lower()
+    sc = 0.0
+    for tag in stretch.get('tags') or []:
+        words = subjects.get(tag)
+        if words and any(w.lower() in t for w in words):
+            sc += 3
+    if people_story and set(stretch.get('tags') or []) & {'person', 'people', 'crowd', 'city', 'vice city'}:
+        sc += 1
+    return sc
+
+
+def frame_hash(path, t, focus=None, boxed=False):
+    """dHash of the frame at t as the grid shows it: cropped to the 9:16 window around focus (0 to 1 across the frame),
+    or, for the 16:9 boxed (showcase) layout, the whole picture in its box (23 Nov 2026, item 4); None on failure."""
     try:
         from PIL import Image
         import io
@@ -76,7 +118,7 @@ def frame_hash(path, t, focus=None):
         cw = min(w, int(h * 9 / 16))
         fx = 0.5 if not isinstance(focus, (int, float)) else float(focus)
         x0 = int(min(max(fx * w - cw / 2, 0), w - cw))
-        im = im.crop((x0, 0, x0 + cw, h)).resize((9, 8))
+        im = (im if boxed else im.crop((x0, 0, x0 + cw, h))).resize((9, 8))
         px = list(im.getdata())
         bits = 0
         for r in range(8):
@@ -106,9 +148,9 @@ def hook_ok(job, f, path, st, fo=None, led=None, now=None):
         if not t or (now - t).days >= OPENER_DAYS or e.get('name') == job.get('name'):
             continue
         op = e.get('opener') or []
-        if game and e.get('game') == game and len(op) == 2 and op[0] == key and abs(float(op[1]) - st) < OPENER_GAP:
+        if game and _gk(e.get('game')) == game and len(op) == 2 and op[0] == key and abs(float(op[1]) - st) < OPENER_GAP:
             return False, f"opener {st:.1f} s was used by {e.get('name')} at {float(op[1]):.1f} s within {OPENER_DAYS} days"
-    h = frame_hash(path, st + 0.2, _focus(fo))
+    h = frame_hash(path, st + 0.2, _focus(fo), boxed=job.get('layout') == 'showcase')
     if h is None:
         return True, ''
     for e in [x for x in ents if x.get('name') != job.get('name')][-COVER_LAST:]:
@@ -127,7 +169,9 @@ def entry(job, uploads):
             path = os.path.join(uploads, sh[0])
             return {'name': job.get('name'), 'game': game_of(job), 'at': _now().strftime('%Y-%m-%dT%H:%M:%SZ'),
                     'opener': [source_key(job, sh[0]), round(float(sh[1]), 2)],
-                    'hash': frame_hash(path, float(sh[1]) + 0.2, _focus(sh[3] if len(sh) > 3 else None))}
+                    'hash': frame_hash(path, float(sh[1]) + 0.2, _focus(sh[3] if len(sh) > 3 else None),
+                                       boxed=job.get('layout') == 'showcase'),
+                    'layout': job.get('layout') or 'crop'}
         if isinstance(sh, list) and str(sh[0]).endswith('.png'):
             return None                          # a card cover: nothing to compare
     return None

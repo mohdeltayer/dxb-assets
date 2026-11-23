@@ -926,6 +926,132 @@ def scan(job):
     return time.time()
 
 
+PEOPLE_KINDS = ('people', 'quote', 'cast', 'interview', 'event', 'debate')
+HOOK_EXTRA_FILES = 1                     # at most one more trailer fetched for the hook (a 4K master is 0.8 to 1.5 GB)
+
+
+def hook_pick(job):
+    """The hook shot (the cover) after the shots are settled (Mohammad, 23 Nov 2026, variety fix items 1 and 5):
+      story: a curated stretch that matches the story (the person it names, a crowd, the city) when one passes the cover
+             and opener ledger;
+      keep:  the hook as picked when it passes and nothing matches the story better;
+      a:     another stretch of the same file: its curated stretches, the library's proven stretches, then evenly
+             spaced clean points;
+      b:     another official trailer of the same game in the curated library;
+      c:     an official still or key art with motion, when the library lists one for the game;
+      d:     a different layout (the 16:9 boxed showcase, hashed as the grid shows it).
+    Never the same shot again: each step's candidate must pass variety.hook_ok. The step taken is written to the render
+    log and qc.json (softgate ladder, kind hook)."""
+    import softgate as SG_
+    import variety
+    shots = job.get('shots') or []
+    if not shots or not isinstance(shots[0], list) or not isinstance(shots[0][1], (int, float)) \
+            or str(shots[0][0]).lower().endswith(tuple(reel.STILL) + ('.png',)):
+        return
+    sh0 = shots[0]
+    need = float(sh0[2])
+    led = variety.load()
+    cur, subjects = variety.curated(job.get('game') or job.get('game_short'))
+    text = ' '.join(str(x) for x in (job.get('headline'), job.get('spoken'), (job.get('subject_person') or {}).get('name'),
+                                       ' '.join(str(p[1]) for p in job.get('person') or [] if len(p) > 1)) if x)
+    people_story = job.get('template') == 'people' or job.get('kind_news') in PEOPLE_KINDS or bool(job.get('subject_person'))
+    extra = [0]
+
+    def file_for(url, name):
+        for it in job.get('footage') or []:
+            if it.get('url') == url and it.get('file'):
+                return it['file']
+        if extra[0] >= HOOK_EXTRA_FILES:
+            return None
+        item = {'file': f'{name}.mp4', 'url': url}
+        try:
+            fetch(item)
+        except Exception as e:                 # noqa: BLE001
+            print(f'render_job: hook: {url} not fetched ({e})', flush=True)
+            return None
+        extra[0] += 1
+        job.setdefault('footage', []).append(item)
+        return item['file']
+
+    def free(f, st):
+        return not any(isinstance(s, list) and s is not sh0 and s[0] == f and isinstance(s[1], (int, float))
+                       and s[1] < st + need and st < s[1] + float(s[2]) for s in shots)
+
+    def passes(f, st, fo):
+        if not free(f, st):
+            return False
+        ok, _ = variety.hook_ok(job, f, C.U + f, st, fo, led)
+        return ok
+
+    def take(f, st, fo, step, why):
+        sh0[0], sh0[1] = f, round(float(st), 2)
+        if fo is not None:
+            sh0[3] = [[0.0, fo]] if not isinstance(fo, list) else fo
+        SG_.ladder('hook', 0, step, why)
+        print(f'render_job: hook step {step}: {why}', flush=True)
+        return True
+
+    import hashlib
+    turn = int(hashlib.md5(str(job.get('name')).encode()).hexdigest(), 16)
+
+    def spread(xs):                            # each Reel starts its list at its own place: two Reels rendered at once
+        xs = list(xs)                          # (and not yet in each other's ledger) still land on different stretches
+        return xs[turn % len(xs):] + xs[:turn % len(xs)] if xs else xs
+
+    def curated_fits(s):
+        return s['start'] + need <= float((s.get('scene') or [0, s['start'] + s['secs']])[1]) - 0.15
+
+    if people_story or text:                   # story: what the story is about, before any generic stretch
+        ranked = sorted(((variety.story_score(s, text, subjects, people_story), i, s) for i, s in enumerate(spread(cur))),
+                        key=lambda x: (-x[0], x[1]))
+        for sc, _i, s in ranked:
+            if sc <= 0:
+                break
+            if not curated_fits(s):
+                continue
+            f = file_for(s['url'], s['file'])
+            if f and passes(f, s['start'], s.get('focus')):
+                return take(f, s['start'], s.get('focus'), 'story', f"{s['label']} ({s['file']} at {s['start']} s), "
+                            f"matches the story (score {sc:g})")
+    ok, why = variety.hook_ok(job, sh0[0], C.U + sh0[0], float(sh0[1]), sh0[3] if len(sh0) > 3 else None, led)
+    if ok:
+        return False
+    f0 = sh0[0]
+    url0 = next((it.get('url') for it in job.get('footage') or [] if it.get('file') == f0), None)
+    for s in spread([s for s in cur if url0 and s['url'] == url0 and curated_fits(s)]):   # a: the same file
+        if passes(f0, s['start'], s.get('focus')):
+            return take(f0, s['start'], s.get('focus'), 'a', f"another stretch of the same file: {s['label']} at "
+                        f"{s['start']} s ({why})")
+    try:
+        import footlib
+        proven = footlib.stretches_for_file(f0, job=job)
+    except Exception:                          # noqa: BLE001
+        proven = []
+    for p in spread(proven):
+        if p[1] >= need - 0.3 and passes(f0, p[0], p[2]):
+            return take(f0, p[0], p[2], 'a', f'another stretch of the same file: library stretch at {p[0]} s ({why})')
+    dur = _video_dur(f0) or 0.0
+    for k in range(8):
+        st = 0.5 + (max(0.0, dur - 1.0 - need)) * (k + 0.5) / 8
+        if frame_clean(f0, st, need, dur)[0] and passes(f0, st, None):
+            return take(f0, st, None, 'a', f'another stretch of the same file: clean point at {st:.2f} s ({why})')
+    for s in spread([s for s in cur if s['url'] != url0 and curated_fits(s)]):         # b: another official trailer
+        f = file_for(s['url'], s['file'])
+        if f and passes(f, s['start'], s.get('focus')):
+            return take(f, s['start'], s.get('focus'), 'b', f"another official trailer: {s['label']} ({s['file']} at "
+                        f"{s['start']} s) ({why})")
+    SG_.ladder('hook', 0, 'c', 'no official still or key art with motion listed for this game; next step')
+    blockers = [k for k in SG_.SHOWCASE_BLOCKERS if job.get(k)]
+    if not blockers and job.get('layout') != 'showcase':                               # d: a different layout
+        job['layout'] = 'showcase'
+        job.setdefault('showcase_reason', 'variety: every crop of the available hooks repeats a recent cover on the grid '
+                                          '(23 Nov 2026 hook order, step d)')
+        SG_.ladder('hook', 0, 'd', f'different layout: the 16:9 boxed showcase ({why})')
+        return True
+    SG_.ladder('hook', 0, 'none', f'no step passed ({why}); the hook stays' + (f' (showcase blocked by {blockers})' if blockers else ''))
+    return False
+
+
 def track_from_first_shot(job):
     """A slip job (templates/slip.py) leaves its trailer track's start to the server: once the shots are picked, the
     track runs from the first footage shot's source second, on that shot's file (adv-20261117-server-news-line-editor-
@@ -1797,6 +1923,9 @@ def run(job, draft=False):
     t_shots = scan(job)                         # auto shots, track, shot gate: capped, on 720p proxies (20 Nov 2026)
     if SG_.soft(job):
         respread(job)                           # never the same moment twice (20 Nov 2026, Ace Combat 8: 12 shots at 3.07 s)
+    if SG_.soft(job) and job.get('kind') not in ('breaking', 'famitsu') and profile_of(job) != 'breaking':
+        SG_.guarded('hook', hook_pick, job)     # story first, then a new cover (Mohammad, 23 Nov 2026)
+        track_from_first_shot(job)
     if SG_.soft(job) and job.get('kind') not in ('breaking', 'famitsu'):
         SG_.guarded('line shade', auto_shade, job)   # a line over bright footage gets the soft shade (21 Nov, item 5)
     if os.environ.get('RUNNER_TEMP') and job.get('kind') not in ('breaking', 'famitsu'):
