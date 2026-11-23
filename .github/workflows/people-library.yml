@@ -38,9 +38,10 @@ jobs:
           KEYS: ${{ inputs.keys }}
         run: |
           case "$KEYS" in *[!a-z0-9\ -]*) echo "bad keys"; exit 1;; esac
-          python3 -c "import PIL, cv2" 2>/dev/null || python3 -m pip install -q --user pillow opencv-python-headless==4.10.0.84
-          python3 templates/people.py fetch $KEYS
-          python3 templates/people.py list | tee -a "$GITHUB_STEP_SUMMARY"
+          py="${DXB_VENV:-/home/runner/venv}/bin/python3"     # the server's render venv (PIL, OpenCV)
+          "$py" -c "import PIL, cv2"
+          "$py" templates/people.py fetch $KEYS
+          "$py" templates/people.py list | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Commit
         if: always()
         env:
