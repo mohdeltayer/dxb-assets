@@ -594,6 +594,11 @@ def line_layer(text, path, price=None, shade=False, top=False, size=70, step=96,
             lines = [' '.join(words[:k]), ' '.join(words[k:])]
     for i, x in enumerate(lines):
         if tw(x) > room - (size if price and i == len(lines) - 1 else 0):
+            if SOFT and size - 4 >= LINE_FLOOR:     # a long name on its own line (23 Nov 2026): the type steps down, 40 px
+                _soft('line size', f'{size} px too wide for {x!r}; {size - 4} px')   # at least, before the render stops
+                return line_layer(text, path, price=price, shade=shade, top=top, size=size - 4,
+                                  step=max(1, round(step * (size - 4) / size)), lift=lift, ink=ink, skin=skin,
+                                  geometry=geometry)
             raise ValueError(f'line runs out of the safe zone: {x}')
     cap = 2 if lift else 3                 # over a split strip a sentence is two visual lines at most (14 Oct 2026)
     if len(lines) > cap:
@@ -1137,6 +1142,7 @@ LOWRES_EXAMPLE = 'IGN, Nintendo store, publisher press site, Steam: none above 7
 CLEAN_MAP = None
 
 
+LINE_FLOOR = 40           # a story line steps down to this size on the live path before it stops (23 Nov 2026)
 SOFT = False               # templates never refuse (adv-20261118-templates-never-refuse A): render_job sets it on the live path
 
 

@@ -485,7 +485,10 @@ def job_from(slip, foot, lane='live', theme=None, spare=()):
     name = _name(slip)
     f = foot['file']
     kind = shape(slip)
-    bs = beats(slip['spoken'], slip['headline'])[:MAX_BEATS]
+    import linecut as LC                          # full sentences or clauses, 3 to 6 lines (Mohammad, 23 Nov 2026)
+    cut_lines, cut_probs = LC.cut(story_sentences(slip['spoken'], slip['headline']))
+    bs = [t for t, _ in cut_lines]
+    line_flags = [f'lines: {x}' for x in cut_probs]
     shots = [[f, 'auto', HOOK_SECS, None]]
     gfx = []
     if kind['class'] == 'numbers':              # the figure on its own card over the game's moving footage, after the hook
@@ -498,11 +501,11 @@ def job_from(slip, foot, lane='live', theme=None, spare=()):
         gfx.append(card)
         shots.append([card['file'], 0.0, CARD_SECS, None])
     lines = []
-    for b in bs:
+    for b, size in cut_lines:                       # one line stays up across the shots its reading time needs
         a = len(shots)
-        for secs in pieces(TR.read_secs(b) + 0.8):
+        for secs in pieces(TR.read_secs(b.replace('\n', ' ')) + 0.8):
             shots.append([f, 'auto', secs, None])
-        lines.append([a, len(shots) - 1, [[_wrap(b), {'size': LINE_SIZE}]]])
+        lines.append([a, len(shots) - 1, [[b, {'size': size}]]])
     if len(shots) < 4:                              # a short story still breathes: footage after the last line
         shots += [[f, 'auto', MIN_SECS, None] for _ in range(4 - len(shots))]
     credit = footage_credit(slip, foot)
@@ -533,6 +536,8 @@ def job_from(slip, foot, lane='live', theme=None, spare=()):
                                   else 'our bed: ' + str(slip.get('bed_reason'))},
         'reel_check': reel_check(slip, foot),
     }
+    if line_flags:
+        job['line_flags'] = line_flags
     if gfx:
         job['gfx'] = gfx
         job['ground_footage'] = [f, 4.0, 60.0]   # the calmest stretch of the trailer behind the card, moving

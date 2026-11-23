@@ -91,7 +91,8 @@ runs:
 
     - name: Text check (fails in seconds on a bad wrap)
       shell: bash
-      run: python templates/render_job.py text "$JOB"
+      # --fix: drip-fed story lines are cut again as sentences (Mohammad, 23 Nov 2026); the other autofixes stay off for breaking
+      run: python templates/render_job.py text "$JOB" --fix
 
     - name: Warm caches (plate, end card, bed; a hit costs nothing)
       shell: bash

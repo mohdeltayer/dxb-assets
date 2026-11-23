@@ -65,9 +65,13 @@ def _note(where, rule, what, before=None, after=None):
 
 def text(job, font=True):
     """Text fixes in place. Returns the list of changes made."""
-    if not enabled(job):
-        return []
     n0 = len(LOG)
+    if job.get('kind') != 'famitsu':               # drip-fed lines cut again as sentences, every template, breaking
+        import linecut as LC                       # included (Mohammad, 23 Nov 2026)
+        for c in LC.merge_job(job):
+            _note(c['where'], 'lines', c['what'], c['before'], c['after'])
+    if not enabled(job):
+        return LOG[n0:]
     import textrules as TR
     new, ch = TR.fix(job)
     if ch:
