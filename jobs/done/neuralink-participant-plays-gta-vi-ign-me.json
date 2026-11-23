@@ -1,14 +1,14 @@
 {
  "name": "neuralink-participant-plays-gta-vi-ign-me",
- "story": "2026-11-22-neuralink-participant-plays-gta-vi-ign-me",
+ "story": "2026-11-23-test-neuralink-participant-plays-gta-vi-ign-me",
  "footage_source": "https://www.playstation.com/en-ae/games/grand-theft-auto-vi/",
  "kind_news": "report",
  "story_class": "trailer",
  "story_class_why": "kind report: no figure or person leads the story, so a plain announcement",
  "skin_why": "genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
  "built_by": "server-slip",
- "render_lane": "server",
- "out": "cards/2026-11/neuralink-participant-plays-gta-vi-ign-me-reel-v1.mp4",
+ "render_lane": "hosted",
+ "out": "cards/test/neuralink-participant-plays-gta-vi-ign-me-reel-v1.mp4",
  "split_fallback": "ladder",
  "footage": [
   {
@@ -163,6 +163,7 @@
  "label": "تقرير",
  "game": "Grand Theft Auto VI",
  "game_short": "GTA VI",
+ "game_key": "gta vi",
  "genre": [
   "action"
  ],
@@ -173,7 +174,7 @@
  },
  "source": "آي جي إن (IGN)، ولقطات من روكستار (Rockstar Games)",
  "date": "22 Nov 2026",
- "theme": "stylized",
+ "theme": "emerald",
  "style": null,
  "template": "trailer",
  "skin": "house",
@@ -207,6 +208,7 @@
   "sound": "yes: trailer sound from the first shot, split per shot on the server",
   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
  },
+ "lane_reason": "Phase 1 test (no Publer upload, no ledgers)",
  "shots_auto": [
   0,
   1,
