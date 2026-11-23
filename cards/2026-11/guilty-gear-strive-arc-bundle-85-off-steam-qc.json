@@ -1,6 +1,6 @@
 {
  "name": "guilty-gear-strive-arc-bundle-85-off-steam",
- "out": "cards/2026-11/guilty-gear-strive-arc-bundle-85-off-steam-reel-v1.mp4",
+ "out": "cards/2026-11/guilty-gear-strive-arc-bundle-85-off-steam-reel-v2.mp4",
  "verdict": "pass",
  "warnings": [
   {
@@ -17,18 +17,6 @@
   }
  ],
  "ladder": [
-  {
-   "kind": "picture",
-   "slot": 3,
-   "step": "a",
-   "why": "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4: shot ended before the first video frame (2.32 s); moved to 2.37 s"
-  },
-  {
-   "kind": "picture",
-   "slot": 4,
-   "step": "a",
-   "why": "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4: shot ended before the first video frame (2.32 s); moved to 2.37 s"
-  },
   {
    "kind": "picture",
    "slot": 4,
@@ -48,119 +36,18 @@
    "why": "2.2 s of 2.4 s: shot 4 lengthened by 0.3 s"
   }
  ],
- "job_to_pass_min": 5.5,
- "at": "2026-11-23T11:59:02Z",
+ "job_to_pass_min": 3.6,
+ "at": "2026-11-23T12:05:58Z",
  "findings": [],
  "notes": [
-  "first frame: shot 0 guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4 starts at 0.0 s, the video at 2.32 s; its first 2.32 s are lost",
-  "first frame: shot 1 guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4 starts at 0.0 s, the video at 2.32 s; its first 2.32 s are lost",
-  "first frame: shot 2 guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4 starts at 0.0 s, the video at 2.32 s; its first 2.32 s are lost",
   "length 11.3 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: applied; music_pct 83.0; leak_pct 0.6; cache {'hit': 5, 'miss': 0}; separate_secs 3.0; secs 5.2",
+  "render_job: audio split: applied; music_pct 83.0; leak_pct 0.6; cache {'hit': 5, 'miss': 0}; separate_secs 3.1; secs 5.4",
   "render_job: lifeless: {\"score\": 4.4, \"still_share\": 0.071, \"longest_still\": 0.3, \"cuts_per_10s\": 8.85, \"held_under_text\": 0.0, \"secs\": 11.3, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
   "estimate: headline: 23 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
  ],
- "autofixed": [
-  {
-   "where": "shot 1",
-   "rule": "auto_shots",
-   "what": "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4 at 48.81 s for 2.6 s, focus 0.48"
-  },
-  {
-   "where": "shot 2",
-   "rule": "auto_shots",
-   "what": "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4 at 42.05 s for 2.6 s, focus 0.559"
-  },
-  {
-   "where": "shot 0",
-   "rule": "auto_shots",
-   "what": "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-2-0-trailer.mp4 at 76.46 s for 3.7 s, focus 0.221 (shortened from 3.8 s: no free clean stretch that long)"
-  },
-  {
-   "where": "shot 3",
-   "rule": "shot_timing",
-   "what": "trimmed to 1.44 s, the clean part before the scene cut at 3.85 s",
-   "before": [
-    "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4",
-    2.37,
-    2.2,
-    [
-     [
-      0.0,
-      0.494
-     ],
-     [
-      1.481,
-      0.523
-     ]
-    ]
-   ],
-   "after": [
-    "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4",
-    2.37,
-    1.44,
-    [
-     [
-      0.0,
-      0.494
-     ],
-     [
-      1.481,
-      0.523
-     ]
-    ]
-   ]
-  },
-  {
-   "where": "shot 2",
-   "rule": "fill",
-   "what": "lengthened 2.64 to 3.40 s to keep the time shot 3 gave up",
-   "before": 2.64,
-   "after": 3.4
-  },
-  {
-   "where": "shot 4",
-   "rule": "shot_timing",
-   "what": "trimmed to 1.44 s, the clean part before the scene cut at 3.85 s",
-   "before": [
-    "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4",
-    2.37,
-    2.2,
-    [
-     [
-      0.0,
-      0.494
-     ],
-     [
-      1.481,
-      0.523
-     ]
-    ]
-   ],
-   "after": [
-    "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4",
-    2.37,
-    1.44,
-    [
-     [
-      0.0,
-      0.494
-     ],
-     [
-      1.481,
-      0.523
-     ]
-    ]
-   ]
-  },
-  {
-   "where": "shot 4",
-   "rule": "fill",
-   "what": "0.76 s shorter in all: no neighbouring shot stays clean with the time"
-  }
- ],
- "job_sha": "6702c1039daf8b070120e292e1df15407be20c08",
- "dispatches": 3,
+ "autofixed": [],
+ "job_sha": "f89f3c1cc95fd64704291d1814612877b419fecf",
+ "dispatches": 4,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -175,245 +62,16 @@
  ],
  "person_shown": "n/a",
  "sound": "trailer",
- "shot_read": {
-  "secs": 0.0,
-  "files": {
-   "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4": {
-    "secs": 0.0,
-    "cached": true,
-    "stages": {
-     "decode": 21.7,
-     "autofocus": 39.9,
-     "ocr": 39.9,
-     "smear": 48.4,
-     "scenes": 48.6
-    },
-    "incomplete": null
-   },
-   "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-2-0-trailer.mp4": {
-    "secs": 0.0,
-    "cached": true,
-    "stages": {
-     "decode": 20.1,
-     "autofocus": 44.4,
-     "ocr": 44.4,
-     "smear": 46.3,
-     "scenes": 47.2
-    },
-    "incomplete": null
-   },
-   "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-jam.mp4": {
-    "secs": 0.0,
-    "cached": true,
-    "stages": {
-     "decode": 23.1,
-     "autofocus": 38.1,
-     "ocr": 38.1,
-     "smear": 49.3,
-     "scenes": 49.5
-    },
-    "incomplete": null
-   }
-  }
- },
+ "shot_read": null,
  "job_path": "jobs/done/guilty-gear-strive-arc-bundle-85-off-steam.json",
  "stage_minutes": {
   "queue": 0.03,
-  "setup": 0.18,
-  "fetch": 0.58,
-  "shots": 1.05,
-  "checks": 1.37,
-  "render": 1.18,
-  "after": 0.51,
-  "upload": 0.17,
-  "job": 4.7
- },
- "job_after_autofix": {
-  "name": "guilty-gear-strive-arc-bundle-85-off-steam",
-  "story": "2026-11-23-guilty-gear-strive-arc-bundle-85-off-steam",
-  "footage_source": "steam:1384160",
-  "kind_news": "price",
-  "story_class": "trailer",
-  "story_class_why": "kind price",
-  "skin_why": "genre fighting: its kit is not built yet (skins.KITS scifi, fantasy)",
-  "built_by": "server-slip",
-  "render_lane": "server",
-  "out": "cards/2026-11/guilty-gear-strive-arc-bundle-85-off-steam-reel-v1.mp4",
-  "split_fallback": "ladder",
-  "footage": [
-   {
-    "file": "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4",
-    "steam": 1384160,
-    "trailer": "GGST Season5 Robo - Ky",
-    "start": 0,
-    "seconds": 120,
-    "trailer_id": "1384160"
-   },
-   {
-    "file": "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-2-0-trailer.mp4",
-    "steam": 1384160,
-    "trailer": "GGST Season5 2.0 Trailer",
-    "start": 0,
-    "seconds": 120,
-    "trailer_id": "1384160"
-   },
-   {
-    "file": "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-jam.mp4",
-    "steam": 1384160,
-    "trailer": "GGST Season5 Jam",
-    "start": 0,
-    "seconds": 120,
-    "trailer_id": "1384160"
-   }
-  ],
-  "shots": [
-   [
-    "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-2-0-trailer.mp4",
-    76.46,
-    3.72,
-    [
-     [
-      0.0,
-      0.221
-     ]
-    ]
-   ],
-   [
-    "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4",
-    48.81,
-    2.64,
-    [
-     [
-      0.0,
-      0.48
-     ]
-    ]
-   ],
-   [
-    "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4",
-    42.05,
-    3.4,
-    [
-     [
-      0.0,
-      0.559
-     ]
-    ]
-   ],
-   [
-    "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4",
-    2.37,
-    1.44,
-    [
-     [
-      0.0,
-      0.494
-     ],
-     [
-      1.481,
-      0.523
-     ]
-    ]
-   ],
-   [
-    "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4",
-    2.37,
-    1.44,
-    [
-     [
-      0.0,
-      0.494
-     ],
-     [
-      1.481,
-      0.523
-     ]
-    ]
-   ]
-  ],
-  "lines": [
-   [
-    1,
-    2,
-    [
-     [
-      "ينخفض سعر الحزمة\nمن 129.97 دولارا إلى 19.50 دولارا",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ],
-   [
-    3,
-    4,
-    [
-     [
-      "ويستمر التخفيض حتى 3 ديسمبر",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ]
-  ],
-  "credits": [
-   [
-    0,
-    4,
-    "المصدر: صفحة الحزمة على Steam · اللقطات: صفحة اللعبة على Steam",
-    {
-     "size": 30,
-     "band": true
-    }
-   ]
-  ],
-  "spoken": "تعرض منصة Steam حزمة Black Friday بخصم 85 بالمئة، وتضم ثلاث ألعاب قتال من Arc System Works هي Guilty Gear Strive وBlazBlue Centralfiction وUnder Night In-Birth II. ينخفض سعر الحزمة من 129.97 دولارا إلى 19.50 دولارا. ويستمر التخفيض حتى 3 ديسمبر.",
-  "headline": "حزمة Guilty Gear Strive\nبخصم 85 بالمئة",
-  "label": "السعر",
-  "game": "Guilty Gear Strive",
-  "game_short": "Guilty Gear Strive",
-  "game_key": "guilty gear strive",
-  "genre": [
-   "fighting"
-  ],
-  "texts": {
-   "instagram": "حزمة ألعاب قتال بخصم 85 بالمئة على Steam\n\nتعرض منصة Steam حزمة Black Friday بخصم 85 بالمئة، وتضم ثلاث ألعاب قتال من Arc System Works هي Guilty Gear Strive وBlazBlue Centralfiction وUnder Night In-Birth II.\n\nينخفض سعر الحزمة من 129.97 دولارا إلى 19.50 دولارا، ويستمر التخفيض حتى 3 ديسمبر.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: صفحة الحزمة على Steam.\n\n#ألعاب #أخبار_الألعاب #GuiltyGear #Steam",
-   "x": "تعرض Steam حزمة Black Friday من Arc System Works بخصم 85 بالمئة: Guilty Gear Strive وBlazBlue Centralfiction وUnder Night In-Birth II بسعر 19.50 دولارا بدل 129.97، حتى 3 ديسمبر.",
-   "threads": "تعرض منصة Steam حزمة Black Friday بخصم 85 بالمئة، وتضم ثلاث ألعاب هي Guilty Gear Strive وBlazBlue Centralfiction وUnder Night In-Birth II.\n\nينخفض سعر الحزمة من 129.97 دولارا إلى 19.50 دولارا، ويستمر التخفيض حتى 3 ديسمبر.\n\nالمصدر: صفحة الحزمة على Steam"
-  },
-  "source": "صفحة الحزمة على Steam، واللقطات من صفحة اللعبة على Steam",
-  "date": "23 Nov 2026",
-  "theme": "spectacle",
-  "style": null,
-  "template": "trailer",
-  "skin": "house",
-  "cut": false,
-  "track": [
-   "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-2-0-trailer.mp4",
-   76.46
-  ],
-  "track_from_first_shot": true,
-  "angle": null,
-  "decision_log": {
-   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
-   "template": "trailer: kind price",
-   "skin": "house: genre fighting: its kit is not built yet (skins.KITS scifi, fantasy)",
-   "footage": "guilty-gear-strive-arc-bundle-85-off-steam-ggst-season5-robo-ky.mp4 from the resolver (steam:1384160)",
-   "shots": "server-picked clean stretches in source order (autoshots)",
-   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
-  },
-  "reel_check": {
-   "source read and first report noted": "yes: Steam bundle page, Black Friday Bundle (Arc System Works), 85% off, sale to 3 Dec 2026 (https://store.steampowered.com/bundle/101044/Black_Friday/); first report: Game*Spark 23 Nov 2026 10:45Z; Steam bundle page live (slow-hours rule: sale still running to 3 Dec, known fighting series)",
-   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
-   "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
-   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
-   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
-   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
-   "footage first, official": "yes: steam 1384160 from the resolver, decode clean",
-   "credit on every clip": "yes: one credit over every shot",
-   "sound": "yes: trailer sound from the first shot, split per shot on the server",
-   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
-  }
+  "setup": 0.2,
+  "fetch": 0.59,
+  "shots": 0.12,
+  "checks": 0.44,
+  "render": 1.14,
+  "after": 0.49,
+  "job": 2.78
  }
 }
