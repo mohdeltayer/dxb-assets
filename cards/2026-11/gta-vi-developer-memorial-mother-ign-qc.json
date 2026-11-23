@@ -1,0 +1,557 @@
+{
+ "name": "gta-vi-developer-memorial-mother-ign",
+ "out": "cards/2026-11/gta-vi-developer-memorial-mother-ign-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot scan",
+   "detail": "footage scan stopped at its cap (180 s); shots as written, automatic slots from the footage library or evenly spaced"
+  },
+  {
+   "stage": "fill",
+   "detail": "ValueError: an empty band in the finished Reel (no empty band at any second, Mohammad 8 Nov 2026): 28.90 s: 692 px of empty band from y 664. Keep the headline in the top band and a line in the bottom band at every second (showcase layout), or fill the frame cropped to the subject."
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 57.15 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 11.92 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 18.5 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 68.54 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 26.11 s for 2.53 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 33.84 s for 2.56 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 37.57 s for 2.56 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 40.5 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 49.1 s for 2.46 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 62.72 s for 2.64 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 54.45 s for 2.64 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 76.43 s for 2.31 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 72.18 s for 2.31 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 66.03 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 14,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 83.79 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch for 15 slot(s)"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 57.15 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 11.92 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 18.5 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 68.54 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 26.11 s for 2.53 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 33.84 s for 2.56 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 37.57 s for 2.56 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 40.5 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 49.1 s for 2.46 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 62.72 s for 2.64 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 54.45 s for 2.64 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 76.43 s for 2.31 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 72.19 s for 2.31 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 66.04 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 14,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 83.79 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "scan cap: 15 automatic slot(s) from the library or evenly spaced"
+  }
+ ],
+ "job_to_pass_min": 9.9,
+ "at": "2026-11-23T01:20:10Z",
+ "findings": [],
+ "notes": [
+  "length 32.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 88.8; leak_pct 0.2; cache {'hit': 0, 'miss': 3}; separate_secs 10.4; secs 15.9",
+  "render_job: lifeless: {\"score\": 11.6, \"still_share\": 0.119, \"longest_still\": 1.5, \"cuts_per_10s\": 4.7, \"held_under_text\": 0.0, \"secs\": 31.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "credit 1",
+   "rule": "credit_width",
+   "what": "set one line at 40 px (was 40 px, too wide for the safe zone)",
+   "before": {
+    "text": "المصدر: آي جي إن (IGN)،\nولقطات من روكستار (Rockstar Games)",
+    "size": 40
+   },
+   "after": {
+    "text": "المصدر: IGN · اللقطات: Rockstar Games",
+    "size": 40
+   }
+  }
+ ],
+ "job_sha": "ee1bd4ea4bcefb4efba1fdbc6a28d30c4d64a9fc",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 2.0,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/gta-vi-developer-memorial-mother-ign-look-1.jpg",
+  "cards/2026-11/gta-vi-developer-memorial-mother-ign-look-2.jpg",
+  "cards/2026-11/gta-vi-developer-memorial-mother-ign-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 0.0,
+  "files": {
+   "gta6-launch-master.mp4": {
+    "secs": 0.0,
+    "cached": true,
+    "stages": {
+     "decode": 11.8,
+     "autofocus": 25.5,
+     "ocr": 25.5,
+     "smear": 26.5,
+     "scenes": 26.7
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/gta-vi-developer-memorial-mother-ign.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.2,
+  "fetch": 0.08,
+  "shots": 3.27,
+  "checks": 0.3,
+  "render": 3.97,
+  "after": 1.29,
+  "job": 8.93
+ },
+ "job_after_autofix": {
+  "name": "gta-vi-developer-memorial-mother-ign",
+  "story": "2026-11-23-gta-vi-developer-memorial-mother-ign",
+  "footage_source": "https://www.playstation.com/en-ae/games/grand-theft-auto-vi/",
+  "kind_news": "reveal",
+  "story_class": "trailer",
+  "story_class_why": "kind reveal",
+  "skin_why": "genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/gta-vi-developer-memorial-mother-ign-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "gta6-launch-master.mp4",
+    "note": "Rockstar GTAVI_Launch_Trailer.mp4 (3840x2160, 70 Mbps) scaled to 1920x1080 crf 17; same timeline, so the shot times hold",
+    "repo": "live/2026-11-20/gta6-launch-1080.mp4"
+   }
+  ],
+  "shots": [
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    3.8,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.53,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.53,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.56,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.56,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.46,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.46,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.64,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.64,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.31,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.31,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.2,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "ذكر موقع آي جي\nإن (IGN) أن مطورا",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "في روكستار (Rockstar Games)\nكرّم والدته الراحلة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "بنصب تذكاري داخل لعبة GTA VI\nيمكن للاعبين زيارته",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    8,
+    [
+     [
+      "ويقع النصب شمال بلدة Hamlet،\nويضم أسماء أخرى،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    9,
+    10,
+    [
+     [
+      "ومن بينها اسما أب وابنة\nلمصمم إنتاج في الفريق نفسه",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    11,
+    12,
+    [
+     [
+      "وقال المطور إن والدته\nتوفيت في مارس 2026،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    13,
+    14,
+    [
+     [
+      "قبل أشهر من إطلاق اللعبة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    14,
+    "المصدر: IGN · اللقطات: Rockstar Games",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع آي جي إن (IGN) أن مطورا في روكستار (Rockstar Games) كرّم والدته الراحلة بنصب تذكاري داخل لعبة GTA VI يمكن للاعبين زيارته. ويقع النصب شمال بلدة Hamlet، ويضم أسماء أخرى، ومن بينها اسما أب وابنة لمصمم إنتاج في الفريق نفسه. وقال المطور إن والدته توفيت في مارس 2026، قبل أشهر من إطلاق اللعبة.",
+  "headline": "مطور يكرّم والدته\nبنصب تذكاري في GTA VI",
+  "label": "تقرير",
+  "game": "GTA VI",
+  "game_short": "GTA VI",
+  "genre": [
+   "action"
+  ],
+  "texts": {
+   "instagram": "ذكر موقع آي جي إن (IGN) أن مطورا في روكستار (Rockstar Games) كرّم والدته الراحلة بنصب تذكاري داخل لعبة GTA VI يمكن للاعبين زيارته. ويقع النصب شمال بلدة Hamlet، ويضم أسماء أخرى، ومن بينها اسما أب وابنة لمصمم إنتاج في الفريق نفسه. وقال المطور إن والدته توفيت في مارس 2026، قبل أشهر من إطلاق اللعبة.\n\nاللقطات من العرض الرسمي للعبة.\n\nالمصدر: آي جي إن (IGN).\n\n#ألعاب #أخبار_الألعاب #GTAVI #روكستار",
+   "x": "ذكر موقع آي جي إن (IGN) أن مطورا في روكستار (Rockstar Games) كرّم والدته الراحلة بنصب تذكاري داخل لعبة GTA VI يمكن للاعبين زيارته شمال بلدة Hamlet. المصدر: آي جي إن (IGN).",
+   "threads": "ذكر موقع آي جي إن (IGN) أن مطورا في روكستار (Rockstar Games) كرّم والدته الراحلة بنصب تذكاري داخل لعبة GTA VI يمكن للاعبين زيارته. ويقع النصب شمال بلدة Hamlet، ويضم أسماء أخرى، ومن بينها اسما أب وابنة لمصمم إنتاج في الفريق نفسه. وقال المطور إن والدته توفيت في مارس 2026، قبل أشهر من إطلاق اللعبة.\n\nالمصدر: آي جي إن (IGN)"
+  },
+  "source": "آي جي إن (IGN)، ولقطات من روكستار (Rockstar Games)",
+  "date": "23 Nov 2026",
+  "theme": "spectacle",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "gta6-launch-master.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "IGN reported on 22 Nov, a week after GTA VI's launch, that a Rockstar developer honoured his late mother with an in-game memorial players can visit.",
+   "what_it_means_here": "A human story from inside the game's world: a visitable memorial in Leonida carrying the names of developers' lost relatives."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind reveal",
+   "skin": "house: genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "gta6-launch-master.mp4 from the resolver (https://www.playstation.com/en-ae/games/grand-theft-auto-vi/)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: IGN, 22 Nov 2026 23:23Z: Rockstar QA developer's Instagram post and production designer's X post on in-game memorial north of Hamlet (https://www.ign.com/articles/gta-6-dev-honors-late-mother-with-in-game-memorial-that-players-can-visit); first report: IGN, 22 Nov 2026 23:23Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam None from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "shots_auto": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14
+  ]
+ }
+}
