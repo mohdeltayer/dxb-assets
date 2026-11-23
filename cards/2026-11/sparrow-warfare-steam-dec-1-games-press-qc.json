@@ -74,13 +74,13 @@
    "why": "audio split not applied (music only 7.4% of the track (< 40.0%)) on a trailer track under 4 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our be"
   }
  ],
- "job_to_pass_min": 5.2,
- "at": "2026-11-23T18:16:48Z",
+ "job_to_pass_min": 3.8,
+ "at": "2026-11-23T18:44:03Z",
  "findings": [],
  "notes": [
   "first frame: shot 0 sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
   "length 12.6 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: not applied, audio as rendered; reason music only 7.4% of the track (< 40.0%); music_pct 7.4; leak_pct 0.2; cache {'hit': 0, 'miss': 6}; separate_secs 7.7; secs 10.3",
+  "render_job: audio split: not applied, audio as rendered; reason music only 7.4% of the track (< 40.0%); music_pct 7.4; leak_pct 0.2; cache {'hit': 6, 'miss': 0}; separate_secs 3.7; secs 4.7",
   "render_job: lifeless: {\"score\": 30.3, \"still_share\": 0.28, \"longest_still\": 1.8, \"cuts_per_10s\": 0.8, \"held_under_text\": 0.0, \"secs\": 12.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
   "estimate: headline: 26 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
  ],
@@ -91,8 +91,8 @@
    "what": "sparrow-warfare-steam-dec-1-games-press-teaser-trailer.mp4 at 24.23 s for 3.8 s, focus 0.34 (nothing free in sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4)"
   }
  ],
- "job_sha": "89d6ca27373919dbb4ce19f5429138ab9131ca43",
- "dispatches": 2,
+ "job_sha": "a8dff8b1efd63afd9dbdd4fabde953c5a6037956",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -108,11 +108,11 @@
  "person_shown": "n/a",
  "sound": "trailer-music (ladder b: audio split not applied (music only 7.4% of the track (< 40.0%)) on a trailer track under 4 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
  "shot_read": {
-  "secs": 32.2,
+  "secs": 0.0,
   "files": {
    "sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4": {
-    "secs": 20.1,
-    "cached": false,
+    "secs": 0.0,
+    "cached": true,
     "stages": {
      "decode": 7.9,
      "autofocus": 16.3,
@@ -123,8 +123,8 @@
     "incomplete": null
    },
    "sparrow-warfare-steam-dec-1-games-press-teaser-trailer.mp4": {
-    "secs": 12.0,
-    "cached": false,
+    "secs": 0.0,
+    "cached": true,
     "stages": {
      "decode": 3.4,
      "autofocus": 11.9,
@@ -139,14 +139,13 @@
  "job_path": "jobs/done/sparrow-warfare-steam-dec-1-games-press.json",
  "stage_minutes": {
   "queue": 0.03,
-  "setup": 0.22,
-  "fetch": 0.92,
-  "shots": 0.59,
-  "checks": 0.85,
-  "render": 1.31,
+  "setup": 0.2,
+  "fetch": 0.18,
+  "shots": 0.31,
+  "checks": 0.6,
+  "render": 1.24,
   "after": 0.51,
-  "upload": 0.08,
-  "job": 4.18
+  "job": 2.85
  },
  "job_after_autofix": {
   "name": "sparrow-warfare-steam-dec-1-games-press",
@@ -165,16 +164,12 @@
     "file": "sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4",
     "steam": 3473440,
     "trailer": "Gameplay Trailer",
-    "start": 0,
-    "seconds": 120,
     "trailer_id": "3473440"
    },
    {
     "file": "sparrow-warfare-steam-dec-1-games-press-teaser-trailer.mp4",
     "steam": 3473440,
     "trailer": "Teaser Trailer",
-    "start": 0,
-    "seconds": 120,
     "trailer_id": "3473440"
    }
   ],
@@ -268,7 +263,7 @@
   },
   "source": "بيان رسمي (Games Press)، واللقطات من صفحة اللعبة على Steam",
   "date": "23 Nov 2026",
-  "theme": "emerald",
+  "theme": "playful",
   "style": null,
   "template": "trailer",
   "skin": "house",
