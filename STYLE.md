@@ -992,3 +992,9 @@ server fixes, every slot on the picture start, were written back to main) and it
 - People Reels (22 Nov): the person's photo comes from the people library (`templates/assets/people.json`, credit on the
   plate); with no photo the box is a name card, never game footage. The plate always names the person (Latin as given
   when names-ar lacks them). A headline never opens on the chip's word («تقرير:» under تقرير).
+- People Reels (23 Nov): a person not in the library is looked up at build time (Wikimedia Commons with its licence, head
+  and shoulders, credited, added to the library). No photo: no box, a lower-third name plate over the footage.
+- Source line (23 Nov): source and date only, «لقطات من ...» in its own credit lower down; if it does not fit: Latin names,
+  short names, primary only, no date, then smaller type, measured on the rendered pixels (x 96 to 910).
+- Cover variety (23 Nov): a hook that repeats a recent opener goes to another stretch of the same file, another official
+  trailer of the game, key art with motion, then the 16:9 boxed layout; one key per game (GTA VI = GTA 6).

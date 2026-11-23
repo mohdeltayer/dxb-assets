@@ -4045,3 +4045,30 @@ and the headline opened on «تقرير:» under the تقرير chip.
    word) when the chip says it and the rest opens on an Arabic word; when it would open on a Latin word the text check
    flags `chip_word` for the writer, never a hard stop.
 Replay before merge (render-replay run 44982069330 on 7123b013): the last 10 jobs/done, 10 of 10 pass. Merged 607c949e.
+
+## People photo at build time, source line on the ladder, cover variety (Mohammad, 23 Nov 2026)
+
+Cases: the Jordan GTA VI Reel and the Steve McQueen / Jason Reel (a person with no library photo, a source line running off
+the frame); the Neuralink, McQueen / Jason and developer memorial Reels all opening on gta6-launch-1080.mp4 at 57.15 s.
+1. Person photo for every people Reel: a person not in the library is looked up when the slip is built
+   (`templates/people.py resolve`: Wikidata finds the human by name and role, its image on Wikimedia Commons with the file's
+   licence and author; press kits and organiser photos stay first when the library has them). The photo is cropped to head
+   and shoulders (OpenCV frontal face, 460:540), credited on the plate («الصورة: <author>، ويكيميديا كومنز، <licence>»), and
+   added to the library and the rights register in the same commit. Never social media, fan edits or AI likenesses. No usable
+   photo: no box at all, never an empty one; the name and role sit on a lower-third plate over the footage
+   (`reel.name_card`, above the safe floor, the template's plate colours), held for the person's beat.
+2. The source line under the headline carries the source and the date only; «لقطات من ...» goes to its own credit lower in
+   the frame. Its ladder (`reel.source_forms`): full form, Latin names only, short names (names-ar section 4), the primary
+   source alone, then the date dropped; then the size steps 32, 30, 28. Each step is drawn and measured on the rendered
+   pixels (`reel.inside`: no text pixel outside x 96 to 910); the first that fits is used, the next is tried automatically,
+   logged as a softgate warning. The lower credit runs the same pixel check on its type.
+3. Cover variety (`render_job.hook_pick`, after the shots settle on the scan or the library fallback alike): a hook that
+   repeats a recent opener or cover goes down, in order and logged as softgate ladder kind hook: story (a curated stretch
+   the story names: the person, a crowd, the city), another stretch of the same file, another official trailer of the same
+   game in the library, an official still or key art with motion (when listed), a different layout (the 16:9 boxed
+   showcase). A second trailer is fetched only for a named subject (score 3); a curated file lists repo copies on its
+   timeline (`same`), so the launch trailer's 1080p cut is used, not the 4K master.
+4. Curated stretches: `templates/assets/game-stretches.json`, GTA VI Trailer 1, Trailer 2 and the launch trailer (Rockstar's
+   own files) scanned in full, 24 clean stretches labelled by what they show.
+5. One key per game (`templates/gamekey.py`: GTA VI, Grand Theft Auto VI and GTA 6 meet) in the ledger and the slip
+   (`game_key`). The cover check hashes the boxed picture on the showcase layout, as the grid shows it.
