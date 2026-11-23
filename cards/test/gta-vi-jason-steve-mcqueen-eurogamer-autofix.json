@@ -1,0 +1,15 @@
+[
+ {
+  "where": "credit 1",
+  "rule": "credit_width",
+  "what": "set one line at 40 px (was 40 px, too wide for the safe zone)",
+  "before": {
+   "text": "المصدر: يوروغيمر (Eurogamer)،\nولقطات من روكستار (Rockstar Games)",
+   "size": 40
+  },
+  "after": {
+   "text": "المصدر: Eurogamer · اللقطات: Rockstar Games",
+   "size": 40
+  }
+ }
+]
