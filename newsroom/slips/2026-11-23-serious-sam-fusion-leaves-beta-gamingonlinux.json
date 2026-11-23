@@ -1,0 +1,34 @@
+{
+ "id": "2026-11-23-serious-sam-fusion-leaves-beta-gamingonlinux",
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "name not in names-ar: «غيمينغ أون لينكس (GamingOnLinux)» (credit); add it there as Proposed",
+  "name not in names-ar: «القديمة من استوديو كروتيم (Croteam)» (spoken); add it there as Proposed",
+  "footage 640x400: under 1080p, the quality gate may ask for the showcase layout",
+  "text fixed mechanically: spoken: names not in names-ar written in Latin: GamingOnLinux, Croteam",
+  "ledger: earlier stories on this game: 2026-10-21-serious-sam-the-third-encounter-announced (an update or a duplicate? the editor decides)"
+ ],
+ "at": "2026-11-23T09:24:14Z",
+ "footage": {
+  "name": "SeriousSamHDHappyTrailer",
+  "width": 640,
+  "height": 400,
+  "fps": 30.0,
+  "mbps": 1.32,
+  "rows": 382,
+  "duration": 105.23,
+  "decode_clean": true
+ },
+ "names_to_review": [
+  "GamingOnLinux",
+  "Croteam"
+ ],
+ "job": "jobs/live/serious-sam-fusion-leaves-beta-gamingonlinux.json",
+ "story": "newsroom/stories/2026-11-23-serious-sam-fusion-leaves-beta-gamingonlinux.json",
+ "lines": 3,
+ "shots": 7,
+ "run": "45146631015",
+ "lane": "live",
+ "build_secs": 36
+}
