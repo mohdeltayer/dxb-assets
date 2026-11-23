@@ -69,5 +69,25 @@
    "the-game-awards-2026-nominees-live-nov-17-20261114",
    "weekly-releases-nov-9-13-list"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/gta-vi-developer-memorial-mother-ign-reel-v1.mp4",
+  "blob": "6c247feb97f5fc62df6fc401b429cb708c41e9b9",
+  "at": "2026-11-23T01:26:12Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/gta-vi-developer-memorial-mother-ign.json",
+   "sha256": "e95f630abf47b6b871be098b68b4097cbcb08d389823b40531426d271c69b545",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "Look frames: vertical Reel with the تقرير chip and headline on top, official GTA VI trailer footage (gym character, couple by a red car, OUT NOW end card) in the middle, Arabic caption line and the IGN/Rockstar credit below; text readable, no memorial footage shown"
  }
 }
