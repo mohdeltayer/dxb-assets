@@ -137417,5 +137417,242 @@
   "sound": "trailer",
   "footage": true,
   "upload_secs": 5.0
+ },
+ {
+  "name": "serious-sam-fusion-leaves-beta-gamingonlinux-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-23T09:30Z",
+  "stages": {
+   "checks": 2.4,
+   "montage": 18.2,
+   "text": 24.5,
+   "audio": 0.3,
+   "outro": 22.2
+  },
+  "total": 67.5,
+  "lane": "runner",
+  "queued_at": "2026-11-23T09:29Z",
+  "finished_at": "2026-11-23T09:30Z",
+  "render_min": 1.13,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4",
+    "start": 71.66,
+    "width": 640,
+    "height": 400,
+    "fps": 30.0,
+    "mbps": 1.36,
+    "rows": 400,
+    "zoom": 4.8,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4",
+    "start": 5.06,
+    "width": 640,
+    "height": 400,
+    "fps": 30.0,
+    "mbps": 1.36,
+    "rows": 400,
+    "zoom": 4.8,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4",
+    "start": 41.66,
+    "width": 640,
+    "height": 400,
+    "fps": 30.0,
+    "mbps": 1.36,
+    "rows": 400,
+    "zoom": 4.8,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4",
+    "start": 2.56,
+    "width": 640,
+    "height": 400,
+    "fps": 30.0,
+    "mbps": 1.36,
+    "rows": 400,
+    "zoom": 4.8,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4",
+    "start": 24.3,
+    "width": 640,
+    "height": 400,
+    "fps": 30.0,
+    "mbps": 1.36,
+    "rows": 400,
+    "zoom": 4.8,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4",
+    "start": 88.67,
+    "width": 640,
+    "height": 400,
+    "fps": 30.0,
+    "mbps": 1.36,
+    "rows": 400,
+    "zoom": 4.8,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4",
+    "start": 58.63,
+    "width": 640,
+    "height": 400,
+    "fps": 30.0,
+    "mbps": 1.36,
+    "rows": 400,
+    "zoom": 4.8,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 400,
+   "max_zoom": 4.8,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 10.5,
+   "audio_secs": 42.0,
+   "music_pct": 87.0,
+   "leak_pct": 0.5,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 6
+   },
+   "effects_shots": 7,
+   "mix_secs": 4.0,
+   "secs": 15.1
+  },
+  "lifeless": {
+   "score": 4.5,
+   "still_share": 0.054,
+   "longest_still": 0.5,
+   "cuts_per_10s": 3.61,
+   "held_under_text": 0.0,
+   "secs": 16.6,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 8.0,
+   "shots": 64.0,
+   "checks": 70.7,
+   "render": 96.0,
+   "after": 27.3
+  },
+  "softgate": {
+   "warnings": 3,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 1,
+     "step": "a",
+     "why": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4: shot ended before the first video frame (3.01 s); moved to 3.06 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4: shot ended before the first video frame (3.01 s); moved to 3.06 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4: shot ended before the first video frame (3.01 s); moved to 3.06 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4: shot ended before the first video frame (3.01 s); moved to 3.06 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4: shot ended before the first video frame (3.01 s); moved to 3.06 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4: shot ended before the first video frame (3.01 s); moved to 3.06 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4 at 41.66 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4 at 24.3 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4 at 88.67 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "serious-sam-fusion-leaves-beta-gamingonlinux-serioussamhdhappytrailer.mp4 at 58.63 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "text",
+     "slot": "reel",
+     "step": "a",
+     "why": "soft shade under line group(s) [1]: bright footage behind them"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "b",
+     "why": "showcase layout, 16:9 fallback: burnt-in text in shot 3 at 3.5 s (JRE Blood Violenc RATING); shot 3 at 4.4 s (IRE Blood)"
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 267,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1372,
+  "peak_mem_mb": 2869,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61553,
+  "peak_disk_mb": 62577,
+  "min_disk_free_mb": 85219,
+  "setup_min": 1.05,
+  "story": "serious-sam-fusion-leaves-beta-gamingonlinux"
  }
 ]
