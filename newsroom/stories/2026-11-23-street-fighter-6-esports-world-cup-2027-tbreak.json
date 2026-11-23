@@ -61,5 +61,25 @@
    "2026-10-19-rick-and-morty-street-fighter-scene",
    "2026-10-27-street-fighter-v-php-online-sales-paused"
   ]
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/street-fighter-6-esports-world-cup-2027-tbreak-reel-v1.mp4",
+  "blob": "8c54dc7dd7d030e1be8a5f6f948851c38e13ce36",
+  "at": "2026-11-23T09:08:13Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/street-fighter-6-esports-world-cup-2027-tbreak.json",
+   "sha256": "ca8718625ec2a81b282233c1f2bae9d5b0fdbe2c1fe416ad6b5e807dcf868fc0",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": null,
+  "looked": "strip, dense and sheet: headline, label, lines and credit legible; Capcom footage"
  }
 }
