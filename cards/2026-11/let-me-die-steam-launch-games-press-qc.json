@@ -1,0 +1,353 @@
+{
+ "name": "let-me-die-steam-launch-games-press",
+ "out": "cards/2026-11/let-me-die-steam-launch-games-press-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "content",
+   "detail": "shot 2 at 17.87 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 2 at 18.66 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 3 at 35.49 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 3 at 36.31 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 4 at 23.15 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 4 at 23.97 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 5 at 44.34 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 5 at 45.14 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 6 at 10.81 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 6 at 11.61 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "smear",
+   "detail": "ValueError: /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/let-me-die-steam-launch-games-press-reel-v1.mp4: blocky smear at 10.60 to 11.27 s (peak 40.8); look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "let-me-die-steam-launch-games-press-gameplay.mp4: shot ended before the first video frame (2.59 s); moved to 2.64 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "let-me-die-steam-launch-games-press-gameplay.mp4: shot ended before the first video frame (2.59 s); moved to 2.64 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "let-me-die-steam-launch-games-press-gameplay.mp4: shot ended before the first video frame (2.59 s); moved to 2.64 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "let-me-die-steam-launch-games-press-gameplay.mp4: shot ended before the first video frame (2.59 s); moved to 2.64 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "let-me-die-steam-launch-games-press-gameplay.mp4: shot ended before the first video frame (2.59 s); moved to 2.64 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "let-me-die-steam-launch-games-press-gameplay.mp4: shot ended before the first video frame (2.59 s); moved to 2.64 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "let-me-die-steam-launch-games-press-gameplay.mp4 at 17.07 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "let-me-die-steam-launch-games-press-gameplay.mp4 at 34.67 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "let-me-die-steam-launch-games-press-gameplay.mp4 at 22.33 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "let-me-die-steam-launch-games-press-gameplay.mp4 at 43.53 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "let-me-die-steam-launch-games-press-gameplay.mp4 at 10.0 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "b",
+   "why": "audio split not applied (music only 27.8% of the track (< 40.0%)) on a trailer track under 6 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our b"
+  }
+ ],
+ "job_to_pass_min": 5.5,
+ "at": "2026-11-23T12:25:33Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 let-me-die-steam-launch-games-press-gameplay.mp4 starts at 0.0 s, the video at 2.59 s; its first 2.59 s are lost",
+  "length 15.9 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason music only 27.8% of the track (< 40.0%); music_pct 27.8; leak_pct 0.8; cache {'hit': 0, 'miss': 2}; separate_secs 8.6; secs 11.5",
+  "render_job: lifeless: {\"score\": 12.5, \"still_share\": 0.189, \"longest_still\": 0.8, \"cuts_per_10s\": 6.29, \"held_under_text\": 0.044, \"secs\": 15.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "let-me-die-steam-launch-games-press-gameplay.mp4 at 26.40 s for 3.8 s, focus 0.48"
+  }
+ ],
+ "job_sha": "47196322380f961116405978e4500255297f47ee",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/let-me-die-steam-launch-games-press-look-1.jpg",
+  "cards/2026-11/let-me-die-steam-launch-games-press-look-2.jpg",
+  "cards/2026-11/let-me-die-steam-launch-games-press-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer-music (ladder b: audio split not applied (music only 27.8% of the track (< 40.0%)) on a trailer track under 6 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
+ "shot_read": {
+  "secs": 16.8,
+  "files": {
+   "let-me-die-steam-launch-games-press-gameplay.mp4": {
+    "secs": 16.5,
+    "cached": false,
+    "stages": {
+     "decode": 6.1,
+     "autofocus": 16.4,
+     "ocr": 16.4,
+     "smear": 16.4,
+     "scenes": 16.5
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/let-me-die-steam-launch-games-press.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.22,
+  "fetch": 0.29,
+  "shots": 0.61,
+  "checks": 1.04,
+  "render": 2.01,
+  "after": 0.58,
+  "job": 4.53
+ },
+ "job_after_autofix": {
+  "name": "let-me-die-steam-launch-games-press",
+  "story": "2026-11-23-let-me-die-steam-launch-games-press",
+  "footage_source": "steam:5258160",
+  "kind_news": "launch",
+  "story_class": "trailer",
+  "story_class_why": "kind none: no figure or person leads the story, so a plain announcement",
+  "skin_why": "genre roguelike: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/let-me-die-steam-launch-games-press-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "let-me-die-steam-launch-games-press-gameplay.mp4",
+    "steam": 5258160,
+    "trailer": "Gameplay",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "5258160"
+   }
+  ],
+  "shots": [
+   [
+    "let-me-die-steam-launch-games-press-gameplay.mp4",
+    26.4,
+    3.8,
+    [
+     [
+      0.0,
+      0.48
+     ]
+    ]
+   ],
+   [
+    "let-me-die-steam-launch-games-press-gameplay.mp4",
+    2.64,
+    2.39,
+    null
+   ],
+   [
+    "let-me-die-steam-launch-games-press-gameplay.mp4",
+    2.64,
+    2.39,
+    null
+   ],
+   [
+    "let-me-die-steam-launch-games-press-gameplay.mp4",
+    2.64,
+    2.46,
+    null
+   ],
+   [
+    "let-me-die-steam-launch-games-press-gameplay.mp4",
+    2.64,
+    2.46,
+    null
+   ],
+   [
+    "let-me-die-steam-launch-games-press-gameplay.mp4",
+    2.64,
+    2.42,
+    null
+   ],
+   [
+    "let-me-die-steam-launch-games-press-gameplay.mp4",
+    2.64,
+    2.42,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "وبحسب بيان رسمي،\nتقوم اللعبة على ضرب الوحوش",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "وجمع الغنائم وتطوير\nالشخصية لتوجيه ضربات أقوى",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وتضم ثلاثة فصول وثلاثة\nزعماء و 16 رونة مختلفة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    6,
+    "المصدر: بيان رسمي (Games Press)",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "صدرت لعبة Let Me Die على Steam، وهي لعبة روغ لايت تراكمية بفن بكسل ثنائي الأبعاد. وبحسب بيان رسمي، تقوم اللعبة على ضرب الوحوش وجمع الغنائم وتطوير الشخصية لتوجيه ضربات أقوى. وتضم ثلاثة فصول وثلاثة زعماء و16 رونة مختلفة.",
+  "headline": "لعبة Let Me Die\nصدرت على Steam",
+  "label": "متوفر الآن",
+  "game": "Let Me Die",
+  "game_short": null,
+  "game_key": "let me die",
+  "genre": [
+   "roguelike"
+  ],
+  "texts": {
+   "instagram": "لعبة Let Me Die صدرت على Steam\n\nصدرت لعبة Let Me Die على Steam، وهي لعبة روغ لايت تراكمية بفن بكسل ثنائي الأبعاد.\n\nوبحسب بيان رسمي، تقوم اللعبة على ضرب الوحوش وجمع الغنائم وتطوير الشخصية، وتضم ثلاثة فصول وثلاثة زعماء و16 رونة مختلفة و22 إنجازا على Steam.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: بيان رسمي (Games Press).\n\n#ألعاب #أخبار_الألعاب #LetMeDie #ألعاب_مستقلة",
+   "x": "صدرت لعبة Let Me Die على Steam، وهي لعبة روغ لايت تراكمية بفن بكسل ثنائي الأبعاد، وتضم ثلاثة فصول وثلاثة زعماء. المصدر: بيان رسمي (Games Press).",
+   "threads": "صدرت لعبة Let Me Die على Steam، وهي لعبة روغ لايت تراكمية بفن بكسل ثنائي الأبعاد.\n\nوبحسب بيان رسمي، تضم ثلاثة فصول وثلاثة زعماء و16 رونة مختلفة.\n\nالمصدر: بيان رسمي (Games Press)"
+  },
+  "source": "بيان رسمي (Games Press)",
+  "date": "23 Nov 2026",
+  "theme": "emerald",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "let-me-die-steam-launch-games-press-gameplay.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": null,
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind none: no figure or person leads the story, so a plain announcement",
+   "skin": "house: genre roguelike: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "let-me-die-steam-launch-games-press-gameplay.mp4 from the resolver (steam:5258160)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Games Press, Let Me Die press release of 23 Nov 2026 (https://www.gamespress.com/en-US/Incremental-Roguelite-Let-Me-Die-is-out-on-Steam); first report: Games Press press release, 23 Nov 2026 11:37Z; the game is out now on Steam (slow-hours rule: small indie with an official Steam page)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 5258160 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
