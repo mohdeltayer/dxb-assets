@@ -10,33 +10,13 @@
   {
    "stage": "headline",
    "detail": "headline too long for 2 lines at 72 px; set at 68 px on 2 lines (cut it to a few words next time): لعبة Sparrow Warfare\nتصدر على Steam في 1 ديسمبر"
+  },
+  {
+   "stage": "fill",
+   "detail": "ValueError: an empty band in the finished Reel (no empty band at any second, Mohammad 8 Nov 2026): 4.55 s: 216 px of empty band from y 284. Keep the headline in the top band and a line in the bottom band at every second (showcase layout), or fill the frame cropped to the subject."
   }
  ],
  "ladder": [
-  {
-   "kind": "picture",
-   "slot": 1,
-   "step": "a",
-   "why": "sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
-  },
-  {
-   "kind": "picture",
-   "slot": 2,
-   "step": "a",
-   "why": "sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
-  },
-  {
-   "kind": "picture",
-   "slot": 3,
-   "step": "a",
-   "why": "sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
-  },
-  {
-   "kind": "picture",
-   "slot": 4,
-   "step": "a",
-   "why": "sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
-  },
   {
    "kind": "picture",
    "slot": 2,
@@ -70,29 +50,23 @@
   {
    "kind": "sound",
    "slot": "reel",
-   "step": "b",
-   "why": "audio split not applied (music only 7.4% of the track (< 40.0%)) on a trailer track under 4 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our be"
+   "step": "d",
+   "why": "audio split not applied (music stem not clean (leftover 47.0% > 5.0%)) on a trailer track under 4 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or "
   }
  ],
- "job_to_pass_min": 4.0,
- "at": "2026-11-23T20:26:49Z",
+ "job_to_pass_min": 3.6,
+ "at": "2026-11-23T21:12:18Z",
  "findings": [],
  "notes": [
-  "first frame: shot 0 sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
   "length 12.6 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: not applied, audio as rendered; reason music only 7.4% of the track (< 40.0%); music_pct 7.4; leak_pct 0.2; cache {'hit': 6, 'miss': 0}; separate_secs 3.2; secs 4.2",
-  "render_job: lifeless: {\"score\": 30.3, \"still_share\": 0.28, \"longest_still\": 1.8, \"cuts_per_10s\": 0.8, \"held_under_text\": 0.0, \"secs\": 12.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 47.0% > 5.0%); music_pct 0.6; leak_pct 47.0; cache {'hit': 4, 'miss': 2}; separate_secs 4.4; secs 5.9",
+  "render_job: audio split fallback: our bed (audio split not applied (music stem not clean (leftover 47.0% > 5.0%)) on a trailer track under 4 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.); bed:neon_b",
+  "render_job: lifeless: {\"score\": 25.3, \"still_share\": 0.469, \"longest_still\": 1.0, \"cuts_per_10s\": 3.12, \"held_under_text\": 0.0, \"secs\": 3.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
   "estimate: headline: 26 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
  ],
- "autofixed": [
-  {
-   "where": "shot 0",
-   "rule": "auto_shots",
-   "what": "sparrow-warfare-steam-dec-1-games-press-teaser-trailer.mp4 at 24.23 s for 3.8 s, focus 0.34 (nothing free in sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4)"
-  }
- ],
- "job_sha": "55667ced50c963b00e096ee271a9c2abed55b2d2",
- "dispatches": 4,
+ "autofixed": [],
+ "job_sha": "68e56b5d8c6a466bf9167278979033ae89b1b081",
+ "dispatches": 5,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -106,200 +80,17 @@
   "cards/2026-11/sparrow-warfare-steam-dec-1-games-press-look-3.jpg"
  ],
  "person_shown": "n/a",
- "sound": "trailer-music (ladder b: audio split not applied (music only 7.4% of the track (< 40.0%)) on a trailer track under 4 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
- "shot_read": {
-  "secs": 0.0,
-  "files": {
-   "sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4": {
-    "secs": 0.0,
-    "cached": true,
-    "stages": {
-     "decode": 7.9,
-     "autofocus": 16.3,
-     "ocr": 16.9,
-     "smear": 20.0,
-     "scenes": 20.1
-    },
-    "incomplete": null
-   },
-   "sparrow-warfare-steam-dec-1-games-press-teaser-trailer.mp4": {
-    "secs": 0.0,
-    "cached": true,
-    "stages": {
-     "decode": 3.4,
-     "autofocus": 11.9,
-     "ocr": 11.9,
-     "smear": 11.9,
-     "scenes": 12.0
-    },
-    "incomplete": null
-   }
-  }
- },
+ "sound": "bed:neon_b (trailer sound refused: music stem not clean (leftover 47.0% > 5.0%))",
+ "shot_read": null,
  "job_path": "jobs/done/sparrow-warfare-steam-dec-1-games-press.json",
  "stage_minutes": {
-  "queue": 0.03,
-  "setup": 0.18,
-  "fetch": 0.32,
-  "shots": 0.32,
-  "checks": 0.59,
-  "render": 1.23,
+  "queue": 0.07,
+  "setup": 0.17,
+  "fetch": 0.17,
+  "shots": 0.33,
+  "checks": 0.64,
+  "render": 0.96,
   "after": 0.51,
-  "upload": 0.12,
-  "job": 2.98
- },
- "job_after_autofix": {
-  "name": "sparrow-warfare-steam-dec-1-games-press",
-  "story": "2026-11-23-sparrow-warfare-steam-dec-1-games-press",
-  "footage_source": "steam:3473440",
-  "kind_news": "date",
-  "story_class": "trailer",
-  "story_class_why": "kind date",
-  "skin_why": "genre card: its kit is not built yet (skins.KITS scifi, fantasy)",
-  "built_by": "server-slip",
-  "render_lane": "server",
-  "out": "cards/2026-11/sparrow-warfare-steam-dec-1-games-press-reel-v1.mp4",
-  "split_fallback": "ladder",
-  "footage": [
-   {
-    "file": "sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4",
-    "steam": 3473440,
-    "trailer": "Gameplay Trailer",
-    "trailer_id": "3473440"
-   },
-   {
-    "file": "sparrow-warfare-steam-dec-1-games-press-teaser-trailer.mp4",
-    "steam": 3473440,
-    "trailer": "Teaser Trailer",
-    "trailer_id": "3473440"
-   }
-  ],
-  "shots": [
-   [
-    "sparrow-warfare-steam-dec-1-games-press-teaser-trailer.mp4",
-    24.23,
-    3.8,
-    [
-     [
-      0.0,
-      0.34
-     ]
-    ]
-   ],
-   [
-    "sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4",
-    3.07,
-    2.71,
-    null
-   ],
-   [
-    "sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4",
-    3.07,
-    2.71,
-    null
-   ],
-   [
-    "sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4",
-    3.07,
-    2.49,
-    null
-   ],
-   [
-    "sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4",
-    3.07,
-    2.49,
-    null
-   ]
-  ],
-  "lines": [
-   [
-    1,
-    2,
-    [
-     [
-      "هي لعبة روغ لايت مستوحاة\nمن الماهجونغ بموضوع الطيور،",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ],
-   [
-    3,
-    4,
-    [
-     [
-      "وفيها أكثر من 100 طائر\nوأكثر من 180 بلاطة خاصة",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ]
-  ],
-  "credits": [
-   [
-    0,
-    4,
-    "المصدر: Games Press · اللقطات: صفحة اللعبة على Steam",
-    {
-     "size": 36,
-     "band": true
-    }
-   ]
-  ],
-  "spoken": "أعلن استوديو NEON AURELIUS أن لعبة Sparrow Warfare تصدر على Steam في الأول من ديسمبر لنظامي ويندوز وماك. هي لعبة روغ لايت مستوحاة من الماهجونغ بموضوع الطيور، وفيها أكثر من 100 طائر وأكثر من 180 بلاطة خاصة.",
-  "headline": "لعبة Sparrow Warfare\nتصدر على Steam في 1 ديسمبر",
-  "label": "رسمي",
-  "game": "Sparrow Warfare",
-  "game_short": "Sparrow Warfare",
-  "game_key": "sparrow warfare",
-  "genre": [
-   "card"
-  ],
-  "texts": {
-   "instagram": "لعبة Sparrow Warfare تصدر على Steam في 1 ديسمبر\n\nأعلن استوديو نيون أوريليوس (NEON AURELIUS) موعد صدور لعبة Sparrow Warfare على Steam لنظامي ويندوز وماك. هي لعبة روغ لايت مستوحاة من الماهجونغ بموضوع الطيور، وفيها أكثر من 100 طائر وأكثر من 180 بلاطة خاصة.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: بيان رسمي (Games Press).\n\n#ألعاب #أخبار_الألعاب #ألعاب_مستقلة #Steam",
-   "x": "لعبة Sparrow Warfare تصدر على Steam في 1 ديسمبر لنظامي ويندوز وماك. لعبة روغ لايت مستوحاة من الماهجونغ بموضوع الطيور، وفيها أكثر من 100 طائر. المصدر: بيان رسمي (Games Press).",
-   "threads": "لعبة Sparrow Warfare تصدر على Steam في 1 ديسمبر لنظامي ويندوز وماك.\n\nهي لعبة روغ لايت مستوحاة من الماهجونغ بموضوع الطيور، وفيها أكثر من 100 طائر وأكثر من 180 بلاطة خاصة.\n\nالمصدر: بيان رسمي (Games Press)"
-  },
-  "source": "بيان رسمي (Games Press)، واللقطات من صفحة اللعبة على Steam",
-  "date": "23 Nov 2026",
-  "theme": "spectacle",
-  "style": null,
-  "template": "trailer",
-  "skin": "house",
-  "cut": false,
-  "track": [
-   "sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4",
-   0.0
-  ],
-  "track_from_first_shot": true,
-  "angle": {
-   "why_now": "The release date was announced today by the developer",
-   "what_it_means_here": "A mahjong-inspired roguelite with birds, 100+ birds and 180+ special tiles, a demo with 100% positive reviews"
-  },
-  "decision_log": {
-   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
-   "template": "trailer: kind date",
-   "skin": "house: genre card: its kit is not built yet (skins.KITS scifi, fantasy)",
-   "footage": "sparrow-warfare-steam-dec-1-games-press-gameplay-trailer.mp4 from the resolver (steam:3473440)",
-   "shots": "server-picked clean stretches in source order (autoshots)",
-   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
-  },
-  "reel_check": {
-   "source read and first report noted": "yes: Games Press, 23 Nov 2026: Sparrow Warfare is taking flight on December 1st (https://www.gamespress.com/en-US/Sparrow-Warfare-is-taking-flight-on-December-1st); first report: Games Press 23 Nov 2026 15:50Z (slow-hours rule: small indie game, official release, official Steam trailer)",
-   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
-   "angle before lines": "yes: angle in the slip",
-   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
-   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
-   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
-   "footage first, official": "yes: steam 3473440 from the resolver, decode clean",
-   "credit on every clip": "yes: one credit over every shot",
-   "sound": "yes: trailer sound from the first shot, split per shot on the server",
-   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
-  },
-  "names_to_review": [
-   "NEON AURELIUS"
-  ]
+  "job": 2.63
  }
 }
