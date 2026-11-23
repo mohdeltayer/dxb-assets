@@ -1671,8 +1671,8 @@ def autofocus(f, start, dur, thresh=0.2, keyframes=False, grab=None, cuts=None, 
             n += 1
             kf = _keyframes([(q, look_x(fc, wf) if fc else d[0] if d else None) for q, d, fc in zip(SAMPLES, row, frow)])
             if kf is None:                    # nothing detected: saliency, held still
-                xs = [_salient_x(Image.open(p)) for p in sp]
-                kf = [sorted(xs)[1]] * 2
+                xs = [_salient_x(Image.open(p)) for p in sp if os.path.exists(p)]   # ffmpeg writes no frame past
+                kf = [sorted(xs)[len(xs) // 2] if xs else 0.5] * 2      # the file's end (Prison Legacy, 23 Nov): centre
             fk = [round(min(1, max(0, (c * sw_ - W / 2) / max(sw_ - W, 1))), 3) for c in kf]
             keys.append((round(a, 3), pan(fk[0], fk[1], *KEYS) if keyframes else round(sum(fk) / 2, 3)))
             prof = [(q, fc) for q, fc in zip(SAMPLES, frow) if fc and turn(fc[2]) == 'profile']
