@@ -75,7 +75,8 @@ CURATED = os.path.join(HERE, 'assets', 'game-stretches.json')
 
 def curated(game):
     """The game's curated, labelled stretches (templates/assets/game-stretches.json), each with its file's url; [] when
-    the game has none."""
+    the game has none. `same` lists repo copies on the same timeline (a 1080p cut of the 4K master), so a job that
+    already carries one uses it instead of fetching the master."""
     try:
         g = json.load(open(CURATED, encoding='utf-8')).get('games', {}).get(_gk(game) or '')
     except (OSError, ValueError):
@@ -84,9 +85,9 @@ def curated(game):
         return [], {}
     out = []
     for s in g.get('stretches') or []:
-        url = (g.get('files') or {}).get(s['file'], {}).get('url')
-        if url:
-            out.append(dict(s, url=url))
+        fi = (g.get('files') or {}).get(s['file'], {})
+        if fi.get('url'):
+            out.append(dict(s, url=fi['url'], same=list(fi.get('same') or [])))
     return out, g.get('subjects') or {}
 
 

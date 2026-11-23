@@ -927,7 +927,8 @@ def scan(job):
 
 
 PEOPLE_KINDS = ('people', 'quote', 'cast', 'interview', 'event', 'debate')
-HOOK_EXTRA_FILES = 1                     # at most one more trailer fetched for the hook (a 4K master is 0.8 to 1.5 GB)
+HOOK_EXTRA_FILES = 1   # at most one more trailer fetched for the hook (a 4K master is 0.8 to 1.5 GB)
+HOOK_FETCH_SCORE = 3                       # only a named subject (Jason, Lucia) is worth fetching another trailer
 
 
 def hook_pick(job):
@@ -957,10 +958,15 @@ def hook_pick(job):
     people_story = job.get('template') == 'people' or job.get('kind_news') in PEOPLE_KINDS or bool(job.get('subject_person'))
     extra = [0]
 
-    def file_for(url, name):
-        for it in job.get('footage') or []:
-            if it.get('url') == url and it.get('file'):
-                return it['file']
+    def held(s):                               # the job already carries this file (or a copy on its timeline)
+        return next((it['file'] for it in job.get('footage') or [] if it.get('file') and
+                     (it.get('url') == s['url'] or (it.get('repo') and it['repo'] in (s.get('same') or [])))), None)
+
+    def file_for(s):
+        url, name = s['url'], s['file']
+        f = held(s)
+        if f:
+            return f
         if extra[0] >= HOOK_EXTRA_FILES:
             return None
         item = {'file': f'{name}.mp4', 'url': url}
@@ -1002,15 +1008,16 @@ def hook_pick(job):
         return s['start'] + need <= float((s.get('scene') or [0, s['start'] + s['secs']])[1]) - 0.15
 
     if people_story or text:                   # story: what the story is about, before any generic stretch
-        have = {it.get('url') for it in job.get('footage') or [] if it.get('url')}
-        ranked = sorted(((variety.story_score(s, text, subjects, people_story), s['url'] not in have, i, s)
+        ranked = sorted(((variety.story_score(s, text, subjects, people_story), not held(s), i, s)
                          for i, s in enumerate(spread(cur))), key=lambda x: (-x[0], x[1], x[2]))
         for sc, _far, _i, s in ranked:          # equal matches: a file the job already has first (no 4K fetch)
             if sc <= 0:
                 break
             if not curated_fits(s):
                 continue
-            f = file_for(s['url'], s['file'])
+            if _far and sc < HOOK_FETCH_SCORE:     # a generic match (a crowd, the city) never costs a second trailer
+                continue
+            f = file_for(s)
             if f and passes(f, s['start'], s.get('focus')):
                 return take(f, s['start'], s.get('focus'), 'story', f"{s['label']} ({s['file']} at {s['start']} s), "
                             f"matches the story (score {sc:g})")
@@ -1018,8 +1025,7 @@ def hook_pick(job):
     if ok:
         return False
     f0 = sh0[0]
-    url0 = next((it.get('url') for it in job.get('footage') or [] if it.get('file') == f0), None)
-    for s in spread([s for s in cur if url0 and s['url'] == url0 and curated_fits(s)]):   # a: the same file
+    for s in spread([s for s in cur if held(s) == f0 and curated_fits(s)]):              # a: the same file
         if passes(f0, s['start'], s.get('focus')):
             return take(f0, s['start'], s.get('focus'), 'a', f"another stretch of the same file: {s['label']} at "
                         f"{s['start']} s ({why})")
@@ -1036,8 +1042,8 @@ def hook_pick(job):
         st = 0.5 + (max(0.0, dur - 1.0 - need)) * (k + 0.5) / 8
         if frame_clean(f0, st, need, dur)[0] and passes(f0, st, None):
             return take(f0, st, None, 'a', f'another stretch of the same file: clean point at {st:.2f} s ({why})')
-    for s in spread([s for s in cur if s['url'] != url0 and curated_fits(s)]):         # b: another official trailer
-        f = file_for(s['url'], s['file'])
+    for s in spread([s for s in cur if held(s) != f0 and curated_fits(s)]):              # b: another official trailer
+        f = file_for(s)
         if f and passes(f, s['start'], s.get('focus')):
             return take(f, s['start'], s.get('focus'), 'b', f"another official trailer: {s['label']} ({s['file']} at "
                         f"{s['start']} s) ({why})")
