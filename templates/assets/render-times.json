@@ -139554,5 +139554,236 @@
   "sound": "trailer-music (ladder b: audio split not applied (music only 27.8% of the track (< 40.0%)) on a trailer track under 6 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
   "footage": true,
   "upload_secs": 13.0
+ },
+ {
+  "name": "doom-dark-ages-xbox-exclusive-pure-xbox-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-23T14:23Z",
+  "stages": {
+   "checks": 3.0,
+   "montage": 31.2,
+   "text": 18.9,
+   "audio": 0.9,
+   "outro": 15.2
+  },
+  "total": 69.1,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-23T14:21Z",
+  "finished_at": "2026-11-23T14:23Z",
+  "render_min": 1.15,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    "start": 65.91,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    "start": 3.07,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    "start": 108.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    "start": 33.26,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    "start": 88.07,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4",
+    "start": 48.21,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 7.0,
+   "audio_secs": 35.0,
+   "music_pct": 6.0,
+   "leak_pct": 26.9,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 7
+   },
+   "reason": "music stem not clean (leftover 26.9% > 5.0%)",
+   "secs": 9.5,
+   "ladder": "d",
+   "fallback": "bed:neon"
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 10.57,
+   "held_under_text": 0.0,
+   "secs": 12.3,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 56.7,
+   "shots": 134.7,
+   "checks": 151.0,
+   "render": 104.5,
+   "after": 34.8
+  },
+  "softgate": {
+   "warnings": 9,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 1,
+     "step": "a",
+     "why": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4 at 108.0 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4 at 33.26 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4 at 88.07 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "doom-dark-ages-xbox-exclusive-pure-xbox-update-2-trailer.mp4 at 48.21 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "text",
+     "slot": "line 1",
+     "step": "a",
+     "why": "2.6 s of 4.6 s: shot 3 lengthened by 2.17 s"
+    },
+    {
+     "kind": "text",
+     "slot": "line 2",
+     "step": "a",
+     "why": "2.0 s of 3.6 s: shot 5 lengthened by 1.71 s"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "d",
+     "why": "audio split not applied (music stem not clean (leftover 26.9% > 5.0%)) on a trailer track under 5 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or "
+    }
+   ]
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 482,
+  "queue_wait_secs": 1,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1220,
+  "peak_mem_mb": 3014,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 70319,
+  "peak_disk_mb": 72550,
+  "min_disk_free_mb": 173556,
+  "setup_min": 0.18,
+  "story": "doom-dark-ages-xbox-exclusive-pure-xbox",
+  "job_sha": "e5d95b4b7e6c7664368de43e5f2e20ebf6543752",
+  "dispatches": 1,
+  "sound": "bed:neon (trailer sound refused: music stem not clean (leftover 26.9% > 5.0%))",
+  "footage": true
  }
 ]
