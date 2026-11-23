@@ -4072,3 +4072,10 @@ the frame); the Neuralink, McQueen / Jason and developer memorial Reels all open
    own files) scanned in full, 24 clean stretches labelled by what they show.
 5. One key per game (`templates/gamekey.py`: GTA VI, Grand Theft Auto VI and GTA 6 meet) in the ledger and the slip
    (`game_key`). The cover check hashes the boxed picture on the showcase layout, as the grid shows it.
+6. Autofocus never stops a render on a frame past the file's end: saliency reads the frames that exist, else the centre
+   (Prison Legacy stopped on main with FileNotFoundError; it passes on this code).
+Replay before merge (render-replay, branch variety-23nov): the last 10 jobs/done. Run 45114892464: 8 of 10 pass; Prison
+Legacy failed on main too (run 45118786290) and passes on the fix (run 45120654402); McQueen passed on the branch in 783 s
+(run 45109737489) and, on the slower runners after 05:00Z, timed out on main and branch alike with the same stage times
+(runs 45122597403 and 45122594257: montage 103 and 103 s, text 192 and 191 s, outro 101 and 100 s). Jordan passes (run
+45111848534, hook step a off 57.15 s), Winter Burrow passes (run 45113306532, 12:49).
