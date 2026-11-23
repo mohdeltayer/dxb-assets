@@ -52,5 +52,25 @@
    "tail"
   ],
   "hits": []
+ },
+ "director_check": {
+  "verdict": "PASS",
+  "out": "cards/2026-11/the-missing-tail-co-op-cat-adventure-denfami-reel-v1.mp4",
+  "blob": "96b067e7fa472e9632c156f52fa6ea5418deec7f",
+  "at": "2026-11-23T08:35:27Z",
+  "note": "",
+  "checklist": {
+   "job": "jobs/live/the-missing-tail-co-op-cat-adventure-denfami.json",
+   "sha256": "08cf0957159755b68c5f9e6b99c16668a762814affdaf389612bef75f5340db0",
+   "ok": true,
+   "problems": [],
+   "template": "trailer",
+   "layout": null,
+   "evergreen": false,
+   "built_by": "server-slip"
+  },
+  "by": "director-p2",
+  "qc": "pass",
+  "looked": "look-1 look-2 look-3 and sheet: headline, game name and Arabic lines legible, credit shown, Steam trailer footage of two cats in a castle"
  }
 }
