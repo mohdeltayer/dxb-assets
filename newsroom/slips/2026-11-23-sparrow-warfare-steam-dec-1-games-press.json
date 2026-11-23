@@ -1,12 +1,31 @@
 {
  "id": "2026-11-23-sparrow-warfare-steam-dec-1-games-press",
- "state": "failed",
- "problems": [
-  "threads: paragraph 4 starts with 'https://www.gamespre'; every paragraph starts with an Arabic word"
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "name not in names-ar: «بيان رسمي (Games Press)» (credit); add it there as Proposed",
+  "name not in names-ar: «أعلن استوديو نيون أوريليوس (NEON AURELIUS)» (spoken); add it there as Proposed",
+  "text fixed mechanically: spoken: names not in names-ar written in Latin: NEON AURELIUS"
  ],
- "flags": [],
- "at": "2026-11-23T16:41:58Z",
- "run": "45219349610",
+ "at": "2026-11-23T18:11:10Z",
+ "footage": {
+  "name": "Gameplay Trailer",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30.0,
+  "mbps": 5.36,
+  "rows": 1080,
+  "duration": 68.09,
+  "decode_clean": true
+ },
+ "names_to_review": [
+  "NEON AURELIUS"
+ ],
+ "job": "jobs/live/sparrow-warfare-steam-dec-1-games-press.json",
+ "story": "newsroom/stories/2026-11-23-sparrow-warfare-steam-dec-1-games-press.json",
+ "lines": 2,
+ "shots": 5,
+ "run": "45235577723",
  "lane": "live",
- "build_secs": 21
+ "build_secs": 50
 }
