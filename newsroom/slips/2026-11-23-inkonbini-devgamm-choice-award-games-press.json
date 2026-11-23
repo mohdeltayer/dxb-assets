@@ -1,14 +1,11 @@
 {
  "id": "2026-11-23-inkonbini-devgamm-choice-award-games-press",
- "state": "failed",
- "problems": [
-  "text: line 2: open the line on an Arabic word («تصدر Warhammer...», not «Warhammer تصدر...»), or rebreak"
- ],
+ "state": "built",
+ "problems": [],
  "flags": [
-  "name not in names-ar: «بيان رسمي (Games Press)» (credit); add it there as Proposed",
-  "warning: text: spoken: 4 sentences: the paragraph is 2 to 3 sentences, each ending on a full stop"
+  "name not in names-ar: «بيان رسمي (Games Press)» (credit); add it there as Proposed"
  ],
- "at": "2026-11-23T05:09:51Z",
+ "at": "2026-11-23T05:11:17Z",
  "footage": {
   "name": "inKONBINI Gameplay Trailer",
   "width": 1920,
@@ -21,9 +18,9 @@
  },
  "job": "jobs/live/inkonbini-devgamm-choice-award-games-press.json",
  "story": "newsroom/stories/2026-11-23-inkonbini-devgamm-choice-award-games-press.json",
- "lines": 11,
- "shots": 24,
- "run": "45115992150",
+ "lines": 6,
+ "shots": 14,
+ "run": "45116143583",
  "lane": "live",
- "build_secs": 54
+ "build_secs": 49
 }
