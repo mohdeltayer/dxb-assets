@@ -556,6 +556,12 @@ def job_from(slip, foot, lane='live', theme=None, spare=()):
                 hit = got
                 lib = PL.photo_of(got[1])
                 job['people_added'] = [got[0]]
+            else:                                 # Commons refused: the register entry waits for people-library.yml
+                pend = [k for k, e in PL.load().items() if e.get('pending') and not e.get('photo')
+                        and (p.get('name') in (e.get('aliases') or []) or (p.get('latin') or '') == e.get('name_latin'))]
+                if pend:
+                    job['people_added'] = pend[:1]
+                    job['people_pending'] = pend[:1]
         if p.get('photo'):                        # the slip's official photo (press kit, the company's page)
             job['footage'].append({'file': photo, 'url': p['photo']})
             ps = {'name': p['name'], 'role': p.get('role') or '', 'photo_source': p['photo']}

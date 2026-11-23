@@ -78,7 +78,7 @@ LICENCES_OK = ('CC0', 'Public domain', 'PDM', 'CC BY 2.0', 'CC BY 3.0', 'CC BY 4
                'CC BY-SA 4.0', 'CC BY-SA 3.0 de')
 
 
-def _get(url, tries=6):
+def _get(url, tries=6, wait=30):
     import time
     import urllib.error
     import urllib.request
@@ -88,7 +88,10 @@ def _get(url, tries=6):
         except urllib.error.HTTPError as e:
             if e.code != 429 or i == tries - 1:
                 raise
-            time.sleep(30 * (i + 1))
+            time.sleep(wait * (i + 1))
+
+
+BUILD_TRIES, BUILD_WAIT = 3, 4     # build time: about 12 s at most before the name plate (Commons rate-limits runners)
 
 
 def fetch(keys=None, path=None, gap=20):
@@ -130,6 +133,15 @@ def fetch(keys=None, path=None, gap=20):
             print(f'people: {k}: image not fetched ({ex}); left for the next run', flush=True)
             continue
         im = Image.open(io.BytesIO(raw)).convert('RGB')
+        if e.get('crop_face'):                          # a build-time entry: the same face crop resolve() makes
+            fc = _face_crop(im)
+            if fc is None:
+                print(f'people: {k}: no face found; left without a photo', flush=True)
+                continue
+            im = fc
+            e.pop('crop_face', None)
+            e['derivative'] = 'cropped to head and shoulders'
+        e.pop('pending', None)
         if e.get('crop'):                               # head and shoulders from a full-length photo (fractions x0 y0 x1 y1)
             x0, y0, x1, y1 = e['crop']
             im = im.crop((round(x0 * im.width), round(y0 * im.height), round(x1 * im.width), round(y1 * im.height)))
@@ -160,7 +172,7 @@ MIN_CROP = 230              # px across: the 460 px window enlarges it at most 2
 
 
 def _json(url):
-    return json.loads(_get(url))
+    return json.loads(_get(url, tries=BUILD_TRIES, wait=BUILD_WAIT))
 
 
 def _role_words(role):
@@ -254,16 +266,28 @@ def resolve(name, role=None, latin=None, path=None):
     try:
         q = urllib.parse.urlencode({'action': 'query', 'format': 'json', 'titles': 'File:' + fname, 'prop': 'imageinfo',
                                     'iiprop': 'url|size|extmetadata', 'iiurlwidth': 1280})
-        ii = list(_json(COMMONS + q)['query']['pages'].values())[0]['imageinfo'][0]
+        ii = list(json.loads(_get(COMMONS + q, tries=BUILD_TRIES, wait=BUILD_WAIT))['query']['pages'].values())[0]['imageinfo'][0]
         m = ii.get('extmetadata', {})
         clean = lambda s: re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', s or '')).strip()
         lic = clean(m.get('LicenseShortName', {}).get('value'))
         if not any(lic.startswith(x) for x in LICENCES_OK):
             print(f'people: {label}: licence {lic!r} not on the list', flush=True)
             return None
-        raw = _get(ii['thumburl'] if ii.get('width', 0) > 1280 and ii.get('thumburl') else ii['url'])
+        raw = _get(ii['thumburl'] if ii.get('width', 0) > 1280 and ii.get('thumburl') else ii['url'],
+                   tries=BUILD_TRIES, wait=BUILD_WAIT)
     except Exception as ex:                             # noqa: BLE001
-        print(f'people: {label}: Commons file not read ({ex})', flush=True)
+        # Commons refused (GitHub runners get 429): the Reel takes the name plate now, and the person goes in the
+        # register with its Commons file so people-library.yml (or a session) fetches the photo for next time.
+        print(f'people: {label}: Commons file not read ({ex}); name plate now, register entry left for the fetch',
+              flush=True)
+        key = re.sub(r'[^a-z0-9]+', '-', label.lower()).strip('-') or qid.lower()
+        try:
+            add(key, {'name_latin': label, 'aliases': [name] if name and name != label else [], 'photo': None,
+                      'source': 'Wikimedia Commons (Wikidata portrait)', 'wikidata': qid, 'description': desc,
+                      'commons_title': 'File:' + fname, 'crop_face': True, 'pending': f'Commons refused at build time ({ex})',
+                      'added': 'build time'}, path)
+        except Exception:                               # noqa: BLE001
+            pass
         return None
     im = _face_crop(Image.open(io.BytesIO(raw)).convert('RGB'))
     if im is None:

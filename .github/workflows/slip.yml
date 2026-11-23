@@ -137,7 +137,8 @@ jobs:
           # whatever the register holds on main when this commits
           people=$(python3 -c "import json,sys; j=json.load(open(sys.argv[1])); print(' '.join(j.get('people_added') or []))" "${{ steps.build.outputs.job }}" 2>/dev/null || true)
           for k in $people; do
-            files="$files live/people/$k.jpg templates/assets/people.json"
+            files="$files templates/assets/people.json"                   # a pending entry (Commons refused) has no photo yet
+            [ -f "live/people/$k.jpg" ] && files="$files live/people/$k.jpg"
             python3 -c "import json,sys; r=json.load(open('templates/assets/people.json')); json.dump({'key': sys.argv[1], 'entry': r['people'][sys.argv[1]]}, open(sys.argv[2], 'w'), ensure_ascii=False)" "$k" "$RUNNER_TEMP/person-$k.json"
           done
           for f in $files; do [ "$f" = templates/assets/people.json ] || cp --parents "$f" "$RUNNER_TEMP/keep/"; done

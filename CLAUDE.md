@@ -4074,6 +4074,12 @@ the frame); the Neuralink, McQueen / Jason and developer memorial Reels all open
    (`game_key`). The cover check hashes the boxed picture on the showcase layout, as the grid shows it.
 6. Autofocus never stops a render on a frame past the file's end: saliency reads the frames that exist, else the centre
    (Prison Legacy stopped on main with FileNotFoundError; it passes on this code).
+7. Commons throttling (23 Nov 2026, the McQueen test): Wikimedia answers GitHub's hosted runners, and at times this
+   container, with HTTP 429. The build-time lookup now waits about 12 s at most (`people.BUILD_TRIES`, `BUILD_WAIT`; it spent
+   7.5 minutes before), then the Reel takes the lower-third name plate and the person goes in the register as `pending`
+   with the Wikidata portrait's Commons file, committed by slip.yml. `people-library.yml` runs on the dxb-render server and
+   fetches every pending or photo-less entry with the same face crop; run it after a slip leaves one pending. A plate name
+   with no names-ar entry stays in Latin (22 Nov rule 3): the Jordan plate reads «Lara Al-Khatib» until names-ar lists her.
 Replay before merge (render-replay, branch variety-23nov): the last 10 jobs/done. Run 45114892464: 8 of 10 pass; Prison
 Legacy failed on main too (run 45118786290) and passes on the fix (run 45120654402); McQueen passed on the branch in 783 s
 (run 45109737489) and, on the slower runners after 05:00Z, timed out on main and branch alike with the same stage times
