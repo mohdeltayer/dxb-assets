@@ -633,10 +633,12 @@ def credit_layer(text, path, low=False, size=36, y=None, band=False):
     above the safe bottom when the story lines sit at the top."""
     for squeeze in (0, 24, 48, 96):            # the drawn pixels decide (23 Nov 2026): a miss takes the next ladder step
         out = _credit_layer(text, path, low, size, y, band, room=W - R - L - squeeze)
-        slack = 28 if band else 0              # the soft band runs 24 px past the type on each side
-        if inside(Image.open(out), L - slack, W - R + slack):
+        if inside(_LAST_TYPE[0]):              # the type itself (its outline and band run a few px past it by design)
             return out
     raise ValueError(f'credit leaves x 96 to 910 at every step of the credit ladder: {text}')
+
+
+_LAST_TYPE = [None]                            # the last credit's type mask, for the pixel check
 
 
 def _credit_layer(text, path, low=False, size=36, y=None, band=False, room=None):
@@ -672,6 +674,7 @@ def _credit_layer(text, path, low=False, size=36, y=None, band=False, room=None)
         ImageDraw.Draw(mask).text((W - R, yy), row, font=f, fill=255, anchor='rs', **G.AR)
         if ImageDraw.Draw(mask).textlength(row, font=f, **G.AR) > W - R - L:
             raise ValueError(f'credit runs out of the safe zone: {text}')
+    _LAST_TYPE[0] = mask
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     if band:                                   # a soft dark band behind it, for pale or busy ground (23 Oct 2026,
         box = mask.getbbox()                   # the Miyamoto Reel: a credit over a light grey portrait and a logo rim)
