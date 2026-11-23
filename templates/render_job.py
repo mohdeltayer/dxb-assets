@@ -927,7 +927,9 @@ def scan(job):
 
 
 PEOPLE_KINDS = ('people', 'quote', 'cast', 'interview', 'event', 'debate')
-HOOK_EXTRA_FILES = 1   # at most one more trailer fetched for the hook (a 4K master is 0.8 to 1.5 GB)
+HOOK_EXTRA_FILES = 2   # at most two stretches read from other trailers for the hook (range reads, a few seconds each)
+HOOK_LEAD = 1.0        # seconds read before the hook stretch
+HOOK_TAIL = 6.0        # seconds read past the Reel's length, for the track's fade
 HOOK_FETCH_SCORE = 3                       # only a named subject (Jason, Lucia) is worth fetching another trailer
 
 
@@ -957,27 +959,34 @@ def hook_pick(job):
                                        ' '.join(str(p[1]) for p in job.get('person') or [] if len(p) > 1)) if x)
     people_story = job.get('template') == 'people' or job.get('kind_news') in PEOPLE_KINDS or bool(job.get('subject_person'))
     extra = [0]
+    reel_secs = sum(float(x[2]) for x in shots if isinstance(x, list) and len(x) > 2
+                    and isinstance(x[2], (int, float)))
 
     def held(s):                               # the job already carries this file (or a copy on its timeline)
         return next((it['file'] for it in job.get('footage') or [] if it.get('file') and
                      (it.get('url') == s['url'] or (it.get('repo') and it['repo'] in (s.get('same') or [])))), None)
 
     def file_for(s):
-        url, name = s['url'], s['file']
+        """(file, offset): the job's own copy when it holds one (offset 0); otherwise only the stretch the hook needs,
+        read over HTTP range requests ("stream", as the GTA VI batch does), long enough to carry the trailer track
+        under the whole Reel. A 4K master is 0.8 to 1.5 GB whole; the McQueen replay of 23 Nov ran out of its 15 minutes
+        fetching Trailer 2."""
         f = held(s)
         if f:
-            return f
+            return f, 0.0
         if extra[0] >= HOOK_EXTRA_FILES:
-            return None
-        item = {'file': f'{name}.mp4', 'url': url}
+            return None, 0.0
+        st0 = max(0.0, float(s['start']) - HOOK_LEAD)
+        item = {'file': f"{s['file']}-from-{st0:g}.mp4", 'url': s['url'], 'stream': True, 'start': round(st0, 2),
+                'seconds': round(reel_secs + HOOK_TAIL, 1), 'note': f"hook: {s['file']} read from {st0:g} s"}
         try:
             fetch(item)
         except Exception as e:                 # noqa: BLE001
-            print(f'render_job: hook: {url} not fetched ({e})', flush=True)
-            return None
+            print(f"render_job: hook: {s['url']} not read ({e})", flush=True)
+            return None, 0.0
         extra[0] += 1
         job.setdefault('footage', []).append(item)
-        return item['file']
+        return item['file'], st0
 
     def free(f, st):
         return not any(isinstance(s, list) and s is not sh0 and s[0] == f and isinstance(s[1], (int, float))
@@ -1017,9 +1026,9 @@ def hook_pick(job):
                 continue
             if _far and sc < HOOK_FETCH_SCORE:     # a generic match (a crowd, the city) never costs a second trailer
                 continue
-            f = file_for(s)
-            if f and passes(f, s['start'], s.get('focus')):
-                return take(f, s['start'], s.get('focus'), 'story', f"{s['label']} ({s['file']} at {s['start']} s), "
+            f, off = file_for(s)
+            if f and passes(f, s['start'] - off, s.get('focus')):
+                return take(f, s['start'] - off, s.get('focus'), 'story', f"{s['label']} ({s['file']} at {s['start']} s), "
                             f"matches the story (score {sc:g})")
     ok, why = variety.hook_ok(job, sh0[0], C.U + sh0[0], float(sh0[1]), sh0[3] if len(sh0) > 3 else None, led)
     if ok:
@@ -1043,9 +1052,9 @@ def hook_pick(job):
         if frame_clean(f0, st, need, dur)[0] and passes(f0, st, None):
             return take(f0, st, None, 'a', f'another stretch of the same file: clean point at {st:.2f} s ({why})')
     for s in spread([s for s in cur if held(s) != f0 and curated_fits(s)]):              # b: another official trailer
-        f = file_for(s)
-        if f and passes(f, s['start'], s.get('focus')):
-            return take(f, s['start'], s.get('focus'), 'b', f"another official trailer: {s['label']} ({s['file']} at "
+        f, off = file_for(s)
+        if f and passes(f, s['start'] - off, s.get('focus')):
+            return take(f, s['start'] - off, s.get('focus'), 'b', f"another official trailer: {s['label']} ({s['file']} at "
                         f"{s['start']} s) ({why})")
     SG_.ladder('hook', 0, 'c', 'no official still or key art with motion listed for this game; next step')
     blockers = [k for k in SG_.SHOWCASE_BLOCKERS if job.get(k)]
