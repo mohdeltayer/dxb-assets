@@ -1,0 +1,27 @@
+{
+ "id": "2026-11-23-dawn-of-war-iv-commander-edition-steam",
+ "state": "failed",
+ "problems": [
+  "text: line 2: open the line on an Arabic word («تصدر Warhammer...», not «Warhammer تصدر...»), or rebreak",
+  "text: line 6: open the line on an Arabic word («تصدر Warhammer...», not «Warhammer تصدر...»), or rebreak"
+ ],
+ "flags": [],
+ "at": "2026-11-23T17:11:52Z",
+ "footage": {
+  "name": "Dawn of War IV Space Marine 101 Trailer",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60.0,
+  "mbps": 5.74,
+  "rows": 1080,
+  "duration": 120.04,
+  "decode_clean": true
+ },
+ "job": "jobs/live/dawn-of-war-iv-commander-edition-steam.json",
+ "story": "newsroom/stories/2026-11-23-dawn-of-war-iv-commander-edition-steam.json",
+ "lines": 6,
+ "shots": 15,
+ "run": "45224895782",
+ "lane": "live",
+ "build_secs": 61
+}
