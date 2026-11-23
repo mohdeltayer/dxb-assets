@@ -1,0 +1,47 @@
+{
+ "id": "2026-11-23-stellaris-willpower-expansion-games-press",
+ "state": "failed",
+ "problems": [
+  "text: line 4: open the line on an Arabic word («تصدر Warhammer...», not «Warhammer تصدر...»), or rebreak"
+ ],
+ "flags": [
+  "name not in names-ar: «بيان رسمي (Games Press)» (credit); add it there as Proposed",
+  "name not in names-ar: «من ناشرها باراداكس إنتراكتيف (Paradox Interactive)» (spoken); add it there as Proposed",
+  "name not in names-ar: «تضيف التوسعة نظام الأيديولوجيات (Ideologies)» (spoken); add it there as Proposed",
+  "name not in names-ar: «وقاعات المجرة (Galactic Halls)» (spoken); add it there as Proposed",
+  "name not in names-ar: «وثلاثة أصول (Origins)» (spoken); add it there as Proposed",
+  "text fixed mechanically: spoken: names not in names-ar written in Latin: Paradox Interactive, Ideologies, Galactic Halls, Origins",
+  "warning: text: line 1: «Paradox Interactive» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before the render, or, for a game, write it in Latin letters only",
+  "warning: text: line 2: «Ideologies» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before the render, or, for a game, write it in Latin letters only",
+  "warning: text: line 3: «Galactic Halls» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before the render, or, for a game, write it in Latin letters only",
+  "warning: text: line 4: «Origins» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before the render, or, for a game, write it in Latin letters only",
+  "warning: text: line 1: these words are not in the paragraph: باراداكس إنتراكتيف; the lines, read in order, are the spoken paragraph (a word may be left out, none added): rewrite the line from the paragraph, or the paragraph to carry it",
+  "warning: text: line 2: these words are not in the paragraph: الأيديولوجيات; the lines, read in order, are the spoken paragraph (a word may be left out, none added): rewrite the line from the paragraph, or the paragraph to carry it",
+  "warning: text: line 3: these words are not in the paragraph: وقاعات المجرة; the lines, read in order, are the spoken paragraph (a word may be left out, none added): rewrite the line from the paragraph, or the paragraph to carry it",
+  "warning: text: line 4: these words are not in the paragraph: أصول; the lines, read in order, are the spoken paragraph (a word may be left out, none added): rewrite the line from the paragraph, or the paragraph to carry it"
+ ],
+ "at": "2026-11-23T15:10:54Z",
+ "footage": {
+  "name": "Anniversary Trailer 2024",
+  "width": 1920,
+  "height": 1080,
+  "fps": 25.0,
+  "mbps": 5.73,
+  "rows": 1080,
+  "duration": 120.1,
+  "decode_clean": true
+ },
+ "names_to_review": [
+  "Paradox Interactive",
+  "Ideologies",
+  "Galactic Halls",
+  "Origins"
+ ],
+ "job": "jobs/live/stellaris-willpower-expansion-games-press.json",
+ "story": "newsroom/stories/2026-11-23-stellaris-willpower-expansion-games-press.json",
+ "lines": 6,
+ "shots": 15,
+ "run": "45202127415",
+ "lane": "live",
+ "build_secs": 78
+}
