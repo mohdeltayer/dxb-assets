@@ -188,8 +188,11 @@ def _download(item, dst):
             raise ValueError(f"{item['file']}: \"stream\" needs \"seconds\" (and \"start\", default 0)")
         hdr = f'Referer: {item["referer"]}\r\n' if item.get('referer') else ''
         cmd = (['ffmpeg', '-nostdin', '-y', '-v', 'error', '-ss', str(item.get('start', 0)), '-user_agent', UA]
-               + (['-headers', hdr] if hdr else []) + ['-i', item['url'], '-t', str(item['seconds']),
-               '-c', 'copy', dst + '.part.mp4'])
+               + (['-headers', hdr] if hdr else []) + ['-i', item['url'], '-t', str(item['seconds'])]
+               + (['-map', '0:v:0', '-map', '0:a:0?', '-vf', f"scale=-2:{int(item['scale'])}", '-c:v', 'libx264',
+                   '-preset', 'veryfast', '-crf', '16', '-pix_fmt', 'yuv420p', '-c:a', 'copy']
+                  if item.get('scale') else ['-c', 'copy']) + [dst + '.part.mp4'])
+        # "scale": a 4K master read at that height (the hook stretch, 23 Nov 2026), as the launch trailer's 1080p cut
         for attempt in range(3):                  # a range read can end early ("Stream ends prematurely"); try again
             try:
                 subprocess.run(cmd, check=True, timeout=600)
@@ -978,7 +981,7 @@ def hook_pick(job):
             return None, 0.0
         st0 = max(0.0, float(s['start']) - HOOK_LEAD)
         item = {'file': f"{s['file']}-from-{st0:g}.mp4", 'url': s['url'], 'stream': True, 'start': round(st0, 2),
-                'seconds': round(reel_secs + HOOK_TAIL, 1), 'note': f"hook: {s['file']} read from {st0:g} s"}
+                'seconds': round(reel_secs + HOOK_TAIL, 1), 'scale': 1080, 'note': f"hook: {s['file']} read from {st0:g} s"}
         try:
             fetch(item)
         except Exception as e:                 # noqa: BLE001
