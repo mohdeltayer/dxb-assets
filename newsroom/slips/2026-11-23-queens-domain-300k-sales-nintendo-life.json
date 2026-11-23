@@ -1,0 +1,37 @@
+{
+ "id": "2026-11-23-queens-domain-300k-sales-nintendo-life",
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "name not in names-ar: «للمطور فريشلي بيكد (Freshly Baked)» (spoken); add it there as Proposed",
+  "name not in names-ar: «والناشر فيوتشر فريندز (Future Friends)» (spoken); add it there as Proposed",
+  "text fixed mechanically: spoken: names not in names-ar written in Latin: Freshly Baked, Future Friends",
+  "warning: text: line 2: «Freshly Baked» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before the render, or, for a game, write it in Latin letters only",
+  "warning: text: line 3: «Future Friends» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before the render, or, for a game, write it in Latin letters only",
+  "warning: text: line 2: these words are not in the paragraph: فريشلي بيكد; the lines, read in order, are the spoken paragraph (a word may be left out, none added): rewrite the line from the paragraph, or the paragraph to carry it",
+  "warning: text: line 3: these words are not in the paragraph: فيوتشر فريندز; the lines, read in order, are the spoken paragraph (a word may be left out, none added): rewrite the line from the paragraph, or the paragraph to carry it",
+  "ledger: earlier stories on this game: queens-domain-out-now, 2026-11-22-gta-vi-jason-steve-mcqueen-eurogamer, 2026-11-23-test-gta-vi-jason-steve-mcqueen-eurogamer, queens-domain-200k-sales-two-weeks-20261114 (an update or a duplicate? the editor decides)"
+ ],
+ "at": "2026-11-23T19:17:09Z",
+ "footage": {
+  "name": "Launch",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60.0,
+  "mbps": 5.73,
+  "rows": 1080,
+  "duration": 65.0,
+  "decode_clean": true
+ },
+ "names_to_review": [
+  "Freshly Baked",
+  "Future Friends"
+ ],
+ "job": "jobs/live/queens-domain-300k-sales-nintendo-life.json",
+ "story": "newsroom/stories/2026-11-23-queens-domain-300k-sales-nintendo-life.json",
+ "lines": 6,
+ "shots": 14,
+ "run": "45247236745",
+ "lane": "live",
+ "build_secs": 45
+}
