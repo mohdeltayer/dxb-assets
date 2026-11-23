@@ -1,0 +1,32 @@
+{
+ "id": "2026-11-23-abide-stop-motion-horror-trailer-gamingonlinux",
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "name not in names-ar: «غيمينغ أون لينكس (GamingOnLinux)» (credit); add it there as Proposed",
+  "text fixed mechanically: spoken: names not in names-ar written in Latin: GamingOnLinux",
+  "warning: text: line 1: «GamingOnLinux» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before the render, or, for a game, write it in Latin letters only",
+  "warning: text: line 1: these words are not in the paragraph: لينكس; the lines, read in order, are the spoken paragraph (a word may be left out, none added): rewrite the line from the paragraph, or the paragraph to carry it"
+ ],
+ "at": "2026-11-23T14:15:42Z",
+ "footage": {
+  "name": "Announcement Trailer",
+  "width": 1920,
+  "height": 1080,
+  "fps": 29.97,
+  "mbps": 5.7,
+  "rows": 1080,
+  "duration": 120.07,
+  "decode_clean": true
+ },
+ "names_to_review": [
+  "GamingOnLinux"
+ ],
+ "job": "jobs/live/abide-stop-motion-horror-trailer-gamingonlinux.json",
+ "story": "newsroom/stories/2026-11-23-abide-stop-motion-horror-trailer-gamingonlinux.json",
+ "lines": 6,
+ "shots": 14,
+ "run": "45192162509",
+ "lane": "live",
+ "build_secs": 69
+}
