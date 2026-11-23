@@ -75,7 +75,7 @@ jobs:
           sudo systemctl stop apt-daily.timer apt-daily-upgrade.timer 2>/dev/null || true
           command -v ffprobe >/dev/null || timeout 300 sudo apt-get -o DPkg::Lock::Timeout=120 install -y -qq ffmpeg >/dev/null
           ffprobe -version | head -1
-          python3 -m pip install -q numpy pillow pedalboard==0.9.26 soundfile   # the decode check imports reel (letterbox reader), which imports sonic
+          python3 -m pip install -q numpy pillow pedalboard==0.9.26 soundfile opencv-python-headless==4.10.0.84   # the decode check imports reel (letterbox reader), which imports sonic
 
       - name: Build (no model)
         id: build
@@ -133,11 +133,19 @@ jobs:
           mkdir -p "$RUNNER_TEMP/keep"
           files="newsroom/slips/$SLIP.json"
           if [ "${{ steps.build.outputs.state }}" = "built" ]; then files="$files newsroom/stories/$SLIP.json ${{ steps.build.outputs.job }}"; fi
-          for f in $files; do cp --parents "$f" "$RUNNER_TEMP/keep/"; done
+          # a person found at build time (people library, 23 Nov 2026): the photo, and the register entry merged into
+          # whatever the register holds on main when this commits
+          people=$(python3 -c "import json,sys; j=json.load(open(sys.argv[1])); print(' '.join(j.get('people_added') or []))" "${{ steps.build.outputs.job }}" 2>/dev/null || true)
+          for k in $people; do
+            files="$files live/people/$k.jpg templates/assets/people.json"
+            python3 -c "import json,sys; r=json.load(open('templates/assets/people.json')); json.dump({'key': sys.argv[1], 'entry': r['people'][sys.argv[1]]}, open(sys.argv[2], 'w'), ensure_ascii=False)" "$k" "$RUNNER_TEMP/person-$k.json"
+          done
+          for f in $files; do [ "$f" = templates/assets/people.json ] || cp --parents "$f" "$RUNNER_TEMP/keep/"; done
           for i in 1 2 3 4 5; do
             git fetch -q --depth=1 origin main
             git reset -q --hard origin/main
             cp -r "$RUNNER_TEMP/keep/." .
+            for k in $people; do python3 templates/people.py merge "$RUNNER_TEMP/person-$k.json"; done
             git add --sparse -f $files
             git commit -q -m "Slip $SLIP: ${{ steps.build.outputs.state }} (lane $LANE, no model step)" || { echo "nothing to commit"; break; }
             if git push -q origin HEAD:main; then echo "committed"; break; fi

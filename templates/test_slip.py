@@ -2,6 +2,8 @@
 
     python3 templates/test_slip.py
 """
+import os
+os.environ.setdefault('DXB_PEOPLE_LOOKUP', 'off')   # no network in the tests
 import copy
 import datetime as dt
 import json
@@ -238,6 +240,21 @@ class Kind(unittest.TestCase):
         self.assertTrue(j['person'][0][2].startswith('منتج'))
         self.assertTrue(any(x.get('repo') == 'live/people/harada.jpg' for x in j['footage']))
         self.assertEqual(j['person'][0][5]['credit'], 'الصورة: Kevin Paul، ويكيميديا كومنز، CC BY 4.0')
+
+    def test_split_role(self):
+        self.assertEqual(S.split_role('الممثل ستيف ماكوين', ''), ('ستيف ماكوين', 'الممثل'))
+        n, r = S.split_role('رئيسة الهيئة لارا الخطيب (Lara Al-Khatib)', '')
+        self.assertEqual(n, 'Lara Al-Khatib')
+        self.assertEqual(r, 'رئيسة الهيئة')
+        self.assertEqual(S.split_role('Katsuhiro Harada', 'منتج لعبة Pokken Tournament'),
+                         ('Katsuhiro Harada', 'منتج لعبة Pokken Tournament'))
+
+    def test_source_line_forms(self):
+        import creditfit as CF
+        src = 'يوروغيمر (Eurogamer)، ولقطات من روكستار (Rockstar Games)'
+        foot = CF.FOOT.search(src)
+        self.assertTrue(foot)
+        self.assertEqual(src[:foot.start()].rstrip(' ،,'), 'يوروغيمر (Eurogamer)')
 
     def test_headline_drops_chip_word(self):
         import textrules as TR

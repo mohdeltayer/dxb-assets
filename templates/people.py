@@ -149,7 +149,167 @@ def fetch(keys=None, path=None, gap=20):
     return done
 
 
+# ------------------------------------------------------------------ build-time lookup (Mohammad, 23 Nov 2026, item 1)
+WIKIDATA = 'https://www.wikidata.org/w/api.php?'
+ROLE_EN = {'ممثل': ('actor', 'actress'), 'ممثلة': ('actress', 'actor'), 'مخرج': ('director',), 'منتج': ('producer',),
+           'رئيس': ('president', 'chair', 'chief executive', 'ceo', 'head'), 'رئيسة': ('president', 'chair', 'ceo', 'head'),
+           'مصمم': ('designer',), 'مصممة': ('designer',), 'كاتب': ('writer', 'author'), 'كاتبة': ('writer', 'author'),
+           'ملحن': ('composer',), 'مؤسس': ('founder',), 'مبتكر': ('designer', 'creator'), 'مدير': ('director', 'manager'),
+           'مديرة': ('director', 'manager')}
+MIN_CROP = 230              # px across: the 460 px window enlarges it at most 2x (reel.PERSON_MAX_ZOOM)
+
+
+def _json(url):
+    return json.loads(_get(url))
+
+
+def _role_words(role):
+    out = []
+    for w in re.findall('[\u0621-\u064A]+', str(role or '')):
+        w = w[2:] if w.startswith('ال') else w
+        out += list(ROLE_EN.get(w, ()))
+    return out
+
+
+def _wikidata_person(name, role=None):
+    """(qid, label, description, P18 file) for the one human Wikidata finds for `name` (Arabic or Latin); when several
+    humans match, the one whose English description names the role («actor», «chair» ...); otherwise None, never a
+    guess between two people."""
+    import urllib.parse
+    lang = 'ar' if re.search('[\u0621-\u064A]', name) else 'en'
+    hits = _json(WIKIDATA + urllib.parse.urlencode({'action': 'wbsearchentities', 'search': name, 'language': lang,
+                                                     'uselang': 'en', 'type': 'item', 'limit': 7, 'format': 'json'}))
+    ids = [h['id'] for h in hits.get('search', [])]
+    if not ids:
+        return None
+    ents = _json(WIKIDATA + urllib.parse.urlencode({'action': 'wbgetentities', 'ids': '|'.join(ids), 'format': 'json',
+                                                     'props': 'claims|descriptions|labels', 'languages': 'en'}))['entities']
+    humans = []
+    for q in ids:
+        e = ents.get(q) or {}
+        cl = e.get('claims', {})
+        if not any(c.get('mainsnak', {}).get('datavalue', {}).get('value', {}).get('id') == 'Q5' for c in cl.get('P31', [])):
+            continue
+        img = next((c['mainsnak']['datavalue']['value'] for c in cl.get('P18', []) if c.get('mainsnak', {}).get('datavalue')), None)
+        desc = (e.get('descriptions', {}).get('en') or {}).get('value', '')
+        label = (e.get('labels', {}).get('en') or {}).get('value', '')
+        humans.append((q, label, desc, img))
+    if not humans:
+        return None
+    words = _role_words(role)
+    if len(humans) > 1:
+        fit = [h for h in humans if words and any(w in h[2].lower() for w in words)]
+        if len(fit) != 1:
+            return None
+        return fit[0]
+    h = humans[0]
+    if words and h[2] and not any(w in h[2].lower() for w in words):
+        return None                                    # one human, but not the role the story names: not risked
+    return h
+
+
+def _face_crop(im):
+    """Head and shoulders around the largest face (OpenCV's frontal-face cascade), cut to the window's 460:540; None when
+    no face is found or the crop would be under MIN_CROP px across."""
+    try:
+        import cv2
+        import numpy as np
+    except ImportError:
+        return None
+    g = cv2.cvtColor(np.array(im.convert('RGB')), cv2.COLOR_RGB2GRAY)
+    cas = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+    faces = cas.detectMultiScale(g, scaleFactor=1.1, minNeighbors=6, minSize=(max(40, im.width // 20),) * 2)
+    if len(faces) == 0:
+        return None
+    x, y, w, h = max(faces, key=lambda f: f[2] * f[3])
+    cw = min(im.width, int(w * 2.8))
+    ch = min(im.height, int(cw * 540 / 460))
+    cw = int(ch * 460 / 540)
+    if cw < MIN_CROP:
+        return None
+    cx, top = x + w / 2, y - 0.75 * h
+    x0 = int(min(max(cx - cw / 2, 0), im.width - cw))
+    y0 = int(min(max(top, 0), im.height - ch))
+    return im.crop((x0, y0, x0 + cw, y0 + ch))
+
+
+def resolve(name, role=None, latin=None, path=None):
+    """Build-time lookup for a person not in the library: Wikidata's portrait (P18, on Wikimedia Commons) with a licence
+    on LICENCES_OK, cropped to head and shoulders around the face, saved as live/people/<key>.jpg and added to the
+    register with its source, licence, author and on-screen credit. (key, entry) or None. Never social media, fan edits or
+    AI likenesses: only the Commons file Wikidata links to the person."""
+    import io
+    import urllib.parse
+    from PIL import Image
+    try:
+        hit = _wikidata_person(latin or name, role)
+        if not hit and latin and name and name != latin:
+            hit = _wikidata_person(name, role)
+    except Exception as ex:                             # noqa: BLE001
+        print(f'people: lookup of {latin or name!r} failed ({ex})', flush=True)
+        return None
+    if not hit or not hit[3]:
+        return None
+    qid, label, desc, fname = hit
+    try:
+        q = urllib.parse.urlencode({'action': 'query', 'format': 'json', 'titles': 'File:' + fname, 'prop': 'imageinfo',
+                                    'iiprop': 'url|size|extmetadata', 'iiurlwidth': 1280})
+        ii = list(_json(COMMONS + q)['query']['pages'].values())[0]['imageinfo'][0]
+        m = ii.get('extmetadata', {})
+        clean = lambda s: re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', s or '')).strip()
+        lic = clean(m.get('LicenseShortName', {}).get('value'))
+        if not any(lic.startswith(x) for x in LICENCES_OK):
+            print(f'people: {label}: licence {lic!r} not on the list', flush=True)
+            return None
+        raw = _get(ii['thumburl'] if ii.get('width', 0) > 1280 and ii.get('thumburl') else ii['url'])
+    except Exception as ex:                             # noqa: BLE001
+        print(f'people: {label}: Commons file not read ({ex})', flush=True)
+        return None
+    im = _face_crop(Image.open(io.BytesIO(raw)).convert('RGB'))
+    if im is None:
+        print(f'people: {label}: no face found, or the face is too small to crop', flush=True)
+        return None
+    key = re.sub(r'[^a-z0-9]+', '-', label.lower()).strip('-') or qid.lower()
+    out = os.path.join(ROOT, 'live', 'people', key + '.jpg')
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    im.thumbnail((LONG_SIDE, LONG_SIDE))
+    im.save(out, quality=90)
+    author = clean(m.get('Artist', {}).get('value'))[:80]
+    if not author or 'unknown' in author.lower():
+        author = None
+    entry = {'name_latin': label, 'aliases': [name] if name and name != label else [], 'photo': f'live/people/{key}.jpg',
+             'source': 'Wikimedia Commons (Wikidata portrait)', 'wikidata': qid, 'description': desc,
+             'commons_title': 'File:' + fname, 'source_url': ii.get('descriptionurl'), 'licence': lic,
+             'licence_url': clean(m.get('LicenseUrl', {}).get('value')) or None, 'author': author,
+             'derivative': 'cropped to head and shoulders', 'size': list(im.size), 'focus': [0.5, 0.42],
+             'credit_ar': (f'الصورة: {author}، ويكيميديا كومنز، {lic}' if author else f'الصورة: ويكيميديا كومنز، {lic}'),
+             'added': 'build time'}
+    add(key, entry, path)
+    print(f'people: {label} ({qid}, {desc}) added from Commons, {lic}, by {author}', flush=True)
+    return key, entry
+
+
+def add(key, entry, path=None):
+    """Writes one entry into the register (merging with whatever is there now)."""
+    path = path or REGISTER
+    try:
+        with open(path, encoding='utf-8') as f:
+            reg = json.load(f)
+    except (OSError, ValueError):
+        reg = {'people': {}}
+    reg.setdefault('people', {})[key] = entry
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(reg, f, ensure_ascii=False, indent=1)
+
+
 def main(argv):
+    if argv and argv[0] == 'resolve':
+        print(json.dumps(resolve(argv[1], argv[2] if len(argv) > 2 else None), ensure_ascii=False, indent=1))
+        return 0
+    if argv and argv[0] == 'merge':                     # slip.yml: an entry built on the runner into today's register
+        e = json.load(open(argv[1], encoding='utf-8'))
+        add(e['key'], e['entry'])
+        return 0
     if argv and argv[0] == 'fetch':
         fetch(argv[1:] or None)
         return 0

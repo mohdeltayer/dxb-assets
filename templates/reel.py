@@ -263,18 +263,81 @@ def head_layer(headline, label, path, source, date, country=None, hs=HEAD_SIZE, 
         _glowed(Image.new('RGBA', (W, H), (0, 0, 0, 0)), c, blur=16, gain=2.6).save(chip_path)
         json.dump({'box': box, 'label': label, 'country': country}, open(os.path.splitext(chip_path)[0] + '.json', 'w'),
                   ensure_ascii=False)
+    meta_txt, meta_size = source_line(source, date)
     if not meta_path:                      # one layer, as before 14 Oct
         d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=acc)
-        d.text((W - R - 62, meta_y), f'{source}\u200f  ·  \u200f{A.arabic_date(date)}', font=A.F('Medium', 32),
-               fill=A.BODY, anchor='rm', **G.AR)
+        d.text((W - R - 62, meta_y), meta_txt, font=A.F('Medium', meta_size), fill=A.BODY, anchor='rm', **G.AR)
     _glowed(im, t, blur=16, gain=2.6); im.save(path)
     if meta_path:                          # the credit line on its own layer: it enters at CREDIT_AT (advisor, 14 Oct 2026)
         m = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(m)
         d.rectangle([W - R - 44, meta_y - 2, W - R, meta_y + 2], fill=acc)
-        d.text((W - R - 62, meta_y), f'{source}\u200f  ·  \u200f{A.arabic_date(date)}', font=A.F('Medium', 32),
-               fill=A.BODY, anchor='rm', **G.AR)
+        d.text((W - R - 62, meta_y), meta_txt, font=A.F('Medium', meta_size), fill=A.BODY, anchor='rm', **G.AR)
         _glowed(Image.new('RGBA', (W, H), (0, 0, 0, 0)), m).save(meta_path)
     return path
+
+
+def inside(img, x0=None, x1=None):
+    """True when every drawn pixel of the layer (alpha above 24) sits inside x0 to x1 (the safe zone, 96 to 910): the
+    check on what was rendered, not on an estimated width (Mohammad, 23 Nov 2026)."""
+    x0 = L if x0 is None else x0
+    x1 = W - R if x1 is None else x1
+    a = img.split()[-1] if img.mode in ('RGBA', 'LA') else img
+    box = a.point(lambda v: 255 if v > 24 else 0).getbbox()
+    return box is None or (box[0] >= x0 and box[2] <= x1)
+
+
+SOURCE_SIZES = (32, 30, 28)
+
+
+def source_forms(source, date):
+    """The source line under the headline, ladder order (Mohammad, 23 Nov 2026): the source and the date only (the
+    footage credit «لقطات من ...» has its own credit lower in the frame), then Latin names only, then short names, then
+    the primary source alone, then without the date. Every form opens on an Arabic word."""
+    import creditfit as CF
+    src = ' '.join(str(source or '').split())
+    foot = CF.FOOT.search(src)
+    if foot:
+        src = src[:foot.start()].rstrip(' ،,')
+    dt_ = A.arabic_date(date) if date else ''
+    sep = '\u200f  ·  \u200f'
+    out = [src + (sep + dt_ if dt_ else '')]
+    names = CF._names(src) if src else []
+    if names:
+        _, short = CF._tables()
+        la = [CF._latin(n) for n in names]
+        sh = [short.get(n.lower(), n) for n in la]
+        for group in (la, sh, sh[:1]):
+            body = 'المصدر: ' + ', '.join(group)
+            out.append(body + (sep + dt_ if dt_ else ''))
+        out.append('المصدر: ' + sh[0])
+    seen, res = set(), []
+    for f in out:
+        if f and f not in seen:
+            seen.add(f)
+            res.append(f)
+    return res
+
+
+def source_line(source, date, right=None):
+    """(text, size): the first ladder form and size whose drawn pixels stay inside the safe zone, the anchor at the
+    headline's credit position. Logged as a softgate warning when it is not the first form."""
+    right = W - R - 62 if right is None else right
+    forms = source_forms(source, date)
+    for size in SOURCE_SIZES:
+        for k, f in enumerate(forms):
+            if size != SOURCE_SIZES[0] and k < len(forms) - 1:
+                continue                          # smaller type only for the shortest form
+            m = Image.new('L', (W, 120), 0)
+            ImageDraw.Draw(m).text((right, 60), f, font=A.F('Medium', size), fill=255, anchor='rm', **G.AR)
+            if inside(m):
+                if (k, size) != (0, SOURCE_SIZES[0]):
+                    import softgate
+                    softgate.warn('credit', f'source line ladder: «{forms[0]}» -> «{f}» at {size} px (drawn pixels '
+                                            'inside x 96 to 910)')
+                return f, size
+    import softgate
+    softgate.warn('credit', f'source line: no form fits inside x 96 to 910; shortest at {SOURCE_SIZES[-1]} px: {forms[-1]}')
+    return forms[-1], SOURCE_SIZES[-1]
 
 
 def _glowed(im, t, blur=10, gain=2):
@@ -568,19 +631,29 @@ def credit_layer(text, path, low=False, size=36, y=None, band=False):
     «لقطات من Fortnite» over a delayed game that has never been shown (Mohammad,
     13 Oct 2026, review priority 3). Right-aligned under the safe top, or just
     above the safe bottom when the story lines sit at the top."""
+    for squeeze in (0, 24, 48, 96):            # the drawn pixels decide (23 Nov 2026): a miss takes the next ladder step
+        out = _credit_layer(text, path, low, size, y, band, room=W - R - L - squeeze)
+        slack = 28 if band else 0              # the soft band runs 24 px past the type on each side
+        if inside(Image.open(out), L - slack, W - R + slack):
+            return out
+    raise ValueError(f'credit leaves x 96 to 910 at every step of the credit ladder: {text}')
+
+
+def _credit_layer(text, path, low=False, size=36, y=None, band=False, room=None):
+    room = W - R - L if room is None else room
     rows = [t for t in text.split('\n') if t.strip()] or [text]   # two lines when the server set it so (autofix,
     rtl_starts(rows, 'credit')                                      # adv-20261117-gates-fix-not-refuse B)
     probe = ImageDraw.Draw(Image.new('L', (W, 10)))
     measure = lambda r, s: probe.textlength(r, font=A.F('Medium', s), **G.AR)
-    if not (len(rows) == 1 and measure(rows[0], size) <= W - R - L):
+    if not (len(rows) == 1 and measure(rows[0], size) <= room):
         # The credit ladder (Mohammad, 21 Nov 2026; templates/creditfit.py): never dropped, never off the frame. One
         # line in the full form, then Latin names only, short names, the primary source and footage owner, smaller
         # type to creditfit.MIN_SIZE, and only then two lines. A credit already set on rows that fit keeps them when
         # no one-line form fits; nothing fitting stops the render as unreadable text.
         import creditfit
-        got = creditfit.fit(text, size, measure, W - R - L)
+        got = creditfit.fit(text, size, measure, room)
         if got is None:
-            if all(measure(r, size) <= W - R - L for r in rows):
+            if all(measure(r, size) <= room for r in rows):
                 got = {'rows': rows, 'size': size, 'step': 1}
             else:
                 raise ValueError(f'credit runs out of the safe zone at every step of the credit ladder: {text}')
@@ -837,56 +910,52 @@ def _credit_forms(credit):
     return out
 
 
+NAME_PLATE_BOTTOM = G.SAFE_BOTTOM - 150   # the lower third: under the person's beat, above the caption's reach
+
+
 def name_card(name, role, path, theme='cold', box=PERSON_BOX):
-    """The people window when no photo is in the library (Mohammad, 22 Nov 2026): the template's plate, the ground at
-    84% so the footage still shows through, the theme accent as its edge and a short rule, the name large (Bold, up
-    to 64 px, a second line before it shrinks under 40) and the role under it (Medium, body colour). Never a game frame."""
-    x, y, bw, bh = box
-    pad, rad = 30, 22
+    """The person with no photo in the library or found at build time (Mohammad, 23 Nov 2026): no box at all. A lower
+    third over the footage in the template's plate style: the ground at 82% in a rounded plate sized to its text, an
+    accent bar on its right edge, the name in Bold (60 down to 40) and the role under it in Medium (34 down to 28),
+    right-aligned at the safe right edge and held for the person's beat. `box` is unused (kept for the call shape)."""
+    pad, rad, bar = 28, 18, 8
     probe = ImageDraw.Draw(Image.new('L', (W, H)))
     acc = G.ACCENTS.get(theme, A.AZURE)
+    room = W - R - L - 2 * pad - bar
 
-    def fit(text, weight, sizes, lines_max):
-        words = str(text or '').split()
+    def fit(text, weight, sizes):
         for s in sizes:
             f = A.F(weight, s)
-            if probe.textlength(text, font=f, **G.AR) <= bw - 2 * pad:
-                return [text], f, s
-        if lines_max > 1 and len(words) > 1:
-            for s in sizes:
-                f = A.F(weight, s)
-                for k in range(1, len(words)):
-                    a, b = ' '.join(words[:k]), ' '.join(words[k:])
-                    if all(probe.textlength(z, font=f, **G.AR) <= bw - 2 * pad for z in (a, b)) and \
-                            (not re.search('[\u0600-\u06FF]', b) or _arabic(b.lstrip('«')[0])):
-                        return [a, b], f, s
-        raise ValueError(f'name card line will not fit the window: {text}')
+            if probe.textlength(text, font=f, **G.AR) <= room:
+                return f, s
+        raise ValueError(f'name plate line will not fit the safe zone: {text}')
     rows = []
     if str(name or '').strip():
         plate_rtl(name)
-        nl, nf, ns = fit(name, 'Bold', (64, 58, 52, 46, 40, 36, 32), 2)
-        rows += [(z, nf, ns, A.INK) for z in nl]
+        rows.append((name,) + fit(name, 'Bold', (60, 56, 52, 48, 44, 40)) + (A.INK,))
     if str(role or '').strip():
         plate_rtl(role)
-        rl, rf, rs = fit(role, 'Medium', (36, 32, 30, 28, 26), 2)
-        rows += [(z, rf, rs, A.BODY) for z in rl]
+        rows.append((role,) + fit(role, 'Medium', (34, 32, 30, 28)) + (A.BODY,))
     if not rows:
-        raise ValueError('name card with no name and no role')
-    gaps = [int(s * 1.3) for _, _, s, _ in rows]
-    block = sum(gaps) + 18
+        raise ValueError('name plate with no name and no role')
+    widths = [probe.textlength(r[0], font=r[1], **G.AR) for r in rows]
+    gaps = [int(s * 1.28) for _, _, s, _ in rows]
+    pw = int(max(widths)) + 2 * pad + bar
+    ph = sum(gaps) + 2 * pad - 6
+    x1, y1 = W - R, NAME_PLATE_BOTTOM
+    x0, y0 = x1 - pw, y1 - ph
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     sh_m = Image.new('L', (W, H), 0)
-    ImageDraw.Draw(sh_m).rounded_rectangle((x + 6, y + 12, x + bw + 6, y + bh + 12), rad, fill=120)
-    sh_l = Image.new('RGBA', (W, H), (0, 0, 0, 255)); sh_l.putalpha(sh_m.filter(ImageFilter.GaussianBlur(18)))
+    ImageDraw.Draw(sh_m).rounded_rectangle((x0 + 4, y0 + 8, x1 + 4, y1 + 8), rad, fill=110)
+    sh_l = Image.new('RGBA', (W, H), (0, 0, 0, 255)); sh_l.putalpha(sh_m.filter(ImageFilter.GaussianBlur(14)))
     im.alpha_composite(sh_l)
     d = ImageDraw.Draw(im)
-    d.rounded_rectangle((x, y, x + bw - 1, y + bh - 1), rad, fill=A.GROUND + (214,), outline=acc + (255,), width=4)
-    yb = y + (bh - block) // 2
-    d.rounded_rectangle((x + bw - pad - 90, yb, x + bw - pad, yb + 6), 3, fill=acc + (255,))
-    yb += 18
+    d.rounded_rectangle((x0, y0, x1, y1), rad, fill=A.GROUND + (209,))
+    d.rounded_rectangle((x1 - bar, y0, x1, y1), rad // 2, fill=acc + (255,))
+    yb = y0 + pad - 4
     for (text, f, s, col), g in zip(rows, gaps):
         yb += g
-        d.text((x + bw - pad, yb - int(s * 0.3)), text, font=f, fill=col + (255,), anchor='rs', **G.AR)
+        d.text((x1 - bar - pad, yb - int(s * 0.28)), text, font=f, fill=col + (255,), anchor='rs', **G.AR)
     im.save(path); return path
 
 

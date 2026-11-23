@@ -455,6 +455,28 @@ def shape(slip):
     return out
 
 
+def split_role(name, role):
+    """(name, role) with a role word that leads the name moved to the role (Mohammad, 23 Nov 2026: «الممثل ستيف ماكوين»
+    was the whole plate). A «Arabic (Latin)» pair keeps only the person's own words; the words before it join the role
+    («رئيسة الهيئة لارا الخطيب (Lara Al-Khatib)» -> «Lara Al-Khatib», «رئيسة الهيئة»)."""
+    import storykind as SK
+    n, r = ' '.join(str(name or '').split()), str(role or '').strip()
+    m = re.search(r'(.*?)\s*\(([A-Za-z][^()]{1,60})\)\s*$', n)
+    if m:
+        la = m.group(2).strip()
+        words = m.group(1).split()
+        k = max(1, min(len(words), len(la.split())))
+        lead = ' '.join(words[:-k])
+        if lead:
+            r = (lead + (' ' + r if r and r not in lead else '')).strip()
+        return SK._plate_name(' '.join(words[-k:]), la), r
+    for w in sorted(SK.ROLES, key=len, reverse=True):
+        if n.startswith(w + ' ') and len(n.split()) > len(w.split()):
+            rest = n[len(w):].strip()
+            return rest, (w + (' ' + r if r else '')).strip()
+    return n, r
+
+
 def job_from(slip, foot, lane='live', theme=None, spare=()):
     """The job, ready for the render: the template the story kind picks (numbers, people, debate or trailer), the
     skin its genre picks, server-picked shots, lines cut from the spoken paragraph."""
@@ -524,7 +546,14 @@ def job_from(slip, foot, lane='live', theme=None, spare=()):
                 p['role'] = ''
         if not p.get('role') and p.get('name') and kind['person'].get('name') not in (None, '', p['name']):
             p['role'] = kind['person']['name']    # what the parser took for the name was the role phrase
+        p['name'], p['role'] = split_role(p.get('name') or '', p.get('role') or '')
         lib = PL.photo_of(hit[1]) if hit and not p.get('photo') else None
+        if not lib and not p.get('photo') and not hit and os.environ.get('DXB_PEOPLE_LOOKUP') != 'off':   # look them up now
+            got = PL.resolve(p.get('name') or '', p.get('role') or '', latin=p.get('latin'))
+            if got:                               # Wikidata's portrait on Commons, cropped, added to the library
+                hit = got
+                lib = PL.photo_of(got[1])
+                job['people_added'] = [got[0]]
         if p.get('photo'):                        # the slip's official photo (press kit, the company's page)
             job['footage'].append({'file': photo, 'url': p['photo']})
             ps = {'name': p['name'], 'role': p.get('role') or '', 'photo_source': p['photo']}
