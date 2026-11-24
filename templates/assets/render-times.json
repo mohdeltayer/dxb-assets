@@ -146446,5 +146446,229 @@
   "sound": "trailer",
   "footage": true,
   "upload_secs": 5.0
+ },
+ {
+  "name": "gta-vi-39m-players-playstation-push-square-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-11-24T02:07Z",
+  "stages": {
+   "checks": 4.1,
+   "montage": 31.2,
+   "text": 35.9,
+   "audio": 1.4,
+   "outro": 22.5
+  },
+  "total": 95.0,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-24T02:06Z",
+  "finished_at": "2026-11-24T02:07Z",
+  "render_min": 1.58,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "gta6-launch-master.mp4",
+    "start": 15.5,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "gta6-launch-master.mp4",
+    "start": 26.45,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "gta6-launch-master.mp4",
+    "start": 27.9,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "gta6-launch-master.mp4",
+    "start": 39.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "gta6-launch-master.mp4",
+    "start": 45.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "gta6-launch-master.mp4",
+    "start": 47.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "gta6-launch-master.mp4",
+    "start": 55.2,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "gta6-launch-master.mp4",
+    "start": 57.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "gta6-launch-master.mp4",
+    "start": 59.95,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 9,
+    "file": "gta6-launch-master.mp4",
+    "start": 63.2,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 10,
+    "file": "gta6-launch-master.mp4",
+    "start": 67.1,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 2.0,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 8.5,
+   "audio_secs": 55.4,
+   "music_pct": 75.1,
+   "leak_pct": 0.6,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "effects_shots": 11,
+   "mix_secs": 3.2,
+   "secs": 12.5
+  },
+  "lifeless": {
+   "score": 8.1,
+   "still_share": 0.06,
+   "longest_still": 1.3,
+   "cuts_per_10s": 7.83,
+   "held_under_text": 0.0,
+   "secs": 21.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 4.6,
+   "shots": 183.0,
+   "checks": 25.9,
+   "render": 108.0,
+   "after": 59.7
+  },
+  "softgate": {
+   "warnings": 1,
+   "ladder": [
+    {
+     "kind": "hook",
+     "slot": 0,
+     "step": "a",
+     "why": "another stretch of the same file: lowrider crew at 15.5 s (opener 3.0 s was used by gta-vi-circana-engagement-push-square at 0.0 s within 14 days)"
+    }
+   ]
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 382,
+  "queue_wait_secs": 49,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1190,
+  "peak_mem_mb": 2453,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 70523,
+  "peak_disk_mb": 74004,
+  "min_disk_free_mb": 172102,
+  "setup_min": 0.17,
+  "story": "gta-vi-39m-players-playstation-push-square",
+  "job_sha": "51609e724b68062b0009a43b3c4a3b9d71498bdc",
+  "dispatches": 2,
+  "sound": "trailer",
+  "footage": true
  }
 ]
