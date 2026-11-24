@@ -936,8 +936,9 @@ def cmd_tick(args):
         status['six'].insert(0, cline)
         extra = []
         if cover_over:
-            lp = last_published(status['rows'], rows, plast, now) or last or now   # the last post may be known from the
-            extra.append({'key': 'cover|' + lp.strftime('%Y-%m-%dT%H:%MZ'),          # logs only (crashed every tick 24 Nov) 'title': 'Coverage gap: %d min' % cgap,
+            # the last post may be known from the logs only (every tick crashed on None overnight, 24 Nov)
+            lp = last_published(status['rows'], rows, plast, now) or last or now
+            extra.append({'key': 'cover|' + lp.strftime('%Y-%m-%dT%H:%MZ'), 'title': 'Coverage gap: %d min' % cgap,
                           'lines': [cline, 'Production 2: the next run ends with a scheduled submit or a banked piece queued.']})
         if status['bank_ready'] is not None and status['bank_ready'] < BANK_MIN:
             extra.append({'key': 'bank|%s|%d' % (now.astimezone(DUBAI).strftime('%Y%m%d'), status['bank_ready']),
