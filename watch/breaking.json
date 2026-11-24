@@ -1,10 +1,36 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-24T16:52:08Z",
- "seq": 821,
+ "generated_at": "2026-11-24T17:00:18Z",
+ "seq": 822,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 22271,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Dead by Daylight: Terrifier’s New Killer is No Laughing Matter",
+   "url": "https://news.xbox.com/en-us/2026/11/24/dead-by-daylight-terrifiers-new-killer-is-no-laughing-matter/",
+   "published": "2026-11-24T17:00Z",
+   "first_seen": "2026-11-24T17:00:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/DBD_CH_CERT_PRSCREEN_03_WEB-0ec21cc7b7ac90e90454.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/DBD_CH_CERT_PRSCREEN_01_WEB-b393e0eb3dd1e3cf193a.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.16719.64366672042187759.733004ed-c696-44cf-98cc-30eddf2375a8.3dd6c96e-e0c3-4a0b-aeb0-810f815a6d37?w=400&h=600"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 822
+  }
+ ],
  "recent": [
   {
    "id": 22257,
@@ -464,7 +490,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-24T16:50:05Z",
+  "last_poll_at": "2026-11-24T17:00:14Z",
   "sources_enabled": 101,
   "sources_ok": 98,
   "sources_failing": 2,
