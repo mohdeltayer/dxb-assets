@@ -4,14 +4,8 @@
  "problems": [
   "text: line 2: open the line on an Arabic word («تصدر Warhammer...», not «Warhammer تصدر...»), or rebreak"
  ],
- "flags": [
-  "name form: «غو نينتيندو (GoNintendo)» (credit); names-ar has «جو نينتندو (GoNintendo)»",
-  "name not in names-ar: «الموسم شخصية كيوكا جيرو (Kyoka Jiro)» (spoken); add it there as Proposed",
-  "text fixed mechanically: spoken: names not in names-ar written in Latin: Kyoka Jiro",
-  "warning: text: line 3: «Kyoka Jiro» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before the render, or, for a game, write it in Latin letters only",
-  "warning: text: line 3: these words are not in the paragraph: كيوكا جيرو; the lines, read in order, are the spoken paragraph (a word may be left out, none added): rewrite the line from the paragraph, or the paragraph to carry it"
- ],
- "at": "2026-11-24T04:11:42Z",
+ "flags": [],
+ "at": "2026-11-24T05:10:43Z",
  "footage": {
   "name": "MY HERO ULTRA RUMBLE - Launch Trailer",
   "width": 1920,
@@ -22,14 +16,11 @@
   "duration": 95.83,
   "decode_clean": true
  },
- "names_to_review": [
-  "Kyoka Jiro"
- ],
  "job": "jobs/live/my-hero-ultra-rumble-plus-ultra-season-1-nov-25-gonintendo.json",
  "story": "newsroom/stories/2026-11-24-my-hero-ultra-rumble-plus-ultra-season-1-nov-25-gonintendo.json",
- "lines": 5,
- "shots": 13,
- "run": "45324614834",
+ "lines": 4,
+ "shots": 11,
+ "run": "45331375101",
  "lane": "live",
- "build_secs": 56
+ "build_secs": 59
 }
