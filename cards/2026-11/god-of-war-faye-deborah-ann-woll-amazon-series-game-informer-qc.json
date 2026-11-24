@@ -1,0 +1,479 @@
+{
+ "name": "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer",
+ "out": "cards/2026-11/god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "build gate",
+   "detail": "story file: \"subject_person\" is null or {\"name\", \"role\", \"photo_source\"} with all three filled"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4 at 7.02 s for 3.8 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4 at 6.84 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4 at 14.54 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4 at 14.1 s for 2.49 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4 at 17.76 s for 2.49 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4 at 21.65 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4 at 25.35 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4 at 11.62 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "text",
+   "slot": "reel",
+   "step": "a",
+   "why": "soft shade under line group(s) [2]: bright footage behind them"
+  }
+ ],
+ "job_to_pass_min": 5.1,
+ "at": "2026-11-24T04:16:42Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4 starts at 0.0 s, the video at 1.30 s; its first 1.30 s are lost",
+  "first frame: shot 1 god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4 starts at 0.0 s, the video at 1.30 s; its first 1.30 s are lost",
+  "first frame: shot 2 god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4 starts at 0.0 s, the video at 1.30 s; its first 1.30 s are lost",
+  "first frame: shot 3 god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4 starts at 0.0 s, the video at 1.30 s; its first 1.30 s are lost",
+  "first frame: shot 4 god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4 starts at 0.0 s, the video at 1.30 s; its first 1.30 s are lost",
+  "first frame: shot 5 god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4 starts at 0.0 s, the video at 1.30 s; its first 1.30 s are lost",
+  "first frame: shot 6 god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4 starts at 0.0 s, the video at 1.30 s; its first 1.30 s are lost",
+  "length 15.2 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 42.6; leak_pct 0.3; cache {'hit': 0, 'miss': 2}; separate_secs 5.4; secs 9.2",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 9.27, \"held_under_text\": 0.0, \"secs\": 15.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 1",
+   "rule": "shot_timing",
+   "what": "moved from 6.84 to 6.59 s, the nearest clean start of the same 2.20 s",
+   "before": [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    6.84,
+    2.2,
+    [
+     [
+      0.0,
+      0.814
+     ]
+    ]
+   ],
+   "after": [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    6.59,
+    2.2,
+    [
+     [
+      0.0,
+      0.814
+     ]
+    ]
+   ]
+  }
+ ],
+ "job_sha": "b3364843073eadd41e86c7f0ea7cf6c1c4d6f15b",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-look-1.jpg",
+  "cards/2026-11/god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-look-2.jpg",
+  "cards/2026-11/god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-look-3.jpg"
+ ],
+ "person_shown": true,
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 15.2,
+  "files": {
+   "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4": {
+    "secs": 15.2,
+    "cached": false,
+    "stages": {
+     "decode": 6.5,
+     "autofocus": 15.1,
+     "ocr": 15.1,
+     "smear": 15.1,
+     "scenes": 15.2
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/god-of-war-faye-deborah-ann-woll-amazon-series-game-informer.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.18,
+  "fetch": 0.1,
+  "shots": 0.78,
+  "checks": 0.97,
+  "render": 1.63,
+  "after": 0.73,
+  "job": 4.22
+ },
+ "job_after_autofix": {
+  "name": "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer",
+  "story": "2026-11-24-god-of-war-faye-deborah-ann-woll-amazon-series-game-informer",
+  "footage_source": "steam:2322010",
+  "kind_news": "person",
+  "story_class": "person",
+  "story_class_why": "kind person",
+  "skin_why": "genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    "steam": 2322010,
+    "trailer": "Launch Trailer (US-EN)",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2322010"
+   },
+   {
+    "file": "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-person.jpg",
+    "repo": "live/people/deborah-ann-woll.jpg"
+   }
+  ],
+  "shots": [
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    7.02,
+    3.8,
+    [
+     [
+      0.0,
+      0.859
+     ]
+    ]
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    6.59,
+    2.2,
+    [
+     [
+      0.0,
+      0.814
+     ]
+    ]
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    14.54,
+    2.2,
+    [
+     [
+      0.0,
+      0.573
+     ],
+     [
+      1.977,
+      0.887
+     ]
+    ]
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    14.1,
+    2.49,
+    [
+     [
+      0.0,
+      0.155
+     ],
+     [
+      2.417,
+      0.885
+     ]
+    ]
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    17.76,
+    2.49,
+    [
+     [
+      0.0,
+      0.412
+     ]
+    ]
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    21.65,
+    2.2,
+    [
+     [
+      0.0,
+      0.178
+     ],
+     [
+      1.707,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    25.35,
+    2.2,
+    [
+     [
+      0.0,
+      0.668
+     ],
+     [
+      1.344,
+      0.0
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "ويجسد\nدايف باوتيستا (Dave Bautista)",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "شخصية Kratos في المسلسل،\nوهو قيد التصوير حاليا",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "ولم يُعلن موعد عرضه بعد",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    6,
+    "المصدر: Game Informer · اللقطات: صفحة اللعبة على Steam",
+    {
+     "size": 34,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع Game Informer أن الممثلة Deborah Ann Woll، التي أدّت دور Faye في لعبة God of War Ragnarök، ستعيد تجسيد الشخصية في مسلسل God of War من أمازون برايم. ويجسد دايف باوتيستا (Dave Bautista) شخصية Kratos في المسلسل، وهو قيد التصوير حاليا. ولم يُعلن موعد عرضه بعد.",
+  "headline": "تعود Faye\nفي مسلسل God of War",
+  "label": "تقرير",
+  "game": "God of War",
+  "game_short": "God of War",
+  "game_key": "god of war",
+  "genre": [
+   "action"
+  ],
+  "texts": {
+   "instagram": "عودة Faye في مسلسل God of War\n\nذكر موقع غيم إنفورمر (Game Informer) أن الممثلة ديبورا آن وول (Deborah Ann Woll)، التي أدّت دور Faye في لعبة God of War Ragnarök، ستعيد تجسيد الشخصية في مسلسل God of War من أمازون برايم.\n\nويجسد دايف باوتيستا (Dave Bautista) شخصية Kratos في المسلسل، وهو قيد التصوير حاليا. ولم يُعلن موعد عرضه بعد.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع غيم إنفورمر (Game Informer).\n\n#ألعاب #أخبار_الألعاب #GodOfWar #Kratos",
+   "x": "تقرير: ذكر موقع غيم إنفورمر (Game Informer) أن الممثلة ديبورا آن وول (Deborah Ann Woll)، التي أدّت دور Faye في God of War Ragnarök، ستعيد تجسيد الشخصية في مسلسل God of War من أمازون برايم. المصدر: غيم إنفورمر.",
+   "threads": "تقرير: ذكر موقع غيم إنفورمر (Game Informer) أن الممثلة ديبورا آن وول (Deborah Ann Woll)، التي أدّت دور Faye في God of War Ragnarök، ستعيد تجسيد الشخصية في مسلسل God of War من أمازون برايم.\n\nويجسد دايف باوتيستا (Dave Bautista) شخصية Kratos في المسلسل، ولم يُعلن موعد عرضه بعد.\n\nالمصدر: موقع غيم إنفورمر (Game Informer)"
+  },
+  "source": "موقع غيم إنفورمر (Game Informer)، واللقطات من صفحة اللعبة على Steam",
+  "date": "24 Nov 2026",
+  "theme": "playful",
+  "style": null,
+  "template": "people",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+   7.02
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Amazon cast Deborah Ann Woll, who played Faye in God of War Ragnarök, as Faye (Laufey) in its live-action series on 23 Nov",
+   "what_it_means_here": "Known game character and actress carry over to the Prime Video show; Dave Bautista plays Kratos; no release date yet"
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "people: kind person",
+   "skin": "house: genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4 from the resolver (steam:2322010)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam store page, God of War Ragnarök (footage only) (https://store.steampowered.com/app/2322010/); first report: Kotaku, IGN, Game Informer 23 Nov 2026 17:19-17:31Z (14 outlets)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 2322010 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "people_added": [
+   "deborah-ann-woll"
+  ],
+  "person_library": "deborah-ann-woll",
+  "person": [
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-person.jpg",
+    "Deborah Ann Woll",
+    "الممثلة",
+    0.0,
+    3.5,
+    {
+     "focus": [
+      0.5,
+      0.42
+     ],
+     "credit": "الصورة: John Manard for Super Festivals from Ft. Lauderdale, USA، ويكيميديا كومنز، CC BY 2.0"
+    }
+   ]
+  ],
+  "subject_person": {
+   "name": "Deborah Ann Woll",
+   "role": "الممثلة",
+   "photo_source": "https://commons.wikimedia.org/wiki/File:Deborah_Ann_Woll_(53981726502).jpg"
+  },
+  "names_to_review": [
+   "Game Informer",
+   "Deborah Ann Woll"
+  ],
+  "cut_ok": [
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    7.02,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    6.84,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    14.54,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    14.1,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    17.76,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    21.65,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    25.35,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ]
+  ],
+  "drift_ok": [
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    7.02,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    6.84,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    14.54,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    14.1,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    17.76,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    21.65,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "god-of-war-faye-deborah-ann-woll-amazon-series-game-informer-launch-trailer-us-en.mp4",
+    25.35,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ]
+  ]
+ }
+}
