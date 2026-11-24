@@ -1,0 +1,36 @@
+{
+ "story": "2026-11-24-massive-entertainment-hartmann-a24-games-saudigamer",
+ "out": "cards/2026-11/massive-entertainment-hartmann-a24-games-saudigamer-reel-v1.mp4",
+ "verdict": "fix",
+ "reason": "unclear_text",
+ "fix": "Name card is garbled: the name slot reads «العام لاستوديو Massive Entertainment» with «المدير» as the role; set name Christoph Hartmann and role «المدير العام لاستوديو Massive Entertainment».",
+ "reasons": [
+  "headline, spoken lines, credit and attribution (Saudi Gamer reporting Variety; Hartmann wants Massive to be the A24 of games; big awards plus commercial success; footage from The Division 2 Steam page) are true against the story sources",
+  "name card on shots 0-1 splits the title mid-phrase: name «العام لاستوديو Massive Entertainment», role «المدير», so an Arab reader sees a nonsense name and the real name Christoph Hartmann is missing from the card",
+  "no graphic content"
+ ],
+ "job_patch": {
+  "person": [
+   [
+    null,
+    "Christoph Hartmann",
+    "المدير العام لاستوديو Massive Entertainment",
+    0.0,
+    3.5,
+    {
+     "focus": [
+      0.5,
+      0.4
+     ]
+    }
+   ]
+  ],
+  "subject_person": {
+   "name": "Christoph Hartmann",
+   "role": "المدير العام لاستوديو Massive Entertainment",
+   "photo_source": null
+  }
+ },
+ "at": "2026-11-24T13:09:22Z",
+ "by": "director-p2"
+}
