@@ -1,0 +1,281 @@
+{
+ "name": "hogwarts-legacy-22-aed-arabic-steam",
+ "out": "cards/2026-11/hogwarts-legacy-22-aed-arabic-steam-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "length",
+   "detail": "length 11.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them; under 12 s fails: add a beat of footage"
+  }
+ ],
+ "ladder": [],
+ "job_to_pass_min": 5.1,
+ "at": "2026-11-24T02:00:55Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4 starts at 0.0 s, the video at 2.11 s; its first 2.11 s are lost",
+  "first frame: shot 1 hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4 starts at 0.0 s, the video at 2.11 s; its first 2.11 s are lost",
+  "first frame: shot 2 hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4 starts at 0.0 s, the video at 2.11 s; its first 2.11 s are lost",
+  "first frame: shot 3 hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4 starts at 0.0 s, the video at 2.11 s; its first 2.11 s are lost",
+  "first frame: shot 4 hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4 starts at 0.0 s, the video at 2.11 s; its first 2.11 s are lost",
+  "length 11.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 58.1; leak_pct 0.4; cache {'hit': 0, 'miss': 6}; separate_secs 7.5; secs 10.6",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 5.5, \"held_under_text\": 0.0, \"secs\": 10.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 24 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4 at 24.77 s for 2.2 s, focus 0.442"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4 at 71.03 s for 2.2 s, focus 0.503"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4 at 83.77 s for 2.2 s, focus 0.61"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4 at 103.40 s for 2.2 s, focus 0.475"
+  },
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-cg-trailer-esrb.mp4 at 39.11 s for 3.8 s, focus 0.324 (nothing free in hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4)"
+  }
+ ],
+ "job_sha": "522d56203367910fe49942330c705776b0ba302d",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/hogwarts-legacy-22-aed-arabic-steam-look-1.jpg",
+  "cards/2026-11/hogwarts-legacy-22-aed-arabic-steam-look-2.jpg",
+  "cards/2026-11/hogwarts-legacy-22-aed-arabic-steam-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 76.0,
+  "files": {
+   "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4": {
+    "secs": 52.8,
+    "cached": false,
+    "stages": {
+     "decode": 24.8,
+     "autofocus": 44.3,
+     "ocr": 44.3,
+     "smear": 52.5,
+     "scenes": 52.8
+    },
+    "incomplete": null
+   },
+   "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-cg-trailer-esrb.mp4": {
+    "secs": 23.1,
+    "cached": false,
+    "stages": {
+     "decode": 9.2,
+     "autofocus": 22.9,
+     "ocr": 22.9,
+     "smear": 22.9,
+     "scenes": 23.1
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/hogwarts-legacy-22-aed-arabic-steam.json",
+ "stage_minutes": {
+  "queue": 0.37,
+  "setup": 0.17,
+  "fetch": 0.4,
+  "shots": 0.76,
+  "checks": 1.05,
+  "render": 1.24,
+  "after": 0.48,
+  "job": 3.93
+ },
+ "job_after_autofix": {
+  "name": "hogwarts-legacy-22-aed-arabic-steam",
+  "story": "2026-11-24-hogwarts-legacy-22-aed-arabic-steam",
+  "footage_source": "steam:990080",
+  "kind_news": "price",
+  "story_class": "trailer",
+  "story_class_why": "kind price",
+  "skin_why": "genre rpg",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/hogwarts-legacy-22-aed-arabic-steam-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4",
+    "steam": 990080,
+    "trailer": "Hogwarts Legacy Launch Trailer ESRB",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "990080"
+   },
+   {
+    "file": "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-cg-trailer-esrb.mp4",
+    "steam": 990080,
+    "trailer": "Hogwarts Legacy CG Trailer ESRB",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "990080"
+   }
+  ],
+  "shots": [
+   [
+    "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-cg-trailer-esrb.mp4",
+    39.11,
+    3.8,
+    [
+     [
+      0.0,
+      0.324
+     ]
+    ]
+   ],
+   [
+    "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4",
+    24.77,
+    2.2,
+    [
+     [
+      0.0,
+      0.442
+     ]
+    ]
+   ],
+   [
+    "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4",
+    71.03,
+    2.2,
+    [
+     [
+      0.0,
+      0.503
+     ]
+    ]
+   ],
+   [
+    "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4",
+    83.77,
+    2.2,
+    [
+     [
+      0.0,
+      0.61
+     ]
+    ]
+   ],
+   [
+    "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4",
+    103.4,
+    2.2,
+    [
+     [
+      0.0,
+      0.475
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "وتدعم اللعبة الواجهة\nوالترجمة العربية",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "من دون دبلجة،\nحسب صفحتها على Steam",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    4,
+    "المصدر: متجر Steam",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "تُباع لعبة Hogwarts Legacy حاليًا على Steam في الإمارات بسعر 22 درهمًا بدلًا من 220، بخصم 90 بالمئة. وتدعم اللعبة الواجهة والترجمة العربية من دون دبلجة، حسب صفحتها على Steam.",
+  "headline": "لعبة Hogwarts Legacy\nبسعر 22 درهمًا على Steam",
+  "label": "السعر",
+  "game": "Hogwarts Legacy",
+  "game_short": "Hogwarts Legacy",
+  "game_key": "hogwarts legacy",
+  "genre": [
+   "rpg"
+  ],
+  "texts": {
+   "instagram": "لعبة Hogwarts Legacy بسعر 22 درهمًا على Steam\n\nتُباع لعبة Hogwarts Legacy حاليًا على Steam في الإمارات بسعر 22 درهمًا بدلًا من 220 درهمًا، بخصم 90 بالمئة، حسب صفحة المتجر يوم 24 نوفمبر 2026.\n\nوتدعم اللعبة الواجهة والترجمة العربية من دون دبلجة عربية، وقد صدرت في 10 فبراير 2023.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: صفحة اللعبة على Steam.\n\n#ألعاب #أخبار_الألعاب #HogwartsLegacy #Steam",
+   "x": "تُباع لعبة Hogwarts Legacy حاليًا على Steam في الإمارات بسعر 22 درهمًا بدلًا من 220، بخصم 90 بالمئة، مع واجهة وترجمة عربية. المصدر: صفحة اللعبة على Steam.",
+   "threads": "تُباع لعبة Hogwarts Legacy حاليًا على Steam في الإمارات بسعر 22 درهمًا بدلًا من 220، بخصم 90 بالمئة، مع واجهة وترجمة عربية.\n\nالمصدر: صفحة اللعبة على Steam"
+  },
+  "source": "متجر Steam",
+  "date": "24 Nov 2026",
+  "theme": "gold",
+  "style": null,
+  "template": "trailer",
+  "skin": "fantasy",
+  "cut": false,
+  "track": [
+   "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": null,
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind price",
+   "skin": "fantasy: genre rpg",
+   "footage": "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4 from the resolver (steam:990080)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam store page, UAE (cc=ae), read 24 Nov 2026 02:00Z: 220 AED, now 22 AED, 90% off; Arabic interface and subtitles, no Arabic full audio; released 10 Feb 2023 (https://store.steampowered.com/app/990080/); first report: Steam UAE store page, read 24 Nov 2026 02:00Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 990080 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
