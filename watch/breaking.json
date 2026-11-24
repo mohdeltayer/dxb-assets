@@ -1,10 +1,24 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-24T01:15:19Z",
- "seq": 792,
+ "generated_at": "2026-11-24T01:25:20Z",
+ "seq": 793,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 21636,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/23/26 A storm is brewing! Here's the latest update for Nintendo Switch Online + Expansion Pack members Oh, hey, classic game fans! If you’ve been looking to",
+   "url": "https://www.nintendo.com/us/whatsnew/a-storm-is-brewing-heres-the-latest-update-for-nintendo-switch-online-expansion-pack-members/",
+   "published": null,
+   "first_seen": "2026-11-24T01:25:14Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 793
+  }
+ ],
+ "recent": [
   {
    "id": 21626,
    "source": "Nintendo Japan",
@@ -16,9 +30,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 792
-  }
- ],
- "recent": [
+  },
   {
    "id": 21625,
    "source": "Nintendo of America (YouTube)",
@@ -201,7 +213,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-24T01:15:14Z",
+  "last_poll_at": "2026-11-24T01:25:14Z",
   "sources_enabled": 101,
   "sources_ok": 99,
   "sources_failing": 1,
