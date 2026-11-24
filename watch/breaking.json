@@ -1,10 +1,23 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-24T17:52:06Z",
- "seq": 825,
+ "generated_at": "2026-11-24T17:55:08Z",
+ "seq": 826,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 22338,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/24/26 Play the 58th MAXIMUS CUP online event and you could earn an in-game collaborative theme! Calling all explorers: it’s time to get organized for the Tet",
+   "url": "https://www.nintendo.com/us/whatsnew/play-the-58th-maximus-cup-online-event-and-you-could-earn-an-in-game-collaborative-theme/",
+   "published": null,
+   "first_seen": "2026-11-24T17:55:05Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 826
+  }
+ ],
  "recent": [
   {
    "id": 22316,
@@ -506,7 +519,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-24T17:50:14Z",
+  "last_poll_at": "2026-11-24T17:55:05Z",
   "sources_enabled": 101,
   "sources_ok": 100,
   "sources_failing": 0,
