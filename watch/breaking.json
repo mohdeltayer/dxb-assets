@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-24T01:52:08Z",
- "seq": 794,
+ "generated_at": "2026-11-24T02:20:18Z",
+ "seq": 795,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 21662,
+   "source": "Nintendo of America (YouTube)",
+   "source_kind": "youtube",
+   "title": "Tetris® 99 – 58th MAXIMUS CUP Gameplay Trailer – Nintendo Switch",
+   "url": "https://www.youtube.com/watch?v=7AXiDrvTd7k",
+   "published": "2026-11-24T02:00Z",
+   "first_seen": "2026-11-24T02:20:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/7AXiDrvTd7k/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=7AXiDrvTd7k"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 795
+  }
+ ],
  "recent": [
   {
    "id": 21636,
@@ -212,12 +234,10 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-24T01:50:04Z",
+  "last_poll_at": "2026-11-24T02:20:14Z",
   "sources_enabled": 101,
   "sources_ok": 100,
-  "sources_failing": 1,
-  "failed": [
-   "Kotaku (HTTP 521, 3x)"
-  ]
+  "sources_failing": 0,
+  "failed": []
  }
 }
