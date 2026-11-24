@@ -1,6 +1,6 @@
 {
  "name": "massive-entertainment-hartmann-a24-games-saudigamer",
- "out": "cards/2026-11/massive-entertainment-hartmann-a24-games-saudigamer-reel-v1.mp4",
+ "out": "cards/2026-11/massive-entertainment-hartmann-a24-games-saudigamer-reel-v2.mp4",
  "verdict": "pass",
  "warnings": [
   {
@@ -28,8 +28,8 @@
    "why": "audio split not applied (music stem not clean (leftover 27.7% > 5.0%)) on a trailer track under 13 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or"
   }
  ],
- "job_to_pass_min": 11.1,
- "at": "2026-11-24T12:19:58Z",
+ "job_to_pass_min": 9.6,
+ "at": "2026-11-24T15:18:19Z",
  "findings": [],
  "notes": [
   "first frame: shot 0 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
@@ -47,8 +47,8 @@
   "first frame: shot 12 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
   "first frame: shot 13 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
   "length 28.5 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 27.7% > 5.0%); music_pct 11.8; leak_pct 27.7; cache {'hit': 0, 'miss': 8}; separate_secs 16.2; secs 21.4",
-  "render_job: audio split fallback: our bed (audio split not applied (music stem not clean (leftover 27.7% > 5.0%)) on a trailer track under 13 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.); bed:neon_b",
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 27.7% > 5.0%); music_pct 11.8; leak_pct 27.7; cache {'hit': 8, 'miss': 0}; separate_secs 4.0; secs 5.3",
+  "render_job: audio split fallback: our bed (audio split not applied (music stem not clean (leftover 27.7% > 5.0%)) on a trailer track under 13 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.); bed:neon",
   "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 4.23, \"held_under_text\": 0.0, \"secs\": 28.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [
@@ -206,8 +206,8 @@
    "after": 2.99
   }
  ],
- "job_sha": "9fc0c46f123dfc90e1b1d67daf338bc2e1a17f85",
- "dispatches": 2,
+ "job_sha": "ef3f54f2b9d9976ec83a63953cd7c21427ec4e35",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -221,13 +221,13 @@
   "cards/2026-11/massive-entertainment-hartmann-a24-games-saudigamer-look-3.jpg"
  ],
  "person_shown": true,
- "sound": "bed:neon_b (trailer sound refused: music stem not clean (leftover 27.7% > 5.0%))",
+ "sound": "bed:neon (trailer sound refused: music stem not clean (leftover 27.7% > 5.0%))",
  "shot_read": {
-  "secs": 86.0,
+  "secs": 0.5,
   "files": {
    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4": {
-    "secs": 34.6,
-    "cached": false,
+    "secs": 0.0,
+    "cached": true,
     "stages": {
      "decode": 14.0,
      "autofocus": 34.3,
@@ -238,8 +238,8 @@
     "incomplete": null
    },
    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4": {
-    "secs": 28.2,
-    "cached": false,
+    "secs": 0.0,
+    "cached": true,
     "stages": {
      "decode": 10.4,
      "autofocus": 28.0,
@@ -250,8 +250,8 @@
     "incomplete": null
    },
    "massive-entertainment-hartmann-a24-games-saudigamer-gameplay-trailer.mp4": {
-    "secs": 22.7,
-    "cached": false,
+    "secs": 0.0,
+    "cached": true,
     "stages": {
      "decode": 8.6,
      "autofocus": 22.5,
@@ -266,14 +266,13 @@
  "job_path": "jobs/done/massive-entertainment-hartmann-a24-games-saudigamer.json",
  "stage_minutes": {
   "queue": 0.03,
-  "setup": 0.22,
-  "fetch": 0.57,
-  "shots": 2.13,
-  "checks": 2.48,
-  "render": 3.36,
-  "after": 1.39,
-  "upload": 0.22,
-  "job": 9.95
+  "setup": 0.25,
+  "fetch": 0.47,
+  "shots": 1.47,
+  "checks": 1.8,
+  "render": 3.08,
+  "after": 1.49,
+  "job": 8.3
  },
  "job_after_autofix": {
   "name": "massive-entertainment-hartmann-a24-games-saudigamer",
@@ -285,7 +284,7 @@
   "skin_why": "genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
   "built_by": "server-slip",
   "render_lane": "server",
-  "out": "cards/2026-11/massive-entertainment-hartmann-a24-games-saudigamer-reel-v1.mp4",
+  "out": "cards/2026-11/massive-entertainment-hartmann-a24-games-saudigamer-reel-v2.mp4",
   "split_fallback": "ladder",
   "footage": [
    {
@@ -594,8 +593,8 @@
   "person": [
    [
     null,
-    "العام لاستوديو Massive Entertainment",
-    "المدير",
+    "Christoph Hartmann",
+    "المدير العام لاستوديو Massive Entertainment",
     0.0,
     3.5,
     {
@@ -607,8 +606,8 @@
    ]
   ],
   "subject_person": {
-   "name": "العام لاستوديو Massive Entertainment",
-   "role": "المدير",
+   "name": "Christoph Hartmann",
+   "role": "المدير العام لاستوديو Massive Entertainment",
    "photo_source": null
   }
  }
