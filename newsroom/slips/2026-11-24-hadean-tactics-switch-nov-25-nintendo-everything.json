@@ -1,12 +1,26 @@
 {
  "id": "2026-11-24-hadean-tactics-switch-nov-25-nintendo-everything",
- "state": "failed",
- "problems": [
-  "grammar_review missing: run the arabic-grammar-review stage on headline, spoken (the lines are cut from it), credit, instagram, x and threads, apply every required edit to the slip, then record \"grammar_review\": {\"by\": \"arabic-grammar-review\", \"at\": \"<ISO time>\", \"required_edits\": <n applied>, \"texts_sha\": \"<python3 templates/slip.py grammar-sha <slip>>\"}"
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "name form: «نينتندو إيفريثينغ (Nintendo Everything)» (credit); names-ar has «نينتيندو إفريثينغ»"
  ],
- "flags": [],
- "at": "2026-11-24T00:10:10Z",
- "run": "45294856890",
+ "at": "2026-11-24T00:13:48Z",
+ "footage": {
+  "name": "Hadean Tactics Trailer",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60.0,
+  "mbps": 5.7,
+  "rows": 1080,
+  "duration": 75.59,
+  "decode_clean": true
+ },
+ "job": "jobs/live/hadean-tactics-switch-nov-25-nintendo-everything.json",
+ "story": "newsroom/stories/2026-11-24-hadean-tactics-switch-nov-25-nintendo-everything.json",
+ "lines": 6,
+ "shots": 14,
+ "run": "45295364347",
  "lane": "live",
- "build_secs": 24
+ "build_secs": 51
 }
