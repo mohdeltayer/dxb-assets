@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-24T15:52:08Z",
- "seq": 819,
+ "generated_at": "2026-11-24T16:35:19Z",
+ "seq": 820,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 22257,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Gothic 3 Classic | Release Trailer",
+   "url": "https://www.youtube.com/watch?v=Wkm2rY2L6uQ",
+   "published": "2026-11-24T16:17Z",
+   "first_seen": "2026-11-24T16:35:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/Wkm2rY2L6uQ/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=Wkm2rY2L6uQ"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 820
+  }
+ ],
  "recent": [
   {
    "id": 22202,
@@ -443,13 +465,13 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-24T15:50:14Z",
+  "last_poll_at": "2026-11-24T16:35:14Z",
   "sources_enabled": 101,
-  "sources_ok": 97,
+  "sources_ok": 99,
   "sources_failing": 2,
   "failed": [
    "GamesRadar (HTTP 404, 3x)",
-   "PC Gamer (HTTP 404, 2x)"
+   "PC Gamer (HTTP 404, 3x)"
   ]
  }
 }
