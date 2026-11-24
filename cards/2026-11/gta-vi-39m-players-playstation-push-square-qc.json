@@ -1,0 +1,61 @@
+{
+ "name": "gta-vi-39m-players-playstation-push-square",
+ "out": "cards/2026-11/gta-vi-39m-players-playstation-push-square-reel-v2.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot scan",
+   "detail": "footage scan stopped at its cap (180 s); shots as written, automatic slots from the footage library or evenly spaced"
+  },
+  {
+   "stage": "credit",
+   "detail": "credit ladder step 3 (short names): «المصدر: مدونة PlayStation · اللقطات: Rockstar Games» -> «المصدر: مدونة PlayStation · · اللقطات: Rockstar» at 40 px"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "hook",
+   "slot": 0,
+   "step": "a",
+   "why": "another stretch of the same file: clean point at 5.77 s (opener 3.0 s was used by gta-vi-circana-engagement-push-square at 0.0 s within 14 days)"
+  }
+ ],
+ "job_to_pass_min": 6.5,
+ "at": "2026-11-24T01:56:01Z",
+ "findings": [],
+ "notes": [
+  "length 19.0 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 58.3; leak_pct 0.9; cache {'hit': 0, 'miss': 4}; separate_secs 6.6; secs 10.5",
+  "render_job: lifeless: {\"score\": 5.9, \"still_share\": 0.048, \"longest_still\": 0.9, \"cuts_per_10s\": 7.41, \"held_under_text\": 0.0, \"secs\": 18.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 24 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [],
+ "job_sha": "20a86e1962a8881e6722a8dfcb8416a2b28c67c1",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 2.0,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/gta-vi-39m-players-playstation-push-square-look-1.jpg",
+  "cards/2026-11/gta-vi-39m-players-playstation-push-square-look-2.jpg",
+  "cards/2026-11/gta-vi-39m-players-playstation-push-square-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": null,
+ "job_path": "jobs/done/gta-vi-39m-players-playstation-push-square.json",
+ "stage_minutes": {
+  "queue": 0.02,
+  "setup": 0.18,
+  "fetch": 0.07,
+  "shots": 3.04,
+  "checks": 0.39,
+  "render": 1.5,
+  "after": 0.66,
+  "job": 5.68
+ }
+}
