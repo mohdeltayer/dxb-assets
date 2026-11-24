@@ -30,52 +30,103 @@
  ],
  "shots": [
   [
-   "attack-on-titan-3-gameplay-dec-10-gematsu-attack-on-titan-3-announce-trailer.mp4",
-   "auto",
-   3.8,
-   null
+   "attack-on-titan-3-gameplay-dec-10-gematsu-on-sale-12-10-26-attack-on-titan-3-gameplay-reveal-trailer.mp4",
+   12.46,
+   2.2,
+   [
+    [
+     0.0,
+     0.202
+    ]
+   ]
   ],
   [
    "attack-on-titan-3-gameplay-dec-10-gematsu-attack-on-titan-3-announce-trailer.mp4",
-   "auto",
+   2.34,
    2.49,
-   null
+   [
+    [
+     0.0,
+     0.0
+    ]
+   ]
   ],
   [
-   "attack-on-titan-3-gameplay-dec-10-gematsu-attack-on-titan-3-announce-trailer.mp4",
-   "auto",
-   2.49,
-   null
-  ],
-  [
-   "attack-on-titan-3-gameplay-dec-10-gematsu-attack-on-titan-3-announce-trailer.mp4",
-   "auto",
+   "attack-on-titan-3-gameplay-dec-10-gematsu-on-sale-12-10-26-attack-on-titan-3-gameplay-reveal-trailer.mp4",
+   53.55,
    2.2,
-   null
+   0.5
   ],
   [
    "attack-on-titan-3-gameplay-dec-10-gematsu-attack-on-titan-3-announce-trailer.mp4",
-   "auto",
+   87.27,
    2.2,
-   null
+   [
+    [
+     0.0,
+     0.58
+    ]
+   ]
+  ],
+  [
+   "attack-on-titan-3-gameplay-dec-10-gematsu-on-sale-12-10-26-attack-on-titan-3-gameplay-reveal-trailer.mp4",
+   36.87,
+   2.2,
+   [
+    [
+     0.0,
+     0.344
+    ]
+   ]
   ],
   [
    "attack-on-titan-3-gameplay-dec-10-gematsu-attack-on-titan-3-announce-trailer.mp4",
-   "auto",
+   13.53,
    2.2,
-   null
+   [
+    [
+     0.0,
+     0.467
+    ]
+   ]
   ],
   [
    "attack-on-titan-3-gameplay-dec-10-gematsu-attack-on-titan-3-announce-trailer.mp4",
-   "auto",
+   44.19,
    2.2,
-   null
+   [
+    [
+     0.0,
+     0.709
+    ],
+    [
+     0.685,
+     0.608
+    ],
+    [
+     1.336,
+     0.562
+    ],
+    [
+     2.12,
+     0.359
+    ]
+   ]
   ],
   [
    "attack-on-titan-3-gameplay-dec-10-gematsu-attack-on-titan-3-announce-trailer.mp4",
-   "auto",
+   72.86,
    2.2,
-   null
+   [
+    [
+     0.0,
+     0.528
+    ],
+    [
+     1.345,
+     0.481
+    ]
+   ]
   ]
  ],
  "lines": [
@@ -120,7 +171,7 @@
   [
    0,
    7,
-   "المصدر: موقع جيماتسو (Gematsu)،\nواللقطات من صفحة اللعبة على Steam",
+   "المصدر: Gematsu · اللقطات: صفحة اللعبة على Steam",
    {
     "size": 40,
     "band": true
@@ -149,8 +200,8 @@
  "skin": "house",
  "cut": false,
  "track": [
-  "attack-on-titan-3-gameplay-dec-10-gematsu-attack-on-titan-3-announce-trailer.mp4",
-  0.0
+  "attack-on-titan-3-gameplay-dec-10-gematsu-on-sale-12-10-26-attack-on-titan-3-gameplay-reveal-trailer.mp4",
+  12.46
  ],
  "track_from_first_shot": true,
  "angle": {
@@ -176,5 +227,41 @@
   "credit on every clip": "yes: one credit over every shot",
   "sound": "yes: trailer sound from the first shot, split per shot on the server",
   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
- }
+ },
+ "cut_ok": [
+  [
+   "attack-on-titan-3-gameplay-dec-10-gematsu-attack-on-titan-3-announce-trailer.mp4",
+   13.53,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "attack-on-titan-3-gameplay-dec-10-gematsu-attack-on-titan-3-announce-trailer.mp4",
+   44.19,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "attack-on-titan-3-gameplay-dec-10-gematsu-attack-on-titan-3-announce-trailer.mp4",
+   72.86,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ]
+ ],
+ "drift_ok": [
+  [
+   "attack-on-titan-3-gameplay-dec-10-gematsu-attack-on-titan-3-announce-trailer.mp4",
+   13.53,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "attack-on-titan-3-gameplay-dec-10-gematsu-attack-on-titan-3-announce-trailer.mp4",
+   44.19,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "attack-on-titan-3-gameplay-dec-10-gematsu-attack-on-titan-3-announce-trailer.mp4",
+   72.86,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ]
+ ],
+ "layout": "showcase",
+ "showcase_reason": "the trailer clashes with our text in a 9:16 crop: the shot scan found no clean stretch for 3 slot(s) (16:9 fallback, Mohammad 20 Nov 2026)"
 }
