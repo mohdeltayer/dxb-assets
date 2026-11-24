@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-24T07:52:06Z",
- "seq": 801,
+ "generated_at": "2026-11-24T08:15:16Z",
+ "seq": 802,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 21816,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "A Fold Apart: Recrafted - Launch Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=plKjdsLwVDA",
+   "published": "2026-11-24T08:00Z",
+   "first_seen": "2026-11-24T08:15:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/plKjdsLwVDA/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=plKjdsLwVDA"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 802
+  }
+ ],
  "recent": [
   {
    "id": 21662,
@@ -233,9 +255,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-24T07:50:14Z",
+  "last_poll_at": "2026-11-24T08:15:15Z",
   "sources_enabled": 101,
-  "sources_ok": 101,
+  "sources_ok": 100,
   "sources_failing": 0,
   "failed": []
  }
