@@ -1,0 +1,147 @@
+{
+ "name": "hogwarts-legacy-22-aed-arabic-steam",
+ "story": "2026-11-24-hogwarts-legacy-22-aed-arabic-steam",
+ "footage_source": "steam:990080",
+ "kind_news": "price",
+ "story_class": "trailer",
+ "story_class_why": "kind price",
+ "skin_why": "genre rpg",
+ "built_by": "server-slip",
+ "render_lane": "server",
+ "out": "cards/2026-11/hogwarts-legacy-22-aed-arabic-steam-reel-v1.mp4",
+ "split_fallback": "ladder",
+ "footage": [
+  {
+   "file": "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4",
+   "steam": 990080,
+   "trailer": "Hogwarts Legacy Launch Trailer ESRB",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "990080"
+  },
+  {
+   "file": "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-cg-trailer-esrb.mp4",
+   "steam": 990080,
+   "trailer": "Hogwarts Legacy CG Trailer ESRB",
+   "start": 0,
+   "seconds": 120,
+   "trailer_id": "990080"
+  }
+ ],
+ "shots": [
+  [
+   "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4",
+   "auto",
+   2.2,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   1,
+   2,
+   [
+    [
+     "وتدعم اللعبة الواجهة\nوالترجمة العربية",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   3,
+   4,
+   [
+    [
+     "من دون دبلجة،\nحسب صفحتها على Steam",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   4,
+   "المصدر: متجر Steam",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "تُباع لعبة Hogwarts Legacy حاليًا على Steam في الإمارات بسعر 22 درهمًا بدلًا من 220، بخصم 90 بالمئة. وتدعم اللعبة الواجهة والترجمة العربية من دون دبلجة، حسب صفحتها على Steam.",
+ "headline": "لعبة Hogwarts Legacy\nبسعر 22 درهمًا على Steam",
+ "label": "السعر",
+ "game": "Hogwarts Legacy",
+ "game_short": "Hogwarts Legacy",
+ "game_key": "hogwarts legacy",
+ "genre": [
+  "rpg"
+ ],
+ "texts": {
+  "instagram": "لعبة Hogwarts Legacy بسعر 22 درهمًا على Steam\n\nتُباع لعبة Hogwarts Legacy حاليًا على Steam في الإمارات بسعر 22 درهمًا بدلًا من 220 درهمًا، بخصم 90 بالمئة، حسب صفحة المتجر يوم 24 نوفمبر 2026.\n\nوتدعم اللعبة الواجهة والترجمة العربية من دون دبلجة عربية، وقد صدرت في 10 فبراير 2023.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: صفحة اللعبة على Steam.\n\n#ألعاب #أخبار_الألعاب #HogwartsLegacy #Steam",
+  "x": "تُباع لعبة Hogwarts Legacy حاليًا على Steam في الإمارات بسعر 22 درهمًا بدلًا من 220، بخصم 90 بالمئة، مع واجهة وترجمة عربية. المصدر: صفحة اللعبة على Steam.",
+  "threads": "تُباع لعبة Hogwarts Legacy حاليًا على Steam في الإمارات بسعر 22 درهمًا بدلًا من 220، بخصم 90 بالمئة، مع واجهة وترجمة عربية.\n\nالمصدر: صفحة اللعبة على Steam"
+ },
+ "source": "متجر Steam",
+ "date": "24 Nov 2026",
+ "theme": "gold",
+ "style": null,
+ "template": "trailer",
+ "skin": "fantasy",
+ "cut": false,
+ "track": [
+  "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": null,
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "template": "trailer: kind price",
+  "skin": "fantasy: genre rpg",
+  "footage": "hogwarts-legacy-22-aed-arabic-steam-hogwarts-legacy-launch-trailer-esrb.mp4 from the resolver (steam:990080)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Steam store page, UAE (cc=ae), read 24 Nov 2026 02:00Z: 220 AED, now 22 AED, 90% off; Arabic interface and subtitles, no Arabic full audio; released 10 Feb 2023 (https://store.steampowered.com/app/990080/); first report: Steam UAE store page, read 24 Nov 2026 02:00Z",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: plain news; the spoken paragraph carries hook and payoff",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam 990080 from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ }
+}
