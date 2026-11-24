@@ -1,0 +1,382 @@
+{
+ "name": "ace-combat-8-online-season-2-dec-1-4gamer",
+ "out": "cards/2026-11/ace-combat-8-online-season-2-dec-1-4gamer-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot scan",
+   "detail": "footage scan stopped at its cap (300 s); shots as written, automatic slots from the footage library or evenly spaced"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4 at 61.95 s for 3.8 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "scan cap: 1 automatic slot(s) from the library or evenly spaced"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4 at 107.01 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4 at 32.99 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4 at 82.35 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4 at 23.14 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4 at 72.57 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "d",
+   "why": "audio split not applied (music stem not clean (leftover 5.4% > 5.0%)) on a trailer track under 6 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or o"
+  }
+ ],
+ "job_to_pass_min": 11.3,
+ "at": "2026-11-24T19:21:51Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 15.5 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 5.4% > 5.0%); music_pct 33.9; leak_pct 5.4; cache {'hit': 0, 'miss': 6}; separate_secs 10.1; secs 13.8",
+  "render_job: audio split fallback: our bed (audio split not applied (music stem not clean (leftover 5.4% > 5.0%)) on a trailer track under 6 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.); bed:neon_d",
+  "render_job: lifeless: {\"score\": 11.9, \"still_share\": 0.162, \"longest_still\": 1.1, \"cuts_per_10s\": 9.74, \"held_under_text\": 0.0, \"secs\": 15.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 23 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "credit 1",
+   "rule": "credit_width",
+   "what": "set one line at 40 px (was 40 px, too wide for the safe zone)",
+   "before": {
+    "text": "المصدر: موقع فورغيمر (4Gamer)،\nواللقطات من صفحة اللعبة على Steam",
+    "size": 40
+   },
+   "after": {
+    "text": "المصدر: 4Gamer · اللقطات: صفحة اللعبة على Steam",
+    "size": 40
+   }
+  }
+ ],
+ "job_sha": "a5ac19379f51cd294d0b4955b204f1bc3e87e117",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 2.71,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/ace-combat-8-online-season-2-dec-1-4gamer-look-1.jpg",
+  "cards/2026-11/ace-combat-8-online-season-2-dec-1-4gamer-look-2.jpg",
+  "cards/2026-11/ace-combat-8-online-season-2-dec-1-4gamer-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_d (trailer sound refused: music stem not clean (leftover 5.4% > 5.0%))",
+ "shot_read": {
+  "secs": 104.4,
+  "files": {
+   "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4": {
+    "secs": 59.1,
+    "cached": false,
+    "stages": {
+     "decode": 34.7,
+     "autofocus": 50.8,
+     "ocr": 50.8,
+     "smear": 58.8,
+     "scenes": 59.0
+    },
+    "incomplete": null
+   },
+   "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve.mp4": {
+    "secs": 45.3,
+    "cached": false,
+    "stages": {
+     "decode": 25.6,
+     "autofocus": 36.4,
+     "ocr": 36.4,
+     "smear": 45.2,
+     "scenes": 45.3
+    },
+    "incomplete": null
+   },
+   "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-launch-trailer.mp4": {
+    "secs": 0.0,
+    "cached": true,
+    "stages": {
+     "decode": 25.6,
+     "autofocus": 36.4,
+     "ocr": 36.4,
+     "smear": 45.2,
+     "scenes": 45.3
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/ace-combat-8-online-season-2-dec-1-4gamer.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.22,
+  "fetch": 0.82,
+  "shots": 5.11,
+  "checks": 0.32,
+  "render": 2.67,
+  "after": 0.87,
+  "job": 9.8
+ },
+ "job_after_autofix": {
+  "name": "ace-combat-8-online-season-2-dec-1-4gamer",
+  "story": "2026-11-24-ace-combat-8-online-season-2-dec-1-4gamer",
+  "footage_source": "steam:2288340",
+  "kind_news": "update",
+  "story_class": "trailer",
+  "story_class_why": "kind update",
+  "skin_why": "genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/ace-combat-8-online-season-2-dec-1-4gamer-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
+    "steam": 2288340,
+    "trailer": "ACE COMBAT 8: WINGS OF THEVE - Pre-Order Trailer",
+    "trailer_id": "2288340"
+   },
+   {
+    "file": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve.mp4",
+    "steam": 2288340,
+    "trailer": "ACE COMBAT 8: WINGS OF THEVE",
+    "trailer_id": "2288340"
+   },
+   {
+    "file": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-launch-trailer.mp4",
+    "steam": 2288340,
+    "trailer": "ACE COMBAT 8: WINGS OF THEVE - Launch Trailer",
+    "trailer_id": "2288340"
+   }
+  ],
+  "shots": [
+   [
+    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
+    0.0,
+    3.8,
+    null
+   ],
+   [
+    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
+    0.0,
+    2.42,
+    null
+   ],
+   [
+    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
+    0.0,
+    2.42,
+    null
+   ],
+   [
+    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
+    0.0,
+    2.39,
+    null
+   ],
+   [
+    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
+    0.0,
+    2.39,
+    null
+   ],
+   [
+    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
+    0.0,
+    2.24,
+    null
+   ],
+   [
+    "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
+    0.0,
+    2.24,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "ويضيف الموسم المقاتلة\nالشبحية X-40 Nightmare",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "ومقاتلة الحرب\nالإلكترونية EA-36 Barricader،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "إضافة إلى خريطتين\nجديدتين للعب التعاوني",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    6,
+    "المصدر: 4Gamer · اللقطات: صفحة اللعبة على Steam",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع فورغيمر (4Gamer) أن الموسم الثاني من الوضع الإلكتروني للعبة Ace Combat 8 يبدأ في 1 ديسمبر. ويضيف الموسم المقاتلة الشبحية X-40 Nightmare ومقاتلة الحرب الإلكترونية EA-36 Barricader، إضافة إلى خريطتين جديدتين للعب التعاوني.",
+  "headline": "الموسم الثاني\nمن Ace Combat 8 أونلاين",
+  "label": "تقرير",
+  "game": "Ace Combat 8",
+  "game_short": "Ace Combat 8",
+  "game_key": "ace combat viii",
+  "genre": [
+   "action"
+  ],
+  "texts": {
+   "instagram": "ذكر موقع فورغيمر (4Gamer) أن الموسم الثاني من الوضع الإلكتروني للعبة Ace Combat 8 يبدأ في 1 ديسمبر.\n\nويضيف الموسم المقاتلة الشبحية X-40 Nightmare وخريطتين جديدتين للعب التعاوني.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع فورغيمر (4Gamer).\n\n#ألعاب #أخبار_الألعاب #AceCombat8 #بانداي_نامكو",
+   "x": "تقرير: ذكر موقع فورغيمر (4Gamer) أن الموسم الثاني من الوضع الإلكتروني للعبة Ace Combat 8 يبدأ في 1 ديسمبر، ويضيف المقاتلة الشبحية X-40 Nightmare وخريطتين جديدتين. المصدر: فورغيمر.",
+   "threads": "تقرير: ذكر موقع فورغيمر (4Gamer) أن الموسم الثاني من الوضع الإلكتروني للعبة Ace Combat 8 يبدأ في 1 ديسمبر.\n\nويضيف الموسم المقاتلة الشبحية X-40 Nightmare وخريطتين جديدتين للعب التعاوني.\n\nالمصدر: موقع فورغيمر (4Gamer)"
+  },
+  "source": "موقع فورغيمر (4Gamer)، واللقطات من صفحة اللعبة على Steam",
+  "date": "24 Nov 2026",
+  "theme": "spectacle",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "4Gamer reported on 24 Nov that the online mode of Ace Combat 8 gets Season 2 on 1 December, after a teaser from Bandai Namco",
+   "what_it_means_here": "Players get the new stealth fighter X-40 Nightmare, the EA-36 Barricader and two new co-op maps"
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind update",
+   "skin": "house: genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4 from the resolver (steam:2288340)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Bandai Namco Entertainment, ACE COMBAT Online Season Two is starting soon (https://www.bandainamcoent.com/news/ace-combat-8-wings-of-theve-ace-combat-online-season-two-starting-soon); first report: Bandai Namco news post 24 Nov 2026 00:00Z (teaser); 4Gamer 24 Nov 2026 11:15Z (details, read in full)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 2288340 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "shots_auto": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ]
+ }
+}

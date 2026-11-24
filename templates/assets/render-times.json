@@ -150463,5 +150463,266 @@
   "sound": "bed:neon (trailer sound refused: music stem not clean (leftover 27.7% > 5.0%))",
   "footage": true,
   "upload_secs": 9.0
+ },
+ {
+  "name": "ace-combat-8-online-season-2-dec-1-4gamer-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-24T19:20Z",
+  "stages": {
+   "checks": 5.5,
+   "montage": 41.5,
+   "text": 32.3,
+   "audio": 0.8,
+   "outro": 12.8
+  },
+  "total": 92.9,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-24T19:19Z",
+  "finished_at": "2026-11-24T19:20Z",
+  "render_min": 1.55,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
+    "start": 61.95,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.81,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
+    "start": 3.07,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.81,
+    "rows": 708,
+    "zoom": 2.71,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
+    "start": 107.01,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.81,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
+    "start": 32.99,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.81,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
+    "start": 82.35,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.81,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
+    "start": 23.14,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.81,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4",
+    "start": 72.57,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.81,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 2.71,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 10.1,
+   "audio_secs": 42.3,
+   "music_pct": 33.9,
+   "leak_pct": 5.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 6
+   },
+   "reason": "music stem not clean (leftover 5.4% > 5.0%)",
+   "secs": 13.8,
+   "ladder": "d",
+   "fallback": "bed:neon_d"
+  },
+  "lifeless": {
+   "score": 11.9,
+   "still_share": 0.162,
+   "longest_still": 1.1,
+   "cuts_per_10s": 9.74,
+   "held_under_text": 0.0,
+   "secs": 15.4,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 49.3,
+   "shots": 306.4,
+   "checks": 13.9,
+   "render": 165.5,
+   "after": 52.1
+  },
+  "softgate": {
+   "warnings": 1,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 1,
+     "step": "a",
+     "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 0,
+     "step": "a",
+     "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4 at 61.95 s for 3.8 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "b",
+     "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "a",
+     "why": "scan cap: 1 automatic slot(s) from the library or evenly spaced"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4 at 107.01 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4 at 32.99 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4 at 82.35 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4 at 23.14 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "ace-combat-8-katabuchi-ace9-famitsu-ace-combat-8-wings-of-theve-pre-order-trailer.mp4 at 72.57 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "d",
+     "why": "audio split not applied (music stem not clean (leftover 5.4% > 5.0%)) on a trailer track under 6 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or o"
+    }
+   ]
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 588,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1180,
+  "peak_mem_mb": 2866,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 71059,
+  "peak_disk_mb": 72260,
+  "min_disk_free_mb": 173846,
+  "setup_min": 0.22,
+  "story": "ace-combat-8-online-season-2-dec-1-4gamer",
+  "job_sha": "a5ac19379f51cd294d0b4955b204f1bc3e87e117",
+  "dispatches": 1,
+  "sound": "bed:neon_d (trailer sound refused: music stem not clean (leftover 5.4% > 5.0%))",
+  "footage": true
  }
 ]
