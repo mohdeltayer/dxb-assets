@@ -94,7 +94,7 @@ jobs:
             echo "RENDER_RETRY=${{ github.event.inputs.retry || '' }}"
             echo "DUBAI_FONTS=$RUNNER_TEMP/dubai-fonts"
             echo "DXB_UPLOADS=$RUNNER_TEMP/uploads"
-            echo "YOLO_WEIGHTS=$RUNNER_TEMP/models/yolov8n.pt"
+            echo "YOLO_WEIGHTS=$HOME/.cache/dxb-models/yolov8n.pt"
           } >> "$GITHUB_ENV"
 
       - name: Fonts (temp folder, outside the workspace)
@@ -109,17 +109,53 @@ jobs:
           for w in Light Regular Medium Bold; do test -f "$DUBAI_FONTS/Dubai-$w.ttf" || { echo "Dubai-$w.ttf missing from dubai.zip"; exit 1; }; done
 
       - uses: actions/setup-python@v6
+        id: py
         with:
           python-version: '3.11'
 
+      # Cached Python environment (Mohammad, 24 Nov 2026: slip builds on the runner timed out at 15 minutes twice
+      # overnight). The venv and the YOLO weights are restored from the Actions cache, keyed on
+      # templates/requirements-render.txt and the exact Python version, so pip runs only when that file changes.
+      - name: Python cache key
+        run: echo "VENV=$HOME/venv-render" >> "$GITHUB_ENV"
+      - uses: actions/cache@v4
+        id: venv
+        with:
+          path: ~/venv-render
+          key: render-venv-${{ runner.os }}-py${{ steps.py.outputs.python-version }}-${{ hashFiles('templates/requirements-render.txt') }}
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/dxb-models
+          key: render-models-yolov8n-v1
+
+      # Its own 5 minute limit (Mohammad, 24 Nov 2026). A hang here fails this step by name, and the retry job below
+      # re-dispatches the render once (templates/render_retry.py: INSTALL_STEPS).
+      - name: Python packages
+        timeout-minutes: 5
+        run: |
+          if [ "${{ steps.venv.outputs.cache-hit }}" = "true" ] && "$VENV/bin/python" -c "import torch, ultralytics, cv2, PIL, pedalboard" 2>/dev/null; then
+            echo "$(date -u +%T) python packages from the cache (pip skipped)"
+          else
+            echo "$(date -u +%T) building the venv"
+            rm -rf "$VENV"; python -m venv "$VENV"
+            "$VENV/bin/python" -m pip install -q --upgrade pip
+            cpu=$(grep -E '#\s*cpu-index' templates/requirements-render.txt | awk '{print $1}' | tr '\n' ' ')
+            rest=$(grep -vE '^\s*(#|$)|cpu-index' templates/requirements-render.txt | awk '{print $1}' | tr '\n' ' ')
+            echo "$(date -u +%T) pip $cpu (cpu index)"
+            "$VENV/bin/python" -m pip install -q --timeout 60 --retries 3 $cpu --index-url https://download.pytorch.org/whl/cpu
+            echo "$(date -u +%T) pip $rest"
+            "$VENV/bin/python" -m pip install -q --timeout 60 --retries 3 $rest
+          fi
+          echo "$VENV/bin" >> "$GITHUB_PATH"
+          echo "$(date -u +%T) python packages done"
+
       - name: Text check (fails in seconds on a bad wrap)
         run: |
-          python -m pip install -q pillow numpy soundfile pedalboard
           # the server's mechanical fixes first, in the job file and listed (adv-20261117-gates-fix-not-refuse B)
           AUTOFIX_JSON="$RUNNER_TEMP/autofix.json" python templates/render_job.py text "$JOB" --fix
 
       - name: Tools
-        timeout-minutes: 10                        # a hung apt or pip mirror held two runs for 15 minutes on 23 Oct
+        timeout-minutes: 5                         # a hung apt mirror held two runs for 15 minutes on 23 Oct; 5 since 24 Nov, retried once
         run: |
           echo "$(date -u +%T) apt"
           # four runs on 23 Oct sat silent at apt install for 10 minutes: a fresh VM's unattended-upgrades holds the dpkg lock
@@ -134,12 +170,7 @@ jobs:
             tar -xJf "$RUNNER_TEMP/ff.tar.xz" -C "$RUNNER_TEMP" && sudo cp "$RUNNER_TEMP"/ffmpeg-master-latest-linux64-gpl/bin/ff* /usr/local/bin/
           fi
           command -v ffmpeg; command -v tesseract || echo "tesseract missing: sheet text checks will warn"
-          echo "$(date -u +%T) pip"
-          python -m pip install -q --upgrade pip
-          python -m pip install -q --timeout 60 --retries 3 torch torchvision --index-url https://download.pytorch.org/whl/cpu   # a matching pair, or YOLO's nms op is missing
-          echo "$(date -u +%T) pip rest"
-          python -m pip install -q --timeout 60 --retries 3 pillow numpy soundfile pedalboard ultralytics opencv-python-headless
-          echo "$(date -u +%T) tools done"
+          echo "$(date -u +%T) tools done (python packages: the step above)"
           mkdir -p "$DXB_UPLOADS" "$(dirname "$YOLO_WEIGHTS")"
 
       # HyperFrames inserts (advisor, 24 Oct 2026) and the design pass (frame and kit moments, 24 Oct 2026,
@@ -343,19 +374,19 @@ jobs:
   # contents read only, no secrets and no checkout of anything but the templates.
   retry:
     needs: render
-    if: ${{ failure() && needs.render.result == 'failure' && github.event.inputs.retry != '1' && github.run_attempt == 1 }}
+    if: ${{ failure() && needs.render.result == 'failure' && github.run_attempt == 1 }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
       actions: write
-      contents: read
+      contents: write          # the server fallback moves the job file from jobs/render/ to jobs/live/ (24 Nov 2026)
     steps:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 1
           filter: blob:none
           sparse-checkout: templates
-      - name: Retry a lost runner once
+      - name: Retry once, else fall back to the server queue
         env:
           GH_TOKEN: ${{ github.token }}
           RETRY_INPUT: ${{ github.event.inputs.retry }}

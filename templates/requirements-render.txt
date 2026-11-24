@@ -1,0 +1,12 @@
+# Python packages for the GitHub render runner (render.yml), 24 Nov 2026. The runner keeps them in a cached venv keyed on
+# this file's hash and the exact Python version, so pip runs only when this file changes. Edit this file to change them.
+# torch and torchvision come from the CPU index as a matching pair (or YOLO's nms op is missing); render.yml installs the
+# two lines marked "cpu-index" from https://download.pytorch.org/whl/cpu and the rest from PyPI.
+torch  # cpu-index
+torchvision  # cpu-index
+pillow
+numpy
+soundfile
+pedalboard
+ultralytics
+opencv-python-headless

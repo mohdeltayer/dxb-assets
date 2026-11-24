@@ -14,6 +14,6 @@
    "capacity"
   ]
  },
- "overflow": false,
- "overflow_note": "Mohammad, 24 Nov 2026: slip builds overflowed to GitHub timed out at 15 minutes twice overnight. Until he adds lanes 2 and 3 (scripts/runner-add.sh), overflow is off: every job, T0 included, routes to the server and waits in its runner queue. Set true to send jobs beyond the server slots to render.yml again."
+ "overflow": true,
+ "overflow_note": "Mohammad, 24 Nov 2026 (correction the same morning): keep overflowing to the GitHub runner, both in use until he adds lanes 2 and 3. The runner was fixed instead: cached Python environment, a 5-minute install step re-dispatched once on a hang, and a runner render that fails falls back to the server queue (render-live lane=server). false sends every job to the server queue."
 }

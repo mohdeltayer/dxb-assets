@@ -31,6 +31,10 @@ on:
         description: 'true: only print the lane the route picks (server or overflow); nothing renders or moves'
         required: false
         default: 'false'
+      lane:
+        description: 'auto (server slot or overflow) or server (queue on the server, never overflow: the runner fallback)'
+        required: false
+        default: 'auto'
 
 jobs:
   # Server lanes (Mohammad, 19 Nov 2026): the server takes render_slots renders at once (templates/assets/server-lanes.json);
@@ -71,6 +75,7 @@ jobs:
         id: lane
         env:
           GH_TOKEN: ${{ github.token }}
+          LANE_INPUT: ${{ inputs.lane }}
         run: python3 templates/render_route.py live "${{ steps.job.outputs.job }}"
 
   # Overflow: the job moves to jobs/render/ and render.yml renders it on a GitHub runner (same render, commit, strip,

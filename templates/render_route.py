@@ -169,6 +169,10 @@ def main(what):
         print('render_route: ' + why)
         out('lane', 'server' if lane == 'server' else 'hosted')
     elif what == 'live':
+        if forced == 'server':                          # the runner's fallback (24 Nov 2026): queue on the server, never overflow
+            print('render_route: lane forced to server (fallback from a failed runner render)')
+            out('lane', 'server')
+            return
         job = json.load(open(sys.argv[2]))
         try:
             held = holders(repo, run)
