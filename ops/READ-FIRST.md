@@ -64,23 +64,26 @@ slot with no post 20 minutes before it).
    GitHub's runner only with `"render_lane": "hosted"` and a `"lane_reason"`: the job in `jobs/render/` (render.yml,
    input `job`; a run with no job named is refused). Breaking: `render-breaking.yml` with `job` and `lane`.
    Done when `cards/YYYY-MM/<name>-reel-vN-publer.json` lands on main with the mp4, strip, sheet and dense.
-5. Director check on the strip, dense and sheet (Director card, delegation.md), then
-   `python3 templates/presubmit.py director <story> PASS <out.mp4> --job <your copy of the job>` (the gate runs again
-   on the job; its "out" must be this file).
-6. Per platform: `presubmit.py intent <commitment> <platform> <story> <out.mp4>` (refuses without a director PASS
-   with a passed checklist for this exact file, and refuses a second submit), then `submit_publer_posts`, then
-   `get_publer_job_status` on that submit until it reads complete (or failed), then `presubmit.py result <commitment>
-   <platform> scheduled --job-status complete` (failed: `failed --job-status failed`). The submit is done only then; the
-   posts list lags and is never the proof. Labels: newsroom/publer-labels.md (one spelling, a `kind:` label on every post, `tpl:showcase`).
-   After every submit read `list_publer_posts state scheduled` and quote what it shows (platform, slot, labels) in the board line.
-   posts list lags and is never the proof. A failed or timed-out submit: read the job status, then look the post up in
-   Publer twice 10 minutes apart before anything else; never submit again on one empty list. No Publer ids in any file.
-7. Records: the `newsroom/commitments.json` row, `python3 templates/formats.py add`; after publishing,
-   `presubmit.py published <commitment> <story> --links <ig> <x> <threads> --queue <dxb-queue clone>` (story file,
-   newsroom/published.jsonl, heartbeat), then push both repos.
-8. Board: one handoff on `desk/board.md` and `desk/board.json`: "built and scheduled: <story>, <slot>, job status
-   complete HH:MMZ on <platforms>" (the line presubmit prints).
-   Keep at least 6 finished undated Reels in `newsroom/evergreen.md` (Status "ready"); fewer is a keeper alarm, and a
+5. Director check on the strip, dense and sheet (Director card, delegation.md). The verdict is a plain file, never a
+   command (Mohammad, 23 and 24 Nov 2026: `presubmit.py director` was refused by the safety filter in the 23 Nov runs and
+   again at 21:26Z, so finished Reels sat unscheduled): the Director agent writes `jobs/director/<job name>.json`
+   (story, out, verdict pass or fix, reason and the one fix, reasons, job_patch for factual_error, unclear_text or
+   graphic, at, by; format and example in jobs/director/README.md) and commits and pushes it. NEVER run
+   `presubmit.py director`, `intent`, `result`, `line` or `published`: they are retired from Production 2's flow.
+6. Scheduling goes through the server step (server-post.yml reads the director file on every keeper tick: pass
+   schedules, fix renders once more, no file 20 minutes after the render schedules anyway). Until the server has its
+   Publer posting key it writes the Reel "ready" and the work order shows it as alarm serverpost-ready with the slot. For
+   each one: read Publer (scheduled, and published for 48 hours) and run `python3 templates/publercheck.py posts <file>
+   --story <story id>` (exit 1: skip it, note it on the board); then submit_publer_posts on Instagram (Reel), X and
+   Threads at that minute with the story file's texts and the labels in the alarm (story:<job name> included), then
+   get_publer_job_status until complete, then `python3 templates/serverpost.py scheduled <story> --slot <ISO>` (a record
+   of what was done, not an approval). Publer is the only record of what is scheduled and posted (23 Nov 2026).
+   A failed or timed-out submit: read the job status, then look the post up in Publer twice 10 minutes apart before
+   anything else; never submit again on one empty list. No Publer ids in any file.
+7. Records: `python3 templates/formats.py add`; nothing else is needed after publishing (Publer is the record).
+8. Board: one handoff on `desk/board.md` and `desk/board.json`: "scheduled: <story>, <slot Dubai>, job status complete
+   HH:MMZ on <platforms>" (no id suffixes needed).
+   Keep at least 6 finished undated Reels (ops/cadence.json buffer_target) as Publer drafts labelled kind:evergreen, listed in `newsroom/evergreen.md` (Status "ready"); fewer is a keeper alarm, and a
    run that builds no news builds a bank piece (the idle card's bank step is mandatory then).
 
 ## 5. Never

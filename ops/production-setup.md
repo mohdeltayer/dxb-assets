@@ -305,11 +305,11 @@ a run that has not been updated still reads them.
    Detail: newsroom/delegation.md, "Director verdict is a file".
 6. The gate's own steps (release 2026-11-10, rules into the gate; code refuses each, so a run that skips one stops):
    the job carries `"built_by": "production-2"`; the director is a separate agent and records its verdict with
-   `presubmit.py director <story> PASS <out> --job <job> --by <director>` (refused when it is the builder); every
+   `jobs/director/<job name>.json` (the director file: verdict pass or fix with its reason; never the retired presubmit command, 24 Nov 2026) (refused when it is the builder); every
    intent carries the Publer labels `--labels kind:<news|evergreen|series|breaking>,tpl:<template>` (tpl:showcase for
    the showcase layout) and, for kind:evergreen, `--slot <ISO>` (refused when the post before it is evergreen or the
    last evergreen is under 3 hours away between 08:00 and 24:00 Dubai: the slot stays empty); the board's scheduled
-   line is the one `presubmit.py line <commitment> --ids ig:<last6> x:<last6> th:<last6>` prints after every platform's
+   line is the one `serverpost.py scheduled <story> --slot <ISO>` (presubmit retired, 24 Nov 2026) prints after every platform's
    job status is read back (only the last six characters of each Publer post id, on the board only). Evergreen jobs
    take chip دليل and none of the «ليست خبرًا جديدًا» family (newsroom/names-ar.md, Evergreen openers). Every card
    stands on footage or art: "ground": "rotate" is refused. The scout returns each rejected lead with one reason from
@@ -354,7 +354,7 @@ a run that has not been updated still reads them.
    effects are not gore. Target: one render per Reel; three in 24 hours raise a work-order alarm.
 11. QC failures (release 2026-11-12 r1, adv-20261112-qc-notes-become-failures). A Reel whose qc.json says `fail` is
    not posted: render-live commits it as evidence, fails the run with the findings in its summary and skips the Publer
-   upload; `presubmit.py director ... PASS` refuses it. Failures: lifeless over 38 (storybeat and tribute exempt), the
+   upload; `jobs/director/<job name>.json` (the director file: verdict pass or fix with its reason; never the retired presubmit command, 24 Nov 2026) refuses it. Failures: lifeless over 38 (storybeat and tribute exempt), the
    last two seconds a card, under 12 s before the end card (handson, edition, storybeat and breaking exempt), a story
    line of two visual lines over a card or touching its text (the text check refuses it before the render). Numbers
    and list cards now count up and reveal rows by themselves (`"animate": false` turns it off); still-ground art needs
@@ -392,7 +392,7 @@ a run that has not been updated still reads them.
    the job names "rerender": {"reason", "note"}. Commit the qc.json the send-back writes with the story file.
 16. After a render, and unfinished work (release 2026-11-17 r4, adv-20261117-server-speed-for-p2 C, D, E). a. A render
    moves its job to jobs/done/<name>.json as rendered (with the server's fixes); the render commit names it ("job:") and
-   qc.json carries job_path. The director needs no path: `presubmit.py director <story> PASS <out> --by director-p2`
+   qc.json carries job_path. The director needs no path: `jobs/director/<job name>.json` (the director file: verdict pass or fix with its reason; never the retired presubmit command, 24 Nov 2026)
    finds the job from the Reel's qc.json (a bare name works too). A re-render is a new job version in jobs/live. b. Each
    render commit, its qc.json (`stage_minutes`) and section 7 of the work order give minutes per stage (queue, setup,
    fetch, shots, checks, render, after, upload); name the slowest one on the board when a Reel took over 15 minutes.

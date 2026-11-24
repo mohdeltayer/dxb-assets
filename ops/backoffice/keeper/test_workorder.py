@@ -49,12 +49,12 @@ class Handoffs(unittest.TestCase):
         b['handoffs'].pop()
         self.assertNotIn('no-line', [x['kind'] for x in W.hop_alarms(b, early, [])])
 
-    def test_scheduled_line_needs_ids(self):
+    def test_scheduled_line_needs_no_ids(self):   # the id-suffix alarm is retired (24 Nov 2026: Publer is the record)
         b = {'handoffs': [h('s1', 'production-2', 'all', '2026-11-09T16:30:00Z', 'scheduled: story at 20:45 Dubai, 3/3'),
                           h('s2', 'production-2', 'all', '2026-11-09T16:31:00Z',
                             'scheduled: story at 21:15 Dubai, 3/3, job status complete, ids ig:a1b2c3 x:d4e5f6 th:778899')]}
         keys = [x['key'] for x in W.hop_alarms(b, NOW, []) if x['kind'] == 'no-ids']
-        self.assertEqual(keys, ['hop|no-ids|s1'])
+        self.assertEqual(keys, [])
 
     def test_mirror_and_publer(self):
         a = W.hop_alarms({'handoffs': []}, NOW, [], mirror={'generated_at': '2026-11-09T13:50:00Z'},

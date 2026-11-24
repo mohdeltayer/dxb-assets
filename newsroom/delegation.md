@@ -55,13 +55,13 @@ lists (Mohammad, 17 Oct 2026).
 
 **Publer is the source of truth (Mohammad, 23 Nov 2026; inKONBINI posted twice).** (1) Before preparing any story: list_publer_posts state scheduled (next 2 days) and state published (last 2 days), save the two results as one JSON file, run `python3 templates/publercheck.py posts <file> --story <story id>` (exit 0: prepare; 1: stop, skip it and write "skipped: already in Publer (<line>)" on the board; 3: the same story is scheduled and not posted, the new version replaces it). (2) Before every connector submit (a serverpost-ready alarm), run the same check again; a match stops the submit and goes on the board. (3) A v2 replaces v1 only while v1 has not posted: delete v1's scheduled posts in Publer, then schedule v2 at v1's minute; if v1 posted, v2 is not posted. (4) Every submit carries the label story:<job name> beside kind, tpl, skin, sound and genre. (5) Production 1 never schedules a Production 2 story; it hands it over on the board. (6) «النسخة المطبوعة» only; «النسخة المادية» is refused.
 
-**Director verdict is a file; the server schedules (Mohammad, 23 Nov 2026; replaces every `presubmit.py director`, `intent`, `result` and `line` step in this file and in ops/production-setup.md).** Three Production 2 runs on 23 Nov, and runs on 17 and 18 Nov, stopped because the safety filter refused the Director helper's `presubmit.py director` command, and the finished inKONBINI Reel was never scheduled. Now:
+**Director verdict is a file; the server schedules (Mohammad, 23 Nov 2026; replaces every presubmit director, `intent`, `result` and `line` step in this file and in ops/production-setup.md).** Three Production 2 runs on 23 Nov, and runs on 17 and 18 Nov, stopped because the safety filter refused the Director helper's `jobs/director/<job name>.json` (the director file: verdict pass or fix with its reason; never the retired presubmit command, 24 Nov 2026) command, and the finished inKONBINI Reel was never scheduled. Now:
 1. The Director (still a separate agent, never the builder) looks at the Reel and writes `jobs/director/<job name>.json` as a plain file, then commits and pushes it: `{"story", "out", "verdict": "pass" | "fix", "reason" (fix only), "fix" (the one fix, one line), "reasons": [...], "job_patch" (for factual_error, unclear_text, graphic: the corrected job fields), "at", "by"}`. Format and an example: `jobs/director/README.md`; `python3 templates/serverpost.py check <file>` validates it and records nothing. No command records an approval.
 2. The server step (`server-post.yml`, every keeper tick) reads it. Pass: scheduled in the next free slot. Fix: one more render with the fix (picture reasons take the 16:9 showcase layout; content reasons apply job_patch, and without it the Reel is held, never posted), then scheduled. No file 20 minutes after the render: scheduled anyway and noted "no director verdict" on the work order and the board. With no director verdict, a Reel whose game went out in the last 48 hours is held (a duplicate or a follow-up: a director pass decides).
 3. Production 2 schedules through the server step, not presubmit. While the server has no posting key (PUBLER_POST_KEY), the work order shows each Reel the server wrote "ready" as an alarm with its slot: submit it through the Publer connector on Instagram, X and Threads at that minute with the story file's texts and the labels in the alarm, read the job status back, then record it with `python3 templates/serverpost.py scheduled <story> --slot <ISO>` (a record of what was done, not an approval). Once the key is in, the server schedules by itself and the alarms stop.
 4. A Reel that should not post (a duplicate, a dropped story) is written in the story file's status as dropped (or held) before the 20 minutes run out; the server never schedules a dropped or held story.
 
-**Separate director (release 2026-11-10).** The director is never the session that built the Reel: the job names its builder (`"built_by"`) and the PASS is recorded with `presubmit.py director <story> PASS <out> --job <job> --by <director>`, which refuses a PASS signed by the builder. A building session spawns the director as its own agent and quotes its verdict; it never writes PASS itself.
+**Separate director (release 2026-11-10).** The director is never the session that built the Reel: the job names its builder (`"built_by"`) and the PASS is recorded with `jobs/director/<job name>.json` (the director file: verdict pass or fix with its reason; never the retired presubmit command, 24 Nov 2026), which refuses a PASS signed by the builder. A building session spawns the director as its own agent and quotes its verdict; it never writes PASS itself.
 
 **Director, graphic content and finality (adv-20261110-one-render-per-reel, item F, Mohammad 10 Nov 2026).** The
 no-gore rule (12 Oct) covers realistic blood, wounds, dismemberment and finishing kills only. Pixel-art, cartoon and
@@ -75,8 +75,7 @@ there should be no rejection"; supersedes every director checklist below where i
 two things only: the text is true (`--reason factual_error`), and it makes sense to an Arab reader who knows no English
 genre words (`--reason unclear_text`). Graphic content stays a stop (`--reason graphic`, the 12 Oct rule). A picture
 fault (wrong subject, framing, our text over the trailer's subtitles, a logo or a face) is never a send-back:
-`presubmit.py director <story> FIX <out> --job <job> --by <director> --reason wrong_subject | framing | overlap |
-unreadable_text` writes the 16:9 showcase layout into the job (the clip at its own width, headline, lines and credit in
+`jobs/director/<job name>.json` (the director file: verdict pass or fix with its reason; never the retired presubmit command, 24 Nov 2026) writes the 16:9 showcase layout into the job (the clip at its own width, headline, lines and credit in
 the bands, nothing over the picture), the server renders it once and that version is posted; on a showcase Reel a
 picture reason is refused. The server also takes the 16:9 layout on its own when the shot scan finds no clean stretch
 or burnt-in text sits under our text in the 9:16 crop.
@@ -100,16 +99,15 @@ again, push once more). New run lines go at the end of board.md, under section 5
 
 **Director limit (adv-20261115-one-render-server-checks item E, Mohammad 15 Nov 2026).** When the server qc is pass,
 the director looks once: the three look frames beside qc.json (every Reel now), the strip and the dense strip. It
-passes (`presubmit.py director <story> PASS ... --looked "<what they show>"`, notes allowed), or sends the Reel back
-once, only for a hard reason: `presubmit.py director <story> FIX <out> --by <director> --reason wrong_subject | graphic |
-unreadable_text | factual_error --note "<what and where>"`. The send-back is written to the Reel's qc.json under
+passes (`jobs/director/<job name>.json` (the director file: verdict pass or fix with its reason; never the retired presubmit command, 24 Nov 2026), notes allowed), or sends the Reel back
+once, only for a hard reason: `jobs/director/<job name>.json` (the director file: verdict pass or fix with its reason; never the retired presubmit command, 24 Nov 2026). The send-back is written to the Reel's qc.json under
 `director_sendbacks` and to the story file; commit both. A second send-back is refused; a third render is refused by the
 server unless the job names "rerender": {"reason", "note"}. Things the server now checks (a line under the headline,
 shots across scene cuts or before the picture, letterbox, a subject leaving the crop, a busy card ground, lines that are
 not the spoken paragraph) are never send-back reasons: if one slips through, it goes to the build desk as a bug.
 16:9 fallback (Mohammad, 20 Nov 2026): when the send-back is wrong_subject or unreadable_text because of what is in the
 footage (the trailer's own subtitles or credits under our lines, a face under the headline, a subject the crop loses),
-`presubmit.py director ... FIX --reason` also moves the job to the showcase layout (the trailer at its own width, our
+`jobs/director/<job name>.json` (the director file: verdict pass or fix with its reason; never the retired presubmit command, 24 Nov 2026) also moves the job to the showcase layout (the trailer at its own width, our
 headline, lines and facts in the bands); commit the job and render once more. Never a re-crop round for the same clash.
 One exception (Mohammad, 15 Nov 2026, on the card): on stylised or cartoon art, where the subject detector sees nothing
 (POPUCOM's submarine and heroes), a subject cut out of the 9:16 crop or drifting out of it is a send-back as

@@ -544,7 +544,7 @@ def hop_alarms(board, now, posts, mirror=None, server=None, history=None, server
         if at < t(RULE_FROM) or now - at > dt.timedelta(hours=24):
             continue
         done = str(h.get('done', ''))
-        if SCHEDULED_LINE.search(done):
+        if False and SCHEDULED_LINE.search(done):   # retired 24 Nov 2026: Publer is the record; presubmit line is out of the flow
             need, have = _needed_ids(done), len(ID6.findall(text_of(h, ('done', 'evidence'))))
             if have < need:
                 out.append({'key': 'hop|no-ids|' + str(h['id']), 'kind': 'no-ids',
