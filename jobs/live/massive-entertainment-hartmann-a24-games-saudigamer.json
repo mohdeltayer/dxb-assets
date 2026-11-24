@@ -39,85 +39,85 @@
  "shots": [
   [
    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
-   "auto",
+   0.0,
    3.8,
    null
   ],
   [
    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
-   "auto",
+   0.0,
    2.25,
    null
   ],
   [
    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
-   "auto",
+   0.0,
    2.25,
    null
   ],
   [
    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
-   "auto",
+   0.0,
    2.25,
    null
   ],
   [
    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
-   "auto",
+   0.0,
    2.2,
    null
   ],
   [
    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
-   "auto",
+   0.0,
    2.2,
    null
   ],
   [
    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
-   "auto",
+   0.0,
    2.2,
    null
   ],
   [
    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
-   "auto",
+   0.0,
    2.2,
    null
   ],
   [
    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
-   "auto",
+   0.0,
    2.2,
    null
   ],
   [
    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
-   "auto",
+   0.0,
    2.2,
    null
   ],
   [
    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
-   "auto",
+   0.0,
    2.2,
    null
   ],
   [
    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
-   "auto",
+   0.0,
    2.2,
    null
   ],
   [
    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
-   "auto",
+   0.0,
    2.2,
    null
   ],
   [
    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
-   "auto",
+   0.0,
    2.2,
    null
   ]
@@ -125,10 +125,10 @@
  "lines": [
   [
    1,
-   3,
+   2,
    [
     [
-     "ذكر موقع سعودي جيمر (Saudi Gamer)\nنقلا عن Variety أن المدير العام",
+     "ذكر موقع\nسعودي جيمر (Saudi Gamer)",
      {
       "size": 54
      }
@@ -136,11 +136,23 @@
    ]
   ],
   [
+   3,
    4,
+   [
+    [
+     "نقلا عن Variety\nأن المدير العام لاستوديو",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   5,
    6,
    [
     [
-     "لاستوديو Massive Entertainment،\nوهو Christoph Hartmann،",
+     "Massive Entertainment،\nوهو Christoph Hartmann،",
      {
       "size": 54
      }
@@ -161,22 +173,10 @@
   ],
   [
    10,
-   11,
-   [
-    [
-     "ويريد أن يفوز\nالاستوديو بجوائز كبرى،",
-     {
-      "size": 54
-     }
-    ]
-   ]
-  ],
-  [
-   12,
    13,
    [
     [
-     "ويحقق نجاحا تجاريا\nفي الوقت نفسه",
+     "ويريد أن يفوز الاستوديو بجوائز كبرى،\nويحقق نجاحا تجاريا في الوقت نفسه",
      {
       "size": 54
      }
@@ -188,9 +188,9 @@
   [
    0,
    13,
-   "المصدر: موقع سعودي جيمر (Saudi Gamer)\nاللقطات من صفحة The Division 2 على Steam",
+   "المصدر: Saudi Gamer · اللقطات: صفحة The Division 2 على Steam",
    {
-    "size": 40,
+    "size": 30,
     "band": true
    }
   ]
@@ -268,5 +268,21 @@
   "name": "العام لاستوديو Massive Entertainment",
   "role": "المدير",
   "photo_source": null
- }
+ },
+ "shots_auto": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13
+ ]
 }
