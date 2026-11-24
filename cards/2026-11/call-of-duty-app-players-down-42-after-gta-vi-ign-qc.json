@@ -1,0 +1,462 @@
+{
+ "name": "call-of-duty-app-players-down-42-after-gta-vi-ign",
+ "out": "cards/2026-11/call-of-duty-app-players-down-42-after-gta-vi-ign-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 68 px on 2 lines (cut it to a few words next time): تراجع مستخدمي Call of Duty\nاليوميين 42 بالمئة بعد GTA VI"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "b",
+   "why": "audio split not applied (music only 26.4% of the track (< 40.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our b"
+  }
+ ],
+ "job_to_pass_min": 7.3,
+ "at": "2026-11-24T02:37:54Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 starts at 0.0 s, the video at 0.77 s; its first 0.77 s are lost",
+  "first frame: shot 2 call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 starts at 0.0 s, the video at 0.77 s; its first 0.77 s are lost",
+  "first frame: shot 3 call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 starts at 0.0 s, the video at 0.77 s; its first 0.77 s are lost",
+  "first frame: shot 4 call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 starts at 0.0 s, the video at 0.77 s; its first 0.77 s are lost",
+  "first frame: shot 5 call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 starts at 0.0 s, the video at 0.77 s; its first 0.77 s are lost",
+  "first frame: shot 6 call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 starts at 0.0 s, the video at 0.77 s; its first 0.77 s are lost",
+  "first frame: shot 7 call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 starts at 0.0 s, the video at 0.77 s; its first 0.77 s are lost",
+  "first frame: shot 8 call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 starts at 0.0 s, the video at 0.77 s; its first 0.77 s are lost",
+  "first frame: shot 9 call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 starts at 0.0 s, the video at 0.77 s; its first 0.77 s are lost",
+  "length 23.2 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason music only 26.4% of the track (< 40.0%); music_pct 26.4; leak_pct 2.7; cache {'hit': 0, 'miss': 3}; separate_secs 9.9; secs 13.4",
+  "smear check: exempt 2.40 to 8.60 s (our own cards)",
+  "render_job: lifeless: {\"score\": 3.8, \"still_share\": 0.039, \"longest_still\": 0.5, \"cuts_per_10s\": 7.79, \"held_under_text\": 0.0, \"secs\": 23.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 26 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)",
+  "estimate: headline: 29 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 at 24.80 s for 3.8 s, focus 0.523"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 at 40.17 s for 2.5 s, focus 0.424"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 at 53.25 s for 2.5 s, focus 0.574"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 at 55.74 s for 2.5 s, focus 0.574"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 at 61.79 s for 2.5 s, focus 0.495"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 at 75.52 s for 2.2 s, focus 0.367"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 at 85.65 s for 2.2 s, focus 1.0"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 at 67.70 s for 2.2 s, focus 0.189"
+  },
+  {
+   "where": "shot 9",
+   "rule": "auto_shots",
+   "what": "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 at 35.83 s for 2.2 s, focus 0.502"
+  },
+  {
+   "where": "shot 2",
+   "rule": "subject_drift",
+   "what": "focus [[0.0, 0.424]] to 0.28: the subject stays inside the window",
+   "before": [
+    "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+    40.17,
+    2.49,
+    [
+     [
+      0.0,
+      0.424
+     ]
+    ]
+   ],
+   "after": [
+    "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+    40.17,
+    2.49,
+    0.28
+   ]
+  },
+  {
+   "where": "shot 5",
+   "rule": "subject_drift",
+   "what": "focus [[0.0, 0.495]] to 0.09: the subject stays inside the window",
+   "before": [
+    "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+    61.79,
+    2.46,
+    [
+     [
+      0.0,
+      0.495
+     ]
+    ]
+   ],
+   "after": [
+    "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+    61.79,
+    2.46,
+    0.09
+   ]
+  },
+  {
+   "where": "shot 9",
+   "rule": "subject_cut",
+   "what": "moved from 35.83 to 35.33 s, the nearest stretch of the same source with the subject inside",
+   "before": [
+    "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+    35.83,
+    2.2,
+    [
+     [
+      0.0,
+      0.502
+     ]
+    ]
+   ],
+   "after": [
+    "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+    35.33,
+    2.2,
+    [
+     [
+      0.0,
+      0.502
+     ]
+    ]
+   ]
+  }
+ ],
+ "job_sha": "f3d7c7fb2177153a13cddef81f318c5c35284c8a",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/call-of-duty-app-players-down-42-after-gta-vi-ign-look-1.jpg",
+  "cards/2026-11/call-of-duty-app-players-down-42-after-gta-vi-ign-look-2.jpg",
+  "cards/2026-11/call-of-duty-app-players-down-42-after-gta-vi-ign-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer-music (ladder b: audio split not applied (music only 26.4% of the track (< 40.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
+ "shot_read": {
+  "secs": 53.8,
+  "files": {
+   "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4": {
+    "secs": 53.5,
+    "cached": false,
+    "stages": {
+     "decode": 26.6,
+     "autofocus": 42.4,
+     "ocr": 42.4,
+     "smear": 53.3,
+     "scenes": 53.5
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/call-of-duty-app-players-down-42-after-gta-vi-ign.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.18,
+  "fetch": 0.49,
+  "shots": 1.12,
+  "checks": 1.36,
+  "render": 2.58,
+  "after": 0.85,
+  "job": 6.42
+ },
+ "job_after_autofix": {
+  "name": "call-of-duty-app-players-down-42-after-gta-vi-ign",
+  "story": "2026-11-24-call-of-duty-app-players-down-42-after-gta-vi-ign",
+  "footage_source": "steam:1938090",
+  "kind_news": "sales",
+  "story_class": "numbers",
+  "story_class_why": "kind sales",
+  "skin_why": "genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/call-of-duty-app-players-down-42-after-gta-vi-ign-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+    "steam": 1938090,
+    "trailer": "MW4 S1",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "1938090"
+   },
+   {
+    "file": "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-campaign.mp4",
+    "steam": 1938090,
+    "trailer": "MW4 Campaign",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "1938090"
+   },
+   {
+    "file": "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-accolades.mp4",
+    "steam": 1938090,
+    "trailer": "MW4 Accolades",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "1938090"
+   }
+  ],
+  "shots": [
+   [
+    "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+    24.8,
+    3.8,
+    [
+     [
+      0.0,
+      0.523
+     ]
+    ]
+   ],
+   [
+    "call-of-duty-app-players-down-42-after-gta-vi-ign-gfx-figure.png",
+    0.0,
+    4.2,
+    null
+   ],
+   [
+    "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+    40.17,
+    2.49,
+    0.28
+   ],
+   [
+    "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+    53.25,
+    2.49,
+    [
+     [
+      0.0,
+      0.574
+     ]
+    ]
+   ],
+   [
+    "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+    55.74,
+    2.46,
+    [
+     [
+      0.0,
+      0.574
+     ]
+    ]
+   ],
+   [
+    "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+    61.79,
+    2.46,
+    0.09
+   ],
+   [
+    "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+    75.52,
+    2.24,
+    [
+     [
+      0.0,
+      0.367
+     ]
+    ]
+   ],
+   [
+    "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+    85.65,
+    2.24,
+    [
+     [
+      0.0,
+      1.0
+     ]
+    ]
+   ],
+   [
+    "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+    67.7,
+    2.2,
+    [
+     [
+      0.0,
+      0.189
+     ]
+    ]
+   ],
+   [
+    "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+    35.33,
+    2.2,
+    [
+     [
+      0.0,
+      0.502
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    2,
+    3,
+    [
+     [
+      "وهذا تقدير من شركة\nالتحليلات Alinea Analytics،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    4,
+    5,
+    [
+     [
+      "وكان أكبر انخفاض\nعلى جهاز PS5 بنسبة 44 بالمئة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    6,
+    7,
+    [
+     [
+      "والأرقام ليست\nمن أكتيفيجن (Activision)،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    8,
+    9,
+    [
+     [
+      "ولم تعلق الشركة عليها بعد",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    9,
+    "المصدر: IGN · اللقطات: Activision",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع آي جي إن (IGN) أن عدد مستخدمي تطبيق Call of Duty اليوميين انخفض من 7.6 مليون إلى 4.4 مليون خلال عطلة إطلاق GTA VI، أي بنسبة 42 بالمئة على كل المنصات. وهذا تقدير من شركة التحليلات Alinea Analytics، وكان أكبر انخفاض على جهاز PS5 بنسبة 44 بالمئة. والأرقام ليست من أكتيفيجن (Activision)، ولم تعلق الشركة عليها بعد.",
+  "headline": "تراجع مستخدمي Call of Duty\nاليوميين 42 بالمئة بعد GTA VI",
+  "label": "تقرير",
+  "game": "Call of Duty",
+  "game_short": "Call of Duty",
+  "game_key": "call of duty",
+  "genre": [
+   "action"
+  ],
+  "texts": {
+   "instagram": "تراجع مستخدمي Call of Duty اليوميين 42 بالمئة بعد إطلاق GTA VI\n\nذكر موقع آي جي إن (IGN) أن عدد مستخدمي تطبيق Call of Duty اليوميين، الذي يضم Warzone وBlack Ops 7 وModern Warfare 4، انخفض من 7.6 مليون إلى 4.4 مليون على كل المنصات خلال عطلة إطلاق GTA VI. وكان أكبر انخفاض على PS5 بنسبة 44 بالمئة.\n\nوهذا تقدير من شركة التحليلات Alinea Analytics، لا بيانات من أكتيفيجن (Activision)، ولم تعلق الشركة عليه بعد.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع آي جي إن (IGN).\n\n#ألعاب #أخبار_الألعاب #CallofDuty #GTAVI",
+   "x": "تقرير: ذكر موقع آي جي إن (IGN) أن عدد مستخدمي تطبيق Call of Duty اليوميين انخفض 42 بالمئة خلال عطلة إطلاق GTA VI، من 7.6 إلى 4.4 مليون، حسب تقدير Alinea Analytics. ولم تعلق أكتيفيجن (Activision). المصدر: آي جي إن.",
+   "threads": "تقرير: ذكر موقع آي جي إن (IGN) أن عدد مستخدمي تطبيق Call of Duty اليوميين انخفض من 7.6 مليون إلى 4.4 مليون خلال عطلة إطلاق GTA VI.\n\nوهذا تقدير من شركة التحليلات Alinea Analytics، وكان أكبر انخفاض على PS5 بنسبة 44 بالمئة. ولم تعلق أكتيفيجن (Activision).\n\nالمصدر: موقع آي جي إن (IGN)"
+  },
+  "source": "موقع آي جي إن (IGN)، ولقطات من أكتيفيجن (Activision)",
+  "date": "24 Nov 2026",
+  "theme": "stylized",
+  "style": null,
+  "template": "numbers",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+   24.8
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "IGN published the Alinea Analytics estimate on 23 Nov 2026, right after GTA VI's launch weekend.",
+   "what_it_means_here": "The biggest shooter lost about four in ten daily users across platforms in one weekend, PS5 most; an analyst estimate, not Activision data."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "numbers: kind sales",
+   "skin": "house: genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4 from the resolver (steam:1938090)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam store page, Call of Duty (footage only) (https://store.steampowered.com/app/1938090/); first report: IGN 23 Nov 2026 23:37Z, citing an Alinea Analytics estimate; Activision has not commented",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 1938090 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "gfx": [
+   {
+    "file": "call-of-duty-app-players-down-42-after-gta-vi-ign-gfx-figure.png",
+    "kind": "fact",
+    "value": "42%",
+    "label": "تراجع المستخدمين اليوميين",
+    "note": "تقدير: من 7.6 إلى 4.4 مليون"
+   }
+  ],
+  "ground_footage": [
+   "call-of-duty-app-players-down-42-after-gta-vi-ign-mw4-s1.mp4",
+   4.0,
+   60.0
+  ]
+ }
+}
