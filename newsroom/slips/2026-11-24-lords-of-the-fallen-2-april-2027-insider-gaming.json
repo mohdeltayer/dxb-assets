@@ -1,0 +1,36 @@
+{
+ "id": "2026-11-24-lords-of-the-fallen-2-april-2027-insider-gaming",
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "name not in names-ar: «سي آي غيمز (CI Games)» (spoken); add it there as Proposed",
+  "name not in names-ar: «وقال مؤسسها ماريك تيمينسكي (Marek Tyminski)» (spoken); add it there as Proposed",
+  "text fixed mechanically: spoken: names not in names-ar written in Latin: CI Games, Marek Tyminski; line 6: space after a glued prefix",
+  "warning: text: line 3: «CI Games» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before the render, or, for a game, write it in Latin letters only",
+  "warning: text: line 4: «Marek Tyminski» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before the render, or, for a game, write it in Latin letters only",
+  "warning: text: line 3: these words are not in the paragraph: آي غيمز; the lines, read in order, are the spoken paragraph (a word may be left out, none added): rewrite the line from the paragraph, or the paragraph to carry it",
+  "warning: text: line 4: these words are not in the paragraph: ماريك تيمينسكي; the lines, read in order, are the spoken paragraph (a word may be left out, none added): rewrite the line from the paragraph, or the paragraph to carry it"
+ ],
+ "at": "2026-11-24T21:24:05Z",
+ "footage": {
+  "name": "Lords of the Fallen II - Steel & Sorcery",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60.0,
+  "mbps": 5.76,
+  "rows": 1080,
+  "duration": 108.3,
+  "decode_clean": true
+ },
+ "names_to_review": [
+  "CI Games",
+  "Marek Tyminski"
+ ],
+ "job": "jobs/live/lords-of-the-fallen-2-april-2027-insider-gaming.json",
+ "story": "newsroom/stories/2026-11-24-lords-of-the-fallen-2-april-2027-insider-gaming.json",
+ "lines": 6,
+ "shots": 15,
+ "run": "45490628022",
+ "lane": "live",
+ "build_secs": 74
+}
