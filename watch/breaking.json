@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-24T19:20:08Z",
- "seq": 829,
+ "generated_at": "2026-11-24T19:52:06Z",
+ "seq": 830,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 22424,
    "source": "Xbox Wire",
@@ -16,9 +17,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 829
-  }
- ],
- "recent": [
+  },
   {
    "id": 22396,
    "source": "Xbox Wire",
@@ -527,9 +526,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-24T19:20:05Z",
+  "last_poll_at": "2026-11-24T19:50:15Z",
   "sources_enabled": 101,
-  "sources_ok": 100,
+  "sources_ok": 101,
   "sources_failing": 0,
   "failed": []
  }
