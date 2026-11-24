@@ -4,6 +4,14 @@
  "verdict": "pass",
  "warnings": [
   {
+   "stage": "source smear",
+   "detail": "blocky smear in the source: hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 43.92 to 44.10 s (peak 47.1)"
+  },
+  {
+   "stage": "shot scan",
+   "detail": "footage scan stopped at its cap (180 s); shots as written, automatic slots from the footage library or evenly spaced"
+  },
+  {
    "stage": "headline",
    "detail": "headline too long for 2 lines at 72 px; set at 60 px on 2 lines (cut it to a few words next time): بطاقات القتال في Hadean Tactics\nقادمة إلى سويتش غدا"
   },
@@ -50,6 +58,10 @@
   {
    "stage": "line size",
    "detail": "56 px too wide for 'تتحكم فيها بساحر يوجه وحداته بالبطاقات'; 52 px"
+  },
+  {
+   "stage": "smear",
+   "detail": "ValueError: /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/hadean-tactics-switch-nov-25-nintendo-everything-reel-v1.mp4: blocky smear at 3.03 to 3.33 s (peak 17.2); look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]"
   }
  ],
  "ladder": [
@@ -74,18 +86,6 @@
   {
    "kind": "picture",
    "slot": 4,
-   "step": "a",
-   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
-  },
-  {
-   "kind": "picture",
-   "slot": 5,
-   "step": "a",
-   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
-  },
-  {
-   "kind": "picture",
-   "slot": 6,
    "step": "a",
    "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
   },
@@ -145,6 +145,24 @@
   },
   {
    "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 35.72 s for 3.8 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "scan cap: 1 automatic slot(s) from the library or evenly spaced"
+  },
+  {
+   "kind": "picture",
    "slot": 2,
    "step": "a",
    "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 60.3 s: moved off a repeated moment (respread)"
@@ -159,25 +177,13 @@
    "kind": "picture",
    "slot": 4,
    "step": "a",
-   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 33.47 s: moved off a repeated moment (respread)"
-  },
-  {
-   "kind": "picture",
-   "slot": 5,
-   "step": "a",
-   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 18.41 s: moved off a repeated moment (respread)"
-  },
-  {
-   "kind": "picture",
-   "slot": 6,
-   "step": "a",
-   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 72.54 s: moved off a repeated moment (respread)"
+   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 15.41 s: moved off a repeated moment (respread)"
   },
   {
    "kind": "picture",
    "slot": 7,
    "step": "a",
-   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 69.19 s: moved off a repeated moment (respread)"
+   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 72.18 s: moved off a repeated moment (respread)"
   },
   {
    "kind": "picture",
@@ -189,31 +195,31 @@
    "kind": "picture",
    "slot": 9,
    "step": "a",
-   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 24.45 s: moved off a repeated moment (respread)"
+   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 63.59 s: moved off a repeated moment (respread)"
   },
   {
    "kind": "picture",
    "slot": 10,
    "step": "a",
-   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 54.56 s: moved off a repeated moment (respread)"
+   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 51.55 s: moved off a repeated moment (respread)"
   },
   {
    "kind": "picture",
    "slot": 11,
    "step": "a",
-   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 42.52 s: moved off a repeated moment (respread)"
+   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 21.44 s: moved off a repeated moment (respread)"
   },
   {
    "kind": "picture",
    "slot": 12,
    "step": "a",
-   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 63.61 s: moved off a repeated moment (respread)"
+   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 66.62 s: moved off a repeated moment (respread)"
   },
   {
    "kind": "picture",
    "slot": 13,
    "step": "a",
-   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 12.41 s: moved off a repeated moment (respread)"
+   "why": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 at 54.57 s: moved off a repeated moment (respread)"
   },
   {
    "kind": "text",
@@ -225,60 +231,25 @@
    "kind": "sound",
    "slot": "reel",
    "step": "b",
-   "why": "audio split not applied (music only 31.0% of the track (< 40.0%)) on a trailer track under 13 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our "
+   "why": "audio split not applied (music only 26.3% of the track (< 40.0%)) on a trailer track under 13 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our "
   }
  ],
- "job_to_pass_min": 10.5,
- "at": "2026-11-24T00:24:46Z",
+ "job_to_pass_min": 10.6,
+ "at": "2026-11-24T00:39:40Z",
  "findings": [],
  "notes": [
   "first frame: shot 0 hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
   "length 29.6 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: not applied, audio as rendered; reason music only 31.0% of the track (< 40.0%); music_pct 31.0; leak_pct 0.6; cache {'hit': 0, 'miss': 3}; separate_secs 10.7; secs 14.7",
-  "render_job: lifeless: {\"score\": 18.2, \"still_share\": 0.247, \"longest_still\": 1.7, \"cuts_per_10s\": 2.71, \"held_under_text\": 0.0, \"secs\": 29.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "render_job: audio split: not applied, audio as rendered; reason music only 26.3% of the track (< 40.0%); music_pct 26.3; leak_pct 0.4; cache {'hit': 0, 'miss': 2}; separate_secs 10.4; secs 14.8",
+  "render_job: lifeless: {\"score\": 11.2, \"still_share\": 0.166, \"longest_still\": 0.9, \"cuts_per_10s\": 3.05, \"held_under_text\": 0.0, \"secs\": 29.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
   "estimate: headline: 31 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
  ],
- "autofixed": [
-  {
-   "where": "lines 1-6",
-   "rule": "lines",
-   "what": "line 1 does not fit two visual lines at 54 px: cut again as 6 full sentences or clauses across the same shots (23 Nov 2026)",
-   "before": [
-    "ذكر موقع نينتندو إيفريثينغ (Nintendo Everything)",
-    "أن لعبة Hadean Tactics تصدر على نينتندو",
-    "سويتش في 25 نوفمبر 2026 بسعر 19.99 دولارا",
-    "وهي لعبة بناء مجموعات بطاقات من نوع روغ لايك، تتحكم",
-    "فيها بساحر يوجه وحداته بالبطاقات في معارك فيها عناصر قتال تلقائي",
-    "وفيها أكثر من 260 بطاقة وتسعة زعماء"
-   ],
-   "after": [
-    "ذكر موقع\nنينتندو إيفريثينغ (Nintendo Everything)",
-    "أن لعبة Hadean Tactics\nتصدر على نينتندو",
-    "سويتش في 25 نوفمبر 2026\nبسعر 19.99 دولارا",
-    "وهي لعبة بناء مجموعات\nبطاقات من نوع روغ لايك،",
-    "تتحكم فيها بساحر يوجه وحداته بالبطاقات\nفي معارك فيها عناصر قتال تلقائي",
-    "وفيها أكثر من 260 بطاقة\nوتسعة زعماء"
-   ]
-  },
-  {
-   "where": "credit 1",
-   "rule": "credit_width",
-   "what": "set one line at 32 px (was 40 px, too wide for the safe zone)",
-   "before": {
-    "text": "المصدر: موقع نينتندو إيفريثينغ (Nintendo Everything)،\nواللقطات من صفحة اللعبة على Steam",
-    "size": 40
-   },
-   "after": {
-    "text": "المصدر: Nintendo Everything · اللقطات: صفحة اللعبة على Steam",
-    "size": 32
-   }
-  }
- ],
- "job_sha": "ec320835bfba4db8e5f18d86680025be18e687eb",
- "dispatches": 2,
+ "autofixed": [],
+ "job_sha": "0b2d4b87aa76d2715f4f5eb64bcaf1c8648a1951",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
-  "max_zoom": 1.99,
+  "max_zoom": 1.78,
   "lowbit_shots": 0
  },
  "quality": "base",
@@ -289,13 +260,13 @@
   "cards/2026-11/hadean-tactics-switch-nov-25-nintendo-everything-look-3.jpg"
  ],
  "person_shown": "n/a",
- "sound": "trailer-music (ladder b: audio split not applied (music only 31.0% of the track (< 40.0%)) on a trailer track under 13 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
+ "sound": "trailer-music (ladder b: audio split not applied (music only 26.3% of the track (< 40.0%)) on a trailer track under 13 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
  "shot_read": {
-  "secs": 39.8,
+  "secs": 0.0,
   "files": {
    "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4": {
-    "secs": 39.8,
-    "cached": false,
+    "secs": 0.0,
+    "cached": true,
     "stages": {
      "decode": 15.9,
      "autofocus": 37.5,
@@ -310,273 +281,12 @@
  "job_path": "jobs/done/hadean-tactics-switch-nov-25-nintendo-everything.json",
  "stage_minutes": {
   "queue": 0.03,
-  "setup": 0.2,
-  "fetch": 0.26,
-  "shots": 1.35,
-  "checks": 2.19,
-  "render": 4.12,
-  "after": 1.64,
-  "upload": 0.1,
-  "job": 9.58
- },
- "job_after_autofix": {
-  "name": "hadean-tactics-switch-nov-25-nintendo-everything",
-  "story": "2026-11-24-hadean-tactics-switch-nov-25-nintendo-everything",
-  "footage_source": "steam:1260590",
-  "kind_news": "date",
-  "story_class": "trailer",
-  "story_class_why": "kind date",
-  "skin_why": "genre strategy: its kit is not built yet (skins.KITS scifi, fantasy)",
-  "built_by": "server-slip",
-  "render_lane": "server",
-  "out": "cards/2026-11/hadean-tactics-switch-nov-25-nintendo-everything-reel-v1.mp4",
-  "split_fallback": "ladder",
-  "footage": [
-   {
-    "file": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4",
-    "steam": 1260590,
-    "trailer": "Hadean Tactics Trailer",
-    "start": 0,
-    "seconds": 120,
-    "trailer_id": "1260590"
-   }
-  ],
-  "shots": [
-   [
-    "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4",
-    0.0,
-    3.8,
-    null
-   ],
-   [
-    "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4",
-    0.0,
-    2.56,
-    null
-   ],
-   [
-    "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4",
-    0.0,
-    2.56,
-    null
-   ],
-   [
-    "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4",
-    0.0,
-    2.24,
-    null
-   ],
-   [
-    "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4",
-    0.0,
-    2.24,
-    null
-   ],
-   [
-    "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4",
-    0.0,
-    2.31,
-    null
-   ],
-   [
-    "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4",
-    0.0,
-    2.31,
-    null
-   ],
-   [
-    "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4",
-    0.0,
-    2.67,
-    null
-   ],
-   [
-    "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4",
-    0.0,
-    2.67,
-    null
-   ],
-   [
-    "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4",
-    0.0,
-    2.22,
-    null
-   ],
-   [
-    "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4",
-    0.0,
-    2.22,
-    null
-   ],
-   [
-    "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4",
-    0.0,
-    2.22,
-    null
-   ],
-   [
-    "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4",
-    0.0,
-    2.2,
-    null
-   ],
-   [
-    "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4",
-    0.0,
-    2.2,
-    null
-   ]
-  ],
-  "lines": [
-   [
-    1,
-    2,
-    [
-     [
-      "ذكر موقع\nنينتندو إيفريثينغ (Nintendo Everything)",
-      {
-       "size": 48
-      }
-     ]
-    ]
-   ],
-   [
-    3,
-    4,
-    [
-     [
-      "أن لعبة Hadean Tactics\nتصدر على نينتندو",
-      {
-       "size": 48
-      }
-     ]
-    ]
-   ],
-   [
-    5,
-    6,
-    [
-     [
-      "سويتش في 25 نوفمبر 2026\nبسعر 19.99 دولارا",
-      {
-       "size": 48
-      }
-     ]
-    ]
-   ],
-   [
-    7,
-    8,
-    [
-     [
-      "وهي لعبة بناء مجموعات\nبطاقات من نوع روغ لايك،",
-      {
-       "size": 48
-      }
-     ]
-    ]
-   ],
-   [
-    9,
-    11,
-    [
-     [
-      "تتحكم فيها بساحر يوجه وحداته بالبطاقات\nفي معارك فيها عناصر قتال تلقائي",
-      {
-       "size": 48
-      }
-     ]
-    ]
-   ],
-   [
-    12,
-    13,
-    [
-     [
-      "وفيها أكثر من 260 بطاقة\nوتسعة زعماء",
-      {
-       "size": 48
-      }
-     ]
-    ]
-   ]
-  ],
-  "credits": [
-   [
-    0,
-    13,
-    "المصدر: Nintendo Everything · اللقطات: صفحة اللعبة على Steam",
-    {
-     "size": 32,
-     "band": true
-    }
-   ]
-  ],
-  "spoken": "ذكر موقع نينتندو إيفريثينغ (Nintendo Everything) أن لعبة Hadean Tactics تصدر على نينتندو سويتش في 25 نوفمبر 2026 بسعر 19.99 دولارا. وهي لعبة بناء مجموعات بطاقات من نوع روغ لايك، تتحكم فيها بساحر يوجه وحداته بالبطاقات في معارك فيها عناصر قتال تلقائي. وفيها أكثر من 260 بطاقة وتسعة زعماء.",
-  "headline": "بطاقات القتال في Hadean Tactics\nقادمة إلى سويتش غدا",
-  "label": "تقرير",
-  "game": "Hadean Tactics",
-  "game_short": "Hadean Tactics",
-  "game_key": "hadean tactics",
-  "genre": [
-   "strategy"
-  ],
-  "texts": {
-   "instagram": "ذكر موقع نينتندو إيفريثينغ (Nintendo Everything) أن لعبة Hadean Tactics تصدر على نينتندو سويتش في 25 نوفمبر 2026 بسعر 19.99 دولارا.\n\nوهي لعبة بناء مجموعات بطاقات من نوع روغ لايك، تتحكم فيها بساحر يوجه وحداته بالبطاقات في معارك فيها عناصر قتال تلقائي. وفيها أكثر من 260 بطاقة وتسعة زعماء.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع نينتندو إيفريثينغ (Nintendo Everything).\n\n#ألعاب #أخبار_الألعاب #HadeanTactics #NintendoSwitch",
-   "x": "تقرير: ذكر موقع نينتندو إيفريثينغ (Nintendo Everything) أن لعبة Hadean Tactics تصدر على نينتندو سويتش في 25 نوفمبر بسعر 19.99 دولارا. المصدر: نينتندو إيفريثينغ.",
-   "threads": "تقرير: ذكر موقع نينتندو إيفريثينغ (Nintendo Everything) أن لعبة Hadean Tactics تصدر على نينتندو سويتش في 25 نوفمبر 2026 بسعر 19.99 دولارا.\n\nوهي لعبة بناء مجموعات بطاقات من نوع روغ لايك، تتحكم فيها بساحر يوجه وحداته بالبطاقات.\n\nالمصدر: موقع نينتندو إيفريثينغ (Nintendo Everything)"
-  },
-  "source": "موقع نينتندو إيفريثينغ (Nintendo Everything)، واللقطات من صفحة اللعبة على Steam",
-  "date": "24 Nov 2026",
-  "theme": "cold",
-  "style": null,
-  "template": "trailer",
-  "skin": "house",
-  "cut": false,
-  "track": [
-   "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4",
-   0.0
-  ],
-  "track_from_first_shot": true,
-  "angle": {
-   "why_now": "Switch release on 25 Nov 2026 reported 23 Nov",
-   "what_it_means_here": "A roguelike deckbuilder already on Steam since 2023 reaches Switch tomorrow at $19.99"
-  },
-  "decision_log": {
-   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
-   "template": "trailer: kind date",
-   "skin": "house: genre strategy: its kit is not built yet (skins.KITS scifi, fantasy)",
-   "footage": "hadean-tactics-switch-nov-25-nintendo-everything-hadean-tactics-trailer.mp4 from the resolver (steam:1260590)",
-   "shots": "server-picked clean stretches in source order (autoshots)",
-   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
-  },
-  "reel_check": {
-   "source read and first report noted": "yes: Nintendo Everything, 23 Nov 2026: Hadean Tactics incoming for Nintendo Switch (https://nintendoeverything.com/hadean-tactics-incoming-for-nintendo-switch/); first report: Nintendo Everything 23 Nov 2026 (slow-hours rule: single credible outlet read in full)",
-   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
-   "angle before lines": "yes: angle in the slip",
-   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
-   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
-   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
-   "footage first, official": "yes: steam 1260590 from the resolver, decode clean",
-   "credit on every clip": "yes: one credit over every shot",
-   "sound": "yes: trailer sound from the first shot, split per shot on the server",
-   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
-  },
-  "shots_auto": [
-   0,
-   1,
-   2,
-   3,
-   4,
-   5,
-   6,
-   7,
-   8,
-   9,
-   10,
-   11,
-   12,
-   13
-  ]
+  "setup": 0.17,
+  "fetch": 0.16,
+  "shots": 3.07,
+  "checks": 0.84,
+  "render": 4.15,
+  "after": 1.47,
+  "job": 9.68
  }
 }
