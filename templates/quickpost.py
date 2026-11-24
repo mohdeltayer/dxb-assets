@@ -300,7 +300,9 @@ def pending(now=None, hours=6):
         m = re.search(r'gate (\d\d):(\d\d)Z', json.dumps(s.get('gate') or '', ensure_ascii=False))
         if made is None and m:                            # the gate line's time on the story's own date
             made = _t(f'{sid[:10]}T{m.group(1)}:{m.group(2)}:00Z')
-        if not made or made < max(_t(START), now - dt.timedelta(hours=hours)):
+        c = load(os.path.join(REPO, 'ops', 'cadence.json'), {}) or {}
+        start = _t(c.get('quick_live_from') or START) or _t(START)
+        if not made or made < max(start, now - dt.timedelta(hours=hours)):
             continue
         if not (s.get('gate') or s.get('slip')):
             continue

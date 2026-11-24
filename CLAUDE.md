@@ -280,6 +280,21 @@ file; No rejection 2]
 - **Labels on every post:** `kind:<news|evergreen|series|breaking>`, `tpl:<template>` (tpl:showcase for the showcase),
   `skin:`, `sound:` (trailer, franchise, bed), `genre:`, `story:<job name>`; reuse existing spellings
   (`list_publer_labels`, `newsroom/publer-labels.md`).
+- **Split by platform** (Mohammad, 24 Nov 2026): X and Threads get the quick post, Instagram gets the Reel. For every
+  verified news story the server renders an image card with `templates/quickpost.py` (fast_ar: official key art, a Steam
+  screenshot, a curated stretch of the game or a frame of its official trailer; our chip and footer, Dubai type, never
+  another outlet's logo) in seconds (`quick-post.yml`; the slip lane starts it, the server tick picks up any verified
+  story without one) and schedules it on X and Threads with the story's short text (`quick_x`/`x`, `quick_threads`/
+  `threads`: one or two lines, the source named, no hashtags on X, the source line on Threads), labels `kind:quick
+  tpl:quick story:<job>`. Publer check as for Reels. Quick posts are spaced `quick_spacing_min` (10) among themselves,
+  apart from the Reel spacing, and do not count toward the Reel buffer, the ahead alert or the gap alarm. T0: the quick
+  post first, within 10 minutes of detection (dispatch `quick-post.yml` at once; the server schedules it 2 minutes out).
+  The Reel goes to Instagram as before and to X and Threads as its own post at least 2 hours after the quick post, with
+  the story's `reel_x` and `reel_threads` (a different first line that leads with what the video shows; without them
+  Instagram only); a quick post older than 24 hours keeps the Reel off X and Threads. A story with no quick post keeps
+  the Reel on all three at one time. Without `PUBLER_POST_KEY` both are written ready (alarms quickpost-ready and
+  serverpost-ready with each network's time) for the connector, then `quickpost.py scheduled` / `serverpost.py
+  scheduled`. Switch: `ops/cadence.json` quick_live. [Split by platform]
 - **Texts:** X and Threads short (one or two lines that hook, source named, no hashtags; Threads may add a source line).
   Instagram caption: a first-line hook that differs from the headline with the game's name and the news word in its first
   five words, the full story, then `#ألعاب #أخبار_الألعاب` and two story hashtags; no links; the caption stands alone and

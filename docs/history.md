@@ -4209,3 +4209,29 @@ desk/board.md (285 KB) and CLAUDE.md (315 KB).
    failed or hung install is re-dispatched once (`render_retry.INSTALL_STEPS`); a runner render that is not retried, or
    whose retry failed, falls back to the server queue: the job moves to jobs/live and render-live runs with `lane=server`,
    which never overflows back. Success rate and setup minutes of the next 10 runner jobs go on the board.
+
+## Split by platform: quick posts on X and Threads, Reels on Instagram (Mohammad, 24 Nov 2026)
+
+Mohammad: X and Threads get fast news posts; Instagram (and later TikTok and YouTube) get the Reels.
+1. Quick post lane: for every verified story the server renders an image card with templates/fast_ar.py (through
+   `templates/quickpost.py`: the story's "art", else the Steam store's screenshots, else a curated stretch of the game in
+   game-stretches.json with a character first, else a frame of the job's official trailer; letterbox bars trimmed; our
+   chip, footer and Dubai type; never another outlet's logo) in seconds and schedules it on X and Threads with a short
+   Arabic text (one or two lines, the source named; no hashtags on X; on Threads the source line). The Publer check
+   applies as for Reels. Workflow `quick-post.yml` (GitHub runner, Dubai font from dxb-fonts; mode live or sample);
+   rows in newsroom/quickpost.jsonl; the server step (serverpost.quick_sweep) schedules or writes ready. Started by the
+   slip lane after a slip builds and by every server-post tick for verified stories without a card
+   (`quickpost.py pending`: a gate line or a slip, a news label, x and threads texts, written after the lane started).
+2. When the story's Reel is ready it goes to Instagram as now, and to X and Threads as its own post at least 2 hours after
+   the quick post, with a different first line that leads with what the video shows (story texts reel_x and
+   reel_threads; slips carry them as optional fields, reviewed by the grammar stage when present; without them the Reel
+   is Instagram only). If the quick post is more than 24 hours old, the Reel posts on Instagram but not on X and Threads.
+   A story with no quick post keeps the Reel on all three at one time (serverpost.reel_networks).
+3. ops/cadence.json: quick_spacing_min 10 for X and Threads, separate from the Reel spacing; quick posts (label
+   kind:quick) do not count toward the Reel buffer, the ahead alert or the work order's gap alarm. Also reel_after_quick_h
+   2, reel_xt_max_h 24, and quick_live (the switch).
+4. T0 stories get the quick post first, within 10 minutes of detection (dispatch quick-post.yml at once; it is scheduled 2
+   minutes out).
+5. Three samples on the board before going live (cards/test/quick/: GTA VI 39 million players, Hogwarts Legacy 22 AED,
+   Nioh 3 Complete Edition); after that, no further approval. The first GTA VI sample took a dark letterboxed trailer frame;
+   curated stretches with a character now come first and black bars are trimmed.

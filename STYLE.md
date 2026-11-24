@@ -1021,3 +1021,13 @@ server fixes, every slot on the picture start, were written back to main) and it
   desk/archive/.
 - Overflow to the GitHub runner stays on until server lanes 2 and 3; the runner caches its Python packages, retries a hung
   install once, and a failed runner render falls back to the server queue (render-live lane=server).
+
+## Split by platform (Mohammad, 24 Nov 2026; docs/history.md "Split by platform")
+
+- X and Threads: a quick post for every verified news story, an image card (templates/quickpost.py, fast_ar: official art,
+  our chip and footer, no other outlet's logo) with one or two lines of Arabic naming the source; no hashtags on X, the
+  source line on Threads. Spaced 10 minutes apart among themselves (ops/cadence.json quick_spacing_min); not counted in
+  the Reel buffer. T0: the quick post first, within 10 minutes.
+- Instagram: the Reel, as before. The Reel also goes to X and Threads as its own post at least 2 hours after the quick
+  post, with its own first line on what the video shows (story texts reel_x, reel_threads); not when the quick post is
+  over 24 hours old.

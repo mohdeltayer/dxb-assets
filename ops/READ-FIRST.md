@@ -82,6 +82,14 @@ slot with no post 20 minutes before it).
    of what was done, not an approval). Publer is the only record of what is scheduled and posted (23 Nov 2026).
    A failed or timed-out submit: read the job status, then look the post up in Publer twice 10 minutes apart before
    anything else; never submit again on one empty list. No Publer ids in any file.
+6b. Quick posts (split by platform, 24 Nov 2026): X and Threads get an image card for every verified story, Instagram
+   gets the Reel. For a T0 story dispatch `quick-post.yml` (input story = the story id) the moment the story file is
+   committed, before the Reel. Each quickpost-ready alarm on the work order: Publer check as above, then
+   submit_publer_posts on X and on Threads (post_type photo, media_url the card's raw dxb-assets URL, the slot and the
+   labels in the alarm, texts quick_x or x on X and quick_threads or threads on Threads), job status, then `python3
+   templates/quickpost.py scheduled <story> --slot <ISO>`. A serverpost-ready alarm lists each network's own time: the
+   Reel's X and Threads post uses the story's reel_x and reel_threads. Write reel_x and reel_threads in every story or
+   slip (a first line about what the video shows, different from the quick post), or the Reel goes to Instagram only.
 7. Records: `python3 templates/formats.py add`; nothing else is needed after publishing (Publer is the record).
 8. Board: one handoff on `desk/board.md` and `desk/board.json`: "scheduled: <story>, <slot Dubai>, job status complete
    HH:MMZ on <platforms>" (no id suffixes needed).
