@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-24T16:35:19Z",
- "seq": 820,
+ "generated_at": "2026-11-24T16:52:08Z",
+ "seq": 821,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 22257,
    "source": "Xbox (YouTube)",
@@ -25,9 +26,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 820
-  }
- ],
- "recent": [
+  },
   {
    "id": 22202,
    "source": "PlayStation (YouTube)",
@@ -465,9 +464,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-24T16:35:14Z",
+  "last_poll_at": "2026-11-24T16:50:05Z",
   "sources_enabled": 101,
-  "sources_ok": 99,
+  "sources_ok": 98,
   "sources_failing": 2,
   "failed": [
    "GamesRadar (HTTP 404, 3x)",
