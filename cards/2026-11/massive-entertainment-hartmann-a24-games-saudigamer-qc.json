@@ -1,0 +1,614 @@
+{
+ "name": "massive-entertainment-hartmann-a24-games-saudigamer",
+ "out": "cards/2026-11/massive-entertainment-hartmann-a24-games-saudigamer-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "build gate",
+   "detail": "story file: \"subject_person\" is null or {\"name\", \"role\", \"photo_source\"} with all three filled"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4 at 41.39 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "text",
+   "slot": "line 3",
+   "step": "a",
+   "why": "3.4 s of 4.4 s: shot 6 lengthened by 1.18 s"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "d",
+   "why": "audio split not applied (music stem not clean (leftover 27.7% > 5.0%)) on a trailer track under 13 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or"
+  }
+ ],
+ "job_to_pass_min": 11.1,
+ "at": "2026-11-24T12:19:58Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 1 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 2 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 3 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 4 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 5 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 6 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 7 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 8 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 9 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 10 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 11 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 12 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 13 massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "length 28.5 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 27.7% > 5.0%); music_pct 11.8; leak_pct 27.7; cache {'hit': 0, 'miss': 8}; separate_secs 16.2; secs 21.4",
+  "render_job: audio split fallback: our bed (audio split not applied (music stem not clean (leftover 27.7% > 5.0%)) on a trailer track under 13 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.); bed:neon_b",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 4.23, \"held_under_text\": 0.0, \"secs\": 28.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 at 9.01 s for 3.8 s, focus 0.391"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 at 70.41 s for 2.2 s, focus 0.444"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4 at 27.43 s for 2.2 s, focus 0.55 (nothing free in massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4 at 30.50 s for 2.2 s, focus 0.318 (nothing free in massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4 at 20.65 s for 2.2 s, focus 0.55 (nothing free in massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4 at 22.85 s for 2.2 s, focus 0.55 (nothing free in massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4 at 25.05 s for 2.2 s, focus 0.55 (nothing free in massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4 at 52.81 s for 2.2 s, focus 0.429 (nothing free in massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4 at 57.80 s for 2.2 s, focus 0.616 (nothing free in massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 9",
+   "rule": "auto_shots",
+   "what": "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4 at 50.05 s for 2.2 s, focus 0.073 (nothing free in massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 10",
+   "rule": "auto_shots",
+   "what": "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4 at 6.28 s for 2.2 s, focus 0.537 (nothing free in massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 11",
+   "rule": "auto_shots",
+   "what": "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4 at 60.58 s for 2.2 s, focus 0.262 (nothing free in massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 12",
+   "rule": "auto_shots",
+   "what": "massive-entertainment-hartmann-a24-games-saudigamer-gameplay-trailer.mp4 at 43.71 s for 2.2 s, focus 0.601 (nothing free in massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 13",
+   "rule": "auto_shots",
+   "what": "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4 at 62.78 s for 2.2 s, focus 0.262 (shortened from 2.2 s: no free clean stretch that long)"
+  },
+  {
+   "where": "shot 2",
+   "rule": "subject_drift",
+   "what": "moved from 27.43 to 28.93 s, the nearest stretch of the same source with the subject inside",
+   "before": [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    27.43,
+    2.25,
+    [
+     [
+      0.0,
+      0.55
+     ]
+    ]
+   ],
+   "after": [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    28.93,
+    2.25,
+    [
+     [
+      0.0,
+      0.55
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 9",
+   "rule": "subject_drift",
+   "what": "focus [[0.0, 0.073]] to 0.0: the subject stays inside the window",
+   "before": [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    50.05,
+    2.2,
+    [
+     [
+      0.0,
+      0.073
+     ]
+    ]
+   ],
+   "after": [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    50.05,
+    2.2,
+    0.0
+   ]
+  },
+  {
+   "where": "shot 13",
+   "rule": "subject_drift",
+   "what": "trimmed to 1.38 s, its longest safe length before the subject leaves the 9:16 window",
+   "before": [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    62.78,
+    2.17,
+    [
+     [
+      0.0,
+      0.262
+     ]
+    ]
+   ],
+   "after": [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    62.78,
+    1.38,
+    [
+     [
+      0.0,
+      0.262
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 12",
+   "rule": "fill",
+   "what": "lengthened 2.20 to 2.99 s to keep the time shot 13 gave up",
+   "before": 2.2,
+   "after": 2.99
+  }
+ ],
+ "job_sha": "9fc0c46f123dfc90e1b1d67daf338bc2e1a17f85",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/massive-entertainment-hartmann-a24-games-saudigamer-look-1.jpg",
+  "cards/2026-11/massive-entertainment-hartmann-a24-games-saudigamer-look-2.jpg",
+  "cards/2026-11/massive-entertainment-hartmann-a24-games-saudigamer-look-3.jpg"
+ ],
+ "person_shown": true,
+ "sound": "bed:neon_b (trailer sound refused: music stem not clean (leftover 27.7% > 5.0%))",
+ "shot_read": {
+  "secs": 86.0,
+  "files": {
+   "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4": {
+    "secs": 34.6,
+    "cached": false,
+    "stages": {
+     "decode": 14.0,
+     "autofocus": 34.3,
+     "ocr": 34.3,
+     "smear": 34.3,
+     "scenes": 34.6
+    },
+    "incomplete": null
+   },
+   "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4": {
+    "secs": 28.2,
+    "cached": false,
+    "stages": {
+     "decode": 10.4,
+     "autofocus": 28.0,
+     "ocr": 28.0,
+     "smear": 28.0,
+     "scenes": 28.2
+    },
+    "incomplete": null
+   },
+   "massive-entertainment-hartmann-a24-games-saudigamer-gameplay-trailer.mp4": {
+    "secs": 22.7,
+    "cached": false,
+    "stages": {
+     "decode": 8.6,
+     "autofocus": 22.5,
+     "ocr": 22.5,
+     "smear": 22.5,
+     "scenes": 22.7
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/massive-entertainment-hartmann-a24-games-saudigamer.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.22,
+  "fetch": 0.57,
+  "shots": 2.13,
+  "checks": 2.48,
+  "render": 3.36,
+  "after": 1.39,
+  "job": 9.95
+ },
+ "job_after_autofix": {
+  "name": "massive-entertainment-hartmann-a24-games-saudigamer",
+  "story": "2026-11-24-massive-entertainment-hartmann-a24-games-saudigamer",
+  "footage_source": "steam:2221490",
+  "kind_news": "person",
+  "story_class": "person",
+  "story_class_why": "kind person",
+  "skin_why": "genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/massive-entertainment-hartmann-a24-games-saudigamer-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
+    "steam": 2221490,
+    "trailer": "Launch Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2221490"
+   },
+   {
+    "file": "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    "steam": 2221490,
+    "trailer": "Red Horizon Launch Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2221490"
+   },
+   {
+    "file": "massive-entertainment-hartmann-a24-games-saudigamer-gameplay-trailer.mp4",
+    "steam": 2221490,
+    "trailer": "Gameplay Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2221490"
+   }
+  ],
+  "shots": [
+   [
+    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
+    9.01,
+    3.8,
+    [
+     [
+      0.0,
+      0.391
+     ]
+    ]
+   ],
+   [
+    "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
+    70.41,
+    2.25,
+    [
+     [
+      0.0,
+      0.444
+     ]
+    ]
+   ],
+   [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    28.93,
+    2.25,
+    [
+     [
+      0.0,
+      0.55
+     ]
+    ]
+   ],
+   [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    30.5,
+    2.25,
+    [
+     [
+      0.0,
+      0.318
+     ]
+    ]
+   ],
+   [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    20.65,
+    2.2,
+    [
+     [
+      0.0,
+      0.55
+     ]
+    ]
+   ],
+   [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    22.85,
+    2.2,
+    [
+     [
+      0.0,
+      0.55
+     ]
+    ]
+   ],
+   [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    25.05,
+    2.2,
+    [
+     [
+      0.0,
+      0.55
+     ]
+    ]
+   ],
+   [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    52.81,
+    2.2,
+    [
+     [
+      0.0,
+      0.429
+     ]
+    ]
+   ],
+   [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    57.8,
+    2.2,
+    [
+     [
+      0.0,
+      0.616
+     ]
+    ]
+   ],
+   [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    50.05,
+    2.2,
+    0.0
+   ],
+   [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    6.28,
+    2.2,
+    [
+     [
+      0.0,
+      0.537
+     ]
+    ]
+   ],
+   [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    60.58,
+    2.2,
+    [
+     [
+      0.0,
+      0.262
+     ]
+    ]
+   ],
+   [
+    "massive-entertainment-hartmann-a24-games-saudigamer-gameplay-trailer.mp4",
+    43.71,
+    2.99,
+    [
+     [
+      0.0,
+      0.601
+     ]
+    ]
+   ],
+   [
+    "massive-entertainment-hartmann-a24-games-saudigamer-red-horizon-launch-trailer.mp4",
+    62.78,
+    1.38,
+    [
+     [
+      0.0,
+      0.262
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "ذكر موقع\nسعودي جيمر (Saudi Gamer)",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "نقلا عن Variety\nأن المدير العام",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "لاستوديو Massive Entertainment،\nوهو Christoph Hartmann،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    9,
+    [
+     [
+      "يريد أن يصبح الاستوديو مثل\nشركة الأفلام A24 في عالم الألعاب",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    10,
+    13,
+    [
+     [
+      "ويريد أن يفوز الاستوديو بجوائز كبرى،\nويحقق نجاحا تجاريا في الوقت نفسه",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    13,
+    "المصدر: Saudi Gamer · اللقطات: صفحة The Division 2 على Steam",
+    {
+     "size": 30,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع سعودي جيمر (Saudi Gamer) نقلا عن Variety أن المدير العام لاستوديو Massive Entertainment، وهو Christoph Hartmann، يريد أن يصبح الاستوديو مثل شركة الأفلام A24 في عالم الألعاب. ويريد أن يفوز الاستوديو بجوائز كبرى، ويحقق نجاحا تجاريا في الوقت نفسه.",
+  "headline": "مدير Massive الجديد\nيريد استوديوه مثل A24",
+  "label": "تقرير",
+  "game": "Massive Entertainment",
+  "game_short": "Massive",
+  "game_key": "massive entertainment",
+  "genre": [
+   "action"
+  ],
+  "texts": {
+   "instagram": "تقرير: مدير Massive يريد لاستوديوه مكانة شركة A24\n\nذكر موقع سعودي جيمر (Saudi Gamer) نقلا عن Variety أن المدير العام لاستوديو Massive Entertainment التابع ليوبيسوفت، وهو Christoph Hartmann، يريد أن يصبح الاستوديو مثل شركة الأفلام A24 في عالم الألعاب.\n\nويريد أن يفوز الاستوديو بجوائز كبرى، ويحقق نجاحا تجاريا في الوقت نفسه.\n\nاللقطات من صفحة The Division 2 على Steam.\n\nالمصدر: موقع سعودي جيمر (Saudi Gamer).\n\n#ألعاب #أخبار_الألعاب #Massive #TheDivision",
+   "x": "تقرير: ذكر موقع سعودي جيمر (Saudi Gamer) نقلا عن Variety أن المدير العام لاستوديو Massive Entertainment، وهو Christoph Hartmann، يريد أن يصبح الاستوديو مثل شركة الأفلام A24 في عالم الألعاب. المصدر: سعودي جيمر.",
+   "threads": "تقرير: ذكر موقع سعودي جيمر (Saudi Gamer) نقلا عن Variety أن المدير العام لاستوديو Massive Entertainment، وهو Christoph Hartmann، يريد أن يصبح الاستوديو مثل شركة الأفلام A24 في عالم الألعاب.\n\nويريد أن يفوز الاستوديو بجوائز كبرى ويحقق نجاحا تجاريا.\n\nالمصدر: موقع سعودي جيمر (Saudi Gamer)"
+  },
+  "source": "موقع سعودي جيمر (Saudi Gamer) اللقطات من صفحة The Division 2 على Steam",
+  "date": "24 Nov 2026",
+  "theme": "gold",
+  "style": null,
+  "template": "people",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4",
+   9.01
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Christoph Hartmann, Massive Entertainment managing director since July 2026 and ex Amazon Game Studios, told Variety he wants Massive to be the A24 of games; Saudi Gamer (Arabic) reported it 23 Nov",
+   "what_it_means_here": "Big studio people news, Arabic outlet; Massive makes The Division and Ghost Recon; footage is The Division 2"
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "people: kind person",
+   "skin": "house: genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "massive-entertainment-hartmann-a24-games-saudigamer-launch-trailer.mp4 from the resolver (steam:2221490)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam store page, Tom Clancy's The Division 2 (footage only) (https://store.steampowered.com/app/2221490/); first report: Saudi Gamer 23 Nov 2026 20:12Z (citing Variety)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 2221490 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "person_photo": "none",
+  "searched": [
+   "people library (templates/assets/people.json): not listed; the slip carried no photo; name card on the plate (22 Nov 2026)"
+  ],
+  "person": [
+   [
+    null,
+    "العام لاستوديو Massive Entertainment",
+    "المدير",
+    0.0,
+    3.5,
+    {
+     "focus": [
+      0.5,
+      0.4
+     ]
+    }
+   ]
+  ],
+  "subject_person": {
+   "name": "العام لاستوديو Massive Entertainment",
+   "role": "المدير",
+   "photo_source": null
+  }
+ }
+}
