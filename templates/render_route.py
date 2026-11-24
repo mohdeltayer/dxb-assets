@@ -83,6 +83,8 @@ def decide(holders, is_priority, c=None):
           f"{c['runners']} runner(s), render limit {limit}{' (T0)' if is_priority else ''}"
     if len(renders) < limit and (free >= 1 or not is_priority):
         return 'server', why                    # a normal job may wait a moment behind a read; a T0 job never waits
+    if not c.get('overflow', True):             # 24 Nov 2026: GitHub overflow timed out at 15 minutes; queue on the server
+        return 'server', why + '; overflow off (server-lanes.json): queued on the server until lanes 2 and 3 exist'
     return 'overflow', why
 CLAIM = 'Hosted render claimed'
 GRACE = int(os.environ.get('T0_GRACE', '25'))

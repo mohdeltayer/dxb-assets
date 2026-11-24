@@ -13,5 +13,7 @@
   "server-capacity-test": [
    "capacity"
   ]
- }
+ },
+ "overflow": false,
+ "overflow_note": "Mohammad, 24 Nov 2026: slip builds overflowed to GitHub timed out at 15 minutes twice overnight. Until he adds lanes 2 and 3 (scripts/runner-add.sh), overflow is off: every job, T0 included, routes to the server and waits in its runner queue. Set true to send jobs beyond the server slots to render.yml again."
 }
