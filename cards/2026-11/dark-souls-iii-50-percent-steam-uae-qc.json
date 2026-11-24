@@ -1,0 +1,275 @@
+{
+ "name": "dark-souls-iii-50-percent-steam-uae",
+ "out": "cards/2026-11/dark-souls-iii-50-percent-steam-uae-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "content",
+   "detail": "shot 2 at 93.12 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 2 at 93.85 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 3 at 53.48 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 3 at 54.48 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "length",
+   "detail": "length 10.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them; under 12 s fails: add a beat of footage"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "dark-souls-iii-50-percent-steam-uae-dark-souls-iii-pre-order-trailer-en-esrb.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "dark-souls-iii-50-percent-steam-uae-dark-souls-iii-pre-order-trailer-en-esrb.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "dark-souls-iii-50-percent-steam-uae-dark-souls-iii-pre-order-trailer-en-esrb.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "dark-souls-iii-50-percent-steam-uae-dark-souls-iii-pre-order-trailer-en-esrb.mp4 at 92.38 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "dark-souls-iii-50-percent-steam-uae-dark-souls-iii-pre-order-trailer-en-esrb.mp4 at 52.48 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "d",
+   "why": "audio split not applied (music stem not clean (leftover 8.4% > 5.0%)) on a trailer track under 3 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or o"
+  }
+ ],
+ "job_to_pass_min": 4.6,
+ "at": "2026-11-24T06:28:20Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 dark-souls-iii-50-percent-steam-uae-dark-souls-iii-pre-order-trailer-en-esrb.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 10.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 8.4% > 5.0%); music_pct 28.5; leak_pct 8.4; cache {'hit': 0, 'miss': 5}; separate_secs 5.6; secs 7.9",
+  "render_job: audio split fallback: our bed (audio split not applied (music stem not clean (leftover 8.4% > 5.0%)) on a trailer track under 3 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.); bed:neon_c",
+  "render_job: lifeless: {\"score\": 6.6, \"still_share\": 0.09, \"longest_still\": 0.6, \"cuts_per_10s\": 9.0, \"held_under_text\": 0.0, \"secs\": 10.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "dark-souls-iii-50-percent-steam-uae-ds3-the-movie-en-esrb.mp4 at 14.50 s for 3.8 s, focus 0.336 (nothing free in dark-souls-iii-50-percent-steam-uae-dark-souls-iii-pre-order-trailer-en-esrb.mp4)"
+  }
+ ],
+ "job_sha": "925132d0cf346ff92efbf8d42a532a86dfd1a64f",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/dark-souls-iii-50-percent-steam-uae-look-1.jpg",
+  "cards/2026-11/dark-souls-iii-50-percent-steam-uae-look-2.jpg",
+  "cards/2026-11/dark-souls-iii-50-percent-steam-uae-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_c (trailer sound refused: music stem not clean (leftover 8.4% > 5.0%))",
+ "shot_read": {
+  "secs": 76.6,
+  "files": {
+   "dark-souls-iii-50-percent-steam-uae-dark-souls-iii-pre-order-trailer-en-esrb.mp4": {
+    "secs": 52.9,
+    "cached": false,
+    "stages": {
+     "decode": 25.6,
+     "autofocus": 43.2,
+     "ocr": 43.2,
+     "smear": 52.6,
+     "scenes": 52.9
+    },
+    "incomplete": null
+   },
+   "dark-souls-iii-50-percent-steam-uae-ds3-the-movie-en-esrb.mp4": {
+    "secs": 23.7,
+    "cached": false,
+    "stages": {
+     "decode": 8.3,
+     "autofocus": 23.5,
+     "ocr": 23.5,
+     "smear": 23.5,
+     "scenes": 23.7
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/dark-souls-iii-50-percent-steam-uae.json",
+ "stage_minutes": {
+  "queue": 0.02,
+  "setup": 0.15,
+  "fetch": 0.36,
+  "shots": 0.89,
+  "checks": 1.12,
+  "render": 1.12,
+  "after": 0.36,
+  "job": 3.85
+ },
+ "job_after_autofix": {
+  "name": "dark-souls-iii-50-percent-steam-uae",
+  "story": "2026-11-24-dark-souls-iii-50-percent-steam-uae",
+  "footage_source": "steam:374320",
+  "kind_news": "deal",
+  "story_class": "trailer",
+  "story_class_why": "kind deal",
+  "skin_why": "genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/dark-souls-iii-50-percent-steam-uae-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "dark-souls-iii-50-percent-steam-uae-dark-souls-iii-pre-order-trailer-en-esrb.mp4",
+    "steam": 374320,
+    "trailer": "Dark Souls III - Pre-Order trailer (EN-ESRB)",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "374320"
+   },
+   {
+    "file": "dark-souls-iii-50-percent-steam-uae-ds3-the-movie-en-esrb.mp4",
+    "steam": 374320,
+    "trailer": "DS3 _ The Movie (EN-ESRB)",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "374320"
+   }
+  ],
+  "shots": [
+   [
+    "dark-souls-iii-50-percent-steam-uae-ds3-the-movie-en-esrb.mp4",
+    14.5,
+    3.8,
+    [
+     [
+      0.0,
+      0.336
+     ]
+    ]
+   ],
+   [
+    "dark-souls-iii-50-percent-steam-uae-dark-souls-iii-pre-order-trailer-en-esrb.mp4",
+    3.07,
+    2.21,
+    null
+   ],
+   [
+    "dark-souls-iii-50-percent-steam-uae-dark-souls-iii-pre-order-trailer-en-esrb.mp4",
+    3.07,
+    2.21,
+    null
+   ],
+   [
+    "dark-souls-iii-50-percent-steam-uae-dark-souls-iii-pre-order-trailer-en-esrb.mp4",
+    3.07,
+    3.0,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "ولم تذكر صفحة اللعبة\nموعد انتهاء العرض",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    3,
+    "المصدر: صفحة اللعبة على Steam",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "تباع لعبة Dark Souls III حاليا على Steam في الإمارات بسعر 149.99 درهما بدلا من 299.99، بخصم 50 بالمئة. ولم تذكر صفحة اللعبة موعد انتهاء العرض.",
+  "headline": "خصم 50 بالمئة\nعلى Dark Souls III",
+  "label": "رسمي",
+  "game": "Dark Souls III",
+  "game_short": "Dark Souls III",
+  "game_key": "dark souls iii",
+  "genre": [
+   "action"
+  ],
+  "texts": {
+   "instagram": "خصم 50 بالمئة على Dark Souls III\n\nتباع لعبة Dark Souls III حاليا على Steam في الإمارات بسعر 149.99 درهما بدلا من 299.99، بخصم 50 بالمئة.\n\nلم تذكر صفحة اللعبة موعد انتهاء العرض.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: صفحة اللعبة على Steam.\n\n#ألعاب #أخبار_الألعاب #DarkSouls #Steam",
+   "x": "تباع لعبة Dark Souls III حاليا على Steam في الإمارات بسعر 149.99 درهما بدلا من 299.99، بخصم 50 بالمئة. المصدر: صفحة اللعبة على Steam.",
+   "threads": "تباع لعبة Dark Souls III حاليا على Steam في الإمارات بسعر 149.99 درهما بدلا من 299.99، بخصم 50 بالمئة.\n\nلم تذكر صفحة اللعبة موعد انتهاء العرض.\n\nالمصدر: صفحة اللعبة على Steam"
+  },
+  "source": "صفحة اللعبة على Steam",
+  "date": "24 Nov 2026",
+  "theme": "cold",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "dark-souls-iii-50-percent-steam-uae-dark-souls-iii-pre-order-trailer-en-esrb.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Dark Souls III shows a 50 percent discount on Steam in the UAE store on 24 Nov 2026: 149.99 AED instead of 299.99",
+   "what_it_means_here": "UAE price in dirhams; the page names no end date"
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind deal",
+   "skin": "house: genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "dark-souls-iii-50-percent-steam-uae-dark-souls-iii-pre-order-trailer-en-esrb.mp4 from the resolver (steam:374320)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam store page and store API, DARK SOULS III, UAE price read 24 Nov 2026 (https://store.steampowered.com/app/374320/); first report: Steam store price read 24 Nov 2026; Denfaminicogamer 24 Nov 2026 reports the series sale",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 374320 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
