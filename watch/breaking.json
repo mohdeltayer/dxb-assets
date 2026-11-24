@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-24T15:30:25Z",
- "seq": 817,
+ "generated_at": "2026-11-24T15:35:20Z",
+ "seq": 818,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 22202,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Attack on Titan 3 - Explorations Within the Walls Gameplay Video | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=Ly9NJxllOiY",
+   "published": "2026-11-24T15:30Z",
+   "first_seen": "2026-11-24T15:35:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/Ly9NJxllOiY/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=Ly9NJxllOiY"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 818
+  }
+ ],
+ "recent": [
   {
    "id": 22199,
    "source": "PlayStation (YouTube)",
@@ -25,9 +48,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 817
-  }
- ],
- "recent": [
+  },
   {
    "id": 22194,
    "source": "PlayStation (YouTube)",
@@ -423,9 +444,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-24T15:30:05Z",
+  "last_poll_at": "2026-11-24T15:35:14Z",
   "sources_enabled": 101,
-  "sources_ok": 97,
+  "sources_ok": 96,
   "sources_failing": 2,
   "failed": [
    "GamesRadar (HTTP 404, 2x)",
