@@ -89,12 +89,10 @@
     "gap alarm: formats.py gaps 2 in every watch"
    ],
    "reads_each_run": [
-    "dxb-queue desk/board.md",
-    "CLAUDE.md",
+    "ops/READ-FIRST.md",
     "STYLE.md",
-    "newsroom/delegation.md",
-    "newsroom/editorial-memory.md (story type)",
-    "newsroom/commitments.json"
+    "CLAUDE.md (slim)",
+    "dxb-queue desk/board.md"
    ],
    "gaps": [
     "task names, schedules and approval mode not visible from Production 1; Production 2 to confirm its rows here"

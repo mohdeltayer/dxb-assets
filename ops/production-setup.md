@@ -257,10 +257,10 @@ a run that has not been updated still reads them.
    episode keeps its date. The desk audit lists as UNACKED any such handoff no Production 2 line names within 70
    minutes, at the top of the morning digest.
 2. Search before asking (adv-20261108-no-decision-stalls): a run never ends on "decision needed" when the repo holds the
-   answer. Search CLAUDE.md, STYLE.md and newsroom/ for the subject and cite the section; if the answer is truly absent,
+   answer. Search CLAUDE.md (and docs/history.md by heading), STYLE.md and newsroom/ for the subject and cite the section; if the answer is truly absent,
    build the written fallback and put the question on the board's Questions list (section 4), never in the run's
    closing line. The desk audit lists a decision line without a cited section as NOT-FOLLOWING-RULES.
-3. Bank sources, by name (CLAUDE.md Overnight cadence 1c, Constant coverage 3; adv-20261108-numbers-cards-grid): the
+3. Bank sources, by name (docs/history.md Overnight cadence 1c, Constant coverage 3; adv-20261108-numbers-cards-grid): the
    bank floor (6 ready Reels with a template and a verified source in newsroom/evergreen.md) is Production 2's job in
    every run that builds no news. Sources: on-this-day anniversaries with the game's own footage («في مثل هذا اليوم»),
    "how it happened" explainers, list pieces with each game's art, the Gulf price roundup, and numbers from a company's

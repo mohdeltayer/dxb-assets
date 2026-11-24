@@ -2,17 +2,19 @@
 
 Raw file, no clone: `https://raw.githubusercontent.com/mohdeltayer/dxb-assets/main/<path>`
 
-## 1. Read before any build
-- `newsroom/reel-check.md`, `newsroom/editorial-memory.md` (your story type), `newsroom/names-ar.md`
-- `STYLE.md` (rules in force, one page) and `arabic/house-glossary.md`
-- `CLAUDE.md`, these headings: "Full-screen format for everything" (inside "Two accounts"), "Full frame, never a box in a
-  blurred fill", "Verification without delay", "Verify against primary sources", "Story brief and editorial memory",
-  "Desk board", "Publishing through Publer", "Trailer audio split, live", "Music-only trailer sound, opt-in"
-- `newsroom/delegation.md`: "Task cards" (Director, Footage, Render lanes, Publer post, Pre-publish gate),
-  "Promises first", "Full-frame check", "Hourly watch and the breaking lane"
-- dxb-queue branch `desk`, `desk/board.md` (first and last thing every run)
-- Cards (from the cards-in-git cutover, see the board): dxb-queue branch `main`, `cards/index.json` at the start of every
-  run and `cards/<id>.json` when acting on one; write status with `python3 ops/cards.py set <id> progress="..."` (dxb-queue)
+## 1. What a run reads (Mohammad, 24 Nov 2026: runs stopped "on context budget" with the board at 285 KB and CLAUDE.md at 315 KB)
+Every Production 2 run reads these four, and only these, at the start:
+- this file, `ops/READ-FIRST.md`
+- `STYLE.md`
+- `CLAUDE.md` (the slim rules in force, about 30 KB; the full dated history is `docs/history.md`: never read it whole,
+  open one section by its heading only when a task needs it)
+- dxb-queue branch `desk`, `desk/board.md` (trimmed every day at 04:00 Dubai to the last 24 hours, under 30 KB; first and
+  last thing every run; older lines in `desk/archive/`, read only when a handoff points there)
+Open anything else only at the step that needs it, and only the part it needs: the story type's entries in
+`newsroom/editorial-memory.md` and its items in `newsroom/reel-check.md` when writing the brief; `arabic/house-glossary.md`
+and `newsroom/names-ar.md` when writing Arabic; the Director card in `newsroom/delegation.md` when acting as Director; an
+exemplar in `ops/exemplars/` when unsure of a template. Do not read whole digests, release notes, render logs or
+render-times.json; use `grep` or the work order's summary.
 
 ## 2. Files without a full clone
 ```

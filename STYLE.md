@@ -1,6 +1,6 @@
 # Digital Lounge: the rules in force (24 Oct 2026)
 
-One page of what applies today. CLAUDE.md is the full, dated history and wins
+One page of what applies today. docs/history.md is the full, dated history and wins
 on detail; each line here names its section there. Anything listed under
 "Not in force" is history, not a rule. Update this page in the same commit
 as any change to a rule (Mohammad, 13 Oct 2026, review priority 1).
@@ -1003,3 +1003,21 @@ server fixes, every slot on the picture start, were written back to main) and it
 - Physical edition: «النسخة المطبوعة» only; «النسخة المادية» and «ورقية» are refused by the text check (23 Nov 2026).
 - Story lines (23 Nov 2026): each line is a full sentence or clause, up to two visual lines, cut only at a full stop or a comma, never inside a name, a number with its unit or a phrase; one line stays up across several shots; 3 to 6 lines a Reel; a line under 5 words (not the last) merges with a neighbour; word-by-word reveal only on the one key line a job asks for. templates/linecut.py, in the slip lane and the render.
 - Publer is the main storyboard (23 Nov 2026): the only record of what is scheduled and posted; the board and the repo are notes. Check Publer before preparing a story and again before every submit (same story or same game and news: skip, note it on the board); v2 replaces v1 only while v1 has not posted; Production 1 never schedules a Production 2 story. Cadence in ops/cadence.json (30 min by day, 60 at night 00:00 to 08:00 Dubai, buffer 6, alert under 2 ahead); nothing hard-codes spacing. «النسخة المطبوعة» only.
+
+## Context overload (Mohammad, 24 Nov 2026; docs/history.md "Context overload")
+
+- CLAUDE.md is the slim rules in force (about 34 KB); the full dated history is docs/history.md, opened by section only.
+- Production 2 reads only ops/READ-FIRST.md, STYLE.md, CLAUDE.md and the trimmed desk/board.md at the start of a run.
+- The board is trimmed every day at 04:00 Dubai (dxb-queue boardtrim.yml): the last 24 hours, under 30 KB; older lines in
+  desk/archive/.
+- Overflow to the GitHub runner stays on until server lanes 2 and 3; the runner caches its Python packages, retries a hung
+  install once, and a failed runner render falls back to the server queue (render-live lane=server).
+
+## Context overload (Mohammad, 24 Nov 2026; docs/history.md "Context overload")
+
+- CLAUDE.md is the slim rules in force (about 34 KB); the full dated history is docs/history.md, opened by section only.
+- Production 2 reads only ops/READ-FIRST.md, STYLE.md, CLAUDE.md and the trimmed desk/board.md at the start of a run.
+- The board is trimmed every day at 04:00 Dubai (dxb-queue boardtrim.yml): the last 24 hours, under 30 KB; older lines in
+  desk/archive/.
+- Overflow to the GitHub runner stays on until server lanes 2 and 3; the runner caches its Python packages, retries a hung
+  install once, and a failed runner render falls back to the server queue (render-live lane=server).

@@ -152,7 +152,7 @@ with a note, or the story moves to a simpler template. A voiced track it
 approves goes into the job as `"speech_ok": "<reason>"` and into the draft spec
 as `"speech_director": "<decision>"`, so the pre-queue transcription reads the
 speech against its decision instead of stopping on it.
-Trailer audio split (Mohammad, 24 Oct 2026, inbox 16:26Z; CLAUDE.md "Trailer
+Trailer audio split (Mohammad, 24 Oct 2026, inbox 16:26Z; docs/history.md "Trailer
 audio split, live"): on a job with a trailer track the runner plays the
 trailer's music stem under the whole Reel and puts back only each shot's own
 effects. The director reads the runner log line `render_job: audio split:` (or
@@ -178,7 +178,7 @@ the brief is on the allowed list (press kit, awarding body, licensed and
 credited), and the first frame shows the person and the game together; a
 missing person window on such a story is a send-back.
 Legal, piracy, hacking and leak-enforcement stories (advisor, 26 Oct 2026;
-CLAUDE.md section of that name): the director checks the wording is neutral and
+docs/history.md section of that name): the director checks the wording is neutral and
 attributed (no side taken, no leaker's framing), nothing leaked or extracted is
 on screen (not even blurred), there is no how-to or tool link, the footage is
 official, and the sound is our channel bed; any miss is a send-back.
@@ -207,7 +207,7 @@ what the footage cannot prove, full frame or crop, and evidence_role (demonstrat
 The director checks shot, excerpt and crop separately and asks the five questions before upload: does
 every beat add something; does the picture support the sentence; is the Arabic natural read aloud; does
 the clip keep the action needed to understand the point; does the ending fulfil the hook. A miss is a
-send-back. CLAUDE.md "Every beat says what must be seen" has the shapes per story kind.
+send-back. docs/history.md "Every beat says what must be seen" has the shapes per story kind.
 Credit on every clip (advisor card adv-20261030-download-automation-and-credits, Part B,
 approved by Mohammad 30 Oct 2026). Every clip that is not ours carries an on-screen credit
 for as long as it is shown: the publisher or platform, and the studio where it differs
@@ -219,7 +219,7 @@ the last, the line opens on an Arabic word and carries no sign that flips (no «
 spelled out), and the pinned comment keeps the source link as before. Until the build item
 lands, the credit line is held off during the headline (one focus), so the first 2 s of the
 cover show no credit; that gap is known and closes with the build item. A miss is a send-back.
-QA format (advisor, 23 Oct 2026; CLAUDE.md "Director QA format"). For every
+QA format (advisor, 23 Oct 2026; docs/history.md "Director QA format"). For every
 shot, pull one frame (the shot's middle, plus its first frame when a line
 enters there) and check: framing (subject in the 9:16 crop, no side-on face
 without look room, no cut text at the edges); text (readable at phone size,
@@ -265,7 +265,7 @@ angle and hook kind, template from `formats.py pick` with the brief's fact
 count and its opening beat from `formats.py check`, cover frame, sound, key
 shot, the named turn and the second it lands on, the total seconds before the
 end card (12 to 20 s target, advisor 14 Oct 2026; handson and edition exempt),
-and one reason per line saying what the viewer sees and why it shows that line, and the "sensitive" line: none, or which rule of CLAUDE.md "Culturally sensitive details" applies and how the wording and shots handle it (21 Oct 2026); CLAUDE.md "Creative brief and formats" and
+and one reason per line saying what the viewer sees and why it shows that line, and the "sensitive" line: none, or which rule of docs/history.md "Culturally sensitive details" applies and how the wording and shots handle it (21 Oct 2026); docs/history.md "Creative brief and formats" and
 "Templates and scenarios", 14 Oct): `check`, then `sheet`, then `draft`, then `strip`, and stop there with the
 paths. A line over a card must be at most one visual line of framing or
 absent (one fact, one place); report any line that repeats its card. Report
@@ -584,7 +584,7 @@ server dispatcher is installed; production disables it that day and says so
 in the release note.
 
 Every run also reads Mohammad's inbox (`items` on
-https://claude.ai/artifact/AwcHX88eyTrUAL9pc4j4AW, CLAUDE.md "Mohammad's
+https://claude.ai/artifact/AwcHX88eyTrUAL9pc4j4AW, docs/history.md "Mohammad's
 inbox", 24 Oct 2026): act on answered production items and mark them done
 with their outcome; apply the default of any item past its deadline. A
 breaking ping goes into the inbox as an approval item too, deadline 15

@@ -33,7 +33,7 @@ Duties: posting lane (build, schedule, publish); hourly watch; review preps 06:3
 - Preflight: disk (under 5 GB: clean first; under 2 GB: alarm on the board and stop); repo at origin/main; board readable; then the started line; Publer answers (list_publer_posts)
 - Alarm: keeper: 90 minutes without a Production 2 watch run (planned, build night 5 to 6 Nov)
 - Alarm: gap alarm: formats.py gaps 2 in every watch
-- Reads each run: dxb-queue desk/board.md, CLAUDE.md, STYLE.md, newsroom/delegation.md, newsroom/editorial-memory.md (story type), newsroom/commitments.json
+- Reads each run (Mohammad, 24 Nov 2026): ops/READ-FIRST.md, STYLE.md, the slim CLAUDE.md and dxb-queue desk/board.md (trimmed daily); other files only at the step that needs them (ops/READ-FIRST.md section 1)
 - GAP: task names, schedules and approval mode not visible from Production 1; Production 2 to confirm its rows here
 
 ## Production 1 studio (Production 1)
