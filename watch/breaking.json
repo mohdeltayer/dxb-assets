@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-24T01:05:09Z",
- "seq": 790,
+ "generated_at": "2026-11-24T01:10:06Z",
+ "seq": 791,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 21625,
+   "source": "Nintendo of America (YouTube)",
+   "source_kind": "youtube",
+   "title": "Switch2 NSO GCN WaveRaceBS Nov2026 TRL H265",
+   "url": "https://www.youtube.com/watch?v=9ZAr8bhi1ig",
+   "published": "2026-11-24T01:02Z",
+   "first_seen": "2026-11-24T01:10:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/9ZAr8bhi1ig/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=9ZAr8bhi1ig"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 791
+  }
+ ],
+ "recent": [
   {
    "id": 21616,
    "source": "Nintendo Japan",
@@ -16,9 +39,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 790
-  }
- ],
- "recent": [
+  },
   {
    "id": 21594,
    "source": "PlayStation Blog",
@@ -168,7 +189,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-24T01:05:04Z",
+  "last_poll_at": "2026-11-24T01:10:04Z",
   "sources_enabled": 101,
   "sources_ok": 99,
   "sources_failing": 1,
