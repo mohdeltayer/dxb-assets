@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-24T15:15:25Z",
- "seq": 815,
+ "generated_at": "2026-11-24T15:25:10Z",
+ "seq": 816,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 22194,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Stardust: Wish of Witch - Release Date Announcement Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=u7u9yRu1Z1Q",
+   "published": "2026-11-24T15:00Z",
+   "first_seen": "2026-11-24T15:25:07Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/u7u9yRu1Z1Q/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=u7u9yRu1Z1Q"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 816
+  }
+ ],
+ "recent": [
   {
    "id": 22172,
    "source": "Xbox (YouTube)",
@@ -25,9 +48,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 815
-  }
- ],
- "recent": [
+  },
   {
    "id": 22140,
    "source": "PlayStation (YouTube)",
@@ -381,12 +402,13 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-24T15:15:25Z",
+  "last_poll_at": "2026-11-24T15:25:07Z",
   "sources_enabled": 101,
-  "sources_ok": 99,
-  "sources_failing": 1,
+  "sources_ok": 98,
+  "sources_failing": 2,
   "failed": [
-   "GamesRadar (HTTP 404, 2x)"
+   "GamesRadar (HTTP 404, 2x)",
+   "PC Gamer (HTTP 404, 2x)"
   ]
  }
 }
