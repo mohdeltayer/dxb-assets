@@ -8,7 +8,7 @@
  "skin_why": "genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
  "built_by": "server-slip",
  "render_lane": "server",
- "out": "cards/2026-11/gta-vi-39m-players-playstation-push-square-reel-v3.mp4",
+ "out": "cards/2026-11/gta-vi-39m-players-playstation-push-square-reel-v4.mp4",
  "split_fallback": "ladder",
  "footage": [
   {
@@ -20,7 +20,7 @@
  "shots": [
   [
    "gta6-launch-master.mp4",
-   3.0,
+   68.6,
    3.8,
    0.5
   ],
@@ -185,8 +185,8 @@
   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
  },
  "rerender": {
-  "reason": "overlap",
-  "note": "v2 ran the trailer's ROCKSTAR GAMES PRESENTS card (source 15 to 18 s) under line 1, and the credit ladder doubled its separator; shots re-picked by eye from the 1080p copy at its scene cuts, short credit"
+  "reason": "wrong_subject",
+  "note": "v3: the hook ladder took the library stretch labelled lowrider crew at 15.5 s, which is the trailer title card ROCKSTAR GAMES PRESENTS; label removed, hook set to the night helicopter scene (68.6 s, clean of the 14-day opener at 3.0 s)"
  },
  "priority": true,
  "p1_note": "Production 1 builds and schedules this T0 on Mohammad order (24 Nov 05:45 Dubai). The 70% line follows the PlayStation Blog sentence \"Since its launch, GTAVI was the first game played on 70% of new PS5 consoles\"; the newly-connected-consoles day is a separate claim. 17.4 hours is per player (\"Each player has spent an average of 17.4 hours\")."
