@@ -1,14 +1,12 @@
 {
  "id": "2026-11-24-nioh-3-complete-edition-xbox-jan-28-bloody-insurrection-dec-17",
- "state": "failed",
- "problems": [
-  "text: line 2: open the line on an Arabic word («تصدر Warhammer...», not «Warhammer تصدر...»), or rebreak",
-  "text: line 6: open the line on an Arabic word («تصدر Warhammer...», not «Warhammer تصدر...»), or rebreak"
- ],
+ "state": "built",
+ "problems": [],
  "flags": [
-  "text fixed mechanically: line 4: space after a glued prefix"
+  "text fixed mechanically: line 4: space after a glued prefix",
+  "ledger: earlier stories on this game: 2026-11-22-nioh-3-complete-edition-korea-rating-insider-gaming (an update or a duplicate? the editor decides)"
  ],
- "at": "2026-11-24T02:16:15Z",
+ "at": "2026-11-24T02:21:01Z",
  "footage": {
   "name": "Nioh 3 - Launch Trailer",
   "width": 1920,
@@ -21,9 +19,9 @@
  },
  "job": "jobs/live/nioh-3-complete-edition-xbox-jan-28-bloody-insurrection-dec-17.json",
  "story": "newsroom/stories/2026-11-24-nioh-3-complete-edition-xbox-jan-28-bloody-insurrection-dec-17.json",
- "lines": 6,
- "shots": 13,
- "run": "45311074163",
+ "lines": 5,
+ "shots": 12,
+ "run": "45311663820",
  "lane": "live",
- "build_secs": 56
+ "build_secs": 45
 }
