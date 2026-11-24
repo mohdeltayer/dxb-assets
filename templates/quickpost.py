@@ -162,6 +162,20 @@ def candidates(story, job):
                 out.append(('url', d['header_image'], f'Steam header (app {app})'))
         except Exception as e:                          # noqa: BLE001
             print(f'quickpost: Steam {app} not read ({e})')
+    try:                                                # curated stretches of the game, a character first (24 Nov 2026)
+        import gamekey as GK
+        lib = load(os.path.join(HERE, 'assets', 'game-stretches.json'), {}) or {}
+        key = GK.key(story.get('game') or job.get('game') or '')
+        g = next((v for k, v in (lib.get('games') or {}).items() if GK.key(k) == key), None) if key else None
+        st = sorted((g or {}).get('stretches') or [], key=lambda x: (not ({'person', 'lucia', 'jason'} & set(x.get('tags') or [])),))
+        files = (g or {}).get('files') or {}
+        for x in st[:3]:
+            f = files.get(x.get('file')) or {}
+            url = (RAW + f['same'][0]) if f.get('same') else f.get('url')   # the repo's 1080p copy before a 4K master
+            if url:
+                out.append(('frame', (url, float(x['start']) + 0.8), f"curated stretch: {x.get('label')}"))
+    except Exception as e:                              # noqa: BLE001
+        print(f'quickpost: curated stretches not read ({e})')
     shots = [s for s in job.get('shots') or [] if isinstance(s, list) and len(s) > 2 and isinstance(s[1], (int, float))]
     feet = {it.get('file'): it for it in job.get('footage') or [] if it.get('file')}
     for s in shots[:2]:
@@ -170,6 +184,27 @@ def candidates(story, job):
         if src and not str(src).endswith(('.png', '.jpg', '.webp')):
             out.append(('frame', (src, float(s[1]) + 0.6), f'frame of the official trailer at {float(s[1]) + 0.6:.1f} s'))
     return out
+
+
+def trim_bars(im):
+    """Black letterbox or pillarbox bars cut off (rows or columns darker than 14 on average)."""
+    g = im.convert('L')
+    w, h = g.size
+    px = g.load()
+    def row(y):
+        return sum(px[x, y] for x in range(0, w, 8)) / len(range(0, w, 8))
+    def col(x):
+        return sum(px[x, y] for y in range(0, h, 8)) / len(range(0, h, 8))
+    t, b, l, r = 0, h - 1, 0, w - 1
+    while t < h // 3 and row(t) < 14:
+        t += 1
+    while b > 2 * h // 3 and row(b) < 14:
+        b -= 1
+    while l < w // 3 and col(l) < 14:
+        l += 1
+    while r > 2 * w // 3 and col(r) < 14:
+        r -= 1
+    return im.crop((l, t, r + 1, b + 1)) if (t or l or b < h - 1 or r < w - 1) else im
 
 
 def fetch_image(story, job, tmp):
@@ -184,7 +219,7 @@ def fetch_image(story, job, tmp):
                 subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', f'{at:.2f}', '-i', url, '-frames:v', '1',
                                 p + '.src.png'], check=True, timeout=120)
                 os.replace(p + '.src.png', p + '.src')
-            im = Image.open(p + '.src').convert('RGB')
+            im = trim_bars(Image.open(p + '.src').convert('RGB'))
             if im.width < 900 or im.height < 500:
                 print(f'quickpost: {note}: {im.width}x{im.height} too small')
                 continue
@@ -209,7 +244,10 @@ def render(sid, out, now=None):
     os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
     import cards as C                                   # fast.compose reads media under cards.U (the uploads folder)
     C.U = os.path.dirname(img).rstrip('/') + '/'
-    FA.fast_ar(os.path.basename(img), date_en(now), src, out, label=lab, theme=th)
+    from PIL import Image
+    with Image.open(img) as im:
+        wide = im.width / im.height > 2.0
+    FA.fast_ar(os.path.basename(img), date_en(now), src, out, label=lab, theme=th, crop=wide)
     return {'story': sid, 'base': base_of(sid), 'card': out, 'image': note, 'chip': lab, 'theme': th, 'source': src,
             'texts': texts(story), 't0': tier0(story, job)}
 
