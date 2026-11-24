@@ -1,25 +1,9 @@
 {
  "id": "2026-11-24-massive-entertainment-hartmann-a24-games-saudigamer",
- "state": "failed",
- "problems": [
-  "text: line 3: game names stay in Latin letters, as the publisher writes them: «Massive Entertainment», never in Arabic letters (names-ar rule; Burning Sword case, 19 Nov 2026)",
-  "text: texts instagram: game names stay in Latin letters, as the publisher writes them: «Massive Entertainment», never in Arabic letters (names-ar rule; Burning Sword case, 19 Nov 2026)",
-  "text: texts x: game names stay in Latin letters, as the publisher writes them: «Massive Entertainment», never in Arabic letters (names-ar rule; Burning Sword case, 19 Nov 2026)",
-  "text: texts threads: game names stay in Latin letters, as the publisher writes them: «Massive Entertainment», never in Arabic letters (names-ar rule; Burning Sword case, 19 Nov 2026)"
- ],
- "flags": [
-  "name not in names-ar: «مدير ماسيف (Massive)» (headline); add it there as Proposed",
-  "name not in names-ar: «نقلا عن مجلة فارايتي (Variety)» (spoken); add it there as Proposed",
-  "name not in names-ar: «أن كريستوف هارتمان (Christoph Hartmann)» (spoken); add it there as Proposed",
-  "name not in names-ar: «المدير العام لاستوديو ماسيف (Massive Entertainment)» (spoken); add it there as Proposed",
-  "text fixed mechanically: headline: names not in names-ar written in Latin: Massive; spoken: names not in names-ar written in Latin: Variety, Christoph Hartmann, Massive Entertainment",
-  "warning: text: line 2: «Variety» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before the render, or, for a game, write it in Latin letters only",
-  "warning: text: line 2: «Christoph Hartmann» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before the render, or, for a game, write it in Latin letters only",
-  "warning: text: line 3: «Massive Entertainment» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before the render, or, for a game, write it in Latin letters only",
-  "warning: text: line 2: these words are not in the paragraph: فارايتي كريستوف هارتمان; the lines, read in order, are the spoken paragraph (a word may be left out, none added): rewrite the line from the paragraph, or the paragraph to carry it",
-  "warning: text: line 3: these words are not in the paragraph: لاستوديو ماسيف; the lines, read in order, are the spoken paragraph (a word may be left out, none added): rewrite the line from the paragraph, or the paragraph to carry it"
- ],
- "at": "2026-11-24T06:40:31Z",
+ "state": "built",
+ "problems": [],
+ "flags": [],
+ "at": "2026-11-24T06:42:33Z",
  "footage": {
   "name": "Launch Trailer",
   "width": 1920,
@@ -30,17 +14,11 @@
   "duration": 92.02,
   "decode_clean": true
  },
- "names_to_review": [
-  "Massive",
-  "Variety",
-  "Christoph Hartmann",
-  "Massive Entertainment"
- ],
  "job": "jobs/live/massive-entertainment-hartmann-a24-games-saudigamer.json",
  "story": "newsroom/stories/2026-11-24-massive-entertainment-hartmann-a24-games-saudigamer.json",
- "lines": 6,
- "shots": 15,
- "run": "45342137219",
+ "lines": 5,
+ "shots": 14,
+ "run": "45342400427",
  "lane": "live",
- "build_secs": 76
+ "build_secs": 54
 }
