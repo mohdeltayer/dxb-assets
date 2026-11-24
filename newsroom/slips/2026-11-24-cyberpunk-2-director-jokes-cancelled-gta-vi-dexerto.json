@@ -1,0 +1,35 @@
+{
+ "id": "2026-11-24-cyberpunk-2-director-jokes-cancelled-gta-vi-dexerto",
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "name not in names-ar: «ديكسيرتو (Dexerto)» (credit); add it there as Proposed",
+  "name not in names-ar: «أن إيغور سارزينسكي (Igor Sarzynski)» (spoken); add it there as Proposed",
+  "text fixed mechanically: spoken: names not in names-ar written in Latin: Dexerto, Igor Sarzynski; line: names not in names-ar written in Latin: Dexerto",
+  "warning: text: line 1: «Igor Sarzynski» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before the render, or, for a game, write it in Latin letters only",
+  "warning: text: line 1: these words are not in the paragraph: إيغور سارزينسكي; the lines, read in order, are the spoken paragraph (a word may be left out, none added): rewrite the line from the paragraph, or the paragraph to carry it",
+  "ledger: earlier stories on this game: 2026-10-20-cyberpunk-2077-edgerunners-2-update-october-22, 2026-10-23-cyberpunk-2077-witcher-3-gear, 2026-10-23-netflix-xbox-rights-talks, 2026-10-24-cyberpunk-2077-steam-peak-3-years, 2026-11-09-cyberpunk-2077-arabic-support-steam (an update or a duplicate? the editor decides)"
+ ],
+ "at": "2026-11-24T06:13:46Z",
+ "footage": {
+  "name": "Cyberpunk 2077 | Edgerunners 2 Update Features Overview",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30.0,
+  "mbps": 5.6,
+  "rows": 1080,
+  "duration": 98.79,
+  "decode_clean": true
+ },
+ "names_to_review": [
+  "Dexerto",
+  "Igor Sarzynski"
+ ],
+ "job": "jobs/live/cyberpunk-2-director-jokes-cancelled-gta-vi-dexerto.json",
+ "story": "newsroom/stories/2026-11-24-cyberpunk-2-director-jokes-cancelled-gta-vi-dexerto.json",
+ "lines": 5,
+ "shots": 13,
+ "run": "45338829680",
+ "lane": "live",
+ "build_secs": 56
+}
