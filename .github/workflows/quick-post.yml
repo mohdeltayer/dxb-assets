@@ -1,0 +1,117 @@
+# Quick posts (Mohammad, 24 Nov 2026: split by platform). X and Threads get a fast news post: an image card from
+# templates/fast_ar.py (official key art or screenshot, our chip and footer, Dubai type) and a short Arabic text; the
+# Reel follows on Instagram, and on X and Threads two hours or more later (templates/quickpost.py, serverpost.py).
+# mode sample: cards under cards/test/quick/, nothing scheduled. mode live: the card under cards/YYYY-MM/<base>-quick.jpg,
+# a row in newsroom/quickpost.jsonl (state rendered), the card uploaded to the Publer library (media-only key), and the
+# server step (server-post.yml, dispatched at the end) schedules it on X and Threads or writes it ready for the
+# connector. The Dubai font comes from the private dxb-fonts repo into a temp folder, never committed, never printed.
+name: quick-post
+
+permissions:
+  contents: write
+  actions: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      story:
+        description: 'Story id(s) in newsroom/stories, comma-separated'
+        required: true
+      mode:
+        description: 'live (render, record, schedule) or sample (cards/test/quick only)'
+        required: false
+        default: 'live'
+
+concurrency:
+  group: quick-post-${{ inputs.story }}
+  cancel-in-progress: false
+
+jobs:
+  card:
+    if: github.repository == 'mohdeltayer/dxb-assets' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      STORIES: ${{ inputs.story }}
+      MODE: ${{ inputs.mode }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: |
+            templates
+            jobs
+            newsroom
+      - name: Guard
+        run: |
+          printf '%s' "$STORIES" | grep -Eq '^[A-Za-z0-9._,-]+$' || { echo "story ids only"; exit 1; }
+          case "$MODE" in live|sample) ;; *) echo "mode is live or sample"; exit 1;; esac
+          echo "T0=$(date +%s)" >> "$GITHUB_ENV"
+      - name: Fonts (temp folder, outside the workspace)
+        env:
+          FONTS_TOKEN: ${{ secrets.FONTS_TOKEN }}
+        run: |
+          repo="$RUNNER_TEMP/dxb-fonts"; f="$RUNNER_TEMP/dubai-fonts"
+          git clone -q --depth 1 "https://x-access-token:${FONTS_TOKEN}@github.com/mohdeltayer/dxb-fonts.git" "$repo"
+          mkdir -p "$f"; unzip -q -C -j -o "$repo/dubai.zip" '*.ttf' -d "$f"; rm -rf "$repo"
+          echo "DUBAI_FONTS=$f" >> "$GITHUB_ENV"
+      - name: Tools
+        timeout-minutes: 4
+        run: |
+          python3 -m pip install -q --timeout 60 pillow numpy
+          command -v ffmpeg >/dev/null || { sudo apt-get -o DPkg::Lock::Timeout=60 update -qq; timeout 150 sudo apt-get install -y -q --no-install-recommends ffmpeg >/dev/null; }
+          command -v ffmpeg
+      - name: Cards
+        run: |
+          mkdir -p "$RUNNER_TEMP/q"; : > "$RUNNER_TEMP/rows.jsonl"
+          month=$(date -u +%Y-%m)
+          for sid in $(echo "$STORIES" | tr ',' ' '); do
+            base=$(echo "$sid" | sed -E 's/^[0-9]{4}-[0-9]{2}-[0-9]{2}-//')
+            if [ "$MODE" = sample ]; then out="cards/test/quick/$base-quick.jpg"; else out="cards/$month/$base-quick.jpg"; fi
+            if python3 templates/quickpost.py render "$sid" "$out" --json "$RUNNER_TEMP/q/$base.json"; then
+              [ "$MODE" = sample ] && cp "$RUNNER_TEMP/q/$base.json" "cards/test/quick/$base-quick.json"
+              python3 - "$RUNNER_TEMP/q/$base.json" "$MODE" >> "$RUNNER_TEMP/rows.jsonl" <<'PY'
+          import json, sys, datetime as dt
+          r = json.load(open(sys.argv[1]))
+          print(json.dumps({'at': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'), 'story': r['story'],
+                            'base': r['base'], 'card': r['card'], 'chip': r['chip'], 't0': r['t0'], 'image': r['image'],
+                            'state': 'rendered' if sys.argv[2] == 'live' else 'sample'}, ensure_ascii=False))
+          PY
+              echo "### $sid: $out ($(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['image'])" "$RUNNER_TEMP/q/$base.json"))" >> "$GITHUB_STEP_SUMMARY"
+            else
+              echo "### $sid: no card (see the log)" >> "$GITHUB_STEP_SUMMARY"
+            fi
+          done
+          echo "RENDER_SECS=$(( $(date +%s) - T0 ))" >> "$GITHUB_ENV"
+      - name: Publer library (media-only key, live only)
+        if: inputs.mode == 'live'
+        continue-on-error: true
+        timeout-minutes: 4
+        env:
+          PUBLER_MEDIA_KEY: ${{ secrets.PUBLER_MEDIA_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json, os, subprocess
+          for l in open(os.path.join(os.environ['RUNNER_TEMP'], 'rows.jsonl')):
+              r = json.loads(l)
+              subprocess.run(['python3', 'templates/publer_upload.py', r['card'], os.path.join(os.environ['RUNNER_TEMP'], 'up.json')])
+          PY
+      - name: Commit
+        run: |
+          git config user.name "dxb-quick-post"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          [ -s "$RUNNER_TEMP/rows.jsonl" ] || { echo "no card rendered"; exit 1; }
+          for i in 1 2 3 4 5; do
+            git fetch -q --depth 1 --filter=blob:none origin main && git reset -q --hard origin/main   # new cards are untracked and stay
+            if [ "$MODE" = live ]; then cat "$RUNNER_TEMP/rows.jsonl" >> newsroom/quickpost.jsonl; git add --sparse newsroom/quickpost.jsonl; fi
+            git add --sparse -A cards
+            git commit -q -m "Quick post card(s) $MODE: $STORIES (${RENDER_SECS}s; split by platform, 24 Nov 2026)" || exit 0
+            git push -q origin HEAD:main && break
+            sleep $((i * 3))
+          done
+      - name: Schedule (server step)
+        if: inputs.mode == 'live'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run server-post.yml --repo "$GITHUB_REPOSITORY" --ref main

@@ -46,6 +46,10 @@ KIND_OF_LABEL = {'متوفر الآن': 'launch', 'تأجيل': 'delay', 'الس
 REQUIRED = ('id', 'label', 'sources', 'first_report', 'credit', 'footage', 'headline', 'spoken', 'instagram', 'x',
             'threads', 'tier', 'expires')
 GRAMMAR_FIELDS = ('headline', 'spoken', 'credit', 'instagram', 'x', 'threads')   # the texts the grammar stage reviews
+# Split by platform (Mohammad, 24 Nov 2026): x and threads are the quick post's texts (the image card on X and Threads);
+# reel_x and reel_threads are the Reel's own X and Threads posts, two hours or more later, a different first line that
+# leads with what the video shows. Without them the Reel goes to Instagram only. Reviewed by the grammar stage when present.
+OPTIONAL_TEXTS = ('reel_x', 'reel_threads')
 
 
 def grammar_sha(slip):
@@ -53,7 +57,8 @@ def grammar_sha(slip):
     slip records it as grammar_review.texts_sha after the required edits are applied; any later change to a text
     needs the stage again."""
     import hashlib
-    blob = json.dumps({k: str(slip.get(k) or '') for k in GRAMMAR_FIELDS}, ensure_ascii=False, sort_keys=True)
+    fields = GRAMMAR_FIELDS + tuple(k for k in OPTIONAL_TEXTS if slip.get(k))   # optional texts join only when present
+    blob = json.dumps({k: str(slip.get(k) or '') for k in fields}, ensure_ascii=False, sort_keys=True)
     return hashlib.sha256(blob.encode('utf-8')).hexdigest()[:16]
 
 
@@ -358,7 +363,8 @@ def story_file(slip, footage_note):
         'source_type': 'primary' if any(s.get('role') == 'primary' for s in slip['sources']) else 'secondary',
         'footage': footage_note, 'beat': slip.get('beat') or 'news',
         'angle': slip.get('angle') or None, 'spoken': slip['spoken'],
-        'texts': {'instagram': slip['instagram'], 'x': slip['x'], 'threads': slip['threads']},
+        'texts': dict({'instagram': slip['instagram'], 'x': slip['x'], 'threads': slip['threads']},
+                      **{k: slip[k] for k in OPTIONAL_TEXTS if slip.get(k)}),
         'slip': {'tier': slip['tier'], 'expires': slip['expires'], 'built_at': dt.datetime.now(UTC).strftime('%Y-%m-%dT%H:%M:%SZ')},
     }
 
