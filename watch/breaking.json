@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-24T20:52:06Z",
- "seq": 831,
+ "generated_at": "2026-11-24T21:10:21Z",
+ "seq": 832,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 22504,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Hela: of Mice & Magic - Playground Deep Dive | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=Yf19aOaG3fU",
+   "published": "2026-11-24T21:00Z",
+   "first_seen": "2026-11-24T21:10:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/Yf19aOaG3fU/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=Yf19aOaG3fU"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 832
+  }
+ ],
  "recent": [
   {
    "id": 22424,
@@ -509,7 +531,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-24T20:50:14Z",
+  "last_poll_at": "2026-11-24T21:10:04Z",
   "sources_enabled": 101,
   "sources_ok": 101,
   "sources_failing": 0,
