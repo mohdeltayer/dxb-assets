@@ -150916,5 +150916,250 @@
   "setup_min": 0.57,
   "story": "attack-on-titan-3-gameplay-dec-10-gematsu",
   "upload_secs": 7.0
+ },
+ {
+  "name": "persona-4-revival-new-characters-release-4gamer-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-24T21:19Z",
+  "stages": {
+   "checks": 3.0,
+   "montage": 30.5,
+   "text": 51.2,
+   "audio": 1.0,
+   "outro": 36.8
+  },
+  "total": 122.6,
+  "lane": "runner",
+  "queued_at": "2026-11-24T21:17Z",
+  "finished_at": "2026-11-24T21:19Z",
+  "render_min": 2.04,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "persona-4-revival-new-characters-release-4gamer-story-trailer.mp4",
+    "start": 108.19,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "persona-4-revival-new-characters-release-4gamer-story-trailer.mp4",
+    "start": 4.19,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "persona-4-revival-new-characters-release-4gamer-story-trailer.mp4",
+    "start": 53.82,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "persona-4-revival-new-characters-release-4gamer-story-trailer.mp4",
+    "start": 83.42,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "persona-4-revival-new-characters-release-4gamer-story-trailer.mp4",
+    "start": 29.16,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "persona-4-revival-new-characters-release-4gamer-story-trailer.mp4",
+    "start": 68.62,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.78,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.7,
+   "audio_secs": 34.1,
+   "music_pct": 31.5,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 7,
+    "miss": 0
+   },
+   "effects_shots": 0,
+   "mix_secs": 0.6,
+   "secs": 3.8,
+   "ladder": "b",
+   "step_a": {
+    "applied": false,
+    "tool": "cocktail-fork",
+    "clean": false,
+    "separate_secs": 13.5,
+    "audio_secs": 34.1,
+    "music_pct": 31.5,
+    "leak_pct": 0.1,
+    "thresholds": {
+     "leak_max_pct": 5.0,
+     "music_min_pct": 40.0
+    },
+    "cache": {
+     "hit": 0,
+     "miss": 7
+    },
+    "reason": "music only 31.5% of the track (< 40.0%)",
+    "secs": 17.9
+   }
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 7.56,
+   "held_under_text": 0.0,
+   "secs": 11.9,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 39.3,
+   "shots": 137.6,
+   "checks": 154.3,
+   "render": 168.6,
+   "after": 36.9
+  },
+  "softgate": {
+   "warnings": 9,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 1,
+     "step": "a",
+     "why": "persona-4-revival-new-characters-release-4gamer-story-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "persona-4-revival-new-characters-release-4gamer-story-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "persona-4-revival-new-characters-release-4gamer-story-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "persona-4-revival-new-characters-release-4gamer-story-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "persona-4-revival-new-characters-release-4gamer-story-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "persona-4-revival-new-characters-release-4gamer-story-trailer.mp4 at 53.82 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "persona-4-revival-new-characters-release-4gamer-story-trailer.mp4 at 83.42 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "persona-4-revival-new-characters-release-4gamer-story-trailer.mp4 at 29.16 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "persona-4-revival-new-characters-release-4gamer-story-trailer.mp4 at 68.62 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "text",
+     "slot": "line 1",
+     "step": "a",
+     "why": "1.8 s of 4.9 s: shot 3 lengthened by 3.17 s"
+    },
+    {
+     "kind": "text",
+     "slot": "line 2",
+     "step": "a",
+     "why": "1.5 s of 3.0 s: shot 5 lengthened by 1.59 s"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "b",
+     "why": "audio split not applied (music only 31.5% of the track (< 40.0%)) on a trailer track under 5 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our b"
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 537,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1422,
+  "peak_mem_mb": 3841,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61147,
+  "peak_disk_mb": 63200,
+  "min_disk_free_mb": 84596,
+  "setup_min": 0.58,
+  "story": "persona-4-revival-new-characters-release-4gamer"
  }
 ]
