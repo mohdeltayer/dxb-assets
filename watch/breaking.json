@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-24T23:20:19Z",
- "seq": 835,
+ "generated_at": "2026-11-24T23:52:06Z",
+ "seq": 836,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 22597,
    "source": "Nintendo of America (YouTube)",
@@ -21,9 +22,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 835
-  }
- ],
- "recent": [
+  },
   {
    "id": 22504,
    "source": "PlayStation (YouTube)",
@@ -511,25 +510,13 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 790
-  },
-  {
-   "id": 21594,
-   "source": "PlayStation Blog",
-   "source_kind": "official",
-   "title": "Thank you for making Grand Theft Auto VI the biggest launch in PlayStation history",
-   "url": "https://blog.playstation.com/2026/11/23/thank-you-for-making-grand-theft-auto-vi-the-biggest-launch-in-playstation-history/",
-   "published": "2026-11-23T23:30Z",
-   "first_seen": "2026-11-23T23:35:04Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 787
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-24T23:20:15Z",
+  "last_poll_at": "2026-11-24T23:50:14Z",
   "sources_enabled": 101,
-  "sources_ok": 100,
+  "sources_ok": 101,
   "sources_failing": 0,
   "failed": []
  }
