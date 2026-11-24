@@ -60,8 +60,11 @@ jobs:
         timeout-minutes: 4
         run: |
           python3 -m pip install -q --timeout 60 pillow numpy
-          command -v ffmpeg >/dev/null || { sudo apt-get -o DPkg::Lock::Timeout=60 update -qq; timeout 150 sudo apt-get install -y -q --no-install-recommends ffmpeg >/dev/null; }
-          command -v ffmpeg
+          if ! command -v ffmpeg >/dev/null; then          # the apt mirror hung 150 s on 24 Nov: the static build from GitHub
+            curl -sSL --retry 3 --max-time 120 -o "$RUNNER_TEMP/ff.tar.xz" https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz
+            tar -xJf "$RUNNER_TEMP/ff.tar.xz" -C "$RUNNER_TEMP" && sudo cp "$RUNNER_TEMP"/ffmpeg-master-latest-linux64-gpl/bin/ff* /usr/local/bin/
+          fi
+          command -v ffmpeg || echo "no ffmpeg: trailer frames unavailable, official images only"
       - name: Cards
         run: |
           mkdir -p "$RUNNER_TEMP/q"; : > "$RUNNER_TEMP/rows.jsonl"
