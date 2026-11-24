@@ -1,10 +1,54 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-24T17:00:18Z",
- "seq": 822,
+ "generated_at": "2026-11-24T17:05:18Z",
+ "seq": 823,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 22288,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Dead by Daylight - Terrifier Chapter Launch Trailer | PS5 & PS4 Games",
+   "url": "https://www.youtube.com/watch?v=-wJapkOeArE",
+   "published": "2026-11-24T17:00Z",
+   "first_seen": "2026-11-24T17:05:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/-wJapkOeArE/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=-wJapkOeArE"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 823
+  },
+  {
+   "id": 22289,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Dead by Daylight: Terrifier | Official Trailer",
+   "url": "https://www.youtube.com/watch?v=GBEawc9drY4",
+   "published": "2026-11-24T17:00Z",
+   "first_seen": "2026-11-24T17:05:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/GBEawc9drY4/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=GBEawc9drY4"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 823
+  }
+ ],
+ "recent": [
   {
    "id": 22271,
    "source": "Xbox Wire",
@@ -29,9 +73,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 822
-  }
- ],
- "recent": [
+  },
   {
    "id": 22257,
    "source": "Xbox (YouTube)",
@@ -490,12 +532,11 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-24T17:00:14Z",
+  "last_poll_at": "2026-11-24T17:05:14Z",
   "sources_enabled": 101,
-  "sources_ok": 98,
-  "sources_failing": 2,
+  "sources_ok": 99,
+  "sources_failing": 1,
   "failed": [
-   "GamesRadar (HTTP 404, 3x)",
    "PC Gamer (HTTP 404, 3x)"
   ]
  }
