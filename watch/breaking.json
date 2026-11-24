@@ -1,10 +1,50 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-24T17:05:18Z",
- "seq": 823,
+ "generated_at": "2026-11-24T17:20:21Z",
+ "seq": 824,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 22316,
+   "source": "Nintendo of America (YouTube)",
+   "source_kind": "youtube",
+   "title": "Choose your Operator challenge. Who are you deploying with?",
+   "url": "https://www.youtube.com/shorts/pwEIqVsZ0ps",
+   "published": "2026-11-24T17:00Z",
+   "first_seen": "2026-11-24T17:20:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/pwEIqVsZ0ps/hqdefault.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 824
+  }
+ ],
+ "recent": [
+  {
+   "id": 22289,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Dead by Daylight: Terrifier | Official Trailer",
+   "url": "https://www.youtube.com/watch?v=GBEawc9drY4",
+   "published": "2026-11-24T17:00Z",
+   "first_seen": "2026-11-24T17:05:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/GBEawc9drY4/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=GBEawc9drY4"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 823
+  },
   {
    "id": 22288,
    "source": "PlayStation (YouTube)",
@@ -26,29 +66,6 @@
    "breaking_source": true,
    "breaking_seq": 823
   },
-  {
-   "id": 22289,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Dead by Daylight: Terrifier | Official Trailer",
-   "url": "https://www.youtube.com/watch?v=GBEawc9drY4",
-   "published": "2026-11-24T17:00Z",
-   "first_seen": "2026-11-24T17:05:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/GBEawc9drY4/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=GBEawc9drY4"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 823
-  }
- ],
- "recent": [
   {
    "id": 22271,
    "source": "Xbox Wire",
@@ -486,58 +503,14 @@
    ],
    "breaking_source": true,
    "breaking_seq": 778
-  },
-  {
-   "id": 21292,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "The Spotter: Dig or Die - Official Launch Trailer | XBOX Series X|S",
-   "url": "https://www.youtube.com/watch?v=AVkhCctmnQQ",
-   "published": "2026-11-23T17:15Z",
-   "first_seen": "2026-11-23T17:20:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/AVkhCctmnQQ/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=AVkhCctmnQQ"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 776
-  },
-  {
-   "id": 21287,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "The Spotter: Dig or Die - Out now! | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=fDRh01_DLhg",
-   "published": "2026-11-23T17:00Z",
-   "first_seen": "2026-11-23T17:15:04Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/fDRh01_DLhg/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=fDRh01_DLhg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 775
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-24T17:05:14Z",
+  "last_poll_at": "2026-11-24T17:20:15Z",
   "sources_enabled": 101,
-  "sources_ok": 99,
-  "sources_failing": 1,
-  "failed": [
-   "PC Gamer (HTTP 404, 3x)"
-  ]
+  "sources_ok": 101,
+  "sources_failing": 0,
+  "failed": []
  }
 }
