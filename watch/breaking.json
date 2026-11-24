@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-24T21:10:21Z",
- "seq": 832,
+ "generated_at": "2026-11-24T21:52:08Z",
+ "seq": 833,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 22504,
    "source": "PlayStation (YouTube)",
@@ -25,9 +26,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 832
-  }
- ],
- "recent": [
+  },
   {
    "id": 22424,
    "source": "Xbox Wire",
@@ -506,34 +505,13 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 787
-  },
-  {
-   "id": 21542,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "How to Play Grand Theft Auto VI in the Cloud and with Remote Play",
-   "url": "https://news.xbox.com/en-us/2026/11/23/grand-theft-auto-vi-xbox-cloud-and-remote-play/",
-   "published": "2026-11-23T21:36Z",
-   "first_seen": "2026-11-23T21:40:04Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/image-cefeee2ea6d9116d6da5.jpeg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/image-b522aab3263f6425699c.jpeg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 784
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-24T21:10:04Z",
+  "last_poll_at": "2026-11-24T21:50:15Z",
   "sources_enabled": 101,
-  "sources_ok": 101,
+  "sources_ok": 100,
   "sources_failing": 0,
   "failed": []
  }
