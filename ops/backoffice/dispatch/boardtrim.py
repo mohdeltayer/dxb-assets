@@ -10,7 +10,9 @@ only what a run needs, and moves the rest to desk/archive/ (nothing is deleted):
 The new board.md stays under MAX_BYTES (30 KB); if it would not, the oldest kept run lines and closed handoffs go first.
 
     python3 ops/backoffice/dispatch/boardtrim.py <desk dir> [--now ISO] [--dry]
-Run daily by Production 1's morning digest task (the server has no key that can push to dxb-queue); it prints what moved.
+Run daily at 04:00 Dubai by dxb-queue's boardtrim.yml (Mohammad, 24 Nov 2026: Production 2 runs stopped early on context
+with the board at 285 KB); it prints what moved. The latest 'p2 queue' line stays whatever its age; a kept run line over
+LINE_MAX is cut on the board, its full text archived under its own day.
 """
 import datetime as dt
 import json
@@ -67,31 +69,57 @@ def split_handoffs(handoffs, now):
     return keep, old
 
 
-def dated_lines(lines, start_date):
-    """Each line with the date it belongs to: a line naming a date (an id like p2-20261109-..., an ISO time) sets it;
-    an undated '- HH:MMZ' line keeps the last one; a time earlier than the last one on the same date moves a day on."""
-    cur, last_hm, out = start_date, None, []
-    for ln in lines:
-        m = DATE_RE.search(ln)
+ISO_RE = re.compile(r'(20\d\d-\d\d-\d\d)T(\d\d):(\d\d)')
+OUT_OF_ORDER_H = 3          # lines from two writers may be a few minutes out of order; a jump back of more is a new day
+QUESTION_KEEP_D = 14        # questions older than this leave board.md (they stay in board.json and the archive)
+LINE_MAX = 600              # a kept run line longer than this is cut on the board; the full line goes to the archive
+
+
+def dated_lines(lines, now):
+    """Each line with its time, dated backwards from the newest line (24 Nov 2026: dating forwards from a start date
+    drifted, every small out-of-order pair moved a day on, and lines of 23 Nov read as 3 Dec, so nothing was trimmed).
+    The last line is on now's date (the day before when its time is later than now). Walking back, a line whose time
+    is more than OUT_OF_ORDER_H later than the line after it is on the day before. A line that carries its own ISO time
+    at the same HH:MM (a '- 2026-11-24T..' prefix, 'started 2026-11-24T21:07Z') anchors the date."""
+    out = [None] * len(lines)
+    cur = now.date()
+    nxt = None
+    for i in range(len(lines) - 1, -1, -1):
+        ln = lines[i]
         hm = TIME_RE.match(ln)
-        if m:
-            try:
-                d = dt.date(int(m.group(1)), int(m.group(2)), int(m.group(3)))
-                if d >= cur:
-                    cur, last_hm = d, None
-            except ValueError:
-                pass
-        when = None
-        if hm:
-            if hm.group(1):
-                cur = dt.date.fromisoformat(hm.group(1))
-            h, mi = int(hm.group(2)), int(hm.group(3))
-            if last_hm and (h, mi) < last_hm and not m and not hm.group(1):
-                cur += dt.timedelta(days=1)
-            last_hm = (h, mi)
-            when = dt.datetime(cur.year, cur.month, cur.day, min(h, 23), min(mi, 59), tzinfo=UTC)
-        out.append((ln, when or dt.datetime(cur.year, cur.month, cur.day, 23, 59, tzinfo=UTC)))
+        if not hm:
+            out[i] = (ln, None)
+            continue
+        h, mi = min(int(hm.group(2)), 23), min(int(hm.group(3)), 59)
+        anchor = hm.group(1)
+        if not anchor:
+            for m in ISO_RE.finditer(ln):
+                if (int(m.group(2)), int(m.group(3))) == (h, mi):
+                    anchor = m.group(1)
+                    break
+        if anchor:
+            cur = dt.date.fromisoformat(anchor)
+        elif nxt is None:
+            if (h, mi) > (now.hour, now.minute) and h - now.hour > OUT_OF_ORDER_H:
+                cur -= dt.timedelta(days=1)
+        elif (h * 60 + mi) - (nxt.hour * 60 + nxt.minute) > OUT_OF_ORDER_H * 60 and nxt.date() == cur:
+            cur -= dt.timedelta(days=1)
+        w = dt.datetime(cur.year, cur.month, cur.day, h, mi, tzinfo=UTC)
+        out[i] = (ln, w)
+        nxt = w
+    last = None
+    for i, (ln, w) in enumerate(out):              # undated lines take the time of the line before them
+        out[i] = (ln, w or last or now)
+        last = out[i][1]
     return out
+
+
+def _qtime(q):
+    m = DATE_RE.search(json.dumps(q, ensure_ascii=False) if isinstance(q, dict) else str(q))
+    try:
+        return dt.datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)), tzinfo=UTC) if m else None
+    except ValueError:
+        return None
 
 
 def _cut(s, n=None):
@@ -126,10 +154,25 @@ def trim(md, board, now):
         if k in head_keys:
             continue
         run_src += [ln for ln in v if TIME_RE.match(ln)]
-    start = (now - dt.timedelta(days=30)).date()
-    dated = dated_lines(run_src, start)
-    keep_runs = [ln for ln, w in dated if now - w <= dt.timedelta(hours=RUN_KEEP_H)]
-    old_runs = [ln for ln, w in dated if now - w > dt.timedelta(hours=RUN_KEEP_H)]
+    dated = dated_lines(run_src, now)
+    recent = [(ln, w) for ln, w in dated if now - w <= dt.timedelta(hours=RUN_KEEP_H)]
+    old_dated = [(ln, w) for ln, w in dated if now - w > dt.timedelta(hours=RUN_KEEP_H)]
+    queue = [ln for ln, w in dated if re.match(r'^- (?:\S+ )?\d\d:\d\dZ p2 queue', ln)]
+    if queue and queue[-1] not in [ln for ln, _ in recent]:   # the latest p2 queue line stays, whatever its age
+        recent.insert(0, next(x for x in dated if x[0] == queue[-1]))
+    latest_q = queue[-1] if queue else None
+    cap = [LINE_MAX]
+
+    def runs_at(rs):                               # run lines cut to the cap; the latest p2 queue line stays whole
+        return [ln if (len(ln) <= cap[0] or ln == latest_q) else ln[:cap[0] - 1].rstrip() + '…' for ln, _ in rs]
+    old_runs = [ln for ln, _ in old_dated]
+    by_day = {}
+    for ln, w in old_dated:
+        by_day.setdefault(w.strftime('%Y-%m-%d'), []).append(ln)
+    q_cut = now - dt.timedelta(days=QUESTION_KEEP_D)
+    qs = [q for q in board.get('questions') or [] if 'RESOLVED' not in str(q)]
+    q_old = [q for q in qs if (_qtime(q) or now) < q_cut]
+    qs = [q for q in qs if q not in q_old]
     keep_h, old_h = split_handoffs(board.get('handoffs') or [], now)
     new_board = dict(board, handoffs=keep_h)
 
@@ -142,33 +185,42 @@ def trim(md, board, now):
         out += [handoff_md(h) for h in kh]
         out += ['## 4. Questions for Mohammad']
         out += [(f"- [{q.get('card') or q.get('id') or ''}] {_cut(q.get('question') or q.get('text') or q, min(200, LIMIT[0]))}"
-                 if isinstance(q, dict) else f'- {_cut(q, min(200, LIMIT[0]))}') for q in board.get('questions') or []
-                if 'RESOLVED' not in str(q)]
+                 if isinstance(q, dict) else f'- {_cut(q, min(200, LIMIT[0]))}') for q in qs]
+        if q_old:
+            out += [f'- ({len(q_old)} older than {QUESTION_KEEP_D} days: in board.json and desk/archive)']
         out += ['', f'## 5. Run lines (last {RUN_KEEP_H} hours; append new ones below)'] + kr + ['']
         return '\n'.join(out)
 
-    kh, kr = list(keep_h), list(keep_runs)
+    kr_src = list(recent)
+    kh = list(keep_h)
     LIMIT[0] = TEXT_MAX
-    text = build(kh, kr)
-    for lim in (160, 90):                          # shorter text first: the full entries stay in board.json
+    text = build(kh, runs_at(kr_src))
+    for lim, c in ((160, 400), (160, 300), (90, 240), (90, 200), (90, 160)):   # shorter text before fewer lines
         if len(text.encode()) <= MAX_BYTES:
             break
-        LIMIT[0] = lim
-        text = build(kh, kr)
-    while len(text.encode()) > MAX_BYTES and (kr or any(not is_open(h, now) for h in kh)):
+        LIMIT[0], cap[0] = lim, c
+        text = build(kh, runs_at(kr_src))
+    kr = runs_at(kr_src)
+    while len(text.encode()) > MAX_BYTES and (kr_src or any(not is_open(h, now) for h in kh)):
         closed = [h for h in kh if not is_open(h, now)]
         if closed:                                 # closed handoffs leave the md first (they stay in board.json)
             kh.remove(closed[0])
         else:
-            old_runs.append(kr.pop(0))
+            gone = kr_src.pop(0 if kr_src[0][0] != latest_q or len(kr_src) == 1 else 1)
+            old_runs.append(gone[0])
+            by_day.setdefault(gone[1].strftime('%Y-%m-%d'), []).append(gone[0])
+        kr = runs_at(kr_src)
         text = build(kh, kr)
+    for ln, w in kr_src:                           # a line cut on the board keeps its full text in its day's archive
+        if len(ln) > cap[0] and ln != latest_q:
+            by_day.setdefault(w.strftime('%Y-%m-%d'), []).append(ln)
     dropped_from_md = [h for h in keep_h if h not in kh]
     archive_md = '\n'.join([ln for k, v in sec.items() if k not in head_keys for ln in v
-                            if not TIME_RE.match(ln)] + old_runs)
+                            if not TIME_RE.match(ln)])
     return text, new_board, old_h, archive_md, {'handoffs_kept': len(keep_h), 'handoffs_archived': len(old_h),
                                                 'handoffs_md_only_in_json': len(dropped_from_md),
                                                 'run_lines_kept': len(kr), 'run_lines_archived': len(old_runs),
-                                                'board_md_bytes': len(text.encode())}
+                                                'board_md_bytes': len(text.encode()), 'archive_days': sorted(by_day)}, by_day
 
 
 def main(argv):
@@ -178,7 +230,7 @@ def main(argv):
     now = _t(argv[argv.index('--now') + 1]) if '--now' in argv else dt.datetime.now(UTC)
     md = open(os.path.join(desk, 'board.md'), encoding='utf-8').read()
     board = json.load(open(os.path.join(desk, 'board.json'), encoding='utf-8'))
-    text, nb, old_h, arch_md, stats = trim(md, board, now)
+    text, nb, old_h, arch_md, stats, by_day = trim(md, board, now)
     print('boardtrim: ' + json.dumps(stats))
     if '--dry' in argv:
         return 0
@@ -188,8 +240,12 @@ def main(argv):
     ap = os.path.join(ad, f'board-{day}.json')
     prev = json.load(open(ap, encoding='utf-8')) if os.path.exists(ap) else []
     json.dump(prev + old_h, open(ap, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    with open(os.path.join(ad, f'board-{day}.md'), 'a', encoding='utf-8') as f:
-        f.write(f'\n<!-- archived {now.strftime("%Y-%m-%dT%H:%MZ")} -->\n' + arch_md + '\n')
+    stamp = f'\n<!-- archived {now.strftime("%Y-%m-%dT%H:%MZ")} -->\n'
+    with open(os.path.join(ad, f'board-{day}.md'), 'a', encoding='utf-8') as f:   # handoffs and questions as they were
+        f.write(stamp + arch_md + '\n')
+    for d, lns in sorted(by_day.items()):        # run lines, each in the file of its own day
+        with open(os.path.join(ad, f'board-{d}.md'), 'a', encoding='utf-8') as f:
+            f.write(stamp + '\n'.join(lns) + '\n')
     nb['updated_at'] = now.strftime('%Y-%m-%dT%H:%M:%SZ')
     nb['updated_by'] = 'boardtrim'
     with open(os.path.join(desk, 'board.json'), 'w', encoding='utf-8') as f:
