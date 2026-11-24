@@ -725,7 +725,8 @@ def scheduled_ahead(read, state, now):
     posts = read.get('posts') if isinstance(read, dict) else None
     if posts is None:
         return None, None
-    slots = {p['at'].strftime('%Y-%m-%dT%H:%M') for p in posts if p.get('state') == 'scheduled' and p['at'] > now}
+    slots = {p['at'].strftime('%Y-%m-%dT%H:%M') for p in posts if p.get('state') == 'scheduled' and p['at'] > now
+             and 'kind:quick' not in (p.get('labels') or [])}    # quick posts are not Reels (split by platform, 24 Nov 2026)
     n = len(slots)
     line = 'publer ahead: %d Reel%s scheduled ahead' % (n, '' if n == 1 else 's')
     hour = now.astimezone(DUBAI).hour

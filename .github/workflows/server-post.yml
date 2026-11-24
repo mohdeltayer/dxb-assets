@@ -56,7 +56,8 @@ jobs:
           git config user.name "dxb-server-post"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           touch newsroom/serverpost.jsonl
-          git add --sparse -A newsroom/serverpost.jsonl newsroom/submissions.jsonl jobs/live
+          touch newsroom/quickpost.jsonl
+          git add --sparse -A newsroom/serverpost.jsonl newsroom/submissions.jsonl newsroom/quickpost.jsonl jobs/live
           git diff --cached --quiet && { echo "nothing new"; exit 0; }
           git commit -q -m "server-post: $(grep -c . "$RUNNER_TEMP/sweep.txt" 2>/dev/null || echo 0) action(s) (director file, 23 Nov 2026)"
           for i in 1 2 3 4 5; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep $((i * 4)); done
@@ -67,4 +68,14 @@ jobs:
         run: |
           grep '^serverpost: fix_render ' "$RUNNER_TEMP/sweep.txt" 2>/dev/null | awk '{print $3}' | while read -r base; do
             gh workflow run render-live.yml --repo "$GITHUB_REPOSITORY" --ref main -f job="$base" && echo "fix render dispatched: $base"
+          done
+      # Split by platform (24 Nov 2026): a verified story with no quick card yet (a story Production 2 wrote by hand; the
+      # slip lane starts its own) gets one, at most 4 per tick, once ops/cadence.json says quick_live.
+      - name: Quick posts for stories without one
+        if: inputs.dry != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for sid in $(python3 templates/quickpost.py pending | tr ' ' '\n' | head -4); do
+            gh workflow run quick-post.yml --repo "$GITHUB_REPOSITORY" --ref main -f story="$sid" -f mode=live && echo "quick post dispatched: $sid"
           done

@@ -9,5 +9,11 @@
  "night_max_gap_min": 120,
  "buffer_target": 6,
  "ahead_alert_min": 2,
- "lead_min": 15
+ "lead_min": 15,
+ "quick_spacing_min": 10,
+ "quick_note": "Split by platform (Mohammad, 24 Nov 2026): quick posts (image card, X and Threads) are spaced quick_spacing_min apart among themselves, separate from the Reel spacing; they do not count toward the Reel buffer or the ahead alert. A Reel's own X and Threads post goes at least reel_after_quick_h after the story's quick post, and not at all once the quick post is older than reel_xt_max_h.",
+ "reel_after_quick_h": 2,
+ "reel_xt_max_h": 24,
+ "quick_live": false,
+ "quick_live_note": "false until the three samples are on the board (Mohammad, 24 Nov 2026: samples first, then no further approval)"
 }

@@ -7,7 +7,7 @@ import os as _os
 PATH = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'cadence.json')
 DEFAULTS = {'timezone_offset_h': 4, 'day_spacing_min': 30, 'night_spacing_min': 60, 'night_start': '00:00',
             'night_end': '08:00', 'day_max_gap_min': 60, 'night_max_gap_min': 120, 'buffer_target': 6,
-            'ahead_alert_min': 2, 'lead_min': 15}
+            'ahead_alert_min': 2, 'lead_min': 15, 'quick_spacing_min': 10, 'reel_after_quick_h': 2, 'reel_xt_max_h': 24}
 
 
 def load(path=None):
@@ -25,6 +25,14 @@ MAX_GAP = {'day': int(C['day_max_gap_min']), 'night': int(C['night_max_gap_min']
 BUFFER = int(C['buffer_target'])
 AHEAD_MIN = int(C['ahead_alert_min'])
 LEAD_MIN = int(C['lead_min'])
+QUICK_SPACING = int(C['quick_spacing_min'])      # quick posts among themselves (24 Nov 2026), apart from the Reel spacing
+REEL_AFTER_QUICK_H = float(C['reel_after_quick_h'])
+REEL_XT_MAX_H = float(C['reel_xt_max_h'])
+
+
+def is_quick(labels):
+    """A quick post (label kind:quick): left out of the Reel spacing, the Reel buffer and the ahead alert."""
+    return 'kind:quick' in set(labels or ())
 TZ = _dt.timezone(_dt.timedelta(hours=float(C['timezone_offset_h'])))
 
 

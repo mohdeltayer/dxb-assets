@@ -683,12 +683,19 @@ GAP_ALARM_MIN = 90          # adv-20261118-templates-never-refuse D: the one ala
 DAY_HOURS = (8, 24)         # Dubai
 
 
+def quick_only(labels):
+    """Posts grouped by minute carry the union of their labels: only quick posts there (kind:quick and no other kind)."""
+    ls = set(labels or ())
+    return 'kind:quick' in ls and not any(l.startswith('kind:') and l != 'kind:quick' for l in ls)
+
+
 def gap_alarm(posts, now):
     """The one alarm that matters: by day in Dubai, no post published or due in the last GAP_ALARM_MIN minutes."""
     d = now.astimezone(DUBAI)
     if not DAY_HOURS[0] <= d.hour < DAY_HOURS[1]:
         return []
-    past = [p['at'] for p in posts if p.get('at') and p['at'] <= now]
+    past = [p['at'] for p in posts if p.get('at') and p['at'] <= now
+            and not quick_only(p.get('labels'))]          # a quick post (X and Threads card) is not a Reel, 24 Nov 2026
     last = max(past) if past else None
     if last and now - last <= dt.timedelta(minutes=GAP_ALARM_MIN):
         return []
@@ -725,13 +732,30 @@ def serverpost_items(now, path=None):
     except Exception:                                   # noqa: BLE001
         return [], []
     alarms, notes = [], []
+    try:                                               # quick posts written ready (split by platform, 24 Nov 2026)
+        last = {}
+        for q in SP.jsonl(SP.QUICK):
+            last[q.get('story')] = q
+        for q in last.values():
+            at = t(q.get('at'))
+            if q.get('state') == 'ready' and at and now - at <= dt.timedelta(hours=6):
+                alarms.append({'key': 'quick|ready|' + str(q.get('base')), 'kind': 'quickpost-ready',
+                               'line': 'quick post %s at %s: a photo post on X and Threads through the Publer connector, the '
+                                       'card %s, texts quick_x/x and quick_threads/threads from the story file, labels %s'
+                                       % (q.get('base'), dub(t(q['slot'])) if q.get('slot') else '?', q.get('card'),
+                                          ', '.join(q.get('labels') or [])),
+                               'clears': 'quickpost.py scheduled <story> --slot <ISO> after the submit reads complete'})
+    except Exception:                                   # noqa: BLE001
+        pass
     for r in rows:
         st, base = r.get('state'), r.get('base') or r.get('story')
         slot = ' at %s' % dub(t(r['slot'])) if r.get('slot') else ''
         if st == 'ready':
+            nets = r.get('networks') or {}
+            where = ('; '.join('%s %s' % (p, dub(t(x))) for p, x in nets.items()) if nets else 'Instagram, X and Threads')
             alarms.append({'key': 'serverpost|ready|' + base, 'kind': 'serverpost-ready',
-                           'line': 'schedule %s%s on Instagram, X and Threads through the Publer connector (texts and labels '
-                                   'in the story file; %s)' % (base, slot, r.get('note') or ''),
+                           'line': 'schedule %s%s through the Publer connector: %s (texts and labels in the story file; %s%s)'
+                                   % (base, slot, where, r.get('note') or '', ('; ' + r['split']) if r.get('split') else ''),
                            'clears': 'serverpost.py scheduled <story> --slot <ISO> after the submit reads complete'})
         elif st == 'held':
             alarms.append({'key': 'serverpost|held|' + base, 'kind': 'serverpost-held',

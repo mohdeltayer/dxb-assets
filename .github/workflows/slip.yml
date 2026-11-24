@@ -50,6 +50,7 @@ jobs:
             newsroom
             jobs
             arabic
+            ops
 
       - name: Read the slip (dxb-queue desk)
         env:
@@ -165,6 +166,19 @@ jobs:
             gh workflow run render-live.yml --repo "$GITHUB_REPOSITORY" --ref main -f job="$(basename "$job" .json)"
           fi
           echo "render dispatched for $job ($LANE), $(( $(date +%s) - T0 )) s after the slip was read" | tee -a "$GITHUB_STEP_SUMMARY"
+
+      # Split by platform (Mohammad, 24 Nov 2026): the quick post (image card on X and Threads) goes first, in seconds,
+      # while the Reel renders. Only on the live lane and only once ops/cadence.json says quick_live.
+      - name: Start the quick post
+        if: steps.build.outputs.state == 'built' && inputs.lane != 'test'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 -c "import json,sys; sys.exit(0 if json.load(open('ops/cadence.json')).get('quick_live') is True else 1)" 2>/dev/null \
+            || { echo "quick posts not live yet (ops/cadence.json quick_live)"; exit 0; }
+          sid=$(python3 -c "import json;print(json.load(open('newsroom/slips/$SLIP.json')).get('story') or '$SLIP')" 2>/dev/null || echo "$SLIP")
+          gh workflow run quick-post.yml --repo "$GITHUB_REPOSITORY" --ref main -f story="$sid" -f mode=live && echo "quick post dispatched for $sid"
 
       - name: Failed slip
         if: steps.build.outputs.state != 'built'

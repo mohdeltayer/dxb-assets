@@ -18,6 +18,8 @@ hashtags are stripped on X). Chip: the story's label on the fast ladder (fast_ar
 
     python3 templates/quickpost.py render <story id> <out.jpg> [--json out.json]   card and texts (needs the Dubai font)
     python3 templates/quickpost.py plan <story id>                                 what it would use, no render
+    python3 templates/quickpost.py pending                                         verified stories with no card yet
+    python3 templates/quickpost.py scheduled <story id> --slot <ISO> [--note ..]   record a connector submit
 Rows: newsroom/quickpost.jsonl (state rendered, ready, scheduled, skipped), read by serverpost.quick_sweep.
 """
 import datetime as dt
@@ -205,9 +207,82 @@ def render(sid, out, now=None):
     th = theme(story, lab)
     src = source_name(story, job)
     os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
-    FA.fast_ar(img, date_en(now), src, out, label=lab, theme=th)
+    import cards as C                                   # fast.compose reads media under cards.U (the uploads folder)
+    C.U = os.path.dirname(img).rstrip('/') + '/'
+    FA.fast_ar(os.path.basename(img), date_en(now), src, out, label=lab, theme=th)
     return {'story': sid, 'base': base_of(sid), 'card': out, 'image': note, 'chip': lab, 'theme': th, 'source': src,
             'texts': texts(story), 't0': tier0(story, job)}
+
+
+def jsonl(path):
+    out = []
+    try:
+        for l in open(path, encoding='utf-8'):
+            try:
+                out.append(json.loads(l))
+            except ValueError:
+                pass
+    except OSError:
+        pass
+    return out
+
+
+def _t(s):
+    try:
+        x = dt.datetime.fromisoformat(str(s).replace('Z', '+00:00'))
+        return x if x.tzinfo else x.replace(tzinfo=dt.timezone.utc)
+    except ValueError:
+        return None
+
+
+START = '2026-11-24T05:00:00Z'      # stories written before the lane went live are not backfilled
+
+
+def live():
+    """ops/cadence.json quick_live: false until the samples are on the board (24 Nov 2026)."""
+    c = load(os.path.join(REPO, 'ops', 'cadence.json'), {}) or {}
+    return c.get('quick_live') is True
+
+
+def pending(now=None, hours=6):
+    """Verified news stories with no quick card yet: written in the last `hours`, a gate line or a slip (the slip lane
+    checks before it builds), a label on the news ladder, x and threads texts, not evergreen, dropped or held."""
+    import glob
+    if not live():
+        return []
+    now = now or dt.datetime.now(dt.timezone.utc)
+    seen = {r.get('story') for r in jsonl(LEDGER)}
+    out = []
+    for f in sorted(glob.glob(os.path.join(STORIES, '*.json'))):
+        sid = os.path.basename(f)[:-5]
+        if sid in seen or sid[:10] < (now - dt.timedelta(days=1)).strftime('%Y-%m-%d'):
+            continue
+        s = load(f, {}) or {}
+        made = _t((s.get('slip') or {}).get('built_at') or s.get('created_at') or s.get('quick_from'))
+        m = re.search(r'gate (\d\d):(\d\d)Z', json.dumps(s.get('gate') or '', ensure_ascii=False))
+        if made is None and m:                            # the gate line's time on the story's own date
+            made = _t(f'{sid[:10]}T{m.group(1)}:{m.group(2)}:00Z')
+        if not made or made < max(_t(START), now - dt.timedelta(hours=hours)):
+            continue
+        if not (s.get('gate') or s.get('slip')):
+            continue
+        if s.get('label') in ('دليل',) or s.get('post_kind') == 'evergreen' or s.get('beat') == 'evergreen':
+            continue
+        if re.search(r'dropped|held|pulled|parked', str(s.get('status', '')), re.I) or s.get('held_by_mohammad'):
+            continue
+        tx = s.get('texts') or {}
+        if not ((tx.get('quick_x') or tx.get('x')) and (tx.get('quick_threads') or tx.get('threads'))):
+            continue
+        out.append(sid)
+    return out
+
+
+def record(sid, slot, note):
+    """A quick post the connector scheduled (no posting key on the server yet)."""
+    with open(LEDGER, 'a', encoding='utf-8') as f:
+        f.write(json.dumps({'at': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'), 'story': sid,
+                            'base': base_of(sid), 'state': 'scheduled', 'slot': slot, 'networks': ['x', 'threads'],
+                            'note': note}, ensure_ascii=False) + '\n')
 
 
 def plan(sid):
@@ -223,6 +298,14 @@ def main(argv):
         if '--json' in argv:
             json.dump(r, open(argv[argv.index('--json') + 1], 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         print('QUICK_JSON: ' + json.dumps(r, ensure_ascii=False))
+        return 0
+    if argv and argv[0] == 'pending':
+        print(' '.join(pending()))
+        return 0
+    if len(argv) >= 2 and argv[0] == 'scheduled' and '--slot' in argv:
+        record(argv[1], argv[argv.index('--slot') + 1], argv[argv.index('--note') + 1] if '--note' in argv else
+               'scheduled through the Publer connector')
+        print(f'quickpost: {argv[1]} recorded as scheduled')
         return 0
     if len(argv) >= 2 and argv[0] == 'plan':
         print(json.dumps(plan(argv[1]), ensure_ascii=False, indent=1))

@@ -60,6 +60,12 @@ except ImportError:                                      # a checkout without op
     CAD = _t.SimpleNamespace(SPACING={'day': 30, 'night': 60}, MAX_GAP={'day': 60, 'night': 120}, BUFFER=6, AHEAD_MIN=2,
                              LEAD_MIN=15, band=lambda x: 'night' if (x if x.tzinfo else x.replace(tzinfo=__import__('datetime').timezone.utc)).astimezone(__import__('datetime').timezone(__import__('datetime').timedelta(hours=4))).hour < 8 else 'day')
 LEAD_MIN = CAD.LEAD_MIN                      # a slot is at least 15 minutes out (rolling queue)
+QUICK = os.path.join(REPO, 'newsroom', 'quickpost.jsonl')
+QUICK_SPACING = getattr(CAD, 'QUICK_SPACING', 10)       # split by platform (Mohammad, 24 Nov 2026)
+REEL_AFTER_QUICK = dt.timedelta(hours=getattr(CAD, 'REEL_AFTER_QUICK_H', 2))
+REEL_XT_MAX = dt.timedelta(hours=getattr(CAD, 'REEL_XT_MAX_H', 24))
+QUICK_LEAD_MIN = 3                                       # a quick post is scheduled a few minutes out (T0: within 10 of detection)
+QUICK_NET = {'x': 'twitter', 'threads': 'threads'}
 PICTURE = ('wrong_subject', 'framing', 'overlap', 'unreadable_text')
 CONTENT = ('factual_error', 'unclear_text', 'graphic')
 HARD = ('factual_error', 'graphic')
@@ -238,7 +244,7 @@ def next_slot(now, extra=(), publer=None):
     import workorder as W
     if publer is not None:
         import publercheck as PC
-        times = [t(PC.norm_post(p)['at']) for p in publer]
+        times = [t(PC.norm_post(p)['at']) for p in publer if 'kind:quick' not in PC.norm_post(p)['labels']]
         posts = [{'at': x} for x in times if x] + [{'at': x} for x in extra]
         return _first_free(now, posts, W)
     rows = load(os.path.join(REPO, 'newsroom', 'commitments.json'), {}) or {}
@@ -343,7 +349,9 @@ def publer_delete(key, wid, ids):
 
 
 def publer_schedule(key, ctx, out, texts, labels, slot):
-    """Schedules the Reel on the three networks; (ok, note). Never prints an id or a body."""
+    """Schedules the Reel; (ok, note). `slot` is one time for every network or {platform: time}; a platform with no time or
+    no text is left out (split by platform, 24 Nov 2026: the Reel's X and Threads post may come later or not at all).
+    Never prints an id or a body."""
     wid, acc = ctx
     fname = os.path.basename(out)
     code, med = _curl([f'{API}/media?types[]=video&search=' + re.sub(r'[^A-Za-z0-9._-]', '', fname)], key, wid, timeout=30)
@@ -351,18 +359,20 @@ def publer_schedule(key, ctx, out, texts, labels, slot):
     mid = next((m.get('id') for m in items or [] if m.get('name') == fname), None)
     if not mid:
         return False, f'the Reel is not in the Publer library by name (media HTTP {code})'
-    when = iso(slot)
+    slots = slot if isinstance(slot, dict) else {p: slot for p in NETWORK}
     posts = []
     for p, n in NETWORK.items():
-        if not acc.get(p) or not texts.get(p):
+        if not slots.get(p):
             continue
+        if not acc.get(p) or not texts.get(p):
+            return False, f'the account or the text for {p} is missing'
         net = {'type': 'video', 'text': texts[p], 'media': [{'id': mid, 'type': 'video'}]}
         if p == 'instagram':
             net['details'] = {'type': 'reel'}
-        posts.append({'networks': {n: net}, 'accounts': [{'id': acc[p], 'scheduled_at': when}],
+        posts.append({'networks': {n: net}, 'accounts': [{'id': acc[p], 'scheduled_at': iso(slots[p])}],
                       'labels': [{'name': l} for l in labels]})
-    if len(posts) < 3:
-        return False, 'an account or a text is missing: ' + ', '.join(p for p in NETWORK if not (acc.get(p) and texts.get(p)))
+    if not posts:
+        return False, 'no network to schedule'
     code, js = _curl([f'{API}/posts/schedule'], key, wid, data={'bulk': {'state': 'scheduled', 'posts': posts}})
     job = (js or {}).get('job_id') if isinstance(js, dict) else None
     if code not in (200, 201) or not job:
@@ -378,6 +388,150 @@ def publer_schedule(key, ctx, out, texts, labels, slot):
         if s == 'failed':
             return False, 'job status failed'
     return False, 'job status not complete after 60 s (look the posts up in Publer before any retry)'
+
+
+# ---------------------------------------------------------------------------------------------- quick posts (24 Nov 2026)
+def quick_slot(sid, publer=None):
+    """The story's quick post time (scheduled or ready, from Publer's kind:quick posts or the quick log), or None."""
+    base = base_of_story(sid)
+    xs = [t(r.get('slot')) for r in jsonl(QUICK) if r.get('story') == sid and r.get('state') in ('ready', 'scheduled')]
+    if publer:
+        import publercheck as PC
+        for p in publer:
+            n = PC.norm_post(p)
+            if 'kind:quick' in n['labels'] and f'story:{base}' in n['labels']:
+                xs.append(t(n['at']))
+    xs = [x for x in xs if x]
+    return min(xs) if xs else None
+
+
+def base_of_story(sid):
+    return re.sub(r'^\d{4}-\d{2}-\d{2}-', '', str(sid or ''))
+
+
+def reel_networks(sid, slot, texts, publer=None):
+    """({platform: time}, note) for a Reel (split by platform, Mohammad 24 Nov 2026): Instagram at the Reel's slot; X and
+    Threads as their own post, at least REEL_AFTER_QUICK after the story's quick post, with the story's reel_x and
+    reel_threads texts (a first line that leads with what the video shows), and not at all once the quick post is older
+    than REEL_XT_MAX. A story with no quick post keeps the three networks at one time, as before."""
+    q = quick_slot(sid, publer)
+    if q is None:
+        return {'instagram': slot, 'x': slot, 'threads': slot}, ''
+    xt = max(slot, q + REEL_AFTER_QUICK)
+    if xt - q > REEL_XT_MAX:
+        return {'instagram': slot}, f'Instagram only: the quick post went out {iso(q)}, over 24 hours before'
+    if not (texts.get('reel_x') and texts.get('reel_threads')):
+        return {'instagram': slot}, 'Instagram only: no reel_x / reel_threads text in the story file (the Reel\'s X and ' \
+                                    'Threads post needs its own first line about what the video shows)'
+    note = f'X and Threads at {iso(xt)}, {int((xt - q).total_seconds() // 60)} min after the quick post' if xt != slot else ''
+    return {'instagram': slot, 'x': xt, 'threads': xt}, note
+
+
+def quick_next(now, publer=None, extra=(), t0=False):
+    """The first minute QUICK_LEAD_MIN out (2 for T0) that is QUICK_SPACING from every other quick post."""
+    import publercheck as PC
+    taken = [t(r.get('slot')) for r in jsonl(QUICK) if r.get('state') in ('ready', 'scheduled')]
+    taken += [t(PC.norm_post(p)['at']) for p in publer or [] if 'kind:quick' in PC.norm_post(p)['labels']]
+    taken = [x for x in taken + list(extra) if x]
+    x = (now + dt.timedelta(minutes=2 if t0 else QUICK_LEAD_MIN)).replace(second=0, microsecond=0)
+    for _ in range(24 * 60):
+        if all(abs((p - x).total_seconds()) >= QUICK_SPACING * 60 for p in taken):
+            return x
+        x += dt.timedelta(minutes=1)
+    return x
+
+
+def publer_schedule_quick(key, ctx, card, texts, labels, slot):
+    """The quick card as a photo post on X and Threads at one time; (ok, note)."""
+    wid, acc = ctx
+    fname = os.path.basename(card)
+    code, med = _curl([f'{API}/media?types[]=photo&search=' + re.sub(r'[^A-Za-z0-9._-]', '', fname)], key, wid, timeout=30)
+    items = (med or {}).get('media') if isinstance(med, dict) else med
+    mid = next((m.get('id') for m in items or [] if m.get('name') == fname), None)
+    if not mid:
+        return False, f'the card is not in the Publer library by name (media HTTP {code})'
+    posts = [{'networks': {n: {'type': 'photo', 'text': texts[p], 'media': [{'id': mid, 'type': 'photo'}]}},
+              'accounts': [{'id': acc[p], 'scheduled_at': iso(slot)}], 'labels': [{'name': l} for l in labels]}
+             for p, n in QUICK_NET.items() if acc.get(p) and texts.get(p)]
+    if len(posts) < 2:
+        return False, 'the X or Threads account or text is missing'
+    code, js = _curl([f'{API}/posts/schedule'], key, wid, data={'bulk': {'state': 'scheduled', 'posts': posts}})
+    job = (js or {}).get('job_id') if isinstance(js, dict) else None
+    if code not in (200, 201) or not job:
+        return False, f'schedule HTTP {code}'
+    import time
+    for _ in range(20):
+        time.sleep(3)
+        code, st = _curl([f'{API}/job_status/{job}'], key, wid, timeout=30)
+        s_ = str((st or {}).get('status', '')).lower() if isinstance(st, dict) else ''
+        if s_ in ('complete', 'completed'):
+            return True, 'job status complete'
+        if s_ == 'failed':
+            return False, 'job status failed'
+    return False, 'job status not complete after 60 s (look the posts up in Publer before any retry)'
+
+
+def quick_labels(story, base):
+    g = story.get('genre')
+    g = g[0] if isinstance(g, list) and g else g
+    return ['kind:quick', 'tpl:quick', 'skin:house'] + ([f'genre:{g}'] if g else []) + [f'story:{base}']
+
+
+def quick_sweep(now=None, dry=False, key=None, ctx=None, posts=None):
+    """Schedules every rendered quick card on X and Threads (or writes it ready for the connector)."""
+    import publercheck as PC
+    import quickpost as QP
+    if not QP.live():
+        return []
+    now = now or now_utc()
+    rows = jsonl(QUICK)
+    last = {}
+    for r in rows:
+        last[r.get('story')] = r
+    acts, taken = [], []
+    for sid, r in last.items():
+        if r.get('state') != 'rendered':
+            continue
+        at = t(r.get('at'))
+        if at and now - at > dt.timedelta(hours=REEL_XT_MAX.total_seconds() // 3600):
+            acts.append(dict(r, at=iso(now), state='skipped', note='rendered over 24 hours ago; not posted'))
+            continue
+        story = load(os.path.join(STORIES, f'{sid}.json'), None)
+        if not isinstance(story, dict) or re.search(r'dropped|held|pulled|parked', str(story.get('status', '')), re.I) \
+                or story.get('held_by_mohammad'):
+            acts.append(dict(r, at=iso(now), state='skipped', note='story dropped or held'))
+            continue
+        tx = QP.texts(story)
+        if not (tx.get('x') and tx.get('threads')):
+            acts.append(dict(r, at=iso(now), state='held', note='no x or threads text in the story file'))
+            continue
+        others = [p for p in (posts or []) if 'kind:quick' in PC.norm_post(p)['labels']] + \
+                 [p for p in (posts or []) if PC.norm_post(p)['state'] == 'published']
+        act, line = PC.verdict(sid, r.get('base'), story.get('game'), tx['x'], others)
+        if act != 'prepare':
+            acts.append(dict(r, at=iso(now), state='skipped', note=line))
+            continue
+        slot = quick_next(now, posts, taken, bool(r.get('t0')))
+        taken.append(slot)
+        labels = quick_labels(story, r.get('base'))
+        row = dict(r, at=iso(now), slot=iso(slot), labels=labels, networks=['x', 'threads'])
+        if dry:
+            acts.append(dict(row, state='(dry) quick'))
+            continue
+        if key and ctx:
+            ok, why = publer_schedule_quick(key, ctx, r['card'], tx, labels, slot)
+            if ok:
+                acts.append(dict(row, state='scheduled', note=why))
+                continue
+            row['note'] = f'Publer API: {why}'
+        acts.append(dict(row, state='ready', note=(row.get('note', '') + '; schedule through the Publer connector: a photo '
+                                                   'post on X and Threads at the slot, the card from cards/, texts quick_x/x '
+                                                   'and quick_threads/threads from the story file, the labels; then '
+                                                   'quickpost.py scheduled <story> --slot <ISO>').strip('; ')))
+    if not dry:
+        for a in acts:
+            append(QUICK, a)
+    return acts
 
 
 # ---------------------------------------------------------------------------------------------- the sweep
@@ -397,11 +551,12 @@ def labels_for(job, story, qc):
     return out
 
 
-def record_schedule(story, slot, labels, state, note, by):
+def record_schedule(story, slot, labels, state, note, by, nets=None):
     at = iso(now_utc())
-    for p in ('instagram', 'x', 'threads'):
+    nets = nets or {p: slot for p in ('instagram', 'x', 'threads')}
+    for p, when in nets.items():
         append(SUBMISSIONS, {'commitment': story, 'platform': p, 'story': story, 'state': state, 'at': at,
-                             'labels': ','.join(labels), 'slot': iso(slot), 'job_status': 'complete' if state == 'scheduled' else None,
+                             'labels': ','.join(labels), 'slot': iso(when), 'job_status': 'complete' if state == 'scheduled' else None,
                              'by': by, 'note': note})
 
 
@@ -509,7 +664,8 @@ def sweep(now=None, dry=False, key=None):
                 actions.append(dict(row, state='held', note=f'no director verdict and the same game went out in the '
                                     f'last 48 hours ({dup}): a duplicate or a follow-up? a director pass schedules it'))
                 continue
-        texts = {p: (story.get('texts') or {}).get(p) for p in ('instagram', 'x', 'threads')}
+        st_t = story.get('texts') or {}
+        texts = {p: st_t.get(p) for p in ('instagram', 'x', 'threads')}
         if not all(texts.values()):
             actions.append(dict(row, state='held', note='story texts missing for ' +
                                 ', '.join(p for p, v in texts.items() if not v) + '; write them in the story file'))
@@ -525,12 +681,12 @@ def sweep(now=None, dry=False, key=None):
                 except Exception as ex:                 # noqa: BLE001
                     why_ctx = str(ex)
         own = [p for p in PC.from_logs(now) if p.get('story') != sid]
-        act, line = PC.verdict(sid, base, story.get('game'), texts['instagram'],
-                               (posts if posts is not None else []) + own)
+        reel_posts = [p for p in (posts or []) if 'kind:quick' not in PC.norm_post(p)['labels']]   # our quick post is not a repeat
+        act, line = PC.verdict(sid, base, story.get('game'), texts['instagram'], reel_posts + own)
         if act == 'stop':
             actions.append(dict(row, state='duplicate', note=line))
             continue
-        old = [PC.norm_post(p) for k, p in PC.matches(sid, base, story.get('game'), texts['instagram'], posts or [])
+        old = [PC.norm_post(p) for k, p in PC.matches(sid, base, story.get('game'), texts['instagram'], reel_posts)
                if k == 'story'] if act == 'replace' else []
         if old:
             replace_at = min((t(p['at']) for p in old if t(p['at'])), default=replace_at)
@@ -540,7 +696,12 @@ def sweep(now=None, dry=False, key=None):
             slot = next_slot(now, taken, posts)
         taken.append(slot)
         labels = labels_for(job, dict(story, id=sid), qc)
-        row.update(slot=iso(slot), labels=labels)
+        nets, nnote = reel_networks(sid, slot, st_t, posts)
+        if 'x' in nets and quick_slot(sid, posts) is not None:      # the Reel's own X and Threads text (24 Nov 2026)
+            texts = dict(texts, x=st_t.get('reel_x'), threads=st_t.get('reel_threads'))
+        row.update(slot=iso(slot), labels=labels, networks={p: iso(x) for p, x in nets.items()})
+        if nnote:
+            row['split'] = nnote
         if replace_at:
             row['replaces'] = 'the scheduled earlier version at ' + iso(replace_at)
         if verdict == 'none':
@@ -558,20 +719,30 @@ def sweep(now=None, dry=False, key=None):
                 row['note'] = (row.get('note', '') + f'; the earlier version was not deleted ({why_d})').strip('; ')
                 ctx = None                                      # never two versions in Publer: hand it to the connector
         if key and ctx:
-            ok, why = publer_schedule(key, ctx, out, texts, labels, slot)
+            ok, why = publer_schedule(key, ctx, out, texts, labels, nets)
             if ok:
-                record_schedule(sid, slot, labels, 'scheduled', row.get('note', ''), 'server')
+                record_schedule(sid, slot, labels, 'scheduled', row.get('note', ''), 'server', nets)
                 actions.append(dict(row, state='scheduled', publer=why))
                 continue
             row['note'] = (row.get('note', '') + f'; Publer API: {why}').strip('; ')
         actions.append(dict(row, state='ready', note=(row.get('note', '') + '; check Publer first (scheduled and the last 48 '
                                                        'hours published, publercheck.py), ' +
                                                        ('delete the scheduled earlier version, ' if replace_at else '') +
-                                                       'schedule through the Publer connector at the slot with the labels, '
+                                                       'schedule through the Publer connector at the slot with the labels '
+                                                       '(each network at its time in "networks"; X and Threads with the story\'s '
+                                                       'reel_x and reel_threads when a quick post went out), '
                                                        'then serverpost.py scheduled').strip('; ')))
     if not dry:
         for a in actions:
             append(LEDGER, a)
+    try:                                                    # quick posts (split by platform, 24 Nov 2026)
+        qctx = qposts = None
+        if key and not dry:
+            qctx, _ = publer_ctx(key)
+            qposts = publer_posts(key, qctx[0], now) if qctx else None
+        actions += [dict(a, base=(a.get('base') or '') + ' (quick)') for a in quick_sweep(now, dry, key, qctx, qposts)]
+    except Exception as ex:                                 # noqa: BLE001
+        actions.append({'state': 'quick-error', 'base': 'quick posts', 'note': str(ex)[:200]})
     return actions
 
 
