@@ -1,0 +1,57 @@
+{
+ "name": "horizon-zero-dawn-remastered-arabic-dub-steam",
+ "out": "cards/2026-11/horizon-zero-dawn-remastered-arabic-dub-steam-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [],
+ "ladder": [
+  {
+   "kind": "text",
+   "slot": "reel",
+   "step": "a",
+   "why": "soft shade under line group(s) [0, 3]: bright footage behind them"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "b",
+   "why": "audio split not applied (music only 29.0% of the track (< 40.0%)) on a trailer track under 12 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our "
+  }
+ ],
+ "job_to_pass_min": 6.9,
+ "at": "2026-11-25T07:37:15Z",
+ "findings": [],
+ "notes": [
+  "length 25.4 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason music only 29.0% of the track (< 40.0%); music_pct 29.0; leak_pct 3.9; cache {'hit': 0, 'miss': 6}; separate_secs 9.6; secs 13.4",
+  "render_job: lifeless: {\"score\": 0.2, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 3.94, \"held_under_text\": 0.016, \"secs\": 25.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "b0e643467d504277a7aa5d78146be1e007160b5c",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.8,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/horizon-zero-dawn-remastered-arabic-dub-steam-look-1.jpg",
+  "cards/2026-11/horizon-zero-dawn-remastered-arabic-dub-steam-look-2.jpg",
+  "cards/2026-11/horizon-zero-dawn-remastered-arabic-dub-steam-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer-music (ladder b: audio split not applied (music only 29.0% of the track (< 40.0%)) on a trailer track under 12 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
+ "shot_read": null,
+ "job_path": "jobs/done/horizon-zero-dawn-remastered-arabic-dub-steam.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.18,
+  "fetch": 0.23,
+  "shots": 0.27,
+  "checks": 1.11,
+  "render": 2.74,
+  "after": 1.36,
+  "job": 5.72
+ }
+}
