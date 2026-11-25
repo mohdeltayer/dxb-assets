@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-25T09:50:20Z",
- "seq": 848,
+ "generated_at": "2026-11-25T09:52:06Z",
+ "seq": 849,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 22871,
    "source": "PlayStation (YouTube)",
@@ -25,9 +26,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 848
-  }
- ],
- "recent": [
+  },
   {
    "id": 22625,
    "source": "Nintendo Japan",
