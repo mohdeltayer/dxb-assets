@@ -23,141 +23,81 @@
  "shots": [
   [
    "horizon-zero-dawn-remastered-arabic-dub-steam-horizon-zero-dawn-remastered-launch-trailer.mp4",
-   7.28,
+   102.73,
    3.8,
-   [
-    [
-     0.0,
-     1.0
-    ]
-   ]
-  ],
-  [
-   "horizon-zero-dawn-remastered-arabic-dub-steam-horizon-zero-dawn-remastered-launch-trailer.mp4",
-   27.01,
-   2.21,
-   [
-    [
-     0.0,
-     0.524
-    ]
-   ]
+   null
   ],
   [
    "horizon-zero-dawn-remastered-arabic-dub-steam-horizon-zero-dawn-remastered-launch-trailer.mp4",
    38.36,
-   2.21,
-   [
-    [
-     0.0,
-     0.007
-    ]
-   ]
+   2.3,
+   null
   ],
   [
    "horizon-zero-dawn-remastered-arabic-dub-steam-horizon-zero-dawn-remastered-launch-trailer.mp4",
    68.23,
-   2.2,
-   [
-    [
-     0.0,
-     0.559
-    ]
-   ]
+   2.3,
+   null
   ],
   [
    "horizon-zero-dawn-remastered-arabic-dub-steam-horizon-zero-dawn-remastered-launch-trailer.mp4",
    81.8,
-   2.2,
-   [
-    [
-     0.0,
-     0.323
-    ]
-   ]
+   2.3,
+   null
   ],
   [
    "horizon-zero-dawn-remastered-arabic-dub-steam-horizon-zero-dawn-remastered-launch-trailer.mp4",
-   92.73,
-   2.25,
-   [
-    [
-     0.0,
-     0.821
-    ]
-   ]
+   60.0,
+   2.3,
+   null
   ],
   [
    "horizon-zero-dawn-remastered-arabic-dub-steam-horizon-zero-dawn-remastered-launch-trailer.mp4",
-   107.61,
-   2.25,
-   0.24
-  ],
-  [
-   "horizon-zero-dawn-remastered-arabic-dub-steam-horizon-zero-dawn-remastered-launch-trailer.mp4",
-   104.85,
-   2.25,
-   [
-    [
-     0.0,
-     0.249
-    ]
-   ]
+   50.0,
+   2.3,
+   null
   ],
   [
    "horizon-zero-dawn-remastered-arabic-dub-steam-horizon-zero-dawn-remastered-launch-trailer.mp4",
    15.68,
-   2.2,
-   [
-    [
-     0.0,
-     1.0
-    ]
-   ]
+   2.3,
+   null
   ],
   [
    "horizon-zero-dawn-remastered-arabic-dub-steam-horizon-zero-dawn-remastered-launch-trailer.mp4",
    11.08,
-   2.2,
-   [
-    [
-     0.0,
-     1.0
-    ]
-   ]
+   2.3,
+   null
   ],
   [
    "horizon-zero-dawn-remastered-arabic-dub-steam-horizon-zero-dawn-remastered-launch-trailer.mp4",
    13.78,
-   2.2,
-   [
-    [
-     0.0,
-     1.0
-    ]
-   ]
+   2.3,
+   null
   ],
   [
    "horizon-zero-dawn-remastered-arabic-dub-steam-horizon-zero-dawn-remastered-launch-trailer.mp4",
    22.51,
-   2.14,
-   [
-    [
-     0.0,
-     0.573
-    ]
-   ]
+   2.3,
+   null
   ],
   [
    "horizon-zero-dawn-remastered-arabic-dub-steam-horizon-zero-dawn-remastered-launch-trailer.mp4",
-   102.73,
-   2.12,
-   [
-    [
-     0.0,
-     0.214
-    ]
-   ]
+   7.28,
+   2.3,
+   null
+  ],
+  [
+   "horizon-zero-dawn-remastered-arabic-dub-steam-horizon-zero-dawn-remastered-launch-trailer.mp4",
+   33.0,
+   2.3,
+   null
+  ],
+  [
+   "horizon-zero-dawn-remastered-arabic-dub-steam-horizon-zero-dawn-remastered-launch-trailer.mp4",
+   104.85,
+   2.4,
+   null
   ]
  ],
  "lines": [
@@ -245,7 +185,7 @@
  "cut": false,
  "track": [
   "horizon-zero-dawn-remastered-arabic-dub-steam-horizon-zero-dawn-remastered-launch-trailer.mp4",
-  7.28
+  102.73
  ],
  "track_from_first_shot": true,
  "angle": null,
@@ -269,5 +209,9 @@
   "credit on every clip": "yes: one credit over every shot",
   "sound": "yes: trailer sound from the first shot, split per shot on the server",
   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ },
+ "rerender": {
+  "reason": "framing",
+  "note": "v2 (25 Nov): v1 ran line 1 over the Nixxes logo slate (27 s), had a letterboxed shot (92.7 s) and opened on dark foliage; v2 opens on Aloy, both shots dropped"
  }
 }
