@@ -1,0 +1,622 @@
+{
+ "name": "pokemon-champions-regulation-m-d-mega-abilities-gamespark",
+ "out": "cards/2026-11/pokemon-champions-regulation-m-d-mega-abilities-gamespark-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot scan",
+   "detail": "footage scan stopped at its cap (180 s); shots as written, automatic slots from the footage library or evenly spaced"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 60 px on 3 lines (cut it to a few words next time): لعبة Pokémon Champions\nتقرير: كشف قدرات Mega Heatran و Mega Tatsugiri"
+  },
+  {
+   "stage": "line size",
+   "detail": "56 px too wide for 'ذكر موقع غيم سبارك (Game*Spark) أن'; 52 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "52 px too wide for 'لعبة Pokémon Champions ستطبّق اعتبارًا'; 48 px"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 60 px on 3 lines (cut it to a few words next time): لعبة Pokémon Champions\nتقرير: كشف قدرات Mega Heatran و Mega Tatsugiri"
+  },
+  {
+   "stage": "line size",
+   "detail": "56 px too wide for 'ذكر موقع غيم سبارك (Game*Spark) أن'; 52 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "52 px too wide for 'لعبة Pokémon Champions ستطبّق اعتبارًا'; 48 px"
+  },
+  {
+   "stage": "smear",
+   "detail": "ValueError: /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/pokemon-champions-regulation-m-d-mega-abilities-gamespark-reel-v1.mp4: blocky smear at 9.53 to 9.80 s (peak 18.4); look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 15,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 30.8 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 16,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 91.67 s for 2.74 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 17,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 158.59 s for 2.74 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 18,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 211.82 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 19,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 274.83 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 20,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 341.84 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch for 6 slot(s)"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 8.98 s for 3.8 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 26.43 s for 2.44 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 43.85 s for 2.44 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 55.27 s for 2.44 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 80.74 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 96.17 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 119.6 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 131.03 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 146.46 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 165.89 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 181.32 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 200.75 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 220.18 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 235.61 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 14,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 251.04 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 15,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 266.47 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 16,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 293.47 s for 2.74 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 17,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 304.88 s for 2.74 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 18,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 324.76 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 19,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 342.19 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 20,
+   "step": "a",
+   "why": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 at 349.62 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "scan cap: 21 automatic slot(s) from the library or evenly spaced"
+  },
+  {
+   "kind": "text",
+   "slot": "reel",
+   "step": "a",
+   "why": "soft shade under line group(s) [6]: bright footage behind them"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "b",
+   "why": "audio split not applied (music only 25.5% of the track (< 40.0%)) on a trailer track under 20 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our "
+  }
+ ],
+ "job_to_pass_min": 12.6,
+ "at": "2026-11-25T07:23:34Z",
+ "findings": [],
+ "notes": [
+  "length 41.6 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "source quality: pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4: low bitrate 2.0 Mbps (floor 3.0 Mbps for 1280x720 at 30 fps) (lowbit)",
+  "render_job: audio split: not applied, audio as rendered; reason music only 25.5% of the track (< 40.0%); music_pct 25.5; leak_pct 0.2; cache {'hit': 0, 'miss': 18}; separate_secs 20.1; secs 26.5",
+  "render_job: lifeless: {\"score\": 25.9, \"still_share\": 0.345, \"longest_still\": 2.5, \"cuts_per_10s\": 6.51, \"held_under_text\": 0.0, \"secs\": 41.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 46 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "credit 1",
+   "rule": "credit_width",
+   "what": "set one line at 40 px (was 40 px, too wide for the safe zone)",
+   "before": {
+    "text": "المصدر: موقع غيم سبارك (Game*Spark)،\nولقطات من نينتيندو (Nintendo)",
+    "size": 40
+   },
+   "after": {
+    "text": "المصدر: Game*Spark · اللقطات: Nintendo",
+    "size": 40
+   }
+  }
+ ],
+ "job_sha": "93dbf75d66487c0777f4fe47f5983f77c0e02761",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 720,
+  "max_zoom": 2.67,
+  "lowbit_shots": 21
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/pokemon-champions-regulation-m-d-mega-abilities-gamespark-look-1.jpg",
+  "cards/2026-11/pokemon-champions-regulation-m-d-mega-abilities-gamespark-look-2.jpg",
+  "cards/2026-11/pokemon-champions-regulation-m-d-mega-abilities-gamespark-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer-music (ladder b: audio split not applied (music only 25.5% of the track (< 40.0%)) on a trailer track under 20 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
+ "shot_read": {
+  "secs": 82.7,
+  "files": {
+   "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4": {
+    "secs": 82.5,
+    "cached": false,
+    "stages": {
+     "decode": 25.8,
+     "autofocus": 81.5,
+     "ocr": 81.5,
+     "smear": 81.6,
+     "scenes": 82.4
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/pokemon-champions-regulation-m-d-mega-abilities-gamespark.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.2,
+  "fetch": 0.17,
+  "shots": 3.5,
+  "checks": 0.49,
+  "render": 5.74,
+  "after": 1.7,
+  "job": 11.6
+ },
+ "job_after_autofix": {
+  "name": "pokemon-champions-regulation-m-d-mega-abilities-gamespark",
+  "story": "2026-11-25-pokemon-champions-regulation-m-d-mega-abilities-gamespark",
+  "footage_source": "https://www.nintendo.com/us/store/products/pokemon-champions-switch/",
+  "kind_news": "update",
+  "story_class": "trailer",
+  "story_class_why": "kind update",
+  "skin_why": "genre strategy: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/pokemon-champions-regulation-m-d-mega-abilities-gamespark-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    "url": "https://assets.nintendo.com/video/upload/store/software/switch/70010000004519/Video/8cf4eb9dccd7ad2f233a7ad04d3dbc47903d7a55fe33d98f7f95df4e307b7447.mp4"
+   }
+  ],
+  "shots": [
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    3.8,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.44,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.44,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.44,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.74,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.74,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+    0.0,
+    2.2,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    3,
+    [
+     [
+      "ذكر موقع غيم سبارك (Game*Spark) أن\nلعبة Pokémon Champions ستطبّق اعتبارًا",
+      {
+       "size": 44
+      }
+     ]
+    ]
+   ],
+   [
+    4,
+    6,
+    [
+     [
+      "من 2 ديسمبر قواعد Regulation M-D،\nوتستمر حتى 3 مارس 2027،",
+      {
+       "size": 44
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    9,
+    [
+     [
+      "ويُسمح فيها حديثًا باستخدام Heatran\nو Dondozo و Tatsugiri",
+      {
+       "size": 44
+      }
+     ]
+    ]
+   ],
+   [
+    10,
+    12,
+    [
+     [
+      "وبحسب التقرير تحمل Mega Heatran\nالقدرة Water Compaction",
+      {
+       "size": 44
+      }
+     ]
+    ]
+   ],
+   [
+    13,
+    15,
+    [
+     [
+      "التي ترفع الدفاع مرحلتين\nعند إصابتها بضربة من نوع الماء",
+      {
+       "size": 44
+      }
+     ]
+    ]
+   ],
+   [
+    16,
+    17,
+    [
+     [
+      "أما Mega Tatsugiri فتحمل\nقدرة جديدة كليًا ترفع الهجوم",
+      {
+       "size": 44
+      }
+     ]
+    ]
+   ],
+   [
+    18,
+    20,
+    [
+     [
+      "الخاص مرحلة واحدة كلما دخلت\nالمعركة، في أشكالها الثلاثة",
+      {
+       "size": 44
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    20,
+    "المصدر: Game*Spark · اللقطات: Nintendo",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع غيم سبارك (Game*Spark) أن لعبة Pokémon Champions ستطبّق اعتبارًا من 2 ديسمبر قواعد Regulation M-D، وتستمر حتى 3 مارس 2027، ويُسمح فيها حديثًا باستخدام Heatran و Dondozo و Tatsugiri. وبحسب التقرير تحمل Mega Heatran القدرة Water Compaction التي ترفع الدفاع مرحلتين عند إصابتها بضربة من نوع الماء. أما Mega Tatsugiri فتحمل قدرة جديدة كليًا ترفع الهجوم الخاص مرحلة واحدة كلما دخلت المعركة، في أشكالها الثلاثة.",
+  "headline": "لعبة Pokémon Champions\nتقرير: كشف قدرات Mega Heatran و Mega Tatsugiri",
+  "label": "تقرير",
+  "game": "Pokémon Champions",
+  "game_short": "Pokémon Champions",
+  "game_key": "pokemon champions",
+  "genre": [
+   "strategy"
+  ],
+  "texts": {
+   "instagram": "تقرير: قدرات Mega Heatran وMega Tatsugiri في Pokémon Champions\n\nذكر موقع غيم سبارك (Game*Spark) أن لعبة Pokémon Champions ستطبّق اعتبارًا من 2 ديسمبر قواعد Regulation M-D، وتستمر حتى 3 مارس 2027، ويُسمح فيها حديثًا باستخدام Heatran وDondozo وTatsugiri.\n\nوبحسب التقرير تحمل Mega Heatran القدرة Water Compaction التي ترفع الدفاع مرحلتين عند إصابتها بضربة من نوع الماء، وتحمل Mega Tatsugiri قدرة جديدة كليًا ترفع الهجوم الخاص مرحلة واحدة كلما دخلت المعركة، في أشكالها الثلاثة.\n\nاللقطات من صفحة اللعبة في متجر نينتيندو (Nintendo).\n\nالمصدر: موقع غيم سبارك (Game*Spark).\n\n#ألعاب #أخبار_الألعاب #PokemonChampions #Pokemon",
+   "x": "تقرير: ذكر موقع غيم سبارك (Game*Spark) أن لعبة Pokémon Champions ستطبّق اعتبارًا من 2 ديسمبر قواعد Regulation M-D حتى 3 مارس 2027، ويُسمح فيها حديثًا باستخدام Heatran وDondozo وTatsugiri. المصدر: غيم سبارك.",
+   "threads": "تقرير: ذكر موقع غيم سبارك (Game*Spark) أن لعبة Pokémon Champions ستطبّق اعتبارًا من 2 ديسمبر قواعد Regulation M-D، وتستمر حتى 3 مارس 2027.\n\nويُسمح فيها حديثًا باستخدام Heatran وDondozo وTatsugiri.\n\nالمصدر: موقع غيم سبارك (Game*Spark)"
+  },
+  "source": "موقع غيم سبارك (Game*Spark)، ولقطات من نينتيندو (Nintendo)",
+  "date": "25 Nov 2026",
+  "theme": "stylized",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Game*Spark reported today the abilities of Mega Heatran and Mega Tatsugiri and that Heatran, Dondozo and Tatsugiri are unlocked in Regulation M-D from 2 Dec 2026.",
+   "what_it_means_here": "Pokémon Champions players can plan teams for the new regulation, which runs from 2 December to 3 March 2027."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind update",
+   "skin": "house: genre strategy: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "pokemon-champions-regulation-m-d-mega-abilities-gamespark-nintendo-1.mp4 from the resolver (https://www.nintendo.com/us/store/products/pokemon-champions-switch/)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Game*Spark, 25 Nov 2026: Mega Heatran and Mega Tatsugiri abilities revealed, Dondozo unlocked in Pokemon Champions (http://www.gamespark.jp/article/2026/11/25/175285.html); first report: Game*Spark 25 Nov 2026 06:45Z (outlet, Japan); seen by the server digest 25 Nov 06:52Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: https://assets.nintendo.com/video/upload/store/software/switch/70010000004519/Video/8cf4eb9dccd7ad2f233a7ad04d3dbc47903d7a55fe33d98f7f95df4e307b7447.mp4 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "line_flags": [
+   "lines: the spoken paragraph makes 7 lines at 44 px; a Reel holds 6: shorten it (one fact per sentence, the rest in the caption)"
+  ],
+  "shots_auto": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20
+  ]
+ }
+}
