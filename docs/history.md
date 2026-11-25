@@ -4235,3 +4235,29 @@ Mohammad: X and Threads get fast news posts; Instagram (and later TikTok and You
 5. Three samples on the board before going live (cards/test/quick/: GTA VI 39 million players, Hogwarts Legacy 22 AED,
    Nioh 3 Complete Edition); after that, no further approval. The first GTA VI sample took a dark letterboxed trailer frame;
    curated stretches with a character now come first and black bars are trimmed.
+
+## Text is fixed, never refused (Mohammad, 25 Nov 2026)
+
+Case: 24 to 25 Nov, 16 hours with almost nothing posted. The slip and render checks still refused text that should be
+fixed automatically, against the 18 Nov "templates never refuse" rule. The Mario Kart World 1.9.0 slip was refused at
+02:11Z and 04:11Z on 25 Nov: its spoken text named «Mario Bros. Circuit 2», the sentence splitter cut at "Bros.", and the
+next beat opened on "Circuit 2" (latin_first, a hard stop); it built at 05:14Z only after Production 2 deleted the track.
+1. Sentence split (`textrules.split_sentences`, used by spoken_sentences, linecut, slip and storykind): a full stop is
+   not a sentence end after a known abbreviation (Bros., Dr., St., No., Vol., Mr., Jr., Inc., Ltd., vs., Ver., Ep., the
+   months and others in ABBREV) or a single Latin letter, nor when a lowercase letter, a digit, or a Latin word after a
+   Latin word follows it (inside the same name). A decimal or version (1.9.0) has no space after its points and never
+   splits.
+2. Headline too long for two or three lines at 60 px (`textrules.shorten_headline`, in fix): more than three lines are
+   joined; the platform words go first (على Switch 2، PS5، Xbox، Steam، الحاسب...), then the source words (حسب، بحسب،
+   وفق...), then it is cut to the news word and the game name («تحديث Mario Kart World»). Never a refusal.
+3. A line that would open on a Latin word (`textrules.arabic_first`, in fix for the headline, lines and credits, and in
+   `slip.autofix` for every paragraph of the slip): a later visual line gives its leading Latin run back to the line
+   before; a line that opens on the game name gets «لعبة» before it; otherwise the first Arabic word after the Latin run
+   moves to the front. `slip.autofix` also fixes em dashes, Arabic-Indic digits, flipping % and + signs and hashtags on X
+   and Threads; the grammar review's texts_sha is checked against the editor's own text, before autofix.
+4. Test: the refused Mario Kart slip text (desk version of 25 Nov 04:09Z, with Mario Bros. Circuit 2) checks clean and
+   builds; on the old code its beats included «Circuit 2 وDK Pass 2 وShy Guy Bazaar 2». The last 20 jobs in jobs/done
+   pass through the new fix with no change. Template tests 230 of 230 (test_neverrefuse_text.py added; two tests that
+   asserted the old refusals now assert the fix).
+5. Bank: 6 evergreen Reels (Ocarina, retro, list, explainer) are kept as Publer drafts labelled kind:evergreen, so a
+   stalled news lane never leaves the feed empty.

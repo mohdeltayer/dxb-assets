@@ -71,7 +71,8 @@ def _text(slip):
 
 
 def _sentences(text):
-    return [s.strip() for s in re.split(r'(?<=[.!؟?])\s+', text) if s.strip()]
+    import textrules as _TR                    # never inside a name or an abbreviation (25 Nov 2026)
+    return [s.strip() for s in _TR.split_sentences(text, keep=True) if s.strip()]
 
 
 def _has(text, words):

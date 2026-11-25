@@ -208,9 +208,52 @@ def _tokens(text, keep=False):
     return out
 
 
+# Server fix (Mohammad, 25 Nov 2026, after the 24 to 25 Nov outage: «Mario Bros. Circuit 2» was split at "Bros." and the
+# next line opened on "Circuit 2", so the Mario Kart World 1.9.0 slip was refused twice). A full stop is not a sentence end
+# after a known abbreviation or a single Latin letter, nor when a lowercase letter, a digit or another Latin word follows a
+# Latin word (the same name). A decimal or version number (1.9.0) has no space after its points and never splits.
+ABBREV = {'bros', 'dr', 'st', 'no', 'vol', 'mr', 'mrs', 'ms', 'jr', 'sr', 'inc', 'ltd', 'co', 'corp', 'vs', 'ver', 'ep',
+          'pt', 'feat', 'mt', 'ft', 'ave', 'approx', 'dept', 'est', 'fig', 'gen', 'lt', 'prof', 'rev', 'ed', 'eds', 'jan',
+          'feb', 'mar', 'apr', 'jun', 'jul', 'aug', 'sep', 'sept', 'oct', 'nov', 'dec', 'u.s', 'e.g', 'i.e', 'etc'}
+LATIN_TOKEN = re.compile(r'^[«"“(]*[A-Za-z0-9]')
+
+
+def _sentence_end(t, i, j):
+    """True when the marks t[i:j] end a sentence (see ABBREV above)."""
+    if not t[i:j].startswith('.') or '.' != t[i:j][-1] and len(t[i:j]) > 1:
+        return True
+    prev = (re.search(r'(\S+)$', t[:i]) or [None, ''])[1]
+    nxt = (re.match(r'\s*(\S+)', t[j:]) or [None, ''])[1]
+    pw = re.sub(r'^[«"“(]+', '', prev).lower()
+    if re.fullmatch(r'[A-Za-z]', pw) or pw in ABBREV:
+        return False
+    if nxt and (re.match(r'[«"“(]*[a-z0-9]', nxt)):
+        return False
+    if nxt and LATIN_TOKEN.match(prev) and LATIN_TOKEN.match(nxt):
+        return False
+    return True
+
+
+def split_sentences(text, keep=False):
+    """The paragraph cut into sentences at . ! ? or ؟ followed by a space or the end, never inside a name or an
+    abbreviation (_sentence_end). keep=True keeps each sentence's closing marks."""
+    t, out, start = str(text or ''), [], 0
+    for m in SENT_END.finditer(t):
+        if not _sentence_end(t, m.start(), m.end()):
+            continue
+        piece = t[start:m.end() if keep else m.start()].strip()
+        if piece:
+            out.append(piece)
+        start = m.end()
+    rest = t[start:].strip()
+    if rest:
+        out.append(rest)
+    return out
+
+
 def spoken_sentences(text):
-    """The paragraph's sentences: ended by . ! ? or ؟, each at least two words."""
-    parts = [p.strip() for p in SENT_END.split(str(text)) if p.strip()]
+    """The paragraph's sentences: ended by . ! ? or ؟, each at least two words (split_sentences: never inside a name)."""
+    parts = [p.strip() for p in split_sentences(text) if p.strip()]
     return [p for p in parts if len(p.split()) >= 2]
 
 
@@ -274,9 +317,12 @@ def check(job):
                                'Arabic word (22 Nov 2026)'})
         parts = str(head).split('\n')
         latin = bool(re.search('[A-Za-z]', str(head)))
-        if len(parts) > HEAD_LINES:
+        if len(parts) > HEAD_MAX_LINES:                 # fix() joins and shortens these (25 Nov 2026)
             out.append({'where': 'headline', 'rule': 'headline_long', 'text': head, 'hard': True,
-                        'fix': f'{len(parts)} lines: at most {HEAD_LINES}; cut to fewer words'})
+                        'fix': f'{len(parts)} lines: at most {HEAD_MAX_LINES}; the server shortens it (textrules.fix)'})
+        elif len(parts) > HEAD_LINES:
+            out.append({'where': 'headline', 'rule': 'headline_long', 'text': head,
+                        'fix': f'{len(parts)} lines: the live path sets three lines at 60 px (estimate)'})
         elif latin:
             if len(parts) == 1 and len(parts[0]) > HEAD_CHARS * HEAD_LINES:
                 out.append({'where': 'headline', 'rule': 'headline_long', 'text': head,
@@ -630,10 +676,114 @@ def headline_with_game(job):
     short = (game_short_of(job) or [game])[0]
     return f'لعبة {short}\n{head.strip()}'
 
+# ----------------------------------------------------------------------------------- autofix, never a refusal (25 Nov 2026)
+HEAD_CHARS_60 = 36             # estimate at the 60 px floor: about 36 characters a line with a Latin name
+HEAD_MAX_LINES = 3             # the live path sets a headline on three lines at 60 px at most
+NEWS_WORDS = ('تحديث', 'تأجيل', 'موعد', 'سعر', 'إطلاق', 'صدور', 'تصدر', 'متوفرة', 'عرض', 'إعلان', 'توسعة', 'إضافة',
+              'خصم', 'مجانا', 'مجانًا', 'مجانية', 'تسريب', 'موسم', 'مبيعات', 'نسخة', 'إلغاء', 'نسخ')
+PLATFORM_RE = re.compile(r'\s*(?:على|لجهاز|لأجهزة|عبر|في)\s+(?:متجر\s+)?(?:(?:Nintendo\s+)?Switch(?:\s*2)?|PS[45]|'
+                         r'PlayStation\s*[45]?|Xbox(?:\s+Series\s+X\|?S)?|Steam|PC|الحاسب|الحاسوب|سويتش(?:\s*2)?)'
+                         r'(?:\s*(?:،|و)\s*(?:(?:Nintendo\s+)?Switch(?:\s*2)?|PS[45]|Xbox(?:\s+Series\s+X\|?S)?|Steam|PC|الحاسب))*')
+SOURCE_RE = re.compile(r'\s*[،,]?\s*(?:حسب|بحسب|وفق|وفقا ل|نقلا عن|عن)\s+[^\n،,]*$')
+
+
+def _visual_ok(line):
+    return _first_ok(line)
+
+
+def arabic_first(text, names=()):
+    """Every visual line opens on an Arabic word, by rewrapping and never by refusing (Mohammad, 25 Nov 2026):
+    1. a later line that opens on a Latin word takes its leading Latin run back onto the line before (the break moves
+       to the next Arabic word);
+    2. a first line (or a line that cannot be rewrapped) that opens on the game's name gets «لعبة» before it;
+    3. otherwise the first Arabic word after the Latin run moves to the front of the line («Warhammer تصدر ...» becomes
+       «تصدر Warhammer ...»).
+    Returns (text, [what changed])."""
+    if not isinstance(text, str) or not text.strip():
+        return text, []
+    lines, what = text.split('\n'), []
+    i = 1
+    while i < len(lines):
+        if not _visual_ok(lines[i]) and _visual_ok(lines[i - 1]):
+            w = lines[i].split()
+            k = next((n for n, x in enumerate(w) if ARABIC.match(x.lstrip(LEAD)[:1] or 'a')), None)
+            if k is None:                               # nothing Arabic left: join the two lines
+                lines[i - 1] = lines[i - 1].rstrip() + ' ' + lines[i].strip()
+                del lines[i]
+                what.append('a Latin-only line joined to the line before')
+                continue
+            lines[i - 1] = lines[i - 1].rstrip() + ' ' + ' '.join(w[:k])
+            lines[i] = ' '.join(w[k:])
+            what.append('rewrapped: the line break moved so the line opens on an Arabic word')
+        i += 1
+    for i, ln in enumerate(lines):
+        if _visual_ok(ln):
+            continue
+        body = ln.strip()
+        nm = next((n for n in names if n and body.lstrip(LEAD).startswith(n)), None)
+        if nm:
+            lines[i] = 'لعبة ' + body
+            what.append('«لعبة» put before the game name')
+            continue
+        w = body.split()
+        k = next((n for n, x in enumerate(w) if ARABIC.match(x.lstrip(LEAD)[:1] or 'a')), None)
+        if k:
+            lines[i] = ' '.join([w[k]] + w[:k] + w[k + 1:])
+            what.append(f'the Arabic word «{w[k]}» moved to the front of the line')
+        elif names:
+            lines[i] = 'لعبة ' + body
+            what.append('«لعبة» put before a Latin-only line')
+    return '\n'.join(lines), what
+
+
+def _est_lines(head, per=HEAD_CHARS_60):
+    parts = [p for p in str(head).split('\n') if p.strip()]
+    return sum(max(1, -(-len(p) // per)) for p in parts)
+
+
+def shorten_headline(head, names=()):
+    """A headline too long for three lines at 60 px is shortened, never refused (Mohammad, 25 Nov 2026): the platform
+    and source words go first; if it is still too long, it becomes the news word and the game's name («تحديث Mario Kart
+    World»). Returns (headline, [what changed])."""
+    if not isinstance(head, str):
+        return head, []
+    what, h = [], head
+    if len([p for p in h.split('\n') if p.strip()]) > HEAD_MAX_LINES:
+        h = ' '.join(p.strip() for p in h.split('\n') if p.strip())
+        what.append(f'more than {HEAD_MAX_LINES} lines joined')
+    if _est_lines(h) <= HEAD_MAX_LINES and len(h.split('\n')) <= HEAD_MAX_LINES:
+        return h, what
+    for rx, why in ((PLATFORM_RE, 'platform words dropped'), (SOURCE_RE, 'source words dropped')):
+        new = '\n'.join(re.sub(r'\s{2,}', ' ', rx.sub('', p)).strip() for p in h.split('\n'))
+        new = '\n'.join(p for p in new.split('\n') if p.strip())
+        if new != h and new.strip():
+            h = new
+            what.append(why)
+        if _est_lines(h) <= HEAD_MAX_LINES:
+            return h, what
+    flat = ' '.join(h.split())
+    word = next((w for w in flat.split() if w.strip('،,.:') in NEWS_WORDS), None) or 'جديد'
+    game = next((n for n in names if n), None)
+    if game:
+        h = f'{word.strip("،,.:")} {game}'
+        what.append('cut to the news word and the game name')
+    else:
+        ws, out = flat.split(), []
+        for w in ws:
+            if len(' '.join(out + [w])) > HEAD_CHARS_60 * HEAD_MAX_LINES:
+                break
+            out.append(w)
+        h = ' '.join(out)
+        what.append('cut to the words that fit three lines')
+    return h, what
+
+
 
 def fix(job):
-    """The job with its mechanical text faults fixed, and [(where, before, after, what)]. Latin-first lines, length and
-    reading time are never changed here: they need a writer."""
+    """The job with its mechanical text faults fixed, and [(where, before, after, what)]. Since 25 Nov 2026 (Mohammad,
+    after the 24 to 25 Nov outage) it also rewraps a line that opens on a Latin word (arabic_first) and shortens a
+    headline too long for three lines at 60 px (shorten_headline): those are fixed, never refused. Reading time is the
+    render's (the shot under a short line grows)."""
     import copy
     j, changes = copy.deepcopy(job), []
 
@@ -681,6 +831,38 @@ def fix(job):
                         x[0] = lat('line', x[0])
     if review:
         j['names_to_review'] = review
+    names = [n for n in ([game_of(j)] + game_short_of(j)) if n]       # 25 Nov 2026: autofix, never a refusal
+    if isinstance(j.get('headline'), str):
+        h, w = shorten_headline(j['headline'], game_short_of(j) + ([game_of(j)] if game_of(j) else []))
+        if w:
+            changes.append({'where': 'headline', 'before': j['headline'], 'after': h, 'what': '; '.join(w)})
+            j['headline'] = h
+        h, w = arabic_first(j['headline'], names)
+        if w:
+            changes.append({'where': 'headline', 'before': j['headline'], 'after': h, 'what': '; '.join(w)})
+            j['headline'] = h
+    m = 0
+    for grp in j.get('lines') or []:
+        if not isinstance(grp, list) or len(grp) < 3:
+            continue
+        for k, x in enumerate(grp[2]):
+            m += 1
+            t0 = x if isinstance(x, str) else (x[0] if isinstance(x, list) and x and isinstance(x[0], str) else None)
+            if t0 is None:
+                continue
+            new, w = arabic_first(t0, names)
+            if w:
+                changes.append({'where': f'line {m}', 'before': t0, 'after': new, 'what': '; '.join(w)})
+                if isinstance(x, str):
+                    grp[2][k] = new
+                else:
+                    x[0] = new
+    for i, c in enumerate(j.get('credits') or [], 1):
+        if isinstance(c, list) and len(c) > 2 and isinstance(c[2], str):
+            new, w = arabic_first(c[2], names)
+            if w:
+                changes.append({'where': f'credit {i}', 'before': c[2], 'after': new, 'what': '; '.join(w)})
+                c[2] = new
     n = 0
     for grp in j.get('lines') or []:
         if not isinstance(grp, list) or len(grp) < 3:

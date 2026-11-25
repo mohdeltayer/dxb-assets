@@ -37,7 +37,7 @@ class Autofix(unittest.TestCase):
         self.assertEqual({c['what'] for c in ch} >= {'space after a glued prefix', 'percent sign spelt out'}, True)
         rules = {f['rule'] for f in TR.hard(TR.check(new))}
         self.assertNotIn('glued', rules); self.assertNotIn('sign', rules)
-        self.assertIn('latin_first', rules)          # a Latin-first line needs a writer, never the server
+        self.assertNotIn('latin_first', rules)       # 25 Nov 2026: the server rewraps a Latin-first line, never refuses
 
 
 class Paths(unittest.TestCase):

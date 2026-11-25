@@ -15,7 +15,8 @@ import unittest
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
-import slip as S  # noqa: E402
+import slip as S
+import textrules as TRX  # noqa: E402
 import textrules as TR  # noqa: E402
 
 NOW = dt.datetime(2026, 11, 17, 20, 0, tzinfo=dt.timezone.utc)
@@ -159,8 +160,9 @@ class Job(unittest.TestCase):
             self.assertEqual(warned['state'], 'built', warned)
             self.assertTrue(any(f.startswith('warning: label') for f in warned['flags']))
             bad = S.build(slip(headline='GTA VI تصدر اليوم'), 'test', resolve=False, root=d, now=NOW)
-            self.assertEqual(bad['state'], 'failed')          # bidi-broken text still stops
-            self.assertTrue(bad['problems'])
+            self.assertEqual(bad['state'], 'built', bad)     # 25 Nov 2026: a Latin-first headline is fixed, not refused
+            fixed = json.load(open(os.path.join(d, bad['job']), encoding='utf-8'))['headline']
+            self.assertTrue(all(TRX._first_ok(x) for x in fixed.split('\n')), fixed)
 
     def test_pick_footage(self):
         c = [{'job': {'file': 'a'}, 'decode_clean': False}, {'job': {'file': 'b'}, 'decode_clean': True}]

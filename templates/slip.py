@@ -168,15 +168,51 @@ def _paragraphs(text):
     return [p.strip() for p in str(text or '').split('\n') if p.strip()]
 
 
-def problems(slip, now=None):
-    """Refusals: a slip with any of these is marked failed, with the reasons."""
+def autofix(slip):
+    """The slip's texts fixed where a machine can fix them, never refused (Mohammad, 25 Nov 2026, after the 24 to 25 Nov
+    outage): an em dash becomes «، », Arabic-Indic digits become Western, a % or + sign that flips is spelt out or dropped
+    (textrules._fix_text), a paragraph or headline line that opens on a Latin word is rewrapped or gets its Arabic word
+    first (textrules.arabic_first), hashtags leave the X and Threads texts. Returns (slip, [what changed])."""
+    import copy
+    import textrules as TR
+    s, out = copy.deepcopy(slip), []
+    names = [n for n in (s.get('game'), s.get('game_short'), _short(s.get('game'))) if n]
+    for field in ('credit', 'headline', 'spoken', 'instagram', 'x', 'threads', 'reel_x', 'reel_threads'):
+        t = s.get(field)
+        if not isinstance(t, str) or not t:
+            continue
+        new = re.sub(r'\s*—\s*', '، ', t)
+        new = new.translate(str.maketrans('٠١٢٣٤٥٦٧٨٩', '0123456789'))
+        if field in ('headline', 'spoken'):
+            new, _ = TR._fix_text(new)
+        if field in ('x', 'threads', 'reel_x', 'reel_threads'):
+            new = re.sub(r'\s*#\S+', '', new).strip()
+        sep = '\n'
+        paras = new.split(sep)
+        for i, p in enumerate(paras):
+            if not p.strip() or (field == 'instagram' and p.lstrip().startswith('#')):
+                continue
+            fixed, w = TR.arabic_first(p, names)
+            paras[i] = fixed
+        new = sep.join(paras)
+        if field == 'headline':
+            new, _ = TR.shorten_headline(new, names)
+        if new != t:
+            s[field] = new
+            out.append(field)
+    return s, out
+
+
+def problems(slip, now=None, reviewed=None):
+    """Refusals: a slip with any of these is marked failed, with the reasons. `reviewed` is the slip as the editor wrote
+    it, before autofix: the grammar review's texts_sha is checked against that text (25 Nov 2026)."""
     now = now or dt.datetime.now(UTC)
     import textrules as TR
     out = []
     missing = [k for k in REQUIRED if slip.get(k) in (None, '', [])]
     if missing:
         out.append('missing: ' + ', '.join(missing))
-    gp = grammar_problem(slip)                      # Burning Sword case, 19 Nov 2026: a hard stop
+    gp = grammar_problem(reviewed or slip)          # Burning Sword case, 19 Nov 2026: a hard stop
     if gp:
         out.append(gp)
     # an unknown name is never a refusal (names rule correction, 21 Nov 2026): textrules.fix writes it in Latin letters
@@ -641,14 +677,15 @@ def split_problems(probs):
 def build(slip, lane='live', resolve=True, root=ROOT, now=None):
     """Writes the story file and the job; returns the result {state, problems, flags, job, story, footage}."""
     res = {'id': slip.get('id'), 'state': 'failed', 'problems': [], 'flags': [], 'at': dt.datetime.now(UTC).strftime('%Y-%m-%dT%H:%M:%SZ')}
-    for field in ('credit', 'headline', 'spoken', 'instagram', 'x', 'threads'):   # an em dash is a mechanical fix
-        if '—' in str(slip.get(field) or ''):
-            slip[field] = re.sub(r'\s*—\s*', '، ', slip[field])
-    hard, soft = split_problems(problems(slip, now))
+    reviewed = slip                                 # the grammar review read this text
+    slip, fixed_fields = autofix(slip)              # fixed, never refused (25 Nov 2026)
+    hard, soft = split_problems(problems(slip, now, reviewed=reviewed))
+    if fixed_fields:
+        res['flags'].append('slip texts fixed mechanically: ' + ', '.join(fixed_fields))
     res['problems'] = hard
     if res['problems']:
         return res
-    res['flags'] = name_flags(slip) + [f'warning: {x}' for x in soft]
+    res['flags'] = res['flags'] + name_flags(slip) + [f'warning: {x}' for x in soft]
     name = _name(slip)
     # Publer is the source of truth (Mohammad, 23 Nov 2026): before preparing, the same story or the same game and news
     # already scheduled or published in the last 48 hours stops the slip (the repository's own record of Publer here; the
@@ -736,7 +773,8 @@ def main(argv):
         print(grammar_sha(slip))
         return 0
     if argv[0] == 'check':
-        p, fl = problems(slip), name_flags(slip)
+        fixed_slip, _fx = autofix(slip)
+        p, fl = problems(fixed_slip, reviewed=slip), name_flags(slip)
         for x in p:
             print('REFUSED: ' + x)
         for x in fl:

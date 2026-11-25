@@ -1031,3 +1031,11 @@ server fixes, every slot on the picture start, were written back to main) and it
 - Instagram: the Reel, as before. The Reel also goes to X and Threads as its own post at least 2 hours after the quick
   post, with its own first line on what the video shows (story texts reel_x, reel_threads); not when the quick post is
   over 24 hours old.
+
+## Text is fixed, never refused (Mohammad, 25 Nov 2026; docs/history.md "Text is fixed, never refused")
+
+- Only the four hard stops refuse (wrong fact, graphic content, unreadable text, broken video).
+- Sentences never split inside a name or abbreviation (Mario Bros. Circuit, Dr., St., No., Vol., 1.9.0).
+- A line or paragraph that opens on a Latin word is rewrapped or gets its Arabic word first; a headline too long for
+  three lines at 60 px is shortened (platform and source words first, then the news word and the game name). Em dashes,
+  Arabic-Indic digits, flipping signs and hashtags on X and Threads are fixed by the server.

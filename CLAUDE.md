@@ -179,6 +179,15 @@ else is a warning with an automatic fallback (qc.json `warnings`, `ladder`). The
 check runs on the last 20 published Reels first; any change to reel.py, render_job.py or softgate.py passes the last 10
 jobs in jobs/done on render-replay before it goes live. [Templates never refuse; The 16:9 fallback, replay rule]
 
+**Text is fixed, never refused** (Mohammad, 25 Nov 2026, after the 24 to 25 Nov outage, 16 hours with almost nothing
+posted): only the four hard stops refuse. `textrules.split_sentences` never splits on a full stop inside a name or an
+abbreviation (Bros., Dr., St., No., Vol., a version like 1.9.0; a full stop followed by a lowercase letter, a digit, or
+a Latin word after a Latin word is not a sentence end). `textrules.fix` (render) and `slip.autofix` (slip lane) rewrap a
+line or paragraph that opens on a Latin word (the break moves, «لعبة» goes before the game name, or the first Arabic
+word moves to the front), shorten a headline too long for three lines at 60 px (platform and source words first, then
+the news word and the game name), and fix em dashes, Arabic-Indic digits, flipping signs and hashtags on X and Threads.
+The grammar review's hash is checked against the editor's text, before autofix. [Text is fixed, never refused]
+
 **Template by story kind** (21 Nov; the slip states its kind, `templates/storykind.py` picks): numbers (sales, scores,
 charts, player counts, results) take the numbers template, a figure card counting up on the game's own moving footage
 after the hook; people (interview, quote, hire, departure) take the people template; debate takes hook and fact, one
