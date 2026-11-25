@@ -1,10 +1,49 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-25T16:30:18Z",
- "seq": 861,
+ "generated_at": "2026-11-25T16:40:18Z",
+ "seq": 862,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 23321,
+   "source": "PlayStation Blog",
+   "source_kind": "official",
+   "title": "PlayStation Plus Monthly Games for December: Tony Hawk’s Pro Skater 3+4, Dragon Ball Xenoverse 2, Amnesia: The Bunker",
+   "url": "https://blog.playstation.com/2026/11/25/playstation-plus-monthly-games-for-december-tony-hawks-pro-skater-34-dragon-ball-xenoverse-2-amnesia-the-bunker/",
+   "published": "2026-11-25T16:30Z",
+   "first_seen": "2026-11-25T16:40:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/tachyon/2026/11/393a7151bd4ebdcfaec45d08f6598f81ccc842af-scaled.jpg?fit=1024%2C1024"
+    },
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/tachyon/2026/11/393a7151bd4ebdcfaec45d08f6598f81ccc842af.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/tachyon/2026/11/31b101a1fe6a6fcebcb2cb8afb3e7a50013465da-scaled.jpg?fit=1024%2C1024"
+    },
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/tachyon/2026/11/31b101a1fe6a6fcebcb2cb8afb3e7a50013465da.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/tachyon/2026/11/2bb62e662b96a987bd43c0d685c1f7fb65109a19-scaled.jpg?fit=1024%2C1024"
+    },
+    {
+     "type": "image",
+     "url": "https://blog.playstation.com/tachyon/2026/11/2bb62e662b96a987bd43c0d685c1f7fb65109a19.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 862
+  }
+ ],
+ "recent": [
   {
    "id": 23317,
    "source": "PlayStation (YouTube)",
@@ -25,9 +64,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 861
-  }
- ],
- "recent": [
+  },
   {
    "id": 23231,
    "source": "PlayStation (YouTube)",
@@ -381,34 +418,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 822
-  },
-  {
-   "id": 22257,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Gothic 3 Classic | Release Trailer",
-   "url": "https://www.youtube.com/watch?v=Wkm2rY2L6uQ",
-   "published": "2026-11-24T16:17Z",
-   "first_seen": "2026-11-24T16:35:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/Wkm2rY2L6uQ/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=Wkm2rY2L6uQ"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 820
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-25T16:30:15Z",
+  "last_poll_at": "2026-11-25T16:40:14Z",
   "sources_enabled": 101,
-  "sources_ok": 100,
+  "sources_ok": 101,
   "sources_failing": 0,
   "failed": []
  }
