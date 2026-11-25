@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-25T17:15:06Z",
- "seq": 864,
+ "generated_at": "2026-11-25T17:20:21Z",
+ "seq": 865,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 23400,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Rayman Legends Retold - Story Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=pH4wT5kdsC8",
+   "published": "2026-11-25T17:00Z",
+   "first_seen": "2026-11-25T17:20:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/pH4wT5kdsC8/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=pH4wT5kdsC8"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 865
+  }
+ ],
+ "recent": [
   {
    "id": 23385,
    "source": "Nintendo of America (YouTube)",
@@ -21,9 +44,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 864
-  }
- ],
- "recent": [
+  },
   {
    "id": 23321,
    "source": "PlayStation Blog",
@@ -351,28 +372,11 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 826
-  },
-  {
-   "id": 22316,
-   "source": "Nintendo of America (YouTube)",
-   "source_kind": "youtube",
-   "title": "Choose your Operator challenge. Who are you deploying with?",
-   "url": "https://www.youtube.com/shorts/pwEIqVsZ0ps",
-   "published": "2026-11-24T17:00Z",
-   "first_seen": "2026-11-24T17:20:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/pwEIqVsZ0ps/hqdefault.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 824
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-25T17:15:04Z",
+  "last_poll_at": "2026-11-25T17:20:14Z",
   "sources_enabled": 101,
   "sources_ok": 101,
   "sources_failing": 0,
