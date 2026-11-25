@@ -153277,5 +153277,346 @@
   "sound": "trailer",
   "footage": true,
   "upload_secs": 4.0
+ },
+ {
+  "name": "ghost-of-tsushima-arabic-steam-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-25T07:07Z",
+  "stages": {
+   "checks": 12.9,
+   "montage": 41.1,
+   "text": 40.3,
+   "audio": 0.4,
+   "outro": 26.4
+  },
+  "total": 121.1,
+  "lane": "runner",
+  "queued_at": "2026-11-25T07:05Z",
+  "finished_at": "2026-11-25T07:07Z",
+  "render_min": 2.02,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4",
+    "start": 11.48,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.52,
+    "rows": 820,
+    "zoom": 2.34,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4",
+    "start": 8.04,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.52,
+    "rows": 820,
+    "zoom": 2.34,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4",
+    "start": 18.53,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.52,
+    "rows": 818,
+    "zoom": 2.35,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4",
+    "start": 25.03,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.52,
+    "rows": 820,
+    "zoom": 2.34,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4",
+    "start": 27.54,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.52,
+    "rows": 820,
+    "zoom": 2.34,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4",
+    "start": 36.04,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.52,
+    "rows": 820,
+    "zoom": 2.34,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4",
+    "start": 42.54,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.52,
+    "rows": 820,
+    "zoom": 2.34,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4",
+    "start": 55.01,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.52,
+    "rows": 820,
+    "zoom": 2.34,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4",
+    "start": 33.11,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.52,
+    "rows": 818,
+    "zoom": 2.35,
+    "lowbit": false
+   },
+   {
+    "shot": 9,
+    "file": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4",
+    "start": 62.07,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.52,
+    "rows": 698,
+    "zoom": 2.75,
+    "lowbit": false
+   },
+   {
+    "shot": 10,
+    "file": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4",
+    "start": 68.57,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.52,
+    "rows": 818,
+    "zoom": 2.35,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 2.75,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 1.6,
+   "audio_secs": 56.8,
+   "music_pct": 34.3,
+   "leak_pct": 0.2,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 0
+   },
+   "effects_shots": 0,
+   "mix_secs": 0.5,
+   "secs": 2.6,
+   "ladder": "b",
+   "step_a": {
+    "applied": false,
+    "tool": "cocktail-fork",
+    "clean": false,
+    "separate_secs": 12.5,
+    "audio_secs": 56.8,
+    "music_pct": 34.3,
+    "leak_pct": 0.2,
+    "thresholds": {
+     "leak_max_pct": 5.0,
+     "music_min_pct": 40.0
+    },
+    "cache": {
+     "hit": 0,
+     "miss": 3
+    },
+    "reason": "music only 34.3% of the track (< 40.0%)",
+    "secs": 17.5
+   }
+  },
+  "lifeless": {
+   "score": 14.6,
+   "still_share": 0.195,
+   "longest_still": 1.4,
+   "cuts_per_10s": 2.97,
+   "held_under_text": 0.0,
+   "secs": 23.6,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 9.5,
+   "shots": 192.8,
+   "checks": 8.0,
+   "render": 187.6,
+   "after": 52.2
+  },
+  "softgate": {
+   "warnings": 2,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 0,
+     "step": "a",
+     "why": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4 at 11.48 s for 3.8 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 1,
+     "step": "a",
+     "why": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4 at 8.04 s for 2.3 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4 at 18.53 s for 2.3 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4 at 25.03 s for 2.3 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4 at 27.54 s for 2.25 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4 at 36.04 s for 2.25 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4 at 42.54 s for 2.25 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4 at 55.01 s for 2.28 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 8,
+     "step": "a",
+     "why": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4 at 55.51 s for 2.28 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 9,
+     "step": "a",
+     "why": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4 at 62.07 s for 2.2 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 10,
+     "step": "a",
+     "why": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4 at 68.57 s for 2.2 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "b",
+     "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "a",
+     "why": "scan cap: 11 automatic slot(s) from the library or evenly spaced"
+    },
+    {
+     "kind": "picture",
+     "slot": 8,
+     "step": "a",
+     "why": "ghost-of-tsushima-arabic-steam-launch-trailer-en-us.mp4 at 33.11 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "text",
+     "slot": "line 1",
+     "step": "a",
+     "why": "3.5 s of 4.1 s: shot 2 lengthened by 0.62 s"
+    },
+    {
+     "kind": "text",
+     "slot": "line 2",
+     "step": "a",
+     "why": "3.5 s of 3.7 s: shot 4 lengthened by 0.31 s"
+    },
+    {
+     "kind": "text",
+     "slot": "line 3",
+     "step": "a",
+     "why": "3.4 s of 3.6 s: shot 6 lengthened by 0.29 s"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "b",
+     "why": "audio split not applied (music only 34.3% of the track (< 40.0%)) on a trailer track under 10 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our "
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 450,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1524,
+  "peak_mem_mb": 3686,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61097,
+  "peak_disk_mb": 62421,
+  "min_disk_free_mb": 85376,
+  "setup_min": 0.55,
+  "story": "ghost-of-tsushima-arabic-steam"
  }
 ]
