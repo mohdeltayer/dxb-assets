@@ -313,6 +313,8 @@ def cut(sentences, size_from=None):
     over = [x for x in lines if not fits(x, size)]
     if over:
         probs.append('a line runs past two visual lines (' + over[0][:40] + '...): shorten its clause')
+    import textrules as TR                 # 25 Nov 2026: no line opens on a Latin word; «لعبة» stays with its name
+    lines, _ = TR.carry_across(lines)
     return [(wrap(x, size), size) for x in lines], probs
 
 

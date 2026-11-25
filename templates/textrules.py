@@ -736,6 +736,34 @@ def arabic_first(text, names=()):
     return '\n'.join(lines), what
 
 
+def carry_across(texts):
+    """A list of on-screen lines, in order, where no line opens on a Latin word: the last word of the line before moves
+    down with it (so «لعبة» stays with its game name: «تدعم لعبة» | «Ghost of Tsushima ...» becomes «تدعم» merged into
+    «تدعم لعبة Ghost of Tsushima ...»); a line left with fewer than two words joins the next. No word is added or
+    dropped (the spoken-order check reads the same words). Returns (texts, [what changed]). 25 Nov 2026."""
+    out, what = [t for t in texts], []
+    k = 1
+    while k < len(out):
+        nxt = out[k]
+        if nxt is None or _first_ok(nxt.split('\n')[0]):
+            k += 1
+            continue
+        prev = (out[k - 1] or '').replace('\n', ' ').split()
+        if not prev:
+            k += 1
+            continue
+        if len(prev) <= 2:                              # a line of one or two words joins the next whole
+            out[k] = ' '.join(prev) + ' ' + nxt.replace('\n', ' ')
+            del out[k - 1]
+            what.append('a short line joined the next, which opened on a Latin word')
+            continue
+        out[k - 1] = ' '.join(prev[:-1])
+        out[k] = prev[-1] + ' ' + nxt.replace('\n', ' ')
+        what.append(f'«{prev[-1]}» moved down so the line opens on an Arabic word')
+        k += 1
+    return out, what
+
+
 def _est_lines(head, per=HEAD_CHARS_60):
     parts = [p for p in str(head).split('\n') if p.strip()]
     return sum(max(1, -(-len(p) // per)) for p in parts)
@@ -841,6 +869,22 @@ def fix(job):
         if w:
             changes.append({'where': 'headline', 'before': j['headline'], 'after': h, 'what': '; '.join(w)})
             j['headline'] = h
+    slots = []                                           # every line's text, in order, for the cross-line carry
+    for grp in j.get('lines') or []:
+        if isinstance(grp, list) and len(grp) >= 3:
+            for k, x in enumerate(grp[2]):
+                if isinstance(x, str) or (isinstance(x, list) and x and isinstance(x[0], str)):
+                    slots.append((grp, k))
+    texts = [g[2][k] if isinstance(g[2][k], str) else g[2][k][0] for g, k in slots]
+    carried, cw = carry_across(texts)
+    if cw and len(carried) == len(texts):
+        for (g, k), t_old, t_new in zip(slots, texts, carried):
+            if t_new != t_old:
+                changes.append({'where': 'lines', 'before': t_old, 'after': t_new, 'what': '; '.join(cw)})
+                if isinstance(g[2][k], str):
+                    g[2][k] = t_new
+                else:
+                    g[2][k][0] = t_new
     m = 0
     for grp in j.get('lines') or []:
         if not isinstance(grp, list) or len(grp) < 3:

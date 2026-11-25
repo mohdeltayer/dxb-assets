@@ -56,3 +56,17 @@ class Headline(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class Carry(unittest.TestCase):
+    def test_game_word_moves_down(self):
+        out, _ = TR.carry_across(['تدعم لعبة', "Ghost of Tsushima DIRECTOR'S CUT\nعلى الحاسب اللغة العربية", 'في الواجهة'])
+        self.assertTrue(all(TR._first_ok(t.split('\n')[0]) for t in out))
+        self.assertEqual(' '.join(' '.join(out).split()).count('لعبة'), 1)
+
+    def test_fix_adds_no_word(self):
+        job = {'headline': 'دليل', 'lines': [[0, 1, [['تدعم لعبة', {}]]], [2, 3, [["Ghost of Tsushima\nعلى الحاسب", {}]]]],
+               'spoken': "تدعم لعبة Ghost of Tsushima على الحاسب. وهي جديدة.", 'game': 'Ghost of Tsushima'}
+        new, _ = TR.fix(job)
+        words = ' '.join(x[2][0][0] for x in new['lines']).split()
+        self.assertEqual(words.count('لعبة'), 1)
