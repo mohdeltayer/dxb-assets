@@ -1,0 +1,741 @@
+{
+ "name": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo",
+ "out": "cards/2026-11/dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 60 px on 2 lines (cut it to a few words next time): لعبة Dead or Alive 6\nتحديث مجاني بمناسبة الذكرى الـ 30"
+  },
+  {
+   "stage": "line size",
+   "detail": "56 px too wide for 'للعبة Dead or Alive 6 Last Round بمناسبة'; 52 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "52 px too wide for 'للعبة Dead or Alive 6 Last Round بمناسبة'; 48 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "48 px too wide for 'للعبة Dead or Alive 6 Last Round بمناسبة'; 44 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "56 px too wide for 'ويضيف التحديث أزياء احتفالية لعشر شخصيات'; 52 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "52 px too wide for 'ويضيف التحديث أزياء احتفالية لعشر شخصيات'; 48 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "48 px too wide for 'ويضيف التحديث أزياء احتفالية لعشر شخصيات'; 44 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "56 px too wide for 'كما تتيح الشركة لفترة محدودة 25 شخصية'; 52 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "52 px too wide for 'كما تتيح الشركة لفترة محدودة 25 شخصية'; 48 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "48 px too wide for 'إضافية مجانًا في النسخة المجانية Core Fighters'; 44 px"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 60 px on 2 lines (cut it to a few words next time): لعبة Dead or Alive 6\nتحديث مجاني بمناسبة الذكرى الـ 30"
+  },
+  {
+   "stage": "line size",
+   "detail": "56 px too wide for 'للعبة Dead or Alive 6 Last Round بمناسبة'; 52 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "52 px too wide for 'للعبة Dead or Alive 6 Last Round بمناسبة'; 48 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "48 px too wide for 'للعبة Dead or Alive 6 Last Round بمناسبة'; 44 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "56 px too wide for 'ويضيف التحديث أزياء احتفالية لعشر شخصيات'; 52 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "52 px too wide for 'ويضيف التحديث أزياء احتفالية لعشر شخصيات'; 48 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "48 px too wide for 'ويضيف التحديث أزياء احتفالية لعشر شخصيات'; 44 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "56 px too wide for 'كما تتيح الشركة لفترة محدودة 25 شخصية'; 52 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "52 px too wide for 'كما تتيح الشركة لفترة محدودة 25 شخصية'; 48 px"
+  },
+  {
+   "stage": "line size",
+   "detail": "48 px too wide for 'إضافية مجانًا في النسخة المجانية Core Fighters'; 44 px"
+  },
+  {
+   "stage": "fill",
+   "detail": "ValueError: an empty band in the finished Reel (no empty band at any second, Mohammad 8 Nov 2026): 12.78 s: 288 px of empty band from y 1032. Keep the headline in the top band and a line in the bottom band at every second (showcase layout), or fill the frame cropped to the subject."
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 at 22.15 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 14,
+   "step": "a",
+   "why": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 at 68.73 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch for 2 slot(s)"
+  },
+  {
+   "kind": "text",
+   "slot": "reel",
+   "step": "a",
+   "why": "soft shade under line group(s) [2]: bright footage behind them"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "b",
+   "why": "audio split not applied (music only 29.9% of the track (< 40.0%)) on a trailer track under 14 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our "
+  }
+ ],
+ "job_to_pass_min": 16.1,
+ "at": "2026-11-25T12:43:27Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 starts at 0.0 s, the video at 1.91 s; its first 1.91 s are lost",
+  "first frame: shot 1 dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 starts at 0.0 s, the video at 1.91 s; its first 1.91 s are lost",
+  "first frame: shot 2 dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 starts at 0.0 s, the video at 1.91 s; its first 1.91 s are lost",
+  "first frame: shot 3 dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 starts at 0.0 s, the video at 1.91 s; its first 1.91 s are lost",
+  "first frame: shot 4 dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 starts at 0.0 s, the video at 1.91 s; its first 1.91 s are lost",
+  "first frame: shot 5 dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 starts at 0.0 s, the video at 1.91 s; its first 1.91 s are lost",
+  "first frame: shot 6 dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 starts at 0.0 s, the video at 1.91 s; its first 1.91 s are lost",
+  "first frame: shot 7 dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 starts at 0.0 s, the video at 1.91 s; its first 1.91 s are lost",
+  "first frame: shot 8 dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 starts at 0.0 s, the video at 1.91 s; its first 1.91 s are lost",
+  "first frame: shot 9 dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 starts at 0.0 s, the video at 1.91 s; its first 1.91 s are lost",
+  "first frame: shot 10 dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 starts at 0.0 s, the video at 1.91 s; its first 1.91 s are lost",
+  "first frame: shot 11 dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 starts at 0.0 s, the video at 1.91 s; its first 1.91 s are lost",
+  "first frame: shot 12 dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 starts at 0.0 s, the video at 1.91 s; its first 1.91 s are lost",
+  "first frame: shot 13 dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 starts at 0.0 s, the video at 1.91 s; its first 1.91 s are lost",
+  "first frame: shot 14 dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 starts at 0.0 s, the video at 1.91 s; its first 1.91 s are lost",
+  "length 30.6 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason music only 29.9% of the track (< 40.0%); music_pct 29.9; leak_pct 0.7; cache {'hit': 0, 'miss': 8}; separate_secs 15.8; secs 20.8",
+  "render_job: lifeless: {\"score\": 12.4, \"still_share\": 0.118, \"longest_still\": 1.7, \"cuts_per_10s\": 4.26, \"held_under_text\": 0.0, \"secs\": 30.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 33 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 at 12.91 s for 2.4 s, focus 0.445"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 at 24.95 s for 2.4 s, focus 0.186"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 at 60.06 s for 2.6 s, focus 0.541"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 at 74.85 s for 2.6 s, focus 0.0"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 at 82.60 s for 2.2 s, focus 0.477"
+  },
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-announcement-trailer.mp4 at 4.05 s for 3.8 s, focus 0.501 (nothing free in dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-announcement-trailer.mp4 at 70.07 s for 2.6 s, focus 0.0 (nothing free in dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-announcement-trailer.mp4 at 10.33 s for 2.2 s, focus 0.113 (nothing free in dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-the-king-of-fighters-xiv-collabor.mp4 at 33.66 s for 2.4 s, focus 0.35 (nothing free in dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 9",
+   "rule": "auto_shots",
+   "what": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-the-king-of-fighters-xiv-collabor.mp4 at 36.30 s for 2.4 s, focus 0.047 (nothing free in dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 10",
+   "rule": "auto_shots",
+   "what": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-the-king-of-fighters-xiv-collabor.mp4 at 51.90 s for 2.2 s, focus 0.112 (nothing free in dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4)"
+  },
+  {
+   "where": "shot 11",
+   "rule": "auto_shots",
+   "what": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-the-king-of-fighters-xiv-collabor.mp4 at 54.10 s for 2.1 s, focus 0.112 (shortened from 2.2 s: no free clean stretch that long)"
+  },
+  {
+   "where": "shot 12",
+   "rule": "auto_shots",
+   "what": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 at 19.10 s for 2.0 s, focus 0.335 (shortened from 2.2 s: no free clean stretch that long)"
+  },
+  {
+   "where": "shot 5",
+   "rule": "shot_timing",
+   "what": "moved from 70.07 to 67.57 s, the nearest clean start of the same 2.56 s",
+   "before": [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-announcement-trailer.mp4",
+    70.07,
+    2.56,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "after": [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-announcement-trailer.mp4",
+    67.57,
+    2.56,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 1",
+   "rule": "subject_cut",
+   "what": "focus [[0.0, 0.445]] to 0.24: the subject stays inside the window",
+   "before": [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    12.91,
+    2.39,
+    [
+     [
+      0.0,
+      0.445
+     ]
+    ]
+   ],
+   "after": [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    12.91,
+    2.39,
+    0.24
+   ]
+  },
+  {
+   "where": "shot 2",
+   "rule": "subject_drift",
+   "what": "focus [[0.0, 0.186]] to 0.43: the subject stays inside the window",
+   "before": [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    24.95,
+    2.39,
+    [
+     [
+      0.0,
+      0.186
+     ]
+    ]
+   ],
+   "after": [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    24.95,
+    2.39,
+    0.43
+   ]
+  },
+  {
+   "where": "shot 8",
+   "rule": "subject_drift",
+   "what": "trimmed to 1.00 s, its longest safe length before the subject leaves the 9:16 window",
+   "before": [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-the-king-of-fighters-xiv-collabor.mp4",
+    33.66,
+    2.39,
+    [
+     [
+      0.0,
+      0.35
+     ]
+    ]
+   ],
+   "after": [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-the-king-of-fighters-xiv-collabor.mp4",
+    33.66,
+    1.0,
+    [
+     [
+      0.0,
+      0.35
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 7",
+   "rule": "fill",
+   "what": "lengthened 2.20 to 3.59 s to keep the time shot 8 gave up",
+   "before": 2.2,
+   "after": 3.59
+  },
+  {
+   "where": "shot 9",
+   "rule": "subject_drift",
+   "what": "focus [[0.0, 0.047]] to 0.5: the subject stays inside the window",
+   "before": [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-the-king-of-fighters-xiv-collabor.mp4",
+    36.3,
+    2.39,
+    [
+     [
+      0.0,
+      0.047
+     ]
+    ]
+   ],
+   "after": [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-the-king-of-fighters-xiv-collabor.mp4",
+    36.3,
+    2.39,
+    0.5
+   ]
+  }
+ ],
+ "job_sha": "5e41038e0ff33b6b22edaf919246edd32ae3d48f",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-look-1.jpg",
+  "cards/2026-11/dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-look-2.jpg",
+  "cards/2026-11/dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer-music (ladder b: audio split not applied (music only 29.9% of the track (< 40.0%)) on a trailer track under 14 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
+ "shot_read": {
+  "secs": 110.7,
+  "files": {
+   "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4": {
+    "secs": 41.3,
+    "cached": false,
+    "stages": {
+     "decode": 21.1,
+     "autofocus": 34.7,
+     "ocr": 34.7,
+     "smear": 41.1,
+     "scenes": 41.3
+    },
+    "incomplete": null
+   },
+   "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-announcement-trailer.mp4": {
+    "secs": 38.1,
+    "cached": false,
+    "stages": {
+     "decode": 17.5,
+     "autofocus": 33.9,
+     "ocr": 33.9,
+     "smear": 37.9,
+     "scenes": 38.1
+    },
+    "incomplete": null
+   },
+   "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-the-king-of-fighters-xiv-collabor.mp4": {
+    "secs": 31.3,
+    "cached": false,
+    "stages": {
+     "decode": 14.4,
+     "autofocus": 26.5,
+     "ocr": 26.5,
+     "smear": 31.1,
+     "scenes": 31.3
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/dead-or-alive-6-30th-anniversary-free-update-koei-tecmo.json",
+ "stage_minutes": {
+  "queue": 0.05,
+  "setup": 0.2,
+  "fetch": 1.34,
+  "shots": 2.29,
+  "checks": 2.62,
+  "render": 3.04,
+  "after": 1.49,
+  "job": 10.78
+ },
+ "job_after_autofix": {
+  "name": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo",
+  "story": "2026-11-25-dead-or-alive-6-30th-anniversary-free-update-koei-tecmo",
+  "footage_source": "steam:4144680",
+  "kind_news": "update",
+  "story_class": "trailer",
+  "story_class_why": "kind update",
+  "skin_why": "genre fighting: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    "steam": 4144680,
+    "trailer": "DEAD OR ALIVE 6 Last Round - Launch Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "4144680"
+   },
+   {
+    "file": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-announcement-trailer.mp4",
+    "steam": 4144680,
+    "trailer": "Announcement Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "4144680"
+   },
+   {
+    "file": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-the-king-of-fighters-xiv-collabor.mp4",
+    "steam": 4144680,
+    "trailer": "『DEAD OR ALIVE 6 Last Round』×『THE KING OF FIGHTERS XIV』Collaboration Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "4144680"
+   }
+  ],
+  "shots": [
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-announcement-trailer.mp4",
+    4.05,
+    3.8,
+    [
+     [
+      0.0,
+      0.501
+     ]
+    ]
+   ],
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    12.91,
+    2.39,
+    0.24
+   ],
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    24.95,
+    2.39,
+    0.43
+   ],
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    60.06,
+    2.56,
+    [
+     [
+      0.0,
+      0.541
+     ]
+    ]
+   ],
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    74.85,
+    2.56,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-announcement-trailer.mp4",
+    67.57,
+    2.56,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    82.6,
+    2.2,
+    [
+     [
+      0.0,
+      0.477
+     ]
+    ]
+   ],
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-announcement-trailer.mp4",
+    10.33,
+    3.59,
+    [
+     [
+      0.0,
+      0.113
+     ]
+    ]
+   ],
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-the-king-of-fighters-xiv-collabor.mp4",
+    33.66,
+    1.0,
+    [
+     [
+      0.0,
+      0.35
+     ]
+    ]
+   ],
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-the-king-of-fighters-xiv-collabor.mp4",
+    36.3,
+    2.39,
+    0.5
+   ],
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-the-king-of-fighters-xiv-collabor.mp4",
+    51.9,
+    2.2,
+    [
+     [
+      0.0,
+      0.112
+     ]
+    ]
+   ],
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-the-king-of-fighters-xiv-collabor.mp4",
+    54.1,
+    2.1,
+    [
+     [
+      0.0,
+      0.112
+     ]
+    ]
+   ],
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    19.1,
+    2.04,
+    [
+     [
+      0.0,
+      0.335
+     ]
+    ]
+   ],
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    22.15,
+    2.2,
+    [
+     [
+      0.0,
+      0.636
+     ],
+     [
+      1.887,
+      0.576
+     ]
+    ]
+   ],
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    68.73,
+    2.2,
+    [
+     [
+      0.0,
+      0.459
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "أطلقت كوي تكمو (Koei Tecmo)\nتحديثًا مجانيًا",
+      {
+       "size": 44
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    6,
+    [
+     [
+      "للعبة Dead or Alive 6 Last Round بمناسبة\nمرور 30 عامًا على سلسلة Dead or Alive",
+      {
+       "size": 44
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    10,
+    [
+     [
+      "ويضيف التحديث أزياء احتفالية لعشر شخصيات\nوحلبة جديدة ومقطوعة موسيقية احتفالية",
+      {
+       "size": 44
+      }
+     ]
+    ]
+   ],
+   [
+    11,
+    14,
+    [
+     [
+      "كما تتيح الشركة لفترة محدودة 25 شخصية\nإضافية مجانًا في النسخة المجانية Core Fighters",
+      {
+       "size": 44
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    14,
+    "المصدر: كوي تكمو (Koei Tecmo)",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "أطلقت كوي تكمو (Koei Tecmo) تحديثًا مجانيًا للعبة Dead or Alive 6 Last Round بمناسبة مرور 30 عامًا على سلسلة Dead or Alive. ويضيف التحديث أزياء احتفالية لعشر شخصيات وحلبة جديدة ومقطوعة موسيقية احتفالية. كما تتيح الشركة لفترة محدودة 25 شخصية إضافية مجانًا في النسخة المجانية Core Fighters.",
+  "headline": "لعبة Dead or Alive 6\nتحديث مجاني بمناسبة الذكرى الـ 30",
+  "label": "تحديث",
+  "game": "DEAD OR ALIVE 6 Last Round",
+  "game_short": "Dead or Alive 6",
+  "game_key": "dead or alive 6 last round",
+  "genre": [
+   "fighting"
+  ],
+  "texts": {
+   "instagram": "تحديث مجاني لـ Dead or Alive 6 Last Round بمناسبة الذكرى الـ30\n\nأعلنت كوي تكمو (Koei Tecmo) تحديثًا مجانيًا للعبة بمناسبة مرور 30 عامًا على سلسلة Dead or Alive.\n\nيضيف التحديث أزياء احتفالية لعشر شخصيات وحلبة جديدة ومقطوعة موسيقية احتفالية.\n\nوتتيح الشركة لفترة محدودة 25 شخصية إضافية مجانًا في النسخة المجانية Core Fighters.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: كوي تكمو (Koei Tecmo).\n\n#ألعاب #أخبار_الألعاب #DeadOrAlive #KoeiTecmo",
+   "x": "أطلقت كوي تكمو (Koei Tecmo) تحديثًا مجانيًا لـ Dead or Alive 6 Last Round بمناسبة 30 عامًا على السلسلة، مع أزياء لعشر شخصيات وحلبة جديدة. المصدر: كوي تكمو.",
+   "threads": "أطلقت كوي تكمو (Koei Tecmo) تحديثًا مجانيًا لـ Dead or Alive 6 Last Round بمناسبة مرور 30 عامًا على السلسلة.\n\nيضيف التحديث أزياء لعشر شخصيات وحلبة جديدة ومقطوعة موسيقية، وتتاح 25 شخصية إضافية مجانًا لفترة محدودة في Core Fighters.\n\nالمصدر: كوي تكمو (Koei Tecmo)"
+  },
+  "source": "كوي تكمو (Koei Tecmo)",
+  "date": "25 Nov 2026",
+  "theme": "cold",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-announcement-trailer.mp4",
+   4.05
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Koei Tecmo released the free 30th anniversary update on 24 Nov and the free-character offer is still running.",
+   "what_it_means_here": "Owners get ten anniversary costumes, a new stage and a music track for free."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind update",
+   "skin": "house: genre fighting: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4 from the resolver (steam:4144680)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Koei Tecmo Europe press release, 24 Nov 2026: Koei Tecmo celebrates 30 years of Dead or Alive (https://www.koeitecmoeurope.com/news/koei-tecmo-celebrates-30-years-of-dead-or-alive/); first report: Koei Tecmo Europe press release 24 Nov 2026 (primary); the free-character offer is still running",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 4144680 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "cut_ok": [
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    22.15,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    68.73,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ]
+  ],
+  "drift_ok": [
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    22.15,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "dead-or-alive-6-30th-anniversary-free-update-koei-tecmo-dead-or-alive-6-last-round-launch-trailer.mp4",
+    68.73,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ]
+  ],
+  "layout": "showcase",
+  "showcase_reason": "the trailer clashes with our text in a 9:16 crop: the shot scan found no clean stretch for 2 slot(s) (16:9 fallback, Mohammad 20 Nov 2026)"
+ }
+}
