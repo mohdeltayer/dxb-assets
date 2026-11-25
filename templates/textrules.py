@@ -773,6 +773,63 @@ def carry_across(texts, join=True):
     return out, what
 
 
+_PUNCT = '،,.:;؛«»()"\'' + chr(0x061F)
+
+
+def _bare(w):
+    return w.strip(_PUNCT)
+
+
+def keep_names(texts, names=None):
+    """A multi-word Arabic name is never split across two on-screen lines (Mohammad's bank, 25 Nov 2026: Elden Ring
+    Nightreign read «... من فروم» | «سوفتوير (FromSoftware)، ...»). The names are the Arabic forms of names-ar.md and the
+    glossary, plus every «Arabic (Latin)» pair in the lines themselves; the split part of a name moves down to the next
+    line. A line left with fewer than two words joins the next. No word is added or dropped. Returns (texts, what)."""
+    if names is None:
+        try:
+            import slip as _S
+            names = set(_S._names_table().values())
+            joined = ' '.join(str(t or '').replace('\n', ' ') for t in texts)
+            names |= {ar.strip() for ar, _ in _S.BRACKET.findall(joined)}
+        except Exception:                               # noqa: BLE001
+            names = set()
+    forms = sorted({tuple(_bare(w) for w in str(n).split() if _bare(w)) for n in names}, key=len, reverse=True)
+    forms = [f for f in forms if len(f) >= 2]
+    out, what = [t for t in texts], []
+    for k in range(1, len(out)):
+        if out[k - 1] is None or out[k] is None:
+            continue
+        prev, nxt = out[k - 1].replace('\n', ' ').split(), out[k].replace('\n', ' ').split()
+        if not prev or not nxt:
+            continue
+        moved = 0
+        for f in forms:
+            for cut in range(1, len(f)):
+                head, tail = f[:cut], f[cut:]
+                pw = [_bare(w) for w in prev[-cut:]]
+                nw = [_bare(w) for w in nxt[:len(tail)]]
+                # a prefix glued on the first word (من، و، ب، ل) still counts: «وفروم»
+                if len(pw) == cut and nw == list(tail) and (pw[1:] == list(head[1:])) and (
+                        pw[0] == head[0] or (pw[0].endswith(head[0]) and len(pw[0]) - len(head[0]) <= 2)):
+                    moved = cut
+                    break
+            if moved:
+                break
+        if not moved:
+            continue
+        if len(prev) - moved < 2:                       # too little left: the whole line joins the next
+            out[k] = ' '.join(prev + nxt)
+            out[k - 1] = ''
+            what.append('a short line joined the next to keep a name whole')
+            continue
+        out[k - 1] = ' '.join(prev[:-moved])
+        out[k] = ' '.join(prev[-moved:] + nxt)
+        what.append(f'«{" ".join(prev[-moved:])}» moved down to keep the name whole')
+    if any(t == '' for t in out):
+        out = [t for t in out if t != '']
+    return out, what
+
+
 def _est_lines(head, per=HEAD_CHARS_60):
     parts = [p for p in str(head).split('\n') if p.strip()]
     return sum(max(1, -(-len(p) // per)) for p in parts)
@@ -886,9 +943,19 @@ def fix(job):
                     slots.append((grp, k))
     texts = [g[2][k] if isinstance(g[2][k], str) else g[2][k][0] for g, k in slots]
     carried, cw = carry_across(texts, join=False)
+    kept, kw = keep_names(carried)
+    if kw and len(kept) == len(carried):
+        carried, cw = kept, cw + kw
     if cw and len(carried) == len(texts):
         for (g, k), t_old, t_new in zip(slots, texts, carried):
             if t_new != t_old:
+                try:                                     # rewrap at the line's own size (linecut breaks phrases right)
+                    import linecut as _LC
+                    sz = g[2][k][1].get('size') if isinstance(g[2][k], list) and len(g[2][k]) > 1 \
+                        and isinstance(g[2][k][1], dict) else None
+                    t_new = _LC.wrap(t_new, sz or _LC.SIZES[0])
+                except Exception:                        # noqa: BLE001
+                    pass
                 changes.append({'where': 'lines', 'before': t_old, 'after': t_new, 'what': '; '.join(cw)})
                 if isinstance(g[2][k], str):
                     g[2][k] = t_new

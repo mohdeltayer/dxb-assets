@@ -315,6 +315,7 @@ def cut(sentences, size_from=None):
         probs.append('a line runs past two visual lines (' + over[0][:40] + '...): shorten its clause')
     import textrules as TR                 # 25 Nov 2026: no line opens on a Latin word; «لعبة» stays with its name
     lines, _ = TR.carry_across(lines)
+    lines, _ = TR.keep_names(lines)        # 25 Nov 2026: «فروم سوفتوير» never split across two lines
     return [(wrap(x, size), size) for x in lines], probs
 
 

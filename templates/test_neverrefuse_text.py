@@ -70,3 +70,17 @@ class Carry(unittest.TestCase):
         new, _ = TR.fix(job)
         words = ' '.join(x[2][0][0] for x in new['lines']).split()
         self.assertEqual(words.count('لعبة'), 1)
+
+
+class KeepNames(unittest.TestCase):
+    def test_fromsoftware_not_split(self):
+        out, what = TR.keep_names(['وهي مغامرة مستقلة في عالم ELDEN RING من فروم',
+                                   'سوفتوير (FromSoftware)، وصدرت في 29 مايو 2025'])
+        self.assertIn('فروم سوفتوير', out[1]); self.assertFalse(out[0].endswith('فروم'), out)
+        self.assertTrue(what)
+        self.assertEqual(' '.join(out).split(), ('وهي مغامرة مستقلة في عالم ELDEN RING من فروم '
+                                                 'سوفتوير (FromSoftware)، وصدرت في 29 مايو 2025').split())
+
+    def test_whole_name_untouched(self):
+        t = ['تطورها شركة فروم سوفتوير (FromSoftware)', 'وتصدر في 2026']
+        self.assertEqual(TR.keep_names(t)[0], t)
