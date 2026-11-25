@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-25T12:52:06Z",
- "seq": 852,
+ "generated_at": "2026-11-25T13:10:21Z",
+ "seq": 853,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 23097,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Origament: A Paper Adventure - Launch Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=m8Y0a_zn1xk",
+   "published": "2026-11-25T13:00Z",
+   "first_seen": "2026-11-25T13:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/m8Y0a_zn1xk/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=m8Y0a_zn1xk"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 853
+  }
+ ],
  "recent": [
   {
    "id": 22871,
@@ -439,9 +461,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-25T12:50:04Z",
+  "last_poll_at": "2026-11-25T13:10:14Z",
   "sources_enabled": 101,
-  "sources_ok": 100,
+  "sources_ok": 101,
   "sources_failing": 0,
   "failed": []
  }
