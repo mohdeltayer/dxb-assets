@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-25T13:10:21Z",
- "seq": 853,
+ "generated_at": "2026-11-25T13:30:21Z",
+ "seq": 854,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 23116,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Sunstone of Time - Launch Trailer | PS VR2 Games",
+   "url": "https://www.youtube.com/watch?v=7fc-ENn3Js4",
+   "published": "2026-11-25T13:15Z",
+   "first_seen": "2026-11-25T13:30:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/7fc-ENn3Js4/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=7fc-ENn3Js4"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 854
+  }
+ ],
+ "recent": [
   {
    "id": 23097,
    "source": "PlayStation (YouTube)",
@@ -25,9 +48,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 853
-  }
- ],
- "recent": [
+  },
   {
    "id": 22871,
    "source": "PlayStation (YouTube)",
@@ -436,32 +457,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 811
-  },
-  {
-   "id": 22054,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Helldivers 2 - Secrets Beneath the Sands | PS5 & PC Games",
-   "url": "https://www.youtube.com/watch?v=c4Gme-OQiak",
-   "published": "2026-11-24T13:00Z",
-   "first_seen": "2026-11-24T13:25:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/c4Gme-OQiak/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=c4Gme-OQiak"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 809
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-25T13:10:14Z",
+  "last_poll_at": "2026-11-25T13:30:15Z",
   "sources_enabled": 101,
   "sources_ok": 101,
   "sources_failing": 0,
