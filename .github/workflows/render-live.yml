@@ -39,7 +39,9 @@ on:
 jobs:
   # Server lanes (Mohammad, 19 Nov 2026): the server takes render_slots renders at once (templates/assets/server-lanes.json);
   # a further normal job overflows to render.yml at once instead of waiting; T0 jobs (tier 0, priority, breaking) may take
-  # the reserved slot. Serialised so two dispatches in the same second cannot both take the last slot.
+  # the reserved slot. One route run per job (25 Nov 2026: a shared group keeps only one run pending and GitHub cancelled
+  # the others, so a burst of slips lost Horizon, Watch Dogs and Ocarina); a stagger of up to 24 s keyed on the job name
+  # spaces a burst so two dispatches rarely count the slots in the same second, and a race only queues one on the server.
   route:
     if: github.repository == 'mohdeltayer/dxb-assets' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -48,7 +50,7 @@ jobs:
       contents: read
       actions: read
     concurrency:
-      group: server-route
+      group: server-route-${{ inputs.job }}
       cancel-in-progress: false
     outputs:
       lane: ${{ steps.lane.outputs.lane }}
@@ -71,6 +73,8 @@ jobs:
           printf '%s' "$JOB_INPUT" | grep -Eq '^(jobs/live/)?[A-Za-z0-9][A-Za-z0-9._-]*$' || { echo "job must be a name or jobs/live/<name>.json"; exit 1; }
           j=$(python3 templates/jobpath.py live "$JOB_INPUT") || exit 1
           echo "job=$j" >> "$GITHUB_OUTPUT"; echo "job: $j"
+      - name: Stagger
+        run: sleep $(( $(printf '%s' "$JOB_INPUT" | cksum | cut -d' ' -f1) % 25 ))
       - name: Server slot or overflow
         id: lane
         env:
