@@ -39,10 +39,13 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 
-LABELS = ('جديد', 'رسمي', 'تقرير', 'تسريب', 'شائعة', 'متوفر الآن', 'تأجيل', 'السعر', 'تحديث', 'نظرة أولى')
-NEEDS_PRIMARY = ('جديد', 'رسمي', 'متوفر الآن', 'تأجيل', 'السعر', 'تحديث')
+LABELS = ('جديد', 'رسمي', 'تقرير', 'تسريب', 'شائعة', 'متوفر الآن', 'تأجيل', 'السعر', 'تحديث', 'نظرة أولى', 'دليل')
+# دليل (25 Nov 2026, the evergreen bank): an evergreen piece. Its job carries post_kind evergreen, so the server step never
+# schedules it on its own; it goes to Publer as a draft labelled kind:evergreen for a stalled news lane.
+NEEDS_PRIMARY = ('جديد', 'رسمي', 'متوفر الآن', 'تأجيل', 'السعر', 'تحديث', 'دليل')
 REPORT_LABELS = ('تقرير', 'تسريب')
-KIND_OF_LABEL = {'متوفر الآن': 'launch', 'تأجيل': 'delay', 'السعر': 'price', 'تحديث': 'update', 'نظرة أولى': 'reveal'}
+KIND_OF_LABEL = {'متوفر الآن': 'launch', 'تأجيل': 'delay', 'السعر': 'price', 'تحديث': 'update', 'نظرة أولى': 'reveal',
+                 'دليل': 'reveal'}
 REQUIRED = ('id', 'label', 'sources', 'first_report', 'credit', 'footage', 'headline', 'spoken', 'instagram', 'x',
             'threads', 'tier', 'expires')
 GRAMMAR_FIELDS = ('headline', 'spoken', 'credit', 'instagram', 'x', 'threads')   # the texts the grammar stage reviews
@@ -569,6 +572,7 @@ def job_from(slip, foot, lane='live', theme=None, spare=()):
         'theme': theme or theme_for(slip), 'style': None, 'template': kind['template'], 'skin': kind['skin'], 'cut': False,
         'track': track, 'track_from_first_shot': track != 'bed',
         'angle': slip.get('angle') or None,
+        **({'post_kind': 'evergreen'} if slip['label'] == 'دليل' else {}),
         'decision_log': {'source': 'server slip build (adv-20261117-server-news-line-editor-model Phase 1)',
                          'template': f"{kind['template']}: {kind['why']}", 'skin': f"{kind['skin']}: {kind['skin_why']}",
                          'footage': f'{foot.get("name") or f} from the resolver ({slip["footage"]})',
