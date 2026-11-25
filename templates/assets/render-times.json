@@ -151890,5 +151890,302 @@
   "sound": "trailer",
   "footage": true,
   "upload_secs": 5.0
+ },
+ {
+  "name": "ea-sports-fc-26-arabic-audio-steam-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-25T06:22Z",
+  "stages": {
+   "checks": 6.3,
+   "montage": 39.0,
+   "text": 37.1,
+   "audio": 0.6,
+   "outro": 42.9
+  },
+  "total": 125.9,
+  "lane": "runner",
+  "queued_at": "2026-11-25T06:20Z",
+  "finished_at": "2026-11-25T06:22Z",
+  "render_min": 2.1,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4",
+    "start": 57.82,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4",
+    "start": 3.07,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.79,
+    "rows": 864,
+    "zoom": 2.22,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4",
+    "start": 106.57,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4",
+    "start": 32.94,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4",
+    "start": 82.23,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4",
+    "start": 72.3,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4",
+    "start": 23.06,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4",
+    "start": 92.17,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4",
+    "start": 42.84,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.79,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 2.22,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 13.5,
+   "audio_secs": 55.1,
+   "music_pct": 86.1,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 8
+   },
+   "effects_shots": 9,
+   "mix_secs": 4.9,
+   "secs": 18.9
+  },
+  "lifeless": {
+   "score": 7.4,
+   "still_share": 0.056,
+   "longest_still": 0.5,
+   "cuts_per_10s": 2.03,
+   "held_under_text": 0.0,
+   "secs": 19.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 44.7,
+   "shots": 303.4,
+   "checks": 16.6,
+   "render": 193.8,
+   "after": 76.5
+  },
+  "softgate": {
+   "warnings": 2,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 1,
+     "step": "a",
+     "why": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 8,
+     "step": "a",
+     "why": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 0,
+     "step": "a",
+     "why": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4 at 57.82 s for 3.8 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "b",
+     "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "a",
+     "why": "scan cap: 1 automatic slot(s) from the library or evenly spaced"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4 at 106.57 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4 at 32.94 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4 at 82.23 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4 at 72.3 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4 at 23.06 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4 at 92.17 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 8,
+     "step": "a",
+     "why": "ea-sports-fc-26-arabic-audio-steam-ea-sports-fc-26-official-reveal-trailer.mp4 at 42.84 s: moved off a repeated moment (respread)"
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 635,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1638,
+  "peak_mem_mb": 3527,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61097,
+  "peak_disk_mb": 62564,
+  "min_disk_free_mb": 85232,
+  "setup_min": 0.55,
+  "story": "ea-sports-fc-26-arabic-audio-steam"
  }
 ]
