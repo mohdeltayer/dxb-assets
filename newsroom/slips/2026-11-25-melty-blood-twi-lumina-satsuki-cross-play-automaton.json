@@ -1,0 +1,31 @@
+{
+ "id": "2026-11-25-melty-blood-twi-lumina-satsuki-cross-play-automaton",
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "slip texts fixed mechanically: spoken",
+  "name not in names-ar: «أن شركة أنيبلكس (Aniplex)» (spoken); add it there as Proposed",
+  "text fixed mechanically: spoken: names not in names-ar written in Latin: Aniplex; line: names not in names-ar written in Latin: Aniplex"
+ ],
+ "at": "2026-11-25T12:10:18Z",
+ "footage": {
+  "name": "mainPV_EN",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60.0,
+  "mbps": 5.53,
+  "rows": 1080,
+  "duration": 120.04,
+  "decode_clean": true
+ },
+ "names_to_review": [
+  "Aniplex"
+ ],
+ "job": "jobs/live/melty-blood-twi-lumina-satsuki-cross-play-automaton.json",
+ "story": "newsroom/stories/2026-11-25-melty-blood-twi-lumina-satsuki-cross-play-automaton.json",
+ "lines": 5,
+ "shots": 13,
+ "run": "45611079927",
+ "lane": "live",
+ "build_secs": 97
+}
