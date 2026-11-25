@@ -84,3 +84,25 @@ class KeepNames(unittest.TestCase):
     def test_whole_name_untouched(self):
         t = ['تطورها شركة فروم سوفتوير (FromSoftware)', 'وتصدر في 2026']
         self.assertEqual(TR.keep_names(t)[0], t)
+
+
+class FitLines(unittest.TestCase):
+    def test_wide_line_steps_down(self):
+        import linecut as LC
+        old = LC._px
+        LC._px = lambda t, z: len(t) * z * 0.45            # a stand-in for the font: wide Latin names
+        try:
+            j = {'lines': [[1, 2, [["تدعم لعبة Horizon Zero Dawn Remastered\nعلى الحاسب اللغة العربية", {'size': 54}]]]]}
+            ch = []
+            TR._fit_lines(j, ch)
+            t, o = j['lines'][0][2][0]
+            self.assertTrue(ch)
+            self.assertTrue(all(len(p) * o['size'] * 0.45 <= LC.ROOM for p in t.split('\n')), (t, o))
+            self.assertEqual(t.replace('\n', ' ').split(), "تدعم لعبة Horizon Zero Dawn Remastered على الحاسب اللغة العربية".split())
+        finally:
+            LC._px = old
+
+    def test_no_font_no_change(self):
+        j = {'lines': [[1, 2, [["سطر قصير", {'size': 54}]]]]}
+        TR._fit_lines(j, [])
+        self.assertEqual(j['lines'][0][2][0][0], "سطر قصير")

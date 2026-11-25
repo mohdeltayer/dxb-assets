@@ -1007,7 +1007,58 @@ def fix(job):
             for k in ('title', 'headline', 'line', 'note', 'caption', 'label'):
                 if isinstance(g.get(k), str):
                     g[k] = one(f'gfx {i} {k}', g[k])
+    _fit_lines(j, changes)
     return j, changes
+
+
+def _fit_lines(j, changes):
+    """A story line wider than the safe zone with the Dubai font is rewrapped, then its type steps down 4 px at a time to
+    40 px, as reel.line_layer does on the live path; never a refusal (25 Nov 2026: «تدعم لعبة Horizon Zero Dawn
+    Remastered» and the Ghost of Tsushima line stopped at the text check while the render would have stepped them down).
+    Needs the font (the server): without it nothing changes."""
+    try:
+        import linecut as _LC
+    except Exception:                                    # noqa: BLE001
+        return
+    n = 0
+    for grp in j.get('lines') or []:
+        if not isinstance(grp, list) or len(grp) < 3:
+            continue
+        for k, x in enumerate(grp[2]):
+            n += 1
+            if isinstance(x, str):
+                t, opts = x, {}
+            elif isinstance(x, list) and x and isinstance(x[0], str):
+                t, opts = x[0], (x[1] if len(x) > 1 and isinstance(x[1], dict) else {})
+            else:
+                continue
+            z0 = opts.get('size') or 70
+            try:
+                wide = lambda txt, z: any((_LC._px(p.strip(), z) or 0) > _LC.ROOM for p in txt.split('\n'))
+                if _LC._px('ا', z0) is None or not wide(t, z0):
+                    continue
+                new, z = t, z0
+                cand = _LC.wrap(t.replace('\n', ' '), z)
+                if not wide(cand, z) and len(cand.split('\n')) <= 3 and _first_ok(cand.split('\n')[-1]):
+                    new = cand
+                while wide(new, z) and z - 4 >= 40:
+                    z -= 4
+                    cand = _LC.wrap(t.replace('\n', ' '), z)
+                    new = cand if not wide(cand, z) and _first_ok(cand.split('\n')[-1]) else new
+            except Exception:                            # noqa: BLE001
+                continue
+            if (new, z) == (t, z0):
+                continue
+            changes.append({'where': f'line {n}', 'before': t, 'after': new,
+                            'what': f'wider than the safe zone at {z0} px: rewrapped' + (f', {z} px' if z != z0 else '')})
+            if isinstance(x, str):
+                grp[2][k] = [new, {'size': z}]
+            else:
+                x[0] = new
+                if len(x) > 1 and isinstance(x[1], dict):
+                    x[1]['size'] = z
+                else:
+                    x[1:] = [{'size': z}]
 
 
 def report(findings):
