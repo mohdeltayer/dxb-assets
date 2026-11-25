@@ -1,156 +1,132 @@
 {
  "schema": 1,
  "file": "digest",
- "generated_at": "2026-11-25T00:52:06Z",
- "seq": 837,
+ "generated_at": "2026-11-25T01:52:06Z",
+ "seq": 840,
  "kind": "hourly",
- "since": "2026-11-24T23:52:06Z",
+ "since": "2026-11-25T00:52:06Z",
  "official": [
   {
-   "id": 22607,
-   "source": "Koei Tecmo",
-   "source_kind": "page",
-   "title": "11/24/2026 KOEI TECMO Celebrates 30 Years of DEAD OR ALIVE KTA Dead or Alive",
-   "url": "https://www.koeitecmoamerica.com/news/koei-tecmo-celebrates-30-years-of-dead-or-alive/",
-   "published": null,
-   "first_seen": "2026-11-25T00:20:14Z",
+   "id": 22625,
+   "source": "Nintendo Japan",
+   "source_kind": "official",
+   "title": "『マリオカート ワールド』の無料アップデートが本日配信。いつものコースをアレンジした8つの新コースや、サバイバルの新ルートを追加。",
+   "url": "https://www.nintendo.com/jp/topics/article/8ec3b6ba-2029-401f-bdf5-c4822e96db09",
+   "published": "2026-11-25T01:01Z",
+   "first_seen": "2026-11-25T01:15:14Z",
    "media": [],
-   "breaking_source": false,
-   "breaking_seq": null,
-   "digest_seq": 837
+   "breaking_source": true,
+   "breaking_seq": 839,
+   "digest_seq": 840
+  },
+  {
+   "id": 22621,
+   "source": "Nintendo of America (YouTube)",
+   "source_kind": "youtube",
+   "title": "Mario Kart World – Ver. 1.9.0 Update Available Now – Nintendo Switch 2",
+   "url": "https://www.youtube.com/watch?v=Pn0MuiE7YDQ",
+   "published": "2026-11-25T01:00Z",
+   "first_seen": "2026-11-25T01:10:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/Pn0MuiE7YDQ/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=Pn0MuiE7YDQ"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 838,
+   "digest_seq": 840
+  },
+  {
+   "id": 22620,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/24/26 Mario Kart World update adds eight courses and more Today marks the release of the Ver. 1.9.0 update for the Mario Kart™ World game for the Nintendo Sw",
+   "url": "https://www.nintendo.com/us/whatsnew/mario-kart-world-update-adds-eight-courses-and-more/",
+   "published": null,
+   "first_seen": "2026-11-25T01:10:04Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 838,
+   "digest_seq": 840
   }
  ],
  "outlets": [
   {
-   "count": 4,
-   "published": "2026-11-24T01:06Z",
-   "title": "Trump claims credit for Jensen Huang's return to Nvidia, posts meme depicting Huang holding up a bra victoriously",
-   "url": "https://www.pcgamer.com/software/ai/trump-claims-credit-for-jensen-huangs-return-to-nvidia-posts-meme-depicting-huang-holding-up-a-bra-victoriously/",
+   "count": 2,
+   "published": "2026-11-24T13:00Z",
+   "title": "GTA 6 Easter Egg Transports You Into 2002's Vice City, Complete With Two Free Items",
+   "url": "https://www.purexbox.com/news/2026/11/gta-6-easter-egg-transports-you-into-2002s-vice-city-complete-with-two-free-items",
    "sources": [
     "GamesRadar",
-    "PC Gamer",
-    "Steam News (hub)",
-    "TweakTown"
+    "Pure Xbox"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/7foqDBPfcAkwqyvMkoRz98-1920-80.jpg"
+     "url": "https://images.purexbox.com/4909c20b34678/small.jpg"
     },
     {
      "type": "image",
-     "url": "https://cdn.mos.cms.futurecdn.net/bYevTePa5TfZeNB2Df3Kd5-1920-80.png"
+     "url": "https://images.purexbox.com/4909c20b34678/large.jpg"
     }
    ],
    "items": [
     {
-     "source": "PC Gamer",
-     "title": "Trump claims credit for Jensen Huang's return to Nvidia, posts meme depicting Huang holding up a bra victoriously",
-     "url": "https://www.pcgamer.com/software/ai/trump-claims-credit-for-jensen-huangs-return-to-nvidia-posts-meme-depicting-huang-holding-up-a-bra-victoriously/",
-     "published": "2026-11-24T01:06Z"
+     "source": "Pure Xbox",
+     "title": "GTA 6 Easter Egg Transports You Into 2002's Vice City, Complete With Two Free Items",
+     "url": "https://www.purexbox.com/news/2026/11/gta-6-easter-egg-transports-you-into-2002s-vice-city-complete-with-two-free-items",
+     "published": "2026-11-24T13:00Z"
     },
     {
      "source": "GamesRadar",
-     "title": "Nvidia CEO Jensen Huang reportedly admitted to more affairs before the board ahead of his return",
-     "url": "https://www.gamesradar.com/hardware/nvidia-ceo-jensen-huang-reportedly-admitted-to-more-affairs-before-the-board-ahead-of-its-unanimous-vote-to-reinstate-him/",
-     "published": "2026-11-24T14:21Z"
-    },
-    {
-     "source": "Steam News (hub)",
-     "title": "Nvidia CEO Jensen Huang reportedly admitted to more affairs before the board ahead of his return",
-     "url": "https://store.steampowered.com/news/group/38509069/view/668382571964401229",
-     "published": "2026-11-24T14:30Z"
-    },
-    {
-     "source": "TweakTown",
-     "title": "Jensen Huang reportedly admitted to more affairs than previously known before NVIDIA reinstated him as CEO",
-     "url": "https://www.tweaktown.com/rss/click/news/114863/?c=news-mf",
-     "published": "2026-11-25T00:03Z"
+     "title": "GTA 6's coolest Easter egg so far is so intricate that only real Vice City sickos would ever find it",
+     "url": "https://www.gamesradar.com/games/grand-theft-auto/gta-6s-coolest-easter-egg-so-far-is-so-intricate-that-only-real-vice-city-sickos-would-ever-find-it/",
+     "published": "2026-11-25T01:12Z"
     }
    ]
   },
   {
-   "count": 3,
-   "published": "2026-11-24T14:20Z",
-   "title": "Hooded Horse's latest tactics RPG is a sequel to Symphony of War, one of 2022's undersung favourites",
-   "url": "https://www.rockpapershotgun.com/hooded-horses-latest-tactics-rpg-is-a-sequel-to-symphony-of-war-one-of-2022s-undersung-favourites",
+   "count": 2,
+   "published": "2026-11-25T01:02Z",
+   "title": "Mario Kart World updated to Ver. 1.9.0 (8 revamped tracks, 2 new Knockout Tour rallies & more)",
+   "url": "https://gonintendo.com/contents/67524-mario-kart-world-updated-to-ver-1-9-0-8-revamped-tracks-2-new-knockout-tour-rallies",
    "sources": [
-    "Automaton (JP)",
-    "Rock Paper Shotgun",
-    "Steam News (hub)"
+    "GoNintendo",
+    "Nintendo Life"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://assetsio.gnwcdn.com/Symphony-of-War-2---Key-Art-No-Logo.png?width=690&quality=85&format=jpg&auto=webp"
+     "url": "https://gonintendo.com/attachments/image/89352/file/medium-ebef546598dacd3a8089ab0524b6bdbe.jpg"
     }
    ],
    "items": [
     {
-     "source": "Rock Paper Shotgun",
-     "title": "Hooded Horse's latest tactics RPG is a sequel to Symphony of War, one of 2022's undersung favourites",
-     "url": "https://www.rockpapershotgun.com/hooded-horses-latest-tactics-rpg-is-a-sequel-to-symphony-of-war-one-of-2022s-undersung-favourites",
-     "published": "2026-11-24T14:20Z"
+     "source": "GoNintendo",
+     "title": "Mario Kart World updated to Ver. 1.9.0 (8 revamped tracks, 2 new Knockout Tour rallies & more)",
+     "url": "https://gonintendo.com/contents/67524-mario-kart-world-updated-to-ver-1-9-0-8-revamped-tracks-2-new-knockout-tour-rallies",
+     "published": "2026-11-25T01:02Z"
     },
     {
-     "source": "Steam News (hub)",
-     "title": "Tactical RPG Symphony of War II: Dominion set to release in 2027 for PC",
-     "url": "https://store.steampowered.com/news/group/6070552/view/679641571029681801",
-     "published": "2026-11-24T22:08Z"
-    },
-    {
-     "source": "Automaton (JP)",
-     "title": "日本でも人気なSRPG続編『Symphony of War II: Dominion』正式発表。海戦追加にクラスは100種以上に倍増、より奥深くなった壮大戦記",
-     "url": "https://automaton-media.com/articles/newsjp/20261125-480769/",
-     "published": "2026-11-25T00:42Z"
-    }
-   ]
-  },
-  {
-   "count": 3,
-   "published": "2026-11-24T12:01Z",
-   "title": "GTA 6 Mandy Actor Calls Viral Fame 'Bittersweet' Because People Keep Pretending to Be Her on Social Media",
-   "url": "https://www.ign.com/articles/gta-6-mandy-actor-calls-viral-fame-bittersweet",
-   "sources": [
-    "IGN",
-    "Kotaku",
-    "Push Square"
-   ],
-   "ar_relay": false,
-   "media": [
-    {
-     "type": "image",
-     "url": "https://assets-prd.ignimgs.com/2026/11/20/mandy-actress-speaks-out-gta6-1795216516675.jpg"
-    }
-   ],
-   "items": [
-    {
-     "source": "IGN",
-     "title": "GTA 6 Mandy Actor Calls Viral Fame 'Bittersweet' Because People Keep Pretending to Be Her on Social Media",
-     "url": "https://www.ign.com/articles/gta-6-mandy-actor-calls-viral-fame-bittersweet",
-     "published": "2026-11-24T12:01Z"
-    },
-    {
-     "source": "Push Square",
-     "title": "GTA 6 Fashion Is Taking Social Media by Storm",
-     "url": "https://www.pushsquare.com/news/2026/11/gta-6-fashion-is-taking-social-media-by-storm",
-     "published": "2026-11-24T15:00Z"
-    },
-    {
-     "source": "Kotaku",
-     "title": "The Actor Behind GTA 6′s Viral NPC Mandy Reacts To All Of The Attention: ‘It’s Sort Of Bittersweet’",
-     "url": "https://kotaku.com/the-actor-behind-gta-6s-viral-npc-mandy-reacts-to-all-of-the-attention-its-sort-of-bittersweet-2001000149",
-     "published": "2026-11-25T00:30Z"
+     "source": "Nintendo Life",
+     "title": "Mario Kart World Has Been Updated To Version 1.9.0, Here Are The Full Patch Notes",
+     "url": "https://www.nintendolife.com/news/2026/11/mario-kart-world-has-been-updated-to-version-1-9-0-here-are-the-full-patch-notes",
+     "published": "2026-11-25T01:05Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-25T00:39Z",
-   "title": "NVIDIAグラボ向けに「SSD無限酷使」を修正する最新パッチ配信開始。今度こそ直ってそう",
-   "url": "https://automaton-media.com/articles/newsjp/20261125-480766/",
+   "published": "2026-11-25T01:45Z",
+   "title": "『マリオカート ワールド』大型アプデ到来、「新コース」が8種類追加。いつものコースが“逆走”&“アレンジ”で姿を変える",
+   "url": "https://automaton-media.com/articles/newsjp/20261125-480776/",
    "sources": [
     "Automaton (JP)"
    ],
@@ -158,42 +134,209 @@
    "media": [
     {
      "type": "image",
-     "url": "https://automaton-media.com/wp-content/uploads/2026/11/20261125-480766-header.jpeg"
+     "url": "https://automaton-media.com/wp-content/uploads/2026/11/20261125-480776-header.jpg"
     }
    ],
    "items": [
     {
      "source": "Automaton (JP)",
-     "title": "NVIDIAグラボ向けに「SSD無限酷使」を修正する最新パッチ配信開始。今度こそ直ってそう",
-     "url": "https://automaton-media.com/articles/newsjp/20261125-480766/",
-     "published": "2026-11-25T00:39Z"
+     "title": "『マリオカート ワールド』大型アプデ到来、「新コース」が8種類追加。いつものコースが“逆走”&“アレンジ”で姿を変える",
+     "url": "https://automaton-media.com/articles/newsjp/20261125-480776/",
+     "published": "2026-11-25T01:45Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-25T00:20Z",
-   "title": "Proximity Chat Coming to Skate.",
-   "url": "https://insider-gaming.com/proximity-chat-coming-to-skate/",
+   "published": "2026-11-25T01:42Z",
+   "title": "カプコンの恐竜TPS『エグゾプライマル』が2027年9月30日をもってサービス終了へ",
+   "url": "https://news.denfaminicogamer.jp/news/261125r",
    "sources": [
-    "Insider Gaming"
+    "Denfaminicogamer (JP)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://news.denfaminicogamer.jp/wp-content/uploads/2026/11/HX7uFOIbIAAcoWy-1024x576.png"
+    }
+   ],
+   "items": [
+    {
+     "source": "Denfaminicogamer (JP)",
+     "title": "カプコンの恐竜TPS『エグゾプライマル』が2027年9月30日をもってサービス終了へ",
+     "url": "https://news.denfaminicogamer.jp/news/261125r",
+     "published": "2026-11-25T01:42Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-25T01:36Z",
+   "title": "『GTA6』壁に描かれた「偽物のトンネル」に車で突撃してしまう人続出。交差点に描かれた狡猾な騙し絵がSNSで話題に",
+   "url": "https://news.denfaminicogamer.jp/news/261125k",
+   "sources": [
+    "Denfaminicogamer (JP)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://news.denfaminicogamer.jp/wp-content/uploads/2026/11/Snapshot_45-1024x585.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Denfaminicogamer (JP)",
+     "title": "『GTA6』壁に描かれた「偽物のトンネル」に車で突撃してしまう人続出。交差点に描かれた狡猾な騙し絵がSNSで話題に",
+     "url": "https://news.denfaminicogamer.jp/news/261125k",
+     "published": "2026-11-25T01:36Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-25T01:35Z",
+   "title": "Pre-ordering GTA 6 only got you an early seat and $5 in savings, as its supposedly exclusive bonus goes on sale for $4.99",
+   "url": "https://www.tweaktown.com/rss/click/news/114862/?c=news-mf",
+   "sources": [
+    "TweakTown"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://static.tweaktown.com/news/1/1/114862_1_pre-ordering-gta-6-only-got-you-an-early-seat-and-5-in-savings-as-its-supposedly-exclusive-bonus-goes-on-sale-for-4-99_full.png?v=1795558581"
+    }
+   ],
+   "items": [
+    {
+     "source": "TweakTown",
+     "title": "Pre-ordering GTA 6 only got you an early seat and $5 in savings, as its supposedly exclusive bonus goes on sale for $4.99",
+     "url": "https://www.tweaktown.com/rss/click/news/114862/?c=news-mf",
+     "published": "2026-11-25T01:35Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-25T01:30Z",
+   "title": "海外有名アダルトサイト、『GTA6』発売直後にアクセス数15.5％減。でもリリース前後にはルシアやマンディなど含む関連単語も検索されまくり16,196%増加",
+   "url": "http://www.gamespark.jp/article/2026/11/25/175272.html",
+   "sources": [
+    "Game*Spark (JP)"
    ],
    "ar_relay": false,
    "media": [],
    "items": [
     {
-     "source": "Insider Gaming",
-     "title": "Proximity Chat Coming to Skate.",
-     "url": "https://insider-gaming.com/proximity-chat-coming-to-skate/",
-     "published": "2026-11-25T00:20Z"
+     "source": "Game*Spark (JP)",
+     "title": "海外有名アダルトサイト、『GTA6』発売直後にアクセス数15.5％減。でもリリース前後にはルシアやマンディなど含む関連単語も検索されまくり16,196%増加",
+     "url": "http://www.gamespark.jp/article/2026/11/25/175272.html",
+     "published": "2026-11-25T01:30Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-25T00:14Z",
-   "title": "Game Update - v0.11.7-alpha",
-   "url": "https://store.steampowered.com/news/app/3218350/view/702160202911186949",
+   "published": "2026-11-25T01:05Z",
+   "title": "TCL shows a 14-inch 120Hz laptop display that draws under 1W inside a Lenovo Yoga Pro prototype",
+   "url": "https://www.tweaktown.com/rss/click/news/114861/?c=news-mf",
+   "sources": [
+    "TweakTown"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://static.tweaktown.com/news/1/1/114861_4_tcl-shows-14-inch-120hz-laptop-display-that-draws-under-1w-inside-lenovo-yoga-pro-prototype_full.jpg?v=1795560206"
+    }
+   ],
+   "items": [
+    {
+     "source": "TweakTown",
+     "title": "TCL shows a 14-inch 120Hz laptop display that draws under 1W inside a Lenovo Yoga Pro prototype",
+     "url": "https://www.tweaktown.com/rss/click/news/114861/?c=news-mf",
+     "published": "2026-11-25T01:05Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-25T01:00Z",
+   "title": "Feature: We Travelled Across GTA 6's Map Using Only Public Transport",
+   "url": "https://www.pushsquare.com/news/2026/11/we-travelled-across-gta-6s-map-using-only-public-transport",
+   "sources": [
+    "Push Square"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://images.pushsquare.com/93917c6f299be/small.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://images.pushsquare.com/93917c6f299be/large.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Push Square",
+     "title": "Feature: We Travelled Across GTA 6's Map Using Only Public Transport",
+     "url": "https://www.pushsquare.com/news/2026/11/we-travelled-across-gta-6s-map-using-only-public-transport",
+     "published": "2026-11-25T01:00Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-25T01:00Z",
+   "title": "『ウィッチャー3』→『4』は『GTA5』から『6』ぐらいの飛躍を期待していい？11年分の進化で“非常に大きなジャンプ”へ―CDPR共同CEOが決算で言及",
+   "url": "http://www.gamespark.jp/article/2026/11/25/175271.html",
+   "sources": [
+    "Game*Spark (JP)"
+   ],
+   "ar_relay": false,
+   "media": [],
+   "items": [
+    {
+     "source": "Game*Spark (JP)",
+     "title": "『ウィッチャー3』→『4』は『GTA5』から『6』ぐらいの飛躍を期待していい？11年分の進化で“非常に大きなジャンプ”へ―CDPR共同CEOが決算で言及",
+     "url": "http://www.gamespark.jp/article/2026/11/25/175271.html",
+     "published": "2026-11-25T01:00Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-25T00:59Z",
+   "title": "【最大8人マルチ】90日後、地球に衝突する小惑星を砕く採掘ゲーム『No Asteroids』が発売直後に同接1万人のロケットスタート。つるはしから始まり、ミサイルで小惑星を破壊せよ",
+   "url": "https://news.denfaminicogamer.jp/news/261125i",
+   "sources": [
+    "Denfaminicogamer (JP)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://news.denfaminicogamer.jp/wp-content/uploads/2026/11/ss_6d01f427dfeb37082da8d430b5d5b12b3b67636c.1920x1080-1024x576.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "Denfaminicogamer (JP)",
+     "title": "【最大8人マルチ】90日後、地球に衝突する小惑星を砕く採掘ゲーム『No Asteroids』が発売直後に同接1万人のロケットスタート。つるはしから始まり、ミサイルで小惑星を破壊せよ",
+     "url": "https://news.denfaminicogamer.jp/news/261125i",
+     "published": "2026-11-25T00:59Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-25T00:56Z",
+   "title": "Could Mass Effect Ever Return? Former Writer Weighs In",
+   "url": "https://store.steampowered.com/news/group/1450625/view/693153003656445964",
    "sources": [
     "Steam News (hub)"
    ],
@@ -201,86 +344,111 @@
    "media": [
     {
      "type": "image",
-     "url": "https://clan.fastly.steamstatic.com/images/45594183/7705a8fc2cc59d25be8608a39d6a28da32b435fb.png"
+     "url": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2026/11/mass-effect-2.jpg"
     }
    ],
    "items": [
     {
      "source": "Steam News (hub)",
-     "title": "Game Update - v0.11.7-alpha",
-     "url": "https://store.steampowered.com/news/app/3218350/view/702160202911186949",
-     "published": "2026-11-25T00:14Z"
+     "title": "Could Mass Effect Ever Return? Former Writer Weighs In",
+     "url": "https://store.steampowered.com/news/group/1450625/view/693153003656445964",
+     "published": "2026-11-25T00:56Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-25T00:00Z",
-   "title": "Tidal Bans AI-Generated Music, Deleting 29 Million Songs From The App",
-   "url": "https://kotaku.com/tidal-bans-ai-generated-music-deleting-29-million-songs-from-the-app-2001000141",
+   "published": "2026-11-25T00:53Z",
+   "title": "Update 1.0.2 — Rock Sales, a Stronger Lance & Fixes",
+   "url": "https://store.steampowered.com/news/app/5527800/view/698782503191707654",
    "sources": [
-    "Kotaku"
+    "Steam News (hub)"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://kotaku.com/app/uploads/2026/11/tidal-1280x720.jpg"
+     "url": "https://clan.akamai.steamstatic.com/images/46669689/75330353a9c81a19bdaf7ab861406daccf794194.png"
     }
    ],
    "items": [
     {
-     "source": "Kotaku",
-     "title": "Tidal Bans AI-Generated Music, Deleting 29 Million Songs From The App",
-     "url": "https://kotaku.com/tidal-bans-ai-generated-music-deleting-29-million-songs-from-the-app-2001000141",
-     "published": "2026-11-25T00:00Z"
+     "source": "Steam News (hub)",
+     "title": "Update 1.0.2 — Rock Sales, a Stronger Lance & Fixes",
+     "url": "https://store.steampowered.com/news/app/5527800/view/698782503191707654",
+     "published": "2026-11-25T00:53Z"
     }
    ]
   },
   {
    "count": 1,
-   "published": "2026-11-25T00:00Z",
-   "title": "「リネージュ クラシック」に新都市“トリア”と史上最速のクラス“ローグ”が登場。シーズン2の構想が語られたメディア懇談会をレポート",
-   "url": "https://www.4gamer.net/games/579/G057943/20261124047/",
+   "published": "2026-11-25T00:52Z",
+   "title": "【11円】マンガ『まじかる☆タルるートくん』Kindle版全巻が「1冊11円」となる破格のセール開催中。全21巻を231円で揃えられる",
+   "url": "https://news.denfaminicogamer.jp/news/261125j",
    "sources": [
-    "4Gamer (JP)"
-   ],
-   "ar_relay": false,
-   "media": [],
-   "items": [
-    {
-     "source": "4Gamer (JP)",
-     "title": "「リネージュ クラシック」に新都市“トリア”と史上最速のクラス“ローグ”が登場。シーズン2の構想が語られたメディア懇談会をレポート",
-     "url": "https://www.4gamer.net/games/579/G057943/20261124047/",
-     "published": "2026-11-25T00:00Z"
-    }
-   ]
-  },
-  {
-   "count": 1,
-   "published": "2026-11-24T22:12Z",
-   "title": "Jaden Industries: Cozy Automation Puzzler launch trailer – new release for Nintendo Switch 2 and Switch",
-   "url": "https://nintendoeverything.com/jaden-industries-cozy-automation-puzzler-launch-trailer/",
-   "sources": [
-    "Nintendo Everything"
+    "Denfaminicogamer (JP)"
    ],
    "ar_relay": false,
    "media": [
     {
      "type": "image",
-     "url": "https://nintendoeverything.com/wp-content/uploads/Jaden-Industries-trailer-150x84.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://nintendoeverything.com/wp-content/uploads/Jaden-Industries-trailer.jpg"
+     "url": "https://news.denfaminicogamer.jp/wp-content/uploads/2026/11/81klWpO0uDL__SL1500_-1-641x1024.png"
     }
    ],
    "items": [
     {
-     "source": "Nintendo Everything",
-     "title": "Jaden Industries: Cozy Automation Puzzler launch trailer – new release for Nintendo Switch 2 and Switch",
-     "url": "https://nintendoeverything.com/jaden-industries-cozy-automation-puzzler-launch-trailer/",
-     "published": "2026-11-24T22:12Z"
+     "source": "Denfaminicogamer (JP)",
+     "title": "【11円】マンガ『まじかる☆タルるートくん』Kindle版全巻が「1冊11円」となる破格のセール開催中。全21巻を231円で揃えられる",
+     "url": "https://news.denfaminicogamer.jp/news/261125j",
+     "published": "2026-11-25T00:52Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": "2026-11-24T23:49Z",
+   "title": "Max Verstappen Spent 40 Hours Playing GTA 6 and Still Won the Las Vegas Grand Prix",
+   "url": "https://www.ign.com/articles/max-verstappen-spent-40-hours-playing-gta-6-and-still-won-the-las-vegas-grand-prix",
+   "sources": [
+    "IGN"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://assets-prd.ignimgs.com/2026/11/24/max-verstappen-gta-6-1795564044448.jpg"
+    }
+   ],
+   "items": [
+    {
+     "source": "IGN",
+     "title": "Max Verstappen Spent 40 Hours Playing GTA 6 and Still Won the Las Vegas Grand Prix",
+     "url": "https://www.ign.com/articles/max-verstappen-spent-40-hours-playing-gta-6-and-still-won-the-las-vegas-grand-prix",
+     "published": "2026-11-24T23:49Z"
+    }
+   ]
+  },
+  {
+   "count": 1,
+   "published": null,
+   "title": "『マリオカート ワールド』8つのアレンジコースが新登場、「マリオブラザーズサーキット2」や「DKスノーマウンテン2」など。無料アップデートが本日配信",
+   "url": "https://news.denfaminicogamer.jp/?p=1689868",
+   "sources": [
+    "Denfaminicogamer (JP)"
+   ],
+   "ar_relay": false,
+   "media": [
+    {
+     "type": "image",
+     "url": "https://news.denfaminicogamer.jp/wp-content/uploads/2026/11/33d2d3db1f3f4fd29669708fa4ce3c60-1024x576.webp"
+    }
+   ],
+   "items": [
+    {
+     "source": "Denfaminicogamer (JP)",
+     "title": "『マリオカート ワールド』8つのアレンジコースが新登場、「マリオブラザーズサーキット2」や「DKスノーマウンテン2」など。無料アップデートが本日配信",
+     "url": "https://news.denfaminicogamer.jp/?p=1689868",
+     "published": null
     }
    ]
   }
@@ -314,7 +482,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-25T00:50:04Z",
+  "last_poll_at": "2026-11-25T01:50:14Z",
   "sources_enabled": 101,
   "sources_ok": 101,
   "sources_failing": 0,
