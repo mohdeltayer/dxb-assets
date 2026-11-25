@@ -736,7 +736,7 @@ def arabic_first(text, names=()):
     return '\n'.join(lines), what
 
 
-def carry_across(texts):
+def carry_across(texts, join=True):
     """A list of on-screen lines, in order, where no line opens on a Latin word: the last word of the line before moves
     down with it (so «لعبة» stays with its game name: «تدعم لعبة» | «Ghost of Tsushima ...» becomes «تدعم» merged into
     «تدعم لعبة Ghost of Tsushima ...»); a line left with fewer than two words joins the next. No word is added or
@@ -752,10 +752,19 @@ def carry_across(texts):
         if not prev:
             k += 1
             continue
-        if len(prev) <= 2:                              # a line of one or two words joins the next whole
+        if len(prev) <= 2 and join:                     # a line of one or two words joins the next whole
             out[k] = ' '.join(prev) + ' ' + nxt.replace('\n', ' ')
             del out[k - 1]
             what.append('a short line joined the next, which opened on a Latin word')
+            continue
+        if len(prev) == 1:                              # the count must hold (render): the Latin run goes up instead
+            w = nxt.replace('\n', ' ').split()
+            a = next((n for n, x in enumerate(w) if ARABIC.match(x.lstrip(LEAD)[:1] or 'a')), None)
+            if a:
+                out[k - 1] = ' '.join(prev + w[:a])
+                out[k] = ' '.join(w[a:])
+                what.append('the Latin run moved up to the line before')
+            k += 1
             continue
         out[k - 1] = ' '.join(prev[:-1])
         out[k] = prev[-1] + ' ' + nxt.replace('\n', ' ')
@@ -876,7 +885,7 @@ def fix(job):
                 if isinstance(x, str) or (isinstance(x, list) and x and isinstance(x[0], str)):
                     slots.append((grp, k))
     texts = [g[2][k] if isinstance(g[2][k], str) else g[2][k][0] for g, k in slots]
-    carried, cw = carry_across(texts)
+    carried, cw = carry_across(texts, join=False)
     if cw and len(carried) == len(texts):
         for (g, k), t_old, t_new in zip(slots, texts, carried):
             if t_new != t_old:
