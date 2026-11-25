@@ -72,9 +72,19 @@ jobs:
           PY
 
       - name: Tools
+        timeout-minutes: 10
         run: |
           sudo systemctl stop apt-daily.timer apt-daily-upgrade.timer 2>/dev/null || true
-          command -v ffprobe >/dev/null || timeout 300 sudo apt-get -o DPkg::Lock::Timeout=120 install -y -qq ffmpeg >/dev/null
+          # 25 Nov 2026: the runner image dropped ffmpeg and apt-get install hit 404s on a stale index (pipewire on
+          # security.ubuntu.com), so every slip failed here. Static build from GitHub first; apt with a fresh index second.
+          if ! command -v ffprobe >/dev/null; then
+            if curl -sSL --retry 3 --max-time 120 -o "$RUNNER_TEMP/ff.tar.xz" https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz \
+               && tar -xJf "$RUNNER_TEMP/ff.tar.xz" -C "$RUNNER_TEMP"; then
+              sudo cp "$RUNNER_TEMP"/ffmpeg-master-latest-linux64-gpl/bin/ff* /usr/local/bin/
+            else
+              timeout 300 sudo apt-get -o DPkg::Lock::Timeout=120 update -qq && timeout 300 sudo apt-get -o DPkg::Lock::Timeout=120 install -y -qq --fix-missing ffmpeg >/dev/null
+            fi
+          fi
           ffprobe -version | head -1
           python3 -m pip install -q numpy pillow pedalboard==0.9.26 soundfile opencv-python-headless==4.10.0.84   # the decode check imports reel (letterbox reader), which imports sonic
 
