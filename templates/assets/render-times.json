@@ -152546,5 +152546,188 @@
   "sound": "bed:neon_e (trailer sound refused: music stem not clean (leftover 5.9% > 5.0%))",
   "footage": true,
   "upload_secs": 5.0
+ },
+ {
+  "name": "mario-kart-world-ver-1-9-0-free-update-nintendo-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-25T06:27Z",
+  "stages": {
+   "checks": 6.5,
+   "montage": 35.9,
+   "text": 35.8,
+   "audio": 1.0,
+   "outro": 51.0
+  },
+  "total": 130.2,
+  "lane": "runner",
+  "queued_at": "2026-11-25T06:25Z",
+  "finished_at": "2026-11-25T06:27Z",
+  "render_min": 2.17,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "mario-kart-world-ver-1-9-0-free-update-nintendo-nintendo-1.mp4",
+    "start": 17.77,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.73,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 1,
+    "file": "mario-kart-world-ver-1-9-0-free-update-nintendo-nintendo-1.mp4",
+    "start": 42.28,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.73,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 2,
+    "file": "mario-kart-world-ver-1-9-0-free-update-nintendo-nintendo-1.mp4",
+    "start": 31.27,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.73,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 3,
+    "file": "mario-kart-world-ver-1-9-0-free-update-nintendo-nintendo-1.mp4",
+    "start": 24.93,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.73,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 4,
+    "file": "mario-kart-world-ver-1-9-0-free-update-nintendo-nintendo-1.mp4",
+    "start": 13.77,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.73,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 5,
+    "file": "mario-kart-world-ver-1-9-0-free-update-nintendo-nintendo-1.mp4",
+    "start": 9.27,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.73,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 6,
+    "file": "mario-kart-world-ver-1-9-0-free-update-nintendo-nintendo-1.mp4",
+    "start": 28.96,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.73,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 7,
+    "file": "mario-kart-world-ver-1-9-0-free-update-nintendo-nintendo-2.mp4",
+    "start": 40.98,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.57,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   }
+  ],
+  "source_summary": {
+   "min_height": 720,
+   "max_zoom": 2.67,
+   "lowbit_shots": 8
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 10.0,
+   "audio_secs": 35.3,
+   "music_pct": 93.9,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "effects_shots": 8,
+   "mix_secs": 4.2,
+   "secs": 14.8
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 6.75,
+   "held_under_text": 0.0,
+   "secs": 16.3,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 55.0,
+   "shots": 7.7,
+   "checks": 26.9,
+   "render": 145.2,
+   "after": 47.6
+  },
+  "softgate": {
+   "warnings": 10,
+   "ladder": [
+    {
+     "kind": "text",
+     "slot": "reel",
+     "step": "a",
+     "why": "soft shade under line group(s) [2]: bright footage behind them"
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 283,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1419,
+  "peak_mem_mb": 3174,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61097,
+  "peak_disk_mb": 64188,
+  "min_disk_free_mb": 83609,
+  "setup_min": 0.8,
+  "story": "mario-kart-world-ver-1-9-0-free-update-nintendo"
  }
 ]

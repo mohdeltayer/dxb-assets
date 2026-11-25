@@ -8,7 +8,7 @@
  "skin_why": "genre racing: its kit is not built yet (skins.KITS scifi, fantasy)",
  "built_by": "server-slip",
  "render_lane": "server",
- "out": "cards/2026-11/mario-kart-world-ver-1-9-0-free-update-nintendo-reel-v1.mp4",
+ "out": "cards/2026-11/mario-kart-world-ver-1-9-0-free-update-nintendo-reel-v2.mp4",
  "split_fallback": "ladder",
  "footage": [
   {
@@ -158,7 +158,7 @@
    }
   ]
  ],
- "spoken": "أعلنت نينتيندو (Nintendo) أن التحديث 1.9.0 للعبة Mario Kart World على Switch 2 صدر الآن، ويضيف ثمانية مسارات معاد تصميمها من مسارات سابقة، منها DK Pass 2 وShy Guy Bazaar 2. ويضيف مسارين جديدين في جولة الإقصاء، ومزية إعادة العرض المحسنة. وقالت الشركة إن مزيدًا من المسارات قادم في تحديثات لاحقة.",
+ "spoken": "أعلنت نينتيندو (Nintendo) أن التحديث 1.9.0 للعبة Mario Kart World على Switch 2 صدر الآن، ويضيف ثمانية مسارات معاد تصميمها من مسارات سابقة، منها DK Pass 2 وShy Guy Bazaar 2. ويضيف مسارين جديدين في جولة الإقصاء، ومزية إعادة العرض المحسنة. وقالت الشركة إن مزيدًا من مسارات جولة الإقصاء قادم في تحديثات لاحقة.",
  "headline": "تحديث Mario Kart World\nثمانية مسارات معاد تصميمها",
  "label": "تحديث",
  "game": "Mario Kart World",
@@ -204,5 +204,12 @@
   "credit on every clip": "yes: one credit over every shot",
   "sound": "yes: trailer sound from the first shot, split per shot on the server",
   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ },
+ "lines_replace": {
+  "وقالت الشركة إن مزيدًا\nمن المسارات قادم في تحديثات لاحقة": "وقالت الشركة إن مزيدًا من\nمسارات جولة الإقصاء\nقادم في تحديثات لاحقة"
+ },
+ "rerender": {
+  "reason": "factual_error",
+  "note": "Change the closing claim to 'more Knockout Tour routes' coming in later updates, in spoken and on-screen text."
  }
 }
