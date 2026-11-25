@@ -1,10 +1,23 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-25T17:52:06Z",
- "seq": 867,
+ "generated_at": "2026-11-25T18:10:18Z",
+ "seq": 868,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 23444,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/25/26 Customize your style and wow the competition in Nintendo Switch Sports Resort! The Nintendo Switch Sports Resort™ game is available for the Nintendo Sw",
+   "url": "https://www.nintendo.com/us/whatsnew/customize-your-style-and-wow-the-competition-in-nintendo-switch-sports-resort/",
+   "published": null,
+   "first_seen": "2026-11-25T18:10:14Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 868
+  }
+ ],
  "recent": [
   {
    "id": 23421,
@@ -380,25 +393,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 828
-  },
-  {
-   "id": 22338,
-   "source": "Nintendo US",
-   "source_kind": "page",
-   "title": "11/24/26 Play the 58th MAXIMUS CUP online event and you could earn an in-game collaborative theme! Calling all explorers: it’s time to get organized for the Tet",
-   "url": "https://www.nintendo.com/us/whatsnew/play-the-58th-maximus-cup-online-event-and-you-could-earn-an-in-game-collaborative-theme/",
-   "published": null,
-   "first_seen": "2026-11-24T17:55:05Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 826
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-25T17:50:05Z",
+  "last_poll_at": "2026-11-25T18:10:14Z",
   "sources_enabled": 101,
-  "sources_ok": 100,
+  "sources_ok": 101,
   "sources_failing": 0,
   "failed": []
  }
