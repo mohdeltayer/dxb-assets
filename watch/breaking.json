@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-25T15:00:21Z",
- "seq": 858,
+ "generated_at": "2026-11-25T15:20:21Z",
+ "seq": 859,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 23231,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Arcade Archives Dirt Dash - Out Now | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=dbovF0PJOl4",
+   "published": "2026-11-25T15:00Z",
+   "first_seen": "2026-11-25T15:20:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/dbovF0PJOl4/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=dbovF0PJOl4"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 859
+  }
+ ],
+ "recent": [
   {
    "id": 23193,
    "source": "Xbox Wire",
@@ -33,9 +56,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 858
-  }
- ],
- "recent": [
+  },
   {
    "id": 23150,
    "source": "PlayStation (YouTube)",
@@ -423,32 +444,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 816
-  },
-  {
-   "id": 22172,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "The Blood of Dawnwalker – Accolades Trailer",
-   "url": "https://www.youtube.com/watch?v=TsB6KBtk-YM",
-   "published": "2026-11-24T15:00Z",
-   "first_seen": "2026-11-24T15:15:25Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/TsB6KBtk-YM/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=TsB6KBtk-YM"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 815
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-25T15:00:14Z",
+  "last_poll_at": "2026-11-25T15:20:14Z",
   "sources_enabled": 101,
   "sources_ok": 99,
   "sources_failing": 1,
