@@ -153965,5 +153965,231 @@
   "sound": "bed:neon_b (trailer sound refused: music stem not clean (leftover 19.8% > 5.0%))",
   "footage": true,
   "upload_secs": 5.0
+ },
+ {
+  "name": "elden-ring-nightreign-arabic-steam-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-25T07:11Z",
+  "stages": {
+   "checks": 6.6,
+   "montage": 63.4,
+   "text": 167.2,
+   "audio": 1.7,
+   "outro": 66.9
+  },
+  "total": 305.8,
+  "lane": "runner",
+  "queued_at": "2026-11-25T07:06Z",
+  "finished_at": "2026-11-25T07:11Z",
+  "render_min": 5.1,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "elden-ring-nightreign-arabic-steam-elden-ring-nightreign-reveal-gameplay-trailer.mp4",
+    "start": 88.08,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.58,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "elden-ring-nightreign-arabic-steam-elden-ring-nightreign-reveal-gameplay-trailer.mp4",
+    "start": 24.25,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.58,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "elden-ring-nightreign-arabic-steam-elden-ring-nightreign-reveal-gameplay-trailer.mp4",
+    "start": 78.26,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.58,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "elden-ring-nightreign-arabic-steam-elden-ring-nightreign-reveal-gameplay-trailer.mp4",
+    "start": 14.44,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.58,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "elden-ring-nightreign-arabic-steam-elden-ring-nightreign-reveal-gameplay-trailer.mp4",
+    "start": 43.9,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.58,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "elden-ring-nightreign-arabic-steam-elden-ring-nightreign-reveal-gameplay-trailer.mp4",
+    "start": 34.09,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.58,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "elden-ring-nightreign-arabic-steam-elden-ring-nightreign-reveal-gameplay-trailer.mp4",
+    "start": 9.34,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.58,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "elden-ring-nightreign-arabic-steam-elden-ring-nightreign-reveal-gameplay-trailer.mp4",
+    "start": 73.53,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.58,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "elden-ring-nightreign-arabic-steam-elden-ring-nightreign-reveal-gameplay-trailer.mp4",
+    "start": 62.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.58,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 9,
+    "file": "elden-ring-nightreign-arabic-steam-elden-ring-nightreign-reveal-gameplay-trailer.mp4",
+    "start": 53.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.58,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 10,
+    "file": "elden-ring-nightreign-arabic-steam-elden-ring-nightreign-reveal-gameplay-trailer.mp4",
+    "start": 19.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 29.97,
+    "mbps": 5.58,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 25.8,
+   "audio_secs": 78.3,
+   "music_pct": 13.9,
+   "leak_pct": 7.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 7
+   },
+   "reason": "music stem not clean (leftover 7.1% > 5.0%)",
+   "secs": 34.7,
+   "ladder": "d",
+   "fallback": "bed:neon_e"
+  },
+  "lifeless": {
+   "score": 14.0,
+   "still_share": 0.09,
+   "longest_still": 2.2,
+   "cuts_per_10s": 5.08,
+   "held_under_text": 0.051,
+   "secs": 25.6,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 38.6,
+   "shots": 144.7,
+   "checks": 181.6,
+   "render": 343.8,
+   "after": 74.8
+  },
+  "softgate": {
+   "warnings": 3,
+   "ladder": [
+    {
+     "kind": "text",
+     "slot": "line 3",
+     "step": "a",
+     "why": "3.1 s of 3.6 s: shot 6 lengthened by 0.68 s"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "d",
+     "why": "audio split not applied (music stem not clean (leftover 7.1% > 5.0%)) on a trailer track under 10 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or "
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 784,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1473,
+  "peak_mem_mb": 5774,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61097,
+  "peak_disk_mb": 65462,
+  "min_disk_free_mb": 82335,
+  "setup_min": 0.5,
+  "story": "elden-ring-nightreign-arabic-steam"
  }
 ]
