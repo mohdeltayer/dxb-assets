@@ -1,10 +1,28 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-25T16:52:06Z",
- "seq": 863,
+ "generated_at": "2026-11-25T17:15:06Z",
+ "seq": 864,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 23385,
+   "source": "Nintendo of America (YouTube)",
+   "source_kind": "youtube",
+   "title": "Treat yo' self. 🍩",
+   "url": "https://www.youtube.com/shorts/5_GJqaYbCY4",
+   "published": "2026-11-25T17:00Z",
+   "first_seen": "2026-11-25T17:15:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/5_GJqaYbCY4/hqdefault.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 864
+  }
+ ],
  "recent": [
   {
    "id": 23321,
@@ -350,78 +368,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 824
-  },
-  {
-   "id": 22289,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Dead by Daylight: Terrifier | Official Trailer",
-   "url": "https://www.youtube.com/watch?v=GBEawc9drY4",
-   "published": "2026-11-24T17:00Z",
-   "first_seen": "2026-11-24T17:05:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/GBEawc9drY4/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=GBEawc9drY4"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 823
-  },
-  {
-   "id": 22288,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Dead by Daylight - Terrifier Chapter Launch Trailer | PS5 & PS4 Games",
-   "url": "https://www.youtube.com/watch?v=-wJapkOeArE",
-   "published": "2026-11-24T17:00Z",
-   "first_seen": "2026-11-24T17:05:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/-wJapkOeArE/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=-wJapkOeArE"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 823
-  },
-  {
-   "id": 22271,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "Dead by Daylight: Terrifier’s New Killer is No Laughing Matter",
-   "url": "https://news.xbox.com/en-us/2026/11/24/dead-by-daylight-terrifiers-new-killer-is-no-laughing-matter/",
-   "published": "2026-11-24T17:00Z",
-   "first_seen": "2026-11-24T17:00:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/DBD_CH_CERT_PRSCREEN_03_WEB-0ec21cc7b7ac90e90454.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/DBD_CH_CERT_PRSCREEN_01_WEB-b393e0eb3dd1e3cf193a.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://store-images.s-microsoft.com/image/apps.16719.64366672042187759.733004ed-c696-44cf-98cc-30eddf2375a8.3dd6c96e-e0c3-4a0b-aeb0-810f815a6d37?w=400&h=600"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 822
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-25T16:50:14Z",
+  "last_poll_at": "2026-11-25T17:15:04Z",
   "sources_enabled": 101,
   "sources_ok": 101,
   "sources_failing": 0,
