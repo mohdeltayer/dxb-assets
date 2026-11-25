@@ -1,0 +1,14 @@
+{
+ "id": "2026-11-25-diablo-4-season-16-tyraels-gambit-dec-1-tbreak",
+ "state": "failed",
+ "problems": [
+  "grammar_review missing: run the arabic-grammar-review stage on headline, spoken (the lines are cut from it), credit, instagram, x and threads, apply every required edit to the slip, then record \"grammar_review\": {\"by\": \"arabic-grammar-review\", \"at\": \"<ISO time>\", \"required_edits\": <n applied>, \"texts_sha\": \"<python3 templates/slip.py grammar-sha <slip>>\"}"
+ ],
+ "flags": [
+  "slip texts fixed mechanically: spoken"
+ ],
+ "at": "2026-11-25T09:12:18Z",
+ "run": "45583079319",
+ "lane": "live",
+ "build_secs": 30
+}
