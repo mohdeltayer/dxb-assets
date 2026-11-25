@@ -1,0 +1,200 @@
+{
+ "name": "watch-dogs-legion-arabic-steam",
+ "out": "cards/2026-11/watch-dogs-legion-arabic-steam-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot scan",
+   "detail": "footage scan stopped at its cap (300 s); shots as written, automatic slots from the footage library or evenly spaced"
+  },
+  {
+   "stage": "smear",
+   "detail": "ValueError: /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/watch-dogs-legion-arabic-steam-reel-v1.mp4: blocky smear at 5.43 to 5.77 s (peak 15.2); look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4: shot ended before the first video frame (2.22 s); moved to 2.27 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4: shot ended before the first video frame (2.22 s); moved to 2.27 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4: shot ended before the first video frame (2.22 s); moved to 2.27 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4: shot ended before the first video frame (2.22 s); moved to 2.27 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4: shot ended before the first video frame (2.22 s); moved to 2.27 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4: shot ended before the first video frame (2.22 s); moved to 2.27 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4: shot ended before the first video frame (2.22 s); moved to 2.27 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4: shot ended before the first video frame (2.22 s); moved to 2.27 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4 at 19.47 s for 3.8 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4 at 58.35 s for 2.74 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4 at 97.06 s for 2.74 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "scan cap: 3 automatic slot(s) from the library or evenly spaced"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4 at 77.07 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4 at 37.33 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4 at 87.03 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4 at 47.28 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4 at 106.91 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4 at 27.41 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "watch-dogs-legion-arabic-steam-deep-dive.mp4 at 12.51 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "d",
+   "why": "audio split not applied (music stem not clean (leftover 19.8% > 5.0%)) on a trailer track under 10 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or"
+  }
+ ],
+ "job_to_pass_min": 16.5,
+ "at": "2026-11-25T07:10:16Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 watch-dogs-legion-arabic-steam-deep-dive.mp4 starts at 0.0 s, the video at 2.22 s; its first 2.22 s are lost",
+  "first frame: shot 1 watch-dogs-legion-arabic-steam-deep-dive.mp4 starts at 0.0 s, the video at 2.22 s; its first 2.22 s are lost",
+  "first frame: shot 2 watch-dogs-legion-arabic-steam-deep-dive.mp4 starts at 0.0 s, the video at 2.22 s; its first 2.22 s are lost",
+  "length 23.1 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 19.8% > 5.0%); music_pct 5.2; leak_pct 19.8; cache {'hit': 0, 'miss': 8}; separate_secs 11.5; secs 15.0",
+  "render_job: audio split fallback: our bed (audio split not applied (music stem not clean (leftover 19.8% > 5.0%)) on a trailer track under 10 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.); bed:neon_b",
+  "render_job: lifeless: {\"score\": 5.3, \"still_share\": 0.043, \"longest_still\": 0.8, \"cuts_per_10s\": 4.78, \"held_under_text\": 0.0, \"secs\": 23.0, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [],
+ "job_sha": "c03eae347e1bdd24dfb1e5c50fb625464e5fbbf8",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/watch-dogs-legion-arabic-steam-look-1.jpg",
+  "cards/2026-11/watch-dogs-legion-arabic-steam-look-2.jpg",
+  "cards/2026-11/watch-dogs-legion-arabic-steam-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_b (trailer sound refused: music stem not clean (leftover 19.8% > 5.0%))",
+ "shot_read": {
+  "secs": 40.9,
+  "files": {
+   "watch-dogs-legion-arabic-steam-deep-dive.mp4": {
+    "secs": 40.4,
+    "cached": false,
+    "stages": {
+     "decode": 16.4,
+     "autofocus": 40.1,
+     "ocr": 40.1,
+     "smear": 40.1,
+     "scenes": 40.4
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/watch-dogs-legion-arabic-steam.json",
+ "stage_minutes": {
+  "queue": 5.0,
+  "setup": 0.17,
+  "fetch": 0.84,
+  "shots": 5.08,
+  "checks": 0.3,
+  "render": 3.02,
+  "after": 1.04,
+  "job": 10.3
+ }
+}
