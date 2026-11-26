@@ -1,0 +1,33 @@
+{
+ "id": "2026-11-26-croaked-free-demo-nov-27-steam-games-press",
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "name not in names-ar: «عبر غيمز برس (Games Press)» (credit); add it there as Proposed",
+  "name not in names-ar: «اللعبة استوديو ديدبيكسل (DeadPixel Studios)» (spoken); add it there as Proposed",
+  "name not in names-ar: «والمطور بوند لوب (Pond Loop)» (spoken); add it there as Proposed",
+  "text fixed mechanically: spoken: names not in names-ar written in Latin: DeadPixel Studios, Pond Loop"
+ ],
+ "at": "2026-11-26T16:28:30Z",
+ "footage": {
+  "name": "Gameplay Trailer",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60.0,
+  "mbps": 5.68,
+  "rows": 1080,
+  "duration": 54.42,
+  "decode_clean": true
+ },
+ "names_to_review": [
+  "DeadPixel Studios",
+  "Pond Loop"
+ ],
+ "job": "jobs/live/croaked-free-demo-nov-27-steam-games-press.json",
+ "story": "newsroom/stories/2026-11-26-croaked-free-demo-nov-27-steam-games-press.json",
+ "lines": 3,
+ "shots": 8,
+ "run": "45859056536",
+ "lane": "live",
+ "build_secs": 76
+}
