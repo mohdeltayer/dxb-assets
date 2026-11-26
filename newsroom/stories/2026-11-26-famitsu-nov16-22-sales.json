@@ -1,0 +1,57 @@
+{
+ "id": "2026-11-26-famitsu-nov16-22-sales",
+ "title": "Famitsu Japan physical sales, 16 to 22 Nov 2026: Grand Theft Auto VI debuts at number 1",
+ "kind": "numbers",
+ "label": "أرقام",
+ "genre": [
+  "open world"
+ ],
+ "game": "Grand Theft Auto VI",
+ "source_chain": [
+  {
+   "what": "primary",
+   "outlet": "Famitsu (ファミ通)",
+   "url": "https://www.famitsu.com/article/202611/95209",
+   "read_at": "2026-11-26T14:12Z"
+  }
+ ],
+ "claims": [
+  {
+   "text": "Grand Theft Auto VI (PS5) 200,759 physical copies, 19 to 22 Nov",
+   "status": "verified",
+   "source": "Famitsu chart"
+  },
+  {
+   "text": "The Legend of Zelda: Ocarina of Time (Switch 2) 35,295 copies this week, 658,433 in all",
+   "status": "verified",
+   "source": "Famitsu chart"
+  },
+  {
+   "text": "PS5 hardware 41,472 against Switch 2 36,817; PS5 11,136 the week before",
+   "status": "verified",
+   "source": "Famitsu chart"
+  }
+ ],
+ "titles": "Grand Theft Auto VI per Rockstar; Momotaro Dentetsu 2 has no English title from Konami (Japan only): romanised in the chart",
+ "reel": "cards/2026-11/famitsu-nov16-22-sales-reel-v1.mp4",
+ "strip": "cards/2026-11/famitsu-nov16-22-sales-strip.jpg",
+ "template": "numbers (sales_full)",
+ "skin": "house",
+ "sound": "our bed",
+ "texts_checked": "arabic-games-film-editor; arabic-grammar-review: no required edits; one own edit («بعد أن باع» dropped: a console does not sell); DeepL AR to EN back-check: meaning intact",
+ "scheduled": {
+  "slot_dubai": "2026-11-26 21:00",
+  "platforms": [
+   "instagram",
+   "x",
+   "threads"
+  ],
+  "publer_suffix": {
+   "ig": "085d04",
+   "x": "77a052",
+   "th": "67bdb6"
+  },
+  "by": "Production 1 (Famitsu weekly task)"
+ },
+ "notes": "famitsu-weekly did not fire on schedule (no run at 12:15Z); started by hand 14:12Z; stopped on three missing English titles; titles and art added (811052e8), rebuilt from the article URL; rendered on the runner 14:24Z. No short Famitsu Reel from Production 2 in Publer today."
+}
