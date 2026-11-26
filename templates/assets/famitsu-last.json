@@ -1,40 +1,39 @@
 {
- "name": "famitsu-nov9-15-sales",
- "out": "cards/2026-11/famitsu-nov9-15-sales-reel-v1.mp4",
+ "name": "famitsu-nov16-22-sales",
+ "out": "cards/2026-11/famitsu-nov16-22-sales-reel-v1.mp4",
  "kind": "famitsu",
- "week_label": "أسبوع 9 إلى 15 نوفمبر 2026",
- "date": "19 Nov 2026",
- "hook": "ثلاث ألعاب جديدة في قائمة اليابان",
+ "week_label": "أسبوع 16 إلى 22 نوفمبر 2026",
+ "date": "26 Nov 2026",
+ "hook": "تصدّرت Grand Theft Auto VI مبيعات اليابان",
+ "article": "https://www.famitsu.com/article/202611/95209",
+ "article_id": 2026110095209,
+ "previous": "https://www.famitsu.com/article/202611/94496",
  "lowres_ok": {
   "searched": [
    "Nintendo US store",
-   "Nintendo JP store"
+   "publisher press site"
   ],
-  "result": "Rhythm Heaven Groove, Tomodachi Life and Minecraft Dungeons II screenshots exist at 1280x720 only"
+  "result": "some screenshots exist at 1280x720 only (server weekly build)"
  },
- "note": "Famitsu 9 to 15 Nov 2026 (article 202611/94496), last week 202611/93799 for change; sound stats; theme gold. Production 2 posted the short Ocarina Reel; this is the full chart.",
- "story": "2026-11-19-famitsu-nov9-15-sales",
- "built_by": "production-1",
+ "note": "Famitsu 16 إلى 22 نوفمبر 2026 (https://www.famitsu.com/article/202611/95209); built by famitsu_weekly on the server",
+ "story": "2026-11-26-famitsu-nov16-22-sales",
+ "built_by": "famitsu-weekly",
  "footage": [
+  {
+   "file": "fm-gta6-box.jpg",
+   "url": "https://www.rockstargames.com/VI/_next/static/media/GTAVI_FOB_StandardEdition_Desktop.09clbpu8-nv8i.jpg?akim=1&imdensity=1&imwidth=1920"
+  },
+  {
+   "file": "fm-gta6.jpg",
+   "url": "https://www.rockstargames.com/VI/_next/static/media/89834o94713o21.04n287k6o2lh9.jpg?akim=1&imdensity=1&imwidth=1920"
+  },
   {
    "file": "fm2-oot.jpg",
    "url": "https://assets.nintendo.com/image/upload/f_jpg/q_auto/store/software/switch2/70010000130792/9fb8faf644291a8398e43eadab602842d21c6b80537f71be0462685f52605c51"
   },
   {
-   "file": "fm2-oot-box.jpg",
-   "url": "https://assets.nintendo.com/image/upload/f_jpg/q_auto/store/software/switch2/70010000130792/da79eecb8ff4a1918790e0084cfcf8581a40f4864854e7a95615f5d43f41f937"
-  },
-  {
    "file": "fm-ssr-a.jpg",
    "url": "https://assets.nintendo.com/image/upload/f_jpg/q_auto/store/software/switch2/70010000125145/69469bdc23f91366de3fb457f0e28810d507e3b331b52520f31d5bd7c29feb7e"
-  },
-  {
-   "file": "fm-ffr.jpg",
-   "url": "https://assets.nintendo.com/image/upload/f_jpg/q_auto/store/software/switch2/70010000117100/d807e25b5a5acb0553bad1ea61b5b8a23d42734fe752d6402a39fc38e0c49951"
-  },
-  {
-   "file": "fm-mc.jpg",
-   "url": "https://assets.nintendo.com/image/upload/f_jpg/q_auto/store/software/switch2/70010000119400/36619fd96e2d169e6bce5eda626ef7ede441b47b35206dc02259768fde70d79a"
   },
   {
    "file": "fm2-rhg.jpg",
@@ -45,31 +44,50 @@
    "repo": "live/2026-10-05/famitsu/tomodachi-life-living-the-dream-4.jpg"
   },
   {
-   "file": "fm3-metaphor.jpg",
-   "url": "https://assets.nintendo.com/image/upload/f_jpg/q_auto/store/software/switch2/70010000105915/00feb434632116bcc18650b8c001d59e67a600da0b2924d67323be41f2b1a26e"
-  },
-  {
-   "file": "fm3-mcd2.jpg",
-   "url": "https://assets.nintendo.com/image/upload/f_jpg/q_auto/store/software/switch/70010000067526/7d317890bcbc675afbd0822e9ce1ad162f2f9d9c3dfc73707d9d5faedd3aa689"
-  },
-  {
    "file": "fm3-splatoon-raiders.jpg",
    "url": "https://assets.nintendo.com/image/upload/f_jpg/q_auto/store/software/switch2/70010000122824/36cdb9d8f92eef60aeea6c9147176b4a0cf469c2613245696c40a14273d20020"
   },
   {
-   "file": "fm3-pikmin4.jpg",
-   "url": "https://assets.nintendo.com/image/upload/f_jpg/q_auto/store/software/switch2/70010000135059/c0ae5f0edf442120a640cf44272860ec98b19c68d1453935729b22c5b250a80d"
+   "file": "fm-momo2-a.jpg",
+   "url": "https://www.konami.com/games/momotetsu/2/s/img/top/ss/momo2-play_01.jpg"
+  },
+  {
+   "file": "fm-mc.jpg",
+   "url": "https://assets.nintendo.com/image/upload/f_jpg/q_auto/store/software/switch2/70010000119400/36619fd96e2d169e6bce5eda626ef7ede441b47b35206dc02259768fde70d79a"
+  },
+  {
+   "file": "fm3-metaphor.jpg",
+   "url": "https://assets.nintendo.com/image/upload/f_jpg/q_auto/store/software/switch2/70010000105915/00feb434632116bcc18650b8c001d59e67a600da0b2924d67323be41f2b1a26e"
+  },
+  {
+   "file": "fm-momo2-b.jpg",
+   "url": "https://www.konami.com/games/momotetsu/2/s/img/top/ss/west-east_03.jpg"
   }
  ],
  "rows": [
   {
    "rank": 1,
+   "title": "Grand Theft Auto VI",
+   "plat": "PS5",
+   "week": 200759,
+   "life": 200759,
+   "new": true,
+   "shot": [
+    "fm-gta6.jpg",
+    [
+     0.35,
+     0.6
+    ]
+   ],
+   "art": "fm-gta6-box.jpg"
+  },
+  {
+   "rank": 2,
    "title": "The Legend of Zelda:\nOcarina of Time",
    "plat": "Switch2",
-   "week": 86097,
-   "life": 623138,
+   "week": 35295,
+   "life": 658433,
    "new": false,
-   "was": 1,
    "shot": [
     "fm2-oot.jpg",
     [
@@ -77,127 +95,81 @@
      0.4
     ]
    ],
-   "art": "fm2-oot-box.jpg"
-  },
-  {
-   "rank": 2,
-   "title": "Metaphor: ReFantazio",
-   "plat": "Switch2",
-   "week": 11167,
-   "life": 11167,
-   "new": true,
-   "shot": [
-    "fm3-metaphor.jpg",
-    [
-     0.2,
-     0.45
-    ]
-   ]
+   "was": 1
   },
   {
    "rank": 3,
    "title": "Nintendo Switch Sports Resort",
    "plat": "Switch2",
-   "week": 11086,
-   "life": 115805,
+   "week": 10486,
+   "life": 126291,
    "new": false,
-   "was": 2,
    "shot": [
     "fm-ssr-a.jpg",
     [
      0.3,
      0.6
     ]
-   ]
+   ],
+   "was": 3
   },
   {
    "rank": 4,
    "title": "Rhythm Heaven Groove",
    "plat": "Switch",
-   "week": 7779,
-   "life": 1128423,
+   "week": 7830,
+   "life": 1136253,
    "new": false,
-   "was": 3,
    "shot": [
     "fm2-rhg.jpg",
     [
      0.3,
      0.6
     ]
-   ]
+   ],
+   "was": 4
   },
   {
    "rank": 5,
-   "title": "Minecraft Dungeons II",
-   "plat": "Switch",
-   "week": 4264,
-   "life": 4264,
-   "new": true,
-   "shot": [
-    "fm3-mcd2.jpg",
-    [
-     0.3,
-     0.6
-    ]
-   ]
-  },
-  {
-   "rank": 6,
    "title": "Tomodachi Life:\nLiving the Dream",
    "plat": "Switch",
-   "week": 3991,
-   "life": 1650334,
+   "week": 4570,
+   "life": 1654904,
    "new": false,
-   "was": 8,
    "shot": [
     "fm2-tl.jpg",
     [
      0.2,
      0.5
     ]
-   ]
+   ],
+   "was": 6
   },
   {
-   "rank": 7,
+   "rank": 6,
    "title": "Splatoon Raiders",
    "plat": "Switch2",
-   "week": 2863,
-   "life": 697678,
+   "week": 3077,
+   "life": 700755,
    "new": false,
-   "was": 11,
    "shot": [
     "fm3-splatoon-raiders.jpg",
     [
      0.1,
      0.4
     ]
-   ]
+   ],
+   "was": 7
   },
   {
-   "rank": 8,
-   "title": "Pikmin 4 Nintendo Switch 2 Edition\n+ Dandori Academy",
-   "plat": "Switch2",
-   "week": 2854,
-   "life": 2854,
-   "new": true,
-   "shot": [
-    "fm3-pikmin4.jpg",
-    [
-     0.35,
-     0.6
-    ]
-   ]
-  },
-  {
-   "rank": 9,
-   "title": "Minecraft",
-   "plat": "Switch2",
-   "week": 2630,
-   "life": 18212,
+   "rank": 7,
+   "title": "Momotaro Dentetsu 2:\nEast + West Japan",
+   "plat": "Switch",
+   "week": 2969,
+   "life": 390053,
    "new": false,
-   "was": 9,
    "shot": [
-    "fm-mc.jpg",
+    "fm-momo2-a.jpg",
     [
      0.3,
      0.6
@@ -205,17 +177,48 @@
    ]
   },
   {
-   "rank": 10,
-   "title": "FINAL FANTASY RESONANCE",
-   "plat": "PS5",
-   "week": 2543,
-   "life": 69895,
+   "rank": 8,
+   "title": "Minecraft",
+   "plat": "Switch2",
+   "week": 2869,
+   "life": 21081,
    "new": false,
-   "was": 6,
    "shot": [
-    "fm-ffr.jpg",
+    "fm-mc.jpg",
     [
-     0.35,
+     0.3,
+     0.6
+    ]
+   ],
+   "was": 9
+  },
+  {
+   "rank": 9,
+   "title": "Metaphor: ReFantazio",
+   "plat": "Switch2",
+   "week": 2426,
+   "life": 13593,
+   "new": false,
+   "shot": [
+    "fm3-metaphor.jpg",
+    [
+     0.2,
+     0.45
+    ]
+   ],
+   "was": 2
+  },
+  {
+   "rank": 10,
+   "title": "Momotaro Dentetsu 2\nNintendo Switch 2 Edition",
+   "plat": "Switch2",
+   "week": 2385,
+   "life": 331659,
+   "new": false,
+   "shot": [
+    "fm-momo2-b.jpg",
+    [
+     0.3,
      0.6
     ]
    ]
@@ -223,43 +226,28 @@
  ],
  "hardware": [
   {
-   "name": "Switch 2",
-   "week": 42402,
-   "life": 6616858,
-   "last": 53104
+   "name": "PS5",
+   "week": 41472,
+   "life": 7868730,
+   "last": 11136
   },
   {
-   "name": "PS5",
-   "week": 11136,
-   "life": 7827258,
-   "last": 11699
+   "name": "Switch 2",
+   "week": 36817,
+   "life": 6653675,
+   "last": 42402
   },
   {
    "name": "Switch",
-   "week": 3754,
-   "life": 37024880,
-   "last": 5148
+   "week": 4362,
+   "life": 37029242,
+   "last": 3754
   },
   {
    "name": "Xbox Series",
-   "week": 707,
-   "life": 710387,
-   "last": 1241
+   "week": 751,
+   "life": 711138,
+   "last": 707
   }
- ],
- "reel_check": [
-  {
-   "line": "Source",
-   "answer": "yes",
-   "evidence": "Famitsu 202611/94496 parsed in full with famitsu.py; last week 93799; every hardware family total equals last week total plus this week"
-  },
-  {
-   "line": "Not already posted",
-   "answer": "yes",
-   "evidence": "only the Production 2 Ocarina short (trailer, one game); no full chart for 9 to 15 Nov in Publer"
-  }
- ],
- "article": "https://www.famitsu.com/article/202611/94496",
- "article_id": 2026110094496,
- "previous": "https://www.famitsu.com/article/202611/93799"
+ ]
 }
