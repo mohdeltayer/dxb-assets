@@ -1,0 +1,446 @@
+{
+ "name": "ac-black-flag-resynced-treasure-hunt-games-press",
+ "out": "cards/2026-11/ac-black-flag-resynced-treasure-hunt-games-press-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot gate",
+   "detail": "shot 5 (ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 53.00 s): no character, creature, face or vehicle inside the 9:16 window (ground, sky or wall); re-aim or another stretch (crop fix) subject_empty",
+   "shot": 5
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 7 (ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 2.25 s): no character, creature, face or vehicle inside the 9:16 window (ground, sky or wall); re-aim or another stretch (crop fix) subject_empty",
+   "shot": 7
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 64 px on 3 lines (cut it to a few words next time): لعبة Black Flag Resynced\nكنز بقيمة 500 ألف دولار\nمستوحى من Assassin's Creed"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "drift: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "drift: kept as a crop, check waived"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "d",
+   "why": "audio split not applied (music stem not clean (leftover 10.6% > 5.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or "
+  }
+ ],
+ "job_to_pass_min": 10.3,
+ "at": "2026-11-26T18:20:49Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 starts at 0.0 s, the video at 0.87 s; its first 0.87 s are lost",
+  "first frame: shot 2 ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 starts at 0.0 s, the video at 0.87 s; its first 0.87 s are lost",
+  "first frame: shot 3 ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 starts at 0.0 s, the video at 0.87 s; its first 0.87 s are lost",
+  "first frame: shot 4 ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 starts at 0.0 s, the video at 0.87 s; its first 0.87 s are lost",
+  "first frame: shot 5 ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 starts at 0.0 s, the video at 0.87 s; its first 0.87 s are lost",
+  "first frame: shot 6 ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 starts at 0.0 s, the video at 0.87 s; its first 0.87 s are lost",
+  "first frame: shot 7 ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 starts at 0.0 s, the video at 0.87 s; its first 0.87 s are lost",
+  "first frame: shot 8 ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 starts at 0.0 s, the video at 0.87 s; its first 0.87 s are lost",
+  "first frame: shot 9 ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 starts at 0.0 s, the video at 0.87 s; its first 0.87 s are lost",
+  "length 22.5 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 10.6% > 5.0%); music_pct 15.3; leak_pct 10.6; cache {'hit': 0, 'miss': 5}; separate_secs 9.8; secs 13.1",
+  "render_job: audio split fallback: our bed (audio split not applied (music stem not clean (leftover 10.6% > 5.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.); bed:neon",
+  "smear check: exempt 2.40 to 8.60 s (our own cards)",
+  "render_job: lifeless: {\"score\": 13.3, \"still_share\": 0.165, \"longest_still\": 1.3, \"cuts_per_10s\": 3.57, \"held_under_text\": 0.027, \"secs\": 22.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 3 lines: the live path sets three lines at 60 px (estimate)"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 at 7.40 s for 3.8 s, focus 0.474"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 at 82.30 s for 2.3 s, focus 0.413"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 at 84.80 s for 2.3 s, focus 0.369"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 at 87.11 s for 2.2 s, focus 0.369"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 at 53.00 s for 2.2 s, focus 0.513"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 at 76.65 s for 2.4 s, focus 1.0"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 at 2.25 s for 2.4 s, focus 0.474"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "ac-black-flag-resynced-treasure-hunt-games-press-gameplay-trailer.mp4 at 54.78 s for 2.2 s, focus 0.435 (nothing free in ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4)"
+  },
+  {
+   "where": "shot 9",
+   "rule": "auto_shots",
+   "what": "ac-black-flag-resynced-treasure-hunt-games-press-gameplay-trailer.mp4 at 50.21 s for 2.2 s, focus 0.772 (nothing free in ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4)"
+  },
+  {
+   "where": "shot 6",
+   "rule": "subject_empty",
+   "what": "focus [[0.0, 1.0]] to 0.5: re-aimed (crop fix, 26 Nov 2026)",
+   "before": [
+    "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4",
+    76.65,
+    2.35,
+    [
+     [
+      0.0,
+      1.0
+     ]
+    ]
+   ],
+   "after": [
+    "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4",
+    76.65,
+    2.35,
+    0.5
+   ]
+  }
+ ],
+ "job_sha": "8ba4d1472df8853112f511bbd935d54324962866",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/ac-black-flag-resynced-treasure-hunt-games-press-look-1.jpg",
+  "cards/2026-11/ac-black-flag-resynced-treasure-hunt-games-press-look-2.jpg",
+  "cards/2026-11/ac-black-flag-resynced-treasure-hunt-games-press-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon (trailer sound refused: music stem not clean (leftover 10.6% > 5.0%))",
+ "shot_read": {
+  "secs": 83.4,
+  "files": {
+   "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4": {
+    "secs": 45.9,
+    "cached": false,
+    "stages": {
+     "decode": 20.3,
+     "autofocus": 39.0,
+     "ocr": 39.0,
+     "smear": 45.6,
+     "scenes": 45.8
+    },
+    "incomplete": null
+   },
+   "ac-black-flag-resynced-treasure-hunt-games-press-gameplay-trailer.mp4": {
+    "secs": 37.2,
+    "cached": false,
+    "stages": {
+     "decode": 16.9,
+     "autofocus": 31.2,
+     "ocr": 31.2,
+     "smear": 37.0,
+     "scenes": 37.2
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/ac-black-flag-resynced-treasure-hunt-games-press.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.2,
+  "fetch": 0.46,
+  "shots": 2.43,
+  "checks": 2.66,
+  "render": 2.47,
+  "after": 0.95,
+  "job": 8.97
+ },
+ "job_after_autofix": {
+  "name": "ac-black-flag-resynced-treasure-hunt-games-press",
+  "story": "2026-11-26-ac-black-flag-resynced-treasure-hunt-games-press",
+  "footage_source": "steam:3751950",
+  "kind_news": "update",
+  "story_class": "numbers",
+  "story_class_why": "a figure in the headline (500 ألف دولار) (kind update read from the text)",
+  "skin_why": "genre action adventure: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/ac-black-flag-resynced-treasure-hunt-games-press-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4",
+    "steam": 3751950,
+    "trailer": "SGF Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3751950"
+   },
+   {
+    "file": "ac-black-flag-resynced-treasure-hunt-games-press-gameplay-trailer.mp4",
+    "steam": 3751950,
+    "trailer": "Gameplay Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3751950"
+   }
+  ],
+  "shots": [
+   [
+    "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4",
+    7.4,
+    3.8,
+    [
+     [
+      0.0,
+      0.474
+     ]
+    ]
+   ],
+   [
+    "ac-black-flag-resynced-treasure-hunt-games-press-gfx-figure.png",
+    0.0,
+    4.2,
+    null
+   ],
+   [
+    "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4",
+    82.3,
+    2.31,
+    [
+     [
+      0.0,
+      0.413
+     ]
+    ]
+   ],
+   [
+    "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4",
+    84.8,
+    2.31,
+    [
+     [
+      0.0,
+      0.369
+     ]
+    ]
+   ],
+   [
+    "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4",
+    87.11,
+    2.2,
+    [
+     [
+      0.0,
+      0.369
+     ]
+    ]
+   ],
+   [
+    "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4",
+    53.0,
+    2.2,
+    [
+     [
+      0.0,
+      0.513
+     ]
+    ]
+   ],
+   [
+    "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4",
+    76.65,
+    2.35,
+    0.5
+   ],
+   [
+    "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4",
+    2.25,
+    2.35,
+    [
+     [
+      0.0,
+      0.474
+     ]
+    ]
+   ],
+   [
+    "ac-black-flag-resynced-treasure-hunt-games-press-gameplay-trailer.mp4",
+    54.78,
+    2.2,
+    [
+     [
+      0.0,
+      0.435
+     ]
+    ]
+   ],
+   [
+    "ac-black-flag-resynced-treasure-hunt-games-press-gameplay-trailer.mp4",
+    50.21,
+    2.2,
+    [
+     [
+      0.0,
+      0.772
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    2,
+    3,
+    [
+     [
+      "يضم الكنز عملات ذهبية\nبقيمة 350 ألف دولار",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    4,
+    5,
+    [
+     [
+      "وجمجمة كريستال\nبقيمة 150 ألف دولار",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    6,
+    7,
+    [
+     [
+      "وتبدأ المشاركة\nمن 34.99 جنيهًا إسترلينيًا،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    8,
+    9,
+    [
+     [
+      "ويفوز من يحدد موقع الكنز بدقة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    9,
+    "المصدر: بيان صحفي من الناشر عبر Games Press · اللقطات: Ubisoft",
+    {
+     "size": 30,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "أطلقت يوبيسوفت (Ubisoft) وشركة Unsolved Hunts مسابقة كنز دولية مستوحاة من Assassin's Creed Black Flag Resynced، وتبلغ قيمة الكنز المدفون في الكاريبي 500 ألف دولار. يضم الكنز عملات ذهبية بقيمة 350 ألف دولار وجمجمة كريستال بقيمة 150 ألف دولار. وتبدأ المشاركة من 34.99 جنيهًا إسترلينيًا، ويفوز من يحدد موقع الكنز بدقة.",
+  "headline": "لعبة Black Flag Resynced\nكنز بقيمة 500 ألف دولار\nمستوحى من Assassin's Creed",
+  "label": "رسمي",
+  "game": "Assassin's Creed Black Flag Resynced",
+  "game_short": "Black Flag Resynced",
+  "game_key": "assassin s creed black flag resynced",
+  "genre": [
+   "action adventure"
+  ],
+  "texts": {
+   "instagram": "رسمي: كنز حقيقي بقيمة 500 ألف دولار مستوحى من Assassin's Creed\n\nأطلقت يوبيسوفت (Ubisoft) وشركة أنسولفد هنتس (Unsolved Hunts) مسابقة كنز دولية مستوحاة من Assassin's Creed Black Flag Resynced، وتبلغ قيمة الكنز المدفون في الكاريبي 500 ألف دولار.\n\nيضم الكنز عملات ذهبية بقيمة 350 ألف دولار وجمجمة كريستال بقيمة 150 ألف دولار.\n\nوتبدأ المشاركة من 34.99 جنيهًا إسترلينيًا، ويفوز من يحدد موقع الكنز بدقة.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: بيان صحفي من الناشر.\n\n#ألعاب #أخبار_الألعاب #AssassinsCreed #Ubisoft",
+   "x": "رسمي: كنز حقيقي بقيمة 500 ألف دولار مدفون في الكاريبي ضمن مسابقة مستوحاة من Assassin's Creed Black Flag Resynced. المصدر: بيان صحفي من الناشر.",
+   "threads": "رسمي: كنز حقيقي بقيمة 500 ألف دولار مدفون في الكاريبي.\n\nأطلقت يوبيسوفت (Ubisoft) مسابقة مستوحاة من Assassin's Creed Black Flag Resynced، وتضم عملات ذهبية وجمجمة كريستال، وتبدأ المشاركة من 34.99 جنيهًا إسترلينيًا.\n\nالمصدر: بيان صحفي من الناشر"
+  },
+  "source": "بيان صحفي من الناشر عبر Games Press، ولقطات من يوبيسوفت (Ubisoft)",
+  "date": "26 Nov 2026",
+  "theme": "spectacle",
+  "style": null,
+  "template": "numbers",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4",
+   7.4
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Ubisoft and Unsolved Hunts launched Gold & Crystal, a real treasure hunt inspired by Assassin's Creed Black Flag Resynced, with a $500,000 chest buried in the Caribbean.",
+   "what_it_means_here": "A real-world prize of gold coins and a crystal skull for solving puzzles; entry starts at 34.99 pounds."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "numbers: a figure in the headline (500 ألف دولار) (kind update read from the text)",
+   "skin": "house: genre action adventure: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4 from the resolver (steam:3751950)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Games Press, 26 Nov 2026: Assassin's Creed Black Flag Resynced international treasure hunt (Ubisoft) (https://www.gamespress.com/en-US/ASSASSINS-CREED-BLACK-FLAG-RESYNCED-INTERNATIONAL-TREASURE-HUNT-IS-LIV); first report: Games Press release 26 Nov 2026 (dated 25 Nov, London)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 3751950 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "gfx": [
+   {
+    "file": "ac-black-flag-resynced-treasure-hunt-games-press-gfx-figure.png",
+    "kind": "fact",
+    "value": "500 ألف",
+    "note": "دولار"
+   }
+  ],
+  "ground_footage": [
+   "ac-black-flag-resynced-treasure-hunt-games-press-sgf-trailer.mp4",
+   4.0,
+   60.0
+  ],
+  "names_to_review": [
+   "Unsolved Hunts"
+  ]
+ }
+}
