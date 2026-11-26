@@ -8,7 +8,7 @@
  "skin_why": "genre rpg",
  "built_by": "server-slip",
  "render_lane": "server",
- "out": "cards/2026-11/witcher-4-launches-on-xbox-day-one-cdpr-vgc-reel-v1.mp4",
+ "out": "cards/2026-11/witcher-4-launches-on-xbox-day-one-cdpr-vgc-reel-v2.mp4",
  "split_fallback": "ladder",
  "footage": [
   {
@@ -277,7 +277,7 @@
   [
    0,
    13,
-   "المصدر: VGC · اللقطات: CD Projekt Red",
+   "المصدر: VGC · اللقطات: من The Witcher 3",
    {
     "size": 40,
     "band": true
@@ -379,5 +379,9 @@
   ]
  ],
  "layout": "showcase",
- "showcase_reason": "the trailer clashes with our text in a 9:16 crop: the shot scan found no clean stretch for 4 slot(s) (16:9 fallback, Mohammad 20 Nov 2026)"
+ "showcase_reason": "the trailer clashes with our text in a 9:16 crop: the shot scan found no clean stretch for 4 slot(s) (16:9 fallback, Mohammad 20 Nov 2026)",
+ "rerender": {
+  "reason": "factual_error",
+  "note": "Credit band must say the footage is from The Witcher 3 (it now says only CD Projekt Red), so viewers do not read the Witcher 3 Remastered clips as Witcher 4."
+ }
 }
