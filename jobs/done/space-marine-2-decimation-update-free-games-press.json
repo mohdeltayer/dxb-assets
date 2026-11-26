@@ -8,7 +8,7 @@
  "skin_why": "genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
  "built_by": "server-slip",
  "render_lane": "server",
- "out": "cards/2026-11/space-marine-2-decimation-update-free-games-press-reel-v1.mp4",
+ "out": "cards/2026-11/space-marine-2-decimation-update-free-games-press-reel-v2.mp4",
  "split_fallback": "ladder",
  "footage": [
   {
@@ -116,7 +116,7 @@
    7,
    [
     [
-     "كما يتضمن إعادة\nتصميم فئة Vanguard",
+     "كما يتضمن تغييرات\nعلى فئة Vanguard",
      {
       "size": 54
      }
@@ -135,7 +135,7 @@
    }
   ]
  ],
- "spoken": "صدر تحديث Decimation المجاني للعبة Warhammer 40,000: Space Marine 2 على PS5 و Xbox Series X|S والكمبيوتر. يضيف التحديث وضع Weekly Clash للعب ضد لاعبين، وقطاع Chaos Siege الجديد للموجات من 11 إلى 15، وستة أسلحة بطولية مجانية. كما يتضمن إعادة تصميم فئة Vanguard.",
+ "spoken": "صدر تحديث Decimation المجاني للعبة Warhammer 40,000: Space Marine 2 على PS5 و Xbox Series X|S والكمبيوتر. يضيف التحديث وضع Weekly Clash للعب ضد لاعبين، وقطاع Chaos Siege الجديد للموجات من 11 إلى 15، وستة أسلحة بطولية مجانية. كما يتضمن تغييرات على فئة Vanguard.",
  "headline": "تحديث Decimation المجاني\nللعبة Space Marine 2",
  "label": "رسمي",
  "game": "Warhammer 40,000: Space Marine 2",
@@ -194,5 +194,9 @@
   5,
   6,
   7
- ]
+ ],
+ "rerender": {
+  "reason": "factual_error",
+  "note": "Source says Vanguard changes, not a redesign: replace 'إعادة تصميم فئة Vanguard' with 'تغييرات على فئة Vanguard' in the last line and the spoken text."
+ }
 }

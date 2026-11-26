@@ -1,6 +1,6 @@
 {
  "name": "space-marine-2-decimation-update-free-games-press",
- "out": "cards/2026-11/space-marine-2-decimation-update-free-games-press-reel-v1.mp4",
+ "out": "cards/2026-11/space-marine-2-decimation-update-free-games-press-reel-v2.mp4",
  "verdict": "pass",
  "warnings": [
   {
@@ -126,55 +126,19 @@
    "why": "space-marine-2-decimation-update-free-games-press-space-marine-2-confrontation-update-trailer.mp4 at 14.05 s: moved off a repeated moment (respread)"
   }
  ],
- "job_to_pass_min": 10.6,
- "at": "2026-11-26T17:29:21Z",
+ "job_to_pass_min": 10.0,
+ "at": "2026-11-26T22:18:30Z",
  "findings": [],
  "notes": [
   "first frame: shot 0 space-marine-2-decimation-update-free-games-press-space-marine-2-confrontation-update-trailer.mp4 starts at 0.0 s, the video at 2.94 s; its first 2.94 s are lost",
   "length 17.5 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: applied; music_pct 84.1; leak_pct 0.7; cache {'hit': 0, 'miss': 5}; separate_secs 8.2; secs 12.1",
+  "render_job: audio split: applied; music_pct 84.1; leak_pct 0.7; cache {'hit': 5, 'miss': 0}; separate_secs 3.0; secs 5.0",
   "render_job: lifeless: {\"score\": 11.3, \"still_share\": 0.121, \"longest_still\": 1.4, \"cuts_per_10s\": 5.17, \"held_under_text\": 0.0, \"secs\": 17.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
   "estimate: headline: 24 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
  ],
- "autofixed": [
-  {
-   "where": "lines 1-3",
-   "rule": "lines",
-   "what": "line 2 does not fit two visual lines at 54 px: cut again as 3 full sentences or clauses across the same shots (23 Nov 2026)",
-   "before": [
-    "يضيف التحديث وضع Weekly Clash للعب ضد لاعبين،",
-    "وقطاع Chaos Siege الجديد للموجات من 11 إلى 15، وستة أسلحة بطولية مجانية",
-    "كما يتضمن إعادة تصميم فئة Vanguard"
-   ],
-   "after": [
-    "يضيف التحديث وضع Weekly Clash\nللعب ضد لاعبين،",
-    "وقطاع Chaos Siege الجديد للموجات\nمن 11 إلى 15، وستة أسلحة بطولية مجانية",
-    "كما يتضمن إعادة\nتصميم فئة Vanguard"
-   ]
-  },
-  {
-   "where": "line 2",
-   "rule": "text",
-   "what": "wider than the safe zone at 54 px: rewrapped, 50 px",
-   "before": "وقطاع Chaos Siege الجديد للموجات\nمن 11 إلى 15، وستة أسلحة بطولية مجانية",
-   "after": "وقطاع Chaos Siege الجديد للموجات\nمن 11 إلى 15، وستة أسلحة بطولية مجانية"
-  },
-  {
-   "where": "credit 1",
-   "rule": "credit_width",
-   "what": "set on two lines at 40 px (was 40 px, too wide for the safe zone)",
-   "before": {
-    "text": "المصدر: بيان صحفي من الناشر عبر Games Press،\nولقطات من Saber Interactive",
-    "size": 40
-   },
-   "after": {
-    "text": "المصدر: بيان صحفي من الناشر عبر Games Press\nاللقطات: Saber Interactive",
-    "size": 40
-   }
-  }
- ],
- "job_sha": "da714ae3e3768d81bfa73ea8b138155eb49f13ec",
- "dispatches": 2,
+ "autofixed": [],
+ "job_sha": "2bc4897e392569bfebe9ee0d3b6fa3000ff9be60",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -190,11 +154,11 @@
  "person_shown": "n/a",
  "sound": "trailer",
  "shot_read": {
-  "secs": 46.3,
+  "secs": 0.4,
   "files": {
    "space-marine-2-decimation-update-free-games-press-space-marine-2-confrontation-update-trailer.mp4": {
-    "secs": 45.9,
-    "cached": false,
+    "secs": 0.0,
+    "cached": true,
     "stages": {
      "decode": 18.9,
      "autofocus": 41.9,
@@ -209,211 +173,12 @@
  "job_path": "jobs/done/space-marine-2-decimation-update-free-games-press.json",
  "stage_minutes": {
   "queue": 0.03,
-  "setup": 0.18,
-  "fetch": 0.71,
+  "setup": 0.17,
+  "fetch": 0.49,
   "shots": 5.06,
   "checks": 0.31,
-  "render": 2.55,
-  "after": 0.92,
-  "upload": 0.25,
-  "job": 9.57
- },
- "job_after_autofix": {
-  "name": "space-marine-2-decimation-update-free-games-press",
-  "story": "2026-11-26-space-marine-2-decimation-update-free-games-press",
-  "footage_source": "steam:2183900",
-  "kind_news": "update",
-  "story_class": "trailer",
-  "story_class_why": "kind update",
-  "skin_why": "genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
-  "built_by": "server-slip",
-  "render_lane": "server",
-  "out": "cards/2026-11/space-marine-2-decimation-update-free-games-press-reel-v1.mp4",
-  "split_fallback": "ladder",
-  "footage": [
-   {
-    "file": "space-marine-2-decimation-update-free-games-press-space-marine-2-confrontation-update-trailer.mp4",
-    "steam": 2183900,
-    "trailer": "Space Marine 2 - Confrontation Update Trailer",
-    "start": 0,
-    "seconds": 120,
-    "trailer_id": "2183900"
-   },
-   {
-    "file": "space-marine-2-decimation-update-free-games-press-warhammer-40-000-space-marine-2-decimation-update-trailer.mp4",
-    "steam": 2183900,
-    "trailer": "Warhammer 40,000: Space Marine 2 - Decimation Update Trailer",
-    "start": 0,
-    "seconds": 120,
-    "trailer_id": "2183900"
-   },
-   {
-    "file": "space-marine-2-decimation-update-free-games-press-warhammer-40-000-space-marine-2-anniversary-update-ii-traile.mp4",
-    "steam": 2183900,
-    "trailer": "Warhammer 40,000: Space Marine 2 - Anniversary Update II Trailer",
-    "start": 0,
-    "seconds": 120,
-    "trailer_id": "2183900"
-   }
-  ],
-  "shots": [
-   [
-    "space-marine-2-decimation-update-free-games-press-space-marine-2-confrontation-update-trailer.mp4",
-    0.0,
-    3.8,
-    null
-   ],
-   [
-    "space-marine-2-decimation-update-free-games-press-space-marine-2-confrontation-update-trailer.mp4",
-    0.0,
-    2.46,
-    null
-   ],
-   [
-    "space-marine-2-decimation-update-free-games-press-space-marine-2-confrontation-update-trailer.mp4",
-    0.0,
-    2.46,
-    null
-   ],
-   [
-    "space-marine-2-decimation-update-free-games-press-space-marine-2-confrontation-update-trailer.mp4",
-    0.0,
-    2.39,
-    null
-   ],
-   [
-    "space-marine-2-decimation-update-free-games-press-space-marine-2-confrontation-update-trailer.mp4",
-    0.0,
-    2.39,
-    null
-   ],
-   [
-    "space-marine-2-decimation-update-free-games-press-space-marine-2-confrontation-update-trailer.mp4",
-    0.0,
-    2.39,
-    null
-   ],
-   [
-    "space-marine-2-decimation-update-free-games-press-space-marine-2-confrontation-update-trailer.mp4",
-    0.0,
-    2.2,
-    null
-   ],
-   [
-    "space-marine-2-decimation-update-free-games-press-space-marine-2-confrontation-update-trailer.mp4",
-    0.0,
-    2.2,
-    null
-   ]
-  ],
-  "lines": [
-   [
-    1,
-    2,
-    [
-     [
-      "يضيف التحديث وضع Weekly Clash\nللعب ضد لاعبين،",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ],
-   [
-    3,
-    5,
-    [
-     [
-      "وقطاع Chaos Siege الجديد للموجات\nمن 11 إلى 15، وستة أسلحة بطولية مجانية",
-      {
-       "size": 50
-      }
-     ]
-    ]
-   ],
-   [
-    6,
-    7,
-    [
-     [
-      "كما يتضمن إعادة\nتصميم فئة Vanguard",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ]
-  ],
-  "credits": [
-   [
-    0,
-    7,
-    "المصدر: بيان صحفي من الناشر عبر Games Press\nاللقطات: Saber Interactive",
-    {
-     "size": 40,
-     "band": true
-    }
-   ]
-  ],
-  "spoken": "صدر تحديث Decimation المجاني للعبة Warhammer 40,000: Space Marine 2 على PS5 و Xbox Series X|S والكمبيوتر. يضيف التحديث وضع Weekly Clash للعب ضد لاعبين، وقطاع Chaos Siege الجديد للموجات من 11 إلى 15، وستة أسلحة بطولية مجانية. كما يتضمن إعادة تصميم فئة Vanguard.",
-  "headline": "تحديث Decimation المجاني\nللعبة Space Marine 2",
-  "label": "رسمي",
-  "game": "Warhammer 40,000: Space Marine 2",
-  "game_short": "Space Marine 2",
-  "game_key": "warhammer 40 000 space marine ii",
-  "genre": [
-   "action"
-  ],
-  "texts": {
-   "instagram": "رسمي: تحديث Decimation المجاني للعبة Space Marine 2 صدر\n\nأعلنت فوكس إنترتينمنت (Focus Entertainment) وسيبر إنتراكتيف (Saber Interactive) صدور تحديث Decimation المجاني للعبة Warhammer 40,000: Space Marine 2 على PS5 وXbox Series X|S والكمبيوتر.\n\nيضيف التحديث وضع Weekly Clash للعب ضد لاعبين، وقطاع Chaos Siege الجديد للموجات من 11 إلى 15، وستة أسلحة بطولية مجانية.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: بيان صحفي من الناشر.\n\n#ألعاب #أخبار_الألعاب #SpaceMarine2 #Warhammer40K",
-   "x": "رسمي: صدر تحديث Decimation المجاني للعبة Warhammer 40,000: Space Marine 2، ويضيف وضع Weekly Clash وقطاع Chaos Siege وستة أسلحة بطولية مجانية. المصدر: بيان صحفي من الناشر.",
-   "threads": "رسمي: صدر تحديث Decimation المجاني للعبة Space Marine 2.\n\nيضيف وضع Weekly Clash للعب ضد لاعبين، وقطاع Chaos Siege الجديد، وستة أسلحة بطولية مجانية.\n\nالمصدر: بيان صحفي من الناشر"
-  },
-  "source": "بيان صحفي من الناشر عبر Games Press، ولقطات من Saber Interactive",
-  "date": "26 Nov 2026",
-  "theme": "gold",
-  "style": null,
-  "template": "trailer",
-  "skin": "house",
-  "cut": false,
-  "track": [
-   "space-marine-2-decimation-update-free-games-press-space-marine-2-confrontation-update-trailer.mp4",
-   0.0
-  ],
-  "track_from_first_shot": true,
-  "angle": {
-   "why_now": "Focus Entertainment and Saber Interactive released the free Decimation update for Space Marine 2 on 26 Nov.",
-   "what_it_means_here": "A new weekly PvP mode, a new Chaos Siege sector and six free heroic weapons."
-  },
-  "decision_log": {
-   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
-   "template": "trailer: kind update",
-   "skin": "house: genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
-   "footage": "space-marine-2-decimation-update-free-games-press-space-marine-2-confrontation-update-trailer.mp4 from the resolver (steam:2183900)",
-   "shots": "server-picked clean stretches in source order (autoshots)",
-   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
-  },
-  "reel_check": {
-   "source read and first report noted": "yes: Games Press, 26 Nov 2026: Warhammer 40,000: Space Marine 2's Decimation Update is out (https://www.gamespress.com/en-US/Warhammer-40000-Space-Marine-2s-Decimation-Update-is-out); first report: Games Press 26 Nov 2026 (15:53 UTC)",
-   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
-   "angle before lines": "yes: angle in the slip",
-   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
-   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
-   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
-   "footage first, official": "yes: steam 2183900 from the resolver, decode clean",
-   "credit on every clip": "yes: one credit over every shot",
-   "sound": "yes: trailer sound from the first shot, split per shot on the server",
-   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
-  },
-  "shots_auto": [
-   0,
-   1,
-   2,
-   3,
-   4,
-   5,
-   6,
-   7
-  ]
+  "render": 2.35,
+  "after": 0.93,
+  "job": 9.17
  }
 }
