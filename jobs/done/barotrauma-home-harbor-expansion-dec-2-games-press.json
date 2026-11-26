@@ -8,7 +8,7 @@
  "skin_why": "genre simulation: its kit is not built yet (skins.KITS scifi, fantasy)",
  "built_by": "server-slip",
  "render_lane": "server",
- "out": "cards/2026-11/barotrauma-home-harbor-expansion-dec-2-games-press-reel-v1.mp4",
+ "out": "cards/2026-11/barotrauma-home-harbor-expansion-dec-2-games-press-reel-v2.mp4",
  "split_fallback": "ladder",
  "footage": [
   {
@@ -214,5 +214,9 @@
   "credit on every clip": "yes: one credit over every shot",
   "sound": "yes: trailer sound from the first shot, split per shot on the server",
   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ },
+ "rerender": {
+  "reason": "unclear_text",
+  "note": "Headline in the job differs from the slip and reads scrambled (Latin name and digit inside an RTL line, date order broken); restore the slip headline."
  }
 }
