@@ -158801,5 +158801,153 @@
   "sound": "trailer",
   "footage": true,
   "upload_secs": 5.0
+ },
+ {
+  "name": "metroid-dread-physical-restock-us-nintendo-life-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-26T02:20Z",
+  "stages": {
+   "checks": 2.6,
+   "montage": 15.5,
+   "text": 19.6,
+   "audio": 0.5,
+   "outro": 19.6
+  },
+  "total": 58.0,
+  "lane": "runner",
+  "queued_at": "2026-11-26T02:19Z",
+  "finished_at": "2026-11-26T02:20Z",
+  "render_min": 0.97,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "metroid-dread-physical-restock-us-nintendo-life-nintendo-1.mp4",
+    "start": 22.16,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.19,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 1,
+    "file": "metroid-dread-physical-restock-us-nintendo-life-nintendo-1.mp4",
+    "start": 85.38,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.19,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 2,
+    "file": "metroid-dread-physical-restock-us-nintendo-life-nintendo-1.mp4",
+    "start": 155.71,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.19,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 3,
+    "file": "metroid-dread-physical-restock-us-nintendo-life-nintendo-1.mp4",
+    "start": 197.67,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.19,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 4,
+    "file": "metroid-dread-physical-restock-us-nintendo-life-nintendo-1.mp4",
+    "start": 221.35,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.19,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   }
+  ],
+  "source_summary": {
+   "min_height": 720,
+   "max_zoom": 2.67,
+   "lowbit_shots": 5
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 7.3,
+   "audio_secs": 29.9,
+   "music_pct": 8.2,
+   "leak_pct": 14.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 6
+   },
+   "reason": "music stem not clean (leftover 14.0% > 5.0%)",
+   "secs": 10.1,
+   "ladder": "d",
+   "fallback": "bed:neon_c"
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 8.18,
+   "held_under_text": 0.0,
+   "secs": 11.0,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 12.1,
+   "shots": 35.2,
+   "checks": 42.3,
+   "render": 68.7,
+   "after": 18.6
+  },
+  "softgate": {
+   "warnings": 7,
+   "ladder": [
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "d",
+     "why": "audio split not applied (music stem not clean (leftover 14.0% > 5.0%)) on a trailer track under 4 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or "
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 177,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1472,
+  "peak_mem_mb": 4545,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61097,
+  "peak_disk_mb": 62971,
+  "min_disk_free_mb": 84825,
+  "setup_min": 0.5,
+  "story": "metroid-dread-physical-restock-us-nintendo-life"
  }
 ]
