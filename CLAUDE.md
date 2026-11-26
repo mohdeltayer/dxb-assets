@@ -188,6 +188,23 @@ word moves to the front), shorten a headline too long for three lines at 60 px (
 the news word and the game name), and fix em dashes, Arabic-Indic digits, flipping signs and hashtags on X and Threads.
 The grammar review's hash is checked against the editor's text, before autofix. [Text is fixed, never refused]
 
+**Crop fix: every shot framed, never refused** (Mohammad, 26 Nov 2026, after the Dragon Quest Monsters Reel: the monster
+half out of the frame on the right, empty desert held for 5 s, HUD text cut at the left edge). Before the render,
+`shotgate.frame_problems` reads three frames (start, middle, end) of the 9:16 window every footage shot uses, and the
+server fixes what it finds:
+1. Subject: a character, creature, face or vehicle cut by the window edge, or a window with no subject (ground, sky or
+   wall), is re-aimed on the subject, then moved to the nearest stretch of the same trailer that has one (up to 5 s
+   either way); if neither works, the Reel takes the 16:9 showcase layout. Never a half face or an empty frame.
+2. Stylised and cartoon games (monsters, mascots, anime, Nintendo; `shotgate.stylised`: the job's genre or game name,
+   or `"stylised": true/false`): the person, vehicle and animal detector cannot see their characters, so the Reel takes
+   the 16:9 showcase, not a saliency guess. A character detector for stylised art is the next step.
+3. HUD or on-screen text crossing the window edge: re-aim, another stretch, else the showcase.
+4. No footage shot over 4 s unless it moves and its subject stays in the window: longer shots are trimmed to 4 s and
+   the time goes to a neighbouring shot that stays clean.
+The showcase covers the whole Reel (the layout's bands carry the headline and lines), not one shot. Autofixes, never
+refusals; a long shot no trim could fix is a warning. A shot checked by eye can be waived with
+`"frame_ok": [[file, start, reason]]`. [Crop fix, 26 Nov 2026]
+
 **Template by story kind** (21 Nov; the slip states its kind, `templates/storykind.py` picks): numbers (sales, scores,
 charts, player counts, results) take the numbers template, a figure card counting up on the game's own moving footage
 after the hook; people (interview, quote, hire, departure) take the people template; debate takes hook and fact, one
