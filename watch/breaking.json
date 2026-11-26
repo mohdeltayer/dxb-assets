@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-26T16:52:09Z",
- "seq": 905,
+ "generated_at": "2026-11-26T17:52:08Z",
+ "seq": 906,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -304,72 +304,13 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 868
-  },
-  {
-   "id": 23421,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Arctic Drive XBOX Release Trailer",
-   "url": "https://www.youtube.com/watch?v=HzV7t48RACM",
-   "published": "2026-11-25T17:24Z",
-   "first_seen": "2026-11-25T17:40:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/HzV7t48RACM/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=HzV7t48RACM"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 866
-  },
-  {
-   "id": 23400,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Rayman Legends Retold - Story Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=pH4wT5kdsC8",
-   "published": "2026-11-25T17:00Z",
-   "first_seen": "2026-11-25T17:20:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/pH4wT5kdsC8/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=pH4wT5kdsC8"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 865
-  },
-  {
-   "id": 23385,
-   "source": "Nintendo of America (YouTube)",
-   "source_kind": "youtube",
-   "title": "Treat yo' self. 🍩",
-   "url": "https://www.youtube.com/shorts/5_GJqaYbCY4",
-   "published": "2026-11-25T17:00Z",
-   "first_seen": "2026-11-25T17:15:04Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/5_GJqaYbCY4/hqdefault.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 864
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-26T16:50:14Z",
+  "last_poll_at": "2026-11-26T17:50:04Z",
   "sources_enabled": 101,
-  "sources_ok": 99,
+  "sources_ok": 101,
   "sources_failing": 0,
   "failed": []
  }
