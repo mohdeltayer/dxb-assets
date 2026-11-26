@@ -1,0 +1,30 @@
+{
+ "story": "2026-11-26-metroid-dread-physical-restock-us-nintendo-life",
+ "out": "cards/2026-11/metroid-dread-physical-restock-us-nintendo-life-reel-v1.mp4",
+ "verdict": "fix",
+ "reason": "factual_error",
+ "fix": "On-screen credit names only Nintendo Life, which reads as the footage source; it must say the footage is from the Nintendo store page.",
+ "reasons": [
+  "label تقرير and outlet named: true",
+  "headline, price, Switch 2 and 28 Jan 2027 true against Nintendo Life",
+  "bidi of Metroid Dread / Metroid Ravenous / Switch 2 renders correctly",
+  "clear to an Arab reader",
+  "no graphic content",
+  "credit does not say footage is from the Nintendo store page (only Instagram caption does)"
+ ],
+ "job_patch": {
+  "credits": [
+   [
+    0,
+    4,
+    "المصدر: موقع نينتيندو لايف (Nintendo Life)\nاللقطات: صفحة اللعبة على متجر نينتيندو",
+    {
+     "size": 38,
+     "band": true
+    }
+   ]
+  ]
+ },
+ "at": "2026-11-26T02:32:24Z",
+ "by": "director-p2"
+}
