@@ -1045,7 +1045,7 @@ half out of the frame on the right, empty desert held for 5 s, HUD text cut at t
 `shotgate.frame_problems` reads three frames (start, middle, end) of the 9:16 window every footage shot uses, and the
 server fixes what it finds:
 1. Subject: a character, creature, face or vehicle cut by the window edge, or a window with no subject (ground, sky or
-   wall), is re-aimed on the subject, then moved to the nearest stretch of the same trailer that has one (up to 5 s
+   wall), is re-aimed on the subject, then moved to the nearest stretch of the same trailer that has one (up to 3 s
    either way); if neither works, the Reel takes the 16:9 showcase layout. Never a half face or an empty frame.
 2. Stylised and cartoon games (monsters, mascots, anime, Nintendo; `shotgate.stylised`: the job's genre or game name,
    or `"stylised": true/false`): the person, vehicle and animal detector cannot see their characters, so the Reel takes

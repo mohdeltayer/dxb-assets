@@ -4275,7 +4275,7 @@ on-screen text crossing the window edge gets the same fix; no shot over 4 s unle
 Autofixes, not refusals.
 Built: `shotgate.frame_problems` (rules subject_unseen, subject_empty, subject_text_cut, shot_long), `shotgate.stylised`,
 autofix attempts (subject_unseen: none, the showcase; subject_empty and subject_text_cut: focus 0.5, 0.3, 0.7, 0.15,
-0.85, 0, 1, then shifts of 0.5 to 5 s; shot_long: trim to 4 s and fill a clean neighbour), and render_job's gate
+0.85 at first, now 0.5, 0.3, 0.7, then shifts of 1 to 3 s, all screened in one detector pass under a 45 s budget per job; shot_long: trim to 4 s and fill a clean neighbour), and render_job's gate
 ladder (unfixed subject problems take the showcase; an unfixed long shot is a warning). The showcase is per Reel, not
 per shot: its bands carry the headline and lines. The character detector for stylised art is not built: the showcase
 is the fallback Mohammad allowed. Texture measures (colour dominance, edge density) did not separate the desert from a

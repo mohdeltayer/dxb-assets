@@ -28,7 +28,7 @@ class Attempts(unittest.TestCase):
         a = AF._attempts({'rule': 'subject_empty'}, self.sh)
         kinds = [k for k, *_ in a]
         self.assertEqual(kinds[0], 'focus'); self.assertIn('shift', kinds)
-        self.assertLessEqual(max(abs(c[1] - 10.0) for k, c, _ in a if k == 'shift'), AF.SHIFT + 1e-6)
+        self.assertLessEqual(max(abs(c[1] - 10.0) for k, c, _ in a if k == 'shift'), 3.0 + 1e-6)
 
     def test_text_cut_reaims(self):
         a = AF._attempts({'rule': 'subject_text_cut'}, ['x.mp4', 10.0, 3.0, 0.25])

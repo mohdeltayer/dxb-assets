@@ -296,11 +296,11 @@ def _attempts(p, sh):
             out.append(('trim', [f, st, safe, fo], f'trimmed from {secs:.2f} to {safe:.2f} s: no shot over 4 s unless it '
                         'moves with its subject in the window (crop fix, 26 Nov 2026)'))
     elif p['rule'] in ('subject_empty', 'subject_text_cut'):
-        for x in (0.5, 0.3, 0.7, 0.15, 0.85):  # re-aim the window first, then another stretch
+        for x in (0.5, 0.3, 0.7):  # re-aim the window first, then another stretch
             if fo is None or (not isinstance(fo, list) and abs(float(fo) - x) > 0.01) or isinstance(fo, list):
                 out.append(('focus', [f, st, secs, x], f'focus {json.dumps(fo)} to {x}: re-aimed (crop fix, 26 Nov 2026)'))
-        k = 1.0                            # whole seconds: each attempt reads frames, the detector and OCR again
-        while k <= SHIFT + 1e-6:
+        k = 1.0                            # whole seconds, up to 3 s: each candidate reads frames, the detector and OCR
+        while k <= 3.0 + 1e-6:
             for s in (round(st + k, 2), round(st - k, 2)):
                 if s >= 0:
                     out.append(('shift', [f, s, secs, fo], f'moved from {st:.2f} to {s:.2f} s, the nearest stretch with '
@@ -325,7 +325,7 @@ def _attempts(p, sh):
 
 
 CROP_RULES = ('subject_empty', 'subject_text_cut')
-CROP_BUDGET = 90           # s per job for the crop fix's re-aim and shift reads; past it the shot takes the showcase
+CROP_BUDGET = 45           # s per job for the crop fix's re-aim and shift reads; past it the shot takes the showcase
 CROP_KEEP = 2              # candidates that read clean are confirmed with the full gate, at most this many
 _CROP_SPENT = [0.0]
 
@@ -340,9 +340,7 @@ def _crop_screen(job, tries, t_start):
     t0 = time.time()
     try:
         cands = [list(c) for _k, c, _w in tries]
-        bad = {int(p['where'].split()[1]) for p in SG.frame_problems(job, cands)}
-        tm, _ = SG.timing_problems(job, cands)
-        bad |= {int(p['where'].split()[1]) for p in tm}
+        bad = {int(p['where'].split()[1]) for p in SG.frame_problems(job, cands)}   # the full gate confirms timing
     finally:
         _CROP_SPENT[0] += time.time() - t0
     return [t for n, t in enumerate(tries) if n not in bad][:CROP_KEEP]
