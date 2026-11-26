@@ -8,7 +8,7 @@
  "skin_why": "genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
  "built_by": "server-slip",
  "render_lane": "server",
- "out": "cards/2026-11/metroid-dread-physical-restock-us-nintendo-life-reel-v1.mp4",
+ "out": "cards/2026-11/metroid-dread-physical-restock-us-nintendo-life-reel-v2.mp4",
  "split_fallback": "ladder",
  "footage": [
   {
@@ -111,9 +111,9 @@
   [
    0,
    4,
-   "المصدر: موقع نينتيندو لايف (Nintendo Life)",
+   "المصدر: Nintendo Life · اللقطات: صفحة اللعبة على متجر نينتيندو",
    {
-    "size": 40,
+    "size": 32,
     "band": true
    }
   ]
@@ -167,5 +167,9 @@
   "credit on every clip": "yes: one credit over every shot",
   "sound": "yes: trailer sound from the first shot, split per shot on the server",
   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ },
+ "rerender": {
+  "reason": "factual_error",
+  "note": "On-screen credit names only Nintendo Life, which reads as the footage source; it must say the footage is from the Nintendo store page."
  }
 }
