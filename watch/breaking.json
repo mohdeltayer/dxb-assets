@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-26T14:30:15Z",
- "seq": 899,
+ "generated_at": "2026-11-26T14:40:11Z",
+ "seq": 900,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 24223,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Hitman World of Assassination - Bawma Elusive Target Launch Trailer | PS5 & PS VR2 Games",
+   "url": "https://www.youtube.com/watch?v=y3E0aK1-C2Y",
+   "published": "2026-11-26T14:30Z",
+   "first_seen": "2026-11-26T14:40:05Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/y3E0aK1-C2Y/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=y3E0aK1-C2Y"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 900
+  }
+ ],
+ "recent": [
   {
    "id": 24194,
    "source": "PlayStation (YouTube)",
@@ -25,9 +48,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 899
-  }
- ],
- "recent": [
+  },
   {
    "id": 24193,
    "source": "PlayStation (YouTube)",
@@ -409,9 +430,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-26T14:30:15Z",
+  "last_poll_at": "2026-11-26T14:40:05Z",
   "sources_enabled": 101,
-  "sources_ok": 101,
+  "sources_ok": 100,
   "sources_failing": 0,
   "failed": []
  }
