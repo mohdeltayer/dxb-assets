@@ -157791,5 +157791,236 @@
   "setup_min": 1.07,
   "story": "ps-plus-december-2026-monthly-games-playstation-blog",
   "upload_secs": 7.0
+ },
+ {
+  "name": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gaming-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-26T00:35Z",
+  "stages": {
+   "checks": 8.8,
+   "montage": 22.4,
+   "text": 21.0,
+   "audio": 0.4,
+   "outro": 10.2
+  },
+  "total": 62.8,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-26T00:34Z",
+  "finished_at": "2026-11-26T00:35Z",
+  "render_min": 1.05,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4",
+    "start": 8.52,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.8,
+    "rows": 818,
+    "zoom": 2.35,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4",
+    "start": 25.22,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.8,
+    "rows": 818,
+    "zoom": 2.35,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4",
+    "start": 41.83,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.8,
+    "rows": 818,
+    "zoom": 2.35,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4",
+    "start": 58.35,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.8,
+    "rows": 818,
+    "zoom": 2.35,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4",
+    "start": 74.94,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.8,
+    "rows": 818,
+    "zoom": 2.35,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4",
+    "start": 93.95,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.8,
+    "rows": 818,
+    "zoom": 2.35,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4",
+    "start": 106.62,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 5.8,
+    "rows": 818,
+    "zoom": 2.35,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 2.35,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 2.6,
+   "audio_secs": 43.7,
+   "music_pct": 23.3,
+   "leak_pct": 44.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 7,
+    "miss": 0
+   },
+   "reason": "music stem not clean (leftover 44.4% > 5.0%)",
+   "secs": 3.6,
+   "ladder": "d",
+   "fallback": "bed:neon_d"
+  },
+  "lifeless": {
+   "score": 8.0,
+   "still_share": 0.123,
+   "longest_still": 0.6,
+   "cuts_per_10s": 3.68,
+   "held_under_text": 0.0,
+   "secs": 16.3,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 26.8,
+   "shots": 306.8,
+   "checks": 5.3,
+   "render": 105.6,
+   "after": 33.5
+  },
+  "softgate": {
+   "warnings": 3,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 0,
+     "step": "a",
+     "why": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4 at 8.52 s for 3.8 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 1,
+     "step": "a",
+     "why": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4 at 25.22 s for 2.56 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4 at 41.83 s for 2.56 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4 at 58.35 s for 2.74 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4 at 74.94 s for 2.74 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4 at 93.95 s for 2.2 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4 at 106.62 s for 2.2 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "b",
+     "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "a",
+     "why": "scan cap: 7 automatic slot(s) from the library or evenly spaced"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "d",
+     "why": "audio split not applied (music stem not clean (leftover 44.4% > 5.0%)) on a trailer track under 6 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or "
+    }
+   ]
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 478,
+  "queue_wait_secs": 1,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1249,
+  "peak_mem_mb": 2381,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 74760,
+  "peak_disk_mb": 75873,
+  "min_disk_free_mb": 170233,
+  "setup_min": 0.18,
+  "story": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gaming",
+  "job_sha": "7d762e64f6347da432daf8ff450699c4bf338d32",
+  "dispatches": 2,
+  "sound": "bed:neon_d (trailer sound refused: music stem not clean (leftover 44.4% > 5.0%))",
+  "footage": true
  }
 ]

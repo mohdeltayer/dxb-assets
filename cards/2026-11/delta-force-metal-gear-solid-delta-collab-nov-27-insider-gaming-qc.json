@@ -9,11 +9,11 @@
   },
   {
    "stage": "headline",
-   "detail": "headline too long for 2 lines at 72 px; set at 72 px on 3 lines (cut it to a few words next time): لعبة Delta Force\nتقرير: مع Metal Gear Solid في 27 نوفمبر"
+   "detail": "headline too long for 2 lines at 72 px; set at 60 px on 2 lines (cut it to a few words next time): لعبة Delta Force\nتقرير: تعاون مع Metal Gear Solid"
   },
   {
    "stage": "headline",
-   "detail": "headline too long for 2 lines at 72 px; set at 72 px on 3 lines (cut it to a few words next time): لعبة Delta Force\nتقرير: مع Metal Gear Solid في 27 نوفمبر"
+   "detail": "headline too long for 2 lines at 72 px; set at 60 px on 2 lines (cut it to a few words next time): لعبة Delta Force\nتقرير: تعاون مع Metal Gear Solid"
   }
  ],
  "ladder": [
@@ -126,8 +126,8 @@
    "why": "audio split not applied (music stem not clean (leftover 44.4% > 5.0%)) on a trailer track under 6 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or "
   }
  ],
- "job_to_pass_min": 9.9,
- "at": "2026-11-26T00:23:18Z",
+ "job_to_pass_min": 8.9,
+ "at": "2026-11-26T00:36:38Z",
  "findings": [],
  "notes": [
   "first frame: shot 0 delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4 starts at 0.0 s, the video at 1.82 s; its first 1.82 s are lost",
@@ -138,10 +138,10 @@
   "first frame: shot 5 delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4 starts at 0.0 s, the video at 1.82 s; its first 1.82 s are lost",
   "first frame: shot 6 delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4 starts at 0.0 s, the video at 1.82 s; its first 1.82 s are lost",
   "length 16.4 s before the end card (target 12 to 20 s)",
-  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 44.4% > 5.0%); music_pct 23.3; leak_pct 44.4; cache {'hit': 0, 'miss': 7}; separate_secs 7.5; secs 10.2",
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 44.4% > 5.0%); music_pct 23.3; leak_pct 44.4; cache {'hit': 7, 'miss': 0}; separate_secs 2.6; secs 3.6",
   "render_job: audio split fallback: our bed (audio split not applied (music stem not clean (leftover 44.4% > 5.0%)) on a trailer track under 6 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.); bed:neon_d",
-  "render_job: lifeless: {\"score\": 8.8, \"still_share\": 0.141, \"longest_still\": 0.6, \"cuts_per_10s\": 3.07, \"held_under_text\": 0.0, \"secs\": 16.3, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
-  "estimate: headline: 39 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+  "render_job: lifeless: {\"score\": 8.0, \"still_share\": 0.123, \"longest_still\": 0.6, \"cuts_per_10s\": 3.68, \"held_under_text\": 0.0, \"secs\": 16.3, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 32 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
  ],
  "autofixed": [
   {
@@ -158,8 +158,8 @@
    }
   }
  ],
- "job_sha": "5f5efeca0f67331486c2e7639dfa85d16727fe17",
- "dispatches": 2,
+ "job_sha": "7d762e64f6347da432daf8ff450699c4bf338d32",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 2.35,
@@ -175,11 +175,11 @@
  "person_shown": "n/a",
  "sound": "bed:neon_d (trailer sound refused: music stem not clean (leftover 44.4% > 5.0%))",
  "shot_read": {
-  "secs": 95.7,
+  "secs": 0.0,
   "files": {
    "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4": {
-    "secs": 32.9,
-    "cached": false,
+    "secs": 0.0,
+    "cached": true,
     "stages": {
      "decode": 14.1,
      "autofocus": 29.9,
@@ -189,21 +189,9 @@
     },
     "incomplete": null
    },
-   "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-martelo.mp4": {
-    "secs": 29.9,
-    "cached": false,
-    "stages": {
-     "decode": 13.9,
-     "autofocus": 22.5,
-     "ocr": 22.8,
-     "smear": 29.8,
-     "scenes": 29.9
-    },
-    "incomplete": null
-   },
    "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-11-trailer.mp4": {
-    "secs": 32.9,
-    "cached": false,
+    "secs": 0.0,
+    "cached": true,
     "stages": {
      "decode": 13.6,
      "autofocus": 31.3,
@@ -212,20 +200,31 @@
      "scenes": 32.9
     },
     "incomplete": null
+   },
+   "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-martelo.mp4": {
+    "secs": 0.0,
+    "cached": true,
+    "stages": {
+     "decode": 13.9,
+     "autofocus": 22.5,
+     "ocr": 22.8,
+     "smear": 29.8,
+     "scenes": 29.9
+    },
+    "incomplete": null
    }
   }
  },
  "job_path": "jobs/done/delta-force-metal-gear-solid-delta-collab-nov-27-insider-gaming.json",
  "stage_minutes": {
-  "queue": 0.03,
-  "setup": 0.17,
-  "fetch": 1.22,
-  "shots": 5.12,
+  "queue": 0.02,
+  "setup": 0.18,
+  "fetch": 0.45,
+  "shots": 5.11,
   "checks": 0.24,
-  "render": 1.73,
-  "after": 0.58,
-  "upload": 0.08,
-  "job": 8.9
+  "render": 1.61,
+  "after": 0.56,
+  "job": 7.97
  },
  "job_after_autofix": {
   "name": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gaming",
@@ -244,24 +243,18 @@
     "file": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-trailer.mp4",
     "steam": 2507950,
     "trailer": "Season 12 Trailer",
-    "start": 0,
-    "seconds": 120,
-    "trailer_id": "2507950"
-   },
-   {
-    "file": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-martelo.mp4",
-    "steam": 2507950,
-    "trailer": "Season 12 Martelo",
-    "start": 0,
-    "seconds": 120,
     "trailer_id": "2507950"
    },
    {
     "file": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-11-trailer.mp4",
     "steam": 2507950,
     "trailer": "Season 11 Trailer",
-    "start": 0,
-    "seconds": 120,
+    "trailer_id": "2507950"
+   },
+   {
+    "file": "delta-force-metal-gear-solid-delta-collab-nov-27-insider-gam-season-12-martelo.mp4",
+    "steam": 2507950,
+    "trailer": "Season 12 Martelo",
     "trailer_id": "2507950"
    }
   ],
@@ -339,7 +332,7 @@
     6,
     [
      [
-      "وتستمر مكافآت\nالفعالية حتى 31 ديسمبر",
+      "وتستمر جوائز الفعالية\nحتى 31 ديسمبر",
       {
        "size": 54
       }
@@ -358,8 +351,8 @@
     }
    ]
   ],
-  "spoken": "ذكر موقع إنسايدر غيمنغ (Insider Gaming) أن تعاون Delta Force مع Metal Gear Solid Delta: Snake Eater يبدأ في 27 نوفمبر. ويضيف التعاون مظهر Naked Snake للشخصية Nox وحركة الصندوق الكرتوني وبندقية SR-3M بطابع Metal Gear Solid. وتستمر مكافآت الفعالية حتى 31 ديسمبر.",
-  "headline": "لعبة Delta Force\nتقرير: مع Metal Gear Solid في 27 نوفمبر",
+  "spoken": "ذكر موقع إنسايدر غيمنغ (Insider Gaming) أن تعاون Delta Force مع Metal Gear Solid Delta: Snake Eater يبدأ في 27 نوفمبر. ويضيف التعاون مظهر Naked Snake للشخصية Nox وحركة الصندوق الكرتوني وبندقية SR-3M بطابع Metal Gear Solid. وتستمر جوائز الفعالية حتى 31 ديسمبر.",
+  "headline": "لعبة Delta Force\nتقرير: تعاون مع Metal Gear Solid",
   "label": "تقرير",
   "game": "Delta Force",
   "game_short": "Delta Force",
@@ -368,13 +361,13 @@
    "action"
   ],
   "texts": {
-   "instagram": "تقرير: Delta Force مع Metal Gear Solid\n\nذكر موقع إنسايدر غيمنغ (Insider Gaming) أن تعاون Delta Force مع Metal Gear Solid Delta: Snake Eater يبدأ في 27 نوفمبر.\n\nويضيف التعاون مظهر Naked Snake للشخصية Nox وحركة الصندوق الكرتوني وبندقية SR-3M بطابع Metal Gear Solid.\n\nوتستمر مكافآت الفعالية حتى 31 ديسمبر.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع إنسايدر غيمنغ.\n\n#ألعاب #أخبار_الألعاب #DeltaForce #MetalGear",
+   "instagram": "تقرير: Delta Force مع Metal Gear Solid\n\nذكر موقع إنسايدر غيمنغ (Insider Gaming) أن تعاون Delta Force مع Metal Gear Solid Delta: Snake Eater يبدأ في 27 نوفمبر.\n\nويضيف التعاون مظهر Naked Snake للشخصية Nox وحركة الصندوق الكرتوني وبندقية SR-3M بطابع Metal Gear Solid.\n\nوتستمر جوائز الفعالية حتى 31 ديسمبر.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع إنسايدر غيمنغ.\n\n#ألعاب #أخبار_الألعاب #DeltaForce #MetalGear",
    "x": "تقرير: ذكر موقع إنسايدر غيمنغ (Insider Gaming) أن تعاون Delta Force مع Metal Gear Solid Delta: Snake Eater يبدأ في 27 نوفمبر ويضيف مظهر Naked Snake وحركة الصندوق الكرتوني. المصدر: إنسايدر غيمنغ.",
    "threads": "تقرير: ذكر موقع إنسايدر غيمنغ (Insider Gaming) أن تعاون Delta Force مع Metal Gear Solid Delta: Snake Eater يبدأ في 27 نوفمبر.\n\nويضيف مظهر Naked Snake للشخصية Nox وحركة الصندوق الكرتوني.\n\nالمصدر: موقع إنسايدر غيمنغ"
   },
   "source": "موقع إنسايدر غيمنغ (Insider Gaming)، ولقطات من Konami",
   "date": "25 Nov 2026",
-  "theme": "spectacle",
+  "theme": "stylized",
   "style": null,
   "template": "trailer",
   "skin": "house",
