@@ -26,6 +26,11 @@ import flex  # noqa: E402
 
 # Japanese title as Famitsu prints it -> English title as the publisher uses it.
 TITLES = {
+    'グランド・セフト・オートVI': 'Grand Theft Auto VI',          # Rockstar Games (26 Nov 2026)
+    # Konami sells Momotaro Dentetsu 2 in Japan only and gives it no English title: romanised (26 Nov 2026)
+    '桃太郎電鉄2 ～あなたの町も きっとある～ 東日本編＋西日本編': 'Momotaro Dentetsu 2: East + West Japan',
+    '桃太郎電鉄2 ～あなたの町も きっとある～ Nintendo Switch 2 Edition 東日本編＋西日本編':
+        'Momotaro Dentetsu 2 Nintendo Switch 2 Edition',
     'メタファー：リファンタジオ': 'Metaphor: ReFantazio',
     'ピクミン4 Nintendo Switch 2 Edition ＋ だれでもチャレンジ！ ダンドリ検定':
         'Pikmin 4 Nintendo Switch 2 Edition + Dandori Academy',
