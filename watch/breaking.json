@@ -1,10 +1,23 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-26T01:52:08Z",
- "seq": 882,
+ "generated_at": "2026-11-26T01:55:21Z",
+ "seq": 883,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 23713,
+   "source": "Nintendo US",
+   "source_kind": "page",
+   "title": "11/25/26 Icon elements inspired by the Rhythm Heaven Groove game are here for a limited time Read more",
+   "url": "https://www.nintendo.com/us/whatsnew/icon-elements-inspired-by-the-rhythm-heaven-groove-game-are-here-for-a-limited-time-nov-2026/",
+   "published": null,
+   "first_seen": "2026-11-26T01:55:14Z",
+   "media": [],
+   "breaking_source": true,
+   "breaking_seq": 883
+  }
+ ],
  "recent": [
   {
    "id": 23711,
@@ -380,9 +393,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-26T01:50:14Z",
+  "last_poll_at": "2026-11-26T01:55:14Z",
   "sources_enabled": 101,
-  "sources_ok": 101,
+  "sources_ok": 100,
   "sources_failing": 0,
   "failed": []
  }
