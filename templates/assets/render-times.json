@@ -170094,5 +170094,277 @@
   "sound": "trailer",
   "footage": true,
   "upload_secs": 5.0
+ },
+ {
+  "name": "croaked-free-demo-nov-27-steam-games-press-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-26T22:25Z",
+  "stages": {
+   "checks": 5.4,
+   "montage": 41.4,
+   "text": 24.0,
+   "audio": 0.8,
+   "outro": 13.8
+  },
+  "total": 85.4,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-26T22:23Z",
+  "finished_at": "2026-11-26T22:25Z",
+  "render_min": 1.42,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4",
+    "start": 10.58,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4",
+    "start": 2.27,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4",
+    "start": 17.46,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4",
+    "start": 34.47,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4",
+    "start": 25.67,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4",
+    "start": 40.58,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4",
+    "start": 21.69,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4",
+    "start": 6.82,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.5,
+   "audio_secs": 39.0,
+   "music_pct": 98.5,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 0
+   },
+   "effects_shots": 8,
+   "mix_secs": 0.8,
+   "secs": 4.2
+  },
+  "lifeless": {
+   "score": 2.2,
+   "still_share": 0.011,
+   "longest_still": 0.1,
+   "cuts_per_10s": 2.29,
+   "held_under_text": 0.0,
+   "secs": 17.5,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 10.7,
+   "shots": 185.3,
+   "checks": 11.9,
+   "render": 141.3,
+   "after": 54.2
+  },
+  "softgate": {
+   "warnings": 4,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 1,
+     "step": "a",
+     "why": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4: shot ended before the first video frame (2.22 s); moved to 2.27 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4: shot ended before the first video frame (2.22 s); moved to 2.27 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4: shot ended before the first video frame (2.22 s); moved to 2.27 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4: shot ended before the first video frame (2.22 s); moved to 2.27 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4: shot ended before the first video frame (2.22 s); moved to 2.27 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 0,
+     "step": "a",
+     "why": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4 at 10.58 s for 3.8 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4 at 25.67 s for 2.74 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4 at 40.58 s for 2.74 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "b",
+     "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "a",
+     "why": "scan cap: 3 automatic slot(s) from the library or evenly spaced"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4 at 17.46 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4 at 34.47 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4 at 21.69 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "croaked-free-demo-nov-27-steam-games-press-gameplay-trailer.mp4 at 6.82 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "text",
+     "slot": "reel",
+     "step": "a",
+     "why": "soft shade under line group(s) [0]: bright footage behind them"
+    }
+   ]
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 404,
+  "queue_wait_secs": 621,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1232,
+  "peak_mem_mb": 2587,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 77039,
+  "peak_disk_mb": 78448,
+  "min_disk_free_mb": 167658,
+  "setup_min": 0.18,
+  "story": "croaked-free-demo-nov-27-steam-games-press",
+  "job_sha": "8624e47426d03e9e0cd173cae97b89af5ce53ce4",
+  "dispatches": 2,
+  "sound": "trailer",
+  "footage": true
  }
 ]
