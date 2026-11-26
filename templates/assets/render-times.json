@@ -168710,5 +168710,201 @@
   "sound": "bed:neon_e (trailer sound refused: music stem not clean (leftover 9.2% > 5.0%))",
   "footage": true,
   "upload_secs": 9.0
+ },
+ {
+  "name": "retail-hell-consoles-gematsu-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-26T18:19Z",
+  "stages": {
+   "checks": 6.0,
+   "montage": 58.1,
+   "text": 43.9,
+   "audio": 0.5,
+   "outro": 30.7
+  },
+  "total": 139.2,
+  "lane": "runner",
+  "queued_at": "2026-11-26T18:16Z",
+  "finished_at": "2026-11-26T18:19Z",
+  "render_min": 2.32,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "retail-hell-consoles-gematsu-retail-hell-endless-mode-update.mp4",
+    "start": 34.28,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.74,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+    "start": 27.42,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+    "start": 13.63,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+    "start": 32.98,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+    "start": 17.94,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+    "start": 21.11,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+    "start": 40.35,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+    "start": 48.78,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+    "start": 51.06,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.71,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 21.3,
+   "audio_secs": 61.4,
+   "music_pct": 44.5,
+   "leak_pct": 46.5,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 3
+   },
+   "reason": "music stem not clean (leftover 46.5% > 5.0%)",
+   "secs": 27.2,
+   "ladder": "d",
+   "fallback": "bed:neon"
+  },
+  "lifeless": {
+   "score": 21.7,
+   "still_share": 0.367,
+   "longest_still": 0.9,
+   "cuts_per_10s": 2.26,
+   "held_under_text": 0.0,
+   "secs": 17.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 23.5,
+   "shots": 97.4,
+   "checks": 106.8,
+   "render": 167.7,
+   "after": 50.7
+  },
+  "softgate": {
+   "warnings": 4,
+   "ladder": [
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "d",
+     "why": "audio split not applied (music stem not clean (leftover 46.5% > 5.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or "
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 447,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1607,
+  "peak_mem_mb": 3636,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61370,
+  "peak_disk_mb": 62527,
+  "min_disk_free_mb": 85269,
+  "setup_min": 0.48,
+  "story": "retail-hell-consoles-gematsu"
  }
 ]

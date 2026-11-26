@@ -38,58 +38,119 @@
  ],
  "shots": [
   [
-   "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
-   "auto",
-   3.8,
-   null
+   "retail-hell-consoles-gematsu-retail-hell-endless-mode-update.mp4",
+   34.28,
+   2.37,
+   [
+    [
+     0.0,
+     0.525
+    ]
+   ]
   ],
   [
    "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
-   "auto",
+   27.42,
    2.46,
-   null
+   [
+    [
+     0.0,
+     0.794
+    ]
+   ]
   ],
   [
    "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
-   "auto",
+   13.63,
    2.46,
-   null
+   [
+    [
+     0.0,
+     0.485
+    ],
+    [
+     0.615,
+     0.961
+    ],
+    [
+     1.616,
+     0.512
+    ]
+   ]
   ],
   [
    "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
-   "auto",
+   32.98,
    2.2,
-   null
+   [
+    [
+     0.0,
+     0.794
+    ]
+   ]
   ],
   [
    "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
-   "auto",
+   17.94,
    2.2,
-   null
+   [
+    [
+     0.0,
+     0.485
+    ],
+    [
+     1.31,
+     0.485
+    ]
+   ]
   ],
   [
    "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
-   "auto",
+   21.11,
    2.46,
-   null
+   [
+    [
+     0.0,
+     0.575
+    ],
+    [
+     1.144,
+     0.706
+    ]
+   ]
   ],
   [
    "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
-   "auto",
+   40.35,
    2.46,
-   null
+   [
+    [
+     0.0,
+     0.506
+    ]
+   ]
   ],
   [
    "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
-   "auto",
+   48.78,
    2.2,
-   null
+   [
+    [
+     0.0,
+     0.609
+    ]
+   ]
   ],
   [
    "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
-   "auto",
+   51.06,
    2.2,
-   null
+   [
+    [
+     0.0,
+     0.618
+    ]
+   ]
   ]
  ],
  "lines": [
@@ -146,7 +207,7 @@
   [
    0,
    8,
-   "المصدر: موقع جيماتسو (Gematsu)،\nولقطات من Feardemic",
+   "المصدر: Gematsu · اللقطات: Feardemic",
    {
     "size": 40,
     "band": true
@@ -175,8 +236,8 @@
  "skin": "house",
  "cut": false,
  "track": [
-  "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
-  0.0
+  "retail-hell-consoles-gematsu-retail-hell-endless-mode-update.mp4",
+  34.28
  ],
  "track_from_first_shot": true,
  "angle": {
@@ -206,5 +267,71 @@
  "names_to_review": [
   "Feardemic",
   "LEAP Game Studios"
- ]
+ ],
+ "cut_ok": [
+  [
+   "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+   13.63,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+   17.94,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+   22.11,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+   40.35,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+   48.78,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+   51.06,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ]
+ ],
+ "drift_ok": [
+  [
+   "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+   13.63,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+   17.94,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+   22.11,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+   40.35,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+   48.78,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "retail-hell-consoles-gematsu-retail-hell-launch-trailer.mp4",
+   51.06,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ]
+ ],
+ "layout": "showcase",
+ "showcase_reason": "the trailer clashes with our text in a 9:16 crop: the shot scan found no clean stretch for 6 slot(s) (16:9 fallback, Mohammad 20 Nov 2026)"
 }
