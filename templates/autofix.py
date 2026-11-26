@@ -324,6 +324,30 @@ def _attempts(p, sh):
     return out
 
 
+CROP_RULES = ('subject_empty', 'subject_text_cut')
+CROP_BUDGET = 90           # s per job for the crop fix's re-aim and shift reads; past it the shot takes the showcase
+CROP_KEEP = 2              # candidates that read clean are confirmed with the full gate, at most this many
+_CROP_SPENT = [0.0]
+
+
+def _crop_screen(job, tries, t_start):
+    """The crop fix's candidates (re-aims, then shifts) read together: one frame read and one detector pass for all of
+    them (shotgate.frame_problems batches), then only the first CROP_KEEP clean ones go to the full gate. Past
+    CROP_BUDGET s in the job, none: the shot falls to the showcase (render_job.gate_ladder)."""
+    import shotgate as SG
+    if _CROP_SPENT[0] >= CROP_BUDGET or not tries:
+        return []
+    t0 = time.time()
+    try:
+        cands = [list(c) for _k, c, _w in tries]
+        bad = {int(p['where'].split()[1]) for p in SG.frame_problems(job, cands)}
+        tm, _ = SG.timing_problems(job, cands)
+        bad |= {int(p['where'].split()[1]) for p in tm}
+    finally:
+        _CROP_SPENT[0] += time.time() - t0
+    return [t for n, t in enumerate(tries) if n not in bad][:CROP_KEEP]
+
+
 def shots(job):
     """Shot fixes in place, on the server's copy of the footage. Returns the problems no fix could clear (the gate
     refuses those)."""
@@ -346,7 +370,10 @@ def shots(job):
             done.add(i)
             sh = job['shots'][i]
             fixed = False
-            for kind, cand, what in _attempts(p, rows[i]):
+            tries = _attempts(p, rows[i])
+            if p['rule'] in CROP_RULES:            # crop fix: every candidate read in one detector pass, under a budget
+                tries = _crop_screen(job, tries, t_start)
+            for kind, cand, what in tries:
                 if time.time() - t_start > BUDGET:
                     break
                 if len(cand) > 3 and cand[3] is None and len(sh) <= 3:
