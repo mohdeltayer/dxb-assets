@@ -8,7 +8,7 @@
  "skin_why": "genre shooter: its kit is not built yet (skins.KITS scifi, fantasy)",
  "built_by": "server-slip",
  "render_lane": "server",
- "out": "cards/2026-11/4-loop-closed-beta-dec-10-gamespark-reel-v1.mp4",
+ "out": "cards/2026-11/4-loop-closed-beta-dec-10-gamespark-reel-v2.mp4",
  "split_fallback": "ladder",
  "footage": [
   {
@@ -189,7 +189,7 @@
    5,
    [
     [
-     "الجديدة للعبة 4:Loop تبدأ\nفي 10 ديسمبر على PS5 والكمبيوتر",
+     "الجديدة للعبة ⁦4:Loop⁩ تبدأ\nفي 10 ديسمبر على PS5 والكمبيوتر",
      {
       "size": 54
      }
@@ -249,7 +249,7 @@
   [
    0,
    13,
-   "المصدر: Game*Spark · اللقطات: Bad Robot Games",
+   "المصدر: Game*Spark · اللقطات: من صفحة اللعبة على Steam",
    {
     "size": 40,
     "band": true
@@ -257,7 +257,7 @@
   ]
  ],
  "spoken": "ذكر موقع غيم سبارك (Game*Spark) أن التجربة المغلقة الجديدة للعبة 4:Loop تبدأ في 10 ديسمبر على PS5 والكمبيوتر. واللعبة تعاونية يقودها Mike Booth، أحد أبرز مطوري Left 4 Dead. والتسجيل مفتوح للاعبين من مختلف الدول، ولم يُحدد موعد إصدار اللعبة بعد.",
- "headline": "تجربة 4:Loop\nتبدأ في 10 ديسمبر",
+ "headline": "تجربة ⁦4:Loop⁩\nتبدأ في 10 ديسمبر",
  "label": "تقرير",
  "game": "4:Loop",
  "game_short": "4:Loop",
@@ -267,8 +267,8 @@
  ],
  "texts": {
   "instagram": "تقرير: تجربة 4:Loop المغلقة تبدأ في 10 ديسمبر\n\nذكر موقع غيم سبارك (Game*Spark) أن التجربة المغلقة الجديدة للعبة 4:Loop تبدأ في 10 ديسمبر على PS5 والكمبيوتر.\n\nواللعبة تعاونية يقودها مايك بوث (Mike Booth)، أحد أبرز مطوري Left 4 Dead.\n\nوالتسجيل مفتوح للاعبين من مختلف الدول، ولم يُحدد موعد إصدار اللعبة بعد.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع غيم سبارك.\n\n#ألعاب #أخبار_الألعاب #4Loop #Left4Dead",
-  "x": "تقرير: ذكر موقع غيم سبارك (Game*Spark) أن التجربة المغلقة الجديدة للعبة 4:Loop التعاونية تبدأ في 10 ديسمبر على PS5 والكمبيوتر. واللعبة بقيادة مايك بوث (Mike Booth)، أحد مطوري Left 4 Dead. المصدر: غيم سبارك.",
-  "threads": "تقرير: ذكر موقع غيم سبارك (Game*Spark) أن التجربة المغلقة الجديدة للعبة 4:Loop تبدأ في 10 ديسمبر على PS5 والكمبيوتر.\n\nواللعبة تعاونية يقودها مايك بوث (Mike Booth)، أحد أبرز مطوري Left 4 Dead.\n\nالمصدر: موقع غيم سبارك"
+  "x": "تقرير: ذكر موقع غيم سبارك (Game*Spark) أن التجربة المغلقة الجديدة للعبة 4:Loop التعاونية تبدأ في 10 ديسمبر على PS5 والكمبيوتر. واللعبة بقيادة مايك بوث (Mike Booth)، أحد مطوري Left 4 Dead. اللقطات من صفحة اللعبة على Steam. المصدر: غيم سبارك.",
+  "threads": "تقرير: ذكر موقع غيم سبارك (Game*Spark) أن التجربة المغلقة الجديدة للعبة 4:Loop تبدأ في 10 ديسمبر على PS5 والكمبيوتر.\n\nواللعبة تعاونية يقودها مايك بوث (Mike Booth)، أحد أبرز مطوري Left 4 Dead.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع غيم سبارك"
  },
  "source": "موقع غيم سبارك (Game*Spark)، ولقطات من Bad Robot Games",
  "date": "26 Nov 2026",
@@ -308,5 +308,9 @@
  },
  "names_to_review": [
   "Mike Booth"
- ]
+ ],
+ "rerender": {
+  "reason": "factual_error",
+  "note": "Game name renders reversed as Loop:4 in the headline and line 2 (bidi); isolate 4:Loop so it reads 4:Loop, and make the footage credit and X/Threads captions say the footage is from the Steam page."
+ }
 }
