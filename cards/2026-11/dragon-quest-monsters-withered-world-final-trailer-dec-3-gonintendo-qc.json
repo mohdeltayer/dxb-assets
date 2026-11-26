@@ -1,0 +1,325 @@
+{
+ "name": "dragon-quest-monsters-withered-world-final-trailer-dec-3-gonintendo",
+ "out": "cards/2026-11/dragon-quest-monsters-withered-world-final-trailer-dec-3-gonintendo-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "content",
+   "detail": "shot 2 at 48.58 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 2 at 49.43 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 3 at 77.67 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 3 at 78.41 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 4 at 59.41 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 4 at 60.15 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 68 px on 2 lines (cut it to a few words next time): الإعلان الأخير\nمن Dragon Quest Monsters"
+  },
+  {
+   "stage": "length",
+   "detail": "length 11.7 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them; under 12 s fails: add a beat of footage"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-tgs-trailer-16x9-steam-storefront-usa-esrb-e10.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-tgs-trailer-16x9-steam-storefront-usa-esrb-e10.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-tgs-trailer-16x9-steam-storefront-usa-esrb-e10.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-tgs-trailer-16x9-steam-storefront-usa-esrb-e10.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-tgs-trailer-16x9-steam-storefront-usa-esrb-e10.mp4 at 47.74 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-esrb-en-1st-trailer.mp4 at 76.94 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-esrb-en-1st-trailer.mp4 at 58.68 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "text",
+   "slot": "reel",
+   "step": "a",
+   "why": "soft shade under line group(s) [0]: bright footage behind them"
+  }
+ ],
+ "job_to_pass_min": 13.7,
+ "at": "2026-11-26T04:26:16Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-tgs-trailer-16x9-steam-storefront-usa-esrb-e10.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 11.7 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 73.5; leak_pct 0.1; cache {'hit': 0, 'miss': 6}; separate_secs 6.5; secs 9.4",
+  "render_job: lifeless: {\"score\": 2.0, \"still_share\": 0.034, \"longest_still\": 0.1, \"cuts_per_10s\": 5.17, \"held_under_text\": 0.0, \"secs\": 11.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 24 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-esrb-en-1st-trailer.mp4 at 40.13 s for 3.8 s, focus 0.252 (nothing free in dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-tgs-trailer-16x9-steam-storefront-usa-esrb-e10.mp4)"
+  }
+ ],
+ "job_sha": "ca5474a9f773d8572f6fcbea3b9bbbf74436f169",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/dragon-quest-monsters-withered-world-final-trailer-dec-3-gonintendo-look-1.jpg",
+  "cards/2026-11/dragon-quest-monsters-withered-world-final-trailer-dec-3-gonintendo-look-2.jpg",
+  "cards/2026-11/dragon-quest-monsters-withered-world-final-trailer-dec-3-gonintendo-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 91.7,
+  "files": {
+   "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-tgs-trailer-16x9-steam-storefront-usa-esrb-e10.mp4": {
+    "secs": 50.5,
+    "cached": false,
+    "stages": {
+     "decode": 22.5,
+     "autofocus": 38.5,
+     "ocr": 38.5,
+     "smear": 50.2,
+     "scenes": 50.4
+    },
+    "incomplete": null
+   },
+   "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-esrb-en-1st-trailer.mp4": {
+    "secs": 41.2,
+    "cached": false,
+    "stages": {
+     "decode": 18.1,
+     "autofocus": 34.3,
+     "ocr": 34.3,
+     "smear": 40.9,
+     "scenes": 41.2
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/dragon-quest-monsters-withered-world-final-trailer-dec-3-gonintendo.json",
+ "stage_minutes": {
+  "queue": 5.4,
+  "setup": 0.15,
+  "fetch": 2.52,
+  "shots": 1.06,
+  "checks": 1.76,
+  "render": 1.55,
+  "after": 0.47,
+  "job": 7.37
+ },
+ "job_after_autofix": {
+  "name": "dragon-quest-monsters-withered-world-final-trailer-dec-3-gonintendo",
+  "story": "2026-11-26-dragon-quest-monsters-withered-world-final-trailer-dec-3-gonintendo",
+  "footage_source": "steam:3681610",
+  "kind_news": "date",
+  "story_class": "trailer",
+  "story_class_why": "kind date",
+  "skin_why": "genre rpg",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/dragon-quest-monsters-withered-world-final-trailer-dec-3-gonintendo-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-tgs-trailer-16x9-steam-storefront-usa-esrb-e10.mp4",
+    "steam": 3681610,
+    "trailer": "TGS_Trailer_16x9_STEAM_Storefront_USA_ESRB_E10+",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3681610"
+   },
+   {
+    "file": "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-esrb-en-1st-trailer.mp4",
+    "steam": 3681610,
+    "trailer": "ESRB EN_1st Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3681610"
+   },
+   {
+    "file": "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-demotrailer-full-16x9-steam-usa-esrb-e10.mp4",
+    "steam": 3681610,
+    "trailer": "DemoTrailer_FULL_16x9_STEAM_USA_ESRB_E10+",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3681610"
+   }
+  ],
+  "shots": [
+   [
+    "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-esrb-en-1st-trailer.mp4",
+    40.13,
+    3.8,
+    [
+     [
+      0.0,
+      0.252
+     ]
+    ]
+   ],
+   [
+    "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-tgs-trailer-16x9-steam-storefront-usa-esrb-e10.mp4",
+    3.07,
+    2.53,
+    null
+   ],
+   [
+    "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-tgs-trailer-16x9-steam-storefront-usa-esrb-e10.mp4",
+    3.07,
+    2.53,
+    null
+   ],
+   [
+    "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-tgs-trailer-16x9-steam-storefront-usa-esrb-e10.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-tgs-trailer-16x9-steam-storefront-usa-esrb-e10.mp4",
+    3.07,
+    2.2,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "وبحسب الموقع، يعرض الإعلان\nالقصة وتجنيد الوحوش،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "إضافة إلى ميزة القتال\nالمشترك الجديدة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    4,
+    "المصدر: GoNintendo · اللقطات: Square Enix",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع جو نينتيندو (GoNintendo) أن الإعلان الأخير للعبة Dragon Quest Monsters: The Withered World نُشر اليوم، وأن اللعبة تصدر في 3 ديسمبر على Switch و Switch 2. وبحسب الموقع، يعرض الإعلان القصة وتجنيد الوحوش، إضافة إلى ميزة القتال المشترك الجديدة.",
+  "headline": "الإعلان الأخير\nمن Dragon Quest Monsters",
+  "label": "تقرير",
+  "game": "DRAGON QUEST MONSTERS: The Withered World",
+  "game_short": "Dragon Quest Monsters",
+  "game_key": "dragon quest monsters the withered world",
+  "genre": [
+   "rpg"
+  ],
+  "texts": {
+   "instagram": "تقرير: الإعلان الأخير من Dragon Quest Monsters\n\nذكر موقع جو نينتيندو (GoNintendo) أن الإعلان الأخير للعبة Dragon Quest Monsters: The Withered World نُشر اليوم.\n\nوتصدر اللعبة في 3 ديسمبر على Switch وSwitch 2.\n\nوبحسب الموقع، يعرض الإعلان القصة وتجنيد الوحوش، إضافة إلى ميزة القتال المشترك الجديدة.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع جو نينتيندو.\n\n#ألعاب #أخبار_الألعاب #DragonQuest #Switch2",
+   "x": "تقرير: ذكر موقع جو نينتيندو (GoNintendo) أن الإعلان الأخير للعبة Dragon Quest Monsters: The Withered World نُشر اليوم، وأن اللعبة تصدر في 3 ديسمبر على Switch وSwitch 2. المصدر: جو نينتيندو.",
+   "threads": "تقرير: ذكر موقع جو نينتيندو (GoNintendo) أن الإعلان الأخير للعبة Dragon Quest Monsters: The Withered World نُشر اليوم.\n\nوتصدر اللعبة في 3 ديسمبر على Switch وSwitch 2.\n\nالمصدر: موقع جو نينتيندو"
+  },
+  "source": "موقع جو نينتيندو (GoNintendo)، ولقطات من سكوير (Square Enix)",
+  "date": "26 Nov 2026",
+  "theme": "gold",
+  "style": null,
+  "template": "trailer",
+  "skin": "fantasy",
+  "cut": false,
+  "track": [
+   "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-tgs-trailer-16x9-steam-storefront-usa-esrb-e10.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "The final trailer was published 26 Nov; release is 3 Dec on Switch and Switch 2.",
+   "what_it_means_here": "It shows the story of two girls who become Monster Wranglers, monster scouting and the new Joint Battle feature."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind date",
+   "skin": "fantasy: genre rpg",
+   "footage": "dragon-quest-monsters-withered-world-final-trailer-dec-3-gon-tgs-trailer-16x9-steam-storefront-usa-esrb-e10.mp4 from the resolver (steam:3681610)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: GoNintendo, 26 Nov 2026: Dragon Quest Monsters: The Withered World final trailer (https://gonintendo.com/contents/67570-dragon-quest-monsters-the-withered-world-final-trailer); first report: GoNintendo 26 Nov 2026 03:03Z, 2 outlets",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 3681610 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
