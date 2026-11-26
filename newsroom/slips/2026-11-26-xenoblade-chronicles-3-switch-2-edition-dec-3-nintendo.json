@@ -1,18 +1,12 @@
 {
  "id": "2026-11-26-xenoblade-chronicles-3-switch-2-edition-dec-3-nintendo",
- "state": "failed",
- "problems": [
-  "text: line 1: game names stay in Latin letters, as the publisher writes them: «Xenoblade Chronicles 3 – Nintendo Switch 2 Edition», never in Arabic letters (names-ar rule; Burning Sword case, 19 Nov 2026)",
-  "text: credit 1: game names stay in Latin letters, as the publisher writes them: «Xenoblade Chronicles 3 – Nintendo Switch 2 Edition», never in Arabic letters (names-ar rule; Burning Sword case, 19 Nov 2026)",
-  "text: spoken: game names stay in Latin letters, as the publisher writes them: «Xenoblade Chronicles 3 – Nintendo Switch 2 Edition», never in Arabic letters (names-ar rule; Burning Sword case, 19 Nov 2026)",
-  "text: texts instagram: game names stay in Latin letters, as the publisher writes them: «Xenoblade Chronicles 3 – Nintendo Switch 2 Edition», never in Arabic letters (names-ar rule; Burning Sword case, 19 Nov 2026)",
-  "text: texts x: game names stay in Latin letters, as the publisher writes them: «Xenoblade Chronicles 3 – Nintendo Switch 2 Edition», never in Arabic letters (names-ar rule; Burning Sword case, 19 Nov 2026)",
-  "text: texts threads: game names stay in Latin letters, as the publisher writes them: «Xenoblade Chronicles 3 – Nintendo Switch 2 Edition», never in Arabic letters (names-ar rule; Burning Sword case, 19 Nov 2026)"
- ],
+ "state": "built",
+ "problems": [],
  "flags": [
-  "warning: text: headline: the chip already says «رسمي»: drop «رسمي:» and open the headline on an Arabic word (22 Nov 2026)"
+  "slip texts fixed mechanically: headline",
+  "ledger: earlier stories on this game: 2026-10-01-xb2, 2026-11-20-xenoblade-chronicles-3-switch-2-edition-update-3-0-0, 2026-11-21-xenoblade-chronicles-3-switch-2-environments-video (an update or a duplicate? the editor decides)"
  ],
- "at": "2026-11-26T02:10:36Z",
+ "at": "2026-11-26T02:12:17Z",
  "footage": {
   "name": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4",
   "width": null,
@@ -25,9 +19,9 @@
  },
  "job": "jobs/live/xenoblade-chronicles-3-switch-2-edition-dec-3-nintendo.json",
  "story": "newsroom/stories/2026-11-26-xenoblade-chronicles-3-switch-2-edition-dec-3-nintendo.json",
- "lines": 4,
- "shots": 9,
- "run": "45740621500",
+ "lines": 2,
+ "shots": 5,
+ "run": "45740795693",
  "lane": "live",
- "build_secs": 27
+ "build_secs": 32
 }
