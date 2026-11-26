@@ -409,7 +409,12 @@ def frame_problems(job, shots):
     subject_empty (no person, vehicle or animal inside the window: ground, sky or wall), subject_text_cut (HUD or
     on-screen text crossing the window edge) and shot_long (over LONG_MAX s unless it moves and the subject stays in).
     Inside the showcase layout only shot_long applies. Waiver after a look: "frame_ok": [[file, start, reason]]."""
-    all_rows = [r for r in _shot_rows(job, shots) if not _waived(job, 'frame_ok', r[1], r[2])]
+    all_rows, seen_at = [], set()
+    for r in _shot_rows(job, shots):        # a repeated (file, start) is a placeholder render_job.respread moves later:
+        if _waived(job, 'frame_ok', r[1], r[2]) or (r[1], round(r[2], 2)) in seen_at:   # judge each moment once
+            continue
+        seen_at.add((r[1], round(r[2], 2)))
+        all_rows.append(r)
     if not all_rows:
         return []
     boxed = job.get('layout') == 'showcase'
