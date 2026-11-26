@@ -166628,5 +166628,315 @@
   "sound": "trailer",
   "footage": true,
   "upload_secs": 23.0
+ },
+ {
+  "name": "barotrauma-home-harbor-expansion-dec-2-games-press-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-26T15:29Z",
+  "stages": {
+   "checks": 5.3,
+   "montage": 47.1,
+   "text": 43.2,
+   "audio": 0.5,
+   "outro": 29.6
+  },
+  "total": 125.5,
+  "lane": "runner",
+  "queued_at": "2026-11-26T15:27Z",
+  "finished_at": "2026-11-26T15:29Z",
+  "render_min": 2.09,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4",
+    "start": 61.18,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.56,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4",
+    "start": 3.05,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.56,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "barotrauma-home-harbor-expansion-dec-2-games-press-releasetrailer-en.mp4",
+    "start": 0.3,
+    "width": 1920,
+    "height": 1080,
+    "fps": 25.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4",
+    "start": 23.13,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.56,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "barotrauma-home-harbor-expansion-dec-2-games-press-releasetrailer-en.mp4",
+    "start": 75.71,
+    "width": 1920,
+    "height": 1080,
+    "fps": 25.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "barotrauma-home-harbor-expansion-dec-2-games-press-releasetrailer-en.mp4",
+    "start": 38.16,
+    "width": 1920,
+    "height": 1080,
+    "fps": 25.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "barotrauma-home-harbor-expansion-dec-2-games-press-releasetrailer-en.mp4",
+    "start": 19.38,
+    "width": 1920,
+    "height": 1080,
+    "fps": 25.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "barotrauma-home-harbor-expansion-dec-2-games-press-releasetrailer-en.mp4",
+    "start": 56.95,
+    "width": 1920,
+    "height": 1080,
+    "fps": 25.0,
+    "mbps": 5.68,
+    "rows": 1062,
+    "zoom": 1.81,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4",
+    "start": 92.22,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.56,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 9,
+    "file": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4",
+    "start": 47.79,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.56,
+    "rows": 1056,
+    "zoom": 1.82,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.82,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 16.6,
+   "audio_secs": 62.9,
+   "music_pct": 14.8,
+   "leak_pct": 10.9,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 11
+   },
+   "reason": "music stem not clean (leftover 10.9% > 5.0%)",
+   "secs": 22.4,
+   "ladder": "d",
+   "fallback": "bed:neon_c"
+  },
+  "lifeless": {
+   "score": 32.0,
+   "still_share": 0.248,
+   "longest_still": 1.4,
+   "cuts_per_10s": 0.0,
+   "held_under_text": 0.0,
+   "secs": 21.4,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 328.1,
+   "shots": 85.0,
+   "checks": 121.2,
+   "render": 182.9,
+   "after": 54.1
+  },
+  "softgate": {
+   "warnings": 6,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 1,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4: shot ended before the first video frame (3.00 s); moved to 3.05 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4: shot ended before the first video frame (3.00 s); moved to 3.05 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4: shot ended before the first video frame (3.00 s); moved to 3.05 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4: shot ended before the first video frame (3.00 s); moved to 3.05 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4: shot ended before the first video frame (3.00 s); moved to 3.05 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4: shot ended before the first video frame (3.00 s); moved to 3.05 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4: shot ended before the first video frame (3.00 s); moved to 3.05 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 8,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4: shot ended before the first video frame (3.00 s); moved to 3.05 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 9,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4: shot ended before the first video frame (3.00 s); moved to 3.05 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-releasetrailer-en.mp4 at 0.3 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4 at 23.13 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-releasetrailer-en.mp4 at 75.71 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-releasetrailer-en.mp4 at 38.16 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-releasetrailer-en.mp4 at 19.38 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-releasetrailer-en.mp4 at 56.95 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 8,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4 at 92.22 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 9,
+     "step": "a",
+     "why": "barotrauma-home-harbor-expansion-dec-2-games-press-untothebreach-en.mp4 at 47.79 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "d",
+     "why": "audio split not applied (music stem not clean (leftover 10.9% > 5.0%)) on a trailer track under 9 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or "
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 771,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1516,
+  "peak_mem_mb": 3641,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61100,
+  "peak_disk_mb": 62598,
+  "min_disk_free_mb": 85198,
+  "setup_min": 0.53,
+  "story": "barotrauma-home-harbor-expansion-dec-2-games-press"
  }
 ]
