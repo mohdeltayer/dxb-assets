@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-26T17:52:08Z",
- "seq": 906,
+ "generated_at": "2026-11-26T18:25:15Z",
+ "seq": 907,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 24484,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "HITMAN World of Assassination - Bawma (ft. Lenny Kravitz) Elusive Target - Launch Trailer",
+   "url": "https://www.youtube.com/watch?v=7d6_3q5Uv_Q",
+   "published": "2026-11-26T18:07Z",
+   "first_seen": "2026-11-26T18:25:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/7d6_3q5Uv_Q/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=7d6_3q5Uv_Q"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 907
+  }
+ ],
  "recent": [
   {
    "id": 24352,
@@ -292,25 +314,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 870
-  },
-  {
-   "id": 23444,
-   "source": "Nintendo US",
-   "source_kind": "page",
-   "title": "11/25/26 Customize your style and wow the competition in Nintendo Switch Sports Resort! The Nintendo Switch Sports Resort™ game is available for the Nintendo Sw",
-   "url": "https://www.nintendo.com/us/whatsnew/customize-your-style-and-wow-the-competition-in-nintendo-switch-sports-resort/",
-   "published": null,
-   "first_seen": "2026-11-25T18:10:14Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 868
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-26T17:50:04Z",
+  "last_poll_at": "2026-11-26T18:25:14Z",
   "sources_enabled": 101,
-  "sources_ok": 101,
+  "sources_ok": 100,
   "sources_failing": 0,
   "failed": []
  }
