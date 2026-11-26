@@ -1,0 +1,29 @@
+{
+ "story": "2026-11-26-dragon-quest-monsters-withered-world-final-trailer-dec-3-gonintendo",
+ "out": "cards/2026-11/dragon-quest-monsters-withered-world-final-trailer-dec-3-gonintendo-reel-v1.mp4",
+ "verdict": "fix",
+ "reasons": [
+  "on-screen text true against the sources: a تقرير attributed to GoNintendo, claims match the story",
+  "headline, lines and facts are plain Arabic with no genre jargon",
+  "credit does not say the footage is from the Steam page / the game's trailer; it credits the footage to the company by Latin name only, which an Arab reader cannot place and which reads as ours-from-the-outlet-or-studio rather than the game's trailer",
+  "no graphic content"
+ ],
+ "reason": "unclear_text",
+ "fix": "Credit line must say the footage is from the game's trailer on Steam, with the outlet named in Arabic as the source.",
+ "job_patch": {
+  "credits": [
+   [
+    0,
+    4,
+    "المصدر: جو نينتيندو · اللقطات: من إعلان اللعبة على Steam",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "source": "جو نينتيندو، واللقطات من إعلان اللعبة على صفحتها في Steam"
+ },
+ "at": "2026-11-26T12:00:00Z",
+ "by": "director-p2"
+}
