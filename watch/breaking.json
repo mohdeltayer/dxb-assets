@@ -1,10 +1,28 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-26T22:52:08Z",
- "seq": 913,
+ "generated_at": "2026-11-26T23:20:18Z",
+ "seq": 914,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 24598,
+   "source": "Nintendo of America (YouTube)",
+   "source_kind": "youtube",
+   "title": "Absolutely ZONKED out after that meal.",
+   "url": "https://www.youtube.com/shorts/O_C2DgDlC90",
+   "published": "2026-11-26T23:00Z",
+   "first_seen": "2026-11-26T23:20:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i4.ytimg.com/vi/O_C2DgDlC90/hqdefault.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 914
+  }
+ ],
  "recent": [
   {
    "id": 24574,
@@ -271,9 +289,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-26T22:50:04Z",
+  "last_poll_at": "2026-11-26T23:20:14Z",
   "sources_enabled": 101,
-  "sources_ok": 101,
+  "sources_ok": 100,
   "sources_failing": 0,
   "failed": []
  }
