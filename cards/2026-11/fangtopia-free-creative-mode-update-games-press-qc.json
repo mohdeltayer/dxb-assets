@@ -1,0 +1,625 @@
+{
+ "name": "fangtopia-free-creative-mode-update-games-press",
+ "out": "cards/2026-11/fangtopia-free-creative-mode-update-games-press-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "content",
+   "detail": "shot 2 at 29.03 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 2 at 29.95 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 3 at 14.19 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 3 at 15.11 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 4 at 38.92 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 4 at 39.84 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 5 at 6.60 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 5 at 7.34 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 6 at 46.57 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 6 at 47.31 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 7 at 28.53 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 7 at 29.27 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 8 at 54.07 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 8 at 54.81 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 9 at 61.56 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 9 at 62.30 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 10 at 21.59 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 10 at 22.33 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 11 at 34.03 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 11 at 34.85 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 12 at 58.90 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 12 at 59.72 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 13 at 41.54 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 13 at 42.31 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 14 at 19.10 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 14 at 19.87 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 68 px on 2 lines (cut it to a few words next time): لعبة Fangtopia\nوضع الإبداع المجاني متوفر الآن"
+  },
+  {
+   "stage": "credit",
+   "detail": "source line ladder: «بيان صحفي من الناشر عبر غيمز برس (Games Press)‏  ·  ‏26 نوفمبر 2026» -> «المصدر: Games Press‏  ·  ‏26 نوفمبر 2026» at 32 px (drawn pixels inside x 96 to 910)"
+  },
+  {
+   "stage": "smear",
+   "detail": "ValueError: /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/fangtopia-free-creative-mode-update-games-press-reel-v1.mp4: blocky smear at 6.13 to 6.83 s (peak 19.5), 8.37 to 9.03 s (peak 19.0), 24.03 to 24.33 s (peak 17.1); look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 14,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4 at 28.12 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4 at 13.26 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4 at 37.99 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4 at 5.87 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4 at 45.84 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-coming-soon-trailer.mp4 at 27.8 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4 at 53.34 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4 at 60.83 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4 at 20.86 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4 at 33.21 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4 at 58.08 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4 at 40.77 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 14,
+   "step": "a",
+   "why": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4 at 18.33 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "text",
+   "slot": "reel",
+   "step": "a",
+   "why": "soft shade under line group(s) [2]: bright footage behind them"
+  }
+ ],
+ "job_to_pass_min": 15.2,
+ "at": "2026-11-26T11:27:42Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 32.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 67.1; leak_pct 1.6; cache {'hit': 0, 'miss': 3}; separate_secs 13.5; secs 20.0",
+  "render_job: lifeless: {\"score\": 9.3, \"still_share\": 0.078, \"longest_still\": 1.3, \"cuts_per_10s\": 4.39, \"held_under_text\": 0.022, \"secs\": 31.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 30 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4 at 48.11 s for 3.8 s, focus 0.735"
+  }
+ ],
+ "job_sha": "922361a3196aa3022adc2edd9e600231ac5a4a49",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/fangtopia-free-creative-mode-update-games-press-look-1.jpg",
+  "cards/2026-11/fangtopia-free-creative-mode-update-games-press-look-2.jpg",
+  "cards/2026-11/fangtopia-free-creative-mode-update-games-press-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 30.1,
+  "files": {
+   "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4": {
+    "secs": 29.6,
+    "cached": false,
+    "stages": {
+     "decode": 11.9,
+     "autofocus": 27.6,
+     "ocr": 27.6,
+     "smear": 29.3,
+     "scenes": 29.5
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/fangtopia-free-creative-mode-update-games-press.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.2,
+  "fetch": 3.42,
+  "shots": 1.32,
+  "checks": 2.62,
+  "render": 4.75,
+  "after": 1.65,
+  "job": 13.77
+ },
+ "job_after_autofix": {
+  "name": "fangtopia-free-creative-mode-update-games-press",
+  "story": "2026-11-26-fangtopia-free-creative-mode-update-games-press",
+  "footage_source": "steam:3010170",
+  "kind_news": "update",
+  "story_class": "trailer",
+  "story_class_why": "kind update",
+  "skin_why": "genre puzzle: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/fangtopia-free-creative-mode-update-games-press-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+    "steam": 3010170,
+    "trailer": "Demo Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3010170"
+   },
+   {
+    "file": "fangtopia-free-creative-mode-update-games-press-coming-soon-trailer.mp4",
+    "steam": 3010170,
+    "trailer": "Coming Soon Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3010170"
+   },
+   {
+    "file": "fangtopia-free-creative-mode-update-games-press-fangtopia-release-date-trailer.mp4",
+    "steam": 3010170,
+    "trailer": "Fangtopia Release Date Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3010170"
+   }
+  ],
+  "shots": [
+   [
+    "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+    48.11,
+    3.8,
+    [
+     [
+      0.0,
+      0.735
+     ]
+    ]
+   ],
+   [
+    "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+    3.07,
+    2.74,
+    null
+   ],
+   [
+    "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+    3.07,
+    2.74,
+    null
+   ],
+   [
+    "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+    3.07,
+    2.78,
+    null
+   ],
+   [
+    "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+    3.07,
+    2.78,
+    null
+   ],
+   [
+    "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+    3.07,
+    2.46,
+    null
+   ],
+   [
+    "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+    3.07,
+    2.46,
+    null
+   ],
+   [
+    "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+    3.07,
+    2.31,
+    null
+   ],
+   [
+    "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+    3.07,
+    2.31,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "أضاف المطورون وضع الإبداع\nالمجاني إلى لعبة Fangtopia،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "وهي لعبة ألغاز هادئة تبني\nفيها العالم من مربعات سداسية",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    7,
+    [
+     [
+      "ويمنح الوضع اللاعب عددا غير\nمحدود من المربعات ومن الوقت",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    8,
+    10,
+    [
+     [
+      "لبناء مملكته، من غابات وحقول\nوجبال وقرى وسكك حديدية وأنهار",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    11,
+    12,
+    [
+     [
+      "وتتوفر اللعبة على الكمبيوتر\nو PS5 و Switch 2،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    13,
+    14,
+    [
+     [
+      "ومن المقرر صدور تحديث\nمجاني آخر في ديسمبر",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    14,
+    "المصدر: Games Press · اللقطات: Absolutely Games",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "أضاف المطورون وضع الإبداع المجاني إلى لعبة Fangtopia، وهي لعبة ألغاز هادئة تبني فيها العالم من مربعات سداسية. ويمنح الوضع اللاعب عددا غير محدود من المربعات ومن الوقت لبناء مملكته، من غابات وحقول وجبال وقرى وسكك حديدية وأنهار. وتتوفر اللعبة على الكمبيوتر و PS5 و Switch 2، ومن المقرر صدور تحديث مجاني آخر في ديسمبر.",
+  "headline": "لعبة Fangtopia\nوضع الإبداع المجاني متوفر الآن",
+  "label": "رسمي",
+  "game": "Fangtopia",
+  "game_short": "Fangtopia",
+  "game_key": "fangtopia",
+  "genre": [
+   "puzzle"
+  ],
+  "texts": {
+   "instagram": "رسمي: وضع الإبداع المجاني متوفر الآن في لعبة Fangtopia\n\nأضاف المطورون وضع الإبداع المجاني إلى لعبة Fangtopia، وهي لعبة ألغاز هادئة تبني فيها العالم من مربعات سداسية.\n\nويمنح الوضع اللاعب عددا غير محدود من المربعات ومن الوقت لبناء مملكته.\n\nوتتوفر اللعبة على الكمبيوتر وPS5 وSwitch 2، ومن المقرر صدور تحديث مجاني آخر في ديسمبر.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: بيان صحفي من الناشر.\n\n#ألعاب #أخبار_الألعاب #Fangtopia #ألعاب_مجانية",
+   "x": "رسمي: أضافت لعبة الألغاز الهادئة Fangtopia وضع الإبداع المجاني، بعدد غير محدود من المربعات ومن الوقت لبناء عالمك. المصدر: بيان صحفي من الناشر.",
+   "threads": "رسمي: وضع الإبداع المجاني متوفر الآن في لعبة Fangtopia.\n\nيمنح الوضع اللاعب عددا غير محدود من المربعات ومن الوقت لبناء مملكته، وتتوفر اللعبة على الكمبيوتر وPS5 وSwitch 2.\n\nالمصدر: بيان صحفي من الناشر"
+  },
+  "source": "بيان صحفي من الناشر عبر غيمز برس (Games Press)، ولقطات من Absolutely Games",
+  "date": "26 Nov 2026",
+  "theme": "spectacle",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Absolutely Games and Secret Mode added a free Creative mode to Fangtopia on 26 Nov 2026, one month after launch.",
+   "what_it_means_here": "Players get unlimited tiles and time to build their own hex worlds on PC, PS5 and Switch 2, with another free update due in December."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind update",
+   "skin": "house: genre puzzle: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "fangtopia-free-creative-mode-update-games-press-demo-trailer.mp4 from the resolver (steam:3010170)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Games Press, 26 Nov 2026: Fangtopia free Creative mode update (Absolutely Games, Secret Mode) (https://www.gamespress.com/en-US/FANGTOPIA-GIVES-PLAYERS-THE-KEYS-TO-THE-KINGDOM-IN-FREE-CREATIVE-MODE-); first report: Games Press release 26 Nov 2026; seen by the server digest 26 Nov 2026",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 3010170 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
