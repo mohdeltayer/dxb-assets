@@ -4261,3 +4261,23 @@ next beat opened on "Circuit 2" (latin_first, a hard stop); it built at 05:14Z o
    asserted the old refusals now assert the fix).
 5. Bank: 6 evergreen Reels (Ocarina, retro, list, explainer) are kept as Publer drafts labelled kind:evergreen, so a
    stalled news lane never leaves the feed empty.
+
+## Crop fix (Mohammad, 26 Nov 2026)
+
+Case: the Dragon Quest Monsters: The Withered World final-trailer Reel (published 26 Nov; not re-rendered or replaced).
+Its first shot (the ESRB trailer at 40.13 s, focus 0.25) aimed the 9:16 window on empty desert while the monster stood
+at the right edge, half out; the next stretch held desert too, about 5 s in all; the level HUD («6») was cut at the left
+edge; later shots carried the trailer's burnt-in captions. YOLOv8n's person, vehicle and animal classes saw nothing on
+the stylised art, so the drift check skipped the shots and the saliency autofocus framed the sand.
+Order: subject check on every footage shot (re-aim, another shot, else the 16:9 showcase; never a half face or an empty
+frame); for stylised and cartoon games a character detector or the showcase instead of the saliency guess; HUD or
+on-screen text crossing the window edge gets the same fix; no shot over 4 s unless it moves with its subject in frame.
+Autofixes, not refusals.
+Built: `shotgate.frame_problems` (rules subject_unseen, subject_empty, subject_text_cut, shot_long), `shotgate.stylised`,
+autofix attempts (subject_unseen: none, the showcase; subject_empty and subject_text_cut: focus 0.5, 0.3, 0.7, 0.15,
+0.85 at first, now 0.5, 0.3, 0.7, then shifts of 1 to 3 s, all screened in one detector pass under a 45 s budget per job; shot_long: trim to 4 s and fill a clean neighbour), and render_job's gate
+ladder (unfixed subject problems take the showcase; an unfixed long shot is a warning). The showcase is per Reel, not
+per shot: its bands carry the headline and lines. The character detector for stylised art is not built: the showcase
+is the fallback Mohammad allowed. Texture measures (colour dominance, edge density) did not separate the desert from a
+monster on a white ground, so "empty" means no detected subject in the window. Tests: templates/test_cropfix.py.
+
