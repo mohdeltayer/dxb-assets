@@ -59,6 +59,20 @@ GROUND_SPAN = 12.0
 GROUND_FPS = 6
 SEARCH = 12.0             # seconds either side of a refused start searched for a clean one
 STILL = ('.jpg', '.jpeg', '.png', '.webp')
+# Crop fix (Mohammad, 26 Nov 2026, after the Dragon Quest Monsters Reel: the monster half out of the frame on the right,
+# empty desert held for 5 s, HUD text cut at the left edge). Autofixes, never refusals: re-aim, another stretch, else the
+# 16:9 showcase (render_job.shot_ladder). frame_problems() below.
+LONG_MAX = 4.0            # no footage shot longer than this, unless it moves and its subject stays in the window
+MOTION_MIN = 8.0          # mean grey difference (0-255, 160 px wide) between a shot's first and last frame: moving
+TEXT_CONF = 70            # tesseract confidence for a word crossing the window edge (HUD numbers and captions)
+TEXT_MIN_H = 0.015        # ... at least this share of the frame high (noise is smaller)
+STYLISED_GENRES = {'anime', 'family', 'platformer', 'party', 'cosy', 'cozy', 'kids', 'cartoon', 'mascot', 'monster',
+                   'creature collector', 'monster collector'}
+STYLISED_WORDS = ('pokemon', 'pok\u00e9mon', 'mario', 'kirby', 'zelda', 'dragon quest', 'monster', 'digimon', 'yo-kai',
+                  'animal crossing', 'splatoon', 'pikmin', 'sonic', 'one piece', 'dragon ball', 'naruto', 'my hero',
+                  'persona', 'fire emblem', 'xenoblade', 'smash bros', 'donkey kong', 'yoshi', 'metroid', 'palworld',
+                  'cookie run', 'genshin', 'honkai', 'zenless', 'hello kitty', 'minecraft', 'roblox', 'rayman', 'crash',
+                  'spyro', 'ratchet', 'astro bot', 'slime', 'chocobo', 'puyo', 'blue archive', 'melty blood')
 
 _BOXES_PY = r"""
 import json, os, sys
@@ -351,6 +365,114 @@ def drift_problems(job, shots):
         shutil.rmtree(tmp, ignore_errors=True)
 
 
+def stylised(job):
+    """True for stylised and cartoon games (monsters, mascots, anime, Nintendo), where YOLOv8n's person, vehicle and
+    animal classes see no subject: "stylised": true/false in the job decides; else its genre or the game's name."""
+    if isinstance(job.get('stylised'), bool):
+        return job['stylised']
+    g = job.get('genre')
+    gs = {str(x).lower() for x in (g if isinstance(g, list) else [g]) if x}
+    if gs & STYLISED_GENRES:
+        return True
+    name = ' '.join(str(job.get(k) or '') for k in ('game', 'game_key', 'game_short', 'name')).lower()
+    return any(w in name for w in STYLISED_WORDS)
+
+
+def _grey_small(path):
+    from PIL import Image
+    return Image.open(path).convert('L').resize((160, 90))
+
+
+def _motion(a, b):
+    import numpy as np
+    return float(np.abs(np.asarray(_grey_small(a), dtype=float) - np.asarray(_grey_small(b), dtype=float)).mean())
+
+
+def _edge_words(path, win):
+    """Words (HUD numbers included) whose box crosses an edge of the window, read with tesseract on the full frame;
+    None without tesseract."""
+    import reel
+    from PIL import Image
+    im = Image.open(path).convert('RGB')
+    w, h = im.size
+    boxes = reel._word_boxes(im, TEXT_CONF, letters=1)
+    if boxes is None:
+        return None
+    x0, x1 = win[0] * w, win[1] * w
+    return [wd for wd, l, t, r, b in boxes if (b - t) >= TEXT_MIN_H * h and any(ch.isalnum() for ch in wd)
+            and (l < x0 < r or l < x1 < r)]
+
+
+def frame_problems(job, shots):
+    """The crop fix (Mohammad, 26 Nov 2026), per footage shot, on three frames (start, middle, end) of the window the
+    shot uses: subject_unseen (a stylised game where the detector sees no subject: the showcase, not a saliency guess),
+    subject_empty (no person, vehicle or animal inside the window: ground, sky or wall), subject_text_cut (HUD or
+    on-screen text crossing the window edge) and shot_long (over LONG_MAX s unless it moves and the subject stays in).
+    Inside the showcase layout only shot_long applies. Waiver after a look: "frame_ok": [[file, start, reason]]."""
+    rows_ = [r for r in _shot_rows(job, shots) if not _waived(job, 'frame_ok', r[1], r[2])]
+    if not rows_:
+        return []
+    boxed = job.get('layout') == 'showcase'
+    tmp = tempfile.mkdtemp(prefix='framecheck-')
+    try:
+        import reel
+        plan, paths, geo = [], [], {}
+        for i, f, st, secs, fo in rows_:
+            if f not in geo:
+                _w, h, _v0, _d = _probe(_U() + f)
+                crop, rows = reel._bars(_U() + f, st, secs)
+                iw = int(crop.split('crop=')[1].split(':')[0]) if crop else _w
+                geo[f] = (crop, iw, rows or h)
+            for k, q in enumerate((0.1, secs / 2, max(0.1, secs - 0.1))):
+                p = f'{tmp}/{i}-{k}.png'
+                _frame(f, st + q, geo[f][0], p)
+                plan.append((i, q)); paths.append(p)
+        found = None if boxed else detect_boxes(paths)
+        by = {}
+        for n, (i, q) in enumerate(plan):
+            by.setdefault(i, []).append((q, paths[n], (found[n] if found is not None else None)))
+        sty = stylised(job)
+        out = []
+        for i, f, st, secs, fo in rows_:
+            smp = by.get(i) or []
+            if len(smp) < 3:
+                continue
+            _crop, iw, rows = geo[f]
+            wins = [_window(fo, q, secs, iw, rows) for q, _p, _b in smp]
+            seen = [None if bs is None else [b for b in bs if _area(b) >= SUBJECT_MIN] for _q, _p, bs in smp]
+            inside = [None if s is None else any(_inside(b, w) >= DRIFT_INSIDE for b in s) for s, w in zip(seen, wins)]
+            base = {'where': f'shot {i}', 'file': f, 'start': st, 'secs': secs, 'focus': fo}
+            if not boxed and found is not None:
+                if sty and not any(seen):
+                    out.append({**base, 'rule': 'subject_unseen',
+                                'detail': f'shot {i} ({f} {st:.2f} s): stylised art, the detector sees no subject to '
+                                          'frame; the 16:9 showcase rather than a saliency guess (crop fix, 26 Nov 2026)'})
+                    continue
+                if not sty and inside[1] is False and not any(inside):
+                    out.append({**base, 'rule': 'subject_empty',
+                                'detail': f'shot {i} ({f} {st:.2f} s): no character, creature, face or vehicle inside the '
+                                          '9:16 window (ground, sky or wall); re-aim or another stretch (crop fix)'})
+                    continue
+            if not boxed:
+                cut = _edge_words(smp[1][1], wins[1])
+                if cut:
+                    out.append({**base, 'rule': 'subject_text_cut',
+                                'detail': f'shot {i} ({f} {st:.2f} s): on-screen text cut by the 9:16 edge '
+                                          f'({" ".join(cut[:4])}); re-aim or another stretch (crop fix)'})
+                    continue
+            if secs > LONG_MAX + 0.05:
+                moving = _motion(smp[0][1], smp[2][1]) >= MOTION_MIN
+                held = boxed or (found is not None and all(x for x in inside))
+                if not (moving and held):
+                    out.append({**base, 'rule': 'shot_long', 'safe_secs': LONG_MAX,
+                                'detail': f'shot {i} ({f} {st:.2f} s): {secs:.2f} s on one shot, over {LONG_MAX:.0f} s '
+                                          + ('without movement' if not moving else 'and the subject is not held in the '
+                                             'window throughout') + f'; trimmed to {LONG_MAX:.1f} s (crop fix)'})
+        return out
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
 def ground_pick(f, start, span, secs, t0=0.0):
     """Item D: the calmest window of `secs` in [start, start + span] of `f` (motion plus contrast on the 9:16 centre the
     footage ground shows, at GROUND_FPS). Returns (seek, its score, the score of the seek as written (start + t0))."""
@@ -386,7 +508,7 @@ def problems(job, shots):
     if job.get('kind') in ('famitsu', 'breaking') or job.get('profile') == 'breaking':
         return []
     tp, _ = timing_problems(job, shots)
-    return tp + drift_problems(job, shots)
+    return tp + drift_problems(job, shots) + frame_problems(job, shots)
 
 
 def enforce(job, shots):

@@ -217,7 +217,7 @@ def _one(job, sh):
     import shotgate as SG
     row = [list(sh)]
     tp, _ = SG.timing_problems(job, row)
-    return tp + SG.drift_problems(job, row)
+    return tp + SG.drift_problems(job, row) + SG.frame_problems(job, row)
 
 
 def _aim(p):
@@ -288,6 +288,24 @@ def _attempts(p, sh):
         if cs is not None:
             out.append(('shift', [f, cs, secs, fo], f'moved from {st:.2f} to {cs:.2f} s, the nearest clean start of the '
                         f'same {secs:.2f} s'))
+    elif p['rule'] == 'subject_unseen':
+        return []                          # stylised art the detector cannot see: the showcase, no guessing (26 Nov)
+    elif p['rule'] == 'shot_long':
+        safe = p.get('safe_secs') or 4.0
+        if secs > safe:
+            out.append(('trim', [f, st, safe, fo], f'trimmed from {secs:.2f} to {safe:.2f} s: no shot over 4 s unless it '
+                        'moves with its subject in the window (crop fix, 26 Nov 2026)'))
+    elif p['rule'] in ('subject_empty', 'subject_text_cut'):
+        for x in (0.5, 0.3, 0.7, 0.15, 0.85, 0.0, 1.0):  # re-aim the window first, then another stretch
+            if fo is None or (not isinstance(fo, list) and abs(float(fo) - x) > 0.01) or isinstance(fo, list):
+                out.append(('focus', [f, st, secs, x], f'focus {json.dumps(fo)} to {x}: re-aimed (crop fix, 26 Nov 2026)'))
+        k = SHIFT_STEP
+        while k <= SHIFT + 1e-6:
+            for s in (round(st + k, 2), round(st - k, 2)):
+                if s >= 0:
+                    out.append(('shift', [f, s, secs, fo], f'moved from {st:.2f} to {s:.2f} s, the nearest stretch with '
+                                'a subject in the window and no cut text (crop fix)'))
+            k += SHIFT_STEP
     else:
         safe = p.get('safe_secs')
         if p['rule'] == 'subject_drift' and safe is not None and safe >= MIN_SHOT:

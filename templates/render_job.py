@@ -1149,6 +1149,9 @@ def gate_ladder(job, left):
         if sh is None:
             SG_.warn('shot gate', d)
             continue
+        if p.get('rule') == 'shot_long':       # crop fix (26 Nov 2026): a long shot no trim could fix is a warning only
+            SG_.warn('shot gate', d, shot=i)
+            continue
         f, st = sh[0], sh[1]
         if 'before the picture' in d and isinstance(p.get('picture_start'), (int, float)):
             sh[1] = st = round(float(p['picture_start']) + 0.05, 2)   # a shot that opens before the picture starts on it
