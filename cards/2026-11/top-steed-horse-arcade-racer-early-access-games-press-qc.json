@@ -1,0 +1,542 @@
+{
+ "name": "top-steed-horse-arcade-racer-early-access-games-press",
+ "out": "cards/2026-11/top-steed-horse-arcade-racer-early-access-games-press-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot scan",
+   "detail": "footage scan stopped at its cap (180 s); shots as written, automatic slots from the footage library or evenly spaced"
+  },
+  {
+   "stage": "credit",
+   "detail": "source line ladder: «بيان صحفي من الناشر عبر غيمز برس (Games Press)‏  ·  ‏26 نوفمبر 2026» -> «المصدر: Games Press‏  ·  ‏26 نوفمبر 2026» at 32 px (drawn pixels inside x 96 to 910)"
+  },
+  {
+   "stage": "credit",
+   "detail": "source line ladder: «بيان صحفي من الناشر عبر غيمز برس (Games Press)‏  ·  ‏26 نوفمبر 2026» -> «المصدر: Games Press‏  ·  ‏26 نوفمبر 2026» at 32 px (drawn pixels inside x 96 to 910)"
+  },
+  {
+   "stage": "credit",
+   "detail": "credit ladder step 5 (smaller type): «بيان صحفي من الناشر عبر غيمز برس (Games Press)‏  ·  ‏26 نوفمبر 2026» -> «بيان صحفي من الناشر عبر غيمز برس (Games Press)‏ · ‏26 نوفمبر 2026» at 30 px"
+  },
+  {
+   "stage": "smear",
+   "detail": "ValueError: /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/top-steed-horse-arcade-racer-early-access-games-press-reel-v1.mp4: blocky smear at 0.00 to 0.57 s (peak 17.1); look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4: shot ended before the first video frame (2.64 s); moved to 2.69 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4: shot ended before the first video frame (2.64 s); moved to 2.69 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4: shot ended before the first video frame (2.64 s); moved to 2.69 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4: shot ended before the first video frame (2.64 s); moved to 2.69 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4: shot ended before the first video frame (2.64 s); moved to 2.69 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4: shot ended before the first video frame (2.64 s); moved to 2.69 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4: shot ended before the first video frame (2.64 s); moved to 2.69 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4: shot ended before the first video frame (2.64 s); moved to 2.69 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4: shot ended before the first video frame (2.64 s); moved to 2.69 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 9.9 s for 3.8 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 24.82 s for 2.74 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 39.63 s for 2.74 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 54.46 s for 2.71 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 67.28 s for 2.71 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch for 5 slot(s)"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 7.83 s for 3.8 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 25.21 s for 2.74 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 38.48 s for 2.74 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 53.77 s for 2.71 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 67.05 s for 2.71 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "scan cap: 5 automatic slot(s) from the library or evenly spaced"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 15.82 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 31.99 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 44.88 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 60.99 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 19.09 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 28.75 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 35.18 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 at 12.65 s: moved off a repeated moment (respread)"
+  }
+ ],
+ "job_to_pass_min": 10.9,
+ "at": "2026-11-26T12:23:16Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 starts at 0.0 s, the video at 2.64 s; its first 2.64 s are lost",
+  "first frame: shot 1 top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 starts at 0.0 s, the video at 2.64 s; its first 2.64 s are lost",
+  "first frame: shot 2 top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 starts at 0.0 s, the video at 2.64 s; its first 2.64 s are lost",
+  "first frame: shot 8 top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 starts at 0.0 s, the video at 2.64 s; its first 2.64 s are lost",
+  "first frame: shot 9 top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 starts at 0.0 s, the video at 2.64 s; its first 2.64 s are lost",
+  "length 30.2 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 99.4; leak_pct 0.0; cache {'hit': 0, 'miss': 3}; separate_secs 11.0; secs 17.2",
+  "render_job: lifeless: {\"score\": 5.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 1.66, \"held_under_text\": 0.0, \"secs\": 30.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 24 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "credit 1",
+   "rule": "credit_width",
+   "what": "set one line at 36 px (was 40 px, too wide for the safe zone)",
+   "before": {
+    "text": "المصدر: بيان صحفي من الناشر عبر غيمز برس (Games Press)،\nولقطات من Coyote Time Publishing",
+    "size": 40
+   },
+   "after": {
+    "text": "المصدر: Games Press · اللقطات: Coyote Time Publishing",
+    "size": 36
+   }
+  }
+ ],
+ "job_sha": "328359ed7287654c2451eeb7772f437fd25cc7d1",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/top-steed-horse-arcade-racer-early-access-games-press-look-1.jpg",
+  "cards/2026-11/top-steed-horse-arcade-racer-early-access-games-press-look-2.jpg",
+  "cards/2026-11/top-steed-horse-arcade-racer-early-access-games-press-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 39.7,
+  "files": {
+   "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4": {
+    "secs": 39.6,
+    "cached": false,
+    "stages": {
+     "decode": 18.0,
+     "autofocus": 34.4,
+     "ocr": 34.4,
+     "smear": 39.4,
+     "scenes": 39.6
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/top-steed-horse-arcade-racer-early-access-games-press.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.18,
+  "fetch": 0.55,
+  "shots": 3.12,
+  "checks": 0.45,
+  "render": 4.35,
+  "after": 1.47,
+  "job": 9.95
+ },
+ "job_after_autofix": {
+  "name": "top-steed-horse-arcade-racer-early-access-games-press",
+  "story": "2026-11-26-top-steed-horse-arcade-racer-early-access-games-press",
+  "footage_source": "steam:4362880",
+  "kind_news": "launch",
+  "story_class": "trailer",
+  "story_class_why": "kind launch",
+  "skin_why": "genre racing: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/top-steed-horse-arcade-racer-early-access-games-press-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4",
+    "steam": 4362880,
+    "trailer": "TOP STEED",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "4362880"
+   }
+  ],
+  "shots": [
+   [
+    "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4",
+    0.0,
+    3.8,
+    null
+   ],
+   [
+    "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4",
+    0.0,
+    2.74,
+    null
+   ],
+   [
+    "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4",
+    0.0,
+    2.74,
+    null
+   ],
+   [
+    "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4",
+    0.0,
+    2.53,
+    null
+   ],
+   [
+    "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4",
+    0.0,
+    2.53,
+    null
+   ],
+   [
+    "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4",
+    0.0,
+    2.71,
+    null
+   ],
+   [
+    "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4",
+    0.0,
+    2.71,
+    null
+   ],
+   [
+    "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4",
+    0.0,
+    2.24,
+    null
+   ],
+   [
+    "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4",
+    0.0,
+    2.24,
+    null
+   ],
+   [
+    "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4",
+    0.0,
+    2.28,
+    null
+   ],
+   [
+    "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4",
+    0.0,
+    2.28,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "صدرت اليوم لعبة TOP STEED\nفي الوصول المبكر على Steam،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "وهي لعبة سباقات أركيد\nيركب فيها كل متسابق حصانا",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    7,
+    [
+     [
+      "وتستلهم اللعبة سباقات حقبة PS2\nالسريعة، وتضم ثلاث خرائط،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    8,
+    9,
+    [
+     [
+      "ولعبا جماعيا عبر الإنترنت\nوبشاشة مقسمة لأربعة لاعبين",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    10,
+    11,
+    [
+     [
+      "وسعرها 12.49 دولارا\nخلال الوصول المبكر،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    12,
+    13,
+    [
+     [
+      "والنسخة 1.0 مقررة\nفي الربع الأول من 2027",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    13,
+    "المصدر: Games Press · اللقطات: Coyote Time Publishing",
+    {
+     "size": 36,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "صدرت اليوم لعبة TOP STEED في الوصول المبكر على Steam، وهي لعبة سباقات أركيد يركب فيها كل متسابق حصانا. وتستلهم اللعبة سباقات حقبة PS2 السريعة، وتضم ثلاث خرائط، ولعبا جماعيا عبر الإنترنت وبشاشة مقسمة لأربعة لاعبين. وسعرها 12.49 دولارا خلال الوصول المبكر، والنسخة 1.0 مقررة في الربع الأول من 2027.",
+  "headline": "لعبة TOP STEED\nسباقات الخيول بأسلوب PS2",
+  "label": "رسمي",
+  "game": "TOP STEED",
+  "game_short": "TOP STEED",
+  "game_key": "top steed",
+  "genre": [
+   "racing"
+  ],
+  "texts": {
+   "instagram": "رسمي: لعبة سباقات الخيول TOP STEED متوفرة الآن في الوصول المبكر\n\nصدرت اليوم لعبة TOP STEED على Steam، وهي لعبة سباقات أركيد يركب فيها كل متسابق حصانا.\n\nوتضم ثلاث خرائط، ولعبا جماعيا عبر الإنترنت وبشاشة مقسمة لأربعة لاعبين.\n\nوسعرها 12.49 دولارا خلال الوصول المبكر، والنسخة 1.0 مقررة في الربع الأول من 2027.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: بيان صحفي من الناشر.\n\n#ألعاب #أخبار_الألعاب #TopSteed #سباقات",
+   "x": "رسمي: صدرت لعبة السباقات TOP STEED في الوصول المبكر على Steam، ويركب فيها كل متسابق حصانا. سعرها 12.49 دولارا. المصدر: بيان صحفي من الناشر.",
+   "threads": "رسمي: صدرت لعبة TOP STEED في الوصول المبكر على Steam.\n\nوهي لعبة سباقات أركيد يركب فيها كل متسابق حصانا، وتدعم اللعب الجماعي وشاشة مقسمة لأربعة لاعبين.\n\nالمصدر: بيان صحفي من الناشر"
+  },
+  "source": "بيان صحفي من الناشر عبر غيمز برس (Games Press)، ولقطات من Coyote Time Publishing",
+  "date": "26 Nov 2026",
+  "theme": "stylized",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "TOP STEED launched in Steam Early Access on 26 Nov 2026.",
+   "what_it_means_here": "An arcade racer where every racer rides a horse, with four-player split-screen and online multiplayer, $12.49 in Early Access."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind launch",
+   "skin": "house: genre racing: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "top-steed-horse-arcade-racer-early-access-games-press-top-steed.mp4 from the resolver (steam:4362880)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Games Press, 26 Nov 2026: TOP STEED Early Access (Coyote Time Publishing, Minuscule Mayhem) (https://www.gamespress.com/en-US/TOP-STEED-the-arcade-racer-where-every-kart-is-a-horse-launches-in-Ste); first report: Games Press release 26 Nov 2026; seen by the server digest 26 Nov 2026",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 4362880 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "shots_auto": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ]
+ }
+}
