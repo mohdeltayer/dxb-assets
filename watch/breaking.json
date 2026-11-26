@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-26T14:52:06Z",
- "seq": 901,
+ "generated_at": "2026-11-26T15:52:08Z",
+ "seq": 902,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -375,63 +375,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 861
-  },
-  {
-   "id": 23231,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Arcade Archives Dirt Dash - Out Now | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=dbovF0PJOl4",
-   "published": "2026-11-25T15:00Z",
-   "first_seen": "2026-11-25T15:20:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i1.ytimg.com/vi/dbovF0PJOl4/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=dbovF0PJOl4"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 859
-  },
-  {
-   "id": 23193,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "Achievement Unlocked: An Interview with the First XBOX Player to Reach 10 Million Gamerscore",
-   "url": "https://news.xbox.com/en-us/2026/11/25/achievements-10-million-gamerscore-interview/",
-   "published": "2026-11-25T15:00Z",
-   "first_seen": "2026-11-25T15:00:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Siegfried_XBOX_Playback-a1988d1fe0b378c4073e.png"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Conquista_10Mi-c847fd8268d5fa0033db.gif"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Achievement_rare-8c955d50f7c846e32948.png"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Achievement_mythic-80e09036cbf00bfa44f2.png"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 858
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-26T14:50:14Z",
+  "last_poll_at": "2026-11-26T15:50:14Z",
   "sources_enabled": 101,
-  "sources_ok": 100,
+  "sources_ok": 101,
   "sources_failing": 0,
   "failed": []
  }
