@@ -1,0 +1,432 @@
+{
+ "name": "expelled-from-paradise-stellar-angel-switch-launch-gonintendo",
+ "out": "cards/2026-11/expelled-from-paradise-stellar-angel-switch-launch-gonintendo-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "source smear",
+   "detail": "blocky smear in the source: expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 1.60 to 2.00 s (peak 50.4); expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 1.60 to 2.00 s (peak 50.4); expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 1.60 to 2.00 s (peak 50.4); expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 1.60 to 2.00 s (peak 50.4); expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 1.60 to 2.00 s (peak 50.4); expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 1.60 to 2.00 s (peak 50.4); expelled-from-paradise-stellar-angel-4"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "text",
+   "slot": "reel",
+   "step": "a",
+   "why": "soft shade under line group(s) [1]: bright footage behind them"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "d",
+   "why": "audio split not applied (music stem not clean (leftover 65.4% > 5.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or "
+  }
+ ],
+ "job_to_pass_min": 7.0,
+ "at": "2026-11-26T06:36:23Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 1 expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 2 expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 3 expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 4 expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 5 expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 6 expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 7 expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "first frame: shot 8 expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 starts at 0.0 s, the video at 1.09 s; its first 1.09 s are lost",
+  "length 21.5 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 65.4% > 5.0%); music_pct 61.3; leak_pct 65.4; cache {'hit': 0, 'miss': 3}; separate_secs 11.2; secs 14.3",
+  "render_job: audio split fallback: our bed (audio split not applied (music stem not clean (leftover 65.4% > 5.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.); bed:neon",
+  "render_job: lifeless: {\"score\": 6.1, \"still_share\": 0.06, \"longest_still\": 0.6, \"cuts_per_10s\": 4.65, \"held_under_text\": 0.056, \"secs\": 21.5, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "variety",
+   "what": "hook moved 22.91 -> 50.05 s: opener 22.9 s was used by expelled-from-paradise-stellar-angel-40-minutes at 22.9 s within 14 days"
+  },
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 at 50.05 s for 3.8 s, focus 0.391"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 at 22.91 s for 2.4 s, focus 0.545"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 at 31.11 s for 2.4 s, focus 0.528"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 at 37.25 s for 2.7 s, focus 0.594"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 at 44.68 s for 2.7 s, focus 0.61"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4 at 31.04 s for 2.6 s, focus 0.782 (nothing free in expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4)"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4 at 35.77 s for 2.6 s, focus 0.782 (nothing free in expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4)"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4 at 25.41 s for 2.8 s, focus 0.782 (nothing free in expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4)"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4 at 41.12 s for 2.8 s, focus 0.353 (nothing free in expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4)"
+  },
+  {
+   "where": "shot 7",
+   "rule": "subject_drift",
+   "what": "trimmed to 2.58 s, its longest safe length before the subject leaves the 9:16 window",
+   "before": [
+    "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4",
+    25.41,
+    2.78,
+    [
+     [
+      0.0,
+      0.782
+     ]
+    ]
+   ],
+   "after": [
+    "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4",
+    25.41,
+    2.58,
+    [
+     [
+      0.0,
+      0.782
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 8",
+   "rule": "fill",
+   "what": "lengthened 2.78 to 2.98 s to keep the time shot 7 gave up",
+   "before": 2.78,
+   "after": 2.98
+  }
+ ],
+ "job_sha": "bcbe32a051b61a77c22cad4209ba3d455a79cfc1",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/expelled-from-paradise-stellar-angel-switch-launch-gonintendo-look-1.jpg",
+  "cards/2026-11/expelled-from-paradise-stellar-angel-switch-launch-gonintendo-look-2.jpg",
+  "cards/2026-11/expelled-from-paradise-stellar-angel-switch-launch-gonintendo-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon (trailer sound refused: music stem not clean (leftover 65.4% > 5.0%))",
+ "shot_read": {
+  "secs": 37.6,
+  "files": {
+   "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4": {
+    "secs": 20.0,
+    "cached": false,
+    "stages": {
+     "decode": 7.7,
+     "autofocus": 19.7,
+     "ocr": 19.7,
+     "smear": 19.8,
+     "scenes": 19.9
+    },
+    "incomplete": null
+   },
+   "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4": {
+    "secs": 17.3,
+    "cached": false,
+    "stages": {
+     "decode": 7.6,
+     "autofocus": 17.2,
+     "ocr": 17.2,
+     "smear": 17.2,
+     "scenes": 17.3
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/expelled-from-paradise-stellar-angel-switch-launch-gonintendo.json",
+ "stage_minutes": {
+  "queue": 0.02,
+  "setup": 0.17,
+  "fetch": 1.08,
+  "shots": 0.8,
+  "checks": 1.27,
+  "render": 1.84,
+  "after": 0.8,
+  "job": 5.82
+ },
+ "job_after_autofix": {
+  "name": "expelled-from-paradise-stellar-angel-switch-launch-gonintendo",
+  "story": "2026-11-26-expelled-from-paradise-stellar-angel-switch-launch-gonintendo",
+  "footage_source": "steam:4607420",
+  "kind_news": "date",
+  "story_class": "trailer",
+  "story_class_why": "kind date",
+  "skin_why": "genre adventure: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/expelled-from-paradise-stellar-angel-switch-launch-gonintendo-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+    "steam": 4607420,
+    "trailer": "Story PV",
+    "trailer_id": "4607420"
+   },
+   {
+    "file": "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4",
+    "steam": 4607420,
+    "trailer": "Teaser PV",
+    "trailer_id": "4607420"
+   },
+   {
+    "file": "expelled-from-paradise-stellar-angel-switch-launch-gonintend-opening-gameplay-en.mp4",
+    "steam": 4607420,
+    "trailer": "Opening Gameplay - EN",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "4607420"
+   }
+  ],
+  "shots": [
+   [
+    "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+    50.05,
+    3.8,
+    [
+     [
+      0.0,
+      0.391
+     ]
+    ]
+   ],
+   [
+    "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+    22.91,
+    2.42,
+    [
+     [
+      0.0,
+      0.545
+     ]
+    ]
+   ],
+   [
+    "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+    31.11,
+    2.42,
+    [
+     [
+      0.0,
+      0.528
+     ]
+    ]
+   ],
+   [
+    "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+    37.25,
+    2.71,
+    [
+     [
+      0.0,
+      0.594
+     ]
+    ]
+   ],
+   [
+    "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+    44.68,
+    2.71,
+    [
+     [
+      0.0,
+      0.61
+     ]
+    ]
+   ],
+   [
+    "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4",
+    31.04,
+    2.56,
+    [
+     [
+      0.0,
+      0.782
+     ]
+    ]
+   ],
+   [
+    "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4",
+    35.77,
+    2.56,
+    [
+     [
+      0.0,
+      0.782
+     ]
+    ]
+   ],
+   [
+    "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4",
+    25.41,
+    2.58,
+    [
+     [
+      0.0,
+      0.782
+     ]
+    ]
+   ],
+   [
+    "expelled-from-paradise-stellar-angel-40-minutes-teaser-pv.mp4",
+    41.12,
+    2.98,
+    [
+     [
+      0.0,
+      0.353
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "ذكر موقع جو\nنينتيندو (GoNintendo) أن الرواية",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "البصرية Expelled from Paradise\nصدرت اليوم على Switch",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وتدور أحداثها بعد فيلم\nالأنيمي الذي صدر عام 2014",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    8,
+    [
+     [
+      "وتضم اللعبة نهايات متعددة،\nوتدعم اليابانية والإنجليزية",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    8,
+    "المصدر: GoNintendo · اللقطات: Toei Animation",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع جو نينتيندو (GoNintendo) أن الرواية البصرية Expelled from Paradise صدرت اليوم على Switch. وتدور أحداثها بعد فيلم الأنيمي الذي صدر عام 2014. وتضم اللعبة نهايات متعددة، وتدعم اليابانية والإنجليزية.",
+  "headline": "لعبة Expelled\nتصدر اليوم على Switch",
+  "label": "تقرير",
+  "game": "Expelled from Paradise: The Stellar Angel",
+  "game_short": "Expelled",
+  "game_key": "expelled from paradise the stellar angel",
+  "genre": [
+   "adventure"
+  ],
+  "texts": {
+   "instagram": "تقرير: رواية Expelled from Paradise تصدر اليوم على Switch\n\nذكر موقع جو نينتيندو (GoNintendo) أن الرواية البصرية Expelled from Paradise: The Stellar Angel صدرت اليوم على Switch.\n\nوتدور أحداثها بعد فيلم الأنيمي الذي صدر عام 2014، وتضم نهايات متعددة.\n\nاللعبة من تطوير ستوديو 51 (Studio51) ونشر شركة تويي أنيميشن (Toei Animation)، وتدعم اليابانية والإنجليزية.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع جو نينتيندو.\n\n#ألعاب #أخبار_الألعاب #ExpelledFromParadise #أنمي",
+   "x": "تقرير: ذكر موقع جو نينتيندو (GoNintendo) أن الرواية البصرية Expelled from Paradise: The Stellar Angel صدرت اليوم على Switch، وتدور أحداثها بعد فيلم الأنيمي الصادر عام 2014. المصدر: جو نينتيندو.",
+   "threads": "تقرير: ذكر موقع جو نينتيندو (GoNintendo) أن الرواية البصرية Expelled from Paradise: The Stellar Angel صدرت اليوم على Switch.\n\nوتدور أحداثها بعد فيلم الأنيمي الصادر عام 2014، وتضم نهايات متعددة.\n\nالمصدر: موقع جو نينتيندو"
+  },
+  "source": "موقع جو نينتيندو (GoNintendo)، ولقطات من Toei Animation",
+  "date": "26 Nov 2026",
+  "theme": "emerald",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4",
+   50.05
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "GoNintendo reports the visual novel Expelled from Paradise: The Stellar Angel is out on Switch today, 26 Nov.",
+   "what_it_means_here": "An anime-film spin-off visual novel from Toei Animation, set after the 2014 film, with multiple endings and Japanese and English text."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind date",
+   "skin": "house: genre adventure: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "expelled-from-paradise-stellar-angel-40-minutes-story-pv.mp4 from the resolver (steam:4607420)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: GoNintendo, 26 Nov 2026: Expelled from Paradise: The Stellar Angel wings it on Switch today (https://gonintendo.com/contents/67582-expelled-from-paradise-the-stellar-angel-wings-it-on-switch-today); first report: GoNintendo 26 Nov 2026 05:34Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 4607420 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
