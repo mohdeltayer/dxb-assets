@@ -1,10 +1,48 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-26T13:52:06Z",
- "seq": 896,
+ "generated_at": "2026-11-26T14:00:18Z",
+ "seq": 897,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 24180,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Lenny Kravitz Brings Bawma, the Pirate King of Aleph in 007 First Light, to HITMAN World of Assassination",
+   "url": "https://news.xbox.com/en-us/2026/11/26/hitman-bawma-elusive-target/",
+   "published": "2026-11-26T14:00Z",
+   "first_seen": "2026-11-26T14:00:15Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/WOA_Bawma_Wire_img2-3b22debdf766e57c2f67.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/WOA_Bawma_Wire_img3-528cdf5f538cba912326.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/WOA_Bawma_Wire_img4-bf82ea62fa998aaded8e.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/WOA_Bawma_Wire_img5-d4bac22db475d613ed3a.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/WOA_Bawma_Wire_img6-949197702a65f288ddbb.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/WOA_Bawma_Wire_img7-5843b4e64c7df5389ba4.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 897
+  }
+ ],
  "recent": [
   {
    "id": 23973,
@@ -350,7 +388,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-26T13:50:14Z",
+  "last_poll_at": "2026-11-26T14:00:15Z",
   "sources_enabled": 101,
   "sources_ok": 101,
   "sources_failing": 0,
