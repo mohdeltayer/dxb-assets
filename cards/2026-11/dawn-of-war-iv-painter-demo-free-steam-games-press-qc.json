@@ -1,0 +1,385 @@
+{
+ "name": "dawn-of-war-iv-painter-demo-free-steam-games-press",
+ "out": "cards/2026-11/dawn-of-war-iv-painter-demo-free-steam-games-press-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot gate",
+   "detail": "shot 2 (dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 41.20 s): no character, creature, face or vehicle inside the 9:16 window (ground, sky or wall); re-aim or another stretch (crop fix) subject_empty",
+   "shot": 2
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 4 (dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 74.39 s): no character, creature, face or vehicle inside the 9:16 window (ground, sky or wall); re-aim or another stretch (crop fix) subject_empty",
+   "shot": 4
+  },
+  {
+   "stage": "credit",
+   "detail": "credit ladder step 6 (two lines): «المصدر: بيان صحفي من الناشر عبر Games Press اللقطات: KING Art Games» -> «المصدر: بيان صحفي من الناشر عبر Games Press / اللقطات: KING Art Games» at 34 px"
+  },
+  {
+   "stage": "fill",
+   "detail": "ValueError: an empty band in the finished Reel (no empty band at any second, Mohammad 8 Nov 2026): 1.70 s: 380 px of empty band from y 916. Keep the headline in the top band and a line in the bottom band at every second (showcase layout), or fill the frame cropped to the subject."
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "drift: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "drift: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the subject leaves or is cut by the 9:16 window"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "d",
+   "why": "audio split not applied (music stem not clean (leftover 9.2% > 5.0%)) on a trailer track under 6 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or o"
+  }
+ ],
+ "job_to_pass_min": 18.9,
+ "at": "2026-11-26T17:37:23Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 1 dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 2 dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 3 dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 4 dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 5 dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "first frame: shot 6 dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 starts at 0.0 s, the video at 2.02 s; its first 2.02 s are lost",
+  "length 16.2 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 9.2% > 5.0%); music_pct 5.1; leak_pct 9.2; cache {'hit': 0, 'miss': 7}; separate_secs 8.6; secs 11.6",
+  "render_job: audio split fallback: our bed (audio split not applied (music stem not clean (leftover 9.2% > 5.0%)) on a trailer track under 6 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.); bed:neon_e",
+  "render_job: lifeless: {\"score\": 16.0, \"still_share\": 0.012, \"longest_still\": 0.1, \"cuts_per_10s\": 0.0, \"held_under_text\": 0.0, \"secs\": 16.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 24 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 at 9.81 s for 3.8 s, focus 0.505"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 at 27.04 s for 2.6 s, focus 0.301"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 at 41.20 s for 2.6 s, focus 0.399"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 at 64.15 s for 2.6 s, focus 0.489"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 at 74.39 s for 2.6 s, focus 0.475"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 at 99.18 s for 2.2 s, focus 0.466"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 at 110.39 s for 2.2 s, focus 0.0"
+  },
+  {
+   "where": "shot 6",
+   "rule": "subject_empty",
+   "what": "focus [[0.0, 0.0]] to 0.5: re-aimed (crop fix, 26 Nov 2026)",
+   "before": [
+    "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4",
+    110.39,
+    2.2,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "after": [
+    "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4",
+    110.39,
+    2.2,
+    0.5
+   ]
+  }
+ ],
+ "job_sha": "48982d9b5e41a41608fff8e5865332bd1e1c16ab",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/dawn-of-war-iv-painter-demo-free-steam-games-press-look-1.jpg",
+  "cards/2026-11/dawn-of-war-iv-painter-demo-free-steam-games-press-look-2.jpg",
+  "cards/2026-11/dawn-of-war-iv-painter-demo-free-steam-games-press-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_e (trailer sound refused: music stem not clean (leftover 9.2% > 5.0%))",
+ "shot_read": {
+  "secs": 0.4,
+  "files": {
+   "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4": {
+    "secs": 0.0,
+    "cached": true,
+    "stages": {
+     "decode": 15.8,
+     "autofocus": 37.3,
+     "ocr": 37.3,
+     "smear": 38.3,
+     "scenes": 38.5
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/dawn-of-war-iv-painter-demo-free-steam-games-press.json",
+ "stage_minutes": {
+  "queue": 10.85,
+  "setup": 0.18,
+  "fetch": 1.72,
+  "shots": 1.45,
+  "checks": 1.62,
+  "render": 1.26,
+  "after": 0.73,
+  "job": 6.77
+ },
+ "job_after_autofix": {
+  "name": "dawn-of-war-iv-painter-demo-free-steam-games-press",
+  "story": "2026-11-26-dawn-of-war-iv-painter-demo-free-steam-games-press",
+  "footage_source": "steam:2272360",
+  "kind_news": "date",
+  "story_class": "trailer",
+  "story_class_why": "kind date",
+  "skin_why": "genre strategy: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/dawn-of-war-iv-painter-demo-free-steam-games-press-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4",
+    "steam": 2272360,
+    "trailer": "Dawn of War IV Gameplay Overview Trailer",
+    "trailer_id": "2272360"
+   },
+   {
+    "file": "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-space-marine-101-trailer.mp4",
+    "steam": 2272360,
+    "trailer": "Dawn of War IV Space Marine 101 Trailer",
+    "trailer_id": "2272360"
+   },
+   {
+    "file": "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-commander-edition-trailer.mp4",
+    "steam": 2272360,
+    "trailer": "Dawn of War IV Commander Edition Trailer",
+    "trailer_id": "2272360"
+   },
+   {
+    "file": "dawn-of-war-iv-painter-demo-free-steam-games-press-dawn-of-war-iv-create-your-army.mp4",
+    "steam": 2272360,
+    "trailer": "Dawn of War IV Create your Army",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2272360"
+   }
+  ],
+  "shots": [
+   [
+    "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4",
+    9.81,
+    3.8,
+    [
+     [
+      0.0,
+      0.505
+     ]
+    ]
+   ],
+   [
+    "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4",
+    27.04,
+    2.56,
+    [
+     [
+      0.0,
+      0.301
+     ]
+    ]
+   ],
+   [
+    "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4",
+    41.2,
+    2.56,
+    [
+     [
+      0.0,
+      0.399
+     ]
+    ]
+   ],
+   [
+    "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4",
+    64.15,
+    2.64,
+    [
+     [
+      0.0,
+      0.489
+     ]
+    ]
+   ],
+   [
+    "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4",
+    74.39,
+    2.64,
+    [
+     [
+      0.0,
+      0.475
+     ]
+    ]
+   ],
+   [
+    "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4",
+    99.18,
+    2.2,
+    [
+     [
+      0.0,
+      0.466
+     ]
+    ]
+   ],
+   [
+    "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4",
+    110.39,
+    2.2,
+    0.5
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "تتيح النسخة التجريبية\nتخصيص وحدات الفصائل الأربع",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "وحفظ التصاميم ومشاركتها،\nونقلها إلى اللعبة الكاملة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وتصدر اللعبة في 3 ديسمبر",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    6,
+    "المصدر: بيان صحفي من الناشر عبر Games Press\nاللقطات: KING Art Games",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "أصبحت النسخة التجريبية Painter المجانية للعبة Warhammer 40,000: Dawn of War IV متوفرة الآن على Steam. تتيح النسخة التجريبية تخصيص وحدات الفصائل الأربع وحفظ التصاميم ومشاركتها، ونقلها إلى اللعبة الكاملة. وتصدر اللعبة في 3 ديسمبر.",
+  "headline": "النسخة التجريبية Painter\nللعبة Dawn of War IV",
+  "label": "رسمي",
+  "game": "Warhammer 40,000: Dawn of War IV",
+  "game_short": "Dawn of War IV",
+  "game_key": "warhammer 40 000 dawn of war iv",
+  "genre": [
+   "strategy"
+  ],
+  "texts": {
+   "instagram": "رسمي: النسخة التجريبية Painter المجانية للعبة Dawn of War IV متوفرة الآن\n\nأعلنت الناشرة ديب سيلفر (Deep Silver) واستوديو كينغ آرت غيمز (KING Art Games) توفر النسخة التجريبية Painter المجانية للعبة Warhammer 40,000: Dawn of War IV على Steam.\n\nتتيح النسخة التجريبية تخصيص وحدات الفصائل الأربع وحفظ التصاميم ومشاركتها، ونقلها إلى اللعبة الكاملة التي تصدر في 3 ديسمبر.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: بيان صحفي من الناشر.\n\n#ألعاب #أخبار_الألعاب #DawnOfWarIV #Warhammer40K",
+   "x": "رسمي: أصبحت النسخة التجريبية Painter المجانية متوفرة الآن للعبة Warhammer 40,000: Dawn of War IV على Steam، وتتيح تخصيص وحدات الفصائل الأربع. اللعبة الكاملة تصدر في 3 ديسمبر. المصدر: بيان صحفي من الناشر.",
+   "threads": "رسمي: أصبحت النسخة التجريبية Painter المجانية للعبة Dawn of War IV متوفرة الآن على Steam.\n\nتتيح تخصيص وحدات الفصائل الأربع ونقل التصاميم إلى اللعبة الكاملة، التي تصدر في 3 ديسمبر.\n\nالمصدر: بيان صحفي من الناشر"
+  },
+  "source": "بيان صحفي من الناشر عبر Games Press، ولقطات من KING Art Games",
+  "date": "26 Nov 2026",
+  "theme": "gold",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4",
+   9.81
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Deep Silver and KING Art Games released the free Painter Demo on 26 Nov, a week before the 3 Dec launch.",
+   "what_it_means_here": "Players can customise units from all four factions and carry the creations into the full game."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind date",
+   "skin": "house: genre strategy: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "dawn-of-war-iv-commander-edition-steam-dawn-of-war-iv-gameplay-overview-trailer.mp4 from the resolver (steam:2272360)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Games Press, 26 Nov 2026: Dawn of War IV Painter Demo out now (https://www.gamespress.com/en-US/DAWN-OF-WAR-IV-PAINTER-DEMO-OUT-NOW); first report: Games Press 26 Nov 2026 (16:00 UTC)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 2272360 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
