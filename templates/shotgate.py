@@ -409,10 +409,35 @@ def frame_problems(job, shots):
     subject_empty (no person, vehicle or animal inside the window: ground, sky or wall), subject_text_cut (HUD or
     on-screen text crossing the window edge) and shot_long (over LONG_MAX s unless it moves and the subject stays in).
     Inside the showcase layout only shot_long applies. Waiver after a look: "frame_ok": [[file, start, reason]]."""
-    rows_ = [r for r in _shot_rows(job, shots) if not _waived(job, 'frame_ok', r[1], r[2])]
-    if not rows_:
+    all_rows = [r for r in _shot_rows(job, shots) if not _waived(job, 'frame_ok', r[1], r[2])]
+    if not all_rows:
         return []
     boxed = job.get('layout') == 'showcase'
+    sty = stylised(job)
+    key = lambda r: (r[1], round(r[2], 2), round(r[3], 2), json.dumps(r[4]), boxed, sty)
+    rows_ = [r for r in all_rows if key(r) not in _FP_CACHE]   # each shot is read once per process (autofix re-asks)
+    if rows_:
+        for r, probs in zip(rows_, _frame_read(job, rows_, boxed, sty)):
+            _FP_CACHE[key(r)] = probs
+    out = []
+    for r in all_rows:
+        for p in _FP_CACHE[key(r)]:
+            d = dict(p)
+            d['where'] = f'shot {r[0]}'
+            d['detail'] = f'shot {r[0]} ' + d['detail']
+            out.append(d)
+    return out
+
+
+_FP_CACHE = {}
+
+
+def _frame_read(job, rows_, boxed, sty):
+    """frame_problems' reading for `rows_`: one list of problems (without 'where') per row, in order."""
+    if sty and not boxed:                              # stylised art: the detector cannot see it; render_job.scan moves the
+        return [[{'rule': 'subject_unseen', 'file': f, 'start': st, 'secs': secs, 'focus': fo,   # Reel to the showcase
+                  'detail': f'({f} {st:.2f} s): stylised art, the detector sees no subject to frame; the 16:9 showcase '
+                            'rather than a saliency guess (crop fix, 26 Nov 2026)'}] for i, f, st, secs, fo in rows_]
     tmp = tempfile.mkdtemp(prefix='framecheck-')
     try:
         import reel
@@ -431,9 +456,10 @@ def frame_problems(job, shots):
         by = {}
         for n, (i, q) in enumerate(plan):
             by.setdefault(i, []).append((q, paths[n], (found[n] if found is not None else None)))
-        sty = stylised(job)
-        out = []
+        res = []
         for i, f, st, secs, fo in rows_:
+            out = []
+            res.append(out)
             smp = by.get(i) or []
             if len(smp) < 3:
                 continue
@@ -441,23 +467,18 @@ def frame_problems(job, shots):
             wins = [_window(fo, q, secs, iw, rows) for q, _p, _b in smp]
             seen = [None if bs is None else [b for b in bs if _area(b) >= SUBJECT_MIN] for _q, _p, bs in smp]
             inside = [None if s is None else any(_inside(b, w) >= DRIFT_INSIDE for b in s) for s, w in zip(seen, wins)]
-            base = {'where': f'shot {i}', 'file': f, 'start': st, 'secs': secs, 'focus': fo}
+            base = {'file': f, 'start': st, 'secs': secs, 'focus': fo}
             if not boxed and found is not None:
-                if sty and not any(seen):
-                    out.append({**base, 'rule': 'subject_unseen',
-                                'detail': f'shot {i} ({f} {st:.2f} s): stylised art, the detector sees no subject to '
-                                          'frame; the 16:9 showcase rather than a saliency guess (crop fix, 26 Nov 2026)'})
-                    continue
-                if not sty and inside[1] is False and not any(inside):
+                if inside[1] is False and not any(inside):
                     out.append({**base, 'rule': 'subject_empty',
-                                'detail': f'shot {i} ({f} {st:.2f} s): no character, creature, face or vehicle inside the '
+                                'detail': f'({f} {st:.2f} s): no character, creature, face or vehicle inside the '
                                           '9:16 window (ground, sky or wall); re-aim or another stretch (crop fix)'})
                     continue
             if not boxed:
                 cut = _edge_words(smp[1][1], wins[1])
                 if cut:
                     out.append({**base, 'rule': 'subject_text_cut',
-                                'detail': f'shot {i} ({f} {st:.2f} s): on-screen text cut by the 9:16 edge '
+                                'detail': f'({f} {st:.2f} s): on-screen text cut by the 9:16 edge '
                                           f'({" ".join(cut[:4])}); re-aim or another stretch (crop fix)'})
                     continue
             if secs > LONG_MAX + 0.05:
@@ -465,10 +486,10 @@ def frame_problems(job, shots):
                 held = boxed or (found is not None and all(x for x in inside))
                 if not (moving and held):
                     out.append({**base, 'rule': 'shot_long', 'safe_secs': LONG_MAX,
-                                'detail': f'shot {i} ({f} {st:.2f} s): {secs:.2f} s on one shot, over {LONG_MAX:.0f} s '
+                                'detail': f'({f} {st:.2f} s): {secs:.2f} s on one shot, over {LONG_MAX:.0f} s '
                                           + ('without movement' if not moving else 'and the subject is not held in the '
                                              'window throughout') + f'; trimmed to {LONG_MAX:.1f} s (crop fix)'})
-        return out
+        return res
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 

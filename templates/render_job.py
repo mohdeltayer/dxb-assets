@@ -914,6 +914,10 @@ def scan(job):
         return t
     import scanproxy
     import autoshots as AS
+    import shotgate as SG
+    if SG.stylised(job) and SG_.showcase_ok(job):   # crop fix (26 Nov 2026): stylised art the detector cannot frame
+        SG_.showcase_fallback(job, 'stylised art: the person, vehicle and animal detector cannot frame its characters '
+                                   '(crop fix, 26 Nov 2026)')
     t0 = time.time()
     if scanproxy.capped(_all, job):
         return t0 + (time.time() - t0) / 2      # the child's own split is in the log; the stage keeps its total
