@@ -1,0 +1,34 @@
+{
+ "id": "2026-11-26-hollow-knight-silksong-cherry-time-nov-27-nintendo-everything",
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "name form: «نينتندو إيفريثينغ (Nintendo Everything)» (credit); names-ar has «نينتيندو إفريثينغ»",
+  "name not in names-ar: «أن استوديو تيم تشيري (Team Cherry)» (spoken); add it there as Proposed",
+  "text fixed mechanically: spoken: names not in names-ar written in Latin: Team Cherry",
+  "warning: text: line 2: «Team Cherry» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before the render, or, for a game, write it in Latin letters only",
+  "warning: text: line 2: these words are not in the paragraph: تيم تشيري; the lines, read in order, are the spoken paragraph (a word may be left out, none added): rewrite the line from the paragraph, or the paragraph to carry it",
+  "ledger: earlier stories on this game: 2026-10-08-fortnite-hollow-knight-price, 2026-11-10-hollow-knight-silksong-free-content-packs (an update or a duplicate? the editor decides)"
+ ],
+ "at": "2026-11-26T01:10:09Z",
+ "footage": {
+  "name": "Reveal Trailer",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30.0,
+  "mbps": 5.73,
+  "rows": 1058,
+  "duration": 105.16,
+  "decode_clean": true
+ },
+ "names_to_review": [
+  "Team Cherry"
+ ],
+ "job": "jobs/live/hollow-knight-silksong-cherry-time-nov-27-nintendo-everything.json",
+ "story": "newsroom/stories/2026-11-26-hollow-knight-silksong-cherry-time-nov-27-nintendo-everything.json",
+ "lines": 6,
+ "shots": 14,
+ "run": "45733841301",
+ "lane": "live",
+ "build_secs": 44
+}
