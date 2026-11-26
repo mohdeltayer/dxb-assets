@@ -31,33 +31,90 @@
  "shots": [
   [
    "forza-horizon-6-itasha-livery-rules-playground-gamespark-forza-horizon-6-launch-trailer.mp4",
-   "auto",
+   14.98,
    3.8,
-   null
+   [
+    [
+     0.0,
+     0.81
+    ]
+   ]
   ],
   [
    "forza-horizon-6-itasha-livery-rules-playground-gamespark-forza-horizon-6-launch-trailer.mp4",
-   "auto",
+   5.61,
    2.53,
-   null
+   [
+    [
+     0.0,
+     0.497
+    ],
+    [
+     0.542,
+     0.0
+    ],
+    [
+     1.442,
+     0.511
+    ],
+    [
+     2.377,
+     0.71
+    ]
+   ]
   ],
   [
    "forza-horizon-6-itasha-livery-rules-playground-gamespark-forza-horizon-6-launch-trailer.mp4",
-   "auto",
+   5.61,
    2.53,
-   null
+   [
+    [
+     0.0,
+     0.497
+    ],
+    [
+     0.542,
+     0.0
+    ],
+    [
+     1.442,
+     0.511
+    ],
+    [
+     2.377,
+     0.71
+    ]
+   ]
   ],
   [
    "forza-horizon-6-itasha-livery-rules-playground-gamespark-forza-horizon-6-launch-trailer.mp4",
-   "auto",
+   47.04,
    2.71,
-   null
+   [
+    [
+     0.0,
+     0.603
+    ],
+    [
+     0.923,
+     0.224
+    ],
+    [
+     2.224,
+     0.0
+    ]
+   ]
   ],
   [
    "forza-horizon-6-itasha-livery-rules-playground-gamespark-forza-horizon-6-launch-trailer.mp4",
-   "auto",
+   76.93,
    2.71,
-   null
+   [
+    [
+     0.0,
+     0.774
+    ]
+   ]
   ]
  ],
  "lines": [
@@ -90,7 +147,7 @@
   [
    0,
    4,
-   "المصدر: موقع غيم سبارك (Game*Spark)،\nولقطات من بلاي غراوند (Playground Games)",
+   "المصدر: Game*Spark · اللقطات: Playground Games",
    {
     "size": 40,
     "band": true
@@ -120,7 +177,7 @@
  "cut": false,
  "track": [
   "forza-horizon-6-itasha-livery-rules-playground-gamespark-forza-horizon-6-launch-trailer.mp4",
-  0.0
+  14.98
  ],
  "track_from_first_shot": true,
  "angle": {
@@ -146,5 +203,41 @@
   "credit on every clip": "yes: one credit over every shot",
   "sound": "yes: trailer sound from the first shot, split per shot on the server",
   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
- }
+ },
+ "cut_ok": [
+  [
+   "forza-horizon-6-itasha-livery-rules-playground-gamespark-forza-horizon-6-launch-trailer.mp4",
+   14.98,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "forza-horizon-6-itasha-livery-rules-playground-gamespark-forza-horizon-6-launch-trailer.mp4",
+   47.04,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "forza-horizon-6-itasha-livery-rules-playground-gamespark-forza-horizon-6-launch-trailer.mp4",
+   76.93,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ]
+ ],
+ "drift_ok": [
+  [
+   "forza-horizon-6-itasha-livery-rules-playground-gamespark-forza-horizon-6-launch-trailer.mp4",
+   14.98,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "forza-horizon-6-itasha-livery-rules-playground-gamespark-forza-horizon-6-launch-trailer.mp4",
+   47.04,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "forza-horizon-6-itasha-livery-rules-playground-gamespark-forza-horizon-6-launch-trailer.mp4",
+   76.93,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ]
+ ],
+ "layout": "showcase",
+ "showcase_reason": "the trailer clashes with our text in a 9:16 crop: the shot scan found no clean stretch for 3 slot(s) (16:9 fallback, Mohammad 20 Nov 2026)"
 }
