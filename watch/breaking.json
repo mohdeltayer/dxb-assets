@@ -1,10 +1,33 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-26T14:00:18Z",
- "seq": 897,
+ "generated_at": "2026-11-26T14:10:08Z",
+ "seq": 898,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 24193,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Station to Station - Launch Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=AhPNbp2s3Tc",
+   "published": "2026-11-26T14:00Z",
+   "first_seen": "2026-11-26T14:10:05Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/AhPNbp2s3Tc/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=AhPNbp2s3Tc"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 898
+  }
+ ],
+ "recent": [
   {
    "id": 24180,
    "source": "Xbox Wire",
@@ -41,9 +64,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 897
-  }
- ],
- "recent": [
+  },
   {
    "id": 23973,
    "source": "PlayStation (YouTube)",
@@ -388,7 +409,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-26T14:00:15Z",
+  "last_poll_at": "2026-11-26T14:10:05Z",
   "sources_enabled": 101,
   "sources_ok": 101,
   "sources_failing": 0,
