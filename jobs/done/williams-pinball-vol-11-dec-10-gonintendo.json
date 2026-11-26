@@ -8,7 +8,7 @@
  "skin_why": "genre pinball: its kit is not built yet (skins.KITS scifi, fantasy)",
  "built_by": "server-slip",
  "render_lane": "server",
- "out": "cards/2026-11/williams-pinball-vol-11-dec-10-gonintendo-reel-v1.mp4",
+ "out": "cards/2026-11/williams-pinball-vol-11-dec-10-gonintendo-reel-v2.mp4",
  "split_fallback": "ladder",
  "footage": [
   {
@@ -132,7 +132,7 @@
    9,
    [
     [
-     "مُحسّنة برسوم محدّثة\nومجسّمات متحركة وميزات جديدة",
+     "مُحسّنة برسوم محدّثة",
      {
       "size": 54
      }
@@ -151,7 +151,7 @@
    }
   ]
  ],
- "spoken": "ذكر موقع جو نينتيندو (GoNintendo) أن حزمة Williams Pinball Vol. 11 تصل إلى لعبة Pinball FX في 10 ديسمبر 2026. تضم الحزمة طاولات Jack·Bot و Elektra و Radical!، وتُعد Elektra و Radical! أول إعادة رسمية لهما. وتتوفر كل طاولة بشكلها الكلاسيكي الأصلي وبنسخة مُحسّنة برسوم محدّثة ومجسّمات متحركة وميزات جديدة.",
+ "spoken": "ذكر موقع جو نينتيندو (GoNintendo) أن حزمة Williams Pinball Vol. 11 تصل إلى لعبة Pinball FX في 10 ديسمبر 2026. تضم الحزمة طاولات Jack·Bot و Elektra و Radical!، وتُعد Elektra و Radical! أول إعادة رسمية لهما. وتتوفر كل طاولة بشكلها الكلاسيكي الأصلي وبنسخة مُحسّنة برسوم محدّثة.",
  "headline": "حزمة Williams\nتصل إلى Pinball FX",
  "label": "تقرير",
  "game": "Pinball FX",
@@ -212,5 +212,9 @@
   7,
   8,
   9
- ]
+ ],
+ "rerender": {
+  "reason": "factual_error",
+  "note": "Cut 'animated toys and new features': the source says only classic and remastered with updated graphics."
+ }
 }

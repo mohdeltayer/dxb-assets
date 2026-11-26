@@ -1,6 +1,6 @@
 {
  "name": "williams-pinball-vol-11-dec-10-gonintendo",
- "out": "cards/2026-11/williams-pinball-vol-11-dec-10-gonintendo-reel-v1.mp4",
+ "out": "cards/2026-11/williams-pinball-vol-11-dec-10-gonintendo-reel-v2.mp4",
  "verdict": "pass",
  "warnings": [
   {
@@ -13,7 +13,7 @@
   },
   {
    "stage": "look",
-   "detail": "theme spectacle would be the third in a row (retail-hell-consoles-gematsu, ac-black-flag-resynced-treasure-hunt-games-press); pick the next nearest to the game's palette from cold, stylized, playful, emerald, gold (no three in a row, 9 Nov 2026); rendering with theme stylized, the one rested longest"
+   "detail": "theme spectacle would be the third in a row (retail-hell-consoles-gematsu, ac-black-flag-resynced-treasure-hunt-games-press); pick the next nearest to the game's palette from cold, stylized, playful, emerald, gold (no three in a row, 9 Nov 2026); rendering with theme emerald, the one rested longest"
   }
  ],
  "ladder": [
@@ -129,33 +129,33 @@
    "kind": "picture",
    "slot": 8,
    "step": "a",
-   "why": "williams-pinball-vol-11-dec-10-gonintendo-pinball-fx-launch.mp4 at 63.22 s: moved off a repeated moment (respread)"
+   "why": "williams-pinball-vol-11-dec-10-gonintendo-pinball-fx-launch.mp4 at 24.19 s: moved off a repeated moment (respread)"
   },
   {
    "kind": "picture",
    "slot": 9,
    "step": "a",
-   "why": "williams-pinball-vol-11-dec-10-gonintendo-pinball-fx-launch.mp4 at 39.8 s: moved off a repeated moment (respread)"
+   "why": "williams-pinball-vol-11-dec-10-gonintendo-pinball-fx-launch.mp4 at 55.41 s: moved off a repeated moment (respread)"
   },
   {
    "kind": "sound",
    "slot": "reel",
    "step": "b",
-   "why": "audio split not applied (music only 5.3% of the track (< 40.0%)) on a trailer track under 9 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our be"
+   "why": "audio split not applied (music only 4.8% of the track (< 40.0%)) on a trailer track under 9 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our be"
   }
  ],
- "job_to_pass_min": 12.1,
- "at": "2026-11-26T18:52:37Z",
+ "job_to_pass_min": 11.9,
+ "at": "2026-11-26T19:14:15Z",
  "findings": [],
  "notes": [
   "first frame: shot 0 williams-pinball-vol-11-dec-10-gonintendo-pinball-fx-launch.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
   "length 21.4 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: not applied, audio as rendered; reason music only 5.3% of the track (< 40.0%); music_pct 5.3; leak_pct 0.4; cache {'hit': 0, 'miss': 4}; separate_secs 10.9; secs 14.7",
-  "render_job: lifeless: {\"score\": 21.0, \"still_share\": 0.31, \"longest_still\": 1.7, \"cuts_per_10s\": 2.82, \"held_under_text\": 0.0, \"secs\": 21.3, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: audio split: not applied, audio as rendered; reason music only 4.8% of the track (< 40.0%); music_pct 4.8; leak_pct 0.5; cache {'hit': 0, 'miss': 2}; separate_secs 10.6; secs 14.4",
+  "render_job: lifeless: {\"score\": 14.3, \"still_share\": 0.235, \"longest_still\": 0.9, \"cuts_per_10s\": 3.29, \"held_under_text\": 0.0, \"secs\": 21.3, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
  "autofixed": [],
- "job_sha": "786a02237a6362cb99a0715b2d55867b4fd0ab75",
- "dispatches": 2,
+ "job_sha": "ecd662fc44ac1e6f98a6159909718e7246c1f1ee",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -169,7 +169,7 @@
   "cards/2026-11/williams-pinball-vol-11-dec-10-gonintendo-look-3.jpg"
  ],
  "person_shown": "n/a",
- "sound": "trailer-music (ladder b: audio split not applied (music only 5.3% of the track (< 40.0%)) on a trailer track under 9 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
+ "sound": "trailer-music (ladder b: audio split not applied (music only 4.8% of the track (< 40.0%)) on a trailer track under 9 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
  "shot_read": {
   "secs": 0.0,
   "files": {
@@ -201,14 +201,13 @@
  },
  "job_path": "jobs/done/williams-pinball-vol-11-dec-10-gonintendo.json",
  "stage_minutes": {
-  "queue": 0.03,
-  "setup": 0.17,
-  "fetch": 0.42,
+  "queue": 0.02,
+  "setup": 0.22,
+  "fetch": 0.25,
   "shots": 5.08,
-  "checks": 0.74,
-  "render": 3.35,
-  "after": 1.13,
-  "upload": 0.15,
-  "job": 10.73
+  "checks": 0.76,
+  "render": 3.26,
+  "after": 1.15,
+  "job": 10.5
  }
 }
