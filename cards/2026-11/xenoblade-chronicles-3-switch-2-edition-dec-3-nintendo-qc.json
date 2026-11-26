@@ -1,0 +1,310 @@
+{
+ "name": "xenoblade-chronicles-3-switch-2-edition-dec-3-nintendo",
+ "out": "cards/2026-11/xenoblade-chronicles-3-switch-2-edition-dec-3-nintendo-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 68 px on 2 lines (cut it to a few words next time): لعبة Xenoblade Chronicles 3\nعلى Switch 2 في 3 ديسمبر"
+  },
+  {
+   "stage": "length",
+   "detail": "length 11.8 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them; under 12 s fails: add a beat of footage"
+  }
+ ],
+ "ladder": [],
+ "job_to_pass_min": 16.9,
+ "at": "2026-11-26T02:29:25Z",
+ "findings": [],
+ "notes": [
+  "length 11.8 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "source quality: xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4: low bitrate 2.8 Mbps (floor 5.0 Mbps for 1920x1080 at 60 fps) (lowbit)",
+  "render_job: audio split: applied; music_pct 98.8; leak_pct 0.0; cache {'hit': 0, 'miss': 2}; separate_secs 5.4; secs 8.6",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 3.42, \"held_under_text\": 0.0, \"secs\": 11.7, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 27 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)",
+  "estimate: headline: 24 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4 at 21.62 s for 3.8 s, focus 0.713 (nothing free in xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4)"
+  },
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4 at 17.47 s for 2.2 s, focus 0.487 (nothing free in xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4)"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4 at 13.57 s for 2.2 s, focus 0.487 (nothing free in xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4)"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4 at 28.38 s for 2.6 s, focus 0.392 (nothing free in xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4)"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4 at 10.97 s for 2.6 s, focus 0.325 (nothing free in xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4)"
+  },
+  {
+   "where": "shot 0",
+   "rule": "subject_cut",
+   "what": "focus [[0.0, 0.713]] to 1.0: the subject stays inside the window",
+   "before": [
+    "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4",
+    21.62,
+    3.8,
+    [
+     [
+      0.0,
+      0.713
+     ]
+    ]
+   ],
+   "after": [
+    "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4",
+    21.62,
+    3.8,
+    1.0
+   ]
+  }
+ ],
+ "job_sha": "11c74ac622ac4b415a065b422d5eaaec10eab0c0",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 5
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/xenoblade-chronicles-3-switch-2-edition-dec-3-nintendo-look-1.jpg",
+  "cards/2026-11/xenoblade-chronicles-3-switch-2-edition-dec-3-nintendo-look-2.jpg",
+  "cards/2026-11/xenoblade-chronicles-3-switch-2-edition-dec-3-nintendo-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 103.6,
+  "files": {
+   "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4": {
+    "secs": 83.0,
+    "cached": false,
+    "stages": {
+     "decode": 33.4,
+     "autofocus": 82.0,
+     "ocr": 82.0,
+     "smear": 82.0,
+     "scenes": 82.9
+    },
+    "incomplete": "833 of 833 frames not read in 30 s"
+   },
+   "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4": {
+    "secs": 20.6,
+    "cached": false,
+    "stages": {
+     "decode": 8.3,
+     "autofocus": 20.4,
+     "ocr": 20.4,
+     "smear": 20.4,
+     "scenes": 20.6
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/xenoblade-chronicles-3-switch-2-edition-dec-3-nintendo.json",
+ "stage_minutes": {
+  "queue": 11.0,
+  "setup": 0.18,
+  "fetch": 0.52,
+  "shots": 1.15,
+  "checks": 1.41,
+  "render": 1.26,
+  "after": 0.49,
+  "job": 4.83
+ },
+ "job_after_autofix": {
+  "name": "xenoblade-chronicles-3-switch-2-edition-dec-3-nintendo",
+  "story": "2026-11-26-xenoblade-chronicles-3-switch-2-edition-dec-3-nintendo",
+  "footage_source": "https://www.nintendo.com/us/store/products/xenoblade-chronicles-3-nintendo-switch-2-edition-switch-2/",
+  "kind_news": "date",
+  "story_class": "trailer",
+  "story_class_why": "kind date",
+  "skin_why": "genre rpg",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/xenoblade-chronicles-3-switch-2-edition-dec-3-nintendo-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4",
+    "url": "https://assets.nintendo.com/video/upload/store/software/switch/70010000053336/Video/208485bc068a34afabe9515e7c80cd3fc85eb5b48c264b97641589e40dc98828.mp4"
+   },
+   {
+    "file": "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4",
+    "repo": "live/2026-11-21/xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4"
+   },
+   {
+    "file": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-1.mp4",
+    "url": "https://assets.nintendo.com/video/upload/store/software/switch2/70010000122696/Video/fa96e6046e83762b9927f557e657c536b76798f39ee4507eddb6605fb28be90d.mp4"
+   },
+   {
+    "file": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-1.mp4",
+    "url": "https://assets.nintendo.com/video/upload/store/software/switch/70010000053336/Video/77daa1fa89d44f6f9d3cbf1a000fdcdc363dd4128555f52bbebaad537df78e6c.mp4"
+   },
+   {
+    "file": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-3.mp4",
+    "url": "https://assets.nintendo.com/video/upload/store/software/switch/70010000053336/Video/e08d9471557c5f82253ab6faf17ba16ec45b8a9a0c636880ae6b93ef498d2938.mp4"
+   },
+   {
+    "file": "xenoblade-chronicles-3-switch-2-edition-dec-3-nintendo-nintendo-1.mp4",
+    "url": "https://assets.nintendo.com/video/upload/store/software/switch2/70010000122696/Video/4f42e78d6d4688512dbb0c2e76662b54b5c56573c6056d6da3ed007b409b9cfc.mp4"
+   }
+  ],
+  "shots": [
+   [
+    "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4",
+    21.62,
+    3.8,
+    1.0
+   ],
+   [
+    "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4",
+    17.47,
+    2.2,
+    [
+     [
+      0.0,
+      0.487
+     ]
+    ]
+   ],
+   [
+    "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4",
+    13.57,
+    2.2,
+    [
+     [
+      0.0,
+      0.487
+     ]
+    ]
+   ],
+   [
+    "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4",
+    28.38,
+    2.6,
+    [
+     [
+      0.0,
+      0.392
+     ]
+    ]
+   ],
+   [
+    "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4",
+    10.97,
+    2.6,
+    [
+     [
+      0.0,
+      0.325
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "ونشرت الشركة العرض\nالتعريفي للنسخة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "وتتوفر اللعبة بنسخة مطبوعة\nورقمية بسعر 69 دولارًا",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    4,
+    "المصدر: نينتيندو (Nintendo)",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "أعلنت نينتيندو (Nintendo) أن نسخة Switch 2 من لعبة Xenoblade Chronicles 3 ستصدر في 3 ديسمبر. ونشرت الشركة العرض التعريفي للنسخة. وتتوفر اللعبة بنسخة مطبوعة ورقمية بسعر 69 دولارًا.",
+  "headline": "لعبة Xenoblade Chronicles 3\nعلى Switch 2 في 3 ديسمبر",
+  "label": "رسمي",
+  "game": "Xenoblade Chronicles 3",
+  "game_short": "Xenoblade Chronicles 3",
+  "game_key": "xenoblade chronicles iii",
+  "genre": [
+   "rpg"
+  ],
+  "texts": {
+   "instagram": "رسمي: Xenoblade Chronicles 3 على Switch 2 في 3 ديسمبر\n\nأعلنت نينتيندو (Nintendo) أن نسخة Switch 2 من لعبة Xenoblade Chronicles 3 ستصدر في 3 ديسمبر.\n\nونشرت الشركة العرض التعريفي للنسخة.\n\nوتتوفر اللعبة بنسخة مطبوعة ورقمية بسعر 69 دولارًا.\n\nاللقطات من صفحة اللعبة على متجر نينتيندو.\n\nالمصدر: نينتيندو.\n\n#ألعاب #أخبار_الألعاب #Xenoblade #Switch2",
+   "x": "رسمي: أعلنت نينتيندو (Nintendo) أن نسخة Switch 2 من لعبة Xenoblade Chronicles 3 ستصدر في 3 ديسمبر، بنسخة مطبوعة ورقمية بسعر 69 دولارًا. المصدر: نينتيندو.",
+   "threads": "رسمي: أعلنت نينتيندو (Nintendo) أن نسخة Switch 2 من لعبة Xenoblade Chronicles 3 ستصدر في 3 ديسمبر.\n\nوتتوفر اللعبة بنسخة مطبوعة ورقمية بسعر 69 دولارًا.\n\nالمصدر: نينتيندو"
+  },
+  "source": "نينتيندو (Nintendo)",
+  "date": "25 Nov 2026",
+  "theme": "playful",
+  "style": null,
+  "template": "trailer",
+  "skin": "fantasy",
+  "cut": false,
+  "track": [
+   "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4",
+   21.62
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Nintendo released the Overview trailer for the Switch 2 Edition on 25 Nov.",
+   "what_it_means_here": "The game launches on Switch 2 on 3 December, digital and physical, at $69."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind date",
+   "skin": "fantasy: genre rpg",
+   "footage": "xenoblade-chronicles-3-switch-2-edition-update-3-0-0-nintendo-2.mp4 from the resolver (https://www.nintendo.com/us/store/products/xenoblade-chronicles-3-nintendo-switch-2-edition-switch-2/)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Nintendo US, 25 Nov 2026: Xenoblade Chronicles 3 – Nintendo Switch 2 Edition Overview trailer (https://www.nintendo.com/us/whatsnew/watch-the-xenoblade-chronicles-3-nintendo-switch-2-edition-overview-trailer-ahead-of-the-game-launch-on-dec-3/); first report: Nintendo US 25 Nov 2026 (primary)",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: https://assets.nintendo.com/video/upload/store/software/switch/70010000053336/Video/208485bc068a34afabe9515e7c80cd3fc85eb5b48c264b97641589e40dc98828.mp4 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}

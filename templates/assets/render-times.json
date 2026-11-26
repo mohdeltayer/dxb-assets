@@ -159362,5 +159362,150 @@
   "sound": "bed:neon_c (trailer sound refused: music stem not clean (leftover 11.5% > 5.0%))",
   "footage": true,
   "upload_secs": 5.0
+ },
+ {
+  "name": "xenoblade-chronicles-3-switch-2-edition-dec-3-nintendo-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-26T02:28Z",
+  "stages": {
+   "checks": 2.7,
+   "montage": 26.2,
+   "text": 27.6,
+   "audio": 0.9,
+   "outro": 12.0
+  },
+  "total": 69.4,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-26T02:27Z",
+  "finished_at": "2026-11-26T02:28Z",
+  "render_min": 1.16,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4",
+    "start": 21.62,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 2.83,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 1,
+    "file": "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4",
+    "start": 17.47,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 2.83,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 2,
+    "file": "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4",
+    "start": 13.57,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 2.83,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 3,
+    "file": "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4",
+    "start": 28.38,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 2.83,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   },
+   {
+    "shot": 4,
+    "file": "xenoblade-chronicles-3-switch-2-environments-video-nintendo.mp4",
+    "start": 10.97,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 2.83,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": true
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 5
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 5.4,
+   "audio_secs": 24.5,
+   "music_pct": 98.8,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 5,
+   "mix_secs": 2.3,
+   "secs": 8.6
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 3.42,
+   "held_under_text": 0.0,
+   "secs": 11.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 31.4,
+   "shots": 69.0,
+   "checks": 81.9,
+   "render": 78.2,
+   "after": 29.1
+  },
+  "softgate": {
+   "warnings": 1,
+   "ladder": []
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 290,
+  "queue_wait_secs": 660,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1214,
+  "peak_mem_mb": 5065,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 74915,
+  "peak_disk_mb": 77059,
+  "min_disk_free_mb": 169047,
+  "setup_min": 0.18,
+  "story": "xenoblade-chronicles-3-switch-2-edition-dec-3-nintendo",
+  "job_sha": "11c74ac622ac4b415a065b422d5eaaec10eab0c0",
+  "dispatches": 1,
+  "sound": "trailer",
+  "footage": true
  }
 ]
