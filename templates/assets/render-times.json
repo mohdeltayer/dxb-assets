@@ -161221,5 +161221,310 @@
   "sound": "trailer",
   "footage": true,
   "upload_secs": 5.0
+ },
+ {
+  "name": "grime-ii-switch-launch-final-coda-gonintendo-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-26T06:22Z",
+  "stages": {
+   "checks": 5.2,
+   "montage": 59.7,
+   "text": 45.1,
+   "audio": 1.0,
+   "outro": 41.9
+  },
+  "total": 152.9,
+  "lane": "runner",
+  "queued_at": "2026-11-26T06:19Z",
+  "finished_at": "2026-11-26T06:22Z",
+  "render_min": 2.55,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4",
+    "start": 35.35,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4",
+    "start": 3.07,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4",
+    "start": 85.02,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4",
+    "start": 56.29,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4",
+    "start": 72.58,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4",
+    "start": 23.72,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4",
+    "start": 64.42,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4",
+    "start": 80.64,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4",
+    "start": 27.77,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.66,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 2.0,
+   "audio_secs": 69.7,
+   "music_pct": 36.4,
+   "leak_pct": 1.8,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 3,
+    "miss": 0
+   },
+   "effects_shots": 0,
+   "mix_secs": 0.6,
+   "secs": 3.2,
+   "ladder": "b",
+   "step_a": {
+    "applied": false,
+    "tool": "cocktail-fork",
+    "clean": false,
+    "separate_secs": 20.0,
+    "audio_secs": 69.7,
+    "music_pct": 36.4,
+    "leak_pct": 1.8,
+    "thresholds": {
+     "leak_max_pct": 5.0,
+     "music_min_pct": 40.0
+    },
+    "cache": {
+     "hit": 0,
+     "miss": 3
+    },
+    "reason": "music only 36.4% of the track (< 40.0%)",
+    "secs": 25.5
+   }
+  },
+  "lifeless": {
+   "score": 0.6,
+   "still_share": 0.005,
+   "longest_still": 0.1,
+   "cuts_per_10s": 9.0,
+   "held_under_text": 0.0,
+   "secs": 20.0,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 44.7,
+   "shots": 86.4,
+   "checks": 120.3,
+   "render": 217.0,
+   "after": 53.8
+  },
+  "softgate": {
+   "warnings": 15,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 1,
+     "step": "a",
+     "why": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 8,
+     "step": "a",
+     "why": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4 at 85.02 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4 at 56.29 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4 at 72.58 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4 at 23.72 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4 at 64.42 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4 at 80.64 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 8,
+     "step": "a",
+     "why": "grime-ii-switch-launch-final-coda-gonintendo-launch-trailer.mp4 at 27.77 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "b",
+     "why": "audio split not applied (music only 36.4% of the track (< 40.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our b"
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 522,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1419,
+  "peak_mem_mb": 5316,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61102,
+  "peak_disk_mb": 64493,
+  "min_disk_free_mb": 83303,
+  "setup_min": 0.68,
+  "story": "grime-ii-switch-launch-final-coda-gonintendo"
  }
 ]
