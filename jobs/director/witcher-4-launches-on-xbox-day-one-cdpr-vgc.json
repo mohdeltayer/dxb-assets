@@ -1,0 +1,27 @@
+{
+ "story": "2026-11-26-witcher-4-launches-on-xbox-day-one-cdpr-vgc",
+ "out": "cards/2026-11/witcher-4-launches-on-xbox-day-one-cdpr-vgc-reel-v1.mp4",
+ "verdict": "fix",
+ "reason": "factual_error",
+ "fix": "Credit band must say the footage is from The Witcher 3 (it now says only CD Projekt Red), so viewers do not read the Witcher 3 Remastered clips as Witcher 4.",
+ "reasons": [
+  "claims (PS5, Xbox and PC same time; Sony deal marketing only; no date; 2028 window; label تقرير; source VGC) match the primary",
+  "clear to an Arab reader: plain Arabic, no genre jargon",
+  "credit does not say the footage is The Witcher 3, and the clips show Witcher 3 Remastered title cards under a Witcher 4 headline"
+ ],
+ "job_patch": {
+  "credits": [
+   [
+    0,
+    13,
+    "المصدر: VGC · اللقطات: من The Witcher 3",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ]
+ },
+ "at": "2026-11-26T02:00:00Z",
+ "by": "director-p2"
+}
