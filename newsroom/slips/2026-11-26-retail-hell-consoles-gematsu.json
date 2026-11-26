@@ -1,0 +1,33 @@
+{
+ "id": "2026-11-26-retail-hell-consoles-gematsu",
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "slip texts fixed mechanically: headline, spoken",
+  "name not in names-ar: «أن الناشر فيرديميك (Feardemic)» (spoken); add it there as Proposed",
+  "name not in names-ar: «والاستوديو ليب غيم ستوديوز (LEAP Game Studios)» (spoken); add it there as Proposed",
+  "text fixed mechanically: spoken: names not in names-ar written in Latin: Feardemic, LEAP Game Studios"
+ ],
+ "at": "2026-11-26T18:10:16Z",
+ "footage": {
+  "name": "Retail Hell Launch Trailer",
+  "width": 1920,
+  "height": 1080,
+  "fps": 59.94,
+  "mbps": 5.72,
+  "rows": 1080,
+  "duration": 65.04,
+  "decode_clean": true
+ },
+ "names_to_review": [
+  "Feardemic",
+  "LEAP Game Studios"
+ ],
+ "job": "jobs/live/retail-hell-consoles-gematsu.json",
+ "story": "newsroom/stories/2026-11-26-retail-hell-consoles-gematsu.json",
+ "lines": 4,
+ "shots": 9,
+ "run": "45873712209",
+ "lane": "live",
+ "build_secs": 74
+}
