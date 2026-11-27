@@ -174,6 +174,8 @@ def run(job, upath, reads=None, frame_ok=None, dur_of=None, ladder=None):
                 continue
             tags = set(s.get('tags') or [])
             sc = 3 * len(tags & named) + sum(1 for t in tags if TAG_CLASS.get(t) in cls)
+            if named and not (tags & named) and 'person' not in tags:
+                continue                                      # a named character: that character, or a single person
             if sc <= 0 and not rom:
                 continue
             if rom and sc <= 0 and not (tags & {'action', 'car', 'city'}):

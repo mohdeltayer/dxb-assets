@@ -701,6 +701,12 @@ def shot_rules(job):
     if job.get('blocked_add'):                 # a director's or builder's fix: the stretch joins the ledger now
         B.add(job['blocked_add'])
     reads = dict(AS.READ)
+    for it in job.get('footage') or []:        # the end slate and ratings card: no frame read needed (27 Nov 2026)
+        f = it.get('file', '')
+        if str(f).lower().endswith(('.mp4', '.mov', '.mkv', '.webm', '.m4v')) and not it.get('stream'):
+            d = _video_dur(f)
+            if d > TAIL_SKIP + 6:
+                B.EXTRA[f] = [(d - TAIL_SKIP, d + 1.0, 'end slate')]
     try:
         import subjectmatch as SM
         SG_.guarded('shot matches line', SM.run, job, C.U, reads, frame_clean, _video_dur, SG_.ladder)

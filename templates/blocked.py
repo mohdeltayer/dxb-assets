@@ -72,14 +72,18 @@ def key_for(job, f, led=None):
     return None, 0.0
 
 
+EXTRA = {}                 # file -> [(a, b, reason)] set for this render: each trailer's end slate (render_job.shot_rules)
+
+
 def ranges(job, f, led=None):
-    """[(a, b, reason)] on file f's timeline, padded by PAD."""
+    """[(a, b, reason)] on file f's timeline, padded by PAD, plus this render's EXTRA ranges for f."""
     led = led or load()
     k, off = key_for(job, f, led)
+    out = list(EXTRA.get(f, []))
     if not k:
-        return []
-    return [(float(a) - off - PAD, float(b) - off + PAD, str(r)) for a, b, r in led['trailers'][k].get('blocked') or []
-            if float(b) - off > 0]
+        return out
+    return out + [(float(a) - off - PAD, float(b) - off + PAD, str(r)) for a, b, r in led['trailers'][k].get('blocked') or []
+                  if float(b) - off > 0]
 
 
 def hit(job, f, st, secs, led=None):
