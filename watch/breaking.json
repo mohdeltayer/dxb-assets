@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-27T04:52:06Z",
- "seq": 925,
+ "generated_at": "2026-11-27T05:52:06Z",
+ "seq": 926,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -321,14 +321,10 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-27T04:50:14Z",
+  "last_poll_at": "2026-11-27T05:50:14Z",
   "sources_enabled": 101,
-  "sources_ok": 85,
-  "sources_failing": 3,
-  "failed": [
-   "Games Press (timeout, 2x)",
-   "Nintendo of America (YouTube) (HTTP 503, 2x)",
-   "Rockstar Games (YouTube) (HTTP 503, 2x)"
-  ]
+  "sources_ok": 90,
+  "sources_failing": 0,
+  "failed": []
  }
 }
