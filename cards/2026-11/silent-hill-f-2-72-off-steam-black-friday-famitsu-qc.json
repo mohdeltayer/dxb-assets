@@ -1,0 +1,307 @@
+{
+ "name": "silent-hill-f-2-72-off-steam-black-friday-famitsu",
+ "out": "cards/2026-11/silent-hill-f-2-72-off-steam-black-friday-famitsu-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "pace",
+   "detail": "pace: nothing changes for 6.0 s at 1.2 (change every 4 s); cut to a second angle, add a line or a strip, or pass pace_ok=True with the reason in the brief"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-accolade-trailer-esrb.mp4 at 73.76 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-accolade-trailer-esrb.mp4 at 34.97 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-accolade-trailer-esrb.mp4 at 52.53 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-accolade-trailer-esrb.mp4 at 17.41 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "sound",
+   "slot": "reel",
+   "step": "d",
+   "why": "audio split not applied (music stem not clean (leftover 9.7% > 5.0%)) on a trailer track under 5 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or o"
+  }
+ ],
+ "job_to_pass_min": 13.0,
+ "at": "2026-11-27T10:21:35Z",
+ "findings": [],
+ "notes": [
+  "length 17.2 s before the end card (target 12 to 20 s)",
+  "pace: nothing changes for 6.0 s at 1.2 (change every 4 s)",
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 9.7% > 5.0%); music_pct 20.1; leak_pct 9.7; cache {'hit': 0, 'miss': 7}; separate_secs 8.5; secs 11.6",
+  "render_job: audio split fallback: our bed (audio split not applied (music stem not clean (leftover 9.7% > 5.0%)) on a trailer track under 5 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.); bed:neon_e",
+  "smear check: exempt 0.20 to 8.60 s (our own cards)",
+  "render_job: lifeless: {\"score\": 26.6, \"still_share\": 0.275, \"longest_still\": 3.4, \"cuts_per_10s\": 2.92, \"held_under_text\": 0.006, \"secs\": 17.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "headline",
+   "rule": "text",
+   "what": "«لعبة» put before the game name",
+   "before": "SILENT HILL f\nبخصم 72 بالمئة",
+   "after": "لعبة SILENT HILL f\nبخصم 72 بالمئة"
+  }
+ ],
+ "job_sha": "853132889b5849e239a032d57ce642f99fb321fc",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/silent-hill-f-2-72-off-steam-black-friday-famitsu-look-1.jpg",
+  "cards/2026-11/silent-hill-f-2-72-off-steam-black-friday-famitsu-look-2.jpg",
+  "cards/2026-11/silent-hill-f-2-72-off-steam-black-friday-famitsu-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "bed:neon_e (trailer sound refused: music stem not clean (leftover 9.7% > 5.0%))",
+ "shot_read": null,
+ "job_path": "jobs/done/silent-hill-f-2-72-off-steam-black-friday-famitsu.json",
+ "stage_minutes": {
+  "queue": 5.47,
+  "setup": 0.2,
+  "fetch": 0.64,
+  "shots": 2.08,
+  "checks": 0.42,
+  "render": 2.33,
+  "after": 0.65,
+  "job": 6.12
+ },
+ "job_after_autofix": {
+  "name": "silent-hill-f-2-72-off-steam-black-friday-famitsu",
+  "story": "2026-11-27-silent-hill-f-2-72-off-steam-black-friday-famitsu",
+  "footage_source": "steam:2947440",
+  "kind_news": "deal",
+  "story_class": "numbers",
+  "story_class_why": "a figure in the headline (72 بالمئة) (kind deal read from the text)",
+  "skin_why": "genre horror: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/silent-hill-f-2-72-off-steam-black-friday-famitsu-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-accolade-trailer-esrb.mp4",
+    "steam": 2947440,
+    "trailer": "SILENT HILL f_Accolade Trailer (ESRB)",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2947440"
+   },
+   {
+    "file": "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-launch-trailer-esrb.mp4",
+    "steam": 2947440,
+    "trailer": "SILENT HILL f_Launch Trailer(ESRB)",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2947440"
+   },
+   {
+    "file": "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-4th-trailer-esrb.mp4",
+    "steam": 2947440,
+    "trailer": "SILENT HILL f_4th Trailer(ESRB)",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "2947440"
+   }
+  ],
+  "shots": [
+   [
+    "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-launch-trailer-esrb.mp4",
+    63.26,
+    1.6,
+    [
+     [
+      0.0,
+      0.494
+     ]
+    ]
+   ],
+   [
+    "silent-hill-f-2-72-off-steam-black-friday-famitsu-gfx-figure.png",
+    0.0,
+    6.4,
+    null
+   ],
+   [
+    "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-accolade-trailer-esrb.mp4",
+    3.07,
+    2.2,
+    [
+     [
+      0.0,
+      0.494
+     ]
+    ]
+   ],
+   [
+    "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-accolade-trailer-esrb.mp4",
+    3.07,
+    2.2,
+    [
+     [
+      0.0,
+      0.494
+     ]
+    ]
+   ],
+   [
+    "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-accolade-trailer-esrb.mp4",
+    3.07,
+    2.39,
+    [
+     [
+      0.0,
+      0.635
+     ]
+    ]
+   ],
+   [
+    "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-accolade-trailer-esrb.mp4",
+    3.07,
+    2.39,
+    [
+     [
+      0.0,
+      0.635
+     ]
+    ]
+   ],
+   [
+    "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-accolade-trailer-esrb.mp4",
+    3.07,
+    2.39,
+    [
+     [
+      0.0,
+      0.635
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    2,
+    3,
+    [
+     [
+      "ويستمر عرض الجمعة\nالسوداء حتى 10",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    4,
+    6,
+    [
+     [
+      "ديسمبر وقالت Konami إن هذا أكبر\nخصم على SILENT HILL f حتى الآن",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    6,
+    "المصدر: Famitsu · اللقطات: صفحة اللعبة على Steam",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع فاميتسو (Famitsu) أن لعبتي SILENT HILL f و SILENT HILL 2 تباعان على Steam بخصم 72 بالمئة، بسعر 19.59 دولارًا بدلًا من 69.99. ويستمر عرض الجمعة السوداء حتى 10 ديسمبر. وقالت Konami إن هذا أكبر خصم على SILENT HILL f حتى الآن.",
+  "headline": "لعبة SILENT HILL f\nبخصم 72 بالمئة",
+  "label": "تقرير",
+  "game": "SILENT HILL f",
+  "game_short": "SILENT HILL f",
+  "game_key": "silent hill f",
+  "genre": [
+   "horror"
+  ],
+  "texts": {
+   "instagram": "تقرير: SILENT HILL f وSILENT HILL 2 بخصم 72% على Steam\n\nذكر موقع فاميتسو (Famitsu) أن لعبتي SILENT HILL f وSILENT HILL 2 تباعان على Steam بخصم 72%، بسعر 19.59 دولارًا بدلًا من 69.99.\n\nويستمر عرض الجمعة السوداء حتى 10 ديسمبر، وقالت كونامي (Konami) إن هذا أكبر خصم على SILENT HILL f حتى الآن.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع فاميتسو (Famitsu).\n\n#ألعاب #أخبار_الألعاب #SilentHill #Konami",
+   "x": "تقرير: ذكر موقع فاميتسو (Famitsu) أن لعبتي SILENT HILL f وSILENT HILL 2 بخصم 72% على Steam بسعر 19.59 دولارًا، والعرض حتى 10 ديسمبر. المصدر: فاميتسو.",
+   "threads": "تقرير: ذكر موقع فاميتسو (Famitsu) أن لعبتي SILENT HILL f وSILENT HILL 2 تباعان على Steam بخصم 72%، بسعر 19.59 دولارًا بدلًا من 69.99.\n\nويستمر عرض الجمعة السوداء حتى 10 ديسمبر.\n\nالمصدر: موقع فاميتسو"
+  },
+  "source": "موقع فاميتسو (Famitsu)، ولقطات من صفحة اللعبة على Steam",
+  "date": "27 Nov 2026",
+  "theme": "playful",
+  "style": null,
+  "template": "numbers",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-launch-trailer-esrb.mp4",
+   63.26
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Famitsu reported on 27 Nov 2026 that Konami's Black Friday sale puts SILENT HILL f and SILENT HILL 2 at 72% off on Steam, the biggest discount so far for SILENT HILL f.",
+   "what_it_means_here": "Both games cost $19.59 instead of $69.99 on Steam (store page, 27 Nov 2026), and Famitsu says the sale runs to 10 December."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "numbers: a figure in the headline (72 بالمئة) (kind deal read from the text)",
+   "skin": "house: genre horror: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-accolade-trailer-esrb.mp4 from the resolver (steam:2947440)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam store page, SILENT HILL f (72% off, $69.99 to $19.59, read 27 Nov 2026) (https://store.steampowered.com/app/2947440/); first report: Konami post 26 Nov 2026, Famitsu 27 Nov 2026 04:35Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 2947440 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "gfx": [
+   {
+    "file": "silent-hill-f-2-72-off-steam-black-friday-famitsu-gfx-figure.png",
+    "kind": "fact",
+    "value": "72",
+    "note": "بالمئة"
+   }
+  ],
+  "ground_footage": [
+   "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-accolade-trailer-esrb.mp4",
+   4.0,
+   60.0
+  ],
+  "names_to_review": [
+   "Konami"
+  ]
+ }
+}
