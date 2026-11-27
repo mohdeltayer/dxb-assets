@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-27T15:52:06Z",
- "seq": 940,
+ "generated_at": "2026-11-27T16:10:18Z",
+ "seq": 941,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 25213,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Infinity Nikki - Version 3.0 [Of Yesterday and Tomorrow] | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=I1JlNls8ZmI",
+   "published": "2026-11-27T16:00Z",
+   "first_seen": "2026-11-27T16:10:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/I1JlNls8ZmI/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=I1JlNls8ZmI"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 941
+  }
+ ],
  "recent": [
   {
    "id": 25159,
@@ -271,38 +293,13 @@
    ],
    "breaking_source": true,
    "breaking_seq": 904
-  },
-  {
-   "id": 24328,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "Free Play Days – Warhammer 40,000: Mechanicus and Little Rocket Lab",
-   "url": "https://news.xbox.com/en-us/2026/11/26/free-play-days-11-26-2026/",
-   "published": "2026-11-26T16:00Z",
-   "first_seen": "2026-11-26T16:00:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://store-images.s-microsoft.com/image/apps.2169.13868663292317454.88445824-0dc3-46f6-8241-3ea5106056eb.890fd424-5522-448b-ad16-0cf6d782b299?w=400&h=600"
-    },
-    {
-     "type": "image",
-     "url": "https://store-images.s-microsoft.com/image/apps.32936.14000344005974621.9729934f-27d2-4900-8aa2-53049eb44202.5ca80ddb-fffd-4d9b-9fde-76a41b9f9201?w=400&h=600"
-    },
-    {
-     "type": "image",
-     "url": "https://assets.onestore.ms/cdnfiles/sfw-service-web-onestore-onerf-2017-11-8-12/store/common/images/xpalogo_black.png"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 903
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-27T15:50:14Z",
+  "last_poll_at": "2026-11-27T16:10:14Z",
   "sources_enabled": 101,
-  "sources_ok": 99,
+  "sources_ok": 101,
   "sources_failing": 0,
   "failed": []
  }
