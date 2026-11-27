@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-27T13:52:08Z",
- "seq": 935,
+ "generated_at": "2026-11-27T14:52:06Z",
+ "seq": 936,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -217,111 +217,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 903
-  },
-  {
-   "id": 24223,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Hitman World of Assassination - Bawma Elusive Target Launch Trailer | PS5 & PS VR2 Games",
-   "url": "https://www.youtube.com/watch?v=y3E0aK1-C2Y",
-   "published": "2026-11-26T14:30Z",
-   "first_seen": "2026-11-26T14:40:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/y3E0aK1-C2Y/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=y3E0aK1-C2Y"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 900
-  },
-  {
-   "id": 24194,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Reshine - Launch Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=Y14OptgSqbM",
-   "published": "2026-11-26T14:15Z",
-   "first_seen": "2026-11-26T14:30:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/Y14OptgSqbM/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=Y14OptgSqbM"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 899
-  },
-  {
-   "id": 24193,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Station to Station - Launch Trailer | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=AhPNbp2s3Tc",
-   "published": "2026-11-26T14:00Z",
-   "first_seen": "2026-11-26T14:10:05Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/AhPNbp2s3Tc/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=AhPNbp2s3Tc"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 898
-  },
-  {
-   "id": 24180,
-   "source": "Xbox Wire",
-   "source_kind": "official",
-   "title": "Lenny Kravitz Brings Bawma, the Pirate King of Aleph in 007 First Light, to HITMAN World of Assassination",
-   "url": "https://news.xbox.com/en-us/2026/11/26/hitman-bawma-elusive-target/",
-   "published": "2026-11-26T14:00Z",
-   "first_seen": "2026-11-26T14:00:15Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/WOA_Bawma_Wire_img2-3b22debdf766e57c2f67.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/WOA_Bawma_Wire_img3-528cdf5f538cba912326.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/WOA_Bawma_Wire_img4-bf82ea62fa998aaded8e.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/WOA_Bawma_Wire_img5-d4bac22db475d613ed3a.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/WOA_Bawma_Wire_img6-949197702a65f288ddbb.jpg"
-    },
-    {
-     "type": "image",
-     "url": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/WOA_Bawma_Wire_img7-5843b4e64c7df5389ba4.jpg"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 897
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-27T13:50:14Z",
+  "last_poll_at": "2026-11-27T14:50:14Z",
   "sources_enabled": 101,
   "sources_ok": 100,
   "sources_failing": 0,
