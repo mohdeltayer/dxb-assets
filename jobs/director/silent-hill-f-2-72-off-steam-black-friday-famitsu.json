@@ -1,0 +1,5 @@
+{"story": "2026-11-27-silent-hill-f-2-72-off-steam-black-friday-famitsu", "out": "cards/2026-11/silent-hill-f-2-72-off-steam-black-friday-famitsu-reel-v1.mp4", "verdict": "fix", "reason": "graphic",
+ "fix": "Opening shot (launch trailer, 63.26 s) shows a figure with a blood-smeared face and torso; block that stretch so the server moves the shot on.",
+ "reasons": ["text true against Famitsu: SILENT HILL f and SILENT HILL 2 on Steam, 72 percent off, $19.59 instead of $69.99, Black Friday to 10 Dec, Konami says biggest SILENT HILL f discount so far; spoken, lines and headline agree", "clear Arabic, no duplicated words, no unknown genre terms", "graphic: blood-covered body in the first shot"],
+ "job_patch": {"blocked_add": [["silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-launch-trailer-esrb.mp4", 62.5, 65.5, "woman with a blood-smeared face and torso"]]},
+ "at": "2026-11-27T10:25:36Z", "by": "director-p2"}
