@@ -1,0 +1,376 @@
+{
+ "name": "iron-sirocco-mech-survivor-announced-gamespark",
+ "out": "cards/2026-11/iron-sirocco-mech-survivor-announced-gamespark-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot gate",
+   "detail": "shot 0 (iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4 28.32 s): no character, creature, face or vehicle inside the 9:16 window (ground, sky or wall); re-aim or another stretch (crop fix) subject_empty",
+   "shot": 0
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 1 (iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4 3.07 s): no character, creature, face or vehicle inside the 9:16 window (ground, sky or wall); re-aim or another stretch (crop fix) subject_empty",
+   "shot": 1
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 72 px on 3 lines (cut it to a few words next time): لعبة IRON SIROCCO\nلعبة ميكا بمواجهة عشرات الآلاف من الأعداء"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 72 px on 3 lines (cut it to a few words next time): لعبة IRON SIROCCO\nلعبة ميكا بمواجهة عشرات الآلاف من الأعداء"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4 at 28.32 s for 3.8 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "fill, not band: the shot scan found no clean stretch for 1 slot(s), but the source fills 9:16 at up to 2x; crop kept"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "drift: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "drift: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the subject leaves or is cut by the 9:16 window"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4 at 39.94 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4 at 50.18 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4 at 63.19 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4 at 16.31 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4 at 34.43 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "blocked (end slate): moved to iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4 at 19.18 s (evenly spaced)"
+  }
+ ],
+ "job_to_pass_min": 7.7,
+ "at": "2026-11-27T23:17:42Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 16.2 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 98.3; leak_pct 0.1; cache {'hit': 0, 'miss': 4}; separate_secs 7.2; secs 11.2",
+  "render_job: lifeless: {\"score\": 9.2, \"still_share\": 0.019, \"longest_still\": 0.2, \"cuts_per_10s\": 1.24, \"held_under_text\": 0.0, \"secs\": 16.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 41 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "credit 1",
+   "rule": "credit_width",
+   "what": "set one line at 40 px (was 40 px, too wide for the safe zone)",
+   "before": {
+    "text": "المصدر: موقع غيم سبارك (GameSpark)،\nولقطات من faanaworks",
+    "size": 40
+   },
+   "after": {
+    "text": "المصدر: GameSpark · اللقطات: faanaworks",
+    "size": 40
+   }
+  }
+ ],
+ "job_sha": "8fd47a708ba8157b3a04c7c6573a5ea74e803ecf",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/iron-sirocco-mech-survivor-announced-gamespark-look-1.jpg",
+  "cards/2026-11/iron-sirocco-mech-survivor-announced-gamespark-look-2.jpg",
+  "cards/2026-11/iron-sirocco-mech-survivor-announced-gamespark-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 26.1,
+  "files": {
+   "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4": {
+    "secs": 26.1,
+    "cached": false,
+    "stages": {
+     "decode": 7.8,
+     "autofocus": 25.7,
+     "ocr": 25.7,
+     "smear": 25.7,
+     "scenes": 26.0
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/iron-sirocco-mech-survivor-announced-gamespark.json",
+ "stage_minutes": {
+  "queue": 0.02,
+  "setup": 0.15,
+  "fetch": 0.49,
+  "shots": 1.47,
+  "checks": 2.08,
+  "render": 1.8,
+  "after": 0.86,
+  "job": 6.72
+ },
+ "job_after_autofix": {
+  "name": "iron-sirocco-mech-survivor-announced-gamespark",
+  "story": "2026-11-27-iron-sirocco-mech-survivor-announced-gamespark",
+  "footage_source": "steam:5579240",
+  "kind_news": "reveal",
+  "story_class": "trailer",
+  "story_class_why": "kind reveal",
+  "skin_why": "genre survival: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/iron-sirocco-mech-survivor-announced-gamespark-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4",
+    "steam": 5579240,
+    "trailer": "gameplay",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "5579240"
+   }
+  ],
+  "shots": [
+   [
+    "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4",
+    0.0,
+    3.8,
+    null
+   ],
+   [
+    "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4",
+    0.0,
+    2.46,
+    null
+   ],
+   [
+    "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4",
+    0.0,
+    2.46,
+    null
+   ],
+   [
+    "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4",
+    0.0,
+    2.74,
+    null
+   ],
+   [
+    "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4",
+    0.0,
+    2.74,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "وتضم اللعبة 12 مدينة مدمرة،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "ولعبًا تعاونيًا عبر الإنترنت\nحتى ثلاثة لاعبين",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وهي مخصصة للكمبيوتر عبر Steam،\nولم يُعلن موعد إصدارها",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    6,
+    "المصدر: GameSpark · اللقطات: faanaworks",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع غيم GameSpark أن استوديو faanaworks أعلن لعبة IRON SIROCCO، وهي لعبة ميكا من نوع النجاة تواجه فيها عشرات الآلاف من الأعداء على الشاشة. وتضم اللعبة 12 مدينة مدمرة، ولعبًا تعاونيًا عبر الإنترنت حتى ثلاثة لاعبين. وهي مخصصة للكمبيوتر عبر Steam، ولم يُعلن موعد إصدارها.",
+  "headline": "لعبة IRON SIROCCO\nلعبة ميكا بمواجهة عشرات الآلاف من الأعداء",
+  "label": "تقرير",
+  "game": "IRON SIROCCO",
+  "game_short": "IRON SIROCCO",
+  "game_key": "iron sirocco",
+  "genre": [
+   "survival"
+  ],
+  "texts": {
+   "instagram": "تقرير: إعلان IRON SIROCCO، لعبة ميكا تواجه فيها عشرات الآلاف الأعداء\n\nذكر موقع غيم سبارك (GameSpark) أن استوديو faanaworks أعلن لعبة IRON SIROCCO، وهي لعبة ميكا من نوع النجاة تواجه فيها عشرات الآلاف من الأعداء على الشاشة.\n\nتضم اللعبة 12 مدينة مدمرة، ولعبًا تعاونيًا عبر الإنترنت حتى ثلاثة لاعبين.\n\nوهي مخصصة للكمبيوتر عبر Steam، ولم يُعلن موعد إصدارها.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع غيم سبارك (GameSpark).\n\n#ألعاب #أخبار_الألعاب #IRONSIROCCO #Steam",
+   "x": "تقرير: أعلن استوديو faanaworks لعبة IRON SIROCCO، لعبة ميكا تواجه فيها عشرات الآلاف من الأعداء، وهي للكمبيوتر عبر Steam، بحسب موقع غيم سبارك (GameSpark).",
+   "threads": "تقرير: أعلن استوديو faanaworks لعبة IRON SIROCCO، وهي لعبة ميكا من نوع النجاة للكمبيوتر عبر Steam، فيها لعب تعاوني حتى ثلاثة لاعبين.\n\nالمصدر: موقع غيم سبارك"
+  },
+  "source": "موقع غيم سبارك (GameSpark)، ولقطات من faanaworks",
+  "date": "27 Nov 2026",
+  "theme": "playful",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Game*Spark reported the announcement of the mech survivor game IRON SIROCCO from faanaworks, planned for Steam.",
+   "what_it_means_here": "A new indie mech survivor with co-op for three players; no release date given."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind reveal",
+   "skin": "house: genre survival: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "iron-sirocco-mech-survivor-announced-gamespark-gameplay.mp4 from the resolver (steam:5579240)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Game*Spark (JP), 28 Nov 2026 JST: IRON SIROCCO announced (http://www.gamespark.jp/article/2026/11/28/175403.html); first report: Game*Spark 27 Nov 2026 22:00Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 5579240 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "names_to_review": [
+   "GameSpark"
+  ],
+  "shots_auto": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ]
+ }
+}
