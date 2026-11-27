@@ -4281,3 +4281,15 @@ per shot: its bands carry the headline and lines. The character detector for sty
 is the fallback Mohammad allowed. Texture measures (colour dominance, edge density) did not separate the desert from a
 monster on a white ground, so "empty" means no detected subject in the window. Tests: templates/test_cropfix.py.
 
+## Shot rules (Mohammad, 27 Nov 2026)
+
+Ordered after the GTA VI car-physics Reel of 27 Nov: its 42.8 s shot ran into the launch trailer's shower scene, and it
+took the band (showcase) layout because the shot scan stopped at its cap, although its 1080p source fills 9:16 at 1.78x.
+Released as autofixes only (no new stop). Built: `templates/blocked.py` and `assets/blocked-stretches.json` (seeded by
+eye from 1 and 2 fps frame sheets of GTA VI Trailers 1 and 2 and the launch trailer: 8, 9 and 4 stretches), the
+first-use classifier scan for new mature trailers, `templates/subjectmatch.py`, `render_job.band_or_fill` and
+`shot_rules`, the blocked filter in autoshots and in `variety.curated` (four curated GTA VI stretches dropped, two trimmed
+to end before a blocked range), and the merge of `blocked-new.json` in render.yml and render-live.yml. Also in the
+release: the credit ladder reads the showcase source row («<outlet> · <date>») and splits «A نقلًا عن B» into two names;
+the GTA VI chainsaw job had failed on it at 05:18Z. Tests: templates/test_shotrules.py. Replay: see the board line.
+

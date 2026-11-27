@@ -80,6 +80,13 @@ the bands, nothing over the picture), the server renders it once and that versio
 picture reason is refused. The server also takes the 16:9 layout on its own when the shot scan finds no clean stretch
 or burnt-in text sits under our text in the 9:16 crop.
 
+**Director: shot rules (Mohammad, 27 Nov 2026).** Two checks the director fixes, never reasons to fail: "nothing
+intimate beyond a kiss" (a kiss passes; a shower or bed scene, partial nudity, underwear or swimwear close-ups,
+suggestive dancing or a strip club does not) and "shot matches line". Intimate: verdict fix, reason `graphic`, with
+`"job_patch": {"blocked_add": [[file, start, end, "what it shows"]]}` (the stretch joins templates/assets/blocked-stretches.json
+and the server moves the shot on the re-render). Shot does not match its line: `wrong_subject` (the server has already
+tried matching shots; this takes the showcase). CLAUDE.md "Shot rules".
+
 **Director: two questions (adv-20261118-templates-never-refuse, Mohammad 18 Nov 2026, 17:54 Dubai; supersedes the
 director checklists below wherever they ask more).** The template is the contract: clip, music and text go in their
 places, and the server falls down its picture, sound and text ladders on its own. After the render the director asks

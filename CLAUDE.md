@@ -205,6 +205,36 @@ The showcase covers the whole Reel (the layout's bands carry the headline and li
 refusals; a long shot no trim could fix is a warning. A shot checked by eye can be waived with
 `"frame_ok": [[file, start, reason]]`. [Crop fix, 26 Nov 2026]
 
+**Shot rules: nothing intimate, the shot matches the line, fill not band** (Mohammad, 27 Nov 2026). Autofixes only:
+none refuses, holds or delays a Reel, and none adds a stop; the four hard stops stay the only ones.
+1. Content: Reels are for a general Gulf audience. A kiss is fine; anything more intimate is not (kissing in a shower
+   or bed, partial nudity, lingerie or swimwear close-ups, suggestive dancing, strip-club scenes).
+   `templates/assets/blocked-stretches.json` lists such stretches per trailer ([start, end, reason], with the file names,
+   repo copies and URLs on the same timeline); `templates/blocked.py` moves any shot that overlaps one, on every lane
+   (auto picks, the library, respread, the hook, hand-timed shots), and the curated library never offers them. Seeded
+   27 Nov by eye from the three GTA VI trailers (21 stretches; the launch trailer's two shower scenes at 36 and 43 s,
+   which the car-physics Reel's 42.8 s shot ran into). A mature-rated trailer the ledger does not know (job
+   `"mature": true`, a listed game, or a rating card read in its first or last seconds) is scanned once on first use by
+   an image classifier at one frame a second (Falconsai/nsfw_image_detection, Apache-2.0, CPU) and the entry is
+   committed with the render; a scan that cannot run is a warning. The classifier catches nudity and underwear, not
+   suggestive dancing, so the director's eye stays the second check. Add by hand: `python3 templates/blocked.py add
+   <trailer or file> <start> <end> <reason>`.
+2. Shot matches line: `templates/subjectmatch.py` reads each shot's line (the headline for the first shot) for its
+   subject (a vehicle for a driving story, a person or a named character, an animal) and the shot's middle frame with
+   the autofocus detector; a shot that does not show it moves to a curated stretch tagged for it, then to a clean read
+   stretch whose frame shows it. No match: the shot stands, unless it is a romance stretch, which moves to the nearest
+   clean action shot.
+3. Fill, not band: a 16:9 source with 960 or more picture rows fills 9:16 at up to 2x and keeps the crop when the shot
+   scan stops at its cap or finds no clean stretch (`render_job.band_or_fill`); the band (showcase) layout is for a
+   source that cannot fill. The GTA VI car-physics Reel of 27 Nov took the band wrongly.
+4. Fallback when no clean, matching shot exists: another shot of the same trailer, another official trailer of the
+   game in the job, an official still or key art with slow motion, then the 16:9 showcase. The Reel always ships; every
+   step is on the picture ladder in qc.json.
+5. Director: "nothing intimate beyond a kiss" and "shot matches line" are checks it fixes, not reasons to fail. An
+   intimate shot: a `graphic` fix whose `job_patch` is `{"blocked_add": [[file, start, end, reason]]}` (the stretch joins
+   the ledger and the shot moves on the re-render); a shot that does not match: `wrong_subject`, the showcase step.
+[Shot rules, 27 Nov 2026]
+
 **Template by story kind** (21 Nov; the slip states its kind, `templates/storykind.py` picks): numbers (sales, scores,
 charts, player counts, results) take the numbers template, a figure card counting up on the game's own moving footage
 after the hook; people (interview, quote, hire, departure) take the people template; debate takes hook and fact, one
