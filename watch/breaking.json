@@ -1,10 +1,54 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-27T17:05:08Z",
- "seq": 944,
+ "generated_at": "2026-11-27T17:15:05Z",
+ "seq": 945,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [
+  {
+   "id": 25257,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Fountains - Launch Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=6v8KweH4smk",
+   "published": "2026-11-27T17:00Z",
+   "first_seen": "2026-11-27T17:15:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/6v8KweH4smk/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=6v8KweH4smk"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 945
+  },
+  {
+   "id": 25258,
+   "source": "Xbox (YouTube)",
+   "source_kind": "youtube",
+   "title": "Unwrap Epic Black Friday Gaming Deals | This Week on XBOX",
+   "url": "https://www.youtube.com/watch?v=Nrnypb9OWyc",
+   "published": "2026-11-27T17:00Z",
+   "first_seen": "2026-11-27T17:15:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/Nrnypb9OWyc/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=Nrnypb9OWyc"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 945
+  }
+ ],
+ "recent": [
   {
    "id": 25247,
    "source": "PlayStation Blog",
@@ -41,9 +85,7 @@
    ],
    "breaking_source": true,
    "breaking_seq": 944
-  }
- ],
- "recent": [
+  },
   {
    "id": 25218,
    "source": "Xbox (YouTube)",
@@ -334,7 +376,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-27T17:05:04Z",
+  "last_poll_at": "2026-11-27T17:15:04Z",
   "sources_enabled": 101,
   "sources_ok": 100,
   "sources_failing": 0,
