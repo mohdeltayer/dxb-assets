@@ -1,0 +1,17 @@
+{
+ "story": "2026-11-27-slay-the-spire-2-ai-80-percent-win-rate-automaton",
+ "out": "cards/2026-11/slay-the-spire-2-ai-80-percent-win-rate-automaton-reel-v1.mp4",
+ "verdict": "fix",
+ "reason": "factual_error",
+ "fix": "The 80 figure card was labelled the players; 80.3% is the AI's win rate. Label changed to the AI.",
+ "job_patch": {
+  "gfx[0].label": "الذكاء الاصطناعي"
+ },
+ "reasons": [
+  "only the card label was wrong",
+  "headline and lines true",
+  "no graphic content"
+ ],
+ "at": "2026-11-27T02:39:20Z",
+ "by": "director-p2"
+}
