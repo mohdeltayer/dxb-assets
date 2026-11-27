@@ -1,0 +1,652 @@
+{
+ "name": "yooka-laylee-definitive-edition-skips-xbox-pure-xbox",
+ "out": "cards/2026-11/yooka-laylee-definitive-edition-skips-xbox-pure-xbox-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 60 px on 2 lines (cut it to a few words next time): النسخة النهائية من Yooka-Laylee\nلن تصدر على Xbox"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 60 px on 2 lines (cut it to a few words next time): النسخة النهائية من Yooka-Laylee\nلن تصدر على Xbox"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: stylised art: the person, vehicle and animal detector cannot frame its characters (crop fix, 26 Nov 2026)"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4 at 42.77 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4 at 64.66 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4 at 20.88 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4 at 51.53 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4 at 34.02 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "text",
+   "slot": "line 1",
+   "step": "a",
+   "why": "2.4 s of 2.4 s: shot 2 lengthened by 0.16 s"
+  },
+  {
+   "kind": "text",
+   "slot": "line 2",
+   "step": "a",
+   "why": "2.4 s of 3.4 s: shot 4 lengthened by 1.16 s"
+  },
+  {
+   "kind": "text",
+   "slot": "line 3",
+   "step": "a",
+   "why": "2.8 s of 3.9 s: shot 6 lengthened by 1.19 s"
+  }
+ ],
+ "job_to_pass_min": 9.2,
+ "at": "2026-11-27T21:21:49Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 14.7 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 98.4; leak_pct 0.1; cache {'hit': 0, 'miss': 7}; separate_secs 9.0; secs 13.4",
+  "render_job: lifeless: {\"score\": 0.7, \"still_share\": 0.007, \"longest_still\": 0.1, \"cuts_per_10s\": 2.74, \"held_under_text\": 0.0, \"secs\": 14.6, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 31 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "variety",
+   "what": "hook moved 52.47 -> 85.46 s: opener 52.5 s was used by yooka-laylee-impossible-lair-definitive-edition-dec-15-gematsu at 51.2 s within 14 days"
+  },
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4 at 85.46 s for 3.8 s, focus 0.458"
+  },
+  {
+   "where": "shot 1",
+   "rule": "shot_timing",
+   "what": "trimmed to 1.71 s, the clean part before the scene cut at 4.82 s",
+   "before": [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    2.2,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.127
+     ]
+    ]
+   ],
+   "after": [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    1.71,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.127
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 0",
+   "rule": "fill",
+   "what": "lengthened 3.80 to 4.29 s to keep the time shot 1 gave up",
+   "before": 3.8,
+   "after": 4.29
+  },
+  {
+   "where": "shot 2",
+   "rule": "shot_timing",
+   "what": "trimmed to 1.71 s, the clean part before the scene cut at 4.82 s",
+   "before": [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    2.2,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.127
+     ]
+    ]
+   ],
+   "after": [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    1.71,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.127
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 2",
+   "rule": "fill",
+   "what": "0.49 s shorter in all: no neighbouring shot stays clean with the time"
+  },
+  {
+   "where": "shot 3",
+   "rule": "shot_timing",
+   "what": "trimmed to 1.71 s, the clean part before the scene cut at 4.82 s",
+   "before": [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    2.31,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.107
+     ]
+    ]
+   ],
+   "after": [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    1.71,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.107
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 3",
+   "rule": "fill",
+   "what": "0.60 s shorter in all: no neighbouring shot stays clean with the time"
+  },
+  {
+   "where": "shot 4",
+   "rule": "shot_timing",
+   "what": "trimmed to 1.71 s, the clean part before the scene cut at 4.82 s",
+   "before": [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    2.31,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.107
+     ]
+    ]
+   ],
+   "after": [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    1.71,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.107
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 4",
+   "rule": "fill",
+   "what": "0.60 s shorter in all: no neighbouring shot stays clean with the time"
+  },
+  {
+   "where": "shot 5",
+   "rule": "shot_timing",
+   "what": "trimmed to 1.71 s, the clean part before the scene cut at 4.82 s",
+   "before": [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    2.53,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.198
+     ]
+    ]
+   ],
+   "after": [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    1.71,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.198
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 5",
+   "rule": "fill",
+   "what": "0.82 s shorter in all: no neighbouring shot stays clean with the time"
+  },
+  {
+   "where": "shot 6",
+   "rule": "shot_timing",
+   "what": "trimmed to 1.71 s, the clean part before the scene cut at 4.82 s",
+   "before": [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    2.53,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.198
+     ]
+    ]
+   ],
+   "after": [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    1.71,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.198
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 6",
+   "rule": "fill",
+   "what": "0.82 s shorter in all: no neighbouring shot stays clean with the time"
+  }
+ ],
+ "job_sha": "6694264d67234f7cf2b584bbea22fbd01ff98ce2",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/yooka-laylee-definitive-edition-skips-xbox-pure-xbox-look-1.jpg",
+  "cards/2026-11/yooka-laylee-definitive-edition-skips-xbox-pure-xbox-look-2.jpg",
+  "cards/2026-11/yooka-laylee-definitive-edition-skips-xbox-pure-xbox-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 0.5,
+  "files": {
+   "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4": {
+    "secs": 0.0,
+    "cached": true,
+    "stages": {
+     "decode": 13.5,
+     "autofocus": 33.4,
+     "ocr": 33.4,
+     "smear": 33.6,
+     "scenes": 33.9
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/yooka-laylee-definitive-edition-skips-xbox-pure-xbox.json",
+ "stage_minutes": {
+  "queue": 0.02,
+  "setup": 0.22,
+  "fetch": 1.07,
+  "shots": 2.3,
+  "checks": 2.39,
+  "render": 1.77,
+  "after": 0.72,
+  "job": 8.25
+ },
+ "job_after_autofix": {
+  "name": "yooka-laylee-definitive-edition-skips-xbox-pure-xbox",
+  "story": "2026-11-27-yooka-laylee-definitive-edition-skips-xbox-pure-xbox",
+  "footage_source": "steam:846870",
+  "kind_news": "update",
+  "story_class": "trailer",
+  "story_class_why": "kind update",
+  "skin_why": "genre platformer: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/yooka-laylee-definitive-edition-skips-xbox-pure-xbox-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    "steam": 846870,
+    "trailer": "Launch Trailer",
+    "trailer_id": "846870"
+   },
+   {
+    "file": "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-accolade-trailer.mp4",
+    "steam": 846870,
+    "trailer": "Accolade Trailer",
+    "trailer_id": "846870"
+   },
+   {
+    "file": "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-pre-order-trailer.mp4",
+    "steam": 846870,
+    "trailer": "Pre-Order Trailer",
+    "trailer_id": "846870"
+   }
+  ],
+  "shots": [
+   [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    85.46,
+    4.29,
+    [
+     [
+      0.0,
+      0.458
+     ]
+    ]
+   ],
+   [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    1.71,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.127
+     ]
+    ]
+   ],
+   [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    1.71,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.127
+     ]
+    ]
+   ],
+   [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    1.71,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.107
+     ]
+    ]
+   ],
+   [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    1.71,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.107
+     ]
+    ]
+   ],
+   [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    1.71,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.198
+     ]
+    ]
+   ],
+   [
+    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+    3.07,
+    1.71,
+    [
+     [
+      0.0,
+      0.448
+     ],
+     [
+      1.747,
+      0.198
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "وقال الاستوديو إن تكلفة نقل",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "اللعبة إلى منصات أخرى\nغير مجدية له حاليًا",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وتصدر النسخة في 15 ديسمبر\nعلى PS5 وعلى Switch 2",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    6,
+    "المصدر: Pure Xbox · اللقطات: صفحة اللعبة الأصلية على Steam",
+    {
+     "size": 34,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع بيور إكس بوكس (Pure Xbox) أن استوديو Playtonic أعلن أن النسخة النهائية من Yooka-Laylee and the Impossible Lair لن تصدر على Xbox. وقال الاستوديو إن تكلفة نقل اللعبة إلى منصات أخرى غير مجدية له حاليًا. وتصدر النسخة في 15 ديسمبر على PS5 وعلى Switch 2.",
+  "headline": "النسخة النهائية من Yooka-Laylee\nلن تصدر على Xbox",
+  "label": "تقرير",
+  "game": "Yooka-Laylee and the Impossible Lair",
+  "game_short": "Yooka-Laylee",
+  "game_key": "yooka laylee and the impossible lair",
+  "genre": [
+   "platformer"
+  ],
+  "texts": {
+   "instagram": "تقرير: النسخة النهائية من Yooka-Laylee لن تصدر على Xbox\n\nذكر موقع بيور إكس بوكس (Pure Xbox) أن استوديو Playtonic أعلن أن النسخة النهائية من Yooka-Laylee and the Impossible Lair لن تصدر على Xbox.\n\nوقال الاستوديو إن تكلفة نقل اللعبة إلى منصات أخرى غير مجدية له حاليًا.\n\nوتصدر النسخة في 15 ديسمبر على PS5 وعلى Switch 2.\n\nاللقطات من صفحة اللعبة الأصلية على Steam.\n\nالمصدر: موقع بيور إكس بوكس (Pure Xbox).\n\n#ألعاب #أخبار_الألعاب #YookaLaylee #Xbox",
+   "x": "تقرير: ذكر موقع بيور إكس بوكس (Pure Xbox) أن استوديو Playtonic أعلن أن النسخة النهائية من Yooka-Laylee and the Impossible Lair لن تصدر على Xbox، وأن تكلفة المنصات الإضافية غير مجدية له حاليًا. المصدر: بيور إكس بوكس.",
+   "threads": "تقرير: ذكر موقع بيور إكس بوكس (Pure Xbox) أن استوديو Playtonic أعلن أن النسخة النهائية من Yooka-Laylee and the Impossible Lair لن تصدر على Xbox.\n\nوتصدر النسخة في 15 ديسمبر على PS5 وعلى Switch 2.\n\nالمصدر: موقع بيور إكس بوكس (Pure Xbox)"
+  },
+  "source": "موقع بيور إكس بوكس (Pure Xbox)، واللقطات من صفحة اللعبة الأصلية على Steam",
+  "date": "27 Nov 2026",
+  "theme": "gold",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
+   85.46
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Playtonic said on 27 Nov 2026 the Definitive Edition (Dec 15) will not come to Xbox; Pure Xbox reported the statement.",
+   "what_it_means_here": "Studio says cost makes more platforms not viable now and it cannot commit to any additional platforms for the foreseeable future; PS5 and Switch 2 versions go ahead."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind update",
+   "skin": "house: genre platformer: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4 from the resolver (steam:846870)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Pure Xbox, 27 Nov 2026: Playtonic statement on why the Yooka-Laylee and the Impossible Lair Definitive Edition (Dec 15, PS5 and Switch 2) is skipping Xbox (https://www.purexbox.com/news/2026/11/yooka-laylee-developer-issues-statement-on-why-definitive-edition-is-skipping-xbox); first report: Pure Xbox 27 Nov 2026 15:38Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 846870 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "layout": "showcase",
+  "showcase_reason": "the trailer clashes with our text in a 9:16 crop: stylised art: the person, vehicle and animal detector cannot frame its characters (crop fix, 26 Nov 2026) (16:9 fallback, Mohammad 20 Nov 2026)"
+ }
+}

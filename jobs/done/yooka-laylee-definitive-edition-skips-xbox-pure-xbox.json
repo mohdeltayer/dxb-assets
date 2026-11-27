@@ -33,45 +33,104 @@
  "shots": [
   [
    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
-   "auto",
-   3.8,
-   null
+   85.46,
+   4.29,
+   [
+    [
+     0.0,
+     0.458
+    ]
+   ]
   ],
   [
    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
-   "auto",
-   2.2,
-   null
+   3.07,
+   1.71,
+   [
+    [
+     0.0,
+     0.448
+    ],
+    [
+     1.747,
+     0.127
+    ]
+   ]
   ],
   [
    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
-   "auto",
-   2.2,
-   null
+   3.07,
+   1.71,
+   [
+    [
+     0.0,
+     0.448
+    ],
+    [
+     1.747,
+     0.127
+    ]
+   ]
   ],
   [
    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
-   "auto",
-   2.31,
-   null
+   3.07,
+   1.71,
+   [
+    [
+     0.0,
+     0.448
+    ],
+    [
+     1.747,
+     0.107
+    ]
+   ]
   ],
   [
    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
-   "auto",
-   2.31,
-   null
+   3.07,
+   1.71,
+   [
+    [
+     0.0,
+     0.448
+    ],
+    [
+     1.747,
+     0.107
+    ]
+   ]
   ],
   [
    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
-   "auto",
-   2.53,
-   null
+   3.07,
+   1.71,
+   [
+    [
+     0.0,
+     0.448
+    ],
+    [
+     1.747,
+     0.198
+    ]
+   ]
   ],
   [
    "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
-   "auto",
-   2.53,
-   null
+   3.07,
+   1.71,
+   [
+    [
+     0.0,
+     0.448
+    ],
+    [
+     1.747,
+     0.198
+    ]
+   ]
   ]
  ],
  "lines": [
@@ -116,9 +175,9 @@
   [
    0,
    6,
-   "المصدر: موقع بيور إكس بوكس (Pure Xbox)،\nواللقطات من صفحة اللعبة الأصلية على Steam",
+   "المصدر: Pure Xbox · اللقطات: صفحة اللعبة الأصلية على Steam",
    {
-    "size": 40,
+    "size": 34,
     "band": true
    }
   ]
@@ -146,7 +205,7 @@
  "cut": false,
  "track": [
   "yooka-laylee-impossible-lair-definitive-edition-dec-15-gemat-launch-trailer.mp4",
-  0.0
+  85.46
  ],
  "track_from_first_shot": true,
  "angle": {
@@ -172,5 +231,7 @@
   "credit on every clip": "yes: one credit over every shot",
   "sound": "yes: trailer sound from the first shot, split per shot on the server",
   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
- }
+ },
+ "layout": "showcase",
+ "showcase_reason": "the trailer clashes with our text in a 9:16 crop: stylised art: the person, vehicle and animal detector cannot frame its characters (crop fix, 26 Nov 2026) (16:9 fallback, Mohammad 20 Nov 2026)"
 }
