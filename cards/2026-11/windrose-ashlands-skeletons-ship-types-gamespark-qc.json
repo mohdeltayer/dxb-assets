@@ -1,0 +1,615 @@
+{
+ "name": "windrose-ashlands-skeletons-ship-types-gamespark",
+ "out": "cards/2026-11/windrose-ashlands-skeletons-ship-types-gamespark-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "build gate",
+   "detail": "spoken: 4 sentences: the paragraph is 2 to 3 sentences, each ending on a full stop"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 2 at 60.95 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 2 at 61.81 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 3 at 48.44 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 3 at 49.18 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 4 at 13.60 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 4 at 14.34 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 5 at 38.94 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 5 at 39.68 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 6 at 67.14 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 6 at 68.06 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 7 at 32.58 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 7 at 33.50 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 8 at 23.10 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 8 at 23.84 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 9 at 35.77 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 9 at 36.51 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 10 at 7.28 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 10 at 8.02 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 11 at 19.94 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 11 at 20.68 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 12 at 51.60 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 12 at 52.34 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 13 at 10.43 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 13 at 11.17 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 14 at 57.94 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 14 at 58.68 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 64 px on 2 lines (cut it to a few words next time): تحديث Ashlands في Windrose\nهياكل عظمية تعيد تركيب نفسها"
+  },
+  {
+   "stage": "smear",
+   "detail": "ValueError: /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/windrose-ashlands-skeletons-ship-types-gamespark-reel-v1.mp4: blocky smear at 15.17 to 15.57 s (peak 39.2); look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 14,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4 at 60.1 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4 at 47.71 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4 at 12.87 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4 at 38.21 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4 at 66.21 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4 at 31.65 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4 at 22.37 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 9,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4 at 35.04 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 10,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4 at 6.54 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 11,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4 at 19.2 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 12,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4 at 50.86 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 13,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4 at 9.7 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 14,
+   "step": "a",
+   "why": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4 at 57.21 s: moved off a repeated moment (respread)"
+  }
+ ],
+ "job_to_pass_min": 12.5,
+ "at": "2026-11-27T22:22:44Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 30.9 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 78.1; leak_pct 0.1; cache {'hit': 0, 'miss': 2}; separate_secs 11.6; secs 18.3",
+  "render_job: lifeless: {\"score\": 2.2, \"still_share\": 0.013, \"longest_still\": 0.4, \"cuts_per_10s\": 10.03, \"held_under_text\": 0.0, \"secs\": 30.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 26 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)",
+  "estimate: headline: 28 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4 at 27.23 s for 3.8 s, focus 0.49"
+  }
+ ],
+ "job_sha": "09e56bfb1c227007fd875a1e3478db5a3fa189de",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/windrose-ashlands-skeletons-ship-types-gamespark-look-1.jpg",
+  "cards/2026-11/windrose-ashlands-skeletons-ship-types-gamespark-look-2.jpg",
+  "cards/2026-11/windrose-ashlands-skeletons-ship-types-gamespark-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 39.9,
+  "files": {
+   "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4": {
+    "secs": 39.5,
+    "cached": false,
+    "stages": {
+     "decode": 16.9,
+     "autofocus": 33.0,
+     "ocr": 33.0,
+     "smear": 39.3,
+     "scenes": 39.5
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/windrose-ashlands-skeletons-ship-types-gamespark.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.18,
+  "fetch": 0.36,
+  "shots": 1.6,
+  "checks": 2.83,
+  "render": 4.97,
+  "after": 1.73,
+  "job": 11.5
+ },
+ "job_after_autofix": {
+  "name": "windrose-ashlands-skeletons-ship-types-gamespark",
+  "story": "2026-11-27-windrose-ashlands-skeletons-ship-types-gamespark",
+  "footage_source": "steam:3041230",
+  "kind_news": "update",
+  "story_class": "trailer",
+  "story_class_why": "kind update",
+  "skin_why": "genre survival: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/windrose-ashlands-skeletons-ship-types-gamespark-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+    "steam": 3041230,
+    "trailer": "Windrose: Early Access Release Date Reveal Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3041230"
+   },
+   {
+    "file": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-gameplay-trailer.mp4",
+    "steam": 3041230,
+    "trailer": "Windrose: Gameplay Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "3041230"
+   }
+  ],
+  "shots": [
+   [
+    "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+    27.23,
+    3.8,
+    [
+     [
+      0.0,
+      0.49
+     ]
+    ]
+   ],
+   [
+    "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+    3.07,
+    2.56,
+    null
+   ],
+   [
+    "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+    3.07,
+    2.56,
+    null
+   ],
+   [
+    "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+    3.07,
+    2.78,
+    null
+   ],
+   [
+    "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+    3.07,
+    2.78,
+    null
+   ],
+   [
+    "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+    3.07,
+    2.22,
+    null
+   ],
+   [
+    "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+    3.07,
+    2.22,
+    null
+   ],
+   [
+    "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+    3.07,
+    2.22,
+    null
+   ],
+   [
+    "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+    3.07,
+    2.2,
+    null
+   ],
+   [
+    "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+    3.07,
+    2.2,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "ذكر موقع غيم GameSpark\nأن مدونة المطورين",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    5,
+    [
+     [
+      "السادسة لتحديث Ashlands\nللعبة Windrose كشفت أعداء جددًا",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    6,
+    7,
+    [
+     [
+      "فهناك هياكل عظمية تعيد تركيب\nعظامها وتنهض بعد هزيمتها،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    8,
+    9,
+    [
+     [
+      "وهياكل بدروع ثقيلة\nيمكن انتزاع دروعها",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    10,
+    12,
+    [
+     [
+      "وفي البحر تحصل السفن المعادية على\nخمسة أدوار قتالية في كل المياه",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    13,
+    14,
+    [
+     [
+      "والتحديث مقرر هذا الشتاء",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    14,
+    "المصدر: GameSpark · اللقطات: Pocketpair",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع غيم GameSpark أن مدونة المطورين السادسة لتحديث Ashlands للعبة Windrose كشفت أعداء جددًا. فهناك هياكل عظمية تعيد تركيب عظامها وتنهض بعد هزيمتها، وهياكل بدروع ثقيلة يمكن انتزاع دروعها. وفي البحر تحصل السفن المعادية على خمسة أدوار قتالية في كل المياه. والتحديث مقرر هذا الشتاء.",
+  "headline": "تحديث Ashlands في Windrose\nهياكل عظمية تعيد تركيب نفسها",
+  "label": "تقرير",
+  "game": "Windrose",
+  "game_short": "Windrose",
+  "game_key": "windrose",
+  "genre": [
+   "survival"
+  ],
+  "texts": {
+   "instagram": "تقرير: تحديث Ashlands في Windrose يضيف هياكل عظمية تعيد تركيب نفسها\n\nذكر موقع غيم سبارك (GameSpark) أن مدونة المطورين السادسة لتحديث Ashlands في لعبة Windrose كشفت أعداء جددًا.\n\nمنها هياكل عظمية تعيد تركيب عظامها وتنهض بعد هزيمتها، وهياكل بدروع ثقيلة يمكن انتزاع دروعها.\n\nوفي البحر تحصل السفن المعادية على خمسة أدوار قتالية في كل المياه.\n\nوالتحديث مقرر هذا الشتاء.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع غيم سبارك (GameSpark).\n\n#ألعاب #أخبار_الألعاب #Windrose #Pocketpair",
+   "x": "تقرير: ذكر موقع غيم سبارك (GameSpark) أن تحديث Ashlands للعبة Windrose يضيف هياكل عظمية تعيد تركيب عظامها بعد هزيمتها، وخمسة أدوار قتالية للسفن المعادية. المصدر: غيم سبارك.",
+   "threads": "تقرير: ذكر موقع غيم سبارك (GameSpark) أن تحديث Ashlands للعبة Windrose يضيف هياكل عظمية تعيد تركيب عظامها بعد هزيمتها.\n\nكما تحصل السفن المعادية على خمسة أدوار قتالية، والتحديث مقرر هذا الشتاء.\n\nالمصدر: موقع غيم سبارك"
+  },
+  "source": "موقع غيم سبارك (GameSpark)، ولقطات من بوكيت بير (Pocketpair)",
+  "date": "27 Nov 2026",
+  "theme": "cold",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Pocketpair Publishing released the 6th dev blog for the winter Ashlands update; GameSpark reported it.",
+   "what_it_means_here": "Skeletons that rebuild themselves after being defeated, heavily armoured skeletons whose armour can be pulled off, and five enemy ship combat roles in every sea."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind update",
+   "skin": "house: genre survival: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "windrose-ashlands-skeletons-ship-types-gamespark-windrose-early-access-release-date-reveal-trailer.mp4 from the resolver (steam:3041230)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: GameSpark (Japan), 28 Nov 2026 JST: Windrose Ashlands update dev blog 6 (https://www.gamespark.jp/article/2026/11/28/175402.html); first report: GameSpark 27 Nov 2026 21:30Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 3041230 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "names_to_review": [
+   "GameSpark"
+  ]
+ }
+}
