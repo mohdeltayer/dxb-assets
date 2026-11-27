@@ -38,10 +38,15 @@
  ],
  "shots": [
   [
-   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-   "auto",
-   3.8,
-   null
+   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-early-access-trailer.mp4",
+   80.81,
+   2.42,
+   [
+    [
+     0.0,
+     0.072
+    ]
+   ]
   ],
   [
    "slay-the-spire-2-ai-80-percent-win-rate-automaton-gfx-figure.png",
@@ -51,51 +56,106 @@
   ],
   [
    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-   "auto",
+   25.38,
    2.53,
-   null
+   [
+    [
+     0.0,
+     0.158
+    ]
+   ]
   ],
   [
    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-   "auto",
+   35.75,
    2.53,
-   null
+   [
+    [
+     0.0,
+     0.27
+    ]
+   ]
   ],
   [
    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-   "auto",
+   39.66,
    2.2,
-   null
+   0.7
   ],
   [
    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-   "auto",
+   7.31,
+   2.12,
+   [
+    [
+     0.0,
+     0.674
+    ]
+   ]
+  ],
+  [
+   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+   11.29,
    2.2,
-   null
+   [
+    [
+     0.0,
+     0.217
+    ]
+   ]
   ],
   [
    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-   "auto",
+   20.36,
    2.2,
-   null
+   [
+    [
+     0.0,
+     0.539
+    ],
+    [
+     2.104,
+     0.461
+    ]
+   ]
   ],
   [
    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-   "auto",
-   2.2,
-   null
-  ],
-  [
-   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-   "auto",
+   43.37,
    2.31,
-   null
+   [
+    [
+     0.0,
+     0.426
+    ],
+    [
+     1.844,
+     0.741
+    ]
+   ]
   ],
   [
    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-   "auto",
+   56.42,
    2.31,
-   null
+   [
+    [
+     0.0,
+     0.923
+    ],
+    [
+     0.644,
+     0.093
+    ],
+    [
+     1.227,
+     0.764
+    ],
+    [
+     1.927,
+     0.429
+    ]
+   ]
   ]
  ],
  "lines": [
@@ -152,9 +212,9 @@
   [
    0,
    9,
-   "المصدر: موقع أوتوماتون (Automaton)،\nولقطات من صفحة اللعبة على Steam",
+   "المصدر: Automaton · اللقطات: صفحة اللعبة على Steam",
    {
-    "size": 40,
+    "size": 38,
     "band": true
    }
   ]
@@ -181,8 +241,8 @@
  "skin": "house",
  "cut": false,
  "track": [
-  "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-  0.0
+  "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-early-access-trailer.mp4",
+  80.81
  ],
  "track_from_first_shot": true,
  "angle": {
@@ -222,5 +282,49 @@
   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
   4.0,
   60.0
+ ],
+ "cut_ok": [
+  [
+   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+   11.29,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+   20.36,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+   43.37,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+   56.42,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ]
+ ],
+ "drift_ok": [
+  [
+   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+   11.29,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+   20.36,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+   43.37,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ],
+  [
+   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+   56.42,
+   "never refuse: no clean stretch read, evenly spaced fallback"
+  ]
  ]
 }
