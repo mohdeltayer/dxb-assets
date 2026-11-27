@@ -24,6 +24,7 @@ Status: **Approved** (Mohammad, in the glossary or on a card) · **In use** (con
 | Nike (in the NIKE x TEKKEN collaboration) | نايكي (NIKE) | Proposed 15 Nov 2026 (caption only; bracket at first mention, the Latin as the collaboration writes it) |
 | pro-wrestling throws (fighting-game move type) | رميات المصارعة الاحترافية | Proposed 15 Nov 2026 (DeepL; «المصارعة الحرة» reads as the Olympic freestyle sport) |
 | G Corporation (TEKKEN's fictional company) | stays Latin, glossed «شركة G Corporation» | Proposed 15 Nov 2026 (caption only) |
+| Team Cherry (Hollow Knight, Silksong developer, Australia) | تيم تشيري | In use 28 Nov 2026 (Silksong Sea of Sorrow trailer Reel: «فريق تيم تشيري (Team Cherry)» at first mention, credit «المصدر: تيم تشيري (Team Cherry)»; the 27 Nov post kept the Latin «فريق Team Cherry») |
 | Mojang Studios (Minecraft developer, Microsoft) | موجانغ | In use 15 Nov 2026 (Minecraft first 2027 drop Reel: «استوديو موجانغ (Mojang)» at first mention, credit «المصدر: موجانغ (Mojang)»; follows the two earlier posts' «شركة موجانغ (Mojang)», one older post had موجانج) |
 | netherite (Minecraft material) | النذرايت (Netherite) | Proposed 15 Nov 2026 (caption only; DeepL gives النيثيريت; the player spelling chosen, Latin in brackets) |
 | off-hand (Minecraft) | اليد الأخرى | Proposed 15 Nov 2026 (DeepL: اليد غير الرئيسية; plainer form chosen) |
