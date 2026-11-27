@@ -263,7 +263,7 @@ class Kind(unittest.TestCase):
         import variety
         self.assertEqual({gamekey.key(n) for n in ('GTA VI', 'Grand Theft Auto VI', 'GTA 6', 'GTA VI™')}, {'gta vi'})
         cur, subj = variety.curated('Grand Theft Auto VI')
-        self.assertGreaterEqual(len(cur), 20)
+        self.assertGreaterEqual(len(cur), 16)          # 20 curated, less those on blocked stretches (27 Nov 2026)
         best = max(cur, key=lambda s: variety.story_score(s, 'من ألهم شخصية جيسون في GTA VI؟', subj, True))
         self.assertIn('jason', best['tags'])
 

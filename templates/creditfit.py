@@ -93,7 +93,7 @@ def _names(part):
     known (never inside a name)."""
     ar2la, _ = _tables()
     out = []
-    for chunk in re.split(r'\s*[،,]\s*', part.strip(' .،,')):
+    for chunk in re.split(r'\s*(?:[،,]|\bنقل[ًا]*\s+عن)\s*', part.strip(' .،,')):   # «A نقلًا عن B»: two names (27 Nov)
         pieces = [chunk]
         while True:
             last = pieces[-1]
@@ -141,6 +141,11 @@ def forms(text):
     full = ' '.join(str(text).split())
     out = [(1, full)]
     p = parse(text)
+    tail = ''
+    if not p and MIDDOT.strip() in full:                   # the showcase source row: «<outlet>‏ · ‏<date>» (27 Nov 2026)
+        head, tail = [x.strip(' \u200f') for x in full.split(MIDDOT.strip(), 1)]
+        p = parse('المصدر: ' + head) if head and tail else None
+        tail = (MIDDOT + tail) if p else ''
     if p:
         _, short = _tables()
         la_s, la_f = [_latin(n) for n in p['sources']], [_latin(n) for n in p['footage']]
@@ -150,6 +155,10 @@ def forms(text):
         out.append((3, _join(sh_s, sh_f)))
         if sh_f:                                           # 4 needs a footage owner to keep beside the source
             out.append((4, _join(sh_s[:1], sh_f)))
+        elif tail and len(sh_s) > 1:                       # a source row: the primary source and the date
+            out.append((4, _join(sh_s[:1], [])))
+        if tail:
+            out[1:] = [(st, f + tail) for st, f in out[1:]]
     seen, res = set(), []
     for step, f in out:
         if f and f not in seen:
@@ -175,7 +184,8 @@ def _two(form):
     rows open on an Arabic word."""
     if MIDDOT in form:
         a, b = form.split(MIDDOT, 1)
-        return [a.strip(), b.strip()]
+        if _arabic_first(a) and _arabic_first(b):
+            return [a.strip(), b.strip()]
     words = form.split(' ')
     best = None
     for k in range(1, len(words)):

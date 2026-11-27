@@ -320,6 +320,7 @@ jobs:
             looks=""; if [ $TEST = 0 ] && [ -f "$RUNNER_TEMP/look.json" ]; then python templates/looks.py add "$RUNNER_TEMP/look.json" && looks=templates/assets/look-ledger.json; fi
             if [ $TEST = 0 ] && [ -f "$RUNNER_TEMP/bed.json" ]; then python templates/sonic.py ledger-add "$RUNNER_TEMP/bed.json" && looks="$looks templates/assets/bed-ledger.json"; fi
             if [ $TEST = 0 ] && [ -f "$RUNNER_TEMP/cover.json" ]; then python templates/variety.py add "$RUNNER_TEMP/cover.json" && looks="$looks templates/assets/cover-ledger.json"; fi
+            if [ $TEST = 0 ] && [ -f "$RUNNER_TEMP/blocked-new.json" ]; then python templates/blocked.py merge "$RUNNER_TEMP/blocked-new.json" && looks="$looks templates/assets/blocked-stretches.json"; fi
             if [ $TEST = 1 ]; then git add --sparse -f $files; else git add --sparse -f $files templates/assets/render-times.json $looks; fi
             mkdir -p jobs/done; cp "$RUNNER_TEMP/job-rendered.json" "$JOB_DONE"; git add --sparse -f "$JOB_DONE"
             if [ -f "$JOB" ]; then git rm -q "$JOB"; fi

@@ -168,6 +168,11 @@ def fill(job, reader=None):
         if f not in reads:
             r = reader(f)
             st = sorted(r.get('shots') or [], key=lambda s: s['start'])
+            try:                                             # blocked stretches never offered (27 Nov 2026)
+                import blocked as B
+                st = B.split(st, B.ranges(job, f))
+            except Exception:                                # noqa: BLE001
+                pass
             dur = float(r.get('duration') or 0) or max([s['end'] for s in st] or [1.0])
             reads[f] = (st, dur, float(r.get('picture_start') or 0.0))
         return reads[f]

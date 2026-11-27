@@ -642,8 +642,9 @@ def auto_shots(job):
         if not SG_.soft(job):
             raise SystemExit(f'autoshots: {len(left)} shot slot{"s" if len(left) > 1 else ""} with no clean stretch (above)')
         auto_fallback(job, [p['shot'] for p in left])
-        # no clean stretch for a slot: the whole frame instead of a guessed crop (Mohammad, 20 Nov 2026, 22:20)
-        SG_.showcase_fallback(job, f'the shot scan found no clean stretch for {len(left)} slot(s)')
+        # no clean stretch for a slot: the whole frame instead of a guessed crop (Mohammad, 20 Nov 2026, 22:20), but only
+        # for a source that cannot fill 9:16 at up to 2x (fill, not band: Mohammad, 27 Nov 2026, shot rule 3)
+        band_or_fill(job, f'the shot scan found no clean stretch for {len(left)} slot(s)')
     print(f'autoshots: {len(AF.LOG) - n0} shot time(s) picked on the server', flush=True)
 
 
@@ -656,6 +657,79 @@ def _video_dur(f):
 
 
 RESPREAD_OVERLAP = 0.5      # seconds two shots of one file may share before the later one is moved
+
+
+FILL_ROWS = 960            # a 16:9 source with this many picture rows fills 1920 at 2x (reel.MAX_ZOOM)
+
+
+def can_fill(job):
+    """True when every footage video of the job can fill 9:16 at up to 2x: picture rows of FILL_ROWS or more after the
+    letterbox, at least as wide as 16:9 is tall (shot rule 3, 27 Nov 2026)."""
+    vids = [it['file'] for it in job.get('footage') or [] if str(it.get('file', '')).lower().endswith(('.mp4', '.mov', '.mkv', '.webm', '.m4v'))]
+    if not vids:
+        return False
+    try:
+        import shotgate as SG
+        for f in vids:
+            w, h = reel._src_size(C.U + f)
+            rows, boxed = SG._letterbox_rows(f, 5.0, 2.0, h)
+            if (rows if boxed else h) < FILL_ROWS or w < (rows if boxed else h) * 1.7:
+                return False
+        return True
+    except Exception:                          # noqa: BLE001  no read: the old fallback
+        return False
+
+
+def band_or_fill(job, why):
+    """Fill, not band (Mohammad, 27 Nov 2026, shot rule 3): the GTA VI car-physics Reel took the band layout because
+    the scan stopped at its cap, although its 1080p trailer fills 9:16 at 1.78x. The showcase (band) layout is for a
+    source that cannot fill; one that can keeps the crop and its shots (from the library or evenly spaced, each moved off
+    black, slates and blocked stretches)."""
+    import softgate as SG_
+    if can_fill(job):
+        SG_.ladder('picture', 'reel', 'a', f'fill, not band: {why}, but the source fills 9:16 at up to 2x; crop kept')
+        return False
+    return SG_.showcase_fallback(job, why)
+
+
+def shot_rules(job):
+    """Shot rules (Mohammad, 27 Nov 2026): the shot matches its line (templates/subjectmatch.py), then no blocked
+    stretch on screen (templates/blocked.py). Autofix only; each step is on the picture ladder."""
+    import softgate as SG_
+    import blocked as B
+    import autoshots as AS
+    if job.get('blocked_add'):                 # a director's or builder's fix: the stretch joins the ledger now
+        B.add(job['blocked_add'])
+    reads = dict(AS.READ)
+    try:
+        import subjectmatch as SM
+        SG_.guarded('shot matches line', SM.run, job, C.U, reads, frame_clean, _video_dur, SG_.ladder)
+    except ImportError:
+        pass
+    first = list(job['shots'][0]) if job.get('shots') and isinstance(job['shots'][0], list) else None
+
+    def prefer(f, i):
+        try:
+            import subjectmatch as SM
+            import variety
+            cur, subjects = variety.curated(job.get('game') or job.get('game_short'))
+            cls, named = SM.wants(SM.line_text(job, i), subjects)
+            out = []
+            for s_ in cur:
+                if B.romance(s_):
+                    continue
+                it = next((x for x in job.get('footage') or [] if x.get('file') == f and (x.get('url') == s_['url']
+                           or (x.get('repo') and x['repo'] in (s_.get('same') or [])))), None)
+                tags = set(s_.get('tags') or [])
+                if it and (tags & named or any(SM.TAG_CLASS.get(t) in cls for t in tags) or tags & {'action', 'car', 'city'}):
+                    off = float(it.get('start') or 0.0) if it.get('stream') else 0.0
+                    out.append((float(s_['start']) - off, s_.get('focus')))
+            return out
+        except Exception:                      # noqa: BLE001
+            return []
+    B.clear(job, _video_dur, frame_clean, reads, prefer, SG_.ladder)
+    if first and job.get('shots') and job['shots'][0] != first:
+        track_from_first_shot(job)             # the trailer sound follows the new first shot
 
 
 def respread(job):
@@ -927,7 +1001,7 @@ def scan(job):
     slots = [i for i in job.get('shots_auto') or [] if i < len(job.get('shots') or [])]
     if slots:
         auto_fallback(job, slots)
-        SG_.showcase_fallback(job, 'the shot scan found no clean stretch before its cap')
+        band_or_fill(job, 'the shot scan found no clean stretch before its cap')
         SG_.ladder('picture', 'reel', 'a', f'scan cap: {len(slots)} automatic slot(s) from the library or evenly spaced')
     track_from_first_shot(job)
     return time.time()
@@ -1946,12 +2020,18 @@ def run(job, draft=False):
     t_src = time.time()
     if SG_.soft(job):
         first_frame_check(job)                  # a shot ending before the picture moves onto it (never a hang)
+    try:                                        # a mature trailer the ledger does not know is scanned once (27 Nov 2026)
+        import blocked as B_
+        B_.scan_new(job, C.U, SG_.warn)
+    except Exception as e:                      # noqa: BLE001  never a hold
+        SG_.warn('blocked scan', f'{type(e).__name__}: {e}')
     t_shots = scan(job)                         # auto shots, track, shot gate: capped, on 720p proxies (20 Nov 2026)
     if SG_.soft(job):
         respread(job)                           # never the same moment twice (20 Nov 2026, Ace Combat 8: 12 shots at 3.07 s)
     if SG_.soft(job) and job.get('kind') not in ('breaking', 'famitsu') and profile_of(job) != 'breaking':
         SG_.guarded('hook', hook_pick, job)     # story first, then a new cover (Mohammad, 23 Nov 2026)
         track_from_first_shot(job)
+    SG_.guarded('shot rules', shot_rules, job)   # shot matches line, nothing intimate beyond a kiss (27 Nov 2026)
     if SG_.soft(job) and job.get('kind') not in ('breaking', 'famitsu'):
         SG_.guarded('line shade', auto_shade, job)   # a line over bright footage gets the soft shade (21 Nov, item 5)
     if os.environ.get('RUNNER_TEMP') and job.get('kind') not in ('breaking', 'famitsu'):

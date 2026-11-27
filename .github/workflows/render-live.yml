@@ -322,6 +322,8 @@ jobs:
             python templates/qc.py sound-entry "$JOB" "$RUNNER_TEMP/render.log" templates/assets/render-times.json || true
             # cover and opener ledger (audit 21 Nov 2026, item 6): the next Reel of this game opens elsewhere
             if [ -f "$RUNNER_TEMP/cover.json" ]; then python templates/variety.py add "$RUNNER_TEMP/cover.json" && looks="$looks templates/assets/cover-ledger.json"; fi
+            # blocked stretches (shot rules, 27 Nov 2026): a first-use scan or a director's fix joins the ledger
+            if [ -f "$RUNNER_TEMP/blocked-new.json" ]; then python templates/blocked.py merge "$RUNNER_TEMP/blocked-new.json" && looks="$looks templates/assets/blocked-stretches.json"; fi
             # footage library (adv-20261118-templates-never-refuse B): this Reel's files and stretches, read first next time
             python templates/footlib.py record "$RUNNER_TEMP/job-rendered.json" "$base-qc.json" && looks="$looks templates/assets/footage-library.json" || true
             git add --sparse -f $files templates/assets/render-times.json $looks

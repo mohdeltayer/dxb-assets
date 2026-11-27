@@ -84,8 +84,17 @@ def curated(game):
     if not g:
         return [], {}
     out = []
+    try:                                         # never a blocked stretch (shot rules, 27 Nov 2026)
+        import blocked as _B
+    except Exception:                            # noqa: BLE001
+        _B = None
     for s in g.get('stretches') or []:
         fi = (g.get('files') or {}).get(s['file'], {})
+        if _B and _B.hit({}, s['file'], float(s['start']), float(s.get('secs') or 2.0)):
+            room = min([a for a, b, _r in _B.ranges({}, s['file']) if b > float(s['start'])] + [1e9]) - float(s['start'])
+            if room < 2.0:                       # starts in or just before a blocked stretch: not offered
+                continue
+            s = dict(s, secs=round(room - 0.05, 2))   # ends before it
         if fi.get('url'):
             out.append(dict(s, url=fi['url'], same=list(fi.get('same') or [])))
     return out, g.get('subjects') or {}

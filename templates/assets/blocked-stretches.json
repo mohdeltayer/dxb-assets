@@ -1,0 +1,53 @@
+{
+ "about": "Stretches of official trailers no Reel shows (Mohammad, 27 Nov 2026, shot rules item 1): Reels are for a general Gulf audience; a kiss is fine, anything more intimate is not (kissing in a shower or bed, partial nudity, lingerie or swimwear close-ups, suggestive dancing, strip-club scenes). Keyed by trailer; each entry lists the file names, repo copies and URLs that share its timeline (a stream copy that starts later is offset by its 'start'). blocked: [start, end, reason] in seconds of the trailer. templates/blocked.py moves any shot that overlaps one on every lane; it never refuses or holds a Reel. 'scanned' says how the entry was made: 'by eye' from 1 fps frame sheets, or 'auto' by the first-use classifier scan.",
+ "mature_games": ["gta vi"],
+ "trailers": {
+  "gtavi-trailer-1": {
+   "game": "gta vi",
+   "rating": "ESRB M (card in the first 3 s)",
+   "url": "https://media-rockstargames-com.akamaized.net/VI/downloads/videos/GTAVI_Trailer_1/GTAVI_Trailer_1.mp4",
+   "files": ["gtavi-trailer-1", "GTAVI_Trailer_1.mp4"],
+   "scanned": "by eye, 1 fps frame sheets of the Rockstar file, 27 Nov 2026",
+   "blocked": [
+    [21.8, 24.2, "beach crowd in swimwear, close"],
+    [24.8, 28.2, "dancing on a car roof (suggestive)"],
+    [28.8, 30.2, "nightclub dancing"],
+    [33.8, 36.2, "nightclub dancing"],
+    [37.8, 40.2, "swimwear close-ups at a pool"],
+    [41.8, 48.6, "social-feed clips: swimwear boat party, dancing on a car roof, a dancer"],
+    [54.6, 58.6, "mud party dancing in swimwear"],
+    [73.2, 78.2, "couple in a bedroom, man shirtless in bed"]
+   ]
+  },
+  "gtavi-trailer-2": {
+   "game": "gta vi",
+   "rating": "ESRB M (card in the first 3 s)",
+   "url": "https://media-rockstargames-com.akamaized.net/VI/downloads/videos/GTAVI_Trailer_2/GTAVI_Trailer_2.mp4",
+   "files": ["gtavi-trailer-2", "GTAVI_Trailer_2.mp4"],
+   "scanned": "by eye, 1 fps frame sheets of the Rockstar file, 27 Nov 2026",
+   "blocked": [
+    [71.6, 75.2, "couple lying in bed (under the Rockstar Games presents card)"],
+    [77.4, 82.2, "couple in a dark embrace; swimwear close-up at a bar"],
+    [90.8, 98.2, "bar dancing; dancing in a short dress on a boat deck"],
+    [99.8, 104.2, "nightclub dancing, close"],
+    [111.8, 114.4, "suggestive dancing"],
+    [122.8, 125.2, "couple kissing lying in bed"],
+    [126.6, 130.2, "strip club stage and pole"],
+    [145.6, 148.4, "couple embracing against a bedroom wall"]
+   ]
+  },
+  "gtavi-launch-trailer": {
+   "game": "gta vi",
+   "rating": "ESRB M (card on the end slate)",
+   "url": "https://media-rockstargames-com.akamaized.net/VI/downloads/videos/GTAVI_Launch_Trailer/GTAVI_Launch_Trailer.mp4",
+   "files": ["gtavi-launch-trailer", "GTAVI_Launch_Trailer.mp4", "gta6-launch-master.mp4", "live/2026-11-20/gta6-launch-1080.mp4", "gta6-launch-1080.mp4"],
+   "scanned": "by eye, 2 fps frame sheets of the Rockstar file, 27 Nov 2026",
+   "blocked": [
+    [36.0, 39.0, "couple in a shower; a dancer in a red-lit club"],
+    [43.2, 47.0, "kissing in a shower; suggestive dancing in a pink-lit club"],
+    [59.8, 61.0, "two women in costume on a club stage"],
+    [73.8, 76.5, "dancer in a sequin dress; dancers in a club tank"]
+   ]
+  }
+ }
+}
