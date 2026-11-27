@@ -601,6 +601,7 @@ def _check_all(job, errs):
     stage('card art', card_art_check, job)
     import fillcheck as FC
     stage('fill', FC.check, job, C.U, st)
+    stage('trailer news', trailer_news_report, job)   # new trailer, DLC, update: footage dated after the news (28 Nov)
     import sfxplan as SF
     stage('sound effects', SF.check, job, st, place(job)(st, end), profile_of(job))
     return end
@@ -736,6 +737,39 @@ def shot_rules(job):
     B.clear(job, _video_dur, frame_clean, reads, prefer, SG_.ladder)
     if first and job.get('shots') and job['shots'][0] != first:
         track_from_first_shot(job)             # the trailer sound follows the new first shot
+
+
+def trailer_news_report(job):
+    """render_job.check: footage older than the announcement on trailer news (Mohammad, 28 Nov 2026). Printed only; the
+    autofix (trailer_news) runs in the render. Never a refusal."""
+    try:
+        import newfootage as NF
+        old = NF.stale(job)
+    except Exception as e:                     # noqa: BLE001
+        print(f'trailer news: not checked ({e})', flush=True)
+        return
+    for f, d, how in old:
+        print(f'trailer news: {f} is from {d} ({how}), older than the story: the render takes the new trailer, '
+              'official stills of the new content, or credits it as the base game', flush=True)
+
+
+def trailer_news(job):
+    """Trailer news shows the new trailer (Mohammad, 28 Nov 2026; templates/newfootage.py): footage older than the
+    announcement is replaced by the new trailer, else official stills of the new content, else credited as the base
+    game. Runs before the shot scan."""
+    import newfootage as NF
+    import softgate as SG_
+    story = None
+    p = os.path.join(ROOT, 'newsroom', 'stories', str(job.get('story') or '') + '.json')
+    if os.path.exists(p):
+        try:
+            story = json.load(open(p, encoding='utf-8'))
+        except ValueError:
+            story = None
+    step = NF.fix(job, C.U, story, fetch, SG_.ladder, SG_.warn)
+    if step:
+        print(f'render_job: trailer news: step {step}', flush=True)
+    return step
 
 
 def respread(job):
@@ -2031,6 +2065,8 @@ def run(job, draft=False):
         B_.scan_new(job, C.U, SG_.warn)
     except Exception as e:                      # noqa: BLE001  never a hold
         SG_.warn('blocked scan', f'{type(e).__name__}: {e}')
+    if job.get('kind') not in ('famitsu',):
+        SG_.guarded('trailer news', trailer_news, job)   # the new trailer, never old footage as the new one (28 Nov 2026)
     t_shots = scan(job)                         # auto shots, track, shot gate: capped, on 720p proxies (20 Nov 2026)
     if SG_.soft(job):
         respread(job)                           # never the same moment twice (20 Nov 2026, Ace Combat 8: 12 shots at 3.07 s)
