@@ -1,10 +1,48 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-27T14:52:06Z",
- "seq": 936,
+ "generated_at": "2026-11-27T15:00:18Z",
+ "seq": 937,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 25116,
+   "source": "Xbox Wire",
+   "source_kind": "official",
+   "title": "Next Week on XBOX: New Games for November 30 to December 4",
+   "url": "https://news.xbox.com/en-us/2026/11/27/next-week-on-xbox-new-games-for-november-30-to-december-4/",
+   "published": "2026-11-27T15:00Z",
+   "first_seen": "2026-11-27T15:00:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.37680.13695455777746470.b5065f12-4f24-419f-8748-b2862b4eb30c.3be8773f-10df-4d40-a088-e321a9b99f87?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://assets.onestore.ms/cdnfiles/sfw-service-web-onestore-onerf-2017-11-8-12/store/common/images/xpalogo_black.png"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.64518.13716374112172288.1dc7c132-a683-426d-9071-58c8fbda35a9.faae214a-8165-4d58-ab37-899d9e309a96?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.451.13825677853630511.34c22f08-dbbb-42c7-9f0e-bf309f685583.e1b7ecd4-575e-4799-baaa-2d440732917f?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.48731.14050004692691549.a522b7d9-b71f-4540-b199-04398af1e3bb.673cbb7d-8983-46c4-ac14-b57f7b98ccee?w=400&h=600"
+    },
+    {
+     "type": "image",
+     "url": "https://store-images.s-microsoft.com/image/apps.30166.14235737447858279.df56875e-0fb3-4b0a-9c89-69a8ca9cdbad.0025d212-7481-48bb-bbbe-662bc9dc2ef4?w=400&h=600"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 937
+  }
+ ],
  "recent": [
   {
    "id": 24960,
@@ -221,7 +259,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-27T14:50:14Z",
+  "last_poll_at": "2026-11-27T15:00:14Z",
   "sources_enabled": 101,
   "sources_ok": 100,
   "sources_failing": 0,
