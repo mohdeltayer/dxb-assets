@@ -1,0 +1,390 @@
+{
+ "name": "hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry",
+ "out": "cards/2026-11/hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot gate",
+   "detail": "shot 7 (silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4 63.00 s): is letterboxed on this stretch (660 of 720 rows of picture); no clean start of 3.60 s within 12 s: pick another stretch or shorten the shot shot_timing",
+   "shot": 7
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 68 px on 2 lines (cut it to a few words next time): أول نظرة على Sea of Sorrow\nتوسعة Silksong المجانية"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 68 px on 2 lines (cut it to a few words next time): أول نظرة على Sea of Sorrow\nتوسعة Silksong المجانية"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: stylised art: the person, vehicle and animal detector cannot frame its characters (crop fix, 26 Nov 2026)"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "letterbox: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "blocked (end slate): moved to silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4 at 32.19 s (evenly spaced)"
+  },
+  {
+   "kind": "text",
+   "slot": "reel",
+   "step": "a",
+   "why": "soft shade under line group(s) [2]: bright footage behind them"
+  }
+ ],
+ "job_to_pass_min": 7.8,
+ "at": "2026-11-27T23:53:01Z",
+ "findings": [],
+ "notes": [
+  "length 20.9 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 42.3; leak_pct 0.4; cache {'hit': 0, 'miss': 2}; separate_secs 8.7; secs 13.5",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 3.35, \"held_under_text\": 0.0, \"secs\": 20.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 26 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)",
+  "estimate: headline: 23 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 1",
+   "rule": "shot_timing",
+   "what": "moved from 11.20 to 11.45 s, the nearest clean start of the same 3.40 s",
+   "before": [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    11.2,
+    3.4,
+    [
+     [
+      0.0,
+      0.004
+     ],
+     [
+      2.367,
+      0.372
+     ]
+    ]
+   ],
+   "after": [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    11.45,
+    3.4,
+    [
+     [
+      0.0,
+      0.004
+     ],
+     [
+      2.367,
+      0.372
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 3",
+   "rule": "shot_timing",
+   "what": "moved from 18.95 to 18.70 s, the nearest clean start of the same 3.10 s",
+   "before": [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    18.95,
+    3.1,
+    [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      2.017,
+      0.809
+     ]
+    ]
+   ],
+   "after": [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    18.7,
+    3.1,
+    [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      2.017,
+      0.809
+     ]
+    ]
+   ]
+  }
+ ],
+ "job_sha": "132b668701bbeb9d2ff8cb7509ae7478f1898125",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1440,
+  "max_zoom": 1.33,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry-look-1.jpg",
+  "cards/2026-11/hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry-look-2.jpg",
+  "cards/2026-11/hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": null,
+ "job_path": "jobs/done/hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.2,
+  "fetch": 0.22,
+  "shots": 1.51,
+  "checks": 1.93,
+  "render": 2.0,
+  "after": 0.99,
+  "job": 6.65
+ },
+ "job_after_autofix": {
+  "name": "hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry",
+  "story": "2026-11-28-hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry",
+  "kind_news": "trailer",
+  "story_class": "trailer",
+  "built_by": "production-1",
+  "out": "cards/2026-11/hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry-reel-v1.mp4",
+  "footage": [
+   {
+    "file": "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    "url": "https://assets.ign.com/videos/mediaconvert/2026/11/27/2560/a0c0f43a-73f5-434e-8eab-ebc279adfe56-1795792613.mp4",
+    "published": "2026-11-27",
+    "note": "Team Cherry's official Sea of Sorrow launch trailer (2560x1440, 60 fps), IGN's copy of the official file: ign.com/videos/hollow-knight-silksong-official-sea-of-sorrow-launch-trailer, published 27 Nov 2026 15:16Z, the day of the announcement"
+   }
+  ],
+  "shots": [
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    40.4,
+    3.6,
+    [
+     [
+      0.0,
+      0.429
+     ]
+    ]
+   ],
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    11.45,
+    3.4,
+    [
+     [
+      0.0,
+      0.004
+     ],
+     [
+      2.367,
+      0.372
+     ]
+    ]
+   ],
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    14.6,
+    2.7,
+    [
+     [
+      0.0,
+      0.332
+     ]
+    ]
+   ],
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    18.7,
+    3.1,
+    [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      2.017,
+      0.809
+     ]
+    ]
+   ],
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    25.28,
+    3.0,
+    [
+     [
+      0.0,
+      1.0
+     ]
+    ]
+   ],
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    36.2,
+    1.75,
+    [
+     [
+      0.0,
+      0.515
+     ],
+     [
+      0.983,
+      0.23
+     ]
+    ]
+   ],
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    48.0,
+    2.6,
+    [
+     [
+      0.0,
+      0.047
+     ],
+     [
+      1.6,
+      0.718
+     ]
+    ]
+   ],
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    63.0,
+    3.6,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "تبحر البطلة Hornet في قارب صيد،\nوتعبر حصونًا في البحر،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "وتواجه وحوشًا بحرية جديدة،\nوتنزل إلى كهوف عميقة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    7,
+    [
+     [
+      "ويكشف العرض زعماء جددًا تصدر\nالتوسعة مجانًا للجميع في 11 ديسمبر",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    7,
+    "المصدر: تيم تشيري (Team Cherry)",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "تبحر البطلة Hornet في قارب صيد، وتعبر حصونًا في البحر، وتواجه وحوشًا بحرية جديدة، وتنزل إلى كهوف عميقة. ويكشف العرض زعماء جددًا. تصدر التوسعة مجانًا للجميع في 11 ديسمبر.",
+  "headline": "أول نظرة على Sea of Sorrow\nتوسعة Silksong المجانية",
+  "label": "رسمي",
+  "game": "Hollow Knight: Silksong",
+  "game_short": "Silksong",
+  "game_key": "hollow knight silksong",
+  "genre": [
+   "action"
+  ],
+  "subject_person": null,
+  "stylised": true,
+  "source": "تيم تشيري (Team Cherry)",
+  "date": "28 Nov 2026",
+  "theme": "cold",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+   40.4
+  ],
+  "track_from_first_shot": true,
+  "music_only": true,
+  "music_fade": [
+   0.3,
+   0.8
+  ],
+  "texts": {
+   "instagram": "أول نظرة على Sea of Sorrow، التوسعة المجانية للعبة Hollow Knight: Silksong\n\nنشر فريق تيم تشيري (Team Cherry) العرض الدعائي للتوسعة، وفيه تبحر البطلة Hornet في قارب صيد بين جزر محيط منسي، وتعبر حصونًا فوق الماء، وتنزل إلى كهوف عميقة تحت الأمواج.\n\nويكشف العرض وحوشًا بحرية وزعماء جددًا، ويصف الفريق التوسعة بأنها أول تحديث كبير لمحتوى اللعبة.\n\nتصدر Sea of Sorrow مجانًا لجميع اللاعبين في 11 ديسمبر.\n\nالمصدر: تيم تشيري (Team Cherry).\n\n#ألعاب #أخبار_الألعاب #Silksong #SeaOfSorrow",
+   "x": "أول نظرة على Sea of Sorrow: العرض الدعائي من فريق تيم تشيري (Team Cherry) يأخذ البطلة Hornet بين جزر وحصون وكهوف تحت الأمواج، وتصدر التوسعة المجانية للعبة Hollow Knight: Silksong في 11 ديسمبر.",
+   "threads": "أول نظرة على Sea of Sorrow، التوسعة المجانية للعبة Hollow Knight: Silksong.\n\nتبحر البطلة Hornet بين جزر وحصون فوق المحيط، وتواجه زعماء جددًا في كهوف تحت الأمواج. وتصدر التوسعة في 11 ديسمبر.\n\nالمصدر: فريق تيم تشيري (Team Cherry)"
+  },
+  "angle": {
+   "hook": "the strongest new boss from Team Cherry's own Sea of Sorrow trailer",
+   "why_now": "Team Cherry released the Sea of Sorrow launch trailer on 27 Nov 2026 in its Cherry Time presentation; our 27 Nov Reel ran the base game's older trailers.",
+   "what_it_means_here": "a free expansion for one of the year's biggest games, 13 days away, shown in its own trailer",
+   "payoff": "free for all players on 11 December"
+  },
+  "decision_log": {
+   "footage": "Team Cherry's launch trailer, IGN copy of the official file (YouTube and the blog's embeds are not downloaded; Steam has only the base game's trailers)",
+   "shots": "hand-picked by Production 1 from 2 fps sheets and the trailer's scene cuts: the cover is the pink-masked boss (40.4 s, one clean 3.7 s scene); the green armoured boss sits on the bosses line; each line on the shot it describes",
+   "music": "the trailer's own music from 35.5 s (music_only)",
+   "facts": "Team Cherry blog, 27 Nov 2026 (teamcherry.com.au/blog/its-cherry-time): free for all players, 11 December, ocean, islands, forts, caverns beneath the waves; the trailer's end cards: December 11, Free for all players",
+   "review": "arabic-games-film-editor and arabic-grammar-review passes, no required edits; DeepL back-check (one ambiguous pronoun fixed)"
+  },
+  "followup_of": "2026-11-27-hollow-knight-silksong-sea-of-sorrow-free-dlc-dec-11-famitsu",
+  "render_lane": "server",
+  "reel_check": {
+   "source read and first report noted": "yes: Team Cherry blog 27 Nov 2026 (free, 11 December, ocean, islands, forts, caverns beneath the waves) and the trailer's own end cards; first report Team Cherry's Cherry Time presentation 27 Nov",
+   "not already posted (ledger find)": "yes: two hits, the 10 Nov booklet note and the 27 Nov report on the base game's trailers; this is the follow-up on the new trailer Mohammad ordered",
+   "angle before lines": "yes: angle in the job and story file",
+   "trailer or first look": "yes: what the footage shows that is new (Hornet on a fishing boat, forts, sea creatures, deep caves, new bosses), on Team Cherry's own launch trailer, credited",
+   "one spoken paragraph, lines cut from it in order": "yes",
+   "names match names-ar": "yes: Team Cherry added as تيم تشيري 28 Nov; Hornet stays Latin (character), labelled البطلة",
+   "release verbs and house rules": "yes: تصدر for the date; Arabic first on every line; no em dash; Western digits",
+   "footage first, official": "yes: the official launch trailer, IGN's copy of the official file, 2560x1440, decode clean",
+   "credit on every clip": "yes: «المصدر: تيم تشيري (Team Cherry)» over every shot",
+   "sound": "yes: the trailer's own music from the first shot (music_only)",
+   "picture matches the lines": "yes: each line on the shot it describes (hand-picked)"
+  },
+  "layout": "showcase",
+  "showcase_reason": "the trailer clashes with our text in a 9:16 crop: stylised art: the person, vehicle and animal detector cannot frame its characters (crop fix, 26 Nov 2026) (16:9 fallback, Mohammad 20 Nov 2026)"
+ }
+}

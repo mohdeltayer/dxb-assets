@@ -176251,5 +176251,205 @@
   "sound": "trailer",
   "footage": true,
   "upload_secs": 5.0
+ },
+ {
+  "name": "hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-27T23:51Z",
+  "stages": {
+   "checks": 5.8,
+   "montage": 55.3,
+   "text": 26.9,
+   "audio": 0.7,
+   "outro": 15.3
+  },
+  "total": 104.2,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-27T23:50Z",
+  "finished_at": "2026-11-27T23:51Z",
+  "render_min": 1.74,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    "start": 40.4,
+    "width": 2560,
+    "height": 1440,
+    "fps": 60.0,
+    "mbps": 5.77,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    "start": 11.45,
+    "width": 2560,
+    "height": 1440,
+    "fps": 60.0,
+    "mbps": 5.77,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    "start": 14.6,
+    "width": 2560,
+    "height": 1440,
+    "fps": 60.0,
+    "mbps": 5.77,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    "start": 18.7,
+    "width": 2560,
+    "height": 1440,
+    "fps": 60.0,
+    "mbps": 5.77,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    "start": 25.28,
+    "width": 2560,
+    "height": 1440,
+    "fps": 60.0,
+    "mbps": 5.77,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    "start": 36.2,
+    "width": 2560,
+    "height": 1440,
+    "fps": 60.0,
+    "mbps": 5.77,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    "start": 48.0,
+    "width": 2560,
+    "height": 1440,
+    "fps": 60.0,
+    "mbps": 5.77,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    "start": 32.19,
+    "width": 2560,
+    "height": 1440,
+    "fps": 60.0,
+    "mbps": 5.77,
+    "rows": 1440,
+    "zoom": 1.33,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1440,
+   "max_zoom": 1.33,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 8.7,
+   "audio_secs": 51.9,
+   "music_pct": 42.3,
+   "leak_pct": 0.4,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "effects_shots": 0,
+   "mix_secs": 3.7,
+   "secs": 13.5
+  },
+  "lifeless": {
+   "score": 0.0,
+   "still_share": 0.0,
+   "longest_still": 0.0,
+   "cuts_per_10s": 3.35,
+   "held_under_text": 0.0,
+   "secs": 20.9,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 13.2,
+   "shots": 90.4,
+   "checks": 109.8,
+   "render": 125.9,
+   "after": 59.2
+  },
+  "softgate": {
+   "warnings": 2,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "b",
+     "why": "showcase layout, 16:9 fallback: stylised art: the person, vehicle and animal detector cannot frame its characters (crop fix, 26 Nov 2026)"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "blocked (end slate): moved to silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4 at 32.19 s (evenly spaced)"
+    },
+    {
+     "kind": "text",
+     "slot": "reel",
+     "step": "a",
+     "why": "soft shade under line group(s) [2]: bright footage behind them"
+    }
+   ]
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 399,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1152,
+  "peak_mem_mb": 3087,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 81621,
+  "peak_disk_mb": 83130,
+  "min_disk_free_mb": 162977,
+  "setup_min": 0.2,
+  "story": "hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry",
+  "job_sha": "132b668701bbeb9d2ff8cb7509ae7478f1898125",
+  "dispatches": 1,
+  "sound": "trailer",
+  "footage": true
  }
 ]

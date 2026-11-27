@@ -18,70 +18,114 @@
    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
    40.4,
    3.6,
-   null
+   [
+    [
+     0.0,
+     0.429
+    ]
+   ]
   ],
   [
    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
-   11.2,
+   11.45,
    3.4,
-   null
+   [
+    [
+     0.0,
+     0.004
+    ],
+    [
+     2.367,
+     0.372
+    ]
+   ]
   ],
   [
    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
    14.6,
    2.7,
-   null
+   [
+    [
+     0.0,
+     0.332
+    ]
+   ]
   ],
   [
    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
-   18.95,
+   18.7,
    3.1,
-   null
+   [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     2.017,
+     0.809
+    ]
+   ]
   ],
   [
    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
    25.28,
    3.0,
-   null
+   [
+    [
+     0.0,
+     1.0
+    ]
+   ]
   ],
   [
    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
    36.2,
    1.75,
-   null
+   [
+    [
+     0.0,
+     0.515
+    ],
+    [
+     0.983,
+     0.23
+    ]
+   ]
   ],
   [
    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
    48.0,
    2.6,
-   null
+   [
+    [
+     0.0,
+     0.047
+    ],
+    [
+     1.6,
+     0.718
+    ]
+   ]
   ],
   [
    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
    63.0,
    3.6,
-   null
+   [
+    [
+     0.0,
+     0.0
+    ]
+   ]
   ]
  ],
  "lines": [
   [
    1,
-   1,
-   [
-    [
-     "تبحر البطلة Hornet في قارب صيد،",
-     {
-      "size": 54
-     }
-    ]
-   ]
-  ],
-  [
-   2,
    2,
    [
     [
-     "وتعبر حصونًا في البحر،",
+     "تبحر البطلة Hornet في قارب صيد،\nوتعبر حصونًا في البحر،",
      {
       "size": 54
      }
@@ -90,22 +134,10 @@
   ],
   [
    3,
-   3,
-   [
-    [
-     "وتواجه وحوشًا بحرية جديدة،",
-     {
-      "size": 54
-     }
-    ]
-   ]
-  ],
-  [
-   4,
    4,
    [
     [
-     "وتنزل إلى كهوف عميقة.",
+     "وتواجه وحوشًا بحرية جديدة،\nوتنزل إلى كهوف عميقة",
      {
       "size": 54
      }
@@ -114,22 +146,10 @@
   ],
   [
    5,
-   6,
-   [
-    [
-     "ويكشف العرض زعماء جددًا.",
-     {
-      "size": 54
-     }
-    ]
-   ]
-  ],
-  [
-   7,
    7,
    [
     [
-     "تصدر التوسعة مجانًا\nللجميع في 11 ديسمبر.",
+     "ويكشف العرض زعماء جددًا تصدر\nالتوسعة مجانًا للجميع في 11 ديسمبر",
      {
       "size": 54
      }
@@ -208,5 +228,7 @@
   "credit on every clip": "yes: «المصدر: تيم تشيري (Team Cherry)» over every shot",
   "sound": "yes: the trailer's own music from the first shot (music_only)",
   "picture matches the lines": "yes: each line on the shot it describes (hand-picked)"
- }
+ },
+ "layout": "showcase",
+ "showcase_reason": "the trailer clashes with our text in a 9:16 crop: stylised art: the person, vehicle and animal detector cannot frame its characters (crop fix, 26 Nov 2026) (16:9 fallback, Mohammad 20 Nov 2026)"
 }
