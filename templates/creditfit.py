@@ -123,7 +123,7 @@ def parse(text):
         s_part, f_part = t[:foot.start()], t[foot.end():]
     else:
         s_part, f_part = t, ''
-    s_part = SOURCE.sub('', s_part)
+    s_part = SOURCE.sub('', s_part).strip(' ·\u200f')   # «المصدر: X · اللقطات: ...» (the middot is a separator)
     return {'sources': _names(s_part) if s_part.strip() else [], 'footage': _names(f_part) if f_part.strip() else []}
 
 
