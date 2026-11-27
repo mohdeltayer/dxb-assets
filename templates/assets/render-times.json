@@ -174740,5 +174740,273 @@
   "sound": "trailer",
   "footage": true,
   "upload_secs": 8.0
+ },
+ {
+  "name": "warframe-kullervo-prime-access-dec-9-steam-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-27T20:22Z",
+  "stages": {
+   "checks": 4.7,
+   "montage": 42.5,
+   "text": 31.3,
+   "audio": 0.4,
+   "outro": 28.0
+  },
+  "total": 106.9,
+  "lane": "runner",
+  "queued_at": "2026-11-27T20:20Z",
+  "finished_at": "2026-11-27T20:22Z",
+  "render_min": 1.78,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4",
+    "start": 20.05,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4",
+    "start": 2.22,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.68,
+    "rows": 826,
+    "zoom": 2.32,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4",
+    "start": 71.52,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4",
+    "start": 54.12,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4",
+    "start": 90.0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4",
+    "start": 39.32,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4",
+    "start": 30.12,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4",
+    "start": 80.72,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.68,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 2.32,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 13.1,
+   "audio_secs": 45.4,
+   "music_pct": 73.0,
+   "leak_pct": 5.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 7
+   },
+   "reason": "music stem not clean (leftover 5.3% > 5.0%)",
+   "secs": 18.0,
+   "ladder": "d",
+   "fallback": "bed:neon_d"
+  },
+  "lifeless": {
+   "score": 12.6,
+   "still_share": 0.133,
+   "longest_still": 1.6,
+   "cuts_per_10s": 4.05,
+   "held_under_text": 0.0,
+   "secs": 17.3,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 128.1,
+   "shots": 314.2,
+   "checks": 10.9,
+   "render": 164.1,
+   "after": 44.3
+  },
+  "softgate": {
+   "warnings": 10,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 1,
+     "step": "a",
+     "why": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4: shot ended before the first video frame (2.17 s); moved to 2.22 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4: shot ended before the first video frame (2.17 s); moved to 2.22 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4: shot ended before the first video frame (2.17 s); moved to 2.22 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4: shot ended before the first video frame (2.17 s); moved to 2.22 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4: shot ended before the first video frame (2.17 s); moved to 2.22 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 0,
+     "step": "a",
+     "why": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4 at 20.05 s for 3.8 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4 at 54.12 s for 2.67 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4 at 90.0 s for 2.67 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "b",
+     "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "a",
+     "why": "scan cap: 3 automatic slot(s) from the library or evenly spaced"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4 at 71.52 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4 at 39.32 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4 at 30.12 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "warframe-kullervo-prime-access-dec-9-steam-warframe-jade-shadows-constellations-official-gameplay-trail.mp4 at 80.72 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "d",
+     "why": "audio split not applied (music stem not clean (leftover 5.3% > 5.0%)) on a trailer track under 7 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or o"
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 662,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1470,
+  "peak_mem_mb": 3371,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61100,
+  "peak_disk_mb": 62361,
+  "min_disk_free_mb": 85436,
+  "setup_min": 0.58,
+  "story": "warframe-kullervo-prime-access-dec-9-steam"
  }
 ]
