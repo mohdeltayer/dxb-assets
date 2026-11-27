@@ -389,6 +389,19 @@ jobs:
           cat "$RUNNER_TEMP/text.log" "$RUNNER_TEMP/render.log" > "$RUNNER_TEMP/all.log" 2>/dev/null || true
           python templates/qc.py fail "$JOB" "$RUNNER_TEMP/qc.json" --log "$RUNNER_TEMP/all.log" || true
           [ -f "$RUNNER_TEMP/qc.json" ] && { echo "### QC: fail"; echo '```json'; cat "$RUNNER_TEMP/qc.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY" || true
+          # a first-use blocked-stretch scan is kept even when the render fails, so the next try does not scan again (27 Nov 2026)
+          if [ -s "$RUNNER_TEMP/blocked-new.json" ]; then
+            git config user.name "dxb-render"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            for i in 1 2 3; do
+              git fetch -q --depth=1 --filter=blob:none origin "$GITHUB_REF_NAME" && git reset -q --hard "origin/$GITHUB_REF_NAME"
+              python templates/blocked.py merge "$RUNNER_TEMP/blocked-new.json" || break
+              git add --sparse -f templates/assets/blocked-stretches.json
+              git commit -q -m "Blocked stretches from a first-use scan of $(basename "$JOB" .json) (kept although the render failed)" || break
+              git push -q origin "HEAD:$GITHUB_REF_NAME" && break
+              sleep $(( i * 5 ))
+            done
+          fi
           # the fixes the server made before it refused go back to main, so the next dispatch starts from them (item B)
           if [ -s "$RUNNER_TEMP/autofix.json" ]; then
             { echo "### Fixed by the server (written back to $JOB)"; echo '```json'; cat "$RUNNER_TEMP/autofix.json"; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
