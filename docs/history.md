@@ -4293,3 +4293,12 @@ to end before a blocked range), and the merge of `blocked-new.json` in render.ym
 release: the credit ladder reads the showcase source row («<outlet> · <date>») and splits «A نقلًا عن B» into two names;
 the GTA VI chainsaw job had failed on it at 05:18Z. Tests: templates/test_shotrules.py. Replay: see the board line.
 
+## Trailer news (Mohammad, 28 Nov 2026)
+
+The Hollow Knight: Silksong Sea of Sorrow Reel (scheduled 27 Nov, 21:30 Dubai) ran Silksong's Steam Release Trailer
+(uploaded 22 Aug 2025) and Reveal Trailer (29 Jun 2025) under lines about the new expansion trailer; Steam had no Sea of
+Sorrow trailer and the slip resolver took the store page's videos. Built: templates/newfootage.py (dates, the
+three-step autofix), render_job.trailer_news before the shot scan and trailer_news_report in check, tests in
+templates/test_newfootage.py; the credit parse drops the middot between source and footage. On the Silksong job the
+server finds both trailers stale and takes Famitsu's article image, a frame of the new trailer (1280x720).
+

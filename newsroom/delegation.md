@@ -80,6 +80,11 @@ the bands, nothing over the picture), the server renders it once and that versio
 picture reason is refused. The server also takes the 16:9 layout on its own when the shot scan finds no clean stretch
 or burnt-in text sits under our text in the 9:16 crop.
 
+**Director: trailer news (Mohammad, 28 Nov 2026).** On a story about a new trailer, DLC, expansion, update or reveal, ask:
+is it the actual new trailer? Old footage carrying it is a `wrong_subject` fix whose `fix` names the new trailer's
+official source (publisher YouTube, press site, the official X post's video, the store page); official stills of the new
+content credited «صورة رسمية للمحتوى الجديد» pass. CLAUDE.md "Trailer news shows the new trailer".
+
 **Director: shot rules (Mohammad, 27 Nov 2026).** Two checks the director fixes, never reasons to fail: "nothing
 intimate beyond a kiss" (a kiss passes; a shower or bed scene, partial nudity, underwear or swimwear close-ups,
 suggestive dancing or a strip club does not) and "shot matches line". Intimate: verdict fix, reason `graphic`, with

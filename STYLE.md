@@ -1040,6 +1040,25 @@ server fixes, every slot on the picture start, were written back to main) and it
   three lines at 60 px is shortened (platform and source words first, then the news word and the game name). Em dashes,
   Arabic-Indic digits, flipping signs and hashtags on X and Threads are fixed by the server.
 
+## Trailer news shows the new trailer (Mohammad, 28 Nov 2026; docs/history.md "Trailer news")
+
+Case: the Hollow Knight: Silksong Sea of Sorrow Reel ran the base game's old Steam trailers; viewers wrote "you showed
+the game trailer, not the DLC trailer". Autofix only, never a refusal; the Reel ships.
+1. When a story is about a new trailer, DLC, expansion, update or reveal, `render_job.check` compares each footage video's
+   publish date with the story's date (`templates/newfootage.py`: a Steam trailer's upload stamp in its path, a dated URL,
+   the item's `"published"`, or the file's Last-Modified). Footage more than 3 days older than the announcement cannot
+   carry the Reel: get the new trailer from the official source (publisher YouTube, press site, the official X post's
+   video, the store page; the 26 Oct rule). A builder who has the new trailer's file sets `"published"` on its item.
+2. If the new trailer is not reachable: official key art or screenshots of the new content with a slow pan, and the
+   on-screen credit says what it is («اللقطات: صورة رسمية للمحتوى الجديد»). Never old footage presented as the new trailer.
+3. The server's order: the new trailer from the same official source (`footage_source` read again for a video dated on
+   or after the news); then official stills of the new content (the og:image of the story's official pages, then of the
+   outlets that carried it, 1000 px wide or more), our bed under them; then, with neither, the old footage stays
+   credited as the base game («اللقطات: من اللعبة الأساسية لا من العرض الجديد»). Each step is on the picture ladder.
+4. Director QA asks: trailer news, is it the actual new trailer? Old footage carrying trailer news is a `wrong_subject`
+   fix naming the new trailer's official source.
+[Trailer news, 28 Nov 2026]
+
 ## Shot rules: nothing intimate, shot matches line, fill not band (Mohammad, 27 Nov 2026; docs/history.md "Shot rules")
 
 Autofixes only:
