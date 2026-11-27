@@ -171891,5 +171891,267 @@
   "setup_min": 0.48,
   "story": "grave-mistakes-launch-steam-store",
   "upload_secs": 7.0
+ },
+ {
+  "name": "gta-vi-car-physics-gran-turismo-pro-push-square-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-27T01:35Z",
+  "stages": {
+   "checks": 4.5,
+   "montage": 28.2,
+   "text": 24.9,
+   "audio": 0.7,
+   "outro": 13.9
+  },
+  "total": 72.1,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-27T01:34Z",
+  "finished_at": "2026-11-27T01:35Z",
+  "render_min": 1.2,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "gta6-launch-master.mp4",
+    "start": 5.77,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "gta6-launch-master.mp4",
+    "start": 36.55,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "gta6-launch-master.mp4",
+    "start": 38.8,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "gta6-launch-master.mp4",
+    "start": 42.8,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "gta6-launch-master.mp4",
+    "start": 47.3,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "gta6-launch-master.mp4",
+    "start": 50.3,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "gta6-launch-master.mp4",
+    "start": 61.22,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "gta6-launch-master.mp4",
+    "start": 68.54,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "mbps": 7.32,
+    "rows": 960,
+    "zoom": 2.0,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 2.0,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 9.6,
+   "audio_secs": 47.9,
+   "music_pct": 60.9,
+   "leak_pct": 6.5,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "reason": "music stem not clean (leftover 6.5% > 5.0%)",
+   "secs": 13.0,
+   "fallback": "franchise:gta",
+   "franchise": {
+    "franchise": "gta",
+    "files": [
+     "live/sound/franchise/gta-2.m4a"
+    ],
+    "why": "audio split not applied (music stem not clean (leftover 6.5% > 5.0%)) on a trailer track under 7 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed."
+   },
+   "ladder": "c"
+  },
+  "lifeless": {
+   "score": 2.1,
+   "still_share": 0.018,
+   "longest_still": 0.3,
+   "cuts_per_10s": 4.91,
+   "held_under_text": 0.0,
+   "secs": 16.3,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 5.2,
+   "shots": 191.6,
+   "checks": 7.7,
+   "render": 101.6,
+   "after": 49.8
+  },
+  "softgate": {
+   "warnings": 1,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 0,
+     "step": "a",
+     "why": "gta6-launch-master.mp4 at 57.15 s: a proven stretch from the footage library"
+    },
+    {
+     "kind": "picture",
+     "slot": 1,
+     "step": "a",
+     "why": "gta6-launch-master.mp4 at 36.55 s: a proven stretch from the footage library"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "gta6-launch-master.mp4 at 38.8 s: a proven stretch from the footage library"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "gta6-launch-master.mp4 at 42.8 s: a proven stretch from the footage library"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "gta6-launch-master.mp4 at 47.3 s: a proven stretch from the footage library"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "gta6-launch-master.mp4 at 50.3 s: a proven stretch from the footage library"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "gta6-launch-master.mp4 at 61.22 s: a proven stretch from the footage library"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "gta6-launch-master.mp4 at 68.54 s: a proven stretch from the footage library"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "b",
+     "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "a",
+     "why": "scan cap: 8 automatic slot(s) from the library or evenly spaced"
+    },
+    {
+     "kind": "hook",
+     "slot": 0,
+     "step": "a",
+     "why": "another stretch of the same file: clean point at 5.77 s (opener 57.1 s was used by gta-vi-day-one-sales-estimate-sensor-tower at 57.1 s within 14 days)"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "c",
+     "why": "audio split not applied (music stem not clean (leftover 6.5% > 5.0%)) on a trailer track under 7 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or o"
+    }
+   ]
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 357,
+  "queue_wait_secs": 2,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1194,
+  "peak_mem_mb": 2444,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 77118,
+  "peak_disk_mb": 78239,
+  "min_disk_free_mb": 167867,
+  "setup_min": 0.2,
+  "story": "gta-vi-car-physics-gran-turismo-pro-push-square",
+  "job_sha": "daa8b7aa78584bf8cea182ba4e1552400e4d33ce",
+  "dispatches": 1,
+  "sound": "franchise:gta (audio split not applied (music stem not clean (leftover 6.5% > 5.0%)) on a trailer track under 7 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
+  "footage": true
  }
 ]
