@@ -171658,5 +171658,237 @@
   "setup_min": 1.0,
   "story": "grave-mistakes-launch-steam-store",
   "upload_secs": 8.0
+ },
+ {
+  "name": "grave-mistakes-launch-steam-store-reel-v3.mp4",
+  "profile": "standard",
+  "at": "2026-11-27T00:49Z",
+  "stages": {
+   "checks": 3.8,
+   "montage": 43.1,
+   "text": 38.7,
+   "audio": 0.9,
+   "outro": 30.5
+  },
+  "total": 116.9,
+  "lane": "runner",
+  "queued_at": "2026-11-27T00:36:33Z",
+  "finished_at": "2026-11-27T00:49Z",
+  "render_min": 1.95,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
+    "start": 3.2,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
+    "start": 8.5,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
+    "start": 45.4,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
+    "start": 37.8,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
+    "start": 23.02,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
+    "start": 30.56,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
+    "start": 50.24,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.61,
+    "rows": 1060,
+    "zoom": 1.81,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
+    "start": 32.96,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
+    "start": 20.69,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.61,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.81,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 11.4,
+   "audio_secs": 51.2,
+   "music_pct": 43.5,
+   "leak_pct": 10.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 2
+   },
+   "reason": "music stem not clean (leftover 10.0% > 5.0%)",
+   "secs": 15.7,
+   "ladder": "d",
+   "fallback": "bed:neon_b"
+  },
+  "lifeless": {
+   "score": 5.6,
+   "still_share": 0.059,
+   "longest_still": 0.7,
+   "cuts_per_10s": 7.84,
+   "held_under_text": 0.0,
+   "secs": 20.4,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 22.2,
+   "shots": 302.6,
+   "checks": 30.0,
+   "render": 170.6,
+   "after": 43.6
+  },
+  "softgate": {
+   "warnings": 21,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 23.02 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 30.56 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 50.24 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 32.96 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 8,
+     "step": "a",
+     "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 20.69 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "text",
+     "slot": "reel",
+     "step": "a",
+     "why": "soft shade under line group(s) [2]: bright footage behind them"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "d",
+     "why": "audio split not applied (music stem not clean (leftover 10.0% > 5.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or "
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 569,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1824,
+  "peak_mem_mb": 3650,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61171,
+  "peak_disk_mb": 64726,
+  "min_disk_free_mb": 83071,
+  "setup_min": 0.48,
+  "story": "grave-mistakes-launch-steam-store"
  }
 ]
