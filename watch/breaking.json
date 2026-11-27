@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-27T09:52:06Z",
- "seq": 930,
+ "generated_at": "2026-11-27T10:52:09Z",
+ "seq": 931,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -296,32 +296,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 897
-  },
-  {
-   "id": 23973,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Crossout Remastered - Track to the Future Update Trailer | PS5 & PS4 Games",
-   "url": "https://www.youtube.com/watch?v=5X68Bw2KjIw",
-   "published": "2026-11-26T10:00Z",
-   "first_seen": "2026-11-26T10:20:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/5X68Bw2KjIw/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=5X68Bw2KjIw"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 892
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-27T09:50:15Z",
+  "last_poll_at": "2026-11-27T10:50:05Z",
   "sources_enabled": 101,
   "sources_ok": 99,
   "sources_failing": 0,
