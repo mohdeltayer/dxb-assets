@@ -1,6 +1,6 @@
 {
  "name": "slay-the-spire-2-ai-80-percent-win-rate-automaton",
- "out": "cards/2026-11/slay-the-spire-2-ai-80-percent-win-rate-automaton-reel-v1.mp4",
+ "out": "cards/2026-11/slay-the-spire-2-ai-80-percent-win-rate-automaton-reel-v2.mp4",
  "verdict": "pass",
  "warnings": [
   {
@@ -30,30 +30,6 @@
  "ladder": [
   {
    "kind": "picture",
-   "slot": 6,
-   "step": "a",
-   "why": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 at 11.29 s for 2.2 s: no clean stretch read, evenly spaced crop"
-  },
-  {
-   "kind": "picture",
-   "slot": 7,
-   "step": "a",
-   "why": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 at 20.36 s for 2.2 s: no clean stretch read, evenly spaced crop"
-  },
-  {
-   "kind": "picture",
-   "slot": 8,
-   "step": "a",
-   "why": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 at 43.37 s for 2.31 s: no clean stretch read, evenly spaced crop"
-  },
-  {
-   "kind": "picture",
-   "slot": 9,
-   "step": "a",
-   "why": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 at 56.42 s for 2.31 s: no clean stretch read, evenly spaced crop"
-  },
-  {
-   "kind": "picture",
    "slot": 5,
    "step": "a",
    "why": "drift: kept as a crop, check waived"
@@ -71,77 +47,20 @@
    "why": "drift: kept as a crop, check waived"
   }
  ],
- "job_to_pass_min": 9.2,
- "at": "2026-11-27T02:38:22Z",
+ "job_to_pass_min": 9.7,
+ "at": "2026-11-27T02:49:04Z",
  "findings": [],
  "notes": [
-  "first frame: shot 0 slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 starts at 0.0 s, the video at 0.79 s; its first 0.79 s are lost",
-  "first frame: shot 2 slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 starts at 0.0 s, the video at 0.79 s; its first 0.79 s are lost",
-  "first frame: shot 3 slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 starts at 0.0 s, the video at 0.79 s; its first 0.79 s are lost",
-  "first frame: shot 4 slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 starts at 0.0 s, the video at 0.79 s; its first 0.79 s are lost",
-  "first frame: shot 5 slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 starts at 0.0 s, the video at 0.79 s; its first 0.79 s are lost",
-  "first frame: shot 6 slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 starts at 0.0 s, the video at 0.79 s; its first 0.79 s are lost",
-  "first frame: shot 7 slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 starts at 0.0 s, the video at 0.79 s; its first 0.79 s are lost",
-  "first frame: shot 8 slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 starts at 0.0 s, the video at 0.79 s; its first 0.79 s are lost",
-  "first frame: shot 9 slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 starts at 0.0 s, the video at 0.79 s; its first 0.79 s are lost",
   "length 21.4 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: applied; music_pct 66.2; leak_pct 0.1; cache {'hit': 0, 'miss': 6}; separate_secs 10.4; secs 14.9",
+  "render_job: audio split: applied; music_pct 66.2; leak_pct 0.1; cache {'hit': 6, 'miss': 0}; separate_secs 3.7; secs 6.0",
   "smear check: exempt 1.02 to 7.22 s (our own cards)",
   "render_job: lifeless: {\"score\": 14.0, \"still_share\": 0.173, \"longest_still\": 1.5, \"cuts_per_10s\": 6.54, \"held_under_text\": 0.0, \"secs\": 21.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
   "estimate: headline: 33 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)",
   "estimate: headline: 29 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
  ],
- "autofixed": [
-  {
-   "where": "shot 2",
-   "rule": "auto_shots",
-   "what": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 at 25.38 s for 2.5 s, focus 0.158"
-  },
-  {
-   "where": "shot 3",
-   "rule": "auto_shots",
-   "what": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 at 35.75 s for 2.5 s, focus 0.27"
-  },
-  {
-   "where": "shot 4",
-   "rule": "auto_shots",
-   "what": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 at 39.66 s for 2.2 s, focus 0.437"
-  },
-  {
-   "where": "shot 0",
-   "rule": "auto_shots",
-   "what": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-early-access-trailer.mp4 at 80.81 s for 2.4 s, focus 0.072 (shortened from 3.8 s: no free clean stretch that long)"
-  },
-  {
-   "where": "shot 5",
-   "rule": "auto_shots",
-   "what": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 at 7.31 s for 2.1 s, focus 0.674 (shortened from 2.2 s: no free clean stretch that long)"
-  },
-  {
-   "where": "shot 4",
-   "rule": "subject_empty",
-   "what": "focus [[0.0, 0.437]] to 0.7: re-aimed (crop fix, 26 Nov 2026)",
-   "before": [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    39.66,
-    2.2,
-    [
-     [
-      0.0,
-      0.437
-     ]
-    ]
-   ],
-   "after": [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    39.66,
-    2.2,
-    0.7
-   ]
-  }
- ],
- "job_sha": "ef696c6143b65a93d971d32a7b250b2968d8b3aa",
- "dispatches": 2,
+ "autofixed": [],
+ "job_sha": "8371447d9bfc50523d9508cfed0b062e5d6865d3",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -156,387 +75,16 @@
  ],
  "person_shown": "n/a",
  "sound": "trailer",
- "shot_read": {
-  "secs": 0.0,
-  "files": {
-   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4": {
-    "secs": 0.0,
-    "cached": true,
-    "stages": {
-     "decode": 16.0,
-     "autofocus": 29.4,
-     "ocr": 29.4,
-     "smear": 34.6,
-     "scenes": 34.8
-    },
-    "incomplete": null
-   },
-   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-early-access-trailer.mp4": {
-    "secs": 0.0,
-    "cached": true,
-    "stages": {
-     "decode": 23.4,
-     "autofocus": 41.4,
-     "ocr": 41.4,
-     "smear": 52.2,
-     "scenes": 52.6
-    },
-    "incomplete": null
-   },
-   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-reveal-trailer.mp4": {
-    "secs": 0.0,
-    "cached": true,
-    "stages": {
-     "decode": 6.4,
-     "autofocus": 17.1,
-     "ocr": 17.1,
-     "smear": 17.1,
-     "scenes": 17.3
-    },
-    "incomplete": null
-   }
-  }
- },
+ "shot_read": null,
  "job_path": "jobs/done/slay-the-spire-2-ai-80-percent-win-rate-automaton.json",
  "stage_minutes": {
-  "queue": 0.03,
+  "queue": 2.38,
   "setup": 0.2,
-  "fetch": 0.52,
-  "shots": 2.1,
-  "checks": 2.34,
-  "render": 2.4,
-  "after": 0.89,
-  "upload": 0.07,
-  "job": 8.25
- },
- "job_after_autofix": {
-  "name": "slay-the-spire-2-ai-80-percent-win-rate-automaton",
-  "story": "2026-11-27-slay-the-spire-2-ai-80-percent-win-rate-automaton",
-  "footage_source": "steam:2868840",
-  "kind_news": "report",
-  "story_class": "numbers",
-  "story_class_why": "a figure in the headline (80 بالمئة) (kind report read from the text)",
-  "skin_why": "genre strategy: its kit is not built yet (skins.KITS scifi, fantasy)",
-  "built_by": "server-slip",
-  "render_lane": "server",
-  "out": "cards/2026-11/slay-the-spire-2-ai-80-percent-win-rate-automaton-reel-v1.mp4",
-  "split_fallback": "ladder",
-  "footage": [
-   {
-    "file": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    "steam": 2868840,
-    "trailer": "Slay the Spire 2 - Gameplay Trailer",
-    "start": 0,
-    "seconds": 120,
-    "trailer_id": "2868840"
-   },
-   {
-    "file": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-early-access-trailer.mp4",
-    "steam": 2868840,
-    "trailer": "Slay the Spire 2 - Early Access Trailer",
-    "start": 0,
-    "seconds": 120,
-    "trailer_id": "2868840"
-   },
-   {
-    "file": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-reveal-trailer.mp4",
-    "steam": 2868840,
-    "trailer": "Slay the Spire 2 - Reveal Trailer",
-    "start": 0,
-    "seconds": 120,
-    "trailer_id": "2868840"
-   }
-  ],
-  "shots": [
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-early-access-trailer.mp4",
-    80.81,
-    2.42,
-    [
-     [
-      0.0,
-      0.072
-     ]
-    ]
-   ],
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-gfx-figure.png",
-    0.0,
-    4.2,
-    null
-   ],
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    25.38,
-    2.53,
-    [
-     [
-      0.0,
-      0.158
-     ]
-    ]
-   ],
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    35.75,
-    2.53,
-    [
-     [
-      0.0,
-      0.27
-     ]
-    ]
-   ],
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    39.66,
-    2.2,
-    0.7
-   ],
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    7.31,
-    2.12,
-    [
-     [
-      0.0,
-      0.674
-     ]
-    ]
-   ],
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    11.29,
-    2.2,
-    [
-     [
-      0.0,
-      0.217
-     ]
-    ]
-   ],
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    20.36,
-    2.2,
-    [
-     [
-      0.0,
-      0.539
-     ],
-     [
-      2.104,
-      0.461
-     ]
-    ]
-   ],
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    43.37,
-    2.31,
-    [
-     [
-      0.0,
-      0.426
-     ],
-     [
-      1.844,
-      0.741
-     ]
-    ]
-   ],
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    56.42,
-    2.31,
-    [
-     [
-      0.0,
-      0.923
-     ],
-     [
-      0.644,
-      0.093
-     ],
-     [
-      1.227,
-      0.764
-     ],
-     [
-      1.927,
-      0.429
-     ]
-    ]
-   ]
-  ],
-  "lines": [
-   [
-    2,
-    3,
-    [
-     [
-      "وتتراوح نسبة فوز اللاعبين\nالبشر بين 10.9 بالمئة",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ],
-   [
-    4,
-    5,
-    [
-     [
-      "و 19.9 بالمئة\nبحسب بيانات Spire Codex",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ],
-   [
-    6,
-    7,
-    [
-     [
-      "وأحد معدّي الدراسة\nباحث في جامعة",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ],
-   [
-    8,
-    9,
-    [
-     [
-      "محمد بن زايد للذكاء\nالاصطناعي في الإمارات",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ]
-  ],
-  "credits": [
-   [
-    0,
-    9,
-    "المصدر: Automaton · اللقطات: صفحة اللعبة على Steam",
-    {
-     "size": 38,
-     "band": true
-    }
-   ]
-  ],
-  "spoken": "ذكر موقع أوتوماتون (Automaton) أن نظام ذكاء اصطناعي اسمه AlphaDefect يفوز بنسبة 80.3 بالمئة في Slay the Spire 2 على مستوى Ascension 10 مع شخصية Defect. وتتراوح نسبة فوز اللاعبين البشر بين 10.9 بالمئة و 19.9 بالمئة بحسب بيانات Spire Codex. وأحد معدّي الدراسة باحث في جامعة محمد بن زايد للذكاء الاصطناعي في الإمارات.",
-  "headline": "ذكاء اصطناعي يفوز بنسبة 80 بالمئة\nمع Defect في Slay the Spire 2",
-  "label": "تقرير",
-  "game": "Slay the Spire 2",
-  "game_short": "Slay the Spire 2",
-  "game_key": "slay the spire ii",
-  "genre": [
-   "strategy"
-  ],
-  "texts": {
-   "instagram": "تقرير: ذكاء اصطناعي يفوز بنسبة 80% مع Defect في Slay the Spire 2\n\nذكر موقع أوتوماتون (Automaton) أن نظام ذكاء اصطناعي اسمه AlphaDefect يفوز بنسبة 80.3% في Slay the Spire 2 على مستوى Ascension 10 مع شخصية Defect.\n\nوتتراوح نسبة فوز اللاعبين البشر بين 10.9% و19.9% بحسب بيانات Spire Codex.\n\nوأحد معدّي الدراسة باحث في جامعة محمد بن زايد للذكاء الاصطناعي في الإمارات.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع أوتوماتون (Automaton).\n\n#ألعاب #أخبار_الألعاب #SlayTheSpire2 #AI",
-   "x": "تقرير: ذكر موقع أوتوماتون (Automaton) أن نظام الذكاء الاصطناعي AlphaDefect يفوز بنسبة 80.3% في Slay the Spire 2 على مستوى Ascension 10 مع شخصية Defect، بينما يفوز اللاعبون البشر بنسبة 10.9% إلى 19.9% بحسب Spire Codex. المصدر: أوتوماتون.",
-   "threads": "تقرير: ذكر موقع أوتوماتون (Automaton) أن نظام ذكاء اصطناعي اسمه AlphaDefect يفوز بنسبة 80.3% في Slay the Spire 2 على مستوى Ascension 10 مع شخصية Defect.\n\nوتتراوح نسبة فوز اللاعبين البشر بين 10.9% و19.9% بحسب بيانات Spire Codex.\n\nالمصدر: موقع أوتوماتون (Automaton)"
-  },
-  "source": "موقع أوتوماتون (Automaton)، ولقطات من صفحة اللعبة على Steam",
-  "date": "27 Nov 2026",
-  "theme": "gold",
-  "style": null,
-  "template": "numbers",
-  "skin": "house",
-  "cut": false,
-  "track": [
-   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-early-access-trailer.mp4",
-   80.81
-  ],
-  "track_from_first_shot": true,
-  "angle": {
-   "why_now": "Automaton published an interview on 27 Nov 2026 with a researcher at MBZUAI in the UAE about AlphaDefect, an AI for Slay the Spire 2, whose paper came out on 24 Nov.",
-   "what_it_means_here": "At Ascension 10 the AI wins 62.2% to 76.7% of runs depending on the character, and 80.3% for the Defect with lookahead, against 10.9% to 19.9% for human players in Spire Codex data. The researcher works at a UAE university."
-  },
-  "decision_log": {
-   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
-   "template": "numbers: a figure in the headline (80 بالمئة) (kind report read from the text)",
-   "skin": "house: genre strategy: its kit is not built yet (skins.KITS scifi, fantasy)",
-   "footage": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4 from the resolver (steam:2868840)",
-   "shots": "server-picked clean stretches in source order (autoshots)",
-   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
-  },
-  "reel_check": {
-   "source read and first report noted": "yes: Automaton, 27 Nov 2026: interview on the AlphaDefect AI for Slay the Spire 2 (Ascension 10) (https://automaton-media.com/articles/interviewsjp/20261127-481245/); first report: Automaton 27 Nov 2026 00:52Z (paper published 24 Nov 2026)",
-   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
-   "angle before lines": "yes: angle in the slip",
-   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
-   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
-   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
-   "footage first, official": "yes: steam 2868840 from the resolver, decode clean",
-   "credit on every clip": "yes: one credit over every shot",
-   "sound": "yes: trailer sound from the first shot, split per shot on the server",
-   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
-  },
-  "gfx": [
-   {
-    "file": "slay-the-spire-2-ai-80-percent-win-rate-automaton-gfx-figure.png",
-    "kind": "fact",
-    "value": "80",
-    "label": "اللاعبون",
-    "note": "بالمئة"
-   }
-  ],
-  "ground_footage": [
-   "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-   4.0,
-   60.0
-  ],
-  "cut_ok": [
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    11.29,
-    "never refuse: no clean stretch read, evenly spaced fallback"
-   ],
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    20.36,
-    "never refuse: no clean stretch read, evenly spaced fallback"
-   ],
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    43.37,
-    "never refuse: no clean stretch read, evenly spaced fallback"
-   ],
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    56.42,
-    "never refuse: no clean stretch read, evenly spaced fallback"
-   ]
-  ],
-  "drift_ok": [
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    11.29,
-    "never refuse: no clean stretch read, evenly spaced fallback"
-   ],
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    20.36,
-    "never refuse: no clean stretch read, evenly spaced fallback"
-   ],
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    43.37,
-    "never refuse: no clean stretch read, evenly spaced fallback"
-   ],
-   [
-    "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
-    56.42,
-    "never refuse: no clean stretch read, evenly spaced fallback"
-   ]
-  ]
+  "fetch": 0.46,
+  "shots": 1.22,
+  "checks": 1.5,
+  "render": 2.28,
+  "after": 0.88,
+  "job": 6.33
  }
 }
