@@ -1,10 +1,48 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-27T16:52:08Z",
- "seq": 943,
+ "generated_at": "2026-11-27T17:05:08Z",
+ "seq": 944,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 25247,
+   "source": "PlayStation Blog",
+   "source_kind": "official",
+   "title": "Share of the Week: Gathered",
+   "url": "https://blog.playstation.com/2026/11/27/share-of-the-week-gathered/",
+   "published": "2026-11-27T17:01Z",
+   "first_seen": "2026-11-27T17:05:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55675369248_b291410abd_k.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55675676965_ece34c6085_k.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55675266951_a04d0b14d4_k.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55675369183_1613f48c47_k.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55675676810_4cdec56919_k.jpg"
+    },
+    {
+     "type": "image",
+     "url": "https://live.staticflickr.com/65535/55674261452_cf1d7ad13d_k.jpg"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 944
+  }
+ ],
  "recent": [
   {
    "id": 25218,
@@ -296,9 +334,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-27T16:50:04Z",
+  "last_poll_at": "2026-11-27T17:05:04Z",
   "sources_enabled": 101,
-  "sources_ok": 101,
+  "sources_ok": 100,
   "sources_failing": 0,
   "failed": []
  }
