@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-27T17:52:05Z",
- "seq": 947,
+ "generated_at": "2026-11-27T18:52:09Z",
+ "seq": 948,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -371,32 +371,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 912
-  },
-  {
-   "id": 24484,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "HITMAN World of Assassination - Bawma (ft. Lenny Kravitz) Elusive Target - Launch Trailer",
-   "url": "https://www.youtube.com/watch?v=7d6_3q5Uv_Q",
-   "published": "2026-11-26T18:07Z",
-   "first_seen": "2026-11-26T18:25:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/7d6_3q5Uv_Q/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=7d6_3q5Uv_Q"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 907
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-27T17:50:14Z",
+  "last_poll_at": "2026-11-27T18:50:04Z",
   "sources_enabled": 101,
   "sources_ok": 101,
   "sources_failing": 0,
