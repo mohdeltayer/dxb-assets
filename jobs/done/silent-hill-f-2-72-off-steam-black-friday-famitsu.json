@@ -8,7 +8,7 @@
  "skin_why": "genre horror: its kit is not built yet (skins.KITS scifi, fantasy)",
  "built_by": "server-slip",
  "render_lane": "server",
- "out": "cards/2026-11/silent-hill-f-2-72-off-steam-black-friday-famitsu-reel-v1.mp4",
+ "out": "cards/2026-11/silent-hill-f-2-72-off-steam-black-friday-famitsu-reel-v2.mp4",
  "split_fallback": "ladder",
  "footage": [
   {
@@ -212,5 +212,17 @@
  ],
  "names_to_review": [
   "Konami"
- ]
+ ],
+ "blocked_add": [
+  [
+   "silent-hill-f-2-72-off-steam-black-friday-famitsu-silent-hill-f-launch-trailer-esrb.mp4",
+   62.5,
+   65.5,
+   "woman with a blood-smeared face and torso"
+  ]
+ ],
+ "rerender": {
+  "reason": "graphic",
+  "note": "Opening shot (launch trailer, 63.26 s) shows a figure with a blood-smeared face and torso; block that stretch so the server moves the shot on."
+ }
 }
