@@ -1,159 +1,142 @@
 {
  "name": "grave-mistakes-launch-steam-store",
- "out": "cards/2026-11/grave-mistakes-launch-steam-store-reel-v1.mp4",
+ "out": "cards/2026-11/grave-mistakes-launch-steam-store-reel-v2.mp4",
  "verdict": "pass",
  "warnings": [
   {
    "stage": "shot scan",
    "detail": "footage scan stopped at its cap (300 s); shots as written, automatic slots from the footage library or evenly spaced"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 0 at 4.47 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 0 at 5.73 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 1 at 9.43 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 1 at 10.35 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 2 at 46.33 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 2 at 47.25 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 3 at 38.69 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 3 at 39.58 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 4 at 43.29 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 4 at 44.18 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 5 at 23.91 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 5 at 24.65 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 6 at 31.29 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 6 at 32.03 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 7 at 50.92 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 7 at 51.69 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 8 at 21.46 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 8 at 22.23 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "smear",
+   "detail": "ValueError: /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/grave-mistakes-launch-steam-store-reel-v2.mp4: blocky smear at 5.40 to 5.80 s (peak 29.8); look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]"
   }
  ],
  "ladder": [
   {
    "kind": "picture",
-   "slot": 1,
-   "step": "a",
-   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
-  },
-  {
-   "kind": "picture",
-   "slot": 2,
-   "step": "a",
-   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
-  },
-  {
-   "kind": "picture",
-   "slot": 3,
-   "step": "a",
-   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
-  },
-  {
-   "kind": "picture",
-   "slot": 4,
-   "step": "a",
-   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
-  },
-  {
-   "kind": "picture",
    "slot": 5,
    "step": "a",
-   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 23.18 s: moved off a repeated moment (respread)"
   },
   {
    "kind": "picture",
    "slot": 6,
    "step": "a",
-   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 30.56 s: moved off a repeated moment (respread)"
   },
   {
    "kind": "picture",
    "slot": 7,
    "step": "a",
-   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 50.15 s: moved off a repeated moment (respread)"
   },
   {
    "kind": "picture",
    "slot": 8,
    "step": "a",
-   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 20.69 s: moved off a repeated moment (respread)"
   },
   {
-   "kind": "picture",
-   "slot": 0,
-   "step": "a",
-   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 29.44 s for 3.8 s: no clean stretch read, evenly spaced crop"
-  },
-  {
-   "kind": "picture",
-   "slot": "reel",
-   "step": "b",
-   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch before its cap"
-  },
-  {
-   "kind": "picture",
+   "kind": "text",
    "slot": "reel",
    "step": "a",
-   "why": "scan cap: 1 automatic slot(s) from the library or evenly spaced"
-  },
-  {
-   "kind": "picture",
-   "slot": 2,
-   "step": "a",
-   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 49.74 s: moved off a repeated moment (respread)"
-  },
-  {
-   "kind": "picture",
-   "slot": 3,
-   "step": "a",
-   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 18.04 s: moved off a repeated moment (respread)"
-  },
-  {
-   "kind": "picture",
-   "slot": 4,
-   "step": "a",
-   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 37.6 s: moved off a repeated moment (respread)"
-  },
-  {
-   "kind": "picture",
-   "slot": 5,
-   "step": "a",
-   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 8.3 s: moved off a repeated moment (respread)"
-  },
-  {
-   "kind": "picture",
-   "slot": 6,
-   "step": "a",
-   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 23.1 s: moved off a repeated moment (respread)"
-  },
-  {
-   "kind": "picture",
-   "slot": 7,
-   "step": "a",
-   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 45.2 s: moved off a repeated moment (respread)"
-  },
-  {
-   "kind": "picture",
-   "slot": 8,
-   "step": "a",
-   "why": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 at 40.28 s: moved off a repeated moment (respread)"
+   "why": "soft shade under line group(s) [2]: bright footage behind them"
   },
   {
    "kind": "sound",
    "slot": "reel",
    "step": "d",
-   "why": "audio split not applied (music stem not clean (leftover 9.5% > 5.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or o"
+   "why": "audio split not applied (music stem not clean (leftover 10.0% > 5.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or "
   }
  ],
- "job_to_pass_min": 10.9,
- "at": "2026-11-27T00:23:26Z",
+ "job_to_pass_min": 11.1,
+ "at": "2026-11-27T00:35:49Z",
  "findings": [],
  "notes": [
-  "first frame: shot 0 grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
   "length 20.5 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 9.5% > 5.0%); music_pct 48.4; leak_pct 9.5; cache {'hit': 0, 'miss': 3}; separate_secs 8.2; secs 11.8",
-  "render_job: audio split fallback: our bed (audio split not applied (music stem not clean (leftover 9.5% > 5.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.); bed:neon_d",
-  "render_job: lifeless: {\"score\": 19.2, \"still_share\": 0.25, \"longest_still\": 1.9, \"cuts_per_10s\": 6.37, \"held_under_text\": 0.0, \"secs\": 20.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+  "render_job: audio split: not applied, audio as rendered; reason music stem not clean (leftover 10.0% > 5.0%); music_pct 43.5; leak_pct 10.0; cache {'hit': 0, 'miss': 2}; separate_secs 9.0; secs 12.6",
+  "render_job: audio split fallback: our bed (audio split not applied (music stem not clean (leftover 10.0% > 5.0%)) on a trailer track under 8 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.); bed:neon_c",
+  "render_job: lifeless: {\"score\": 8.2, \"still_share\": 0.088, \"longest_still\": 1.0, \"cuts_per_10s\": 9.31, \"held_under_text\": 0.005, \"secs\": 20.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
  ],
- "autofixed": [
-  {
-   "where": "credit 1",
-   "rule": "credit_width",
-   "what": "set one line at 34 px (was 40 px, too wide for the safe zone)",
-   "before": {
-    "text": "المصدر: صفحة اللعبة على Steam،\nولقطات من Happy Volcano",
-    "size": 40
-   },
-   "after": {
-    "text": "المصدر: صفحة اللعبة على Steam · اللقطات: Happy Volcano",
-    "size": 34
-   }
-  }
- ],
- "job_sha": "89c4a9bd8c6a3dfab341838ab755d8ba71fb8419",
- "dispatches": 2,
+ "autofixed": [],
+ "job_sha": "f4399919861fb7dd0c4221c3c0f89a2cdd6f9874",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
-  "max_zoom": 1.79,
+  "max_zoom": 1.81,
   "lowbit_shots": 0
  },
  "quality": "base",
@@ -164,255 +147,17 @@
   "cards/2026-11/grave-mistakes-launch-steam-store-look-3.jpg"
  ],
  "person_shown": "n/a",
- "sound": "bed:neon_d (trailer sound refused: music stem not clean (leftover 9.5% > 5.0%))",
- "shot_read": {
-  "secs": 70.5,
-  "files": {
-   "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4": {
-    "secs": 31.8,
-    "cached": false,
-    "stages": {
-     "decode": 13.8,
-     "autofocus": 28.2,
-     "ocr": 28.2,
-     "smear": 31.6,
-     "scenes": 31.8
-    },
-    "incomplete": null
-   },
-   "grave-mistakes-launch-steam-store-grave-mistakes-release-date-trailer.mp4": {
-    "secs": 38.7,
-    "cached": false,
-    "stages": {
-     "decode": 15.7,
-     "autofocus": 35.8,
-     "ocr": 35.8,
-     "smear": 38.3,
-     "scenes": 38.6
-    },
-    "incomplete": null
-   }
-  }
- },
+ "sound": "bed:neon_c (trailer sound refused: music stem not clean (leftover 10.0% > 5.0%))",
+ "shot_read": null,
  "job_path": "jobs/done/grave-mistakes-launch-steam-store.json",
  "stage_minutes": {
-  "queue": 0.03,
+  "queue": 0.02,
   "setup": 0.18,
-  "fetch": 0.31,
-  "shots": 5.06,
-  "checks": 0.36,
-  "render": 2.84,
-  "after": 1.0,
-  "upload": 0.08,
-  "job": 9.57
- },
- "job_after_autofix": {
-  "name": "grave-mistakes-launch-steam-store",
-  "story": "2026-11-26-grave-mistakes-launch-steam-store",
-  "footage_source": "steam:4635290",
-  "kind_news": "date",
-  "story_class": "trailer",
-  "story_class_why": "kind date",
-  "skin_why": "genre simulation: its kit is not built yet (skins.KITS scifi, fantasy)",
-  "built_by": "server-slip",
-  "render_lane": "server",
-  "out": "cards/2026-11/grave-mistakes-launch-steam-store-reel-v1.mp4",
-  "split_fallback": "ladder",
-  "footage": [
-   {
-    "file": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
-    "steam": 4635290,
-    "trailer": "Grave Mistakes | Announcement Trailer",
-    "start": 0,
-    "seconds": 120,
-    "trailer_id": "4635290"
-   },
-   {
-    "file": "grave-mistakes-launch-steam-store-grave-mistakes-release-date-trailer.mp4",
-    "steam": 4635290,
-    "trailer": "Grave Mistakes | Release Date Trailer",
-    "start": 0,
-    "seconds": 120,
-    "trailer_id": "4635290"
-   }
-  ],
-  "shots": [
-   [
-    "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
-    0.0,
-    3.8,
-    null
-   ],
-   [
-    "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
-    0.0,
-    2.78,
-    null
-   ],
-   [
-    "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
-    0.0,
-    2.78,
-    null
-   ],
-   [
-    "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
-    0.0,
-    2.67,
-    null
-   ],
-   [
-    "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
-    0.0,
-    2.67,
-    null
-   ],
-   [
-    "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
-    0.0,
-    2.2,
-    null
-   ],
-   [
-    "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
-    0.0,
-    2.2,
-    null
-   ],
-   [
-    "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
-    0.0,
-    2.31,
-    null
-   ],
-   [
-    "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
-    0.0,
-    2.31,
-    null
-   ]
-  ],
-  "lines": [
-   [
-    1,
-    2,
-    [
-     [
-      "تتولون فيها إدارة مكتب جنازات،\nفتجهزون الجثامين للعزاء",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ],
-   [
-    3,
-    4,
-    [
-     [
-      "وتلقون كلمة الرثاء،\nوتطعمون الجدة المحبوسة في القبو",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ],
-   [
-    5,
-    6,
-    [
-     [
-      "اللعبة من تطوير Happy Volcano",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ],
-   [
-    7,
-    8,
-    [
-     [
-      "ونشر Oro Interactive،\nوسعرها 7.49 دولارًا",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ]
-  ],
-  "credits": [
-   [
-    0,
-    8,
-    "المصدر: صفحة اللعبة على Steam · اللقطات: Happy Volcano",
-    {
-     "size": 34,
-     "band": true
-    }
-   ]
-  ],
-  "spoken": "صدرت لعبة Grave Mistakes على Steam للكمبيوتر، وهي لعبة تعاونية من اثنين إلى أربعة لاعبين. تتولون فيها إدارة مكتب جنازات، فتجهزون الجثامين للعزاء وتلقون كلمة الرثاء، وتطعمون الجدة المحبوسة في القبو. اللعبة من تطوير Happy Volcano ونشر Oro Interactive، وسعرها 7.49 دولارًا.",
-  "headline": "لعبة Grave Mistakes\nصدرت الآن على Steam",
-  "label": "رسمي",
-  "game": "Grave Mistakes",
-  "game_short": "Grave Mistakes",
-  "game_key": "grave mistakes",
-  "genre": [
-   "simulation"
-  ],
-  "texts": {
-   "instagram": "رسمي: لعبة Grave Mistakes التعاونية صدرت الآن على Steam\n\nصدرت لعبة Grave Mistakes على Steam للكمبيوتر، وهي لعبة تعاونية من اثنين إلى أربعة لاعبين.\n\nتتولون فيها إدارة مكتب جنازات، فتجهزون الجثامين للعزاء وتلقون كلمة الرثاء، وتطعمون الجدة المحبوسة في القبو.\n\nاللعبة من تطوير Happy Volcano ونشر Oro Interactive، وسعرها 7.49 دولارًا.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: صفحة اللعبة على Steam.\n\n#ألعاب #أخبار_الألعاب #GraveMistakes #Steam",
-   "x": "رسمي: لعبة Grave Mistakes التعاونية عن إدارة مكتب جنازات صدرت الآن على Steam بسعر 7.49 دولارًا. المصدر: صفحة اللعبة على Steam.",
-   "threads": "رسمي: صدرت لعبة Grave Mistakes على Steam.\n\nهي لعبة تعاونية من اثنين إلى أربعة لاعبين عن إدارة مكتب جنازات، وسعرها 7.49 دولارًا.\n\nالمصدر: صفحة اللعبة على Steam"
-  },
-  "source": "صفحة اللعبة على Steam، ولقطات من Happy Volcano",
-  "date": "26 Nov 2026",
-  "theme": "stylized",
-  "style": null,
-  "template": "trailer",
-  "skin": "house",
-  "cut": false,
-  "track": [
-   "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4",
-   0.0
-  ],
-  "track_from_first_shot": true,
-  "angle": {
-   "why_now": "Grave Mistakes, a 2-4 player co-op funeral home management game, released on Steam on 26 Nov 2026.",
-   "what_it_means_here": "A dark-comedy co-op game: prepare bodies for viewing, give eulogies, feed the grandmother locked in the basement; 7.49 USD, Windows only."
-  },
-  "decision_log": {
-   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
-   "template": "trailer: kind date",
-   "skin": "house: genre simulation: its kit is not built yet (skins.KITS scifi, fantasy)",
-   "footage": "grave-mistakes-launch-steam-store-grave-mistakes-announcement-trailer.mp4 from the resolver (steam:4635290)",
-   "shots": "server-picked clean stretches in source order (autoshots)",
-   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
-  },
-  "reel_check": {
-   "source read and first report noted": "yes: Steam store page, Grave Mistakes: released 26 Nov 2026 (Happy Volcano, Oro Interactive) (https://store.steampowered.com/app/4635290/); first report: Steam store page release 26 Nov 2026 (release date trailer)",
-   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
-   "angle before lines": "yes: angle in the slip",
-   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
-   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
-   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
-   "footage first, official": "yes: steam 4635290 from the resolver, decode clean",
-   "credit on every clip": "yes: one credit over every shot",
-   "sound": "yes: trailer sound from the first shot, split per shot on the server",
-   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
-  },
-  "shots_auto": [
-   0,
-   1,
-   2,
-   3,
-   4,
-   5,
-   6,
-   7,
-   8
-  ]
+  "fetch": 0.28,
+  "shots": 5.05,
+  "checks": 0.65,
+  "render": 3.05,
+  "after": 0.9,
+  "job": 9.93
  }
 }
