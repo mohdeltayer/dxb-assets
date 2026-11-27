@@ -1,10 +1,11 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-27T01:15:19Z",
- "seq": 919,
+ "generated_at": "2026-11-27T01:52:08Z",
+ "seq": 920,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [
+ "items": [],
+ "recent": [
   {
    "id": 24631,
    "source": "Nintendo Japan",
@@ -16,9 +17,7 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 919
-  }
- ],
- "recent": [
+  },
   {
    "id": 24623,
    "source": "Nintendo Japan",
@@ -288,58 +287,13 @@
    "media": [],
    "breaking_source": true,
    "breaking_seq": 883
-  },
-  {
-   "id": 23711,
-   "source": "Nintendo US",
-   "source_kind": "page",
-   "title": "11/25/26 Nom nom nom! Read more",
-   "url": "https://www.nintendo.com/us/whatsnew/nom-nom-nom/",
-   "published": null,
-   "first_seen": "2026-11-26T01:40:04Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 881
-  },
-  {
-   "id": 23703,
-   "source": "Nintendo US",
-   "source_kind": "page",
-   "title": "11/25/26 Watch the Xenoblade Chronicles 3 – Nintendo Switch 2 Edition Overview trailer ahead of the game launch on Dec. 3! Join a pair of fate-defying soldiers",
-   "url": "https://www.nintendo.com/us/whatsnew/watch-the-xenoblade-chronicles-3-nintendo-switch-2-edition-overview-trailer-ahead-of-the-game-launch-on-dec-3/",
-   "published": null,
-   "first_seen": "2026-11-26T01:25:14Z",
-   "media": [],
-   "breaking_source": true,
-   "breaking_seq": 880
-  },
-  {
-   "id": 23696,
-   "source": "Nintendo of America (YouTube)",
-   "source_kind": "youtube",
-   "title": "Xenoblade Chronicles 3 – Nintendo Switch 2 Edition – Overview Trailer",
-   "url": "https://www.youtube.com/watch?v=2ohfoM2k4dI",
-   "published": "2026-11-26T01:01Z",
-   "first_seen": "2026-11-26T01:20:04Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i3.ytimg.com/vi/2ohfoM2k4dI/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=2ohfoM2k4dI"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 879
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-27T01:15:15Z",
+  "last_poll_at": "2026-11-27T01:50:14Z",
   "sources_enabled": 101,
-  "sources_ok": 100,
+  "sources_ok": 101,
   "sources_failing": 0,
   "failed": []
  }
