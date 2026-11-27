@@ -170367,5 +170367,248 @@
   "sound": "trailer",
   "footage": true,
   "upload_secs": 6.0
+ },
+ {
+  "name": "appulse-launch-20-off-steam-store-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-27T00:21Z",
+  "stages": {
+   "checks": 6.7,
+   "montage": 57.3,
+   "text": 57.2,
+   "audio": 0.6,
+   "outro": 31.4
+  },
+  "total": 153.2,
+  "lane": "runner",
+  "queued_at": "2026-11-27T00:18Z",
+  "finished_at": "2026-11-27T00:21Z",
+  "render_min": 2.55,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "appulse-launch-20-off-steam-store-appulse-awesome-indies-showcase.mp4",
+    "start": 19.45,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.76,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "appulse-launch-20-off-steam-store-appulse-awesome-indies-showcase.mp4",
+    "start": 15.36,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.76,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "appulse-launch-20-off-steam-store-appulse-secret-sauce-trailer.mp4",
+    "start": 20.33,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "appulse-launch-20-off-steam-store-appulse-secret-sauce-trailer.mp4",
+    "start": 48.83,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "appulse-launch-20-off-steam-store-appulse-secret-sauce-trailer.mp4",
+    "start": 5.43,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "appulse-launch-20-off-steam-store-appulse-secret-sauce-trailer.mp4",
+    "start": 16.13,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "appulse-launch-20-off-steam-store-appulse-secret-sauce-trailer.mp4",
+    "start": 40.46,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.84,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "appulse-launch-20-off-steam-store-out-now.mp4",
+    "start": 2.78,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.81,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "appulse-launch-20-off-steam-store-out-now.mp4",
+    "start": 11.29,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.81,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 9,
+    "file": "appulse-launch-20-off-steam-store-out-now.mp4",
+    "start": 27.76,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.81,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 10,
+    "file": "appulse-launch-20-off-steam-store-out-now.mp4",
+    "start": 44.25,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.81,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 11,
+    "file": "appulse-launch-20-off-steam-store-out-now.mp4",
+    "start": 52.95,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.81,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 12,
+    "file": "appulse-launch-20-off-steam-store-out-now.mp4",
+    "start": 65.49,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.81,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 17.5,
+   "audio_secs": 85.2,
+   "music_pct": 71.8,
+   "leak_pct": 0.3,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 11
+   },
+   "effects_shots": 13,
+   "mix_secs": 5.9,
+   "secs": 24.0
+  },
+  "lifeless": {
+   "score": 11.1,
+   "still_share": 0.116,
+   "longest_still": 1.4,
+   "cuts_per_10s": 3.62,
+   "held_under_text": 0.0,
+   "secs": 27.6,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 39.3,
+   "shots": 82.4,
+   "checks": 92.6,
+   "render": 177.3,
+   "after": 68.1
+  },
+  "softgate": {
+   "warnings": 1,
+   "ladder": [
+    {
+     "kind": "text",
+     "slot": "line 3",
+     "step": "a",
+     "why": "3.2 s of 4.4 s: shot 6 lengthened by 1.24 s"
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 460,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1611,
+  "peak_mem_mb": 3832,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61099,
+  "peak_disk_mb": 63439,
+  "min_disk_free_mb": 84357,
+  "setup_min": 0.48,
+  "story": "appulse-launch-20-off-steam-store"
  }
 ]
