@@ -1,0 +1,485 @@
+{
+ "name": "our-life-now-and-forever-early-access-free-steam",
+ "out": "cards/2026-11/our-life-now-and-forever-early-access-free-steam-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot scan",
+   "detail": "footage scan stopped at its cap (300 s); shots as written, automatic slots from the footage library or evenly spaced"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 0 at 59.03 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 0 at 60.29 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 1 at 3.80 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 1 at 4.54 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 2 at 107.59 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 2 at 108.33 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 3 at 28.79 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 3 at 29.65 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 4 at 87.72 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 4 at 88.58 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 5 at 43.52 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 5 at 44.34 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 6 at 73.02 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 6 at 73.84 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 7 at 102.45 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 7 at 103.31 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 8 at 68.08 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "content",
+   "detail": "shot 8 at 68.94 s: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  {
+   "stage": "headline",
+   "detail": "headline too long for 2 lines at 72 px; set at 64 px on 2 lines (cut it to a few words next time): لعبة Our Life: Now & Forever\nصدرت مجانًا على Steam"
+  },
+  {
+   "stage": "smear",
+   "detail": "ValueError: /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/our-life-now-and-forever-early-access-free-steam-reel-v1.mp4: blocky smear at 6.90 to 7.17 s (peak 30.9); look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4 at 57.76 s for 3.8 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "fill, not band: the shot scan found no clean stretch before its cap, but the source fills 9:16 at up to 2x; crop kept"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "scan cap: 1 automatic slot(s) from the library or evenly spaced"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4 at 106.86 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4 at 27.92 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4 at 86.85 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4 at 42.7 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4 at 72.2 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4 at 101.58 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "picture",
+   "slot": 8,
+   "step": "a",
+   "why": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4 at 67.21 s: moved off a repeated moment (respread)"
+  },
+  {
+   "kind": "text",
+   "slot": "reel",
+   "step": "a",
+   "why": "soft shade under line group(s) [0, 1, 2, 3]: bright footage behind them"
+  }
+ ],
+ "job_to_pass_min": 23.8,
+ "at": "2026-11-27T22:33:54Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4 starts at 0.0 s, the video at 3.02 s; its first 3.02 s are lost",
+  "length 20.3 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "render_job: audio split: applied; music_pct 100.0; leak_pct 0.1; cache {'hit': 0, 'miss': 7}; separate_secs 9.1; secs 13.8",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 8.42, \"held_under_text\": 0.0, \"secs\": 20.2, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "estimate: headline: 28 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
+ ],
+ "autofixed": [
+  {
+   "where": "credit 1",
+   "rule": "credit_width",
+   "what": "set one line at 34 px (was 40 px, too wide for the safe zone)",
+   "before": {
+    "text": "المصدر: صفحة اللعبة على Steam،\nولقطات من GB Patch Games",
+    "size": 40
+   },
+   "after": {
+    "text": "المصدر: صفحة اللعبة على Steam · اللقطات: GB Patch Games",
+    "size": 34
+   }
+  }
+ ],
+ "job_sha": "ed937ccac3ff4af3e29fc05af1e23e4efb627298",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/our-life-now-and-forever-early-access-free-steam-look-1.jpg",
+  "cards/2026-11/our-life-now-and-forever-early-access-free-steam-look-2.jpg",
+  "cards/2026-11/our-life-now-and-forever-early-access-free-steam-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 35.8,
+  "files": {
+   "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4": {
+    "secs": 35.4,
+    "cached": false,
+    "stages": {
+     "decode": 13.3,
+     "autofocus": 28.8,
+     "ocr": 30.7,
+     "smear": 35.2,
+     "scenes": 35.4
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/our-life-now-and-forever-early-access-free-steam.json",
+ "stage_minutes": {
+  "queue": 12.52,
+  "setup": 0.2,
+  "fetch": 0.4,
+  "shots": 5.22,
+  "checks": 0.67,
+  "render": 2.76,
+  "after": 0.93,
+  "job": 9.98
+ },
+ "job_after_autofix": {
+  "name": "our-life-now-and-forever-early-access-free-steam",
+  "story": "2026-11-27-our-life-now-and-forever-early-access-free-steam",
+  "footage_source": "steam:1622130",
+  "kind_news": "free release",
+  "story_class": "trailer",
+  "story_class_why": "kind free release",
+  "skin_why": "genre visual novel: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/our-life-now-and-forever-early-access-free-steam-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4",
+    "steam": 1622130,
+    "trailer": "Our Life Now And Forever Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "1622130"
+   },
+   {
+    "file": "our-life-now-and-forever-early-access-free-steam-animated-trailer.mp4",
+    "steam": 1622130,
+    "trailer": "Animated Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "1622130"
+   }
+  ],
+  "shots": [
+   [
+    "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4",
+    0.0,
+    3.8,
+    null
+   ],
+   [
+    "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4",
+    0.0,
+    2.6,
+    null
+   ],
+   [
+    "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4",
+    0.0,
+    2.6,
+    null
+   ],
+   [
+    "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4",
+    0.0,
+    2.46,
+    null
+   ],
+   [
+    "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4",
+    0.0,
+    2.46,
+    null
+   ],
+   [
+    "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4",
+    0.0,
+    2.6,
+    null
+   ],
+   [
+    "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4",
+    0.0,
+    2.6,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "وهي رواية بصرية تنمو فيها",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "شخصيتك من الطفولة إلى البلوغ،\nوتصنع قصتك بخياراتك",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وتضم النسخة الحالية\nالخطوتين الأولى والثانية،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    7,
+    8,
+    [
+     [
+      "وستضاف الخطوتان الثالثة\nوالرابعة في تحديثات لاحقة",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    8,
+    "المصدر: صفحة اللعبة على Steam · اللقطات: GB Patch Games",
+    {
+     "size": 34,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "صدرت اليوم لعبة Our Life: Now & Forever في الوصول المبكر على Steam، وهي مجانية اللعب. وهي رواية بصرية تنمو فيها شخصيتك من الطفولة إلى البلوغ، وتصنع قصتك بخياراتك. وتضم النسخة الحالية الخطوتين الأولى والثانية، وستضاف الخطوتان الثالثة والرابعة في تحديثات لاحقة.",
+  "headline": "لعبة Our Life: Now & Forever\nصدرت مجانًا على Steam",
+  "label": "رسمي",
+  "game": "Our Life: Now & Forever",
+  "game_short": "Our Life",
+  "game_key": "our life now forever",
+  "genre": [
+   "visual novel"
+  ],
+  "texts": {
+   "instagram": "رسمي: لعبة Our Life: Now & Forever صدرت مجانًا على Steam\n\nأعلن استوديو GB Patch Games صدور الوصول المبكر للعبة Our Life: Now & Forever على Steam، وهي مجانية اللعب.\n\nوهي رواية بصرية قائمة على الخيارات، تنمو فيها شخصيتك من الطفولة إلى البلوغ.\n\nتضم النسخة الحالية الخطوتين الأولى والثانية، وتضاف الخطوتان الثالثة والرابعة في تحديثات لاحقة.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: صفحة اللعبة على Steam.\n\n#ألعاب #أخبار_الألعاب #OurLife #ألعاب_مجانية",
+   "x": "رسمي: صدرت لعبة Our Life: Now & Forever مجانًا في الوصول المبكر على Steam، وهي رواية بصرية قائمة على الخيارات من GB Patch Games. المصدر: صفحة اللعبة على Steam.",
+   "threads": "رسمي: صدر الوصول المبكر للعبة Our Life: Now & Forever على Steam، وهي مجانية اللعب.\n\nوتضم الخطوتين الأولى والثانية، وتضاف الخطوتان الثالثة والرابعة لاحقًا.\n\nالمصدر: صفحة اللعبة على Steam"
+  },
+  "source": "صفحة اللعبة على Steam، ولقطات من GB Patch Games",
+  "date": "27 Nov 2026",
+  "theme": "cold",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "GB Patch Games released the early access of the free-to-play visual novel Our Life: Now & Forever on Steam on 27 Nov 2026.",
+   "what_it_means_here": "Free to play; Steps 1 and 2 playable now, Steps 3 and 4 (epilogue) come in later updates; paid DLCs optional."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind free release",
+   "skin": "house: genre visual novel: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "our-life-now-and-forever-early-access-free-steam-our-life-now-and-forever-trailer.mp4 from the resolver (steam:1622130)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Steam News, GB Patch Games, 27 Nov 2026: Our Life: N&F Early Access Out Now! (https://store.steampowered.com/news/app/1622130/view/675138605143819944); first report: Steam News 27 Nov 2026 13:04Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 1622130 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "shots_auto": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ]
+ }
+}
