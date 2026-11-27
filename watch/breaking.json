@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-27T03:52:06Z",
- "seq": 923,
+ "generated_at": "2026-11-27T04:15:08Z",
+ "seq": 924,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 24699,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Bad Inmate - Release Date Announcement Trailer | PS VR Games",
+   "url": "https://www.youtube.com/watch?v=XqH3jvbbvGM",
+   "published": "2026-11-27T04:00Z",
+   "first_seen": "2026-11-27T04:15:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i1.ytimg.com/vi/XqH3jvbbvGM/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=XqH3jvbbvGM"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 924
+  }
+ ],
  "recent": [
   {
    "id": 24646,
@@ -300,12 +322,10 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-27T03:50:14Z",
+  "last_poll_at": "2026-11-27T04:15:04Z",
   "sources_enabled": 101,
   "sources_ok": 100,
-  "sources_failing": 1,
-  "failed": [
-   "Games Press (timeout, 2x)"
-  ]
+  "sources_failing": 0,
+  "failed": []
  }
 }
