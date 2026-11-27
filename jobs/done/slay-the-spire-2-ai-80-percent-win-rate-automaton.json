@@ -274,7 +274,7 @@
    "file": "slay-the-spire-2-ai-80-percent-win-rate-automaton-gfx-figure.png",
    "kind": "fact",
    "value": "80",
-   "label": "الذكاء الاصطناعي",
+   "label": "اللاعبون",
    "note": "بالمئة"
   }
  ],
@@ -326,5 +326,10 @@
    56.42,
    "never refuse: no clean stretch read, evenly spaced fallback"
   ]
- ]
+ ],
+ "gfx[0].label": "الذكاء الاصطناعي",
+ "rerender": {
+  "reason": "factual_error",
+  "note": "The 80 figure card was labelled the players; 80.3% is the AI's win rate. Label changed to the AI."
+ }
 }

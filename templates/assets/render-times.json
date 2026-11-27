@@ -172713,5 +172713,193 @@
   "job_sha": "8371447d9bfc50523d9508cfed0b062e5d6865d3",
   "dispatches": 2,
   "upload_secs": 5.0
+ },
+ {
+  "name": "slay-the-spire-2-ai-80-percent-win-rate-automaton-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-27T02:50Z",
+  "stages": {
+   "checks": 5.1,
+   "montage": 55.3,
+   "text": 53.7,
+   "audio": 0.9,
+   "outro": 40.6
+  },
+  "total": 155.6,
+  "lane": "runner",
+  "queued_at": "2026-11-27T02:47Z",
+  "finished_at": "2026-11-27T02:50Z",
+  "render_min": 2.59,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-early-access-trailer.mp4",
+    "start": 80.81,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.6,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+    "start": 25.38,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.37,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+    "start": 35.75,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.37,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+    "start": 39.66,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.37,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+    "start": 7.31,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.37,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+    "start": 11.29,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.37,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+    "start": 20.36,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.37,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+    "start": 43.37,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.37,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 9,
+    "file": "slay-the-spire-2-ai-80-percent-win-rate-automaton-slay-the-spire-2-gameplay-trailer.mp4",
+    "start": 56.42,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.37,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 16.9,
+   "audio_secs": 57.4,
+   "music_pct": 66.2,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 6
+   },
+   "effects_shots": 9,
+   "mix_secs": 6.4,
+   "secs": 23.9
+  },
+  "lifeless": {
+   "score": 13.6,
+   "still_share": 0.164,
+   "longest_still": 1.5,
+   "cuts_per_10s": 6.54,
+   "held_under_text": 0.0,
+   "secs": 21.4,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 46.1,
+   "shots": 58.6,
+   "checks": 69.9,
+   "render": 206.1,
+   "after": 51.0
+  },
+  "softgate": {
+   "warnings": 3,
+   "ladder": []
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 432,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1460,
+  "peak_mem_mb": 4412,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61099,
+  "peak_disk_mb": 64089,
+  "min_disk_free_mb": 83707,
+  "setup_min": 0.65,
+  "story": "slay-the-spire-2-ai-80-percent-win-rate-automaton"
  }
 ]
