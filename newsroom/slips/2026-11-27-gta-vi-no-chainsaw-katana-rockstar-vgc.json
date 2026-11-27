@@ -1,0 +1,35 @@
+{
+ "id": "2026-11-27-gta-vi-no-chainsaw-katana-rockstar-vgc",
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "name not in names-ar: «أن روب نيلسون (Rob Nelson)» (spoken); add it there as Proposed",
+  "name not in names-ar: «من روكستار (Rockstar)» (spoken); add it there as Proposed",
+  "text fixed mechanically: spoken: names not in names-ar written in Latin: Rob Nelson, Rockstar; line: names not in names-ar written in Latin: Rob Nelson",
+  "warning: text: line 2: «Rockstar» is not in newsroom/names-ar.md: add it there (Arabic form agreed) before the render, or, for a game, write it in Latin letters only",
+  "warning: text: line 2: these words are not in the paragraph: روكستار; the lines, read in order, are the spoken paragraph (a word may be left out, none added): rewrite the line from the paragraph, or the paragraph to carry it",
+  "ledger: earlier stories on this game: 2026-11-23-test-gta-vi-jordan-trc-block-roya-news, 2026-11-23-test-neuralink-participant-plays-gta-vi-ign-me, 2026-11-24-gta-vi-39m-players-playstation-push-square, 2026-11-26-famitsu-nov16-22-sales, 2026-11-27-gta-vi-car-physics-gran-turismo-pro-push-square (an update or a duplicate? the editor decides)"
+ ],
+ "at": "2026-11-27T05:10:45Z",
+ "footage": {
+  "name": "gta6-launch-master.mp4",
+  "width": null,
+  "height": null,
+  "fps": null,
+  "mbps": null,
+  "rows": null,
+  "duration": null,
+  "decode_clean": true
+ },
+ "names_to_review": [
+  "Rob Nelson",
+  "Rockstar"
+ ],
+ "job": "jobs/live/gta-vi-no-chainsaw-katana-rockstar-vgc.json",
+ "story": "newsroom/stories/2026-11-27-gta-vi-no-chainsaw-katana-rockstar-vgc.json",
+ "lines": 6,
+ "shots": 16,
+ "run": "45944198770",
+ "lane": "live",
+ "build_secs": 13
+}
