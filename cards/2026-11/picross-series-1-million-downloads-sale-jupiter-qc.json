@@ -1,0 +1,444 @@
+{
+ "name": "picross-series-1-million-downloads-sale-jupiter",
+ "out": "cards/2026-11/picross-series-1-million-downloads-sale-jupiter-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "source smear",
+   "detail": "blocky smear in the source: picross-sale-konami-antiques-trailer.mp4 48.14 to 49.07 s (peak 95.1)"
+  },
+  {
+   "stage": "pace",
+   "detail": "pace: nothing changes for 5.1 s at 3.2, 4.5 s at 8.6, 4.9 s at 13.4, 5.3 s at 18.5 (change every 4 s); cut to a second angle, add a line or a strip, or pass pace_ok=True with the reason in the brief"
+  },
+  {
+   "stage": "smear",
+   "detail": "ValueError: /home/runner/actions-runner/_work/dxb-assets/dxb-assets/cards/2026-11/picross-series-1-million-downloads-sale-jupiter-reel-v1.mp4: blocky smear at 22.87 to 23.27 s (peak 194.4); look at the frames, then re-fetch the source or pass block_ok=[[t0, t1, reason]]"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "text",
+   "slot": "reel",
+   "step": "a",
+   "why": "soft shade under line group(s) [4]: bright footage behind them"
+  },
+  {
+   "kind": "text",
+   "slot": "line 2",
+   "step": "a",
+   "why": "3.3 s of 4.4 s: shot 2 lengthened by 1.21 s"
+  },
+  {
+   "kind": "text",
+   "slot": "line 3",
+   "step": "a",
+   "why": "2.2 s of 4.8 s: shot 3 lengthened by 2.73 s"
+  }
+ ],
+ "job_to_pass_min": 6.7,
+ "at": "2026-11-28T12:25:15Z",
+ "findings": [],
+ "notes": [
+  "length 27.8 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "pace: nothing changes for 5.1 s at 3.2, 4.5 s at 8.6, 4.9 s at 13.4, 5.3 s at 18.5 (change every 4 s)",
+  "source quality: picross-sale-konami-antiques-trailer.mp4: low bitrate 2.2 Mbps (floor 3.0 Mbps for 1280x720 at 30 fps) (lowbit)",
+  "source quality: picross-sale-picross-s-trailer.mp4: low bitrate 1.1 Mbps (floor 3.0 Mbps for 1280x720 at 30 fps) (lowbit)",
+  "render_job: audio split: applied; music_pct 99.1; leak_pct 0.0; cache {'hit': 0, 'miss': 4}; separate_secs 11.8; secs 18.1",
+  "render_job: lifeless: {\"score\": 16.9, \"still_share\": 0.158, \"longest_still\": 0.8, \"cuts_per_10s\": 1.44, \"held_under_text\": 0.004, \"secs\": 27.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 2",
+   "rule": "shot_timing",
+   "what": "trimmed to 3.97 s, the clean part before the scene cut at 41.61 s",
+   "before": [
+    "picross-sale-konami-antiques-trailer.mp4",
+    37.6,
+    5.1,
+    [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      4.008,
+      0.365
+     ]
+    ]
+   ],
+   "after": [
+    "picross-sale-konami-antiques-trailer.mp4",
+    37.6,
+    3.97,
+    [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      4.008,
+      0.365
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 1",
+   "rule": "fill",
+   "what": "lengthened 4.40 to 5.53 s to keep the time shot 2 gave up",
+   "before": 4.4,
+   "after": 5.53
+  },
+  {
+   "where": "shot 3",
+   "rule": "shot_timing",
+   "what": "trimmed to 2.81 s, the clean part before the scene cut at 49.85 s",
+   "before": [
+    "picross-sale-picross-s-trailer.mp4",
+    47.0,
+    5.4,
+    [
+     [
+      0.0,
+      0.114
+     ],
+     [
+      2.683,
+      0.171
+     ],
+     [
+      3.684,
+      0.098
+     ]
+    ]
+   ],
+   "after": [
+    "picross-sale-picross-s-trailer.mp4",
+    47.0,
+    2.81,
+    [
+     [
+      0.0,
+      0.114
+     ],
+     [
+      2.683,
+      0.171
+     ],
+     [
+      3.684,
+      0.098
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 4",
+   "rule": "fill",
+   "what": "lengthened 3.20 to 5.79 s to keep the time shot 3 gave up",
+   "before": 3.2,
+   "after": 5.79
+  },
+  {
+   "where": "shot 5",
+   "rule": "shot_long",
+   "what": "trimmed from 4.20 to 4.00 s: no shot over 4 s unless it moves with its subject in the window (crop fix, 26 Nov 2026)",
+   "before": [
+    "picross-sale-picross-s-trailer.mp4",
+    56.0,
+    4.2,
+    [
+     [
+      0.0,
+      0.391
+     ]
+    ]
+   ],
+   "after": [
+    "picross-sale-picross-s-trailer.mp4",
+    56.0,
+    4.0,
+    [
+     [
+      0.0,
+      0.391
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 4",
+   "rule": "fill",
+   "what": "lengthened 5.79 to 5.99 s to keep the time shot 5 gave up",
+   "before": 5.79,
+   "after": 5.99
+  }
+ ],
+ "job_sha": "346a5f9afa4f5a0367f81006e8a7023d258dc454",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 720,
+  "max_zoom": 2.67,
+  "lowbit_shots": 6
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/picross-series-1-million-downloads-sale-jupiter-look-1.jpg",
+  "cards/2026-11/picross-series-1-million-downloads-sale-jupiter-look-2.jpg",
+  "cards/2026-11/picross-series-1-million-downloads-sale-jupiter-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": null,
+ "job_path": "jobs/done/picross-series-1-million-downloads-sale-jupiter.json",
+ "stage_minutes": {
+  "queue": 0.02,
+  "setup": 0.18,
+  "fetch": 0.11,
+  "shots": 1.23,
+  "checks": 1.38,
+  "render": 2.01,
+  "after": 0.64,
+  "job": 5.38
+ },
+ "job_after_autofix": {
+  "name": "picross-series-1-million-downloads-sale-jupiter",
+  "story": "2026-11-28-picross-series-1-million-downloads-sale-jupiter",
+  "kind_news": "deal",
+  "story_class": "trailer",
+  "built_by": "production-1",
+  "render_lane": "server",
+  "out": "cards/2026-11/picross-series-1-million-downloads-sale-jupiter-reel-v1.mp4",
+  "footage": [
+   {
+    "file": "picross-sale-konami-antiques-trailer.mp4",
+    "url": "https://assets.nintendo.com/video/upload/store/software/switch/70010000111611/Video/072ee4b804a87882c58cd7db128c2703ad6e86c2195b2a80ca30f492ca6e6e9e.mp4",
+    "note": "PICROSS S KONAMI ANTIQUES edition trailer, Nintendo US store page (1280x720)"
+   },
+   {
+    "file": "picross-sale-picross-s-trailer.mp4",
+    "url": "https://assets.nintendo.com/video/upload/store/software/switch/70010000000878/Video/50a8b1c59aaa584e78cd40b23f6edeecc4ad642377f3d892f74cebb1e95514f4.mp4",
+    "note": "PICROSS S trailer, Nintendo US store page (1280x720)"
+   }
+  ],
+  "shots": [
+   [
+    "picross-sale-konami-antiques-trailer.mp4",
+    45.5,
+    3.6,
+    [
+     [
+      0.0,
+      0.558
+     ]
+    ]
+   ],
+   [
+    "picross-sale-picross-s-trailer.mp4",
+    7.0,
+    5.53,
+    [
+     [
+      0.0,
+      0.579
+     ]
+    ]
+   ],
+   [
+    "picross-sale-konami-antiques-trailer.mp4",
+    37.6,
+    3.97,
+    [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      4.008,
+      0.365
+     ]
+    ]
+   ],
+   [
+    "picross-sale-picross-s-trailer.mp4",
+    47.0,
+    2.81,
+    [
+     [
+      0.0,
+      0.114
+     ],
+     [
+      2.683,
+      0.171
+     ],
+     [
+      3.684,
+      0.098
+     ]
+    ]
+   ],
+   [
+    "picross-sale-konami-antiques-trailer.mp4",
+    72.6,
+    5.99,
+    [
+     [
+      0.0,
+      0.453
+     ]
+    ]
+   ],
+   [
+    "picross-sale-picross-s-trailer.mp4",
+    56.0,
+    4.0,
+    [
+     [
+      0.0,
+      0.391
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    1,
+    [
+     [
+      "تخطت سلسلة Picross\nمليون تحميل على Switch،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    2,
+    2,
+    [
+     [
+      "وتحتفل شركة جوبيتر (Jupiter)\nبتخفيضات على 21 لعبة منها.",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    3,
+    [
+     [
+      "تُباع Picross S بخصم 50 بالمئة،\nوهو الأكبر في تاريخ السلسلة،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    4,
+    4,
+    [
+     [
+      "وبقية الألعاب بخصم 20 بالمئة.",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    5,
+    [
+     [
+      "وتستمر التخفيضات\nمن 30 نوفمبر حتى 26 ديسمبر.",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    5,
+    "المصدر: جوبيتر (Jupiter)",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "تخطت سلسلة Picross مليون تحميل على Switch، وتحتفل شركة جوبيتر (Jupiter) بتخفيضات على 21 لعبة منها. تُباع Picross S بخصم 50 بالمئة، وهو الأكبر في تاريخ السلسلة، وبقية الألعاب بخصم 20 بالمئة. وتستمر التخفيضات من 30 نوفمبر حتى 26 ديسمبر.",
+  "headline": "سلسلة Picross تتخطى\nمليون تحميل على Switch",
+  "label": "رسمي",
+  "game": "Picross",
+  "game_short": "Picross",
+  "game_key": "picross",
+  "genre": [
+   "puzzle"
+  ],
+  "subject_person": null,
+  "stylised": true,
+  "layout": "showcase",
+  "showcase_reason": "weak source: every official copy is 720p at 1.2 to 2.2 Mbps (Nintendo US store pages for Picross S, KONAMI ANTIQUES, S9 and CLIMAX checked), and the puzzle grids would be cut by a 9:16 crop",
+  "lowres_ok": {
+   "searched": [
+    "Nintendo US store: PICROSS S",
+    "Nintendo US store: PICROSS S KONAMI ANTIQUES edition",
+    "Nintendo US store: PICROSS S9",
+    "Nintendo US store: PICROSS S CLIMAX",
+    "Games Press release (no video file)"
+   ],
+   "result": "none above 720p; Jupiter's CLIMAX trailer is on YouTube only"
+  },
+  "source": "جوبيتر (Jupiter)",
+  "date": "28 Nov 2026",
+  "theme": "playful",
+  "style": null,
+  "template": "trailer",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "picross-sale-konami-antiques-trailer.mp4",
+   45.5
+  ],
+  "track_from_first_shot": true,
+  "texts": {
+   "instagram": "رسمي: Picross تتخطى مليون تحميل على Switch وتخفيضات على 21 لعبة\n\nأعلنت شركة جوبيتر (Jupiter) أن سلسلة ألغاز Picross تخطت مليون تحميل حول العالم على Nintendo Switch منذ صدور Picross S عام 2017، وتحتفل بتخفيضات على ألعاب السلسلة.\n\nتُباع Picross S بخصم 50 بالمئة، وهو الأكبر في تاريخ السلسلة، وتُخفض نسخة PICROSS S KONAMI ANTIQUES edition لأول مرة، وبقية الألعاب بخصم 20 بالمئة.\n\nوتستمر التخفيضات من 30 نوفمبر حتى 26 ديسمبر، وتصدر Picross S CLIMAX في 10 ديسمبر على Switch 2 وSwitch.\n\nاللقطات من صفحات الألعاب على متجر نينتيندو (Nintendo).\n\nالمصدر: جوبيتر (Jupiter).\n\n#ألعاب #أخبار_الألعاب #Picross #NintendoSwitch",
+   "x": "رسمي: تخطت سلسلة Picross مليون تحميل على Switch، وتحتفل شركة جوبيتر (Jupiter) بخصم 50 بالمئة على Picross S و20 بالمئة على بقية ألعاب السلسلة من 30 نوفمبر حتى 26 ديسمبر.",
+   "threads": "رسمي: تخطت سلسلة Picross مليون تحميل على Switch.\n\nتحتفل شركة جوبيتر (Jupiter) بخصم 50 بالمئة على Picross S، وهو الأكبر في تاريخ السلسلة، و20 بالمئة على بقية ألعابها، من 30 نوفمبر حتى 26 ديسمبر.\n\nالمصدر: جوبيتر (Jupiter)"
+  },
+  "angle": {
+   "hook": "the Picross series passes 1 million downloads on Switch",
+   "why_now": "Jupiter announced the milestone and the sale on 27 Nov 2026; the sale starts 30 Nov",
+   "what_it_means_here": "the biggest Picross S discount ever, across 21 games, for a month",
+   "payoff": "30 November to 26 December"
+  },
+  "decision_log": {
+   "facts": "Jupiter's release on Games Press, 27 Nov 2026 (1 million downloads worldwide on Switch, sale 30 Nov to 26 Dec, Picross S 50% off the biggest in series history, KONAMI ANTIQUES discounted for the first time); Jupiter's sale banner (sent by Mohammad): 21 titles, Picross S 50% off, the others 20% off",
+   "footage": "Nintendo US store trailers: KONAMI ANTIQUES (clean pixel-art stretches) and Picross S",
+   "layout": "showcase (weak source)",
+   "review": "arabic-games-film-editor and arabic-grammar-review passes; numbers as words with بالمئة (no % sign on screen)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Jupiter release, Games Press 27 Nov 2026",
+   "not already posted (ledger find)": "yes: the 27 Nov Picross S free-trial story never posted; folded into this one",
+   "angle before lines": "yes",
+   "one spoken paragraph, lines cut from it in order": "yes",
+   "names match names-ar": "yes: Jupiter added 28 Nov",
+   "release verbs and house rules": "yes",
+   "footage first, official": "yes: Nintendo store trailers",
+   "credit on every clip": "yes",
+   "sound": "yes: the KONAMI ANTIQUES trailer's own sound",
+   "picture matches the lines": "yes"
+  }
+ }
+}

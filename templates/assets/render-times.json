@@ -181602,5 +181602,181 @@
   "sound": "trailer",
   "footage": true,
   "upload_secs": 12.0
+ },
+ {
+  "name": "picross-series-1-million-downloads-sale-jupiter-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-28T12:24Z",
+  "stages": {
+   "checks": 8.0,
+   "montage": 31.1,
+   "text": 53.0,
+   "audio": 1.0,
+   "outro": 17.3
+  },
+  "total": 110.4,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-28T12:22Z",
+  "finished_at": "2026-11-28T12:24Z",
+  "render_min": 1.84,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "picross-sale-konami-antiques-trailer.mp4",
+    "start": 45.5,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.18,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 1,
+    "file": "picross-sale-picross-s-trailer.mp4",
+    "start": 7.0,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 1.08,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 2,
+    "file": "picross-sale-konami-antiques-trailer.mp4",
+    "start": 37.6,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.18,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 3,
+    "file": "picross-sale-picross-s-trailer.mp4",
+    "start": 47.0,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 1.08,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 4,
+    "file": "picross-sale-konami-antiques-trailer.mp4",
+    "start": 72.6,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 2.18,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   },
+   {
+    "shot": 5,
+    "file": "picross-sale-picross-s-trailer.mp4",
+    "start": 56.0,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97,
+    "mbps": 1.08,
+    "rows": 720,
+    "zoom": 2.67,
+    "lowbit": true
+   }
+  ],
+  "source_summary": {
+   "min_height": 720,
+   "max_zoom": 2.67,
+   "lowbit_shots": 6
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 11.8,
+   "audio_secs": 65.5,
+   "music_pct": 99.1,
+   "leak_pct": 0.0,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "effects_shots": 6,
+   "mix_secs": 5.2,
+   "secs": 18.1
+  },
+  "lifeless": {
+   "score": 16.9,
+   "still_share": 0.158,
+   "longest_still": 0.8,
+   "cuts_per_10s": 1.44,
+   "held_under_text": 0.004,
+   "secs": 27.8,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 6.5,
+   "shots": 74.1,
+   "checks": 74.5,
+   "render": 128.7,
+   "after": 38.2
+  },
+  "softgate": {
+   "warnings": 3,
+   "ladder": [
+    {
+     "kind": "text",
+     "slot": "reel",
+     "step": "a",
+     "why": "soft shade under line group(s) [4]: bright footage behind them"
+    },
+    {
+     "kind": "text",
+     "slot": "line 2",
+     "step": "a",
+     "why": "3.3 s of 4.4 s: shot 2 lengthened by 1.21 s"
+    },
+    {
+     "kind": "text",
+     "slot": "line 3",
+     "step": "a",
+     "why": "2.2 s of 4.8 s: shot 3 lengthened by 2.73 s"
+    }
+   ]
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 323,
+  "queue_wait_secs": 1,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1153,
+  "peak_mem_mb": 2930,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 82986,
+  "peak_disk_mb": 84748,
+  "min_disk_free_mb": 161358,
+  "setup_min": 0.18,
+  "story": "picross-series-1-million-downloads-sale-jupiter",
+  "job_sha": "346a5f9afa4f5a0367f81006e8a7023d258dc454",
+  "dispatches": 1,
+  "sound": "trailer",
+  "footage": true
  }
 ]
