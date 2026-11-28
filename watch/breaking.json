@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-28T12:52:09Z",
- "seq": 968,
+ "generated_at": "2026-11-28T13:20:08Z",
+ "seq": 969,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 25600,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "I Am Monkey - Launch Trailer | PS VR2 Games",
+   "url": "https://www.youtube.com/watch?v=qUZhJS2cYpc",
+   "published": "2026-11-28T13:00Z",
+   "first_seen": "2026-11-28T13:20:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/qUZhJS2cYpc/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=qUZhJS2cYpc"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 969
+  }
+ ],
  "recent": [
   {
    "id": 25543,
@@ -272,7 +294,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-28T12:50:04Z",
+  "last_poll_at": "2026-11-28T13:20:04Z",
   "sources_enabled": 101,
   "sources_ok": 101,
   "sources_failing": 0,
