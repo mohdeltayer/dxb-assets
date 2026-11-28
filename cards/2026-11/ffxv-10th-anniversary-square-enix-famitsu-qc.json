@@ -1,0 +1,416 @@
+{
+ "name": "ffxv-10th-anniversary-square-enix-famitsu",
+ "out": "cards/2026-11/ffxv-10th-anniversary-square-enix-famitsu-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot gate",
+   "detail": "shot 1 (ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4 38.30 s): no character, creature, face or vehicle inside the 9:16 window (ground, sky or wall); re-aim or another stretch (crop fix) subject_empty",
+   "shot": 1
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 2 (ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4 41.35 s): no character, creature, face or vehicle inside the 9:16 window (ground, sky or wall); re-aim or another stretch (crop fix) subject_empty",
+   "shot": 2
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "drift: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "drift: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the subject leaves or is cut by the 9:16 window"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "blocked (end slate): moved to ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxiv-crossover.mp4 at 36.99 s (evenly spaced)"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "blocked (end slate): moved to ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4 at 99.1 s (evenly spaced)"
+  }
+ ],
+ "job_to_pass_min": 9.8,
+ "at": "2026-11-28T16:20:29Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4 starts at 0.0 s, the video at 2.07 s; its first 2.07 s are lost",
+  "first frame: shot 1 ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4 starts at 0.0 s, the video at 2.07 s; its first 2.07 s are lost",
+  "first frame: shot 2 ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4 starts at 0.0 s, the video at 2.07 s; its first 2.07 s are lost",
+  "first frame: shot 3 ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4 starts at 0.0 s, the video at 2.07 s; its first 2.07 s are lost",
+  "first frame: shot 4 ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4 starts at 0.0 s, the video at 2.07 s; its first 2.07 s are lost",
+  "first frame: shot 5 ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4 starts at 0.0 s, the video at 2.07 s; its first 2.07 s are lost",
+  "length 13.5 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 96.5; leak_pct 0.0; cache {'hit': 0, 'miss': 6}; separate_secs 7.6; secs 11.2",
+  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 5.97, \"held_under_text\": 0.0, \"secs\": 13.4, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 1",
+   "rule": "auto_shots",
+   "what": "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4 at 38.30 s for 2.6 s, focus 0.499"
+  },
+  {
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4 at 41.35 s for 2.6 s, focus 0.53"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4 at 74.05 s for 2.2 s, focus 0.198"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4 at 112.30 s for 2.2 s, focus 0.376"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4 at 12.73 s for 2.2 s, focus 0.648"
+  },
+  {
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxiv-crossover.mp4 at 38.03 s for 3.8 s, focus 0.0 (nothing free in ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4)"
+  },
+  {
+   "where": "shot 4",
+   "rule": "shot_timing",
+   "what": "moved from 112.30 to 112.55 s, the nearest clean start of the same 2.20 s",
+   "before": [
+    "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4",
+    112.3,
+    2.2,
+    [
+     [
+      0.0,
+      0.376
+     ]
+    ]
+   ],
+   "after": [
+    "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4",
+    112.55,
+    2.2,
+    [
+     [
+      0.0,
+      0.376
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 0",
+   "rule": "subject_cut",
+   "what": "focus [[0.0, 0.0]] to 0.29: the subject stays inside the window",
+   "before": [
+    "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxiv-crossover.mp4",
+    38.03,
+    3.8,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "after": [
+    "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxiv-crossover.mp4",
+    38.03,
+    3.8,
+    0.29
+   ]
+  },
+  {
+   "where": "shot 3",
+   "rule": "subject_cut",
+   "what": "moved from 74.05 to 74.55 s, the nearest stretch of the same source with the subject inside",
+   "before": [
+    "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4",
+    74.05,
+    2.2,
+    [
+     [
+      0.0,
+      0.198
+     ]
+    ]
+   ],
+   "after": [
+    "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4",
+    74.55,
+    2.2,
+    [
+     [
+      0.0,
+      0.198
+     ]
+    ]
+   ]
+  }
+ ],
+ "job_sha": "87b8499cd4aaa01bd0551918045d9a316479b855",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.78,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/ffxv-10th-anniversary-square-enix-famitsu-look-1.jpg",
+  "cards/2026-11/ffxv-10th-anniversary-square-enix-famitsu-look-2.jpg",
+  "cards/2026-11/ffxv-10th-anniversary-square-enix-famitsu-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 79.9,
+  "files": {
+   "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4": {
+    "secs": 56.0,
+    "cached": false,
+    "stages": {
+     "decode": 26.9,
+     "autofocus": 43.9,
+     "ocr": 43.9,
+     "smear": 55.7,
+     "scenes": 55.9
+    },
+    "incomplete": null
+   },
+   "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxiv-crossover.mp4": {
+    "secs": 23.9,
+    "cached": false,
+    "stages": {
+     "decode": 10.5,
+     "autofocus": 22.8,
+     "ocr": 22.8,
+     "smear": 23.8,
+     "scenes": 23.9
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/ffxv-10th-anniversary-square-enix-famitsu.json",
+ "stage_minutes": {
+  "queue": 0.05,
+  "setup": 0.18,
+  "fetch": 1.14,
+  "shots": 2.61,
+  "checks": 2.66,
+  "render": 1.7,
+  "after": 0.61,
+  "job": 8.72
+ },
+ "job_after_autofix": {
+  "name": "ffxv-10th-anniversary-square-enix-famitsu",
+  "story": "2026-11-28-ffxv-10th-anniversary-square-enix-famitsu",
+  "footage_source": "steam:637650",
+  "kind_news": "date",
+  "story_class": "trailer",
+  "story_class_why": "kind date",
+  "skin_why": "genre rpg",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/ffxv-10th-anniversary-square-enix-famitsu-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4",
+    "steam": 637650,
+    "trailer": "ESRB EN FFXV Launch",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "637650"
+   },
+   {
+    "file": "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxiv-crossover.mp4",
+    "steam": 637650,
+    "trailer": "ESRB EN - FFXIV Crossover",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "637650"
+   },
+   {
+    "file": "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-subs-episode-ardyn.mp4",
+    "steam": 637650,
+    "trailer": "ESRB EN Subs - Episode Ardyn",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "637650"
+   }
+  ],
+  "shots": [
+   [
+    "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxiv-crossover.mp4",
+    38.03,
+    3.8,
+    0.29
+   ],
+   [
+    "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4",
+    38.3,
+    2.56,
+    [
+     [
+      0.0,
+      0.499
+     ]
+    ]
+   ],
+   [
+    "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4",
+    41.35,
+    2.56,
+    [
+     [
+      0.0,
+      0.53
+     ]
+    ]
+   ],
+   [
+    "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4",
+    74.55,
+    2.2,
+    [
+     [
+      0.0,
+      0.198
+     ]
+    ]
+   ],
+   [
+    "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4",
+    112.55,
+    2.2,
+    [
+     [
+      0.0,
+      0.376
+     ]
+    ]
+   ],
+   [
+    "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4",
+    12.73,
+    2.2,
+    [
+     [
+      0.0,
+      0.648
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "ونشرت سكوير (Square Enix)\nفيديو خاصًا بالمناسبة،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    5,
+    [
+     [
+      "وكانت اللعبة قد تجاوزت 10 ملايين\nنسخة مباعة بحلول عام 2022",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    5,
+    "المصدر: Famitsu · اللقطات: Square Enix",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكرت فاميتسو (Famitsu) أن لعبة Final Fantasy XV تكمل 10 سنوات منذ صدورها في 29 نوفمبر 2016. ونشرت سكوير (Square Enix) فيديو خاصًا بالمناسبة، وكانت اللعبة قد تجاوزت 10 ملايين نسخة مباعة بحلول عام 2022.",
+  "headline": "لعبة Final Fantasy XV\nتكمل 10 سنوات",
+  "label": "تقرير",
+  "game": "Final Fantasy XV",
+  "game_short": null,
+  "game_key": "final fantasy xv",
+  "genre": [
+   "rpg"
+  ],
+  "texts": {
+   "instagram": "ذكرت فاميتسو (Famitsu) أن لعبة Final Fantasy XV تكمل 10 سنوات منذ صدورها في 29 نوفمبر 2016.\n\nونشرت سكوير (Square Enix) فيديو خاصًا بالمناسبة، وكانت اللعبة قد تجاوزت 10 ملايين نسخة مباعة بحلول عام 2022.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: فاميتسو (Famitsu).\n\n#ألعاب #أخبار_الألعاب #FinalFantasyXV #سكوير",
+   "x": "تقرير: ذكرت فاميتسو (Famitsu) أن Final Fantasy XV تكمل 10 سنوات منذ صدورها في 29 نوفمبر 2016، ونشرت سكوير (Square Enix) فيديو بالمناسبة. المصدر: فاميتسو.",
+   "threads": "تقرير: ذكرت فاميتسو (Famitsu) أن Final Fantasy XV تكمل 10 سنوات منذ صدورها في 29 نوفمبر 2016.\n\nونشرت سكوير (Square Enix) فيديو خاصًا بالمناسبة.\n\nالمصدر: فاميتسو (Famitsu)"
+  },
+  "source": "فاميتسو (Famitsu)، ولقطات من سكوير (Square Enix)",
+  "date": "28 Nov 2026",
+  "theme": "stylized",
+  "style": null,
+  "template": "trailer",
+  "skin": "fantasy",
+  "cut": false,
+  "track": [
+   "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxiv-crossover.mp4",
+   38.03
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "The 10th anniversary falls on 29 Nov 2026 and Square Enix posted its anniversary movie today at 15:00Z.",
+   "what_it_means_here": "A known series: fans get a reminder of the milestone and the 10 million sales figure."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind date",
+   "skin": "fantasy: genre rpg",
+   "footage": "ffxv-10th-anniversary-square-enix-famitsu-esrb-en-ffxv-launch.mp4 from the resolver (steam:637650)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Square Enix (YouTube), FINAL FANTASY XV 10th anniversary movie, 28 Nov 2026 15:00Z (https://www.youtube.com/shorts/RkC4sUHcQiY); first report: Square Enix anniversary movie and Famitsu, 28 Nov 2026 15:00Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 637650 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  }
+ }
+}
