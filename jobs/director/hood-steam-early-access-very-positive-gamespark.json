@@ -1,93 +1,11 @@
 {
  "story": "2026-11-28-hood-steam-early-access-very-positive-gamespark",
  "out": "cards/2026-11/hood-steam-early-access-very-positive-gamespark-reel-v1.mp4",
- "verdict": "fix",
+ "verdict": "pass",
  "reasons": [
-  "price, 83% of 150, 7 Dec, Game*Spark attribution, early access all match the source",
-  "'you steal, grow plants and run a shop' (تسرق فيها وتزرع وتدير متجرك) is not in the source facts, which only say low-poly crime life sim",
-  "figure card label التقييم (rating) over 150 reviews can read as a rating of 150; call it المراجعات"
+  "fixes verified in job and frames: unsourced clause removed, card label المراجعات; facts match Game*Spark source"
  ],
- "reason": "factual_error",
- "fix": "Cut the unsourced gameplay claim (steal, grow, run a shop) from spoken, line 5, and the caption texts; relabel the 150 card as المراجعات.",
- "job_patch": {
-  "spoken": "ذكر موقع غيم سبارك (Game*Spark) أن لعبة HOOD بدأت الوصول المبكر على Steam بتقييم إيجابي جدًا، إذ كانت 83 بالمئة من 150 مراجعة إيجابية في يوم الإطلاق. وهي لعبة محاكاة حياة إجرامية بمجسمات منخفضة التفاصيل. وسعرها 1,150 ينًا، أو 920 ينًا حتى 7 ديسمبر.",
-  "lines": [
-   [
-    2,
-    3,
-    [
-     [
-      "ذكر موقع غيم سبارك (Game*Spark)\nأن لعبة HOOD",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ],
-   [
-    4,
-    5,
-    [
-     [
-      "بدأت الوصول المبكر على Steam\nبتقييم إيجابي جدًا،",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ],
-   [
-    6,
-    7,
-    [
-     [
-      "إذ كانت 83 بالمئة من 150 مراجعة\nإيجابية في يوم الإطلاق.",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ],
-   [
-    8,
-    10,
-    [
-     [
-      "وهي لعبة محاكاة حياة إجرامية\nبمجسمات منخفضة التفاصيل.",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ],
-   [
-    11,
-    13,
-    [
-     [
-      "وسعرها 1,150 ينًا،\nأو 920 ينًا حتى 7 ديسمبر",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ]
-  ],
-  "gfx": [
-   {
-    "file": "hood-steam-early-access-very-positive-gamespark-gfx-figure.png",
-    "kind": "fact",
-    "value": "150",
-    "label": "المراجعات",
-    "note": "مراجعة"
-   }
-  ],
-  "texts": {
-   "instagram": "تقرير: HOOD تبدأ الوصول المبكر على Steam بتقييم إيجابي جدًا\n\nذكر موقع غيم سبارك (Game*Spark) أن لعبة HOOD بدأت الوصول المبكر على Steam، وكانت 83 بالمئة من 150 مراجعة إيجابية في يوم الإطلاق.\n\nوهي لعبة محاكاة حياة إجرامية بمجسمات منخفضة التفاصيل.\n\nوسعرها 1,150 ينًا، أو 920 ينًا حتى 7 ديسمبر.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع غيم سبارك (Game*Spark).\n\n#ألعاب #أخبار_الألعاب #HOOD #Steam",
-   "reel_x": "شاهد لقطات من HOOD، لعبة محاكاة حياة إجرامية بمجسمات منخفضة التفاصيل، التي حصلت على تقييم إيجابي جدًا في أول يوم من الوصول المبكر بحسب غيم سبارك (Game*Spark).",
-   "reel_threads": "شاهدوا لقطات من HOOD، لعبة محاكاة حياة إجرامية.\n\nحصلت على تقييم إيجابي جدًا في أول يوم من الوصول المبكر، بحسب موقع غيم سبارك (Game*Spark).\n\nالمصدر: موقع غيم سبارك (Game*Spark)"
-  }
- },
- "at": "2026-11-28T11:09:20Z",
+ "reason": "pass",
+ "at": "2026-11-28T13:40:35Z",
  "by": "director-p2"
 }
