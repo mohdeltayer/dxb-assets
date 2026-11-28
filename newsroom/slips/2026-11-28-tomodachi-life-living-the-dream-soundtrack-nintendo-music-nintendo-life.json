@@ -1,0 +1,32 @@
+{
+ "id": "2026-11-28-tomodachi-life-living-the-dream-soundtrack-nintendo-music-nintendo-life",
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "slip texts fixed mechanically: headline, spoken",
+  "name not in names-ar: «فيها هو تورو مينيغيشي (Toru Minegishi)» (spoken); add it there as Proposed",
+  "footage 1280x720: under 1080p, the quality gate may ask for the showcase layout",
+  "text fixed mechanically: spoken: names not in names-ar written in Latin: Toru Minegishi; line: names not in names-ar written in Latin: Toru Minegishi"
+ ],
+ "at": "2026-11-28T06:11:11Z",
+ "footage": {
+  "name": "Tomodachi Life™: Living the Dream gallery video 1",
+  "width": 1280,
+  "height": 720,
+  "fps": 29.97,
+  "mbps": 1.67,
+  "rows": 720,
+  "duration": 471.17,
+  "decode_clean": true
+ },
+ "names_to_review": [
+  "Toru Minegishi"
+ ],
+ "job": "jobs/live/tomodachi-life-living-the-dream-soundtrack-nintendo-music-nintendo-life.json",
+ "story": "newsroom/stories/2026-11-28-tomodachi-life-living-the-dream-soundtrack-nintendo-music-nintendo-life.json",
+ "lines": 6,
+ "shots": 13,
+ "run": "46115415176",
+ "lane": "live",
+ "build_secs": 48
+}
