@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-27T23:52:08Z",
- "seq": 953,
+ "generated_at": "2026-11-28T00:15:18Z",
+ "seq": 954,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 25433,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "Doki Doki Literature Club arrives in Fortnite | PS5 & PS4 Games",
+   "url": "https://www.youtube.com/watch?v=uY-6-pMJwLw",
+   "published": "2026-11-28T00:00Z",
+   "first_seen": "2026-11-28T00:15:14Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i2.ytimg.com/vi/uY-6-pMJwLw/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=uY-6-pMJwLw"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 954
+  }
+ ],
  "recent": [
   {
    "id": 25265,
@@ -341,9 +363,9 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-27T23:50:14Z",
+  "last_poll_at": "2026-11-28T00:15:14Z",
   "sources_enabled": 101,
-  "sources_ok": 100,
+  "sources_ok": 101,
   "sources_failing": 0,
   "failed": []
  }
