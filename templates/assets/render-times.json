@@ -176848,5 +176848,326 @@
   "sound": "trailer",
   "footage": true,
   "upload_secs": 5.0
+ },
+ {
+  "name": "abelina-free-demo-steam-games-press-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-28T01:23Z",
+  "stages": {
+   "checks": 14.1,
+   "montage": 47.9,
+   "text": 50.0,
+   "audio": 0.5,
+   "outro": 39.8
+  },
+  "total": 152.3,
+  "lane": "runner",
+  "queued_at": "2026-11-28T01:20Z",
+  "finished_at": "2026-11-28T01:23Z",
+  "render_min": 2.54,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4",
+    "start": 37.47,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.75,
+    "rows": 804,
+    "zoom": 2.39,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4",
+    "start": 2.57,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.75,
+    "rows": 804,
+    "zoom": 2.39,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4",
+    "start": 18.81,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.75,
+    "rows": 804,
+    "zoom": 2.39,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4",
+    "start": 50.83,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.75,
+    "rows": 804,
+    "zoom": 2.39,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4",
+    "start": 48.16,
+    "width": 1920,
+    "height": 1080,
+    "fps": 59.94,
+    "mbps": 5.75,
+    "rows": 804,
+    "zoom": 2.39,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "abelina-free-demo-steam-games-press-abelina-demo-trailer.mp4",
+    "start": 2.21,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "mbps": 5.77,
+    "rows": 796,
+    "zoom": 2.41,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "abelina-free-demo-steam-games-press-abelina-demo-trailer.mp4",
+    "start": 29.74,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "mbps": 5.77,
+    "rows": 798,
+    "zoom": 2.41,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "abelina-free-demo-steam-games-press-abelina-demo-trailer.mp4",
+    "start": 15.22,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "mbps": 5.77,
+    "rows": 816,
+    "zoom": 2.35,
+    "lowbit": false
+   },
+   {
+    "shot": 8,
+    "file": "abelina-free-demo-steam-games-press-abelina-demo-trailer.mp4",
+    "start": 22.39,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "mbps": 5.77,
+    "rows": 816,
+    "zoom": 2.35,
+    "lowbit": false
+   },
+   {
+    "shot": 9,
+    "file": "abelina-free-demo-steam-games-press-abelina-demo-trailer.mp4",
+    "start": 9.74,
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "mbps": 5.77,
+    "rows": 816,
+    "zoom": 2.35,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 2.41,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 21.7,
+   "audio_secs": 63.3,
+   "music_pct": 81.0,
+   "leak_pct": 0.1,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 5
+   },
+   "effects_shots": 10,
+   "mix_secs": 7.1,
+   "secs": 29.3
+  },
+  "lifeless": {
+   "score": 19.4,
+   "still_share": 0.116,
+   "longest_still": 1.2,
+   "cuts_per_10s": 0.97,
+   "held_under_text": 0.0,
+   "secs": 20.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 46.0,
+   "shots": 313.5,
+   "checks": 36.5,
+   "render": 233.4,
+   "after": 63.1
+  },
+  "softgate": {
+   "warnings": 3,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 1,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4: shot ended before the first video frame (2.52 s); moved to 2.57 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4: shot ended before the first video frame (2.52 s); moved to 2.57 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4: shot ended before the first video frame (2.52 s); moved to 2.57 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4: shot ended before the first video frame (2.52 s); moved to 2.57 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4: shot ended before the first video frame (2.52 s); moved to 2.57 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4: shot ended before the first video frame (2.52 s); moved to 2.57 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4: shot ended before the first video frame (2.52 s); moved to 2.57 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 8,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4: shot ended before the first video frame (2.52 s); moved to 2.57 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 9,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4: shot ended before the first video frame (2.52 s); moved to 2.57 s"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "b",
+     "why": "showcase layout, 16:9 fallback: stylised art: the person, vehicle and animal detector cannot frame its characters (crop fix, 26 Nov 2026)"
+    },
+    {
+     "kind": "picture",
+     "slot": 0,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4 at 37.47 s for 3.8 s: no clean stretch read, evenly spaced crop"
+    },
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "a",
+     "why": "scan cap: 1 automatic slot(s) from the library or evenly spaced"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4 at 18.81 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4 at 50.83 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-announcement-trailer.mp4 at 48.16 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-demo-trailer.mp4 at 2.21 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-demo-trailer.mp4 at 29.74 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-demo-trailer.mp4 at 15.22 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 8,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-demo-trailer.mp4 at 22.39 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 9,
+     "step": "a",
+     "why": "abelina-free-demo-steam-games-press-abelina-demo-trailer.mp4 at 9.74 s: moved off a repeated moment (respread)"
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 692,
+  "mem_total_mb": 15983,
+  "mem_start_mb": 1519,
+  "peak_mem_mb": 3468,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61371,
+  "peak_disk_mb": 62419,
+  "min_disk_free_mb": 85377,
+  "setup_min": 0.55,
+  "story": "abelina-free-demo-steam-games-press"
  }
 ]
