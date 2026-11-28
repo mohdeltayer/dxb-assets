@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-28T05:52:05Z",
- "seq": 960,
+ "generated_at": "2026-11-28T06:52:06Z",
+ "seq": 961,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -272,10 +272,30 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-28T05:50:14Z",
+  "last_poll_at": "2026-11-28T06:50:04Z",
   "sources_enabled": 101,
-  "sources_ok": 83,
-  "sources_failing": 0,
-  "failed": []
+  "sources_ok": 81,
+  "sources_failing": 19,
+  "failed": [
+   "Bethesda (YouTube) (HTTP 503, 2x)",
+   "Blizzard (YouTube) (HTTP 503, 2x)",
+   "Bungie (YouTube) (HTTP 503, 2x)",
+   "CD PROJEKT RED (YouTube) (HTTP 503, 2x)",
+   "Call of Duty (YouTube) (HTTP 503, 2x)",
+   "Capcom USA (YouTube) (HTTP 503, 2x)",
+   "Fortnite (YouTube) (HTTP 503, 2x)",
+   "Nintendo of America (YouTube) (HTTP 503, 2x)",
+   "PlayStation (YouTube) (HTTP 503, 2x)",
+   "PlayStation MENA (YouTube) (HTTP 503, 2x)",
+   "PlayStation Middle East (YouTube) (HTTP 503, 2x)",
+   "Pokemon (YouTube) (HTTP 503, 2x)",
+   "Riot Games (YouTube) (HTTP 503, 2x)",
+   "Rockstar Games (YouTube) (HTTP 503, 3x)",
+   "SEGA (YouTube) (HTTP 503, 2x)",
+   "Square Enix (YouTube) (HTTP 503, 2x)",
+   "Steam (YouTube) (HTTP 503, 2x)",
+   "Ubisoft (YouTube) (HTTP 503, 2x)",
+   "Xbox (YouTube) (HTTP 503, 3x)"
+  ]
  }
 }
