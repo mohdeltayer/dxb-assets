@@ -1,0 +1,8 @@
+{"story": "2026-11-28-zenless-zone-zero-cecilia-playable-gamespark",
+ "out": "cards/2026-11/zenless-zone-zero-cecilia-playable-gamespark-reel-v1.mp4",
+ "verdict": "fix",
+ "reason": "unclear_text",
+ "fix": "Headline renders as \"في Cecilia Zenless Zone Zero\" (the Latin run swallows the Arabic \"في\", so Cecilia and the game read as one name and the sentence is scrambled); rebreak it so no Arabic word sits between two Latin names on one line.",
+ "reasons": ["on-screen text is true to the slip and Game*Spark (reported, 3.5 expected, no date, credit says base-game footage)", "headline word order is scrambled for an Arab reader: \"في\" ends up before \"Cecilia Zenless Zone Zero\"", "lines and credit are readable and not cut off", "no graphic content"],
+ "job_patch": {"headline": "ستصبح Cecilia قابلة للعب\nفي Zenless Zone Zero"},
+ "at": "2026-11-28T06:30:00Z", "by": "director-p2"}
