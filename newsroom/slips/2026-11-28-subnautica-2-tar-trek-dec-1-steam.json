@@ -1,14 +1,28 @@
 {
  "id": "2026-11-28-subnautica-2-tar-trek-dec-1-steam",
- "state": "failed",
- "problems": [
-  "grammar_review missing: run the arabic-grammar-review stage on headline, spoken (the lines are cut from it), credit, instagram, x and threads, apply every required edit to the slip, then record \"grammar_review\": {\"by\": \"arabic-grammar-review\", \"at\": \"<ISO time>\", \"required_edits\": <n applied>, \"texts_sha\": \"<python3 templates/slip.py grammar-sha <slip>>\"}"
- ],
+ "state": "built",
+ "problems": [],
  "flags": [
-  "slip texts fixed mechanically: spoken"
+  "slip texts fixed mechanically: spoken",
+  "warning: text: spoken: 4 sentences: the paragraph is 2 to 3 sentences, each ending on a full stop",
+  "ledger: earlier stories on this game: 2026-11-24-subnautica-2-tar-trek-update-dec-1-automaton (an update or a duplicate? the editor decides)"
  ],
- "at": "2026-11-28T17:12:27Z",
- "run": "46169217045",
+ "at": "2026-11-28T17:13:48Z",
+ "footage": {
+  "name": "Subnautica 2 - Early Access Cinematic Trailer",
+  "width": null,
+  "height": null,
+  "fps": null,
+  "mbps": null,
+  "rows": null,
+  "duration": null,
+  "decode_clean": true
+ },
+ "job": "jobs/live/subnautica-2-tar-trek-dec-1-steam.json",
+ "story": "newsroom/stories/2026-11-28-subnautica-2-tar-trek-dec-1-steam.json",
+ "lines": 6,
+ "shots": 14,
+ "run": "46169326666",
  "lane": "live",
- "build_secs": 13
+ "build_secs": 45
 }
