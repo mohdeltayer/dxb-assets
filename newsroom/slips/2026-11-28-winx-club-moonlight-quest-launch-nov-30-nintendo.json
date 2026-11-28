@@ -1,14 +1,26 @@
 {
  "id": "2026-11-28-winx-club-moonlight-quest-launch-nov-30-nintendo",
- "state": "failed",
- "problems": [
-  "footage: no decode-clean official video from the footage source (https://www.nintendo.com/us/store/products/winx-club-moonlight-quest-switch/; 0 found)"
- ],
+ "state": "built",
+ "problems": [],
  "flags": [
   "slip texts fixed mechanically: headline"
  ],
- "at": "2026-11-28T20:10:59Z",
- "run": "46185004105",
+ "at": "2026-11-28T20:11:57Z",
+ "footage": {
+  "name": "Reveal",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60.0,
+  "mbps": 5.69,
+  "rows": 1080,
+  "duration": 30.15,
+  "decode_clean": true
+ },
+ "job": "jobs/live/winx-club-moonlight-quest-launch-nov-30-nintendo.json",
+ "story": "newsroom/stories/2026-11-28-winx-club-moonlight-quest-launch-nov-30-nintendo.json",
+ "lines": 3,
+ "shots": 7,
+ "run": "46185091271",
  "lane": "live",
- "build_secs": 14
+ "build_secs": 30
 }
