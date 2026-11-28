@@ -31,37 +31,47 @@
  "shots": [
   [
    "zenless-zone-zero-cecilia-playable-gamespark-zenless-zone-zero-steam-launch-trailer.mp4",
-   "auto",
+   51.96,
    3.8,
-   null
+   [
+    [
+     0.0,
+     0.136
+    ]
+   ]
   ],
   [
    "zenless-zone-zero-cecilia-playable-gamespark-zenless-zone-zero-steam-launch-trailer.mp4",
-   "auto",
+   37.56,
+   2.2,
+   [
+    [
+     0.0,
+     0.514
+    ]
+   ]
+  ],
+  [
+   "zenless-zone-zero-cecilia-playable-gamespark-zenless-zone-zero-steam-launch-trailer.mp4",
+   0.0,
    2.2,
    null
   ],
   [
    "zenless-zone-zero-cecilia-playable-gamespark-zenless-zone-zero-steam-launch-trailer.mp4",
-   "auto",
+   0.0,
    2.2,
    null
   ],
   [
    "zenless-zone-zero-cecilia-playable-gamespark-zenless-zone-zero-steam-launch-trailer.mp4",
-   "auto",
+   0.0,
    2.2,
    null
   ],
   [
    "zenless-zone-zero-cecilia-playable-gamespark-zenless-zone-zero-steam-launch-trailer.mp4",
-   "auto",
-   2.2,
-   null
-  ],
-  [
-   "zenless-zone-zero-cecilia-playable-gamespark-zenless-zone-zero-steam-launch-trailer.mp4",
-   "auto",
+   0.0,
    2.2,
    null
   ]
@@ -96,9 +106,9 @@
   [
    0,
    5,
-   "المصدر: موقع غيم سبارك (GameSpark)،\nواللقطات من صفحة اللعبة على Steam",
+   "المصدر: GameSpark · اللقطات: من اللعبة الأساسية لا من العرض الجديد",
    {
-    "size": 40,
+    "size": 38,
     "band": true
    }
   ]
@@ -156,5 +166,13 @@
  },
  "names_to_review": [
   "GameSpark"
- ]
+ ],
+ "shots_auto": [
+  2,
+  3,
+  4,
+  5
+ ],
+ "layout": "showcase",
+ "showcase_reason": "the trailer clashes with our text in a 9:16 crop: stylised art: the person, vehicle and animal detector cannot frame its characters (crop fix, 26 Nov 2026) (16:9 fallback, Mohammad 20 Nov 2026)"
 }
