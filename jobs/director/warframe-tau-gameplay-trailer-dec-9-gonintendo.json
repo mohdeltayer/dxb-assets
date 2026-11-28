@@ -1,0 +1,80 @@
+{
+ "story": "2026-11-28-warframe-tau-gameplay-trailer-dec-9-gonintendo",
+ "out": "cards/2026-11/warframe-tau-gameplay-trailer-dec-9-gonintendo-reel-v1.mp4",
+ "verdict": "fix",
+ "reason": "factual_error",
+ "reasons": [
+  "headline says a new Tau gameplay trailer over footage that is the Jade Shadows: Constellations trailer (its Available Now end card is on screen), so the footage reads as the Tau trailer",
+  "credit line only says footage is from the Steam page, not that it is older footage",
+  "figures true against GoNintendo: Dec 9, free, new star system Tau, Perita survival, 67th Warframe Brysko",
+  "Arabic is clear to an Arab reader; the lam before Latin Tau renders legibly"
+ ],
+ "fix": "Retitle as footage from Warframe before the Tau update and credit the footage as earlier trailers, not the Tau trailer.",
+ "job_patch": {
+  "headline": "لقطات من Warframe\nقبل تحديث Tau",
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "ذكر موقع جو نينتندو (GoNintendo)\nأن عرض لعب جديد لتحديث Tau ظهر",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    5,
+    [
+     [
+      "ويصل التحديث مجانًا في 9 ديسمبر\nعلى الحاسب والكونسول والجوال",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    6,
+    8,
+    [
+     [
+      "وبحسب الموقع، يضيف التحديث\nنظامًا نجميًا جديدًا اسمه Tau،",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    9,
+    11,
+    [
+     [
+      "وطورًا جديدًا للنجاة في Perita،\nو Warframe رقم 67 باسم Brysko",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    11,
+    "المصدر: GoNintendo · اللقطات: عروض سابقة للعبة من Steam، وليست عرض Tau",
+    {
+     "size": 36,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع جو نينتندو (GoNintendo) أن عرض لعب جديد لتحديث Tau ظهر، وأن التحديث يصل مجانًا في 9 ديسمبر على الحاسب والكونسول والجوال. وبحسب الموقع، يضيف التحديث نظامًا نجميًا جديدًا اسمه Tau، وطورًا جديدًا للنجاة في Perita، و Warframe رقم 67 باسم Brysko. اللقطات هنا من عروض سابقة للعبة، وليست من عرض Tau."
+ },
+ "at": "2026-11-28T19:26:08Z",
+ "by": "director-p2"
+}
