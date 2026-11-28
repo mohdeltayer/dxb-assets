@@ -1,10 +1,32 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-28T08:52:09Z",
- "seq": 963,
+ "generated_at": "2026-11-28T09:10:09Z",
+ "seq": 964,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
- "items": [],
+ "items": [
+  {
+   "id": 25543,
+   "source": "PlayStation (YouTube)",
+   "source_kind": "youtube",
+   "title": "The Eminence in Shadow: Phantom Echoes - Release Date Announcement Trailer | PS5 Games",
+   "url": "https://www.youtube.com/watch?v=F6-8-Re1pCw",
+   "published": "2026-11-28T09:00Z",
+   "first_seen": "2026-11-28T09:10:04Z",
+   "media": [
+    {
+     "type": "image",
+     "url": "https://i3.ytimg.com/vi/F6-8-Re1pCw/hqdefault.jpg"
+    },
+    {
+     "type": "video",
+     "url": "https://www.youtube.com/watch?v=F6-8-Re1pCw"
+    }
+   ],
+   "breaking_source": true,
+   "breaking_seq": 964
+  }
+ ],
  "recent": [
   {
    "id": 25433,
@@ -272,7 +294,7 @@
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-28T08:50:04Z",
+  "last_poll_at": "2026-11-28T09:10:04Z",
   "sources_enabled": 101,
   "sources_ok": 86,
   "sources_failing": 14,
