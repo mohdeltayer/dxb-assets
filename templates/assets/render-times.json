@@ -179119,5 +179119,297 @@
   "setup_min": 0.48,
   "story": "zenless-zone-zero-cecilia-playable-gamespark",
   "upload_secs": 7.0
+ },
+ {
+  "name": "professor-layton-new-world-of-steam-finished-dec-1-event-gamingtrend-reel-v1.mp4",
+  "profile": "standard",
+  "at": "2026-11-28T06:32Z",
+  "stages": {
+   "checks": 5.2,
+   "montage": 41.4,
+   "text": 23.5,
+   "audio": 0.6,
+   "outro": 11.9
+  },
+  "total": 82.6,
+  "lane": "selfhosted",
+  "queued_at": "2026-11-28T06:30Z",
+  "finished_at": "2026-11-28T06:32Z",
+  "render_min": 1.38,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4",
+    "start": 33.71,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4",
+    "start": 3.07,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4",
+    "start": 96.93,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4",
+    "start": 62.71,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4",
+    "start": 18.2,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4",
+    "start": 82.41,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 6,
+    "file": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4",
+    "start": 107.12,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 7,
+    "file": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4",
+    "start": 72.53,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.73,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": true,
+   "tool": "cocktail-fork",
+   "clean": true,
+   "separate_secs": 3.0,
+   "audio_secs": 50.3,
+   "music_pct": 32.4,
+   "leak_pct": 0.7,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 9,
+    "miss": 0
+   },
+   "effects_shots": 0,
+   "mix_secs": 0.9,
+   "secs": 4.8,
+   "ladder": "b",
+   "step_a": {
+    "applied": false,
+    "tool": "cocktail-fork",
+    "clean": false,
+    "separate_secs": 8.9,
+    "audio_secs": 50.3,
+    "music_pct": 32.4,
+    "leak_pct": 0.7,
+    "thresholds": {
+     "leak_max_pct": 5.0,
+     "music_min_pct": 40.0
+    },
+    "cache": {
+     "hit": 0,
+     "miss": 9
+    },
+    "reason": "music only 32.4% of the track (< 40.0%)",
+    "secs": 11.7
+   }
+  },
+  "lifeless": {
+   "score": 10.3,
+   "still_share": 0.136,
+   "longest_still": 1.0,
+   "cuts_per_10s": 3.98,
+   "held_under_text": 0.0,
+   "secs": 17.6,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 22.6,
+   "shots": 87.2,
+   "checks": 97.0,
+   "render": 141.7,
+   "after": 46.7
+  },
+  "softgate": {
+   "warnings": 3,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": 1,
+     "step": "a",
+     "why": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4: shot ended before the first video frame (3.02 s); moved to 3.07 s"
+    },
+    {
+     "kind": "picture",
+     "slot": 2,
+     "step": "a",
+     "why": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4 at 96.93 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 3,
+     "step": "a",
+     "why": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4 at 62.71 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 4,
+     "step": "a",
+     "why": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4 at 18.2 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 5,
+     "step": "a",
+     "why": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4 at 82.41 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 6,
+     "step": "a",
+     "why": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4 at 107.12 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "picture",
+     "slot": 7,
+     "step": "a",
+     "why": "professor-layton-new-world-of-steam-finished-dec-1-event-gam-trailer.mp4 at 72.53 s: moved off a repeated moment (respread)"
+    },
+    {
+     "kind": "text",
+     "slot": "reel",
+     "step": "a",
+     "why": "soft shade under line group(s) [0]: bright footage behind them"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "b",
+     "why": "audio split not applied (music only 32.4% of the track (< 40.0%)) on a trailer track under 7 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our b"
+    }
+   ]
+  },
+  "runner": "selfhosted",
+  "cores": 8,
+  "job_secs": 395,
+  "queue_wait_secs": 827,
+  "mem_total_mb": 15986,
+  "mem_start_mb": 1118,
+  "peak_mem_mb": 3070,
+  "disk_total_mb": 256646,
+  "disk_start_mb": 81921,
+  "peak_disk_mb": 83201,
+  "min_disk_free_mb": 162906,
+  "setup_min": 0.18,
+  "story": "professor-layton-new-world-of-steam-finished-dec-1-event-gamingtrend",
+  "job_sha": "d4832ffcfb0292a6be53f7617866998e5455e54e",
+  "dispatches": 1,
+  "sound": "trailer-music (ladder b: audio split not applied (music only 32.4% of the track (< 40.0%)) on a trailer track under 7 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or our bed.)",
+  "footage": true
  }
 ]
