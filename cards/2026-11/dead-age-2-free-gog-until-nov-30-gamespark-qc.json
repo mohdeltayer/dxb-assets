@@ -1,0 +1,536 @@
+{
+ "name": "dead-age-2-free-gog-until-nov-30-gamespark",
+ "out": "cards/2026-11/dead-age-2-free-gog-until-nov-30-gamespark-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot gate",
+   "detail": "shot 4 (dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4 64.51 s): is letterboxed on this stretch (1060 of 1080 rows of picture); no clean start of 2.49 s within 12 s: pick another stretch or shorten the shot shot_timing",
+   "shot": 4
+  },
+  {
+   "stage": "fill",
+   "detail": "ValueError: an empty band in the finished Reel (no empty band at any second, Mohammad 8 Nov 2026): 4.30 s: 660 px of empty band from y 708; 14.08 s: 656 px of empty band from y 708. Keep the headline in the top band and a line in the bottom band at every second (showcase layout), or fill the frame cropped to the subject."
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4 at 10.25 s for 3.8 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 1,
+   "step": "a",
+   "why": "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4 at 17.95 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4 at 27.53 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4 at 40.97 s for 2.49 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4 at 64.51 s for 2.49 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4 at 54.28 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4 at 75.87 s for 2.2 s: no clean stretch read, evenly spaced crop"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "b",
+   "why": "showcase layout, 16:9 fallback: the shot scan found no clean stretch for 7 slot(s)"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "letterbox: kept as a crop, check waived"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "b",
+   "why": "blocked (end slate): moved to dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-announcement-trailer.mp4 at 9.77 s (evenly spaced)"
+  }
+ ],
+ "job_to_pass_min": 8.7,
+ "at": "2026-11-28T07:18:48Z",
+ "findings": [],
+ "notes": [
+  "first frame: shot 0 dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4 starts at 0.0 s, the video at 1.06 s; its first 1.06 s are lost",
+  "first frame: shot 1 dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4 starts at 0.0 s, the video at 1.06 s; its first 1.06 s are lost",
+  "first frame: shot 2 dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4 starts at 0.0 s, the video at 1.06 s; its first 1.06 s are lost",
+  "first frame: shot 3 dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4 starts at 0.0 s, the video at 1.06 s; its first 1.06 s are lost",
+  "first frame: shot 4 dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4 starts at 0.0 s, the video at 1.06 s; its first 1.06 s are lost",
+  "first frame: shot 5 dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4 starts at 0.0 s, the video at 1.06 s; its first 1.06 s are lost",
+  "first frame: shot 6 dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4 starts at 0.0 s, the video at 1.06 s; its first 1.06 s are lost",
+  "length 15.2 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 80.9; leak_pct 0.0; cache {'hit': 0, 'miss': 6}; separate_secs 7.4; secs 11.5",
+  "render_job: lifeless: {\"score\": 19.8, \"still_share\": 0.219, \"longest_still\": 0.7, \"cuts_per_10s\": 1.32, \"held_under_text\": 0.0, \"secs\": 15.1, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "shot 1",
+   "rule": "shot_timing",
+   "what": "moved from 17.95 to 15.95 s, the nearest clean start of the same 2.20 s",
+   "before": [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    17.95,
+    2.2,
+    [
+     [
+      0.0,
+      0.567
+     ]
+    ]
+   ],
+   "after": [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    15.95,
+    2.2,
+    [
+     [
+      0.0,
+      0.567
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 3",
+   "rule": "shot_timing",
+   "what": "moved from 40.97 to 39.97 s, the nearest clean start of the same 2.49 s",
+   "before": [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    40.97,
+    2.49,
+    [
+     [
+      0.0,
+      0.263
+     ]
+    ]
+   ],
+   "after": [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    39.97,
+    2.49,
+    [
+     [
+      0.0,
+      0.263
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 6",
+   "rule": "shot_timing",
+   "what": "moved from 75.87 to 76.87 s, the nearest clean start of the same 2.20 s",
+   "before": [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    75.87,
+    2.2,
+    [
+     [
+      0.0,
+      0.214
+     ]
+    ]
+   ],
+   "after": [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    76.87,
+    2.2,
+    [
+     [
+      0.0,
+      0.214
+     ]
+    ]
+   ]
+  }
+ ],
+ "job_sha": "ea92f2314c61aee9581d7d42545f268fce0089aa",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 1.81,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/dead-age-2-free-gog-until-nov-30-gamespark-look-1.jpg",
+  "cards/2026-11/dead-age-2-free-gog-until-nov-30-gamespark-look-2.jpg",
+  "cards/2026-11/dead-age-2-free-gog-until-nov-30-gamespark-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 48.7,
+  "files": {
+   "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4": {
+    "secs": 24.4,
+    "cached": false,
+    "stages": {
+     "decode": 9.9,
+     "autofocus": 23.6,
+     "ocr": 23.6,
+     "smear": 24.2,
+     "scenes": 24.4
+    },
+    "incomplete": null
+   },
+   "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-announcement-trailer.mp4": {
+    "secs": 24.3,
+    "cached": false,
+    "stages": {
+     "decode": 9.7,
+     "autofocus": 22.2,
+     "ocr": 22.2,
+     "smear": 24.1,
+     "scenes": 24.3
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/dead-age-2-free-gog-until-nov-30-gamespark.json",
+ "stage_minutes": {
+  "queue": 0.02,
+  "setup": 0.18,
+  "fetch": 0.42,
+  "shots": 2.53,
+  "checks": 2.72,
+  "render": 1.47,
+  "after": 0.69,
+  "job": 7.83
+ },
+ "job_after_autofix": {
+  "name": "dead-age-2-free-gog-until-nov-30-gamespark",
+  "story": "2026-11-28-dead-age-2-free-gog-until-nov-30-gamespark",
+  "footage_source": "steam:951430",
+  "kind_news": "free release",
+  "story_class": "trailer",
+  "story_class_why": "kind free release",
+  "skin_why": "genre rpg",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/dead-age-2-free-gog-until-nov-30-gamespark-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    "steam": 951430,
+    "trailer": "Dead Age 2 - Full Launch Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "951430"
+   },
+   {
+    "file": "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-announcement-trailer.mp4",
+    "steam": 951430,
+    "trailer": "Dead Age 2 - Announcement Trailer",
+    "start": 0,
+    "seconds": 120,
+    "trailer_id": "951430"
+   }
+  ],
+  "shots": [
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    10.25,
+    3.8,
+    [
+     [
+      0.0,
+      0.041
+     ],
+     [
+      0.606,
+      0.578
+     ],
+     [
+      2.606,
+      0.317
+     ]
+    ]
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    15.95,
+    2.2,
+    [
+     [
+      0.0,
+      0.567
+     ]
+    ]
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    27.53,
+    2.2,
+    [
+     [
+      0.0,
+      0.518
+     ],
+     [
+      1.618,
+      0.419
+     ]
+    ]
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    39.97,
+    2.49,
+    [
+     [
+      0.0,
+      0.263
+     ]
+    ]
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    64.51,
+    2.49,
+    [
+     [
+      0.0,
+      0.475
+     ]
+    ]
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    54.28,
+    2.2,
+    [
+     [
+      0.0,
+      0.61
+     ],
+     [
+      1.493,
+      0.671
+     ]
+    ]
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    76.87,
+    2.2,
+    [
+     [
+      0.0,
+      0.214
+     ]
+    ]
+   ]
+  ],
+  "lines": [
+   [
+    1,
+    2,
+    [
+     [
+      "وهي لعبة بقاء ضد الزومبي",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    3,
+    4,
+    [
+     [
+      "بقتال بالأدوار وإدارة\nقاعدة وموت دائم للشخصيات",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    5,
+    6,
+    [
+     [
+      "وينتهي العرض في 30 نوفمبر",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    6,
+    "المصدر: GameSpark · اللقطات: صفحة اللعبة على Steam",
+    {
+     "size": 38,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع غيم GameSpark أن لعبة Dead Age 2 تُوزع مجانًا على متجر GOG ضمن عروض الجمعة البيضاء (White Friday)، وسعرها المعتاد نحو 18 دولارًا. وهي لعبة بقاء ضد الزومبي بقتال بالأدوار وإدارة قاعدة وموت دائم للشخصيات. وينتهي العرض في 30 نوفمبر.",
+  "headline": "لعبة Dead Age 2\nمجانية على GOG",
+  "label": "تقرير",
+  "game": "Dead Age 2",
+  "game_short": "Dead Age 2",
+  "game_key": "dead age ii",
+  "genre": [
+   "rpg"
+  ],
+  "texts": {
+   "instagram": "تقرير: Dead Age 2 مجانية على GOG حتى 30 نوفمبر\n\nذكر موقع غيم سبارك (GameSpark) أن لعبة Dead Age 2 تُوزع مجانًا على متجر GOG ضمن عروض الجمعة البيضاء (White Friday)، وسعرها المعتاد نحو 18 دولارًا.\n\nوهي لعبة بقاء ضد الزومبي بقتال بالأدوار وإدارة قاعدة وموت دائم للشخصيات.\n\nوينتهي العرض في 30 نوفمبر.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع غيم سبارك (GameSpark).\n\n#ألعاب #أخبار_الألعاب #DeadAge2 #ألعاب_مجانية",
+   "x": "تقرير: ذكر موقع غيم سبارك (GameSpark) أن لعبة Dead Age 2 تُوزع مجانًا على متجر GOG حتى 30 نوفمبر، وسعرها المعتاد نحو 18 دولارًا. المصدر: غيم سبارك.",
+   "threads": "تقرير: لعبة Dead Age 2 للبقاء ضد الزومبي مجانية على متجر GOG حتى 30 نوفمبر، بحسب موقع غيم سبارك (GameSpark).\n\nوسعرها المعتاد نحو 18 دولارًا.\n\nالمصدر: موقع غيم سبارك (GameSpark)"
+  },
+  "source": "موقع غيم سبارك (GameSpark)، واللقطات من صفحة اللعبة على Steam",
+  "date": "28 Nov 2026",
+  "theme": "cold",
+  "style": null,
+  "template": "trailer",
+  "skin": "fantasy",
+  "cut": false,
+  "track": [
+   "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+   10.25
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Game*Spark reported on 28 Nov 2026 that Dead Age 2, a zombie survival RPG, is free on GOG during its Black Friday sale.",
+   "what_it_means_here": "The offer ends 30 Nov 2026 at 23:00 Japan time; the game normally costs about 17.99 USD."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "trailer: kind free release",
+   "skin": "fantasy: genre rpg",
+   "footage": "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4 from the resolver (steam:951430)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Game*Spark (JP), 28 Nov 2026 06:38Z: Dead Age 2 free on GOG until 30 Nov 23:00 JST, normally about 2,870 yen, Black Friday sale (http://www.gamespark.jp/article/2026/11/28/175411.html); first report: Game*Spark 28 Nov 2026 06:38Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam 951430 from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "names_to_review": [
+   "GameSpark"
+  ],
+  "cut_ok": [
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    10.25,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    17.95,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    27.53,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    40.97,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    64.51,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    54.28,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    75.87,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ]
+  ],
+  "drift_ok": [
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    10.25,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    17.95,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    27.53,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    40.97,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    64.51,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    54.28,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "dead-age-2-free-gog-until-nov-30-gamespark-dead-age-2-full-launch-trailer.mp4",
+    75.87,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ]
+  ],
+  "layout": "showcase",
+  "showcase_reason": "the trailer clashes with our text in a 9:16 crop: the shot scan found no clean stretch for 7 slot(s) (16:9 fallback, Mohammad 20 Nov 2026)"
+ }
+}
