@@ -123,3 +123,9 @@ Sources: Mohammad, 14 Nov 2026 about 10:50 Dubai; captions changed in Publer, Re
 Wrong: the headline called the physical release «ورقية», which reads as a paper edition.
 Rule: a physical, boxed or retail copy of a game is «نسخة مطبوعة»; never «ورقية» or «ورقيًا». Glossary row [games] and names-ar updated; the mechanical text check (job and slip) now refuses both forms.
 Sources: Mohammad, 18 Nov 2026. The live post stays as it is unless he asks.
+
+
+## 27 Nov 2026 · Hollow Knight: Silksong Sea of Sorrow · trailer news
+Wrong: the 27 Nov 21:30 Reel ran the base game's old Steam trailers (Release Trailer, Aug 2025; Reveal Trailer) under lines about the new Sea of Sorrow trailer; viewers commented "you showed the game trailer, not the DLC trailer".
+Rule: trailer news uses the new trailer, not the base game's. Date every footage file against the announcement; the official new trailer comes from the publisher's YouTube, press site, the official X post's video or the store page, or IGN's copy of the official file (Sea of Sorrow: ign.com/videos/hollow-knight-silksong-official-sea-of-sorrow-launch-trailer, 27 Nov 15:16Z, while Steam still had only the base game's trailers). With no new trailer: official stills of the new content, credited as such; never old footage presented as the new trailer.
+Sources: Mohammad, 28 Nov 2026. Code: templates/newfootage.py (render_job.trailer_news), CLAUDE.md "Trailer news shows the new trailer". Follow-up Reel on the real trailer built 28 Nov (story 2026-11-28-hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry).
