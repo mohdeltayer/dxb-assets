@@ -1,0 +1,408 @@
+{
+ "name": "gta-vi-all-achievements-152-hours-xbox-destructoid",
+ "out": "cards/2026-11/gta-vi-all-achievements-152-hours-xbox-destructoid-reel-v1.mp4",
+ "verdict": "pass",
+ "warnings": [
+  {
+   "stage": "shot scan",
+   "detail": "footage scan stopped at its cap (180 s); shots as written, automatic slots from the footage library or evenly spaced"
+  }
+ ],
+ "ladder": [
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 57.15 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 36.55 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 39.1 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 42.8 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 47.3 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 50.3 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 68.54 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "fill, not band: the shot scan found no clean stretch for 7 slot(s), but the source fills 9:16 at up to 2x; crop kept"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 57.15 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 36.55 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 39.1 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 42.8 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 5,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 47.3 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 6,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 50.3 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": 7,
+   "step": "a",
+   "why": "gta6-launch-master.mp4 at 68.54 s: a proven stretch from the footage library"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "fill, not band: the shot scan found no clean stretch before its cap, but the source fills 9:16 at up to 2x; crop kept"
+  },
+  {
+   "kind": "picture",
+   "slot": "reel",
+   "step": "a",
+   "why": "scan cap: 7 automatic slot(s) from the library or evenly spaced"
+  },
+  {
+   "kind": "hook",
+   "slot": 0,
+   "step": "a",
+   "why": "another stretch of the same file: clean point at 16.32 s (opener 57.1 s was used by gta-vi-day-one-sales-estimate-sensor-tower at 57.1 s within 14 days)"
+  },
+  {
+   "kind": "picture",
+   "slot": 0,
+   "step": "a",
+   "why": "blocked (title card: Rockstar Games presents): moved to gta6-launch-master.mp4 at 10.22 s (evenly spaced)"
+  },
+  {
+   "kind": "picture",
+   "slot": 2,
+   "step": "a",
+   "why": "blocked (couple in a shower; a dancer in a red-lit club): moved to gta6-launch-master.mp4 at 27.25 s (evenly spaced)"
+  },
+  {
+   "kind": "picture",
+   "slot": 3,
+   "step": "a",
+   "why": "blocked (couple in a shower; a dancer in a red-lit club): moved to gta6-launch-master.mp4 at 7.04 s (evenly spaced)"
+  },
+  {
+   "kind": "picture",
+   "slot": 4,
+   "step": "a",
+   "why": "blocked (kissing in a shower; suggestive dancing in a pink-lit club): moved to gta6-launch-master.mp4 at 40.83 s (evenly spaced)"
+  }
+ ],
+ "job_to_pass_min": 7.3,
+ "at": "2026-11-28T20:18:19Z",
+ "findings": [],
+ "notes": [
+  "length 18.9 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 93.2; leak_pct 0.1; cache {'hit': 0, 'miss': 4}; separate_secs 8.0; secs 12.0",
+  "smear check: exempt 2.40 to 8.60 s (our own cards)",
+  "render_job: lifeless: {\"score\": 8.0, \"still_share\": 0.064, \"longest_still\": 1.2, \"cuts_per_10s\": 5.32, \"held_under_text\": 0.005, \"secs\": 18.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}"
+ ],
+ "autofixed": [
+  {
+   "where": "credit 1",
+   "rule": "credit_width",
+   "what": "set one line at 40 px (was 40 px, too wide for the safe zone)",
+   "before": {
+    "text": "المصدر: موقع ديستركتويد (Destructoid)،\nولقطات من روكستار (Rockstar Games)",
+    "size": 40
+   },
+   "after": {
+    "text": "المصدر: Destructoid · اللقطات: Rockstar Games",
+    "size": 40
+   }
+  }
+ ],
+ "job_sha": "451d734b2a5e0f27d36328e4eb7c226a8434a0a6",
+ "dispatches": 2,
+ "source_summary": {
+  "min_height": 1080,
+  "max_zoom": 2.0,
+  "lowbit_shots": 0
+ },
+ "quality": "base",
+ "final_enc": "-preset medium -crf 18",
+ "look_frames": [
+  "cards/2026-11/gta-vi-all-achievements-152-hours-xbox-destructoid-look-1.jpg",
+  "cards/2026-11/gta-vi-all-achievements-152-hours-xbox-destructoid-look-2.jpg",
+  "cards/2026-11/gta-vi-all-achievements-152-hours-xbox-destructoid-look-3.jpg"
+ ],
+ "person_shown": "n/a",
+ "sound": "trailer",
+ "shot_read": {
+  "secs": 0.0,
+  "files": {
+   "gta6-launch-master.mp4": {
+    "secs": 0.0,
+    "cached": true,
+    "stages": {
+     "decode": 11.8,
+     "autofocus": 25.5,
+     "ocr": 25.5,
+     "smear": 26.5,
+     "scenes": 26.7
+    },
+    "incomplete": null
+   }
+  }
+ },
+ "job_path": "jobs/done/gta-vi-all-achievements-152-hours-xbox-destructoid.json",
+ "stage_minutes": {
+  "queue": 0.03,
+  "setup": 0.18,
+  "fetch": 0.08,
+  "shots": 3.19,
+  "checks": 0.23,
+  "render": 2.36,
+  "after": 0.61,
+  "job": 6.47
+ },
+ "job_after_autofix": {
+  "name": "gta-vi-all-achievements-152-hours-xbox-destructoid",
+  "story": "2026-11-28-gta-vi-all-achievements-152-hours-xbox-destructoid",
+  "footage_source": "https://www.playstation.com/en-ae/games/grand-theft-auto-vi/",
+  "kind_news": "numbers",
+  "story_class": "numbers",
+  "story_class_why": "kind numbers",
+  "skin_why": "genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "built_by": "server-slip",
+  "render_lane": "server",
+  "out": "cards/2026-11/gta-vi-all-achievements-152-hours-xbox-destructoid-reel-v1.mp4",
+  "split_fallback": "ladder",
+  "footage": [
+   {
+    "file": "gta6-launch-master.mp4",
+    "note": "Rockstar GTAVI_Launch_Trailer.mp4 (3840x2160, 70 Mbps) scaled to 1920x1080 crf 17; same timeline, so the shot times hold",
+    "repo": "live/2026-11-20/gta6-launch-1080.mp4"
+   }
+  ],
+  "shots": [
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    3.8,
+    null
+   ],
+   [
+    "gta-vi-all-achievements-152-hours-xbox-destructoid-gfx-figure.png",
+    0.0,
+    4.2,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.39,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.39,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.2,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.24,
+    null
+   ],
+   [
+    "gta6-launch-master.mp4",
+    0.0,
+    2.24,
+    null
+   ]
+  ],
+  "lines": [
+   [
+    2,
+    3,
+    [
+     [
+      "ذكر موقع Destructoid\nأن لاعبًا",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    4,
+    5,
+    [
+     [
+      "حصل على جميع\nإنجازات GTA VI على Xbox",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ],
+   [
+    6,
+    7,
+    [
+     [
+      "وبحسب الموقع،\nاستغرق الأمر 152 ساعة فقط",
+      {
+       "size": 54
+      }
+     ]
+    ]
+   ]
+  ],
+  "credits": [
+   [
+    0,
+    7,
+    "المصدر: Destructoid · اللقطات: Rockstar Games",
+    {
+     "size": 40,
+     "band": true
+    }
+   ]
+  ],
+  "spoken": "ذكر موقع Destructoid أن لاعبًا حصل على جميع إنجازات GTA VI على Xbox. وبحسب الموقع، استغرق الأمر 152 ساعة فقط.",
+  "headline": "لاعب ينهي كل إنجازات\nلعبة GTA VI على Xbox",
+  "label": "تقرير",
+  "game": "GTA VI",
+  "game_short": "GTA VI",
+  "game_key": "gta vi",
+  "genre": [
+   "action"
+  ],
+  "texts": {
+   "instagram": "ذكر موقع ديستركتويد (Destructoid) أن لاعبًا حصل على جميع إنجازات GTA VI على Xbox.\n\nوبحسب الموقع، استغرق الأمر 152 ساعة فقط.\n\nاللقطات من العرض الرسمي للعبة.\n\nالمصدر: موقع ديستركتويد (Destructoid).\n\n#ألعاب #أخبار_الألعاب #GTAVI #Xbox",
+   "x": "تقرير: ذكر موقع ديستركتويد (Destructoid) أن لاعبًا حصل على جميع إنجازات GTA VI على Xbox خلال 152 ساعة. المصدر: ديستركتويد.",
+   "threads": "تقرير: ذكر موقع ديستركتويد (Destructoid) أن لاعبًا حصل على جميع إنجازات GTA VI على Xbox.\n\nوبحسب الموقع، استغرق الأمر 152 ساعة فقط.\n\nالمصدر: موقع ديستركتويد"
+  },
+  "source": "موقع ديستركتويد (Destructoid)، ولقطات من روكستار (Rockstar Games)",
+  "date": "28 Nov 2026",
+  "theme": "playful",
+  "style": null,
+  "template": "numbers",
+  "skin": "house",
+  "cut": false,
+  "track": [
+   "gta6-launch-master.mp4",
+   0.0
+  ],
+  "track_from_first_shot": true,
+  "angle": {
+   "why_now": "Destructoid reported on 28 Nov 2026 that a player earned every GTA VI achievement on Xbox in 152 hours.",
+   "what_it_means_here": "A concrete completion time for a game everyone is playing; only the headline figures are confirmed."
+  },
+  "decision_log": {
+   "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+   "template": "numbers: kind numbers",
+   "skin": "house: genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
+   "footage": "gta6-launch-master.mp4 from the resolver (https://www.playstation.com/en-ae/games/grand-theft-auto-vi/)",
+   "shots": "server-picked clean stretches in source order (autoshots)",
+   "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+  },
+  "reel_check": {
+   "source read and first report noted": "yes: Destructoid, Someone got every achievement in GTA 6 on the Xbox, and all it took them was 152 hours, 28 Nov 2026 19:37Z (headline only, page not readable) (https://www.destructoid.com/someone-platinumed-gta-6-on-xbox-in-10-days/); first report: Destructoid 28 Nov 2026 19:37Z",
+   "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+   "angle before lines": "yes: angle in the slip",
+   "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+   "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+   "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+   "footage first, official": "yes: steam None from the resolver, decode clean",
+   "credit on every clip": "yes: one credit over every shot",
+   "sound": "yes: trailer sound from the first shot, split per shot on the server",
+   "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+  },
+  "gfx": [
+   {
+    "file": "gta-vi-all-achievements-152-hours-xbox-destructoid-gfx-figure.png",
+    "kind": "fact",
+    "value": "152",
+    "label": "ساعة لجمع كل الإنجازات",
+    "note": "بحسب ديستركتويد"
+   }
+  ],
+  "ground_footage": [
+   "gta6-launch-master.mp4",
+   4.0,
+   60.0
+  ],
+  "names_to_review": [
+   "Destructoid"
+  ],
+  "shots_auto": [
+   0,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ]
+ }
+}
