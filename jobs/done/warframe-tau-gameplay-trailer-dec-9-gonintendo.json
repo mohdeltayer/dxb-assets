@@ -8,7 +8,7 @@
  "skin_why": "genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
  "built_by": "server-slip",
  "render_lane": "server",
- "out": "cards/2026-11/warframe-tau-gameplay-trailer-dec-9-gonintendo-reel-v1.mp4",
+ "out": "cards/2026-11/warframe-tau-gameplay-trailer-dec-9-gonintendo-reel-v2.mp4",
  "split_fallback": "ladder",
  "footage": [
   {
@@ -116,7 +116,7 @@
    2,
    [
     [
-     "ذكر موقع جو نينتندو (GoNintendo)\nأن عرض اللعب الجديد",
+     "ذكر موقع جو نينتندو (GoNintendo)\nأن عرض لعب جديد لتحديث Tau ظهر",
      {
       "size": 54
      }
@@ -128,7 +128,7 @@
    5,
    [
     [
-     "لتحديث Warframe: Tau ظهر، وأن\nالتحديث يصل مجانًا في 9 ديسمبر",
+     "ويصل التحديث مجانًا في 9 ديسمبر\nعلى الحاسب والكونسول والجوال",
      {
       "size": 54
      }
@@ -164,15 +164,15 @@
   [
    0,
    11,
-   "المصدر: GoNintendo · اللقطات: صفحة اللعبة على Steam",
+   "المصدر: GoNintendo · اللقطات: عروض سابقة للعبة من Steam، وليست عرض Tau",
    {
     "size": 36,
     "band": true
    }
   ]
  ],
- "spoken": "ذكر موقع جو نينتندو (GoNintendo) أن عرض اللعب الجديد لتحديث Warframe: Tau ظهر، وأن التحديث يصل مجانًا في 9 ديسمبر. وبحسب الموقع، يضيف التحديث نظامًا نجميًا جديدًا اسمه Tau، وطورًا جديدًا للنجاة في Perita، و Warframe رقم 67 باسم Brysko.",
- "headline": "عرض لعب جديد\nلـ Warframe: Tau",
+ "spoken": "ذكر موقع جو نينتندو (GoNintendo) أن عرض لعب جديد لتحديث Tau ظهر، وأن التحديث يصل مجانًا في 9 ديسمبر على الحاسب والكونسول والجوال. وبحسب الموقع، يضيف التحديث نظامًا نجميًا جديدًا اسمه Tau، وطورًا جديدًا للنجاة في Perita، و Warframe رقم 67 باسم Brysko. اللقطات هنا من عروض سابقة للعبة، وليست من عرض Tau.",
+ "headline": "لقطات من Warframe\nقبل تحديث Tau",
  "label": "تقرير",
  "game": "Warframe",
  "game_short": null,
@@ -234,5 +234,9 @@
   9,
   10,
   11
- ]
+ ],
+ "rerender": {
+  "reason": "factual_error",
+  "note": "Retitle as footage from Warframe before the Tau update and credit the footage as earlier trailers, not the Tau trailer."
+ }
 }
