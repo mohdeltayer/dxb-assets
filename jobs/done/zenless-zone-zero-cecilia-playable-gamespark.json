@@ -8,7 +8,7 @@
  "skin_why": "genre rpg",
  "built_by": "server-slip",
  "render_lane": "server",
- "out": "cards/2026-11/zenless-zone-zero-cecilia-playable-gamespark-reel-v1.mp4",
+ "out": "cards/2026-11/zenless-zone-zero-cecilia-playable-gamespark-reel-v2.mp4",
  "split_fallback": "ladder",
  "footage": [
   {
@@ -114,7 +114,7 @@
   ]
  ],
  "spoken": "ذكر موقع غيم GameSpark أن هويوفيرس (HoYoverse) أعلنت عبر حسابها الرسمي على X أن شخصية Cecilia ستصبح قابلة للعب في Zenless Zone Zero، بعد نحو عام من ظهورها شخصية غير قابلة للعب. وهي شخصية دعم من عنصر الرياح تنتمي إلى Delusional Angels، ويُتوقع وصولها في الإصدار 3.5.",
- "headline": "في Cecilia Zenless Zone Zero\nستصبح شخصية قابلة للعب",
+ "headline": "ستصبح Cecilia قابلة للعب\nفي Zenless Zone Zero",
  "label": "تقرير",
  "game": "Zenless Zone Zero",
  "game_short": "Zenless Zone Zero",
@@ -174,5 +174,9 @@
   5
  ],
  "layout": "showcase",
- "showcase_reason": "the trailer clashes with our text in a 9:16 crop: stylised art: the person, vehicle and animal detector cannot frame its characters (crop fix, 26 Nov 2026) (16:9 fallback, Mohammad 20 Nov 2026)"
+ "showcase_reason": "the trailer clashes with our text in a 9:16 crop: stylised art: the person, vehicle and animal detector cannot frame its characters (crop fix, 26 Nov 2026) (16:9 fallback, Mohammad 20 Nov 2026)",
+ "rerender": {
+  "reason": "unclear_text",
+  "note": "Headline renders as \"في Cecilia Zenless Zone Zero\" (the Latin run swallows the Arabic \"في\", so Cecilia and the game read as one name and the sentence is scrambled); rebreak it so no Arabic word sits b"
+ }
 }

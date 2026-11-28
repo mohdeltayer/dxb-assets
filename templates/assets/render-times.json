@@ -178952,5 +178952,171 @@
   "sound": "bed:neon_c (trailer sound refused: music stem not clean (leftover 52.8% > 5.0%))",
   "footage": true,
   "upload_secs": 5.0
+ },
+ {
+  "name": "zenless-zone-zero-cecilia-playable-gamespark-reel-v2.mp4",
+  "profile": "standard",
+  "at": "2026-11-28T06:28Z",
+  "stages": {
+   "checks": 2.9,
+   "montage": 30.3,
+   "text": 28.8,
+   "audio": 0.5,
+   "outro": 26.1
+  },
+  "total": 88.6,
+  "lane": "runner",
+  "queued_at": "2026-11-28T06:27Z",
+  "finished_at": "2026-11-28T06:28Z",
+  "render_min": 1.48,
+  "sources": [
+   {
+    "shot": 0,
+    "file": "zenless-zone-zero-cecilia-playable-gamespark-zenless-zone-zero-steam-launch-trailer.mp4",
+    "start": 51.96,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.32,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 1,
+    "file": "zenless-zone-zero-cecilia-playable-gamespark-zenless-zone-zero-steam-launch-trailer.mp4",
+    "start": 37.56,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.32,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 2,
+    "file": "zenless-zone-zero-cecilia-playable-gamespark-zenless-zone-zero-steam-launch-trailer.mp4",
+    "start": 8.88,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.32,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 3,
+    "file": "zenless-zone-zero-cecilia-playable-gamespark-zenless-zone-zero-steam-launch-trailer.mp4",
+    "start": 24.89,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.32,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 4,
+    "file": "zenless-zone-zero-cecilia-playable-gamespark-zenless-zone-zero-steam-launch-trailer.mp4",
+    "start": 40.9,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.32,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   },
+   {
+    "shot": 5,
+    "file": "zenless-zone-zero-cecilia-playable-gamespark-zenless-zone-zero-steam-launch-trailer.mp4",
+    "start": 48.91,
+    "width": 1920,
+    "height": 1080,
+    "fps": 60.0,
+    "mbps": 5.32,
+    "rows": 1080,
+    "zoom": 1.78,
+    "lowbit": false
+   }
+  ],
+  "source_summary": {
+   "min_height": 1080,
+   "max_zoom": 1.78,
+   "lowbit_shots": 0
+  },
+  "final_enc": "-preset medium -crf 18",
+  "quality": "base",
+  "audio_split": {
+   "applied": false,
+   "tool": "cocktail-fork",
+   "clean": false,
+   "separate_secs": 7.9,
+   "audio_secs": 37.6,
+   "music_pct": 82.9,
+   "leak_pct": 52.8,
+   "thresholds": {
+    "leak_max_pct": 5.0,
+    "music_min_pct": 40.0
+   },
+   "cache": {
+    "hit": 0,
+    "miss": 4
+   },
+   "reason": "music stem not clean (leftover 52.8% > 5.0%)",
+   "secs": 10.3,
+   "ladder": "d",
+   "fallback": "bed:neon_b"
+  },
+  "lifeless": {
+   "score": 0.8,
+   "still_share": 0.008,
+   "longest_still": 0.1,
+   "cuts_per_10s": 6.3,
+   "held_under_text": 0.0,
+   "secs": 12.7,
+   "storybook": false,
+   "mode": "report-only",
+   "over": false
+  },
+  "pipeline": {
+   "fetch": 37.8,
+   "shots": 77.4,
+   "checks": 72.0,
+   "render": 100.2,
+   "after": 31.6
+  },
+  "softgate": {
+   "warnings": 3,
+   "ladder": [
+    {
+     "kind": "picture",
+     "slot": "reel",
+     "step": "c",
+     "why": "trailer news: no new trailer or official still reachable; older footage stays, credited as the base game: zenless-zone-zero-cecilia-playable-gamespark-zenless-zone-zero-steam-launch-trailer.mp4 2026-06-15 (steam upload stamp), zenless-zone-zero-cecilia-playable-gamespark-version-3-3-teaser-journey-t"
+    },
+    {
+     "kind": "sound",
+     "slot": "reel",
+     "step": "d",
+     "why": "audio split not applied (music stem not clean (leftover 52.8% > 5.0%)) on a trailer track under 5 shot(s) from other moments: the trailer's effects would not match the picture (adv-20261030-sfx-mismatch). Take the shots from the track's own seconds, a music-led stretch (sfx_ok with the measure), or "
+    }
+   ]
+  },
+  "runner": "actions",
+  "cores": 4,
+  "job_secs": 320,
+  "mem_total_mb": 15982,
+  "mem_start_mb": 1652,
+  "peak_mem_mb": 3709,
+  "disk_total_mb": 147813,
+  "disk_start_mb": 61371,
+  "peak_disk_mb": 62410,
+  "min_disk_free_mb": 85387,
+  "setup_min": 0.48,
+  "story": "zenless-zone-zero-cecilia-playable-gamespark"
  }
 ]
