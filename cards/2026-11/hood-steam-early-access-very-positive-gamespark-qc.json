@@ -4,8 +4,38 @@
  "verdict": "pass",
  "warnings": [
   {
-   "stage": "shot scan",
-   "detail": "footage scan stopped at its cap (300 s); shots as written, automatic slots from the footage library or evenly spaced"
+   "stage": "shot gate",
+   "detail": "shot 7 (hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 7.65 s): no character, creature, face or vehicle inside the 9:16 window (ground, sky or wall); re-aim or another stretch (crop fix) subject_empty",
+   "shot": 7
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 8 (hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer-ea-release.mp4 7.65 s): no character, creature, face or vehicle inside the 9:16 window (ground, sky or wall); re-aim or another stretch (crop fix) subject_empty",
+   "shot": 8
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 9 (hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer-ea-release.mp4 21.11 s): no character, creature, face or vehicle inside the 9:16 window (ground, sky or wall); re-aim or another stretch (crop fix) subject_empty",
+   "shot": 9
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 10 (hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 21.11 s): no character, creature, face or vehicle inside the 9:16 window (ground, sky or wall); re-aim or another stretch (crop fix) subject_empty",
+   "shot": 10
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 11 (hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 12.21 s): no character, creature, face or vehicle inside the 9:16 window (ground, sky or wall); re-aim or another stretch (crop fix) subject_empty",
+   "shot": 11
+  },
+  {
+   "stage": "shot gate",
+   "detail": "shot 13 (hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 59.09 s): on-screen text cut by the 9:16 edge (DEFAULT); re-aim or another stretch (crop fix) subject_text_cut",
+   "shot": 13
+  },
+  {
+   "stage": "pace",
+   "detail": "pace: nothing changes for 5.1 s at 3.4 (change every 4 s); cut to a second angle, add a line or a strip, or pass pace_ok=True with the reason in the brief"
   },
   {
    "stage": "headline",
@@ -39,103 +69,55 @@
   },
   {
    "kind": "picture",
-   "slot": 0,
-   "step": "a",
-   "why": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 10.86 s for 3.8 s: no clean stretch read, evenly spaced crop"
-  },
-  {
-   "kind": "picture",
-   "slot": 2,
-   "step": "a",
-   "why": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 4.15 s for 2.42 s: no clean stretch read, evenly spaced crop"
-  },
-  {
-   "kind": "picture",
-   "slot": 3,
-   "step": "a",
-   "why": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 15.38 s for 2.42 s: no clean stretch read, evenly spaced crop"
-  },
-  {
-   "kind": "picture",
-   "slot": 4,
-   "step": "a",
-   "why": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 24.57 s for 2.56 s: no clean stretch read, evenly spaced crop"
-  },
-  {
-   "kind": "picture",
-   "slot": 5,
-   "step": "a",
-   "why": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 27.79 s for 2.56 s: no clean stretch read, evenly spaced crop"
-  },
-  {
-   "kind": "picture",
-   "slot": 6,
-   "step": "a",
-   "why": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 30.91 s for 2.78 s: no clean stretch read, evenly spaced crop"
-  },
-  {
-   "kind": "picture",
    "slot": 7,
    "step": "a",
-   "why": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 34.12 s for 2.78 s: no clean stretch read, evenly spaced crop"
+   "why": "drift: kept as a crop, check waived"
   },
   {
    "kind": "picture",
    "slot": 8,
    "step": "a",
-   "why": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 43.34 s for 2.74 s: no clean stretch read, evenly spaced crop"
+   "why": "drift: kept as a crop, check waived"
   },
   {
    "kind": "picture",
    "slot": 9,
    "step": "a",
-   "why": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 46.55 s for 2.74 s: no clean stretch read, evenly spaced crop"
+   "why": "drift: kept as a crop, check waived"
   },
   {
    "kind": "picture",
    "slot": 10,
    "step": "a",
-   "why": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 50.15 s for 2.2 s: no clean stretch read, evenly spaced crop"
+   "why": "drift: kept as a crop, check waived"
   },
   {
    "kind": "picture",
    "slot": 11,
    "step": "a",
-   "why": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 59.4 s for 2.2 s: no clean stretch read, evenly spaced crop"
-  },
-  {
-   "kind": "picture",
-   "slot": 12,
-   "step": "a",
-   "why": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 56.48 s for 2.39 s: no clean stretch read, evenly spaced crop"
+   "why": "drift: kept as a crop, check waived"
   },
   {
    "kind": "picture",
    "slot": 13,
    "step": "a",
-   "why": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 65.71 s for 2.39 s: no clean stretch read, evenly spaced crop"
+   "why": "drift: kept as a crop, check waived"
   },
   {
-   "kind": "picture",
-   "slot": "reel",
+   "kind": "text",
+   "slot": "line 1",
    "step": "a",
-   "why": "fill, not band: the shot scan found no clean stretch before its cap, but the source fills 9:16 at up to 2x; crop kept"
+   "why": "2.5 s of 3.6 s: shot 3 lengthened by 1.26 s"
   },
   {
-   "kind": "picture",
-   "slot": "reel",
+   "kind": "text",
+   "slot": "line 3",
    "step": "a",
-   "why": "scan cap: 13 automatic slot(s) from the library or evenly spaced"
-  },
-  {
-   "kind": "picture",
-   "slot": 13,
-   "step": "a",
-   "why": "blocked (end slate): moved to hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 38.99 s (evenly spaced)"
+   "why": "3.6 s of 4.4 s: shot 7 lengthened by 0.96 s"
   }
  ],
- "job_to_pass_min": 13.0,
- "at": "2026-11-28T10:23:47Z",
+ "job_to_pass_min": 18.0,
+ "at": "2026-11-28T13:26:41Z",
  "findings": [],
  "notes": [
   "first frame: shot 0 hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
@@ -151,36 +133,179 @@
   "first frame: shot 11 hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
   "first frame: shot 12 hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
   "first frame: shot 13 hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 starts at 0.0 s, the video at 1.29 s; its first 1.29 s are lost",
-  "length 33.0 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: applied; music_pct 90.8; leak_pct 0.3; cache {'hit': 0, 'miss': 2}; separate_secs 10.4; secs 16.4",
-  "smear check: exempt 2.40 to 8.60 s (our own cards)",
-  "render_job: lifeless: {\"score\": 7.9, \"still_share\": 0.097, \"longest_still\": 0.8, \"cuts_per_10s\": 8.51, \"held_under_text\": 0.015, \"secs\": 32.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "length 32.9 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
+  "pace: nothing changes for 5.1 s at 3.4 (change every 4 s)",
+  "render_job: audio split: applied; music_pct 90.3; leak_pct 0.4; cache {'hit': 0, 'miss': 6}; separate_secs 13.9; secs 20.9",
+  "smear check: exempt 2.40 to 9.91 s (our own cards)",
+  "render_job: lifeless: {\"score\": 7.5, \"still_share\": 0.079, \"longest_still\": 0.9, \"cuts_per_10s\": 6.4, \"held_under_text\": 0.009, \"secs\": 32.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
   "estimate: headline: 28 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
  ],
  "autofixed": [
   {
-   "where": "line 1",
-   "rule": "text",
-   "what": "wider than the safe zone at 54 px: rewrapped",
-   "before": "ذكر موقع غيم\nسبارك (Game*Spark) أن لعبة HOOD",
-   "after": "ذكر موقع غيم سبارك (Game*Spark)\nأن لعبة HOOD"
+   "where": "shot 0",
+   "rule": "auto_shots",
+   "what": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 15.48 s for 3.8 s, focus 0.584"
   },
   {
-   "where": "credit 1",
-   "rule": "credit_width",
-   "what": "set one line at 36 px (was 40 px, too wide for the safe zone)",
-   "before": {
-    "text": "المصدر: موقع غيم سبارك (Game*Spark)،\nواللقطات من صفحة اللعبة على Steam",
-    "size": 40
-   },
-   "after": {
-    "text": "المصدر: Game*Spark · اللقطات: صفحة اللعبة على Steam",
-    "size": 36
-   }
+   "where": "shot 2",
+   "rule": "auto_shots",
+   "what": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 48.58 s for 2.4 s, focus 0.586"
+  },
+  {
+   "where": "shot 3",
+   "rule": "auto_shots",
+   "what": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 3.59 s for 2.4 s, focus 0.801"
+  },
+  {
+   "where": "shot 4",
+   "rule": "auto_shots",
+   "what": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer-ea-release.mp4 at 48.58 s for 2.6 s, focus 0.586 (nothing free in hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4)"
+  },
+  {
+   "where": "shot 5",
+   "rule": "auto_shots",
+   "what": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer-ea-release.mp4 at 16.72 s for 2.6 s, focus 0.584 (nothing free in hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4)"
+  },
+  {
+   "where": "shot 6",
+   "rule": "auto_shots",
+   "what": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer-ea-release.mp4 at 3.55 s for 2.5 s, focus 0.801 (shortened from 2.8 s: no free clean stretch that long)"
+  },
+  {
+   "where": "shot 7",
+   "rule": "auto_shots",
+   "what": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 7.65 s for 2.2 s, focus 0.0 (shortened from 2.8 s: no free clean stretch that long)"
+  },
+  {
+   "where": "shot 8",
+   "rule": "auto_shots",
+   "what": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer-ea-release.mp4 at 7.65 s for 2.2 s, focus 0.0 (shortened from 2.7 s: no free clean stretch that long)"
+  },
+  {
+   "where": "shot 9",
+   "rule": "auto_shots",
+   "what": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer-ea-release.mp4 at 21.11 s for 2.1 s, focus 0.823 (shortened from 2.7 s: no free clean stretch that long)"
+  },
+  {
+   "where": "shot 10",
+   "rule": "auto_shots",
+   "what": "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4 at 21.11 s for 2.1 s, focus 0.823 (shortened from 2.2 s: no free clean stretch that long)"
+  },
+  {
+   "where": "shot 2",
+   "rule": "subject_drift",
+   "what": "trimmed to 1.11 s, its longest safe length before the subject leaves the 9:16 window",
+   "before": [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
+    48.58,
+    2.42,
+    [
+     [
+      0.0,
+      0.586
+     ]
+    ]
+   ],
+   "after": [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
+    48.58,
+    1.11,
+    [
+     [
+      0.0,
+      0.586
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 1",
+   "rule": "fill",
+   "what": "lengthened 4.20 to 5.51 s to keep the time shot 2 gave up",
+   "before": 4.2,
+   "after": 5.51
+  },
+  {
+   "where": "shot 4",
+   "rule": "subject_drift",
+   "what": "trimmed to 1.18 s, its longest safe length before the subject leaves the 9:16 window",
+   "before": [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer-ea-release.mp4",
+    48.58,
+    2.56,
+    [
+     [
+      0.0,
+      0.586
+     ]
+    ]
+   ],
+   "after": [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer-ea-release.mp4",
+    48.58,
+    1.18,
+    [
+     [
+      0.0,
+      0.586
+     ]
+    ]
+   ]
+  },
+  {
+   "where": "shot 5",
+   "rule": "fill",
+   "what": "lengthened 2.56 to 3.94 s to keep the time shot 4 gave up",
+   "before": 2.56,
+   "after": 3.94
+  },
+  {
+   "where": "shot 3",
+   "rule": "subject_empty",
+   "what": "focus [[0.0, 0.801]] to 0.5: re-aimed (crop fix, 26 Nov 2026)",
+   "before": [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
+    3.59,
+    2.42,
+    [
+     [
+      0.0,
+      0.801
+     ]
+    ]
+   ],
+   "after": [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
+    3.59,
+    2.42,
+    0.5
+   ]
+  },
+  {
+   "where": "shot 6",
+   "rule": "subject_empty",
+   "what": "focus [[0.0, 0.801]] to 0.5: re-aimed (crop fix, 26 Nov 2026)",
+   "before": [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer-ea-release.mp4",
+    3.55,
+    2.46,
+    [
+     [
+      0.0,
+      0.801
+     ]
+    ]
+   ],
+   "after": [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer-ea-release.mp4",
+    3.55,
+    2.46,
+    0.5
+   ]
   }
  ],
- "job_sha": "98aebfd20f3487658dc1c6b530d9c5b98f6389e7",
- "dispatches": 2,
+ "job_sha": "06e82036b0808568bcca66199a91844efe722ca7",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1080,
   "max_zoom": 1.78,
@@ -196,11 +321,11 @@
  "person_shown": "n/a",
  "sound": "trailer",
  "shot_read": {
-  "secs": 25.7,
+  "secs": 0.4,
   "files": {
    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4": {
-    "secs": 25.3,
-    "cached": false,
+    "secs": 0.0,
+    "cached": true,
     "stages": {
      "decode": 8.7,
      "autofocus": 25.0,
@@ -226,15 +351,14 @@
  },
  "job_path": "jobs/done/hood-steam-early-access-very-positive-gamespark.json",
  "stage_minutes": {
-  "queue": 0.03,
+  "queue": 6.78,
   "setup": 0.18,
-  "fetch": 0.35,
-  "shots": 5.44,
-  "checks": 0.3,
-  "render": 4.81,
-  "after": 1.17,
-  "upload": 0.17,
-  "job": 12.08
+  "fetch": 0.23,
+  "shots": 2.56,
+  "checks": 2.7,
+  "render": 3.28,
+  "after": 1.25,
+  "job": 10.03
  },
  "job_after_autofix": {
   "name": "hood-steam-early-access-very-positive-gamespark",
@@ -269,87 +393,154 @@
   "shots": [
    [
     "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
-    0.0,
+    15.48,
     3.8,
-    null
+    [
+     [
+      0.0,
+      0.584
+     ]
+    ]
    ],
    [
     "hood-steam-early-access-very-positive-gamespark-gfx-figure.png",
     0.0,
-    4.2,
+    5.51,
     null
    ],
    [
     "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
-    0.0,
+    48.58,
+    1.11,
+    [
+     [
+      0.0,
+      0.586
+     ]
+    ]
+   ],
+   [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
+    3.59,
     2.42,
-    null
+    0.5
+   ],
+   [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer-ea-release.mp4",
+    48.58,
+    1.18,
+    [
+     [
+      0.0,
+      0.586
+     ]
+    ]
+   ],
+   [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer-ea-release.mp4",
+    16.72,
+    3.94,
+    [
+     [
+      0.0,
+      0.584
+     ]
+    ]
+   ],
+   [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer-ea-release.mp4",
+    3.55,
+    2.46,
+    0.5
    ],
    [
     "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
-    0.0,
-    2.42,
-    null
+    7.65,
+    2.16,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer-ea-release.mp4",
+    7.65,
+    2.16,
+    [
+     [
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer-ea-release.mp4",
+    21.11,
+    2.07,
+    [
+     [
+      0.0,
+      0.823
+     ]
+    ]
    ],
    [
     "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
-    0.0,
-    2.56,
-    null
+    21.11,
+    2.07,
+    [
+     [
+      0.0,
+      0.823
+     ]
+    ]
    ],
    [
     "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
-    0.0,
-    2.56,
-    null
-   ],
-   [
-    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
-    0.0,
-    2.78,
-    null
-   ],
-   [
-    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
-    0.0,
-    2.78,
-    null
-   ],
-   [
-    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
-    0.0,
-    2.74,
-    null
-   ],
-   [
-    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
-    0.0,
-    2.74,
-    null
-   ],
-   [
-    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
-    0.0,
+    12.21,
     2.2,
-    null
+    [
+     [
+      0.0,
+      0.625
+     ],
+     [
+      0.605,
+      0.32
+     ],
+     [
+      1.971,
+      0.657
+     ]
+    ]
    ],
    [
     "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
-    0.0,
-    2.2,
-    null
-   ],
-   [
-    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
-    0.0,
+    38.63,
     2.39,
-    null
+    [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      1.251,
+      0.346
+     ]
+    ]
    ],
    [
     "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
-    0.0,
+    59.09,
     2.39,
-    null
+    [
+     [
+      0.0,
+      0.577
+     ]
+    ]
    ]
   ],
   "lines": [
@@ -382,7 +573,7 @@
     7,
     [
      [
-      "إذ كانت 83 بالمئة من 150 مراجعة\nإيجابية في يوم الإطلاق",
+      "إذ كانت 83 بالمئة من 150 مراجعة\nإيجابية في يوم الإطلاق.",
       {
        "size": 54
       }
@@ -391,22 +582,10 @@
    ],
    [
     8,
-    9,
-    [
-     [
-      "وهي لعبة محاكاة حياة إجرامية\nبمجسمات منخفضة التفاصيل،",
-      {
-       "size": 54
-      }
-     ]
-    ]
-   ],
-   [
     10,
-    11,
     [
      [
-      "تسرق فيها وتزرع وتدير متجرك",
+      "وهي لعبة محاكاة حياة إجرامية\nبمجسمات منخفضة التفاصيل.",
       {
        "size": 54
       }
@@ -414,7 +593,7 @@
     ]
    ],
    [
-    12,
+    11,
     13,
     [
      [
@@ -437,7 +616,7 @@
     }
    ]
   ],
-  "spoken": "ذكر موقع غيم سبارك (Game*Spark) أن لعبة HOOD بدأت الوصول المبكر على Steam بتقييم إيجابي جدًا، إذ كانت 83 بالمئة من 150 مراجعة إيجابية في يوم الإطلاق. وهي لعبة محاكاة حياة إجرامية بمجسمات منخفضة التفاصيل، تسرق فيها وتزرع وتدير متجرك. وسعرها 1,150 ينًا، أو 920 ينًا حتى 7 ديسمبر.",
+  "spoken": "ذكر موقع غيم سبارك (Game*Spark) أن لعبة HOOD بدأت الوصول المبكر على Steam بتقييم إيجابي جدًا، إذ كانت 83 بالمئة من 150 مراجعة إيجابية في يوم الإطلاق. وهي لعبة محاكاة حياة إجرامية بمجسمات منخفضة التفاصيل. وسعرها 1,150 ينًا، أو 920 ينًا حتى 7 ديسمبر.",
   "headline": "لعبة HOOD تبدأ الوصول المبكر\nبتقييمات إيجابية جدًا",
   "label": "تقرير",
   "game": "HOOD",
@@ -447,9 +626,9 @@
    "action"
   ],
   "texts": {
-   "instagram": "تقرير: HOOD تبدأ الوصول المبكر على Steam بتقييم إيجابي جدًا\n\nذكر موقع غيم سبارك (Game*Spark) أن لعبة HOOD بدأت الوصول المبكر على Steam، وكانت 83 بالمئة من 150 مراجعة إيجابية في يوم الإطلاق.\n\nوهي لعبة محاكاة حياة إجرامية بمجسمات منخفضة التفاصيل، تسرق فيها وتزرع وتدير متجرك.\n\nوسعرها 1,150 ينًا، أو 920 ينًا حتى 7 ديسمبر.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع غيم سبارك (Game*Spark).\n\n#ألعاب #أخبار_الألعاب #HOOD #Steam",
-   "x": "تقرير: ذكر موقع غيم سبارك (Game*Spark) أن لعبة HOOD بدأت الوصول المبكر على Steam، وكانت 83 بالمئة من 150 مراجعة إيجابية في يوم الإطلاق. المصدر: غيم سبارك.",
-   "threads": "تقرير: لعبة HOOD لمحاكاة الحياة الإجرامية بدأت الوصول المبكر على Steam بتقييم إيجابي جدًا، بحسب موقع غيم سبارك (Game*Spark).\n\nوسعرها 920 ينًا حتى 7 ديسمبر.\n\nالمصدر: موقع غيم سبارك (Game*Spark)"
+   "instagram": "تقرير: HOOD تبدأ الوصول المبكر على Steam بتقييم إيجابي جدًا\n\nذكر موقع غيم سبارك (Game*Spark) أن لعبة HOOD بدأت الوصول المبكر على Steam، وكانت 83 بالمئة من 150 مراجعة إيجابية في يوم الإطلاق.\n\nوهي لعبة محاكاة حياة إجرامية بمجسمات منخفضة التفاصيل.\n\nوسعرها 1,150 ينًا، أو 920 ينًا حتى 7 ديسمبر.\n\nاللقطات من صفحة اللعبة على Steam.\n\nالمصدر: موقع غيم سبارك (Game*Spark).\n\n#ألعاب #أخبار_الألعاب #HOOD #Steam",
+   "reel_x": "شاهد لقطات من HOOD، لعبة محاكاة حياة إجرامية بمجسمات منخفضة التفاصيل، التي حصلت على تقييم إيجابي جدًا في أول يوم من الوصول المبكر بحسب غيم سبارك (Game*Spark).",
+   "reel_threads": "شاهدوا لقطات من HOOD، لعبة محاكاة حياة إجرامية.\n\nحصلت على تقييم إيجابي جدًا في أول يوم من الوصول المبكر، بحسب موقع غيم سبارك (Game*Spark).\n\nالمصدر: موقع غيم سبارك (Game*Spark)"
   },
   "source": "موقع غيم سبارك (Game*Spark)، واللقطات من صفحة اللعبة على Steam",
   "date": "28 Nov 2026",
@@ -460,7 +639,7 @@
   "cut": false,
   "track": [
    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
-   0.0
+   15.48
   ],
   "track_from_first_shot": true,
   "angle": {
@@ -492,7 +671,7 @@
     "file": "hood-steam-early-access-very-positive-gamespark-gfx-figure.png",
     "kind": "fact",
     "value": "150",
-    "label": "التقييم",
+    "label": "المراجعات",
     "note": "مراجعة"
    }
   ],
@@ -501,20 +680,39 @@
    4.0,
    60.0
   ],
-  "shots_auto": [
-   0,
-   2,
-   3,
-   4,
-   5,
-   6,
-   7,
-   8,
-   9,
-   10,
-   11,
-   12,
-   13
+  "cut_ok": [
+   [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
+    12.21,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
+    38.63,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
+    59.09,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ]
+  ],
+  "drift_ok": [
+   [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
+    12.21,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
+    38.63,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ],
+   [
+    "hood-steam-early-access-very-positive-gamespark-hood-gameplay-trailer.mp4",
+    59.09,
+    "never refuse: no clean stretch read, evenly spaced fallback"
+   ]
   ]
  }
 }
