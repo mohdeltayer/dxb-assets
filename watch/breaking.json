@@ -1,8 +1,8 @@
 {
  "schema": 1,
  "file": "breaking",
- "generated_at": "2026-11-28T15:52:05Z",
- "seq": 972,
+ "generated_at": "2026-11-28T16:52:06Z",
+ "seq": 973,
  "note": "items: first handed over in this push (breaking_seq == seq). recent: handed over in the last 24 h. An item from a breaking source is a lead from a first-party source, not a verdict: the Verifier grades it.",
  "items": [],
  "recent": [
@@ -168,53 +168,11 @@
    ],
    "breaking_source": true,
    "breaking_seq": 944
-  },
-  {
-   "id": 25218,
-   "source": "Xbox (YouTube)",
-   "source_kind": "youtube",
-   "title": "Hollow Knight: Silksong - Sea of Sorrow Trailer",
-   "url": "https://www.youtube.com/watch?v=srZGGEyJQ9Q",
-   "published": "2026-11-27T16:00Z",
-   "first_seen": "2026-11-27T16:15:11Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i4.ytimg.com/vi/srZGGEyJQ9Q/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=srZGGEyJQ9Q"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 942
-  },
-  {
-   "id": 25213,
-   "source": "PlayStation (YouTube)",
-   "source_kind": "youtube",
-   "title": "Infinity Nikki - Version 3.0 [Of Yesterday and Tomorrow] | PS5 Games",
-   "url": "https://www.youtube.com/watch?v=I1JlNls8ZmI",
-   "published": "2026-11-27T16:00Z",
-   "first_seen": "2026-11-27T16:10:14Z",
-   "media": [
-    {
-     "type": "image",
-     "url": "https://i2.ytimg.com/vi/I1JlNls8ZmI/hqdefault.jpg"
-    },
-    {
-     "type": "video",
-     "url": "https://www.youtube.com/watch?v=I1JlNls8ZmI"
-    }
-   ],
-   "breaking_source": true,
-   "breaking_seq": 941
   }
  ],
  "watcher": {
   "host": "dxb-render-1",
-  "last_poll_at": "2026-11-28T15:50:14Z",
+  "last_poll_at": "2026-11-28T16:50:04Z",
   "sources_enabled": 101,
   "sources_ok": 101,
   "sources_failing": 0,
