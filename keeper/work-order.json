@@ -1,0 +1,241 @@
+{
+ "generated_at": "2026-11-28T21:27:28Z",
+ "generated_dubai": "Sun 29 Nov 01:27 Dubai",
+ "source": "keeper.yml workorder (adv-20261109-coordination-in-code)",
+ "posts_from": "commitments, format ledger, submissions and published logs (no server Publer read)",
+ "alarms": [
+  {
+   "key": "serverpost|ready|ffxv-10th-anniversary-square-enix-famitsu",
+   "kind": "serverpost-ready",
+   "line": "schedule ffxv-10th-anniversary-square-enix-famitsu at Sat 28 Nov 20:45 Dubai through the Publer connector: instagram Sat 28 Nov 20:45 Dubai; x Sat 28 Nov 20:45 Dubai; threads Sat 28 Nov 20:45 Dubai (texts and labels in the story file; check Publer first (scheduled and the last 48 hours published, publercheck.py), schedule through the Publer connector at the slot with the labels (each network at its time in \"networks\"; X and Threads with the story's reel_x and reel_threads when a quick post went out), then serverpost.py scheduled)",
+   "clears": "serverpost.py scheduled <story> --slot <ISO> after the submit reads complete"
+  },
+  {
+   "key": "serverpost|ready|subnautica-2-tar-trek-dec-1-steam",
+   "kind": "serverpost-ready",
+   "line": "schedule subnautica-2-tar-trek-dec-1-steam at Sat 28 Nov 22:00 Dubai through the Publer connector: instagram Sat 28 Nov 22:00 Dubai; x Sat 28 Nov 22:00 Dubai; threads Sat 28 Nov 22:00 Dubai (texts and labels in the story file; check Publer first (scheduled and the last 48 hours published, publercheck.py), schedule through the Publer connector at the slot with the labels (each network at its time in \"networks\"; X and Threads with the story's reel_x and reel_threads when a quick post went out), then serverpost.py scheduled)",
+   "clears": "serverpost.py scheduled <story> --slot <ISO> after the submit reads complete"
+  },
+  {
+   "key": "serverpost|held|warframe-tau-gameplay-trailer-dec-9-gonintendo",
+   "kind": "serverpost-held",
+   "line": "warframe-tau-gameplay-trailer-dec-9-gonintendo held by the server: second factual_error verdict on the fixed Reel: held, never posted with a known wrong fact or graphic content; Mohammad decides",
+   "clears": "a director file with job_patch or pass, or Mohammad decides"
+  },
+  {
+   "key": "serverpost|ready|warframe-tau-gameplay-trailer-dec-9-gonintendo",
+   "kind": "serverpost-ready",
+   "line": "schedule warframe-tau-gameplay-trailer-dec-9-gonintendo at Sun 29 Nov 00:00 Dubai through the Publer connector: instagram Sun 29 Nov 00:00 Dubai; x Sun 29 Nov 00:00 Dubai; threads Sun 29 Nov 00:00 Dubai (texts and labels in the story file; fix render of factual_error landed (warframe-tau-gameplay-trailer-dec-9-gonintendo-reel-v2.mp4); scheduled as fixed; check Publer first (scheduled and the last 48 hours published, publercheck.py), schedule through the Publer connector at the slot with the labels (each network at its time in \"networks\"; X and Threads with the story's reel_x and reel_threads when a quick post went out), then serverpost.py scheduled)",
+   "clears": "serverpost.py scheduled <story> --slot <ISO> after the submit reads complete"
+  },
+  {
+   "key": "serverpost|ready|gta-vi-all-achievements-152-hours-xbox-destructoid",
+   "kind": "serverpost-ready",
+   "line": "schedule gta-vi-all-achievements-152-hours-xbox-destructoid at Sun 29 Nov 01:00 Dubai through the Publer connector: instagram Sun 29 Nov 01:00 Dubai; x Sun 29 Nov 01:00 Dubai; threads Sun 29 Nov 01:00 Dubai (texts and labels in the story file; check Publer first (scheduled and the last 48 hours published, publercheck.py), schedule through the Publer connector at the slot with the labels (each network at its time in \"networks\"; X and Threads with the story's reel_x and reel_threads when a quick post went out), then serverpost.py scheduled)",
+   "clears": "serverpost.py scheduled <story> --slot <ISO> after the submit reads complete"
+  }
+ ],
+ "notes": [
+  {
+   "key": "hop|unacked|director-20261128-silksong-sea-of-sorrow-v2",
+   "kind": "unacked",
+   "line": "handoff director-20261128-silksong-sea-of-sorrow-v2 to Production 2 unacknowledged 1260 min (from Production 1 at 04:26)",
+   "clears": "this run's board line: ack: director-20261128-silksong-sea-of-sorrow-v2 (scheduled HH:MM Dubai | building, target HH:MM | declined: reason)"
+  },
+  {
+   "key": "hop|mirror|2026-11-28T04:49:29Z",
+   "kind": "mirror",
+   "line": "inbox mirror export is 997 min old (desk/mirror.json Sat 28 Nov 08:49 Dubai)",
+   "clears": "Production 1: run the inbox mirror task"
+  },
+  {
+   "key": "hop|publer|2026112901",
+   "kind": "publer",
+   "line": "keeper coverage stale: no Publer read in 15 min (the server sent no Publer read; server pass Sun 29 Nov 01:27 Dubai)",
+   "clears": "Production 1: check dxb-keeper.timer and /etc/dxb-keeper/publer.key on dxb-render-1 (backoffice-install keeper)"
+  },
+  {
+   "key": "serverpost|fix|warframe-tau-gameplay-trailer-dec-9-gonintendo",
+   "kind": "director fix render",
+   "line": "warframe-tau-gameplay-trailer-dec-9-gonintendo rendering once more (factual_error: Retitle as footage from Warframe before the Tau update and credit the footage as earlier trailers, not the Tau trailer.), then scheduled",
+   "clears": "the new Reel lands and the server schedules it"
+  }
+ ],
+ "unfinished": [],
+ "orders": [],
+ "handoffs": [
+  {
+   "id": "release-20261127-shot-rules",
+   "from": "Production 1",
+   "at": "2026-11-27T07:22:51Z",
+   "due": "2026-11-27T08:22:51Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "dispatch gta-vi-no-chainsaw-katana-rockstar-vgc on main; shorten the Silent Hill headline"
+  },
+  {
+   "id": "fix-20261127-render-lane",
+   "from": "Production 1",
+   "at": "2026-11-27T17:03:50Z",
+   "due": "2026-11-27T18:03:50Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "fix the chainsaw job lines to 9 shots and dispatch render-live; dispatch slip.yml for every slip pushed"
+  },
+  {
+   "id": "director-20261128-silksong-sea-of-sorrow-v2",
+   "from": "Production 1",
+   "at": "2026-11-28T00:26:45Z",
+   "due": "2026-11-28T01:26:45Z",
+   "overdue": true,
+   "t0": false,
+   "acked": false,
+   "ack_at": null,
+   "ask": "Director verdict on v2 (not by Production 1); on pass schedule 28 Nov 20:00 Dubai, three networks, labels as listed"
+  }
+ ],
+ "digest_head": {
+  "seq": 977,
+  "generated_at": "2026-11-28T20:52:09Z",
+  "age_min": 35
+ },
+ "scout": {
+  "from_line": null,
+  "leads": null,
+  "rejections": []
+ },
+ "verdicts": {
+  "unavailable": "no server read"
+ },
+ "next_slot": {
+  "last_post": "2026-11-27T17:30:00Z",
+  "covered_until": "2026-11-27T17:30:00Z",
+  "due_by": "2026-11-27T18:30:00Z",
+  "earliest": "2026-11-28T21:27:28Z",
+  "overdue": true,
+  "line": "next slot: OVERDUE, nothing since Fri 27 Nov 21:30 Dubai (gap limit 60 min passed at 22:30)"
+ },
+ "caps": {
+  "at": "2026-11-28T21:27:28Z",
+  "evergreen_allowed": true,
+  "evergreen_reopens": "2026-11-28T21:27:28Z",
+  "evergreen_why": [],
+  "numbers_allowed": true,
+  "numbers_why": [],
+  "card_led_window": "0 of the last 5 card-led (at most 2 in 6)",
+  "card_led_allowed": true,
+  "last_templates": [
+   "trailer",
+   "trailer",
+   "trailer"
+  ]
+ },
+ "renders": [],
+ "names_to_review": [
+  {
+   "name": "Siliconera",
+   "story": "2026-11-25-witchbrook-gone-gold-siliconera"
+  },
+  {
+   "name": "Chucklefish",
+   "story": "2026-11-25-witchbrook-gone-gold-siliconera"
+  },
+  {
+   "name": "Mike Booth",
+   "story": "2026-11-26-4-loop-closed-beta-dec-10-gamespark"
+  },
+  {
+   "name": "Unsolved Hunts",
+   "story": "2026-11-26-ac-black-flag-resynced-treasure-hunt-games-press"
+  },
+  {
+   "name": "DeadPixel Studios",
+   "story": "2026-11-26-croaked-free-demo-nov-27-steam-games-press"
+  },
+  {
+   "name": "Pond Loop",
+   "story": "2026-11-26-croaked-free-demo-nov-27-steam-games-press"
+  },
+  {
+   "name": "Team Cherry",
+   "story": "2026-11-26-hollow-knight-silksong-cherry-time-nov-27-nintendo-everything"
+  },
+  {
+   "name": "Low Orbit Games",
+   "story": "2026-11-26-orion-space-4x-early-access-dec-14-games-press"
+  },
+  {
+   "name": "Feardemic",
+   "story": "2026-11-26-retail-hell-consoles-gematsu"
+  },
+  {
+   "name": "LEAP Game Studios",
+   "story": "2026-11-26-retail-hell-consoles-gematsu"
+  },
+  {
+   "name": "Kusa Games",
+   "story": "2026-11-26-split-brain-samsara-launch-steam-games-press"
+  },
+  {
+   "name": "GT Planet",
+   "story": "2026-11-27-gta-vi-car-physics-gran-turismo-pro-push-square"
+  },
+  {
+   "name": "Lewis Bentley",
+   "story": "2026-11-27-gta-vi-car-physics-gran-turismo-pro-push-square"
+  },
+  {
+   "name": "Rockstar",
+   "story": "2026-11-27-gta-vi-car-physics-gran-turismo-pro-push-square"
+  },
+  {
+   "name": "Rob Nelson",
+   "story": "2026-11-27-gta-vi-no-chainsaw-katana-rockstar-vgc"
+  },
+  {
+   "name": "GameSpark",
+   "story": "2026-11-27-iron-sirocco-mech-survivor-announced-gamespark"
+  },
+  {
+   "name": "Konami",
+   "story": "2026-11-27-silent-hill-f-2-72-off-steam-black-friday-famitsu"
+  },
+  {
+   "name": "Archetype Entertainment",
+   "story": "2026-11-28-exodus-pc-requirements-saudi-gamer"
+  },
+  {
+   "name": "KINDA",
+   "story": "2026-11-28-fumes-kinda-rally-update-gamespark"
+  },
+  {
+   "name": "Destructoid",
+   "story": "2026-11-28-gta-vi-all-achievements-152-hours-xbox-destructoid"
+  },
+  {
+   "name": "Nexon",
+   "story": "2026-11-28-maplestory-overdrive-dec-9-damage-cap-automaton"
+  },
+  {
+   "name": "GamingTrend",
+   "story": "2026-11-28-professor-layton-new-world-of-steam-finished-dec-1-event-gamingtrend"
+  },
+  {
+   "name": "LEVEL5",
+   "story": "2026-11-28-professor-layton-new-world-of-steam-finished-dec-1-event-gamingtrend"
+  },
+  {
+   "name": "QuizKnock",
+   "story": "2026-11-28-professor-layton-new-world-of-steam-finished-dec-1-event-gamingtrend"
+  },
+  {
+   "name": "Toru Minegishi",
+   "story": "2026-11-28-tomodachi-life-living-the-dream-soundtrack-nintendo-music-nintendo-life"
+  }
+ ],
+ "instructions": "Production 2: execute this work order top to bottom. Clear the alarms first, then pick up what the last run left unfinished, then the orders (T0 first), then the handoffs oldest first, then the scout (fresh digest with the forced refspec; carried leads first), then fill the next slot under the caps. Report each item on the board with evidence: \"wo <generated_at> item <n>: <outcome> (evidence)\"."
+}
