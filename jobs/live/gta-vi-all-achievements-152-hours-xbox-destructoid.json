@@ -1,0 +1,186 @@
+{
+ "name": "gta-vi-all-achievements-152-hours-xbox-destructoid",
+ "story": "2026-11-28-gta-vi-all-achievements-152-hours-xbox-destructoid",
+ "footage_source": "https://www.playstation.com/en-ae/games/grand-theft-auto-vi/",
+ "kind_news": "numbers",
+ "story_class": "numbers",
+ "story_class_why": "kind numbers",
+ "skin_why": "genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
+ "built_by": "server-slip",
+ "render_lane": "server",
+ "out": "cards/2026-11/gta-vi-all-achievements-152-hours-xbox-destructoid-reel-v1.mp4",
+ "split_fallback": "ladder",
+ "footage": [
+  {
+   "file": "gta6-launch-master.mp4",
+   "note": "Rockstar GTAVI_Launch_Trailer.mp4 (3840x2160, 70 Mbps) scaled to 1920x1080 crf 17; same timeline, so the shot times hold",
+   "repo": "live/2026-11-20/gta6-launch-1080.mp4"
+  }
+ ],
+ "shots": [
+  [
+   "gta6-launch-master.mp4",
+   "auto",
+   3.8,
+   null
+  ],
+  [
+   "gta-vi-all-achievements-152-hours-xbox-destructoid-gfx-figure.png",
+   0.0,
+   4.2,
+   null
+  ],
+  [
+   "gta6-launch-master.mp4",
+   "auto",
+   2.39,
+   null
+  ],
+  [
+   "gta6-launch-master.mp4",
+   "auto",
+   2.39,
+   null
+  ],
+  [
+   "gta6-launch-master.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "gta6-launch-master.mp4",
+   "auto",
+   2.2,
+   null
+  ],
+  [
+   "gta6-launch-master.mp4",
+   "auto",
+   2.24,
+   null
+  ],
+  [
+   "gta6-launch-master.mp4",
+   "auto",
+   2.24,
+   null
+  ]
+ ],
+ "lines": [
+  [
+   2,
+   3,
+   [
+    [
+     "ذكر موقع Destructoid\nأن لاعبًا",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   4,
+   5,
+   [
+    [
+     "حصل على جميع\nإنجازات GTA VI على Xbox",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ],
+  [
+   6,
+   7,
+   [
+    [
+     "وبحسب الموقع،\nاستغرق الأمر 152 ساعة فقط",
+     {
+      "size": 54
+     }
+    ]
+   ]
+  ]
+ ],
+ "credits": [
+  [
+   0,
+   7,
+   "المصدر: موقع ديستركتويد (Destructoid)،\nولقطات من روكستار (Rockstar Games)",
+   {
+    "size": 40,
+    "band": true
+   }
+  ]
+ ],
+ "spoken": "ذكر موقع Destructoid أن لاعبًا حصل على جميع إنجازات GTA VI على Xbox. وبحسب الموقع، استغرق الأمر 152 ساعة فقط.",
+ "headline": "لاعب ينهي كل إنجازات\nلعبة GTA VI على Xbox",
+ "label": "تقرير",
+ "game": "GTA VI",
+ "game_short": "GTA VI",
+ "game_key": "gta vi",
+ "genre": [
+  "action"
+ ],
+ "texts": {
+  "instagram": "ذكر موقع ديستركتويد (Destructoid) أن لاعبًا حصل على جميع إنجازات GTA VI على Xbox.\n\nوبحسب الموقع، استغرق الأمر 152 ساعة فقط.\n\nاللقطات من العرض الرسمي للعبة.\n\nالمصدر: موقع ديستركتويد (Destructoid).\n\n#ألعاب #أخبار_الألعاب #GTAVI #Xbox",
+  "x": "تقرير: ذكر موقع ديستركتويد (Destructoid) أن لاعبًا حصل على جميع إنجازات GTA VI على Xbox خلال 152 ساعة. المصدر: ديستركتويد.",
+  "threads": "تقرير: ذكر موقع ديستركتويد (Destructoid) أن لاعبًا حصل على جميع إنجازات GTA VI على Xbox.\n\nوبحسب الموقع، استغرق الأمر 152 ساعة فقط.\n\nالمصدر: موقع ديستركتويد"
+ },
+ "source": "موقع ديستركتويد (Destructoid)، ولقطات من روكستار (Rockstar Games)",
+ "date": "28 Nov 2026",
+ "theme": "playful",
+ "style": null,
+ "template": "numbers",
+ "skin": "house",
+ "cut": false,
+ "track": [
+  "gta6-launch-master.mp4",
+  0.0
+ ],
+ "track_from_first_shot": true,
+ "angle": {
+  "why_now": "Destructoid reported on 28 Nov 2026 that a player earned every GTA VI achievement on Xbox in 152 hours.",
+  "what_it_means_here": "A concrete completion time for a game everyone is playing; only the headline figures are confirmed."
+ },
+ "decision_log": {
+  "source": "server slip build (adv-20261117-server-news-line-editor-model Phase 1)",
+  "template": "numbers: kind numbers",
+  "skin": "house: genre action: its kit is not built yet (skins.KITS scifi, fantasy)",
+  "footage": "gta6-launch-master.mp4 from the resolver (https://www.playstation.com/en-ae/games/grand-theft-auto-vi/)",
+  "shots": "server-picked clean stretches in source order (autoshots)",
+  "music": "the trailer's own sound from the first shot (sound ladder: split, music only, franchise theme, our bed)"
+ },
+ "reel_check": {
+  "source read and first report noted": "yes: Destructoid, Someone got every achievement in GTA 6 on the Xbox, and all it took them was 152 hours, 28 Nov 2026 19:37Z (headline only, page not readable) (https://www.destructoid.com/someone-platinumed-gta-6-on-xbox-in-10-days/); first report: Destructoid 28 Nov 2026 19:37Z",
+  "not already posted (ledger find)": "yes: ledger.py find recorded in the story file at build",
+  "angle before lines": "yes: angle in the slip",
+  "one spoken paragraph, lines cut from it in order": "yes: slip.beats() keeps every word in order; the text check confirms it",
+  "names match names-ar": "yes: slip.name_flags() run; flags listed on the result for the editor",
+  "release verbs and house rules": "yes: slip.problems() (Arabic first, no em dash, Western digits, hashtags only on Instagram)",
+  "footage first, official": "yes: steam None from the resolver, decode clean",
+  "credit on every clip": "yes: one credit over every shot",
+  "sound": "yes: trailer sound from the first shot, split per shot on the server",
+  "picture matches the lines": "n/a: shots are picked by the server; the editor reviews the look frames at the ticket"
+ },
+ "gfx": [
+  {
+   "file": "gta-vi-all-achievements-152-hours-xbox-destructoid-gfx-figure.png",
+   "kind": "fact",
+   "value": "152",
+   "label": "ساعة لجمع كل الإنجازات",
+   "note": "بحسب ديستركتويد"
+  }
+ ],
+ "ground_footage": [
+  "gta6-launch-master.mp4",
+  4.0,
+  60.0
+ ],
+ "names_to_review": [
+  "Destructoid"
+ ]
+}
