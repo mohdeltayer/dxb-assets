@@ -4,7 +4,7 @@
  "kind_news": "trailer",
  "story_class": "trailer",
  "built_by": "production-1",
- "out": "cards/2026-11/hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry-reel-v1.mp4",
+ "out": "cards/2026-11/hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry-reel-v2.mp4",
  "footage": [
   {
    "file": "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
@@ -21,7 +21,7 @@
    [
     [
      0.0,
-     0.429
+     0.33
     ]
    ]
   ],
@@ -32,11 +32,7 @@
    [
     [
      0.0,
-     0.004
-    ],
-    [
-     2.367,
-     0.372
+     0.5
     ]
    ]
   ],
@@ -47,7 +43,7 @@
    [
     [
      0.0,
-     0.332
+     0.5
     ]
    ]
   ],
@@ -58,11 +54,7 @@
    [
     [
      0.0,
-     0.0
-    ],
-    [
-     2.017,
-     0.809
+     0.4
     ]
    ]
   ],
@@ -73,7 +65,7 @@
    [
     [
      0.0,
-     1.0
+     0.5
     ]
    ]
   ],
@@ -84,11 +76,7 @@
    [
     [
      0.0,
-     0.515
-    ],
-    [
-     0.983,
-     0.23
+     0.6
     ]
    ]
   ],
@@ -99,22 +87,18 @@
    [
     [
      0.0,
-     0.047
-    ],
-    [
-     1.6,
-     0.718
+     0.5
     ]
    ]
   ],
   [
    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
-   63.0,
-   3.6,
+   62.35,
+   2.5,
    [
     [
      0.0,
-     0.0
+     0.48
     ]
    ]
   ]
@@ -149,7 +133,7 @@
    7,
    [
     [
-     "ويكشف العرض زعماء جددًا تصدر\nالتوسعة مجانًا للجميع في 11 ديسمبر",
+     "ويكشف العرض زعماء جددًا\nتصدر مجانًا في 11 ديسمبر",
      {
       "size": 54
      }
@@ -168,7 +152,7 @@
    }
   ]
  ],
- "spoken": "تبحر البطلة Hornet في قارب صيد، وتعبر حصونًا في البحر، وتواجه وحوشًا بحرية جديدة، وتنزل إلى كهوف عميقة. ويكشف العرض زعماء جددًا. تصدر التوسعة مجانًا للجميع في 11 ديسمبر.",
+ "spoken": "تبحر البطلة Hornet في قارب صيد، وتعبر حصونًا في البحر، وتواجه وحوشًا بحرية جديدة، وتنزل إلى كهوف عميقة. ويكشف العرض زعماء جددًا. تصدر مجانًا في 11 ديسمبر.",
  "headline": "أول نظرة على Sea of Sorrow\nتوسعة Silksong المجانية",
  "label": "رسمي",
  "game": "Hollow Knight: Silksong",
@@ -178,7 +162,7 @@
   "action"
  ],
  "subject_person": null,
- "stylised": true,
+ "stylised": false,
  "source": "تيم تشيري (Team Cherry)",
  "date": "28 Nov 2026",
  "theme": "cold",
@@ -229,6 +213,58 @@
   "sound": "yes: the trailer's own music from the first shot (music_only)",
   "picture matches the lines": "yes: each line on the shot it describes (hand-picked)"
  },
- "layout": "showcase",
- "showcase_reason": "the trailer clashes with our text in a 9:16 crop: stylised art: the person, vehicle and animal detector cannot frame its characters (crop fix, 26 Nov 2026) (16:9 fallback, Mohammad 20 Nov 2026)"
+ "showcase_fallback": false,
+ "frame_ok": [
+  [
+   "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+   40.4,
+   "looked at by Production 1 on 2 fps sheets: Hornet or the boss inside the window at this focus"
+  ],
+  [
+   "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+   11.45,
+   "looked at by Production 1 on 2 fps sheets: Hornet or the boss inside the window at this focus"
+  ],
+  [
+   "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+   14.6,
+   "looked at by Production 1 on 2 fps sheets: Hornet or the boss inside the window at this focus"
+  ],
+  [
+   "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+   18.7,
+   "looked at by Production 1 on 2 fps sheets: Hornet or the boss inside the window at this focus"
+  ],
+  [
+   "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+   25.28,
+   "looked at by Production 1 on 2 fps sheets: Hornet or the boss inside the window at this focus"
+  ],
+  [
+   "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+   36.2,
+   "looked at by Production 1 on 2 fps sheets: Hornet or the boss inside the window at this focus"
+  ],
+  [
+   "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+   48.0,
+   "looked at by Production 1 on 2 fps sheets: Hornet or the boss inside the window at this focus"
+  ],
+  [
+   "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+   62.35,
+   "looked at by Production 1 on 2 fps sheets: Hornet or the boss inside the window at this focus"
+  ]
+ ],
+ "letterbox_ok": [
+  [
+   "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+   62.35,
+   "the shore shot's dark top rows are picture (sky), not bars"
+  ]
+ ],
+ "rerender": {
+  "reason": "line timing and closing shot",
+  "note": "v1 took the band layout for stylised art, which runs the lines back to back from frame 0, and the end-slate rule moved the closing shore shot; Mohammad's brief puts each line on the shot it describes. v2: full-height crop with focus set by eye, closing shot ends before the last 9 s."
+ }
 }

@@ -1,17 +1,8 @@
 {
  "name": "hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry",
- "out": "cards/2026-11/hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry-reel-v1.mp4",
+ "out": "cards/2026-11/hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry-reel-v2.mp4",
  "verdict": "pass",
  "warnings": [
-  {
-   "stage": "shot gate",
-   "detail": "shot 7 (silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4 63.00 s): is letterboxed on this stretch (660 of 720 rows of picture); no clean start of 3.60 s within 12 s: pick another stretch or shorten the shot shot_timing",
-   "shot": 7
-  },
-  {
-   "stage": "headline",
-   "detail": "headline too long for 2 lines at 72 px; set at 68 px on 2 lines (cut it to a few words next time): أول نظرة على Sea of Sorrow\nتوسعة Silksong المجانية"
-  },
   {
    "stage": "headline",
    "detail": "headline too long for 2 lines at 72 px; set at 68 px on 2 lines (cut it to a few words next time): أول نظرة على Sea of Sorrow\nتوسعة Silksong المجانية"
@@ -19,117 +10,47 @@
  ],
  "ladder": [
   {
-   "kind": "picture",
-   "slot": "reel",
-   "step": "b",
-   "why": "showcase layout, 16:9 fallback: stylised art: the person, vehicle and animal detector cannot frame its characters (crop fix, 26 Nov 2026)"
-  },
-  {
-   "kind": "picture",
-   "slot": 7,
-   "step": "a",
-   "why": "letterbox: kept as a crop, check waived"
-  },
-  {
-   "kind": "picture",
-   "slot": 7,
-   "step": "a",
-   "why": "blocked (end slate): moved to silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4 at 32.19 s (evenly spaced)"
-  },
-  {
    "kind": "text",
    "slot": "reel",
    "step": "a",
    "why": "soft shade under line group(s) [2]: bright footage behind them"
   }
  ],
- "job_to_pass_min": 7.8,
- "at": "2026-11-27T23:53:01Z",
+ "job_to_pass_min": 5.3,
+ "at": "2026-11-28T00:00:08Z",
  "findings": [],
  "notes": [
-  "length 20.9 s before the end card (target 12 to 20 s): outside the target; four lines is the normal case, six only when the story needs them",
-  "render_job: audio split: applied; music_pct 42.3; leak_pct 0.4; cache {'hit': 0, 'miss': 2}; separate_secs 8.7; secs 13.5",
-  "render_job: lifeless: {\"score\": 0.0, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 3.35, \"held_under_text\": 0.0, \"secs\": 20.9, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
+  "length 19.8 s before the end card (target 12 to 20 s)",
+  "render_job: audio split: applied; music_pct 45.6; leak_pct 0.8; cache {'hit': 0, 'miss': 3}; separate_secs 8.7; secs 12.9",
+  "render_job: lifeless: {\"score\": 0.1, \"still_share\": 0.0, \"longest_still\": 0.0, \"cuts_per_10s\": 10.1, \"held_under_text\": 0.005, \"secs\": 19.8, \"storybook\": false, \"mode\": \"report-only\", \"over\": false}",
   "estimate: headline: 26 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)",
   "estimate: headline: 23 characters on one line with a Latin name: about 22 fit; cut or rebreak (estimate; the server font check is final)"
  ],
  "autofixed": [
   {
-   "where": "shot 1",
-   "rule": "shot_timing",
-   "what": "moved from 11.20 to 11.45 s, the nearest clean start of the same 3.40 s",
+   "where": "lines 1-6",
+   "rule": "lines",
+   "what": "line 2 is under 5 words: cut again as 3 full sentences or clauses across the same shots (23 Nov 2026)",
    "before": [
-    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
-    11.2,
-    3.4,
-    [
-     [
-      0.0,
-      0.004
-     ],
-     [
-      2.367,
-      0.372
-     ]
-    ]
+    "تبحر البطلة Hornet في قارب صيد،",
+    "وتعبر حصونًا في البحر،",
+    "وتواجه وحوشًا بحرية جديدة،",
+    "وتنزل إلى كهوف عميقة.",
+    "ويكشف العرض زعماء جددًا.",
+    "تصدر مجانًا في 11 ديسمبر."
    ],
    "after": [
-    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
-    11.45,
-    3.4,
-    [
-     [
-      0.0,
-      0.004
-     ],
-     [
-      2.367,
-      0.372
-     ]
-    ]
-   ]
-  },
-  {
-   "where": "shot 3",
-   "rule": "shot_timing",
-   "what": "moved from 18.95 to 18.70 s, the nearest clean start of the same 3.10 s",
-   "before": [
-    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
-    18.95,
-    3.1,
-    [
-     [
-      0.0,
-      0.0
-     ],
-     [
-      2.017,
-      0.809
-     ]
-    ]
-   ],
-   "after": [
-    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
-    18.7,
-    3.1,
-    [
-     [
-      0.0,
-      0.0
-     ],
-     [
-      2.017,
-      0.809
-     ]
-    ]
+    "تبحر البطلة Hornet في قارب صيد،\nوتعبر حصونًا في البحر،",
+    "وتواجه وحوشًا بحرية جديدة،\nوتنزل إلى كهوف عميقة",
+    "ويكشف العرض زعماء جددًا\nتصدر مجانًا في 11 ديسمبر"
    ]
   }
  ],
- "job_sha": "132b668701bbeb9d2ff8cb7509ae7478f1898125",
- "dispatches": 2,
+ "job_sha": "af433d8cc9b28ebb4e16f34dd211ad1220c96648",
+ "dispatches": 3,
  "source_summary": {
   "min_height": 1440,
-  "max_zoom": 1.33,
+  "max_zoom": 1.45,
   "lowbit_shots": 0
  },
  "quality": "base",
@@ -145,14 +66,13 @@
  "job_path": "jobs/done/hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry.json",
  "stage_minutes": {
   "queue": 0.03,
-  "setup": 0.2,
-  "fetch": 0.22,
-  "shots": 1.51,
-  "checks": 1.93,
-  "render": 2.0,
-  "after": 0.99,
-  "upload": 0.1,
-  "job": 6.65
+  "setup": 0.17,
+  "fetch": 0.21,
+  "shots": 0.31,
+  "checks": 0.69,
+  "render": 1.98,
+  "after": 0.95,
+  "job": 4.17
  },
  "job_after_autofix": {
   "name": "hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry",
@@ -160,7 +80,7 @@
   "kind_news": "trailer",
   "story_class": "trailer",
   "built_by": "production-1",
-  "out": "cards/2026-11/hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry-reel-v1.mp4",
+  "out": "cards/2026-11/hollow-knight-silksong-sea-of-sorrow-first-look-trailer-team-cherry-reel-v2.mp4",
   "footage": [
    {
     "file": "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
@@ -177,7 +97,7 @@
     [
      [
       0.0,
-      0.429
+      0.33
      ]
     ]
    ],
@@ -188,11 +108,7 @@
     [
      [
       0.0,
-      0.004
-     ],
-     [
-      2.367,
-      0.372
+      0.5
      ]
     ]
    ],
@@ -203,7 +119,7 @@
     [
      [
       0.0,
-      0.332
+      0.5
      ]
     ]
    ],
@@ -214,11 +130,7 @@
     [
      [
       0.0,
-      0.0
-     ],
-     [
-      2.017,
-      0.809
+      0.4
      ]
     ]
    ],
@@ -229,7 +141,7 @@
     [
      [
       0.0,
-      1.0
+      0.5
      ]
     ]
    ],
@@ -240,11 +152,7 @@
     [
      [
       0.0,
-      0.515
-     ],
-     [
-      0.983,
-      0.23
+      0.6
      ]
     ]
    ],
@@ -255,22 +163,18 @@
     [
      [
       0.0,
-      0.047
-     ],
-     [
-      1.6,
-      0.718
+      0.5
      ]
     ]
    ],
    [
     "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
-    63.0,
-    3.6,
+    62.35,
+    2.5,
     [
      [
       0.0,
-      0.0
+      0.48
      ]
     ]
    ]
@@ -305,7 +209,7 @@
     7,
     [
      [
-      "ويكشف العرض زعماء جددًا تصدر\nالتوسعة مجانًا للجميع في 11 ديسمبر",
+      "ويكشف العرض زعماء جددًا\nتصدر مجانًا في 11 ديسمبر",
       {
        "size": 54
       }
@@ -324,7 +228,7 @@
     }
    ]
   ],
-  "spoken": "تبحر البطلة Hornet في قارب صيد، وتعبر حصونًا في البحر، وتواجه وحوشًا بحرية جديدة، وتنزل إلى كهوف عميقة. ويكشف العرض زعماء جددًا. تصدر التوسعة مجانًا للجميع في 11 ديسمبر.",
+  "spoken": "تبحر البطلة Hornet في قارب صيد، وتعبر حصونًا في البحر، وتواجه وحوشًا بحرية جديدة، وتنزل إلى كهوف عميقة. ويكشف العرض زعماء جددًا. تصدر مجانًا في 11 ديسمبر.",
   "headline": "أول نظرة على Sea of Sorrow\nتوسعة Silksong المجانية",
   "label": "رسمي",
   "game": "Hollow Knight: Silksong",
@@ -334,7 +238,7 @@
    "action"
   ],
   "subject_person": null,
-  "stylised": true,
+  "stylised": false,
   "source": "تيم تشيري (Team Cherry)",
   "date": "28 Nov 2026",
   "theme": "cold",
@@ -385,7 +289,59 @@
    "sound": "yes: the trailer's own music from the first shot (music_only)",
    "picture matches the lines": "yes: each line on the shot it describes (hand-picked)"
   },
-  "layout": "showcase",
-  "showcase_reason": "the trailer clashes with our text in a 9:16 crop: stylised art: the person, vehicle and animal detector cannot frame its characters (crop fix, 26 Nov 2026) (16:9 fallback, Mohammad 20 Nov 2026)"
+  "showcase_fallback": false,
+  "frame_ok": [
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    40.4,
+    "looked at by Production 1 on 2 fps sheets: Hornet or the boss inside the window at this focus"
+   ],
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    11.45,
+    "looked at by Production 1 on 2 fps sheets: Hornet or the boss inside the window at this focus"
+   ],
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    14.6,
+    "looked at by Production 1 on 2 fps sheets: Hornet or the boss inside the window at this focus"
+   ],
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    18.7,
+    "looked at by Production 1 on 2 fps sheets: Hornet or the boss inside the window at this focus"
+   ],
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    25.28,
+    "looked at by Production 1 on 2 fps sheets: Hornet or the boss inside the window at this focus"
+   ],
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    36.2,
+    "looked at by Production 1 on 2 fps sheets: Hornet or the boss inside the window at this focus"
+   ],
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    48.0,
+    "looked at by Production 1 on 2 fps sheets: Hornet or the boss inside the window at this focus"
+   ],
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    62.35,
+    "looked at by Production 1 on 2 fps sheets: Hornet or the boss inside the window at this focus"
+   ]
+  ],
+  "letterbox_ok": [
+   [
+    "silksong-sea-of-sorrow-launch-trailer-team-cherry.mp4",
+    62.35,
+    "the shore shot's dark top rows are picture (sky), not bars"
+   ]
+  ],
+  "rerender": {
+   "reason": "line timing and closing shot",
+   "note": "v1 took the band layout for stylised art, which runs the lines back to back from frame 0, and the end-slate rule moved the closing shore shot; Mohammad's brief puts each line on the shot it describes. v2: full-height crop with focus set by eye, closing shot ends before the last 9 s."
+  }
  }
 }
