@@ -1,0 +1,33 @@
+{
+ "id": "2026-11-28-fumes-kinda-rally-update-gamespark",
+ "state": "built",
+ "problems": [],
+ "flags": [
+  "slip texts fixed mechanically: spoken",
+  "name not in names-ar: «غيم سبارك (GameSpark)» (credit); add it there as Proposed",
+  "name not in names-ar: «حصلت على تحديث (KINDA)» (spoken); add it there as Proposed",
+  "text fixed mechanically: spoken: names not in names-ar written in Latin: GameSpark, KINDA; line: names not in names-ar written in Latin: GameSpark; line: names not in names-ar written in Latin: KINDA"
+ ],
+ "at": "2026-11-28T08:11:37Z",
+ "footage": {
+  "name": "FUMES - CO-OP Announcement Trailer",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60.0,
+  "mbps": 5.21,
+  "rows": 1080,
+  "duration": 50.04,
+  "decode_clean": true
+ },
+ "names_to_review": [
+  "GameSpark",
+  "KINDA"
+ ],
+ "job": "jobs/live/fumes-kinda-rally-update-gamespark.json",
+ "story": "newsroom/stories/2026-11-28-fumes-kinda-rally-update-gamespark.json",
+ "lines": 6,
+ "shots": 14,
+ "run": "46124628815",
+ "lane": "live",
+ "build_secs": 49
+}
